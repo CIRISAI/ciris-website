@@ -8,7 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
-import { GithubLogoIcon } from "@phosphor-icons/react";
+import { GithubLogoIcon, DiscordLogo, UserCircle, GridFour } from "@phosphor-icons/react";
 import LogoIcon from "./LogoIcon";
 
 export const FloatingNav = ({
@@ -87,6 +87,33 @@ export const FloatingNav = ({
             </p>
           </Link>
         ))}
+        <Link
+          href={"https://discord.gg/SWGM7Gsvrv"}
+          className={
+            "bg-[#5865F2] hover:bg-[#4752C4] text-white flex items-center space-x-1 rounded-full px-4 py-1 text-sm transition-colors"
+          }
+        >
+          <DiscordLogo weight="fill" className="mr-1" size={16} />
+          <span className="text-xxs font-bold">Chat with Agents</span>
+        </Link>
+        <Link
+          href={"https://agents.ciris.ai"}
+          className={
+            "text-neutral-700 border-neutral-400 flex items-center space-x-1 rounded-full border-2 px-4 py-1 text-sm hover:text-black hover:border-black dark:text-neutral-50 dark:border-neutral-50 dark:hover:text-neutral-300 dark:hover:border-neutral-300 transition-colors"
+          }
+        >
+          <UserCircle className="mr-1" size={16} />
+          <span className="text-xxs font-bold">Login</span>
+        </Link>
+        <Link
+          href={"https://agents.ciris.ai/lens"}
+          className={
+            "text-neutral-700 border-neutral-400 flex items-center space-x-1 rounded-full border-2 px-4 py-1 text-sm hover:text-black hover:border-black dark:text-neutral-50 dark:border-neutral-50 dark:hover:text-neutral-300 dark:hover:border-neutral-300 transition-colors"
+          }
+        >
+          <GridFour className="mr-1" size={16} />
+          <span className="text-xxs font-bold">Dashboard</span>
+        </Link>
         <Link
           href={"https://github.com/CIRISAI/CIRISAgent"}
           className={
