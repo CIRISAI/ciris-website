@@ -56,82 +56,89 @@ export const FloatingNav = ({
         }}
         transition={{ type: "spring" }}
         className={cn(
-          "fixed inset-x-0 top-10 z-[5000] mx-auto flex flex-col md:flex-row max-w-fit items-center justify-center rounded-lg border-white/[0.1] bg-white/70 py-4 px-6 md:pr-8 md:pl-12 backdrop-blur-md md:space-x-16 dark:bg-black/50",
+          "fixed inset-x-0 top-10 z-[5000] mx-auto flex flex-col md:flex-row max-w-fit items-center justify-between rounded-full border border-white/[0.2] bg-white/80 py-2 px-4 md:px-8 backdrop-blur-md dark:bg-black/70 shadow-lg",
           className
         )}
       >
-        {/* Mobile Layout: Logo + Nav Items in first row */}
-        <div className="flex items-center justify-center w-full md:w-auto">
+        {/* Logo and Nav Items Group */}
+        <div className="flex items-center gap-8">
           <Link
             href={"/"}
             className={cn(
-              "relative flex items-center space-x-1 text-neutral-800 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300 mr-4 md:mr-0"
+              "relative flex items-center text-neutral-800 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300"
             )}
           >
-            {/* LogoIcon SVG extracted to its own component */}
             <LogoIcon />
           </Link>
-          <div className="flex items-center">
+          
+          {/* Navigation Items */}
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((navItem: any, idx: number) => (
               <Link
                 key={`link=${idx}`}
                 href={navItem.link}
                 className={cn(
-                  "hover:text-brand-primary flex-column relative mx-2 md:mx-4 block items-center space-x-1 text-sm font-normal text-neutral-700 dark:text-neutral-50 dark:hover:text-neutral-300"
+                  "flex flex-col items-center text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors"
                 )}
               >
-                <p className="text-[0.64rem] font-bold sm:block md:text-sm md:font-normal">
+                <span className="text-sm font-medium">
                   {navItem.name}
-                </p>
-                <p className="text-xxs hidden font-bold uppercase sm:block">
+                </span>
+                <span className="text-[10px] uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                   {navItem.subtitle}
-                </p>
+                </span>
               </Link>
             ))}
           </div>
         </div>
 
-        {/* Mobile Layout: Action buttons in second row, Desktop: inline */}
-        <div className="flex items-center justify-center mt-3 md:mt-0 gap-2">
-          <Link
-            href={"https://discord.gg/SWGM7Gsvrv"}
-            className={
-              "bg-[#5865F2] hover:bg-[#4752C4] text-white flex items-center space-x-1 rounded-full px-3 md:px-4 py-1 text-xs md:text-sm transition-colors"
-            }
-          >
-            <DiscordLogo weight="fill" className="mr-1" size={16} />
-            <span className="text-xxs font-bold">Chat with Agents</span>
-          </Link>
-          <Link
-            href={"https://agents.ciris.ai"}
-            className={
-              "text-neutral-700 border-neutral-400 flex items-center space-x-1 rounded-full border-2 px-3 md:px-4 py-1 text-xs md:text-sm hover:text-black hover:border-black dark:text-neutral-50 dark:border-neutral-50 dark:hover:text-neutral-300 dark:hover:border-neutral-300 transition-colors"
-            }
-          >
-            <UserCircle className="mr-1" size={16} />
-            <span className="text-xxs font-bold">Login</span>
-          </Link>
-          <Link
-            href={"https://agents.ciris.ai/lens"}
-            className={
-              "text-neutral-700 border-neutral-400 flex items-center space-x-1 rounded-full border-2 px-3 md:px-4 py-1 text-xs md:text-sm hover:text-black hover:border-black dark:text-neutral-50 dark:border-neutral-50 dark:hover:text-neutral-300 dark:hover:border-neutral-300 transition-colors"
-            }
-          >
-            <GridFour className="mr-1" size={16} />
-            <span className="text-xxs font-bold">Dashboard</span>
-          </Link>
+        {/* Mobile Nav Items */}
+        <div className="flex md:hidden items-center gap-3 mt-2">
+          {navItems.map((navItem: any, idx: number) => (
+            <Link
+              key={`mobile-link=${idx}`}
+              href={navItem.link}
+              className={cn(
+                "text-xs font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+              )}
+            >
+              {navItem.name}
+            </Link>
+          ))}
         </div>
 
-        {/* Mobile Layout: GitHub in third row, Desktop: inline */}
-        <div className="flex items-center justify-center mt-3 md:mt-0">
+        {/* Action Buttons Group */}
+        <div className="flex items-center gap-3 mt-3 md:mt-0">
+          <Link
+            href={"https://discord.gg/SWGM7Gsvrv"}
+            className="bg-[#5865F2] hover:bg-[#4752C4] text-white flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all hover:shadow-md"
+          >
+            <DiscordLogo weight="fill" size={18} />
+            <span className="hidden sm:inline">Chat with Agents</span>
+          </Link>
+          
+          <Link
+            href={"https://agents.ciris.ai"}
+            className="text-neutral-700 border border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all dark:text-neutral-300 dark:border-neutral-600 dark:hover:border-neutral-500 dark:hover:bg-neutral-800"
+          >
+            <UserCircle size={18} />
+            <span className="hidden sm:inline">Login</span>
+          </Link>
+          
+          <Link
+            href={"https://agents.ciris.ai/lens"}
+            className="text-neutral-700 border border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all dark:text-neutral-300 dark:border-neutral-600 dark:hover:border-neutral-500 dark:hover:bg-neutral-800"
+          >
+            <GridFour size={18} />
+            <span className="hidden sm:inline">Dashboard</span>
+          </Link>
+          
           <Link
             href={"https://github.com/CIRISAI/CIRISAgent"}
-            className={
-              "text-brand-primary border-brand-primary fill-brand-primary flex items-center space-x-1 rounded-full border-2 px-3 md:px-4 py-1 text-xs md:text-sm hover:fill-black hover:text-black dark:text-neutral-50"
-            }
+            className="text-neutral-700 border border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all dark:text-neutral-300 dark:border-neutral-600 dark:hover:border-neutral-500 dark:hover:bg-neutral-800"
           >
-            <GithubLogoIcon fill="current" className="mr-1" size={16} />
-            <span className="text-xxs font-bold">Github</span>
+            <GithubLogoIcon size={18} />
+            <span className="hidden sm:inline">GitHub</span>
           </Link>
         </div>
       </motion.div>
