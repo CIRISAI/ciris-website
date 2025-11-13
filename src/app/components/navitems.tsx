@@ -19,6 +19,12 @@ const navItems = [
     link: "/sections/main",
     icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
+  {
+    name: "GitHub",
+    subtitle: "Open Source Code",
+    link: "https://github.com/CIRISAI/CIRISAgent",
+    icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
 ];
 
 export default navItems;
