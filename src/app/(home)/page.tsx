@@ -5,6 +5,7 @@ import Footer from "@/app/components/Footer";
 import NewsletterForm from "@/app/components/NewsletterForm";
 import FlexSection from "@/app/components/SectionFlexContent";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
+import QuickInstall from "@/app/components/QuickInstall";
 
 import Image from "next/image";
 import { stagger } from "motion";
@@ -120,6 +121,7 @@ export default function Homepage() {
           subheadline="An ethical Framework for the rest of us."
           copyText="CIRIS (Core Identity, Integrity, Resilience, Incompleteness Awareness, and Signalling Gratitude / Sustained Coherence) is an advanced ethical governance framework for autonomous AI systems. It ensures that AI operates with clear ethical coherence, principled transparency, and meaningful human oversight."
         />
+        <QuickInstall />
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
