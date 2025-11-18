@@ -1064,12 +1064,13 @@ main() {
     echo ""
     echo "     Default credentials: admin / ciris_admin_password"
     echo ""
-    echo "Documentation: https://docs.ciris.ai"
+    echo "Documentation: https://github.com/CIRISAI/CIRISAgent/blob/main/docs/README.md"
     echo "Support: https://github.com/CIRISAI/CIRISAgent/issues"
     echo ""
 }
 
 # Run main if not sourced
-if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
+# Also run if piped (BASH_SOURCE will be /dev/fd/... or empty)
+if [ "${BASH_SOURCE[0]}" = "${0}" ] || [[ "${BASH_SOURCE[0]}" == /dev/fd/* ]] || [ -z "${BASH_SOURCE[0]}" ]; then
     main "$@"
 fi
