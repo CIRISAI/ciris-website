@@ -6,6 +6,7 @@ import navItems from "@/app/components/navitems";
 
 export default function InstallPage() {
   const [copied, setCopied] = useState(false);
+  const [copiedDocker, setCopiedDocker] = useState(false);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -13,7 +14,14 @@ export default function InstallPage() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const copyDockerToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedDocker(true);
+    setTimeout(() => setCopiedDocker(false), 2000);
+  };
+
   const installCommand = "curl -sSL https://ciris.ai/install.sh | bash";
+  const dockerCommand = "curl -sSL https://ciris.ai/install.sh | bash -s -- --docker";
 
   return (
     <>
@@ -98,6 +106,87 @@ export default function InstallPage() {
             </div>
           </div>
 
+          {/* Docker Installation */}
+          <div className="mt-12">
+            <div className="rounded-lg border-2 border-blue-500 bg-blue-50 p-6 dark:border-blue-400 dark:bg-blue-900/20">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <svg
+                    className="h-6 w-6 text-blue-600 dark:text-blue-400"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21.81 10.25c-.06-.04-.56-.43-1.64-.43-.28 0-.56.03-.84.08-.21-1.4-1.09-2.62-2.26-3.18a.75.75 0 0 0-1.04.41c-.03.09-.59 1.56.26 3.13-.44.27-.97.44-1.54.51-.33-1.33-1.23-2.26-2.49-2.26h-.08c-1.26 0-2.16.93-2.49 2.26-.57-.07-1.1-.24-1.54-.51.85-1.57.29-3.04.26-3.13a.75.75 0 0 0-1.04-.41c-1.17.56-2.05 1.78-2.26 3.18-.28-.05-.56-.08-.84-.08-1.08 0-1.58.39-1.64.43a.75.75 0 0 0-.25.99c.03.06.81 1.45 3.11 1.72.88 2.36 2.82 4.01 5.23 4.43v3.13c0 .41.34.75.75.75s.75-.34.75-.75v-3.13c2.41-.42 4.35-2.07 5.23-4.43 2.3-.27 3.08-1.66 3.11-1.72a.75.75 0 0 0-.25-.99zM4.11 10.89c.26-.08.65-.14 1.14-.14.13 0 .27 0 .41.02-.61.99-.96 2.14-1.02 3.35-1.19-.25-1.69-.99-1.8-1.23.14-.12.53-.66 1.27-1zm7.89 6.86c-2.71 0-4.91-2.2-4.91-4.91 0-2.01 1.21-3.74 2.94-4.49.31 1.07 1.03 1.74 1.97 1.74s1.66-.67 1.97-1.74c1.73.75 2.94 2.48 2.94 4.49 0 2.71-2.2 4.91-4.91 4.91zm7.8-6.52c-.11.24-.61.98-1.8 1.23-.06-1.21-.41-2.36-1.02-3.35.14-.02.28-.02.41-.02.49 0 .88.06 1.14.14.74.34 1.13.88 1.27 1z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
+                    Docker Installation (Recommended)
+                  </h2>
+                  <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">
+                    Use pre-built Docker images from GitHub Container Registry for a fast, isolated deployment with no dependency management.
+                  </p>
+                  <div className="relative">
+                    <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-sm text-gray-100">
+                      <code>{dockerCommand}</code>
+                    </pre>
+                    <button
+                      onClick={() => copyDockerToClipboard(dockerCommand)}
+                      className="absolute right-2 top-2 rounded-md bg-gray-700 px-3 py-1 text-xs text-white hover:bg-gray-600 transition-colors"
+                    >
+                      {copiedDocker ? "Copied!" : "Copy"}
+                    </button>
+                  </div>
+                  <div className="mt-4 grid gap-4 md:grid-cols-2">
+                    <div>
+                      <h3 className="mb-2 text-sm font-semibold text-gray-900 dark:text-white">
+                        Requirements
+                      </h3>
+                      <ul className="space-y-1 text-xs text-gray-700 dark:text-gray-300">
+                        <li className="flex items-start">
+                          <span className="mr-2">✓</span>
+                          <span>Docker Engine 20.10+ or Docker Desktop</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2">✓</span>
+                          <span>docker compose plugin</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2">✓</span>
+                          <span>~1GB disk space</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="mb-2 text-sm font-semibold text-gray-900 dark:text-white">
+                        Benefits
+                      </h3>
+                      <ul className="space-y-1 text-xs text-gray-700 dark:text-gray-300">
+                        <li className="flex items-start">
+                          <span className="mr-2">•</span>
+                          <span>No Python or Node.js installation needed</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2">•</span>
+                          <span>Isolated environment</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2">•</span>
+                          <span>Automatic updates with health checks</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="mt-4 rounded-md bg-blue-100 p-3 dark:bg-blue-900/40">
+                    <p className="text-xs text-gray-700 dark:text-gray-300">
+                      <strong>After installation:</strong> The installer creates a docker-compose.yml file. Access the Agent API at localhost:8080 and Web UI at localhost:3000. Manage with <code className="rounded bg-blue-200 px-1 dark:bg-blue-800">docker compose up -d</code> and <code className="rounded bg-blue-200 px-1 dark:bg-blue-800">docker compose down</code>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Advanced Options */}
           <div className="mt-12">
             <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
@@ -109,6 +198,9 @@ export default function InstallPage() {
                 <h3 className="mb-3 font-semibold text-gray-900 dark:text-white">
                   Custom Installation Directory
                 </h3>
+                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+                  Install to a custom location (default: ~/ciris)
+                </p>
                 <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-sm text-gray-100">
                   <code>
                     curl -sSL https://ciris.ai/install.sh | bash -s --
@@ -119,8 +211,25 @@ export default function InstallPage() {
 
               <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="mb-3 font-semibold text-gray-900 dark:text-white">
+                  Dry Run (Preview Actions)
+                </h3>
+                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+                  See what would be installed without making changes
+                </p>
+                <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-sm text-gray-100">
+                  <code>
+                    curl -sSL https://ciris.ai/install.sh | bash -s -- --dry-run
+                  </code>
+                </pre>
+              </div>
+
+              <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="mb-3 font-semibold text-gray-900 dark:text-white">
                   Development Mode
                 </h3>
+                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+                  Install development dependencies
+                </p>
                 <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-sm text-gray-100">
                   <code>
                     curl -sSL https://ciris.ai/install.sh | bash -s -- --dev
@@ -132,6 +241,9 @@ export default function InstallPage() {
                 <h3 className="mb-3 font-semibold text-gray-900 dark:text-white">
                   Skip Service Installation
                 </h3>
+                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+                  Install without systemd/launchd service setup
+                </p>
                 <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-sm text-gray-100">
                   <code>
                     curl -sSL https://ciris.ai/install.sh | bash -s --
