@@ -49,6 +49,8 @@ SKIP_SERVICE=false
 SKIP_DEPS=false
 DEV_MODE=false
 UNINSTALL=false
+DRY_RUN=false
+DOCKER_MODE=false
 
 # ============================================================================
 # Colors and Formatting
@@ -151,8 +153,222 @@ get_package_manager() {
 }
 
 # ============================================================================
+# Docker Installation
+# ============================================================================
+
+ensure_docker() {
+    log_step "Checking Docker availability"
+
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would verify docker and docker compose availability"
+        return
+    fi
+
+    if ! command_exists docker; then
+        log_error "Docker is required for --docker installs. Please install Docker Desktop or docker-ce."
+        exit 1
+    fi
+
+    if ! docker compose version >/dev/null 2>&1; then
+        log_error "docker compose plugin is required. Please upgrade Docker to include 'docker compose'."
+        exit 1
+    fi
+}
+
+create_docker_compose_file() {
+    log_step "Preparing Docker Compose configuration"
+
+    local compose_file="$INSTALL_DIR/docker-compose.yml"
+    local init_script="$INSTALL_DIR/init_permissions.sh"
+
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would write Docker Compose file to $compose_file using GHCR images"
+        return
+    fi
+
+    # Create directories for container (will be owned by ciris user inside container)
+    mkdir -p "$INSTALL_DIR/data" "$INSTALL_DIR/logs" "$INSTALL_DIR/.ciris_keys" "$INSTALL_DIR/config"
+
+    # Create init script that runs as root, fixes permissions, then switches to ciris user
+    # This is the only robust way to handle arbitrary host UIDs
+    cat > "$init_script" << 'INIT_SCRIPT'
+#!/bin/bash
+# CIRIS Docker Init - runs as root, fixes permissions, switches to ciris user
+set -e
+
+echo "Initializing CIRIS directories..."
+
+# Ensure directories exist
+mkdir -p /app/data /app/logs /app/.ciris_keys /app/config
+
+# Fix ownership to ciris user (UID 1000)
+chown -R ciris:ciris /app/data /app/logs /app/.ciris_keys /app/config
+
+# Set secure permissions (application enforces 755 for data/logs/config, 700 for keys)
+chmod 755 /app/data /app/logs /app/config
+chmod 700 /app/.ciris_keys
+
+echo "Starting CIRIS agent as user 'ciris'..."
+
+# Create a temporary script to run as ciris user with the exact command
+TMPSCRIPT=$(mktemp)
+{
+    echo '#!/bin/bash'
+    echo 'cd /app'
+    printf 'exec'
+    for arg in "$@"; do
+        printf ' %q' "$arg"
+    done
+    echo
+} > "$TMPSCRIPT"
+chmod +x "$TMPSCRIPT"
+chown ciris:ciris "$TMPSCRIPT"
+
+# Execute the script as ciris user
+exec su ciris -c "$TMPSCRIPT"
+INIT_SCRIPT
+
+    chmod +x "$init_script"
+
+    cat > "$compose_file" << EOF
+version: "3.8"
+
+services:
+  ciris-agent:
+    image: ghcr.io/cirisai/ciris-agent:latest
+    container_name: ciris-agent
+    platform: linux/amd64
+    user: "0:0"  # Run as root to fix permissions, init script switches to ciris user
+    entrypoint: ["/init_permissions.sh"]
+    command: ["python", "main.py", "--adapter", "api"]
+    env_file:
+      - $INSTALL_DIR/.env
+    environment:
+      - CIRIS_API_HOST=0.0.0.0
+      - CIRIS_API_PORT=8080
+      - CIRIS_PORT=${CIRIS_AGENT_PORT:-8080}
+    ports:
+      - "${CIRIS_AGENT_PORT:-8080}:8080"
+    volumes:
+      - "$INSTALL_DIR/data:/app/data"
+      - "$INSTALL_DIR/logs:/app/logs"
+      - "$INSTALL_DIR/.ciris_keys:/app/.ciris_keys"
+      - "$INSTALL_DIR/config:/app/config"
+      - "$INSTALL_DIR/init_permissions.sh:/init_permissions.sh:ro"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/v1/system/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - ciris-network
+
+  ciris-gui:
+    image: ghcr.io/cirisai/ciris-gui:latest
+    container_name: ciris-gui
+    platform: linux/amd64
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_BASE_URL=http://ciris-agent:8080
+    ports:
+      - "${CIRIS_GUI_PORT:-3000}:3000"
+    depends_on:
+      ciris-agent:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - ciris-network
+
+networks:
+  ciris-network:
+    name: ciris-standalone
+    driver: bridge
+EOF
+
+    log_success "Docker Compose file created at $compose_file"
+    log_info "Container will run as 'ciris' user (UID 1000), directories configured for container access"
+}
+
+start_docker_stack() {
+    log_step "Starting CIRIS with Docker"
+
+    local compose_file="$INSTALL_DIR/docker-compose.yml"
+
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would pull GHCR images and run 'docker compose -f $compose_file up -d'"
+        return
+    fi
+
+    docker compose -f "$compose_file" pull
+    docker compose -f "$compose_file" up -d
+
+    log_success "Docker containers are running"
+}
+
+# ============================================================================
 # Dependency Installation
 # ============================================================================
+
+check_macos_prerequisites() {
+    # On macOS, check if we have either Homebrew or Command Line Tools
+    local os_type
+    os_type=$(detect_os)
+
+    if [ "$os_type" != "macos" ]; then
+        return 0  # Not macOS, nothing to check
+    fi
+
+    # Check if Homebrew is installed
+    if command_exists brew; then
+        log_success "Homebrew found"
+        return 0
+    fi
+
+    # No Homebrew - check if Python 3 is already available (from CLT or python.org)
+    if command_exists python3; then
+        local py_version
+        py_version=$(python3 -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")' 2>/dev/null || echo "0.0")
+
+        # Check if it meets minimum requirements (3.9+)
+        if python3 -c 'import sys; exit(0 if sys.version_info >= (3, 9) else 1)' 2>/dev/null; then
+            log_success "Python $py_version found (system)"
+            log_warn "Homebrew not found - using system Python. Some dependencies may need manual installation."
+            return 0
+        fi
+    fi
+
+    # No suitable Python and no Homebrew - bail out with helpful message
+    log_error "macOS requires Homebrew to install dependencies automatically."
+    echo ""
+    echo "Please install Homebrew first:"
+    echo "  /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+    echo ""
+    echo "Alternatively, if you have Python 3.9+ installed manually:"
+    echo "  Run this script with --skip-deps and ensure you have:"
+    echo "    - Python 3.9+ (python3 --version)"
+    echo "    - Node.js 18+ (node --version)"
+    echo "    - pnpm (npm install -g pnpm)"
+    echo "    - git"
+    exit 1
+}
 
 install_dependencies() {
     log_step "Installing system dependencies"
@@ -161,6 +377,14 @@ install_dependencies() {
     os_type=$(detect_os)
     local pkg_mgr
     pkg_mgr=$(get_package_manager)
+
+    # Check macOS prerequisites first (brew or existing Python)
+    check_macos_prerequisites
+
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would verify Python 3.9+, Node.js 18+, pnpm, git, and curl using $pkg_mgr"
+        return
+    fi
 
     # Check Python
     if ! command_exists python3; then
@@ -178,8 +402,17 @@ install_dependencies() {
             pacman)
                 sudo pacman -S --noconfirm python python-pip
                 ;;
-            *)
-                log_error "Cannot automatically install Python. Please install Python 3.9+ manually."
+            none|*)
+                if [ "$os_type" = "macos" ]; then
+                    log_error "Cannot install Python without Homebrew or system Python."
+                    echo ""
+                    echo "Please either:"
+                    echo "  1. Install Homebrew: /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+                    echo "  2. Install Python from python.org: https://www.python.org/downloads/macos/"
+                    echo "  3. Run with --skip-deps if you already have Python 3.9+ installed"
+                else
+                    log_error "Cannot automatically install Python. Please install Python 3.9+ manually."
+                fi
                 exit 1
                 ;;
         esac
@@ -214,8 +447,17 @@ install_dependencies() {
             pacman)
                 sudo pacman -S --noconfirm nodejs npm
                 ;;
-            *)
-                log_error "Cannot automatically install Node.js. Please install Node.js 18+ manually from https://nodejs.org"
+            none|*)
+                if [ "$os_type" = "macos" ]; then
+                    log_error "Cannot install Node.js without Homebrew."
+                    echo ""
+                    echo "Please either:"
+                    echo "  1. Install Homebrew first, then re-run this script"
+                    echo "  2. Install Node.js manually from https://nodejs.org/en/download/package-manager"
+                    echo "  3. Run with --skip-deps if you already have Node.js 18+ installed"
+                else
+                    log_error "Cannot automatically install Node.js. Please install Node.js 18+ manually from https://nodejs.org"
+                fi
                 exit 1
                 ;;
         esac
@@ -281,6 +523,11 @@ install_dependencies() {
 clone_repositories() {
     log_step "Cloning repositories"
 
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would create $INSTALL_DIR and clone CIRISAgent ($AGENT_BRANCH) and CIRISGUI ($GUI_BRANCH)"
+        return
+    fi
+
     mkdir -p "$INSTALL_DIR"
     cd "$INSTALL_DIR"
 
@@ -315,6 +562,11 @@ clone_repositories() {
 
 setup_agent() {
     log_step "Setting up CIRISAgent"
+
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would create a virtual environment and install Python dependencies in $INSTALL_DIR/CIRISAgent"
+        return
+    fi
 
     cd "$INSTALL_DIR/CIRISAgent" || {
         log_error "Failed to enter CIRISAgent directory"
@@ -354,6 +606,11 @@ setup_agent() {
 
 setup_gui() {
     log_step "Setting up CIRISGUI"
+
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would install Node dependencies and build the GUI in $INSTALL_DIR/CIRISGUI"
+        return
+    fi
 
     cd "$INSTALL_DIR/CIRISGUI" || {
         log_error "Failed to enter CIRISGUI directory"
@@ -417,6 +674,11 @@ create_env_file() {
     log_step "Creating environment configuration"
 
     local env_file="$INSTALL_DIR/.env"
+
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would generate $env_file with LLM and system defaults"
+        return
+    fi
 
     if [ -f "$env_file" ]; then
         log_warn "Environment file already exists at $env_file"
@@ -486,7 +748,7 @@ create_env_file() {
 EOF
 
     # Add LLM configuration based on provider choice
-    if [ "$llm_provider" = "local" ]; then
+    if [ "$llm_provider" != "openai" ]; then
         cat >> "$env_file" << EOF
 # OpenAI-Compatible LLM Configuration
 OPENAI_API_KEY="$llm_api_key"
@@ -726,6 +988,11 @@ install_services() {
         return
     fi
 
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would install system services for $AGENT_SERVICE_NAME and $GUI_SERVICE_NAME"
+        return
+    fi
+
     local init_system
     init_system=$(detect_init_system)
 
@@ -749,6 +1016,11 @@ install_services() {
 
 create_helper_scripts() {
     log_step "Creating helper scripts"
+
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would create start/stop/status scripts in $INSTALL_DIR/scripts"
+        return
+    fi
 
     local scripts_dir="$INSTALL_DIR/scripts"
     mkdir -p "$scripts_dir"
@@ -866,40 +1138,145 @@ EOF
 # Uninstallation
 # ============================================================================
 
+detect_installation_type() {
+    # Detect if existing installation is Docker or local
+    # Returns: "docker", "local", or "none"
+
+    if [ ! -d "$INSTALL_DIR" ]; then
+        echo "none"
+        return
+    fi
+
+    if [ -f "$INSTALL_DIR/docker-compose.yml" ]; then
+        echo "docker"
+    elif [ -d "$INSTALL_DIR/CIRISAgent" ] || [ -d "$INSTALL_DIR/CIRISGUI" ]; then
+        echo "local"
+    else
+        echo "unknown"
+    fi
+}
+
+check_existing_installation() {
+    # Check for existing installation and prompt user
+    # Sets UNINSTALL=true if user chooses to uninstall
+
+    local install_type
+    install_type=$(detect_installation_type)
+
+    if [ "$install_type" = "none" ]; then
+        return 0
+    fi
+
+    # Installation exists - prompt user
+    log_warn "Existing CIRIS installation detected at: $INSTALL_DIR"
+    log_info "Installation type: $install_type"
+
+    # In non-interactive mode, abort
+    if [ ! -t 1 ] || [ ! -r /dev/tty ]; then
+        log_error "Non-interactive mode: cannot prompt for action"
+        log_info "Use --uninstall to remove, or choose a different --install-dir"
+        exit 1
+    fi
+
+    echo ""
+    echo "What would you like to do?"
+    echo "  1) Re-install (remove existing and install fresh)"
+    echo "  2) Uninstall only (remove existing installation)"
+    echo "  3) Cancel (exit without changes)"
+    echo ""
+
+    local choice
+    read -r -p "Enter choice [1-3]: " choice </dev/tty || choice="3"
+
+    case "$choice" in
+        1)
+            log_info "Re-installing: removing existing installation..."
+            UNINSTALL=true
+            uninstall_ciris
+            UNINSTALL=false
+            log_success "Ready to install fresh"
+            ;;
+        2)
+            log_info "Uninstalling..."
+            UNINSTALL=true
+            uninstall_ciris
+            exit 0
+            ;;
+        3|*)
+            log_info "Installation cancelled"
+            exit 0
+            ;;
+    esac
+}
+
 uninstall_ciris() {
     log_step "Uninstalling CIRIS"
 
-    # Stop services
-    log_info "Stopping services..."
-    local init_system
-    init_system=$(detect_init_system)
+    if [ "$DRY_RUN" = true ]; then
+        log_info "[dry-run] Would stop services and remove installation at $INSTALL_DIR"
+        return
+    fi
 
-    case "$init_system" in
-        systemd)
-            systemctl --user stop "$AGENT_SERVICE_NAME" "$GUI_SERVICE_NAME" 2>/dev/null || true
-            systemctl --user disable "$AGENT_SERVICE_NAME" "$GUI_SERVICE_NAME" 2>/dev/null || true
-            rm -f "$HOME/.config/systemd/user/$AGENT_SERVICE_NAME.service"
-            rm -f "$HOME/.config/systemd/user/$GUI_SERVICE_NAME.service"
-            systemctl --user daemon-reload
-            ;;
-        launchd)
-            launchctl unload "$HOME/Library/LaunchAgents/ai.ciris.agent.plist" 2>/dev/null || true
-            launchctl unload "$HOME/Library/LaunchAgents/ai.ciris.gui.plist" 2>/dev/null || true
-            rm -f "$HOME/Library/LaunchAgents/ai.ciris.agent.plist"
-            rm -f "$HOME/Library/LaunchAgents/ai.ciris.gui.plist"
-            ;;
-    esac
+    # Detect installation type
+    local install_type
+    install_type=$(detect_installation_type)
 
-    # Stop any running processes
-    pkill -f "python.*main.py" || true
-    pkill -f "pnpm.*start" || true
+    if [ "$install_type" = "none" ]; then
+        log_warn "No installation found at $INSTALL_DIR"
+        return 0
+    fi
 
-    # Ask about data removal (only in interactive mode)
+    # Handle Docker installation
+    if [ "$install_type" = "docker" ]; then
+        log_info "Stopping Docker containers..."
+        if [ -f "$INSTALL_DIR/docker-compose.yml" ]; then
+            (cd "$INSTALL_DIR" && docker compose down -v 2>/dev/null) || true
+        fi
+        # Also try to stop by container name in case compose file is corrupted
+        docker stop ciris-agent ciris-gui 2>/dev/null || true
+        docker rm ciris-agent ciris-gui 2>/dev/null || true
+    fi
+
+    # Handle local installation
+    if [ "$install_type" = "local" ]; then
+        # Stop services
+        log_info "Stopping services..."
+        local init_system
+        init_system=$(detect_init_system)
+
+        case "$init_system" in
+            systemd)
+                systemctl --user stop "$AGENT_SERVICE_NAME" "$GUI_SERVICE_NAME" 2>/dev/null || true
+                systemctl --user disable "$AGENT_SERVICE_NAME" "$GUI_SERVICE_NAME" 2>/dev/null || true
+                rm -f "$HOME/.config/systemd/user/$AGENT_SERVICE_NAME.service"
+                rm -f "$HOME/.config/systemd/user/$GUI_SERVICE_NAME.service"
+                systemctl --user daemon-reload
+                ;;
+            launchd)
+                launchctl unload "$HOME/Library/LaunchAgents/ai.ciris.agent.plist" 2>/dev/null || true
+                launchctl unload "$HOME/Library/LaunchAgents/ai.ciris.gui.plist" 2>/dev/null || true
+                rm -f "$HOME/Library/LaunchAgents/ai.ciris.agent.plist"
+                rm -f "$HOME/Library/LaunchAgents/ai.ciris.gui.plist"
+                ;;
+        esac
+
+        # Stop any running processes
+        pkill -f "python.*main.py" || true
+        pkill -f "pnpm.*start" || true
+    fi
+
+    # Ask about data removal (only in interactive mode and not during re-install)
     local response="N"
-    if [ -t 1 ] && [ -r /dev/tty ]; then
-        read -r -p "Remove all data including databases and logs? [y/N] " response </dev/tty || response="N"
+    if [ "$UNINSTALL" = true ]; then
+        # Full uninstall - ask about data
+        if [ -t 1 ] && [ -r /dev/tty ]; then
+            read -r -p "Remove all data including databases and logs? [y/N] " response </dev/tty || response="N"
+        else
+            log_info "Non-interactive mode: keeping data at $INSTALL_DIR"
+        fi
     else
-        log_info "Non-interactive mode: keeping data at $INSTALL_DIR"
+        # Re-install - always remove
+        response="Y"
     fi
 
     if [[ "$response" =~ ^[Yy]$ ]]; then
@@ -928,6 +1305,8 @@ Options:
   --skip-service        Skip systemd/launchd service installation
   --skip-deps           Skip dependency installation
   --dev                 Install development dependencies
+  --dry-run             Print the actions without executing them
+  --docker              Use Docker images from GHCR instead of local build
   --agent-branch NAME   CIRISAgent branch to install (default: main)
   --gui-branch NAME     CIRISGUI branch to install (default: main)
   --uninstall           Uninstall CIRIS
@@ -971,6 +1350,16 @@ main() {
                 DEV_MODE=true
                 shift
                 ;;
+            --dry-run)
+                DRY_RUN=true
+                shift
+                ;;
+            --docker)
+                DOCKER_MODE=true
+                SKIP_SERVICE=true
+                SKIP_DEPS=true
+                shift
+                ;;
             --agent-branch)
                 AGENT_BRANCH="$2"
                 shift 2
@@ -1001,6 +1390,32 @@ main() {
         exit 0
     fi
 
+    # Check for existing installation and prompt user
+    check_existing_installation
+
+    if [ "$DOCKER_MODE" = true ]; then
+        log_info "Docker mode enabled: using GHCR images"
+
+        ensure_docker
+        mkdir -p "$INSTALL_DIR"
+        create_env_file
+        create_docker_compose_file
+        start_docker_stack
+
+        if [ "$DRY_RUN" = true ]; then
+            log_success "Dry run complete. Docker commands were not executed."
+            return
+        fi
+
+        echo ""
+        echo -e "${GREEN}${BOLD}✓ Docker deployment Complete!${RESET}"
+        echo ""
+        echo "Agent API:  http://localhost:$AGENT_PORT"
+        echo "Web UI:     http://localhost:$GUI_PORT"
+        echo "Compose:    $INSTALL_DIR/docker-compose.yml"
+        return
+    fi
+
     # Show banner
     echo ""
     echo -e "${CYAN}${BOLD}"
@@ -1017,6 +1432,10 @@ main() {
     log_info "Installing CIRIS to $INSTALL_DIR"
     log_info "OS: $(detect_os)"
     log_info "Init: $(detect_init_system)"
+
+    if [ "$DRY_RUN" = true ]; then
+        log_warn "Dry run enabled: no changes will be made"
+    fi
 
     # Installation steps
     if [ "$SKIP_DEPS" = false ]; then
@@ -1040,6 +1459,11 @@ main() {
 
     create_helper_scripts
     install_services
+
+    if [ "$DRY_RUN" = true ]; then
+        log_success "Dry run complete. No changes were made."
+        return
+    fi
 
     # Success message
     echo ""
