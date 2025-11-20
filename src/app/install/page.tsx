@@ -67,7 +67,7 @@ export default function InstallPage() {
                 </p>
               </div>
               <div className="mt-3 text-xs text-gray-600 dark:text-gray-400">
-                <strong>Requirements:</strong> Python 3.9+
+                <strong>Requirements:</strong> Python 3.10+
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function InstallPage() {
                   </button>
                 </div>
                 <div className="mt-3 text-xs text-gray-600 dark:text-gray-400">
-                  <strong>Requirements:</strong> Linux/macOS/WSL2, Python 3.9+, Node.js 18+
+                  <strong>Requirements:</strong> Linux/macOS/WSL2, Python 3.10+, Node.js 18+
                 </div>
               </div>
 
@@ -259,7 +259,7 @@ export default function InstallPage() {
                   pip install fails
                 </summary>
                 <div className="border-t border-gray-200 p-4 text-sm text-gray-600 dark:border-gray-700 dark:text-gray-300">
-                  <p className="mb-2">Ensure you have Python 3.9 or higher:</p>
+                  <p className="mb-2">Ensure you have Python 3.10 or higher:</p>
                   <pre className="overflow-x-auto rounded-md bg-gray-900 p-2 text-xs text-gray-100">
                     python --version
                   </pre>

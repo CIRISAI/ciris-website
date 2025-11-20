@@ -34,7 +34,7 @@ export default function QuickInstall() {
         </div>
 
         <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          Windows, macOS, and Linux supported | Python 3.9+
+          Windows, macOS, and Linux supported | Python 3.10+
         </p>
 
         <Link
