@@ -25,7 +25,7 @@ export default function InstallPage() {
     <>
       <FloatingNav navItems={navItems} />
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black">
-        <div className="mx-auto max-w-4xl px-6 pt-32 pb-16">
+        <div className="mx-auto max-w-4xl px-6 pt-44 pb-16">
           {/* Hero */}
           <div className="text-center">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
