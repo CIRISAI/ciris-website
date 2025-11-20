@@ -6,7 +6,7 @@ export default function QuickInstall() {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("curl -sSL https://ciris.ai/install.sh | bash");
+    navigator.clipboard.writeText("pip install ciris-agent");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -18,12 +18,12 @@ export default function QuickInstall() {
           Quick Install
         </h2>
         <p className="mb-6 text-gray-600 dark:text-gray-400">
-          Get started with CIRIS in one command
+          Get started with CIRIS in seconds
         </p>
 
         <div className="relative mx-auto max-w-2xl">
           <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-left text-sm text-gray-100">
-            <code>curl -sSL https://ciris.ai/install.sh | bash</code>
+            <code>pip install ciris-agent</code>
           </pre>
           <button
             onClick={copyToClipboard}
@@ -34,14 +34,14 @@ export default function QuickInstall() {
         </div>
 
         <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          Linux, macOS, and WSL2 supported
+          Windows, macOS, and Linux supported | Python 3.9+
         </p>
 
         <Link
           href="/install"
           className="text-brand-primary hover:text-brand-primary/80 mt-4 inline-block font-semibold transition-colors"
         >
-          See full installation guide →
+          See all 5 installation methods →
         </Link>
       </div>
     </div>
