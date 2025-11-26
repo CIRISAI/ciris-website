@@ -79,7 +79,7 @@ export default function Homepage() {
       <HomeHeader
         headline="Your Personal AI."
         subheadline="An ethical agent that defers to you and your trusted advisors."
-        description="CIRIS is a personal, ethical agent that you can install on your own computer. It's designed to be a partner in your digital life, helping you make better decisions and navigate the complexities of the online world."
+        description="CIRIS brings multi-perspective ethical reasoning to your decision-making. Built on a foundation of transparency and accountability, it's designed to be a trusted partner in your digital life."
         mediaType="video"
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
@@ -118,8 +118,8 @@ export default function Homepage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="What is CIRIS"
-          subheadline="Your personal ethical AI."
-          copyText="CIRIS is a personal AI that you can install on your own computer. It's designed to be a partner in your digital life, helping you make better decisions and navigate the complexities of the online world. CIRIS is built on a foundation of ethical principles that ensure it always acts in your best interests."
+          subheadline="AI built for human flourishing, not market fit."
+          copyText="Unlike commercial AI assistants, CIRIS runs entirely on your hardware with complete transparency. It includes specialized agents for different needs—Sage for GDPR compliance, Datum for research, Echo for content moderation, Ally as your personal assistant, and Scout for customer service. Every decision is auditable, every action is accountable."
         />
         <QuickInstall />
         <SeparatorTitleBlock
@@ -127,7 +127,7 @@ export default function Homepage() {
           logoAlt="Brand logo icon"
           headline="You are in Control"
           subheadline="CIRIS defers to you and your trusted advisors."
-          copyText="CIRIS is designed to be your personal ethical agent. It will always defer to your judgment and the guidance of those you trust. You can customize its ethical framework to align with your own values and principles."
+          copyText="When faced with complex decisions, CIRIS uses its H3ERE pipeline to evaluate multiple ethical perspectives—then defers to you or advisors you designate. Your values shape its behavior. Your trusted circle provides wisdom. You maintain final authority over every action."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
         <CardsSection
@@ -135,21 +135,21 @@ export default function Homepage() {
             {
               headline: "Wisdom-Based Deferral",
               copyText:
-                "When faced with a difficult decision, CIRIS will defer to you or a designated trusted advisor. This ensures that you are always in control of the AI's actions.",
+                "Complex ethical questions get escalated to you or advisors you trust. CIRIS doesn't pretend to have all the answers—it knows when to ask for human wisdom.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Customizable Ethics",
+              headline: "Multi-Perspective Reasoning",
               copyText:
-                "You can customize CIRIS's ethical framework to align with your own values and principles. This allows you to create an AI that is truly your own.",
+                "The H3ERE pipeline evaluates decisions through multiple ethical lenses—Harm, Honesty, Human Rights, Equity, and Responsibility—before presenting options to you.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "User-Controlled",
+              headline: "Your Hardware, Your Data",
               copyText:
-                "CIRIS is a personal agent that you install on your own computer. You are in complete control of your data and the AI's operation.",
+                "Runs entirely on your machine. No cloud dependencies, no data harvesting, no surveillance. Install it, customize it, audit it—you're in complete control.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -177,23 +177,23 @@ export default function Homepage() {
         <CardsSection
           cardsData={[
             {
-              headline: "Fast Performance",
+              headline: "Type-Safe Architecture",
               copyText:
-                "Experience lightning-fast performance with our optimized solutions designed to scale with your business needs.",
+                "Built on The Three Rules: No Untyped Dicts, No Bypass Patterns, No Exceptions. Every interaction is validated through Pydantic models, creating an immutable audit trail.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Secure & Reliable",
+              headline: "22 Core Services",
               copyText:
-                "Built with security at its core, ensuring your data and applications are protected with enterprise-grade encryption.",
+                "From ethical reasoning and memory management to secure communications and bias detection—CIRIS coordinates specialized services that work together transparently.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Easy Integration",
+              headline: "Open Source Foundation",
               copyText:
-                "Seamlessly integrate with your existing workflow and tools. Get started in minutes, not hours.",
+                "Inspect the code, verify the behavior, contribute improvements. Transparency isn't a feature—it's the foundation of trust.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -212,9 +212,9 @@ export default function Homepage() {
           buttonText="Get in Touch"
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Futureproofing AI."
-          subheadline="ETHICS at the core."
-          copyText="CIRIS is designed to adapt and evolve with the rapidly changing landscape of AI ethics. By embedding ethical principles into the core of AI systems, CIRIS ensures that these systems remain aligned with human values and societal norms, even as they learn and grow."
+          headline="Built for Humanity."
+          subheadline="Forever open source, no profit motive."
+          copyText="Education and Healthcare agents are coming soon, joining Scout, Sage, Datum, Echo, and Ally. CIRIS will always remain open source with no profit motive—because AI that serves humanity shouldn't be driven by market forces. As AI capabilities grow, our commitment to ethical principles remains constant."
         />{" "}
         <NewsletterForm />
         <Footer />
