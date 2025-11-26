@@ -108,7 +108,15 @@ export default function Homepage() {
             <Corner bottom={0} right={0} />
           </>
         </Cursor>
-        
+
+        <FlexSection
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="Built by Volunteers, Funded by Values"
+          subheadline="100% open source, zero funding received."
+          copyText="CIRIS has received zero funding to date. Every line of code, every ethical decision, every design choice has been created by 100% volunteers who believe AI should serve humanity, not profit motives. We are actively seeking grants and other ethical fundraising options to begin compensating our team for their extraordinary dedication. If you know of opportunities aligned with our mission, we'd love to hear from you."
+        />
+
         <SeparatorTitleBlock
           animateNumber={true}
           animateNumberValue={3}
