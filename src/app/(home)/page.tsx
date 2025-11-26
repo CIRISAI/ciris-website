@@ -77,9 +77,9 @@ export default function Homepage() {
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="Ethical AI."
-        subheadline="A comprehensive, free and robust way to employ Ethics in AI"
-        description="CIRIS.ai balances autonomous AI decision-making with meaningful human oversight, delivering resilient, transparent ethical intelligence for critical systems."
+        headline="Your Personal AI."
+        subheadline="An ethical agent that defers to you and your trusted advisors."
+        description="CIRIS is a personal, ethical agent that you can install on your own computer. It's designed to be a partner in your digital life, helping you make better decisions and navigate the complexities of the online world."
         mediaType="video"
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
@@ -118,145 +118,42 @@ export default function Homepage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="What is CIRIS"
-          subheadline="An ethical Framework for the rest of us."
-          copyText="CIRIS (Core Identity, Integrity, Resilience, Incompleteness Awareness, and Signalling Gratitude / Sustained Coherence) is an advanced ethical governance framework for autonomous AI systems. It ensures that AI operates with clear ethical coherence, principled transparency, and meaningful human oversight."
+          subheadline="Your personal ethical AI."
+          copyText="CIRIS is a personal AI that you can install on your own computer. It's designed to be a partner in your digital life, helping you make better decisions and navigate the complexities of the online world. CIRIS is built on a foundation of ethical principles that ensure it always acts in your best interests."
         />
         <QuickInstall />
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="How CIRIS Works"
-          subheadline="Ethical Governance Through Recursive Decision-Making"
-          copyText="At the heart of CIRIS is the Hyper3 Ethical Recursive Engine (H3ERE), which employs a 3×3×3 ethical reasoning structure:"
+          headline="You are in Control"
+          subheadline="CIRIS defers to you and your trusted advisors."
+          copyText="CIRIS is designed to be your personal ethical agent. It will always defer to your judgment and the guidance of those you trust. You can customize its ethical framework to align with your own values and principles."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
-        <ImageHeroBlockLeftBottom
-          backgroundImageSrc="/overview.svg"
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="An overview of CIRIS"
-          subheadline="CIRIS is a comprehensive ethical framework for AI systems"
-          copyText="CIRIS employs a 3x3x3 structure for ethical decision-making, ensuring that every action is guided by core principles, contextual knowledge, and behavioral handlers. This recursive approach guarantees that AI systems maintain ethical integrity, transparency, and resilience in their operations."
-        />
-        <SeparatorTitleBlock
-          animateNumber={true}
-          animateNumberValue={3}
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Decision-Making Algorithms"
-          subheadline="DMAs collectively ensure robust, multi-dimensional ethical validation."
-        />
         <CardsSection
           cardsData={[
             {
-              headline: "Principled DMA (PDMA)",
+              headline: "Wisdom-Based Deferral",
               copyText:
-                "Ensures all decisions align strictly with core ethical principles, including beneficence, non-maleficence, integrity, transparency, autonomy, and justice.",
+                "When faced with a difficult decision, CIRIS will defer to you or a designated trusted advisor. This ensures that you are always in control of the AI's actions.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Secure & Reliable",
+              headline: "Customizable Ethics",
               copyText:
-                "Built with security at its core, ensuring your∫ data and applications are protected with enterprise-grade encryption.",
+                "You can customize CIRIS's ethical framework to align with your own values and principles. This allows you to create an AI that is truly your own.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Easy Integration",
+              headline: "User-Controlled",
               copyText:
-                "Seamlessly integrate with your existing workflow and tools. Get started in minutes, not hours.",
+                "CIRIS is a personal agent that you install on your own computer. You are in complete control of your data and the AI's operation.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
           ]}
-        />
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          animateNumber={true}
-          animateNumberValue={3}
-          headline="Contextual Knowledge Graphs"
-          subheadline="Environmental, Core Identity, and Task-Specific"
-          copyText="CIRIS employs three distinct Contextual Knowledge Graphs (CKGs) to ensure that ethical decisions are informed, relevant, and aligned with the agent's operational context."
-        />
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Core Identity Graph",
-              copyText:
-                "Ensures all decisions align strictly with core ethical principles, including beneficence, non-maleficence, integrity, transparency, autonomy, and justice.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Environmental Graph",
-
-              copyText:
-                "Provides a robust, common-sense model of the external world, enabling consistent and understandable interactions.  ",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Task-Specific Graph",
-              copyText:
-                "Contains detailed, mission-specific context, ensuring informed, relevant decision-making tailored precisely to the agent’s operational objectives.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          animateNumber={true}
-          animateNumberValue={3}
-          headline="Core Behavioral Handlers"
-          subheadline="CIRIS employs three core behavioral handlers to manage ethical decision-making and operational coherence."
-          copyText="These handlers ensure that the agent can act, remember, and defer decisions in a manner that maintains ethical integrity and operational efficiency."
-        />
-        <Image
-          alt="decoration static image"
-          width={1500}
-          height={1000}
-          className="border-brand-primary mb-8 border-t border-b"
-          src={"overview1.svg"}
-        />
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Action Handler",
-              copyText:
-                "Executes ethically approved actions. Can Speak (communicate decisions), Act (implement direct actions), or Listen (monitor and intake new information).",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Memory Handler",
-
-              copyText:
-                "Manages ethical coherence by deciding when to Memorize (store important ethical reasoning and context), Remember (recall past decisions), or Forget (discard outdated or irrelevant information).",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Deferral Handler",
-              copyText:
-                "Manages uncertainty or high-stakes decisions by choosing to Ignore (continue without action), Ponder (revisit in subsequent cycles), or Defer/Reject (escalate the decision to human wisdom or reject it outright).",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-        <div className="mb-8"></div>
-        <FlexSection
-          // buttonHref="ddsfgsdf"
-          // buttonText="Click me"
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Recursive Ethical Evaluation "
-          subheadline="PDMA Engine"
-          copyText="Decisions made by the CIRIS agent aren't simply one-off ethical checks—they undergo continuous recursive evaluation. When the system generates a 'thought' (a decision or insight from a prior action), this thought enters a queue. Each thought is rigorously assessed through the three DMAs. The results from these DMAs are synthesized in a final recursive PDMA review, ensuring every decision maintains ethical alignment, coherence, and transparency."
         />
         <AccordionSection
           logoSrc="logoIcon"
