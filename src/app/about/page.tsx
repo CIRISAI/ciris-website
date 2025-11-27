@@ -30,19 +30,22 @@ export default function Homepage() {
       // Hide the container until the fonts are loaded
       containerRef.current.style.visibility = "visible";
 
-      const { words } = splitText(containerRef.current.querySelector("h1")!);
+      const h1 = containerRef.current.querySelector("h1");
+      if (h1) {
+        const { words } = splitText(h1);
 
-      // Animate the words in the h1
-      animate(
-        words,
-        { opacity: [0, 1], y: [10, 0] },
-        {
-          type: "spring",
-          duration: 2,
-          bounce: 0,
-          delay: stagger(0.05),
-        }
-      );
+        // Animate the words in the h1
+        animate(
+          words,
+          { opacity: [0, 1], y: [10, 0] },
+          {
+            type: "spring",
+            duration: 2,
+            bounce: 0,
+            delay: stagger(0.05),
+          }
+        );
+      }
     });
   }, []);
   useEffect(() => {
@@ -176,6 +179,7 @@ export default function Homepage() {
           </p>
           </div>
         </div>
+        <Stylesheet />
       </div>
       <div>
         <ImageHeroBlock
