@@ -36,6 +36,16 @@ export default function InstallPage() {
             </p>
           </div>
 
+          {/* Android App Coming Soon */}
+          <div className="mt-8 rounded-lg border-2 border-blue-500 bg-blue-50 p-4 text-center dark:border-blue-400 dark:bg-blue-900/20">
+            <p className="text-sm font-semibold text-gray-900 dark:text-white">
+              📱 Android App Coming Soon
+            </p>
+            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400">
+              Mobile installation will be available via Google Play Store
+            </p>
+          </div>
+
           {/* Method 1: pip (Preferred) */}
           <div className="mt-12">
             <div className="rounded-lg border-2 border-green-500 bg-green-50 p-6 shadow-lg dark:border-green-400 dark:bg-green-900/20">

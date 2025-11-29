@@ -26,6 +26,12 @@ const navItems = [
     icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
+    name: "Services",
+    subtitle: "Android App & Hosted LLM",
+    link: "/services",
+    icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
     name: "Install",
     subtitle: "Get Started Now",
     link: "/install",
