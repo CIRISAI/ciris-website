@@ -79,13 +79,13 @@ export const FloatingNav = ({
         </div>
 
         {/* Mobile Nav Items */}
-        <div className="flex md:hidden items-center gap-3 mb-2">
+        <div className="flex md:hidden items-center gap-1.5 mb-2 flex-wrap justify-center">
           {navItems.map((navItem: any, idx: number) => (
             <Link
               key={`mobile-link=${idx}`}
               href={navItem.link}
               className={cn(
-                "text-xs font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+                "text-[10px] font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white whitespace-nowrap"
               )}
             >
               {navItem.name}
