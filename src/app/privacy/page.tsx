@@ -661,57 +661,156 @@ export default function PrivacyPage() {
             </ul>
           </div>
 
-          {/* Third Parties */}
+          {/* Subprocessors */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              10. Third-Party Services
+              10. Subprocessors & Third-Party Services
             </h2>
-            <div className="mb-6">
-              <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
+            <p className="mb-4 text-gray-700 dark:text-gray-300">
+              Per GDPR Article 28, we maintain a list of subprocessors who process data on our behalf.
+              All subprocessors are contractually bound to equivalent data protection standards.
+            </p>
+
+            <div className="mb-6 rounded-lg border-2 border-red-500 bg-red-50 p-4 dark:bg-red-900/20">
+              <h3 className="mb-2 font-semibold text-red-800 dark:text-red-300">
                 We Do NOT:
               </h3>
-              <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-300">
+              <ul className="list-inside list-disc space-y-1 text-sm text-red-700 dark:text-red-300">
                 <li>Sell your data to anyone</li>
                 <li>Share data with advertisers or marketing platforms</li>
-                <li>Use your content to train AI models</li>
-                <li>Provide data to analytics services (we self-host all analytics)</li>
+                <li>Allow subprocessors to train AI models on your content</li>
+                <li>Use third-party analytics services (we self-host all analytics)</li>
               </ul>
             </div>
-            <div className="mb-6">
-              <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
-                We DO Share Data With:
-              </h3>
-              <div className="space-y-3">
-                <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-                  <h4 className="mb-2 font-semibold text-gray-900 dark:text-white">Stripe (Payment Processing)</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    For credit purchases only. We do not store credit card information. Stripe's privacy policy: <a href="https://stripe.com/privacy" className="text-blue-600 hover:underline dark:text-blue-400">stripe.com/privacy</a>
-                  </p>
-                </div>
-                <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-                  <h4 className="mb-2 font-semibold text-gray-900 dark:text-white">Google OAuth (Optional Authentication)</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    If you choose Google login, we receive name, email, and profile photo. Google's privacy policy: <a href="https://policies.google.com/privacy" className="text-blue-600 hover:underline dark:text-blue-400">policies.google.com/privacy</a>
-                  </p>
-                </div>
-                <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-                  <h4 className="mb-2 font-semibold text-gray-900 dark:text-white">LLM Providers (OpenRouter, Groq, Together)</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Your prompts are sent to LLM providers for processing. We use providers with strong privacy commitments and no training policies.
-                  </p>
-                </div>
+
+            <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
+              10.1 Subprocessor List
+            </h3>
+            <div className="mb-6 overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Provider</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Purpose</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Location</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Data Retention</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">DPA</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-700 dark:text-gray-300">
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3 font-medium">Vultr</td>
+                    <td className="p-3">Infrastructure hosting</td>
+                    <td className="p-3">US (configurable)</td>
+                    <td className="p-3">We control</td>
+                    <td className="p-3"><a href="https://www.vultr.com/legal/compliance/" className="text-blue-600 hover:underline dark:text-blue-400">Available</a></td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3 font-medium">Groq</td>
+                    <td className="p-3">LLM inference</td>
+                    <td className="p-3">US</td>
+                    <td className="p-3 text-green-600 dark:text-green-400">Zero (default)</td>
+                    <td className="p-3"><a href="https://console.groq.com/docs/legal/customer-data-processing-addendum" className="text-blue-600 hover:underline dark:text-blue-400">Signed</a></td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3 font-medium">OpenRouter</td>
+                    <td className="p-3">LLM routing</td>
+                    <td className="p-3">US/EU</td>
+                    <td className="p-3 text-green-600 dark:text-green-400">Zero (enforced)</td>
+                    <td className="p-3"><a href="https://openrouter.ai/enterprise" className="text-blue-600 hover:underline dark:text-blue-400">Enterprise</a></td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3 font-medium">Together AI</td>
+                    <td className="p-3">LLM inference</td>
+                    <td className="p-3">US</td>
+                    <td className="p-3 text-green-600 dark:text-green-400">Zero (configured)</td>
+                    <td className="p-3"><a href="https://www.together.ai/privacy" className="text-blue-600 hover:underline dark:text-blue-400">Privacy Policy</a></td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3 font-medium">Stripe</td>
+                    <td className="p-3">Payment processing</td>
+                    <td className="p-3">US/EU</td>
+                    <td className="p-3">Per Stripe policy</td>
+                    <td className="p-3"><a href="https://stripe.com/legal/dpa" className="text-blue-600 hover:underline dark:text-blue-400">Available</a></td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-medium">Google</td>
+                    <td className="p-3">OAuth authentication</td>
+                    <td className="p-3">US/EU</td>
+                    <td className="p-3">Per Google policy</td>
+                    <td className="p-3"><a href="https://cloud.google.com/terms/data-processing-addendum" className="text-blue-600 hover:underline dark:text-blue-400">Available</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
+              10.2 LLM Provider Details
+            </h3>
+            <div className="mb-6 space-y-3">
+              <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+                <h4 className="mb-2 font-semibold text-gray-900 dark:text-white">Groq</h4>
+                <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
+                  High-performance LLM inference. Zero data retention by default. EU Representative: DP-Dock GmbH (Hamburg).
+                  Never trains on customer data.
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-500">
+                  <a href="https://console.groq.com/docs/your-data" className="text-blue-600 hover:underline dark:text-blue-400">Data handling</a> |{" "}
+                  <a href="https://trust.groq.com/" className="text-blue-600 hover:underline dark:text-blue-400">Trust Center</a>
+                </p>
+              </div>
+              <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+                <h4 className="mb-2 font-semibold text-gray-900 dark:text-white">OpenRouter</h4>
+                <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
+                  LLM routing with Zero Data Retention (ZDR) enforcement. EU routing available. SOC-2 compliant.
+                  Prompts/completions not logged by default.
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-500">
+                  <a href="https://openrouter.ai/docs/features/privacy-and-logging" className="text-blue-600 hover:underline dark:text-blue-400">Privacy & Logging</a> |{" "}
+                  <a href="https://trust.openrouter.ai/" className="text-blue-600 hover:underline dark:text-blue-400">Trust Center</a>
+                </p>
+              </div>
+              <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+                <h4 className="mb-2 font-semibold text-gray-900 dark:text-white">Together AI</h4>
+                <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
+                  LLM inference and fine-tuning platform. Configured for zero data retention on CIRIS requests.
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-500">
+                  <a href="https://www.together.ai/privacy" className="text-blue-600 hover:underline dark:text-blue-400">Privacy Policy</a>
+                </p>
               </div>
             </div>
-            <div>
-              <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
-                We MAY Share Data:
-              </h3>
-              <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-300">
-                <li>When required by law (subpoenas, court orders)</li>
-                <li>To prevent imminent harm or illegal activity</li>
-                <li>With your explicit written consent</li>
-                <li>In anonymized/aggregated form for research (no PII)</li>
-              </ul>
+
+            <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
+              10.3 Infrastructure
+            </h3>
+            <div className="mb-6 rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+              <h4 className="mb-2 font-semibold text-gray-900 dark:text-white">Vultr Cloud Hosting</h4>
+              <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
+                GDPR-ready cloud infrastructure. Data residency controlled by CIRIS - your data stays where we put it.
+                Vultr acts as data processor; we control all data handling. Standard Contractual Clauses (SCCs) for EU transfers.
+              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-500">
+                <a href="https://www.vultr.com/legal/eea-gdpr-privacy/" className="text-blue-600 hover:underline dark:text-blue-400">GDPR Privacy</a> |{" "}
+                <a href="https://www.vultr.com/trust-center/" className="text-blue-600 hover:underline dark:text-blue-400">Trust Center</a>
+              </p>
+            </div>
+
+            <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
+              10.4 We MAY Share Data
+            </h3>
+            <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-300">
+              <li>When required by law (subpoenas, court orders)</li>
+              <li>To prevent imminent harm or illegal activity</li>
+              <li>With your explicit written consent</li>
+              <li>In anonymized/aggregated form for research (no PII)</li>
+            </ul>
+
+            <div className="mt-6 rounded-md bg-blue-50 p-4 dark:bg-blue-900/20">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                <strong>Subprocessor Changes:</strong> We will notify users at least 30 days before adding new subprocessors
+                that handle personal data. You may object to new subprocessors by contacting privacy@ciris.ai.
+              </p>
             </div>
           </div>
 
