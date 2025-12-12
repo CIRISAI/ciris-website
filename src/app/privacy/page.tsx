@@ -15,10 +15,29 @@ export default function PrivacyPage() {
               CIRIS Privacy Policy
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-              Last Updated: November 29, 2025
+              Last Updated: December 12, 2025
             </p>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
-              Version 1.3.0
+              Version 1.4.0
+            </p>
+          </div>
+
+          {/* The Big Promise */}
+          <div className="mb-12 rounded-lg border-4 border-green-600 bg-green-50 p-8 dark:bg-green-900/30">
+            <h2 className="mb-4 text-3xl font-bold text-green-800 dark:text-green-300">
+              Zero data retention. Your conversations aren't stored anywhere.
+            </h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300">
+              <strong>Your device stores your data locally</strong> - for your own use and for your personal agent to learn from
+              (based on your <a href="#consent-system" className="font-semibold text-green-700 underline hover:text-green-800 dark:text-green-400 dark:hover:text-green-300">consent level</a>).
+            </p>
+            <p className="mt-4 text-gray-700 dark:text-gray-300">
+              <strong>When you use our LLM proxy</strong>, your messages are transmitted securely to our servers, then to our
+              AI providers (Together, Groq, OpenRouter) for processing. <strong>All points in this pipeline are configured for
+              zero data retention</strong> - your conversations are processed and immediately discarded, never stored.
+            </p>
+            <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+              See <a href="#infrastructure" className="font-semibold text-green-700 underline hover:text-green-800 dark:text-green-400 dark:hover:text-green-300">Infrastructure Data</a> for what our servers actually store (spoiler: only billing metrics and system health - never message content).
             </p>
           </div>
 
@@ -30,11 +49,19 @@ export default function PrivacyPage() {
             <ul className="space-y-2 text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-2">
                 <span className="text-green-600 dark:text-green-400">✓</span>
+                <span><strong>Zero data retention</strong> - Your conversations are processed and discarded, never stored on our servers or by our LLM providers</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 dark:text-green-400">✓</span>
+                <span><strong>Local-first storage</strong> - Your device keeps your data for your personal agent (under your control)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 dark:text-green-400">✓</span>
                 <span>We do NOT train AI models on your raw content or messages</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 dark:text-blue-400">ℹ</span>
-                <span>Hosted agents (ciris.ai) DO self-train on patterns and data from your interactions according to the <a href="#consent-system" className="font-semibold text-blue-600 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">Consensual Evolution Protocol</a></span>
+                <span>Your personal agent learns from your local data via <a href="#consent-system" className="font-semibold text-blue-600 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">Consensual Evolution Protocol</a> (your device, your control)</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-green-600 dark:text-green-400">✓</span>
@@ -42,15 +69,7 @@ export default function PrivacyPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-green-600 dark:text-green-400">✓</span>
-                <span>Message content retained for maximum 14 days (pilot phase)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 dark:text-green-400">✓</span>
-                <span>You can request your data or complete deletion anytime</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 dark:text-green-400">✓</span>
-                <span>Default consent is TEMPORARY (14-day auto-delete, essential interactions only)</span>
+                <span>You can delete your local data anytime - it's on YOUR device</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-green-600 dark:text-green-400">✓</span>
@@ -110,16 +129,27 @@ export default function PrivacyPage() {
             </h2>
 
             <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
-              1.1 CIRIS Agents
+              1.1 CIRIS Agents (Local Device Storage)
             </h3>
+            <div className="mb-4 rounded-md bg-blue-50 p-3 dark:bg-blue-900/20">
+              <p className="text-sm text-blue-800 dark:text-blue-300">
+                <strong>Local-First Architecture:</strong> Your agent data is stored on YOUR device (phone, computer) - not on CIRIS servers.
+                You have full control over this data and can delete it anytime.
+              </p>
+            </div>
             <ul className="mb-6 list-inside list-disc space-y-2 text-gray-700 dark:text-gray-300">
-              <li><strong>Interaction Data:</strong> Messages, commands, and agent responses</li>
-              <li><strong>H3ERE Decision Logs:</strong> Ethical reasoning steps (PDMA pipeline) for transparency and auditability</li>
-              <li><strong>Memory Graph:</strong> Relationships and patterns stored in graph database (consent-dependent)</li>
-              <li><strong>Metadata:</strong> Timestamps, occurrence IDs, task IDs, round counts</li>
-              <li><strong>Audit Trail:</strong> Complete history of all agent actions with Ed25519 signatures</li>
-              <li><strong>Telemetry:</strong> Performance metrics, resource usage, error rates (aggregated)</li>
+              <li><strong>Interaction Data (local):</strong> Messages and agent responses stored on your device for your use</li>
+              <li><strong>H3ERE Decision Logs (local):</strong> Ethical reasoning steps stored locally for transparency</li>
+              <li><strong>Memory Graph (local, consent-dependent):</strong> Relationships and patterns your agent learns - stored on your device based on your <a href="#consent-system" className="text-blue-600 underline dark:text-blue-400">consent level</a></li>
+              <li><strong>Metadata (local):</strong> Timestamps, task IDs, round counts - for your agent's operation</li>
+              <li><strong>Audit Trail (local):</strong> History of agent actions with Ed25519 signatures - on your device</li>
             </ul>
+            <div className="mb-6 rounded-md bg-green-50 p-3 dark:bg-green-900/20">
+              <p className="text-sm text-green-800 dark:text-green-300">
+                <strong>What we DON'T have access to:</strong> Your conversations, your agent's memories, your local data.
+                None of this is transmitted to CIRIS servers.
+              </p>
+            </div>
 
             <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
               1.2 Scout Web App
@@ -348,62 +378,164 @@ export default function PrivacyPage() {
             </div>
           </div>
 
-          {/* Data Retention */}
-          <div className="mb-12">
+          {/* Infrastructure Data */}
+          <div id="infrastructure" className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              5. Data Retention Periods
+              5. What Our Servers Actually Store
             </h2>
-            <div className="overflow-x-auto">
+            <p className="mb-4 text-gray-700 dark:text-gray-300">
+              While your conversations stay on your device, our infrastructure does collect some data for billing and system monitoring.
+              Here's exactly what we store - and what we don't.
+            </p>
+
+            <div className="mb-6 rounded-lg border-2 border-red-500 bg-red-50 p-4 dark:bg-red-900/20">
+              <h3 className="mb-2 font-semibold text-red-800 dark:text-red-300">
+                What Our Servers NEVER Store:
+              </h3>
+              <ul className="list-inside list-disc space-y-1 text-sm text-red-700 dark:text-red-300">
+                <li>Your messages or conversation content</li>
+                <li>AI responses to you</li>
+                <li>User-generated text of any kind</li>
+                <li>Payment card numbers (handled by Stripe/Google Play)</li>
+                <li>Your agent's memories or learned patterns</li>
+              </ul>
+            </div>
+
+            <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
+              5.1 CIRISLens (System Monitoring)
+            </h3>
+            <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+              Our observability platform monitors system health - not your content.
+            </p>
+            <div className="mb-6 overflow-x-auto">
               <table className="w-full border-collapse text-sm">
                 <thead>
                   <tr className="border-b border-gray-200 dark:border-gray-700">
                     <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Data Type</th>
-                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Retention Period</th>
-                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">After Deletion</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Retention</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Contains User Content?</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-700 dark:text-gray-300">
                   <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <td className="p-3">Message Content</td>
-                    <td className="p-3">14 days (pilot phase)</td>
-                    <td className="p-3">Permanently deleted</td>
+                    <td className="p-3">Performance Metrics (CPU, memory, latency)</td>
+                    <td className="p-3">30 days</td>
+                    <td className="p-3 text-green-600 dark:text-green-400">No</td>
                   </tr>
                   <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <td className="p-3">PDMA Decision Logs</td>
+                    <td className="p-3">Service Logs (operational events)</td>
+                    <td className="p-3">14-90 days</td>
+                    <td className="p-3 text-green-600 dark:text-green-400">No (PII redacted)</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3">Request Traces (timing, request IDs)</td>
                     <td className="p-3">14 days</td>
-                    <td className="p-3">Hashed for pattern detection only</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <td className="p-3">Audit Trail</td>
-                    <td className="p-3">90 days</td>
-                    <td className="p-3">Deleted after compliance period</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <td className="p-3">Incident Reports</td>
-                    <td className="p-3">90 days</td>
-                    <td className="p-3">Deleted unless legally required</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <td className="p-3">Billing Records</td>
-                    <td className="p-3">7 years</td>
-                    <td className="p-3">Legal requirement (tax/compliance)</td>
-                  </tr>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <td className="p-3">System Metrics</td>
-                    <td className="p-3">Indefinite</td>
-                    <td className="p-3">Aggregated only, no PII</td>
+                    <td className="p-3 text-green-600 dark:text-green-400">No (IDs only)</td>
                   </tr>
                   <tr>
-                    <td className="p-3">CIRISProxy Logs</td>
-                    <td className="p-3">7 days</td>
-                    <td className="p-3">Permanently deleted (no content logged)</td>
+                    <td className="p-3">Aggregated Metrics (hourly/daily)</td>
+                    <td className="p-3">90 days - 1 year</td>
+                    <td className="p-3 text-green-600 dark:text-green-400">No</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div className="mt-4 rounded-md bg-blue-50 p-4 dark:bg-blue-900/20">
+
+            <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
+              5.2 CIRISBilling (Financial Records)
+            </h3>
+            <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+              Required for billing, fraud prevention, and regulatory compliance.
+            </p>
+            <div className="mb-6 overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Data Type</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Retention</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-700 dark:text-gray-300">
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3">Account email</td>
+                    <td className="p-3">Until account deletion</td>
+                    <td className="p-3">Account identification</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3">Transaction history (amounts, dates)</td>
+                    <td className="p-3">10 years</td>
+                    <td className="p-3">EU AI Act / Tax compliance</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3">Credit/usage counts (integers only)</td>
+                    <td className="p-3">10 years</td>
+                    <td className="p-3">Billing records</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Admin audit logs</td>
+                    <td className="p-3">10 years</td>
+                    <td className="p-3">Security audit trail</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="rounded-md bg-blue-50 p-4 dark:bg-blue-900/20">
               <p className="text-sm text-gray-700 dark:text-gray-300">
-                <strong>Note:</strong> These are maximum retention periods. We will not extend these periods without explicit user consent and advance notice. We aim to retain data for the shortest period necessary.
+                <strong>10-Year Archive (EU AI Act Compliance):</strong> Financial records are automatically archived to
+                encrypted cold storage (AWS Glacier) and deleted after 10 years. Archives contain only transaction data -
+                never conversation content.
+              </p>
+            </div>
+          </div>
+
+          {/* Local Data Retention */}
+          <div className="mb-12">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
+              6. Your Local Data Retention
+            </h2>
+            <p className="mb-4 text-gray-700 dark:text-gray-300">
+              Data stored on YOUR device is under YOUR control. Here are the default retention settings
+              (which you can modify):
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Local Data Type</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Default Retention</th>
+                    <th className="p-3 text-left font-semibold text-gray-900 dark:text-white">Your Control</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-700 dark:text-gray-300">
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3">Conversation History</td>
+                    <td className="p-3">Until you delete it</td>
+                    <td className="p-3">Delete anytime in app</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3">Agent Memory Graph</td>
+                    <td className="p-3">Based on consent level</td>
+                    <td className="p-3">Clear memories in settings</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3">PDMA Decision Logs</td>
+                    <td className="p-3">14 days (configurable)</td>
+                    <td className="p-3">Adjust in privacy settings</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3">Local Audit Trail</td>
+                    <td className="p-3">90 days (configurable)</td>
+                    <td className="p-3">Export or delete anytime</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-4 rounded-md bg-green-50 p-4 dark:bg-green-900/20">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                <strong>It's your device, your data.</strong> You can delete all local data at any time by uninstalling
+                the app or using the "Clear All Data" option in settings. We have no backup of your local data.
               </p>
             </div>
           </div>
@@ -411,7 +543,7 @@ export default function PrivacyPage() {
           {/* 90-Day Decay */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              5. 90-Day Decay Protocol
+              7. 90-Day Decay Protocol
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               When you revoke consent or request deletion, we initiate a 90-day decay process:
@@ -456,7 +588,7 @@ export default function PrivacyPage() {
           {/* Your Rights */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              6. Your Privacy Rights
+              8. Your Privacy Rights
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               Under GDPR, CCPA, and other privacy regulations, you have the following rights:
@@ -516,7 +648,7 @@ export default function PrivacyPage() {
           {/* Data Security */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              7. Data Security Measures
+              9. Data Security Measures
             </h2>
             <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-300">
               <li><strong>Encryption:</strong> TLS 1.3 for all network traffic, AES-256 for data at rest</li>
@@ -532,7 +664,7 @@ export default function PrivacyPage() {
           {/* Third Parties */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              8. Third-Party Services
+              10. Third-Party Services
             </h2>
             <div className="mb-6">
               <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
@@ -586,7 +718,7 @@ export default function PrivacyPage() {
           {/* International Transfers */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              9. International Data Transfers
+              11. International Data Transfers
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               CIRIS services are hosted in the United States. If you access our services from outside the US, your data will be transferred to and processed in the US.
@@ -604,7 +736,7 @@ export default function PrivacyPage() {
           {/* Children */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              10. Children's Privacy
+              12. Children's Privacy
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               CIRIS services are not directed to children under 13 (or 16 in the EU). We do not knowingly collect personal information from children.
@@ -617,7 +749,7 @@ export default function PrivacyPage() {
           {/* Changes to Policy */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              11. Changes to This Policy
+              13. Changes to This Policy
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               We may update this privacy policy to reflect changes in our practices, technology, legal requirements, or other factors.
@@ -641,7 +773,7 @@ export default function PrivacyPage() {
           {/* Covenant */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              12. CIRIS Covenant Principles
+              14. CIRIS Covenant Principles
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               This privacy policy is governed by the CIRIS Covenant (Version 1.0-β), which establishes our ethical foundation:
@@ -673,7 +805,7 @@ export default function PrivacyPage() {
           {/* Contact */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              13. Contact Information
+              15. Contact Information
             </h2>
             <div className="rounded-lg border-2 border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
               <p className="mb-4 text-gray-700 dark:text-gray-300">
@@ -693,7 +825,7 @@ export default function PrivacyPage() {
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
             <p>CIRIS - Ethical AI by Design</p>
             <p className="mt-2">© 2025 Eric Moore and CIRIS L3C | Apache 2.0 License</p>
-            <p className="mt-2">Last Updated: November 29, 2025 | Version 1.3.0</p>
+            <p className="mt-2">Last Updated: December 12, 2025 | Version 1.4.0</p>
           </div>
         </div>
       </div>
