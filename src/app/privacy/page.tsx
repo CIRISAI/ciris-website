@@ -18,21 +18,21 @@ export default function PrivacyPage() {
               Last Updated: December 12, 2025
             </p>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
-              Version 1.4.0
+              Version 1.5.0
             </p>
           </div>
 
           {/* The Big Promise */}
           <div className="mb-12 rounded-lg border-4 border-green-600 bg-green-50 p-8 dark:bg-green-900/30">
             <h2 className="mb-4 text-3xl font-bold text-green-800 dark:text-green-300">
-              Zero data retention. Your conversations aren't stored anywhere.
+              For Android App & CIRISProxy: Zero data retention.
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300">
-              <strong>Your device stores your data locally</strong> - for your own use and for your personal agent to learn from
+              <strong>Android App:</strong> Your data stays on your device - for your own use and for your personal agent to learn from
               (based on your <a href="#consent-system" className="font-semibold text-green-700 underline hover:text-green-800 dark:text-green-400 dark:hover:text-green-300">consent level</a>).
             </p>
             <p className="mt-4 text-gray-700 dark:text-gray-300">
-              <strong>When you use our LLM proxy</strong>, your messages are transmitted securely to our servers, then to our
+              <strong>CIRISProxy:</strong> When you use our LLM proxy, your messages are transmitted securely to our servers, then to our
               AI providers (Together, Groq, OpenRouter) for processing. <strong>All points in this pipeline are configured for
               zero data retention</strong> - your conversations are processed and immediately discarded, never stored.
             </p>
@@ -41,11 +41,31 @@ export default function PrivacyPage() {
             </p>
           </div>
 
+          {/* Research Services Notice */}
+          <div className="mb-12 rounded-lg border-4 border-yellow-500 bg-yellow-50 p-8 dark:bg-yellow-900/30">
+            <h2 className="mb-4 text-3xl font-bold text-yellow-800 dark:text-yellow-300">
+              For Research Services: Data is recorded.
+            </h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300">
+              <strong>scout.ciris.ai</strong> and <strong>agents.ciris.ai</strong> are research platforms.
+              Data is recorded per clear on-site statements and may be used for research, improving future agent templates,
+              and model selection.
+            </p>
+            <p className="mt-4 text-gray-700 dark:text-gray-300">
+              These services implement the <a href="#consent-system" className="font-semibold text-yellow-700 underline hover:text-yellow-800 dark:text-yellow-400 dark:hover:text-yellow-300">Consensual Evolution Protocol</a> and
+              provide full DSAR support. All model and prompt changes that impact responses are publicly available at{" "}
+              <a href="https://github.com/cirisai" className="font-semibold text-yellow-700 underline hover:text-yellow-800 dark:text-yellow-400 dark:hover:text-yellow-300">github.com/cirisai</a>.
+            </p>
+          </div>
+
           {/* Key Commitments */}
           <div className="mb-12 rounded-lg border-2 border-green-500 bg-green-50 p-6 dark:bg-green-900/20">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
               Our Core Privacy Commitments
             </h2>
+            <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+              For Android App and CIRISProxy (services covered by this policy):
+            </p>
             <ul className="space-y-2 text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-2">
                 <span className="text-green-600 dark:text-green-400">✓</span>
@@ -71,11 +91,21 @@ export default function PrivacyPage() {
                 <span className="text-green-600 dark:text-green-400">✓</span>
                 <span>You can delete your local data anytime - it's on YOUR device</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 dark:text-green-400">✓</span>
-                <span>Full transparency via public audit feeds</span>
-              </li>
             </ul>
+          </div>
+
+          {/* Transparency - All Services */}
+          <div className="mb-12 rounded-lg border-2 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+              Public Transparency (All CIRIS Services)
+            </h2>
+            <p className="text-gray-700 dark:text-gray-300">
+              All model selections, prompt templates, and code changes that could impact agent responses are
+              immediately available on our public GitHub: <a href="https://github.com/cirisai" className="font-semibold text-blue-600 underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">github.com/cirisai</a>
+            </p>
+            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              This applies to all CIRIS agents - research services, Android app, and self-hosted deployments.
+            </p>
           </div>
 
           {/* Scope */}
@@ -84,40 +114,62 @@ export default function PrivacyPage() {
               Scope of This Policy
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              This privacy policy applies to all CIRIS services:
+              This privacy policy applies to the following production services:
             </p>
             <div className="space-y-3">
-              <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-                <h3 className="mb-2 font-semibold text-gray-900 dark:text-white">
-                  CIRIS Agents (agents.ciris.ai)
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Self-hosted or cloud-hosted AI agents running the CIRIS framework with H3ERE ethical reasoning
-                </p>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-                <h3 className="mb-2 font-semibold text-gray-900 dark:text-white">
-                  Scout Web App (scout.ciris.ai)
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Browser-based interface for interacting with CIRIS agents, viewing reasoning, and managing account
-                </p>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+              <div className="rounded-lg border-2 border-green-500 bg-green-50 p-4 dark:border-green-600 dark:bg-green-900/20">
                 <h3 className="mb-2 font-semibold text-gray-900 dark:text-white">
                   CIRIS Android App (Coming Soon)
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Mobile application for CIRIS agents with offline-first architecture
+                  Mobile application with local-first architecture. Your data stays on your device.
+                  Zero data retention on our servers.
                 </p>
               </div>
-              <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+              <div className="rounded-lg border-2 border-green-500 bg-green-50 p-4 dark:border-green-600 dark:bg-green-900/20">
                 <h3 className="mb-2 font-semibold text-gray-900 dark:text-white">
                   CIRISProxy LLM Service (proxy.ciris.ai)
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Privacy-focused LLM proxy and billing service (Android app only)
+                  Privacy-focused LLM proxy and billing service. Zero data retention - messages processed and discarded.
                 </p>
+              </div>
+            </div>
+
+            {/* Research Services Warning */}
+            <div className="mt-6 rounded-lg border-2 border-yellow-500 bg-yellow-50 p-4 dark:border-yellow-600 dark:bg-yellow-900/20">
+              <h3 className="mb-2 font-semibold text-yellow-800 dark:text-yellow-300">
+                Research Services (Different Terms Apply)
+              </h3>
+              <p className="mb-3 text-sm text-yellow-700 dark:text-yellow-300">
+                The following services are <strong>research platforms</strong> with different privacy terms.
+                They record data and may use it for research purposes:
+              </p>
+              <div className="space-y-2">
+                <div className="rounded bg-white/50 p-3 dark:bg-gray-800/50">
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Scout Web App (scout.ciris.ai)</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Research interface for CIRIS agents. Data is recorded per clear on-site statements.
+                    Implements Consensual Evolution Protocol. Data may be used for improving future agent
+                    templates and model selection.
+                  </p>
+                </div>
+                <div className="rounded bg-white/50 p-3 dark:bg-gray-800/50">
+                  <h4 className="font-semibold text-gray-900 dark:text-white">CIRIS Agents (agents.ciris.ai)</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Hosted research agents. Data is recorded per clear on-site statements.
+                    Implements Consensual Evolution Protocol. Data may be used for research and improving
+                    future agent templates and model selection.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 text-sm text-yellow-700 dark:text-yellow-300">
+                <strong>Research services provide:</strong>
+                <ul className="mt-1 list-inside list-disc">
+                  <li>DSAR (Data Subject Access Request) support</li>
+                  <li>Consensual Evolution Protocol implementation</li>
+                  <li>Clear on-site privacy statements</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -924,7 +976,7 @@ export default function PrivacyPage() {
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
             <p>CIRIS - Ethical AI by Design</p>
             <p className="mt-2">© 2025 Eric Moore and CIRIS L3C | Apache 2.0 License</p>
-            <p className="mt-2">Last Updated: December 12, 2025 | Version 1.4.0</p>
+            <p className="mt-2">Last Updated: December 12, 2025 | Version 1.5.0</p>
           </div>
         </div>
       </div>
