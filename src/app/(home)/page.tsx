@@ -198,6 +198,54 @@ export default function Homepage() {
           headline="Governance and Oversight"
           subheadline="CIRIS includes built-in operational governance mechanisms to sustain ethical integrity"
         />
+
+        {/* Why CIRIS - The Only Ethical Agentic AI */}
+        <div className="my-12 rounded-xl border-2 border-brand-primary bg-gradient-to-br from-gray-50 to-white p-8 dark:from-gray-900 dark:to-gray-800">
+          <h2 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+            The Only Ethical Agentic AI
+          </h2>
+          <p className="mb-6 text-gray-600 dark:text-gray-400">
+            Everyone says "ethical AI." We defined what it actually means.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
+              <p className="font-semibold text-gray-900 dark:text-white">1. Published Covenant</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Formal ethical charter the agent is bound to</p>
+            </div>
+            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
+              <p className="font-semibold text-gray-900 dark:text-white">2. Runtime Conscience</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Ethics checked on every single action</p>
+            </div>
+            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
+              <p className="font-semibold text-gray-900 dark:text-white">3. Human Deferral</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Asks for help when out of its depth</p>
+            </div>
+            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
+              <p className="font-semibold text-gray-900 dark:text-white">4. Cryptographic Audit</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Immutable, signed trail of every decision</p>
+            </div>
+            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
+              <p className="font-semibold text-gray-900 dark:text-white">5. Bilateral Consent</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Agent can refuse unethical requests</p>
+            </div>
+            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
+              <p className="font-semibold text-gray-900 dark:text-white">6. Fully Open Source</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">No black boxes. Show the code or it doesn't count.</p>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row">
+            <a
+              href="/why-ciris"
+              className="inline-block rounded-lg bg-brand-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-primary/80"
+            >
+              See How CIRIS Compares
+            </a>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Governance frameworks, scanners, policy layers are useful. They are not ethical agents.
+            </p>
+          </div>
+        </div>
+
         {/* <ImageHeroBlock
           className="text-brand-primary fill-brand-primary mb-8"
           backgroundImageSrc="/kelly-vohs-soSTXmIxTDU-unsplash.jpg"
