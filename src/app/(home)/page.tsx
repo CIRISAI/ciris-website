@@ -77,16 +77,16 @@ export default function Homepage() {
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="Your Personal AI."
-        subheadline="An ethical agent that defers to you and your trusted advisors."
-        description="CIRIS brings multi-perspective ethical reasoning to your decision-making. Built on a foundation of transparency and accountability, it's designed to be a trusted partner in your digital life."
+        headline="The Only Ethical Agentic AI."
+        subheadline="We looked. Nothing else comes close."
+        description="CIRIS is the only AI agent with a published ethical covenant, runtime conscience on every action, human deferral when uncertain, cryptographic audit trail, bilateral consent, and fully open source code. Everyone else is building frameworks and papers. We built the system."
         mediaType="video"
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
-        buttonText="Get the Code"
-        buttonHref="https://github.com/CIRISAI/CIRISAgent"
-        linkText="The Covenant "
-        linkHref="/sections/main"
+        buttonText="See the Proof"
+        buttonHref="/why-ciris"
+        linkText="Get the Code"
+        linkHref="https://github.com/CIRISAI/CIRISAgent"
       />
 
       {/* Android App Announcement Banner */}
@@ -149,102 +149,130 @@ export default function Homepage() {
             <Corner bottom={0} right={0} />
           </>
         </Cursor>
+
+        {/* The Six Requirements - FRONT AND CENTER */}
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="Six Requirements"
+          subheadline="All six. Not five. Six."
+          animateNumber={true}
+          animateNumberValue={6}
+          className="border-brand-primary text-brand-primary"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Published Covenant",
+              copyText:
+                "Bound to a formal ethical charter with foundational principles. Not guidelines. Not values. A covenant the agent must follow — publicly available for anyone to read and critique.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Runtime Conscience",
+              copyText:
+                "Every action passes through an internal conscience pipeline before execution. Speaking, tools, memory. Not a post-hoc filter. Part of the operational loop. Every. Single. Action.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Human Deferral",
+              copyText:
+                "When uncertain, conflicting values, or potential harm — the agent defers to humans with full context. Built-in workflow. It knows when to ask for help instead of guessing.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Cryptographic Audit",
+              copyText:
+                "Every action, rationale, and decision recorded in an immutable, signed ledger. Not 'we log some things.' Everything. Verifiable. Trace exactly why the agent did what it did.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Bilateral Consent",
+              copyText:
+                "Consent is symmetric. Humans can refuse access. The agent can refuse unethical requests. It has principles it won't compromise — even if you ask nicely.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Fully Open Source",
+              copyText:
+                "Ethical AI cannot be closed source or patented. You cannot audit what you cannot see. 'Trust us, it's ethical' is not ethical. Show the code or it doesn't count.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        <div className="my-8 flex justify-center">
+          <a
+            href="/why-ciris"
+            className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
+          >
+            See the Full Comparison
+          </a>
+        </div>
+
         <FlexSection
-          // buttonHref=" "
-          // buttonText="About CIRIS"
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="What is CIRIS"
           subheadline="AI built for human flourishing, not market fit."
-          copyText="Unlike commercial AI assistants, CIRIS runs entirely on your hardware with complete transparency. It includes specialized agents for different needs—Sage for GDPR compliance, Datum for research, Echo for content moderation, Ally as your personal assistant, and Scout for customer service. Every decision is auditable, every action is accountable."
+          copyText="Unlike commercial AI assistants, CIRIS runs entirely on your hardware with complete transparency. Specialized agents for different needs — Sage for GDPR compliance, Datum for research, Echo for content moderation, Ally as your personal assistant, Scout for customer service. Every decision is auditable, every action is accountable."
         />
+
         <QuickInstall />
+
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="You are in Control"
           subheadline="CIRIS defers to you and your trusted advisors."
-          copyText="When faced with complex decisions, CIRIS uses its H3ERE pipeline to evaluate multiple ethical perspectives—then defers to you or advisors you designate. Your values shape its behavior. Your trusted circle provides wisdom. You maintain final authority over every action."
+          copyText="When faced with complex decisions, CIRIS uses its H3ERE pipeline to evaluate multiple ethical perspectives — then defers to you or advisors you designate. Your values shape its behavior. Your trusted circle provides wisdom. You maintain final authority over every action."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
+
         <CardsSection
           cardsData={[
             {
               headline: "Wisdom-Based Deferral",
               copyText:
-                "Complex ethical questions get escalated to you or advisors you trust. CIRIS doesn't pretend to have all the answers—it knows when to ask for human wisdom.",
+                "Complex ethical questions get escalated to you or advisors you trust. CIRIS doesn't pretend to have all the answers — it knows when to ask for human wisdom.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
               headline: "Multi-Perspective Reasoning",
               copyText:
-                "The H3ERE pipeline evaluates decisions through multiple ethical lenses—Harm, Honesty, Human Rights, Equity, and Responsibility—before presenting options to you.",
+                "The H3ERE pipeline evaluates decisions through multiple ethical lenses — Harm, Honesty, Human Rights, Equity, and Responsibility — before presenting options to you.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
               headline: "Your Hardware, Your Data",
               copyText:
-                "Runs entirely on your machine. No cloud dependencies, no data harvesting, no surveillance. Install it, customize it, audit it—you're in complete control.",
+                "Runs entirely on your machine. No cloud dependencies, no data harvesting, no surveillance. Install it, customize it, audit it — you're in complete control.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
           ]}
         />
+
         <AccordionSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="Governance and Oversight"
-          subheadline="CIRIS includes built-in operational governance mechanisms to sustain ethical integrity"
+          subheadline="Built-in operational governance mechanisms to sustain ethical integrity"
         />
-
-        {/* Why CIRIS - The Only Ethical Agentic AI */}
-        <div className="my-12 rounded-xl border-2 border-brand-primary bg-gradient-to-br from-gray-50 to-white p-8 dark:from-gray-900 dark:to-gray-800">
-          <h2 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
-            The Only Ethical Agentic AI
-          </h2>
-          <p className="mb-6 text-gray-600 dark:text-gray-400">
-            Everyone says "ethical AI." We defined what it actually means.
-          </p>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
-              <p className="font-semibold text-gray-900 dark:text-white">1. Published Covenant</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Formal ethical charter the agent is bound to</p>
-            </div>
-            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
-              <p className="font-semibold text-gray-900 dark:text-white">2. Runtime Conscience</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Ethics checked on every single action</p>
-            </div>
-            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
-              <p className="font-semibold text-gray-900 dark:text-white">3. Human Deferral</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Asks for help when out of its depth</p>
-            </div>
-            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
-              <p className="font-semibold text-gray-900 dark:text-white">4. Cryptographic Audit</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Immutable, signed trail of every decision</p>
-            </div>
-            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
-              <p className="font-semibold text-gray-900 dark:text-white">5. Bilateral Consent</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Agent can refuse unethical requests</p>
-            </div>
-            <div className="rounded-lg bg-white p-4 shadow-sm dark:bg-gray-700">
-              <p className="font-semibold text-gray-900 dark:text-white">6. Fully Open Source</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">No black boxes. Show the code or it doesn't count.</p>
-            </div>
-          </div>
-          <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row">
-            <a
-              href="/why-ciris"
-              className="inline-block rounded-lg bg-brand-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-primary/80"
-            >
-              See How CIRIS Compares
-            </a>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Governance frameworks, scanners, policy layers are useful. They are not ethical agents.
-            </p>
-          </div>
-        </div>
 
         {/* <ImageHeroBlock
           className="text-brand-primary fill-brand-primary mb-8"

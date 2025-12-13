@@ -192,6 +192,139 @@ export default function WhyCirisPage() {
             },
           ]}
         />
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="The Current Landscape"
+          subheadline="We looked. Nothing else comes close."
+          className="border-brand-primary text-brand-primary border-t border-b"
+        />
+
+        {/* Landscape Comparison Table */}
+        <div className="my-12 px-8 md:px-12">
+          <p className="mb-8 text-center text-gray-600 dark:text-gray-400">
+            After searching the latest research, industry projects, and open-source efforts — here's what actually exists as of late 2025.
+          </p>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-brand-primary">
+                  <th className="p-4 text-left font-bold text-brand-primary">Project</th>
+                  <th className="p-4 text-center font-bold text-brand-primary">Runtime System</th>
+                  <th className="p-4 text-center font-bold text-brand-primary">Covenant</th>
+                  <th className="p-4 text-center font-bold text-brand-primary">Conscience</th>
+                  <th className="p-4 text-center font-bold text-brand-primary">Audit Trail</th>
+                  <th className="p-4 text-center font-bold text-brand-primary">Consent</th>
+                  <th className="p-4 text-center font-bold text-brand-primary">Open Source</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                <tr className="bg-green-50 dark:bg-green-900/20">
+                  <td className="p-4 font-bold text-brand-primary">CIRIS</td>
+                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
+                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
+                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
+                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
+                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
+                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-gray-700 dark:text-gray-300">MI9 Framework</td>
+                  <td className="p-4 text-center text-red-500">Paper only</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-yellow-500">Concept</td>
+                  <td className="p-4 text-center text-yellow-500">Concept</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-gray-700 dark:text-gray-300">HADA Architecture</td>
+                  <td className="p-4 text-center text-yellow-500">PoC only</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-yellow-500">Logging</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-gray-700 dark:text-gray-300">Superego Prototype</td>
+                  <td className="p-4 text-center text-yellow-500">Research</td>
+                  <td className="p-4 text-center text-yellow-500">Partial</td>
+                  <td className="p-4 text-center text-yellow-500">Partial</td>
+                  <td className="p-4 text-center text-yellow-500">Partial</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-gray-700 dark:text-gray-300">METR (nonprofit)</td>
+                  <td className="p-4 text-center text-red-500">Evaluation only</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-gray-700 dark:text-gray-300">Agentic AI Foundation</td>
+                  <td className="p-4 text-center text-red-500">Standards only</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-gray-700 dark:text-gray-300">Manus AI</td>
+                  <td className="p-4 text-center text-green-600">Yes</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-yellow-500">Limited</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
+            Sources: arXiv (MI9, HADA, Superego), Wikipedia (METR, Manus AI), WIRED (Agentic AI Foundation)
+          </p>
+        </div>
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "MI9 Framework",
+              copyText:
+                "A research architecture proposing runtime governance for agentic AI. Theoretical framework and protocol only — no deployed system, no normative covenant, no cryptographic audit. Paper, not product.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "HADA Architecture",
+              copyText:
+                "Reference architecture wrapping agents with stakeholder roles (ethics, audit, customer). A proof-of-concept demo, not a general-purpose ethical agent platform. Research, not runtime.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Manus AI",
+              copyText:
+                "A real deployed autonomous agent — but not alignment-focused. No binding covenant, no internal ethical reasoning, no deferral pathways, no cryptographic audit, no bilateral consent. Autonomous but not ethical.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        <FlexSection
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="The Agentic AI Foundation"
+          subheadline="OpenAI, Anthropic, Block — building standards, not ethics."
+          copyText="The companies that could build ethical agentic AI are instead building agent communication protocols and interoperability standards. Useful work. But it doesn't address conscience, covenant, consent, or audit. They're standardizing how agents talk to each other — not how agents reason about right and wrong."
+        />
       </div>
 
       <ImageHeroBlock
