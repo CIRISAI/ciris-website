@@ -28,6 +28,7 @@ const navigation: Navigation = {
   ],
   support: [
     { name: "Compare", href: "/compare" },
+    { name: "Safety", href: "/safety" },
     { name: "Documentation", href: "/sections/main" },
     { name: "Academic Paper", href: "https://zenodo.org/records/17195221" },
   ],
