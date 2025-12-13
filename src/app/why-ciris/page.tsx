@@ -46,7 +46,7 @@ export default function WhyCirisPage() {
             {
               headline: "2. Runtime Conscience",
               copyText:
-                "Every meaningful action must pass through an internal conscience pipeline before execution. Speaking, invoking tools, changing memory. Not a post-hoc filter. Part of the operational loop. Every. Single. Action.",
+                "Speaking, tool use, memory writes, and reflection pass through four conscience checks before execution. Passive actions (recall, observe) and terminal actions (defer, reject) are exempt. Part of the operational loop, not a post-hoc filter.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

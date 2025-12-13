@@ -173,7 +173,7 @@ export default function Homepage() {
             {
               headline: "Runtime Conscience",
               copyText:
-                "Every action passes through an internal conscience pipeline before execution. Speaking, tools, memory. Not a post-hoc filter. Part of the operational loop. Every. Single. Action.",
+                "Speaking, tool use, memory writes, and reflection all pass through four conscience checks before execution. Passive actions like recall and observe are exempt. Not a post-hoc filter — part of the operational loop.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -260,7 +260,7 @@ export default function Homepage() {
             {
               headline: "Your Hardware, Your Data",
               copyText:
-                "Runs entirely on your machine. No cloud dependencies, no data harvesting, no surveillance. Install it, customize it, audit it — you're in complete control.",
+                "Core logic, database, memory, and audit logs run locally. LLM inference uses your choice of provider — cloud APIs, local models, or our zero-retention proxy. No data harvesting, no surveillance.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
