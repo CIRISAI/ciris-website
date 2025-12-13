@@ -15,7 +15,7 @@ export default function ComparePage() {
       <HomeHeader
         headline="Enrich or Extract"
         subheadline="AI that doesn't serve humanity is extracting from it."
-        description="Closed source AI asks for faith. You can't audit what you can't see. If the ethics are proprietary, they're marketing. Here are the six requirements for AI that actually enriches society — and why every closed-source system fails."
+        description="Closed source AI asks for faith. You can't audit what you can't see. If the ethics are proprietary, they're marketing. Here are six requirements for verifiably ethical AI — and why closed-source systems can't demonstrate they meet them."
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -196,14 +196,14 @@ export default function ComparePage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="The Current Landscape"
-          subheadline="We looked. Nothing else comes close."
+          subheadline="As of December 2025, we haven't found another system meeting all six."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
         {/* Landscape Comparison Table */}
         <div className="my-12 px-8 md:px-12">
           <p className="mb-8 text-center text-gray-600 dark:text-gray-400">
-            After searching the latest research, industry projects, and open-source efforts — here's what actually exists as of late 2025.
+            Based on publicly available documentation as of December 2025. If we've missed something or gotten something wrong, <a href="https://github.com/CIRISAI/CIRISAgent/issues" className="underline hover:text-brand-primary">open an issue</a>.
           </p>
 
           <div className="overflow-x-auto">
@@ -311,7 +311,7 @@ export default function ComparePage() {
             {
               headline: "Manus AI",
               copyText:
-                "A real deployed autonomous agent — but not alignment-focused. No binding covenant, no internal ethical reasoning, no deferral pathways, no cryptographic audit, no bilateral consent. Autonomous but not ethical.",
+                "A real deployed autonomous agent — but not alignment-focused. No published covenant, no documented ethical reasoning layer, no public deferral mechanism, no cryptographic audit trail, no bilateral consent framework. Capable, but not verifiably aligned.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
