@@ -21,9 +21,43 @@ export default function ComparePage() {
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
         buttonText="View the Code"
         buttonHref="https://github.com/CIRISAI/CIRISAgent"
-        linkText="Install CIRIS"
-        linkHref="/install"
+        linkText="Read the Covenant"
+        linkHref="/sections/main"
       />
+
+      {/* Install CTA Banner */}
+      <div className="bg-gradient-to-r from-green-600 to-blue-600 py-4">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+            <div className="flex items-center gap-3 text-white">
+              <span className="text-2xl">🔓</span>
+              <div>
+                <p className="text-lg font-bold">Try the Alternative</p>
+                <p className="text-sm opacity-90">Open source. Auditable. Yours to verify.</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <a
+                href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+                </svg>
+                Google Play
+              </a>
+              <a
+                href="/install"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                All Install Options
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="container min-h-screen max-w-7xl">
         <FlexSection
