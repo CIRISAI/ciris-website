@@ -21,8 +21,8 @@ export default function ComparePage() {
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
         buttonText="View the Code"
         buttonHref="https://github.com/CIRISAI/CIRISAgent"
-        linkText="Read the Covenant"
-        linkHref="/sections/main"
+        linkText="Install CIRIS"
+        linkHref="/install"
       />
 
       <div className="container min-h-screen max-w-7xl">
