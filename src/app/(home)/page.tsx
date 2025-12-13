@@ -237,7 +237,7 @@ export default function Homepage() {
           logoAlt="Brand logo icon"
           headline="You are in Control"
           subheadline="CIRIS defers to you and your trusted advisors."
-          copyText="When faced with complex decisions, CIRIS uses its H3ERE pipeline to evaluate multiple ethical perspectives — then defers to you or advisors you designate. Your values shape its behavior. Your trusted circle provides wisdom. You maintain final authority over every action."
+          copyText="The H3ERE pipeline runs three parallel analyses (ethical, common sense, mission-specific) then validates through four conscience dimensions. When uncertain or when conscience fails twice, it defers to you or advisors you designate. You maintain final authority."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
@@ -253,7 +253,7 @@ export default function Homepage() {
             {
               headline: "Multi-Perspective Reasoning",
               copyText:
-                "The H3ERE pipeline evaluates decisions through multiple ethical lenses — Harm, Honesty, Human Rights, Equity, and Responsibility — before presenting options to you.",
+                "Three parallel lenses analyze every decision: ethical principles, common sense, and mission-specific context. Then four conscience checks validate the action before execution.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
