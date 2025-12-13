@@ -36,14 +36,37 @@ export default function InstallPage() {
             </p>
           </div>
 
-          {/* Android App Coming Soon */}
-          <div className="mt-8 rounded-lg border-2 border-blue-500 bg-blue-50 p-4 text-center dark:border-blue-400 dark:bg-blue-900/20">
-            <p className="text-sm font-semibold text-gray-900 dark:text-white">
-              📱 Android App Coming Soon
-            </p>
-            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400">
-              Mobile installation will be available via Google Play Store
-            </p>
+          {/* Android App NOW AVAILABLE */}
+          <div className="mt-8 rounded-lg border-2 border-green-500 bg-green-50 p-6 dark:border-green-400 dark:bg-green-900/20">
+            <div className="text-center">
+              <p className="text-lg font-bold text-gray-900 dark:text-white">
+                📱 Android App Now Available
+              </p>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                Your personal AI agent on mobile — private, local-first, open source
+              </p>
+            </div>
+            <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a
+                href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-black px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+                </svg>
+                Google Play
+              </a>
+              <a
+                href="https://github.com/CIRISAI/CIRISAgent/releases/download/android-v1.7.33/ciris-mobile-1.7.33.apk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-gray-700 px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                Direct APK
+              </a>
+            </div>
           </div>
 
           {/* Method 1: pip (Preferred) */}

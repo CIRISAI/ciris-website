@@ -31,19 +31,54 @@ export default function ServicesPage() {
             </a>
           </div>
 
-          {/* Android App Coming Soon Banner */}
-          <div className="mb-12 rounded-lg border-4 border-brand-primary bg-gradient-to-br from-blue-50 to-purple-50 p-8 text-center shadow-xl dark:from-blue-900/20 dark:to-purple-900/20">
+          {/* Android App NOW AVAILABLE */}
+          <div className="mb-12 rounded-lg border-4 border-green-500 bg-gradient-to-br from-green-50 to-blue-50 p-8 text-center shadow-xl dark:from-green-900/20 dark:to-blue-900/20">
             <div className="mb-4 flex justify-center">
-              <DeviceMobile size={64} weight="fill" className="text-brand-primary" />
+              <DeviceMobile size={64} weight="fill" className="text-green-600" />
             </div>
             <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
               CIRIS Android App
             </h1>
-            <div className="mb-2 inline-block rounded-full bg-brand-primary px-4 py-2 text-lg font-semibold text-white">
-              COMING SOON
+            <div className="mb-4 inline-block rounded-full bg-green-600 px-4 py-2 text-lg font-semibold text-white">
+              NOW AVAILABLE
             </div>
-            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-              Your personal ethical AI agent, now on mobile. Stay tuned for updates.
+            <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+              Your personal ethical AI agent, now on mobile. Private, local-first, and fully open source.
+            </p>
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a
+                href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 font-semibold text-white transition-colors hover:bg-gray-800"
+              >
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+                </svg>
+                Google Play
+              </a>
+              <a
+                href="https://github.com/CIRISAI/CIRISAgent/releases/download/android-v1.7.33/ciris-mobile-1.7.33.apk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-gray-800 bg-white px-6 py-3 font-semibold text-gray-800 transition-colors hover:bg-gray-100 dark:border-gray-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                Direct APK Download
+              </a>
+            </div>
+            <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+              Or{" "}
+              <a
+                href="https://github.com/CIRISAI/CIRISAgent"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-600 hover:underline dark:text-green-400"
+              >
+                build from source on GitHub
+              </a>
             </p>
           </div>
 
