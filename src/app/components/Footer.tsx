@@ -22,27 +22,23 @@ interface Navigation {
 
 const navigation: Navigation = {
   solutions: [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Automation", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
+    { name: "Models", href: "/models" },
+    { name: "Services", href: "/services" },
+    { name: "Install", href: "/install" },
   ],
   support: [
-    { name: "Submit ticket", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
+    { name: "Compare", href: "/compare" },
+    { name: "Documentation", href: "/sections/main" },
+    { name: "Academic Paper", href: "https://zenodo.org/records/17195221" },
   ],
   company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
+    { name: "About", href: "/about" },
+    { name: "Vision", href: "/vision" },
+    { name: "Covenant", href: "/sections/main" },
   ],
   legal: [
-    { name: "Terms of service", href: "#" },
-    { name: "Privacy policy", href: "#" },
-    { name: "License", href: "#" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Subprocessors", href: "/privacy#subprocessors" },
   ],
   social: [
     {
@@ -121,21 +117,20 @@ export default function Example() {
           <div className="space-y-8">
             <LogoIcon className="text-brand-primary h-16 w-auto" />
             <p className="text-sm/6 text-balance">
-              Making the world a better place through constructing elegant
-              hierarchies.
+              AI that earns your trust. Open source. Auditable. Yours to verify.
             </p>
             <div className="flex gap-x-6"></div>
           </div>
-          {/* <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="border-b-brand-primary border-b pb-4 text-sm/6 font-semibold">
-                  Solutions
+                  Technology
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="hover: text-sm/6">
+                      <a href={item.href} className="hover:underline text-sm/6">
                         {item.name}
                       </a>
                     </li>
@@ -144,12 +139,12 @@ export default function Example() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="border-b-brand-primary border-b pb-4 text-sm/6 font-semibold">
-                  Support
+                  Resources
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="hover: text-sm/6">
+                      <a href={item.href} className="hover:underline text-sm/6">
                         {item.name}
                       </a>
                     </li>
@@ -160,12 +155,12 @@ export default function Example() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="border-b-brand-primary border-b pb-4 text-sm/6 font-semibold">
-                  Company
+                  Mission
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="hover: text-sm/6">
+                      <a href={item.href} className="hover:underline text-sm/6">
                         {item.name}
                       </a>
                     </li>
@@ -179,7 +174,7 @@ export default function Example() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="hover: text-sm/6">
+                      <a href={item.href} className="hover:underline text-sm/6">
                         {item.name}
                       </a>
                     </li>
@@ -187,7 +182,7 @@ export default function Example() {
                 </ul>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
         <div className="mt-16 flex justify-center gap-8 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-sm/6">&copy; 2025 CIRIS.AI All rights reserved.</p>

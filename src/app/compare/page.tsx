@@ -8,14 +8,14 @@ import SeparatorTitleBlock from "@/app/components/Separatortitle";
 import ImageHeroBlock from "@/app/components/ImageHeroBlock";
 import navItems from "@/app/components/navitems";
 
-export default function WhyCirisPage() {
+export default function ComparePage() {
   return (
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="What Is Ethical Agentic AI?"
-        subheadline="Everyone says they're building ethical AI."
-        description="Almost nobody can point to where, exactly, the ethics live in the stack. For CIRIS, ethical agentic AI isn't branding. It's a strict technical definition with six non-negotiable requirements."
+        headline="The Landscape"
+        subheadline="What exists. What's missing. Where CIRIS fits."
+        description="We searched the latest research, industry projects, and open-source efforts. Here's what actually qualifies as ethical agentic AI — and what doesn't."
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
