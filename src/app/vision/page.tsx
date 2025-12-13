@@ -114,8 +114,8 @@ export default function VisionPage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="The Academic Foundation"
-          subheadline="Peer-reviewed. Publicly available."
-          copyText="CIRIS isn't just code — it's grounded in published research on AI alignment, ethical frameworks, and accountable autonomy. Read the paper, critique the approach, contribute improvements."
+          subheadline="Published. Open to critique."
+          copyText="CIRIS isn't just code — it's grounded in documented research on AI alignment, ethical frameworks, and accountable autonomy. Read the paper, challenge the approach, contribute improvements. We welcome scrutiny."
         />
 
         <div className="my-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
