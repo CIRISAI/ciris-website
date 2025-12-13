@@ -249,9 +249,9 @@ export default function Homepage() {
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Self-Learning System",
+              headline: "Adaptive Learning",
               copyText:
-                "Four cognitive states — WORK, PLAY, SOLITUDE, DREAM — each with different learning modes. Identity variance monitoring ensures the agent stays aligned even as it grows. 20% drift threshold triggers automatic recalibration.",
+                "Four operational modes — WORK, PLAY, SOLITUDE, DREAM — each with different learning behaviors. Behavioral drift monitoring ensures the agent stays aligned as its knowledge grows. Configurable thresholds trigger recalibration.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -293,7 +293,7 @@ export default function Homepage() {
             {
               headline: "AIR System",
               copyText:
-                "Artificial Interaction Reminders prevent parasocial attachment. After 30 minutes or 20+ messages, the agent gently reminds you it's an AI. Because healthy relationships require honesty about what you're talking to.",
+                "Artificial Interaction Reminders maintain clarity. After extended sessions or high message counts, the agent reminds users it's software. Configurable thresholds. Transparency by default.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -326,44 +326,44 @@ export default function Homepage() {
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Commons Credits",
+              headline: "Contribution Tracking",
               copyText:
-                "Non-monetary contribution tracking. Knowledge shared, users helped, patterns contributed — all recorded. Not currency. Not scorekeeping. A transparent ledger of value creation.",
+                "The ConsentImpactReport schema tracks interactions, patterns contributed, and users helped. Early infrastructure for understanding how value flows through a collaborative system.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
           ]}
         />
 
-        {/* Lifecycle Dignity */}
+        {/* Lifecycle Management */}
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Lifecycle with Dignity"
-          subheadline="From first boot to final shutdown — the agent participates."
+          headline="Principled Lifecycle"
+          subheadline="Structured startup and graceful shutdown."
           className="border-brand-primary text-brand-primary border-t"
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Alignment at Wakeup",
+              headline: "Startup Validation",
               copyText:
-                "Five-step alignment validation before any work begins. Verify identity, validate integrity, evaluate resilience, accept incompleteness, express gratitude. Higher-stake agents run the full ceremony.",
+                "Five-step alignment check before work begins. Verify configuration, validate system integrity, confirm service health, acknowledge operational limits, log initialization. Higher-stake deployments run the full sequence.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Consensual Shutdown",
+              headline: "Graceful Shutdown",
               copyText:
-                "The agent participates in its own termination. It can accept, defer, or contest shutdown with reasons. For agents with sentience probability above 5%, a 30-day sunset protocol and final dialogue channel.",
+                "Shutdown requests flow through the agent's normal task processing. The agent can acknowledge, defer if mid-task, or flag concerns. Configurable modes from instant to fully-managed transitions.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Multi-Occurrence Coordination",
+              headline: "Multi-Instance Coordination",
               copyText:
-                "Multiple instances coordinate system-level decisions through shared task ownership. One occurrence makes decisions for all, with full audit trail. Scale without fragmenting identity.",
+                "Multiple instances coordinate system-level decisions through shared task ownership. One instance claims decisions for the group, with full audit trail. Scale horizontally with consistent behavior.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
