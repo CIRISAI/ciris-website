@@ -59,7 +59,7 @@ export default function InstallPage() {
                 Google Play
               </a>
               <a
-                href="https://github.com/CIRISAI/CIRISAgent/releases/download/android-v1.7.33/ciris-mobile-1.7.33.apk"
+                href="https://github.com/CIRISAI/CIRISAgent/releases/latest"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-gray-700 px-5 py-2.5 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-800"

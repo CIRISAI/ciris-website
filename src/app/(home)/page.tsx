@@ -113,7 +113,7 @@ export default function Homepage() {
                 Google Play
               </a>
               <a
-                href="https://github.com/CIRISAI/CIRISAgent/releases/download/android-v1.7.33/ciris-mobile-1.7.33.apk"
+                href="https://github.com/CIRISAI/CIRISAgent/releases/latest"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"

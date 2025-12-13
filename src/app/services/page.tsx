@@ -58,7 +58,7 @@ export default function ServicesPage() {
                 Google Play
               </a>
               <a
-                href="https://github.com/CIRISAI/CIRISAgent/releases/download/android-v1.7.33/ciris-mobile-1.7.33.apk"
+                href="https://github.com/CIRISAI/CIRISAgent/releases/latest"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-gray-800 bg-white px-6 py-3 font-semibold text-gray-800 transition-colors hover:bg-gray-100 dark:border-gray-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
