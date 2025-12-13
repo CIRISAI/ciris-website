@@ -53,7 +53,7 @@ export default function ComparePage() {
             </div>
           </div>
           <p className="mt-2 text-center text-xs text-gray-500 dark:text-gray-400">
-            Free to install · No signup required for core features
+            Free to install · No signup required (unless using our privacy-protecting LLM proxy)
           </p>
         </div>
       </div>
@@ -429,7 +429,7 @@ export default function ComparePage() {
               </a>
             </div>
             <p className="text-xs text-white/70 mt-2">
-              Free to install · No signup required · Your data stays on your device
+              Free to install · No signup unless using our LLM proxy · Your data stays on your device
             </p>
           </div>
         </div>
