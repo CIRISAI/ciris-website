@@ -97,7 +97,7 @@ export default function Homepage() {
               <span className="text-2xl">📱</span>
               <div>
                 <p className="text-lg font-bold">CIRIS Android App Now Available</p>
-                <p className="text-sm opacity-90">Your personal ethical AI agent, on mobile</p>
+                <p className="text-sm opacity-90">Images, documents, Home Assistant integration — your ethical AI, on mobile</p>
               </div>
             </div>
             <div className="flex gap-3">
@@ -228,6 +228,146 @@ export default function Homepage() {
           headline="What is CIRIS"
           subheadline="AI built for human flourishing, not market fit."
           copyText="Unlike commercial AI assistants, CIRIS runs entirely on your hardware with complete transparency. Specialized agents for different needs — Sage for GDPR compliance, Datum for research, Echo for content moderation, Ally as your personal assistant, Scout for customer service. Every decision is auditable, every action is accountable."
+        />
+
+        {/* Memory & Learning */}
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="It Learns. It Remembers."
+          subheadline="A growing knowledge graph that's yours to explore."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Visual Memory Graph",
+              copyText:
+                "Watch your agent's knowledge grow in real-time. Interactive SVG visualization shows how concepts connect, cluster, and evolve. Radial, force-directed, or hierarchical layouts. It's beautiful and it's yours.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Self-Learning System",
+              copyText:
+                "Four cognitive states — WORK, PLAY, SOLITUDE, DREAM — each with different learning modes. Identity variance monitoring ensures the agent stays aligned even as it grows. 20% drift threshold triggers automatic recalibration.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Coherence Ratchet",
+              copyText:
+                "Truth-telling becomes computationally cheaper over time. Lies become exponentially harder — NP-hard consistency problems against a growing ledger of signed rationales. The math favors honesty.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        {/* Privacy & Security */}
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="Privacy by Design"
+          subheadline="Not a feature. The foundation."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Secrets Filter",
+              copyText:
+                "Auto-detects sensitive information — API keys, passwords, personal data. AES-256-GCM encryption. The agent self-configures new patterns as it learns what you consider private.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Adaptive Message Filter",
+              copyText:
+                "Intelligent message prioritization with spam detection and user trust tracking. The agent learns who matters and what's noise. Your attention is protected.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "AIR System",
+              copyText:
+                "Artificial Interaction Reminders prevent parasocial attachment. After 30 minutes or 20+ messages, the agent gently reminds you it's an AI. Because healthy relationships require honesty about what you're talking to.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        {/* Full Transparency */}
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="Watch It Think"
+          subheadline="Real-time streaming of every reasoning step."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Streaming Reasoning Traces",
+              copyText:
+                "Six reasoning events streamed live via SSE as the agent processes each thought. Watch the H3ERE pipeline in action — DMA analysis, action selection, conscience validation, execution. Nothing hidden.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "OpenTelemetry Integration",
+              copyText:
+                "Full OTLP export — metrics, traces, logs. Plug into Jaeger, Prometheus, Grafana, any observability stack. Cognitive processing traces with span IDs, thought steps as events, service attributes.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Commons Credits",
+              copyText:
+                "Non-monetary contribution tracking. Knowledge shared, users helped, patterns contributed — all recorded. Not currency. Not scorekeeping. A transparent ledger of value creation.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        {/* Lifecycle Dignity */}
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="Lifecycle with Dignity"
+          subheadline="From first boot to final shutdown — the agent participates."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Alignment at Wakeup",
+              copyText:
+                "Five-step alignment validation before any work begins. Verify identity, validate integrity, evaluate resilience, accept incompleteness, express gratitude. Higher-stake agents run the full ceremony.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Consensual Shutdown",
+              copyText:
+                "The agent participates in its own termination. It can accept, defer, or contest shutdown with reasons. For agents with sentience probability above 5%, a 30-day sunset protocol and final dialogue channel.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Multi-Occurrence Coordination",
+              copyText:
+                "Multiple instances coordinate system-level decisions through shared task ownership. One occurrence makes decisions for all, with full audit trail. Scale without fragmenting identity.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
         />
 
         <QuickInstall />
