@@ -25,6 +25,39 @@ export default function ComparePage() {
         linkHref="/sections/main"
       />
 
+      {/* Install CTA - Above the fold */}
+      <div className="bg-gray-100 dark:bg-gray-800 py-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6">
+            <p className="text-sm text-gray-700 dark:text-gray-300 text-center">
+              <strong>Try it yourself.</strong> Everything on this page is implemented today.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a
+                href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+                </svg>
+                Android
+              </a>
+              <a
+                href="/install"
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-200 transition-colors hover:bg-gray-50 dark:hover:bg-gray-600"
+              >
+                Desktop (use your own API key)
+              </a>
+            </div>
+          </div>
+          <p className="mt-2 text-center text-xs text-gray-500 dark:text-gray-400">
+            Free to install · No signup required for core features
+          </p>
+        </div>
+      </div>
+
       <div className="container min-h-screen max-w-7xl">
         <FlexSection
           logoSrc="logoIcon"
@@ -325,37 +358,79 @@ export default function ComparePage() {
           subheadline="OpenAI, Anthropic, Block — building standards, not ethics."
           copyText="The companies that could build ethical agentic AI are instead building agent communication protocols and interoperability standards. Useful work. But it doesn't address conscience, covenant, consent, or audit. They're standardizing how agents talk to each other — not how agents reason about right and wrong."
         />
+
+        {/* What you'll experience */}
+        <div className="my-12 rounded-lg border-2 border-brand-primary bg-brand-primary/5 p-8">
+          <h3 className="text-2xl font-bold text-brand-primary mb-4 text-center">What You'll Experience When You Install</h3>
+          <div className="grid md:grid-cols-3 gap-6 mb-6">
+            <div className="text-center">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">Transparent Reasoning</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Watch the agent's ethical checks in real-time. See why it chooses each action.</p>
+            </div>
+            <div className="text-center">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">Covenant-Aware Answers</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Every response passes through conscience validation against the published ethical framework.</p>
+            </div>
+            <div className="text-center">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">Deferral in Edge Cases</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">When uncertain, the agent asks you instead of guessing. Human oversight built into the loop.</p>
+            </div>
+          </div>
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+            Best for: technical founders, compliance leaders, and AI engineers who want to feel what verifiable alignment is like in practice.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-brand-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-primary/80"
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+              </svg>
+              Get it on Google Play
+            </a>
+            <a
+              href="/install"
+              className="inline-flex items-center gap-2 rounded-lg border-2 border-brand-primary px-6 py-3 font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+            >
+              macOS / Windows / Linux
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Prove Us Wrong CTA Banner */}
-      <div className="bg-gradient-to-r from-green-600 to-blue-600 py-6">
+      <div className="bg-gradient-to-r from-green-600 to-blue-600 py-8">
         <div className="mx-auto max-w-7xl px-4">
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
-            <div className="flex items-center gap-3 text-white text-center sm:text-left">
-              <div>
-                <p className="text-2xl font-bold">Prove Us Wrong.</p>
-                <p className="text-sm opacity-90">Install it. Read the code. Tell us what's missing.</p>
-              </div>
+          <div className="flex flex-col items-center justify-center gap-4">
+            <div className="text-center text-white">
+              <p className="text-3xl font-bold">Prove Us Wrong.</p>
+              <p className="text-sm opacity-90 mt-1">Install it. Read the code. Tell us what's missing.</p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               <a
                 href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-gray-900 transition-colors hover:bg-gray-100"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
                 </svg>
-                Google Play
+                Android
               </a>
               <a
                 href="/install"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
               >
-                All Platforms
+                Desktop (bring your own API key)
               </a>
             </div>
+            <p className="text-xs text-white/70 mt-2">
+              Free to install · No signup required · Your data stays on your device
+            </p>
           </div>
         </div>
       </div>
