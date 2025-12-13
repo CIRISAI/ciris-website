@@ -13,9 +13,9 @@ export default function ComparePage() {
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="The Landscape"
-        subheadline="What exists. What's missing. Where CIRIS fits."
-        description="We searched the latest research, industry projects, and open-source efforts. Here's what actually qualifies as ethical agentic AI — and what doesn't."
+        headline="Enrich or Extract"
+        subheadline="AI that doesn't serve humanity is extracting from it."
+        description="Closed source AI asks for faith. You can't audit what you can't see. If the ethics are proprietary, they're marketing. Here are the six requirements for AI that actually enriches society — and why every closed-source system fails."
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
