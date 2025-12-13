@@ -237,7 +237,7 @@ export default function Homepage() {
           logoAlt="Brand logo icon"
           headline="You are in Control"
           subheadline="CIRIS defers to you and your trusted advisors."
-          copyText="The H3ERE pipeline runs three parallel analyses (ethical, common sense, mission-specific) then validates through four conscience dimensions. When uncertain or when conscience fails twice, it defers to you or advisors you designate. You maintain final authority."
+          copyText="Three parallel lenses, four conscience dimensions, up to seven rounds of internal reconsideration. The agent exhausts every ethical option before asking for help. Only after all that does it defer to you or your designated advisors. You maintain final authority."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
