@@ -12,12 +12,16 @@ interface CardData {
 
 interface CardsSectionProps {
   cardsData: CardData[];
+  centered?: boolean;
 }
 
-function CardsSectionImage({ cardsData }: CardsSectionProps) {
+function CardsSectionImage({ cardsData, centered = false }: CardsSectionProps) {
+  const gridCols = cardsData.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
+  const containerClass = centered || cardsData.length === 2 ? "max-w-4xl mx-auto" : "";
+
   return (
-    <section className="container mx-auto">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <section className={`container mx-auto ${containerClass}`}>
+      <div className={`grid grid-cols-1 gap-4 ${gridCols}`}>
         {cardsData.map((card, index) => (
           <CardImage
             key={index}

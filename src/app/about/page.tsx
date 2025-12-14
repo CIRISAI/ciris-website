@@ -122,7 +122,7 @@ export default function Homepage() {
 
         <SeparatorTitleBlock
           animateNumber={true}
-          animateNumberValue={3}
+          animateNumberValue={2}
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="Board Members"
