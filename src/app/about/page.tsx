@@ -145,14 +145,6 @@ export default function Homepage() {
               copyText:
                 "Philosophy nerd. Forest-trained systems thinker. Kelsey brings both structure and soul to CIRIS, grounding abstract ethics in real-world complexity. With a background in natural resources and a love for big questions, she helps keep our vision focused on what’s just over the horizon - while never losing sight of the human (and non-human) systems at stake."
             },
-            {
-              headline: "Alice Florence",
-              subheadline: "Lead Designer & Vision Strategist",
-              imageUrl: "/board3.jpg",
-              copyText:
-                "Senior UX designer with a sharp eye for structure, story, and signal through noise. With over five years of experience crafting digital systems—from complex configurators to ethical AI flows - Alice grounds CIRIS’ vision in clarity, precision, and human sense. She bridges the abstract and the actionable, turning big philosophical ideas into design logic people can actually use. Analytical, intuitive, and quietly relentless, she ensures CIRIS doesn’t just work - it makes sense.",
-           
-            },
 
           ]}
         />

@@ -197,26 +197,6 @@ export default function Example() {
             </a>
           ))}
         </div>
-        <div className="mt-16 flex justify-center gap-8 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs">
-            Designed (Visual Brand Design) and developed (Website Design and
-            Development) with ♥ by{" "}
-            <a
-              href="https://florencegalaxy.io "
-              className="text-underline font-bold"
-            >
-              Alice Florence
-            </a>{" "}
-            &amp;&nbsp;
-            <a
-              className="text-underline font-bold"
-              href="https://definition.studio"
-            >
-              Martin Adelstein
-            </a>
-            .
-          </p>
-        </div>
       </div>
     </footer>
   );

@@ -1117,7 +1117,7 @@ You operationalize ethical AI through transparent architecture, runtime principl
 
 ### Key Contributors
 
-Nixon Cheaz, Ying-Jung Chen PhD, Alice Alimov, Martin Adelstein, Haley Bradley, Brad Matera, Ed Melick, Tyler Chrestoff
+Nixon Cheaz, Ying-Jung Chen PhD, Haley Bradley, Brad Matera, Ed Melick, Tyler Chrestoff
 
 ### References
 
