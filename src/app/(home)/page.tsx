@@ -84,7 +84,7 @@ export default function Homepage() {
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
         buttonText="See the Proof"
-        buttonHref="/why-ciris"
+        buttonHref="/compare"
         linkText="Get the Code"
         linkHref="https://github.com/CIRISAI/CIRISAgent"
       />
