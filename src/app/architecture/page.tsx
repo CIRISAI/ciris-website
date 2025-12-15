@@ -337,10 +337,12 @@ export default function ArchitecturePage() {
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISAgent</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Core agent framework</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISAgent" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISAgent" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://deepwiki.com/CIRISAI/CIRISAgent" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">DeepWiki</a>
                   </div>
                 </div>
 
@@ -348,10 +350,12 @@ export default function ArchitecturePage() {
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISManager</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Scout, research agents, Discord mods</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISManager" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISManager" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://deepwiki.com/CIRISAI/CIRISManager" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">DeepWiki</a>
                   </div>
                 </div>
 
@@ -359,10 +363,12 @@ export default function ArchitecturePage() {
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBridge</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Terraform + Ansible orchestration</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISBridge" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISBridge" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://deepwiki.com/CIRISAI/CIRISBridge" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">DeepWiki</a>
                   </div>
                 </div>
 
@@ -370,10 +376,12 @@ export default function ArchitecturePage() {
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBilling</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Credits and payments</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISBilling" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISBilling" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://deepwiki.com/CIRISAI/CIRISBilling" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">DeepWiki</a>
                   </div>
                 </div>
 
@@ -381,10 +389,12 @@ export default function ArchitecturePage() {
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISProxy</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">LLM routing with ZDR</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISProxy" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISProxy" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://deepwiki.com/CIRISAI/CIRISProxy" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">DeepWiki</a>
                   </div>
                 </div>
 
@@ -392,10 +402,12 @@ export default function ArchitecturePage() {
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISLens</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Observability and status</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISLens" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISLens" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://deepwiki.com/CIRISAI/CIRISLens" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">DeepWiki</a>
                   </div>
                 </div>
 
@@ -403,10 +415,12 @@ export default function ArchitecturePage() {
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">ciris-website</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">This website</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/ciris-website" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISWebsite" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://deepwiki.com/CIRISAI/ciris-website" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">DeepWiki</a>
                   </div>
                 </div>
               </div>
