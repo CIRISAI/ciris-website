@@ -197,7 +197,7 @@ export default function Example() {
           </div>
         </div>
         <div className="mt-16 flex justify-center gap-8 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-sm/6">&copy; 2025 CIRIS.AI All rights reserved.</p>
+          <p className="text-sm/6">&copy; 2025 CIRIS.AI | AGPL-3.0 License</p>
           <a href="/privacy" className="text-sm/6 hover:text-gray-800 underline">
             Privacy Policy
           </a>

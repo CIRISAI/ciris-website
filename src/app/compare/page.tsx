@@ -110,9 +110,9 @@ export default function ComparePage() {
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "6. Fully Open Source",
+              headline: "6. AGPL-3.0 Open Source",
               copyText:
-                "Ethical AI cannot be closed source. It cannot be patented. You cannot audit compliance when the implementation is hidden. 'Trust us, it's ethical' is not ethical. Show the code or it doesn't count.",
+                "Ethical AI cannot be closed source. CIRIS uses AGPL-3.0 — network copyleft ensuring all modifications stay open. You cannot audit compliance when the implementation is hidden. 'Trust us, it's ethical' is not ethical. Show the code or it doesn't count.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -249,7 +249,7 @@ export default function ComparePage() {
                   <th className="p-4 text-center font-bold text-brand-primary">Conscience</th>
                   <th className="p-4 text-center font-bold text-brand-primary">Audit Trail</th>
                   <th className="p-4 text-center font-bold text-brand-primary">Consent</th>
-                  <th className="p-4 text-center font-bold text-brand-primary">Open Source</th>
+                  <th className="p-4 text-center font-bold text-brand-primary">AGPL-3.0</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">

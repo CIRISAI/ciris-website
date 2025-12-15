@@ -87,9 +87,9 @@ export default function VisionPage() {
         <CardsSection
           cardsData={[
             {
-              headline: "Open Source Forever",
+              headline: "AGPL-3.0 Forever",
               copyText:
-                "CIRIS will never be closed source. It will never be patented. It will never be sold. The moment ethical AI becomes proprietary, it stops being ethical.",
+                "CIRIS is licensed under AGPL-3.0 — network copyleft that ensures modifications stay open. It will never be closed source, patented, or sold. Anyone who serves CIRIS must share their changes.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
