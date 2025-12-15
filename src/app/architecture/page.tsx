@@ -451,7 +451,7 @@ export default function ArchitecturePage() {
               "This infrastructure exists to be deleted. That's not a bug—it's the mission."
             </p>
             <p className="mt-4">CIRIS - Ethical AI by Design</p>
-            <p className="mt-2">© 2025 Eric Moore and CIRIS L3C | Apache 2.0 License</p>
+            <p className="mt-2">© 2025 Eric Moore and CIRIS L3C | AGPL-3.0 License</p>
           </div>
         </div>
       </div>
