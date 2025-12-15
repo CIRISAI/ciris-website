@@ -4,20 +4,29 @@ import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
 
+type StatusLevel = "operational" | "degraded" | "outage";
+
 interface ProviderStatus {
-  status: "operational" | "degraded" | "outage";
-  latency_ms?: number;
+  status: StatusLevel;
+  latency_ms?: number | null;
   source?: string;
   name?: string;
   url?: string | null;
   provider?: string;
 }
 
+interface RegionData {
+  name: string;
+  status: StatusLevel;
+  services: Record<string, ProviderStatus>;
+}
+
 interface StatusData {
-  status: "operational" | "degraded" | "outage";
+  status: StatusLevel;
   timestamp: string;
   last_incident: string | null;
-  services: Record<string, ProviderStatus>;
+  regions?: Record<string, RegionData>;
+  services?: Record<string, ProviderStatus>; // Legacy fallback
   infrastructure: Record<string, ProviderStatus>;
   llm_providers: Record<string, ProviderStatus>;
   auth_providers: Record<string, ProviderStatus>;
@@ -27,7 +36,7 @@ interface StatusData {
 
 const STATUS_API = "https://lens.ciris-services-1.ai/lens-api/api/v1/status";
 
-function StatusIndicator({ status }: { status: "operational" | "degraded" | "outage" }) {
+function StatusIndicator({ status }: { status: StatusLevel }) {
   const colors = {
     operational: "bg-green-500",
     degraded: "bg-yellow-500",
@@ -36,7 +45,7 @@ function StatusIndicator({ status }: { status: "operational" | "degraded" | "out
   return <span className={`inline-block h-3 w-3 rounded-full ${colors[status]}`} />;
 }
 
-function StatusBadge({ status }: { status: "operational" | "degraded" | "outage" }) {
+function StatusBadge({ status, size = "md" }: { status: StatusLevel; size?: "sm" | "md" }) {
   const styles = {
     operational: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
     degraded: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
@@ -47,14 +56,15 @@ function StatusBadge({ status }: { status: "operational" | "degraded" | "outage"
     degraded: "Degraded",
     outage: "Outage",
   };
+  const sizeClass = size === "sm" ? "px-2 py-0.5 text-xs" : "px-3 py-1 text-sm";
   return (
-    <span className={`rounded-full px-3 py-1 text-sm font-medium ${styles[status]}`}>
+    <span className={`rounded-full font-medium ${sizeClass} ${styles[status]}`}>
       {labels[status]}
     </span>
   );
 }
 
-function ServiceRow({ name, displayName, status, latency }: { name: string; displayName: string; status: "operational" | "degraded" | "outage"; latency?: number }) {
+function ServiceRow({ displayName, status, latency }: { displayName: string; status: StatusLevel; latency?: number | null }) {
   return (
     <div className="flex items-center justify-between py-3 border-b border-gray-200 dark:border-gray-700 last:border-0">
       <div className="flex items-center gap-3">
@@ -62,10 +72,10 @@ function ServiceRow({ name, displayName, status, latency }: { name: string; disp
         <span className="font-medium text-gray-900 dark:text-white">{displayName}</span>
       </div>
       <div className="flex items-center gap-4">
-        {latency !== undefined && (
+        {latency !== undefined && latency !== null && (
           <span className="text-sm text-gray-500 dark:text-gray-400">{latency}ms</span>
         )}
-        <StatusBadge status={status} />
+        <StatusBadge status={status} size="sm" />
       </div>
     </div>
   );
@@ -77,6 +87,56 @@ function ServiceSection({ title, children }: { title: string; children: React.Re
       <h2 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">{title}</h2>
       <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
         {children}
+      </div>
+    </div>
+  );
+}
+
+function RegionCard({ regionKey, region, infrastructure }: { regionKey: string; region: RegionData; infrastructure?: ProviderStatus }) {
+  const regionIcons: Record<string, string> = {
+    us: "🇺🇸",
+    eu: "🇪🇺",
+  };
+
+  return (
+    <div className={`rounded-lg border-2 p-4 ${
+      region.status === "operational"
+        ? "border-green-500 bg-green-50 dark:bg-green-900/10"
+        : region.status === "degraded"
+        ? "border-yellow-500 bg-yellow-50 dark:bg-yellow-900/10"
+        : "border-red-500 bg-red-50 dark:bg-red-900/10"
+    }`}>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl">{regionIcons[regionKey] || "🌍"}</span>
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white">{region.name}</h3>
+        </div>
+        <StatusBadge status={region.status} />
+      </div>
+
+      <div className="space-y-2">
+        {Object.entries(region.services).map(([key, service]) => (
+          <div key={key} className="flex items-center justify-between text-sm">
+            <div className="flex items-center gap-2">
+              <StatusIndicator status={service.status} />
+              <span className="text-gray-700 dark:text-gray-300">{service.name || key}</span>
+            </div>
+            {service.latency_ms && (
+              <span className="text-gray-500 dark:text-gray-400">{service.latency_ms}ms</span>
+            )}
+          </div>
+        ))}
+        {infrastructure && (
+          <div className="flex items-center justify-between text-sm pt-2 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-2">
+              <StatusIndicator status={infrastructure.status} />
+              <span className="text-gray-500 dark:text-gray-400">Infrastructure</span>
+            </div>
+            {infrastructure.latency_ms && (
+              <span className="text-gray-500 dark:text-gray-400">{infrastructure.latency_ms}ms</span>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -148,21 +208,26 @@ export default function StatusPage() {
   };
 
   const providerDisplayNames: Record<string, string> = {
-    lens: "Observability",
-    billing: "Billing & Authentication",
-    proxy: "LLM Proxy",
     openrouter: "OpenRouter",
     groq: "Groq",
     together: "Together AI",
     google_oauth: "Google OAuth",
     google_play: "Google Play",
-    vultr: "US Region (Chicago)",
+    vultr: "US (Chicago)",
+    hetzner: "EU (Germany)",
     github: "Container Registry",
     "lens.postgresql": "Lens Database",
+    "us.postgresql": "US Database",
+    "eu.postgresql": "EU Database",
     "billing.postgresql": "Billing Database",
     "lens.grafana": "Grafana",
-    "proxy.billing": "Proxy-Billing Link",
     brave_search: "Brave Search",
+  };
+
+  // Map infrastructure keys to region keys
+  const infraToRegion: Record<string, string> = {
+    vultr: "us",
+    hetzner: "eu",
   };
 
   return (
@@ -210,24 +275,41 @@ export default function StatusPage() {
           {/* Status Data */}
           {data && (
             <>
-              {/* Core Services */}
-              <ServiceSection title="Services">
-                {Object.entries(data.services).map(([key, service]) => (
-                  <ServiceRow
-                    key={key}
-                    name={key}
-                    displayName={service.name || providerDisplayNames[key] || key}
-                    status={service.status}
-                  />
-                ))}
-              </ServiceSection>
+              {/* Regional Status */}
+              {data.regions && (
+                <div className="mb-8">
+                  <h2 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Regions</h2>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {Object.entries(data.regions).map(([key, region]) => (
+                      <RegionCard
+                        key={key}
+                        regionKey={key}
+                        region={region}
+                        infrastructure={data.infrastructure[infraToRegion[key] === key ? key : Object.keys(data.infrastructure).find(k => infraToRegion[k] === key) || ""]}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Legacy Services (if no regions) */}
+              {!data.regions && data.services && (
+                <ServiceSection title="Services">
+                  {Object.entries(data.services).map(([key, service]) => (
+                    <ServiceRow
+                      key={key}
+                      displayName={service.name || key}
+                      status={service.status}
+                    />
+                  ))}
+                </ServiceSection>
+              )}
 
               {/* AI Providers */}
               <ServiceSection title="AI Providers">
                 {Object.entries(data.llm_providers).map(([key, provider]) => (
                   <ServiceRow
                     key={key}
-                    name={key}
                     displayName={providerDisplayNames[key] || key}
                     status={provider.status}
                     latency={provider.latency_ms}
@@ -240,7 +322,6 @@ export default function StatusPage() {
                 {Object.entries(data.auth_providers).map(([key, provider]) => (
                   <ServiceRow
                     key={key}
-                    name={key}
                     displayName={providerDisplayNames[key] || key}
                     status={provider.status}
                     latency={provider.latency_ms}
@@ -257,7 +338,6 @@ export default function StatusPage() {
                   {Object.entries(data.infrastructure).map(([key, infra]) => (
                     <ServiceRow
                       key={key}
-                      name={key}
                       displayName={infra.name || providerDisplayNames[key] || key}
                       status={infra.status}
                       latency={infra.latency_ms}
@@ -272,7 +352,6 @@ export default function StatusPage() {
                   {Object.entries(data.database_providers).map(([key, db]) => (
                     <ServiceRow
                       key={key}
-                      name={key}
                       displayName={providerDisplayNames[key] || key}
                       status={db.status}
                       latency={db.latency_ms}
@@ -287,7 +366,6 @@ export default function StatusPage() {
                   {Object.entries(data.internal_providers).map(([key, svc]) => (
                     <ServiceRow
                       key={key}
-                      name={key}
                       displayName={providerDisplayNames[key] || key}
                       status={svc.status}
                       latency={svc.latency_ms}
@@ -314,6 +392,7 @@ export default function StatusPage() {
                 <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                   <li>Status updates every 60 seconds automatically</li>
                   <li>Data sourced from CIRISLens observability platform</li>
+                  <li>Multi-region monitoring: US (Chicago) and EU (Germany)</li>
                   <li>Latency measured from our infrastructure to each provider</li>
                 </ul>
                 <div className="mt-4 flex gap-4">
