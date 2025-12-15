@@ -167,7 +167,7 @@ function ChevronDownIcon({ isOpen }: { isOpen: boolean }) {
       viewBox="0 0 24 24"
       stroke="white"
       strokeWidth="1"
-      fill={isOpen ? "none" : "none"}
+      fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
       animate={{ rotate: isOpen ? 180 : 0 }}

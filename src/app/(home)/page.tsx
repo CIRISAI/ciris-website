@@ -411,7 +411,6 @@ function Button({ children }: { children: React.ReactNode }) {
     </motion.button>
   );
 }
-``;
 
 function Corner({
   thickness = 1.5,
