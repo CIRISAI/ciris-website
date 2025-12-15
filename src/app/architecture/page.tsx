@@ -333,15 +333,6 @@ export default function ArchitecturePage() {
               </p>
 
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {/* CIRISBridge */}
-                <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBridge</h4>
-                  <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Terraform + Ansible orchestration</p>
-                  <div className="flex gap-2">
-                    <a href="https://github.com/CIRISAI/CIRISBridge" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
-                  </div>
-                </div>
-
                 {/* CIRISAgent */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISAgent</h4>
@@ -353,12 +344,36 @@ export default function ArchitecturePage() {
                   </div>
                 </div>
 
+                {/* CIRISManager */}
+                <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
+                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISManager</h4>
+                  <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Scout, research agents, Discord mods</p>
+                  <div className="flex gap-2">
+                    <a href="https://github.com/CIRISAI/CIRISManager" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISManager" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                  </div>
+                </div>
+
+                {/* CIRISBridge */}
+                <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
+                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBridge</h4>
+                  <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Terraform + Ansible orchestration</p>
+                  <div className="flex gap-2">
+                    <a href="https://github.com/CIRISAI/CIRISBridge" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISBridge" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                  </div>
+                </div>
+
                 {/* CIRISBilling */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBilling</h4>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Credits and payments</p>
                   <div className="flex gap-2">
                     <a href="https://github.com/CIRISAI/CIRISBilling" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISBilling" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
                   </div>
                 </div>
 
@@ -368,6 +383,8 @@ export default function ArchitecturePage() {
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">LLM routing with ZDR</p>
                   <div className="flex gap-2">
                     <a href="https://github.com/CIRISAI/CIRISProxy" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
+                    <span className="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISProxy" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
                   </div>
                 </div>
 
