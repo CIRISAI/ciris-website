@@ -152,6 +152,78 @@ export default function ArchitecturePage() {
             </div>
           </div>
 
+          {/* Performance */}
+          <div className="mb-12">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+              Performance
+            </h2>
+
+            <div className="mb-6 rounded-lg border-2 border-green-500 bg-green-50 p-6 dark:bg-green-900/20">
+              <h3 className="font-semibold text-green-800 dark:text-green-300 mb-4">
+                Production Metrics (scout.ciris.ai)
+              </h3>
+              <div className="grid gap-4 sm:grid-cols-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">368 MB</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Memory Usage</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">5%</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">CPU Usage</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">5-10s</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Response Time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">22</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Core Services</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  Edge Device Support
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  CIRISAgent runs on Android ARM32 devices via Chaquopy Python with 15-20 second
+                  response times. Total app footprint under 100MB.
+                </p>
+                <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
+                  <li>• Full on-device runtime (no cloud required)</li>
+                  <li>• SQLite with WAL mode for local persistence</li>
+                  <li>• Opportunistic sync when connectivity available</li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  Coherence Ratchet
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  Ethical consistency isn't expensive—deception is. Truth verification is O(1),
+                  while lying requires solving NP-hard consistency against cryptographically-signed history.
+                </p>
+                <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
+                  <li>• Truth-telling: constant time verification</li>
+                  <li>• Deception: exponentially growing computational cost</li>
+                  <li>• Ethics as path of least resistance</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-6 rounded bg-gray-100 p-4 dark:bg-gray-900">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Graceful Degradation</h4>
+              <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                <li>• <strong>LLM fallback chain:</strong> Primary → Fast → Fallback → Mock (offline)</li>
+                <li>• <strong>Phased initialization:</strong> Critical services block, optional services fail gracefully</li>
+                <li>• <strong>Resource adaptation:</strong> Adjusts to intermittent networks and power constraints</li>
+              </ul>
+            </div>
+          </div>
+
           {/* Key Design Decisions */}
           <div className="mb-12">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
