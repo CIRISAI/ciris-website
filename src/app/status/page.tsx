@@ -157,7 +157,7 @@ function RegionCard({ regionKey, region, infrastructure }: { regionKey: string; 
 }
 
 function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: number }) {
-  // Create array of days, filling in missing data
+  // Create array of days, showing gray for missing data
   const today = new Date();
   const bars = [];
 
@@ -167,32 +167,45 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
     const dateStr = date.toISOString().split("T")[0];
 
     const entry = history.find((h) => h.date === dateStr);
-    const status = entry?.status || "operational";
-    const uptime = entry?.uptime_pct ?? 100;
 
-    const color =
-      status === "outage"
-        ? "bg-red-500"
-        : status === "degraded"
-        ? "bg-yellow-500"
-        : uptime < 99.9
-        ? "bg-yellow-500"
-        : "bg-green-500";
+    // No data = gray, has data = color based on status
+    let color: string;
+    let title: string;
+
+    if (!entry) {
+      color = "bg-gray-300 dark:bg-gray-600";
+      title = `${dateStr}: No data`;
+    } else {
+      const status = entry.status;
+      const uptime = entry.uptime_pct;
+
+      color =
+        status === "outage"
+          ? "bg-red-500"
+          : status === "degraded"
+          ? "bg-yellow-500"
+          : uptime < 99.9
+          ? "bg-yellow-500"
+          : "bg-green-500";
+      title = `${dateStr}: ${uptime.toFixed(2)}% uptime`;
+    }
 
     bars.push(
       <div
         key={dateStr}
         className={`h-8 flex-1 ${color} rounded-sm hover:opacity-80 transition-opacity cursor-pointer`}
-        title={`${dateStr}: ${uptime.toFixed(2)}% uptime`}
+        title={title}
       />
     );
   }
 
-  // Calculate overall uptime
+  // Calculate overall uptime only from days with data
   const avgUptime =
     history.length > 0
       ? history.reduce((sum, h) => sum + h.uptime_pct, 0) / history.length
       : null;
+
+  const daysWithData = history.length;
 
   return (
     <div>
@@ -201,7 +214,7 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
         <span>{days} days ago</span>
         {avgUptime !== null ? (
           <span className="font-medium text-gray-900 dark:text-white">
-            {avgUptime.toFixed(2)}% uptime
+            {avgUptime.toFixed(2)}% uptime ({daysWithData} {daysWithData === 1 ? "day" : "days"} of data)
           </span>
         ) : (
           <span>Collecting data...</span>
