@@ -1,0 +1,22 @@
+{
+  "canary": {
+    "version": "1.0",
+    "timestamp": "2025-12-15T00:58:30.082051+00:00",
+    "valid_until": null,
+    "statements": [
+      "We have NOT received any National Security Letters (NSLs)",
+      "We have NOT received any orders under the Foreign Intelligence Surveillance Act (FISA)",
+      "We have NOT been subject to any gag order preventing disclosure of government requests",
+      "We have NOT placed any backdoors in our software or been asked to do so",
+      "We have NOT provided any user data to government agencies",
+      "We have NOT been compelled to modify CIRIS to weaken its ethical constraints"
+    ],
+    "signer": {
+      "wa_id": "wa-2025-06-14-ROOT00",
+      "role": "root"
+    }
+  },
+  "signature": "i35Rszt4EmhnbPvkQUGUybthxvyYZ7rD5_VBP7F4RKZ2pj21lpQFAMMF98f98VpSp8YD9JbR2dxW3oCSUw8dAw",
+  "public_key": "7Bp-e4M4M-eLzwiwuoMLb4aoKZJuXDsQ8NamVJzveAk",
+  "verify_instructions": "To verify: decode base64url signature and public_key, verify Ed25519 signature over JSON.stringify(canary, sortKeys=true, compact=true)"
+}
