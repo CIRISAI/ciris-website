@@ -35,6 +35,20 @@ interface StatusData {
 }
 
 const STATUS_API = "https://lens.ciris-services-1.ai/lens-api/api/v1/status";
+const HISTORY_API = "https://lens.ciris-services-1.ai/lens-api/api/v1/status/history";
+
+interface HistoryEntry {
+  date: string;
+  uptime_pct: number;
+  status: StatusLevel;
+}
+
+interface HistoryData {
+  days: number;
+  region: string | null;
+  history: HistoryEntry[];
+  regions?: Record<string, HistoryEntry[]>;
+}
 
 function StatusIndicator({ status }: { status: StatusLevel }) {
   const colors = {
@@ -142,6 +156,62 @@ function RegionCard({ regionKey, region, infrastructure }: { regionKey: string; 
   );
 }
 
+function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: number }) {
+  // Create array of days, filling in missing data
+  const today = new Date();
+  const bars = [];
+
+  for (let i = days - 1; i >= 0; i--) {
+    const date = new Date(today);
+    date.setDate(date.getDate() - i);
+    const dateStr = date.toISOString().split("T")[0];
+
+    const entry = history.find((h) => h.date === dateStr);
+    const status = entry?.status || "operational";
+    const uptime = entry?.uptime_pct ?? 100;
+
+    const color =
+      status === "outage"
+        ? "bg-red-500"
+        : status === "degraded"
+        ? "bg-yellow-500"
+        : uptime < 99.9
+        ? "bg-yellow-500"
+        : "bg-green-500";
+
+    bars.push(
+      <div
+        key={dateStr}
+        className={`h-8 flex-1 ${color} rounded-sm hover:opacity-80 transition-opacity cursor-pointer`}
+        title={`${dateStr}: ${uptime.toFixed(2)}% uptime`}
+      />
+    );
+  }
+
+  // Calculate overall uptime
+  const avgUptime =
+    history.length > 0
+      ? history.reduce((sum, h) => sum + h.uptime_pct, 0) / history.length
+      : null;
+
+  return (
+    <div>
+      <div className="flex gap-0.5 mb-2">{bars}</div>
+      <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400">
+        <span>{days} days ago</span>
+        {avgUptime !== null ? (
+          <span className="font-medium text-gray-900 dark:text-white">
+            {avgUptime.toFixed(2)}% uptime
+          </span>
+        ) : (
+          <span>Collecting data...</span>
+        )}
+        <span>Today</span>
+      </div>
+    </div>
+  );
+}
+
 function CollapsibleSection({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   return (
@@ -171,6 +241,7 @@ function CollapsibleSection({ title, children, defaultOpen = false }: { title: s
 
 export default function StatusPage() {
   const [data, setData] = useState<StatusData | null>(null);
+  const [history, setHistory] = useState<HistoryData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -192,11 +263,24 @@ export default function StatusPage() {
     }
   }, []);
 
+  const fetchHistory = useCallback(async () => {
+    try {
+      const response = await fetch(`${HISTORY_API}?days=90`);
+      if (response.ok) {
+        const json = await response.json();
+        setHistory(json);
+      }
+    } catch {
+      // History is optional, don't show error
+    }
+  }, []);
+
   useEffect(() => {
     fetchStatus();
+    fetchHistory();
     const interval = setInterval(fetchStatus, 60000);
     return () => clearInterval(interval);
-  }, [fetchStatus]);
+  }, [fetchStatus, fetchHistory]);
 
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString("en-US", {
@@ -291,6 +375,16 @@ export default function StatusPage() {
                   </div>
                 </div>
               )}
+
+              {/* 90-Day Uptime History */}
+              <div className="mb-8">
+                <h2 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                  90-Day Uptime
+                </h2>
+                <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+                  <UptimeBar history={history?.history || []} days={90} />
+                </div>
+              </div>
 
               {/* Legacy Services (if no regions) */}
               {!data.regions && data.services && (
