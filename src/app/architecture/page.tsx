@@ -217,7 +217,7 @@ export default function ArchitecturePage() {
             <div className="mt-6 rounded bg-gray-100 p-4 dark:bg-gray-900">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Graceful Degradation</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                <li>• <strong>LLM fallback chain:</strong> Primary → Fast → Fallback → Mock (offline)</li>
+                <li>• <strong>LLM fallback chain:</strong> Primary → Fast → Fallback providers</li>
                 <li>• <strong>Phased initialization:</strong> Critical services block, optional services fail gracefully</li>
                 <li>• <strong>Resource adaptation:</strong> Adjusts to intermittent networks and power constraints</li>
               </ul>
