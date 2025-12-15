@@ -288,6 +288,73 @@ export default function SafetyPolicyPage() {
             </div>
           </div>
 
+          {/* Zero Data Retention */}
+          <div className="mb-12">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+              Zero Data Retention
+            </h2>
+
+            <div className="mb-6 rounded-lg border-2 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Your conversations are never stored.</strong> CIRISProxy processes requests
+                in real-time and deletes all conversation content immediately after response delivery.
+                We cannot retrieve, replay, or analyze your conversations because we do not retain them.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+              <h3 className="mb-4 font-semibold text-gray-900 dark:text-white">
+                Operational Metadata We Collect
+              </h3>
+              <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+                For debugging and abuse prevention, we collect minimal operational metadata.
+                This data is anonymized by design and cannot be linked to you or your conversations:
+              </p>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                      <th className="py-2 pr-4 text-left font-semibold text-gray-900 dark:text-white">Field</th>
+                      <th className="py-2 pr-4 text-left font-semibold text-gray-900 dark:text-white">Value</th>
+                      <th className="py-2 text-left font-semibold text-gray-900 dark:text-white">Why Safe</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-700 dark:text-gray-300">
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-2 pr-4 font-mono text-xs">interaction_id</td>
+                      <td className="py-2 pr-4">SHA256 hash (truncated)</td>
+                      <td className="py-2 text-green-700 dark:text-green-400">Irreversible, no PII</td>
+                    </tr>
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-2 pr-4 font-mono text-xs">request_id</td>
+                      <td className="py-2 pr-4">Random UUID</td>
+                      <td className="py-2 text-green-700 dark:text-green-400">Random, not linked to user</td>
+                    </tr>
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-2 pr-4 font-mono text-xs">retry_count</td>
+                      <td className="py-2 pr-4">Integer (0, 1, 2...)</td>
+                      <td className="py-2 text-green-700 dark:text-green-400">Just a number</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-xs">error_category</td>
+                      <td className="py-2 pr-4">"TIMEOUT", "RATE_LIMIT"</td>
+                      <td className="py-2 text-green-700 dark:text-green-400">Category only, no content</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="mt-4 rounded bg-gray-100 p-3 dark:bg-gray-900">
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  <strong>What we explicitly do NOT collect:</strong> User messages, AI responses,
+                  email addresses, names, IP addresses, conversation history, or any content
+                  that could identify you or reconstruct your interactions.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Transparency Commitment */}
           <div className="mb-12">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
