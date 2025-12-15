@@ -15,8 +15,7 @@ export default function ArchitecturePage() {
               Infrastructure
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-              Multi-region, privacy-first infrastructure for ~$30/month.
-              Designed to be deleted.
+              Multi-region, privacy-first infrastructure. Designed to be deleted.
             </p>
           </div>
 
@@ -84,66 +83,6 @@ export default function ArchitecturePage() {
             </div>
           </div>
 
-          {/* Cost Breakdown */}
-          <div className="mb-12">
-            <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-              Cost Breakdown
-            </h2>
-
-            <div className="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800 overflow-hidden">
-              <table className="w-full text-sm">
-                <thead className="bg-gray-50 dark:bg-gray-900">
-                  <tr>
-                    <th className="py-3 px-4 text-left font-semibold text-gray-900 dark:text-white">Resource</th>
-                    <th className="py-3 px-4 text-left font-semibold text-gray-900 dark:text-white">Provider</th>
-                    <th className="py-3 px-4 text-left font-semibold text-gray-900 dark:text-white">Specs</th>
-                    <th className="py-3 px-4 text-right font-semibold text-gray-900 dark:text-white">Cost</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-700 dark:text-gray-300">
-                  <tr className="border-t border-gray-100 dark:border-gray-800">
-                    <td className="py-3 px-4">US Node</td>
-                    <td className="py-3 px-4">Vultr</td>
-                    <td className="py-3 px-4 text-xs">2 vCPU, 4GB RAM, 80GB SSD</td>
-                    <td className="py-3 px-4 text-right">$24/mo</td>
-                  </tr>
-                  <tr className="border-t border-gray-100 dark:border-gray-800">
-                    <td className="py-3 px-4">EU Node</td>
-                    <td className="py-3 px-4">Hetzner</td>
-                    <td className="py-3 px-4 text-xs">2 vCPU, 4GB RAM, 40GB SSD</td>
-                    <td className="py-3 px-4 text-right">~$7/mo</td>
-                  </tr>
-                  <tr className="border-t border-gray-100 dark:border-gray-800">
-                    <td className="py-3 px-4">Block Storage</td>
-                    <td className="py-3 px-4">Hetzner</td>
-                    <td className="py-3 px-4 text-xs">20GB for PostgreSQL</td>
-                    <td className="py-3 px-4 text-right">~$1/mo</td>
-                  </tr>
-                  <tr className="border-t border-gray-100 dark:border-gray-800">
-                    <td className="py-3 px-4">Domains (2)</td>
-                    <td className="py-3 px-4">Registrar</td>
-                    <td className="py-3 px-4 text-xs">ciris-services-1.ai, ciris-services-2.ai</td>
-                    <td className="py-3 px-4 text-right">~$3/mo</td>
-                  </tr>
-                  <tr className="border-t-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900">
-                    <td className="py-3 px-4 font-bold" colSpan={3}>Total</td>
-                    <td className="py-3 px-4 text-right font-bold text-brand-primary">~$35/mo</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="mt-4 rounded bg-gray-100 p-4 dark:bg-gray-900">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Why so low?</h4>
-              <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                <li>• No managed service premiums (self-hosted DNS, Postgres, observability)</li>
-                <li>• Two independent providers (no vendor lock-in penalty)</li>
-                <li>• Minimal resources (2 vCPU/4GB sufficient for all services)</li>
-                <li>• No VC pressure to monetize—sustainable indefinitely</li>
-              </ul>
-            </div>
-          </div>
-
           {/* Services */}
           <div className="mb-12">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
@@ -175,7 +114,7 @@ export default function ArchitecturePage() {
                   Sustainable operation without ads or data monetization.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• Pre-purchased credits ($0.05/interaction)</li>
+                  <li>• Pre-purchased credits model</li>
                   <li>• Idempotent consumption (exactly-once)</li>
                   <li>• Google OAuth authentication</li>
                 </ul>
