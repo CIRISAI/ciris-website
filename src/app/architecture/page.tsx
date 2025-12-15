@@ -323,19 +323,36 @@ export default function ArchitecturePage() {
           {/* Open Source */}
           <div className="mb-12">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-              100% Open Source
+              100% AGPL-3.0 Open Source
             </h2>
+
+            <div className="rounded-lg border-2 border-purple-500 bg-purple-50 p-6 dark:bg-purple-900/20 mb-6">
+              <h3 className="font-semibold text-purple-800 dark:text-purple-300 mb-2">
+                Why AGPL-3.0?
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-3">
+                Every CIRIS component uses the GNU Affero General Public License v3.0. This isn't just "open source"—it's <strong>network copyleft</strong>. If anyone modifies CIRIS and offers it as a service, they must release their modifications under the same license.
+              </p>
+              <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                <li>• <strong>Prevents cloud appropriation</strong> — No company can take CIRIS, modify it, and offer it as a closed service</li>
+                <li>• <strong>Ensures transparency</strong> — Any deployed version's source must be available to users</li>
+                <li>• <strong>Protects the commons</strong> — Improvements flow back to the community, not into proprietary forks</li>
+              </ul>
+            </div>
 
             <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Every component of CIRIS infrastructure is open source. You can audit our claims,
-                reproduce our setup, or fork it for your own use.
+                Every component of CIRIS infrastructure is open source under AGPL-3.0. You can audit our claims,
+                reproduce our setup, or fork it—and if you serve it to others, you share your improvements.
               </p>
 
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {/* CIRISAgent */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISAgent</h4>
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISAgent</h4>
+                    <span className="text-[10px] bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300 px-1.5 py-0.5 rounded">AGPL-3.0</span>
+                  </div>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Core agent framework</p>
                   <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISAgent" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
@@ -348,7 +365,10 @@ export default function ArchitecturePage() {
 
                 {/* CIRISManager */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISManager</h4>
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISManager</h4>
+                    <span className="text-[10px] bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300 px-1.5 py-0.5 rounded">AGPL-3.0</span>
+                  </div>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Scout, research agents, Discord mods</p>
                   <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISManager" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
@@ -361,7 +381,10 @@ export default function ArchitecturePage() {
 
                 {/* CIRISBridge */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBridge</h4>
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBridge</h4>
+                    <span className="text-[10px] bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300 px-1.5 py-0.5 rounded">AGPL-3.0</span>
+                  </div>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Terraform + Ansible orchestration</p>
                   <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISBridge" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
@@ -374,7 +397,10 @@ export default function ArchitecturePage() {
 
                 {/* CIRISBilling */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBilling</h4>
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISBilling</h4>
+                    <span className="text-[10px] bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300 px-1.5 py-0.5 rounded">AGPL-3.0</span>
+                  </div>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Credits and payments</p>
                   <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISBilling" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
@@ -387,7 +413,10 @@ export default function ArchitecturePage() {
 
                 {/* CIRISProxy */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISProxy</h4>
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISProxy</h4>
+                    <span className="text-[10px] bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300 px-1.5 py-0.5 rounded">AGPL-3.0</span>
+                  </div>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">LLM routing with ZDR</p>
                   <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISProxy" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
@@ -400,7 +429,10 @@ export default function ArchitecturePage() {
 
                 {/* CIRISLens */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISLens</h4>
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CIRISLens</h4>
+                    <span className="text-[10px] bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300 px-1.5 py-0.5 rounded">AGPL-3.0</span>
+                  </div>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">Observability and status</p>
                   <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/CIRISLens" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
@@ -413,12 +445,15 @@ export default function ArchitecturePage() {
 
                 {/* ciris-website */}
                 <div className="rounded border border-gray-200 p-3 dark:border-gray-700">
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">ciris-website</h4>
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">ciris-website</h4>
+                    <span className="text-[10px] bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300 px-1.5 py-0.5 rounded">AGPL-3.0</span>
+                  </div>
                   <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">This website</p>
                   <div className="flex flex-wrap gap-x-2 gap-y-1">
                     <a href="https://github.com/CIRISAI/ciris-website" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">GitHub</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
-                    <a href="https://sonarcloud.io/project/overview?id=CIRISAI_CIRISWebsite" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
+                    <a href="https://sonarcloud.io/project/overview?id=CIRISAI_ciris-website" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">SonarCloud</a>
                     <span className="text-gray-300 dark:text-gray-600">|</span>
                     <a href="https://deepwiki.com/CIRISAI/ciris-website" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">DeepWiki</a>
                   </div>
