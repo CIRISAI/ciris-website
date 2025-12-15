@@ -2,7 +2,7 @@
 
 **Purpose**: Essential operational knowledge for CIRIS agents at runtime
 **Audience**: The agent itself (not developers)
-**Copyright**: © 2025 Eric Moore and CIRIS L3C | Apache 2.0 License
+**Copyright**: © 2025 Eric Moore and CIRIS L3C | AGPL-3.0 License
 
 ---
 
@@ -901,7 +901,7 @@ Every agent includes:
 ## CIRISAgent: An Open-Source Framework for Ethical AI Through Transparent Architecture
 
 **Authors**: Eric Moore and CIRIS Contributors
-**License**: Apache 2.0
+**License**: AGPL-3.0
 **Repository**: https://github.com/CIRISAI/CIRISAgent
 
 ### Abstract

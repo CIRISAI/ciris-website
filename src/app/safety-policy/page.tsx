@@ -406,7 +406,7 @@ export default function SafetyPolicyPage() {
           {/* Footer */}
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
             <p>CIRIS - Ethical AI by Design</p>
-            <p className="mt-2">© 2025 Eric Moore and CIRIS L3C | Apache 2.0 License</p>
+            <p className="mt-2">© 2025 Eric Moore and CIRIS L3C | AGPL-3.0 License</p>
           </div>
         </div>
       </div>
