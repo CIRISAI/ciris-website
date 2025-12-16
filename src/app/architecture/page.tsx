@@ -43,41 +43,129 @@ export default function ArchitecturePage() {
             </h2>
 
             <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
-              <pre className="overflow-x-auto text-xs sm:text-sm text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
-{`                    Clients (Americas / Europe)
-                              │
-                     ┌────────┴────────┐
-                     │                 │
-                     ▼                 ▼
-                ┌─────────┐       ┌─────────┐
-                │  Vultr  │◄─────►│ Hetzner │
-                │   US    │  sync │   EU    │
-                │ Chicago │       │ Germany │
-                └─────────┘       └─────────┘
-                     │                 │
-    ─────────────────┼─────────────────┼─────────────────
-                     │                 │
-              Each region runs:        │
-              ├─ Constellation DNS     │
-              ├─ CIRISBilling          │
-              ├─ CIRISProxy            │
-              ├─ PostgreSQL ◄──────────┘ (bi-directional)
-              ├─ Redis
-              └─ Caddy (TLS)`}
-              </pre>
-
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded bg-green-50 p-4 dark:bg-green-900/20">
-                  <h4 className="font-semibold text-green-800 dark:text-green-300">US Region (Vultr)</h4>
-                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                    Chicago datacenter. Serves Americas. Runs CIRISLens (observability).
-                  </p>
+              {/* Clients */}
+              <div className="text-center mb-4">
+                <div className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-6 py-3">
+                  <div className="font-semibold text-gray-900 dark:text-white">Clients</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">Americas / Europe</div>
                 </div>
-                <div className="rounded bg-blue-50 p-4 dark:bg-blue-900/20">
-                  <h4 className="font-semibold text-blue-800 dark:text-blue-300">EU Region (Hetzner)</h4>
-                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                    Falkenstein, Germany. Serves Europe. Full service redundancy.
-                  </p>
+              </div>
+
+              {/* Connection lines down */}
+              <div className="flex justify-center mb-4">
+                <div className="flex items-end gap-16 sm:gap-24">
+                  <div className="w-px h-8 bg-gray-400 dark:bg-gray-500"></div>
+                  <div className="w-px h-8 bg-gray-400 dark:bg-gray-500"></div>
+                </div>
+              </div>
+
+              {/* Geo-routing label */}
+              <div className="text-center mb-4">
+                <span className="text-xs text-gray-500 dark:text-gray-400 italic">geo-routed to nearest</span>
+              </div>
+
+              {/* Region boxes */}
+              <div className="grid gap-4 sm:gap-8 sm:grid-cols-2 mb-4">
+                {/* US Region */}
+                <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-4">
+                  <div className="text-center mb-3">
+                    <h4 className="font-bold text-green-800 dark:text-green-300">Vultr US</h4>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Chicago</div>
+                  </div>
+                  <div className="space-y-1.5 text-xs text-gray-700 dark:text-gray-300">
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      Constellation DNS
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      CIRISBilling
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      CIRISProxy
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      PostgreSQL
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      Redis
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      Caddy (TLS)
+                    </div>
+                    <div className="flex items-center gap-2 mt-2 pt-2 border-t border-green-300 dark:border-green-700">
+                      <span className="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
+                      <span className="text-yellow-700 dark:text-yellow-400">+ CIRISLens</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* EU Region */}
+                <div className="rounded-lg border-2 border-blue-500 bg-blue-50 dark:bg-blue-900/20 p-4">
+                  <div className="text-center mb-3">
+                    <h4 className="font-bold text-blue-800 dark:text-blue-300">Hetzner EU</h4>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Falkenstein, Germany</div>
+                  </div>
+                  <div className="space-y-1.5 text-xs text-gray-700 dark:text-gray-300">
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                      Constellation DNS
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                      CIRISBilling
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                      CIRISProxy
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                      PostgreSQL
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                      Redis
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                      Caddy (TLS)
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sync indicator */}
+              <div className="flex items-center justify-center gap-2 py-3">
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-400 to-gray-400 dark:via-gray-500 dark:to-gray-500"></div>
+                <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-600">
+                  <span className="text-xs font-medium text-gray-700 dark:text-gray-300">PostgreSQL sync</span>
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  </svg>
+                </div>
+                <div className="flex-1 h-px bg-gradient-to-l from-transparent via-gray-400 to-gray-400 dark:via-gray-500 dark:to-gray-500"></div>
+              </div>
+
+              {/* Legend */}
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-3 h-3 rounded border-2 border-green-500 bg-green-50 dark:bg-green-900/20"></div>
+                    <span>US Region (Americas)</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-3 h-3 rounded border-2 border-blue-500 bg-blue-50 dark:bg-blue-900/20"></div>
+                    <span>EU Region (Europe)</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                    <span>US-only service</span>
+                  </div>
                 </div>
               </div>
             </div>
