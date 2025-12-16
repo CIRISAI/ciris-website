@@ -177,7 +177,7 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
       title = `${dateStr}: No data`;
     } else {
       const status = entry.status;
-      const uptime = entry.uptime_pct;
+      const uptime = entry.uptime_pct ?? 0;
 
       color =
         status === "outage"
@@ -200,12 +200,13 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
   }
 
   // Calculate overall uptime only from days with data
+  const validHistory = history.filter((h) => typeof h.uptime_pct === 'number');
   const avgUptime =
-    history.length > 0
-      ? history.reduce((sum, h) => sum + h.uptime_pct, 0) / history.length
+    validHistory.length > 0
+      ? validHistory.reduce((sum, h) => sum + h.uptime_pct, 0) / validHistory.length
       : null;
 
-  const daysWithData = history.length;
+  const daysWithData = validHistory.length;
 
   return (
     <div>
