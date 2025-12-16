@@ -27,11 +27,11 @@ interface StatusData {
   last_incident: string | null;
   regions?: Record<string, RegionData>;
   services?: Record<string, ProviderStatus>; // Legacy fallback
-  infrastructure: Record<string, ProviderStatus>;
-  llm_providers: Record<string, ProviderStatus>;
-  auth_providers: Record<string, ProviderStatus>;
-  database_providers: Record<string, ProviderStatus>;
-  internal_providers: Record<string, ProviderStatus>;
+  infrastructure?: Record<string, ProviderStatus>;
+  llm_providers?: Record<string, ProviderStatus>;
+  auth_providers?: Record<string, ProviderStatus>;
+  database_providers?: Record<string, ProviderStatus>;
+  internal_providers?: Record<string, ProviderStatus>;
 }
 
 const STATUS_API = "https://lens.ciris-services-1.ai/lens-api/api/v1/status";
@@ -261,16 +261,24 @@ export default function StatusPage() {
 
   const fetchStatus = useCallback(async () => {
     try {
-      const response = await fetch(STATUS_API);
+      const response = await fetch(STATUS_API, {
+        mode: 'cors',
+        credentials: 'omit',
+      });
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       const json = await response.json();
+      if (!json || typeof json.status !== 'string') {
+        throw new Error('Invalid response format');
+      }
       setData(json);
       setLastUpdated(new Date());
       setError(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to fetch status");
+      const errorMessage = err instanceof Error ? err.message : "Failed to fetch status";
+      console.error('[CIRIS Status] Fetch error:', errorMessage, err);
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -278,13 +286,17 @@ export default function StatusPage() {
 
   const fetchHistory = useCallback(async () => {
     try {
-      const response = await fetch(`${HISTORY_API}?days=90`);
+      const response = await fetch(`${HISTORY_API}?days=90`, {
+        mode: 'cors',
+        credentials: 'omit',
+      });
       if (response.ok) {
         const json = await response.json();
         setHistory(json);
       }
-    } catch {
-      // History is optional, don't show error
+    } catch (err) {
+      // History is optional, just log for debugging
+      console.warn('[CIRIS Status] History fetch warning:', err);
     }
   }, []);
 
@@ -377,14 +389,19 @@ export default function StatusPage() {
                 <div className="mb-8">
                   <h2 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Regions</h2>
                   <div className="grid gap-4 md:grid-cols-2">
-                    {Object.entries(data.regions).map(([key, region]) => (
-                      <RegionCard
-                        key={key}
-                        regionKey={key}
-                        region={region}
-                        infrastructure={data.infrastructure[infraToRegion[key] === key ? key : Object.keys(data.infrastructure).find(k => infraToRegion[k] === key) || ""]}
-                      />
-                    ))}
+                    {Object.entries(data.regions).map(([key, region]) => {
+                      const infraKey = data.infrastructure
+                        ? (infraToRegion[key] === key ? key : Object.keys(data.infrastructure).find(k => infraToRegion[k] === key) || "")
+                        : "";
+                      return (
+                        <RegionCard
+                          key={key}
+                          regionKey={key}
+                          region={region}
+                          infrastructure={data.infrastructure?.[infraKey]}
+                        />
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -413,72 +430,82 @@ export default function StatusPage() {
               )}
 
               {/* AI Providers */}
-              <ServiceSection title="AI Providers">
-                {Object.entries(data.llm_providers).map(([key, provider]) => (
-                  <ServiceRow
-                    key={key}
-                    displayName={providerDisplayNames[key] || key}
-                    status={provider.status}
-                    latency={provider.latency_ms}
-                  />
-                ))}
-              </ServiceSection>
+              {data.llm_providers && Object.keys(data.llm_providers).length > 0 && (
+                <ServiceSection title="AI Providers">
+                  {Object.entries(data.llm_providers).map(([key, provider]) => (
+                    <ServiceRow
+                      key={key}
+                      displayName={providerDisplayNames[key] || key}
+                      status={provider.status}
+                      latency={provider.latency_ms}
+                    />
+                  ))}
+                </ServiceSection>
+              )}
 
               {/* Authentication */}
-              <ServiceSection title="Authentication">
-                {Object.entries(data.auth_providers).map(([key, provider]) => (
-                  <ServiceRow
-                    key={key}
-                    displayName={providerDisplayNames[key] || key}
-                    status={provider.status}
-                    latency={provider.latency_ms}
-                  />
-                ))}
-              </ServiceSection>
+              {data.auth_providers && Object.keys(data.auth_providers).length > 0 && (
+                <ServiceSection title="Authentication">
+                  {Object.entries(data.auth_providers).map(([key, provider]) => (
+                    <ServiceRow
+                      key={key}
+                      displayName={providerDisplayNames[key] || key}
+                      status={provider.status}
+                      latency={provider.latency_ms}
+                    />
+                  ))}
+                </ServiceSection>
+              )}
 
               {/* Infrastructure (Collapsible) */}
               <CollapsibleSection title="Infrastructure Details">
-                <div className="mb-4">
-                  <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
-                    Hosting
-                  </h3>
-                  {Object.entries(data.infrastructure).map(([key, infra]) => (
-                    <ServiceRow
-                      key={key}
-                      displayName={infra.name || providerDisplayNames[key] || key}
-                      status={infra.status}
-                      latency={infra.latency_ms}
-                    />
-                  ))}
-                </div>
+                {data.infrastructure && Object.keys(data.infrastructure).length > 0 && (
+                  <div className="mb-4">
+                    <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                      Hosting
+                    </h3>
+                    {Object.entries(data.infrastructure).map(([key, infra]) => (
+                      <ServiceRow
+                        key={key}
+                        displayName={infra.name || providerDisplayNames[key] || key}
+                        status={infra.status}
+                        latency={infra.latency_ms}
+                      />
+                    ))}
+                  </div>
+                )}
 
-                <div className="mb-4">
-                  <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
-                    Databases
-                  </h3>
-                  {Object.entries(data.database_providers).map(([key, db]) => (
-                    <ServiceRow
-                      key={key}
-                      displayName={providerDisplayNames[key] || key}
-                      status={db.status}
-                      latency={db.latency_ms}
-                    />
-                  ))}
-                </div>
+                {data.database_providers && Object.keys(data.database_providers).length > 0 && (
+                  <div className="mb-4">
+                    <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                      Databases
+                    </h3>
+                    {Object.entries(data.database_providers).map(([key, db]) => (
+                      <ServiceRow
+                        key={key}
+                        displayName={providerDisplayNames[key] || key}
+                        status={db.status}
+                        latency={db.latency_ms}
+                      />
+                    ))}
+                  </div>
+                )}
 
-                <div>
-                  <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
-                    Internal Services
-                  </h3>
-                  {Object.entries(data.internal_providers).map(([key, svc]) => (
-                    <ServiceRow
-                      key={key}
-                      displayName={providerDisplayNames[key] || key}
-                      status={svc.status}
-                      latency={svc.latency_ms}
-                    />
-                  ))}
-                </div>
+                {data.internal_providers && Object.keys(data.internal_providers).length > 0 && (
+                  <div>
+                    <h3 className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                      Internal Services
+                    </h3>
+                    {Object.entries(data.internal_providers).map(([key, svc]) => (
+                      <ServiceRow
+                        key={key}
+                        displayName={providerDisplayNames[key] || key}
+                        status={svc.status}
+                        latency={svc.latency_ms}
+                      />
+                    ))}
+                  </div>
+                )}
               </CollapsibleSection>
 
               {/* Last Incident */}
