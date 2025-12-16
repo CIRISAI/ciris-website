@@ -71,12 +71,9 @@ export default function ArchitecturePage() {
                   <div className="text-center mb-3">
                     <h4 className="font-bold text-green-800 dark:text-green-300">Vultr US</h4>
                     <div className="text-xs text-gray-600 dark:text-gray-400">Chicago</div>
+                    <div className="text-[10px] text-orange-600 dark:text-orange-400 mt-1">via Cloudflare</div>
                   </div>
                   <div className="space-y-1.5 text-xs text-gray-700 dark:text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                      Constellation DNS
-                    </div>
                     <div className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
                       CIRISBilling
@@ -109,12 +106,9 @@ export default function ArchitecturePage() {
                   <div className="text-center mb-3">
                     <h4 className="font-bold text-blue-800 dark:text-blue-300">Hetzner EU</h4>
                     <div className="text-xs text-gray-600 dark:text-gray-400">Falkenstein, Germany</div>
+                    <div className="text-[10px] text-gray-500 dark:text-gray-500 mt-1">direct DNS</div>
                   </div>
                   <div className="space-y-1.5 text-xs text-gray-700 dark:text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                      Constellation DNS
-                    </div>
                     <div className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                       CIRISBilling
@@ -181,15 +175,15 @@ export default function ArchitecturePage() {
               {/* DNS */}
               <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Constellation DNS
+                  Split DNS
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  Self-hosted authoritative DNS. No third party can cut off access to CIRIS.
+                  US via Cloudflare proxy, EU direct. Zero single point of failure.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• Geo-DNS routing to nearest region</li>
-                  <li>• Health-check-based failover</li>
-                  <li>• Both nodes serve both domains</li>
+                  <li>• US: Cloudflare proxy + DDoS protection</li>
+                  <li>• EU: Direct DNS to Hetzner</li>
+                  <li>• If CF fails, EU still accessible</li>
                 </ul>
               </div>
 
@@ -343,12 +337,12 @@ export default function ArchitecturePage() {
 
               <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Self-Hosted DNS
+                  Split DNS Strategy
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Running our own authoritative DNS (Constellation) means no third party—not Cloudflare,
-                  not Route53—can cut access to CIRIS. Both nodes serve both domains, so even DNS
-                  has no single point of failure.
+                  US traffic routes through Cloudflare for DDoS protection and caching. EU traffic
+                  uses direct DNS to Hetzner. This split ensures zero single point of failure—if
+                  Cloudflare has issues, EU remains directly accessible.
                 </p>
               </div>
 
