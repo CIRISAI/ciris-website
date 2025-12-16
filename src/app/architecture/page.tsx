@@ -59,9 +59,9 @@ export default function ArchitecturePage() {
                 </div>
               </div>
 
-              {/* Geo-routing label */}
+              {/* Domain label */}
               <div className="text-center mb-4">
-                <span className="text-xs text-gray-500 dark:text-gray-400 italic">geo-routed to nearest</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 italic">separate domains per region</span>
               </div>
 
               {/* Region boxes */}
@@ -319,8 +319,8 @@ export default function ArchitecturePage() {
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Both regions serve all requests simultaneously. No single point of failure for compute.
-                  Clients are geo-routed to the nearest region. If one region fails, the other continues
-                  serving immediately—no failover delay.
+                  Each region has its own domain. If one region fails, clients can switch to the other
+                  immediately—no failover delay.
                 </p>
               </div>
 
