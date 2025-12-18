@@ -249,8 +249,8 @@ export default function SafetyPage() {
         logoSrc="logoIcon"
         logoAlt="Brand logo icon"
         headline="Verify Everything."
-        subheadline="Trust, but verify."
-        copyText="Every safety claim on this page is implemented in code you can read. The audit logs are real. The signatures are verifiable. The kill switch works. Don't take our word for it — check the source."
+        subheadline="Governance infrastructure you can audit."
+        copyText="Every safety claim on this page is implemented in code you can read. The audit logs are real. The signatures are verifiable. The kill switch works. This is what AI governance infrastructure looks like when it's open."
       />
 
       <Footer />

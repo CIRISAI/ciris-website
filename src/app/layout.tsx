@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   creator: "CIRIS L3C",
   publisher: "CIRIS L3C",
   metadataBase: new URL("https://ciris.ai"),
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

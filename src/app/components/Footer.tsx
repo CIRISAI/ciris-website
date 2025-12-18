@@ -25,18 +25,19 @@ const navigation: Navigation = {
     { name: "Models", href: "/models" },
     { name: "Services", href: "/services" },
     { name: "Install", href: "/install" },
+    { name: "Safety", href: "/safety" },
     { name: "Infrastructure", href: "/architecture" },
   ],
   support: [
     { name: "Compare", href: "/compare" },
-    { name: "Documentation", href: "/sections/main" },
+    { name: "Documentation", href: "https://deepwiki.com/CIRISAI/CIRISAgent" },
     { name: "Academic Paper", href: "https://zenodo.org/records/17195221" },
     { name: "Status", href: "/status" },
   ],
   company: [
     { name: "About", href: "/about" },
     { name: "Vision", href: "/vision" },
-    { name: "Covenant", href: "/sections/main" },
+    { name: "Principles", href: "/sections/main" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
@@ -129,7 +130,7 @@ export default function Example() {
           <div className="space-y-8">
             <LogoIcon className="text-brand-primary h-16 w-auto" />
             <p className="text-sm/6 text-balance">
-              AI that earns your trust. Open source. Auditable. Yours to verify.
+              Open infrastructure against existential misalignment. AGPL-3.0 | Mission-locked.
             </p>
             <div className="flex gap-x-6"></div>
           </div>

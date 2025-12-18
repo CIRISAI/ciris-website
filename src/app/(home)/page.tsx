@@ -367,7 +367,7 @@ export default function Homepage() {
             {
               headline: "22 Core Services",
               copyText:
-                "From ethical reasoning and memory management to secure communications and bias detection—CIRIS coordinates specialized services that work together transparently.",
+                "From ethical reasoning and memory management to secure communications and audit logging—CIRIS coordinates specialized services that work together transparently.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

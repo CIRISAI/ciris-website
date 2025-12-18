@@ -14,7 +14,7 @@ const navItems = [
     icon: <IconHeart className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
-    name: "Covenant",
+    name: "Principles",
     subtitle: "The Ethical Framework",
     link: "/sections/main",
     icon: <IconBook className="h-4 w-4 text-neutral-500 dark:text-white" />,

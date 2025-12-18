@@ -276,7 +276,6 @@ export default function ArchitecturePage() {
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
                   <li>• Full on-device runtime (no cloud required)</li>
                   <li>• SQLite with WAL mode for local persistence</li>
-                  <li>• Opportunistic sync when connectivity available</li>
                 </ul>
               </div>
 
