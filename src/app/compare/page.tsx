@@ -62,7 +62,7 @@ export default function ComparePage() {
       <div className="bg-gray-900 dark:bg-black py-8 border-b border-gray-800">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="text-lg text-gray-100 font-medium">
-            CIRIS isn't productivity AI. It's governance infrastructure for high-stakes deployment where misalignment kills.
+            CIRIS isn't productivity AI. It's runtime governance for agentic AI — infrastructure for high-stakes deployment where misalignment kills.
           </p>
           <p className="mt-3 text-sm text-gray-400">
             The only open stack enforcing all six ethical requirements at runtime (as of Dec 2025).{" "}
@@ -147,7 +147,7 @@ export default function ComparePage() {
           logoAlt="Brand logo icon"
           headline="The Runtime Gap"
           subheadline="Design-time ethics don't execute."
-          copyText="Most ethical AI work stops at governance frameworks. CIRIS enforces at runtime. 'Runtime verification mechanisms ensure principles remain strictly adhered to during operation.' — Springer, AI and Ethics (2025)"
+          copyText="Most ethical AI stops at governance frameworks. CIRIS provides runtime governance — enforcing principles during operation, not just at design time. 'Runtime verification mechanisms ensure principles remain strictly adhered to during operation.' — Springer, AI and Ethics (2025)"
         />
 
         <FlexSection

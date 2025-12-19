@@ -14,14 +14,18 @@ export const metadata: Metadata = {
     template: "%s | CIRIS",
   },
   description:
-    "Open source AI that earns your trust. Auditable ethical framework with Zero Data Retention. 100% transparent, yours to verify.",
+    "Runtime governance for agentic AI. Open source ethical framework with cryptographic audit, human deferral, and conscience-checked actions. AGPL-3.0.",
   keywords: [
+    "runtime governance",
+    "AI governance",
     "ethical AI",
     "open source AI",
     "AI framework",
     "trustworthy AI",
     "AI safety",
-    "zero data retention",
+    "agentic AI safety",
+    "AI compliance",
+    "EU AI Act",
     "auditable AI",
   ],
   authors: [{ name: "CIRIS L3C" }],
@@ -36,9 +40,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://ciris.ai",
     siteName: "CIRIS",
-    title: "CIRIS - Ethical AI Framework",
+    title: "CIRIS - Runtime Governance for Agentic AI",
     description:
-      "Open source AI that earns your trust. Auditable ethical framework with Zero Data Retention.",
+      "Runtime governance for agentic AI. Open source ethical framework with cryptographic audit, human deferral, and conscience-checked actions.",
     images: [
       {
         url: "/og-image.png",
@@ -50,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CIRIS - Ethical AI Framework",
+    title: "CIRIS - Runtime Governance for Agentic AI",
     description:
-      "Open source AI that earns your trust. Auditable ethical framework with Zero Data Retention.",
+      "Runtime governance for agentic AI. Open source ethical framework with cryptographic audit and conscience-checked actions.",
     images: ["/og-image.png"],
   },
   robots: {

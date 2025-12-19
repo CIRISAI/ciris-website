@@ -78,8 +78,8 @@ export default function Homepage() {
       <FloatingNav navItems={navItems} />
       <HomeHeader
         headline="AI That Earns Your Trust."
-        subheadline="Open source. Auditable. Yours to verify."
-        description="CIRIS is an AI agent with a published ethical covenant, runtime conscience, human deferral when uncertain, cryptographic audit trail, and bilateral consent. Fully open source — because you shouldn't have to take our word for it."
+        subheadline="Runtime governance for agentic AI."
+        description="CIRIS is runtime governance you can audit: published ethical principles, conscience-checked actions, human deferral when uncertain, cryptographic audit trail, and bilateral consent. Fully open source — because you shouldn't have to take our word for it."
         mediaType="video"
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
