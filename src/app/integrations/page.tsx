@@ -91,35 +91,46 @@ export default function IntegrationsPage() {
             <div className="space-y-6">
               <div className="rounded-lg border-2 border-green-500 bg-green-50 p-6 dark:border-green-400 dark:bg-green-900/20">
                 <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
-                  Home Assistant
+                  Home Assistant + CIRISHome
                 </h3>
                 <p className="mb-4 text-gray-700 dark:text-gray-300">
-                  Complete IoT integration with dual services: Tool service for device control, automation triggering, and sensor queries. Communication service for event streams and text-to-speech.
+                  Complete multi-modal home automation with 100% local AI processing. Voice control, camera analysis, and smart automation — no cloud required.
                 </p>
                 <div className="mb-4 rounded-md bg-green-100 p-4 dark:bg-green-900/40">
                   <p className="mb-2 font-semibold text-gray-900 dark:text-white">Capabilities:</p>
                   <ul className="list-inside list-disc space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                    <li>Voice commands via Wyoming protocol</li>
                     <li>Device control (lights, switches, climate, locks)</li>
-                    <li>Automation triggering and scene activation</li>
-                    <li>Sensor queries and state monitoring</li>
+                    <li>Local vision processing with Llama-4-Scout</li>
                     <li>Camera snapshot analysis</li>
-                    <li>Event stream subscriptions</li>
-                    <li>Text-to-speech announcements</li>
                     <li>Enriches context with entity states</li>
+                    <li>Text-to-speech via Coqui TTS</li>
                   </ul>
                 </div>
-                <div className="rounded-md border border-green-300 bg-white p-3 dark:border-green-600 dark:bg-gray-800">
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
-                    <strong>HACS Integration:</strong> Install the CIRIS conversation assistant directly in Home Assistant via HACS.{" "}
-                    <a
-                      href="https://github.com/CIRISAI/CIRISHome"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-600 hover:underline dark:text-green-400"
-                    >
-                      View on GitHub →
-                    </a>
-                  </p>
+                <div className="mb-4 rounded-md bg-green-200 p-4 dark:bg-green-800/40">
+                  <p className="mb-2 font-semibold text-gray-900 dark:text-white">Hardware Stack:</p>
+                  <ul className="list-inside list-disc space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                    <li>Home Assistant Yellow (automation hub)</li>
+                    <li>Jetson Orin Nano (local AI processing)</li>
+                    <li>Voice PE Pucks (voice satellites)</li>
+                  </ul>
+                </div>
+                <div className="rounded-md border border-green-300 bg-white p-4 dark:border-green-600 dark:bg-gray-800">
+                  <p className="mb-2 font-semibold text-gray-900 dark:text-white">HACS Installation:</p>
+                  <ol className="list-inside list-decimal space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                    <li>Install HACS in Home Assistant</li>
+                    <li>Add repository: <code className="rounded bg-gray-100 px-1 dark:bg-gray-700">https://github.com/CIRISAI/CIRISHome</code></li>
+                    <li>Install "CIRISHome Agent" add-on</li>
+                    <li>Configure with Jetson IP and HA token</li>
+                  </ol>
+                  <a
+                    href="https://github.com/CIRISAI/CIRISHome/blob/main/INSTALLATION.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-block text-green-600 hover:underline dark:text-green-400"
+                  >
+                    Full Installation Guide →
+                  </a>
                 </div>
               </div>
 
