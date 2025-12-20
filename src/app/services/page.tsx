@@ -145,13 +145,16 @@ export default function ServicesPage() {
             </div>
             <div className="mb-4 text-center">
               <div className="inline-block rounded-lg bg-purple-100 p-6 dark:bg-purple-900/40">
-                <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">$5.00</p>
-                <p className="text-lg text-gray-700 dark:text-gray-300">for 20 credits</p>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">$0.25 per interaction</p>
+                <div className="mb-2 inline-block rounded-full bg-green-500 px-3 py-1 text-xs font-semibold text-white">
+                  BETA PRICING
+                </div>
+                <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">$0.05</p>
+                <p className="text-lg text-gray-700 dark:text-gray-300">per interaction</p>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">$0.10 after beta</p>
               </div>
             </div>
             <p className="text-center text-sm text-gray-600 dark:text-gray-400">
-              1 credit = 1 interaction session (up to 7 processing rounds)
+              1 interaction = 1 session (up to 7 processing rounds). Pricing adjusted for actual cost.
             </p>
             <div className="mt-4 rounded-md bg-purple-100 p-3 dark:bg-purple-900/40">
               <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -196,7 +199,7 @@ export default function ServicesPage() {
                 {
                   headline: "Paid Credits via Stripe",
                   copyText:
-                    "Purchase credits securely through Stripe. $5 = 20 credits ($0.25 per interaction). Only charged when daily free and trial credits are used up.",
+                    "Purchase credits securely through Stripe. Beta: $0.05/interaction, $0.10 after beta. Only charged when daily free and trial credits are used up.",
                   logoSrc: "logoIcon",
                   logoAlt: "Brand logo icon",
                 },
@@ -237,7 +240,7 @@ export default function ServicesPage() {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-white">Paid Credits (Stripe)</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">$5 = 20 credits • Only used after free credits</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">$0.05/interaction (beta) • Only used after free credits</p>
                 </div>
               </div>
             </div>
