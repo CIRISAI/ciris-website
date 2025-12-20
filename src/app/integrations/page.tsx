@@ -96,7 +96,7 @@ export default function IntegrationsPage() {
                 <p className="mb-4 text-gray-700 dark:text-gray-300">
                   Complete IoT integration with dual services: Tool service for device control, automation triggering, and sensor queries. Communication service for event streams and text-to-speech.
                 </p>
-                <div className="rounded-md bg-green-100 p-4 dark:bg-green-900/40">
+                <div className="mb-4 rounded-md bg-green-100 p-4 dark:bg-green-900/40">
                   <p className="mb-2 font-semibold text-gray-900 dark:text-white">Capabilities:</p>
                   <ul className="list-inside list-disc space-y-1 text-sm text-gray-700 dark:text-gray-300">
                     <li>Device control (lights, switches, climate, locks)</li>
@@ -105,7 +105,21 @@ export default function IntegrationsPage() {
                     <li>Camera snapshot analysis</li>
                     <li>Event stream subscriptions</li>
                     <li>Text-to-speech announcements</li>
+                    <li>Enriches context with entity states</li>
                   </ul>
+                </div>
+                <div className="rounded-md border border-green-300 bg-white p-3 dark:border-green-600 dark:bg-gray-800">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>HACS Integration:</strong> Install the CIRIS conversation assistant directly in Home Assistant via HACS.{" "}
+                    <a
+                      href="https://github.com/CIRISAI/CIRISHome"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-600 hover:underline dark:text-green-400"
+                    >
+                      View on GitHub →
+                    </a>
+                  </p>
                 </div>
               </div>
 
