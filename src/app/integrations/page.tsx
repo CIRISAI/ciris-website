@@ -18,7 +18,7 @@ export default function IntegrationsPage() {
               Integrations & Adapters
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              CIRIS connects to your world through adapters. Each adapter is a self-contained integration that provides tools, communication channels, or domain expertise.
+              CIRIS connects to your world through adapters. Each adapter is a self-contained integration that provides tools or communication channels.
             </p>
           </div>
 
@@ -130,42 +130,13 @@ export default function IntegrationsPage() {
             </div>
           </div>
 
-          {/* Wise Authority Adapters */}
-          <div className="mt-12">
-            <SeparatorTitleBlock
-              logoSrc="logoIcon"
-              logoAlt="Brand logo icon"
-              headline="Wise Authority Adapters"
-              subheadline="Domain expertise from trusted data sources"
-            />
-
-            <CardsSection
-              cardsData={[
-                {
-                  headline: "Weather",
-                  copyText:
-                    "Weather forecasting and current conditions via NOAA National Weather Service API. Provides accurate, authoritative weather data for location-based queries.",
-                  logoSrc: "logoIcon",
-                  logoAlt: "Brand logo icon",
-                },
-                {
-                  headline: "Navigation",
-                  copyText:
-                    "Geographic routing and navigation guidance via OpenStreetMap. Route planning, distance calculations, and turn-by-turn directions.",
-                  logoSrc: "logoIcon",
-                  logoAlt: "Brand logo icon",
-                },
-              ]}
-            />
-          </div>
-
           {/* Data & Infrastructure Adapters */}
           <div className="mt-12">
             <SeparatorTitleBlock
               logoSrc="logoIcon"
               logoAlt="Brand logo icon"
               headline="Data & Infrastructure"
-              subheadline="Database access and protocol implementations"
+              subheadline="Database access and external data sources"
             />
 
             <CardsSection
@@ -177,22 +148,45 @@ export default function IntegrationsPage() {
                   logoSrc: "logoIcon",
                   logoAlt: "Brand logo icon",
                 },
-                {
-                  headline: "MCP Server",
-                  copyText:
-                    "Model Context Protocol server implementation. Expose CIRIS tools and capabilities to MCP-compatible clients.",
-                  logoSrc: "logoIcon",
-                  logoAlt: "Brand logo icon",
-                },
-                {
-                  headline: "MCP Client",
-                  copyText:
-                    "Model Context Protocol client implementation. Connect to external MCP servers for tool, communication, and wise authority services.",
-                  logoSrc: "logoIcon",
-                  logoAlt: "Brand logo icon",
-                },
               ]}
             />
+          </div>
+
+          {/* Coming Soon */}
+          <div className="mt-12">
+            <SeparatorTitleBlock
+              logoSrc="logoIcon"
+              logoAlt="Brand logo icon"
+              headline="Coming Soon"
+              subheadline="Adapters currently under development"
+            />
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-800/50">
+                <h3 className="font-semibold text-gray-900 dark:text-white">MCP Server</h3>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                  Model Context Protocol server. Expose CIRIS tools to MCP-compatible clients.
+                </p>
+              </div>
+              <div className="rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-800/50">
+                <h3 className="font-semibold text-gray-900 dark:text-white">MCP Client</h3>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                  Connect to external MCP servers for additional tool capabilities.
+                </p>
+              </div>
+              <div className="rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-800/50">
+                <h3 className="font-semibold text-gray-900 dark:text-white">Weather</h3>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                  Weather forecasting via NOAA National Weather Service API.
+                </p>
+              </div>
+              <div className="rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-800/50">
+                <h3 className="font-semibold text-gray-900 dark:text-white">Navigation</h3>
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                  Geographic routing and directions via OpenStreetMap.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Utility Adapters */}
@@ -274,12 +268,6 @@ export default function IntegrationsPage() {
                     <p className="font-semibold text-gray-900 dark:text-white">COMMUNICATION</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
                       Handles messaging. Implement send_message() and fetch_messages().
-                    </p>
-                  </div>
-                  <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-                    <p className="font-semibold text-gray-900 dark:text-white">WISE_AUTHORITY</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Domain expertise. Provides authoritative answers from trusted data sources.
                     </p>
                   </div>
                 </div>
