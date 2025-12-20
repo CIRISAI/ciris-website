@@ -24,6 +24,7 @@ const navigation: Navigation = {
   solutions: [
     { name: "Models", href: "/models" },
     { name: "Services", href: "/services" },
+    { name: "Integrations", href: "/integrations" },
     { name: "Install", href: "/install" },
     { name: "Safety", href: "/safety" },
     { name: "Infrastructure", href: "/architecture" },
