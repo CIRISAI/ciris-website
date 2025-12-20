@@ -90,9 +90,14 @@ export default function IntegrationsPage() {
 
             <div className="space-y-6">
               <div className="rounded-lg border-2 border-green-500 bg-green-50 p-6 dark:border-green-400 dark:bg-green-900/20">
-                <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
-                  Home Assistant + CIRISHome
-                </h3>
+                <div className="mb-3 flex items-center gap-3">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    Home Assistant + CIRISHome
+                  </h3>
+                  <span className="rounded-full bg-yellow-500 px-2 py-0.5 text-xs font-semibold text-white">
+                    Under Development
+                  </span>
+                </div>
                 <p className="mb-4 text-gray-700 dark:text-gray-300">
                   Complete multi-modal home automation with 100% local AI processing. Voice control, camera analysis, and smart automation — no cloud required.
                 </p>
