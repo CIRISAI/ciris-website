@@ -178,6 +178,7 @@ export default function SafetyPage() {
             },
             {
               headline: "The Coherence Ratchet",
+              headlineHref: "/coherence-ratchet",
               copyText:
                 "Each truthful action makes future truth-telling easier and deception harder. The hash chain creates a one-way ratchet toward coherence. The agent's history becomes its constraint and its credential.",
               logoSrc: "logoIcon",

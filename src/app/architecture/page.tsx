@@ -279,12 +279,12 @@ export default function ArchitecturePage() {
                 </ul>
               </div>
 
-              <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+              <a href="/coherence-ratchet" className="block rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800 hover:border-brand-primary transition-colors">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                   Coherence Ratchet
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  Ethical consistency isn't expensive—deception is. Honest actions reference existing signed commitments.
+                  Ethical consistency isn&apos;t expensive—deception is. Honest actions reference existing signed commitments.
                   Deceptive actions must satisfy a growing constraint surface of immutable rationales, making lies
                   increasingly fragile and detectable under audit.
                 </p>
@@ -293,7 +293,7 @@ export default function ArchitecturePage() {
                   <li>• Deception: reconcile against expanding constraint surface</li>
                   <li>• Structural asymmetry favors honest continuation</li>
                 </ul>
-              </div>
+              </a>
             </div>
 
             <div className="mt-6 rounded bg-gray-100 p-4 dark:bg-gray-900">

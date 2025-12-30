@@ -38,6 +38,7 @@ const navigation: Navigation = {
   company: [
     { name: "About", href: "/about" },
     { name: "Vision", href: "/vision" },
+    { name: "Thesis", href: "/coherence-ratchet" },
     { name: "Principles", href: "/sections/main" },
   ],
   legal: [

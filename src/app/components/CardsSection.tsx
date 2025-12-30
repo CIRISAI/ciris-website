@@ -3,6 +3,7 @@ import Card from "./Card";
 
 interface CardData {
   headline: string;
+  headlineHref?: string;
   copyText: string;
   logoSrc: string;
   logoAlt: string;
@@ -20,6 +21,7 @@ function CardsSection({ cardsData }: CardsSectionProps) {
           <Card
             key={index}
             headline={card.headline}
+            headlineHref={card.headlineHref}
             copyText={card.copyText}
             logoSrc={card.logoSrc}
             logoAlt={card.logoAlt}
