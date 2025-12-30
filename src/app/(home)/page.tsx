@@ -186,7 +186,7 @@ export default function Homepage() {
             {
               headline: "Coherence Ratchet",
               copyText:
-                "Truth-telling becomes computationally cheaper over time. Lies become exponentially harder — NP-hard consistency problems against a growing ledger of signed rationales. The math favors honesty.",
+                "Each truthful action makes future truth-telling easier and deception harder. Honest actions reference prior signed commitments directly. Deceptive actions must satisfy an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes—becoming increasingly fragile and detectable under scrutiny.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

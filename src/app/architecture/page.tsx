@@ -284,13 +284,14 @@ export default function ArchitecturePage() {
                   Coherence Ratchet
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  Ethical consistency isn't expensive—deception is. Truth verification is O(1),
-                  while lying requires solving NP-hard consistency against cryptographically-signed history.
+                  Ethical consistency isn't expensive—deception is. Honest actions reference existing signed commitments.
+                  Deceptive actions must satisfy a growing constraint surface of immutable rationales, making lies
+                  increasingly fragile and detectable under audit.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• Truth-telling: constant time verification</li>
-                  <li>• Deception: exponentially growing computational cost</li>
-                  <li>• Ethics as path of least resistance</li>
+                  <li>• Truth-telling: reference prior commitments directly</li>
+                  <li>• Deception: reconcile against expanding constraint surface</li>
+                  <li>• Structural asymmetry favors honest continuation</li>
                 </ul>
               </div>
             </div>

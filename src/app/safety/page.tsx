@@ -156,8 +156,8 @@ export default function SafetyPage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="Hash Chain Verification"
-          subheadline="Truth-telling is computationally cheaper than deception."
-          copyText="Every action generates a cryptographically-signed rationale chain stored in Graph Memory. The H3ERE Coherence faculty cross-references new actions against this accumulated history. Attempted deceptions would need to solve an NP-hard consistency problem against exponentially growing hash-locked precedents. Lying is computationally expensive. Honesty is the path of least resistance."
+          subheadline="Truth-telling is structurally simpler than deception."
+          copyText="Every action generates a cryptographically-signed rationale chain stored in Graph Memory. The H3ERE Coherence faculty cross-references new actions against this accumulated history. Honest actions can reference prior commitments directly. Deceptive actions must remain consistent with an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes—becoming increasingly fragile and detectable over time. Truth is cheap because it can point backward; lies are expensive because they must keep rewriting the past without being allowed to change it."
         />
 
         <CardsSection
