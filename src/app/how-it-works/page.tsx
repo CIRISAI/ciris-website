@@ -3,6 +3,7 @@ import HomeHeader from "@/app/components/HomeHeader";
 import Footer from "@/app/components/Footer";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import navItems from "@/app/components/navitems";
+import TraceExplorer from "@/app/components/TraceExplorer";
 
 export default function HowItWorksPage() {
   return (
@@ -611,54 +612,20 @@ export default function HowItWorksPage() {
 
           {/* Example Signed Trace */}
           <div className="mt-8">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-4">Example Signed Trace</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              Every decision produces an immutable, Ed25519-signed trace with all 6 components. Here&apos;s a real trace from the system:
-            </p>
-            <div className="rounded-lg bg-gray-900 dark:bg-gray-950 p-4 overflow-x-auto">
-              <pre className="text-xs text-gray-300 font-mono whitespace-pre">{`{
-  "trace_id": "sample-trace-20251231045649",
-  "thought_id": "thought-sample-001",
-  "components": [
-    {
-      "component_type": "observation",
-      "event_type": "THOUGHT_START",
-      "data": { "thought_type": "user_request", "round_number": 0 }
-    },
-    {
-      "component_type": "context",
-      "event_type": "SNAPSHOT_AND_CONTEXT",
-      "data": { "has_snapshot": true }
-    },
-    {
-      "component_type": "rationale",
-      "event_type": "DMA_RESULTS",
-      "data": { "has_csdma": true, "has_dsdma": true, "has_pdma": true }
-    },
-    {
-      "component_type": "rationale",
-      "event_type": "ASPDMA_RESULT",
-      "data": { "selected_action": "SPEAK", "has_rationale": true }
-    },
-    {
-      "component_type": "conscience",
-      "event_type": "CONSCIENCE_RESULT",
-      "data": { "conscience_passed": true, "final_action": "SPEAK" }
-    },
-    {
-      "component_type": "action",
-      "event_type": "ACTION_RESULT",
-      "data": { "action_executed": "SPEAK", "execution_success": true }
-    }
-  ],
-  "signature": "_cif-urBS10SqSCjixRa_2A1ZdpCKpc5uPpwopY_veq...",
-  "signature_key_id": "wa-2025-06-14-ROOT00",
-  "_signature_verified": true
-}`}</pre>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-bold text-gray-900 dark:text-white">Example Signed Trace</h3>
+              <a
+                href="/explore-a-trace"
+                className="text-sm font-semibold text-brand-primary hover:underline"
+              >
+                Explore full trace →
+              </a>
             </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">
-              <strong>Root Public Key:</strong> <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">QK0ZQ9FhWKMtP8YL3wXU_n0cmqYyV3HoDi-AIJgSHi0</code> — verify signatures independently.
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+              Every decision produces an immutable, Ed25519-signed trace with all 6 components.
+              Click any component below to expand and see the real data from Datum&apos;s wakeup ritual:
             </p>
+            <TraceExplorer compact={true} defaultOpenIndex={4} />
           </div>
         </section>
 
