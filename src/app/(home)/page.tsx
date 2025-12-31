@@ -242,6 +242,7 @@ export default function Homepage() {
           cardsData={[
             {
               headline: "Streaming Reasoning Traces",
+              headlineHref: "/how-it-works",
               copyText:
                 "Six reasoning events streamed live via SSE as the agent processes each thought. Watch the H3ERE pipeline in action — DMA analysis, action selection, conscience validation, execution. Nothing hidden.",
               logoSrc: "logoIcon",
@@ -314,6 +315,7 @@ export default function Homepage() {
           cardsData={[
             {
               headline: "Wisdom-Based Deferral",
+              headlineHref: "/safety",
               copyText:
                 "Complex ethical questions get escalated to you or advisors you trust. CIRIS doesn't pretend to have all the answers — it knows when to ask for human wisdom.",
               logoSrc: "logoIcon",
@@ -367,6 +369,7 @@ export default function Homepage() {
             },
             {
               headline: "22 Core Services",
+              headlineHref: "/architecture",
               copyText:
                 "From ethical reasoning and memory management to secure communications and audit logging—CIRIS coordinates specialized services that work together transparently.",
               logoSrc: "logoIcon",

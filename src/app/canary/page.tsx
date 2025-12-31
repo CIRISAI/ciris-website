@@ -318,7 +318,7 @@ print("Signature valid!")`}
           {/* Footer Links */}
           <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
-              href="/safety-policy"
+              href="/safety"
               className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-center text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
             >
               Safety Policy

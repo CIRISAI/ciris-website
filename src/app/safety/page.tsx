@@ -22,7 +22,7 @@ export default function SafetyPage() {
         buttonText="View Source on GitHub"
         buttonHref="https://github.com/CIRISAI/CIRISAgent"
         linkText="Read the Covenant"
-        linkHref="/sections/main"
+        linkHref="/docs"
       />
 
       <div className="container min-h-screen max-w-7xl">

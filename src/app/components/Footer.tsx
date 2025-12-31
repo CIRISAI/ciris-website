@@ -40,11 +40,11 @@ const navigation: Navigation = {
     { name: "About", href: "/about" },
     { name: "Vision", href: "/vision" },
     { name: "Thesis", href: "/coherence-ratchet" },
-    { name: "Principles", href: "/sections/main" },
+    { name: "Principles", href: "/docs" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
-    { name: "Safety Policy", href: "/safety-policy" },
+    { name: "Safety Policy", href: "/safety" },
     { name: "Warrant Canary", href: "/canary" },
   ],
   social: [

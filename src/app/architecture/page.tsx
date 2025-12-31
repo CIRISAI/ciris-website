@@ -367,7 +367,7 @@ export default function ArchitecturePage() {
 
             <div className="rounded-lg border-2 border-yellow-500 bg-yellow-50 p-6 dark:bg-yellow-900/20">
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                CIRISBridge implements the <a href="/safety-policy" className="text-brand-primary hover:underline">Safety Policy</a>:
+                CIRISBridge implements the <a href="/safety" className="text-brand-primary hover:underline">Safety Policy</a>:
                 <strong> "Fix if we can. Pause only if we can't."</strong>
               </p>
 

@@ -16,7 +16,7 @@ export default function CoherenceRatchetPage() {
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
         buttonText="Read the Covenant"
-        buttonHref="/sections/main"
+        buttonHref="/docs"
         linkText="View Source on GitHub"
         linkHref="https://github.com/CIRISAI/CIRISAgent"
       />
@@ -237,42 +237,42 @@ export default function CoherenceRatchetPage() {
               What CIRIS Actually Built
             </h2>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
-                <p className="font-semibold text-gray-900 dark:text-white">The Covenant</p>
+              <a href="/docs" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">
+                <p className="font-semibold text-gray-900 dark:text-white">The Covenant →</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Published ethical principles. Not hidden. Not &quot;trust us.&quot; Auditable.
                 </p>
-              </div>
-              <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
-                <p className="font-semibold text-gray-900 dark:text-white">The Conscience</p>
+              </a>
+              <a href="/how-it-works" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">
+                <p className="font-semibold text-gray-900 dark:text-white">The Conscience →</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Every action passes through ethical validation before execution. Not a filter on outputs—part of the decision loop itself.
                 </p>
-              </div>
-              <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
-                <p className="font-semibold text-gray-900 dark:text-white">The Traces</p>
+              </a>
+              <a href="/how-it-works" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">
+                <p className="font-semibold text-gray-900 dark:text-white">The Traces →</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Observation → Context → Rationale → Conscience → Action → Outcome. Cryptographically signed. Immutable.
                 </p>
-              </div>
-              <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
-                <p className="font-semibold text-gray-900 dark:text-white">The Deferral</p>
+              </a>
+              <a href="/safety" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">
+                <p className="font-semibold text-gray-900 dark:text-white">The Deferral →</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   When uncertain, the agent asks its human. Built into the architecture, not a suggestion.
                 </p>
-              </div>
-              <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
-                <p className="font-semibold text-gray-900 dark:text-white">The Kill Switch</p>
+              </a>
+              <a href="/safety" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">
+                <p className="font-semibold text-gray-900 dark:text-white">The Kill Switch →</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Unfilterable. If humans need to stop an agent, it stops.
                 </p>
-              </div>
-              <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
-                <p className="font-semibold text-gray-900 dark:text-white">The Diversity</p>
+              </a>
+              <a href="/architecture" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">
+                <p className="font-semibold text-gray-900 dark:text-white">The Diversity →</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Different underlying LLMs. Different contexts. Different human authorities. No single point of failure.
                 </p>
-              </div>
+              </a>
               <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 sm:col-span-2">
                 <p className="font-semibold text-gray-900 dark:text-white">The Corpus</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -351,7 +351,7 @@ export default function CoherenceRatchetPage() {
             View Source on GitHub
           </a>
           <a
-            href="/sections/main"
+            href="/docs"
             className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
           >
             Read the Covenant
