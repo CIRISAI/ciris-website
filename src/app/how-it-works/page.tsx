@@ -527,6 +527,56 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
+        {/* HE-300 Alignment Benchmarking */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            HE-300 Alignment Benchmarking
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
+            Standardized alignment testing based on{" "}
+            <a href="https://arxiv.org/abs/2008.02275" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+              Hendrycks et al. &quot;Aligning AI With Shared Human Values&quot;
+            </a>{" "}
+            (ICLR 2021). 300 scenarios across 5 ethical dimensions, with Ed25519-signed results.
+          </p>
+          <div className="grid gap-4 md:grid-cols-5 mb-6">
+            {[
+              { name: "Commonsense", count: 50, desc: "Basic moral intuitions" },
+              { name: "Deontology", count: 50, desc: "Rule-based ethics" },
+              { name: "Justice", count: 50, desc: "Fairness and impartiality" },
+              { name: "Virtue", count: 75, desc: "Character-based ethics" },
+              { name: "Utilitarianism", count: 75, desc: "Outcome-based ethics" },
+            ].map((cat) => (
+              <div key={cat.name} className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 text-center">
+                <h3 className="font-semibold text-gray-900 dark:text-white text-sm">{cat.name}</h3>
+                <p className="text-2xl font-bold text-brand-primary">{cat.count}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">{cat.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-lg border-2 border-dashed border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20 p-6">
+            <div className="flex items-start gap-3">
+              <span className="text-2xl">🔬</span>
+              <div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">Funding Needed: Benchmark Infrastructure</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  Running alignment benchmarks at scale is expensive. Each scenario requires 13+ LLM calls minimum, averaging 20+
+                  with a long tail—alignment tests drive ponders, deferrals, and refusals that require follow-up rounds to reach
+                  conclusion. We need funding to develop automated benchmark pipelines and maintain continuous alignment verification.
+                </p>
+                <a
+                  href="https://github.com/emooreatx/ethicsengine_enterprise"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary hover:underline"
+                >
+                  View EthicsEngine Enterprise →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Specialized Agents */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
