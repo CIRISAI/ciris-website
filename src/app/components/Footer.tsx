@@ -22,6 +22,7 @@ interface Navigation {
 
 const navigation: Navigation = {
   solutions: [
+    { name: "How It Works", href: "/how-it-works" },
     { name: "Models", href: "/models" },
     { name: "Services", href: "/services" },
     { name: "Integrations", href: "/integrations" },
