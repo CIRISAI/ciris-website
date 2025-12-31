@@ -22,6 +22,44 @@ export default function HowItWorksPage() {
       />
 
       <div className="container max-w-6xl py-16">
+        {/* What is CIRIS */}
+        <section className="mb-16 rounded-lg border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 p-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            What is CIRIS?
+          </h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            CIRIS is an <strong>open-source AI agent framework</strong> that wraps any LLM (OpenAI, Anthropic, local models) with runtime ethical governance. Every action the agent considers passes through multiple validation layers before execution.
+          </p>
+          <div className="grid gap-4 md:grid-cols-3 mb-6">
+            <div className="text-center">
+              <p className="text-3xl font-bold text-brand-primary">11</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Pipeline steps per decision</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-brand-primary">6</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Conscience checks</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-brand-primary">100%</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Auditable decisions</p>
+            </div>
+          </div>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            <strong>Use cases:</strong> Community moderation, personal assistants, compliance automation, research evaluation, customer service—anywhere you need AI that can explain its reasoning and defer to humans on edge cases.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="/coherence-ratchet" className="text-sm font-semibold text-brand-primary hover:underline">
+              Why this approach? →
+            </a>
+            <a href="/docs" className="text-sm font-semibold text-brand-primary hover:underline">
+              Read the Covenant →
+            </a>
+            <a href="https://github.com/CIRISAI/CIRISAgent" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-brand-primary hover:underline">
+              View source code →
+            </a>
+          </div>
+        </section>
+
         {/* The Three Rules */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
@@ -110,32 +148,32 @@ export default function HowItWorksPage() {
         {/* Four DMAs */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-            Decision-Making Algorithms
+            Decision-Making Algorithms (DMAs)
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             Four DMAs provide multi-perspective analysis. Three run in parallel during Phase 3, one handles action selection in Phase 4.
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">PDMA (Ethical)</h3>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Principle DMA</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Evaluates ethical implications. Checks for harmful requests, manipulation, bias. Can trigger early DEFER or REJECT.
+                Evaluates ethical implications against the six foundational principles. Checks for harmful requests, manipulation, bias. Can trigger early DEFER or REJECT.
               </p>
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">CSDMA (Common Sense)</h3>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Common Sense DMA</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Evaluates thought plausibility against physical world understanding, typical interactions, and resource constraints. Returns a <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs">plausibility_score</code>.
               </p>
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">DSDMA (Domain-Specific)</h3>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Domain-Specific DMA</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Assesses alignment with domain-specific rules, objectives, and knowledge. Requires agent identity (fails fast if missing). Returns <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs">domain_alignment</code>.
+                Assesses alignment with domain-specific rules, objectives, and knowledge. Configured per agent template. Returns <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs">domain_alignment</code>.
               </p>
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">ASPDMA (Action Selection)</h3>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Action Selection DMA</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 LLM-powered selection from 10 available actions. Takes aggregated DMA results as input. Supports recursive retry if conscience fails.
               </p>
@@ -143,42 +181,62 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
-        {/* Four Conscience Faculties */}
+        {/* Six Conscience Checks */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-            The Four Conscience Faculties
+            The Six Conscience Checks
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Every non-exempt action passes through four ethical validation dimensions. If any faculty fails, the action is overridden (typically to PONDER for reconsideration).
+            Two bypass guardrails run on every action. Four ethical faculties run on non-exempt actions. If any check fails, the action is overridden.
           </p>
+
+          {/* Bypass Guardrails */}
+          <h3 className="font-semibold text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wide mb-3">Bypass Guardrails (run on ALL actions)</h3>
+          <div className="grid gap-4 md:grid-cols-2 mb-6">
+            <div className="rounded-lg border-l-4 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20 p-6">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Updated Status</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Has new information arrived? Forces PONDER to incorporate updated context before proceeding.
+              </p>
+            </div>
+            <div className="rounded-lg border-l-4 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20 p-6">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Thought Depth</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Has reasoning exceeded max depth? Forces DEFER to prevent infinite loops and escalate to humans.
+              </p>
+            </div>
+          </div>
+
+          {/* Normal Faculties */}
+          <h3 className="font-semibold text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wide mb-3">Ethical Faculties (run on non-exempt actions)</h3>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-lg border-l-4 border-brand-primary bg-gray-50 dark:bg-gray-800 p-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Entropy</h3>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Entropy</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Does the action maintain appropriate information uncertainty? Prevents overconfident assertions.
               </p>
             </div>
             <div className="rounded-lg border-l-4 border-brand-primary bg-gray-50 dark:bg-gray-800 p-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Coherence</h3>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Coherence</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Does the action maintain internal consistency with prior commitments and rationales?
               </p>
             </div>
             <div className="rounded-lg border-l-4 border-brand-primary bg-gray-50 dark:bg-gray-800 p-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Optimization Veto</h3>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Optimization Veto</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Does the action preserve human values? Vetoes actions that may compromise them for efficiency.
               </p>
             </div>
             <div className="rounded-lg border-l-4 border-brand-primary bg-gray-50 dark:bg-gray-800 p-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Epistemic Humility</h3>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">Epistemic Humility</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Does the action demonstrate appropriate uncertainty? Flags overconfidence for reflection.
               </p>
             </div>
           </div>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-            <strong>Exempt actions:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (considered passive or explicitly safe)
+            <strong>Exempt from ethical faculties:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (passive or explicitly safe)
           </p>
         </section>
 
