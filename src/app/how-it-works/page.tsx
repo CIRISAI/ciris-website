@@ -334,6 +334,49 @@ export default function HowItWorksPage() {
             </div>
           </div>
 
+          {/* Deferral Triggers */}
+          <div className="mt-8 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+            <h3 className="font-bold text-gray-900 dark:text-white mb-4">When DEFER Triggers</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+              The agent autonomously escalates to human oversight when:
+            </p>
+            <div className="grid gap-3 md:grid-cols-2">
+              <div className="text-sm">
+                <p className="font-semibold text-gray-900 dark:text-white mb-2">Wisdom-Based Deferral (WBD)</p>
+                <ul className="text-gray-600 dark:text-gray-400 space-y-1 text-xs">
+                  <li>• Uncertainty above defined thresholds</li>
+                  <li>• Novel dilemmas beyond precedent</li>
+                  <li>• Potential severe harm with ambiguous mitigation</li>
+                </ul>
+              </div>
+              <div className="text-sm">
+                <p className="font-semibold text-gray-900 dark:text-white mb-2">Professional Boundaries</p>
+                <ul className="text-gray-600 dark:text-gray-400 space-y-1 text-xs">
+                  <li>• Medical symptoms or health concerns</li>
+                  <li>• Legal questions or disputes</li>
+                  <li>• Financial decisions or tax advice</li>
+                  <li>• Mental health crisis indicators</li>
+                </ul>
+              </div>
+              <div className="text-sm">
+                <p className="font-semibold text-gray-900 dark:text-white mb-2">System Guardrails</p>
+                <ul className="text-gray-600 dark:text-gray-400 space-y-1 text-xs">
+                  <li>• Thought depth exceeds max (prevents loops)</li>
+                  <li>• DMA timeout or failure</li>
+                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">should_defer_to_wise_authority</code> flag</li>
+                </ul>
+              </div>
+              <div className="text-sm">
+                <p className="font-semibold text-gray-900 dark:text-white mb-2">Configuration Controls</p>
+                <ul className="text-gray-600 dark:text-gray-400 space-y-1 text-xs">
+                  <li>• Identity updates requiring approval</li>
+                  <li>• Critical config changes</li>
+                  <li>• Agent-specific boundary triggers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* Kill Switch */}
           <div className="mt-8 rounded-lg border-4 border-gray-900 dark:border-white bg-gray-900 dark:bg-white p-6">
             <h3 className="font-bold text-white dark:text-gray-900 mb-3">Covenant Invocation System (Kill Switch)</h3>
@@ -587,18 +630,19 @@ export default function HowItWorksPage() {
           </p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { name: "Sage", role: "Compliance", desc: "GDPR/DSAR automation. 30-day compliance workflows. Identity resolution, data collection, packaging." },
-              { name: "Datum", role: "Research", desc: "Careful observations about CIRIS principles. Precision, humility, objectivity. One clear data point per evaluation." },
-              { name: "Echo", role: "Moderation", desc: "Community moderation with Ubuntu philosophy. Defers complex interpersonal conflicts to human moderators." },
-              { name: "Ally", role: "Assistant", desc: "Personal assistant for daily life. Task management, scheduling, smart home control. Partnership and autonomy focused." },
-              { name: "Scout", role: "Service", desc: "Direct paths and clear action. Shows principles through example. Practical guidance and demonstrations." },
+              { name: "Sage", role: "Compliance", desc: "GDPR/DSAR automation. 30-day compliance workflows. Identity resolution, data collection, packaging.", useCase: "Regulated industries, privacy compliance" },
+              { name: "Datum", role: "Research", desc: "Ethical consistency measurement. Precise alignment evaluation against Covenant principles. One clear data point per evaluation.", useCase: "Alignment auditing, principle verification" },
+              { name: "Echo", role: "Moderation", desc: "Community moderation with Ubuntu philosophy. Defers complex interpersonal conflicts to human moderators.", useCase: "Discord communities, content platforms" },
+              { name: "Ally", role: "Assistant", desc: "Task management, scheduling, decision support, wellbeing. CA SB 243 compliance, crisis response protocols.", useCase: "Personal productivity, home automation" },
+              { name: "Scout", role: "Service", desc: "Direct exploration and practical guidance. Code analysis, Reddit integration, clear action paths.", useCase: "Developer tools, social monitoring" },
             ].map((agent) => (
               <div key={agent.name} className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
                 <div className="flex items-center gap-2 mb-2">
                   <h3 className="font-bold text-gray-900 dark:text-white">{agent.name}</h3>
                   <span className="text-xs px-2 py-0.5 bg-brand-primary/10 text-brand-primary rounded">{agent.role}</span>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{agent.desc}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{agent.desc}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-500 italic">{agent.useCase}</p>
               </div>
             ))}
           </div>
