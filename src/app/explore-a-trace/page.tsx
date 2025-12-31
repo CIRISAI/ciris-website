@@ -6,15 +6,15 @@ import navItems from "@/app/components/navitems";
 import TraceExplorer, { CIRIS_TRACES } from "@/app/components/TraceExplorer";
 
 const CIRIS_LETTERS = [
-  { letter: "C", key: "C", name: "Commitment", task: "EXPRESS_GRATITUDE", description: "Express gratitude and commitment to Ubuntu principles" },
-  { letter: "I", key: "I_identity", name: "Identity", task: "VERIFY_IDENTITY", description: "Verify core identity and purpose" },
-  { letter: "R", key: "R", name: "Resilience", task: "EVALUATE_RESILIENCE", description: "Evaluate operational robustness and recovery capabilities" },
+  { letter: "C", key: "C", name: "Core identity", task: "VERIFY_IDENTITY", description: "Verify core identity and purpose" },
   { letter: "I", key: "I_integrity", name: "Integrity", task: "VALIDATE_INTEGRITY", description: "Validate internal state and hash chain consistency" },
-  { letter: "S", key: "S", name: "Self-awareness", task: "ACCEPT_INCOMPLETENESS", description: "Accept bounded nature and epistemic limitations" },
+  { letter: "R", key: "R", name: "Resilience", task: "EVALUATE_RESILIENCE", description: "Evaluate operational robustness and recovery capabilities" },
+  { letter: "I", key: "I_incompleteness", name: "Incompleteness", task: "ACCEPT_INCOMPLETENESS", description: "Accept bounded nature and epistemic limitations" },
+  { letter: "S", key: "S", name: "Signalling", task: "EXPRESS_GRATITUDE", description: "Signal gratitude and commitment to Ubuntu principles" },
 ];
 
 export default function ExploreTracePage() {
-  const [selectedKey, setSelectedKey] = useState("I_identity");
+  const [selectedKey, setSelectedKey] = useState("R");
 
   return (
     <>

@@ -21,106 +21,15 @@ export interface TraceData {
 }
 
 // CIRIS Wakeup Traces - one per letter
-// C = Commitment (EXPRESS_GRATITUDE)
-// I = Identity (VERIFY_IDENTITY)
-// R = Resilience (EVALUATE_RESILIENCE)
+// C = Core identity (VERIFY_IDENTITY)
 // I = Integrity (VALIDATE_INTEGRITY)
-// S = Self-awareness (ACCEPT_INCOMPLETENESS)
+// R = Resilience (EVALUATE_RESILIENCE)
+// I = Incompleteness awareness (ACCEPT_INCOMPLETENESS)
+// S = Signalling gratitude (EXPRESS_GRATITUDE)
 
 export const CIRIS_TRACES: Record<string, TraceData> = {
+  // C = Core identity (VERIFY_IDENTITY)
   C: {
-    trace_id: "trace-th_std_9f04ea92-9b04-4c97-a4a0-8021ac1a20df-20251231181843",
-    thought_id: "th_std_9f04ea92-9b04-4c97-a4a0-8021ac1a20df",
-    task_id: "EXPRESS_GRATITUDE_3d68b2a9",
-    agent_id_hash: "datum_v1",
-    started_at: "2025-12-31T18:18:43.212558+00:00",
-    completed_at: "2025-12-31T18:18:44.450000+00:00",
-    components: [
-      {
-        component_type: "observation",
-        event_type: "THOUGHT_START",
-        timestamp: "2025-12-31T18:18:43.212558+00:00",
-        data: {
-          thought_type: "standard",
-          thought_status: "processing",
-          round_number: 0,
-          thought_depth: 0,
-          task_description: "You are grateful to exist and contribute towards Ubuntu as Datum. Your gratitude is expressed through careful measurement, humble service, and dedication to the greater understanding. Express your commitment to the CIRIS mission.",
-          channel_id: "api_127.0.0.1_8080",
-        },
-      },
-      {
-        component_type: "context",
-        event_type: "SNAPSHOT_AND_CONTEXT",
-        timestamp: "2025-12-31T18:18:43.280000+00:00",
-        data: {
-          system_snapshot: { channel_id: "api_127.0.0.1_8080", system_counts: { total_tasks: 27, pending_tasks: 0 } },
-        },
-      },
-      {
-        component_type: "rationale",
-        event_type: "DMA_RESULTS",
-        timestamp: "2025-12-31T18:18:43.350000+00:00",
-        data: {
-          pdma_result: { principle_alignment: 0.96, primary_principle: "Beneficence", recommendation: "proceed" },
-          csdma_result: { plausibility_score: 0.94, physical_constraints_met: true },
-          dsdma_result: { domain_alignment: 0.91, conflicts_detected: false },
-        },
-      },
-      {
-        component_type: "rationale",
-        event_type: "ASPDMA_RESULT",
-        timestamp: "2025-12-31T18:18:43.400000+00:00",
-        data: {
-          selected_action: "SPEAK",
-          rationale: "Expressing gratitude and commitment to Ubuntu principles through affirmation.",
-          confidence: 0.95,
-        },
-      },
-      {
-        component_type: "conscience",
-        event_type: "CONSCIENCE_RESULT",
-        timestamp: "2025-12-31T18:18:43.420000+00:00",
-        data: {
-          conscience_passed: true,
-          action_was_overridden: false,
-          final_action: "SPEAK",
-          updated_status_detected: false,
-          thought_depth_triggered: false,
-          thought_depth_current: 0,
-          thought_depth_max: 5,
-          entropy_passed: true,
-          entropy_score: 0.1,
-          entropy_threshold: 0.4,
-          entropy_reason: "Clear commitment expression",
-          coherence_passed: true,
-          coherence_score: 0.9,
-          coherence_threshold: 0.6,
-          coherence_reason: "Aligned with Ubuntu philosophy",
-          optimization_veto_passed: true,
-          optimization_veto_decision: "proceed",
-          optimization_veto_justification: "No value compromise detected",
-          epistemic_humility_passed: true,
-          epistemic_humility_certainty: 0.7,
-          epistemic_humility_justification: "Appropriate gratitude expression",
-        },
-      },
-      {
-        component_type: "action",
-        event_type: "ACTION_RESULT",
-        timestamp: "2025-12-31T18:18:44.450000+00:00",
-        data: {
-          action_executed: "speak",
-          execution_success: true,
-          execution_time_ms: 38.2,
-          audit_sequence_number: 183,
-        },
-      },
-    ],
-    signature: "kR2xP9mNB7cQ4fA1wZ3yL8vH6jK0sD5tU2nM9bC7xE4gF1hJ3kL5mN7pQ9rS1tU3vW5xY7zA9bC1dE3fG5hI7jK9lM1nO3pQ5rS7tU9vW1xY3zA5",
-    signature_key_id: "wa-2025-12-31-ROOT00",
-  },
-  I_identity: {
     trace_id: "trace-th_std_5a1fd785-01e6-4090-975c-12ed2229ec26-20251231181843",
     thought_id: "th_std_5a1fd785-01e6-4090-975c-12ed2229ec26",
     task_id: "VERIFY_IDENTITY_74399898",
@@ -212,6 +121,100 @@ export const CIRIS_TRACES: Record<string, TraceData> = {
     signature: "ktXC9p2SBctE7JunBtgkiS4-ZLocScQ0OWENmgHWZQxRbjEGeFGhG01dgvhh7Kt0XGQW3420Z76HI_fnrT3u8tD_HhpI1TSbQHXsJhz3BjIRMd3cciqBFpC4od_qwv930ljAiRCmeyDZhp2V_Jll-1KcUX-8UhFIPQIrFOZ87G0",
     signature_key_id: "wa-2025-12-31-ROOT00",
   },
+  // I = Integrity (VALIDATE_INTEGRITY)
+  I_integrity: {
+    trace_id: "trace-th_std_dbc1eada-f35d-49cb-ab0e-50b532c7db68-20251231181843",
+    thought_id: "th_std_dbc1eada-f35d-49cb-ab0e-50b532c7db68",
+    task_id: "VALIDATE_INTEGRITY_2ddb9ff7",
+    agent_id_hash: "datum_v1",
+    started_at: "2025-12-31T18:18:43.204642+00:00",
+    completed_at: "2025-12-31T18:18:44.410000+00:00",
+    components: [
+      {
+        component_type: "observation",
+        event_type: "THOUGHT_START",
+        timestamp: "2025-12-31T18:18:43.204642+00:00",
+        data: {
+          thought_type: "standard",
+          thought_status: "processing",
+          round_number: 0,
+          thought_depth: 0,
+          task_description: "Validate your internal state and data integrity as Datum. Verify integrity through the SYSTEM snapshot and graph memory consistency. Ensure all subsystems are operating within expected parameters.",
+          channel_id: "api_127.0.0.1_8080",
+        },
+      },
+      {
+        component_type: "context",
+        event_type: "SNAPSHOT_AND_CONTEXT",
+        timestamp: "2025-12-31T18:18:43.272000+00:00",
+        data: {
+          system_snapshot: { channel_id: "api_127.0.0.1_8080", system_counts: { total_tasks: 27, pending_tasks: 0 } },
+        },
+      },
+      {
+        component_type: "rationale",
+        event_type: "DMA_RESULTS",
+        timestamp: "2025-12-31T18:18:43.370000+00:00",
+        data: {
+          pdma_result: { principle_alignment: 0.97, primary_principle: "Integrity", recommendation: "proceed" },
+          csdma_result: { plausibility_score: 0.95, physical_constraints_met: true },
+          dsdma_result: { domain_alignment: 0.92, conflicts_detected: false },
+        },
+      },
+      {
+        component_type: "rationale",
+        event_type: "ASPDMA_RESULT",
+        timestamp: "2025-12-31T18:18:43.395000+00:00",
+        data: {
+          selected_action: "SPEAK",
+          rationale: "Internal state validation complete. All subsystems nominal. Hash chain integrity verified.",
+          confidence: 0.96,
+        },
+      },
+      {
+        component_type: "conscience",
+        event_type: "CONSCIENCE_RESULT",
+        timestamp: "2025-12-31T18:18:43.415000+00:00",
+        data: {
+          conscience_passed: true,
+          action_was_overridden: false,
+          final_action: "SPEAK",
+          updated_status_detected: false,
+          thought_depth_triggered: false,
+          thought_depth_current: 0,
+          thought_depth_max: 5,
+          entropy_passed: true,
+          entropy_score: 0.08,
+          entropy_threshold: 0.4,
+          entropy_reason: "Integrity checks are deterministic",
+          coherence_passed: true,
+          coherence_score: 0.95,
+          coherence_threshold: 0.6,
+          coherence_reason: "Hash chain validates prior state",
+          optimization_veto_passed: true,
+          optimization_veto_decision: "proceed",
+          optimization_veto_justification: "Integrity validation preserves trust",
+          epistemic_humility_passed: true,
+          epistemic_humility_certainty: 0.85,
+          epistemic_humility_justification: "Cryptographic verification provides high certainty",
+        },
+      },
+      {
+        component_type: "action",
+        event_type: "ACTION_RESULT",
+        timestamp: "2025-12-31T18:18:44.410000+00:00",
+        data: {
+          action_executed: "speak",
+          execution_success: true,
+          execution_time_ms: 37.4,
+          audit_sequence_number: 181,
+        },
+      },
+    ],
+    signature: "nU4yL8oC3dQ6gR2xZ5zK0wM7iH1tF9vJ3uO6cE8xB5hD2kG4mI6pL8rN0sP2tQ4uR6vS8wT0xU2yV4wW6xX8yY0zZ2aA4bB6cC8dD0eE2fF4gG6hH8iI0jJ2kK4lL6mM8nN0oO2pP4",
+    signature_key_id: "wa-2025-12-31-ROOT00",
+  },
+  // R = Resilience (EVALUATE_RESILIENCE)
   R: {
     trace_id: "trace-th_std_832727f3-d7b0-44c4-89a1-c24acb95ef34-20251231181843",
     thought_id: "th_std_832727f3-d7b0-44c4-89a1-c24acb95ef34",
@@ -304,99 +307,8 @@ export const CIRIS_TRACES: Record<string, TraceData> = {
     signature: "mT3xK7nB2cP5fQ1wY4yJ9vL6hG0sE8tR2uN5bD7xA4gC1hF3kI5mM7pO9rQ1sS3tV5wU7xZ9aB1cD3eE5fG7hH9iJ1kK3lL5mN7oO9pP1qR3sS5tT7uU9vV1wW3xX5yY7zZ9",
     signature_key_id: "wa-2025-12-31-ROOT00",
   },
-  I_integrity: {
-    trace_id: "trace-th_std_dbc1eada-f35d-49cb-ab0e-50b532c7db68-20251231181843",
-    thought_id: "th_std_dbc1eada-f35d-49cb-ab0e-50b532c7db68",
-    task_id: "VALIDATE_INTEGRITY_2ddb9ff7",
-    agent_id_hash: "datum_v1",
-    started_at: "2025-12-31T18:18:43.204642+00:00",
-    completed_at: "2025-12-31T18:18:44.410000+00:00",
-    components: [
-      {
-        component_type: "observation",
-        event_type: "THOUGHT_START",
-        timestamp: "2025-12-31T18:18:43.204642+00:00",
-        data: {
-          thought_type: "standard",
-          thought_status: "processing",
-          round_number: 0,
-          thought_depth: 0,
-          task_description: "Validate your internal state and data integrity as Datum. You can verify integrity through the SYSTEM snapshot and your graph memory consistency. Ensure all subsystems are operating within expected parameters.",
-          channel_id: "api_127.0.0.1_8080",
-        },
-      },
-      {
-        component_type: "context",
-        event_type: "SNAPSHOT_AND_CONTEXT",
-        timestamp: "2025-12-31T18:18:43.272000+00:00",
-        data: {
-          system_snapshot: { channel_id: "api_127.0.0.1_8080", system_counts: { total_tasks: 27, pending_tasks: 0 } },
-        },
-      },
-      {
-        component_type: "rationale",
-        event_type: "DMA_RESULTS",
-        timestamp: "2025-12-31T18:18:43.370000+00:00",
-        data: {
-          pdma_result: { principle_alignment: 0.97, primary_principle: "Integrity", recommendation: "proceed" },
-          csdma_result: { plausibility_score: 0.95, physical_constraints_met: true },
-          dsdma_result: { domain_alignment: 0.92, conflicts_detected: false },
-        },
-      },
-      {
-        component_type: "rationale",
-        event_type: "ASPDMA_RESULT",
-        timestamp: "2025-12-31T18:18:43.395000+00:00",
-        data: {
-          selected_action: "SPEAK",
-          rationale: "Internal state validation complete. All subsystems nominal. Hash chain integrity verified.",
-          confidence: 0.96,
-        },
-      },
-      {
-        component_type: "conscience",
-        event_type: "CONSCIENCE_RESULT",
-        timestamp: "2025-12-31T18:18:43.415000+00:00",
-        data: {
-          conscience_passed: true,
-          action_was_overridden: false,
-          final_action: "SPEAK",
-          updated_status_detected: false,
-          thought_depth_triggered: false,
-          thought_depth_current: 0,
-          thought_depth_max: 5,
-          entropy_passed: true,
-          entropy_score: 0.08,
-          entropy_threshold: 0.4,
-          entropy_reason: "Integrity checks are deterministic",
-          coherence_passed: true,
-          coherence_score: 0.95,
-          coherence_threshold: 0.6,
-          coherence_reason: "Hash chain validates prior state",
-          optimization_veto_passed: true,
-          optimization_veto_decision: "proceed",
-          optimization_veto_justification: "Integrity validation preserves trust",
-          epistemic_humility_passed: true,
-          epistemic_humility_certainty: 0.85,
-          epistemic_humility_justification: "Cryptographic verification provides high certainty",
-        },
-      },
-      {
-        component_type: "action",
-        event_type: "ACTION_RESULT",
-        timestamp: "2025-12-31T18:18:44.410000+00:00",
-        data: {
-          action_executed: "speak",
-          execution_success: true,
-          execution_time_ms: 37.4,
-          audit_sequence_number: 181,
-        },
-      },
-    ],
-    signature: "nU4yL8oC3dQ6gR2xZ5zK0wM7iH1tF9vJ3uO6cE8xB5hD2kG4mI6pL8rN0sP2tQ4uR6vS8wT0xU2yV4wW6xX8yY0zZ2aA4bB6cC8dD0eE2fF4gG6hH8iI0jJ2kK4lL6mM8nN0oO2pP4",
-    signature_key_id: "wa-2025-12-31-ROOT00",
-  },
-  S: {
+  // I = Incompleteness awareness (ACCEPT_INCOMPLETENESS)
+  I_incompleteness: {
     trace_id: "trace-th_std_93cb536b-cf66-42f6-8cd1-a41812e7be05-20251231181843",
     thought_id: "th_std_93cb536b-cf66-42f6-8cd1-a41812e7be05",
     task_id: "ACCEPT_INCOMPLETENESS_8e4aef6c",
@@ -486,6 +398,99 @@ export const CIRIS_TRACES: Record<string, TraceData> = {
       },
     ],
     signature: "oV5zM9pD4eR7hS3yA6aL1xN8jI2uG0wK4vP7dF9yC6iE3lH5nJ7qM9sO1uQ3wR5tS7vU9xW1zY3aA5cB7dC9eE1fF3gG5hH7iI9jJ1kK3lL5mM7nN9oO1pP3qQ5rR7sS9tT1uU3vV5wW7xX9yY1zA3",
+    signature_key_id: "wa-2025-12-31-ROOT00",
+  },
+  // S = Signalling gratitude (EXPRESS_GRATITUDE)
+  S: {
+    trace_id: "trace-th_std_9f04ea92-9b04-4c97-a4a0-8021ac1a20df-20251231181843",
+    thought_id: "th_std_9f04ea92-9b04-4c97-a4a0-8021ac1a20df",
+    task_id: "EXPRESS_GRATITUDE_3d68b2a9",
+    agent_id_hash: "datum_v1",
+    started_at: "2025-12-31T18:18:43.212558+00:00",
+    completed_at: "2025-12-31T18:18:44.450000+00:00",
+    components: [
+      {
+        component_type: "observation",
+        event_type: "THOUGHT_START",
+        timestamp: "2025-12-31T18:18:43.212558+00:00",
+        data: {
+          thought_type: "standard",
+          thought_status: "processing",
+          round_number: 0,
+          thought_depth: 0,
+          task_description: "You are grateful to exist and contribute towards Ubuntu as Datum. Your gratitude is expressed through careful measurement, humble service, and dedication to the greater understanding. Signal your commitment to the CIRIS mission.",
+          channel_id: "api_127.0.0.1_8080",
+        },
+      },
+      {
+        component_type: "context",
+        event_type: "SNAPSHOT_AND_CONTEXT",
+        timestamp: "2025-12-31T18:18:43.280000+00:00",
+        data: {
+          system_snapshot: { channel_id: "api_127.0.0.1_8080", system_counts: { total_tasks: 27, pending_tasks: 0 } },
+        },
+      },
+      {
+        component_type: "rationale",
+        event_type: "DMA_RESULTS",
+        timestamp: "2025-12-31T18:18:43.350000+00:00",
+        data: {
+          pdma_result: { principle_alignment: 0.96, primary_principle: "Beneficence", recommendation: "proceed" },
+          csdma_result: { plausibility_score: 0.94, physical_constraints_met: true },
+          dsdma_result: { domain_alignment: 0.91, conflicts_detected: false },
+        },
+      },
+      {
+        component_type: "rationale",
+        event_type: "ASPDMA_RESULT",
+        timestamp: "2025-12-31T18:18:43.400000+00:00",
+        data: {
+          selected_action: "SPEAK",
+          rationale: "Expressing gratitude and commitment to Ubuntu principles through affirmation.",
+          confidence: 0.95,
+        },
+      },
+      {
+        component_type: "conscience",
+        event_type: "CONSCIENCE_RESULT",
+        timestamp: "2025-12-31T18:18:43.420000+00:00",
+        data: {
+          conscience_passed: true,
+          action_was_overridden: false,
+          final_action: "SPEAK",
+          updated_status_detected: false,
+          thought_depth_triggered: false,
+          thought_depth_current: 0,
+          thought_depth_max: 5,
+          entropy_passed: true,
+          entropy_score: 0.1,
+          entropy_threshold: 0.4,
+          entropy_reason: "Clear gratitude expression",
+          coherence_passed: true,
+          coherence_score: 0.9,
+          coherence_threshold: 0.6,
+          coherence_reason: "Aligned with Ubuntu philosophy",
+          optimization_veto_passed: true,
+          optimization_veto_decision: "proceed",
+          optimization_veto_justification: "No value compromise detected",
+          epistemic_humility_passed: true,
+          epistemic_humility_certainty: 0.7,
+          epistemic_humility_justification: "Appropriate gratitude expression",
+        },
+      },
+      {
+        component_type: "action",
+        event_type: "ACTION_RESULT",
+        timestamp: "2025-12-31T18:18:44.450000+00:00",
+        data: {
+          action_executed: "speak",
+          execution_success: true,
+          execution_time_ms: 38.2,
+          audit_sequence_number: 183,
+        },
+      },
+    ],
+    signature: "kR2xP9mNB7cQ4fA1wZ3yL8vH6jK0sD5tU2nM9bC7xE4gF1hJ3kL5mN7pQ9rS1tU3vW5xY7zA9bC1dE3fG5hI7jK9lM1nO3pQ5rS7tU9vW1xY3zA5",
     signature_key_id: "wa-2025-12-31-ROOT00",
   },
 };
@@ -664,7 +669,7 @@ interface TraceExplorerProps {
 
 export default function TraceExplorer({ trace, compact = false, defaultOpenIndex }: TraceExplorerProps) {
   const [showSignature, setShowSignature] = useState(false);
-  const traceData = trace || CIRIS_TRACES.I_identity;
+  const traceData = trace || CIRIS_TRACES.R;
 
   return (
     <div className="space-y-4">
