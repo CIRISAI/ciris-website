@@ -1,10 +1,21 @@
 "use client";
+import { useState } from "react";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
-import TraceExplorer from "@/app/components/TraceExplorer";
+import TraceExplorer, { CIRIS_TRACES } from "@/app/components/TraceExplorer";
+
+const CIRIS_LETTERS = [
+  { letter: "C", key: "C", name: "Commitment", task: "EXPRESS_GRATITUDE", description: "Express gratitude and commitment to Ubuntu principles" },
+  { letter: "I", key: "I_identity", name: "Identity", task: "VERIFY_IDENTITY", description: "Verify core identity and purpose" },
+  { letter: "R", key: "R", name: "Resilience", task: "EVALUATE_RESILIENCE", description: "Evaluate operational robustness and recovery capabilities" },
+  { letter: "I", key: "I_integrity", name: "Integrity", task: "VALIDATE_INTEGRITY", description: "Validate internal state and hash chain consistency" },
+  { letter: "S", key: "S", name: "Self-awareness", task: "ACCEPT_INCOMPLETENESS", description: "Accept bounded nature and epistemic limitations" },
+];
 
 export default function ExploreTracePage() {
+  const [selectedKey, setSelectedKey] = useState("I_identity");
+
   return (
     <>
       <FloatingNav navItems={navItems} />
@@ -20,15 +31,62 @@ export default function ExploreTracePage() {
             </p>
           </div>
 
-          {/* What is a Trace */}
-          <div className="mb-12 rounded-lg border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-6">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-              What is a Trace?
+          {/* CIRIS Acronym Selector */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              The CIRIS Wakeup Ritual
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              A trace is the complete record of a single decision. It captures everything: what the agent observed,
-              what context it had, how it reasoned, what its conscience evaluated, and what action it took.
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              Every agent begins with 5 wakeup tasks—one for each letter of CIRIS. These traces are from Datum&apos;s wakeup on December 31, 2025.
             </p>
+
+            {/* CIRIS Letter Selector */}
+            <div className="flex justify-center gap-2 mb-8">
+              {CIRIS_LETTERS.map((item, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedKey(item.key)}
+                  className={`relative group flex flex-col items-center p-4 rounded-lg transition-all ${
+                    selectedKey === item.key
+                      ? "bg-brand-primary text-white scale-105 shadow-lg"
+                      : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                  }`}
+                >
+                  <span className="text-4xl font-black">{item.letter}</span>
+                  <span className="text-xs font-medium mt-1">{item.name}</span>
+
+                  {/* Tooltip */}
+                  <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-48 p-2 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                    <p className="font-semibold">{item.task}</p>
+                    <p className="text-gray-300 mt-1">{item.description}</p>
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            {/* Selected Trace Info */}
+            <div className="rounded-lg border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-4 mb-6">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl font-black text-brand-primary">
+                  {CIRIS_LETTERS.find(l => l.key === selectedKey)?.letter}
+                </span>
+                <div>
+                  <p className="font-bold text-gray-900 dark:text-white">
+                    {CIRIS_LETTERS.find(l => l.key === selectedKey)?.name}: {CIRIS_LETTERS.find(l => l.key === selectedKey)?.task}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {CIRIS_LETTERS.find(l => l.key === selectedKey)?.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* What is a Trace */}
+          <div className="mb-8 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+              Trace Components
+            </h2>
             <div className="grid gap-3 md:grid-cols-6">
               <div className="text-center">
                 <span className="text-2xl">👁️</span>
@@ -63,22 +121,8 @@ export default function ExploreTracePage() {
             </div>
           </div>
 
-          {/* Trace Source */}
-          <div className="mb-8 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">🔬</span>
-              <div>
-                <p className="font-semibold text-gray-900 dark:text-white">Real Trace from Datum Agent</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  This is an actual trace from Datum&apos;s VERIFY_IDENTITY wakeup task, captured December 31, 2025.
-                  Click any component to expand and explore the data.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Interactive Trace Explorer */}
-          <TraceExplorer defaultOpenIndex={4} />
+          <TraceExplorer trace={CIRIS_TRACES[selectedKey]} defaultOpenIndex={4} />
 
           {/* Understanding the Conscience */}
           <div className="mt-12 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
@@ -122,13 +166,13 @@ export default function ExploreTracePage() {
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded bg-gray-100 dark:bg-gray-900 p-4">
                 <p className="font-mono text-xs text-gray-700 dark:text-gray-300 mb-2">audit_sequence_number</p>
-                <p className="text-2xl font-bold text-brand-primary">179</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">This is decision #179 in the chain</p>
+                <p className="text-2xl font-bold text-brand-primary">179-183</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">5 sequential wakeup decisions</p>
               </div>
               <div className="rounded bg-gray-100 dark:bg-gray-900 p-4">
-                <p className="font-mono text-xs text-gray-700 dark:text-gray-300 mb-2">audit_entry_hash</p>
-                <p className="text-xs font-mono text-gray-600 dark:text-gray-400 break-all">8400dddc31b7daa1...</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">SHA-256 of this entry</p>
+                <p className="font-mono text-xs text-gray-700 dark:text-gray-300 mb-2">signature_algorithm</p>
+                <p className="text-lg font-bold text-gray-900 dark:text-white">Ed25519</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Elliptic curve digital signature</p>
               </div>
               <div className="rounded bg-gray-100 dark:bg-gray-900 p-4">
                 <p className="font-mono text-xs text-gray-700 dark:text-gray-300 mb-2">signature_key_id</p>
