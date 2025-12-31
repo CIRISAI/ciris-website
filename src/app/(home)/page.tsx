@@ -78,13 +78,13 @@ export default function Homepage() {
       <FloatingNav navItems={navItems} />
       <HomeHeader
         headline="AI That Earns Your Trust."
-        subheadline="Runtime governance for agentic AI."
-        description="CIRIS is runtime governance you can audit: published ethical principles, conscience-checked actions, human deferral when uncertain, cryptographic audit trail, and bilateral consent. Fully open source — because you shouldn't have to take our word for it."
+        subheadline="Meet Ally — your ethical AI assistant."
+        description="Ally is an open-source personal assistant with runtime ethical governance: every action passes through conscience checks, uncertain decisions defer to you, and everything is cryptographically audited. Fully open source — verify it yourself."
         mediaType="video"
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
-        buttonText="See the Proof"
-        buttonHref="/compare"
+        buttonText="How It Works"
+        buttonHref="/how-it-works"
         linkText="Get the Code"
         linkHref="https://github.com/CIRISAI/CIRISAgent"
       />
@@ -153,9 +153,9 @@ export default function Homepage() {
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="What is CIRIS"
-          subheadline="AI built for human flourishing, not market fit."
-          copyText="Unlike commercial AI assistants, CIRIS runs entirely on your hardware with complete transparency. Specialized agents for different needs — Sage for GDPR compliance, Datum for research, Echo for content moderation, Ally as your personal assistant, Scout for customer service. Every decision is auditable, every action is accountable."
+          headline="Meet Ally"
+          subheadline="Your personal AI assistant, built on ethical principles."
+          copyText="Ally is an open-source AI assistant that runs on your hardware. Task management, scheduling, decision support, smart home control — with complete transparency. Core logic runs locally; LLM inference uses your choice of provider (cloud APIs, local models, or our zero-data-retention proxy). Every decision is auditable, every action is accountable."
         />
 
         {/* Memory & Learning */}
@@ -305,8 +305,8 @@ export default function Homepage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="You are in Control"
-          subheadline="CIRIS defers to you and your trusted advisors."
-          copyText="Three parallel lenses, four conscience dimensions, up to seven rounds of internal reconsideration. The agent exhausts every ethical option before asking for help. Only after all that does it defer to you or your designated advisors. You maintain final authority."
+          subheadline="Ally defers to you when it matters."
+          copyText="Before asking for help, Ally analyzes every decision through ethical, common-sense, and domain-specific lenses. Six conscience checks validate every action. If uncertainty remains, it escalates to you or advisors you trust. You maintain final authority."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
@@ -322,7 +322,7 @@ export default function Homepage() {
             {
               headline: "Multi-Perspective Reasoning",
               copyText:
-                "Three parallel lenses analyze every decision: ethical principles, common sense, and mission-specific context. Then four conscience checks validate the action before execution.",
+                "Every decision runs through three parallel analyses: ethical principles, common-sense plausibility, and your specific context. Then six conscience checks validate the action before execution.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -395,8 +395,8 @@ export default function Homepage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="Built for Humanity."
-          subheadline="Forever open source, no profit motive."
-          copyText="Education and Healthcare agents are coming soon, joining Scout, Sage, Datum, Echo, and Ally. CIRIS will always remain open source with no profit motive—because AI that serves humanity shouldn't be driven by market forces. As AI capabilities grow, our commitment to ethical principles remains constant."
+          subheadline="Open source. Open infrastructure. Open future."
+          copyText="Ally is just the beginning. The entire CIRIS stack is open source — the agent framework, the zero-data-retention proxy, the billing system, everything. Because AI that serves humanity should be transparent, auditable, and owned by everyone."
         />{" "}
         <NewsletterForm />
         <Footer />

@@ -541,6 +541,40 @@ export default function HowItWorksPage() {
               </p>
             </div>
           </div>
+
+          {/* Open Infrastructure */}
+          <div className="mt-8 rounded-lg border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-6">
+            <h3 className="font-bold text-gray-900 dark:text-white mb-4">Open Source Infrastructure</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+              The entire CIRIS stack is open source — not just the agent. You can verify, audit, and self-host everything:
+            </p>
+            <div className="grid gap-4 md:grid-cols-3">
+              <div>
+                <a href="https://github.com/CIRISAI/CIRISProxy" target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-primary hover:underline">
+                  CIRISProxy →
+                </a>
+                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                  Zero-Data-Retention (ZDR) LLM proxy. Routes requests to OpenAI, Anthropic, Together.ai, Groq with no logging of prompts or responses. Self-hostable.
+                </p>
+              </div>
+              <div>
+                <a href="https://github.com/CIRISAI/CIRISBilling" target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-primary hover:underline">
+                  CIRISBilling →
+                </a>
+                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                  Credit-based usage tracking. Transparent pricing, no hidden fees. Self-host to eliminate third-party billing entirely.
+                </p>
+              </div>
+              <div>
+                <a href="https://github.com/CIRISAI/CIRISBridge" target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-primary hover:underline">
+                  CIRISBridge →
+                </a>
+                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                  Discord adapter for CIRIS agents. Community moderation, channel management, user profiles. All open source.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Transparency */}
