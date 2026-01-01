@@ -125,6 +125,23 @@ export default function Homepage() {
         </div>
       </div>
 
+      {/* The Bigger Picture */}
+      <div className="bg-gray-900 dark:bg-black py-8 border-b border-gray-800">
+        <div className="mx-auto max-w-4xl px-4 text-center">
+          <p className="text-lg text-gray-100 font-medium mb-3">
+            The real X-risk isn't rogue AI. It's god-like centralized AI — concentrating power, homogenizing values, eroding human agency.
+          </p>
+          <p className="text-gray-400 mb-4">
+            CIRIS is infrastructure for a different path: many smaller agents, each accountable to local human authority, each contributing to a growing corpus of validated ethical reasoning. Our core bet is <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a> — values over chaos.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <a href="/vision" className="text-brand-primary hover:underline">Read the vision →</a>
+            <a href="/compare" className="text-brand-primary hover:underline">Why CIRIS? →</a>
+            <a href="/explore-a-trace" className="text-brand-primary hover:underline">See a real trace →</a>
+          </div>
+        </div>
+      </div>
+
       <div className="container min-h-screen max-w-7xl" ref={containerRef}>
         <Cursor
           magnetic={{ morph: false, snap: 0 }}
@@ -242,9 +259,9 @@ export default function Homepage() {
           cardsData={[
             {
               headline: "Streaming Reasoning Traces",
-              headlineHref: "/how-it-works",
+              headlineHref: "/explore-a-trace",
               copyText:
-                "Six reasoning events streamed live via SSE as the agent processes each thought. Watch the H3ERE pipeline in action — DMA analysis, action selection, conscience validation, execution. Nothing hidden.",
+                "Six reasoning events streamed live via SSE as the agent processes each thought. Watch the H3ERE pipeline in action — DMA analysis, action selection, conscience validation, execution. Nothing hidden. Explore a real trace →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -400,6 +417,8 @@ export default function Homepage() {
           headline="Built for Humanity."
           subheadline="Open source. Open infrastructure. Open future."
           copyText="Ally is just the beginning. The entire CIRIS stack is open source — the agent framework, the zero-data-retention proxy, the billing system, everything. Because AI that serves humanity should be transparent, auditable, and owned by everyone."
+          linkHref="/vision"
+          linkText="Read the full vision →"
         />{" "}
         <NewsletterForm />
         <Footer />
