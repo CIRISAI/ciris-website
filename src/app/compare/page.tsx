@@ -65,9 +65,9 @@ export default function ComparePage() {
             CIRIS isn't productivity AI. It's runtime governance for agentic AI — infrastructure for high-stakes deployment where misalignment kills.
           </p>
           <p className="mt-3 text-sm text-gray-400">
-            The only open stack enforcing all six ethical requirements at runtime (as of Dec 2025).{" "}
+            To our knowledge, the first open stack attempting all six ethical requirements at runtime.{" "}
             <a href="https://github.com/CIRISAI/CIRISAgent/issues" className="underline hover:text-white">
-              Open an issue if we've missed a peer.
+              We'd love to be wrong — open an issue if we've missed a peer.
             </a>
           </p>
         </div>
@@ -244,7 +244,7 @@ export default function ComparePage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="The Current Landscape"
-          subheadline="As of December 2025, we haven't found another system meeting all six."
+          subheadline="What we found when we looked for peers. Different projects, different goals."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
@@ -331,12 +331,23 @@ export default function ComparePage() {
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                 </tr>
+                <tr>
+                  <td className="p-4 text-gray-700 dark:text-gray-300">
+                    <a href="https://github.com/p0ss/HatCat" className="underline hover:text-brand-primary">HatCat</a>
+                  </td>
+                  <td className="p-4 text-center text-green-600">Yes</td>
+                  <td className="p-4 text-center text-yellow-500">Partial</td>
+                  <td className="p-4 text-center text-yellow-500">Steering</td>
+                  <td className="p-4 text-center text-yellow-500">Partial</td>
+                  <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-green-600">CC0</td>
+                </tr>
               </tbody>
             </table>
           </div>
 
           <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-            Sources: arXiv (MI9, HADA, Superego), Wikipedia (METR, Manus AI), WIRED (Agentic AI Foundation)
+            Sources: arXiv (MI9, HADA, Superego), Wikipedia (METR, Manus AI), WIRED (Agentic AI Foundation), GitHub (HatCat)
           </p>
         </div>
 
@@ -402,6 +413,13 @@ export default function ComparePage() {
               headline: "Manus AI",
               copyText:
                 "A deployed autonomous agent — but not alignment-focused. No published principles, no ethical reasoning layer, no deferral mechanism, no cryptographic audit, no consent framework. Capable, but not verifiably aligned.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "HatCat",
+              copyText:
+                "Real-time interpretability and steering for open-weights models. Detects concepts like deception and manipulation during generation, can steer away from harmful outputs. Complementary approach — monitors internals rather than reasoning about principles. CC0 licensed.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -504,7 +522,7 @@ export default function ComparePage() {
         logoAlt="Brand logo icon"
         headline="Verify It Yourself."
         subheadline="pip install ciris-agent"
-        copyText="The only open stack enforcing all six requirements end-to-end, in code, running in production. Audit it. Deploy it for safety-critical use cases: moderation, crisis response, governance. Tell us what's missing."
+        copyText="An open stack attempting all six requirements end-to-end, in code, running in production. Audit it. Deploy it for safety-critical use cases: moderation, crisis response, governance. Tell us what's missing."
       />
 
       <Footer />
