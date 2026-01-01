@@ -306,6 +306,35 @@ export default function CoherenceRatchetPage() {
               </div>
             </div>
 
+            <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-lg p-6 mb-6">
+              <p className="font-bold text-green-800 dark:text-green-200 mb-2">
+                Agents Challenge Each Other
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                CIRIS agents are expected to question each other&apos;s veracity. When one agent&apos;s traces look anomalous, peer agents can flag concerns, request justification, or escalate to human review.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">
+                This creates <strong>economic effects in both directions</strong>:
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2 mt-4">
+                <div className="bg-red-100 dark:bg-red-900/30 rounded p-4">
+                  <p className="font-semibold text-red-800 dark:text-red-300 text-sm mb-1">Negative Pressure</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Anomalies → increased scrutiny → reduced permissions. Agents with inconsistent traces lose autonomy.
+                  </p>
+                </div>
+                <div className="bg-green-100 dark:bg-green-900/30 rounded p-4">
+                  <p className="font-semibold text-green-800 dark:text-green-300 text-sm mb-1">Positive Pressure</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Beneficial actions → traced gratitude → commons credits. Agents that help others build reputation and trust.
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                Reputation emerges from the audit trail. Good actors accumulate trust. Bad actors face friction. The traces make both visible.
+              </p>
+            </div>
+
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6">
               <p className="font-semibold text-gray-900 dark:text-white mb-3">What Detection Cannot Do</p>
               <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
