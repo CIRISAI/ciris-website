@@ -112,7 +112,7 @@ export default function CoherenceRatchetPage() {
               CIRIS agents don&apos;t just behave consistently. They actively pursue beneficent action—and we can prove it.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Every decision passes through a <strong>conscience</strong>—six ethical checks that evaluate actions before execution:
+              Every decision passes through a <a href="/how-it-works" className="underline hover:text-brand-primary">conscience</a>—six ethical checks that evaluate actions before execution:
             </p>
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 mb-6">
               <div className="grid gap-3 sm:grid-cols-2">
@@ -148,7 +148,7 @@ export default function CoherenceRatchetPage() {
               The Mechanism: Traces
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Every time a CIRIS agent makes a decision, it creates a trace:
+              Every time a CIRIS agent makes a decision, it creates a <a href="/explore-a-trace" className="underline hover:text-brand-primary">trace</a>:
             </p>
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 font-mono text-sm mb-6">
               <div className="text-gray-700 dark:text-gray-300">
@@ -404,7 +404,7 @@ export default function CoherenceRatchetPage() {
               We&apos;re asking: <strong>&quot;Does this agent&apos;s behavior diverge from the population in ways that matter?&quot;</strong>
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Cross-agent comparison works regardless of underlying model weights—GPT-4, Claude, Gemini, open-source models can all be compared at the behavioral layer. Different architectures, same semantic trace format.
+              Cross-agent comparison works regardless of underlying model weights—GPT-4, Claude, Gemini, <a href="/models" className="underline hover:text-brand-primary">open-source models</a> can all be compared at the behavioral layer. Different architectures, same semantic trace format.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               This lets us see <em>relative</em> alignment against diverse goals and values—and lets people choose how to respond.
@@ -444,6 +444,9 @@ export default function CoherenceRatchetPage() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Why This Is Different
             </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <a href="/compare" className="text-sm text-brand-primary hover:underline">See the full comparison →</a>
+            </p>
             <div className="space-y-6">
               <div className="border-l-4 border-gray-300 dark:border-gray-600 pl-6">
                 <p className="font-semibold text-gray-900 dark:text-white">RLHF (how ChatGPT is trained)</p>
@@ -548,7 +551,7 @@ export default function CoherenceRatchetPage() {
           {/* The Vision */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              The Vision
+              <a href="/vision" className="hover:text-brand-primary">The Vision</a>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               A world where AI alignment isn&apos;t a desperate race to control one superintelligence.

@@ -94,16 +94,18 @@ export default function ComparePage() {
             {
               headline: "2. Runtime Conscience",
               copyText:
-                "Every action passes through ethical checks before execution. Not a post-hoc filter — part of the decision loop itself.",
+                "Every action passes through ethical checks before execution. Not a post-hoc filter — part of the decision loop itself. See how it works →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
+              headlineHref: "/how-it-works",
             },
             {
               headline: "3. Human Deferral",
               copyText:
-                "When uncertain or facing potential harm, the agent defers to humans with full context. Built into the workflow, not a suggestion.",
+                "When uncertain or facing potential harm, the agent defers to humans with full context. Built into the workflow, not a suggestion. See safety mechanisms →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
+              headlineHref: "/safety",
             },
           ]}
         />
@@ -113,9 +115,10 @@ export default function ComparePage() {
             {
               headline: "4. Cryptographic Audit",
               copyText:
-                "Every action and rationale recorded in an immutable, signed ledger. Not 'we log some things.' Everything. Trace exactly why the agent did what it did.",
+                "Every action and rationale recorded in an immutable, signed ledger. Not 'we log some things.' Everything. Trace exactly why the agent did what it did. Explore a real trace →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
+              headlineHref: "/explore-a-trace",
             },
             {
               headline: "5. Bilateral Consent",
@@ -365,6 +368,8 @@ export default function ComparePage() {
           headline="Many Aligned Agents"
           subheadline="Not one unaligned god."
           copyText="The dominant AI safety narrative assumes one superintelligent system that must be perfectly aligned or humanity loses. CIRIS rejects that frame. Instead: many smaller agents, each bound to published principles, each auditable, each deferring to human authority. Distributed governance, not concentrated power. No single point of failure. No race to build God."
+          linkHref="/coherence-ratchet"
+          linkText="Read about the Coherence Ratchet →"
         />
 
         <CardsSection
@@ -372,9 +377,10 @@ export default function ComparePage() {
             {
               headline: "Distributed Governance",
               copyText:
-                "Power stays distributed. Each CIRIS instance answers to its local Wise Authority, not a central controller. Geopolitical risk from AI concentration is structural — the fix is architectural.",
+                "Power stays distributed. Each CIRIS instance answers to its local Wise Authority, not a central controller. Geopolitical risk from AI concentration is structural — the fix is architectural. See the vision →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
+              headlineHref: "/vision",
             },
             {
               headline: "Aligned Baby-AGIs",
@@ -438,10 +444,10 @@ export default function ComparePage() {
         <div className="my-12 rounded-lg border-2 border-brand-primary bg-brand-primary/5 p-8">
           <h3 className="text-2xl font-bold text-brand-primary mb-4 text-center">What You'll Experience When You Install</h3>
           <div className="grid md:grid-cols-3 gap-6 mb-6">
-            <div className="text-center">
+            <a href="/explore-a-trace" className="text-center hover:bg-brand-primary/10 rounded-lg p-2 -m-2 transition-colors">
               <p className="font-semibold text-gray-900 dark:text-white mb-2">Transparent Reasoning</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Watch the agent's ethical checks in real-time. See why it chooses each action.</p>
-            </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Watch the agent's ethical checks in real-time. See why it chooses each action. <span className="text-brand-primary">Explore a trace →</span></p>
+            </a>
             <div className="text-center">
               <p className="font-semibold text-gray-900 dark:text-white mb-2">Principle-Checked Answers</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">Every response passes through conscience validation against the published ethical principles.</p>
