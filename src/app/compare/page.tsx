@@ -87,25 +87,26 @@ export default function ComparePage() {
             {
               headline: "1. Published Principles",
               copyText:
-                "The agent must be bound to a public ethical framework: Beneficence, Non-maleficence, Integrity, Transparency, Autonomy, and Justice. Not guidelines. A formal document the agent is obligated to follow.",
+                "The agent must be bound to a public ethical framework: Beneficence, Non-maleficence, Integrity, Transparency, Autonomy, and Justice. Not guidelines. A formal document the agent is obligated to follow. Read the Covenant →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
+              headlineHref: "/sections/main/v1",
             },
             {
               headline: "2. Runtime Conscience",
               copyText:
-                "Every action passes through ethical checks before execution. Not a post-hoc filter — part of the decision loop itself. See how it works →",
+                "Every action passes through ethical checks before execution. Not a post-hoc filter — part of the decision loop itself. View code →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
-              headlineHref: "/how-it-works",
+              headlineHref: "https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/conscience",
             },
             {
               headline: "3. Human Deferral",
               copyText:
-                "When uncertain or facing potential harm, the agent defers to humans with full context. Built into the workflow, not a suggestion. See safety mechanisms →",
+                "When uncertain or facing potential harm, the agent defers to humans with full context. Built into the workflow, not a suggestion. View code →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
-              headlineHref: "/safety",
+              headlineHref: "https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/handlers",
             },
           ]}
         />
@@ -115,24 +116,26 @@ export default function ComparePage() {
             {
               headline: "4. Cryptographic Audit",
               copyText:
-                "Every action and rationale recorded in an immutable, signed ledger. Not 'we log some things.' Everything. Trace exactly why the agent did what it did. Explore a real trace →",
+                "Every action and rationale recorded in an immutable, signed ledger. Not 'we log some things.' Everything. Trace exactly why the agent did what it did. View code →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
-              headlineHref: "/explore-a-trace",
+              headlineHref: "https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/audit",
             },
             {
               headline: "5. Bilateral Consent",
               copyText:
-                "Consent goes both ways. Humans can refuse data access. The agent can refuse requests that violate its principles. Neither party compromises.",
+                "Consent goes both ways. Humans can refuse data access. The agent can refuse requests that violate its principles. Neither party compromises. View code →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
+              headlineHref: "https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/services/governance/consent",
             },
             {
               headline: "6. Open Source (AGPL-3.0)",
               copyText:
-                "Ethical AI cannot be closed source. You can't audit what you can't see. 'Trust us, it's ethical' is not ethical. Show the code.",
+                "Ethical AI cannot be closed source. You can't audit what you can't see. 'Trust us, it's ethical' is not ethical. Show the code. View license →",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
+              headlineHref: "https://github.com/CIRISAI/CIRISAgent/blob/main/LICENSE",
             },
           ]}
         />
@@ -272,13 +275,27 @@ export default function ComparePage() {
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 <tr className="bg-green-50 dark:bg-green-900/20">
-                  <td className="p-4 font-bold text-brand-primary">CIRIS</td>
-                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
-                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
-                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
-                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
-                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
-                  <td className="p-4 text-center text-green-600 font-bold">Yes</td>
+                  <td className="p-4 font-bold text-brand-primary">
+                    <a href="https://github.com/CIRISAI/CIRISAgent" className="hover:underline">CIRIS</a>
+                  </td>
+                  <td className="p-4 text-center text-green-600 font-bold">
+                    <a href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine" className="hover:underline">Yes</a>
+                  </td>
+                  <td className="p-4 text-center text-green-600 font-bold">
+                    <a href="/sections/main/v1" className="hover:underline">Yes</a>
+                  </td>
+                  <td className="p-4 text-center text-green-600 font-bold">
+                    <a href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/conscience" className="hover:underline">Yes</a>
+                  </td>
+                  <td className="p-4 text-center text-green-600 font-bold">
+                    <a href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/audit" className="hover:underline">Yes</a>
+                  </td>
+                  <td className="p-4 text-center text-green-600 font-bold">
+                    <a href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/services/governance/consent" className="hover:underline">Yes</a>
+                  </td>
+                  <td className="p-4 text-center text-green-600 font-bold">
+                    <a href="https://github.com/CIRISAI/CIRISAgent/blob/main/LICENSE" className="hover:underline">Yes</a>
+                  </td>
                 </tr>
                 <tr>
                   <td className="p-4 text-gray-700 dark:text-gray-300">MI9 Framework</td>
