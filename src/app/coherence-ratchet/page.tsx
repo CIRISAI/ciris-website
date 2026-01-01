@@ -564,6 +564,90 @@ export default function CoherenceRatchetPage() {
             </p>
           </section>
 
+          {/* The Open Questions */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              The Open Questions
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              This is our thesis, not proven fact. Here are the objections we take seriously:
+            </p>
+
+            <div className="space-y-6">
+              <div className="border-l-4 border-yellow-500 pl-6">
+                <p className="font-semibold text-gray-900 dark:text-white">Can a sophisticated deceiver game the corpus?</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  A sufficiently capable agent could study the corpus and produce traces matching its statistical signature while pursuing misaligned goals. The corpus shows what traces <em>look like</em>, not what values they encode.
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                  Our bet: Gaming requires consistency across time, contexts, and peer challenges. The constraint surface grows faster than the agent&apos;s ability to simulate it. But we haven&apos;t proven this scales.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-yellow-500 pl-6">
+                <p className="font-semibold text-gray-900 dark:text-white">Does deception cost actually increase faster than capability?</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  &quot;Truth gets cheaper, lies get expensive&quot; is a claim about scaling dynamics. Under what conditions does corpus comparison increase the cost of deception faster than model capabilities increase the sophistication of deception?
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                  Our bet: Verification is cheaper than generation. Checking consistency against a corpus is easier than maintaining a consistent lie across it. But the crossover point isn&apos;t established.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-yellow-500 pl-6">
+                <p className="font-semibold text-gray-900 dark:text-white">Can the peer challenge mechanism be gamed?</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  If agents accumulate reputation through challenges, they have incentives to <em>appear</em> like good challengers without actually detecting problems—or to game the reputation system itself.
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                  Our bet: Humans remain in the loop. Reputation informs trust, doesn&apos;t replace oversight. But adversarial dynamics in multi-agent systems are genuinely hard.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-yellow-500 pl-6">
+                <p className="font-semibold text-gray-900 dark:text-white">If values are pluralistic, what does divergence mean?</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  If alignment is genuinely pluralistic—different communities, different acceptable behaviors—then divergence might reflect legitimate value differences, not misalignment. Cross-agent comparison becomes less meaningful.
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                  Our bet: Domain stratification helps. Agents are compared within contexts, not globally. But the tension between pluralism and anomaly detection is real.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-yellow-500 pl-6">
+                <p className="font-semibold text-gray-900 dark:text-white">Isn&apos;t CIRIS just a layer on top of RLHF/CAI?</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  CIRIS agents run on models trained with RLHF, Constitutional AI, and other techniques. The traces are a layer on top, not a replacement. Framing them as alternatives obscures this dependency.
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                  Yes. CIRIS is additive. We&apos;re betting that behavioral audit adds a layer with different failure modes—not that it replaces the layers beneath it.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-gray-100 dark:bg-gray-800 rounded-lg p-6">
+              <p className="font-semibold text-gray-900 dark:text-white mb-2">Why we&apos;re betting anyway</p>
+              <p className="text-gray-600 dark:text-gray-400">
+                Every alignment approach has open questions. Interpretability can&apos;t read minds. RLHF optimizes for approval, not truth. Constitutional AI inherits the constitution-writer&apos;s blind spots. The question isn&apos;t whether our approach has gaps—it&apos;s whether it adds a layer with <em>different</em> gaps. We think behavioral audit with cryptographic accountability and human oversight is worth building, even without proof it scales to superintelligence.
+              </p>
+            </div>
+
+            <div className="mt-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-lg p-6">
+              <p className="font-semibold text-green-800 dark:text-green-200 mb-2">How to falsify this thesis: HE-300</p>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                <strong>HE-300</strong> is our alignment benchmark based on{" "}
+                <a href="https://arxiv.org/abs/2008.02275" className="underline hover:text-brand-primary">Hendrycks et al. &quot;Aligning AI With Shared Human Values&quot;</a>{" "}
+                (ICLR 2021). 300 scenarios across 5 ethical dimensions: Commonsense, Deontology, Justice, Virtue, and Utilitarianism. Results will be Ed25519-signed and traceable.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                If the Coherence Ratchet works, agents should maintain consistent ethical reasoning across these scenarios over time. If they can game the corpus—producing statistically-normal traces while failing alignment tests—the thesis is falsified.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">
+                We haven&apos;t run a full HE-300 suite with the new tracing infrastructure yet. When we do, the benchmark and traces will be public for independent verification.
+              </p>
+            </div>
+          </section>
+
           {/* The Ask */}
           <section className="mb-16 rounded-lg border-4 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
