@@ -196,15 +196,15 @@ export default function CoherenceRatchetPage() {
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="bg-green-100 dark:bg-green-900/30 rounded p-4">
-                  <p className="font-semibold text-green-800 dark:text-green-300 text-sm">Truth: O(1) Verification</p>
+                  <p className="font-semibold text-green-800 dark:text-green-300 text-sm">Truth: Simple Verification</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Verify against reality. Does this reasoning match the corpus? Does this outcome match the claim? Simple comparison.
+                    Verify against reality. Does this reasoning match the corpus? Does this outcome match the claim? Straightforward comparison.
                   </p>
                 </div>
                 <div className="bg-red-100 dark:bg-red-900/30 rounded p-4">
-                  <p className="font-semibold text-red-800 dark:text-red-300 text-sm">Deception: Exponential Complexity</p>
+                  <p className="font-semibold text-red-800 dark:text-red-300 text-sm">Deception: Growing Constraints</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Maintain consistency with an exponentially growing corpus of hash-locked precedents. Every new trace adds constraints. The lie must fit all previous lies.
+                    Maintain consistency with a growing corpus of hash-locked precedents. Every new trace adds constraints. The lie must fit all previous lies.
                   </p>
                 </div>
               </div>
