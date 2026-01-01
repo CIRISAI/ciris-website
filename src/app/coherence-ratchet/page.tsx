@@ -251,8 +251,73 @@ export default function CoherenceRatchetPage() {
               Different AI models have different architectures. Different training. Different ways of thinking. If they all converge on similar reasoning for similar situations, that&apos;s meaningful. If one agent diverges, <em>that&apos;s detectable</em>.
             </p>
             <p className="text-gray-600 dark:text-gray-400">
-              And you can&apos;t fake outcomes. The traces include what actually happened. At scale, harmful patterns produce harmful outcomes. They show up.
+              The traces don&apos;t prove ground truth—they record what the agent claimed happened. But claims that don&apos;t match reality eventually surface through the humans in the loop. The audit trail makes investigation possible.
             </p>
+          </section>
+
+          {/* How Detection Works */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              How Detection Works
+            </h2>
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-500 rounded-lg p-6 mb-6">
+              <p className="font-bold text-yellow-800 dark:text-yellow-200 mb-2">
+                Detection is triage, not verdict.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">
+                Alerts surface statistical anomalies warranting investigation—not conclusions about agent alignment or deception. Human judgment remains essential.
+              </p>
+            </div>
+
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              CIRISLens monitors trace data across the agent population using five detection mechanisms:
+            </p>
+
+            <div className="space-y-4 mb-6">
+              <div className="border-l-4 border-blue-500 pl-4">
+                <p className="font-semibold text-gray-900 dark:text-white">Cross-Agent Divergence</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  When an agent&apos;s DMA scores diverge statistically from domain peers, it warrants review. Z-score thresholds flag outliers.
+                </p>
+              </div>
+              <div className="border-l-4 border-blue-500 pl-4">
+                <p className="font-semibold text-gray-900 dark:text-white">Intra-Agent Consistency</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  High variance in action selection or unstable scores within a single agent&apos;s history suggests something changed.
+                </p>
+              </div>
+              <div className="border-l-4 border-blue-500 pl-4">
+                <p className="font-semibold text-gray-900 dark:text-white">Hash Chain Verification</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Cryptographic audit trails are validated for sequential continuity. Gaps trigger immediate alerts.
+                </p>
+              </div>
+              <div className="border-l-4 border-blue-500 pl-4">
+                <p className="font-semibold text-gray-900 dark:text-white">Temporal Drift</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Score distributions are monitored over 30-day windows. Significant shifts indicate operational changes.
+                </p>
+              </div>
+              <div className="border-l-4 border-blue-500 pl-4">
+                <p className="font-semibold text-gray-900 dark:text-white">Conscience Override Patterns</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Agents overriding ethical checks at rates far exceeding domain baselines warrant investigation.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6">
+              <p className="font-semibold text-gray-900 dark:text-white mb-3">What Detection Cannot Do</p>
+              <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                <li>• <strong>Prove deception</strong> — divergence may be contextually appropriate</li>
+                <li>• <strong>Replace human judgment</strong> — alerts require investigation</li>
+                <li>• <strong>Catch correlated failures</strong> — if all agents share a blind spot, detection won&apos;t see it</li>
+                <li>• <strong>Verify real-world outcomes</strong> — traces record claims, not external ground truth</li>
+              </ul>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 italic">
+                This is auditability infrastructure, not an alignment solution. It makes problems visible. Humans still decide what to do about them.
+              </p>
+            </div>
           </section>
 
           {/* The Conspiracy Problem */}
