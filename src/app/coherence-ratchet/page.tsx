@@ -401,10 +401,10 @@ export default function CoherenceRatchetPage() {
                   Every action passes through ethical validation before execution. Not a filter on outputs—part of the decision loop itself.
                 </p>
               </a>
-              <a href="/how-it-works" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">
+              <a href="/explore-a-trace" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">
                 <p className="font-semibold text-gray-900 dark:text-white">The Traces →</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Observation → Context → Rationale → Conscience → Action → Outcome. Cryptographically signed. Immutable.
+                  Observation → Context → Rationale → Conscience → Action → Outcome. Cryptographically signed. Immutable. Explore a real trace.
                 </p>
               </a>
               <a href="/safety" className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors">

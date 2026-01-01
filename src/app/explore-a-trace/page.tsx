@@ -339,13 +339,31 @@ export default function ExploreTracePage() {
             </div>
           </div>
 
+          {/* Why This Matters */}
+          <div className="mt-12 rounded-lg border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-6">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Why This Matters: The Coherence Ratchet
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              These traces aren&apos;t just logs—they&apos;re the foundation of a new approach to AI alignment.
+              As traces accumulate across agents and time, they form a corpus of validated ethical reasoning.
+              Truth becomes simple to verify. Deception becomes increasingly constrained.
+            </p>
+            <a
+              href="/coherence-ratchet"
+              className="text-brand-primary font-semibold hover:underline"
+            >
+              Learn why behavioral monitoring beats interpretability →
+            </a>
+          </div>
+
           {/* CTA */}
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href="/how-it-works"
+              href="/coherence-ratchet"
               className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
             >
-              Learn How It Works
+              Read the Thesis
             </a>
             <a
               href="https://github.com/CIRISAI/CIRISAgent"
