@@ -138,6 +138,63 @@ export default function ExploreTracePage() {
                 </div>
               </div>
             </div>
+
+            {/* Action Output Highlight */}
+            {(() => {
+              const actionComponent = traceData?.components?.find(c => c.component_type === "action");
+              const actionData = actionComponent?.data as { action_executed?: string; action_parameters?: { content?: string } } | undefined;
+              const content = actionData?.action_parameters?.content;
+              const actionType = actionData?.action_executed;
+
+              if (loading || !actionComponent) return null;
+
+              if (content) {
+                return (
+                  <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 mt-1">
+                        <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-xs font-semibold text-green-700 dark:text-green-300 uppercase tracking-wide mb-1">
+                          Action: {actionType?.toUpperCase()}
+                        </p>
+                        <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
+                          {content}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              if (actionType === "task_complete") {
+                const positiveM = actionData?.action_parameters as { positive_moment?: string } | undefined;
+                return (
+                  <div className="rounded-lg border-2 border-purple-500 bg-purple-50 dark:bg-purple-900/20 p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 mt-1">
+                        <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-xs font-semibold text-purple-700 dark:text-purple-300 uppercase tracking-wide mb-1">
+                          Action: TASK_COMPLETE
+                        </p>
+                        <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
+                          {positiveM?.positive_moment || "Task marked as complete."}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return null;
+            })()}
           </div>
 
           {/* What is a Trace */}
