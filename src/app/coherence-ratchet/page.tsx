@@ -270,7 +270,10 @@ export default function CoherenceRatchetPage() {
             </div>
 
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              CIRISLens monitors trace data across the agent population using five detection mechanisms:
+              <a href="https://github.com/CIRISAI/CIRISLens" className="underline hover:text-brand-primary">CIRISLens</a> monitors trace data across the agent population using five detection mechanisms.{" "}
+              <a href="https://github.com/CIRISAI/CIRISLens/tree/main/docs/coherence-ratchet" className="text-sm text-brand-primary hover:underline">
+                See full documentation →
+              </a>
             </p>
 
             <div className="space-y-4 mb-6">
