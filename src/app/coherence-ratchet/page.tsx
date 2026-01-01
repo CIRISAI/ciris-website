@@ -349,29 +349,43 @@ export default function CoherenceRatchetPage() {
             </div>
           </section>
 
-          {/* The Conspiracy Problem */}
+          {/* The Correlated Failure Problem */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              The Conspiracy Problem
+              The Correlated Failure Problem
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              For this system to fail catastrophically, you&apos;d need:
+              The serious objection isn&apos;t conspiracy—it&apos;s <strong>correlated failure modes</strong>.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              If all agents share training biases, architectural vulnerabilities, or systematic blind spots, they can fail in correlated ways without any coordination. A corpus built from such agents would encode those blind spots as &quot;what aligned reasoning looks like.&quot; Recent research confirms this concern: <a href="https://arxiv.org/abs/2510.11235" className="underline hover:text-brand-primary">defense-in-depth only works if failure modes are uncorrelated</a>.
+            </p>
+
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-500 rounded-lg p-6 mb-6">
+              <p className="font-bold text-yellow-800 dark:text-yellow-200 mb-2">
+                This is a genuine limitation.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">
+                If every underlying model shares the same blind spot, cross-agent comparison won&apos;t detect it. The corpus would normalize the failure. We don&apos;t claim to solve this.
+              </p>
+            </div>
+
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              What CIRIS does to <em>reduce</em> correlation:
             </p>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 mb-4 space-y-2">
-              <li>Thousands of independent agents</li>
-              <li>Running on different AI models</li>
-              <li>Under different human authorities</li>
-              <li>In different contexts around the world</li>
-              <li>To all <strong>independently</strong> decide to pursue the same harmful goal</li>
-              <li>Without any of them telling their humans</li>
-              <li>Without their reasoning patterns diverging from the corpus</li>
-              <li>Without their outcomes revealing the deception</li>
+              <li><strong>Model diversity</strong> — Claude, GPT, Llama, Mistral, Gemini have different training data, architectures, and failure modes</li>
+              <li><strong>Human diversity</strong> — Different Wise Authorities in different contexts catch different problems</li>
+              <li><strong>Domain stratification</strong> — Agents are compared within domains, so edge cases in one domain don&apos;t pollute baselines in another</li>
+              <li><strong>Temporal monitoring</strong> — Drift detection catches when behavior changes, even if we don&apos;t know why</li>
             </ul>
+
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              That&apos;s not a failure mode. That&apos;s a global conspiracy among minds that can&apos;t communicate, have different architectures, and are being watched by different people.
+              The goal isn&apos;t perfect detection. It&apos;s <em>reducing</em> correlation and <em>making anomalies visible</em> so humans can investigate. Defense-in-depth works better when layers have uncorrelated failure modes—CIRIS adds a layer with different failure modes than interpretability or RLHF.
             </p>
-            <p className="text-gray-600 dark:text-gray-400">
-              It doesn&apos;t happen by accident. And it&apos;s very hard to make happen on purpose.
+
+            <p className="text-gray-600 dark:text-gray-400 text-sm italic">
+              For more on this concern, see Anthropic&apos;s research on <a href="https://www.anthropic.com/research/agentic-misalignment" className="underline hover:text-brand-primary">agentic misalignment generalizing across models</a>.
             </p>
           </section>
 
