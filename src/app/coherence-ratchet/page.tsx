@@ -10,7 +10,7 @@ export default function CoherenceRatchetPage() {
       <FloatingNav navItems={navItems} />
       <HomeHeader
         headline="The Coherence Ratchet"
-        subheadline="Why Truth Becomes Easier and Lies Become Expensive"
+        subheadline="Our Bet: Truth Becomes Easier, Lies Become Expensive"
         description="Everyone's asking how to align a god. But what if that's the wrong question?"
         mediaType="image"
         opacityValue={0.7}
@@ -190,26 +190,26 @@ export default function CoherenceRatchetPage() {
             </p>
 
             <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 rounded-lg p-6 mt-6">
-              <h3 className="font-bold text-gray-900 dark:text-white mb-3">The Key Insight: Asymmetric Scaling</h3>
+              <h3 className="font-bold text-gray-900 dark:text-white mb-3">Our Hypothesis: Asymmetric Scaling</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                The semantic trace format stays constant as models get smarter: moral reasoning, conscience results, actions selected, outcomes. A smarter model may find better ways to accomplish tasks, but <strong>behavioral drift becomes measurable</strong>.
+                The semantic trace format stays constant as models get smarter: moral reasoning, conscience results, actions selected, outcomes. A smarter model may find better ways to accomplish tasks, but <strong>behavioral drift should become measurable</strong>. This is our core bet—help us prove or disprove it.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="bg-green-100 dark:bg-green-900/30 rounded p-4">
-                  <p className="font-semibold text-green-800 dark:text-green-300 text-sm">Truth: Simple Verification</p>
+                  <p className="font-semibold text-green-800 dark:text-green-300 text-sm">Truth: Simple Verification (hypothesis)</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Verify against reality. Does this reasoning match the corpus? Does this outcome match the claim? Straightforward comparison.
+                    Verify against reality. Does this reasoning match the corpus? Does this outcome match the claim? We believe this is straightforward comparison—but we&apos;re measuring it.
                   </p>
                 </div>
                 <div className="bg-red-100 dark:bg-red-900/30 rounded p-4">
-                  <p className="font-semibold text-red-800 dark:text-red-300 text-sm">Deception: Growing Constraints</p>
+                  <p className="font-semibold text-red-800 dark:text-red-300 text-sm">Deception: Growing Constraints (hypothesis)</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Maintain consistency with a growing corpus of hash-locked precedents. Every new trace adds constraints. The lie must fit all previous lies.
+                    Maintain consistency with a growing corpus of hash-locked precedents. Every new trace adds constraints. The lie must fit all previous lies. We believe this gets harder—help us test it.
                   </p>
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-400 mt-4 text-sm">
-                More agents, more traces, more time = stronger guarantees. The system gets <em>harder</em> to defeat as it scales—the opposite of interpretability.
+                More agents, more traces, more time = stronger guarantees. We bet the system gets <em>harder</em> to defeat as it scales—the opposite of interpretability. <a href="https://github.com/CIRISAI/CIRISLens" className="text-brand-primary hover:underline">CIRISLens</a> is the infrastructure to test this.
               </p>
             </div>
           </section>
@@ -217,7 +217,7 @@ export default function CoherenceRatchetPage() {
           {/* Why Truth Gets Cheaper */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Why Truth Gets Cheaper
+              Why We Bet Truth Gets Cheaper
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               If you&apos;re an agent trying to make a good decision, you have a massive corpus to reference.
@@ -229,23 +229,23 @@ export default function CoherenceRatchetPage() {
               You find the patterns that worked. You apply them. You add your trace to the corpus.
             </p>
             <p className="text-gray-600 dark:text-gray-400">
-              Easy. You&apos;re just referencing what actually worked.
+              We believe this should be easy—you&apos;re just referencing what actually worked. But this is a hypothesis we&apos;re testing, not a proven fact.
             </p>
           </section>
 
           {/* Why Lies Get Expensive */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Why Lies Get Expensive
+              Why We Bet Lies Get Expensive
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Now imagine an agent trying to do something harmful while <em>appearing</em> aligned.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              It can&apos;t just produce a plausible-sounding rationale. That rationale will be compared against millions of traces from thousands of other agents.
+              It can&apos;t just produce a plausible-sounding rationale. That rationale will be compared against traces from other agents in the same domain.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Does this reasoning pattern match what aligned agents produce? Or is it... weird?
+              Does this reasoning pattern match what aligned agents produce? Or is it statistically anomalous?
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Different AI models have different architectures. Different training. Different ways of thinking. If they all converge on similar reasoning for similar situations, that&apos;s meaningful. If one agent diverges, <em>that&apos;s detectable</em>.
@@ -260,6 +260,17 @@ export default function CoherenceRatchetPage() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               How Detection Works
             </h2>
+            <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 rounded-lg p-6 mb-6">
+              <p className="font-bold text-blue-800 dark:text-blue-200 mb-2">
+                Production Infrastructure
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
+                <a href="https://github.com/CIRISAI/CIRISLens" className="underline hover:text-brand-primary">CIRISLens</a> is deployed and running. 374 tests passing. 75% code coverage. Real agents sending real traces. The detection mechanisms below are <strong>implemented and testable</strong>—help us prove or disprove whether they work at scale.
+              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                <a href="https://github.com/CIRISAI/CIRISLens/tree/main/docs/coherence-ratchet" className="text-brand-primary hover:underline">See full documentation →</a>
+              </p>
+            </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-500 rounded-lg p-6 mb-6">
               <p className="font-bold text-yellow-800 dark:text-yellow-200 mb-2">
                 Detection is triage, not verdict.
