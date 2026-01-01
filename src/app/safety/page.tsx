@@ -97,7 +97,7 @@ export default function SafetyPage() {
             {
               headline: "Cryptographic Verification",
               copyText:
-                "Emergency shutdown requires a valid Ed25519 signature from an authorized ROOT authority. The signature is verified at the hardware level. No one without the private key can trigger it.",
+                "Emergency shutdown requires a valid Ed25519 signature from an authorized ROOT authority. The handler terminates itself if authorities fail to load or if someone attempts to disable covenant detection. No one without the private key can trigger it.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
