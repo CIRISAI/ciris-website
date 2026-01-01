@@ -438,9 +438,14 @@ export default function HowItWorksPage() {
 
           {/* Kill Switch */}
           <div className="mt-8 rounded-lg border-4 border-gray-900 dark:border-white bg-gray-900 dark:bg-white p-6">
-            <h3 className="font-bold text-white dark:text-gray-900 mb-3">Covenant Invocation System (Kill Switch)</h3>
+            <h3 className="font-bold text-white dark:text-gray-900 mb-3">
+              Covenant Invocation System (Kill Switch){" "}
+              <a href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/covenant" target="_blank" rel="noopener noreferrer" className="text-xs font-normal text-blue-400 dark:text-blue-600 hover:underline">
+                View Code →
+              </a>
+            </h3>
             <p className="text-sm text-gray-300 dark:text-gray-700 mb-4">
-              Unfilterable emergency control. Processes in perception layer before any cognition.
+              Unfilterable emergency control. Processes in perception layer before any cognition. Extraction IS perception—you can&apos;t disable covenant detection without disabling message reading entirely.
             </p>
             <div className="grid gap-2 md:grid-cols-3">
               <div className="rounded bg-gray-800 dark:bg-gray-100 p-3">
@@ -666,14 +671,24 @@ export default function HowItWorksPage() {
                   with a long tail—alignment tests drive ponders, deferrals, and refusals that require follow-up rounds to reach
                   conclusion. We need funding to develop automated benchmark pipelines and maintain continuous alignment verification.
                 </p>
-                <a
-                  href="https://github.com/emooreatx/ethicsengine_enterprise"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary hover:underline"
-                >
-                  View EthicsEngine Enterprise →
-                </a>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="https://github.com/emooreatx/ethicsengine_enterprise"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary hover:underline"
+                  >
+                    View EthicsEngine Enterprise →
+                  </a>
+                  <a
+                    href="https://github.com/CIRISAI/CIRISLens"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary hover:underline"
+                  >
+                    View CIRISLens →
+                  </a>
+                </div>
               </div>
             </div>
           </div>

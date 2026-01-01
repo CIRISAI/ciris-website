@@ -74,6 +74,8 @@ export default function SafetyPage() {
           headline="Covenant Invocation System"
           subheadline="Emergency shutdown that cannot be filtered."
           copyText="The kill switch is steganographically embedded in CIRIS's perception layer — it processes the shutdown signal before any filtering, reasoning, or ethical evaluation occurs. Even a compromised agent cannot refuse to process it. The signal is cryptographically signed and requires Ed25519 verification, bypassing normal authentication."
+          linkHref="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/covenant"
+          linkText="View Implementation →"
         />
 
         <CardsSection
