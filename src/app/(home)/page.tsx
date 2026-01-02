@@ -126,12 +126,12 @@ export default function Homepage() {
       </div>
 
       {/* The Bigger Picture */}
-      <div className="bg-gray-900 dark:bg-black py-8 border-b border-gray-800">
+      <div className="bg-gray-100 dark:bg-gray-900 py-8 border-b border-gray-200 dark:border-gray-800">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-lg text-gray-100 font-medium mb-3">
-            The real X-risk isn't rogue AI. It's god-like centralized AI — concentrating power, homogenizing values, eroding human agency.
+          <p className="text-lg text-gray-900 dark:text-gray-100 font-medium mb-3">
+            The real X-risk isn&apos;t rogue AI. It&apos;s god-like centralized AI — concentrating power, homogenizing values, eroding human agency.
           </p>
-          <p className="text-gray-400 mb-4">
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
             CIRIS is infrastructure for a different path: many smaller agents, each accountable to local human authority, each contributing to a growing corpus of validated ethical reasoning. Our core bet is <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a> — values over chaos.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">

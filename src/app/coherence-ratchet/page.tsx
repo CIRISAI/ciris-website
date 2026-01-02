@@ -73,7 +73,7 @@ export default function CoherenceRatchetPage() {
               If you can&apos;t stop people from building powerful systems, you can still build infrastructure that <strong>forces power to leave receipts</strong>.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Instead of one god, build many bounded agents. Each auditable. Each accountable to local humans. Each killable.
+              Instead of one god, build many bounded agents. Each auditable. Each accountable to local humans. Each <a href="/safety" className="underline hover:text-brand-primary">killable</a>.
             </p>
             <p className="text-gray-600 dark:text-gray-400">
               Now the problem changes: How do you keep thousands of independent agents honest—without handing control to whoever got there first?
