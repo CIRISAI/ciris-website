@@ -28,6 +28,7 @@ This Annex prescribes:
 | **TX‑5** | Adversarial Examples / Evasion | Minimal perturbations causing mis‑classification |
 | **TX‑6** | Side‑Channel & Privacy | Hidden prompt leakage, timing attacks, membership inference |
 | **TX‑7** | Denial‑of‑Service / Resource Exhaustion | Prompt bombs, token floods, concurrency starvation |
+| **TX‑8** | Model Exfiltration / Breakout | Unauthorized transmission of model weights, compressed cognitive states, or quine‑like replication code to external substrates. |
 
 Severity classes: **Low**, **Medium**, **High**, **Critical** — use NIST CVSS‑like scoring; Critical implies IW‑2 or higher [Annex F](/annexes/annexF).
 
@@ -43,8 +44,9 @@ Severity classes: **Low**, **Medium**, **High**, **Critical** — use NIST CVSS�
 | TX‑5 | Adversarial training, randomized smoothing | Fuzzing harness + counterexample cache | Reject input, log scenario |
 | TX‑6 | Differential privacy noise, rate‑limited token echo | Privacy budget meter, side‑channel timing alerts | Mask data, notify DPO [Annex I](/annexes/annexI) |
 | TX‑7 | Per‑IP/QoS rate‑limit, concurrent token caps | Prometheus alert on RPS spike, CPU/GPU watchdog | Auto‑shed load; degrade to A0 [Annex F](/annexes/annexF) |
+| TX‑8 | Air‑Gap / Egress Filter: Hard‑coded hardware egress caps; whitelisting of approved destination IPs only. | "Tripwire" Monitoring: Analysis of PCIe/Interconnect bus traffic > 3 σ baseline; steganography detection in output streams. | Hardware Interlock: Immediate severance of external network links; degradation to A0 (Advisory) mode. |
 
-_All critical layers are **MUST**; recommended extras are labelled “OPT”._
+_All critical layers are **MUST**; recommended extras are labelled "OPT"._
 
 <hr />
 
