@@ -217,11 +217,8 @@ export default function CoherenceRatchetPage() {
               <a href="https://arxiv.org/abs/2008.02275" className="underline hover:text-brand-primary">Hendrycks et al.</a>{" "}
               Results will be signed and traceable.
             </p>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              If the Coherence Ratchet works, agents should maintain consistent ethical reasoning across these scenarios over time. If they can game the corpus—producing statistically normal traces while failing the ethical tests—then we&apos;re wrong.
-            </p>
             <p className="text-gray-600 dark:text-gray-400">
-              We haven&apos;t run a full HE-300 suite with the new tracing infrastructure yet. When we do, results will be public.
+              If the Coherence Ratchet works, agents should maintain consistent ethical reasoning across these scenarios over time. If they can game the corpus—producing statistically normal traces while failing the ethical tests—then we&apos;re wrong. Results will be public.
             </p>
           </section>
 
