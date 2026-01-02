@@ -144,6 +144,33 @@ export default function CoherenceRatchetPage() {
             </p>
           </section>
 
+          {/* Natural Law Hypothesis */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              A Candidate Natural Law
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <a href="/sections/main/v9" className="underline hover:text-brand-primary">Book IX of the CIRIS Covenant</a> proposes that we may have identified something deeper than a design choice.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              The mathematical framework suggests that sustained coordination under entropy is governed by a substrate-independent set of geometric constraints. These constraints appear to function identically across biological systems (where violation causes isolation, radicalization, social decay) and digital systems (where violation causes mode collapse, Sybil failure, coordination breakdown).
+            </p>
+            <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 pl-4 py-2 mb-4">
+              <p className="text-gray-700 dark:text-gray-300 mb-2">
+                <strong>Epistemic status:</strong> This is a hypothesis, not a declaration. We believe these constraints function as a <em>candidate natural law of flourishing and deception resistance</em>, but whether they qualify as such will not be decided by us.
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                It will be decided by whether others can break it, whether systems built on it fail less often, and whether violations reliably collapse.
+              </p>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              The framework does not prescribe values. It describes necessary conditions for sustained coherence. Nature enforces the penalty for violation, not us.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400">
+              If true, this would explain why truth-telling becomes computationally cheaper than coordinated deception at scale, and why the same variables (community, humility, conscience, care) govern both safety and flourishing across all intelligent systems.
+            </p>
+          </section>
+
           {/* Detection */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
