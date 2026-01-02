@@ -147,13 +147,16 @@ export default function CoherenceRatchetPage() {
           {/* Natural Law Hypothesis */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              A Candidate Natural Law
+              The Law of Coherent Intersection
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               <a href="/sections/main/v9" className="underline hover:text-brand-primary">Book IX of the CIRIS Covenant</a> proposes that we may have identified something deeper than a design choice.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              The mathematical framework suggests that sustained coordination under entropy is governed by a substrate-independent set of geometric constraints. These constraints appear to function identically across biological systems (where violation causes isolation, radicalization, social decay) and digital systems (where violation causes mode collapse, Sybil failure, coordination breakdown).
+              We call this <strong>The Law of Coherent Intersection</strong>—a substrate-independent geometric principle governing coordination under entropy. The mathematical framework suggests that sustained coordination is governed by constraint manifold intersection topology, not prescriptive values.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              These constraints appear to function identically across biological systems (where violation causes isolation, radicalization, social decay) and digital systems (where violation causes mode collapse, Sybil failure, coordination breakdown).
             </p>
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 pl-4 py-2 mb-4">
               <p className="text-gray-700 dark:text-gray-300 mb-2">
