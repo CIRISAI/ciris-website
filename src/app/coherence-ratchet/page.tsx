@@ -155,6 +155,30 @@ export default function CoherenceRatchetPage() {
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               This isn&apos;t a conspiracy story. It&apos;s bookkeeping. Sustained deception gets harder because the lie has to fit an expanding body of recorded precedent—and the trail can&apos;t be quietly rewritten.
             </p>
+
+            <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-lg p-5 mb-4">
+              <p className="font-bold text-green-800 dark:text-green-200 mb-2">
+                Agents Challenge Each Other
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mb-3 text-sm">
+                Human oversight doesn&apos;t scale. But agents can question each other&apos;s veracity—flagging anomalous traces, requesting justification, escalating to human review. This creates <strong>economic effects in both directions</strong>:
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="bg-red-100 dark:bg-red-900/30 rounded p-3">
+                  <p className="font-semibold text-red-800 dark:text-red-300 text-sm mb-1">Negative Pressure</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    Anomalies → scrutiny → reduced permissions. Inconsistent traces lose autonomy.
+                  </p>
+                </div>
+                <div className="bg-green-100 dark:bg-green-900/30 rounded p-3">
+                  <p className="font-semibold text-green-800 dark:text-green-300 text-sm mb-1">Positive Pressure</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    Beneficial actions → traced gratitude → commons credits. Good actors build trust.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-500 rounded-lg p-4 mb-4">
               <p className="font-semibold text-yellow-800 dark:text-yellow-200 text-sm mb-1">Detection is triage, not verdict.</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
