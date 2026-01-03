@@ -927,7 +927,7 @@ export default function PrivacyPage() {
               14. CIRIS Covenant Principles
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              This privacy policy is governed by the CIRIS Covenant (Version 1.0-β), which establishes our ethical foundation:
+              This privacy policy is governed by the CIRIS Covenant (Version 1.0-RC1), which establishes our ethical foundation:
             </p>
             <div className="space-y-2">
               <div className="rounded-lg border-l-4 border-brand-primary bg-white p-4 dark:bg-gray-800">

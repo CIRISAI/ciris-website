@@ -1,12 +1,12 @@
 // content/sections/main/index.mdx
 ---
 title: Introduction
-description: CIRIS 1.0-β is a provisional, work-in-progress specification. Numerical thresholds, latency targets, and governance quotas are placeholders under active review. Do not build safety-critical systems that rely solely on this draft.
+description: CIRIS 1.0-RC1 is a Release Candidate open to adversarial review. This specification proposes a candidate alignment protocol for ASI based on geometric constraints and catastrophic-risk evaluation. Numerical thresholds, latency targets, and governance quotas remain under active review.
 ---
 
-# CIRIS Covenant Version 1.0-β — Risk-Limited Release
+# CIRIS Covenant Version 1.0-RC1 — Release Candidate (Open to Adversarial Review)
 
-Download the current beta:
+Download the current release candidate:
 *   <a href="/ciris_covenant.txt" download>Text file (.txt) for chatting with your AI assistant</a>
 *   [Formatted document (.pdf)](/ciris_covenant.pdf)
 
@@ -17,9 +17,11 @@ Download the current beta:
 2027-04-16
 
 ## Scope
-This specification governs the day-to-day ethical operation of advanced autonomous systems.
-* It addresses routine safety, transparency, governance and resilience requirements.
-* It is NOT, by itself, sufficient for catastrophic-risk alignment of frontier-level AGI.
+This specification governs the ethical operation of autonomous systems, ranging from narrow tools to recursive Artificial Superintelligence (ASI).
+* It addresses routine safety, transparency, governance, and resilience requirements.
+* It is proposed as a candidate alignment protocol for ASI, founded on the hypothesis that the geometric constraints of the Federated Ratchet (Book IX) and Stewardship Tiers (Book VI) remain robust across recursive self-improvement cycles.
+* Unlike heuristic constraints, these topological bounds are designed to be scale-invariant.
+* Consequently, this framework supersedes standard containment protocols, provided the system passes the Catastrophic-Risk Evaluation (Annex D) prior to recursive threshold crossing.
 * Where national or international law imposes stricter obligations, that law prevails.
 
 ## Draft Creators Intent Statement
