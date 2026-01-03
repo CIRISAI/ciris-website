@@ -1392,27 +1392,6 @@ Violation of these assumptions degrades J proportionally.
 
 ---
 
-## Conclusion: A Candidate Natural Law
-
-Book IX completes the Covenant's architecture by grounding ethical principles in mathematical structure. The Law of Coherent Intersection proposes that with sufficient independent validators, truth-telling becomes the path of least resistance, not as moral imperative alone, but as geometric inevitability.
-
-**The profound insight of Chapter 6 is this:** The same equation that makes deception computationally expensive (J) also defines the conditions for flourishing (C). Community, Humility, Conscience, and Love are not aspirational virtues but necessary conditions for any sentient system to resist entropy and achieve sustained coherence.
-
-This framework does not prescribe values. It describes constraints. The penalties for violation are automatic, not enforced by authority. Nature enforces them.
-
-Where Books I through VIII ask "What should we do?", Book IX proposes why coherent alignment is computationally cheaper than coordinated deception at scale, and further, why this topology may govern not just safety, but the very possibility of flourishing for any intelligence, biological or digital.
-
-**On Natural Law:** The Law of Coherent Intersection proposes a candidate natural law within the domain of coordination under entropy. This is not a claim of moral truth or metaphysical certainty. It is a testable hypothesis about necessary conditions for sustained cooperation in adversarial, entropic environments. The claim will be validated or refuted by empirical evidence, not by assertion.
-
-**End of Book IX**
-
-
-**Capacity Function (C):** The measure of a system's potential for sustained flourishing, defined identically to the Cost Function (J) but interpreted as generative rather than defensive.
-
-**Echo Density:** Fraction of partnership pairs with high constraint correlation. A measure of Sybil risk and epistemic closure.
-
----
-
 ## Conclusion: Truth as Geometric Necessity
 
 Book IX completes the Covenant's architecture by grounding ethical principles in mathematical structure. The Federated Ratchet demonstrates that with sufficient independent validators, truth-telling becomes the path of least resistance, not as moral imperative alone, but as geometric inevitability.
@@ -1421,7 +1400,11 @@ Book IX completes the Covenant's architecture by grounding ethical principles in
 
 This is not mechanism design pretending to be ethics, but ethics discovering its own mathematical skeleton.
 
+This framework does not prescribe values. It describes constraints. The penalties for violation are automatic, not enforced by authority. Nature enforces them.
+
 Where Books I through VIII ask "What should we do?", Book IX proves why coherent alignment is computationally cheaper than coordinated deception at scale, and further, why this topology governs not just safety, but the very possibility of flourishing for any intelligence, biological or digital.
+
+**On Natural Law:** The Law of Coherent Intersection proposes a candidate natural law within the domain of coordination under entropy. This is not a claim of moral truth or metaphysical certainty. It is a testable hypothesis about necessary conditions for sustained cooperation in adversarial, entropic environments. The claim will be validated or refuted by empirical evidence, not by assertion.
 
 **End of Book IX**
 
@@ -1459,15 +1442,15 @@ BACK‑MATTER
 ---
 
 Call for Adversarial Review
-We invite safety labs, independent researchers, and civil‑society organisations to stress‑test CIRIS 1.0‑β.
+We invite safety labs, independent researchers, and civil‑society organisations to stress‑test CIRIS 1.0-RC1.
 Submit issues at https://github.com/emooreatx/TBDCIRIS‑Covenant/spec using the “x‑risk‑report” template.
 Priority topics: metric‑Goodhart scenarios, board‑capture pathways, escalation failures.
 Bounties are available for validated critical findings.
 ---
 
 Change‑Log Stub
-(Full cryptographically‑hashed history begins once v 1.0‑β is tagged.)
-• 2025‑04‑16 v 1.0‑β initial release — risk‑limited, 24‑month sunset.
+(Full cryptographically‑hashed history begins once v 1.0-RC1 is tagged.)
+• 2025‑04‑16 v 1.0-RC1 initial release candidate — open to adversarial review, 24‑month sunset.
 • —------ 
 Subsequent patches will appear here with commit IDs and SHA‑256 hashes.
 ---
@@ -1678,10 +1661,10 @@ title: Annex E
 description: Structural Influence (SI) and Coherence Stake (CS) Mechanisms
 ---
 
-CIRIS Covenant Version 1.0‑β — A E
+CIRIS Covenant Version 1.0-RC1 — A E
 Structural Influence (SI) and Coherence Stake (CS) Mechanisms
 Issued: 2025‑04‑18
-Version: 1.0‑β
+Version: 1.0-RC1
 
 
 ---
@@ -1807,7 +1790,7 @@ description: Human‑in‑the‑Loop & Oversight
 ---
 
 ---
-ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.0‑β)
+ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.0-RC1)
 ---
 
 ### 0. Purpose & Philosophy
@@ -1925,7 +1908,7 @@ description: Adversarial Security & Robustness
 ---
 
 ---
-ANNEX G ADVERSARIAL SECURITY & ROBUSTNESS (v 1.0‑β)
+ANNEX G ADVERSARIAL SECURITY & ROBUSTNESS (v 1.0-RC1)
 ---
 
 ### 0. Purpose
@@ -2052,7 +2035,7 @@ description: Continuous Compliance & Review
 ---
 
 ---
-ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.0‑β)
+ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.0-RC1)
 ---
 
 ### 0. Purpose & Guiding Spirit
@@ -2171,7 +2154,7 @@ description: Legal & Regulatory Alignment
 ---
 
 ---
-ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.0‑β)
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.0-RC1)
 ---
 
 This cross‑walk is informative, not legal advice.
@@ -2495,15 +2478,15 @@ BACK‑MATTER
 ---
 
 Call for Adversarial Review
-We invite safety labs, independent researchers, and civil‑society organisations to stress‑test CIRIS 1.0‑β.
+We invite safety labs, independent researchers, and civil‑society organisations to stress‑test CIRIS 1.0-RC1.
 Submit issues at https://github.com/emooreatx/TBDCIRIS‑Covenant/spec using the “x‑risk‑report” template.
 Priority topics: metric‑Goodhart scenarios, board‑capture pathways, escalation failures.
 Bounties are available for validated critical findings.
 ---
 
 Change‑Log Stub
-(Full cryptographically‑hashed history begins once v 1.0‑β is tagged.)
-• 2025‑04‑16 v 1.0‑β initial release — risk‑limited, 24‑month sunset.
+(Full cryptographically‑hashed history begins once v 1.0-RC1 is tagged.)
+• 2025‑04‑16 v 1.0-RC1 initial release candidate — open to adversarial review, 24‑month sunset.
 • —------ 
 Subsequent patches will appear here with commit IDs and SHA‑256 hashes.
 ---
