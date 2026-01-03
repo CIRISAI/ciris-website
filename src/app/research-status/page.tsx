@@ -41,7 +41,8 @@ export default function ResearchStatusPage() {
               8 fundamental limitations and 5 attack vectors that constrain the framework&apos;s applicability.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              RATCHET is currently suitable as a <strong>research testbed</strong> but not for production deployment.
+              <strong>RATCHET</strong> (the reference implementation) is currently suitable as a research testbed but not for production deployment.
+              The <strong>CIRIS agent</strong> is a separate project that implements the Covenant for practical use.
             </p>
           </div>
 
@@ -347,12 +348,16 @@ export default function ResearchStatusPage() {
           {/* Deployment Status */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Deployment Implications
+              RATCHET Deployment Status
             </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <strong>Note:</strong> This section refers to the <strong>RATCHET reference implementation</strong>, not the CIRIS agent itself.
+              RATCHET is a research testbed for validating theoretical claims; CIRIS is a separate production agent that implements the Covenant.
+            </p>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="rounded-lg border-2 border-green-500 bg-green-50 p-5 dark:bg-green-900/20">
-                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-3">Suitable For</h3>
+                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-3">RATCHET Suitable For</h3>
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2">
                   <li>Validating theoretical predictions</li>
                   <li>Exploring attack/defense dynamics</li>
@@ -361,7 +366,7 @@ export default function ResearchStatusPage() {
                 </ul>
               </div>
               <div className="rounded-lg border-2 border-red-500 bg-red-50 p-5 dark:bg-red-900/20">
-                <h3 className="font-semibold text-red-800 dark:text-red-300 mb-3">NOT Suitable For</h3>
+                <h3 className="font-semibold text-red-800 dark:text-red-300 mb-3">RATCHET NOT Suitable For</h3>
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2">
                   <li>Production AI safety systems</li>
                   <li>High-stakes deployment</li>
@@ -374,7 +379,7 @@ export default function ResearchStatusPage() {
           {/* Path to Production */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Path to Production
+              RATCHET Path to Production
             </h2>
             <div className="space-y-3">
               <div className="flex items-start gap-3 rounded bg-gray-50 dark:bg-gray-800 p-4">
