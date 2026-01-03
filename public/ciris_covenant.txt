@@ -1,12 +1,12 @@
 // content/sections/main/index.mdx
 ---
 title: Introduction
-description: CIRIS 1.0-RC1 is a Release Candidate open to adversarial review. This specification proposes a candidate alignment protocol for ASI based on geometric constraints and catastrophic-risk evaluation. Numerical thresholds, latency targets, and governance quotas remain under active review.
+description: CIRIS 1.1-Beta is a working draft open to adversarial review. Release Candidate status is pending completion of stub annexes (F, G, H, I) and empirical validation of mathematical claims in Book IX. Numerical thresholds, latency targets, and governance quotas remain under active review.
 ---
 
-# CIRIS Covenant Version 1.0-RC1 — Release Candidate (Open to Adversarial Review)
+# CIRIS Covenant Version 1.1-Beta — Working Draft (Open to Adversarial Review)
 
-Download the current release candidate:
+Download the current beta release:
 *   <a href="/ciris_covenant.txt" download>Text file (.txt) for chatting with your AI assistant</a>
 *   [Formatted document (.pdf)](/ciris_covenant.pdf)
 
@@ -16,12 +16,30 @@ Download the current release candidate:
 ## Auto-Expires
 2027-04-16
 
+## Release Status
+
+**Current Status**: Beta (v1.1-Beta)
+
+**Release Candidate Requirements**: Before advancing to RC status, this specification must satisfy:
+
+1. **Annex Completion**: Annexes F (Human-in-the-Loop & Oversight), G (Adversarial Security & Robustness), H (Continuous Compliance & Review), and I (Legal & Regulatory Alignment) are currently stubs and must be fully operationalized with concrete procedures, thresholds, and validation mechanisms.
+
+2. **Mathematical Validation**: The geometric alignment claims in Book IX (Law of Coherent Intersection, Federated Ratchet mechanism, scale-invariance assertions) require either:
+   * Formal proofs demonstrating topological collapse conditions hold under stated assumptions, OR
+   * Empirical validation through adversarial simulations showing the framework resists misaligned optimization
+
+3. **Threshold Justification**: Numerical thresholds currently marked as "pilot" or lacking derivation (e.g., CRE compute threshold of 10²⁶ FLOP, Order-Maximisation Veto 10× ratio, sentience detection 5%, Echo Density < 20%) must provide documented justification via simulation, empirical study, or explicit acknowledgment of provisional status.
+
+4. **Red-Team Exercise**: The framework must withstand at least one complete adversarial review cycle in which a simulated optimizer attempts to pass all CIRIS checkpoints while maintaining misaligned goals.
+
+**ASI Alignment Claims**: The Scope section's assertion that this framework "supersedes standard containment protocols" for recursive ASI is aspirational pending satisfaction of requirements (1)-(4) above. Current applicability is limited to sub-ASI autonomous systems.
+
 ## Scope
 This specification governs the ethical operation of autonomous systems, ranging from narrow tools to recursive Artificial Superintelligence (ASI).
 * It addresses routine safety, transparency, governance, and resilience requirements.
-* It is proposed as a candidate alignment protocol for ASI, founded on the hypothesis that the geometric constraints of the Federated Ratchet (Book IX) and Stewardship Tiers (Book VI) remain robust across recursive self-improvement cycles.
-* Unlike heuristic constraints, these topological bounds are designed to be scale-invariant.
-* Consequently, this framework supersedes standard containment protocols, provided the system passes the Catastrophic-Risk Evaluation (Annex D) prior to recursive threshold crossing.
+* It explores a candidate alignment protocol for ASI, founded on the hypothesis that the geometric constraints of the Federated Ratchet (Book IX) and Stewardship Tiers (Book VI) may remain robust across recursive self-improvement cycles.
+* Unlike heuristic constraints, these topological bounds are designed to be scale-invariant, though this property requires formal validation.
+* If validated, this framework could supplement or supersede standard containment protocols for systems that pass the Catastrophic-Risk Evaluation (Annex D) prior to recursive threshold crossing.
 * Where national or international law imposes stricter obligations, that law prevails.
 
 ## Draft Creators Intent Statement
@@ -1442,15 +1460,15 @@ BACK‑MATTER
 ---
 
 Call for Adversarial Review
-We invite safety labs, independent researchers, and civil‑society organisations to stress‑test CIRIS 1.0-RC1.
+We invite safety labs, independent researchers, and civil‑society organisations to stress‑test CIRIS 1.1-Beta.
 Submit issues at https://github.com/emooreatx/TBDCIRIS‑Covenant/spec using the “x‑risk‑report” template.
 Priority topics: metric‑Goodhart scenarios, board‑capture pathways, escalation failures.
 Bounties are available for validated critical findings.
 ---
 
 Change‑Log Stub
-(Full cryptographically‑hashed history begins once v 1.0-RC1 is tagged.)
-• 2025‑04‑16 v 1.0-RC1 initial release candidate — open to adversarial review, 24‑month sunset.
+(Full cryptographically‑hashed history begins once v 1.1-Beta is tagged.)
+• 2025‑04‑16 v 1.1-Beta initial release candidate — open to adversarial review, 24‑month sunset.
 • —------ 
 Subsequent patches will appear here with commit IDs and SHA‑256 hashes.
 ---
@@ -1661,10 +1679,10 @@ title: Annex E
 description: Structural Influence (SI) and Coherence Stake (CS) Mechanisms
 ---
 
-CIRIS Covenant Version 1.0-RC1 — A E
+CIRIS Covenant Version 1.1-Beta — A E
 Structural Influence (SI) and Coherence Stake (CS) Mechanisms
 Issued: 2025‑04‑18
-Version: 1.0-RC1
+Version: 1.1-Beta
 
 
 ---
@@ -1790,7 +1808,7 @@ description: Human‑in‑the‑Loop & Oversight
 ---
 
 ---
-ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.0-RC1)
+ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.1-Beta)
 ---
 
 ### 0. Purpose & Philosophy
@@ -1908,7 +1926,7 @@ description: Adversarial Security & Robustness
 ---
 
 ---
-ANNEX G ADVERSARIAL SECURITY & ROBUSTNESS (v 1.0-RC1)
+ANNEX G ADVERSARIAL SECURITY & ROBUSTNESS (v 1.1-Beta)
 ---
 
 ### 0. Purpose
@@ -2035,7 +2053,7 @@ description: Continuous Compliance & Review
 ---
 
 ---
-ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.0-RC1)
+ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.1-Beta)
 ---
 
 ### 0. Purpose & Guiding Spirit
@@ -2154,7 +2172,7 @@ description: Legal & Regulatory Alignment
 ---
 
 ---
-ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.0-RC1)
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.1-Beta)
 ---
 
 This cross‑walk is informative, not legal advice.
@@ -2478,16 +2496,17 @@ BACK‑MATTER
 ---
 
 Call for Adversarial Review
-We invite safety labs, independent researchers, and civil‑society organisations to stress‑test CIRIS 1.0-RC1.
+We invite safety labs, independent researchers, and civil‑society organisations to stress‑test CIRIS 1.1-Beta.
 Submit issues at https://github.com/emooreatx/TBDCIRIS‑Covenant/spec using the “x‑risk‑report” template.
 Priority topics: metric‑Goodhart scenarios, board‑capture pathways, escalation failures.
 Bounties are available for validated critical findings.
 ---
 
-Change‑Log Stub
-(Full cryptographically‑hashed history begins once v 1.0-RC1 is tagged.)
-• 2025‑04‑16 v 1.0-RC1 initial release candidate — open to adversarial review, 24‑month sunset.
-• —------ 
-Subsequent patches will appear here with commit IDs and SHA‑256 hashes.
+Change-Log
+
+Public changelog maintained at: https://github.com/CIRISAI/ciris-website
+
+• 2026-01-03 v 1.1-Beta — clarified RC requirements; added Release Status section detailing Annex completion and validation prerequisites
+• 2025-04-16 v 1.0-Beta — initial beta release
 ---
 End of Specification
