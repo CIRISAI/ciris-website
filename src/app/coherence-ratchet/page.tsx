@@ -183,6 +183,9 @@ export default function CoherenceRatchetPage() {
               <a href="https://github.com/CIRISAI/CIRISLens" className="underline hover:text-brand-primary">CIRISLens</a> watches for the cracks: statistical divergence from domain peers, temporal drift in reasoning patterns, conscience overrides exceeding baseline rates.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
+              These observations feed into the <a href="/ciris-scoring" className="underline hover:text-brand-primary">CIRIS Scoring model</a>, which quantifies an agent&apos;s coherence capacity and fragility based on five factors: core identity stability, integrity of traces, resilience under stress, uncertainty awareness, and sustained signaling.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               This isn&apos;t a conspiracy story. It&apos;s bookkeeping. Sustained deception gets harder because the lie has to fit an expanding body of recorded precedent—and the trail can&apos;t be quietly rewritten.
             </p>
 
