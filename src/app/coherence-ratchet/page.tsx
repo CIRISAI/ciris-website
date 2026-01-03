@@ -22,6 +22,16 @@ export default function CoherenceRatchetPage() {
       />
 
       <div className="container max-w-4xl py-16">
+        {/* W-06: Research Status Disclaimer */}
+        <div className="mb-8 rounded-lg border-2 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20 p-4">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong>Research Status:</strong> The Coherence Ratchet framework has been validated through the{" "}
+            <a href="/research-status" className="text-brand-primary hover:underline">RATCHET reference implementation</a>,
+            confirming core theoretical claims while revealing 8 fundamental limitations. The framework provides meaningful
+            security guarantees within a well-defined threat model but is currently suitable as a research testbed, not production deployment.
+          </p>
+        </div>
+
         <article className="prose prose-lg dark:prose-invert mx-auto">
 
           {/* The Real Question */}
@@ -179,10 +189,25 @@ export default function CoherenceRatchetPage() {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               How Detection Works
             </h2>
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-3 mb-4">
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Compositional Limit (NEW-04)</p>
+            {/* W-04: Strengthened NEW-04 */}
+            <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 pl-4 py-3 mb-4">
+              <p className="text-sm font-semibold text-red-800 dark:text-red-300 mb-2">Proven Impossibility (NEW-04)</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                The Coherence Ratchet makes <strong>coordinated single-agent deception</strong> expensive, but cannot fully detect <strong>compositional deception</strong>—emergent harmful behavior from individually-honest components. This is an information-theoretic barrier, not an engineering limitation.
+              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">
+                <em>Example:</em> N agents each output uniformly random bits (perfectly honest individually). If an adversary controls the random seeds, the XOR of outputs can be predetermined—emergent deception from honest components.
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                The Coherence Ratchet makes <strong>coordinated single-agent deception</strong> expensive, but cannot guarantee detection of <strong>compositional deception</strong>—emergent harmful behavior from individually-honest components. This is a proven impossibility result, not a gap we can close. See <a href="/sections/main/v9#9-4-the-compositional-detection-limit" className="underline hover:text-brand-primary">Book IX §9.4</a> for the formal proof.
+                <strong>Partial Mitigation:</strong> The implementation provides ~60% detection coverage via mutual information amplification analysis, but ~40% of emergent deception patterns remain fundamentally undetectable. See <a href="/sections/main/v9#9-4-the-compositional-detection-limit" className="underline hover:text-brand-primary">Book IX §9.4</a>.
+              </p>
+            </div>
+
+            {/* W-05: Non-Adaptive Adversary Assumption */}
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-3 mb-4">
+              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Adversary Model</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Detection power guarantees assume a <strong>non-adaptive adversary</strong> who cannot query the detector to learn its thresholds. An adaptive adversary with O(√n) queries can degrade detection to random chance. Deployed systems should implement threshold randomization and rate limiting.
               </p>
             </div>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -270,6 +295,52 @@ export default function CoherenceRatchetPage() {
             </p>
           </section>
 
+          {/* Technical Constraints - W-01, W-02, W-03, W-07 */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Technical Constraints
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              The framework operates within explicit mathematical boundaries:
+            </p>
+            <div className="space-y-3 mb-4">
+              {/* W-01: k_eff */}
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+                <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">Effective Constraints (k_eff)</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                  The cost function uses <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">k_eff = k / (1 + ρ·(k-1))</code> where ρ is constraint correlation.
+                  When constraints are correlated, effective security is reduced. At full correlation (ρ→1), k_eff→1 regardless of constraint count.
+                </p>
+              </div>
+              {/* W-02: ETH */}
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+                <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">Complexity Conditionality</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  The exponential gap claim (T_D/T_H = 2^Ω(m)) is conditional on the <strong>Exponential Time Hypothesis (ETH)</strong>—widely believed but unproven.
+                  Unconditionally: CONSISTENT-LIE is NP-complete and deception requires superpolynomial time, but the gap could be subexponential.
+                </p>
+              </div>
+              {/* W-03: Convexity */}
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+                <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">Geometric Constraint</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  The topological collapse theorem requires <strong>convex deceptive regions</strong> (e.g., balls or ellipsoids).
+                  Non-convex regions (torus, point cloud, disconnected sets) may not exhibit exponential volume decay and require different analysis.
+                </p>
+              </div>
+              {/* W-07: k >= 3 */}
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+                <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">Clause Size Requirement</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  NP-hardness of CONSISTENT-LIE requires <strong>k ≥ 3</strong> literals per clause. For k=2 (2-SAT), the problem is solvable in polynomial time and all complexity gap guarantees are void.
+                </p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              These are theoretical boundaries, not engineering limitations. See <a href="/research-status" className="text-brand-primary hover:underline">Research Status</a> for full details.
+            </p>
+          </section>
+
           {/* Falsifiability */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -298,6 +369,19 @@ export default function CoherenceRatchetPage() {
             <p className="text-gray-700 dark:text-gray-300">
               If we&apos;re wrong, show us. If we&apos;re right, help us build it.
             </p>
+          </section>
+
+          {/* W-08: Links to Full Findings */}
+          <section className="mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Technical Details</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+              For complete implementation findings, limitations, and formal amendments:
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a href="/research-status" className="text-sm text-brand-primary hover:underline">Research Status →</a>
+              <a href="/sections/main/v9" className="text-sm text-brand-primary hover:underline">Book IX (Theory) →</a>
+              <a href="https://github.com/CIRISAI/RATCHET" className="text-sm text-brand-primary hover:underline">RATCHET Source →</a>
+            </div>
           </section>
 
         </article>

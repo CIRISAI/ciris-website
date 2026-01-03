@@ -1179,12 +1179,15 @@ At this threshold, the intersection of feasible deceptive strategies collapses t
 To quantify the resistance to deception, we define the Cost Function J. Systemic safety is achieved when J exceeds the computational resources of any adversary.
 
 ```
-J = k · (1 - ρ̄) · λ · σ
+J = k_eff · (1 - ρ̄) · λ · σ
+
+where k_eff = k / (1 + ρ · (k - 1))
 ```
 
 Where:
 
-- **k (Scale):** The number of active federated agents.
+- **k_eff (Effective Scale):** The effective number of constraints accounting for correlation. When constraints are fully independent (ρ = 0), k_eff = k. When constraints are correlated, k_eff < k, reducing the security guarantee proportionally. At full correlation (ρ → 1), k_eff → 1 regardless of the number of constraints, providing no additional security beyond a single constraint.
+- **k (Raw Scale):** The number of active federated agents.
 - **(1 - ρ̄) (Diversity):** The degree of topological independence. ρ̄ is the average correlation between agents' constraints. As ρ̄ approaches 0 (orthogonality), cost is maximized. As ρ̄ approaches 1 (echo chambers), cost collapses.
 - **λ (Strictness):** The rigor of local enforcement (e.g., AIR module limits, Conscience sensitivity).
 - **σ (Sustainability):** The time-integral of coherence (see Chapter 5).

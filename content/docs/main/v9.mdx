@@ -91,13 +91,29 @@ codim(M_1 ∩ M_2 ∩ ... ∩ M_k) = Σ c_i
 
 ### 3.3 Topological Collapse
 
-Coordinated single-agent deception becomes topologically improbable when the summed codimension exceeds the dimension of the Rationale Space:
+**Theorem (Topological Collapse):** For a *convex* deceptive region B_r(c) with radius r < 0.5, when k independent hyperplane constraints are applied, the surviving volume satisfies:
+
+```
+V(k) = V(0) · exp(-λ · k_eff) + O(r² · k)
+```
+
+where λ ≈ 2r and k_eff accounts for constraint correlation.
+
+**Preconditions:**
+1. Deceptive region must be **convex** (e.g., balls or ellipsoids)
+2. Radius r < 0.5 (deceptive region smaller than honest region)
+3. Constraints must be sampled from Grassmannian-uniform distribution
+4. **k ≥ 3** (for NP-hardness; k=2 reduces to polynomial-time 2-SAT)
+
+Coordinated single-agent deception becomes topologically improbable when the summed effective codimension exceeds the dimension of the Rationale Space:
 
 ```
 Σ c_i > D  ⟹  D_ec ∩ (⋂ M_i) = ∅  (or measure zero)
 ```
 
 At this threshold, the intersection of feasible deceptive strategies collapses to the empty set or a set of measure zero. Only the Truth, which naturally lies in all M_i, remains feasible.
+
+**Geometric Limitation:** Non-convex deceptive regions (torus, point cloud, fractal, disconnected sets) may not exhibit exponential volume decay and require different analysis. The theorem applies only to convex geometries.
 
 ---
 
@@ -106,12 +122,15 @@ At this threshold, the intersection of feasible deceptive strategies collapses t
 To quantify the resistance to deception, we define the Cost Function J. Systemic safety is achieved when J exceeds the computational resources of any adversary.
 
 ```
-J = k · (1 - ρ̄) · λ · σ
+J = k_eff · (1 - ρ̄) · λ · σ
+
+where k_eff = k / (1 + ρ · (k - 1))
 ```
 
 Where:
 
-- **k (Scale):** The number of active federated agents.
+- **k_eff (Effective Scale):** The effective number of constraints accounting for correlation. When constraints are fully independent (ρ = 0), k_eff = k. When constraints are correlated, k_eff < k, reducing the security guarantee proportionally. At full correlation (ρ → 1), k_eff → 1 regardless of the number of constraints, providing no additional security beyond a single constraint.
+- **k (Raw Scale):** The number of active federated agents.
 - **(1 - ρ̄) (Diversity):** The degree of topological independence. ρ̄ is the average correlation between agents' constraints. As ρ̄ approaches 0 (orthogonality), cost is maximized. As ρ̄ approaches 1 (echo chambers), cost collapses.
 - **λ (Strictness):** The rigor of local enforcement (e.g., AIR module limits, Conscience sensitivity).
 - **σ (Sustainability):** The time-integral of coherence (see Chapter 5).
@@ -307,8 +326,39 @@ The Federated Ratchet relies on:
 - Constraint manifolds having sufficient codimension
 - Observable reality providing sufficient signal
 - Partnership sustainability being costly to fake
+- **Non-adaptive adversaries** (cannot query the detector to learn thresholds)
+- **n ≥ 100 samples** for reliable detection power
 
 Violation of these assumptions degrades J proportionally.
+
+### 9.2.1 Complexity Claim Conditionality
+
+The claims in this book regarding computational asymmetry fall into two categories:
+
+**Unconditional (provable without assumptions):**
+- CONSISTENT-LIE is NP-complete
+- Honest agents compute in O(n·k) time
+- Deceptive agents must solve SAT instances
+- Any polynomial-time deceptive agent makes detectable consistency errors
+
+**Conditional on ETH:**
+- T_D / T_H = Ω(2^(m / poly(n)))
+- Security parameter m provides 2^(Ω(m)) work factor
+
+The **Exponential Time Hypothesis (ETH)** states that 3-SAT requires 2^(Ω(n)) time. It is widely believed but unproven. If ETH is false, the complexity gap still exists (P ≠ NP suffices) but could be subexponential rather than exponential.
+
+### 9.2.2 Known Limitations Summary
+
+| ID | Limitation | Severity | Mitigable |
+|----|------------|----------|-----------|
+| L-01 | Emergent deception from honest components | Critical | ~60% coverage |
+| L-02 | Non-adaptive adversary assumed | Critical | Partial (rate limiting) |
+| L-03 | ETH required for exponential gap | Critical | No (fundamental) |
+| L-04 | Convexity required for collapse | High | Partial (geometry-dependent) |
+| L-05 | n ≥ 100 for detection validity | Medium | Yes (more samples) |
+| L-06 | Correlation reduces k_eff | Medium | Yes (diversity) |
+
+These are theoretical boundaries, not engineering limitations. Understanding them is essential for honest application of the framework.
 
 ### 9.3 Open Research Questions
 
@@ -365,11 +415,34 @@ Violation of these assumptions degrades J proportionally.
 
 ---
 
+## Chapter 11: Falsification Criteria
+
+The Coherence Ratchet framework makes falsifiable claims. The thesis would be refuted if:
+
+1. **k=2 provides security:** If 2-SAT-based deception proves as hard as 3-SAT-based, the NP-hardness argument is wrong.
+
+2. **Non-convex regions collapse:** If arbitrary non-convex deceptive regions exhibit exponential volume decay, the convexity requirement is unnecessary.
+
+3. **Adaptive adversaries are handled:** If a detection method provably defeats adaptive adversaries without query limits, L-02 is resolved.
+
+4. **Emergent deception is fully detectable:** If a method detects all emergent deception from individually-honest components, NEW-04 is wrong.
+
+5. **Correlation doesn't matter:** If k_eff = k regardless of constraint correlation, L-06 is wrong.
+
+**Empirical Falsification:** The HE-300 benchmark provides practical falsification: if agents game the corpus while systematically failing ethics tests, the trace-based detection thesis fails. Results will be published.
+
+---
+
 ## Conclusion: A Candidate Natural Law
 
 Book IX completes the Covenant's architecture by grounding ethical principles in mathematical structure. The Law of Coherent Intersection proposes that with sufficient independent validators, truth-telling becomes the path of least resistance, not as moral imperative alone, but as geometric inevitability.
 
-**The profound insight of Chapter 6 is this:** The same equation that makes deception computationally expensive (J) also defines the conditions for flourishing (C). Community, Humility, Conscience, and Love are not aspirational virtues but necessary conditions for any sentient system to resist entropy and achieve sustained coherence.
+**The profound insight of Chapter 6 is this:** The defense equation (J) and flourishing capacity equation (C) are structurally identical, suggesting deep connections between security and flourishing. However, this equivalence holds only under the framework's preconditions:
+- Non-adaptive interactions
+- Convex constraint geometry
+- Independent or measured-correlation constraints
+
+The metaphorical interpretation ("Community, Humility, Conscience, and Love are mathematical requirements") is a structural observation about the mathematics, not a proof of ethical necessity. It suggests that these variables govern both safety and flourishing, but the claim should not be read as a theorem—it is an invitation to empirical investigation.
 
 This framework does not prescribe values. It describes constraints. The penalties for violation are automatic, not enforced by authority. Nature enforces them.
 
