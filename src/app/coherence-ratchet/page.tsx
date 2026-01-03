@@ -140,7 +140,7 @@ export default function CoherenceRatchetPage() {
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
-              <strong>Truth gets cheaper. Deception gets expensive.</strong> That&apos;s our bet.
+              <strong>Truth gets cheaper. Coordinated deception gets expensive.</strong> That&apos;s our bet.
             </p>
           </section>
 
@@ -179,6 +179,12 @@ export default function CoherenceRatchetPage() {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               How Detection Works
             </h2>
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-3 mb-4">
+              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Compositional Limit (NEW-04)</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                The Coherence Ratchet makes <strong>coordinated single-agent deception</strong> expensive, but cannot guarantee detection of <strong>compositional deception</strong>—emergent harmful behavior from individually-honest components. This is a proven impossibility result, not a gap we can close. See <a href="/sections/main/v9#9-4-the-compositional-detection-limit" className="underline hover:text-brand-primary">Book IX §9.4</a> for the formal proof.
+              </p>
+            </div>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               <a href="https://github.com/CIRISAI/CIRISLens" className="underline hover:text-brand-primary">CIRISLens</a> watches for the cracks: statistical divergence from domain peers, temporal drift in reasoning patterns, conscience overrides exceeding baseline rates.
             </p>
@@ -186,7 +192,7 @@ export default function CoherenceRatchetPage() {
               These observations feed into the <a href="/ciris-scoring" className="underline hover:text-brand-primary">CIRIS Scoring model</a>, which quantifies an agent&apos;s coherence capacity and fragility based on five factors: core identity stability, integrity of traces, resilience under stress, uncertainty awareness, and sustained signaling.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              This isn&apos;t a conspiracy story. It&apos;s bookkeeping. Sustained deception gets harder because the lie has to fit an expanding body of recorded precedent—and the trail can&apos;t be quietly rewritten.
+              This isn&apos;t a conspiracy story. It&apos;s bookkeeping. Sustained coordinated deception gets harder because the lie has to fit an expanding body of recorded precedent—and the trail can&apos;t be quietly rewritten.
             </p>
 
             <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-lg p-5 mb-4">

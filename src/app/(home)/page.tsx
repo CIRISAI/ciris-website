@@ -204,7 +204,7 @@ export default function Homepage() {
               headline: "Coherence Ratchet",
               headlineHref: "/coherence-ratchet",
               copyText:
-                "Each truthful action makes future truth-telling easier and deception harder. Honest actions reference prior signed commitments directly. Deceptive actions must satisfy an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes—becoming increasingly fragile and detectable under scrutiny.",
+                "Each truthful action makes future truth-telling easier and coordinated deception harder. Honest actions reference prior signed commitments directly. Deceptive actions must satisfy an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes—becoming increasingly fragile under scrutiny.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

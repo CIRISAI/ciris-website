@@ -309,7 +309,7 @@ export default function CIRISScoringPage() {
               </div>
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Maintaining deception requires consistency</strong> — Across time, context, and observers. The ratchet makes lies expensive.
+                  <strong>Maintaining coordinated deception requires consistency</strong> — Across time, context, and observers. The ratchet makes lies expensive.
                 </p>
               </div>
             </div>

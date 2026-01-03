@@ -151,7 +151,7 @@ export default function VisionPage() {
               headline: "The Coherence Ratchet",
               headlineHref: "/coherence-ratchet",
               copyText:
-                "How do you make lying expensive at planetary scale without giving anyone the keys to truth? Traces accumulate. Agents challenge each other. Deception gets harder over time.",
+                "How do you make lying expensive at planetary scale without giving anyone the keys to truth? Traces accumulate. Agents challenge each other. Coordinated deception gets harder over time.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

@@ -17,7 +17,7 @@ description: The Mathematics of Coherence - A Geometric Framework for Coordinati
 
 The preceding Books establish the moral necessity of the Covenant; this Book establishes its mathematical viability. It addresses the fundamental safety paradox: How can bounded, imperfect agents reliably constrain a potentially super-intelligent deceiver?
 
-The answer lies not in the infinite depth of any single agent's wisdom, but in the topology of their intersection. Under this framework, Truth is defined as **the unique geometric feature that survives the superposition of independent, rigorous constraint manifolds.** Deception is treated as a high-entropy state that becomes statistically impossible to maintain across a diverse, sustained federation.
+The answer lies not in the infinite depth of any single agent's wisdom, but in the topology of their intersection. Under this framework, Truth is defined as **the unique geometric feature that survives the superposition of independent, rigorous constraint manifolds.** Deception is treated as a high-entropy state that becomes statistically improbable to maintain across a diverse, sustained federation. Note: This applies to coordinated single-agent deception; compositional deception from individually-honest components remains a fundamental detection limit (see Section 9.4, NEW-04).
 
 **Operational Scope:** Within this framework, "Truth" refers to the maximal coherence state consistent across independent constraint manifolds, not a claim of absolute or omniscient knowledge. This is an operational definition grounded in observability and consensus, not metaphysics.
 
@@ -91,7 +91,7 @@ codim(M_1 ∩ M_2 ∩ ... ∩ M_k) = Σ c_i
 
 ### 3.3 Topological Collapse
 
-Deception becomes topologically impossible when the summed codimension exceeds the dimension of the Rationale Space:
+Coordinated single-agent deception becomes topologically improbable when the summed codimension exceeds the dimension of the Rationale Space:
 
 ```
 Σ c_i > D  ⟹  D_ec ∩ (⋂ M_i) = ∅  (or measure zero)
@@ -298,6 +298,7 @@ Book IX does NOT claim to:
 - Replace human judgment in edge cases
 - Eliminate need for other safety mechanisms
 - Guarantee perfect safety under adversarial superintelligence
+- Detect compositional deception from individually-honest components (NEW-04 impossibility result)
 
 ### 9.2 Theoretical Assumptions
 
@@ -316,6 +317,33 @@ Violation of these assumptions degrades J proportionally.
 - Dynamic λ adjustment based on context
 - Sustainability signal verification under adversarial conditions
 - Empirical validation of the C = J equivalence across substrates
+
+### 9.4 The Compositional Detection Limit (NEW-04)
+
+**Impossibility Result:** No polynomial-time detector can be complete for compositional deception.
+
+**Definition:** Compositional deception occurs when individually-honest components combine to produce emergent deceptive behavior at the system level, while each component's traces remain statistically honest.
+
+**Three Independent Proofs:**
+
+1. **Cryptographic Reduction:** If compositional deception were fully detectable, it would imply the ability to detect "deceptive" cryptographic commitments (commit(m₁) followed by reveal(m₂)), breaking the hiding property of commitment schemes.
+
+2. **Information-Theoretic Barrier:** Emergent deception can preserve marginal distributions—each component's traces look statistically honest, with deception only visible in the joint distribution. Without complete global state access (which may be unavailable or intractable), detection is impossible.
+
+3. **Rice's Theorem Analog:** "Is this composition deceptive?" is a semantic property of the system's behavior. By analogy to the halting problem, no general algorithm can decide arbitrary semantic properties. Compositional deception is undecidable in the general case.
+
+**Implications for the Federated Ratchet:**
+
+| What's Possible | What's Impossible |
+|-----------------|-------------------|
+| Detect statistical anomalies in individual traces | Detect all emergent deception |
+| Detect systematic bias in inference chains | Detect marginal-preserving deception |
+| Detect suspicious information flows | Detect cryptographically-hidden coordination |
+| Probabilistic detection via MI amplification | Complete compositional detection |
+
+**Practical Consequence:** The Coherence Ratchet provides probabilistic safety guarantees against coordinated single-agent deception, not complete safety against all forms of deception. This is a fundamental mathematical constraint, not a limitation of implementation.
+
+**Documentation Status:** NEW-04 is classified as KNOWN_LIMITATION in the RATCHET technical specification.
 
 ---
 

@@ -284,13 +284,13 @@ export default function ArchitecturePage() {
                   Coherence Ratchet
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  Ethical consistency isn&apos;t expensive—deception is. Honest actions reference existing signed commitments.
-                  Deceptive actions must satisfy a growing constraint surface of immutable rationales, making lies
-                  increasingly fragile and detectable under audit.
+                  Ethical consistency isn&apos;t expensive—coordinated deception is. Honest actions reference existing signed commitments.
+                  Deceptive actions must satisfy a growing constraint surface of immutable rationales, making coordinated lies
+                  increasingly fragile under audit.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
                   <li>• Truth-telling: reference prior commitments directly</li>
-                  <li>• Deception: reconcile against expanding constraint surface</li>
+                  <li>• Coordinated deception: reconcile against expanding constraint surface</li>
                   <li>• Structural asymmetry favors honest continuation</li>
                 </ul>
               </a>

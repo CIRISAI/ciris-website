@@ -347,7 +347,7 @@ export default function ExploreTracePage() {
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               These traces aren&apos;t just logs—they&apos;re the foundation of a new approach to AI alignment.
               As traces accumulate across agents and time, they will form a corpus of validated ethical reasoning.
-              Truth becomes simple to verify. Deception becomes increasingly constrained.
+              Truth becomes simple to verify. Coordinated deception becomes increasingly constrained.
             </p>
             <a
               href="/coherence-ratchet"
