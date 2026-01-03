@@ -77,16 +77,16 @@ export default function Homepage() {
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="AI That Earns Your Trust."
-        subheadline="Meet Ally — your ethical AI assistant."
-        description="Ally is an open-source personal assistant with runtime ethical governance: every action passes through conscience checks, uncertain decisions defer to you, and everything is cryptographically audited. Fully open source — verify it yourself."
+        headline="Accountability Without Gatekeepers."
+        subheadline="Make lying expensive at planetary scale — without giving anyone the keys to truth."
+        description="CIRIS is open-source infrastructure for trustworthy AI. Many bounded agents, each auditable, each accountable to local humans. Ally is your personal assistant built on it — runtime ethical governance, cryptographic audit trails, complete transparency."
         mediaType="video"
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
-        buttonText="How It Works"
-        buttonHref="/how-it-works"
-        linkText="Get the Code"
-        linkHref="https://github.com/CIRISAI/CIRISAgent"
+        buttonText="Read the Vision"
+        buttonHref="/vision"
+        linkText="How It Works"
+        linkHref="/how-it-works"
       />
 
       {/* Android App Announcement Banner */}

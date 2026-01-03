@@ -51,7 +51,7 @@ export default function ExploreTracePage() {
               Explore a Trace
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-              Every CIRIS decision produces a cryptographically-signed trace. Expand each component to see exactly how the agent reasoned.
+              Every CIRIS decision produces a cryptographically-signed trace. Below is a <strong>sample trace</strong> from a test agent—expand each component to see exactly how the agent reasoned.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function ExploreTracePage() {
               The CIRIS Wakeup Ritual
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Every agent begins with 5 wakeup tasks&mdash;one for each letter of CIRIS. Each task has 2 thoughts: an initial SPEAK action, then a follow-up TASK_COMPLETE. These traces are from Datum&apos;s wakeup on January 1, 2026.
+              Every agent begins with 5 wakeup tasks&mdash;one for each letter of CIRIS. Each task has 2 thoughts: an initial SPEAK action, then a follow-up TASK_COMPLETE. These sample traces are from a test run of the wakeup ritual.
             </p>
 
             {/* CIRIS Letter Selector */}
@@ -316,9 +316,9 @@ export default function ExploreTracePage() {
               The Audit Trail
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Every trace is cryptographically signed with Ed25519 and includes hash chain verification.
-              The signature proves the trace hasn&apos;t been modified. The hash chain links this trace to
-              all previous decisions, creating an immutable record of the agent&apos;s history.
+              In production, every trace will be cryptographically signed with Ed25519 and include hash chain verification.
+              The signature proves the trace hasn&apos;t been modified. The hash chain links each trace to
+              all previous decisions, creating an immutable record of the agent&apos;s history. Sample values shown below:
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded bg-gray-100 dark:bg-gray-900 p-4">
@@ -346,7 +346,7 @@ export default function ExploreTracePage() {
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               These traces aren&apos;t just logs—they&apos;re the foundation of a new approach to AI alignment.
-              As traces accumulate across agents and time, they form a corpus of validated ethical reasoning.
+              As traces accumulate across agents and time, they will form a corpus of validated ethical reasoning.
               Truth becomes simple to verify. Deception becomes increasingly constrained.
             </p>
             <a

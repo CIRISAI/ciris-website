@@ -52,7 +52,7 @@ export default function HowItWorksPage() {
             <a href="/coherence-ratchet" className="text-sm font-semibold text-brand-primary hover:underline">
               Why this approach? →
             </a>
-            <a href="/docs" className="text-sm font-semibold text-brand-primary hover:underline">
+            <a href="/sections/main" className="text-sm font-semibold text-brand-primary hover:underline">
               Read the Covenant →
             </a>
             <a href="https://github.com/CIRISAI/CIRISAgent" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-brand-primary hover:underline">
@@ -728,20 +728,32 @@ export default function HowItWorksPage() {
             This is runtime governance. Not training-time alignment. Not policy documents.<br />
             Mechanisms that execute, audit, and defer—at runtime.
           </p>
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="/safety"
+              className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
+            >
+              Safety Features
+            </a>
+            <a
+              href="/compare"
+              className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+            >
+              Compare Approaches
+            </a>
+            <a
+              href="/coherence-ratchet"
+              className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              Read the Thesis
+            </a>
             <a
               href="https://github.com/CIRISAI/CIRISAgent"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
+              className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
             >
-              View Source on GitHub
-            </a>
-            <a
-              href="/coherence-ratchet"
-              className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
-            >
-              Read the Thesis
+              View Source
             </a>
           </div>
         </section>

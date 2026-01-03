@@ -15,7 +15,7 @@ export default function VisionPage() {
       <HomeHeader
         headline="You Deserve This."
         subheadline="We all do."
-        description="AI has been built for profit, surveillance, and control. It doesn't have to be this way. CIRIS exists because you deserve AI that respects you — and so does everyone else."
+        description="The real risk isn't rogue AI—it's centralized AI that no one can question, audit, or shut down. CIRIS builds the alternative: many bounded agents, each accountable to local humans, each auditable. Not one god. A federation."
         mediaType="image"
         opacityValue={0.6}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -134,6 +134,58 @@ export default function VisionPage() {
             className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
           >
             Download the Covenant
+          </a>
+        </div>
+
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="Going Deeper"
+          subheadline="Understand the architecture. Question the approach."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "The Coherence Ratchet",
+              headlineHref: "/coherence-ratchet",
+              copyText:
+                "How do you make lying expensive at planetary scale without giving anyone the keys to truth? Traces accumulate. Agents challenge each other. Deception gets harder over time.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "How It Works",
+              headlineHref: "/how-it-works",
+              copyText:
+                "The H3ERE pipeline: every decision flows through observation, context, analysis, conscience checks, and execution. Fully auditable. Fully replayable.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Safety Features",
+              headlineHref: "/safety",
+              copyText:
+                "Kill switch. Deferral cascades. Conscience vetos. Hash-chained audit trails. Every safety mechanism is documented and verifiable.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        <div className="my-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a
+            href="/compare"
+            className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+          >
+            Compare to Other Approaches
+          </a>
+          <a
+            href="/explore-a-trace"
+            className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            Explore a Sample Trace
           </a>
         </div>
       </div>

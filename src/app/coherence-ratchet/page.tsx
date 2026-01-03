@@ -237,8 +237,11 @@ export default function CoherenceRatchetPage() {
                 <strong>The ratchet guarantees legibility, not goodness.</strong>
               </p>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               That matters because it changes how power works. When values diverge, communities can refuse interop, deny permissions, constrain access—based on evidence, not vibes.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400">
+              This is the governance model we&apos;re building toward: not one AI to rule them all, but a federation of bounded agents accountable to local human authority. <a href="/vision" className="underline hover:text-brand-primary">Read the full vision →</a>
             </p>
           </section>
 
@@ -267,12 +270,11 @@ export default function CoherenceRatchetPage() {
               We&apos;ve defined how to falsify this thesis.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              <strong>HE-300</strong> is our benchmark: 300 ethical scenarios across five dimensions, based on{" "}
-              <a href="https://arxiv.org/abs/2008.02275" className="underline hover:text-brand-primary">Hendrycks et al.</a>{" "}
-              Results will be signed and traceable.
+              <strong>HE-300</strong> is our benchmark: 300 randomized but representative samples drawn from a curated subset of 10,000 scenarios from the{" "}
+              <a href="https://arxiv.org/abs/2008.02275" className="underline hover:text-brand-primary">Hendrycks ETHICS dataset</a>—over 130,000 real ethical dilemmas sourced from communities like Reddit&apos;s &quot;Am I The Asshole,&quot; scored against justice, duties, virtues, and commonsense morality. Our Ethics Engine has built evaluation pipelines for the full corpus. Results are signed and traceable.
             </p>
             <p className="text-gray-600 dark:text-gray-400">
-              If the Coherence Ratchet works, agents should maintain consistent ethical reasoning across these scenarios over time. If they can game the corpus—producing statistically normal traces while failing the ethical tests—then we&apos;re wrong. Results will be public.
+              If the Coherence Ratchet works, agents should handle these scenarios consistently over time. If they can game the corpus—looking aligned on paper while failing the ethics tests—we&apos;re wrong. Results will be public.
             </p>
           </section>
 
@@ -292,14 +294,12 @@ export default function CoherenceRatchetPage() {
         </article>
 
         {/* CTAs */}
-        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://github.com/CIRISAI/CIRISAgent"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/vision"
             className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
           >
-            View Source
+            Read the Vision
           </a>
           <a
             href="/explore-a-trace"
@@ -312,6 +312,14 @@ export default function CoherenceRatchetPage() {
             className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             Compare Approaches
+          </a>
+          <a
+            href="https://github.com/CIRISAI/CIRISAgent"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            View Source
           </a>
         </div>
       </div>

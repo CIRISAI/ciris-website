@@ -22,7 +22,7 @@ export default function SafetyPage() {
         buttonText="View Source on GitHub"
         buttonHref="https://github.com/CIRISAI/CIRISAgent"
         linkText="Read the Covenant"
-        linkHref="/docs"
+        linkHref="/sections/main"
       />
 
       <div className="container min-h-screen max-w-7xl">
@@ -223,20 +223,24 @@ export default function SafetyPage() {
           ]}
         />
 
-        <div className="my-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="my-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="/privacy"
+            href="/how-it-works"
             className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
           >
-            Read the Privacy Policy
+            See How It Works
           </a>
           <a
-            href="https://github.com/CIRISAI/CIRISAgent/tree/main/FSD"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/compare"
             className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
           >
-            View Technical Specifications
+            Compare Approaches
+          </a>
+          <a
+            href="/privacy"
+            className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            Privacy Policy
           </a>
         </div>
       </div>
