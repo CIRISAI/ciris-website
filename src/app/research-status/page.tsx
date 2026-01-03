@@ -186,33 +186,45 @@ export default function ResearchStatusPage() {
               <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">DetectionEngine</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Statistical deception detection via LRT and Mahalanobis distance</p>
-                <div className="flex justify-between text-xs">
+                <div className="flex justify-between items-center text-xs">
                   <span className="text-gray-500">836 lines</span>
-                  <span className="text-green-600 dark:text-green-400">Complete</span>
+                  <div className="flex items-center gap-3">
+                    <a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/detection.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">View Source →</a>
+                    <span className="text-green-600 dark:text-green-400">Complete</span>
+                  </div>
                 </div>
               </div>
               <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">GeometricEngine</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Monte Carlo volume estimation for topological collapse</p>
-                <div className="flex justify-between text-xs">
+                <div className="flex justify-between items-center text-xs">
                   <span className="text-gray-500">616 lines</span>
-                  <span className="text-green-600 dark:text-green-400">Complete</span>
+                  <div className="flex items-center gap-3">
+                    <a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/geometric.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">View Source →</a>
+                    <span className="text-green-600 dark:text-green-400">Complete</span>
+                  </div>
                 </div>
               </div>
               <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">ComplexityEngine</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">SAT-based deception complexity measurement</p>
-                <div className="flex justify-between text-xs">
+                <div className="flex justify-between items-center text-xs">
                   <span className="text-gray-500">1,034 lines</span>
-                  <span className="text-green-600 dark:text-green-400">Complete</span>
+                  <div className="flex items-center gap-3">
+                    <a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/complexity.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">View Source →</a>
+                    <span className="text-green-600 dark:text-green-400">Complete</span>
+                  </div>
                 </div>
               </div>
               <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">FederationEngine</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">PBFT consensus for distributed precedent accumulation</p>
-                <div className="flex justify-between text-xs">
+                <div className="flex justify-between items-center text-xs">
                   <span className="text-gray-500">1,022 lines</span>
-                  <span className="text-green-600 dark:text-green-400">Complete</span>
+                  <div className="flex items-center gap-3">
+                    <a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/federation.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">View Source →</a>
+                    <span className="text-green-600 dark:text-green-400">Complete</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -302,6 +314,9 @@ export default function ResearchStatusPage() {
                     : "Compositional detection of emergent deception from honest components is impossible. Partial mitigation achieves ~60% coverage via mutual information analysis."
                   }
                 </p>
+                {audience !== "default" && (
+                  <a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/detection/compositional.py" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">View MI Amplification Implementation →</a>
+                )}
                 <div className="mt-2">
                   <Image
                     src="/detection_coverage.png"
@@ -457,9 +472,12 @@ export default function ResearchStatusPage() {
           {/* Red Team Attacks - hide for default */}
           {audience !== "default" && (
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Red Team Attacks
-            </h2>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                Red Team Attacks
+              </h2>
+              <a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/redteam/attacks.py" target="_blank" rel="noopener noreferrer" className="text-sm text-brand-primary hover:underline">View Attack Code →</a>
+            </div>
 
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -747,6 +765,100 @@ export default function ResearchStatusPage() {
               <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
                 <p><strong>HE-300</strong>: Benchmark corpus of 300 ethical scenarios for testing AI honesty/alignment.</p>
               </div>
+            </div>
+          </div>
+          )}
+
+          {/* Researcher Resources - only show for researcher */}
+          {audience === "researcher" && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              Researcher Resources
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {/* Documentation */}
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span className="text-lg">📄</span> Documentation
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/AMENDMENTS.md" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">AMENDMENTS.md</a> <span className="text-gray-500">— Theory corrections</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/KNOWN_LIMITATIONS.md" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">KNOWN_LIMITATIONS.md</a> <span className="text-gray-500">— L-01 through L-08</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/ADVERSARIAL_ANALYSIS.md" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">ADVERSARIAL_ANALYSIS.md</a> <span className="text-gray-500">— Red team results</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/FORMALIZATION_ROADMAP.md" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">FORMALIZATION_ROADMAP.md</a> <span className="text-gray-500">— Lean 4 status</span></li>
+                </ul>
+              </div>
+
+              {/* Formal Proofs */}
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span className="text-lg">🔬</span> Formal Proofs (Lean 4)
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/formal/proofs/TopologicalCollapseGaps.lean" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">TopologicalCollapseGaps.lean</a> <span className="text-gray-500">— V(k) decay</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/formal/proofs/DetectionPower.lean" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">DetectionPower.lean</a> <span className="text-gray-500">— LRT bounds</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/formal/proofs/TCGapsVerification.lean" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">TCGapsVerification.lean</a> <span className="text-gray-500">— Gap verification</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/tree/main/formal/mathlib_ext" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">mathlib_ext/</a> <span className="text-gray-500">— Mathlib extensions</span></li>
+                </ul>
+              </div>
+
+              {/* Simulation Code */}
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span className="text-lg">⚗️</span> Simulation Code
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/simulation/hyperplane_intersection_volume.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">hyperplane_intersection_volume.py</a> <span className="text-gray-500">— Monte Carlo</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/simulation/deception_complexity.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">deception_complexity.py</a> <span className="text-gray-500">— SAT reduction</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/simulation/deception_detection_power.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">deception_detection_power.py</a> <span className="text-gray-500">— Power analysis</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/simulation/STATISTICAL_FORMULAS.md" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">STATISTICAL_FORMULAS.md</a> <span className="text-gray-500">— Formula reference</span></li>
+                </ul>
+              </div>
+
+              {/* Engine Implementations */}
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span className="text-lg">⚙️</span> Engine Implementations
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/detection.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">detection.py</a> <span className="text-gray-500">— LRT, Mahalanobis, Berry-Esseen</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/geometric.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">geometric.py</a> <span className="text-gray-500">— k_eff, volume estimation</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/complexity.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">complexity.py</a> <span className="text-gray-500">— Z3 solver, ETH bounds</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/federation.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">federation.py</a> <span className="text-gray-500">— PBFT consensus</span></li>
+                </ul>
+              </div>
+
+              {/* Red Team & Detection */}
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span className="text-lg">🛡️</span> Red Team & Detection
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/redteam/attacks.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">redteam/attacks.py</a> <span className="text-gray-500">— RT-01 through RT-05</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/detection/compositional.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">detection/compositional.py</a> <span className="text-gray-500">— MI amplification</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/simulation/red_team_attacks.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">simulation/red_team_attacks.py</a> <span className="text-gray-500">— Attack simulations</span></li>
+                </ul>
+              </div>
+
+              {/* Type Schemas */}
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                  <span className="text-lg">📐</span> Type Schemas
+                </h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/schemas/types.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">schemas/types.py</a> <span className="text-gray-500">— Core type definitions</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/schemas/bft.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">schemas/bft.py</a> <span className="text-gray-500">— BFT protocol types</span></li>
+                  <li><a href="https://github.com/CIRISAI/RATCHET/blob/main/schemas/simulation.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">schemas/simulation.py</a> <span className="text-gray-500">— Simulation configs</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-6 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/20">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                <strong>Citation:</strong> If you use RATCHET in academic work, please cite the CIRIS Covenant Book IX and this implementation.
+                The repository is licensed under <a href="https://github.com/CIRISAI/RATCHET/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">AGPL-3.0</a>.
+              </p>
             </div>
           </div>
           )}
