@@ -2,6 +2,7 @@
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
+import Image from "next/image";
 
 export default function ResearchStatusPage() {
   return (
@@ -27,6 +28,41 @@ export default function ResearchStatusPage() {
               <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-300">
                 ~8,400 lines
               </span>
+              <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-300">
+                Updated: 2026-01-02
+              </span>
+            </div>
+          </div>
+
+          {/* What is the Coherence Ratchet? */}
+          <div className="mb-12 rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+              What is the Coherence Ratchet?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>The Problem:</strong> How do you detect if an AI agent is being deceptive when you can&apos;t read its mind?
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>The Hypothesis:</strong> Sustained deception is computationally expensive. An agent that lies must maintain consistency across many independent validators—each additional constraint makes the &quot;space of viable lies&quot; exponentially smaller.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>The Insight:</strong> The same equation that governs deception resistance (J) also governs flourishing capacity (C). Security and flourishing share the same mathematical structure.
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>RATCHET</strong> tests whether this hypothesis holds computationally. <strong>CIRIS</strong> is a separate agent that applies these principles in practice.
+                </p>
+              </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/jc_duality.png"
+                  alt="J=C Duality: Defense and Flourishing share the same equation"
+                  width={400}
+                  height={300}
+                  className="rounded-lg"
+                />
+              </div>
             </div>
           </div>
 
@@ -111,6 +147,18 @@ export default function ResearchStatusPage() {
                   When k independent hyperplane constraints intersect a convex deceptive region, surviving volume decays exponentially.
                 </p>
                 <code className="text-xs bg-white dark:bg-gray-800 px-2 py-1 rounded">V(k) = V(0) * exp(-lambda * k_eff)</code>
+                <div className="mt-4">
+                  <Image
+                    src="/constraint_manifold.png"
+                    alt="Constraint manifold collapse: as constraints increase, deceptive region shrinks"
+                    width={600}
+                    height={200}
+                    className="rounded-lg w-full"
+                  />
+                  <p className="text-xs text-gray-500 dark:text-gray-500 mt-1 text-center">
+                    As independent constraints accumulate, the viable deceptive region shrinks exponentially
+                  </p>
+                </div>
               </div>
 
               <div className="rounded-lg border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20">
@@ -131,10 +179,19 @@ export default function ResearchStatusPage() {
               </div>
 
               <div className="rounded-lg border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20">
-                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">NEW-04 Impossibility</h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Compositional detection of emergent deception from honest components is impossible. Partial mitigation achieves ~60% coverage.
+                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">Emergent Deception Limit (NEW-04)</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                  Compositional detection of emergent deception from honest components is impossible. Partial mitigation achieves ~60% coverage via mutual information analysis.
                 </p>
+                <div className="mt-2">
+                  <Image
+                    src="/detection_coverage.png"
+                    alt="Detection coverage: ~60% detectable, ~40% fundamental blind spot"
+                    width={500}
+                    height={300}
+                    className="rounded-lg mx-auto"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -181,9 +238,18 @@ export default function ResearchStatusPage() {
                   <span className="text-xs font-bold bg-red-600 text-white px-2 py-0.5 rounded">CRITICAL</span>
                   <span className="font-semibold text-gray-900 dark:text-white">L-03: ETH Dependency</span>
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Exponential complexity gap requires the Exponential Time Hypothesis. Without ETH, gap is superpolynomial but could be subexponential.
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                  Exponential complexity gap requires the Exponential Time Hypothesis (ETH). Without ETH, gap is superpolynomial but could be subexponential.
                 </p>
+                <div className="mt-2">
+                  <Image
+                    src="/eth_dependency.png"
+                    alt="ETH dependency flowchart: unconditional vs conditional claims"
+                    width={500}
+                    height={300}
+                    className="rounded-lg mx-auto"
+                  />
+                </div>
               </div>
 
               {/* High */}
@@ -213,9 +279,16 @@ export default function ResearchStatusPage() {
                     <span className="text-xs font-bold bg-yellow-600 text-white px-2 py-0.5 rounded">MEDIUM</span>
                     <span className="font-semibold text-gray-900 dark:text-white text-sm">L-06: Correlation</span>
                   </div>
-                  <p className="text-xs text-gray-700 dark:text-gray-300">
+                  <p className="text-xs text-gray-700 dark:text-gray-300 mb-2">
                     k_eff = k / (1 + rho*(k-1)), reduces at high correlation
                   </p>
+                  <Image
+                    src="/k_eff_correlation.png"
+                    alt="k_eff decreases as correlation increases"
+                    width={200}
+                    height={150}
+                    className="rounded mx-auto"
+                  />
                 </div>
                 <div className="rounded-lg border border-yellow-500 bg-yellow-50 p-4 dark:bg-yellow-900/20">
                   <div className="flex items-center gap-2 mb-2">
@@ -376,11 +449,14 @@ export default function ResearchStatusPage() {
             </div>
           </div>
 
-          {/* Path to Production */}
+          {/* Research Roadmap */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              RATCHET Path to Production
+              Research Roadmap
             </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
+              <strong>Note:</strong> These steps address RATCHET&apos;s engineering maturity, not the fundamental theoretical limitations (L-01 through L-08) which remain inherent to the framework.
+            </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3 rounded bg-gray-50 dark:bg-gray-800 p-4">
                 <span className="text-gray-400">1.</span>
@@ -439,6 +515,45 @@ export default function ResearchStatusPage() {
             <p className="text-gray-700 dark:text-gray-300">
               These are not engineering failures but <strong>theoretical boundaries</strong>. Understanding them is essential for honest assessment of what the framework can and cannot provide.
             </p>
+          </div>
+
+          {/* Glossary */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              Glossary
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-sm">
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>ETH</strong> (Exponential Time Hypothesis): Unproven conjecture that 3-SAT requires 2^Ω(n) time.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>NP-complete</strong>: Complexity class of problems as hard as the hardest in NP; no known polynomial-time solution.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>LRT</strong> (Likelihood Ratio Test): Statistical test comparing two hypotheses to detect deviations.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>Mahalanobis distance</strong>: Multivariate distance measure accounting for correlations between variables.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>PBFT</strong> (Practical Byzantine Fault Tolerance): Consensus protocol tolerating up to 1/3 malicious nodes.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>SAT</strong> (Boolean Satisfiability): Problem of determining if a logical formula can be satisfied.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>MI</strong> (Mutual Information): Measure of information shared between two random variables.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>Sybil attack</strong>: Creating multiple fake identities to gain disproportionate influence.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>Byzantine</strong>: Arbitrary/malicious failure mode where nodes may lie or behave inconsistently.</p>
+              </div>
+              <div className="rounded bg-gray-50 dark:bg-gray-800 p-4">
+                <p><strong>HE-300</strong>: Benchmark corpus of 300 ethical scenarios for testing AI honesty/alignment.</p>
+              </div>
+            </div>
           </div>
 
           {/* CTAs */}
