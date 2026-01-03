@@ -186,7 +186,7 @@ export default function Homepage() {
           logoAlt="Brand logo icon"
           headline="Futureproofing AI."
           subheadline="ETHICS at the core."
-          copyText="CIRIS is designed to adapt and evolve with the rapidly changing landscape of AI ethics. By embedding ethical principles into the core of AI systems, CIRIS ensures that these systems remain aligned with human values and societal norms, even as they learn and grow."
+          copyText="CIRIS is designed to adapt and evolve with the rapidly changing landscape of AI ethics. By embedding ethical principles into the core of AI systems, CIRIS aims to help these systems remain aligned with human values and societal norms. This is a work in progress with known limitations—not a guarantee of perfect alignment."
         />{" "}
         <NewsletterForm />
         <Footer />

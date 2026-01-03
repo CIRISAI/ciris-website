@@ -154,26 +154,26 @@ export default function CoherenceRatchetPage() {
             </p>
           </section>
 
-          {/* Natural Law Hypothesis */}
+          {/* Coherent Intersection Hypothesis */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              The Law of Coherent Intersection
+              The Coherent Intersection Hypothesis
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              <a href="/sections/main/v9" className="underline hover:text-brand-primary">Book IX of the CIRIS Covenant</a> proposes that we may have identified something deeper than a design choice.
+              <a href="/sections/main/v9" className="underline hover:text-brand-primary">Book IX of the CIRIS Covenant</a> proposes a conjecture about coordination under entropy.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              We call this <strong>The Law of Coherent Intersection</strong>—a substrate-independent geometric principle governing coordination under entropy. The mathematical framework suggests that sustained coordination is governed by constraint manifold intersection topology, not prescriptive values.
+              We call this <strong>The Coherent Intersection Hypothesis</strong>—a geometric conjecture suggesting that sustained coordination may be governed by constraint manifold intersection topology, not prescriptive values. This is not yet a law; it is a testable claim with known limitations.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               These constraints appear to function identically across biological systems (where violation causes isolation, radicalization, social decay) and digital systems (where violation causes mode collapse, Sybil failure, coordination breakdown).
             </p>
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 pl-4 py-2 mb-4">
               <p className="text-gray-700 dark:text-gray-300 mb-2">
-                <strong>Epistemic status:</strong> This is a hypothesis, not a declaration. We believe these constraints function as a <em>candidate natural law of flourishing and deception resistance</em>, but whether they qualify as such will not be decided by us.
+                <strong>Epistemic status:</strong> This is a hypothesis with partial validation and known limitations—not a proven law. We believe it describes useful dynamics, but it operates only under specific preconditions (non-adaptive adversaries, convex geometry, independent constraints, k≥3).
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                It will be decided by whether others can break it, whether systems built on it fail less often, and whether violations reliably collapse.
+                Whether it qualifies as something deeper will be decided by whether others can break it, whether systems built on it fail less often, and whether the preconditions can be relaxed.
               </p>
             </div>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
