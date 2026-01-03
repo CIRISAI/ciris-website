@@ -745,15 +745,13 @@ export default function HowItWorksPage() {
               href="/coherence-ratchet"
               className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
             >
-              Read the Thesis
+              Coherence Ratchet
             </a>
             <a
-              href="https://github.com/CIRISAI/CIRISAgent"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/ciris-scoring"
               className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
             >
-              View Source
+              CIRIS Scoring
             </a>
           </div>
         </section>

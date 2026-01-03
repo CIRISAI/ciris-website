@@ -174,12 +174,18 @@ export default function VisionPage() {
           ]}
         />
 
-        <div className="my-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="my-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="/compare"
+            href="/ciris-scoring"
             className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
           >
-            Compare to Other Approaches
+            CIRIS Scoring Model
+          </a>
+          <a
+            href="/compare"
+            className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            Compare Approaches
           </a>
           <a
             href="/explore-a-trace"
