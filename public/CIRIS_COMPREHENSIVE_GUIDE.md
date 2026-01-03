@@ -1126,7 +1126,7 @@ Nixon Cheaz, Ying-Jung Chen PhD, Haley Bradley, Brad Matera, Ed Melick, Tyler Ch
 
 - P. Christiano et al., "Deep Reinforcement Learning from Human Preferences," NeurIPS, 2017
 - Anthropic, "Constitutional AI: Harmlessness from AI Feedback," 2022
-- Eric Moore, "CIRIS Covenant Version 1.0-β: Risk-Limited Release," 2025. https://ciris.ai/ciris_covenant.pdf
+- Eric Moore, "CIRIS Covenant Version 1.0-RC1: Release Candidate (Open to Adversarial Review)," 2025. https://ciris.ai/ciris_covenant.pdf
 - Eric Moore, "CIRISAgent Source Code," https://github.com/CIRISAI/CIRISAgent
 
 ---
