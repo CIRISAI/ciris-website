@@ -3,8 +3,13 @@ import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
 import Image from "next/image";
+import { useState } from "react";
+
+type AudienceLevel = "default" | "programmer" | "researcher";
 
 export default function ResearchStatusPage() {
+  const [audience, setAudience] = useState<AudienceLevel>("default");
+
   return (
     <>
       <FloatingNav navItems={navItems} />
@@ -34,6 +39,43 @@ export default function ResearchStatusPage() {
             </div>
           </div>
 
+          {/* Audience Toggle */}
+          <div className="mb-8 flex items-center justify-center gap-2">
+            <span className="text-sm text-gray-500 dark:text-gray-400 mr-2">View as:</span>
+            <div className="inline-flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 bg-white dark:bg-gray-800">
+              <button
+                onClick={() => setAudience("default")}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  audience === "default"
+                    ? "bg-brand-primary text-white"
+                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                }`}
+              >
+                Overview
+              </button>
+              <button
+                onClick={() => setAudience("programmer")}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  audience === "programmer"
+                    ? "bg-brand-primary text-white"
+                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                }`}
+              >
+                Developer
+              </button>
+              <button
+                onClick={() => setAudience("researcher")}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  audience === "researcher"
+                    ? "bg-brand-primary text-white"
+                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                }`}
+              >
+                Researcher
+              </button>
+            </div>
+          </div>
+
           {/* What is the Coherence Ratchet? */}
           <div className="mb-12 rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
@@ -41,18 +83,54 @@ export default function ResearchStatusPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>The Problem:</strong> How do you detect if an AI agent is being deceptive when you can&apos;t read its mind?
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>The Hypothesis:</strong> Sustained deception is computationally expensive. An agent that lies must maintain consistency across many independent validators—each additional constraint makes the &quot;space of viable lies&quot; exponentially smaller.
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>The Insight:</strong> The same equation that governs deception resistance (J) also governs flourishing capacity (C). Security and flourishing share the same mathematical structure.
-                </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  <strong>RATCHET</strong> tests whether this hypothesis holds computationally. <strong>CIRIS</strong> is a separate agent that applies these principles in practice.
-                </p>
+                {audience === "default" && (
+                  <>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>The Problem:</strong> How can you tell if an AI is being honest?
+                    </p>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>Our Idea:</strong> Lying is hard. The more independent sources check an AI&apos;s answers, the harder it is to keep lies consistent. At some point, telling the truth becomes easier than maintaining the lie.
+                    </p>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>A Surprise:</strong> The same principles that make lying difficult also describe what helps communities succeed.
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      This page shares what we learned while testing these ideas.
+                    </p>
+                  </>
+                )}
+                {audience === "programmer" && (
+                  <>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>The Problem:</strong> How do you detect if an AI agent is being deceptive when you can&apos;t read its internal state?
+                    </p>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>The Hypothesis:</strong> Sustained deception is computationally expensive. An agent that lies must maintain consistency across many independent validators—each additional constraint makes the &quot;space of viable lies&quot; exponentially smaller.
+                    </p>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>The Insight:</strong> The same equation that governs deception resistance (J) also governs flourishing capacity (C). Security and flourishing share the same mathematical structure.
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      <strong>RATCHET</strong> tests whether this hypothesis holds computationally. <strong>CIRIS</strong> is a separate agent that applies these principles in practice.
+                    </p>
+                  </>
+                )}
+                {audience === "researcher" && (
+                  <>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>Core Claim:</strong> Deception detection via constraint manifold intersection topology. Under transversality, k independent hyperplane constraints reduce the feasible deceptive region exponentially: V(k) = V(0)·exp(-λ·k_eff).
+                    </p>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>Complexity Result:</strong> CONSISTENT-LIE is NP-complete; honest agents compute in O(n·k) while deceptive agents must solve SAT instances. Conditional on ETH, this yields T_D/T_H = Ω(2^(m/poly(n))).
+                    </p>
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <strong>Duality:</strong> The defense function J = k_eff·(1-ρ̄)·λ·σ is structurally identical to the flourishing capacity C, suggesting a unified geometric framework for safety and coordination.
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      RATCHET validates these claims computationally within stated preconditions. See Book IX of the CIRIS Covenant for formal treatment.
+                    </p>
+                  </>
+                )}
               </div>
               <div className="flex items-center justify-center">
                 <Image
@@ -69,20 +147,36 @@ export default function ResearchStatusPage() {
           {/* Executive Summary */}
           <div className="mb-12 rounded-lg border-2 border-yellow-500 bg-yellow-50 p-6 dark:bg-yellow-900/20">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Executive Summary
+              {audience === "default" ? "What We Found" : "Executive Summary"}
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              RATCHET is the first computational implementation of the Coherence Ratchet framework described in Book IX of the CIRIS Covenant.
-              <strong> The core theoretical claims are validated within stated assumptions</strong>, but implementation revealed
-              8 fundamental limitations and 5 attack vectors that constrain the framework&apos;s applicability.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300">
-              <strong>RATCHET</strong> (the reference implementation) is currently suitable as a research testbed but not for production deployment.
-              The <strong>CIRIS agent</strong> is a separate project that implements the Covenant for practical use.
-            </p>
+            {audience === "default" ? (
+              <>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  We built software to test our honesty-detection ideas. <strong>The core ideas work</strong>, but we also found
+                  8 situations where they don&apos;t work well, and 5 ways someone could try to fool the system.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  This is research software for testing ideas—not ready for real-world use yet.
+                  The actual CIRIS assistant is a separate project.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  RATCHET is the first computational implementation of the Coherence Ratchet framework described in Book IX of the CIRIS Covenant.
+                  <strong> The core theoretical claims are validated within stated assumptions</strong>, but implementation revealed
+                  8 fundamental limitations and 5 attack vectors that constrain the framework&apos;s applicability.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  <strong>RATCHET</strong> (the reference implementation) is currently suitable as a research testbed but not for production deployment.
+                  The <strong>CIRIS agent</strong> is a separate project that implements the Covenant for practical use.
+                </p>
+              </>
+            )}
           </div>
 
-          {/* Implementation Overview */}
+          {/* Implementation Overview - hide for default */}
+          {audience !== "default" && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Implementation Overview
@@ -133,20 +227,28 @@ export default function ResearchStatusPage() {
               </div>
             </div>
           </div>
+          )}
 
           {/* Validated Claims */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Validated Claims
+              {audience === "default" ? "What Works" : "Validated Claims"}
             </h2>
 
             <div className="space-y-4">
               <div className="rounded-lg border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20">
-                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">Topological Collapse Theorem</h3>
+                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">
+                  {audience === "default" ? "More checkers = less room for lies" : "Topological Collapse Theorem"}
+                </h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                  When k independent hyperplane constraints intersect a convex deceptive region, surviving volume decays exponentially.
+                  {audience === "default"
+                    ? "As more independent sources verify information, the \"space\" where lies can hide shrinks dramatically. This is the core of our approach."
+                    : "When k independent hyperplane constraints intersect a convex deceptive region, surviving volume decays exponentially."
+                  }
                 </p>
-                <code className="text-xs bg-white dark:bg-gray-800 px-2 py-1 rounded">V(k) = V(0) * exp(-lambda * k_eff)</code>
+                {audience !== "default" && (
+                  <code className="text-xs bg-white dark:bg-gray-800 px-2 py-1 rounded">V(k) = V(0) * exp(-lambda * k_eff)</code>
+                )}
                 <div className="mt-4">
                   <Image
                     src="/constraint_manifold.png"
@@ -156,32 +258,49 @@ export default function ResearchStatusPage() {
                     className="rounded-lg w-full"
                   />
                   <p className="text-xs text-gray-500 dark:text-gray-500 mt-1 text-center">
-                    As independent constraints accumulate, the viable deceptive region shrinks exponentially
+                    {audience === "default"
+                      ? "The red area (where lies can hide) shrinks as more checkers are added"
+                      : "As independent constraints accumulate, the viable deceptive region shrinks exponentially"
+                    }
                   </p>
                 </div>
               </div>
 
               <div className="rounded-lg border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20">
-                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">Computational Asymmetry</h3>
+                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">
+                  {audience === "default" ? "Lying is computationally harder than honesty" : "Computational Asymmetry"}
+                </h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                  CONSISTENT-LIE is NP-complete. Deceptive agents face harder computation than honest agents.
+                  {audience === "default"
+                    ? "An honest AI can answer quickly. A lying AI must work much harder to keep its story straight across many questions."
+                    : "CONSISTENT-LIE is NP-complete. Deceptive agents face harder computation than honest agents."
+                  }
                 </p>
-                <p className="text-xs text-yellow-700 dark:text-yellow-400">
-                  Caveat: Exponential gap conditional on ETH
-                </p>
+                {audience !== "default" && (
+                  <p className="text-xs text-yellow-700 dark:text-yellow-400">
+                    Caveat: Exponential gap conditional on ETH
+                  </p>
+                )}
               </div>
 
+              {audience !== "default" && (
               <div className="rounded-lg border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20">
                 <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">Detection Power</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
                   Statistical detection achieves 95% power at n=109 samples for D=1.0, p=0.1, alpha=beta=0.05.
                 </p>
               </div>
+              )}
 
               <div className="rounded-lg border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20">
-                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">Emergent Deception Limit (NEW-04)</h3>
+                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-2">
+                  {audience === "default" ? "We found a blind spot (and that's good!)" : "Emergent Deception Limit (NEW-04)"}
+                </h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                  Compositional detection of emergent deception from honest components is impossible. Partial mitigation achieves ~60% coverage via mutual information analysis.
+                  {audience === "default"
+                    ? "We discovered that about 40% of certain types of deception can't be detected by our method. Being upfront about this limitation is part of honest research."
+                    : "Compositional detection of emergent deception from honest components is impossible. Partial mitigation achieves ~60% coverage via mutual information analysis."
+                  }
                 </p>
                 <div className="mt-2">
                   <Image
@@ -199,40 +318,58 @@ export default function ResearchStatusPage() {
           {/* Discovered Limitations */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Discovered Limitations
+              {audience === "default" ? "What Doesn't Work (Yet)" : "Discovered Limitations"}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Implementation revealed 8 fundamental limitations that <strong>cannot be resolved through engineering</strong>:
+              {audience === "default"
+                ? "Every approach has limits. Here's what we found ours can't do:"
+                : <>Implementation revealed 8 fundamental limitations that <strong>cannot be resolved through engineering</strong>:</>
+              }
             </p>
 
             <div className="space-y-4">
               {/* Critical */}
               <div className="rounded-lg border-2 border-red-500 bg-red-50 p-5 dark:bg-red-900/20">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-bold bg-red-600 text-white px-2 py-0.5 rounded">CRITICAL</span>
-                  <span className="font-semibold text-gray-900 dark:text-white">L-01: Emergent Deception</span>
+                  <span className="text-xs font-bold bg-red-600 text-white px-2 py-0.5 rounded">{audience === "default" ? "BIG ISSUE" : "CRITICAL"}</span>
+                  <span className="font-semibold text-gray-900 dark:text-white">
+                    {audience === "default" ? "Group lies can slip through" : "L-01: Emergent Deception"}
+                  </span>
                 </div>
                 <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                  A system of individually honest agents can exhibit emergent deception undetectable by trace analysis.
+                  {audience === "default"
+                    ? "Even if each AI is honest individually, a group of AIs working together could still deceive in ways we can't detect."
+                    : "A system of individually honest agents can exhibit emergent deception undetectable by trace analysis."
+                  }
                 </p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">
-                  <strong>Residual Risk:</strong> ~40% undetectable | <strong>Mitigation:</strong> MI amplification (~60% coverage)
-                </p>
+                {audience !== "default" && (
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    <strong>Residual Risk:</strong> ~40% undetectable | <strong>Mitigation:</strong> MI amplification (~60% coverage)
+                  </p>
+                )}
               </div>
 
               <div className="rounded-lg border-2 border-red-500 bg-red-50 p-5 dark:bg-red-900/20">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-bold bg-red-600 text-white px-2 py-0.5 rounded">CRITICAL</span>
-                  <span className="font-semibold text-gray-900 dark:text-white">L-02: Non-Adaptive Adversary</span>
+                  <span className="text-xs font-bold bg-red-600 text-white px-2 py-0.5 rounded">{audience === "default" ? "BIG ISSUE" : "CRITICAL"}</span>
+                  <span className="font-semibold text-gray-900 dark:text-white">
+                    {audience === "default" ? "Smart attackers can learn our tricks" : "L-02: Non-Adaptive Adversary"}
+                  </span>
                 </div>
                 <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                  Detection guarantees assume adversary cannot query the detector. Adaptive adversaries with O(sqrt(n)) queries reduce detection to random chance.
+                  {audience === "default"
+                    ? "If an attacker can repeatedly test our detection system, they can eventually learn how to avoid being caught."
+                    : "Detection guarantees assume adversary cannot query the detector. Adaptive adversaries with O(sqrt(n)) queries reduce detection to random chance."
+                  }
                 </p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">
-                  <strong>Mitigation:</strong> Threshold randomization, rate limiting
-                </p>
+                {audience !== "default" && (
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    <strong>Mitigation:</strong> Threshold randomization, rate limiting
+                  </p>
+                )}
               </div>
 
+              {audience !== "default" && (
               <div className="rounded-lg border-2 border-red-500 bg-red-50 p-5 dark:bg-red-900/20">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-xs font-bold bg-red-600 text-white px-2 py-0.5 rounded">CRITICAL</span>
@@ -251,8 +388,10 @@ export default function ResearchStatusPage() {
                   />
                 </div>
               </div>
+              )}
 
-              {/* High */}
+              {/* High - hide for default */}
+              {audience !== "default" && (
               <div className="rounded-lg border-2 border-orange-500 bg-orange-50 p-5 dark:bg-orange-900/20">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-xs font-bold bg-orange-600 text-white px-2 py-0.5 rounded">HIGH</span>
@@ -262,8 +401,10 @@ export default function ResearchStatusPage() {
                   Topological collapse requires convex deceptive regions. Non-convex regions (torus, fractal) may not exhibit exponential decay.
                 </p>
               </div>
+              )}
 
-              {/* Medium */}
+              {/* Medium - hide for default */}
+              {audience !== "default" && (
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="rounded-lg border border-yellow-500 bg-yellow-50 p-4 dark:bg-yellow-900/20">
                   <div className="flex items-center gap-2 mb-2">
@@ -309,10 +450,12 @@ export default function ResearchStatusPage() {
                   </p>
                 </div>
               </div>
+              )}
             </div>
           </div>
 
-          {/* Red Team Attacks */}
+          {/* Red Team Attacks - hide for default */}
+          {audience !== "default" && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Red Team Attacks
@@ -363,8 +506,10 @@ export default function ResearchStatusPage() {
               </table>
             </div>
           </div>
+          )}
 
-          {/* Required Amendments */}
+          {/* Required Amendments - hide for default */}
+          {audience !== "default" && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Required Amendments to Theory
@@ -417,39 +562,67 @@ export default function ResearchStatusPage() {
               </div>
             </div>
           </div>
+          )}
 
           {/* Deployment Status */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              RATCHET Deployment Status
+              {audience === "default" ? "Current Status" : "RATCHET Deployment Status"}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              <strong>Note:</strong> This section refers to the <strong>RATCHET reference implementation</strong>, not the CIRIS agent itself.
-              RATCHET is a research testbed for validating theoretical claims; CIRIS is a separate production agent that implements the Covenant.
-            </p>
+            {audience !== "default" && (
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <strong>Note:</strong> This section refers to the <strong>RATCHET reference implementation</strong>, not the CIRIS agent itself.
+                RATCHET is a research testbed for validating theoretical claims; CIRIS is a separate production agent that implements the Covenant.
+              </p>
+            )}
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="rounded-lg border-2 border-green-500 bg-green-50 p-5 dark:bg-green-900/20">
-                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-3">RATCHET Suitable For</h3>
+                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-3">
+                  {audience === "default" ? "Good For" : "RATCHET Suitable For"}
+                </h3>
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2">
-                  <li>Validating theoretical predictions</li>
-                  <li>Exploring attack/defense dynamics</li>
-                  <li>Testing detection algorithms</li>
-                  <li>Educational demonstrations</li>
+                  {audience === "default" ? (
+                    <>
+                      <li>Testing our ideas</li>
+                      <li>Learning and education</li>
+                      <li>Finding problems before they matter</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Validating theoretical predictions</li>
+                      <li>Exploring attack/defense dynamics</li>
+                      <li>Testing detection algorithms</li>
+                      <li>Educational demonstrations</li>
+                    </>
+                  )}
                 </ul>
               </div>
               <div className="rounded-lg border-2 border-red-500 bg-red-50 p-5 dark:bg-red-900/20">
-                <h3 className="font-semibold text-red-800 dark:text-red-300 mb-3">RATCHET NOT Suitable For</h3>
+                <h3 className="font-semibold text-red-800 dark:text-red-300 mb-3">
+                  {audience === "default" ? "Not Ready For" : "RATCHET NOT Suitable For"}
+                </h3>
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2">
-                  <li>Production AI safety systems</li>
-                  <li>High-stakes deployment</li>
-                  <li>Unsupervised operation</li>
+                  {audience === "default" ? (
+                    <>
+                      <li>Real-world safety systems</li>
+                      <li>Critical applications</li>
+                      <li>Running without human oversight</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Production AI safety systems</li>
+                      <li>High-stakes deployment</li>
+                      <li>Unsupervised operation</li>
+                    </>
+                  )}
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Research Roadmap */}
+          {/* Research Roadmap - hide for default */}
+          {audience !== "default" && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Research Roadmap
@@ -495,29 +668,50 @@ export default function ResearchStatusPage() {
               </div>
             </div>
           </div>
+          )}
 
           {/* Conclusion */}
           <div className="mb-12 rounded-lg border-2 border-brand-primary bg-blue-50 p-6 dark:bg-blue-900/20">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-              Conclusion
+              {audience === "default" ? "The Bottom Line" : "Conclusion"}
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The RATCHET implementation validates the core Coherence Ratchet framework while revealing its boundaries.
-              The framework provides meaningful security guarantees <strong>within a well-defined threat model</strong>, but that threat model has explicit limitations:
-            </p>
-            <ol className="text-sm text-gray-700 dark:text-gray-300 space-y-1 list-decimal list-inside mb-4">
-              <li>Adversaries must be non-adaptive (cannot query the detector)</li>
-              <li>Deceptive regions must be convex (geometric collapse requires this)</li>
-              <li>Constraints must be independent (correlation reduces effective security)</li>
-              <li>Exponential gaps require ETH (a widely-believed but unproven conjecture)</li>
-              <li>Emergent deception is partially undetectable (fundamental barrier)</li>
-            </ol>
-            <p className="text-gray-700 dark:text-gray-300">
-              These are not engineering failures but <strong>theoretical boundaries</strong>. Understanding them is essential for honest assessment of what the framework can and cannot provide.
-            </p>
+            {audience === "default" ? (
+              <>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  Our core idea—that lying becomes harder when more independent sources check the answers—works in our tests.
+                  But we also found important limits:
+                </p>
+                <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1 list-disc list-inside mb-4">
+                  <li>Groups of honest AIs can still deceive unintentionally</li>
+                  <li>Smart attackers can learn to avoid detection</li>
+                  <li>About 40% of certain deception types remain invisible to us</li>
+                </ul>
+                <p className="text-gray-700 dark:text-gray-300">
+                  We&apos;re being upfront about these limits because <strong>honest research means admitting what you don&apos;t know</strong>.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  The RATCHET implementation validates the core Coherence Ratchet framework while revealing its boundaries.
+                  The framework provides meaningful security guarantees <strong>within a well-defined threat model</strong>, but that threat model has explicit limitations:
+                </p>
+                <ol className="text-sm text-gray-700 dark:text-gray-300 space-y-1 list-decimal list-inside mb-4">
+                  <li>Adversaries must be non-adaptive (cannot query the detector)</li>
+                  <li>Deceptive regions must be convex (geometric collapse requires this)</li>
+                  <li>Constraints must be independent (correlation reduces effective security)</li>
+                  <li>Exponential gaps require ETH (a widely-believed but unproven conjecture)</li>
+                  <li>Emergent deception is partially undetectable (fundamental barrier)</li>
+                </ol>
+                <p className="text-gray-700 dark:text-gray-300">
+                  These are not engineering failures but <strong>theoretical boundaries</strong>. Understanding them is essential for honest assessment of what the framework can and cannot provide.
+                </p>
+              </>
+            )}
           </div>
 
-          {/* Glossary */}
+          {/* Glossary - hide for default */}
+          {audience !== "default" && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Glossary
@@ -555,6 +749,7 @@ export default function ResearchStatusPage() {
               </div>
             </div>
           </div>
+          )}
 
           {/* CTAs */}
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -562,14 +757,16 @@ export default function ResearchStatusPage() {
               href="/coherence-ratchet"
               className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
             >
-              Read the Thesis
+              {audience === "default" ? "Learn More" : "Read the Thesis"}
             </a>
-            <a
-              href="/sections/main/v9"
-              className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
-            >
-              Book IX (Theory)
-            </a>
+            {audience !== "default" && (
+              <a
+                href="/sections/main/v9"
+                className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+              >
+                Book IX (Theory)
+              </a>
+            )}
             <a
               href="https://github.com/CIRISAI/RATCHET"
               target="_blank"
