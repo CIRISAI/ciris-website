@@ -28,13 +28,13 @@ export default function ResearchStatusPage() {
                 Status: Research Testbed
               </span>
               <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
-                Version: 0.1.0
+                Version: 0.2.0
               </span>
               <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-300">
-                ~8,400 lines
+                ~14,000 lines
               </span>
               <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-300">
-                Updated: 2026-01-02
+                Updated: 2026-01-03
               </span>
             </div>
           </div>
@@ -144,6 +144,93 @@ export default function ResearchStatusPage() {
             </div>
           </div>
 
+          {/* Coherence Collapse Analysis - NEW */}
+          <div className="mb-12 rounded-lg border border-purple-200 bg-purple-50 p-6 dark:border-purple-800 dark:bg-purple-900/20">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center rounded-full bg-purple-600 px-2 py-0.5 text-xs font-medium text-white">NEW</span>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                {audience === "default" ? "New Paper: Cross-Domain Validation" : "Coherence Collapse Analysis (CCA)"}
+              </h2>
+            </div>
+
+            {audience === "default" ? (
+              <>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  We published a new paper testing whether our ideas apply beyond AI systems.
+                  The same math that describes honesty verification also describes how battery cells age,
+                  how institutions maintain stability, and how gut microbiomes stay healthy.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>Key finding:</strong> When the sources checking each other become too similar, the protection weakens.
+                  Diverse, independent verification matters more than having many similar verifiers.
+                </p>
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                    <p className="text-2xl font-bold text-purple-600">19</p>
+                    <p className="text-xs text-gray-500">Battery cells tested</p>
+                  </div>
+                  <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                    <p className="text-2xl font-bold text-purple-600">203</p>
+                    <p className="text-xs text-gray-500">Countries analyzed</p>
+                  </div>
+                  <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                    <p className="text-2xl font-bold text-purple-600">2,081</p>
+                    <p className="text-xs text-gray-500">Microbial species</p>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>Paper:</strong> &quot;Coherence Collapse Analysis: A Universal Failure Mode in Complex Coordinating Systems&quot;
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>Core Finding:</strong> As constraints become correlated (ρ → 1), effective diversity collapses toward unity regardless of scale:
+                </p>
+                <code className="block bg-white dark:bg-gray-800 px-3 py-2 rounded text-sm mb-4">k_eff = k / (1 + ρ(k-1)) → 1 as ρ → 1</code>
+
+                <div className="grid md:grid-cols-3 gap-4 mb-4">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Chemistry</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">NASA Li-ion battery data (19 cells, 8.1% RMSE)</p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Political Science</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">QoG + Polity V (203 countries, 5/5 stable democracies classified)</p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Biology</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">American Gut Project (2,081 taxa, matches AGP norms)</p>
+                  </div>
+                </div>
+
+                {audience === "researcher" && (
+                  <div className="border-t border-purple-200 dark:border-purple-700 pt-4 mt-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">CCA Capabilities & Limits</h4>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p className="text-green-700 dark:text-green-400 font-medium mb-1">What CCA Does Well:</p>
+                        <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+                          <li>Phase classification (chaos/healthy/rigidity)</li>
+                          <li>Structural diagnosis of fragile systems</li>
+                          <li>Singularity boundary detection: k_req · ρ ≥ 1</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="text-yellow-700 dark:text-yellow-400 font-medium mb-1">Timing Uncertainty:</p>
+                        <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+                          <li>Lead times average 5-8 years for institutions</li>
+                          <li>Provides risk windows, not event dates</li>
+                          <li>Better at &quot;if&quot; than &quot;when&quot;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+
           {/* Executive Summary */}
           <div className="mb-12 rounded-lg border-2 border-yellow-500 bg-yellow-50 p-6 dark:bg-yellow-900/20">
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
@@ -238,6 +325,57 @@ export default function ResearchStatusPage() {
                 <div><span className="text-green-700 dark:text-green-400">5/5</span> red team</div>
               </div>
             </div>
+
+            {/* Domain-Specific Engines v0.2.0 */}
+            <div className="mt-6">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="inline-flex items-center rounded-full bg-purple-600 px-2 py-0.5 text-xs font-medium text-white">v0.2.0</span>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Domain-Specific Engines</h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                      <th className="text-left py-2 px-3 font-medium text-gray-700 dark:text-gray-300">Engine</th>
+                      <th className="text-left py-2 px-3 font-medium text-gray-700 dark:text-gray-300">Domain</th>
+                      <th className="text-left py-2 px-3 font-medium text-gray-700 dark:text-gray-300">Validates</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+                    <tr>
+                      <td className="py-2 px-3"><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/battery.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">battery.py</a></td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">Chemistry</td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">SEI growth, capacity fade</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3"><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/institutional.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">institutional.py</a></td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">Political Science</td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">Elite coupling, rule of law decay</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3"><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/microbiome.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">microbiome.py</a></td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">Biology</td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">Species diversity, dysbiosis</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3"><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/correlation_tensor.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">correlation_tensor.py</a></td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">All</td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">Spectral analysis beyond scalar ρ</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3"><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/robustness.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">robustness.py</a></td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">All</td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">Non-convex geometry bounds</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3"><a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet/engines/interventions.py" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">interventions.py</a></td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">All</td>
+                      <td className="py-2 px-3 text-gray-600 dark:text-gray-400">Cross-effects, adversary response</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           )}
 
@@ -254,12 +392,16 @@ export default function ResearchStatusPage() {
                 </h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
                   {audience === "default"
-                    ? "As more independent sources verify information, the \"space\" where lies can hide shrinks dramatically. This is the core of our approach."
-                    : "When k independent hyperplane constraints intersect a convex deceptive region, surviving volume decays exponentially."
+                    ? "As more independent sources verify information, the \"space\" where lies can hide shrinks dramatically. But there's a catch: if the sources are too similar to each other, the protection weakens."
+                    : "When k independent hyperplane constraints intersect a convex deceptive region, surviving volume decays exponentially. The k_eff formula (derived from Kish design effect) quantifies how correlation erodes this protection."
                   }
                 </p>
                 {audience !== "default" && (
-                  <code className="text-xs bg-white dark:bg-gray-800 px-2 py-1 rounded">V(k) = V(0) * exp(-lambda * k_eff)</code>
+                  <div className="flex flex-wrap gap-2 items-center">
+                    <code className="text-xs bg-white dark:bg-gray-800 px-2 py-1 rounded">V(k) = V(0) * exp(-λ * k_eff)</code>
+                    <span className="text-xs text-gray-500">where</span>
+                    <code className="text-xs bg-white dark:bg-gray-800 px-2 py-1 rounded">k_eff = k / (1 + ρ(k-1))</code>
+                  </div>
                 )}
                 <div className="mt-4">
                   <Image
@@ -463,6 +605,33 @@ export default function ResearchStatusPage() {
                   <p className="text-xs text-gray-700 dark:text-gray-300">
                     Gradual Byzantine takeover detectable only after breach
                   </p>
+                </div>
+              </div>
+              )}
+
+              {/* CCA-Specific Limitations - v0.2.0 */}
+              {audience === "researcher" && (
+              <div className="mt-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="inline-flex items-center rounded-full bg-purple-600 px-2 py-0.5 text-xs font-medium text-white">CCA</span>
+                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">CCA-Specific Limitations (v0.2.0)</h4>
+                </div>
+                <div className="grid gap-4 md:grid-cols-3">
+                  <div className="rounded-lg border border-purple-300 bg-purple-50 p-4 dark:border-purple-700 dark:bg-purple-900/20">
+                    <p className="text-xs font-medium text-purple-800 dark:text-purple-300 mb-1">Scalar ρ Simplification</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Scalar ρ oversimplifies clustered correlations</p>
+                    <p className="text-xs text-green-600 dark:text-green-400 mt-1">Mitigation: correlation_tensor.py</p>
+                  </div>
+                  <div className="rounded-lg border border-purple-300 bg-purple-50 p-4 dark:border-purple-700 dark:bg-purple-900/20">
+                    <p className="text-xs font-medium text-purple-800 dark:text-purple-300 mb-1">Defense Function J</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">J is a modeling choice, not derived from first principles</p>
+                    <p className="text-xs text-yellow-600 dark:text-yellow-400 mt-1">Acknowledged in paper</p>
+                  </div>
+                  <div className="rounded-lg border border-purple-300 bg-purple-50 p-4 dark:border-purple-700 dark:bg-purple-900/20">
+                    <p className="text-xs font-medium text-purple-800 dark:text-purple-300 mb-1">Timing Precision</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Timing estimates are risk windows, not precise dates</p>
+                    <p className="text-xs text-yellow-600 dark:text-yellow-400 mt-1">5-8 year lead time variance</p>
+                  </div>
                 </div>
               </div>
               )}
@@ -862,6 +1031,66 @@ export default function ResearchStatusPage() {
             </div>
           </div>
           )}
+
+          {/* Publications */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              {audience === "default" ? "Read More" : "Publications"}
+            </h2>
+            <div className="space-y-4">
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                      {audience === "default"
+                        ? "Why Systems Fail: A Cross-Domain Study"
+                        : "Coherence Collapse Analysis: A Universal Failure Mode in Complex Coordinating Systems"
+                      }
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      {audience === "default"
+                        ? "Our new paper applying these ideas to batteries, democracies, and biology."
+                        : "Cross-domain validation of k_eff framework across chemistry, political science, and biology."
+                      }
+                    </p>
+                    <p className="text-xs text-gray-500">January 2026</p>
+                  </div>
+                  <a
+                    href="https://github.com/CIRISAI/RATCHET/blob/main/immediate_release/coherence_collapse_analysis.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 ml-4 inline-flex items-center rounded-lg bg-brand-primary px-4 py-2 text-sm font-medium text-white hover:bg-brand-primary/80"
+                  >
+                    PDF →
+                  </a>
+                </div>
+              </div>
+
+              {audience !== "default" && (
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                      CIRISAgent Framework
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      Technical specification for the CIRIS agent implementation.
+                    </p>
+                    <p className="text-xs text-gray-500">December 2025</p>
+                  </div>
+                  <a
+                    href="https://github.com/CIRISAI/RATCHET/blob/main/immediate_release/main.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 ml-4 inline-flex items-center rounded-lg bg-brand-primary px-4 py-2 text-sm font-medium text-white hover:bg-brand-primary/80"
+                  >
+                    PDF →
+                  </a>
+                </div>
+              </div>
+              )}
+            </div>
+          </div>
 
           {/* CTAs */}
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
