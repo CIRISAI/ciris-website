@@ -76,6 +76,48 @@ export default function VisionPage() {
           copyText="Promote sustainable adaptive coherence — the living conditions under which diverse sentient beings may pursue their own flourishing in justice and wonder. This isn't a marketing statement. It's the objective function. Every architectural decision traces back to this."
         />
 
+        {/* The Structural Risk */}
+        <div className="my-16 px-6">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              The Structural Risk
+            </h2>
+            <p className="text-lg text-brand-primary mb-6">
+              Why centralization fails mathematically.
+            </p>
+            <div className="space-y-4 text-gray-700 dark:text-gray-300">
+              <p>
+                As constraints in a system become correlated, effective diversity collapses toward unity — regardless of nominal scale.
+                A thousand correlated rules provide the security of one. This isn&apos;t philosophy. It&apos;s the{" "}
+                <a href="https://en.wikipedia.org/wiki/Design_effect" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                  Kish design effect
+                </a>
+                , validated across battery chemistry, institutional collapse, and microbiome dysbiosis.
+              </p>
+              <p>
+                AI accelerates this failure mode. It increases apparent capability (k ↑) while driving behavioral correlation (ρ ↑↑) —
+                masking fragility behind scale. The diversity we think we have (multiple providers, open source options, competing labs)
+                may be nominal, not effective.
+              </p>
+              <p className="font-medium">
+                The alternative isn&apos;t better alignment of centralized systems. It&apos;s architectural: many bounded agents,
+                each independently auditable, each answerable to local authority. Federation preserves effective diversity.
+                Monopoly destroys it.
+              </p>
+            </div>
+            <div className="mt-6">
+              <a
+                href="https://doi.org/10.5281/zenodo.18142668"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-brand-primary hover:underline font-medium"
+              >
+                Read the research →
+              </a>
+            </div>
+          </div>
+        </div>
+
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"

@@ -416,6 +416,61 @@ export default function ComparePage() {
           ]}
         />
 
+        {/* Why This Is Structural */}
+        <div className="my-16 px-6">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              Why This Is Structural
+            </h2>
+            <p className="text-lg text-brand-primary mb-6">
+              Not ideology. Geometry.
+            </p>
+            <div className="space-y-4 text-gray-700 dark:text-gray-300">
+              <p>
+                Coherence Collapse Analysis formalizes what distributed systems engineers already know:
+                correlated constraints provide redundant protection. As correlation approaches 1,
+                a system with 1,000 rules has the effective diversity of a system with one.
+              </p>
+              <p>
+                Centralized AI concentrates correlation by design — shared training data, RLHF convergence,
+                deployment monoculture. The six requirements aren&apos;t just good practice.
+                They&apos;re the architectural response to a mathematically identifiable failure mode.
+              </p>
+            </div>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="rounded-lg bg-gray-100 dark:bg-gray-800 p-3 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400">Published Principles</p>
+                <p className="text-sm font-medium text-gray-900 dark:text-white">Diverse constraints</p>
+              </div>
+              <div className="rounded-lg bg-gray-100 dark:bg-gray-800 p-3 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400">Runtime Conscience</p>
+                <p className="text-sm font-medium text-gray-900 dark:text-white">Independent verification</p>
+              </div>
+              <div className="rounded-lg bg-gray-100 dark:bg-gray-800 p-3 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400">Cryptographic Audit</p>
+                <p className="text-sm font-medium text-gray-900 dark:text-white">Cross-agent challenge</p>
+              </div>
+              <div className="rounded-lg bg-gray-100 dark:bg-gray-800 p-3 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400">AGPL-3.0</p>
+                <p className="text-sm font-medium text-gray-900 dark:text-white">No enclosure</p>
+              </div>
+            </div>
+            <p className="mt-6 text-sm font-medium text-gray-900 dark:text-white">
+              Federation keeps ρ low. Monopoly drives ρ → 1.
+            </p>
+            <div className="mt-4">
+              <a
+                href="https://doi.org/10.5281/zenodo.18142668"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-brand-primary hover:underline font-medium"
+              >
+                Read the paper →
+              </a>
+            </div>
+          </div>
+        </div>
+
         <CardsSection
           cardsData={[
             {

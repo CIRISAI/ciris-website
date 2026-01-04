@@ -37,6 +37,15 @@ export default function ResearchStatusPage() {
                 Updated: 2026-01-03
               </span>
             </div>
+            {/* DOI Badges */}
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a href="https://doi.org/10.5281/zenodo.18142668" target="_blank" rel="noopener noreferrer">
+                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18142668.svg" alt="DOI: CCA Paper" className="h-5" />
+              </a>
+              <a href="https://doi.org/10.5281/zenodo.18137161" target="_blank" rel="noopener noreferrer">
+                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18137161.svg" alt="DOI: CIRIS Framework" className="h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Audience Toggle */}
