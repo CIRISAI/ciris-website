@@ -15,7 +15,7 @@ export default function ComparePage() {
       <HomeHeader
         headline="Enrich or Extract"
         subheadline="AI that doesn't serve humanity is extracting from it."
-        description="If you can't audit the ethics, they're marketing. Here are six requirements for verifiably ethical AI — and why closed-source systems can't meet them."
+        description="If you can't audit the ethics, they're marketing. Here are seven requirements for verifiably ethical AI — and why closed-source systems can't meet them."
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -65,10 +65,67 @@ export default function ComparePage() {
             CIRIS isn't productivity AI. It's runtime governance for agentic AI — infrastructure for high-stakes deployment where misalignment kills.
           </p>
           <p className="mt-3 text-sm text-gray-400">
-            To our knowledge, the first open stack attempting all six ethical requirements at runtime.{" "}
+            To our knowledge, the first open stack attempting all seven ethical requirements at runtime.{" "}
             <a href="https://github.com/CIRISAI/CIRISAgent/issues" className="underline hover:text-white">
               We'd love to be wrong — open an issue if we've missed a peer.
             </a>
+          </p>
+        </div>
+      </div>
+
+      {/* Three Types of AI */}
+      <div className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-2">Three Types of AI</h2>
+          <p className="text-center text-brand-primary font-medium mb-10">Ethics is necessary. It&apos;s not sufficient.</p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Type 1 */}
+            <div className="rounded-xl border-2 border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-900/20 p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-bold text-sm">1</span>
+                <h3 className="text-xl font-bold text-red-700 dark:text-red-400">Unethical AI</h3>
+              </div>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                No published principles. No audit trail. Closed source. &quot;Trust us.&quot;
+              </p>
+              <p className="text-xs text-red-600 dark:text-red-400 font-medium">
+                Fails requirements 1-6. Obvious extraction.
+              </p>
+            </div>
+
+            {/* Type 2 */}
+            <div className="rounded-xl border-2 border-yellow-300 dark:border-yellow-700 bg-yellow-50 dark:bg-yellow-900/20 p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-500 text-white font-bold text-sm">2</span>
+                <h3 className="text-xl font-bold text-yellow-700 dark:text-yellow-400">Ethical AI</h3>
+              </div>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                Published principles. Runtime conscience. Auditable. But reasons from correlated sources without knowing it.
+              </p>
+              <p className="text-xs text-yellow-600 dark:text-yellow-400 font-medium">
+                Meets 1-6 but lacks intuition. Echo chamber failure mode.
+              </p>
+            </div>
+
+            {/* Type 3 */}
+            <div className="rounded-xl border-2 border-green-400 dark:border-green-600 bg-green-50 dark:bg-green-900/20 p-6 ring-2 ring-green-400 ring-offset-2 dark:ring-offset-gray-900">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white font-bold text-sm">3</span>
+                <h3 className="text-xl font-bold text-green-700 dark:text-green-400">Ethical + Intuitive AI</h3>
+              </div>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                All six ethical requirements PLUS corridor maintenance. Knows when its confidence is unwarranted.
+              </p>
+              <p className="text-xs text-green-600 dark:text-green-400 font-medium">
+                Meets all 7. Stays between chaos and rigidity.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-8 text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            An AI can follow every rule, pass every audit, and still fail catastrophically if it&apos;s reasoning from an echo chamber.
+            <strong className="text-gray-900 dark:text-white"> Intuition is the capacity to sense fragility before collapse.</strong>
           </p>
         </div>
       </div>
@@ -77,9 +134,9 @@ export default function ComparePage() {
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="The Six Requirements"
-          subheadline="All six. Not five."
-          copyText="An AI system only qualifies as verifiably ethical if it meets ALL six. Governance frameworks and safety filters are useful — but they're layers around agents, not ethical agents themselves."
+          headline="The Six Ethical Requirements"
+          subheadline="Necessary. Not sufficient."
+          copyText="These six requirements establish verifiable ethics. But ethics alone can still fail via correlation collapse — when correlated sources create false confidence. That's why there's a seventh."
         />
 
         <CardsSection
@@ -139,6 +196,97 @@ export default function ComparePage() {
             },
           ]}
         />
+
+        {/* The Seventh Requirement - Intuition */}
+        <div className="my-12 rounded-xl border-2 border-indigo-400 dark:border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 p-8">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600 text-white font-bold">7</span>
+            <div>
+              <h3 className="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Intuition (Corridor Maintenance)</h3>
+              <p className="text-sm text-indigo-600 dark:text-indigo-400">The requirement ethics alone can&apos;t satisfy.</p>
+            </div>
+          </div>
+
+          <p className="text-gray-700 dark:text-gray-300 mb-6">
+            The agent monitors its own epistemic diversity. Before acting, it asks: <em>&quot;Am I reasoning from truly independent sources, or is this an echo chamber?&quot;</em>
+            When effective source count drops below threshold (k<sub>eff</sub> &lt; 2), the decision is flagged for human review.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-red-100 dark:bg-red-900/30 rounded-lg p-4 text-center">
+              <p className="text-sm font-bold text-red-700 dark:text-red-400 mb-1">CHAOS</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Too loud. No coordination. High variance.</p>
+              <p className="text-xs text-red-600 dark:text-red-500 mt-1">ρ &lt; 0.2</p>
+            </div>
+            <div className="bg-green-100 dark:bg-green-900/30 rounded-lg p-4 text-center ring-2 ring-green-400">
+              <p className="text-sm font-bold text-green-700 dark:text-green-400 mb-1">HEALTHY CORRIDOR</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Diverse perspectives. Synthesizable.</p>
+              <p className="text-xs text-green-600 dark:text-green-500 mt-1">0.2 &lt; ρ &lt; 0.7</p>
+            </div>
+            <div className="bg-yellow-100 dark:bg-yellow-900/30 rounded-lg p-4 text-center">
+              <p className="text-sm font-bold text-yellow-700 dark:text-yellow-400 mb-1">RIGIDITY</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Too quiet. Echo chamber. False confidence.</p>
+              <p className="text-xs text-yellow-600 dark:text-yellow-500 mt-1">ρ &gt; 0.7</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-4 items-center justify-between">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Implemented as <strong>IDMA</strong> (Intuition Decision Making Algorithm) — the 4th DMA in the CIRIS pipeline.
+            </p>
+            <a
+              href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/logic/dma/idma.py"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:underline font-medium text-sm"
+            >
+              View IDMA code →
+            </a>
+          </div>
+        </div>
+
+        {/* Why Ethics Alone Fails */}
+        <div className="my-12 bg-gray-900 dark:bg-black rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-white mb-2">Why Ethics Alone Fails</h3>
+          <p className="text-brand-primary font-medium mb-6">The math of echo chambers.</p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <p className="text-gray-300 mb-4">
+                As sources become correlated (ρ → 1), effective diversity collapses regardless of how many sources you have:
+              </p>
+              <code className="block bg-gray-800 text-green-400 px-4 py-3 rounded-lg text-sm mb-4">
+                k<sub>eff</sub> = k / (1 + ρ(k-1)) → 1 as ρ → 1
+              </code>
+              <p className="text-gray-400 text-sm">
+                10 sources with ρ=0.9 → k<sub>eff</sub> ≈ 1.1 (effectively one source)
+              </p>
+            </div>
+            <div>
+              <p className="text-gray-300 mb-4">
+                An ethical AI following correlated guidance is like a democracy where every voter reads the same newspaper.
+                The vote count looks healthy. The effective diversity is 1.
+              </p>
+              <p className="text-gray-300">
+                <strong className="text-white">Too correlated is the new too quiet.</strong> The system appears stable while fragility accumulates invisibly.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-gray-700 flex flex-wrap gap-4 items-center justify-between">
+            <p className="text-sm text-gray-400">
+              Based on Coherence Collapse Analysis (CCA) — validated across chemistry, political science, finance, and biology.
+            </p>
+            <a
+              href="https://doi.org/10.5281/zenodo.18142668"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-brand-primary hover:underline font-medium text-sm"
+            >
+              Read the paper →
+            </a>
+          </div>
+        </div>
 
         <SeparatorTitleBlock
           logoSrc="logoIcon"
@@ -271,6 +419,7 @@ export default function ComparePage() {
                   <th className="p-4 text-center font-bold text-brand-primary">Audit Trail</th>
                   <th className="p-4 text-center font-bold text-brand-primary">Consent</th>
                   <th className="p-4 text-center font-bold text-brand-primary">AGPL-3.0</th>
+                  <th className="p-4 text-center font-bold text-indigo-600 dark:text-indigo-400">Intuition</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -296,6 +445,9 @@ export default function ComparePage() {
                   <td className="p-4 text-center text-green-600 font-bold">
                     <a href="https://github.com/CIRISAI/CIRISAgent/blob/main/LICENSE" className="hover:underline">Yes</a>
                   </td>
+                  <td className="p-4 text-center text-indigo-600 font-bold">
+                    <a href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/logic/dma/idma.py" className="hover:underline">IDMA</a>
+                  </td>
                 </tr>
                 <tr>
                   <td className="p-4 text-gray-700 dark:text-gray-300">MI9 Framework</td>
@@ -303,6 +455,7 @@ export default function ComparePage() {
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-yellow-500">Concept</td>
                   <td className="p-4 text-center text-yellow-500">Concept</td>
+                  <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                 </tr>
@@ -314,6 +467,7 @@ export default function ComparePage() {
                   <td className="p-4 text-center text-yellow-500">Logging</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
                 </tr>
                 <tr>
                   <td className="p-4 text-gray-700 dark:text-gray-300">Superego Prototype</td>
@@ -323,10 +477,12 @@ export default function ComparePage() {
                   <td className="p-4 text-center text-yellow-500">Partial</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
                 </tr>
                 <tr>
                   <td className="p-4 text-gray-700 dark:text-gray-300">METR (nonprofit)</td>
                   <td className="p-4 text-center text-red-500">Evaluation only</td>
+                  <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
@@ -341,6 +497,7 @@ export default function ComparePage() {
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
+                  <td className="p-4 text-center text-red-500">No</td>
                 </tr>
                 <tr>
                   <td className="p-4 text-gray-700 dark:text-gray-300">Manus AI</td>
@@ -348,6 +505,7 @@ export default function ComparePage() {
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-yellow-500">Limited</td>
+                  <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-red-500">No</td>
                 </tr>
@@ -361,6 +519,7 @@ export default function ComparePage() {
                   <td className="p-4 text-center text-yellow-500">Partial</td>
                   <td className="p-4 text-center text-red-500">No</td>
                   <td className="p-4 text-center text-green-600">CC0</td>
+                  <td className="p-4 text-center text-red-500">No</td>
                 </tr>
               </tbody>
             </table>
@@ -433,7 +592,7 @@ export default function ComparePage() {
               </p>
               <p>
                 Centralized AI concentrates correlation by design — shared training data, RLHF convergence,
-                deployment monoculture. The six requirements aren&apos;t just good practice.
+                deployment monoculture. The seven requirements aren&apos;t just good practice.
                 They&apos;re the architectural response to a mathematically identifiable failure mode.
               </p>
             </div>
@@ -600,7 +759,7 @@ export default function ComparePage() {
         logoAlt="Brand logo icon"
         headline="Verify It Yourself."
         subheadline="pip install ciris-agent"
-        copyText="An open stack attempting all six requirements end-to-end, in code, running in production. Audit it. Deploy it for safety-critical use cases: moderation, crisis response, governance. Tell us what's missing."
+        copyText="An open stack attempting all seven requirements end-to-end, in code, running in production. Audit it. Deploy it for safety-critical use cases: moderation, crisis response, governance. Tell us what's missing."
       />
 
       <Footer />

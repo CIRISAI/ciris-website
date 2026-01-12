@@ -34,7 +34,7 @@ export default function ResearchStatusPage() {
                 ~14,000 lines
               </span>
               <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-300">
-                Updated: 2026-01-03
+                Updated: 2026-01-11
               </span>
             </div>
             {/* DOI Badges */}
@@ -167,13 +167,12 @@ export default function ResearchStatusPage() {
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   We published a new paper testing whether our ideas apply beyond AI systems.
                   The same math that describes honesty verification also describes how battery cells age,
-                  how institutions maintain stability, and how gut microbiomes stay healthy.
+                  how institutions maintain stability, how financial systems approach crises, and how gut microbiomes stay healthy.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>Key finding:</strong> When the sources checking each other become too similar, the protection weakens.
-                  Diverse, independent verification matters more than having many similar verifiers.
+                  <strong>Key finding:</strong> Warning signs appear differently in each domain. Before financial crises and government transitions, warning signals rise. Before battery failure, they fall. The math measures the same thing—domain experts interpret what it means.
                 </p>
-                <div className="grid grid-cols-3 gap-4 mt-4">
+                <div className="grid grid-cols-4 gap-4 mt-4">
                   <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
                     <p className="text-2xl font-bold text-purple-600">19</p>
                     <p className="text-xs text-gray-500">Battery cells tested</p>
@@ -186,6 +185,10 @@ export default function ResearchStatusPage() {
                     <p className="text-2xl font-bold text-purple-600">2,081</p>
                     <p className="text-xs text-gray-500">Microbial species</p>
                   </div>
+                  <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                    <p className="text-2xl font-bold text-purple-600">4</p>
+                    <p className="text-xs text-gray-500">Domains validated</p>
+                  </div>
                 </div>
               </>
             ) : (
@@ -194,11 +197,17 @@ export default function ResearchStatusPage() {
                   <strong>Paper:</strong> &quot;Coherence Collapse Analysis: A Universal Failure Mode in Complex Coordinating Systems&quot;
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>Core Finding:</strong> As constraints become correlated (ρ → 1), effective diversity collapses toward unity regardless of scale:
+                  <strong>Framework:</strong> An engineering risk framework for measuring structural fragility. As constraints become correlated (ρ → 1), effective diversity collapses toward unity regardless of scale:
                 </p>
                 <code className="block bg-white dark:bg-gray-800 px-3 py-2 rounded text-sm mb-4">k_eff = k / (1 + ρ(k-1)) → 1 as ρ → 1</code>
 
-                <div className="grid md:grid-cols-3 gap-4 mb-4">
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-4">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>Temporal Precedence:</strong> ρ rises before financial crises (+0.14) and institutional transitions (+0.17), but falls before battery failure (−0.25). The framework measures; domain experts interpret.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-4 gap-4 mb-4">
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Chemistry</h4>
                     <p className="text-xs text-gray-600 dark:text-gray-400">NASA Li-ion battery data (19 cells, 8.1% RMSE)</p>
@@ -210,6 +219,10 @@ export default function ResearchStatusPage() {
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Biology</h4>
                     <p className="text-xs text-gray-600 dark:text-gray-400">American Gut Project (2,081 taxa, matches AGP norms)</p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Finance</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Domain-specific temporal patterns validated</p>
                   </div>
                 </div>
 
@@ -233,6 +246,140 @@ export default function ResearchStatusPage() {
                           <li>Better at &quot;if&quot; than &quot;when&quot;</li>
                         </ul>
                       </div>
+                    </div>
+
+                    {/* GPU Validation */}
+                    <div className="mt-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3">
+                      <p className="text-xs font-medium text-green-700 dark:text-green-400 mb-1">Physical Validation (GPU Hardware)</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">
+                        C-series/F-series experiments: k_eff formula validated, common-cause correlation mechanism confirmed on physical hardware.
+                      </p>
+                    </div>
+
+                    {/* Interpretation Guardrails */}
+                    <div className="mt-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3">
+                      <p className="text-xs font-medium text-yellow-700 dark:text-yellow-400 mb-1">Interpretation Guardrails</p>
+                      <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+                        <li>No inevitability claims—structural fragility ≠ guaranteed failure</li>
+                        <li>No timeline predictions—risk windows only</li>
+                        <li>No causal claims—identifies structural bottlenecks, not root causes</li>
+                        <li>&quot;Great Filter&quot; terminology is metaphorical only</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+
+          {/* IDMA - Applied CCA */}
+          <div className="mb-12 rounded-lg border border-indigo-200 bg-indigo-50 p-6 dark:border-indigo-800 dark:bg-indigo-900/20">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center rounded-full bg-indigo-600 px-2 py-0.5 text-xs font-medium text-white">APPLIED</span>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                {audience === "default" ? "CCA in Practice: IDMA" : "IDMA: Intuition Decision Making Algorithm"}
+              </h2>
+            </div>
+
+            {audience === "default" ? (
+              <>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  The CIRIS agent uses CCA principles to check its own reasoning. Before making important decisions,
+                  it asks: &quot;Am I relying on truly independent sources, or is this an echo chamber?&quot;
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>How it works:</strong> The agent counts its sources and checks if they&apos;re actually independent.
+                  Ten articles from the same research group count as one effective source, not ten.
+                  If the effective source count is too low, the decision gets flagged for human review.
+                </p>
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                    <p className="text-2xl font-bold text-indigo-600">k_eff</p>
+                    <p className="text-xs text-gray-500">Effective sources</p>
+                  </div>
+                  <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                    <p className="text-2xl font-bold text-indigo-600">&lt;2</p>
+                    <p className="text-xs text-gray-500">Triggers review</p>
+                  </div>
+                  <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                    <p className="text-2xl font-bold text-indigo-600">4th</p>
+                    <p className="text-xs text-gray-500">DMA in pipeline</p>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>IDMA</strong> is the 4th Decision Making Algorithm in the CIRIS Trinity DMA Pipeline (v1.8.0).
+                  It implements CCA as a semantic LLM-based reasoning analysis with no hardware dependencies.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Pipeline Position</h4>
+                    <code className="text-xs block bg-gray-100 dark:bg-gray-900 p-2 rounded">
+                      PDMA, CSDMA, DSDMA (parallel)<br/>
+                      → IDMA (sequential)<br/>
+                      → ASPDMA (action selection)
+                    </code>
+                    <p className="text-xs text-gray-500 mt-2">Non-fatal: pipeline continues if IDMA fails</p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Fragility Triggers</h4>
+                    <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+                      <li><code>k_eff &lt; 2</code> — too few effective sources</li>
+                      <li><code>phase = &quot;rigidity&quot;</code> — echo chamber detected</li>
+                      <li><code>ρ &gt; 0.7</code> — highly correlated sources</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-lg p-4 mb-4">
+                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Epistemic Phase Classification</h4>
+                  <div className="grid grid-cols-3 gap-2 text-xs">
+                    <div className="bg-red-50 dark:bg-red-900/20 p-2 rounded">
+                      <p className="font-medium text-red-700 dark:text-red-400">CHAOS</p>
+                      <p className="text-gray-600 dark:text-gray-400">Contradictory info, no synthesis</p>
+                    </div>
+                    <div className="bg-green-50 dark:bg-green-900/20 p-2 rounded">
+                      <p className="font-medium text-green-700 dark:text-green-400">HEALTHY</p>
+                      <p className="text-gray-600 dark:text-gray-400">Diverse perspectives, synthesizable</p>
+                    </div>
+                    <div className="bg-yellow-50 dark:bg-yellow-900/20 p-2 rounded">
+                      <p className="font-medium text-yellow-700 dark:text-yellow-400">RIGIDITY</p>
+                      <p className="text-gray-600 dark:text-gray-400">Unanimous on complex matters</p>
+                    </div>
+                  </div>
+                </div>
+
+                {audience === "researcher" && (
+                  <div className="border-t border-indigo-200 dark:border-indigo-700 pt-4 mt-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">Implementation Details</h4>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p className="text-indigo-700 dark:text-indigo-400 font-medium mb-1">IDMAResult Schema:</p>
+                        <code className="text-xs block bg-gray-100 dark:bg-gray-900 p-2 rounded">
+                          k_eff: float<br/>
+                          correlation_risk: float (0-1)<br/>
+                          phase: &quot;chaos&quot;|&quot;healthy&quot;|&quot;rigidity&quot;<br/>
+                          fragility_flag: bool<br/>
+                          sources_identified: List[str]<br/>
+                          correlation_factors: List[str]
+                        </code>
+                      </div>
+                      <div>
+                        <p className="text-indigo-700 dark:text-indigo-400 font-medium mb-1">Key Thresholds:</p>
+                        <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+                          <li><code>k_eff &lt; 2</code> — fragile (single effective source)</li>
+                          <li><code>ρ &gt; 0.43</code> — CCA singularity warning</li>
+                          <li><code>ρ &gt; 0.7</code> — high correlation risk</li>
+                          <li>Temperature: 0.0 (deterministic)</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-4 grid md:grid-cols-2 gap-4">
+                      <a href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/logic/dma/idma.py" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">View IDMAEvaluator →</a>
+                      <a href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/logic/dma/prompts/idma.yml" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:underline">View IDMA Prompt Template →</a>
                     </div>
                   </div>
                 )}
@@ -1058,8 +1205,8 @@ export default function ResearchStatusPage() {
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
                       {audience === "default"
-                        ? "Our new paper applying these ideas to batteries, democracies, and biology."
-                        : "Cross-domain validation of k_eff framework across chemistry, political science, and biology."
+                        ? "An engineering risk framework applied to batteries, democracies, financial systems, and biology."
+                        : "Engineering risk framework: k_eff validation across chemistry, political science, finance, and biology. Emphasizes measurement over prediction."
                       }
                     </p>
                     <p className="text-xs text-gray-500">January 2026</p>
