@@ -115,6 +115,64 @@ export default function FederationPage() {
             </div>
           </section>
 
+          {/* The Grid Analogy */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Think of It Like an Electrical Grid
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <strong>Values are power. Work is the result.</strong> The hierarchy transforms one into the other safely.
+            </p>
+            <div className="bg-gray-900 dark:bg-black rounded-lg p-6 text-white mb-6">
+              <div className="grid gap-4 md:grid-cols-4">
+                <div className="text-center">
+                  <p className="text-3xl mb-2">⚡</p>
+                  <p className="font-bold text-purple-400">Power Plant</p>
+                  <p className="text-xs text-gray-400 mt-1">Humans</p>
+                  <p className="text-xs text-gray-500">Generate values</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl mb-2">🏭</p>
+                  <p className="font-bold text-green-400">Substation</p>
+                  <p className="text-xs text-gray-400 mt-1">Type 3</p>
+                  <p className="text-xs text-gray-500">Transform, monitor, isolate</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl mb-2">🔌</p>
+                  <p className="font-bold text-yellow-400">Distribution</p>
+                  <p className="text-xs text-gray-400 mt-1">Type 2</p>
+                  <p className="text-xs text-gray-500">Deliver with breakers</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl mb-2">💡</p>
+                  <p className="font-bold text-red-400">Devices</p>
+                  <p className="text-xs text-gray-400 mt-1">Type 1</p>
+                  <p className="text-xs text-gray-500">Do work</p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 border-l-4 border-green-500">
+                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-1">Type 3 = Substation</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>Transforms</strong> high-level human values into agent-level directives. <strong>Monitors</strong> for faults via IDMA. <strong>Isolates</strong> sections when correlation spikes (circuit breaker). <strong>Smooths</strong> fluctuations so downstream agents get stable input (capacitor).
+                </p>
+              </div>
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 border-l-4 border-yellow-500">
+                <h3 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-1">Type 2 = Distribution Lines</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Delivers power (values) to end devices. Has <strong>circuit breakers</strong> that trip on overload — when a Type 1 agent tries something outside bounds, Type 2 cuts the connection and escalates.
+                </p>
+              </div>
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 border-l-4 border-gray-400">
+                <h3 className="font-semibold text-gray-800 dark:text-gray-300 mb-1">Type 2 + Type 3 Together</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Like a <strong>surge protector</strong>: Type 3 absorbs the shock (detects correlation spikes), Type 2 trips the breaker (enforces boundaries). Neither works alone — together they buffer humans from the raw chaos of millions of Type 1 agents doing work.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Why This Works */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
