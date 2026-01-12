@@ -372,6 +372,58 @@ export default function CoherenceRatchetPage() {
             </p>
           </section>
 
+          {/* The Seismograph - Tracking Fragility */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              The Seismograph
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              Every CIRIS agent runs <a href="/research-status#idma" className="text-brand-primary hover:underline">IDMA</a> on every decision. That means every agent is constantly measuring:
+            </p>
+            <div className="grid gap-3 sm:grid-cols-3 mb-6">
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center">
+                <p className="text-2xl font-bold text-brand-primary mb-1">k</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Sources counted</p>
+              </div>
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center">
+                <p className="text-2xl font-bold text-brand-primary mb-1">ρ</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Correlation estimated</p>
+              </div>
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 text-center">
+                <p className="text-2xl font-bold text-brand-primary mb-1">k_eff</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Effective independence</p>
+              </div>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              Each agent is a sensor. Aggregate them across a region or domain and you get something like a seismograph network for epistemic fragility.
+            </p>
+            <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 rounded-lg p-6 mb-4">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-3">How It Works</h3>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                <p>
+                  <strong>1. Local sensing:</strong> Each agent tracks k, ρ, k_eff, and phase (chaos/healthy/rigidity) for every decision via IDMA.
+                </p>
+                <p>
+                  <strong>2. Signed traces:</strong> These measurements are cryptographically signed and stored in the agent&apos;s audit trail.
+                </p>
+                <p>
+                  <strong>3. Regional aggregation:</strong> <a href="/ciris-scoring" className="text-brand-primary hover:underline">CIRIS Scoring</a> aggregates k_eff and ρ across agents in a domain. Rising ρ across many agents = early warning.
+                </p>
+                <p>
+                  <strong>4. Federation stability:</strong> As long as enough Type 3 agents maintain healthy k_eff (≥2), the federation stays stable—even if some agents drift toward rigidity.
+                </p>
+              </div>
+            </div>
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-3 mb-4">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                <strong>The early warning:</strong> When ρ rises across a region—when agents start agreeing too easily, drawing from correlated sources—that&apos;s the signal. Like seismographs detecting P-waves before the main shock, rising correlation precedes collapse.
+              </p>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">
+              This is why we track k and ρ, not just outcomes. By the time you see the failure, it&apos;s too late. The seismograph gives you lead time.
+            </p>
+          </section>
+
           {/* Technical Constraints - W-01, W-02, W-03, W-07 */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
