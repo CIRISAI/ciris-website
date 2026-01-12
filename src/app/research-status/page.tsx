@@ -48,6 +48,80 @@ export default function ResearchStatusPage() {
             </div>
           </div>
 
+          {/* Source Links */}
+          <div className="mb-12 grid gap-4 md:grid-cols-2">
+            <a
+              href="https://zenodo.org/records/18217688"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors"
+            >
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">📄</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary">Coherence Collapse Analysis Paper</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Engineering risk framework for correlation-driven failures. The math behind &quot;too correlated is the new too quiet.&quot;</p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://zenodo.org/records/18137161"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors"
+            >
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">📄</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary">CIRISAgent Framework Paper</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Open-source ethical AI framework. 22-service architecture for accountable autonomy.</p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://github.com/CIRISAI/RATCHET"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors"
+            >
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🔬</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary">RATCHET</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Reference implementation for CCA validation. ~14k lines of research code testing coherence ratchet claims.</p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://github.com/CIRISAI/CIRISArray"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors"
+            >
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">📡</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary">CIRISArray</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">GPU-based coherence receiver. Detects ordered patterns through massive arrays of coupled oscillators.</p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://github.com/CIRISAI/CIRISOssicle"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors md:col-span-2"
+            >
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🔍</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary">CIRISOssicle</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">GPU workload detection. Identifies unauthorized compute usage through timing-based kernel analysis — no external hardware required.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
           {/* Audience Toggle */}
           <div className="mb-8 flex items-center justify-center gap-2">
             <span className="text-sm text-gray-500 dark:text-gray-400 mr-2">View as:</span>
