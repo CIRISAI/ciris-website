@@ -79,7 +79,7 @@ export default function Homepage() {
       <HomeHeader
         headline="Accountability Without Gatekeepers."
         subheadline="Make lying expensive at planetary scale — without giving anyone the keys to truth."
-        description="CIRIS is open-source infrastructure for trustworthy AI. Many bounded agents, each auditable, each accountable to local humans. Ally is your personal assistant built on it — runtime ethical governance, cryptographic audit trails, complete transparency."
+        description="CIRIS is open-source infrastructure for trustworthy AI — ethics and intuition working together. Many bounded agents, each auditable, each accountable to local humans. Ally is your personal assistant built on it — runtime ethical governance, coherence monitoring, cryptographic audit trails."
         mediaType="video"
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
@@ -125,18 +125,18 @@ export default function Homepage() {
         </div>
       </div>
 
-      {/* The Bigger Picture */}
+      {/* The Bigger Picture - Three Types of AI */}
       <div className="bg-gray-100 dark:bg-gray-900 py-8 border-b border-gray-200 dark:border-gray-800">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="text-lg text-gray-900 dark:text-gray-100 font-medium mb-3">
-            The real X-risk isn&apos;t rogue AI. It&apos;s god-like centralized AI — concentrating power, homogenizing values, eroding human agency.
+            Ethics alone isn&apos;t enough. There are three types of AI — and only one avoids the worst outcomes.
           </p>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            CIRIS is infrastructure for a different path: many smaller agents, each accountable to local human authority, each contributing to a growing corpus of validated ethical reasoning. Our core bet is <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a> — values over chaos.
+            <span className="text-red-500 font-medium">Unethical AI</span> fails obvious tests. <span className="text-yellow-600 font-medium">Ethical AI</span> passes them but still fails silently — when correlated sources create false confidence, it can&apos;t tell. <span className="text-green-600 font-medium">Ethical + Intuitive AI</span> monitors its own coherence and knows when agreement is too easy. CIRIS implements all three layers: ethics, intuition, and <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a>.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <a href="/vision" className="text-brand-primary hover:underline">Read the vision →</a>
-            <a href="/compare" className="text-brand-primary hover:underline">Why CIRIS? →</a>
+            <a href="/compare" className="text-brand-primary hover:underline">Three Types of AI →</a>
+            <a href="/research-status" className="text-brand-primary hover:underline">The research →</a>
             <a href="/explore-a-trace" className="text-brand-primary hover:underline">See a real trace →</a>
           </div>
         </div>
