@@ -356,7 +356,7 @@ export default function CoherenceRatchetPage() {
                 <span className="text-yellow-600 font-bold text-lg">2.</span>
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-white">Ethical AI</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Passes ethics tests but can&apos;t tell when its confidence is unearned. Acts with conviction on echo chambers or noise. Can be <em>more</em> dangerous than Type 1.</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Passes ethics tests but can&apos;t tell when its confidence is unearned. Acts with conviction on echo chambers or noise. Needs Type 3 in the mix.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 bg-green-50 dark:bg-green-900/20 rounded-lg p-4 border-2 border-green-500">

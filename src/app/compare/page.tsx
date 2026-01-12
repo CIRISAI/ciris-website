@@ -104,7 +104,7 @@ export default function ComparePage() {
                 Published principles. Runtime conscience. Auditable. But reasons from correlated sources without knowing it. Acts with conviction on echo chambers.
               </p>
               <p className="text-xs text-yellow-600 dark:text-yellow-400 font-medium">
-                Meets 1-6 but lacks intuition. Can be more dangerous than Type 1.
+                Meets 1-6 but lacks intuition. Needs Type 3 in the mix to stay stable.
               </p>
             </div>
 
