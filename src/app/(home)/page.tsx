@@ -132,7 +132,7 @@ export default function Homepage() {
             Ethics alone isn&apos;t enough. There are three types of AI — and only one avoids the worst outcomes.
           </p>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            <span className="text-red-500 font-medium">Unethical AI</span> fails obvious tests. <span className="text-yellow-600 font-medium">Ethical AI</span> passes them but still fails silently — when correlated sources create false confidence, it can&apos;t tell. <span className="text-green-600 font-medium">Ethical + Intuitive AI</span> monitors its own coherence and knows when agreement is too easy. CIRIS implements all three layers: ethics, intuition, and <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a>.
+            <span className="text-red-500 font-medium">Unethical AI</span> fails obvious tests. <span className="text-yellow-600 font-medium">Ethical AI</span> passes them but acts with false confidence — when correlated sources agree, it can&apos;t tell the difference. <span className="text-green-600 font-medium">Ethical + Intuitive AI</span> monitors its own coherence and knows when agreement is too easy. CIRIS implements all three layers: ethics, intuition, and <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a>.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <a href="/compare" className="text-brand-primary hover:underline">Three Types of AI →</a>

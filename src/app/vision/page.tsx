@@ -15,7 +15,7 @@ export default function VisionPage() {
       <HomeHeader
         headline="You Deserve This."
         subheadline="We all do."
-        description="The real risk isn't rogue AI—it's centralized AI that no one can question, audit, or shut down. CIRIS builds the alternative: many bounded agents, each accountable to local humans, each auditable. Not one god. A federation."
+        description="The real risk isn't rogue AI—it's AI that acts with conviction on bad foundations. Ethics alone isn't enough. CIRIS builds agents with both ethics and intuition: knowing when their own confidence is unearned."
         mediaType="image"
         opacityValue={0.6}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -83,36 +83,40 @@ export default function VisionPage() {
               The Structural Risk
             </h2>
             <p className="text-lg text-brand-primary mb-6">
-              Why centralization fails mathematically.
+              Why ethics alone isn&apos;t enough.
             </p>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
-                As constraints in a system become correlated, effective diversity collapses toward unity — regardless of nominal scale.
-                A thousand correlated rules provide the security of one. This isn&apos;t philosophy. It&apos;s the{" "}
-                <a href="https://en.wikipedia.org/wiki/Design_effect" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                  Kish design effect
-                </a>
-                , validated across battery chemistry, institutional collapse, and microbiome dysbiosis.
+                An AI can pass every ethics test and still fail catastrophically. How? When all its &quot;independent&quot; checks
+                are secretly correlated—drawing from the same training data, the same assumptions, the same blind spots.
+                Agreement feels like validation, but it might just be an echo chamber.
               </p>
               <p>
-                AI accelerates this failure mode. It increases apparent capability (k ↑) while driving behavioral correlation (ρ ↑↑) —
-                masking fragility behind scale. The diversity we think we have (multiple providers, open source options, competing labs)
-                may be nominal, not effective.
+                This is the difference between <span className="text-yellow-600 font-medium">Ethical AI</span> and{" "}
+                <span className="text-green-600 font-medium">Ethical + Intuitive AI</span>.
+                The first passes tests but can&apos;t tell when its confidence is unearned.
+                The second monitors its own reasoning quality—and knows when agreement is too easy.
               </p>
               <p className="font-medium">
-                The alternative isn&apos;t better alignment of centralized systems. It&apos;s architectural: many bounded agents,
-                each independently auditable, each answerable to local authority. Federation preserves effective diversity.
-                Monopoly destroys it.
+                CIRIS implements both layers. Ethics through the{" "}
+                <a href="/how-it-works" className="text-brand-primary hover:underline">six conscience checks</a>.
+                Intuition through{" "}
+                <a href="/research-status#idma" className="text-brand-primary hover:underline">IDMA</a>—the component
+                that asks &quot;are my sources actually independent?&quot; before every action.
               </p>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-wrap gap-4">
               <a
-                href="https://doi.org/10.5281/zenodo.18142668"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/compare"
                 className="inline-flex items-center gap-2 text-brand-primary hover:underline font-medium"
               >
-                Read the research →
+                Three Types of AI →
+              </a>
+              <a
+                href="/coherence-ratchet"
+                className="inline-flex items-center gap-2 text-brand-primary hover:underline font-medium"
+              >
+                The Coherence Ratchet →
               </a>
             </div>
           </div>

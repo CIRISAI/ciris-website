@@ -101,10 +101,10 @@ export default function ComparePage() {
                 <h3 className="text-xl font-bold text-yellow-700 dark:text-yellow-400">Ethical AI</h3>
               </div>
               <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                Published principles. Runtime conscience. Auditable. But reasons from correlated sources without knowing it.
+                Published principles. Runtime conscience. Auditable. But reasons from correlated sources without knowing it. Acts with conviction on echo chambers.
               </p>
               <p className="text-xs text-yellow-600 dark:text-yellow-400 font-medium">
-                Meets 1-6 but lacks intuition. Echo chamber failure mode.
+                Meets 1-6 but lacks intuition. Can be more dangerous than Type 1.
               </p>
             </div>
 

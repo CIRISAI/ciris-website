@@ -32,9 +32,17 @@ export default function CIRISScoringPage() {
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               The CIRIS scoring model provides a dimensionless, auditable measure of an agent&apos;s capacity to maintain coherent, legible, and accountable behavior over time under uncertainty and adversarial pressure.
             </p>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               The score is derived exclusively from cryptographically signed, immutable traces produced by the CIRIS runtime pipeline.
             </p>
+            <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 pl-4 py-3">
+              <p className="text-sm font-semibold text-green-800 dark:text-green-300 mb-1">
+                Relationship to IDMA
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                The scoring model measures <em>outcomes</em> (did the agent maintain coherence?). <a href="/research-status#idma" className="text-brand-primary hover:underline">IDMA</a> operates at <em>runtime</em> (is the agent&apos;s current reasoning trustworthy?). High CIRIS scores over time indicate that IDMA is successfully catching correlation-driven failures before they cause harm.
+              </p>
+            </div>
           </section>
 
           {/* Definitions */}

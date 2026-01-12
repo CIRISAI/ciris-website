@@ -33,12 +33,12 @@ export default function HowItWorksPage() {
           </p>
           <div className="grid gap-4 md:grid-cols-3 mb-6">
             <div className="text-center">
-              <p className="text-3xl font-bold text-brand-primary">11</p>
+              <p className="text-3xl font-bold text-brand-primary">12</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">Pipeline steps per decision</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-brand-primary">6</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Conscience checks</p>
+              <p className="text-3xl font-bold text-green-500">+1</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Intuition check (IDMA)</p>
             </div>
             <div className="text-center">
               <p className="text-3xl font-bold text-brand-primary">100%</p>
@@ -97,7 +97,7 @@ export default function HowItWorksPage() {
             The H3ERE Pipeline
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Every task flows through 7 phases (11 steps including recursive validation). The pipeline is implemented as mixin classes composing the <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">ThoughtProcessor</code>.
+            Every task flows through 8 phases (12 steps including recursive validation). The pipeline is implemented as mixin classes composing the <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">ThoughtProcessor</code>. <span className="text-green-600 font-medium">Step 4 (IDMA)</span> is the intuition check.
           </p>
 
           {/* Pipeline Diagram */}
@@ -116,19 +116,21 @@ export default function HowItWorksPage() {
                 { step: 1, name: "START_ROUND", desc: "Initialize processing round" },
                 { step: 2, name: "GATHER_CONTEXT", desc: "Build comprehensive context for analysis" },
                 { step: 3, name: "PERFORM_DMAS", desc: "Run 3 parallel Decision-Making Algorithms" },
-                { step: 4, name: "PERFORM_ASPDMA", desc: "LLM-powered action selection from DMA results" },
-                { step: 5, name: "CONSCIENCE_EXECUTION", desc: "Ethical validation through 4 faculties" },
-                { step: 6, name: "RECURSIVE_ASPDMA", desc: "(If conscience failed) Re-run action selection" },
-                { step: 7, name: "RECURSIVE_CONSCIENCE", desc: "(If needed) Re-validate refined action" },
-                { step: 8, name: "FINALIZE_ACTION", desc: "Determine final action with any overrides" },
-                { step: 9, name: "PERFORM_ACTION", desc: "Dispatch to appropriate handler" },
-                { step: 10, name: "ACTION_COMPLETE", desc: "Mark execution complete" },
-                { step: 11, name: "ROUND_COMPLETE", desc: "Cleanup and prepare for next cycle" },
+                { step: 4, name: "PERFORM_IDMA", desc: "Intuition check — are sources truly independent?", isIDMA: true },
+                { step: 5, name: "PERFORM_ASPDMA", desc: "LLM-powered action selection from DMA results" },
+                { step: 6, name: "CONSCIENCE_EXECUTION", desc: "Ethical validation through 4 faculties" },
+                { step: 7, name: "RECURSIVE_ASPDMA", desc: "(If conscience failed) Re-run action selection" },
+                { step: 8, name: "RECURSIVE_CONSCIENCE", desc: "(If needed) Re-validate refined action" },
+                { step: 9, name: "FINALIZE_ACTION", desc: "Determine final action with any overrides" },
+                { step: 10, name: "PERFORM_ACTION", desc: "Dispatch to appropriate handler" },
+                { step: 11, name: "ACTION_COMPLETE", desc: "Mark execution complete" },
+                { step: 12, name: "ROUND_COMPLETE", desc: "Cleanup and prepare for next cycle" },
               ].map((item, idx) => (
-                <div key={item.step} className={`flex items-center gap-4 ${item.step === 6 || item.step === 7 ? 'opacity-60' : ''}`}>
+                <div key={item.step} className={`flex items-center gap-4 ${item.step === 7 || item.step === 8 ? 'opacity-60' : ''}`}>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold ${
-                    item.step === 5 ? 'bg-brand-primary text-white' :
-                    item.step === 6 || item.step === 7 ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300' :
+                    item.step === 4 ? 'bg-green-500 text-white' :
+                    item.step === 6 ? 'bg-brand-primary text-white' :
+                    item.step === 7 || item.step === 8 ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300' :
                     'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                   }`}>
                     {item.step}
@@ -136,7 +138,7 @@ export default function HowItWorksPage() {
                   <div className="flex-1">
                     <span className="font-mono text-sm font-semibold text-gray-900 dark:text-white">{item.name}</span>
                     <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">{item.desc}</span>
-                    {(item.step === 6 || item.step === 7) && (
+                    {(item.step === 7 || item.step === 8) && (
                       <span className="text-xs text-gray-400 ml-2">(conditional)</span>
                     )}
                   </div>
@@ -146,13 +148,13 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
-        {/* Four DMAs */}
+        {/* Five DMAs */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
             Decision-Making Algorithms (DMAs)
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Four DMAs provide multi-perspective analysis. Three run in parallel during Phase 3, one handles action selection in Phase 4.
+            Five DMAs provide multi-perspective analysis. Three run in parallel (ethics, common sense, domain). Then <strong className="text-green-600">IDMA checks intuition</strong>. Finally, action selection chooses the response.
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
@@ -173,10 +175,19 @@ export default function HowItWorksPage() {
                 Assesses alignment with domain-specific rules, objectives, and knowledge. Configured per agent template. Returns <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs">domain_alignment</code>.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+            <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-6">
+              <h3 className="font-bold text-green-700 dark:text-green-400 mb-2">
+                Intuition DMA (IDMA){" "}
+                <a href="/research-status#idma" className="text-xs font-normal text-brand-primary hover:underline">Learn more →</a>
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Checks whether DMA results are truly independent or secretly correlated. Monitors for echo chamber patterns. If correlation is too high, flags the decision for caution. This is the &quot;intuition&quot; that distinguishes Type 3 AI.
+              </p>
+            </div>
+            <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 md:col-span-2">
               <h3 className="font-bold text-gray-900 dark:text-white mb-2">Action Selection DMA</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                LLM-powered selection from 10 available actions. Takes aggregated DMA results as input. Supports recursive retry if conscience fails.
+                LLM-powered selection from 10 available actions. Takes aggregated DMA results (including IDMA confidence assessment) as input. Supports recursive retry if conscience fails.
               </p>
             </div>
           </div>

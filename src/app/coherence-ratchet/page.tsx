@@ -11,7 +11,7 @@ export default function CoherenceRatchetPage() {
       <HomeHeader
         headline="The Coherence Ratchet"
         subheadline="Making Lies Expensive Without Giving Anyone the Keys to Truth"
-        description="Not a moral doctrine. Accountability infrastructure."
+        description="Ethics isn't enough. You need intuition too."
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -279,19 +279,96 @@ export default function CoherenceRatchetPage() {
             </p>
           </section>
 
-          {/* Correlated Failure */}
+          {/* Correlated Failure - The Echo Chamber Problem */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              The Correlated Failure Problem
+              The Echo Chamber Problem
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              The serious risk isn&apos;t conspiracy. It&apos;s <strong>correlated blind spots</strong>—everyone sharing the same wrong assumption. If every model has the same failure mode, cross-comparison won&apos;t catch it.
+              The serious risk isn&apos;t conspiracy. It&apos;s <strong>everyone agreeing for the wrong reasons</strong>.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              The mitigation is diversity: diverse models, diverse human authorities, domain stratification, drift monitoring over time.
+              Imagine a room where five people all nod along to an idea. Feels like consensus, right? But what if they&apos;re all reading the same Twitter feed? Their &quot;agreement&quot; isn&apos;t five independent confirmations—it&apos;s one opinion echoed five times.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              AI systems have this problem at scale. Models trained on similar data, optimized with similar methods, deployed in similar ways. When they agree, it might mean they&apos;re right. Or it might mean they all inherited the same blind spot.
+            </p>
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-3 mb-4">
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>The hidden buildup:</strong> Systems that look stable because nothing&apos;s obviously wrong—while fragility accumulates. When correlated systems finally break, they break together. Too much agreement can be more dangerous than obvious chaos.
+              </p>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">
+              Ethics alone doesn&apos;t catch this. An AI can pass every ethics test while still being dangerously overconfident—because all its &quot;independent&quot; checks are secretly correlated.
+            </p>
+          </section>
+
+          {/* The Solution: Intuition */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              The Missing Piece: Intuition
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              This is why CIRIS doesn&apos;t just check ethics. It checks <strong>whether the ethics checks themselves are trustworthy</strong>.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              We call this intuition—the ability to sense when something feels off even if you can&apos;t point to a specific rule violation. In practice, it means monitoring correlation: Are my sources actually independent? Is agreement too easy? Am I in an echo chamber?
+            </p>
+            <div className="grid gap-4 sm:grid-cols-3 mb-4">
+              <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-4 text-center">
+                <p className="font-bold text-red-700 dark:text-red-300 mb-1">Chaos</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Too much disagreement. Nothing coherent emerges.</p>
+              </div>
+              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 text-center border-2 border-green-500">
+                <p className="font-bold text-green-700 dark:text-green-300 mb-1">Healthy</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Independent sources, genuine agreement. Real signal.</p>
+              </div>
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 text-center">
+                <p className="font-bold text-blue-700 dark:text-blue-300 mb-1">Rigidity</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Too much agreement. Echo chamber. Hidden fragility.</p>
+              </div>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              CIRIS stays in the healthy middle. When correlation gets too high, it flags the situation: &quot;I have high confidence, but my sources might not be independent—treat this with caution.&quot;
             </p>
             <p className="text-gray-600 dark:text-gray-400">
-              The goal isn&apos;t perfection. It&apos;s early visibility, durable evidence, and distributed control.
+              This is implemented in <a href="/research-status#idma" className="underline hover:text-brand-primary">IDMA</a> (Intuition Decision Making Algorithm)—the component that runs after ethical analysis but before action, checking whether the reasoning process itself is sound.
+            </p>
+          </section>
+
+          {/* Three Types of AI */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Three Types of AI
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              This gives us a simple way to think about AI systems:
+            </p>
+            <div className="space-y-3 mb-4">
+              <div className="flex items-start gap-3 bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
+                <span className="text-red-500 font-bold text-lg">1.</span>
+                <div>
+                  <p className="font-semibold text-gray-900 dark:text-white">Unethical AI</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Fails basic ethics tests. Obviously dangerous.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4">
+                <span className="text-yellow-600 font-bold text-lg">2.</span>
+                <div>
+                  <p className="font-semibold text-gray-900 dark:text-white">Ethical AI</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Passes ethics tests but can&apos;t tell when its confidence is unearned. Acts with conviction on echo chambers or noise. Can be <em>more</em> dangerous than Type 1.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 bg-green-50 dark:bg-green-900/20 rounded-lg p-4 border-2 border-green-500">
+                <span className="text-green-600 font-bold text-lg">3.</span>
+                <div>
+                  <p className="font-semibold text-gray-900 dark:text-white">Ethical + Intuitive AI</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Passes ethics tests AND monitors its own reasoning quality. Knows when agreement is too easy. CIRIS is here.</p>
+                </div>
+              </div>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">
+              Most AI safety work focuses on moving from Type 1 to Type 2. We think the real challenge is Type 2 to Type 3—and most frameworks aren&apos;t even trying. <a href="/compare" className="underline hover:text-brand-primary">See the comparison →</a>
             </p>
           </section>
 
@@ -361,7 +438,10 @@ export default function CoherenceRatchetPage() {
           {/* The Ask */}
           <section className="mb-8 rounded-lg border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-8">
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              We&apos;re not claiming we solved alignment. We&apos;re claiming we built infrastructure where alignment can emerge—without handing the keys to whoever wins the race.
+              We&apos;re not claiming we solved alignment. We&apos;re claiming most approaches stop at ethics—and that&apos;s not enough.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              An AI that passes every ethics test can still fail catastrophically if it can&apos;t tell when its confidence is unearned. That&apos;s the gap between Type 2 and Type 3. That&apos;s what the Coherence Ratchet addresses.
             </p>
             <p className="text-xl font-bold text-gray-900 dark:text-white mb-4">
               Verify it yourself.
