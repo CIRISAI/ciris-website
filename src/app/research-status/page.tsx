@@ -164,66 +164,55 @@ export default function ResearchStatusPage() {
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
               What is the Coherence Ratchet?
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                {audience === "default" && (
-                  <>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>The Problem:</strong> How can you tell if an AI is being honest?
-                    </p>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>Our Idea:</strong> Lying is hard. The more independent sources check an AI&apos;s answers, the harder it is to keep lies consistent. At some point, telling the truth becomes easier than maintaining the lie.
-                    </p>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>A Surprise:</strong> The same principles that make lying difficult also describe what helps communities succeed.
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      This page shares what we learned while testing these ideas.
-                    </p>
-                  </>
-                )}
-                {audience === "programmer" && (
-                  <>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>The Problem:</strong> How do you detect if an AI agent is being deceptive when you can&apos;t read its internal state?
-                    </p>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>The Hypothesis:</strong> Sustained deception is computationally expensive. An agent that lies must maintain consistency across many independent validators—each additional constraint makes the &quot;space of viable lies&quot; exponentially smaller.
-                    </p>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>The Insight:</strong> The same equation that governs deception resistance (J) also governs flourishing capacity (C). Security and flourishing share the same mathematical structure.
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      <strong>RATCHET</strong> tests whether this hypothesis holds computationally. <strong>CIRIS</strong> is a separate agent that applies these principles in practice.
-                    </p>
-                  </>
-                )}
-                {audience === "researcher" && (
-                  <>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>Core Claim:</strong> Deception detection via constraint manifold intersection topology. Under transversality, k independent hyperplane constraints reduce the feasible deceptive region exponentially: V(k) = V(0)·exp(-λ·k_eff).
-                    </p>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>Complexity Result:</strong> CONSISTENT-LIE is NP-complete; honest agents compute in O(n·k) while deceptive agents must solve SAT instances. Conditional on ETH, this yields T_D/T_H = Ω(2^(m/poly(n))).
-                    </p>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                      <strong>Duality:</strong> The defense function J = k_eff·(1-ρ̄)·λ·σ is structurally identical to the flourishing capacity C, suggesting a unified geometric framework for safety and coordination.
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      RATCHET validates these claims computationally within stated preconditions. See Book IX of the CIRIS Covenant for formal treatment.
-                    </p>
-                  </>
-                )}
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/jc_duality.png"
-                  alt="J=C Duality: Defense and Flourishing share the same equation"
-                  width={400}
-                  height={300}
-                  className="rounded-lg"
-                />
-              </div>
+            <div>
+              {audience === "default" && (
+                <>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>The Problem:</strong> How can you tell if an AI is being honest?
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>Our Idea:</strong> Lying is hard. The more independent sources check an AI&apos;s answers, the harder it is to keep lies consistent. At some point, telling the truth becomes easier than maintaining the lie.
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>A Surprise:</strong> The same principles that make lying difficult also describe what helps communities succeed.
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    This page shares what we learned while testing these ideas.
+                  </p>
+                </>
+              )}
+              {audience === "programmer" && (
+                <>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>The Problem:</strong> How do you detect if an AI agent is being deceptive when you can&apos;t read its internal state?
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>The Hypothesis:</strong> Sustained deception is computationally expensive. An agent that lies must maintain consistency across many independent validators—each additional constraint makes the &quot;space of viable lies&quot; exponentially smaller.
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>The Insight:</strong> The mathematical structure that enables deception resistance also enables effective coordination. Security and flourishing share common foundations.
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <strong>RATCHET</strong> tests whether this hypothesis holds computationally. <strong>CIRIS</strong> is a separate agent that applies these principles in practice.
+                  </p>
+                </>
+              )}
+              {audience === "researcher" && (
+                <>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>Core Claim:</strong> Deception detection via constraint manifold intersection topology. Under transversality, k independent hyperplane constraints reduce the feasible deceptive region exponentially: V(k) = V(0)·exp(-λ·k_eff).
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>Complexity Result:</strong> CONSISTENT-LIE is NP-complete; honest agents compute in O(n·k) while deceptive agents must solve SAT instances. Conditional on ETH, this yields T_D/T_H = Ω(2^(m/poly(n))).
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>Framework:</strong> The defense function J = k_eff·(1-ρ̄)·λ·σ provides a unified geometric framework for measuring both safety constraints and coordination capacity.
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    RATCHET validates these claims computationally within stated preconditions. See Book IX of the CIRIS Covenant for formal treatment.
+                  </p>
+                </>
+              )}
             </div>
           </div>
 
