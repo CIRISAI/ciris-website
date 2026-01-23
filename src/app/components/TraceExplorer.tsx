@@ -731,7 +731,7 @@ function DMAResultCard({
           <span className="text-yellow-600 dark:text-yellow-400">{icon}</span>
           <h4 className="font-semibold text-gray-900 dark:text-white">{title}</h4>
         </div>
-        {score !== undefined && (
+        {typeof score === "number" && (
           <div className={`px-3 py-1 rounded-full ${getScoreBgColor(score)}`}>
             <span className={`font-bold ${getScoreColor(score)}`}>
               {(score * 100).toFixed(0)}%
@@ -1907,7 +1907,7 @@ function ConscienceCheckCard({
           </div>
         </div>
         <div className="flex items-center gap-2">
-          {score !== undefined && threshold !== undefined && (
+          {typeof score === "number" && typeof threshold === "number" && (
             <span className={`text-xs font-mono px-2 py-1 rounded ${
               passed
                 ? "bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200"
@@ -1916,7 +1916,7 @@ function ConscienceCheckCard({
               {score.toFixed(2)} / {threshold.toFixed(2)}
             </span>
           )}
-          {confidence !== undefined && (
+          {typeof confidence === "number" && (
             <span className={`text-xs font-mono px-2 py-1 rounded ${
               passed
                 ? "bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200"
