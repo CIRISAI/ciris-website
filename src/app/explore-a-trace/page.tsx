@@ -41,7 +41,18 @@ function formatTimestamp(ts: string): string {
   });
 }
 
-function ScoreGauge({ label, value, max = 1 }: { label: string; value: number; max?: number }) {
+function ScoreGauge({ label, value, max = 1 }: { label: string; value: number | null | undefined; max?: number }) {
+  if (value === null || value === undefined) {
+    return (
+      <div className="flex items-center gap-2">
+        <span className="text-xs text-gray-500 dark:text-gray-400 w-16">{label}</span>
+        <div className="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div className="h-full bg-gray-400 transition-all" style={{ width: "0%" }} />
+        </div>
+        <span className="text-xs font-mono text-gray-400 w-8">—</span>
+      </div>
+    );
+  }
   const percent = (value / max) * 100;
   const color = percent >= 80 ? "bg-green-500" : percent >= 60 ? "bg-yellow-500" : "bg-red-500";
 
