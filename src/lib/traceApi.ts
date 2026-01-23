@@ -5,7 +5,45 @@
 
 const API_BASE = "https://lens.ciris-services-1.ai/api/v1/covenant/repository";
 
-// Types matching the API response structure
+// Raw API response structure (nested)
+interface ApiTraceRaw {
+  trace_id: string;
+  timestamp: string;
+  agent: {
+    name: string;
+    id_hash: string;
+    domain: string;
+  };
+  thought: {
+    thought_id: string;
+    type: string;
+    depth: number;
+    cognitive_state: string;
+  };
+  action: {
+    selected: string;
+    success: boolean;
+    was_overridden: boolean;
+    rationale: string;
+  };
+  scores: {
+    csdma_plausibility: number | null;
+    dsdma_alignment: number | null;
+    idma_k_eff: number | null;
+    idma_fragility: boolean | null;
+    idma_phase: string | null;
+  };
+  conscience: {
+    passed: boolean;
+    entropy_passed: boolean | null;
+    coherence_passed: boolean | null;
+    optimization_veto_passed: boolean | null;
+    epistemic_humility_passed: boolean | null;
+  };
+  dma_results: string;
+}
+
+// Flattened structure for UI consumption
 export interface ApiTraceListItem {
   trace_id: string;
   timestamp: string;
@@ -89,8 +127,8 @@ export interface ApiTraceDetail {
   action_result: string;
 }
 
-export interface ApiTraceListResponse {
-  traces: ApiTraceListItem[];
+interface ApiTraceListResponse {
+  traces: ApiTraceRaw[];
   pagination: {
     total: number;
     limit: number;
@@ -121,6 +159,29 @@ export interface TraceData {
 }
 
 /**
+ * Transform raw API trace to flattened structure
+ */
+function flattenTrace(raw: ApiTraceRaw): ApiTraceListItem {
+  return {
+    trace_id: raw.trace_id,
+    timestamp: raw.timestamp,
+    agent_name: raw.agent?.name ?? "Unknown",
+    cognitive_state: raw.thought?.cognitive_state ?? "unknown",
+    thought_type: raw.thought?.type ?? "standard",
+    thought_depth: raw.thought?.depth ?? 0,
+    selected_action: raw.action?.selected ?? "UNKNOWN",
+    action_success: raw.action?.success ?? false,
+    conscience_passed: raw.conscience?.passed ?? false,
+    csdma_plausibility_score: raw.scores?.csdma_plausibility,
+    dsdma_domain_alignment: raw.scores?.dsdma_alignment,
+    dsdma_domain: raw.agent?.domain ?? "unknown",
+    idma_k_eff: raw.scores?.idma_k_eff,
+    idma_fragility_flag: raw.scores?.idma_fragility,
+    idma_phase: raw.scores?.idma_phase,
+  };
+}
+
+/**
  * Fetch list of public sample traces
  */
 export async function fetchPublicTraces(): Promise<ApiTraceListItem[]> {
@@ -129,7 +190,7 @@ export async function fetchPublicTraces(): Promise<ApiTraceListItem[]> {
     throw new Error(`Failed to fetch traces: ${response.status}`);
   }
   const data: ApiTraceListResponse = await response.json();
-  return data.traces;
+  return data.traces.map(flattenTrace);
 }
 
 /**
