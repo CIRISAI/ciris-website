@@ -709,10 +709,10 @@ function isFragileReasoning(k_eff: number): boolean {
                   ) : (
                     <div className="bg-gray-900 rounded p-3 overflow-x-auto">
                       <pre className="text-xs text-green-400 font-mono whitespace-pre">{`// Sample IDMA measurements (n=${liveTraces.length})
-${liveTraces.slice(0, 3).map(t => `{ agent: "${t.agent_name}", k_eff: ${t.idma_k_eff?.toFixed(2) ?? "null"}, phase: "${t.idma_phase ?? "unknown"}", fragile: ${t.idma_fragility_flag} }`).join(",\n")}
+${liveTraces.slice(0, 3).map(t => `{ agent: "${t.agent_name}", k_eff: ${t.idma_k_eff !== null && t.idma_k_eff !== undefined ? t.idma_k_eff.toFixed(2) : "null"}, phase: "${t.idma_phase ?? "unknown"}", fragile: ${t.idma_fragility_flag} }`).join(",\n")}
 
 // Aggregates
-mean_k_eff: ${(liveTraces.reduce((sum, t) => sum + (t.idma_k_eff ?? 0), 0) / liveTraces.length).toFixed(2)}
+mean_k_eff: ${(() => { const validTraces = liveTraces.filter(t => t.idma_k_eff !== null && t.idma_k_eff !== undefined); return validTraces.length > 0 ? (validTraces.reduce((sum, t) => sum + (t.idma_k_eff ?? 0), 0) / validTraces.length).toFixed(2) : "N/A"; })()}
 fragility_rate: ${(liveTraces.filter(t => t.idma_fragility_flag).length / liveTraces.length * 100).toFixed(0)}%`}</pre>
                     </div>
                   )}
