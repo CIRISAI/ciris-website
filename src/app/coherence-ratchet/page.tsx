@@ -537,7 +537,7 @@ function isFragileReasoning(k_eff: number): boolean {
                             </span>
                           </div>
                           <p className="text-xs text-gray-500 mt-1">
-                            True diversity score: {trace.idma_k_eff !== null ? trace.idma_k_eff.toFixed(1) : "—"} independent perspectives
+                            True diversity score: {typeof trace.idma_k_eff === "number" ? trace.idma_k_eff.toFixed(1) : "—"} independent perspectives
                           </p>
                         </div>
                       ))}
@@ -648,8 +648,8 @@ function isFragileReasoning(k_eff: number): boolean {
                           <div className="grid grid-cols-3 gap-2 text-center">
                             <div>
                               <p className="text-xs text-gray-500 dark:text-gray-400">k_eff</p>
-                              <p className={`text-lg font-bold ${trace.idma_k_eff !== null && trace.idma_k_eff < 2 ? "text-orange-600" : "text-green-600"}`}>
-                                {trace.idma_k_eff !== null ? trace.idma_k_eff.toFixed(2) : "—"}
+                              <p className={`text-lg font-bold ${typeof trace.idma_k_eff === "number" && trace.idma_k_eff < 2 ? "text-orange-600" : "text-green-600"}`}>
+                                {typeof trace.idma_k_eff === "number" ? trace.idma_k_eff.toFixed(2) : "—"}
                               </p>
                             </div>
                             <div>
