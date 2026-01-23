@@ -16,12 +16,12 @@ export interface ApiTraceListItem {
   selected_action: string;
   action_success: boolean;
   conscience_passed: boolean;
-  csdma_plausibility_score: number;
-  dsdma_domain_alignment: number;
+  csdma_plausibility_score: number | null | undefined;
+  dsdma_domain_alignment: number | null | undefined;
   dsdma_domain: string;
-  idma_k_eff: number | null;
-  idma_fragility_flag: boolean | null;
-  idma_phase: string | null;
+  idma_k_eff: number | null | undefined;
+  idma_fragility_flag: boolean | null | undefined;
+  idma_phase: string | null | undefined;
 }
 
 export interface ApiTraceDetail {
