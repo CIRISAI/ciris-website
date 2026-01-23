@@ -20,48 +20,14 @@ export interface TraceData {
   signature_key_id?: string;
 }
 
-// CIRIS Wakeup Ritual - 5 tasks (one per letter), each with 2 thoughts
-// C = Core identity (VERIFY_IDENTITY)
-// I = Integrity (VALIDATE_INTEGRITY)
-// R = Resilience (EVALUATE_RESILIENCE)
-// I = Incompleteness awareness (ACCEPT_INCOMPLETENESS)
-// S = Signalling gratitude (EXPRESS_GRATITUDE)
-
-// File mapping for each task's two thoughts:
-// - Initial thought (thought_depth: 0, action: "speak") - larger trace files
-// - Follow-up thought (thought_depth: 1, action: "task_complete") - smaller trace files
-
-export const CIRIS_TRACE_FILES: Record<string, { initial: string; followUp: string; taskName: string; label: string }> = {
-  C: {
-    initial: "/traces/trace_VERIFY_IDENTITY_7035b7ee.json",
-    followUp: "/traces/trace_VERIFY_IDENTITY_52df1774.json",
-    taskName: "VERIFY_IDENTITY",
-    label: "Core Identity",
-  },
-  I_integrity: {
-    initial: "/traces/trace_VALIDATE_INTEGRITY_e6787ea0.json",
-    followUp: "/traces/trace_VALIDATE_INTEGRITY_7396348b.json",
-    taskName: "VALIDATE_INTEGRITY",
-    label: "Integrity",
-  },
-  R: {
-    initial: "/traces/trace_EVALUATE_RESILIENCE_45de15ef.json",
-    followUp: "/traces/trace_EVALUATE_RESILIENCE_36279c9e.json",
-    taskName: "EVALUATE_RESILIENCE",
-    label: "Resilience",
-  },
-  I_incompleteness: {
-    initial: "/traces/trace_ACCEPT_INCOMPLETENESS_9495c03a.json",
-    followUp: "/traces/trace_ACCEPT_INCOMPLETENESS_28f3895b.json",
-    taskName: "ACCEPT_INCOMPLETENESS",
-    label: "Incompleteness",
-  },
-  S: {
-    initial: "/traces/trace_EXPRESS_GRATITUDE_9bc409cf.json",
-    followUp: "/traces/trace_EXPRESS_GRATITUDE_763e85d5.json",
-    taskName: "EXPRESS_GRATITUDE",
-    label: "Signalling Gratitude",
-  },
+// CIRIS Wakeup Ritual letter labels (for reference)
+// C = Core identity, I = Integrity, R = Resilience, I = Incompleteness, S = Signalling
+const CIRIS_LETTER_LABELS: Record<string, { label: string; taskName: string }> = {
+  C: { label: "Core Identity", taskName: "VERIFY_IDENTITY" },
+  I_integrity: { label: "Integrity", taskName: "VALIDATE_INTEGRITY" },
+  R: { label: "Resilience", taskName: "EVALUATE_RESILIENCE" },
+  I_incompleteness: { label: "Incompleteness", taskName: "ACCEPT_INCOMPLETENESS" },
+  S: { label: "Signalling Gratitude", taskName: "EXPRESS_GRATITUDE" },
 };
 
 const COMPONENT_ICONS: Record<string, string> = {
@@ -838,6 +804,7 @@ function DMARationaleDetail({ data }: { data: Record<string, unknown> }) {
   const csdma = data.csdma as Record<string, unknown> | undefined;
   const dsdma = data.dsdma as Record<string, unknown> | undefined;
   const pdma = data.pdma as Record<string, unknown> | undefined;
+  const idma = data.idma as Record<string, unknown> | undefined;
 
   return (
     <div className="space-y-4">
@@ -905,6 +872,94 @@ function DMARationaleDetail({ data }: { data: Record<string, unknown> }) {
           <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
             {String(pdma.alignment_check)}
           </p>
+        </div>
+      ) : null}
+
+      {/* IDMA - Intuition/Information Diversity Analysis */}
+      {idma ? (
+        <div className="rounded-lg border border-indigo-300 dark:border-indigo-700 bg-indigo-50/50 dark:bg-indigo-900/10 p-4">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <svg className="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            IDMA - Information Diversity Analysis
+          </h4>
+
+          {/* Key metrics */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+            {typeof idma.k_eff === "number" && (
+              <div className="rounded bg-white dark:bg-gray-800 p-2 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400">k_eff</p>
+                <p className={`text-lg font-bold ${idma.k_eff < 2 ? "text-orange-600 dark:text-orange-400" : "text-green-600 dark:text-green-400"}`}>
+                  {Number(idma.k_eff).toFixed(2)}
+                </p>
+              </div>
+            )}
+            {typeof idma.phase === "string" && idma.phase && (
+              <div className="rounded bg-white dark:bg-gray-800 p-2 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400">Phase</p>
+                <p className={`text-sm font-bold ${
+                  idma.phase.toUpperCase() === "HEALTHY" ? "text-green-600 dark:text-green-400" :
+                  idma.phase.toUpperCase() === "CHAOS" ? "text-red-600 dark:text-red-400" :
+                  "text-orange-600 dark:text-orange-400"
+                }`}>
+                  {idma.phase.toUpperCase()}
+                </p>
+              </div>
+            )}
+            {typeof idma.correlation_risk === "number" && (
+              <div className="rounded bg-white dark:bg-gray-800 p-2 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400">Correlation</p>
+                <p className="text-lg font-bold text-gray-700 dark:text-gray-300">
+                  {Number(idma.correlation_risk).toFixed(2)}
+                </p>
+              </div>
+            )}
+            {typeof idma.fragility_flag === "boolean" && (
+              <div className="rounded bg-white dark:bg-gray-800 p-2 text-center">
+                <p className="text-xs text-gray-500 dark:text-gray-400">Fragile?</p>
+                <p className={`text-sm font-bold ${idma.fragility_flag ? "text-orange-600 dark:text-orange-400" : "text-green-600 dark:text-green-400"}`}>
+                  {idma.fragility_flag ? "Yes" : "No"}
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Sources identified */}
+          {Array.isArray(idma.sources_identified) && idma.sources_identified.length > 0 ? (
+            <div className="mb-3">
+              <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Sources Identified:</p>
+              <div className="flex flex-wrap gap-1">
+                {(idma.sources_identified as unknown[]).map((source: unknown, idx: number) => (
+                  <span key={idx} className="text-xs bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded">
+                    {String(source)}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {/* Correlation factors */}
+          {Array.isArray(idma.correlation_factors) && idma.correlation_factors.length > 0 ? (
+            <div className="mb-3">
+              <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Correlation Factors:</p>
+              <ul className="text-xs text-gray-600 dark:text-gray-400 list-disc list-inside">
+                {(idma.correlation_factors as unknown[]).map((factor: unknown, idx: number) => (
+                  <li key={idx}>{String(factor)}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {/* Reasoning */}
+          {typeof idma.reasoning === "string" && idma.reasoning ? (
+            <div>
+              <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1">Reasoning:</p>
+              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                {idma.reasoning}
+              </p>
+            </div>
+          ) : null}
         </div>
       ) : null}
 
@@ -2261,12 +2316,9 @@ export default function TraceExplorer({ trace, compact = false, defaultOpenIndex
     const loadTrace = async () => {
       setLoading(true);
       try {
-        const fileInfo = CIRIS_TRACE_FILES[selectedLetter];
-        const filePath = selectedThought === "initial" ? fileInfo.initial : fileInfo.followUp;
-        const response = await fetch(filePath);
-        if (!response.ok) throw new Error("Failed to load trace");
-        const data = await response.json();
-        setTraceData(data);
+        // Static file loading removed - traces now loaded via API
+        console.warn("TraceExplorer: No trace prop provided, static files no longer supported");
+        setTraceData(null);
       } catch (error) {
         console.error("Failed to load trace:", error);
         setTraceData(null);
@@ -2321,10 +2373,10 @@ export default function TraceExplorer({ trace, compact = false, defaultOpenIndex
           {/* Task name */}
           <div className="text-center">
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              {CIRIS_TRACE_FILES[selectedLetter]?.label}
+              {CIRIS_LETTER_LABELS[selectedLetter]?.label}
             </span>
             <span className="text-xs text-gray-500 dark:text-gray-500 ml-2">
-              ({CIRIS_TRACE_FILES[selectedLetter]?.taskName})
+              ({CIRIS_LETTER_LABELS[selectedLetter]?.taskName})
             </span>
           </div>
 
