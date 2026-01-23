@@ -108,7 +108,7 @@ function TraceCard({
         <ScoreGauge label="DSDMA" value={trace.dsdma_domain_alignment} />
       </div>
 
-      {trace.idma_k_eff !== null && (
+      {typeof trace.idma_k_eff === "number" && (
         <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
