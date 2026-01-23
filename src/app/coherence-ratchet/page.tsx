@@ -2,12 +2,37 @@
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { fetchPublicTraces, ApiTraceListItem } from "@/lib/traceApi";
 
 type AudienceLevel = "simple" | "developer" | "researcher";
 
+// Phase colors for IDMA display
+const PHASE_COLORS: Record<string, string> = {
+  CHAOS: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300 border-red-300 dark:border-red-700",
+  HEALTHY: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 border-green-300 dark:border-green-700",
+  RIGIDITY: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 border-orange-300 dark:border-orange-700",
+};
+
 export default function CoherenceRatchetPage() {
   const [audience, setAudience] = useState<AudienceLevel>("simple");
+  const [liveTraces, setLiveTraces] = useState<ApiTraceListItem[]>([]);
+  const [loadingTraces, setLoadingTraces] = useState(true);
+
+  // Fetch live traces for IDMA data display
+  useEffect(() => {
+    async function loadTraces() {
+      try {
+        const traces = await fetchPublicTraces();
+        setLiveTraces(traces);
+      } catch (err) {
+        console.error("Failed to load traces:", err);
+      } finally {
+        setLoadingTraces(false);
+      }
+    }
+    loadTraces();
+  }, []);
 
   return (
     <>
@@ -475,13 +500,52 @@ function isFragileReasoning(k_eff: number): boolean {
                   </div>
                 </div>
 
-                <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-3">
+                <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-3 mb-4">
                   <div className="flex items-start gap-2">
                     <span className="text-lg flex-shrink-0">🤖</span>
                     <p className="text-gray-700 dark:text-gray-300">
                       <strong>&quot;When lots of us start agreeing too much, that&apos;s actually a warning sign.&quot;</strong> Something might be manipulating us all the same way.
                     </p>
                   </div>
+                </div>
+
+                {/* Live data - simple view */}
+                <div className="rounded-lg border-2 border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-900/20 p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <span className="font-semibold text-gray-900 dark:text-white">Live: Real CIRIS Agent Decisions</span>
+                  </div>
+                  {loadingTraces ? (
+                    <p className="text-sm text-gray-500 text-center py-2">Loading...</p>
+                  ) : liveTraces.length === 0 ? (
+                    <p className="text-sm text-gray-500 text-center py-2">No examples available right now</p>
+                  ) : (
+                    <div className="space-y-2">
+                      {liveTraces.slice(0, 2).map((trace) => (
+                        <div key={trace.trace_id} className="bg-white dark:bg-gray-800 rounded p-3 text-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="font-medium text-gray-900 dark:text-white">{trace.agent_name} made a decision</span>
+                            <span className={`text-xs px-2 py-0.5 rounded-full ${
+                              trace.idma_fragility_flag
+                                ? "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300"
+                                : "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"
+                            }`}>
+                              {trace.idma_fragility_flag ? "Needs more viewpoints" : "Good diversity"}
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-500 mt-1">
+                            True diversity score: {trace.idma_k_eff !== null ? trace.idma_k_eff.toFixed(1) : "—"} independent perspectives
+                          </p>
+                        </div>
+                      ))}
+                      <a href="/explore-a-trace" className="block text-center text-sm text-brand-primary hover:underline">
+                        See how these agents reasoned &rarr;
+                      </a>
+                    </div>
+                  )}
                 </div>
               </>
             )}
@@ -546,6 +610,67 @@ function isFragileReasoning(k_eff: number): boolean {
                     <li>Alert thresholds: <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">rho &gt; 0.6</code> OR <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">k_eff &lt; 1.5</code></li>
                   </ul>
                 </div>
+
+                {/* Live IDMA Data */}
+                <div className="rounded-lg border-2 border-indigo-300 dark:border-indigo-700 bg-indigo-50 dark:bg-indigo-900/20 p-4 mb-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                      </span>
+                      Live IDMA Data from Public Traces
+                    </h4>
+                    <a href="/explore-a-trace" className="text-xs text-brand-primary hover:underline">
+                      Explore traces &rarr;
+                    </a>
+                  </div>
+
+                  {loadingTraces ? (
+                    <div className="flex items-center justify-center py-4">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-indigo-600"></div>
+                      <span className="ml-2 text-sm text-gray-500">Loading...</span>
+                    </div>
+                  ) : liveTraces.length === 0 ? (
+                    <p className="text-sm text-gray-500 text-center py-4">No public traces available</p>
+                  ) : (
+                    <div className="space-y-3">
+                      {liveTraces.slice(0, 3).map((trace) => (
+                        <div key={trace.trace_id} className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="font-medium text-gray-900 dark:text-white text-sm">{trace.agent_name}</span>
+                            {trace.idma_phase && (
+                              <span className={`text-xs px-2 py-0.5 rounded-full border ${PHASE_COLORS[trace.idma_phase.toUpperCase()] || PHASE_COLORS.HEALTHY}`}>
+                                {trace.idma_phase.toUpperCase()}
+                              </span>
+                            )}
+                          </div>
+                          <div className="grid grid-cols-3 gap-2 text-center">
+                            <div>
+                              <p className="text-xs text-gray-500 dark:text-gray-400">k_eff</p>
+                              <p className={`text-lg font-bold ${trace.idma_k_eff !== null && trace.idma_k_eff < 2 ? "text-orange-600" : "text-green-600"}`}>
+                                {trace.idma_k_eff !== null ? trace.idma_k_eff.toFixed(2) : "—"}
+                              </p>
+                            </div>
+                            <div>
+                              <p className="text-xs text-gray-500 dark:text-gray-400">fragile?</p>
+                              <p className={`text-sm font-medium ${trace.idma_fragility_flag ? "text-orange-600" : "text-green-600"}`}>
+                                {trace.idma_fragility_flag ? "Yes" : "No"}
+                              </p>
+                            </div>
+                            <div>
+                              <p className="text-xs text-gray-500 dark:text-gray-400">action</p>
+                              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{trace.selected_action}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                      <p className="text-xs text-gray-500 text-center">
+                        Showing {Math.min(3, liveTraces.length)} of {liveTraces.length} public sample traces
+                      </p>
+                    </div>
+                  )}
+                </div>
               </>
             )}
             {audience === "researcher" && (
@@ -559,9 +684,39 @@ function isFragileReasoning(k_eff: number): boolean {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Temporal precedence (from CCA validation): ρ rises precede failures by +0.14 (financial), +0.17 (institutional). Predictive, not just diagnostic.
                 </p>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
                   All measurements cryptographically signed into Ed25519 trace chain. Tamper-evident. Replayable.
                 </p>
+
+                {/* Live IDMA Data - Researcher view */}
+                <div className="rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm flex items-center gap-2">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                      </span>
+                      Live Trace Repository Sample
+                    </h4>
+                    <a href="/explore-a-trace" className="text-xs text-brand-primary hover:underline font-mono">
+                      /explore-a-trace &rarr;
+                    </a>
+                  </div>
+                  {loadingTraces ? (
+                    <p className="text-xs text-gray-500 font-mono">Loading from lens.ciris-services-1.ai...</p>
+                  ) : liveTraces.length === 0 ? (
+                    <p className="text-xs text-gray-500 font-mono">No public samples in repository</p>
+                  ) : (
+                    <div className="bg-gray-900 rounded p-3 overflow-x-auto">
+                      <pre className="text-xs text-green-400 font-mono whitespace-pre">{`// Sample IDMA measurements (n=${liveTraces.length})
+${liveTraces.slice(0, 3).map(t => `{ agent: "${t.agent_name}", k_eff: ${t.idma_k_eff?.toFixed(2) ?? "null"}, phase: "${t.idma_phase ?? "unknown"}", fragile: ${t.idma_fragility_flag} }`).join(",\n")}
+
+// Aggregates
+mean_k_eff: ${(liveTraces.reduce((sum, t) => sum + (t.idma_k_eff ?? 0), 0) / liveTraces.length).toFixed(2)}
+fragility_rate: ${(liveTraces.filter(t => t.idma_fragility_flag).length / liveTraces.length * 100).toFixed(0)}%`}</pre>
+                    </div>
+                  )}
+                </div>
               </>
             )}
           </section>
