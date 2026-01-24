@@ -197,12 +197,16 @@ function flattenTrace(raw: ApiTraceRaw): ApiTraceListItem {
 
 /**
  * Transform raw API task to UI task with flattened traces
+ * Sorts traces by thought_depth (ascending) so SPEAK comes before TASK_COMPLETE
  */
 function flattenTask(raw: ApiTaskRaw): ApiTaskListItem {
+  const traces = raw.traces.map(flattenTrace);
+  // Sort by thought_depth ascending (depth 0 = SPEAK, depth 1 = TASK_COMPLETE)
+  traces.sort((a, b) => a.thought_depth - b.thought_depth);
   return {
     task_id: raw.task_id,
     initial_observation: raw.initial_observation,
-    traces: raw.traces.map(flattenTrace),
+    traces,
   };
 }
 
