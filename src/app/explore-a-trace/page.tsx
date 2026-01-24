@@ -5,10 +5,11 @@ import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
 import TraceExplorer from "@/app/components/TraceExplorer";
 import {
-  fetchPublicTraces,
+  fetchPublicTasks,
   fetchTraceDetail,
   transformToTraceData,
   ApiTraceListItem,
+  ApiTaskListItem,
   TraceData,
 } from "@/lib/traceApi";
 
@@ -146,24 +147,28 @@ function TraceCard({
 }
 
 export default function ExploreTracePage() {
-  const [traces, setTraces] = useState<ApiTraceListItem[]>([]);
+  const [tasks, setTasks] = useState<ApiTaskListItem[]>([]);
   const [selectedTraceId, setSelectedTraceId] = useState<string | null>(null);
   const [traceData, setTraceData] = useState<TraceData | null>(null);
   const [loading, setLoading] = useState(true);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [expandedTasks, setExpandedTasks] = useState<Set<string>>(new Set());
 
-  // Fetch list of public traces on mount
+  // Fetch list of public tasks on mount
   useEffect(() => {
-    async function loadTraces() {
+    async function loadTasks() {
       try {
         setLoading(true);
         setError(null);
-        const data = await fetchPublicTraces();
-        setTraces(data);
-        // Auto-select first trace if available
-        if (data.length > 0) {
-          setSelectedTraceId(data[0].trace_id);
+        const data = await fetchPublicTasks();
+        setTasks(data || []);
+        // Auto-expand all tasks and select first trace if available
+        if (data && data.length > 0) {
+          setExpandedTasks(new Set(data.map(t => t.task_id)));
+          if (data[0].traces && data[0].traces.length > 0) {
+            setSelectedTraceId(data[0].traces[0].trace_id);
+          }
         }
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load traces");
@@ -171,8 +176,24 @@ export default function ExploreTracePage() {
         setLoading(false);
       }
     }
-    loadTraces();
+    loadTasks();
   }, []);
+
+  // Toggle task expansion
+  const toggleTask = (taskId: string) => {
+    setExpandedTasks(prev => {
+      const next = new Set(prev);
+      if (next.has(taskId)) {
+        next.delete(taskId);
+      } else {
+        next.add(taskId);
+      }
+      return next;
+    });
+  };
+
+  // Count total traces (with defensive check)
+  const totalTraces = tasks?.reduce((sum, task) => sum + (task.traces?.length || 0), 0) || 0;
 
   // Fetch trace detail when selection changes
   useEffect(() => {
@@ -249,27 +270,61 @@ export default function ExploreTracePage() {
           {/* Main content */}
           {!loading && !error && (
             <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
-              {/* Trace list sidebar */}
+              {/* Task list sidebar */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <h2 className="font-semibold text-gray-900 dark:text-white">
-                    Public Traces ({traces.length})
+                    Tasks ({tasks.length}) &bull; {totalTraces} traces
                   </h2>
                 </div>
 
-                {traces.length === 0 ? (
+                {!tasks || tasks.length === 0 ? (
                   <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                     <p>No public traces available</p>
                   </div>
                 ) : (
-                  <div className="space-y-3 max-h-[600px] overflow-y-auto pr-2">
-                    {traces.map((trace) => (
-                      <TraceCard
-                        key={trace.trace_id}
-                        trace={trace}
-                        isSelected={selectedTraceId === trace.trace_id}
-                        onClick={() => setSelectedTraceId(trace.trace_id)}
-                      />
+                  <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
+                    {tasks.map((task) => (
+                      <div key={task.task_id} className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                        {/* Task header with initial observation */}
+                        <button
+                          onClick={() => toggleTask(task.task_id)}
+                          className="w-full text-left p-3 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        >
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex-1 min-w-0">
+                              <p className="text-sm text-gray-800 dark:text-gray-200 line-clamp-2">
+                                {task.initial_observation}
+                              </p>
+                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                {task.traces.length} trace{task.traces.length !== 1 ? "s" : ""} &bull; {task.task_id.slice(0, 8)}...
+                              </p>
+                            </div>
+                            <svg
+                              className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${expandedTasks.has(task.task_id) ? "rotate-180" : ""}`}
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </div>
+                        </button>
+
+                        {/* Traces under this task */}
+                        {expandedTasks.has(task.task_id) && task.traces && (
+                          <div className="p-2 space-y-2 bg-white dark:bg-gray-900">
+                            {task.traces.map((trace) => (
+                              <TraceCard
+                                key={trace.trace_id}
+                                trace={trace}
+                                isSelected={selectedTraceId === trace.trace_id}
+                                onClick={() => setSelectedTraceId(trace.trace_id)}
+                              />
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}

@@ -5,16 +5,16 @@
 
 const API_BASE = "https://lens.ciris-services-1.ai/api/v1/covenant/repository";
 
-// Raw API response structure (nested)
+// Raw API trace structure (nested within tasks)
 interface ApiTraceRaw {
   trace_id: string;
-  timestamp: string;
+  timestamp?: string;
   agent: {
     name: string;
-    id_hash: string;
+    id_hash?: string;
     domain: string;
   };
-  thought: {
+  thought?: {
     thought_id: string;
     type: string;
     depth: number;
@@ -23,8 +23,8 @@ interface ApiTraceRaw {
   action: {
     selected: string;
     success: boolean;
-    was_overridden: boolean;
-    rationale: string;
+    was_overridden?: boolean;
+    rationale?: string;
   };
   scores: {
     csdma_plausibility: number | null;
@@ -40,10 +40,17 @@ interface ApiTraceRaw {
     optimization_veto_passed: boolean | null;
     epistemic_humility_passed: boolean | null;
   };
-  dma_results: string;
+  dma_results?: string | Record<string, unknown>;
 }
 
-// Flattened structure for UI consumption
+// Task grouping structure from API
+interface ApiTaskRaw {
+  task_id: string;
+  initial_observation: string;
+  traces: ApiTraceRaw[];
+}
+
+// Flattened trace structure for UI consumption
 export interface ApiTraceListItem {
   trace_id: string;
   timestamp: string;
@@ -60,6 +67,13 @@ export interface ApiTraceListItem {
   idma_k_eff: number | null | undefined;
   idma_fragility_flag: boolean | null | undefined;
   idma_phase: string | null | undefined;
+}
+
+// Task with grouped traces for UI consumption
+export interface ApiTaskListItem {
+  task_id: string;
+  initial_observation: string;
+  traces: ApiTraceListItem[];
 }
 
 export interface ApiTraceDetail {
@@ -128,8 +142,8 @@ export interface ApiTraceDetail {
 }
 
 interface ApiTraceListResponse {
-  traces: ApiTraceRaw[];
-  pagination: {
+  tasks: ApiTaskRaw[];
+  pagination?: {
     total: number;
     limit: number;
     offset: number;
@@ -164,7 +178,7 @@ export interface TraceData {
 function flattenTrace(raw: ApiTraceRaw): ApiTraceListItem {
   return {
     trace_id: raw.trace_id,
-    timestamp: raw.timestamp,
+    timestamp: raw.timestamp ?? new Date().toISOString(),
     agent_name: raw.agent?.name ?? "Unknown",
     cognitive_state: raw.thought?.cognitive_state ?? "unknown",
     thought_type: raw.thought?.type ?? "standard",
@@ -182,15 +196,48 @@ function flattenTrace(raw: ApiTraceRaw): ApiTraceListItem {
 }
 
 /**
- * Fetch list of public sample traces
+ * Transform raw API task to UI task with flattened traces
  */
-export async function fetchPublicTraces(): Promise<ApiTraceListItem[]> {
+function flattenTask(raw: ApiTaskRaw): ApiTaskListItem {
+  return {
+    task_id: raw.task_id,
+    initial_observation: raw.initial_observation,
+    traces: raw.traces.map(flattenTrace),
+  };
+}
+
+/**
+ * Fetch public sample tasks (grouped traces)
+ */
+export async function fetchPublicTasks(): Promise<ApiTaskListItem[]> {
   const response = await fetch(`${API_BASE}/traces?public_sample=true&limit=100`);
   if (!response.ok) {
     throw new Error(`Failed to fetch traces: ${response.status}`);
   }
   const data: ApiTraceListResponse = await response.json();
-  return data.traces.map(flattenTrace);
+  // Handle both old (traces array) and new (tasks array) API formats
+  if (data.tasks && Array.isArray(data.tasks)) {
+    return data.tasks.map(flattenTask);
+  }
+  // Fallback: if API returns old format, wrap traces in a single task
+  const oldData = data as unknown as { traces?: ApiTraceRaw[] };
+  if (oldData.traces && Array.isArray(oldData.traces)) {
+    return [{
+      task_id: "legacy",
+      initial_observation: "Public sample traces",
+      traces: oldData.traces.map(flattenTrace),
+    }];
+  }
+  return [];
+}
+
+/**
+ * Fetch list of public sample traces (flat list for backward compatibility)
+ */
+export async function fetchPublicTraces(): Promise<ApiTraceListItem[]> {
+  const tasks = await fetchPublicTasks();
+  // Flatten all tasks into a single trace list
+  return tasks.flatMap(task => task.traces);
 }
 
 /**
