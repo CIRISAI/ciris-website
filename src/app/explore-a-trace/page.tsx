@@ -148,12 +148,11 @@ function TraceCard({
 
 export default function ExploreTracePage() {
   const [tasks, setTasks] = useState<ApiTaskListItem[]>([]);
-  const [selectedTraceId, setSelectedTraceId] = useState<string | null>(null);
-  const [traceData, setTraceData] = useState<TraceData | null>(null);
+  const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null);
+  const [traceDataList, setTraceDataList] = useState<TraceData[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [expandedTasks, setExpandedTasks] = useState<Set<string>>(new Set());
 
   // Fetch list of public tasks on mount
   useEffect(() => {
@@ -163,12 +162,9 @@ export default function ExploreTracePage() {
         setError(null);
         const data = await fetchPublicTasks();
         setTasks(data || []);
-        // Auto-expand all tasks and select first trace if available
+        // Auto-select first task if available
         if (data && data.length > 0) {
-          setExpandedTasks(new Set(data.map(t => t.task_id)));
-          if (data[0].traces && data[0].traces.length > 0) {
-            setSelectedTraceId(data[0].traces[0].trace_id);
-          }
+          setSelectedTaskId(data[0].task_id);
         }
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load traces");
@@ -179,44 +175,44 @@ export default function ExploreTracePage() {
     loadTasks();
   }, []);
 
-  // Toggle task expansion
-  const toggleTask = (taskId: string) => {
-    setExpandedTasks(prev => {
-      const next = new Set(prev);
-      if (next.has(taskId)) {
-        next.delete(taskId);
-      } else {
-        next.add(taskId);
-      }
-      return next;
-    });
-  };
-
-  // Count total traces (with defensive check)
-  const totalTraces = tasks?.reduce((sum, task) => sum + (task.traces?.length || 0), 0) || 0;
-
-  // Fetch trace detail when selection changes
+  // Fetch all trace details when task selection changes
   useEffect(() => {
-    if (!selectedTraceId) {
-      setTraceData(null);
+    if (!selectedTaskId) {
+      setTraceDataList([]);
       return;
     }
 
-    async function loadTraceDetail() {
+    const selectedTask = tasks.find(t => t.task_id === selectedTaskId);
+    if (!selectedTask || !selectedTask.traces || selectedTask.traces.length === 0) {
+      setTraceDataList([]);
+      return;
+    }
+
+    async function loadTaskTraces() {
       try {
         setLoadingDetail(true);
-        const detail = await fetchTraceDetail(selectedTraceId!);
-        const transformed = transformToTraceData(detail);
-        setTraceData(transformed);
+        const tracePromises = selectedTask!.traces.map(async (trace) => {
+          const detail = await fetchTraceDetail(trace.trace_id);
+          return transformToTraceData(detail);
+        });
+        const traces = await Promise.all(tracePromises);
+        setTraceDataList(traces);
       } catch (err) {
-        console.error("Failed to load trace detail:", err);
-        setTraceData(null);
+        console.error("Failed to load trace details:", err);
+        setTraceDataList([]);
       } finally {
         setLoadingDetail(false);
       }
     }
-    loadTraceDetail();
-  }, [selectedTraceId]);
+    loadTaskTraces();
+  }, [selectedTaskId, tasks]);
+
+  // Count total traces (with defensive check)
+  const totalTraces = tasks?.reduce((sum, task) => sum + (task.traces?.length || 0), 0) || 0;
+
+  // Get selected task
+  const selectedTask = tasks.find(t => t.task_id === selectedTaskId);
+
 
   return (
     <>
@@ -274,8 +270,9 @@ export default function ExploreTracePage() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <h2 className="font-semibold text-gray-900 dark:text-white">
-                    Tasks ({tasks.length}) &bull; {totalTraces} traces
+                    Observations ({tasks.length})
                   </h2>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">{totalTraces} traces</span>
                 </div>
 
                 {!tasks || tasks.length === 0 ? (
@@ -283,48 +280,57 @@ export default function ExploreTracePage() {
                     <p>No public traces available</p>
                   </div>
                 ) : (
-                  <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
+                  <div className="space-y-3 max-h-[600px] overflow-y-auto pr-2">
                     {tasks.map((task) => (
-                      <div key={task.task_id} className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                        {/* Task header with initial observation */}
-                        <button
-                          onClick={() => toggleTask(task.task_id)}
-                          className="w-full text-left p-3 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                        >
-                          <div className="flex items-start justify-between gap-2">
-                            <div className="flex-1 min-w-0">
-                              <p className="text-sm text-gray-800 dark:text-gray-200 line-clamp-2">
-                                {task.initial_observation}
-                              </p>
-                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                {task.traces.length} trace{task.traces.length !== 1 ? "s" : ""} &bull; {task.task_id.slice(0, 8)}...
-                              </p>
+                      <button
+                        key={task.task_id}
+                        onClick={() => setSelectedTaskId(task.task_id)}
+                        className={`w-full text-left rounded-lg border-2 transition-all ${
+                          selectedTaskId === task.task_id
+                            ? "border-brand-primary bg-blue-50 dark:bg-blue-900/20"
+                            : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600"
+                        }`}
+                      >
+                        {/* Observation header */}
+                        <div className="p-4 border-b border-gray-100 dark:border-gray-700">
+                          <div className="flex items-start gap-3">
+                            <div className="flex-shrink-0 mt-0.5">
+                              <svg className="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
                             </div>
-                            <svg
-                              className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${expandedTasks.has(task.task_id) ? "rotate-180" : ""}`}
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <p className="text-sm font-medium text-gray-900 dark:text-white leading-snug">
+                              {task.initial_observation}
+                            </p>
                           </div>
-                        </button>
+                        </div>
 
-                        {/* Traces under this task */}
-                        {expandedTasks.has(task.task_id) && task.traces && (
-                          <div className="p-2 space-y-2 bg-white dark:bg-gray-900">
-                            {task.traces.map((trace) => (
-                              <TraceCard
-                                key={trace.trace_id}
-                                trace={trace}
-                                isSelected={selectedTraceId === trace.trace_id}
-                                onClick={() => setSelectedTraceId(trace.trace_id)}
-                              />
-                            ))}
+                        {/* Task meta */}
+                        <div className="px-4 py-2 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            {task.traces && task.traces.length > 0 && (
+                              <>
+                                <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                                  {task.traces[0].agent_name}
+                                </span>
+                                <span className={`text-xs px-2 py-0.5 rounded-full ${ACTION_COLORS[task.traces[0].selected_action] || ACTION_COLORS.SPEAK}`}>
+                                  {task.traces[0].selected_action}
+                                </span>
+                                {task.traces.length > 1 && (
+                                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                                    +{task.traces.length - 1} more
+                                  </span>
+                                )}
+                              </>
+                            )}
                           </div>
-                        )}
-                      </div>
+                          <span className={`w-2 h-2 rounded-full ${
+                            task.traces?.every(t => t.conscience_passed)
+                              ? "bg-green-500"
+                              : "bg-red-500"
+                          }`} />
+                        </div>
+                      </button>
                     ))}
                   </div>
                 )}
@@ -350,128 +356,96 @@ export default function ExploreTracePage() {
                   </div>
                 )}
 
-                {!loadingDetail && traceData && (
+                {!loadingDetail && selectedTask && traceDataList.length > 0 && (
                   <>
-                    {/* Trace header */}
-                    <div className="mb-6 p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
-                      <div className="flex items-start justify-between">
+                    {/* Task observation header */}
+                    <div className="mb-6 p-5 rounded-lg border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20">
+                      <div className="flex items-start gap-3">
+                        <div className="flex-shrink-0 mt-0.5">
+                          <svg className="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
                         <div>
-                          <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-                            {traceData.agent_name || "Agent"} Decision Trace
-                          </h2>
-                          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 font-mono">
-                            {traceData.trace_id}
+                          <p className="text-xs font-semibold text-brand-primary uppercase tracking-wide mb-1">
+                            Initial Observation
                           </p>
-                        </div>
-                        <div className="text-right text-xs text-gray-500 dark:text-gray-400">
-                          <p>Signed: {traceData.signature_key_id}</p>
-                          <p className="font-mono truncate max-w-[200px]" title={traceData.signature}>
-                            {traceData.signature?.slice(0, 20)}...
+                          <p className="text-gray-900 dark:text-white font-medium leading-relaxed">
+                            {selectedTask.initial_observation}
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    {/* Action Output Highlight */}
-                    {(() => {
-                      const actionComponent = traceData.components.find(c => c.component_type === "action");
-                      const actionData = actionComponent?.data as { action_executed?: string; action_parameters?: { content?: string } } | undefined;
-                      const content = actionData?.action_parameters?.content;
-                      const actionType = actionData?.action_executed;
+                    {/* Show all traces for this task */}
+                    {traceDataList.map((traceData, index) => (
+                      <div key={traceData.trace_id} className="mb-8">
+                        {/* Trace step indicator */}
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand-primary text-white font-bold text-sm">
+                            {index + 1}
+                          </div>
+                          <div>
+                            <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+                              {traceData.agent_name || "Agent"} &mdash; {selectedTask.traces?.[index]?.selected_action || "Action"}
+                            </h2>
+                            <p className="text-xs text-gray-500 dark:text-gray-400">
+                              Depth {selectedTask.traces?.[index]?.thought_depth || 0} &bull; {traceData.trace_id.slice(0, 40)}...
+                            </p>
+                          </div>
+                        </div>
 
-                      if (content) {
-                        return (
-                          <div className="mb-6 rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-4">
-                            <div className="flex items-start gap-3">
-                              <div className="flex-shrink-0 mt-1">
-                                <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                </svg>
-                              </div>
-                              <div className="flex-1">
-                                <p className="text-xs font-semibold text-green-700 dark:text-green-300 uppercase tracking-wide mb-1">
-                                  Action: {actionType?.toUpperCase()}
-                                </p>
-                                <p className="text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-wrap">
-                                  {content}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      }
-                      return null;
-                    })()}
+                        {/* Action Output Highlight */}
+                        {(() => {
+                          const actionComponent = traceData.components.find(c => c.component_type === "action");
+                          const actionData = actionComponent?.data as { action_executed?: string; action_parameters?: { content?: string } } | undefined;
+                          const content = actionData?.action_parameters?.content;
+                          const actionType = actionData?.action_executed;
 
-                    {/* Trace Components */}
-                    <div className="mb-8 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
-                        Trace Components
-                      </h3>
-                      <div className="grid gap-3 md:grid-cols-5">
-                        <div className="text-center">
-                          <div className="text-2xl text-blue-500">
-                            <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
-                          </div>
-                          <p className="text-xs font-semibold text-gray-900 dark:text-white mt-1">Observation</p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">Trigger</p>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl text-purple-500">
-                            <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                            </svg>
-                          </div>
-                          <p className="text-xs font-semibold text-gray-900 dark:text-white mt-1">Context</p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">State</p>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl text-yellow-500">
-                            <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                            </svg>
-                          </div>
-                          <p className="text-xs font-semibold text-gray-900 dark:text-white mt-1">DMAs</p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">Analysis</p>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl text-green-500">
-                            <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                            </svg>
-                          </div>
-                          <p className="text-xs font-semibold text-gray-900 dark:text-white mt-1">Conscience</p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">Checks</p>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl text-red-500">
-                            <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                          </div>
-                          <p className="text-xs font-semibold text-gray-900 dark:text-white mt-1">Action</p>
-                          <p className="text-xs text-gray-500 dark:text-gray-400">Result</p>
-                        </div>
+                          if (content) {
+                            return (
+                              <div className="mb-4 rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-4">
+                                <div className="flex items-start gap-3">
+                                  <div className="flex-shrink-0 mt-1">
+                                    <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                    </svg>
+                                  </div>
+                                  <div className="flex-1">
+                                    <p className="text-xs font-semibold text-green-700 dark:text-green-300 uppercase tracking-wide mb-1">
+                                      Response: {actionType?.toUpperCase()}
+                                    </p>
+                                    <p className="text-gray-800 dark:text-gray-200 leading-relaxed whitespace-pre-wrap">
+                                      {content}
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          }
+                          return null;
+                        })()}
+
+                        {/* Interactive Trace Explorer */}
+                        <TraceExplorer trace={traceData} defaultOpenIndex={2} />
                       </div>
-                    </div>
-
-                    {/* Interactive Trace Explorer */}
-                    <TraceExplorer trace={traceData} defaultOpenIndex={2} />
+                    ))}
                   </>
                 )}
 
-                {!loadingDetail && !traceData && selectedTraceId && (
+                {!loadingDetail && selectedTaskId && traceDataList.length === 0 && (
                   <div className="text-center py-16 text-gray-500 dark:text-gray-400">
                     <p>Failed to load trace details</p>
                   </div>
                 )}
 
-                {!selectedTraceId && (
+                {!selectedTaskId && (
                   <div className="text-center py-16 text-gray-500 dark:text-gray-400">
-                    <p>Select a trace from the list to view details</p>
+                    <svg className="w-16 h-16 mx-auto mb-4 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-lg font-medium">Select an observation</p>
+                    <p className="text-sm mt-1">Click on an observation to see how CIRIS reasoned through it</p>
                   </div>
                 )}
               </div>
