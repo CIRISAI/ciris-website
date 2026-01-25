@@ -1,17 +1,21 @@
 "use client";
+import { useState } from "react";
 import HomeHeader from "@/app/components/HomeHeader";
 import Footer from "@/app/components/Footer";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import navItems from "@/app/components/navitems";
+import LiveScoreDashboard from "@/app/components/LiveScoreDashboard";
 
 export default function CIRISScoringPage() {
+  const [activeTab, setActiveTab] = useState<"live" | "spec">("live");
+
   return (
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
         headline="CIRIS Scoring"
         subheadline="Capacity and Fragility"
-        description="Normative Specification (v1.0) — Quantifying coherence through cryptographically signed runtime traces"
+        description="Live fleet scores and normative specification — Quantifying coherence through cryptographically signed runtime traces"
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -21,6 +25,70 @@ export default function CIRISScoringPage() {
         linkHref="/coherence-ratchet"
       />
 
+      {/* Tab navigation */}
+      <div className="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 sticky top-16 z-10">
+        <div className="container max-w-6xl">
+          <nav className="flex gap-8" aria-label="Tabs">
+            <button
+              onClick={() => setActiveTab("live")}
+              className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
+                activeTab === "live"
+                  ? "border-brand-primary text-brand-primary"
+                  : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"
+              }`}
+            >
+              Live Dashboard
+            </button>
+            <button
+              onClick={() => setActiveTab("spec")}
+              className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
+                activeTab === "spec"
+                  ? "border-brand-primary text-brand-primary"
+                  : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"
+              }`}
+            >
+              Specification
+            </button>
+          </nav>
+        </div>
+      </div>
+
+      {/* Live Dashboard Tab */}
+      {activeTab === "live" && (
+        <div className="container max-w-6xl py-8">
+          <LiveScoreDashboard />
+
+          {/* Educational callout */}
+          <div className="mt-8 rounded-lg border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-6">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+              Understanding These Scores
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              CIRIS scores quantify how hard it is for an agent to lie coherently over time.
+              Each score is derived from cryptographically-signed traces that form an
+              ever-growing constraint surface. The five factors measure distinct properties
+              of coherent ethical agency.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button
+                onClick={() => setActiveTab("spec")}
+                className="text-brand-primary font-semibold hover:underline"
+              >
+                Read the full specification &rarr;
+              </button>
+              <a
+                href="/explore-a-trace"
+                className="text-brand-primary font-semibold hover:underline"
+              >
+                Explore individual traces &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Specification Tab */}
+      {activeTab === "spec" && (
       <div className="container max-w-4xl py-16">
         <article className="prose prose-lg dark:prose-invert mx-auto">
 
@@ -430,6 +498,7 @@ export default function CIRISScoringPage() {
           </a>
         </div>
       </div>
+      )}
 
       <Footer />
     </>
