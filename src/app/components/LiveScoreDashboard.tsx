@@ -134,7 +134,7 @@ function AgentCard({
       <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
         <span>{agent.metadata.total_traces} decisions analyzed</span>
         <span>&bull;</span>
-        <span>Last 7 days</span>
+        <span>Last 30 days</span>
       </div>
     </button>
   );
@@ -283,7 +283,7 @@ export default function LiveScoreDashboard() {
       }
       setError(null);
 
-      const response = await fetchFleetScores(7);
+      const response = await fetchFleetScores(30);
       setData(response);
       setLastUpdated(new Date());
 
