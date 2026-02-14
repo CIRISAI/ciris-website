@@ -29,11 +29,13 @@ const navigation: Navigation = {
     { name: "Install", href: "/install" },
     { name: "Safety", href: "/safety" },
     { name: "Infrastructure", href: "/architecture" },
+    { name: "EthicsEngine", href: "https://ethicsengine.org" },
   ],
   support: [
     { name: "Compare", href: "/compare" },
     { name: "Documentation", href: "https://deepwiki.com/CIRISAI/CIRISAgent" },
     { name: "Academic Paper", href: "https://zenodo.org/records/17195221" },
+    { name: "Agent Portal", href: "https://portal.ethicsengine.org" },
     { name: "Status", href: "/status" },
   ],
   company: [

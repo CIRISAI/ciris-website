@@ -125,6 +125,39 @@ export default function Homepage() {
         </div>
       </div>
 
+      {/* EthicsEngine - Public Evaluation Platform */}
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 py-6">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
+            <div className="flex items-center gap-3 text-white">
+              <span className="text-2xl">&#x1F50D;</span>
+              <div>
+                <p className="text-lg font-bold">EthicsEngine — Measuring Ethical Reasoning in LLMs</p>
+                <p className="text-sm opacity-90">An affiliated project for evaluating the ethical reasoning quality of large language models. Transparent scoring, cryptographic audit trails, open to everyone.</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <a
+                href="https://ethicsengine.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100"
+              >
+                Visit ethicsengine.org
+              </a>
+              <a
+                href="https://portal.ethicsengine.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                Agent Portal
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* The Bigger Picture - Three Types of AI */}
       <div className="bg-gray-100 dark:bg-gray-900 py-8 border-b border-gray-200 dark:border-gray-800">
         <div className="mx-auto max-w-4xl px-4 text-center">
