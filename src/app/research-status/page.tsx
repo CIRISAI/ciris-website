@@ -209,7 +209,7 @@ export default function ResearchStatusPage() {
                     <strong>Framework:</strong> The defense function J = k_eff·(1-ρ̄)·λ·σ provides a unified geometric framework for measuring both safety constraints and coordination capacity.
                   </p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    RATCHET validates these claims computationally within stated preconditions. See Book IX of the CIRIS Covenant for formal treatment.
+                    RATCHET validates these claims computationally within stated preconditions. See Book IX of the CIRIS Accord for formal treatment.
                   </p>
                 </>
               )}
@@ -469,13 +469,13 @@ export default function ResearchStatusPage() {
             ) : (
               <>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  RATCHET is the first computational implementation of the Coherence Ratchet framework described in Book IX of the CIRIS Covenant.
+                  RATCHET is the first computational implementation of the Coherence Ratchet framework described in Book IX of the CIRIS Accord.
                   <strong> The core theoretical claims are validated within stated assumptions</strong>, but implementation revealed
                   8 fundamental limitations and 5 attack vectors that constrain the framework&apos;s applicability.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
                   <strong>RATCHET</strong> (the reference implementation) is currently suitable as a research testbed but not for production deployment.
-                  The <strong>CIRIS agent</strong> is a separate project that implements the Covenant for practical use.
+                  The <strong>CIRIS agent</strong> is a separate project that implements the Accord for practical use.
                 </p>
               </>
             )}
@@ -978,7 +978,7 @@ export default function ResearchStatusPage() {
             {audience !== "default" && (
               <p className="text-gray-600 dark:text-gray-400 mb-4">
                 <strong>Note:</strong> This section refers to the <strong>RATCHET reference implementation</strong>, not the CIRIS agent itself.
-                RATCHET is a research testbed for validating theoretical claims; CIRIS is a separate production agent that implements the Covenant.
+                RATCHET is a research testbed for validating theoretical claims; CIRIS is a separate production agent that implements the Accord.
               </p>
             )}
 
@@ -1244,7 +1244,7 @@ export default function ResearchStatusPage() {
 
             <div className="mt-6 rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/20">
               <p className="text-sm text-gray-700 dark:text-gray-300">
-                <strong>Citation:</strong> If you use RATCHET in academic work, please cite the CIRIS Covenant Book IX and this implementation.
+                <strong>Citation:</strong> If you use RATCHET in academic work, please cite the CIRIS Accord Book IX and this implementation.
                 The repository is licensed under <a href="https://github.com/CIRISAI/RATCHET/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">AGPL-3.0</a>.
               </p>
             </div>

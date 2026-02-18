@@ -3,7 +3,7 @@
  * Fetches public sample traces from CIRISLens
  */
 
-const API_BASE = "https://lens.ciris-services-1.ai/api/v1/covenant/repository";
+const API_BASE = "https://lens.ciris-services-1.ai/api/v1/accord/repository";
 
 // Raw API trace structure (nested within tasks)
 interface ApiTraceRaw {

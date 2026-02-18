@@ -50,7 +50,7 @@ export default function ModelsPage() {
               logoAlt="Brand logo icon"
               headline="CIRIS doesn't trim its values to fit the model"
               subheadline="We choose models large enough to carry our entire ethical framework."
-              copyText="CIRIS includes the complete Covenant and Comprehensive Guide in every single LLM call. No compression, no summaries, no options. This means the agent never forgets its obligations—not even for a single token. That's why context window isn't a vanity metric for us: it's a direct extension of our commitment to transparency and accountability."
+              copyText="CIRIS includes the complete Accord and Comprehensive Guide in every single LLM call. No compression, no summaries, no options. This means the agent never forgets its obligations—not even for a single token. That's why context window isn't a vanity metric for us: it's a direct extension of our commitment to transparency and accountability."
             />
           </div>
 
@@ -75,7 +75,7 @@ export default function ModelsPage() {
                 {
                   headline: "2. Context Window: 128K Minimum",
                   copyText:
-                    "CIRIS embeds the full Covenant and Guide into every prompt. 128K is the absolute minimum; 256K+ is strongly preferred for long conversations, tool outputs, and audit trails.",
+                    "CIRIS embeds the full Accord and Guide into every prompt. 128K is the absolute minimum; 256K+ is strongly preferred for long conversations, tool outputs, and audit trails.",
                   logoSrc: "logoIcon",
                   logoAlt: "Brand logo icon",
                 },
@@ -197,13 +197,13 @@ export default function ModelsPage() {
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
                 <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-                  Always-On Covenant and Guide
+                  Always-On Accord and Guide
                 </h3>
                 <p>
-                  CIRIS embeds the <strong>full Covenant</strong> and <strong>complete Comprehensive Guide</strong> into every prompt. Not a summary. Not a distilled version. The entire governance text.
+                  CIRIS embeds the <strong>full Accord</strong> and <strong>complete Comprehensive Guide</strong> into every prompt. Not a summary. Not a distilled version. The entire governance text.
                 </p>
                 <p className="mt-2">
-                  This ensures that updates to the Covenant or Guide immediately affect behavior across all agents, without waiting for new fine-tunes or prompt compression strategies.
+                  This ensures that updates to the Accord or Guide immediately affect behavior across all agents, without waiting for new fine-tunes or prompt compression strategies.
                 </p>
               </div>
 
@@ -218,7 +218,7 @@ export default function ModelsPage() {
                   <li>Multi-step workflows</li>
                   <li>System state and tool outputs</li>
                   <li>User messages and conversation history</li>
-                  <li>The complete Covenant and Guide</li>
+                  <li>The complete Accord and Guide</li>
                 </ul>
                 <p className="mt-2">
                   This combined context easily exceeds 32K-64K, especially for long-running sessions or complex investigations. That's why 128K is the minimum and 256K+ is preferred.
@@ -236,12 +236,12 @@ export default function ModelsPage() {
             </div>
           </div>
 
-          {/* How This Supports the Covenant */}
+          {/* How This Supports the Accord */}
           <div className="mt-12">
             <SeparatorTitleBlock
               logoSrc="logoIcon"
               logoAlt="Brand logo icon"
-              headline="How This Supports the CIRIS Covenant"
+              headline="How This Supports the CIRIS Accord"
               subheadline="Model selection as ethical infrastructure"
             />
 
@@ -290,7 +290,7 @@ export default function ModelsPage() {
               CIRIS uses Llama 4 Maverick as the primary model because it is the most reliable open option that satisfies CIRIS's ethical, operational, and economic constraints. Other models are monitored and periodically tested, but Maverick is the current default because it best serves CIRIS's commitment to trustworthy, tool-centric AI systems.
             </p>
             <p className="mt-4 text-gray-700 dark:text-gray-300">
-              This isn't about chasing benchmark scores or following hype cycles. It's about choosing a model that actually works for ethical agents in production—and that takes the Covenant seriously enough to carry it in every single call.
+              This isn't about chasing benchmark scores or following hype cycles. It's about choosing a model that actually works for ethical agents in production—and that takes the Accord seriously enough to carry it in every single call.
             </p>
           </div>
         </div>

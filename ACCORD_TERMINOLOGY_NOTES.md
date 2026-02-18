@@ -1,4 +1,4 @@
-# CIRIS Covenant Terminology Standardization Notes
+# CIRIS Accord Terminology Standardization Notes
 
 ## Current State (Pre-Standardization)
 
@@ -49,7 +49,7 @@
 ### Option B: Standardize to "Book" throughout
 - Update v1-v5 to use "Book" in body text
 - Update all titles to "Book I" through "Book IX"
-- Pro: More traditional religious/philosophical text convention (matches "Covenant" framing)
+- Pro: More traditional religious/philosophical text convention (matches "Accord" framing)
 - Con: Larger scope of changes required
 
 ### Option C: Hybrid (Current State)

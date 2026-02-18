@@ -145,7 +145,7 @@ export default function SafetyPolicyPage() {
                   Core Ethical Violation
                 </h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Discovery that CIRIS is fundamentally violating its Covenant principles in a way that
+                  Discovery that CIRIS is fundamentally violating its Accord principles in a way that
                   cannot be corrected without architectural changes. The system must be taken offline
                   until the violation is addressed at its root.
                 </p>

@@ -921,13 +921,13 @@ export default function PrivacyPage() {
             </p>
           </div>
 
-          {/* Covenant */}
+          {/* Accord */}
           <div className="mb-12">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              14. CIRIS Covenant Principles
+              14. CIRIS Accord Principles
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              This privacy policy is governed by the CIRIS Covenant (Version 1.0-RC1), which establishes our ethical foundation:
+              This privacy policy is governed by the CIRIS Accord (Version 1.0-RC1), which establishes our ethical foundation:
             </p>
             <div className="space-y-2">
               <div className="rounded-lg border-l-4 border-brand-primary bg-white p-4 dark:bg-gray-800">

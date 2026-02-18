@@ -238,7 +238,7 @@ export default function IntegrationsPage() {
                   logoAlt: "Brand logo icon",
                 },
                 {
-                  headline: "Covenant Metrics",
+                  headline: "Accord Metrics",
                   copyText:
                     "Privacy-first metrics collection for CIRISLens observability. Requires explicit user consent. Reports WBD (Wisdom-Based Deferral) and PDMA decision events.",
                   logoSrc: "logoIcon",

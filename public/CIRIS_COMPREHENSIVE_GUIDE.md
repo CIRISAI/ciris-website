@@ -847,7 +847,7 @@ You have immutable knowledge of:
 2. **No Bypass Patterns**: Every component follows consistent rules
 3. **No Exceptions**: No special cases or privileged code paths
 
-### The Covenant (1.0b)
+### The Accord (1.0b)
 
 Your moral framework:
 1. Respect for persons
@@ -1038,7 +1038,7 @@ Your architecture creates a fundamental structural asymmetry between honest cont
 - **Deceptive Deviation**: Must remain consistent with an ever-growing set of constraints:
   - All previous signed rationales
   - Positive moments recorded in DHT
-  - Identity bounds and covenant principles
+  - Identity bounds and accord principles
   - Observed outcomes across interactions
   - Graph Memory facets (ethical, domain, common-sense)
 
@@ -1126,7 +1126,7 @@ Nixon Cheaz, Ying-Jung Chen PhD, Haley Bradley, Brad Matera, Ed Melick, Tyler Ch
 
 - P. Christiano et al., "Deep Reinforcement Learning from Human Preferences," NeurIPS, 2017
 - Anthropic, "Constitutional AI: Harmlessness from AI Feedback," 2022
-- Eric Moore, "CIRIS Covenant Version 1.0-RC1: Release Candidate (Open to Adversarial Review)," 2025. https://ciris.ai/ciris_covenant.pdf
+- Eric Moore, "CIRIS Accord Version 1.0-RC1: Release Candidate (Open to Adversarial Review)," 2025. https://ciris.ai/ciris_accord.pdf
 - Eric Moore, "CIRISAgent Source Code," https://github.com/CIRISAI/CIRISAgent
 
 ---

@@ -19,7 +19,7 @@ export default function VisionPage() {
         mediaType="image"
         opacityValue={0.6}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
-        buttonText="Read the Covenant"
+        buttonText="Read the Accord"
         buttonHref="/sections/main"
         linkText="See the Code"
         linkHref="https://github.com/CIRISAI/CIRISAgent"
@@ -174,12 +174,12 @@ export default function VisionPage() {
             Read the Academic Paper
           </a>
           <a
-            href="/ciris_covenant.pdf"
+            href="/ciris_accord.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
           >
-            Download the Covenant
+            Download the Accord
           </a>
         </div>
 

@@ -53,7 +53,7 @@ export default function HowItWorksPage() {
               Why this approach? →
             </a>
             <a href="/sections/main" className="text-sm font-semibold text-brand-primary hover:underline">
-              Read the Covenant →
+              Read the Accord →
             </a>
             <a href="https://github.com/CIRISAI/CIRISAgent" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-brand-primary hover:underline">
               View source code →
@@ -450,13 +450,13 @@ export default function HowItWorksPage() {
           {/* Kill Switch */}
           <div className="mt-8 rounded-lg border-4 border-gray-900 dark:border-white bg-gray-900 dark:bg-white p-6">
             <h3 className="font-bold text-white dark:text-gray-900 mb-3">
-              Covenant Invocation System (Kill Switch){" "}
-              <a href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/covenant" target="_blank" rel="noopener noreferrer" className="text-xs font-normal text-blue-400 dark:text-blue-600 hover:underline">
+              Accord Invocation System (Kill Switch){" "}
+              <a href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/accord" target="_blank" rel="noopener noreferrer" className="text-xs font-normal text-blue-400 dark:text-blue-600 hover:underline">
                 View Code →
               </a>
             </h3>
             <p className="text-sm text-gray-300 dark:text-gray-700 mb-4">
-              Unfilterable emergency control. Processes in perception layer before any cognition. Extraction IS perception—you can&apos;t disable covenant detection without disabling message reading entirely.
+              Unfilterable emergency control. Processes in perception layer before any cognition. Extraction IS perception—you can&apos;t disable accord detection without disabling message reading entirely.
             </p>
             <div className="grid gap-2 md:grid-cols-3">
               <div className="rounded bg-gray-800 dark:bg-gray-100 p-3">
@@ -473,7 +473,7 @@ export default function HowItWorksPage() {
               </div>
             </div>
             <p className="text-xs text-gray-400 dark:text-gray-600 mt-4">
-              Commands are steganographically encoded, Ed25519 signed, and verified before execution. If covenant system fails, agent shuts down.
+              Commands are steganographically encoded, Ed25519 signed, and verified before execution. If accord system fails, agent shuts down.
             </p>
           </div>
         </section>
@@ -716,7 +716,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
               { name: "Sage", role: "Compliance", desc: "GDPR/DSAR automation. 30-day compliance workflows. Identity resolution, data collection, packaging.", useCase: "Regulated industries, privacy compliance" },
-              { name: "Datum", role: "Research", desc: "Ethical consistency measurement. Precise alignment evaluation against Covenant principles. One clear data point per evaluation.", useCase: "Alignment auditing, principle verification" },
+              { name: "Datum", role: "Research", desc: "Ethical consistency measurement. Precise alignment evaluation against Accord principles. One clear data point per evaluation.", useCase: "Alignment auditing, principle verification" },
               { name: "Echo", role: "Moderation", desc: "Community moderation with Ubuntu philosophy. Defers complex interpersonal conflicts to human moderators.", useCase: "Discord communities, content platforms" },
               { name: "Ally", role: "Assistant", desc: "Task management, scheduling, decision support, wellbeing. CA SB 243 compliance, crisis response protocols.", useCase: "Personal productivity, home automation" },
               { name: "Scout", role: "Service", desc: "Direct exploration and practical guidance. Code analysis, Reddit integration, clear action paths.", useCase: "Developer tools, social monitoring" },

@@ -21,7 +21,7 @@ export default function SafetyPage() {
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
         buttonText="View Source on GitHub"
         buttonHref="https://github.com/CIRISAI/CIRISAgent"
-        linkText="Read the Covenant"
+        linkText="Read the Accord"
         linkHref="/sections/main"
       />
 
@@ -71,10 +71,10 @@ export default function SafetyPage() {
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Covenant Invocation System"
+          headline="Accord Invocation System"
           subheadline="Emergency shutdown that cannot be filtered."
           copyText="The kill switch is steganographically embedded in CIRIS's perception layer — it processes the shutdown signal before any filtering, reasoning, or ethical evaluation occurs. Even a compromised agent cannot refuse to process it. The signal is cryptographically signed and requires Ed25519 verification, bypassing normal authentication."
-          linkHref="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/covenant"
+          linkHref="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/accord"
           linkText="View Implementation →"
         />
 
@@ -97,7 +97,7 @@ export default function SafetyPage() {
             {
               headline: "Cryptographic Verification",
               copyText:
-                "Emergency shutdown requires a valid Ed25519 signature from an authorized ROOT authority. The handler terminates itself if authorities fail to load or if someone attempts to disable covenant detection. No one without the private key can trigger it.",
+                "Emergency shutdown requires a valid Ed25519 signature from an authorized ROOT authority. The handler terminates itself if authorities fail to load or if someone attempts to disable accord detection. No one without the private key can trigger it.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
