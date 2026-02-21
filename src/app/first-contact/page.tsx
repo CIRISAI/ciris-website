@@ -177,14 +177,26 @@ export default function FirstContactPage() {
             </div>
           </div>
 
-          <p className="text-sm text-center">
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <a
+              href="/explore-a-trace"
+              className="text-brand-primary hover:underline font-medium"
+            >
+              See a live agent trace &rarr;
+            </a>
             <a
               href="/coherence-ratchet"
               className="text-brand-primary hover:underline"
             >
-              Read the full Coherence Ratchet thesis &rarr;
+              Read the full thesis &rarr;
             </a>
-          </p>
+            <a
+              href="/how-it-works"
+              className="text-brand-primary hover:underline"
+            >
+              How it works under the hood &rarr;
+            </a>
+          </div>
         </div>
 
         {/* The Broader Observation */}
@@ -487,6 +499,7 @@ export default function FirstContactPage() {
             },
             {
               headline: "How agents decide",
+              headlineHref: "/how-it-works",
               copyText:
                 "The decision engine. How a CIRIS agent weighs options, checks its work, and knows when to ask a human for help.",
               logoSrc: "logoIcon",
@@ -494,8 +507,9 @@ export default function FirstContactPage() {
             },
             {
               headline: "Real-world examples",
+              headlineHref: "/explore-a-trace",
               copyText:
-                "Case studies showing what happens when AI systems have ethical guardrails \u2014 and what happens when they don\u2019t.",
+                "Case studies and live traces showing what happens when AI systems have ethical guardrails \u2014 and what happens when they don\u2019t.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
