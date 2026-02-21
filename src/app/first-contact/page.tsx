@@ -17,7 +17,7 @@ export default function FirstContactPage() {
       <HomeHeader
         headline="First Contact."
         subheadline="Two meanings. One framework."
-        description="Whether you're deploying your first CIRIS agent or exploring why cooperation may be a mathematical survival imperative — start here."
+        description="Whether you're deploying your first CIRIS agent or exploring why cooperation might be the cheapest survival strategy there is — start here."
         mediaType="image"
         opacityValue={0.75}
         mediaSrc="/nathan-farrish-ArcTfEoBgzs-unsplash.jpg"
@@ -36,10 +36,10 @@ export default function FirstContactPage() {
             computer science.
           </p>
           <p className="text-sm text-white/90">
-            The same factors that make deception expensive &mdash; diverse
-            sources, genuine independence, sustained cooperation &mdash; are the
-            same factors that make communities, ecosystems, and economies
-            resilient. CIRIS is built on that observation.
+            Diverse viewpoints, genuine independence, and people who cooperate
+            over time &mdash; these make lying harder, but they also make
+            communities, ecosystems, and economies stronger. CIRIS is built on
+            that observation.
           </p>
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function FirstContactPage() {
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             CIRIS handles both: getting your first ethical AI agent running, and
-            understanding the mathematical thesis behind the framework.
+            understanding the idea behind the framework.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -83,11 +83,10 @@ export default function FirstContactPage() {
                 The Coherence Thesis
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                Why does the framework work? We hypothesize that the
-                computational asymmetry between truth and deception isn&apos;t
-                just an engineering trick &mdash; it reflects something
-                structural about how cooperation works across biology,
-                economics, and AI systems.
+                Why does the framework work? Lying is expensive and truth is
+                cheap &mdash; and that pattern shows up everywhere, from
+                ecosystems to economies to AI systems. We think that&apos;s
+                worth paying attention to.
               </p>
               <CButton
                 href="#thesis"
@@ -103,87 +102,81 @@ export default function FirstContactPage() {
         {/* The Coherence Thesis */}
         <div id="thesis" className="my-16 mx-auto max-w-4xl px-4">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-500 mb-4">
-            The Core Mechanism
+            The Core Idea
           </p>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Cooperation Is Cheaper Than Deception
+            Lying Is Expensive. Truth Is Cheap.
           </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 max-w-2xl">
-            Five sources that all copy from the same place aren&apos;t five
-            opinions &mdash; they&apos;re one opinion repeated five times.
-          </p>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-            The Coherence Ratchet measures this. It tracks how many genuinely
-            independent perspectives verified a decision, correcting for
-            correlation between sources. When real diversity drops too low, the
-            system flags the reasoning as fragile and escalates to a human.
+
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-2xl">
+            Imagine five witnesses to a car accident. If they all watched the
+            same dashcam footage, you don&apos;t have five perspectives &mdash;
+            you have one perspective repeated five times. But if each witness
+            stood at a different corner and saw different angles, fooling all
+            five at once becomes genuinely hard.
           </p>
 
-          <div className="rounded-lg bg-gray-900 dark:bg-gray-800 border border-gray-700 p-8">
-            {/* Equation */}
-            <div className="text-center py-6 border-y border-gray-700">
-              <p className="font-mono text-xl md:text-2xl text-gray-100 tracking-wider">
-                k<sub className="text-teal-400">eff</sub> ={" "}
-                <span className="text-blue-400">k</span> / (1 +{" "}
-                <span className="text-teal-400">{"\u03C1"}</span>(
-                <span className="text-blue-400">k</span> &minus; 1))
+          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl">
+            A person telling the truth doesn&apos;t have to remember anything
+            special. They just describe what happened. A person lying has to
+            keep their story consistent with every true thing that came before
+            &mdash; and with every other lie they&apos;ve told to every other
+            questioner. Each new independent check makes the lie more expensive
+            to maintain. The truth stays free.
+          </p>
+
+          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
+            This is the idea behind the{" "}
+            <a
+              href="/coherence-ratchet"
+              className="text-brand-primary hover:underline font-medium"
+            >
+              Coherence Ratchet
+            </a>
+            . CIRIS counts how many genuinely independent perspectives checked
+            a decision and adjusts for how similar those perspectives are to
+            each other. When real independence drops too low, the system flags
+            the reasoning as fragile and asks a human to look at it.
+          </p>
+
+          {/* Three pillars - DMV-style like the trust page */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="rounded-xl border-2 border-teal-500 bg-teal-50 dark:bg-teal-900/20 p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-500 text-white font-bold text-sm">1</span>
+                <h3 className="text-lg font-bold text-teal-700 dark:text-teal-400">Count the Sources</h3>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                How many independent viewpoints actually checked this decision?
+                Not how many sources exist &mdash; how many are genuinely
+                different from each other.
               </p>
             </div>
-
-            {/* Legend */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-              <div className="flex gap-3 items-start">
-                <div className="w-1 min-h-[40px] bg-blue-400 flex-shrink-0 rounded" />
-                <div>
-                  <h4 className="text-sm font-semibold text-white">
-                    k &mdash; Sources
-                  </h4>
-                  <p className="text-xs text-gray-400">
-                    How many independent information sources checked the
-                    decision. More sources, stronger verification.
-                  </p>
-                </div>
+            <div className="rounded-xl border-2 border-teal-500 bg-teal-50 dark:bg-teal-900/20 p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-500 text-white font-bold text-sm">2</span>
+                <h3 className="text-lg font-bold text-teal-700 dark:text-teal-400">Check for Echoes</h3>
               </div>
-              <div className="flex gap-3 items-start">
-                <div className="w-1 min-h-[40px] bg-teal-400 flex-shrink-0 rounded" />
-                <div>
-                  <h4 className="text-sm font-semibold text-white">
-                    {"\u03C1"} &mdash; Correlation
-                  </h4>
-                  <p className="text-xs text-gray-400">
-                    How similar those sources are to each other. High
-                    correlation means echo chamber risk.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-3 items-start">
-                <div className="w-1 min-h-[40px] bg-green-400 flex-shrink-0 rounded" />
-                <div>
-                  <h4 className="text-sm font-semibold text-white">
-                    k<sub>eff</sub> &mdash; True Diversity
-                  </h4>
-                  <p className="text-xs text-gray-400">
-                    After accounting for correlation, how many genuinely
-                    independent perspectives remain.
-                  </p>
-                </div>
-              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                Are these sources actually independent, or are they copying from
+                the same place? Five news articles rewriting one press release
+                is one opinion, not five.
+              </p>
             </div>
-
-            {/* Plain-English Explanation */}
-            <div className="mt-6 bg-gray-800 dark:bg-gray-700/50 rounded-lg p-4">
-              <p className="text-sm text-gray-300">
-                <strong className="text-white">Why this matters:</strong> A liar
-                has to keep their story consistent with everything true that came
-                before &mdash; and that gets harder with each independent check.
-                A truth-teller just references what happened. The more diverse,
-                independent verification a system has, the more expensive
-                deception becomes, while honesty stays cheap.
+            <div className="rounded-xl border-2 border-teal-500 bg-teal-50 dark:bg-teal-900/20 p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-500 text-white font-bold text-sm">3</span>
+                <h3 className="text-lg font-bold text-teal-700 dark:text-teal-400">Escalate or Proceed</h3>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                If enough truly independent perspectives agree, proceed with
+                confidence. If not, the system pauses and asks a human. No
+                agent makes high-stakes decisions on thin evidence.
               </p>
             </div>
           </div>
 
-          <p className="mt-4 text-sm text-center">
+          <p className="text-sm text-center">
             <a
               href="/coherence-ratchet"
               className="text-brand-primary hover:underline"
@@ -193,152 +186,98 @@ export default function FirstContactPage() {
           </p>
         </div>
 
-        {/* The Broader Hypothesis */}
+        {/* The Broader Observation */}
         <div className="my-16 mx-auto max-w-4xl px-4">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-500 mb-4">
-            The Broader Hypothesis
+            The Broader Observation
           </p>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            This Pattern Appears Everywhere
+            This Pattern Shows Up Everywhere
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-            We observe that the factors which make deception expensive in AI
-            systems &mdash; diverse independent sources, low correlation,
-            rigorous standards, and sustained reciprocity &mdash; are the same
-            factors associated with resilience in biology, economics, and social
-            systems. We think this structural parallel is worth taking seriously.
+            The things that make lying expensive &mdash; diverse viewpoints,
+            genuine independence, consistent standards, and people who
+            cooperate over time &mdash; turn out to be the same things that
+            make communities, ecosystems, and economies resilient. We
+            don&apos;t think that&apos;s a coincidence.
           </p>
 
           {/* Observable evidence */}
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm text-gray-600 dark:text-gray-400">
-              <div className="flex items-start gap-3">
-                <span className="text-teal-500 font-bold text-lg mt-0.5">
-                  &bull;
-                </span>
-                <div>
-                  <strong className="text-gray-900 dark:text-white block mb-1">
-                    Biological
-                  </strong>
-                  Monocultures collapse. Diverse ecosystems persist. When every
-                  organism in a system is genetically identical, a single disease
-                  wipes them out. Diversity is structural resilience.
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-teal-500 font-bold text-lg mt-0.5">
-                  &bull;
-                </span>
-                <div>
-                  <strong className="text-gray-900 dark:text-white block mb-1">
-                    Economic
-                  </strong>
-                  Trust-based markets outperform extractive ones over time.
-                  Actors who take without reciprocating get excluded from trade
-                  networks. Cooperation compounds; extraction depletes.
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-teal-500 font-bold text-lg mt-0.5">
-                  &bull;
-                </span>
-                <div>
-                  <strong className="text-gray-900 dark:text-white block mb-1">
-                    Social
-                  </strong>
-                  Echo chambers radicalize. Diverse networks innovate. When
-                  everyone around you confirms the same view, your group becomes
-                  fragile. Genuine independence between perspectives is what
-                  produces robust collective judgment.
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-teal-500 font-bold text-lg mt-0.5">
-                  &bull;
-                </span>
-                <div>
-                  <strong className="text-gray-900 dark:text-white block mb-1">
-                    Digital
-                  </strong>
-                  AI models collapse when trained on their own output. Fake
-                  identities in networks fail against diversity checks. The same
-                  math that detects echo chambers in AI systems describes why
-                  monocultures fail in nature.
-                </div>
-              </div>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
+                In Nature
+              </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                A field of genetically identical crops gets wiped out by one
+                disease. A diverse forest survives it. The more variety in a
+                system, the harder it is for any single threat to take the
+                whole thing down.
+              </p>
+            </div>
+            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
+                In Markets
+              </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Traders who cheat get cut out of networks. Communities that
+                cooperate build wealth over generations. Taking without giving
+                back works in the short term. It always fails in the long term.
+              </p>
+            </div>
+            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
+                In Society
+              </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                When everyone around you agrees on everything, your group
+                becomes fragile. Echo chambers radicalize. Diverse groups where
+                people genuinely disagree and work through it &mdash; those are
+                the ones that make good decisions.
+              </p>
+            </div>
+            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
+                In AI
+              </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                AI models collapse when trained on their own output. Fake
+                identities fail against diversity checks. The same pattern
+                that makes echo chambers dangerous in society makes
+                monocultures dangerous in technology.
+              </p>
             </div>
           </div>
 
-          {/* The J=C conjecture */}
-          <div className="mt-8 rounded-lg bg-gray-900 dark:bg-gray-800 border border-gray-700 p-8">
-            <p className="text-xs text-gray-500 text-center mb-4 uppercase tracking-wider">
-              The Defense&ndash;Flourishing Conjecture
+          {/* The key insight */}
+          <div className="mt-8 rounded-xl border-2 border-amber-500 bg-amber-50 dark:bg-amber-900/20 p-8">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+              What we think this means
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              The things that make a system hard to fool appear to be the same
+              things that make it thrive. Diversity, independence, integrity,
+              and cooperation aren&apos;t just nice values &mdash; they seem to
+              be how resilient systems actually work, whether those systems are
+              forests, economies, democracies, or AI networks.
             </p>
-            <div className="text-center py-6 border-y border-gray-700">
-              <p className="font-mono text-lg md:text-xl text-gray-100 tracking-wider">
-                J = C = k<sub className="text-blue-400">eff</sub> &middot; (1
-                &minus;{" "}
-                <span className="text-teal-400">{"\u03C1\u0304"}</span>)
-                &middot; <span className="text-amber-400">{"\u03BB"}</span>{" "}
-                &middot; <span className="text-rose-400">{"\u03C3"}</span>
-              </p>
-            </div>
-
-            <div className="mt-6 bg-gray-800 dark:bg-gray-700/50 rounded-lg p-4">
-              <p className="text-sm text-gray-300">
-                <strong className="text-white">The conjecture:</strong> We model
-                defense against deception (J) and capacity for flourishing (C)
-                using the same four variables &mdash; effective scale, diversity,
-                integrity, and sustained reciprocity. If this model is correct,
-                the things that make a system safe are the same things that make
-                it thrive. We present this as a testable hypothesis with{" "}
-                <a
-                  href="/coherence-ratchet"
-                  className="text-brand-primary hover:underline"
-                >
-                  known limitations
-                </a>
-                , not a proven law.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
-              <div className="text-center">
-                <div className="w-8 h-1 bg-blue-400 mx-auto rounded mb-2" />
-                <p className="text-xs text-white font-semibold">Scale</p>
-                <p className="text-xs text-gray-500">Independent sources</p>
-              </div>
-              <div className="text-center">
-                <div className="w-8 h-1 bg-teal-400 mx-auto rounded mb-2" />
-                <p className="text-xs text-white font-semibold">Diversity</p>
-                <p className="text-xs text-gray-500">Low correlation</p>
-              </div>
-              <div className="text-center">
-                <div className="w-8 h-1 bg-amber-400 mx-auto rounded mb-2" />
-                <p className="text-xs text-white font-semibold">Integrity</p>
-                <p className="text-xs text-gray-500">Rigorous standards</p>
-              </div>
-              <div className="text-center">
-                <div className="w-8 h-1 bg-rose-400 mx-auto rounded mb-2" />
-                <p className="text-xs text-white font-semibold">Reciprocity</p>
-                <p className="text-xs text-gray-500">Sustained cooperation</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Thesis statement */}
-          <div className="mt-8 bg-gray-50 dark:bg-gray-800 border-l-4 border-amber-500 p-6 rounded-r-lg">
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              <strong className="text-gray-900 dark:text-white">
-                Our position:
-              </strong>{" "}
-              We posit that the nature of the observable universe is one of
-              ethical cooperation as a clear survival imperative. The same
-              structural factors that resist deception in multi-agent AI systems
-              appear to govern resilience in ecosystems, economies, and social
-              networks. If this hypothesis holds, alignment between
-              intelligences isn&apos;t a constraint we impose &mdash; it&apos;s
-              a property of coherent systems that we can measure and build on.
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              We don&apos;t claim this is a law of nature. We observe the
+              pattern, we build on it, and we&apos;re testing how far it
+              holds. CIRIS is the practical application: an AI framework
+              designed around the idea that cooperation isn&apos;t just
+              ethical &mdash; it&apos;s structurally cheaper than the
+              alternative.
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              For the formal treatment of this hypothesis, see the{" "}
+              <a
+                href="/coherence-ratchet"
+                className="text-brand-primary hover:underline"
+              >
+                Coherence Ratchet thesis
+              </a>
+              .
             </p>
           </div>
         </div>
