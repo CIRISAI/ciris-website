@@ -412,12 +412,12 @@ export default function FirstContactPage() {
                 </a>
                 <span className="text-gray-300 dark:text-gray-600">|</span>
                 <a
-                  href="https://apps.apple.com/app/ciris-agent/id6745374771"
+                  href="https://testflight.apple.com/join/zfCj9waH"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-brand-primary hover:underline"
                 >
-                  App Store &rarr;
+                  TestFlight (iOS) &rarr;
                 </a>
               </div>
             </div>
