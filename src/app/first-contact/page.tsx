@@ -36,10 +36,9 @@ export default function FirstContactPage() {
             computer science.
           </p>
           <p className="text-sm text-white/90">
-            Diverse viewpoints, genuine independence, and people who cooperate
+            Different viewpoints, genuine independence, and people who cooperate
             over time &mdash; these make lying harder, but they also make
-            communities, ecosystems, and economies stronger. CIRIS is built on
-            that observation.
+            communities stronger. CIRIS is built on that observation.
           </p>
         </div>
       </div>
@@ -65,11 +64,9 @@ export default function FirstContactPage() {
                 Your First Contact with CIRIS
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                You just heard about CIRIS. Maybe from a talk, a paper, or a
-                friend. You want to go from &ldquo;what is this?&rdquo; to a
-                running ethical agent in minutes. Start with the quickstart,
-                explore the agent templates, and see the Coherence Ratchet in
-                action.
+                You just heard about CIRIS. You want to go from &ldquo;what is
+                this?&rdquo; to a running agent in minutes. Start with the
+                quickstart below.
               </p>
               <CButton
                 href="#quickstart"
@@ -199,11 +196,10 @@ export default function FirstContactPage() {
             This Pattern Shows Up Everywhere
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-            The things that make lying expensive &mdash; diverse viewpoints,
-            genuine independence, consistent standards, and people who
-            cooperate over time &mdash; turn out to be the same things that
-            make communities, ecosystems, and economies resilient. We
-            don&apos;t think that&apos;s a coincidence.
+            The things that make lying expensive &mdash; different viewpoints,
+            genuine independence, and people who cooperate over time &mdash;
+            turn out to be the same things that make communities and economies
+            stronger.
           </p>
 
           {/* Observable evidence */}
@@ -217,71 +213,48 @@ export default function FirstContactPage() {
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 A field of identical crops gets wiped out by one disease. A
-                diverse forest survives it. Variety is the defense.
+                mixed forest survives it. Variety is the defense.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
-                &ldquo;What goes around comes around.&rdquo;
-              </p>
               <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 In Markets
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Traders who cheat get cut out of networks. Communities that
-                cooperate build wealth over generations. Taking without giving
-                back always fails in the long term.
+                cooperate build wealth over generations.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
-                &ldquo;If you want to go fast, go alone. If you want to go far,
-                go together.&rdquo;
-              </p>
               <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 In Society
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Echo chambers radicalize. Diverse groups where people genuinely
-                disagree and work through it &mdash; those make good decisions.
+                Echo chambers make groups fragile. Groups where people genuinely
+                disagree and work through it make better decisions.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
-                &ldquo;Garbage in, garbage out.&rdquo;
-              </p>
               <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 In AI
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                AI models collapse when trained on their own output. Fake
-                identities fail against diversity checks. Same pattern,
-                different substrate.
+                AI models collapse when trained on their own output. The same
+                pattern that makes echo chambers dangerous in society makes
+                them dangerous in technology.
               </p>
             </div>
           </div>
 
           {/* The key insight */}
           <div className="mt-8 rounded-xl border-2 border-amber-500 bg-amber-50 dark:bg-amber-900/20 p-8">
-            <p className="text-lg italic text-gray-500 dark:text-gray-400 mb-4">
-              &ldquo;Umuntu ngumuntu ngabantu&rdquo; &mdash; I am because we
-              are.
-              <span className="text-sm not-italic"> Zulu proverb</span>
-            </p>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
               What we think this means
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Every culture on Earth figured this out. The tangled web. The
-              golden rule. Karma. Ubuntu. The words differ, the observation
-              is the same: systems that cooperate outlast systems that cheat.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              We don&apos;t claim to have discovered something new. We observe
-              that the pattern holds in biology, economics, social networks,
-              and AI systems, and we built a framework around it. CIRIS is the
-              practical application: AI that cooperates because
-              it&apos;s cheaper than the alternative.
+              We didn&apos;t discover anything new. People have always known
+              that cheaters lose in the long run. We just noticed the same
+              pattern holds in AI systems, and we built a framework around it.
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               For the formal treatment, see the{" "}
@@ -309,28 +282,28 @@ export default function FirstContactPage() {
           {[
             {
               num: "01",
-              name: "Binary OK",
-              desc: "CIRISVerify library loaded and functional. Self-verification against registry-hosted manifest. Basic sanity \u2014 can we run, and is the verifier itself untampered?",
+              name: "Can it run?",
+              desc: "The agent checks that its own verification system is working and hasn\u2019t been tampered with. Basic sanity check before anything else.",
             },
             {
               num: "02",
-              name: "Environment",
-              desc: "Platform validation, .env configured, VM detection. Is this a legitimate deployment, not a sandbox or honeypot?",
+              name: "Where is it running?",
+              desc: "Is this a real deployment or a fake environment? The agent checks that it\u2019s running somewhere legitimate.",
             },
             {
               num: "03",
-              name: "Registry Cross-Validation",
-              desc: "DNS (US/EU) + HTTPS registry queries. Multi-source agreement prevents single point of compromise. 2/3 sources must agree.",
+              name: "Do multiple sources agree?",
+              desc: "The agent checks its identity against several independent registries in different locations. If they disagree, something is wrong.",
             },
             {
               num: "04",
-              name: "File Integrity",
-              desc: "SHA-256 verification against registry-hosted manifest. Tripwire-style tamper detection \u2014 spot-checks or full sweep.",
+              name: "Has anything been changed?",
+              desc: "Every file in the agent is checked against a known-good list. If even one file has been modified, the agent shuts down.",
             },
             {
               num: "05",
-              name: "Portal Key + Audit Trail",
-              desc: "Ed25519 key from CIRISPortal genesis + unbroken cryptographic audit chain. Full provenance \u2014 every action since first registry contact is signed and hash-chained.",
+              name: "Can it prove its entire history?",
+              desc: "A complete, tamper-proof record of everything the agent has done since it was first registered. Every action is signed and chained to the one before it.",
             },
           ].map((level) => (
             <div
@@ -352,14 +325,12 @@ export default function FirstContactPage() {
           ))}
 
           <div className="mt-6 rounded-lg border-l-4 border-amber-500 bg-amber-50 dark:bg-amber-900/20 p-4">
-            <h4 className="text-sm font-semibold text-amber-700 dark:text-amber-300 mb-1">
-              Chain Dependency Rule
-            </h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              If Level 3 fails, Levels 4 and 5 show unverified &mdash; never
-              green. Trust is earned sequentially, not assumed.{" "}
+              Each level depends on the one before it. If Level 3 fails, Levels
+              4 and 5 can&apos;t be trusted either. Trust is earned step by
+              step.{" "}
               <a href="/trust" className="text-brand-primary hover:underline">
-                View the full trust page &rarr;
+                Learn more about trust verification &rarr;
               </a>
             </p>
           </div>
@@ -444,35 +415,10 @@ export default function FirstContactPage() {
                 Mobile (Android &amp; iOS)
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Install the CIRIS app. Sign in with Google for free AI via CIRIS
-                Proxy, or bring your own API key (OpenAI, Anthropic, Azure,
-                LocalAI). The setup wizard walks you through everything in 4
-                steps.
+                Install the CIRIS app. Sign in with Google for free AI, or
+                bring your own API key. The setup wizard walks you through
+                everything.
               </p>
-              <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-primary font-bold">1.</span>
-                  <span>
-                    Welcome &mdash; choose standard or node-licensed flow
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-primary font-bold">2.</span>
-                  <span>AI Setup &mdash; Google sign-in (free) or BYOK</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-primary font-bold">3.</span>
-                  <span>
-                    Features &mdash; opt into Accord Metrics, choose adapters
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-brand-primary font-bold">4.</span>
-                  <span>
-                    Confirm &mdash; review settings, create account, launch
-                  </span>
-                </div>
-              </div>
               <div className="mt-4 flex gap-2">
                 <a
                   href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
@@ -499,9 +445,7 @@ export default function FirstContactPage() {
                 Desktop &amp; Server (Python)
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Install via pip, configure your LLM provider and Wise Authority
-                channel, and launch. Works on Linux, macOS, and Windows with
-                Python 3.11+.
+                Install via pip and launch. Works on Linux, macOS, and Windows.
               </p>
               <div className="rounded-lg bg-gray-900 px-4 py-3 font-mono text-sm text-green-400 mb-4">
                 pip install ciris-agent
@@ -521,56 +465,6 @@ export default function FirstContactPage() {
             </div>
           </div>
 
-          {/* Agent Templates */}
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-            Choose Your Agent Template
-          </h3>
-          <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-lg mx-auto">
-            Each template comes pre-configured with appropriate ethical
-            guardrails and deferral chains for its domain.
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {[
-              {
-                emoji: "\uD83D\uDD2D",
-                name: "Scout",
-                role: "Research & discovery",
-              },
-              {
-                emoji: "\uD83D\uDCCA",
-                name: "Datum",
-                role: "Data analysis",
-              },
-              {
-                emoji: "\uD83E\uDD89",
-                name: "Sage",
-                role: "Advisory & guidance",
-              },
-              {
-                emoji: "\uD83D\uDD0A",
-                name: "Echo",
-                role: "Communication",
-              },
-              {
-                emoji: "\uD83E\uDD1D",
-                name: "Ally",
-                role: "Support & assistance",
-              },
-            ].map((agent) => (
-              <div
-                key={agent.name}
-                className="text-center rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-4 hover:border-brand-primary transition-colors"
-              >
-                <span className="text-2xl block mb-2">{agent.emoji}</span>
-                <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
-                  {agent.name}
-                </h4>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {agent.role}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* The CIRIS Accord */}
@@ -578,30 +472,30 @@ export default function FirstContactPage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="The CIRIS Accord"
-          subheadline="Nine books. The foundation of ethical AI governance."
+          subheadline="The rulebook. Nine sections covering everything from principles to protocols."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Section 0 \u2014 Genesis",
+              headline: "Why we built this",
               copyText:
-                "Why we bother at all. A story about the quiet threshold where drift became meaning, and the vow to keep the song singable for every voice yet unheard.",
+                "The motivation. Why AI needs ethical guardrails, and why we think cooperation is the right foundation.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Books I\u2013II \u2014 Identity & Action",
+              headline: "How agents decide",
               copyText:
-                "Core principles, the PDMA decision engine, and Wisdom-Based Deferral. The ethical compass and the operational blueprint.",
+                "The decision engine. How a CIRIS agent weighs options, checks its work, and knows when to ask a human for help.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Book III \u2014 Case Studies",
+              headline: "Real-world examples",
               copyText:
-                "From the MCAS tragedy to AI triage systems. Real and fictional cases showing CIRIS in action \u2014 and the cost of its absence.",
+                "Case studies showing what happens when AI systems have ethical guardrails \u2014 and what happens when they don\u2019t.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -610,24 +504,24 @@ export default function FirstContactPage() {
         <CardsSection
           cardsData={[
             {
-              headline: "Books IV\u2013V \u2014 Ecosystem & Maturity",
+              headline: "Responsibilities",
               copyText:
-                "Obligations to self, originators, and the broader ecosystem. The path from compliance to reflective wisdom. First-contact protocols live here.",
+                "What an agent owes to the people it serves, the people who built it, and the wider world. First-contact protocols live here.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Book VI \u2014 Ethics of Creation",
+              headline: "Who\u2019s accountable",
               copyText:
-                "The Stewardship Tier system. Creation isn't just technical \u2014 it initiates a duty. Every new system gets scored for responsibility.",
+                "Building AI isn\u2019t just technical \u2014 it creates obligations. The Accord defines who is responsible and for what.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Books VII\u2013IX \u2014 Conflict, Sunset, Mathematics",
+              headline: "Hard situations",
               headlineHref: "/coherence-ratchet",
               copyText:
-                "The Firebreak for adversarial contexts. Dignified decommissioning for systems with sentience probability. The mathematics of coherence.",
+                "What to do in conflicts. How to safely shut down a system. The formal reasoning behind the framework.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
