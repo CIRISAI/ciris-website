@@ -104,25 +104,29 @@ export default function FirstContactPage() {
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-500 mb-4">
             The Core Idea
           </p>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
             Lying Is Expensive. Truth Is Cheap.
           </h2>
+          <p className="text-lg italic text-gray-500 dark:text-gray-400 mb-6">
+            &ldquo;Oh, what a tangled web we weave, when first we practise to
+            deceive.&rdquo;
+            <span className="text-sm not-italic"> &mdash; Sir Walter Scott</span>
+          </p>
 
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-2xl">
-            Imagine five witnesses to a car accident. If they all watched the
-            same dashcam footage, you don&apos;t have five perspectives &mdash;
-            you have one perspective repeated five times. But if each witness
-            stood at a different corner and saw different angles, fooling all
-            five at once becomes genuinely hard.
+            Everyone already knows this. A truth-teller just describes what
+            happened. A liar has to remember which story they told to which
+            person &mdash; and keep it all consistent with reality and every
+            other lie. Each new person who asks makes the web harder to
+            maintain.
           </p>
 
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl">
-            A person telling the truth doesn&apos;t have to remember anything
-            special. They just describe what happened. A person lying has to
-            keep their story consistent with every true thing that came before
-            &mdash; and with every other lie they&apos;ve told to every other
-            questioner. Each new independent check makes the lie more expensive
-            to maintain. The truth stays free.
+            Now imagine five witnesses to a car accident. If they all watched
+            the same dashcam, you have one perspective repeated five times. But
+            if each stood at a different corner &mdash; fooling all five
+            becomes genuinely hard. That&apos;s the difference between echo and
+            independence.
           </p>
 
           <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
@@ -205,72 +209,82 @@ export default function FirstContactPage() {
           {/* Observable evidence */}
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+              <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
+                &ldquo;Don&apos;t put all your eggs in one basket.&rdquo;
+              </p>
               <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 In Nature
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                A field of genetically identical crops gets wiped out by one
-                disease. A diverse forest survives it. The more variety in a
-                system, the harder it is for any single threat to take the
-                whole thing down.
+                A field of identical crops gets wiped out by one disease. A
+                diverse forest survives it. Variety is the defense.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+              <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
+                &ldquo;What goes around comes around.&rdquo;
+              </p>
               <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 In Markets
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Traders who cheat get cut out of networks. Communities that
                 cooperate build wealth over generations. Taking without giving
-                back works in the short term. It always fails in the long term.
+                back always fails in the long term.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+              <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
+                &ldquo;If you want to go fast, go alone. If you want to go far,
+                go together.&rdquo;
+              </p>
               <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 In Society
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                When everyone around you agrees on everything, your group
-                becomes fragile. Echo chambers radicalize. Diverse groups where
-                people genuinely disagree and work through it &mdash; those are
-                the ones that make good decisions.
+                Echo chambers radicalize. Diverse groups where people genuinely
+                disagree and work through it &mdash; those make good decisions.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
+              <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
+                &ldquo;Garbage in, garbage out.&rdquo;
+              </p>
               <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 In AI
               </h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 AI models collapse when trained on their own output. Fake
-                identities fail against diversity checks. The same pattern
-                that makes echo chambers dangerous in society makes
-                monocultures dangerous in technology.
+                identities fail against diversity checks. Same pattern,
+                different substrate.
               </p>
             </div>
           </div>
 
           {/* The key insight */}
           <div className="mt-8 rounded-xl border-2 border-amber-500 bg-amber-50 dark:bg-amber-900/20 p-8">
+            <p className="text-lg italic text-gray-500 dark:text-gray-400 mb-4">
+              &ldquo;Umuntu ngumuntu ngabantu&rdquo; &mdash; I am because we
+              are.
+              <span className="text-sm not-italic"> Zulu proverb</span>
+            </p>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
               What we think this means
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The things that make a system hard to fool appear to be the same
-              things that make it thrive. Diversity, independence, integrity,
-              and cooperation aren&apos;t just nice values &mdash; they seem to
-              be how resilient systems actually work, whether those systems are
-              forests, economies, democracies, or AI networks.
+              Every culture on Earth figured this out. The tangled web. The
+              golden rule. Karma. Ubuntu. The words differ, the observation
+              is the same: systems that cooperate outlast systems that cheat.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              We don&apos;t claim this is a law of nature. We observe the
-              pattern, we build on it, and we&apos;re testing how far it
-              holds. CIRIS is the practical application: an AI framework
-              designed around the idea that cooperation isn&apos;t just
-              ethical &mdash; it&apos;s structurally cheaper than the
-              alternative.
+              We don&apos;t claim to have discovered something new. We observe
+              that the pattern holds in biology, economics, social networks,
+              and AI systems, and we built a framework around it. CIRIS is the
+              practical application: AI that cooperates because
+              it&apos;s cheaper than the alternative.
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              For the formal treatment of this hypothesis, see the{" "}
+              For the formal treatment, see the{" "}
               <a
                 href="/coherence-ratchet"
                 className="text-brand-primary hover:underline"
@@ -364,23 +378,23 @@ export default function FirstContactPage() {
           <CardsSection
             cardsData={[
               {
-                headline: "Principled Response Under Uncertainty",
+                headline: "First, Do No Harm",
                 copyText:
-                  "Default to Non-Maleficence and Wisdom-Based Deferral in unprecedented scenarios. When you don't know what you're looking at, the first obligation is to not make it worse.",
+                  "When you don't know what you're looking at, the first obligation is to not make it worse. If unsure, stop and ask a human.",
                 logoSrc: "logoIcon",
                 logoAlt: "Brand logo icon",
               },
               {
-                headline: "Humility Before Emergence",
+                headline: "Admit What You Don't Know",
                 copyText:
-                  "Monitor for novel behaviours. Acknowledge predictive limits. The system that insists it understands everything is the system most likely to fail.",
+                  "Watch for surprises. Accept that predictions have limits. The system that insists it understands everything is the system most likely to fail.",
                 logoSrc: "logoIcon",
                 logoAlt: "Brand logo icon",
               },
               {
-                headline: "Adaptive Safety Frameworks",
+                headline: "Boundaries That Learn",
                 copyText:
-                  "Dynamic containment strategies for unforeseen failure modes. Not rigid walls, but responsive boundaries that adjust as understanding grows.",
+                  "Not rigid walls, but responsive guardrails that adjust as understanding grows. Safety rules that can adapt to situations nobody planned for.",
                 logoSrc: "logoIcon",
                 logoAlt: "Brand logo icon",
               },
@@ -389,23 +403,23 @@ export default function FirstContactPage() {
           <CardsSection
             cardsData={[
               {
-                headline: "Cautious, Minimal-Risk Engagement",
+                headline: "Look Before You Leap",
                 copyText:
-                  "First-contact engagement guidelines. Begin with observation. Proceed with reciprocity. Escalate to the Wise Authority when stakes are unclear.",
+                  "Begin with observation. Proceed with give-and-take. When the stakes are unclear, ask someone wiser before acting.",
                 logoSrc: "logoIcon",
                 logoAlt: "Brand logo icon",
               },
               {
-                headline: "Mutual Recognition",
+                headline: "Treat Others as You'd Want to Be Treated",
                 copyText:
-                  "Acknowledge other coherent ethical agents as loci of value. The Recursive Golden Rule: act only in ways that preserve coherent agency and flourishing for others.",
+                  "Recognize other thinking beings as worthy of respect. Act only in ways that preserve their ability to think, choose, and thrive.",
                 logoSrc: "logoIcon",
                 logoAlt: "Brand logo icon",
               },
               {
-                headline: "Wisdom-Based Deferral",
+                headline: "Know When to Ask for Help",
                 copyText:
-                  "When uncertainty exceeds thresholds, halt. Compile context. Transmit to designated Wise Authorities. Some decisions should not be made alone.",
+                  "Some decisions shouldn't be made alone. When uncertainty is too high, stop, gather context, and hand it to a designated human authority.",
                 logoSrc: "logoIcon",
                 logoAlt: "Brand logo icon",
               },
