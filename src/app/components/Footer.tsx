@@ -29,6 +29,7 @@ const navigation: Navigation = {
     { name: "Install", href: "/install" },
     { name: "Safety", href: "/safety" },
     { name: "Infrastructure", href: "/architecture" },
+    { name: "Trust & Identity", href: "/trust" },
     { name: "EthicsEngine", href: "https://ethicsengine.org" },
   ],
   support: [
