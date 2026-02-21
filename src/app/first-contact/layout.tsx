@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "First Contact | CIRIS",
   description:
-    "The world's first open-source ethical AI framework with built-in first-contact protocols. Whether you're deploying your first CIRIS agent or preparing autonomous systems for the radically unknown — start here.",
+    "Maintaining a coherent lie across multiple independent checks is harder than telling the truth. We think this has implications beyond computer science. Deploy your first CIRIS agent or explore the coherence thesis.",
   openGraph: {
     title: "First Contact — CIRIS Framework",
     description:
-      "The only open-source AI governance framework with first-contact protocols built in. From deploying your first ethical agent to preparing for the radically unknown.",
+      "Two meanings. One framework. Deploy your first ethical AI agent or explore why cooperation may be cheaper than deception — and what that means for building trustworthy AI.",
     url: "https://ciris.ai/first-contact",
     type: "website",
   },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "First Contact — CIRIS Framework",
     description:
-      "The only open-source AI governance framework with first-contact protocols built in.",
+      "Cooperation is cheaper than deception. Deploy your first ethical AI agent or explore what that means.",
   },
 };
 

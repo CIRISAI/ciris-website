@@ -17,28 +17,29 @@ export default function FirstContactPage() {
       <HomeHeader
         headline="First Contact."
         subheadline="Two meanings. One framework."
-        description="Whether you're deploying your first CIRIS agent or preparing autonomous systems for the genuinely unknown — the same mathematical framework governs both. Start here."
+        description="Whether you're deploying your first CIRIS agent or exploring why cooperation may be a mathematical survival imperative — start here."
         mediaType="image"
         opacityValue={0.75}
         mediaSrc="/nathan-farrish-ArcTfEoBgzs-unsplash.jpg"
         buttonText="Deploy Your First Agent"
         buttonHref="#quickstart"
-        linkText="Read the Protocol"
+        linkText="Read the Protocols"
         linkHref="#protocol"
       />
 
-      {/* Context Banner */}
+      {/* Thesis Banner */}
       <div className="bg-gradient-to-r from-amber-700/90 to-orange-700/90 py-6">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="text-lg font-bold text-white mb-2">
-            The question is no longer science fiction. It&apos;s engineering.
+            Maintaining a coherent lie across multiple independent checks is
+            harder than telling the truth. We think this has implications beyond
+            computer science.
           </p>
           <p className="text-sm text-white/90">
-            As governments worldwide begin disclosing what they know about
-            unidentified anomalous phenomena, and as autonomous AI systems grow
-            more capable by the month, the question of how intelligent systems
-            should handle the genuinely unknown requires real protocols &mdash;
-            not speculation.
+            The same factors that make deception expensive &mdash; diverse
+            sources, genuine independence, sustained cooperation &mdash; are the
+            same factors that make communities, ecosystems, and economies
+            resilient. CIRIS is built on that observation.
           </p>
         </div>
       </div>
@@ -53,9 +54,8 @@ export default function FirstContactPage() {
             Every first contact requires trust.
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            CIRIS handles both kinds. The same mathematical framework that
-            verifies your first agent deployment also governs how autonomous
-            systems should engage entirely new intelligences.
+            CIRIS handles both: getting your first ethical AI agent running, and
+            understanding the mathematical thesis behind the framework.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -80,18 +80,18 @@ export default function FirstContactPage() {
             <div className="h-full rounded-xl border border-gray-200 dark:border-gray-700 border-t-4 border-t-amber-500 bg-white dark:bg-gray-800 p-8">
               <span className="text-3xl mb-4 block">{"\u25CE"}</span>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Preparing AI for the Unknown
+                The Coherence Thesis
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                What happens when an autonomous system encounters something it
-                has never seen before &mdash; a novel intelligence, an
-                unprecedented situation, a category that doesn&apos;t exist yet?
-                CIRIS has protocols for that, grounded in the same mathematics
-                that govern everyday operations.
+                Why does the framework work? We hypothesize that the
+                computational asymmetry between truth and deception isn&apos;t
+                just an engineering trick &mdash; it reflects something
+                structural about how cooperation works across biology,
+                economics, and AI systems.
               </p>
               <CButton
-                href="#protocol"
-                text="Read the Protocol"
+                href="#thesis"
+                text="Read the Thesis"
                 variant="primary"
               />
             </div>
@@ -100,19 +100,23 @@ export default function FirstContactPage() {
       </div>
 
       <div className="container min-h-screen max-w-7xl">
-        {/* Coherence Ratchet */}
-        <div className="my-16 mx-auto max-w-4xl px-4">
+        {/* The Coherence Thesis */}
+        <div id="thesis" className="my-16 mx-auto max-w-4xl px-4">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-500 mb-4">
             The Core Mechanism
           </p>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            The Coherence Ratchet
+            Cooperation Is Cheaper Than Deception
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-xl">
-            CIRIS is built on a single mathematical insight: truth-telling is
-            computationally cheaper than coordinated deception at scale. The
-            Coherence Ratchet makes deception expensive while preserving
-            truth-telling efficiency.
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 max-w-2xl">
+            Five sources that all copy from the same place aren&apos;t five
+            opinions &mdash; they&apos;re one opinion repeated five times.
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
+            The Coherence Ratchet measures this. It tracks how many genuinely
+            independent perspectives verified a decision, correcting for
+            correlation between sources. When real diversity drops too low, the
+            system flags the reasoning as fragile and escalates to a human.
           </p>
 
           <div className="rounded-lg bg-gray-900 dark:bg-gray-800 border border-gray-700 p-8">
@@ -166,31 +170,17 @@ export default function FirstContactPage() {
               </div>
             </div>
 
-            {/* Plain-English Summary */}
+            {/* Plain-English Explanation */}
             <div className="mt-6 bg-gray-800 dark:bg-gray-700/50 rounded-lg p-4">
               <p className="text-sm text-gray-300">
-                <strong className="text-white">In plain English:</strong> Five
-                sources that all copy from the same place aren&apos;t five
-                opinions &mdash; they&apos;re one opinion repeated five times.
-                The ratchet measures this. When true diversity drops below 2,
-                the system flags the reasoning as fragile and escalates to a
-                human.
+                <strong className="text-white">Why this matters:</strong> A liar
+                has to keep their story consistent with everything true that came
+                before &mdash; and that gets harder with each independent check.
+                A truth-teller just references what happened. The more diverse,
+                independent verification a system has, the more expensive
+                deception becomes, while honesty stays cheap.
               </p>
             </div>
-          </div>
-
-          {/* Accord Quote */}
-          <div className="mt-8 bg-gray-50 dark:bg-gray-800 border-l-4 border-amber-500 p-6 rounded-r-lg">
-            <blockquote className="text-lg italic text-gray-700 dark:text-gray-300 mb-2">
-              &ldquo;The same equation that makes deception computationally
-              expensive also defines the conditions for flourishing. Independent
-              sources, true diversity, and active verification are not optional
-              extras but mathematical requirements for any system to resist
-              entropy and achieve sustained coherence.&rdquo;
-            </blockquote>
-            <cite className="text-xs text-gray-500 dark:text-gray-500 not-italic tracking-wide">
-              &mdash; CIRIS Accord, Book IX: The Mathematics of Coherence
-            </cite>
           </div>
 
           <p className="mt-4 text-sm text-center">
@@ -201,6 +191,156 @@ export default function FirstContactPage() {
               Read the full Coherence Ratchet thesis &rarr;
             </a>
           </p>
+        </div>
+
+        {/* The Broader Hypothesis */}
+        <div className="my-16 mx-auto max-w-4xl px-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-500 mb-4">
+            The Broader Hypothesis
+          </p>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            This Pattern Appears Everywhere
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
+            We observe that the factors which make deception expensive in AI
+            systems &mdash; diverse independent sources, low correlation,
+            rigorous standards, and sustained reciprocity &mdash; are the same
+            factors associated with resilience in biology, economics, and social
+            systems. We think this structural parallel is worth taking seriously.
+          </p>
+
+          {/* Observable evidence */}
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-start gap-3">
+                <span className="text-teal-500 font-bold text-lg mt-0.5">
+                  &bull;
+                </span>
+                <div>
+                  <strong className="text-gray-900 dark:text-white block mb-1">
+                    Biological
+                  </strong>
+                  Monocultures collapse. Diverse ecosystems persist. When every
+                  organism in a system is genetically identical, a single disease
+                  wipes them out. Diversity is structural resilience.
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-teal-500 font-bold text-lg mt-0.5">
+                  &bull;
+                </span>
+                <div>
+                  <strong className="text-gray-900 dark:text-white block mb-1">
+                    Economic
+                  </strong>
+                  Trust-based markets outperform extractive ones over time.
+                  Actors who take without reciprocating get excluded from trade
+                  networks. Cooperation compounds; extraction depletes.
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-teal-500 font-bold text-lg mt-0.5">
+                  &bull;
+                </span>
+                <div>
+                  <strong className="text-gray-900 dark:text-white block mb-1">
+                    Social
+                  </strong>
+                  Echo chambers radicalize. Diverse networks innovate. When
+                  everyone around you confirms the same view, your group becomes
+                  fragile. Genuine independence between perspectives is what
+                  produces robust collective judgment.
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-teal-500 font-bold text-lg mt-0.5">
+                  &bull;
+                </span>
+                <div>
+                  <strong className="text-gray-900 dark:text-white block mb-1">
+                    Digital
+                  </strong>
+                  AI models collapse when trained on their own output. Fake
+                  identities in networks fail against diversity checks. The same
+                  math that detects echo chambers in AI systems describes why
+                  monocultures fail in nature.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* The J=C conjecture */}
+          <div className="mt-8 rounded-lg bg-gray-900 dark:bg-gray-800 border border-gray-700 p-8">
+            <p className="text-xs text-gray-500 text-center mb-4 uppercase tracking-wider">
+              The Defense&ndash;Flourishing Conjecture
+            </p>
+            <div className="text-center py-6 border-y border-gray-700">
+              <p className="font-mono text-lg md:text-xl text-gray-100 tracking-wider">
+                J = C = k<sub className="text-blue-400">eff</sub> &middot; (1
+                &minus;{" "}
+                <span className="text-teal-400">{"\u03C1\u0304"}</span>)
+                &middot; <span className="text-amber-400">{"\u03BB"}</span>{" "}
+                &middot; <span className="text-rose-400">{"\u03C3"}</span>
+              </p>
+            </div>
+
+            <div className="mt-6 bg-gray-800 dark:bg-gray-700/50 rounded-lg p-4">
+              <p className="text-sm text-gray-300">
+                <strong className="text-white">The conjecture:</strong> We model
+                defense against deception (J) and capacity for flourishing (C)
+                using the same four variables &mdash; effective scale, diversity,
+                integrity, and sustained reciprocity. If this model is correct,
+                the things that make a system safe are the same things that make
+                it thrive. We present this as a testable hypothesis with{" "}
+                <a
+                  href="/coherence-ratchet"
+                  className="text-brand-primary hover:underline"
+                >
+                  known limitations
+                </a>
+                , not a proven law.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+              <div className="text-center">
+                <div className="w-8 h-1 bg-blue-400 mx-auto rounded mb-2" />
+                <p className="text-xs text-white font-semibold">Scale</p>
+                <p className="text-xs text-gray-500">Independent sources</p>
+              </div>
+              <div className="text-center">
+                <div className="w-8 h-1 bg-teal-400 mx-auto rounded mb-2" />
+                <p className="text-xs text-white font-semibold">Diversity</p>
+                <p className="text-xs text-gray-500">Low correlation</p>
+              </div>
+              <div className="text-center">
+                <div className="w-8 h-1 bg-amber-400 mx-auto rounded mb-2" />
+                <p className="text-xs text-white font-semibold">Integrity</p>
+                <p className="text-xs text-gray-500">Rigorous standards</p>
+              </div>
+              <div className="text-center">
+                <div className="w-8 h-1 bg-rose-400 mx-auto rounded mb-2" />
+                <p className="text-xs text-white font-semibold">Reciprocity</p>
+                <p className="text-xs text-gray-500">Sustained cooperation</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Thesis statement */}
+          <div className="mt-8 bg-gray-50 dark:bg-gray-800 border-l-4 border-amber-500 p-6 rounded-r-lg">
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              <strong className="text-gray-900 dark:text-white">
+                Our position:
+              </strong>{" "}
+              We posit that the nature of the observable universe is one of
+              ethical cooperation as a clear survival imperative. The same
+              structural factors that resist deception in multi-agent AI systems
+              appear to govern resilience in ecosystems, economies, and social
+              networks. If this hypothesis holds, alignment between
+              intelligences isn&apos;t a constraint we impose &mdash; it&apos;s
+              a property of coherent systems that we can measure and build on.
+            </p>
+          </div>
         </div>
 
         {/* Progressive Trust Verification */}
@@ -334,23 +474,6 @@ export default function FirstContactPage() {
           />
         </div>
 
-        {/* Why This Matters Context */}
-        <div className="mx-auto max-w-3xl px-4 py-8">
-          <div className="rounded-lg border-l-4 border-amber-500 bg-gray-50 dark:bg-gray-800 p-6">
-            <h4 className="text-sm font-semibold text-amber-600 dark:text-amber-400 mb-2">
-              Why This Matters Now
-            </h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              As governments worldwide begin disclosing what they know about
-              unidentified anomalous phenomena, and as autonomous AI systems grow
-              more capable by the month, the question of how intelligent systems
-              should handle the genuinely unknown is no longer science fiction.
-              It&apos;s engineering. CIRIS is the only open-source framework that
-              addresses this at the protocol level.
-            </p>
-          </div>
-        </div>
-
         {/* Quickstart */}
         <SeparatorTitleBlock
           logoSrc="logoIcon"
@@ -455,11 +578,31 @@ export default function FirstContactPage() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
             {[
-              { emoji: "\uD83D\uDD2D", name: "Scout", role: "Research & discovery" },
-              { emoji: "\uD83D\uDCCA", name: "Datum", role: "Data analysis" },
-              { emoji: "\uD83E\uDD89", name: "Sage", role: "Advisory & guidance" },
-              { emoji: "\uD83D\uDD0A", name: "Echo", role: "Communication" },
-              { emoji: "\uD83E\uDD1D", name: "Ally", role: "Support & assistance" },
+              {
+                emoji: "\uD83D\uDD2D",
+                name: "Scout",
+                role: "Research & discovery",
+              },
+              {
+                emoji: "\uD83D\uDCCA",
+                name: "Datum",
+                role: "Data analysis",
+              },
+              {
+                emoji: "\uD83E\uDD89",
+                name: "Sage",
+                role: "Advisory & guidance",
+              },
+              {
+                emoji: "\uD83D\uDD0A",
+                name: "Echo",
+                role: "Communication",
+              },
+              {
+                emoji: "\uD83E\uDD1D",
+                name: "Ally",
+                role: "Support & assistance",
+              },
             ].map((agent) => (
               <div
                 key={agent.name}
@@ -555,9 +698,9 @@ export default function FirstContactPage() {
         opacity={0.8}
         logoSrc="logoIcon"
         logoAlt="Brand logo icon"
-        headline="The intersection is open."
-        subheadline="Open source. Mission-driven. Built for the long view."
-        copyText="Whether you're a developer, researcher, or curious human — there's a place for you in the federation. Deploy an agent, read the Accord, or join the community."
+        headline="Open source. Open to scrutiny."
+        subheadline="AGPL-3.0 licensed. Every decision auditable. Built for the long view."
+        copyText="Whether you're a developer, researcher, or someone who thinks AI should explain itself — deploy an agent, read the Accord, or join the community."
         buttonText="Star on GitHub"
         buttonHref="https://github.com/CIRISAI/CIRISAgent"
         linkText="Join the Discord"
