@@ -34,6 +34,7 @@ const navigation: Navigation = {
   ],
   support: [
     { name: "Compare", href: "/compare" },
+    { name: "First Contact", href: "/first-contact" },
     { name: "Documentation", href: "https://deepwiki.com/CIRISAI/CIRISAgent" },
     { name: "Academic Paper", href: "https://zenodo.org/records/17195221" },
     { name: "Agent Portal", href: "https://portal.ethicsengine.org" },
