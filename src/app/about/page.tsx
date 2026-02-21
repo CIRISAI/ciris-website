@@ -172,6 +172,22 @@ export default function Homepage() {
           </div>
         </div>
         <Stylesheet />
+
+        {/* Next steps */}
+        <div className="mt-12 flex flex-wrap gap-4">
+          <a
+            href="/vision"
+            className="text-brand-primary hover:underline font-medium text-sm"
+          >
+            Read our vision →
+          </a>
+          <a
+            href="/first-contact"
+            className="text-brand-primary hover:underline font-medium text-sm"
+          >
+            See what we&apos;re building →
+          </a>
+        </div>
       </div>
       <div>
         <ImageHeroBlock
