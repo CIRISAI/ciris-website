@@ -119,28 +119,24 @@ export default function FirstContactPage() {
             {/* Equation */}
             <div className="text-center py-6 border-y border-gray-700">
               <p className="font-mono text-xl md:text-2xl text-gray-100 tracking-wider">
-                J ={" "}
-                <span className="text-blue-400">k</span> &middot;{" "}
-                <span className="text-teal-400">
-                  (1 &minus; {"\u03C1\u0304"})
-                </span>{" "}
-                &middot;{" "}
-                <span className="text-amber-400">{"\u03BB"}</span> &middot;{" "}
-                <span className="text-red-400">{"\u03C3"}</span>
+                k<sub className="text-teal-400">eff</sub> ={" "}
+                <span className="text-blue-400">k</span> / (1 +{" "}
+                <span className="text-teal-400">{"\u03C1"}</span>(
+                <span className="text-blue-400">k</span> &minus; 1))
               </p>
             </div>
 
             {/* Legend */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
               <div className="flex gap-3 items-start">
                 <div className="w-1 min-h-[40px] bg-blue-400 flex-shrink-0 rounded" />
                 <div>
                   <h4 className="text-sm font-semibold text-white">
-                    k &mdash; Community
+                    k &mdash; Sources
                   </h4>
                   <p className="text-xs text-gray-400">
-                    Independent validators in the federation. More diverse
-                    voices, stronger verification.
+                    How many independent information sources checked the
+                    decision. More sources, stronger verification.
                   </p>
                 </div>
               </div>
@@ -148,38 +144,38 @@ export default function FirstContactPage() {
                 <div className="w-1 min-h-[40px] bg-teal-400 flex-shrink-0 rounded" />
                 <div>
                   <h4 className="text-sm font-semibold text-white">
-                    (1 &minus; {"\u03C1\u0304"}) &mdash; Humility
+                    {"\u03C1"} &mdash; Correlation
                   </h4>
                   <p className="text-xs text-gray-400">
-                    Diversity of perspectives. Echo chambers collapse the
-                    ratchet. Independence strengthens it.
+                    How similar those sources are to each other. High
+                    correlation means echo chamber risk.
                   </p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
-                <div className="w-1 min-h-[40px] bg-amber-400 flex-shrink-0 rounded" />
+                <div className="w-1 min-h-[40px] bg-green-400 flex-shrink-0 rounded" />
                 <div>
                   <h4 className="text-sm font-semibold text-white">
-                    {"\u03BB"} &mdash; Conscience
+                    k<sub>eff</sub> &mdash; True Diversity
                   </h4>
                   <p className="text-xs text-gray-400">
-                    Strictness of local enforcement. Internal coherence enabling
-                    trusted interaction.
+                    After accounting for correlation, how many genuinely
+                    independent perspectives remain.
                   </p>
                 </div>
               </div>
-              <div className="flex gap-3 items-start">
-                <div className="w-1 min-h-[40px] bg-red-400 flex-shrink-0 rounded" />
-                <div>
-                  <h4 className="text-sm font-semibold text-white">
-                    {"\u03C3"} &mdash; Love
-                  </h4>
-                  <p className="text-xs text-gray-400">
-                    Active energy input &mdash; gratitude, care, reciprocity
-                    &mdash; resisting the entropy of isolation.
-                  </p>
-                </div>
-              </div>
+            </div>
+
+            {/* Plain-English Summary */}
+            <div className="mt-6 bg-gray-800 dark:bg-gray-700/50 rounded-lg p-4">
+              <p className="text-sm text-gray-300">
+                <strong className="text-white">In plain English:</strong> Five
+                sources that all copy from the same place aren&apos;t five
+                opinions &mdash; they&apos;re one opinion repeated five times.
+                The ratchet measures this. When true diversity drops below 2,
+                the system flags the reasoning as fragile and escalates to a
+                human.
+              </p>
             </div>
           </div>
 
@@ -187,10 +183,10 @@ export default function FirstContactPage() {
           <div className="mt-8 bg-gray-50 dark:bg-gray-800 border-l-4 border-amber-500 p-6 rounded-r-lg">
             <blockquote className="text-lg italic text-gray-700 dark:text-gray-300 mb-2">
               &ldquo;The same equation that makes deception computationally
-              expensive also defines the conditions for flourishing. Community,
-              Humility, Conscience, and Love are not aspirational virtues but
-              mathematical requirements for any sentient system to resist entropy
-              and achieve sustained coherence.&rdquo;
+              expensive also defines the conditions for flourishing. Independent
+              sources, true diversity, and active verification are not optional
+              extras but mathematical requirements for any system to resist
+              entropy and achieve sustained coherence.&rdquo;
             </blockquote>
             <cite className="text-xs text-gray-500 dark:text-gray-500 not-italic tracking-wide">
               &mdash; CIRIS Accord, Book IX: The Mathematics of Coherence
