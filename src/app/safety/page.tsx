@@ -125,7 +125,7 @@ export default function SafetyPage() {
             {
               headline: "Wise Authority Certificates",
               copyText:
-                "Each authorized user holds a certificate with their role, public key, and identity. Certificates are stored locally and verified on every privileged operation. No external server required.",
+                "Each authorized user holds a certificate with their role, public key, and identity. Certificates are stored locally and validated on every privileged operation. No external server required.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

@@ -102,7 +102,7 @@ export default function ServicesPage() {
             <div className="mb-4 flex items-center gap-3">
               <Shield size={32} weight="fill" className="text-green-600 dark:text-green-400" />
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Privacy Guaranteed
+                Zero Data Retention
               </h3>
             </div>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
@@ -167,7 +167,7 @@ export default function ServicesPage() {
                 >
                   scout.ciris.ai/billing
                 </a>{" "}
-                to add credits to your account. Secure payment processing through Stripe.
+                to add credits to your account. Payment processing through Stripe.
               </p>
             </div>
           </div>

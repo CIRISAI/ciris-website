@@ -473,7 +473,7 @@ export default function HowItWorksPage() {
               </div>
             </div>
             <p className="text-xs text-gray-400 dark:text-gray-600 mt-4">
-              Commands are steganographically encoded, Ed25519 signed, and verified before execution. If accord system fails, agent shuts down.
+              Commands are steganographically encoded, Ed25519 signed, and validated before execution. If accord system fails, agent shuts down.
             </p>
           </div>
         </section>

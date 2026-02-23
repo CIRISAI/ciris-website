@@ -110,7 +110,7 @@ export default function TrustPage() {
             {
               headline: "Key Attestation",
               copyText:
-                "Is this license real? The agent's signing key is verified: portal-issued or ephemeral, hardware-bound or software-only. A random challenge proves possession.",
+                "Is this license real? The agent's signing key is validated: portal-issued or ephemeral, hardware-bound or software-only. A random challenge proves possession.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -247,9 +247,9 @@ export default function TrustPage() {
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Compliance",
+              headline: "Audit Reporting",
               copyText:
-                "SOC2, HIPAA, and GDPR compliance reporting. Complete audit trail of all administrative operations. Every action is logged and attributable.",
+                "Generate reports aligned with SOC2, HIPAA, and GDPR frameworks. Complete audit trail of all administrative operations. Every action is logged and attributable.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -369,7 +369,7 @@ export default function TrustPage() {
               <ul className="space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Formal attestation support</li>
                 <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Audit log anchoring</li>
-                <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Compliance docs (SOC2/HIPAA/GDPR)</li>
+                <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Audit documentation (SOC2/HIPAA/GDPR aligned)</li>
                 <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Incident investigation support</li>
               </ul>
 
@@ -407,7 +407,7 @@ export default function TrustPage() {
               <ul className="space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Enhanced accountability</li>
                 <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Forensic audit support</li>
-                <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Regulatory certification</li>
+                <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Regulatory attestation support</li>
                 <li className="flex items-start gap-2"><span className="text-brand-primary mt-0.5">&#10003;</span>Priority infrastructure</li>
               </ul>
 
@@ -441,7 +441,7 @@ export default function TrustPage() {
               <div>
                 <h4 className="mb-2 font-medium text-gray-900 dark:text-white">Monthly Assurance</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Paid tiers include steward-backed verification, compliance documentation, and enhanced accountability support. You&apos;re paying for accountability, not capability.
+                  Paid tiers include steward-backed validation, audit documentation, and enhanced accountability support. You&apos;re paying for accountability, not capability.
                 </p>
               </div>
             </div>
@@ -517,7 +517,7 @@ export default function TrustPage() {
         {/* Closing Philosophy */}
         <div className="my-12 rounded-lg border-2 border-brand-primary bg-brand-primary/5 p-8 text-center">
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-4">
-            CIRISVerify is infrastructure for trust, not control. The capability is the same whether licensed or not. The difference is accountability &mdash; and with CIRISVerify, that accountability is cryptographically provable.
+            CIRISVerify provides cryptographic attestation under defined threat models and does not guarantee absolute security. The capability is the same whether licensed or not. The difference is accountability &mdash; and with CIRISVerify, that accountability is cryptographically attestable.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
