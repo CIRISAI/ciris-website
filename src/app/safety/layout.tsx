@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Safety | Runtime Governance Architecture",
-  description: "Architectural safety features: parasocial prevention, cryptographic kill switch, on-device identity, tamper-evident audit trails, and privacy by design.",
+  title: "Accountability | CIRIS Architecture",
+  description: "Architectural accountability features: parasocial prevention, cryptographic kill switch, on-device identity, tamper-evident attestation, and privacy by design.",
   keywords: [
-    "AI safety architecture",
-    "runtime governance",
+    "AI accountability architecture",
+    "runtime conscience",
     "AI kill switch",
-    "cryptographic audit",
-    "AI safety features",
-    "ethical AI safety",
+    "cryptographic attestation",
+    "AI accountability features",
+    "auditable AI",
   ],
 };
 

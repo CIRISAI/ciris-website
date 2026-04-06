@@ -25,8 +25,8 @@ const fontBrandRegular = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "CIRIS.AI",
-  description: "Ethical AI for the future.",
+  title: "CIRIS.AI | About",
+  description: "Auditable AI for the future. Verify me, not trust me.",
 };
 
 export default function RootLayout({

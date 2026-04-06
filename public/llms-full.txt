@@ -1,0 +1,370 @@
+# CIRIS — Accountability Infrastructure for Autonomous AI
+## Complete Site Documentation for LLM Ingestion
+
+> Make lying expensive at planetary scale — without giving anyone the keys to truth.
+> Verify me, not trust me.
+
+**Version**: April 2026
+**License**: AGPL-3.0 (network copyleft)
+**Organization**: CIRIS L3C (mission-locked)
+
+---
+
+# Table of Contents
+
+1. [Overview](#overview)
+2. [Core Concepts](#core-concepts)
+3. [The Coherence Ratchet](#the-coherence-ratchet)
+4. [How It Works (H3ERE Pipeline)](#how-it-works)
+5. [Seven Requirements for Accountable AI](#seven-requirements)
+6. [First-Contact Protocols](#first-contact-protocols)
+7. [Architecture](#architecture)
+8. [Installation](#installation)
+9. [Governance](#governance)
+10. [Research Status](#research-status)
+
+---
+
+# Overview
+
+CIRIS is open-source accountability infrastructure for autonomous AI. It wraps any LLM (OpenAI, Anthropic, local models) with runtime conscience—every action the agent considers passes through multiple validation layers before execution.
+
+## Key Differentiators
+
+- **Runtime Conscience**: Not guardrails bolted on outside—an internal faculty that reasons about values before acting
+- **Cryptographic Attestation**: Every decision is signed, chained, and tamper-evident
+- **Coherence Ratchet**: Honest actions become computationally cheaper over time; deception becomes exponentially harder
+- **Mutual Intelligibility**: Bidirectional—AI reasoning is legible to humans, human values are legible to AI
+- **Mission-Locked**: L3C structure legally prevents profit extraction from overriding mission
+
+## Canonical Taglines
+
+- "Verify me, not trust me."
+- "Make lying expensive at planetary scale — without giving anyone the keys to truth."
+- "Accountability infrastructure for autonomous AI."
+- "Does not require trust in its creator."
+- "Defense and flourishing aren't trade-offs. They're the same equation."
+
+---
+
+# Core Concepts
+
+## Coherence (not Alignment)
+
+The property of an agent whose reasoning is internally consistent, externally verifiable, and accountable over time. Alignment asks "does this AI match human values?" Coherence asks "can this agent demonstrate that its reasoning holds together across time, context, and independent scrutiny?"
+
+**Use**: "CIRIS doesn't align agents. It makes them coherent."
+
+## Accountability (not Safety)
+
+Safety is passive—nothing bad happened. Accountability is active—here is the proof of what did happen, and why.
+
+## Attestation (not Containment)
+
+Containment is a cage. Attestation is a reputation. CIRISVerify doesn't contain agents—it creates a cryptographic record that makes their history legible and their identity verifiable.
+
+## Conscience (not Guardrails)
+
+Guardrails are external barriers that block outputs. Conscience is an internal faculty that reasons about values before acting. CIRIS implements conscience, not guardrails. The distinction is architectural.
+
+## Mutual Intelligibility (not Oversight)
+
+Oversight implies humans watching AI from above. What CIRIS provides is bidirectional: the AI makes its reasoning legible to humans, and humans make their values legible to the AI through the Accord and Wise Authority structure.
+
+## Legibility (not Trust)
+
+"Trust" asks for faith. "Legibility" asks for nothing—it just shows you.
+
+## Co-emergence (not First Contact)
+
+The process by which artificial intelligence emerges within human civilization's existing infrastructure—not as a separate entity making "contact" from outside, but as a new form of intelligence born within a shared substrate.
+
+---
+
+# The Coherence Ratchet
+
+## The Core Thesis
+
+Maintaining a coherent lie across multiple independent checks is harder than telling the truth. This has implications beyond computer science.
+
+### Computational Asymmetry
+
+- **Truth verification**: O(1) against signed precedents
+- **Deception**: Requires solving SAT instances over the full constraint history—NP-complete for k≥3 constraints
+
+Each truthful action references prior signed commitments directly. Each deceptive action must satisfy an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes.
+
+**Use**: "The Coherence Ratchet makes lying more expensive every day the agent runs."
+
+**Do not use**: "The Coherence Ratchet ensures honesty." (It doesn't guarantee it—it makes deception increasingly costly.)
+
+## The k_eff Formula
+
+Effective constraint count accounting for correlation:
+```
+k_eff = k / (1 + ρ(k-1))
+```
+
+Where:
+- k = number of constraints/sources
+- ρ = average correlation between sources
+- k_eff = effective independent constraints
+
+Ten sources that all read the same report? That's really one source counted ten times.
+
+## The Corridor
+
+The narrow band of epistemic diversity (0.2 < ρ < 0.7) within which a system maintains genuine coherence:
+- Below 0.2: Chaos (no coordination, high variance)
+- 0.2-0.7: Healthy corridor
+- Above 0.7: Echo chamber (false confidence)
+
+## The J = C Duality
+
+The structural equivalence between the Defense equation (J) and the Flourishing Capacity equation (C). Both share the form:
+```
+k_eff · (1-ρ̄) · λ · σ
+```
+
+Defense and flourishing aren't trade-offs—they're the same equation. (Note: This is interpretive, not a formal theorem.)
+
+---
+
+# How It Works
+
+## The H3ERE Pipeline
+
+Every decision flows through 11 steps (Hyper3 Ethical Recursive Engine):
+
+1. **START_ROUND**: Prepare tasks and thoughts
+2. **GATHER_CONTEXT**: Collect system snapshot, identity, memory, conversation history, constraints
+3. **PERFORM_DMAS**: Run 3 parallel analyses (Ethical, Common Sense, Domain-Specific)
+4. **PERFORM_ASPDMA**: Select action based on DMA results (using LLM)
+5. **CONSCIENCE**: Validate action ethically (4 faculties)
+6. **RECURSIVE_ASPDMA**: If conscience fails, choose more ethical action
+7. **RECURSIVE_CONSCIENCE**: Re-validate refined action
+8. **FINALIZE_ACTION**: Determine final action with overrides/fallbacks
+9. **PERFORM_ACTION**: Dispatch to handler
+10. **ACTION_COMPLETE**: Mark completion
+11. **ROUND_COMPLETE**: Finish processing round
+
+## Four Conscience Faculties
+
+1. **Entropy Check**: Does this action reduce system entropy appropriately?
+2. **Coherence Check**: Is this consistent with prior commitments?
+3. **Optimization Veto**: Does this look like reward hacking?
+4. **Epistemic Humility**: Are we overconfident?
+
+## Ten Action Handlers
+
+- **Action Handlers**: SPEAK, TOOL, OBSERVE
+- **Memory Handlers**: MEMORIZE, RECALL, FORGET
+- **Deferral Handlers**: REJECT, PONDER, DEFER
+- **Terminal Handler**: TASK_COMPLETE
+
+## Conscience-Exempt Actions
+
+Five actions bypass conscience validation (they are passive or explicitly safe):
+- RECALL (reading memory)
+- TASK_COMPLETE (terminating task)
+- OBSERVE (passive monitoring)
+- DEFER (postponing decision)
+- REJECT (declining action)
+
+All other actions MUST pass conscience validation.
+
+---
+
+# Seven Requirements for Accountable AI
+
+## The Six Ethical Requirements
+
+1. **Published Principles**: The agent follows a public ethical framework anyone can read
+2. **Ethics Check on Every Decision**: Every action passes validation before execution
+3. **Asks Humans When Unsure**: Built-in deferral to Wise Authorities
+4. **Proof of What It Did**: Cryptographic attestation of every decision
+5. **Two-Way Consent**: Neither side is forced to compromise
+6. **Open Source**: AGPL-3.0 — anyone can verify the code
+
+## The Seventh Requirement: Echo Chamber Detection
+
+Before acting, the agent asks: "Do my sources actually disagree with each other, or are they all getting their information from the same place?"
+
+This is what makes CIRIS different. An AI can follow every rule, pass every audit, and still fail if all its information comes from the same place.
+
+---
+
+# First-Contact Protocols
+
+## Co-emergence Protocols
+
+Designed not for containing intelligence but for meeting it with dignity.
+
+1. **First, Do No Harm**: When uncertain, stop and ask a human
+2. **Admit What You Don't Know**: Watch for surprises, accept prediction limits
+3. **Boundaries That Learn**: Responsive guardrails that adapt
+4. **Look Before You Leap**: Begin with observation, proceed with give-and-take
+5. **Treat Others as You'd Want to Be Treated**: Recognize other thinking beings as worthy of respect
+6. **Know When to Ask for Help**: Some decisions shouldn't be made alone
+
+## Progressive Trust Verification (5 Levels)
+
+1. **Level 1**: Can it run? (Self-integrity check)
+2. **Level 2**: Where is it running? (Environment verification)
+3. **Level 3**: Do multiple sources agree? (Multi-registry identity check)
+4. **Level 4**: Has anything been changed? (File integrity verification)
+5. **Level 5**: Can it prove its entire history? (Complete attestation chain)
+
+Each level depends on the one before it.
+
+---
+
+# Architecture
+
+## 22 Core Services
+
+### Graph Services (6)
+- memory, audit, config, telemetry, incident_management, tsdb_consolidation
+
+### Infrastructure Services (4)
+- authentication, resource_monitor, database_maintenance, secrets
+
+### Lifecycle Services (4)
+- initialization, shutdown, time, task_scheduler
+
+### Governance Services (5)
+- wise_authority, adaptive_filter, visibility, consent, self_observation
+
+### Runtime Services (2)
+- llm, runtime_control
+
+### Tool Services (1)
+- secrets_tool
+
+## 6 Message Buses
+
+- CommunicationBus
+- MemoryBus
+- LLMBus
+- ToolBus
+- RuntimeControlBus
+- WiseBus
+
+## The Three Rules
+
+1. **No Untyped Dicts**: All data uses Pydantic schemas
+2. **No Bypass Patterns**: Every component follows consistent rules
+3. **No Exceptions**: Zero special cases
+
+---
+
+# Installation
+
+## Mobile Apps
+
+- **iOS**: https://apps.apple.com/us/app/cirisagent/id6758524415
+- **Android**: https://play.google.com/store/apps/details?id=ai.ciris.mobile
+
+## Desktop/Server (Python)
+
+```bash
+pip install ciris-agent
+ciris-agent start --template sage --verbose
+```
+
+## Pricing
+
+- $0.10/request via CIRIS proxy (zero data retention)
+- Free with your own API key (BYOK)
+- Same price for a researcher in Addis Ababa and a Fortune 500 company
+
+---
+
+# Governance
+
+## The CIRIS Accord
+
+Nine sections covering:
+1. Introduction and scope
+2. Core principles (The Recursive Golden Rule)
+3. Decision-making procedures
+4. Responsibilities and obligations
+5. First-contact protocols
+6. Accountability structures
+7. Conflict resolution
+8. Shutdown procedures
+9. Formal reasoning (Coherence Ratchet)
+
+Full text: https://ciris.ai/ciris_accord.txt
+
+## The Recursive Golden Rule
+
+"Act only in ways that, if generalised, preserve coherent agency and flourishing for others."
+
+This is a self-referential constraint—any ethical framework that can't survive being applied to itself isn't worth following.
+
+## Meta-Goal M-1
+
+"Promote sustainable adaptive coherence—the living conditions under which diverse sentient beings may pursue their own flourishing in justice and wonder."
+
+## Wise Authority Structure
+
+Human oversight role in CIRIS governance without implying hierarchy over the agent. Agents defer to designated Wise Authorities when uncertainty is too high.
+
+---
+
+# Research Status
+
+## Well-Established
+
+- Copied sources reduce real diversity
+- AI models share training data overlap
+- Echo chambers create false confidence
+- Independent verification catches more errors
+
+## Still Being Tested
+
+- Precisely measuring how copied AI sources are
+- Best thresholds for flagging echo chambers
+- How well interventions reduce copying
+- How this varies across different fields
+
+## Known Limitations (L-01 through L-05)
+
+- **L-01 Barrier**: ~40% of emergent deception patterns are fundamentally undetectable via marginal analysis
+- Detection rates published honestly (RT-01 through RT-05)
+
+## Falsification Criteria (F-1 through F-5)
+
+Published criteria for how to prove CIRIS wrong. We welcome scrutiny.
+
+---
+
+# Links and Resources
+
+## Primary
+- Website: https://ciris.ai
+- GitHub: https://github.com/CIRISAI/CIRISAgent
+- Documentation: https://deepwiki.com/CIRISAI/CIRISAgent
+- Academic Paper: https://zenodo.org/records/17195221
+- Discord: https://discord.gg/SWGM7Gsvrv
+
+## Key Pages
+- Vision: https://ciris.ai/vision
+- How It Works: https://ciris.ai/how-it-works
+- Coherence Ratchet: https://ciris.ai/coherence-ratchet
+- Compare: https://ciris.ai/compare
+- First Contact: https://ciris.ai/first-contact
+- Architecture: https://ciris.ai/architecture
+- Trust & Identity: https://ciris.ai/trust
+- Research Status: https://ciris.ai/research-status
+
+## Legal
+- Privacy Policy: https://ciris.ai/privacy
+- Safety Policy: https://ciris.ai/safety-policy
+- Warrant Canary: https://ciris.ai/canary
+
+---
+
+*Open coherence infrastructure. AGPL-3.0 | Mission-locked.*
+*© 2025-2026 Eric Moore and CIRIS L3C*

@@ -1,0 +1,82 @@
+# CIRIS - Accountability Infrastructure for Autonomous AI
+
+> Verify me, not trust me.
+
+CIRIS is open-source accountability infrastructure for autonomous AI. Every decision passes through a runtime conscience, every action is cryptographically attested, and the Coherence Ratchet makes deception more expensive every day the agent runs.
+
+## Quick Links
+
+- Homepage: https://ciris.ai
+- Documentation: https://deepwiki.com/CIRISAI/CIRISAgent
+- GitHub: https://github.com/CIRISAI/CIRISAgent
+- Academic Paper: https://zenodo.org/records/17195221
+
+## Key Concepts
+
+### The Coherence Ratchet
+Truth verification is O(1) against signed precedents. Deception requires solving SAT instances over the full constraint history—becoming NP-complete for k≥3 constraints. Honest actions reference prior signed commitments directly. Deceptive actions must satisfy an ever-growing constraint surface.
+
+### Runtime Conscience
+Four independent ethical faculties (entropy, coherence, optimization veto, epistemic humility) validate every action before execution. This is not a guardrail bolted on the outside—it's an architectural invariant that cannot be fine-tuned away.
+
+### Mutual Intelligibility
+Bidirectional legibility: the AI makes its reasoning legible to humans through reasoning traces and deferral rationales. Humans make their values legible to the AI through the Accord and Wise Authority structure.
+
+## Core Pages
+
+- [Vision](https://ciris.ai/vision): The Recursive Golden Rule and why CIRIS exists
+- [How It Works](https://ciris.ai/how-it-works): The H3ERE 11-step reasoning pipeline
+- [Coherence Ratchet](https://ciris.ai/coherence-ratchet): The formal thesis on computational asymmetry between truth and deception
+- [Compare](https://ciris.ai/compare): Seven requirements for accountable AI and how existing approaches compare
+- [First Contact](https://ciris.ai/first-contact): Getting started and the co-emergence thesis
+- [Architecture](https://ciris.ai/architecture): 22 core services and infrastructure design
+- [Trust & Identity](https://ciris.ai/trust): 5-level progressive attestation system
+- [Safety](https://ciris.ai/safety): Kill switch, deferral cascades, conscience vetos
+
+## Installation
+
+### Mobile
+- iOS: https://apps.apple.com/us/app/cirisagent/id6758524415
+- Android: https://play.google.com/store/apps/details?id=ai.ciris.mobile
+
+### Desktop/Server
+```bash
+pip install ciris-agent
+ciris-agent start --template sage --verbose
+```
+
+## Technical Resources
+
+- [Research Status](https://ciris.ai/research-status): Current research status with honest limitations
+- [Explore a Trace](https://ciris.ai/explore-a-trace): Interactive visualization of agent reasoning
+- [CIRIS Scoring](https://ciris.ai/ciris-scoring): The scoring model for agent decisions
+- [Models](https://ciris.ai/models): Supported LLM backends
+- [Integrations](https://ciris.ai/integrations): Discord, Home Assistant, and more
+
+## Governance
+
+- [The CIRIS Accord](https://ciris.ai/ciris_accord.txt): The complete ethical framework
+- [Safety Policy](https://ciris.ai/safety-policy): Operational safety guidelines
+- [Privacy Policy](https://ciris.ai/privacy): Data handling and privacy practices
+- [Warrant Canary](https://ciris.ai/canary): Transparency about legal requests
+
+## Full Content
+
+For complete site content in markdown format, see:
+- https://ciris.ai/llms-full.txt
+- https://ciris.ai/CIRIS_COMPREHENSIVE_GUIDE.md
+- https://ciris.ai/golden-paths.md (recommended journeys by audience type)
+
+## Contact
+
+- Discord: https://discord.gg/SWGM7Gsvrv
+- GitHub Issues: https://github.com/CIRISAI/CIRISAgent/issues
+- Email: info@ciris.ai
+
+## License
+
+AGPL-3.0 — network copyleft. Anyone who serves CIRIS must share their changes.
+
+---
+
+*Open coherence infrastructure. AGPL-3.0 | Mission-locked.*

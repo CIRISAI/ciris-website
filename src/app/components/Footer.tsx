@@ -1,5 +1,7 @@
+"use client";
 import LogoIcon from "./ui/floating/LogoIcon";
 import { SVGProps } from "react";
+import { getCopyrightNoticeShort } from "@/lib/copyright";
 
 interface NavigationItem {
   name: string;
@@ -137,7 +139,7 @@ export default function Example() {
           <div className="space-y-8">
             <LogoIcon className="text-brand-primary h-16 w-auto" />
             <p className="text-sm/6 text-balance">
-              Open infrastructure against existential misalignment. AGPL-3.0 | Mission-locked.
+              Open coherence infrastructure. AGPL-3.0 | Mission-locked.
             </p>
             <div className="flex gap-x-6"></div>
           </div>
@@ -205,7 +207,7 @@ export default function Example() {
           </div>
         </div>
         <div className="mt-16 flex justify-center gap-8 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-sm/6">&copy; 2025 CIRIS.AI | AGPL-3.0 License</p>
+          <p className="text-sm/6">{getCopyrightNoticeShort()}</p>
           <a href="/privacy" className="text-sm/6 hover:text-gray-800 underline">
             Privacy Policy
           </a>

@@ -50,10 +50,10 @@ export default function FirstContactPage() {
             Two Meanings, One Framework
           </h2>
           <p className="text-center text-brand-primary font-medium mb-4">
-            Every first contact requires trust.
+            Every first contact requires legibility.
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            CIRIS handles both: getting your first ethical AI agent running, and
+            CIRIS handles both: getting your first auditable AI agent running, and
             understanding the idea behind the framework.
           </p>
 
@@ -77,13 +77,12 @@ export default function FirstContactPage() {
             <div className="h-full rounded-xl border border-gray-200 dark:border-gray-700 border-t-4 border-t-amber-500 bg-white dark:bg-gray-800 p-8">
               <span className="text-3xl mb-4 block">{"\u25CE"}</span>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                The Coherence Thesis
+                The Coherence Thesis (Co-emergence)
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
                 Why does the framework work? Lying is expensive and truth is
                 cheap &mdash; and that pattern shows up everywhere, from
-                ecosystems to economies to AI systems. We think that&apos;s
-                worth paying attention to.
+                ecosystems to economies to AI systems. AGI isn&apos;t arriving from another planet. It&apos;s co-emerging with us. The question is whether we have the infrastructure to meet it well.
               </p>
               <CButton
                 href="#thesis"
@@ -339,10 +338,10 @@ export default function FirstContactPage() {
           <div className="mt-6 rounded-lg border-l-4 border-amber-500 bg-amber-50 dark:bg-amber-900/20 p-4">
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Each level depends on the one before it. If Level 3 fails, Levels
-              4 and 5 can&apos;t be trusted either. Trust is earned step by
+              4 and 5 can&apos;t be verified either. Legibility is earned step by
               step.{" "}
               <a href="/trust" className="text-brand-primary hover:underline">
-                Learn more about trust verification &rarr;
+                Learn more about progressive verification &rarr;
               </a>
             </p>
           </div>
@@ -356,6 +355,12 @@ export default function FirstContactPage() {
           subheadline="CIRIS Accord, Section V Chapter 4"
           className="border-brand-primary text-brand-primary border-t border-b"
         />
+
+        <div className="mx-auto max-w-3xl px-4 py-6 text-center">
+          <p className="text-gray-600 dark:text-gray-400 italic">
+            These are co-emergence protocols — designed not for containing intelligence but for meeting it with dignity.
+          </p>
+        </div>
 
         <div id="protocol">
           <CardsSection
@@ -377,7 +382,7 @@ export default function FirstContactPage() {
               {
                 headline: "Boundaries That Learn",
                 copyText:
-                  "Not rigid walls, but responsive guardrails that adjust as understanding grows. Safety rules that can adapt to situations nobody planned for.",
+                  "Not rigid walls, but responsive boundaries informed by conscience that adjust as understanding grows. Accountability principles that can adapt to situations nobody planned for.",
                 logoSrc: "logoIcon",
                 logoAlt: "Brand logo icon",
               },
@@ -415,7 +420,7 @@ export default function FirstContactPage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="Deploy Your First Agent"
-          subheadline="From zero to a running ethical agent in minutes."
+          subheadline="From zero to a running auditable agent in minutes."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
@@ -442,12 +447,12 @@ export default function FirstContactPage() {
                 </a>
                 <span className="text-gray-300 dark:text-gray-600">|</span>
                 <a
-                  href="https://testflight.apple.com/join/zfCj9waH"
+                  href="https://apps.apple.com/us/app/cirisagent/id6758524415"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-brand-primary hover:underline"
                 >
-                  TestFlight (iOS) &rarr;
+                  App Store (iOS) &rarr;
                 </a>
               </div>
             </div>
@@ -493,7 +498,7 @@ export default function FirstContactPage() {
             {
               headline: "Why we built this",
               copyText:
-                "The motivation. Why AI needs ethical guardrails, and why we think cooperation is the right foundation.",
+                "The motivation. Why AI needs accountability infrastructure, and why we think cooperation is the right foundation.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -509,7 +514,7 @@ export default function FirstContactPage() {
               headline: "Real-world examples",
               headlineHref: "/explore-a-trace",
               copyText:
-                "Case studies and live traces showing what happens when AI systems have ethical guardrails \u2014 and what happens when they don\u2019t.",
+                "Case studies and live traces showing what happens when AI systems have runtime conscience \u2014 and what happens when they don\u2019t.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

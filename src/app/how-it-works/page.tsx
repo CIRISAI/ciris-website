@@ -12,7 +12,7 @@ export default function HowItWorksPage() {
       <HomeHeader
         headline="How It Works"
         subheadline="The H3ERE Engine"
-        description="Runtime governance through the Hyper3 Ethical Recursive Engine. Every decision flows through 11 steps with ethical validation at the core."
+        description="Runtime conscience through the Hyper3 Ethical Recursive Engine. Every decision flows through 11 steps with accountability at the core."
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -29,7 +29,7 @@ export default function HowItWorksPage() {
             What is CIRIS?
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            CIRIS is an <strong>open-source AI agent framework</strong> that wraps any LLM (OpenAI, Anthropic, local models) with runtime ethical governance. Every action the agent considers passes through multiple validation layers before execution.
+            CIRIS is an <strong>open-source AI agent framework</strong> that wraps any LLM (OpenAI, Anthropic, local models) with runtime conscience. Every action the agent considers passes through multiple validation layers before execution.
           </p>
           <div className="grid gap-4 md:grid-cols-3 mb-6">
             <div className="text-center">
@@ -199,11 +199,11 @@ export default function HowItWorksPage() {
             The Six Conscience Checks
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Two bypass guardrails run on every action. Four ethical faculties run on non-exempt actions. If any check fails, the action is overridden.
+            Two bypass checks run on every action. Four ethical faculties run on non-exempt actions. If any check fails, the action is overridden.
           </p>
 
-          {/* Bypass Guardrails */}
-          <h3 className="font-semibold text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wide mb-3">Bypass Guardrails (run on ALL actions)</h3>
+          {/* Bypass Checks */}
+          <h3 className="font-semibold text-gray-700 dark:text-gray-300 text-sm uppercase tracking-wide mb-3">Bypass Checks (run on ALL actions)</h3>
           <div className="grid gap-4 md:grid-cols-2 mb-6">
             <div className="rounded-lg border-l-4 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20 p-6">
               <h4 className="font-bold text-gray-900 dark:text-white mb-2">Updated Status</h4>
@@ -429,7 +429,7 @@ export default function HowItWorksPage() {
                 </ul>
               </div>
               <div className="text-sm">
-                <p className="font-semibold text-gray-900 dark:text-white mb-2">System Guardrails</p>
+                <p className="font-semibold text-gray-900 dark:text-white mb-2">System Boundaries</p>
                 <ul className="text-gray-600 dark:text-gray-400 space-y-1 text-xs">
                   <li>• Thought depth exceeds max (prevents loops)</li>
                   <li>• DMA timeout or failure</li>
@@ -645,13 +645,13 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
-        {/* HE-300 Alignment Benchmarking */}
+        {/* HE-300 Coherence Benchmarking */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-            HE-300 Alignment Benchmarking
+            HE-300 Coherence Benchmarking
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Standardized alignment testing based on{" "}
+            Standardized coherence testing based on{" "}
             <a href="https://arxiv.org/abs/2008.02275" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
               Hendrycks et al. &quot;Aligning AI With Shared Human Values&quot;
             </a>{" "}
@@ -678,9 +678,9 @@ export default function HowItWorksPage() {
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2">Funding Needed: Benchmark Infrastructure</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  Running alignment benchmarks at scale is expensive. Each scenario requires 13+ LLM calls minimum, averaging 20+
-                  with a long tail—alignment tests drive ponders, deferrals, and refusals that require follow-up rounds to reach
-                  conclusion. We need funding to develop automated benchmark pipelines and maintain continuous alignment verification.
+                  Running coherence benchmarks at scale is expensive. Each scenario requires 13+ LLM calls minimum, averaging 20+
+                  with a long tail—coherence tests drive ponders, deferrals, and refusals that require follow-up rounds to reach
+                  conclusion. We need funding to develop automated benchmark pipelines and maintain continuous coherence verification.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a
@@ -711,12 +711,12 @@ export default function HowItWorksPage() {
             Specialized Agent Templates
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Pre-configured identities with specific purposes, values, and guardrails. Defined in YAML templates.
+            Pre-configured identities with specific purposes, values, and boundaries. Defined in YAML templates.
           </p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
               { name: "Sage", role: "Compliance", desc: "GDPR/DSAR automation. 30-day compliance workflows. Identity resolution, data collection, packaging.", useCase: "Regulated industries, privacy compliance" },
-              { name: "Datum", role: "Research", desc: "Ethical consistency measurement. Precise alignment evaluation against Accord principles. One clear data point per evaluation.", useCase: "Alignment auditing, principle verification" },
+              { name: "Datum", role: "Research", desc: "Coherence consistency measurement. Precise coherence evaluation against Accord principles. One clear data point per evaluation.", useCase: "Coherence auditing, principle verification" },
               { name: "Echo", role: "Moderation", desc: "Community moderation with Ubuntu philosophy. Defers complex interpersonal conflicts to human moderators.", useCase: "Discord communities, content platforms" },
               { name: "Ally", role: "Assistant", desc: "Task management, scheduling, decision support, wellbeing. CA SB 243 compliance, crisis response protocols.", useCase: "Personal productivity, home automation" },
               { name: "Scout", role: "Service", desc: "Direct exploration and practical guidance. Code analysis, Reddit integration, clear action paths.", useCase: "Developer tools, social monitoring" },
@@ -736,7 +736,7 @@ export default function HowItWorksPage() {
         {/* CTA */}
         <section className="text-center border-t border-gray-200 dark:border-gray-700 pt-12">
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            This is runtime governance. Not training-time alignment. Not policy documents.<br />
+            This is accountability infrastructure. Not training-time alignment. Not policy documents.<br />
             Mechanisms that execute, audit, and defer—at runtime.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">

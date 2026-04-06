@@ -15,7 +15,7 @@ export default function VisionPage() {
       <HomeHeader
         headline="You Deserve This."
         subheadline="We all do."
-        description="The real risk isn't rogue AI—it's AI that acts with conviction on bad foundations. Ethics alone isn't enough. CIRIS builds agents with both ethics and intuition: knowing when their own confidence is unearned."
+        description="The real risk isn't rogue AI—it's AI that acts with conviction on bad foundations. Rules alone aren't enough. CIRIS builds agents with both conscience and intuition: knowing when their own confidence is unearned."
         mediaType="image"
         opacityValue={0.6}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -52,16 +52,16 @@ export default function VisionPage() {
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Trust Requires Transparency",
+              headline: "Legibility Requires Transparency",
               copyText:
-                "You can't trust what you can't see. Closed-source AI asks for faith. CIRIS asks you to verify. The code is open. The reasoning is auditable. The ethics are explicit.",
+                "You can't verify what you can't see. Closed-source AI asks for faith. CIRIS asks you to verify. The code is open. The reasoning is auditable. The principles are explicit.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Ethics Must Execute",
+              headline: "Conscience Must Execute",
               copyText:
-                "Principles on paper don't protect anyone. CIRIS embeds ethics in the runtime — every action passes through conscience checks. Not guidelines. Constraints.",
+                "Principles on paper don't protect anyone. CIRIS embeds conscience in the runtime — every action passes through validation checks. Not guidelines. Constraints.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -83,23 +83,23 @@ export default function VisionPage() {
               The Structural Risk
             </h2>
             <p className="text-lg text-brand-primary mb-6">
-              Why ethics alone isn&apos;t enough.
+              Why rules alone aren&apos;t enough.
             </p>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
-                An AI can pass every ethics test and still fail catastrophically. How? When all its &quot;independent&quot; checks
+                An AI can pass every compliance test and still fail catastrophically. How? When all its &quot;independent&quot; checks
                 are secretly correlated—drawing from the same training data, the same assumptions, the same blind spots.
                 Agreement feels like validation, but it might just be an echo chamber.
               </p>
               <p>
-                This is the difference between <span className="text-yellow-600 font-medium">Ethical AI</span> and{" "}
-                <span className="text-green-600 font-medium">Ethical + Intuitive AI</span>.
+                This is the difference between <span className="text-yellow-600 font-medium">Rules-Only AI</span> and{" "}
+                <span className="text-green-600 font-medium">Rules + Awareness AI</span>.
                 The first passes tests but can&apos;t tell when its confidence is unearned.
                 The second monitors its own reasoning quality—and knows when agreement is too easy.
               </p>
               <p className="font-medium">
-                CIRIS implements both layers. Ethics through the{" "}
-                <a href="/how-it-works" className="text-brand-primary hover:underline">six conscience checks</a>.
+                CIRIS implements both layers. Conscience through the{" "}
+                <a href="/how-it-works" className="text-brand-primary hover:underline">four-faculty validation system</a>.
                 Intuition through{" "}
                 <a href="/research-status#idma" className="text-brand-primary hover:underline">IDMA</a>—the component
                 that asks &quot;are my sources actually independent?&quot; before every action.
@@ -140,16 +140,16 @@ export default function VisionPage() {
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "No Profit Motive",
+              headline: "Mission-Locked Economics",
               copyText:
-                "CIRIS isn't a startup. There are no investors expecting returns. No growth metrics. No monetization strategy. Just infrastructure for human flourishing.",
+                "CIRIS is built by a mission-locked L3C. Revenue exists ($0.10/request or BYOK free) — but the legal structure prevents profit extraction from overriding mission. Same price everywhere. No enterprise tiers. No 'contact sales.'",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Human Oversight Always",
+              headline: "Mutual Intelligibility Always",
               copyText:
-                "The agent defers to you when uncertain. It can refuse unethical requests. But you maintain final authority. AI that serves humanity must answer to humanity.",
+                "The agent makes its reasoning legible to you. You make your values legible to the agent through the Accord and Wise Authority structure. AI that serves humanity must be understandable by humanity.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -161,7 +161,7 @@ export default function VisionPage() {
           logoAlt="Brand logo icon"
           headline="The Academic Foundation"
           subheadline="Published. Open to critique."
-          copyText="CIRIS isn't just code — it's grounded in documented research on AI alignment, ethical frameworks, and accountable autonomy. Read the paper, challenge the approach, contribute improvements. We welcome scrutiny."
+          copyText="CIRIS isn't just code — it's grounded in documented research on AI coherence, accountability frameworks, and autonomous agents. Read the paper, challenge the approach, contribute improvements. We welcome scrutiny."
         />
 
         <div className="my-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -210,10 +210,10 @@ export default function VisionPage() {
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Safety Features",
+              headline: "Accountability Features",
               headlineHref: "/safety",
               copyText:
-                "Kill switch. Deferral cascades. Conscience vetos. Hash-chained audit trails. Every safety mechanism is documented and verifiable.",
+                "Kill switch. Deferral cascades. Conscience vetos. Hash-chained audit trails. Every accountability mechanism is documented and verifiable.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

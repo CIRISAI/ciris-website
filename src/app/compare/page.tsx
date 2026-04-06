@@ -15,7 +15,7 @@ export default function ComparePage() {
       <HomeHeader
         headline="Enrich or Extract"
         subheadline="AI that doesn't serve humanity is extracting from it."
-        description="If you can't check the ethics, they're marketing. Here's what to look for — and how existing approaches compare."
+        description="If you can't check the accountability, it's marketing. Here's what to look for — and how existing approaches compare."
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -30,7 +30,7 @@ export default function ComparePage() {
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-2">Three Types of AI</h2>
           <p className="text-center text-brand-primary font-medium mb-4">
-            Ethics is necessary. It&apos;s not sufficient.
+            Conscience is necessary. It&apos;s not sufficient.
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             Some AI has no rules at all. Some follows rules but can&apos;t tell when its sources are just echoing each other. Only one type checks whether its information actually comes from different places.
@@ -93,7 +93,7 @@ export default function ComparePage() {
           logoAlt="Brand logo icon"
           headline="Seven Things to Check"
           subheadline="Six for ethics. One for blind spots."
-          copyText="These are the things that make AI verifiably ethical. The first six are about doing the right thing. The seventh is about catching the situations where 'doing the right thing' is based on bad information."
+          copyText="These are the things that make AI auditable and accountable. The first six are about doing the right thing. The seventh is about catching the situations where 'doing the right thing' is based on bad information."
         />
 
         <CardsSection
@@ -107,9 +107,9 @@ export default function ComparePage() {
               headlineHref: "/sections/main/v1",
             },
             {
-              headline: "2. Ethics Check on Every Decision",
+              headline: "2. Conscience Check on Every Decision",
               copyText:
-                "Every action goes through an ethics check before the agent does it. Not after the fact — before.",
+                "Every action goes through a conscience check before the agent does it. Not after the fact — before.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -182,7 +182,7 @@ export default function ComparePage() {
 
           <div className="flex flex-wrap gap-4 items-center justify-between">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              This is what makes CIRIS different from other ethical AI frameworks.
+              This is what makes CIRIS different from other AI accountability frameworks.
             </p>
             <a
               href="/coherence-ratchet"
@@ -252,7 +252,7 @@ export default function ComparePage() {
                   <th className="p-4 text-left font-bold text-brand-primary">Project</th>
                   <th className="p-4 text-center font-bold text-brand-primary">Checks Every Decision</th>
                   <th className="p-4 text-center font-bold text-brand-primary">Published Rules</th>
-                  <th className="p-4 text-center font-bold text-brand-primary">Ethics Built In</th>
+                  <th className="p-4 text-center font-bold text-brand-primary">Conscience Built In</th>
                   <th className="p-4 text-center font-bold text-brand-primary">Proof of What It Did</th>
                   <th className="p-4 text-center font-bold text-brand-primary">Open Source</th>
                   <th className="p-4 text-center font-bold text-indigo-600 dark:text-indigo-400">Echo Chamber Detection</th>
@@ -313,7 +313,7 @@ export default function ComparePage() {
           </div>
 
           <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-            Guardrails and governance frameworks solve important but different problems. Safety blocks harmful outputs. Ethics reasons about values. CIRIS aims to do both — and catch the blind spots that neither addresses alone.
+            Output filters and governance frameworks solve important but different problems. Filters block harmful outputs. Conscience reasons about values. CIRIS aims to do both — and catch the blind spots that neither addresses alone.
           </p>
         </div>
 
@@ -328,7 +328,7 @@ export default function ComparePage() {
         <CardsSection
           cardsData={[
             {
-              headline: "Safety Guardrails",
+              headline: "Output Filters",
               copyText:
                 "Block dangerous outputs — prompt injection, harmful content, adversarial attacks. Like a filter that catches bad things on the way out.",
               logoSrc: "logoIcon",
@@ -354,7 +354,7 @@ export default function ComparePage() {
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Many Aligned Agents"
+          headline="Many Coherent Agents"
           subheadline="Distributed governance, not concentrated power."
           className="border-brand-primary text-brand-primary border-t"
         />
@@ -423,6 +423,17 @@ export default function ComparePage() {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://apps.apple.com/us/app/cirisagent/id6758524415"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-brand-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-primary/80"
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              iOS
+            </a>
             <a
               href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
               target="_blank"

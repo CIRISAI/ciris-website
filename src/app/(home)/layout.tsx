@@ -25,8 +25,8 @@ const fontBrandRegular = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "CIRIS.AI | Runtime Governance for Agentic AI",
-  description: "Runtime governance for agentic AI. Open source ethical framework with cryptographic audit, human deferral, and conscience-checked actions. AGPL-3.0.",
+  title: "CIRIS.AI | Accountability Infrastructure for Autonomous AI",
+  description: "Accountability infrastructure for autonomous AI. Open source framework with cryptographic attestation, human deferral, and runtime conscience. Verify me, not trust me. AGPL-3.0.",
 };
 
 export default function RootLayout({

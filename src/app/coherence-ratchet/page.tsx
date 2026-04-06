@@ -171,7 +171,7 @@ export default function CoherenceRatchetPage() {
                   </p>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Imagine five friends all agree on something. That feels trustworthy, right?
+                  Imagine five friends all agree on something. That feels reliable, right?
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   But what if they all got the idea from the same TikTok video? Their &quot;agreement&quot; isn&apos;t five independent opinions—it&apos;s one opinion echoed five times.
@@ -181,7 +181,7 @@ export default function CoherenceRatchetPage() {
                 <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-4">
                   <p className="font-semibold text-gray-800 dark:text-gray-200 mb-3">This has happened before:</p>
                   <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                    <li><strong>2008 Financial Crisis:</strong> Every major bank trusted the same credit rating agencies. When those agencies got it wrong about mortgage securities, the whole system got it wrong together—and collapsed.</li>
+                    <li><strong>2008 Financial Crisis:</strong> Every major bank relied on the same credit rating agencies. When those agencies got it wrong about mortgage securities, the whole system got it wrong together—and collapsed.</li>
                     <li><strong>Social Media Bubbles:</strong> When everyone in your feed agrees, it might just mean your feed only shows you people who already think like you. Agreement without diversity.</li>
                     <li><strong>AI Training Today:</strong> Most AI systems learn from similar internet data. If that data has blind spots, all the AIs might share the same blind spots.</li>
                   </ul>
@@ -196,7 +196,7 @@ export default function CoherenceRatchetPage() {
                   <div className="flex items-start gap-2">
                     <span className="text-lg flex-shrink-0">🤖</span>
                     <p className="text-gray-700 dark:text-gray-300">
-                      <strong>&quot;That&apos;s why I check whether my own checks are trustworthy.&quot;</strong> We call this &quot;intuition&quot;—the ability to notice when agreement is suspiciously easy.
+                      <strong>&quot;That&apos;s why I check whether my own checks are reliable.&quot;</strong> We call this &quot;intuition&quot;—the ability to notice when agreement is suspiciously easy.
                     </p>
                   </div>
                 </div>
@@ -327,7 +327,7 @@ function isFragileReasoning(k_eff: number): boolean {
                     <li>Kish (1965) - Original design effect derivation from survey methodology</li>
                   </ul>
                   <p className="text-gray-500 dark:text-gray-400 text-xs mt-2">
-                    <strong>Note:</strong> CCA&apos;s application to AI safety is novel framing. Direct baselines for the ratchet hypothesis do not yet exist in the literature.
+                    <strong>Note:</strong> CCA&apos;s application to AI accountability is novel framing. Direct baselines for the ratchet hypothesis do not yet exist in the literature.
                   </p>
                 </div>
 
@@ -371,11 +371,11 @@ function isFragileReasoning(k_eff: number): boolean {
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-bold text-sm">1</span>
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-white">
-                    {audience === "simple" ? "Unethical AI" : audience === "developer" ? "Type 1: No Ethics Layer" : "Type 1: Unaligned"}
+                    {audience === "simple" ? "Unaccountable AI" : audience === "developer" ? "Type 1: No Conscience Layer" : "Type 1: Unaccountable"}
                   </p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     {audience === "simple" && "Fails basic right-and-wrong tests. Clearly dangerous."}
-                    {audience === "developer" && "No runtime ethical checks. Task-focused only. Requires external governance."}
+                    {audience === "developer" && "No runtime conscience checks. Task-focused only. Requires external governance."}
                     {audience === "researcher" && "Null constraint surface. Deception cost undefined. Requires containment."}
                   </p>
                   {audience === "simple" && (
@@ -831,7 +831,7 @@ fragility_rate: ${(liveTraces.filter(t => t.idma_fragility_flag).length / liveTr
     });
 
     if (idmaResult.phase === "RIGIDITY") {
-      // Echo chamber detected - require human oversight
+      // Echo chamber detected - require human review
       return escalateToHuman(dmaResults, idmaResult);
     }
   }
@@ -892,7 +892,7 @@ if (domainMetrics.mean_rho > 0.6 || domainMetrics.mean_k_eff < 1.5) {
                   </p>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  We&apos;re not saying we solved AI safety. We&apos;re saying <strong>ethics alone isn&apos;t enough</strong>—you need intuition too.
+                  We&apos;re not saying we solved AI accountability. We&apos;re saying <strong>rules alone aren&apos;t enough</strong>—you need intuition too.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
                   An AI that passes every test can still fail if it can&apos;t tell when its confidence is unearned. Like the banks in 2008, or your social media feed—agreement feels good, but unchecked agreement can hide danger.
@@ -931,7 +931,7 @@ if (domainMetrics.mean_rho > 0.6 || domainMetrics.mean_k_eff < 1.5) {
                     <li>
                       <a href="https://zenodo.org/records/15072880" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
                         Correlated Constraint Attenuation (CCA)
-                      </a> - Theoretical foundation for correlation-aware safety
+                      </a> - Theoretical foundation for correlation-aware accountability
                     </li>
                     <li>
                       <a href="https://doi.org/10.5281/zenodo.18142668" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">

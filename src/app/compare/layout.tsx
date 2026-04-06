@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Compare | Runtime Governance for Agentic AI",
-  description: "Six requirements for verifiably ethical AI. See how CIRIS implements runtime governance with published principles, conscience-checked actions, and cryptographic audit.",
+  title: "Compare | Accountability Infrastructure for Autonomous AI",
+  description: "Seven requirements for verifiably accountable AI. See how CIRIS implements accountability infrastructure with published principles, runtime conscience, and cryptographic attestation.",
   keywords: [
-    "runtime governance",
-    "AI governance comparison",
-    "ethical AI requirements",
-    "agentic AI safety",
+    "accountability infrastructure",
+    "AI accountability comparison",
+    "auditable AI requirements",
+    "autonomous AI accountability",
     "AI compliance",
     "EU AI Act compliance",
   ],

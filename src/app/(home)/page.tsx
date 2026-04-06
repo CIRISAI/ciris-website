@@ -79,7 +79,7 @@ export default function Homepage() {
       <HomeHeader
         headline="Accountability Without Gatekeepers."
         subheadline="Make lying expensive at planetary scale — without giving anyone the keys to truth."
-        description="CIRIS is open-source infrastructure for trustworthy AI — ethics and intuition working together. Many bounded agents, each auditable, each accountable to local humans. Ally is your personal assistant built on it — runtime ethical governance, coherence monitoring, cryptographic audit trails."
+        description="CIRIS is open-source accountability infrastructure for autonomous AI — coherence and conscience working together. Many bounded agents, each auditable, each accountable to local humans. Ally is your personal assistant built on it — runtime conscience, coherence monitoring, cryptographic attestation."
         mediaType="video"
         opacityValue={0.5}
         mediaSrc="/videos/video3.mp4"
@@ -89,18 +89,29 @@ export default function Homepage() {
         linkHref="/how-it-works"
       />
 
-      {/* Android App Announcement Banner */}
+      {/* Mobile Apps Announcement Banner */}
       <div className="bg-gradient-to-r from-green-600 to-blue-600 py-4">
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
             <div className="flex items-center gap-3 text-white">
               <span className="text-2xl">📱</span>
               <div>
-                <p className="text-lg font-bold">CIRIS Android App Now Available</p>
-                <p className="text-sm opacity-90">Images, documents, Home Assistant integration — your ethical AI, on mobile</p>
+                <p className="text-lg font-bold">CIRIS Mobile Apps Now Available</p>
+                <p className="text-sm opacity-90">Images, documents, Home Assistant integration — your auditable AI, on mobile</p>
               </div>
             </div>
             <div className="flex gap-3">
+              <a
+                href="https://apps.apple.com/us/app/cirisagent/id6758524415"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                App Store
+              </a>
               <a
                 href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
                 target="_blank"
@@ -111,14 +122,6 @@ export default function Homepage() {
                   <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
                 </svg>
                 Google Play
-              </a>
-              <a
-                href="https://github.com/CIRISAI/CIRISAgent/releases/latest"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-              >
-                Direct APK
               </a>
             </div>
           </div>
@@ -162,10 +165,10 @@ export default function Homepage() {
       <div className="bg-gray-100 dark:bg-gray-900 py-8 border-b border-gray-200 dark:border-gray-800">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="text-lg text-gray-900 dark:text-gray-100 font-medium mb-3">
-            Ethics alone isn&apos;t enough. There are three types of AI — and only one avoids the worst outcomes.
+            Rules alone aren&apos;t enough. There are three types of AI — and only one avoids the worst outcomes.
           </p>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            <span className="text-red-500 font-medium">Unethical AI</span> fails obvious tests. <span className="text-yellow-600 font-medium">Ethical AI</span> passes them but acts with false confidence — when correlated sources agree, it can&apos;t tell the difference. <span className="text-green-600 font-medium">Ethical + Intuitive AI</span> monitors its own coherence and knows when agreement is too easy. CIRIS implements all three layers: ethics, intuition, and <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a>.
+            <span className="text-red-500 font-medium">Unaccountable AI</span> fails obvious tests. <span className="text-yellow-600 font-medium">Rules-Only AI</span> passes them but acts with false confidence — when correlated sources agree, it can&apos;t tell the difference. <span className="text-green-600 font-medium">Rules + Awareness AI</span> monitors its own coherence and knows when agreement is too easy. CIRIS implements all three layers: conscience, intuition, and <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a>.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <a href="/compare" className="text-brand-primary hover:underline">Three Types of AI →</a>
@@ -204,8 +207,69 @@ export default function Homepage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="Meet Ally"
-          subheadline="Your personal AI assistant, built on ethical principles."
+          subheadline="Your personal AI assistant, built for accountability."
           copyText="Ally is an open-source AI assistant that runs on your hardware. Task management, scheduling, decision support, smart home control — with complete transparency. Core logic runs locally; LLM inference uses your choice of provider (cloud APIs, local models, or our zero-data-retention proxy). Every decision is auditable, every action is accountable."
+        />
+
+        {/* Out of the Box Use Cases */}
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="Works Out of the Box"
+          subheadline="Real capabilities you can use today."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Home Assistant Integration",
+              copyText:
+                "Control your lights, thermostats, and devices with natural language. 'Turn off the living room lights' or 'Set the temperature to 72°.' Full Home Assistant API support — your smart home, your way, with full audit trails.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Navigation & Directions",
+              copyText:
+                "Get directions, traffic updates, and route planning through natural conversation. 'How do I get to the airport?' or 'What's the fastest route home?' Local processing means your location history stays private.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Weather & Planning",
+              copyText:
+                "Real-time weather forecasts, severe weather alerts, and planning assistance. 'Should I bring an umbrella tomorrow?' or 'What's the best day to mow the lawn this week?' Context-aware answers that actually help.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Document Understanding",
+              copyText:
+                "Upload PDFs, images, and documents. Ask questions about your files — receipts, contracts, manuals. 'What's the return policy in this receipt?' Everything stays local unless you choose otherwise.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Task & Calendar Management",
+              copyText:
+                "Create reminders, manage your schedule, track to-dos. 'Remind me to call Mom on Sunday' or 'What's on my calendar this week?' Natural language interface to your digital life.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Research & Questions",
+              copyText:
+                "Ask anything — from quick facts to complex research. Unlike other assistants, Ally tells you when it's uncertain and can defer to web search or human experts when needed.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
         />
 
         {/* Memory & Learning */}
@@ -229,7 +293,7 @@ export default function Homepage() {
             {
               headline: "Adaptive Learning",
               copyText:
-                "Four operational modes — WORK, PLAY, SOLITUDE, DREAM — each with different learning behaviors. Behavioral drift monitoring ensures the agent stays aligned as its knowledge grows. Configurable thresholds trigger recalibration.",
+                "Four operational modes — WORK, PLAY, SOLITUDE, DREAM — each with different learning behaviors. Behavioral drift monitoring ensures the agent stays coherent as its knowledge grows. Configurable thresholds trigger recalibration.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -329,7 +393,7 @@ export default function Homepage() {
             {
               headline: "Startup Validation",
               copyText:
-                "Five-step alignment check before work begins. Verify configuration, validate system integrity, confirm service health, acknowledge operational limits, log initialization. Higher-stake deployments run the full sequence.",
+                "Five-step coherence check before work begins. Verify configuration, validate system integrity, confirm service health, acknowledge operational limits, log initialization. Higher-stake deployments run the full sequence.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -357,7 +421,7 @@ export default function Homepage() {
           logoAlt="Brand logo icon"
           headline="You are in Control"
           subheadline="Ally defers to you when it matters."
-          copyText="Before asking for help, Ally analyzes every decision through ethical, common-sense, and domain-specific lenses. Six conscience checks validate every action. If uncertainty remains, it escalates to you or advisors you trust. You maintain final authority."
+          copyText="Before asking for help, Ally analyzes every decision through ethical, common-sense, and domain-specific lenses. Four ethical evaluations plus a four-faculty conscience validate every action. If uncertainty remains, it escalates to you or advisors you trust. You maintain final authority."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
@@ -374,7 +438,7 @@ export default function Homepage() {
             {
               headline: "Multi-Perspective Reasoning",
               copyText:
-                "Every decision runs through three parallel analyses: ethical principles, common-sense plausibility, and your specific context. Then six conscience checks validate the action before execution.",
+                "Every decision runs through three parallel analyses: ethical principles, common-sense plausibility, and your specific context. Then the four-faculty conscience validates the action before execution.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -391,8 +455,8 @@ export default function Homepage() {
         <AccordionSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Governance and Oversight"
-          subheadline="Built-in operational governance mechanisms to sustain ethical integrity"
+          headline="Governance and Mutual Intelligibility"
+          subheadline="Built-in operational governance mechanisms to sustain coherence and accountability"
         />
 
         {/* <ImageHeroBlock
@@ -428,7 +492,7 @@ export default function Homepage() {
             {
               headline: "Open Source Foundation",
               copyText:
-                "Inspect the code, verify the behavior, contribute improvements. Transparency isn't a feature—it's the foundation of trust.",
+                "Inspect the code, verify the behavior, contribute improvements. Transparency isn't a feature—it's the foundation of legibility.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

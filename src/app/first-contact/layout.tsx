@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "First Contact — CIRIS Framework",
     description:
-      "Two meanings. One framework. Deploy your first ethical AI agent or explore why cooperation may be cheaper than deception — and what that means for building trustworthy AI.",
+      "Two meanings. One framework. Deploy your first auditable AI agent or explore why cooperation may be cheaper than deception — and what that means for building legible AI.",
     url: "https://ciris.ai/first-contact",
     type: "website",
   },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "First Contact — CIRIS Framework",
     description:
-      "Cooperation is cheaper than deception. Deploy your first ethical AI agent or explore what that means.",
+      "Cooperation is cheaper than deception. Deploy your first auditable AI agent or explore what that means.",
   },
 };
 

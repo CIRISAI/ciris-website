@@ -10,23 +10,23 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "CIRIS - Ethical AI Framework",
+    default: "CIRIS — Accountability Infrastructure for Autonomous AI",
     template: "%s | CIRIS",
   },
   description:
-    "Runtime governance for agentic AI. Open source ethical framework with cryptographic audit, human deferral, and conscience-checked actions. AGPL-3.0.",
+    "Accountability infrastructure for autonomous AI. Open source framework with cryptographic attestation, human deferral, and runtime conscience. Verify me, not trust me. AGPL-3.0.",
   keywords: [
-    "runtime governance",
-    "AI governance",
-    "ethical AI",
+    "accountability infrastructure",
+    "AI accountability",
+    "auditable AI",
+    "legible AI",
     "open source AI",
     "AI framework",
-    "trustworthy AI",
-    "AI safety",
-    "agentic AI safety",
+    "coherence ratchet",
+    "autonomous AI",
     "AI compliance",
     "EU AI Act",
-    "auditable AI",
+    "runtime conscience",
   ],
   authors: [{ name: "CIRIS L3C" }],
   creator: "CIRIS L3C",
@@ -40,23 +40,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://ciris.ai",
     siteName: "CIRIS",
-    title: "CIRIS - Runtime Governance for Agentic AI",
+    title: "CIRIS — Accountability Infrastructure for Autonomous AI",
     description:
-      "Runtime governance for agentic AI. Open source ethical framework with cryptographic audit, human deferral, and conscience-checked actions.",
+      "Accountability infrastructure for autonomous AI. Open source framework with cryptographic attestation, runtime conscience, and the Coherence Ratchet. Verify me, not trust me.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "CIRIS - Ethical AI Framework",
+        alt: "CIRIS — Accountability Infrastructure for Autonomous AI",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CIRIS - Runtime Governance for Agentic AI",
+    title: "CIRIS — Accountability Infrastructure for Autonomous AI",
     description:
-      "Runtime governance for agentic AI. Open source ethical framework with cryptographic audit and conscience-checked actions.",
+      "Accountability infrastructure for autonomous AI. Open source framework with cryptographic attestation and runtime conscience. Verify me, not trust me.",
     images: ["/og-image.png"],
   },
   robots: {
