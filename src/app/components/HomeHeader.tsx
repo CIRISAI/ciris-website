@@ -69,7 +69,7 @@ export default function HomeHeader({
           />
           <TextGenerateEffectRND
             textContent={headline}
-            className="mt-[120px] w-full text-5xl font-medium tracking-tight text-white md:text-8xl dark:text-white"
+            className="mt-[120px] mb-6 w-full text-5xl font-medium tracking-tight text-white md:mb-8 md:text-8xl dark:text-white"
           />
           {subheadline && (
             <FadeInwrapper delay={1.2}>
