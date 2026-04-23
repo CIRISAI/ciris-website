@@ -7,7 +7,6 @@ import navItems from "@/app/components/navitems";
 export default function InstallPage() {
   const [copiedPip, setCopiedPip] = useState(false);
   const [copiedDocker, setCopiedDocker] = useState(false);
-  const [copiedCurl, setCopiedCurl] = useState(false);
   const [copiedGit, setCopiedGit] = useState(false);
 
   const copyToClipboard = (text: string, setter: (val: boolean) => void) => {
@@ -17,8 +16,7 @@ export default function InstallPage() {
   };
 
   const pipCommand = "pip install ciris-agent";
-  const dockerCommand = "curl -sSL https://ciris.ai/install.sh | bash -s -- --docker";
-  const curlCommand = "curl -sSL https://ciris.ai/install.sh | bash";
+  const dockerCommand = "docker compose up -d";
   const gitCommand = "git clone https://github.com/CIRISAI/CIRISAgent.git";
 
   return (
@@ -121,7 +119,7 @@ export default function InstallPage() {
                   2. Docker Compose
                 </h3>
                 <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
-                  Pre-built containers from GitHub Container Registry. Isolated environment with no dependency management.
+                  Run CIRIS in an isolated container environment. Best when you want reproducible local or server deployments.
                 </p>
                 <div className="relative">
                   <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-sm text-gray-100">
@@ -135,38 +133,14 @@ export default function InstallPage() {
                   </button>
                 </div>
                 <div className="mt-3 text-xs text-gray-600 dark:text-gray-400">
-                  <strong>Requirements:</strong> Docker Engine 20.10+, docker compose plugin
+                  <strong>Requirements:</strong> Docker Engine 20.10+, docker compose plugin, a project checkout with the compose file
                 </div>
               </div>
 
-              {/* Method 3: curl | bash */}
+              {/* Method 3: GitHub Clone */}
               <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
-                  3. Automated Installer Script
-                </h3>
-                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
-                  One-line installer that handles dependencies, setup, and services. Best for servers and production deployments.
-                </p>
-                <div className="relative">
-                  <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-sm text-gray-100">
-                    <code>{curlCommand}</code>
-                  </pre>
-                  <button
-                    onClick={() => copyToClipboard(curlCommand, setCopiedCurl)}
-                    className="absolute right-2 top-2 rounded-md bg-gray-700 px-3 py-1 text-xs text-white hover:bg-gray-600 transition-colors"
-                  >
-                    {copiedCurl ? "✓ Copied!" : "Copy"}
-                  </button>
-                </div>
-                <div className="mt-3 text-xs text-gray-600 dark:text-gray-400">
-                  <strong>Requirements:</strong> Linux/macOS/WSL2, Python 3.10+, Node.js 18+
-                </div>
-              </div>
-
-              {/* Method 4: GitHub Clone */}
-              <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
-                <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
-                  4. GitHub Clone (Development)
+                  3. GitHub Clone (Development)
                 </h3>
                 <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
                   Clone the repository for development, customization, or contributing. Full source code access.
@@ -196,10 +170,10 @@ export default function InstallPage() {
                 </div>
               </div>
 
-              {/* Method 5: CIRISManager */}
+              {/* Method 4: CIRISManager */}
               <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
-                  5. CIRISManager (Enterprise/Canary)
+                  4. CIRISManager (Enterprise/Canary)
                 </h3>
                 <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
                   Managed canary deployments with gradual rollouts, automated testing, and rollback capabilities. For production fleets.
@@ -213,74 +187,6 @@ export default function InstallPage() {
                   <strong>Best for:</strong> Enterprise deployments, production fleets, managed infrastructure
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Installer Script Options */}
-          <div className="mt-12">
-            <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
-              Installer Script Options
-            </h2>
-            <p className="mb-6 text-sm text-gray-600 dark:text-gray-400">
-              Advanced options for the curl installer script (method #3)
-            </p>
-
-            <div className="space-y-4">
-              <details className="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
-                <summary className="cursor-pointer p-4 font-semibold text-gray-900 dark:text-white">
-                  Custom Installation Directory
-                </summary>
-                <div className="border-t border-gray-200 p-4 dark:border-gray-700">
-                  <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
-                    Install to a custom location (default: ~/ciris)
-                  </p>
-                  <pre className="overflow-x-auto rounded-md bg-gray-900 p-3 text-xs text-gray-100">
-                    curl -sSL https://ciris.ai/install.sh | bash -s -- --install-dir /opt/ciris
-                  </pre>
-                </div>
-              </details>
-
-              <details className="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
-                <summary className="cursor-pointer p-4 font-semibold text-gray-900 dark:text-white">
-                  Dry Run (Preview Actions)
-                </summary>
-                <div className="border-t border-gray-200 p-4 dark:border-gray-700">
-                  <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
-                    See what would be installed without making changes
-                  </p>
-                  <pre className="overflow-x-auto rounded-md bg-gray-900 p-3 text-xs text-gray-100">
-                    curl -sSL https://ciris.ai/install.sh | bash -s -- --dry-run
-                  </pre>
-                </div>
-              </details>
-
-              <details className="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
-                <summary className="cursor-pointer p-4 font-semibold text-gray-900 dark:text-white">
-                  Development Mode
-                </summary>
-                <div className="border-t border-gray-200 p-4 dark:border-gray-700">
-                  <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
-                    Install development dependencies
-                  </p>
-                  <pre className="overflow-x-auto rounded-md bg-gray-900 p-3 text-xs text-gray-100">
-                    curl -sSL https://ciris.ai/install.sh | bash -s -- --dev
-                  </pre>
-                </div>
-              </details>
-
-              <details className="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
-                <summary className="cursor-pointer p-4 font-semibold text-gray-900 dark:text-white">
-                  Skip Service Installation
-                </summary>
-                <div className="border-t border-gray-200 p-4 dark:border-gray-700">
-                  <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
-                    Install without systemd/launchd service setup
-                  </p>
-                  <pre className="overflow-x-auto rounded-md bg-gray-900 p-3 text-xs text-gray-100">
-                    curl -sSL https://ciris.ai/install.sh | bash -s -- --skip-service
-                  </pre>
-                </div>
-              </details>
             </div>
           </div>
 

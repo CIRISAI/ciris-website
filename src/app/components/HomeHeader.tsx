@@ -9,6 +9,7 @@ interface HomeHeaderProps {
   headline: string;
   subheadline?: string;
   description?: string;
+  supportingText?: string;
   mediaType: "video" | "image";
   mediaSrc: string;
   opacityValue: number;
@@ -22,6 +23,7 @@ export default function HomeHeader({
   headline,
   subheadline,
   description,
+  supportingText,
   mediaType,
   mediaSrc,
   buttonText,
@@ -31,7 +33,7 @@ export default function HomeHeader({
   opacityValue,
 }: HomeHeaderProps) {
   return (
-    <div className="h-90v relative isolate container mt-6 overflow-hidden shadow-2xl">
+    <div className="h-90v relative isolate container mt-4 overflow-hidden rounded-[28px] shadow-2xl">
       <FadeInwrapper delay={1}>
         <div className="bg-black opacity-100">
           {mediaType === "video" ? (
@@ -58,7 +60,7 @@ export default function HomeHeader({
         style={{ opacity: opacityValue }}
         className="absolute inset-0 rounded-xl bg-black"
       />
-      <div className="relative top-0 z-10 max-w-[1536px] px-8 py-32 sm:py-48 md:px-40 lg:py-56">
+      <div className="relative top-0 z-10 max-w-[1536px] px-8 py-32 sm:py-44 md:px-40 lg:py-52">
         <div className="text-left">
           <RotatingLogo
             className="absolute top-24 -left-20 z-1 animate-[spin_150s_linear_infinite] fill-white opacity-100 md:top-52 md:left-10 dark:fill-white/50"
@@ -104,6 +106,15 @@ export default function HomeHeader({
               )}
             </div>
           </FadeInwrapper>
+          {supportingText && (
+            <FadeInwrapper delay={1.75}>
+              <div className="relative top-1 mt-6 opacity-0">
+                <p className="text-sm font-medium text-white/90 md:max-w-[720px]">
+                  {supportingText}
+                </p>
+              </div>
+            </FadeInwrapper>
+          )}
         </div>
       </div>
     </div>

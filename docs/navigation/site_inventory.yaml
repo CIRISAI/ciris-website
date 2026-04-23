@@ -1,0 +1,590 @@
+schema_version: 1
+generated_on: 2026-04-23
+purpose: >
+  LLM-parsable content inventory and IA audit baseline for redrawing CIRIS
+  navigation paths around user personas, task stages, and evidence ladders.
+approach_names:
+  primary:
+    - content inventory
+    - content audit
+    - information architecture audit
+  adjacent:
+    - navigation redesign
+    - IA restructuring
+    - tree-testing preparation
+    - persona-based journey mapping
+sources:
+  terminology_and_best_practices:
+    - https://www.iainstitute.org/sites/default/files/what_is_ia.pdf
+    - https://brandguide.asu.edu/execution-guidelines/web/content/information-architecture
+    - https://www.siteimprove.com/glossary/content-inventory/
+    - https://informationarchitectureauthority.com/information-architecture-principles
+current_primary_nav:
+  - name: Home
+    link: /
+  - name: Vision
+    link: /vision
+  - name: Principles
+    link: /sections/main
+  - name: Get Started
+    link: /install
+  - name: GitHub
+    link: https://github.com/CIRISAI/CIRISAgent
+site_wide_findings:
+  - The strongest narrative overlap is across /, /compare, /how-it-works, and /first-contact. These pages all try to answer "why CIRIS" for nearby personas.
+  - The strongest evidence ladder is /research-status -> /ciris-scoring -> /explore-a-trace. These work better as one grouped proof surface than as disconnected destinations.
+  - The strongest utility cluster is /status, /canary, and /safety-policy. These should live in footer or utility nav, not primary marketing nav.
+  - The long-form Accord/docs system should remain the canonical source of truth, with marketing pages summarizing and routing into it rather than restating it at full length.
+  - /services and /install both serve activation intent. They should either be merged into one clearer "Get CIRIS" path or split cleanly into hosted-use versus local install.
+  - /models and /federation read more like supporting essays than primary destinations and are candidates for merge or demotion.
+  - /trust currently mixes trust architecture with commercial packaging; that weakens its information scent.
+  - /about is credibility support rather than a high-priority discovery page.
+proposed_navigation_clusters:
+  primary_candidates:
+    - /
+    - /first-contact
+    - /compare
+    - /how-it-works
+    - /services
+    - /install
+    - /vision
+    - /coherence-ratchet
+    - /safety
+  secondary_candidates:
+    - /trust
+    - /research-status
+    - /ciris-scoring
+    - /explore-a-trace
+    - /architecture
+    - /integrations
+    - /sections/main
+  merge_candidates:
+    - /models
+    - /federation
+  footer_or_utility:
+    - /privacy
+    - /safety-policy
+    - /status
+    - /canary
+    - /about
+best_practices:
+  - Inventory every route with structured metadata before redrawing navigation.
+  - Organize around user needs and task flows, not internal system boundaries or org structure.
+  - Keep top-level navigation focused on the smallest set of primary user tasks and audience needs.
+  - Distinguish global, local, and contextual navigation instead of forcing every destination into one primary nav tier.
+  - Identify duplicates and near-duplicates before redesign; merge or demote supporting essays rather than adding more top-level choices.
+  - Use consistent labeling and controlled vocabulary so similar concepts are not split across multiple names.
+  - Preserve the difference between discoverability and findability; navigation and search complement each other.
+  - Validate the proposed hierarchy with tree testing or similar task-based navigation checks before final visual polish.
+  - Treat IA as an ongoing governance function; refresh the inventory as the site changes.
+route_summaries:
+  - route: /
+    source_file: src/app/(home)/page.tsx
+    audience_persona:
+      - first-time visitor
+      - privacy-conscious user
+      - open-source believer
+    core_promise: Accountability without gatekeepers through a local-first, auditable personal AI assistant.
+    primary_evidence:
+      - feature inventory
+      - local control framing
+      - reasoning traces
+      - privacy systems
+      - install options
+      - mobile app presence
+    primary_ctas:
+      - Read the Vision
+      - How It Works
+      - mobile app store links
+      - Install
+      - Get in Touch
+    user_stage:
+      - discover
+    overlap_risks:
+      - overlaps with /compare on differentiation
+      - overlaps with /how-it-works on product explanation
+      - overlaps with /install on activation
+    nav_recommendation: top-nav
+  - route: /about
+    source_file: src/app/about/page.tsx
+    audience_persona:
+      - donor
+      - grant reviewer
+      - trust-seeking visitor
+    core_promise: CIRIS is volunteer-built, mission-locked, and led by identifiable people.
+    primary_evidence:
+      - zero funding claim
+      - founder and board bios
+      - mission story
+    primary_ctas:
+      - Read our vision
+      - See what we're building
+      - Get in Touch
+    user_stage:
+      - evaluate
+      - partner
+    overlap_risks:
+      - overlaps with mission framing on / and /vision
+    nav_recommendation: secondary
+  - route: /install
+    source_file: src/app/install/page.tsx
+    audience_persona:
+      - ready-to-try user
+      - developer
+      - self-hoster
+      - admin
+    core_promise: Fast path to install CIRIS across desktop, server, and mobile.
+    primary_evidence:
+      - pip command
+      - Docker path
+      - installer script
+      - Git clone instructions
+      - mobile app links
+    primary_ctas:
+      - pip install ciris-agent
+      - Docker instructions
+      - installer script
+      - app store links
+    user_stage:
+      - install
+    overlap_risks:
+      - overlaps with /services on activation
+      - overlaps with / on mobile promotion
+    nav_recommendation: top-nav
+  - route: /how-it-works
+    source_file: src/app/how-it-works/page.tsx
+    audience_persona:
+      - technical evaluator
+      - developer
+      - researcher
+      - serious buyer
+    core_promise: CIRIS adds runtime conscience and explicit oversight around model execution.
+    primary_evidence:
+      - H3ERE pipeline
+      - DMA definitions
+      - handler actions
+      - oversight hierarchy
+      - kill switch
+      - source links
+    primary_ctas:
+      - View Source
+      - Read the Thesis
+      - Read the Accord
+    user_stage:
+      - evaluate
+      - verify
+    overlap_risks:
+      - overlaps with /compare
+      - overlaps with the homepage explanation layer
+    nav_recommendation: top-nav
+  - route: /compare
+    source_file: src/app/compare/page.tsx
+    audience_persona:
+      - skeptical evaluator
+      - comparison shopper
+      - safety-conscious user
+    core_promise: CIRIS is differentiated by combining ethics, accountability, and echo-chamber detection.
+    primary_evidence:
+      - three types of AI framing
+      - seven-point checklist
+      - comparison table
+      - links to proofs and trust pages
+    primary_ctas:
+      - See How They Compare
+      - Explore a trace
+      - Get Started
+    user_stage:
+      - evaluate
+    overlap_risks:
+      - overlaps with / and /how-it-works on "why CIRIS"
+    nav_recommendation: top-nav
+  - route: /trust
+    source_file: src/app/trust/page.tsx
+    audience_persona:
+      - enterprise buyer
+      - compliance lead
+      - partner
+    core_promise: CIRISVerify provides cryptographic identity and accountability for agents.
+    primary_evidence:
+      - attestation model
+      - portal workflows
+      - pricing tiers
+      - integrity claims
+    primary_ctas:
+      - Open Portal
+      - View Source
+      - Activate Now
+      - Contact Sales
+    user_stage:
+      - verify
+      - partner
+    overlap_risks:
+      - overlaps with /compare and /safety on trust claims
+      - mixes trust architecture with pricing and sales
+    nav_recommendation: secondary
+  - route: /privacy
+    source_file: src/app/privacy/page.tsx
+    audience_persona:
+      - privacy-conscious user
+      - legal reviewer
+      - compliance reviewer
+    core_promise: CIRIS clearly separates zero-retention product paths from research-trace paths.
+    primary_evidence:
+      - service-by-service privacy scope
+      - storage disclosures
+      - consent language
+    primary_ctas:
+      - informational anchors
+      - GitHub transparency links
+    user_stage:
+      - verify
+    overlap_risks:
+      - overlaps with privacy claims on / and /install
+    nav_recommendation: footer
+  - route: /research-status
+    source_file: src/app/research-status/page.tsx
+    audience_persona:
+      - researcher
+      - technical skeptic
+      - credibility-seeking evaluator
+    core_promise: CIRIS is building an open, privacy-preserving trace commons for alignment-relevant measurement.
+    primary_evidence:
+      - research framing
+      - Zenodo papers
+      - aggregate overlays
+      - explicit limitations and falsification sections
+    primary_ctas:
+      - View the live trace compendium
+      - View Lens source
+    user_stage:
+      - evaluate
+      - verify
+    overlap_risks:
+      - overlaps with /coherence-ratchet
+      - overlaps with /ciris-scoring
+      - overlaps with /vision
+    nav_recommendation: secondary
+  - route: /ciris-scoring
+    source_file: src/app/ciris-scoring/page.tsx
+    audience_persona:
+      - developer
+      - auditor
+      - technical evaluator
+    core_promise: CIRIS provides a live and auditable coherence and fragility scoring system derived from traces.
+    primary_evidence:
+      - live dashboard
+      - formal spec
+      - thresholds
+      - equations
+    primary_ctas:
+      - View Source
+      - Read the full specification
+      - Explore individual traces
+    user_stage:
+      - evaluate
+      - verify
+    overlap_risks:
+      - overlaps with /explore-a-trace
+      - overlaps with /coherence-ratchet
+    nav_recommendation: secondary
+  - route: /explore-a-trace
+    source_file: src/app/explore-a-trace/page.tsx
+    audience_persona:
+      - skeptical user
+      - developer
+      - evaluator
+    core_promise: Visitors can inspect concrete public traces and see how CIRIS reasoned on specific tasks.
+    primary_evidence:
+      - interactive trace explorer
+      - public task data
+      - action outputs
+      - conscience explanations
+    primary_ctas:
+      - interactive trace selection
+      - Learn more about the coherence ratchet
+      - Read the Thesis
+      - View Source on GitHub
+    user_stage:
+      - verify
+    overlap_risks:
+      - overlaps with /ciris-scoring and /research-status as proof surfaces
+    nav_recommendation: secondary
+  - route: /coherence-ratchet
+    source_file: src/app/coherence-ratchet/page.tsx
+    audience_persona:
+      - mixed audience
+      - researcher
+      - developer
+      - curious general visitor
+    core_promise: CIRIS makes coordinated deception more expensive by accumulating signed constraints and monitoring correlation collapse.
+    primary_evidence:
+      - multi-level explanation
+      - DOI and paper links
+      - k_eff framing
+      - live examples
+    primary_ctas:
+      - research status
+      - explore a trace
+      - federation
+      - compare
+    user_stage:
+      - discover
+      - evaluate
+    overlap_risks:
+      - conceptual hub that repeats ideas found on /vision, /research-status, and /ciris-scoring
+    nav_recommendation: top-nav
+  - route: /vision
+    source_file: src/app/vision/page.tsx
+    audience_persona:
+      - mission-aligned newcomer
+      - donor
+      - open-source contributor
+    core_promise: CIRIS exists to build AI that is open, accountable, mission-locked, and aligned with human flourishing.
+    primary_evidence:
+      - ethical framing
+      - open-source commitments
+      - mission-lock economics
+      - paper link
+      - Accord link
+    primary_ctas:
+      - Read the Accord
+      - See the Code
+      - Read the Academic Paper
+      - Download the Accord
+    user_stage:
+      - discover
+    overlap_risks:
+      - overlaps with /coherence-ratchet and acts as a directory to many other pages
+    nav_recommendation: top-nav
+  - route: /architecture
+    source_file: src/app/architecture/page.tsx
+    audience_persona:
+      - infrastructure evaluator
+      - due-diligence reviewer
+      - open-source operator
+    core_promise: CIRIS infrastructure is privacy-first, resilient, and intentionally non-lock-in.
+    primary_evidence:
+      - architecture diagram
+      - service breakdowns
+      - production metrics
+      - source repo matrix
+    primary_ctas:
+      - View Live Status
+      - View Source Code
+    user_stage:
+      - verify
+    overlap_risks:
+      - overlaps with /services on hosted-stack claims
+    nav_recommendation: secondary
+  - route: /services
+    source_file: src/app/services/page.tsx
+    audience_persona:
+      - prospective hosted user
+      - mobile app user
+      - price-sensitive evaluator
+    core_promise: CIRIS offers privacy-focused hosted and mobile access with simple pricing and zero-retention positioning.
+    primary_evidence:
+      - Scout preview link
+      - app store links
+      - logging policy
+      - billing details
+    primary_ctas:
+      - Try Scout Preview Agent
+      - app store links
+      - billing link
+      - Install CIRIS Agent
+    user_stage:
+      - install
+    overlap_risks:
+      - overlaps with /install and parts of /architecture
+    nav_recommendation: top-nav
+  - route: /integrations
+    source_file: src/app/integrations/page.tsx
+    audience_persona:
+      - developer
+      - integrator
+      - technical evaluator
+    core_promise: CIRIS plugs into real systems through typed, self-contained adapters.
+    primary_evidence:
+      - adapter categories
+      - Home Assistant example
+      - Reddit example
+      - sample adapter structure
+    primary_ctas:
+      - View Sample Adapter
+      - Read the Docs
+      - CIRISHome install guide
+    user_stage:
+      - evaluate
+      - install
+    overlap_risks:
+      - overlaps with /install and /how-it-works
+    nav_recommendation: secondary
+  - route: /models
+    source_file: src/app/models/page.tsx
+    audience_persona:
+      - technical buyer
+      - open-source evaluator
+      - infrastructure skeptic
+    core_promise: Model choice is governance infrastructure rather than branding.
+    primary_evidence:
+      - model criteria
+      - provider and fallback strategy
+      - rejection reasons for alternatives
+    primary_ctas: []
+    user_stage:
+      - evaluate
+    overlap_risks:
+      - overlaps with /how-it-works, /safety, and long-form governance explanation
+    nav_recommendation: merge-candidate
+  - route: /federation
+    source_file: src/app/federation/page.tsx
+    audience_persona:
+      - researcher
+      - governance thinker
+      - policy reader
+    core_promise: Large-scale AI can stay aligned through a human-supervised hierarchy of simple and advanced agents.
+    primary_evidence:
+      - type 1/2/3 governance stack
+      - analogies
+      - ratio examples
+      - links to scoring
+    primary_ctas:
+      - Three Types of AI
+      - The Seismograph
+      - CIRIS Scoring
+    user_stage:
+      - discover
+      - evaluate
+    overlap_risks:
+      - overlaps heavily with /compare and /coherence-ratchet
+    nav_recommendation: merge-candidate
+  - route: /first-contact
+    source_file: src/app/first-contact/page.tsx
+    audience_persona:
+      - brand-new visitor
+      - practical adopter
+      - idea-driven reader
+    core_promise: One entry page for either deploying a first agent or understanding the thesis.
+    primary_evidence:
+      - dual-path hero
+      - quickstart
+      - thesis explainer
+      - Accord overview
+    primary_ctas:
+      - Deploy Your First Agent
+      - Begin the Quickstart
+      - Read the Thesis
+      - Read the Full Accord
+    user_stage:
+      - discover
+      - install
+    overlap_risks:
+      - overlaps with homepage, /install, and theory pages
+    nav_recommendation: top-nav
+  - route: /safety
+    source_file: src/app/safety/page.tsx
+    audience_persona:
+      - trust-conscious prospect
+      - technical verifier
+      - governance skeptic
+    core_promise: CIRIS safety controls are architectural and inspectable, not policy-only claims.
+    primary_evidence:
+      - AIR reminders
+      - kill switch
+      - role certificates
+      - tamper-evident audit chain
+    primary_ctas:
+      - View Source on GitHub
+      - Read the Accord
+      - See How It Works
+      - Compare Approaches
+    user_stage:
+      - evaluate
+      - verify
+    overlap_risks:
+      - overlaps with /safety-policy and /models
+    nav_recommendation: top-nav
+  - route: /safety-policy
+    source_file: src/app/safety-policy/page.tsx
+    audience_persona:
+      - legal reader
+      - compliance reviewer
+      - privacy-sensitive user
+    core_promise: CIRIS defines when it pauses, what it stores, and how status and canary should be interpreted.
+    primary_evidence:
+      - explicit pause triggers
+      - failover logic
+      - zero-retention claim
+      - warrant canary statement
+    primary_ctas:
+      - View Current Status
+      - Signed Canary
+    user_stage:
+      - verify
+    overlap_risks:
+      - overlaps with /canary, /status, /privacy, and /safety
+    nav_recommendation: footer
+  - route: /status
+    source_file: src/app/status/page.tsx
+    audience_persona:
+      - current user
+      - operator
+      - integrator
+    core_promise: Real-time operational visibility across regions and providers.
+    primary_evidence:
+      - live status API fetches
+      - region cards
+      - provider blocks
+      - incident history
+    primary_ctas:
+      - View CIRISLens Source
+      - Grafana Dashboard
+    user_stage:
+      - verify
+    overlap_risks:
+      - utility route with little marketing overlap
+    nav_recommendation: footer
+  - route: /canary
+    source_file: src/app/canary/page.tsx
+    audience_persona:
+      - security verifier
+      - privacy auditor
+      - advanced trust auditor
+    core_promise: The warrant canary is machine-verifiable rather than only prose.
+    primary_evidence:
+      - signed JSON
+      - public key
+      - stale detection
+      - verification instructions
+    primary_ctas:
+      - Download Raw JSON
+      - public key link
+    user_stage:
+      - verify
+    overlap_risks:
+      - overlaps directly with /safety-policy
+    nav_recommendation: footer
+  - route: /sections/[[...slug]]
+    source_file: src/app/sections/[[...slug]]/page.tsx
+    audience_persona:
+      - long-form reader
+      - Accord reader
+      - reference-seeking evaluator
+    core_promise: Canonical long-form documentation and Accord delivery system.
+    primary_evidence:
+      - MDX rendering
+      - generated params
+      - TOC
+      - metadata system
+    primary_ctas:
+      - long-form reading
+      - cross-linking
+    user_stage:
+      - evaluate
+      - verify
+      - partner
+    overlap_risks:
+      - marketing pages repeat governance material that should route here instead
+    nav_recommendation: secondary
+    ia_role: Canonical source of truth for the Accord and related long-form sections.

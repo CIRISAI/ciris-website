@@ -1,413 +1,141 @@
 "use client";
-import AccordionSection from "@/app/components/SectionAccordion";
-import HomeHeader from "@/app/components/HomeHeader";
+
 import Footer from "@/app/components/Footer";
-import NewsletterForm from "@/app/components/NewsletterForm";
-import FlexSection from "@/app/components/SectionFlexContent";
-import { FloatingNav } from "@/app/components/ui/floating/nav";
-import QuickInstall from "@/app/components/QuickInstall";
-
-import Image from "next/image";
-import { stagger } from "motion";
-import { splitText } from "motion-plus";
-import { Cursor, useCursorState } from "motion-plus/react";
-import { animate, motion, useMotionValue } from "motion/react";
-import { useEffect, useRef, useState } from "react";
-import CardsSection from "@/app/components/CardsSection";
+import HomeHeader from "@/app/components/HomeHeader";
 import ImageHeroBlock from "@/app/components/ImageHeroBlock";
-import ImageHeroBlockLeftBottom from "@/app/components/ImageHeroBlockLeftBottom";
+import NewsletterForm from "@/app/components/NewsletterForm";
+import QuickInstall from "@/app/components/QuickInstall";
+import CardsSection from "@/app/components/CardsSection";
 import SeparatorTitleBlock from "@/app/components/Separatortitle";
-
 import navItems from "@/app/components/navitems";
+import { FloatingNav } from "@/app/components/ui/floating/nav";
+
 export default function Homepage() {
-  const state = useCursorState();
-  const rotate = useMotionValue(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    document.fonts.ready.then(() => {
-      if (!containerRef.current) return;
-
-      // Hide the container until the fonts are loaded
-      containerRef.current.style.visibility = "visible";
-
-      const { words } = splitText(containerRef.current.querySelector("h1")!);
-
-      // Animate the words in the h1
-      animate(
-        words,
-        { opacity: [0, 1], y: [10, 0] },
-        {
-          type: "spring",
-          duration: 2,
-          bounce: 0,
-          delay: stagger(0.05),
-        }
-      );
-    });
-  }, []);
-  useEffect(() => {
-    if (!state.targetBoundingBox) {
-      /**
-       * If we don't have a current target then we want to make an infinite
-       * rotation animation. We do an infinite rotation between the current rotation
-       * and +360 degrees.
-       */
-      animate(rotate, [rotate.get(), rotate.get() + 360], {
-        duration: 17,
-        ease: "linear",
-        repeat: Infinity,
-      });
-    } else {
-      /**
-       * If we do have a target then we want to animate the rotation to
-       * the nearest 180 degree angle. We can use 180 instead of 360 to minimise
-       * the spin and because it doesn't visually matter if the cursor is upside down
-       * for this effect. We could increase the spin by doing something like
-       * (rotate.get() + minimumSpin) / 180
-       */
-      animate(rotate, Math.round(rotate.get() / 180) * 180, {
-        type: "spring",
-        bounce: 0.3,
-      });
-    }
-  }, [state.targetBoundingBox]);
 
   return (
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="Accountability Without Gatekeepers."
-        subheadline="Make lying expensive at planetary scale — without giving anyone the keys to truth."
-        description="CIRIS is open-source accountability infrastructure for autonomous AI — coherence and conscience working together. Many bounded agents, each auditable, each accountable to local humans. Ally is your personal assistant built on it — runtime conscience, coherence monitoring, cryptographic attestation."
+        headline="The Open Ethical AI Agent."
+        subheadline="Install it. Inspect it. Compare it. Build with it."
+        description="CIRIS is a free, open-source agent platform with a rich UI, visible reasoning, privacy-preserving tracing, and support across desktop, mobile, and pip. It is built to be inspectable, not taken on faith."
+        supportingText="Available on iPhone, Android, desktop, and pip. Open source, free, privacy-preserving, and built for accountability."
         mediaType="video"
-        opacityValue={0.5}
+        opacityValue={0.55}
         mediaSrc="/videos/video3.mp4"
-        buttonText="Read the Vision"
-        buttonHref="/vision"
-        linkText="How It Works"
-        linkHref="/how-it-works"
+        buttonText="Install CIRIS"
+        buttonHref="/install"
+        linkText="See the Comparison"
+        linkHref="/compare"
       />
 
-      {/* Mobile Apps Announcement Banner */}
-      <div className="bg-gradient-to-r from-green-600 to-blue-600 py-4">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-            <div className="flex items-center gap-3 text-white">
-              <span className="text-2xl">📱</span>
-              <div>
-                <p className="text-lg font-bold">CIRIS Mobile Apps Now Available</p>
-                <p className="text-sm opacity-90">Images, documents, Home Assistant integration — your auditable AI, on mobile</p>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <a
-                href="https://apps.apple.com/us/app/cirisagent/id6758524415"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100"
-              >
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                </svg>
-                App Store
-              </a>
-              <a
-                href="https://play.google.com/store/apps/details?id=ai.ciris.mobile"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100"
-              >
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
-                </svg>
-                Google Play
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* EthicsEngine - Public Evaluation Platform */}
-      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 py-6">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
-            <div className="flex items-center gap-3 text-white">
-              <span className="text-2xl">&#x1F50D;</span>
-              <div>
-                <p className="text-lg font-bold">EthicsEngine — Measuring Ethical Reasoning in LLMs</p>
-                <p className="text-sm opacity-90">An affiliated project for evaluating the ethical reasoning quality of large language models. Transparent scoring, cryptographic audit trails, open to everyone.</p>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <a
-                href="https://ethicsengine.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100"
-              >
-                Visit ethicsengine.org
-              </a>
-              <a
-                href="https://portal.ethicsengine.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-              >
-                Agent Portal
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* The Bigger Picture - Three Types of AI */}
-      <div className="bg-gray-100 dark:bg-gray-900 py-8 border-b border-gray-200 dark:border-gray-800">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-lg text-gray-900 dark:text-gray-100 font-medium mb-3">
-            Rules alone aren&apos;t enough. There are three types of AI — and only one avoids the worst outcomes.
-          </p>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
-            <span className="text-red-500 font-medium">Unaccountable AI</span> fails obvious tests. <span className="text-yellow-600 font-medium">Rules-Only AI</span> passes them but acts with false confidence — when correlated sources agree, it can&apos;t tell the difference. <span className="text-green-600 font-medium">Rules + Awareness AI</span> monitors its own coherence and knows when agreement is too easy. CIRIS implements all three layers: conscience, intuition, and <a href="/coherence-ratchet" className="text-brand-primary hover:underline">the Coherence Ratchet</a>.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <a href="/compare" className="text-brand-primary hover:underline">Three Types of AI →</a>
-            <a href="/research-status" className="text-brand-primary hover:underline">The research →</a>
-            <a href="/explore-a-trace" className="text-brand-primary hover:underline">See a real trace →</a>
-          </div>
-        </div>
-      </div>
-
-      <div className="container min-h-screen max-w-7xl" ref={containerRef}>
-        <Cursor
-          magnetic={{ morph: false, snap: 0 }}
-          matchTextSize={false}
-          style={{ width: 4, height: 4 }}
-          className="cursor"
-        />
-        <Cursor
-          magnetic={{ snap: 0.9 }}
-          style={{ rotate, width: 30, height: 30 }}
-          variants={{
-            pressed: {
-              scale: state.targetBoundingBox ? 0.9 : 0.7,
-            },
-          }}
-          className="reticule"
-        >
-          <>
-            <Corner top={0} left={0} />
-            <Corner top={0} right={0} />
-            <Corner bottom={0} left={0} />
-            <Corner bottom={0} right={0} />
-          </>
-        </Cursor>
-
-        <FlexSection
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Meet Ally"
-          subheadline="Your personal AI assistant, built for accountability."
-          copyText="Ally is an open-source AI assistant that runs on your hardware. Task management, scheduling, decision support, smart home control — with complete transparency. Core logic runs locally; LLM inference uses your choice of provider (cloud APIs, local models, or our zero-data-retention proxy). Every decision is auditable, every action is accountable."
-        />
-
-        {/* Out of the Box Use Cases */}
+      <div className="container max-w-7xl py-16">
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Works Out of the Box"
-          subheadline="Real capabilities you can use today."
+          headline="Choose Your Path"
+          subheadline="Start from your reason for being here."
           className="border-brand-primary text-brand-primary border-t"
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Home Assistant Integration",
+              headline: "Install the Agent",
+              headlineHref: "/install",
               copyText:
-                "Control your lights, thermostats, and devices with natural language. 'Turn off the living room lights' or 'Set the temperature to 72°.' Full Home Assistant API support — your smart home, your way, with full audit trails.",
+                "Get CIRIS running through pip, desktop, or mobile. Use a model you trust. Keep your data under your control.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Navigation & Directions",
+              headline: "Inspect the Accord",
+              headlineHref: "/sections/main",
               copyText:
-                "Get directions, traffic updates, and route planning through natural conversation. 'How do I get to the airport?' or 'What's the fastest route home?' Local processing means your location history stays private.",
+                "Read the public ethical framework behind the runtime. Principles are explicit, published, and open to scrutiny.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Weather & Planning",
+              headline: "Work with the Platform",
+              headlineHref: "/services",
               copyText:
-                "Real-time weather forecasts, severe weather alerts, and planning assistance. 'Should I bring an umbrella tomorrow?' or 'What's the best day to mow the lawn this week?' Context-aware answers that actually help.",
+                "Use the hosted path, mobile apps, and platform surfaces when you want to evaluate, integrate, or deploy faster.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
           ]}
         />
 
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Document Understanding",
-              copyText:
-                "Upload PDFs, images, and documents. Ask questions about your files — receipts, contracts, manuals. 'What's the return policy in this receipt?' Everything stays local unless you choose otherwise.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Task & Calendar Management",
-              copyText:
-                "Create reminders, manage your schedule, track to-dos. 'Remind me to call Mom on Sunday' or 'What's on my calendar this week?' Natural language interface to your digital life.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Research & Questions",
-              copyText:
-                "Ask anything — from quick facts to complex research. Unlike other assistants, Ally tells you when it's uncertain and can defer to web search or human experts when needed.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-
-        {/* Memory & Learning */}
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="It Learns. It Remembers."
-          subheadline="A growing knowledge graph that's yours to explore."
+          headline="Why CIRIS"
+          subheadline="The thesis is simple."
+          copyText="The safest agentic system is the one you can inspect. CIRIS makes reasoning visible, keeps the framework public, and uses privacy-preserving traces to measure the shape of behavior as systems scale."
           className="border-brand-primary text-brand-primary border-t"
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Visual Memory Graph",
+              headline: "Safer by Design",
+              headlineHref: "/compare",
               copyText:
-                "Watch your agent's knowledge grow in real-time. Interactive SVG visualization shows how concepts connect, cluster, and evolve. Radial, force-directed, or hierarchical layouts. It's beautiful and it's yours.",
+                "We make the safety claim in public and put it next to alternatives. Completion corridors, refusal boundaries, and behavioral evidence are all inspectable.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Adaptive Learning",
+              headline: "Open and Free",
+              headlineHref: "/vision",
               copyText:
-                "Four operational modes — WORK, PLAY, SOLITUDE, DREAM — each with different learning behaviors. Behavioral drift monitoring ensures the agent stays coherent as its knowledge grows. Configurable thresholds trigger recalibration.",
+                "The app and framework are open source and free. The trust model is meant to survive commercial pressure, not depend on it.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Coherence Ratchet",
-              headlineHref: "/coherence-ratchet",
+              headline: "Measured in the Open",
+              headlineHref: "/research-status",
               copyText:
-                "Each truthful action makes future truth-telling easier and coordinated deception harder. Honest actions reference prior signed commitments directly. Deceptive actions must satisfy an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes—becoming increasingly fragile under scrutiny.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-
-        {/* Privacy & Security */}
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Privacy by Design"
-          subheadline="Not a feature. The foundation."
-          className="border-brand-primary text-brand-primary border-t"
-        />
-
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Secrets Filter",
-              copyText:
-                "Auto-detects sensitive information — API keys, passwords, personal data. AES-256-GCM encryption. The agent self-configures new patterns as it learns what you consider private.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Adaptive Message Filter",
-              copyText:
-                "Intelligent message prioritization with spam detection and user trust tracking. The agent learns who matters and what's noise. Your attention is protected.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "AIR System",
-              copyText:
-                "Artificial Interaction Reminders maintain clarity. After extended sessions or high message counts, the agent reminds users it's software. Configurable thresholds. Transparency by default.",
+                "Privacy-preserving trace schemas and a live compendium let outsiders inspect aggregate behavior without exposing private reasoning content.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
           ]}
         />
 
-        {/* Full Transparency */}
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Watch It Think"
-          subheadline="Real-time streaming of every reasoning step."
+          headline="Proof Surfaces"
+          subheadline="If you want evidence, start here."
           className="border-brand-primary text-brand-primary border-t"
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Streaming Reasoning Traces",
+              headline: "Compare",
+              headlineHref: "/compare",
+              copyText:
+                "See the public argument for why CIRIS is the safest and most ethical agentic option available.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Research Status",
+              headlineHref: "/research-status",
+              copyText:
+                "Read what the current trace corpus supports, what we are learning, and how the public research loop works.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Explore a Trace",
               headlineHref: "/explore-a-trace",
               copyText:
-                "Six reasoning events streamed live via SSE as the agent processes each thought. Watch the H3ERE pipeline in action — DMA analysis, action selection, conscience validation, execution. Nothing hidden. Explore a real trace →",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "OpenTelemetry Integration",
-              copyText:
-                "Full OTLP export — metrics, traces, logs. Plug into Jaeger, Prometheus, Grafana, any observability stack. Cognitive processing traces with span IDs, thought steps as events, service attributes.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Contribution Tracking",
-              copyText:
-                "The ConsentImpactReport schema tracks interactions, patterns contributed, and users helped. Early infrastructure for understanding how value flows through a collaborative system.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-
-        {/* Lifecycle Management */}
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Principled Lifecycle"
-          subheadline="Structured startup and graceful shutdown."
-          className="border-brand-primary text-brand-primary border-t"
-        />
-
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Startup Validation",
-              copyText:
-                "Five-step coherence check before work begins. Verify configuration, validate system integrity, confirm service health, acknowledge operational limits, log initialization. Higher-stake deployments run the full sequence.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Graceful Shutdown",
-              copyText:
-                "Shutdown requests flow through the agent's normal task processing. The agent can acknowledge, defer if mid-task, or flag concerns. Configurable modes from instant to fully-managed transitions.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Multi-Instance Coordination",
-              copyText:
-                "Multiple instances coordinate system-level decisions through shared task ownership. One instance claims decisions for the group, with full audit trail. Scale horizontally with consistent behavior.",
+                "Inspect a concrete example of how the runtime reasons, checks itself, and decides to act or defer.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -415,183 +143,27 @@ export default function Homepage() {
         />
 
         <QuickInstall />
-
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="You are in Control"
-          subheadline="Ally defers to you when it matters."
-          copyText="Before asking for help, Ally analyzes every decision through ethical, common-sense, and domain-specific lenses. Four ethical evaluations plus a four-faculty conscience validate every action. If uncertainty remains, it escalates to you or advisors you trust. You maintain final authority."
-          className="border-brand-primary text-brand-primary border-t border-b"
-        />
-
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Wisdom-Based Deferral",
-              headlineHref: "/safety",
-              copyText:
-                "Complex ethical questions get escalated to you or advisors you trust. CIRIS doesn't pretend to have all the answers — it knows when to ask for human wisdom.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Multi-Perspective Reasoning",
-              copyText:
-                "Every decision runs through three parallel analyses: ethical principles, common-sense plausibility, and your specific context. Then the four-faculty conscience validates the action before execution.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Your Hardware, Your Data",
-              copyText:
-                "Core logic, database, memory, and audit logs run locally. LLM inference uses your choice of provider — cloud APIs, local models, or our zero-retention proxy. No data harvesting, no surveillance.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-
-        <AccordionSection
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Governance and Mutual Intelligibility"
-          subheadline="Built-in operational governance mechanisms to sustain coherence and accountability"
-        />
-
-        {/* <ImageHeroBlock
-          className="text-brand-primary fill-brand-primary mb-8"
-          backgroundImageSrc="/kelly-vohs-soSTXmIxTDU-unsplash.jpg"
-          buttonHref="ddsfgsdf"
-          opacity={0.4}
-          buttonText="Click me"
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="System Design"
-          subheadline="AI based system design"
-          copyText="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-           ut labore et dolore magna aliqua."
-        /> */}
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Type-Safe Architecture",
-              copyText:
-                "Built on The Three Rules: No Untyped Dicts, No Bypass Patterns, No Exceptions. Every interaction is validated through Pydantic models, creating an immutable audit trail.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "22 Core Services",
-              headlineHref: "/architecture",
-              copyText:
-                "From ethical reasoning and memory management to signed communications and audit logging—CIRIS coordinates specialized services that work together transparently.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Open Source Foundation",
-              copyText:
-                "Inspect the code, verify the behavior, contribute improvements. Transparency isn't a feature—it's the foundation of legibility.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-        <Stylesheet />
       </div>
-      <div>
-        <ImageHeroBlock
-          className="my-8 min-h-screen fill-white text-white"
-          backgroundImageSrc="/chip-vincent-PkQDwfl9Flc-unsplash.jpg"
-          opacity={0.8}
-          video={true}
-          videoSrc="/videos/video1.mp4"
-          buttonHref="mailto:info@ciris.ai"
-          buttonText="Get in Touch"
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Built for Humanity."
-          subheadline="Open source. Open infrastructure. Open future."
-          copyText="Ally is just the beginning. The entire CIRIS stack is open source — the agent framework, the zero-data-retention proxy, the billing system, everything. Because AI that serves humanity should be transparent, auditable, and owned by everyone."
-          linkHref="/vision"
-          linkText="Read the full vision →"
-        />{" "}
-        <NewsletterForm />
-        <Footer />
-      </div>
-    </>
-  );
-}
 
-function Button({ children }: { children: React.ReactNode }) {
-  return (
-    <motion.button className="button" whileTap={{ scale: 0.9 }}>
-      {children}
-    </motion.button>
-  );
-}
-
-function Corner({
-  thickness = 1.5,
-  length = 9,
-  ...position
-}: {
-  thickness?: number;
-  length?: number;
-  top?: number;
-  right?: number;
-  bottom?: number;
-  left?: number;
-}) {
-  return (
-    <>
-      <motion.div
-        layout
-        className="corner"
-        style={{
-          width: thickness,
-          height: length,
-          ...position,
-        }}
+      <ImageHeroBlock
+        className="my-8 min-h-[70vh] fill-white text-white"
+        backgroundImageSrc="/chip-vincent-PkQDwfl9Flc-unsplash.jpg"
+        opacity={0.8}
+        video={true}
+        videoSrc="/videos/video1.mp4"
+        buttonHref="mailto:info@ciris.ai"
+        buttonText="Work With CIRIS"
+        logoSrc="logoIcon"
+        logoAlt="Brand logo icon"
+        headline="Built to Be Inspected."
+        subheadline="Open source agent runtime. Public framework. Live evidence surfaces."
+        copyText="If you want to use the agent, read the Accord, or evaluate the platform with us, the shortest path is now visible from the homepage."
+        linkHref="/sections/main"
+        linkText="Read the Accord →"
       />
-      <motion.div
-        layout
-        className="corner"
-        style={{
-          width: length,
-          height: thickness,
-          ...position,
-        }}
-      />
+
+      <NewsletterForm />
+      <Footer />
     </>
-  );
-}
-
-/**
- * ==============   Styles   ================
- */
-
-function Stylesheet() {
-  return (
-    <style>
-      {`
-             
-           .corner {
-              background: var(--color-brand-primary);
-              position: absolute;
-            }
-
-            .cursor {
-              background-color: var(--color-brand-primary);
-            }
-
-            .reticule {
-              background-color: transparent;
-              border-radius: 0;
-            }
-
-            `}
-    </style>
   );
 }
