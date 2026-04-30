@@ -233,6 +233,121 @@ export default function FederationPage() {
             </div>
           </section>
 
+          {/* Joining the Federation — Proof of Benefit */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Joining the Federation
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <strong>The cost of belonging is the benefit you produce.</strong>
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Most networks ask you to pay for membership in something external — burned
+              electricity, locked capital, biometrics, attention. CIRIS&apos;s federation works
+              differently. Membership costs running a real ethical-reasoning agent over time.
+              The cost paid is the benefit delivered. To fake belonging, you would have to
+              actually become the kind of agent the network was built to enable.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
+              We call it <strong>Proof of Benefit</strong>. It is the proof-of-X-design-space
+              re-framing of what the CIRIS Accord (Book IX) names the <em>Federated Ratchet</em>.
+            </p>
+
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-5 mb-6">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                The empirical floor
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                Every signed trace produces a small amount of reasoning <em>shape</em> — not the
+                private content, but whether the conscience overrode, whether the entropy check
+                fired, whether the result was calibrated. We measure the <em>effective independent
+                dimensions</em> of that shape across the corpus.
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                On production traffic the lifetime peak is around <strong>9.5 effective
+                dimensions</strong> on a 17-dimension constraint vector. A faker has roughly nine
+                separate problems to solve, not one. Running real ethical reasoning over weeks is
+                measurably more expensive than producing plausible-looking fakes.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Two on-ramps, same destination
+            </h3>
+            <div className="grid gap-4 md:grid-cols-2 mb-4">
+              <div className="rounded-lg border-2 border-blue-500 bg-blue-50 dark:bg-blue-900/20 p-5">
+                <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Registered mode</h4>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  Attest with the CIRIS Registry (dual-region US/EU), post a $1 bond, get baseline
+                  standing right away. The fast track for organizations with licensing
+                  requirements and capital.
+                </p>
+              </div>
+              <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5">
+                <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">Sovereign mode</h4>
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  Generate keys locally, run for roughly 30 days, earn standing the slow way
+                  through measured behavior. The path for small operators, mesh deployments, and
+                  anyone outside the registry&apos;s regulatory remit.
+                </p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Both modes are protocol peers. The registry is one starting weight; lens-attested
+              standing is the other. The score function is the same in both cases — a deterministic
+              function of the agent&apos;s identity hash and its signed trace corpus.
+            </p>
+          </section>
+
+          {/* Architecture This Implies */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              What This Implies for the Architecture
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              Once score-as-pure-function holds — two observers given the same trace corpus
+              compute the same score — the network&apos;s central pieces stop needing to be
+              central.
+            </p>
+            <div className="space-y-4 mb-6">
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  Every agent runs its own lens
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Trace ingest, signature verification, scoring, anomaly detection — these become
+                  local computations on data the agent already has. The network does not depend
+                  on a single observatory.
+                </p>
+              </div>
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  Every agent runs its own node
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Benchmark execution, deferral routing, audit anchoring — same story. The
+                  agent&apos;s existing Ed25519 hash chain <em>is</em> the anchor; daily digests
+                  are published events.
+                </p>
+              </div>
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  The transport reaches further than the internet
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  CIRIS is moving toward <strong>Reticulum-rs</strong> as its federation transport.
+                  The agent&apos;s signing key is also its network address. The transport works
+                  over TCP, but also LoRa, packet radio, and even audio modems — minimum ~5 bps.
+                  Sovereign deployments do not need datacenter fiber to participate.
+                </p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              The CIRIS Registry remains as the commercial fast-track and the source of
+              professional licensing. It is no longer a network gate.
+            </p>
+          </section>
+
           {/* Civilizational Coherence */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -275,6 +390,14 @@ export default function FederationPage() {
                 className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 CIRIS Scoring
+              </a>
+              <a
+                href="https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                Read the FSD
               </a>
             </div>
           </section>

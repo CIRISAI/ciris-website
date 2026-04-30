@@ -7,10 +7,10 @@
 
 | Persona | Start Here | Key Pages | End Goal |
 |---------|------------|-----------|----------|
-| **Developer** | /first-contact | /how-it-works → /architecture → /explore-a-trace | Deploy an agent |
+| **Developer** | /first-contact | /how-it-works → /architecture → /federation → /explore-a-trace | Deploy an agent |
 | **Executive** | /vision | /compare → /coherence-ratchet → /trust | Understand the value proposition |
 | **End User** | / (homepage) | /first-contact → /install | Install the app |
-| **Researcher** | /coherence-ratchet | /research-status → /sections/main | Evaluate the thesis |
+| **Researcher** | /coherence-ratchet | /research-status → /federation → /sections/main | Evaluate the thesis |
 | **Compliance Officer** | /compare | /safety → /trust → /privacy | Assess for deployment |
 
 ---
@@ -27,6 +27,8 @@
     ↓
 /architecture (22 services, message buses)
     ↓
+/federation (Proof of Benefit, sovereign vs registered, transport)
+    ↓
 /explore-a-trace (see real reasoning)
     ↓
 /install (pip install ciris-agent)
@@ -40,6 +42,7 @@
 - 10 action handlers
 - The Three Rules (no untyped dicts, no bypass patterns, no exceptions)
 - Message bus architecture
+- Proof of Benefit federation primitive — score-as-pure-function, sovereign and registered tiers, Reticulum-rs transport
 
 ### Technical Resources
 - GitHub: https://github.com/CIRISAI/CIRISAgent
@@ -138,9 +141,13 @@ App Store / Play Store
     ↓
 /research-status (what's proven vs. being tested)
     ↓
+/federation (Proof of Benefit + N_eff empirical validation)
+    ↓
 /sections/main (The CIRIS Accord)
     ↓
 Academic Paper (Zenodo)
+    ↓
+PoB FSD (GitHub)
     ↓
 /compare (landscape positioning)
 ```
@@ -149,9 +156,11 @@ Academic Paper (Zenodo)
 - Computational asymmetry: O(1) vs NP-complete
 - k_eff formula: k/(1 + ρ(k-1))
 - J = C Duality (interpretive, not formal theorem)
-- L-01 Barrier (~40% fundamental limit)
+- L-01 Barrier (~40% fundamental limit) — possibly addressable via recursive II with prompt perturbation (v4 conscience methodology, proposed and not yet empirically validated)
 - Corridor bounds (0.2 < ρ < 0.7)
 - Falsification criteria F-1 through F-5
+- Proof of Benefit: cost ≡ benefit primitive; N_eff ≥ 9 measured on 17-dim constraint vector; lifetime peak N_eff_H = 9.51 (April 2026)
+- Federated Ratchet / Coherent Intersection Hypothesis (Accord Book IX Ch. 3-4)
 
 ### Language to Use
 - "Conditional exponential gap under ETH"
@@ -161,6 +170,9 @@ Academic Paper (Zenodo)
 
 ### Critical Resources
 - Academic Paper: https://zenodo.org/records/17195221
+- Constrained Reasoning Chains (Apr 2026): https://zenodo.org/records/19839280
+- Reasoning Traces dataset: https://huggingface.co/datasets/CIRISAI/reasoning-traces
+- Proof of Benefit FSD: https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md
 - Falsification criteria: /research-status#falsification
 - Known limitations: /research-status#limitations
 
