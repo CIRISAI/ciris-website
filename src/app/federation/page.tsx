@@ -241,10 +241,27 @@ export default function FederationPage() {
               </p>
               <p className="text-sm text-amber-900 dark:text-amber-200">
                 The sections below describe where the federation is heading as the 3.X line takes
-                shape. The current Capacity Score, signed traces, and registry are deployed today;
-                the federation primitive, the architectural collapse, and the multi-medium
-                transport are <strong>proposed in an FSD</strong>, not yet shipped. Treat as a plan
-                to react to, not a status report.
+                shape. The current{" "}
+                <a href="/ciris-scoring" className="font-semibold underline hover:no-underline">
+                  Capacity Score
+                </a>
+                , signed traces, and registry are deployed today; the federation primitive,
+                the architectural collapse, and the multi-medium transport are{" "}
+                <strong>proposed in an FSD</strong> (
+                <a
+                  href="https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline hover:no-underline"
+                >
+                  read it on GitHub
+                </a>
+                ), not yet shipped. The empirical N_eff measurement that the proposal rests on is
+                already running on production traffic — see{" "}
+                <a href="/research-status" className="font-semibold underline hover:no-underline">
+                  research status
+                </a>
+                . Treat the rest as a plan to react to, not a status report.
               </p>
             </div>
           </section>

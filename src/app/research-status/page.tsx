@@ -339,6 +339,9 @@ export default function ResearchStatusPage() {
             <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
               IDMA works at runtime, estimating whether the sources behind a decision are sufficiently independent. The trace corpus works at the aggregate layer, showing what agents actually do over many tasks. Together they create a path from live decisions to auditable research evidence.
             </p>
+            <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+              The empirical N_eff measurement on the trace corpus is also the floor under the proposed Proof of Benefit federation primitive — see the <a href="/federation" className="text-brand-primary hover:underline">federation page</a> for how the 3.X architectural plan would use it.
+            </p>
           </section>
 
           <section id="benchmarks" className="mb-10 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
