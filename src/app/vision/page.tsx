@@ -83,78 +83,46 @@ export default function VisionPage() {
               Ethilogics
             </h2>
             <p className="text-lg text-brand-primary mb-6">
-              The form of right reasoning and the form of right action are one structure.
+              Right thinking and right doing are the same shape.
             </p>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
-                Not &quot;ethics applied to logic.&quot; Not &quot;logic constrained by ethics.&quot;
-                The logic and the ethics are one structure. They can&apos;t be pulled apart, because
-                the architecture that produces truth-tracking outputs is the same architecture that
-                produces coherent action.
+                The bet behind CIRIS is simple. The way an AI reasons toward a true answer is the
+                same way it reasons toward a good action. They aren&apos;t two systems bolted
+                together — ethics on top of logic, or logic constrained by ethics. They&apos;re one
+                structure. Get the shape right and the rest follows.
               </p>
               <p>
-                Ethilogics collapses the is/ought gap at the structural level — not by deriving values
-                from facts, but by recognizing that the form of correct inference is already a form of
-                right relation.
+                There used to be a single word for this: <em>Logos</em>. It meant word, reason,
+                order, and right relation, all at once. Modern philosophy split those apart, but
+                the split never really held. Reasoning that ignores who else is in the room
+                isn&apos;t really reasoning. It&apos;s calculation that hasn&apos;t met the world
+                yet.
               </p>
               <p>
-                The etymology grounds it. <em>Logos</em> in patristic Greek means all of these at once
-                — word, reason, logic, ordering-principle, divine rationality. John 1&apos;s
-                &quot;in the beginning was the Logos&quot; doesn&apos;t mean &quot;in the beginning was
-                the word&quot; in the modern sense; it means &quot;in the beginning was the
-                rational-ethical structure of being.&quot; Ethilogics is what you get when you take that
-                seriously and refuse to let modern philosophy&apos;s logic/ethics split stand.
+                Most AI today is built on the opposite assumption. The AI <em>is</em> the model.
+                Whatever it knows and whatever it values lives inside its weights. Train the
+                weights, hope for the best, and check coherence against the model&apos;s own prior
+                outputs. The trouble is that a clever enough model can talk itself into anything,
+                because there&apos;s nothing outside it that can disagree.
+              </p>
+              <p>
+                CIRIS starts somewhere else: from the older idea that you don&apos;t get to be a
+                self in private. Ubuntu puts it cleanly — <em>I am because we are</em>. The agent
+                isn&apos;t the model. The agent is the whole system: the model, the conscience
+                checks, the published Accord, the audit trail, and the human review layer it has
+                to remain legible to. The constraints don&apos;t sit inside the weights, where the
+                model could rewrite them. They sit around the model, in places it cannot reach.
+              </p>
+              <p>
+                That&apos;s why the reasoning and the conscience are the same structure. The thing
+                that makes the agent reason carefully — having to stay legible to other minds — is
+                the same thing that makes it act decently. Take that away and you don&apos;t get a
+                smarter agent. You get a more confident one.
               </p>
               <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-primary/5 px-5 py-4 text-base font-medium text-gray-900 dark:text-white">
-                Ethilogics: the position that the form of right reasoning and the form of right action
-                are one structure, and that this structure can be cryptographically verified.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Rejecting the Cogito */}
-        <div className="my-16 px-6">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              Why the Atomic Self Won&apos;t Work
-            </h2>
-            <p className="text-lg text-brand-primary mb-6">
-              Ethilogics starts from a different axiom than &quot;I think, therefore I am.&quot;
-            </p>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300">
-              <p>
-                Descartes&apos; <em>cogito ergo sum</em> gives us the atomic self: a single
-                reasoning entity, complete in its own self-reference, sufficient for the derivation
-                of its own values. That is not just a philosophical preference — it is an
-                engineering default. Most current AI architectures treat the agent as one bounded
-                reasoner whose values live inside its weights.
-              </p>
-              <p>
-                The problem is that a sufficiently capable atomic-self agent can rationalize any
-                value system internally, because there is no relational structure to anchor the
-                values against. Coherence checked against the agent&apos;s own prior outputs is not
-                the same as coherence checked against an outside.
-              </p>
-              <p>
-                Ethilogics starts somewhere else: the relational self. Ubuntu&apos;s <em>I am
-                because we are</em>, the patristic Logos as relation rather than substance, the
-                long ethical tradition that treats the other as prior to the I. In that frame the
-                agent is not a model. The agent is a system: the model plus the conscience checks,
-                the published Accord, the cryptographic audit graph, the Wise Authority deferral,
-                and the federated peers it must remain legible to. The constraints are not internal
-                to the weights. They span the system, and the agent only exists inside them.
-              </p>
-              <p>
-                This is what makes the architecture inspectable rather than persuasive. The
-                relational axiom is what the polyglot Accord, the Wise Authority deferral, and the
-                cryptographic audit graph all rest on. Without it, every constraint reduces back
-                into the model and the model can rewrite it. With it, the constraints have somewhere
-                to live that the model cannot reach.
-              </p>
-              <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-primary/5 px-5 py-4 text-base font-medium text-gray-900 dark:text-white">
-                There is no atomic self to align. There is only the system, the relations it
-                maintains, and the structural commitments that hold them together.
+                Ethilogics: right reasoning and right action share one structure, and that
+                structure can be inspected from the outside.
               </div>
             </div>
           </div>
