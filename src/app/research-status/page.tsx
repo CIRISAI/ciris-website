@@ -53,7 +53,7 @@ export default function ResearchStatusPage() {
                     Research status
                   </span>
                   <span className="rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300">
-                    Updated: April 23, 2026
+                    Updated: April 28, 2026
                   </span>
                 </div>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
@@ -97,6 +97,38 @@ export default function ResearchStatusPage() {
           </section>
 
           <section className="mb-14 grid gap-4 md:grid-cols-2">
+            <a
+              href="https://zenodo.org/records/19839280"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors hover:border-brand-primary dark:border-gray-800 dark:bg-gray-900"
+            >
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+                Latest paper
+              </p>
+              <h2 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">
+                Constrained Reasoning Chains
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                An empirical telemetry study of LLM coherence under standardized ethical tracing. Zenodo record: Version v1, published April 28, 2026.
+              </p>
+            </a>
+            <a
+              href="https://huggingface.co/datasets/CIRISAI/reasoning-traces"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors hover:border-brand-primary dark:border-gray-800 dark:bg-gray-900"
+            >
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+                Open dataset
+              </p>
+              <h2 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">
+                CIRISAI/reasoning-traces
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                The privacy-preserving reasoning trace corpus released alongside the Constrained Reasoning Chains study, hosted on Hugging Face.
+              </p>
+            </a>
             <a
               href="https://zenodo.org/records/18137161"
               target="_blank"
