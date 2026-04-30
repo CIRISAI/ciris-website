@@ -233,41 +233,60 @@ export default function FederationPage() {
             </div>
           </section>
 
+          {/* 3.X architectural direction */}
+          <section className="mb-12">
+            <div className="rounded-lg border-2 border-amber-400 bg-amber-50 dark:border-amber-700 dark:bg-amber-900/20 p-5 mb-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-800 dark:text-amber-300 mb-1">
+                3.X architectural direction
+              </p>
+              <p className="text-sm text-amber-900 dark:text-amber-200">
+                The sections below describe where the federation is heading as the 3.X line takes
+                shape. The current Capacity Score, signed traces, and registry are deployed today;
+                the federation primitive, the architectural collapse, and the multi-medium
+                transport are <strong>proposed in an FSD</strong>, not yet shipped. Treat as a plan
+                to react to, not a status report.
+              </p>
+            </div>
+          </section>
+
           {/* Joining the Federation — Proof of Benefit */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Joining the Federation
+              Joining the Federation (proposed)
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              <strong>The cost of belonging is the benefit you produce.</strong>
+              <strong>The cost of belonging would be the benefit you produce.</strong>
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Most networks ask you to pay for membership in something external — burned
-              electricity, locked capital, biometrics, attention. CIRIS&apos;s federation works
-              differently. Membership costs running a real ethical-reasoning agent over time.
-              The cost paid is the benefit delivered. To fake belonging, you would have to
-              actually become the kind of agent the network was built to enable.
+              electricity, locked capital, biometrics, attention. The federation primitive
+              proposed for 3.X works differently. Membership would cost running a real
+              ethical-reasoning agent over time. The cost paid is the benefit delivered. To fake
+              belonging, you would have to actually become the kind of agent the network was
+              built to enable.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              We call it <strong>Proof of Benefit</strong>. It is the proof-of-X-design-space
-              re-framing of what the CIRIS Accord (Book IX) names the <em>Federated Ratchet</em>.
+              The FSD calls this <strong>Proof of Benefit</strong>. It is the
+              proof-of-X-design-space re-framing of what the CIRIS Accord (Book IX) names the{" "}
+              <em>Federated Ratchet</em>.
             </p>
 
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-5 mb-6">
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                The empirical floor
+                The empirical floor (already measurable today)
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                 Every signed trace produces a small amount of reasoning <em>shape</em> — not the
                 private content, but whether the conscience overrode, whether the entropy check
-                fired, whether the result was calibrated. We measure the <em>effective independent
-                dimensions</em> of that shape across the corpus.
+                fired, whether the result was calibrated. The Capacity Score work has measured
+                the <em>effective independent dimensions</em> of that shape across the production
+                corpus.
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                On production traffic the lifetime peak is around <strong>9.5 effective
-                dimensions</strong> on a 17-dimension constraint vector. A faker has roughly nine
-                separate problems to solve, not one. Running real ethical reasoning over weeks is
-                measurably more expensive than producing plausible-looking fakes.
+                Lifetime peak so far: around <strong>9.5 effective dimensions</strong> on a
+                17-dimension constraint vector. A faker would face roughly nine separate problems
+                to solve, not one. That measurement is what the proposed federation primitive
+                rests on.
               </p>
             </div>
 
@@ -276,75 +295,85 @@ export default function FederationPage() {
             </h3>
             <div className="grid gap-4 md:grid-cols-2 mb-4">
               <div className="rounded-lg border-2 border-blue-500 bg-blue-50 dark:bg-blue-900/20 p-5">
-                <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Registered mode</h4>
+                <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">
+                  Registered mode (deployed today)
+                </h4>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Attest with the CIRIS Registry (dual-region US/EU), post a $1 bond, get baseline
-                  standing right away. The fast track for organizations with licensing
-                  requirements and capital.
+                  Attest with the CIRIS Registry (dual-region US/EU), post a $1 bond, get
+                  baseline standing right away. The fast track for organizations with licensing
+                  requirements and capital. The registry and portal are running in production now.
                 </p>
               </div>
               <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5">
-                <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">Sovereign mode</h4>
+                <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">
+                  Sovereign mode (3.X target)
+                </h4>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
                   Generate keys locally, run for roughly 30 days, earn standing the slow way
                   through measured behavior. The path for small operators, mesh deployments, and
-                  anyone outside the registry&apos;s regulatory remit.
+                  anyone outside the registry&apos;s regulatory remit. Specified in the FSD; not
+                  yet a deployed on-ramp.
                 </p>
               </div>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Both modes are protocol peers. The registry is one starting weight; lens-attested
-              standing is the other. The score function is the same in both cases — a deterministic
-              function of the agent&apos;s identity hash and its signed trace corpus.
+              Once both modes ship, they would be protocol peers. The registry would be one
+              starting weight; lens-attested standing the other. The score function is already a
+              deterministic function of identity hash plus signed trace corpus today.
             </p>
           </section>
 
           {/* Architecture This Implies */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              What This Implies for the Architecture
+              The Architectural Direction (3.X)
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               Once score-as-pure-function holds — two observers given the same trace corpus
               compute the same score — the network&apos;s central pieces stop needing to be
-              central.
+              central. The FSD proposes folding two roles into the agent and adopting a new
+              transport.
             </p>
             <div className="space-y-4 mb-6">
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Every agent runs its own lens
+                  Every agent would run its own lens
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Trace ingest, signature verification, scoring, anomaly detection — these become
-                  local computations on data the agent already has. The network does not depend
-                  on a single observatory.
+                  local computations on data the agent already has. Today CIRISLens runs as a
+                  separate service; the proposal is to fold its responsibilities into the agent
+                  so the network does not depend on a single observatory.
                 </p>
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Every agent runs its own node
+                  Every agent would run its own node
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Benchmark execution, deferral routing, audit anchoring — same story. The
-                  agent&apos;s existing Ed25519 hash chain <em>is</em> the anchor; daily digests
-                  are published events.
+                  agent&apos;s existing Ed25519 hash chain already <em>is</em> the audit anchor;
+                  the proposal is to publish daily digests as events rather than route through a
+                  central CIRISNode.
                 </p>
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  The transport reaches further than the internet
+                  A transport that reaches further than the internet
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  CIRIS is moving toward <strong>Reticulum-rs</strong> as its federation transport.
-                  The agent&apos;s signing key is also its network address. The transport works
-                  over TCP, but also LoRa, packet radio, and even audio modems — minimum ~5 bps.
-                  Sovereign deployments do not need datacenter fiber to participate.
+                  The FSD proposes <strong>Reticulum-rs</strong> as the federation transport for
+                  the 3.X line. The agent&apos;s signing key would also be its network address.
+                  The transport works over TCP but also LoRa, packet radio, and audio modems —
+                  minimum ~5 bps. Sovereign deployments would not need datacenter fiber to
+                  participate. Not yet integrated.
                 </p>
               </div>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               The CIRIS Registry remains as the commercial fast-track and the source of
-              professional licensing. It is no longer a network gate.
+              professional licensing in both today&apos;s and tomorrow&apos;s topology. It is
+              never the network gate.
             </p>
           </section>
 

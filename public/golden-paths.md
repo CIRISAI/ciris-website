@@ -7,10 +7,10 @@
 
 | Persona | Start Here | Key Pages | End Goal |
 |---------|------------|-----------|----------|
-| **Developer** | /first-contact | /how-it-works → /architecture → /federation → /explore-a-trace | Deploy an agent |
+| **Developer** | /first-contact | /how-it-works → /architecture → /federation (3.X plan) → /explore-a-trace | Deploy an agent |
 | **Executive** | /vision | /compare → /coherence-ratchet → /trust | Understand the value proposition |
 | **End User** | / (homepage) | /first-contact → /install | Install the app |
-| **Researcher** | /coherence-ratchet | /research-status → /federation → /sections/main | Evaluate the thesis |
+| **Researcher** | /coherence-ratchet | /research-status → /federation (3.X plan) → /sections/main | Evaluate the thesis |
 | **Compliance Officer** | /compare | /safety → /trust → /privacy | Assess for deployment |
 
 ---
@@ -27,7 +27,7 @@
     ↓
 /architecture (22 services, message buses)
     ↓
-/federation (Proof of Benefit, sovereign vs registered, transport)
+/federation (3.X architectural direction — Proof of Benefit, sovereign vs registered, Reticulum-rs)
     ↓
 /explore-a-trace (see real reasoning)
     ↓
@@ -42,7 +42,7 @@
 - 10 action handlers
 - The Three Rules (no untyped dicts, no bypass patterns, no exceptions)
 - Message bus architecture
-- Proof of Benefit federation primitive — score-as-pure-function, sovereign and registered tiers, Reticulum-rs transport
+- Proof of Benefit federation primitive (3.X plan) — score-as-pure-function, sovereign and registered tiers, Reticulum-rs transport. Capacity Score and the registry are deployed today; sovereign mode and the transport are FSD-stage
 
 ### Technical Resources
 - GitHub: https://github.com/CIRISAI/CIRISAgent
@@ -141,7 +141,7 @@ App Store / Play Store
     ↓
 /research-status (what's proven vs. being tested)
     ↓
-/federation (Proof of Benefit + N_eff empirical validation)
+/federation (3.X plan — Proof of Benefit; N_eff measurement is empirical today, the federation primitive is FSD-stage)
     ↓
 /sections/main (The CIRIS Accord)
     ↓
@@ -159,8 +159,8 @@ PoB FSD (GitHub)
 - L-01 Barrier (~40% fundamental limit) — possibly addressable via recursive II with prompt perturbation (v4 conscience methodology, proposed and not yet empirically validated)
 - Corridor bounds (0.2 < ρ < 0.7)
 - Falsification criteria F-1 through F-5
-- Proof of Benefit: cost ≡ benefit primitive; N_eff ≥ 9 measured on 17-dim constraint vector; lifetime peak N_eff_H = 9.51 (April 2026)
-- Federated Ratchet / Coherent Intersection Hypothesis (Accord Book IX Ch. 3-4)
+- Proof of Benefit (3.X plan): cost ≡ benefit primitive proposed in the FSD; the empirical N_eff measurement on the 17-dim constraint vector — lifetime peak 9.51 in April 2026 — is what the proposed primitive rests on
+- Federated Ratchet / Coherent Intersection Hypothesis (Accord Book IX Ch. 3-4) — canonical text since 2025-04-16; the federation topology that operationalizes it is the 3.X target
 
 ### Language to Use
 - "Conditional exponential gap under ETH"
