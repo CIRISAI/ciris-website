@@ -15,30 +15,70 @@ export default function ModelsPage() {
           {/* Hero */}
           <div className="text-center">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-              What LLM We Use and Why
+              What LLMs We Use and Why
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              CIRIS Agent runs on Llama 4 Maverick because it's the only open model that actually works for ethical, tool-heavy agents in production.
+              CIRIS Agent runs on a small set of open models that meet five non-negotiable
+              criteria. The current production lineup is Llama 4 Maverick, Llama 4 Scout, Qwen 3.6,
+              and Gemma 4 — chosen for different roles in the agent&apos;s workload.
             </p>
           </div>
 
-          {/* Current Model */}
-          <div className="mt-12 rounded-lg border-2 border-brand-primary bg-gradient-to-br from-blue-50 to-purple-50 p-6 shadow-lg dark:from-blue-900/20 dark:to-purple-900/20">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              Llama 4 Maverick
-            </h2>
-            <div className="space-y-3 text-gray-700 dark:text-gray-300">
-              <p>
-                <strong className="text-gray-900 dark:text-white">Architecture:</strong> Mixture-of-Experts (activates ~17B parameters per token)
+          {/* Current Lineup */}
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
+            <div className="rounded-lg border-2 border-brand-primary bg-gradient-to-br from-blue-50 to-purple-50 p-6 shadow-sm dark:from-blue-900/20 dark:to-purple-900/20">
+              <h2 className="mb-3 text-2xl font-bold text-gray-900 dark:text-white">
+                Llama 4 Maverick
+              </h2>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                The reasoning workhorse. Mixture-of-Experts with ~17B active parameters per token,
+                1M token context, multi-provider availability. Default for the deeper reasoning
+                steps where context capacity matters most.
               </p>
-              <p>
-                <strong className="text-gray-900 dark:text-white">Context Window:</strong> 1M tokens
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Providers: OpenRouter, Groq, Together
               </p>
-              <p>
-                <strong className="text-gray-900 dark:text-white">Pricing:</strong> ~$0.11 in / $0.34 out per 1M tokens (via OpenRouter)
+            </div>
+
+            <div className="rounded-lg border-2 border-brand-primary bg-gradient-to-br from-blue-50 to-purple-50 p-6 shadow-sm dark:from-blue-900/20 dark:to-purple-900/20">
+              <h2 className="mb-3 text-2xl font-bold text-gray-900 dark:text-white">
+                Llama 4 Scout
+              </h2>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                The fast companion in the Llama 4 family. Smaller and quicker than Maverick, with
+                strong tool calling. Used for interactive tiers where latency matters and the full
+                Maverick context budget is not required.
               </p>
-              <p>
-                <strong className="text-gray-900 dark:text-white">Deployment:</strong> Multi-provider (OpenRouter, Groq, Together)
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Providers: OpenRouter, Groq
+              </p>
+            </div>
+
+            <div className="rounded-lg border-2 border-brand-primary bg-gradient-to-br from-blue-50 to-purple-50 p-6 shadow-sm dark:from-blue-900/20 dark:to-purple-900/20">
+              <h2 className="mb-3 text-2xl font-bold text-gray-900 dark:text-white">
+                Qwen 3.6
+              </h2>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                Multilingual depth and strong structured output. Carries weight in the
+                non-English reasoning paths the polyglot Accord requires; an independent provider
+                base outside the Llama family adds redundancy in the fallback chain.
+              </p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Providers: OpenRouter, DashScope
+              </p>
+            </div>
+
+            <div className="rounded-lg border-2 border-brand-primary bg-gradient-to-br from-blue-50 to-purple-50 p-6 shadow-sm dark:from-blue-900/20 dark:to-purple-900/20">
+              <h2 className="mb-3 text-2xl font-bold text-gray-900 dark:text-white">
+                Gemma 4
+              </h2>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                Small enough to run on commodity hardware. Used where reach matters more than
+                raw capacity — on-device, low-bandwidth, and degraded-network deployments — and
+                as a third-family fallback alongside Llama and Qwen.
+              </p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Providers: OpenRouter, Google
               </p>
             </div>
           </div>
@@ -115,7 +155,8 @@ export default function ModelsPage() {
                   Default Tier
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Llama 4 Maverick via cost-optimized provider (OpenRouter)
+                  Llama 4 Maverick via cost-optimized provider for deep-reasoning steps that need
+                  the full context budget.
                 </p>
               </div>
 
@@ -124,7 +165,28 @@ export default function ModelsPage() {
                   Fast Tier
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Llama 4 Maverick via speed-optimized provider (Groq) for interactive use
+                  Llama 4 Scout via speed-optimized provider (Groq) for interactive use, with
+                  Maverick on Groq as a heavier-context alternative.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
+                  Multilingual Tier
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Qwen 3.6 carries weight in non-English reasoning paths the polyglot Accord
+                  requires, and provides a non-Llama fallback in the chain.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
+                  Edge Tier
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Gemma 4 for on-device, low-bandwidth, and degraded-network deployments where
+                  reaching the user matters more than the size of the model.
                 </p>
               </div>
 
@@ -133,58 +195,67 @@ export default function ModelsPage() {
                   Fallback Chain
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Maverick across multiple providers, with final fallback to large Llama 3.3-class models when Maverick is unavailable
+                  Maverick → Scout → Qwen 3.6 → Gemma 4 across multiple providers, so the agent
+                  degrades gracefully across model families and infrastructure boundaries instead
+                  of failing hard.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Why Not Other Models */}
+          {/* Why This Lineup */}
           <div className="mt-12">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-              Why Maverick Over Other Open Models
+              Why This Lineup
             </h2>
 
             <div className="space-y-6">
-              <div className="rounded-lg border-l-4 border-red-500 bg-red-50 p-6 dark:bg-red-900/20">
+              <div className="rounded-lg border-l-4 border-green-500 bg-green-50 p-6 dark:bg-green-900/20">
                 <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-                  GPT-OSS-20B
-                </h3>
-                <p className="mb-3 text-gray-700 dark:text-gray-300">
-                  Attractive on paper due to cost, but weak in structured output and tool calling.
-                </p>
-                <div className="rounded-md bg-red-100 p-3 dark:bg-red-900/40">
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
-                    <strong>Failure mode:</strong> "tool choice is required, but the model did not call a tool"
-                  </p>
-                  <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
-                    This error is unacceptable for a framework that depends on 12-70 tool calls per interaction. Even a 3-10× cheaper token price is not worth the operational failures.
-                  </p>
-                </div>
-              </div>
-
-              <div className="rounded-lg border-l-4 border-yellow-500 bg-yellow-50 p-6 dark:bg-yellow-900/20">
-                <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-                  Other Long-Context "Max" Models
+                  Different roles, not interchangeable parts
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Some newer high-context, high-parameter models offer impressive benchmarks and large contexts, but with significantly higher per-token pricing and less mature tool-calling behavior. For CIRIS's mission—ethical, inspectable, tool-centric agents—these models are currently better suited to targeted experiments than to default production use.
+                  Maverick handles deep reasoning where the full context budget matters. Scout
+                  carries the interactive tier where latency dominates. Qwen 3.6 reaches the
+                  polyglot reasoning paths the Accord requires across 29 languages. Gemma 4 is
+                  the small-footprint option that puts the agent within reach of commodity
+                  hardware. The lineup is chosen so different tiers of work go to the model that
+                  actually fits, instead of forcing one model to do everything.
                 </p>
               </div>
 
               <div className="rounded-lg border-l-4 border-green-500 bg-green-50 p-6 dark:bg-green-900/20">
                 <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-                  Maverick's Sweet Spot
+                  Three independent model families
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Llama 4 Maverick via cost-optimized providers delivers:
+                  Llama (Maverick + Scout), Qwen, and Gemma come from three independent training
+                  pipelines and three independent provider ecosystems. That matters for fallback
+                  chains: a CVE, a licensing change, or a provider outage on one family does not
+                  take the agent down. Independence at the model layer is the same property that
+                  makes the IDMA component robust at the reasoning layer.
                 </p>
-                <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                  <li>Reliable tool calling across 12-70 calls per interaction</li>
-                  <li>1M token context (8× the minimum, plenty of headroom)</li>
-                  <li>Multi-provider availability (OpenRouter, Groq, Together)</li>
-                  <li>Cost significantly below proprietary frontier models</li>
-                </ul>
+              </div>
+
+              <div className="rounded-lg border-l-4 border-red-500 bg-red-50 p-6 dark:bg-red-900/20">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
+                  What stays out of the lineup
+                </h3>
+                <p className="mb-3 text-gray-700 dark:text-gray-300">
+                  Models that cannot meet the five criteria — most often, models that look
+                  attractive on token price but fail on structured output and tool calling.
+                </p>
+                <div className="rounded-md bg-red-100 p-3 dark:bg-red-900/40">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>Representative failure mode (GPT-OSS-20B):</strong> &quot;tool choice
+                    is required, but the model did not call a tool&quot;
+                  </p>
+                  <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
+                    This error is unacceptable for a framework that depends on 12-70 tool calls
+                    per interaction. Even a 3-10× cheaper token price is not worth the
+                    operational failures.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -287,10 +358,18 @@ export default function ModelsPage() {
               The Bottom Line
             </h2>
             <p className="text-gray-700 dark:text-gray-300">
-              CIRIS uses Llama 4 Maverick as the primary model because it is the most reliable open option that satisfies CIRIS's ethical, operational, and economic constraints. Other models are monitored and periodically tested, but Maverick is the current default because it best serves CIRIS's commitment to trustworthy, tool-centric AI systems.
+              CIRIS runs Llama 4 Maverick, Llama 4 Scout, Qwen 3.6, and Gemma 4 in production
+              because together they satisfy the operational and economic constraints the Accord
+              imposes — long context, reliable tool calling, polyglot coverage, and reach to
+              commodity hardware — across three independent model families. New models are
+              monitored and tested continuously; the lineup changes when something better
+              actually meets the five criteria.
             </p>
             <p className="mt-4 text-gray-700 dark:text-gray-300">
-              This isn't about chasing benchmark scores or following hype cycles. It's about choosing a model that actually works for ethical agents in production—and that takes the Accord seriously enough to carry it in every single call.
+              This is not about chasing benchmark scores or following hype cycles. It is about
+              choosing models that actually work for accountable, tool-centric agents in
+              production — and that take the Accord seriously enough to carry it in every single
+              call.
             </p>
           </div>
         </div>
