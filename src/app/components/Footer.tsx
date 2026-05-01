@@ -25,6 +25,7 @@ interface Navigation {
 const navigation: Navigation = {
   solutions: [
     { name: "How It Works", href: "/how-it-works" },
+    { name: "Federation", href: "/federation" },
     { name: "Models", href: "/models" },
     { name: "Services", href: "/services" },
     { name: "Integrations", href: "/integrations" },
@@ -37,6 +38,9 @@ const navigation: Navigation = {
   support: [
     { name: "Compare", href: "/compare" },
     { name: "First Contact", href: "/first-contact" },
+    { name: "Explore a Trace", href: "/explore-a-trace" },
+    { name: "CIRIS Scoring", href: "/ciris-scoring" },
+    { name: "Research Status", href: "/research-status" },
     { name: "Documentation", href: "https://deepwiki.com/CIRISAI/CIRISAgent" },
     { name: "Academic Paper", href: "https://zenodo.org/records/17195221" },
     { name: "Agent Portal", href: "https://portal.ethicsengine.org" },

@@ -10,8 +10,8 @@
 | **Developer** | /first-contact | /how-it-works → /architecture → /federation (3.X plan) → /explore-a-trace | Deploy an agent |
 | **Executive** | /vision | /compare → /coherence-ratchet → /trust | Understand the value proposition |
 | **End User** | / (homepage) | /first-contact → /install | Install the app |
-| **Researcher** | /coherence-ratchet | /research-status → /federation (3.X plan) → /sections/main | Evaluate the thesis |
-| **Compliance Officer** | /compare | /safety → /trust → /privacy | Assess for deployment |
+| **Researcher** | /coherence-ratchet | /research-status → /ciris-scoring → /federation (3.X plan) → /sections/main | Evaluate the thesis |
+| **Compliance Officer** | /compare | /safety → /trust → /privacy → /status | Assess for deployment |
 
 ---
 
@@ -141,6 +141,8 @@ App Store / Play Store
     ↓
 /research-status (what's proven vs. being tested)
     ↓
+/ciris-scoring (live trace dashboard — the evidence surface)
+    ↓
 /federation (3.X plan — Proof of Benefit; N_eff measurement is empirical today, the federation primitive is FSD-stage)
     ↓
 /sections/main (The CIRIS Accord)
@@ -195,6 +197,8 @@ PoB FSD (GitHub)
 /safety-policy (operational guidelines)
     ↓
 /canary (warrant canary)
+    ↓
+/status (live infrastructure status)
 ```
 
 ### Key Concepts to Absorb
