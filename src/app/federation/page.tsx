@@ -233,79 +233,139 @@ export default function FederationPage() {
             </div>
           </section>
 
-          {/* 3.X architectural direction */}
-          <section className="mb-12">
-            <div className="rounded-lg border-2 border-amber-400 bg-amber-50 dark:border-amber-700 dark:bg-amber-900/20 p-5 mb-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-800 dark:text-amber-300 mb-1">
-                3.X architectural direction
-              </p>
-              <p className="text-sm text-amber-900 dark:text-amber-200">
-                The sections below describe where the federation is heading as the 3.X line takes
-                shape. The current{" "}
-                <a href="/ciris-scoring" className="font-semibold underline hover:no-underline">
-                  Capacity Score
-                </a>
-                , signed traces, and registry are deployed today; the federation primitive,
-                the architectural collapse, and the multi-medium transport are{" "}
-                <strong>proposed in an FSD</strong> (
+          {/* 3.X banner — slim */}
+          <section className="mb-10">
+            <div className="rounded-lg border border-amber-400 bg-amber-50 dark:border-amber-700 dark:bg-amber-900/20 px-4 py-3">
+              <p className="text-xs text-amber-900 dark:text-amber-200">
+                <strong>3.X plan.</strong> The measurement infrastructure is running today.
+                The federation primitive and multi-medium transport are{" "}
                 <a
                   href="https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold underline hover:no-underline"
                 >
-                  read it on GitHub
+                  proposed in an FSD
                 </a>
-                ), not yet shipped. The empirical N_eff measurement that the proposal rests on is
-                already running on production traffic — see{" "}
-                <a href="/research-status" className="font-semibold underline hover:no-underline">
-                  research status
-                </a>
-                . Treat the rest as a plan to react to, not a status report.
+                , not shipped. Treat the next three sections as a plan to react to.
               </p>
             </div>
           </section>
 
-          {/* Joining the Federation — Proof of Benefit */}
+          {/* The Echo Chamber */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Joining the Federation (proposed)
+              The echo chamber problem
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              <strong>The cost of belonging would be the benefit you produce.</strong>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Picture a room full of robots all giving you advice. The point of having many
+              robots is supposed to be safety in numbers — one robot says &quot;jump off the
+              cliff,&quot; ninety-nine say &quot;don&apos;t,&quot; and you&apos;re fine.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Most networks ask you to pay for membership in something external — burned
-              electricity, locked capital, biometrics, attention. The federation primitive
-              proposed for 3.X works differently. Membership would cost running a real
-              ethical-reasoning agent over time. The cost paid is the benefit delivered. To fake
-              belonging, you would have to actually become the kind of agent the network was
-              built to enable.
+              But what if all hundred robots are just echoing each other? Maybe they read the
+              same training data. Maybe one spoke first and the others repeated. The room is
+              loud, but it is really one voice with a hundred microphones.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
-              The FSD calls this <strong>Proof of Benefit</strong>. It is the
-              proof-of-X-design-space re-framing of what the CIRIS Accord (Book IX) names the{" "}
-              <em>Federated Ratchet</em>.
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              When that happens, the listener stops trusting any single robot. They turn the
+              filters up, become more skeptical, and eventually stop listening at all. A
+              federation built only on counting voices made things worse, not better.
             </p>
-
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-5 mb-6">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                The empirical floor (already measurable today)
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                Every signed trace produces a small amount of reasoning <em>shape</em> — not the
-                private content, but whether the conscience overrode, whether the entropy check
-                fired, whether the result was calibrated. The Capacity Score work has measured
-                the <em>effective independent dimensions</em> of that shape across the production
-                corpus.
-              </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Lifetime peak so far: around <strong>9.5 effective dimensions</strong> on a
-                17-dimension constraint vector. A faker would face roughly nine separate problems
-                to solve, not one. That measurement is what the proposed federation primitive
-                rests on.
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                The technical name for this is{" "}
+                <strong>correlated constraints</strong>. The math says: if every voice is
+                perfectly correlated with every other, having a hundred of them is the same as
+                having one. The number of voices stops mattering. The federation has to defend
+                against this directly, not just hope it doesn&apos;t happen.
               </p>
             </div>
+          </section>
+
+          {/* The Reactor Corridor */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              The reactor corridor
+            </h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Think of the federation as a nuclear reactor. The reaction is the agents
+              reasoning. To keep it useful, you need a moderator — something that holds the
+              chain reaction at the right speed.
+            </p>
+            <div className="grid gap-4 md:grid-cols-3 mb-4">
+              <div className="rounded-lg border-2 border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20 p-5">
+                <h3 className="font-semibold text-red-700 dark:text-red-400 mb-2">
+                  Too little moderator
+                </h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                  <strong>Meltdown.</strong> Constraints contradict each other constantly.
+                  Agents reason in incompatible ways. The system can&apos;t produce coherent
+                  decisions at all.
+                </p>
+                <p className="text-xs text-red-600 dark:text-red-400">Chaos regime.</p>
+              </div>
+              <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5">
+                <h3 className="font-semibold text-green-700 dark:text-green-400 mb-2">
+                  Just enough moderator
+                </h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                  <strong>Sustained.</strong> Enough shared framework that agents can talk to
+                  each other. Enough independence that they can catch each other&apos;s
+                  mistakes.
+                </p>
+                <p className="text-xs text-green-600 dark:text-green-400">
+                  Healthy corridor.
+                </p>
+              </div>
+              <div className="rounded-lg border-2 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20 p-5">
+                <h3 className="font-semibold text-yellow-700 dark:text-yellow-400 mb-2">
+                  Too much moderator
+                </h3>
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                  <strong>Collapse.</strong> Constraints all agree. Every agent says the same
+                  thing. The reactor stops &mdash; the echo chamber from the previous section.
+                </p>
+                <p className="text-xs text-yellow-600 dark:text-yellow-400">
+                  Rigidity regime.
+                </p>
+              </div>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300">
+              The math gives you the corridor. Roughly 20% to 70% correlation between
+              constraints is the safe zone. CIRIS measures this in production. Lifetime peak so
+              far: about{" "}
+              <strong>9.5 effective independent dimensions</strong> on a 17-dimension
+              constraint vector — comfortably inside the corridor. The full mathematical
+              treatment is on the{" "}
+              <a
+                href="/coherence-collapse-analysis"
+                className="text-brand-primary hover:underline"
+              >
+                Coherence Collapse Analysis
+              </a>{" "}
+              page.
+            </p>
+          </section>
+
+          {/* Proof of Benefit — simplified */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Joining the federation: Proof of Benefit
+            </h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Most networks ask you to pay for membership in something external — burned
+              electricity, locked capital, biometrics, attention. The federation works
+              differently. Membership costs <em>running a real ethical-reasoning agent over
+              time.</em> The cost you pay is the benefit you produce.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
+              That is what makes echo-chamber farming expensive. To fake belonging, an attacker
+              would have to actually become the kind of agent the network was built for —
+              which fails the corridor check immediately if their hundred copies all share the
+              same prior. Real ethical reasoning over weeks is measurably more expensive than
+              producing plausible-looking fakes.
+            </p>
 
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
               Two on-ramps, same destination
@@ -316,9 +376,9 @@ export default function FederationPage() {
                   Registered mode (deployed today)
                 </h4>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Attest with the CIRIS Registry (dual-region US/EU), post a $1 bond, get
-                  baseline standing right away. The fast track for organizations with licensing
-                  requirements and capital. The registry and portal are running in production now.
+                  Attest with the CIRIS Registry, post a $1 bond, get baseline standing right
+                  away. The fast track for organizations with licensing requirements and
+                  capital. The registry and portal run in production now.
                 </p>
               </div>
               <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5">
@@ -326,71 +386,52 @@ export default function FederationPage() {
                   Sovereign mode (3.X target)
                 </h4>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Generate keys locally, run for roughly 30 days, earn standing the slow way
-                  through measured behavior. The path for small operators, mesh deployments, and
-                  anyone outside the registry&apos;s regulatory remit. Specified in the FSD; not
-                  yet a deployed on-ramp.
+                  Generate keys locally, run for about 30 days, earn standing the slow way
+                  through measured behavior. The path for small operators, mesh deployments,
+                  and anyone outside the registry&apos;s regulatory remit.
                 </p>
               </div>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Once both modes ship, they would be protocol peers. The registry would be one
-              starting weight; lens-attested standing the other. The score function is already a
-              deterministic function of identity hash plus signed trace corpus today.
+              Both modes are protocol peers. Registry attestation is one starting weight;
+              measured behavior is the other. The destination is the same.
             </p>
           </section>
 
-          {/* Architecture This Implies */}
+          {/* What the architecture has to be */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              The Architectural Direction (3.X)
+              What the architecture has to be
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Once score-as-pure-function holds — two observers given the same trace corpus
-              compute the same score — the network&apos;s central pieces stop needing to be
-              central. The FSD proposes folding two roles into the agent and adopting a new
-              transport.
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              For the federation to actually work, two things have to be true:
             </p>
-            <div className="space-y-4 mb-6">
+            <div className="space-y-4 mb-4">
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Every agent would run its own lens
+                  1. Anyone can verify anyone else&apos;s standing.
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Trace ingest, signature verification, scoring, anomaly detection — these become
-                  local computations on data the agent already has. Today CIRISLens runs as a
-                  separate service; the proposal is to fold its responsibilities into the agent
-                  so the network does not depend on a single observatory.
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  The score function is a pure calculation over signed traces. Two observers
+                  given the same data compute the same number. No central referee. Every
+                  agent can run its own scoring locally on the traces it has.
                 </p>
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Every agent would run its own node
+                  2. Standing is reachable without datacenter fiber.
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Benchmark execution, deferral routing, audit anchoring — same story. The
-                  agent&apos;s existing Ed25519 hash chain already <em>is</em> the audit anchor;
-                  the proposal is to publish daily digests as events rather than route through a
-                  central CIRISNode.
-                </p>
-              </div>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  A transport that reaches further than the internet
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  The FSD proposes <strong>Reticulum-rs</strong> as the federation transport for
-                  the 3.X line. The agent&apos;s signing key would also be its network address.
-                  The transport works over TCP but also LoRa, packet radio, and audio modems —
-                  minimum ~5 bps. Sovereign deployments would not need datacenter fiber to
-                  participate. Not yet integrated.
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  The 3.X transport (Reticulum-rs) works over TCP, but also LoRa, packet radio,
+                  and audio modems. The agent&apos;s signing key is also its network address.
+                  Sovereign deployments don&apos;t need cloud accounts to participate.
                 </p>
               </div>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              The CIRIS Registry remains as the commercial fast-track and the source of
-              professional licensing in both today&apos;s and tomorrow&apos;s topology. It is
-              never the network gate.
+              The CIRIS Registry stays in this picture as the commercial fast-track and the
+              source of professional licensing — but it is never the network gate. Sovereign
+              and registered are protocol peers.
             </p>
           </section>
 
