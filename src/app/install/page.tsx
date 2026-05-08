@@ -29,8 +29,13 @@ export default function InstallPage() {
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
               Install CIRIS
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              Choose your preferred installation method. Works on Windows, macOS, and Linux.
+            <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
+              An open-source replacement for ChatGPT and Gemini — auditable reasoning, polyglot
+              across 29 languages, plugs into Home Assistant for fully open-source home control.
+            </p>
+            <p className="mt-3 text-base text-gray-600 dark:text-gray-400">
+              Available on iPhone, Android, and as pip / docker / git installs for Windows,
+              macOS, and Linux.
             </p>
           </div>
 

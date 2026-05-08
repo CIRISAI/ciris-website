@@ -46,6 +46,11 @@ export default function ComparePage() {
               <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                 No published principles. No audit trail. Closed source. You can&apos;t check what it did or why.
               </p>
+              <p className="text-xs text-gray-600 dark:text-gray-400 italic mb-3">
+                Most consumer AI assistants — ChatGPT, Gemini — sit here from a
+                public-accountability standpoint. Strong internal practices may exist; you
+                can&apos;t verify them.
+              </p>
               <p className="text-xs text-red-600 dark:text-red-400 font-medium">
                 Requires external regulation. Cannot govern itself.
               </p>
