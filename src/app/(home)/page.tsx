@@ -33,6 +33,44 @@ export default function Homepage() {
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
+          headline="What CIRIS Agent Does"
+          subheadline="An AI assistant you can audit, in your language, plugged into your tools."
+          copyText="Ask it the things you'd ask any AI assistant — the difference is you can see exactly how it reasoned, verify it didn't drift from its public ethical framework, and run it on a phone in 228 megabytes if you have to. Real production deployments today: a Discord moderator, a mobile assistant across 29 languages, and tooling adapters that plug into CLI, HTTP API, and SQL databases."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Ask in your language",
+              headlineHref: "/install",
+              copyText:
+                "Polyglot reasoning across 29 languages, including low-resource ones. Runs in 228 MB on a commodity Android phone — same answers a datacenter would give, on the device in someone's hand.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Watch it think",
+              headlineHref: "/explore-a-trace",
+              copyText:
+                "Every decision is signed, replayable, and inspectable. Four conscience faculties evaluate each action before it executes. The reasoning trace is part of the product, not buried.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Plug it in",
+              headlineHref: "/integrations",
+              copyText:
+                "Discord moderation bot in production today. CLI, HTTP API, and SQL adapters available. MCP, weather, and navigation integrations on the way.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
           headline="Choose Your Path"
           subheadline="Start from your reason for being here."
           className="border-brand-primary text-brand-primary border-t"
