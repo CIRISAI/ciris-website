@@ -341,7 +341,7 @@ export default function FirstContactPage() {
               4 and 5 can&apos;t be verified either. Legibility is earned step by
               step.{" "}
               <a href="/trust" className="text-brand-primary hover:underline">
-                Learn more about progressive verification &rarr;
+                Five-level post-quantum attestation (Ed25519 + ML-DSA-65) &rarr;
               </a>
             </p>
           </div>

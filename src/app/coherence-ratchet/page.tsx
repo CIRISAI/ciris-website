@@ -96,6 +96,26 @@ export default function CoherenceRatchetPage() {
             </div>
           </div>
 
+          {/* Coherence-Based Alignment framing */}
+          <section className="mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-2">
+              Coherence-Based Alignment
+            </p>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              The Coherence Ratchet is the operational mechanism behind Coherence-Based Alignment.
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Coherence-Based Alignment (CBA) is the architectural thesis that an AI system stays
+              aligned by being structurally required to maintain coherence across many independent
+              constraints over time. The Coherence Ratchet is how that requirement becomes
+              operational. The mathematical foundation is the{" "}
+              <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
+                Coherence Collapse Analysis
+              </a>
+              .
+            </p>
+          </section>
+
           {/* The Core Idea */}
           <section className="mb-12">
             <div className="rounded-xl border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-6">
@@ -449,15 +469,15 @@ function isFragileReasoning(k_eff: number): boolean {
                   </div>
                 </div>
                 <p className="text-xs text-gray-500 mt-3 text-center">
-                  <a href="/federation" className="text-brand-primary hover:underline">Learn more about the Federation Model →</a>
+                  <a href="/federation" className="text-brand-primary hover:underline">Federation: Proof of Benefit and the Federated Ratchet →</a>
                 </p>
               </div>
             )}
 
             <p className="text-gray-600 dark:text-gray-400">
-              <a href="/compare" className="text-brand-primary hover:underline">See how frameworks compare →</a>
+              <a href="/compare" className="text-brand-primary hover:underline">Frameworks compared (seven requirements) →</a>
               {" "}|{" "}
-              <a href="/federation" className="text-brand-primary hover:underline">How they work together →</a>
+              <a href="/federation" className="text-brand-primary hover:underline">Federation topology — Type 1/2/3 governance →</a>
             </p>
           </section>
 

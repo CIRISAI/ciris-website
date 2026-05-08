@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Trust & Identity — Verifiable AI Agent with Cryptographic Attestation (Ed25519)",
+    "Trust & Identity — Post-Quantum Cryptographic Attestation (Ed25519 + ML-DSA-65)",
   description:
-    "Verifiable AI agent identity built on Ed25519 cryptographic attestation. Five-level trust stack with hardware-anchored signing keys, per-decision signatures, and a hash-chained audit ledger. Verify the agent, do not trust it.",
+    "Verifiable AI agent identity built on post-quantum cryptographic attestation. Hybrid Ed25519 + ML-DSA-65 dual signatures — classical security from hardware, quantum resistance from software. Five-level trust stack, hardware-anchored signing keys, hash-chained audit ledger. Verify the agent, do not trust it.",
   alternates: { canonical: "/trust" },
   openGraph: {
     type: "article",
     url: "https://ciris.ai/trust",
-    title: "Trust & Identity — Verifiable AI Agent with Ed25519 Attestation",
+    title: "Trust & Identity — Post-Quantum Cryptographic Attestation",
     description:
-      "Cryptographic attestation, hardware-anchored signing keys, hash-chained audit ledger. Verify the agent, do not trust it.",
+      "Hybrid Ed25519 + ML-DSA-65 dual signatures, hardware-anchored signing keys, hash-chained audit ledger. Verify the agent, do not trust it.",
   },
 };
 

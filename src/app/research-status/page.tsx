@@ -329,7 +329,7 @@ export default function ResearchStatusPage() {
             <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                  What we can see already
+                  Effective Dimensionality in Production
                 </p>
                 <h2 className="mt-2 text-3xl font-bold text-slate-900 dark:text-white">
                   The current corpus already shows distinct field structures.

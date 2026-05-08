@@ -506,7 +506,7 @@ export default function ExploreTracePage() {
               </div>
               <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
                 <a href="/coherence-ratchet" className="text-brand-primary hover:underline">
-                  Learn more about the coherence ratchet &rarr;
+                  Coherence-Based Alignment thesis &rarr;
                 </a>
               </p>
             </div>

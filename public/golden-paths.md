@@ -7,11 +7,11 @@
 
 | Persona | Start Here | Key Pages | End Goal |
 |---------|------------|-----------|----------|
-| **Developer** | /first-contact | /how-it-works → /architecture → /federation (3.X plan) → /explore-a-trace | Deploy an agent |
-| **Executive** | /vision | /compare → /coherence-ratchet → /trust | Understand the value proposition |
+| **Developer** | /first-contact | /how-it-works → /architecture → /mdd → /federation (3.X plan) → /explore-a-trace | Deploy an agent |
+| **Executive** | /vision | /compare → /coherence-ratchet → /trust → /mdd | Understand the value proposition |
 | **End User** | / (homepage) | /first-contact → /install | Install the app |
-| **Researcher** | /coherence-ratchet | /research-status → /ciris-scoring → /federation (3.X plan) → /sections/main | Evaluate the thesis |
-| **Compliance Officer** | /compare | /safety → /trust → /privacy → /status | Assess for deployment |
+| **Researcher** | /coherence-ratchet | /coherence-collapse-analysis → /research-status → /ciris-scoring → /federation (3.X plan) → /sections/main | Evaluate the thesis |
+| **Compliance Officer** | /compare | /safety → /trust → /coherence-collapse-analysis → /privacy → /status | Assess for deployment |
 
 ---
 
@@ -26,6 +26,8 @@
 /how-it-works (H3ERE pipeline)
     ↓
 /architecture (22 services, message buses)
+    ↓
+/mdd (Mission Driven Development — how we build it)
     ↓
 /federation (3.X architectural direction — Proof of Benefit, sovereign vs registered, Reticulum-rs)
     ↓
@@ -68,7 +70,9 @@
     ↓
 /coherence-ratchet (the core thesis, simplified)
     ↓
-/trust (5-level attestation)
+/trust (5-level post-quantum attestation)
+    ↓
+/mdd (Mission Driven Development — methodology and worked example)
     ↓
 /about (team and mission)
     ↓
@@ -139,6 +143,8 @@ App Store / Play Store
 ```
 /coherence-ratchet (full thesis)
     ↓
+/coherence-collapse-analysis (mathematical foundation — Kish formula, effective dimensionality, singularity boundary, L-01)
+    ↓
 /research-status (what's proven vs. being tested)
     ↓
 /ciris-scoring (live trace dashboard — the evidence surface)
@@ -190,7 +196,9 @@ PoB FSD (GitHub)
     ↓
 /safety (kill switch, deferral cascades)
     ↓
-/trust (5-level attestation)
+/trust (5-level post-quantum attestation: Ed25519 + ML-DSA-65)
+    ↓
+/coherence-collapse-analysis (mathematical foundation auditors can verify)
     ↓
 /privacy (data handling)
     ↓

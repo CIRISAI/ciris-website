@@ -79,6 +79,9 @@ export default function VisionPage() {
         {/* Ethilogics */}
         <div className="my-16 px-6">
           <div className="mx-auto max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-2">
+              Ubuntu-Grounded Relational Ethics
+            </p>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
               Ethilogics
             </h2>

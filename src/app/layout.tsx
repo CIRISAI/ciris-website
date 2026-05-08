@@ -12,7 +12,7 @@ const TITLE =
   "CIRIS — Verifiable Ethical AI Agent | Coherence-Grounded, AGPL, Production-Deployed";
 
 const DESCRIPTION =
-  "Open-source ethical AI framework with cryptographic attestation (Ed25519), runtime conscience, Kish-formula effective-dimensionality measurement, Ubuntu-grounded relational ethics, and Mission Driven Development methodology. AGPL-3.0, L3C mission-locked. Live on Google Play and App Store.";
+  "Open-source ethical AI framework with post-quantum cryptographic attestation (Ed25519 + ML-DSA-65 dual signatures), runtime conscience, Kish-formula effective-dimensionality measurement, Ubuntu-grounded relational ethics, and Mission Driven Development methodology. AGPL-3.0, L3C mission-locked. Live on Google Play and App Store.";
 
 export const metadata: Metadata = {
   title: {
@@ -85,7 +85,7 @@ const jsonLd = {
       "@id": "https://ciris.ai/#product",
       name: "CIRIS Agent",
       description:
-        "Open-source ethical AI agent with cryptographic attestation (Ed25519), runtime conscience module, and coherence-grounded alignment. Built on Mission Driven Development methodology.",
+        "Open-source ethical AI agent with post-quantum cryptographic attestation (Ed25519 + ML-DSA-65 dual signatures), runtime conscience module, and coherence-grounded alignment. Built on Mission Driven Development methodology.",
       brand: { "@id": "https://ciris.ai/#organization" },
       license: "https://www.gnu.org/licenses/agpl-3.0.html",
       url: "https://ciris.ai",

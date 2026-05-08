@@ -178,7 +178,7 @@ export default function HowItWorksPage() {
             <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-6">
               <h3 className="font-bold text-green-700 dark:text-green-400 mb-2">
                 Intuition DMA (IDMA){" "}
-                <a href="/research-status#idma" className="text-xs font-normal text-brand-primary hover:underline">Learn more →</a>
+                <a href="/research-status#idma" className="text-xs font-normal text-brand-primary hover:underline">Effective dimensionality at runtime →</a>
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Checks whether DMA results are truly independent or secretly correlated. Monitors for echo chamber patterns. If correlation is too high, flags the decision for caution. This is the &quot;intuition&quot; that distinguishes Type 3 AI.

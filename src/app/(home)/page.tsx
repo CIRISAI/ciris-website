@@ -142,6 +142,43 @@ export default function Homepage() {
           ]}
         />
 
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="Coherence-Based Alignment in Production"
+          subheadline="The mathematical foundation, the empirical floor, the architectural direction."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Coherence Collapse Analysis",
+              headlineHref: "/coherence-collapse-analysis",
+              copyText:
+                "The Kish design effect applied to AI alignment. Effective dimensionality, the singularity boundary, and the L-01 ceiling — Lean-formalized.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Effective Dimensionality",
+              headlineHref: "/research-status",
+              copyText:
+                "Lifetime peak Neff = 9.51 on a 17-dimension constraint vector across 6,465+ production traces. Measurement is reproducible, the corpus is published.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "The Federation (3.X)",
+              headlineHref: "/federation",
+              copyText:
+                "Proof of Benefit: where the cost of network membership is producing the benefit the network exists to enable. The 3.X architectural direction.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
         <QuickInstall />
       </div>
 

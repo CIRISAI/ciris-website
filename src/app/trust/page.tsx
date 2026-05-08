@@ -27,6 +27,9 @@ export default function TrustPage() {
       {/* DMV Analogy - Three Pillars */}
       <div className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 py-16">
         <div className="mx-auto max-w-6xl px-4">
+          <p className="text-center text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-2">
+            Post-Quantum Cryptographic Attestation
+          </p>
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-2">
             Every Agent Needs Three Things
           </h2>
@@ -34,7 +37,7 @@ export default function TrustPage() {
             Just like every car on the road.
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            CIRISVerify is the trust anchor for the CIRIS ecosystem. Post-quantum ready with hybrid Ed25519 + ML-DSA-65 cryptography as a day-1 standard.
+            CIRISVerify is the trust anchor for the CIRIS ecosystem. Hybrid Ed25519 + ML-DSA-65 dual-signature cryptography as a day-1 standard — classical security from hardware, quantum resistance from software.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
