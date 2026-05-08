@@ -475,6 +475,13 @@ export default function ResearchStatusPage() {
             <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
               The working hypothesis is that behavioral attractors can act as candidate proxies for operational mode. The purpose of the trace commons is to make that hypothesis measurable in the open.
             </p>
+            <p className="mt-6 text-sm text-slate-500 dark:text-slate-400">
+              The failure mode CCA measures structurally also has a name in the FAccT 2025 literature: <em>perspectival homogenization</em> (&quot;Value of Disagreement in AI Design, Evaluation, and Alignment&quot;). The mathematical foundation is on the dedicated{" "}
+              <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
+                Coherence Collapse Analysis
+              </a>{" "}
+              page.
+            </p>
           </section>
         </div>
       </main>

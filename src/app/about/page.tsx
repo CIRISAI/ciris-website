@@ -187,6 +187,12 @@ export default function Homepage() {
           >
             See what we&apos;re building →
           </a>
+          <a
+            href="/mdd"
+            className="text-brand-primary hover:underline font-medium text-sm"
+          >
+            How we build it (MDD methodology) →
+          </a>
         </div>
       </div>
       <div>

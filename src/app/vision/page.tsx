@@ -124,6 +124,17 @@ export default function VisionPage() {
                 Ethilogics: right reasoning and right action share one structure, and that
                 structure can be inspected from the outside.
               </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                The engineering discipline that takes this seriously is{" "}
+                <a href="/mdd" className="text-brand-primary hover:underline">
+                  Mission Driven Development
+                </a>
+                . The mathematical foundation is{" "}
+                <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
+                  Coherence Collapse Analysis
+                </a>
+                .
+              </p>
             </div>
           </div>
         </div>
