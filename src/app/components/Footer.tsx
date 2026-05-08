@@ -50,6 +50,7 @@ const navigation: Navigation = {
     { name: "About", href: "/about" },
     { name: "Vision", href: "/vision" },
     { name: "Thesis", href: "/coherence-ratchet" },
+    { name: "Methodology", href: "/mdd" },
     { name: "Principles", href: "/sections/main" },
   ],
   legal: [
