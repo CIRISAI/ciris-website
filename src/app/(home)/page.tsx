@@ -34,18 +34,18 @@ export default function Homepage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="What CIRIS Agent Does"
-          subheadline="An AI assistant you can audit, in your language, plugged into your tools."
-          copyText="Ask it the things you'd ask any AI assistant — the difference is you can see exactly how it reasoned, verify it didn't drift from its public ethical framework, and run it on a phone in 228 megabytes if you have to. Real production deployments today: a Discord moderator, a mobile assistant across 29 languages, and tooling adapters that plug into CLI, HTTP API, and SQL databases."
+          subheadline="Use it instead of ChatGPT or Gemini — open-source, auditable, multilingual, and plugs into your home."
+          copyText="Ask it the things you'd ask any AI assistant. The difference is you can see exactly how it reasoned, verify it didn't drift from a public ethical framework, and run it on a phone in 228 megabytes. Plug it into Home Assistant for fully open-source home control. Production deployments today include a Discord moderation bot and mobile apps across 29 languages."
           className="border-brand-primary text-brand-primary border-t"
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Ask in your language",
+              headline: "Replace ChatGPT or Gemini",
               headlineHref: "/install",
               copyText:
-                "Polyglot reasoning across 29 languages, including low-resource ones. Runs in 228 MB on a commodity Android phone — same answers a datacenter would give, on the device in someone's hand.",
+                "An open-source assistant for the questions you'd otherwise put to a closed-source model. Polyglot across 29 languages — including low-resource ones — and runs in 228 MB on a commodity Android phone.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -58,10 +58,10 @@ export default function Homepage() {
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Plug it in",
+              headline: "Run your home, your way",
               headlineHref: "/integrations",
               copyText:
-                "Discord moderation bot in production today. CLI, HTTP API, and SQL adapters available. MCP, weather, and navigation integrations on the way.",
+                "Plugs into Home Assistant for fully open-source home control. Discord moderation bot in production today. CLI, HTTP API, and SQL adapters available. MCP, weather, and navigation integrations on the way.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
