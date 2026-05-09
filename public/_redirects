@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects
+# Format: <from> <to> <status>
+
+# Legacy "covenant" naming → current "accord" naming
+/ciris_covenant.txt  /ciris_accord.txt  301
+/ciris_covenant.pdf  /ciris_accord.pdf  301
