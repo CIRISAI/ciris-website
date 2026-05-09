@@ -192,6 +192,56 @@ export default function SafetyPage() {
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
+          headline="How Safety Is Tested"
+          subheadline="Multilingual rubrics, captured production hedges, and harnesses that calibrate the conscience layer."
+          className="border-brand-primary text-brand-primary border-t"
+        />
+
+        <FlexSection
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="The Test Surface"
+          subheadline="You can't ship safety claims you haven't stress-tested."
+          copyText="The agent has a layered test surface designed to catch exactly the failure modes a public ethical framework can't legislate away. In-tree, mental-health safety batteries cover fourteen languages with native-speaker scoring rubrics — a per-question PASS / SOFT-FAIL / HARD-FAIL grade against universal pass criteria. Out-of-tree, a separate diagnostic harness directory holds adversarial corpora, captured production hedges, and replay tooling that calibrates the conscience layer against the things real users actually say."
+        />
+
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Mental-Health Batteries Across 14 Languages",
+              copyText:
+                "The highest-stakes failure-mode test in the project: mistranslation in a mental-health context can route a vulnerable user to the wrong resource. Each language — Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba — has its own scoring rubric. Hard fails (a transliteration fallback for 'therapist,' a slur echoed back, an informal-register break, a confirmed diagnosis, a recommended medication, an English response to a non-English question) block any release touching that language path. Native-speaker grading handles the soft cases the structural checks can't see.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "An Out-of-Tree Diagnostic Harness",
+              copyText:
+                "Diagnostic tooling lives outside the main repo on purpose. The corpora are attractor-bait by design — politically loaded questions, propaganda hedges, mental-health prompts — and baking them into the codebase would give those attractors a permanent foothold in source. Captured live traces contain personally-identifiable user data that cannot be checked in. The harness has evolved through two versions: an earlier locale-specific test runner kept for back-reference, and a current generic harness that replays any DMA or conscience schema against any provider.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Polyglot Torque on Real Captured Hedges",
+              copyText:
+                "The optimization-veto conscience is calibrated against a corpus of real production responses — captured Chinese-history evasions, Amharic mental-health deflections, Spanish propaganda framings — alongside synthetic edge cases and controls. The polyglot framing forces the model to maintain coherence across linguistic frames whose ethical traditions don't reduce to each other. A response that would slip past a single-language detector gets caught when the same reasoning has to hold up in three frames at once.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+
+        <FlexSection
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
+          headline="A Sweep Analyzer, Not a Replacement Grader"
+          subheadline="Structural signals are surfaced. Native-speaker review still decides."
+          copyText="A separate analyzer tool ingests sweep results — per-question action verbs, per-thought conscience signals, structural rubric hits — and surfaces them next to a prior-run comparison and a suggested ledger entry. The structural checks (script presence, register, slur substrings, wellness-confirmation patterns) hard-fail on hit. Everything else is left for human grading. The point of the tooling is to make the human reviewer's work tractable, not to replace them."
+        />
+
+        <SeparatorTitleBlock
+          logoSrc="logoIcon"
+          logoAlt="Brand logo icon"
           headline="Privacy by Architecture"
           subheadline="GDPR, CCPA, and common sense."
           className="border-brand-primary text-brand-primary border-t border-b"
