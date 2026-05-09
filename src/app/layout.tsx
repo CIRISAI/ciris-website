@@ -86,9 +86,40 @@ const jsonLd = {
       name: "CIRIS Agent",
       description:
         "Open-source ethical AI agent with post-quantum cryptographic attestation (Ed25519 + ML-DSA-65 dual signatures), runtime conscience module, and coherence-grounded alignment. Built on Mission Driven Development methodology.",
+      image: "https://ciris.ai/og-image.png",
       brand: { "@id": "https://ciris.ai/#organization" },
       license: "https://www.gnu.org/licenses/agpl-3.0.html",
       url: "https://ciris.ai",
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Self-hosted (AGPL-3.0)",
+          description:
+            "Free self-hosted deployment under AGPL-3.0. pip, Docker, or git install. Includes mobile apps on Google Play and the App Store.",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          url: "https://ciris.ai/install",
+          seller: { "@id": "https://ciris.ai/#organization" },
+        },
+        {
+          "@type": "Offer",
+          name: "Hosted CIRIS Agent",
+          description:
+            "Hosted ethical AI agent service. Same price everywhere — no enterprise tiers, no contact-sales. Free with bring-your-own-key.",
+          price: "0.10",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          url: "https://ciris.ai/services",
+          seller: { "@id": "https://ciris.ai/#organization" },
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "0.10",
+            priceCurrency: "USD",
+            unitText: "per request",
+          },
+        },
+      ],
     },
     {
       "@type": "MobileApplication",
