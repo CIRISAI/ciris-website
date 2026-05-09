@@ -33,7 +33,6 @@ const navigation: Navigation = {
     { name: "Safety", href: "/safety" },
     { name: "Infrastructure", href: "/architecture" },
     { name: "Trust & Identity", href: "/trust" },
-    { name: "EthicsEngine", href: "https://ethicsengine.org" },
   ],
   support: [
     { name: "Compare", href: "/compare" },
@@ -42,8 +41,6 @@ const navigation: Navigation = {
     { name: "CIRIS Scoring", href: "/ciris-scoring" },
     { name: "Research Status", href: "/research-status" },
     { name: "Documentation", href: "https://deepwiki.com/CIRISAI/CIRISAgent" },
-    { name: "Academic Paper", href: "https://zenodo.org/records/17195221" },
-    { name: "Agent Portal", href: "https://portal.ethicsengine.org" },
     { name: "Status", href: "/status" },
   ],
   company: [
