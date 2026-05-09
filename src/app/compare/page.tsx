@@ -13,8 +13,8 @@ export default function ComparePage() {
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="Enrich or Extract"
-        subheadline="AI that doesn't serve humanity is extracting from it."
+        headline="Worth Checking"
+        subheadline="Without accountability, AI tends to extract more than it gives."
         description="If you can't check the accountability, it's marketing. Here's what to look for — and how existing approaches compare."
         mediaType="image"
         opacityValue={0.7}

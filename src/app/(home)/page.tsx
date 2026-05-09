@@ -110,7 +110,7 @@ export default function Homepage() {
           logoAlt="Brand logo icon"
           headline="Why CIRIS"
           subheadline="The thesis is simple."
-          copyText="The safest agentic system is the one you can inspect. CIRIS makes reasoning visible, keeps the framework public, and uses privacy-preserving traces to measure the shape of behavior as systems scale."
+          copyText="An agentic system you can inspect is easier to keep accountable than one you can't. CIRIS makes reasoning visible, keeps the framework public, and uses privacy-preserving traces to measure the shape of behavior as systems scale."
           className="border-brand-primary text-brand-primary border-t"
         />
 
@@ -157,7 +157,7 @@ export default function Homepage() {
               headline: "Compare",
               headlineHref: "/compare",
               copyText:
-                "See the public argument for why CIRIS is the safest and most ethical agentic option available.",
+                "See the public argument for what makes an agentic option easy to inspect, audit, and hold accountable — and where CIRIS fits.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

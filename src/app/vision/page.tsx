@@ -61,7 +61,7 @@ export default function VisionPage() {
             {
               headline: "Conscience Must Execute",
               copyText:
-                "Principles on paper don't protect anyone. CIRIS embeds conscience in the runtime — every action passes through validation checks. Not guidelines. Constraints.",
+                "Principles on paper rarely protect anyone in practice. CIRIS embeds conscience in the runtime — every action passes through validation checks. Not guidelines. Constraints.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
