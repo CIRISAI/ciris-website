@@ -493,6 +493,24 @@ export default function PrivacyPage() {
               </table>
             </div>
 
+            <p className="mb-6 text-sm text-gray-600 dark:text-gray-400">
+              <strong className="text-gray-900 dark:text-white">Public research releases.</strong>{" "}
+              Trace contribution is opt-in everywhere and NER-cleansed at ingest. The default
+              is structural only — model, region, timing, no text content. CIRIS-managed agents
+              like scout.ciris.ai send full reasoning traces by configuration; any other install
+              can opt into the same by overriding the default. Cleansed corpora are published
+              openly to the{" "}
+              <a
+                href="https://huggingface.co/CIRISAI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline dark:text-blue-400"
+              >
+                CIRISAI organization on Hugging Face
+              </a>
+              {" "}so outside researchers can verify what is in them.
+            </p>
+
             <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
               5.2 CIRISBilling (Financial Records)
             </h3>

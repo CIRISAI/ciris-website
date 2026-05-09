@@ -126,7 +126,7 @@ export default function ResearchStatusPage() {
                 CIRISAI/reasoning-traces
               </h2>
               <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-                The privacy-preserving reasoning trace corpus released alongside the Constrained Reasoning Chains study, hosted on Hugging Face.
+                The privacy-preserving reasoning trace corpus released alongside the Constrained Reasoning Chains study. Part of the broader CIRISAI org of public datasets and models on Hugging Face.
               </p>
             </a>
             <a
@@ -162,6 +162,17 @@ export default function ResearchStatusPage() {
               </p>
             </a>
           </section>
+
+          <div className="mb-14 flex justify-center">
+            <a
+              href="https://huggingface.co/CIRISAI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-brand-primary px-6 py-3 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+            >
+              See the full CIRISAI org on Hugging Face →
+            </a>
+          </div>
 
           <section id="alignment-manifold" className="mb-10 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">

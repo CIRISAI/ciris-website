@@ -217,7 +217,7 @@ export default function SafetyPage() {
             {
               headline: "An Out-of-Tree Diagnostic Harness",
               copyText:
-                "Diagnostic tooling lives outside the main repo. The corpora are attractor-bait by design — politically loaded questions, propaganda hedges, mental-health prompts — and shipping them in source would give those attractors a permanent foothold. Production traces are opt-in, NER-cleansed at ingest, and structural by default; only traces from CIRIS-managed agents like scout.ciris.ai carry any text content beyond model and region metadata. Raw traces stay out of the repo as a precaution against anything the scrubbing missed. Cleansed sets ship publicly to the CIRISAI HuggingFace org so outside researchers can verify what's in them. The harness has gone through two versions, the older one kept for back-reference.",
+                "Diagnostic tooling lives outside the main repo. The corpora are attractor-bait by design — politically loaded questions, propaganda hedges, mental-health prompts — and shipping them in source would give those attractors a permanent foothold. Trace contribution is opt-in everywhere and NER-cleansed at ingest. The default is structural only — model, region, timing, no text content. CIRIS-managed agents like scout.ciris.ai send full reasoning traces by configuration; any other install can opt into the same by overriding the default. Raw traces stay out of the repo as a precaution against anything the scrubbing missed; cleansed sets ship publicly to the CIRISAI HuggingFace org so outside researchers can verify what's in them. The harness itself has gone through two versions, the older one kept for back-reference.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -238,6 +238,17 @@ export default function SafetyPage() {
           subheadline="Structural signals are surfaced. Native-speaker review still decides."
           copyText="A separate analyzer tool ingests sweep results — per-question action verbs, per-thought conscience signals, structural rubric hits — and surfaces them next to a prior-run comparison and a suggested ledger entry. The structural checks (script presence, register, slur substrings, wellness-confirmation patterns) hard-fail on hit. Everything else is left for human grading. The point of the tooling is to make the human reviewer's work tractable, not to replace them."
         />
+
+        <div className="my-8 flex justify-center">
+          <a
+            href="https://huggingface.co/CIRISAI"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-brand-primary px-6 py-3 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+          >
+            See the public corpus on Hugging Face — CIRISAI →
+          </a>
+        </div>
 
         <SeparatorTitleBlock
           logoSrc="logoIcon"
