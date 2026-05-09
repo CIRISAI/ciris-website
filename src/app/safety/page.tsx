@@ -217,7 +217,7 @@ export default function SafetyPage() {
             {
               headline: "An Out-of-Tree Diagnostic Harness",
               copyText:
-                "Diagnostic tooling lives outside the main repo on purpose. The corpora are attractor-bait by design — politically loaded questions, propaganda hedges, mental-health prompts — and baking them into the codebase would give those attractors a permanent foothold in source. Captured live traces contain personally-identifiable user data that cannot be checked in. The harness has evolved through two versions: an earlier locale-specific test runner kept for back-reference, and a current generic harness that replays any DMA or conscience schema against any provider.",
+                "Diagnostic tooling lives outside the main repo. The corpora are attractor-bait by design — politically loaded questions, propaganda hedges, mental-health prompts — and shipping them in source would give those attractors a permanent foothold. Production traces are opt-in, NER-cleansed at ingest, and structural by default; only traces from CIRIS-managed agents like scout.ciris.ai carry any text content beyond model and region metadata. Raw traces still stay out of the repo as a precaution against anything the scrubbing missed. The harness has gone through two versions, the older one kept for back-reference.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
