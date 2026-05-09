@@ -217,7 +217,7 @@ export default function SafetyPage() {
             {
               headline: "An Out-of-Tree Diagnostic Harness",
               copyText:
-                "Diagnostic tooling lives outside the main repo. The corpora are attractor-bait by design — politically loaded questions, propaganda hedges, mental-health prompts — and shipping them in source would give those attractors a permanent foothold. Production traces are opt-in, NER-cleansed at ingest, and structural by default; only traces from CIRIS-managed agents like scout.ciris.ai carry any text content beyond model and region metadata. Raw traces still stay out of the repo as a precaution against anything the scrubbing missed. The harness has gone through two versions, the older one kept for back-reference.",
+                "Diagnostic tooling lives outside the main repo. The corpora are attractor-bait by design — politically loaded questions, propaganda hedges, mental-health prompts — and shipping them in source would give those attractors a permanent foothold. Production traces are opt-in, NER-cleansed at ingest, and structural by default; only traces from CIRIS-managed agents like scout.ciris.ai carry any text content beyond model and region metadata. Raw traces stay out of the repo as a precaution against anything the scrubbing missed. Cleansed sets ship publicly to the CIRISAI HuggingFace org so outside researchers can verify what's in them. The harness has gone through two versions, the older one kept for back-reference.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
