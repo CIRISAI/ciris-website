@@ -13,7 +13,7 @@ export default function ComparePage() {
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="Worth Checking"
+        headline="The Safest and Most Ethical AI in Production Today"
         subheadline="Without accountability, AI tends to extract more than it gives."
         description="If you can't check the accountability, it's marketing. Here's what to look for — and how existing approaches compare."
         mediaType="image"

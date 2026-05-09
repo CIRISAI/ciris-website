@@ -17,7 +17,7 @@ export default function Homepage() {
       <FloatingNav navItems={navItems} />
       <HomeHeader
         headline="The Open Ethical AI Agent."
-        subheadline="Install it. Inspect it. Compare it. Build with it."
+        subheadline="Reason locally, love globally."
         description="CIRIS is a free, open-source agent platform with a rich UI, visible reasoning, privacy-preserving tracing, and support across desktop, mobile, and pip. It is built to be inspectable, not taken on faith."
         supportingText="Available on iPhone, Android, desktop, and pip. Open source, free, privacy-preserving, and built for accountability."
         mediaType="video"
@@ -157,7 +157,7 @@ export default function Homepage() {
               headline: "Compare",
               headlineHref: "/compare",
               copyText:
-                "See the public argument for what makes an agentic option easy to inspect, audit, and hold accountable — and where CIRIS fits.",
+                "See the public case for why CIRIS is the safest and most ethical AI in production today — checked against other approaches, with the receipts.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
