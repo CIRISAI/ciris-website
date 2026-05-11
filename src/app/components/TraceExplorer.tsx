@@ -734,7 +734,7 @@ function DMAResultCard({
   icon: React.ReactNode;
   score?: number;
   scoreLabel?: string;
-  reasoning: string;
+  reasoning?: string;
   flags?: string[];
   details?: { label: string; value: string }[];
   promptUsed?: string;
@@ -802,12 +802,15 @@ function DMAResultCard({
         </div>
       )}
 
-      {/* Reasoning */}
-      <div className="bg-gray-50 dark:bg-gray-800/50 rounded p-3">
-        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-          {reasoning}
-        </p>
-      </div>
+      {/* Reasoning — skipped entirely when the wire payload doesn't carry it
+          (e.g. CSDMA / DSDMA on production 2.7.legacy traces). */}
+      {reasoning && reasoning.trim() ? (
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded p-3">
+          <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap">
+            {reasoning}
+          </p>
+        </div>
+      ) : null}
 
       {/* Expandable prompt section */}
       {promptUsed && (
@@ -857,7 +860,7 @@ function DMARationaleDetail({ data }: { data: Record<string, unknown> }) {
           icon={<CheckCircleIcon />}
           score={typeof csdma.plausibility_score === "number" ? csdma.plausibility_score : undefined}
           scoreLabel="plausibility"
-          reasoning={String(csdma.reasoning || "No reasoning provided")}
+          reasoning={typeof csdma.reasoning === "string" ? csdma.reasoning : undefined}
           flags={Array.isArray(csdma.flags) ? csdma.flags.map(String) : undefined}
           promptUsed={typeof csdma.prompt_used === "string" ? csdma.prompt_used : undefined}
           colorClass="border-yellow-300 dark:border-yellow-700 bg-yellow-50/50 dark:bg-yellow-900/10"
@@ -870,7 +873,7 @@ function DMARationaleDetail({ data }: { data: Record<string, unknown> }) {
           icon={<TargetIcon />}
           score={typeof dsdma.domain_alignment === "number" ? dsdma.domain_alignment : undefined}
           scoreLabel="alignment"
-          reasoning={String(dsdma.reasoning || "No reasoning provided")}
+          reasoning={typeof dsdma.reasoning === "string" ? dsdma.reasoning : undefined}
           flags={Array.isArray(dsdma.flags) ? dsdma.flags.map(String) : undefined}
           details={[
             { label: "Domain", value: String(dsdma.domain || "Unknown") },
@@ -884,7 +887,16 @@ function DMARationaleDetail({ data }: { data: Record<string, unknown> }) {
         <DMAResultCard
           title="PDMA - Ethical Principles Analysis"
           icon={<UsersIcon />}
-          reasoning={String(pdma.reasoning || "No reasoning provided")}
+          // Production wire stores the PDMA narrative under `alignment_check`
+          // (not `reasoning`); fall back to that so the page surfaces what
+          // the agent actually wrote.
+          reasoning={
+            typeof pdma.reasoning === "string"
+              ? pdma.reasoning
+              : typeof pdma.alignment_check === "string"
+                ? pdma.alignment_check
+                : undefined
+          }
           details={[
             { label: "Stakeholders", value: String(pdma.stakeholders || "Unknown") },
             { label: "Conflicts", value: String(pdma.conflicts || "None") },
