@@ -52,9 +52,13 @@ export interface TraceSummary {
   cost_usd: number;
 }
 
+// next_cursor is opaque on the wire — observed shape in v0.5.0 is an
+// object {version, last_started_at, last_trace_id}, but FastAPI could
+// return anything here. Type as unknown and JSON-stringify when sending
+// it back as a query param.
 interface TraceListPage {
   items: TraceSummary[];
-  next_cursor: string | null;
+  next_cursor: unknown | null;
 }
 
 interface TraceComponentRow {
@@ -121,6 +125,9 @@ export interface TraceData {
 }
 
 // New v0.5.0 event_type → legacy component_type for color/icon lookup.
+// Unknown event_types (e.g. additions in post-2.7.9 schema versions)
+// fall through to "other" with neutral styling so the page degrades
+// gracefully instead of guessing wrong.
 const EVENT_TYPE_TO_COMPONENT_TYPE: Record<string, string> = {
   THOUGHT_START: "observation",
   SNAPSHOT_AND_CONTEXT: "context",
@@ -130,6 +137,12 @@ const EVENT_TYPE_TO_COMPONENT_TYPE: Record<string, string> = {
   CONSCIENCE_RESULT: "conscience",
   ACTION_RESULT: "action",
 };
+
+// LLM_CALL events fire between the reasoning beats above; we filter them
+// out of the rendered narrative because their totals already live on the
+// summary (llm_calls, tokens_total, cost_usd). The raw rows are still in
+// TraceDetail.llm_calls if a future surface wants to enumerate them.
+const HIDDEN_EVENT_TYPES = new Set<string>(["LLM_CALL"]);
 
 // ────────────────────────────── Fetchers ──────────────────────────────────
 
@@ -203,12 +216,14 @@ export async function fetchTraceDetail(traceId: string): Promise<TraceDetail> {
  */
 export function transformToTraceData(detail: TraceDetail): TraceData {
   const { summary, components, envelope } = detail;
-  const mappedComponents: TraceComponent[] = components.map((c) => ({
-    component_type: EVENT_TYPE_TO_COMPONENT_TYPE[c.event_type] ?? "rationale",
-    event_type: c.event_type,
-    timestamp: c.ts,
-    data: c.payload ?? {},
-  }));
+  const mappedComponents: TraceComponent[] = components
+    .filter((c) => !HIDDEN_EVENT_TYPES.has(c.event_type))
+    .map((c) => ({
+      component_type: EVENT_TYPE_TO_COMPONENT_TYPE[c.event_type] ?? "other",
+      event_type: c.event_type,
+      timestamp: c.ts,
+      data: c.payload ?? {},
+    }));
   return {
     trace_id: summary.trace_id,
     thought_id: summary.thought_id,

@@ -44,6 +44,7 @@ const COMPONENT_COLORS: Record<string, string> = {
   rationale: "border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20",
   conscience: "border-green-500 bg-green-50 dark:bg-green-900/20",
   action: "border-red-500 bg-red-50 dark:bg-red-900/20",
+  other: "border-gray-400 bg-gray-50 dark:bg-gray-800/40",
 };
 
 // SVG icons as components to avoid emoji rendering issues
@@ -202,10 +203,40 @@ function ContextExpandableSection({
 function ContextDetail({ data }: { data: Record<string, unknown> }) {
   const systemSnapshot = data.system_snapshot as Record<string, unknown> | undefined;
 
+  // 2.7.9+ wire returns a flat SNAPSHOT_AND_CONTEXT payload (attestation +
+  // identity + binary integrity), not the nested system_snapshot structure
+  // the rich renderer below expects. Render the flat payload as a key/value
+  // grid so the page degrades gracefully instead of going blank.
   if (!systemSnapshot) {
+    const entries = Object.entries(data).filter(
+      ([k]) => k !== "attempt_index",
+    );
+    if (entries.length === 0) {
+      return (
+        <div className="text-sm text-gray-500 dark:text-gray-400 italic">
+          No context data
+        </div>
+      );
+    }
     return (
-      <div className="text-sm text-gray-500 dark:text-gray-400 italic">
-        No system snapshot available
+      <div className="grid gap-2 sm:grid-cols-2">
+        {entries.map(([key, value]) => (
+          <div
+            key={key}
+            className="rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-3"
+          >
+            <div className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">
+              {key.replace(/_/g, " ")}
+            </div>
+            <div className="text-sm font-mono text-gray-800 dark:text-gray-200 break-all">
+              {value === null || value === undefined
+                ? "—"
+                : typeof value === "object"
+                  ? JSON.stringify(value)
+                  : String(value)}
+            </div>
+          </div>
+        ))}
       </div>
     );
   }

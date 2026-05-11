@@ -55,12 +55,18 @@ function formatTimestamp(ts: string): string {
   });
 }
 
-// Task IDs from the lens look like "VERIFY_IDENTITY_bbc88c33-44d2-..."
-// Strip the trailing UUID suffix and replace underscores so the sidebar
-// shows a readable label.
+// Task IDs from the lens come in a few shapes. Examples seen on the
+// live wire:
+//   "VERIFY_IDENTITY_bbc88c33-44d2-4d33-ab01-7d07c1ad7294" → "VERIFY IDENTITY"
+//   "ACCEPT_INCOMPLETENESS_69c6250f-..."                   → "ACCEPT INCOMPLETENESS"
+//   "[IDENTIFIER]-97ca-4096-bc94-ad7b92d24b6a"             → "[IDENTIFIER]"
+// Anything else falls through to the raw id.
 function taskLabel(taskId: string): string {
-  const m = taskId.match(/^(.+?)_[0-9a-f-]{8,}$/i);
-  return (m ? m[1] : taskId).replace(/_/g, " ");
+  const scrubbed = taskId.match(/^(\[[A-Z_]+\])/);
+  if (scrubbed) return scrubbed[1];
+  const prefix = taskId.match(/^([A-Z][A-Z_]*[A-Z])_[0-9a-f]/i);
+  if (prefix) return prefix[1].replace(/_/g, " ");
+  return taskId;
 }
 
 function ScoreGauge({ label, value, max = 1 }: { label: string; value: number | null | undefined; max?: number }) {
