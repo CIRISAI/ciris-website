@@ -174,97 +174,33 @@ export default function ResearchStatusPage() {
             </a>
           </div>
 
-          <section id="alignment-manifold" className="mb-10 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          <section id="alignment-manifold" className="mb-14 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
               Mathematical foundations
             </p>
             <h2 className="mt-2 text-3xl font-bold text-slate-900 dark:text-white">
-              The Alignment Manifold.
+              Two ideas the rest of the page rests on.
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
-              The Alignment Manifold is the lower-dimensional region of constraint-satisfying reasoning configurations an agent&apos;s traces must lie on or near to be considered coherent under the framework&apos;s principles. As independent constraints accumulate, the volume of trace shapes consistent with deception collapses exponentially around the manifold; the volume consistent with truth does not. It is the geometric object the <a href="/coherence-ratchet" className="text-brand-primary hover:underline">Coherence Ratchet</a> tightens around.
+              The <strong>Alignment Manifold</strong> is the region of
+              reasoning shapes consistent with the framework&apos;s principles.
+              As independent constraints accumulate, the room for deception
+              collapses around the manifold while the room for truth
+              doesn&apos;t. The <strong>Coherence Singularity</strong> is the
+              edge of that room — the point where constraints become so
+              correlated that adding more stops helping. Between
+              &quot;chaos&quot; (constraints contradict each other) and
+              &quot;rigidity&quot; (constraints all echo each other) is the
+              healthy corridor. The current production corpus sits inside it.
             </p>
-            <ul className="mt-6 grid gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300 md:grid-cols-2">
-              <li>
-                <strong className="text-slate-900 dark:text-white">Grounding density</strong> — δ = 11 (intrinsic rank from corpus).
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Rationale codimension</strong> — C(k_eff) = k_eff + δ.
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Stability condition</strong> — k_eff ≥ 9.2 for operational autonomy.
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Volume decay</strong> — V(k) = V₀ · exp(−λ · k_eff).
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Required constraints</strong> — k_req = −ln(ε / V₀) / λ for safety target ε.
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Hitting probability</strong> — p ≈ 2.5 · r / √D for a constraint on a manifold ball of radius r.
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Defense function</strong> — J = k_eff · (1 − ρ̄) · λ · σ. Correlated constraints reduce effective resistance.
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Critical rigidity</strong> — ρ_crit ≈ 0.43. Above this correlation, k_eff collapses toward 1.
-              </li>
-            </ul>
-            <p className="mt-6 text-sm text-slate-500 dark:text-slate-400">
-              Formalized in Lean 4 against Mathlib in{" "}
-              <a href="https://github.com/CIRISAI/RATCHET/tree/main/ratchet-math" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                CIRISAI/RATCHET
-              </a>
-              . Empirical anchor:{" "}
-              <a href="https://zenodo.org/records/19839280" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                Constrained Reasoning Chains
+            <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+              Full mathematical treatment with formulas, Lean formalization
+              references, and the L-01 information-theoretic ceiling lives on
+              the{" "}
+              <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
+                Coherence Collapse Analysis
               </a>{" "}
-              validates N_eff ≈ 9.2 across 6,465 production traces.
-            </p>
-          </section>
-
-          <section id="coherence-singularity" className="mb-14 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-              Mathematical foundations
-            </p>
-            <h2 className="mt-2 text-3xl font-bold text-slate-900 dark:text-white">
-              The Coherence Singularity.
-            </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
-              The Coherence Singularity is the curve in coherence phase space at which time-to-truth diverges to infinity. Above it, correlated constraints provide no additional security regardless of scale or time — an echo chamber where k_eff collapses toward 1. The singularity defines the edge of the healthy corridor of sustainable coherence: between the chaos regime (ρ &lt; 0.2) and the rigidity regime (ρ &gt; 0.7), below the singularity curve K_req · ρ = 1.
-            </p>
-            <ul className="mt-6 grid gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300 md:grid-cols-2">
-              <li>
-                <strong className="text-slate-900 dark:text-white">Singularity condition</strong> — K_req · ρ ≥ 1. Above this curve, T_truth → ∞.
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Time to truth</strong> — T_truth = K_req · (1 − ρ) / [α · (1 − K_req · ρ)].
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Effective constraints</strong> — k_eff = k / (1 + ρ · (k − 1)) (Kish design effect).
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Critical rigidity</strong> — ρ_crit = 0.43, k_eff ≈ 2.3 at collapse.
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">Three timelines</strong> — T_truth, T_entropy, T_capture, each with its own singularity structure tied to ρ.
-              </li>
-              <li>
-                <strong className="text-slate-900 dark:text-white">L-01 ceiling</strong> — ~60% of emergent incoherence detectable from marginal distributions; ~40% fundamentally undetectable. The singularity is the deterministic boundary; L-01 is the information-theoretic limit.
-              </li>
-            </ul>
-            <p className="mt-6 text-sm text-slate-500 dark:text-slate-400">
-              Source:{" "}
-              <em>Coherence Collapse Analysis</em>{" "}
-              (
-              <a href="https://zenodo.org/records/18217688" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                Zenodo
-              </a>
-              ) and the Lean formalization in{" "}
-              <a href="https://github.com/CIRISAI/RATCHET/blob/main/ratchet-math/RatchetMath/FundamentalIdentity.lean" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                FundamentalIdentity.lean
-              </a>
-              .
+              page.
             </p>
           </section>
 
