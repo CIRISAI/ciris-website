@@ -11,7 +11,7 @@
 | **Executive** | /vision | /compare → /coherence-ratchet → /trust → /mdd | Understand the value proposition |
 | **End User** | / (homepage) | /first-contact → /install | Install the app |
 | **Researcher** | /coherence-ratchet | /coherence-collapse-analysis → /research-status → /ciris-scoring → /federation (3.X plan) → /sections/main | Evaluate the thesis |
-| **Compliance Officer** | /compare | /safety → /trust → /coherence-collapse-analysis → /privacy → /status | Assess for deployment |
+| **Compliance Officer** | /compare | /safety → /safety-vs-censorship → /trust → /coherence-collapse-analysis → /privacy → /status | Assess for deployment |
 
 ---
 
@@ -195,6 +195,8 @@ PoB FSD (GitHub)
 /compare (seven requirements checklist)
     ↓
 /safety (kill switch, deferral cascades)
+    ↓
+/safety-vs-censorship (rules-not-verdicts discipline — the line we don't cross)
     ↓
 /trust (5-level post-quantum attestation: Ed25519 + ML-DSA-65)
     ↓

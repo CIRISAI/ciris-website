@@ -48,6 +48,7 @@ const navigation: Navigation = {
     { name: "Vision", href: "/vision" },
     { name: "Thesis", href: "/coherence-ratchet" },
     { name: "Methodology", href: "/mdd" },
+    { name: "Safety vs Censorship", href: "/safety-vs-censorship" },
     { name: "Principles", href: "/sections/main" },
   ],
   legal: [
