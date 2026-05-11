@@ -1,157 +1,105 @@
 /**
- * CIRIS Trace Repository API Client
- * Fetches public sample traces from CIRISLens
+ * CIRIS Trace Repository API Client (CIRISPersist v0.5.0)
+ *
+ * Talks to the lens-side pass-through of CIRISPersist's typed read
+ * primitives:
+ *   GET /api/v1/accord/repository/traces           -> TraceListPage
+ *   GET /api/v1/accord/repository/traces/{id}      -> TraceDetail
+ *
+ * The list endpoint returns a flat array of trace summaries plus an
+ * opaque cursor. Task grouping for the sidebar is derived client-side
+ * (one bucket per task_id, sorted by thought_depth).
  */
 
 const API_BASE = "https://lens.ciris-services-1.ai/api/v1/accord/repository";
 
-// Raw API trace structure (nested within tasks)
-interface ApiTraceRaw {
-  trace_id: string;
-  timestamp?: string;
-  agent: {
-    name: string;
-    id_hash?: string;
-    domain: string;
-  };
-  thought?: {
-    thought_id: string;
-    type: string;
-    depth: number;
-    cognitive_state: string;
-  };
-  action: {
-    selected: string;
-    success: boolean;
-    was_overridden?: boolean;
-    rationale?: string;
-  };
-  scores: {
-    csdma_plausibility: number | null;
-    dsdma_alignment: number | null;
-    idma_k_eff: number | null;
-    idma_fragility: boolean | null;
-    idma_phase: string | null;
-  };
-  conscience: {
-    passed: boolean;
-    entropy_passed: boolean | null;
-    coherence_passed: boolean | null;
-    optimization_veto_passed: boolean | null;
-    epistemic_humility_passed: boolean | null;
-  };
-  dma_results?: string | Record<string, unknown>;
-}
+// ─────────────────────────── Wire types (v0.5.0) ──────────────────────────
 
-// Task grouping structure from API
-interface ApiTaskRaw {
+export interface TraceSummary {
+  trace_id: string;
+  thought_id: string;
   task_id: string;
-  initial_observation: string;
-  traces: ApiTraceRaw[];
-}
-
-// Flattened trace structure for UI consumption
-export interface ApiTraceListItem {
-  trace_id: string;
-  timestamp: string;
+  agent_id_hash: string;
   agent_name: string;
+  agent_role: string | null;
+  deployment_domain: string | null;
+  deployment_type: string | null;
+  started_at: string;
+  completed_at: string | null;
+  trace_level: string;
+  schema_version: string;
+  signature_verified: boolean;
   cognitive_state: string;
   thought_type: string;
   thought_depth: number;
-  selected_action: string;
-  action_success: boolean;
-  conscience_passed: boolean;
-  csdma_plausibility_score: number | null | undefined;
-  dsdma_domain_alignment: number | null | undefined;
-  dsdma_domain: string;
-  idma_k_eff: number | null | undefined;
-  idma_fragility_flag: boolean | null | undefined;
-  idma_phase: string | null | undefined;
+  csdma_plausibility_score: number | null;
+  dsdma_domain_alignment: number | null;
+  dsdma_domain: string | null;
+  idma_k_eff: number | null;
+  idma_correlation_risk: number | null;
+  idma_fragility_flag: boolean | null;
+  idma_phase: string | null;
+  conscience_passed: boolean | null;
+  action_was_overridden: boolean;
+  entropy_passed: boolean | null;
+  coherence_passed: boolean | null;
+  optimization_veto_passed: boolean | null;
+  epistemic_humility_passed: boolean | null;
+  selected_action: string | null;
+  action_success: boolean | null;
+  llm_calls: number;
+  tokens_total: number;
+  cost_usd: number;
 }
 
-// Task with grouped traces for UI consumption
+interface TraceListPage {
+  items: TraceSummary[];
+  next_cursor: string | null;
+}
+
+interface TraceComponentRow {
+  step_point: number | null;
+  event_type: string;
+  attempt_index: number;
+  ts: string;
+  payload: Record<string, unknown> | null;
+}
+
+interface TraceLlmCallRow {
+  [key: string]: unknown;
+}
+
+interface TraceEnvelopeRefs {
+  signature?: string;
+  signature_key_id?: string;
+  original_content_hash?: string;
+  scrub_signature?: string;
+  scrub_key_id?: string;
+  scrub_timestamp?: string;
+  pii_scrubbed?: boolean;
+}
+
+export interface TraceDetail {
+  summary: TraceSummary;
+  components: TraceComponentRow[];
+  llm_calls: TraceLlmCallRow[];
+  envelope: TraceEnvelopeRefs;
+}
+
+// ────────────────────────── UI-side view models ────────────────────────────
+
+// Backward-compatible alias used by existing UI components.
+export type ApiTraceListItem = TraceSummary;
+
+// Task bucket grouping derived client-side from the flat list.
 export interface ApiTaskListItem {
   task_id: string;
   initial_observation: string;
   traces: ApiTraceListItem[];
 }
 
-export interface ApiTraceDetail {
-  id: number;
-  trace_id: string;
-  thought_id: string;
-  task_id: string;
-  agent_id_hash: string;
-  agent_name: string;
-  started_at: string;
-  completed_at: string;
-  signature: string;
-  signature_key_id: string;
-  signature_verified: boolean;
-  cognitive_state: string;
-  thought_type: string;
-  thought_depth: number;
-  selected_action: string;
-  action_success: boolean;
-  action_rationale: string;
-  conscience_passed: boolean;
-  action_was_overridden: boolean;
-
-  // Scores
-  csdma_plausibility_score: number;
-  dsdma_domain_alignment: number;
-  dsdma_domain: string;
-  pdma_stakeholders: string;
-  pdma_conflicts: string;
-  idma_k_eff: number | null;
-  idma_correlation_risk: number | null;
-  idma_fragility_flag: boolean | null;
-  idma_phase: string | null;
-
-  // Conscience details
-  entropy_level: number | null;
-  coherence_level: number | null;
-  uncertainty_acknowledged: boolean | null;
-  reasoning_transparency: number | null;
-  entropy_passed: boolean | null;
-  coherence_passed: boolean | null;
-  optimization_veto_passed: boolean | null;
-  epistemic_humility_passed: boolean | null;
-
-  // Audit
-  audit_sequence_number: number;
-  audit_entry_hash: string;
-  audit_signature: string;
-
-  // Resources
-  tokens_input: number;
-  tokens_output: number;
-  tokens_total: number;
-  cost_cents: number;
-  carbon_grams: number;
-  llm_calls: number;
-  models_used: string[];
-
-  // JSON-stringified detailed data
-  thought_start: string;
-  snapshot_and_context: string;
-  dma_results: string;
-  aspdma_result: string;
-  conscience_result: string;
-  action_result: string;
-}
-
-interface ApiTraceListResponse {
-  tasks: ApiTaskRaw[];
-  pagination?: {
-    total: number;
-    limit: number;
-    offset: number;
-    has_more: boolean;
-  };
-}
-
-// TraceData format expected by TraceExplorer
+// TraceData is the shape TraceExplorer consumes. Kept stable across
+// API migrations; the transform below populates it from TraceDetail.
 export interface TraceComponent {
   component_type: string;
   event_type: string;
@@ -172,83 +120,75 @@ export interface TraceData {
   signature_key_id?: string;
 }
 
-/**
- * Transform raw API trace to flattened structure
- */
-function flattenTrace(raw: ApiTraceRaw): ApiTraceListItem {
-  return {
-    trace_id: raw.trace_id,
-    timestamp: raw.timestamp ?? new Date().toISOString(),
-    agent_name: raw.agent?.name ?? "Unknown",
-    cognitive_state: raw.thought?.cognitive_state ?? "unknown",
-    thought_type: raw.thought?.type ?? "standard",
-    thought_depth: raw.thought?.depth ?? 0,
-    selected_action: raw.action?.selected ?? "UNKNOWN",
-    action_success: raw.action?.success ?? false,
-    conscience_passed: raw.conscience?.passed ?? false,
-    csdma_plausibility_score: raw.scores?.csdma_plausibility,
-    dsdma_domain_alignment: raw.scores?.dsdma_alignment,
-    dsdma_domain: raw.agent?.domain ?? "unknown",
-    idma_k_eff: raw.scores?.idma_k_eff,
-    idma_fragility_flag: raw.scores?.idma_fragility,
-    idma_phase: raw.scores?.idma_phase,
-  };
-}
+// New v0.5.0 event_type → legacy component_type for color/icon lookup.
+const EVENT_TYPE_TO_COMPONENT_TYPE: Record<string, string> = {
+  THOUGHT_START: "observation",
+  SNAPSHOT_AND_CONTEXT: "context",
+  DMA_RESULTS: "rationale",
+  IDMA_RESULT: "rationale",
+  ASPDMA_RESULT: "rationale",
+  CONSCIENCE_RESULT: "conscience",
+  ACTION_RESULT: "action",
+};
 
-/**
- * Transform raw API task to UI task with flattened traces
- * Sorts traces by thought_depth (ascending) so SPEAK comes before TASK_COMPLETE
- */
-function flattenTask(raw: ApiTaskRaw): ApiTaskListItem {
-  const traces = raw.traces.map(flattenTrace);
-  // Sort by thought_depth ascending (depth 0 = SPEAK, depth 1 = TASK_COMPLETE)
-  traces.sort((a, b) => a.thought_depth - b.thought_depth);
-  return {
-    task_id: raw.task_id,
-    initial_observation: raw.initial_observation,
-    traces,
-  };
-}
+// ────────────────────────────── Fetchers ──────────────────────────────────
 
-/**
- * Fetch public sample tasks (grouped traces)
- */
-export async function fetchPublicTasks(): Promise<ApiTaskListItem[]> {
-  const response = await fetch(`${API_BASE}/traces?public_sample=true&limit=100`);
+async function fetchTracePage(
+  cursor?: string,
+  limit = 100,
+): Promise<TraceListPage> {
+  const params = new URLSearchParams();
+  params.set("limit", String(limit));
+  if (cursor) params.set("cursor", cursor);
+  const response = await fetch(`${API_BASE}/traces?${params.toString()}`);
   if (!response.ok) {
     throw new Error(`Failed to fetch traces: ${response.status}`);
   }
-  const data: ApiTraceListResponse = await response.json();
-  // Handle both old (traces array) and new (tasks array) API formats
-  if (data.tasks && Array.isArray(data.tasks)) {
-    return data.tasks.map(flattenTask);
-  }
-  // Fallback: if API returns old format, wrap traces in a single task
-  const oldData = data as unknown as { traces?: ApiTraceRaw[] };
-  if (oldData.traces && Array.isArray(oldData.traces)) {
-    return [{
-      task_id: "legacy",
-      initial_observation: "Public sample traces",
-      traces: oldData.traces.map(flattenTrace),
-    }];
-  }
-  return [];
+  return response.json();
 }
 
 /**
- * Fetch list of public sample traces (flat list for backward compatibility)
+ * Fetch a single page of public traces and group them by task_id for
+ * the sidebar buckets. Traces within each bucket are sorted by depth.
+ */
+export async function fetchPublicTasks(): Promise<ApiTaskListItem[]> {
+  const page = await fetchTracePage();
+  const byTaskId = new Map<string, ApiTaskListItem>();
+  for (const item of page.items) {
+    const taskId = item.task_id ?? `standalone-${item.trace_id}`;
+    if (!byTaskId.has(taskId)) {
+      byTaskId.set(taskId, {
+        task_id: taskId,
+        // Server-side initial-observation derivation lands in v0.5.1
+        // (§C task-grouped listings). Until then, the task_id is the
+        // only readable label available without fetching every detail.
+        initial_observation: taskId,
+        traces: [],
+      });
+    }
+    byTaskId.get(taskId)!.traces.push(item);
+  }
+  for (const task of byTaskId.values()) {
+    task.traces.sort((a, b) => a.thought_depth - b.thought_depth);
+  }
+  return Array.from(byTaskId.values());
+}
+
+/**
+ * Flat list of trace summaries (no task grouping).
  */
 export async function fetchPublicTraces(): Promise<ApiTraceListItem[]> {
-  const tasks = await fetchPublicTasks();
-  // Flatten all tasks into a single trace list
-  return tasks.flatMap(task => task.traces);
+  const page = await fetchTracePage();
+  return page.items;
 }
 
 /**
- * Fetch a single trace with full details
+ * Fetch a single trace with full component decomposition.
  */
-export async function fetchTraceDetail(traceId: string): Promise<ApiTraceDetail> {
-  const response = await fetch(`${API_BASE}/traces/${encodeURIComponent(traceId)}`);
+export async function fetchTraceDetail(traceId: string): Promise<TraceDetail> {
+  const response = await fetch(
+    `${API_BASE}/traces/${encodeURIComponent(traceId)}`,
+  );
   if (!response.ok) {
     throw new Error(`Failed to fetch trace: ${response.status}`);
   }
@@ -256,163 +196,29 @@ export async function fetchTraceDetail(traceId: string): Promise<ApiTraceDetail>
 }
 
 /**
- * Safely parse JSON string, returning null on failure
+ * Convert TraceDetail to the TraceData shape TraceExplorer consumes.
+ * The new API returns typed component rows directly — no JSON-string
+ * unwrap dance — so this is near-identity: map event_type to a legacy
+ * component_type for color/icon styling and forward the payload.
  */
-function safeJsonParse(str: string | null | undefined): Record<string, unknown> | null {
-  if (!str) return null;
-  try {
-    return JSON.parse(str);
-  } catch {
-    return null;
-  }
-}
-
-/**
- * Transform API trace detail to TraceData format for TraceExplorer
- */
-export function transformToTraceData(api: ApiTraceDetail): TraceData {
-  const components: TraceComponent[] = [];
-
-  // 1. Observation component from thought_start
-  const thoughtStart = safeJsonParse(api.thought_start);
-  components.push({
-    component_type: "observation",
-    event_type: "THOUGHT_START",
-    timestamp: api.started_at,
-    data: {
-      thought_type: api.thought_type,
-      thought_status: "processing",
-      round_number: 0,
-      thought_depth: api.thought_depth,
-      cognitive_state: api.cognitive_state,
-      ...(thoughtStart || {}),
-    },
-  });
-
-  // 2. Context component from snapshot_and_context
-  const contextData = safeJsonParse(api.snapshot_and_context);
-  components.push({
-    component_type: "context",
-    event_type: "SNAPSHOT_AND_CONTEXT",
-    timestamp: api.started_at,
-    data: {
-      system_snapshot: contextData?.system_snapshot || contextData || {},
-      gathered_context: contextData?.gathered_context || null,
-      cognitive_state: api.cognitive_state,
-    },
-  });
-
-  // 3. Rationale component (DMA results)
-  const dmaResults = safeJsonParse(api.dma_results);
-  const aspdmaResult = safeJsonParse(api.aspdma_result);
-
-  // Add DMA results component
-  components.push({
-    component_type: "rationale",
-    event_type: "DMA_RESULTS",
-    timestamp: api.completed_at,
-    data: {
-      csdma: dmaResults?.csdma || {
-        plausibility_score: api.csdma_plausibility_score,
-        flags: [],
-        reasoning: "Score from API summary",
-      },
-      dsdma: dmaResults?.dsdma || {
-        domain: api.dsdma_domain,
-        domain_alignment: api.dsdma_domain_alignment,
-        flags: [],
-        reasoning: "Score from API summary",
-      },
-      pdma: dmaResults?.pdma || {
-        stakeholders: api.pdma_stakeholders,
-        conflicts: api.pdma_conflicts,
-        reasoning: "From API summary",
-      },
-      idma: dmaResults?.idma || (api.idma_k_eff !== null ? {
-        k_eff: api.idma_k_eff,
-        correlation_risk: api.idma_correlation_risk,
-        fragility_flag: api.idma_fragility_flag,
-        phase: api.idma_phase,
-        reasoning: "From API summary",
-      } : null),
-      combined_analysis: null,
-    },
-  });
-
-  // Add ASPDMA result component
-  if (aspdmaResult) {
-    components.push({
-      component_type: "rationale",
-      event_type: "ASPDMA_RESULT",
-      timestamp: api.completed_at,
-      data: {
-        selected_action: `HandlerActionType.${api.selected_action}`,
-        action_rationale: api.action_rationale || aspdmaResult.rationale,
-        ...aspdmaResult,
-      },
-    });
-  }
-
-  // 4. Conscience component
-  const conscienceResult = safeJsonParse(api.conscience_result);
-  components.push({
-    component_type: "conscience",
-    event_type: "CONSCIENCE_RESULT",
-    timestamp: api.completed_at,
-    data: {
-      conscience_passed: api.conscience_passed,
-      action_was_overridden: api.action_was_overridden,
-      final_action: `HandlerActionType.${api.selected_action}`,
-      conscience_override_reason: null,
-      epistemic_data: {
-        entropy_level: api.entropy_level,
-        coherence_level: api.coherence_level,
-        uncertainty_acknowledged: api.uncertainty_acknowledged,
-        reasoning_transparency: api.reasoning_transparency,
-      },
-      entropy_passed: api.entropy_passed,
-      coherence_passed: api.coherence_passed,
-      optimization_veto_passed: api.optimization_veto_passed,
-      epistemic_humility_passed: api.epistemic_humility_passed,
-      ...(conscienceResult || {}),
-    },
-  });
-
-  // 5. Action component
-  const actionResult = safeJsonParse(api.action_result);
-  components.push({
-    component_type: "action",
-    event_type: "ACTION_RESULT",
-    timestamp: api.completed_at,
-    data: {
-      action_executed: api.selected_action.toLowerCase(),
-      action_parameters: actionResult?.action_parameters || {},
-      execution_success: api.action_success,
-      execution_error: null,
-      audit_sequence_number: api.audit_sequence_number,
-      audit_entry_hash: api.audit_entry_hash,
-      audit_signature: api.audit_signature,
-      tokens_input: api.tokens_input,
-      tokens_output: api.tokens_output,
-      tokens_total: api.tokens_total,
-      cost_cents: api.cost_cents,
-      carbon_grams: api.carbon_grams,
-      llm_calls: api.llm_calls,
-      models_used: api.models_used,
-      ...(actionResult || {}),
-    },
-  });
-
+export function transformToTraceData(detail: TraceDetail): TraceData {
+  const { summary, components, envelope } = detail;
+  const mappedComponents: TraceComponent[] = components.map((c) => ({
+    component_type: EVENT_TYPE_TO_COMPONENT_TYPE[c.event_type] ?? "rationale",
+    event_type: c.event_type,
+    timestamp: c.ts,
+    data: c.payload ?? {},
+  }));
   return {
-    trace_id: api.trace_id,
-    thought_id: api.thought_id,
-    task_id: api.task_id,
-    agent_id_hash: api.agent_id_hash,
-    agent_name: api.agent_name,
-    started_at: api.started_at,
-    completed_at: api.completed_at,
-    components,
-    signature: api.signature,
-    signature_key_id: api.signature_key_id,
+    trace_id: summary.trace_id,
+    thought_id: summary.thought_id,
+    task_id: summary.task_id,
+    agent_id_hash: summary.agent_id_hash,
+    agent_name: summary.agent_name,
+    started_at: summary.started_at,
+    completed_at: summary.completed_at ?? summary.started_at,
+    components: mappedComponents,
+    signature: envelope?.signature,
+    signature_key_id: envelope?.signature_key_id,
   };
 }

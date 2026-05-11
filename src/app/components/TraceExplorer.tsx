@@ -2270,6 +2270,10 @@ function ComponentCard({ component, defaultOpen = false }: { component: TraceCom
             <div className="mt-4">
               <DMARationaleDetail data={component.data} />
             </div>
+          ) : component.event_type === "IDMA_RESULT" ? (
+            <div className="mt-4">
+              <DMARationaleDetail data={{ idma: component.data }} />
+            </div>
           ) : component.event_type === "ASPDMA_RESULT" ? (
             <div className="mt-4">
               <ASPDMARationaleDetail data={component.data} />

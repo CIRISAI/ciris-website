@@ -13,17 +13,30 @@ import {
   TraceData,
 } from "@/lib/traceApi";
 
-// Action type colors for badges
+// Action type colors for badges. Keys match the v0.5.0 API which sends
+// selected_action as lowercase (`speak`, `task_complete`, …).
 const ACTION_COLORS: Record<string, string> = {
-  SPEAK: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
-  OBSERVE: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
-  TOOL: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
-  MEMORIZE: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
-  DEFER: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
-  REJECT: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
-  TASK_COMPLETE: "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300",
-  PONDER: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+  speak: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  observe: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
+  tool: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300",
+  memorize: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
+  defer: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+  reject: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
+  task_complete: "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300",
+  ponder: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
 };
+
+const ACTION_DEFAULT = ACTION_COLORS.speak;
+
+function actionLabel(action: string | null | undefined): string {
+  if (!action) return "—";
+  return action.toUpperCase();
+}
+
+function actionColorClass(action: string | null | undefined): string {
+  if (!action) return ACTION_DEFAULT;
+  return ACTION_COLORS[action.toLowerCase()] ?? ACTION_DEFAULT;
+}
 
 // Phase colors for IDMA
 const PHASE_COLORS: Record<string, string> = {
@@ -40,6 +53,14 @@ function formatTimestamp(ts: string): string {
     hour: "2-digit",
     minute: "2-digit",
   });
+}
+
+// Task IDs from the lens look like "VERIFY_IDENTITY_bbc88c33-44d2-..."
+// Strip the trailing UUID suffix and replace underscores so the sidebar
+// shows a readable label.
+function taskLabel(taskId: string): string {
+  const m = taskId.match(/^(.+?)_[0-9a-f-]{8,}$/i);
+  return (m ? m[1] : taskId).replace(/_/g, " ");
 }
 
 function ScoreGauge({ label, value, max = 1 }: { label: string; value: number | null | undefined; max?: number }) {
@@ -77,7 +98,7 @@ function TraceCard({
   isSelected: boolean;
   onClick: () => void;
 }) {
-  const actionColor = ACTION_COLORS[trace.selected_action] || ACTION_COLORS.SPEAK;
+  const actionColor = actionColorClass(trace.selected_action);
   const phaseColor = trace.idma_phase ? PHASE_COLORS[trace.idma_phase.toUpperCase()] || PHASE_COLORS.HEALTHY : null;
 
   return (
@@ -93,26 +114,32 @@ function TraceCard({
         <div className="flex items-center gap-2">
           <span className="font-semibold text-gray-900 dark:text-white">{trace.agent_name}</span>
           <span className={`text-xs px-2 py-0.5 rounded-full ${actionColor}`}>
-            {trace.selected_action}
+            {actionLabel(trace.selected_action)}
           </span>
         </div>
-        {trace.conscience_passed ? (
+        {trace.conscience_passed === true ? (
           <span className="text-green-500 text-sm" title="Conscience passed">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
           </span>
-        ) : (
+        ) : trace.conscience_passed === false ? (
           <span className="text-red-500 text-sm" title="Conscience override">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+          </span>
+        ) : (
+          <span className="text-gray-400 text-sm" title="Conscience not evaluated for this trace">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
             </svg>
           </span>
         )}
       </div>
 
       <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
-        {formatTimestamp(trace.timestamp)} &bull; {trace.cognitive_state} &bull; depth {trace.thought_depth}
+        {formatTimestamp(trace.started_at)} &bull; {trace.cognitive_state} &bull; depth {trace.thought_depth}
       </p>
 
       <div className="space-y-1">
@@ -300,7 +327,7 @@ export default function ExploreTracePage() {
                               </svg>
                             </div>
                             <p className="text-sm font-medium text-gray-900 dark:text-white leading-snug">
-                              {task.initial_observation}
+                              {taskLabel(task.task_id)}
                             </p>
                           </div>
                         </div>
@@ -313,8 +340,8 @@ export default function ExploreTracePage() {
                                 <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
                                   {task.traces[0].agent_name}
                                 </span>
-                                <span className={`text-xs px-2 py-0.5 rounded-full ${ACTION_COLORS[task.traces[0].selected_action] || ACTION_COLORS.SPEAK}`}>
-                                  {task.traces[0].selected_action}
+                                <span className={`text-xs px-2 py-0.5 rounded-full ${actionColorClass(task.traces[0].selected_action)}`}>
+                                  {actionLabel(task.traces[0].selected_action)}
                                 </span>
                                 {task.traces.length > 1 && (
                                   <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -325,9 +352,9 @@ export default function ExploreTracePage() {
                             )}
                           </div>
                           <span className={`w-2 h-2 rounded-full ${
-                            task.traces?.every(t => t.conscience_passed)
-                              ? "bg-green-500"
-                              : "bg-red-500"
+                            task.traces?.some(t => t.conscience_passed === false)
+                              ? "bg-red-500"
+                              : "bg-green-500"
                           }`} />
                         </div>
                       </button>
@@ -368,10 +395,13 @@ export default function ExploreTracePage() {
                         </div>
                         <div>
                           <p className="text-xs font-semibold text-brand-primary uppercase tracking-wide mb-1">
-                            Initial Observation
+                            Task
                           </p>
                           <p className="text-gray-900 dark:text-white font-medium leading-relaxed">
-                            {selectedTask.initial_observation}
+                            {taskLabel(selectedTask.task_id)}
+                          </p>
+                          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 font-mono break-all">
+                            {selectedTask.task_id}
                           </p>
                         </div>
                       </div>
@@ -387,7 +417,7 @@ export default function ExploreTracePage() {
                           </div>
                           <div>
                             <h2 className="text-lg font-bold text-gray-900 dark:text-white">
-                              {traceData.agent_name || "Agent"} &mdash; {selectedTask.traces?.[index]?.selected_action || "Action"}
+                              {traceData.agent_name || "Agent"} &mdash; {actionLabel(selectedTask.traces?.[index]?.selected_action) || "Action"}
                             </h2>
                             <p className="text-xs text-gray-500 dark:text-gray-400">
                               Depth {selectedTask.traces?.[index]?.thought_depth || 0} &bull; {traceData.trace_id.slice(0, 40)}...
