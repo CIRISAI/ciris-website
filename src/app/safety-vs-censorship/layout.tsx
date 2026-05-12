@@ -2,24 +2,24 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Safety Infrastructure vs Censorship Infrastructure | How CIRIS Stays on the Right Side",
+    "Where Crowdsourced Safety Can Drift | Naming a Risk in Our Own Design",
   description:
-    "Both crowdsource. Only one is honest about what. CIRIS crowdsources rules (machine-applicable, dated, signed, reversible); verdicts are machined from those rules deterministically. The architectural commitment that keeps a safety platform from sliding into a censorship platform — and where the line can still fail if discipline lapses.",
+    "Naming a risk in our own design. A crowdsourced safety system can drift into something else if we're not careful. CIRIS crowdsources rules (machine-applicable, dated, signed, reversible); verdicts are machined from those rules deterministically. Honest about where the line can still fail if discipline lapses.",
   alternates: { canonical: "/safety-vs-censorship" },
   openGraph: {
     type: "article",
     url: "https://ciris.ai/safety-vs-censorship",
     title:
-      "Safety Infrastructure vs Censorship Infrastructure",
+      "Where crowdsourced safety can drift — and how we're trying not to.",
     description:
-      "Rules are crowdsourced. Verdicts are machined. The line between safety and censorship is operational language discipline plus structural appeal paths.",
+      "A risk we see in our own design. Rules are crowdsourced; verdicts are machined. The discipline we're committing to, and where it can still fail.",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Safety Infrastructure vs Censorship Infrastructure",
+      "Where crowdsourced safety can drift — and how we're trying not to.",
     description:
-      "Rules are crowdsourced. Verdicts are machined. How CIRIS stays on the right side of the line.",
+      "Naming a risk in our own design. Rules crowdsourced, verdicts machined, appeals through Reconsideration.",
   },
 };
 
