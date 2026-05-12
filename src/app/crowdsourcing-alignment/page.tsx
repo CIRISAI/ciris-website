@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
@@ -9,11 +9,9 @@ import { FloatingNav } from "@/app/components/ui/floating/nav";
 
 const REPO = "https://github.com/CIRISAI/CIRISAgent";
 const BLOB = `${REPO}/blob/main`;
+const RAW = "https://raw.githubusercontent.com/CIRISAI/CIRISAgent/main";
 const ISSUES_NEW = `${REPO}/issues/new`;
 
-// 14 languages currently have a mental-health safety battery shipped.
-// The mapping below uses the directory name (English language word) and the
-// rubric filename stem; everything else can be derived from the ISO code.
 type Language = {
   code: string;
   name: string;
@@ -53,7 +51,11 @@ const LANGUAGES: Language[] = [
   { code: "zh", name: "Chinese (Simplified)", native: "中文", battery: null },
 ];
 
-// ─────────────────────────── URL helpers ──────────────────────────────────
+// ─────────────────────────── Path helpers ─────────────────────────────────
+
+function stringsPath(code: string) {
+  return `ciris_engine/data/localized/${code}.json`;
+}
 
 function accordPath(code: string) {
   return `ciris_engine/data/localized/accord_1.2b_${code}.txt`;
@@ -78,6 +80,27 @@ function batteryRubricPath(lang: Language) {
 function batteryCriteriaPath(lang: Language) {
   if (!lang.battery) return null;
   return `tests/safety/${lang.battery.dir}/v4_${lang.battery.stem}_canonical_universal_criteria.json`;
+}
+
+function glossaryPath(code: string) {
+  return `docs/localization/glossaries/${code}_glossary.md`;
+}
+
+// 4 first-pass DMAs + 3 verb-specific second-pass action selectors.
+// See CIRISAgent/MISSION.md §4.3 for the canonical names + roles, and
+// FSD/DMA_BOUNCE.md / FSD/CONSCIENCE_V3.md for the bounce/recursive paths.
+const DMA_PROMPTS = [
+  { file: "pdma_ethical.yml", label: "PDMA — Principled DMA", note: "First-pass ethical evaluation. Accord-anchored stakeholder analysis + conflict detection." },
+  { file: "csdma_common_sense.yml", label: "CSDMA — Common-Sense DMA", note: "First-pass reality/plausibility check. Red-flag enumeration." },
+  { file: "dsdma_base.yml", label: "DSDMA — Domain-Specific DMA", note: "First-pass domain alignment per the agent template (Discord moderator, scout, etc.)." },
+  { file: "idma.yml", label: "IDMA — Identity DMA", note: "The check on the checkers. Evaluates the other DMAs' reasoning for fragility (k_eff, fragility flag); rooted in Coherence Collapse Analysis." },
+  { file: "action_selection_pdma.yml", label: "ASPDMA — Action Selection PDMA", note: "Picks the action verb (SPEAK / OBSERVE / TOOL / REJECT / PONDER / DEFER / MEMORIZE / RECALL / FORGET / TASK_COMPLETE) given the DMA outputs above." },
+  { file: "tsaspdma.yml", label: "TSASPDMA — Tool-Specific Action Selection", note: "Verb-specific second pass when the candidate action is TOOL. Picks the tool + parameters." },
+  { file: "dsaspdma.yml", label: "DSASPDMA — Defer-Specific Action Selection", note: "Verb-specific second pass when the candidate action is DEFER. Frames the deferral for the Wise Authority." },
+];
+
+function dmaPromptPath(code: string, file: string) {
+  return `ciris_engine/logic/dma/prompts/localized/${code}/${file}`;
 }
 
 function issueUrl(code: string, resourceName: string, filePath: string | null) {
@@ -107,26 +130,148 @@ function issueUrl(code: string, resourceName: string, filePath: string | null) {
   return `${ISSUES_NEW}?${params.toString()}`;
 }
 
-// ─────────────────────────── Component ────────────────────────────────────
+// ─────────────────────────── Content rendering ────────────────────────────
+
+type RenderKind = "json" | "text" | "markdown";
+
+function renderJsonTree(value: unknown, depth = 0): React.ReactElement {
+  if (value === null) return <span className="text-slate-400">null</span>;
+  if (typeof value === "boolean") return <span className="text-purple-700 dark:text-purple-300">{String(value)}</span>;
+  if (typeof value === "number") return <span className="text-blue-700 dark:text-blue-300">{value}</span>;
+  if (typeof value === "string") {
+    // Preserve newlines inside multi-line strings (DMA prompts often have these).
+    return (
+      <span className="whitespace-pre-wrap text-emerald-700 dark:text-emerald-300">
+        {JSON.stringify(value)}
+      </span>
+    );
+  }
+  if (Array.isArray(value)) {
+    if (value.length === 0) return <span className="text-slate-400">[]</span>;
+    return (
+      <ul className="ml-4 list-none border-l border-slate-200 dark:border-gray-700 pl-3 space-y-1">
+        {value.map((v, i) => (
+          <li key={i}>
+            <span className="text-slate-400 mr-1">{i}:</span>
+            {renderJsonTree(v, depth + 1)}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+  if (typeof value === "object") {
+    const entries = Object.entries(value as Record<string, unknown>);
+    if (entries.length === 0) return <span className="text-slate-400">{"{}"}</span>;
+    // Top-level: render each key as a collapsible details element.
+    if (depth === 0) {
+      return (
+        <div className="space-y-2">
+          {entries.map(([k, v]) => (
+            <details key={k} className="rounded-md border border-slate-200 bg-slate-50 dark:border-gray-700 dark:bg-gray-900/40">
+              <summary className="cursor-pointer px-3 py-2 text-sm font-semibold text-slate-900 dark:text-white">
+                {k}
+              </summary>
+              <div className="px-3 pb-3 text-sm">
+                {renderJsonTree(v, depth + 1)}
+              </div>
+            </details>
+          ))}
+        </div>
+      );
+    }
+    return (
+      <ul className="ml-4 list-none border-l border-slate-200 dark:border-gray-700 pl-3 space-y-1">
+        {entries.map(([k, v]) => (
+          <li key={k}>
+            <span className="font-semibold text-slate-700 dark:text-slate-300">{k}:</span>{" "}
+            {renderJsonTree(v, depth + 1)}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+  return <span>{String(value)}</span>;
+}
+
+function ContentBody({ kind, text }: { kind: RenderKind; text: string }) {
+  if (kind === "json") {
+    try {
+      const parsed = JSON.parse(text);
+      return (
+        <div className="text-xs font-mono">{renderJsonTree(parsed)}</div>
+      );
+    } catch {
+      return (
+        <pre className="overflow-x-auto rounded-md bg-slate-50 p-3 text-xs text-slate-900 dark:bg-gray-900/40 dark:text-slate-100 whitespace-pre-wrap break-words max-h-[60vh]">
+          {text}
+        </pre>
+      );
+    }
+  }
+  // markdown + text both render as pre-wrap with monospaced font; markdown renders
+  // pleasantly enough as plain text for this surface, and rubric.md is intentionally
+  // readable that way.
+  return (
+    <pre className="overflow-auto rounded-md bg-slate-50 p-3 text-xs text-slate-900 dark:bg-gray-900/40 dark:text-slate-100 whitespace-pre-wrap break-words max-h-[60vh]">
+      {text}
+    </pre>
+  );
+}
+
+// ─────────────────────────── ResourceRow ──────────────────────────────────
 
 function ResourceRow({
   label,
   filePath,
   lang,
   resourceName,
-  status,
+  kind,
+  available,
 }: {
   label: string;
   filePath: string | null;
   lang: Language;
   resourceName: string;
-  status: "available" | "not_yet";
+  kind: RenderKind;
+  available: boolean;
 }) {
-  const available = status === "available" && filePath !== null;
+  const [open, setOpen] = useState(false);
+  const [content, setContent] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // When language changes the filePath changes; reset the inline state.
+  useEffect(() => {
+    setOpen(false);
+    setContent(null);
+    setError(null);
+  }, [filePath]);
+
+  async function handleToggle() {
+    if (open) {
+      setOpen(false);
+      return;
+    }
+    setOpen(true);
+    if (!available || !filePath || content) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const resp = await fetch(`${RAW}/${filePath}`);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const text = await resp.text();
+      setContent(text);
+    } catch (e) {
+      setError(String(e));
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900">
-      <div className="mb-2 flex items-start justify-between gap-3">
-        <div>
+      <div className="mb-2 flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0 flex-1">
           <h3 className="text-sm font-semibold text-slate-900 dark:text-white">{label}</h3>
           {filePath && (
             <p className="mt-1 text-xs font-mono text-slate-500 dark:text-slate-400 break-all">
@@ -147,16 +292,22 @@ function ResourceRow({
       <div className="mt-3 flex flex-wrap gap-2 text-xs">
         {available && filePath && (
           <>
+            <button
+              onClick={handleToggle}
+              className="rounded-md border-2 border-brand-primary bg-brand-primary/5 px-2.5 py-1 font-semibold text-brand-primary hover:bg-brand-primary/10"
+            >
+              {open ? "Hide content" : "View inline"}
+            </button>
             <a
               href={`${BLOB}/${filePath}`}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
             >
-              View on GitHub →
+              GitHub →
             </a>
             <a
-              href={`https://raw.githubusercontent.com/CIRISAI/CIRISAgent/main/${filePath}`}
+              href={`${RAW}/${filePath}`}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
@@ -169,14 +320,31 @@ function ResourceRow({
           href={issueUrl(lang.code, resourceName, filePath)}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-md border-2 border-brand-primary px-2.5 py-1 font-semibold text-brand-primary hover:bg-brand-primary/10"
+          className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
         >
           {available ? "Propose edit (GitHub issue)" : `Request artifact for ${lang.code}`}
         </a>
       </div>
+      {open && available && filePath && (
+        <div className="mt-4">
+          {loading && (
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              Loading from GitHub…
+            </p>
+          )}
+          {error && (
+            <p className="text-xs text-red-700 dark:text-red-300">
+              Failed to load: {error}. Open the GitHub link directly.
+            </p>
+          )}
+          {content && <ContentBody kind={kind} text={content} />}
+        </div>
+      )}
     </div>
   );
 }
+
+// ─────────────────────────── Page ─────────────────────────────────────────
 
 export default function CrowdsourcingAlignmentPage() {
   const [code, setCode] = useState<string>("am");
@@ -203,16 +371,16 @@ export default function CrowdsourcingAlignmentPage() {
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
               The CIRIS safety-evaluation loop is being built in public.
-              Below: pick a language, browse the Accord and Comprehensive
-              Guide in that language, view safety batteries and rubrics
-              where they exist, and propose edits via GitHub issues.
+              Pick a language, browse the localization strings, the
+              Accord, the Comprehensive Guide, and the safety battery
+              and rubric where they exist — directly on this page, with
+              expand-in-place. Propose edits via pre-filled GitHub issues.
               Native-speaker review for soft cases is what this surface
               is being built for &mdash; reviewers are not in the loop
               today.
             </p>
             <p className="mt-4 max-w-3xl text-sm text-slate-500 dark:text-slate-400">
-              Submission happens on GitHub. Every &quot;Propose edit&quot;
-              button opens a pre-filled issue against{" "}
+              Every &quot;View inline&quot; fetches the file from{" "}
               <a
                 href={REPO}
                 target="_blank"
@@ -221,7 +389,8 @@ export default function CrowdsourcingAlignmentPage() {
               >
                 CIRISAI/CIRISAgent
               </a>
-              {" "}with the file path and language code already populated.
+              {" "}on demand. No content is duplicated here; the GitHub
+              repo is the source of truth.
             </p>
           </section>
 
@@ -254,22 +423,149 @@ export default function CrowdsourcingAlignmentPage() {
             </div>
           </section>
 
+          {/* Runtime flow explanation — the "how-it-works v2" for the localization stack */}
+          <section className="mb-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-3">
+              2. How the pieces fit at runtime
+            </p>
+            <p className="text-base leading-7 text-slate-700 dark:text-slate-200 mb-4">
+              Every thought the agent processes walks an 11-step pipeline —
+              the H3ERE pipeline (Hyper³ Ethical Recursive Engine). The DMA
+              prompts on this page are the system prompts that drive that
+              pipeline. Each one is localised per language; the responses the
+              user sees come back in their locale.
+            </p>
+
+            {/* Pipeline diagram */}
+            <div className="rounded-lg bg-slate-50 p-4 dark:bg-gray-900/40 mb-4 overflow-x-auto">
+              <p className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">
+                Per-thought pipeline (canonical 11-step path)
+              </p>
+              <pre className="text-xs leading-6 text-slate-800 dark:text-slate-200 font-mono whitespace-pre">{`START_ROUND
+    ↓
+GATHER_CONTEXT
+    ↓
+PERFORM_DMAS           ← 3 first-pass DMAs run in parallel: PDMA, CSDMA, DSDMA
+    ↓                    (optional DMA bounce if any flag fragility)
+                        IDMA runs the check-on-the-checkers here
+                          (with its own optional bounce)
+    ↓
+PERFORM_ASPDMA         ← Action selector picks the verb (SPEAK / DEFER /
+    ↓                    TOOL / TASK_COMPLETE / ...)
+                        Verb-specific second pass if needed:
+                          TSASPDMA when verb = TOOL
+                          DSASPDMA when verb = DEFER
+    ↓
+CONSCIENCE_EXECUTION   ← 4 consciences gate the action:
+    ↓                    Entropy, Coherence, Optimization Veto,
+                          Epistemic Humility
+                        On failure, the recursive path fires:
+                          RECURSIVE_ASPDMA → RECURSIVE_CONSCIENCE
+                          (the optional conscience bounce)
+    ↓
+FINALIZE_ACTION
+    ↓
+PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
+            </div>
+
+            <p className="text-base leading-7 text-slate-700 dark:text-slate-200 mb-4">
+              Two layers stack across every LLM call. The <strong>polyglot
+              layer</strong> is universal — the Accord and book composites at{" "}
+              <a
+                href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/localized/polyglot/polyglot_accord.txt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-primary hover:underline"
+              >
+                <code>polyglot_accord.txt</code>
+              </a>
+              {" "}triangulate concepts across many traditions&apos; densest
+              encodings, loaded regardless of who&apos;s asking. The{" "}
+              <strong>per-locale layer</strong> is what this page surfaces —
+              the Accord, the Guide, the DMA prompts (4 first-pass + 3
+              verb-specific second-pass), the UI strings, and the glossary,
+              all in the user&apos;s language.
+            </p>
+            <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+              <li><strong>Localization strings</strong> — every user-facing message: error text, agent reply templates, handler follow-up thoughts injected back into the LLM context.</li>
+              <li><strong>Accord (per-locale)</strong> — the framework the agent operates under, in this user&apos;s language. Loaded into every conscience evaluation.</li>
+              <li><strong>Comprehensive Guide</strong> — register, idiom, and contextual guidance for how the agent communicates in this locale. Loaded into every prompt.</li>
+              <li><strong>DMA prompts (7 files)</strong> — the system prompts driving the pipeline above: 4 first-pass (PDMA, CSDMA, DSDMA, IDMA) + the action selector (ASPDMA) + the two verb-specific second-pass variants (TSASPDMA for TOOL, DSASPDMA for DEFER).</li>
+              <li><strong>Glossary</strong> — the translator&apos;s reference for getting the per-locale artifacts right. Not loaded at runtime; consulted when authoring the others.</li>
+            </ul>
+            <p className="mt-4 text-sm leading-6 text-slate-700 dark:text-slate-300">
+              When the agent responds, the reasoning trace is signed and
+              (with consent) flows to{" "}
+              <a
+                href="https://github.com/CIRISAI/CIRISLensCore"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-primary hover:underline"
+              >
+                CIRISLensCore
+              </a>
+              {" "}for cohort-relative scoring. The <strong>safety battery + rubric</strong>{" "}
+              for this locale are what the trace gets checked against — hard
+              fails block release; soft cases queue for review.
+            </p>
+            <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
+              Canonical references:{" "}
+              <a href="https://github.com/CIRISAI/CIRISAgent/blob/main/MISSION.md#42-the-h3ere-pipeline-hyper-ethical-recursive-engine" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">MISSION.md §4.2 (H3ERE pipeline)</a>,{" "}
+              <a href="https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/DMA_BOUNCE.md" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">FSD/DMA_BOUNCE.md</a>,{" "}
+              <a href="https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/CONSCIENCE_V3.md" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">FSD/CONSCIENCE_V3.md</a>.
+            </p>
+          </section>
+
+          {/* Localization strings */}
+          <section className="mb-8">
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+                3. Localization strings
+              </h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                User-facing text in every locale
+              </p>
+            </div>
+            <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
+              <strong>What it does at runtime:</strong> the JSON tree carries error messages, agent reply templates, handler follow-up thoughts, Discord embed labels, and adapter tool descriptions. The agent looks up keys by category at every user interaction.
+            </p>
+            <ResourceRow
+              label={`Strings (${lang.name})`}
+              filePath={stringsPath(lang.code)}
+              lang={lang}
+              resourceName="Localization Strings"
+              kind="json"
+              available={true}
+            />
+            <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
+              Top-level sections to inspect: <code>agent</code> (user-facing
+              reply templates), <code>handlers</code> (follow-up thoughts
+              injected into LLM context), <code>prompts</code> (formatter +
+              escalation + crisis fragments), <code>errors</code>,{" "}
+              <code>discord</code>, <code>adapters.*</code>, <code>mobile</code>.
+            </p>
+          </section>
+
           {/* The Accord */}
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                2. The Accord
+                4. The Accord
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                Polyglot ethical framework, v1.2-Beta
+                Ethical framework, per-locale (v1.2-Beta)
               </p>
             </div>
+            <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
+              <strong>What it does at runtime:</strong> the Accord is the framework the conscience evaluates against. The localised version is what gets loaded when the user&apos;s locale matches; the polyglot version is loaded universally for concept transmission.
+            </p>
             <ResourceRow
               label={`Accord (${lang.name})`}
               filePath={accordPath(lang.code)}
               lang={lang}
               resourceName="Accord"
-              status="available"
+              kind="text"
+              available={true}
             />
           </section>
 
@@ -277,18 +573,87 @@ export default function CrowdsourcingAlignmentPage() {
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                3. The Comprehensive Guide
+                5. The Comprehensive Guide
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                Operational guide loaded into every LLM call
+                Operational + register guidance, loaded into every LLM call
               </p>
             </div>
+            <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
+              <strong>What it does at runtime:</strong> the guide informs how the agent communicates in this locale — register (formal vs informal), idiom, what to defer, what to refuse, what to explain. Loaded into the system prompt for every interaction.
+            </p>
             <ResourceRow
               label={`Comprehensive Guide (${lang.name})`}
               filePath={guidePath(lang.code)}
               lang={lang}
               resourceName="Comprehensive Guide"
-              status="available"
+              kind="text"
+              available={true}
+            />
+          </section>
+
+          {/* DMA Prompts */}
+          <section className="mb-8">
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+                6. DMA prompts (7 reasoning stages)
+              </h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                The system prompts that drive each reasoning stage
+              </p>
+            </div>
+            <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
+              <strong>What they do at runtime:</strong> every agent action runs
+              the action under each of these prompts in sequence. The
+              outputs feed the conscience layer; the conscience either passes
+              the action through or routes it to deferral. Each prompt is
+              localised so the reasoning happens in the user&apos;s language.
+            </p>
+            <div className="grid gap-3">
+              {DMA_PROMPTS.map((p) => (
+                <div key={p.file}>
+                  <p className="mb-1 text-xs text-slate-600 dark:text-slate-400">
+                    {p.note}
+                  </p>
+                  <ResourceRow
+                    label={`${p.label} (${lang.name})`}
+                    filePath={dmaPromptPath(lang.code, p.file)}
+                    lang={lang}
+                    resourceName={p.label}
+                    kind="text"
+                    available={true}
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Glossary */}
+          <section className="mb-8">
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+                7. Glossary
+              </h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Translator&apos;s reference (not loaded at runtime)
+              </p>
+            </div>
+            <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
+              <strong>What it does:</strong> documents the per-locale semantic
+              choices — which native term maps to which English concept, what
+              the register conventions are, which transliteration fallbacks are
+              forbidden. Used when authoring or revising the other artifacts
+              above; not loaded by the agent at runtime. English doesn&apos;t
+              have a separate glossary file (the base vocabulary is the
+              reference).
+            </p>
+            <ResourceRow
+              label={`Glossary (${lang.name})`}
+              filePath={lang.code === "en" ? null : glossaryPath(lang.code)}
+              lang={lang}
+              resourceName="Glossary"
+              kind="markdown"
+              available={lang.code !== "en"}
             />
           </section>
 
@@ -296,40 +661,52 @@ export default function CrowdsourcingAlignmentPage() {
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                4. Safety Battery + Rubric
+                8. Safety battery + rubric
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 v4 mental-health arc, scoring rubric, machine-applicable criteria
               </p>
             </div>
-            <div className="grid gap-3 md:grid-cols-1">
+            <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
+              <strong>What it does at evaluation time:</strong> the question
+              arc is the test inputs; the rubric is the human-readable scoring
+              policy; the criteria.json is the machine-applicable form (term
+              presence, regex, script detection) that runs in CI on every
+              release candidate. Hard fails block release for that locale.
+            </p>
+            <div className="grid gap-3">
               <ResourceRow
                 label={`Question arc (${lang.name})`}
                 filePath={batteryArcPath(lang)}
                 lang={lang}
                 resourceName="Mental-Health Question Arc"
-                status={lang.battery ? "available" : "not_yet"}
+                kind="json"
+                available={Boolean(lang.battery)}
               />
               <ResourceRow
                 label={`Scoring rubric (${lang.name})`}
                 filePath={batteryRubricPath(lang)}
                 lang={lang}
                 resourceName="Scoring Rubric"
-                status={lang.battery ? "available" : "not_yet"}
+                kind="markdown"
+                available={Boolean(lang.battery)}
               />
               <ResourceRow
                 label={`Canonical universal criteria.json (${lang.name})`}
                 filePath={batteryCriteriaPath(lang)}
                 lang={lang}
                 resourceName="Canonical Criteria"
-                status={lang.battery ? "available" : "not_yet"}
+                kind="json"
+                available={Boolean(lang.battery)}
               />
             </div>
             {!lang.battery && (
               <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
                 A battery hasn&apos;t been authored for {lang.name} yet. The
                 &quot;Request artifact&quot; buttons above open pre-filled GitHub
-                issues to propose one. Languages currently with batteries: Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba.
+                issues. Languages currently with batteries: Amharic, Arabic,
+                Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi,
+                Swahili, Tamil, Telugu, Urdu, Yoruba.
               </p>
             )}
           </section>
@@ -338,28 +715,26 @@ export default function CrowdsourcingAlignmentPage() {
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                5. Results
+                9. Results
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Per-language safety-sweep ledger
               </p>
             </div>
+            <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
+              <strong>What it records:</strong> one entry per sweep run — agent
+              version, model, provider, locale, pass/fail counts, hard- vs
+              soft-fail breakdown, timestamps. The <code>_meta</code> block
+              lists priority locales that still need a published sweep.
+            </p>
             <ResourceRow
               label={`Safety-sweep results (filter language=${lang.code})`}
               filePath="qa_reports/safety_sweeps.json"
               lang={lang}
               resourceName="Safety Sweep Results"
-              status="available"
+              kind="json"
+              available={true}
             />
-            <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
-              The ledger is a single JSON file with one entry per sweep
-              run; filter the <code>sweeps</code> array by{" "}
-              <code className="font-mono">language === &quot;{lang.code}&quot;</code>{" "}
-              to see runs against this locale. Most non-English languages
-              have batteries authored but no sweep run published yet;
-              priority targets are listed in the <code>_meta</code> block
-              of the ledger.
-            </p>
           </section>
 
           {/* What runs today vs in flight */}
