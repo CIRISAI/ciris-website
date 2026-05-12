@@ -16,30 +16,28 @@ export default function FirstContactPage() {
       {/* Hero */}
       <HomeHeader
         headline="First Contact."
-        subheadline="Two meanings. One framework."
-        description="Whether you're deploying your first CIRIS agent or exploring why cooperation might be the cheapest survival strategy there is — start here."
+        subheadline="Deploy your first agent in minutes. Or read the framework first — both paths start here."
+        description="Whether you're deploying your first CIRIS agent or exploring why cooperation might be the cheapest survival strategy there is, start with what you need today."
         mediaType="image"
         opacityValue={0.75}
         mediaSrc="/nathan-farrish-ArcTfEoBgzs-unsplash.jpg"
-        buttonText="Deploy Your First Agent"
+        buttonText="Quickstart"
         buttonHref="#quickstart"
-        linkText="Read the Protocols"
+        linkText="Read the Framework"
         linkHref="#protocol"
       />
 
-      {/* Thesis Banner */}
-      <div className="bg-gradient-to-r from-amber-700/90 to-orange-700/90 py-6">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="text-lg font-bold text-white mb-2">
-            Maintaining a coherent lie across multiple independent checks is
-            harder than telling the truth. We think this has implications beyond
-            computer science.
-          </p>
-          <p className="text-sm text-white/90">
-            Different viewpoints, genuine independence, and people who cooperate
-            over time &mdash; these make lying harder, but they also make
-            communities stronger. CIRIS is built on that observation.
-          </p>
+      {/* Skip-to-quickstart shortcut for impatient readers */}
+      <div className="bg-blue-50 dark:bg-blue-900/20 border-y border-blue-200 dark:border-blue-800 py-3">
+        <div className="mx-auto max-w-4xl px-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+          <span className="text-gray-700 dark:text-gray-300">Just want to install?</span>
+          <a href="#quickstart" className="font-semibold text-brand-primary hover:underline">
+            Skip to quickstart →
+          </a>
+          <span className="text-gray-300 dark:text-gray-600">·</span>
+          <a href="/install" className="font-semibold text-brand-primary hover:underline">
+            Install page (phone + desktop) →
+          </a>
         </div>
       </div>
 

@@ -53,8 +53,8 @@ export default function CoherenceRatchetPage() {
               <span className="inline-flex items-center rounded-full bg-yellow-100 px-3 py-1 text-sm font-medium text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300">
                 Research Testbed
               </span>
-              <a href="https://doi.org/10.5281/zenodo.18142668" target="_blank" rel="noopener noreferrer">
-                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18142668.svg" alt="DOI" className="h-5" />
+              <a href="https://doi.org/10.5281/zenodo.18217688" target="_blank" rel="noopener noreferrer">
+                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18217688.svg" alt="DOI" className="h-5" />
               </a>
             </div>
           </div>
@@ -157,17 +157,33 @@ export default function CoherenceRatchetPage() {
                 <>
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Theoretical Foundation</h2>
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    The Coherence Ratchet exploits computational asymmetry: CONSISTENT-LIE (maintaining deception across k independent constraints) is NP-complete, while truth-telling is O(1) verification.
+                    The Coherence Ratchet rests on a structural cost-asymmetry: maintaining
+                    coherence across <em>k</em> independent constraints over time is structurally
+                    more expensive than producing a single deceptive output that defeats any
+                    single detector. The asymmetry is empirical, not a worst-case complexity
+                    claim — in practice SAT-flavoured constraint problems are routinely solvable
+                    on modern hardware, so the load-bearing argument is about <em>sustained</em>
+                    coherence across many independent constraints, not the hardness of any one.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    Under ETH, deception cost scales as T<sub>D</sub>/T<sub>H</sub> = 2<sup>Ω(m)</sup> where m is constraint count. Each additional independent validator exponentially shrinks the viable deception manifold.
-                  </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    Formally: the intersection of k independent constraint half-spaces has volume V<sub>k</sub> = V<sub>0</sub>·∏(1-ε<sub>i</sub>), approaching measure zero as k→∞.
+                    Geometrically: the intersection of <em>k</em> independent constraint
+                    half-spaces has volume V<sub>k</sub> = V<sub>0</sub>·∏(1−ε<sub>i</sub>),
+                    which approaches measure zero as <em>k</em>→∞ in the independent-constraint
+                    limit. When constraints are correlated, the Kish design effect{" "}
+                    <em>k</em><sub>eff</sub> = <em>k</em>/(1+ρ(<em>k</em>−1)) gives the actual
+                    independent-dimension count — see the dedicated{" "}
+                    <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
+                      Coherence Collapse Analysis
+                    </a>
+                    {" "}page for the formal treatment.
                   </p>
                   <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 pl-4 py-3 mt-4">
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      <strong>Research Status:</strong> This is emerging research. The theoretical framework is novel and lacks direct baselines in existing literature. Early empirical validation shows promise but requires peer review. See <a href="/research-status" className="text-brand-primary hover:underline">research status</a> for current state.
+                      <strong>Research Status:</strong> This is emerging research. The framework
+                      is novel and the empirical work is the project&apos;s own production
+                      corpus measured by the project&apos;s own instruments. Independent
+                      replication is the missing piece. See{" "}
+                      <a href="/research-status" className="text-brand-primary hover:underline">research status</a> for current state and named limitations.
                     </p>
                   </div>
                 </>
@@ -352,7 +368,11 @@ function isFragileReasoning(k_eff: number): boolean {
                 </div>
 
                 <p className="text-gray-600 dark:text-gray-400">
-                  See <a href="https://zenodo.org/records/15072880" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">CCA paper (Zenodo)</a> for validation across financial, institutional, and electrochemical domains.
+                  See the{" "}
+                  <a href="https://zenodo.org/records/18217688" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                    Coherence Collapse Analysis paper (Zenodo)
+                  </a>
+                  {" "}for the engineering-risk framework across financial, institutional, and electrochemical domains.
                 </p>
               </>
             )}
@@ -771,21 +791,15 @@ fragility_rate: ${(liveTraces.filter(t => t.idma_fragility_flag).length / liveTr
                 {audience === "researcher" && (
                   <>
                     <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                      <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">W-02: ETH Conditionality</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        T_D/T_H = 2^Ω(m) conditional on ETH. Unconditionally: CONSISTENT-LIE is NP-complete, gap is superpolynomial but possibly subexponential.
-                      </p>
-                    </div>
-                    <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
                       <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">W-03: Convexity Requirement</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Topological collapse theorem requires convex deceptive regions. Non-convex (torus, disconnected) may not exhibit exponential decay.
+                        The geometric volume-decay argument assumes convex deceptive regions. Non-convex shapes (torus, disconnected) may not exhibit the same exponential decay.
                       </p>
                     </div>
                     <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                      <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">W-07: Clause Size k ≥ 3</p>
+                      <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">W-08: Empirical Self-Measurement</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        NP-hardness requires k ≥ 3 literals per clause. k=2 (2-SAT) is polynomial; complexity guarantees void.
+                        The corpus is the project&apos;s own production traffic; ρ is estimated by the same IDMA that the page evaluates. Independent ρ measurement and external replication are the missing pieces.
                       </p>
                     </div>
                   </>
@@ -943,20 +957,20 @@ if (domainMetrics.mean_rho > 0.6 || domainMetrics.mean_k_eff < 1.5) {
                   </p>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>Open questions:</strong> Can ETH conditionality be relaxed? What&apos;s the tightest bound on compositional detection? Does ρ-precedence generalize beyond validated domains?
+                  <strong>Open questions:</strong> What&apos;s the tightest bound on compositional detection? Does ρ-precedence generalize beyond validated domains? Can ρ be measured independently of the IDMA that estimates it?
                 </p>
                 <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-4">
                   <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-2">Source Papers</p>
                   <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                     <li>
-                      <a href="https://zenodo.org/records/15072880" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                        Correlated Constraint Attenuation (CCA)
-                      </a> - Theoretical foundation for correlation-aware accountability
+                      <a href="https://zenodo.org/records/18217688" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                        Coherence Collapse Analysis (CCA)
+                      </a> — engineering risk framework for correlation-driven diversity collapse; full mathematical treatment.
                     </li>
                     <li>
-                      <a href="https://doi.org/10.5281/zenodo.18142668" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                        RATCHET Paper
-                      </a> - Empirical validation framework and benchmark methodology
+                      <a href="https://zenodo.org/records/19839280" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                        Constrained Reasoning Chains
+                      </a> — empirical anchor: N_eff measurement on 6,465+ production traces.
                     </li>
                   </ul>
                 </div>
