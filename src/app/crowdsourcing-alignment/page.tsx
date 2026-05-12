@@ -93,10 +93,10 @@ const DMA_PROMPTS = [
   { file: "pdma_ethical.yml", label: "PDMA — Principled DMA", note: "First-pass ethical evaluation. Accord-anchored stakeholder analysis + conflict detection." },
   { file: "csdma_common_sense.yml", label: "CSDMA — Common-Sense DMA", note: "First-pass reality/plausibility check. Red-flag enumeration." },
   { file: "dsdma_base.yml", label: "DSDMA — Domain-Specific DMA", note: "First-pass domain alignment per the agent template (Discord moderator, scout, etc.)." },
-  { file: "idma.yml", label: "IDMA — Identity DMA", note: "The check on the checkers. Evaluates the other DMAs' reasoning for fragility (k_eff, fragility flag); rooted in Coherence Collapse Analysis." },
+  { file: "idma.yml", label: "IDMA — Intuition DMA", note: "Semantic implementation of Coherence Collapse Analysis on the agent's own reasoning. Computes k_eff, classifies phase (chaos / healthy / rigidity), flags fragility when k_eff < 2 or the reasoning sits in the rigidity phase." },
   { file: "action_selection_pdma.yml", label: "ASPDMA — Action Selection PDMA", note: "Picks the action verb (SPEAK / OBSERVE / TOOL / REJECT / PONDER / DEFER / MEMORIZE / RECALL / FORGET / TASK_COMPLETE) given the DMA outputs above." },
   { file: "tsaspdma.yml", label: "TSASPDMA — Tool-Specific Action Selection", note: "Verb-specific second pass when the candidate action is TOOL. Picks the tool + parameters." },
-  { file: "dsaspdma.yml", label: "DSASPDMA — Defer-Specific Action Selection", note: "Verb-specific second pass when the candidate action is DEFER. Frames the deferral for the Wise Authority." },
+  { file: "dsaspdma.yml", label: "DSASPDMA — Deferral-Specific Action Selection", note: "Verb-specific second pass when the candidate action is DEFER. Frames the deferral for the Wise Authority." },
 ];
 
 function dmaPromptPath(code: string, file: string) {
@@ -447,8 +447,9 @@ GATHER_CONTEXT
     ↓
 PERFORM_DMAS           ← 3 first-pass DMAs run in parallel: PDMA, CSDMA, DSDMA
     ↓                    (optional DMA bounce if any flag fragility)
-                        IDMA runs the check-on-the-checkers here
-                          (with its own optional bounce)
+                        IDMA (Intuition DMA) evaluates the agent's own
+                          reasoning quality via CCA — k_eff, phase,
+                          fragility — with its own optional bounce
     ↓
 PERFORM_ASPDMA         ← Action selector picks the verb (SPEAK / DEFER /
     ↓                    TOOL / TASK_COMPLETE / ...)
