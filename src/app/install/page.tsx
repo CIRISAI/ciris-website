@@ -195,6 +195,78 @@ export default function InstallPage() {
             </div>
           </div>
 
+          {/* Hello World */}
+          <div className="mt-12">
+            <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
+              Hello, CIRIS
+            </h2>
+            <p className="mb-6 text-sm text-gray-600 dark:text-gray-400">
+              The shortest path to a first response. Start the agent, then call it from
+              Python. Both blocks below are copy-pasteable.
+            </p>
+
+            <div className="grid gap-4 lg:grid-cols-2">
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="mb-2 text-base font-semibold text-gray-900 dark:text-white">
+                  1. Start the agent
+                </h3>
+                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+                  Run the API adapter. Defaults to port 8080. OBSERVER access requires no auth
+                  for local development.
+                </p>
+                <pre className="overflow-x-auto rounded-md bg-gray-900 p-3 text-xs text-gray-100">
+{`pip install ciris-agent
+ciris-agent --adapter api --port 8080`}
+                </pre>
+              </div>
+
+              <div className="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+                <h3 className="mb-2 text-base font-semibold text-gray-900 dark:text-white">
+                  2. Call it from Python
+                </h3>
+                <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
+                  Async SDK. <code className="text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded">response.processing_time_ms</code> + <code className="text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded">response.state</code> let you see the reasoning surface for every call.
+                </p>
+                <pre className="overflow-x-auto rounded-md bg-gray-900 p-3 text-xs text-gray-100">
+{`pip install ciris-sdk
+
+# hello_ciris.py
+import asyncio
+from ciris_sdk import CIRISClient
+
+async def main():
+    async with CIRISClient(
+        base_url="http://localhost:8080",
+    ) as client:
+        response = await client.interact(
+            "Hello, CIRIS!"
+        )
+        print(response.response)
+        print(
+            f"[{response.state}] "
+            f"{response.processing_time_ms}ms"
+        )
+
+asyncio.run(main())`}
+                </pre>
+              </div>
+            </div>
+
+            <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
+              The SDK is <strong>pre-beta</strong> — interfaces may change between releases.
+              Full API surface (181 endpoints across 15 modules) documented in{" "}
+              <a
+                href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-primary hover:underline"
+              >
+                ciris_sdk on GitHub
+              </a>
+              .
+            </p>
+          </div>
+
           {/* Troubleshooting */}
           <div className="mt-12">
             <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
