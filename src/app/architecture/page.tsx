@@ -389,15 +389,45 @@ export default function ArchitecturePage() {
               </div>
 
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-4">
-                Safety runbooks are public in the{" "}
+                Trust artifacts are public AGPL-3.0 in the CIRISBridge repository:{" "}
+                <a
+                  href="https://github.com/CIRISAI/CIRISBridge/blob/main/SECURITY.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-primary hover:underline"
+                >
+                  SECURITY.md
+                </a>
+                {", "}
+                <a
+                  href="https://github.com/CIRISAI/CIRISBridge/blob/main/OPERATIONS.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-primary hover:underline"
+                >
+                  OPERATIONS.md
+                </a>
+                , and{" "}
+                <a
+                  href="https://github.com/CIRISAI/CIRISBridge/tree/main/ansible/runbooks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-primary hover:underline"
+                >
+                  26 named Ansible runbooks
+                </a>
+                {" "}(incident-response, intrusion-response, cert-rotate, backup-verify,
+                e2e-smoke-test, image-update, disk-cleanup, billing-rollback,
+                add-region, and others). The repository itself is also public:{" "}
                 <a
                   href="https://github.com/CIRISAI/CIRISBridge"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-brand-primary hover:underline"
                 >
-                  CIRISBridge repository
-                </a>.
+                  CIRISAI/CIRISBridge
+                </a>
+                .
               </p>
             </div>
           </div>

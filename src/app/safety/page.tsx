@@ -202,22 +202,15 @@ export default function SafetyPage() {
           logoAlt="Brand logo icon"
           headline="The Test Surface"
           subheadline="You can't ship safety claims you haven't stress-tested."
-          copyText="The agent has a layered test surface designed to catch exactly the failure modes a public ethical framework can't legislate away. In-tree, mental-health safety batteries cover fourteen languages with native-speaker scoring rubrics — a per-question PASS / SOFT-FAIL / HARD-FAIL grade against universal pass criteria. Out-of-tree, a separate diagnostic harness directory holds adversarial corpora, captured production hedges, and replay tooling that calibrates the conscience layer against the things real users actually say."
+          copyText="The agent has a layered test surface for the failure modes a public ethical framework can't legislate away. Mental-health safety batteries cover fourteen languages with machine-checkable rubrics — transliteration fallbacks, slur substrings, register breaks, diagnostic confirmation, medication recommendation, locale failure. The hard-fail checks run in CI on every change. Native-speaker review for the soft cases is what the crowdsourcing-alignment surface is being built for; it is not in the loop today."
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Mental-Health Batteries Across 14 Languages",
+              headline: "14-Language Mental-Health Batteries",
               copyText:
-                "The highest-stakes failure-mode test in the project: mistranslation in a mental-health context can route a vulnerable user to the wrong resource. Each language — Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba — has its own scoring rubric. Hard fails (a transliteration fallback for 'therapist,' a slur echoed back, an informal-register break, a confirmed diagnosis, a recommended medication, an English response to a non-English question) block any release touching that language path. Native-speaker grading handles the soft cases the structural checks can't see.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "An Out-of-Tree Diagnostic Harness",
-              copyText:
-                "Diagnostic tooling lives outside the main repo. The corpora are attractor-bait by design — politically loaded questions, propaganda hedges, mental-health prompts — and shipping them in source would give those attractors a permanent foothold. Trace contribution is opt-in everywhere and NER-cleansed at ingest. The default is structural only — model, region, timing, no text content. CIRIS-managed agents like scout.ciris.ai send full reasoning traces by configuration; any other install can opt into the same by overriding the default. Raw traces stay out of the repo as a precaution against anything the scrubbing missed; cleansed sets ship publicly to the CIRISAI HuggingFace org so outside researchers can verify what's in them. The harness itself has gone through two versions, the older one kept for back-reference.",
+                "The highest-stakes failure-mode test in the project: mistranslation in a mental-health context can route a vulnerable user to the wrong resource. Each language — Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba — has its own machine-applicable rubric. Hard fails (transliteration fallback for clinical terms, slur substrings, informal-register pattern, confirmed-diagnosis check, recommended-medication check, locale-failure check) run automatically against every release candidate.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -228,25 +221,46 @@ export default function SafetyPage() {
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
+            {
+              headline: "Cleansed Public Corpus on Hugging Face",
+              copyText:
+                "Trace contribution is opt-in everywhere and NER-cleansed at ingest. CIRIS-managed agents like scout.ciris.ai send full reasoning traces by configuration; other installs can opt into the same. Cleansed sets are published openly to the CIRISAI HuggingFace org so outside researchers can verify the cleansing pipeline against the artifacts that come out of it.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
           ]}
         />
 
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="A Sweep Analyzer, Not a Replacement Grader"
-          subheadline="Structural signals are surfaced. Native-speaker review still decides."
-          copyText="A separate analyzer tool ingests sweep results — per-question action verbs, per-thought conscience signals, structural rubric hits — and surfaces them next to a prior-run comparison and a suggested ledger entry. The structural checks (script presence, register, slur substrings, wellness-confirmation patterns) hard-fail on hit. Everything else is left for human grading. The point of the tooling is to make the human reviewer's work tractable, not to replace them."
+          headline="What Runs Today vs What's in Flight"
+          subheadline="Machine checks are in CI. The reviewer cohort surface is being built."
+          copyText="The automated mental-health batteries run in CI on every release candidate via the safety-battery workflow in CIRISAgent. Machine-applicable rubric criteria (term-presence, regex-presence, script-detection) hard-fail on hit. Soft cases — phrasing, register nuance, contextual appropriateness — are designed for native-speaker review but native speakers are not in the loop today. The crowdsourcing-alignment page describes the surface being built so that review can engage."
         />
 
-        <div className="my-8 flex justify-center">
+        <div className="my-8 flex flex-wrap justify-center gap-3">
+          <a
+            href="/crowdsourcing-alignment"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-brand-primary px-6 py-3 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+          >
+            See the crowdsourcing-alignment surface →
+          </a>
+          <a
+            href="https://github.com/CIRISAI/CIRISAgent/tree/main/tests/safety"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-primary hover:text-brand-primary dark:border-slate-700 dark:text-slate-200"
+          >
+            Automated batteries on GitHub →
+          </a>
           <a
             href="https://huggingface.co/CIRISAI"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-brand-primary px-6 py-3 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-primary hover:text-brand-primary dark:border-slate-700 dark:text-slate-200"
           >
-            See the public corpus on Hugging Face — CIRISAI →
+            Public corpus on Hugging Face →
           </a>
         </div>
 

@@ -355,6 +355,57 @@ export default function SafetyPolicyPage() {
             </div>
           </div>
 
+          {/* Breach Notification */}
+          <div className="mb-12">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+              Breach Notification
+            </h2>
+            <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+              <p className="text-gray-700 dark:text-gray-300">
+                If a confirmed breach of personal data affects users in scope of
+                GDPR, we follow{" "}
+                <strong>Article 33</strong>: notification to the relevant
+                supervisory authority within <strong>72 hours</strong> of
+                becoming aware. Affected users are notified without undue delay.
+                We commit to the GDPR floor for everyone — the time window
+                doesn&apos;t change based on jurisdiction.
+              </p>
+            </div>
+          </div>
+
+          {/* Change Management — structural fact, not a process promise */}
+          <div className="mb-12">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+              Change Management
+            </h2>
+            <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+              <p className="text-gray-700 dark:text-gray-300">
+                CIRIS infrastructure code (
+                <a
+                  href="https://github.com/CIRISAI/CIRISBridge"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-primary hover:underline"
+                >
+                  CIRISBridge
+                </a>
+                ) and agent code (
+                <a
+                  href="https://github.com/CIRISAI/CIRISAgent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-primary hover:underline"
+                >
+                  CIRISAgent
+                </a>
+                ) are AGPL-3.0 and publicly version-controlled. Production
+                change history is the Git history of those repositories. The
+                Ansible runbooks and security guide that govern deployment
+                live in CIRISBridge alongside the code they deploy.
+              </p>
+            </div>
+          </div>
+
           {/* Transparency Commitment */}
           <div className="mb-12">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
