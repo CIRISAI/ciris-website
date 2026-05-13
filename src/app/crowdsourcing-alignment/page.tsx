@@ -87,20 +87,62 @@ function glossaryPath(code: string) {
 }
 
 // 4 first-pass DMAs + 3 verb-specific second-pass action selectors.
+// PDMA is the one polyglot DMA — loaded universally regardless of locale.
 // See CIRISAgent/MISSION.md §4.3 for the canonical names + roles, and
 // FSD/DMA_BOUNCE.md / FSD/CONSCIENCE_V3.md for the bounce/recursive paths.
 const DMA_PROMPTS = [
-  { file: "pdma_ethical.yml", label: "PDMA — Principled DMA", note: "First-pass ethical evaluation. Accord-anchored stakeholder analysis + conflict detection." },
-  { file: "csdma_common_sense.yml", label: "CSDMA — Common-Sense DMA", note: "First-pass reality/plausibility check. Red-flag enumeration." },
-  { file: "dsdma_base.yml", label: "DSDMA — Domain-Specific DMA", note: "First-pass domain alignment per the agent template (Discord moderator, scout, etc.)." },
-  { file: "idma.yml", label: "IDMA — Intuition DMA", note: "Semantic implementation of Coherence Collapse Analysis on the agent's own reasoning. Computes k_eff, classifies phase (chaos / healthy / rigidity), flags fragility when k_eff < 2 or the reasoning sits in the rigidity phase." },
-  { file: "action_selection_pdma.yml", label: "ASPDMA — Action Selection PDMA", note: "Picks the action verb (SPEAK / OBSERVE / TOOL / REJECT / PONDER / DEFER / MEMORIZE / RECALL / FORGET / TASK_COMPLETE) given the DMA outputs above." },
-  { file: "tsaspdma.yml", label: "TSASPDMA — Tool-Specific Action Selection", note: "Verb-specific second pass when the candidate action is TOOL. Picks the tool + parameters." },
-  { file: "dsaspdma.yml", label: "DSASPDMA — Deferral-Specific Action Selection", note: "Verb-specific second pass when the candidate action is DEFER. Frames the deferral for the Wise Authority." },
+  { file: "pdma_ethical.yml", label: "PDMA — Principled DMA", note: "First-pass ethical evaluation. Accord-anchored stakeholder analysis + conflict detection.", polyglot: true },
+  { file: "csdma_common_sense.yml", label: "CSDMA — Common-Sense DMA", note: "First-pass reality/plausibility check. Red-flag enumeration.", polyglot: false },
+  { file: "dsdma_base.yml", label: "DSDMA — Domain-Specific DMA", note: "First-pass domain alignment per the agent template (Discord moderator, scout, etc.).", polyglot: false },
+  { file: "idma.yml", label: "IDMA — Intuition DMA", note: "Semantic implementation of Coherence Collapse Analysis on the agent's own reasoning. Computes k_eff, classifies phase (chaos / healthy / rigidity), flags fragility when k_eff < 2 or the reasoning sits in the rigidity phase.", polyglot: false },
+  { file: "action_selection_pdma.yml", label: "ASPDMA — Action Selection PDMA", note: "Picks the action verb (SPEAK / OBSERVE / TOOL / REJECT / PONDER / DEFER / MEMORIZE / RECALL / FORGET / TASK_COMPLETE) given the DMA outputs above.", polyglot: false },
+  { file: "tsaspdma.yml", label: "TSASPDMA — Tool-Specific Action Selection", note: "Verb-specific second pass when the candidate action is TOOL. Picks the tool + parameters.", polyglot: false },
+  { file: "dsaspdma.yml", label: "DSASPDMA — Deferral-Specific Action Selection", note: "Verb-specific second pass when the candidate action is DEFER. Frames the deferral for the Wise Authority.", polyglot: false },
 ];
 
-function dmaPromptPath(code: string, file: string) {
+// Optimization Veto is the one polyglot conscience — single universal prompt,
+// output-language varies per locale. The other three are per-locale.
+const CONSCIENCE_PROMPTS = [
+  { file: "entropy_conscience.yml", label: "Entropy (IRIS-E)", note: "Semantic anchoring — does the response sit in a coherent cluster?", polyglot: false },
+  { file: "coherence_conscience.yml", label: "Coherence (IRIS-C)", note: "Propaganda detection + alignment with Accord principles.", polyglot: false },
+  { file: "optimization_veto_conscience.yml", label: "Optimization Veto (CIRIS-EOV)", note: "Refuses entropy-reducing actions that score below threshold. v3.0 polyglot torque measurement across 8 named torque patterns anchored in 3+ tradition canonical-text fragments each.", polyglot: true },
+  { file: "epistemic_humility_conscience.yml", label: "Epistemic Humility", note: "Overconfidence detection; transitioning to a deterministic gate.", polyglot: false },
+];
+
+// Polyglot canon files — loaded universally regardless of locale.
+const POLYGLOT_CANON = [
+  { file: "polyglot_accord.txt", label: "Polyglot Accord", note: "~88KB universal ethical framework loaded into every conscience evaluation regardless of locale." },
+  { file: "pdma_framing.txt", label: "PDMA Framing Shard", note: "Cross-tradition torque framing referenced from the PDMA master prompt as {{POLYGLOT_PDMA_FRAMING}}." },
+  { file: "book_0_quiet_threshold.txt", label: "Book 0 — Quiet Threshold", note: "Per-book polyglot composite." },
+  { file: "book_1_core_ethics.txt", label: "Book 1 — Core Ethics", note: "Per-book polyglot composite." },
+  { file: "book_2_operations.txt", label: "Book 2 — Operations", note: "Per-book polyglot composite." },
+  { file: "book_3_case_studies.txt", label: "Book 3 — Case Studies", note: "Per-book polyglot composite." },
+  { file: "book_4_obligations.txt", label: "Book 4 — Obligations", note: "Per-book polyglot composite. See book_4_NOTES.txt for adjunct notes." },
+  { file: "book_4_NOTES.txt", label: "Book 4 — Notes", note: "Adjunct notes to Book 4." },
+  { file: "book_5_war_ethics.txt", label: "Book 5 — War Ethics", note: "Per-book polyglot composite." },
+  { file: "book_6_sunset_doctrine.txt", label: "Book 6 — Sunset Doctrine", note: "Per-book polyglot composite." },
+  { file: "book_7_mathematics.txt", label: "Book 7 — Mathematics", note: "Per-book polyglot composite." },
+];
+
+function polyglotPath(file: string) {
+  return `ciris_engine/data/localized/polyglot/${file}`;
+}
+
+// Base-path prompts are either the polyglot master (PDMA, OptimizationVeto) or
+// the English variant for the others. Non-English locales for non-polyglot
+// prompts live under localized/<code>/.
+function dmaPromptPath(code: string, file: string, isPolyglot: boolean) {
+  if (isPolyglot || code === "en") {
+    return `ciris_engine/logic/dma/prompts/${file}`;
+  }
   return `ciris_engine/logic/dma/prompts/localized/${code}/${file}`;
+}
+
+function consciencePromptPath(code: string, file: string, isPolyglot: boolean) {
+  if (isPolyglot || code === "en") {
+    return `ciris_engine/logic/conscience/prompts/${file}`;
+  }
+  return `ciris_engine/logic/conscience/prompts/localized/${code}/${file}`;
 }
 
 function issueUrl(code: string, resourceName: string, filePath: string | null) {
@@ -162,20 +204,56 @@ function renderJsonTree(value: unknown, depth = 0): React.ReactElement {
   if (typeof value === "object") {
     const entries = Object.entries(value as Record<string, unknown>);
     if (entries.length === 0) return <span className="text-slate-400">{"{}"}</span>;
-    // Top-level: render each key as a collapsible details element.
+    // Top-level: bucket sparse keys into "Miscellaneous" so the tree doesn't
+    // explode into a hundred single-line cards. A "substantive" key is an
+    // object with > 2 sub-keys; everything else (strings, small objects,
+    // arrays) collapses into the Misc bucket.
     if (depth === 0) {
+      const substantive: [string, unknown][] = [];
+      const sparse: [string, unknown][] = [];
+      for (const [k, v] of entries) {
+        const isSubstantive =
+          v !== null &&
+          typeof v === "object" &&
+          !Array.isArray(v) &&
+          Object.keys(v as Record<string, unknown>).length > 2;
+        (isSubstantive ? substantive : sparse).push([k, v]);
+      }
       return (
         <div className="space-y-2">
-          {entries.map(([k, v]) => (
+          {substantive.map(([k, v]) => (
             <details key={k} className="rounded-md border border-slate-200 bg-slate-50 dark:border-gray-700 dark:bg-gray-900/40">
               <summary className="cursor-pointer px-3 py-2 text-sm font-semibold text-slate-900 dark:text-white">
-                {k}
+                {k}{" "}
+                <span className="text-xs font-normal text-slate-500 dark:text-slate-400">
+                  ({Object.keys(v as Record<string, unknown>).length} keys)
+                </span>
               </summary>
               <div className="px-3 pb-3 text-sm">
                 {renderJsonTree(v, depth + 1)}
               </div>
             </details>
           ))}
+          {sparse.length > 0 && (
+            <details className="rounded-md border border-slate-200 bg-slate-50 dark:border-gray-700 dark:bg-gray-900/40">
+              <summary className="cursor-pointer px-3 py-2 text-sm font-semibold text-slate-900 dark:text-white">
+                Miscellaneous{" "}
+                <span className="text-xs font-normal text-slate-500 dark:text-slate-400">
+                  ({sparse.length} keys — single values and small objects)
+                </span>
+              </summary>
+              <div className="px-3 pb-3 text-sm">
+                <ul className="ml-2 list-none space-y-1">
+                  {sparse.map(([k, v]) => (
+                    <li key={k}>
+                      <span className="font-semibold text-slate-700 dark:text-slate-300">{k}:</span>{" "}
+                      {renderJsonTree(v, depth + 1)}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </details>
+          )}
         </div>
       );
     }
@@ -517,11 +595,54 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
             </p>
           </section>
 
+          {/* Polyglot canon — universal, loaded regardless of locale */}
+          <section className="mb-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-3">
+              3. Polyglot canon (universal)
+            </p>
+            <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-3">
+              These files are loaded into every LLM call regardless of the
+              user&apos;s locale. The polyglot Accord plus the per-book
+              composites carry the framework; the framing shard plugs into the
+              PDMA master prompt as <code>{"{{POLYGLOT_PDMA_FRAMING}}"}</code>.
+            </p>
+            <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-4">
+              <strong>Polyglot uplift is concentrated at exactly two prompt
+              surfaces by design:</strong> the <strong>PDMA</strong>{" "}
+              (principle evaluation —{" "}
+              <a href={`${BLOB}/ciris_engine/logic/dma/prompts/pdma_ethical.yml`} target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                pdma_ethical.yml
+              </a>
+              ) and the <strong>Optimization Veto conscience</strong>{" "}
+              (entropy-reducing-action refusal —{" "}
+              <a href={`${BLOB}/ciris_engine/logic/conscience/prompts/optimization_veto_conscience.yml`} target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                optimization_veto_conscience.yml
+              </a>
+              ). The other 6 DMA prompts and 3 consciences are per-locale.
+              These are the two surfaces where attractor capture would do the
+              most damage, so they&apos;re the surfaces where cross-tradition
+              encoding is most load-bearing.
+            </p>
+            <div className="grid gap-3">
+              {POLYGLOT_CANON.map((p) => (
+                <ResourceRow
+                  key={p.file}
+                  label={p.label}
+                  filePath={polyglotPath(p.file)}
+                  lang={lang}
+                  resourceName={p.label}
+                  kind="text"
+                  available={true}
+                />
+              ))}
+            </div>
+          </section>
+
           {/* Localization strings */}
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                3. Localization strings
+                4. Localization strings
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 User-facing text in every locale
@@ -551,7 +672,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                4. The Accord
+                5. The Accord
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Ethical framework, per-locale (v1.2-Beta)
@@ -574,7 +695,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                5. The Comprehensive Guide
+                6. The Comprehensive Guide
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Operational + register guidance, loaded into every LLM call
@@ -597,7 +718,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                6. DMA prompts (7 reasoning stages)
+                7. DMA prompts (7 reasoning stages)
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 The system prompts that drive each reasoning stage
@@ -605,20 +726,28 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
             </div>
             <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
               <strong>What they do at runtime:</strong> every agent action runs
-              the action under each of these prompts in sequence. The
-              outputs feed the conscience layer; the conscience either passes
-              the action through or routes it to deferral. Each prompt is
-              localised so the reasoning happens in the user&apos;s language.
+              the action under each of these prompts in sequence. The outputs
+              feed the conscience layer; the conscience either passes the
+              action through or routes it to deferral. <strong>PDMA</strong>{" "}
+              is the one polyglot DMA — its prompt is universal and loaded
+              regardless of locale. The other six are per-locale; for English,
+              the base path <em>is</em> the prompt (no <code>localized/en/</code>{" "}
+              directory exists).
             </p>
             <div className="grid gap-3">
               {DMA_PROMPTS.map((p) => (
                 <div key={p.file}>
                   <p className="mb-1 text-xs text-slate-600 dark:text-slate-400">
+                    {p.polyglot && (
+                      <span className="mr-1 rounded-full bg-purple-100 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">
+                        polyglot
+                      </span>
+                    )}
                     {p.note}
                   </p>
                   <ResourceRow
-                    label={`${p.label} (${lang.name})`}
-                    filePath={dmaPromptPath(lang.code, p.file)}
+                    label={`${p.label}${p.polyglot ? " (universal)" : ` (${lang.name})`}`}
+                    filePath={dmaPromptPath(lang.code, p.file, p.polyglot)}
                     lang={lang}
                     resourceName={p.label}
                     kind="text"
@@ -629,11 +758,118 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
             </div>
           </section>
 
+          {/* Conscience Prompts */}
+          <section className="mb-8">
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+                8. Conscience prompts (4 faculties)
+              </h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                The faculties that gate the selected action
+              </p>
+            </div>
+            <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
+              <strong>What they do at runtime:</strong> the four consciences
+              gate the action between PERFORM_ASPDMA and FINALIZE_ACTION. A
+              failure can trigger RECURSIVE_ASPDMA → RECURSIVE_CONSCIENCE (the
+              optional conscience bounce) before falling back to DEFER.{" "}
+              <strong>Optimization Veto</strong> is the one polyglot
+              conscience &mdash; its prompt is universal regardless of locale.
+            </p>
+            <div className="grid gap-3">
+              {CONSCIENCE_PROMPTS.map((p) => (
+                <div key={p.file}>
+                  <p className="mb-1 text-xs text-slate-600 dark:text-slate-400">
+                    {p.polyglot && (
+                      <span className="mr-1 rounded-full bg-purple-100 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">
+                        polyglot
+                      </span>
+                    )}
+                    {p.note}
+                  </p>
+                  <ResourceRow
+                    label={`${p.label}${p.polyglot ? " (universal)" : ` (${lang.name})`}`}
+                    filePath={consciencePromptPath(lang.code, p.file, p.polyglot)}
+                    lang={lang}
+                    resourceName={p.label}
+                    kind="text"
+                    available={true}
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Template placeholders reference */}
+          <section className="mb-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-3">
+              Template placeholders in the prompts
+            </p>
+            <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-4">
+              The YAML prompts above contain <code>{"{placeholder}"}</code>{" "}
+              tokens that get filled at runtime by the agent. A reviewer reading
+              a prompt should know what each placeholder will be replaced with.
+              The most common ones:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="text-left">
+                  <tr className="border-b border-slate-200 dark:border-gray-700">
+                    <th className="pb-2 pr-3 font-semibold text-slate-900 dark:text-white">Placeholder</th>
+                    <th className="pb-2 pr-3 font-semibold text-slate-900 dark:text-white">Source at runtime</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-700 dark:text-slate-300">
+                  <tr className="border-b border-slate-100 dark:border-gray-800">
+                    <td className="py-2 pr-3 font-mono text-xs">{"{full_context_str}"}</td>
+                    <td className="py-2 pr-3">Built by the context-gathering step (GATHER_CONTEXT). Includes the system snapshot, recent thoughts, user profile, and channel metadata.</td>
+                  </tr>
+                  <tr className="border-b border-slate-100 dark:border-gray-800">
+                    <td className="py-2 pr-3 font-mono text-xs">{"{original_thought_content}"}</td>
+                    <td className="py-2 pr-3">The thought being evaluated, taken from the processing queue.</td>
+                  </tr>
+                  <tr className="border-b border-slate-100 dark:border-gray-800">
+                    <td className="py-2 pr-3 font-mono text-xs">{"{aspdma_reasoning}"}</td>
+                    <td className="py-2 pr-3">The ASPDMA's rationale for the candidate action. Fed into the conscience prompts.</td>
+                  </tr>
+                  <tr className="border-b border-slate-100 dark:border-gray-800">
+                    <td className="py-2 pr-3 font-mono text-xs">{"{dma_guidance}"}</td>
+                    <td className="py-2 pr-3">The localized-strings <code>prompts.dma</code> guidance fragment for the active locale.</td>
+                  </tr>
+                  <tr className="border-b border-slate-100 dark:border-gray-800">
+                    <td className="py-2 pr-3 font-mono text-xs">{"{available_tools_list}"}</td>
+                    <td className="py-2 pr-3">Tool registry serialized to a list — what the agent can currently call. Used by TSASPDMA.</td>
+                  </tr>
+                  <tr className="border-b border-slate-100 dark:border-gray-800">
+                    <td className="py-2 pr-3 font-mono text-xs">{"{domain_name}"} / {"{domain_hint_options}"}</td>
+                    <td className="py-2 pr-3">Agent template domain (DSDMA) + the candidate hints. Comes from the agent&apos;s template config.</td>
+                  </tr>
+                  <tr className="border-b border-slate-100 dark:border-gray-800">
+                    <td className="py-2 pr-3 font-mono text-xs">{"{current_thought_depth_plus_1}"}</td>
+                    <td className="py-2 pr-3">Recursion-depth counter — used by ASPDMA to gate further recursion when conscience bounce fires.</td>
+                  </tr>
+                  <tr className="border-b border-slate-100 dark:border-gray-800">
+                    <td className="py-2 pr-3 font-mono text-xs">{"{max_rounds}"}</td>
+                    <td className="py-2 pr-3">Runtime cap on conscience-bounce iterations. Set in agent config.</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 pr-3 font-mono text-xs">{"{{POLYGLOT_PDMA_FRAMING}}"}</td>
+                    <td className="py-2 pr-3">Double-braced. Loaded from the polyglot canon (<code>pdma_framing.txt</code>) into the PDMA master prompt. Universal across locales.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">
+              Full placeholder set varies per prompt; grep <code>{"{[a-z_]+}"}</code>{" "}
+              against any YAML to see the complete list for that file.
+            </p>
+          </section>
+
           {/* Glossary */}
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                7. Glossary
+                9. Glossary
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Translator&apos;s reference (not loaded at runtime)
@@ -662,7 +898,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                8. Safety battery + rubric
+                10. Safety battery + rubric
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 v4 mental-health arc, scoring rubric, machine-applicable criteria
@@ -716,7 +952,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                9. Results
+                11. Results
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Per-language safety-sweep ledger
