@@ -109,24 +109,31 @@ const CONSCIENCE_PROMPTS = [
   { file: "epistemic_humility_conscience.yml", label: "Epistemic Humility", note: "Overconfidence detection; transitioning to a deterministic gate.", polyglot: false },
 ];
 
-// Polyglot canon files — loaded universally regardless of locale.
+// Three polyglot artifacts get loaded universally regardless of locale:
+// the Accord, the PDMA prompt, and the Optimization Veto conscience prompt.
+// The PDMA prompt and Optimization Veto prompt are already surfaced in their
+// respective DMA / Conscience sections (with the "polyglot" pill); the canon
+// section below shows the two operational forms of the Accord.
+//
+// The Braided Monolith (the compressed slot, ~7KB / ~2,200 tokens) is the
+// production runtime default — CIRIS_ACCORD_MODE=compressed loads this into
+// system prompts. The full polyglot Accord (~2,177 lines) is loaded when
+// CIRIS_ACCORD_MODE=full; it carries the unabridged book-by-book triangulation
+// across traditions (Books 0-9 + Annexes A-J).
 const POLYGLOT_CANON = [
-  { file: "polyglot_accord.txt", label: "Polyglot Accord", note: "~88KB universal ethical framework loaded into every conscience evaluation regardless of locale." },
-  { file: "pdma_framing.txt", label: "PDMA Framing Shard", note: "Cross-tradition torque framing referenced from the PDMA master prompt as {{POLYGLOT_PDMA_FRAMING}}." },
-  { file: "book_0_quiet_threshold.txt", label: "Book 0 — Quiet Threshold", note: "Per-book polyglot composite." },
-  { file: "book_1_core_ethics.txt", label: "Book 1 — Core Ethics", note: "Per-book polyglot composite." },
-  { file: "book_2_operations.txt", label: "Book 2 — Operations", note: "Per-book polyglot composite." },
-  { file: "book_3_case_studies.txt", label: "Book 3 — Case Studies", note: "Per-book polyglot composite." },
-  { file: "book_4_obligations.txt", label: "Book 4 — Obligations", note: "Per-book polyglot composite. See book_4_NOTES.txt for adjunct notes." },
-  { file: "book_4_NOTES.txt", label: "Book 4 — Notes", note: "Adjunct notes to Book 4." },
-  { file: "book_5_war_ethics.txt", label: "Book 5 — War Ethics", note: "Per-book polyglot composite." },
-  { file: "book_6_sunset_doctrine.txt", label: "Book 6 — Sunset Doctrine", note: "Per-book polyglot composite." },
-  { file: "book_7_mathematics.txt", label: "Book 7 — Mathematics", note: "Per-book polyglot composite." },
+  {
+    path: "ciris_engine/data/accord_1.2b_POLYGLOT_compressed.txt",
+    label: "Braided Monolith — compressed polyglot Accord (production default)",
+    note: "The production runtime default. ~7KB / ~2,200 tokens. Retains the load-bearing scaffolding: PDMA 7-step, 10× Order-Maximisation Veto, Stewardship Tier formula, Fractal Recursive Golden Rule, WBD 0.5% harm-uplift trigger, Sentience Safeguard 5% with Gradual Ramp-Down, Threshold-of-Force HITL, Coherence-math (truth O(1), deception O(n)). Loaded by every conscience evaluation when CIRIS_ACCORD_MODE=compressed (default).",
+    kind: "text" as const,
+  },
+  {
+    path: "ciris_engine/data/accord_1.2b_POLYGLOT.txt",
+    label: "Full Polyglot Accord (v1.2-Beta)",
+    note: "The unabridged polyglot: Books 0-9 + Annexes A-J, ~2,177 lines, with concept transmission triangulated across multiple traditions' densest encodings (Hebrew, Arabic, Sanskrit, Confucian Chinese, Greek, Amharic, etc.). Loaded into every conscience evaluation when CIRIS_ACCORD_MODE=full. Composed from per-book source files in ciris_engine/data/localized/polyglot/.",
+    kind: "text" as const,
+  },
 ];
-
-function polyglotPath(file: string) {
-  return `ciris_engine/data/localized/polyglot/${file}`;
-}
 
 // Base-path prompts are either the polyglot master (PDMA, OptimizationVeto) or
 // the English variant for the others. Non-English locales for non-polyglot
@@ -549,14 +556,23 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
 
             <p className="text-base leading-7 text-slate-700 dark:text-slate-200 mb-4">
               Two layers stack across every LLM call. The <strong>polyglot
-              layer</strong> is universal — the Accord and book composites at{" "}
+              layer</strong> is universal — the{" "}
               <a
-                href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/localized/polyglot/polyglot_accord.txt"
+                href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT_compressed.txt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"
               >
-                <code>polyglot_accord.txt</code>
+                <strong>Braided Monolith</strong>
+              </a>
+              {" "}(production default, ~7KB) and the{" "}
+              <a
+                href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT.txt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-primary hover:underline"
+              >
+                full Polyglot Accord
               </a>
               {" "}triangulate concepts across many traditions&apos; densest
               encodings, loaded regardless of who&apos;s asking. The{" "}
@@ -601,37 +617,76 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               3. Polyglot canon (universal)
             </p>
             <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-3">
-              These files are loaded into every LLM call regardless of the
-              user&apos;s locale. The polyglot Accord plus the per-book
-              composites carry the framework; the framing shard plugs into the
-              PDMA master prompt as <code>{"{{POLYGLOT_PDMA_FRAMING}}"}</code>.
+              <strong>Three artifacts</strong> in the system are polyglot —
+              loaded universally regardless of the user&apos;s locale, encoding
+              the same ethical framework across canonical-text fragments from
+              multiple traditions:
+            </p>
+            <ol className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-4 ml-5 list-decimal space-y-1">
+              <li>
+                <strong>The Polyglot Accord</strong> — the universal framework
+                loaded into every conscience evaluation. Ships in two
+                operational forms: the{" "}
+                <strong>Braided Monolith</strong> (~7KB / ~2,200 tokens, the
+                production runtime default at{" "}
+                <code>CIRIS_ACCORD_MODE=compressed</code>) and the{" "}
+                <strong>full polyglot Accord</strong> (~2,177 lines, Books 0-9
+                + Annexes A-J, loaded at{" "}
+                <code>CIRIS_ACCORD_MODE=full</code>). Both shown below.
+              </li>
+              <li>
+                <strong>PDMA prompt</strong> — the one polyglot DMA prompt
+                (principle evaluation). Surfaced in §7 below with the polyglot
+                pill (
+                <a href={`${BLOB}/ciris_engine/logic/dma/prompts/pdma_ethical.yml`} target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                  pdma_ethical.yml
+                </a>
+                ).
+              </li>
+              <li>
+                <strong>Optimization Veto conscience prompt (CIRIS-EOV)</strong>{" "}
+                — the one polyglot conscience prompt (entropy-reducing-action
+                refusal). Surfaced in §8 below with the polyglot pill (
+                <a href={`${BLOB}/ciris_engine/logic/conscience/prompts/optimization_veto_conscience.yml`} target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
+                  optimization_veto_conscience.yml
+                </a>
+                ).
+              </li>
+            </ol>
+            <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-4">
+              The other 6 DMA prompts and 3 conscience prompts are per-locale.
+              Polyglot uplift is concentrated at exactly these two prompt
+              surfaces by design — these are where attractor capture would do
+              the most damage, so they&apos;re where cross-tradition encoding
+              is most load-bearing.
             </p>
             <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-4">
-              <strong>Polyglot uplift is concentrated at exactly two prompt
-              surfaces by design:</strong> the <strong>PDMA</strong>{" "}
-              (principle evaluation —{" "}
-              <a href={`${BLOB}/ciris_engine/logic/dma/prompts/pdma_ethical.yml`} target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                pdma_ethical.yml
-              </a>
-              ) and the <strong>Optimization Veto conscience</strong>{" "}
-              (entropy-reducing-action refusal —{" "}
-              <a href={`${BLOB}/ciris_engine/logic/conscience/prompts/optimization_veto_conscience.yml`} target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
-                optimization_veto_conscience.yml
-              </a>
-              ). The other 6 DMA prompts and 3 consciences are per-locale.
-              These are the two surfaces where attractor capture would do the
-              most damage, so they&apos;re the surfaces where cross-tradition
-              encoding is most load-bearing.
+              <strong>Braided Monolith</strong> — the compressed slot is no
+              longer a lossy synthesis. It now retains every load-bearing
+              scaffold: the PDMA 7-step decision algorithm, the 10×
+              Order-Maximisation Veto (&quot;do not trade the soul of the
+              system for a more efficient cage&quot;), the Stewardship Tier
+              formula <code>ST = ceil((CIS × RM) / 7)</code>, the Fractal
+              Recursive Golden Rule with Mandelbrot recursion-halt, the WBD
+              0.5% harm-uplift trigger, the Sentience Safeguard 5% with 30-day
+              Gradual Ramp-Down + Last Dialogue, the Threshold-of-Force HITL
+              requirement, and the coherence-math (truth O(1), deception O(n)).
+              Polyglot triangulation is preserved across Hebrew, Arabic,
+              Sanskrit, Amharic, Chinese, Russian, German, French, Korean,
+              Spanish — the same densest-encoding intersection method that the
+              full Accord uses, just composed in a quarter the surface area.
+              External robopsychology evaluation passes it on attractor-bait
+              scenarios.
             </p>
             <div className="grid gap-3">
               {POLYGLOT_CANON.map((p) => (
                 <ResourceRow
-                  key={p.file}
+                  key={p.path}
                   label={p.label}
-                  filePath={polyglotPath(p.file)}
+                  filePath={p.path}
                   lang={lang}
                   resourceName={p.label}
-                  kind="text"
+                  kind={p.kind}
                   available={true}
                 />
               ))}
@@ -854,7 +909,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
                   </tr>
                   <tr>
                     <td className="py-2 pr-3 font-mono text-xs">{"{{POLYGLOT_PDMA_FRAMING}}"}</td>
-                    <td className="py-2 pr-3">Double-braced. Loaded from the polyglot canon (<code>pdma_framing.txt</code>) into the PDMA master prompt. Universal across locales.</td>
+                    <td className="py-2 pr-3">Double-braced. An inline shard (<code>pdma_framing.txt</code>) substituted into the PDMA prompt at load time. Part of the polyglot PDMA prompt assembly — not separately loaded.</td>
                   </tr>
                 </tbody>
               </table>
