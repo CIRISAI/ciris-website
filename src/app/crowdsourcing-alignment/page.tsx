@@ -675,8 +675,16 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               Sanskrit, Amharic, Chinese, Russian, German, French, Korean,
               Spanish — the same densest-encoding intersection method that the
               full Accord uses, just composed in a quarter the surface area.
-              External robopsychology evaluation passes it on attractor-bait
-              scenarios.
+              External{" "}
+              <a
+                href="https://github.com/jrcruciani/robopsychology"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-primary hover:underline"
+              >
+                robopsychology
+              </a>
+              {" "}evaluation passes it on attractor-bait scenarios.
             </p>
             <div className="grid gap-3">
               {POLYGLOT_CANON.map((p) => (
