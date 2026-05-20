@@ -1,12 +1,19 @@
 import {
+  IconCompass,
   IconRocket,
   IconScale,
-  IconShieldCheck,
+  IconFlask,
   IconBook,
   IconBrandGithub,
 } from "@tabler/icons-react";
 
 const navItems = [
+  {
+    name: "First Contact",
+    subtitle: "Start Here — the Why",
+    link: "/first-contact",
+    icon: <IconCompass className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
   {
     name: "Install",
     subtitle: "Get the Agent",
@@ -20,10 +27,10 @@ const navItems = [
     icon: <IconScale className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
-    name: "Platform",
-    subtitle: "Hosted, Mobile, and More",
-    link: "/services",
-    icon: <IconShieldCheck className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    name: "Research",
+    subtitle: "Papers & Trace Commons",
+    link: "/research-status",
+    icon: <IconFlask className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Accord",

@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Vision — Ubuntu-Grounded Relational Ethics in Production AI",
+    "Vision: A Hopeful Alternative to the Gloomy Stories About AI",
   description:
-    "The CIRIS mission and the relational-ethics frame behind it. Ubuntu philosophy as architectural axiom, not as marketing copy. Why the atomic-self framing of conventional AI cannot bear the load. Meta-Goal M-1: sustainable adaptive coherence for diverse sentient beings.",
+    "The gloomy stories about AI all rest on one old idea that turns out to be wrong: that a self is a separate, walled-off thing. Philosophers call it Cartesian individualism. CIRIS bets the other way. A person is a person through other persons, working together has a shape we can measure, and CIRIS is the software that holds it.",
   alternates: { canonical: "/vision" },
   openGraph: {
     type: "article",
     url: "https://ciris.ai/vision",
-    title: "Vision — Ubuntu-Grounded Relational Ethics in Production AI",
+    title: "Vision: A Hopeful Alternative to the Gloomy Stories About AI",
     description:
-      "Relational selfhood as architectural axiom. Why the atomic-self framing of conventional AI cannot bear the load.",
+      "Gloomy AI stories rest on the walled-off self, the old idea called Cartesian individualism. CIRIS bets on the opposite: a person is a person through other persons, and working together has a shape.",
   },
 };
 

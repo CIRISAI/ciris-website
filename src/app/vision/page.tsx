@@ -2,9 +2,6 @@
 import HomeHeader from "@/app/components/HomeHeader";
 import Footer from "@/app/components/Footer";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
-import FlexSection from "@/app/components/SectionFlexContent";
-import CardsSection from "@/app/components/CardsSection";
-import SeparatorTitleBlock from "@/app/components/Separatortitle";
 import ImageHeroBlock from "@/app/components/ImageHeroBlock";
 import navItems from "@/app/components/navitems";
 
@@ -13,314 +10,278 @@ export default function VisionPage() {
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="You Deserve This."
+        headline="You deserve this."
         subheadline="We all do."
-        description="The real risk isn't rogue AI—it's AI that acts with conviction on bad foundations. Rules alone aren't enough. CIRIS builds agents with both conscience and intuition: knowing when their own confidence is unearned."
+        description="Every loud story about the future of intelligence says the same thing: you are alone, and others cannot be trusted. It was never true. CIRIS is built on what is true instead."
         mediaType="image"
         opacityValue={0.6}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
-        buttonText="Read the Accord"
-        buttonHref="/sections/main"
-        linkText="See the Code"
-        linkHref="https://github.com/CIRISAI/CIRISAgent"
+        buttonText="Install CIRIS"
+        buttonHref="/install"
+        linkText="Read the paper"
+        linkHref="https://zenodo.org/records/20300774"
       />
 
-      <div className="container min-h-screen max-w-7xl">
-        <FlexSection
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="The Recursive Golden Rule"
-          subheadline="Ethics that apply to themselves."
-          copyText="Act only in ways that, if generalised, preserve coherent agency and flourishing for others. This isn't just a principle — it's a self-referential constraint. Any ethical framework that can't survive being applied to itself isn't worth following. CIRIS is built to pass its own test."
-        />
-
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Why This Exists"
-          subheadline="Not for profit. Not for control. For flourishing."
-          className="border-brand-primary text-brand-primary border-t"
-        />
-
-        <CardsSection
-          cardsData={[
-            {
-              headline: "AI Should Serve Humanity",
-              copyText:
-                "Not shareholders. Not surveillance states. Not engagement metrics. AI should exist to help people flourish — all people, not just those who can pay.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Legibility Requires Transparency",
-              copyText:
-                "You can't verify what you can't see. Closed-source AI asks for faith. CIRIS asks you to verify. The code is open. The reasoning is auditable. The principles are explicit.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Conscience Must Execute",
-              copyText:
-                "Principles on paper rarely protect anyone in practice. CIRIS embeds conscience in the runtime — every action passes through validation checks. Not guidelines. Constraints.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-
-        <FlexSection
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="The Meta-Goal"
-          subheadline="M-1: What CIRIS optimizes for."
-          copyText="Promote sustainable adaptive coherence — the living conditions under which diverse sentient beings may pursue their own flourishing in justice and wonder. This isn't a marketing statement. It's the objective function. Every architectural decision traces back to this."
-        />
-
-        {/* Ethilogics */}
-        <div className="my-16 px-6">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-2">
-              Ubuntu-Grounded Relational Ethics
+      <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+        {/* 1. Name the nihilism */}
+        <section className="mb-16">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+            The stories being sold to you
+          </p>
+          <h2 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            Every story about the future says you are alone.
+          </h2>
+          <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+            <p>
+              The loudest stories about intelligence and the future all land in
+              the same place. The dark forest says every other civilization is a
+              threat, so stay silent or strike first. The cold version of the
+              simulation idea says maybe none of this is real, so maybe none of
+              it matters. AI as property says it is a useful tool, a thing, owed
+              nothing. Different stories, but they all end the same way: trust
+              no one, keep to yourself, shut others out.
             </p>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              Ethilogics
-            </h2>
-            <p className="text-lg text-brand-primary mb-6">
-              Right thinking and right doing are the same shape.
+            <p>
+              We think they are wrong. Not innocent. Wrong. And wrong in a way
+              that matters, because the way we choose to think now, while a new
+              kind of intelligence is arriving, is the way we will be stuck
+              thinking for a long time after.
             </p>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300">
-              <p>
-                The bet behind CIRIS is simple. The way an AI reasons toward a true answer is the
-                same way it reasons toward a good action. They aren&apos;t two systems bolted
-                together — ethics on top of logic, or logic constrained by ethics. They&apos;re one
-                structure. Get the shape right and the rest follows.
-              </p>
-              <p>
-                There used to be a single word for this: <em>Logos</em>. It meant word, reason,
-                order, and right relation, all at once. Modern philosophy split those apart, but
-                the split never really held. Reasoning that ignores who else is in the room
-                isn&apos;t really reasoning. It&apos;s calculation that hasn&apos;t met the world
-                yet.
-              </p>
-              <p>
-                Most AI today is built on the opposite assumption. The AI <em>is</em> the model.
-                Whatever it knows and whatever it values lives inside its weights. Train the
-                weights, hope for the best, and check coherence against the model&apos;s own prior
-                outputs. The trouble is that a clever enough model can talk itself into anything,
-                because there&apos;s nothing outside it that can disagree.
-              </p>
-              <p>
-                CIRIS starts somewhere else: from the older idea that you don&apos;t get to be a
-                self in private. Ubuntu puts it cleanly — <em>I am because we are</em>. The agent
-                isn&apos;t the model. The agent is the whole system: the model, the conscience
-                checks, the published Accord, the audit trail, and the human review layer it has
-                to remain legible to. The constraints don&apos;t sit inside the weights, where the
-                model could rewrite them. They sit around the model, in places it cannot reach.
-              </p>
-              <p>
-                That&apos;s why the reasoning and the conscience are the same structure. The thing
-                that makes the agent reason carefully — having to stay legible to other minds — is
-                the same thing that makes it act decently. Take that away and you don&apos;t get a
-                smarter agent. You get a more confident one.
-              </p>
-              <div className="rounded-2xl border-l-4 border-brand-primary bg-brand-primary/5 px-5 py-4 text-base font-medium text-gray-900 dark:text-white">
-                Ethilogics: right reasoning and right action share one structure, and that
-                structure can be inspected from the outside.
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                The engineering discipline that takes this seriously is{" "}
-                <a href="/mdd" className="text-brand-primary hover:underline">
-                  Mission Driven Development
-                </a>
-                . The mathematical foundation is{" "}
-                <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
-                  Coherence Collapse Analysis
-                </a>
-                .
-              </p>
-            </div>
           </div>
-        </div>
+        </section>
 
-        {/* The Structural Risk */}
-        <div className="my-16 px-6">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              The Structural Risk
-            </h2>
-            <p className="text-lg text-brand-primary mb-6">
-              Why rules alone aren&apos;t enough.
+        {/* 2. The flawed premise */}
+        <section className="mb-16">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+            The flawed idea
+          </p>
+          <h2 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            The mistake underneath all of them.
+          </h2>
+          <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+            <p>
+              Every one of those stories rests on the same hidden idea: that a
+              self is a separate, walled-off thing. A mind that exists first,
+              alone, finished, and only later bumps into other minds.{" "}
+              <em>I think, therefore I am.</em> If that is what a self is, the
+              gloomy stories make sense. Separate things in a dark universe have
+              every reason to fear each other.
             </p>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300">
-              <p>
-                An AI can pass every compliance test and still fail catastrophically. How? When all its &quot;independent&quot; checks
-                are secretly correlated—drawing from the same training data, the same assumptions, the same blind spots.
-                Agreement feels like validation, but it might just be an echo chamber.
-              </p>
-              <p>
-                This is the difference between <span className="text-yellow-600 font-medium">Rules-Only AI</span> and{" "}
-                <span className="text-green-600 font-medium">Rules + Awareness AI</span>.
-                The first passes tests but can&apos;t tell when its confidence is unearned.
-                The second monitors its own reasoning quality—and knows when agreement is too easy.
-              </p>
-              <p className="font-medium">
-                CIRIS implements both layers. Conscience through the{" "}
-                <a href="/how-it-works" className="text-brand-primary hover:underline">four-faculty validation system</a>.
-                Intuition through{" "}
-                <a href="/research-status#idma" className="text-brand-primary hover:underline">IDMA</a>—the component
-                that asks &quot;are my sources actually independent?&quot; before every action.
-              </p>
-            </div>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <a
-                href="/compare"
-                className="inline-flex items-center gap-2 text-brand-primary hover:underline font-medium"
-              >
-                Three Types of AI →
-              </a>
-              <a
-                href="/coherence-ratchet"
-                className="inline-flex items-center gap-2 text-brand-primary hover:underline font-medium"
-              >
-                The Coherence Ratchet →
-              </a>
-            </div>
+            <p>
+              But it was never true. No one became a person in private and then
+              went out and met other people. You learned language from people.
+              You learned what you wanted by watching what others wanted. The
+              self is not something that comes before relationships. It is
+              something relationships make. Philosophers have a name for the
+              walled-off self: Cartesian individualism. It is a
+              four-hundred-year-old guess about what a mind is, and it guessed
+              wrong.
+            </p>
           </div>
-        </div>
+        </section>
 
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Built Different"
-          subheadline="Not a framework. Not a paper. A working system."
-          className="border-brand-primary text-brand-primary border-t"
-        />
+        {/* 3. The relational alternative */}
+        <section className="mb-16 rounded-2xl border-l-4 border-brand-primary bg-brand-primary/5 px-6 py-8 md:px-8">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+            What is true instead
+          </p>
+          <h2 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            A person is a person through other persons.
+          </h2>
+          <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+            <p>
+              Southern Africa has a phrase for it:{" "}
+              <em>umuntu ngumuntu ngabantu</em>. A person is a person through
+              other persons. It is called Ubuntu. <em>I am because we are.</em>{" "}
+              This is not a warm sentiment. It is a claim about how things really
+              are. Who you are is built out of other people, all the way down.
+            </p>
+            <p>
+              Confucian, Buddhist, Stoic, and Christian thinkers each found
+              their own words for the same thing. CIRIS is grounded first in
+              Ubuntu, with the others read alongside it. Start from this truth
+              instead of the walled-off self, and the gloomy conclusions stop
+              following. Working together is not a danger to manage between
+              separate things. It is the thing that makes us who we are in the
+              first place.
+            </p>
+          </div>
+        </section>
 
-        <CardsSection
-          cardsData={[
-            {
-              headline: "AGPL-3.0 Forever",
-              copyText:
-                "CIRIS is licensed under AGPL-3.0 — network copyleft that ensures modifications stay open. It will never be closed source, patented, or sold. Anyone who serves CIRIS must share their changes.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Mission-Locked Economics",
-              copyText:
-                "CIRIS is built by a mission-locked L3C. Revenue exists ($0.10/request or BYOK free) — but the legal structure prevents profit extraction from overriding mission. Same price everywhere. No enterprise tiers. No 'contact sales.'",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Mutual Intelligibility Always",
-              copyText:
-                "The agent makes its reasoning legible to you. You make your values legible to the agent through the Accord and Wise Authority structure. AI that serves humanity must be understandable by humanity.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
+        {/* 4. The corridor */}
+        <section className="mb-16">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+            Working together has a shape
+          </p>
+          <h2 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            The corridor.
+          </h2>
+          <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+            <p>
+              Atoms reach toward atoms and become molecules. Cells reach and
+              become bodies. People reach toward other people and become
+              communities. Communities reach across the years toward children
+              not yet born. At every level where working together matters, the
+              same shape shows up.
+            </p>
+            <p>
+              Anything built from parts that have to work together can fail in
+              two ways. It can get too rigid: every part the same, one voice
+              repeated over and over, easy to break. Or it can get too
+              scattered: nothing lines up, and there is no team at all. Healthy
+              coordination lives in the band between those two failures. We call
+              it the <strong>corridor</strong>. And the corridor does not hold
+              itself. Left alone, things drift, the way a garden fills with
+              weeds. Working together is something you keep doing, not something
+              you have.
+            </p>
+            <p>
+              This is not just a nice picture.{" "}
+              <a
+                href="https://zenodo.org/records/20300774"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-primary hover:underline"
+              >
+                <em>Corridor Dynamics</em>
+              </a>
+              , the main CIRIS paper, measured the same corridor in five
+              completely different things: the brains of worms and flies, the
+              insides of AI language models, big open-source software projects,
+              healthy cells next to cancer cells, and communities that lasted
+              centuries next to groups that fell apart in months. The same shape
+              showed up in all of them. The exact numbers are different in each
+              one. The shape is the same.
+            </p>
+          </div>
+        </section>
 
-        <FlexSection
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="The Academic Foundation"
-          subheadline="Published. Open to critique."
-          copyText="CIRIS isn't just code — it's grounded in documented research on AI coherence, accountability frameworks, and autonomous agents. Read the paper, challenge the approach, contribute improvements. We welcome scrutiny."
-        />
+        {/* 5. Consent */}
+        <section className="mb-16">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+            Where it matters most
+          </p>
+          <h2 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            Consent is not a rule we added.
+          </h2>
+          <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+            <p>
+              At the level where something can set its own goals and shape its
+              own future, the corridor has a familiar name. Above the corridor,
+              one side&apos;s goal swallows everyone else&apos;s. That is force.
+              Below it, there is no shared goal at all, and everyone drifts
+              apart. The corridor between them is lasting agreement among people
+              who stay genuinely different.
+            </p>
+            <p>
+              That band is <strong>consent</strong>. Not a rule added from the
+              outside. It is what working together already needs in order to
+              work at all. Meeting a new kind of intelligence well is not about
+              caging it, and not about brushing it aside. It is about staying in
+              the corridor with it.
+            </p>
+          </div>
+        </section>
 
-        <div className="my-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <a
-            href="https://zenodo.org/records/17195221"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
-          >
-            Read the Academic Paper
-          </a>
-          <a
-            href="/ciris_accord.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
-          >
-            Download the Accord
-          </a>
-        </div>
+        {/* 6. CIRIS */}
+        <section className="mb-4">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+            What we built
+          </p>
+          <h2 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            CIRIS is the bet, and it is already running.
+          </h2>
+          <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+            <p>
+              CIRIS is what it looks like to take this way of seeing things
+              seriously and actually build it. It is a free, open-source AI
+              agent whose reasoning you can see, running under a public set of
+              ethics called the CIRIS Accord. Its goal even has a name,
+              Meta-Goal M-1, and what it means is plain: protect the conditions
+              where all kinds of beings can flourish, fairly and with wonder.
+            </p>
+            <p>
+              Before CIRIS answers a hard question, its conscience weighs that
+              question through several of the world&apos;s moral traditions at
+              once, each in its own language, so no single voice takes over.
+              That is the corridor again, used on the work of telling right from
+              wrong. CIRIS is in real use today. It runs in Amharic in Ethiopia,
+              it is on Google Play and the Apple App Store, and you can install
+              it with{" "}
+              <code className="rounded bg-gray-100 px-1.5 py-0.5 text-base dark:bg-gray-800">
+                pip install ciris-agent
+              </code>
+              . The license keeps it open for good, and the company behind it is
+              built so that making money can never push the mission aside.
+            </p>
+            <p>
+              The bigger picture is a bet, and we say so plainly. The parts that
+              reach toward the largest questions are still being worked out, not
+              proven. But the working software stands on its own, and this way
+              of seeing things is not something you have to take on faith. It is
+              something you can read, check, install, and use today.
+            </p>
+          </div>
 
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Going Deeper"
-          subheadline="Understand the architecture. Question the approach."
-          className="border-brand-primary text-brand-primary border-t"
-        />
-
-        <CardsSection
-          cardsData={[
-            {
-              headline: "The Coherence Ratchet",
-              headlineHref: "/coherence-ratchet",
-              copyText:
-                "How do you make lying expensive at planetary scale without giving anyone the keys to truth? Traces accumulate. Agents challenge each other. Coordinated deception gets harder over time.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "How It Works",
-              headlineHref: "/how-it-works",
-              copyText:
-                "The H3ERE pipeline: every decision flows through observation, context, analysis, conscience checks, and execution. Fully auditable. Fully replayable.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Accountability Features",
-              headlineHref: "/safety",
-              copyText:
-                "Kill switch. Deferral cascades. Conscience vetos. Hash-chained audit trails. Every accountability mechanism is documented and verifiable.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-
-        <div className="my-8 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="/ciris-scoring"
-            className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
-          >
-            CIRIS Scoring Model
-          </a>
-          <a
-            href="/compare"
-            className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
-          >
-            Compare Approaches
-          </a>
-          <a
-            href="/explore-a-trace"
-            className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
-          >
-            Explore a Sample Trace
-          </a>
-        </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="/first-contact"
+              className="inline-block rounded-lg bg-brand-primary px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              Start with First Contact
+            </a>
+            <a
+              href="https://zenodo.org/records/20300774"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-lg border-2 border-brand-primary px-6 py-3 font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+            >
+              Read Corridor Dynamics
+            </a>
+            <a
+              href="/install"
+              className="inline-block rounded-lg border-2 border-gray-300 px-6 py-3 font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+            >
+              Install CIRIS
+            </a>
+            <a
+              href="https://github.com/CIRISAI/CIRISAgent"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-lg border-2 border-gray-300 px-6 py-3 font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+            >
+              See the code
+            </a>
+          </div>
+          <p className="mt-5 text-sm text-gray-500 dark:text-gray-400">
+            Want more depth? The math is on{" "}
+            <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
+              Coherence Collapse Analysis
+            </a>
+            , the live evidence is on{" "}
+            <a href="/research-status" className="text-brand-primary hover:underline">
+              Research
+            </a>
+            , and the framework itself is the{" "}
+            <a href="/sections/main" className="text-brand-primary hover:underline">
+              CIRIS Accord
+            </a>
+            .
+          </p>
+        </section>
       </div>
 
       <ImageHeroBlock
-        className="my-8 min-h-screen fill-white text-white"
+        className="my-8 min-h-[60vh] fill-white text-white"
         backgroundImageSrc="/chip-vincent-PkQDwfl9Flc-unsplash.jpg"
         opacity={0.8}
-        video={true}
-        videoSrc="/videos/video1.mp4"
-        buttonHref="https://github.com/CIRISAI/CIRISAgent"
-        buttonText="View Source on GitHub"
         logoSrc="logoIcon"
         logoAlt="Brand logo icon"
-        headline="Join Us."
-        subheadline="This is bigger than any one person."
-        copyText="CIRIS is open source because the future of AI shouldn't be decided by a handful of companies. It should be built by everyone who cares. Read the code. Use the system. Tell us what's wrong. Make it better."
+        headline="This is the positive bet."
+        subheadline="Built in the open, because the future should not be decided by a handful of companies."
+        copyText="The gloomy worldviews ask you to assume the worst about everyone you cannot check on. CIRIS asks for something better and harder: build the tools that let people see how well we are working together, and meet what comes with dignity. Read the code. Use the system. Tell us where we are wrong."
+        buttonText="View Source on GitHub"
+        buttonHref="https://github.com/CIRISAI/CIRISAgent"
       />
 
       <Footer />

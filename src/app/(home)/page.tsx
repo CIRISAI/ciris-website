@@ -16,9 +16,9 @@ export default function Homepage() {
     <>
       <FloatingNav navItems={navItems} />
       <HomeHeader
-        headline="The Open Ethical AI Agent."
+        headline="Coordination has a shape."
         subheadline="A free ChatGPT alternative you can actually check — in your language, on your phone."
-        description="CIRIS is a free, open-source AI assistant with visible reasoning, privacy-preserving traces, and a public ethical framework. Available on iPhone, Android, desktop, and pip."
+        description="We found it — and built CIRIS to hold it. An open, auditable AI agent with visible reasoning, privacy-preserving traces, and a public ethical framework. On iPhone, Android, desktop, and pip."
         supportingText="Open source, free, privacy-preserving, and built for accountability."
         mediaType="video"
         opacityValue={0.55}
