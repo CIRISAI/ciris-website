@@ -39,6 +39,32 @@ const schemaHighlights = [
   "They give researchers a way to study how behavior scales as intelligence, context, and data volume increase.",
 ];
 
+// Engineering-tier papers — each stands on its own DOI. The flagship
+// synthesis (Corridor Dynamics) integrates these; it does not replace them.
+const papers = [
+  {
+    href: "https://zenodo.org/records/18217688",
+    title: "Coherence Collapse Analysis",
+    meta: "v3 · Jan 11, 2026 · DOI 10.5281/zenodo.18217688",
+    blurb:
+      "The engineering risk framework under the corridor idea. When the constraints governing a system become correlated, effective diversity collapses — k_eff = k/(1+ρ(k−1)) → 1 as ρ → 1. Derives three collapse timelines, a singularity boundary, and phase classification (chaos / healthy / rigidity). Verified with Monte Carlo simulation and Lean 4 proofs.",
+  },
+  {
+    href: "https://zenodo.org/records/18137161",
+    title: "CIRISAgent Framework",
+    meta: "v2 · Jan 2, 2026 · DOI 10.5281/zenodo.18137161",
+    blurb:
+      "The framework paper. An open-source ethical AI framework for accountable autonomy: a 22-service architecture organized around explicit action verbs and ethical reasoning, building transparency into the structure rather than bolting it on afterward.",
+  },
+  {
+    href: "https://zenodo.org/records/19839280",
+    title: "Constrained Reasoning Chains",
+    meta: "v1 · Apr 28, 2026 · DOI 10.5281/zenodo.19839280",
+    blurb:
+      "The measurement paper. An empirical telemetry study of LLM alignment under standardized ethical tracing — turning consented reasoning traces into maps of completion corridors, hesitation zones, and refusal boundaries. Released alongside the open reasoning-traces dataset.",
+  },
+];
+
 export default function ResearchStatusPage() {
   return (
     <>
@@ -53,7 +79,7 @@ export default function ResearchStatusPage() {
                     Research status
                   </span>
                   <span className="rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300">
-                    Updated: April 28, 2026
+                    Updated: May 20, 2026
                   </span>
                 </div>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
@@ -96,23 +122,97 @@ export default function ResearchStatusPage() {
             </div>
           </section>
 
-          <section className="mb-14 grid gap-4 md:grid-cols-2">
+          {/* Flagship synthesis paper */}
+          <section className="mb-8">
             <a
-              href="https://zenodo.org/records/19839280"
+              href="https://zenodo.org/records/20300774"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors hover:border-brand-primary dark:border-gray-800 dark:bg-gray-900"
+              className="block rounded-3xl border-2 border-brand-primary bg-gradient-to-br from-brand-primary/5 to-transparent p-8 shadow-sm transition-colors hover:from-brand-primary/10 dark:border-brand-primary dark:from-brand-primary/10"
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                Latest paper
-              </p>
-              <h2 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">
-                Constrained Reasoning Chains
+              <div className="mb-3 flex flex-wrap items-center gap-3">
+                <span className="rounded-full bg-brand-primary px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-white">
+                  Flagship synthesis paper
+                </span>
+                <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                  v1 · May 20, 2026 · DOI 10.5281/zenodo.20300774
+                </span>
+              </div>
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white md:text-3xl">
+                Corridor Dynamics in Coordinated Systems
               </h2>
-              <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-                An empirical telemetry study of LLM coherence under standardized ethical tracing. Zenodo record: Version v1, published April 28, 2026.
+              <p className="mt-1 text-sm font-medium text-slate-500 dark:text-slate-400">
+                An Integration of Operator Formalism, Relational Ontology, and
+                Five-Substrate Empirical Validation
               </p>
+              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
+                The integration statement of CIRIS — the single document that
+                states the framework&apos;s full structural commitment.
+                Coordinated systems sit in a bounded <strong>corridor</strong>{" "}
+                between rigidity (ρ → 1, single-voice collapse) and chaos
+                (ρ → 0, vacuous dispersal); the corridor is the regime where
+                coordination is possible at all. The argument grounds in
+                Ubuntu&apos;s relational ontology, formalizes in Lean 4
+                (1,942 modules, 0 declaration-level gaps, 63 documented
+                axioms), and reads two-state vector formalism as the
+                structural form of agency.
+              </p>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
+                The new empirical contribution is a <strong>paired
+                in-corridor / out-of-corridor record across five
+                substrates</strong>: C. elegans whole-brain calcium imaging,
+                Drosophila central-complex imaging, four LLM architectures,
+                four open-source projects (Kubernetes, Rust, Django, Redis),
+                tumor-vs-normal tissue across five cancers, and three
+                centuries-persisting religious societies. The dynamical
+                reading&apos;s strongest would-be falsifier — long unmaintained
+                non-corridor persistence — is <strong>absent at all five</strong>:
+                out-of-corridor states either dissolve quickly or persist only
+                with documented active maintenance. The synthesis is offered
+                as a bet under uncertainty, with twenty falsification handles
+                (F-1 … F-20) attached to every load-bearing seam.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
+                Read on Zenodo →
+              </span>
             </a>
+          </section>
+
+          {/* Engineering-tier papers */}
+          <section className="mb-8">
+            <p className="mb-1 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+              The engineering tier
+            </p>
+            <p className="mb-5 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">
+              The synthesis above integrates these three papers; it does not
+              replace them. Each stands on its own DOI and is evaluable on its
+              own terms.
+            </p>
+            <div className="grid gap-4 md:grid-cols-3">
+              {papers.map((paper) => (
+                <a
+                  key={paper.href}
+                  href={paper.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors hover:border-brand-primary dark:border-gray-800 dark:bg-gray-900"
+                >
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                    {paper.title}
+                  </h3>
+                  <p className="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+                    {paper.meta}
+                  </p>
+                  <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    {paper.blurb}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          {/* Open dataset + org link */}
+          <section className="mb-14 grid gap-4 md:grid-cols-[1.6fr_1fr]">
             <a
               href="https://huggingface.co/datasets/CIRISAI/reasoning-traces"
               target="_blank"
@@ -122,56 +222,41 @@ export default function ResearchStatusPage() {
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
                 Open dataset
               </p>
-              <h2 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">
+              <h3 className="mt-2 text-lg font-semibold text-slate-900 dark:text-white">
                 CIRISAI/reasoning-traces
-              </h2>
+              </h3>
               <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-                The privacy-preserving reasoning trace corpus released alongside the Constrained Reasoning Chains study. Part of the broader CIRISAI org of public datasets and models on Hugging Face.
+                The privacy-preserving reasoning-trace corpus released
+                alongside the Constrained Reasoning Chains study — the raw
+                material the measurement paper draws its maps from.
               </p>
             </a>
-            <a
-              href="https://zenodo.org/records/18137161"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors hover:border-brand-primary dark:border-gray-800 dark:bg-gray-900"
-            >
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                Paper
-              </p>
-              <h2 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">
-                CIRISAgent Framework v2
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-                Open-source ethical AI framework for accountable autonomy. Zenodo record: Version v2, published January 2, 2026.
-              </p>
-            </a>
-            <a
-              href="https://zenodo.org/records/18217688"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors hover:border-brand-primary dark:border-gray-800 dark:bg-gray-900"
-            >
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                Paper
-              </p>
-              <h2 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">
-                Coherence Collapse Analysis v3
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
-                Engineering risk framework for correlation-driven diversity collapse in complex systems. Zenodo record: Version v3, published January 11, 2026.
-              </p>
-            </a>
-          </section>
-
-          <div className="mb-14 flex justify-center">
             <a
               href="https://huggingface.co/CIRISAI"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-brand-primary px-6 py-3 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+              className="flex flex-col justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center shadow-sm transition-colors hover:border-brand-primary dark:border-gray-800 dark:bg-gray-950"
             >
-              See the full CIRISAI org on Hugging Face →
+              <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                CIRISAI on Hugging Face
+              </p>
+              <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                The full org of public datasets and models →
+              </p>
             </a>
+          </section>
+
+          <div className="mb-14 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm leading-6 text-slate-600 dark:border-gray-800 dark:bg-gray-950 dark:text-slate-300">
+            Source repository and Lean formal lake for the synthesis paper:{" "}
+            <a
+              href="https://github.com/CIRISAI/coherence-ratchet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-brand-primary hover:underline"
+            >
+              github.com/CIRISAI/coherence-ratchet
+            </a>
+            .
           </div>
 
           <section id="alignment-manifold" className="mb-14 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
