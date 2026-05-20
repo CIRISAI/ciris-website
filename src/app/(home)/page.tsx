@@ -17,8 +17,8 @@ export default function Homepage() {
       <FloatingNav navItems={navItems} />
       <HomeHeader
         headline="Coordination has a shape."
-        subheadline="A free ChatGPT alternative you can actually check — in your language, on your phone."
-        description="We found it — and built CIRIS to hold it. An open, auditable AI agent with visible reasoning, privacy-preserving traces, and a public ethical framework. On iPhone, Android, desktop, and pip."
+        subheadline="A free ChatGPT alternative you can actually check, in your language, on your phone."
+        description="We found it, and built CIRIS to hold it. An open, auditable AI agent with visible reasoning, privacy-preserving traces, and a public ethical framework. On iPhone, Android, desktop, and pip."
         supportingText="Open source, free, privacy-preserving, and built for accountability."
         mediaType="video"
         opacityValue={0.55}
@@ -29,7 +29,7 @@ export default function Homepage() {
         linkHref="/compare"
       />
 
-      {/* Mobile install badges — surface the most-clicked action directly under the hero */}
+      {/* Mobile install badges: surface the most-clicked action directly under the hero */}
       <div className="container max-w-7xl pt-8">
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <p className="text-sm text-gray-600 dark:text-gray-400">Get it now:</p>
@@ -69,7 +69,7 @@ export default function Homepage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="What CIRIS Agent Does"
-          subheadline="Use it instead of ChatGPT or Gemini — open-source, auditable, multilingual, and plugs into your home."
+          subheadline="Use it instead of ChatGPT or Gemini. Open-source, auditable, multilingual, and plugs into your home."
           copyText="Ask it the things you'd ask any AI assistant. The difference is you can see exactly how it reasoned, verify it didn't drift from a public ethical framework, and run it on a phone in 228 megabytes. Plug it into Home Assistant for fully open-source home control. Production deployments today include a Discord moderation bot and mobile apps across 29 languages."
           className="border-brand-primary text-brand-primary border-t"
         />
@@ -80,7 +80,7 @@ export default function Homepage() {
               headline: "Replace ChatGPT or Gemini",
               headlineHref: "/install",
               copyText:
-                "An open-source assistant for the questions you'd otherwise put to a closed-source model. Polyglot across 29 languages — including low-resource ones — and runs in 228 MB on a commodity Android phone.",
+                "An open-source assistant for the questions you'd otherwise put to a closed-source model. Polyglot across 29 languages (including low-resource ones) and runs in 228 MB on a commodity Android phone.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -192,7 +192,7 @@ export default function Homepage() {
               headline: "Compare",
               headlineHref: "/compare",
               copyText:
-                "See the public case for why CIRIS is the safest and most ethical AI in production today — checked against other approaches, with the receipts.",
+                "See the public case for why CIRIS is the safest and most ethical AI in production today, checked against other approaches, with the receipts.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

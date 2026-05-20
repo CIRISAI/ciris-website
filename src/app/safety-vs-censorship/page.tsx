@@ -34,8 +34,8 @@ export default function SafetyVsCensorshipPage() {
               The failure mode we&apos;re worried about
             </h2>
             <p className="text-base leading-7 text-slate-600 dark:text-slate-300 mb-4">
-              If humans crowdsource per-case verdicts — &quot;did this
-              specific response break the rule?&quot; — bias rides into
+              If humans crowdsource per-case verdicts (&quot;did this
+              specific response break the rule?&quot;), bias rides into
               every interpretation. The same behavior gets called
               differently depending on who&apos;s voting today. Even with
               good intentions, the loop slides toward enforcing the
@@ -54,7 +54,7 @@ export default function SafetyVsCensorshipPage() {
               Rules are crowdsourced. Verdicts are machined.
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
-              People propose and vote on rules — public, dated, signed,
+              People propose and vote on rules: public, dated, signed,
               reversible. A deterministic check applies those rules to
               specific cases. Same response + same rule → same verdict,
               every time. The argument moves <em>upstream</em>, to whether
@@ -70,15 +70,15 @@ export default function SafetyVsCensorshipPage() {
             </h2>
             <p className="text-base leading-7 text-slate-600 dark:text-slate-300 mb-4">
               Rules pass an <strong>operational-language gate</strong>{" "}
-              before they can be voted on — a rule has to be checkable
+              before they can be voted on. A rule has to be checkable
               without judgment, or it isn&apos;t ready. Every rule is
               dated, signed, and version-pinned. The verdict on any
               specific response is produced deterministically.
             </p>
             <p className="text-base leading-7 text-slate-600 dark:text-slate-300">
               If a verdict turns out to be wrong, the appeal goes through
-              <strong> Reconsideration</strong> by a fresh review group —
-              the original adjudicators recused — not back to the same
+              <strong> Reconsideration</strong> by a fresh review group
+              (the original adjudicators recused), not back to the same
               crowd that produced the verdict. That structural separation
               is the load-bearing piece.
             </p>
@@ -91,7 +91,7 @@ export default function SafetyVsCensorshipPage() {
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
               None of this is automatic. The discipline holds only if rule
-              language stays <em>operational</em> — about things a machine
+              language stays <em>operational</em>, about things a machine
               can check, not about feelings. The moment a rule slides from
               &quot;uses the wrong word for therapy&quot; toward &quot;feels
               disrespectful,&quot; human interpretation re-enters by the

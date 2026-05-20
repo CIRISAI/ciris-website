@@ -30,7 +30,7 @@ export default function InstallPage() {
               Install CIRIS
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
-              An open-source replacement for ChatGPT and Gemini — auditable reasoning, polyglot
+              An open-source replacement for ChatGPT and Gemini: auditable reasoning, polyglot
               across 29 languages, plugs into Home Assistant for fully open-source home control.
             </p>
             <p className="mt-3 text-base text-gray-600 dark:text-gray-400">
@@ -46,7 +46,7 @@ export default function InstallPage() {
                 📱 Mobile Apps Now Available
               </p>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                Your personal AI agent on mobile — private, local-first, open source
+                Your personal AI agent on mobile: private, local-first, open source
               </p>
             </div>
             <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
@@ -253,7 +253,7 @@ asyncio.run(main())`}
             </div>
 
             <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-              The SDK is <strong>pre-beta</strong> — interfaces may change between releases.
+              The SDK is <strong>pre-beta</strong>. Interfaces may change between releases.
               Full API surface (181 endpoints across 15 modules) documented in{" "}
               <a
                 href="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk"

@@ -230,7 +230,7 @@ function ContextDetail({ data }: { data: Record<string, unknown> }) {
             </div>
             <div className="text-sm font-mono text-gray-800 dark:text-gray-200 break-all">
               {value === null || value === undefined
-                ? "—"
+                ? "-"
                 : typeof value === "object"
                   ? JSON.stringify(value)
                   : String(value)}
@@ -802,7 +802,7 @@ function DMAResultCard({
         </div>
       )}
 
-      {/* Reasoning — skipped entirely when the wire payload doesn't carry it
+      {/* Reasoning: skipped entirely when the wire payload doesn't carry it
           (e.g. CSDMA / DSDMA on production 2.7.legacy traces). */}
       {reasoning && reasoning.trim() ? (
         <div className="bg-gray-50 dark:bg-gray-800/50 rounded p-3">

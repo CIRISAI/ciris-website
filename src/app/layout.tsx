@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 const TITLE =
-  "CIRIS — Verifiable Ethical AI Agent | Coherence-Grounded, AGPL, Production-Deployed";
+  "CIRIS: Verifiable Ethical AI Agent | Coherence-Grounded, AGPL, Production-Deployed";
 
 const DESCRIPTION =
   "Open-source ethical AI framework with post-quantum cryptographic attestation (Ed25519 + ML-DSA-65 dual signatures), runtime conscience, Kish-formula effective-dimensionality measurement, Ubuntu-grounded relational ethics, and Mission Driven Development methodology. AGPL-3.0, L3C mission-locked. Live on Google Play and App Store.";
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "CIRIS — Verifiable Ethical AI Agent",
+        alt: "CIRIS: Verifiable Ethical AI Agent",
       },
     ],
   },
@@ -106,7 +106,7 @@ const jsonLd = {
           "@type": "Offer",
           name: "Hosted CIRIS Agent",
           description:
-            "Hosted ethical AI agent service. Same price everywhere — no enterprise tiers, no contact-sales. Free with bring-your-own-key.",
+            "Hosted ethical AI agent service. Same price everywhere, no enterprise tiers, no contact-sales. Free with bring-your-own-key.",
           price: "0.10",
           priceCurrency: "USD",
           availability: "https://schema.org/InStock",

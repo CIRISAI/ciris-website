@@ -15,7 +15,7 @@ export default function ComparePage() {
       <HomeHeader
         headline="The Safest and Most Ethical AI in Production Today"
         subheadline="Without accountability, AI tends to extract more than it gives."
-        description="If you can't check the accountability, it's marketing. Here's what to look for — and how existing approaches compare."
+        description="If you can't check the accountability, it's marketing. Here's what to look for, and how existing approaches compare."
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -47,7 +47,7 @@ export default function ComparePage() {
                 No published principles. No audit trail. Closed source. You can&apos;t check what it did or why.
               </p>
               <p className="text-xs text-gray-600 dark:text-gray-400 italic mb-3">
-                Most consumer AI assistants — ChatGPT, Gemini — sit here from a
+                Most consumer AI assistants (ChatGPT, Gemini) sit here from a
                 public-accountability standpoint. Strong internal practices may exist; you
                 can&apos;t verify them.
               </p>
@@ -63,7 +63,7 @@ export default function ComparePage() {
                 <h3 className="text-xl font-bold text-yellow-700 dark:text-yellow-400">Rules, No Awareness</h3>
               </div>
               <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                Follows ethical rules. But can&apos;t tell when all its sources are just copying each other — so it can be confidently wrong.
+                Follows ethical rules. But can&apos;t tell when all its sources are just copying each other, so it can be confidently wrong.
               </p>
               <p className="text-xs text-yellow-600 dark:text-yellow-400 font-medium">
                 Safe when supervised. Can&apos;t detect echo chambers on its own.
@@ -106,7 +106,7 @@ export default function ComparePage() {
             {
               headline: "1. Published Principles",
               copyText:
-                "The agent must follow a public ethical framework. Not hidden rules — a document anyone can read and hold it accountable to.",
+                "The agent must follow a public ethical framework. Not hidden rules: a document anyone can read and hold it accountable to.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
               headlineHref: "/sections/main/v1",
@@ -114,7 +114,7 @@ export default function ComparePage() {
             {
               headline: "2. Conscience Check on Every Decision",
               copyText:
-                "Every action goes through a conscience check before the agent does it. Not after the fact — before.",
+                "Every action goes through a conscience check before the agent does it. Not after the fact. Before.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -147,7 +147,7 @@ export default function ComparePage() {
             {
               headline: "6. Open Source",
               copyText:
-                "You can't audit what you can't see. CIRIS is fully open source under AGPL-3.0 — anyone can read, verify, and improve the code.",
+                "You can't audit what you can't see. CIRIS is fully open source under AGPL-3.0. Anyone can read, verify, and improve the code.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
               headlineHref: "https://github.com/CIRISAI/CIRISAgent/blob/main/LICENSE",
@@ -206,7 +206,7 @@ export default function ComparePage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <p className="text-gray-300 mb-4">
-                As sources start copying each other, the number of truly independent viewpoints collapses — even if you have ten sources on paper.
+                As sources start copying each other, the number of truly independent viewpoints collapses, even if you have ten sources on paper.
               </p>
               <p className="text-gray-300">
                 Ten sources that all read the same report? That&apos;s really one source counted ten times.
@@ -225,7 +225,7 @@ export default function ComparePage() {
 
           <div className="mt-6 pt-6 border-t border-gray-700 flex flex-wrap gap-4 items-center justify-between">
             <p className="text-sm text-gray-400">
-              This problem shows up everywhere — from financial markets to scientific peer review to social media.
+              This problem shows up everywhere, from financial markets to scientific peer review to social media.
             </p>
             <a
               href="/coherence-ratchet"
@@ -318,7 +318,7 @@ export default function ComparePage() {
           </div>
 
           <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-            Output filters and governance frameworks solve important but different problems. Filters block harmful outputs. Conscience reasons about values. CIRIS aims to do both — and catch the blind spots that neither addresses alone.
+            Output filters and governance frameworks solve important but different problems. Filters block harmful outputs. Conscience reasons about values. CIRIS aims to do both, and catch the blind spots that neither addresses alone.
           </p>
         </div>
 
@@ -335,7 +335,7 @@ export default function ComparePage() {
             {
               headline: "Output Filters",
               copyText:
-                "Block dangerous outputs — prompt injection, harmful content, adversarial attacks. Like a filter that catches bad things on the way out.",
+                "Block dangerous outputs: prompt injection, harmful content, adversarial attacks. Like a filter that catches bad things on the way out.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -420,7 +420,7 @@ export default function ComparePage() {
             </a>
             <a href="/trust" className="text-center hover:bg-brand-primary/10 rounded-lg p-2 -m-2 transition-colors">
               <p className="font-semibold text-gray-900 dark:text-white mb-2">Verify Its Identity</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">See how agents prove who they are — like a DMV for AI. <span className="text-brand-primary">Trust & identity →</span></p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">See how agents prove who they are, like a DMV for AI. <span className="text-brand-primary">Trust & identity →</span></p>
             </a>
             <a href="/first-contact" className="text-center hover:bg-brand-primary/10 rounded-lg p-2 -m-2 transition-colors">
               <p className="font-semibold text-gray-900 dark:text-white mb-2">Get Started</p>

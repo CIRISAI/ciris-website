@@ -20,7 +20,7 @@ export default function ModelsPage() {
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
               CIRIS Agent runs on a small set of open models that meet five non-negotiable
               criteria. The current production lineup is Llama 4 Maverick, Llama 4 Scout, Qwen 3.6,
-              and Gemma 4 — chosen for different roles in the agent&apos;s workload.
+              and Gemma 4, chosen for different roles in the agent&apos;s workload.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export default function ModelsPage() {
               </h2>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
                 Small enough to run on commodity hardware. Used where reach matters more than
-                raw capacity — on-device, low-bandwidth, and degraded-network deployments — and
+                raw capacity (on-device, low-bandwidth, and degraded-network deployments) and
                 as a third-family fallback alongside Llama and Qwen.
               </p>
               <p className="text-xs text-gray-600 dark:text-gray-400">
@@ -90,7 +90,7 @@ export default function ModelsPage() {
               logoAlt="Brand logo icon"
               headline="CIRIS doesn't trim its values to fit the model"
               subheadline="We choose models large enough to carry our entire ethical framework."
-              copyText="CIRIS includes the complete Accord and Comprehensive Guide in every single LLM call. No compression, no summaries, no options. This means the agent never forgets its obligations—not even for a single token. That's why context window isn't a vanity metric for us: it's a direct extension of our commitment to transparency and accountability."
+              copyText="CIRIS includes the complete Accord and Comprehensive Guide in every single LLM call. No compression, no summaries, no options. This means the agent never forgets its obligations, not even for a single token. That's why context window isn't a vanity metric for us: it's a direct extension of our commitment to transparency and accountability."
             />
           </div>
 
@@ -108,7 +108,7 @@ export default function ModelsPage() {
                 {
                   headline: "1. Structured Outputs & Tool Use",
                   copyText:
-                    "Must natively support function calling and return valid JSON across 12-70 tool calls per interaction. CIRIS is an orchestrator—we need stable tool semantics, not chatty conversation.",
+                    "Must natively support function calling and return valid JSON across 12-70 tool calls per interaction. CIRIS is an orchestrator. We need stable tool semantics, not chatty conversation.",
                   logoSrc: "logoIcon",
                   logoAlt: "Brand logo icon",
                 },
@@ -122,7 +122,7 @@ export default function ModelsPage() {
                 {
                   headline: "3. Cost Efficiency",
                   copyText:
-                    "Target: <$1.00 per 1M tokens combined. We choose the cheapest working option—not the cheapest benchmark winner. A reliable model that never breaks JSON beats a cheaper model that fails 1 in 10 calls.",
+                    "Target: <$1.00 per 1M tokens combined. We choose the cheapest working option, not the cheapest benchmark winner. A reliable model that never breaks JSON beats a cheaper model that fails 1 in 10 calls.",
                   logoSrc: "logoIcon",
                   logoAlt: "Brand logo icon",
                 },
@@ -242,7 +242,7 @@ export default function ModelsPage() {
                   What stays out of the lineup
                 </h3>
                 <p className="mb-3 text-gray-700 dark:text-gray-300">
-                  Models that cannot meet the five criteria — most often, models that look
+                  Models that cannot meet the five criteria, most often, models that look
                   attractive on token price but fail on structured output and tool calling.
                 </p>
                 <div className="rounded-md bg-red-100 p-3 dark:bg-red-900/40">
@@ -301,7 +301,7 @@ export default function ModelsPage() {
                   The bottom line:
                 </p>
                 <p className="mt-2 text-sm">
-                  CIRIS does not trim its values or procedures to fit the model. Instead, CIRIS chooses models that are large enough to carry the entire ethical and operational framework on every call. Models with smaller context windows—even if cheaper or more popular—are excluded from production use.
+                  CIRIS does not trim its values or procedures to fit the model. Instead, CIRIS chooses models that are large enough to carry the entire ethical and operational framework on every call. Models with smaller context windows (even if cheaper or more popular) are excluded from production use.
                 </p>
               </div>
             </div>
@@ -360,15 +360,15 @@ export default function ModelsPage() {
             <p className="text-gray-700 dark:text-gray-300">
               CIRIS runs Llama 4 Maverick, Llama 4 Scout, Qwen 3.6, and Gemma 4 in production
               because together they satisfy the operational and economic constraints the Accord
-              imposes — long context, reliable tool calling, polyglot coverage, and reach to
-              commodity hardware — across three independent model families. New models are
+              imposes: long context, reliable tool calling, polyglot coverage, and reach to
+              commodity hardware, across three independent model families. New models are
               monitored and tested continuously; the lineup changes when something better
               actually meets the five criteria.
             </p>
             <p className="mt-4 text-gray-700 dark:text-gray-300">
               This is not about chasing benchmark scores or following hype cycles. It is about
               choosing models that actually work for accountable, tool-centric agents in
-              production — and that take the Accord seriously enough to carry it in every single
+              production, and that take the Accord seriously enough to carry it in every single
               call.
             </p>
           </div>

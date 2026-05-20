@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     type: "article",
     url: "https://ciris.ai/safety-vs-censorship",
     title:
-      "Where crowdsourced safety can drift — and how we're trying not to.",
+      "Where crowdsourced safety can drift, and how we're trying not to.",
     description:
       "A risk we see in our own design. Rules are crowdsourced; verdicts are machined. The discipline we're committing to, and where it can still fail.",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Where crowdsourced safety can drift — and how we're trying not to.",
+      "Where crowdsourced safety can drift, and how we're trying not to.",
     description:
       "Naming a risk in our own design. Rules crowdsourced, verdicts machined, appeals through Reconsideration.",
   },

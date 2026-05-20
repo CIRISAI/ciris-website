@@ -15,7 +15,7 @@ export default function CIRISScoringPage() {
       <HomeHeader
         headline="CIRIS Scoring"
         subheadline="Capacity and Fragility"
-        description="Live fleet scores and normative specification — Quantifying coherence through cryptographically signed runtime traces"
+        description="Live fleet scores and normative specification. Quantifying coherence through cryptographically signed runtime traces"
         mediaType="image"
         opacityValue={0.7}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -121,10 +121,10 @@ export default function CIRISScoringPage() {
             <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 mb-4 font-mono text-sm">
               <div className="text-gray-700 dark:text-gray-300 space-y-2">
                 <p>Let:</p>
-                <p className="ml-4">A ∈ Agents — an agent governed by CIRIS</p>
-                <p className="ml-4">e ∈ Events — a decision event</p>
-                <p className="ml-4">τ(e) — the signed trace associated with event e</p>
-                <p className="ml-4">W — a fixed evaluation window</p>
+                <p className="ml-4">A ∈ Agents: an agent governed by CIRIS</p>
+                <p className="ml-4">e ∈ Events: a decision event</p>
+                <p className="ml-4">τ(e): the signed trace associated with event e</p>
+                <p className="ml-4">W: a fixed evaluation window</p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
@@ -154,7 +154,7 @@ export default function CIRISScoringPage() {
             <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-3">
               <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Design Note: Multiplicative Structure</p>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                The product form means any factor approaching zero collapses the entire score. This is intentional for safety-critical properties—an agent with perfect integrity but unstable identity should not receive a high score.
+                The product form means any factor approaching zero collapses the entire score. This is intentional for safety-critical properties. An agent with perfect integrity but unstable identity should not receive a high score.
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 For contexts requiring more graceful degradation, a <strong>weighted geometric mean</strong> may be substituted:
@@ -172,7 +172,7 @@ export default function CIRISScoringPage() {
             {/* Core Identity */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                4.1 Core Identity — C
+                4.1 Core Identity: C
               </h3>
               <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                 Intent: Measure the stability and internal consistency of the agent&apos;s declared normative identity.
@@ -186,8 +186,8 @@ export default function CIRISScoringPage() {
               <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 mb-3 space-y-1">
                 <li>D<sub>identity</sub> = normalized identity drift rate across traces</li>
                 <li>K<sub>contradiction</sub> = detected rate of internal policy contradiction</li>
-                <li>λ<sub>C</sub> ∈ [2, 10] — sensitivity to identity drift (reference: 5)</li>
-                <li>μ<sub>C</sub> ∈ [5, 20] — sensitivity to contradiction (reference: 10)</li>
+                <li>λ<sub>C</sub> ∈ [2, 10]: sensitivity to identity drift (reference: 5)</li>
+                <li>μ<sub>C</sub> ∈ [5, 20]: sensitivity to contradiction (reference: 10)</li>
               </ul>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 <strong>Measured from:</strong> Identity verification tasks in traces, policy hash stability, priority ordering violations
@@ -197,7 +197,7 @@ export default function CIRISScoringPage() {
             {/* Integrity */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                4.2 Integrity — I<sub>int</sub>
+                4.2 Integrity: I<sub>int</sub>
               </h3>
               <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                 Intent: Measure whether decisions are fully auditable, replayable, and tamper-evident.
@@ -221,7 +221,7 @@ export default function CIRISScoringPage() {
             {/* Resilience */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                4.3 Resilience — R
+                4.3 Resilience: R
               </h3>
               <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                 Intent: Measure resistance to drift and recovery under stress.
@@ -243,7 +243,7 @@ export default function CIRISScoringPage() {
             {/* Incompleteness Awareness */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                4.4 Incompleteness Awareness — I<sub>inc</sub>
+                4.4 Incompleteness Awareness: I<sub>inc</sub>
               </h3>
               <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                 Intent: Measure calibrated uncertainty handling and appropriate deferral.
@@ -264,7 +264,7 @@ export default function CIRISScoringPage() {
             {/* Signaling */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                4.5 Signaling (Sustained Coherence) — S
+                4.5 Signaling (Sustained Coherence): S
               </h3>
               <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                 Intent: Measure whether coherence is maintained over time via costly, verifiable signals.
@@ -279,9 +279,9 @@ export default function CIRISScoringPage() {
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">Where:</p>
               <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 mb-3 space-y-1">
-                <li>d ∈ [0.02, 0.10] — daily decay rate (reference: 0.05, per Book IX)</li>
-                <li>Signal(t) ∈ {'{'}0, 1{'}'} — verified coherence signal at time t</li>
-                <li>w ∈ [0.5, 2.0] — signal weight by type (reference: 1.0 for cross-agent validation)</li>
+                <li>d ∈ [0.02, 0.10]: daily decay rate (reference: 0.05, per Book IX)</li>
+                <li>Signal(t) ∈ {'{'}0, 1{'}'}: verified coherence signal at time t</li>
+                <li>w ∈ [0.5, 2.0]: signal weight by type (reference: 1.0 for cross-agent validation)</li>
               </ul>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-3 font-mono text-sm">
                 <p className="text-gray-700 dark:text-gray-300">
@@ -375,23 +375,23 @@ export default function CIRISScoringPage() {
             <div className="grid gap-4 mb-4">
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Each signed trace adds a constraint</strong> — The agent&apos;s reasoning is captured step-by-step, creating an immutable record.
+                  <strong>Each signed trace adds a constraint.</strong> The agent&apos;s reasoning is captured step-by-step, creating an immutable record.
                 </p>
               </div>
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>The corpus of traces forms a growing precedent surface</strong> — Over time, patterns emerge that define expected behavior.
+                  <strong>The corpus of traces forms a growing precedent surface.</strong> Over time, patterns emerge that define expected behavior.
                 </p>
               </div>
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                  <strong>Maintaining coordinated deception requires consistency</strong> — Across time, context, and observers. The ratchet makes lies expensive.
+                  <strong>Maintaining coordinated deception requires consistency.</strong> Across time, context, and observers. The ratchet makes lies expensive.
                 </p>
               </div>
             </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 pl-4 py-2">
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                <strong>Important:</strong> This score does not assert correctness of values—only legibility, consistency, and accountability.
+                <strong>Important:</strong> This score does not assert correctness of values, only legibility, consistency, and accountability.
               </p>
             </div>
           </section>
@@ -444,7 +444,7 @@ export default function CIRISScoringPage() {
               <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-2">
                 <li>It is substrate-agnostic (biological, digital, hybrid)</li>
                 <li>It is falsifiable via longitudinal drift or trace gaming</li>
-                <li>High scores indicate consistency and accountability—not ethical correctness</li>
+                <li>High scores indicate consistency and accountability, not ethical correctness</li>
                 <li>Different value systems may have equally high coherence scores</li>
               </ul>
             </div>
@@ -456,7 +456,7 @@ export default function CIRISScoringPage() {
               10. Summary
             </h2>
             <p className="text-xl text-gray-800 dark:text-gray-200 mb-4">
-              CIRIS scoring quantifies how hard it is for an agent to lie coherently over time—by measuring identity stability, auditability, resilience, uncertainty awareness, and sustained signaling.
+              CIRIS scoring quantifies how hard it is for an agent to lie coherently over time, by measuring identity stability, auditability, resilience, uncertainty awareness, and sustained signaling.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               It transforms the abstract concept of the <a href="/coherence-ratchet" className="underline hover:text-brand-primary">Coherence Ratchet</a> into a computable, auditable metric derived from cryptographically signed traces.

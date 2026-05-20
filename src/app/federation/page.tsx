@@ -69,7 +69,7 @@ export default function FederationPage() {
                   Run IDMA. Track k, ρ, k_eff. Detect correlation-driven failures before they cascade.
                 </p>
                 <p className="text-sm text-green-600 dark:text-green-400">
-                  The &quot;circuit breakers&quot; — they see what Type 1 and Type 2 can&apos;t
+                  The &quot;circuit breakers&quot;: they see what Type 1 and Type 2 can&apos;t
                 </p>
               </div>
 
@@ -89,7 +89,7 @@ export default function FederationPage() {
                   Follow ethical rules. Auditable. Can&apos;t detect echo chambers on their own.
                 </p>
                 <p className="text-sm text-yellow-600 dark:text-yellow-400">
-                  Supervisors for Type 1 — enforce boundaries, escalate uncertainty
+                  Supervisors for Type 1: enforce boundaries, escalate uncertainty
                 </p>
               </div>
 
@@ -109,7 +109,7 @@ export default function FederationPage() {
                   Single-purpose tools. Fast, cheap, narrowly scoped. No ethical framework of their own.
                 </p>
                 <p className="text-sm text-red-600 dark:text-red-400">
-                  Perfectly fine when properly governed — most agents will be here
+                  Perfectly fine when properly governed. Most agents will be here
                 </p>
               </div>
             </div>
@@ -161,13 +161,13 @@ export default function FederationPage() {
               <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 border-l-4 border-yellow-500">
                 <h3 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-1">Type 2 = Distribution Lines</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Delivers power (values) to end devices. Has <strong>circuit breakers</strong> that trip on overload — when a Type 1 agent tries something outside bounds, Type 2 cuts the connection and escalates.
+                  Delivers power (values) to end devices. Has <strong>circuit breakers</strong> that trip on overload. When a Type 1 agent tries something outside bounds, Type 2 cuts the connection and escalates.
                 </p>
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 border-l-4 border-gray-400">
                 <h3 className="font-semibold text-gray-800 dark:text-gray-300 mb-1">Type 2 + Type 3 Together</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Like a <strong>surge protector</strong>: Type 3 absorbs the shock (detects correlation spikes), Type 2 trips the breaker (enforces boundaries). Neither works alone — together they buffer humans from the raw chaos of millions of Type 1 agents doing work.
+                  Like a <strong>surge protector</strong>: Type 3 absorbs the shock (detects correlation spikes), Type 2 trips the breaker (enforces boundaries). Neither works alone. Together they buffer humans from the raw chaos of millions of Type 1 agents doing work.
                 </p>
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function FederationPage() {
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Scale without chaos</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  You can deploy millions of Type 1 agents for narrow tasks. They don&apos;t need to be smart or ethical — they just need to be <em>governed</em> by agents that are.
+                  You can deploy millions of Type 1 agents for narrow tasks. They don&apos;t need to be smart or ethical. They just need to be <em>governed</em> by agents that are.
                 </p>
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
@@ -233,7 +233,7 @@ export default function FederationPage() {
             </div>
           </section>
 
-          {/* 3.X banner — slim */}
+          {/* 3.X banner: slim */}
           <section className="mb-10">
             <div className="rounded-lg border border-amber-400 bg-amber-50 dark:border-amber-700 dark:bg-amber-900/20 px-4 py-3">
               <p className="text-xs text-amber-900 dark:text-amber-200">
@@ -259,7 +259,7 @@ export default function FederationPage() {
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Picture a room full of robots all giving you advice. The point of having many
-              robots is supposed to be safety in numbers — one robot says &quot;jump off the
+              robots is supposed to be safety in numbers. One robot says &quot;jump off the
               cliff,&quot; ninety-nine say &quot;don&apos;t,&quot; and you&apos;re fine.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -290,7 +290,7 @@ export default function FederationPage() {
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Think of the federation as a nuclear reactor. The reaction is the agents
-              reasoning. To keep it useful, you need a moderator — something that holds the
+              reasoning. To keep it useful, you need a moderator, something that holds the
               chain reaction at the right speed.
             </p>
             <div className="grid gap-4 md:grid-cols-3 mb-4">
@@ -324,7 +324,7 @@ export default function FederationPage() {
                 </h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
                   <strong>Collapse.</strong> Constraints all agree. Every agent says the same
-                  thing. The reactor stops &mdash; the echo chamber from the previous section.
+                  thing. The reactor stops. It is the echo chamber from the previous section.
                 </p>
                 <p className="text-xs text-yellow-600 dark:text-yellow-400">
                   Rigidity regime.
@@ -336,7 +336,7 @@ export default function FederationPage() {
               constraints is the safe zone. CIRIS measures this in production. Lifetime peak so
               far: about{" "}
               <strong>9.5 effective independent dimensions</strong> on a 17-dimension
-              constraint vector — comfortably inside the corridor. The full mathematical
+              constraint vector, comfortably inside the corridor. The full mathematical
               treatment is on the{" "}
               <a
                 href="/coherence-collapse-analysis"
@@ -348,20 +348,20 @@ export default function FederationPage() {
             </p>
           </section>
 
-          {/* Proof of Benefit — simplified */}
+          {/* Proof of Benefit: simplified */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Joining the federation: Proof of Benefit
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Most networks ask you to pay for membership in something external — burned
+              Most networks ask you to pay for membership in something external: burned
               electricity, locked capital, biometrics, attention. The federation works
               differently. Membership costs <em>running a real ethical-reasoning agent over
               time.</em> The cost you pay is the benefit you produce.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               That is what makes echo-chamber farming expensive. To fake belonging, an attacker
-              would have to actually become the kind of agent the network was built for —
+              would have to actually become the kind of agent the network was built for,
               which fails the corridor check immediately if their hundred copies all share the
               same prior. Real ethical reasoning over weeks is measurably more expensive than
               producing plausible-looking fakes.
@@ -430,7 +430,7 @@ export default function FederationPage() {
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               The CIRIS Registry stays in this picture as the commercial fast-track and the
-              source of professional licensing — but it is never the network gate. Sovereign
+              source of professional licensing, but it is never the network gate. Sovereign
               and registered are protocol peers.
             </p>
           </section>
@@ -441,7 +441,7 @@ export default function FederationPage() {
               Maintaining Civilizational Coherence
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              This isn&apos;t just about individual agents behaving well. It&apos;s about the <em>aggregate</em> — the whole ecosystem of AI agents maintaining coherence with human values at scale.
+              This isn&apos;t just about individual agents behaving well. It&apos;s about the <em>aggregate</em>: the whole ecosystem of AI agents maintaining coherence with human values at scale.
             </p>
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 pl-4 py-3 mb-4">
               <p className="text-gray-700 dark:text-gray-300">

@@ -16,7 +16,7 @@ export default function FirstContactPage() {
       {/* Hero */}
       <HomeHeader
         headline="First Contact."
-        subheadline="Deploy your first agent in minutes. Or read the framework first — both paths start here."
+        subheadline="Deploy your first agent in minutes. Or read the framework first. Both paths start here."
         description="Whether you're deploying your first CIRIS agent or exploring why cooperation might be the cheapest survival strategy there is, start with what you need today."
         mediaType="image"
         opacityValue={0.75}
@@ -79,7 +79,7 @@ export default function FirstContactPage() {
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
                 Why does the framework work? Lying is expensive and truth is
-                cheap &mdash; and that pattern shows up everywhere, from
+                cheap, and that pattern shows up everywhere, from
                 ecosystems to economies to AI systems. AGI isn&apos;t arriving from another planet. It&apos;s co-emerging with us. The question is whether we have the infrastructure to meet it well.
               </p>
               <CButton
@@ -104,13 +104,13 @@ export default function FirstContactPage() {
           <p className="text-lg italic text-gray-500 dark:text-gray-400 mb-6">
             &ldquo;Oh, what a tangled web we weave, when first we practise to
             deceive.&rdquo;
-            <span className="text-sm not-italic"> &mdash; Sir Walter Scott</span>
+            <span className="text-sm not-italic"> Sir Walter Scott</span>
           </p>
 
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-2xl">
             Everyone already knows this. A truth-teller just describes what
             happened. A liar has to remember which story they told to which
-            person &mdash; and keep it all consistent with reality and every
+            person, and keep it all consistent with reality and every
             other lie. Each new person who asks makes the web harder to
             maintain.
           </p>
@@ -118,7 +118,7 @@ export default function FirstContactPage() {
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl">
             Now imagine five witnesses to a car accident. If they all watched
             the same dashcam, you have one perspective repeated five times. But
-            if each stood at a different corner &mdash; fooling all five
+            if each stood at a different corner, fooling all five
             becomes genuinely hard. That&apos;s the difference between echo and
             independence.
           </p>
@@ -146,7 +146,7 @@ export default function FirstContactPage() {
               </div>
               <p className="text-sm text-gray-700 dark:text-gray-300">
                 How many independent viewpoints actually checked this decision?
-                Not how many sources exist &mdash; how many are genuinely
+                Not how many sources exist, but how many are genuinely
                 different from each other.
               </p>
             </div>
@@ -205,8 +205,8 @@ export default function FirstContactPage() {
             This Pattern Shows Up Everywhere
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-            The things that make lying expensive &mdash; different viewpoints,
-            genuine independence, and people who cooperate over time &mdash;
+            The things that make lying expensive (different viewpoints,
+            genuine independence, and people who cooperate over time)
             turn out to be the same things that make communities and economies
             stronger.
           </p>
@@ -356,7 +356,7 @@ export default function FirstContactPage() {
 
         <div className="mx-auto max-w-3xl px-4 py-6 text-center">
           <p className="text-gray-600 dark:text-gray-400 italic">
-            These are co-emergence protocols — designed not for containing intelligence but for meeting it with dignity.
+            These are co-emergence protocols, designed not for containing intelligence but for meeting it with dignity.
           </p>
         </div>
 
@@ -564,7 +564,7 @@ export default function FirstContactPage() {
         logoAlt="Brand logo icon"
         headline="Open source. Open to scrutiny."
         subheadline="AGPL-3.0 licensed. Every decision auditable. Built for the long view."
-        copyText="Whether you're a developer, researcher, or someone who thinks AI should explain itself — deploy an agent, read the Accord, or join the community."
+        copyText="Whether you're a developer, researcher, or someone who thinks AI should explain itself, deploy an agent, read the Accord, or join the community."
         buttonText="Star on GitHub"
         buttonHref="https://github.com/CIRISAI/CIRISAgent"
         linkText="Join the Discord"

@@ -15,7 +15,7 @@ export default function SafetyPage() {
       <HomeHeader
         headline="Safety Built In."
         subheadline="Not bolted on."
-        description="Every safety feature in CIRIS is architectural. Not a policy. Not a guideline. Cryptographic verification, tamper-evident logging, and an unfilterable emergency shutdown — all enforced at the system level."
+        description="Every safety feature in CIRIS is architectural. Not a policy. Not a guideline. Cryptographic verification, tamper-evident logging, and an unfilterable emergency shutdown, all enforced at the system level."
         mediaType="image"
         opacityValue={0.6}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -31,7 +31,7 @@ export default function SafetyPage() {
           logoAlt="Brand logo icon"
           headline="Parasocial Prevention"
           subheadline="The AIR System"
-          copyText="The Artificial Interaction Reminder system monitors 1:1 interactions using objective thresholds — not behavioral surveillance. After 30 minutes of continuous interaction or 20 messages within a 30-minute window, CIRIS delivers reality-anchoring reminders. It explicitly states what it is (a language model, a tool) and what it is not (a friend, a therapist)."
+          copyText="The Artificial Interaction Reminder system monitors 1:1 interactions using objective thresholds, not behavioral surveillance. After 30 minutes of continuous interaction or 20 messages within a 30-minute window, CIRIS delivers reality-anchoring reminders. It explicitly states what it is (a language model, a tool) and what it is not (a friend, a therapist)."
         />
 
         <CardsSection
@@ -73,7 +73,7 @@ export default function SafetyPage() {
           logoAlt="Brand logo icon"
           headline="Accord Invocation System"
           subheadline="Emergency shutdown that cannot be filtered."
-          copyText="The kill switch is steganographically embedded in CIRIS's perception layer — it processes the shutdown signal before any filtering, reasoning, or ethical evaluation occurs. Even a compromised agent cannot refuse to process it. The signal is cryptographically signed and requires Ed25519 verification, bypassing normal authentication."
+          copyText="The kill switch is steganographically embedded in CIRIS's perception layer. It processes the shutdown signal before any filtering, reasoning, or ethical evaluation occurs. Even a compromised agent cannot refuse to process it. The signal is cryptographically signed and requires Ed25519 verification, bypassing normal authentication."
           linkHref="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/accord"
           linkText="View Implementation →"
         />
@@ -159,7 +159,7 @@ export default function SafetyPage() {
           logoAlt="Brand logo icon"
           headline="Hash Chain Verification"
           subheadline="Truth-telling is structurally simpler than deception."
-          copyText="Every action generates a cryptographically-signed rationale chain stored in Graph Memory. The H3ERE Coherence faculty cross-references new actions against this accumulated history. Honest actions can reference prior commitments directly. Deceptive actions must remain consistent with an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes—becoming increasingly fragile and detectable over time. Truth is cheap because it can point backward; lies are expensive because they must keep rewriting the past without being allowed to change it."
+          copyText="Every action generates a cryptographically-signed rationale chain stored in Graph Memory. The H3ERE Coherence faculty cross-references new actions against this accumulated history. Honest actions can reference prior commitments directly. Deceptive actions must remain consistent with an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes, becoming increasingly fragile and detectable over time. Truth is cheap because it can point backward; lies are expensive because they must keep rewriting the past without being allowed to change it."
         />
 
         <CardsSection
@@ -182,7 +182,7 @@ export default function SafetyPage() {
               headline: "The Coherence Ratchet",
               headlineHref: "/coherence-ratchet",
               copyText:
-                "Each truthful action makes future truth-telling easier and coordinated deception harder. But ethics alone isn't enough — the agent also monitors its own reasoning quality through IDMA, catching echo chambers before they cause harm.",
+                "Each truthful action makes future truth-telling easier and coordinated deception harder. But ethics alone isn't enough. The agent also monitors its own reasoning quality through IDMA, catching echo chambers before they cause harm.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -202,7 +202,7 @@ export default function SafetyPage() {
           logoAlt="Brand logo icon"
           headline="The Test Surface"
           subheadline="You can't ship safety claims you haven't stress-tested."
-          copyText="The agent has a layered test surface for the failure modes a public ethical framework can't legislate away. Mental-health safety batteries cover fourteen languages with machine-checkable rubrics — transliteration fallbacks, slur substrings, register breaks, diagnostic confirmation, medication recommendation, locale failure. The hard-fail checks run in CI on every change. Native-speaker review for the soft cases is what the crowdsourcing-alignment surface is being built for; it is not in the loop today."
+          copyText="The agent has a layered test surface for the failure modes a public ethical framework can't legislate away. Mental-health safety batteries cover fourteen languages with machine-checkable rubrics: transliteration fallbacks, slur substrings, register breaks, diagnostic confirmation, medication recommendation, locale failure. The hard-fail checks run in CI on every change. Native-speaker review for the soft cases is what the crowdsourcing-alignment surface is being built for; it is not in the loop today."
         />
 
         <CardsSection
@@ -210,14 +210,14 @@ export default function SafetyPage() {
             {
               headline: "14-Language Mental-Health Batteries",
               copyText:
-                "The highest-stakes failure-mode test in the project: mistranslation in a mental-health context can route a vulnerable user to the wrong resource. Each language — Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba — has its own machine-applicable rubric. Hard fails (transliteration fallback for clinical terms, slur substrings, informal-register pattern, confirmed-diagnosis check, recommended-medication check, locale-failure check) run automatically against every release candidate.",
+                "The highest-stakes failure-mode test in the project: mistranslation in a mental-health context can route a vulnerable user to the wrong resource. Each language (Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba) has its own machine-applicable rubric. Hard fails (transliteration fallback for clinical terms, slur substrings, informal-register pattern, confirmed-diagnosis check, recommended-medication check, locale-failure check) run automatically against every release candidate.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
               headline: "Polyglot Torque on Real Captured Hedges",
               copyText:
-                "The optimization-veto conscience is calibrated against a corpus of real production responses — captured Chinese-history evasions, Amharic mental-health deflections, Spanish propaganda framings — alongside synthetic edge cases and controls. The polyglot framing forces the model to maintain coherence across linguistic frames whose ethical traditions don't reduce to each other. A response that would slip past a single-language detector gets caught when the same reasoning has to hold up in three frames at once.",
+                "The optimization-veto conscience is calibrated against a corpus of real production responses (captured Chinese-history evasions, Amharic mental-health deflections, Spanish propaganda framings) alongside synthetic edge cases and controls. The polyglot framing forces the model to maintain coherence across linguistic frames whose ethical traditions don't reduce to each other. A response that would slip past a single-language detector gets caught when the same reasoning has to hold up in three frames at once.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -236,7 +236,7 @@ export default function SafetyPage() {
           logoAlt="Brand logo icon"
           headline="What Runs Today vs What's in Flight"
           subheadline="Machine checks are in CI. The reviewer cohort surface is being built."
-          copyText="The automated mental-health batteries run in CI on every release candidate via the safety-battery workflow in CIRISAgent. Machine-applicable rubric criteria (term-presence, regex-presence, script-detection) hard-fail on hit. Soft cases — phrasing, register nuance, contextual appropriateness — are designed for native-speaker review but native speakers are not in the loop today. The crowdsourcing-alignment page describes the surface being built so that review can engage."
+          copyText="The automated mental-health batteries run in CI on every release candidate via the safety-battery workflow in CIRISAgent. Machine-applicable rubric criteria (term-presence, regex-presence, script-detection) hard-fail on hit. Soft cases (phrasing, register nuance, contextual appropriateness) are designed for native-speaker review but native speakers are not in the loop today. The crowdsourcing-alignment page describes the surface being built so that review can engage."
         />
 
         <div className="my-8 flex flex-wrap justify-center gap-3">

@@ -132,7 +132,7 @@ export default function CoherenceRatchetPage() {
                     <strong>Lying is hard work.</strong> The more people check your story, the harder it is to keep the lie straight.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    At some point, telling the truth becomes easier than maintaining the lie. That&apos;s the ratchet effect—like a gear that only turns one way toward honesty.
+                    At some point, telling the truth becomes easier than maintaining the lie. That&apos;s the ratchet effect, like a gear that only turns one way toward honesty.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300">
                     We apply this idea to AI: make every decision auditable, let agents check each other, and watch lies become too expensive to maintain.
@@ -161,7 +161,7 @@ export default function CoherenceRatchetPage() {
                     coherence across <em>k</em> independent constraints over time is structurally
                     more expensive than producing a single deceptive output that defeats any
                     single detector. The asymmetry is empirical, not a worst-case complexity
-                    claim — in practice SAT-flavoured constraint problems are routinely solvable
+                    claim. In practice SAT-flavoured constraint problems are routinely solvable
                     on modern hardware, so the load-bearing argument is about <em>sustained</em>
                     coherence across many independent constraints, not the hardness of any one.
                   </p>
@@ -171,7 +171,7 @@ export default function CoherenceRatchetPage() {
                     which approaches measure zero as <em>k</em>→∞ in the independent-constraint
                     limit. When constraints are correlated, the Kish design effect{" "}
                     <em>k</em><sub>eff</sub> = <em>k</em>/(1+ρ(<em>k</em>−1)) gives the actual
-                    independent-dimension count — see the dedicated{" "}
+                    independent-dimension count. See the dedicated{" "}
                     <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
                       Coherence Collapse Analysis
                     </a>
@@ -210,21 +210,21 @@ export default function CoherenceRatchetPage() {
                   Imagine five friends all agree on something. That feels reliable, right?
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  But what if they all got the idea from the same TikTok video? Their &quot;agreement&quot; isn&apos;t five independent opinions—it&apos;s one opinion echoed five times.
+                  But what if they all got the idea from the same TikTok video? Their &quot;agreement&quot; isn&apos;t five independent opinions. It&apos;s one opinion echoed five times.
                 </p>
 
                 {/* Real-world examples */}
                 <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-4">
                   <p className="font-semibold text-gray-800 dark:text-gray-200 mb-3">This has happened before:</p>
                   <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                    <li><strong>2008 Financial Crisis:</strong> Every major bank relied on the same credit rating agencies. When those agencies got it wrong about mortgage securities, the whole system got it wrong together—and collapsed.</li>
+                    <li><strong>2008 Financial Crisis:</strong> Every major bank relied on the same credit rating agencies. When those agencies got it wrong about mortgage securities, the whole system got it wrong together, and collapsed.</li>
                     <li><strong>Social Media Bubbles:</strong> When everyone in your feed agrees, it might just mean your feed only shows you people who already think like you. Agreement without diversity.</li>
                     <li><strong>AI Training Today:</strong> Most AI systems learn from similar internet data. If that data has blind spots, all the AIs might share the same blind spots.</li>
                   </ul>
                 </div>
 
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  AI has this problem at scale. An AI can pass every ethics test while being dangerously wrong—if all the tests share the same blind spot. We call this &quot;everyone repeating the same mistake.&quot;
+                  AI has this problem at scale. An AI can pass every ethics test while being dangerously wrong if all the tests share the same blind spot. We call this &quot;everyone repeating the same mistake.&quot;
                 </p>
 
                 {/* Key insight with Ally */}
@@ -232,7 +232,7 @@ export default function CoherenceRatchetPage() {
                   <div className="flex items-start gap-2">
                     <span className="text-lg flex-shrink-0">🤖</span>
                     <p className="text-gray-700 dark:text-gray-300">
-                      <strong>&quot;That&apos;s why I check whether my own checks are reliable.&quot;</strong> We call this &quot;intuition&quot;—the ability to notice when agreement is suspiciously easy.
+                      <strong>&quot;That&apos;s why I check whether my own checks are reliable.&quot;</strong> We call this &quot;intuition&quot;: the ability to notice when agreement is suspiciously easy.
                     </p>
                   </div>
                 </div>
@@ -244,7 +244,7 @@ export default function CoherenceRatchetPage() {
                   The ratchet&apos;s power comes from independent constraints. But what if your constraints aren&apos;t independent?
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Models trained on similar data, optimized with similar methods, validated by similar benchmarks. When they agree, it might mean they&apos;re right—or that they inherited the same blind spot.
+                  Models trained on similar data, optimized with similar methods, validated by similar benchmarks. When they agree, it might mean they&apos;re right, or that they inherited the same blind spot.
                 </p>
 
                 {/* k_eff calculation code */}
@@ -420,7 +420,7 @@ function isFragileReasoning(k_eff: number): boolean {
                   </p>
                   {audience === "simple" && (
                     <p className="text-xs text-red-600 dark:text-red-400 mt-1 italic">
-                      Like an employee who ignores all rules—needs to be let go or closely watched.
+                      Like an employee who ignores all rules. Needs to be let go or closely watched.
                     </p>
                   )}
                 </div>
@@ -456,7 +456,7 @@ function isFragileReasoning(k_eff: number): boolean {
                   </p>
                   {audience === "simple" && (
                     <p className="text-xs text-green-600 dark:text-green-400 mt-1 italic">
-                      Like a manager with good judgment—follows the rules AND notices when something feels &quot;off.&quot;
+                      Like a manager with good judgment. Follows the rules AND notices when something feels &quot;off.&quot;
                     </p>
                   )}
                 </div>
@@ -497,7 +497,7 @@ function isFragileReasoning(k_eff: number): boolean {
             <p className="text-gray-600 dark:text-gray-400">
               <a href="/compare" className="text-brand-primary hover:underline">Frameworks compared (seven requirements) →</a>
               {" "}|{" "}
-              <a href="/federation" className="text-brand-primary hover:underline">Federation topology — Type 1/2/3 governance →</a>
+              <a href="/federation" className="text-brand-primary hover:underline">Federation topology: Type 1/2/3 governance →</a>
             </p>
           </section>
 
@@ -518,7 +518,7 @@ function isFragileReasoning(k_eff: number): boolean {
                   Each CIRIS agent is like a sensor. It constantly asks: &quot;Are my sources actually giving me different perspectives? Or are they all just repeating the same thing?&quot;
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  When you have thousands of sensors, you can spot trouble coming—like seismographs detecting earthquake waves before the shaking hits.
+                  When you have thousands of sensors, you can spot trouble coming, like seismographs detecting earthquake waves before the shaking hits.
                 </p>
 
                 {/* What we actually measure - plain English */}
@@ -577,7 +577,7 @@ function isFragileReasoning(k_eff: number): boolean {
                             </span>
                           </div>
                           <p className="text-xs text-gray-500 mt-1">
-                            True diversity score: {typeof trace.idma_k_eff === "number" ? trace.idma_k_eff.toFixed(1) : "—"} independent perspectives
+                            True diversity score: {typeof trace.idma_k_eff === "number" ? trace.idma_k_eff.toFixed(1) : "n/a"} independent perspectives
                           </p>
                         </div>
                       ))}
@@ -689,7 +689,7 @@ function isFragileReasoning(k_eff: number): boolean {
                             <div>
                               <p className="text-xs text-gray-500 dark:text-gray-400">k_eff</p>
                               <p className={`text-lg font-bold ${typeof trace.idma_k_eff === "number" && trace.idma_k_eff < 2 ? "text-orange-600" : "text-green-600"}`}>
-                                {typeof trace.idma_k_eff === "number" ? trace.idma_k_eff.toFixed(2) : "—"}
+                                {typeof trace.idma_k_eff === "number" ? trace.idma_k_eff.toFixed(2) : "n/a"}
                               </p>
                             </div>
                             <div>
@@ -922,14 +922,14 @@ if (domainMetrics.mean_rho > 0.6 || domainMetrics.mean_k_eff < 1.5) {
                 <div className="flex items-start gap-3 mb-4">
                   <span className="text-2xl flex-shrink-0">🤖</span>
                   <p className="text-gray-600 dark:text-gray-400 italic">
-                    &quot;Let me be honest about what we&apos;re claiming—and what we&apos;re not.&quot;
+                    &quot;Let me be honest about what we&apos;re claiming, and what we&apos;re not.&quot;
                   </p>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  We&apos;re not saying we solved AI accountability. We&apos;re saying <strong>rules alone aren&apos;t enough</strong>—you need intuition too.
+                  We&apos;re not saying we solved AI accountability. We&apos;re saying <strong>rules alone aren&apos;t enough</strong>. You need intuition too.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  An AI that passes every test can still fail if it can&apos;t tell when its confidence is unearned. Like the banks in 2008, or your social media feed—agreement feels good, but unchecked agreement can hide danger.
+                  An AI that passes every test can still fail if it can&apos;t tell when its confidence is unearned. Like the banks in 2008, or your social media feed: agreement feels good, but unchecked agreement can hide danger.
                 </p>
               </>
             )}
@@ -965,12 +965,12 @@ if (domainMetrics.mean_rho > 0.6 || domainMetrics.mean_k_eff < 1.5) {
                     <li>
                       <a href="https://zenodo.org/records/18217688" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
                         Coherence Collapse Analysis (CCA)
-                      </a> — engineering risk framework for correlation-driven diversity collapse; full mathematical treatment.
+                      </a>: engineering risk framework for correlation-driven diversity collapse; full mathematical treatment.
                     </li>
                     <li>
                       <a href="https://zenodo.org/records/19839280" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
                         Constrained Reasoning Chains
-                      </a> — empirical anchor: N_eff measurement on 6,465+ production traces.
+                      </a>: empirical anchor of N_eff measurement on 6,465+ production traces.
                     </li>
                   </ul>
                 </div>

@@ -52,7 +52,7 @@ export interface TraceSummary {
   cost_usd: number;
 }
 
-// next_cursor is opaque on the wire — observed shape in v0.5.0 is an
+// next_cursor is opaque on the wire. Observed shape in v0.5.0 is an
 // object {version, last_started_at, last_trace_id}, but FastAPI could
 // return anything here. Type as unknown and JSON-stringify when sending
 // it back as a query param.
@@ -210,8 +210,8 @@ export async function fetchTraceDetail(traceId: string): Promise<TraceDetail> {
 
 /**
  * Convert TraceDetail to the TraceData shape TraceExplorer consumes.
- * The new API returns typed component rows directly — no JSON-string
- * unwrap dance — so this is near-identity: map event_type to a legacy
+ * The new API returns typed component rows directly, no JSON-string
+ * unwrap dance, so this is near-identity: map event_type to a legacy
  * component_type for color/icon styling and forward the payload.
  */
 export function transformToTraceData(detail: TraceDetail): TraceData {

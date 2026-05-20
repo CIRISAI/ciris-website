@@ -26,7 +26,7 @@ export default function ArchitecturePage() {
             </h2>
             <p className="text-gray-700 dark:text-gray-300">
               CIRISBridge is temporary infrastructure. Every component knows it will be retired
-              when Veilid matures. This isn't a bug—it's the mission. We avoid lock-in,
+              when Veilid matures. This isn't a bug. It's the mission. We avoid lock-in,
               vendor-specific integrations, and features that assume centralization is forever.
             </p>
             <div className="mt-4 grid gap-2 text-sm text-gray-600 dark:text-gray-400 sm:grid-cols-3">
@@ -284,7 +284,7 @@ export default function ArchitecturePage() {
                   Coherence Ratchet
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  Ethical consistency isn&apos;t expensive—coordinated deception is. Honest actions reference existing signed commitments.
+                  Ethical consistency isn&apos;t expensive. Coordinated deception is. Honest actions reference existing signed commitments.
                   Deceptive actions must satisfy a growing constraint surface of immutable rationales, making coordinated lies
                   increasingly fragile under audit.
                 </p>
@@ -320,7 +320,7 @@ export default function ArchitecturePage() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Both regions serve all requests simultaneously. No single point of failure for compute.
                   Each region has its own domain. If one region fails, clients can switch to the other
-                  immediately—no failover delay.
+                  immediately, no failover delay.
                 </p>
               </div>
 
@@ -341,7 +341,7 @@ export default function ArchitecturePage() {
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   US traffic routes through Cloudflare for DDoS protection and caching. EU traffic
-                  uses direct DNS to Hetzner. This split ensures zero single point of failure—if
+                  uses direct DNS to Hetzner. This split ensures zero single point of failure: if
                   Cloudflare has issues, EU remains directly accessible.
                 </p>
               </div>
@@ -443,19 +443,19 @@ export default function ArchitecturePage() {
                 Why AGPL-3.0?
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-3">
-                Every CIRIS component uses the GNU Affero General Public License v3.0. This isn't just "open source"—it's <strong>network copyleft</strong>. If anyone modifies CIRIS and offers it as a service, they must release their modifications under the same license.
+                Every CIRIS component uses the GNU Affero General Public License v3.0. This isn't just "open source". It's <strong>network copyleft</strong>. If anyone modifies CIRIS and offers it as a service, they must release their modifications under the same license.
               </p>
               <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                <li>• <strong>Prevents cloud appropriation</strong> — No company can take CIRIS, modify it, and offer it as a closed service</li>
-                <li>• <strong>Ensures transparency</strong> — Any deployed version's source must be available to users</li>
-                <li>• <strong>Protects the commons</strong> — Improvements flow back to the community, not into proprietary forks</li>
+                <li>• <strong>Prevents cloud appropriation:</strong> No company can take CIRIS, modify it, and offer it as a closed service</li>
+                <li>• <strong>Ensures transparency:</strong> Any deployed version's source must be available to users</li>
+                <li>• <strong>Protects the commons:</strong> Improvements flow back to the community, not into proprietary forks</li>
               </ul>
             </div>
 
             <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 Every component of CIRIS infrastructure is open source under AGPL-3.0. You can audit our claims,
-                reproduce our setup, or fork it—and if you serve it to others, you share your improvements.
+                reproduce our setup, or fork it, and if you serve it to others, you share your improvements.
               </p>
 
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -595,9 +595,9 @@ export default function ArchitecturePage() {
           {/* Footer */}
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
             <p className="italic">
-              "This infrastructure exists to be deleted. That's not a bug—it's the mission."
+              "This infrastructure exists to be deleted. That's not a bug. It's the mission."
             </p>
-            <p className="mt-4">CIRIS — Accountability Infrastructure for Autonomous AI</p>
+            <p className="mt-4">CIRIS: Accountability Infrastructure for Autonomous AI</p>
             <p className="mt-2">© 2025-2026 Eric Moore and CIRIS L3C | AGPL-3.0 License</p>
           </div>
         </div>

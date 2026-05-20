@@ -10,7 +10,7 @@ import {
 const navItems = [
   {
     name: "First Contact",
-    subtitle: "Start Here — the Why",
+    subtitle: "Start Here: the Why",
     link: "/first-contact",
     icon: <IconCompass className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },

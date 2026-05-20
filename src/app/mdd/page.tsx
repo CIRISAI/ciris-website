@@ -18,7 +18,7 @@ export default function MddPage() {
                 Methodology
               </span>
               <span className="rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300">
-                Active — v1.0
+                Active: v1.0
               </span>
             </div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
@@ -52,7 +52,7 @@ export default function MddPage() {
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-gray-800 dark:bg-gray-950">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-                  Leg 1 — HOW
+                  Leg 1: HOW
                 </p>
                 <h3 className="mt-1 text-xl font-semibold text-slate-900 dark:text-white">
                   Logic
@@ -63,7 +63,7 @@ export default function MddPage() {
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-gray-800 dark:bg-gray-950">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-                  Leg 2 — WHAT
+                  Leg 2: WHAT
                 </p>
                 <h3 className="mt-1 text-xl font-semibold text-slate-900 dark:text-white">
                   Schemas
@@ -74,7 +74,7 @@ export default function MddPage() {
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-gray-800 dark:bg-gray-950">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-                  Leg 3 — WHO
+                  Leg 3: WHO
                 </p>
                 <h3 className="mt-1 text-xl font-semibold text-slate-900 dark:text-white">
                   Protocols
@@ -85,7 +85,7 @@ export default function MddPage() {
               </div>
               <div className="rounded-2xl border-2 border-brand-primary bg-brand-primary/5 p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                  Seat — WHY
+                  Seat: WHY
                 </p>
                 <h3 className="mt-1 text-xl font-semibold text-slate-900 dark:text-white">
                   Mission
@@ -351,8 +351,8 @@ export default function MddPage() {
               CIRIS, the worked example.
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
-              CIRIS — Core Identity, Integrity, Resilience, Incompleteness, Signalling Gratitude
-              — is the system MDD was developed alongside. The mission is{" "}
+              CIRIS (Core Identity, Integrity, Resilience, Incompleteness, Signalling Gratitude)
+              is the system MDD was developed alongside. The mission is{" "}
               <a href="/vision" className="text-brand-primary hover:underline">
                 Meta-Goal M-1
               </a>
@@ -460,7 +460,7 @@ export default function MddPage() {
             <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
               MDD is designed for systems where ethical behavior is mission-critical and
               long-term reliability matters more than short-term feature velocity. For those
-              systems, MDD provides a pathway from ethical intentions to operational reality —
+              systems, MDD provides a pathway from ethical intentions to operational reality,
               with the same engineering discipline applied to the mission as to the code.
             </p>
             <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">

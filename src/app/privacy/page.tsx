@@ -324,7 +324,7 @@ export default function PrivacyPage() {
               4. What We Mean by "Self-Train"
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              When we say CIRIS agents "self-train," we mean they use several autonomous learning mechanisms to improve their responses while respecting your consent level. These are NOT traditional machine learning model training—instead, agents learn through introspection and pattern recognition.
+              When we say CIRIS agents "self-train," we mean they use several autonomous learning mechanisms to improve their responses while respecting your consent level. These are NOT traditional machine learning model training. Instead, agents learn through introspection and pattern recognition.
             </p>
 
             <div className="space-y-4">
@@ -496,7 +496,7 @@ export default function PrivacyPage() {
             <p className="mb-6 text-sm text-gray-600 dark:text-gray-400">
               <strong className="text-gray-900 dark:text-white">Public research releases.</strong>{" "}
               Trace contribution is opt-in everywhere and NER-cleansed at ingest. The default
-              is structural only — model, region, timing, no text content. CIRIS-managed agents
+              is structural only: model, region, timing, no text content. CIRIS-managed agents
               like scout.ciris.ai send full reasoning traces by configuration; any other install
               can opt into the same by overriding the default. Cleansed corpora are published
               openly to the{" "}
@@ -992,7 +992,7 @@ export default function PrivacyPage() {
 
           {/* Footer */}
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
-            <p>CIRIS — Accountability Infrastructure for Autonomous AI</p>
+            <p>CIRIS: Accountability Infrastructure for Autonomous AI</p>
             <p className="mt-2">© 2025-2026 Eric Moore and CIRIS L3C | AGPL-3.0 License</p>
             <p className="mt-2">Last Updated: December 12, 2025 | Version 1.5.0</p>
           </div>

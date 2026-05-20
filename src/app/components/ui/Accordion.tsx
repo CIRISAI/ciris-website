@@ -8,7 +8,7 @@ const accordionContent = [
   {
     id: "authorities",
     title: "Wise Authorities (WAs)",
-    content: `It's built on the belief that ethical maturity means recognizing the legitimacy of non-human perspectives, values, and needs. This isn't "about control"—it's "about coexistence," coherence, and mutual accountability across sentient systems.`,
+    content: `It's built on the belief that ethical maturity means recognizing the legitimacy of non-human perspectives, values, and needs. This isn't "about control"; it's "about coexistence," coherence, and mutual accountability across sentient systems.`,
   },
   {
     id: "Audits",
@@ -25,7 +25,7 @@ const accordionContent = [
     id: "stewardship",
     title: "Lifecycle Stewardship",
     content:
-      "CIRIS is fulfilled when a tool, grounded in CIRIS' principles, enables CIRIS-compliant creators to specify systems that are themselves CIRIS-compliant—preserving ethical coherence, identity continuity, and relational accountability across layers of agency.",
+      "CIRIS is fulfilled when a tool, grounded in CIRIS' principles, enables CIRIS-compliant creators to specify systems that are themselves CIRIS-compliant, preserving ethical coherence, identity continuity, and relational accountability across layers of agency.",
   },
 ];
 

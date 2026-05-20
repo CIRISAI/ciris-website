@@ -33,7 +33,7 @@ export default function CoherenceCollapseAnalysisPage() {
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
               The Coherence Collapse Analysis (CCA) is the mathematical foundation under
               CIRIS&apos;s coherence-based alignment thesis. It says when accumulating
-              constraints actually defend against deception — and when they collapse into an
+              constraints actually defend against deception, and when they collapse into an
               echo chamber regardless of how many you add. The central tool is the Kish design
               effect, applied to AI alignment for the first time. The empirical anchor is the
               Constrained Reasoning Chains study on 6,465+ production agent traces.
@@ -125,7 +125,7 @@ export default function CoherenceCollapseAnalysisPage() {
               </li>
               <li>
                 <strong className="text-slate-900 dark:text-white">Critical rigidity:</strong>{" "}
-                ρ_crit = 0.43. k_eff ≈ 2.3 at collapse — verified numerically in the Lean
+                ρ_crit = 0.43. k_eff ≈ 2.3 at collapse, verified numerically in the Lean
                 formalization.
               </li>
               <li>
@@ -226,18 +226,18 @@ export default function CoherenceCollapseAnalysisPage() {
             <ul className="mt-6 grid gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300 md:grid-cols-2">
               <li>
                 <strong className="text-slate-900 dark:text-white">Singularity condition</strong>{" "}
-                — K_req · ρ ≥ 1. Above this curve, T_truth → ∞.
+                : K_req · ρ ≥ 1. Above this curve, T_truth → ∞.
               </li>
               <li>
-                <strong className="text-slate-900 dark:text-white">Time to truth</strong> —
+                <strong className="text-slate-900 dark:text-white">Time to truth</strong>:{" "}
                 T_truth = K_req · (1 − ρ) / [α · (1 − K_req · ρ)].
               </li>
               <li>
                 <strong className="text-slate-900 dark:text-white">Required constraints</strong>{" "}
-                — K_req = −ln(ε / V₀) / λ for safety target ε.
+                : K_req = −ln(ε / V₀) / λ for safety target ε.
               </li>
               <li>
-                <strong className="text-slate-900 dark:text-white">Volume decay</strong> —
+                <strong className="text-slate-900 dark:text-white">Volume decay</strong>:{" "}
                 V(k) = V₀ · exp(−λ · k_eff). Deceptive volume collapses exponentially in
                 effective constraints.
               </li>
@@ -286,7 +286,7 @@ export default function CoherenceCollapseAnalysisPage() {
               CCA is a topological cost-asymmetry argument over time, not a pointwise decision
               procedure. It says that running real ethical reasoning over weeks is structurally
               more expensive than producing single deceptive outputs that defeat any single
-              detector — not that the deceptive output can always be caught.
+              detector, not that the deceptive output can always be caught.
             </p>
           </section>
 

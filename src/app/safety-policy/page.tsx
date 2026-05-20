@@ -34,7 +34,7 @@ export default function SafetyPolicyPage() {
             </p>
             <p className="mt-4 text-gray-700 dark:text-gray-300">
               Pausing CIRIS services is a last resort, not a first response. If we discover a problem,
-              we fix it. We only pause when the issue is irremediable — when continued operation would
+              we fix it. We only pause when the issue is irremediable, when continued operation would
               cause harm we cannot prevent any other way.
             </p>
           </div>
@@ -171,15 +171,15 @@ export default function SafetyPolicyPage() {
                 <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">⚠</span>
-                    <span><strong>Legal compulsion</strong> — Court order, warrant, or subpoena requiring action incompatible with our commitments</span>
+                    <span><strong>Legal compulsion</strong>: Court order, warrant, or subpoena requiring action incompatible with our commitments</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">⚠</span>
-                    <span><strong>Provider termination</strong> — Vultr service unavailable or terminated</span>
+                    <span><strong>Provider termination</strong>: Vultr service unavailable or terminated</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">⚠</span>
-                    <span><strong>Compliance failure</strong> — Inability to meet US regulatory requirements</span>
+                    <span><strong>Compliance failure</strong>: Inability to meet US regulatory requirements</span>
                   </li>
                 </ul>
                 <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
@@ -195,15 +195,15 @@ export default function SafetyPolicyPage() {
                 <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">⚠</span>
-                    <span><strong>Legal compulsion</strong> — EU/German court order or regulatory action incompatible with our commitments</span>
+                    <span><strong>Legal compulsion</strong>: EU/German court order or regulatory action incompatible with our commitments</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">⚠</span>
-                    <span><strong>Provider termination</strong> — Hetzner service unavailable or terminated</span>
+                    <span><strong>Provider termination</strong>: Hetzner service unavailable or terminated</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">⚠</span>
-                    <span><strong>GDPR/EU AI Act failure</strong> — Inability to meet EU regulatory requirements</span>
+                    <span><strong>GDPR/EU AI Act failure</strong>: Inability to meet EU regulatory requirements</span>
                   </li>
                 </ul>
                 <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
@@ -240,7 +240,7 @@ export default function SafetyPolicyPage() {
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">Remediate</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    If fixable, we fix it. Patches, configuration changes, provider switches —
+                    If fixable, we fix it. Patches, configuration changes, provider switches:
                     whatever resolves the issue while maintaining service.
                   </p>
                 </div>
@@ -367,13 +367,13 @@ export default function SafetyPolicyPage() {
                 <strong>Article 33</strong>: notification to the relevant
                 supervisory authority within <strong>72 hours</strong> of
                 becoming aware. Affected users are notified without undue delay.
-                We commit to the GDPR floor for everyone — the time window
+                We commit to the GDPR floor for everyone. The time window
                 doesn&apos;t change based on jurisdiction.
               </p>
             </div>
           </div>
 
-          {/* Change Management — structural fact, not a process promise */}
+          {/* Change Management: structural fact, not a process promise */}
           <div className="mb-12">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
               Change Management
@@ -420,7 +420,7 @@ export default function SafetyPolicyPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-brand-primary mt-1">•</span>
-                  <span>All code is open source — you can verify our claims against the implementation</span>
+                  <span>All code is open source. You can verify our claims against the implementation</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-brand-primary mt-1">•</span>
@@ -456,7 +456,7 @@ export default function SafetyPolicyPage() {
 
           {/* Footer */}
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
-            <p>CIRIS — Accountability Infrastructure for Autonomous AI</p>
+            <p>CIRIS: Accountability Infrastructure for Autonomous AI</p>
             <p className="mt-2">© 2025-2026 Eric Moore and CIRIS L3C | AGPL-3.0 License</p>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function TrustPage() {
       <FloatingNav navItems={navItems} />
       <HomeHeader
         headline="The DMV for AI Agents"
-        subheadline="Identity, Integrity, and Accountability — cryptographically provable."
+        subheadline="Identity, Integrity, and Accountability, cryptographically provable."
         description="CIRISVerify issues the driver's license (identity), performs the vehicle inspection (integrity), and tracks insurance (accountability). Without it, any agent could claim to be anything."
         mediaType="image"
         opacityValue={0.7}
@@ -37,7 +37,7 @@ export default function TrustPage() {
             Just like every car on the road.
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            CIRISVerify is the trust anchor for the CIRIS ecosystem. Hybrid Ed25519 + ML-DSA-65 dual-signature cryptography as a day-1 standard — classical security from hardware, quantum resistance from software.
+            CIRISVerify is the trust anchor for the CIRIS ecosystem. Hybrid Ed25519 + ML-DSA-65 dual-signature cryptography as a day-1 standard: classical security from hardware, quantum resistance from software.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -52,7 +52,7 @@ export default function TrustPage() {
                 A hardware-bound Ed25519 signing key that <em>is</em> the agent&apos;s identity. Stored in secure hardware (TPM, Secure Enclave, Android Keystore). Cannot be forged or transferred.
               </p>
               <p className="text-xs text-brand-primary font-medium">
-                The key doesn&apos;t represent the identity &mdash; it is the identity.
+                The key doesn&apos;t represent the identity. It is the identity.
               </p>
             </div>
 
@@ -64,7 +64,7 @@ export default function TrustPage() {
               </div>
               <p className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Software &amp; Hardware Integrity</p>
               <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                Every file in the agent distribution is SHA-256 hashed at build time and stored in a signed manifest. At runtime, CIRISVerify validates files against this manifest. Any modification &mdash; even one byte &mdash; triggers forced shutdown.
+                Every file in the agent distribution is SHA-256 hashed at build time and stored in a signed manifest. At runtime, CIRISVerify validates files against this manifest. Any modification, even one byte, triggers forced shutdown.
               </p>
               <p className="text-xs text-brand-primary font-medium">
                 Software-only environments are capped at community tier.
@@ -82,7 +82,7 @@ export default function TrustPage() {
                 Tracks the human-in-the-loop accountability chain: which organization deployed this agent, which licensed human is responsible, what capabilities they&apos;re authorized to use, and mandatory disclosure shown to every user.
               </p>
               <p className="text-xs text-brand-primary font-medium">
-                Unlicensed agents can operate &mdash; but cannot perform professional services.
+                Unlicensed agents can operate, but cannot perform professional services.
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function TrustPage() {
             {
               headline: "Source Validation",
               copyText:
-                "Let me run your plates. Multiple independent sources (HTTPS US, HTTPS EU, DNS US, DNS EU) are queried. If they disagree, that's suspicious — the agent is restricted.",
+                "Let me run your plates. Multiple independent sources (HTTPS US, HTTPS EU, DNS US, DNS EU) are queried. If they disagree, that's suspicious. The agent is restricted.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -202,7 +202,7 @@ export default function TrustPage() {
           logoAlt="Brand logo icon"
           headline="Agent Administration"
           subheadline="Live at portal.ciris.ai"
-          copyText="CIRISPortal is the web interface where administrators issue driver's licenses, register vehicles, and manage insurance records for AI agents. Register agents, generate Ed25519 keypairs, issue licenses with capability grants, and respond to incidents — all with complete audit trails."
+          copyText="CIRISPortal is the web interface where administrators issue driver's licenses, register vehicles, and manage insurance records for AI agents. Register agents, generate Ed25519 keypairs, issue licenses with capability grants, and respond to incidents, all with complete audit trails."
           buttonText="Open Portal"
           buttonHref="https://portal.ciris.ai"
         />
@@ -219,7 +219,7 @@ export default function TrustPage() {
             {
               headline: "Build Integrity",
               copyText:
-                "Register builds with Tripwire file integrity manifests — 907+ file SHA-256 hashes per build. CIRISVerify validates agents against these manifests at runtime.",
+                "Register builds with Tripwire file integrity manifests: 907+ file SHA-256 hashes per build. CIRISVerify validates agents against these manifests at runtime.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -238,7 +238,7 @@ export default function TrustPage() {
             {
               headline: "Key Custody",
               copyText:
-                "Generate Ed25519 keypairs with AES-256-GCM envelope encryption. Self-custody or portal-custodied — your choice. ML-DSA-65 post-quantum keys coming soon.",
+                "Generate Ed25519 keypairs with AES-256-GCM envelope encryption. Self-custody or portal-custodied, your choice. ML-DSA-65 post-quantum keys coming soon.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -520,7 +520,7 @@ export default function TrustPage() {
         {/* Closing Philosophy */}
         <div className="my-12 rounded-lg border-2 border-brand-primary bg-brand-primary/5 p-8 text-center">
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-4">
-            CIRISVerify provides cryptographic attestation under defined threat models and does not guarantee absolute security. The capability is the same whether licensed or not. The difference is accountability &mdash; and with CIRISVerify, that accountability is cryptographically attestable.
+            CIRISVerify provides cryptographic attestation under defined threat models and does not guarantee absolute security. The capability is the same whether licensed or not. The difference is accountability, and with CIRISVerify, that accountability is cryptographically attestable.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

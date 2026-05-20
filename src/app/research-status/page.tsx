@@ -39,7 +39,7 @@ const schemaHighlights = [
   "They give researchers a way to study how behavior scales as intelligence, context, and data volume increase.",
 ];
 
-// Engineering-tier papers — each stands on its own DOI. The flagship
+// Engineering-tier papers: each stands on its own DOI. The flagship
 // synthesis (Corridor Dynamics) integrates these; it does not replace them.
 const papers = [
   {
@@ -47,7 +47,7 @@ const papers = [
     title: "Coherence Collapse Analysis",
     meta: "v3 · Jan 11, 2026 · DOI 10.5281/zenodo.18217688",
     blurb:
-      "The engineering risk framework under the corridor idea. When the constraints governing a system become correlated, effective diversity collapses — k_eff = k/(1+ρ(k−1)) → 1 as ρ → 1. Derives three collapse timelines, a singularity boundary, and phase classification (chaos / healthy / rigidity). Verified with Monte Carlo simulation and Lean 4 proofs.",
+      "The engineering risk framework under the corridor idea. When the constraints governing a system become correlated, effective diversity collapses: k_eff = k/(1+ρ(k−1)) → 1 as ρ → 1. Derives three collapse timelines, a singularity boundary, and phase classification (chaos / healthy / rigidity). Verified with Monte Carlo simulation and Lean 4 proofs.",
   },
   {
     href: "https://zenodo.org/records/18137161",
@@ -61,7 +61,7 @@ const papers = [
     title: "Constrained Reasoning Chains",
     meta: "v1 · Apr 28, 2026 · DOI 10.5281/zenodo.19839280",
     blurb:
-      "The measurement paper. An empirical telemetry study of LLM alignment under standardized ethical tracing — turning consented reasoning traces into maps of completion corridors, hesitation zones, and refusal boundaries. Released alongside the open reasoning-traces dataset.",
+      "The measurement paper. An empirical telemetry study of LLM alignment under standardized ethical tracing, turning consented reasoning traces into maps of completion corridors, hesitation zones, and refusal boundaries. Released alongside the open reasoning-traces dataset.",
   },
 ];
 
@@ -146,7 +146,7 @@ export default function ResearchStatusPage() {
                 Five-Substrate Empirical Validation
               </p>
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
-                The integration statement of CIRIS — the single document that
+                The integration statement of CIRIS, the single document that
                 states the framework&apos;s full structural commitment.
                 Coordinated systems sit in a bounded <strong>corridor</strong>{" "}
                 between rigidity (ρ → 1, single-voice collapse) and chaos
@@ -165,8 +165,8 @@ export default function ResearchStatusPage() {
                 four open-source projects (Kubernetes, Rust, Django, Redis),
                 tumor-vs-normal tissue across five cancers, and three
                 centuries-persisting religious societies. The dynamical
-                reading&apos;s strongest would-be falsifier — long unmaintained
-                non-corridor persistence — is <strong>absent at all five</strong>:
+                reading&apos;s strongest would-be falsifier (long unmaintained
+                non-corridor persistence) is <strong>absent at all five</strong>:
                 out-of-corridor states either dissolve quickly or persist only
                 with documented active maintenance. The synthesis is offered
                 as a bet under uncertainty, with twenty falsification handles
@@ -227,7 +227,7 @@ export default function ResearchStatusPage() {
               </h3>
               <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
                 The privacy-preserving reasoning-trace corpus released
-                alongside the Constrained Reasoning Chains study — the raw
+                alongside the Constrained Reasoning Chains study, the raw
                 material the measurement paper draws its maps from.
               </p>
             </a>
@@ -272,7 +272,7 @@ export default function ResearchStatusPage() {
               As independent constraints accumulate, the room for deception
               collapses around the manifold while the room for truth
               doesn&apos;t. The <strong>Coherence Singularity</strong> is the
-              edge of that room — the point where constraints become so
+              edge of that room, the point where constraints become so
               correlated that adding more stops helping. Between
               &quot;chaos&quot; (constraints contradict each other) and
               &quot;rigidity&quot; (constraints all echo each other) is the
@@ -466,7 +466,7 @@ export default function ResearchStatusPage() {
               IDMA works at runtime, estimating whether the sources behind a decision are sufficiently independent. The trace corpus works at the aggregate layer, showing what agents actually do over many tasks. Together they create a path from live decisions to auditable research evidence.
             </p>
             <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
-              The empirical N_eff measurement on the trace corpus is also the floor under the proposed Proof of Benefit federation primitive — see the <a href="/federation" className="text-brand-primary hover:underline">federation page</a> for how the 3.X architectural plan would use it.
+              The empirical N_eff measurement on the trace corpus is also the floor under the proposed Proof of Benefit federation primitive. See the <a href="/federation" className="text-brand-primary hover:underline">federation page</a> for how the 3.X architectural plan would use it.
             </p>
           </section>
 

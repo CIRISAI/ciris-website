@@ -29,7 +29,7 @@ const ACTION_COLORS: Record<string, string> = {
 const ACTION_DEFAULT = ACTION_COLORS.speak;
 
 function actionLabel(action: string | null | undefined): string {
-  if (!action) return "—";
+  if (!action) return "-";
   return action.toUpperCase();
 }
 
@@ -77,7 +77,7 @@ function ScoreGauge({ label, value, max = 1 }: { label: string; value: number | 
         <div className="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
           <div className="h-full bg-gray-400 transition-all" style={{ width: "0%" }} />
         </div>
-        <span className="text-xs font-mono text-gray-400 w-8">—</span>
+        <span className="text-xs font-mono text-gray-400 w-8">-</span>
       </div>
     );
   }
@@ -423,7 +423,7 @@ export default function ExploreTracePage() {
                           </div>
                           <div>
                             <h2 className="text-lg font-bold text-gray-900 dark:text-white">
-                              {traceData.agent_name || "Agent"} &mdash; {actionLabel(selectedTask.traces?.[index]?.selected_action) || "Action"}
+                              {traceData.agent_name || "Agent"} · {actionLabel(selectedTask.traces?.[index]?.selected_action) || "Action"}
                             </h2>
                             <p className="text-xs text-gray-500 dark:text-gray-400">
                               Depth {selectedTask.traces?.[index]?.thought_depth || 0} &bull; {traceData.trace_id.slice(0, 40)}...
@@ -554,7 +554,7 @@ export default function ExploreTracePage() {
               Why This Matters
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              These traces aren&apos;t just logs&mdash;they&apos;re the foundation of a new approach to AI alignment.
+              These traces aren&apos;t just logs. They&apos;re the foundation of a new approach to AI alignment.
               As traces accumulate, they form a corpus of validated ethical reasoning. Truth becomes simple to verify.
               Coordinated deception becomes increasingly constrained.
             </p>

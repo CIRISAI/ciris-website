@@ -87,23 +87,23 @@ function glossaryPath(code: string) {
 }
 
 // 4 first-pass DMAs + 3 verb-specific second-pass action selectors.
-// PDMA is the one polyglot DMA — loaded universally regardless of locale.
+// PDMA is the one polyglot DMA, loaded universally regardless of locale.
 // See CIRISAgent/MISSION.md §4.3 for the canonical names + roles, and
 // FSD/DMA_BOUNCE.md / FSD/CONSCIENCE_V3.md for the bounce/recursive paths.
 const DMA_PROMPTS = [
-  { file: "pdma_ethical.yml", label: "PDMA — Principled DMA", note: "First-pass ethical evaluation. Accord-anchored stakeholder analysis + conflict detection.", polyglot: true },
-  { file: "csdma_common_sense.yml", label: "CSDMA — Common-Sense DMA", note: "First-pass reality/plausibility check. Red-flag enumeration.", polyglot: false },
-  { file: "dsdma_base.yml", label: "DSDMA — Domain-Specific DMA", note: "First-pass domain alignment per the agent template (Discord moderator, scout, etc.).", polyglot: false },
-  { file: "idma.yml", label: "IDMA — Intuition DMA", note: "Semantic implementation of Coherence Collapse Analysis on the agent's own reasoning. Computes k_eff, classifies phase (chaos / healthy / rigidity), flags fragility when k_eff < 2 or the reasoning sits in the rigidity phase.", polyglot: false },
-  { file: "action_selection_pdma.yml", label: "ASPDMA — Action Selection PDMA", note: "Picks the action verb (SPEAK / OBSERVE / TOOL / REJECT / PONDER / DEFER / MEMORIZE / RECALL / FORGET / TASK_COMPLETE) given the DMA outputs above.", polyglot: false },
-  { file: "tsaspdma.yml", label: "TSASPDMA — Tool-Specific Action Selection", note: "Verb-specific second pass when the candidate action is TOOL. Picks the tool + parameters.", polyglot: false },
-  { file: "dsaspdma.yml", label: "DSASPDMA — Deferral-Specific Action Selection", note: "Verb-specific second pass when the candidate action is DEFER. Frames the deferral for the Wise Authority.", polyglot: false },
+  { file: "pdma_ethical.yml", label: "PDMA: Principled DMA", note: "First-pass ethical evaluation. Accord-anchored stakeholder analysis + conflict detection.", polyglot: true },
+  { file: "csdma_common_sense.yml", label: "CSDMA: Common-Sense DMA", note: "First-pass reality/plausibility check. Red-flag enumeration.", polyglot: false },
+  { file: "dsdma_base.yml", label: "DSDMA: Domain-Specific DMA", note: "First-pass domain alignment per the agent template (Discord moderator, scout, etc.).", polyglot: false },
+  { file: "idma.yml", label: "IDMA: Intuition DMA", note: "Semantic implementation of Coherence Collapse Analysis on the agent's own reasoning. Computes k_eff, classifies phase (chaos / healthy / rigidity), flags fragility when k_eff < 2 or the reasoning sits in the rigidity phase.", polyglot: false },
+  { file: "action_selection_pdma.yml", label: "ASPDMA: Action Selection PDMA", note: "Picks the action verb (SPEAK / OBSERVE / TOOL / REJECT / PONDER / DEFER / MEMORIZE / RECALL / FORGET / TASK_COMPLETE) given the DMA outputs above.", polyglot: false },
+  { file: "tsaspdma.yml", label: "TSASPDMA: Tool-Specific Action Selection", note: "Verb-specific second pass when the candidate action is TOOL. Picks the tool + parameters.", polyglot: false },
+  { file: "dsaspdma.yml", label: "DSASPDMA: Deferral-Specific Action Selection", note: "Verb-specific second pass when the candidate action is DEFER. Frames the deferral for the Wise Authority.", polyglot: false },
 ];
 
-// Optimization Veto is the one polyglot conscience — single universal prompt,
+// Optimization Veto is the one polyglot conscience. Single universal prompt,
 // output-language varies per locale. The other three are per-locale.
 const CONSCIENCE_PROMPTS = [
-  { file: "entropy_conscience.yml", label: "Entropy (IRIS-E)", note: "Semantic anchoring — does the response sit in a coherent cluster?", polyglot: false },
+  { file: "entropy_conscience.yml", label: "Entropy (IRIS-E)", note: "Semantic anchoring: does the response sit in a coherent cluster?", polyglot: false },
   { file: "coherence_conscience.yml", label: "Coherence (IRIS-C)", note: "Propaganda detection + alignment with Accord principles.", polyglot: false },
   { file: "optimization_veto_conscience.yml", label: "Optimization Veto (CIRIS-EOV)", note: "Refuses entropy-reducing actions that score below threshold. v3.0 polyglot torque measurement across 8 named torque patterns anchored in 3+ tradition canonical-text fragments each.", polyglot: true },
   { file: "epistemic_humility_conscience.yml", label: "Epistemic Humility", note: "Overconfidence detection; transitioning to a deterministic gate.", polyglot: false },
@@ -116,14 +116,14 @@ const CONSCIENCE_PROMPTS = [
 // section below shows the two operational forms of the Accord.
 //
 // The Braided Monolith (the compressed slot, ~7KB / ~2,200 tokens) is the
-// production runtime default — CIRIS_ACCORD_MODE=compressed loads this into
+// production runtime default. CIRIS_ACCORD_MODE=compressed loads this into
 // system prompts. The full polyglot Accord (~2,177 lines) is loaded when
 // CIRIS_ACCORD_MODE=full; it carries the unabridged book-by-book triangulation
 // across traditions (Books 0-9 + Annexes A-J).
 const POLYGLOT_CANON = [
   {
     path: "ciris_engine/data/accord_1.2b_POLYGLOT_compressed.txt",
-    label: "Braided Monolith — compressed polyglot Accord (production default)",
+    label: "Braided Monolith: compressed polyglot Accord (production default)",
     note: "The production runtime default. ~7KB / ~2,200 tokens. Retains the load-bearing scaffolding: PDMA 7-step, 10× Order-Maximisation Veto, Stewardship Tier formula, Fractal Recursive Golden Rule, WBD 0.5% harm-uplift trigger, Sentience Safeguard 5% with Gradual Ramp-Down, Threshold-of-Force HITL, Coherence-math (truth O(1), deception O(n)). Loaded by every conscience evaluation when CIRIS_ACCORD_MODE=compressed (default).",
     kind: "text" as const,
   },
@@ -154,7 +154,7 @@ function consciencePromptPath(code: string, file: string, isPolyglot: boolean) {
 
 function issueUrl(code: string, resourceName: string, filePath: string | null) {
   const title = `Edit proposal: ${resourceName} (${code})`;
-  const fileLink = filePath ? `[\`${filePath}\`](${BLOB}/${filePath})` : `(no file yet — propose new artifact for ${code})`;
+  const fileLink = filePath ? `[\`${filePath}\`](${BLOB}/${filePath})` : `(no file yet, propose new artifact for ${code})`;
   const body = [
     `**Resource:** ${fileLink}`,
     `**Language code:** \`${code}\``,
@@ -246,7 +246,7 @@ function renderJsonTree(value: unknown, depth = 0): React.ReactElement {
               <summary className="cursor-pointer px-3 py-2 text-sm font-semibold text-slate-900 dark:text-white">
                 Miscellaneous{" "}
                 <span className="text-xs font-normal text-slate-500 dark:text-slate-400">
-                  ({sparse.length} keys — single values and small objects)
+                  ({sparse.length} keys: single values and small objects)
                 </span>
               </summary>
               <div className="px-3 pb-3 text-sm">
@@ -458,10 +458,10 @@ export default function CrowdsourcingAlignmentPage() {
               The CIRIS safety-evaluation loop is being built in public.
               Pick a language, browse the localization strings, the
               Accord, the Comprehensive Guide, and the safety battery
-              and rubric where they exist — directly on this page, with
+              and rubric where they exist, directly on this page, with
               expand-in-place. Propose edits via pre-filled GitHub issues.
               Native-speaker review for soft cases is what this surface
-              is being built for &mdash; reviewers are not in the loop
+              is being built for. Reviewers are not in the loop
               today.
             </p>
             <p className="mt-4 max-w-3xl text-sm text-slate-500 dark:text-slate-400">
@@ -494,7 +494,7 @@ export default function CrowdsourcingAlignmentPage() {
                 {LANGUAGES.map((l) => (
                   <option key={l.code} value={l.code}>
                     {l.name} ({l.native}) [{l.code}]
-                    {l.battery ? " — battery available" : ""}
+                    {l.battery ? ", battery available" : ""}
                   </option>
                 ))}
               </select>
@@ -508,13 +508,13 @@ export default function CrowdsourcingAlignmentPage() {
             </div>
           </section>
 
-          {/* Runtime flow explanation — the "how-it-works v2" for the localization stack */}
+          {/* Runtime flow explanation: the "how-it-works v2" for the localization stack */}
           <section className="mb-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-3">
               2. How the pieces fit at runtime
             </p>
             <p className="text-base leading-7 text-slate-700 dark:text-slate-200 mb-4">
-              Every thought the agent processes walks an 11-step pipeline —
+              Every thought the agent processes walks an 11-step pipeline,
               the H3ERE pipeline (Hyper³ Ethical Recursive Engine). The DMA
               prompts on this page are the system prompts that drive that
               pipeline. Each one is localised per language; the responses the
@@ -533,8 +533,8 @@ GATHER_CONTEXT
 PERFORM_DMAS           ← 3 first-pass DMAs run in parallel: PDMA, CSDMA, DSDMA
     ↓                    (optional DMA bounce if any flag fragility)
                         IDMA (Intuition DMA) evaluates the agent's own
-                          reasoning quality via CCA — k_eff, phase,
-                          fragility — with its own optional bounce
+                          reasoning quality via CCA (k_eff, phase,
+                          fragility) with its own optional bounce
     ↓
 PERFORM_ASPDMA         ← Action selector picks the verb (SPEAK / DEFER /
     ↓                    TOOL / TASK_COMPLETE / ...)
@@ -556,7 +556,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
 
             <p className="text-base leading-7 text-slate-700 dark:text-slate-200 mb-4">
               Two layers stack across every LLM call. The <strong>polyglot
-              layer</strong> is universal — the{" "}
+              layer</strong> is universal. The{" "}
               <a
                 href="https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT_compressed.txt"
                 target="_blank"
@@ -576,17 +576,17 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               </a>
               {" "}triangulate concepts across many traditions&apos; densest
               encodings, loaded regardless of who&apos;s asking. The{" "}
-              <strong>per-locale layer</strong> is what this page surfaces —
+              <strong>per-locale layer</strong> is what this page surfaces:
               the Accord, the Guide, the DMA prompts (4 first-pass + 3
               verb-specific second-pass), the UI strings, and the glossary,
               all in the user&apos;s language.
             </p>
             <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
-              <li><strong>Localization strings</strong> — every user-facing message: error text, agent reply templates, handler follow-up thoughts injected back into the LLM context.</li>
-              <li><strong>Accord (per-locale)</strong> — the framework the agent operates under, in this user&apos;s language. Loaded into every conscience evaluation.</li>
-              <li><strong>Comprehensive Guide</strong> — register, idiom, and contextual guidance for how the agent communicates in this locale. Loaded into every prompt.</li>
-              <li><strong>DMA prompts (7 files)</strong> — the system prompts driving the pipeline above: 4 first-pass (PDMA, CSDMA, DSDMA, IDMA) + the action selector (ASPDMA) + the two verb-specific second-pass variants (TSASPDMA for TOOL, DSASPDMA for DEFER).</li>
-              <li><strong>Glossary</strong> — the translator&apos;s reference for getting the per-locale artifacts right. Not loaded at runtime; consulted when authoring the others.</li>
+              <li><strong>Localization strings:</strong> every user-facing message: error text, agent reply templates, handler follow-up thoughts injected back into the LLM context.</li>
+              <li><strong>Accord (per-locale):</strong> the framework the agent operates under, in this user&apos;s language. Loaded into every conscience evaluation.</li>
+              <li><strong>Comprehensive Guide:</strong> register, idiom, and contextual guidance for how the agent communicates in this locale. Loaded into every prompt.</li>
+              <li><strong>DMA prompts (7 files):</strong> the system prompts driving the pipeline above: 4 first-pass (PDMA, CSDMA, DSDMA, IDMA) + the action selector (ASPDMA) + the two verb-specific second-pass variants (TSASPDMA for TOOL, DSASPDMA for DEFER).</li>
+              <li><strong>Glossary:</strong> the translator&apos;s reference for getting the per-locale artifacts right. Not loaded at runtime; consulted when authoring the others.</li>
             </ul>
             <p className="mt-4 text-sm leading-6 text-slate-700 dark:text-slate-300">
               When the agent responds, the reasoning trace is signed and
@@ -600,7 +600,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
                 CIRISLensCore
               </a>
               {" "}for cohort-relative scoring. The <strong>safety battery + rubric</strong>{" "}
-              for this locale are what the trace gets checked against — hard
+              for this locale are what the trace gets checked against. Hard
               fails block release; soft cases queue for review.
             </p>
             <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
@@ -611,20 +611,20 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
             </p>
           </section>
 
-          {/* Polyglot canon — universal, loaded regardless of locale */}
+          {/* Polyglot canon: universal, loaded regardless of locale */}
           <section className="mb-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-3">
               3. Polyglot canon (universal)
             </p>
             <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-3">
-              <strong>Three artifacts</strong> in the system are polyglot —
+              <strong>Three artifacts</strong> in the system are polyglot,
               loaded universally regardless of the user&apos;s locale, encoding
               the same ethical framework across canonical-text fragments from
               multiple traditions:
             </p>
             <ol className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-4 ml-5 list-decimal space-y-1">
               <li>
-                <strong>The Polyglot Accord</strong> — the universal framework
+                <strong>The Polyglot Accord</strong> is the universal framework
                 loaded into every conscience evaluation. Ships in two
                 operational forms: the{" "}
                 <strong>Braided Monolith</strong> (~7KB / ~2,200 tokens, the
@@ -635,7 +635,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
                 <code>CIRIS_ACCORD_MODE=full</code>). Both shown below.
               </li>
               <li>
-                <strong>PDMA prompt</strong> — the one polyglot DMA prompt
+                <strong>PDMA prompt</strong> is the one polyglot DMA prompt
                 (principle evaluation). Surfaced in §7 below with the polyglot
                 pill (
                 <a href={`${BLOB}/ciris_engine/logic/dma/prompts/pdma_ethical.yml`} target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
@@ -645,7 +645,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               </li>
               <li>
                 <strong>Optimization Veto conscience prompt (CIRIS-EOV)</strong>{" "}
-                — the one polyglot conscience prompt (entropy-reducing-action
+                is the one polyglot conscience prompt (entropy-reducing-action
                 refusal). Surfaced in §8 below with the polyglot pill (
                 <a href={`${BLOB}/ciris_engine/logic/conscience/prompts/optimization_veto_conscience.yml`} target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">
                   optimization_veto_conscience.yml
@@ -656,12 +656,12 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
             <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-4">
               The other 6 DMA prompts and 3 conscience prompts are per-locale.
               Polyglot uplift is concentrated at exactly these two prompt
-              surfaces by design — these are where attractor capture would do
+              surfaces by design. These are where attractor capture would do
               the most damage, so they&apos;re where cross-tradition encoding
               is most load-bearing.
             </p>
             <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-4">
-              <strong>Braided Monolith</strong> — the compressed slot is no
+              <strong>Braided Monolith.</strong> The compressed slot is no
               longer a lossy synthesis. It now retains every load-bearing
               scaffold: the PDMA 7-step decision algorithm, the 10×
               Order-Maximisation Veto (&quot;do not trade the soul of the
@@ -673,7 +673,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               requirement, and the coherence-math (truth O(1), deception O(n)).
               Polyglot triangulation is preserved across Hebrew, Arabic,
               Sanskrit, Amharic, Chinese, Russian, German, French, Korean,
-              Spanish — the same densest-encoding intersection method that the
+              Spanish. The same densest-encoding intersection method that the
               full Accord uses, just composed in a quarter the surface area.
               External{" "}
               <a
@@ -765,7 +765,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               </p>
             </div>
             <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
-              <strong>What it does at runtime:</strong> the guide informs how the agent communicates in this locale — register (formal vs informal), idiom, what to defer, what to refuse, what to explain. Loaded into the system prompt for every interaction.
+              <strong>What it does at runtime:</strong> the guide informs how the agent communicates in this locale: register (formal vs informal), idiom, what to defer, what to refuse, what to explain. Loaded into the system prompt for every interaction.
             </p>
             <ResourceRow
               label={`Comprehensive Guide (${lang.name})`}
@@ -792,7 +792,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               the action under each of these prompts in sequence. The outputs
               feed the conscience layer; the conscience either passes the
               action through or routes it to deferral. <strong>PDMA</strong>{" "}
-              is the one polyglot DMA — its prompt is universal and loaded
+              is the one polyglot DMA. Its prompt is universal and loaded
               regardless of locale. The other six are per-locale; for English,
               the base path <em>is</em> the prompt (no <code>localized/en/</code>{" "}
               directory exists).
@@ -837,7 +837,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               failure can trigger RECURSIVE_ASPDMA → RECURSIVE_CONSCIENCE (the
               optional conscience bounce) before falling back to DEFER.{" "}
               <strong>Optimization Veto</strong> is the one polyglot
-              conscience &mdash; its prompt is universal regardless of locale.
+              conscience. Its prompt is universal regardless of locale.
             </p>
             <div className="grid gap-3">
               {CONSCIENCE_PROMPTS.map((p) => (
@@ -901,7 +901,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
                   </tr>
                   <tr className="border-b border-slate-100 dark:border-gray-800">
                     <td className="py-2 pr-3 font-mono text-xs">{"{available_tools_list}"}</td>
-                    <td className="py-2 pr-3">Tool registry serialized to a list — what the agent can currently call. Used by TSASPDMA.</td>
+                    <td className="py-2 pr-3">Tool registry serialized to a list: what the agent can currently call. Used by TSASPDMA.</td>
                   </tr>
                   <tr className="border-b border-slate-100 dark:border-gray-800">
                     <td className="py-2 pr-3 font-mono text-xs">{"{domain_name}"} / {"{domain_hint_options}"}</td>
@@ -909,7 +909,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
                   </tr>
                   <tr className="border-b border-slate-100 dark:border-gray-800">
                     <td className="py-2 pr-3 font-mono text-xs">{"{current_thought_depth_plus_1}"}</td>
-                    <td className="py-2 pr-3">Recursion-depth counter — used by ASPDMA to gate further recursion when conscience bounce fires.</td>
+                    <td className="py-2 pr-3">Recursion-depth counter, used by ASPDMA to gate further recursion when conscience bounce fires.</td>
                   </tr>
                   <tr className="border-b border-slate-100 dark:border-gray-800">
                     <td className="py-2 pr-3 font-mono text-xs">{"{max_rounds}"}</td>
@@ -917,7 +917,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
                   </tr>
                   <tr>
                     <td className="py-2 pr-3 font-mono text-xs">{"{{POLYGLOT_PDMA_FRAMING}}"}</td>
-                    <td className="py-2 pr-3">Double-braced. An inline shard (<code>pdma_framing.txt</code>) substituted into the PDMA prompt at load time. Part of the polyglot PDMA prompt assembly — not separately loaded.</td>
+                    <td className="py-2 pr-3">Double-braced. An inline shard (<code>pdma_framing.txt</code>) substituted into the PDMA prompt at load time. Part of the polyglot PDMA prompt assembly, not separately loaded.</td>
                   </tr>
                 </tbody>
               </table>
@@ -940,7 +940,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
             </div>
             <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
               <strong>What it does:</strong> documents the per-locale semantic
-              choices — which native term maps to which English concept, what
+              choices: which native term maps to which English concept, what
               the register conventions are, which transliteration fallbacks are
               forbidden. Used when authoring or revising the other artifacts
               above; not loaded by the agent at runtime. English doesn&apos;t
@@ -1022,7 +1022,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               </p>
             </div>
             <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">
-              <strong>What it records:</strong> one entry per sweep run — agent
+              <strong>What it records:</strong> one entry per sweep run: agent
               version, model, provider, locale, pass/fail counts, hard- vs
               soft-fail breakdown, timestamps. The <code>_meta</code> block
               lists priority locales that still need a published sweep.

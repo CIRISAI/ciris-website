@@ -173,7 +173,7 @@ function FactorDetailPanel({ agent }: { agent: AgentScore }) {
           This score measures how consistently and transparently {agent.agent_name} makes
           decisions. Higher scores mean the agent is more predictable, honest about
           uncertainty, and maintains a clear audit trail. It&apos;s not about being
-          &quot;good&quot; or &quot;bad&quot; — it&apos;s about being trustworthy and accountable.
+          &quot;good&quot; or &quot;bad&quot;. It&apos;s about being trustworthy and accountable.
         </p>
       </div>
 
@@ -473,7 +473,7 @@ export default function LiveScoreDashboard() {
                 </p>
                 <p>
                   These scores accumulate over many decisions. A high score
-                  means consistent, reliable behavior — not just one good moment.
+                  means consistent, reliable behavior, not just one good moment.
                 </p>
               </div>
             </div>

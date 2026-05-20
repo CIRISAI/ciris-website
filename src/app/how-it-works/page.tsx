@@ -46,7 +46,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            <strong>Use cases:</strong> Community moderation, personal assistants, compliance automation, research evaluation, customer service—anywhere you need AI that can explain its reasoning and defer to humans on edge cases.
+            <strong>Use cases:</strong> Community moderation, personal assistants, compliance automation, research evaluation, customer service. Anywhere you need AI that can explain its reasoning and defer to humans on edge cases.
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="/coherence-ratchet" className="text-sm font-semibold text-brand-primary hover:underline">
@@ -116,7 +116,7 @@ export default function HowItWorksPage() {
                 { step: 1, name: "START_ROUND", desc: "Initialize processing round" },
                 { step: 2, name: "GATHER_CONTEXT", desc: "Build comprehensive context for analysis" },
                 { step: 3, name: "PERFORM_DMAS", desc: "Run 3 parallel Decision-Making Algorithms" },
-                { step: 4, name: "PERFORM_IDMA", desc: "Intuition check — are sources truly independent?", isIDMA: true },
+                { step: 4, name: "PERFORM_IDMA", desc: "Intuition check: are sources truly independent?", isIDMA: true },
                 { step: 5, name: "PERFORM_ASPDMA", desc: "LLM-powered action selection from DMA results" },
                 { step: 6, name: "CONSCIENCE_EXECUTION", desc: "Ethical validation through 4 faculties" },
                 { step: 7, name: "RECURSIVE_ASPDMA", desc: "(If conscience failed) Re-run action selection" },
@@ -456,7 +456,7 @@ export default function HowItWorksPage() {
               </a>
             </h3>
             <p className="text-sm text-gray-300 dark:text-gray-700 mb-4">
-              Unfilterable emergency control. Processes in perception layer before any cognition. Extraction IS perception—you can&apos;t disable accord detection without disabling message reading entirely.
+              Unfilterable emergency control. Processes in perception layer before any cognition. Extraction IS perception. You can&apos;t disable accord detection without disabling message reading entirely.
             </p>
             <div className="grid gap-2 md:grid-cols-3">
               <div className="rounded bg-gray-800 dark:bg-gray-100 p-3">
@@ -563,7 +563,7 @@ export default function HowItWorksPage() {
           <div className="mt-8 rounded-lg border-2 border-brand-primary bg-blue-50 dark:bg-blue-900/20 p-6">
             <h3 className="font-bold text-gray-900 dark:text-white mb-4">Open Source Infrastructure</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              The entire CIRIS stack is open source — not just the agent. You can verify, audit, and self-host everything:
+              The entire CIRIS stack is open source, not just the agent. You can verify, audit, and self-host everything:
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               <div>
@@ -679,7 +679,7 @@ export default function HowItWorksPage() {
                 <h3 className="font-bold text-gray-900 dark:text-white mb-2">Funding Needed: Benchmark Infrastructure</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                   Running coherence benchmarks at scale is expensive. Each scenario requires 13+ LLM calls minimum, averaging 20+
-                  with a long tail—coherence tests drive ponders, deferrals, and refusals that require follow-up rounds to reach
+                  with a long tail. Coherence tests drive ponders, deferrals, and refusals that require follow-up rounds to reach
                   conclusion. We need funding to develop automated benchmark pipelines and maintain continuous coherence verification.
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -737,7 +737,7 @@ export default function HowItWorksPage() {
         <section className="text-center border-t border-gray-200 dark:border-gray-700 pt-12">
           <p className="text-gray-600 dark:text-gray-400 mb-6">
             This is accountability infrastructure. Not training-time alignment. Not policy documents.<br />
-            Mechanisms that execute, audit, and defer—at runtime.
+            Mechanisms that execute, audit, and defer, at runtime.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a

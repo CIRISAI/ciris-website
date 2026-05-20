@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Mission Driven Development | Methodology for Mission-as-Architecture",
   description:
-    "Mission Driven Development (MDD) is a software engineering methodology that embeds mission as the fourth structural foundation alongside logic, schemas, and protocols. Every architectural decision must demonstrate alignment with the stated mission. Worked example: CIRIS — 22 services, 10,000+ tests, minimal untyped data structures in production.",
+    "Mission Driven Development (MDD) is a software engineering methodology that embeds mission as the fourth structural foundation alongside logic, schemas, and protocols. Every architectural decision must demonstrate alignment with the stated mission. Worked example: CIRIS, with 22 services, 10,000+ tests, minimal untyped data structures in production.",
   alternates: {
     canonical: "/mdd",
   },

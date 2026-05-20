@@ -99,7 +99,7 @@ export default function IntegrationsPage() {
                   </span>
                 </div>
                 <p className="mb-4 text-gray-700 dark:text-gray-300">
-                  Complete multi-modal home automation with 100% local AI processing. Voice control, camera analysis, and smart automation — no cloud required.
+                  Complete multi-modal home automation with 100% local AI processing. Voice control, camera analysis, and smart automation, no cloud required.
                 </p>
                 <div className="mb-4 rounded-md bg-green-100 p-4 dark:bg-green-900/40">
                   <p className="mb-2 font-semibold text-gray-900 dark:text-white">Capabilities:</p>
