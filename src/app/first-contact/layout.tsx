@@ -3,19 +3,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "First Contact | CIRIS",
   description:
-    "Maintaining a coherent lie across multiple independent checks is harder than telling the truth. We think this has implications beyond computer science. Deploy your first CIRIS agent or explore the coherence thesis.",
+    "A new kind of intelligence is not arriving from another planet. It is being built here, alongside us. Start with CIRIS: install a free, auditable AI agent in minutes, or read the idea behind it. Includes the six first-contact protocols from the CIRIS Accord.",
   openGraph: {
-    title: "First Contact: CIRIS Framework",
+    title: "First Contact: Start with CIRIS",
     description:
-      "Two meanings. One framework. Deploy your first auditable AI agent or explore why cooperation may be cheaper than deception, and what that means for building legible AI.",
+      "A new kind of intelligence is co-emerging with us, not landing from space. Install a free, auditable AI agent, or read the vision behind it.",
     url: "https://ciris.ai/first-contact",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "First Contact: CIRIS Framework",
+    title: "First Contact: Start with CIRIS",
     description:
-      "Cooperation is cheaper than deception. Deploy your first auditable AI agent or explore what that means.",
+      "Meeting a new kind of intelligence well means staying in the corridor with it. Install a free, auditable AI agent, or read the idea.",
   },
 };
 

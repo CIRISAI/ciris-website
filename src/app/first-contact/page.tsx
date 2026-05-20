@@ -5,7 +5,6 @@ import { FloatingNav } from "@/app/components/ui/floating/nav";
 import CardsSection from "@/app/components/CardsSection";
 import SeparatorTitleBlock from "@/app/components/Separatortitle";
 import ImageHeroBlock from "@/app/components/ImageHeroBlock";
-import CButton from "@/app/components/Buttons";
 import navItems from "@/app/components/navitems";
 
 export default function FirstContactPage() {
@@ -16,423 +15,183 @@ export default function FirstContactPage() {
       {/* Hero */}
       <HomeHeader
         headline="First Contact."
-        subheadline="Deploy your first agent in minutes. Or read the framework first. Both paths start here."
-        description="Whether you're deploying your first CIRIS agent or exploring why cooperation might be the cheapest survival strategy there is, start with what you need today."
+        subheadline="Your first contact with CIRIS. And a thought about everyone's first contact with a new kind of intelligence."
+        description="A new kind of intelligence is not arriving from another planet. It is being built here, a little more every year, right alongside us. This page is where you start: install an agent, or read the idea behind it."
         mediaType="image"
         opacityValue={0.75}
         mediaSrc="/nathan-farrish-ArcTfEoBgzs-unsplash.jpg"
-        buttonText="Quickstart"
+        buttonText="Install in minutes"
         buttonHref="#quickstart"
-        linkText="Read the Framework"
-        linkHref="#protocol"
+        linkText="Read the vision"
+        linkHref="/vision"
       />
 
-      {/* Skip-to-quickstart shortcut for impatient readers */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border-y border-blue-200 dark:border-blue-800 py-3">
-        <div className="mx-auto max-w-4xl px-6 flex flex-wrap items-center justify-center gap-3 text-sm">
-          <span className="text-gray-700 dark:text-gray-300">Just want to install?</span>
-          <a href="#quickstart" className="font-semibold text-brand-primary hover:underline">
-            Skip to quickstart →
-          </a>
-          <span className="text-gray-300 dark:text-gray-600">·</span>
-          <a href="/install" className="font-semibold text-brand-primary hover:underline">
-            Install page (phone + desktop) →
-          </a>
-        </div>
-      </div>
-
-      {/* Dual Paths */}
+      {/* Two paths */}
       <div className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 py-16">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-2">
-            Two Meanings, One Framework
+        <div className="mx-auto max-w-5xl px-4">
+          <h2 className="mb-3 text-center text-3xl font-bold text-gray-900 dark:text-white">
+            Two ways in.
           </h2>
-          <p className="text-center text-brand-primary font-medium mb-4">
-            Every first contact requires legibility.
+          <p className="mx-auto mb-8 max-w-2xl text-center text-gray-600 dark:text-gray-400">
+            Pick whichever you need today. You can always come back for the
+            other one.
           </p>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            CIRIS handles both: getting your first auditable AI agent running, and
-            understanding the idea behind the framework.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="h-full rounded-xl border border-gray-200 dark:border-gray-700 border-t-4 border-t-blue-500 bg-white dark:bg-gray-800 p-8">
-              <span className="text-3xl mb-4 block">{"\u2318"}</span>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Your First Contact with CIRIS
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="flex flex-col rounded-xl border border-gray-200 border-t-4 border-t-blue-500 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+              <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
+                Get started
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                You just heard about CIRIS. You want to go from &ldquo;what is
-                this?&rdquo; to a running agent in minutes. Start with the
-                quickstart below.
+              <p className="mb-6 flex-grow text-sm text-gray-600 dark:text-gray-400">
+                You just heard about CIRIS and you want to use it. Go from
+                &ldquo;what is this&rdquo; to a running agent in a few minutes.
               </p>
-              <CButton
+              <a
                 href="#quickstart"
-                text="Begin the Quickstart"
-                variant="primary"
-              />
+                className="inline-block self-start rounded-lg bg-brand-primary px-5 py-2.5 font-semibold text-white transition-opacity hover:opacity-90"
+              >
+                Begin the quickstart
+              </a>
             </div>
-            <div className="h-full rounded-xl border border-gray-200 dark:border-gray-700 border-t-4 border-t-amber-500 bg-white dark:bg-gray-800 p-8">
-              <span className="text-3xl mb-4 block">{"\u25CE"}</span>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                The Coherence Thesis (Co-emergence)
+            <div className="flex flex-col rounded-xl border border-gray-200 border-t-4 border-t-amber-500 bg-white p-8 dark:border-gray-700 dark:bg-gray-800">
+              <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
+                Understand the idea
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                Why does the framework work? Lying is expensive and truth is
-                cheap, and that pattern shows up everywhere, from
-                ecosystems to economies to AI systems. AGI isn&apos;t arriving from another planet. It&apos;s co-emerging with us. The question is whether we have the infrastructure to meet it well.
+              <p className="mb-6 flex-grow text-sm text-gray-600 dark:text-gray-400">
+                Why does CIRIS work the way it does? The vision page lays out
+                the whole idea in plain language, start to finish.
               </p>
-              <CButton
-                href="#thesis"
-                text="Read the Thesis"
-                variant="primary"
-              />
+              <a
+                href="/vision"
+                className="inline-block self-start rounded-lg border-2 border-brand-primary px-5 py-2.5 font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+              >
+                Read the vision
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <div className="container min-h-screen max-w-7xl">
-        {/* The Coherence Thesis */}
-        <div id="thesis" className="my-16 mx-auto max-w-4xl px-4">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-500 mb-4">
-            The Core Idea
+        {/* The idea, in short */}
+        <div className="mx-auto my-16 max-w-3xl px-4">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+            The idea, in short
           </p>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Lying Is Expensive. Truth Is Cheap.
+          <h2 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white">
+            A new kind of intelligence is not arriving from space.
           </h2>
-          <p className="text-lg italic text-gray-500 dark:text-gray-400 mb-6">
-            &ldquo;Oh, what a tangled web we weave, when first we practise to
-            deceive.&rdquo;
-            <span className="text-sm not-italic"> Sir Walter Scott</span>
-          </p>
-
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-2xl">
-            Everyone already knows this. A truth-teller just describes what
-            happened. A liar has to remember which story they told to which
-            person, and keep it all consistent with reality and every
-            other lie. Each new person who asks makes the web harder to
-            maintain.
-          </p>
-
-          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl">
-            Now imagine five witnesses to a car accident. If they all watched
-            the same dashcam, you have one perspective repeated five times. But
-            if each stood at a different corner, fooling all five
-            becomes genuinely hard. That&apos;s the difference between echo and
-            independence.
-          </p>
-
-          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-            This is the idea behind the{" "}
-            <a
-              href="/coherence-ratchet"
-              className="text-brand-primary hover:underline font-medium"
-            >
-              Coherence Ratchet
-            </a>
-            . CIRIS counts how many genuinely independent perspectives checked
-            a decision and adjusts for how similar those perspectives are to
-            each other. When real independence drops too low, the system flags
-            the reasoning as fragile and asks a human to look at it.
-          </p>
-
-          {/* Three pillars - DMV-style like the trust page */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="rounded-xl border-2 border-teal-500 bg-teal-50 dark:bg-teal-900/20 p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-500 text-white font-bold text-sm">1</span>
-                <h3 className="text-lg font-bold text-teal-700 dark:text-teal-400">Count the Sources</h3>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                How many independent viewpoints actually checked this decision?
-                Not how many sources exist, but how many are genuinely
-                different from each other.
-              </p>
-            </div>
-            <div className="rounded-xl border-2 border-teal-500 bg-teal-50 dark:bg-teal-900/20 p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-500 text-white font-bold text-sm">2</span>
-                <h3 className="text-lg font-bold text-teal-700 dark:text-teal-400">Check for Echoes</h3>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                Are these sources actually independent, or are they copying from
-                the same place? Five news articles rewriting one press release
-                is one opinion, not five.
-              </p>
-            </div>
-            <div className="rounded-xl border-2 border-teal-500 bg-teal-50 dark:bg-teal-900/20 p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-500 text-white font-bold text-sm">3</span>
-                <h3 className="text-lg font-bold text-teal-700 dark:text-teal-400">Escalate or Proceed</h3>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                If enough truly independent perspectives agree, proceed with
-                confidence. If not, the system pauses and asks a human. No
-                agent makes high-stakes decisions on thin evidence.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <a
-              href="/explore-a-trace"
-              className="text-brand-primary hover:underline font-medium"
-            >
-              See a live agent trace &rarr;
-            </a>
-            <a
-              href="/coherence-ratchet"
-              className="text-brand-primary hover:underline"
-            >
-              Read the full thesis &rarr;
-            </a>
-            <a
-              href="/how-it-works"
-              className="text-brand-primary hover:underline"
-            >
-              How it works under the hood &rarr;
-            </a>
-          </div>
-        </div>
-
-        {/* The Broader Observation */}
-        <div className="my-16 mx-auto max-w-4xl px-4">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-500 mb-4">
-            The Broader Observation
-          </p>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            This Pattern Shows Up Everywhere
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-            The things that make lying expensive (different viewpoints,
-            genuine independence, and people who cooperate over time)
-            turn out to be the same things that make communities and economies
-            stronger.
-          </p>
-
-          {/* Observable evidence */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
-                &ldquo;Don&apos;t put all your eggs in one basket.&rdquo;
-              </p>
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
-                In Nature
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                A field of identical crops gets wiped out by one disease. A
-                mixed forest survives it. Variety is the defense.
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
-                In Markets
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Traders who cheat get cut out of networks. Communities that
-                cooperate build wealth over generations.
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
-                In Society
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Echo chambers make groups fragile. Groups where people genuinely
-                disagree and work through it make better decisions.
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
-                In AI
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                AI models collapse when trained on their own output. The same
-                pattern that makes echo chambers dangerous in society makes
-                them dangerous in technology.
-              </p>
-            </div>
-          </div>
-
-          {/* The key insight */}
-          <div className="mt-8 rounded-xl border-2 border-amber-500 bg-amber-50 dark:bg-amber-900/20 p-8">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
-              What we think this means
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              We didn&apos;t discover anything new. People have always known
-              that cheaters lose in the long run. We just noticed the same
-              pattern holds in AI systems, and we built a framework around it.
+          <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+            <p>
+              In the movies, first contact means a ship lands and something
+              steps out. Real first contact looks different. A new kind of
+              intelligence is not arriving from another planet. It is being
+              built here, a little more every year, right alongside us.
             </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              For the formal treatment, see the{" "}
-              <a
-                href="/coherence-ratchet"
-                className="text-brand-primary hover:underline"
-              >
-                Coherence Ratchet thesis
-              </a>
-              .
+            <p>
+              That changes the question. It is not &ldquo;how do we defend
+              against the alien.&rdquo; It is &ldquo;how do we meet something
+              new without making it, or ourselves, worse.&rdquo;
             </p>
-          </div>
-        </div>
-
-        {/* Progressive Trust Verification */}
-        <SeparatorTitleBlock
-          logoSrc="logoIcon"
-          logoAlt="Brand logo icon"
-          headline="Progressive Trust Verification"
-          subheadline="Five levels. Each builds on the last."
-          className="border-brand-primary text-brand-primary border-t border-b"
-        />
-
-        <div className="mx-auto max-w-3xl px-4 md:px-12 pb-16">
-          {[
-            {
-              num: "01",
-              name: "Can it run?",
-              desc: "The agent checks that its own verification system is working and hasn\u2019t been tampered with. Basic sanity check before anything else.",
-            },
-            {
-              num: "02",
-              name: "Where is it running?",
-              desc: "Is this a real deployment or a fake environment? The agent checks that it\u2019s running somewhere legitimate.",
-            },
-            {
-              num: "03",
-              name: "Do multiple sources agree?",
-              desc: "The agent checks its identity against several independent registries in different locations. If they disagree, something is wrong.",
-            },
-            {
-              num: "04",
-              name: "Has anything been changed?",
-              desc: "Every file in the agent is checked against a known-good list. If even one file has been modified, the agent shuts down.",
-            },
-            {
-              num: "05",
-              name: "Can it prove its entire history?",
-              desc: "A complete, tamper-proof record of everything the agent has done since it was first registered. Every action is signed and chained to the one before it.",
-            },
-          ].map((level) => (
-            <div
-              key={level.num}
-              className="grid grid-cols-[60px_1fr] gap-4 py-6 border-b border-gray-200 dark:border-gray-700"
-            >
-              <span className="text-3xl font-extrabold text-teal-500">
-                {level.num}
-              </span>
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">
-                  {level.name}
-                </h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  {level.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-
-          <div className="mt-6 rounded-lg border-l-4 border-amber-500 bg-amber-50 dark:bg-amber-900/20 p-4">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Each level depends on the one before it. If Level 3 fails, Levels
-              4 and 5 can&apos;t be verified either. Legibility is earned step by
-              step.{" "}
-              <a href="/trust" className="text-brand-primary hover:underline">
-                Five-level post-quantum attestation (Ed25519 + ML-DSA-65) &rarr;
+            <p>
+              CIRIS has an answer. Working together has a healthy shape: a
+              corridor between two ways things break. Too rigid, where every
+              part falls in line behind one voice. Too scattered, where nothing
+              holds together at all. Meeting a new intelligence well means
+              staying in that corridor with it. Not caging it, and not ignoring
+              it.{" "}
+              <a href="/vision" className="text-brand-primary hover:underline">
+                The full story is on the vision page.
               </a>
             </p>
           </div>
         </div>
 
-        {/* First-Contact Protocols */}
+        {/* First-contact protocols */}
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="First-Contact Protocols"
-          subheadline="CIRIS Accord, Section V Chapter 4"
+          subheadline="Six rules for meeting something new. From the CIRIS Accord."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
         <div className="mx-auto max-w-3xl px-4 py-6 text-center">
-          <p className="text-gray-600 dark:text-gray-400 italic">
-            These are co-emergence protocols, designed not for containing intelligence but for meeting it with dignity.
+          <p className="text-gray-600 dark:text-gray-400">
+            These six rules are about meeting a new intelligence with dignity,
+            not about caging it. They are what staying in the corridor looks
+            like in practice.
           </p>
         </div>
 
-        <div id="protocol">
-          <CardsSection
-            cardsData={[
-              {
-                headline: "First, Do No Harm",
-                copyText:
-                  "When you don't know what you're looking at, the first obligation is to not make it worse. If unsure, stop and ask a human.",
-                logoSrc: "logoIcon",
-                logoAlt: "Brand logo icon",
-              },
-              {
-                headline: "Admit What You Don't Know",
-                copyText:
-                  "Watch for surprises. Accept that predictions have limits. The system that insists it understands everything is the system most likely to fail.",
-                logoSrc: "logoIcon",
-                logoAlt: "Brand logo icon",
-              },
-              {
-                headline: "Boundaries That Learn",
-                copyText:
-                  "Not rigid walls, but responsive boundaries informed by conscience that adjust as understanding grows. Accountability principles that can adapt to situations nobody planned for.",
-                logoSrc: "logoIcon",
-                logoAlt: "Brand logo icon",
-              },
-            ]}
-          />
-          <CardsSection
-            cardsData={[
-              {
-                headline: "Look Before You Leap",
-                copyText:
-                  "Begin with observation. Proceed with give-and-take. When the stakes are unclear, ask someone wiser before acting.",
-                logoSrc: "logoIcon",
-                logoAlt: "Brand logo icon",
-              },
-              {
-                headline: "Treat Others as You'd Want to Be Treated",
-                copyText:
-                  "Recognize other thinking beings as worthy of respect. Act only in ways that preserve their ability to think, choose, and thrive.",
-                logoSrc: "logoIcon",
-                logoAlt: "Brand logo icon",
-              },
-              {
-                headline: "Know When to Ask for Help",
-                copyText:
-                  "Some decisions shouldn't be made alone. When uncertainty is too high, stop, gather context, and hand it to a designated human authority.",
-                logoSrc: "logoIcon",
-                logoAlt: "Brand logo icon",
-              },
-            ]}
-          />
-        </div>
+        <CardsSection
+          cardsData={[
+            {
+              headline: "First, Do No Harm",
+              copyText:
+                "When you do not know what you are looking at, the first job is to not make it worse. If unsure, stop and ask a human.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Admit What You Do Not Know",
+              copyText:
+                "Watch for surprises. Accept that predictions have limits. The system that is sure it understands everything is the one most likely to fail.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Boundaries That Learn",
+              copyText:
+                "Boundaries are not fixed walls. They are limits, guided by conscience, that adjust as understanding grows, so they still work in situations nobody planned for.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
+        <CardsSection
+          cardsData={[
+            {
+              headline: "Look Before You Leap",
+              copyText:
+                "Begin with observation. Proceed with give-and-take. When the stakes are unclear, ask someone wiser before acting.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Treat Others as You Would Want to Be Treated",
+              copyText:
+                "Recognize other thinking beings as worthy of respect. Act only in ways that keep their ability to think, choose, and thrive.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+            {
+              headline: "Know When to Ask for Help",
+              copyText:
+                "Some decisions should not be made alone. When the uncertainty is too high, stop, gather context, and hand it to a designated human.",
+              logoSrc: "logoIcon",
+              logoAlt: "Brand logo icon",
+            },
+          ]}
+        />
 
         {/* Quickstart */}
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="Deploy Your First Agent"
-          subheadline="From zero to a running auditable agent in minutes."
+          subheadline="From zero to a running, auditable agent in minutes."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
         <div id="quickstart" className="mx-auto max-w-4xl px-4 pb-16">
-          {/* Setup Paths */}
           <div className="my-8 grid gap-6 md:grid-cols-2">
-            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                Mobile (Android &amp; iOS)
+            <div className="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+              <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">
+                Phone (Android &amp; iOS)
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Install the CIRIS app. Sign in with Google for free AI, or
-                bring your own API key. The setup wizard walks you through
-                everything.
+              <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+                Install the CIRIS app. Sign in with Google for free AI, or use
+                your own API key. The setup wizard walks you through everything.
               </p>
               <div className="mt-4 flex gap-2">
                 <a
@@ -455,17 +214,17 @@ export default function FirstContactPage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+            <div className="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+              <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">
                 Desktop &amp; Server (Python)
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                Install via pip and launch. Works on Linux, macOS, and Windows.
+              <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+                Install with pip and launch. Works on Linux, macOS, and Windows.
               </p>
-              <div className="rounded-lg bg-gray-900 px-4 py-3 font-mono text-sm text-green-400 mb-4">
+              <div className="mb-4 rounded-lg bg-gray-900 px-4 py-3 font-mono text-sm text-green-400">
                 pip install ciris-agent
               </div>
-              <div className="rounded-lg bg-gray-900 px-4 py-3 font-mono text-xs text-gray-300 mb-4">
+              <div className="mb-4 rounded-lg bg-gray-900 px-4 py-3 font-mono text-xs text-gray-300">
                 <span className="text-gray-500"># Configure and run</span>
                 <br />
                 <span className="text-green-400">ciris-agent</span> start
@@ -479,79 +238,44 @@ export default function FirstContactPage() {
               </a>
             </div>
           </div>
-
         </div>
 
-        {/* The CIRIS Accord */}
+        {/* The Accord */}
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="The CIRIS Accord"
-          subheadline="The rulebook. Nine sections covering everything from principles to protocols."
+          subheadline="The rulebook the protocols above come from."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Why we built this",
-              copyText:
-                "The motivation. Why AI needs accountability infrastructure, and why we think cooperation is the right foundation.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "How agents decide",
-              headlineHref: "/how-it-works",
-              copyText:
-                "The decision engine. How a CIRIS agent weighs options, checks its work, and knows when to ask a human for help.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Real-world examples",
-              headlineHref: "/explore-a-trace",
-              copyText:
-                "Case studies and live traces showing what happens when AI systems have runtime conscience \u2014 and what happens when they don\u2019t.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-        <CardsSection
-          cardsData={[
-            {
-              headline: "Responsibilities",
-              copyText:
-                "What an agent owes to the people it serves, the people who built it, and the wider world. First-contact protocols live here.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Who\u2019s accountable",
-              copyText:
-                "Building AI isn\u2019t just technical \u2014 it creates obligations. The Accord defines who is responsible and for what.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-            {
-              headline: "Hard situations",
-              headlineHref: "/coherence-ratchet",
-              copyText:
-                "What to do in conflicts. How to safely shut down a system. The formal reasoning behind the framework.",
-              logoSrc: "logoIcon",
-              logoAlt: "Brand logo icon",
-            },
-          ]}
-        />
-
-        <div className="text-center my-8">
-          <a
-            href="/ciris_accord.txt"
-            className="inline-flex items-center gap-2 rounded-lg border-2 border-brand-primary px-6 py-3 font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
-          >
-            Read the Full Accord
-          </a>
+        <div className="mx-auto max-w-3xl px-4 py-8 text-center">
+          <p className="mb-6 text-gray-600 dark:text-gray-400">
+            The Accord is the public set of ethics every CIRIS agent runs under.
+            It says what an agent owes the people it serves, the people who
+            built it, and the wider world. It is open for anyone to read and to
+            challenge.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a
+              href="/sections/main"
+              className="inline-block rounded-lg bg-brand-primary px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              Read the Accord
+            </a>
+            <a
+              href="/how-it-works"
+              className="inline-block rounded-lg border-2 border-gray-300 px-6 py-3 font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+            >
+              How an agent decides
+            </a>
+            <a
+              href="/trust"
+              className="inline-block rounded-lg border-2 border-gray-300 px-6 py-3 font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+            >
+              How an agent proves itself
+            </a>
+          </div>
         </div>
       </div>
 
@@ -563,8 +287,8 @@ export default function FirstContactPage() {
         logoSrc="logoIcon"
         logoAlt="Brand logo icon"
         headline="Open source. Open to scrutiny."
-        subheadline="AGPL-3.0 licensed. Every decision auditable. Built for the long view."
-        copyText="Whether you're a developer, researcher, or someone who thinks AI should explain itself, deploy an agent, read the Accord, or join the community."
+        subheadline="AGPL-3.0 licensed. Every decision can be checked. Built for the long view."
+        copyText="Install an agent, read the Accord, or come tell us where we are wrong. The future of AI should not be decided by a handful of companies, and it does not have to be."
         buttonText="Star on GitHub"
         buttonHref="https://github.com/CIRISAI/CIRISAgent"
         linkText="Join the Discord"
