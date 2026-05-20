@@ -139,11 +139,11 @@ export default function Homepage() {
                 "A technical leader at the intersection of safety, scale, and soul. Ying-Jung specializes in fine-tuning and evaluating large language models, building multi-agent frameworks, and developing safety-critical systems for the future of AI. With deep research roots in sustainability and AI governance, and a Ph.D. in Environmental Science from UC Santa Barbara, she brings both precision and care to CIRIS’ architecture of trust."
             },
             {
-              headline: "Kelsey",
+              headline: "Kelsy Smith",
               subheadline: "Systems Ethicist",
               imageUrl: "/board2.jpg",
               copyText:
-                "Philosophy nerd. Forest-trained systems thinker. Kelsey brings both structure and soul to CIRIS, grounding abstract ethics in real-world complexity. With a background in natural resources and a love for big questions, she helps keep our vision focused on what’s just over the horizon - while never losing sight of the human (and non-human) systems at stake."
+                "Philosophy nerd. Forest-trained systems thinker. Kelsy brings both structure and soul to CIRIS, grounding abstract ethics in real-world complexity. With a background in natural resources and a love for big questions, she helps keep our vision focused on what’s just over the horizon - while never losing sight of the human (and non-human) systems at stake."
             },
 
           ]}
