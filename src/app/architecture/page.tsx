@@ -25,9 +25,11 @@ export default function ArchitecturePage() {
               Designed to Be Deleted
             </h2>
             <p className="text-gray-700 dark:text-gray-300">
-              CIRISBridge is temporary infrastructure. Every component knows it will be retired
-              when Veilid matures. This isn't a bug. It's the mission. We avoid lock-in,
-              vendor-specific integrations, and features that assume centralization is forever.
+              The CIRIS infrastructure is meant to be temporary. Every part of it is
+              built knowing it will be retired once the peer-to-peer network meant to
+              replace it is ready. That is not a flaw. It is the plan. We avoid
+              anything that ties CIRIS to one company, or that assumes a central hub
+              has to exist forever.
             </p>
             <div className="mt-4 grid gap-2 text-sm text-gray-600 dark:text-gray-400 sm:grid-cols-3">
               <div><strong>DNS</strong> → Veilid DHT</div>
@@ -39,7 +41,7 @@ export default function ArchitecturePage() {
           {/* Architecture Diagram */}
           <div className="mb-12">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-              Multi-Region Active/Active
+              Two Regions, Both Always On
             </h2>
 
             <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
@@ -178,12 +180,13 @@ export default function ArchitecturePage() {
                   Split DNS
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  US via Cloudflare proxy, EU direct. Zero single point of failure.
+                  The US site and the EU site reach the internet two different ways,
+                  so no single failure can take both down.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• US: Cloudflare proxy + DDoS protection</li>
-                  <li>• EU: Direct DNS to Hetzner</li>
-                  <li>• If CF fails, EU still accessible</li>
+                  <li>• The US site goes through Cloudflare, which also absorbs attacks</li>
+                  <li>• The EU site connects directly</li>
+                  <li>• If Cloudflare has trouble, the EU site still works</li>
                 </ul>
               </div>
 
@@ -193,12 +196,12 @@ export default function ArchitecturePage() {
                   CIRISBilling
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  Sustainable operation without ads or data monetization.
+                  Keeps CIRIS running without ads and without selling your data.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• Pre-purchased credits model</li>
-                  <li>• Idempotent consumption (exactly-once)</li>
-                  <li>• Google OAuth authentication</li>
+                  <li>• You buy credits ahead of time</li>
+                  <li>• Each credit is counted exactly once, never twice</li>
+                  <li>• You sign in with Google</li>
                 </ul>
               </div>
 
@@ -208,12 +211,12 @@ export default function ArchitecturePage() {
                   CIRISProxy
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  LLM routing with Zero Data Retention. Your conversations are never stored.
+                  Passes requests to the AI model. Your conversations are never stored.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• OpenAI-compatible API (LiteLLM)</li>
-                  <li>• All providers configured for ZDR</li>
-                  <li>• No prompt/response logging</li>
+                  <li>• Works with standard AI model providers</li>
+                  <li>• Every provider is set to keep no data</li>
+                  <li>• Nothing you send or receive is logged</li>
                 </ul>
               </div>
 
@@ -223,12 +226,13 @@ export default function ArchitecturePage() {
                   PostgreSQL
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  Bi-directional replication. Both regions can accept writes.
+                  The database. Both regions keep matching copies, and either one
+                  can be written to.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• Synchronous replication</li>
-                  <li>• Last-write-wins conflict resolution</li>
-                  <li>• Manual failover (safer for financial data)</li>
+                  <li>• The two copies stay in step with each other</li>
+                  <li>• If they ever disagree, the most recent change wins</li>
+                  <li>• A person, not a script, switches regions (safer for money)</li>
                 </ul>
               </div>
             </div>
@@ -270,12 +274,12 @@ export default function ArchitecturePage() {
                   Edge Device Support
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  CIRISAgent runs on Android ARM32 devices via Chaquopy Python with 15-20 second
-                  response times. Total app footprint under 100MB.
+                  CIRIS runs on ordinary Android phones, answering in about 15 to 20
+                  seconds, with the whole app under 100 MB.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• Full on-device runtime (no cloud required)</li>
-                  <li>• SQLite with WAL mode for local persistence</li>
+                  <li>• Runs fully on the phone, no cloud needed</li>
+                  <li>• Keeps its data on the device</li>
                 </ul>
               </div>
 
@@ -284,24 +288,24 @@ export default function ArchitecturePage() {
                   Coherence Ratchet
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  Ethical consistency isn&apos;t expensive. Coordinated deception is. Honest actions reference existing signed commitments.
-                  Deceptive actions must satisfy a growing constraint surface of immutable rationales, making coordinated lies
-                  increasingly fragile under audit.
+                  Being honest is cheap. Keeping a lie going is expensive. An honest
+                  agent can point back at what it already said. A lying agent has to
+                  keep every past record lined up, and that gets harder over time.
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
-                  <li>• Truth-telling: reference prior commitments directly</li>
-                  <li>• Coordinated deception: reconcile against expanding constraint surface</li>
-                  <li>• Structural asymmetry favors honest continuation</li>
+                  <li>• Honesty: just point back at the record</li>
+                  <li>• Lying: keep an ever-growing pile of records in step</li>
+                  <li>• The longer it runs, the more honesty is the easy path</li>
                 </ul>
               </a>
             </div>
 
             <div className="mt-6 rounded bg-gray-100 p-4 dark:bg-gray-900">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Graceful Degradation</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Bending Instead of Breaking</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                <li>• <strong>LLM fallback chain:</strong> Primary → Fast → Fallback providers</li>
-                <li>• <strong>Phased initialization:</strong> Critical services block, optional services fail gracefully</li>
-                <li>• <strong>Resource adaptation:</strong> Adjusts to intermittent networks and power constraints</li>
+                <li>• <strong>Backup AI providers:</strong> if the main one is down, it falls back to another</li>
+                <li>• <strong>Careful startup:</strong> the must-have parts load first, the optional parts can fail without stopping the rest</li>
+                <li>• <strong>Adapts:</strong> copes with a patchy network or limited power</li>
               </ul>
             </div>
           </div>
@@ -315,23 +319,25 @@ export default function ArchitecturePage() {
             <div className="space-y-6">
               <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Active/Active, Not Primary/Replica
+                  Both Regions Run at Once
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Both regions serve all requests simultaneously. No single point of failure for compute.
-                  Each region has its own domain. If one region fails, clients can switch to the other
-                  immediately, no failover delay.
+                  Both regions handle real traffic at the same time, so neither is a
+                  single point of failure. Each has its own web address. If one
+                  region goes down, people can switch to the other right away, with
+                  no waiting.
                 </p>
               </div>
 
               <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Two Independent Providers
+                  Two Separate Hosting Companies
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Vultr (US company) and Hetzner (German company) provide jurisdictional diversity.
-                  No single provider can take down CIRIS. No vendor lock-in means we can swap
-                  providers if pricing or policies change.
+                  One US company (Vultr) and one German company (Hetzner), under two
+                  different countries' laws. No single company can take CIRIS down,
+                  and because nothing is locked to either one, we can switch if their
+                  prices or policies change.
                 </p>
               </div>
 
@@ -340,20 +346,22 @@ export default function ArchitecturePage() {
                   Split DNS Strategy
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  US traffic routes through Cloudflare for DDoS protection and caching. EU traffic
-                  uses direct DNS to Hetzner. This split ensures zero single point of failure: if
-                  Cloudflare has issues, EU remains directly accessible.
+                  US traffic goes through Cloudflare, which absorbs attacks and speeds
+                  things up. EU traffic connects straight to Hetzner. Splitting it
+                  this way means no single failure can take both down: if Cloudflare
+                  has trouble, the EU site still works.
                 </p>
               </div>
 
               <div className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Manual Database Failover
+                  A Person Switches the Database, Not a Script
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  For financial data (credit balances, transactions), we chose manual promotion over
-                  automatic failover. This prevents split-brain scenarios and ensures human verification
-                  before changing write authority. Good enough beats perfect when money is involved.
+                  For money data, like credit balances and payments, a person makes
+                  the call to switch regions, not an automatic script. This avoids
+                  the case where both regions think they are in charge at once. When
+                  money is involved, careful beats clever.
                 </p>
               </div>
             </div>
@@ -367,23 +375,23 @@ export default function ArchitecturePage() {
 
             <div className="rounded-lg border-2 border-yellow-500 bg-yellow-50 p-6 dark:bg-yellow-900/20">
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                CIRISBridge implements the <a href="/safety" className="text-brand-primary hover:underline">Safety Policy</a>:
-                <strong> "Fix if we can. Pause only if we can't."</strong>
+                The infrastructure follows the <a href="/safety" className="text-brand-primary hover:underline">safety policy</a>:
+                <strong> &ldquo;Fix it if we can. Pause only if we cannot.&rdquo;</strong>
               </p>
 
               <div className="grid gap-4 sm:grid-cols-2 mt-4">
                 <div className="rounded bg-white p-4 dark:bg-gray-800">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">Global Pause</h4>
                   <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                    Stops proxy, billing, DNS across all regions. PostgreSQL persists.
-                    Requires explicit documented reason.
+                    Stops the whole service across both regions. The database is
+                    kept safe. A clear written reason is required.
                   </p>
                 </div>
                 <div className="rounded bg-white p-4 dark:bg-gray-800">
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">Regional Pause</h4>
                   <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                    Pauses one region while other continues serving.
-                    Graceful degradation for localized issues.
+                    Pauses one region while the other keeps serving. Used for a
+                    problem that only affects one place.
                   </p>
                 </div>
               </div>
