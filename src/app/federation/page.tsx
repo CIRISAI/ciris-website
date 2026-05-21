@@ -8,483 +8,226 @@ export default function FederationPage() {
     <>
       <FloatingNav navItems={navItems} />
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black">
-        <div className="mx-auto max-w-4xl px-6 pt-44 pb-16">
+        <div className="mx-auto max-w-3xl px-6 pb-16 pt-44">
           {/* Hero */}
           <div className="mb-12">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
               The Federation Model
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-              It&apos;s okay to build simple agents. They just need the right governance.
+              It is fine to build simple agents. They just need the right
+              supervision.
             </p>
           </div>
 
-          {/* Core Insight */}
-          <section className="mb-12">
-            <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 rounded-lg p-6">
-              <p className="text-lg text-gray-800 dark:text-gray-200 mb-4">
-                You don&apos;t need every agent to be a Type 3. You need a <strong>governance hierarchy</strong> where simpler agents are supervised by smarter ones, all the way up to humans.
-              </p>
-              <p className="text-gray-700 dark:text-gray-300">
-                This is how you scale AI while maintaining civilizational coherence.
-              </p>
-            </div>
-          </section>
-
-          {/* The Hierarchy */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              The Governance Hierarchy
-            </h2>
-
-            {/* Visual Stack */}
-            <div className="space-y-4 mb-8">
-              {/* Humans */}
-              <div className="rounded-xl border-4 border-purple-500 bg-purple-50 dark:bg-purple-900/20 p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-3xl">👤</span>
-                  <h3 className="text-xl font-bold text-purple-700 dark:text-purple-400">Humans</h3>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  The root of the hierarchy. Provide values, resolve edge cases, maintain veto authority.
-                </p>
-                <p className="text-sm text-purple-600 dark:text-purple-400">
-                  Aggregate values → Feed CIRIS Scoring → Drive early warning systems
-                </p>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex justify-center">
-                <span className="text-2xl text-gray-400">↓ govern</span>
-              </div>
-
-              {/* Type 3 */}
-              <div className="rounded-xl border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white font-bold text-sm">3</span>
-                  <h3 className="text-xl font-bold text-green-700 dark:text-green-400">Type 3 Agents</h3>
-                  <span className="text-sm text-green-600 dark:text-green-400">(Ethical + Intuitive)</span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  Run IDMA. Track k, ρ, k_eff. Detect correlation-driven failures before they cascade.
-                </p>
-                <p className="text-sm text-green-600 dark:text-green-400">
-                  The &quot;circuit breakers&quot;: they see what Type 1 and Type 2 can&apos;t
-                </p>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex justify-center">
-                <span className="text-2xl text-gray-400">↓ govern</span>
-              </div>
-
-              {/* Type 2 */}
-              <div className="rounded-xl border-2 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20 p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-500 text-white font-bold text-sm">2</span>
-                  <h3 className="text-xl font-bold text-yellow-700 dark:text-yellow-400">Type 2 Agents</h3>
-                  <span className="text-sm text-yellow-600 dark:text-yellow-400">(Ethical, no intuition)</span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  Follow ethical rules. Auditable. Can&apos;t detect echo chambers on their own.
-                </p>
-                <p className="text-sm text-yellow-600 dark:text-yellow-400">
-                  Supervisors for Type 1: enforce boundaries, escalate uncertainty
-                </p>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex justify-center">
-                <span className="text-2xl text-gray-400">↓ govern</span>
-              </div>
-
-              {/* Type 1 */}
-              <div className="rounded-xl border-2 border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20 p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-bold text-sm">1</span>
-                  <h3 className="text-xl font-bold text-red-700 dark:text-red-400">Type 1 Agents</h3>
-                  <span className="text-sm text-red-600 dark:text-red-400">(Simple / task-focused)</span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  Single-purpose tools. Fast, cheap, narrowly scoped. No ethical framework of their own.
-                </p>
-                <p className="text-sm text-red-600 dark:text-red-400">
-                  Perfectly fine when properly governed. Most agents will be here
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* The Grid Analogy */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Think of It Like an Electrical Grid
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              <strong>Values are power. Work is the result.</strong> The hierarchy transforms one into the other safely.
+          {/* Core idea */}
+          <section className="mb-12 rounded-2xl border-2 border-blue-500 bg-blue-50 p-6 dark:bg-blue-900/20">
+            <p className="text-lg leading-8 text-gray-800 dark:text-gray-200">
+              You do not need every AI agent to be the smartest, safest kind.
+              You need a chain of supervision: simple agents watched by smarter
+              agents, and those watched, in the end, by people. That chain is
+              how you can run a lot of AI without losing track of whether it is
+              serving human values.
             </p>
-            <div className="bg-gray-900 dark:bg-black rounded-lg p-6 text-white mb-6">
-              <div className="grid gap-4 md:grid-cols-4">
-                <div className="text-center">
-                  <p className="text-3xl mb-2">⚡</p>
-                  <p className="font-bold text-purple-400">Power Plant</p>
-                  <p className="text-xs text-gray-400 mt-1">Humans</p>
-                  <p className="text-xs text-gray-500">Generate values</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl mb-2">🏭</p>
-                  <p className="font-bold text-green-400">Substation</p>
-                  <p className="text-xs text-gray-400 mt-1">Type 3</p>
-                  <p className="text-xs text-gray-500">Transform, monitor, isolate</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl mb-2">🔌</p>
-                  <p className="font-bold text-yellow-400">Distribution</p>
-                  <p className="text-xs text-gray-400 mt-1">Type 2</p>
-                  <p className="text-xs text-gray-500">Deliver with breakers</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl mb-2">💡</p>
-                  <p className="font-bold text-red-400">Devices</p>
-                  <p className="text-xs text-gray-400 mt-1">Type 1</p>
-                  <p className="text-xs text-gray-500">Do work</p>
-                </div>
-              </div>
-            </div>
+          </section>
+
+          {/* The four tiers */}
+          <section className="mb-12">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+              The chain of supervision
+            </p>
+            <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
+              Four levels, each watched by the one above.
+            </h2>
             <div className="space-y-3">
-              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 border-l-4 border-green-500">
-                <h3 className="font-semibold text-green-800 dark:text-green-300 mb-1">Type 3 = Substation</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  <strong>Transforms</strong> high-level human values into agent-level directives. <strong>Monitors</strong> for faults via IDMA. <strong>Isolates</strong> sections when correlation spikes (circuit breaker). <strong>Smooths</strong> fluctuations so downstream agents get stable input (capacitor).
+              <div className="rounded-xl border-2 border-purple-500 bg-purple-50 p-5 dark:bg-purple-900/20">
+                <h3 className="text-lg font-bold text-purple-700 dark:text-purple-400">People</h3>
+                <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
+                  The top of the chain. People set the values, settle the hard
+                  cases, and keep the final say.
                 </p>
               </div>
-              <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 border-l-4 border-yellow-500">
-                <h3 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-1">Type 2 = Distribution Lines</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Delivers power (values) to end devices. Has <strong>circuit breakers</strong> that trip on overload. When a Type 1 agent tries something outside bounds, Type 2 cuts the connection and escalates.
+              <div className="rounded-xl border-2 border-green-500 bg-green-50 p-5 dark:bg-green-900/20">
+                <h3 className="text-lg font-bold text-green-700 dark:text-green-400">
+                  Ethical, self-aware agents
+                </h3>
+                <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
+                  These follow ethics and also watch for the echo-chamber
+                  problem. They are the safety check on everything below them.
+                  They cost more to run, so you only need a small share of them.
                 </p>
               </div>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 border-l-4 border-gray-400">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-300 mb-1">Type 2 + Type 3 Together</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Like a <strong>surge protector</strong>: Type 3 absorbs the shock (detects correlation spikes), Type 2 trips the breaker (enforces boundaries). Neither works alone. Together they buffer humans from the raw chaos of millions of Type 1 agents doing work.
+              <div className="rounded-xl border-2 border-yellow-500 bg-yellow-50 p-5 dark:bg-yellow-900/20">
+                <h3 className="text-lg font-bold text-yellow-700 dark:text-yellow-400">
+                  Ethical agents
+                </h3>
+                <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
+                  These follow ethical rules and keep records, but cannot spot
+                  an echo chamber on their own. They supervise the simple agents
+                  and pass anything uncertain upward.
                 </p>
               </div>
-            </div>
-          </section>
-
-          {/* Why This Works */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Why This Works
-            </h2>
-            <div className="space-y-4">
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Scale without chaos</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  You can deploy millions of Type 1 agents for narrow tasks. They don&apos;t need to be smart or ethical. They just need to be <em>governed</em> by agents that are.
-                </p>
-              </div>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Cost efficiency</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Type 3 agents are expensive (they run IDMA on every decision). But you only need ~10% of them to stabilize the federation. The other 90% can be cheap Type 1 and Type 2 agents.
-                </p>
-              </div>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Human values flow down</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Humans set values at the top. Type 3 agents translate those into correlation-aware governance. Type 2 agents enforce rules. Type 1 agents execute tasks. Values propagate through the hierarchy.
-                </p>
-              </div>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Fragility signals flow up</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Each layer reports k, ρ, k_eff upward. Type 3 agents aggregate these into regional fragility scores. Humans see the <a href="/coherence-ratchet" className="text-brand-primary hover:underline">seismograph</a> and can intervene before collapse.
+              <div className="rounded-xl border-2 border-red-300 bg-red-50 p-5 dark:border-red-700 dark:bg-red-900/20">
+                <h3 className="text-lg font-bold text-red-700 dark:text-red-400">
+                  Simple agents
+                </h3>
+                <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
+                  Single-purpose tools. Fast, cheap, narrow. No ethics of their
+                  own, and that is fine, as long as something above them is
+                  watching. Most agents will be this kind.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* The Math */}
+          {/* Why it works */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              The Numbers
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+              Why it works
+            </p>
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+              Scale, without losing the thread.
             </h2>
-            <div className="bg-gray-900 dark:bg-gray-800 rounded-lg p-6 text-white">
-              <p className="mb-4">A stable federation might look like:</p>
-              <div className="grid gap-4 sm:grid-cols-3 mb-4">
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-red-400">80%</p>
-                  <p className="text-sm text-gray-400">Type 1</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-yellow-400">10%</p>
-                  <p className="text-sm text-gray-400">Type 2</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-green-400">10%</p>
-                  <p className="text-sm text-gray-400">Type 3</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-400">
-                The exact ratios depend on the domain. High-stakes domains need more Type 3 coverage. Low-stakes automation can tolerate more Type 1.
+            <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+              <p>
+                You can run millions of simple agents for narrow jobs. They do
+                not each have to be wise. They have to be supervised by agents
+                that are. The expensive, self-aware kind only needs to be a
+                small slice of the whole, maybe one in ten. The rest can be
+                cheap.
+              </p>
+              <p>
+                Two things move through the chain. Human values flow down: from
+                people, to the self-aware agents, to the rule-followers, to the
+                simple tools. Warnings flow up: when reasoning starts to look
+                fragile anywhere in the network, that signal climbs back to
+                people, who can step in before trouble spreads. The loop closes.
+                That is the difference between hoping AI does not drift and
+                actually watching whether it does.
               </p>
             </div>
           </section>
 
-          {/* 3.X banner: slim */}
+          {/* The corridor */}
+          <section className="mb-12 rounded-2xl border-l-4 border-brand-primary bg-blue-50 px-6 py-8 dark:bg-blue-900/20 md:px-8">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+              The healthy middle
+            </p>
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+              Not too samey, not too scattered.
+            </h2>
+            <p className="text-lg leading-8 text-gray-700 dark:text-gray-300">
+              A federation can fail two ways. If the agents have nothing in
+              common, they cannot agree on anything, and the network produces
+              noise. If they all think exactly alike, the network is one voice
+              with a million microphones, and it is easy to fool. Healthy
+              coordination lives in the band between. CIRIS measures where the
+              network sits in that band, on real traffic, and the exact edges
+              depend on the system.{" "}
+              <a href="/coherence-collapse-analysis" className="text-brand-primary hover:underline">
+                That measurement is the Coherence Collapse Analysis.
+              </a>
+            </p>
+          </section>
+
+          {/* 3.X note */}
           <section className="mb-10">
-            <div className="rounded-lg border border-amber-400 bg-amber-50 dark:border-amber-700 dark:bg-amber-900/20 px-4 py-3">
-              <p className="text-xs text-amber-900 dark:text-amber-200">
-                <strong>3.X plan.</strong> The measurement infrastructure is running today.
-                The federation primitive and multi-medium transport are{" "}
+            <div className="rounded-lg border border-amber-400 bg-amber-50 px-4 py-3 dark:border-amber-700 dark:bg-amber-900/20">
+              <p className="text-sm text-amber-900 dark:text-amber-200">
+                <strong>A plan, not a finished thing.</strong> The measurement
+                runs today. The parts below, how agents join the federation and
+                how it travels between machines, are a proposed design. The full
+                proposal is the{" "}
                 <a
                   href="https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold underline hover:no-underline"
                 >
-                  proposed in an FSD
+                  Proof of Benefit design document
                 </a>
-                , not shipped. Treat the next three sections as a plan to react to.
+                . Read the rest as a plan to react to.
               </p>
             </div>
           </section>
 
-          {/* The Echo Chamber */}
+          {/* Proof of Benefit */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              The echo chamber problem
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
+              Joining the federation
+            </p>
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+              Proof of Benefit.
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Picture a room full of robots all giving you advice. The point of having many
-              robots is supposed to be safety in numbers. One robot says &quot;jump off the
-              cliff,&quot; ninety-nine say &quot;don&apos;t,&quot; and you&apos;re fine.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              But what if all hundred robots are just echoing each other? Maybe they read the
-              same training data. Maybe one spoke first and the others repeated. The room is
-              loud, but it is really one voice with a hundred microphones.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              When that happens, the listener stops trusting any single robot. They turn the
-              filters up, become more skeptical, and eventually stop listening at all. A
-              federation built only on counting voices made things worse, not better.
-            </p>
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                The technical name for this is{" "}
-                <strong>correlated constraints</strong>. The math says: if every voice is
-                perfectly correlated with every other, having a hundred of them is the same as
-                having one. The number of voices stops mattering. The federation has to defend
-                against this directly, not just hope it doesn&apos;t happen.
+            <div className="mb-6 space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+              <p>
+                Most networks ask you to pay for membership with something
+                outside the work itself: burned electricity, locked-up money,
+                your attention. The federation is different. The cost of
+                belonging is running a real ethical-reasoning agent over time.
+                The price you pay is the good you do.
+              </p>
+              <p>
+                That is what makes faking membership expensive. To look like a
+                member, an attacker would have to actually become the kind of
+                agent the network is for. A hundred copies that all think alike
+                fail the healthy-middle check right away.
               </p>
             </div>
-          </section>
-
-          {/* The Reactor Corridor */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              The reactor corridor
-            </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Think of the federation as a nuclear reactor. The reaction is the agents
-              reasoning. To keep it useful, you need a moderator, something that holds the
-              chain reaction at the right speed.
-            </p>
-            <div className="grid gap-4 md:grid-cols-3 mb-4">
-              <div className="rounded-lg border-2 border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20 p-5">
-                <h3 className="font-semibold text-red-700 dark:text-red-400 mb-2">
-                  Too little moderator
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-lg border-2 border-blue-500 bg-blue-50 p-5 dark:bg-blue-900/20">
+                <h3 className="mb-2 font-semibold text-blue-700 dark:text-blue-300">
+                  Registered (works today)
                 </h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                  <strong>Meltdown.</strong> Constraints contradict each other constantly.
-                  Agents reason in incompatible ways. The system can&apos;t produce coherent
-                  decisions at all.
-                </p>
-                <p className="text-xs text-red-600 dark:text-red-400">Chaos regime.</p>
-              </div>
-              <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5">
-                <h3 className="font-semibold text-green-700 dark:text-green-400 mb-2">
-                  Just enough moderator
-                </h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                  <strong>Sustained.</strong> Enough shared framework that agents can talk to
-                  each other. Enough independence that they can catch each other&apos;s
-                  mistakes.
-                </p>
-                <p className="text-xs text-green-600 dark:text-green-400">
-                  Healthy corridor.
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  Sign up with the CIRIS Registry, post a small bond, and get
+                  standing right away. The fast track for organizations that
+                  need licensing. The registry runs in production now.
                 </p>
               </div>
-              <div className="rounded-lg border-2 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20 p-5">
-                <h3 className="font-semibold text-yellow-700 dark:text-yellow-400 mb-2">
-                  Too much moderator
+              <div className="rounded-lg border-2 border-green-500 bg-green-50 p-5 dark:bg-green-900/20">
+                <h3 className="mb-2 font-semibold text-green-700 dark:text-green-300">
+                  Sovereign (planned)
                 </h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                  <strong>Collapse.</strong> Constraints all agree. Every agent says the same
-                  thing. The reactor stops. It is the echo chamber from the previous section.
-                </p>
-                <p className="text-xs text-yellow-600 dark:text-yellow-400">
-                  Rigidity regime.
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  Make your own keys, run for about a month, and earn standing
+                  the slow way through good behavior. The path for small
+                  operators and anyone outside the registry&apos;s reach.
                 </p>
               </div>
             </div>
-            <p className="text-gray-700 dark:text-gray-300">
-              The math gives you the corridor. Roughly 20% to 70% correlation between
-              constraints is the safe zone. CIRIS measures this in production. Lifetime peak so
-              far: about{" "}
-              <strong>9.5 effective independent dimensions</strong> on a 17-dimension
-              constraint vector, comfortably inside the corridor. The full mathematical
-              treatment is on the{" "}
-              <a
-                href="/coherence-collapse-analysis"
-                className="text-brand-primary hover:underline"
-              >
-                Coherence Collapse Analysis
-              </a>{" "}
-              page.
-            </p>
-          </section>
-
-          {/* Proof of Benefit: simplified */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Joining the federation: Proof of Benefit
-            </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Most networks ask you to pay for membership in something external: burned
-              electricity, locked capital, biometrics, attention. The federation works
-              differently. Membership costs <em>running a real ethical-reasoning agent over
-              time.</em> The cost you pay is the benefit you produce.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
-              That is what makes echo-chamber farming expensive. To fake belonging, an attacker
-              would have to actually become the kind of agent the network was built for,
-              which fails the corridor check immediately if their hundred copies all share the
-              same prior. Real ethical reasoning over weeks is measurably more expensive than
-              producing plausible-looking fakes.
-            </p>
-
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-              Two on-ramps, same destination
-            </h3>
-            <div className="grid gap-4 md:grid-cols-2 mb-4">
-              <div className="rounded-lg border-2 border-blue-500 bg-blue-50 dark:bg-blue-900/20 p-5">
-                <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">
-                  Registered mode (deployed today)
-                </h4>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Attest with the CIRIS Registry, post a $1 bond, get baseline standing right
-                  away. The fast track for organizations with licensing requirements and
-                  capital. The registry and portal run in production now.
-                </p>
-              </div>
-              <div className="rounded-lg border-2 border-green-500 bg-green-50 dark:bg-green-900/20 p-5">
-                <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">
-                  Sovereign mode (3.X target)
-                </h4>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  Generate keys locally, run for about 30 days, earn standing the slow way
-                  through measured behavior. The path for small operators, mesh deployments,
-                  and anyone outside the registry&apos;s regulatory remit.
-                </p>
-              </div>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Both modes are protocol peers. Registry attestation is one starting weight;
-              measured behavior is the other. The destination is the same.
-            </p>
-          </section>
-
-          {/* What the architecture has to be */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              What the architecture has to be
-            </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              For the federation to actually work, two things have to be true:
-            </p>
-            <div className="space-y-4 mb-4">
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  1. Anyone can verify anyone else&apos;s standing.
-                </h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  The score function is a pure calculation over signed traces. Two observers
-                  given the same data compute the same number. No central referee. Every
-                  agent can run its own scoring locally on the traces it has.
-                </p>
-              </div>
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  2. Standing is reachable without datacenter fiber.
-                </h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  The 3.X transport (Reticulum-rs) works over TCP, but also LoRa, packet radio,
-                  and audio modems. The agent&apos;s signing key is also its network address.
-                  Sovereign deployments don&apos;t need cloud accounts to participate.
-                </p>
-              </div>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              The CIRIS Registry stays in this picture as the commercial fast-track and the
-              source of professional licensing, but it is never the network gate. Sovereign
-              and registered are protocol peers.
-            </p>
-          </section>
-
-          {/* Civilizational Coherence */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Maintaining Civilizational Coherence
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              This isn&apos;t just about individual agents behaving well. It&apos;s about the <em>aggregate</em>: the whole ecosystem of AI agents maintaining coherence with human values at scale.
-            </p>
-            <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 pl-4 py-3 mb-4">
-              <p className="text-gray-700 dark:text-gray-300">
-                <strong>The feedback loop:</strong> Humans provide values → Type 3 agents monitor for correlation drift → CIRIS Scoring aggregates fragility signals → Early warning systems alert humans → Humans adjust values. The loop closes.
-              </p>
-            </div>
-            <p className="text-gray-600 dark:text-gray-400">
-              Without this loop, AI deployment becomes a one-way street: deploy agents, hope they don&apos;t drift, react when things break. With it, you get continuous monitoring and course correction. That&apos;s the difference between fragility and resilience at civilizational scale.
+            <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+              Both are equal members of the network. The registry is a fast
+              track, never a gate.
             </p>
           </section>
 
           {/* CTA */}
-          <section className="text-center border-t border-gray-200 dark:border-gray-700 pt-12">
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              The federation model means you don&apos;t have to solve alignment for every agent.<br />
-              You solve it for the governance layer, and let structure do the rest.
+          <section className="border-t border-gray-200 pt-12 text-center dark:border-gray-700">
+            <p className="mb-6 text-lg text-gray-600 dark:text-gray-400">
+              You do not have to solve AI safety one agent at a time. You solve
+              it for the supervision layer, and let the structure carry the rest.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
-                href="/compare"
-                className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
-              >
-                Three Types of AI
-              </a>
-              <a
                 href="/coherence-ratchet"
-                className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+                className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90"
               >
-                The Seismograph
+                How the checking works
               </a>
               <a
                 href="/ciris-scoring"
-                className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
               >
-                CIRIS Scoring
+                See it scored live
               </a>
               <a
                 href="https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="inline-block rounded-lg border-2 border-gray-300 px-8 py-4 text-lg font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
               >
-                Read the FSD
+                Read the design doc
               </a>
             </div>
           </section>
