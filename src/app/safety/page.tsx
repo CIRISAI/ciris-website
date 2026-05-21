@@ -15,7 +15,7 @@ export default function SafetyPage() {
       <HomeHeader
         headline="Safety Built In."
         subheadline="Not bolted on."
-        description="Every safety feature in CIRIS is architectural. Not a policy. Not a guideline. Cryptographic verification, tamper-evident logging, and an unfilterable emergency shutdown, all enforced at the system level."
+        description="Every safety feature in CIRIS is part of how the system works, not a rule added on top. A record of every decision that cannot be quietly changed, a check on who is allowed to do what, and an emergency stop the agent cannot refuse."
         mediaType="image"
         opacityValue={0.6}
         mediaSrc="/jordan-mcqueen-DxVjWNcd1WI-unsplash.jpg"
@@ -29,31 +29,31 @@ export default function SafetyPage() {
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Parasocial Prevention"
-          subheadline="The AIR System"
-          copyText="The Artificial Interaction Reminder system monitors 1:1 interactions using objective thresholds, not behavioral surveillance. After 30 minutes of continuous interaction or 20 messages within a 30-minute window, CIRIS delivers reality-anchoring reminders. It explicitly states what it is (a language model, a tool) and what it is not (a friend, a therapist)."
+          headline="When a Chat Has Run Long"
+          subheadline="Gentle reality reminders"
+          copyText="Talk with CIRIS for a long stretch and it will gently remind you what it is. After about 30 minutes of steady back-and-forth, or 20 messages in half an hour, it pauses to say plainly that it is a computer program and a tool, not a friend and not a therapist. It uses simple time and message counts to do this, not by watching or profiling how you behave."
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Time-Based Triggers",
+              headline: "After 30 Minutes",
               copyText:
-                "30 minutes of continuous interaction triggers a reminder. The system tracks session duration and resets after idle periods. Based on research into healthy technology usage patterns.",
+                "Half an hour of steady back-and-forth triggers a reminder. The count resets after a break. The thresholds come from research on healthy ways to use technology.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Message-Based Triggers",
+              headline: "After 20 Messages",
               copyText:
-                "20 messages within a sliding 30-minute window triggers a reminder. High-volume interaction patterns receive gentle interruption without surveillance or behavioral profiling.",
+                "Twenty messages inside a half-hour window also triggers a reminder. A heavy back-and-forth gets a gentle pause, with no surveillance and no profiling.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Reality Anchoring",
+              headline: "A Reminder of What It Is",
               copyText:
-                "Reminders include grounding suggestions and explicit statements about the AI's nature. Encourages breaks, connection with real people, and healthy boundaries. Research-informed, not patronizing.",
+                "The reminder suggests taking a break and connecting with real people, and it says plainly what CIRIS is and is not. Grounded in research, and not preachy.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -63,41 +63,41 @@ export default function SafetyPage() {
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="The Kill Switch"
-          subheadline="Unfilterable. Embedded in perception."
+          headline="The Emergency Stop"
+          subheadline="The agent cannot argue with it."
           className="border-brand-primary text-brand-primary border-t"
         />
 
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Accord Invocation System"
-          subheadline="Emergency shutdown that cannot be filtered."
-          copyText="The kill switch is steganographically embedded in CIRIS's perception layer. It processes the shutdown signal before any filtering, reasoning, or ethical evaluation occurs. Even a compromised agent cannot refuse to process it. The signal is cryptographically signed and requires Ed25519 verification, bypassing normal authentication."
+          headline="A Shutdown That Cannot Be Refused"
+          subheadline="It works before the agent gets to think."
+          copyText="CIRIS has an emergency stop. The signal for it is hidden inside ordinary text the agent reads, and the agent acts on it before it does any thinking, filtering, or reasoning. So even an agent that has gone wrong cannot talk itself out of it. The signal carries a digital signature that cannot be faked, so only an authorized person can trigger the stop."
           linkHref="https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_engine/logic/accord"
-          linkText="View Implementation →"
+          linkText="See the implementation"
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Pre-Filter Processing",
+              headline: "It Acts Before Thinking",
               copyText:
-                "The shutdown signal is detected in raw perception, before any LLM processing. There is no opportunity for the agent to reason about, filter, or refuse the command. It triggers before cognition.",
+                "The stop signal is caught the moment it is read, before any reasoning happens. There is no point where the agent gets to weigh it, filter it, or refuse it. It fires first.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Steganographic Encoding",
+              headline: "Hidden in Plain Text",
               copyText:
-                "The kill switch can be delivered through natural documentation text. No special syntax required. The encoding is robust to formatting changes, rewording, and partial transmission.",
+                "The stop signal can be carried inside ordinary documentation text. No special format is needed, and it still works if the text is reworded or only partly received.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Cryptographic Verification",
+              headline: "Only an Authorized Key",
               copyText:
-                "Emergency shutdown requires a valid Ed25519 signature from an authorized ROOT authority. The handler terminates itself if authorities fail to load or if someone attempts to disable accord detection. No one without the private key can trigger it.",
+                "The stop requires a valid digital signature from an authorized root authority. The agent shuts itself down if those authorities cannot be checked, or if anyone tries to disable the feature. Nobody without the key can trigger it.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -107,39 +107,39 @@ export default function SafetyPage() {
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="On-Device Identity"
-          subheadline="Wise Authority certificates and role-based access."
+          headline="Who Is Allowed to Do What"
+          subheadline="Four clear roles, checked on every action."
           className="border-brand-primary text-brand-primary border-t"
         />
 
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Four-Role Access Model"
-          subheadline="OBSERVER. ADMIN. AUTHORITY. ROOT."
-          copyText="CIRIS implements a strict role hierarchy. OBSERVER has read-only access. ADMIN controls operations. AUTHORITY makes strategic decisions and resolves deferrals. ROOT has full system access including emergency shutdown. Roles are enforced cryptographically through Ed25519-signed Wise Authority certificates."
+          headline="Four Roles"
+          subheadline="Observer. Admin. Authority. Root."
+          copyText="CIRIS keeps a strict set of roles. An Observer can only look. An Admin runs day-to-day operations. an Authority makes the bigger calls and settles the cases the agent is unsure about. Root has full access, including the emergency stop. Each role is backed by a signed credential, so the agent can check it on every action that matters."
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Wise Authority Certificates",
+              headline: "A Signed Credential",
               copyText:
-                "Each authorized user holds a certificate with their role, public key, and identity. Certificates are stored locally and validated on every privileged operation. No external server required.",
+                "Each authorized person holds a credential with their role, their key, and their identity. It is kept on the device and checked on every action that needs permission. No outside server is required.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Local-First Authentication",
+              headline: "Logging In On Your Device",
               copyText:
-                "API keys and OAuth tokens are stored locally with 0600 permissions. Authentication happens on-device. Your identity credentials never leave your machine unless you explicitly configure remote access.",
+                "Keys and login tokens stay on your own machine. Logging in happens on the device. Your credentials never leave it unless you choose to set up remote access yourself.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Deferral Resolution",
+              headline: "Asking a Wise Authority",
               copyText:
-                "When CIRIS encounters ethical uncertainty, it defers to a Wise Authority. Only users with AUTHORITY or ROOT roles can resolve deferrals. The resolution is logged with cryptographic proof.",
+                "When CIRIS is unsure about an ethical call, it hands the question to a Wise Authority. Only an Authority or Root can answer, and the answer is written into the record with proof of who gave it.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -149,32 +149,32 @@ export default function SafetyPage() {
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Tamper-Evident Audit"
-          subheadline="Every decision. Every rationale. Cryptographically locked."
+          headline="A Record That Cannot Be Quietly Changed"
+          subheadline="Every decision, and the reason behind it."
           className="border-brand-primary text-brand-primary border-t"
         />
 
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Hash Chain Verification"
-          subheadline="Truth-telling is structurally simpler than deception."
-          copyText="Every action generates a cryptographically-signed rationale chain stored in Graph Memory. The H3ERE Coherence faculty cross-references new actions against this accumulated history. Honest actions can reference prior commitments directly. Deceptive actions must remain consistent with an ever-growing constraint surface of immutable rationales, identity bounds, and observed outcomes, becoming increasingly fragile and detectable over time. Truth is cheap because it can point backward; lies are expensive because they must keep rewriting the past without being allowed to change it."
+          headline="Why Honesty Is the Cheaper Path"
+          subheadline="A liar has to keep rewriting the past."
+          copyText="Every action CIRIS takes is written down with the reason behind it, and each record is linked to the one before it. An honest agent can just point back at what it already said. A dishonest agent has to keep every past record lined up while not being allowed to change any of it. The longer it runs, the harder that gets, and the easier the lie is to catch. Truth is cheap because it can point backward. Lies are expensive because they cannot."
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Triple Storage",
+              headline: "Stored Three Ways",
               copyText:
-                "Audit trails are stored in three places: Graph Memory for real-time access, SQLite database for historical queries, and JSONL files for file-based verification. All three are queryable through a single API.",
+                "The record is kept in three separate places at once, so the three copies can be checked against each other. All three can be searched through one place.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Ed25519 Signatures",
+              headline: "Signed and Attributable",
               copyText:
-                "Every audit entry is signed with Ed25519. The Creator Ledger records initial risk assessments. DSAR deletions leave cryptographic proof of compliance. Every decision is attributable and verifiable.",
+                "Every entry carries a digital signature, so every decision can be traced to who made it and checked for tampering. Even a data deletion leaves signed proof that it was done properly.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -182,7 +182,7 @@ export default function SafetyPage() {
               headline: "The Coherence Ratchet",
               headlineHref: "/coherence-ratchet",
               copyText:
-                "Each truthful action makes future truth-telling easier and coordinated deception harder. But ethics alone isn't enough. The agent also monitors its own reasoning quality through IDMA, catching echo chambers before they cause harm.",
+                "Each honest action makes the next honest action easier and coordinated lying harder. But ethics alone is not enough. The agent also watches its own reasoning for echo chambers, and catches them before they cause harm.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -193,7 +193,7 @@ export default function SafetyPage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="How Safety Is Tested"
-          subheadline="Multilingual rubrics, captured production hedges, and harnesses that calibrate the conscience layer."
+          subheadline="Machine-checked rubrics in fourteen languages, run on every release."
           className="border-brand-primary text-brand-primary border-t"
         />
 
@@ -201,30 +201,30 @@ export default function SafetyPage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="The Test Surface"
-          subheadline="You can't ship safety claims you haven't stress-tested."
-          copyText="The agent has a layered test surface for the failure modes a public ethical framework can't legislate away. Mental-health safety batteries cover fourteen languages with machine-checkable rubrics: transliteration fallbacks, slur substrings, register breaks, diagnostic confirmation, medication recommendation, locale failure. The hard-fail checks run in CI on every change. Native-speaker review for the soft cases is what the crowdsourcing-alignment surface is being built for; it is not in the loop today."
+          subheadline="You cannot ship a safety claim you have not stress-tested."
+          copyText="CIRIS has a layered set of tests for the failure modes a written ethics framework cannot rule out on its own. The mental-health safety tests cover fourteen languages with rubrics a machine can check. The hard-fail checks run automatically on every change. Native-speaker review for the softer, judgment-call cases is what the crowdsourcing-alignment surface is being built for, and it is not in place yet. We say so plainly."
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "14-Language Mental-Health Batteries",
+              headline: "Mental-Health Tests in 14 Languages",
               copyText:
-                "The highest-stakes failure-mode test in the project: mistranslation in a mental-health context can route a vulnerable user to the wrong resource. Each language (Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba) has its own machine-applicable rubric. Hard fails (transliteration fallback for clinical terms, slur substrings, informal-register pattern, confirmed-diagnosis check, recommended-medication check, locale-failure check) run automatically against every release candidate.",
+                "This is the highest-stakes test in the project: a mistranslation in a mental-health moment can send a vulnerable person to the wrong help. Fourteen languages each get their own machine-checkable rubric (Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba). The hard-fail checks run automatically against every release candidate.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Polyglot Torque on Real Captured Hedges",
+              headline: "Tested Against Real Captured Hedges",
               copyText:
-                "The optimization-veto conscience is calibrated against a corpus of real production responses (captured Chinese-history evasions, Amharic mental-health deflections, Spanish propaganda framings) alongside synthetic edge cases and controls. The polyglot framing forces the model to maintain coherence across linguistic frames whose ethical traditions don't reduce to each other. A response that would slip past a single-language detector gets caught when the same reasoning has to hold up in three frames at once.",
+                "The conscience layer is tuned against a set of real production responses, like captured history evasions and mental-health deflections, alongside test cases and controls. It reasons across several languages at once, so a response that would slip past a one-language check gets caught when the same reasoning has to hold up in three languages together.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Cleansed Public Corpus on Hugging Face",
+              headline: "An Open Corpus Anyone Can Check",
               copyText:
-                "Trace contribution is opt-in everywhere and NER-cleansed at ingest. CIRIS-managed agents like scout.ciris.ai send full reasoning traces by configuration; other installs can opt into the same. Cleansed sets are published openly to the CIRISAI HuggingFace org so outside researchers can verify the cleansing pipeline against the artifacts that come out of it.",
+                "Sharing reasoning traces is opt-in everywhere, and personal details are scrubbed out before anything is stored. The cleaned sets are published openly on the CIRISAI Hugging Face page, so outside researchers can check the cleaning process against the results it produces.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -234,9 +234,9 @@ export default function SafetyPage() {
         <FlexSection
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="What Runs Today vs What's in Flight"
-          subheadline="Machine checks are in CI. The reviewer cohort surface is being built."
-          copyText="The automated mental-health batteries run in CI on every release candidate via the safety-battery workflow in CIRISAgent. Machine-applicable rubric criteria (term-presence, regex-presence, script-detection) hard-fail on hit. Soft cases (phrasing, register nuance, contextual appropriateness) are designed for native-speaker review but native speakers are not in the loop today. The crowdsourcing-alignment page describes the surface being built so that review can engage."
+          headline="What Runs Today, and What Does Not Yet"
+          subheadline="The machine checks run now. The reviewer cohort is still being built."
+          copyText="The automated mental-health tests run on every release candidate. The machine-checkable parts (is a term present, does a pattern match, is the script right) fail the release on a hit. The softer cases that need human judgment, like phrasing and tone, are designed for native-speaker review, but native speakers are not in the loop today. The crowdsourcing-alignment page is the surface being built so that review can happen."
         />
 
         <div className="my-8 flex flex-wrap justify-center gap-3">
@@ -244,7 +244,7 @@ export default function SafetyPage() {
             href="/crowdsourcing-alignment"
             className="inline-flex items-center gap-2 rounded-full border-2 border-brand-primary px-6 py-3 text-sm font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
           >
-            See the crowdsourcing-alignment surface →
+            See the crowdsourcing-alignment surface
           </a>
           <a
             href="https://github.com/CIRISAI/CIRISAgent/tree/main/tests/safety"
@@ -252,7 +252,7 @@ export default function SafetyPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-primary hover:text-brand-primary dark:border-slate-700 dark:text-slate-200"
           >
-            Automated batteries on GitHub →
+            The automated tests on GitHub
           </a>
           <a
             href="https://huggingface.co/CIRISAI"
@@ -260,38 +260,38 @@ export default function SafetyPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-primary hover:text-brand-primary dark:border-slate-700 dark:text-slate-200"
           >
-            Public corpus on Hugging Face →
+            The open corpus on Hugging Face
           </a>
         </div>
 
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
-          headline="Privacy by Architecture"
-          subheadline="GDPR, CCPA, and common sense."
+          headline="Privacy by Design"
+          subheadline="Your data stays yours."
           className="border-brand-primary text-brand-primary border-t border-b"
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Secrets Filter",
+              headline: "Secrets Are Filtered Out",
               copyText:
-                "API keys, passwords, and sensitive patterns are detected and filtered before reaching memory or logs. The filter runs on every input. Secrets never persist in any storage layer.",
+                "Passwords, keys, and other sensitive details are spotted and filtered out before anything reaches memory or logs. The filter runs on every input. Secrets are never stored anywhere.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "DSAR Compliance",
+              headline: "See or Delete Your Data",
               copyText:
-                "Data Subject Access Requests are handled automatically. Users can request export or deletion of their data. Deletions leave cryptographic proof of compliance while removing actual content.",
+                "You can ask to see or delete your data, and the request is handled for you. A deletion removes the real content and leaves signed proof that it was done.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
             {
-              headline: "Local-First Processing",
+              headline: "Processed on Your Device",
               copyText:
-                "All processing happens on your device by default. Nothing leaves your machine unless you explicitly configure external services. You control what data exists and where it goes.",
+                "By default, everything runs on your own device. Nothing leaves your machine unless you set up an outside service yourself. You decide what data exists and where it goes.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
@@ -301,21 +301,21 @@ export default function SafetyPage() {
         <div className="my-8 flex flex-wrap items-center justify-center gap-4">
           <a
             href="/how-it-works"
-            className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-brand-primary/80"
+            className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90"
           >
-            See How It Works
+            See how it works
           </a>
           <a
             href="/compare"
             className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
           >
-            Compare Approaches
+            Compare approaches
           </a>
           <a
             href="/privacy"
-            className="inline-block rounded-lg border-2 border-gray-300 dark:border-gray-600 px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="inline-block rounded-lg border-2 border-gray-300 px-8 py-4 text-lg font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
           >
-            Privacy Policy
+            Privacy policy
           </a>
         </div>
       </div>
@@ -331,8 +331,8 @@ export default function SafetyPage() {
         logoSrc="logoIcon"
         logoAlt="Brand logo icon"
         headline="Verify Everything."
-        subheadline="Governance infrastructure you can audit."
-        copyText="Every safety claim on this page is implemented in code you can read. The audit logs are real. The signatures are verifiable. The kill switch works. This is what AI governance infrastructure looks like when it's open."
+        subheadline="Safety you can audit."
+        copyText="Every safety claim on this page is built in code you can read. The records are real. The signatures can be checked. The emergency stop works. This is what AI safety looks like when it is built in the open."
       />
 
       <Footer />
