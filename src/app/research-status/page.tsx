@@ -125,7 +125,7 @@ export default function ResearchStatusPage() {
           {/* Flagship synthesis paper */}
           <section className="mb-8">
             <a
-              href="https://zenodo.org/records/20300774"
+              href="https://zenodo.org/records/20300773"
               target="_blank"
               rel="noopener noreferrer"
               className="block rounded-3xl border-2 border-brand-primary bg-gradient-to-br from-brand-primary/5 to-transparent p-8 shadow-sm transition-colors hover:from-brand-primary/10 dark:border-brand-primary dark:from-brand-primary/10"
@@ -135,7 +135,7 @@ export default function ResearchStatusPage() {
                   Flagship synthesis paper
                 </span>
                 <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                  v1 · May 20, 2026 · DOI 10.5281/zenodo.20300774
+                  v2 · May 22, 2026 · DOI 10.5281/zenodo.20300773
                 </span>
               </div>
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white md:text-3xl">
@@ -168,8 +168,11 @@ export default function ResearchStatusPage() {
                 reading&apos;s strongest would-be falsifier (long unmaintained
                 non-corridor persistence) is <strong>absent at all five</strong>:
                 out-of-corridor states either dissolve quickly or persist only
-                with documented active maintenance. The synthesis is offered
-                as a bet under uncertainty, with twenty falsification handles
+                with documented active maintenance. v2 (May 22, 2026) reruns
+                all five under a debiased estimator (5/5 PASS) and extends the
+                record to human brain imaging (fMRI, 139 controls), mouse
+                visual cortex, and twelve cancers. The synthesis is offered as
+                a bet under uncertainty, with twenty falsification handles
                 (F-1 … F-20) attached to every load-bearing seam.
               </p>
               <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">

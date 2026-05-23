@@ -19,7 +19,7 @@ export default function VisionPage() {
         buttonText="Install CIRIS"
         buttonHref="/install"
         linkText="Read the paper"
-        linkHref="https://zenodo.org/records/20300774"
+        linkHref="https://zenodo.org/records/20300773"
       />
 
       <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
@@ -138,7 +138,7 @@ export default function VisionPage() {
             <p>
               This is not just a nice picture.{" "}
               <a
-                href="https://zenodo.org/records/20300774"
+                href="https://zenodo.org/records/20300773"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"
@@ -231,7 +231,7 @@ export default function VisionPage() {
               Start with First Contact
             </a>
             <a
-              href="https://zenodo.org/records/20300774"
+              href="https://zenodo.org/records/20300773"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-lg border-2 border-brand-primary px-6 py-3 font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
