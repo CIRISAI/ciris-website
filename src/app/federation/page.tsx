@@ -318,22 +318,44 @@ function SimpleContent() {
           Where to engage
         </p>
         <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-          GitHub issues, on the agent repository.
+          We are requesting comments from anyone.
         </h2>
-        <p className="text-lg leading-8 text-gray-700 dark:text-gray-300">
-          If you want to challenge what is being built here, open an issue on{" "}
-          <a
-            href="https://github.com/CIRISAI/CIRISAgent"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-primary hover:underline"
-          >
-            CIRISAgent
-          </a>
-          . The most useful issues name a specific part of the system, say
-          what they think is wrong with it, and propose what should change.
-          Substantive issues are read. The work proceeds at its own pace.
-        </p>
+        <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+          <p>
+            GitHub issues on{" "}
+            <a
+              href="https://github.com/CIRISAI/CIRISAgent"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-primary hover:underline"
+            >
+              CIRISAgent
+            </a>{" "}
+            is the place to weigh in. You do not need to be a developer. You
+            do not need to know the codebase. If something on this site reads
+            wrong to you, or if you see a problem with what is being built,
+            open an issue and say so. The most useful issues name a specific
+            part of the system and propose what should change, but any honest
+            engagement is welcome.
+          </p>
+          <p>
+            The accord that grounds the whole project &mdash; what CIRIS owes
+            to people, and what people owe back &mdash; is at{" "}
+            <a
+              href="/ciris_accord.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-primary hover:underline"
+            >
+              /ciris_accord.txt
+            </a>{" "}
+            and remains open for review. If something in it does not sit right
+            with you, that is also a GitHub issue worth opening.
+          </p>
+          <p>
+            Substantive issues are read. The work proceeds at its own pace.
+          </p>
+        </div>
       </section>
     </>
   );
@@ -514,11 +536,11 @@ function AdvancedContent() {
           Where to engage
         </p>
         <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-          How to challenge what is being built.
+          Comments are actively requested, from anyone.
         </h2>
         <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
           <p>
-            Public engagement is invited via GitHub issues on the{" "}
+            Comments are actively requested via GitHub issues on the{" "}
             <a
               href="https://github.com/CIRISAI/CIRISAgent"
               target="_blank"
@@ -526,13 +548,30 @@ function AdvancedContent() {
               className="text-brand-primary hover:underline"
             >
               CIRISAgent repository
-            </a>
-            . The most useful engagement challenges a specific architectural
-            layer, one of the ethical postulate&apos;s four &ldquo;produces&rdquo;
-            claims, the system claim itself, or the engineering detail of a
-            specific FSD. Useful issues cite the section of the canonical doc
-            they engage with and state the change or response the contributor
-            believes is warranted.
+            </a>{" "}
+            &mdash; from engineers, governance reviewers, ethicists, end
+            users, and the broader public alike. The most useful engagement
+            challenges a specific architectural layer, one of the ethical
+            postulate&apos;s four &ldquo;produces&rdquo; claims, the system
+            claim itself, or the engineering detail of a specific FSD. Useful
+            issues cite the section of the canonical doc they engage with and
+            state the change or response the contributor believes is
+            warranted. Issues that do not meet that bar are still read.
+          </p>
+          <p>
+            The accord grounding the project&apos;s commitments &mdash; the
+            ethical foundation referenced by ACCORD &sect;VII and the humanity
+            accord &mdash; is at{" "}
+            <a
+              href="/ciris_accord.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-primary hover:underline"
+            >
+              /ciris_accord.txt
+            </a>{" "}
+            and remains open for review. Engagement with the accord text
+            itself is welcome through the same GitHub-issues channel.
           </p>
           <p>
             The project is operated by CIRIS L3C. Response cadence is the
