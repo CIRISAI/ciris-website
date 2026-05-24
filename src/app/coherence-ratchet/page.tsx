@@ -50,6 +50,11 @@ function LevelToggle({
 function SimpleContent() {
   return (
     <>
+      <p className="mb-10 text-lg leading-8 text-gray-700 dark:text-gray-300">
+        A small thinking system can hide things and do little harm. A powerful
+        one cannot.
+      </p>
+
       <section className="mb-12">
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
           What &ldquo;coherent&rdquo; means here
@@ -120,8 +125,12 @@ function SimpleContent() {
           <p>
             Picture a ladder. As you climb, each rung you leave behind falls
             off. You cannot go back down. You can only climb toward the top,
-            where there is full daylight. That is the Coherence Ratchet. The
-            ladder moves toward open ground because the way back is gone.
+            where there is full daylight. That is the Coherence Ratchet.
+          </p>
+          <p>
+            Once people have seen the system show its work, they will not
+            trust it again if it stops. The only way forward is to keep
+            showing more.
           </p>
           <p className="text-base italic text-gray-600 dark:text-gray-400">
             A second image works too. A gear in a machine clicks forward one
@@ -151,7 +160,9 @@ function SimpleContent() {
             different views checked this idea? Not the number of sources, but
             the number of sources that did not start from the same place
             themselves. Five news stories that rewrite one press release count
-            as one view, not five.
+            as one view, not five. If something is wrong in the press release,
+            it will be wrong in all five stories, and the agent has no way to
+            catch it.
           </p>
           <p>
             When real independence drops too low, the agent treats its own
