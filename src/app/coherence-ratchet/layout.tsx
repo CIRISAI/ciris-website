@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "The Coherence Ratchet: Coherence-Based Alignment Architecture for AI",
+  title: "The Coherence Ratchet",
   description:
-    "Coherence-based alignment thesis: how independent constraints accumulate to make deception expensive over time. The architecture behind the Coherence Collapse Analysis paper, the Alignment Manifold, and the Coherence Singularity formalisms in CIRIS RATCHET.",
+    "Why hidden state in scaling cognitive systems becomes a structural liability, and what powerful systems converge toward instead. Read in plain English or in full technical register.",
   alternates: { canonical: "/coherence-ratchet" },
   openGraph: {
     type: "article",
     url: "https://ciris.ai/coherence-ratchet",
-    title: "The Coherence Ratchet: Coherence-Based Alignment Architecture",
+    title: "The Coherence Ratchet",
     description:
-      "How accumulating independent constraints make deception structurally expensive over time. The CIRIS thesis and its formal foundations.",
+      "Why hidden state in scaling cognitive systems becomes a structural liability. The CIRIS thesis, in plain English or full technical register.",
   },
 };
 
