@@ -212,10 +212,11 @@ function SimpleContent() {
       <section className="mb-10">
         <div className="rounded-lg border border-amber-400 bg-amber-50 px-4 py-3 dark:border-amber-700 dark:bg-amber-900/20">
           <p className="text-sm text-amber-900 dark:text-amber-200">
-            <strong>A plan, not a finished thing.</strong> The measurement,
-            the signed records, and the supervision chain run today. The parts
-            below, how agents join the federation and how it travels between
-            machines, are a proposed design. The full proposal is the{" "}
+            <strong>What runs today, and what is still in design.</strong> The
+            measurement, the signed records, the supervision chain, and both
+            join paths below (registered and sovereign) run today. The
+            federation transport that moves data between machines is the part
+            still being built out. The full join-and-transport proposal is the{" "}
             <a
               href="https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md"
               target="_blank"
@@ -224,7 +225,7 @@ function SimpleContent() {
             >
               Proof of Benefit design document
             </a>
-            . Read the rest as a plan to react to.
+            .
           </p>
         </div>
       </section>
@@ -264,7 +265,7 @@ function SimpleContent() {
           </div>
           <div className="rounded-lg border-2 border-green-500 bg-green-50 p-5 dark:bg-green-900/20">
             <h3 className="mb-2 font-semibold text-green-700 dark:text-green-300">
-              Sovereign (planned)
+              Sovereign (works today)
             </h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Make your own keys, run for about a month, and earn standing the
@@ -589,10 +590,11 @@ function AdvancedContent() {
         <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
           <p>
             The signed-record infrastructure, the supervision-chain semantics,
-            the verification primitives, and the foundation-model judge
-            contracts run in production. The federation transport, the
-            Proof-of-Benefit join semantics, and several cross-node consensus
-            mechanisms are partially in production and partially in design.
+            the verification primitives, the foundation-model judge
+            contracts, and the Proof-of-Benefit join semantics (registered
+            and sovereign paths both) run in production. The federation
+            transport and several cross-node consensus mechanisms are
+            partially in production and partially in design.
           </p>
           <p>
             The canonical articulation of the system, the layer
