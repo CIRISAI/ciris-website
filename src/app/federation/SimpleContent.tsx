@@ -233,28 +233,15 @@ export default function SimpleContent() {
 
       <section className="mb-10 rounded-lg border-2 border-brand-primary bg-blue-50 p-8 dark:bg-blue-900/20">
         <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-          What we claim, and what we do not.
+          Honest status.
         </h2>
         <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
-          <p>
-            We are not asking for permission to build this. The decision to
-            build has been public for over a year, through the source code,
-            the design documents, and the working system. This page exists
-            because the project has reached a point where it should be
-            explained openly to anyone who wants to look.
-          </p>
-          <p>
-            We are not running a public comment period. People are welcome to
-            weigh in any time. The work does not pause for engagement to
-            arrive.
-          </p>
           <p>
             The architectural protections &mdash; decentralization, the
             three-person humanity accord, the signed records, the monthly
             drill &mdash; are bets, not certainties. We can describe what the
             bets are. We cannot claim they have already been won. Outside
-            teams have not yet evaluated the system at scale. We say so
-            plainly.{" "}
+            teams have not yet evaluated the system at scale.{" "}
             <a
               href="/research-status"
               className="text-brand-primary hover:underline"

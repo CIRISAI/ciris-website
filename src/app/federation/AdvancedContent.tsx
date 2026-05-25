@@ -123,40 +123,22 @@ export default function AdvancedContent() {
 
       <section className="mb-12">
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-          What this is, and is not
+          Substrate, not framework
         </p>
         <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-          Six non-claims, given the size of the claim.
+          A governance + cognition substrate for distributed intelligence.
         </h2>
         <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
           <p>
-            The system is not a single AI model, not a centralized agent
-            framework, not a blockchain-first protocol, and not a coordination
-            API layer alone. It is a governance + cognition substrate for
-            distributed intelligence under adversarial conditions.
+            CIRIS is a governance + cognition substrate for distributed
+            intelligence under adversarial conditions. The halt path is
+            architectural: three named human individuals hold authority
+            anchored in the role hierarchy that no federation-internal
+            process can route around. Ethical commitments are anchored in
+            the meta-goal grounding in ACCORD &sect;VII, the humanity
+            accord, and the Coherence Ratchet response.
           </p>
           <p>
-            This articulation is not a request for permission. The decision to
-            build was made and acted upon openly, over time, in public. It is
-            not a comment period with a deadline; engagement is welcome on a
-            continuing basis and the work does not pause for it. It is not a
-            claim that public comment can or will halt the project &mdash; the
-            halt path is the architecture itself, anchored in three named
-            human individuals who hold authority no federation-internal
-            process can route around.
-          </p>
-          <p>
-            It is not a claim of completed safety. The protections are bets,
-            validated empirically and ongoing. It is not a claim of political
-            neutrality as virtue &mdash; the structural neutrality across
-            governance forms is an engineering property. CIRIS has strong
-            ethical commitments (the meta-goal grounding in ACCORD &sect;VII,
-            the humanity accord, the Coherence Ratchet response). The
-            architecture is neutral in shape; the project is not neutral in
-            commitments.
-          </p>
-          <p>
-            And it is not a substitute for the operational specifications.
             Engineering details &mdash; primitive schemas, wire formats,
             substrate contracts, decision-hierarchy semantics &mdash; live in
             the FSD documents referenced in the canonical{" "}
