@@ -10,9 +10,8 @@
 | **Developer** | /first-contact | /how-it-works → /architecture → /mdd → /federation → /explore-a-trace | Deploy an agent |
 | **Executive** | /vision | /compare → /coherence-ratchet → /federation → /trust → /mdd | Understand the value proposition |
 | **End User** | / (homepage) | /first-contact → /coherence-ratchet → /install | Install the app |
-| **Researcher** | /coherence-ratchet/advanced | /papers → /coherence-collapse-analysis → /failure-modes → /research-status → /ciris-scoring → /federation/advanced → /sections/main | Evaluate the thesis |
-| **Compliance Officer** | /compare | /safety → /failure-modes → /safety-vs-censorship → /trust → /papers → /privacy → /status | Assess for deployment |
-| **AI Safety Reviewer** | /coherence-ratchet | /federation → /failure-modes → /papers → /research-status | Engage on GitHub Issues |
+| **Researcher** | /coherence-ratchet/advanced | /papers → /coherence-collapse-analysis → /research-status → /ciris-scoring → /federation/advanced → /sections/main | Evaluate the thesis |
+| **Compliance Officer** | /compare | /safety → /safety-vs-censorship → /trust → /papers → /privacy → /status | Assess for deployment |
 
 ---
 
@@ -149,27 +148,25 @@ App Store / Play Store
 
 ## 4. Researcher/Academic Path
 
-**Goal**: Evaluate the theoretical foundations, the empirical evidence, and the falsification criteria
+**Goal**: Evaluate the theoretical foundations and the empirical evidence
 
 ### Journey
 ```
 /coherence-ratchet/advanced (the structural pressure, full technical articulation)
     ↓
-/papers (the four papers under the architecture, with scope limits)
+/papers (the four papers under the architecture)
     ↓
 /coherence-collapse-analysis (mathematical foundation — k_eff formula, effective dimensionality, singularity boundary, L-01)
-    ↓
-/failure-modes (executable mechanism per claim + explicit out-of-scope list)
     ↓
 /research-status (open trace commons; the empirical surface)
     ↓
 /ciris-scoring (live trace dashboard — evidence in production)
     ↓
-/federation/advanced (the response: system claim, architectural layers, ethical postulate, non-claims)
+/federation/advanced (the response: system claim, architectural layers, ethical postulate)
     ↓
 /sections/main (The CIRIS Accord)
     ↓
-GitHub Issues on CIRISAgent (where engagement happens)
+GitHub Issues on CIRISAgent
 ```
 
 ### Key Concepts to Absorb
@@ -181,7 +178,6 @@ GitHub Issues on CIRISAgent (where engagement happens)
 - The three-person humanity accord as the architectural halt path
 - Effective-dimensionality threshold N_eff ≈ 7.1 (Constrained Reasoning Chains, 6,465 traces)
 - Five-substrate empirical record (Corridor Dynamics flagship synthesis): C. elegans, Drosophila, four LLM architectures, four open-source projects, five cancers, three religious societies
-- Explicit out-of-scope failure modes: undetectable emergent deception, adaptive-adversary manipulation, coordinated compromise of the humanity accord, substrate-level supply-chain attacks, and the system measuring itself
 
 ### Language to Use
 - "Hidden state introduces unverifiable optimization pathways that destabilize trust, coordination, and adaptive error correction under increasing capability density"
@@ -198,21 +194,18 @@ GitHub Issues on CIRISAgent (where engagement happens)
 - Proof of Benefit FSD: https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md
 - CIRIS_FEDERATION.md (canonical system articulation): https://github.com/CIRISAI/CIRISNodeCore/blob/main/CIRIS_FEDERATION.md
 - COHERENCE_RATCHET.md (canonical pressure articulation): https://github.com/CIRISAI/CIRISNodeCore/blob/main/COHERENCE_RATCHET.md
-- Falsification criteria and known limitations: /research-status
 
 ---
 
 ## 5. Compliance/Legal Path
 
-**Goal**: Assess CIRIS for organizational deployment, including what is and is not claimed
+**Goal**: Assess CIRIS for organizational deployment
 
 ### Journey
 ```
 /compare (seven requirements checklist)
     ↓
 /safety (kill switch, deferral cascades, rubric pipeline)
-    ↓
-/failure-modes (each claim with executable mechanism + named out-of-scope list)
     ↓
 /safety-vs-censorship (rules-not-verdicts discipline — the line we don't cross)
     ↓
@@ -239,7 +232,6 @@ GitHub Issues on CIRISAgent (where engagement happens)
 - Human deferral (Wise Authority) for edge cases
 - Zero data retention option (BYOK)
 - EU AI Act compliance positioning
-- The system is open about what it does NOT cover: undetectable emergent deception, adaptive-adversary scenarios, supply-chain attacks (see /failure-modes)
 
 ### Checklist Questions Answered
 - ✓ Published principles? → /sections/main (The Accord)
@@ -248,48 +240,7 @@ GitHub Issues on CIRISAgent (where engagement happens)
 - ✓ Audit trail? → /trust (cryptographic attestation), CIRISPersist
 - ✓ Open source? → AGPL-3.0 on GitHub
 - ✓ Privacy controls? → /privacy + BYOK option
-- ✓ Honest about limits? → /failure-modes (explicit out-of-scope list)
 - ✓ Formal foundation? → /papers (four papers, permanent DOIs)
-
----
-
-## 6. AI Safety Reviewer Path
-
-**Goal**: Evaluate the structural claim, the architectural response, and engage substantively
-
-### Journey
-```
-/coherence-ratchet (the structural pressure — start with the plain version, then escalate)
-    ↓
-/coherence-ratchet/advanced (full technical articulation with grounding cases)
-    ↓
-/federation (what is actually being built as a response)
-    ↓
-/federation/advanced (the system claim: a decentralized ethical superintelligence, with ethical postulate and non-claims)
-    ↓
-/failure-modes (mechanism per claim + named out-of-scope failure modes)
-    ↓
-/papers (Coherence Collapse Analysis, Constrained Reasoning Chains, framework paper, synthesis)
-    ↓
-/research-status (open trace commons; what evidence exists today)
-    ↓
-GitHub Issues on CIRISAgent (where the engagement is requested)
-```
-
-### What the Project Is Explicitly Asking For
-Comments from anyone, on GitHub issues at https://github.com/CIRISAI/CIRISAgent. The most useful engagement names a specific architectural layer, ethical postulate claim, system claim, or specific FSD, and proposes what should change. The accord at https://ciris.ai/ciris_accord.txt remains open for review.
-
-### What the Project Is Not Claiming
-- Not asking permission (the decision to build has been public for over a year)
-- Not running a public comment period with a deadline (engagement is continuous; the work proceeds at its own cadence)
-- Not claiming completed safety (the protections are bets, validated empirically and ongoing — see /failure-modes)
-- Not claiming political neutrality as virtue (the structural neutrality across governance forms is an engineering property; CIRIS has strong ethical commitments anchored in ACCORD §VII and the humanity accord)
-
-### Where Outside Replication Would Be Most Valuable
-- Independent verification of the k_eff identity on production traces from systems CIRIS doesn't operate
-- Independent evaluation of the rubric pipeline against adversarial inputs
-- Independent audit of the monthly kill-switch drill outcomes
-- Adversarial testing of the cross-agent verification under coordinated compromise scenarios
 
 ---
 
@@ -305,19 +256,16 @@ Comments from anyone, on GitHub issues at https://github.com/CIRISAI/CIRISAgent.
 → Start at /explore-a-trace (live reasoning visualization)
 
 ### If They Ask "Can I Trust It?"
-→ Start at /trust (5-level attestation) → then /coherence-ratchet → then /failure-modes
+→ Start at /trust (5-level attestation) → then /coherence-ratchet
 
 ### If They Ask "What's the Catch?"
-→ Start at /failure-modes (executable mechanism per claim + what's out of scope) → then /research-status
-
-### If They Ask "Isn't This Cargo Cult Safety?"
-→ Start at /failure-modes — each claim is paired with its executable mechanism and a "where to verify" link; the asymmetry argument is at the bottom
+→ Start at /research-status (open trace commons; the empirical surface)
 
 ### If They Ask "Is This Really a Superintelligence?"
 → Start at /federation/advanced (the system claim and the four-clause ethical postulate)
 
-### If They Ask "How Do I Push Back?"
-→ Open a GitHub issue at https://github.com/CIRISAI/CIRISAgent. See the Engagement section of /federation/advanced for what makes an issue substantive.
+### If They Want to Engage
+→ Open a GitHub issue at https://github.com/CIRISAI/CIRISAgent.
 
 ---
 
@@ -350,12 +298,7 @@ Comments from anyone, on GitHub issues at https://github.com/CIRISAI/CIRISAgent.
 
 ### For Compliance
 - "Every decision is attested — signed, chained, and tamper-evident."
-- "The failure modes we cover and the ones we don't are listed openly at /failure-modes."
-
-### For AI Safety Reviewers
-- "We are not asking for permission. We are asking for comments."
-- "The bets are explicit; the wins are not yet claimed."
-- "Open a GitHub issue. The work proceeds at its own cadence; substantive issues are read."
+- "Cryptographic proof of every decision, traceable back to hardware."
 
 ---
 

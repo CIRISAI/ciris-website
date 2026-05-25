@@ -256,19 +256,11 @@ export default function SimpleContent() {
             teams have not yet evaluated the system at scale. We say so
             plainly.{" "}
             <a
-              href="/failure-modes"
-              className="text-brand-primary hover:underline"
-            >
-              The failure modes we do and do not cover are listed openly
-            </a>
-            , and{" "}
-            <a
               href="/research-status"
               className="text-brand-primary hover:underline"
             >
-              the current research status
-            </a>{" "}
-            says what the evidence is and isn&apos;t.
+              See the current research status.
+            </a>
           </p>
         </div>
       </section>

@@ -256,14 +256,6 @@ export default function AdvancedContent() {
             <a href="/papers" className="text-brand-primary hover:underline">
               /papers
             </a>
-            . Each safety claim&apos;s executable mechanism and each named
-            out-of-scope failure mode are at{" "}
-            <a
-              href="/failure-modes"
-              className="text-brand-primary hover:underline"
-            >
-              /failure-modes
-            </a>
             .
           </p>
         </div>

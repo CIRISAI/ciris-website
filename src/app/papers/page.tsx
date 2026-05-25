@@ -11,7 +11,6 @@ type Paper = {
   role: string;
   summary: string;
   keyFindings: string[];
-  caveats?: string;
 };
 
 const papers: Paper[] = [
@@ -44,8 +43,6 @@ const papers: Paper[] = [
       "Effective constraint count: k_eff = k / (1 + ρ(k − 1)) → 1 as ρ → 1.",
       "The k_eff identity formalizes coherence collapse under correlated constraint and is the mathematical content the Coherence Ratchet operationalizes.",
     ],
-    caveats:
-      "Explicit scope limits: undetectable emergent deception and adaptive-adversary scenarios are named as out-of-scope for the formal results. The paper is the framework, not the completed safety proof.",
   },
   {
     title: "Constrained Reasoning Chains",
@@ -61,8 +58,6 @@ const papers: Paper[] = [
       "6,465 traces analyzed for effective-dimensionality structure.",
       "An effective-dimensionality threshold around N_eff ≈ 7.1 correlates with successful conflict resolution; higher-dimensional reasoning runs show different qualitative behavior than lower-dimensional ones.",
     ],
-    caveats:
-      "Telemetry on the operating system; needs independent replication on external deployments.",
   },
   {
     title: "CIRISAgent Framework",
@@ -95,12 +90,9 @@ export default function PapersPage() {
               The empirical and formal backing under the CIRIS architecture.
             </p>
             <p className="mt-4 max-w-3xl text-base leading-7 text-gray-600 dark:text-gray-400">
-              CIRIS does not rest on prose claims. Four papers document the
-              framework, the formal model, the empirical measurements, and the
-              cross-substrate validation. Each is on Zenodo with a permanent
-              DOI; each names its scope limits explicitly. Independent
-              replication and outside evaluation are the missing piece and we
-              name it as such.
+              Four papers document the framework, the formal model, the
+              empirical measurements, and the cross-substrate validation. Each
+              is on Zenodo with a permanent DOI.
             </p>
           </div>
 
@@ -139,11 +131,6 @@ export default function PapersPage() {
                     <li key={finding}>{finding}</li>
                   ))}
                 </ul>
-                {paper.caveats && (
-                  <p className="mt-4 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
-                    <strong>Scope:</strong> {paper.caveats}
-                  </p>
-                )}
                 <p className="mt-4 text-sm">
                   <a
                     href={paper.href}
@@ -157,30 +144,6 @@ export default function PapersPage() {
               </article>
             ))}
           </div>
-
-          <section className="mt-12 rounded-2xl border-l-4 border-brand-primary bg-blue-50 px-6 py-8 dark:bg-blue-900/20 md:px-8">
-            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-              What the papers do not establish.
-            </h2>
-            <div className="space-y-4 text-base leading-7 text-gray-700 dark:text-gray-300">
-              <p>
-                The papers establish the framework, the formal model, the
-                empirical pattern, and the cross-substrate signature. They do
-                not establish that CIRIS resists adversarial scenarios the
-                framework explicitly puts out of scope &mdash; specifically
-                undetectable emergent deception and adaptive-adversary
-                manipulation. Those failure modes are named in the Coherence
-                Collapse Analysis caveats and remain open problems.
-              </p>
-              <p>
-                Validation across the papers is internal to the project: the
-                system measures itself with its own tooling. Independent
-                replication by outside teams is the standing request. Useful
-                replication targets specific claims rather than the framework
-                as a whole.
-              </p>
-            </div>
-          </section>
 
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a

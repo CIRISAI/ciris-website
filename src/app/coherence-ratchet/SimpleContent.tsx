@@ -141,19 +141,11 @@ export default function SimpleContent() {
             . The code is open. If we are wrong, the way to show it is in the
             open too.{" "}
             <a
-              href="/failure-modes"
-              className="text-brand-primary hover:underline"
-            >
-              See exactly what we do not claim
-            </a>{" "}
-            and{" "}
-            <a
               href="/research-status"
               className="text-brand-primary hover:underline"
             >
-              the current research status
+              See the current research status.
             </a>
-            .
           </p>
         </div>
       </section>

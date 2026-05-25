@@ -300,20 +300,14 @@ export default function SafetyPage() {
 
         <div className="my-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="/failure-modes"
-            className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90"
-          >
-            What we do not claim
-          </a>
-          <a
             href="/papers"
-            className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
+            className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90"
           >
             The papers underneath
           </a>
           <a
             href="/how-it-works"
-            className="inline-block rounded-lg border-2 border-gray-300 px-8 py-4 text-lg font-semibold text-gray-700 transition-colors hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+            className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
           >
             How it works
           </a>
