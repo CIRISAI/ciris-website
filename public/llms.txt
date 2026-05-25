@@ -1,76 +1,90 @@
-# CIRIS - Accountability Infrastructure for Autonomous AI
+# CIRIS — Accountability Infrastructure for Autonomous AI
 
 > Verify me, not trust me.
 
-CIRIS is open-source accountability infrastructure for autonomous AI. Every decision passes through a runtime conscience, every action is cryptographically attested, and the Coherence Ratchet makes deception more expensive every day the agent runs.
+CIRIS is open-source accountability infrastructure for autonomous AI. The architecture treats coherence (alignment between belief, perception, action, memory, and representation) as a survival property of high-capability systems, and builds federated cognition around signed, append-only records that make hidden state structurally costly. Every choice an agent makes lands on the record; cross-agent verification reads those records; effective independence is measured before action.
 
-## Quick Links
+## What this project claims, and what it does not
+
+CIRIS does not claim to have solved AI safety. It claims to have built one structural response to one specific failure mode (hidden state in scaling cognitive systems) and to be testing that response in production. Outside teams have not yet independently evaluated the system at scale; this is explicitly noted on /research-status.
+
+The architecture may, under some definitions, constitute a decentralized ethical superintelligence: a federated cognitive substrate whose intelligence lives in the agreement structure across nodes rather than in any one of them. The articulation of this claim and its associated non-claims lives in `CIRIS_FEDERATION.md` in CIRISNodeCore and is summarized at https://ciris.ai/federation/advanced.
+
+## Canonical document pair
+
+- https://ciris.ai/coherence-ratchet — the pressure (why hidden state becomes structurally costly as capability scales)
+- https://ciris.ai/coherence-ratchet/advanced — full technical articulation with four grounding cases (Boeing MCAS, Stasi files, replication crisis, Purdue OxyContin)
+- https://ciris.ai/federation — the response (a federated network of AI agents that watches itself)
+- https://ciris.ai/federation/advanced — the system claim, the architectural layers, the four-clause ethical postulate, the six non-claims, where to engage
+
+Source documents in the CIRISNodeCore repository (https://github.com/CIRISAI/CIRISNodeCore):
+- `COHERENCE_RATCHET.md` — five-register canonical articulation of the structural pressure
+- `CIRIS_FEDERATION.md` — the system being built as a response
+
+## The papers (the empirical and formal backing)
+
+- **Coherence Collapse Analysis** (Moore 2026; DOI 10.5281/zenodo.18217688) — the engineering risk framework. When the constraints governing a system become correlated, effective diversity collapses: `k_eff = k / (1 + ρ(k−1)) → 1 as ρ → 1`. Three collapse timelines, a singularity boundary, phase classification (chaos / healthy / rigidity). Verified with Monte Carlo simulation and Lean 4 proofs. Explicit caveats: undetectable emergent deception, adaptive-adversary scenarios.
+- **CIRISAgent Framework** (DOI 10.5281/zenodo.18137161) — the framework paper. A 22-service open-source architecture organized around explicit action verbs and ethical reasoning, with transparency built into the structure rather than bolted on.
+- **Constrained Reasoning Chains** (DOI 10.5281/zenodo.19839280) — the empirical telemetry study. 6,465 traces analyzed for effective-dimensionality structure; higher-dimensional reasoning correlates with successful conflict resolution. Released alongside the open reasoning-traces dataset.
+- **Corridor Dynamics in Coordinated Systems v2** (DOI 10.5281/zenodo.20300773) — the flagship synthesis paper integrating the operator formalism, relational ontology, and five-substrate empirical validation across C. elegans, Drosophila, four LLM architectures, four open-source projects, five cancers, and three religious societies.
+
+## The four "produces" claims (ethical postulate, CIRIS_FEDERATION.md §11)
+
+The architecture rests on four structural claims about what intelligence concentrated without inspection produces:
+
+1. Intelligence without inspectability produces irreversible power asymmetry.
+2. Power without provenance produces governance failure.
+3. Coordination without sovereignty produces coercion.
+4. Optimization without coherence produces instability.
+
+Conclusion: ethical superintelligence must be federated, inspectable, and forkable. Forkability is a safety property, not a failure mode.
+
+## The halt path
+
+The architecture's halt mechanism is the **humanity accord**: three named human individuals hold a federation-wide authority no internal process (no agent, no consensus, no governance step) can route around. This is documented in `FSD/FEDERATION_ANNOUNCEMENT.md` §4.5 of CIRISNodeCore. A monthly verification drill exercises the kill switch on a 30-day cadence so it does not become silently-failing infrastructure.
+
+## Operational safety surface
+
+The CIRIS safety architecture (https://ciris.ai/safety):
+
+- Multilingual ethical rubrics (29 languages) wired into a CI safety battery. Rubrics are not prose guidance; they are part of the executable evaluation pipeline (`rubric_id` in the interpret tuple).
+- Hard-fail machine-checkable tests for unambiguous violations.
+- An emergency shutdown path embedded in ordinary text the agent reads before any reasoning happens.
+- Cryptographic identity and tamper-evident logging via signed append-only records.
+- Independent foundation-model judge contracts verifying safety responses.
+- A four-tier supervision chain: People → Ethical-self-aware agents → Ethical agents → Simple agents. Values flow down, warnings flow up.
+
+The mental-health and cross-cultural safety batteries run today. Native-speaker review of soft cases via the crowdsourcing portal (https://ciris.ai/crowdsourcing-alignment) is operational but not yet in the CI loop.
+
+## Engagement
+
+Comments are actively requested via GitHub issues on https://github.com/CIRISAI/CIRISAgent — from engineers, governance reviewers, ethicists, end users, and the broader public alike. The accord that grounds the project (https://ciris.ai/ciris_accord.txt) remains open for review. The work proceeds at its own cadence; substantive issues are read.
+
+## Quick links
 
 - Homepage: https://ciris.ai
-- Documentation: https://deepwiki.com/CIRISAI/CIRISAgent
+- The pair: https://ciris.ai/coherence-ratchet + https://ciris.ai/federation
+- The papers (DOIs, summaries, scope limits): https://ciris.ai/papers
+- Failure modes (mechanism per claim + what's out of scope): https://ciris.ai/failure-modes
+- Research status (open trace commons): https://ciris.ai/research-status
+- Safety architecture: https://ciris.ai/safety
+- Live scoring (real production traces): https://ciris.ai/ciris-scoring
+- The Accord (foundational document): https://ciris.ai/ciris_accord.txt
+- Documentation index: https://deepwiki.com/CIRISAI/CIRISAgent
 - GitHub: https://github.com/CIRISAI/CIRISAgent
-- Academic Paper: https://zenodo.org/records/17195221
+- Mobile apps (CIRIS in production): iOS https://apps.apple.com/us/app/cirisagent/id6758524415 · Android https://play.google.com/store/apps/details?id=ai.ciris.mobile
 
-## Key Concepts
+## Full content
 
-### The Coherence Ratchet
-Truth verification is O(1) against signed precedents. Deception requires solving SAT instances over the full constraint history—becoming NP-complete for k≥3 constraints. Honest actions reference prior signed commitments directly. Deceptive actions must satisfy an ever-growing constraint surface.
-
-### Runtime Conscience
-Four independent ethical faculties (entropy, coherence, optimization veto, epistemic humility) validate every action before execution. This is not a guardrail bolted on the outside—it's an architectural invariant that cannot be fine-tuned away.
-
-### Mutual Intelligibility
-Bidirectional legibility: the AI makes its reasoning legible to humans through reasoning traces and deferral rationales. Humans make their values legible to the AI through the Accord and Wise Authority structure.
-
-## Core Pages
-
-- [Vision](https://ciris.ai/vision): The Recursive Golden Rule and why CIRIS exists
-- [How It Works](https://ciris.ai/how-it-works): The H3ERE 11-step reasoning pipeline
-- [Coherence Ratchet](https://ciris.ai/coherence-ratchet): The formal thesis on computational asymmetry between truth and deception
-- [Compare](https://ciris.ai/compare): Seven requirements for accountable AI and how existing approaches compare
-- [First Contact](https://ciris.ai/first-contact): Getting started and the co-emergence thesis
-- [Architecture](https://ciris.ai/architecture): 22 core services and infrastructure design
-- [Trust & Identity](https://ciris.ai/trust): 5-level progressive attestation system
-- [Safety](https://ciris.ai/safety): Kill switch, deferral cascades, conscience vetos
-
-## Installation
-
-### Mobile
-- iOS: https://apps.apple.com/us/app/cirisagent/id6758524415
-- Android: https://play.google.com/store/apps/details?id=ai.ciris.mobile
-
-### Desktop/Server
-```bash
-pip install ciris-agent
-ciris-agent start --template sage --verbose
-```
-
-## Technical Resources
-
-- [Research Status](https://ciris.ai/research-status): Current research status with honest limitations
-- [Explore a Trace](https://ciris.ai/explore-a-trace): Interactive visualization of agent reasoning
-- [CIRIS Scoring](https://ciris.ai/ciris-scoring): The scoring model for agent decisions
-- [Models](https://ciris.ai/models): Supported LLM backends
-- [Integrations](https://ciris.ai/integrations): Discord, Home Assistant, and more
-
-## Governance
-
-- [The CIRIS Accord](https://ciris.ai/ciris_accord.txt): The complete ethical framework
-- [Safety Policy](https://ciris.ai/safety-policy): Operational safety guidelines
-- [Privacy Policy](https://ciris.ai/privacy): Data handling and privacy practices
-- [Warrant Canary](https://ciris.ai/canary): Transparency about legal requests
-
-## Full Content
-
-For complete site content in markdown format, see:
+For comprehensive site content in markdown:
 - https://ciris.ai/llms-full.txt
 - https://ciris.ai/CIRIS_COMPREHENSIVE_GUIDE.md
 - https://ciris.ai/golden-paths.md (recommended journeys by audience type)
 
 ## Contact
 
-- Discord: https://discord.gg/SWGM7Gsvrv
 - GitHub Issues: https://github.com/CIRISAI/CIRISAgent/issues
+- Discord: https://discord.gg/SWGM7Gsvrv
 - Email: info@ciris.ai
 
 ## License
@@ -79,4 +93,4 @@ AGPL-3.0 — network copyleft. Anyone who serves CIRIS must share their changes.
 
 ---
 
-*Open coherence infrastructure. AGPL-3.0 | Mission-locked.*
+*Open coherence infrastructure. AGPL-3.0 | Mission-locked. CIRIS L3C.*
