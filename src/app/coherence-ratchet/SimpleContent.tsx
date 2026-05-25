@@ -133,21 +133,27 @@ export default function SimpleContent() {
             Outside teams have not yet checked our work. We say so plainly. The
             full theory and the math live in our{" "}
             <a
-              href="https://doi.org/10.5281/zenodo.18217688"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/papers"
               className="text-brand-primary hover:underline"
             >
-              research paper
+              four papers
             </a>
             . The code is open. If we are wrong, the way to show it is in the
             open too.{" "}
             <a
+              href="/failure-modes"
+              className="text-brand-primary hover:underline"
+            >
+              See exactly what we do not claim
+            </a>{" "}
+            and{" "}
+            <a
               href="/research-status"
               className="text-brand-primary hover:underline"
             >
-              See the current research status.
+              the current research status
             </a>
+            .
           </p>
         </div>
       </section>

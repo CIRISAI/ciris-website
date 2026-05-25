@@ -5,6 +5,8 @@ import {
   IconFlask,
   IconBook,
   IconBrandGithub,
+  IconLockOpen,
+  IconNetwork,
 } from "@tabler/icons-react";
 
 const navItems = [
@@ -19,6 +21,18 @@ const navItems = [
     subtitle: "Get the Agent",
     link: "/install",
     icon: <IconRocket className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Coherence Ratchet",
+    subtitle: "The Pressure",
+    link: "/coherence-ratchet",
+    icon: <IconLockOpen className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Federation",
+    subtitle: "The Response",
+    link: "/federation",
+    icon: <IconNetwork className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Compare",

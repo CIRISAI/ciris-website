@@ -245,22 +245,26 @@ export default function AdvancedContent() {
             </code>{" "}
             (the{" "}
             <a
-              href="/coherence-ratchet"
+              href="/coherence-ratchet/advanced"
               className="text-brand-primary hover:underline"
             >
-              Coherence Ratchet
+              Coherence Ratchet (advanced)
             </a>{" "}
-            page is the web-rendered pair). The mathematical foundation for
-            the coherence-collapse pressure is{" "}
+            page is the web-rendered pair). The four papers under the
+            architecture &mdash; the synthesis, the formal model, the
+            empirical study, and the framework paper &mdash; are at{" "}
+            <a href="/papers" className="text-brand-primary hover:underline">
+              /papers
+            </a>
+            . Each safety claim&apos;s executable mechanism and each named
+            out-of-scope failure mode are at{" "}
             <a
-              href="https://doi.org/10.5281/zenodo.18217688"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/failure-modes"
               className="text-brand-primary hover:underline"
             >
-              Coherence Collapse Analysis
-            </a>{" "}
-            (Moore 2026).
+              /failure-modes
+            </a>
+            .
           </p>
         </div>
       </section>

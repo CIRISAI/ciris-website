@@ -189,7 +189,10 @@ export default function ResearchStatusPage() {
             <p className="mb-5 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">
               The synthesis above integrates these three papers; it does not
               replace them. Each stands on its own DOI and is evaluable on its
-              own terms.
+              own terms.{" "}
+              <a href="/papers" className="font-semibold text-brand-primary hover:underline">
+                See all four papers with key findings and scope limits →
+              </a>
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               {papers.map((paper) => (

@@ -235,13 +235,22 @@ export default function AdvancedContent() {
           <p>
             The architecture is its own disprover: every step is on the record.
             If the claim is wrong, the records are where the wrongness will
-            show up first.{" "}
+            show up first. See{" "}
+            <a
+              href="/failure-modes"
+              className="text-brand-primary hover:underline"
+            >
+              /failure-modes
+            </a>{" "}
+            for the explicit list of what each safety claim is backed by and
+            what is named out of scope, and{" "}
             <a
               href="/research-status"
               className="text-brand-primary hover:underline"
             >
-              See the current research status.
-            </a>
+              /research-status
+            </a>{" "}
+            for the current evidence surface.
           </p>
         </div>
       </section>
