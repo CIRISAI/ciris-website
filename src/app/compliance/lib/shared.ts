@@ -149,6 +149,27 @@ export const BATCH_ORDER: BatchId[] = [
   "asean_guide_v1",
 ];
 
+// Authoritative source URLs per batch — from each batch's manifest.yaml in
+// ciris-response-magnifica-humanitas. The brief says do NOT republish full
+// third-party texts; link out to these for the canonical source. Each entry
+// is the *full document* URL; for chapter-specific anchors, append #fragments
+// or use search.
+export const SOURCE_URL: Record<BatchId, { html?: string; pdf?: string }> = {
+  magnifica_humanitas_v1: {
+    html: "http://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
+  },
+  eu_hleg_v1: {
+    html: "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai",
+    pdf: "https://ec.europa.eu/newsroom/dae/document.cfm?doc_id=60419",
+  },
+  ieee_ead_v1: {
+    pdf: "https://standards.ieee.org/wp-content/uploads/import/documents/other/ead1e.pdf",
+  },
+  asean_guide_v1: {
+    pdf: "https://asean.org/wp-content/uploads/2024/02/ASEAN-Guide-on-AI-Governance-and-Ethics_beautified_201223_v2.pdf",
+  },
+};
+
 const FILENAME_BY_ID: Record<string, string> = {
   D01: "D01_non_maleficence.md",
   D02: "D02_integrity.md",

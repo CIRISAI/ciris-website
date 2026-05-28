@@ -29,7 +29,7 @@ import type {
 import { CHAPTERS_BY_BATCH } from "../lib/shared";
 import DimensionDoc from "./DimensionDoc";
 import SemanticsGraph from "./SemanticsGraph";
-import ChapterReader from "./ChapterReader";
+import SourceChapterView from "./SourceChapterView";
 
 type Mode = "dimension" | "regulatory" | "semantics";
 
@@ -1195,7 +1195,7 @@ export default function Workspace({
           {sel.mode === "regulatory" &&
             (currentBatch ? (
               currentChapter ? (
-                <ChapterReader
+                <SourceChapterView
                   batch={currentBatch}
                   chapter={currentChapter}
                   seed={seed}
