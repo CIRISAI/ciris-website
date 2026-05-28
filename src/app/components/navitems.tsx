@@ -7,7 +7,6 @@ import {
   IconBrandGithub,
   IconLockOpen,
   IconNetwork,
-  IconChecklist,
 } from "@tabler/icons-react";
 
 const navItems = [
@@ -40,12 +39,6 @@ const navItems = [
     subtitle: "See the Safety Case",
     link: "/compare",
     icon: <IconScale className="h-4 w-4 text-neutral-500 dark:text-white" />,
-  },
-  {
-    name: "Compliance",
-    subtitle: "27 Dimensions, 4 Frameworks",
-    link: "/compliance",
-    icon: <IconChecklist className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Research",

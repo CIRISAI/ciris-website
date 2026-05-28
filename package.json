@@ -20,7 +20,10 @@
     "next": "^15.3.6",
     "react": "^19.1.2",
     "react-dom": "^19.1.2",
+    "react-force-graph-2d": "^1.29.1",
+    "react-markdown": "^10.1.0",
     "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
