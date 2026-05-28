@@ -1,7 +1,7 @@
 // Server component — renders the fractal-self reading discipline from CEG
 // 0.1 README.md ("How to read this spec without Cartesian default") + primer
-// §0.5. This is the most common misread the page must preempt, so it lives
-// above the 1+4 primitives panel.
+// §0.5. Renders as a notes section near the bottom; the page is not built
+// around this idea, but spec readers coming from PGP / X.509 will want it.
 
 import { REGISTRY_BLOB, CEG_CHAPTER } from "../lib/shared";
 
@@ -9,15 +9,20 @@ export default function FractalSelfCallout() {
   return (
     <section
       id="fractal-self"
-      className="rounded-2xl border-l-4 border-brand-primary bg-brand-primary/5 p-6 shadow-sm dark:bg-brand-primary/10"
+      className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900"
     >
       <header>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-primary">
-          Reading discipline · how to read this spec without Cartesian default
+        <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-slate-500 dark:text-slate-400">
+          Notes for spec readers · the most common misread
         </p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+        <h2 className="mt-2 text-xl font-bold tracking-tight text-slate-900 dark:text-white">
           Self is self, fractally
         </h2>
+        <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+          Readers arriving from PGP / X.509 / atomic-principal cryptographic
+          identity work tend to read &ldquo;self-attestation&rdquo; the way
+          those systems mean it. CEG means something different. Quick orientation:
+        </p>
       </header>
 
       <div className="mt-3 space-y-3 text-sm leading-7 text-slate-700 dark:text-slate-200">

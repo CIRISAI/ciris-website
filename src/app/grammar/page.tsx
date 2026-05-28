@@ -39,7 +39,7 @@ export default async function GrammarPage() {
       <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-gray-950 dark:via-black dark:to-gray-950">
         <div className="mx-auto max-w-6xl px-4 pb-20 pt-32 md:px-6">
           {/* Hero */}
-          <header id={ANCHORS.hero} className="mb-10 space-y-4">
+          <header id={ANCHORS.hero} className="mb-10 space-y-5">
             <div className="flex flex-wrap gap-2 text-xs">
               <span className="rounded-full bg-blue-100 px-3 py-1 font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
                 {source.specVersion} · released {source.fsdLastUpdated}
@@ -47,78 +47,115 @@ export default async function GrammarPage() {
               <span className="rounded-full bg-emerald-100 px-3 py-1 font-medium text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300">
                 {source.totalPrefixes} prefix families
               </span>
-              <span className="rounded-full bg-amber-100 px-3 py-1 font-medium text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
-                5 structural primitives · 5 families · 8 envelope fields
-              </span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white md:text-5xl">
-              CIRIS Epistemic Grammar
+              See who said it. See who agrees. Decide for yourself.
             </h1>
             <p className="max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-              The federation&rsquo;s language for making structured, signed,
-              machine-checkable claims about reality and each other. One
-              workhorse + four structural composers + an open vocabulary of
-              prefix families, all sitting in five organizing families with
-              clear consumer-side composition policies.
+              The world is moving faster than most of us can fact-check it.
+              Sources contradict. Agents speak unsigned. Corrections rarely
+              catch the original. CEG is a small shared format that puts a
+              signature on every claim, with a trail you can follow — so
+              you can read who&rsquo;s saying what, who&rsquo;s pushed
+              back, and what changed, and make your own call without
+              giving up or giving in to any one source.
             </p>
 
-            {/* Four shape facts */}
-            <div className="grid gap-3 rounded-2xl border border-slate-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 md:grid-cols-2 xl:grid-cols-4">
+            {/* What this is, why we made it, what's comparable */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+              <div className="grid gap-5 md:grid-cols-3">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-primary">
+                    What this is
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+                    Every claim travels in a small signed envelope: who
+                    made it, what it&rsquo;s about, how confident they are,
+                    what evidence they cite, when it was made. Other
+                    people, organisations, and AI agents add envelopes
+                    around it — agreeing, disagreeing, correcting,
+                    superseding. The trail is readable end-to-end.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-primary">
+                    Why we made it
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+                    Trust in &ldquo;what&rsquo;s true&rdquo; is breaking down
+                    because the substrate underneath is missing. Without a
+                    shared claim format, every voice invents its own, the
+                    trails don&rsquo;t stitch together, and the only way to
+                    cope is to pick a side. CEG is the small, austere
+                    middle that lets many voices read each other and lets
+                    a reader build their own verdict.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-primary">
+                    What&rsquo;s comparable
+                  </p>
+                  <ul className="mt-2 space-y-1 text-sm leading-6 text-slate-700 dark:text-slate-300">
+                    <li>
+                      <strong>PGP web of trust</strong> — same instinct,
+                      much narrower scope
+                    </li>
+                    <li>
+                      <strong>W3C Verifiable Credentials</strong> — heavier
+                      ceremony, no composition story
+                    </li>
+                    <li>
+                      <strong>Community Notes</strong> — readable trails,
+                      single platform
+                    </li>
+                    <li>
+                      <strong>Sigstore / SLSA</strong> — code-supply-chain
+                      cousins; CEG generalises the shape
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Three things a reader can actually do here */}
+            <div className="grid gap-3 rounded-2xl border border-slate-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 md:grid-cols-3">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-primary">
-                  Shape fact 1
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-primary">
+                  See who said it
                 </p>
                 <p className="mt-1 text-sm leading-6 text-slate-700 dark:text-slate-300">
-                  One workhorse + four structural composers = the entire wire
-                  format. Everything else is open vocabulary on top.
+                  Every claim carries a signature, a date, what
+                  it&rsquo;s about, and what it&rsquo;s based on. No
+                  anonymous assertions getting lost in the feed; no
+                  attribution lost to a screenshot.
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-primary">
-                  Shape fact 2
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-primary">
+                  See who else weighed in
                 </p>
                 <p className="mt-1 text-sm leading-6 text-slate-700 dark:text-slate-300">
-                  The vocabulary is mechanism-descriptive, not
-                  judgment-descriptive. Prefixes describe what is being
-                  measured; polarity carries the value claim.
+                  Other signers add their own envelopes around the claim
+                  — agreeing, disagreeing, correcting, superseding. You
+                  see the full chorus and the receipts behind each
+                  voice, not just whoever shouted loudest.
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-primary">
-                  Shape fact 3
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-primary">
+                  Decide for yourself
                 </p>
                 <p className="mt-1 text-sm leading-6 text-slate-700 dark:text-slate-300">
-                  Composition discipline beats primitive proliferation. New
-                  requirements are absorbed by composing existing primitives,
-                  not by adding atomic ones.
-                </p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-primary">
-                  Shape fact 4
-                </p>
-                <p className="mt-1 text-sm leading-6 text-slate-700 dark:text-slate-300">
-                  Self is self, fractally. At every scale, self means the
-                  already-relationally-constituted entity speaking. Never a
-                  Cartesian atomic ego asserting pre-relational identity.{" "}
-                  <a
-                    href={`#${ANCHORS.fractalSelf}`}
-                    className="text-brand-primary hover:underline"
-                  >
-                    See below ↓
-                  </a>
+                  Trust isn&rsquo;t something the system hands you. You
+                  pick the voices you weigh, how heavily, and on what.
+                  The format is the same for everyone; the verdict is
+                  yours.
                 </p>
               </div>
             </div>
 
             {/* On-page nav */}
             <nav className="flex flex-wrap gap-2 text-xs">
-              <a
-                href={`#${ANCHORS.fractalSelf}`}
-                className="rounded-md border-2 border-brand-primary bg-brand-primary/5 px-2.5 py-1 font-semibold text-brand-primary hover:bg-brand-primary/10"
-              >
-                Fractal self
-              </a>
               <a
                 href={`#${ANCHORS.primitives}`}
                 className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
@@ -183,7 +220,6 @@ export default async function GrammarPage() {
           </header>
 
           <div className="space-y-14">
-            <FractalSelfCallout />
             <PrimitivesPanel />
             <FamiliesPanel source={source} />
             <EnvelopeAndAxesPanel />
@@ -193,6 +229,7 @@ export default async function GrammarPage() {
             <TranslationPlayground />
             <StoriesLibrary />
             <NonGoalsPanel />
+            <FractalSelfCallout />
 
             {/* References */}
             <section id={ANCHORS.references} className="space-y-4">
