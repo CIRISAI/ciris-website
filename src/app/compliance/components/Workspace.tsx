@@ -30,6 +30,7 @@ import { CHAPTERS_BY_BATCH } from "../lib/shared";
 import DimensionDoc from "./DimensionDoc";
 import SemanticsGraph from "./SemanticsGraph";
 import SourceChapterView from "./SourceChapterView";
+import ParagraphDetail from "./ParagraphDetail";
 
 type Mode = "dimension" | "regulatory" | "semantics";
 
@@ -1200,6 +1201,7 @@ export default function Workspace({
                   chapter={currentChapter}
                   seed={seed}
                   onPickCitation={pickCitation}
+                  onPickParagraph={pickCitation}
                 />
               ) : (
                 <BatchOverview
@@ -1243,17 +1245,20 @@ export default function Workspace({
             {sel.mode === "dimension" && currentDimension && (
               <DimensionDoc dimensionId={currentDimension.id} />
             )}
-            {sel.mode === "regulatory" && currentBatch && sel.citation && (
-              <CitationCrossRef
-                seed={seed}
-                batch={currentBatch}
-                citation={sel.citation}
-                onClose={closeRight}
-                onJumpToDimension={(id) => {
-                  setSel({ mode: "dimension", dimensionId: id });
-                }}
-              />
-            )}
+            {sel.mode === "regulatory" &&
+              currentBatch &&
+              currentChapter &&
+              sel.citation && (
+                <ParagraphDetail
+                  batch={currentBatch}
+                  chapter={currentChapter}
+                  citation={sel.citation}
+                  seed={seed}
+                  onJumpToDimension={(id) => {
+                    setSel({ mode: "dimension", dimensionId: id });
+                  }}
+                />
+              )}
             {sel.mode === "semantics" && sel.semanticsNodeId && (
               <SemanticsDetail
                 nodeId={sel.semanticsNodeId}

@@ -137,3 +137,41 @@ h4 {
 .ceg-source-html .cleaner {
   display: none;
 }
+
+/* Per-paragraph "analysis" trigger injected into the MH HTML source by
+   SourceChapterView. Floats to the right of each numbered paragraph; click
+   opens the right detail pane. */
+.ceg-source-html .ceg-source-paragraph {
+  position: relative;
+  padding-right: 4.5rem;
+}
+.ceg-source-html .ceg-analysis-trigger {
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-brand-primary, #0d9488);
+  background: color-mix(in srgb, var(--color-brand-primary, #0d9488) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-brand-primary, #0d9488) 35%, transparent);
+  border-radius: 9999px;
+  opacity: 0.5;
+  transition: opacity 0.12s ease, background-color 0.12s ease;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.ceg-source-html .ceg-source-paragraph:hover .ceg-analysis-trigger,
+.ceg-source-html .ceg-analysis-trigger:hover,
+.ceg-source-html .ceg-analysis-trigger:focus-visible {
+  opacity: 1;
+  background: color-mix(in srgb, var(--color-brand-primary, #0d9488) 18%, transparent);
+}
+.ceg-source-html .ceg-analysis-arrow {
+  font-size: 0.8em;
+}
