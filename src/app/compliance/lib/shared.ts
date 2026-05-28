@@ -186,3 +186,134 @@ export function dimensionFilename(id: string): string {
 export function complianceDocPath(id: string): string {
   return `compliance/${dimensionFilename(id)}`;
 }
+
+// Source chapters per regulatory work. Each entry maps to a
+// CONTRIBUTION_OBJECTS_*.md file in ciris-response-magnifica-humanitas.
+// The label is what we show in the nav tree.
+
+export interface Chapter {
+  file: string;
+  label: string;
+}
+
+export const CHAPTERS_BY_BATCH: Record<BatchId, Chapter[]> = {
+  magnifica_humanitas_v1: [
+    { file: "CONTRIBUTION_OBJECTS_v1.4_CH0_INTRO.md", label: "Introduction" },
+    { file: "CONTRIBUTION_OBJECTS_v1.4_CH1_DOCTRINE.md", label: "Ch 1 — Doctrine" },
+    {
+      file: "CONTRIBUTION_OBJECTS_v1.4_CH2_FOUNDATIONS.md",
+      label: "Ch 2 — Foundations",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_v1.4_CH3_TECH_AI.md",
+      label: "Ch 3 — Technology & AI",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_v1.4_CH4_TRUTH_WORK_FREEDOM.md",
+      label: "Ch 4 — Truth, Work, Freedom",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_v1.4_CH5_POWER_LOVE.md",
+      label: "Ch 5 — Power, Love",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_v1.4_CONCLUSION.md",
+      label: "Conclusion",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_v1.4_SYNTHESIS.md",
+      label: "Synthesis",
+    },
+  ],
+  eu_hleg_v1: [
+    {
+      file: "CONTRIBUTION_OBJECTS_EU_HLEG_AB_INTRO_FRAMEWORK.md",
+      label: "Introduction & Framework",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_EU_HLEG_CHI_FOUNDATIONS.md",
+      label: "Ch I — Foundations",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_EU_HLEG_CHII_REQUIREMENTS.md",
+      label: "Ch II — Requirements",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_EU_HLEG_CHIII_ASSESSMENT.md",
+      label: "Ch III — Assessment",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_EU_HLEG_CD_EXAMPLES_CONCLUSION.md",
+      label: "Examples & Conclusion",
+    },
+  ],
+  ieee_ead_v1: [
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH01_FROM_PRINCIPLES_TO_PRACTICE.md",
+      label: "Ch 01 — From Principles to Practice",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH02_GENERAL_PRINCIPLES.md",
+      label: "Ch 02 — General Principles",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH03_CLASSICAL_ETHICS.md",
+      label: "Ch 03 — Classical Ethics",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH04_WELL_BEING.md",
+      label: "Ch 04 — Well-Being",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH05_AFFECTIVE_COMPUTING.md",
+      label: "Ch 05 — Affective Computing",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH06_PERSONAL_DATA.md",
+      label: "Ch 06 — Personal Data",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH07_METHODS.md",
+      label: "Ch 07 — Methods",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH08_SUSTAINABLE_DEVELOPMENT.md",
+      label: "Ch 08 — Sustainable Development",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH09_EMBEDDING_VALUES.md",
+      label: "Ch 09 — Embedding Values",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH10_POLICY.md",
+      label: "Ch 10 — Policy",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_IEEE_EAD_CH11_LAW.md",
+      label: "Ch 11 — Law",
+    },
+  ],
+  asean_guide_v1: [
+    {
+      file: "CONTRIBUTION_OBJECTS_ASEAN_AB_INTRO_PRINCIPLES.md",
+      label: "Introduction & Principles",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_ASEAN_C_FRAMEWORK.md",
+      label: "Framework",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_ASEAN_DEF_RECOMMENDATIONS_CONCLUSION.md",
+      label: "Recommendations & Conclusion",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_ASEAN_ANNEX_A_RISK_ASSESSMENT.md",
+      label: "Annex A — Risk Assessment",
+    },
+    {
+      file: "CONTRIBUTION_OBJECTS_ASEAN_ANNEX_B_USE_CASES.md",
+      label: "Annex B — Use Cases",
+    },
+  ],
+};
+

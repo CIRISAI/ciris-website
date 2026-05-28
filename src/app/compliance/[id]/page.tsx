@@ -10,6 +10,9 @@ import {
   AGENT_BLOB,
 } from "../lib/seed";
 import Workspace from "../components/Workspace";
+import SeoBrowseAll, {
+  SeoDimensionDetail,
+} from "../components/SeoBrowseAll";
 
 export const dynamicParams = false;
 
@@ -76,6 +79,9 @@ export default async function DimensionPage({
           <Suspense fallback={<div className="h-[60vh]" />}>
             <Workspace seed={seed} initialDimensionId={d.id} />
           </Suspense>
+
+          <SeoDimensionDetail seed={seed} dimension={d} />
+          <SeoBrowseAll seed={seed} />
         </div>
       </main>
       <Footer />

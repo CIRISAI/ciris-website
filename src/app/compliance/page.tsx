@@ -4,6 +4,7 @@ import navItems from "@/app/components/navitems";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import { getSeed, RESPONSE_BLOB, AGENT_BLOB } from "./lib/seed";
 import Workspace from "./components/Workspace";
+import SeoBrowseAll from "./components/SeoBrowseAll";
 
 export default async function CompliancePage() {
   const seed = await getSeed();
@@ -59,6 +60,8 @@ export default async function CompliancePage() {
           <Suspense fallback={<div className="h-[60vh]" />}>
             <Workspace seed={seed} initialDimensionId={null} />
           </Suspense>
+
+          <SeoBrowseAll seed={seed} />
         </div>
       </main>
       <Footer />

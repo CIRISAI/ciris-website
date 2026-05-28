@@ -1,9 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useCallback,
+} from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import {
   IconLayoutSidebarLeftExpand,
+  IconLayoutSidebarRightExpand,
   IconX,
   IconChevronRight,
   IconChevronDown,
@@ -17,20 +24,24 @@ import type {
   Batch,
   BatchId,
   AccordPrinciple,
+  RegulatoryAttestation,
 } from "../lib/shared";
+import { CHAPTERS_BY_BATCH } from "../lib/shared";
 import DimensionDoc from "./DimensionDoc";
 import SemanticsGraph from "./SemanticsGraph";
+import ChapterReader from "./ChapterReader";
 
 type Mode = "dimension" | "regulatory" | "semantics";
 
 interface Selection {
   mode: Mode;
-  // dimension mode: D## id
+  // dimension mode
   dimensionId?: string;
-  // regulatory mode: batch id, optional attestation index
+  // regulatory mode
   batchId?: BatchId;
-  attestationDimensionId?: string;
-  // semantics mode: graph node id (D##, principle:foo, primitive:foo)
+  chapterFile?: string;
+  citation?: string;
+  // semantics mode
   semanticsNodeId?: string;
 }
 
@@ -54,7 +65,8 @@ const ACCORD_DOT: Record<AccordPrinciple, string> = {
 
 const SEVERITY_STYLE: Record<string, string> = {
   HIGH: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
-  MEDIUM: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
+  MEDIUM:
+    "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
   LOW_MEDIUM:
     "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
   LOW: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
@@ -74,7 +86,8 @@ function decodeSelection(
     sel.dimensionId = params.get("id") ?? fallbackDimensionId ?? undefined;
   } else if (mode === "regulatory") {
     sel.batchId = (params.get("batch") as BatchId | null) ?? undefined;
-    sel.attestationDimensionId = params.get("attest") ?? undefined;
+    sel.chapterFile = params.get("chapter") ?? undefined;
+    sel.citation = params.get("citation") ?? undefined;
   } else {
     sel.semanticsNodeId = params.get("node") ?? undefined;
   }
@@ -87,7 +100,8 @@ function encodeSelection(sel: Selection): string {
   if (sel.mode === "dimension" && sel.dimensionId) p.set("id", sel.dimensionId);
   if (sel.mode === "regulatory") {
     if (sel.batchId) p.set("batch", sel.batchId);
-    if (sel.attestationDimensionId) p.set("attest", sel.attestationDimensionId);
+    if (sel.chapterFile) p.set("chapter", sel.chapterFile);
+    if (sel.citation) p.set("citation", sel.citation);
   }
   if (sel.mode === "semantics" && sel.semanticsNodeId)
     p.set("node", sel.semanticsNodeId);
@@ -96,8 +110,7 @@ function encodeSelection(sel: Selection): string {
 
 function hasRightContent(sel: Selection): boolean {
   if (sel.mode === "dimension") return Boolean(sel.dimensionId);
-  if (sel.mode === "regulatory")
-    return Boolean(sel.batchId && sel.attestationDimensionId);
+  if (sel.mode === "regulatory") return Boolean(sel.citation);
   return Boolean(sel.semanticsNodeId);
 }
 
@@ -115,13 +128,13 @@ function ModeSelector({
       {
         id: "dimension",
         label: "Dimensions",
-        sub: "D01–D27",
+        sub: "the CIRIS spine",
         icon: <IconList className="h-4 w-4" />,
       },
       {
         id: "regulatory",
         label: "Regulatory work",
-        sub: "4 batches",
+        sub: "4 batches · chapters",
         icon: <IconFileText className="h-4 w-4" />,
       },
       {
@@ -199,21 +212,19 @@ function DimensionTree({
                 <li key={d.id}>
                   <button
                     onClick={() => onSelect(d.id)}
-                    className={`flex w-full items-start gap-2 rounded px-2 py-1.5 text-left text-sm transition ${
+                    className={`flex w-full items-start gap-2 rounded px-2 py-1.5 text-left transition ${
                       selectedId === d.id
                         ? "bg-brand-primary/10 text-brand-primary"
                         : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-gray-800"
                     }`}
+                    title={d.gloss}
                   >
                     <span
                       className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${ACCORD_DOT[d.accord_principle]}`}
                       title={ACCORD_LABEL[d.accord_principle]}
                     />
-                    <span className="min-w-0 flex-1">
-                      <span className="font-mono text-xs font-semibold">
-                        {d.id}
-                      </span>{" "}
-                      <span className="text-xs">{d.prefix}</span>
+                    <span className="min-w-0 flex-1 break-all font-mono text-xs">
+                      {d.prefix}
                     </span>
                   </button>
                 </li>
@@ -226,20 +237,20 @@ function DimensionTree({
   );
 }
 
-// ──────────────────────────── RegulatoryTree ─────────────────────────────
+// ──────────────────────────── RegulatoryTree (chapters) ────────────────────
 
 function RegulatoryTree({
   seed,
   selectedBatchId,
-  selectedDimensionId,
+  selectedChapter,
   onSelectBatch,
-  onSelectAttestation,
+  onSelectChapter,
 }: {
   seed: Seed;
   selectedBatchId: BatchId | null;
-  selectedDimensionId: string | null;
+  selectedChapter: string | null;
   onSelectBatch: (b: BatchId) => void;
-  onSelectAttestation: (b: BatchId, d: string) => void;
+  onSelectChapter: (b: BatchId, file: string) => void;
 }) {
   const [open, setOpen] = useState<Record<BatchId, boolean>>(
     () =>
@@ -249,23 +260,17 @@ function RegulatoryTree({
       >,
   );
 
-  // When a batch becomes selected, auto-expand it.
+  // Auto-expand the selected batch.
   useEffect(() => {
     if (selectedBatchId) {
       setOpen((o) => ({ ...o, [selectedBatchId]: true }));
     }
   }, [selectedBatchId]);
 
-  function dimensionsAttestedBy(b: BatchId) {
-    return seed.dimensions.filter((d) =>
-      d.regulatory_attestations.some((a) => a.batch_id === b),
-    );
-  }
-
   return (
     <div className="space-y-2">
       {seed.batches.map((b) => {
-        const dims = dimensionsAttestedBy(b.id);
+        const chapters = CHAPTERS_BY_BATCH[b.id] ?? [];
         return (
           <div key={b.id}>
             <div className="flex items-stretch">
@@ -283,44 +288,34 @@ function RegulatoryTree({
               <button
                 onClick={() => onSelectBatch(b.id)}
                 className={`flex-1 rounded px-2 py-1.5 text-left text-sm transition ${
-                  selectedBatchId === b.id && !selectedDimensionId
+                  selectedBatchId === b.id && !selectedChapter
                     ? "bg-brand-primary/10 text-brand-primary"
                     : "text-slate-800 hover:bg-slate-100 dark:text-slate-100 dark:hover:bg-gray-800"
                 }`}
               >
                 <span className="block font-semibold">{b.short}</span>
                 <span className="block text-[11px] text-slate-500 dark:text-slate-400">
-                  {dims.length} dimensions
+                  {chapters.length} chapters
                 </span>
               </button>
             </div>
             {open[b.id] && (
               <ul className="ml-5 mt-1 space-y-0.5 border-l border-slate-200 pl-2 dark:border-gray-700">
-                {dims.map((d) => {
-                  const att = d.regulatory_attestations.find(
-                    (a) => a.batch_id === b.id,
-                  );
-                  return (
-                    <li key={d.id}>
-                      <button
-                        onClick={() => onSelectAttestation(b.id, d.id)}
-                        className={`flex w-full items-start gap-1.5 rounded px-1.5 py-1 text-left text-xs transition ${
-                          selectedBatchId === b.id &&
-                          selectedDimensionId === d.id
-                            ? "bg-brand-primary/10 text-brand-primary"
-                            : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-gray-800"
-                        }`}
-                      >
-                        <span className="font-mono shrink-0">{d.id}</span>
-                        {att && (
-                          <span className="truncate text-slate-500 dark:text-slate-400">
-                            {att.citation}
-                          </span>
-                        )}
-                      </button>
-                    </li>
-                  );
-                })}
+                {chapters.map((ch) => (
+                  <li key={ch.file}>
+                    <button
+                      onClick={() => onSelectChapter(b.id, ch.file)}
+                      className={`block w-full rounded px-1.5 py-1 text-left text-xs transition ${
+                        selectedBatchId === b.id &&
+                        selectedChapter === ch.file
+                          ? "bg-brand-primary/10 text-brand-primary"
+                          : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-gray-800"
+                      }`}
+                    >
+                      {ch.label}
+                    </button>
+                  </li>
+                ))}
               </ul>
             )}
           </div>
@@ -358,14 +353,14 @@ function DimensionOverview({
     seed.aggregate_indices.by_accord_principle[d.accord_principle] ?? []
   ).filter((id) => id !== d.id);
   const batchById = new Map(seed.batches.map((b) => [b.id, b]));
+  const siblingDimensions = siblings
+    .map((id) => seed.dimensions.find((x) => x.id === id))
+    .filter((x): x is Dimension => Boolean(x));
 
   return (
     <div className="space-y-5">
       <header>
         <div className="mb-2 flex flex-wrap items-center gap-2">
-          <span className="rounded-md bg-brand-primary/10 px-2.5 py-1 text-lg font-bold text-brand-primary">
-            {d.id}
-          </span>
           <span
             className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide ${
               d.tier === "STRONG-4"
@@ -379,7 +374,7 @@ function DimensionOverview({
             {ACCORD_LABEL[d.accord_principle]}
           </span>
         </div>
-        <h2 className="font-mono text-xl font-bold tracking-tight text-slate-900 dark:text-white md:text-2xl">
+        <h2 className="break-all font-mono text-xl font-bold tracking-tight text-slate-900 dark:text-white md:text-2xl">
           {d.prefix}
         </h2>
         <p className="mt-2 leading-7 text-slate-700 dark:text-slate-300">
@@ -387,7 +382,6 @@ function DimensionOverview({
         </p>
       </header>
 
-      {/* Attestation bars */}
       <section className="rounded-xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           Attestation density
@@ -421,7 +415,6 @@ function DimensionOverview({
         </div>
       </section>
 
-      {/* Source quotes */}
       <section>
         <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
           Regulatory attestations
@@ -481,7 +474,6 @@ function DimensionOverview({
         </div>
       </section>
 
-      {/* Convergence / conflicts / T-3 */}
       {(d.convergence_note || conflicts.length > 0 || t3s.length > 0) && (
         <section className="space-y-3">
           {d.convergence_note && (
@@ -555,20 +547,20 @@ function DimensionOverview({
         </section>
       )}
 
-      {/* Siblings under same Accord principle */}
-      {siblings.length > 0 && (
+      {siblingDimensions.length > 0 && (
         <section className="rounded-lg border border-slate-200 bg-white p-3 dark:border-gray-800 dark:bg-gray-900">
           <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             Other dimensions under {ACCORD_LABEL[d.accord_principle]}
           </p>
           <div className="mt-2 flex flex-wrap gap-1.5">
-            {siblings.map((sid) => (
+            {siblingDimensions.map((sd) => (
               <button
-                key={sid}
-                onClick={() => onJumpToDimension(sid)}
-                className="rounded-md border border-slate-300 px-2 py-0.5 font-mono text-xs text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
+                key={sd.id}
+                onClick={() => onJumpToDimension(sd.id)}
+                className="break-all rounded-md border border-slate-300 px-2 py-0.5 font-mono text-xs text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
+                title={sd.gloss}
               >
-                {sid}
+                {sd.prefix}
               </button>
             ))}
           </div>
@@ -578,23 +570,21 @@ function DimensionOverview({
   );
 }
 
-// ──────────────────────────── Center: Regulatory overview ──────────────────
+// ──────────────────────────── Center: Batch overview ───────────────────────
 
-function RegulatoryOverview({
+function BatchOverview({
   batch,
   seed,
-  onSelectAttestation,
+  onSelectChapter,
 }: {
   batch: Batch;
   seed: Seed;
-  onSelectAttestation: (d: string) => void;
+  onSelectChapter: (file: string) => void;
 }) {
-  const attestations = seed.dimensions
-    .map((d) => {
-      const a = d.regulatory_attestations.find((x) => x.batch_id === batch.id);
-      return a ? { dimension: d, attestation: a } : null;
-    })
-    .filter((x): x is { dimension: Dimension; attestation: typeof seed.dimensions[number]["regulatory_attestations"][number] } => x !== null);
+  const chapters = CHAPTERS_BY_BATCH[batch.id] ?? [];
+  const attestationCount = seed.dimensions.filter((d) =>
+    d.regulatory_attestations.some((a) => a.batch_id === batch.id),
+  ).length;
 
   return (
     <div className="space-y-5">
@@ -612,57 +602,61 @@ function RegulatoryOverview({
         </h2>
         <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
           {batch.authority} · {batch.publication_date} ·{" "}
-          {batch.geographic_scope.replace(/_/g, " ")} ·{" "}
+          {batch.geographic_scope.replace(/_/g, " ")}
+          <br />
           {batch.atomic_units_mapped} atomic units mapped ·{" "}
-          {attestations.length} dimensions attested
+          {attestationCount} CIRIS dimensions attested
         </p>
       </header>
       <section>
         <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          Dimensions attested by this batch
+          Pick a chapter to start reading
         </p>
         <ul className="grid gap-2 md:grid-cols-2">
-          {attestations.map(({ dimension, attestation }) => (
-            <li key={dimension.id}>
+          {chapters.map((ch) => (
+            <li key={ch.file}>
               <button
-                onClick={() => onSelectAttestation(dimension.id)}
-                className="flex w-full flex-col items-start gap-1 rounded-lg border border-slate-200 bg-white p-3 text-left transition hover:border-brand-primary hover:shadow-sm dark:border-gray-800 dark:bg-gray-900"
+                onClick={() => onSelectChapter(ch.file)}
+                className="block w-full rounded-lg border border-slate-200 bg-white p-3 text-left text-sm transition hover:border-brand-primary hover:shadow-sm dark:border-gray-800 dark:bg-gray-900"
               >
-                <div className="flex w-full items-center gap-2">
-                  <span className="font-mono text-xs font-bold text-brand-primary">
-                    {dimension.id}
-                  </span>
-                  <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
-                    {attestation.citation}
-                  </span>
-                </div>
-                <p className="line-clamp-2 text-xs italic text-slate-600 dark:text-slate-300">
-                  &ldquo;{attestation.language}&rdquo;
-                </p>
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  {ch.label}
+                </span>
+                <span className="mt-0.5 block truncate font-mono text-[11px] text-slate-500 dark:text-slate-400">
+                  {ch.file}
+                </span>
               </button>
             </li>
           ))}
         </ul>
+        <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
+          Inside a chapter, headings with a matching CIRIS dimension show a{" "}
+          <span className="rounded-full border border-brand-primary/40 bg-brand-primary/5 px-1.5 text-[10px] font-semibold uppercase tracking-wide text-brand-primary">
+            cross-references
+          </span>{" "}
+          button. Click it to see the dimension(s) attested, other batches&apos;
+          attestations, and the CIRIS control.
+        </p>
       </section>
     </div>
   );
 }
 
-// ──────────────────────────── Center: Empty states ─────────────────────────
+// ──────────────────────────── Center: Empty ────────────────────────────────
 
 function CenterEmpty({ mode }: { mode: Mode }) {
   if (mode === "dimension") {
     return (
       <div className="rounded-xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500 dark:border-gray-700 dark:text-slate-400">
-        Pick a dimension from the left to load its three-layer view.
+        Pick a CIRIS dimension from the left.
       </div>
     );
   }
   if (mode === "regulatory") {
     return (
       <div className="rounded-xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500 dark:border-gray-700 dark:text-slate-400">
-        Pick a batch from the left (MH / EU / IEEE / ASEAN) to see what it
-        attests, then drill into a citation.
+        Pick a regulatory work from the left (MH / EU / IEEE / ASEAN), then a
+        chapter inside it.
       </div>
     );
   }
@@ -673,51 +667,218 @@ function CenterEmpty({ mode }: { mode: Mode }) {
   );
 }
 
-// ──────────────────────────── Right: regulatory detail ─────────────────────
+// ──────────────────────────── Right: citation cross-refs ──────────────────
 
-function RegulatoryDetail({
+function findCrossReferences(
+  seed: Seed,
+  batchId: BatchId,
+  citationToken: string,
+): { dimension: Dimension; attestation: RegulatoryAttestation }[] {
+  const normalized = citationToken.toLowerCase().replace(/\s+/g, " ").trim();
+  const hits: { dimension: Dimension; attestation: RegulatoryAttestation }[] =
+    [];
+  for (const d of seed.dimensions) {
+    for (const a of d.regulatory_attestations) {
+      if (a.batch_id !== batchId) continue;
+      const cit = a.citation.toLowerCase().replace(/\s+/g, " ").trim();
+      if (
+        cit === normalized ||
+        cit.startsWith(normalized) ||
+        normalized.startsWith(cit) ||
+        cit.includes(normalized)
+      ) {
+        hits.push({ dimension: d, attestation: a });
+        break;
+      }
+    }
+  }
+  return hits;
+}
+
+function CitationCrossRef({
+  seed,
   batch,
-  dimension,
+  citation,
   onClose,
   onJumpToDimension,
 }: {
+  seed: Seed;
   batch: Batch;
-  dimension: Dimension;
+  citation: string;
   onClose: () => void;
   onJumpToDimension: (id: string) => void;
 }) {
-  const att = dimension.regulatory_attestations.find(
-    (a) => a.batch_id === batch.id,
+  const hits = useMemo(
+    () => findCrossReferences(seed, batch.id, citation),
+    [seed, batch.id, citation],
   );
-  if (!att) return null;
+  const batchById = new Map(seed.batches.map((b) => [b.id, b]));
+  const agentBlob = "https://github.com/CIRISAI/CIRISAgent/blob/main";
+
   return (
-    <div className="space-y-3">
-      <RightHeader onClose={onClose} title={`${batch.short} · ${att.citation}`} />
-      <p className="text-sm leading-6 text-slate-700 dark:text-slate-300">
-        {batch.title} · {batch.authority}
-      </p>
-      <blockquote className="border-l-4 border-brand-primary/40 bg-brand-primary/5 px-3 py-2 italic">
-        &ldquo;{att.language}&rdquo;
-      </blockquote>
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          CIRIS wire form
+    <div className="space-y-4">
+      <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-gray-700 dark:bg-gray-900/40">
+        <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+          Citation
         </p>
-        <p className="mt-1 break-all rounded bg-slate-50 px-2 py-1 font-mono text-xs text-slate-800 dark:bg-gray-900/40 dark:text-slate-200">
-          {att.wire_form}
+        <p className="mt-0.5 break-all font-mono text-sm font-semibold text-slate-900 dark:text-white">
+          {batch.short} · {citation}
         </p>
       </div>
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-          Attests dimension
+
+      {hits.length === 0 ? (
+        <p className="text-sm text-slate-500 dark:text-slate-400">
+          No seed-anchored CIRIS dimension matches this citation. The seed
+          flags canonical anchor citations, not every paragraph in the
+          source. You can still see CIRIS&apos;s full coverage by opening any
+          dimension from the left.
         </p>
-        <button
-          onClick={() => onJumpToDimension(dimension.id)}
-          className="mt-1 rounded-md border border-slate-300 px-2.5 py-1 text-xs font-mono hover:border-brand-primary hover:text-brand-primary dark:border-gray-700"
-        >
-          {dimension.id} · {dimension.prefix}
-        </button>
-      </div>
+      ) : (
+        <>
+          <p className="text-xs leading-6 text-slate-600 dark:text-slate-300">
+            This paragraph is the seed anchor for{" "}
+            <strong>{hits.length}</strong> CIRIS dimension
+            {hits.length === 1 ? "" : "s"}. For each one, you can see how the
+            other three governance frameworks approached the same subject and
+            how CIRIS itself implements it.
+          </p>
+          {hits.map(({ dimension, attestation }) => {
+            const others = dimension.regulatory_attestations.filter(
+              (a) => a.batch_id !== batch.id,
+            );
+            const controlPath = `compliance/${dimension.id}_${dimension.prefix
+              .replace(/:\*$/, "")
+              .replace(/[^a-zA-Z0-9]+/g, "_")
+              .toLowerCase()}.md`;
+            return (
+              <div
+                key={dimension.id}
+                className="space-y-3 rounded-lg border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900"
+              >
+                {/* CIRIS dimension header */}
+                <div>
+                  <div className="mb-1 flex flex-wrap items-center gap-1.5">
+                    <span className="rounded-full bg-purple-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">
+                      CIRIS dimension
+                    </span>
+                    <span
+                      className={`rounded-full px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
+                        dimension.tier === "STRONG-4"
+                          ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300"
+                          : "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300"
+                      }`}
+                    >
+                      {dimension.tier}
+                    </span>
+                    <span className="rounded-full bg-slate-100 px-1.5 py-0.5 text-[10px] text-slate-700 dark:bg-gray-800 dark:text-slate-300">
+                      {ACCORD_LABEL[dimension.accord_principle]}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => onJumpToDimension(dimension.id)}
+                    className="break-all text-left font-mono text-base font-semibold text-brand-primary hover:underline"
+                    title={dimension.gloss}
+                  >
+                    {dimension.prefix}
+                  </button>
+                  <p className="mt-1 text-xs leading-5 text-slate-600 dark:text-slate-300">
+                    {dimension.gloss}
+                  </p>
+                </div>
+
+                {/* How CIRIS addresses it */}
+                <div className="rounded-md border-l-4 border-emerald-400 bg-emerald-50/40 p-3 dark:bg-emerald-950/20">
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">
+                    How CIRIS addresses it
+                  </p>
+                  <p className="mt-1 text-xs leading-5 text-slate-700 dark:text-slate-300">
+                    CIRIS wire form:
+                  </p>
+                  <p className="mt-1 break-all rounded bg-white px-2 py-1 font-mono text-[11px] text-slate-800 dark:bg-gray-900/60 dark:text-slate-200">
+                    {attestation.wire_form}
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <button
+                      onClick={() => onJumpToDimension(dimension.id)}
+                      className="rounded-md border-2 border-brand-primary bg-brand-primary/5 px-2.5 py-1 text-[11px] font-semibold text-brand-primary hover:bg-brand-primary/10"
+                    >
+                      Open CIRIS dimension →
+                    </button>
+                    <a
+                      href={`${agentBlob}/${controlPath}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-md border border-slate-300 px-2.5 py-1 text-[11px] font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
+                    >
+                      Control on GitHub →
+                    </a>
+                  </div>
+                </div>
+
+                {/* How other materials approached the same subject */}
+                {others.length > 0 && (
+                  <div className="rounded-md border-l-4 border-blue-400 bg-blue-50/40 p-3 dark:bg-blue-950/20">
+                    <p className="text-[11px] font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-300">
+                      How other materials approached the same subject (
+                      {others.length})
+                    </p>
+                    <div className="mt-2 space-y-2">
+                      {others.map((a) => {
+                        const otherBatch = batchById.get(a.batch_id);
+                        return (
+                          <div
+                            key={a.batch_id}
+                            className="rounded border border-slate-200 bg-white p-2 dark:border-gray-700 dark:bg-gray-900/60"
+                          >
+                            <div className="flex flex-wrap items-center gap-1.5">
+                              <span className="rounded bg-brand-primary/10 px-1 py-0.5 text-[10px] font-bold text-brand-primary">
+                                {otherBatch?.short ?? a.batch_id}
+                              </span>
+                              <span className="font-mono text-[10px] text-slate-500 dark:text-slate-400">
+                                {a.citation}
+                              </span>
+                            </div>
+                            <blockquote className="mt-1 border-l-2 border-brand-primary/30 pl-2 text-xs italic leading-5 text-slate-700 dark:text-slate-300">
+                              &ldquo;{a.language}&rdquo;
+                            </blockquote>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Absent batches, if any */}
+                {(dimension.absent_batch ?? []).length > 0 && (
+                  <div className="rounded-md border-l-4 border-amber-400 bg-amber-50/40 p-3 dark:bg-amber-950/20">
+                    <p className="text-[11px] font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
+                      Absent from
+                    </p>
+                    <div className="mt-1 space-y-1.5 text-xs leading-5 text-slate-700 dark:text-slate-300">
+                      {(dimension.absent_batch ?? []).map((a) => {
+                        const ob = batchById.get(a.batch_id);
+                        return (
+                          <p key={a.batch_id}>
+                            <strong>{ob?.short ?? a.batch_id}:</strong>{" "}
+                            {a.absence_note}
+                          </p>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </>
+      )}
+
+      <button
+        onClick={onClose}
+        className="text-xs text-slate-500 underline-offset-2 hover:underline dark:text-slate-400"
+      >
+        Close detail
+      </button>
     </div>
   );
 }
@@ -737,13 +898,12 @@ function SemanticsDetail({
   onJumpToDimension: (id: string) => void;
   onSelectNode: (id: string) => void;
 }) {
-  // dimension node
   if (/^D\d{2}$/.test(nodeId)) {
     const d = seed.dimensions.find((x) => x.id === nodeId);
     if (!d) return null;
     return (
       <div className="space-y-3">
-        <RightHeader onClose={onClose} title={`${d.id} · ${d.prefix}`} />
+        <RightHeader title={d.prefix} onClose={onClose} />
         <p className="text-sm leading-6 text-slate-700 dark:text-slate-300">
           {d.gloss}
         </p>
@@ -767,32 +927,34 @@ function SemanticsDetail({
       </div>
     );
   }
-  // principle node
   if (nodeId.startsWith("principle:")) {
     const p = nodeId.slice("principle:".length) as AccordPrinciple;
     const dims = seed.aggregate_indices.by_accord_principle[p] ?? [];
     return (
       <div className="space-y-3">
-        <RightHeader onClose={onClose} title={`Accord: ${ACCORD_LABEL[p]}`} />
+        <RightHeader title={`Accord: ${ACCORD_LABEL[p]}`} onClose={onClose} />
         <p className="text-sm leading-6 text-slate-700 dark:text-slate-300">
           One of the six CIRIS Accord principles. The dimensions below
           operationalize it.
         </p>
         <div className="flex flex-wrap gap-1.5">
-          {dims.map((sid) => (
-            <button
-              key={sid}
-              onClick={() => onSelectNode(sid)}
-              className="rounded-md border border-slate-300 px-2 py-0.5 font-mono text-xs hover:border-brand-primary hover:text-brand-primary dark:border-gray-700"
-            >
-              {sid}
-            </button>
-          ))}
+          {dims.map((sid) => {
+            const sd = seed.dimensions.find((x) => x.id === sid);
+            return (
+              <button
+                key={sid}
+                onClick={() => onSelectNode(sid)}
+                className="break-all rounded-md border border-slate-300 px-2 py-0.5 font-mono text-xs hover:border-brand-primary hover:text-brand-primary dark:border-gray-700"
+                title={sd?.gloss}
+              >
+                {sd?.prefix ?? sid}
+              </button>
+            );
+          })}
         </div>
       </div>
     );
   }
-  // primitive node
   if (nodeId.startsWith("primitive:")) {
     const prefix = nodeId.slice("primitive:".length);
     const dims = seed.dimensions.filter((d) =>
@@ -805,7 +967,7 @@ function SemanticsDetail({
     );
     return (
       <div className="space-y-3">
-        <RightHeader onClose={onClose} title="Wire primitive" />
+        <RightHeader title="Wire primitive" onClose={onClose} />
         <p className="break-all rounded bg-slate-50 px-2 py-1 font-mono text-sm text-slate-800 dark:bg-gray-900/40 dark:text-slate-200">
           {prefix}
         </p>
@@ -817,9 +979,10 @@ function SemanticsDetail({
             <button
               key={d.id}
               onClick={() => onSelectNode(d.id)}
-              className="rounded-md border border-slate-300 px-2 py-0.5 font-mono text-xs hover:border-brand-primary hover:text-brand-primary dark:border-gray-700"
+              className="break-all rounded-md border border-slate-300 px-2 py-0.5 font-mono text-xs hover:border-brand-primary hover:text-brand-primary dark:border-gray-700"
+              title={d.gloss}
             >
-              {d.id}
+              {d.prefix}
             </button>
           ))}
         </div>
@@ -837,13 +1000,13 @@ function RightHeader({
   onClose: () => void;
 }) {
   return (
-    <div className="flex items-center justify-between gap-2 pb-2">
-      <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-brand-primary">
+    <div className="flex items-start justify-between gap-2 pb-2">
+      <h3 className="break-all text-sm font-semibold uppercase tracking-[0.15em] text-brand-primary">
         {title}
       </h3>
       <button
         onClick={onClose}
-        className="rounded-md border border-slate-300 p-1.5 text-slate-600 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-300 lg:hidden"
+        className="shrink-0 rounded-md border border-slate-300 p-1.5 text-slate-600 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-300 xl:hidden"
         aria-label="Close detail"
       >
         <IconX className="h-4 w-4" />
@@ -869,23 +1032,21 @@ export default function Workspace({
     decodeSelection(new URLSearchParams(params.toString()), initialDimensionId),
   );
   const [leftOpenMobile, setLeftOpenMobile] = useState(false);
-  const [rightOpenMobile, setRightOpenMobile] = useState(false);
+  // Single open/close state for the right pane at every breakpoint.
+  const [rightOpen, setRightOpen] = useState(true);
 
-  // Sync URL when selection changes (without reload)
   const lastQuery = useRef<string>("");
   useEffect(() => {
     const q = encodeSelection(sel);
     if (q === lastQuery.current) return;
     lastQuery.current = q;
-    // On the static /compliance route we use search params; on /compliance/D04
-    // we leave the path alone and just push the params.
     router.replace(`${pathname}?${q}`, { scroll: false });
   }, [sel, pathname, router]);
 
-  // When selection becomes "right-pane content", open the mobile overlay.
+  // Auto-open the right pane whenever the user picks something new.
   useEffect(() => {
     if (hasRightContent(sel)) {
-      setRightOpenMobile(true);
+      setRightOpen(true);
     }
   }, [sel]);
 
@@ -903,29 +1064,31 @@ export default function Workspace({
     setLeftOpenMobile(false);
   }, []);
 
-  const selectAttestation = useCallback((b: BatchId, d: string) => {
-    setSel({
-      mode: "regulatory",
-      batchId: b,
-      attestationDimensionId: d,
-    });
+  const selectChapter = useCallback((b: BatchId, file: string) => {
+    setSel({ mode: "regulatory", batchId: b, chapterFile: file });
     setLeftOpenMobile(false);
   }, []);
 
+  const pickCitation = useCallback(
+    (citation: string) => {
+      setSel((s) =>
+        s.mode === "regulatory" && s.batchId
+          ? { ...s, citation }
+          : s,
+      );
+    },
+    [],
+  );
+
   const selectSemanticsNode = useCallback((id: string | null) => {
-    setSel((s) => ({
+    setSel({
       mode: "semantics",
       semanticsNodeId: id ?? undefined,
-    }));
+    });
   }, []);
 
   const closeRight = useCallback(() => {
-    setRightOpenMobile(false);
-    setSel((s) => {
-      if (s.mode === "dimension") return { mode: "dimension" };
-      if (s.mode === "regulatory") return { mode: "regulatory", batchId: s.batchId };
-      return { mode: "semantics" };
-    });
+    setRightOpen(false);
   }, []);
 
   const currentDimension: Dimension | null =
@@ -938,10 +1101,14 @@ export default function Workspace({
       ? (seed.batches.find((b) => b.id === sel.batchId) ?? null)
       : null;
 
-  const currentRegulatoryDimension: Dimension | null =
-    sel.mode === "regulatory" && sel.attestationDimensionId
-      ? (seed.dimensions.find((d) => d.id === sel.attestationDimensionId) ?? null)
-      : null;
+  const currentChapter = useMemo(() => {
+    if (sel.mode !== "regulatory" || !sel.batchId || !sel.chapterFile)
+      return null;
+    return (
+      CHAPTERS_BY_BATCH[sel.batchId].find((c) => c.file === sel.chapterFile) ??
+      null
+    );
+  }, [sel.mode, sel.batchId, sel.chapterFile]);
 
   return (
     <div className="relative">
@@ -956,25 +1123,23 @@ export default function Workspace({
         </button>
         <span className="truncate text-xs text-slate-500 dark:text-slate-400">
           {sel.mode === "dimension"
-            ? sel.dimensionId
-              ? `Dimension · ${sel.dimensionId}`
-              : "Dimensions"
+            ? currentDimension?.prefix ?? "Dimensions"
             : sel.mode === "regulatory"
-              ? sel.batchId
-                ? `Regulatory · ${sel.batchId.split("_")[0].toUpperCase()}`
-                : "Regulatory"
+              ? currentChapter
+                ? `${currentBatch?.short} · ${currentChapter.label}`
+                : currentBatch?.short ?? "Regulatory work"
               : "CIRIS semantics"}
         </span>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[260px_minmax(0,1fr)] xl:grid-cols-[280px_minmax(0,1.05fr)_minmax(0,1fr)]">
-        {/* LEFT PANE (drawer on mobile) */}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[260px_minmax(0,1fr)] xl:grid-cols-[280px_minmax(0,1fr)]">
+        {/* LEFT PANE */}
         <aside
           className={`${
             leftOpenMobile
-              ? "fixed inset-0 z-40 overflow-y-auto bg-white p-4 dark:bg-gray-950"
+              ? "fixed inset-y-0 right-auto left-0 top-24 z-40 w-[calc(100%-3rem)] max-w-sm overflow-y-auto border-r border-slate-200 bg-white p-4 shadow-2xl dark:border-gray-800 dark:bg-gray-950"
               : "hidden"
-          } lg:sticky lg:top-24 lg:z-0 lg:block lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:rounded-2xl lg:border lg:border-slate-200 lg:bg-white lg:p-4 lg:dark:border-gray-800 lg:dark:bg-gray-900`}
+          } lg:sticky lg:inset-auto lg:top-24 lg:z-0 lg:block lg:w-auto lg:max-w-none lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:rounded-2xl lg:border lg:border-slate-200 lg:bg-white lg:p-4 lg:shadow-none lg:dark:border-gray-800 lg:dark:bg-gray-900`}
         >
           <div className="mb-3 flex items-center justify-between lg:hidden">
             <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
@@ -1001,9 +1166,9 @@ export default function Workspace({
             <RegulatoryTree
               seed={seed}
               selectedBatchId={sel.batchId ?? null}
-              selectedDimensionId={sel.attestationDimensionId ?? null}
+              selectedChapter={sel.chapterFile ?? null}
               onSelectBatch={selectBatch}
-              onSelectAttestation={selectAttestation}
+              onSelectChapter={selectChapter}
             />
           )}
           {sel.mode === "semantics" && (
@@ -1015,7 +1180,7 @@ export default function Workspace({
           )}
         </aside>
 
-        {/* CENTER PANE (workspace) */}
+        {/* CENTER (workspace) */}
         <section className="min-w-0 space-y-4">
           {sel.mode === "dimension" &&
             (currentDimension ? (
@@ -1029,13 +1194,22 @@ export default function Workspace({
             ))}
           {sel.mode === "regulatory" &&
             (currentBatch ? (
-              <RegulatoryOverview
-                batch={currentBatch}
-                seed={seed}
-                onSelectAttestation={(d) =>
-                  selectAttestation(currentBatch.id, d)
-                }
-              />
+              currentChapter ? (
+                <ChapterReader
+                  batch={currentBatch}
+                  chapter={currentChapter}
+                  seed={seed}
+                  onPickCitation={pickCitation}
+                />
+              ) : (
+                <BatchOverview
+                  batch={currentBatch}
+                  seed={seed}
+                  onSelectChapter={(file) =>
+                    selectChapter(currentBatch.id, file)
+                  }
+                />
+              )
             ) : (
               <CenterEmpty mode="regulatory" />
             ))}
@@ -1048,44 +1222,38 @@ export default function Workspace({
           )}
         </section>
 
-        {/* RIGHT PANE (overlay on mobile) */}
-        {hasRightContent(sel) && (
-          <aside
-            className={`${
-              rightOpenMobile
-                ? "fixed inset-0 z-40 overflow-y-auto bg-white p-4 dark:bg-gray-950"
-                : "hidden"
-            } xl:sticky xl:top-24 xl:z-0 xl:block xl:max-h-[calc(100vh-7rem)] xl:overflow-y-auto xl:rounded-2xl xl:border xl:border-slate-200 xl:bg-white xl:p-4 xl:dark:border-gray-800 xl:dark:bg-gray-900`}
-          >
-            {/* Mobile dismiss bar */}
-            <div className="mb-3 flex items-center justify-between xl:hidden">
-              <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
+        {/* RIGHT PANE
+            Slides in from the right at all breakpoints; below the floating
+            top nav (top-24 ≈ 6rem). On mobile/tablet, ~2/3 width so the left
+            edge of the workspace stays visible. On xl+, a fixed wider sheet. */}
+        {hasRightContent(sel) && rightOpen && (
+          <aside className="fixed right-0 top-24 bottom-0 z-30 w-[calc(100%-3rem)] max-w-3xl overflow-y-auto border-l border-slate-200 bg-white p-4 shadow-2xl dark:border-gray-800 dark:bg-gray-950 sm:w-2/3 xl:w-[40rem]">
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.15em] text-slate-900 dark:text-white">
                 Detail
               </h2>
               <button
-                onClick={() => setRightOpenMobile(false)}
-                className="rounded-md border border-slate-300 p-1.5 text-slate-600 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-300"
-                aria-label="Close detail"
+                onClick={closeRight}
+                className="flex items-center gap-1.5 rounded-md border border-slate-300 px-2.5 py-1.5 text-xs font-semibold text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-300"
               >
-                <IconX className="h-4 w-4" />
+                <IconX className="h-3.5 w-3.5" />
+                Hide
               </button>
             </div>
             {sel.mode === "dimension" && currentDimension && (
               <DimensionDoc dimensionId={currentDimension.id} />
             )}
-            {sel.mode === "regulatory" &&
-              currentBatch &&
-              currentRegulatoryDimension && (
-                <RegulatoryDetail
-                  batch={currentBatch}
-                  dimension={currentRegulatoryDimension}
-                  onClose={closeRight}
-                  onJumpToDimension={(id) => {
-                    setSel({ mode: "dimension", dimensionId: id });
-                    setRightOpenMobile(true);
-                  }}
-                />
-              )}
+            {sel.mode === "regulatory" && currentBatch && sel.citation && (
+              <CitationCrossRef
+                seed={seed}
+                batch={currentBatch}
+                citation={sel.citation}
+                onClose={closeRight}
+                onJumpToDimension={(id) => {
+                  setSel({ mode: "dimension", dimensionId: id });
+                }}
+              />
+            )}
             {sel.mode === "semantics" && sel.semanticsNodeId && (
               <SemanticsDetail
                 nodeId={sel.semanticsNodeId}
@@ -1093,7 +1261,6 @@ export default function Workspace({
                 onClose={closeRight}
                 onJumpToDimension={(id) => {
                   setSel({ mode: "dimension", dimensionId: id });
-                  setRightOpenMobile(true);
                 }}
                 onSelectNode={(id) =>
                   setSel({ mode: "semantics", semanticsNodeId: id })
@@ -1101,6 +1268,20 @@ export default function Workspace({
               />
             )}
           </aside>
+        )}
+
+        {/* Floating "Show detail" handle. Always visible when there is
+            something to show; positioned at the right edge below the nav so
+            it can't be confused with the floating top bar. */}
+        {hasRightContent(sel) && !rightOpen && (
+          <button
+            onClick={() => setRightOpen(true)}
+            className="fixed right-0 top-32 z-30 flex items-center gap-2 rounded-l-full border-2 border-r-0 border-brand-primary bg-brand-primary px-3 py-2 text-xs font-bold uppercase tracking-wide text-white shadow-lg transition hover:bg-brand-primary/90"
+            aria-label="Show detail panel"
+          >
+            <IconLayoutSidebarRightExpand className="h-4 w-4" />
+            Detail
+          </button>
         )}
       </div>
     </div>
