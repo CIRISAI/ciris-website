@@ -56,6 +56,20 @@ function buildGraph(source: RegistrySource) {
   const nodes: GraphNode[] = [...PRIMITIVE_NODES];
   const links: GraphLink[] = [];
 
+  // The four structural composers all operate on prior `scores` attestations
+  // (delegates_to authorizes a signer on scores claims; supersedes /
+  // withdraws / recants replace, retract, or admit-falsity on prior scores
+  // attestations). Wire them in so they aren't orphaned at the edge of the
+  // canvas.
+  for (const composer of [
+    "prim:delegates_to",
+    "prim:supersedes",
+    "prim:withdraws",
+    "prim:recants",
+  ]) {
+    links.push({ source: composer, target: "prim:scores", kind: "operates_on" });
+  }
+
   for (const f of FAMILIES) {
     nodes.push({ id: `family:${f}`, label: f, group: "family", size: 10, family: f });
     // Each family stems from `scores` (the workhorse) by composition

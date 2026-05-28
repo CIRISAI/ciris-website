@@ -193,7 +193,61 @@ function extractSection(
       i++;
     }
   }
+  // Fallback: if no tabular rows were parsed, some §5 sub-sections
+  // (§5.1.2 DMA verdicts, §5.1.3 conscience, §5.3 Persist, §5.4 Edge,
+  // §5.5.1/2, §5.7 RATCHET) list prefixes as inline backtick tokens
+  // separated by " / " or "," instead of in markdown tables. Pull those
+  // out so the namespace panel doesn't show 0 prefixes for those owners.
+  if (rows.length === 0) {
+    rows.push(...extractInlineListPrefixes(lines));
+  }
   return { rows, notes };
+}
+
+function extractInlineListPrefixes(lines: string[]): PrefixRow[] {
+  const out: PrefixRow[] = [];
+  const seen = new Set<string>();
+  // A prefix-shaped backtick token: starts with a lowercase letter or word
+  // char, contains at least one ":", may contain "{...}" segments. We
+  // anchor on backticks to avoid pulling URLs or inline code.
+  const prefixTokenRe = /`([a-z][a-z0-9_]*(?::[A-Za-z0-9_{}*+\-]+)+\*?)`/g;
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith("|") || line.startsWith("#")) continue;
+    // Find every backtick-token in the line that matches a prefix shape.
+    const matches: string[] = [];
+    let m: RegExpExecArray | null;
+    prefixTokenRe.lastIndex = 0;
+    while ((m = prefixTokenRe.exec(line)) !== null) {
+      matches.push(m[1]);
+    }
+    if (matches.length === 0) continue;
+    // Polarity / description: take what follows the last token in the
+    // line. Strip leading "— ", "- ", or "/".
+    const lastIdx = line.lastIndexOf("`" + matches[matches.length - 1] + "`");
+    const tail = line
+      .slice(lastIdx + matches[matches.length - 1].length + 2)
+      .replace(/^[\s—\-/.,]+/, "")
+      .trim();
+    const polarityMatch = tail.match(/Polarity:\s*([^.]+)\./i);
+    const polarity = polarityMatch ? polarityMatch[1].trim() : undefined;
+    // Description is the tail minus the polarity sentence (best-effort).
+    const description = tail.replace(/Polarity:[^.]*\.?/i, "").trim();
+    for (const prefix of matches) {
+      if (seen.has(prefix)) continue;
+      seen.add(prefix);
+      out.push({
+        prefix,
+        description: description || tail,
+        polarity,
+        section: "",
+        sectionTitle: "",
+        component: "CIRISAgent",
+        family: null,
+      });
+    }
+  }
+  return out;
 }
 
 function stripBackticks(s: string): string {
