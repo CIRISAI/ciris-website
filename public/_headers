@@ -27,4 +27,8 @@
   # Without it the script-src restricts the V8 wasm pipeline and the
   # kernel module load throws a CSP violation that doesn't bubble to
   # React.
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.brevo.com https://*.ciris.ai https://lens.ciris-services-1.ai https://raw.githubusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  # worker-src explicitly allows blob: workers. drei's <Text> component
+  # (the room labels in the Aleph scene) spawns a Troika SDF font
+  # worker from a blob URL; without this it gets blocked and the text
+  # silently fails to render (the rest of the scene still works).
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://challenges.cloudflare.com https://static.cloudflareinsights.com; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.brevo.com https://*.ciris.ai https://lens.ciris-services-1.ai https://raw.githubusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
