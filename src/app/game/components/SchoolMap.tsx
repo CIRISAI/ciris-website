@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { FLOORS, roomsByFloor, type Room, type RoomId } from "../lib/school";
+import { useMemo, useState } from "react";
+import { FLOORS, ROOMS, roomsByFloor, type Room, type RoomId } from "../lib/school";
+
+const ROOMS_BY_ID = Object.fromEntries(ROOMS.map((r) => [r.id, r]));
 import { ROSTER, type RosterCharacter } from "../lib/roster";
+import { CASE_HOT_ROOMS } from "../lib/case-of-the-day";
 import FaceTile from "./FaceTile";
 
 type ViewMode = "class" | "club";
@@ -18,9 +21,20 @@ function charactersInRoom(
 }
 
 export default function SchoolMap() {
-  // Default to floor 2 — the kid-dense floor. Floor 1 is mostly common
-  // areas and lands empty in CLASS view, which makes a bad first paint.
-  const [floor, setFloor] = useState<number>(2);
+  // Default to the floor with the most CASE-hot rooms. Falls back to F2 if
+  // the case touches every floor equally.
+  const defaultFloor = useMemo(() => {
+    const counts: Record<number, number> = {};
+    for (const id of CASE_HOT_ROOMS) {
+      const r = ROOMS_BY_ID[id];
+      if (r) counts[r.floor] = (counts[r.floor] ?? 0) + 1;
+    }
+    const best = Object.entries(counts).sort(
+      (a, b) => Number(b[1]) - Number(a[1]),
+    )[0]?.[0];
+    return best ? parseInt(best, 10) : 2;
+  }, []);
+  const [floor, setFloor] = useState<number>(defaultFloor);
   const [mode, setMode] = useState<ViewMode>("class");
   const [selected, setSelected] = useState<string | null>(null);
   const rooms = roomsByFloor(floor);
@@ -57,18 +71,30 @@ export default function SchoolMap() {
 
       {/* Floor tabs */}
       <div className="floor-tabs" role="tablist" aria-label="school floor">
-        {FLOORS.map((f) => (
-          <button
-            key={f.id}
-            role="tab"
-            aria-selected={floor === f.id}
-            className={`floor-btn ${floor === f.id ? "on" : ""}`}
-            onClick={() => setFloor(f.id)}
-          >
-            <span className="floor-num">F{f.id}</span>
-            <span className="floor-name">{f.label}</span>
-          </button>
-        ))}
+        {FLOORS.map((f) => {
+          const hotCount = CASE_HOT_ROOMS.filter(
+            (id) => ROOMS_BY_ID[id]?.floor === f.id,
+          ).length;
+          return (
+            <button
+              key={f.id}
+              role="tab"
+              aria-selected={floor === f.id}
+              className={`floor-btn ${floor === f.id ? "on" : ""} ${
+                hotCount > 0 ? "has-hot" : ""
+              }`}
+              onClick={() => setFloor(f.id)}
+            >
+              <span className="floor-num">F{f.id}</span>
+              <span className="floor-name">{f.label}</span>
+              {hotCount > 0 && (
+                <span className="floor-hot-badge" title="rooms in this case">
+                  {hotCount}
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
 
       <div className="floor-summary">
@@ -87,6 +113,7 @@ export default function SchoolMap() {
             chars={charactersInRoom(ROSTER, r.id, mode)}
             selected={selected}
             onSelect={setSelected}
+            hot={CASE_HOT_ROOMS.includes(r.id)}
           />
         ))}
       </div>
@@ -132,14 +159,17 @@ function RoomTile({
   chars,
   selected,
   onSelect,
+  hot,
 }: {
   room: Room;
   chars: RosterCharacter[];
   selected: string | null;
   onSelect: (id: string | null) => void;
+  hot: boolean;
 }) {
   return (
-    <div className="room-tile" data-room-id={room.id}>
+    <div className={`room-tile ${hot ? "hot" : ""}`} data-room-id={room.id}>
+      {hot && <div className="room-hot-flag" aria-hidden="true">!</div>}
       <div className="room-header">
         <span className="room-glyph">{room.glyph}</span>
         <span className="room-name">{room.short}</span>

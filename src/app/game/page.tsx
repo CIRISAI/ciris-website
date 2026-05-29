@@ -3,6 +3,7 @@ import navItems from "@/app/components/navitems";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import CaseBanner from "./components/CaseBanner";
 import SchoolMap from "./components/SchoolMap";
+import SourcesGallery from "./components/SourcesGallery";
 import "./game.css";
 
 export default function GamePage() {
@@ -58,6 +59,9 @@ export default function GamePage() {
 
           <h2 className="section-h">THE CAST</h2>
           <SchoolMap />
+
+          <h2 className="section-h">THE PRINTED SOURCES</h2>
+          <SourcesGallery />
         </div>
       </main>
       <Footer />
