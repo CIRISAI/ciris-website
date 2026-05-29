@@ -26,6 +26,7 @@ import type {
   EdgeGeom,
 } from "./AlephView";
 import { nodeColor } from "./AlephView";
+import { iconForNode, familyBadgeForNode } from "../lib/icons";
 
 const BAND_LABELS = [
   "key",
@@ -343,6 +344,111 @@ function NodeGroup({
   );
 }
 
+// NodeIconOverlays — drei <Html> portals that stamp an emoji glyph above
+// each non-trivial node. Per the CEG icon language: attesters get a fun
+// character icon (🐺 🧒 👵 …) with a small family badge; primitives get
+// the verb glyph (⚖️ 🤲 ♻️ 🫥 💌); family nodes get the family icon
+// (🏛️ ⚙️ 🔍 🤝 🔧). Claims and prefix dots are left bare so the canvas
+// doesn't drown in DOM nodes.
+const ICON_GROUPS = new Set([
+  "attester",
+  "primitive",
+  "family",
+  "component",
+]);
+
+function NodeIconOverlays({
+  graph,
+  instanceMeta,
+  positions,
+  selectedNodeId,
+}: {
+  graph: KernelGraph;
+  instanceMeta: InstanceMeta[];
+  positions: Float32Array;
+  selectedNodeId: string | null;
+}) {
+  const items = useMemo(() => {
+    const out: Array<{
+      key: string;
+      pos: THREE.Vector3;
+      icon: string;
+      badge: string;
+      group: string;
+      isSelected: boolean;
+      nodeId: string;
+    }> = [];
+    const seenNodeIds = new Set<string>();
+    instanceMeta.forEach((inst, instIdx) => {
+      const node = graph.nodes[inst.node_idx];
+      if (!node) return;
+      if (!ICON_GROUPS.has(node.group)) return;
+      // Only one glyph per logical node even if multi-scale duplicated it.
+      if (seenNodeIds.has(inst.node_id)) return;
+      seenNodeIds.add(inst.node_id);
+      const icon = iconForNode(node);
+      if (!icon) return;
+      const badge = node.group === "attester" ? familyBadgeForNode(node) : "";
+      out.push({
+        key: `${inst.node_id}-${instIdx}`,
+        pos: instancePos(positions, instIdx),
+        icon,
+        badge,
+        group: node.group,
+        isSelected: selectedNodeId === inst.node_id,
+        nodeId: inst.node_id,
+      });
+    });
+    return out;
+  }, [graph, instanceMeta, positions, selectedNodeId]);
+
+  return (
+    <>
+      {items.map((it) => {
+        const baseSize = GROUP_SIZE[it.group] ?? 0.04;
+        const yOffset = baseSize * 1.8;
+        const fontSize =
+          it.group === "primitive"
+            ? 22
+            : it.group === "family"
+              ? 18
+              : it.group === "attester"
+                ? 18
+                : 14;
+        return (
+          <Html
+            key={it.key}
+            position={[it.pos.x, it.pos.y + yOffset, it.pos.z]}
+            center
+            zIndexRange={[15, 0]}
+            distanceFactor={1.4}
+            style={{
+              pointerEvents: "none",
+              userSelect: "none",
+              whiteSpace: "nowrap",
+              lineHeight: 1,
+              fontSize: `${fontSize}px`,
+              filter: it.isSelected
+                ? "drop-shadow(0 0 6px #fbbf24)"
+                : "drop-shadow(0 1px 1px rgba(0,0,0,0.25))",
+              transform: it.isSelected ? "scale(1.25)" : undefined,
+            }}
+          >
+            <span>
+              {it.icon}
+              {it.badge ? (
+                <span style={{ fontSize: "0.55em", marginLeft: 2 }}>
+                  {it.badge}
+                </span>
+              ) : null}
+            </span>
+          </Html>
+        );
+      })}
+    </>
+  );
+}
+
 // All forward arcs in one LineSegments; all backward arcs in another. Each
 // arc contributes ARC_SEGMENTS line segments (= 2 * ARC_SEGMENTS verts).
 function EdgeRibbons({
@@ -617,6 +723,12 @@ export default function AlephScene({
           onPickNode={onPickNode}
         />
       ))}
+      <NodeIconOverlays
+        graph={graph}
+        instanceMeta={instanceMeta}
+        positions={positions}
+        selectedNodeId={selectedNodeId}
+      />
       <OrbitControls
         enablePan={false}
         enableZoom={true}

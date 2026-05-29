@@ -30,8 +30,15 @@ import {
   NEWSPAPERS,
 } from "@/app/game/lib/publications";
 import { CASES } from "@/app/game/lib/cases-generated";
+import {
+  RRH_VOICES,
+  RRH_DIMENSIONS,
+  RRH_ATTESTATIONS,
+  rrhAttestationsAt,
+  type RrhAttestation,
+} from "./red-riding-hood";
 
-export type CorpusMode = "encyclopedia" | "game";
+export type CorpusMode = "encyclopedia" | "game" | "demo";
 
 const STRUCTURAL_PRIMITIVES = [
   "scores",
@@ -542,6 +549,143 @@ export function buildGameGraph(
 
   return { nodes, edges };
 }
+
+// ── DEMO mode — Red Riding Hood ───────────────────────────────────
+//
+// Time-sliced view of the fairy tale. Voices and attestations enter
+// the graph as the time slider advances. The wolf's lies stand alone
+// at t=0; the Woodsman's eyewitness arrives at t=8 and witness
+// diversity collapses the deception.
+
+export function buildDemoGraph(currentTime = 10): KernelGraph {
+  const nodes: KernelNode[] = [];
+  const edges: KernelEdge[] = [];
+  pushPrimitivesAndFamilies(nodes, edges);
+
+  // Filter to attestations that have arrived by currentTime.
+  const live = rrhAttestationsAt(currentTime);
+  const liveVoiceIds = new Set(live.map((a) => a.voice_id));
+
+  // Voices present in the graph: anyone whose attestations have arrived.
+  // We also include voices that are the TARGET of a vouches_for /
+  // delegates_to from a live attestation, so the recipient of the
+  // delegation is visible even before they testify.
+  const targets = new Set<string>();
+  for (const a of live) {
+    if (a.target_voice_id) targets.add(a.target_voice_id);
+  }
+  for (const t of targets) liveVoiceIds.add(t);
+
+  for (const v of RRH_VOICES) {
+    if (!liveVoiceIds.has(v.id)) continue;
+    nodes.push({
+      id: v.id,
+      label: v.name,
+      group: "attester",
+      component: null,
+      family: v.family,
+      band: 4,
+      multi_scale: false,
+    });
+  }
+
+  // Each scored attestation becomes a claim node + asserts edges.
+  // Composition primitives (delegates_to, vouches_for, withdraws,
+  // recants, supersedes) emit additional edges with their kind.
+  live.forEach((a, idx) => {
+    if (a.primitive === "scores" && a.dim) {
+      const claimId = `rrh-claim:${idx}`;
+      nodes.push({
+        id: claimId,
+        label: `${a.voice_id}|${a.dim}|${a.score}|${a.confidence}`,
+        group: "claim",
+        component: null,
+        family: null,
+        band: 4,
+        multi_scale: false,
+      });
+      edges.push({
+        source: a.voice_id,
+        target: claimId,
+        kind: "asserts",
+      });
+      edges.push({
+        source: claimId,
+        target: "prim:scores",
+        kind: "asserts",
+      });
+      return;
+    }
+    // Non-scoring primitives become edges between voices.
+    if (a.primitive === "vouches_for" && a.target_voice_id) {
+      edges.push({
+        source: a.voice_id,
+        target: a.target_voice_id,
+        kind: "vouches_for",
+      });
+      // Also connect the voice to the vouches_for primitive marker so it
+      // visibly anchors to the composition layer.
+      return;
+    }
+    if (a.primitive === "delegates_to" && a.target_voice_id) {
+      edges.push({
+        source: a.voice_id,
+        target: a.target_voice_id,
+        kind: "delegates_to",
+      });
+      edges.push({
+        source: a.voice_id,
+        target: "prim:delegates_to",
+        kind: "operates_on",
+      });
+      return;
+    }
+    if (a.primitive === "withdraws" && typeof a.target_attestation_idx === "number") {
+      const targetClaimId = `rrh-claim:${a.target_attestation_idx}`;
+      edges.push({
+        source: a.voice_id,
+        target: targetClaimId,
+        kind: "withdraws",
+      });
+      edges.push({
+        source: a.voice_id,
+        target: "prim:withdraws",
+        kind: "operates_on",
+      });
+      return;
+    }
+    if (a.primitive === "recants") {
+      // Recants point at the recanter's own earlier attestation pattern
+      // (or at their own behaviour). For the demo we anchor on the
+      // recants primitive.
+      edges.push({
+        source: a.voice_id,
+        target: "prim:recants",
+        kind: "operates_on",
+      });
+      return;
+    }
+    if (a.primitive === "supersedes" && typeof a.target_attestation_idx === "number") {
+      const targetClaimId = `rrh-claim:${a.target_attestation_idx}`;
+      edges.push({
+        source: a.voice_id,
+        target: targetClaimId,
+        kind: "supersedes",
+      });
+      edges.push({
+        source: a.voice_id,
+        target: "prim:supersedes",
+        kind: "operates_on",
+      });
+      return;
+    }
+  });
+
+  return { nodes, edges };
+}
+
+export const DEMO_TIME_MAX = 10;
+export const DEMO_TIME_MIN = 0;
 
 // Helper for diagnostic strip — counts by group.
 export function summariseGraph(g: KernelGraph): Record<string, number> {

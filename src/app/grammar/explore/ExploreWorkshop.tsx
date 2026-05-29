@@ -16,9 +16,15 @@ import { ALL_STORIES } from "../lib/stories-generated";
 import {
   buildEncyclopediaGraph,
   buildGameGraph,
+  buildDemoGraph,
+  DEMO_TIME_MAX,
   summariseGraph,
   type CorpusMode,
 } from "../lib/corpus-graph";
+import {
+  RRH_TAGLINE,
+  rrhVoiceById,
+} from "../lib/red-riding-hood";
 import { CHARACTERS } from "../lib/characters-generated";
 import { ALL_PUBLICATIONS } from "@/app/game/lib/publications";
 import { CASES } from "@/app/game/lib/cases-generated";
@@ -289,6 +295,11 @@ export default function ExploreWorkshop({
   const [corpusMode, setCorpusMode] = useState<"workshop" | CorpusMode>(
     "encyclopedia",
   );
+  // Demo time slider — only meaningful when corpusMode === "demo".
+  // Voices and attestations enter the graph as time advances. At t=0
+  // only the Wolf is testifying; at t=10 the Village Crier has
+  // superseded his lies.
+  const [demoTime, setDemoTime] = useState<number>(DEMO_TIME_MAX);
 
   // Kernel state. The kernel type is opaque from JS-side (it's a wasm-bindgen
   // class); we cast at call boundaries.
@@ -353,8 +364,9 @@ export default function ExploreWorkshop({
   const graph = useMemo(() => {
     if (corpusMode === "game") return buildGameGraph();
     if (corpusMode === "encyclopedia") return buildEncyclopediaGraph(_source);
+    if (corpusMode === "demo") return buildDemoGraph(demoTime);
     return buildWorkshopGraph(pinned, claims, vouches, seedCount);
-  }, [corpusMode, pinned, claims, vouches, seedCount, _source]);
+  }, [corpusMode, demoTime, pinned, claims, vouches, seedCount, _source]);
   const graphSummary = useMemo(() => summariseGraph(graph), [graph]);
   // Compute the set of hidden node ids from the filters. Hidden nodes
   // still exist in the kernel (positions, verdict, corridor all still
@@ -482,12 +494,17 @@ export default function ExploreWorkshop({
   // decorative gradients. Tufte / Vignelli / single-pane editorial.
   return (
     <div className="space-y-4">
-      {/* Mode chips — three buttons, compact, one row */}
+      {/* Mode chips — four buttons, compact, one row */}
       <CorpusModeStrip
         mode={corpusMode}
         onChange={setCorpusMode}
         summary={graphSummary}
       />
+
+      {/* Demo time slider — only when Red Riding Hood mode is active. */}
+      {corpusMode === "demo" && (
+        <DemoTimeSlider value={demoTime} onChange={setDemoTime} />
+      )}
 
       {/* Topology filters — CEG-powered sliders/toggles that hide
           groups or focus a single concern area. */}
@@ -1549,6 +1566,22 @@ function NodeContent({
     }
   }
 
+  // ── Demo mode: Red Riding Hood voices.
+  const rrhVoice = rrhVoiceById(nodeId);
+  if (rrhVoice) {
+    return (
+      <Section title={`${rrhVoice.glyph} ${rrhVoice.name}`}>
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          <b>{rrhVoice.role}</b> · concern area{" "}
+          <span className="font-mono">{rrhVoice.family}</span>
+        </p>
+        <p className="mt-1 text-[12px] leading-5 text-slate-700 dark:text-slate-300">
+          {rrhVoice.bio}
+        </p>
+      </Section>
+    );
+  }
+
   // ── Encyclopedia attester (pub-encyclopedia).
   if (nodeId === "pub-encyclopedia") {
     return (
@@ -1683,6 +1716,69 @@ function EdgeList({
   );
 }
 
+// DemoTimeSlider — scrubs the Red Riding Hood timeline 0..10. Each
+// voice arrives at a specific time; the slider determines which
+// attestations are in the graph at this moment.
+function DemoTimeSlider({
+  value,
+  onChange,
+}: {
+  value: number;
+  onChange: (n: number) => void;
+}) {
+  const EVENTS: Array<{ t: number; label: string }> = [
+    { t: 0, label: "🐺 Wolf publishes" },
+    { t: 1, label: "👩 Mother delegates" },
+    { t: 2, label: "👩 Mother vouches for 🧒" },
+    { t: 3, label: "🏹 Hunter testifies" },
+    { t: 4, label: "🧒 Red testifies" },
+    { t: 5, label: "🧒 Red withdraws" },
+    { t: 6, label: "👵 Grandmother recants" },
+    { t: 7, label: "🐿️ Squirrel testifies" },
+    { t: 8, label: "🪓 Woodsman arrives" },
+    { t: 9, label: "📜 Crier publishes" },
+    { t: 10, label: "♻️ Crier supersedes" },
+  ];
+  const here = EVENTS.find((e) => e.t === value);
+  return (
+    <div className="rounded-md border border-slate-200 bg-slate-50 p-3 dark:border-gray-800 dark:bg-gray-900">
+      <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
+        <p className="text-xs font-semibold text-slate-700 dark:text-slate-200">
+          Time {value} / 10 {here ? `· ${here.label}` : ""}
+        </p>
+        <p className="text-[11px] italic text-slate-500">
+          {RRH_TAGLINE}
+        </p>
+      </div>
+      <input
+        type="range"
+        min={0}
+        max={10}
+        step={1}
+        value={value}
+        onChange={(e) => onChange(parseInt(e.target.value, 10))}
+        className="w-full accent-brand-primary"
+        aria-label="story time"
+      />
+      <div className="mt-1 flex justify-between text-[9px] text-slate-500">
+        {EVENTS.map((e) => (
+          <button
+            key={e.t}
+            type="button"
+            onClick={() => onChange(e.t)}
+            className={`px-0.5 ${
+              value >= e.t ? "text-brand-primary" : "text-slate-400"
+            }`}
+            title={e.label}
+          >
+            t{e.t}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // TopologyFilters — runtime CEG-powered knobs that change what's drawn
 // without recomputing the kernel graph. The kernel still runs over the
 // full data (verdict + corridor stay honest); the scene just omits
@@ -1798,6 +1894,7 @@ function CorpusModeStrip({
   const opts: Array<{ id: "workshop" | CorpusMode; label: string }> = [
     { id: "encyclopedia", label: "Encyclopedia" },
     { id: "game", label: "Mystery game" },
+    { id: "demo", label: "Red Riding Hood" },
     { id: "workshop", label: "Workshop" },
   ];
   return (
@@ -1948,6 +2045,31 @@ function CorpusModeNotes({
   mode: "workshop" | CorpusMode;
   summary: Record<string, number>;
 }) {
+  if (mode === "demo") {
+    return (
+      <aside className="space-y-3">
+        <section className="rounded-2xl border-l-4 border-rose-400 bg-white p-4 dark:bg-gray-900">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-rose-700 dark:text-rose-300">
+            🐺 Red Riding Hood
+          </p>
+          <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+            Same fairy tale, eight voices, one liar. The Wolf publishes
+            first at t=0, alone in the graph. As witnesses arrive — the
+            Hunter, Red, Grandmother (who recants opening the door),
+            the Squirrel, the Woodsman, and finally the Village Crier
+            who supersedes the Wolf&rsquo;s self-serving statement — the
+            verdict converges on the truth.
+          </p>
+          <p className="mt-2 text-xs italic text-slate-500">
+            Drag the time slider above. The Woodsman&rsquo;s arrival at
+            t=8 is the inflection: the deception isolates and witness
+            diversity wins.
+          </p>
+        </section>
+        <ScenePalette summary={summary} />
+      </aside>
+    );
+  }
   if (mode === "encyclopedia") {
     return (
       <aside className="space-y-3">
