@@ -11,6 +11,7 @@ import type {
   EdgeGeom,
 } from "../components/AlephView";
 import AlephScene from "../components/AlephScene";
+import { ALL_STORIES } from "../lib/stories-generated";
 
 // Hook-side mount gate. Avoids the dynamic({ssr:false}) chunk-boundary that
 // was hanging on Vercel's static export. Three.js and R3F live in the same
@@ -39,6 +40,37 @@ const ATTESTER_ROSTER: Attester[] = [
   { id: "dani", name: "Dani (independent observer)", hue: "#ec4899" },
 ];
 
+// One synthetic attester per story-generation agent. Lets every seeded
+// story attribute to a stable id without polluting the user-facing roster.
+const STORY_AGENT_HUES: Record<string, string> = {
+  agent_1: "#2dd4bf",
+  agent_2: "#a78bfa",
+  agent_3: "#fbbf24",
+  agent_4: "#f472b6",
+  agent_5: "#22d3ee",
+  agent_6: "#84cc16",
+  agent_7: "#fb923c",
+  agent_8: "#c084fc",
+  agent_9: "#34d399",
+};
+function storyAgentHue(srcAgent: string): string {
+  return STORY_AGENT_HUES[srcAgent] ?? "#94a3b8";
+}
+
+// Deterministic pseudo-score from story id. We need a score per seeded
+// claim but the corpus doesn't carry one; this gives a stable spread in
+// [0.4, 0.95] from the id hash so the viz has something to render.
+function seedScore(id: string): number {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+  return 0.4 + (Math.abs(h) % 56) / 100;
+}
+function seedConfidence(id: string): number {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 17 + id.charCodeAt(i)) | 0;
+  return 0.6 + (Math.abs(h) % 36) / 100;
+}
+
 type Claim = {
   id: string;
   attester: string;
@@ -60,6 +92,7 @@ function buildWorkshopGraph(
   pinned: Set<string>,
   claims: Claim[],
   vouches: Set<string>,
+  seedCount: number,
 ): KernelGraph {
   const nodes: KernelNode[] = [];
   const edges: KernelEdge[] = [];
@@ -126,6 +159,49 @@ function buildWorkshopGraph(
       kind: "asserts",
     });
   }
+  // Seed corpus: synthesise N story-attestations from the kindfuture
+  // corpus (lib/stories-generated.ts). Each story becomes:
+  //   1. a synthetic "story_agent_X" attester (one per source agent)
+  //   2. a claim on the story's first primitive/dimension with a
+  //      deterministic score+confidence derived from the story id
+  // Provenance is preserved in the claim id so future phases can link
+  // back to the story body.
+  if (seedCount > 0) {
+    const usedAgents = new Set<string>();
+    const N = Math.min(seedCount, ALL_STORIES.length);
+    for (let i = 0; i < N; i++) {
+      const story = ALL_STORIES[i];
+      const dim = story.dimensions[0] ?? story.primitives[0];
+      if (!dim) continue;
+      const attesterId = `story_${story.sourceAgent}`;
+      if (!usedAgents.has(attesterId)) {
+        usedAgents.add(attesterId);
+        nodes.push({
+          id: attesterId,
+          label: `story corpus · ${story.sourceAgent}`,
+          group: "attester",
+          component: null,
+          family: story.family ?? null,
+          band: 4,
+          multi_scale: false,
+        });
+      }
+      const claimId = `seed:${story.id}`;
+      const score = seedScore(story.id);
+      const conf = seedConfidence(story.id);
+      nodes.push({
+        id: claimId,
+        label: `${attesterId}|${dim}|${score}|${conf}`,
+        group: "claim",
+        component: null,
+        family: story.family ?? null,
+        band: 4,
+        multi_scale: false,
+      });
+      edges.push({ source: attesterId, target: claimId, kind: "asserts" });
+      edges.push({ source: claimId, target: "prim:scores", kind: "asserts" });
+    }
+  }
   // Suppress unused warning for `pinned` — kept in the signature because
   // it's part of the workshop's conceptual surface and may influence
   // graph shape in later phases.
@@ -181,6 +257,11 @@ export default function ExploreWorkshop({
     new Set(["alice:clara"]),
   );
 
+  // Corpus seed size — number of stories from the kindfuture corpus to
+  // materialise as claim nodes. Defaults to 40 so the first paint shows a
+  // populated graph instead of the 5-node minimal viz.
+  const [seedCount, setSeedCount] = useState<number>(40);
+
   // Kernel state. The kernel type is opaque from JS-side (it's a wasm-bindgen
   // class); we cast at call boundaries.
   type KernelInstance = {
@@ -226,8 +307,8 @@ export default function ExploreWorkshop({
 
   // Recompute graph + corridor + verdict whenever state changes
   const graph = useMemo(
-    () => buildWorkshopGraph(pinned, claims, vouches),
-    [pinned, claims, vouches],
+    () => buildWorkshopGraph(pinned, claims, vouches, seedCount),
+    [pinned, claims, vouches, seedCount],
   );
 
   useEffect(() => {
@@ -477,11 +558,37 @@ export default function ExploreWorkshop({
           </p>
         </section>
 
+        {/* Corpus seed */}
+        <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+          <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            6. Seed corpus
+          </p>
+          <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">
+            Materialise N stories from the kindfuture corpus as claim
+            nodes. Each story attributes to one of nine synthetic story
+            agents. Up to {ALL_STORIES.length} available.
+          </p>
+          <label className="mt-2 flex items-center gap-2 text-xs">
+            <input
+              type="range"
+              min={0}
+              max={Math.min(240, ALL_STORIES.length)}
+              step={5}
+              value={seedCount}
+              onChange={(e) => setSeedCount(parseInt(e.target.value, 10))}
+              className="flex-1 accent-brand-primary"
+            />
+            <span className="w-12 text-right font-mono text-slate-700 dark:text-slate-300">
+              {seedCount}
+            </span>
+          </label>
+        </section>
+
         {/* Claim list */}
         <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
           <div className="flex items-center justify-between">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              6. Claims on the chain
+              7. Claims on the chain
             </p>
             {claims.length > 0 && (
               <button
