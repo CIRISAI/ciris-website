@@ -1,11 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FLOORS, ROOMS, roomsByFloor, type Room, type RoomId } from "../lib/school";
 
 const ROOMS_BY_ID = Object.fromEntries(ROOMS.map((r) => [r.id, r]));
 import { ROSTER, type RosterCharacter } from "../lib/roster";
-import { CASE_HOT_ROOMS } from "../lib/case-of-the-day";
 import FaceTile from "./FaceTile";
 
 type ViewMode = "class" | "club";
@@ -20,12 +19,16 @@ function charactersInRoom(
   );
 }
 
-export default function SchoolMap() {
+export default function SchoolMap({
+  hotRooms = [],
+}: {
+  hotRooms?: RoomId[];
+}) {
   // Default to the floor with the most CASE-hot rooms. Falls back to F2 if
   // the case touches every floor equally.
   const defaultFloor = useMemo(() => {
     const counts: Record<number, number> = {};
-    for (const id of CASE_HOT_ROOMS) {
+    for (const id of hotRooms) {
       const r = ROOMS_BY_ID[id];
       if (r) counts[r.floor] = (counts[r.floor] ?? 0) + 1;
     }
@@ -33,8 +36,11 @@ export default function SchoolMap() {
       (a, b) => Number(b[1]) - Number(a[1]),
     )[0]?.[0];
     return best ? parseInt(best, 10) : 2;
-  }, []);
+  }, [hotRooms]);
   const [floor, setFloor] = useState<number>(defaultFloor);
+  useEffect(() => {
+    setFloor(defaultFloor);
+  }, [defaultFloor]);
   const [mode, setMode] = useState<ViewMode>("class");
   const [selected, setSelected] = useState<string | null>(null);
   const rooms = roomsByFloor(floor);
@@ -72,7 +78,7 @@ export default function SchoolMap() {
       {/* Floor tabs */}
       <div className="floor-tabs" role="tablist" aria-label="school floor">
         {FLOORS.map((f) => {
-          const hotCount = CASE_HOT_ROOMS.filter(
+          const hotCount = hotRooms.filter(
             (id) => ROOMS_BY_ID[id]?.floor === f.id,
           ).length;
           return (
@@ -113,7 +119,7 @@ export default function SchoolMap() {
             chars={charactersInRoom(ROSTER, r.id, mode)}
             selected={selected}
             onSelect={setSelected}
-            hot={CASE_HOT_ROOMS.includes(r.id)}
+            hot={hotRooms.includes(r.id)}
           />
         ))}
       </div>

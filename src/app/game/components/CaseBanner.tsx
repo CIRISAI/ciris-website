@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
-import { CASE_OF_THE_DAY } from "../lib/case-of-the-day";
+import { useEffect, useState } from "react";
+import type { CaseFile } from "../lib/cases-generated";
+import { ROSTER } from "../lib/roster";
 import FaceTile from "./FaceTile";
 
-export default function CaseBanner() {
-  const c = CASE_OF_THE_DAY;
+export default function CaseBanner({
+  case: c,
+  onFileBrief,
+}: {
+  case: CaseFile;
+  onFileBrief?: () => void;
+}) {
+  const client = ROSTER.find((r) => r.id === c.client_id);
+  const clientName = client?.name ?? c.client_id;
   const [locked, setLocked] = useState<Record<string, boolean>>({});
+  // Reset locks when the active case changes.
+  useEffect(() => {
+    setLocked({});
+  }, [c.id]);
   const lockedCount = Object.values(locked).filter(Boolean).length;
   const totalSlots = c.slots.length;
 
@@ -30,7 +42,7 @@ export default function CaseBanner() {
         <div className="case-bubble">
           <div className="case-bubble-tail" aria-hidden="true" />
           <div className="case-bubble-meta">
-            <b>{c.client_name}</b> · {c.client_year}
+            <b>{clientName}</b> · {c.client_year}
           </div>
           <p className="case-bubble-quote">&ldquo;{c.client_quote}&rdquo;</p>
         </div>
@@ -76,6 +88,16 @@ export default function CaseBanner() {
         </summary>
         <p>{c.framing_short}</p>
       </details>
+
+      {lockedCount === totalSlots && onFileBrief && (
+        <button
+          type="button"
+          className="case-file-btn"
+          onClick={onFileBrief}
+        >
+          FILE BRIEF →
+        </button>
+      )}
     </section>
   );
 }
