@@ -17,7 +17,7 @@ import {
   buildEncyclopediaGraph,
   buildGameGraph,
   buildDemoGraph,
-  DEMO_TIME_MAX,
+  DEMO_TIME_MIN,
   summariseGraph,
   type CorpusMode,
 } from "../lib/corpus-graph";
@@ -299,7 +299,7 @@ export default function ExploreWorkshop({
   // Voices and attestations enter the graph as time advances. At t=0
   // only the Wolf is testifying; at t=10 the Village Crier has
   // superseded his lies.
-  const [demoTime, setDemoTime] = useState<number>(DEMO_TIME_MAX);
+  const [demoTime, setDemoTime] = useState<number>(DEMO_TIME_MIN);
 
   // Kernel state. The kernel type is opaque from JS-side (it's a wasm-bindgen
   // class); we cast at call boundaries.
@@ -1716,9 +1716,84 @@ function EdgeList({
   );
 }
 
+// Story beats for each timestep of the Red Riding Hood demo. Title
+// names the CEG move; body explains what the graph just gained or lost
+// and which families/primitives lit up. Reads like a fairy tale told
+// in CEG primitives.
+const RRH_STORY_BEATS: Array<{ t: number; title: string; body: string }> = [
+  {
+    t: 0,
+    title: "🐺 The Wolf publishes — alone in the graph",
+    body:
+      "The Wolf scores a self-serving claim: that he is a kindly companion of the forest and the girl was never in danger. Nobody else is here to disagree. With one voice, the verdict reads exactly as the liar wants it to. The encyclopedia would call this a corridor of one.",
+  },
+  {
+    t: 1,
+    title: "👩 The Mother delegates to the Woodsman",
+    body:
+      "Red's Mother delegates_to the Woodsman to keep watch over the forest path. No claim about the wolf yet — just standing being constituted, the way a village makes someone trustworthy by relying on them.",
+  },
+  {
+    t: 2,
+    title: "👩 The Mother vouches for Red",
+    body:
+      "The Mother vouches_for her daughter's honesty. The STANDING family lights up. Red can now testify and be heard, even though she is a child and the Wolf is older.",
+  },
+  {
+    t: 3,
+    title: "🏹 The Hunter testifies",
+    body:
+      "The Hunter, passing through the forest, scores a DETECTION claim that he saw a wolf circling Grandmother's cottage. First independent eyewitness. The corridor widens from one voice to two.",
+  },
+  {
+    t: 4,
+    title: "🧒 Red testifies",
+    body:
+      "Red Riding Hood scores her own ACTION account: what the wolf said at the door, what he wore, how he answered. The first witness who was actually there.",
+  },
+  {
+    t: 5,
+    title: "🧒 Red withdraws a confused detail",
+    body:
+      "Red withdraws an earlier line where she mixed up who answered the door. The withdraw primitive lets her stay credible without retroactively pretending she never said it. CORRECTION begins to light up.",
+  },
+  {
+    t: 6,
+    title: "👵 Grandmother recants opening the door",
+    body:
+      "Grandmother recants a statement she signed under duress when the wolf was still in the cottage. recants is louder than withdraws — it names a reason. Two CORRECTION moves in a row erode the wolf's monopoly on the story.",
+  },
+  {
+    t: 7,
+    title: "🐿️ The Squirrel testifies",
+    body:
+      "A small DETECTION voice: the Squirrel saw the wolf eating something through the window. Tiny on its own, but it is witness-diverse — a non-human voice the wolf cannot intimidate or out-talk.",
+  },
+  {
+    t: 8,
+    title: "🪓 The Woodsman arrives — inflection",
+    body:
+      "The Woodsman arrives with the eyewitness account. He saw the wolf attack. Now the wolf's lie is contradicted across DETECTION (Hunter, Squirrel) and ACTION (Red, Grandmother, Woodsman). The deception isolates. This is the demo's hinge.",
+  },
+  {
+    t: 9,
+    title: "📜 The Village Crier publishes the record",
+    body:
+      "The Crier scores the official CONSENSUS — the institutional voice gathers the testimonies and publishes the verdict on the village board. Not a new witness, a new attester: the village speaking as itself.",
+  },
+  {
+    t: 10,
+    title: "♻️ The Crier supersedes the Wolf's lie",
+    body:
+      "The Crier supersedes the wolf's original claim from t=0. The lie is not deleted — it is on the record, marked obsolete, with the corrected verdict pointing back at it. CORRECTION closes the loop. The graph now reads honestly.",
+  },
+];
+
 // DemoTimeSlider — scrubs the Red Riding Hood timeline 0..10. Each
 // voice arrives at a specific time; the slider determines which
-// attestations are in the graph at this moment.
+// attestations are in the graph at this moment. Also exposes the
+// per-beat story panel with Prev / Next / Restart controls so a
+// reader can step the story without having to find the right tick.
 function DemoTimeSlider({
   value,
   onChange,
@@ -1726,55 +1801,86 @@ function DemoTimeSlider({
   value: number;
   onChange: (n: number) => void;
 }) {
-  const EVENTS: Array<{ t: number; label: string }> = [
-    { t: 0, label: "🐺 Wolf publishes" },
-    { t: 1, label: "👩 Mother delegates" },
-    { t: 2, label: "👩 Mother vouches for 🧒" },
-    { t: 3, label: "🏹 Hunter testifies" },
-    { t: 4, label: "🧒 Red testifies" },
-    { t: 5, label: "🧒 Red withdraws" },
-    { t: 6, label: "👵 Grandmother recants" },
-    { t: 7, label: "🐿️ Squirrel testifies" },
-    { t: 8, label: "🪓 Woodsman arrives" },
-    { t: 9, label: "📜 Crier publishes" },
-    { t: 10, label: "♻️ Crier supersedes" },
-  ];
-  const here = EVENTS.find((e) => e.t === value);
+  const beat =
+    RRH_STORY_BEATS.find((b) => b.t === value) ?? RRH_STORY_BEATS[0];
+  const atStart = value <= 0;
+  const atEnd = value >= 10;
   return (
-    <div className="rounded-md border border-slate-200 bg-slate-50 p-3 dark:border-gray-800 dark:bg-gray-900">
-      <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
-        <p className="text-xs font-semibold text-slate-700 dark:text-slate-200">
-          Time {value} / 10 {here ? `· ${here.label}` : ""}
-        </p>
-        <p className="text-[11px] italic text-slate-500">
-          {RRH_TAGLINE}
-        </p>
+    <div className="space-y-3">
+      <div className="rounded-md border border-slate-200 bg-slate-50 p-3 dark:border-gray-800 dark:bg-gray-900">
+        <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
+          <p className="text-xs font-semibold text-slate-700 dark:text-slate-200">
+            Time {value} / 10
+          </p>
+          <p className="text-[11px] italic text-slate-500">
+            {RRH_TAGLINE}
+          </p>
+        </div>
+        <input
+          type="range"
+          min={0}
+          max={10}
+          step={1}
+          value={value}
+          onChange={(e) => onChange(parseInt(e.target.value, 10))}
+          className="w-full accent-brand-primary"
+          aria-label="story time"
+        />
+        <div className="mt-1 flex justify-between text-[9px] text-slate-500">
+          {RRH_STORY_BEATS.map((b) => (
+            <button
+              key={b.t}
+              type="button"
+              onClick={() => onChange(b.t)}
+              className={`px-0.5 ${
+                value >= b.t ? "text-brand-primary" : "text-slate-400"
+              }`}
+              title={b.title}
+            >
+              t{b.t}
+            </button>
+          ))}
+        </div>
       </div>
-      <input
-        type="range"
-        min={0}
-        max={10}
-        step={1}
-        value={value}
-        onChange={(e) => onChange(parseInt(e.target.value, 10))}
-        className="w-full accent-brand-primary"
-        aria-label="story time"
-      />
-      <div className="mt-1 flex justify-between text-[9px] text-slate-500">
-        {EVENTS.map((e) => (
+      <article className="rounded-md border-l-4 border-rose-400 bg-white p-3 dark:bg-gray-900">
+        <header className="flex items-baseline justify-between gap-2">
+          <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+            {beat.title}
+          </h3>
+          <span className="text-[10px] uppercase tracking-[0.15em] text-rose-700 dark:text-rose-300">
+            beat {value} of 10
+          </span>
+        </header>
+        <p className="mt-2 text-[13px] leading-6 text-slate-700 dark:text-slate-300">
+          {beat.body}
+        </p>
+        <div className="mt-3 flex flex-wrap items-center justify-end gap-2">
           <button
-            key={e.t}
             type="button"
-            onClick={() => onChange(e.t)}
-            className={`px-0.5 ${
-              value >= e.t ? "text-brand-primary" : "text-slate-400"
-            }`}
-            title={e.label}
+            onClick={() => onChange(0)}
+            disabled={atStart}
+            className="rounded border border-slate-200 px-3 py-1 text-xs text-slate-600 hover:bg-slate-100 disabled:opacity-40 dark:border-gray-700 dark:text-slate-300 dark:hover:bg-gray-800"
           >
-            t{e.t}
+            Restart
           </button>
-        ))}
-      </div>
+          <button
+            type="button"
+            onClick={() => onChange(Math.max(0, value - 1))}
+            disabled={atStart}
+            className="rounded border border-slate-200 px-3 py-1 text-xs text-slate-600 hover:bg-slate-100 disabled:opacity-40 dark:border-gray-700 dark:text-slate-300 dark:hover:bg-gray-800"
+          >
+            ← Back
+          </button>
+          <button
+            type="button"
+            onClick={() => onChange(Math.min(10, value + 1))}
+            disabled={atEnd}
+            className="rounded bg-brand-primary px-4 py-1 text-xs font-semibold text-white hover:bg-brand-secondary disabled:opacity-40"
+          >
+            Next →
+          </button>
+        </div>
+      </article>
     </div>
   );
 }
