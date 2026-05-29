@@ -294,6 +294,7 @@ export default function ExploreWorkshop({
   };
   const kernelRef = useRef<KernelInstance | null>(null);
   const [ready, setReady] = useState(false);
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [positions, setPositions] = useState<Float32Array | null>(null);
   const [instanceMeta, setInstanceMeta] = useState<InstanceMeta[] | null>(
     null,
@@ -742,7 +743,18 @@ export default function ExploreWorkshop({
           positions={positions}
           instanceMeta={instanceMeta}
           edgeGeoms={edgeGeoms}
+          selectedNodeId={selectedNodeId}
+          onPickNode={setSelectedNodeId}
         />
+
+        {selectedNodeId && (
+          <NodeDetailPanel
+            graph={graph}
+            nodeId={selectedNodeId}
+            onPick={setSelectedNodeId}
+            onClose={() => setSelectedNodeId(null)}
+          />
+        )}
 
         <DiagnosticStrip
           ready={ready}
@@ -773,12 +785,16 @@ function SceneFrame({
   positions,
   instanceMeta,
   edgeGeoms,
+  selectedNodeId,
+  onPickNode,
 }: {
   mounted: boolean;
   graph: KernelGraph;
   positions: Float32Array;
   instanceMeta: InstanceMeta[];
   edgeGeoms: EdgeGeom[];
+  selectedNodeId?: string | null;
+  onPickNode?: (id: string) => void;
 }) {
   const [webglOk, setWebglOk] = useState<boolean | null>(null);
   useEffect(() => {
@@ -820,8 +836,170 @@ function SceneFrame({
           positions={positions}
           instanceMeta={instanceMeta}
           edgeGeoms={edgeGeoms}
+          selectedNodeId={selectedNodeId}
+          onPickNode={onPickNode}
         />
       )}
+    </div>
+  );
+}
+
+// ─── Node detail panel ───────────────────────────────────────────
+//
+// Click any sphere in the scene → this panel opens with the node's
+// label, group, family, component, band, plus a list of every edge
+// pointing in or out. Each edge row names the other end and is
+// clickable; tapping it pivots the panel + the scene highlight to that
+// node. You can walk the federation graph by clicking through it.
+
+function NodeDetailPanel({
+  graph,
+  nodeId,
+  onPick,
+  onClose,
+}: {
+  graph: KernelGraph;
+  nodeId: string;
+  onPick: (id: string | null) => void;
+  onClose: () => void;
+}) {
+  const node = graph.nodes.find((n) => n.id === nodeId);
+  if (!node) {
+    return (
+      <div className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-800 dark:border-amber-900/40 dark:bg-amber-950/30 dark:text-amber-200">
+        Node{" "}
+        <span className="font-mono">{nodeId}</span> not found in the current
+        graph.{" "}
+        <button onClick={onClose} className="underline">
+          close
+        </button>
+      </div>
+    );
+  }
+  const outgoing = graph.edges.filter((e) => e.source === nodeId);
+  const incoming = graph.edges.filter((e) => e.target === nodeId);
+  const labelOf = (id: string) => {
+    const n = graph.nodes.find((x) => x.id === id);
+    return n ? n.label : id;
+  };
+  return (
+    <section
+      className="rounded-xl border-2 border-brand-primary bg-white p-3 shadow-md dark:border-brand-primary dark:bg-gray-900"
+      aria-label={`node detail: ${node.label}`}
+    >
+      <div className="mb-2 flex items-start justify-between gap-2">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-primary">
+            Selected node
+          </p>
+          <h3 className="break-all font-mono text-sm font-bold text-slate-900 dark:text-white">
+            {node.label}
+          </h3>
+          <p className="break-all font-mono text-[10px] text-slate-500 dark:text-slate-400">
+            id: {node.id}
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          className="rounded-md border border-slate-300 px-2 py-1 text-[11px] font-semibold text-slate-700 hover:border-brand-primary dark:border-gray-700 dark:text-slate-200"
+        >
+          close
+        </button>
+      </div>
+
+      <div className="mb-3 grid grid-cols-2 gap-x-3 gap-y-1 text-[11px]">
+        <span className="font-mono text-slate-500">group</span>
+        <span className="font-mono">{node.group}</span>
+        {node.family && (
+          <>
+            <span className="font-mono text-slate-500">family</span>
+            <span className="font-mono">{node.family}</span>
+          </>
+        )}
+        {node.component && (
+          <>
+            <span className="font-mono text-slate-500">component</span>
+            <span className="break-all font-mono">{node.component}</span>
+          </>
+        )}
+        <span className="font-mono text-slate-500">band</span>
+        <span className="font-mono">{node.band}</span>
+        {node.multi_scale && (
+          <>
+            <span className="font-mono text-slate-500">multi-scale</span>
+            <span className="font-mono">yes</span>
+          </>
+        )}
+      </div>
+
+      <EdgeList
+        title={`out (${outgoing.length})`}
+        edges={outgoing}
+        otherId={(e) => e.target}
+        otherLabel={(e) => labelOf(e.target)}
+        onPick={onPick}
+      />
+      <EdgeList
+        title={`in (${incoming.length})`}
+        edges={incoming}
+        otherId={(e) => e.source}
+        otherLabel={(e) => labelOf(e.source)}
+        onPick={onPick}
+      />
+      <p className="mt-3 text-[10px] italic text-slate-500 dark:text-slate-400">
+        Tap any edge to walk the graph. The selected node glows in the scene.
+      </p>
+    </section>
+  );
+}
+
+function EdgeList({
+  title,
+  edges,
+  otherId,
+  otherLabel,
+  onPick,
+}: {
+  title: string;
+  edges: KernelEdge[];
+  otherId: (e: KernelEdge) => string;
+  otherLabel: (e: KernelEdge) => string;
+  onPick: (id: string) => void;
+}) {
+  if (edges.length === 0) {
+    return (
+      <p className="mb-2 text-[11px] italic text-slate-500 dark:text-slate-400">
+        {title}: none
+      </p>
+    );
+  }
+  return (
+    <div className="mb-2">
+      <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-slate-500 dark:text-slate-400">
+        {title}
+      </p>
+      <ul className="space-y-1 text-[11px]">
+        {edges.slice(0, 24).map((e, i) => (
+          <li key={i}>
+            <button
+              type="button"
+              onClick={() => onPick(otherId(e))}
+              className="flex w-full items-center justify-between gap-2 rounded border border-slate-200 px-2 py-1 text-left hover:border-brand-primary hover:bg-brand-primary/5 dark:border-gray-700"
+            >
+              <span className="break-all font-mono">{otherLabel(e)}</span>
+              <span className="shrink-0 rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[10px] text-slate-600 dark:bg-gray-800 dark:text-slate-400">
+                {e.kind}
+              </span>
+            </button>
+          </li>
+        ))}
+        {edges.length > 24 && (
+          <li className="px-1 text-[10px] text-slate-500">
+            + {edges.length - 24} more
+          </li>
+        )}
+      </ul>
     </div>
   );
 }

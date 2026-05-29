@@ -220,7 +220,9 @@ function NodeGroup({
   instanceMeta,
   graph,
   hoverInstanceId,
+  selectedNodeId,
   setHoverNodeId,
+  onPickNode,
 }: {
   group: string;
   instanceIndices: number[];
@@ -228,7 +230,9 @@ function NodeGroup({
   instanceMeta: InstanceMeta[];
   graph: KernelGraph;
   hoverInstanceId: number | null;
+  selectedNodeId: string | null;
   setHoverNodeId: (id: string | null) => void;
+  onPickNode?: (id: string) => void;
 }) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const tmpObj = useMemo(() => new THREE.Object3D(), []);
@@ -257,13 +261,24 @@ function NodeGroup({
       const p = instancePos(positions, instIdx);
       const inst = instanceMeta[instIdx];
       const node = graph.nodes[inst.node_idx];
-      const sameLogical = hoveredNodeId === inst.node_id;
-      const scale = sameLogical ? baseSize * 1.6 : baseSize;
+      const sameLogicalHover = hoveredNodeId === inst.node_id;
+      const sameLogicalSelected = selectedNodeId === inst.node_id;
+      // Selected > hovered > default
+      const scale = sameLogicalSelected
+        ? baseSize * 2.4
+        : sameLogicalHover
+          ? baseSize * 1.6
+          : baseSize;
       tmpObj.position.copy(p);
       tmpObj.scale.setScalar(scale);
       tmpObj.updateMatrix();
       mesh.setMatrixAt(i, tmpObj.matrix);
-      tmpColor.set(nodeColor(node));
+      // Selected glows yellow; otherwise the node's normal color.
+      if (sameLogicalSelected) {
+        tmpColor.set("#fbbf24");
+      } else {
+        tmpColor.set(nodeColor(node));
+      }
       mesh.setColorAt(i, tmpColor);
     });
     mesh.instanceMatrix.needsUpdate = true;
@@ -274,6 +289,7 @@ function NodeGroup({
     instanceMeta,
     baseSize,
     hoverInstanceId,
+    selectedNodeId,
     graph,
     tmpObj,
     tmpColor,
@@ -297,6 +313,16 @@ function NodeGroup({
       onPointerOut={(e: ThreeEvent<PointerEvent>) => {
         e.stopPropagation();
         setHoverNodeId(null);
+      }}
+      onClick={(e: ThreeEvent<MouseEvent>) => {
+        if (!onPickNode) return;
+        e.stopPropagation();
+        const i = e.instanceId;
+        if (typeof i === "number") {
+          const instIdx = instanceIndices[i];
+          const meta = instanceMeta[instIdx];
+          if (meta) onPickNode(meta.node_id);
+        }
       }}
     />
   );
@@ -384,14 +410,25 @@ export default function AlephScene({
   positions,
   instanceMeta,
   edgeGeoms,
+  selectedNodeId = null,
   onHoverChange,
+  onPickNode,
 }: {
   graph: KernelGraph;
   positions: Float32Array;
   instanceMeta: InstanceMeta[];
   edgeGeoms: EdgeGeom[];
+  selectedNodeId?: string | null;
   onHoverChange?: (nodeId: string | null) => void;
+  onPickNode?: (nodeId: string) => void;
 }) {
+  // Cap dpr at 1.5 on touch devices — per the research, the single biggest
+  // mobile win. Retina phones at dpr=3 with the LineSegments mesh blow
+  // fillrate; 1.5 keeps the scene crisp enough without melting.
+  const dpr: [number, number] = useMemo(() => {
+    if (typeof window === "undefined") return [1, 2];
+    return "ontouchstart" in window ? [1, 1.5] : [1, 2];
+  }, []);
   const [hoverInstanceId, setHoverInstanceId] = useState<number | null>(null);
   const [hoverNodeId, setHoverNodeId] = useState<string | null>(null);
 
@@ -417,7 +454,7 @@ export default function AlephScene({
   return (
     <Canvas
       camera={{ position: [2.6, 1.6, 2.6], fov: 50 }}
-      dpr={[1, 2]}
+      dpr={dpr}
     >
       <ambientLight intensity={0.6} />
       <directionalLight position={[3, 4, 3]} intensity={0.6} />
@@ -437,7 +474,9 @@ export default function AlephScene({
           instanceMeta={instanceMeta}
           graph={graph}
           hoverInstanceId={hoverInstanceId}
+          selectedNodeId={selectedNodeId}
           setHoverNodeId={setHoverNodeId}
+          onPickNode={onPickNode}
         />
       ))}
       <OrbitControls
