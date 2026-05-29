@@ -12,6 +12,12 @@ import type {
 } from "../components/AlephView";
 import AlephScene from "../components/AlephScene";
 import { ALL_STORIES } from "../lib/stories-generated";
+import {
+  buildEncyclopediaGraph,
+  buildGameGraph,
+  summariseGraph,
+  type CorpusMode,
+} from "../lib/corpus-graph";
 
 // Hook-side mount gate. Avoids the dynamic({ssr:false}) chunk-boundary that
 // was hanging on Vercel's static export. Three.js and R3F live in the same
@@ -260,6 +266,16 @@ export default function ExploreWorkshop({
   // populated graph instead of the 5-node minimal viz.
   const [seedCount, setSeedCount] = useState<number>(40);
 
+  // Corpus mode — selects which graph is rendered:
+  //   workshop:     the small interactive verdict workshop (legacy)
+  //   game:         100 characters + 43 publications + 5 case-goals
+  //                 at Federation band + 240 story-holding claims
+  //   encyclopedia: the namespace prefixes + The Cascadia Encyclopedia
+  //                 attesting on definitional dimensions
+  const [corpusMode, setCorpusMode] = useState<"workshop" | CorpusMode>(
+    "game",
+  );
+
   // Kernel state. The kernel type is opaque from JS-side (it's a wasm-bindgen
   // class); we cast at call boundaries.
   type KernelInstance = {
@@ -304,10 +320,12 @@ export default function ExploreWorkshop({
   }, []);
 
   // Recompute graph + corridor + verdict whenever state changes
-  const graph = useMemo(
-    () => buildWorkshopGraph(pinned, claims, vouches, seedCount),
-    [pinned, claims, vouches, seedCount],
-  );
+  const graph = useMemo(() => {
+    if (corpusMode === "game") return buildGameGraph();
+    if (corpusMode === "encyclopedia") return buildEncyclopediaGraph(_source);
+    return buildWorkshopGraph(pinned, claims, vouches, seedCount);
+  }, [corpusMode, pinned, claims, vouches, seedCount, _source]);
+  const graphSummary = useMemo(() => summariseGraph(graph), [graph]);
 
   useEffect(() => {
     if (!ready || !kernelRef.current) return;
