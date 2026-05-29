@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 import type { RegistrySource } from "../lib/shared";
 import type {
   KernelGraph,
@@ -11,15 +10,19 @@ import type {
   InstanceMeta,
   EdgeGeom,
 } from "../components/AlephView";
+import AlephScene from "../components/AlephScene";
 
-const SceneInner = dynamic(() => import("../components/AlephScene"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-full min-h-[420px] items-center justify-center text-sm text-slate-500 dark:text-slate-400">
-      Loading kernel…
-    </div>
-  ),
-});
+// Hook-side mount gate. Avoids the dynamic({ssr:false}) chunk-boundary that
+// was hanging on Vercel's static export. Three.js and R3F live in the same
+// bundle as the workshop now; client-only behaviour is enforced by
+// rendering the Canvas only after the first effect tick on the client.
+function useHasMounted(): boolean {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  return mounted;
+}
 
 type Attester = {
   id: string;
@@ -200,6 +203,7 @@ export default function ExploreWorkshop({
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   const [corridorHistory, setCorridorHistory] = useState<CorridorMetric[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const hasMounted = useHasMounted();
 
   // Init kernel once
   useEffect(() => {
@@ -589,13 +593,28 @@ export default function ExploreWorkshop({
         </div>
 
         <div className="h-[60vh] min-h-[420px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100 dark:border-gray-800 dark:from-gray-950 dark:to-black">
-          <SceneInner
-            graph={graph}
-            positions={positions}
-            instanceMeta={instanceMeta}
-            edgeGeoms={edgeGeoms}
-          />
+          {hasMounted ? (
+            <AlephScene
+              graph={graph}
+              positions={positions}
+              instanceMeta={instanceMeta}
+              edgeGeoms={edgeGeoms}
+            />
+          ) : (
+            <div className="flex h-full items-center justify-center text-sm text-slate-500 dark:text-slate-400">
+              Booting scene…
+            </div>
+          )}
         </div>
+
+        <DiagnosticStrip
+          ready={ready}
+          mounted={hasMounted}
+          graph={graph}
+          positions={positions}
+          instanceMeta={instanceMeta}
+          edgeGeoms={edgeGeoms}
+        />
 
         <p className="text-[11px] text-slate-500 dark:text-slate-400">
           Phase 2 surface. The workshop runs entirely in your browser on the{" "}
@@ -605,6 +624,61 @@ export default function ExploreWorkshop({
         </p>
       </section>
     </div>
+  );
+}
+
+function DiagnosticStrip({
+  ready,
+  mounted,
+  graph,
+  positions,
+  instanceMeta,
+  edgeGeoms,
+}: {
+  ready: boolean;
+  mounted: boolean;
+  graph: KernelGraph;
+  positions: Float32Array;
+  instanceMeta: InstanceMeta[];
+  edgeGeoms: EdgeGeom[];
+}) {
+  const [webgl, setWebgl] = useState<string>("?");
+  const [threeVer, setThreeVer] = useState<string>("?");
+  useEffect(() => {
+    if (!mounted) return;
+    try {
+      const c = document.createElement("canvas");
+      const gl2 = c.getContext("webgl2");
+      const gl1 = gl2 ? null : c.getContext("webgl");
+      setWebgl(gl2 ? "WebGL2" : gl1 ? "WebGL1" : "none");
+    } catch {
+      setWebgl("error");
+    }
+    import("three")
+      .then((m) => setThreeVer((m as { REVISION?: string }).REVISION ?? "?"))
+      .catch(() => setThreeVer("err"));
+  }, [mounted]);
+  // Length sanity. positions has 3 floats per instance.
+  const posInstances = positions.length / 3;
+  const metaCount = instanceMeta.length;
+  const ok = posInstances === metaCount;
+  const text =
+    `kernel=${ready ? "ready" : "loading"} ` +
+    `mount=${mounted ? "yes" : "no"} ` +
+    `nodes=${graph.nodes.length} edges=${graph.edges.length} ` +
+    `inst=${metaCount} pos=${posInstances}${ok ? "" : " MISMATCH"} ` +
+    `edgeGeoms=${edgeGeoms.length} gl=${webgl} three=${threeVer}`;
+  return (
+    <pre
+      data-testid="diag"
+      className={`whitespace-pre-wrap rounded-lg border px-3 py-2 font-mono text-sm leading-6 ${
+        ok
+          ? "border-slate-200 bg-slate-50 text-slate-700 dark:border-gray-800 dark:bg-gray-900 dark:text-slate-300"
+          : "border-red-300 bg-red-50 text-red-700 dark:border-red-800/40 dark:bg-red-950/30 dark:text-red-300"
+      }`}
+    >
+      {text}
+    </pre>
   );
 }
 

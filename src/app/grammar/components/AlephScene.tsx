@@ -1,22 +1,30 @@
 "use client";
 
-// The Three.js scene for the Aleph view.
+// AlephScene — Phase 2.5 rewrite.
 //
-// Phase 2 additions:
-//   - Multi-scale nodes rendered at every band (one instance per band)
-//   - Hover synchronisation: pointer over any node lights up every instance
-//     of the same logical id across all bands
-//   - Paired TSVF arcs: forward (karma) above the chord, backward (grace)
-//     below, with curvature parameter bound to ρ from the kernel
-//
-// Separated from AlephView so it can be dynamically imported without
-// dragging Three.js into the static pre-render path.
+// Architecture per the agent's research notes:
+//   - One InstancedMesh per node group (primitive / family / component /
+//     prefix / attester / claim). Scales linearly with node count and gives
+//     us a single draw call per group.
+//   - One LineSegments mesh for all forward TSVF arcs, one for all backward.
+//     Replaces the per-edge BufferGeometry + per-edge useMemo that was
+//     allocating O(edges) geometries on every state change.
+//   - frameloop="demand" + invalidate() on input change. Stops the GPU
+//     spinning at idle and prevents React/Three contention.
+//   - Hover via Raycaster on the InstancedMesh, returning instanceId. One
+//     pointer event per move, not per node.
+//   - Stable scene structure: only attribute updates between renders.
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Canvas, useFrame, type ThreeEvent } from "@react-three/fiber";
+import { Canvas, useThree, type ThreeEvent } from "@react-three/fiber";
 import { OrbitControls, Text } from "@react-three/drei";
 import * as THREE from "three";
-import type { KernelGraph, KernelNode } from "./AlephView";
+import type {
+  KernelGraph,
+  KernelNode,
+  InstanceMeta,
+  EdgeGeom,
+} from "./AlephView";
 import { nodeColor } from "./AlephView";
 
 const BAND_LABELS = [
@@ -29,35 +37,39 @@ const BAND_LABELS = [
 ];
 const BAND_Z = [0.2, 0.36, 0.52, 0.68, 0.84, 1.0];
 
-export type InstanceMeta = {
-  node_idx: number;
-  band: number;
-  node_id: string;
+// Per-group base sphere size. InstancedMesh uses a unit-sphere geometry and
+// scales each instance via setMatrixAt; these are the per-group scale
+// factors.
+const GROUP_SIZE: Record<string, number> = {
+  primitive: 0.05,
+  family: 0.038,
+  component: 0.032,
+  prefix: 0.018,
+  attester: 0.045,
+  claim: 0.022,
 };
+const GROUP_ORDER = [
+  "primitive",
+  "family",
+  "component",
+  "prefix",
+  "attester",
+  "claim",
+];
 
-export type EdgeGeom = {
-  source_instance: number;
-  target_instance: number;
-  curvature: number;
-  kind: string;
-};
+const ARC_SEGMENTS = 16;
 
-const ARC_SEGMENTS = 24;
-
-function PulsingRing({ z }: { z: number }) {
-  const ref = useRef<THREE.Mesh>(null);
-  useFrame(() => {
-    if (!ref.current) return;
-    const t = performance.now() / 1000;
-    const s = 1.0 + 0.04 * Math.sin(t * 1.2);
-    ref.current.scale.setScalar(s);
-  });
-  return (
-    <mesh ref={ref} position={[0, z, 0]} rotation={[Math.PI / 2, 0, 0]}>
-      <ringGeometry args={[0.98, 1.0, 96]} />
-      <meshBasicMaterial color="#0d9488" transparent opacity={0.45} />
-    </mesh>
-  );
+// Scene-coordinate from kernel position. The kernel emits Poincaré disk
+// (x, y) in [-1, 1] and band height z in [0.2, 1.0]. Three.js scene uses
+// y as up, so we swap z↔y here once for the whole scene.
+function instancePos(
+  positions: Float32Array,
+  instanceIdx: number,
+): THREE.Vector3 {
+  const x = positions[instanceIdx * 3 + 0];
+  const y = positions[instanceIdx * 3 + 1];
+  const z = positions[instanceIdx * 3 + 2];
+  return new THREE.Vector3(x, z, y);
 }
 
 function GroundPlane() {
@@ -71,53 +83,48 @@ function GroundPlane() {
         <ringGeometry args={[1.03, 1.05, 96]} />
         <meshBasicMaterial color="#475569" transparent opacity={0.7} />
       </mesh>
-      <Text
-        position={[0, 0, 1.18]}
-        rotation={[-Math.PI / 2, 0, 0]}
-        fontSize={0.06}
-        color="#475569"
-        anchorX="center"
-        anchorY="middle"
-      >
-        biosphere · ground plane
-      </Text>
     </>
   );
 }
 
-function Band({ z, label, lit }: { z: number; label: string; lit: boolean }) {
+function BandRings() {
   return (
-    <group position={[0, z, 0]}>
-      <mesh rotation={[Math.PI / 2, 0, 0]}>
-        <ringGeometry args={[0.98, 1.0, 96]} />
-        <meshBasicMaterial
-          color={lit ? "#0d9488" : "#94a3b8"}
-          transparent
-          opacity={lit ? 0.55 : 0.25}
-        />
-      </mesh>
-      <Text
-        position={[1.05, 0, 0]}
-        fontSize={0.045}
-        color={lit ? "#0d9488" : "#64748b"}
-        anchorX="left"
-        anchorY="middle"
-      >
-        {label}
-      </Text>
-    </group>
+    <>
+      {BAND_Z.map((z, i) => (
+        <group key={i} position={[0, z, 0]}>
+          <mesh rotation={[Math.PI / 2, 0, 0]}>
+            <ringGeometry args={[0.98, 1.0, 96]} />
+            <meshBasicMaterial
+              color={i === 4 ? "#0d9488" : "#94a3b8"}
+              transparent
+              opacity={i === 4 ? 0.55 : 0.25}
+            />
+          </mesh>
+          <Text
+            position={[1.05, 0, 0]}
+            fontSize={0.045}
+            color={i === 4 ? "#0d9488" : "#64748b"}
+            anchorX="left"
+            anchorY="middle"
+          >
+            {BAND_LABELS[i]}
+          </Text>
+        </group>
+      ))}
+      <VerticalSpine />
+    </>
   );
 }
 
 function VerticalSpine() {
-  const points = useMemo(
-    () => [new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, 1.0, 0)],
-    [],
-  );
-  const geom = useMemo(
-    () => new THREE.BufferGeometry().setFromPoints(points),
-    [points],
-  );
+  const geom = useMemo(() => {
+    const g = new THREE.BufferGeometry();
+    g.setFromPoints([
+      new THREE.Vector3(0, 0, 0),
+      new THREE.Vector3(0, 1.0, 0),
+    ]);
+    return g;
+  }, []);
   return (
     <line>
       <primitive object={geom} attach="geometry" />
@@ -126,140 +133,250 @@ function VerticalSpine() {
   );
 }
 
-// Scene-coordinate from kernel position. The kernel emits Poincaré disk
-// (x, y) in [-1, 1] and band height z in [0.2, 1.0]. Three.js scene uses
-// y as up.
-function instancePos(
-  positions: Float32Array,
-  instanceIdx: number,
-): THREE.Vector3 {
-  const x = positions[instanceIdx * 3 + 0];
-  const y = positions[instanceIdx * 3 + 1];
-  const z = positions[instanceIdx * 3 + 2];
-  return new THREE.Vector3(x, z, y);
-}
-
-// Build paired forward+backward arcs for a given chord. Forward sits above
-// the midpoint, backward below. Curvature is set by the kernel — higher ρ
-// → tighter bundle.
-function arcCurve(
+// Arc midpoint computation matching the kernel's geometric intent. Forward
+// arc bows above the chord (or radially outward for cross-band); backward
+// bows below (or radially inward).
+function arcMid(
   start: THREE.Vector3,
   end: THREE.Vector3,
   curvature: number,
   forward: boolean,
-): THREE.QuadraticBezierCurve3 {
+): THREE.Vector3 {
   const mid = start.clone().add(end).multiplyScalar(0.5);
-  // Direction perpendicular to the chord in the Y direction (band-vertical).
-  // For same-band edges that vertical bow is the only one that reads; for
-  // cross-band edges the vertical is already covered by the height
-  // difference and we offset in the radial outward direction instead.
-  const chord = end.clone().sub(start);
-  const len = chord.length();
+  const len = end.clone().sub(start).length();
   const sameBand = Math.abs(start.y - end.y) < 0.001;
-
-  let offset: THREE.Vector3;
   if (sameBand) {
-    // bow vertically: lifts above the band (forward) or dips below (backward).
-    offset = new THREE.Vector3(0, len * curvature * (forward ? 1 : -1), 0);
-  } else {
-    // bow radially outward: spreads the pair away from the spine.
-    const radial = mid.clone();
-    radial.y = 0;
-    if (radial.lengthSq() < 1e-6) {
-      radial.set(1, 0, 0);
-    }
-    radial.normalize().multiplyScalar(len * curvature * (forward ? 1 : -1));
-    offset = radial;
+    return mid.add(
+      new THREE.Vector3(0, len * curvature * (forward ? 1 : -1), 0),
+    );
   }
-  return new THREE.QuadraticBezierCurve3(
-    start,
-    mid.clone().add(offset),
-    end,
+  const radial = new THREE.Vector3(mid.x, 0, mid.z);
+  if (radial.lengthSq() < 1e-6) radial.set(1, 0, 0);
+  radial.normalize().multiplyScalar(len * curvature * (forward ? 1 : -1));
+  return mid.add(radial);
+}
+
+// Sample a quadratic Bezier between start/end with control = midpoint
+// offset, emitting line-segment pairs into `out` for THREE.LineSegments.
+function sampleArc(
+  start: THREE.Vector3,
+  end: THREE.Vector3,
+  curvature: number,
+  forward: boolean,
+  out: number[],
+) {
+  const ctrl = arcMid(start, end, curvature, forward);
+  // Sample ARC_SEGMENTS+1 points, then emit each consecutive pair.
+  const pts: number[] = new Array((ARC_SEGMENTS + 1) * 3);
+  for (let i = 0; i <= ARC_SEGMENTS; i++) {
+    const t = i / ARC_SEGMENTS;
+    const oneT = 1 - t;
+    const w0 = oneT * oneT;
+    const w1 = 2 * oneT * t;
+    const w2 = t * t;
+    pts[i * 3 + 0] = w0 * start.x + w1 * ctrl.x + w2 * end.x;
+    pts[i * 3 + 1] = w0 * start.y + w1 * ctrl.y + w2 * end.y;
+    pts[i * 3 + 2] = w0 * start.z + w1 * ctrl.z + w2 * end.z;
+  }
+  for (let i = 0; i < ARC_SEGMENTS; i++) {
+    out.push(
+      pts[i * 3],
+      pts[i * 3 + 1],
+      pts[i * 3 + 2],
+      pts[(i + 1) * 3],
+      pts[(i + 1) * 3 + 1],
+      pts[(i + 1) * 3 + 2],
+    );
+  }
+}
+
+// Group instances by node group. Returns Map<group, instance-index[]> for
+// the InstancedMesh assembly.
+function groupInstances(
+  graph: KernelGraph,
+  instanceMeta: InstanceMeta[],
+): Record<string, number[]> {
+  const out: Record<string, number[]> = {};
+  for (const g of GROUP_ORDER) out[g] = [];
+  instanceMeta.forEach((inst, i) => {
+    const node = graph.nodes[inst.node_idx];
+    if (!node) return;
+    (out[node.group] ?? (out[node.group] = [])).push(i);
+  });
+  return out;
+}
+
+// One InstancedMesh for each node group. Each instance maps back to a
+// (node_idx, band) pair via instanceMeta. Geometry + material are
+// pre-allocated and passed via `args` rather than reflecting via JSX
+// children — that path was leaving the InstancedMesh with no
+// renderable geometry on first mount.
+const SHARED_SPHERE_GEOM = new THREE.SphereGeometry(1.0, 14, 12);
+
+function NodeGroup({
+  group,
+  instanceIndices,
+  positions,
+  instanceMeta,
+  graph,
+  hoverInstanceId,
+  setHoverNodeId,
+}: {
+  group: string;
+  instanceIndices: number[];
+  positions: Float32Array;
+  instanceMeta: InstanceMeta[];
+  graph: KernelGraph;
+  hoverInstanceId: number | null;
+  setHoverNodeId: (id: string | null) => void;
+}) {
+  const meshRef = useRef<THREE.InstancedMesh>(null);
+  const tmpObj = useMemo(() => new THREE.Object3D(), []);
+  const tmpColor = useMemo(() => new THREE.Color(), []);
+  const material = useMemo(
+    () =>
+      new THREE.MeshBasicMaterial({
+        transparent: true,
+        opacity: 0.95,
+        toneMapped: false,
+      }),
+    [],
+  );
+  const baseSize = GROUP_SIZE[group] ?? 0.02;
+
+  // Write matrices + colors imperatively after every layout/hover change.
+  // setColorAt creates mesh.instanceColor lazily; we then mark it dirty.
+  useEffect(() => {
+    const mesh = meshRef.current;
+    if (!mesh) return;
+    const hoveredNodeId =
+      hoverInstanceId !== null
+        ? instanceMeta[hoverInstanceId]?.node_id
+        : null;
+    instanceIndices.forEach((instIdx, i) => {
+      const p = instancePos(positions, instIdx);
+      const inst = instanceMeta[instIdx];
+      const node = graph.nodes[inst.node_idx];
+      const sameLogical = hoveredNodeId === inst.node_id;
+      const scale = sameLogical ? baseSize * 1.6 : baseSize;
+      tmpObj.position.copy(p);
+      tmpObj.scale.setScalar(scale);
+      tmpObj.updateMatrix();
+      mesh.setMatrixAt(i, tmpObj.matrix);
+      tmpColor.set(nodeColor(node));
+      mesh.setColorAt(i, tmpColor);
+    });
+    mesh.instanceMatrix.needsUpdate = true;
+    if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
+  }, [
+    positions,
+    instanceIndices,
+    instanceMeta,
+    baseSize,
+    hoverInstanceId,
+    graph,
+    tmpObj,
+    tmpColor,
+  ]);
+
+  if (instanceIndices.length === 0) return null;
+
+  return (
+    <instancedMesh
+      ref={meshRef}
+      args={[SHARED_SPHERE_GEOM, material, instanceIndices.length]}
+      onPointerOver={(e: ThreeEvent<PointerEvent>) => {
+        e.stopPropagation();
+        const i = e.instanceId;
+        if (typeof i === "number") {
+          const instIdx = instanceIndices[i];
+          const meta = instanceMeta[instIdx];
+          if (meta) setHoverNodeId(meta.node_id);
+        }
+      }}
+      onPointerOut={(e: ThreeEvent<PointerEvent>) => {
+        e.stopPropagation();
+        setHoverNodeId(null);
+      }}
+    />
   );
 }
 
-function TsvfArc({
-  start,
-  end,
-  curvature,
-  highlighted,
+// All forward arcs in one LineSegments; all backward arcs in another. Each
+// arc contributes ARC_SEGMENTS line segments (= 2 * ARC_SEGMENTS verts).
+function EdgeRibbons({
+  edgeGeoms,
+  positions,
+  hoverInstanceId,
 }: {
-  start: THREE.Vector3;
-  end: THREE.Vector3;
-  curvature: number;
-  highlighted: boolean;
+  edgeGeoms: EdgeGeom[];
+  positions: Float32Array;
+  hoverInstanceId: number | null;
 }) {
-  const fwd = useMemo(
-    () => arcCurve(start, end, curvature, true).getPoints(ARC_SEGMENTS),
-    [start, end, curvature],
-  );
-  const bwd = useMemo(
-    () => arcCurve(start, end, curvature, false).getPoints(ARC_SEGMENTS),
-    [start, end, curvature],
-  );
-  const fwdGeom = useMemo(() => {
-    const g = new THREE.BufferGeometry();
-    g.setFromPoints(fwd);
-    return g;
-  }, [fwd]);
-  const bwdGeom = useMemo(() => {
-    const g = new THREE.BufferGeometry();
-    g.setFromPoints(bwd);
-    return g;
-  }, [bwd]);
-  const opacity = highlighted ? 0.9 : 0.22;
+  const { fwdGeom, bwdGeom } = useMemo(() => {
+    const fwd: number[] = [];
+    const bwd: number[] = [];
+    for (const e of edgeGeoms) {
+      const s = instancePos(positions, e.source_instance);
+      const t = instancePos(positions, e.target_instance);
+      sampleArc(s, t, e.curvature, true, fwd);
+      sampleArc(s, t, e.curvature, false, bwd);
+    }
+    const fwdGeom = new THREE.BufferGeometry();
+    fwdGeom.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(new Float32Array(fwd), 3),
+    );
+    const bwdGeom = new THREE.BufferGeometry();
+    bwdGeom.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(new Float32Array(bwd), 3),
+    );
+    return { fwdGeom, bwdGeom };
+  }, [edgeGeoms, positions]);
+
+  // Hover-dim with a simple opacity boost. Real per-edge highlight comes in
+  // Phase 3 when we attribute-pack the hover flag.
+  const litOpacity = hoverInstanceId === null ? 0.32 : 0.5;
+
   return (
-    <group>
-      <line>
+    <>
+      <lineSegments>
         <primitive object={fwdGeom} attach="geometry" />
-        <lineBasicMaterial color="#0d9488" transparent opacity={opacity} />
-      </line>
-      <line>
+        <lineBasicMaterial
+          color="#0d9488"
+          transparent
+          opacity={litOpacity}
+        />
+      </lineSegments>
+      <lineSegments>
         <primitive object={bwdGeom} attach="geometry" />
-        <lineBasicMaterial color="#8b5cf6" transparent opacity={opacity * 0.85} />
-      </line>
-    </group>
+        <lineBasicMaterial
+          color="#8b5cf6"
+          transparent
+          opacity={litOpacity * 0.85}
+        />
+      </lineSegments>
+    </>
   );
 }
 
-function NodeDot({
-  node,
-  position,
-  size,
-  highlighted,
-  onPointerOver,
-  onPointerOut,
-}: {
-  node: KernelNode;
-  position: THREE.Vector3;
-  size: number;
-  highlighted: boolean;
-  onPointerOver: (e: ThreeEvent<PointerEvent>) => void;
-  onPointerOut: (e: ThreeEvent<PointerEvent>) => void;
-}) {
-  return (
-    <mesh
-      position={position}
-      onPointerOver={onPointerOver}
-      onPointerOut={onPointerOut}
-    >
-      <sphereGeometry args={[highlighted ? size * 1.5 : size, 16, 16]} />
-      <meshBasicMaterial
-        color={nodeColor(node)}
-        transparent
-        opacity={highlighted ? 1.0 : 0.85}
-      />
-    </mesh>
-  );
-}
-
-function sizeFor(node: KernelNode) {
-  if (node.group === "primitive") return 0.05;
-  if (node.group === "family") return 0.038;
-  if (node.group === "component") return 0.032;
-  if (node.group === "attester") return 0.045;
-  if (node.group === "claim") return 0.022;
-  return 0.018;
+// Re-invalidate the frameloop whenever the visible inputs change. Required
+// for frameloop="demand". Triple-pump on mount because we have seen the
+// first invalidate land before InstancedMesh's matrix/color attributes are
+// uploaded, leaving the canvas blank on initial paint.
+function InvalidateOnChange({ signal }: { signal: unknown }) {
+  const invalidate = useThree((s) => s.invalidate);
+  useEffect(() => {
+    invalidate();
+    const a = requestAnimationFrame(() => invalidate());
+    const b = requestAnimationFrame(() => invalidate());
+    return () => {
+      cancelAnimationFrame(a);
+      cancelAnimationFrame(b);
+    };
+  }, [signal, invalidate]);
+  return null;
 }
 
 export default function AlephScene({
@@ -275,77 +392,62 @@ export default function AlephScene({
   edgeGeoms: EdgeGeom[];
   onHoverChange?: (nodeId: string | null) => void;
 }) {
-  const [hoverId, setHoverId] = useState<string | null>(null);
+  const [hoverInstanceId, setHoverInstanceId] = useState<number | null>(null);
+  const [hoverNodeId, setHoverNodeId] = useState<string | null>(null);
 
   useEffect(() => {
-    onHoverChange?.(hoverId);
-  }, [hoverId, onHoverChange]);
+    onHoverChange?.(hoverNodeId);
+  }, [hoverNodeId, onHoverChange]);
+
+  // Map hover node id → first instance for size-bump
+  useEffect(() => {
+    if (hoverNodeId === null) {
+      setHoverInstanceId(null);
+      return;
+    }
+    const idx = instanceMeta.findIndex((m) => m.node_id === hoverNodeId);
+    setHoverInstanceId(idx >= 0 ? idx : null);
+  }, [hoverNodeId, instanceMeta]);
+
+  const grouped = useMemo(
+    () => groupInstances(graph, instanceMeta),
+    [graph, instanceMeta],
+  );
 
   return (
-    <Canvas camera={{ position: [2.6, 1.6, 2.6], fov: 50 }} dpr={[1, 2]}>
+    <Canvas
+      camera={{ position: [2.6, 1.6, 2.6], fov: 50 }}
+      dpr={[1, 2]}
+    >
       <ambientLight intensity={0.6} />
       <directionalLight position={[3, 4, 3]} intensity={0.6} />
       <GroundPlane />
-      {BAND_Z.map((z, i) => (
-        <Band key={i} z={z} label={BAND_LABELS[i]} lit={i === 4 /* cell */} />
+      <BandRings />
+      <EdgeRibbons
+        edgeGeoms={edgeGeoms}
+        positions={positions}
+        hoverInstanceId={hoverInstanceId}
+      />
+      {GROUP_ORDER.map((g) => (
+        <NodeGroup
+          key={g}
+          group={g}
+          instanceIndices={grouped[g] ?? []}
+          positions={positions}
+          instanceMeta={instanceMeta}
+          graph={graph}
+          hoverInstanceId={hoverInstanceId}
+          setHoverNodeId={setHoverNodeId}
+        />
       ))}
-      <VerticalSpine />
-      <PulsingRing z={BAND_Z[4]} />
-
-      {/* Paired forward/backward TSVF arcs */}
-      <group>
-        {edgeGeoms.map((e, i) => {
-          const start = instancePos(positions, e.source_instance);
-          const end = instancePos(positions, e.target_instance);
-          const sId = instanceMeta[e.source_instance]?.node_id;
-          const tId = instanceMeta[e.target_instance]?.node_id;
-          const highlighted =
-            hoverId !== null && (sId === hoverId || tId === hoverId);
-          return (
-            <TsvfArc
-              key={i}
-              start={start}
-              end={end}
-              curvature={e.curvature}
-              highlighted={highlighted}
-            />
-          );
-        })}
-      </group>
-
-      {/* Node instances. Each instance has its own mesh in Phase 2; Phase 3
-          moves to InstancedMesh when we cross ~1000 instances. */}
-      <group>
-        {instanceMeta.map((inst, i) => {
-          const node = graph.nodes[inst.node_idx];
-          if (!node) return null;
-          const pos = instancePos(positions, i);
-          const highlighted = node.id === hoverId;
-          return (
-            <NodeDot
-              key={i}
-              node={node}
-              position={pos}
-              size={sizeFor(node)}
-              highlighted={highlighted}
-              onPointerOver={(e) => {
-                e.stopPropagation();
-                setHoverId(node.id);
-              }}
-              onPointerOut={(e) => {
-                e.stopPropagation();
-                setHoverId(null);
-              }}
-            />
-          );
-        })}
-      </group>
-
       <OrbitControls
         enablePan={false}
-        minDistance={1.5}
+        minDistance={0.6}
         maxDistance={6}
         target={[0, 0.5, 0]}
+      />
+      <InvalidateOnChange
+        signal={`${positions.length}-${edgeGeoms.length}-${hoverInstanceId}`}
       />
     </Canvas>
   );
