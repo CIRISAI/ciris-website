@@ -1,0 +1,13 @@
+# wasm-pack regenerates this directory. We track ONLY the artifacts the
+# Next.js build needs (everything imported via the `coherence-kernel`
+# package alias in package.json). The build environment doesn't run
+# wasm-pack, so these files must be committed.
+*
+!coherence_kernel.js
+!coherence_kernel.d.ts
+!coherence_kernel_bg.js
+!coherence_kernel_bg.wasm
+!coherence_kernel_bg.wasm.d.ts
+!package.json
+!README.md
+!.gitignore
