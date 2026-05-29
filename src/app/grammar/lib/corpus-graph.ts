@@ -63,7 +63,13 @@ function pseudoConfidence(id: string): number {
 }
 
 function pushPrimitivesAndFamilies(nodes: KernelNode[], edges: KernelEdge[]): void {
-  // 1+4 multi-scale primitives at the disk centre.
+  // Single cell-band placements. Earlier versions made primitives and
+  // families multi_scale=true to honour the Ubuntu-primary "fractal self
+  // at every scale" design. In practice, 5 primitives × 6 bands + 5
+  // families × 6 bands = 60 stacked spheres up the spine that
+  // dominated the eye and made the rosette unreadable. CEG's
+  // structural meaning is preserved by the kernel; the renderer just
+  // shows them once on the cell band.
   for (const p of STRUCTURAL_PRIMITIVES) {
     nodes.push({
       id: `prim:${p}`,
@@ -72,10 +78,9 @@ function pushPrimitivesAndFamilies(nodes: KernelNode[], edges: KernelEdge[]): vo
       component: null,
       family: null,
       band: 4,
-      multi_scale: true,
+      multi_scale: false,
     });
   }
-  // Composer primitives operate_on scores.
   for (const p of ["delegates_to", "supersedes", "withdraws", "recants"]) {
     edges.push({
       source: `prim:${p}`,
@@ -83,7 +88,6 @@ function pushPrimitivesAndFamilies(nodes: KernelNode[], edges: KernelEdge[]): vo
       kind: "operates_on",
     });
   }
-  // 5 families.
   for (const f of FAMILIES) {
     nodes.push({
       id: `family:${f}`,
@@ -92,7 +96,7 @@ function pushPrimitivesAndFamilies(nodes: KernelNode[], edges: KernelEdge[]): vo
       component: null,
       family: f,
       band: 4,
-      multi_scale: true,
+      multi_scale: false,
     });
     edges.push({
       source: "prim:scores",

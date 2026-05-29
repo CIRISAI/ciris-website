@@ -482,6 +482,7 @@ export default function AlephScene({
   instanceMeta,
   edgeGeoms,
   selectedNodeId = null,
+  hiddenNodeIds,
   onHoverChange,
   onPickNode,
 }: {
@@ -490,6 +491,7 @@ export default function AlephScene({
   instanceMeta: InstanceMeta[];
   edgeGeoms: EdgeGeom[];
   selectedNodeId?: string | null;
+  hiddenNodeIds?: Set<string>;
   onHoverChange?: (nodeId: string | null) => void;
   onPickNode?: (nodeId: string) => void;
 }) {
@@ -521,6 +523,32 @@ export default function AlephScene({
     () => groupInstances(graph, instanceMeta),
     [graph, instanceMeta],
   );
+
+  // Apply runtime hides: drop any instance whose node_id is in the hide
+  // set. Edges that touch a hidden node also drop. The kernel still
+  // computed everything; we just skip drawing.
+  const filteredGrouped = useMemo(() => {
+    if (!hiddenNodeIds || hiddenNodeIds.size === 0) return grouped;
+    const out: Record<string, number[]> = {};
+    for (const g of Object.keys(grouped)) {
+      out[g] = grouped[g].filter((instIdx) => {
+        const meta = instanceMeta[instIdx];
+        return meta && !hiddenNodeIds.has(meta.node_id);
+      });
+    }
+    return out;
+  }, [grouped, hiddenNodeIds, instanceMeta]);
+  const filteredEdgeGeoms = useMemo(() => {
+    if (!hiddenNodeIds || hiddenNodeIds.size === 0) return edgeGeoms;
+    return edgeGeoms.filter((e) => {
+      const sMeta = instanceMeta[e.source_instance];
+      const tMeta = instanceMeta[e.target_instance];
+      if (!sMeta || !tMeta) return false;
+      return (
+        !hiddenNodeIds.has(sMeta.node_id) && !hiddenNodeIds.has(tMeta.node_id)
+      );
+    });
+  }, [edgeGeoms, instanceMeta, hiddenNodeIds]);
 
   return (
     <Canvas
@@ -571,7 +599,7 @@ export default function AlephScene({
       <GroundPlane />
       <BandRings />
       <EdgeRibbons
-        edgeGeoms={edgeGeoms}
+        edgeGeoms={filteredEdgeGeoms}
         positions={positions}
         hoverInstanceId={hoverInstanceId}
       />
@@ -579,7 +607,7 @@ export default function AlephScene({
         <NodeGroup
           key={g}
           group={g}
-          instanceIndices={grouped[g] ?? []}
+          instanceIndices={filteredGrouped[g] ?? []}
           positions={positions}
           instanceMeta={instanceMeta}
           graph={graph}

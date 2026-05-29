@@ -148,6 +148,11 @@ struct LayoutCtx {
     /// For each node (by node array index), its order within its component's prefix list.
     prefix_intra_component_idx: Vec<usize>,
     component_prefix_count: std::collections::HashMap<String, usize>,
+    /// Cached 2D position (x, y) per attester id, computed on the cell
+    /// band so claims can sit adjacent to their attester instead of
+    /// being globally id-hash-spread (the "cloud of edges" effect the
+    /// user reported).
+    attester_positions: std::collections::HashMap<String, (f32, f32)>,
 }
 
 fn build_layout_ctx(input: &GraphInput) -> LayoutCtx {
@@ -182,12 +187,51 @@ fn build_layout_ctx(input: &GraphInput) -> LayoutCtx {
         }
     }
 
+    // Pre-compute attester 2D positions so claims can anchor to them.
+    let mut attester_positions: std::collections::HashMap<String, (f32, f32)> =
+        std::collections::HashMap::new();
+    for n in &input.nodes {
+        if n.group == "attester" {
+            let (x, y) = attester_xy(n, &families);
+            attester_positions.insert(n.id.clone(), (x, y));
+        }
+    }
+
     LayoutCtx {
         families,
         components,
         prefix_intra_component_idx: intra,
         component_prefix_count: per_component_count,
+        attester_positions,
     }
+}
+
+/// Pure 2D placement for an attester. Family wedge centroid + a tight
+/// id-hash jitter so multiple voices in the same family pack into a
+/// readable cluster instead of overlapping with neighbouring wedges.
+fn attester_xy(node: &Node, families: &[String]) -> (f32, f32) {
+    let h = id_hash(&node.id);
+    let base = if let Some(f) = node.family.as_ref() {
+        let f_idx = families.iter().position(|x| x == f).unwrap_or(0);
+        (f_idx as f32 / families.len().max(1) as f32) * TAU
+    } else {
+        0.0
+    };
+    // Was ±20% TAU (±72°), wider than the family wedge spacing of 72°
+    // so attesters from one family overlapped the next two. ±5% TAU
+    // (±18°) keeps each voice inside its slice.
+    let jitter = (h as f32 / u32::MAX as f32) * TAU * 0.10 - TAU * 0.05;
+    let theta = base + jitter;
+    // Slight radial jitter so voices don't all sit on the same circle.
+    let r_jitter = 0.50 + ((h >> 16) as f32 / u16::MAX as f32) * 0.12;
+    let r = hyperbolic_r(r_jitter);
+    (r * theta.cos(), r * theta.sin())
+}
+
+/// Parse the attester id out of a claim label of shape
+/// `<attester>|<dimension>|<score>|<confidence>`.
+fn claim_attester_id(label: &str) -> Option<&str> {
+    label.split('|').next()
 }
 
 fn place_node(node_idx: usize, node: &Node, layout_ctx: &LayoutCtx) -> (f32, f32, f32) {
@@ -222,27 +266,37 @@ fn place_node(node_idx: usize, node: &Node, layout_ctx: &LayoutCtx) -> (f32, f32
         return (r * theta.cos(), r * theta.sin(), z);
     }
 
-    // Attesters -> ring at depth 0.55, angle keyed off id-hash so multiple
-    // attesters spread around the disk instead of stacking. Family-bearing
-    // attesters cluster near their family wedge.
+    // Attesters -> within their family wedge (tight ±5% TAU jitter so
+    // STANDING / ACTION / DETECTION / CONSENSUS / CORRECTION clusters
+    // are visually distinct on the disk).
     if node.group == "attester" {
-        let h = id_hash(&node.id);
-        let base = if let Some(f) = node.family.as_ref() {
-            let f_idx = layout_ctx.families.iter().position(|x| x == f).unwrap_or(0);
-            (f_idx as f32 / layout_ctx.families.len().max(1) as f32) * TAU
-        } else {
-            0.0
-        };
-        let jitter = (h as f32 / u32::MAX as f32) * TAU * 0.4 - TAU * 0.2;
-        let theta = base + jitter;
-        let r = hyperbolic_r(0.55);
-        return (r * theta.cos(), r * theta.sin(), z);
+        let (x, y) = attester_xy(node, &layout_ctx.families);
+        return (x, y, z);
     }
 
-    // Claims -> ring at depth 0.70, angle keyed off id-hash. Outer than
-    // attesters so the asserts-edges visibly fan outward from the
-    // attesting voice.
+    // Claims -> placed adjacent to their attester so the assertion arcs
+    // become short local strands instead of cross-disk noise. Falls
+    // back to the family-wedge id-hash spread when the attester is
+    // unknown (rare; orphan claims shouldn't happen with the corpus
+    // builders).
     if node.group == "claim" {
+        if let Some(att_id) = claim_attester_id(&node.label) {
+            if let Some(&(ax, ay)) = layout_ctx.attester_positions.get(att_id) {
+                let h = id_hash(&node.id);
+                let offset_theta = (h as f32 / u32::MAX as f32) * TAU;
+                // Small offset (~ 5% disk radius) so claims hug their
+                // attester. Multiple claims per attester fan around the
+                // voice in a tiny halo.
+                let offset_r = 0.04
+                    + ((h >> 16) as f32 / u16::MAX as f32) * 0.03;
+                return (
+                    ax + offset_r * offset_theta.cos(),
+                    ay + offset_r * offset_theta.sin(),
+                    z,
+                );
+            }
+        }
+        // Orphan-claim fallback: keep the old global spread.
         let h = id_hash(&node.id);
         let theta = (h as f32 / u32::MAX as f32) * TAU;
         let r_jitter = 0.66 + ((h >> 16) as f32 / u16::MAX as f32) * 0.12;
@@ -554,6 +608,7 @@ impl CoherenceKernel {
                 components: Vec::new(),
                 prefix_intra_component_idx: Vec::new(),
                 component_prefix_count: std::collections::HashMap::new(),
+                attester_positions: std::collections::HashMap::new(),
             },
         }
     }

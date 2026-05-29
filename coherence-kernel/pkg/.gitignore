@@ -1,7 +1,7 @@
-# wasm-pack regenerates this directory. We track ONLY the artifacts the
+# wasm-pack regenerates this directory. Track ONLY the artifacts the
 # Next.js build needs (everything imported via the `coherence-kernel`
-# package alias in package.json). The build environment doesn't run
-# wasm-pack, so these files must be committed.
+# package alias in package.json). The Cloudflare Pages build env does
+# not run wasm-pack, so these files must be committed.
 *
 !coherence_kernel.js
 !coherence_kernel.d.ts

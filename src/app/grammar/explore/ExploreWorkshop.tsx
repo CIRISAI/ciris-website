@@ -304,6 +304,14 @@ export default function ExploreWorkshop({
   const kernelRef = useRef<KernelInstance | null>(null);
   const [ready, setReady] = useState(false);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+  // Topology filter state — runtime knobs that hide groups or focus a
+  // single CEG concern area without changing the kernel graph. Hiding a
+  // group also drops any edges where the hidden node is either end, so
+  // the scene declutters cleanly.
+  const [hideGroups, setHideGroups] = useState<Set<string>>(
+    new Set(["primitive"]),
+  );
+  const [focusFamily, setFocusFamily] = useState<string | null>(null);
 
   // Wire the perf harness early so the first kernel.set_graph capture
   // happens after enabling. SceneFrame separately installs the per-frame
@@ -348,6 +356,28 @@ export default function ExploreWorkshop({
     return buildWorkshopGraph(pinned, claims, vouches, seedCount);
   }, [corpusMode, pinned, claims, vouches, seedCount, _source]);
   const graphSummary = useMemo(() => summariseGraph(graph), [graph]);
+  // Compute the set of hidden node ids from the filters. Hidden nodes
+  // still exist in the kernel (positions, verdict, corridor all still
+  // compute against the full graph), but the scene skips drawing
+  // them and any edge touching them.
+  const hiddenNodeIds = useMemo(() => {
+    const set = new Set<string>();
+    for (const n of graph.nodes) {
+      if (hideGroups.has(n.group)) {
+        set.add(n.id);
+        continue;
+      }
+      if (focusFamily && n.family && n.family !== focusFamily) {
+        // Don't hide structural primitives / spine when focusing — they
+        // anchor the geometry. Only hide attesters/claims of other
+        // families.
+        if (n.group === "attester" || n.group === "claim") {
+          set.add(n.id);
+        }
+      }
+    }
+    return set;
+  }, [graph, hideGroups, focusFamily]);
 
   useEffect(() => {
     if (!ready || !kernelRef.current) return;
@@ -459,6 +489,23 @@ export default function ExploreWorkshop({
         summary={graphSummary}
       />
 
+      {/* Topology filters — CEG-powered sliders/toggles that hide
+          groups or focus a single concern area. */}
+      <TopologyFilters
+        hideGroups={hideGroups}
+        onToggleGroup={(g) =>
+          setHideGroups((prev) => {
+            const next = new Set(prev);
+            if (next.has(g)) next.delete(g);
+            else next.add(g);
+            return next;
+          })
+        }
+        focusFamily={focusFamily}
+        onFocusFamily={setFocusFamily}
+        summary={graphSummary}
+      />
+
       {/* Canvas — the page */}
       <SceneFrame
         mounted={hasMounted}
@@ -467,6 +514,7 @@ export default function ExploreWorkshop({
         instanceMeta={instanceMeta}
         edgeGeoms={edgeGeoms}
         selectedNodeId={selectedNodeId}
+        hiddenNodeIds={hiddenNodeIds}
         onPickNode={setSelectedNodeId}
       />
 
@@ -829,6 +877,7 @@ function SceneFrame({
   instanceMeta,
   edgeGeoms,
   selectedNodeId,
+  hiddenNodeIds,
   onPickNode,
 }: {
   mounted: boolean;
@@ -837,6 +886,7 @@ function SceneFrame({
   instanceMeta: InstanceMeta[];
   edgeGeoms: EdgeGeom[];
   selectedNodeId?: string | null;
+  hiddenNodeIds?: Set<string>;
   onPickNode?: (id: string) => void;
 }) {
   const [webglOk, setWebglOk] = useState<boolean | null>(null);
@@ -908,6 +958,7 @@ function SceneFrame({
             instanceMeta={instanceMeta}
             edgeGeoms={edgeGeoms}
             selectedNodeId={selectedNodeId}
+            hiddenNodeIds={hiddenNodeIds}
             onPickNode={onPickNode}
           />
           <SceneOverlay />
@@ -1629,6 +1680,106 @@ function EdgeList({
         )}
       </ul>
     </div>
+  );
+}
+
+// TopologyFilters — runtime CEG-powered knobs that change what's drawn
+// without recomputing the kernel graph. The kernel still runs over the
+// full data (verdict + corridor stay honest); the scene just omits
+// hidden groups and any edge touching a hidden node.
+function TopologyFilters({
+  hideGroups,
+  onToggleGroup,
+  focusFamily,
+  onFocusFamily,
+  summary,
+}: {
+  hideGroups: Set<string>;
+  onToggleGroup: (g: string) => void;
+  focusFamily: string | null;
+  onFocusFamily: (f: string | null) => void;
+  summary: Record<string, number>;
+}) {
+  // Group toggles. "Hide" reads more naturally to users than "show".
+  const GROUP_OPTS: Array<{ id: string; label: string }> = [
+    { id: "primitive", label: "spine (scores etc.)" },
+    { id: "family", label: "concern-area nodes" },
+    { id: "component", label: "components" },
+    { id: "prefix", label: "prefix leaves" },
+    { id: "claim", label: "claims" },
+  ];
+  const FAMILIES = ["STANDING", "ACTION", "DETECTION", "CONSENSUS", "CORRECTION"];
+  return (
+    <details className="rounded-md border border-slate-200 dark:border-gray-800">
+      <summary className="flex cursor-pointer list-none items-center justify-between px-3 py-2 text-sm font-semibold text-slate-800 dark:text-slate-100">
+        <span>Topology filters</span>
+        <span className="text-[11px] font-normal text-slate-500">
+          {hideGroups.size > 0 || focusFamily
+            ? `active: ${hideGroups.size + (focusFamily ? 1 : 0)}`
+            : "none"}
+        </span>
+      </summary>
+      <div className="border-t border-slate-200 p-3 dark:border-gray-800">
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+          Hide groups
+        </p>
+        <div className="mb-3 flex flex-wrap gap-1.5">
+          {GROUP_OPTS.map((g) => {
+            const off = hideGroups.has(g.id);
+            const count = summary[g.id] ?? 0;
+            return (
+              <button
+                key={g.id}
+                type="button"
+                onClick={() => onToggleGroup(g.id)}
+                className={`rounded-full border px-2 py-0.5 text-[11px] ${
+                  off
+                    ? "border-slate-300 bg-slate-100 text-slate-400 line-through dark:border-gray-700 dark:bg-gray-800"
+                    : "border-brand-primary bg-brand-primary/10 text-brand-primary"
+                }`}
+                title={off ? "hidden — tap to show" : "visible — tap to hide"}
+              >
+                {g.label} ({count})
+              </button>
+            );
+          })}
+        </div>
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+          Focus concern area
+        </p>
+        <div className="flex flex-wrap gap-1.5">
+          <button
+            type="button"
+            onClick={() => onFocusFamily(null)}
+            className={`rounded-full border px-2 py-0.5 text-[11px] ${
+              focusFamily === null
+                ? "border-brand-primary bg-brand-primary text-white"
+                : "border-slate-300 text-slate-600 dark:border-gray-700 dark:text-slate-300"
+            }`}
+          >
+            all
+          </button>
+          {FAMILIES.map((f) => (
+            <button
+              key={f}
+              type="button"
+              onClick={() => onFocusFamily(focusFamily === f ? null : f)}
+              className={`rounded-full border px-2 py-0.5 text-[11px] ${
+                focusFamily === f
+                  ? "border-brand-primary bg-brand-primary text-white"
+                  : "border-slate-300 text-slate-600 dark:border-gray-700 dark:text-slate-300"
+              }`}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+        <p className="mt-3 text-[10px] italic text-slate-500">
+          Filters change WHAT IS DRAWN. The kernel still composes verdicts and
+          corridor metrics over the full conversation.
+        </p>
+      </div>
+    </details>
   );
 }
 
