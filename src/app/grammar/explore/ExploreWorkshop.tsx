@@ -695,56 +695,62 @@ export default function ExploreWorkshop({
           {verdict && (
             <div className="rounded-xl border-l-4 border-brand-primary bg-white p-3 dark:bg-gray-900">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-brand-primary">
-                Policy {policy} verdict
+                What the trusted voices think (Policy {policy})
               </p>
               <p className="mt-1 break-all font-mono text-[11px] text-slate-700 dark:text-slate-300">
-                {verdict.dimension}
+                on: {verdict.dimension}
               </p>
               <p className="mt-2 text-2xl font-bold text-slate-900 dark:text-white">
                 {verdict.composed_score >= 0 ? "+" : ""}
-                {verdict.composed_score.toFixed(3)}
+                {verdict.composed_score.toFixed(2)}
               </p>
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                composed score · confidence{" "}
-                {verdict.composed_confidence.toFixed(2)} · supporting{" "}
+                blended score · how sure they are:{" "}
+                {Math.round(verdict.composed_confidence * 100)}% · backed by{" "}
                 {verdict.supporting_count}{" "}
-                {verdict.supporting_count === 1 ? "claim" : "claims"}
+                {verdict.supporting_count === 1 ? "voice" : "voices"}
               </p>
             </div>
           )}
 
-          {/* Corridor */}
+          {/* Corridor — human-readable. The Rust kernel still computes
+              k / ρ / k_eff from the synthesis paper, but the public UI
+              never names them that way. */}
           {corridor && (
             <div className="rounded-xl border-l-4 border-purple-400 bg-white p-3 dark:bg-gray-900">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-purple-700 dark:text-purple-300">
-                Corridor (synthesis paper §4)
+                How well-rounded the conversation is
               </p>
               <div className="mt-2 grid grid-cols-3 gap-2 text-center">
-                <div>
+                <div title="How many CEG concern areas (STANDING, ACTION, DETECTION, CONSENSUS, CORRECTION) the conversation actually touches.">
                   <p className="font-mono text-xl font-bold text-slate-900 dark:text-white">
                     {corridor.k}
                   </p>
                   <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    k
+                    Concern areas
                   </p>
                 </div>
-                <div>
+                <div title="How much the conversation piles into one concern area. 0 = perfectly spread; 1 = everyone is talking about the same thing.">
                   <p className="font-mono text-xl font-bold text-slate-900 dark:text-white">
-                    {corridor.rho_estimate.toFixed(2)}
+                    {Math.round(corridor.rho_estimate * 100)}%
                   </p>
                   <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    ρ
+                    Echo rate
                   </p>
                 </div>
-                <div>
+                <div title="The number of effectively independent voices once you account for the echo. Higher means a more diverse evidence pool.">
                   <p className="font-mono text-xl font-bold text-brand-primary">
-                    {corridor.k_eff.toFixed(2)}
+                    {corridor.k_eff.toFixed(1)}
                   </p>
                   <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    k_eff
+                    Independent voices
                   </p>
                 </div>
               </div>
+              <p className="mt-2 text-[10px] italic text-slate-500 dark:text-slate-400">
+                More concern areas + lower echo rate = more independent voices.
+                In the synthesis paper this is k, ρ, k_eff.
+              </p>
               {corridorHistory.length > 3 && (
                 <KEffSparkline history={corridorHistory} />
               )}
@@ -781,9 +787,9 @@ export default function ExploreWorkshop({
         />
 
         <p className="text-[11px] text-slate-500 dark:text-slate-400">
-          One scene, two epistemic lenses. The structural primitives, the
-          five families, the corridor metric — all the same kernel. The
-          attesters and claims change with the mode.
+          One scene, three views. The five composition primitives, the
+          five concern areas, the well-roundedness numbers — same kernel.
+          The voices and claims change with the mode.
         </p>
       </section>
       </div>

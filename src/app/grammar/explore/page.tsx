@@ -19,11 +19,11 @@ export default async function ExplorePage() {
               Explore the grammar
             </h1>
             <p className="max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
-              Build a small attestation chain. Pin a few attesters as the
-              voices you trust, make some claims on a dimension, run a
-              composition policy, and watch the corridor metric move. The
-              same Rust kernel that powers the namespace view computes the
-              composed verdict here.
+              Build a small attestation chain. Pin a few voices you trust,
+              make some claims on a topic, run a composition policy, and
+              watch how well-rounded the conversation gets. Or flip to
+              Encyclopedia or Mystery Game to see what 100+ voices look
+              like when they're all talking at once.
             </p>
             <p className="text-xs text-slate-500 dark:text-slate-400">
               FSD acceptance bar for Phase 2 per{" "}
