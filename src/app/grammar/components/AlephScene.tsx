@@ -17,7 +17,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
-import { OrbitControls, Text } from "@react-three/drei";
+import { Html, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import type {
   KernelGraph,
@@ -88,6 +88,11 @@ function GroundPlane() {
 }
 
 function BandRings() {
+  // Band labels were drawn with drei's <Text> (Troika SDF text). Troika
+  // hits cdn.jsdelivr.net for unicode-font-resolver data and runs a
+  // worker pool, both of which trip CSP. For six ASCII words we don't
+  // need any of that — drei's <Html> portals plain DOM into world
+  // space, no workers, no external fetches, sharper at any zoom.
   return (
     <>
       {BAND_Z.map((z, i) => (
@@ -100,15 +105,25 @@ function BandRings() {
               opacity={i === 4 ? 0.55 : 0.25}
             />
           </mesh>
-          <Text
+          <Html
             position={[1.05, 0, 0]}
-            fontSize={0.045}
-            color={i === 4 ? "#0d9488" : "#64748b"}
-            anchorX="left"
-            anchorY="middle"
+            center={false}
+            zIndexRange={[20, 0]}
+            distanceFactor={1.2}
+            style={{
+              pointerEvents: "none",
+              userSelect: "none",
+              whiteSpace: "nowrap",
+              fontFamily: "ui-sans-serif, system-ui, sans-serif",
+              fontSize: "11px",
+              fontWeight: 600,
+              letterSpacing: "0.05em",
+              color: i === 4 ? "#0d9488" : "#64748b",
+              transform: "translate(8px, -50%)",
+            }}
           >
             {BAND_LABELS[i]}
-          </Text>
+          </Html>
         </group>
       ))}
       <VerticalSpine />
