@@ -438,23 +438,127 @@ export default function ExploreWorkshop({
     );
   }
 
+  // Canvas-first progressive disclosure:
+  //   1. The graph IS the page. Top of the column, full width.
+  //   2. The node detail panel is the second-most-semantic surface.
+  //      It opens directly under the graph when a sphere is selected.
+  //   3. Everything else — mode notes, palette, verdict, corridor,
+  //      workshop controls, diagnostics — collapses into a column of
+  //      named <details> sections below.
+  //   4. The mode toggle stays as three chips at the very top because
+  //      it's a navigation control, not a panel.
+  //
+  // Visual register: one ink colour, one accent, hairline borders, no
+  // decorative gradients. Tufte / Vignelli / single-pane editorial.
   return (
     <div className="space-y-4">
-      <CorpusModeBar
+      {/* Mode chips — three buttons, compact, one row */}
+      <CorpusModeStrip
         mode={corpusMode}
         onChange={setCorpusMode}
         summary={graphSummary}
       />
-      <div
-        className={`grid gap-4 ${
-          corpusMode === "workshop"
-            ? "lg:grid-cols-[320px_minmax(0,1fr)]"
-            : "lg:grid-cols-[260px_minmax(0,1fr)]"
-        }`}
-      >
-        {/* Left controls / mode notes */}
-        {corpusMode === "workshop" ? (
-          <aside className="space-y-4">
+
+      {/* Canvas — the page */}
+      <SceneFrame
+        mounted={hasMounted}
+        graph={graph}
+        positions={positions}
+        instanceMeta={instanceMeta}
+        edgeGeoms={edgeGeoms}
+        selectedNodeId={selectedNodeId}
+        onPickNode={setSelectedNodeId}
+      />
+
+      {/* Detail — what you clicked on */}
+      {selectedNodeId ? (
+        <NodeDetailPanel
+          graph={graph}
+          nodeId={selectedNodeId}
+          source={_source}
+          onPick={setSelectedNodeId}
+          onClose={() => setSelectedNodeId(null)}
+        />
+      ) : (
+        <p className="rounded-md border border-dashed border-slate-300 px-3 py-2 text-center text-xs text-slate-500 dark:border-gray-700">
+          Tap a sphere in the graph to read what it is.
+        </p>
+      )}
+
+      {/* Progressive-disclosure column: everything else */}
+      <DisclosureSection title="What you are looking at" defaultOpen>
+        <CorpusModeNotes mode={corpusMode} summary={graphSummary} />
+      </DisclosureSection>
+
+      {(verdict || corridor) && (
+        <DisclosureSection title="Numbers from the trusted voices">
+          <div className="grid gap-3 md:grid-cols-2">
+            {verdict && (
+              <div className="rounded-md border border-slate-200 bg-white p-3 dark:border-gray-700 dark:bg-gray-900">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                  What the trusted voices think (Policy {policy})
+                </p>
+                <p className="mt-1 break-all font-mono text-[11px] text-slate-700 dark:text-slate-300">
+                  on: {verdict.dimension}
+                </p>
+                <p className="mt-2 text-2xl font-bold text-slate-900 dark:text-white">
+                  {verdict.composed_score >= 0 ? "+" : ""}
+                  {verdict.composed_score.toFixed(2)}
+                </p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  blended score · how sure they are:{" "}
+                  {Math.round(verdict.composed_confidence * 100)}% · backed
+                  by {verdict.supporting_count}{" "}
+                  {verdict.supporting_count === 1 ? "voice" : "voices"}
+                </p>
+              </div>
+            )}
+            {corridor && (
+              <div className="rounded-md border border-slate-200 bg-white p-3 dark:border-gray-700 dark:bg-gray-900">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                  How well-rounded the conversation is
+                </p>
+                <div className="mt-2 grid grid-cols-3 gap-2 text-center">
+                  <div title="How many CEG concern areas the conversation touches.">
+                    <p className="font-mono text-xl font-bold text-slate-900 dark:text-white">
+                      {corridor.k}
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                      Concern areas
+                    </p>
+                  </div>
+                  <div title="0 = perfectly spread; 1 = everyone is on the same thing.">
+                    <p className="font-mono text-xl font-bold text-slate-900 dark:text-white">
+                      {Math.round(corridor.rho_estimate * 100)}%
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                      Echo rate
+                    </p>
+                  </div>
+                  <div title="Independent voices once you account for the echo.">
+                    <p className="font-mono text-xl font-bold text-brand-primary">
+                      {corridor.k_eff.toFixed(1)}
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                      Independent voices
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-2 text-[10px] italic text-slate-500 dark:text-slate-400">
+                  In the synthesis paper this is k, ρ, k_eff.
+                </p>
+                {corridorHistory.length > 3 && (
+                  <KEffSparkline history={corridorHistory} />
+                )}
+              </div>
+            )}
+          </div>
+        </DisclosureSection>
+      )}
+
+      {corpusMode === "workshop" && (
+        <DisclosureSection title="Workshop controls">
+          <div className="space-y-4">
         {/* Attester picker */}
         <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
           <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
@@ -691,101 +795,11 @@ export default function ExploreWorkshop({
             })}
           </ul>
         </section>
-      </aside>
-        ) : (
-          <CorpusModeNotes mode={corpusMode} summary={graphSummary} />
-        )}
+          </div>
+        </DisclosureSection>
+      )}
 
-      {/* Center: scene + readouts */}
-      <section className="space-y-3">
-        <div className="grid gap-3 md:grid-cols-2">
-          {/* Verdict */}
-          {verdict && (
-            <div className="rounded-xl border-l-4 border-brand-primary bg-white p-3 dark:bg-gray-900">
-              <p className="text-[11px] font-semibold uppercase tracking-wide text-brand-primary">
-                What the trusted voices think (Policy {policy})
-              </p>
-              <p className="mt-1 break-all font-mono text-[11px] text-slate-700 dark:text-slate-300">
-                on: {verdict.dimension}
-              </p>
-              <p className="mt-2 text-2xl font-bold text-slate-900 dark:text-white">
-                {verdict.composed_score >= 0 ? "+" : ""}
-                {verdict.composed_score.toFixed(2)}
-              </p>
-              <p className="text-xs text-slate-500 dark:text-slate-400">
-                blended score · how sure they are:{" "}
-                {Math.round(verdict.composed_confidence * 100)}% · backed by{" "}
-                {verdict.supporting_count}{" "}
-                {verdict.supporting_count === 1 ? "voice" : "voices"}
-              </p>
-            </div>
-          )}
-
-          {/* Corridor — human-readable. The Rust kernel still computes
-              k / ρ / k_eff from the synthesis paper, but the public UI
-              never names them that way. */}
-          {corridor && (
-            <div className="rounded-xl border-l-4 border-purple-400 bg-white p-3 dark:bg-gray-900">
-              <p className="text-[11px] font-semibold uppercase tracking-wide text-purple-700 dark:text-purple-300">
-                How well-rounded the conversation is
-              </p>
-              <div className="mt-2 grid grid-cols-3 gap-2 text-center">
-                <div title="How many CEG concern areas (STANDING, ACTION, DETECTION, CONSENSUS, CORRECTION) the conversation actually touches.">
-                  <p className="font-mono text-xl font-bold text-slate-900 dark:text-white">
-                    {corridor.k}
-                  </p>
-                  <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    Concern areas
-                  </p>
-                </div>
-                <div title="How much the conversation piles into one concern area. 0 = perfectly spread; 1 = everyone is talking about the same thing.">
-                  <p className="font-mono text-xl font-bold text-slate-900 dark:text-white">
-                    {Math.round(corridor.rho_estimate * 100)}%
-                  </p>
-                  <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    Echo rate
-                  </p>
-                </div>
-                <div title="The number of effectively independent voices once you account for the echo. Higher means a more diverse evidence pool.">
-                  <p className="font-mono text-xl font-bold text-brand-primary">
-                    {corridor.k_eff.toFixed(1)}
-                  </p>
-                  <p className="text-[10px] uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    Independent voices
-                  </p>
-                </div>
-              </div>
-              <p className="mt-2 text-[10px] italic text-slate-500 dark:text-slate-400">
-                More concern areas + lower echo rate = more independent voices.
-                In the synthesis paper this is k, ρ, k_eff.
-              </p>
-              {corridorHistory.length > 3 && (
-                <KEffSparkline history={corridorHistory} />
-              )}
-            </div>
-          )}
-        </div>
-
-        <SceneFrame
-          mounted={hasMounted}
-          graph={graph}
-          positions={positions}
-          instanceMeta={instanceMeta}
-          edgeGeoms={edgeGeoms}
-          selectedNodeId={selectedNodeId}
-          onPickNode={setSelectedNodeId}
-        />
-
-        {selectedNodeId && (
-          <NodeDetailPanel
-            graph={graph}
-            nodeId={selectedNodeId}
-            source={_source}
-            onPick={setSelectedNodeId}
-            onClose={() => setSelectedNodeId(null)}
-          />
-        )}
-
+      <DisclosureSection title="Diagnostics">
         <DiagnosticStrip
           ready={ready}
           mounted={hasMounted}
@@ -794,14 +808,13 @@ export default function ExploreWorkshop({
           instanceMeta={instanceMeta}
           edgeGeoms={edgeGeoms}
         />
+      </DisclosureSection>
 
-        <p className="text-[11px] text-slate-500 dark:text-slate-400">
-          One scene, three views. The five composition primitives, the
-          five concern areas, the well-roundedness numbers — same kernel.
-          The voices and claims change with the mode.
-        </p>
-      </section>
-      </div>
+      <p className="text-[11px] text-slate-500 dark:text-slate-400">
+        One scene, three views. The five composition primitives, the
+        five concern areas, the well-roundedness numbers — same kernel.
+        The voices and claims change with the mode.
+      </p>
     </div>
   );
 }
@@ -827,9 +840,6 @@ function SceneFrame({
   onPickNode?: (id: string) => void;
 }) {
   const [webglOk, setWebglOk] = useState<boolean | null>(null);
-  const [sceneCreated, setSceneCreated] = useState(false);
-  const [sceneError, setSceneError] = useState<string | null>(null);
-  const [stuck, setStuck] = useState(false);
   useEffect(() => {
     if (!mounted) return;
     try {
@@ -840,31 +850,11 @@ function SceneFrame({
       setWebglOk(false);
     }
   }, [mounted]);
-  // Poll the module-scope created flag the Canvas's onCreated sets, then
-  // start a 3s "stuck" timer. If onCreated never fires (e.g. the renderer
-  // failed silently on this mobile GPU), the user gets a fallback banner
-  // instead of staring at an empty box.
-  useEffect(() => {
-    if (!mounted || webglOk !== true) return;
-    type GlobalFlags = {
-      __alephSceneCreated?: boolean;
-      __alephSceneError?: string;
-    };
-    const tick = () => {
-      const g = globalThis as GlobalFlags;
-      if (g.__alephSceneCreated) setSceneCreated(true);
-      if (g.__alephSceneError) setSceneError(g.__alephSceneError);
-    };
-    const id = setInterval(tick, 200);
-    const stuckTimer = setTimeout(() => {
-      const g = globalThis as GlobalFlags;
-      if (!g.__alephSceneCreated) setStuck(true);
-    }, 3000);
-    return () => {
-      clearInterval(id);
-      clearTimeout(stuckTimer);
-    };
-  }, [mounted, webglOk]);
+  // Earlier versions polled a global flag to detect "the canvas mounted
+  // but Three.js never painted". That was racing with the Canvas's own
+  // onCreated and sticking the failure overlay on across reloads. If
+  // WebGL is available, just trust the renderer to paint. The webglOk
+  // probe above handles the actual "no WebGL" case.
 
   // Wire the perf harness's per-frame tick into a global the scene
   // PerfReporter can call without prop-drilling through Canvas. The
@@ -921,48 +911,6 @@ function SceneFrame({
             onPickNode={onPickNode}
           />
           <SceneOverlay />
-          {(sceneError || (stuck && !sceneCreated)) && (
-            <div className="absolute inset-3 z-20 flex flex-col items-center justify-center gap-3 rounded-xl border-2 border-red-300 bg-white/95 p-4 text-center text-sm text-slate-800 shadow-lg dark:bg-gray-900/95 dark:text-slate-100">
-              <p className="font-semibold">
-                The scene did not paint on this device.
-              </p>
-              {sceneError && (
-                <pre className="max-w-full overflow-x-auto whitespace-pre-wrap break-all rounded bg-slate-100 p-2 text-left text-[10px] dark:bg-gray-800">
-                  {sceneError}
-                </pre>
-              )}
-              <p className="max-w-sm text-xs text-slate-600 dark:text-slate-300">
-                Some mobile GPUs (especially older Android Mali / Adreno)
-                refuse WebGL at the rate we ask. We tried antialias off
-                and a lower pixel ratio; it still failed. The cast and
-                deduction game work without WebGL.
-              </p>
-              <a
-                href="/game"
-                className="rounded-md border-2 border-brand-primary bg-brand-primary px-3 py-1 text-xs font-semibold text-white"
-              >
-                Play the mystery game →
-              </a>
-              <button
-                type="button"
-                onClick={() => {
-                  (
-                    globalThis as { __alephSceneCreated?: boolean; __alephSceneError?: string }
-                  ).__alephSceneCreated = false;
-                  (
-                    globalThis as { __alephSceneCreated?: boolean; __alephSceneError?: string }
-                  ).__alephSceneError = undefined;
-                  setSceneError(null);
-                  setStuck(false);
-                  setSceneCreated(false);
-                  window.location.reload();
-                }}
-                className="text-xs text-brand-primary underline-offset-2 hover:underline"
-              >
-                or try reloading
-              </button>
-            </div>
-          )}
         </>
       )}
     </div>
@@ -1619,7 +1567,85 @@ function EdgeList({
   );
 }
 
-// ─── Corpus mode controls ─────────────────────────────────────────
+// CorpusModeStrip — three chips at the top of the page. Replaces the
+// chunkier CorpusModeBar to lower the visual weight: the graph below is
+// the page, not this control.
+function CorpusModeStrip({
+  mode,
+  onChange,
+  summary,
+}: {
+  mode: "workshop" | CorpusMode;
+  onChange: (m: "workshop" | CorpusMode) => void;
+  summary: Record<string, number>;
+}) {
+  const opts: Array<{ id: "workshop" | CorpusMode; label: string }> = [
+    { id: "encyclopedia", label: "Encyclopedia" },
+    { id: "game", label: "Mystery game" },
+    { id: "workshop", label: "Workshop" },
+  ];
+  return (
+    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-2 dark:border-gray-800">
+      <div className="flex flex-wrap gap-1">
+        {opts.map((o) => {
+          const on = mode === o.id;
+          return (
+            <button
+              key={o.id}
+              type="button"
+              onClick={() => onChange(o.id)}
+              className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                on
+                  ? "bg-brand-primary text-white"
+                  : "bg-transparent text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-gray-800"
+              }`}
+              aria-pressed={on}
+            >
+              {o.label}
+            </button>
+          );
+        })}
+      </div>
+      <div className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
+        {summary.nodes ?? 0} nodes · {summary.edges ?? 0} edges
+      </div>
+    </div>
+  );
+}
+
+// DisclosureSection — uniform <details>/<summary> wrapper. One ink colour,
+// hairline border, no decorative gradients. The arrow rotates on open.
+function DisclosureSection({
+  title,
+  defaultOpen,
+  children,
+}: {
+  title: string;
+  defaultOpen?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <details
+      open={defaultOpen}
+      className="group rounded-md border border-slate-200 dark:border-gray-800"
+    >
+      <summary className="flex cursor-pointer list-none items-center justify-between px-3 py-2 text-sm font-semibold text-slate-800 dark:text-slate-100">
+        <span>{title}</span>
+        <span
+          className="text-slate-400 transition-transform group-open:rotate-90"
+          aria-hidden="true"
+        >
+          ▸
+        </span>
+      </summary>
+      <div className="border-t border-slate-200 p-3 dark:border-gray-800">
+        {children}
+      </div>
+    </details>
+  );
+}
+
+// ─── Corpus mode controls (legacy CorpusModeBar kept for reference) ───────
 
 function CorpusModeBar({
   mode,
