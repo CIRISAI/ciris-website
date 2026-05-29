@@ -293,7 +293,7 @@ export default function ExploreWorkshop({
   // namespace. Mobile GPUs choked on game mode by default with 2k+
   // edge geometries at first paint.
   const [corpusMode, setCorpusMode] = useState<"workshop" | CorpusMode>(
-    "encyclopedia",
+    "demo",
   );
   // Demo time slider — only meaningful when corpusMode === "demo".
   // Voices and attestations enter the graph as time advances. At t=0
@@ -1892,9 +1892,9 @@ function CorpusModeStrip({
   summary: Record<string, number>;
 }) {
   const opts: Array<{ id: "workshop" | CorpusMode; label: string }> = [
+    { id: "demo", label: "Red Riding Hood" },
     { id: "encyclopedia", label: "Encyclopedia" },
     { id: "game", label: "Mystery game" },
-    { id: "demo", label: "Red Riding Hood" },
     { id: "workshop", label: "Workshop" },
   ];
   return (
