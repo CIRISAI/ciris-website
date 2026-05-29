@@ -1,3 +1,21 @@
+# Path-specific rules go ABOVE the catch-all `/*` rule. Cloudflare Pages
+# uses first-match semantics: the first block whose path matches gets its
+# headers applied, the rest are skipped for that response.
+
+# WebAssembly served with the correct MIME type so the browser will
+# actually instantiate it. Without this, Cloudflare's default is
+# application/octet-stream and `X-Content-Type-Options: nosniff` below
+# stops the browser from guessing — the kernel silently fails to load
+# and the /grammar/explore scene never paints.
+/_next/static/wasm/*
+  Content-Type: application/wasm
+  Cache-Control: public, max-age=31536000, immutable
+
+# Catch any other .wasm path (e.g. /coherence-kernel/* if we ever serve
+# the kernel directly).
+/*.wasm
+  Content-Type: application/wasm
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
@@ -5,4 +23,8 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.brevo.com https://*.ciris.ai https://lens.ciris-services-1.ai https://raw.githubusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  # CSP adds 'wasm-unsafe-eval' for WebAssembly.instantiate to be allowed.
+  # Without it the script-src restricts the V8 wasm pipeline and the
+  # kernel module load throws a CSP violation that doesn't bubble to
+  # React.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.brevo.com https://*.ciris.ai https://lens.ciris-services-1.ai https://raw.githubusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
