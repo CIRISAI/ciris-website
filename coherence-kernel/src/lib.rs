@@ -124,6 +124,17 @@ pub struct GraphInput {
 
 const TAU: f32 = std::f32::consts::TAU;
 
+// Deterministic 32-bit hash of an id string for spread-on-disk placement.
+// Not cryptographic — just stable across kernel rebuilds.
+fn id_hash(id: &str) -> u32 {
+    let mut h: u32 = 0x811c9dc5;
+    for b in id.bytes() {
+        h ^= b as u32;
+        h = h.wrapping_mul(0x01000193);
+    }
+    h
+}
+
 fn hyperbolic_r(depth: f32) -> f32 {
     // depth = 0 -> centre; depth = 1 -> near boundary.
     // Map to Euclidean radius on the disk via tanh.
@@ -208,6 +219,34 @@ fn place_node(node_idx: usize, node: &Node, layout_ctx: &LayoutCtx) -> (f32, f32
             .unwrap_or(0);
         let theta = (c_idx as f32 / layout_ctx.components.len().max(1) as f32) * TAU;
         let r = hyperbolic_r(0.40);
+        return (r * theta.cos(), r * theta.sin(), z);
+    }
+
+    // Attesters -> ring at depth 0.55, angle keyed off id-hash so multiple
+    // attesters spread around the disk instead of stacking. Family-bearing
+    // attesters cluster near their family wedge.
+    if node.group == "attester" {
+        let h = id_hash(&node.id);
+        let base = if let Some(f) = node.family.as_ref() {
+            let f_idx = layout_ctx.families.iter().position(|x| x == f).unwrap_or(0);
+            (f_idx as f32 / layout_ctx.families.len().max(1) as f32) * TAU
+        } else {
+            0.0
+        };
+        let jitter = (h as f32 / u32::MAX as f32) * TAU * 0.4 - TAU * 0.2;
+        let theta = base + jitter;
+        let r = hyperbolic_r(0.55);
+        return (r * theta.cos(), r * theta.sin(), z);
+    }
+
+    // Claims -> ring at depth 0.70, angle keyed off id-hash. Outer than
+    // attesters so the asserts-edges visibly fan outward from the
+    // attesting voice.
+    if node.group == "claim" {
+        let h = id_hash(&node.id);
+        let theta = (h as f32 / u32::MAX as f32) * TAU;
+        let r_jitter = 0.66 + ((h >> 16) as f32 / u16::MAX as f32) * 0.12;
+        let r = hyperbolic_r(r_jitter);
         return (r * theta.cos(), r * theta.sin(), z);
     }
 

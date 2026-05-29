@@ -31,17 +31,9 @@ type Attester = {
   hue: string;
 };
 
-// Phase 2 canned roster. Real attesters arrive in Phase 3 when this hooks
-// into the federation directory.
-const ATTESTER_ROSTER: Attester[] = [
-  { id: "alice", name: "Alice (steward · ciris-services-1)", hue: "#0d9488" },
-  { id: "bob", name: "Bob (steward · ciris-services-2)", hue: "#8b5cf6" },
-  { id: "clara", name: "Clara (community moderator)", hue: "#f59e0b" },
-  { id: "dani", name: "Dani (independent observer)", hue: "#ec4899" },
-];
-
-// One synthetic attester per story-generation agent. Lets every seeded
-// story attribute to a stable id without polluting the user-facing roster.
+// One synthetic attester per story-generation agent. Built from the
+// kindfuture corpus — these are the real federation voices the workshop
+// composes verdicts over.
 const STORY_AGENT_HUES: Record<string, string> = {
   agent_1: "#2dd4bf",
   agent_2: "#a78bfa",
@@ -56,6 +48,27 @@ const STORY_AGENT_HUES: Record<string, string> = {
 function storyAgentHue(srcAgent: string): string {
   return STORY_AGENT_HUES[srcAgent] ?? "#94a3b8";
 }
+
+// Distinct source-agent ids in corpus order. Cached at module init so the
+// roster is stable across renders.
+const STORY_AGENTS: Attester[] = (() => {
+  const seen = new Set<string>();
+  const list: Attester[] = [];
+  for (const s of ALL_STORIES) {
+    if (seen.has(s.sourceAgent)) continue;
+    seen.add(s.sourceAgent);
+    list.push({
+      id: `story_${s.sourceAgent}`,
+      name: `${s.sourceAgent.replace("_", " ")} (kindfuture corpus)`,
+      hue: storyAgentHue(s.sourceAgent),
+    });
+  }
+  return list;
+})();
+
+// What the UI calls the available roster. Aliased to story-agents so the
+// rest of the workshop reads naturally.
+const ATTESTER_ROSTER: Attester[] = STORY_AGENTS;
 
 // Deterministic pseudo-score from story id. We need a score per seeded
 // claim but the corpus doesn't carry one; this gives a stable spread in
@@ -115,17 +128,20 @@ function buildWorkshopGraph(
   // All roster attesters are present as nodes. Pinning is a trust signal
   // (Policy A/B input), not a presence signal — non-pinned attesters can
   // still post claims and can still be vouched-for under Policy B.
-  for (const a of ATTESTER_ROSTER) {
+  // Assign a family to each attester deterministically so the kernel's
+  // attester placement spreads them around the disk.
+  const FAMILIES = ["STANDING", "ACTION", "DETECTION", "CONSENSUS", "CORRECTION"];
+  ATTESTER_ROSTER.forEach((a, i) => {
     nodes.push({
       id: a.id,
       label: a.name,
       group: "attester",
       component: null,
-      family: null,
+      family: FAMILIES[i % FAMILIES.length],
       band: 4,
       multi_scale: false,
     });
-  }
+  });
 
   // Vouches: encoded as `vouches_for` edges between attester nodes. The
   // kernel's policy_b_pure() reads these to compute one-hop trust closure.
@@ -160,32 +176,16 @@ function buildWorkshopGraph(
     });
   }
   // Seed corpus: synthesise N story-attestations from the kindfuture
-  // corpus (lib/stories-generated.ts). Each story becomes:
-  //   1. a synthetic "story_agent_X" attester (one per source agent)
-  //   2. a claim on the story's first primitive/dimension with a
-  //      deterministic score+confidence derived from the story id
-  // Provenance is preserved in the claim id so future phases can link
-  // back to the story body.
+  // corpus. Each story becomes a claim on its primary dimension from
+  // its source-agent attester. The attester nodes themselves come from
+  // ATTESTER_ROSTER above; the seed loop emits only claims.
   if (seedCount > 0) {
-    const usedAgents = new Set<string>();
     const N = Math.min(seedCount, ALL_STORIES.length);
     for (let i = 0; i < N; i++) {
       const story = ALL_STORIES[i];
       const dim = story.dimensions[0] ?? story.primitives[0];
       if (!dim) continue;
       const attesterId = `story_${story.sourceAgent}`;
-      if (!usedAgents.has(attesterId)) {
-        usedAgents.add(attesterId);
-        nodes.push({
-          id: attesterId,
-          label: `story corpus · ${story.sourceAgent}`,
-          group: "attester",
-          component: null,
-          family: story.family ?? null,
-          band: 4,
-          multi_scale: false,
-        });
-      }
       const claimId = `seed:${story.id}`;
       const score = seedScore(story.id);
       const conf = seedConfidence(story.id);
@@ -210,13 +210,18 @@ function buildWorkshopGraph(
   return { nodes, edges };
 }
 
-const STARTER_DIMENSIONS = [
-  "integrity:transparency",
-  "fidelity:explainability_sla:L3_full_dma_chain",
-  "non_maleficence:epistemic_environment_degradation",
-  "beneficence:community_care",
-  "testimonial_witness:retired_teacher",
-];
+// Most-frequent dimensions across the corpus. Lets the dimension picker
+// default to something the seeded claims actually score on.
+const STARTER_DIMENSIONS: string[] = (() => {
+  const counts = new Map<string, number>();
+  for (const s of ALL_STORIES) {
+    for (const d of s.dimensions) counts.set(d, (counts.get(d) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([d]) => d);
+})();
 
 export default function ExploreWorkshop({
   source: _source,
@@ -225,36 +230,29 @@ export default function ExploreWorkshop({
   // dimensions from the namespace. Currently unused.
   source: RegistrySource;
 }) {
-  // Workshop state
+  // Workshop state. Default-pin the first two story agents so the
+  // verdict has something to compose against on first paint; vouches
+  // wire one pinned agent to one non-pinned one so Policy B starts with
+  // motion.
+  const firstAgentId = ATTESTER_ROSTER[0]?.id;
+  const secondAgentId = ATTESTER_ROSTER[1]?.id;
+  const thirdAgentId = ATTESTER_ROSTER[2]?.id;
   const [pinned, setPinned] = useState<Set<string>>(
-    new Set(["alice", "bob"]),
+    new Set(
+      [firstAgentId, secondAgentId].filter((s): s is string => !!s),
+    ),
   );
-  const [claims, setClaims] = useState<Claim[]>([
-    {
-      id: "claim-1",
-      attester: "alice",
-      dimension: "integrity:transparency",
-      score: 0.8,
-      confidence: 0.9,
-    },
-    {
-      id: "claim-2",
-      attester: "bob",
-      dimension: "integrity:transparency",
-      score: 0.6,
-      confidence: 0.8,
-    },
-  ]);
+  const [claims, setClaims] = useState<Claim[]>([]);
   const [policy, setPolicy] = useState<Policy>("A");
   const [currentDimension, setCurrentDimension] = useState<string>(
-    "integrity:transparency",
+    STARTER_DIMENSIONS[0] ?? "integrity:transparency",
   );
 
   // Vouches: each entry is "<from>:<to>" where from vouches for to.
-  // Default seed gives Policy B something interesting to show: Alice
-  // (pinned) vouches for Clara so her claims start counting at half weight.
   const [vouches, setVouches] = useState<Set<string>>(
-    new Set(["alice:clara"]),
+    firstAgentId && thirdAgentId
+      ? new Set([`${firstAgentId}:${thirdAgentId}`])
+      : new Set(),
   );
 
   // Corpus seed size — number of stories from the kindfuture corpus to
