@@ -268,12 +268,17 @@ export default function ExploreWorkshop({
 
   // Corpus mode — selects which graph is rendered:
   //   workshop:     the small interactive verdict workshop (legacy)
-  //   game:         100 characters + 43 publications + 5 case-goals
+  //   game:         100 characters + 12 publications + 5 case-goals
   //                 at Federation band + 240 story-holding claims
   //   encyclopedia: the namespace prefixes + The Cascadia Encyclopedia
   //                 attesting on definitional dimensions
+  //
+  // Default = "encyclopedia" because it is the lightest of the three
+  // (154 nodes vs the game's 450) and still showcases the full CEG
+  // namespace. Mobile GPUs choked on game mode by default with 2k+
+  // edge geometries at first paint.
   const [corpusMode, setCorpusMode] = useState<"workshop" | CorpusMode>(
-    "game",
+    "encyclopedia",
   );
 
   // Kernel state. The kernel type is opaque from JS-side (it's a wasm-bindgen
@@ -731,20 +736,13 @@ export default function ExploreWorkshop({
           )}
         </div>
 
-        <div className="h-[60vh] min-h-[420px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100 dark:border-gray-800 dark:from-gray-950 dark:to-black">
-          {hasMounted ? (
-            <AlephScene
-              graph={graph}
-              positions={positions}
-              instanceMeta={instanceMeta}
-              edgeGeoms={edgeGeoms}
-            />
-          ) : (
-            <div className="flex h-full items-center justify-center text-sm text-slate-500 dark:text-slate-400">
-              Booting scene…
-            </div>
-          )}
-        </div>
+        <SceneFrame
+          mounted={hasMounted}
+          graph={graph}
+          positions={positions}
+          instanceMeta={instanceMeta}
+          edgeGeoms={edgeGeoms}
+        />
 
         <DiagnosticStrip
           ready={ready}
@@ -762,6 +760,68 @@ export default function ExploreWorkshop({
         </p>
       </section>
       </div>
+    </div>
+  );
+}
+
+// SceneFrame — gates the canvas mount on (a) client-only hasMounted and
+// (b) WebGL2 capability. Mobile and older browsers that can't run the
+// scene get a polite fallback instead of a black box.
+function SceneFrame({
+  mounted,
+  graph,
+  positions,
+  instanceMeta,
+  edgeGeoms,
+}: {
+  mounted: boolean;
+  graph: KernelGraph;
+  positions: Float32Array;
+  instanceMeta: InstanceMeta[];
+  edgeGeoms: EdgeGeom[];
+}) {
+  const [webglOk, setWebglOk] = useState<boolean | null>(null);
+  useEffect(() => {
+    if (!mounted) return;
+    try {
+      const c = document.createElement("canvas");
+      const gl = c.getContext("webgl2") ?? c.getContext("webgl");
+      setWebglOk(!!gl);
+    } catch {
+      setWebglOk(false);
+    }
+  }, [mounted]);
+  return (
+    <div className="h-[60vh] min-h-[420px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100 dark:border-gray-800 dark:from-gray-950 dark:to-black">
+      {!mounted ? (
+        <div className="flex h-full items-center justify-center text-sm text-slate-500 dark:text-slate-400">
+          Booting scene…
+        </div>
+      ) : webglOk === false ? (
+        <div className="flex h-full flex-col items-center justify-center gap-2 p-6 text-center text-sm">
+          <p className="font-semibold text-slate-800 dark:text-slate-100">
+            This device cannot run the 3D scene.
+          </p>
+          <p className="max-w-sm text-slate-600 dark:text-slate-300">
+            The Aleph view needs WebGL. Most desktops and recent phones
+            have it. If you are on an older browser, please try Chrome
+            or Firefox.
+          </p>
+          <a
+            href="/game"
+            className="mt-2 text-brand-primary underline-offset-2 hover:underline"
+          >
+            Or go play the mystery game instead →
+          </a>
+        </div>
+      ) : webglOk === null ? null : (
+        <AlephScene
+          graph={graph}
+          positions={positions}
+          instanceMeta={instanceMeta}
+          edgeGeoms={edgeGeoms}
+        />
+      )}
     </div>
   );
 }
