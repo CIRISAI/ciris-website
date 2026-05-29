@@ -410,9 +410,22 @@ export default function ExploreWorkshop({
   }
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[320px_minmax(0,1fr)]">
-      {/* Left workshop controls */}
-      <aside className="space-y-4">
+    <div className="space-y-4">
+      <CorpusModeBar
+        mode={corpusMode}
+        onChange={setCorpusMode}
+        summary={graphSummary}
+      />
+      <div
+        className={`grid gap-4 ${
+          corpusMode === "workshop"
+            ? "lg:grid-cols-[320px_minmax(0,1fr)]"
+            : "lg:grid-cols-[260px_minmax(0,1fr)]"
+        }`}
+      >
+        {/* Left controls / mode notes */}
+        {corpusMode === "workshop" ? (
+          <aside className="space-y-4">
         {/* Attester picker */}
         <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
           <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
@@ -650,6 +663,9 @@ export default function ExploreWorkshop({
           </ul>
         </section>
       </aside>
+        ) : (
+          <CorpusModeNotes mode={corpusMode} summary={graphSummary} />
+        )}
 
       {/* Center: scene + readouts */}
       <section className="space-y-3">
@@ -740,13 +756,186 @@ export default function ExploreWorkshop({
         />
 
         <p className="text-[11px] text-slate-500 dark:text-slate-400">
-          Phase 2 surface. The workshop runs entirely in your browser on the{" "}
-          <span className="font-mono">coherence-kernel</span> WASM module.
-          Phase 3 wires this into the real federation; Phase 5 unlocks the
-          full game.
+          One scene, two epistemic lenses. The structural primitives, the
+          five families, the corridor metric — all the same kernel. The
+          attesters and claims change with the mode.
         </p>
       </section>
+      </div>
     </div>
+  );
+}
+
+// ─── Corpus mode controls ─────────────────────────────────────────
+
+function CorpusModeBar({
+  mode,
+  onChange,
+  summary,
+}: {
+  mode: "workshop" | CorpusMode;
+  onChange: (m: "workshop" | CorpusMode) => void;
+  summary: Record<string, number>;
+}) {
+  const buttons: Array<{
+    id: "workshop" | CorpusMode;
+    label: string;
+    sub: string;
+  }> = [
+    {
+      id: "encyclopedia",
+      label: "ENCYCLOPEDIA",
+      sub: "CEG, formally",
+    },
+    {
+      id: "game",
+      label: "MYSTERY GAME",
+      sub: "CEG in practice",
+    },
+    {
+      id: "workshop",
+      label: "WORKSHOP",
+      sub: "Interactive verdict bench",
+    },
+  ];
+  return (
+    <section className="rounded-2xl border border-slate-200 bg-white p-3 dark:border-gray-800 dark:bg-gray-900">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-primary">
+            Viewing mode
+          </p>
+          <p className="text-xs text-slate-600 dark:text-slate-300">
+            Same kernel, three views.
+          </p>
+        </div>
+        <div className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
+          {summary.nodes ?? 0} nodes · {summary.edges ?? 0} edges
+        </div>
+      </div>
+      <div className="mt-3 grid gap-2 sm:grid-cols-3">
+        {buttons.map((b) => {
+          const on = mode === b.id;
+          return (
+            <button
+              key={b.id}
+              type="button"
+              onClick={() => onChange(b.id)}
+              className={`rounded-md border-2 px-3 py-2 text-left transition ${
+                on
+                  ? "border-brand-primary bg-brand-primary text-white"
+                  : "border-slate-300 bg-white text-slate-700 hover:border-brand-primary dark:border-gray-700 dark:bg-gray-900 dark:text-slate-200"
+              }`}
+              aria-pressed={on}
+            >
+              <div className="text-[11px] font-semibold tracking-[0.15em]">
+                {b.label}
+              </div>
+              <div
+                className={`text-[10px] ${
+                  on ? "text-white/80" : "text-slate-500 dark:text-slate-400"
+                }`}
+              >
+                {b.sub}
+              </div>
+            </button>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function CorpusModeNotes({
+  mode,
+  summary,
+}: {
+  mode: "workshop" | CorpusMode;
+  summary: Record<string, number>;
+}) {
+  if (mode === "encyclopedia") {
+    return (
+      <aside className="space-y-3">
+        <section className="rounded-2xl border-l-4 border-purple-400 bg-white p-4 dark:bg-gray-900">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-purple-700 dark:text-purple-300">
+            Encyclopedia mode
+          </p>
+          <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+            The formal CEG grammar in use. Every prefix in the registry
+            appears as a leaf, owned by its component, attached to its
+            family. The Cascadia Encyclopedia attests across the whole
+            namespace as a single high-volume institutional voice.
+          </p>
+          <p className="mt-2 text-xs italic text-slate-500 dark:text-slate-400">
+            What you are looking at: the spec itself, as a federation
+            graph.
+          </p>
+        </section>
+        <ScenePalette summary={summary} />
+      </aside>
+    );
+  }
+  if (mode === "game") {
+    return (
+      <aside className="space-y-3">
+        <section className="rounded-2xl border-l-4 border-amber-400 bg-white p-4 dark:bg-gray-900">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-amber-700 dark:text-amber-300">
+            Mystery game mode
+          </p>
+          <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+            CEG alive in a community. 100 named characters as attesters,
+            12 institutional publications as their own voices, 5 case
+            goals at the federation band, and the witness attestations
+            from each case arcing up toward those goals.
+          </p>
+          <p className="mt-2 text-xs italic text-slate-500 dark:text-slate-400">
+            The cases sit above the cell band because they are not
+            things in the namespace; they are convergence points the
+            community is aiming at. That is what a goal IS in CEG.
+          </p>
+        </section>
+        <ScenePalette summary={summary} />
+      </aside>
+    );
+  }
+  return null;
+}
+
+function ScenePalette({ summary }: { summary: Record<string, number> }) {
+  const rows: Array<[string, string, string]> = [
+    ["primitive", "Primitives", "bg-slate-900"],
+    ["family", "Families", "bg-emerald-500"],
+    ["component", "Components", "bg-slate-400"],
+    ["attester", "Attesters / goals", "bg-amber-400"],
+    ["prefix", "Prefix leaves", "bg-purple-400"],
+    ["claim", "Claims", "bg-teal-400"],
+  ];
+  return (
+    <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-slate-500 dark:text-slate-400">
+        What is on screen
+      </p>
+      <ul className="mt-2 space-y-1">
+        {rows.map(([k, label, swatch]) => (
+          <li
+            key={k}
+            className="flex items-center justify-between gap-2 text-xs"
+          >
+            <span className="flex items-center gap-2">
+              <span
+                className={`inline-block h-3 w-3 rounded-sm ${swatch}`}
+              />
+              <span className="text-slate-700 dark:text-slate-300">
+                {label}
+              </span>
+            </span>
+            <span className="font-mono text-slate-500 dark:text-slate-400">
+              {summary[k] ?? 0}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
