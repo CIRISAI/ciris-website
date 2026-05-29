@@ -1189,6 +1189,35 @@ function NodeContent({
     );
   }
 
+  // ── Game mode: meta-group anchors (one per CEG family).
+  if (nodeId.startsWith("meta:")) {
+    const f = nodeId.replace(/^meta:/, "");
+    const META_BLURBS: Record<string, string> = {
+      STANDING:
+        "The standing cluster. Kids and adults who carry stories about who-someone-IS — identity, beneficence, fidelity. Their attestations land here.",
+      ACTION:
+        "The action cluster. Voices who attest about what was done — delegation, supersession, withdrawal. Often the comms-relay kids, the gardens crew, the council apprentices.",
+      DETECTION:
+        "The detection cluster. The ones who notice. Tally the assignments tracker, the archive helpers, the year-6 systems-watchers. Their attestations spot drift.",
+      CONSENSUS:
+        "The consensus cluster. Where the community's shared-record voices sit: every newspaper, every club newsletter, every class announcement, plus the encyclopedia maintainers.",
+      CORRECTION:
+        "The correction cluster. The mediators, the recanters, the supersession-keepers. Aurora the day-companion AI lives here when she walks something back kindly.",
+    };
+    return (
+      <Section title="Concern-area cluster">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          {META_BLURBS[f] ?? `Meta-group for the ${f} concern area.`}
+        </p>
+        <p className="mt-2 text-[11px] italic text-slate-500">
+          All voices whose primary concern area is {f} gravitate to this
+          point on the disk. The five clusters together form a 5-petal
+          rosette around the spine.
+        </p>
+      </Section>
+    );
+  }
+
   // ── Encyclopedia mode: components own prefix leaves.
   if (node.group === "component" && !nodeId.startsWith("case-")) {
     const comp = node.component ?? node.label;

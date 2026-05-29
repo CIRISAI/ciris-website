@@ -324,33 +324,76 @@ export function buildGameGraph(
   const edges: KernelEdge[] = [];
   pushPrimitivesAndFamilies(nodes, edges);
 
-  // Characters as attesters. Each carries a CEG family for the
-  // kernel's attester placement, derived from their ceg_family field.
+  // Meta-group anchors: one per CEG family. These are NOT structural
+  // primitives; they're cluster centroids that attesters of the same
+  // family gravitate to. Tagged as "component" because the kernel
+  // currently places components in a mid-radius ring; that wedge
+  // becomes the gravitational center for its family's voices.
+  //
+  // Per the synthesis paper: more concern areas covered + lower echo
+  // rate = more independent voices (k_eff). This is that geometry
+  // made visible. A character in the STANDING family clusters near the
+  // STANDING anchor, separating cleanly from CONSENSUS publications
+  // and ACTION editors.
+  for (const f of FAMILIES) {
+    nodes.push({
+      id: `meta:${f}`,
+      label: `${f} cluster`,
+      group: "component",
+      component: `meta-${f}`,
+      family: f,
+      band: 4,
+      multi_scale: false,
+    });
+    // Each meta-anchor belongs_to its family.
+    edges.push({
+      source: `family:${f}`,
+      target: `meta:${f}`,
+      kind: "belongs_to",
+    });
+  }
+
+  // Characters as attesters; each belongs_to its family's meta-anchor.
+  // This is the "X said Y" pivot: attesters become the primary
+  // structural anchor, and they cluster organically into family-named
+  // meta-groups.
   const chars = CHARACTERS.slice(0, characterCount);
   for (const c of chars) {
     nodes.push({
       id: c.id,
       label: c.name,
       group: "attester",
-      component: null,
+      component: `meta-${c.ceg_family}`,
       family: c.ceg_family,
       band: 4,
       multi_scale: false,
     });
+    edges.push({
+      source: c.id,
+      target: `meta:${c.ceg_family}`,
+      kind: "belongs_to",
+    });
   }
 
-  // Publications as institutional attesters. Use CONSENSUS family so
-  // they cluster together visually on the disk.
+  // Publications as institutional attesters. They cluster under the
+  // CONSENSUS meta-anchor because publications are the community's
+  // shared-record voices. Newspapers may have idiosyncratic editorial
+  // bias but their structural role is consensus-making.
   const pubs = ALL_PUBLICATIONS.slice(0, publicationCount);
   for (const p of pubs) {
     nodes.push({
       id: p.id,
       label: p.name,
       group: "attester",
-      component: null,
+      component: "meta-CONSENSUS",
       family: "CONSENSUS",
       band: 4,
       multi_scale: false,
+    });
+    edges.push({
+      source: p.id,
+      target: "meta:CONSENSUS",
+      kind: "belongs_to",
     });
   }
 
