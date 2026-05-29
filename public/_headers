@@ -31,4 +31,14 @@
   # (the room labels in the Aleph scene) spawns a Troika SDF font
   # worker from a blob URL; without this it gets blocked and the text
   # silently fails to render (the rest of the scene still works).
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://challenges.cloudflare.com https://static.cloudflareinsights.com; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.brevo.com https://*.ciris.ai https://lens.ciris-services-1.ai https://raw.githubusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  # Notes on the CSP:
+  #  - 'wasm-unsafe-eval' gates WebAssembly.instantiate. Without it the
+  #    coherence-kernel WASM module fails to load.
+  #  - script-src needs `blob:` because drei's <Text> component runs a
+  #    Troika worker that itself does `importScripts(blob:...)` inside
+  #    the worker context. script-src-elem falls back to script-src.
+  #  - worker-src 'self' blob: covers the parent thread spawning the
+  #    Troika worker.
+  #  - connect-src has `blob:` so the workers can fetch their
+  #    bootstrap data URLs.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: https://challenges.cloudflare.com https://static.cloudflareinsights.com; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' blob: https://api.brevo.com https://*.ciris.ai https://lens.ciris-services-1.ai https://raw.githubusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
