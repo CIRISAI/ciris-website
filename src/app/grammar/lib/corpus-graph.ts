@@ -112,8 +112,31 @@ export function buildEncyclopediaGraph(
   const edges: KernelEdge[] = [];
   pushPrimitivesAndFamilies(nodes, edges);
 
-  // The encyclopedia is one big institutional voice that attests across
-  // the whole namespace. It anchors definitional claims.
+  // Tens of attester voices, not one. Each registry component is its
+  // OWN authoritative voice over the prefixes it owns. The Encyclopedia
+  // is the cross-component synthesis voice. The Accord is the
+  // constitutional voice. The corridor metric reads correctly because
+  // each component has its own concern area.
+  //
+  // Per-component family assignment: rotates through the five families
+  // so the disk gets a 5-petal rosette of components instead of a
+  // single dense ring.
+  const COMPONENT_FAMILIES = [
+    "STANDING",
+    "ACTION",
+    "DETECTION",
+    "CONSENSUS",
+    "CORRECTION",
+  ];
+  nodes.push({
+    id: "att-accord",
+    label: "The Accord",
+    group: "attester",
+    component: null,
+    family: "STANDING",
+    band: 4,
+    multi_scale: false,
+  });
   nodes.push({
     id: "pub-encyclopedia",
     label: "The Cascadia Encyclopedia",
@@ -124,11 +147,30 @@ export function buildEncyclopediaGraph(
     multi_scale: false,
   });
 
-  // Components from the registry namespace.
+  // Each registry component becomes a NAMED attester voice. Stored as
+  // group "attester" so the kernel places it on the cell band with the
+  // id-hash spread; the prefix leaves it "owns" pull toward it via the
+  // owned_by edges below.
   const componentsSeen = new Set<string>();
+  let componentIdx = 0;
   for (const ns of source.namespace) {
     if (componentsSeen.has(ns.component)) continue;
     componentsSeen.add(ns.component);
+    const fam = COMPONENT_FAMILIES[componentIdx % COMPONENT_FAMILIES.length];
+    componentIdx++;
+    nodes.push({
+      id: `att-comp:${ns.component}`,
+      label: ns.component,
+      group: "attester",
+      component: ns.component,
+      family: fam,
+      band: 4,
+      multi_scale: false,
+    });
+    // Also keep the structural component node for layout (it's a
+    // different concept from the attester voice — component is the
+    // owner of prefixes; the att-comp voice is "the team behind the
+    // component speaking authoritatively").
     nodes.push({
       id: `comp:${ns.component}`,
       label: ns.component,
@@ -137,6 +179,12 @@ export function buildEncyclopediaGraph(
       family: null,
       band: 4,
       multi_scale: false,
+    });
+    // Voice asserts on its own component anchor.
+    edges.push({
+      source: `att-comp:${ns.component}`,
+      target: `comp:${ns.component}`,
+      kind: "asserts",
     });
   }
 
@@ -171,9 +219,11 @@ export function buildEncyclopediaGraph(
     }
   }
 
-  // Per-component encyclopedia attestations — a handful of dimensions
-  // per component, attributed to The Cascadia Encyclopedia. Forms a
-  // visible "the encyclopedia ratifies the namespace" pattern.
+  // Per-component attestations. Each component-voice asserts on its
+  // OWN prefixes, plus the Encyclopedia provides cross-component
+  // synthesis attestations. This gives every component a visible
+  // local presence on the disk, not one mega-voice swallowing
+  // everything.
   let claimIdx = 0;
   for (const comp of componentsSeen) {
     const prefixes = nodes
@@ -181,12 +231,13 @@ export function buildEncyclopediaGraph(
       .slice(0, seedClaimsPerComponent);
     for (const pref of prefixes) {
       const dim = pref.label;
-      const claimId = `enc-claim:${claimIdx++}`;
-      const score = pseudoScore(claimId);
-      const conf = pseudoConfidence(claimId);
+      // Component voice attests on its own prefix.
+      const compClaimId = `enc-claim:${claimIdx++}`;
+      const cScore = pseudoScore(compClaimId);
+      const cConf = pseudoConfidence(compClaimId);
       nodes.push({
-        id: claimId,
-        label: `pub-encyclopedia|${dim}|${score}|${conf}`,
+        id: compClaimId,
+        label: `att-comp:${comp}|${dim}|${cScore}|${cConf}`,
         group: "claim",
         component: null,
         family: pref.family ?? null,
@@ -194,16 +245,69 @@ export function buildEncyclopediaGraph(
         multi_scale: false,
       });
       edges.push({
-        source: "pub-encyclopedia",
-        target: claimId,
+        source: `att-comp:${comp}`,
+        target: compClaimId,
         kind: "asserts",
       });
       edges.push({
-        source: claimId,
+        source: compClaimId,
         target: "prim:scores",
         kind: "asserts",
       });
     }
+    // Encyclopedia synthesis claim — one per component, sampled.
+    const synthPrefix = nodes.find(
+      (n) => n.group === "prefix" && n.component === comp,
+    );
+    if (synthPrefix) {
+      const synClaimId = `enc-claim:${claimIdx++}`;
+      const sScore = pseudoScore(synClaimId);
+      const sConf = pseudoConfidence(synClaimId);
+      nodes.push({
+        id: synClaimId,
+        label: `pub-encyclopedia|${synthPrefix.label}|${sScore}|${sConf}`,
+        group: "claim",
+        component: null,
+        family: synthPrefix.family ?? null,
+        band: 4,
+        multi_scale: false,
+      });
+      edges.push({
+        source: "pub-encyclopedia",
+        target: synClaimId,
+        kind: "asserts",
+      });
+      edges.push({
+        source: synClaimId,
+        target: "prim:scores",
+        kind: "asserts",
+      });
+    }
+  }
+
+  // Accord ratifies each family — making the constitutional voice
+  // visible in the rosette.
+  for (const f of FAMILIES) {
+    const accClaimId = `enc-claim:accord-${f}`;
+    nodes.push({
+      id: accClaimId,
+      label: `att-accord|${f}|0.95|0.9`,
+      group: "claim",
+      component: null,
+      family: f,
+      band: 4,
+      multi_scale: false,
+    });
+    edges.push({
+      source: "att-accord",
+      target: accClaimId,
+      kind: "asserts",
+    });
+    edges.push({
+      source: accClaimId,
+      target: "prim:scores",
+      kind: "asserts",
+    });
   }
 
   return { nodes, edges };

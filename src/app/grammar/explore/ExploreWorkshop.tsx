@@ -1474,11 +1474,47 @@ function NodeContent({
     return (
       <Section title="The Cascadia Encyclopedia">
         <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
-          A single high-volume institutional voice that ratifies the
-          namespace. In encyclopedia mode it attests across every
-          component on the most-cited dimensions. The community
-          maintains it; it can be edit-warred; it has a drift rate.
+          The cross-component synthesis voice. It assembles the
+          component voices into one shared reference, the way an
+          encyclopedia entry rolls up many sources. It has a drift
+          rate; the community maintains it; entries can be
+          edit-warred.
         </p>
+      </Section>
+    );
+  }
+
+  // ── Encyclopedia attester (the Accord).
+  if (nodeId === "att-accord") {
+    return (
+      <Section title="The Accord">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          The constitutional voice. The Accord ratifies each CEG
+          concern area at the highest standing weight, with confidence
+          near 1. It is the &ldquo;floor under everything else&rdquo; — when
+          two component voices disagree, the Accord is the
+          tie-breaker.
+        </p>
+      </Section>
+    );
+  }
+
+  // ── Encyclopedia attester (component voice att-comp:<NAME>).
+  if (nodeId.startsWith("att-comp:")) {
+    const comp = nodeId.replace(/^att-comp:/, "");
+    const ns = source.namespace.find((n) => n.component === comp);
+    return (
+      <Section title="Component voice">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          <b>{comp}</b> speaking authoritatively about the prefixes it
+          owns. Each registry component is its own voice in the
+          federation.
+        </p>
+        {ns && (
+          <p className="mt-1 text-[11px] text-slate-500">
+            §{ns.section} {ns.title}
+          </p>
+        )}
       </Section>
     );
   }
