@@ -19,6 +19,14 @@ import {
   summariseGraph,
   type CorpusMode,
 } from "../lib/corpus-graph";
+import { CHARACTERS } from "../lib/characters-generated";
+import { ALL_PUBLICATIONS } from "@/app/game/lib/publications";
+import { CASES } from "@/app/game/lib/cases-generated";
+
+const CHARS_BY_ID = new Map(CHARACTERS.map((c) => [c.id, c]));
+const PUBS_BY_ID = new Map(ALL_PUBLICATIONS.map((p) => [p.id, p]));
+const CASES_BY_ID = new Map(CASES.map((c) => [c.id, c]));
+const STORIES_BY_ID = new Map(ALL_STORIES.map((s) => [s.id, s]));
 
 // Hook-side mount gate. Avoids the dynamic({ssr:false}) chunk-boundary that
 // was hanging on Vercel's static export. Three.js and R3F live in the same
@@ -772,6 +780,7 @@ export default function ExploreWorkshop({
           <NodeDetailPanel
             graph={graph}
             nodeId={selectedNodeId}
+            source={_source}
             onPick={setSelectedNodeId}
             onClose={() => setSelectedNodeId(null)}
           />
@@ -1058,11 +1067,13 @@ function BenchOverlay() {
 function NodeDetailPanel({
   graph,
   nodeId,
+  source,
   onPick,
   onClose,
 }: {
   graph: KernelGraph;
   nodeId: string;
+  source: RegistrySource;
   onPick: (id: string | null) => void;
   onClose: () => void;
 }) {
@@ -1136,6 +1147,13 @@ function NodeDetailPanel({
         )}
       </div>
 
+      <NodeContent
+        node={node}
+        nodeId={nodeId}
+        source={source}
+        onPick={onPick}
+      />
+
       <EdgeList
         title={`out (${outgoing.length})`}
         edges={outgoing}
@@ -1154,6 +1172,400 @@ function NodeDetailPanel({
         Tap any edge to walk the graph. The selected node glows in the scene.
       </p>
     </section>
+  );
+}
+
+// NodeContent — looks up the rich data behind a node id and renders
+// whatever's useful: the registry prefix description, a character's
+// bio + memberships, a story scenario, a publication's drift and
+// editorial note, a case framing, or a witness attestation. Pattern-
+// matches by node id prefix and node group.
+function NodeContent({
+  node,
+  nodeId,
+  source,
+  onPick,
+}: {
+  node: KernelNode;
+  nodeId: string;
+  source: RegistrySource;
+  onPick: (id: string | null) => void;
+}) {
+  // ── Encyclopedia mode: prefix leaves carry the registry description.
+  if (node.group === "prefix" || nodeId.startsWith("prefix:")) {
+    const prefix = nodeId.replace(/^prefix:/, "");
+    let row: { description: string; section: string; sectionTitle: string; component: string; citation?: string; polarity?: string } | undefined;
+    for (const ns of source.namespace) {
+      for (const sub of ns.subsections) {
+        const r = sub.rows.find((x) => x.prefix === prefix);
+        if (r) {
+          row = {
+            description: r.description,
+            section: r.section,
+            sectionTitle: r.sectionTitle,
+            component: r.component,
+            citation: r.citation,
+            polarity: r.polarity,
+          };
+          break;
+        }
+      }
+      if (row) break;
+    }
+    if (!row) {
+      return (
+        <Section title="Prefix">
+          <p className="text-xs text-slate-600 dark:text-slate-300">
+            Encyclopedia entry for{" "}
+            <span className="font-mono">{prefix}</span> not found in the
+            registry.
+          </p>
+        </Section>
+      );
+    }
+    return (
+      <Section title="Encyclopedia entry">
+        <p className="text-[11px] text-slate-500">
+          §{row.section} {row.sectionTitle} · component {row.component}
+          {row.polarity ? ` · polarity ${row.polarity}` : ""}
+        </p>
+        <p className="mt-2 text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          {row.description}
+        </p>
+        {row.citation && (
+          <p className="mt-2 break-all font-mono text-[10px] text-slate-500">
+            cite: {row.citation}
+          </p>
+        )}
+      </Section>
+    );
+  }
+
+  // ── Encyclopedia mode: components own prefix leaves.
+  if (node.group === "component" && !nodeId.startsWith("case-")) {
+    const comp = node.component ?? node.label;
+    const sections = source.namespace.filter((n) => n.component === comp);
+    if (sections.length === 0) return null;
+    return (
+      <Section title="Component">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          The <span className="font-mono">{comp}</span> component owns its
+          prefix leaves below. Open the namespace view on /grammar for
+          the full table.
+        </p>
+        <ul className="mt-2 list-disc pl-4 text-[11px] text-slate-700 dark:text-slate-300">
+          {sections.map((s) => (
+            <li key={s.section} className="break-all">
+              §{s.section} {s.title}
+            </li>
+          ))}
+        </ul>
+      </Section>
+    );
+  }
+
+  // ── Encyclopedia mode: families.
+  if (node.group === "family" || nodeId.startsWith("family:")) {
+    const FAMILY_BLURBS: Record<string, string> = {
+      STANDING:
+        "Standing — who you are in the federation. Identity, beneficence, integrity, fidelity, autonomy, justice, prohibited categories, provenance, transparency log, certificate validity, hardware custody.",
+      ACTION:
+        "Action — what you do. Delegation, supersession, withdrawal, recantation. The verbs CEG runs on.",
+      DETECTION:
+        "Detection — what changed. Anomaly detection across attestations, drift detection in chains, hash chain integrity, mutation, cross-agent divergence.",
+      CONSENSUS:
+        "Consensus — what we agree on. Composition policies, quorum, witness diversity, multilateral participation, encyclopedia ratification.",
+      CORRECTION:
+        "Correction — how we make it right. Recantation, rollback detection, supersession, conscience overrides, gentle redirect.",
+    };
+    const f = (node.family ?? nodeId.replace(/^family:/, "")) as string;
+    const blurb = FAMILY_BLURBS[f];
+    return (
+      <Section title="Concern area">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          {blurb ?? `Family ${f}.`}
+        </p>
+      </Section>
+    );
+  }
+
+  // ── Encyclopedia + game: structural primitives.
+  if (node.group === "primitive" || nodeId.startsWith("prim:")) {
+    const PRIM_BLURBS: Record<string, string> = {
+      scores:
+        "The workhorse primitive. Every other primitive is composed against scores: an attestation puts a number and a confidence on a dimension.",
+      delegates_to:
+        "I am not the right voice on this; please carry this to the next person in the trust chain.",
+      supersedes:
+        "An earlier attestation is replaced by this one. The earlier one stays in the log, but no longer composes.",
+      withdraws:
+        "I take back what I said. No correction, just removal from the active composition.",
+      recants:
+        "I take back what I said AND say why. Recants compose against the original to mark it as known-wrong.",
+    };
+    const key = nodeId.replace(/^prim:/, "") as keyof typeof PRIM_BLURBS;
+    const blurb = PRIM_BLURBS[key];
+    if (!blurb) return null;
+    return (
+      <Section title="Composition primitive">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          {blurb}
+        </p>
+      </Section>
+    );
+  }
+
+  // ── Game mode: characters (story-agent attesters).
+  const char = CHARS_BY_ID.get(nodeId);
+  if (char) {
+    return (
+      <Section title="Voice">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          <b>{char.name}</b> · {char.role}
+          {char.yearBand ? ` · ${char.yearBand}` : ""} ·{" "}
+          {char.pronouns}
+        </p>
+        <p className="mt-1 text-[12px] leading-5 text-slate-700 dark:text-slate-300">
+          {char.bio}
+        </p>
+        <p className="mt-2 text-[11px] text-slate-500">
+          Cares most about CEG concern area{" "}
+          <span className="font-mono">{char.ceg_family}</span>. Sharing
+          posture: {char.sharing_posture.replace(/_/g, " ")}.
+        </p>
+        {char.default_goals.length > 0 && (
+          <p className="mt-1 text-[11px] text-slate-500">
+            Default goals: {char.default_goals.join("; ")}.
+          </p>
+        )}
+        {char.storyHoldings.length > 0 && (
+          <details className="mt-2">
+            <summary className="cursor-pointer text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+              Holds {char.storyHoldings.length}{" "}
+              {char.storyHoldings.length === 1 ? "story" : "stories"}
+            </summary>
+            <ul className="mt-1 space-y-1">
+              {char.storyHoldings.map((h, i) => {
+                const story = STORIES_BY_ID.get(h.storyId);
+                return (
+                  <li
+                    key={i}
+                    className="rounded border border-slate-200 p-2 text-[11px] dark:border-gray-700"
+                  >
+                    <p className="font-semibold">
+                      {story?.title ?? h.storyId}
+                    </p>
+                    <p className="text-[10px] text-slate-500">
+                      via {h.provenance.replace(/_/g, " ")}
+                      {h.note ? ` · ${h.note}` : ""}
+                    </p>
+                    {story && (
+                      <p className="mt-1 text-[11px] leading-5 text-slate-700 dark:text-slate-300">
+                        {story.scenario}
+                      </p>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </details>
+        )}
+      </Section>
+    );
+  }
+
+  // ── Game mode: publications (institutional attesters).
+  const pub = PUBS_BY_ID.get(nodeId);
+  if (pub) {
+    return (
+      <Section title="Published source">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          <b>{pub.name}</b>
+        </p>
+        <p className="text-[11px] italic text-slate-600 dark:text-slate-300">
+          {pub.tagline}
+        </p>
+        <p className="mt-2 text-[11px] text-slate-500">
+          Drift rate {Math.round(pub.drift_rate * 100)}% · focus on{" "}
+          {pub.focus_domains.join(", ")}
+        </p>
+        {pub.editorial_note && (
+          <p className="mt-1 text-[11px] text-slate-700 dark:text-slate-300">
+            {pub.editorial_note}
+          </p>
+        )}
+      </Section>
+    );
+  }
+
+  // ── Game mode: cases as goals.
+  const caseFile = CASES_BY_ID.get(nodeId);
+  if (caseFile) {
+    return (
+      <Section title="Case (community goal)">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          <b>
+            {caseFile.codename} · {caseFile.subtitle}
+          </b>
+        </p>
+        <p className="mt-1 text-[12px] leading-5 text-slate-700 dark:text-slate-300">
+          {caseFile.framing_short}
+        </p>
+        <p className="mt-2 text-[11px] text-slate-500">
+          Witnesses: {caseFile.witnesses.length} · Articles:{" "}
+          {caseFile.articles.length}. Open the full case at{" "}
+          <a
+            href="/game"
+            className="text-brand-primary underline-offset-2 hover:underline"
+          >
+            /game
+          </a>
+          .
+        </p>
+      </Section>
+    );
+  }
+
+  // ── Game mode: holding claims (claim:character:story).
+  if (nodeId.startsWith("holding:")) {
+    const parts = nodeId.split(":");
+    const storyId = parts.slice(2).join(":");
+    const story = STORIES_BY_ID.get(storyId);
+    const charId = parts[1];
+    if (story) {
+      return (
+        <Section title="Story held by this voice">
+          <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+            <b>{story.title}</b>
+          </p>
+          <p className="mt-1 text-[12px] leading-5 text-slate-700 dark:text-slate-300">
+            {story.scenario}
+          </p>
+          <p className="mt-2 text-[11px] text-slate-500">
+            Carries on dimension{" "}
+            <span className="font-mono">
+              {story.dimensions[0] ?? "—"}
+            </span>{" "}
+            · concern area {story.family}
+          </p>
+          <button
+            type="button"
+            onClick={() => onPick(charId)}
+            className="mt-2 rounded border border-slate-200 px-2 py-0.5 text-[11px] hover:border-brand-primary dark:border-gray-700"
+          >
+            walk to the holder →
+          </button>
+        </Section>
+      );
+    }
+  }
+
+  // ── Game mode: witness claims (case:caseId:wit:characterId).
+  if (nodeId.startsWith("case:") && nodeId.includes(":wit:")) {
+    const [, caseId, , charId] = nodeId.split(":");
+    const c = CASES_BY_ID.get(caseId);
+    const w = c?.witnesses.find((x) => x.character_id === charId);
+    if (w && c) {
+      return (
+        <Section title="Witness in this case">
+          <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+            &ldquo;{w.attestation}&rdquo;
+          </p>
+          <p className="mt-2 text-[11px] text-slate-500">
+            Attention domain: {w.domain_present}
+          </p>
+          {w.drift_hint && (
+            <p className="mt-1 rounded bg-amber-50 px-2 py-1 text-[11px] text-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
+              <span className="font-semibold">drift hint:</span>{" "}
+              {w.drift_hint}
+            </p>
+          )}
+          <p className="mt-2 text-[11px] text-slate-500">
+            From {c.codename}: {c.subtitle}
+          </p>
+        </Section>
+      );
+    }
+  }
+
+  // ── Game mode: article claims.
+  if (nodeId.startsWith("art-case-")) {
+    for (const c of CASES) {
+      const a = c.articles.find((x) => x.id === nodeId);
+      if (a) {
+        const publication = PUBS_BY_ID.get(a.source_id);
+        return (
+          <Section title="Article in this case">
+            <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+              <b>{a.headline}</b>
+            </p>
+            {a.byline && (
+              <p className="text-[11px] text-slate-500">{a.byline}</p>
+            )}
+            <p className="mt-1 text-[12px] leading-5 text-slate-700 dark:text-slate-300">
+              {a.body}
+            </p>
+            <p className="mt-2 rounded bg-amber-50 px-2 py-1 text-[11px] text-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
+              <span className="font-semibold">what drifted:</span>{" "}
+              {a.drift_notes}
+            </p>
+            {publication && (
+              <p className="mt-2 text-[11px] text-slate-500">
+                Source: {publication.name} (drift rate{" "}
+                {Math.round(publication.drift_rate * 100)}%)
+              </p>
+            )}
+          </Section>
+        );
+      }
+    }
+  }
+
+  // ── Encyclopedia attester (pub-encyclopedia).
+  if (nodeId === "pub-encyclopedia") {
+    return (
+      <Section title="The Cascadia Encyclopedia">
+        <p className="text-[13px] leading-6 text-slate-800 dark:text-slate-200">
+          A single high-volume institutional voice that ratifies the
+          namespace. In encyclopedia mode it attests across every
+          component on the most-cited dimensions. The community
+          maintains it; it can be edit-warred; it has a drift rate.
+        </p>
+      </Section>
+    );
+  }
+
+  // ── Generic claim (no rich source found).
+  if (node.group === "claim") {
+    return (
+      <Section title="Claim">
+        <p className="font-mono text-[11px] text-slate-700 dark:text-slate-300">
+          {node.label}
+        </p>
+        <p className="mt-2 text-[11px] italic text-slate-500">
+          Claim labels encode attester | dimension | score | confidence.
+        </p>
+      </Section>
+    );
+  }
+
+  return null;
+}
+
+function Section({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="mb-3 rounded-lg border border-slate-200 bg-slate-50 p-2 dark:border-gray-700 dark:bg-gray-800">
+      <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-primary">
+        {title}
+      </p>
+      <div className="mt-1">{children}</div>
+    </div>
   );
 }
 
