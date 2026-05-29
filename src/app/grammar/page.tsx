@@ -155,8 +155,22 @@ export default async function GrammarPage() {
               </div>
             </div>
 
-            {/* On-page nav */}
-            <nav className="flex flex-wrap gap-2 text-xs">
+            {/* On-page nav. On mobile it lived as a tall left-aligned wrap of
+                 chips that read like a pinned side-rail; collapse it behind a
+                 toggle below md, keep the original flat layout on md+. */}
+            <details
+              className="group rounded-md border border-slate-200 bg-white p-2 dark:border-gray-800 dark:bg-gray-900 md:border-0 md:bg-transparent md:p-0 md:dark:bg-transparent md:[&>nav]:!flex"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-2 rounded px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600 hover:text-brand-primary dark:text-slate-300 md:hidden">
+                <span>Jump to section</span>
+                <span
+                  className="text-slate-400 transition-transform duration-150 group-open:rotate-180"
+                  aria-hidden="true"
+                >
+                  &#9662;
+                </span>
+              </summary>
+              <nav className="mt-2 flex flex-wrap gap-2 text-xs md:mt-0">
               <a
                 href={`#${ANCHORS.primitives}`}
                 className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
@@ -217,7 +231,8 @@ export default async function GrammarPage() {
               >
                 References
               </a>
-            </nav>
+              </nav>
+            </details>
           </header>
 
           <div className="space-y-14">
