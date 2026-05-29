@@ -681,6 +681,33 @@ export function buildDemoGraph(currentTime = 10): KernelGraph {
     }
   });
 
+  // Cross-attester claim relations on the same dimension. This is what
+  // makes the demo visibly evolve: every time a new voice scores a
+  // dimension someone else already scored, we draw an agrees_with or
+  // contradicts arc across the cluster. The wolf's lies attract
+  // contradicts edges; the witnesses agree with each other.
+  const scoredByDim = new Map<string, Array<{ idx: number; score: number }>>();
+  live.forEach((a, idx) => {
+    if (a.primitive !== "scores" || !a.dim) return;
+    const arr = scoredByDim.get(a.dim) ?? [];
+    arr.push({ idx, score: a.score });
+    scoredByDim.set(a.dim, arr);
+  });
+  for (const claims of scoredByDim.values()) {
+    for (let i = 0; i < claims.length; i++) {
+      for (let j = i + 1; j < claims.length; j++) {
+        const a = claims[i];
+        const b = claims[j];
+        const sameSign = a.score * b.score > 0;
+        edges.push({
+          source: `rrh-claim:${a.idx}`,
+          target: `rrh-claim:${b.idx}`,
+          kind: sameSign ? "agrees_with" : "contradicts",
+        });
+      }
+    }
+  }
+
   return { nodes, edges };
 }
 
