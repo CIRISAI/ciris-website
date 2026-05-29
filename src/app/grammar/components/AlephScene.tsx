@@ -511,6 +511,45 @@ export default function AlephScene({
     <Canvas
       camera={{ position: [2.6, 1.6, 2.6], fov: 50 }}
       dpr={dpr}
+      // Belt-and-braces WebGL hardening for mobile Chrome / Safari:
+      //   - antialias=false drops MSAA which some tile-based GPUs (Mali,
+      //     Adreno) silently fail to allocate at touchscreen DPRs
+      //   - powerPreference defaults to "default" so we don't kick the
+      //     discrete GPU on hybrid laptops
+      //   - preserveDrawingBuffer=false is the Three.js default but we
+      //     spell it out so future readers know we tolerate buffer swap
+      //   - failIfMajorPerformanceCaveat=false lets WebGL run on the
+      //     software rasteriser when no GPU is available (the alternative
+      //     is the black box the user just reported)
+      gl={{
+        antialias: false,
+        alpha: true,
+        preserveDrawingBuffer: false,
+        failIfMajorPerformanceCaveat: false,
+      }}
+      onCreated={({ gl, scene, camera }) => {
+        // Surface basic ready-state to the page so SceneFrame can show a
+        // "stuck loading" banner if no first paint arrives within 2s.
+        try {
+          (
+            globalThis as { __alephSceneCreated?: boolean }
+          ).__alephSceneCreated = true;
+          void scene; void camera; void gl;
+        } catch {
+          /* harmless */
+        }
+      }}
+      onError={(e) => {
+        // R3F surfaces context creation / first-paint errors here.
+        // Re-throw into a module-scope so the SceneFrame can render it.
+        try {
+          (
+            globalThis as { __alephSceneError?: string }
+          ).__alephSceneError = String(e);
+        } catch {
+          /* harmless */
+        }
+      }}
     >
       <ambientLight intensity={0.6} />
       <directionalLight position={[3, 4, 3]} intensity={0.6} />

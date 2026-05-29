@@ -818,6 +818,9 @@ function SceneFrame({
   onPickNode?: (id: string) => void;
 }) {
   const [webglOk, setWebglOk] = useState<boolean | null>(null);
+  const [sceneCreated, setSceneCreated] = useState(false);
+  const [sceneError, setSceneError] = useState<string | null>(null);
+  const [stuck, setStuck] = useState(false);
   useEffect(() => {
     if (!mounted) return;
     try {
@@ -828,6 +831,31 @@ function SceneFrame({
       setWebglOk(false);
     }
   }, [mounted]);
+  // Poll the module-scope created flag the Canvas's onCreated sets, then
+  // start a 3s "stuck" timer. If onCreated never fires (e.g. the renderer
+  // failed silently on this mobile GPU), the user gets a fallback banner
+  // instead of staring at an empty box.
+  useEffect(() => {
+    if (!mounted || webglOk !== true) return;
+    type GlobalFlags = {
+      __alephSceneCreated?: boolean;
+      __alephSceneError?: string;
+    };
+    const tick = () => {
+      const g = globalThis as GlobalFlags;
+      if (g.__alephSceneCreated) setSceneCreated(true);
+      if (g.__alephSceneError) setSceneError(g.__alephSceneError);
+    };
+    const id = setInterval(tick, 200);
+    const stuckTimer = setTimeout(() => {
+      const g = globalThis as GlobalFlags;
+      if (!g.__alephSceneCreated) setStuck(true);
+    }, 3000);
+    return () => {
+      clearInterval(id);
+      clearTimeout(stuckTimer);
+    };
+  }, [mounted, webglOk]);
 
   // Wire the perf harness's per-frame tick into a global the scene
   // PerfReporter can call without prop-drilling through Canvas. The
@@ -884,6 +912,48 @@ function SceneFrame({
             onPickNode={onPickNode}
           />
           <SceneOverlay />
+          {(sceneError || (stuck && !sceneCreated)) && (
+            <div className="absolute inset-3 z-20 flex flex-col items-center justify-center gap-3 rounded-xl border-2 border-red-300 bg-white/95 p-4 text-center text-sm text-slate-800 shadow-lg dark:bg-gray-900/95 dark:text-slate-100">
+              <p className="font-semibold">
+                The scene did not paint on this device.
+              </p>
+              {sceneError && (
+                <pre className="max-w-full overflow-x-auto whitespace-pre-wrap break-all rounded bg-slate-100 p-2 text-left text-[10px] dark:bg-gray-800">
+                  {sceneError}
+                </pre>
+              )}
+              <p className="max-w-sm text-xs text-slate-600 dark:text-slate-300">
+                Some mobile GPUs (especially older Android Mali / Adreno)
+                refuse WebGL at the rate we ask. We tried antialias off
+                and a lower pixel ratio; it still failed. The cast and
+                deduction game work without WebGL.
+              </p>
+              <a
+                href="/game"
+                className="rounded-md border-2 border-brand-primary bg-brand-primary px-3 py-1 text-xs font-semibold text-white"
+              >
+                Play the mystery game →
+              </a>
+              <button
+                type="button"
+                onClick={() => {
+                  (
+                    globalThis as { __alephSceneCreated?: boolean; __alephSceneError?: string }
+                  ).__alephSceneCreated = false;
+                  (
+                    globalThis as { __alephSceneCreated?: boolean; __alephSceneError?: string }
+                  ).__alephSceneError = undefined;
+                  setSceneError(null);
+                  setStuck(false);
+                  setSceneCreated(false);
+                  window.location.reload();
+                }}
+                className="text-xs text-brand-primary underline-offset-2 hover:underline"
+              >
+                or try reloading
+              </button>
+            </div>
+          )}
         </>
       )}
     </div>
