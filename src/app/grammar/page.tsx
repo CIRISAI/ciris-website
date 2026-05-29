@@ -24,6 +24,7 @@ import NonGoalsPanel from "./components/NonGoalsPanel";
 import CompositionGraph from "./components/CompositionGraph";
 import TranslationPlayground from "./components/TranslationPlayground";
 import FractalSelfCallout from "./components/FractalSelfCallout";
+import AlephView from "./components/AlephView";
 
 export default async function GrammarPage() {
   const source = await getRegistrySource();
@@ -225,6 +226,7 @@ export default async function GrammarPage() {
             <EnvelopeAndAxesPanel />
             <CompositionPoliciesPanel />
             <NamespacePanel source={source} />
+            <AlephView source={source} />
             <CompositionGraph source={source} />
             <TranslationPlayground />
             <StoriesLibrary />

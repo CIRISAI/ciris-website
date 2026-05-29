@@ -1,0 +1,21 @@
+{
+  "name": "coherence-kernel",
+  "type": "module",
+  "description": "CIRIS Coherence kernel — CEG graph topology, Poincaré scale-tower embedding, corridor math. Per FSD at CIRISAgent#835.",
+  "version": "0.1.0",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CIRISAI/ciris-website"
+  },
+  "files": [
+    "coherence_kernel_bg.wasm",
+    "coherence_kernel.js",
+    "coherence_kernel.d.ts"
+  ],
+  "main": "coherence_kernel.js",
+  "types": "coherence_kernel.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

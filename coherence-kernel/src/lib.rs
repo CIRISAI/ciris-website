@@ -1,0 +1,426 @@
+// CIRIS Coherence kernel — Phase 1.
+//
+// Per the FSD at CIRISAgent#835. Phase 1 scope:
+// - Load a CEG namespace (nodes + edges + per-node component / family / role)
+// - Place every node on a Poincaré disk within its assigned scale band
+// - Expose the layout to JS as a typed-array of [x, y, z, ...] positions, one
+//   GPU upload per frame on the @react-three/fiber side
+// - Carry the seven scale tower (biosphere as ground plane + 6 bands)
+// - Compute a basic corridor metric: per-component k and an estimated rho
+//
+// Determinism is preserved by avoiding any randomized layout: every input
+// gets a deterministic output. Q16.16 fixed-point is a hardening pass; Phase
+// 1 ships f32 and audits later.
+//
+// License: AGPL-3.0-or-later.
+
+use serde::{Deserialize, Serialize};
+use wasm_bindgen::prelude::*;
+
+// Scale tower
+//
+// Per CEG §1.2 and the synthesis paper: biosphere is the ground plane, not a
+// 7th equal-weight band. Six discrete scale bands sit above it. The ground
+// plane is what every node renders against; the bands carry the wire-format
+// scopes a node can be claimed at.
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[repr(u8)]
+pub enum Band {
+    Key = 0,
+    Occurrence = 1,
+    Agent = 2,
+    Fleet = 3,
+    Cell = 4,
+    Federation = 5,
+}
+
+impl Band {
+    pub fn from_index(i: u8) -> Self {
+        match i {
+            0 => Band::Key,
+            1 => Band::Occurrence,
+            2 => Band::Agent,
+            3 => Band::Fleet,
+            4 => Band::Cell,
+            _ => Band::Federation,
+        }
+    }
+    pub fn z(self) -> f32 {
+        // Ground plane is z=0.0. Bands stack above. Federation is the highest
+        // signed band; biosphere remains the floor everything draws against.
+        match self {
+            Band::Key => 0.20,
+            Band::Occurrence => 0.36,
+            Band::Agent => 0.52,
+            Band::Fleet => 0.68,
+            Band::Cell => 0.84,
+            Band::Federation => 1.00,
+        }
+    }
+    pub fn label(self) -> &'static str {
+        match self {
+            Band::Key => "key",
+            Band::Occurrence => "occurrence",
+            Band::Agent => "agent",
+            Band::Fleet => "fleet",
+            Band::Cell => "cell",
+            Band::Federation => "federation",
+        }
+    }
+}
+
+// Node + Edge input shapes
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Node {
+    pub id: String,
+    pub label: String,
+    /// "primitive" | "family" | "component" | "prefix"
+    pub group: String,
+    /// Component name or None for primitives / families
+    pub component: Option<String>,
+    /// Family name (STANDING / ACTION / DETECTION / CONSENSUS / CORRECTION) or None
+    pub family: Option<String>,
+    /// Which scale band the node primarily lives at. Phase 1 default: Cell.
+    pub band: u8,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Edge {
+    pub source: String,
+    pub target: String,
+    /// "composes" | "belongs_to" | "owned_by" | "operates_on"
+    pub kind: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct GraphInput {
+    pub nodes: Vec<Node>,
+    pub edges: Vec<Edge>,
+}
+
+// Layout output shape: a flat Float32Array of node positions, indexed by the
+// nodes array supplied to set_graph. Three floats per node: x, y, z.
+
+// Poincare disk embedding
+//
+// For Phase 1 we use a simple sector-and-radius placement. Each component
+// (CIRISAgent, CIRISVerify, ...) gets an angular sector around the disk;
+// within the sector, nodes spread radially. Primitives sit at the disk centre
+// (canonical fractal-self anchor); families at low hyperbolic radius;
+// components at mid radius; prefix leaves at outer radius.
+//
+// Hyperbolic distance from disk centre is tanh(r), so Euclidean radius
+// approaches 1 asymptotically. The metric encodes the
+// "exponentially more room as you move outward" property that makes scale
+// recursion legible (Nickel and Kiela 2017; Lamping and Rao 1995).
+
+const TAU: f32 = std::f32::consts::TAU;
+
+fn hyperbolic_r(depth: f32) -> f32 {
+    // depth = 0 -> centre; depth = 1 -> near boundary.
+    // Map to Euclidean radius on the disk via tanh.
+    let h = depth * 3.0; // 3.0 chosen for legible separation in Phase 1
+    h.tanh() * 0.95 // 0.95 to leave headroom at the disk boundary
+}
+
+struct LayoutCtx {
+    families: Vec<String>,
+    components: Vec<String>,
+    /// For each node (by node array index), its order within its component's prefix list.
+    prefix_intra_component_idx: Vec<usize>,
+    component_prefix_count: std::collections::HashMap<String, usize>,
+}
+
+fn build_layout_ctx(input: &GraphInput) -> LayoutCtx {
+    let mut families: Vec<String> = Vec::new();
+    let mut components: Vec<String> = Vec::new();
+    for n in &input.nodes {
+        if let Some(f) = &n.family {
+            if !families.contains(f) {
+                families.push(f.clone());
+            }
+        }
+        if let Some(c) = &n.component {
+            if !components.contains(c) {
+                components.push(c.clone());
+            }
+        }
+    }
+    families.sort();
+    components.sort();
+
+    // Index each prefix node within its component's prefix list
+    let mut per_component_count: std::collections::HashMap<String, usize> =
+        std::collections::HashMap::new();
+    let mut intra: Vec<usize> = vec![0; input.nodes.len()];
+    for (i, n) in input.nodes.iter().enumerate() {
+        if n.group == "prefix" {
+            if let Some(c) = &n.component {
+                let entry = per_component_count.entry(c.clone()).or_insert(0);
+                intra[i] = *entry;
+                *entry += 1;
+            }
+        }
+    }
+
+    LayoutCtx {
+        families,
+        components,
+        prefix_intra_component_idx: intra,
+        component_prefix_count: per_component_count,
+    }
+}
+
+fn place_node(node_idx: usize, node: &Node, layout_ctx: &LayoutCtx) -> (f32, f32, f32) {
+    let z = Band::from_index(node.band).z();
+
+    // Primitives -> disk centre at their band
+    if node.group == "primitive" {
+        return (0.0, 0.0, z);
+    }
+
+    // Families -> small ring around centre (depth 0.20)
+    if node.group == "family" {
+        let f_idx = layout_ctx
+            .families
+            .iter()
+            .position(|f| Some(f) == node.family.as_ref())
+            .unwrap_or(0);
+        let theta = (f_idx as f32 / layout_ctx.families.len().max(1) as f32) * TAU;
+        let r = hyperbolic_r(0.20);
+        return (r * theta.cos(), r * theta.sin(), z);
+    }
+
+    // Components -> ring at depth 0.40
+    if node.group == "component" {
+        let c_idx = layout_ctx
+            .components
+            .iter()
+            .position(|c| Some(c) == node.component.as_ref())
+            .unwrap_or(0);
+        let theta = (c_idx as f32 / layout_ctx.components.len().max(1) as f32) * TAU;
+        let r = hyperbolic_r(0.40);
+        return (r * theta.cos(), r * theta.sin(), z);
+    }
+
+    // Prefix leaves -> cluster within their owning component's angular sector
+    let comp_idx = node
+        .component
+        .as_ref()
+        .and_then(|c| layout_ctx.components.iter().position(|x| x == c))
+        .unwrap_or(0);
+    let n_components = layout_ctx.components.len().max(1) as f32;
+    let sector_centre = (comp_idx as f32 / n_components) * TAU;
+    let sector_width = TAU / n_components;
+
+    // Within the sector, spread by within-component index
+    let intra_idx = layout_ctx
+        .prefix_intra_component_idx
+        .get(node_idx)
+        .copied()
+        .unwrap_or(0);
+    let intra_count = layout_ctx
+        .component_prefix_count
+        .get(node.component.as_deref().unwrap_or(""))
+        .copied()
+        .unwrap_or(1)
+        .max(1) as f32;
+
+    // Spread within the sector, leaving margins on each side
+    let local_theta = (intra_idx as f32 + 0.5) / intra_count;
+    let theta = sector_centre - sector_width * 0.40 + sector_width * 0.80 * local_theta;
+
+    // Vary radial depth slightly so prefixes don't all sit on one circle
+    let depth_jitter = 0.62 + 0.18 * ((intra_idx as f32 * 0.7321).fract());
+    let r = hyperbolic_r(depth_jitter);
+
+    (r * theta.cos(), r * theta.sin(), z)
+}
+
+// Corridor metric (Phase 1 sketch)
+//
+// Per the synthesis paper: k_eff = k / (1 + rho * (k - 1)).
+//
+// For Phase 1 we surface a per-component estimate. The full graph-wide
+// k_eff calculation against composition policy data lands in Phase 2 once
+// the kernel is dynamic. This is enough to drive the persistence sidebar.
+
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+pub struct CorridorMetric {
+    pub k: u32,
+    pub rho_estimate: f32,
+    pub k_eff: f32,
+}
+
+fn estimate_corridor(input: &GraphInput) -> CorridorMetric {
+    // Phase 1 heuristic: k = number of distinct families touched; rho is a
+    // crude estimate from the fraction of edges that stay within one family.
+    let mut families = std::collections::HashSet::new();
+    for n in &input.nodes {
+        if let Some(f) = &n.family {
+            families.insert(f.clone());
+        }
+    }
+    let k = families.len() as u32;
+
+    let node_family: std::collections::HashMap<&str, &str> = input
+        .nodes
+        .iter()
+        .filter_map(|n| n.family.as_deref().map(|f| (n.id.as_str(), f)))
+        .collect();
+
+    let mut intra = 0u32;
+    let mut total = 0u32;
+    for e in &input.edges {
+        let s = node_family.get(e.source.as_str());
+        let t = node_family.get(e.target.as_str());
+        if let (Some(s), Some(t)) = (s, t) {
+            total += 1;
+            if s == t {
+                intra += 1;
+            }
+        }
+    }
+    let rho = if total > 0 {
+        intra as f32 / total as f32
+    } else {
+        0.0
+    };
+    let k_eff = if k > 0 {
+        k as f32 / (1.0 + rho * (k as f32 - 1.0))
+    } else {
+        0.0
+    };
+    CorridorMetric {
+        k,
+        rho_estimate: rho,
+        k_eff,
+    }
+}
+
+// Public kernel API
+
+#[wasm_bindgen]
+pub struct CoherenceKernel {
+    graph: GraphInput,
+    ctx: LayoutCtx,
+}
+
+#[wasm_bindgen]
+impl CoherenceKernel {
+    #[wasm_bindgen(constructor)]
+    pub fn new() -> Self {
+        Self {
+            graph: GraphInput {
+                nodes: Vec::new(),
+                edges: Vec::new(),
+            },
+            ctx: LayoutCtx {
+                families: Vec::new(),
+                components: Vec::new(),
+                prefix_intra_component_idx: Vec::new(),
+                component_prefix_count: std::collections::HashMap::new(),
+            },
+        }
+    }
+
+    /// Load a graph from a JSON-serialized GraphInput.
+    #[wasm_bindgen]
+    pub fn set_graph(&mut self, json: &str) -> Result<(), JsValue> {
+        let graph: GraphInput = serde_json::from_str(json)
+            .map_err(|e| JsValue::from_str(&format!("parse error: {e}")))?;
+        self.ctx = build_layout_ctx(&graph);
+        self.graph = graph;
+        Ok(())
+    }
+
+    /// Return the laid-out positions as a typed array the JS side can map
+    /// straight into a Float32Array view of WASM linear memory. Three floats
+    /// per node, in input order: [x0, y0, z0, x1, y1, z1, ...].
+    #[wasm_bindgen]
+    pub fn layout(&self) -> Vec<f32> {
+        let mut out = Vec::with_capacity(self.graph.nodes.len() * 3);
+        for (i, n) in self.graph.nodes.iter().enumerate() {
+            let (x, y, z) = place_node(i, n, &self.ctx);
+            out.push(x);
+            out.push(y);
+            out.push(z);
+        }
+        out
+    }
+
+    /// Number of nodes in the loaded graph.
+    #[wasm_bindgen(getter)]
+    pub fn node_count(&self) -> u32 {
+        self.graph.nodes.len() as u32
+    }
+
+    /// Z height of a band by its 0..5 ordinal.
+    #[wasm_bindgen]
+    pub fn band_z(band: u8) -> f32 {
+        Band::from_index(band).z()
+    }
+
+    /// Per-graph corridor metric: { k, rho_estimate, k_eff }.
+    /// Phase 1 heuristic; Phase 2 makes it precise.
+    #[wasm_bindgen]
+    pub fn corridor(&self) -> Result<JsValue, JsValue> {
+        let m = estimate_corridor(&self.graph);
+        serde_wasm_bindgen::to_value(&m).map_err(|e| JsValue::from_str(&e.to_string()))
+    }
+}
+
+impl Default for CoherenceKernel {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
+extern crate serde_json;
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn empty_graph_layout_is_empty() {
+        let k = CoherenceKernel::new();
+        assert_eq!(k.node_count(), 0);
+        assert_eq!(k.layout().len(), 0);
+    }
+
+    #[test]
+    fn band_z_values_increase() {
+        assert!(Band::from_index(0).z() < Band::from_index(3).z());
+        assert!(Band::from_index(3).z() < Band::from_index(5).z());
+    }
+
+    #[test]
+    fn small_graph_lays_out() {
+        let json = r#"{
+            "nodes": [
+                {"id":"s","label":"scores","group":"primitive","component":null,"family":null,"band":4},
+                {"id":"d","label":"delegates_to","group":"primitive","component":null,"family":null,"band":4},
+                {"id":"famS","label":"STANDING","group":"family","component":null,"family":"STANDING","band":4},
+                {"id":"compA","label":"CIRISAgent","group":"component","component":"CIRISAgent","family":null,"band":4},
+                {"id":"prefA","label":"beneficence:*","group":"prefix","component":"CIRISAgent","family":"STANDING","band":4}
+            ],
+            "edges": [
+                {"source":"d","target":"s","kind":"operates_on"},
+                {"source":"s","target":"famS","kind":"composes"},
+                {"source":"famS","target":"prefA","kind":"belongs_to"},
+                {"source":"compA","target":"prefA","kind":"owned_by"}
+            ]
+        }"#;
+        let mut k = CoherenceKernel::new();
+        k.set_graph(json).unwrap();
+        assert_eq!(k.node_count(), 5);
+        let layout = k.layout();
+        assert_eq!(layout.len(), 15);
+        // Primitives at disk centre
+        assert!(layout[0].abs() < 0.001);
+        assert!(layout[1].abs() < 0.001);
+    }
+}
