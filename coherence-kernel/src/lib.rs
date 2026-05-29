@@ -268,35 +268,47 @@ pub struct Verdict {
     pub supporting_count: u32,
 }
 
-/// Pure-Rust core of Policy A. Composable from outside the wasm-bindgen
-/// surface so the unit tests can exercise the logic without a JS host.
-pub fn policy_a_pure(graph: &GraphInput, pinned: &[String], dimension: &str) -> Verdict {
-    let pinned_set: std::collections::HashSet<&str> =
-        pinned.iter().map(|s| s.as_str()).collect();
+/// Parse a claim node's label into (attester, dimension, score, confidence).
+/// Claim labels encode "<attester>|<dimension>|<score>|<confidence>".
+fn parse_claim(label: &str) -> Option<(&str, &str, f32, f32)> {
+    let parts: Vec<&str> = label.split('|').collect();
+    if parts.len() < 3 {
+        return None;
+    }
+    let score: f32 = parts[2].parse().ok()?;
+    let confidence: f32 = parts.get(3).and_then(|s| s.parse().ok()).unwrap_or(0.8);
+    Some((parts[0], parts[1], score, confidence))
+}
+
+/// Build a directed map of "who vouches for whom" from `vouches_for` edges
+/// in the graph. Returns voucher -> set(vouched). One-hop traversal only.
+fn vouch_adjacency(graph: &GraphInput) -> std::collections::HashMap<&str, std::collections::HashSet<&str>> {
+    let mut adj: std::collections::HashMap<&str, std::collections::HashSet<&str>> =
+        std::collections::HashMap::new();
+    for e in &graph.edges {
+        if e.kind == "vouches_for" {
+            adj.entry(e.source.as_str())
+                .or_default()
+                .insert(e.target.as_str());
+        }
+    }
+    adj
+}
+
+/// Compose a verdict from per-claim (score, weight) pairs.
+fn compose_weighted(
+    contributions: &[(f32, f32)],
+    dimension: &str,
+) -> Verdict {
     let mut weighted_sum = 0.0f32;
     let mut total_w = 0.0f32;
     let mut count = 0u32;
-    for n in &graph.nodes {
-        if n.group != "claim" {
+    for (score, w) in contributions {
+        if *w <= 0.0 {
             continue;
         }
-        // Claim label encodes: "<attester>|<dimension>|<score>|<confidence>"
-        let parts: Vec<&str> = n.label.split('|').collect();
-        if parts.len() < 3 {
-            continue;
-        }
-        let attester = parts[0];
-        let dim = parts[1];
-        let score: f32 = parts[2].parse().unwrap_or(0.0);
-        let confidence: f32 = parts.get(3).and_then(|s| s.parse().ok()).unwrap_or(0.8);
-        if dim != dimension {
-            continue;
-        }
-        if !pinned_set.contains(attester) {
-            continue;
-        }
-        weighted_sum += score * confidence;
-        total_w += confidence;
+        weighted_sum += score * w;
+        total_w += w;
         count += 1;
     }
     let composed = if total_w > 0.0 { weighted_sum / total_w } else { 0.0 };
@@ -307,6 +319,84 @@ pub fn policy_a_pure(graph: &GraphInput, pinned: &[String], dimension: &str) -> 
         composed_confidence: conf,
         supporting_count: count,
     }
+}
+
+/// Pure-Rust core of Policy A (Direct Trust). Weighted mean of (score ×
+/// confidence) over claims by pinned attesters only.
+pub fn policy_a_pure(graph: &GraphInput, pinned: &[String], dimension: &str) -> Verdict {
+    let pinned_set: std::collections::HashSet<&str> =
+        pinned.iter().map(|s| s.as_str()).collect();
+    let mut contributions: Vec<(f32, f32)> = Vec::new();
+    for n in &graph.nodes {
+        if n.group != "claim" {
+            continue;
+        }
+        let Some((attester, dim, score, confidence)) = parse_claim(&n.label) else {
+            continue;
+        };
+        if dim != dimension {
+            continue;
+        }
+        if !pinned_set.contains(attester) {
+            continue;
+        }
+        contributions.push((score, confidence));
+    }
+    compose_weighted(&contributions, dimension)
+}
+
+/// Pure-Rust core of Policy B (One-hop Transitive Trust). Pinned attesters
+/// contribute at full weight; attesters vouched-for by any pinned attester
+/// contribute at one-hop decay (default 0.5); others contribute zero.
+///
+/// Weight per claim = hop_decay × confidence. The hop_decay = 0.5 constant
+/// is a sane default for Phase 2.4; later the kernel can take it as a
+/// caller-supplied parameter once the social-distance literature catches
+/// up. The decay matters less than the qualitative shift: low-confidence
+/// directly-pinned voices still beat high-confidence one-hop voices, which
+/// matches Ubuntu-primary intuition (you trust who you've actually heard).
+pub fn policy_b_pure(graph: &GraphInput, pinned: &[String], dimension: &str) -> Verdict {
+    const HOP_DECAY: f32 = 0.5;
+
+    let pinned_set: std::collections::HashSet<&str> =
+        pinned.iter().map(|s| s.as_str()).collect();
+    let adj = vouch_adjacency(graph);
+
+    // One-hop closure: anyone vouched for by a pinned attester.
+    let mut one_hop: std::collections::HashSet<&str> = std::collections::HashSet::new();
+    for &p in &pinned_set {
+        if let Some(vouched) = adj.get(p) {
+            for v in vouched {
+                if !pinned_set.contains(v) {
+                    one_hop.insert(v);
+                }
+            }
+        }
+    }
+
+    let mut contributions: Vec<(f32, f32)> = Vec::new();
+    for n in &graph.nodes {
+        if n.group != "claim" {
+            continue;
+        }
+        let Some((attester, dim, score, confidence)) = parse_claim(&n.label) else {
+            continue;
+        };
+        if dim != dimension {
+            continue;
+        }
+        let trust = if pinned_set.contains(attester) {
+            1.0
+        } else if one_hop.contains(attester) {
+            HOP_DECAY
+        } else {
+            0.0
+        };
+        if trust > 0.0 {
+            contributions.push((score, confidence * trust));
+        }
+    }
+    compose_weighted(&contributions, dimension)
 }
 
 fn estimate_corridor(input: &GraphInput) -> CorridorMetric {
@@ -555,9 +645,12 @@ impl CoherenceKernel {
         self.graph
             .nodes
             .retain(|n| n.group != "attester" && n.group != "claim" && n.group != "vote");
-        self.graph
-            .edges
-            .retain(|e| e.kind != "asserts" && e.kind != "votes_on" && e.kind != "delegates");
+        self.graph.edges.retain(|e| {
+            e.kind != "asserts"
+                && e.kind != "votes_on"
+                && e.kind != "delegates"
+                && e.kind != "vouches_for"
+        });
         self.ctx = build_layout_ctx(&self.graph);
     }
 
@@ -641,6 +734,18 @@ impl CoherenceKernel {
         let pinned: Vec<String> = serde_json::from_str(pinned_attester_ids_json)
             .map_err(|e| JsValue::from_str(&format!("parse error: {e}")))?;
         let v = policy_a_pure(&self.graph, &pinned, dimension);
+        serde_wasm_bindgen::to_value(&v).map_err(|e| JsValue::from_str(&e.to_string()))
+    }
+
+    /// Composition Policy B — One-hop Transitive Trust.
+    /// Pinned attesters at full weight, attesters vouched-for by any pinned
+    /// attester at 0.5 weight, others ignored. Vouches are encoded as edges
+    /// of kind "vouches_for" between attester nodes.
+    #[wasm_bindgen]
+    pub fn policy_b(&self, pinned_attester_ids_json: &str, dimension: &str) -> Result<JsValue, JsValue> {
+        let pinned: Vec<String> = serde_json::from_str(pinned_attester_ids_json)
+            .map_err(|e| JsValue::from_str(&format!("parse error: {e}")))?;
+        let v = policy_b_pure(&self.graph, &pinned, dimension);
         serde_wasm_bindgen::to_value(&v).map_err(|e| JsValue::from_str(&e.to_string()))
     }
 
@@ -729,6 +834,80 @@ mod tests {
         assert!((layout[2] - Band::Key.z()).abs() < 0.001);
         // Last instance at band 5 (Federation)
         assert!((layout[17] - Band::Federation.z()).abs() < 0.001);
+    }
+
+    fn make_attester(id: &str) -> Node {
+        Node {
+            id: id.into(),
+            label: id.into(),
+            group: "attester".into(),
+            component: None,
+            family: None,
+            band: 4,
+            multi_scale: false,
+        }
+    }
+
+    fn make_claim(id: &str, attester: &str, dim: &str, score: f32, conf: f32) -> Node {
+        Node {
+            id: id.into(),
+            label: format!("{attester}|{dim}|{score}|{conf}"),
+            group: "claim".into(),
+            component: None,
+            family: None,
+            band: 4,
+            multi_scale: false,
+        }
+    }
+
+    #[test]
+    fn policy_b_one_hop_includes_vouched_attester() {
+        // Alice is pinned. Alice vouches for Bob. Carol is not vouched-for.
+        // Alice claims 0.8/0.9; Bob claims 0.6/1.0; Carol claims -0.5/1.0.
+        // Policy A: only Alice counts → 0.8.
+        // Policy B: Alice at full (0.9), Bob at 0.5*1.0 = 0.5, Carol ignored.
+        //   (0.8*0.9 + 0.6*0.5) / (0.9 + 0.5) = (0.72 + 0.30) / 1.4 ≈ 0.7286
+        let graph = GraphInput {
+            nodes: vec![
+                make_attester("alice"),
+                make_attester("bob"),
+                make_attester("carol"),
+                make_claim("c1", "alice", "integrity:transparency", 0.8, 0.9),
+                make_claim("c2", "bob", "integrity:transparency", 0.6, 1.0),
+                make_claim("c3", "carol", "integrity:transparency", -0.5, 1.0),
+            ],
+            edges: vec![Edge {
+                source: "alice".into(),
+                target: "bob".into(),
+                kind: "vouches_for".into(),
+            }],
+        };
+        let pinned = vec!["alice".to_string()];
+        let a = policy_a_pure(&graph, &pinned, "integrity:transparency");
+        assert!((a.composed_score - 0.8).abs() < 0.01);
+        assert_eq!(a.supporting_count, 1);
+
+        let b = policy_b_pure(&graph, &pinned, "integrity:transparency");
+        assert!((b.composed_score - 0.7286).abs() < 0.01);
+        assert_eq!(b.supporting_count, 2);
+    }
+
+    #[test]
+    fn policy_b_without_vouches_matches_policy_a() {
+        let graph = GraphInput {
+            nodes: vec![
+                make_attester("alice"),
+                make_attester("bob"),
+                make_claim("c1", "alice", "x", 0.5, 1.0),
+                make_claim("c2", "bob", "x", 0.9, 1.0),
+            ],
+            edges: vec![],
+        };
+        let pinned = vec!["alice".to_string()];
+        let a = policy_a_pure(&graph, &pinned, "x");
+        let b = policy_b_pure(&graph, &pinned, "x");
+        assert!((a.composed_score - b.composed_score).abs() < 1e-6);
+        assert_eq!(a.supporting_count, b.supporting_count);
     }
 
     #[test]

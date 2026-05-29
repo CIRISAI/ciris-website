@@ -54,8 +54,9 @@ type Verdict = {
 };
 
 function buildWorkshopGraph(
-  selected: Set<string>,
+  pinned: Set<string>,
   claims: Claim[],
+  vouches: Set<string>,
 ): KernelGraph {
   const nodes: KernelNode[] = [];
   const edges: KernelEdge[] = [];
@@ -75,9 +76,10 @@ function buildWorkshopGraph(
     },
   );
 
-  // Pinned attesters (band Cell, single-scale)
+  // All roster attesters are present as nodes. Pinning is a trust signal
+  // (Policy A/B input), not a presence signal — non-pinned attesters can
+  // still post claims and can still be vouched-for under Policy B.
   for (const a of ATTESTER_ROSTER) {
-    if (!selected.has(a.id)) continue;
     nodes.push({
       id: a.id,
       label: a.name,
@@ -87,6 +89,14 @@ function buildWorkshopGraph(
       band: 4,
       multi_scale: false,
     });
+  }
+
+  // Vouches: encoded as `vouches_for` edges between attester nodes. The
+  // kernel's policy_b_pure() reads these to compute one-hop trust closure.
+  for (const v of vouches) {
+    const [from, to] = v.split(":");
+    if (!from || !to) continue;
+    edges.push({ source: from, target: to, kind: "vouches_for" });
   }
 
   // Claims (band Cell). Label encodes the kernel's policy_a input shape.
@@ -113,6 +123,10 @@ function buildWorkshopGraph(
       kind: "asserts",
     });
   }
+  // Suppress unused warning for `pinned` — kept in the signature because
+  // it's part of the workshop's conceptual surface and may influence
+  // graph shape in later phases.
+  void pinned;
 
   return { nodes, edges };
 }
@@ -157,6 +171,13 @@ export default function ExploreWorkshop({
     "integrity:transparency",
   );
 
+  // Vouches: each entry is "<from>:<to>" where from vouches for to.
+  // Default seed gives Policy B something interesting to show: Alice
+  // (pinned) vouches for Clara so her claims start counting at half weight.
+  const [vouches, setVouches] = useState<Set<string>>(
+    new Set(["alice:clara"]),
+  );
+
   // Kernel state. The kernel type is opaque from JS-side (it's a wasm-bindgen
   // class); we cast at call boundaries.
   type KernelInstance = {
@@ -166,6 +187,7 @@ export default function ExploreWorkshop({
     edge_geometry: () => EdgeGeom[];
     corridor: () => CorridorMetric;
     policy_a: (pinned: string, dim: string) => Verdict;
+    policy_b: (pinned: string, dim: string) => Verdict;
   };
   const kernelRef = useRef<KernelInstance | null>(null);
   const [ready, setReady] = useState(false);
@@ -185,7 +207,6 @@ export default function ExploreWorkshop({
     (async () => {
       try {
         const mod = await import("coherence-kernel");
-        await mod.default();
         const instance = new mod.CoherenceKernel();
         if (cancelled) return;
         kernelRef.current = instance as unknown as KernelInstance;
@@ -201,8 +222,8 @@ export default function ExploreWorkshop({
 
   // Recompute graph + corridor + verdict whenever state changes
   const graph = useMemo(
-    () => buildWorkshopGraph(pinned, claims),
-    [pinned, claims],
+    () => buildWorkshopGraph(pinned, claims, vouches),
+    [pinned, claims, vouches],
   );
 
   useEffect(() => {
@@ -219,23 +240,15 @@ export default function ExploreWorkshop({
       setCorridor(c);
       setCorridorHistory((h) => [...h, c].slice(-30));
 
-      // Run the chosen policy
-      if (policy === "A") {
-        const pinnedArr = JSON.stringify(Array.from(pinned));
-        const v = kernelRef.current.policy_a(
-          pinnedArr,
-          currentDimension,
-        ) as Verdict;
-        setVerdict(v);
+      const pinnedArr = JSON.stringify(Array.from(pinned));
+      let v: Verdict;
+      if (policy === "B") {
+        v = kernelRef.current.policy_b(pinnedArr, currentDimension);
       } else {
-        // Policy B / C — not yet implemented in the kernel; fall back to A
-        const pinnedArr = JSON.stringify(Array.from(pinned));
-        const v = kernelRef.current.policy_a(
-          pinnedArr,
-          currentDimension,
-        ) as Verdict;
-        setVerdict(v);
+        // Policy A (default). Policy C lands in 2.5.
+        v = kernelRef.current.policy_a(pinnedArr, currentDimension);
       }
+      setVerdict(v);
     } catch (e) {
       setError(String(e));
     }
@@ -269,6 +282,15 @@ export default function ExploreWorkshop({
   function clearClaims() {
     setClaims([]);
     setCorridorHistory([]);
+  }
+  function toggleVouch(from: string, to: string) {
+    const key = `${from}:${to}`;
+    setVouches((vs) => {
+      const n = new Set(vs);
+      if (n.has(key)) n.delete(key);
+      else n.add(key);
+      return n;
+    });
   }
 
   if (error) {
@@ -346,14 +368,15 @@ export default function ExploreWorkshop({
             3. Add a claim
           </p>
           <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">
-            Each claim is one attester&rsquo;s signed score + confidence on
-            the current dimension.
+            Any attester can post a claim. Whether it counts is up to the
+            composition policy.
           </p>
           <div className="mt-3 space-y-2">
-            {ATTESTER_ROSTER.filter((a) => pinned.has(a.id)).map((a) => (
+            {ATTESTER_ROSTER.map((a) => (
               <AddClaimRow
                 key={a.id}
                 attester={a}
+                pinned={pinned.has(a.id)}
                 onAdd={(score, confidence) =>
                   addClaim(a.id, score, confidence)
                 }
@@ -362,10 +385,64 @@ export default function ExploreWorkshop({
           </div>
         </section>
 
+        {/* Vouches — Policy B input */}
+        <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+          <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            4. Vouches
+          </p>
+          <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">
+            Pinned attester vouches let non-pinned voices count at 0.5
+            weight under Policy B.
+          </p>
+          <div className="mt-3 space-y-2">
+            {ATTESTER_ROSTER.filter((a) => pinned.has(a.id)).map((from) => {
+              const targets = ATTESTER_ROSTER.filter(
+                (t) => t.id !== from.id && !pinned.has(t.id),
+              );
+              if (targets.length === 0) return null;
+              return (
+                <div
+                  key={from.id}
+                  className="flex flex-wrap items-center gap-1.5 text-[11px]"
+                >
+                  <span
+                    className="inline-block h-2 w-2 rounded-full"
+                    style={{ background: from.hue }}
+                  />
+                  <span className="font-mono text-slate-600 dark:text-slate-300">
+                    {from.id} vouches:
+                  </span>
+                  {targets.map((to) => {
+                    const active = vouches.has(`${from.id}:${to.id}`);
+                    return (
+                      <button
+                        key={to.id}
+                        onClick={() => toggleVouch(from.id, to.id)}
+                        className={`rounded-full border px-2 py-0.5 font-mono text-[10px] ${
+                          active
+                            ? "border-brand-primary bg-brand-primary text-white"
+                            : "border-slate-300 text-slate-600 hover:border-brand-primary dark:border-gray-700 dark:text-slate-300"
+                        }`}
+                      >
+                        {to.id}
+                      </button>
+                    );
+                  })}
+                </div>
+              );
+            })}
+            {ATTESTER_ROSTER.filter((a) => pinned.has(a.id)).length === 0 && (
+              <p className="text-[11px] italic text-slate-500 dark:text-slate-400">
+                Pin at least one attester above to issue vouches.
+              </p>
+            )}
+          </div>
+        </section>
+
         {/* Policy picker */}
         <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
           <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            4. Composition policy
+            5. Composition policy
           </p>
           <div className="mt-2 flex gap-1.5">
             {(["A", "B", "C"] as Policy[]).map((p) => (
@@ -376,12 +453,14 @@ export default function ExploreWorkshop({
                   policy === p
                     ? "border-brand-primary bg-brand-primary text-white"
                     : "border-slate-300 text-slate-700 dark:border-gray-700 dark:text-slate-200"
-                }`}
-                disabled={p !== "A"}
+                } ${p === "C" ? "opacity-50" : ""}`}
+                disabled={p === "C"}
                 title={
                   p === "A"
-                    ? "Direct trust — weighted mean over pinned attesters"
-                    : "Coming in Phase 2.1+"
+                    ? "Direct Trust — weighted mean over pinned attesters only"
+                    : p === "B"
+                      ? "One-hop Transitive Trust — vouched-for attesters at 0.5 weight"
+                      : "Weighted-graph EigenTrust — lands in Phase 2.5"
                 }
               >
                 {p}
@@ -389,8 +468,8 @@ export default function ExploreWorkshop({
             ))}
           </div>
           <p className="mt-2 text-[11px] text-slate-500 dark:text-slate-400">
-            Phase 2 ships Policy A (Direct Trust). B (One-hop transitive)
-            and C (Weighted-graph EigenTrust) arrive in 2.1.
+            A = Direct Trust. B = One-hop Transitive Trust (uses vouches).
+            C = Weighted-graph EigenTrust (Phase 2.5).
           </p>
         </section>
 
@@ -398,7 +477,7 @@ export default function ExploreWorkshop({
         <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
           <div className="flex items-center justify-between">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              5. Claims on the chain
+              6. Claims on the chain
             </p>
             {claims.length > 0 && (
               <button
@@ -531,15 +610,28 @@ export default function ExploreWorkshop({
 
 function AddClaimRow({
   attester,
+  pinned,
   onAdd,
 }: {
   attester: Attester;
+  pinned: boolean;
   onAdd: (score: number, confidence: number) => void;
 }) {
   const [score, setScore] = useState(0.5);
   const [confidence, setConfidence] = useState(0.8);
   return (
-    <div className="flex items-center gap-2 rounded border border-slate-200 px-2 py-1.5 text-xs dark:border-gray-700">
+    <div
+      className={`flex items-center gap-2 rounded border px-2 py-1.5 text-xs ${
+        pinned
+          ? "border-slate-200 dark:border-gray-700"
+          : "border-dashed border-slate-200 opacity-70 dark:border-gray-700"
+      }`}
+      title={
+        pinned
+          ? "Pinned — claims count at full weight under Policy A and B."
+          : "Not pinned — claims count only under Policy B if vouched-for."
+      }
+    >
       <span
         className="h-2 w-2 shrink-0 rounded-full"
         style={{ background: attester.hue }}

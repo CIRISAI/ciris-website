@@ -13,6 +13,7 @@ export const coherencekernel_layout: (a: number, b: number) => void;
 export const coherencekernel_new: () => number;
 export const coherencekernel_node_count: (a: number) => number;
 export const coherencekernel_policy_a: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
+export const coherencekernel_policy_b: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
 export const coherencekernel_remove_edge: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => void;
 export const coherencekernel_set_graph: (a: number, b: number, c: number, d: number) => void;
 export const coherencekernel_upsert_node: (a: number, b: number, c: number, d: number) => void;

@@ -11,11 +11,13 @@
   "files": [
     "coherence_kernel_bg.wasm",
     "coherence_kernel.js",
+    "coherence_kernel_bg.js",
     "coherence_kernel.d.ts"
   ],
   "main": "coherence_kernel.js",
   "types": "coherence_kernel.d.ts",
   "sideEffects": [
+    "./coherence_kernel.js",
     "./snippets/*"
   ]
 }

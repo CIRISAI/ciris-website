@@ -216,7 +216,6 @@ export default function AlephView({ source }: { source: RegistrySource }) {
     (async () => {
       try {
         const mod = await import("coherence-kernel");
-        await mod.default();
         const kernel = new mod.CoherenceKernel();
         kernel.set_graph(JSON.stringify(graph));
         const layout = kernel.layout();

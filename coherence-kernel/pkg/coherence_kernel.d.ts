@@ -54,6 +54,13 @@ export class CoherenceKernel {
      */
     policy_a(pinned_attester_ids_json: string, dimension: string): any;
     /**
+     * Composition Policy B — One-hop Transitive Trust.
+     * Pinned attesters at full weight, attesters vouched-for by any pinned
+     * attester at 0.5 weight, others ignored. Vouches are encoded as edges
+     * of kind "vouches_for" between attester nodes.
+     */
+    policy_b(pinned_attester_ids_json: string, dimension: string): any;
+    /**
      * Remove an edge.
      */
     remove_edge(source: string, target: string, kind: string): void;
@@ -74,50 +81,3 @@ export class CoherenceKernel {
      */
     readonly node_count: number;
 }
-
-export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
-
-export interface InitOutput {
-    readonly memory: WebAssembly.Memory;
-    readonly __wbg_coherencekernel_free: (a: number, b: number) => void;
-    readonly coherencekernel_add_edge: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => void;
-    readonly coherencekernel_band_z: (a: number) => number;
-    readonly coherencekernel_clear_runtime: (a: number) => void;
-    readonly coherencekernel_corridor: (a: number, b: number) => void;
-    readonly coherencekernel_edge_geometry: (a: number, b: number) => void;
-    readonly coherencekernel_instance_count: (a: number) => number;
-    readonly coherencekernel_instance_meta: (a: number, b: number) => void;
-    readonly coherencekernel_layout: (a: number, b: number) => void;
-    readonly coherencekernel_new: () => number;
-    readonly coherencekernel_node_count: (a: number) => number;
-    readonly coherencekernel_policy_a: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
-    readonly coherencekernel_remove_edge: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => void;
-    readonly coherencekernel_set_graph: (a: number, b: number, c: number, d: number) => void;
-    readonly coherencekernel_upsert_node: (a: number, b: number, c: number, d: number) => void;
-    readonly __wbindgen_export: (a: number, b: number) => number;
-    readonly __wbindgen_export2: (a: number, b: number, c: number, d: number) => number;
-    readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
-    readonly __wbindgen_export3: (a: number, b: number, c: number) => void;
-}
-
-export type SyncInitInput = BufferSource | WebAssembly.Module;
-
-/**
- * Instantiates the given `module`, which can either be bytes or
- * a precompiled `WebAssembly.Module`.
- *
- * @param {{ module: SyncInitInput }} module - Passing `SyncInitInput` directly is deprecated.
- *
- * @returns {InitOutput}
- */
-export function initSync(module: { module: SyncInitInput } | SyncInitInput): InitOutput;
-
-/**
- * If `module_or_path` is {RequestInfo} or {URL}, makes a request and
- * for everything else, calls `WebAssembly.instantiate` directly.
- *
- * @param {{ module_or_path: InitInput | Promise<InitInput> }} module_or_path - Passing `InitInput` directly is deprecated.
- *
- * @returns {Promise<InitOutput>}
- */
-export default function __wbg_init (module_or_path?: { module_or_path: InitInput | Promise<InitInput> } | InitInput | Promise<InitInput>): Promise<InitOutput>;
