@@ -300,6 +300,8 @@ export default function ExploreWorkshop({
   // only the Wolf is testifying; at t=10 the Village Crier has
   // superseded his lies.
   const [demoTime, setDemoTime] = useState<number>(DEMO_TIME_MIN);
+  const currentBeat =
+    RRH_STORY_BEATS.find((b) => b.t === demoTime) ?? RRH_STORY_BEATS[0];
 
   // Kernel state. The kernel type is opaque from JS-side (it's a wasm-bindgen
   // class); we cast at call boundaries.
@@ -533,6 +535,11 @@ export default function ExploreWorkshop({
         selectedNodeId={selectedNodeId}
         hiddenNodeIds={hiddenNodeIds}
         onPickNode={setSelectedNodeId}
+        speechBubble={
+          corpusMode === "demo"
+            ? { speakerId: currentBeat.speakerId, quote: currentBeat.quote }
+            : null
+        }
       />
 
       {/* Detail — what you clicked on */}
@@ -896,6 +903,7 @@ function SceneFrame({
   selectedNodeId,
   hiddenNodeIds,
   onPickNode,
+  speechBubble = null,
 }: {
   mounted: boolean;
   graph: KernelGraph;
@@ -905,6 +913,7 @@ function SceneFrame({
   selectedNodeId?: string | null;
   hiddenNodeIds?: Set<string>;
   onPickNode?: (id: string) => void;
+  speechBubble?: { speakerId: string; quote: string } | null;
 }) {
   const [webglOk, setWebglOk] = useState<boolean | null>(null);
   useEffect(() => {
@@ -977,6 +986,7 @@ function SceneFrame({
             selectedNodeId={selectedNodeId}
             hiddenNodeIds={hiddenNodeIds}
             onPickNode={onPickNode}
+            speechBubble={speechBubble}
           />
           <SceneOverlay />
         </>
@@ -1720,72 +1730,114 @@ function EdgeList({
 // names the CEG move; body explains what the graph just gained or lost
 // and which families/primitives lit up. Reads like a fairy tale told
 // in CEG primitives.
-const RRH_STORY_BEATS: Array<{ t: number; title: string; body: string }> = [
+// Each beat: title (CEG move), the speaker's actual in-character quote
+// rendered as a speech bubble in the scene, and a short body line
+// explaining what just lit up in the graph.
+export type RrhBeat = {
+  t: number;
+  speakerId: string;
+  title: string;
+  quote: string;
+  body: string;
+};
+
+const RRH_STORY_BEATS: RrhBeat[] = [
   {
     t: 0,
+    speakerId: "rrh-wolf",
     title: "🐺 The Wolf publishes — alone in the graph",
+    quote:
+      "I was nowhere near the cottage. I have an alibi. The child must have been confused. Also I am clearly a misunderstood forest dog.",
     body:
-      "The Wolf scores a self-serving claim: that he is a kindly companion of the forest and the girl was never in danger. Nobody else is here to disagree. With one voice, the verdict reads exactly as the liar wants it to. The encyclopedia would call this a corridor of one.",
+      "The Wolf scores a self-serving claim and nobody is here to disagree. One voice, his version. The encyclopedia would call this a corridor of one.",
   },
   {
     t: 1,
+    speakerId: "rrh-mother",
     title: "👩 The Mother delegates to the Woodsman",
+    quote: "I wasn't at the cottage. Ask the Woodsman — I trust his eyes there.",
     body:
-      "Red's Mother delegates_to the Woodsman to keep watch over the forest path. No claim about the wolf yet — just standing being constituted, the way a village makes someone trustworthy by relying on them.",
+      "The delegates_to primitive constitutes standing. No new claim about the wolf yet, just the village deciding whose word to weight.",
   },
   {
     t: 2,
+    speakerId: "rrh-mother",
     title: "👩 The Mother vouches for Red",
+    quote:
+      "Red tells the truth. Whatever she says she saw, she saw.",
     body:
-      "The Mother vouches_for her daughter's honesty. The STANDING family lights up. Red can now testify and be heard, even though she is a child and the Wolf is older.",
+      "vouches_for lifts Red's standing so her later testimony lands. STANDING family lights up.",
   },
   {
     t: 3,
+    speakerId: "rrh-hunter",
     title: "🏹 The Hunter testifies",
+    quote: "I know a wolf when I see one. That was no dog.",
     body:
-      "The Hunter, passing through the forest, scores a DETECTION claim that he saw a wolf circling Grandmother's cottage. First independent eyewitness. The corridor widens from one voice to two.",
+      "First independent witness. His DETECTION claims contradict the wolf — the first contradicts arc stretches across the cluster.",
   },
   {
     t: 4,
+    speakerId: "rrh-red",
     title: "🧒 Red testifies",
+    quote:
+      "Grandmother looked strange. Big eyes, big ears, big teeth. I asked her about it.",
     body:
-      "Red Riding Hood scores her own ACTION account: what the wolf said at the door, what he wore, how he answered. The first witness who was actually there.",
+      "Red's ACTION account: she was there. Her claims agree with the Hunter and contradict the Wolf.",
   },
   {
     t: 5,
+    speakerId: "rrh-red",
     title: "🧒 Red withdraws a confused detail",
+    quote:
+      "I want to take that back. It wasn't grandmother with big eyes. It was the wolf wearing grandmother.",
     body:
-      "Red withdraws an earlier line where she mixed up who answered the door. The withdraw primitive lets her stay credible without retroactively pretending she never said it. CORRECTION begins to light up.",
+      "withdraws lets her correct without pretending she never said it. CORRECTION begins.",
   },
   {
     t: 6,
+    speakerId: "rrh-grandmother",
     title: "👵 Grandmother recants opening the door",
+    quote:
+      "I take back my old habit of opening the door for any voice that says 'it's Red'. Next time I want a code word.",
     body:
-      "Grandmother recants a statement she signed under duress when the wolf was still in the cottage. recants is louder than withdraws — it names a reason. Two CORRECTION moves in a row erode the wolf's monopoly on the story.",
+      "recants is louder than withdraws — it names the reason. Two CORRECTION moves in a row erode the wolf's monopoly.",
   },
   {
     t: 7,
+    speakerId: "rrh-squirrel",
     title: "🐿️ The Squirrel testifies",
+    quote:
+      "From my oak I saw the grey shape go through the door. Squirrels remember.",
     body:
-      "A small DETECTION voice: the Squirrel saw the wolf eating something through the window. Tiny on its own, but it is witness-diverse — a non-human voice the wolf cannot intimidate or out-talk.",
+      "A small DETECTION voice — but it's witness-diverse. The wolf can't intimidate or out-talk a squirrel.",
   },
   {
     t: 8,
+    speakerId: "rrh-woodsman",
     title: "🪓 The Woodsman arrives — inflection",
+    quote:
+      "I opened the door and there he was, in grandmother's bed, snoring. I cut her out of him with my axe. She was alive. So was Red.",
     body:
-      "The Woodsman arrives with the eyewitness account. He saw the wolf attack. Now the wolf's lie is contradicted across DETECTION (Hunter, Squirrel) and ACTION (Red, Grandmother, Woodsman). The deception isolates. This is the demo's hinge.",
+      "Firsthand eyewitness on the end state. Contradicts arcs flood in from every witness. The deception isolates. This is the demo's hinge.",
   },
   {
     t: 9,
+    speakerId: "rrh-crier",
     title: "📜 The Village Crier publishes the record",
+    quote:
+      "Per chronicle entry 14B-3: wolf entered cottage at midday. Witnesses: Grandmother, Woodsman, Squirrel.",
     body:
-      "The Crier scores the official CONSENSUS — the institutional voice gathers the testimonies and publishes the verdict on the village board. Not a new witness, a new attester: the village speaking as itself.",
+      "The institutional voice scores CONSENSUS — not a new witness, a new kind of attester: the village speaking as itself.",
   },
   {
     t: 10,
+    speakerId: "rrh-crier",
     title: "♻️ The Crier supersedes the Wolf's lie",
+    quote:
+      "The Wolf's earlier statement is superseded by the chronicle's witness-diverse account. Filed under recanted-by-others.",
     body:
-      "The Crier supersedes the wolf's original claim from t=0. The lie is not deleted — it is on the record, marked obsolete, with the corrected verdict pointing back at it. CORRECTION closes the loop. The graph now reads honestly.",
+      "supersedes marks the lie obsolete without deleting it. CORRECTION closes the loop. The graph now reads honestly.",
   },
 ];
 

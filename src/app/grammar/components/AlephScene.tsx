@@ -449,6 +449,99 @@ function NodeIconOverlays({
   );
 }
 
+// SpeechBubble — anchors a small bubble next to the speaker's icon
+// containing their in-character quote for the current story beat. The
+// bubble follows the speaker's instance position through layout
+// updates, so as the story scrubs and the cluster reflows, the bubble
+// follows the speaker. drei <Html> handles depth-occlusion and zoom.
+function SpeechBubble({
+  speakerId,
+  quote,
+  graph,
+  instanceMeta,
+  positions,
+}: {
+  speakerId: string;
+  quote: string;
+  graph: KernelGraph;
+  instanceMeta: InstanceMeta[];
+  positions: Float32Array;
+}) {
+  const target = useMemo(() => {
+    // Speaker's primary instance — the attester sphere, not a claim halo.
+    const idx = instanceMeta.findIndex((m) => {
+      if (m.node_id !== speakerId) return false;
+      const n = graph.nodes[m.node_idx];
+      return n?.group === "attester";
+    });
+    if (idx < 0) return null;
+    return instancePos(positions, idx);
+  }, [speakerId, instanceMeta, graph, positions]);
+
+  if (!target) return null;
+
+  return (
+    <Html
+      position={[target.x, target.y + 0.18, target.z]}
+      center
+      zIndexRange={[40, 0]}
+      distanceFactor={4}
+      style={{
+        pointerEvents: "none",
+        userSelect: "none",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          background: "white",
+          color: "#1f2937",
+          border: "1.5px solid #0d9488",
+          borderRadius: "12px",
+          padding: "10px 14px",
+          fontFamily: "ui-sans-serif, system-ui, sans-serif",
+          fontSize: "13px",
+          lineHeight: 1.45,
+          boxShadow: "0 4px 14px rgba(15,23,42,0.18)",
+          whiteSpace: "normal",
+          width: "260px",
+          textAlign: "left",
+          transform: "translate(0, -50%)",
+        }}
+      >
+        {quote}
+        {/* Tail pointing straight down at the speaker. */}
+        <span
+          style={{
+            position: "absolute",
+            left: "50%",
+            bottom: "-10px",
+            marginLeft: "-8px",
+            width: 0,
+            height: 0,
+            borderLeft: "8px solid transparent",
+            borderRight: "8px solid transparent",
+            borderTop: "10px solid #0d9488",
+          }}
+        />
+        <span
+          style={{
+            position: "absolute",
+            left: "50%",
+            bottom: "-7px",
+            marginLeft: "-7px",
+            width: 0,
+            height: 0,
+            borderLeft: "7px solid transparent",
+            borderRight: "7px solid transparent",
+            borderTop: "9px solid white",
+          }}
+        />
+      </div>
+    </Html>
+  );
+}
+
 // All forward arcs in one LineSegments; all backward arcs in another. Each
 // arc contributes ARC_SEGMENTS line segments (= 2 * ARC_SEGMENTS verts).
 function EdgeRibbons({
@@ -591,6 +684,7 @@ export default function AlephScene({
   hiddenNodeIds,
   onHoverChange,
   onPickNode,
+  speechBubble = null,
 }: {
   graph: KernelGraph;
   positions: Float32Array;
@@ -600,6 +694,7 @@ export default function AlephScene({
   hiddenNodeIds?: Set<string>;
   onHoverChange?: (nodeId: string | null) => void;
   onPickNode?: (nodeId: string) => void;
+  speechBubble?: { speakerId: string; quote: string } | null;
 }) {
   // Cap dpr at 1.5 on touch devices — per the research, the single biggest
   // mobile win. Retina phones at dpr=3 with the LineSegments mesh blow
@@ -729,6 +824,15 @@ export default function AlephScene({
         positions={positions}
         selectedNodeId={selectedNodeId}
       />
+      {speechBubble && (
+        <SpeechBubble
+          speakerId={speechBubble.speakerId}
+          quote={speechBubble.quote}
+          graph={graph}
+          instanceMeta={instanceMeta}
+          positions={positions}
+        />
+      )}
       <OrbitControls
         enablePan={false}
         enableZoom={true}
