@@ -10,7 +10,8 @@ import type {
   InstanceMeta,
   EdgeGeom,
 } from "../components/AlephView";
-import AlephScene from "../components/AlephScene";
+import AlephScene, { nudgeZoom } from "../components/AlephScene";
+import { perf, isBenchEnabled, type BenchSample } from "./lib/perf";
 import { ALL_STORIES } from "../lib/stories-generated";
 import {
   buildEncyclopediaGraph,
@@ -295,6 +296,13 @@ export default function ExploreWorkshop({
   const kernelRef = useRef<KernelInstance | null>(null);
   const [ready, setReady] = useState(false);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+
+  // Wire the perf harness early so the first kernel.set_graph capture
+  // happens after enabling. SceneFrame separately installs the per-frame
+  // tick once the canvas mounts.
+  useEffect(() => {
+    perf.setEnabled(isBenchEnabled());
+  }, []);
   const [positions, setPositions] = useState<Float32Array | null>(null);
   const [instanceMeta, setInstanceMeta] = useState<InstanceMeta[] | null>(
     null,
@@ -336,8 +344,12 @@ export default function ExploreWorkshop({
   useEffect(() => {
     if (!ready || !kernelRef.current) return;
     try {
+      const buildStart = performance.now();
       kernelRef.current.set_graph(JSON.stringify(graph));
+      const buildMs = performance.now() - buildStart;
+      const layoutStart = performance.now();
       const positionsCopy = new Float32Array(kernelRef.current.layout());
+      const layoutMs = performance.now() - layoutStart;
       const meta = kernelRef.current.instance_meta() as InstanceMeta[];
       const eg = kernelRef.current.edge_geometry() as EdgeGeom[];
       const c = kernelRef.current.corridor() as CorridorMetric;
@@ -346,6 +358,9 @@ export default function ExploreWorkshop({
       setEdgeGeoms(eg);
       setCorridor(c);
       setCorridorHistory((h) => [...h, c].slice(-30));
+      perf.markKernelPhase("build", buildMs);
+      perf.markKernelPhase("layout", layoutMs);
+      perf.markGraph(graph.nodes.length, graph.edges.length, eg.length);
 
       const pinnedArr = JSON.stringify(Array.from(pinned));
       let v: Verdict;
@@ -807,8 +822,30 @@ function SceneFrame({
       setWebglOk(false);
     }
   }, [mounted]);
+
+  // Wire the perf harness's per-frame tick into a global the scene
+  // PerfReporter can call without prop-drilling through Canvas. The
+  // enabled flag itself is set earlier in the workshop so kernel
+  // timings are captured from first render.
+  useEffect(() => {
+    if (!isBenchEnabled()) return;
+    type GlInfo = { render: { calls: number; triangles: number; lines: number; points: number } };
+    type Global = typeof globalThis & {
+      __perfTick?: (now: number, info: GlInfo) => void;
+    };
+    (globalThis as Global).__perfTick = (now: number, info: GlInfo) => {
+      perf.recordFrame(now);
+      perf.recordRendererInfo(info);
+    };
+    return () => {
+      (globalThis as Global).__perfTick = undefined;
+    };
+  }, []);
   return (
-    <div className="h-[60vh] min-h-[420px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100 dark:border-gray-800 dark:from-gray-950 dark:to-black">
+    <div
+      className="relative h-[60vh] min-h-[420px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100 dark:border-gray-800 dark:from-gray-950 dark:to-black"
+      style={{ touchAction: "none" }}
+    >
       {!mounted ? (
         <div className="flex h-full items-center justify-center text-sm text-slate-500 dark:text-slate-400">
           Booting scene…
@@ -831,15 +868,105 @@ function SceneFrame({
           </a>
         </div>
       ) : webglOk === null ? null : (
-        <AlephScene
-          graph={graph}
-          positions={positions}
-          instanceMeta={instanceMeta}
-          edgeGeoms={edgeGeoms}
-          selectedNodeId={selectedNodeId}
-          onPickNode={onPickNode}
-        />
+        <>
+          <AlephScene
+            graph={graph}
+            positions={positions}
+            instanceMeta={instanceMeta}
+            edgeGeoms={edgeGeoms}
+            selectedNodeId={selectedNodeId}
+            onPickNode={onPickNode}
+          />
+          <SceneOverlay />
+        </>
       )}
+    </div>
+  );
+}
+
+// SceneOverlay — touch-friendly zoom buttons + a "tap a sphere" hint.
+// The zoom buttons drive OrbitControls via the module-scope nudgeZoom
+// function set up by ZoomTracker inside the canvas.
+function SceneOverlay() {
+  const [hintVisible, setHintVisible] = useState(true);
+  useEffect(() => {
+    const t = setTimeout(() => setHintVisible(false), 4500);
+    return () => clearTimeout(t);
+  }, []);
+  return (
+    <>
+      <div
+        className="pointer-events-none absolute left-1/2 top-3 z-10 -translate-x-1/2 select-none"
+        aria-hidden="true"
+      >
+        {hintVisible && (
+          <div className="rounded-full bg-black/60 px-3 py-1 text-[11px] font-medium text-white">
+            tap a sphere · drag to rotate · pinch to zoom
+          </div>
+        )}
+      </div>
+      <div className="absolute bottom-3 right-3 z-10 flex flex-col gap-1.5">
+        <button
+          type="button"
+          aria-label="zoom in"
+          onClick={() => nudgeZoom(-0.18)}
+          className="rounded-lg border-2 border-slate-300 bg-white/90 px-3 py-1.5 text-lg font-bold leading-none text-slate-800 shadow hover:border-brand-primary dark:border-gray-700 dark:bg-gray-900/90 dark:text-slate-100"
+        >
+          +
+        </button>
+        <button
+          type="button"
+          aria-label="zoom out"
+          onClick={() => nudgeZoom(0.18)}
+          className="rounded-lg border-2 border-slate-300 bg-white/90 px-3 py-1.5 text-lg font-bold leading-none text-slate-800 shadow hover:border-brand-primary dark:border-gray-700 dark:bg-gray-900/90 dark:text-slate-100"
+        >
+          −
+        </button>
+      </div>
+      <BenchOverlay />
+    </>
+  );
+}
+
+// BenchOverlay — visible only when ?bench=1 is in the URL.
+// Subscribes to the perf harness and shows fps / draws / verts.
+function BenchOverlay() {
+  const [bench, setBench] = useState<BenchSample | null>(null);
+  useEffect(() => {
+    if (!isBenchEnabled()) return;
+    const id = setInterval(() => setBench(perf.flush()), 500);
+    return () => clearInterval(id);
+  }, []);
+  if (!bench) return null;
+  return (
+    <div className="pointer-events-none absolute left-3 top-3 z-10 select-none rounded-md border border-emerald-400 bg-black/70 px-2 py-1 font-mono text-[10px] leading-4 text-emerald-200">
+      <div>
+        fps {bench.fpsAvg.toFixed(0)} (p1 {bench.fps_p1.toFixed(0)})
+      </div>
+      <div>
+        frame {bench.frameAvg.toFixed(1)}ms p99 {bench.frame_p99.toFixed(1)}ms
+      </div>
+      <div>
+        draws {bench.drawCalls} tris {bench.triangles}
+      </div>
+      <div>
+        lines {bench.lines} pts {bench.points}
+      </div>
+      <div>
+        nodes {bench.graphNodes} edges {bench.graphEdges} geom {bench.graphEdgeGeoms}
+      </div>
+      <div>
+        kernel build{" "}
+        {bench.kernelBuildMs === null
+          ? "—"
+          : `${bench.kernelBuildMs.toFixed(1)}ms`}
+      </div>
+      <div>
+        kernel layout{" "}
+        {bench.kernelLayoutMs === null
+          ? "—"
+          : `${bench.kernelLayoutMs.toFixed(1)}ms`}
+      </div>
     </div>
   );
 }

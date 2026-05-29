@@ -15,8 +15,8 @@
 //     pointer event per move, not per node.
 //   - Stable scene structure: only attribute updates between renders.
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import { Canvas, useThree, type ThreeEvent } from "@react-three/fiber";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Canvas, useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
 import { OrbitControls, Text } from "@react-three/drei";
 import * as THREE from "three";
 import type {
@@ -387,6 +387,62 @@ function EdgeRibbons({
   );
 }
 
+// PerfReporter — sits inside the Canvas so it can read renderer.info
+// every frame and feed the bench harness when ?bench=1 is on.
+function PerfReporter() {
+  const gl = useThree((s) => s.gl);
+  useFrame((_, dt) => {
+    try {
+      const fn = (globalThis as { __perfTick?: (now: number, info: unknown) => void }).__perfTick;
+      if (fn) fn(performance.now(), gl.info);
+    } catch {
+      /* harness off */
+    }
+    void dt;
+  });
+  return null;
+}
+
+// ZoomTracker — exposes the OrbitControls' current camera-to-target
+// distance to the UI so the zoom in/out buttons can drive it. Stored
+// in a module-scope ref for cross-component access (avoids prop
+// drilling out through the Canvas boundary).
+const zoomCmdRef: { current: ((delta: number) => void) | null } = {
+  current: null,
+};
+function ZoomTracker() {
+  const camera = useThree((s) => s.camera);
+  const controls = useThree(
+    (s) => s.controls as { update?: () => void; object?: THREE.Camera; target?: THREE.Vector3 } | null,
+  );
+  const invalidate = useThree((s) => s.invalidate);
+  useEffect(() => {
+    zoomCmdRef.current = (delta: number) => {
+      // delta > 0 → zoom out (move farther); delta < 0 → zoom in
+      const target = controls?.target ?? new THREE.Vector3(0, 0.5, 0);
+      const dir = new THREE.Vector3()
+        .copy(camera.position)
+        .sub(target)
+        .normalize();
+      const dist = camera.position.distanceTo(target);
+      const newDist = THREE.MathUtils.clamp(dist * (1 + delta), 0.4, 8);
+      camera.position
+        .copy(target)
+        .addScaledVector(dir, newDist);
+      controls?.update?.();
+      invalidate();
+    };
+    return () => {
+      zoomCmdRef.current = null;
+    };
+  }, [camera, controls, invalidate]);
+  return null;
+}
+
+export function nudgeZoom(delta: number): void {
+  zoomCmdRef.current?.(delta);
+}
+
 // Re-invalidate the frameloop whenever the visible inputs change. Required
 // for frameloop="demand". Triple-pump on mount because we have seen the
 // first invalidate land before InstancedMesh's matrix/color attributes are
@@ -481,10 +537,24 @@ export default function AlephScene({
       ))}
       <OrbitControls
         enablePan={false}
-        minDistance={0.6}
-        maxDistance={6}
+        enableZoom={true}
+        // Explicit touch mapping: one finger rotates the scene, two
+        // fingers pinch-to-zoom AND two-finger drag also dollies
+        // (since pan is disabled). Without this explicit mapping,
+        // some mobile browsers silently drop the second-finger event
+        // because the dpr cap above changes the pixel ratio mid-tap.
+        touches={{
+          ONE: THREE.TOUCH.ROTATE,
+          TWO: THREE.TOUCH.DOLLY_ROTATE,
+        }}
+        minDistance={0.4}
+        maxDistance={8}
+        zoomSpeed={1.0}
+        rotateSpeed={0.9}
         target={[0, 0.5, 0]}
       />
+      <PerfReporter />
+      <ZoomTracker />
       <InvalidateOnChange
         signal={`${positions.length}-${edgeGeoms.length}-${hoverInstanceId}`}
       />
