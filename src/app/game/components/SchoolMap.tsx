@@ -2,16 +2,16 @@
 
 import { useState } from "react";
 import { FLOORS, roomsByFloor, type Room, type RoomId } from "../lib/school";
-import { STUB_ROSTER, type StubCharacter } from "../lib/stub-roster";
+import { ROSTER, type RosterCharacter } from "../lib/roster";
 import FaceTile from "./FaceTile";
 
 type ViewMode = "class" | "club";
 
 function charactersInRoom(
-  roster: StubCharacter[],
+  roster: RosterCharacter[],
   roomId: RoomId,
   mode: ViewMode,
-): StubCharacter[] {
+): RosterCharacter[] {
   return roster.filter((c) =>
     mode === "class" ? c.classroom === roomId : c.clubRoom === roomId,
   );
@@ -22,13 +22,13 @@ export default function SchoolMap() {
   const [mode, setMode] = useState<ViewMode>("class");
   const [selected, setSelected] = useState<string | null>(null);
   const rooms = roomsByFloor(floor);
-  const totalKidsHere = STUB_ROSTER.filter((c) =>
+  const totalKidsHere = ROSTER.filter((c) =>
     rooms.some((r) =>
       mode === "class" ? c.classroom === r.id : c.clubRoom === r.id,
     ),
   ).length;
   const selectedChar = selected
-    ? STUB_ROSTER.find((c) => c.id === selected) ?? null
+    ? ROSTER.find((c) => c.id === selected) ?? null
     : null;
 
   return (
@@ -82,7 +82,7 @@ export default function SchoolMap() {
           <RoomTile
             key={r.id}
             room={r}
-            chars={charactersInRoom(STUB_ROSTER, r.id, mode)}
+            chars={charactersInRoom(ROSTER, r.id, mode)}
             selected={selected}
             onSelect={setSelected}
           />
@@ -92,15 +92,23 @@ export default function SchoolMap() {
       {/* Selected character peek */}
       {selectedChar && (
         <div className="peek-card">
-          <FaceTile id={selectedChar.id} size={56} />
+          <FaceTile id={selectedChar.id} size={64} />
           <div className="peek-body">
             <div className="peek-name">{selectedChar.name}</div>
             <div className="peek-meta">
               {selectedChar.role}
               {selectedChar.yearBand ? ` · ${selectedChar.yearBand}` : ""}
+              {selectedChar.cegFamily ? ` · ${selectedChar.cegFamily}` : ""}
+              {" · "}{selectedChar.pronouns}
+            </div>
+            <div className="peek-bio">{selectedChar.bio}</div>
+            <div className="peek-meta">
+              {selectedChar.className ? `class: ${selectedChar.className}` : ""}
+              {selectedChar.clubName ? ` · club: ${selectedChar.clubName}` : ""}
             </div>
             <div className="peek-meta">
-              class: {selectedChar.classroom ?? "—"} · club: {selectedChar.clubRoom ?? "—"}
+              holds {selectedChar.storyCount} stories ·{" "}
+              {selectedChar.sharingPosture.replace(/_/g, " ")}
             </div>
           </div>
           <button
@@ -124,7 +132,7 @@ function RoomTile({
   onSelect,
 }: {
   room: Room;
-  chars: StubCharacter[];
+  chars: RosterCharacter[];
   selected: string | null;
   onSelect: (id: string | null) => void;
 }) {

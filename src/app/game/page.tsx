@@ -37,6 +37,22 @@ export default function GamePage() {
               kids are narrow and accurate. The truth is in the gaps between
               what each kid was paying attention to.
             </p>
+            <p className="game-note-rule">
+              <span className="kbd kbd-small">PRINTED SOURCES</span> Some kids
+              cite school newspapers, club newsletters, class announcements,
+              or the colony encyclopedia. The KID is honest; the PUBLISHED
+              SOURCE may have drifted. All sources are wrong 20 to 50 percent
+              of the time on average. None is reliable enough to trust
+              blindly, none unreliable enough to silence. Important details
+              live in the noisier sources too.
+            </p>
+            <p className="game-note-rule">
+              <span className="kbd kbd-small">WEAK POOL</span> If you trust
+              only one gossipy paper and a clutch of year-1s who were doing
+              hydroponics during the comms-tower incident, the game tells you
+              so. Build out your roster. Pin a kid whose attention domain
+              overlaps the case.
+            </p>
           </section>
         </div>
       </main>

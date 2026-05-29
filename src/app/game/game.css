@@ -248,7 +248,7 @@
     inset 1px 1px 0 var(--shadow-light),
     inset -2px -2px 0 var(--shadow-dark);
 }
-.peek-body { font-size: 13px; }
+.peek-body { font-size: 13px; min-width: 0; }
 .peek-name {
   font-size: 16px;
   letter-spacing: 1.5px;
@@ -259,6 +259,13 @@
   font-size: 11px;
   letter-spacing: 1px;
   color: var(--ink-soft);
+  margin-bottom: 2px;
+}
+.peek-bio {
+  font-size: 12px;
+  color: var(--ink);
+  margin: 4px 0 6px;
+  line-height: 1.35;
 }
 .peek-close {
   font-family: var(--font-vt323), monospace;
