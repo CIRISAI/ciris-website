@@ -18,7 +18,9 @@ function charactersInRoom(
 }
 
 export default function SchoolMap() {
-  const [floor, setFloor] = useState<number>(1);
+  // Default to floor 2 — the kid-dense floor. Floor 1 is mostly common
+  // areas and lands empty in CLASS view, which makes a bad first paint.
+  const [floor, setFloor] = useState<number>(2);
   const [mode, setMode] = useState<ViewMode>("class");
   const [selected, setSelected] = useState<string | null>(null);
   const rooms = roomsByFloor(floor);
