@@ -148,12 +148,13 @@ export default function GameShell() {
         activeSlot={activeSlot}
         selectedCharacterId={fills.who}
         selectedRoomId={fills.where}
+        activeCase={activeCase}
         onSelectCharacter={handleSelectCharacter}
         onSelectRoom={handleSelectRoom}
       />
 
       <h2 className="section-h">THE PRINTED SOURCES</h2>
-      <SourcesGallery />
+      <SourcesGallery activeCase={activeCase} />
 
       {showOverlay && (
         <SolveOverlay

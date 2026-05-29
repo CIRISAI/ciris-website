@@ -5,7 +5,13 @@ import { FLOORS, ROOMS, roomsByFloor, type Room, type RoomId } from "../lib/scho
 
 const ROOMS_BY_ID = Object.fromEntries(ROOMS.map((r) => [r.id, r]));
 import { ROSTER, type RosterCharacter } from "../lib/roster";
+import type { CaseFile, CaseWitness } from "../lib/cases-generated";
+import { CHARACTERS } from "@/app/grammar/lib/characters-generated";
+import { ALL_STORIES } from "@/app/grammar/lib/stories-generated";
 import FaceTile from "./FaceTile";
+
+const CHAR_BY_ID = new Map(CHARACTERS.map((c) => [c.id, c]));
+const STORY_BY_ID = new Map(ALL_STORIES.map((s) => [s.id, s]));
 
 type ViewMode = "class" | "club";
 
@@ -24,6 +30,7 @@ export default function SchoolMap({
   activeSlot = null,
   selectedCharacterId = null,
   selectedRoomId = null,
+  activeCase = null,
   onSelectCharacter,
   onSelectRoom,
 }: {
@@ -31,9 +38,24 @@ export default function SchoolMap({
   activeSlot?: "who" | "where" | "how" | null;
   selectedCharacterId?: string | null;
   selectedRoomId?: RoomId | null;
+  activeCase?: CaseFile | null;
   onSelectCharacter?: (id: string) => void;
   onSelectRoom?: (id: RoomId) => void;
 }) {
+  // Case-relevance: suspects + witnesses get a gold glow on their face
+  // tile so the player can see WHO matters to this mystery without
+  // having to read every kid's bio.
+  const witnessById = useMemo(() => {
+    const m = new Map<string, CaseWitness>();
+    if (activeCase) {
+      for (const w of activeCase.witnesses) m.set(w.character_id, w);
+    }
+    return m;
+  }, [activeCase]);
+  const suspectIds = useMemo(
+    () => new Set(activeCase?.suspects ?? []),
+    [activeCase],
+  );
   // Default to the floor with the most CASE-hot rooms. Falls back to F2 if
   // the case touches every floor equally.
   const defaultFloor = useMemo(() => {
@@ -145,6 +167,8 @@ export default function SchoolMap({
               picking={activeSlot === "where"}
               isSelectedRoom={isSelectedRoom}
               isPickedCharacter={selectedCharacterId}
+              witnessIds={witnessById}
+              suspectIds={suspectIds}
               onPickRoom={() => {
                 if (activeSlot === "where" && onSelectRoom) {
                   onSelectRoom(r.id);
@@ -157,34 +181,136 @@ export default function SchoolMap({
 
       {/* Selected character peek */}
       {selectedChar && (
-        <div className="peek-card">
-          <FaceTile id={selectedChar.id} size={64} />
-          <div className="peek-body">
-            <div className="peek-name">{selectedChar.name}</div>
-            <div className="peek-meta">
-              {selectedChar.role}
-              {selectedChar.yearBand ? ` · ${selectedChar.yearBand}` : ""}
-              {selectedChar.cegFamily ? ` · ${selectedChar.cegFamily}` : ""}
-              {" · "}{selectedChar.pronouns}
-            </div>
-            <div className="peek-bio">{selectedChar.bio}</div>
-            <div className="peek-meta">
-              {selectedChar.className ? `class: ${selectedChar.className}` : ""}
-              {selectedChar.clubName ? ` · club: ${selectedChar.clubName}` : ""}
-            </div>
-            <div className="peek-meta">
-              holds {selectedChar.storyCount} stories ·{" "}
-              {selectedChar.sharingPosture.replace(/_/g, " ")}
-            </div>
+        <CharacterPeek
+          char={selectedChar}
+          witness={witnessById.get(selectedChar.id) ?? null}
+          isSuspect={suspectIds.has(selectedChar.id)}
+          onClose={() => setSelected(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+function CharacterPeek({
+  char,
+  witness,
+  isSuspect,
+  onClose,
+}: {
+  char: RosterCharacter;
+  witness: CaseWitness | null;
+  isSuspect: boolean;
+  onClose: () => void;
+}) {
+  const profile = CHAR_BY_ID.get(char.id);
+  const [expandedStory, setExpandedStory] = useState<string | null>(null);
+  return (
+    <div className="peek-card">
+      <div className="peek-head">
+        <FaceTile
+          id={char.id}
+          size={64}
+          ring={witness ? "#d4a04a" : isSuspect ? "#b94c2a" : undefined}
+        />
+        <div className="peek-body">
+          <div className="peek-name">{char.name}</div>
+          <div className="peek-meta">
+            {char.role}
+            {char.yearBand ? ` · ${char.yearBand}` : ""}
+            {char.cegFamily ? ` · ${char.cegFamily}` : ""}
+            {" · "}
+            {char.pronouns}
           </div>
-          <button
-            type="button"
-            className="peek-close"
-            onClick={() => setSelected(null)}
-            aria-label="close"
-          >
-            X
-          </button>
+          <div className="peek-bio">{char.bio}</div>
+          <div className="peek-meta">
+            {char.className ? `class: ${char.className}` : ""}
+            {char.clubName ? ` · club: ${char.clubName}` : ""}
+          </div>
+          <div className="peek-meta">
+            holds {char.storyCount} stories ·{" "}
+            {char.sharingPosture.replace(/_/g, " ")}
+          </div>
+        </div>
+        <button
+          type="button"
+          className="peek-close"
+          onClick={onClose}
+          aria-label="close"
+        >
+          X
+        </button>
+      </div>
+
+      {witness && (
+        <div className="peek-witness">
+          <div className="peek-witness-tag">
+            <span className="kbd kbd-small">WITNESS</span>
+            <span>attention was on {witness.domain_present}</span>
+          </div>
+          <p className="peek-witness-quote">
+            &ldquo;{witness.attestation}&rdquo;
+          </p>
+          {witness.drift_hint && (
+            <p className="peek-witness-drift">
+              <span className="kbd kbd-small">!</span> {witness.drift_hint}
+            </p>
+          )}
+        </div>
+      )}
+
+      {!witness && isSuspect && (
+        <div className="peek-suspect">
+          <span className="kbd kbd-small">NEARBY</span>
+          <span>this kid was in or near the case at the time</span>
+        </div>
+      )}
+
+      {profile && profile.storyHoldings.length > 0 && (
+        <div className="peek-stories">
+          <div className="peek-stories-head">
+            <span className="kbd kbd-small">STORIES</span>
+            <span>tap a title to read</span>
+          </div>
+          <ul className="peek-stories-list">
+            {profile.storyHoldings.map((h, i) => {
+              const story = STORY_BY_ID.get(h.storyId);
+              const open = expandedStory === h.storyId;
+              return (
+                <li key={i} className="peek-story-item">
+                  <button
+                    type="button"
+                    className={`peek-story-row ${open ? "on" : ""}`}
+                    onClick={() =>
+                      setExpandedStory(open ? null : h.storyId)
+                    }
+                  >
+                    <span className="peek-story-prov">
+                      {h.provenance.replace(/_/g, " ")}
+                    </span>
+                    <span className="peek-story-title">
+                      {story?.title ?? h.storyId}
+                    </span>
+                  </button>
+                  {open && story && (
+                    <div className="peek-story-body">
+                      {h.note && (
+                        <p className="peek-story-note">
+                          <span className="kbd kbd-small">NOTE</span>{" "}
+                          {h.note}
+                        </p>
+                      )}
+                      <p className="peek-story-text">{story.scenario}</p>
+                      <p className="peek-story-meta">
+                        family: {story.family} ·{" "}
+                        {story.dimensions.join(", ")}
+                      </p>
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       )}
     </div>
@@ -200,6 +326,8 @@ function RoomTile({
   picking,
   isSelectedRoom,
   isPickedCharacter,
+  witnessIds,
+  suspectIds,
   onPickRoom,
 }: {
   room: Room;
@@ -210,6 +338,8 @@ function RoomTile({
   picking?: boolean;
   isSelectedRoom?: boolean;
   isPickedCharacter?: string | null;
+  witnessIds?: Map<string, CaseWitness>;
+  suspectIds?: Set<string>;
   onPickRoom?: () => void;
 }) {
   const clickableRoom = picking && !!onPickRoom;
@@ -239,19 +369,29 @@ function RoomTile({
         {chars.length === 0 ? (
           <div className="room-empty">— empty —</div>
         ) : (
-          chars.map((c) => (
-            <FaceTile
-              key={c.id}
-              id={c.id}
-              size={28}
-              selected={c.id === selected || c.id === isPickedCharacter}
-              onClick={(e) => {
-                e.stopPropagation();
-                onSelect(c.id === selected ? null : c.id);
-              }}
-              title={c.name}
-            />
-          ))
+          chars.map((c) => {
+            const isWitness = !!witnessIds?.has(c.id);
+            const isSuspect = !!suspectIds?.has(c.id);
+            const titleSuffix = isWitness
+              ? " · WITNESS"
+              : isSuspect
+                ? " · NEARBY"
+                : "";
+            return (
+              <FaceTile
+                key={c.id}
+                id={c.id}
+                size={28}
+                selected={c.id === selected || c.id === isPickedCharacter}
+                ring={isWitness ? "#d4a04a" : isSuspect ? "#b94c2a" : undefined}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onSelect(c.id === selected ? null : c.id);
+                }}
+                title={c.name + titleSuffix}
+              />
+            );
+          })
         )}
       </div>
     </div>
