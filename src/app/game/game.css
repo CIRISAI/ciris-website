@@ -1,0 +1,295 @@
+/* 90s edutainment register. Hard pixel borders. Chunky type. No rounded
+ * corners. Limited palette. Mobile-first; phone is the canonical width.
+ *
+ * Inspired by Carmen Sandiego DOS, Number Munchers, Treasure Mountain,
+ * Sim City Classic. Earthy core palette + bright accents.
+ */
+
+.game-shell {
+  --paper: #f4ecd8;
+  --paper-dim: #e6dec4;
+  --ink: #1a1410;
+  --ink-soft: #3a2e2a;
+  --accent-red: #b94c2a;
+  --accent-yellow: #d4a04a;
+  --accent-green: #4a6a3a;
+  --accent-blue: #4a6488;
+  --accent-purple: #7a3aaa;
+  --shadow-light: #fbf7e9;
+  --shadow-dark: #6e5a48;
+
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  padding-top: 96px;
+  font-family: var(--font-vt323), "Courier New", ui-monospace, monospace;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.game-frame {
+  margin: 0 auto;
+  max-width: 540px;
+  padding: 12px;
+}
+
+@media (min-width: 760px) {
+  .game-frame { max-width: 720px; padding: 24px; }
+}
+
+.game-title-bar {
+  border: 3px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 12px 14px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.game-title {
+  font-family: var(--font-vt323), "Courier New", monospace;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin: 4px 0 6px;
+  font-weight: 400;
+}
+
+.game-subtitle {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 0;
+  color: var(--accent-yellow);
+}
+
+@media (min-width: 760px) {
+  .game-title { font-size: 38px; letter-spacing: 3px; }
+  .game-subtitle { font-size: 15px; }
+}
+
+.kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  font-family: var(--font-vt323), "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.kbd-small { font-size: 11px; padding: 1px 4px; }
+
+/* ── School map ───────────────────────────────────────── */
+
+.school-map {
+  border: 3px solid var(--ink);
+  background: var(--paper-dim);
+  padding: 8px;
+}
+
+.mode-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.mode-btn,
+.floor-btn {
+  font-family: var(--font-vt323), "Courier New", monospace;
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 8px 4px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  box-shadow:
+    inset 1px 1px 0 var(--shadow-light),
+    inset -2px -2px 0 var(--shadow-dark);
+  cursor: pointer;
+}
+.mode-btn:active,
+.floor-btn:active {
+  box-shadow:
+    inset -1px -1px 0 var(--shadow-light),
+    inset 2px 2px 0 var(--shadow-dark);
+}
+.mode-btn.on,
+.floor-btn.on {
+  background: var(--accent-red);
+  color: var(--paper);
+}
+
+.floor-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.floor-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.floor-num {
+  font-size: 18px;
+  font-weight: 400;
+}
+.floor-name {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.floor-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  align-items: center;
+}
+
+/* ── Rooms grid ───────────────────────────────────────── */
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+@media (min-width: 760px) {
+  .rooms-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.room-tile {
+  border: 3px solid var(--ink);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  min-height: 130px;
+}
+
+.room-header {
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 3px solid var(--ink);
+}
+.room-glyph {
+  font-size: 14px;
+  text-align: center;
+  color: var(--accent-yellow);
+}
+.room-name {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+.room-count {
+  font-size: 12px;
+  background: var(--accent-yellow);
+  color: var(--ink);
+  padding: 1px 4px;
+  border: 1px solid var(--ink);
+  min-width: 16px;
+  text-align: center;
+}
+.room-floor-num {
+  font-size: 10px;
+  padding: 2px 6px;
+  background: var(--paper-dim);
+  border-bottom: 2px solid var(--ink-soft);
+  letter-spacing: 1px;
+  color: var(--ink-soft);
+}
+.room-faces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 5px;
+  flex: 1;
+  align-content: flex-start;
+}
+.room-empty {
+  font-size: 11px;
+  color: var(--ink-soft);
+  padding: 8px;
+  font-style: italic;
+}
+
+/* ── Face tile ───────────────────────────────────────── */
+
+.face-tile {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* ── Peek card ───────────────────────────────────────── */
+
+.peek-card {
+  position: sticky;
+  bottom: 8px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+  border: 3px solid var(--ink);
+  background: var(--paper);
+  padding: 8px;
+  box-shadow:
+    inset 1px 1px 0 var(--shadow-light),
+    inset -2px -2px 0 var(--shadow-dark);
+}
+.peek-body { font-size: 13px; }
+.peek-name {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  margin-bottom: 2px;
+  color: var(--accent-red);
+}
+.peek-meta {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--ink-soft);
+}
+.peek-close {
+  font-family: var(--font-vt323), monospace;
+  font-size: 16px;
+  background: var(--accent-red);
+  color: var(--paper);
+  border: 2px solid var(--ink);
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.3),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* ── Bottom note ───────────────────────────────────── */
+
+.game-note {
+  margin-top: 16px;
+  border: 3px dashed var(--ink-soft);
+  background: var(--paper-dim);
+  padding: 10px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.game-note p { margin: 6px 0 0; }
+.game-note-rule {
+  margin-top: 10px !important;
+  padding: 8px;
+  border: 2px solid var(--accent-red);
+  background: var(--paper);
+  color: var(--ink);
+}
+.game-note-rule .kbd { background: var(--accent-red); color: var(--paper); }
