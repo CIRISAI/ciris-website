@@ -21,8 +21,18 @@ function charactersInRoom(
 
 export default function SchoolMap({
   hotRooms = [],
+  activeSlot = null,
+  selectedCharacterId = null,
+  selectedRoomId = null,
+  onSelectCharacter,
+  onSelectRoom,
 }: {
   hotRooms?: RoomId[];
+  activeSlot?: "who" | "where" | "how" | null;
+  selectedCharacterId?: string | null;
+  selectedRoomId?: RoomId | null;
+  onSelectCharacter?: (id: string) => void;
+  onSelectRoom?: (id: RoomId) => void;
 }) {
   // Default to the floor with the most CASE-hot rooms. Falls back to F2 if
   // the case touches every floor equally.
@@ -111,17 +121,38 @@ export default function SchoolMap({
       </div>
 
       {/* Rooms grid */}
-      <div className="rooms-grid">
-        {rooms.map((r) => (
-          <RoomTile
-            key={r.id}
-            room={r}
-            chars={charactersInRoom(ROSTER, r.id, mode)}
-            selected={selected}
-            onSelect={setSelected}
-            hot={hotRooms.includes(r.id)}
-          />
-        ))}
+      <div
+        className={`rooms-grid ${
+          activeSlot === "who" ? "picking-who" : ""
+        } ${activeSlot === "where" ? "picking-where" : ""}`}
+      >
+        {rooms.map((r) => {
+          const isSelectedRoom = selectedRoomId === r.id;
+          return (
+            <RoomTile
+              key={r.id}
+              room={r}
+              chars={charactersInRoom(ROSTER, r.id, mode)}
+              selected={selected}
+              onSelect={(charId) => {
+                if (activeSlot === "who" && charId && onSelectCharacter) {
+                  onSelectCharacter(charId);
+                } else {
+                  setSelected(charId);
+                }
+              }}
+              hot={hotRooms.includes(r.id)}
+              picking={activeSlot === "where"}
+              isSelectedRoom={isSelectedRoom}
+              isPickedCharacter={selectedCharacterId}
+              onPickRoom={() => {
+                if (activeSlot === "where" && onSelectRoom) {
+                  onSelectRoom(r.id);
+                }
+              }}
+            />
+          );
+        })}
       </div>
 
       {/* Selected character peek */}
@@ -166,16 +197,36 @@ function RoomTile({
   selected,
   onSelect,
   hot,
+  picking,
+  isSelectedRoom,
+  isPickedCharacter,
+  onPickRoom,
 }: {
   room: Room;
   chars: RosterCharacter[];
   selected: string | null;
   onSelect: (id: string | null) => void;
   hot: boolean;
+  picking?: boolean;
+  isSelectedRoom?: boolean;
+  isPickedCharacter?: string | null;
+  onPickRoom?: () => void;
 }) {
+  const clickableRoom = picking && !!onPickRoom;
   return (
-    <div className={`room-tile ${hot ? "hot" : ""}`} data-room-id={room.id}>
+    <div
+      className={`room-tile ${hot ? "hot" : ""} ${
+        clickableRoom ? "pickable" : ""
+      } ${isSelectedRoom ? "picked" : ""}`}
+      data-room-id={room.id}
+      onClick={clickableRoom ? onPickRoom : undefined}
+      role={clickableRoom ? "button" : undefined}
+      tabIndex={clickableRoom ? 0 : undefined}
+    >
       {hot && <div className="room-hot-flag" aria-hidden="true">!</div>}
+      {isSelectedRoom && (
+        <div className="room-picked-flag" aria-hidden="true">✓</div>
+      )}
       <div className="room-header">
         <span className="room-glyph">{room.glyph}</span>
         <span className="room-name">{room.short}</span>
@@ -193,10 +244,11 @@ function RoomTile({
               key={c.id}
               id={c.id}
               size={28}
-              selected={c.id === selected}
-              onClick={() =>
-                onSelect(c.id === selected ? null : c.id)
-              }
+              selected={c.id === selected || c.id === isPickedCharacter}
+              onClick={(e) => {
+                e.stopPropagation();
+                onSelect(c.id === selected ? null : c.id);
+              }}
               title={c.name}
             />
           ))

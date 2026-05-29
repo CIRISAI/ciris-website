@@ -525,6 +525,12 @@
   background: var(--accent-green);
   color: var(--paper);
 }
+.case-slot.active {
+  background: var(--accent-yellow);
+  color: var(--ink);
+  border-color: var(--accent-red);
+  animation: case-pulse 0.9s ease-in-out infinite;
+}
 .case-slot-tag {
   font-size: 9px;
   letter-spacing: 1px;
@@ -596,6 +602,103 @@
   border-bottom: 2px solid var(--ink);
   padding-bottom: 2px;
 }
+.section-h-prompt {
+  color: var(--accent-red);
+  font-size: 14px;
+  letter-spacing: 1.5px;
+}
+
+/* ── HOW picker (inline failure-mode options) ───────── */
+.how-picker {
+  margin-bottom: 10px;
+  padding: 8px;
+  background: var(--accent-yellow);
+  border: 3px solid var(--ink);
+  box-shadow: inset 1px 1px 0 var(--shadow-light), inset -2px -2px 0 var(--shadow-dark);
+}
+.how-picker-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.how-picker-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.how-option {
+  font-family: var(--font-vt323), monospace;
+  background: var(--paper);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  padding: 6px 4px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-align: left;
+}
+.how-option.on { background: var(--accent-green); color: var(--paper); }
+
+/* ── Picking states on the school map ──────────────── */
+.rooms-grid.picking-where .room-tile {
+  cursor: pointer;
+  outline: 2px dashed var(--accent-red);
+  outline-offset: -4px;
+}
+.rooms-grid.picking-who .room-faces .face-tile {
+  cursor: pointer;
+}
+.rooms-grid.picking-who .face-tile:hover {
+  outline: 2px solid var(--accent-red);
+  outline-offset: 1px;
+}
+.room-tile.picked {
+  background: var(--accent-green);
+}
+.room-tile.picked .room-header { background: var(--accent-green); }
+.room-tile.picked .room-name { color: var(--paper); }
+.room-picked-flag {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background: var(--accent-green);
+  color: var(--paper);
+  border: 2px solid var(--paper);
+  font-family: var(--font-vt323), monospace;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+  line-height: 16px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* ── Solve overlay variants ──────────────────────────── */
+.solve-title.partial {
+  color: var(--accent-yellow);
+  text-shadow: 3px 3px 0 var(--ink-soft);
+}
+.solve-score-line {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+.solve-truth-row.right {
+  border-color: var(--accent-green);
+  background: var(--ink);
+}
+.solve-truth-row.right .solve-truth-label { color: var(--accent-green); }
+.solve-truth-row.wrong {
+  background: #4a2620;
+  border-color: var(--accent-red);
+}
+.solve-truth-row.wrong .solve-truth-label { color: var(--accent-red); }
 
 /* ── How-to-play accordion ─────────────────────────── */
 .how-to-play {

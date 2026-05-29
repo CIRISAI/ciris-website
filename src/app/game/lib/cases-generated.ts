@@ -52,6 +52,8 @@ export interface CaseFile {
     who_carried: string;
     where_it_happened: RoomId;
     what_got_mixed_up: string;
+    /** The one failure-mode from the 8 how_options that names the case. */
+    how_correct: string;
     explainer: string;
   };
   suspects: string[];
@@ -113,6 +115,7 @@ export const CASES: CaseFile[] = [
       who_carried: "student-y1-amaru-quispe",
       where_it_happened: "hydroponics",
       what_got_mixed_up: "the little wooden tray-tags",
+      how_correct: "An honest mistake",
       explainer:
         "Amaru tidied the rack at 13:50 and stood the two wooden tags back up after wiping the shelf. He put them back in the order he read them, left to right. The trays had been moved that morning for a leak check. Live tray markers would fix this; the tags need to live ON the tray, not on the shelf.",
     },
@@ -277,6 +280,7 @@ export const CASES: CaseFile[] = [
       who_carried: "staff-comms-relay-doyle",
       where_it_happened: "comms_tower",
       what_got_mixed_up: "the THURSDAY drill and the FRIDAY make-up",
+      how_correct: "A misread attestation",
       explainer:
         "There were two drills. The full club passed on Thursday. A small make-up was run on Friday for two kids who had been at the clinic. The Times reporter read the make-up summary, did not see the Thursday pass, and printed it as the result. The school needs the drill report to double-print: one line for the main drill, one line for any make-up.",
     },
@@ -433,6 +437,7 @@ export const CASES: CaseFile[] = [
       who_carried: "student-y3-marta-kowalski",
       where_it_happened: "library",
       what_got_mixed_up: "the older 'long-crossing' verse and the newer 'arrival' verse",
+      how_correct: "An out-of-date book",
       explainer:
         "The song has two verses both currently sung. The lower-terrace chapbook prints the older 'long-crossing' verse, which Keoni's grandfather and many elders sing. The Ensemble teaches the newer 'arrival' verse the school adopted four years ago. Both are correct in their own community. Songbooks need a version tag: which verse, which year, which singer learned it from.",
     },
@@ -590,6 +595,7 @@ export const CASES: CaseFile[] = [
       who_carried: "staff-attestation-clerk-aoki",
       where_it_happened: "staff_room",
       what_got_mixed_up: "the surname 'Akamatsu' read as 'Akinyemi' on a hand-written envelope",
+      how_correct: "A misread attestation",
       explainer:
         "The mail came in hand-written. The clerk read the surname as Akinyemi because Mr. Akinyemi is the only Ak- surname most staff see daily. Mr. Akinyemi opened it kindly, realised the printer-tray request was not for him, and walked it to the Akamatsu family the same afternoon. The Inter-Cupola assumed the music room was hosting a choir. The school needs a same-day name-check column at the mail desk.",
     },
@@ -746,6 +752,7 @@ export const CASES: CaseFile[] = [
       who_carried: "community-beekeeper-fields",
       where_it_happened: "gardens",
       what_got_mixed_up: "two hives moved to the side terrace for varroa-check this week",
+      how_correct: "A wrong calibration",
       explainer:
         "There are 14 hives in the orchard system this season. Two were moved to the side terrace for a varroa-check on Monday. The Bulletin counted at the registry (14). Junior Hydroponics counted at the orchard on Tuesday and saw 12. Amaru counted at the weekend mid-move and saw 13 (one had just come back). All three counts are honest. The Equinox Honey Tally needs a single census day with a 'moved-out' column on the log.",
     },

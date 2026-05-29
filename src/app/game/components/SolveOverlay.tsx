@@ -5,6 +5,7 @@ import type { CaseFile } from "../lib/cases-generated";
 import { ROSTER } from "../lib/roster";
 import { findRoom } from "../lib/school";
 import FaceTile from "./FaceTile";
+import { computeCorrectness, type SlotFills } from "./GameShell";
 
 // Solve overlay — the "brief filed" payoff.
 //
@@ -55,12 +56,14 @@ function buildFlowers(): Flower[] {
 
 export default function SolveOverlay({
   case: c,
+  fills,
   solvedCount,
   totalCount,
   onClose,
   onNext,
 }: {
   case: CaseFile;
+  fills: SlotFills;
   solvedCount: number;
   totalCount: number;
   onClose: () => void;
@@ -70,6 +73,24 @@ export default function SolveOverlay({
   const truthWho = ROSTER.find((r) => r.id === c.truth.who_carried);
   const truthRoom = findRoom(c.truth.where_it_happened);
   const client = ROSTER.find((r) => r.id === c.client_id);
+  const correctness = computeCorrectness(c, fills);
+  // Players who guessed nothing right still get a warm payoff, just no
+  // confetti garden — keep the verdict reveal, drop the ballyhoo.
+  const isWin = correctness.count === 3;
+  const headline =
+    correctness.count === 3
+      ? "CASE SOLVED"
+      : correctness.count === 2
+        ? "ALMOST"
+        : correctness.count === 1
+          ? "GETTING CLOSER"
+          : "BRIEF FILED";
+  const subline =
+    correctness.count === 3
+      ? "all three picks matched the truth"
+      : correctness.count === 0
+        ? "let's look at what really happened together"
+        : `${correctness.count} of 3 picks matched the truth`;
 
   // Lock body scroll while overlay open
   useEffect(() => {
@@ -87,18 +108,21 @@ export default function SolveOverlay({
       aria-modal="true"
       aria-label="brief filed"
     >
-      {/* Fractal flower garden — bg layer */}
-      <div className="solve-garden" aria-hidden="true">
-        {flowers.map((f, i) => (
-          <Flower
-            key={i}
-            cx={f.cx}
-            cy={f.cy}
-            delaySec={f.delaySec}
-            hue={f.hue}
-          />
-        ))}
-      </div>
+      {/* Fractal flower garden — bg layer. Only blooms on a full win;
+          a partial brief still reveals the truth but without confetti. */}
+      {isWin && (
+        <div className="solve-garden" aria-hidden="true">
+          {flowers.map((f, i) => (
+            <Flower
+              key={i}
+              cx={f.cx}
+              cy={f.cy}
+              delaySec={f.delaySec}
+              hue={f.hue}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Truth panel — fg layer */}
       <div className="solve-content">
@@ -108,8 +132,9 @@ export default function SolveOverlay({
             {solvedCount}/{totalCount} SOLVED
           </span>
         </div>
-        <h2 className="solve-title">CASE SOLVED</h2>
+        <h2 className={`solve-title ${isWin ? "win" : "partial"}`}>{headline}</h2>
         <div className="solve-codename">{c.codename} · {c.subtitle}</div>
+        <div className="solve-score-line">{subline}</div>
 
         {client && (
           <div className="solve-client-row">
@@ -124,8 +149,10 @@ export default function SolveOverlay({
         )}
 
         <div className="solve-truth">
-          <div className="solve-truth-row">
-            <span className="solve-truth-label">WHO CARRIED</span>
+          <div className={`solve-truth-row ${correctness.who ? "right" : "wrong"}`}>
+            <span className="solve-truth-label">
+              {correctness.who ? "✓ WHO CARRIED" : "✗ WHO CARRIED"}
+            </span>
             {truthWho ? (
               <span className="solve-truth-value">
                 <FaceTile id={truthWho.id} size={28} />
@@ -135,15 +162,21 @@ export default function SolveOverlay({
               <span className="solve-truth-value">{c.truth.who_carried}</span>
             )}
           </div>
-          <div className="solve-truth-row">
-            <span className="solve-truth-label">WHERE IT HAPPENED</span>
+          <div className={`solve-truth-row ${correctness.where ? "right" : "wrong"}`}>
+            <span className="solve-truth-label">
+              {correctness.where ? "✓ WHERE IT HAPPENED" : "✗ WHERE IT HAPPENED"}
+            </span>
             <span className="solve-truth-value">
               {truthRoom?.glyph} {truthRoom?.label ?? c.truth.where_it_happened}
             </span>
           </div>
-          <div className="solve-truth-row">
-            <span className="solve-truth-label">WHAT GOT MIXED UP</span>
-            <span className="solve-truth-value">{c.truth.what_got_mixed_up}</span>
+          <div className={`solve-truth-row ${correctness.how ? "right" : "wrong"}`}>
+            <span className="solve-truth-label">
+              {correctness.how ? "✓ WHAT GOT MIXED UP" : "✗ WHAT GOT MIXED UP"}
+            </span>
+            <span className="solve-truth-value">
+              {c.truth.how_correct}: {c.truth.what_got_mixed_up}
+            </span>
           </div>
         </div>
 
