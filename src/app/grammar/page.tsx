@@ -227,6 +227,7 @@ export default async function GrammarPage() {
             <CompositionPoliciesPanel />
             <NamespacePanel source={source} />
             <AlephView source={source} />
+            <ExploreCTA />
             <CompositionGraph source={source} />
             <TranslationPlayground />
             <StoriesLibrary />
@@ -339,5 +340,33 @@ export default async function GrammarPage() {
       </main>
       <Footer />
     </>
+  );
+}
+
+function ExploreCTA() {
+  return (
+    <section className="rounded-2xl border-l-4 border-brand-primary bg-gradient-to-br from-brand-primary/5 to-transparent p-5">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="max-w-2xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-primary">
+            Try it yourself
+          </p>
+          <h2 className="mt-1 text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Build a small attestation chain in the browser.
+          </h2>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+            Pin a few attesters, post claims, run a composition policy, and
+            watch the corridor metric move. Same Rust kernel as the Aleph
+            view, no server round-trip.
+          </p>
+        </div>
+        <Link
+          href="/grammar/explore"
+          className="rounded-md border-2 border-brand-primary bg-brand-primary px-4 py-2 text-sm font-semibold text-white hover:bg-brand-primary/90"
+        >
+          Open the workshop &rarr;
+        </Link>
+      </div>
+    </section>
   );
 }

@@ -31,10 +31,17 @@ const SceneInner = dynamic(() => import("./AlephScene"), {
 export type KernelNode = {
   id: string;
   label: string;
-  group: "primitive" | "family" | "component" | "prefix";
+  group:
+    | "primitive"
+    | "family"
+    | "component"
+    | "prefix"
+    | "attester"
+    | "claim";
   component: string | null;
   family: string | null;
   band: number;
+  multi_scale?: boolean;
 };
 
 export type KernelEdge = {
@@ -54,6 +61,19 @@ export type CorridorMetric = {
   k_eff: number;
 };
 
+export type InstanceMeta = {
+  node_idx: number;
+  band: number;
+  node_id: string;
+};
+
+export type EdgeGeom = {
+  source_instance: number;
+  target_instance: number;
+  curvature: number;
+  kind: string;
+};
+
 // Build the kernel input from the parsed CEG namespace + the structural
 // primitives + the five families.
 function buildKernelGraph(source: RegistrySource): KernelGraph {
@@ -64,7 +84,7 @@ function buildKernelGraph(source: RegistrySource): KernelGraph {
   // Future phases will use the multi-scale embedding.
   const DEFAULT_BAND = 4;
 
-  // 1 + 4 structural primitives — placed at the disk centre at each band
+  // 1 + 4 structural primitives — multi-scale (appear at every band)
   const primitives = [
     "scores",
     "delegates_to",
@@ -80,6 +100,7 @@ function buildKernelGraph(source: RegistrySource): KernelGraph {
       component: null,
       family: null,
       band: DEFAULT_BAND,
+      multi_scale: true,
     });
   });
   // composer → scores
@@ -107,6 +128,7 @@ function buildKernelGraph(source: RegistrySource): KernelGraph {
       component: null,
       family: f,
       band: DEFAULT_BAND,
+      multi_scale: true,
     });
     edges.push({
       source: "prim:scores",
@@ -128,6 +150,7 @@ function buildKernelGraph(source: RegistrySource): KernelGraph {
       component: c,
       family: null,
       band: DEFAULT_BAND,
+      multi_scale: false,
     });
   });
 
@@ -144,6 +167,7 @@ function buildKernelGraph(source: RegistrySource): KernelGraph {
           component: ns.component,
           family: row.family ?? null,
           band: DEFAULT_BAND,
+          multi_scale: false,
         });
         edges.push({
           source: `comp:${ns.component}`,
@@ -181,24 +205,29 @@ export function nodeColor(node: KernelNode): string {
 export default function AlephView({ source }: { source: RegistrySource }) {
   const graph = useMemo(() => buildKernelGraph(source), [source]);
   const [positions, setPositions] = useState<Float32Array | null>(null);
+  const [instanceMeta, setInstanceMeta] = useState<InstanceMeta[] | null>(null);
+  const [edgeGeoms, setEdgeGeoms] = useState<EdgeGeom[] | null>(null);
   const [corridor, setCorridor] = useState<CorridorMetric | null>(null);
+  const [hoverId, setHoverId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       try {
-        // Dynamic import so the WASM only loads on the client when this
-        // component actually mounts.
         const mod = await import("coherence-kernel");
-        await mod.default(); // initialise the WASM
+        await mod.default();
         const kernel = new mod.CoherenceKernel();
         kernel.set_graph(JSON.stringify(graph));
-        const layout = kernel.layout(); // Float32Array view of x0,y0,z0,x1,y1,z1,...
+        const layout = kernel.layout();
         const positionsCopy = new Float32Array(layout);
+        const meta = kernel.instance_meta() as InstanceMeta[];
+        const edges = kernel.edge_geometry() as EdgeGeom[];
         const corridorMetric = kernel.corridor() as CorridorMetric;
         if (!cancelled) {
           setPositions(positionsCopy);
+          setInstanceMeta(meta);
+          setEdgeGeoms(edges);
           setCorridor(corridorMetric);
         }
       } catch (e) {
@@ -219,7 +248,7 @@ export default function AlephView({ source }: { source: RegistrySource }) {
       </div>
     );
   }
-  if (!positions) {
+  if (!positions || !instanceMeta || !edgeGeoms) {
     return (
       <div className="flex h-[420px] items-center justify-center rounded-2xl border border-slate-200 bg-white text-sm text-slate-500 dark:border-gray-800 dark:bg-gray-900 dark:text-slate-400">
         Loading kernel and computing layout…
@@ -268,8 +297,23 @@ export default function AlephView({ source }: { source: RegistrySource }) {
       </p>
 
       <div className="h-[60vh] min-h-[460px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100 dark:border-gray-800 dark:from-gray-950 dark:to-black">
-        <SceneInner graph={graph} positions={positions} />
+        <SceneInner
+          graph={graph}
+          positions={positions}
+          instanceMeta={instanceMeta}
+          edgeGeoms={edgeGeoms}
+          onHoverChange={setHoverId}
+        />
       </div>
+      {hoverId && (
+        <p className="text-xs text-slate-500 dark:text-slate-400">
+          Hovering{" "}
+          <span className="font-mono font-semibold text-brand-primary">
+            {hoverId.replace(/^prim:|^family:|^comp:|^prefix:/, "")}
+          </span>{" "}
+          — multi-scale nodes glow at every band where they appear.
+        </p>
+      )}
 
       <p className="text-[11px] text-slate-500 dark:text-slate-400">
         Powered by the{" "}

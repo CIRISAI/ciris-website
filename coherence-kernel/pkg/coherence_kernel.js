@@ -12,6 +12,21 @@ export class CoherenceKernel {
         wasm.__wbg_coherencekernel_free(ptr, 0);
     }
     /**
+     * Add an edge. Idempotent.
+     * @param {string} source
+     * @param {string} target
+     * @param {string} kind
+     */
+    add_edge(source, target, kind) {
+        const ptr0 = passStringToWasm0(source, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+        const len0 = WASM_VECTOR_LEN;
+        const ptr1 = passStringToWasm0(target, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+        const len1 = WASM_VECTOR_LEN;
+        const ptr2 = passStringToWasm0(kind, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+        const len2 = WASM_VECTOR_LEN;
+        wasm.coherencekernel_add_edge(this.__wbg_ptr, ptr0, len0, ptr1, len1, ptr2, len2);
+    }
+    /**
      * Z height of a band by its 0..5 ordinal.
      * @param {number} band
      * @returns {number}
@@ -19,6 +34,13 @@ export class CoherenceKernel {
     static band_z(band) {
         const ret = wasm.coherencekernel_band_z(band);
         return ret;
+    }
+    /**
+     * Clear all attester/claim/vote nodes and edges. Keeps the CEG
+     * namespace anchors.
+     */
+    clear_runtime() {
+        wasm.coherencekernel_clear_runtime(this.__wbg_ptr);
     }
     /**
      * Per-graph corridor metric: { k, rho_estimate, k_eff }.
@@ -41,9 +63,64 @@ export class CoherenceKernel {
         }
     }
     /**
+     * Edge geometry export: for each edge, emit the source and target
+     * instance indices PLUS the curvature parameter the renderer should
+     * use for the paired forward/backward TSVF arc. Curvature binds to
+     * the per-edge ρ proxy: tightly-coupled edges (high ρ) draw tightly
+     * curved; weakly coupled edges (low ρ) draw straight.
+     * @returns {any}
+     */
+    edge_geometry() {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            wasm.coherencekernel_edge_geometry(retptr, this.__wbg_ptr);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            if (r2) {
+                throw takeObject(r1);
+            }
+            return takeObject(r0);
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * Total instance count (multi-scale nodes contribute multiple instances).
+     * @returns {number}
+     */
+    get instance_count() {
+        const ret = wasm.coherencekernel_instance_count(this.__wbg_ptr);
+        return ret >>> 0;
+    }
+    /**
+     * Return per-instance metadata as JSON: [{node_idx, band, node_id}, ...].
+     * The JS side uses this to map hover events back to logical nodes
+     * (multi-scale nodes share one logical id across bands).
+     * @returns {any}
+     */
+    instance_meta() {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            wasm.coherencekernel_instance_meta(retptr, this.__wbg_ptr);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            if (r2) {
+                throw takeObject(r1);
+            }
+            return takeObject(r0);
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
      * Return the laid-out positions as a typed array the JS side can map
      * straight into a Float32Array view of WASM linear memory. Three floats
-     * per node, in input order: [x0, y0, z0, x1, y1, z1, ...].
+     * per node-instance. Multi-scale nodes contribute one instance per
+     * band; scale-pinned nodes contribute one instance at their band. The
+     * JS side reads the matching instance_meta() to know which input node
+     * each instance belongs to.
      * @returns {Float32Array}
      */
     layout() {
@@ -66,12 +143,55 @@ export class CoherenceKernel {
         return this;
     }
     /**
-     * Number of nodes in the loaded graph.
+     * Number of input nodes in the loaded graph.
      * @returns {number}
      */
     get node_count() {
         const ret = wasm.coherencekernel_node_count(this.__wbg_ptr);
         return ret >>> 0;
+    }
+    /**
+     * Composition Policy A — Direct Trust.
+     * Given a set of pinned attester ids, compute the composed verdict on
+     * a dimension: weighted mean of (score × confidence) over claims by
+     * pinned attesters, ignoring others.
+     * @param {string} pinned_attester_ids_json
+     * @param {string} dimension
+     * @returns {any}
+     */
+    policy_a(pinned_attester_ids_json, dimension) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            const ptr0 = passStringToWasm0(pinned_attester_ids_json, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+            const len0 = WASM_VECTOR_LEN;
+            const ptr1 = passStringToWasm0(dimension, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+            const len1 = WASM_VECTOR_LEN;
+            wasm.coherencekernel_policy_a(retptr, this.__wbg_ptr, ptr0, len0, ptr1, len1);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            if (r2) {
+                throw takeObject(r1);
+            }
+            return takeObject(r0);
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * Remove an edge.
+     * @param {string} source
+     * @param {string} target
+     * @param {string} kind
+     */
+    remove_edge(source, target, kind) {
+        const ptr0 = passStringToWasm0(source, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+        const len0 = WASM_VECTOR_LEN;
+        const ptr1 = passStringToWasm0(target, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+        const len1 = WASM_VECTOR_LEN;
+        const ptr2 = passStringToWasm0(kind, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+        const len2 = WASM_VECTOR_LEN;
+        wasm.coherencekernel_remove_edge(this.__wbg_ptr, ptr0, len0, ptr1, len1, ptr2, len2);
     }
     /**
      * Load a graph from a JSON-serialized GraphInput.
@@ -88,6 +208,28 @@ export class CoherenceKernel {
             if (r1) {
                 throw takeObject(r0);
             }
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * Add or replace a node. Returns the input-array index.
+     * @param {string} json
+     * @returns {number}
+     */
+    upsert_node(json) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            const ptr0 = passStringToWasm0(json, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+            const len0 = WASM_VECTOR_LEN;
+            wasm.coherencekernel_upsert_node(retptr, this.__wbg_ptr, ptr0, len0);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            if (r2) {
+                throw takeObject(r1);
+            }
+            return r0 >>> 0;
         } finally {
             wasm.__wbindgen_add_to_stack_pointer(16);
         }
@@ -111,8 +253,15 @@ function __wbg_get_imports() {
             const ret = new Object();
             return addHeapObject(ret);
         },
+        __wbg_new_d90091b82fdf5b91: function() {
+            const ret = new Array();
+            return addHeapObject(ret);
+        },
         __wbg_set_6be42768c690e380: function(arg0, arg1, arg2) {
             getObject(arg0)[takeObject(arg1)] = takeObject(arg2);
+        },
+        __wbg_set_dca99999bba88a9a: function(arg0, arg1, arg2) {
+            getObject(arg0)[arg1 >>> 0] = takeObject(arg2);
         },
         __wbindgen_cast_0000000000000001: function(arg0) {
             // Cast intrinsic for `F64 -> Externref`.
