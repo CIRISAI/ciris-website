@@ -300,17 +300,231 @@ export function rollup(s: Scenario): FedRollup {
   };
 }
 
-export function feasible(srv: ActorCosts): {
-  disk: boolean;
-  bandwidth: boolean;
-  cpu: boolean;
-} {
+// Feasibility result. `ratio` > 1 means the gate is exceeded by that
+// factor; the UI uses it to label "needs 2.3x the bandwidth" rather
+// than just a red checkmark. ok is just ratio <= 1 for convenience.
+export type GateResult = { ok: boolean; ratio: number };
+
+export type Feasibility = {
+  disk: GateResult;
+  bandwidth: GateResult;
+  cpu: GateResult;
+  retention: GateResult;
+};
+
+export function feasible(srv: ActorCosts): Feasibility {
+  const bw = srv.bandwidth_in_per_day + srv.bandwidth_out_per_day;
+  // Retention: if the trust pool churns faster than a day or two, the
+  // server is mostly a pass-through cache and the federation has lost
+  // the persistence the trust gate was supposed to give it. Floor at
+  // 2 days as "ok"; under that, we mark a soft failure.
+  const RETENTION_FLOOR_DAYS = 2.0;
   return {
-    disk: srv.storage_total <= SERVER_DISK_GATE_BYTES,
-    bandwidth:
-      srv.bandwidth_in_per_day + srv.bandwidth_out_per_day <=
-      SERVER_BANDWIDTH_GATE_BYTES_PER_DAY,
-    cpu: srv.cpu_seconds_per_day <= SERVER_CPU_GATE_SECONDS_PER_DAY,
+    disk: {
+      ok: srv.storage_total <= SERVER_DISK_GATE_BYTES,
+      ratio: srv.storage_total / SERVER_DISK_GATE_BYTES,
+    },
+    bandwidth: {
+      ok: bw <= SERVER_BANDWIDTH_GATE_BYTES_PER_DAY,
+      ratio: bw / SERVER_BANDWIDTH_GATE_BYTES_PER_DAY,
+    },
+    cpu: {
+      ok: srv.cpu_seconds_per_day <= SERVER_CPU_GATE_SECONDS_PER_DAY,
+      ratio: srv.cpu_seconds_per_day / SERVER_CPU_GATE_SECONDS_PER_DAY,
+    },
+    retention: {
+      ok: srv.effective_retention_days >= RETENTION_FLOOR_DAYS,
+      ratio: RETENTION_FLOOR_DAYS / Math.max(0.01, srv.effective_retention_days),
+    },
+  };
+}
+
+// ── Latency estimate ────────────────────────────────────────────
+//
+// A first-order latency model parameterized by the same slider
+// inputs that drive storage and bandwidth. Numbers come from
+// measured residential ISP RTTs, CDN edge cache RTTs, and great-
+// circle backbone delays — not from the substrate benchmarks. They
+// shift with the sliders so the reader can see the cache and
+// locality dividends as time savings, not just bytes.
+//
+// CEWP path:
+//   - cache hit → reply from same box / metro: a few ms
+//   - cache miss, local cohort (self/family/community): metro hop
+//   - regional cohort (affiliations): same continent
+//   - global cohort (species/planet/federation): cross-ocean
+//   - trust depth > 0 adds friend-of-friends resolution hops
+//
+// Centralized path:
+//   - cache hit at CDN edge: low (still TLS + auth)
+//   - cache miss: origin round trip through hyperscale facility
+const L_CACHE_LOCAL_MS = 2;
+const L_LOCAL_HOP_MS = 18;
+const L_REGIONAL_MS = 55;
+const L_GLOBAL_MS = 195;
+const L_TRUST_HOP_MS = 14;
+const L_CDN_EDGE_MS = 28;
+const L_ORIGIN_FETCH_MS = 180;
+
+export type LatencyEstimate = {
+  cewp_p50_ms: number;
+  internet_p50_ms: number;
+  // Breakdown for the panel.
+  cewp_breakdown: {
+    from_cache_ms: number;
+    from_local_ms: number;
+    from_regional_ms: number;
+    from_global_ms: number;
+    trust_hop_penalty_ms: number;
+  };
+};
+
+// ── Environmental footprint ────────────────────────────────────
+//
+// Datacenter count, electricity draw, CO2 per year for each
+// topology, plus a "useful work" share to make the central thesis
+// visible: today's substrate spends a large share of its compute on
+// value extraction (recommender models, ad targeting, surveillance,
+// A/B testing). CEWP removes that layer architecturally.
+//
+// Numbers and sources — all rough, uncertainty bars are wide. The
+// page shows the math so anyone can disagree with the inputs.
+//
+//   TODAY_DC_COUNT_AT_5B = 10_000.
+//     SemiAnalysis 2024 DC census: ~10K facilities ("hyperscale +
+//     edge + colocation"). Scale linearly with user slider.
+//
+//   HYPERSCALE_DC_AVG_MW = 5.
+//     Weighted average across the 10K facility population. True
+//     hyperscale campuses run 20-50 MW; edge and colocation are
+//     1-10 MW. Calibrated so the model reproduces IEA's 2024 global
+//     DC electricity estimate (~415 TWh/yr) when n_users = 5B.
+//
+//   GRID_CO2_KG_PER_KWH = 0.4.
+//     IEA global average 2023. Regions: ~0.05 (Iceland), ~0.9
+//     (coal-heavy India).
+//
+//   HOURS_PER_YEAR = 8760.
+//
+//   HOME_SERVER_W = 50.
+//     ARM SoC + 1 TB SSD continuous draw.
+//
+//   L0_PROXY_ATTRIBUTABLE_W = 4.
+//     Most of a phone's or laptop's power goes to what the human is
+//     doing on the device. We count only the marginal substrate share.
+//
+//   EXTRACTION_OVERHEAD = 0.40.
+//     Rough estimate of compute on today's substrate that goes to
+//     value extraction: ad targeting, recommender training,
+//     surveillance analytics, A/B test platforms. Anchors are
+//     several wide ranges:
+//       - Sandvine 2024: recommender-driven traffic dominates.
+//       - SemiAnalysis ML breakdowns at large ad-funded platforms
+//         show 30-50% of accelerator hours on personalization /
+//         targeting workloads.
+//       - Reported AI training shares at Meta/Google ad businesses.
+//     30-50% is a defensible band across platforms; 40% midpoint.
+//     CEWP removes this layer architecturally.
+//
+// The central bet: CEWP makes far better use of the world's existing
+// hardware by removing the value-extraction layer. Today's substrate
+// burns a large share of its compute on ads, recommenders, and
+// surveillance, plus needs dedicated facilities to host them. CEWP
+// folds into hardware that already exists in homes and pockets, and
+// every joule it does spend goes to the user's actual task.
+
+export const GRID_CO2_KG_PER_KWH = 0.4;
+export const HOURS_PER_YEAR = 8760;
+export const HYPERSCALE_DC_AVG_MW = 5;
+export const TODAY_DC_COUNT_AT_5B = 10_000;
+export const DC_FLOOR = 100;
+export const HOME_SERVER_W = 50;
+export const L0_PROXY_ATTRIBUTABLE_W = 4;
+export const EXTRACTION_OVERHEAD = 0.40;
+
+export type Footprint = {
+  datacenters: number;
+  power_MW: number;
+  electricity_TWh_per_year: number;
+  co2_Mt_per_year: number;
+  /** Power spent on the user's actual task (vs value extraction). */
+  useful_power_MW: number;
+  /** Power that's net-new buildout (new hardware in the world). */
+  new_buildout_power_MW: number;
+};
+
+function envelope(power_MW: number) {
+  const electricity_TWh = (power_MW * 1000 * HOURS_PER_YEAR) / 1e9;
+  const co2_Mt = electricity_TWh * GRID_CO2_KG_PER_KWH;
+  return { electricity_TWh, co2_Mt };
+}
+
+export function internetFootprint(s: Scenario): Footprint {
+  // DC count scales linearly with users vs the today-baseline at 5B.
+  const dcs = Math.max(DC_FLOOR, (s.n_users / 5e9) * TODAY_DC_COUNT_AT_5B);
+  const power_MW = dcs * HYPERSCALE_DC_AVG_MW;
+  const { electricity_TWh, co2_Mt } = envelope(power_MW);
+  return {
+    datacenters: dcs,
+    power_MW,
+    electricity_TWh_per_year: electricity_TWh,
+    co2_Mt_per_year: co2_Mt,
+    useful_power_MW: power_MW * (1 - EXTRACTION_OVERHEAD),
+    new_buildout_power_MW: power_MW, // every hyperscale facility is net-new
+  };
+}
+
+export function cewpFootprint(s: Scenario): Footprint {
+  const n_l1 = s.n_users * s.tier_mix.server;
+  const n_l0 = s.n_users * s.tier_mix.proxy;
+  const power_W = n_l1 * HOME_SERVER_W + n_l0 * L0_PROXY_ATTRIBUTABLE_W;
+  const power_MW = power_W / 1e6;
+  const { electricity_TWh, co2_Mt } = envelope(power_MW);
+  // L1 home servers are mostly net-new (purpose-built boxes); L0
+  // proxies fold into devices that exist for other reasons.
+  const new_buildout_MW = (n_l1 * HOME_SERVER_W) / 1e6;
+  return {
+    datacenters: 0,
+    power_MW,
+    electricity_TWh_per_year: electricity_TWh,
+    co2_Mt_per_year: co2_Mt,
+    useful_power_MW: power_MW, // no value-extraction layer in the substrate
+    new_buildout_power_MW: new_buildout_MW,
+  };
+}
+
+export function estimateLatency(s: Scenario): LatencyEstimate {
+  const cache = s.cache_hit_rate;
+  const miss = 1 - cache;
+  // For CEWP, cohort_scope determines where a missed fetch is sourced
+  // from. self/family stay local; community is metro; affiliations
+  // are continent-scope; species+ is global.
+  const localScope = s.cohort.self_ + s.cohort.family + s.cohort.community;
+  const regionalScope = s.cohort.affiliations;
+  const globalScope = s.cohort.species + s.cohort.planet + s.cohort.federation;
+  const trustHop = s.trust_depth_avg * L_TRUST_HOP_MS;
+
+  const from_cache_ms = cache * L_CACHE_LOCAL_MS;
+  const from_local_ms = miss * localScope * L_LOCAL_HOP_MS;
+  const from_regional_ms = miss * regionalScope * L_REGIONAL_MS;
+  const from_global_ms = miss * globalScope * L_GLOBAL_MS;
+  const trust_hop_penalty_ms = miss * trustHop;
+  const cewp = from_cache_ms + from_local_ms + from_regional_ms + from_global_ms + trust_hop_penalty_ms;
+
+  // Centralized: cache_hit_rate here is the rough CDN edge hit rate.
+  // Misses traverse the hyperscale origin path.
+  const internet = cache * L_CDN_EDGE_MS + miss * L_ORIGIN_FETCH_MS;
+
+  return {
+    cewp_p50_ms: cewp,
+    internet_p50_ms: internet,
+    cewp_breakdown: {
+      from_cache_ms,
+      from_local_ms,
+      from_regional_ms,
+      from_global_ms,
+      trust_hop_penalty_ms,
+    },
   };
 }
 

@@ -43,12 +43,11 @@ export default function CewpPage() {
               </a>
             </div>
             <p className="max-w-2xl text-sm leading-6 text-slate-600 dark:text-slate-300 md:text-base">
-              CEWP is the CIRIS Epistemic Web Platform. Humans, AI agents, and
-              organizations as first-class participants with the same
-              cryptographic identity shape. Every load-bearing claim is signed.
-              The federation&rsquo;s aggregate scoring is what governs the
-              system in real time. The globe below shows what that looks like
-              compared to the substrate we have today.
+              CEWP is what the internet could look like if nobody big owned
+              the middle. People, AI agents, and organizations all sign their
+              own posts. The network weighs those signatures against each
+              other to work out what to trust. The globe below shows what
+              runs today, and what could run instead.
             </p>
           </header>
 

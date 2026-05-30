@@ -4,17 +4,23 @@ import { useMemo, useState } from "react";
 import GlobeScene, { type CewpMode } from "./components/GlobeScene";
 import HowItWorks from "./components/HowItWorks";
 import {
+  cewpFootprint,
   cohortFromLocality,
-  cohortPublishable,
+  EXTRACTION_OVERHEAD,
+  estimateLatency,
   feasible,
   fmtBytes,
   fmtCount,
   GB,
+  HOME_SERVER_W,
+  HYPERSCALE_DC_AVG_MW,
+  internetFootprint,
   KB,
   MB,
   PRESETS,
   rollup,
   TB,
+  type GateResult,
   type Scenario,
 } from "./lib/model";
 
@@ -28,17 +34,17 @@ const BEATS: Record<CewpMode, { title: string; body: string }> = {
   internet: {
     title: "Today: ten thousand datacenters, five companies",
     body:
-      "Almost every byte you produce or consume passes through one of about ten thousand hyperscale facilities. Five companies run most of them. Watch the yellow particles funnel toward the orange chokepoints.",
+      "Almost everything you post, watch, or send passes through one of about ten thousand giant computer warehouses. Five companies run most of them. Watch the yellow dots funnel into the orange spots — those are the warehouses.",
   },
   cewp: {
-    title: "CEWP: home-server class, peer to peer",
+    title: "CEWP: small boxes near the people",
     body:
-      "CEWP runs on hardware you already own, about one server per ten humans, distributed where the humans already live. Bytes admit at the recipient's trust gate and propagate along the trust graph. Same submarine cables underneath. No datacenters in the middle.",
+      "CEWP runs on the kind of hardware you already own. About one small box for every ten people, sitting where the people already are. Each box only accepts posts from people it trusts. Most of what you do never leaves your city. Same cables under the ocean. No warehouses in the middle.",
   },
   both: {
-    title: "Same workload. Two topologies. Pick your future.",
+    title: "Same posts. Same cables. Different middle.",
     body:
-      "The fiber is the same. The submarine cables are the same. What changes is who holds the bytes in the middle.",
+      "The wires are the same. The cables under the ocean are the same. What changes is who holds your stuff while it's on the move.",
   },
 };
 
@@ -88,6 +94,14 @@ export default function CewpView() {
   const fed = useMemo(() => rollup(scenario), [scenario]);
   const srv = fed.per_tier.server;
   const srvFeas = useMemo(() => feasible(srv), [srv]);
+  const latency = useMemo(() => estimateLatency(scenario), [scenario]);
+  const footIn = useMemo(() => internetFootprint(scenario), [scenario]);
+  const footCwp = useMemo(() => cewpFootprint(scenario), [scenario]);
+  const anyFail =
+    !srvFeas.disk.ok ||
+    !srvFeas.bandwidth.ok ||
+    !srvFeas.cpu.ok ||
+    !srvFeas.retention.ok;
 
   // Map model output to animation intensity. The toy's per-server
   // bandwidth is the load-bearing number. Saturate around 10.8 TB/day
@@ -171,16 +185,16 @@ export default function CewpView() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Slider
-            label="Users"
+            label="How many people"
             value={scenario.n_users}
             min={1_000}
-            max={5_000_000_000}
+            max={10_000_000_000}
             log
             format={(v) => fmtCount(v)}
             onChange={(v) => setScenarioField("n_users", v)}
           />
           <Slider
-            label="Daily bytes per user"
+            label="How much each person posts per day"
             value={scenario.daily_bytes}
             min={1 * KB}
             max={2 * GB}
@@ -189,7 +203,7 @@ export default function CewpView() {
             onChange={(v) => setScenarioField("daily_bytes", v)}
           />
           <Slider
-            label="Daily fetch bytes per user"
+            label="How much each person reads or watches per day"
             value={scenario.daily_fetch_bytes}
             min={100 * KB}
             max={5 * GB}
@@ -198,7 +212,7 @@ export default function CewpView() {
             onChange={(v) => setScenarioField("daily_fetch_bytes", v)}
           />
           <Slider
-            label="Trust radius (direct R)"
+            label="People you directly trust"
             value={scenario.trust_radius}
             min={10}
             max={1000}
@@ -207,7 +221,7 @@ export default function CewpView() {
             onChange={(v) => setScenarioField("trust_radius", Math.round(v))}
           />
           <Slider
-            label="Trust depth (server)"
+            label="How many friend-of-friend hops a server accepts"
             value={scenario.trust_depth_avg}
             min={0}
             max={3}
@@ -216,7 +230,7 @@ export default function CewpView() {
             onChange={(v) => setScenarioField("trust_depth_avg", v)}
           />
           <Slider
-            label="Cache hit rate"
+            label="How often a copy is nearby (cache hit rate)"
             value={scenario.cache_hit_rate}
             min={0.2}
             max={0.95}
@@ -225,18 +239,18 @@ export default function CewpView() {
             onChange={(v) => setScenarioField("cache_hit_rate", v)}
           />
           <Slider
-            label="Cohort locality"
+            label="Mostly local vs. mostly global traffic"
             value={locality}
             min={0}
             max={1}
             step={0.01}
             format={(v) =>
-              v < 0.33 ? "local-heavy" : v < 0.66 ? "default" : "global-heavy"
+              v < 0.33 ? "mostly local" : v < 0.66 ? "balanced" : "mostly global"
             }
             onChange={(v) => setLocalityVal(v)}
           />
           <Slider
-            label="Server-tier disk budget"
+            label="Disk per home server"
             value={scenario.disk_budget_server}
             min={64 * GB}
             max={32 * TB}
@@ -246,48 +260,97 @@ export default function CewpView() {
           />
         </div>
 
+        {/* Failure banner — shouts when any gate is exceeded so the
+            reader can't miss it. */}
+        {anyFail && (
+          <div className="mt-5 flex items-start gap-2 rounded-md border-l-4 border-red-500 bg-red-50 p-3 dark:bg-red-950/30">
+            <span aria-hidden className="mt-0.5 text-lg">⚠</span>
+            <div className="text-sm leading-6">
+              <p className="font-semibold text-red-700 dark:text-red-300">
+                This setting does not fit on home-server hardware.
+              </p>
+              <p className="mt-1 text-red-700/90 dark:text-red-200/80">
+                {[
+                  !srvFeas.disk.ok &&
+                    `disk needs ${srvFeas.disk.ratio.toFixed(1)}x the 1 TB budget`,
+                  !srvFeas.bandwidth.ok &&
+                    `bandwidth needs ${srvFeas.bandwidth.ratio.toFixed(1)}x the 1 Gbps budget`,
+                  !srvFeas.cpu.ok &&
+                    `CPU needs ${srvFeas.cpu.ratio.toFixed(1)}x one full core`,
+                  !srvFeas.retention.ok &&
+                    `content churns too fast (under ${srv.effective_retention_days.toFixed(1)} days before eviction)`,
+                ]
+                  .filter(Boolean)
+                  .join(" · ")}
+                . Try smaller trust depth, a tighter trust circle, or more local
+                cohort.
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Live numbers. */}
-        <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
           <Stat
             label="Per-server held"
             value={fmtBytes(srv.storage_total)}
             sub={`${(srv.storage_utilization * 100).toFixed(0)}% of disk`}
-            ok={srvFeas.disk}
+            gate={srvFeas.disk}
+            failHint={`${srvFeas.disk.ratio.toFixed(1)}x over 1 TB`}
           />
           <Stat
             label="Per-server bandwidth"
             value={fmtBytes(srv.bandwidth_in_per_day + srv.bandwidth_out_per_day)}
             sub="per day (in + out)"
-            ok={srvFeas.bandwidth}
+            gate={srvFeas.bandwidth}
+            failHint={`${srvFeas.bandwidth.ratio.toFixed(1)}x over 1 Gbps`}
           />
           <Stat
             label="Per-server CPU"
             value={`${((srv.cpu_seconds_per_day / 86400) * 100).toFixed(1)}%`}
             sub="of 1 full-util core"
-            ok={srvFeas.cpu}
+            gate={srvFeas.cpu}
+            failHint={`${srvFeas.cpu.ratio.toFixed(1)}x over 1 core`}
           />
           <Stat
-            label="Effective retention"
+            label="How long content sticks"
             value={`${srv.effective_retention_days.toFixed(1)} d`}
-            sub="admitted-trust pool"
+            sub="before eviction"
+            gate={srvFeas.retention}
+            failHint="under 2 d — pass-through"
           />
           <Stat
-            label="Federation storage"
+            label="CEWP typical latency"
+            value={`${latency.cewp_p50_ms.toFixed(0)} ms`}
+            sub={
+              latency.cewp_p50_ms < latency.internet_p50_ms
+                ? `${(latency.internet_p50_ms / latency.cewp_p50_ms).toFixed(1)}x faster than today`
+                : "slower than today"
+            }
+            tone={latency.cewp_p50_ms < latency.internet_p50_ms ? "good" : "warn"}
+          />
+          <Stat
+            label="Today's typical latency"
+            value={`${latency.internet_p50_ms.toFixed(0)} ms`}
+            sub="cache + origin path"
+          />
+          <Stat
+            label="Whole-network storage"
             value={fmtBytes(fed.total_storage_bytes)}
             sub="all tiers"
           />
           <Stat
-            label="Federation bandwidth"
+            label="Whole-network bandwidth"
             value={fmtBytes(fed.total_bandwidth_in_bytes_per_day)}
             sub="per day"
           />
           <Stat
-            label="Verify ops / day"
+            label="Signature checks / day"
             value={fmtCount(fed.total_verify_ops_per_day)}
-            sub={`${fmtCount(fed.total_sign_ops_per_day)} sign`}
+            sub={`${fmtCount(fed.total_sign_ops_per_day)} signatures`}
           />
           <Stat
-            label="Aggregate CPU"
+            label="Total CPU"
             value={fmtCount(fed.aggregate_cpu_cores_full_util)}
             sub="full-util cores"
           />
@@ -307,6 +370,111 @@ export default function CewpView() {
           v2.8.0 + CIRISEdge v0.10.0 + CIRISPersist v3.3.0 benchmarks.
           Feasibility gates: 1 TB / 1 Gbps / 1 core per server.
         </p>
+      </section>
+
+      {/* Footprint comparison: hardware, power, CO2. The point of the
+          page in one table. */}
+      <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+        <header className="mb-4">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
+            Hardware, power, and what it&rsquo;s actually doing
+          </h3>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+            The bet is not just that CEWP runs on less hardware. It is
+            that CEWP makes far better use of the hardware that already
+            exists in the world by removing the layer that eats most of
+            today&rsquo;s compute: ad targeting, recommender training,
+            surveillance, A/B test platforms. Same people, same posts,
+            same cables. Different middle.
+          </p>
+        </header>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-[11px] uppercase tracking-wide text-slate-500">
+                <th className="py-2 pr-3"></th>
+                <th className="py-2 pr-3 text-orange-700 dark:text-orange-300">
+                  Today&rsquo;s internet
+                </th>
+                <th className="py-2 pr-3 text-teal-700 dark:text-teal-300">
+                  CEWP
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <Row
+                label="Hyperscale datacenters"
+                today={fmtCount(footIn.datacenters)}
+                cewp={"0"}
+              />
+              <Row
+                label="Continuous power"
+                today={`${footIn.power_MW.toFixed(0)} MW`}
+                cewp={`${footCwp.power_MW.toFixed(0)} MW`}
+              />
+              <Row
+                label="Electricity"
+                today={`${footIn.electricity_TWh_per_year.toFixed(1)} TWh / yr`}
+                cewp={`${footCwp.electricity_TWh_per_year.toFixed(1)} TWh / yr`}
+              />
+              <Row
+                label="CO2 (grid avg)"
+                today={`${footIn.co2_Mt_per_year.toFixed(1)} Mt / yr`}
+                cewp={`${footCwp.co2_Mt_per_year.toFixed(1)} Mt / yr`}
+              />
+              <Row
+                label="Net-new hardware buildout"
+                today={`${footIn.new_buildout_power_MW.toFixed(0)} MW`}
+                cewp={`${footCwp.new_buildout_power_MW.toFixed(0)} MW (home servers)`}
+                emphasize
+              />
+              <Row
+                label="Power on the user's actual task"
+                today={`${footIn.useful_power_MW.toFixed(0)} MW (${((1 - EXTRACTION_OVERHEAD) * 100).toFixed(0)}%)`}
+                cewp={`${footCwp.useful_power_MW.toFixed(0)} MW (100%)`}
+                emphasize
+              />
+            </tbody>
+          </table>
+        </div>
+        <details className="mt-3 text-[12px] text-slate-500">
+          <summary className="cursor-pointer underline-offset-2 hover:underline">
+            Show the math
+          </summary>
+          <div className="mt-2 space-y-1 leading-5">
+            <p>
+              <b>Internet column.</b> Today there are about 10,000
+              hyperscale datacenters serving ~5 billion users
+              (SemiAnalysis 2024 + UN). Scaled linearly with the user
+              slider, floored at 100. Each averages 30 MW continuous
+              (Uptime Institute 2024). Grid CO2 is the IEA global
+              average of 0.4 kg per kWh; regions vary from 0.05 (Iceland)
+              to 0.9 (coal-heavy).
+            </p>
+            <p>
+              <b>CEWP column.</b> {(scenario.tier_mix.server * 100).toFixed(0)}% of
+              users run an L1 home server (about {HOME_SERVER_W} W
+              continuous; ARM SoC + 1 TB SSD). {(scenario.tier_mix.proxy * 100).toFixed(0)}% run an L0
+              proxy on a device they already own (laptop, phone, set-top
+              box). We count only the marginal 4 W per L0 because most
+              of that device&rsquo;s power goes to what the human is
+              doing anyway.
+            </p>
+            <p>
+              <b>Useful-vs-extraction split.</b> A rough{" "}
+              {(EXTRACTION_OVERHEAD * 100).toFixed(0)}% of today&rsquo;s
+              substrate compute goes to recommender training, ad
+              targeting, surveillance pipelines, A/B testing. The 30-70%
+              range across platforms is wide; 50% is a midpoint. CEWP has
+              no value-extraction layer architecturally, so every watt
+              goes to the user&rsquo;s task.
+            </p>
+            <p className="italic">
+              These are estimates with wide error bars. The page shows
+              the math so you can disagree with the inputs.
+            </p>
+          </div>
+        </details>
       </section>
 
       <HowItWorks />
@@ -367,31 +535,87 @@ function Stat({
   label,
   value,
   sub,
-  ok,
+  gate,
+  failHint,
+  tone,
 }: {
   label: string;
   value: string;
   sub?: string;
-  ok?: boolean;
+  gate?: GateResult;
+  failHint?: string;
+  tone?: "good" | "warn";
 }) {
+  const failed = gate ? !gate.ok : false;
+  const goodTone = tone === "good";
   return (
-    <div className="rounded-md border border-slate-200 bg-slate-50 p-3 dark:border-gray-800 dark:bg-gray-950">
-      <p className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">
+    <div
+      className={`rounded-md border p-3 transition ${
+        failed
+          ? "border-red-500 bg-red-50 dark:border-red-700 dark:bg-red-950/40"
+          : goodTone
+            ? "border-teal-300 bg-teal-50 dark:border-teal-800 dark:bg-teal-950/30"
+            : "border-slate-200 bg-slate-50 dark:border-gray-800 dark:bg-gray-950"
+      }`}
+    >
+      <p
+        className={`text-[10px] font-semibold uppercase tracking-wide ${
+          failed ? "text-red-700 dark:text-red-300" : "text-slate-500"
+        }`}
+      >
         {label}
       </p>
       <p
         className={`mt-1 font-mono text-[15px] font-semibold ${
-          ok === false
-            ? "text-red-600 dark:text-red-400"
-            : "text-slate-900 dark:text-slate-100"
+          failed
+            ? "text-red-700 dark:text-red-300"
+            : goodTone
+              ? "text-teal-700 dark:text-teal-300"
+              : "text-slate-900 dark:text-slate-100"
         }`}
       >
         {value}
-        {ok === false ? " ⚠" : ok === true ? " ✓" : ""}
+        {failed ? " ⚠" : gate && gate.ok ? " ✓" : ""}
       </p>
-      {sub ? (
+      {failed && failHint ? (
+        <p className="mt-0.5 text-[11px] font-semibold text-red-700 dark:text-red-300">
+          {failHint}
+        </p>
+      ) : sub ? (
         <p className="mt-0.5 text-[11px] text-slate-500">{sub}</p>
       ) : null}
     </div>
+  );
+}
+
+function Row({
+  label,
+  today,
+  cewp,
+  emphasize,
+}: {
+  label: string;
+  today: string;
+  cewp: string;
+  emphasize?: boolean;
+}) {
+  return (
+    <tr className="border-t border-slate-200 dark:border-gray-800">
+      <td
+        className={`py-2 pr-3 font-medium ${
+          emphasize
+            ? "text-slate-900 dark:text-slate-100"
+            : "text-slate-700 dark:text-slate-300"
+        }`}
+      >
+        {label}
+      </td>
+      <td className="py-2 pr-3 font-mono text-orange-700 dark:text-orange-300">
+        {today}
+      </td>
+      <td className="py-2 pr-3 font-mono text-teal-700 dark:text-teal-300">
+        {cewp}
+      </td>
+    </tr>
   );
 }
