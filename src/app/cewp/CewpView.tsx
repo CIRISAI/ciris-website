@@ -165,7 +165,12 @@ export default function CewpView() {
 
       {/* Globe. */}
       <div className="relative h-[480px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 dark:border-gray-800 md:h-[560px]">
-        <GlobeScene mode={mode} intensity={intensity} />
+        <GlobeScene
+          mode={mode}
+          intensity={intensity}
+          humansPerServer={humansPerServer}
+          cewpFailed={anyFail}
+        />
         <div className="pointer-events-none absolute inset-x-3 bottom-3 flex justify-end text-[11px] text-slate-300">
           <span className="rounded-full bg-black/40 px-2 py-1 backdrop-blur">
             drag to rotate
@@ -292,6 +297,89 @@ export default function CewpView() {
             </>
           )}
         </p>
+
+        {/* Advanced assumptions — progressive disclosure. Six more
+            knobs that the casual reader doesn't need to see but
+            change the math meaningfully if you do. */}
+        <details className="mt-4 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 transition open:bg-white dark:border-gray-800 dark:bg-gray-950 dark:open:bg-gray-900">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-1 text-sm font-medium text-slate-800 dark:text-slate-200">
+            <span>More assumptions</span>
+            <span aria-hidden className="text-slate-400">›</span>
+          </summary>
+          <div className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Slider
+              label="People you directly trust"
+              value={scenario.trust_radius}
+              min={10}
+              max={1000}
+              log
+              format={(v) => Math.round(v).toString()}
+              onChange={(v) =>
+                setScenarioField("trust_radius", Math.round(v))
+              }
+            />
+            <Slider
+              label="Disk per home server"
+              value={scenario.disk_budget_server}
+              min={64 * GB}
+              max={32 * TB}
+              log
+              format={(v) => fmtBytes(v)}
+              onChange={(v) => setScenarioField("disk_budget_server", v)}
+            />
+            <Slider
+              label="AI agent decisions per person per day"
+              value={scenario.agent_decisions_per_day}
+              min={0}
+              max={2000}
+              step={10}
+              format={(v) => Math.round(v).toString()}
+              onChange={(v) =>
+                setScenarioField("agent_decisions_per_day", v)
+              }
+            />
+            <Slider
+              label="Share of agent traces that get published"
+              value={scenario.trace_publishable_fraction}
+              min={0}
+              max={0.5}
+              step={0.01}
+              format={(v) => `${(v * 100).toFixed(0)}%`}
+              onChange={(v) =>
+                setScenarioField("trace_publishable_fraction", v)
+              }
+            />
+            <Slider
+              label="Share of fetched bytes that are external links"
+              value={scenario.external_fetch_fraction}
+              min={0}
+              max={1}
+              step={0.01}
+              format={(v) => `${(v * 100).toFixed(0)}%`}
+              onChange={(v) =>
+                setScenarioField("external_fetch_fraction", v)
+              }
+            />
+            <Slider
+              label="Average post size"
+              value={scenario.avg_envelope_bytes}
+              min={500}
+              max={50 * MB}
+              log
+              format={(v) => fmtBytes(v)}
+              onChange={(v) => setScenarioField("avg_envelope_bytes", v)}
+            />
+          </div>
+          <p className="mt-3 text-[12px] text-slate-500">
+            Agent decisions drive the H3ERE trace stream (about 14 KB
+            per decision). Trace publishable share is how many of those
+            decisions move past the local cohort gate. External fetch
+            share is what fraction of the bytes you fetch ride a
+            publisher&rsquo;s own store (S3-class) rather than the
+            substrate. Average post size sets how many envelopes the
+            same byte total breaks into.
+          </p>
+        </details>
 
         {/* Failure banner — shouts when any gate is exceeded so the
             reader can't miss it. */}

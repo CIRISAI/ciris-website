@@ -275,14 +275,19 @@ function MetroNodes({
 }
 
 // CEWP L1 server peppering — a halo of tiny teal dots scattered
-// around each metro to suggest "~1 server per 10 humans" without
-// rendering 500M. Population determines how many we draw per metro.
-function CewpServerHalo() {
+// around each metro to suggest L1 home server density. Per-metro
+// count scales with population AND inversely with humans-per-server
+// so dragging the slider visibly thickens or thins the halo.
+function CewpServerHalo({ humansPerServer }: { humansPerServer: number }) {
   const positions = useMemo(() => {
     const out: THREE.Vector3[] = [];
+    const density = 10 / Math.max(1, humansPerServer); // 10 hp/server = baseline
     for (const m of METROS) {
       const center = latLonToVec3(m.lat, m.lon, GLOBE_RADIUS * 1.006);
-      const count = Math.min(60, 4 + Math.floor(m.population_m * 2));
+      const count = Math.min(
+        80,
+        Math.max(2, Math.floor((4 + m.population_m * 2) * density)),
+      );
       const tangent = new THREE.Vector3(-center.z, 0, center.x).normalize();
       const binormal = new THREE.Vector3().crossVectors(center, tangent).normalize();
       for (let i = 0; i < count; i++) {
@@ -353,7 +358,9 @@ function InternetFlows() {
 
 // CEWP flows: small-world trust graph between metros. Lots of short
 // local edges, a few long-range ones. No central convergence node.
-function CewpFlows() {
+// When the model says any per-server gate fails, the arcs flip to
+// red so the failure mode is visible on the globe too.
+function CewpFlows({ failed }: { failed: boolean }) {
   const geom = useMemo(() => {
     const edges = buildCewpTrustGraph();
     const pairs: Array<[THREE.Vector3, THREE.Vector3]> = edges.map(
@@ -371,7 +378,11 @@ function CewpFlows() {
   return (
     <lineSegments>
       <primitive object={geom} attach="geometry" />
-      <lineBasicMaterial color="#5eead4" transparent opacity={0.55} />
+      <lineBasicMaterial
+        color={failed ? "#ef4444" : "#5eead4"}
+        transparent
+        opacity={0.6}
+      />
     </lineSegments>
   );
 }
@@ -455,9 +466,15 @@ function TrafficParticles({
 export default function GlobeScene({
   mode,
   intensity = { internet: 0.5, cewp: 0.5 },
+  humansPerServer = 10,
+  cewpFailed = false,
 }: {
   mode: CewpMode;
   intensity?: TrafficIntensity;
+  /** Affects the L1 server halo density on the globe. */
+  humansPerServer?: number;
+  /** When true, CEWP arcs render red to signal a gate failure. */
+  cewpFailed?: boolean;
 }) {
   const groupRef = useRef<THREE.Group | null>(null);
   const dpr: [number, number] = useMemo(() => {
@@ -510,8 +527,8 @@ export default function GlobeScene({
       <group ref={groupRef}>
         <Earth />
         <SubmarineUnderlay />
-        {showCewp && <CewpServerHalo />}
-        {showCewp && <CewpFlows />}
+        {showCewp && <CewpServerHalo humansPerServer={humansPerServer} />}
+        {showCewp && <CewpFlows failed={cewpFailed} />}
         <MetroNodes color={showInternet && !showCewp ? "#fde68a" : "#fef3c7"} />
         {showInternet && <HyperscaleNodes />}
         {showInternet && <InternetFlows />}
@@ -528,7 +545,7 @@ export default function GlobeScene({
         {showCewp && (
           <TrafficParticles
             pairs={cewpPairs}
-            color="#67e8f9"
+            color={cewpFailed ? "#ef4444" : "#67e8f9"}
             speed={0.12}
             density={cewpDensity}
             altitudeLift={0.08}

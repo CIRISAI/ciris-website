@@ -213,10 +213,20 @@ export function perActor(tier: Tier, s: Scenario): ActorCosts {
     storage_hot_cache = cache_held;
     effective_retention_days = effective_days;
   } else {
-    // server
+    // server (L1)
+    //
+    // A home server serves multiple humans, not one. Each of those
+    // humans drags their own trust set + their own fetch load onto
+    // the box. The toy's baseline is 10 humans per L1 server (the
+    // README's headline); load scales linearly with that ratio so
+    // that pushing humans-per-server up visibly stresses the gates.
+    const users_per_server = 1 / Math.max(0.001, s.tier_mix.server);
+    const BASELINE_USERS_PER_SERVER = 10;
+    const load_scale = users_per_server / BASELINE_USERS_PER_SERVER;
+
     const effective_R = s.trust_radius * effectiveTrustSetMultiplier(s.trust_depth_avg);
-    const daily_admitted = effective_R * s.daily_bytes * cohortPublishable(s.cohort);
-    const traces_in_per_day = effective_R * trace_bytes_per_day * s.trace_publishable_fraction;
+    const daily_admitted = effective_R * s.daily_bytes * cohortPublishable(s.cohort) * load_scale;
+    const traces_in_per_day = effective_R * trace_bytes_per_day * s.trace_publishable_fraction * load_scale;
     const daily_admitted_plus_traces = daily_admitted + traces_in_per_day;
     const trust_share_of_remaining = 0.85;
     const trust_budget = remaining_budget * trust_share_of_remaining;
@@ -225,10 +235,10 @@ export function perActor(tier: Tier, s: Scenario): ActorCosts {
     const admitted_trust_held = Math.min(daily_admitted * effective_days, trust_budget * 0.85);
     const replicated_traces_held = Math.min(traces_in_per_day * effective_days, trust_budget * 0.15);
     const cache_hit_rate = s.cache_hit_rate;
-    const inline_fetch = s.daily_fetch_bytes * (1 - s.external_fetch_fraction);
+    const inline_fetch = s.daily_fetch_bytes * (1 - s.external_fetch_fraction) * load_scale;
     const cache_inbound = inline_fetch * (1 - cache_hit_rate);
     const cache_held = Math.min(cache_inbound, cache_budget);
-    const total_fetch_bw = s.daily_fetch_bytes * (1 - cache_hit_rate);
+    const total_fetch_bw = s.daily_fetch_bytes * (1 - cache_hit_rate) * load_scale;
     verify_ops = (daily_admitted_plus_traces + cache_inbound) / s.avg_envelope_bytes;
     scrub_extra = traces_in_per_day;
     const wide = s.cohort.species + s.cohort.planet + s.cohort.federation;
@@ -504,8 +514,16 @@ export function estimateLatency(s: Scenario): LatencyEstimate {
   const globalScope = s.cohort.species + s.cohort.planet + s.cohort.federation;
   const trustHop = s.trust_depth_avg * L_TRUST_HOP_MS;
 
+  // Locality penalty for sparser server-to-population ratios. At the
+  // baseline of 10 humans per L1 server, the closest server is in your
+  // building / block. At 100 / 1000, it's farther away. Adds ~5 ms
+  // per decade above the baseline.
+  const usersPerServer = 1 / Math.max(0.001, s.tier_mix.server);
+  const sparsenessPenalty =
+    Math.max(0, Math.log10(usersPerServer / 10)) * 5;
+
   const from_cache_ms = cache * L_CACHE_LOCAL_MS;
-  const from_local_ms = miss * localScope * L_LOCAL_HOP_MS;
+  const from_local_ms = miss * localScope * (L_LOCAL_HOP_MS + sparsenessPenalty);
   const from_regional_ms = miss * regionalScope * L_REGIONAL_MS;
   const from_global_ms = miss * globalScope * L_GLOBAL_MS;
   const trust_hop_penalty_ms = miss * trustHop;
