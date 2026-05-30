@@ -23,11 +23,19 @@ import {
 } from "../lib/dataset";
 import {
   GLOBE_RADIUS,
+  greatCircleArc,
   latLonToVec3,
   packArcsAsLineSegments,
 } from "../lib/geo";
 
 export type CewpMode = "internet" | "cewp" | "both";
+
+// Traffic intensity comes from the scaling-model output. Higher value
+// = more particles travelling each arc each frame. 0..1.
+export type TrafficIntensity = {
+  internet: number;
+  cewp: number;
+};
 
 // Earth shell. Ocean-blue sphere + continent outlines drawn from the
 // Natural Earth 110m land polygon set (public domain) + a very faint
@@ -368,7 +376,89 @@ function CewpFlows() {
   );
 }
 
-export default function GlobeScene({ mode }: { mode: CewpMode }) {
+// TrafficParticles — animated dots traveling along arc paths. Each
+// arc gets `density` particles evenly phased; each particle's
+// position is sampled from the great-circle arc at t in [0, 1) and
+// advanced each frame. Pure InstancedMesh, one draw call.
+function TrafficParticles({
+  pairs,
+  color,
+  speed,
+  density,
+  altitudeLift,
+  size,
+}: {
+  pairs: Array<[THREE.Vector3, THREE.Vector3]>;
+  color: string;
+  speed: number;
+  density: number;
+  altitudeLift: number;
+  size: number;
+}) {
+  // Pre-sample each arc into N control points so per-frame work is a
+  // lerp between adjacent points + scalar arithmetic.
+  const arcs = useMemo(
+    () => pairs.map(([a, b]) => greatCircleArc(a, b, 48, altitudeLift)),
+    [pairs, altitudeLift],
+  );
+  const meshRef = useRef<THREE.InstancedMesh>(null);
+  const tmp = useMemo(() => new THREE.Object3D(), []);
+  const phases = useMemo(() => {
+    const out: number[] = [];
+    for (let i = 0; i < arcs.length; i++) {
+      for (let p = 0; p < density; p++) {
+        out.push(p / density);
+      }
+    }
+    return out;
+  }, [arcs.length, density]);
+
+  const count = arcs.length * density;
+
+  useFrame(({ clock }) => {
+    const mesh = meshRef.current;
+    if (!mesh || count === 0) return;
+    const t = clock.getElapsedTime() * speed;
+    for (let arcIdx = 0; arcIdx < arcs.length; arcIdx++) {
+      const arc = arcs[arcIdx];
+      const N = arc.length - 1;
+      for (let p = 0; p < density; p++) {
+        const id = arcIdx * density + p;
+        const u = (t + phases[id]) % 1;
+        const f = u * N;
+        const i0 = Math.floor(f);
+        const frac = f - i0;
+        const a = arc[i0];
+        const b = arc[Math.min(i0 + 1, N)];
+        tmp.position.set(
+          a.x + (b.x - a.x) * frac,
+          a.y + (b.y - a.y) * frac,
+          a.z + (b.z - a.z) * frac,
+        );
+        tmp.scale.setScalar(size);
+        tmp.updateMatrix();
+        mesh.setMatrixAt(id, tmp.matrix);
+      }
+    }
+    mesh.instanceMatrix.needsUpdate = true;
+  });
+
+  if (count === 0) return null;
+  return (
+    <instancedMesh ref={meshRef} args={[undefined, undefined, count]}>
+      <sphereGeometry args={[1, 6, 6]} />
+      <meshBasicMaterial color={color} toneMapped={false} />
+    </instancedMesh>
+  );
+}
+
+export default function GlobeScene({
+  mode,
+  intensity = { internet: 0.5, cewp: 0.5 },
+}: {
+  mode: CewpMode;
+  intensity?: TrafficIntensity;
+}) {
   const groupRef = useRef<THREE.Group | null>(null);
   const dpr: [number, number] = useMemo(() => {
     if (typeof window === "undefined") return [1, 2];
@@ -376,6 +466,34 @@ export default function GlobeScene({ mode }: { mode: CewpMode }) {
   }, []);
   const showInternet = mode === "internet" || mode === "both";
   const showCewp = mode === "cewp" || mode === "both";
+
+  // Endpoints for traffic particles. Centralized: each metro -> its
+  // nearest hyperscale facility. CEWP: along trust-graph edges.
+  const internetPairs = useMemo(
+    () =>
+      METROS.map((m) => {
+        const h = nearestHyperscale(m);
+        return [
+          latLonToVec3(m.lat, m.lon, GLOBE_RADIUS * 1.01),
+          latLonToVec3(h.lat, h.lon, GLOBE_RADIUS * 1.01),
+        ] as [THREE.Vector3, THREE.Vector3];
+      }),
+    [],
+  );
+  const cewpPairs = useMemo(
+    () =>
+      buildCewpTrustGraph().map(
+        ([a, b]) =>
+          [
+            latLonToVec3(a.lat, a.lon, GLOBE_RADIUS * 1.01),
+            latLonToVec3(b.lat, b.lon, GLOBE_RADIUS * 1.01),
+          ] as [THREE.Vector3, THREE.Vector3],
+      ),
+    [],
+  );
+
+  const internetDensity = Math.max(1, Math.round(2 + intensity.internet * 6));
+  const cewpDensity = Math.max(1, Math.round(1 + intensity.cewp * 3));
 
   return (
     <Canvas
@@ -397,6 +515,26 @@ export default function GlobeScene({ mode }: { mode: CewpMode }) {
         <MetroNodes color={showInternet && !showCewp ? "#fde68a" : "#fef3c7"} />
         {showInternet && <HyperscaleNodes />}
         {showInternet && <InternetFlows />}
+        {showInternet && (
+          <TrafficParticles
+            pairs={internetPairs}
+            color="#fde68a"
+            speed={0.18}
+            density={internetDensity}
+            altitudeLift={0.22}
+            size={0.0055}
+          />
+        )}
+        {showCewp && (
+          <TrafficParticles
+            pairs={cewpPairs}
+            color="#67e8f9"
+            speed={0.12}
+            density={cewpDensity}
+            altitudeLift={0.08}
+            size={0.0035}
+          />
+        )}
       </group>
       <AutoRotate groupRef={groupRef} />
       <OrbitControls
