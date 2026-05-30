@@ -25,6 +25,7 @@ import CompositionGraph from "./components/CompositionGraph";
 import TranslationPlayground from "./components/TranslationPlayground";
 import FractalSelfCallout from "./components/FractalSelfCallout";
 import AlephView from "./components/AlephView";
+import MediaTierPanel from "./components/MediaTierPanel";
 
 export default async function GrammarPage() {
   const source = await getRegistrySource();
@@ -241,6 +242,7 @@ export default async function GrammarPage() {
             <EnvelopeAndAxesPanel />
             <CompositionPoliciesPanel />
             <NamespacePanel source={source} />
+            <MediaTierPanel />
             <AlephView source={source} />
             <ExploreCTA />
             <CompositionGraph source={source} />

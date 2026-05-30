@@ -288,6 +288,27 @@ export const COMPOSITION_POLICIES: CompositionPolicy[] = [
       "Cross-component composition recurring as the substrate's freshness-plus-attested idiom: cert_validity:{authority} + transparency_log:inclusion + attestation:l3_or_l4. Each consumer policy weights the bundle differently; CEG 0.1 §8.1.7 documents the pattern after the 283-story stress test surfaced it organically.",
     classification: "specialization",
   },
+  {
+    id: "H",
+    name: "Tiered-Scope composition",
+    description:
+      "Three feed-shape composition idioms that read attestations by cohort_scope (local / community / global). The shape lets a single namespace serve a phone, a community feed, and the open federation without merging their consensus rules.",
+    classification: "specialization",
+  },
+  {
+    id: "I",
+    name: "Attestation-Ladder composition",
+    description:
+      "The familiar L1-L5 verification ladder (self_verify → hardware_rooted → registry_consensus → license_validity → agent_integrity) is consumer-side composition over the §5.2 mechanism prefixes, not a wire-level taxonomy. CEG 0.2 documents the existing pattern.",
+    classification: "specialization",
+  },
+  {
+    id: "J",
+    name: "Trusted-Publisher composition",
+    description:
+      "Three-layer multimedia content path (CEG 0.3): distributor attestation chain → content_class + content_rating gate → age_assurance gate. Same shape as Policy F but specialized for image / audio / video / film / model_3d. Anti-tricking guarantee binds the publisher's trust chain to the consumer's cohort gate.",
+    classification: "specialization",
+  },
 ];
 
 // ─────────────────────────── Worked stories ─────────────────────────────────
