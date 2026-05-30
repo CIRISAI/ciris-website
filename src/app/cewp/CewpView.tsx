@@ -91,6 +91,30 @@ export default function CewpView() {
     setScenario((s) => ({ ...s, cohort: cohortFromLocality(t) }));
   }
 
+  // Server share is parameterized as "humans per L1 server" because
+  // that's the framing a person actually has an intuition about.
+  // 10 humans per server is the README's headline number. We rebalance
+  // the client / proxy mix proportionally so the three shares still
+  // sum to 1.
+  function setHumansPerServer(hps: number) {
+    setScenario((s) => {
+      const serverShare = 1 / hps;
+      const restShare = 1 - serverShare;
+      const prevRest = Math.max(0.0001, s.tier_mix.client + s.tier_mix.proxy);
+      const clientShare = restShare * (s.tier_mix.client / prevRest);
+      const proxyShare = restShare * (s.tier_mix.proxy / prevRest);
+      return {
+        ...s,
+        tier_mix: {
+          client: clientShare,
+          proxy: proxyShare,
+          server: serverShare,
+        },
+      };
+    });
+  }
+  const humansPerServer = 1 / Math.max(1e-6, scenario.tier_mix.server);
+
   const fed = useMemo(() => rollup(scenario), [scenario]);
   const srv = fed.per_tier.server;
   const srvFeas = useMemo(() => feasible(srv), [srv]);
@@ -212,15 +236,6 @@ export default function CewpView() {
             onChange={(v) => setScenarioField("daily_fetch_bytes", v)}
           />
           <Slider
-            label="People you directly trust"
-            value={scenario.trust_radius}
-            min={10}
-            max={1000}
-            log
-            format={(v) => Math.round(v).toString()}
-            onChange={(v) => setScenarioField("trust_radius", Math.round(v))}
-          />
-          <Slider
             label="How many friend-of-friend hops a server accepts"
             value={scenario.trust_depth_avg}
             min={0}
@@ -250,15 +265,33 @@ export default function CewpView() {
             onChange={(v) => setLocalityVal(v)}
           />
           <Slider
-            label="Disk per home server"
-            value={scenario.disk_budget_server}
-            min={64 * GB}
-            max={32 * TB}
+            label="Humans per home server"
+            value={humansPerServer}
+            min={5}
+            max={100}
             log
-            format={(v) => fmtBytes(v)}
-            onChange={(v) => setScenarioField("disk_budget_server", v)}
+            format={(v) => `1 per ${Math.round(v)}`}
+            onChange={(v) => setHumansPerServer(v)}
           />
         </div>
+        <p className="mt-2 text-[12px] text-slate-500">
+          A &ldquo;home server&rdquo; here is one Xbox-class box, or a midrange
+          laptop you already own: roughly 50 W continuous, 1 TB SSD, ARM
+          SoC. About what you&rsquo;d find on a hobbyist shelf today.
+          {humansPerServer >= 7 && humansPerServer <= 12 ? (
+            <>
+              {" "}At 1 per 10 humans (the headline), that&rsquo;s ~
+              {fmtCount(scenario.n_users * scenario.tier_mix.server)} boxes
+              worldwide.
+            </>
+          ) : (
+            <>
+              {" "}At 1 per {Math.round(humansPerServer)}, that&rsquo;s ~
+              {fmtCount(scenario.n_users * scenario.tier_mix.server)} boxes
+              worldwide.
+            </>
+          )}
+        </p>
 
         {/* Failure banner — shouts when any gate is exceeded so the
             reader can't miss it. */}
@@ -289,70 +322,56 @@ export default function CewpView() {
           </div>
         )}
 
-        {/* Live numbers. */}
-        <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
-          <Stat
-            label="Per-server held"
-            value={fmtBytes(srv.storage_total)}
-            sub={`${(srv.storage_utilization * 100).toFixed(0)}% of disk`}
-            gate={srvFeas.disk}
-            failHint={`${srvFeas.disk.ratio.toFixed(1)}x over 1 TB`}
-          />
-          <Stat
-            label="Per-server bandwidth"
-            value={fmtBytes(srv.bandwidth_in_per_day + srv.bandwidth_out_per_day)}
-            sub="per day (in + out)"
-            gate={srvFeas.bandwidth}
-            failHint={`${srvFeas.bandwidth.ratio.toFixed(1)}x over 1 Gbps`}
-          />
-          <Stat
-            label="Per-server CPU"
-            value={`${((srv.cpu_seconds_per_day / 86400) * 100).toFixed(1)}%`}
-            sub="of 1 full-util core"
-            gate={srvFeas.cpu}
-            failHint={`${srvFeas.cpu.ratio.toFixed(1)}x over 1 core`}
-          />
-          <Stat
-            label="How long content sticks"
-            value={`${srv.effective_retention_days.toFixed(1)} d`}
-            sub="before eviction"
-            gate={srvFeas.retention}
-            failHint="under 2 d — pass-through"
-          />
-          <Stat
-            label="CEWP typical latency"
-            value={`${latency.cewp_p50_ms.toFixed(0)} ms`}
+        {/* Compare cards. Two rows of three; first row pits CEWP
+            against today on the comparison-worthy metrics; second
+            row shows the home-server feasibility gates with RAG.
+            Card backgrounds shift green / amber / red as the
+            sliders move so the failure modes are unmissable. */}
+        <div className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-3">
+          <CompareCard
+            label="Typical latency"
+            cewp={`${latency.cewp_p50_ms.toFixed(0)} ms`}
+            today={`${latency.internet_p50_ms.toFixed(0)} ms`}
+            rag={ragLowerIsBetter(latency.cewp_p50_ms, latency.internet_p50_ms)}
             sub={
               latency.cewp_p50_ms < latency.internet_p50_ms
-                ? `${(latency.internet_p50_ms / latency.cewp_p50_ms).toFixed(1)}x faster than today`
-                : "slower than today"
+                ? `CEWP is ${(latency.internet_p50_ms / latency.cewp_p50_ms).toFixed(1)}x faster`
+                : `CEWP is ${(latency.cewp_p50_ms / latency.internet_p50_ms).toFixed(1)}x slower`
             }
-            tone={latency.cewp_p50_ms < latency.internet_p50_ms ? "good" : "warn"}
           />
-          <Stat
-            label="Today's typical latency"
-            value={`${latency.internet_p50_ms.toFixed(0)} ms`}
-            sub="cache + origin path"
+          <CompareCard
+            label="CO2 per year"
+            cewp={`${footCwp.co2_Mt_per_year.toFixed(1)} Mt`}
+            today={`${footIn.co2_Mt_per_year.toFixed(1)} Mt`}
+            rag={ragLowerIsBetter(footCwp.co2_Mt_per_year, footIn.co2_Mt_per_year)}
+            sub={`Today uses ~40% of compute on extraction`}
           />
-          <Stat
-            label="Whole-network storage"
-            value={fmtBytes(fed.total_storage_bytes)}
-            sub="all tiers"
+          <CompareCard
+            label="Hyperscale datacenters"
+            cewp="0"
+            today={fmtCount(footIn.datacenters)}
+            rag="green"
+            sub="zero datacenters required"
           />
-          <Stat
-            label="Whole-network bandwidth"
-            value={fmtBytes(fed.total_bandwidth_in_bytes_per_day)}
-            sub="per day"
+        </div>
+        <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-3">
+          <GateCard
+            label="Per-server bandwidth"
+            value={fmtBytes(srv.bandwidth_in_per_day + srv.bandwidth_out_per_day)}
+            gate={srvFeas.bandwidth}
+            sub="of 1 Gbps home link"
           />
-          <Stat
-            label="Signature checks / day"
-            value={fmtCount(fed.total_verify_ops_per_day)}
-            sub={`${fmtCount(fed.total_sign_ops_per_day)} signatures`}
+          <GateCard
+            label="Per-server CPU"
+            value={`${((srv.cpu_seconds_per_day / 86400) * 100).toFixed(1)}%`}
+            gate={srvFeas.cpu}
+            sub="of 1 full-util core"
           />
-          <Stat
-            label="Total CPU"
-            value={fmtCount(fed.aggregate_cpu_cores_full_util)}
-            sub="full-util cores"
+          <GateCard
+            label="How long content sticks"
+            value={`${srv.effective_retention_days.toFixed(1)} d`}
+            gate={srvFeas.retention}
+            sub="before eviction"
           />
         </div>
 
@@ -531,61 +550,116 @@ function Slider({
   );
 }
 
-function Stat({
+type Rag = "green" | "amber" | "red";
+
+// CompareCard — CEWP value next to today's value with a RAG dot for
+// the winner. Used for the metrics where the two topologies can be
+// scored against each other directly (latency, CO2, DC count).
+function CompareCard({
+  label,
+  cewp,
+  today,
+  rag,
+  sub,
+}: {
+  label: string;
+  cewp: string;
+  today: string;
+  rag: Rag;
+  sub?: string;
+}) {
+  const tone = RAG_TONE[rag];
+  return (
+    <div
+      className={`rounded-md border p-3 transition ${tone.card}`}
+    >
+      <div className="flex items-center justify-between gap-2">
+        <p className={`text-[10px] font-semibold uppercase tracking-wide ${tone.label}`}>
+          {label}
+        </p>
+        <span aria-hidden className={`inline-block h-2.5 w-2.5 rounded-full ${tone.dot}`} />
+      </div>
+      <div className="mt-2 grid grid-cols-2 gap-2">
+        <div>
+          <p className="text-[10px] uppercase tracking-wider text-teal-700 dark:text-teal-300">CEWP</p>
+          <p className={`font-mono text-[15px] font-semibold ${tone.value}`}>{cewp}</p>
+        </div>
+        <div>
+          <p className="text-[10px] uppercase tracking-wider text-orange-700 dark:text-orange-300">Today</p>
+          <p className="font-mono text-[15px] font-semibold text-slate-700 dark:text-slate-300">{today}</p>
+        </div>
+      </div>
+      {sub ? <p className="mt-2 text-[11px] text-slate-500">{sub}</p> : null}
+    </div>
+  );
+}
+
+// GateCard — single CEWP per-server number against a feasibility
+// gate. RAG comes straight from the ratio.
+function GateCard({
   label,
   value,
-  sub,
   gate,
-  failHint,
-  tone,
+  sub,
 }: {
   label: string;
   value: string;
+  gate: GateResult;
   sub?: string;
-  gate?: GateResult;
-  failHint?: string;
-  tone?: "good" | "warn";
 }) {
-  const failed = gate ? !gate.ok : false;
-  const goodTone = tone === "good";
+  const rag: Rag = !gate.ok ? "red" : gate.ratio > 0.7 ? "amber" : "green";
+  const tone = RAG_TONE[rag];
   return (
-    <div
-      className={`rounded-md border p-3 transition ${
-        failed
-          ? "border-red-500 bg-red-50 dark:border-red-700 dark:bg-red-950/40"
-          : goodTone
-            ? "border-teal-300 bg-teal-50 dark:border-teal-800 dark:bg-teal-950/30"
-            : "border-slate-200 bg-slate-50 dark:border-gray-800 dark:bg-gray-950"
-      }`}
-    >
-      <p
-        className={`text-[10px] font-semibold uppercase tracking-wide ${
-          failed ? "text-red-700 dark:text-red-300" : "text-slate-500"
-        }`}
-      >
-        {label}
-      </p>
-      <p
-        className={`mt-1 font-mono text-[15px] font-semibold ${
-          failed
-            ? "text-red-700 dark:text-red-300"
-            : goodTone
-              ? "text-teal-700 dark:text-teal-300"
-              : "text-slate-900 dark:text-slate-100"
-        }`}
-      >
-        {value}
-        {failed ? " ⚠" : gate && gate.ok ? " ✓" : ""}
-      </p>
-      {failed && failHint ? (
-        <p className="mt-0.5 text-[11px] font-semibold text-red-700 dark:text-red-300">
-          {failHint}
+    <div className={`rounded-md border p-3 transition ${tone.card}`}>
+      <div className="flex items-center justify-between gap-2">
+        <p className={`text-[10px] font-semibold uppercase tracking-wide ${tone.label}`}>
+          {label}
         </p>
-      ) : sub ? (
-        <p className="mt-0.5 text-[11px] text-slate-500">{sub}</p>
-      ) : null}
+        <span aria-hidden className={`inline-block h-2.5 w-2.5 rounded-full ${tone.dot}`} />
+      </div>
+      <p className={`mt-1 font-mono text-[18px] font-semibold ${tone.value}`}>
+        {value}
+        {rag === "red" ? " ⚠" : ""}
+      </p>
+      <p className={`mt-0.5 text-[11px] ${rag === "red" ? "font-semibold " + tone.label : "text-slate-500"}`}>
+        {rag === "red" ? `${gate.ratio.toFixed(1)}x over budget` : sub}
+      </p>
     </div>
   );
+}
+
+const RAG_TONE: Record<Rag, {
+  card: string;
+  label: string;
+  value: string;
+  dot: string;
+}> = {
+  green: {
+    card: "border-teal-300 bg-teal-50/70 dark:border-teal-800 dark:bg-teal-950/30",
+    label: "text-teal-700 dark:text-teal-300",
+    value: "text-slate-900 dark:text-slate-100",
+    dot: "bg-teal-500",
+  },
+  amber: {
+    card: "border-amber-300 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30",
+    label: "text-amber-700 dark:text-amber-300",
+    value: "text-amber-800 dark:text-amber-200",
+    dot: "bg-amber-500",
+  },
+  red: {
+    card: "border-red-500 bg-red-50 dark:border-red-700 dark:bg-red-950/40",
+    label: "text-red-700 dark:text-red-300",
+    value: "text-red-700 dark:text-red-300",
+    dot: "bg-red-500",
+  },
+};
+
+// For comparison metrics: green if CEWP is materially better, amber
+// if comparable, red if worse.
+function ragLowerIsBetter(cewp: number, today: number): Rag {
+  if (cewp <= today * 0.7) return "green";
+  if (cewp <= today * 1.1) return "amber";
+  return "red";
 }
 
 function Row({
