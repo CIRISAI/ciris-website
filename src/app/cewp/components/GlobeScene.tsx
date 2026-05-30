@@ -8,7 +8,7 @@
 // Frameloop is "demand" but the globe auto-rotates so the scene
 // stays painted while the user reads the panel below.
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
@@ -29,29 +29,96 @@ import {
 
 export type CewpMode = "internet" | "cewp" | "both";
 
-// Earth shell. Translucent dark sphere with a faint lat/lon wireframe
-// on top. No texture — the data dots and arcs do the talking, and we
-// keep the bundle small.
+// Earth shell. Ocean-blue sphere + continent outlines drawn from the
+// Natural Earth 110m land polygon set (public domain) + a very faint
+// lat/lon grid. No texture image — coastlines are vector lines so
+// they stay sharp at any zoom.
 function Earth() {
   return (
     <group>
+      {/* Ocean. */}
       <mesh>
-        <sphereGeometry args={[GLOBE_RADIUS * 0.998, 48, 48]} />
-        <meshBasicMaterial color="#0b1a2a" transparent opacity={0.92} />
+        <sphereGeometry args={[GLOBE_RADIUS * 0.998, 64, 64]} />
+        <meshBasicMaterial color="#0c2243" />
       </mesh>
+      {/* Faint lat/lon grid for shape readability. */}
       <mesh>
-        <sphereGeometry args={[GLOBE_RADIUS * 1.001, 36, 24]} />
+        <sphereGeometry args={[GLOBE_RADIUS * 1.001, 36, 18]} />
         <meshBasicMaterial
-          color="#1e3a8a"
+          color="#1e40af"
           wireframe
           transparent
-          opacity={0.18}
+          opacity={0.22}
         />
       </mesh>
-      {/* A bright equator + prime meridian for orientation. */}
+      <Coastlines />
       <Equator />
       <PrimeMeridian />
     </group>
+  );
+}
+
+// Coastlines — fetched once at mount from /cewp/land-110m.json. We
+// parse only the geometry rings and emit them as a single
+// LineSegments mesh so the whole continent set is one draw call.
+function Coastlines() {
+  const [geom, setGeom] = useState<THREE.BufferGeometry | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/cewp/land-110m.json", { cache: "force-cache" });
+        if (!res.ok) return;
+        const json = (await res.json()) as {
+          features: Array<{
+            geometry: {
+              type: "Polygon" | "MultiPolygon";
+              coordinates: number[][][] | number[][][][];
+            };
+          }>;
+        };
+        if (cancelled) return;
+        const pts: number[] = [];
+        const r = GLOBE_RADIUS * 1.004;
+        const pushRing = (ring: number[][]) => {
+          for (let i = 0; i < ring.length - 1; i++) {
+            const [lon1, lat1] = ring[i];
+            const [lon2, lat2] = ring[i + 1];
+            const a = latLonToVec3(lat1, lon1, r);
+            const b = latLonToVec3(lat2, lon2, r);
+            pts.push(a.x, a.y, a.z, b.x, b.y, b.z);
+          }
+        };
+        for (const f of json.features) {
+          const g = f.geometry;
+          if (g.type === "Polygon") {
+            for (const ring of g.coordinates as number[][][]) pushRing(ring);
+          } else if (g.type === "MultiPolygon") {
+            for (const poly of g.coordinates as number[][][][]) {
+              for (const ring of poly) pushRing(ring);
+            }
+          }
+        }
+        const bg = new THREE.BufferGeometry();
+        bg.setAttribute(
+          "position",
+          new THREE.Float32BufferAttribute(new Float32Array(pts), 3),
+        );
+        if (!cancelled) setGeom(bg);
+      } catch {
+        /* asset missing — sphere alone is fine */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  if (!geom) return null;
+  return (
+    <lineSegments>
+      <primitive object={geom} attach="geometry" />
+      <lineBasicMaterial color="#7dd3fc" transparent opacity={0.75} />
+    </lineSegments>
   );
 }
 
