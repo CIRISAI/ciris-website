@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import GlobeScene, { type CewpMode } from "./components/GlobeScene";
+import HowItWorks from "./components/HowItWorks";
 import {
   cohortFromLocality,
   cohortPublishable,
@@ -308,56 +309,7 @@ export default function CewpView() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-gray-800 dark:bg-gray-900">
-        <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
-          Where to go next
-        </h3>
-        <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
-          <li>
-            <a
-              className="text-brand-primary underline-offset-2 hover:underline"
-              href="https://github.com/CIRISAI/CEWP"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CEWP repo
-            </a>{" "}
-            — the platform identity and the simulation engine spec.
-          </li>
-          <li>
-            <a
-              className="text-brand-primary underline-offset-2 hover:underline"
-              href="https://github.com/CIRISAI/CEWP/blob/main/FSD/SIMULATION_ENGINE.md"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Simulation engine FSD
-            </a>{" "}
-            — modular Rust engine, 1 K agents in the browser up to 5 B
-            agents at 1:1 on GPU.
-          </li>
-          <li>
-            <a
-              className="text-brand-primary underline-offset-2 hover:underline"
-              href="https://github.com/CIRISAI/CIRISNodeCore/blob/main/FSD/FEDERATION_SCALING_MODEL.md"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Federation scaling model
-            </a>{" "}
-            — the analytic numbers the engine reproduces.
-          </li>
-          <li>
-            <a
-              className="text-brand-primary underline-offset-2 hover:underline"
-              href="/research-status"
-            >
-              Research status
-            </a>{" "}
-            — the empirical bet.
-          </li>
-        </ul>
-      </section>
+      <HowItWorks />
     </div>
   );
 }
