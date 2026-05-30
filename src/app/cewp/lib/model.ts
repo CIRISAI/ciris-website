@@ -391,11 +391,19 @@ export type LatencyEstimate = {
 
 // ── Environmental footprint ────────────────────────────────────
 //
-// Datacenter count, electricity draw, CO2 per year for each
-// topology, plus a "useful work" share to make the central thesis
-// visible: today's substrate spends a large share of its compute on
-// value extraction (recommender models, ad targeting, surveillance,
-// A/B testing). CEWP removes that layer architecturally.
+// Replaces an earlier "50W per L1 home server" constant that
+// quietly assumed a single dedicated box class. The honest unit is
+// idle_W * marginal_share * device_count per device class, summed
+// across the fleet. Most CEWP participation rides hardware that's
+// already on for other reasons (phones, laptops) — those contribute
+// sub-watt marginal power and zero net-new buildout. The L1 always-
+// on sliver (ARM boxes, home x86) is where the real new-hardware
+// power lives, and it is small because most metros only need a
+// handful of always-on servers to anchor the trust graph.
+//
+// The page can also show a hyperscale efficiency premium so a
+// reader sees what happens when CEWP pays the commodity-vs-custom
+// penalty — and whether the win still holds.
 //
 // Numbers and sources — all rough, uncertainty bars are wide. The
 // page shows the math so anyone can disagree with the inputs.
@@ -448,19 +456,108 @@ export const HOURS_PER_YEAR = 8760;
 export const HYPERSCALE_DC_AVG_MW = 5;
 export const TODAY_DC_COUNT_AT_5B = 10_000;
 export const DC_FLOOR = 100;
-export const HOME_SERVER_W = 50;
-export const L0_PROXY_ATTRIBUTABLE_W = 4;
-export const EXTRACTION_OVERHEAD = 0.40;
+
+// ── Device class table ─────────────────────────────────────────
+//
+// Each spec has:
+//   idle_W           — typical continuous idle floor
+//   marginal_share   — fraction of that power attributable to the
+//                      substrate vs whatever else the device is doing.
+//                      A phone serving as a CEWP client costs ~5%
+//                      of its idle draw, not 100%.
+//   always_on        — does it stay reachable (no sleep, no NAT)?
+//                      Phones and laptops do not; ARM mini-PCs do.
+//   efficiency_factor— useful-work-per-watt vs the hyperscale baseline
+//                      of 1.0. Commodity SoCs at low utilization are
+//                      worse than a custom-silicon facility with PUE 1.1
+//                      and pooled cooling. Numbers are best-of-breed
+//                      estimates with wide error bars.
+//   net_new          — does taking on a CEWP role require buying a
+//                      new device? Phones / laptops / old desktops
+//                      don't; dedicated boxes do.
+
+export type DeviceClass =
+  | "phone"
+  | "laptop"
+  | "arm_box"
+  | "home_x86"
+  | "old_desktop";
+
+export type DeviceSpec = {
+  label: string;
+  idle_W: number;
+  marginal_share: number;
+  always_on: boolean;
+  efficiency_factor: number;
+  net_new: boolean;
+};
+
+export const DEVICE_SPECS: Record<DeviceClass, DeviceSpec> = {
+  phone:       { label: "phone",        idle_W: 2.5, marginal_share: 0.05, always_on: false, efficiency_factor: 0.5, net_new: false },
+  laptop:      { label: "laptop",       idle_W: 10,  marginal_share: 0.10, always_on: false, efficiency_factor: 0.4, net_new: false },
+  arm_box:     { label: "ARM mini-PC",  idle_W: 5,   marginal_share: 1.00, always_on: true,  efficiency_factor: 0.6, net_new: true  },
+  home_x86:    { label: "home x86",     idle_W: 25,  marginal_share: 1.00, always_on: true,  efficiency_factor: 0.4, net_new: true  },
+  old_desktop: { label: "old desktop",  idle_W: 60,  marginal_share: 1.00, always_on: true,  efficiency_factor: 0.2, net_new: false },
+};
+
+// A tier's device composition. Fractions sum to 1.0.
+export type DeviceMix = Partial<Record<DeviceClass, number>>;
+
+// Fleet presets. The slider on the page picks a style; each style
+// describes the device mix for the always-on L1 server tier (the
+// only tier where device class actually moves the bill). Clients
+// and proxies are mostly phones in every style; phones don't appear
+// in the L1 mix because they're poor at always-on reachability
+// (sleep, cellular NAT), so phone-as-server is held at a small
+// share even in the phone-first style.
+export type FleetStyle = "phone_first" | "realistic" | "homelab";
+
+export const FLEET_PRESETS: Record<FleetStyle, {
+  label: string;
+  description: string;
+  client_mix: DeviceMix;
+  proxy_mix: DeviceMix;
+  server_mix: DeviceMix;
+}> = {
+  phone_first: {
+    label: "Phone-first",
+    description: "Most of the fleet rides hardware that's already on. L1 server slice runs on ARM mini-PCs; very few dedicated x86 boxes.",
+    client_mix: { phone: 0.95, laptop: 0.05 },
+    proxy_mix:  { phone: 0.70, laptop: 0.30 },
+    server_mix: { phone: 0.05, laptop: 0.15, arm_box: 0.70, home_x86: 0.05, old_desktop: 0.05 },
+  },
+  realistic: {
+    label: "Realistic 2026",
+    description: "What you'd see today: phones for clients and proxies; L1 is a mix of dedicated ARM boxes, laptops left on, and some x86 home servers.",
+    client_mix: { phone: 0.85, laptop: 0.15 },
+    proxy_mix:  { phone: 0.50, laptop: 0.40, arm_box: 0.10 },
+    server_mix: { phone: 0.05, laptop: 0.20, arm_box: 0.40, home_x86: 0.25, old_desktop: 0.10 },
+  },
+  homelab: {
+    label: "Homelab",
+    description: "Dedicated home servers everywhere. Worst case for net-new buildout and per-watt efficiency.",
+    client_mix: { phone: 0.70, laptop: 0.30 },
+    proxy_mix:  { phone: 0.30, laptop: 0.40, arm_box: 0.30 },
+    server_mix: { laptop: 0.10, arm_box: 0.30, home_x86: 0.45, old_desktop: 0.15 },
+  },
+};
 
 export type Footprint = {
   datacenters: number;
   power_MW: number;
   electricity_TWh_per_year: number;
   co2_Mt_per_year: number;
-  /** Power spent on the user's actual task (vs value extraction). */
-  useful_power_MW: number;
-  /** Power that's net-new buildout (new hardware in the world). */
+  /** Substrate power spent on hardware that exists for other reasons too. */
+  marginal_power_MW: number;
+  /** Substrate power on net-new dedicated hardware. */
   new_buildout_power_MW: number;
+  /** Useful work delivered per watt, in arbitrary units relative to
+   *  the hyperscale baseline (1.0). For CEWP this is the weighted
+   *  average device efficiency factor; for the internet column it's
+   *  always 1.0. */
+  useful_work_per_watt: number;
+  /** Breakdown for the show-the-math panel. */
+  by_class?: Array<{ cls: DeviceClass; count: number; power_MW: number; net_new: boolean }>;
 };
 
 function envelope(power_MW: number) {
@@ -470,7 +567,6 @@ function envelope(power_MW: number) {
 }
 
 export function internetFootprint(s: Scenario): Footprint {
-  // DC count scales linearly with users vs the today-baseline at 5B.
   const dcs = Math.max(DC_FLOOR, (s.n_users / 5e9) * TODAY_DC_COUNT_AT_5B);
   const power_MW = dcs * HYPERSCALE_DC_AVG_MW;
   const { electricity_TWh, co2_Mt } = envelope(power_MW);
@@ -479,27 +575,69 @@ export function internetFootprint(s: Scenario): Footprint {
     power_MW,
     electricity_TWh_per_year: electricity_TWh,
     co2_Mt_per_year: co2_Mt,
-    useful_power_MW: power_MW * (1 - EXTRACTION_OVERHEAD),
-    new_buildout_power_MW: power_MW, // every hyperscale facility is net-new
+    marginal_power_MW: 0,             // hyperscale serves only the substrate
+    new_buildout_power_MW: power_MW,  // every facility is dedicated
+    useful_work_per_watt: 1.0,        // baseline
   };
 }
 
-export function cewpFootprint(s: Scenario): Footprint {
-  const n_l1 = s.n_users * s.tier_mix.server;
-  const n_l0 = s.n_users * s.tier_mix.proxy;
-  const power_W = n_l1 * HOME_SERVER_W + n_l0 * L0_PROXY_ATTRIBUTABLE_W;
-  const power_MW = power_W / 1e6;
+function tierPower(count: number, mix: DeviceMix) {
+  let power_MW = 0;
+  let marginal_MW = 0;
+  let new_buildout_MW = 0;
+  let weighted_efficiency = 0;
+  let mix_sum = 0;
+  const by_class: Footprint["by_class"] = [];
+  for (const cls of Object.keys(DEVICE_SPECS) as DeviceClass[]) {
+    const frac = mix[cls] ?? 0;
+    if (frac <= 0) continue;
+    const spec = DEVICE_SPECS[cls];
+    const tier_count = count * frac;
+    const tier_W = tier_count * spec.idle_W * spec.marginal_share;
+    const tier_MW = tier_W / 1e6;
+    power_MW += tier_MW;
+    if (spec.marginal_share < 1.0 || !spec.net_new) marginal_MW += tier_MW;
+    if (spec.net_new && spec.marginal_share >= 0.5) new_buildout_MW += tier_MW;
+    weighted_efficiency += frac * spec.efficiency_factor;
+    mix_sum += frac;
+    by_class.push({ cls, count: tier_count, power_MW: tier_MW, net_new: spec.net_new });
+  }
+  const efficiency = mix_sum > 0 ? weighted_efficiency / mix_sum : 1.0;
+  return { power_MW, marginal_MW, new_buildout_MW, efficiency, by_class };
+}
+
+export function cewpFootprint(s: Scenario, style: FleetStyle = "realistic"): Footprint {
+  const preset = FLEET_PRESETS[style];
+  const n_cli = s.n_users * s.tier_mix.client;
+  const n_prx = s.n_users * s.tier_mix.proxy;
+  const n_srv = s.n_users * s.tier_mix.server;
+  const cli = tierPower(n_cli, preset.client_mix);
+  const prx = tierPower(n_prx, preset.proxy_mix);
+  const srv = tierPower(n_srv, preset.server_mix);
+  const power_MW = cli.power_MW + prx.power_MW + srv.power_MW;
+  const marginal_MW = cli.marginal_MW + prx.marginal_MW + srv.marginal_MW;
+  const new_buildout_MW = cli.new_buildout_MW + prx.new_buildout_MW + srv.new_buildout_MW;
+  // Weight efficiency by power share so the L1 box (the largest
+  // share of new-build power) dominates the headline number.
+  const efficiency =
+    power_MW > 0
+      ? (cli.efficiency * cli.power_MW +
+          prx.efficiency * prx.power_MW +
+          srv.efficiency * srv.power_MW) /
+        power_MW
+      : 1.0;
   const { electricity_TWh, co2_Mt } = envelope(power_MW);
-  // L1 home servers are mostly net-new (purpose-built boxes); L0
-  // proxies fold into devices that exist for other reasons.
-  const new_buildout_MW = (n_l1 * HOME_SERVER_W) / 1e6;
   return {
     datacenters: 0,
     power_MW,
     electricity_TWh_per_year: electricity_TWh,
     co2_Mt_per_year: co2_Mt,
-    useful_power_MW: power_MW, // no value-extraction layer in the substrate
+    marginal_power_MW: marginal_MW,
     new_buildout_power_MW: new_buildout_MW,
+    useful_work_per_watt: efficiency,
+    by_class: [...cli.by_class!, ...prx.by_class!, ...srv.by_class!].filter(
+      (x) => x.power_MW > 0,
+    ),
   };
 }
 

@@ -6,20 +6,20 @@ import HowItWorks from "./components/HowItWorks";
 import {
   cewpFootprint,
   cohortFromLocality,
-  EXTRACTION_OVERHEAD,
+  DEVICE_SPECS,
   estimateLatency,
   feasible,
+  FLEET_PRESETS,
   fmtBytes,
   fmtCount,
   GB,
-  HOME_SERVER_W,
-  HYPERSCALE_DC_AVG_MW,
   internetFootprint,
   KB,
   MB,
   PRESETS,
   rollup,
   TB,
+  type FleetStyle,
   type GateResult,
   type Scenario,
 } from "./lib/model";
@@ -118,9 +118,13 @@ export default function CewpView() {
   const fed = useMemo(() => rollup(scenario), [scenario]);
   const srv = fed.per_tier.server;
   const srvFeas = useMemo(() => feasible(srv), [srv]);
+  const [fleetStyle, setFleetStyle] = useState<FleetStyle>("realistic");
   const latency = useMemo(() => estimateLatency(scenario), [scenario]);
   const footIn = useMemo(() => internetFootprint(scenario), [scenario]);
-  const footCwp = useMemo(() => cewpFootprint(scenario), [scenario]);
+  const footCwp = useMemo(
+    () => cewpFootprint(scenario, fleetStyle),
+    [scenario, fleetStyle],
+  );
   const anyFail =
     !srvFeas.disk.ok ||
     !srvFeas.bandwidth.ok ||
@@ -432,7 +436,7 @@ export default function CewpView() {
             cewp={`${footCwp.co2_Mt_per_year.toFixed(1)} Mt`}
             today={`${footIn.co2_Mt_per_year.toFixed(1)} Mt`}
             rag={ragLowerIsBetter(footCwp.co2_Mt_per_year, footIn.co2_Mt_per_year)}
-            sub={`Today uses ~40% of compute on extraction`}
+            sub={`device mix: ${FLEET_PRESETS[fleetStyle].label}`}
           />
           <CompareCard
             label="Hyperscale datacenters"
@@ -479,20 +483,39 @@ export default function CewpView() {
         </p>
       </section>
 
-      {/* Footprint comparison: hardware, power, CO2. The point of the
-          page in one table. */}
+      {/* Footprint comparison: hardware, power, CO2. The honest
+          argument: most CEWP participation rides hardware that's
+          already on. The dedicated buildout is small. */}
       <section className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
-        <header className="mb-4">
+        <header className="mb-4 space-y-2">
           <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
-            Hardware, power, and what it&rsquo;s actually doing
+            Hardware and power, by device class
           </h3>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-            The bet is not just that CEWP runs on less hardware. It is
-            that CEWP makes far better use of the hardware that already
-            exists in the world by removing the layer that eats most of
-            today&rsquo;s compute: ad targeting, recommender training,
-            surveillance, A/B test platforms. Same people, same posts,
-            same cables. Different middle.
+          <p className="text-sm text-slate-600 dark:text-slate-400">
+            Today&rsquo;s internet runs on dedicated hyperscale
+            facilities. CEWP runs mostly on phones and laptops that
+            were already on for other reasons. The dedicated slice is
+            a small population of always-on home boxes. The
+            buildout-power row is the honest one to compare.
+          </p>
+          <div className="flex flex-wrap gap-1 pt-1">
+            {(Object.keys(FLEET_PRESETS) as FleetStyle[]).map((id) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => setFleetStyle(id)}
+                className={`rounded-full border px-2.5 py-1 text-[11px] transition ${
+                  fleetStyle === id
+                    ? "border-brand-primary bg-brand-primary text-white"
+                    : "border-slate-300 bg-white text-slate-600 hover:bg-slate-100 dark:border-gray-700 dark:bg-gray-900 dark:text-slate-400"
+                }`}
+              >
+                {FLEET_PRESETS[id].label}
+              </button>
+            ))}
+          </div>
+          <p className="text-[12px] italic text-slate-500">
+            {FLEET_PRESETS[fleetStyle].description}
           </p>
         </header>
         <div className="overflow-x-auto">
@@ -515,7 +538,18 @@ export default function CewpView() {
                 cewp={"0"}
               />
               <Row
-                label="Continuous power"
+                label="Net-new hardware buildout (power)"
+                today={`${footIn.new_buildout_power_MW.toFixed(0)} MW`}
+                cewp={`${footCwp.new_buildout_power_MW.toFixed(0)} MW`}
+                emphasize
+              />
+              <Row
+                label="Marginal share on existing devices"
+                today={"0 MW"}
+                cewp={`${footCwp.marginal_power_MW.toFixed(0)} MW`}
+              />
+              <Row
+                label="Total continuous power"
                 today={`${footIn.power_MW.toFixed(0)} MW`}
                 cewp={`${footCwp.power_MW.toFixed(0)} MW`}
               />
@@ -530,16 +564,9 @@ export default function CewpView() {
                 cewp={`${footCwp.co2_Mt_per_year.toFixed(1)} Mt / yr`}
               />
               <Row
-                label="Net-new hardware buildout"
-                today={`${footIn.new_buildout_power_MW.toFixed(0)} MW`}
-                cewp={`${footCwp.new_buildout_power_MW.toFixed(0)} MW (home servers)`}
-                emphasize
-              />
-              <Row
-                label="Power on the user's actual task"
-                today={`${footIn.useful_power_MW.toFixed(0)} MW (${((1 - EXTRACTION_OVERHEAD) * 100).toFixed(0)}%)`}
-                cewp={`${footCwp.useful_power_MW.toFixed(0)} MW (100%)`}
-                emphasize
+                label="Useful work per watt (vs hyperscale)"
+                today={"1.0x (baseline)"}
+                cewp={`${footCwp.useful_work_per_watt.toFixed(2)}x`}
               />
             </tbody>
           </table>
@@ -548,37 +575,65 @@ export default function CewpView() {
           <summary className="cursor-pointer underline-offset-2 hover:underline">
             Show the math
           </summary>
-          <div className="mt-2 space-y-1 leading-5">
+          <div className="mt-2 space-y-2 leading-5">
             <p>
-              <b>Internet column.</b> Today there are about 10,000
-              hyperscale datacenters serving ~5 billion users
-              (SemiAnalysis 2024 + UN). Scaled linearly with the user
-              slider, floored at 100. Each averages 30 MW continuous
-              (Uptime Institute 2024). Grid CO2 is the IEA global
-              average of 0.4 kg per kWh; regions vary from 0.05 (Iceland)
-              to 0.9 (coal-heavy).
+              <b>Internet column.</b> About 10,000 hyperscale and edge
+              datacenters serving ~5 billion users (SemiAnalysis 2024 +
+              UN), scaled linearly with the user slider and floored at
+              100. 5 MW continuous per facility on average (weighted
+              across hyperscale + edge + colocation, calibrated to the
+              IEA 2024 estimate of ~415 TWh/yr global DC electricity).
+              Every facility is net-new buildout. Grid CO2 is 0.4 kg
+              per kWh (IEA global average); regions vary from 0.05
+              (Iceland) to 0.9 (coal-heavy India).
             </p>
             <p>
-              <b>CEWP column.</b> {(scenario.tier_mix.server * 100).toFixed(0)}% of
-              users run an L1 home server (about {HOME_SERVER_W} W
-              continuous; ARM SoC + 1 TB SSD). {(scenario.tier_mix.proxy * 100).toFixed(0)}% run an L0
-              proxy on a device they already own (laptop, phone, set-top
-              box). We count only the marginal 4 W per L0 because most
-              of that device&rsquo;s power goes to what the human is
-              doing anyway.
+              <b>CEWP column — per device class.</b> Each row below
+              shows count × idle watts × marginal share. The marginal
+              share is the fraction of that device&rsquo;s idle power
+              we attribute to the substrate; for a phone running a
+              client it is around 5%, because most of the phone&rsquo;s
+              power goes to what the human is doing with it. ARM
+              mini-PCs and home x86 boxes are dedicated to the
+              substrate so their marginal share is 1.0.
+            </p>
+            <ul className="ml-4 list-disc space-y-1">
+              {footCwp.by_class?.map((row) => {
+                const spec = DEVICE_SPECS[row.cls];
+                return (
+                  <li key={row.cls + row.power_MW}>
+                    {fmtCount(row.count)} ×{" "}
+                    <span className="font-mono">{spec.label}</span>{" "}
+                    @ {spec.idle_W} W ×{" "}
+                    {(spec.marginal_share * 100).toFixed(0)}% marginal
+                    = {row.power_MW.toFixed(0)} MW{" "}
+                    {row.net_new && spec.marginal_share >= 0.5
+                      ? "(net-new)"
+                      : "(on existing hardware)"}
+                  </li>
+                );
+              })}
+            </ul>
+            <p>
+              <b>Useful work per watt.</b> Hyperscale gets a real per-
+              op efficiency premium from custom silicon, PUE around
+              1.1, and pooled cooling at high utilization. The CEWP
+              fleet is commodity hardware running at low utilization
+              (the toy itself shows ~0.2% of one core at default
+              load). Reported as a weighted average across the fleet
+              with hyperscale set to 1.0. ARM mini-PCs are taken at
+              0.6, home x86 at 0.4, phones at 0.5, old desktops at
+              0.2. These are estimates with wide error bars.
             </p>
             <p>
-              <b>Useful-vs-extraction split.</b> A rough{" "}
-              {(EXTRACTION_OVERHEAD * 100).toFixed(0)}% of today&rsquo;s
-              substrate compute goes to recommender training, ad
-              targeting, surveillance pipelines, A/B testing. The 30-70%
-              range across platforms is wide; 50% is a midpoint. CEWP has
-              no value-extraction layer architecturally, so every watt
-              goes to the user&rsquo;s task.
-            </p>
-            <p className="italic">
-              These are estimates with wide error bars. The page shows
-              the math so you can disagree with the inputs.
+              <b>What this does NOT model yet.</b> Persistence cost:
+              eviction at ~37 days fine for feeds, structurally
+              amnesiac for content that must persist. Always-on
+              reliability premium: phones make poor L1 servers because
+              of sleep and NAT, paid for in battery cycles and
+              redundancy rather than grid watts. Both are real costs
+              the current toy does not carry, and the page does not
+              hide that.
             </p>
           </div>
         </details>
