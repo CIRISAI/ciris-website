@@ -173,6 +173,12 @@ export const ENVELOPE_FIELDS: EnvelopeField[] = [
     whatItDoes:
       "Multi-occurrence deployment discriminator. Lets consumers reconstruct fleet-wide coverage from per-occurrence attestation streams. Added v1.4.2.",
   },
+  {
+    name: "subject_key_ids",
+    default: "[] (producer-only authority)",
+    whatItDoes:
+      "Vec<KeyId>. OPTIONAL. The keys the claim is ABOUT — subject-side authority parallel to the producer-side attesting_key_id. Empty or omitted preserves the pre-0.6 producer-only behavior; populated, the named subjects (and their delegates) can withdraw the claim. Accepts both federation_keys identities and canonical-hash identifiers so un-enrolled subjects can be named. Added CEG 0.6.",
+  },
 ];
 
 // ─────────────────────────── The 8 reasoning axes ───────────────────────────

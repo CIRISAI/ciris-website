@@ -23,9 +23,13 @@ export default function EnvelopeAndAxesPanel() {
           Envelope fields and reasoning axes
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-          The envelope carries eight fields that consumers use to weight an
+          The envelope carries nine fields that consumers use to weight an
           attestation. These are <strong>not</strong> wire primitives — they
-          are consumer-reasoning axes per CEG 0.1 §2.
+          are consumer-reasoning axes per CEG 0.1 §2. CEG 0.6 added{" "}
+          <code className="rounded bg-slate-100 px-1 dark:bg-gray-800">
+            subject_key_ids
+          </code>{" "}
+          as a ninth OPTIONAL field for subject-side authority.
         </p>
       </header>
 
@@ -33,7 +37,7 @@ export default function EnvelopeAndAxesPanel() {
         {/* Envelope fields */}
         <div>
           <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-brand-primary">
-            8 envelope fields
+            9 envelope fields
           </h3>
           <ul className="space-y-2">
             {ENVELOPE_FIELDS.map((f) => (
