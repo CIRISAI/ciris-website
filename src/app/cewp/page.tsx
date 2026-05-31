@@ -106,62 +106,12 @@ export default function CewpPage() {
               </a>
             </div>
 
-            {/* Shipping note */}
+            {/* Shipping note — kept short for the hero. */}
             <p className="max-w-3xl rounded-md border-l-4 border-brand-primary bg-brand-primary/5 px-4 py-3 text-sm leading-6 text-slate-700 dark:bg-brand-primary/10 dark:text-slate-200">
-              <b>CIRIS 2.9 is shipping today.</b> The app installs on iPhone
-              and Android right now and uses the parts of CEWP that are
-              ready: signed posts, trust-graph identity, the first federation
-              endpoints. The full platform comes online through{" "}
-              <b>June and July 2026</b> as the remaining substrate pieces
-              land.
+              <b>CIRIS 2.9.x is shipping now.</b> Install today on
+              iPhone or Android. The full CEWP feature set rolls out
+              through <b>June and July 2026</b>.
             </p>
-
-            {/* Substrate maturity note — per issue #17 */}
-            <div className="max-w-3xl rounded-md border border-emerald-300 bg-emerald-50 px-4 py-3 text-sm leading-6 text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-100">
-              <p className="font-semibold">
-                Substrate maturity update — May 2026
-              </p>
-              <p className="mt-1">
-                The CIRIS Federation Threat Model v1.1 closed three of the
-                four structural gaps identified at v1.0:
-              </p>
-              <ul className="mt-2 space-y-0.5 text-[13px]">
-                <li>
-                  <span className="font-mono text-emerald-700 dark:text-emerald-300">
-                    ✓
-                  </span>{" "}
-                  <b>Gap A</b> — revocation propagation timeliness, contract
-                  specified
-                </li>
-                <li>
-                  <span className="font-mono text-emerald-700 dark:text-emerald-300">
-                    ✓
-                  </span>{" "}
-                  <b>Gap B</b> — quorum and bounded-staleness reads,
-                  contract specified
-                </li>
-                <li>
-                  <span className="font-mono text-emerald-700 dark:text-emerald-300">
-                    ✓
-                  </span>{" "}
-                  <b>Gap C</b> — hybrid post-quantum key exchange{" "}
-                  <b>shipped</b> in CIRISVerify 4.6.0 (X25519 + ML-KEM-768)
-                </li>
-                <li>
-                  <span className="font-mono text-amber-700 dark:text-amber-300">
-                    ◐
-                  </span>{" "}
-                  <b>Gap D</b> — multi-medium transport, pending CIRISEdge
-                  Phase 1
-                </li>
-              </ul>
-              <p className="mt-2 text-[12px] italic">
-                All 17 scaling scenarios remain feasible at the v1
-                per-server gates (1 TB / 1 Gbps / 1 core). The headline
-                numbers below haven&rsquo;t moved; the substrate
-                underneath them got more honest.
-              </p>
-            </div>
           </header>
 
           {/* Tier 2 — plain-English benefit cards. Between hero and math. */}
