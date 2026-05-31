@@ -44,7 +44,7 @@ export default function CewpPage() {
     <>
       <FloatingNav navItems={navItems} />
       <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-gray-950 dark:via-black dark:to-gray-950">
-        <div className="mx-auto max-w-6xl px-4 pb-20 pt-32 md:px-6">
+        <div className="mx-auto max-w-6xl px-4 pb-20 pt-40 md:px-6 md:pt-44">
           {/* Tier 1 — friendly hero. Plain English, install CTAs, no math. */}
           <header className="mb-10 space-y-6">
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
