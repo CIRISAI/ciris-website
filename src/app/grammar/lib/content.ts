@@ -309,6 +309,13 @@ export const COMPOSITION_POLICIES: CompositionPolicy[] = [
       "Three-layer multimedia content path (CEG 0.3): distributor attestation chain → content_class + content_rating gate → age_assurance gate. Same shape as Policy F but specialized for image / audio / video / film / model_3d. Anti-tricking guarantee binds the publisher's trust chain to the consumer's cohort gate.",
     classification: "specialization",
   },
+  {
+    id: "K",
+    name: "CEM — Consent Effective Model composition",
+    description:
+      "Six-layer subject-consent composition (CEG 0.6): effective consent resolution (walk latest non-superseded consent:state:*), multi-subject revocation (any-subject-binding — consumer policy MUST NOT soften to majority), SLA watcher (substrate emits hard_case:consent_sla_breach when producer misses deletion_sla), bilateral pair ratification (PARTNERED), decay-protocol stage composition, and the CIRISAgent CEM bundle (TEMPORARY / PARTNERED / ANONYMOUS) as a consumer-policy bundle over the wire primitives. Bare-scores and consent_record ceremony shapes admit at the same gate.",
+    classification: "specialization",
+  },
 ];
 
 // ─────────────────────────── Worked stories ─────────────────────────────────

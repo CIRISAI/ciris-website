@@ -26,6 +26,7 @@ import TranslationPlayground from "./components/TranslationPlayground";
 import FractalSelfCallout from "./components/FractalSelfCallout";
 import AlephView from "./components/AlephView";
 import MediaTierPanel from "./components/MediaTierPanel";
+import ConsentTierPanel from "./components/ConsentTierPanel";
 
 export default async function GrammarPage() {
   const source = await getRegistrySource();
@@ -243,6 +244,7 @@ export default async function GrammarPage() {
             <CompositionPoliciesPanel />
             <NamespacePanel source={source} />
             <MediaTierPanel />
+            <ConsentTierPanel />
             <AlephView source={source} />
             <ExploreCTA />
             <CompositionGraph source={source} />
