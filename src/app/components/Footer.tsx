@@ -37,7 +37,9 @@ const navigation: Navigation = {
   support: [
     { name: "Compare", href: "/compare" },
     { name: "Compliance", href: "/compliance" },
+    { name: "CEWP (soup)", href: "/cewp" },
     { name: "Grammar (CEG)", href: "/grammar" },
+    { name: "Mystery game", href: "/game" },
     { name: "First Contact", href: "/first-contact" },
     { name: "Explore a Trace", href: "/explore-a-trace" },
     { name: "CIRIS Scoring", href: "/ciris-scoring" },
