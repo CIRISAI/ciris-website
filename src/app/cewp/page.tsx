@@ -18,7 +18,7 @@ const BENEFITS: Array<{ icon: string; title: string; body: string }> = [
     icon: "🛡️",
     title: "Your stuff stays yours",
     body:
-      "Local content never gets advertised to the rest of the network. The wire format will not carry it. No policy promise, no trust-us moment.",
+      "Self and family content never emits the attestation that would tell the rest of the network it exists. You don't need a privacy policy to keep family photos off the federation — the wire format can't carry them in the first place.",
   },
   {
     icon: "🧠",
@@ -30,7 +30,7 @@ const BENEFITS: Array<{ icon: string; title: string; body: string }> = [
     icon: "🏠",
     title: "Runs on hardware you have",
     body:
-      "Your phone is most of it. A small set of always-on home boxes carry the rest. No giant datacenters required, anywhere.",
+      "Your phone is most of it. The backbone is roughly one always-on home box per ten people — about 500 million boxes worldwide, Xbox-sized, on a shelf. Zero hyperscale datacenters required.",
   },
   {
     icon: "🌍",
@@ -38,6 +38,12 @@ const BENEFITS: Array<{ icon: string; title: string; body: string }> = [
     body:
       "The cables under the ocean are the same. What changes is who owns the stuff while it's in motion. Five companies today; the people on the ends tomorrow.",
   },
+];
+
+const TENETS: Array<{ icon: string; label: string; sub: string }> = [
+  { icon: "🛡️", label: "Structural privacy", sub: "by absence of attestation" },
+  { icon: "🔏", label: "Epistemic signatures", sub: "every load-bearing claim" },
+  { icon: "🏠", label: "Commodity hardware", sub: "no new buildout required" },
 ];
 
 export default function CewpPage() {
@@ -60,11 +66,13 @@ export default function CewpPage() {
               A better internet, without big tech and massive datacenters.
             </h1>
             <p className="max-w-3xl text-base leading-7 text-slate-700 dark:text-slate-300 md:text-lg">
-              CEWP is what the internet looks like if nobody big owns the
-              middle. People, AI agents, and organizations all sign their
-              own posts. The network weighs those signatures against each
-              other to work out what to trust. No five companies in the
-              way. No giant warehouses full of servers.
+              Same cables under the ocean. Different middle. CEWP routes
+              traffic along a small-world trust graph directly between
+              the devices you already own, instead of through about ten
+              thousand giant warehouses run by five companies. People,
+              AI agents, and organizations all sign their own posts.
+              The network weighs those signatures to work out what to
+              trust.
             </p>
 
             {/* Install CTAs */}
@@ -114,6 +122,27 @@ export default function CewpPage() {
             </p>
           </header>
 
+          {/* Three tenets strip — the structural argument before the
+              benefit cards, so the reader has the spine first. */}
+          <section className="mb-6 grid gap-3 md:grid-cols-3">
+            {TENETS.map((t) => (
+              <div
+                key={t.label}
+                className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 dark:border-gray-800 dark:bg-gray-900"
+              >
+                <span aria-hidden className="text-2xl">
+                  {t.icon}
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    {t.label}
+                  </p>
+                  <p className="text-[12px] text-slate-500">{t.sub}</p>
+                </div>
+              </div>
+            ))}
+          </section>
+
           {/* Tier 2 — plain-English benefit cards. Between hero and math. */}
           <section className="mb-10 grid gap-4 md:grid-cols-2">
             {BENEFITS.map((b) => (
@@ -150,14 +179,16 @@ export default function CewpPage() {
           {/* Tier 3 — the simulator: globe, sliders, math. */}
           <header className="mb-4 space-y-1">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              See it work
+              The locality dividend
             </p>
             <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white md:text-3xl">
-              What CEWP actually looks like at scale
+              About 65% of typical activity never leaves the metro.
             </h2>
-            <p className="max-w-2xl text-sm leading-6 text-slate-600 dark:text-slate-300">
-              Drag the sliders. Watch the assumptions move. Everything below
-              is honest math you can disagree with input by input.
+            <p className="max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">
+              That number isn&rsquo;t a routing trick. It falls out of
+              the wire format. Drag the sliders below and watch the
+              assumptions move. Everything is honest math you can
+              disagree with input by input.
             </p>
           </header>
           <CewpView />

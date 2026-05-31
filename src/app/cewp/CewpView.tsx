@@ -34,12 +34,12 @@ const MODES: Array<{ id: CewpMode; label: string }> = [
 
 const BEATS: Record<CewpMode, { title: string; body: string }> = {
   internet: {
-    title: "Today: ten thousand datacenters, five companies",
+    title: "The ten thousand hyperscale bottleneck",
     body:
       "Almost everything you post, watch, or send passes through one of about ten thousand giant computer warehouses. Five companies run most of them. Watch the yellow dots funnel into the orange spots — those are the warehouses.",
   },
   cewp: {
-    title: "CEWP: small boxes near the people",
+    title: "Decentralizing the backbone: 1 home box per 10 humans",
     body:
       "CEWP runs on the kind of hardware you already own. About one small box for every ten people, sitting where the people already are. Each box only accepts posts from people it trusts. Most of what you do never leaves your city. Same cables under the ocean. No warehouses in the middle.",
   },
@@ -848,16 +848,14 @@ function CohortBreakdown({
     { key: "federation", label: "federation", emoji: "🌐" },
   ];
   return (
-    <details className="mt-4 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 transition open:bg-white dark:border-gray-800 dark:bg-gray-950 dark:open:bg-gray-900">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-1 text-sm font-medium text-slate-800 dark:text-slate-200">
-        <span>
+    <section className="mt-4 rounded-2xl border border-slate-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+      <header className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
+        <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
           The seven cohort tiers · where adversarial traffic lands
-        </span>
-        <span aria-hidden className="text-slate-400">
-          ›
-        </span>
-      </summary>
-      <p className="mt-3 text-[12px] leading-5 text-slate-600 dark:text-slate-400">
+        </h3>
+        <span className="text-[11px] text-slate-500">CEG locality ladder</span>
+      </header>
+      <p className="mb-3 text-[12px] leading-5 text-slate-600 dark:text-slate-400">
         Every post in CEWP is scoped to one of seven cohorts. The two
         local tiers (self, family) never emit a{" "}
         <code className="rounded bg-slate-100 px-1 dark:bg-gray-800">
@@ -932,7 +930,7 @@ function CohortBreakdown({
         compose on top. The substrate makes abuse{" "}
         <i>visible and reversible</i>; it does not make it impossible.
       </p>
-    </details>
+    </section>
   );
 }
 
