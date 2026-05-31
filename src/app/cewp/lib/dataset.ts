@@ -286,3 +286,77 @@ export function buildCewpTrustGraph(): Array<[Metro, Metro]> {
   }
   return edges;
 }
+
+// Per-cohort tier graph. self + family are deliberately not drawn —
+// they never emit a holds_bytes attestation, so the substrate
+// doesn't carry them. The other five tiers correspond to edge
+// length bands:
+//   community     = same metro (we render as a halo dot, not an arc)
+//   affiliations  = nearest few neighbors (same region)
+//   species       = same hemisphere, longer
+//   planet        = cross-ocean
+//   federation    = antipodal-ish, the longest arcs
+export type TierKey =
+  | "community"
+  | "affiliations"
+  | "species"
+  | "planet"
+  | "federation";
+
+export function buildTierGraph(): Record<TierKey, Array<[Metro, Metro]>> {
+  const out: Record<TierKey, Array<[Metro, Metro]>> = {
+    community: [],
+    affiliations: [],
+    species: [],
+    planet: [],
+    federation: [],
+  };
+  // The km thresholds split the great-circle distance band into the
+  // five publishable tiers.
+  const BANDS: Array<[TierKey, number, number]> = [
+    ["affiliations", 0, 1500],
+    ["species", 1500, 5000],
+    ["planet", 5000, 10000],
+    ["federation", 10000, 25000],
+  ];
+  for (let i = 0; i < METROS.length; i++) {
+    const m = METROS[i];
+    // Affiliations: 3 nearest. Species: 2 mid. Planet: 1 long. Fed: 1 antipodal.
+    const sorted = METROS.filter((o) => o.id !== m.id)
+      .map((o) => ({ o, d: haversine(m, o) }))
+      .sort((a, b) => a.d - b.d);
+    const pushed: Record<TierKey, number> = {
+      community: 0,
+      affiliations: 0,
+      species: 0,
+      planet: 0,
+      federation: 0,
+    };
+    const LIMITS: Record<TierKey, number> = {
+      community: 0,
+      affiliations: 3,
+      species: 2,
+      planet: 1,
+      federation: 1,
+    };
+    const seenKey = new Set<string>();
+    for (const { o, d } of sorted) {
+      const a = m.id < o.id ? m.id : o.id;
+      const b = m.id < o.id ? o.id : m.id;
+      const k = `${a}|${b}`;
+      if (seenKey.has(k)) continue;
+      for (const [tier, lo, hi] of BANDS) {
+        if (d >= lo && d < hi && pushed[tier] < LIMITS[tier]) {
+          out[tier].push([m, o]);
+          pushed[tier]++;
+          seenKey.add(k);
+          break;
+        }
+      }
+    }
+  }
+  // Community is rendered as halos around metros (no inter-metro
+  // arcs), so the array stays empty; included in the type for
+  // uniformity with the rest.
+  return out;
+}

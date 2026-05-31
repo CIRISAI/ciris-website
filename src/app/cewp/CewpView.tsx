@@ -179,6 +179,8 @@ export default function CewpView() {
           intensity={intensity}
           humansPerServer={humansPerServer}
           cewpFailed={anyFail}
+          cohort={scenario.cohort}
+          maliciousFraction={scenario.malicious_fraction}
         />
         <div className="pointer-events-none absolute inset-x-3 bottom-3 flex justify-end text-[11px] text-slate-300">
           <span className="rounded-full bg-black/40 px-2 py-1 backdrop-blur">

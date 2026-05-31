@@ -18,9 +18,13 @@ import {
   METROS,
   SUBMARINE_PAIRS,
   buildCewpTrustGraph,
+  buildTierGraph,
   nearestHyperscale,
   type Metro,
+  type TierKey,
 } from "../lib/dataset";
+import type { CohortDist } from "../lib/model";
+import { COHORT_ABUSE_SUSCEPTIBILITY } from "../lib/model";
 import {
   GLOBE_RADIUS,
   greatCircleArc,
@@ -356,6 +360,99 @@ function InternetFlows() {
   );
 }
 
+// TierFlows — five layers, one per publishable cohort tier
+// (affiliations, species, planet, federation; community is rendered
+// as halos by CewpServerHalo). Each tier's opacity scales with the
+// cohort dist (more local = quieter outer tiers) and its color tints
+// red proportional to the adversarial-traffic susceptibility of that
+// tier. Self + family don't render — they never emit holds_bytes.
+const TIER_BASE_COLOR = "#67e8f9";
+const TIER_FAIL_COLOR = "#ef4444";
+
+function lerpColor(a: string, b: string, t: number): string {
+  const ai = parseInt(a.slice(1), 16);
+  const bi = parseInt(b.slice(1), 16);
+  const ar = (ai >> 16) & 0xff,
+    ag = (ai >> 8) & 0xff,
+    ab = ai & 0xff;
+  const br = (bi >> 16) & 0xff,
+    bg = (bi >> 8) & 0xff,
+    bb = bi & 0xff;
+  const r = Math.round(ar + (br - ar) * t);
+  const g = Math.round(ag + (bg - ag) * t);
+  const bl = Math.round(ab + (bb - ab) * t);
+  return `#${((r << 16) | (g << 8) | bl).toString(16).padStart(6, "0")}`;
+}
+
+function TierFlows({
+  cohort,
+  maliciousFraction,
+}: {
+  cohort: CohortDist;
+  maliciousFraction: number;
+}) {
+  const tierGraph = useMemo(() => buildTierGraph(), []);
+  const TIERS: Array<{ key: TierKey; cohortKey: keyof CohortDist; altitudeLift: number }> = [
+    { key: "affiliations", cohortKey: "affiliations", altitudeLift: 0.05 },
+    { key: "species", cohortKey: "species", altitudeLift: 0.10 },
+    { key: "planet", cohortKey: "planet", altitudeLift: 0.18 },
+    { key: "federation", cohortKey: "federation", altitudeLift: 0.28 },
+  ];
+  return (
+    <>
+      {TIERS.map(({ key, cohortKey, altitudeLift }) => {
+        const share = cohort[cohortKey] ?? 0;
+        // Opacity floor so low-share tiers still glow faintly.
+        const opacity = Math.max(0.12, Math.min(0.85, 0.2 + share * 5));
+        const susceptibility = COHORT_ABUSE_SUSCEPTIBILITY[cohortKey];
+        const redMix = Math.min(1, maliciousFraction * susceptibility * 1.4);
+        const color = lerpColor(TIER_BASE_COLOR, TIER_FAIL_COLOR, redMix);
+        return (
+          <TierLine
+            key={key}
+            pairs={tierGraph[key]}
+            color={color}
+            opacity={opacity}
+            altitudeLift={altitudeLift}
+          />
+        );
+      })}
+    </>
+  );
+}
+
+function TierLine({
+  pairs,
+  color,
+  opacity,
+  altitudeLift,
+}: {
+  pairs: Array<[Metro, Metro]>;
+  color: string;
+  opacity: number;
+  altitudeLift: number;
+}) {
+  const geom = useMemo(() => {
+    const vecPairs: Array<[THREE.Vector3, THREE.Vector3]> = pairs.map(
+      ([a, b]) =>
+        [
+          latLonToVec3(a.lat, a.lon, GLOBE_RADIUS * 1.01),
+          latLonToVec3(b.lat, b.lon, GLOBE_RADIUS * 1.01),
+        ] as [THREE.Vector3, THREE.Vector3],
+    );
+    const buf = packArcsAsLineSegments(vecPairs, 22, altitudeLift);
+    const g = new THREE.BufferGeometry();
+    g.setAttribute("position", new THREE.Float32BufferAttribute(buf, 3));
+    return g;
+  }, [pairs, altitudeLift]);
+  return (
+    <lineSegments>
+      <primitive object={geom} attach="geometry" />
+      <lineBasicMaterial color={color} transparent opacity={opacity} />
+    </lineSegments>
+  );
+}
+
 // CEWP flows: small-world trust graph between metros. Lots of short
 // local edges, a few long-range ones. No central convergence node.
 // When the model says any per-server gate fails, the arcs flip to
@@ -468,6 +565,8 @@ export default function GlobeScene({
   intensity = { internet: 0.5, cewp: 0.5 },
   humansPerServer = 10,
   cewpFailed = false,
+  cohort,
+  maliciousFraction = 0,
 }: {
   mode: CewpMode;
   intensity?: TrafficIntensity;
@@ -475,6 +574,10 @@ export default function GlobeScene({
   humansPerServer?: number;
   /** When true, CEWP arcs render red to signal a gate failure. */
   cewpFailed?: boolean;
+  /** Per-cohort share. Drives which tier bands are visible. */
+  cohort?: CohortDist;
+  /** Adversarial traffic share. Tints affected tier bands red. */
+  maliciousFraction?: number;
 }) {
   const groupRef = useRef<THREE.Group | null>(null);
   const dpr: [number, number] = useMemo(() => {
@@ -528,7 +631,11 @@ export default function GlobeScene({
         <Earth />
         <SubmarineUnderlay />
         {showCewp && <CewpServerHalo humansPerServer={humansPerServer} />}
-        {showCewp && <CewpFlows failed={cewpFailed} />}
+        {showCewp && cohort ? (
+          <TierFlows cohort={cohort} maliciousFraction={maliciousFraction} />
+        ) : showCewp ? (
+          <CewpFlows failed={cewpFailed} />
+        ) : null}
         <MetroNodes color={showInternet && !showCewp ? "#fde68a" : "#fef3c7"} />
         {showInternet && <HyperscaleNodes />}
         {showInternet && <InternetFlows />}
