@@ -2,6 +2,7 @@ import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import CewpView from "./CewpView";
+import WhyCewp from "./components/WhyCewp";
 
 export const metadata = {
   title: "CEWP — A better internet, without big tech | CIRIS",
@@ -210,6 +211,12 @@ export default function CewpPage() {
             </p>
           </header>
           <CewpView />
+
+          {/* Why CEWP vs the prior art. Lifted from CIRISConformance's
+              SOTA comparison set. */}
+          <div className="mt-12">
+            <WhyCewp />
+          </div>
 
           {/* The seven (now eight) repos. CIRISConformance lives next to the
               substrate sisters per the recent split-out. */}
