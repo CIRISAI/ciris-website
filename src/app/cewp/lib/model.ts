@@ -145,6 +145,37 @@ export type Scenario = {
   external_fetch_fraction: number;
   agent_decisions_per_day: number;
   trace_publishable_fraction: number;
+  /** Share of admittable inbound that's coming from compromised /
+   *  sybil / brigade accounts. They pass the trust gate (that's how
+   *  they're in the trust set in the first place) and post at higher
+   *  volume than honest users. Scales server inbound by
+   *  (1 + malicious_fraction * ABUSE_VOLUME_FACTOR) and pollutes the
+   *  cache. A baseline of ~5% reflects normal-world noise. */
+  malicious_fraction: number;
+};
+
+// Abusive actors post several times more than honest ones — same
+// trust-gate admission, more bytes per actor. Multiplier on top of
+// the malicious-fraction share.
+export const ABUSE_VOLUME_FACTOR = 4;
+
+// Per-cohort susceptibility to adversarial traffic. The CEG locality
+// dividend is structural: self + family content NEVER emits a
+// holds_bytes attestation, so it is undiscoverable; no adversary can
+// request what was never advertised. Community is tight-knit (dense
+// local trust, hard to sybil); affiliations are wider; species and
+// planet and federation are huge populations where trust is shallow
+// and brigading is cheap. Values are the fraction of bytes in that
+// tier that an adversary can inflate, multiplied by the slider's
+// share AND the volume factor.
+export const COHORT_ABUSE_SUSCEPTIBILITY: Record<keyof CohortDist, number> = {
+  self_: 0,        // invisible by construction
+  family: 0,       // invisible by construction
+  community: 0.2,  // dense local trust resists sybils
+  affiliations: 0.6,
+  species: 1.0,
+  planet: 1.0,
+  federation: 1.0,
 };
 
 export type ActorCosts = {
@@ -225,7 +256,21 @@ export function perActor(tier: Tier, s: Scenario): ActorCosts {
     const load_scale = users_per_server / BASELINE_USERS_PER_SERVER;
 
     const effective_R = s.trust_radius * effectiveTrustSetMultiplier(s.trust_depth_avg);
-    const daily_admitted = effective_R * s.daily_bytes * cohortPublishable(s.cohort) * load_scale;
+    // Per-cohort abuse weighting. Self + family stay locality-dividend
+    // safe (zero abuse — undiscoverable by construction). Community
+    // resists sybils through dense local trust. Wider cohorts admit
+    // more abuse as the trust signal thins. The local tiers never
+    // appear in the inbound calc anyway because they don't emit
+    // holds_bytes, but the per-tier weighting makes the structure
+    // explicit and lets the page surface it.
+    const abuse_weighted_publishable =
+      s.cohort.community     * (1 + COHORT_ABUSE_SUSCEPTIBILITY.community     * s.malicious_fraction * ABUSE_VOLUME_FACTOR) +
+      s.cohort.affiliations  * (1 + COHORT_ABUSE_SUSCEPTIBILITY.affiliations  * s.malicious_fraction * ABUSE_VOLUME_FACTOR) +
+      s.cohort.species       * (1 + COHORT_ABUSE_SUSCEPTIBILITY.species       * s.malicious_fraction * ABUSE_VOLUME_FACTOR) +
+      s.cohort.planet        * (1 + COHORT_ABUSE_SUSCEPTIBILITY.planet        * s.malicious_fraction * ABUSE_VOLUME_FACTOR) +
+      s.cohort.federation    * (1 + COHORT_ABUSE_SUSCEPTIBILITY.federation    * s.malicious_fraction * ABUSE_VOLUME_FACTOR);
+    const daily_admitted =
+      effective_R * s.daily_bytes * abuse_weighted_publishable * load_scale;
     const traces_in_per_day = effective_R * trace_bytes_per_day * s.trace_publishable_fraction * load_scale;
     const daily_admitted_plus_traces = daily_admitted + traces_in_per_day;
     const trust_share_of_remaining = 0.85;
@@ -234,11 +279,23 @@ export function perActor(tier: Tier, s: Scenario): ActorCosts {
     const effective_days = daily_admitted_plus_traces > 0 ? trust_budget / daily_admitted_plus_traces : 0;
     const admitted_trust_held = Math.min(daily_admitted * effective_days, trust_budget * 0.85);
     const replicated_traces_held = Math.min(traces_in_per_day * effective_days, trust_budget * 0.15);
-    const cache_hit_rate = s.cache_hit_rate;
-    const inline_fetch = s.daily_fetch_bytes * (1 - s.external_fetch_fraction) * load_scale;
+    // Cache pollution: malicious content displaces honest content
+    // nobody wants to refetch, so the effective hit rate drops.
+    // Weighted by the same publishable abuse share so self/family
+    // (which don't go through the cache anyway) stay safe.
+    const fetch_abuse_share =
+      s.malicious_fraction *
+      ((s.cohort.community     * COHORT_ABUSE_SUSCEPTIBILITY.community     +
+        s.cohort.affiliations  * COHORT_ABUSE_SUSCEPTIBILITY.affiliations  +
+        s.cohort.species       * COHORT_ABUSE_SUSCEPTIBILITY.species       +
+        s.cohort.planet        * COHORT_ABUSE_SUSCEPTIBILITY.planet        +
+        s.cohort.federation    * COHORT_ABUSE_SUSCEPTIBILITY.federation));
+    const cache_hit_rate = Math.max(0.05, s.cache_hit_rate - fetch_abuse_share * 0.5);
+    const fetch_inflation = 1 + fetch_abuse_share * ABUSE_VOLUME_FACTOR;
+    const inline_fetch = s.daily_fetch_bytes * (1 - s.external_fetch_fraction) * load_scale * fetch_inflation;
     const cache_inbound = inline_fetch * (1 - cache_hit_rate);
     const cache_held = Math.min(cache_inbound, cache_budget);
-    const total_fetch_bw = s.daily_fetch_bytes * (1 - cache_hit_rate) * load_scale;
+    const total_fetch_bw = s.daily_fetch_bytes * (1 - cache_hit_rate) * load_scale * fetch_inflation;
     verify_ops = (daily_admitted_plus_traces + cache_inbound) / s.avg_envelope_bytes;
     scrub_extra = traces_in_per_day;
     const wide = s.cohort.species + s.cohort.planet + s.cohort.federation;
@@ -642,7 +699,18 @@ export function cewpFootprint(s: Scenario, style: FleetStyle = "realistic"): Foo
 }
 
 export function estimateLatency(s: Scenario): LatencyEstimate {
-  const cache = s.cache_hit_rate;
+  // Cache pollution from adversarial traffic. Self + family content
+  // never enters the global cache so it pays nothing here; only the
+  // publishable cohort load gets the hit, weighted by per-cohort
+  // susceptibility.
+  const fetch_abuse_share =
+    s.malicious_fraction *
+    ((s.cohort.community     * COHORT_ABUSE_SUSCEPTIBILITY.community     +
+      s.cohort.affiliations  * COHORT_ABUSE_SUSCEPTIBILITY.affiliations  +
+      s.cohort.species       * COHORT_ABUSE_SUSCEPTIBILITY.species       +
+      s.cohort.planet        * COHORT_ABUSE_SUSCEPTIBILITY.planet        +
+      s.cohort.federation    * COHORT_ABUSE_SUSCEPTIBILITY.federation));
+  const cache = Math.max(0.05, s.cache_hit_rate - fetch_abuse_share * 0.5);
   const miss = 1 - cache;
   // For CEWP, cohort_scope determines where a missed fetch is sourced
   // from. self/family stay local; community is metro; affiliations
@@ -695,6 +763,7 @@ export const PRESETS = {
     cohort: COHORT_DEFAULT,
     daily_fetch_bytes: 5 * MB, cache_hit_rate: 0.5, external_fetch_fraction: 0,
     agent_decisions_per_day: 20, trace_publishable_fraction: 0.15,
+    malicious_fraction: 0.05,
   }),
   dunbar: (): Scenario => ({
     n_users: 1_000_000,
@@ -705,6 +774,7 @@ export const PRESETS = {
     cohort: COHORT_DEFAULT,
     daily_fetch_bytes: 50 * MB, cache_hit_rate: 0.6, external_fetch_fraction: 0,
     agent_decisions_per_day: 50, trace_publishable_fraction: 0.15,
+    malicious_fraction: 0.05,
   }),
   full_internet: (): Scenario => ({
     n_users: 5_000_000_000,
@@ -715,6 +785,7 @@ export const PRESETS = {
     cohort: COHORT_DEFAULT,
     daily_fetch_bytes: 1 * GB, cache_hit_rate: 0.6, external_fetch_fraction: 0,
     agent_decisions_per_day: 200, trace_publishable_fraction: 0.10,
+    malicious_fraction: 0.05,
   }),
   full_internet_with_video: (): Scenario => ({
     n_users: 5_000_000_000,
@@ -725,6 +796,7 @@ export const PRESETS = {
     cohort: COHORT_DEFAULT,
     daily_fetch_bytes: 1700 * MB, cache_hit_rate: 0.55, external_fetch_fraction: 0.88,
     agent_decisions_per_day: 200, trace_publishable_fraction: 0.10,
+    malicious_fraction: 0.05,
   }),
 };
 

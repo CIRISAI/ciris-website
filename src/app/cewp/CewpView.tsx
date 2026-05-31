@@ -6,6 +6,7 @@ import HowItWorks from "./components/HowItWorks";
 import {
   cewpFootprint,
   cohortFromLocality,
+  COHORT_ABUSE_SUSCEPTIBILITY,
   DEVICE_SPECS,
   estimateLatency,
   feasible,
@@ -19,6 +20,7 @@ import {
   PRESETS,
   rollup,
   TB,
+  type CohortDist,
   type FleetStyle,
   type GateResult,
   type Scenario,
@@ -130,6 +132,9 @@ export default function CewpView() {
     !srvFeas.bandwidth.ok ||
     !srvFeas.cpu.ok ||
     !srvFeas.retention.ok;
+  // The trust gate is admission-only; high enough share of trusted-
+  // but-malicious accounts overwhelms it even when no gate fails.
+  const abuseOverwhelmed = scenario.malicious_fraction >= 0.5;
 
   // Map model output to animation intensity. The toy's per-server
   // bandwidth is the load-bearing number. Saturate around 10.8 TB/day
@@ -282,7 +287,21 @@ export default function CewpView() {
             format={(v) => `1 per ${Math.round(v)}`}
             onChange={(v) => setHumansPerServer(v)}
           />
+          <Slider
+            label="Adversarial / abusive traffic share"
+            value={scenario.malicious_fraction}
+            min={0}
+            max={0.9}
+            step={0.01}
+            format={(v) => `${(v * 100).toFixed(0)}%`}
+            onChange={(v) => setScenarioField("malicious_fraction", v)}
+          />
         </div>
+
+        <CohortBreakdown
+          cohort={scenario.cohort}
+          malicious_fraction={scenario.malicious_fraction}
+        />
         <p className="mt-2 text-[12px] text-slate-500">
           A &ldquo;home server&rdquo; here is one Xbox-class box, or a midrange
           laptop you already own: roughly 50 W continuous, 1 TB SSD, ARM
@@ -803,6 +822,116 @@ function ragLowerIsBetter(cewp: number, today: number): Rag {
   if (cewp <= today * 0.7) return "green";
   if (cewp <= today * 1.1) return "amber";
   return "red";
+}
+
+// CohortBreakdown — the seven cohort_scope tiers, what share of
+// traffic each carries at the current locality setting, and where
+// adversarial traffic actually lands. Surfaces the CEG locality
+// dividend: self + family are architecturally invisible, so they pay
+// nothing for abuse.
+function CohortBreakdown({
+  cohort,
+  malicious_fraction,
+}: {
+  cohort: CohortDist;
+  malicious_fraction: number;
+}) {
+  const TIERS: Array<{ key: keyof CohortDist; label: string; emoji: string }> = [
+    { key: "self_", label: "self", emoji: "🪞" },
+    { key: "family", label: "family", emoji: "🏡" },
+    { key: "community", label: "community", emoji: "🏘️" },
+    { key: "affiliations", label: "affiliations", emoji: "🤝" },
+    { key: "species", label: "species", emoji: "🧬" },
+    { key: "planet", label: "planet", emoji: "🌍" },
+    { key: "federation", label: "federation", emoji: "🌐" },
+  ];
+  return (
+    <details className="mt-4 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 transition open:bg-white dark:border-gray-800 dark:bg-gray-950 dark:open:bg-gray-900">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-1 text-sm font-medium text-slate-800 dark:text-slate-200">
+        <span>
+          The seven cohort tiers · where adversarial traffic lands
+        </span>
+        <span aria-hidden className="text-slate-400">
+          ›
+        </span>
+      </summary>
+      <p className="mt-3 text-[12px] leading-5 text-slate-600 dark:text-slate-400">
+        Every post in CEWP is scoped to one of seven cohorts. The two
+        local tiers (self, family) never emit a{" "}
+        <code className="rounded bg-slate-100 px-1 dark:bg-gray-800">
+          holds_bytes
+        </code>{" "}
+        attestation, so the rest of the federation can&rsquo;t see them
+        and an adversary can&rsquo;t request what was never advertised.
+        That&rsquo;s the CEG locality dividend: privacy as the
+        <i> absence</i> of an attestation, not a policy promise. Abuse
+        gets bigger as you climb the cohort ladder because the trust
+        signal thins and brigading is cheaper.
+      </p>
+      <div className="mt-3 space-y-1.5">
+        {TIERS.map((t) => {
+          const share = cohort[t.key];
+          const susceptibility = COHORT_ABUSE_SUSCEPTIBILITY[t.key];
+          const safe = susceptibility === 0;
+          const abusePct =
+            malicious_fraction * susceptibility * 100;
+          return (
+            <div
+              key={t.key}
+              className="flex items-center gap-2 text-[12px]"
+            >
+              <span aria-hidden className="w-5 text-center text-sm">
+                {t.emoji}
+              </span>
+              <span className="w-20 font-mono text-slate-700 dark:text-slate-300">
+                {t.label}
+              </span>
+              {/* Share bar */}
+              <div className="relative h-2 flex-1 overflow-hidden rounded bg-slate-200 dark:bg-gray-800">
+                <div
+                  className={
+                    safe ? "h-full bg-emerald-500" : "h-full bg-brand-primary"
+                  }
+                  style={{ width: `${share * 100}%` }}
+                />
+                {!safe && abusePct > 0 ? (
+                  <div
+                    className="absolute right-0 top-0 h-full bg-red-500/70"
+                    style={{ width: `${Math.min(share, share * susceptibility * malicious_fraction * 5) * 100}%` }}
+                  />
+                ) : null}
+              </div>
+              <span className="w-14 text-right font-mono text-slate-600 dark:text-slate-400">
+                {(share * 100).toFixed(0)}%
+              </span>
+              <span
+                className={`w-24 text-right font-mono text-[11px] ${
+                  safe
+                    ? "text-emerald-700 dark:text-emerald-400"
+                    : abusePct > 20
+                      ? "text-red-700 dark:text-red-400"
+                      : "text-slate-500"
+                }`}
+              >
+                {safe
+                  ? "locality-safe"
+                  : abusePct > 0
+                    ? `+${abusePct.toFixed(0)}% abuse`
+                    : "clean"}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <p className="mt-3 text-[12px] italic leading-5 text-slate-500">
+        The trust gate alone isn&rsquo;t enough at high abuse rates.
+        Slashing, reconsideration, and per-cohort moderation
+        (Conformance Policies E + K + the higher-level CEG governance)
+        compose on top. The substrate makes abuse{" "}
+        <i>visible and reversible</i>; it does not make it impossible.
+      </p>
+    </details>
+  );
 }
 
 function Row({
