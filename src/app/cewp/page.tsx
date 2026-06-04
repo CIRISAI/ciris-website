@@ -52,10 +52,10 @@ export default function CewpPage() {
             </p>
           </header>
 
-          {/* The 60-second demo */}
+          {/* The video explainer */}
           <section className="mt-8">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
-              The 60-second version
+              Watch the 7-minute explainer
             </p>
             <div className="relative aspect-video overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-sm dark:border-gray-800">
               <iframe
