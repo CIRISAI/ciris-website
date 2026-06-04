@@ -27,6 +27,7 @@ import FractalSelfCallout from "./components/FractalSelfCallout";
 import AlephView from "./components/AlephView";
 import MediaTierPanel from "./components/MediaTierPanel";
 import ConsentTierPanel from "./components/ConsentTierPanel";
+import LineagePanel from "./components/LineagePanel";
 
 export default async function GrammarPage() {
   const source = await getRegistrySource();
@@ -245,6 +246,7 @@ export default async function GrammarPage() {
             <NamespacePanel source={source} />
             <MediaTierPanel />
             <ConsentTierPanel />
+            <LineagePanel />
             <AlephView source={source} />
             <ExploreCTA />
             <CompositionGraph source={source} />
@@ -271,7 +273,7 @@ export default async function GrammarPage() {
                   rel="noopener noreferrer"
                   className="rounded-md border border-slate-300 px-3 py-2 text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
                 >
-                  CEG 0.1 — the wire-format spec (18-file directory) →
+                  {source.specVersion} — the wire-format spec (18-file directory) →
                 </a>
                 <a
                   href={witnessRegistryLink}

@@ -24,12 +24,16 @@ export default function EnvelopeAndAxesPanel() {
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
           The envelope carries nine fields that consumers use to weight an
-          attestation. These are <strong>not</strong> wire primitives — they
-          are consumer-reasoning axes per CEG 0.1 §2. CEG 0.6 added{" "}
+          attestation. These are <strong>signed payload but not
+          structural primitives</strong> per §2 — they are carried and
+          signed (the canonical bytes include them per §0.9 envelope
+          canonicalization), but they don&rsquo;t change the 1+4
+          structural-primitive set. Implementers MUST carry them; CEG
+          0.6 added{" "}
           <code className="rounded bg-slate-100 px-1 dark:bg-gray-800">
             subject_key_ids
           </code>{" "}
-          as a ninth OPTIONAL field for subject-side authority.
+          as the ninth OPTIONAL field for subject-side authority.
         </p>
       </header>
 

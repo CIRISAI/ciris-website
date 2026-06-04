@@ -75,7 +75,7 @@ function PrefixRowDisplay({ row }: { row: PrefixRow }) {
           rel="noopener noreferrer"
           className="text-brand-primary hover:underline"
         >
-          CEG 0.1 §{row.section}
+          §{row.section}
         </a>
         {row.citation && (
           <>
@@ -115,7 +115,7 @@ export default function NamespacePanel({
             {source.specVersion} §5
           </a>{" "}
           (commit {source.commitShaShort}). The namespace is open-extensible
-          — new prefix families can be added via CEG 0.1 §11.2 amendment.
+          — new prefix families can be added via §11.2 amendment.
         </p>
       </header>
 
@@ -161,7 +161,7 @@ export default function NamespacePanel({
                 {subsections.length === 0 ? (
                   <p className="text-xs italic text-slate-500 dark:text-slate-400">
                     No prefix tables parsed for this component in the current
-                    CEG 0.1 cut.
+                    spec cut.
                   </p>
                 ) : (
                   <div className="space-y-4">

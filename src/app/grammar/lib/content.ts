@@ -291,7 +291,7 @@ export const COMPOSITION_POLICIES: CompositionPolicy[] = [
     id: "G",
     name: "Trust-Fresh / lighthouse composition",
     description:
-      "Cross-component composition recurring as the substrate's freshness-plus-attested idiom: cert_validity:{authority} + transparency_log:inclusion + attestation:l3_or_l4. Each consumer policy weights the bundle differently; CEG 0.1 §8.1.7 documents the pattern after the 283-story stress test surfaced it organically.",
+      "Cross-component composition recurring as the substrate's freshness-plus-attested idiom: cert_validity:{authority} + transparency_log:inclusion + attestation:l3_or_l4. Each consumer policy weights the bundle differently; §8.1.7 documents the pattern after the 283-story stress test surfaced it organically.",
     classification: "specialization",
   },
   {
@@ -432,7 +432,7 @@ attestation_envelope:
     id: "encyclical-bootstrap",
     title: "Bootstrap content from the encyclical lands",
     scenario:
-      "Magnifica Humanitas §76 ('justice demands lexical priority for the most vulnerable') needs to land as a federation claim. The bootstrap-content pattern from CEG 0.1 §11.3 governs the discipline.",
+      "Magnifica Humanitas §76 ('justice demands lexical priority for the most vulnerable') needs to land as a federation claim. The bootstrap-content pattern from §11.3 governs the discipline.",
     primitives: ["scores", "justice:lexical_vulnerability_priority"],
     family: "STANDING",
     walkthrough:
@@ -521,7 +521,7 @@ attestation_envelope:
   witness_relation: self
   cohort_scope: self
   stake: reputational
-  # NEVER sole evidence for slashing:* per CEG 0.1 §5.6.3.`,
+  # NEVER sole evidence for slashing:* per §5.6.3.`,
   },
   {
     id: "locale-targeted-attack",
@@ -531,7 +531,7 @@ attestation_envelope:
     primitives: ["provenance:build_manifest:ios-mobile-bundle:locale:my"],
     family: "DETECTION",
     walkthrough:
-      "Per CEG 0.1 §5.2.1 canonical-bytes contract: each per-locale leaf carries its own signed hash chain; the parent manifest is a Merkle root over the per-locale leaves. RFC 6962 domain-separated hashing + lexicographic locale ordering + RFC-6962 padding for non-power-of-2 leaf counts.",
+      "Per §5.2.1 canonical-bytes contract: each per-locale leaf carries its own signed hash chain; the parent manifest is a Merkle root over the per-locale leaves. RFC 6962 domain-separated hashing + lexicographic locale ordering + RFC-6962 padding for non-power-of-2 leaf counts.",
     exampleYaml: `attestation_type: scores
 attesting_key_id: <verify-steward-2026>
 attested_key_id: <build:ios-mobile-bundle-v2.9.4>
@@ -575,7 +575,7 @@ export const NON_GOALS: { title: string; body: string }[] = [
   },
   {
     title: "No claim of completeness",
-    body: "The namespace is open-extensible. Prefix families can be added via CEG 0.1 §11.2 amendment. Render the current namespace as “as of CEG 0.1” with a link to the spec for the live state.",
+    body: "The namespace is open-extensible. Prefix families can be added via §11.2 amendment. Render the current namespace as of the current spec commit with a link to the live source.",
   },
   {
     title: "No rendering of self-attestation as a Cartesian admission gap",

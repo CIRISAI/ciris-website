@@ -63,7 +63,7 @@ export default function PrimitivesPanel() {
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"
               >
-                CEG 0.1 {p.fsdLabel} →
+                {p.fsdLabel} →
               </a>
             </p>
           </article>
