@@ -253,6 +253,60 @@ export default function Homepage() {
           </div>
         </Reveal>
 
+        {/* === 04.5 · Honest about the two paths === */}
+        <Reveal as="section" className="hsec" id="two-paths">
+          <div className="hsec-inner">
+            <header className="head-row rise">
+              <div className="eyebrow">
+                <span className="eb-dot" /> Two paths · same signed agent
+              </div>
+              <h2 className="title">
+                On your device, or hosted — <em>your call</em>.
+              </h2>
+            </header>
+            <p className="lead rise d1 lead-wide">
+              &ldquo;No data centers&rdquo; is the on-device path. We&rsquo;ll be
+              honest about the other one too.
+            </p>
+            <div className="paths rise d2">
+              <article className="path-card path-local">
+                <header className="path-header">
+                  <span className="path-pill mono">no data centers</span>
+                  <h3 className="path-title">Local · on your phone</h3>
+                </header>
+                <p className="path-body">
+                  Pair CIRISAgent with a small open model that runs on your
+                  phone — <b>Gemma 4 (E2B or E4B)</b>, Phi, or any compatible
+                  open model. Around <b>1.5 GB of RAM</b>, completely offline,
+                  zero hyperscale facilities. This is the path the rest of
+                  this page is talking about.
+                </p>
+              </article>
+              <article className="path-card path-hosted">
+                <header className="path-header">
+                  <span className="path-pill path-pill-mute mono">uses a data center</span>
+                  <h3 className="path-title">Hosted · free for everyone</h3>
+                </header>
+                <p className="path-body">
+                  For people who can&rsquo;t run a local model — older phones,
+                  low-resource languages, no storage to spare — CIRIS offers
+                  <b> free hosted inference</b> through providers like{" "}
+                  <b>DeepInfra</b>, in <b>29 languages</b>. That path uses
+                  someone else&rsquo;s data center. The signed traces, the
+                  accountability, and the ethical framework are identical.
+                </p>
+              </article>
+            </div>
+            <footer className="hfoot rise d3">
+              <span className="pip" />
+              <span>
+                both paths are signed &nbsp;·&nbsp; both can be checked
+                &nbsp;·&nbsp; we&rsquo;re upfront about which one you&rsquo;re on
+              </span>
+            </footer>
+          </div>
+        </Reveal>
+
         {/* === 05 · Promise 02 · privacy === */}
         <Reveal as="section" className="hsec" id="privacy">
           <div className="hsec-inner">
