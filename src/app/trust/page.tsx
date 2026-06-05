@@ -238,7 +238,7 @@ export default function TrustPage() {
             {
               headline: "Key Custody",
               copyText:
-                "Generate Ed25519 keypairs with AES-256-GCM envelope encryption. Self-custody or portal-custodied, your choice. ML-DSA-65 post-quantum keys coming soon.",
+                "Generate hybrid Ed25519 + ML-DSA-65 keypairs with AES-256-GCM envelope encryption. Self-custody or portal-custodied, your choice. The post-quantum half ships today, not on a roadmap.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },
