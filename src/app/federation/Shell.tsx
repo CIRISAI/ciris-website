@@ -14,7 +14,7 @@ export default function Shell({
 }) {
   const subtitle =
     level === "simple"
-      ? "A network of AI agents that thinks together — only in the open."
+      ? "A network of AI agents that thinks together. Only in the open."
       : "A decentralized ethical superintelligence: the system claim, the architecture, and the bets being made.";
 
   return (

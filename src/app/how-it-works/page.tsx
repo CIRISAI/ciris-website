@@ -736,7 +736,8 @@ export default function HowItWorksPage() {
         {/* CTA */}
         <section className="text-center border-t border-gray-200 dark:border-gray-700 pt-12">
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            This is accountability infrastructure. Not training-time alignment. Not policy documents.<br />
+            This is accountability that runs while the agent works, rather than
+            a training step or a policy document.<br />
             Mechanisms that execute, audit, and defer, at runtime.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">

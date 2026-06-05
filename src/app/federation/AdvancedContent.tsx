@@ -18,8 +18,7 @@ export default function AdvancedContent() {
           <p>
             The decision to build this has been public for over a year through
             the ACCORD, the source code, and the governance specifications.
-            What is new &mdash; and what warrants explicit articulation
-            &mdash; is the recognition that the architecture has reached a
+            What is new, and what warrants explicit articulation, is the recognition that the architecture has reached a
             maturity at which the emergent shape becomes visible: a federated
             cognitive substrate whose intelligence lives in the agreement
             structure across nodes rather than in any one of them. Under some
@@ -50,8 +49,7 @@ export default function AdvancedContent() {
           </p>
           <p>
             Every participant has a cryptographically attestable identity that
-            persists across versions and binds to a traceable action history
-            &mdash; agency as a first-class primitive rather than an
+            persists across versions and binds to a traceable action history, agency as a first-class primitive rather than an
             implementation detail. All cognition-relevant activity is
             represented as signed, append-only events: observations, model
             outputs, decisions, audits, updates, contradictions. The result is
@@ -62,7 +60,7 @@ export default function AdvancedContent() {
             alignment. Federation is voluntary, scoped, revocable, and
             asymmetric: trust weights differ per relationship, and no node can
             unilaterally impose epistemic state on another. Truth itself is a
-            computed object &mdash; signed evidence comparison, multi-node
+            computed object, signed evidence comparison, multi-node
             cross-checking, foundation-model judge contracts, reproducibility
             tests, and contradiction scoring produce a consensus-stable region
             in a space of competing signed interpretations.
@@ -70,7 +68,7 @@ export default function AdvancedContent() {
           <p>
             Safety, in this architecture, is the dynamic preservation of
             coherent inspectable alignment between intention, reasoning, and
-            action under recursive scaling &mdash; enforced through
+            action under recursive scaling, enforced through
             traceability, rollback-capable updates, anomaly detection in
             reasoning traces, adversarial evaluation loops, and coherence
             scoring across federated nodes. An observability layer
@@ -83,9 +81,9 @@ export default function AdvancedContent() {
           <p>
             The system&apos;s superintelligence is the stable attractor of
             federated agreement across these identity-bound,
-            provenance-tracked nodes under shared verification constraints. It
-            is not centralized reasoning. It is not ensemble averaging. It is
-            structured convergence under adversarial verification.
+            provenance-tracked nodes under shared verification constraints.
+            This is structured convergence under adversarial verification,
+            distinct from both centralized reasoning and ensemble averaging.
           </p>
         </div>
       </section>
@@ -114,7 +112,7 @@ export default function AdvancedContent() {
           <p>
             The architectural conclusion is that ethical superintelligence
             must be federated, inspectable, and forkable. Forkability is not
-            failure &mdash; it is a safety property. A system that cannot be
+            failure, it is a safety property. A system that cannot be
             forked cannot be exited; a system that cannot be exited collapses
             any meaningful consent into structural dependency.
           </p>
@@ -139,8 +137,8 @@ export default function AdvancedContent() {
             accord, and the Coherence Ratchet response.
           </p>
           <p>
-            Engineering details &mdash; primitive schemas, wire formats,
-            substrate contracts, decision-hierarchy semantics &mdash; live in
+            Engineering details, primitive schemas, wire formats,
+            substrate contracts, decision-hierarchy semantics, live in
             the FSD documents referenced in the canonical{" "}
             <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm text-gray-800 dark:bg-gray-800 dark:text-gray-200">
               CIRIS_FEDERATION.md
@@ -167,8 +165,7 @@ export default function AdvancedContent() {
               className="text-brand-primary hover:underline"
             >
               CIRISAgent repository
-            </a>{" "}
-            &mdash; from engineers, governance reviewers, ethicists, end
+            </a>{" "}, from engineers, governance reviewers, ethicists, end
             users, and the broader public alike. The most useful engagement
             challenges a specific architectural layer, one of the ethical
             postulate&apos;s four &ldquo;produces&rdquo; claims, the system
@@ -178,9 +175,9 @@ export default function AdvancedContent() {
             warranted. Issues that do not meet that bar are still read.
           </p>
           <p>
-            The accord grounding the project&apos;s commitments &mdash; the
+            The accord grounding the project&apos;s commitments, the
             ethical foundation referenced by ACCORD &sect;VII and the humanity
-            accord &mdash; is at{" "}
+            accord, is at{" "}
             <a
               href="/ciris_accord.txt"
               target="_blank"
@@ -203,7 +200,7 @@ export default function AdvancedContent() {
 
       <section className="mb-10 rounded-lg border-2 border-brand-primary bg-blue-50 p-8 dark:bg-blue-900/20">
         <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-          Honest status &mdash; what is built, what is bet.
+          Honest status, what is built, what is bet.
         </h2>
         <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
           <p>
@@ -233,8 +230,8 @@ export default function AdvancedContent() {
               Coherence Ratchet (advanced)
             </a>{" "}
             page is the web-rendered pair). The four papers under the
-            architecture &mdash; the synthesis, the formal model, the
-            empirical study, and the framework paper &mdash; are at{" "}
+            architecture, the synthesis, the formal model, the
+            empirical study, and the framework paper, are at{" "}
             <a href="/papers" className="text-brand-primary hover:underline">
               /papers
             </a>

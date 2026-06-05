@@ -33,8 +33,8 @@ export default function PrivacyPage() {
             </p>
             <p className="mt-4 text-gray-700 dark:text-gray-300">
               <strong>CIRISProxy:</strong> When you use our LLM proxy, your messages are transmitted securely to our servers, then to our
-              AI providers (Together, Groq, OpenRouter) for processing. <strong>All points in this pipeline are configured for
-              zero data retention</strong> - your conversations are processed and immediately discarded, never stored.
+              AI providers (Together, Groq, OpenRouter, DeepInfra) for processing. <strong>All points in this pipeline are configured for
+              zero data retention.</strong> Your conversations are processed and immediately discarded, never stored.
             </p>
             <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
               See <a href="#infrastructure" className="font-semibold text-green-700 underline hover:text-green-800 dark:text-green-400 dark:hover:text-green-300">Infrastructure Data</a> for what our servers actually store (spoiler: only billing metrics and system health - never message content).
@@ -119,11 +119,11 @@ export default function PrivacyPage() {
             <div className="space-y-3">
               <div className="rounded-lg border-2 border-green-500 bg-green-50 p-4 dark:border-green-600 dark:bg-green-900/20">
                 <h3 className="mb-2 font-semibold text-gray-900 dark:text-white">
-                  CIRIS Android App (Coming Soon)
+                  CIRIS Mobile App (iPhone &amp; Android)
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Mobile application with local-first architecture. Your data stays on your device.
-                  Zero data retention on our servers.
+                  Shipping now on the App Store and Google Play. Local-first architecture.
+                  Your data stays on your device. Zero data retention on our servers.
                 </p>
               </div>
               <div className="rounded-lg border-2 border-green-500 bg-green-50 p-4 dark:border-green-600 dark:bg-green-900/20">
@@ -797,6 +797,13 @@ export default function PrivacyPage() {
                     <td className="p-3"><a href="https://www.together.ai/privacy" className="text-blue-600 hover:underline dark:text-blue-400">Privacy Policy</a></td>
                   </tr>
                   <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <td className="p-3 font-medium">DeepInfra</td>
+                    <td className="p-3">LLM inference (free hosted tier)</td>
+                    <td className="p-3">US</td>
+                    <td className="p-3 text-green-600 dark:text-green-400">Zero (configured)</td>
+                    <td className="p-3"><a href="https://deepinfra.com/privacy" className="text-blue-600 hover:underline dark:text-blue-400">Privacy Policy</a></td>
+                  </tr>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
                     <td className="p-3 font-medium">Stripe</td>
                     <td className="p-3">Payment processing</td>
                     <td className="p-3">US/EU</td>
@@ -847,6 +854,15 @@ export default function PrivacyPage() {
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-500">
                   <a href="https://www.together.ai/privacy" className="text-blue-600 hover:underline dark:text-blue-400">Privacy Policy</a>
+                </p>
+              </div>
+              <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+                <h4 className="mb-2 font-semibold text-gray-900 dark:text-white">DeepInfra</h4>
+                <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
+                  LLM inference for the free hosted tier that keeps CIRIS available in 29 languages. Configured for zero data retention on CIRIS requests.
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-500">
+                  <a href="https://deepinfra.com/privacy" className="text-blue-600 hover:underline dark:text-blue-400">Privacy Policy</a>
                 </p>
               </div>
             </div>

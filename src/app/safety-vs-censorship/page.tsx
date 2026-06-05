@@ -106,7 +106,7 @@ export default function SafetyVsCensorshipPage() {
             <p className="text-base leading-7 text-slate-600 dark:text-slate-300 mb-6">
               The crowdsourcing primitives, the appeal paths, and the
               machine-applicable rule format live in the CIRISNodeCore
-              spec. The 14-language mental-health batteries are the first
+              spec. The 29-language mental-health batteries are the first
               cell where the loop runs.
             </p>
             <div className="flex flex-wrap gap-3">

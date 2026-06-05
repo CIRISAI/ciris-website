@@ -237,9 +237,9 @@ export default function SimpleContent() {
         </h2>
         <div className="space-y-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
           <p>
-            The architectural protections &mdash; decentralization, the
+            The architectural protections, decentralization, the
             three-person humanity accord, the signed records, the monthly
-            drill &mdash; are bets, not certainties. We can describe what the
+            drill, are bets, not certainties. We can describe what the
             bets are. We cannot claim they have already been won. Outside
             teams have not yet evaluated the system at scale.{" "}
             <a
@@ -278,8 +278,8 @@ export default function SimpleContent() {
             engagement is welcome.
           </p>
           <p>
-            The accord that grounds the whole project &mdash; what CIRIS owes
-            to people, and what people owe back &mdash; is at{" "}
+            The accord that grounds the whole project, what CIRIS owes
+            to people, and what people owe back, is at{" "}
             <a
               href="/ciris_accord.txt"
               target="_blank"

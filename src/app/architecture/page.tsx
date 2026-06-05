@@ -27,9 +27,15 @@ export default function ArchitecturePage() {
             <p className="text-gray-700 dark:text-gray-300">
               The CIRIS infrastructure is meant to be temporary. Every part of it is
               built knowing it will be retired once the peer-to-peer network meant to
-              replace it is ready. That is not a flaw. It is the plan. We avoid
+              replace it is ready. That is the plan, not an accident. We avoid
               anything that ties CIRIS to one company, or that assumes a central hub
               has to exist forever.
+            </p>
+            <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">
+              This is the <strong>hosted path</strong>: the two rented regions below
+              keep CIRIS free for everyone today. Run a small model on your own device
+              and you skip them entirely. The substrate that replaces them is{" "}
+              <a href="/cewp" className="font-semibold text-brand-primary hover:underline">CEWP</a>.
             </p>
             <div className="mt-4 grid gap-2 text-sm text-gray-600 dark:text-gray-400 sm:grid-cols-3">
               <div><strong>DNS</strong> → Veilid DHT</div>
@@ -603,7 +609,7 @@ export default function ArchitecturePage() {
           {/* Footer */}
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
             <p className="italic">
-              "This infrastructure exists to be deleted. That's not a bug. It's the mission."
+              "This infrastructure exists to be deleted. That is the whole point."
             </p>
             <p className="mt-4">CIRIS: Accountability Infrastructure for Autonomous AI</p>
             <p className="mt-2">© 2025-2026 Eric Moore and CIRIS L3C | AGPL-3.0 License</p>

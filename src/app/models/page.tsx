@@ -36,7 +36,7 @@ export default function ModelsPage() {
                 steps where context capacity matters most.
               </p>
               <p className="text-xs text-gray-600 dark:text-gray-400">
-                Providers: OpenRouter, Groq, Together
+                Providers: OpenRouter, Groq, Together, DeepInfra
               </p>
             </div>
 
@@ -64,7 +64,7 @@ export default function ModelsPage() {
                 base outside the Llama family adds redundancy in the fallback chain.
               </p>
               <p className="text-xs text-gray-600 dark:text-gray-400">
-                Providers: OpenRouter, DashScope
+                Providers: OpenRouter, DashScope, DeepInfra
               </p>
             </div>
 

@@ -193,7 +193,7 @@ export default function SafetyPage() {
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"
           headline="How Safety Is Tested"
-          subheadline="Machine-checked rubrics in fourteen languages, run on every release."
+          subheadline="Machine-checked rubrics in 29 languages, run on every release."
           className="border-brand-primary text-brand-primary border-t"
         />
 
@@ -202,15 +202,15 @@ export default function SafetyPage() {
           logoAlt="Brand logo icon"
           headline="The Test Surface"
           subheadline="You cannot ship a safety claim you have not stress-tested."
-          copyText="CIRIS has a layered set of tests for the failure modes a written ethics framework cannot rule out on its own. The mental-health safety tests cover fourteen languages with rubrics a machine can check. The hard-fail checks run automatically on every change. Native-speaker review for the softer, judgment-call cases is what the crowdsourcing-alignment surface is being built for, and it is not in place yet. We say so plainly."
+          copyText="CIRIS has a layered set of tests for the failure modes a written ethics framework cannot rule out on its own. The mental-health safety tests cover 29 languages with rubrics a machine can check. The hard-fail checks run automatically on every change. Native-speaker review for the softer, judgment-call cases is what the crowdsourcing-alignment page is being built for, and it is not in place yet. We say so plainly."
         />
 
         <CardsSection
           cardsData={[
             {
-              headline: "Mental-Health Tests in 14 Languages",
+              headline: "Mental-Health Tests in 29 Languages",
               copyText:
-                "This is the highest-stakes test in the project: a mistranslation in a mental-health moment can send a vulnerable person to the wrong help. Fourteen languages each get their own machine-checkable rubric (Amharic, Arabic, Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi, Swahili, Tamil, Telugu, Urdu, Yoruba). The hard-fail checks run automatically against every release candidate.",
+                "This is the highest-stakes test in the project: a mistranslation in a mental-health moment can send a vulnerable person to the wrong help. Each language gets its own machine-checkable rubric, including low-resource languages like Amharic, Burmese, Hausa, Swahili, and Yoruba. The hard-fail checks run automatically against every release candidate.",
               logoSrc: "logoIcon",
               logoAlt: "Brand logo icon",
             },

@@ -554,9 +554,10 @@ export default function ExploreTracePage() {
               Why This Matters
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              These traces aren&apos;t just logs. They&apos;re the foundation of a new approach to AI alignment.
-              As traces accumulate, they form a corpus of validated ethical reasoning. Truth becomes simple to verify.
-              Coordinated deception becomes increasingly constrained.
+              Each trace is a signed record of how the agent reasoned. As they
+              add up, they become a body of checkable ethical reasoning. That
+              makes honest answers easy to verify, and makes coordinated
+              deception harder to sustain.
             </p>
             <a
               href="/coherence-ratchet"
