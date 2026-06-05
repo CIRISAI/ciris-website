@@ -61,37 +61,55 @@ export const FloatingNav = ({
       >
         {/* Top Row: Nav Items */}
         <div className="hidden md:flex items-center gap-6 mb-3">
-          {navItems.map((navItem: any, idx: number) => (
-            <Link
-              key={`link=${idx}`}
-              href={navItem.link}
-              className={cn(
-                "flex flex-col items-center text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors"
-              )}
-            >
-              <span className="text-sm font-medium">
-                {navItem.name}
-              </span>
-              <span className="text-[10px] uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
-                {navItem.subtitle}
-              </span>
-            </Link>
-          ))}
+          {navItems.map((navItem: any, idx: number) => {
+            const isInstall = navItem.link === "/install";
+            return (
+              <Link
+                key={`link=${idx}`}
+                href={navItem.link}
+                className={cn(
+                  isInstall
+                    ? "flex flex-col items-center text-brand-primary font-semibold hover:text-brand-secondary transition-colors"
+                    : "flex flex-col items-center text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors"
+                )}
+              >
+                <span className={cn("text-sm", isInstall ? "font-semibold" : "font-medium")}>
+                  {navItem.name}
+                </span>
+                <span
+                  className={cn(
+                    "text-[10px] uppercase tracking-wider",
+                    isInstall
+                      ? "text-brand-primary/70"
+                      : "text-neutral-500 dark:text-neutral-400"
+                  )}
+                >
+                  {navItem.subtitle}
+                </span>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Mobile Nav Items */}
         <div className="flex md:hidden items-center gap-1.5 mb-2 flex-wrap justify-center">
-          {navItems.map((navItem: any, idx: number) => (
-            <Link
-              key={`mobile-link=${idx}`}
-              href={navItem.link}
-              className={cn(
-                "text-[10px] font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white whitespace-nowrap"
-              )}
-            >
-              {navItem.name}
-            </Link>
-          ))}
+          {navItems.map((navItem: any, idx: number) => {
+            const isInstall = navItem.link === "/install";
+            return (
+              <Link
+                key={`mobile-link=${idx}`}
+                href={navItem.link}
+                className={cn(
+                  "text-[10px] whitespace-nowrap transition-colors",
+                  isInstall
+                    ? "text-brand-primary font-semibold hover:text-brand-secondary"
+                    : "font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+                )}
+              >
+                {navItem.name}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Bottom Row: Product Buttons - Sage, Scout (centered), Medical */}

@@ -293,6 +293,26 @@
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
+/* Hero CTAs — louder than the close-section ones so they read above
+ * the fold. Filled accent on the primary, with the store icons in a
+ * contrasting white. */
+.home-narrative .cta-hero { margin-top: 8px; }
+.home-narrative .store-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0D1117;
+  padding: 16px 26px;
+  font-size: 16px;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 35%, transparent);
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.home-narrative .store-primary:hover {
+  background: color-mix(in srgb, var(--accent) 80%, white 20%);
+  border-color: color-mix(in srgb, var(--accent) 80%, white 20%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -8px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+.home-narrative .store-primary svg { color: #0D1117; flex: 0 0 auto; }
 .home-narrative .ctahint {
   font-weight: 500; font-size: 14px; line-height: 1; color: var(--text-mute);
   letter-spacing: 0.04em;
