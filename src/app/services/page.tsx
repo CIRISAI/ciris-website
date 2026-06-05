@@ -2,7 +2,6 @@
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
-import FlexSection from "@/app/components/SectionFlexContent";
 import CardsSection from "@/app/components/CardsSection";
 import SeparatorTitleBlock from "@/app/components/Separatortitle";
 import { DeviceMobile, Shield, CurrencyDollar } from "@phosphor-icons/react";
@@ -88,11 +87,11 @@ export default function ServicesPage() {
               CIRIS Hosted Services
             </h2>
             <p className="text-lg leading-8 text-gray-600 dark:text-gray-300">
-              Privacy-focused LLM proxy and billing services for the CIRIS Android App
+              Privacy-focused LLM proxy and billing services for the CIRIS mobile apps
             </p>
             <div className="mt-4 rounded-md bg-blue-100 p-3 dark:bg-blue-900/40">
               <p className="text-sm font-semibold text-gray-900 dark:text-white">
-                Note: The CIRIS LLM proxy is exclusively available for use with the CIRIS Android App
+                Note: The CIRIS LLM proxy is for use with the CIRIS apps on iPhone and Android
               </p>
             </div>
           </div>
@@ -125,15 +124,6 @@ export default function ServicesPage() {
               </ul>
             </div>
           </div>
-
-          {/* Daily Free Uses */}
-          <FlexSection
-            logoSrc="logoIcon"
-            logoAlt="Brand logo icon"
-            headline="Daily Free Uses"
-            subheadline="2 free LLM calls every day, no credit card required."
-            copyText="Every CIRIS account gets 2 free LLM API calls daily, resetting at midnight UTC. Use them for quick tasks, testing, or just exploring what CIRIS can do. No payment information needed to get started."
-          />
 
           {/* Pricing */}
           <div className="mb-12 rounded-lg border-2 border-purple-500 bg-purple-50 p-6 dark:border-purple-400 dark:bg-purple-900/20">

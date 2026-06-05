@@ -198,44 +198,6 @@ export default function ComparePage() {
           </div>
         </div>
 
-        {/* Why Ethics Alone Fails */}
-        <div className="my-12 bg-gray-900 dark:bg-black rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-white mb-2">Why Rules Alone Aren&apos;t Enough</h3>
-          <p className="text-brand-primary font-medium mb-6">The echo chamber problem.</p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-gray-300 mb-4">
-                As sources start copying each other, the number of truly independent viewpoints collapses, even if you have ten sources on paper.
-              </p>
-              <p className="text-gray-300">
-                Ten sources that all read the same report? That&apos;s really one source counted ten times.
-              </p>
-            </div>
-            <div>
-              <p className="text-gray-300 mb-4">
-                An ethical AI following copied guidance is like a democracy where every voter reads the same newspaper.
-                The vote count looks healthy. The actual number of viewpoints is one.
-              </p>
-              <p className="text-gray-300">
-                <strong className="text-white">Agreement only means something when the sources are actually independent.</strong>
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-6 pt-6 border-t border-gray-700 flex flex-wrap gap-4 items-center justify-between">
-            <p className="text-sm text-gray-400">
-              This problem shows up everywhere, from financial markets to scientific peer review to social media.
-            </p>
-            <a
-              href="/coherence-ratchet"
-              className="inline-flex items-center gap-2 text-brand-primary hover:underline font-medium text-sm"
-            >
-              Read the full thesis →
-            </a>
-          </div>
-        </div>
-
         <SeparatorTitleBlock
           logoSrc="logoIcon"
           logoAlt="Brand logo icon"

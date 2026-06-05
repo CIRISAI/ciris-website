@@ -2,7 +2,6 @@
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
-import FlexSection from "@/app/components/SectionFlexContent";
 import SeparatorTitleBlock from "@/app/components/Separatortitle";
 import CardsSection from "@/app/components/CardsSection";
 
@@ -31,9 +30,9 @@ export default function ModelsPage() {
                 Llama 4 Maverick
               </h2>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                The reasoning workhorse. Mixture-of-Experts with ~17B active parameters per token,
-                1M token context, multi-provider availability. Default for the deeper reasoning
-                steps where context capacity matters most.
+                The reasoning workhorse. It holds a very large amount of context
+                at once, so it is the default for the deeper reasoning steps where
+                keeping the whole picture in view matters most.
               </p>
               <p className="text-xs text-gray-600 dark:text-gray-400">
                 Providers: OpenRouter, Groq, Together, DeepInfra
@@ -81,17 +80,6 @@ export default function ModelsPage() {
                 Providers: OpenRouter, Google
               </p>
             </div>
-          </div>
-
-          {/* Why This Matters */}
-          <div className="mt-12">
-            <FlexSection
-              logoSrc="logoIcon"
-              logoAlt="Brand logo icon"
-              headline="CIRIS doesn't trim its values to fit the model"
-              subheadline="We choose models large enough to carry our entire ethical framework."
-              copyText="CIRIS includes the complete Accord and Comprehensive Guide in every single LLM call. No compression, no summaries, no options. This means the agent never forgets its obligations, not even for a single token. That's why context window isn't a vanity metric for us: it's a direct extension of our commitment to transparency and accountability."
-            />
           </div>
 
           {/* Model Criteria */}

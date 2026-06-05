@@ -79,7 +79,7 @@ export default function ResearchStatusPage() {
                     Research status
                   </span>
                   <span className="rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300">
-                    Updated: May 20, 2026
+                    Updated: May 22, 2026
                   </span>
                 </div>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
@@ -89,7 +89,10 @@ export default function ResearchStatusPage() {
                   CIRIS is building an open trace commons for alignment research.
                 </h1>
                 <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-                  We are learning what standardized ethical tracing can tell us about alignment and superalignment by measuring the shape of reasoning rather than the private specifics. Each consented trace is a small measurement of how an agent moved through ethical space during a real task.
+                  We give away a free AI app. With your okay, it records the
+                  shape of how it reasoned, never your private words. Those
+                  records become a public map that researchers can study to
+                  learn what keeps AI honest as it scales.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
@@ -146,34 +149,13 @@ export default function ResearchStatusPage() {
                 Five-Substrate Empirical Validation
               </p>
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
-                The integration statement of CIRIS, the single document that
-                states the framework&apos;s full structural commitment.
-                Coordinated systems sit in a bounded <strong>corridor</strong>{" "}
-                between rigidity (ρ → 1, single-voice collapse) and chaos
-                (ρ → 0, vacuous dispersal); the corridor is the regime where
-                coordination is possible at all. The argument grounds in
-                Ubuntu&apos;s relational ontology, formalizes in Lean 4
-                (1,942 modules, 0 declaration-level gaps, 63 documented
-                axioms), and reads two-state vector formalism as the
-                structural form of agency.
-              </p>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
-                The new empirical contribution is a <strong>paired
-                in-corridor / out-of-corridor record across five
-                substrates</strong>: C. elegans whole-brain calcium imaging,
-                Drosophila central-complex imaging, four LLM architectures,
-                four open-source projects (Kubernetes, Rust, Django, Redis),
-                tumor-vs-normal tissue across five cancers, and three
-                centuries-persisting religious societies. The dynamical
-                reading&apos;s strongest would-be falsifier (long unmaintained
-                non-corridor persistence) is <strong>absent at all five</strong>:
-                out-of-corridor states either dissolve quickly or persist only
-                with documented active maintenance. v2 (May 22, 2026) reruns
-                all five under a debiased estimator (5/5 PASS) and extends the
-                record to human brain imaging (fMRI, 139 controls), mouse
-                visual cortex, and twelve cancers. The synthesis is offered as
-                a bet under uncertainty, with twenty falsification handles
-                (F-1 … F-20) attached to every load-bearing seam.
+                The single paper that states the whole CIRIS bet: healthy
+                coordinated systems sit in a measurable middle band, away from
+                both rigid single-voice collapse and chaotic noise. We tested
+                that claim across worms, flies, AI models, open-source
+                projects, tissue samples, and long-lived human institutions.
+                The pattern holds in every one, and the paper attaches twenty
+                ways it could be proven wrong.
               </p>
               <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary">
                 Read on Zenodo →

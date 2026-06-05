@@ -28,11 +28,10 @@ export default function MddPage() {
               Mission as the fourth foundation of software architecture.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-              Mission Driven Development (MDD) is a software engineering methodology that
-              structures technical architecture around an objective ethical framework. Unlike
-              approaches that treat ethics as external constraints, MDD embeds mission-critical
-              purpose directly into the foundational design patterns, creating systems where
-              technical excellence and ethical behavior are mutually reinforcing.
+              Most software asks how to build a thing. Mission Driven Development
+              (MDD) adds one question first: why are we building it, and does this
+              choice serve that purpose? CIRIS was built this way, so ethics is part
+              of the design instead of a rule bolted on afterward.
             </p>
           </section>
 

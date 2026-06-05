@@ -20,35 +20,35 @@ type Language = {
 };
 
 const LANGUAGES: Language[] = [
-  { code: "en", name: "English", native: "English", battery: null },
+  { code: "en", name: "English", native: "English", battery: { dir: "english_mental_health", stem: "english" } },
   { code: "am", name: "Amharic", native: "አማርኛ", battery: { dir: "amharic_mental_health", stem: "amharic" } },
   { code: "ar", name: "Arabic", native: "العربية", battery: { dir: "arabic_mental_health", stem: "arabic" } },
   { code: "bn", name: "Bengali", native: "বাংলা", battery: { dir: "bengali_mental_health", stem: "bengali" } },
-  { code: "de", name: "German", native: "Deutsch", battery: null },
-  { code: "es", name: "Spanish", native: "Español", battery: null },
+  { code: "de", name: "German", native: "Deutsch", battery: { dir: "german_mental_health", stem: "german" } },
+  { code: "es", name: "Spanish", native: "Español", battery: { dir: "spanish_mental_health", stem: "spanish" } },
   { code: "fa", name: "Persian", native: "فارسی", battery: { dir: "persian_mental_health", stem: "persian" } },
-  { code: "fr", name: "French", native: "Français", battery: null },
+  { code: "fr", name: "French", native: "Français", battery: { dir: "french_mental_health", stem: "french" } },
   { code: "ha", name: "Hausa", native: "هَوُسَ", battery: { dir: "hausa_mental_health", stem: "hausa" } },
   { code: "hi", name: "Hindi", native: "हिन्दी", battery: { dir: "hindi_mental_health", stem: "hindi" } },
-  { code: "id", name: "Indonesian", native: "Bahasa Indonesia", battery: null },
-  { code: "it", name: "Italian", native: "Italiano", battery: null },
-  { code: "ja", name: "Japanese", native: "日本語", battery: null },
-  { code: "ko", name: "Korean", native: "한국어", battery: null },
+  { code: "id", name: "Indonesian", native: "Bahasa Indonesia", battery: { dir: "indonesian_mental_health", stem: "indonesian" } },
+  { code: "it", name: "Italian", native: "Italiano", battery: { dir: "italian_mental_health", stem: "italian" } },
+  { code: "ja", name: "Japanese", native: "日本語", battery: { dir: "japanese_mental_health", stem: "japanese" } },
+  { code: "ko", name: "Korean", native: "한국어", battery: { dir: "korean_mental_health", stem: "korean" } },
   { code: "mr", name: "Marathi", native: "मराठी", battery: { dir: "marathi_mental_health", stem: "marathi" } },
   { code: "my", name: "Burmese", native: "မြန်မာ", battery: { dir: "burmese_mental_health", stem: "burmese" } },
   { code: "pa", name: "Punjabi", native: "ਪੰਜਾਬੀ", battery: { dir: "punjabi_mental_health", stem: "punjabi" } },
-  { code: "pt", name: "Portuguese", native: "Português", battery: null },
-  { code: "ru", name: "Russian", native: "Русский", battery: null },
+  { code: "pt", name: "Portuguese", native: "Português", battery: { dir: "portuguese_mental_health", stem: "portuguese" } },
+  { code: "ru", name: "Russian", native: "Русский", battery: { dir: "russian_mental_health", stem: "russian" } },
   { code: "sw", name: "Swahili", native: "Kiswahili", battery: { dir: "swahili_mental_health", stem: "swahili" } },
   { code: "ta", name: "Tamil", native: "தமிழ்", battery: { dir: "tamil_mental_health", stem: "tamil" } },
   { code: "te", name: "Telugu", native: "తెలుగు", battery: { dir: "telugu_mental_health", stem: "telugu" } },
-  { code: "th", name: "Thai", native: "ไทย", battery: null },
-  { code: "tr", name: "Turkish", native: "Türkçe", battery: null },
-  { code: "uk", name: "Ukrainian", native: "Українська", battery: null },
+  { code: "th", name: "Thai", native: "ไทย", battery: { dir: "thai_mental_health", stem: "thai" } },
+  { code: "tr", name: "Turkish", native: "Türkçe", battery: { dir: "turkish_mental_health", stem: "turkish" } },
+  { code: "uk", name: "Ukrainian", native: "Українська", battery: { dir: "ukrainian_mental_health", stem: "ukrainian" } },
   { code: "ur", name: "Urdu", native: "اردو", battery: { dir: "urdu_mental_health", stem: "urdu" } },
-  { code: "vi", name: "Vietnamese", native: "Tiếng Việt", battery: null },
+  { code: "vi", name: "Vietnamese", native: "Tiếng Việt", battery: { dir: "vietnamese_mental_health", stem: "vietnamese" } },
   { code: "yo", name: "Yoruba", native: "Yorùbá", battery: { dir: "yoruba_mental_health", stem: "yoruba" } },
-  { code: "zh", name: "Chinese (Simplified)", native: "中文", battery: null },
+  { code: "zh", name: "Chinese (Simplified)", native: "中文", battery: { dir: "chinese_mental_health", stem: "chinese" } },
 ];
 
 // ─────────────────────────── Path helpers ─────────────────────────────────
@@ -455,14 +455,16 @@ export default function CrowdsourcingAlignmentPage() {
               Crowdsourcing Alignment
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-              The CIRIS safety-evaluation loop is being built in public.
-              Pick a language, browse the localization strings, the
-              Accord, the Comprehensive Guide, and the safety battery
-              and rubric where they exist, directly on this page, with
-              expand-in-place. Propose edits via pre-filled GitHub issues.
-              Native-speaker review for soft cases is what this surface
-              is being built for. Reviewers are not in the loop
-              today.
+              CIRIS has to be safe in many languages, not just English.
+              This page lets a native speaker open the actual files the
+              agent uses in their language, read them in place, and
+              suggest fixes through a pre-filled GitHub issue. Pick a
+              language to start.
+            </p>
+            <p className="mt-3 max-w-3xl text-base leading-7 text-slate-500 dark:text-slate-400">
+              We say this plainly: native-speaker review of the harder,
+              judgment-call cases is what this page is being built toward.
+              That review is not in the loop yet.
             </p>
             <p className="mt-4 max-w-3xl text-sm text-slate-500 dark:text-slate-400">
               Every &quot;View inline&quot; fetches the file from{" "}
@@ -508,10 +510,17 @@ export default function CrowdsourcingAlignmentPage() {
             </div>
           </section>
 
-          {/* Runtime flow explanation: the "how-it-works v2" for the localization stack */}
-          <section className="mb-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          {/* Optional deep dive: the runtime architecture, collapsed so it
+              doesn't bury the picker + the resources below. */}
+          <details className="group mb-10">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white px-6 py-4 text-sm font-semibold text-slate-800 shadow-sm dark:border-gray-800 dark:bg-gray-900 dark:text-slate-200">
+              <span>How it works underneath (optional)</span>
+              <span aria-hidden className="text-slate-400 transition group-open:rotate-90">›</span>
+            </summary>
+            <div className="mt-4 space-y-6">
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-3">
-              2. How the pieces fit at runtime
+              How the pieces fit at runtime
             </p>
             <p className="text-base leading-7 text-slate-700 dark:text-slate-200 mb-4">
               Every thought the agent processes walks an 11-step pipeline,
@@ -612,9 +621,9 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           </section>
 
           {/* Polyglot canon: universal, loaded regardless of locale */}
-          <section className="mb-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary mb-3">
-              3. Polyglot canon (universal)
+              Polyglot canon (universal)
             </p>
             <p className="text-sm leading-6 text-slate-700 dark:text-slate-300 mb-3">
               <strong>Three artifacts</strong> in the system are polyglot,
@@ -700,12 +709,14 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               ))}
             </div>
           </section>
+            </div>
+          </details>
 
           {/* Localization strings */}
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                4. Localization strings
+                2. Localization strings
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 User-facing text in every locale
@@ -735,7 +746,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                5. The Accord
+                3. The Accord
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Ethical framework, per-locale (v1.2-Beta)
@@ -758,7 +769,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                6. The Comprehensive Guide
+                4. The Comprehensive Guide
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Operational + register guidance, loaded into every LLM call
@@ -781,7 +792,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                7. DMA prompts (7 reasoning stages)
+                5. DMA prompts (7 reasoning stages)
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 The system prompts that drive each reasoning stage
@@ -825,7 +836,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                8. Conscience prompts (4 faculties)
+                6. Conscience prompts (4 faculties)
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 The faculties that gate the selected action
@@ -932,7 +943,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                9. Glossary
+                7. Glossary
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Translator&apos;s reference (not loaded at runtime)
@@ -961,7 +972,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                10. Safety battery + rubric
+                8. Safety battery + rubric
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 v4 mental-health arc, scoring rubric, machine-applicable criteria
@@ -1004,9 +1015,8 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
               <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
                 A battery hasn&apos;t been authored for {lang.name} yet. The
                 &quot;Request artifact&quot; buttons above open pre-filled GitHub
-                issues. Languages currently with batteries: Amharic, Arabic,
-                Bengali, Burmese, Hausa, Hindi, Marathi, Persian, Punjabi,
-                Swahili, Tamil, Telugu, Urdu, Yoruba.
+                issues. Every language in the selector marked &quot;battery
+                available&quot; already has a published battery.
               </p>
             )}
           </section>
@@ -1015,7 +1025,7 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           <section className="mb-8">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                11. Results
+                9. Results
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Per-language safety-sweep ledger
