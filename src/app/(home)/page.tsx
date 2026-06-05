@@ -62,7 +62,7 @@ export default function Homepage() {
             </p>
             <div className="cover-foot rise d3">
               <span>CIRISAgent &nbsp;·&nbsp; CEWP — &ldquo;soup&rdquo;</span>
-              <span>CIRIS 3.0</span>
+              <span>CIRIS 2.9.4 shipping &nbsp;·&nbsp; 3.0 rolling out June–July 2026</span>
             </div>
           </div>
         </Reveal>
@@ -412,12 +412,13 @@ export default function Homepage() {
               <span className="eb-dot" /> Not just talk
             </div>
             <h1 className="cover-h1 cover-h1-close rise d1">
-              CIRIS 3.0 is <em>open</em>,<br />
+              CIRIS is <em>open</em>,<br />
               and it&rsquo;s <em>here</em>.
             </h1>
             <p className="cover-sub rise d2">
-              Open source, all the way through — and{" "}
-              <b>on your phone today.</b>
+              Open source, all the way through. <b>2.9.4 is shipping
+              now</b> on iPhone and Android, and <b>3.0 rolls out
+              through June and July 2026</b>.
             </p>
             <div className="cta rise d3">
               <a

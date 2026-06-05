@@ -227,6 +227,16 @@
   align-items: center;
   padding: 96px 32px;
 }
+/* First section sits beneath the FloatingNav; bump top padding so the
+ * eyebrow + headline aren't clipped on first paint. */
+.home-narrative > .hsec-cover:first-of-type {
+  padding-top: 176px;
+}
+@media (min-width: 768px) {
+  .home-narrative > .hsec-cover:first-of-type {
+    padding-top: 192px;
+  }
+}
 .home-narrative .cover-inner {
   position: relative;
   z-index: 2;
