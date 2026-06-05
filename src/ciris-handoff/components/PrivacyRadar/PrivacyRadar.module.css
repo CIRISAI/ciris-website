@@ -1,0 +1,20 @@
+.radar { width: 100%; height: auto; display: block; max-width: 420px; }
+.faint { fill: none; stroke: rgba(255,255,255,0.07); stroke-width: 1.2; }
+.midRing { fill: color-mix(in srgb, var(--accent) 7%, transparent); stroke: color-mix(in srgb, var(--accent) 35%, transparent); stroke-width: 1.4; }
+.boundary { fill: color-mix(in srgb, var(--accent) 12%, transparent); stroke: color-mix(in srgb, var(--accent) 50%, transparent); stroke-width: 1.4; }
+.core { fill: color-mix(in srgb, var(--accent) 22%, transparent); stroke: var(--accent); stroke-width: 1.6; }
+.coreDot { fill: var(--accent); transform-box: fill-box; transform-origin: center; }
+.sonar { fill: none; stroke: var(--accent); stroke-width: 2; transform-box: fill-box; transform-origin: center; opacity: 0; }
+.coreLabel { fill: var(--text, #F4F5F7); font: 17px 'Geist Mono', ui-monospace, monospace; letter-spacing: 1px; }
+.outerLabel { fill: var(--text-mute, #6B7280); font: 17px 'Geist Mono', ui-monospace, monospace; letter-spacing: 1px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .boundary { animation: radarBoundary 3.2s ease-in-out infinite; }
+  .coreDot { animation: radarBreathe 3.3s ease-in-out infinite; }
+  .sonar { animation: radarContain 3.6s ease-out infinite; }
+  .s2 { animation-delay: 1.27s; }
+  .s3 { animation-delay: 2.54s; }
+}
+@keyframes radarContain { 0% { transform: scale(.45); opacity: 0; } 25% { opacity: .65; } 78% { opacity: .5; } 100% { transform: scale(1.9); opacity: 0; } }
+@keyframes radarBoundary { 0%,100% { stroke: color-mix(in srgb, var(--accent) 45%, transparent); } 50% { stroke: color-mix(in srgb, var(--accent) 95%, transparent); } }
+@keyframes radarBreathe { 0%,100% { opacity: .62; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }

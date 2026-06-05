@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${fontBrandRegular.className} ${geistMono.variable} antialiased`}
+        className={` ${fontBrandRegular.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="bg-white dark:bg-black">{children}</div>
       </body>

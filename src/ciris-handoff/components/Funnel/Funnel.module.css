@@ -1,0 +1,18 @@
+.funnel { width: 100%; height: auto; display: block; }
+.people circle { fill: var(--text-mute, #6B7280); }
+.flow { fill: none; stroke: rgba(154,163,175,0.5); stroke-width: 1.4; }
+.neck { fill: color-mix(in srgb, var(--accent) 16%, transparent); stroke: var(--accent); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; }
+.racks rect { fill: var(--bg-card, #1A222C); stroke: var(--border-strong, rgba(255,255,255,0.16)); }
+.leds circle { fill: var(--accent); }
+.barLines rect { fill: rgba(154,163,175,0.35); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow { stroke-dasharray: 5 11; animation: funnelFlow 2.6s linear infinite; }
+  .neck { animation: funnelBreathe 3.3s ease-in-out infinite; }
+  .leds circle { animation: funnelLed 1.9s ease-in-out infinite; }
+  .leds circle:nth-of-type(2) { animation-delay: .55s; }
+  .leds circle:nth-of-type(3) { animation-delay: 1.1s; }
+}
+@keyframes funnelFlow { to { stroke-dashoffset: -340; } }
+@keyframes funnelBreathe { 0%,100% { opacity: .7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+@keyframes funnelLed { 0%,100% { opacity: 1; } 50% { opacity: .16; } }

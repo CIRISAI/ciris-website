@@ -1,0 +1,46 @@
+/* CIRIS — narrative-page tokens.
+   Opt-in: apply :root globally OR scope to a .ciris-dark wrapper on the
+   narrative pages only (no sitewide migration needed). */
+:root,
+.ciris-dark {
+  --bg: #0D1117;
+  --bg-deep: #090C10;
+  --bg-elev: #151B24;
+  --bg-card: #1A222C;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --text: #F4F5F7;
+  --text-dim: #9AA3AF;
+  --text-mute: #6B7280;
+
+  --teal: #419CA0;
+  --cyan: #22C0E8;
+  --violet: #7A6FD6;
+  --rust: #C96A38;
+  --brass: #B08A3E;
+  --rose: #E14B7F;
+  --ok: #4ADE80;
+
+  /* component default accent (each component also takes an `accent` prop) */
+  --accent: var(--teal);
+}
+
+/* Fonts — drop on narrative pages only; does not touch the global type stack.
+   In Next.js prefer next/font/google, but this <link> works too:
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+   font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+   font-family: 'Geist Mono', ui-monospace, monospace;
+*/
+.ciris-dark {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: 'ss01' 1, 'cv11' 1;
+  -webkit-font-smoothing: antialiased;
+}

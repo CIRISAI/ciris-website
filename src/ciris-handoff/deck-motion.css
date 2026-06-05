@@ -1,0 +1,73 @@
+/* CIRIS deck-motion.css
+   Global animation library lifted from the CIRIS pitch deck.
+
+   Two things live here:
+   1. The scroll-reveal pattern (.rise / .anim / .in / .d1-.d4).
+   2. The full keyframe set used across the narrative diagrams.
+
+   NOTE: the diagram components (Funnel, MeshFlow, ...) are SELF-CONTAINED —
+   each defines its own copy of the keyframes it needs inside its CSS module
+   (CSS Modules scope @keyframes names). You do NOT need to import this file
+   for the components to animate. Import it for page-level reveal-on-scroll
+   and if you want to reuse these keyframes in your own global CSS.
+
+   All motion is gated on (prefers-reduced-motion: no-preference) and the
+   reveal base state is the final/visible state, so reduced-motion + print
+   show content, never a pre-animation blank. */
+
+/* ---- reveal-on-scroll pattern ----
+   Usage: put class "anim" on a section, "rise" (+ optional d1..d4 stagger) on
+   children, then toggle "in" on each child when it enters the viewport
+   (IntersectionObserver). Base state is visible, so SSR/no-JS shows content. */
+.rise { opacity: 1; transform: none; }
+@media print { .rise { opacity: 1 !important; transform: none !important; } }
+@media (prefers-reduced-motion: no-preference) {
+  .anim .rise {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s cubic-bezier(.22,.7,.2,1), transform .6s cubic-bezier(.22,.7,.2,1);
+  }
+  .anim .rise.in { opacity: 1; transform: none; }
+  .anim .rise.d1 { transition-delay: .07s; }
+  .anim .rise.d2 { transition-delay: .15s; }
+  .anim .rise.d3 { transition-delay: .24s; }
+  .anim .rise.d4 { transition-delay: .33s; }
+}
+
+/* ---- keyframes ---- */
+@keyframes twinkle { 0%,100% { opacity:.32; } 50% { opacity:1; } }
+@keyframes dashFlow { to { stroke-dashoffset:-340; } }
+@keyframes dashFlowIn { to { stroke-dashoffset:340; } }
+@keyframes ledBlink { 0%,100% { opacity:1; } 50% { opacity:.16; } }
+@keyframes glowBreathe { 0%,100% { opacity:.62; transform:scale(1); } 50% { opacity:1; transform:scale(1.05); } }
+@keyframes spinSlow { to { transform:rotate(360deg); } }
+@keyframes floatY { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-13px); } }
+@keyframes ringBreathe { 0% { transform:scale(.5); opacity:0; } 32% { opacity:.5; } 100% { transform:scale(1.32); opacity:0; } }
+@keyframes dotPulse { 0%,100% { opacity:.55; box-shadow:0 0 8px var(--accent); } 50% { opacity:1; box-shadow:0 0 22px var(--accent); } }
+@keyframes pktDown { 0% { transform:translateY(2px); opacity:0; } 12% { opacity:1; } 80% { opacity:1; } 100% { transform:translateY(50px); opacity:0; } }
+@keyframes traceMove { from { offset-distance:0%; } to { offset-distance:100%; } }
+@keyframes popIn { 0% { transform:scale(0); opacity:0; } 60% { transform:scale(1.18); } 100% { transform:scale(1); opacity:1; } }
+@keyframes corePulse { 0%,100% { box-shadow:0 0 60px rgba(65,156,160,0.14) inset, 0 0 0 0 rgba(65,156,160,0); } 50% { box-shadow:0 0 95px rgba(65,156,160,0.30) inset, 0 0 48px 6px rgba(65,156,160,0.16); } }
+@keyframes containPulse { 0% { transform:scale(.45); opacity:0; } 25% { opacity:.65; } 78% { opacity:.5; } 100% { transform:scale(1.9); opacity:0; } }
+@keyframes boundaryGlow { 0%,100% { stroke:rgba(122,111,214,0.45); } 50% { stroke:rgba(122,111,214,0.95); } }
+@keyframes emitGlow { 0%,8% { box-shadow:0 0 0 0 rgba(34,192,232,0); } 18% { box-shadow:0 0 36px -6px rgba(34,192,232,0.5); } 42%,100% { box-shadow:0 0 0 0 rgba(34,192,232,0); } }
+@keyframes recvGlow { 0%,50% { box-shadow:0 0 0 0 rgba(65,156,160,0); } 64% { box-shadow:0 0 36px -6px rgba(65,156,160,0.5); } 90%,100% { box-shadow:0 0 0 0 rgba(65,156,160,0); } }
+@keyframes chipPing { 0% { box-shadow:0 0 0 0 var(--ping, rgba(65,156,160,0.5)); } 70%,100% { box-shadow:0 0 0 22px rgba(0,0,0,0); } }
+@keyframes sheen { 0% { transform:translateX(-130%); } 55%,100% { transform:translateX(320%); } }
+@keyframes nodePing { 0% { transform:scale(1); opacity:.75; } 100% { transform:scale(3.6); opacity:0; } }
+@keyframes sweepX { 0% { transform:scaleX(0); opacity:0; } 14% { opacity:1; } 100% { transform:scaleX(1); opacity:1; } }
+
+/* ---- "caught lying" cascade (8.5s synced loop) ---- */
+@keyframes cActor { 0%,9% { border-color:var(--teal); background:rgba(65,156,160,0.06); } 15%,90% { border-color:var(--rose); background:rgba(225,75,127,0.09); } 97%,100% { border-color:var(--teal); background:rgba(65,156,160,0.06); } }
+@keyframes cAva { 0%,9% { color:var(--teal); background:rgba(65,156,160,0.14); } 15%,90% { color:var(--rose); background:rgba(225,75,127,0.16); } 97%,100% { color:var(--teal); background:rgba(65,156,160,0.14); } }
+@keyframes cTag { 0%,11% { opacity:0; transform:translateY(5px); } 17%,90% { opacity:1; transform:none; } 96%,100% { opacity:0; } }
+@keyframes cConn1 { 0%,15% { background:var(--border-strong); } 21%,90% { background:var(--rose); } 97%,100% { background:var(--border-strong); } }
+@keyframes cConn2 { 0%,46% { background:var(--border-strong); } 52%,90% { background:var(--warn, #FBBF24); } 97%,100% { background:var(--border-strong); } }
+@keyframes cStrike1 { 0%,28% { transform:scaleX(0); } 36%,92% { transform:scaleX(1); } 97%,100% { transform:scaleX(0); } }
+@keyframes cStrike2 { 0%,32% { transform:scaleX(0); } 40%,92% { transform:scaleX(1); } 97%,100% { transform:scaleX(0); } }
+@keyframes cStrike3 { 0%,36% { transform:scaleX(0); } 44%,92% { transform:scaleX(1); } 97%,100% { transform:scaleX(0); } }
+@keyframes cMoot { 0%,40% { opacity:0; } 48%,90% { opacity:1; } 96%,100% { opacity:0; } }
+@keyframes cDim { 0%,30% { opacity:1; } 44%,90% { opacity:.42; } 97%,100% { opacity:1; } }
+@keyframes cConcl { 0%,47% { border-color:var(--border-strong); color:var(--text); } 54%,90% { border-color:var(--warn, #FBBF24); color:var(--warn, #FBBF24); } 97%,100% { border-color:var(--border-strong); color:var(--text); } }
+@keyframes cReopen { 0%,49% { opacity:0; } 56%,90% { opacity:1; } 96%,100% { opacity:0; } }
+@keyframes spinOnce { 0%,50% { transform:rotate(0); } 60%,100% { transform:rotate(360deg); } }

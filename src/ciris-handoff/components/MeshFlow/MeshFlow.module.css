@@ -1,0 +1,22 @@
+.mesh { width: 100%; height: auto; display: block; }
+.links { fill: none; stroke: color-mix(in srgb, var(--accent) 30%, transparent); stroke-width: 1.4; }
+.nodes circle { fill: var(--accent); }
+.trace, .trace2 { fill: var(--accent); offset-path: var(--p); filter: drop-shadow(0 0 7px var(--accent)); opacity: 0; }
+.ping { fill: none; stroke: var(--accent); stroke-width: 2; transform-box: fill-box; transform-origin: center; opacity: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .links { stroke-dasharray: 4 13; animation: meshFlow 4.4s linear infinite; }
+  .nodes circle { transform-box: fill-box; transform-origin: center; animation: meshTwinkle 4.6s ease-in-out infinite; }
+  .nodes circle:nth-child(3n) { animation-delay: -1.3s; }
+  .nodes circle:nth-child(3n+1) { animation-delay: -2.6s; }
+  .nodes circle:nth-child(4n) { animation-delay: -.7s; }
+  .trace { opacity: 1; animation: meshTrace var(--d, 6s) linear infinite; }
+  .trace2 { opacity: 1; animation: meshTrace var(--d, 5s) linear infinite 2s; }
+  .ping { animation: meshPing 3s ease-out infinite; }
+  .ping2 { animation-delay: 1s; }
+  .ping3 { animation-delay: 2s; }
+}
+@keyframes meshFlow { to { stroke-dashoffset: -340; } }
+@keyframes meshTwinkle { 0%,100% { opacity: .32; } 50% { opacity: 1; } }
+@keyframes meshTrace { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+@keyframes meshPing { 0% { transform: scale(1); opacity: .75; } 100% { transform: scale(3.4); opacity: 0; } }
