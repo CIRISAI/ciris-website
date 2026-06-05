@@ -264,45 +264,32 @@ export default function Homepage() {
                 On your device, or hosted — <em>your call</em>.
               </h2>
             </header>
-            <p className="lead rise d1 lead-wide">
-              &ldquo;No data centers&rdquo; is the on-device path. We&rsquo;ll be
-              honest about the other one too.
-            </p>
             <div className="paths rise d2">
               <article className="path-card path-local">
                 <header className="path-header">
                   <span className="path-pill mono">no data centers</span>
-                  <h3 className="path-title">Local · on your phone</h3>
+                  <h3 className="path-title">On your phone</h3>
                 </header>
                 <p className="path-body">
-                  Pair CIRISAgent with a small open model that runs on your
-                  phone — <b>Gemma 4 (E2B or E4B)</b>, Phi, or any compatible
-                  open model. Around <b>1.5 GB of RAM</b>, completely offline,
-                  zero hyperscale facilities. This is the path the rest of
-                  this page is talking about.
+                  A small open model — like <b>Gemma 4</b> — runs on the
+                  device. Completely offline. No warehouse in the middle.
                 </p>
               </article>
               <article className="path-card path-hosted">
                 <header className="path-header">
                   <span className="path-pill path-pill-mute mono">uses a data center</span>
-                  <h3 className="path-title">Hosted · free for everyone</h3>
+                  <h3 className="path-title">Free, in your language</h3>
                 </header>
                 <p className="path-body">
-                  For people who can&rsquo;t run a local model — older phones,
-                  low-resource languages, no storage to spare — CIRIS offers
-                  <b> free hosted inference</b> through providers like{" "}
-                  <b>DeepInfra</b>, in <b>29 languages</b>. That path uses
-                  someone else&rsquo;s data center. The signed traces, the
-                  accountability, and the ethical framework are identical.
+                  For phones too small to run a model, CIRIS is{" "}
+                  <b>free</b> over hosted inference in <b>29 languages</b>.
+                  Same signed claims. Someone else&rsquo;s data center.
                 </p>
               </article>
             </div>
             <footer className="hfoot rise d3">
               <span className="pip" />
-              <span>
-                both paths are signed &nbsp;·&nbsp; both can be checked
-                &nbsp;·&nbsp; we&rsquo;re upfront about which one you&rsquo;re on
-              </span>
+              <span>two paths &nbsp;·&nbsp; both signed &nbsp;·&nbsp; both checkable</span>
             </footer>
           </div>
         </Reveal>
