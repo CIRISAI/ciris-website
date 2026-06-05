@@ -1,4 +1,16 @@
 .collapse { display: flex; align-items: center; justify-content: center; gap: 0; --warn: #FBBF24; }
+@media (max-width: 760px) {
+  .collapse { flex-direction: column; gap: 0; }
+  .actor { width: 100% !important; max-width: 320px; padding: 20px 18px !important; }
+  .conn { width: 3px !important; height: 28px !important; flex: 0 0 28px !important; align-self: center !important; }
+  .claims { width: 100% !important; max-width: 360px; gap: 10px !important; }
+  .cl { padding: 12px 16px !important; font-size: 17px !important; }
+  .concl { width: 100% !important; max-width: 280px; padding: 18px 16px !important; font-size: 18px !important; }
+  .who { font-size: 19px !important; }
+  .moot { font-size: 14px !important; }
+  .reopen { font-size: 14px !important; }
+  .tag { font-size: 14px !important; }
+}
 .actor { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 300px; padding: 30px 26px; border: 1.5px solid var(--teal, #419CA0); border-radius: 20px; background: rgba(65,156,160,0.06); flex: 0 0 auto; }
 .ava { width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; background: rgba(65,156,160,0.14); color: var(--teal, #419CA0); }
 .ava svg { width: 34px; height: 34px; }

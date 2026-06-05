@@ -1,4 +1,17 @@
 .ledger { width: 100%; max-width: 760px; border: 1px solid var(--border, rgba(255,255,255,0.08)); border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.02); }
+@media (max-width: 760px) {
+  .row { gap: 10px !important; padding: 16px 16px !important; }
+  .tag { font-size: 11px !important; letter-spacing: 0.08em !important; width: 78px !important; }
+  .claim { font-size: 16px !important; line-height: 1.3 !important; }
+  .hash { font-size: 11px !important; margin-top: 4px !important; word-break: break-all; }
+  .seal { width: 36px !important; height: 36px !important; }
+  .seal svg { width: 18px !important; height: 18px !important; }
+  .vchip { width: 28px !important; height: 28px !important; }
+  .vchip svg { width: 16px !important; height: 16px !important; }
+  .count { font-size: 13px !important; }
+  .pill { font-size: 12px !important; padding: 5px 10px !important; margin-left: 4px !important; }
+  .votes { gap: 6px !important; flex-wrap: wrap !important; }
+}
 .row { display: flex; align-items: center; gap: 18px; padding: 24px 28px; border-bottom: 1px solid var(--border, rgba(255,255,255,0.08)); }
 .row:last-child { border-bottom: 0; }
 .tag { font: 600 18px/1 'Geist Mono', ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--text-mute, #6B7280); width: 118px; flex: 0 0 auto; }
