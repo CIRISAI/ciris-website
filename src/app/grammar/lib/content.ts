@@ -98,7 +98,7 @@ attestation_envelope:
     oneLiner:
       "My prior attestation was false at issuance. Admits epistemic error.",
     whenToUse:
-      "Genuine error admission. Heavyweight — the entire weight is sincerity (Habermas §6.2).",
+      "Genuine error admission. Heavyweight, the entire weight is sincerity (Habermas §6.2).",
     fsdAnchor: "#322-the-recants-distinction-matters",
     fsdLabel: "§3.2",
     exampleYaml: `attestation_type: recants
@@ -177,7 +177,7 @@ export const ENVELOPE_FIELDS: EnvelopeField[] = [
     name: "subject_key_ids",
     default: "[] (producer-only authority)",
     whatItDoes:
-      "Vec<KeyId>. OPTIONAL. The keys the claim is ABOUT — subject-side authority parallel to the producer-side attesting_key_id. Empty or omitted preserves the pre-0.6 producer-only behavior; populated, the named subjects (and their delegates) can withdraw the claim. Accepts both federation_keys identities and canonical-hash identifiers so un-enrolled subjects can be named. Added CEG 0.6.",
+      "Vec<KeyId>. OPTIONAL. The keys the claim is ABOUT, subject-side authority parallel to the producer-side attesting_key_id. Empty or omitted preserves the pre-0.6 producer-only behavior; populated, the named subjects (and their delegates) can withdraw the claim. Accepts both federation_keys identities and canonical-hash identifiers so un-enrolled subjects can be named. Added CEG 0.6.",
   },
 ];
 
@@ -277,7 +277,7 @@ export const COMPOSITION_POLICIES: CompositionPolicy[] = [
     id: "E",
     name: "Locality-scaled-quorum",
     description:
-      "Modifier that sizes the consensus quorum to the decision's scale. Closes the G3 gap from v1.3 — decisions made too broadly or too narrowly carry less weight.",
+      "Modifier that sizes the consensus quorum to the decision's scale. Closes the G3 gap from v1.3, decisions made too broadly or too narrowly carry less weight.",
     classification: "modifier",
   },
   {
@@ -317,9 +317,9 @@ export const COMPOSITION_POLICIES: CompositionPolicy[] = [
   },
   {
     id: "K",
-    name: "CEM — Consent Effective Model composition",
+    name: "CEM: Consent Effective Model composition",
     description:
-      "Six-layer subject-consent composition (CEG 0.6): effective consent resolution (walk latest non-superseded consent:state:*), multi-subject revocation (any-subject-binding — consumer policy MUST NOT soften to majority), SLA watcher (substrate emits hard_case:consent_sla_breach when producer misses deletion_sla), bilateral pair ratification (PARTNERED), decay-protocol stage composition, and the CIRISAgent CEM bundle (TEMPORARY / PARTNERED / ANONYMOUS) as a consumer-policy bundle over the wire primitives. Bare-scores and consent_record ceremony shapes admit at the same gate.",
+      "Six-layer subject-consent composition (CEG 0.6): effective consent resolution (walk latest non-superseded consent:state:*), multi-subject revocation (any-subject-binding, consumer policy MUST NOT soften to majority), SLA watcher (substrate emits hard_case:consent_sla_breach when producer misses deletion_sla), bilateral pair ratification (PARTNERED), decay-protocol stage composition, and the CIRISAgent CEM bundle (TEMPORARY / PARTNERED / ANONYMOUS) as a consumer-policy bundle over the wire primitives. Bare-scores and consent_record ceremony shapes admit at the same gate.",
     classification: "specialization",
   },
 ];
@@ -414,11 +414,11 @@ attestation_envelope:
     id: "supersedes-doctrinal-development",
     title: "Doctrinal development supersedes a prior version",
     scenario:
-      "A scoring rubric was published 6 months ago. New evidence justifies a refinement. The new attestation should supersede the old one without claiming the old one was false — this is development, not error correction.",
+      "A scoring rubric was published 6 months ago. New evidence justifies a refinement. The new attestation should supersede the old one without claiming the old one was false, this is development, not error correction.",
     primitives: ["supersedes"],
     family: "STANDING",
     walkthrough:
-      "supersedes is the structural primitive. differs_in names what changed; supersession_reason classifies the change. If the change were error correction, use recants instead — the wire format keeps these strictly distinct.",
+      "supersedes is the structural primitive. differs_in names what changed; supersession_reason classifies the change. If the change were error correction, use recants instead, the wire format keeps these strictly distinct.",
     exampleYaml: `attestation_type: supersedes
 attesting_key_id: <same attester>
 attested_key_id: <same subject>
@@ -461,7 +461,7 @@ attestation_envelope:
     primitives: ["accord:invoke:CONSTITUTIONAL"],
     family: "CORRECTION",
     walkthrough:
-      "Requires 2-of-3 HUMANITY_ACCORD multi-sig. Distinct from operational SYSTEM_ADMIN authority — the SetEmergencyShutdown admin RPC explicitly refuses this; it must come through the constitutional layer per §7.",
+      "Requires 2-of-3 HUMANITY_ACCORD multi-sig. Distinct from operational SYSTEM_ADMIN authority, the SetEmergencyShutdown admin RPC explicitly refuses this; it must come through the constitutional layer per §7.",
     exampleYaml: `attestation_type: scores
 attesting_key_id: <humanity-accord-multisig-2-of-3>
 attested_key_id: <federation>
@@ -508,7 +508,7 @@ attestation_envelope:
     primitives: ["testimonial_witness:displaced_worker", "non_maleficence:*"],
     family: "CONSENSUS",
     walkthrough:
-      "testimonial_witness is distinct from witness_diversity — that primitive aggregates multiple reviewers; this one preserves a singular narrative without aggregation. Composes with non_maleficence:* from external advocates per LANGUAGE_PRIMER §11.14.",
+      "testimonial_witness is distinct from witness_diversity, that primitive aggregates multiple reviewers; this one preserves a singular narrative without aggregation. Composes with non_maleficence:* from external advocates per LANGUAGE_PRIMER §11.14.",
     exampleYaml: `attestation_type: scores
 attesting_key_id: <affected-party-key>
 attested_key_id: <hiring-decision-id>

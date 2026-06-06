@@ -34,6 +34,11 @@ export const CEG_CHAPTER = {
   references: `${CEG_DIR}/16_references.md`,
   cadence: `${CEG_DIR}/17_cadence.md`,
 } as const;
+// CEG 0.15 PDF editions (GitHub renders both in its PDF viewer).
+// The reader edition is the de-editorialized, human-first cut; the
+// full edition is the exhaustive working draft.
+export const CEG_READER_PDF = `${REGISTRY_BLOB}/${CEG_DIR}/pdf/ceg-0.15-reader.pdf`;
+export const CEG_FULL_PDF = `${REGISTRY_BLOB}/${CEG_DIR}/pdf/ceg-0.15.pdf`;
 export const WITNESS_KIND_REGISTRY_PATH = "FSD/WITNESS_KIND_REGISTRY.md";
 export const LANG_PRIMER_PATH = "FSD/LANGUAGE_PRIMER.md";
 export const CEG_PRIMER_PATH = "docs/CEG_EXPLORATION_PAGE_PRIMER.md";
@@ -119,7 +124,7 @@ export const FAMILY_ANALOGY: Record<FamilyId, string> = {
   ACTION:
     "Research grant proposal: aim, approach, methods, outcome metrics.",
   DETECTION:
-    "Epidemiological surveillance — patterns surfaced, treatment downstream.",
+    "Epidemiological surveillance: patterns surfaced, treatment downstream.",
   CONSENSUS:
     "Peer review combined with jury deliberation: multiple reviewers, weighted votes.",
   CORRECTION:

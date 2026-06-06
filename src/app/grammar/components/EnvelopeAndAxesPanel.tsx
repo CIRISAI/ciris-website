@@ -1,4 +1,4 @@
-// Server component — the 8 envelope fields paired with the 8 reasoning axes.
+// Server component, the 8 envelope fields paired with the 8 reasoning axes.
 // Cross-links between them per the primer.
 
 import { ENVELOPE_FIELDS, REASONING_AXES } from "../lib/content";
@@ -25,7 +25,7 @@ export default function EnvelopeAndAxesPanel() {
         <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
           The envelope carries nine fields that consumers use to weight an
           attestation. These are <strong>signed payload but not
-          structural primitives</strong> per §2 — they are carried and
+          structural primitives</strong> per §2, they are carried and
           signed (the canonical bytes include them per §0.9 envelope
           canonicalization), but they don&rsquo;t change the 1+4
           structural-primitive set. Implementers MUST carry them; CEG

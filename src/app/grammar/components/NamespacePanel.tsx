@@ -1,4 +1,4 @@
-// Server component — renders all §3 prefix families grouped by component,
+// Server component, renders all §3 prefix families grouped by component,
 // with per-component expandable details and per-prefix metadata.
 
 import Link from "next/link";
@@ -17,17 +17,17 @@ import { FractalSelfBadge } from "./FractalSelfCallout";
 // Prefixes that the spec marks as self-attestation surfaces inviting the
 // Cartesian misread (per CEG primer §0.5).
 function isFractalSelfPrefix(prefix: string): string | null {
-  // hardware_class — key-bearing entity reports provenance from within
+  // hardware_class, key-bearing entity reports provenance from within
   // existing cross-attestations of that key.
   if (/^hardware_(class|custody)/.test(prefix)) {
     return "The key-bearing entity reports its own hardware provenance from within the substrate's cross-attestations of that key.";
   }
-  // accord:lifecycle:active — accord-holder self-attests at the
+  // accord:lifecycle:active, accord-holder self-attests at the
   // already-constituted humanity→triple→individual scale.
   if (/^accord:/.test(prefix)) {
     return "The accord-holder speaking from within the relational constitution humanity → triple → individual.";
   }
-  // attestation:l1:self_verify — the binary speaking from within the
+  // attestation:l1:self_verify, the binary speaking from within the
   // already-constituted CIRISVerify deployment.
   if (/^attestation:l1:self_verify/.test(prefix)) {
     return "The CIRISVerify binary speaking from within its already-constituted deployment.";
@@ -64,7 +64,7 @@ function PrefixRowDisplay({ row }: { row: PrefixRow }) {
       <p
         className="text-xs leading-5 text-slate-700 dark:text-slate-300"
         // Description is pre-rendered markdown-ish; safe-ish (no user input)
-        // — strip leading backticks if present.
+        //, strip leading backticks if present.
       >
         {row.description}
       </p>
@@ -114,8 +114,8 @@ export default function NamespacePanel({
           >
             {source.specVersion} §5
           </a>{" "}
-          (commit {source.commitShaShort}). The namespace is open-extensible
-          — new prefix families can be added via §11.2 amendment.
+          (commit {source.commitShaShort}). The namespace is open-extensible,
+          new prefix families can be added via §11.2 amendment.
         </p>
       </header>
 

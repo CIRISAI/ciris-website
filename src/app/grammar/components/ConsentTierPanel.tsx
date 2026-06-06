@@ -1,6 +1,6 @@
-// ConsentTierPanel — additive surface from CEG 0.6.
+// ConsentTierPanel, additive surface from CEG 0.6.
 //
-// CEG 0.6 added subject-side consent authority — the missing half of
+// CEG 0.6 added subject-side consent authority, the missing half of
 // the wire format. Pre-0.6 only encoded producer authority
 // (attesting_key_id); 0.6 adds subject_key_ids to the envelope so a
 // claim about a person can be revoked by that person, not only by the
@@ -62,7 +62,7 @@ const ADMISSION_RULES: Array<{ rule: string; description: string }> = [
   {
     rule: "issuer.key_id == T.attesting_key_id",
     description:
-      "Producer self-withdraw — the original author retracting their own claim. The pre-0.6 rule, unchanged.",
+      "Producer self-withdraw, the original author retracting their own claim. The pre-0.6 rule, unchanged.",
   },
   {
     rule: "issuer.key_id ∈ T.subject_key_ids",
@@ -72,7 +72,7 @@ const ADMISSION_RULES: Array<{ rule: string; description: string }> = [
   {
     rule: "delegates_to chain to a canonical-hash subject",
     description:
-      "Proxy authority — a parent revoking on behalf of a child, a fiduciary on behalf of a client, an estate on behalf of the deceased. Scope must include consent_revocation. New in 0.6.",
+      "Proxy authority, a parent revoking on behalf of a child, a fiduciary on behalf of a client, an estate on behalf of the deceased. Scope must include consent_revocation. New in 0.6.",
   },
   {
     rule: "via delegates_to from any of the above",
@@ -126,7 +126,7 @@ export default function ConsentTierPanel() {
 {`subject_key_ids: Vec<KeyId>   // OPTIONAL`}
           </pre>
           <p className="mt-2 text-[13px] leading-5 text-slate-600 dark:text-slate-400">
-            Empty or omitted means status quo — producer authority only,
+            Empty or omitted means status quo, producer authority only,
             pre-0.6 behavior preserved. Accepts both{" "}
             <code>federation_keys</code> identities and canonical-hash
             identifiers, so a claim about someone who has not enrolled
@@ -174,7 +174,7 @@ export default function ConsentTierPanel() {
           </ol>
           <p className="mt-3 text-[12px] italic text-slate-500">
             Wire shape of <code>withdraws</code> unchanged. 1+4
-            lockdown preserved — this is a semantic broadening, not a
+            lockdown preserved, this is a semantic broadening, not a
             new structural primitive.
           </p>
         </article>
@@ -249,7 +249,7 @@ export default function ConsentTierPanel() {
           </header>
           <ul className="space-y-3 text-[13px] leading-6 text-slate-700 dark:text-slate-300">
             <li>
-              <b>Policy K — CEM composition</b> (composition panel
+              <b>Policy K: CEM composition</b> (composition panel
               above). Six layers: effective consent resolution,
               multi-subject revocation, SLA watcher, bilateral pair
               ratification, decay-protocol stages, and the CIRISAgent
@@ -307,7 +307,7 @@ export default function ConsentTierPanel() {
           claim: a structural set rich enough to express not just
           producer authority over content but the full duality of
           producer plus subject authority real-world data shapes
-          require — without adding a new primitive.
+          require, without adding a new primitive.
         </p>
       </div>
     </section>

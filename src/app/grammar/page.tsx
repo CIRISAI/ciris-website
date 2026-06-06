@@ -12,8 +12,11 @@ import {
   WITNESS_KIND_REGISTRY_PATH,
   LANG_PRIMER_PATH,
   CEG_PRIMER_PATH,
+  CEG_READER_PDF,
+  CEG_FULL_PDF,
   ANCHORS,
 } from "./lib/source";
+import GrammarNav from "./components/GrammarNav";
 import PrimitivesPanel from "./components/PrimitivesPanel";
 import FamiliesPanel from "./components/FamiliesPanel";
 import EnvelopeAndAxesPanel from "./components/EnvelopeAndAxesPanel";
@@ -59,11 +62,36 @@ export default async function GrammarPage() {
               The world is moving faster than most of us can fact-check it.
               Sources contradict. Agents speak unsigned. Corrections rarely
               catch the original. CEG is a small shared format that puts a
-              signature on every claim, with a trail you can follow — so
+              signature on every claim, with a trail you can follow, so
               you can read who&rsquo;s saying what, who&rsquo;s pushed
               back, and what changed, and make your own call without
               giving up or giving in to any one source.
             </p>
+
+            {/* PDF editions, the human-readable reader edition is the
+                friendliest entry point for the full spec. */}
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href={CEG_READER_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-secondary"
+              >
+                <span aria-hidden>📖</span>
+                Read the human edition (PDF, 134 pp)
+              </a>
+              <a
+                href={CEG_FULL_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:bg-gray-900 dark:text-slate-200"
+              >
+                Full spec (PDF)
+              </a>
+              <span className="text-xs text-slate-500">
+                {source.specVersion}, de-editorialized for human reading
+              </span>
+            </div>
 
             {/* What this is, why we made it, what's comparable */}
             <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900">
@@ -77,7 +105,7 @@ export default async function GrammarPage() {
                     made it, what it&rsquo;s about, how confident they are,
                     what evidence they cite, when it was made. Other
                     people, organisations, and AI agents add envelopes
-                    around it — agreeing, disagreeing, correcting,
+                    around it, agreeing, disagreeing, correcting,
                     superseding. The trail is readable end-to-end.
                   </p>
                 </div>
@@ -101,19 +129,19 @@ export default async function GrammarPage() {
                   </p>
                   <ul className="mt-2 space-y-1 text-sm leading-6 text-slate-700 dark:text-slate-300">
                     <li>
-                      <strong>PGP web of trust</strong> — same instinct,
+                      <strong>PGP web of trust</strong>, same instinct,
                       much narrower scope
                     </li>
                     <li>
-                      <strong>W3C Verifiable Credentials</strong> — heavier
+                      <strong>W3C Verifiable Credentials</strong>, heavier
                       ceremony, no composition story
                     </li>
                     <li>
-                      <strong>Community Notes</strong> — readable trails,
+                      <strong>Community Notes</strong>, readable trails,
                       single platform
                     </li>
                     <li>
-                      <strong>Sigstore / SLSA</strong> — code-supply-chain
+                      <strong>Sigstore / SLSA</strong>, code-supply-chain
                       cousins; CEG generalises the shape
                     </li>
                   </ul>
@@ -140,7 +168,7 @@ export default async function GrammarPage() {
                 </p>
                 <p className="mt-1 text-sm leading-6 text-slate-700 dark:text-slate-300">
                   Other signers add their own envelopes around the claim
-                  — agreeing, disagreeing, correcting, superseding. You
+                 , agreeing, disagreeing, correcting, superseding. You
                   see the full chorus and the receipts behind each
                   voice, not just whoever shouted loudest.
                 </p>
@@ -158,105 +186,53 @@ export default async function GrammarPage() {
               </div>
             </div>
 
-            {/* On-page nav. On mobile it lived as a tall left-aligned wrap of
-                 chips that read like a pinned side-rail; collapse it behind a
-                 toggle below md, keep the original flat layout on md+. */}
-            <details
-              className="group rounded-md border border-slate-200 bg-white p-2 dark:border-gray-800 dark:bg-gray-900 md:border-0 md:bg-transparent md:p-0 md:dark:bg-transparent md:[&>nav]:!flex"
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-2 rounded px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600 hover:text-brand-primary dark:text-slate-300 md:hidden">
-                <span>Jump to section</span>
-                <span
-                  className="text-slate-400 transition-transform duration-150 group-open:rotate-180"
-                  aria-hidden="true"
-                >
-                  &#9662;
-                </span>
-              </summary>
-              <nav className="mt-2 flex flex-wrap gap-2 text-xs md:mt-0">
-              <a
-                href={`#${ANCHORS.primitives}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                1+4 primitives
-              </a>
-              <a
-                href={`#${ANCHORS.families}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                5 families
-              </a>
-              <a
-                href={`#${ANCHORS.envelope}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                Envelope + axes
-              </a>
-              <a
-                href={`#${ANCHORS.composition}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                Composition policies
-              </a>
-              <a
-                href={`#${ANCHORS.namespace}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                The {source.totalPrefixes} prefixes
-              </a>
-              <a
-                href={`#${ANCHORS.graph}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                Composition graph
-              </a>
-              <a
-                href={`#${ANCHORS.playground}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                Playground
-              </a>
-              <a
-                href={`#${ANCHORS.stories}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                Worked stories
-              </a>
-              <a
-                href={`#${ANCHORS.nonGoals}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                Non-goals
-              </a>
-              <a
-                href={`#${ANCHORS.references}`}
-                className="rounded-md border border-slate-300 px-2.5 py-1 font-medium text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
-              >
-                References
-              </a>
-              </nav>
-            </details>
           </header>
 
+          <GrammarNav />
+
           <div className="space-y-14">
-            <PrimitivesPanel />
-            <FamiliesPanel source={source} />
-            <EnvelopeAndAxesPanel />
-            <CompositionPoliciesPanel />
-            <NamespacePanel source={source} />
-            <MediaTierPanel />
-            <ConsentTierPanel />
-            <LineagePanel />
-            <AlephView source={source} />
+            <section id="primitives" className="scroll-mt-40">
+              <PrimitivesPanel />
+            </section>
+            <section id="families" className="scroll-mt-40">
+              <FamiliesPanel source={source} />
+            </section>
+            <section id="envelope" className="scroll-mt-40">
+              <EnvelopeAndAxesPanel />
+            </section>
+            <section id="composition" className="scroll-mt-40">
+              <CompositionPoliciesPanel />
+            </section>
+            <section id="namespace" className="scroll-mt-40">
+              <NamespacePanel source={source} />
+            </section>
+            <section id="media" className="scroll-mt-40">
+              <MediaTierPanel />
+            </section>
+            <section id="consent" className="scroll-mt-40">
+              <ConsentTierPanel />
+            </section>
+            <section id="whats-new" className="scroll-mt-40">
+              <LineagePanel />
+            </section>
+            <section id="explore" className="scroll-mt-40">
+              <AlephView source={source} />
+            </section>
             <ExploreCTA />
-            <CompositionGraph source={source} />
-            <TranslationPlayground />
-            <StoriesLibrary />
+            <section id="graph" className="scroll-mt-40">
+              <CompositionGraph source={source} />
+            </section>
+            <section id="translate" className="scroll-mt-40">
+              <TranslationPlayground />
+            </section>
+            <section id="stories" className="scroll-mt-40">
+              <StoriesLibrary />
+            </section>
             <NonGoalsPanel />
             <FractalSelfCallout />
 
             {/* References */}
-            <section id={ANCHORS.references} className="space-y-4">
+            <section id={ANCHORS.references} className="scroll-mt-40 space-y-4">
               <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
                 References
               </h2>
@@ -273,7 +249,7 @@ export default async function GrammarPage() {
                   rel="noopener noreferrer"
                   className="rounded-md border border-slate-300 px-3 py-2 text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
                 >
-                  {source.specVersion} — the wire-format spec (18-file directory) →
+                  {source.specVersion}, the wire-format spec (18-file directory) →
                 </a>
                 <a
                   href={witnessRegistryLink}

@@ -20,7 +20,7 @@ export default function TranslationPlayground() {
           <code className="rounded bg-slate-100 px-1 font-mono text-xs text-slate-700 dark:bg-gray-800 dark:text-slate-200">
             LANGUAGE_PRIMER §11
           </code>{" "}
-          — not LLM output. The wire format ships ready vocabulary; the
+         , not LLM output. The wire format ships ready vocabulary; the
           translation discipline is human authorial work.
         </p>
       </header>

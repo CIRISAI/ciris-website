@@ -82,7 +82,7 @@ export default function StoriesLibrary() {
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
           {STORY_COUNT + CURATED_STORIES.length} worked stories. Sci-fi
-          children&rsquo;s grammar primer for adults — every prefix family
+          children&rsquo;s grammar primer for adults, every prefix family
           covered at least twice. Filter by family or search for a primitive
           or phrase.
         </p>

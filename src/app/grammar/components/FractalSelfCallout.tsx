@@ -1,4 +1,4 @@
-// Server component — renders the fractal-self reading discipline from CEG
+// Server component, renders the fractal-self reading discipline from CEG
 // 0.1 README.md ("How to read this spec without Cartesian default") + primer
 // §0.5. Renders as a notes section near the bottom; the page is not built
 // around this idea, but spec readers coming from PGP / X.509 will want it.
@@ -27,8 +27,8 @@ export default function FractalSelfCallout() {
 
       <div className="mt-3 space-y-3 text-sm leading-7 text-slate-700 dark:text-slate-200">
         <p>
-          At every scale CEG operates on — key, occurrence, agent, fleet,
-          cell, federation, biosphere —{" "}
+          At every scale CEG operates on, key, occurrence, agent, fleet,
+          cell, federation, biosphere,{" "}
           <strong>
             &ldquo;self&rdquo; means the already-relationally-constituted
             entity speaking at that scale
@@ -77,7 +77,7 @@ export default function FractalSelfCallout() {
           admitting.&rdquo; That reading is wrong. If you find yourself
           thinking the spec should add a cross-attestation gate before
           admitting this self-attestation,{" "}
-          <strong>pause</strong> — cross-attestation already happened
+          <strong>pause</strong>, cross-attestation already happened
           upstream; the self-attestation is its downstream voice.
         </p>
       </div>
@@ -115,8 +115,8 @@ export function FractalSelfBadge({ context }: { context?: string }) {
       href="#fractal-self"
       title={
         context
-          ? `Fractal self — ${context}`
-          : "Fractal self — the relational composition speaking AS itself at this scale"
+          ? `Fractal self: ${context}`
+          : "Fractal self: the relational composition speaking AS itself at this scale"
       }
       className="inline-flex items-center gap-1 rounded-full border border-brand-primary/40 bg-brand-primary/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-primary hover:bg-brand-primary/10"
     >

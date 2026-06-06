@@ -1,4 +1,4 @@
-// MediaTierPanel — additive surface from CEG 0.3.
+// MediaTierPanel, additive surface from CEG 0.3.
 //
 // CEG 0.3 shipped multimedia support without touching the 1+4 wire-
 // format primitive set. The additions are five new external_content
@@ -41,7 +41,7 @@ const SUB_KINDS: Array<{ id: string; label: string; description: string }> = [
   },
 ];
 
-const PHASE_2 = "live_stream (Phase 2 — drafted, not yet live)";
+const PHASE_2 = "live_stream (Phase 2, drafted, not yet live)";
 
 const DIMENSION_FAMILIES: Array<{ key: string; description: string }> = [
   {
@@ -70,12 +70,12 @@ const SUBJECT_KINDS: Array<{ name: string; description: string }> = [
   {
     name: "takedown_notice",
     description:
-      "Signed wire artifact carrying a legal takedown request. LegalBasis is a closed 10-value enum (5 immediate-removal, 4 expeditious-with-counter-notice, 1 compose-with-age-gate). The fast-path categories — TVEC, NCMEC, GIFCT, perceptual-hash CSAM, court order — propagate as withdraws against the holds_bytes attestation chain. The takedown is not a coup: §11.4 binds it so a takedown can remove content but cannot capture the substrate.",
+      "Signed wire artifact carrying a legal takedown request. LegalBasis is a closed 10-value enum (5 immediate-removal, 4 expeditious-with-counter-notice, 1 compose-with-age-gate). The fast-path categories, TVEC, NCMEC, GIFCT, perceptual-hash CSAM, court order, propagate as withdraws against the holds_bytes attestation chain. The takedown is not a coup: §11.4 binds it so a takedown can remove content but cannot capture the substrate.",
   },
   {
     name: "key_grant",
     description:
-      "Wrapped data-encryption-key delivery for restricted or subscription content. HPKE per RFC 9180 as the wrap_algorithm. Retiring a grant emits a fresh key_grant that supersedes the old one (rotation_chain semantics), not a withdraws — so the consumer-side path stays at the existing 1+4 primitive set.",
+      "Wrapped data-encryption-key delivery for restricted or subscription content. HPKE per RFC 9180 as the wrap_algorithm. Retiring a grant emits a fresh key_grant that supersedes the old one (rotation_chain semantics), not a withdraws, so the consumer-side path stays at the existing 1+4 primitive set.",
   },
 ];
 
@@ -113,8 +113,8 @@ export default function MediaTierPanel() {
           ,{" "}
           <code className="rounded bg-slate-100 px-1 dark:bg-gray-800">
             recants
-          </code>{" "}
-          — the existing five.
+          </code>,{" "}
+          the existing five.
         </p>
       </header>
 
@@ -179,7 +179,7 @@ export default function MediaTierPanel() {
               Plus five media-prefix families:{" "}
               <code>image:*</code>, <code>audio:*</code>,{" "}
               <code>video:*</code>, <code>film:*</code>,{" "}
-              <code>model_3d:*</code> — one per sub_kind.
+              <code>model_3d:*</code>, one per sub_kind.
             </li>
           </ul>
         </article>
@@ -222,7 +222,7 @@ export default function MediaTierPanel() {
           </header>
           <ul className="space-y-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
             <li>
-              <b>Policy J — Trusted-Publisher composition</b> (composition
+              <b>Policy J: Trusted-Publisher composition</b> (composition
               panel above). Three-layer: distributor attestation chain,
               content-class plus content-rating gate, age-assurance gate.
               Same shape as Policy F but for media.{" "}

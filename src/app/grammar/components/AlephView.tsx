@@ -1,6 +1,6 @@
 "use client";
 
-// AlephView — Phase 1 of the Coherence game scale tower.
+// AlephView, Phase 1 of the Coherence game scale tower.
 //
 // Renders the CEG namespace through the Rust kernel (coherence-kernel,
 // wasm-bindgen) into a Three.js scene via @react-three/fiber. The seven-scale
@@ -84,7 +84,7 @@ function buildKernelGraph(source: RegistrySource): KernelGraph {
   // Future phases will use the multi-scale embedding.
   const DEFAULT_BAND = 4;
 
-  // 1 + 4 structural primitives — multi-scale (appear at every band)
+  // 1 + 4 structural primitives, multi-scale (appear at every band)
   const primitives = [
     "scores",
     "delegates_to",
@@ -257,9 +257,8 @@ export default function AlephView({ source }: { source: RegistrySource }) {
 
   return (
     <section
-      id="graph"
       className="relative space-y-4"
-      aria-label="Coherence Aleph view — seven-scale CEG namespace"
+      aria-label="Coherence Aleph view, seven-scale CEG namespace"
     >
       <header className="flex flex-wrap items-baseline justify-between gap-3">
         <div>
@@ -287,7 +286,7 @@ export default function AlephView({ source }: { source: RegistrySource }) {
         )}
       </header>
       <p className="max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-        Biosphere is the ground plane every node draws against — not a 7th
+        Biosphere is the ground plane every node draws against, not a 7th
         top floor. Six bands stack above: key, occurrence, agent, fleet,
         cell, federation. Phase 1 places the CEG namespace at the cell band.
         Phase 2 animates nodes between bands as you traverse the federation.
@@ -309,8 +308,8 @@ export default function AlephView({ source }: { source: RegistrySource }) {
           Hovering{" "}
           <span className="font-mono font-semibold text-brand-primary">
             {hoverId.replace(/^prim:|^family:|^comp:|^prefix:/, "")}
-          </span>{" "}
-          — multi-scale nodes glow at every band where they appear.
+          </span>,{" "}
+          multi-scale nodes glow at every band where they appear.
         </p>
       )}
 
