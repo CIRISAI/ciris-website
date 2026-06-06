@@ -1,4 +1,4 @@
-// CIRIS homepage — the 7-minute pitch as a scroll-narrative.
+// CIRIS homepage, the 7-minute pitch as a scroll-narrative.
 //
 // Eleven sections matching the deck arc: cover · funnel · app+fabric · three
 // promises · hardware · privacy · signed · caught lying · unification · safety
@@ -88,8 +88,8 @@ export default function Homepage() {
               <span className="ctahint mono">free · open source · on your phone today</span>
             </div>
             <div className="cover-foot rise d3">
-              <span>CIRISAgent &nbsp;·&nbsp; CEWP — &ldquo;soup&rdquo;</span>
-              <span>CIRIS 2.9.4 shipping &nbsp;·&nbsp; 3.0 rolling out June–July 2026</span>
+              <span>CIRISAgent &nbsp;·&nbsp; CEWP &ldquo;soup&rdquo;</span>
+              <span>CIRIS 2.9.4 shipping &nbsp;·&nbsp; 3.0 rolling out June and July 2026</span>
             </div>
           </div>
         </Reveal>
@@ -110,7 +110,7 @@ export default function Homepage() {
                 <p className="body rise d2">
                   Ask an AI anything and your words travel to someone
                   else&rsquo;s building, run on someone else&rsquo;s model,
-                  and land in someone else&rsquo;s logs — with the carbon
+                  and land in someone else&rsquo;s logs, with the carbon
                   as a side effect.
                 </p>
                 <p className="body body-mute rise d2">
@@ -147,7 +147,7 @@ export default function Homepage() {
             <div className="split split-wide">
               <div className="left">
                 <p className="lead rise d2">
-                  <b>CIRISAgent</b> is what you hold and talk to — it
+                  <b>CIRISAgent</b> is what you hold and talk to. It
                   carries the reasoning.
                 </p>
                 <p className="lead rise d2">
@@ -155,7 +155,7 @@ export default function Homepage() {
                   that trust each other, all hardware you already own.
                 </p>
                 <p className="small mono rise d3">
-                  People and AI both live on it as equals — side by side.
+                  People and AI both live on it as equals, side by side.
                 </p>
               </div>
               <div className="right rise d3">
@@ -169,7 +169,7 @@ export default function Homepage() {
                   </div>
                   <div className="stack-card stack-fabric">
                     <div className="stack-name">
-                      CEWP <span className="mono stack-pron">— &ldquo;soup&rdquo;</span>
+                      CEWP <span className="mono stack-pron">&ldquo;soup&rdquo;</span>
                     </div>
                     <div className="stack-sub mono">the fabric · your hardware</div>
                   </div>
@@ -208,7 +208,7 @@ export default function Homepage() {
               <div className="col rise d4">
                 <div className="cnum">03</div>
                 <h3>AI you can check</h3>
-                <p>Every claim it makes is signed — so you can see it and undo it.</p>
+                <p>Every claim it makes is signed, so you can see it and undo it.</p>
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@ export default function Homepage() {
                 <span className="eb-dot" /> Two paths · same signed agent
               </div>
               <h2 className="title">
-                On your device, or hosted — <em>your call</em>.
+                On your device, or hosted, <em>your call</em>.
               </h2>
             </header>
             <div className="paths rise d2">
@@ -271,7 +271,7 @@ export default function Homepage() {
                   <h3 className="path-title">On your phone</h3>
                 </header>
                 <p className="path-body">
-                  A small open model — like <b>Gemma 4</b> — runs on the
+                  A small open model, like <b>Gemma 4</b>, runs on the
                   device. Completely offline. No warehouse in the middle.
                 </p>
               </article>
@@ -312,14 +312,14 @@ export default function Homepage() {
               </div>
               <div className="left">
                 <p className="lead rise d2">
-                  The agent sorts everything into <b>seven circles</b> —
+                  The agent sorts everything into <b>seven circles</b>,
                   from <b>self</b> out to the whole <b>Global Commons</b>.
                 </p>
                 <p className="body rise d2">
                   For the closest circles, the system <b className="emph-text">never sends the little message</b>{" "}
                   that tells the network your data is even there. No message,
                   no way to ask for it. The privacy comes from what&rsquo;s{" "}
-                  <b className="emph-violet">missing</b> — not from a promise.
+                  <b className="emph-violet">missing</b>, not from a promise.
                 </p>
                 <ul className="tiers rise d3">
                   <li className="tier tier-local">
@@ -358,13 +358,13 @@ export default function Homepage() {
             <div className="split">
               <div className="left">
                 <p className="lead rise d2">
-                  Big tech checks its AI once, while building it — then
+                  Big tech checks its AI once, while building it, then
                   hopes. CIRIS keeps checking it{" "}
                   <b>while it runs, out in the open.</b>
                 </p>
                 <p className="small body-mute rise d3">
                   When the AI gets something wrong, you don&rsquo;t just
-                  see it — you can undo it, and it{" "}
+                  see it, you can undo it, and it{" "}
                   <span className="emph-rose">loses trust</span>.
                 </p>
               </div>
@@ -376,7 +376,7 @@ export default function Homepage() {
               <span className="pip" />
               <span>
                 who said it &nbsp;·&nbsp; who agreed &nbsp;·&nbsp; who
-                pushed back — for every important claim on the network
+                pushed back, for every important claim on the network
               </span>
             </footer>
           </div>
@@ -397,7 +397,7 @@ export default function Homepage() {
               <CaughtLyingCascade />
             </div>
             <p className="lead lead-center rise d3">
-              If a person — or an AI — is ever caught misleading people,
+              If a person, or an AI, is ever caught misleading people,
               every claim they ever signed becomes{" "}
               <b className="emph-text">moot</b>, and every conclusion
               built on them can be{" "}
@@ -422,7 +422,7 @@ export default function Homepage() {
             </div>
             <p className="lead lead-center rise d3">
               The same signature that proves who said something also
-              decides what stays home. One simple idea — and privacy,
+              decides what stays home. One simple idea, and privacy,
               less waste, and safe AI all come from it.
             </p>
           </div>
@@ -444,7 +444,7 @@ export default function Homepage() {
               <div className="col rise d2">
                 <h3>An emergency stop it can&rsquo;t argue with</h3>
                 <p>
-                  It works before the AI can even think — and only a
+                  It works before the AI can even think, and only a
                   trusted, signed key can set it off.
                 </p>
               </div>
@@ -458,7 +458,7 @@ export default function Homepage() {
               <div className="col rise d4">
                 <h3>Mental-health safety in 29 languages</h3>
                 <p>
-                  Checked by computer on every update — built first for
+                  Checked by computer on every update, built first for
                   the people who need it most.
                 </p>
               </div>

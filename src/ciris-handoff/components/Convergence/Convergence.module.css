@@ -12,6 +12,42 @@
 .i2 { right: 0; top: 50%; transform: translateY(-50%); }
 .i3 { left: 0; bottom: 8%; }
 
+/* Mobile: the 3:1 radial layout collapses on a narrow screen (the core
+   circle fills the short height and the left/right labels overlap it).
+   Below 768px, drop the connector lines and stack the core over the
+   three inputs as a clean vertical list. */
+@media (max-width: 768px) {
+  .wrap {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
+  }
+  .svg { display: none; }
+  .core {
+    position: static;
+    transform: none;
+    width: auto;
+    max-width: 92%;
+    aspect-ratio: auto;
+    border-radius: 16px;
+    padding: 20px 24px;
+    gap: 6px;
+  }
+  .coreTitle { font-size: 24px; max-width: none; }
+  .coreSub { font-size: 13px; max-width: none; }
+  .inp {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 320px;
+    font-size: 17px;
+    justify-content: flex-start;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .core { animation: convCore 3.4s ease-in-out infinite; }
   .flow { stroke-dasharray: 5 12; animation: convFlow 3.2s linear infinite; }
