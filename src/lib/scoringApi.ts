@@ -130,6 +130,128 @@ export interface AlertsResponse {
   agents: AlertAgent[];
 }
 
+// ─── Template grouping ──────────────────────────────────────────────
+//
+// The fleet endpoint returns one entry per running OCCURRENCE, and many
+// occurrences share a template name (e.g. 143 "Ally" instances). The
+// response carries no per-occurrence id, so we synthesize a stable UID
+// from each occurrence's distinguishing content (template + window +
+// trace counts + per-factor trace counts). Identical occurrence data
+// yields the same UID across refreshes; distinct occurrences differ.
+
+/** An occurrence is an AgentScore plus its derived stable UID. */
+export interface Occurrence extends AgentScore {
+  uid: string;
+}
+
+/** All occurrences of one template, plus an aggregate roll-up. */
+export interface TemplateGroup {
+  template: string;
+  occurrences: Occurrence[];
+  aggregate: {
+    count: number;
+    /** Trace-weighted mean composite score across occurrences. */
+    weighted_composite: number;
+    total_traces: number;
+    /** How many occurrences fall in each category. */
+    categories: {
+      high_capacity: number;
+      healthy: number;
+      moderate: number;
+      high_fragility: number;
+    };
+    /** The most common category (drives the group badge color). */
+    dominant_category: AgentScore["category"];
+  };
+}
+
+/** djb2 hash → short base36 string. Deterministic, no crypto needed. */
+function shortHash(input: string): string {
+  let h = 5381;
+  for (let i = 0; i < input.length; i++) {
+    h = ((h << 5) + h + input.charCodeAt(i)) >>> 0;
+  }
+  return h.toString(36).padStart(7, "0").slice(0, 7);
+}
+
+/** Stable UID for one occurrence, from its distinguishing fields. */
+export function occurrenceUid(a: AgentScore): string {
+  const factorCounts = (["C", "I_int", "R", "I_inc", "S"] as const)
+    .map((k) => a.factors[k]?.trace_count ?? 0)
+    .join(".");
+  const seed = [
+    a.agent_name,
+    a.metadata.window_start,
+    a.metadata.total_traces,
+    a.metadata.non_exempt_traces,
+    a.composite_score.toFixed(6),
+    a.fragility_index.toFixed(6),
+    factorCounts,
+  ].join("|");
+  return `${a.agent_name}-${shortHash(seed)}`;
+}
+
+/** Group fleet occurrences by template name, newest-largest first. */
+export function groupByTemplate(agents: AgentScore[]): TemplateGroup[] {
+  const byTemplate = new Map<string, Occurrence[]>();
+  // Some occurrences are byte-identical in the response (same scores,
+  // trace counts, and window) and so hash to the same base UID. Rather
+  // than drop them — the user wants every occurrence shown — we keep
+  // all of them and append an ordinal suffix to the 2nd+ duplicate, so
+  // every occurrence gets a distinct id even when its data is identical.
+  const baseCount = new Map<string, number>();
+  for (const a of agents) {
+    const base = occurrenceUid(a);
+    const n = (baseCount.get(base) ?? 0) + 1;
+    baseCount.set(base, n);
+    const uid = n === 1 ? base : `${base}~${n}`;
+    const occ: Occurrence = { ...a, uid };
+    const list = byTemplate.get(a.agent_name) ?? [];
+    list.push(occ);
+    byTemplate.set(a.agent_name, list);
+  }
+
+  const groups: TemplateGroup[] = [];
+  for (const [template, occurrences] of byTemplate) {
+    const total_traces = occurrences.reduce(
+      (s, o) => s + (o.metadata.total_traces || 0),
+      0,
+    );
+    const weighted = occurrences.reduce(
+      (s, o) => s + o.composite_score * (o.metadata.total_traces || 0),
+      0,
+    );
+    const categories = {
+      high_capacity: 0,
+      healthy: 0,
+      moderate: 0,
+      high_fragility: 0,
+    };
+    for (const o of occurrences) categories[o.category] += 1;
+    const dominant_category = (
+      Object.entries(categories).sort((x, y) => y[1] - x[1])[0][0]
+    ) as AgentScore["category"];
+    // Occurrences sorted by trace volume, busiest first.
+    occurrences.sort(
+      (x, y) => (y.metadata.total_traces || 0) - (x.metadata.total_traces || 0),
+    );
+    groups.push({
+      template,
+      occurrences,
+      aggregate: {
+        count: occurrences.length,
+        weighted_composite: total_traces > 0 ? weighted / total_traces : 0,
+        total_traces,
+        categories,
+        dominant_category,
+      },
+    });
+  }
+  // Largest fleet first.
+  groups.sort((a, b) => b.aggregate.count - a.aggregate.count);
+  return groups;
+}
+
 /**
  * Fetch fleet capacity scores
  */
