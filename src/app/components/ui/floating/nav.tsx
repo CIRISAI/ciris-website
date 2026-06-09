@@ -8,21 +8,40 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Robot, ShieldCheck, Heart } from "@phosphor-icons/react";
+import { delocalizePath, localizeHref } from "@/i18n/config";
+import { getChrome } from "@/i18n/chrome";
 
 export const FloatingNav = ({
   navItems,
   className,
+  locale: localeProp,
 }: {
   navItems: {
     name: string;
     link: string;
     subtitle?: string;
     icon?: React.JSX.Element;
+    key?: string;
   }[];
   className?: string;
+  locale?: string;
 }) => {
   const { scrollYProgress } = useScroll();
+  const pathname = usePathname() || "/";
+  // Prefer the explicit locale prop (reliable during static prerender on
+  // localized pages); fall back to deriving it from the path elsewhere.
+  const locale = localeProp ?? delocalizePath(pathname).locale;
+  const navT = getChrome(locale).nav as Record<
+    string,
+    { name: string; subtitle: string }
+  >;
+  const tr = (item: { key?: string; name: string; subtitle?: string; link: string }) => ({
+    name: (item.key && navT[item.key]?.name) || item.name,
+    subtitle: (item.key && navT[item.key]?.subtitle) || item.subtitle,
+    href: localizeHref(item.link, locale),
+  });
 
   const [visible, setVisible] = useState(true);
 
@@ -63,10 +82,11 @@ export const FloatingNav = ({
         <div className="hidden md:flex items-center gap-6 mb-3">
           {navItems.map((navItem: any, idx: number) => {
             const isInstall = navItem.link === "/install";
+            const t = tr(navItem);
             return (
               <Link
                 key={`link=${idx}`}
-                href={navItem.link}
+                href={t.href}
                 className={cn(
                   isInstall
                     ? "flex flex-col items-center text-brand-primary font-semibold hover:text-brand-secondary transition-colors"
@@ -74,7 +94,7 @@ export const FloatingNav = ({
                 )}
               >
                 <span className={cn("text-sm", isInstall ? "font-semibold" : "font-medium")}>
-                  {navItem.name}
+                  {t.name}
                 </span>
                 <span
                   className={cn(
@@ -84,7 +104,7 @@ export const FloatingNav = ({
                       : "text-neutral-500 dark:text-neutral-400"
                   )}
                 >
-                  {navItem.subtitle}
+                  {t.subtitle}
                 </span>
               </Link>
             );
@@ -95,10 +115,11 @@ export const FloatingNav = ({
         <div className="flex md:hidden items-center gap-1.5 mb-2 flex-wrap justify-center">
           {navItems.map((navItem: any, idx: number) => {
             const isInstall = navItem.link === "/install";
+            const t = tr(navItem);
             return (
               <Link
                 key={`mobile-link=${idx}`}
-                href={navItem.link}
+                href={t.href}
                 className={cn(
                   "text-[10px] whitespace-nowrap transition-colors",
                   isInstall
@@ -106,7 +127,7 @@ export const FloatingNav = ({
                     : "font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
                 )}
               >
-                {navItem.name}
+                {t.name}
               </Link>
             );
           })}

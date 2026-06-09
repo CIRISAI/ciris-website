@@ -1,0 +1,54 @@
+{
+  "_meta": { "locale": "en", "origin": "source" },
+  "nav": {
+    "firstContact": { "name": "First Contact", "subtitle": "Start Here: the Why" },
+    "install": { "name": "Install", "subtitle": "Get the Agent" },
+    "coherenceRatchet": { "name": "Coherence Ratchet", "subtitle": "The Pressure" },
+    "federation": { "name": "Federation", "subtitle": "The Response" },
+    "compare": { "name": "Compare", "subtitle": "See the Safety Case" },
+    "research": { "name": "Research", "subtitle": "Papers & Trace Commons" },
+    "accord": { "name": "Accord", "subtitle": "Read the Framework" },
+    "github": { "name": "GitHub", "subtitle": "Open Source Code" }
+  },
+  "footer": {
+    "desc": "Open coherence infrastructure. AGPL-3.0 | Mission-locked.",
+    "headings": {
+      "technology": "Technology",
+      "resources": "Resources",
+      "mission": "Mission",
+      "legal": "Legal"
+    },
+    "privacyPolicy": "Privacy Policy",
+    "items": {
+      "howItWorks": "How It Works",
+      "federation": "Federation",
+      "models": "Models",
+      "services": "Services",
+      "integrations": "Integrations",
+      "install": "Install",
+      "safety": "Safety",
+      "infrastructure": "Infrastructure",
+      "trust": "Trust & Identity",
+      "compare": "Compare",
+      "compliance": "Compliance",
+      "cewp": "CEWP (soup)",
+      "grammar": "Grammar (CEG)",
+      "game": "Mystery game",
+      "firstContact": "First Contact",
+      "exploreTrace": "Explore a Trace",
+      "scoring": "CIRIS Scoring",
+      "researchStatus": "Research Status",
+      "documentation": "Documentation",
+      "status": "Status",
+      "about": "About",
+      "vision": "Vision",
+      "thesis": "Thesis",
+      "methodology": "Methodology",
+      "safetyVsCensorship": "Safety vs Censorship",
+      "principles": "Principles",
+      "privacyPolicy": "Privacy Policy",
+      "safetyPolicy": "Safety Policy",
+      "warrantCanary": "Warrant Canary"
+    }
+  }
+}

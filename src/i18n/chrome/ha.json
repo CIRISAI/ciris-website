@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "ha",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "Farkon Tuntuɓa",
+      "subtitle": "Fara Nan: Dalilin"
+    },
+    "install": {
+      "name": "Shigar da shi",
+      "subtitle": "Sami Wakilin"
+    },
+    "coherenceRatchet": {
+      "name": "Matsin Daidaituwa",
+      "subtitle": "Matsinin"
+    },
+    "federation": {
+      "name": "Haɗin ƙungiyoyi",
+      "subtitle": "Amsar"
+    },
+    "compare": {
+      "name": "Kwatanta",
+      "subtitle": "Duba Hujjar Aminci"
+    },
+    "research": {
+      "name": "Bincike",
+      "subtitle": "Takardun Ilimi & Gama-gari"
+    },
+    "accord": {
+      "name": "Yarjejeniya",
+      "subtitle": "Karanta Tsarin"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Lambar Buɗaɗɗen Tushe"
+    }
+  },
+  "footer": {
+    "desc": "Buɗaɗɗen kayayyakin daidaituwa. AGPL-3.0 | Kullum ga manufa.",
+    "headings": {
+      "technology": "Fasaha",
+      "resources": "Albarkatu",
+      "mission": "Manufa",
+      "legal": "Doka"
+    },
+    "privacyPolicy": "Manufar Sirri",
+    "items": {
+      "howItWorks": "Yadda Yake Aiki",
+      "federation": "Haɗin ƙungiyoyi",
+      "models": "Samfurori",
+      "services": "Sabis",
+      "integrations": "Haɗewar",
+      "install": "Shigar da shi",
+      "safety": "Aminci",
+      "infrastructure": "Kayan Aikin Jama'a",
+      "trust": "Amincewa da Asali",
+      "compare": "Kwatanta",
+      "compliance": "Bin Doka",
+      "cewp": "CEWP (soup)",
+      "grammar": "Nahawu (CEG)",
+      "game": "Wasan asiri",
+      "firstContact": "Farkon Tuntuɓa",
+      "exploreTrace": "Binciko Sawu",
+      "scoring": "CIRIS Ƙididdiga",
+      "researchStatus": "Halin Bincike",
+      "documentation": "Takardun Bayanai",
+      "status": "Halin Yanzu",
+      "about": "Game da mu",
+      "vision": "Hangen Nesa",
+      "thesis": "Muhawara",
+      "methodology": "Hanyar Aiki",
+      "safetyVsCensorship": "Aminci da Takunkumi",
+      "principles": "Ka'idoji",
+      "privacyPolicy": "Manufar Sirri",
+      "safetyPolicy": "Manufar Aminci",
+      "warrantCanary": "Gargaɗin Umarni"
+    }
+  }
+}

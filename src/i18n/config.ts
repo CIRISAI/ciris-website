@@ -44,6 +44,32 @@ export function isLocale(code: string): boolean {
   return ALL_LOCALE_CODES.includes(code);
 }
 
+// Base (English) paths that have localized /[locale]/ variants. Nav/footer/
+// switcher links are only locale-prefixed for paths in this set; everything
+// else stays on its English URL so we never link to a route that 404s.
+export const LOCALIZED_ROUTES: ReadonlySet<string> = new Set([
+  "/",
+  "/install",
+  "/about",
+  "/how-it-works",
+  "/trust",
+  "/vision",
+  "/safety",
+  "/crowdsourcing-alignment",
+]);
+
+/**
+ * Prefix an internal href with the locale IF that route is localized.
+ * External (http) and non-localized routes are returned unchanged.
+ */
+export function localizeHref(href: string, locale: string): string {
+  if (locale === DEFAULT_LOCALE) return href;
+  if (!href.startsWith("/")) return href; // external / anchor
+  const base = href === "/" ? "/" : href.replace(/\/$/, "");
+  if (!LOCALIZED_ROUTES.has(base)) return href;
+  return base === "/" ? `/${locale}` : `/${locale}${base}`;
+}
+
 export function localeMeta(code: string): LocaleMeta {
   return LOCALES.find((l) => l.code === code) ?? LOCALES[0];
 }

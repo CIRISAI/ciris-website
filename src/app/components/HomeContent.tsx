@@ -57,7 +57,7 @@ export default function HomeContent({ t }: { t: Dictionary }) {
 
   return (
     <>
-      <FloatingNav navItems={navItems} />
+      <FloatingNav navItems={navItems} locale={locale} />
       {isLocalized && (
         <MachineTranslationBanner
           lead={t.common.mtBanner.lead}
@@ -435,7 +435,7 @@ export default function HomeContent({ t }: { t: Dictionary }) {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer locale={locale} />
       <LanguageSwitcher currentLocale={locale} />
     </>
   );

@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "am",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "ቀዳሚ ግንኙነት",
+      "subtitle": "ከዚህ ጀምር: ለምን?"
+    },
+    "install": {
+      "name": "ጫን",
+      "subtitle": "ወኪሉን ያውርዱ"
+    },
+    "coherenceRatchet": {
+      "name": "ተቀናጀነት ራቸት",
+      "subtitle": "ጫናው"
+    },
+    "federation": {
+      "name": "ፌዴሬሽን",
+      "subtitle": "ምላሹ"
+    },
+    "compare": {
+      "name": "አወዳድር",
+      "subtitle": "የደህንነት ምክንያቱን ይመልከቱ"
+    },
+    "research": {
+      "name": "ምርምር",
+      "subtitle": "ጽሁፎችና የክትትል ሀብቶች"
+    },
+    "accord": {
+      "name": "ስምምነት",
+      "subtitle": "ማዕቀፉን ያንብቡ"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "ክፍት ምንጭ ኮድ"
+    }
+  },
+  "footer": {
+    "desc": "ክፍት ተቀናጀነት መሠረተ ልማት። AGPL-3.0 | ተልዕኮ-ቆልፍ።",
+    "headings": {
+      "technology": "ቴክኖሎጂ",
+      "resources": "ሀብቶች",
+      "mission": "ተልዕኮ",
+      "legal": "ህጋዊ"
+    },
+    "privacyPolicy": "የግልነት ፖሊሲ",
+    "items": {
+      "howItWorks": "እንዴት እንደሚሰራ",
+      "federation": "ፌዴሬሽን",
+      "models": "ሞዴሎች",
+      "services": "አገልግሎቶች",
+      "integrations": "ውህደቶች",
+      "install": "ጫን",
+      "safety": "ደህንነት",
+      "infrastructure": "መሠረተ ልማት",
+      "trust": "መተማመን & ማንነት",
+      "compare": "አወዳድር",
+      "compliance": "ተገዢነት",
+      "cewp": "CEWP (soup)",
+      "grammar": "ሰዋስው (CEG)",
+      "game": "እንቆቅልሽ ጨዋታ",
+      "firstContact": "ቀዳሚ ግንኙነት",
+      "exploreTrace": "ክትትል ያስሱ",
+      "scoring": "CIRIS ነጥብ አሰጣጥ",
+      "researchStatus": "የምርምር ሁኔታ",
+      "documentation": "ሰነዶች",
+      "status": "ሁኔታ",
+      "about": "ስለ እኛ",
+      "vision": "ራዕይ",
+      "thesis": "ጽሁፍ",
+      "methodology": "ዘዴ",
+      "safetyVsCensorship": "ደህንነት ወይስ ሳንሱር",
+      "principles": "መርሆዎች",
+      "privacyPolicy": "የግልነት ፖሊሲ",
+      "safetyPolicy": "የደህንነት ፖሊሲ",
+      "warrantCanary": "የፍርድ ቤት ትዕዛዝ ካናሪ"
+    }
+  }
+}

@@ -1,11 +1,15 @@
 "use client";
 import LogoIcon from "./ui/floating/LogoIcon";
 import { SVGProps } from "react";
+import { usePathname } from "next/navigation";
 import { getCopyrightNoticeShort } from "@/lib/copyright";
+import { delocalizePath, localizeHref } from "@/i18n/config";
+import { getChrome } from "@/i18n/chrome";
 
 interface NavigationItem {
   name: string;
   href: string;
+  key?: string;
 }
 
 interface SocialItem {
@@ -24,41 +28,41 @@ interface Navigation {
 
 const navigation: Navigation = {
   solutions: [
-    { name: "How It Works", href: "/how-it-works" },
-    { name: "Federation", href: "/federation" },
-    { name: "Models", href: "/models" },
-    { name: "Services", href: "/services" },
-    { name: "Integrations", href: "/integrations" },
-    { name: "Install", href: "/install" },
-    { name: "Safety", href: "/safety" },
-    { name: "Infrastructure", href: "/architecture" },
-    { name: "Trust & Identity", href: "/trust" },
+    { name: "How It Works", href: "/how-it-works", key: "howItWorks" },
+    { name: "Federation", href: "/federation", key: "federation" },
+    { name: "Models", href: "/models", key: "models" },
+    { name: "Services", href: "/services", key: "services" },
+    { name: "Integrations", href: "/integrations", key: "integrations" },
+    { name: "Install", href: "/install", key: "install" },
+    { name: "Safety", href: "/safety", key: "safety" },
+    { name: "Infrastructure", href: "/architecture", key: "infrastructure" },
+    { name: "Trust & Identity", href: "/trust", key: "trust" },
   ],
   support: [
-    { name: "Compare", href: "/compare" },
-    { name: "Compliance", href: "/compliance" },
-    { name: "CEWP (soup)", href: "/cewp" },
-    { name: "Grammar (CEG)", href: "/grammar" },
-    { name: "Mystery game", href: "/game" },
-    { name: "First Contact", href: "/first-contact" },
-    { name: "Explore a Trace", href: "/explore-a-trace" },
-    { name: "CIRIS Scoring", href: "/ciris-scoring" },
-    { name: "Research Status", href: "/research-status" },
-    { name: "Documentation", href: "https://deepwiki.com/CIRISAI/CIRISAgent" },
-    { name: "Status", href: "/status" },
+    { name: "Compare", href: "/compare", key: "compare" },
+    { name: "Compliance", href: "/compliance", key: "compliance" },
+    { name: "CEWP (soup)", href: "/cewp", key: "cewp" },
+    { name: "Grammar (CEG)", href: "/grammar", key: "grammar" },
+    { name: "Mystery game", href: "/game", key: "game" },
+    { name: "First Contact", href: "/first-contact", key: "firstContact" },
+    { name: "Explore a Trace", href: "/explore-a-trace", key: "exploreTrace" },
+    { name: "CIRIS Scoring", href: "/ciris-scoring", key: "scoring" },
+    { name: "Research Status", href: "/research-status", key: "researchStatus" },
+    { name: "Documentation", href: "https://deepwiki.com/CIRISAI/CIRISAgent", key: "documentation" },
+    { name: "Status", href: "/status", key: "status" },
   ],
   company: [
-    { name: "About", href: "/about" },
-    { name: "Vision", href: "/vision" },
-    { name: "Thesis", href: "/coherence-ratchet" },
-    { name: "Methodology", href: "/mdd" },
-    { name: "Safety vs Censorship", href: "/safety-vs-censorship" },
-    { name: "Principles", href: "/sections/main" },
+    { name: "About", href: "/about", key: "about" },
+    { name: "Vision", href: "/vision", key: "vision" },
+    { name: "Thesis", href: "/coherence-ratchet", key: "thesis" },
+    { name: "Methodology", href: "/mdd", key: "methodology" },
+    { name: "Safety vs Censorship", href: "/safety-vs-censorship", key: "safetyVsCensorship" },
+    { name: "Principles", href: "/sections/main", key: "principles" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Safety Policy", href: "/safety-policy" },
-    { name: "Warrant Canary", href: "/canary" },
+    { name: "Privacy Policy", href: "/privacy", key: "privacyPolicy" },
+    { name: "Safety Policy", href: "/safety-policy", key: "safetyPolicy" },
+    { name: "Warrant Canary", href: "/canary", key: "warrantCanary" },
   ],
   social: [
     {
@@ -138,29 +142,33 @@ const navigation: Navigation = {
   ],
 };
 
-export default function Example() {
+export default function Example({ locale: localeProp }: { locale?: string } = {}) {
+  const pathname = usePathname() || "/";
+  const locale = localeProp ?? delocalizePath(pathname).locale;
+  const f = getChrome(locale).footer;
+  const items = f.items as Record<string, string>;
+  const itemLabel = (it: NavigationItem) =>
+    (it.key && items[it.key]) || it.name;
   return (
     <footer className="fill-brand-primary text-brand-primary bg-ciris-vlback container mb-8 rounded-md dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <LogoIcon className="text-brand-primary h-16 w-auto" />
-            <p className="text-sm/6 text-balance">
-              Open coherence infrastructure. AGPL-3.0 | Mission-locked.
-            </p>
+            <p className="text-sm/6 text-balance">{f.desc}</p>
             <div className="flex gap-x-6"></div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="border-b-brand-primary border-b pb-4 text-sm/6 font-semibold">
-                  Technology
+                  {f.headings.technology}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="hover:underline text-sm/6">
-                        {item.name}
+                      <a href={localizeHref(item.href, locale)} className="hover:underline text-sm/6">
+                        {itemLabel(item)}
                       </a>
                     </li>
                   ))}
@@ -168,13 +176,13 @@ export default function Example() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="border-b-brand-primary border-b pb-4 text-sm/6 font-semibold">
-                  Resources
+                  {f.headings.resources}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="hover:underline text-sm/6">
-                        {item.name}
+                      <a href={localizeHref(item.href, locale)} className="hover:underline text-sm/6">
+                        {itemLabel(item)}
                       </a>
                     </li>
                   ))}
@@ -184,13 +192,13 @@ export default function Example() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="border-b-brand-primary border-b pb-4 text-sm/6 font-semibold">
-                  Mission
+                  {f.headings.mission}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="hover:underline text-sm/6">
-                        {item.name}
+                      <a href={localizeHref(item.href, locale)} className="hover:underline text-sm/6">
+                        {itemLabel(item)}
                       </a>
                     </li>
                   ))}
@@ -198,13 +206,13 @@ export default function Example() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="border-b-brand-primary border-b pb-4 text-sm/6 font-semibold">
-                  Legal
+                  {f.headings.legal}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="hover:underline text-sm/6">
-                        {item.name}
+                      <a href={localizeHref(item.href, locale)} className="hover:underline text-sm/6">
+                        {itemLabel(item)}
                       </a>
                     </li>
                   ))}
@@ -215,8 +223,8 @@ export default function Example() {
         </div>
         <div className="mt-16 flex justify-center gap-8 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-sm/6">{getCopyrightNoticeShort()}</p>
-          <a href="/privacy" className="text-sm/6 hover:text-gray-800 underline">
-            Privacy Policy
+          <a href={localizeHref("/privacy", locale)} className="text-sm/6 hover:text-gray-800 underline">
+            {f.privacyPolicy}
           </a>
           {navigation.social.map((item) => (
             <a key={item.name} href={item.href} className="hover:text-gray-800">
