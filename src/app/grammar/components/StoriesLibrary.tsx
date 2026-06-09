@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FAMILY_COLOR, FAMILY_LABEL } from "../lib/shared";
 import type { FamilyId, GeneratedStory } from "../lib/shared";
 import { STORIES as CURATED_STORIES } from "../lib/content";
@@ -52,6 +52,8 @@ export default function StoriesLibrary() {
   const all = useMemo(combinedLibrary, []);
   const [family, setFamily] = useState<FamilyId | "ALL">("ALL");
   const [query, setQuery] = useState("");
+  const PAGE = 10;
+  const [visible, setVisible] = useState(PAGE);
 
   const counts = useMemo(() => {
     const c: Record<string, number> = { ALL: all.length };
@@ -73,6 +75,15 @@ export default function StoriesLibrary() {
       return false;
     });
   }, [all, family, query]);
+
+  // Collapse back to the first page whenever the filter or search changes,
+  // so a fresh query never inherits a previously-expanded long list.
+  useEffect(() => {
+    setVisible(PAGE);
+  }, [family, query]);
+
+  const shown = filtered.slice(0, visible);
+  const remaining = filtered.length - shown.length;
 
   return (
     <section id="stories" className="space-y-5">
@@ -132,13 +143,14 @@ export default function StoriesLibrary() {
           className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder-slate-400 focus:border-brand-primary focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder-slate-500"
         />
         <p className="text-xs text-slate-500 dark:text-slate-400">
-          Showing {filtered.length} of {all.length} stories.
+          Showing {shown.length} of {filtered.length} matching ({all.length}{" "}
+          total). Filter or search to narrow the list.
         </p>
       </div>
 
       {/* Stories list */}
       <div className="space-y-3">
-        {filtered.map((s, i) => (
+        {shown.map((s, i) => (
           <details
             key={s.id}
             id={`story-${s.id}`}
@@ -203,6 +215,22 @@ export default function StoriesLibrary() {
             No stories match this filter. Try clearing the search or picking
             a different family.
           </p>
+        )}
+        {remaining > 0 && (
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+            <button
+              onClick={() => setVisible((v) => v + PAGE)}
+              className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
+            >
+              Show {Math.min(PAGE, remaining)} more
+            </button>
+            <button
+              onClick={() => setVisible(filtered.length)}
+              className="text-sm font-medium text-slate-500 hover:text-brand-primary dark:text-slate-400"
+            >
+              Show all {filtered.length}
+            </button>
+          </div>
         )}
       </div>
     </section>
