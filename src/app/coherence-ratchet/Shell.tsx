@@ -2,16 +2,25 @@ import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
 import LevelToggle from "@/app/components/LevelToggle";
+import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
+import LanguageSwitcher from "@/app/components/LanguageSwitcher";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 type Level = "simple" | "advanced";
 
 export default function Shell({
   level,
+  locale,
+  mtBanner,
   children,
 }: {
   level: Level;
+  locale?: string;
+  mtBanner?: Dictionary["common"]["mtBanner"];
   children: React.ReactNode;
 }) {
+  const isLocalized = locale !== undefined && locale !== "en";
+
   const subtitle =
     level === "simple"
       ? "Why a powerful mind has to show its work."
@@ -19,7 +28,14 @@ export default function Shell({
 
   return (
     <>
-      <FloatingNav navItems={navItems} />
+      <FloatingNav navItems={navItems} locale={locale} />
+      {isLocalized && mtBanner && (
+        <MachineTranslationBanner
+          lead={mtBanner.lead}
+          body={mtBanner.body}
+          cta={mtBanner.cta}
+        />
+      )}
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black">
         <div className="mx-auto max-w-3xl px-6 pb-16 pt-44">
           <div className="mb-8">
@@ -79,7 +95,8 @@ export default function Shell({
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer locale={locale} />
+      {isLocalized && locale && <LanguageSwitcher currentLocale={locale} />}
     </>
   );
 }

@@ -86,6 +86,10 @@ export const LOCALIZED_ROUTES: ReadonlySet<string> = new Set([
   "/safety-vs-censorship",
   "/services",
   "/models",
+  "/mdd",
+  "/coherence-ratchet",
+  "/coherence-collapse-analysis",
+  "/research-status",
 ]);
 
 /**
