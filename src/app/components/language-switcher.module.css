@@ -1,0 +1,166 @@
+/* Animated, attention-drawing language switcher.
+   - The pill breathes a soft glow (pulseGlow) to draw the eye.
+   - The label cross-fades as it auto-cycles native language names (cycleIn).
+   - Respects prefers-reduced-motion: no pulse, no auto-cycle motion. */
+
+.root {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 50;
+}
+
+.pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 9999px;
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(var(--ls-bg, #0b1220), var(--ls-bg, #0b1220)) padding-box,
+    linear-gradient(120deg, #22d3ee, #8b5cf6, #ec4899, #22d3ee) border-box;
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.55);
+  animation: pulseGlow 2.8s ease-in-out infinite;
+  transition: transform 0.18s ease;
+}
+.pill:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(139, 92, 246, 0.0),
+      0 6px 22px -6px rgba(34, 211, 238, 0.45);
+  }
+  50% {
+    box-shadow:
+      0 0 0 7px rgba(139, 92, 246, 0.12),
+      0 8px 30px -4px rgba(236, 72, 153, 0.55);
+  }
+}
+
+.globe {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  animation: spinSlow 14s linear infinite;
+}
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The cycling native-name label. Fixed min-width so the pill doesn't jitter
+   as labels of different lengths swap in. */
+.label {
+  display: inline-block;
+  min-width: 5.5rem;
+  text-align: center;
+  line-height: 1.1;
+}
+.labelText {
+  display: inline-block;
+  animation: cycleIn 0.5s ease;
+}
+@keyframes cycleIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.caret {
+  flex: none;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+.caretOpen {
+  transform: rotate(180deg);
+}
+
+/* The expanded picker panel. */
+.panel {
+  position: absolute;
+  bottom: calc(100% + 0.65rem);
+  right: 0;
+  min-width: 14rem;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: var(--ls-bg, #0b1220);
+  box-shadow: 0 18px 50px -12px rgba(0, 0, 0, 0.6);
+  animation: panelIn 0.18s ease;
+}
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.4rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.panelHead {
+  padding: 0.45rem 0.65rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.option {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border-radius: 0.6rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: background 0.14s ease;
+}
+.option:hover {
+  background: rgba(148, 163, 184, 0.12);
+}
+.optionActive {
+  background: linear-gradient(
+    90deg,
+    rgba(34, 211, 238, 0.16),
+    rgba(139, 92, 246, 0.16)
+  );
+}
+.native {
+  font-weight: 600;
+}
+.english {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pill,
+  .globe,
+  .labelText,
+  .panel {
+    animation: none;
+  }
+}

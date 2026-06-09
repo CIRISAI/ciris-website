@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "locale": "en",
+    "name": "English",
+    "origin": "source",
+    "status": "source"
+  },
+  "common": {
+    "langSwitcher": {
+      "label": "Language",
+      "cta": "Read this in your language",
+      "current": "Current language"
+    },
+    "mtBanner": {
+      "lead": "This page was translated by machine.",
+      "body": "If anything reads wrong, please open an issue — the repo is public for a reason.",
+      "cta": "Report a translation problem"
+    }
+  },
+  "home": {
+    "cover": {
+      "eyebrow": "CIRIS · Open Coherence Infrastructure",
+      "h1": "An AI you can <em>actually own</em>.",
+      "sub": "One app. <b>No data centers.</b> Every claim it makes, <b>signed.</b>",
+      "appStoreAria": "Install CIRIS on the App Store",
+      "googlePlayAria": "Install CIRIS on Google Play",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ctahint": "free · open source · on your phone today",
+      "foot1": "CIRISAgent · CEWP “soup”",
+      "foot2": "CIRIS 2.9.4 shipping · 3.0 rolling out June and July 2026"
+    },
+    "funnel": {
+      "eyebrow": "Where we are",
+      "title": "The internet runs through a few <em>giant buildings</em>.",
+      "body1": "Ask an AI anything and your words travel to someone else’s building, run on someone else’s model, and land in someone else’s logs, with the carbon as a side effect.",
+      "body2": "You don’t own the answer, the data, or the footprint.",
+      "foot": "≈ 10,000 data centers · 5 billion people · one funnel"
+    },
+    "appFabric": {
+      "eyebrow": "The shape of the alternative",
+      "title": "One app.<br />One <em>fabric</em> underneath.",
+      "lead1": "<b>CIRISAgent</b> is what you hold and talk to. It carries the reasoning.",
+      "lead2": "<b>CEWP</b> is the fabric it runs on: a web of devices that trust each other, all hardware you already own.",
+      "small": "People and AI both live on it as equals, side by side.",
+      "appName": "CIRISAgent",
+      "appSub": "the app · reasoning + UI",
+      "connector": "~14 KB trace / decision",
+      "fabricSub": "the fabric · your hardware",
+      "fabricPron": "“soup”"
+    },
+    "threePromises": {
+      "eyebrow": "The big idea",
+      "title": "Three promises, held as <em>one system</em>.",
+      "lead": "Usually these come from three different companies. Here they fall out of one design.",
+      "col1Title": "No data centers",
+      "col1Body": "It runs on the phone in your pocket and a small box at home.",
+      "col2Title": "Privacy that can’t leak",
+      "col2Body": "Your private life literally can’t leave your circle.",
+      "col3Title": "AI you can check",
+      "col3Body": "Every claim it makes is signed, so you can see it and undo it."
+    },
+    "hardware": {
+      "eyebrow": "PROMISE 01",
+      "title": "It runs on hardware<br />you <em>already own</em>.",
+      "lead": "of everyday web activity <b>never leaves your city</b>. We call it the <b>locality bonus</b>.",
+      "small": "phones · home boxes · no giant data centers",
+      "foot": "two-thirds stays home → no giant data center → far less energy & CO₂"
+    },
+    "twoPaths": {
+      "eyebrow": "Two paths · same signed agent",
+      "title": "On your device, or hosted, <em>your call</em>.",
+      "localPill": "no data centers",
+      "localTitle": "On your phone",
+      "localBody": "A small open model, like <b>Gemma 4</b>, runs on the device. Completely offline. No warehouse in the middle.",
+      "hostedPill": "uses a data center",
+      "hostedTitle": "Free, in your language",
+      "hostedBody": "For phones too small to run a model, CIRIS is <b>free</b> over hosted inference in <b>29 languages</b>. Same signed claims. Someone else’s data center.",
+      "foot": "two paths · both signed · both checkable"
+    },
+    "privacy": {
+      "eyebrow": "PROMISE 02",
+      "title": "Your private life<br />can’t <em class=\"em-violet\">leave the room</em>.",
+      "lead": "The agent sorts everything into <b>seven circles</b>, from <b>self</b> out to the whole <b>Global Commons</b>.",
+      "body": "For the closest circles, the system <b class=\"emph-text\">never sends the little message</b> that tells the network your data is even there. No message, no way to ask for it. The privacy comes from what’s <b class=\"emph-violet\">missing</b>, not from a promise.",
+      "tier1Name": "self · family",
+      "tier1Lab": "never shared",
+      "tier2Name": "friends · circle",
+      "tier2Lab": "stays local",
+      "tier3Name": "community → Global Commons",
+      "tier3Lab": "can be shared"
+    },
+    "signed": {
+      "eyebrow": "PROMISE 03",
+      "title": "Every claim it makes<br />is <em class=\"em-cyan\">signed</em>.",
+      "lead": "Big tech checks its AI once, while building it, then hopes. CIRIS keeps checking it <b>while it runs, out in the open.</b>",
+      "small": "When the AI gets something wrong, you don’t just see it, you can undo it, and it <span class=\"emph-rose\">loses trust</span>.",
+      "foot": "who said it · who agreed · who pushed back, for every important claim on the network"
+    },
+    "caughtLying": {
+      "eyebrow": "And here’s the safety net",
+      "title": "Catch a liar, and it all <em>comes undone</em>.",
+      "lead": "If a person, or an AI, is ever caught misleading people, every claim they ever signed becomes <b class=\"emph-text\">moot</b>, and every conclusion built on them can be <b class=\"emph-text\">re-opened</b>."
+    },
+    "unification": {
+      "eyebrow": "Why it’s one system, not three",
+      "title": "The three can’t be <em>pulled apart</em>.",
+      "lead": "The same signature that proves who said something also decides what stays home. One simple idea, and privacy, less waste, and safe AI all come from it."
+    },
+    "safetyLeadership": {
+      "eyebrow": "And we’ll say it out loud",
+      "title": "The safest, most ethical AI you can actually use. <em>By a lot.</em>",
+      "col1Title": "An emergency stop it can’t argue with",
+      "col1Body": "It works before the AI can even think, and only a trusted, signed key can set it off.",
+      "col2Title": "A record it can’t quietly change",
+      "col2Body": "Every choice is signed and linked to the one before. A lie can’t keep its story straight.",
+      "col3Title": "Mental-health safety in 29 languages",
+      "col3Body": "Checked by computer on every update, built first for the people who need it most.",
+      "tail": "And every word of it is <b class=\"emph-accent\">open code you can read</b>."
+    },
+    "close": {
+      "eyebrow": "Not just talk",
+      "h1": "CIRIS is <em>open</em>,<br />and it’s <em>here</em>.",
+      "sub": "Open source, all the way through. <b>2.9.4 is shipping now</b> on iPhone and Android, and <b>3.0 rolls out through June and July 2026</b>.",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ctahint": "free · open source",
+      "foot1": "github.com/CIRISAI · AGPL-3.0 · mission-locked",
+      "foot2": "An AI you can own"
+    },
+    "explore": {
+      "eyebrow": "Explore further",
+      "title": "If you want the proof.",
+      "links": {
+        "install": "Install the agent",
+        "installNote": "iPhone · Android · pip · desktop",
+        "cewp": "CEWP",
+        "cewpNote": "The fabric, in plain English",
+        "cewpDetails": "CEWP simulator",
+        "cewpDetailsNote": "The math, with sliders",
+        "grammar": "Grammar (CEG)",
+        "grammarNote": "The wire format the federation speaks",
+        "game": "Mystery game",
+        "gameNote": "Play with the trust graph",
+        "compare": "Compare",
+        "compareNote": "Against alternatives, with receipts",
+        "accord": "The Accord",
+        "accordNote": "The public ethical framework",
+        "research": "Research status",
+        "researchNote": "What the trace corpus supports"
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "locale": "ha",
+    "name": "Hausa",
+    "origin": "machine",
+    "status": "draft"
+  },
+  "common": {
+    "langSwitcher": {
+      "label": "Harshe",
+      "cta": "Karanta wannan da harshenu",
+      "current": "Harshen yanzu"
+    },
+    "mtBanner": {
+      "lead": "An fassara wannan shafi ta na'ura.",
+      "body": "Idan wani abu ya yi kuskure, don Allah buɗe batun a shafin — repo yana buɗe wa kowa.",
+      "cta": "Rarraba matsalar fassara"
+    }
+  },
+  "home": {
+    "cover": {
+      "eyebrow": "CIRIS · Open Coherence Infrastructure",
+      "h1": "AI da za ku <em>mallaka gaske</em>.",
+      "sub": "App ɗaya. <b>Ba daɗakin sabar ba.</b> Kowane da'awar da ya yi, <b>an sanya hannu.</b>",
+      "appStoreAria": "Sanya CIRIS daga App Store",
+      "googlePlayAria": "Sanya CIRIS daga Google Play",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ctahint": "kyauta · buɗaɗɗen tushe · a wayarku yau",
+      "foot1": "CIRISAgent · CEWP “soup”",
+      "foot2": "CIRIS 2.9.4 yana fitowa · 3.0 yana fitowa a watan Yuni da Yuli 2026"
+    },
+    "funnel": {
+      "eyebrow": "Inda muke yanzu",
+      "title": "Intanet yana gudana ta cikin <em>manyan gidaje kaɗan</em>.",
+      "body1": "Ka tambaye AI kome, kalmomin ka sai su tafi ginin wani, su yi amfani da samfurin wani, su sauka a rikodin wani, da carbon a matsayin illa a gefen.",
+      "body2": "Ba ka mallaki amsar ba, ba bayanan ba, ba kuma sawun ba.",
+      "foot": "≈ 10,000 daɗakin sabar · mutane biliyan 5 · toshiyar ɗaya"
+    },
+    "appFabric": {
+      "eyebrow": "Siffar madadin",
+      "title": "App ɗaya.<br />Wani <em>yaɗi</em> ɗaya ƙarƙashin.",
+      "lead1": "<b>CIRISAgent</b> shi ne abin da kuke riƙe da magana da shi. Shi ne mai ɗauke da tunani.",
+      "lead2": "<b>CEWP</b> shi ne yaɗin da yake gudana a kai: yanar gizo na na'urori da ke amincewa da junansu, duk na'urorin da kuka riga ku mallaka.",
+      "small": "Mutane da AI duka suna zaune a kai a matsayin daidaita, a gefena gefe.",
+      "appName": "CIRISAgent",
+      "appSub": "app · tunani + UI",
+      "connector": "~14 KB sawu / yanke shawara",
+      "fabricSub": "yaɗin · na'urorinku",
+      "fabricPron": "“soup”"
+    },
+    "threePromises": {
+      "eyebrow": "Babbar manufa",
+      "title": "Alkawura uku, ana riƙe su a matsayin <em>tsarin ɗaya</em>.",
+      "lead": "Yawanci waɗannan suna fitowa daga kamfanoni uku daban-daban. Anan suna fitowa daga ƙira ɗaya.",
+      "col1Title": "Babu daɗakin sabar",
+      "col1Body": "Yana gudana a kan wayar da ke a aljihuɗunku da kuma ƙaramin akwati a gida.",
+      "col2Title": "Sirri da ba zai yiwu ya zubo ba",
+      "col2Body": "Rayuwar sirrinku ba za ta iya barin da'iraku ba.",
+      "col3Title": "AI da za ku bincika",
+      "col3Body": "Kowane da'awar da ya yi an sanya hannu, don haka za ku gan shi ku kuma soke shi."
+    },
+    "hardware": {
+      "eyebrow": "ALKAWARI 01",
+      "title": "Yana gudana a kan na'ura<br />da <em>kuka riga ku mallaka</em>.",
+      "lead": "na ayyukan yau da kullum na intanet <b>ba ya taɓa barin garinku</b>. Muna kiransa <b>fa'idar gida</b>.",
+      "small": "wayoyi · akwatuna na gida · babu manyan daɗakin sabar",
+      "foot": "kashi biyu na uku suna zaune gida → babu babban daɗin sabar → makamashi da CO₂ kasa da kasa"
+    },
+    "twoPaths": {
+      "eyebrow": "Hanyoyi biyu · wakili ɗaya mai sa hannu",
+      "title": "A na'urarka, ko a masaukin, <em>zaɓin ku ne</em>.",
+      "localPill": "babu daɗakin sabar",
+      "localTitle": "A wayarku",
+      "localBody": "Ƙaramin samfuri buɗaɗɗe, kamar <b>Gemma 4</b>, yana gudana a kan na'ura. Ba tare da intanet ba kwata-kwata. Babu ma'ajiyar da take tsakiya.",
+      "hostedPill": "yana amfani da daɗin sabar",
+      "hostedTitle": "Kyauta, da harshenu",
+      "hostedBody": "Ga wayoyin da suka yi ƙanƙanta don gudanar da samfuri, CIRIS yana <b>kyauta</b> ta hanyar masaukin a cikin <b>harsuna 29</b>. Wannan da'awowin da aka sanya hannu. Daɗin sabar na wani.",
+      "foot": "hanyoyi biyu · duka suna da sa hannu · duka ana iya bincika su"
+    },
+    "privacy": {
+      "eyebrow": "ALKAWARI 02",
+      "title": "Rayuwar sirrinku<br />ba za ta iya <em class=\"em-violet\">barin ɗakin</em> ba.",
+      "lead": "Wakilin yana rarrabewa duk abubuwa cikin <b>da'irori bakwai</b>, daga <b>kai</b> zuwa dukan <b>Filin gama-gari na duniya</b>.",
+      "body": "Ga da'irori mafi kusa, tsarin <b class=\"emph-text\">ba ya taɓa aika ƙaramin saƙo</b> wanda ke gaya wa hanyar sadarwa cewa bayananku na can. Babu saƙo, babu hanyar tambayar shi. Sirrin ya fito ne daga abin da yake <b class=\"emph-violet\">rasa</b>, ba daga alkawari ba.",
+      "tier1Name": "kai · iyali",
+      "tier1Lab": "ba a taɓa raba ba",
+      "tier2Name": "abokai · da'ira",
+      "tier2Lab": "yana zaune a gida",
+      "tier3Name": "al'umma → Filin gama-gari na duniya",
+      "tier3Lab": "ana iya raba shi"
+    },
+    "signed": {
+      "eyebrow": "ALKAWARI 03",
+      "title": "Kowane da'awar da ya yi<br /><em class=\"em-cyan\">an sanya hannu</em> a kai.",
+      "lead": "Manyan kamfanonin fasaha suna bincika AI ɗinsu sau ɗaya, a lokacin ginawa, sannan suna fata. CIRIS yana ci gaba da bincika shi <b>yayin da yake gudana, a bayyane.</b>",
+      "small": "Idan AI ya yi kuskure, ba wai kawai za ku ga shi ba, za ku iya soke shi, kuma shi <span class=\"emph-rose\">yana rasa amincewa</span>.",
+      "foot": "wanda ya faɗa · wanda ya amince · wanda ya yi adawa, ga kowane da'awa mai muhimmanci a hanyar sadarwa"
+    },
+    "caughtLying": {
+      "eyebrow": "Kuma ga abin da ke kare mu",
+      "title": "Ka kama mahaukaci, sai komai <em>ya rushe</em>.",
+      "lead": "Idan an taɓa kama mutum, ko AI, yana yaudare mutane, dukan da'awowin da suka taɓa sanya hannu a kai sun zama <b class=\"emph-text\">mara amfani</b>, kuma dukan ƙarshe da aka gina a kansu ana iya <b class=\"emph-text\">bude su sake</b>."
+    },
+    "unification": {
+      "eyebrow": "Me ya sa tsari ɗaya ne, ba uku ba",
+      "title": "Ukun ba za su iya <em>rabuwa</em> ba.",
+      "lead": "Wannan sa hannun da ke tabbatar da wanda ya faɗi wani abu shi ne kuma yake yanke shawara game da abin da ke zaune gida. Ƙa'ida ɗaya mai sauƙi, kuma sirri, ɓarnar kasa, da AI mai aminci duka suna fitowa daga gare ta."
+    },
+    "safetyLeadership": {
+      "eyebrow": "Kuma za mu faɗe shi a sarari",
+      "title": "Mafi aminci, mafi ɗa'a AI da za ku iya amfani da shi gaske. <em>Da tazara mai yawa.</em>",
+      "col1Title": "Tsayawa gaggawa da ba zai iya jayayya da shi ba",
+      "col1Body": "Yana aiki kafin AI ya ma iya tunani, kuma maɓallin da aka amince da shi mai sa hannu kaɗai ne zai iya kunna shi.",
+      "col2Title": "Rikodin da ba zai iya canza shi a ɓoye ba",
+      "col2Body": "Kowane zaɓi an sanya hannu a kai kuma an haɗa shi da wanda ya gabace shi. Ƙarya ba za ta iya riƙe labarin ta daidai ba.",
+      "col3Title": "Lafiyar hankali a harsuna 29",
+      "col3Body": "Ana duba ta na'ura a kan kowane sabuntawa, an gina ta da farko ga mutanen da suka fi buƙatarta.",
+      "tail": "Kuma kowane kalma a cikinsa <b class=\"emph-accent\">lambar buɗaɗɗe ce za ku iya karanta</b>."
+    },
+    "close": {
+      "eyebrow": "Ba magana kawai ba",
+      "h1": "CIRIS yana <em>buɗe</em>,<br />kuma yana <em>nan</em>.",
+      "sub": "Tushen buɗaɗɗe, duka ta. <b>2.9.4 yana fitowa yanzu</b> a iPhone da Android, kuma <b>3.0 yana fitowa a watan Yuni da Yuli 2026</b>.",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ctahint": "kyauta · buɗaɗɗen tushe",
+      "foot1": "github.com/CIRISAI · AGPL-3.0 · an kulle manufa",
+      "foot2": "AI da za ku mallaka"
+    },
+    "explore": {
+      "eyebrow": "Bincika ƙari",
+      "title": "Idan kuna son shaida.",
+      "links": {
+        "install": "Sanya wakilin",
+        "installNote": "iPhone · Android · pip · kwamfuta",
+        "cewp": "CEWP",
+        "cewpNote": "Yaɗin, da harshe mai sauƙi",
+        "cewpDetails": "CEWP mai kwaikwayo",
+        "cewpDetailsNote": "Lissafin, tare da masu zamewa",
+        "grammar": "Nahawu (CEG)",
+        "grammarNote": "Tsarin sa'an da ƙungiyar ta yi magana da shi",
+        "game": "Wasan asiri",
+        "gameNote": "Yi wasa da zanen amincewa",
+        "compare": "Yi kwatanta",
+        "compareNote": "Da madadin, tare da shaidu",
+        "accord": "Yarjejeniyar",
+        "accordNote": "Tsarin ɗa'a na jama'a",
+        "research": "Matsayin bincike",
+        "researchNote": "Abin da tarin sawun ke goyan baya"
+      }
+    }
+  }
+}

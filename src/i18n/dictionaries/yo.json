@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "locale": "yo",
+    "name": "Yoruba",
+    "origin": "machine",
+    "status": "draft"
+  },
+  "common": {
+    "langSwitcher": {
+      "label": "Èdè",
+      "cta": "Ka èyí ní èdè rẹ",
+      "current": "Èdè tí a ń lò báyìí"
+    },
+    "mtBanner": {
+      "lead": "Ẹ̀rọ àgbékọ ló túmọ̀ ojú-ìwé yìí.",
+      "body": "Tí ohunkóhun kò bá jẹ́ kedere, jọwọ ṣí ìṣòro kan — repo náà ṣí fún gbogbo ènìyàn lásán.",
+      "cta": "Ròyìn ìṣòro ìtumọ̀"
+    }
+  },
+  "home": {
+    "cover": {
+      "eyebrow": "CIRIS · Àwọn Ìpìlẹ̀ Ìbáramu Tí Ó Ṣí",
+      "h1": "AI tí o lè <em>ní gidi gidi</em>.",
+      "sub": "Ọ̀kan àpò. <b>Kò sí ilé-iṣẹ́ ìpamọ́ dátà.</b> Gbogbo ohun tó sọ, <b>fìdí rẹ̀ múlẹ̀.</b>",
+      "appStoreAria": "Fi CIRIS sórí fóònù rẹ lórí App Store",
+      "googlePlayAria": "Fi CIRIS sórí fóònù rẹ lórí Google Play",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ctahint": "ọ̀fẹ́ · orísun ṣíṣí · lórí fóònù rẹ lónìí",
+      "foot1": "CIRISAgent · CEWP “soup”",
+      "foot2": "CIRIS 2.9.4 tí ń rán · 3.0 ń jáde ní Okudu àti Agẹmọ 2026"
+    },
+    "funnel": {
+      "eyebrow": "Níbo tí a wà",
+      "title": "Íńtánẹ́ẹ̀tì ń ṣiṣẹ́ nípasẹ̀ àwọn <em>ilé ńlá díẹ̀</em>.",
+      "body1": "Béèrè ohunkóhun lọ́wọ́ AI, àwọn ọ̀rọ̀ rẹ máa ń rìnrìn àjò lọ sí ilé ẹlòmíràn, ń ṣiṣẹ́ lórí àwòṣe ẹlòmíràn, tí wọ́n sì ń dé inú àkọsílẹ̀ ẹlòmíràn, pẹ̀lú CO₂ gẹ́gẹ́ bí ẹ̀gbẹ́ rẹ̀.",
+      "body2": "Ìdáhùn náà, dátà náà, tàbí ipa ẹsẹ̀ náà kò jẹ́ tìrẹ.",
+      "foot": "≈ 10,000 ilé-iṣẹ́ ìpamọ́ dátà · 5 billion ènìyàn · ọ̀nà ìdọ̀tí kan"
+    },
+    "appFabric": {
+      "eyebrow": "Àpẹẹrẹ ìyàtọ̀",
+      "title": "Ọ̀kan àpò.<br />Ọ̀kan <em>àsọ</em> ní ìsàlẹ̀.",
+      "lead1": "<b>CIRISAgent</b> ni ohun tí o mú àti tí o bá sọ̀rọ̀ pẹ̀lú. Ó gbe ìdíwọ̀n náà.",
+      "lead2": "<b>CEWP</b> ni àsọ tí ó ń ṣiṣẹ́ lórí: ọ̀nà àjọ àwọn ẹ̀rọ tí wọ́n ní Ìgbẹ́kẹ̀lé fún ara wọn, gbogbo ohun-èlò tí o ti ní tẹ́lẹ̀.",
+      "small": "Ènìyàn àti AI ń gbé lórí rẹ̀ gẹ́gẹ́ bí àwọn Ẹlẹ́gbẹ́, pa pọ̀.",
+      "appName": "CIRISAgent",
+      "appSub": "àpò náà · ìdíwọ̀n + UI",
+      "connector": "~14 KB ìtọpasẹ̀ / ìpinnu",
+      "fabricSub": "àsọ náà · ohun-èlò rẹ",
+      "fabricPron": "“soup”"
+    },
+    "threePromises": {
+      "eyebrow": "Èrò àkọ́kọ́",
+      "title": "Ìlérí mẹ́ta, tí a mú gẹ́gẹ́ bí <em>ètò kan</em>.",
+      "lead": "Ní ìgbà gbogbo, àwọn wọ̀nyí máa ń wá láti ọ̀dọ̀ àwọn ilé-iṣẹ́ mẹ́ta. Níbí, wọ́n ṣe jáde láti inú àpẹẹrẹ kan.",
+      "col1Title": "Kò sí ilé-iṣẹ́ ìpamọ́ dátà",
+      "col1Body": "Ó ń ṣiṣẹ́ lórí fóònù tó wà ní àpò rẹ àti apótí kékeré kan ní ilé.",
+      "col2Title": "Ìkọ̀kọ̀ tí kò lè jó",
+      "col2Body": "Ìgbésí-ayé àdáni rẹ kò lè jáde lọ kúrò ní àyíká rẹ ní tòótọ́.",
+      "col3Title": "AI tí o lè ṣàyẹ̀wò",
+      "col3Body": "Gbogbo ohun tó sọ jẹ́ fìdí rẹ̀ múlẹ̀, nítorí náà o lè rí i tí o sì lè yípadà rẹ̀."
+    },
+    "hardware": {
+      "eyebrow": "ÌLÉRÍ 01",
+      "title": "Ó ń ṣiṣẹ́ lórí ohun-èlò<br />tí o <em>ti ní tẹ́lẹ̀</em>.",
+      "lead": "ti ìgbésẹ̀ íńtánẹ́ẹ̀tì ojoojúmọ́ <b>kò kúrò ní ìlú rẹ</b>. A pè é ní <b>èrè ìbílẹ̀</b>.",
+      "small": "àwọn fóònù · àwọn apótí ilé · kò sí ilé-iṣẹ́ ìpamọ́ dátà ńlá",
+      "foot": "ìdá méjì ń wà ní ilé → kò sí ilé-iṣẹ́ ìpamọ́ dátà ńlá → agbára àti CO₂ tó kéré sí i"
+    },
+    "twoPaths": {
+      "eyebrow": "Ọ̀nà méjì · aṣojú kan tí fìdí rẹ̀ múlẹ̀",
+      "title": "Lórí ẹ̀rọ rẹ, tàbí tí a gbé lé, <em>ìpinnu rẹ ni</em>.",
+      "localPill": "kò sí ilé-iṣẹ́ ìpamọ́ dátà",
+      "localTitle": "Lórí fóònù rẹ",
+      "localBody": "Àwòṣe kékeré tí ó ṣí, bíi <b>Gemma 4</b>, ń ṣiṣẹ́ lórí ẹ̀rọ náà. Ní pápá ìbẹ̀. Kò sí ilé ìpamọ́ ní àárín.",
+      "hostedPill": "ń lo ilé-iṣẹ́ ìpamọ́ dátà",
+      "hostedTitle": "Ọ̀fẹ́, ní èdè rẹ",
+      "hostedBody": "Fún àwọn fóònù tí kò tó bí àwòṣe kan ṣe, CIRIS jẹ́ <b>ọ̀fẹ́</b> nípasẹ̀ ìṣírò tí a gbé lé ní <b>èdè 29</b>. Àwọn Ẹ̀rí fìdí rẹ̀ múlẹ̀ kan náà. Ilé-iṣẹ́ ìpamọ́ dátà ẹlòmíràn.",
+      "foot": "ọ̀nà méjì · méjèèjì fìdí rẹ̀ múlẹ̀ · méjèèjì ṣeéṣàyẹ̀wò"
+    },
+    "privacy": {
+      "eyebrow": "ÌLÉRÍ 02",
+      "title": "Ìgbésí-ayé àdáni rẹ<br />kò lè <em class=\"em-violet\">jáde kúrò ní yàrá</em>.",
+      "lead": "Aṣojú máa ń ṣètò ohun gbogbo sínú <b>àyíká méjèèje</b>, láti <b>ara-ẹni</b> títí dé <b>Ohun-ìní Àjọpín Àgbáyé</b> gbogbo rẹ̀.",
+      "body": "Fún àwọn àyíká tó sún mọ́ jùlọ, ètò náà <b class=\"emph-text\">kò rán ìránṣẹ́ kékeré</b> tí ó mú kí nẹ́tíwọ̀ọ̀kì mọ̀ pé dátà rẹ wà rárá. Kò sí ìránṣẹ́, kò sí ọ̀nà láti béèrè rẹ̀. Ìkọ̀kọ̀ máa ń wá láti ohun tó <b class=\"emph-violet\">kò sí</b>, kì í ṣe láti ìlérí.",
+      "tier1Name": "ara-ẹni · ìdílé",
+      "tier1Lab": "kò pín rárá",
+      "tier2Name": "àwọn ọ̀rẹ́ · àyíká",
+      "tier2Lab": "ń wà ní ìbílẹ̀",
+      "tier3Name": "àwùjọ → Ohun-ìní Àjọpín Àgbáyé",
+      "tier3Lab": "lè pín"
+    },
+    "signed": {
+      "eyebrow": "ÌLÉRÍ 03",
+      "title": "Gbogbo ohun tó sọ<br />jẹ́ <em class=\"em-cyan\">fìdí rẹ̀ múlẹ̀</em>.",
+      "lead": "Àwọn ilé-iṣẹ́ ìmọ̀-ẹ̀rọ ńlá máa ń ṣàyẹ̀wò AI wọn lẹ̀ẹ̀ kan, nígbà tí wọ́n ń kọ́ ọ, tí wọ́n sì ń ní ìrètí. CIRIS máa ń pa ṣàyẹ̀wò rẹ̀ láìdúró <b>nígbà tó ń ṣiṣẹ́, ní ìhà tí gbogbo ènìyàn lè rí.</b>",
+      "small": "Nígbà tí AI bá ṣe àṣìṣe, o kò ní rí i nìkan, o lè yípadà rẹ̀, tí AI náà sì <span class=\"emph-rose\">padà sẹ́yìn nínú Ìgbẹ́kẹ̀lé</span>.",
+      "foot": "tani ló sọ ọ · tani ló fọwọ́si · tani ló tako, fún gbogbo Ẹ̀rí pàtàkì lórí nẹ́tíwọ̀ọ̀kì"
+    },
+    "caughtLying": {
+      "eyebrow": "Àti èyí ni àbójútó ààbò",
+      "title": "Mú agabagebe, kí ohun gbogbo <em>wó lulẹ̀</em>.",
+      "lead": "Tí ènìyàn kan, tàbí AI kan, bá jẹ́ mímú tí wọ́n ń darú ẹ̀mí ènìyàn, gbogbo Ẹ̀rí tí wọ́n ti fọwọ́si rí di <b class=\"emph-text\">aláìní ìjẹ́rìísí</b>, tí àwọn ìpinnu tí a kọ́ lé wọn sì lè jẹ́ <b class=\"emph-text\">ṣíṣí padà</b>."
+    },
+    "unification": {
+      "eyebrow": "Ìdí tí ó jẹ́ ètò kan, kì í ṣe mẹ́ta",
+      "title": "A kò lè ya àwọn mẹ́ta <em>sọ̀tọ̀</em>.",
+      "lead": "Ìbuwọ́lù kan náà tí ó fi hàn tani ló sọ ohun kan náà ló pinnu ohun tó wà ní ilé. Èrò kan tí ó rọrùn, tí Ìkọ̀kọ̀, ìdínkù egbin, àti AI àìléwu gbogbo rẹ̀ ṣe jáde lọ́dọ̀ rẹ̀."
+    },
+    "safetyLeadership": {
+      "eyebrow": "Àti a ó sọ ọ̀ ní gbangba",
+      "title": "AI tó ní ààbò jùlọ, tó sì ní ìwà rere jùlọ tí o lè lò ní tòótọ́. <em>Jìnnà sí àwọn míràn.</em>",
+      "col1Title": "Dáwọ́ àjálù dúró tí AI kò lè jiyàn rẹ̀",
+      "col1Body": "Ó ń ṣiṣẹ́ kí AI tó lè ronú rárá, tí bọ́tìnnì fìdí rẹ̀ múlẹ̀ kan tí a gbẹ́kẹ̀lé nìkan lè tan ín.",
+      "col2Title": "Àkọsílẹ̀ tí kò lè yípadà ní àṣírí",
+      "col2Body": "Gbogbo ìpinnu jẹ́ fìdí rẹ̀ múlẹ̀ tí a so mọ́ èyí tí ó ṣáájú. Irọ́ kò lè pa ìtàn rẹ̀ mọ́.",
+      "col3Title": "Ààbò ìlera ọpọlọ ní èdè 29",
+      "col3Body": "Ẹ̀rọ ṣàyẹ̀wò rẹ̀ nígbà gbogbo tí a bá ṣe ìmúdójúìwọ̀n, tí a ṣe àkọ́kọ́ fún àwọn ènìyàn tí ó nílò jùlọ.",
+      "tail": "Àti gbogbo ọ̀rọ̀ rẹ̀ jẹ́ <b class=\"emph-accent\">kóòdù tí ó ṣí tí o lè kà</b>."
+    },
+    "close": {
+      "eyebrow": "Kì í ṣe ọ̀rọ̀ lásán",
+      "h1": "CIRIS jẹ́ <em>ṣíṣí</em>,<br />tí ó sì <em>wà níbí</em>.",
+      "sub": "Orísun ṣíṣí, láti ìbẹ̀rẹ̀ títí dé òpin. <b>2.9.4 ń rán ní báyìí</b> lórí iPhone àti Android, tí <b>3.0 ṣe jáde ní Okudu àti Agẹmọ 2026</b>.",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ctahint": "ọ̀fẹ́ · orísun ṣíṣí",
+      "foot1": "github.com/CIRISAI · AGPL-3.0 · tí a ti di mú sí iṣẹ́-àṣẹ",
+      "foot2": "AI tí o lè ní"
+    },
+    "explore": {
+      "eyebrow": "Ṣàwárí síwájú",
+      "title": "Tí o bá fẹ́ẹ́ ẹ̀rí náà.",
+      "links": {
+        "install": "Fi Aṣojú sórí ẹ̀rọ",
+        "installNote": "iPhone · Android · pip · kọ̀mpútà",
+        "cewp": "CEWP",
+        "cewpNote": "Àsọ náà, ní èdè àlàáyà",
+        "cewpDetails": "Àdáṣe CEWP",
+        "cewpDetailsNote": "Ìṣirò náà, pẹ̀lú àwọn olùṣàtúnṣe",
+        "grammar": "Gírámà (CEG)",
+        "grammarNote": "Ọ̀nà àkójọ tí Ìṣọ̀kan-Àjùmọ̀ṣe ń sọ̀rọ̀ rẹ̀",
+        "game": "Eré àṣírí",
+        "gameNote": "Ṣeré pẹ̀lú àwòrán Ìgbẹ́kẹ̀lé",
+        "compare": "Fiwéra",
+        "compareNote": "Pẹ̀lú àwọn míràn, pẹ̀lú ẹ̀rí",
+        "accord": "ÀDÉHÙN",
+        "accordNote": "Àpẹẹrẹ ìwà rere tí ó ṣí fún gbogbo ènìyàn",
+        "research": "Ipò ìwádìí",
+        "researchNote": "Ohun tí àkójọ ìtọpasẹ̀ ṣe àtìlẹ́yìn rẹ̀"
+      }
+    }
+  }
+}

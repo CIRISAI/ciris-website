@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "locale": "es",
+    "name": "Spanish",
+    "origin": "machine",
+    "status": "draft"
+  },
+  "common": {
+    "langSwitcher": {
+      "label": "Idioma",
+      "cta": "Leer esto en tu idioma",
+      "current": "Idioma actual"
+    },
+    "mtBanner": {
+      "lead": "Esta página fue traducida automáticamente.",
+      "body": "Si algo no suena bien, abre un issue — el repositorio es público por algo.",
+      "cta": "Reportar un problema de traducción"
+    }
+  },
+  "home": {
+    "cover": {
+      "eyebrow": "CIRIS · Infraestructura de Coherencia Abierta",
+      "h1": "Una IA que <em>realmente te pertenece</em>.",
+      "sub": "Una app. <b>Sin centros de datos.</b> Cada afirmación que hace, <b>firmada.</b>",
+      "appStoreAria": "Instalar CIRIS en el App Store",
+      "googlePlayAria": "Instalar CIRIS en Google Play",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ctahint": "gratis · código abierto · en tu teléfono hoy",
+      "foot1": "CIRISAgent · CEWP “soup”",
+      "foot2": "CIRIS 2.9.4 disponible · 3.0 se lanza en junio y julio de 2026"
+    },
+    "funnel": {
+      "eyebrow": "Dónde estamos",
+      "title": "Internet pasa por unos pocos <em>edificios enormes</em>.",
+      "body1": "Pregúntale algo a una IA y tus palabras viajan al edificio de otra persona, corren en el modelo de otra persona y quedan en los registros de otra persona, con el carbono como efecto secundario.",
+      "body2": "No eres dueño de la respuesta, los datos ni la huella ambiental.",
+      "foot": "≈ 10,000 centros de datos · 5 mil millones de personas · un solo embudo"
+    },
+    "appFabric": {
+      "eyebrow": "La forma de la alternativa",
+      "title": "Una app.<br />Un solo <em>tejido</em> debajo.",
+      "lead1": "<b>CIRISAgent</b> es lo que tienes en la mano y con quien hablas. Lleva el razonamiento.",
+      "lead2": "<b>CEWP</b> es el tejido sobre el que corre: una red de dispositivos que se tienen confianza entre sí, todo hardware que ya tienes.",
+      "small": "Personas e IA conviven en él como iguales, uno al lado del otro.",
+      "appName": "CIRISAgent",
+      "appSub": "la app · razonamiento + UI",
+      "connector": "~14 KB traza / decisión",
+      "fabricSub": "el tejido · tu hardware",
+      "fabricPron": "“soup”"
+    },
+    "threePromises": {
+      "eyebrow": "La gran idea",
+      "title": "Tres promesas, sostenidas como <em>un solo sistema</em>.",
+      "lead": "Normalmente estas vienen de tres empresas distintas. Aquí surgen de un solo diseño.",
+      "col1Title": "Sin centros de datos",
+      "col1Body": "Corre en el teléfono de tu bolsillo y en una pequeña caja en casa.",
+      "col2Title": "Privacidad que no puede filtrarse",
+      "col2Body": "Tu vida privada literalmente no puede salir de tu círculo.",
+      "col3Title": "IA que puedes verificar",
+      "col3Body": "Cada afirmación que hace está firmada, para que puedas verla y deshacerla."
+    },
+    "hardware": {
+      "eyebrow": "PROMESA 01",
+      "title": "Corre en el hardware<br />que <em>ya tienes</em>.",
+      "lead": "de la actividad web cotidiana <b>nunca sale de tu ciudad</b>. Lo llamamos el <b>bono de localidad</b>.",
+      "small": "teléfonos · cajas caseras · sin enormes centros de datos",
+      "foot": "dos tercios se quedan en casa → sin gran centro de datos → mucha menos energía y CO₂"
+    },
+    "twoPaths": {
+      "eyebrow": "Dos caminos · el mismo agente firmado",
+      "title": "En tu dispositivo o en la nube, <em>tú decides</em>.",
+      "localPill": "sin centros de datos",
+      "localTitle": "En tu teléfono",
+      "localBody": "Un modelo abierto pequeño, como <b>Gemma 4</b>, corre en el dispositivo. Completamente sin conexión. Sin almacenes de datos de por medio.",
+      "hostedPill": "usa un centro de datos",
+      "hostedTitle": "Gratis, en tu idioma",
+      "hostedBody": "Para teléfonos demasiado pequeños para correr un modelo, CIRIS es <b>gratis</b> con inferencia alojada en <b>29 idiomas</b>. Las mismas afirmaciones firmadas. El centro de datos de otra persona.",
+      "foot": "dos caminos · ambos firmados · ambos verificables"
+    },
+    "privacy": {
+      "eyebrow": "PROMESA 02",
+      "title": "Tu vida privada<br />no puede <em class=\"em-violet\">salir de la habitación</em>.",
+      "lead": "El agente organiza todo en <b>siete círculos</b>, desde el <b>yo</b> hasta el <b>Bien Común Global</b>.",
+      "body": "Para los círculos más cercanos, el sistema <b class=\"emph-text\">nunca envía el pequeño mensaje</b> que le dice a la red que tus datos siquiera existen. Sin mensaje, no hay forma de pedirlos. La privacidad viene de lo que <b class=\"emph-violet\">falta</b>, no de una promesa.",
+      "tier1Name": "yo · familia",
+      "tier1Lab": "nunca compartido",
+      "tier2Name": "amigos · círculo",
+      "tier2Lab": "se queda local",
+      "tier3Name": "comunidad → Bien Común Global",
+      "tier3Lab": "se puede compartir"
+    },
+    "signed": {
+      "eyebrow": "PROMESA 03",
+      "title": "Cada afirmación que hace<br />está <em class=\"em-cyan\">firmada</em>.",
+      "lead": "Las grandes tecnológicas revisan su IA una vez, mientras la construyen, y después confían. CIRIS la sigue revisando <b>mientras funciona, a la vista de todos.</b>",
+      "small": "Cuando la IA se equivoca, no solo lo ves, puedes deshacerlo, y ella <span class=\"emph-rose\">pierde confianza</span>.",
+      "foot": "quién lo dijo · quién estuvo de acuerdo · quién se opuso, para cada afirmación importante en la red"
+    },
+    "caughtLying": {
+      "eyebrow": "Y aquí está la red de seguridad",
+      "title": "Atrapa a un mentiroso, y todo <em>se deshace</em>.",
+      "lead": "Si una persona, o una IA, es atrapada engañando a la gente, cada afirmación que firmaron se vuelve <b class=\"emph-text\">nula</b>, y cada conclusión construida sobre ellas puede <b class=\"emph-text\">reabrirse</b>."
+    },
+    "unification": {
+      "eyebrow": "Por qué es un sistema y no tres",
+      "title": "Los tres no pueden <em>separarse</em>.",
+      "lead": "La misma firma que prueba quién dijo algo también decide qué se queda en casa. Una idea simple, y de ella surgen la privacidad, menos desperdicio y una IA segura."
+    },
+    "safetyLeadership": {
+      "eyebrow": "Y lo decimos en voz alta",
+      "title": "La IA más segura y ética que puedes usar de verdad. <em>Por mucho.</em>",
+      "col1Title": "Un freno de emergencia con el que no puede discutir",
+      "col1Body": "Actúa antes de que la IA pueda siquiera pensar, y solo una clave firmada y de confianza puede activarlo.",
+      "col2Title": "Un registro que no puede cambiar en silencio",
+      "col2Body": "Cada decisión está firmada y enlazada a la anterior. Una mentira no puede mantener su historia.",
+      "col3Title": "Seguridad en salud mental en 29 idiomas",
+      "col3Body": "Verificado por computadora en cada actualización, construido primero para quienes más lo necesitan.",
+      "tail": "Y cada línea de código es <b class=\"emph-accent\">código abierto que puedes leer</b>."
+    },
+    "close": {
+      "eyebrow": "No son solo palabras",
+      "h1": "CIRIS es <em>abierto</em>,<br />y está <em>aquí</em>.",
+      "sub": "Código abierto, de principio a fin. <b>2.9.4 está disponible ahora</b> en iPhone y Android, y <b>3.0 se lanza durante junio y julio de 2026</b>.",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "ctahint": "gratis · código abierto",
+      "foot1": "github.com/CIRISAI · AGPL-3.0 · misión protegida",
+      "foot2": "Una IA que te pertenece"
+    },
+    "explore": {
+      "eyebrow": "Explora más",
+      "title": "Si quieres las pruebas.",
+      "links": {
+        "install": "Instalar el agente",
+        "installNote": "iPhone · Android · pip · escritorio",
+        "cewp": "CEWP",
+        "cewpNote": "El tejido, en palabras simples",
+        "cewpDetails": "Simulador de CEWP",
+        "cewpDetailsNote": "Las matemáticas, con controles deslizantes",
+        "grammar": "Gramática (CEG)",
+        "grammarNote": "El formato de comunicación de la federación",
+        "game": "Juego misterio",
+        "gameNote": "Juega con el grafo de confianza",
+        "compare": "Comparar",
+        "compareNote": "Frente a alternativas, con evidencia",
+        "accord": "El ACCORD",
+        "accordNote": "El marco ético público",
+        "research": "Estado de la investigación",
+        "researchNote": "Lo que respalda el corpus de trazas"
+      }
+    }
+  }
+}
