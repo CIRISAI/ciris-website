@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "th",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "การติดต่อครั้งแรก",
+      "subtitle": "เริ่มที่นี่: เหตุผล"
+    },
+    "install": {
+      "name": "ติดตั้ง",
+      "subtitle": "รับเอเจนต์"
+    },
+    "coherenceRatchet": {
+      "name": "ฟันเฟืองความสอดคล้อง",
+      "subtitle": "แรงกดดัน"
+    },
+    "federation": {
+      "name": "สหพันธ์",
+      "subtitle": "การตอบสนอง"
+    },
+    "compare": {
+      "name": "เปรียบเทียบ",
+      "subtitle": "ดูกรณีความปลอดภัย"
+    },
+    "research": {
+      "name": "การวิจัย",
+      "subtitle": "บทความและคลังร่องรอย"
+    },
+    "accord": {
+      "name": "ข้อตกลง",
+      "subtitle": "อ่านกรอบงาน"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "โค้ดโอเพนซอร์ส"
+    }
+  },
+  "footer": {
+    "desc": "โครงสร้างพื้นฐานความสอดคล้องแบบเปิด AGPL-3.0 | ล็อกภารกิจ",
+    "headings": {
+      "technology": "เทคโนโลยี",
+      "resources": "ทรัพยากร",
+      "mission": "ภารกิจ",
+      "legal": "กฎหมาย"
+    },
+    "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+    "items": {
+      "howItWorks": "วิธีการทำงาน",
+      "federation": "สหพันธ์",
+      "models": "โมเดล",
+      "services": "บริการ",
+      "integrations": "การรวมระบบ",
+      "install": "ติดตั้ง",
+      "safety": "ความปลอดภัย",
+      "infrastructure": "โครงสร้างพื้นฐาน",
+      "trust": "ความเชื่อใจและตัวตน",
+      "compare": "เปรียบเทียบ",
+      "compliance": "การปฏิบัติตามกฎ",
+      "cewp": "CEWP (soup)",
+      "grammar": "ไวยากรณ์ (CEG)",
+      "game": "เกมลึกลับ",
+      "firstContact": "การติดต่อครั้งแรก",
+      "exploreTrace": "สำรวจร่องรอย",
+      "scoring": "CIRIS การให้คะแนน",
+      "researchStatus": "สถานะการวิจัย",
+      "documentation": "เอกสาร",
+      "status": "สถานะ",
+      "about": "เกี่ยวกับ",
+      "vision": "วิสัยทัศน์",
+      "thesis": "วิทยานิพนธ์",
+      "methodology": "วิธีวิทยา",
+      "safetyVsCensorship": "ความปลอดภัยกับการเซนเซอร์",
+      "principles": "หลักการ",
+      "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+      "safetyPolicy": "นโยบายความปลอดภัย",
+      "warrantCanary": "Warrant Canary"
+    }
+  }
+}

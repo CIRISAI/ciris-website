@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "uk",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "Перший контакт",
+      "subtitle": "Почніть звідси: чому"
+    },
+    "install": {
+      "name": "Встановити",
+      "subtitle": "Отримати агент"
+    },
+    "coherenceRatchet": {
+      "name": "Храповик узгодженості",
+      "subtitle": "Тиск"
+    },
+    "federation": {
+      "name": "Федерація",
+      "subtitle": "Відповідь"
+    },
+    "compare": {
+      "name": "Порівняти",
+      "subtitle": "Дивіться кейс безпеки"
+    },
+    "research": {
+      "name": "Дослідження",
+      "subtitle": "Статті та корпус трасувань"
+    },
+    "accord": {
+      "name": "Угода",
+      "subtitle": "Читати базу"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Відкритий код"
+    }
+  },
+  "footer": {
+    "desc": "Відкрита інфраструктура узгодженості. AGPL-3.0 | Прив'язана до місії.",
+    "headings": {
+      "technology": "Технологія",
+      "resources": "Ресурси",
+      "mission": "Місія",
+      "legal": "Правова інформація"
+    },
+    "privacyPolicy": "Політика конфіденційності",
+    "items": {
+      "howItWorks": "Як це працює",
+      "federation": "Федерація",
+      "models": "Моделі",
+      "services": "Сервіси",
+      "integrations": "Інтеграції",
+      "install": "Встановити",
+      "safety": "Безпека",
+      "infrastructure": "Інфраструктура",
+      "trust": "Довіра та ідентичність",
+      "compare": "Порівняти",
+      "compliance": "Відповідність вимогам",
+      "cewp": "CEWP (soup)",
+      "grammar": "Граматика (CEG)",
+      "game": "Гра-загадка",
+      "firstContact": "Перший контакт",
+      "exploreTrace": "Дослідити трасування",
+      "scoring": "CIRIS Оцінювання",
+      "researchStatus": "Стан досліджень",
+      "documentation": "Документація",
+      "status": "Стан",
+      "about": "Про нас",
+      "vision": "Бачення",
+      "thesis": "Теза",
+      "methodology": "Методологія",
+      "safetyVsCensorship": "Безпека проти цензури",
+      "principles": "Принципи",
+      "privacyPolicy": "Політика конфіденційності",
+      "safetyPolicy": "Політика безпеки",
+      "warrantCanary": "Канарка ордеру"
+    }
+  }
+}

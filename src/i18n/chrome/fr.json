@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "fr",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "Premier Contact",
+      "subtitle": "Commencer ici : le Pourquoi"
+    },
+    "install": {
+      "name": "Installer",
+      "subtitle": "Obtenir l'Agent"
+    },
+    "coherenceRatchet": {
+      "name": "Coherence Ratchet",
+      "subtitle": "La Pression"
+    },
+    "federation": {
+      "name": "Fédération",
+      "subtitle": "La Réponse"
+    },
+    "compare": {
+      "name": "Comparer",
+      "subtitle": "Voir le Dossier de Sécurité"
+    },
+    "research": {
+      "name": "Recherche",
+      "subtitle": "Articles et Corpus de Traces"
+    },
+    "accord": {
+      "name": "Accord",
+      "subtitle": "Lire le Cadre"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Code Open Source"
+    }
+  },
+  "footer": {
+    "desc": "Infrastructure de cohérence ouverte. AGPL-3.0 | Ancré dans la mission.",
+    "headings": {
+      "technology": "Technologie",
+      "resources": "Ressources",
+      "mission": "Mission",
+      "legal": "Juridique"
+    },
+    "privacyPolicy": "Politique de Confidentialité",
+    "items": {
+      "howItWorks": "Fonctionnement",
+      "federation": "Fédération",
+      "models": "Modèles",
+      "services": "Services",
+      "integrations": "Intégrations",
+      "install": "Installer",
+      "safety": "Sécurité",
+      "infrastructure": "Infrastructure",
+      "trust": "Confiance & Identité",
+      "compare": "Comparer",
+      "compliance": "Conformité",
+      "cewp": "CEWP (soup)",
+      "grammar": "Grammaire (CEG)",
+      "game": "Jeu mystère",
+      "firstContact": "Premier Contact",
+      "exploreTrace": "Explorer une Trace",
+      "scoring": "CIRIS Évaluation",
+      "researchStatus": "État de la Recherche",
+      "documentation": "Documentation",
+      "status": "Statut",
+      "about": "À propos",
+      "vision": "Vision",
+      "thesis": "Thèse",
+      "methodology": "Méthodologie",
+      "safetyVsCensorship": "Sécurité vs Censure",
+      "principles": "Principes",
+      "privacyPolicy": "Politique de Confidentialité",
+      "safetyPolicy": "Politique de Sécurité",
+      "warrantCanary": "Warrant Canary"
+    }
+  }
+}

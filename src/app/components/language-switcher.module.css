@@ -99,12 +99,15 @@
   bottom: calc(100% + 0.65rem);
   right: 0;
   min-width: 14rem;
+  max-height: min(70vh, 30rem);
+  overflow-y: auto;
   padding: 0.4rem;
   border-radius: 1rem;
   border: 1px solid rgba(148, 163, 184, 0.25);
   background: var(--ls-bg, #0b1220);
   box-shadow: 0 18px 50px -12px rgba(0, 0, 0, 0.6);
   animation: panelIn 0.18s ease;
+  overscroll-behavior: contain;
 }
 @keyframes panelIn {
   from {

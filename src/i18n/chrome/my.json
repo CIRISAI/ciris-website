@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "my",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "ပထမဆုံးဆက်သွယ်ခြင်း",
+      "subtitle": "ဤနေရာမှ စတင်ပါ: ဘာကြောင့်"
+    },
+    "install": {
+      "name": "ထည့်သွင်းပါ",
+      "subtitle": "အေးဂျင့် ရယူပါ"
+    },
+    "coherenceRatchet": {
+      "name": "Coherence Ratchet",
+      "subtitle": "ဖိအား"
+    },
+    "federation": {
+      "name": "ပေါင်းစည်းမှု",
+      "subtitle": "တုံ့ပြန်မှု"
+    },
+    "compare": {
+      "name": "နှိုင်းယှဉ်ပါ",
+      "subtitle": "လုံခြုံရေးကိစ္စကို ကြည့်ပါ"
+    },
+    "research": {
+      "name": "သုတေသန",
+      "subtitle": "စာတမ်းများ နှင့် Trace Commons"
+    },
+    "accord": {
+      "name": "သဘောတူညီချက်",
+      "subtitle": "မူဘောင်ကို ဖတ်ပါ"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Open Source ကုဒ်"
+    }
+  },
+  "footer": {
+    "desc": "Open coherence infrastructure ဖြစ်သည်။ AGPL-3.0 | Mission-locked ဖြစ်သည်။",
+    "headings": {
+      "technology": "နည်းပညာ",
+      "resources": "အရင်းအမြစ်များ",
+      "mission": "ရည်မှန်းချက်",
+      "legal": "ဥပဒေရေးရာ"
+    },
+    "privacyPolicy": "ကိုယ်ရေးကိုယ်တာ မူဝါဒ",
+    "items": {
+      "howItWorks": "မည်သို့ အလုပ်လုပ်သည်",
+      "federation": "ပေါင်းစည်းမှု",
+      "models": "Models များ",
+      "services": "ဝန်ဆောင်မှုများ",
+      "integrations": "ပေါင်းစပ်မှုများ",
+      "install": "ထည့်သွင်းပါ",
+      "safety": "လုံခြုံရေး",
+      "infrastructure": "အခြေခံဖွဲ့စည်းပုံ",
+      "trust": "ယုံကြည်မှု နှင့် အထောက်အထား",
+      "compare": "နှိုင်းယှဉ်ပါ",
+      "compliance": "လိုက်နာမှု",
+      "cewp": "CEWP (soup)",
+      "grammar": "ဘာသာဗျာကရဏ (CEG)",
+      "game": "နက်နဲသောဂိမ်း",
+      "firstContact": "ပထမဆုံးဆက်သွယ်ခြင်း",
+      "exploreTrace": "Trace ကို လေ့လာပါ",
+      "scoring": "CIRIS အမှတ်ပေးစနစ်",
+      "researchStatus": "သုတေသနအခြေအနေ",
+      "documentation": "စာရွက်စာတမ်းများ",
+      "status": "အခြေအနေ",
+      "about": "အကြောင်း",
+      "vision": "မျှော်မြင်ချက်",
+      "thesis": "ဘွဲ့ကျောင်းစာတမ်း",
+      "methodology": "နည်းစနစ်",
+      "safetyVsCensorship": "လုံခြုံရေး နှင့် ဆင်ဆာဖြတ်ကြောင်း",
+      "principles": "မူဝါဒများ",
+      "privacyPolicy": "ကိုယ်ရေးကိုယ်တာ မူဝါဒ",
+      "safetyPolicy": "လုံခြုံရေး မူဝါဒ",
+      "warrantCanary": "တရားဝင်အမိန့် ငှက်ငယ်"
+    }
+  }
+}

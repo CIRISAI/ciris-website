@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "pa",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "ਪਹਿਲਾ ਸੰਪਰਕ",
+      "subtitle": "ਇੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ: ਕਿਉਂ"
+    },
+    "install": {
+      "name": "ਇੰਸਟਾਲ",
+      "subtitle": "ਏਜੰਟ ਲਓ"
+    },
+    "coherenceRatchet": {
+      "name": "ਇਕਸਾਰਤਾ ਰੈਚੇਟ",
+      "subtitle": "ਦਬਾਅ"
+    },
+    "federation": {
+      "name": "ਸੰਘ",
+      "subtitle": "ਜਵਾਬ"
+    },
+    "compare": {
+      "name": "ਤੁਲਨਾ",
+      "subtitle": "ਸੁਰੱਖਿਆ ਮਾਮਲਾ ਦੇਖੋ"
+    },
+    "research": {
+      "name": "ਖੋਜ",
+      "subtitle": "ਪੇਪਰ ਅਤੇ ਟਰੇਸ ਕਾਮਨਜ਼"
+    },
+    "accord": {
+      "name": "ਇਕਰਾਰਨਾਮਾ",
+      "subtitle": "ਢਾਂਚਾ ਪੜ੍ਹੋ"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "ਖੁੱਲ੍ਹਾ ਸਰੋਤ ਕੋਡ"
+    }
+  },
+  "footer": {
+    "desc": "ਖੁੱਲ੍ਹੀ ਇਕਸਾਰਤਾ ਢਾਂਚਾ। AGPL-3.0 | ਮਿਸ਼ਨ-ਲਾਕਡ।",
+    "headings": {
+      "technology": "ਤਕਨਾਲੋਜੀ",
+      "resources": "ਸਰੋਤ",
+      "mission": "ਮਿਸ਼ਨ",
+      "legal": "ਕਾਨੂੰਨੀ"
+    },
+    "privacyPolicy": "ਗੁਪਤਤਾ ਨੀਤੀ",
+    "items": {
+      "howItWorks": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+      "federation": "ਸੰਘ",
+      "models": "ਮਾਡਲ",
+      "services": "ਸੇਵਾਵਾਂ",
+      "integrations": "ਏਕੀਕਰਨ",
+      "install": "ਇੰਸਟਾਲ",
+      "safety": "ਸੁਰੱਖਿਆ",
+      "infrastructure": "ਬੁਨਿਆਦੀ ਢਾਂਚਾ",
+      "trust": "ਭਰੋਸਾ ਅਤੇ ਪਛਾਣ",
+      "compare": "ਤੁਲਨਾ",
+      "compliance": "ਪਾਲਣਾ",
+      "cewp": "CEWP (soup)",
+      "grammar": "ਵਿਆਕਰਨ (CEG)",
+      "game": "ਰਹੱਸਮਈ ਖੇਡ",
+      "firstContact": "ਪਹਿਲਾ ਸੰਪਰਕ",
+      "exploreTrace": "ਟਰੇਸ ਖੋਜੋ",
+      "scoring": "CIRIS ਸਕੋਰਿੰਗ",
+      "researchStatus": "ਖੋਜ ਸਥਿਤੀ",
+      "documentation": "ਦਸਤਾਵੇਜ਼",
+      "status": "ਸਥਿਤੀ",
+      "about": "ਬਾਰੇ",
+      "vision": "ਦ੍ਰਿਸ਼ਟੀਕੋਣ",
+      "thesis": "ਥੀਸਿਸ",
+      "methodology": "ਵਿਧੀਵਿਗਿਆਨ",
+      "safetyVsCensorship": "ਸੁਰੱਖਿਆ ਬਨਾਮ ਸੈਂਸਰਸ਼ਿਪ",
+      "principles": "ਸਿਧਾਂਤ",
+      "privacyPolicy": "ਗੁਪਤਤਾ ਨੀਤੀ",
+      "safetyPolicy": "ਸੁਰੱਖਿਆ ਨੀਤੀ",
+      "warrantCanary": "ਵਾਰੰਟ ਕੈਨਰੀ"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "hi",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "पहला संपर्क",
+      "subtitle": "यहाँ से शुरू करें: क्यों"
+    },
+    "install": {
+      "name": "इंस्टॉल",
+      "subtitle": "एजेंट पाएं"
+    },
+    "coherenceRatchet": {
+      "name": "Coherence Ratchet",
+      "subtitle": "दबाव"
+    },
+    "federation": {
+      "name": "फेडरेशन",
+      "subtitle": "प्रतिक्रिया"
+    },
+    "compare": {
+      "name": "तुलना",
+      "subtitle": "सुरक्षा मामला देखें"
+    },
+    "research": {
+      "name": "शोध",
+      "subtitle": "पेपर और ट्रेस कॉमन्स"
+    },
+    "accord": {
+      "name": "Accord",
+      "subtitle": "ढाँचा पढ़ें"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "ओपन सोर्स कोड"
+    }
+  },
+  "footer": {
+    "desc": "ओपन कोहेरेंस इंफ्रास्ट्रक्चर। AGPL-3.0 | मिशन-लॉक्ड।",
+    "headings": {
+      "technology": "तकनीक",
+      "resources": "संसाधन",
+      "mission": "मिशन",
+      "legal": "कानूनी"
+    },
+    "privacyPolicy": "गोपनीयता नीति",
+    "items": {
+      "howItWorks": "यह कैसे काम करता है",
+      "federation": "फेडरेशन",
+      "models": "मॉडल",
+      "services": "सेवाएं",
+      "integrations": "इंटीग्रेशन",
+      "install": "इंस्टॉल",
+      "safety": "सुरक्षा",
+      "infrastructure": "इंफ्रास्ट्रक्चर",
+      "trust": "विश्वास और पहचान",
+      "compare": "तुलना",
+      "compliance": "अनुपालन",
+      "cewp": "CEWP (soup)",
+      "grammar": "व्याकरण (CEG)",
+      "game": "रहस्य खेल",
+      "firstContact": "पहला संपर्क",
+      "exploreTrace": "एक ट्रेस देखें",
+      "scoring": "CIRIS स्कोरिंग",
+      "researchStatus": "शोध की स्थिति",
+      "documentation": "दस्तावेज़ीकरण",
+      "status": "स्थिति",
+      "about": "हमारे बारे में",
+      "vision": "दृष्टिकोण",
+      "thesis": "थीसिस",
+      "methodology": "पद्धति",
+      "safetyVsCensorship": "सुरक्षा बनाम सेंसरशिप",
+      "principles": "सिद्धांत",
+      "privacyPolicy": "गोपनीयता नीति",
+      "safetyPolicy": "सुरक्षा नीति",
+      "warrantCanary": "वारंट कैनेरी"
+    }
+  }
+}

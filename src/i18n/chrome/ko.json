@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "ko",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "첫 접촉",
+      "subtitle": "시작: 이유"
+    },
+    "install": {
+      "name": "설치",
+      "subtitle": "에이전트 다운로드"
+    },
+    "coherenceRatchet": {
+      "name": "일관성 래칫",
+      "subtitle": "압력"
+    },
+    "federation": {
+      "name": "페더레이션",
+      "subtitle": "응답"
+    },
+    "compare": {
+      "name": "비교",
+      "subtitle": "안전성 사례 보기"
+    },
+    "research": {
+      "name": "연구",
+      "subtitle": "논문 및 추적 공유지"
+    },
+    "accord": {
+      "name": "협약",
+      "subtitle": "프레임워크 읽기"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "오픈 소스 코드"
+    }
+  },
+  "footer": {
+    "desc": "개방형 일관성 인프라. AGPL-3.0 | 미션 고정.",
+    "headings": {
+      "technology": "기술",
+      "resources": "자료",
+      "mission": "미션",
+      "legal": "법률"
+    },
+    "privacyPolicy": "개인정보 처리방침",
+    "items": {
+      "howItWorks": "작동 원리",
+      "federation": "페더레이션",
+      "models": "모델",
+      "services": "서비스",
+      "integrations": "통합",
+      "install": "설치",
+      "safety": "안전",
+      "infrastructure": "인프라",
+      "trust": "신뢰 및 신원",
+      "compare": "비교",
+      "compliance": "컴플라이언스",
+      "cewp": "CEWP (soup)",
+      "grammar": "문법 (CEG)",
+      "game": "미스터리 게임",
+      "firstContact": "첫 접촉",
+      "exploreTrace": "추적 탐색",
+      "scoring": "CIRIS 점수",
+      "researchStatus": "연구 현황",
+      "documentation": "문서",
+      "status": "상태",
+      "about": "소개",
+      "vision": "비전",
+      "thesis": "논문",
+      "methodology": "방법론",
+      "safetyVsCensorship": "안전 대 검열",
+      "principles": "원칙",
+      "privacyPolicy": "개인정보 처리방침",
+      "safetyPolicy": "안전 정책",
+      "warrantCanary": "영장 카나리"
+    }
+  }
+}

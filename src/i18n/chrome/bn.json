@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "bn",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "প্রথম যোগাযোগ",
+      "subtitle": "এখান থেকে শুরু করুন: কেন"
+    },
+    "install": {
+      "name": "ইনস্টল",
+      "subtitle": "এজেন্ট নিন"
+    },
+    "coherenceRatchet": {
+      "name": "সামঞ্জস্য র‍্যাচেট",
+      "subtitle": "চাপ"
+    },
+    "federation": {
+      "name": "ফেডারেশন",
+      "subtitle": "সাড়া"
+    },
+    "compare": {
+      "name": "তুলনা",
+      "subtitle": "নিরাপত্তার কেস দেখুন"
+    },
+    "research": {
+      "name": "গবেষণা",
+      "subtitle": "পেপার ও ট্রেস কমনস"
+    },
+    "accord": {
+      "name": "Accord",
+      "subtitle": "কাঠামো পড়ুন"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "ওপেন সোর্স কোড"
+    }
+  },
+  "footer": {
+    "desc": "ওপেন কোহেরেন্স অবকাঠামো। AGPL-3.0 | মিশন-লকড।",
+    "headings": {
+      "technology": "প্রযুক্তি",
+      "resources": "সম্পদ",
+      "mission": "লক্ষ্য",
+      "legal": "আইনি"
+    },
+    "privacyPolicy": "গোপনীয়তা নীতি",
+    "items": {
+      "howItWorks": "এটি কীভাবে কাজ করে",
+      "federation": "ফেডারেশন",
+      "models": "মডেল",
+      "services": "সেবা",
+      "integrations": "ইন্টিগ্রেশন",
+      "install": "ইনস্টল",
+      "safety": "নিরাপত্তা",
+      "infrastructure": "অবকাঠামো",
+      "trust": "বিশ্বাস ও পরিচয়",
+      "compare": "তুলনা",
+      "compliance": "সম্মতি",
+      "cewp": "CEWP (soup)",
+      "grammar": "ব্যাকরণ (CEG)",
+      "game": "রহস্য গেম",
+      "firstContact": "প্রথম যোগাযোগ",
+      "exploreTrace": "একটি ট্রেস অন্বেষণ করুন",
+      "scoring": "CIRIS স্কোরিং",
+      "researchStatus": "গবেষণার অবস্থা",
+      "documentation": "ডকুমেন্টেশন",
+      "status": "অবস্থা",
+      "about": "সম্পর্কে",
+      "vision": "দৃষ্টিভঙ্গি",
+      "thesis": "থিসিস",
+      "methodology": "পদ্ধতি",
+      "safetyVsCensorship": "নিরাপত্তা বনাম সেন্সরশিপ",
+      "principles": "নীতিমালা",
+      "privacyPolicy": "গোপনীয়তা নীতি",
+      "safetyPolicy": "নিরাপত্তা নীতি",
+      "warrantCanary": "ওয়ারেন্ট ক্যানারি"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "id",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "Kontak Pertama",
+      "subtitle": "Mulai di Sini: Alasannya"
+    },
+    "install": {
+      "name": "Pasang",
+      "subtitle": "Dapatkan Agennya"
+    },
+    "coherenceRatchet": {
+      "name": "Ratchet Koherensi",
+      "subtitle": "Tekanannya"
+    },
+    "federation": {
+      "name": "Federasi",
+      "subtitle": "Responsnya"
+    },
+    "compare": {
+      "name": "Bandingkan",
+      "subtitle": "Lihat Kasus Keamanan"
+    },
+    "research": {
+      "name": "Riset",
+      "subtitle": "Makalah & Jejak Bersama"
+    },
+    "accord": {
+      "name": "PERJANJIAN",
+      "subtitle": "Baca Kerangkanya"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Kode Sumber Terbuka"
+    }
+  },
+  "footer": {
+    "desc": "Infrastruktur koherensi terbuka. AGPL-3.0 | Terkunci pada misi.",
+    "headings": {
+      "technology": "Teknologi",
+      "resources": "Sumber Daya",
+      "mission": "Misi",
+      "legal": "Hukum"
+    },
+    "privacyPolicy": "Kebijakan Privasi",
+    "items": {
+      "howItWorks": "Cara Kerjanya",
+      "federation": "Federasi",
+      "models": "Model",
+      "services": "Layanan",
+      "integrations": "Integrasi",
+      "install": "Pasang",
+      "safety": "Keamanan",
+      "infrastructure": "Infrastruktur",
+      "trust": "Kepercayaan & Identitas",
+      "compare": "Bandingkan",
+      "compliance": "Kepatuhan",
+      "cewp": "CEWP (soup)",
+      "grammar": "Tata Bahasa (CEG)",
+      "game": "Permainan misteri",
+      "firstContact": "Kontak Pertama",
+      "exploreTrace": "Jelajahi Jejak",
+      "scoring": "CIRIS Penilaian",
+      "researchStatus": "Status Riset",
+      "documentation": "Dokumentasi",
+      "status": "Status",
+      "about": "Tentang Kami",
+      "vision": "Visi",
+      "thesis": "Tesis",
+      "methodology": "Metodologi",
+      "safetyVsCensorship": "Keamanan vs Sensor",
+      "principles": "Prinsip",
+      "privacyPolicy": "Kebijakan Privasi",
+      "safetyPolicy": "Kebijakan Keamanan",
+      "warrantCanary": "Warrant Canary"
+    }
+  }
+}

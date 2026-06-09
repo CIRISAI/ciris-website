@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "ru",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "Первый контакт",
+      "subtitle": "Начните здесь: зачем это нужно"
+    },
+    "install": {
+      "name": "Установка",
+      "subtitle": "Получить агент"
+    },
+    "coherenceRatchet": {
+      "name": "Когерентный храповик",
+      "subtitle": "Давление"
+    },
+    "federation": {
+      "name": "Федерация",
+      "subtitle": "Ответ"
+    },
+    "compare": {
+      "name": "Сравнить",
+      "subtitle": "Посмотреть обоснование безопасности"
+    },
+    "research": {
+      "name": "Исследования",
+      "subtitle": "Статьи и корпус трассировок"
+    },
+    "accord": {
+      "name": "Соглашение",
+      "subtitle": "Читать основу"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Открытый исходный код"
+    }
+  },
+  "footer": {
+    "desc": "Открытая инфраструктура когерентности. AGPL-3.0 | Привязан к миссии.",
+    "headings": {
+      "technology": "Технологии",
+      "resources": "Ресурсы",
+      "mission": "Миссия",
+      "legal": "Правовая информация"
+    },
+    "privacyPolicy": "Политика конфиденциальности",
+    "items": {
+      "howItWorks": "Как это работает",
+      "federation": "Федерация",
+      "models": "Модели",
+      "services": "Сервисы",
+      "integrations": "Интеграции",
+      "install": "Установка",
+      "safety": "Безопасность",
+      "infrastructure": "Инфраструктура",
+      "trust": "Доверие и идентичность",
+      "compare": "Сравнить",
+      "compliance": "Соответствие требованиям",
+      "cewp": "CEWP (soup)",
+      "grammar": "Грамматика (CEG)",
+      "game": "Игра-загадка",
+      "firstContact": "Первый контакт",
+      "exploreTrace": "Изучить трассировку",
+      "scoring": "CIRIS Оценка",
+      "researchStatus": "Статус исследований",
+      "documentation": "Документация",
+      "status": "Статус",
+      "about": "О нас",
+      "vision": "Видение",
+      "thesis": "Тезис",
+      "methodology": "Методология",
+      "safetyVsCensorship": "Безопасность и цензура",
+      "principles": "Принципы",
+      "privacyPolicy": "Политика конфиденциальности",
+      "safetyPolicy": "Политика безопасности",
+      "warrantCanary": "Warrant Canary"
+    }
+  }
+}

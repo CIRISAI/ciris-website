@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "ar",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "أول تواصل",
+      "subtitle": "ابدأ هنا: لماذا"
+    },
+    "install": {
+      "name": "التثبيت",
+      "subtitle": "احصل على الوكيل"
+    },
+    "coherenceRatchet": {
+      "name": "رافعة التماسك",
+      "subtitle": "الضغط"
+    },
+    "federation": {
+      "name": "الاتحاد",
+      "subtitle": "الاستجابة"
+    },
+    "compare": {
+      "name": "قارن",
+      "subtitle": "انظر حالة السلامة"
+    },
+    "research": {
+      "name": "البحث",
+      "subtitle": "الأوراق البحثية وأرشيف التتبع"
+    },
+    "accord": {
+      "name": "Accord",
+      "subtitle": "اقرأ الإطار"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "كود مفتوح المصدر"
+    }
+  },
+  "footer": {
+    "desc": "بنية تحتية مفتوحة للتماسك. AGPL-3.0 | مقيَّد بالمهمة.",
+    "headings": {
+      "technology": "التكنولوجيا",
+      "resources": "الموارد",
+      "mission": "المهمة",
+      "legal": "القانوني"
+    },
+    "privacyPolicy": "سياسة الخصوصية",
+    "items": {
+      "howItWorks": "كيف يعمل",
+      "federation": "الاتحاد",
+      "models": "النماذج",
+      "services": "الخدمات",
+      "integrations": "التكاملات",
+      "install": "التثبيت",
+      "safety": "السلامة",
+      "infrastructure": "البنية التحتية",
+      "trust": "الثقة والهوية",
+      "compare": "قارن",
+      "compliance": "الامتثال",
+      "cewp": "CEWP (soup)",
+      "grammar": "النحو (CEG)",
+      "game": "لعبة الغموض",
+      "firstContact": "أول تواصل",
+      "exploreTrace": "استكشف تتبعاً",
+      "scoring": "CIRIS تقييم",
+      "researchStatus": "حالة البحث",
+      "documentation": "التوثيق",
+      "status": "الحالة",
+      "about": "عن المشروع",
+      "vision": "الرؤية",
+      "thesis": "الأطروحة",
+      "methodology": "المنهجية",
+      "safetyVsCensorship": "السلامة في مقابل الرقابة",
+      "principles": "المبادئ",
+      "privacyPolicy": "سياسة الخصوصية",
+      "safetyPolicy": "سياسة السلامة",
+      "warrantCanary": "إشعار أمر التفتيش"
+    }
+  }
+}

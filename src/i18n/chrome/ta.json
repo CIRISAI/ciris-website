@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "ta",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "முதல் தொடர்பு",
+      "subtitle": "இங்கே தொடங்கு: ஏன் என்று"
+    },
+    "install": {
+      "name": "நிறுவு",
+      "subtitle": "முகவரை பெறு"
+    },
+    "coherenceRatchet": {
+      "name": "ஒத்திசைவு சக்கரம்",
+      "subtitle": "அழுத்தம்"
+    },
+    "federation": {
+      "name": "ஃபெடரேஷன்",
+      "subtitle": "பதில்"
+    },
+    "compare": {
+      "name": "ஒப்பிடு",
+      "subtitle": "பாதுகாப்பு வழக்கை பார்"
+    },
+    "research": {
+      "name": "ஆராய்ச்சி",
+      "subtitle": "கட்டுரைகள் & தடயக் களஞ்சியம்"
+    },
+    "accord": {
+      "name": "உடன்படிக்கை",
+      "subtitle": "கட்டமைப்பை படி"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "திறந்த மூல குறியீடு"
+    }
+  },
+  "footer": {
+    "desc": "திறந்த ஒத்திசைவு உள்கட்டமைப்பு. AGPL-3.0 | நோக்க-பூட்டப்பட்டது.",
+    "headings": {
+      "technology": "தொழில்நுட்பம்",
+      "resources": "வளங்கள்",
+      "mission": "நோக்கம்",
+      "legal": "சட்டம்"
+    },
+    "privacyPolicy": "தனியுரிமை கொள்கை",
+    "items": {
+      "howItWorks": "எப்படி செயல்படுகிறது",
+      "federation": "ஃபெடரேஷன்",
+      "models": "மாதிரிகள்",
+      "services": "சேவைகள்",
+      "integrations": "ஒருங்கிணைப்புகள்",
+      "install": "நிறுவு",
+      "safety": "பாதுகாப்பு",
+      "infrastructure": "உள்கட்டமைப்பு",
+      "trust": "நம்பிக்கை & அடையாளம்",
+      "compare": "ஒப்பிடு",
+      "compliance": "இணக்கம்",
+      "cewp": "CEWP (soup)",
+      "grammar": "இலக்கணம் (CEG)",
+      "game": "மர்ம விளையாட்டு",
+      "firstContact": "முதல் தொடர்பு",
+      "exploreTrace": "ஒரு தடயத்தை ஆராயுங்கள்",
+      "scoring": "CIRIS மதிப்பெண்",
+      "researchStatus": "ஆராய்ச்சி நிலை",
+      "documentation": "ஆவணமயமாக்கல்",
+      "status": "நிலை",
+      "about": "பற்றி",
+      "vision": "தரிசனம்",
+      "thesis": "ஆய்வுக்கட்டுரை",
+      "methodology": "முறைமை",
+      "safetyVsCensorship": "பாதுகாப்பு எதிர் தணிக்கை",
+      "principles": "கொள்கைகள்",
+      "privacyPolicy": "தனியுரிமை கொள்கை",
+      "safetyPolicy": "பாதுகாப்பு கொள்கை",
+      "warrantCanary": "வாரண்ட் கேனரி"
+    }
+  }
+}

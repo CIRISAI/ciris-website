@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "zh",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "初次接触",
+      "subtitle": "从这里开始：了解原因"
+    },
+    "install": {
+      "name": "安装",
+      "subtitle": "获取智能体"
+    },
+    "coherenceRatchet": {
+      "name": "连贯棘轮",
+      "subtitle": "压力所在"
+    },
+    "federation": {
+      "name": "联邦",
+      "subtitle": "应对之策"
+    },
+    "compare": {
+      "name": "对比",
+      "subtitle": "查看安全案例"
+    },
+    "research": {
+      "name": "研究",
+      "subtitle": "论文与追踪公域"
+    },
+    "accord": {
+      "name": "协议",
+      "subtitle": "阅读框架"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "开源代码"
+    }
+  },
+  "footer": {
+    "desc": "开放连贯基础设施。AGPL-3.0 | 使命锁定。",
+    "headings": {
+      "technology": "技术",
+      "resources": "资源",
+      "mission": "使命",
+      "legal": "法律"
+    },
+    "privacyPolicy": "隐私政策",
+    "items": {
+      "howItWorks": "工作原理",
+      "federation": "联邦",
+      "models": "模型",
+      "services": "服务",
+      "integrations": "集成",
+      "install": "安装",
+      "safety": "安全",
+      "infrastructure": "基础设施",
+      "trust": "信任与身份",
+      "compare": "对比",
+      "compliance": "合规",
+      "cewp": "CEWP (soup)",
+      "grammar": "语法 (CEG)",
+      "game": "神秘游戏",
+      "firstContact": "初次接触",
+      "exploreTrace": "探索追踪记录",
+      "scoring": "CIRIS 评分",
+      "researchStatus": "研究状态",
+      "documentation": "文档",
+      "status": "状态",
+      "about": "关于",
+      "vision": "愿景",
+      "thesis": "论文",
+      "methodology": "方法论",
+      "safetyVsCensorship": "安全与审查",
+      "principles": "原则",
+      "privacyPolicy": "隐私政策",
+      "safetyPolicy": "安全政策",
+      "warrantCanary": "授权金丝雀"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "te",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "మొదటి సంప్రదింపు",
+      "subtitle": "ఇక్కడ ప్రారంభించండి: ఎందుకు"
+    },
+    "install": {
+      "name": "ఇన్‌స్టాల్",
+      "subtitle": "ఏజెంట్ పొందండి"
+    },
+    "coherenceRatchet": {
+      "name": "సంఘటన రాచెట్",
+      "subtitle": "ఒత్తిడి"
+    },
+    "federation": {
+      "name": "ఫెడరేషన్",
+      "subtitle": "ప్రతిస్పందన"
+    },
+    "compare": {
+      "name": "పోల్చండి",
+      "subtitle": "భద్రత కేసు చూడండి"
+    },
+    "research": {
+      "name": "పరిశోధన",
+      "subtitle": "పేపర్లు & ట్రేస్ కామన్స్"
+    },
+    "accord": {
+      "name": "ఒప్పందం",
+      "subtitle": "చట్రాన్ని చదవండి"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "ఓపెన్ సోర్స్ కోడ్"
+    }
+  },
+  "footer": {
+    "desc": "ఓపెన్ కోహెరెన్స్ ఇన్‌ఫ్రాస్ట్రక్చర్. AGPL-3.0 | మిషన్-లాక్డ్.",
+    "headings": {
+      "technology": "సాంకేతికత",
+      "resources": "వనరులు",
+      "mission": "మిషన్",
+      "legal": "చట్టపరమైన"
+    },
+    "privacyPolicy": "గోప్యతా విధానం",
+    "items": {
+      "howItWorks": "ఇది ఎలా పనిచేస్తుంది",
+      "federation": "ఫెడరేషన్",
+      "models": "మోడళ్లు",
+      "services": "సేవలు",
+      "integrations": "ఇంటిగ్రేషన్లు",
+      "install": "ఇన్‌స్టాల్",
+      "safety": "భద్రత",
+      "infrastructure": "ఇన్‌ఫ్రాస్ట్రక్చర్",
+      "trust": "నమ్మకం & గుర్తింపు",
+      "compare": "పోల్చండి",
+      "compliance": "అనుపాలన",
+      "cewp": "CEWP (soup)",
+      "grammar": "వ్యాకరణం (CEG)",
+      "game": "రహస్య ఆట",
+      "firstContact": "మొదటి సంప్రదింపు",
+      "exploreTrace": "ట్రేస్ అన్వేషించండి",
+      "scoring": "CIRIS స్కోరింగ్",
+      "researchStatus": "పరిశోధన స్థితి",
+      "documentation": "డాక్యుమెంటేషన్",
+      "status": "స్థితి",
+      "about": "మా గురించి",
+      "vision": "దృష్టి",
+      "thesis": "థీసిస్",
+      "methodology": "పద్ధతి",
+      "safetyVsCensorship": "భద్రత vs సెన్సార్‌షిప్",
+      "principles": "సూత్రాలు",
+      "privacyPolicy": "గోప్యతా విధానం",
+      "safetyPolicy": "భద్రతా విధానం",
+      "warrantCanary": "వారంట్ కెనరీ"
+    }
+  }
+}

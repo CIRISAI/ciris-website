@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "tr",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "İlk Temas",
+      "subtitle": "Buradan başlayın: Neden?"
+    },
+    "install": {
+      "name": "Yükle",
+      "subtitle": "Ajanı edinin"
+    },
+    "coherenceRatchet": {
+      "name": "Tutarlılık Mandal",
+      "subtitle": "Baskı"
+    },
+    "federation": {
+      "name": "Federasyon",
+      "subtitle": "Yanıt"
+    },
+    "compare": {
+      "name": "Karşılaştır",
+      "subtitle": "Güvenlik Durumunu Görün"
+    },
+    "research": {
+      "name": "Araştırma",
+      "subtitle": "Makaleler ve İz Arşivi"
+    },
+    "accord": {
+      "name": "Anlaşma",
+      "subtitle": "Çerçeveyi Okuyun"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Açık Kaynak Kod"
+    }
+  },
+  "footer": {
+    "desc": "Açık tutarlılık altyapısı. AGPL-3.0 | Misyona kilitli.",
+    "headings": {
+      "technology": "Teknoloji",
+      "resources": "Kaynaklar",
+      "mission": "Misyon",
+      "legal": "Hukuki"
+    },
+    "privacyPolicy": "Gizlilik Politikası",
+    "items": {
+      "howItWorks": "Nasıl Çalışır",
+      "federation": "Federasyon",
+      "models": "Modeller",
+      "services": "Hizmetler",
+      "integrations": "Entegrasyonlar",
+      "install": "Yükle",
+      "safety": "Güvenlik",
+      "infrastructure": "Altyapı",
+      "trust": "Güven ve Kimlik",
+      "compare": "Karşılaştır",
+      "compliance": "Uyumluluk",
+      "cewp": "CEWP (soup)",
+      "grammar": "Dilbilgisi (CEG)",
+      "game": "Gizem oyunu",
+      "firstContact": "İlk Temas",
+      "exploreTrace": "Bir İzi Keşfedin",
+      "scoring": "CIRIS Puanlama",
+      "researchStatus": "Araştırma Durumu",
+      "documentation": "Belgeler",
+      "status": "Durum",
+      "about": "Hakkında",
+      "vision": "Vizyon",
+      "thesis": "Tez",
+      "methodology": "Metodoloji",
+      "safetyVsCensorship": "Güvenlik ve Sansür",
+      "principles": "İlkeler",
+      "privacyPolicy": "Gizlilik Politikası",
+      "safetyPolicy": "Güvenlik Politikası",
+      "warrantCanary": "Warrant Canary"
+    }
+  }
+}

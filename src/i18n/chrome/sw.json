@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "sw",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "Mawasiliano ya Kwanza",
+      "subtitle": "Anza Hapa: Sababu"
+    },
+    "install": {
+      "name": "Sakinisha",
+      "subtitle": "Pata Wakala"
+    },
+    "coherenceRatchet": {
+      "name": "Ratchet ya Upatanifu",
+      "subtitle": "Msukumo"
+    },
+    "federation": {
+      "name": "Shirikisho",
+      "subtitle": "Jibu"
+    },
+    "compare": {
+      "name": "Linganisha",
+      "subtitle": "Angalia Hoja ya Usalama"
+    },
+    "research": {
+      "name": "Utafiti",
+      "subtitle": "Karatasi na Mkusanyiko wa Mfuatilio"
+    },
+    "accord": {
+      "name": "Mkataba",
+      "subtitle": "Soma Mfumo"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Msimbo wa Chanzo Wazi"
+    }
+  },
+  "footer": {
+    "desc": "Miundombinu wazi ya upatanifu. AGPL-3.0 | Imefungwa kwa dhamira.",
+    "headings": {
+      "technology": "Teknolojia",
+      "resources": "Rasilimali",
+      "mission": "Dhamira",
+      "legal": "Kisheria"
+    },
+    "privacyPolicy": "Sera ya Faragha",
+    "items": {
+      "howItWorks": "Inavyofanya Kazi",
+      "federation": "Shirikisho",
+      "models": "Mifano",
+      "services": "Huduma",
+      "integrations": "Muunganiko",
+      "install": "Sakinisha",
+      "safety": "Usalama",
+      "infrastructure": "Miundombinu",
+      "trust": "Uaminifu na Utambulisho",
+      "compare": "Linganisha",
+      "compliance": "Uzingatifu",
+      "cewp": "CEWP (soup)",
+      "grammar": "Sarufi (CEG)",
+      "game": "Mchezo wa siri",
+      "firstContact": "Mawasiliano ya Kwanza",
+      "exploreTrace": "Chunguza Mfuatilio",
+      "scoring": "CIRIS Kipimo",
+      "researchStatus": "Hali ya Utafiti",
+      "documentation": "Nyaraka",
+      "status": "Hali",
+      "about": "Kuhusu",
+      "vision": "Maono",
+      "thesis": "Tasnifu",
+      "methodology": "Mbinu",
+      "safetyVsCensorship": "Usalama dhidi ya Udhibiti",
+      "principles": "Kanuni",
+      "privacyPolicy": "Sera ya Faragha",
+      "safetyPolicy": "Sera ya Usalama",
+      "warrantCanary": "Ndege wa Onyo la Hati"
+    }
+  }
+}

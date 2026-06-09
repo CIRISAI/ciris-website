@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "mr",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "पहिला संपर्क",
+      "subtitle": "येथून सुरू करा: का ते"
+    },
+    "install": {
+      "name": "इन्स्टॉल करा",
+      "subtitle": "एजंट मिळवा"
+    },
+    "coherenceRatchet": {
+      "name": "सुसंगतता रॅचेट",
+      "subtitle": "दबाव"
+    },
+    "federation": {
+      "name": "फेडरेशन",
+      "subtitle": "प्रतिसाद"
+    },
+    "compare": {
+      "name": "तुलना करा",
+      "subtitle": "सुरक्षा प्रकरण पाहा"
+    },
+    "research": {
+      "name": "संशोधन",
+      "subtitle": "पेपर आणि ट्रेस संग्रह"
+    },
+    "accord": {
+      "name": "करार",
+      "subtitle": "चौकट वाचा"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "ओपन सोर्स कोड"
+    }
+  },
+  "footer": {
+    "desc": "मुक्त सुसंगतता पायाभूत सुविधा. AGPL-3.0 | Mission-locked.",
+    "headings": {
+      "technology": "तंत्रज्ञान",
+      "resources": "संसाधने",
+      "mission": "ध्येय",
+      "legal": "कायदेशीर"
+    },
+    "privacyPolicy": "गोपनीयता धोरण",
+    "items": {
+      "howItWorks": "हे कसे काम करते",
+      "federation": "फेडरेशन",
+      "models": "मॉडेल",
+      "services": "सेवा",
+      "integrations": "एकत्रीकरण",
+      "install": "इन्स्टॉल करा",
+      "safety": "सुरक्षा",
+      "infrastructure": "पायाभूत सुविधा",
+      "trust": "विश्वास आणि ओळख",
+      "compare": "तुलना करा",
+      "compliance": "अनुपालन",
+      "cewp": "CEWP (soup)",
+      "grammar": "व्याकरण (CEG)",
+      "game": "रहस्य खेळ",
+      "firstContact": "पहिला संपर्क",
+      "exploreTrace": "ट्रेस एक्सप्लोर करा",
+      "scoring": "CIRIS स्कोअरिंग",
+      "researchStatus": "संशोधन स्थिती",
+      "documentation": "दस्तऐवजीकरण",
+      "status": "स्थिती",
+      "about": "आमच्याबद्दल",
+      "vision": "दृष्टी",
+      "thesis": "प्रबंध",
+      "methodology": "कार्यपद्धती",
+      "safetyVsCensorship": "सुरक्षा विरुद्ध सेन्सॉरशिप",
+      "principles": "तत्त्वे",
+      "privacyPolicy": "गोपनीयता धोरण",
+      "safetyPolicy": "सुरक्षा धोरण",
+      "warrantCanary": "वॉरंट कॅनरी"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "ur",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "پہلا رابطہ",
+      "subtitle": "یہاں سے شروع کریں: کیوں"
+    },
+    "install": {
+      "name": "انسٹال",
+      "subtitle": "ایجنٹ حاصل کریں"
+    },
+    "coherenceRatchet": {
+      "name": "ہم آہنگی کا زور",
+      "subtitle": "دباؤ"
+    },
+    "federation": {
+      "name": "فیڈریشن",
+      "subtitle": "جواب"
+    },
+    "compare": {
+      "name": "موازنہ",
+      "subtitle": "حفاظتی معاملہ دیکھیں"
+    },
+    "research": {
+      "name": "تحقیق",
+      "subtitle": "مقالے اور نقش کامنز"
+    },
+    "accord": {
+      "name": "عہد نامہ",
+      "subtitle": "ڈھانچہ پڑھیں"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "اوپن سورس کوڈ"
+    }
+  },
+  "footer": {
+    "desc": "کھلا ہم آہنگی کا ڈھانچہ۔ AGPL-3.0 | مشن کے پابند۔",
+    "headings": {
+      "technology": "ٹیکنالوجی",
+      "resources": "وسائل",
+      "mission": "مشن",
+      "legal": "قانونی"
+    },
+    "privacyPolicy": "رازداری کی پالیسی",
+    "items": {
+      "howItWorks": "یہ کیسے کام کرتا ہے",
+      "federation": "فیڈریشن",
+      "models": "ماڈلز",
+      "services": "سروسز",
+      "integrations": "انضمام",
+      "install": "انسٹال",
+      "safety": "حفاظت",
+      "infrastructure": "انفراسٹرکچر",
+      "trust": "اعتماد اور شناخت",
+      "compare": "موازنہ",
+      "compliance": "تعمیل",
+      "cewp": "CEWP (soup)",
+      "grammar": "گرامر (CEG)",
+      "game": "راز کا کھیل",
+      "firstContact": "پہلا رابطہ",
+      "exploreTrace": "نقش دریافت کریں",
+      "scoring": "CIRIS اسکورنگ",
+      "researchStatus": "تحقیق کی حیثیت",
+      "documentation": "دستاویزات",
+      "status": "حیثیت",
+      "about": "ہمارے بارے میں",
+      "vision": "تصور",
+      "thesis": "مقالہ",
+      "methodology": "طریق کار",
+      "safetyVsCensorship": "حفاظت بمقابلہ سنسر شپ",
+      "principles": "اصول",
+      "privacyPolicy": "رازداری کی پالیسی",
+      "safetyPolicy": "حفاظت کی پالیسی",
+      "warrantCanary": "وارنٹ کینری"
+    }
+  }
+}

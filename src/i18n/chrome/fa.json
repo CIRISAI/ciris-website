@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "fa",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "اولین تماس",
+      "subtitle": "از اینجا شروع کنید: چرایی"
+    },
+    "install": {
+      "name": "نصب",
+      "subtitle": "عامل را دریافت کنید"
+    },
+    "coherenceRatchet": {
+      "name": "چرخ‌دنده انسجام",
+      "subtitle": "فشار"
+    },
+    "federation": {
+      "name": "فدراسیون",
+      "subtitle": "پاسخ"
+    },
+    "compare": {
+      "name": "مقایسه",
+      "subtitle": "پرونده ایمنی را ببینید"
+    },
+    "research": {
+      "name": "تحقیقات",
+      "subtitle": "مقالات و مجموعه اثر"
+    },
+    "accord": {
+      "name": "پیمان",
+      "subtitle": "چارچوب را بخوانید"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "کد متن‌باز"
+    }
+  },
+  "footer": {
+    "desc": "زیرساخت انسجام باز. AGPL-3.0 | قفل‌شده به ماموریت.",
+    "headings": {
+      "technology": "فناوری",
+      "resources": "منابع",
+      "mission": "ماموریت",
+      "legal": "حقوقی"
+    },
+    "privacyPolicy": "سیاست حریم خصوصی",
+    "items": {
+      "howItWorks": "چطور کار می‌کند",
+      "federation": "فدراسیون",
+      "models": "مدل‌ها",
+      "services": "سرویس‌ها",
+      "integrations": "یکپارچه‌سازی‌ها",
+      "install": "نصب",
+      "safety": "ایمنی",
+      "infrastructure": "زیرساخت",
+      "trust": "اعتماد و هویت",
+      "compare": "مقایسه",
+      "compliance": "انطباق",
+      "cewp": "CEWP (soup)",
+      "grammar": "دستور زبان (CEG)",
+      "game": "بازی رمز",
+      "firstContact": "اولین تماس",
+      "exploreTrace": "کاوش در اثر",
+      "scoring": "CIRIS امتیازدهی",
+      "researchStatus": "وضعیت تحقیقات",
+      "documentation": "مستندات",
+      "status": "وضعیت",
+      "about": "درباره ما",
+      "vision": "چشم‌انداز",
+      "thesis": "پایان‌نامه",
+      "methodology": "روش‌شناسی",
+      "safetyVsCensorship": "ایمنی در برابر سانسور",
+      "principles": "اصول",
+      "privacyPolicy": "سیاست حریم خصوصی",
+      "safetyPolicy": "سیاست ایمنی",
+      "warrantCanary": "قناری احضاریه"
+    }
+  }
+}

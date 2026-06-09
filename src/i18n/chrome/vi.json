@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "vi",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "Tiếp xúc đầu tiên",
+      "subtitle": "Bắt đầu từ đây: lý do tại sao"
+    },
+    "install": {
+      "name": "Cài đặt",
+      "subtitle": "Lấy tác nhân"
+    },
+    "coherenceRatchet": {
+      "name": "Cơ chế siết chặt tính nhất quán",
+      "subtitle": "Áp lực"
+    },
+    "federation": {
+      "name": "Liên minh",
+      "subtitle": "Phản hồi"
+    },
+    "compare": {
+      "name": "So sánh",
+      "subtitle": "Xem trường hợp an toàn"
+    },
+    "research": {
+      "name": "Nghiên cứu",
+      "subtitle": "Bài báo & kho dấu vết"
+    },
+    "accord": {
+      "name": "HIỆP ƯỚC",
+      "subtitle": "Đọc khung đạo đức"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Mã nguồn mở"
+    }
+  },
+  "footer": {
+    "desc": "Hạ tầng tính nhất quán mở. AGPL-3.0 | Được khóa theo sứ mệnh.",
+    "headings": {
+      "technology": "Công nghệ",
+      "resources": "Tài nguyên",
+      "mission": "Sứ mệnh",
+      "legal": "Pháp lý"
+    },
+    "privacyPolicy": "Chính sách bảo mật",
+    "items": {
+      "howItWorks": "Cách hoạt động",
+      "federation": "Liên minh",
+      "models": "Mô hình",
+      "services": "Dịch vụ",
+      "integrations": "Tích hợp",
+      "install": "Cài đặt",
+      "safety": "An toàn",
+      "infrastructure": "Hạ tầng",
+      "trust": "Tin cậy & Danh tính",
+      "compare": "So sánh",
+      "compliance": "Tuân thủ",
+      "cewp": "CEWP (soup)",
+      "grammar": "Ngữ pháp (CEG)",
+      "game": "Trò chơi bí ẩn",
+      "firstContact": "Tiếp xúc đầu tiên",
+      "exploreTrace": "Khám phá dấu vết",
+      "scoring": "CIRIS Chấm điểm",
+      "researchStatus": "Tình trạng nghiên cứu",
+      "documentation": "Tài liệu",
+      "status": "Trạng thái",
+      "about": "Về chúng tôi",
+      "vision": "Tầm nhìn",
+      "thesis": "Luận văn",
+      "methodology": "Phương pháp luận",
+      "safetyVsCensorship": "An toàn và kiểm duyệt",
+      "principles": "Nguyên tắc",
+      "privacyPolicy": "Chính sách bảo mật",
+      "safetyPolicy": "Chính sách an toàn",
+      "warrantCanary": "Thông báo giám sát"
+    }
+  }
+}

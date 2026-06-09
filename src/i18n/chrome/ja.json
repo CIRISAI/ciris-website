@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "locale": "ja",
+    "origin": "machine"
+  },
+  "nav": {
+    "firstContact": {
+      "name": "最初の接触",
+      "subtitle": "ここから始める：その理由"
+    },
+    "install": {
+      "name": "インストール",
+      "subtitle": "エージェントを入手"
+    },
+    "coherenceRatchet": {
+      "name": "一貫性ラチェット",
+      "subtitle": "その圧力"
+    },
+    "federation": {
+      "name": "フェデレーション",
+      "subtitle": "その応答"
+    },
+    "compare": {
+      "name": "比較",
+      "subtitle": "安全性の根拠を見る"
+    },
+    "research": {
+      "name": "研究",
+      "subtitle": "論文とトレースコモンズ"
+    },
+    "accord": {
+      "name": "協定",
+      "subtitle": "枠組みを読む"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "オープンソースコード"
+    }
+  },
+  "footer": {
+    "desc": "オープン一貫性インフラ。AGPL-3.0 | ミッションロック。",
+    "headings": {
+      "technology": "テクノロジー",
+      "resources": "リソース",
+      "mission": "ミッション",
+      "legal": "法務"
+    },
+    "privacyPolicy": "プライバシーポリシー",
+    "items": {
+      "howItWorks": "仕組み",
+      "federation": "フェデレーション",
+      "models": "モデル",
+      "services": "サービス",
+      "integrations": "インテグレーション",
+      "install": "インストール",
+      "safety": "安全性",
+      "infrastructure": "インフラ",
+      "trust": "信頼とアイデンティティ",
+      "compare": "比較",
+      "compliance": "コンプライアンス",
+      "cewp": "CEWP (soup)",
+      "grammar": "文法 (CEG)",
+      "game": "謎解きゲーム",
+      "firstContact": "最初の接触",
+      "exploreTrace": "トレースを探索",
+      "scoring": "CIRIS スコアリング",
+      "researchStatus": "研究状況",
+      "documentation": "ドキュメント",
+      "status": "ステータス",
+      "about": "私たちについて",
+      "vision": "ビジョン",
+      "thesis": "論文",
+      "methodology": "方法論",
+      "safetyVsCensorship": "安全性と検閲",
+      "principles": "原則",
+      "privacyPolicy": "プライバシーポリシー",
+      "safetyPolicy": "安全性ポリシー",
+      "warrantCanary": "令状カナリア"
+    }
+  }
+}
