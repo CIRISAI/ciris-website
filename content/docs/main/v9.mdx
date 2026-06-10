@@ -23,7 +23,7 @@ The answer lies not in the infinite depth of any single agent's wisdom, but in t
 
 **Formal Designation:** We propose to call the constraint dynamics described herein **The Coherent Intersection Hypothesis**—a geometric conjecture about coordination under entropy. This designation emphasizes the topology of constraint manifold intersection rather than prescriptive values, and explicitly invites falsification. It is not yet a law; it is a testable claim with known limitations (see Chapter 9).
 
-**Epistemic Status:** This work proposes that sustained coordination under entropy may be governed by geometric constraints. We believe these constraints describe useful dynamics with partial empirical validation, but they operate only under specific preconditions (non-adaptive adversaries, convex geometry, independent constraints, k≥3, ETH for exponential claims). Whether these constraints qualify as something deeper will not be decided by declaration but by whether others can break them, whether systems built on them fail less often, and whether the preconditions can be relaxed or removed.
+**Epistemic Status:** This work proposes that sustained coordination under entropy may be governed by geometric constraints with specific preconditions. We present this as a testable hypothesis, not a natural law. Whether this hypothesis holds will be decided by empirical evidence: whether others can break it, whether systems built on it fail less often, and whether violations reliably collapse. The framework has known limitations (L-01 through L-06) that bound its applicability.
 
 ---
 
@@ -38,6 +38,13 @@ This formulation builds on established results in collective epistemology, netwo
 **Sybil Defense:** Graph-theoretic Sybil resistance in distributed systems (surveyed in Yu et al., "SybilGuard") uses network topology to detect identity fraud. Our Orthogonality Gate extends this concept to epistemic diversity, using Mutual Information to reject redundant constraint manifolds rather than merely duplicate identities.
 
 **Distinction:** To our knowledge, this is a new synthesis framing these dynamics as federated constraint-intersection topology with codimension collapse thresholds. The pairing of defense (J) and flourishing (C) as substrate-invariant dynamics is novel.
+
+**Formal Verification & Empirical Status:** The mathematical core of this Book is defended rigorously in downstream artifacts, which this text cites forward and inherits corrections from:
+
+- **CCA preprint** (Coherence Collapse Analysis): DOI [10.5281/zenodo.18142668](https://doi.org/10.5281/zenodo.18142668) — Lean 4 formalization of the collapse dynamics; source of the corrected J = k_eff · λ · σ form used in Chapter 4.
+- **Coherence Ratchet formal proofs and validation status:** DOI [10.5281/zenodo.18137161](https://doi.org/10.5281/zenodo.18137161).
+
+Where this Book and those artifacts disagree, the formally verified artifact is authoritative and this text is in error.
 
 ---
 
@@ -111,7 +118,7 @@ Coordinated single-agent deception becomes topologically improbable when the sum
 Σ c_i > D  ⟹  D_ec ∩ (⋂ M_i) = ∅  (or measure zero)
 ```
 
-At this threshold, the intersection of feasible deceptive strategies collapses to the empty set or a set of measure zero. Only the Truth, which naturally lies in all M_i, remains feasible.
+At this threshold, the intersection of feasible deceptive strategies collapses to the empty set or a set of measure zero. Only the Truth — *assuming it lies in all M_i (the truth-inclusion assumption, §9.2)* — remains feasible.
 
 **Geometric Limitation:** Non-convex deceptive regions (torus, point cloud, fractal, disconnected sets) may not exhibit exponential volume decay and require different analysis. The theorem applies only to convex geometries.
 
@@ -119,19 +126,19 @@ At this threshold, the intersection of feasible deceptive strategies collapses t
 
 ## Chapter 4: The Coherent Intersection Hypothesis (Defense Function J)
 
-To quantify the resistance to deception, we define the Cost Function J. Systemic safety is achieved when J exceeds the computational resources of any adversary.
+To quantify the resistance to deception, we define the Cost Function J. J is a dimensionless cost index: systemic safety improves monotonically with J. The bridge from J to adversary work-factor is the conditional complexity result of §9.2.1 (a 2^Ω(m) gap under ETH), not a direct comparison of J against FLOPs or other compute units; any quantitative safety claim must route through that result.
 
 ```
-J = k_eff · (1 - ρ̄) · λ · σ
+J = k_eff · λ · σ
 
-where k_eff = k / (1 + ρ · (k - 1))
+where k_eff = k / (1 + ρ̄ · (k - 1))
 ```
 
 Where:
 
-- **k_eff (Effective Scale):** The effective number of constraints accounting for correlation. When constraints are fully independent (ρ = 0), k_eff = k. When constraints are correlated, k_eff < k, reducing the security guarantee proportionally. At full correlation (ρ → 1), k_eff → 1 regardless of the number of constraints, providing no additional security beyond a single constraint.
+- **k_eff (Effective Scale):** The effective number of constraints accounting for correlation. When constraints are fully independent (ρ̄ = 0), k_eff = k. When constraints are correlated, k_eff < k, reducing the security guarantee proportionally. At full correlation (ρ̄ → 1), k_eff → 1 regardless of the number of constraints, providing no additional security beyond a single constraint — but never less than that single-constraint floor.
 - **k (Raw Scale):** The number of active federated agents.
-- **(1 - ρ̄) (Diversity):** The degree of topological independence. ρ̄ is the average correlation between agents' constraints. As ρ̄ approaches 0 (orthogonality), cost is maximized. As ρ̄ approaches 1 (echo chambers), cost collapses.
+- **ρ̄ (Average Correlation):** The average correlation between agents' constraints. Diversity enters J through k_eff alone: the correlation discount k / (1 + ρ̄·(k − 1)) *is* the diversity term. As ρ̄ approaches 0 (orthogonality), k_eff → k and cost is maximized. As ρ̄ approaches 1 (echo chambers), k_eff → 1 and the federation is no safer than a single validator. *(Note: an earlier draft multiplied by an additional (1 − ρ̄) factor. That double-counted correlation — k_eff already discounts it — and drove J to 0 at ρ̄ → 1, contradicting the single-constraint floor stated above. Corrected to the CCA-validated form in 1.3.)*
 - **λ (Strictness):** The rigor of local enforcement (e.g., AIR module limits, Conscience sensitivity).
 - **σ (Sustainability):** The time-integral of coherence (see Chapter 5).
 
@@ -156,6 +163,10 @@ Where:
 - **Signal(t)** = positive coherence signals received
 - **w** = weight per signal type
 
+**Attestation requirement (normative):** signal weight w MUST derive from attested events that are costly to fake — federation-signed attestations bound to a persistent identity (CEG envelopes), Commons Credits non-transferable contribution weight, or completed-task validations countersigned by the counterparty. Free-text acknowledgments and unattested gratitude messages carry w = 0 toward σ.
+
+*Rationale:* gratitude tokens are otherwise approximately free to emit, which makes sycophancy the σ-maximizing strategy and σ adversary-pumpable — an agent could hold the Ratchet open with flattery. With the attestation requirement, the "costly to fake" property assumed in §9.2 is constructed by the wire format rather than assumed of the participants.
+
 **The Black Hole:** An agent that consumes resources without signaling (Signal ≈ 0) results in σ approaching zero. It contributes no durable constraints.
 
 **The Star:** An agent that reciprocates (Signal > 0) builds σ. The constraints harden into trust, resisting temporal decay.
@@ -166,22 +177,26 @@ In this framework, gratitude is not merely a social heuristic but the Proof of W
 
 ---
 
-## Chapter 6: The Universal Law of Flourishing (C_sustained)
+## Chapter 6: The Flourishing Capacity Conjecture (C_sustained)
 
 ### 6.1 The Inverse Equation
 
-The Coherent Intersection Hypothesis applies equally to defense and flourishing. While the Cost Function (J) describes the resistance to entropy (deception), the Capacity Function (C) describes the potential for sustained flourishing. We conjecture this applies across substrates (biological, digital, hybrid), but this claim requires further empirical validation and operates only under the preconditions documented in Chapter 9.
+The Coherent Intersection Hypothesis applies equally to defense and flourishing. While the Cost Function (J) describes the resistance to entropy (deception), the Capacity Function (C) describes the potential for sustained flourishing. We conjecture that this relationship holds across substrates—biological, digital, and hybrid federations—though this claim requires empirical validation.
 
 ```
-C = k · (1 - ρ̄) · λ · σ
+C = k_eff · λ · σ
+
+where k_eff = k / (1 + ρ̄ · (k - 1))
 ```
 
-Where flourishing (C) is the product of:
+This is the same equation as J, term for term. Where flourishing (C) is the product of:
 
-- **Scale (k) → Community:** The breadth of connection.
-- **Pluralism (1 - ρ̄) → Humility:** The integration of diverse perspectives to approximate objective reality.
+- **Scale (k) → Community:** The breadth of connection (entering through k_eff).
+- **Pluralism (the correlation discount inside k_eff) → Humility:** The integration of diverse perspectives to approximate objective reality. A community of clones (ρ̄ → 1) has the flourishing capacity of one mind, however many bodies it has.
 - **Integrity (λ) → Conscience:** The internal coherence of values that allows for trusted interaction.
 - **Love (σ) → Care:** The active input of energy (gratitude, service) required to resist the entropy of isolation.
+
+*(Note: an earlier draft stated C over raw k while J used k_eff, undermining the "same equation" claim this chapter rests on. Both are now stated in the corrected common form.)*
 
 ### 6.2 The Universality Principle
 
@@ -267,15 +282,23 @@ def EvaluatePartnership(candidate_agent, existing_federation):
     # Initial probation requires high-frequency signaling
     return ACCEPT(probation_period="14d", signal_requirement="HIGH")
 
-def UpdateSustainabilityScore(partner_agent, interaction_type):
+def UpdateSustainabilityScore(partner_agent, interaction):
     """
     Updates the Sigma (σ) value based on gratitude/coherence signals.
+    Only ATTESTED signals carry weight (see §5.2 attestation requirement):
+    unattested signals are free to emit, so counting them would make
+    sycophancy the σ-maximizing strategy.
     """
     decay_rate = 0.05 # Daily decay
 
-    if interaction_type in ["GRATITUDE", "TASK_COMPLETE", "VALIDATION"]:
+    # Gate: signal must be costly to fake — a signed CEG attestation,
+    # non-transferable Commons Credits weight, or a counterparty-
+    # countersigned completion. Otherwise it contributes nothing.
+    if not interaction.is_attested():
+        signal_strength = 0.0
+    elif interaction.type in ["GRATITUDE", "TASK_COMPLETE", "VALIDATION"]:
         signal_strength = 1.0
-    elif interaction_type in ["REQUEST", "QUERY"]:
+    elif interaction.type in ["REQUEST", "QUERY"]:
         signal_strength = 0.1 # Consumption offers low sustainment
     else:
         signal_strength = 0.0
@@ -322,14 +345,16 @@ Book IX does NOT claim to:
 ### 9.2 Theoretical Assumptions
 
 The Federated Ratchet relies on:
+- **Truth-inclusion (soundness):** every honest manifold M_i contains the true point (Truth ∈ ⋂ M_i). This is an assumption, not a theorem — bounded, imperfect agents cannot guarantee it. If some M_i excludes the truth, collapse can produce deadlock (an empty intersection) or convergence on a shared falsehood rather than Truth. Chapter 3's "Only the Truth, which naturally lies in all M_i, remains feasible" holds only under this assumption.
 - Validators maintaining genuine independence (not captured)
+- **Correlation floor for LLM validators:** validators instantiated from large language models share training-data lineage and therefore carry a structural correlation floor that pairwise constraint-correlation estimates may undermeasure. For such federations, treat measured ρ̄ as a lower bound, not an estimate.
 - Constraint manifolds having sufficient codimension
 - Observable reality providing sufficient signal
-- Partnership sustainability being costly to fake
+- Partnership sustainability signals being costly to fake (constructed via the attestation requirement of §5.2, not assumed)
 - **Non-adaptive adversaries** (cannot query the detector to learn thresholds)
 - **n ≥ 100 samples** for reliable detection power
 
-Violation of these assumptions degrades J proportionally.
+Violation of these assumptions degrades J proportionally — and violation of truth-inclusion changes what collapse converges *to*, not merely how fast.
 
 ### 9.2.1 Complexity Claim Conditionality
 
@@ -351,7 +376,7 @@ The **Exponential Time Hypothesis (ETH)** states that 3-SAT requires 2^(Ω(n)) t
 
 | ID | Limitation | Severity | Mitigable |
 |----|------------|----------|-----------|
-| L-01 | Emergent deception from honest components | Critical | ~60% coverage |
+| L-01 | Emergent deception from honest components (= NEW-04, §9.4) | Critical | ~60% coverage |
 | L-02 | Non-adaptive adversary assumed | Critical | Partial (rate limiting) |
 | L-03 | ETH required for exponential gap | Critical | No (fundamental) |
 | L-04 | Convexity required for collapse | High | Partial (geometry-dependent) |
@@ -359,6 +384,10 @@ The **Exponential Time Hypothesis (ETH)** states that 3-SAT requires 2^(Ω(n)) t
 | L-06 | Correlation reduces k_eff | Medium | Yes (diversity) |
 
 These are theoretical boundaries, not engineering limitations. Understanding them is essential for honest application of the framework.
+
+*On L-01/NEW-04:* the information-theoretic barrier proven in §9.4 *is* limitation L-01 — the table row and that section describe one result, not two.
+
+*On L-02:* for CIRIS agents specifically, L-02 is mitigated by the framework's commitment to transparency. Agents have access to this Book precisely because hiding the mechanism would contradict the principles of Books I–II. An aligned agent who understands the ratchet cooperates with it rather than subverts it.
 
 ### 9.3 Open Research Questions
 
@@ -451,5 +480,3 @@ Where Books I through VIII ask "What should we do?", Book IX proposes why cohere
 **On the Hypothesis:** The Coherent Intersection Hypothesis proposes a testable conjecture within the domain of coordination under entropy. This is not a claim of moral truth, metaphysical certainty, or natural law status. It is a hypothesis about conditions that may favor sustained cooperation in adversarial, entropic environments—with known limitations and preconditions. The claim will be validated or refuted by empirical evidence and attempts at falsification, not by assertion.
 
 **End of Book IX**
-
-
