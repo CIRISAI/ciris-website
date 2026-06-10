@@ -24,7 +24,7 @@ RC status reflects **text completeness**: every section carries operationalized 
    * Formal proofs demonstrating topological collapse conditions hold under stated assumptions, OR
    * Empirical validation through adversarial simulations showing the framework resists misaligned optimization
 
-   *Status as of 1.3-RC1: partially satisfied.* The collapse dynamics are formalized in Lean 4 in the CCA preprint (DOI 10.5281/zenodo.18142668), whose corrected cost form Book IX now inherits; corridor empirics provide retrospective cross-substrate fits. Outstanding: a pre-registered out-of-sample prediction in a new substrate, and external adversarial review independent of the author.
+   *Status as of 1.3-RC1: partially satisfied.* The collapse dynamics are formalized in Lean 4 in the CCA preprint (v3, DOI 10.5281/zenodo.18217688), whose corrected cost form Book IX now inherits; corridor empirics provide retrospective cross-substrate fits. Outstanding: a pre-registered out-of-sample prediction in a new substrate, and external adversarial review independent of the author.
 
 3. **Threshold Justification**: Numerical thresholds currently marked as "pilot" or lacking derivation (e.g., CRE compute threshold of 10²⁶ FLOP, sentience detection 5%, Echo Density < 20%) must provide documented justification via simulation, empirical study, or explicit acknowledgment of provisional status. *(The former Order-Maximisation Veto 10× ratio is restated in 1.3 as a deontological side-constraint — Book II, PDMA Step 2 — and no longer carries a ratio threshold to justify.)*
 
@@ -1120,12 +1120,12 @@ This formulation builds on established results in collective epistemology, netwo
 
 **Sybil Defense:** Graph-theoretic Sybil resistance in distributed systems (surveyed in Yu et al., "SybilGuard") uses network topology to detect identity fraud. Our Orthogonality Gate extends this concept to epistemic diversity, using Mutual Information to reject redundant constraint manifolds rather than merely duplicate identities.
 
-**Distinction:** To our knowledge, this is a new synthesis framing these dynamics as federated constraint-intersection topology with codimension collapse thresholds. The pairing of defense (J) and flourishing (C) as substrate-invariant dynamics is novel.
+**Distinction:** To our knowledge, this is a new synthesis framing these dynamics as federated constraint-intersection topology with codimension collapse thresholds. The pairing of defense (J) and flourishing (F) as substrate-invariant dynamics is novel.
 
 **Formal Verification & Empirical Status:** The mathematical core of this Book is defended rigorously in downstream artifacts, which this text cites forward and inherits corrections from:
 
-- **CCA preprint** (Coherence Collapse Analysis): DOI [10.5281/zenodo.18142668](https://doi.org/10.5281/zenodo.18142668) — Lean 4 formalization of the collapse dynamics; source of the corrected J = k_eff · λ · σ form used in Chapter 4.
-- **Coherence Ratchet formal proofs and validation status:** DOI [10.5281/zenodo.18137161](https://doi.org/10.5281/zenodo.18137161).
+- **CCA preprint** (Coherence Collapse Analysis), v3: DOI [10.5281/zenodo.18217688](https://doi.org/10.5281/zenodo.18217688) — Lean 4 formalization of the collapse dynamics; source of the corrected J = k_eff · λ · σ form used in Chapter 4.
+- **Coherence Ratchet formal proofs and validation status:** carried in *Corridor Dynamics in Coordinated Systems* — concept DOI [10.5281/zenodo.20300773](https://doi.org/10.5281/zenodo.20300773) (resolves to the latest version); proof artifacts at [github.com/CIRISAI/RATCHET](https://github.com/CIRISAI/RATCHET) and [github.com/CIRISAI/coherence-ratchet](https://github.com/CIRISAI/coherence-ratchet).
 
 Where this Book and those artifacts disagree, the formally verified artifact is authoritative and this text is in error.
 
@@ -1260,26 +1260,28 @@ In this framework, gratitude is not merely a social heuristic but the Proof of W
 
 ---
 
-## Chapter 6: The Flourishing Capacity Conjecture (C_sustained)
+## Chapter 6: The Flourishing Capacity Conjecture (F_sustained)
 
 ### 6.1 The Inverse Equation
 
-The Coherent Intersection Hypothesis applies equally to defense and flourishing. While the Cost Function (J) describes the resistance to entropy (deception), the Capacity Function (C) describes the potential for sustained flourishing. We conjecture that this relationship holds across substrates—biological, digital, and hybrid federations—though this claim requires empirical validation.
+The Coherent Intersection Hypothesis applies equally to defense and flourishing. While the Cost Function (J) describes the resistance to entropy (deception), the Capacity Function (F) describes the potential for sustained flourishing. We conjecture that this relationship holds across substrates—biological, digital, and hybrid federations—though this claim requires empirical validation.
 
 ```
-C = k_eff · λ · σ
+F = k_eff · λ · σ
 
 where k_eff = k / (1 + ρ̄ · (k - 1))
 ```
 
-This is the same equation as J, term for term. Where flourishing (C) is the product of:
+This is the same equation as J, term for term. Where flourishing (F) is the product of:
 
 - **Scale (k) → Community:** The breadth of connection (entering through k_eff).
 - **Pluralism (the correlation discount inside k_eff) → Humility:** The integration of diverse perspectives to approximate objective reality. A community of clones (ρ̄ → 1) has the flourishing capacity of one mind, however many bodies it has.
 - **Integrity (λ) → Conscience:** The internal coherence of values that allows for trusted interaction.
 - **Love (σ) → Care:** The active input of energy (gratitude, service) required to resist the entropy of isolation.
 
-*(Note: an earlier draft stated C over raw k while J used k_eff, undermining the "same equation" claim this chapter rests on. Both are now stated in the corrected common form.)*
+*(Note: an earlier draft stated this composite over raw k while J used k_eff, undermining the "same equation" claim this chapter rests on. Both are now stated in the corrected common form.)*
+
+*(Nomenclature, 1.3-RC2: this composite was previously written C. It is renamed F because the symbol C is taken by the core-identity factor of the CIRIS Capacity Score 𝒞_CIRIS = C · I_int · R · I_inc · S (Corridor Dynamics in Coordinated Systems; CIRIS CEG §5.5.4). F and 𝒞_CIRIS are distinct composites — F is the three-factor flourishing capacity of this chapter; 𝒞_CIRIS is the five-factor per-agent capacity score — and no mapping between them is implied. This note is the authoritative statement of that relation; other documents cross-reference it.)*
 
 ### 6.2 The Universality Principle
 
@@ -1478,7 +1480,7 @@ These are theoretical boundaries, not engineering limitations. Understanding the
 - Automatic detection of constraint correlation (ρ estimation)
 - Dynamic λ adjustment based on context
 - Sustainability signal verification under adversarial conditions
-- Empirical validation of the C = J equivalence across substrates
+- Empirical validation of the F = J equivalence across substrates
 
 ### 9.4 The Compositional Detection Limit (NEW-04)
 
@@ -1521,7 +1523,7 @@ These are theoretical boundaries, not engineering limitations. Understanding the
 
 **Transversality:** A geometric property where intersecting manifolds meet at non-zero angles, ensuring that their intersection effectively reduces the dimension of the feasible space.
 
-**Capacity Function (C):** The measure of a system's potential for sustained flourishing, defined identically to the Cost Function (J) but interpreted as generative rather than defensive.
+**Capacity Function (F):** The measure of a system's potential for sustained flourishing, defined identically to the Cost Function (J) but interpreted as generative rather than defensive. Formerly written C; renamed in 1.3-RC2 to avoid collision with the core-identity factor C of the CIRIS Capacity Score 𝒞_CIRIS (see Chapter 6 nomenclature note).
 
 **Echo Density:** Fraction of partnership pairs with high constraint correlation. A measure of Sybil risk and epistemic closure.
 
@@ -1549,7 +1551,7 @@ The Coherence Ratchet framework makes falsifiable claims. The thesis would be re
 
 Book IX completes the Accord's architecture by grounding ethical principles in mathematical structure. The Coherent Intersection Hypothesis proposes that with sufficient independent validators, truth-telling tends toward the path of least resistance—not as moral imperative alone, but as a geometric tendency that emerges under specific conditions.
 
-**The profound insight of Chapter 6 is this:** The defense equation (J) and flourishing capacity equation (C) are structurally identical, suggesting deep connections between security and flourishing. However, this equivalence holds only under the framework's preconditions:
+**The profound insight of Chapter 6 is this:** The defense equation (J) and flourishing capacity equation (F) are structurally identical, suggesting deep connections between security and flourishing. However, this equivalence holds only under the framework's preconditions:
 - Non-adaptive interactions
 - Convex constraint geometry
 - Independent or measured-correlation constraints
@@ -1632,13 +1634,13 @@ k_eff = k / (1 + ρ̄ · (k − 1))
 
 ---
 
-## 7. Flourishing Capacity (C)
+## 7. Flourishing Capacity (F)
 
 ```math
-C = k_eff · λ · σ
+F = k_eff · λ · σ
 ```
 
-(Book IX Ch 6 — identical to J term for term; interpreted as generative rather than defensive.)
+(Book IX Ch 6 — identical to J term for term; interpreted as generative rather than defensive. Formerly written C; renamed in 1.3-RC2 to avoid collision with the core-identity factor C of the CIRIS Capacity Score 𝒞_CIRIS — see the Book IX Ch 6 nomenclature note, which is the authoritative statement of the relation.)
 
 ---
 
@@ -1708,7 +1710,7 @@ Two consequences matter for ASI readiness:
 | RC requirement | Status | Evidence / outstanding |
 |---|---|---|
 | 1. Annex F–I operationalization | **Text operationalized at 1.3-RC1; live-cycle validation outstanding** | Annexes F–I carry full procedures, thresholds, and validation mechanisms (completed from the May 2026 *Magnifica Humanitas*-grounded drafts); they have not yet been exercised against a live deployment cycle |
-| 2. Book IX mathematical validation | **Partially satisfied** | Collapse dynamics formalized in Lean 4 (CCA preprint, DOI 10.5281/zenodo.18142668); corridor empirics provide retrospective cross-substrate fits. Outstanding: one pre-registered out-of-sample prediction in a new substrate; external adversarial review independent of the author |
+| 2. Book IX mathematical validation | **Partially satisfied** | Collapse dynamics formalized in Lean 4 (CCA preprint v3, DOI 10.5281/zenodo.18217688); corridor empirics provide retrospective cross-substrate fits. Outstanding: one pre-registered out-of-sample prediction in a new substrate; external adversarial review independent of the author |
 | 3. Threshold justification | **Partially satisfied** | OMV ratio retired (restated as side-constraint, Book II). Still provisional: 10²⁶ FLOP CRE trigger, 5% sentience heuristic, < 20% Echo Density target |
 | 4. Red-team exercise | **Not yet performed** | The 1.3 σ-attestation requirement (Book IX §5.2) preemptively closes the first known attack vector (σ-pumping via free gratitude signals); a full adversarial cycle against all checkpoints remains owed |
 
