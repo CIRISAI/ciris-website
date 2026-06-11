@@ -2,21 +2,12 @@
 // fed the English dictionary. Localized variants live at src/app/[locale]/about/.
 
 import type { Metadata } from "next";
+import { localizedSeo } from "@/lib/seo";
 import AboutContent from "@/app/components/AboutContent";
 import { getDictionary } from "@/i18n/dictionaries";
 import { LOCALES, localizedPath } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "/about",
-    languages: {
-      ...Object.fromEntries(
-        LOCALES.map((l) => [l.code, localizedPath("/about", l.code)]),
-      ),
-      "x-default": "/about",
-    },
-  },
-};
+export const metadata = localizedSeo("/about", "en");
 
 export default function AboutPage() {
   return <AboutContent t={getDictionary("en")} />;

@@ -4,6 +4,7 @@
 // locale's page so the right one surfaces per reader.
 
 import type { Metadata } from "next";
+import { localizedSeo } from "@/lib/seo";
 import CrowdsourcingAlignmentContent from "@/app/components/CrowdsourcingAlignmentContent";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
@@ -25,17 +26,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    languages[l.code] = localizedPath("/crowdsourcing-alignment", l.code);
-  }
-  languages["x-default"] = "/crowdsourcing-alignment";
-  return {
-    alternates: {
-      canonical: localizedPath("/crowdsourcing-alignment", locale),
-      languages,
-    },
-  };
+  return localizedSeo("/crowdsourcing-alignment", locale);
 }
 
 export default async function LocalizedCrowdsourcingAlignment({

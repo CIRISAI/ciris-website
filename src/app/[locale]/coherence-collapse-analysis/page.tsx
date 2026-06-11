@@ -4,6 +4,7 @@
 // locale's page so the right one surfaces per reader.
 
 import type { Metadata } from "next";
+import { localizedSeo } from "@/lib/seo";
 import CoherenceCollapseAnalysisContent from "@/app/components/CoherenceCollapseAnalysisContent";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
@@ -25,17 +26,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    languages[l.code] = localizedPath("/coherence-collapse-analysis", l.code);
-  }
-  languages["x-default"] = "/coherence-collapse-analysis";
-  return {
-    alternates: {
-      canonical: localizedPath("/coherence-collapse-analysis", locale),
-      languages,
-    },
-  };
+  return localizedSeo("/coherence-collapse-analysis", locale);
 }
 
 export default async function LocalizedCoherenceCollapseAnalysis({

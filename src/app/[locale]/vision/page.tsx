@@ -4,6 +4,7 @@
 // the right one surfaces per reader.
 
 import type { Metadata } from "next";
+import { localizedSeo } from "@/lib/seo";
 import VisionContent from "@/app/components/VisionContent";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
@@ -25,17 +26,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    languages[l.code] = localizedPath("/vision", l.code);
-  }
-  languages["x-default"] = "/vision";
-  return {
-    alternates: {
-      canonical: localizedPath("/vision", locale),
-      languages,
-    },
-  };
+  return localizedSeo("/vision", locale);
 }
 
 export default async function LocalizedVision({

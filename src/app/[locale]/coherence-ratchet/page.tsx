@@ -4,6 +4,7 @@
 // the right one surfaces per reader.
 
 import type { Metadata } from "next";
+import { localizedSeo } from "@/lib/seo";
 import Shell from "@/app/coherence-ratchet/Shell";
 import SimpleContent from "@/app/coherence-ratchet/SimpleContent";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -26,17 +27,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const languages: Record<string, string> = {};
-  for (const l of LOCALES) {
-    languages[l.code] = localizedPath("/coherence-ratchet", l.code);
-  }
-  languages["x-default"] = "/coherence-ratchet";
-  return {
-    alternates: {
-      canonical: localizedPath("/coherence-ratchet", locale),
-      languages,
-    },
-  };
+  return localizedSeo("/coherence-ratchet", locale);
 }
 
 export default async function LocalizedCoherenceRatchet({

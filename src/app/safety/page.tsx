@@ -3,21 +3,12 @@
 // src/app/[locale]/safety/.
 
 import type { Metadata } from "next";
+import { localizedSeo } from "@/lib/seo";
 import SafetyContent from "@/app/components/SafetyContent";
 import { getDictionary } from "@/i18n/dictionaries";
 import { LOCALES, localizedPath } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "/safety",
-    languages: {
-      ...Object.fromEntries(
-        LOCALES.map((l) => [l.code, localizedPath("/safety", l.code)]),
-      ),
-      "x-default": "/safety",
-    },
-  },
-};
+export const metadata = localizedSeo("/safety", "en");
 
 export default function SafetyPage() {
   return <SafetyContent t={getDictionary("en")} />;

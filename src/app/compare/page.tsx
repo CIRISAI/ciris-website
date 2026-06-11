@@ -3,21 +3,12 @@
 // src/app/[locale]/compare/.
 
 import type { Metadata } from "next";
+import { localizedSeo } from "@/lib/seo";
 import CompareContent from "@/app/components/CompareContent";
 import { getDictionary } from "@/i18n/dictionaries";
 import { LOCALES, localizedPath } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "/compare",
-    languages: {
-      ...Object.fromEntries(
-        LOCALES.map((l) => [l.code, localizedPath("/compare", l.code)]),
-      ),
-      "x-default": "/compare",
-    },
-  },
-};
+export const metadata = localizedSeo("/compare", "en");
 
 export default function ComparePage() {
   return <CompareContent t={getDictionary("en")} />;
