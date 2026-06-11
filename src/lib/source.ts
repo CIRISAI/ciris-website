@@ -1,9 +1,11 @@
-import { docs } from '@/.source';
-import { loader } from 'fumadocs-core/source';
+import { docs } from "@/.source";
+import { loader } from "fumadocs-core/source";
+import { i18n } from "./i18n";
 
-// See https://fumadocs.vercel.app/docs/headless/source-api for more info
+// Assigns /sections URLs to the Accord pages; i18n adds /{lang}/sections/* for
+// non-default locales (translated content lives in content/docs/**.{lang}.mdx).
 export const source = loader({
-  // it assigns a URL to your pages
-  baseUrl: '/sections',
+  i18n,
+  baseUrl: "/sections",
   source: docs.toFumadocsSource(),
 });

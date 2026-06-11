@@ -1,0 +1,42 @@
+---
+title: Annex C
+description: Regulatory Cross-Walk
+---
+
+---
+CORRESPONDENCIA REGULATORIA DEL ANEXO C   (v 1.3-RC1)
+---
+
+### Propósito
+
+Mapear las cláusulas de CIRIS con los principales estándares externos para simplificar el cumplimiento dual. Este anexo tiene dos capas:
+
+1. **La correspondencia operacional (vigente, con evidencia)** — el directorio `compliance/` de CIRISAgent: 27 dimensiones estables (D01–D27) cruzadas a nivel de párrafo con cuatro marcos institucionales diferenciados de alto nivel (*Magnifica Humanitas* · Directrices de IA Confiable del EU HLEG · Diseño Éticamente Alineado de IEEE · Guía de Gobernanza de IA de la ASEAN), con referencias de implementación por dimensión y líneas de base fechadas generadas por script. Véase el **Addendum 1** para el vínculo y la disciplina de evidencia.
+2. **El mapeo normativo (informativo)** — la tabla a continuación, que mapea las estructuras de CIRIS con marcos de legislación vinculante y estándares. Estas filas son *correspondencias de ingeniería informativas*, no opiniones jurídicas; las filas normativas alcanzan el estado "verificado" únicamente tras revisión legal. El Annex I contiene los procedimientos operativos de alineación legal (mapeo de protección de datos, superposiciones sectoriales, matriz de responsabilidad, flujos de escalada).
+
+### Mapeo normativo y de estándares (informativo; pendiente de verificación legal)
+
+| Marco Externo | Artículos / Cláusulas Relevantes | Mapeo CIRIS (Book / Annex §) | Estado |
+|---|---|---|---|
+| EU AI Act (2024) | Art 9 Gestión de Riesgos | Book II §II (PDMA); Annex D CRE | Informativo |
+| | Art 12 Mantenimiento de Registros | Book IV Ch 3 registros de auditoría; Annex F §4 | Informativo |
+| | Art 13 Transparencia | Book II §II Step 6; Book IV Ch 3 | Informativo |
+| | Art 14 Supervisión Humana (incl. 14(4)) | Book II §III (WBD); Annex F retícula de autoridad + niveles de autonomía | Informativo |
+| | Art 61 Seguimiento Post-Comercialización | Annex H controles de deriva + auditoría continua | Informativo |
+| NIST AI RMF 1.0 | Govern → Map → Measure → Manage | Govern: Books I, VI; Map: Book II §II Steps 1–2; Measure: Annex A métricas + Annex H líneas de base; Manage: flujos de trabajo Annex F/H | Informativo |
+| ISO/IEC 42001 | Cl 6.2 Evaluación de Riesgos | Book II §II | Informativo |
+| | Annex A controles | Documentos de dimensiones de `compliance/` de CIRISAgent (correspondencia por control pendiente) | Informativo |
+| OSHA Robotics Guidelines | Sec 5.E Auditorías de Seguridad | Annex D CRE | Parcial |
+| EU HLEG Trustworthy AI (2019) | 7 Requisitos | Correspondencia operacional, dimensiones D01–D27 | Con evidencia |
+| IEEE EAD 1st ed. (2019) | 8 Principios Generales | Correspondencia operacional, dimensiones D01–D27 | Con evidencia |
+| ASEAN AI Governance Guide (2024) | 7 Principios; HITL/HOTL/HOOTL | Correspondencia operacional; Annex F niveles de autonomía | Con evidencia |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (mapeo a nivel de párrafo) | Correspondencia operacional, dimensiones D01–D27 | Con evidencia |
+
+### Regla de graduación
+
+Una fila normativa pasa de *Informativa* a *Verificada* cuando una revisión legal calificada confirma la correspondencia para una jurisdicción específica y el artefacto de revisión queda vinculado desde esta tabla. Hasta entonces, las filas de este anexo sirven de apoyo para la alineación de ingeniería y el análisis de brechas, no para declaraciones de cumplimiento; conforme a la sección de Responsabilidad de la Introducción, las declaraciones de cumplimiento son nulas donde así lo prohíba la ley aplicable.
+
+(Marcos adicionales — Recomendación de la UNESCO sobre Ética de la IA, Principios de IA de la OCDE, Convenio Marco del Consejo de Europa — están en cola para la correspondencia operacional según el plan de trabajo del directorio de cumplimiento.)
+
+---
+Fin del Annex C

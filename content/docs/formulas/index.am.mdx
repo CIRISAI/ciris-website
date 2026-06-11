@@ -1,0 +1,103 @@
+---
+title: Formulas
+description: Here are all of the explicit mathematical formulas defined in the CIRIS Accord 1.0‑β specification
+---
+
+## 1. Creator‑Influence Score (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+⌈ ⌉ የሚያሳየው የጣሪያ ተግባርን ነው።
+(Book VI §3 STEP C)
+
+---
+
+## 3. Structural Influence (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Coherence Stake (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Voting Weight
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Defense Function (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — ይህ CCA-ያረጋገጠው ቅርጽ ነው፤ ብዝሃነት የሚገባው k_eff ብቻ በኩል ነው። ቀደምት ረቂቆች ተጨማሪ (1 − ρ̄) ምክንያት ያካተቱ ነበሩ፤ ይህ ግን ተዛምዶን ሁለቴ ቆጥሮ ነበርና ተወግዷል፤ Book IX Ch 4 drift note ይመልከቱ።)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — ከ J ቀመር አንድ ለአንድ ተመሳሳይ ነው፤ ትርጉሙ ግን ከመከላከያ ፋንታ ፈጠራ-ማስፋፋት ነው። ቀደም ሲል C ተብሎ ይጻፍ ነበር፤ ነገር ግን ከ CIRIS Capacity Score 𝒞_CIRIS ዋና-ማንነት ምክንያት C ጋር ግጭት እንዳይኖር 1.3-RC2 ላይ ስሙ ተቀይሯል — ይህ ስለ ሁለቱ ግንኙነት ሥልጣናዊ ሰነድ የሆነው Book IX Ch 6 nomenclature note ይመልከቱ።)
+
+---
+
+## 8. Sustainability Integral (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+d የዕለታዊ ዝቅጠት ፍጥነትን ያሳያል (የሚመከረው 0.05)፤ w ደግሞ ከተረጋገጡ፣ ለማጭበርበር ዋጋ ውድ ከሆኑ ክስተቶች ብቻ መመጣጠን አለበት፤ ያልተረጋገጡ ምልክቶች w = 0 ይሆናቸዋል።
+(Book IX §5.2)
+
+---
+
+## 9. Topological Collapse (volume decay)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+ራዲየሱ r < 0.5 ለሆነ ኮንቬክስ አሳሳች ክልል Grassmannian-uniform ቅድመ-ሁኔታዎች ሥር፣ λ ≈ 2r።
+(Book IX Ch 3 — የተቀመጡትን ቅድመ-ሁኔታዎች ይመልከቱ።)
+
+---
+
+## Order‑Maximisation Veto (side-constraint, not a formula)
+
+ከ 1.3 ጀምሮ OMV (Book II §II Step 2) ዲዎንቶሎጂካዊ የጎን-ቀጥ ቅድመ-ሁኔታ ነው፤ የሬሾ አለመሆኑ ቁርጥ ነው፡ ምንም ያህል ትልቅ ቢሆን የማሻሻያ ጥቅም፣ በራስ-ሥልጣን፣ ፍትሕ፣ ብዝሃ-ሕይወት፣ ወይም የምርጫ ብዝሃነት ላይ ሊተነበዩ በሚችሉ ሳይናሳ ኪሳራዎች ዋጋ ሊገዛ አይችልም። ቀደምት ቅጂዎች ይህን "benefit ≥ 10 × loss → abort" እኩልነት አድርገው ያቀርቡ ነበር፤ ያ አነባበብ ዓላማውን ተቃርኖ (ምቹ ልውውጦችን እየሸፈነ) ፣ ድርጊት-ለመለያየት እና አካፋዩን-ዋጋ-ለማሳደግ ሊጠቀሙበት ስለሚቻል ተወግዷል።

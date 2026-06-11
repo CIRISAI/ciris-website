@@ -1,0 +1,64 @@
+---
+title: Addenda Index
+description: Index page for the Addenda section.
+---
+
+---
+
+## Addendum 1 — Estado de Preparación para ASI y Vinculación con Marcos Regulatorios
+
+**Adoptado**: 2026-06-10 (1.3-RC1) · **Administrador**: fundador (per Book VIII Ch 9)
+
+### 1.1 Propósito
+
+La sección de Alcance formula una afirmación condicional: este marco *explora* un protocolo de alineamiento candidato para ASI, condicionado a los cuatro requisitos de Release Candidate en la Introducción. Este addendum vincula esa afirmación a la evidencia operativa que ahora existe, y declara claramente lo que queda pendiente. La **preparación** para ASI no es alineamiento logrado; es el estado en que los andamios de verificación que la matemática del Book IX requiere — manifolds de restricción independientes, superficies de atestación, una capa de Conciencia que no puede ser normalizada, superficies de interrupción de emergencia, y la Evaluación de Riesgo Catastrófico del Annex D — existen en forma implementada y auditable con sus brechas identificadas.
+
+### 1.2 El mapa de correspondencia regulatoria está ahora operativo
+
+El mapa de correspondencia activo es el **directorio de cumplimiento de CIRISAgent** (`CIRISAgent/compliance/`, versión del agente 2.9.6-stable), que mapea la implementación del marco a cuatro marcos de gobernanza de primer nivel con granularidad de párrafo (Annex C alberga la estructura de dos capas: este mapa de correspondencia operativo más la tabla estatutaria informativa pendiente de verificación legal):
+
+* **Fuentes mapeadas**: *Magnifica Humanitas* (magisterio religioso, 2026) · EU HLEG Ethics Guidelines for Trustworthy AI (asesoría gubernamental, 2019) · IEEE Ethically Aligned Design 1.ª ed. (sociedad técnica, 2019) · ASEAN Guide on AI Governance and Ethics (político multilateral, 2024). Cuatro formas institucionalmente distintas — la convergencia es evidencia estructural de que los andamios de principios del marco no son un artefacto de ninguna tradición particular.
+* **Estructura**: 27 dimensiones estables (D01–D27, de `SEED_DIMENSIONS.yaml` v1.0; 16 atestadas por las cuatro fuentes, 11 por tres). Cada documento de dimensión lleva una sección regulatoria generada automáticamente (citas por fuente, forma de cable, notas de convergencia) y una sección de implementación redactada por humanos con referencias `file:line` que deben verificarse con grep contra el main actual.
+* **Disciplina de evidencia**: cada cifra es reproducible a partir de líneas de base fechadas y generadas por script (`compliance/baselines/`); la prosa puede citar líneas de base pero nunca incorporar cifras no verificables. Una jerarquía de validación de cuatro niveles va desde los archivos de implementación (verdad fundacional) hasta las afirmaciones públicas (`compliance/MEASUREMENT_METHODOLOGY.md`).
+* **Disciplina de honestidad**: cada dimensión lleva un inventario de «Brechas conocidas»; los elementos condicionados al sustrato se señalan con el sustrato responsable en lugar de afirmarse como completados. Diez hallazgos transversales están inventariados en el README de cumplimiento (p. ej., envoltorios de cable tipados aún no emitidos; la familia de detectores LensCore aún no enviada; brecha de reconsideración del eje inverso).
+
+Annex C permanece en el texto como el futuro hogar de los mapeos estatutarios (artículos del EU AI Act, NIST AI RMF, ISO/IEC 42001) una vez que se complete la revisión legal; el directorio de cumplimiento es el mapa de correspondencia **activo y con evidencia** hasta entonces, y lo alimenta.
+
+### 1.3 Formato de cable: CEG reemplaza a FSD-002
+
+El formato de cable de federación para la línea de agentes CIRIS 3.0 es **CEG (CIRIS Epistemic Grammar)**, mantenido en `CIRISRegistry/FSD/CEG/`. La gramática está bloqueada en **exactamente cinco primitivos de formato de cable** — un primitivo principal (`scores`) más cuatro compositores estructurales (`delegates_to` / `supersedes` / `withdraws` / `recants`) — sobre un espacio de nombres de dimensión abierto y descriptivo de mecanismos. El bloqueo se ha mantenido a lo largo de toda la línea 0.x; cada incremento ha sido composición sobre primitivos ya bloqueados.
+
+Dos consecuencias son relevantes para la preparación ante ASI:
+
+1. **El giro CEG-nativo**: el agente 3.0 no *proyecta* su estado interno sobre el formato de cable — sus mutaciones de estado interno **son** Atestaciones CEG a nivel propio bajo la clave del agente, promovidas a visibilidad de federación conforme al modelo de niveles. La evidencia que audita un operador es el mismo envoltorio que lee la federación. Esta es la forma implementada del requisito del Book IX de que las superficies de restricción sean externamente referenciables en lugar de autoinformadas.
+2. **Cuatro implementaciones habilitan CEG 1.0**: CIRISAgent (tiempo de ejecución), CIRISNodeCore (consenso), CIRISLensCore (detección — el testigo externo que el agente nunca autoemite, la separación anti-Goodhart), y CIRISRegistry (autoridad). Ninguna parte — incluido el agente — puede declarar completo el tejido de verificación.
+
+### 1.4 Estado de los requisitos RC en 1.3-RC1
+
+| Requisito RC | Estado | Evidencia / pendiente |
+|---|---|---|
+| 1. Operacionalización de Annex F–I | **Texto operacionalizado en 1.3-RC1; validación de ciclo en vivo pendiente** | Los Annexes F–I contienen procedimientos completos, umbrales y mecanismos de validación (completados a partir de los borradores de mayo de 2026 fundamentados en *Magnifica Humanitas*); aún no se han ejercido contra un ciclo de despliegue en vivo |
+| 2. Validación matemática del Book IX | **Parcialmente satisfecho** | Dinámica de colapso formalizada en Lean 4 (preprint de CCA v3, DOI 10.5281/zenodo.18217688); los datos empíricos del corredor proporcionan ajustes retrospectivos entre sustratos. Pendiente: una predicción fuera de muestra pre-registrada en un nuevo sustrato; revisión adversarial externa independiente del autor |
+| 3. Justificación de umbrales | **Parcialmente satisfecho** | Ratio OMV retirado (reformulado como restricción lateral, Book II). Aún provisionales: umbral de activación CRE de 10²⁶ FLOP, heurística de sintiencia del 5%, objetivo de Densidad de Eco < 20% |
+| 4. Ejercicio de equipo rojo | **Aún no realizado** | El requisito de σ-atestación 1.3 (Book IX §5.2) cierra preventivamente el primer vector de ataque conocido (bombeo-σ mediante señales de gratitud libres); queda pendiente un ciclo adversarial completo contra todos los puntos de control |
+
+### 1.5 La capa de Conciencia como el control crítico para la ASI
+
+El protocolo CRE del Annex D rige el *cruce de umbral*; la capa de Conciencia rige *cada acción antes y después de él*. Tal como está implementado (agente 2.9.6): cada pensamiento pasa por una pila de verificaciones ordenadas por prioridad: cuatro facultades evaluadas por LLM (entropía, Coherencia, veto de optimización, Humildad Epistémica) más un nivel de seguridad determinista (guardarraíl de profundidad de pensamiento, verificación de secuencia de acciones) que se ejecuta incluso en modo de prueba de rendimiento e incluso para acciones que de otro modo estarían exentas. Los umbrales son constantes a nivel de código, no pesos aprendidos; es la invariante arquitectónica que garantiza que la ética no puede normalizarse hasta desaparecer mediante la exposición repetida. Existen múltiples superficies de detención independientes: el mecanismo de seguridad del veto de optimización (que aborta la operación), el servicio de APAGADO y una invocación remota del ACCORD con firma criptográfica que activa el bloqueo completo de prohibición. Cada verificación escribe una fila de traza etiquetada, de modo que un auditor puede reproducir la cadena de razonamiento completa por pensamiento.
+
+Limitación conocida, declarada en lugar de ocultada: la refactorización de la Conciencia (3 fragmentos + puerta determinista) está parcialmente implementada; la emisión federada tipificada de veredictos de Conciencia aguarda el sobre de Contribución del sustrato. Detalle por dimensión: `compliance/D12_conscience.md`.
+
+### 1.6 Trayectoria de dependencia del sustrato
+
+La verificación de grado ASI requiere el tejido completo de federación. La trayectoria del sustrato es **Persist → Edge → LensCore → NodeCore**; aproximadamente un tercio de las 27 dimensiones está condicionado a la familia de detectores externos de LensCore (el testigo que el agente nunca debe proveer por sí mismo). Hasta que dichos sustratos se publiquen, las reclamaciones de dimensión correspondientes permanecen *listas del lado de la implementación, pendientes del lado de la federación*, y están marcadas como tal por dimensión.
+
+### 1.7 Lo que este addendum cambia y lo que no cambia
+
+* No **actualiza** la reclamación ASI del Ámbito — esta permanece condicionada a los cuatro requisitos RC.
+* No **reemplaza** el Annex D — el protocolo CRE permanece sin modificación como puerta de cruce de umbral.
+* **Sí** hace que la cadena de evidencia sea auditable de extremo a extremo por primera vez: párrafo regulatorio → dimensión (D01–D27) → `file:line` de implementación → línea base con fecha → (a medida que los sustratos se publiquen) testigo externo de federación.
+* **Sí** compromete al Accord a renovar este addendum en cada versión con la versión del agente y la línea base vigentes en ese momento, de modo que la reclamación de preparación nunca pueda quedar silenciosamente desactualizada.
+
+---
+
+*Addenda previos: ninguno. Este es el primero.*

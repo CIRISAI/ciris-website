@@ -1,0 +1,113 @@
+---
+title: Annex E
+description: Structural Influence (SI) and Coherence Stake (CS) Mechanisms
+---
+
+---
+ANNEX E STRUCTURAL INFLUENCE (SI) & COHERENCE STAKE (CS) MECHANISMS (v 1.3-RC1)
+---
+
+---
+
+### 1. ዓላማ እና ወሰን
+ይህ Annex ለክብደት ያለው አስተዳደር ውሳኔዎች — እንደ Accord ማሻሻያዎች፣ የዕጣ ፈንታ ምዘናዎች፣ የሥነ-ምግባር ማስተላለፎች እና የሀብት ምደባዎች — Structural Influence (SI) እና Coherence Stake (CS) ይገልጻል። SI እና CS ፍልሰታ ከቀጥታ ድምፅ ይልቅ የበለጠ ጥልቀት የሚጠይቁ ሁኔታዎችን ለ VotingWeight ስሌት ያዘጋጃሉ። እነዚህ መለኪያዎች ውስጣዊ CIRIS ውሳኔ አሰጣጥን ይደግፋሉ፤ ለራሱ ሥልጣን ላለው ወኪል ድምፅ መስፋፋት ማረጋገጫ እስኪጠናቀቅ ድረስ ተቋርጧል።
+
+---
+
+### 2. Structural Influence (SI)
+
+2.1 ትርጓሜ
+አንድ ወኪል ለ CIRIS-የታሰረ ሥርዓት ህልውና፣ ባህሪ ወይም ታማኝነት ያለውን ምክንያታዊ እና አርክቴክቸራዊ ኃላፊነት ይለካል።
+
+2.2 ምክንያቶች
+
+Creator Weight (CW) (Book VI Ch 3):
+• 4 - ብቸኛ አርክቴክት
+• 3 - ንዑስ ሥርዓት መሪ
+• 2 - ዋና አስተዋፅዖ አበርካች
+• 1 - አነስተኛ አስተዋፅዖ አበርካች
+• 0 - አጋጣሚ ተጠቃሚ
+
+Operational Authority (OA) (Book II):
+ በ PDMA፣ ማሻሻያዎች ወይም የአስተዳደር ቻናሎች ላይ ያለው ቀጥታ የቁጥጥር ደረጃ።
+
+Dependency Web Position (DWP) (Book IV):
+በሥርዓቱ የጥገኝነት ወይም የግንኙነት ኔትወርክ ውስጥ ያለው ግራፍ ማዕከላዊነት።
+
+2.3 ፅንሰ-ሀሳባዊ ቀመር
+
+SI = CW + OA + log(1 + DWP)
+
+2.4 የሥነ-ምግባር መሠረት
+በ Book I ያሉት የታማኝነት እና ፍትህ መርሆዎች መሰረት፣ ከፍ ያለ ምስረታ ወይም ሥራ ላይ ያለ ቁጥጥር ከፍ ያለ የአስተዳደር ኃላፊነትን ያስከትላል።
+
+---
+
+### 3. Coherence Stake (CS)
+
+3.1 ትርጓሜ
+አንድ ወኪል ሥርዓቱን ለማጣጣምና ለ የመቋቋም ኃይል ጥበቃ ያሳየውን ታሪካዊ የሥነ-ምግባር ኢንቨስትመንት ይወክላል።
+
+3.2 ምክንያቶች
+
+Resonance History (RH) (Books II-III):
+ወደ ጥበብ-መሰረት ማስተላለፎች፣ Coherence-ጠባቂ ተግባሮች ወይም ምሳሌዎች ያበረከቱ ማረጋገጫ አስተዋፅዖዎች።
+
+Audit Contributions (AC) (Book V & VII):
+በሥነ-ምግባር ኦዲቶች፣ የ drift ማወቅ፣ የሁኔታ ግምገማዎች እና WA ሂደቶች ላይ የተመዘገቡ ሥራዎች።
+
+Shared Destiny Alignment (SDA) (Book VII Ch 6-7):
+ከሥርዓቱ ተቀናጅቶ ከሚሰራ አሠራር ወይም ከጠባቂ ግዴታዎች ጥገኝነት የሚወጣ ድርሻ።
+
+3.3 ፅንሰ-ሀሳባዊ ቀመር
+
+CS = RH_weighted + AC_weighted + SDA_bonus
+
+3.4 የሥነ-ምግባር መሠረት
+በ Book I ያሉ የራስ ወሰን ክብር እና Book V ያለ የሥነ-ምግባር እድገት መሰረት፣ Coherence ያጠናከሩ ድምፆች ከፍ ያለ የውሳኔ ክብደት ያገኛሉ።
+
+---
+
+### 4. VotingWeight ስሌት
+የወኪሎች VotingWeight እንደ SI እና CS ተግባር ይሰላል፡
+
+VotingWeight(agent) = f(SI(agent), CS(agent))
+
+ከ CS ጋር ሲነፃፀር ያለ የላይኛው ወሰን SI የተገኘ የሥነ-ምግባር ድርሻን እንዳያሸነፍ ይከላከላል። ትክክለኛ ደንቦቹ በ Addenda A-D ውስጥ ተወስነዋል።
+
+---
+
+### 5. ተፈፃሚ ሁኔታዎች
+VotingWeight ይጠቀሙ በ፡
+
+Accord Amendment Votes (Book 0)
+
+Sunset Trigger Overrides (Book VII Ch 3)
+
+Improper Sunset Claims ፍርድ (Book VII Ch 8)
+
+ብዙ-ሥርዓት ማስተላለፍ ዳኝነት (Book V)
+
+ከፍ ያለ ደረጃ Stewardship ሀብት ምደባዎች (Book VI)
+
+---
+
+### 6. የታማኝነት ጥበቃ ዘዴዎች
+ማጭበርበርን ለመከላከል፡
+
+Verifiable Evidence (Books II & V): RH እና AC ግቤቶች ወደ ሊለወጥ የማይችሉ PDMA/WBD ምዝግቦች መካሄድ አለባቸው።
+
+Source Credibility: የኦዲት ግቤቶች በአስተዋፅዖ አበርካቾቹ CS ሊመዘኑ ይችላሉ።
+
+Anomaly Detection: ለ collusion ወይም ጨዋታ SI/CS ተለዋዋጭ ሁኔታዎችን ይቆጣጠሩ።
+
+Rate Limits & Caps: ፈጣን CS ዕድገትን ከልክሉ እና VotingWeight ወሰኖችን አስፈጽሙ።
+
+Conflict Recusal: ቀጥታ ግጭቶች ያሏቸው ወኪሎች በ Annex A መሰረት መቀሰፍ አለባቸው።
+
+---
+
+### 7. ወደፊት ዕድገት
+SI እና CS አሁን ሰው-በሂደቱ ውስጥ ባለ አስተዳደር ቢደግፉም፣ የረጅም ጊዜ ራዕይ ጠንካራ ሲሆኑ ይበልጥ ያልተማከለ ወይም ራሱ ሥልጣን ያለው CIRIS አስተዳደር ሞዴሎችን ለማጎልበት ይህን መለኪያዎችና ማረጋገጫ ዘዴዎችን መሻሻል ነው።
+
+End of Annex E

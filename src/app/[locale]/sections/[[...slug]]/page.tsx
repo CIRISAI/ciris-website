@@ -1,17 +1,16 @@
 import { source } from "@/lib/source";
-import { i18n } from "@/lib/i18n";
 import { DocsPage, DocsBody, DocsDescription, DocsTitle } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { getMDXComponents } from "@/mdx-components";
 
-const EN = i18n.defaultLanguage;
+export const dynamicParams = false;
 
 export default async function Page(props: {
-  params: Promise<{ slug?: string[] }>;
+  params: Promise<{ locale: string; slug?: string[] }>;
 }) {
-  const params = await props.params;
-  const page = source.getPage(params.slug, EN);
+  const { locale, slug } = await props.params;
+  const page = source.getPage(slug, locale);
   if (!page) notFound();
   const MDXContent = page.data.body;
   return (
@@ -32,15 +31,15 @@ export default async function Page(props: {
 export async function generateStaticParams() {
   return source
     .generateParams()
-    .filter((p) => p.lang === EN)
-    .map((p) => ({ slug: p.slug }));
+    .filter((p) => p.lang !== "en")
+    .map((p) => ({ locale: p.lang, slug: p.slug }));
 }
 
 export async function generateMetadata(props: {
-  params: Promise<{ slug?: string[] }>;
+  params: Promise<{ locale: string; slug?: string[] }>;
 }) {
-  const params = await props.params;
-  const page = source.getPage(params.slug, EN);
+  const { locale, slug } = await props.params;
+  const page = source.getPage(slug, locale);
   if (!page) notFound();
   return { title: page.data.title, description: page.data.description };
 }

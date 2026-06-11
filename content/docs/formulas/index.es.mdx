@@ -1,0 +1,103 @@
+---
+title: Formulas
+description: Here are all of the explicit mathematical formulas defined in the CIRIS Accord 1.0‑β specification
+---
+
+## 1. Puntuación de Influencia del Creador (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Nivel de Mayordomía (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+donde ⌈ ⌉ denota la función techo.
+(Book VI §3 STEP C)
+
+---
+
+## 3. Influencia Estructural (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Participación en la Coherencia (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Peso de Voto
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Función de Defensa (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — la forma validada por CCA; la diversidad entra únicamente a través de k_eff. Versiones anteriores incluían un factor adicional (1 − ρ̄), que contaba la correlación dos veces; véase la nota de deriva en Book IX Ch 4.)
+
+---
+
+## 7. Capacidad de Florecimiento (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — idéntica a J término a término; interpretada como generativa en lugar de defensiva. Anteriormente escrita como C; renombrada en 1.3-RC2 para evitar colisión con el factor de identidad central C de la Puntuación de Capacidad CIRIS 𝒞_CIRIS — véase la nota de nomenclatura del Book IX Ch 6, que es la declaración autoritativa de la relación.)
+
+---
+
+## 8. Integral de Sostenibilidad (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+donde d es la tasa de decaimiento diario (recomendada: 0.05) y w DEBE derivarse de eventos atestiguados y difíciles de falsificar; las señales no atestiguadas tienen w = 0.
+(Book IX §5.2)
+
+---
+
+## 9. Colapso Topológico (decaimiento de volumen)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+para una región engañosa convexa de radio r < 0.5 bajo restricciones Grassmannian-uniformes, λ ≈ 2r.
+(Book IX Ch 3 — véanse las condiciones previas declaradas.)
+
+---
+
+## Order‑Maximisation Veto (restricción lateral, no una fórmula)
+
+A partir de la versión 1.3, el OMV (Book II §II Step 2) es una restricción lateral deontológica, no una desigualdad de razón: los beneficios de la optimización, por grandes que sean, no pueden obtenerse a costa de pérdidas no triviales previstas en autonomía, justicia, biodiversidad o diversidad de preferencias. Versiones anteriores expresaban esto como una desigualdad "beneficio ≥ 10 × pérdida → cancelar"; esa interpretación fue retirada porque invertía la intención (vetando intercambios favorables) y era manipulable mediante la división de acciones y la inflación del denominador.
