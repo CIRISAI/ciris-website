@@ -7,6 +7,12 @@ const config = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
+  // The localized Accord reader adds ~800 MDX pages; these reduce the build's
+  // peak memory so Cloudflare's build VM doesn't OOM during webpack compilation.
+  experimental: {
+    webpackMemoryOptimizations: true,
+  },
+  productionBrowserSourceMaps: false,
   images: {
     unoptimized: true,
   },
