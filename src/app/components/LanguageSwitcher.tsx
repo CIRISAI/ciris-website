@@ -23,8 +23,10 @@ const CYCLE_MS = 2100;
 
 export default function LanguageSwitcher({
   currentLocale,
+  large = false,
 }: {
   currentLocale: string;
+  large?: boolean;
 }) {
   const pathname = usePathname() || "/";
   const { path: basePath } = delocalizePath(pathname);
@@ -88,7 +90,7 @@ export default function LanguageSwitcher({
 
       <button
         type="button"
-        className={styles.pill}
+        className={`${styles.pill} ${large ? styles.pillLarge : ""}`}
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label={`Change language — currently ${here.name}`}

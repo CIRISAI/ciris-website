@@ -33,6 +33,27 @@
   transform: translateY(-2px) scale(1.03);
 }
 
+/* Larger, extra-prominent variant (used on the /sections Accord reader, which
+   has room for a bigger control). */
+.pillLarge {
+  padding: 0.95rem 1.6rem;
+  font-size: 1.2rem;
+  border-width: 2px;
+  gap: 0.7rem;
+}
+.pillLarge .globe {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+.pillLarge .label {
+  min-width: 8rem;
+  font-size: 1.18rem;
+}
+.pillLarge .caret {
+  width: 18px;
+  height: 18px;
+}
+
 @keyframes pulseGlow {
   0%,
   100% {
