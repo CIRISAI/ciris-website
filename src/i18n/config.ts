@@ -68,6 +68,20 @@ export function isLocale(code: string): boolean {
   return ALL_LOCALE_CODES.includes(code);
 }
 
+// OpenGraph locale codes (lang_REGION) for og:locale, so localized share
+// previews are tagged with the right language instead of en_US.
+const OG_LOCALE: Record<string, string> = {
+  en: "en_US", es: "es_ES", am: "am_ET", ha: "ha_NG", yo: "yo_NG",
+  sw: "sw_KE", ta: "ta_IN", te: "te_IN", mr: "mr_IN", pa: "pa_IN",
+  my: "my_MM", bn: "bn_BD", hi: "hi_IN", vi: "vi_VN", id: "id_ID",
+  th: "th_TH", tr: "tr_TR", uk: "uk_UA", ru: "ru_RU", ko: "ko_KR",
+  ja: "ja_JP", zh: "zh_CN", de: "de_DE", fr: "fr_FR", it: "it_IT",
+  pt: "pt_PT", ar: "ar_AR", fa: "fa_IR", ur: "ur_PK",
+};
+export function ogLocale(code: string): string {
+  return OG_LOCALE[code] ?? "en_US";
+}
+
 // Base (English) paths that have localized /[locale]/ variants. Nav/footer/
 // switcher links are only locale-prefixed for paths in this set; everything
 // else stays on its English URL so we never link to a route that 404s.

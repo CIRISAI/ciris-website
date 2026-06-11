@@ -1,5 +1,6 @@
 import { source } from "@/lib/source";
 import { i18n } from "@/lib/i18n";
+import { ogLocale } from "@/i18n/config";
 import { DocsPage, DocsBody, DocsDescription, DocsTitle } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
@@ -42,5 +43,26 @@ export async function generateMetadata(props: {
   const params = await props.params;
   const page = source.getPage(params.slug, EN);
   if (!page) notFound();
-  return { title: page.data.title, description: page.data.description };
+  const title = page.data.title;
+  const description = page.data.description;
+  const url = "/sections" + (params.slug?.length ? "/" + params.slug.join("/") : "");
+  return {
+    title,
+    description,
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      url,
+      siteName: "CIRIS",
+      locale: ogLocale(EN),
+      images: ["/og-image.png"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.png"],
+    },
+  };
 }
