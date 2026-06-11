@@ -8,6 +8,7 @@ import { I18nProvider } from "fumadocs-ui/i18n";
 import { usePathname, useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { LOCALES, DEFAULT_LOCALE, ALL_LOCALE_CODES } from "@/i18n/config";
+import { setLocalePref } from "@/i18n/pref";
 import { SECTIONS_UI } from "@/lib/sections-ui-i18n";
 
 const CODES = new Set(ALL_LOCALE_CODES);
@@ -23,6 +24,7 @@ export default function SectionsI18nProvider({
   const pathname = usePathname() || "/";
   const router = useRouter();
   const onLocaleChange = (value: string) => {
+    setLocalePref(value);
     const segs = pathname.split("/").filter(Boolean);
     // strip an existing (non-default) locale prefix
     if (segs.length && CODES.has(segs[0]) && segs[0] !== DEFAULT_LOCALE) {

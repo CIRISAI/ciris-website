@@ -3,6 +3,26 @@ import { RootProvider } from "fumadocs-ui/provider";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import { PREFIXED_LOCALES, LOCALIZED_ROUTES } from "@/i18n/config";
+
+// Universal language persistence: a locale chosen anywhere (marketing pages or
+// the /sections reader) is stored, and this guard redirects localizable pages to
+// it before paint, so the language "sticks" across the whole site. Built from
+// config so the path/locale lists never drift.
+const LOCALE_GUARD = `(function(){try{
+var s=localStorage.getItem('ciris-locale');if(!s)return;
+var P=${JSON.stringify(PREFIXED_LOCALES)},M=${JSON.stringify([...LOCALIZED_ROUTES])};
+var path=location.pathname;while(path.length>1&&path.charAt(path.length-1)==='/')path=path.slice(0,-1);
+var segs=path.split('/').filter(function(x){return x.length>0;});
+var cur=(segs.length>0&&P.indexOf(segs[0])>=0)?segs[0]:'en';
+if(cur===s)return;
+var base=(cur==='en')?path:('/'+segs.slice(1).join('/'));if(base==='')base='/';
+var ok=M.indexOf(base)>=0||base==='/sections'||base.indexOf('/sections/')===0;
+if(!ok)return;
+var t=(s==='en')?base:('/'+s+base);if(t!=='/')t=t+'/';
+var curFull=path==='/'?'/':path+'/';
+if(t!==curFull)location.replace(t);
+}catch(e){}})();`;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -180,6 +200,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
+        <script dangerouslySetInnerHTML={{ __html: LOCALE_GUARD }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

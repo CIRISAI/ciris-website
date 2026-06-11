@@ -10,6 +10,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { setLocalePref } from "@/i18n/pref";
 import {
   LOCALES,
   delocalizePath,
@@ -73,7 +74,7 @@ export default function LanguageSwitcher({
                 role="menuitem"
                 aria-current={isActive ? "true" : undefined}
                 className={`${styles.option} ${isActive ? styles.optionActive : ""}`}
-                onClick={() => setOpen(false)}
+                onClick={() => { setLocalePref(l.code); setOpen(false); }}
               >
                 <span className={styles.native} lang={l.code}>
                   {l.nativeName}
