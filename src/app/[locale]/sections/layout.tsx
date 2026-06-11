@@ -1,9 +1,8 @@
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
-import { I18nProvider } from "fumadocs-ui/i18n";
 import type { ReactNode } from "react";
 import { baseOptions } from "@/app/layout.config";
 import { source } from "@/lib/source";
-import { SECTIONS_UI } from "@/lib/sections-ui-i18n";
+import SectionsI18nProvider from "@/app/components/SectionsI18nProvider";
 
 export default async function Layout({
   children,
@@ -15,10 +14,10 @@ export default async function Layout({
   const { locale } = await params;
   const tree = source.pageTree[locale] ?? source.pageTree["en"];
   return (
-    <I18nProvider locale={locale} translations={SECTIONS_UI[locale]}>
-      <DocsLayout tree={tree} {...baseOptions}>
+    <SectionsI18nProvider locale={locale}>
+      <DocsLayout tree={tree} i18n {...baseOptions}>
         {children}
       </DocsLayout>
-    </I18nProvider>
+    </SectionsI18nProvider>
   );
 }
