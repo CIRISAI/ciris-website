@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 import { VT323 } from "next/font/google";
 
 const vt323 = VT323({
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
     title: "The Cascadia Reach Case File",
     description:
       "Everyone tells a different story. Can you figure out who to trust?",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

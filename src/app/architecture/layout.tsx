@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     title: "Infrastructure: Multi-Region, Privacy-First",
     description:
       "Active/active deployment across US and EU. Designed to be deleted.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

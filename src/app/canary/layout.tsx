@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     title: "Warrant Canary: Public Attestation of Operational Integrity",
     description:
       "A signed public statement of what has not happened. Part of the structural commitments that make capture visible.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

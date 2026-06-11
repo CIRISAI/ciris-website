@@ -1,6 +1,7 @@
 import { source } from "@/lib/source";
 import { i18n } from "@/lib/i18n";
 import { ogLocale } from "@/i18n/config";
+import { ogSectionsImage } from "@/lib/seo";
 import { DocsPage, DocsBody, DocsDescription, DocsTitle } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
@@ -56,13 +57,13 @@ export async function generateMetadata(props: {
       url,
       siteName: "CIRIS",
       locale: ogLocale(EN),
-      images: ["/og-image.png"],
+      images: [ogSectionsImage(EN)],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og-image.png"],
+      images: [ogSectionsImage(EN)],
     },
   };
 }

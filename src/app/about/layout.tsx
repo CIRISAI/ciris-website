@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "../global.css";
@@ -24,10 +23,8 @@ const fontBrandRegular = localFont({
   fallback: ["sans-serif"],
 });
 
-export const metadata: Metadata = {
-  title: "CIRIS.AI | About",
-  description: "Auditable AI for the future. Verify me, not trust me.",
-};
+// Page metadata (title/description/OG/canonical) is owned by about/page.tsx
+// via localizedSeo — the single source of truth shared with every locale.
 
 export default function RootLayout({
   children,

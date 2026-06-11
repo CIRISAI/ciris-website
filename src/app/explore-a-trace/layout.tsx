@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     title: "Explore a Trace: Reasoning-Trace Inspector",
     description:
       "Inspect a real CIRIS reasoning trace step by step. Every conscience check and tool call signed and replayable.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

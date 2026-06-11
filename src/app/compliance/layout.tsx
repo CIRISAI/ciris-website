@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Compliance | CIRIS",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     title: "Compliance | CIRIS",
     description:
       "Walk the compliance graph: standards → dimension → control. 27 dimensions, four governance frameworks, one source of truth per layer.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

@@ -2,22 +2,11 @@
 // ModelsContent, fed the English dictionary. Localized variants live at
 // src/app/[locale]/models/.
 
-import type { Metadata } from "next";
+import { localizedSeo } from "@/lib/seo";
 import ModelsContent from "@/app/components/ModelsContent";
 import { getDictionary } from "@/i18n/dictionaries";
-import { LOCALES, localizedPath } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "/models",
-    languages: {
-      ...Object.fromEntries(
-        LOCALES.map((l) => [l.code, localizedPath("/models", l.code)]),
-      ),
-      "x-default": "/models",
-    },
-  },
-};
+export const metadata = localizedSeo("/models", "en");
 
 export default function ModelsPage() {
   return <ModelsContent t={getDictionary("en")} />;

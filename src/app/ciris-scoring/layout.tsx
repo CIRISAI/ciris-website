@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     title: "CIRIS Scoring: Live Trace Compendium",
     description:
       "Effective-dimensionality measurement and behavioral structure on production AI agents in real time.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

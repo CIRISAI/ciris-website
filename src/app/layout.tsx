@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { PREFIXED_LOCALES, LOCALIZED_ROUTES } from "@/i18n/config";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 // Universal language persistence: a locale chosen anywhere (marketing pages or
 // the /sections reader) is stored, and this guard redirects localizable pages to
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: [
       {
-        url: "/og-image.png",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "CIRIS: Verifiable Ethical AI Agent",
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/og-image.png"],
+    images: [DEFAULT_OG_IMAGE],
   },
   robots: {
     index: true,

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "CIRIS Epistemic Grammar (CEG) | CIRIS",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     title: "CIRIS Epistemic Grammar (CEG)",
     description:
       "1 workhorse + 4 composers + 5 families + 9 envelope fields + 8 reasoning axes + 11 composition policies + an open namespace. The wire format the federation speaks.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 
