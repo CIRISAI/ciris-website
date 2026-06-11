@@ -7,7 +7,7 @@ description: "Halaman indeks untuk bagian Addenda."
 
 ## Addendum 1 — Status Kesiapan ASI & Pengikatan Pemetaan Lintas Regulasi
 
-**Diadopsi**: 2026-06-10 (1.3-RC1) · **Steward**: founder (per Book VIII Ch 9)
+**Diadopsi**: 2026-06-10 (1.3-RC2) · **Steward**: founder (per Book VIII Ch 9)
 
 ### 1.1 Tujuan
 
@@ -33,11 +33,11 @@ Dua konsekuensi penting untuk kesiapan ASI:
 1. **Beralih ke CEG-native**: agen 3.0 tidak *memetakan* kondisi internalnya ke format wire — mutasi kondisi internalnya **adalah** atestasi CEG tingkat-diri di bawah kunci agen sendiri, yang dipromosikan ke visibilitas federasi per model tier. Bukti yang diaudit oleh operator adalah amplop yang sama yang dibaca oleh federasi. Ini adalah bentuk implementasi dari persyaratan Book IX bahwa permukaan kendala harus dapat direferensikan secara eksternal, bukan dilaporkan sendiri.
 2. **Empat implementasi menjadi gerbang CEG 1.0**: CIRISAgent (runtime), CIRISNodeCore (konsensus), CIRISLensCore (deteksi — saksi eksternal yang tidak pernah dipancarkan sendiri oleh agen, pemisahan anti-Goodhart), dan CIRISRegistry (otoritas). Tidak satu pihak pun — termasuk agen — dapat menyatakan jaringan verifikasi telah lengkap.
 
-### 1.4 Status persyaratan RC pada 1.3-RC1
+### 1.4 Status persyaratan RC pada 1.3-RC2
 
 | Persyaratan RC | Status | Bukti / yang masih tertunggak |
 |---|---|---|
-| 1. Operasionalisasi Annex F–I | **Teks dioperasionalkan pada 1.3-RC1; validasi siklus-langsung masih tertunggak** | Annex F–I memuat prosedur lengkap, ambang batas, dan mekanisme validasi (diselesaikan dari draf berdasarkan *Magnifica Humanitas* Mei 2026); belum pernah dijalankan terhadap siklus deployment langsung |
+| 1. Operasionalisasi Annex F–I | **Teks dioperasionalkan pada 1.3-RC2; validasi siklus-langsung masih tertunggak** | Annex F–I memuat prosedur lengkap, ambang batas, dan mekanisme validasi (diselesaikan dari draf berdasarkan *Magnifica Humanitas* Mei 2026); belum pernah dijalankan terhadap siklus deployment langsung |
 | 2. Validasi matematis Book IX | **Terpenuhi sebagian** | Dinamika Coherence-Collapse diformalisasi dalam Lean 4 (pracetak CCA v3, DOI 10.5281/zenodo.18217688); empiris koridor memberikan kecocokan lintas substrat retrospektif. Yang masih tertunggak: satu prediksi out-of-sample yang telah dipra-registrasi dalam substrat baru; tinjauan adversarial eksternal independen dari penulis |
 | 3. Justifikasi ambang batas | **Terpenuhi sebagian** | Rasio OMV dihentikan (dinyatakan ulang sebagai kendala sisi, Book II). Masih provisional: pemicu CRE 10²⁶ FLOP, heuristik sentience 5%, target Echo Density &lt; 20% |
 | 4. Latihan red-team | **Belum dilakukan** | Persyaratan σ-atestasi 1.3 (Book IX §5.2) secara preemptif menutup vektor serangan pertama yang diketahui (σ-pumping melalui sinyal Ungkapan Syukur bebas); siklus adversarial penuh terhadap semua titik pemeriksaan masih menjadi kewajiban |

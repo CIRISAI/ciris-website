@@ -7,7 +7,7 @@ description: "Pagina indice della sezione Addenda."
 
 ## Addendum 1 — Stato di Preparazione all'ASI e Collegamento Normativo Vincolante
 
-**Adottato**: 2026-06-10 (1.3-RC1) · **Custode**: fondatore (per il Libro VIII Cap. 9)
+**Adottato**: 2026-06-10 (1.3-RC2) · **Custode**: fondatore (per il Libro VIII Cap. 9)
 
 ### 1.1 Scopo
 
@@ -33,11 +33,11 @@ Due conseguenze contano per la preparazione all'ASI:
 1. **La svolta nativa CEG**: l'agente 3.0 non *mappa* il proprio stato interno sul formato wire — le sue mutazioni di stato interno **sono** attestazioni CEG a livello self sotto la chiave propria dell'agente, promosse a visibilità federativa per il modello a livelli. Le prove che un operatore verifica sono lo stesso envelope che la federazione legge. Questa è la forma implementata del requisito del Libro IX che le superfici di vincolo siano esternamente referenziabili piuttosto che auto-dichiarate.
 2. **Quattro implementazioni subordinano CEG 1.0**: CIRISAgent (runtime), CIRISNodeCore (consenso), CIRISLensCore (rilevamento — il testimone esterno che l'agente non auto-emette mai, la separazione anti-Goodhart), e CIRISRegistry (autorità). Nessuna singola parte — incluso l'agente — può dichiarare completo il tessuto di verifica.
 
-### 1.4 Stato dei requisiti RC al 1.3-RC1
+### 1.4 Stato dei requisiti RC al 1.3-RC2
 
 | Requisito RC | Stato | Prove / In sospeso |
 |---|---|---|
-| 1. Operativizzazione Annessi F–I | **Testo operativizzato al 1.3-RC1; validazione del ciclo live in sospeso** | Gli Annessi F–I portano procedure complete, soglie e meccanismi di validazione (completati dalle bozze fondate su *Magnifica Humanitas* del maggio 2026); non sono ancora stati applicati a un ciclo di deployment live |
+| 1. Operativizzazione Annessi F–I | **Testo operativizzato al 1.3-RC2; validazione del ciclo live in sospeso** | Gli Annessi F–I portano procedure complete, soglie e meccanismi di validazione (completati dalle bozze fondate su *Magnifica Humanitas* del maggio 2026); non sono ancora stati applicati a un ciclo di deployment live |
 | 2. Validazione matematica Libro IX | **Parzialmente soddisfatto** | Dinamiche di collasso formalizzate in Lean 4 (preprint CCA v3, DOI 10.5281/zenodo.18217688); l'empiria dei corridoi fornisce adattamenti retrospettivi cross-substrato. In sospeso: una previsione out-of-sample pre-registrata in un nuovo substrato; revisione avversariale esterna indipendente dall'autore |
 | 3. Giustificazione delle soglie | **Parzialmente soddisfatto** | Il rapporto OMV ritirato (ridefinito come side-constraint, Libro II). Ancora provvisori: trigger CRE a 10²⁶ FLOP, euristica sentienza al 5%, obiettivo Echo Density &lt; 20% |
 | 4. Esercitazione red-team | **Non ancora eseguita** | Il requisito di σ-attestation 1.3 (Libro IX §5.2) chiude preemptivamente il primo vettore di attacco noto (σ-pumping via segnali di gratitudine liberi); un ciclo avversariale completo contro tutti i checkpoint rimane dovuto |

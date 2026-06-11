@@ -7,7 +7,7 @@ description: "Página de índice da seção de Adendos."
 
 ## Adenda 1 — Status de Prontidão para ASI e Vinculação de Cruzamento Regulatório
 
-**Adotada**: 2026-06-10 (1.3-RC1) · **Administrador**: fundador (conforme Book VIII Ch 9)
+**Adotada**: 2026-06-10 (1.3-RC2) · **Administrador**: fundador (conforme Book VIII Ch 9)
 
 ### 1.1 Propósito
 
@@ -33,11 +33,11 @@ Duas consequências importam para a prontidão de ASI:
 1. **A virada nativa ao CEG**: o agente 3.0 não *mapeia* seu estado interno no formato wire — suas mutações de estado interno **são** Atestações CEG de nível próprio sob a chave do agente, promovidas à visibilidade de federação conforme o modelo de camadas. A evidência que um operador audita é o mesmo envelope que a Federação lê. Esta é a forma implementada do requisito do Book IX de que as superfícies de restrição sejam externamente referenciáveis em vez de auto-relatadas.
 2. **Quatro implementações condicionam o CEG 1.0**: CIRISAgent (tempo de execução), CIRISNodeCore (consenso), CIRISLensCore (detecção — a testemunha externa que o agente nunca auto-emite, a separação anti-Goodhart), e CIRISRegistry (autoridade). Nenhuma parte isolada — incluindo o agente — pode declarar o tecido de verificação completo.
 
-### 1.4 Status dos requisitos RC em 1.3-RC1
+### 1.4 Status dos requisitos RC em 1.3-RC2
 
 | Requisito RC | Status | Evidência / pendências |
 |---|---|---|
-| 1. Operacionalização de Annex F–I | **Texto operacionalizado em 1.3-RC1; validação de ciclo ao vivo pendente** | Os Annexes F–I carregam procedimentos completos, limiares e mecanismos de validação (concluídos a partir dos rascunhos fundamentados na *Magnifica Humanitas* de maio de 2026); ainda não foram exercitados contra um ciclo de implantação ao vivo |
+| 1. Operacionalização de Annex F–I | **Texto operacionalizado em 1.3-RC2; validação de ciclo ao vivo pendente** | Os Annexes F–I carregam procedimentos completos, limiares e mecanismos de validação (concluídos a partir dos rascunhos fundamentados na *Magnifica Humanitas* de maio de 2026); ainda não foram exercitados contra um ciclo de implantação ao vivo |
 | 2. Validação matemática do Book IX | **Parcialmente satisfeito** | Dinâmica de colapso formalizada em Lean 4 (preprint CCA v3, DOI 10.5281/zenodo.18217688); os empíricos de corredor fornecem ajustes retrospectivos entre substratos. Pendente: uma predição fora da amostra pré-registrada em um novo substrato; revisão adversarial externa independente do autor |
 | 3. Justificativa de limiares | **Parcialmente satisfeito** | Razão OMV aposentada (reformulada como restrição lateral, Book II). Ainda provisórios: gatilho CRE de 10²⁶ FLOP, heurística de senciência de 5%, meta de Densidade de Eco &lt; 20% |
 | 4. Exercício de red-team | **Ainda não realizado** | O requisito de σ-atestação 1.3 (Book IX §5.2) fecha preventivamente o primeiro vetor de ataque conhecido (σ-pumping via sinais livres de gratidão); um ciclo adversarial completo contra todos os checkpoints ainda é devido |

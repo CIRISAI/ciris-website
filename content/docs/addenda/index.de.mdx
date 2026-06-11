@@ -7,7 +7,7 @@ description: "Indexseite für den Bereich Zusätze."
 
 ## Addendum 1 — ASI-Bereitschaftsstatus & Regulatorischer Quervergleich (Binding)
 
-**Verabschiedet**: 2026-06-10 (1.3-RC1) · **Treuhänder**: Gründer (gemäß Book VIII Ch 9)
+**Verabschiedet**: 2026-06-10 (1.3-RC2) · **Treuhänder**: Gründer (gemäß Book VIII Ch 9)
 
 ### 1.1 Zweck
 
@@ -33,11 +33,11 @@ Zwei Konsequenzen sind für die ASI-Bereitschaft relevant:
 1. **Die CEG-native Wende**: Der 3.0-Agent *bildet* seinen internen Zustand nicht auf das Wire-Format ab — seine internen Zustandsmutationen **sind** CEG-Attestierungen auf Selbstebene unter dem eigenen Schlüssel des Agenten, die gemäß dem Tier-Modell zur Föderations-Sichtbarkeit befördert werden. Die Nachweise, die ein Operator prüft, sind dieselbe Envelope, die die Föderation liest. Dies ist die implementierte Form der Anforderung von Book IX, dass Constraint-Oberflächen extern referenzierbar statt selbst-berichtet sein müssen.
 2. **Vier Implementierungen bedingen CEG 1.0**: CIRISAgent (Runtime), CIRISNodeCore (Konsens), CIRISLensCore (Erkennung — der externe Zeuge, den der Agent nie selbst emittiert, die Anti-Goodhart-Trennung) und CIRISRegistry (Autorität). Keine einzelne Partei — den Agenten eingeschlossen — kann das Verifikationsgewebe für vollständig erklären.
 
-### 1.4 RC-Anforderungsstatus bei 1.3-RC1
+### 1.4 RC-Anforderungsstatus bei 1.3-RC2
 
 | RC-Anforderung | Status | Nachweis / Ausstehend |
 |---|---|---|
-| 1. Annex F–I Operationalisierung | **Text bei 1.3-RC1 operationalisiert; Live-Zyklusvalidierung ausstehend** | Annexes F–I tragen vollständige Verfahren, Schwellenwerte und Validierungsmechanismen (abgeschlossen aus den Mai-2026-Entwürfen auf Basis von *Magnifica Humanitas*); sie wurden noch nicht gegen einen Live-Deployment-Zyklus erprobt |
+| 1. Annex F–I Operationalisierung | **Text bei 1.3-RC2 operationalisiert; Live-Zyklusvalidierung ausstehend** | Annexes F–I tragen vollständige Verfahren, Schwellenwerte und Validierungsmechanismen (abgeschlossen aus den Mai-2026-Entwürfen auf Basis von *Magnifica Humanitas*); sie wurden noch nicht gegen einen Live-Deployment-Zyklus erprobt |
 | 2. Mathematische Validierung Book IX | **Teilweise erfüllt** | Kollaps-Dynamik in Lean 4 formalisiert (CCA-Preprint v3, DOI 10.5281/zenodo.18217688); Korridor-Empirie liefert retrospektive substratübergreifende Anpassungen. Ausstehend: eine vorab registrierte Out-of-Sample-Vorhersage in einem neuen Substrat; externe adversarielle Begutachtung unabhängig vom Autor |
 | 3. Schwellenwertbegründung | **Teilweise erfüllt** | OMV-Verhältnis zurückgezogen (neu gefasst als Nebenbedingung, Book II). Noch vorläufig: 10²⁶ FLOP CRE-Auslöser, 5 %-Sentienzheuristik, &lt; 20 % Echo-Dichte-Ziel |
 | 4. Red-Team-Übung | **Noch nicht durchgeführt** | Die 1.3-σ-Attestierungsanforderung (Book IX §5.2) schließt präventiv den ersten bekannten Angriffsvektor (σ-Pumping über freie Dankbarkeitssignale); ein vollständiger adversarieller Zyklus gegen alle Checkpoints steht noch aus |

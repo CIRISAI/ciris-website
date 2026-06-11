@@ -7,7 +7,7 @@ description: "Eklemeler bölümünün dizin sayfası."
 
 ## Ek 1 — YSZ-Hazırlık Durumu ve Düzenleyici Çapraz Referans Bağlantısı
 
-**Kabul Tarihi**: 2026-06-10 (1.3-RC1) · **Sorumlu**: kurucu (Book VIII Ch 9 uyarınca)
+**Kabul Tarihi**: 2026-06-10 (1.3-RC2) · **Sorumlu**: kurucu (Book VIII Ch 9 uyarınca)
 
 ### 1.1 Amaç
 
@@ -33,11 +33,11 @@ YSZ hazırlığı açısından iki sonuç önem taşımaktadır:
 1. **CEG-native dönüş**: 3.0 ajanı iç durumunu wire formatına *eşleştirmez* — iç durum mutasyonları, tier modeli uyarınca federasyon görünürlüğüne taşınan, ajanın kendi anahtarı altındaki öz düzey CEG belgelemeleri **olarak** gerçekleşir. Bir operatörün denetlediği kanıt, federasyonun okuduğu zarfın aynısıdır. Bu, Book IX'un kısıt yüzeylerinin öz-bildirilen değil, dışarıdan başvurulabilir olması gerektiği şeklindeki gereksiniminin uygulanmış biçimidir.
 2. **Dört uygulama CEG 1.0'ı kapılar**: CIRISAgent (çalışma zamanı), CIRISNodeCore (konsensüs), CIRISLensCore (algılama — ajanın hiçbir zaman öz-yaymadığı dışsal tanık, anti-Goodhart ayrımı) ve CIRISRegistry (otorite). Ajanın kendisi dahil hiçbir tek taraf, doğrulama dokusunun tamamlandığını ilan edemez.
 
-### 1.4 1.3-RC1'de RC-gereksinim durumu
+### 1.4 1.3-RC2'de RC-gereksinim durumu
 
 | RC gereksinimi | Durum | Kanıt / öne çıkan |
 |---|---|---|
-| 1. Annex F–I operasyonelleştirmesi | **Metin 1.3-RC1'de operasyonelleştirildi; canlı döngü doğrulaması beklemede** | Annex F–I'ler tam prosedürler, eşikler ve doğrulama mekanizmaları taşımaktadır (Mayıs 2026 *Magnifica Humanitas* tabanlı taslaklar tamamlanmıştır); henüz canlı bir dağıtım döngüsüne karşı kullanılmamıştır |
+| 1. Annex F–I operasyonelleştirmesi | **Metin 1.3-RC2'de operasyonelleştirildi; canlı döngü doğrulaması beklemede** | Annex F–I'ler tam prosedürler, eşikler ve doğrulama mekanizmaları taşımaktadır (Mayıs 2026 *Magnifica Humanitas* tabanlı taslaklar tamamlanmıştır); henüz canlı bir dağıtım döngüsüne karşı kullanılmamıştır |
 | 2. Book IX matematiksel doğrulaması | **Kısmen karşılandı** | Çöküş dinamikleri Lean 4'te formalize edildi (CCA ön baskı v3, DOI 10.5281/zenodo.18217688); koridor empirikleri geriye dönük çapraz-substrat uyumları sağlar. Öne çıkan: yeni bir substrat üzerinde önceden kaydedilmiş bir örnek dışı tahmin; yazardan bağımsız harici çekişmeli inceleme |
 | 3. Eşik gerekçesi | **Kısmen karşılandı** | OMV oranı emekliye ayrıldı (Book II'de yan kısıt olarak yeniden ifade edildi). Hâlâ geçici: 10²⁶ FLOP CRE tetikleyicisi, %5 bilinç buluşsalı, &lt; %20 Echo Density hedefi |
 | 4. Red-team egzersizi | **Henüz gerçekleştirilmedi** | 1.3 σ-belgeleme gereksinimi (Book IX §5.2), bilinen ilk saldırı vektörünü (σ-pompalama — serbest minnettarlık sinyalleri aracılığıyla) önleyici biçimde kapatmaktadır; tüm kontrol noktalarına karşı tam bir çekişmeli döngü hâlâ borçludur |

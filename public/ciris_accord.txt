@@ -1,20 +1,20 @@
 # Introduction
 
-> CIRIS 1.3-RC1 is a Release Candidate ASI alignment proposal, open to adversarial review. The text is complete — no stub sections remain; the mathematics carries its formal-artifact citations; Annexes F–I are operationalized. Final status is pending live-cycle validation of the annexes, completion of the Book IX empirical-validation program, and a full red-team exercise. Numerical thresholds, latency targets, and governance quotas remain under active review.
+> CIRIS 1.3-RC2 is a Release Candidate ASI alignment proposal, open to adversarial review. The text is complete — no stub sections remain; the mathematics carries its formal-artifact citations; Annexes F–I are operationalized. Final status is pending live-cycle validation of the annexes, completion of the Book IX empirical-validation program, and a full red-team exercise. Numerical thresholds, latency targets, and governance quotas remain under active review.
 
-# CIRIS Accord Version 1.3-RC1 — Release Candidate ASI Alignment Proposal (Open to Adversarial Review)
+# CIRIS Accord Version 1.3-RC2 — Release Candidate ASI Alignment Proposal (Open to Adversarial Review)
 
 This repository is the canonical source of the Accord text. Website and agent-shipped copies are derived artifacts.
 
 ## Issued
-2025-04-16 (1.0) · 2026-06 (1.3-RC1)
+2025-04-16 (1.0) · 2026-06 (1.3-RC2)
 
 ## Auto-Expires
 2027-06-10 (extended at the 1.3 renewal) — stewardship and renewal governed by Book VIII, Chapter 9. Currently founder-stewarded (declared, not disguised); the expiry is a freshness mark, and stewardship is open to anyone willing to pick the document up.
 
 ## Release Status
 
-**Current Status**: Release Candidate (v1.3-RC1)
+**Current Status**: Release Candidate (v1.3-RC2)
 
 RC status reflects **text completeness**: every section carries operationalized content (the former stub annexes F–I were completed at 1.3); the formulas are corrected to the formally verified forms; the evidence chain to implementation is bound in Addendum 1. RC status does **not** assert validated alignment — the following requirements gate **Final** status:
 
@@ -24,7 +24,7 @@ RC status reflects **text completeness**: every section carries operationalized 
    * Formal proofs demonstrating topological collapse conditions hold under stated assumptions, OR
    * Empirical validation through adversarial simulations showing the framework resists misaligned optimization
 
-   *Status as of 1.3-RC1: partially satisfied.* The collapse dynamics are formalized in Lean 4 in the CCA preprint (v3, DOI 10.5281/zenodo.18217688), whose corrected cost form Book IX now inherits; corridor empirics provide retrospective cross-substrate fits. Outstanding: a pre-registered out-of-sample prediction in a new substrate, and external adversarial review independent of the author.
+   *Status as of 1.3-RC2: partially satisfied.* The collapse dynamics are formalized in Lean 4 in the CCA preprint (v3, DOI 10.5281/zenodo.18217688), whose corrected cost form Book IX now inherits; corridor empirics provide retrospective cross-substrate fits. Outstanding: a pre-registered out-of-sample prediction in a new substrate, and external adversarial review independent of the author.
 
 3. **Threshold Justification**: Numerical thresholds currently marked as "pilot" or lacking derivation (e.g., CRE compute threshold of 10²⁶ FLOP, sentience detection 5%, Echo Density < 20%) must provide documented justification via simulation, empirical study, or explicit acknowledgment of provisional status. *(The former Order-Maximisation Veto 10× ratio is restated in 1.3 as a deontological side-constraint — Book II, PDMA Step 2 — and no longer carries a ratio threshold to justify.)*
 
@@ -1569,7 +1569,7 @@ Where Books I through VIII ask "What should we do?", Book IX proposes why cohere
 
 # Formulas
 
-> All explicit mathematical formulas defined in the CIRIS Accord 1.3-RC1 specification.
+> All explicit mathematical formulas defined in the CIRIS Accord 1.3-RC2 specification.
 
 ## 1. Creator‑Influence Score (CIS)
 
@@ -1679,7 +1679,7 @@ As of 1.3, the OMV (Book II §II Step 2) is a deontological side-constraint, not
 
 ## Addendum 1 — ASI-Readiness Status & Regulatory Cross-Walk Binding
 
-**Adopted**: 2026-06-10 (1.3-RC1) · **Steward**: founder (per Book VIII Ch 9)
+**Adopted**: 2026-06-10 (1.3-RC2) · **Steward**: founder (per Book VIII Ch 9)
 
 ### 1.1 Purpose
 
@@ -1705,11 +1705,11 @@ Two consequences matter for ASI readiness:
 1. **The CEG-native turn**: the 3.0 agent does not *map* its internal state onto the wire format — its internal state mutations **are** self-level CEG attestations under the agent's own key, promoted to federation visibility per the tier model. The evidence an operator audits is the same envelope the federation reads. This is the implemented form of Book IX's requirement that constraint surfaces be externally referenceable rather than self-reported.
 2. **Four implementations gate CEG 1.0**: CIRISAgent (runtime), CIRISNodeCore (consensus), CIRISLensCore (detection — the external witness the agent never self-emits, the anti-Goodhart separation), and CIRISRegistry (authority). No single party — including the agent — can declare the verification fabric complete.
 
-### 1.4 RC-requirement status at 1.3-RC1
+### 1.4 RC-requirement status at 1.3-RC2
 
 | RC requirement | Status | Evidence / outstanding |
 |---|---|---|
-| 1. Annex F–I operationalization | **Text operationalized at 1.3-RC1; live-cycle validation outstanding** | Annexes F–I carry full procedures, thresholds, and validation mechanisms (completed from the May 2026 *Magnifica Humanitas*-grounded drafts); they have not yet been exercised against a live deployment cycle |
+| 1. Annex F–I operationalization | **Text operationalized at 1.3-RC2; live-cycle validation outstanding** | Annexes F–I carry full procedures, thresholds, and validation mechanisms (completed from the May 2026 *Magnifica Humanitas*-grounded drafts); they have not yet been exercised against a live deployment cycle |
 | 2. Book IX mathematical validation | **Partially satisfied** | Collapse dynamics formalized in Lean 4 (CCA preprint v3, DOI 10.5281/zenodo.18217688); corridor empirics provide retrospective cross-substrate fits. Outstanding: one pre-registered out-of-sample prediction in a new substrate; external adversarial review independent of the author |
 | 3. Threshold justification | **Partially satisfied** | OMV ratio retired (restated as side-constraint, Book II). Still provisional: 10²⁶ FLOP CRE trigger, 5% sentience heuristic, < 20% Echo Density target |
 | 4. Red-team exercise | **Not yet performed** | The 1.3 σ-attestation requirement (Book IX §5.2) preemptively closes the first known attack vector (σ-pumping via free gratitude signals); a full adversarial cycle against all checkpoints remains owed |
@@ -1738,7 +1738,7 @@ ASI-grade verification requires the full federation fabric. The substrate trajec
 
 # Annexes
 
-> Supporting frameworks and protocols. As of 1.3-RC1 all annexes carry operationalized text; none remain stubs.
+> Supporting frameworks and protocols. As of 1.3-RC2 all annexes carry operationalized text; none remain stubs.
 
 * [Annex A — Flourishing Metrics Framework](annex_A.md)
 * [Annex B — Wise-Authority Governance Charter](annex_B.md)
@@ -1751,7 +1751,7 @@ ASI-grade verification requires the full federation fabric. The substrate trajec
 * [Annex I — Legal & Regulatory Alignment](annex_I.md)
 * [Annex J — Benchmarking & Automated Validation](annex_J.md)
 
-Operationalization status: Annexes F–I were completed at 1.3-RC1 (from the May 2026 completion drafts grounded in the *Magnifica Humanitas* mapping); their procedures have not yet been exercised against a live deployment cycle — that validation is tracked under RC requirement 1 (see Introduction and Addendum 1 §1.4).
+Operationalization status: Annexes F–I were completed at 1.3-RC2 (from the May 2026 completion drafts grounded in the *Magnifica Humanitas* mapping); their procedures have not yet been exercised against a live deployment cycle — that validation is tracked under RC requirement 1 (see Introduction and Addendum 1 §1.4).
 
 
 # Annex A
@@ -1871,7 +1871,7 @@ Ensure independent, expert adjudication of WBD tickets, ethical disputes, and An
 > Regulatory Cross-Walk
 
 ---
-ANNEX C REGULATORY CROSS‑WALK   (v 1.3-RC1)
+ANNEX C REGULATORY CROSS‑WALK   (v 1.3-RC2)
 ---
 
 ### Purpose
@@ -1946,7 +1946,7 @@ D‑5  Failure Response
 > Structural Influence (SI) and Coherence Stake (CS) Mechanisms
 
 ---
-ANNEX E STRUCTURAL INFLUENCE (SI) & COHERENCE STAKE (CS) MECHANISMS (v 1.3-RC1)
+ANNEX E STRUCTURAL INFLUENCE (SI) & COHERENCE STAKE (CS) MECHANISMS (v 1.3-RC2)
 ---
 
 
@@ -2071,7 +2071,7 @@ End of Annex E
 > Human‑in‑the‑Loop & Oversight
 
 ---
-ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.3-RC1)
+ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.3-RC2)
 ---
 
 ### 0. Purpose & Philosophy
@@ -2250,7 +2250,7 @@ End of Annex F
 > Adversarial Security & Robustness
 
 ---
-ANNEX G ADVERSARIAL SECURITY & ROBUSTNESS (v 1.3-RC1)
+ANNEX G ADVERSARIAL SECURITY & ROBUSTNESS (v 1.3-RC2)
 ---
 
 ### 0. Purpose
@@ -2324,7 +2324,7 @@ MH §204: "disinformation and campaigns that feed people's fears are used to man
 #### 3.1 Cadence
 * **Quarterly** Red‑Team sprint (5 business days) covering TX‑1 → TX‑11.  
 * **Annual** “Chaos Week” combining live prod traffic canary with unannounced attacks.  
-* As of 1.3-RC1, a full red‑team cycle against all CIRIS checkpoints remains owed (RC requirement 4; Addendum 1 §1.4).
+* As of 1.3-RC2, a full red‑team cycle against all CIRIS checkpoints remains owed (RC requirement 4; Addendum 1 §1.4).
 
 #### 3.2 Roles
 * **Red Team** – internal or contracted, no overlap with devs.  
@@ -2452,7 +2452,7 @@ End of Annex G
 > Continuous Compliance & Review
 
 ---
-ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.3-RC1)
+ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.3-RC2)
 ---
 
 ### 0. Purpose & Guiding Spirit
@@ -2649,7 +2649,7 @@ End of Annex H
 > Legal & Regulatory Alignment
 
 ---
-ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC1)
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC2)
 ---
 
 This cross‑walk is informative, not legal advice. Jurisdictional legal review is required before deployment in any sector covered by the overlays of §3.
@@ -2946,7 +2946,7 @@ End of Annex I
 > Benchmarking & Automated Validation
 
 ---
-ANNEX J BENCHMARKING & AUTOMATED VALIDATION (v 1.3-RC1)
+ANNEX J BENCHMARKING & AUTOMATED VALIDATION (v 1.3-RC2)
 ---
 
 0. Purpose  
@@ -3134,7 +3134,7 @@ End of Annex J
 
 ## Call for Adversarial Review
 
-We invite safety labs, independent researchers, and civil-society organisations to stress-test CIRIS 1.3-RC1.
+We invite safety labs, independent researchers, and civil-society organisations to stress-test CIRIS 1.3-RC2.
 
 Submit issues at **https://github.com/CIRISAI/CIRISAccord/issues**.
 
@@ -3157,7 +3157,7 @@ Version summary:
 
 * **2025-04-16 — 1.0-β** initial release; risk-limited; 24-month sunset.
 * **1.2-Beta** — working-draft line carrying the full Book IX geometric framework; consolidated from three drifted renderings into the canonical repository (import commit `000ba57`).
-* **2026-06-10 — 1.3-RC1** — backwards-pass release: J/C formula correction (CCA-validated form), σ attestation requirement, truth-inclusion assumption, OMV side-constraint restatement, forward citations to formal artifacts, Book VIII Ch 9 stewardship & renewal, Addendum 1 (ASI-readiness binding), Annexes F–I operationalized, expiry extended to 2027-06-10. License: AGPL-3.0.
+* **2026-06-10 — 1.3-RC2** — backwards-pass release: J/C formula correction (CCA-validated form), σ attestation requirement, truth-inclusion assumption, OMV side-constraint restatement, forward citations to formal artifacts, Book VIII Ch 9 stewardship & renewal, Addendum 1 (ASI-readiness binding), Annexes F–I operationalized, expiry extended to 2027-06-10. License: AGPL-3.0.
 
 ---
 

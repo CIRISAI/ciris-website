@@ -7,7 +7,7 @@ description: "Trang mục lục cho phần Phụ Bổ."
 
 ## Phụ Lục 1 — Trạng Thái Sẵn Sàng ASI & Ràng Buộc Đối Chiếu Quy Định
 
-**Thông qua**: 2026-06-10 (1.3-RC1) · **Người quản trị**: nhà sáng lập (theo Book VIII Ch 9)
+**Thông qua**: 2026-06-10 (1.3-RC2) · **Người quản trị**: nhà sáng lập (theo Book VIII Ch 9)
 
 ### 1.1 Mục Đích
 
@@ -33,11 +33,11 @@ Hai hệ quả quan trọng cho sự sẵn sàng ASI:
 1. **Bước ngoặt CEG-native**: tác nhân 3.0 không *ánh xạ* trạng thái nội bộ của nó lên định dạng wire — các đột biến trạng thái nội bộ của nó **là** các chứng thực CEG cấp bản thân dưới khóa riêng của tác nhân, được thăng cấp lên khả năng hiển thị liên bang theo mô hình tier. Bằng chứng mà người vận hành kiểm toán là cùng một phong bì mà liên bang đọc. Đây là hình thức đã triển khai của yêu cầu Book IX rằng các bề mặt ràng buộc phải có thể tham chiếu từ bên ngoài thay vì tự báo cáo.
 2. **Bốn triển khai kiểm soát CEG 1.0**: CIRISAgent (runtime), CIRISNodeCore (đồng thuận), CIRISLensCore (phát hiện — nhân chứng bên ngoài mà tác nhân không bao giờ tự phát ra, sự tách biệt chống Goodhart), và CIRISRegistry (cơ quan thẩm quyền). Không một bên nào — bao gồm cả tác nhân — có thể tuyên bố vải xác minh đã hoàn tất.
 
-### 1.4 Trạng Thái Yêu Cầu RC tại 1.3-RC1
+### 1.4 Trạng Thái Yêu Cầu RC tại 1.3-RC2
 
 | Yêu cầu RC | Trạng thái | Bằng chứng / còn tồn đọng |
 |---|---|---|
-| 1. Vận hành hóa Annex F–I | **Văn bản đã vận hành hóa tại 1.3-RC1; xác thực chu kỳ trực tiếp còn tồn đọng** | Annex F–I mang đầy đủ các thủ tục, ngưỡng và cơ chế xác thực (hoàn thành từ các bản thảo có nền tảng *Magnifica Humanitas* tháng 5 năm 2026); chúng chưa được thực thi trên một chu kỳ triển khai trực tiếp |
+| 1. Vận hành hóa Annex F–I | **Văn bản đã vận hành hóa tại 1.3-RC2; xác thực chu kỳ trực tiếp còn tồn đọng** | Annex F–I mang đầy đủ các thủ tục, ngưỡng và cơ chế xác thực (hoàn thành từ các bản thảo có nền tảng *Magnifica Humanitas* tháng 5 năm 2026); chúng chưa được thực thi trên một chu kỳ triển khai trực tiếp |
 | 2. Xác thực toán học Book IX | **Thỏa mãn một phần** | Động lực sụp đổ được hình thức hóa trong Lean 4 (bản tiền in CCA v3, DOI 10.5281/zenodo.18217688); các nghiên cứu thực nghiệm hành lang cung cấp các kết quả khớp xuyên substrate hồi cứu. Còn tồn đọng: một dự đoán ngoài mẫu đã đăng ký trước trong một substrate mới; đánh giá đối kháng bên ngoài độc lập với tác giả |
 | 3. Biện minh ngưỡng | **Thỏa mãn một phần** | Tỷ lệ OMV đã nghỉ hưu (được tái phát biểu như ràng buộc phụ, Book II). Vẫn còn tạm thời: ngưỡng kích hoạt CRE 10²⁶ FLOP, heuristic sentience 5%, mục tiêu Mật Độ Echo &lt; 20% |
 | 4. Bài tập red-team | **Chưa được thực hiện** | Yêu cầu σ-attestation 1.3 (Book IX §5.2) chủ động đóng vector tấn công đã biết đầu tiên (σ-pumping qua các tín hiệu gratitude tự do); một chu kỳ đối kháng đầy đủ chống lại tất cả các điểm kiểm tra vẫn còn nợ |

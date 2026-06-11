@@ -1,21 +1,21 @@
 ---
 title: "Pengantar"
-description: "CIRIS 1.3-RC1 adalah Kandidat Rilis proposal penyelarasan ASI, terbuka untuk tinjauan adversarial. Teks telah lengkap — tidak ada bagian yang belum selesai; matematika memuat kutipan artefak formalnya; Lampiran F–I telah dioperasionalkan. Status final menunggu validasi siklus-hidup lampiran, penyelesaian program validasi empiris Book IX, dan latihan red-team penuh. Ambang batas numerik, target latensi, dan kuota tata kelola masih dalam tinjauan aktif."
+description: "CIRIS 1.3-RC2 adalah Kandidat Rilis proposal penyelarasan ASI, terbuka untuk tinjauan adversarial. Teks telah lengkap — tidak ada bagian yang belum selesai; matematika memuat kutipan artefak formalnya; Lampiran F–I telah dioperasionalkan. Status final menunggu validasi siklus-hidup lampiran, penyelesaian program validasi empiris Book IX, dan latihan red-team penuh. Ambang batas numerik, target latensi, dan kuota tata kelola masih dalam tinjauan aktif."
 ---
 
-# CIRIS Accord Versi 1.3-RC1 — Kandidat Rilis Proposal Keselarasan ASI (Terbuka untuk Tinjauan Adversarial)
+# CIRIS Accord Versi 1.3-RC2 — Kandidat Rilis Proposal Keselarasan ASI (Terbuka untuk Tinjauan Adversarial)
 
 Repositori ini adalah sumber kanonik teks Accord. Salinan di situs web dan yang dikirimkan bersama agen adalah artefak turunan.
 
 ## Diterbitkan
-2025-04-16 (1.0) · 2026-06 (1.3-RC1)
+2025-04-16 (1.0) · 2026-06 (1.3-RC2)
 
 ## Kedaluwarsa Otomatis
 2027-06-10 (diperpanjang pada pembaruan 1.3) — pengelolaan dan pembaruan diatur oleh Book VIII, Chapter 9. Saat ini dikelola oleh pendiri (dinyatakan, tidak disamarkan); tanggal kedaluwarsa adalah tanda kesegaran, dan pengelolaan terbuka bagi siapa pun yang bersedia mengambil alih dokumen ini.
 
 ## Status Rilis
 
-**Status Saat Ini**: Kandidat Rilis (v1.3-RC1)
+**Status Saat Ini**: Kandidat Rilis (v1.3-RC2)
 
 Status RC mencerminkan **kelengkapan teks**: setiap bagian memuat konten yang telah dioperasionalkan (lampiran yang sebelumnya berupa kerangka, F–I, diselesaikan pada versi 1.3); rumus-rumus telah dikoreksi ke bentuk yang telah diverifikasi secara formal; rantai bukti menuju implementasi terikat dalam Addendum 1. Status RC **tidak** menyatakan keselarasan yang telah divalidasi — persyaratan berikut menjadi gerbang menuju status **Final**:
 
@@ -25,7 +25,7 @@ Status RC mencerminkan **kelengkapan teks**: setiap bagian memuat konten yang te
    * Bukti formal yang menunjukkan kondisi kolaps topologis berlaku di bawah asumsi yang dinyatakan, ATAU
    * Validasi empiris melalui simulasi adversarial yang menunjukkan kerangka ini tahan terhadap optimasi yang tidak selaras
 
-   *Status per 1.3-RC1: sebagian terpenuhi.* Dinamika kolaps diformalkan dalam Lean 4 dalam pracetak CCA (v3, DOI 10.5281/zenodo.18217688), yang bentuk biaya terkoreksinya kini diwarisi oleh Book IX; empirik koridor memberikan kesesuaian lintas substrat secara retrospektif. Yang masih kurang: prediksi di luar sampel yang telah diregistrasi sebelumnya dalam substrat baru, dan tinjauan adversarial eksternal yang independen dari penulis.
+   *Status per 1.3-RC2: sebagian terpenuhi.* Dinamika kolaps diformalkan dalam Lean 4 dalam pracetak CCA (v3, DOI 10.5281/zenodo.18217688), yang bentuk biaya terkoreksinya kini diwarisi oleh Book IX; empirik koridor memberikan kesesuaian lintas substrat secara retrospektif. Yang masih kurang: prediksi di luar sampel yang telah diregistrasi sebelumnya dalam substrat baru, dan tinjauan adversarial eksternal yang independen dari penulis.
 
 3. **Justifikasi Ambang Batas**: Ambang numerik yang saat ini ditandai sebagai "pilot" atau tidak memiliki derivasi (misalnya, ambang komputasi CRE sebesar 10²⁶ FLOP, deteksi sentiensi 5%, Kepadatan Gema &lt; 20%) harus menyediakan justifikasi terdokumentasi melalui simulasi, studi empiris, atau pengakuan eksplisit atas status provisional. *(Rasio Order-Maximisation Veto 10× yang sebelumnya dinyatakan ulang dalam 1.3 sebagai batasan samping deontologis — Book II, PDMA Step 2 — dan tidak lagi memerlukan justifikasi rasio ambang batas.)*
 

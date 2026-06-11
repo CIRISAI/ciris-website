@@ -7,7 +7,7 @@ description: "Page d'index de la section Addenda."
 
 ## Addendum 1 — Statut de préparation à l'ASI et liaison transversale réglementaire
 
-**Adopté** : 2026-06-10 (1.3-RC1) · **Gardien** : fondateur (par Livre VIII Ch 9)
+**Adopté** : 2026-06-10 (1.3-RC2) · **Gardien** : fondateur (par Livre VIII Ch 9)
 
 ### 1.1 Objet
 
@@ -33,11 +33,11 @@ Deux conséquences importent pour la préparation à l'ASI :
 1. **Le tournant CEG-natif** : l'agent 3.0 ne *mappe* pas son état interne sur le format wire — ses mutations d'état interne **sont** des attestations CEG au niveau propre sous la clé de l'agent, promues à la visibilité de fédération selon le modèle de tiers. La preuve qu'un opérateur audite est la même enveloppe que lit la fédération. C'est la forme implémentée de l'exigence du Livre IX selon laquelle les surfaces de contrainte doivent être référençables de l'extérieur plutôt qu'auto-rapportées.
 2. **Quatre implémentations conditionnent CEG 1.0** : CIRISAgent (runtime), CIRISNodeCore (consensus), CIRISLensCore (détection — le témoin externe que l'agent n'auto-émet jamais, la séparation anti-Goodhart), et CIRISRegistry (autorité). Aucune partie — pas même l'agent — ne peut déclarer complet le tissu de vérification.
 
-### 1.4 Statut des exigences RC à 1.3-RC1
+### 1.4 Statut des exigences RC à 1.3-RC2
 
 | Exigence RC | Statut | Preuve / points en suspens |
 |---|---|---|
-| 1. Opérationnalisation des Annexes F–I | **Texte opérationnalisé à 1.3-RC1 ; validation du cycle en direct en attente** | Les Annexes F–I portent des procédures complètes, des seuils et des mécanismes de validation (complétés à partir des ébauches fondées sur *Magnifica Humanitas* de mai 2026) ; elles n'ont pas encore été exercées sur un cycle de déploiement en direct |
+| 1. Opérationnalisation des Annexes F–I | **Texte opérationnalisé à 1.3-RC2 ; validation du cycle en direct en attente** | Les Annexes F–I portent des procédures complètes, des seuils et des mécanismes de validation (complétés à partir des ébauches fondées sur *Magnifica Humanitas* de mai 2026) ; elles n'ont pas encore été exercées sur un cycle de déploiement en direct |
 | 2. Validation mathématique du Livre IX | **Partiellement satisfaite** | Dynamiques de collapsus formalisées en Lean 4 (prépublication CCA v3, DOI 10.5281/zenodo.18217688) ; les données empiriques de corridor fournissent des ajustements multi-substrats rétrospectifs. En suspens : une prédiction hors échantillon pré-enregistrée dans un nouveau substrat ; revue adversariale externe indépendante de l'auteur |
 | 3. Justification des seuils | **Partiellement satisfaite** | Le ratio OMV retraité (reformulé comme contrainte latérale, Livre II). Toujours provisoires : déclencheur CRE à 10²⁶ FLOP, heuristique de sentience à 5 %, cible de densité d'écho &lt; 20 % |
 | 4. Exercice de red-team | **Pas encore effectué** | L'exigence σ-attestation 1.3 (Livre IX §5.2) ferme préventivement le premier vecteur d'attaque connu (σ-pumping via des signaux de gratitude libres) ; un cycle adversarial complet contre tous les points de contrôle reste dû |
