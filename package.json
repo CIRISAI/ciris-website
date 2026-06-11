@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "NODE_OPTIONS=--max-old-space-size=6144 next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap && node scripts/indexnow.mjs",
+    "indexnow": "INDEXNOW_SUBMIT=1 node scripts/indexnow.mjs",
     "dev": "next dev --turbo",
     "start": "next start",
     "postinstall": "fumadocs-mdx"
