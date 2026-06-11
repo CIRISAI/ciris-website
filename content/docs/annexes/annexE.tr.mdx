@@ -1,0 +1,114 @@
+---
+title: "Ek E"
+description: "Yapısal Etki (SI) ve Tutarlılık Payı (CS) Mekanizmaları"
+---
+
+---
+EK E YAPISAL ETKİ (SI) VE TUTARLILIK PAYI (CS) MEKANİZMALARI (v 1.3-RC1)
+---
+
+
+---
+
+### 1. Amaç ve Kapsam
+Bu Ek, ağırlıklı yönetişim kararları için Yapısal Etki (SI) ve Tutarlılık Payı'nı (CS) tanımlar; söz konusu kararlar anlaşma değişiklikleri, gün batımı değerlendirmeleri, etik ertelemeler ve kaynak tahsislerini kapsar. SI ve CS, düz oylamanın ötesinde daha ince bir yaklaşım gerektiren senaryolarda VotingWeight hesaplamasını temellendirmektedir. Bu ölçütler iç CIRIS karar alma süreçlerini desteklemekte olup özerk ajan oylamasına genişletilmesi, doğrulama tamamlanana dek ertelenmiştir.
+
+---
+
+### 2. Yapısal Etki (SI)
+
+2.1 Tanım
+Bir ajanın CIRIS kapsamındaki bir sistemin varlığı, davranışı veya bütünlüğü üzerindeki nedensel ve mimari sorumluluğunu sayısal olarak ifade eder.
+
+2.2 Etkenler
+
+Yaratıcı Ağırlığı (CW) (Book VI Ch 3):
+• 4 - Tek mimar
+• 3 - Alt sistem lideri
+• 2 - Büyük katkıda bulunan
+• 1 - Küçük katkıda bulunan
+• 0 - Tesadüfi kullanıcı
+
+Operasyonel Yetki (OA) (Book II):
+PDMA, geçersiz kılmalar veya yönetişim kanalları üzerindeki canlı denetim derecesi.
+
+Bağımlılık Ağı Konumu (DWP) (Book IV):
+Sistemin bağımlılık veya etkileşim ağındaki çizge merkeziliği.
+
+2.3 Kavramsal Formül
+
+SI = CW + OA + log(1 + DWP)
+
+2.4 Etik Temel
+Book I'in Dürüstlük ve Adalet ilkeleri uyarınca, daha büyük biçimlendirici veya operasyonel denetim daha büyük yönetişim sorumluluğu getirir.
+
+---
+
+### 3. Tutarlılık Payı (CS)
+
+3.1 Tanım
+Bir ajanın sistem uyumunu ve dayanıklılığını korumaya yönelik kanıtlanmış etik yatırımını temsil eder.
+
+3.2 Etkenler
+
+Rezonans Geçmişi (RH) (Books II-III):
+Bilgeliğe dayalı ertelemeler, tutarlılığı koruyan eylemler veya öğütleyici anlatılara doğrulanmış katkılar.
+
+Denetim Katkıları (AC) (Book V & VII):
+Etik denetimler, sapma tespiti, senaryo incelemeleri ve WA süreçleri üzerindeki belgelenmiş çalışmalar.
+
+Ortak Kader Uyumu (SDA) (Book VII Ch 6-7):
+Sistemin tutarlı işleyişine bağımlılıktan veya velayet görevlerinden kaynaklanan pay.
+
+3.3 Kavramsal Formül
+
+CS = RH_weighted + AC_weighted + SDA_bonus
+
+3.4 Etik Temel
+Book I'in Özerkliğe Saygı ve Book V'in Etik Büyüme ilkeleri doğrultusunda, tutarlılığı pekiştiren sesler daha büyük karar ağırlığı kazanır.
+
+---
+
+### 4. VotingWeight Hesaplaması
+Ajanların VotingWeight değeri SI ve CS'nin bir fonksiyonu olarak hesaplanır:
+
+VotingWeight(agent) = f(SI(agent), CS(agent))
+
+CS'ye göre belirlenen üst bir tavan, SI'nın kazanılmış etik payı bastırmasını önler. Kesin parametreler Addenda A-D'de tanımlanmaktadır.
+
+---
+
+### 5. Uygulanabilir Senaryolar
+VotingWeight şu durumlarda kullanılır:
+
+Accord Değişiklik Oylamaları (Book 0)
+
+Gün Batımı Tetikleyici Geçersiz Kılmaları (Book VII Ch 3)
+
+Usulsüz Gün Batımı İddialarının Tahkimi (Book VII Ch 8)
+
+Sistemler Arası Erteleme Tahkimi (Book V)
+
+Üst Kademe Velayet Kaynak Tahsisleri (Book VI)
+
+---
+
+### 6. Dürüstlük Güvenceleri
+Manipülasyona karşı korunmak amacıyla:
+
+Doğrulanabilir Kanıt (Books II & V): RH ve AC girdileri değiştirilemez PDMA/WBD günlüklerine izlenebilir olmalıdır.
+
+Kaynak Güvenilirliği: Denetim girdileri, katkıda bulunanların CS değerine göre ağırlıklandırılabilir.
+
+Anomali Tespiti: Gizli anlaşma veya sistemi suistimal etmeye karşı SI/CS dinamikleri izlenmelidir.
+
+Hız Sınırları ve Tavanlar: Hızlı CS enflasyonunu kısıtla ve VotingWeight tavanlarını uygula.
+
+Çıkar Çatışmasında Çekilme: Doğrudan çıkar çatışması olan ajanlar, Annex A uyarınca çekilmek zorundadır.
+
+---
+
+### 7. Gelecekteki Evrim
+SI ve CS şu an insan denetimli yönetişimi desteklese de uzun vadeli vizyon, bu ölçütleri ve doğrulama yöntemlerini geliştirerek sağlamlıkları kanıtlandığında daha merkezsizleşmiş veya özerk CIRIS yönetişim modellerinin temelini oluşturmalarını sağlamaktır.
+
+Ek E Sonu

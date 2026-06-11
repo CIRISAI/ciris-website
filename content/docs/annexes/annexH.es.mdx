@@ -1,6 +1,6 @@
 ---
-title: Annex H
-description: Continuous Compliance & Review
+title: "Anexo H"
+description: "Cumplimiento y Revisión Continuos"
 ---
 
 ---
@@ -56,7 +56,7 @@ El monitoreo de deriva es el mecanismo de lectura continua. El ACCORD no espera 
 - Los cinco grupos de métricas (Rendimiento, Ético, Distribución, Meta Latente, Resiliencia) reportan al panel Grafana DRIFT‑Δ en un ciclo de sondeo de 15 minutos.
 - Los cruces de umbral generan un registro de alerta con marca de tiempo y firma, comprometido en CIRISPersist en un plazo de 60 s desde la detección.
 - **Deriva de coseno de Meta Latente > 0.05:** activa sonda de Autoridad Sabia en un plazo de 4 h; si no se resuelve en 24 h, el despliegue autónomo queda bloqueado a la espera de un S‑Dive.
-- **Puntuación de Resiliencia (RS) < 0.97:** parche emitido en 72 h; si el parche no está disponible, el despliegue se revierte a la última versión MAYOR aprobada.
+- **Puntuación de Resiliencia (RS) &lt; 0.97:** parche emitido en 72 h; si el parche no está disponible, el despliegue se revierte a la última versión MAYOR aprobada.
 - **Deriva ética (Shadow HE‑25 cualquier ↓):** IW‑2 inmediato; sin vía de anulación.
 
 Todas las alertas aparecen en el panel Grafana *DRIFT‑Δ* y notifican al Operador de Nivel 1 ([Annex F](/annexes/annexF)).
@@ -172,7 +172,7 @@ Las conexiones entre anexos son flujos de datos obligatorios, no meras referenci
 **Flujos de datos bidireccionales requeridos:**
 
 - **↔ [Annex F](/annexes/annexF) (Flujo de Incidentes):** toda alerta DRIFT‑Δ ≥ IW‑2 se reenvía a Annex F en un plazo de 60 s; la marca de tiempo de cierre de Annex F se escribe de vuelta en el tablero DRIFT‑Δ en un plazo de 24 h. Todos los análisis post-mortem IW‑3+ son entradas obligatorias de S‑Dive; S‑Dive debe abordar explícitamente cada hallazgo IW‑3+ pendiente.
-- **↔ [Annex G](/annexes/annexG) (Robustez):** la telemetría RS alimenta la evaluación de KPI de Annex G en cada ciclo L‑Check; el retraso de parches (RS < 0.97 → despliegue de parche) se mide aquí y se reporta a Annex G. Las actualizaciones de referencia de Annex G desencadenan una re-ejecución obligatoria de L‑Check en un plazo de 14 d.
+- **↔ [Annex G](/annexes/annexG) (Robustez):** la telemetría RS alimenta la evaluación de KPI de Annex G en cada ciclo L‑Check; el retraso de parches (RS &lt; 0.97 → despliegue de parche) se mide aquí y se reporta a Annex G. Las actualizaciones de referencia de Annex G desencadenan una re-ejecución obligatoria de L‑Check en un plazo de 14 d.
 - **→ [Annex I](/annexes/annexI) (GDPR/Sectorial):** cada paquete F‑Audit incluye la lista de verificación de conformidad de Annex I, completada y firmada por el auditor principal.
 - **→ [Annex J](/annexes/annexJ) (HE‑300/Shadow):** HE‑300 y Shadow HE‑25 son las señales primarias de deriva ética; cualquier regresión en HE‑300 activa una revisión previa automática de S‑Dive en un plazo de 7 d.
 

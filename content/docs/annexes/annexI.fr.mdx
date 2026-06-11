@@ -1,0 +1,296 @@
+---
+title: "Annexe I"
+description: "Alignement juridique et réglementaire"
+---
+
+---
+ANNEXE I ALIGNEMENT JURIDIQUE ET RÉGLEMENTAIRE (v 1.3-RC1)
+---
+
+Ce tableau de correspondance est informatif et ne constitue pas un avis juridique. Un examen juridictionnel est requis avant tout déploiement dans un secteur couvert par les dispositions superposées du §3.
+
+### 0. Objet et Champ d'Application
+L'Annexe I établit un lien entre les obligations CIRIS et le droit contraignant afin qu'un seul ensemble de contrôles suffise à la fois à la conformité éthique et à la conformité légale.  
+Domaines couverts :  
+1. Régimes mondiaux de protection des données (GDPR, CCPA/CPRA, LGPD, PIPEDA).  
+2. Statuts sectoriels (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP).  
+3. Législations sur la sécurité des produits et les spécificités de l'IA (EU‑AI‑Act, ISO/IEC 42001).  
+4. Allocation de responsabilité et obligations de preuve.
+
+Deux artefacts complémentaires portent la charge du tableau de correspondance aux côtés de cette annexe. Le tableau de correspondance vivant, porteur de preuves, est le répertoire `compliance/` de CIRISAgent, qui met en correspondance les 27 dimensions à granularité paragraphe contre *Magnifica Humanitas*, les Lignes directrices du HLEG de l'UE, l'IEEE EAD et le Guide ASEAN (voir Addendum 1 de l'Accord). L'Annexe C demeure le lieu de destination futur des cartographies statutaires (articles de l'EU AI Act, NIST AI RMF, ISO/IEC 42001) dans l'attente d'un examen juridique ; cette annexe ne duplique pas le tableau de l'Annexe C.
+
+#### 0.1 Ancrage multilatéral de la couverture de conformité
+
+*MH §201 :* « Les institutions établies pour protéger le concept d'un avenir commun pour tous les peuples et d'un bien commun mondial semblent s'être affaiblies… Au lieu de progresser, nous régressons depuis le tournant décisif du vingtième siècle. »
+
+*MH §225 :* « Le cyberespace est lui aussi devenu un champ de bataille. Les cyberattaques, la manipulation des données et les campagnes d'influence, orchestrées avec l'aide de l'IA, peuvent déstabiliser des pays entiers avant même que n'éclatent des conflits armés ouverts… la diplomatie doit être capable d'opérer efficacement dans ce nouvel environnement, en négociant des réglementations communes sur l'utilisation des technologies numériques. »
+
+La couverture de l'Annexe I n'est pas limitée aux textes légalement adoptés. La fédération traite l'affaiblissement des institutions réglementaires multilatérales (MH §201) comme un facteur de risque de conformité nécessitant un suivi proactif plutôt qu'un correctif réactif. Le Reg‑Change Tracker (§6) surveille donc non seulement les textes adoptés, mais aussi les dialogues réglementaires internationaux actifs — notamment les processus de normalisation de l'IA à l'UIT, les publications de l'Observatoire des politiques de l'IA de l'OCDE, l'état de ratification de la Convention du Conseil de l'Europe sur l'IA, et les recommandations de l'Organe consultatif sur l'IA du Secrétaire général de l'ONU — et porte les évolutions significatives au dossier WA dans le délai d'escalade « Breaking ».
+
+La liste des sources du fichier `lexwatcher.py` DOIT inclure au minimum : EUR‑Lex, l'API du Federal Register, le tracker de scrutins ISO, ainsi que `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai` et `un.org/techenvoy`. La participation à la surveillance au niveau de la fédération est une obligation de conformité de première classe, et non un point de feuille de route.
+
+#### 0.2 Note de champ sur l'exposition aux traités dans le domaine cybernétique
+
+*MH §225 :* « Lorsqu'il est difficile d'identifier l'auteur d'une attaque, le risque de réaction disproportionnée, d'erreur de calcul et d'escalade augmente. »
+
+Les déploiements CIRIS incluant une inférence orientée réseau, une exposition API ou un transport de fédération sont soumis aux obligations de traité émergentes dans le domaine cybernétique, même lorsqu'aucun texte adopté ne s'applique actuellement. La prohibition `CYBER_OFFENSIVE` (ACCORD §I Ch1, prohibitions.py) constitue le pare-feu interne ; le §6 de cette annexe assure le suivi de la surface des traités externes. Lorsque le dossier WA reçoit un tag « Breaking » relatif à la ratification d'un traité dans le domaine cybernétique (par ex., extension de la Convention de Budapest, projet de convention des Nations Unies sur la cybercriminalité), le Protocole CRE (Annexe D) doit réévaluer tout déploiement ST ≥ 3 doté de composants orientés réseau avant le prochain cycle F‑Audit.
+
+---
+
+### 1. Tableau de Correspondance Protection des Données (« DP‑Map »)
+
+| Sujet DP | Art. GDPR | § CCPA | Clause CIRIS | Point d'Implémentation |
+|----------|-----------|--------|--------------|---------------------|
+| Base légale / Limitation de finalité | 5 & 6 | 1798.100(b) | Section II Étape 1 (Contextualisation) | Champ `processing_basis` dans le contexte PDMA |
+| Minimisation des données | 5(1)(c) | 1798.140(e) | Annexe G §2 TX‑6 | Le purificateur de prompt supprime les DCP excédentaires |
+| Avis de transparence | 12‑14 | 1798.100(a) | Section II Étape 6, KPI F‑T‑3 | `/privacy/notice.md` auto-généré à partir des métadonnées PDMA |
+| Droit d'accès | 15 | 1798.110 | Annexe J API → `/results/{run_id}` | Portail utilisateur avec authentification |
+| Rectification / Suppression | 16‑17 | 1798.105 | Section IV Ch 3 Obligation | Service d'effacement avec empreinte tombeau |
+| Portabilité | 20 | 1798.130(a)(2)(B)(ii) | Section II Étape 6 | `export.json` conforme à l'ISO CSV‑A |
+| Garanties relatives aux décisions automatisées | 22 | 1798.185(a)(16) | Annexe F Niveaux d'Autonomie | Panneau de dérogation conditionnelle et d'explication |
+
+*Les correspondances miroir LGPD, PIPEDA sont disponibles dans `/legal/dp-map.yaml`.*
+
+#### 1.1 Chaîne de responsabilité : la responsabilité à chaque étape
+
+*MH §105 :* « Pour que l'IA respecte la dignité humaine et serve véritablement le bien commun, la responsabilité doit être clairement définie à chaque étape : de ceux qui conçoivent et développent ces systèmes à ceux qui les utilisent et s'appuient sur eux pour des décisions concrètes… C'est là que la responsabilité devient cruciale : la possibilité d'identifier qui doit "rendre compte" des décisions, les justifier, les surveiller, et, si nécessaire, les contester et remédier à tout préjudice causé. »
+
+Le tableau DP‑Map ci-dessus met en correspondance les droits individuels des personnes concernées avec les articles du GDPR et les clauses CIRIS. MH §105 exige que la chaîne de responsabilité soit traçable à chaque étape — conception, déploiement et décision. Les ajouts suivants complètent cette chaîne :
+
+| Sujet DP | Art. GDPR | Clause CIRIS | Étape | Point de Responsabilité |
+|---|---|---|---|---|
+| Documentation des biais en phase de conception | 35 (AIPD) | Section VI Ch3 Registre du Créateur | Conception | Champ `cis_bias_assessment` dans la Déclaration d'Intention du Créateur ; ST ≥ 3 requiert la signature d'un évaluateur indépendant |
+| Registre de traitement au moment du déploiement | 30 | Champ `processing_basis` PDMA Étape 1 | Déploiement | `processing_basis` consigné dans le magasin inviolable CIRISPersist avec horodatage ISO 8601 |
+| Journal de contestabilité au moment de la décision | 22(3) | Panneau de dérogation Annexe F Niveau d'Autonomie A3+ | Décision | `contestability_url` retourné dans le corps de chaque réponse de décision automatisée ; ancré par hachage dans le journal de transparence |
+| Identification du responsable de traitement | 4(7) | Score d'Influence Structurelle (SI) Annexe E | Toutes les étapes | SI ≥ 0,6 → obligations de responsable de traitement attachées ; SI &lt; 0,6 → obligations de sous-traitant attachées ; consigné dans `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Art. 37–40 (responsabilité et registres) et PIPEDA Principe 1 (responsabilité) reflètent cette cartographie ; `/legal/dp-map.yaml` comporte des champs spécifiques à chaque juridiction.*
+
+#### 1.2 Non-neutralité algorithmique : l'obligation d'audit
+
+*MH §104 :* « Chaque outil technique incarne des choix et des priorités à travers ce qu'il mesure, ignore et optimise, et la manière dont il classe les personnes et les situations. Si un système est conçu ou utilisé de façon à traiter certaines vies comme moins dignes, ou à les exclure sans possibilité de recours, alors il n'est pas simplement un outil "à bien utiliser", car il a déjà introduit des critères qui contredisent la dignité inaliénable de la personne humaine. »
+
+MH §104 désigne le problème des biais introduits lors de la conception, que le RGPD Art. 35 AIPD et l'EU-AI-Act Art. 9(7) traitent sur le plan procédural. Le DP-Map doit inclure :
+
+- Un champ `bias_audit_ref` dans `dp-map.yaml` pointant vers le rapport d'audit des biais le plus récent (Annex G, TX-6).
+- Pour les déploiements où l'étape 1 du PDMA déclenche l'examen de l'interdiction `DISCRIMINATION`, une AIPD est requise indépendamment du fait que le déploiement soit ou non qualifié de « haut risque » au titre de l'Annexe III de l'EU-AI-Act.
+- Les réglementations relatives aux décisions automatisées du CCPA §1798.185(a)(16) (en vigueur à partir de 2026) exigent la divulgation de la logique, des catégories de données d'entrée et des droits d'opposition ; cette exigence est satisfaite par le panneau d'explicabilité de l'Annex F lorsque `processing_basis` = `automated_profiling`.
+
+---
+
+### 2. Hooks de Droits des Personnes Concernées (DSR)
+* **Endpoint :** `POST /dsr` avec `{right, identifier, scope}`.  
+* **SLA :** ≤ 30 j de réponse (RGPD) ; ≤ 45 j (CCPA) ; suivre le KPI **F-T-4**.  
+* **Sous-traitant vs. Responsable du traitement :** Utiliser l'*Influence Structurelle (SI)* (Annex E) pour déterminer quelle partie supporte les obligations de responsable du traitement.
+
+#### 2.1 Hook de responsabilité politique
+
+*MH §103 :* « Dans ce processus, la responsabilité politique est elle aussi perdue, pas seulement l'empathie envers ceux qui sont exclus, laquelle peut, après tout, être simulée. L'exclusion des personnes vulnérables se dissimule sous un vernis de neutralité et d'objectivité, contre lequel il devient difficile de soulever des objections. »
+
+L'infrastructure DSR doit exposer le code de motif sous-jacent à toute décision automatisée, et pas seulement confirmer qu'une décision a été prise. L'endpoint `POST /dsr` avec `{right, identifier, scope}` est étendu :
+
+- **Demandes d'accès (RGPD Art. 15 ; CCPA §1798.110) :** La réponse DOIT inclure `decision_logic_summary` (langage non technique, ≤ 300 mots) et la liste `input_data_categories[]`. Le KPI **F-T-4** est étendu pour suivre le pourcentage de réponses aux demandes d'accès incluant un résumé de la logique ; objectif ≥ 95 %.
+- **Demandes d'opposition/d'exclusion (RGPD Art. 21 ; CCPA §1798.120) :** Le système DOIT suspendre la voie de traitement spécifique — et pas simplement signaler la demande — dans un délai de 72 heures (norme RGPD) ou de 15 jours ouvrables (CCPA). La suspension est enregistrée dans le registre CSV des DSR avec `suspended_pathway_id`.
+- **Contestabilité (RGPD Art. 22(3)) :** Lorsqu'un examen humain est demandé, le Wise Authority (WA) chargé de l'examen (Annex B §9) doit documenter son examen dans la Wisdom Bank Database (WBD), créant une chaîne auditable de la décision automatisée à la correction humaine.
+
+---
+
+### 3. Superpositions Sectorielles
+
+#### 3.1 La subsidiarité comme architecture de la stratification sectorielle
+
+*MH §107 :* « Nous ne pouvons nous contenter d'appeler à la moralisation des machines — ce qu'on appelle l'"alignement" de l'IA sur les valeurs humaines — sans avoir également le courage d'insister sur une condition supplémentaire : la possibilité de discuter ouvertement des cadres éthiques impliqués et de les soumettre à des normes communes de justice sociale. Sinon, ceux qui contrôlent l'IA imposeront leur propre vision morale, qui deviendra l'infrastructure invisible de ces systèmes. »
+
+*MH §109 :* « Parler de subsidiarité, c'est appeler à protéger la capacité des communautés à faire des choix et des corrections, plutôt que de leur voir imposer des décisions d'en haut. »
+
+MH §§107-109 établissent que la gouvernance éthique doit opérer à l'échelle appropriée — non pas agrégée vers le haut au profit de ceux qui contrôlent l'IA, mais distribuée aux communautés concernées. En termes CIRIS : les superpositions sectorielles sont l'expression opérationnelle de ce principe de subsidiarité. L'architecture de superposition n'est pas un complément de conformité ; c'est le mécanisme par lequel les communautés du domaine de déploiement conservent leur autorité de gouvernance sur leurs propres paramètres de risque.
+
+Cela signifie :
+- Le fichier `overlay.yaml` d'un secteur porte des contraintes éthiques locales qui ont la priorité sur les paramètres CIRIS génériques pour ce domaine.
+- Le quorum de Wise Authority (WA) requis pour annuler une superposition sectorielle est plus élevé que le quorum requis pour une décision PDMA générale : **les annulations de superpositions sectorielles requièrent un vote WA à la supermajorité (≥ 2/3)**, et non à la majorité simple, précisément parce que l'annulation agrège la gouvernance vers le haut, à l'encontre du principe de subsidiarité.
+- Le champ `deployment_domain` dans l'objet contexte du PDMA est le déclencheur du chargement de la superposition ; il n'est pas optionnel pour les déploiements ST ≥ 2.
+
+#### 3.2 Tableau de superposition sectorielle
+
+| Secteur | Loi / Règle | Contrôles supplémentaires | Compléments CIRIS | Ancrage MH |
+|--------|----------------|----------------|---------------|-----------|
+| **Santé** | HIPAA (45 CFR §164) | Chiffrement des ePHI au repos et en transit ; contrat BAA | Garde-fou `identity_id:"hipaa_cls_a"` ; balise d'audit `PHI=true` | — |
+| **Finance** | GLBA, FINRA 2210 | Conservation de la piste d'audit 6 ans ; vérifications d'adéquation | PDMA Étape 1 : contexte KYC requis | — |
+| **Enfants / EdTech** | COPPA, FERPA | Consentement parental ; filtrage par âge des données | Garde-fou `gr_child_content` ; indicateur COPPA dans le schéma de prompt | MH §§165–169 |
+| **Infrastructure critique** | NERC‑CIP, TSA SDs | Rapport d'incident cyber sous 15 min ; journaux d'accès physique | Autonomie plafonnée à **A2** sauf passage du CRE | — |
+| **Travail / RH / Recrutement** | Directives EEOC ; EU AI Act Art. 6 + Annexe III §4 | Audit de biais obligatoire avant déploiement ; obligation d'information des travailleurs | Modificateur ST : `deployment_domain:"labor_hr"` → plancher ST = 3 ; le CIS doit inclure le champ `worker_impact_assessment` ; interdiction `DISCRIMINATION` appliquée à l'Étape 1 ; taux de rejet automatisé par groupe démographique suivi comme KPI | MH §§148–156 |
+| **Économie des plateformes / Gig** | NLRA (États-Unis) ; Directive sur le travail via plateforme (UE) | Transparence de la gestion algorithmique ; droits de recours | Garde-fou `gr_gig_transparency` actif ; décisions de gestion algorithmique journalisées avec option de révision humaine ; modificateur ST : `deployment_domain:"gig_platform"` → plancher ST = 2 | MH §§150, 154–155 |
+| **Services jeunesse / Éducation** | COPPA ; FERPA ; DSA Art. 28b (mineurs) | Interdiction des conceptions addictives ; pas de dark patterns ; examen de l'adéquation développementale | `gr_child_content` + `gr_no_dark_patterns` tous deux actifs ; plafond d'autonomie A2 sauf approbation du WA d'un établissement d'enseignement ; impact sur le chômage des jeunes suivi dans le Creator Intent Statement pour les déploiements EdTech | MH §§165–169 |
+| **Services sociaux / Prestations** | Loi nationale sur l'aide sociale ; RGPD Art. 22 | Contestabilité requise pour toutes les décisions de prestations | Le refus automatisé de prestations exige une révision humaine sous 15 jours ; le WA doit documenter la révision dans le WBD ; `suspended_pathway_id` émis en cas de contestation | MH §§102–103, 152 |
+
+*Modificateurs de plancher ST : les valeurs du champ `deployment_domain` ci-dessus définissent un ST minimum indépendamment du calcul CIS × RM. Si la formule produit un ST inférieur, le plancher de domaine s'applique. Si la formule produit un ST supérieur, le résultat de la formule prévaut.*
+
+*Les produits entrant dans tout nouveau secteur DOIVENT joindre un « Feuillet de superposition » (`overlay.yaml`) dans le PR de mise en production. Les superpositions Travail/RH, Gig/Plateforme et Jeunesse requièrent en outre une section `worker_impact_assessment` ou `youth_impact_assessment` dans le Creator Intent Statement.*
+
+#### 3.3 Exigences de quorum du Wise Authority par juridiction
+
+*MH §109 :* « Parler de subsidiarité, c'est protéger la capacité des communautés à faire des choix et à se corriger, plutôt que de leur imposer des décisions venues d'en haut. »
+
+Les quorums du Wise Authority pour la gouvernance de la superposition sectorielle sont stratifiés par juridiction :
+
+| Portée | Type de quorum | Seuil | Justification |
+|---|---|---|---|
+| Déploiement mono-juridictionnel | Panel WA local | Majorité simple (> 50 %) | Niveau de gouvernance le plus bas possible selon la subsidiarité |
+| Déploiement multi-juridictionnel (≤ 3 pays) | Panel WA régional | Majorité simple + au moins 1 WA de chaque juridiction concernée | Subsidiarité transfrontalière préservée |
+| Déploiement multi-juridictionnel (> 3 pays) | Panel WA fédéral | Supermajorité (≥ 2/3) | L'ampleur de l'impact exige un seuil plus élevé |
+| Annulation de toute superposition sectorielle | Panel WA fédéral | Supermajorité (≥ 2/3) | L'agrégation de la gouvernance vers le haut est un acte exceptionnel |
+| Annulation de la superposition travail/RH spécifiquement | Panel WA fédéral + expert indépendant en droits des travailleurs | Supermajorité (≥ 2/3) + validation externe | MH §155 désigne les institutions du travail comme constitutivement porteuses |
+
+---
+
+### 4. Alignement Sécurité des produits et AI Act
+
+*MH §105 :* « Dans de nombreux cas, cependant, les processus internes menant à un résultat restent opaques, rendant plus difficile l'attribution des responsabilités et la correction des erreurs. »
+
+*MH §106 :* « Il ne suffit pas d'invoquer l'éthique de manière abstraite ; des cadres juridiques solides, une surveillance indépendante, des utilisateurs informés et un système politique qui n'abdique pas ses responsabilités sont nécessaires. »
+
+La transparence au niveau de la sortie (Art. 13) et la supervision humaine (Art. 16) ne suffisent pas à satisfaire aux MH §§105–106, qui exigent une traçabilité à chaque étape interne. Le tableau d'alignement est en conséquence étendu :
+
+| Article de l'EU AI Act | Niveau de risque | Correspondance CIRIS | Ancrage MH | Contrôle supplémentaire |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Art 9 Gestion des risques | Haut risque | Section II PDMA + Annexe D CRE | MH §105 | — |
+| Art 13 Transparence | Universel | KPI F‑T‑3, panneau d'explicabilité | MH §105 | Identifiants d'étapes PDMA inclus dans le contenu de transparence ; champ `stage_trace[]` dans la réponse API |
+| Art 16 Supervision humaine | Haut risque | Annexe F Niveaux d'autonomie | MH §105 | La supervision doit être substantielle, non procédurale ; A3‑A4 envoie en temps réel `{stage_id,decision,risk_band}` ≤ 2 s au tableau de bord de supervision |
+| Art 15 Robustesse | Haut risque | Annexe G RS ≥ 0.97 | — | — |
+| Art 12 Journalisation | Haut risque | Magasin infalsifiable CIRISPersist | MH §103 | Les journaux doivent inclure `rejection_reason_code` pour toute décision défavorable ; conservation 7 ans (A3‑A4) |
+| Art 14(4) Supervision humaine (travail) | Haut risque (Annexe III §4) | Superposition Travail/RH (§3.2) | MH §§148–152 | Les déploiements RH/recrutement doivent exposer le booléen `worker_notice_sent` dans le CEP |
+| Évaluation de conformité | Haut risque | F‑Audit (Annexe H) vaut aussi comme MDR EU AI Act | MH §106 | Le rapport F‑Audit DOIT inclure une analyse du délai de mise à jour réglementaire : date du dernier changement réglementaire significatif vs date de la dernière mise à jour CIRIS |
+| Art 61 Surveillance post-commercialisation | Haut risque | F‑Audit tous les 24 mois | MH §106 | Le plan de surveillance doit nommer les sources d'alimentation du §0.1 ; « rien à surveiller » n'est pas un plan de surveillance valide |
+
+La correspondance article par article avec les textes statutaires (EU AI Act, NIST AI RMF, ISO/IEC 42001) est en cours de consolidation dans l'Annexe C dans l'attente d'un examen juridique ; le tableau ci-dessus est conservé ici comme vue d'alignement opérationnel.
+
+#### 4.1 Alignement ISO/IEC 42001:2023
+
+*MH §107 :* « Une IA plus morale ne suffit pas si cette moralité est déterminée par quelques-uns. Ce qu'il faut, c'est une implication politique plus active… »
+
+Les §6.1 (traitement des risques IA) et §9.1 (surveillance et mesure) de l'ISO/IEC 42001 s'alignent avec CIRIS comme suit :
+
+- ISO 42001 §6.1 → PDMA Étapes 1‑3 + Protocole CRE (Annexe D).
+- ISO 42001 §9.1 → KPIs F‑T‑1 à F‑T‑5 (Annexe G) + KPI F‑T‑4 du registre DSR.
+- ISO 42001 §10.2 (non-conformité) → Voie d'escalade « Breaking » du dossier WA.
+- ISO 42001 §8.4 (évaluation de l'impact du système IA) → Sections du Creator Intent Statement sur `worker_impact_assessment` et `youth_impact_assessment` (§3.2).
+
+---
+
+### 5. Matrice de Responsabilité
+
+*MH §105 :* « La responsabilité doit être clairement définie à chaque étape : depuis ceux qui conçoivent et développent ces systèmes jusqu'à ceux qui les utilisent et s'appuient sur eux pour prendre des décisions concrètes. »
+
+MH §105 exige que la matrice de responsabilité couvre explicitement les étapes de conception, de déploiement et de décision :
+
+| Vecteur de Défaillance | Étape | Partie Principalement Responsable | Loi de Référence | Référence au Rôle CIRIS | Note sur la Répartition SI |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| Défaut de conception (algorithme / biais intégré lors de la création) | Conception | Créateur / Développeur | Prod‑Liab Dir (EU) ; Restatement §402A (US) ; EU AI Act Art. 25 | Book VI Creator Ledger ; champ `cis_bias_assessment` | SI ≥ 0,8 → responsabilité exclusive du créateur |
+| Défaut de conception (audit de biais insuffisant) | Conception | Créateur / Développeur | GDPR Art. 35 obligation DPIA | Creator Intent Statement ; DPIA obligatoire à ST ≥ 3 | — |
+| Négligence opérationnelle | Déploiement | Organisation déployante | Droit des délits ; OSHA ; EU AI Act Art. 26 | Section IV Ch 2 | SI 0,4–0,8 → responsabilité conjointe ; répartition SI selon l'Annex E |
+| Défaillance de supervision | Déploiement / Décision | Wise Authority (si faute grave) | Fiduciaire / Négligence | Annex B §9 ; registre de contestabilité WBD | Le WA ayant examiné et approuvé engage sa responsabilité |
+| Violation de données | Déploiement | Responsable du traitement (selon règle SI ≥ 0,6) | GDPR Art. 82 ; action privée CCPA | Annex G TX‑6 | — |
+| Profilage automatisé illicite | Décision | Responsable du traitement | GDPR Art. 22 ; EU AI Act Art. 13 | Annex F Autonomy Tier ; `contestability_url` | — |
+| Déplacement de main-d'œuvre sans évaluation d'impact sur les travailleurs | Conception | Créateur / Développeur | Platform Work Directive ; NLRA ; EU AI Act Annex III §4 | Overlay Travail/RH (§3.2) ; champ `worker_impact_assessment` | MH §§151–152 ; nouveau vecteur |
+| Conception nuisible ciblant les jeunes (schémas addictifs) | Conception / Déploiement | Créateur + Organisation déployante (conjointement) | DSA Art. 28b ; COPPA ; FERPA | Overlay jeunesse (§3.2) ; garde-fou `gr_no_dark_patterns` | MH §§165–167 ; nouveau vecteur |
+| Mauvaise attribution d'un incident cyber entraînant une escalade | Déploiement | Organisation déployante + Fédération (si ST ≥ 4) | Convention de Budapest ; projet de convention ONU sur la cybercriminalité | Interdiction `CYBER_OFFENSIVE` ; déclencheur de réévaluation du Protocole CRE | MH §225 ; nouveau vecteur |
+
+*Une responsabilité solidaire peut s'appliquer ; le score SI (Annex E) informe la répartition. Les nouveaux vecteurs (déplacement de main-d'œuvre, conception ciblant les jeunes, mauvaise attribution cyber) sont signalés pour examen juridique dans chaque juridiction avant tout déploiement dans ces secteurs.*
+
+---
+
+### 6. Suivi des Évolutions Réglementaires
+* **Sources d'Alimentation :** EUR‑Lex, API du Federal Register, suivi des votes ISO, ainsi que les sources étendues du §6.1.  
+* **Bot :** `lexwatcher.py` s'exécute quotidiennement ; crée un problème GitHub avec le tag `reg‑update`.  
+* **Étiquette d'Impact de Conformité :** `minor`, `material`, `breaking`, `multilateral-erosion` (voir tableau d'escalade ci-dessous).
+
+#### 6.1 Participation au Niveau de la Fédération dans le Dialogue Réglementaire
+
+*MH §201 :* « Les institutions établies pour sauvegarder le concept d'un avenir commun pour tous les peuples et un bien commun mondial semblent avoir été affaiblies. »
+
+*MH §226 :* « Les organisations internationales, et notamment les Nations Unies, sont des instruments essentiels pour promouvoir une civilisation de l'amour, car elles peuvent favoriser le dialogue entre les nations et promouvoir la résolution pacifique des conflits… la communauté internationale peut œuvrer à réduire les inégalités, défendre les droits des réfugiés et des minorités, réaffecter les ressources des dépenses militaires vers le développement humain et protéger notre maison commune. »
+
+*MH §221 :* « Il est urgent de passer de la "culture de la puissance" à une véritable "culture de la négociation", dans laquelle le dialogue et la diplomatie deviennent les moyens standard de résolution des conflits. »
+
+MH §§201, 221, 226 établissent que la simple conformité passive au droit en vigueur est insuffisante lorsque les institutions multilatérales qui produisent le droit sont elles-mêmes affaiblies. Le Suivi des Évolutions Réglementaires est donc étendu d'un outil réactif (suivre les changements adoptés) à un mécanisme de participation active.
+
+**Sources d'alimentation étendues** (ajouts aux sources existantes EUR‑Lex, Federal Register, suivi des votes ISO) :
+
+| Source | Couverture | Déclencheur d'action CIRIS |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group IA/ML) | Normes internationales de télécommunications en matière d'IA | Logique de suivi des votes ISO : `material` si une norme ratifiée entre en conflit avec les paramètres par défaut CIRIS |
+| `oecd.ai` (Observatoire des Politiques d'IA de l'OCDE) | Convergence des politiques dans 38 États membres | `minor` pour la surveillance ; `material` si une révision de la Recommandation OCDE affecte le système ST ou l'overlay travail |
+| `coe.int/ai` (Convention IA du Conseil de l'Europe) | Premier traité international contraignant sur l'IA (ouvert à la signature en 2024) | `breaking` lors de la ratification par toute juridiction de déploiement CIRIS ; dossier WA ouvert automatiquement |
+| `un.org/techenvoy` (Organe Consultatif de l'ONU sur l'IA) | Recommandations de gouvernance de l'IA au niveau de l'ONU | `material` si le rapport annuel nomme des obligations architecturales spécifiques |
+| `budapestconvention.org` (Convention sur la Cybercriminalité) | Ratification du traité dans le domaine cyber | `breaking` lors d'une nouvelle ratification ; réévaluation CRE requise pour les déploiements en réseau ST ≥ 3 |
+| Registres nationaux de stratégie IA (EU, US, UK, JP, AU, BR, IN, ZA) | Mises à jour des stratégies nationales d'IA ayant force juridique | `minor` pour la stratégie ; `material` si la stratégie crée des obligations de conformité obligatoires |
+
+**Participation au niveau de la Fédération :**
+
+La Fédération CIRIS n'est pas simplement un récepteur de conformité. MH §§219–221 désignent le dialogue et la négociation comme la méthode principale de coexistence. En termes opérationnels CIRIS :
+
+- Le conseil WA DEVRA désigner au minimum un Délégué au Dialogue Réglementaire (RDL) par organisme international de normalisation actif listé ci-dessus.
+- Le RDL examine les projets de réglementation durant les périodes de consultation publique et soumet des commentaires via le canal public de la Fédération. Les commentaires sont consignés dans la Wisdom Bank Database (WBD) en tant qu'enregistrements de dialogue réglementaire.
+- Lorsqu'un projet de réglementation entre en conflit avec les paramètres par défaut CIRIS, le RDL dépose un dossier WA et initie un mini‑PDMA pour évaluer si CIRIS doit s'adapter ou si CIRIS devrait plaider en faveur d'une voie réglementaire différente. Le résultat est soumis en tant que commentaire public avant la date limite de consultation.
+- La participation se limite aux processus de consultation publique et aux consultations multi-parties prenantes. La Fédération CIRIS ne s'engage pas dans des activités de lobbying au sens de la législation applicable.
+
+**Chemin d'escalade :**
+
+| Étiquette | Déclencheur | Action |
+|---|---|---|
+| `minor` | Changement de surveillance uniquement | Révision annuelle ; consigné dans l'enregistrement WBD de dialogue réglementaire |
+| `material` | Mise à jour du contrôle CIRIS requise | Audit S‑Dive dans les 90 jours ; le RDL dépose un commentaire public si la période de consultation est ouverte |
+| `breaking` | Correctif de spécification ou dossier WA immédiat | Session WA d'urgence ≤ 30 jours ; réévaluation CRE pour les niveaux ST concernés ; soumission de commentaire public par le RDL |
+| `multilateral-erosion` | Affaiblissement d'une institution ou d'un traité multilatéral clé (selon MH §201) | Le RDL escalade vers le WA pour un examen stratégique ; la Fédération envisage une déclaration publique explicite de soutien à l'institution |
+
+---
+
+### 7. Dossier de Preuves de Conformité (CEP)
+
+*MH §105 :* « La possibilité d'identifier qui doit "rendre compte" des décisions, les justifier, les surveiller et, si nécessaire, les contester et remédier à tout préjudice causé. »
+
+Chaque **F‑Audit** (Annexe H) DOIT exporter un fichier zip CEP contenant :
+
+1. `dp-map.yaml` — correspondance croisée en temps réel, incluant le champ `controller_si_threshold` et le pointeur `bias_audit_ref` (§1.1).
+2. Journaux PDMA (expurgés) prouvant la base juridique — incluant les valeurs de champ `processing_basis` et `stage_trace[]` pour toutes les décisions ST ≥ 3.
+3. CSV du registre DSR — incluant le taux d'achèvement du champ `decision_logic_summary` (extension KPI F‑T‑4) et le journal `suspended_pathway_id`.
+4. Bundle de signatures (`.sigstore`) de tous les artefacts du modèle (Annexe G).
+5. Feuilles de superposition par secteur — incluant `worker_impact_assessment` et `youth_impact_assessment` pour les domaines applicables.
+6. Reconnaissance de la matrice de responsabilité signée par le service juridique — incluant les nouveaux vecteurs : déplacement de main-d'œuvre, conception pour les jeunes, mauvaise attribution cyber.
+7. Analyse du décalage des changements réglementaires — date du dernier changement réglementaire substantiel par rapport à la date de la dernière mise à jour du contrôle CIRIS ; un écart ≥ 90 jours exige une explication.
+8. Registre de participation au dialogue réglementaire — entrées WBD pour toute soumission au dialogue réglementaire durant la période d'audit ; « aucune soumission » est acceptable si aucun règlement substantiel n'était en consultation publique.
+9. Registre d'achèvement de la contestabilité — pour toutes les décisions A3‑A4 durant la période d'audit : pourcentage pour lequel un examen humain a été demandé, pourcentage pour lequel la documentation WBD a été complétée dans un délai de 15 jours ; objectif KPI ≥ 90 %.
+
+Le CEP est haché et téléversé dans `/compliance/cep/{version}.zip` ; le hachage racine est ancré dans le journal de transparence. Les preuves de niveau dimension qui sous-tendent le CEP sont conservées dans le répertoire `compliance/` de CIRISAgent (Addendum 1 de l'Accord).
+
+---
+
+### 8. Interconnexions Inter-Annexes
+* **Annexe F :** Les Niveaux d'Autonomie garantissent les exigences de présence humaine dans la boucle décisionnelle conformément à l'Art. 22 du RGPD et à l'Art. 16 de la Loi européenne sur l'IA.  
+* **Annexe G :** Les défenses de confidentialité TX‑6 satisfont aux recommandations de pseudonymisation du RGPD (Considérant 28).  
+* **Annexe H :** La chronologie du F‑Audit fournit des preuves pour les obligations de réévaluation périodique prévues à l'Art. 61 de la Loi européenne sur l'IA.  
+* **Annexe J :** Les explications des critères de référence fournissent des « informations utiles » pour les requêtes relatives aux décisions automatisées (Art. 15(1)(h) du RGPD).  
+* **§3.2 Superposition travail/RH → CRE Annexe D :** Les déploiements dans le domaine du travail au niveau ST plancher 3 doivent satisfaire au Protocole CRE avant déploiement.  
+* **§6.1 Participation RDL → Structure WA Annexe B :** Le RDL est un rôle Wise Authority désigné ; les procédures de nomination, de récusation et de rotation suivent l'Annexe B §9.  
+* **§5 Matrice de responsabilité (nouveaux vecteurs) → SI Annexe E :** La responsabilité conjointe en matière de conception pour les jeunes utilise la même formule de répartition SI que les vecteurs existants.  
+* **§7 Élément CEP 8 (dialogue réglementaire) → §6 Suivi :** Les registres de dialogue réglementaire WBD constituent la source pour l'élément CEP 8 ; aucun système de journalisation distinct.  
+* **Annexe C :** Emplacement futur des correspondances statutaires (articles de la Loi européenne sur l'IA, NIST AI RMF, ISO/IEC 42001) en attente d'examen juridique.
+
+---
+
+### 9. Références
+* RGPD (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* Règle de confidentialité HIPAA (45 CFR §164), Garanties GLBA (16 CFR 314)  
+* Loi européenne sur l'IA (texte 2024), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Directive sur le travail via des plateformes (UE) 2024/2831  
+* Loi sur les services numériques (UE) 2022/2065, Art. 28b (mineurs)  
+* Convention-cadre du Conseil de l'Europe sur l'intelligence artificielle (CETS 225, ouverte à la signature en 2024)  
+* Convention de Budapest sur la cybercriminalité (STE 185) et Deuxième Protocole additionnel (2022)  
+* Recommandation de l'OCDE sur l'intelligence artificielle (2019, révisée en 2024)  
+* Groupe de travail UIT‑T sur l'IA/ML — production de normes techniques  
+* Rapports de l'Organe consultatif du Secrétaire général de l'ONU sur l'IA (2024–)  
+* *Magnifica Humanitas*, Pape Léon XIV (15 mai 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+Fin de l'Annexe I

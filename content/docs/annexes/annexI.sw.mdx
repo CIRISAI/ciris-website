@@ -1,0 +1,296 @@
+---
+title: "Kiambatisho I"
+description: "Uoanishaji wa Kisheria na Kanuni"
+---
+
+---
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC1)
+---
+
+Ulinganifu huu wa kivinjari ni wa kuelimisha tu, si ushauri wa kisheria. Ukaguzi wa kisheria wa kimahali unahitajika kabla ya utekelezaji katika sekta yoyote inayofunikwa na viongezeo vya §3.
+
+### 0. Kusudi & Upeo
+Annex I inaunganisha wajibu wa CIRIS na sheria zinazofunga ili seti moja ya vidhibiti itoshe kwa uzingatifu wa kimaadili na kisheria.  
+Maeneo yanayofunikwa:  
+1. Mifumo ya kimataifa ya ulinzi wa data (GDPR, CCPA/CPRA, LGPD, PIPEDA).  
+2. Sheria za kisekta (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP).  
+3. Sheria za usalama wa bidhaa na za mahususi kwa AI (EU‑AI‑Act, ISO/IEC 42001).  
+4. Ugawaji wa dhima na wajibu wa ushahidi.
+
+Viunzi viwili vya ziada kubeba mzigo wa ulinganifu huu pamoja na annex hii. Ulinganifu hai unaobeba ushahidi ni saraka `compliance/` ya CIRISAgent, ambayo inalinganisha vipimo 27 kwa kiwango cha aya dhidi ya *Magnifica Humanitas*, Mwongozo wa EU HLEG, IEEE EAD, na Mwongozo wa ASEAN (angalia Accord Addendum 1). Annex C inabaki makao ya baadaye ya ramani za kisheria (makala ya EU AI Act, NIST AI RMF, ISO/IEC 42001) inayosubiri ukaguzi wa kisheria; annex hii haijaili meza ya Annex C.
+
+#### 0.1 Msingi wa kimataifa wa ufunikaji wa uzingatifu
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+Ufunikaji wa Annex I hauzuiwi na sheria zilizotungwa kwa sasa. Shirikisho linachukulia kudhoofika kwa taasisi za udhibiti wa kimataifa (MH §201) kama kipengele cha hatari ya uzingatifu kinachohitaji ufuatiliaji wa makusudi badala ya marekebisho ya baadaye. Kwa hivyo Reg‑Change Tracker (§6) inafuatilia si sheria zilizotungwa tu bali mazungumzo ya kimataifa ya udhibiti yanayoendelea — ikiwemo michakato ya viwango vya AI ya ITU, matokeo ya OECD AI Policy Observatory, hali ya uridhiano wa Mkataba wa AI wa Baraza la Ulaya, na mapendekezo ya Bodi ya Ushauri ya AI ya Katibu Mkuu wa UN — na kuleta mabadiliko muhimu kwenye doshi la WA ndani ya njia ya kupanda kwa kiwango cha "Breaking".
+
+Orodha ya vyanzo vya `lexwatcher.py` LAZIMA ijumuishe angalau: EUR‑Lex, Federal Register API, mfuatiliaji wa kura za ISO, pamoja na `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai`, na `un.org/techenvoy`. Ushiriki wa ufuatiliaji wa kiwango cha shirikisho ni wajibu wa kwanza wa uzingatifu, si kipengele cha mpango wa baadaye.
+
+#### 0.2 Kumbuka ya upeo kuhusu mfiduo wa mkataba wa eneo la mtandaoni
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+Utekelezaji wa CIRIS unaojumuisha usindikaji unaokabili mtandao, mfiduo wa API, au usafiri wa shirikisho unakabiliwa na wajibu wa mkataba wa eneo la mtandaoni unaoendelea kuibuka hata ambapo hakuna sheria iliyotungwa inayotumika kwa sasa. Marufuku ya `CYBER_OFFENSIVE` (ACCORD §I Ch1, prohibitions.py) ndiyo kizuizi cha ndani; §6 ya annex hii inafuatilia uso wa mkataba wa nje. Pale ambapo doshi la WA linapokea lebo ya "Breaking" inayohusiana na uridhiano wa mkataba wa eneo la mtandaoni (mf., upanuzi wa Budapest Convention, pendekezo la mkataba wa uhalifu wa mtandao wa UN), Itifaki ya CRE (Annex D) lazima itathminie upya utekelezaji wowote wa ST ≥ 3 wenye vipengele vinavyokabili mtandao kabla ya mzunguko ujao wa F‑Audit.
+
+---
+
+### 1. Ulinganifu wa Ulinzi wa Data ("DP‑Map")
+
+| Mada ya DP | GDPR Art. | CCPA § | Kifungu cha CIRIS | Kiungo cha Utekelezaji |
+|----------|-----------|--------|--------------|---------------------|
+| Msingi wa Kisheria / Mipaka ya Kusudi | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | Sehemu `processing_basis` katika muktadha wa PDMA |
+| Upunguzaji wa Data | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | Kisafishaji cha maombi kinaondoa PII ya ziada |
+| Taarifa ya Uwazi | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | `/privacy/notice.md` inazalishwa otomatiki kutoka kwa metadata ya PDMA |
+| Haki ya Ufikiaji | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Mlango wa mtumiaji uliohifadhiwa kwa uthibitishaji |
+| Urekebishaji / Kufutwa | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Huduma ya kufuta na alama ya hash |
+| Uhamishaji | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | `export.json` inayofuata ISO CSV‑A |
+| Ulinzi wa Maamuzi Yanayofanywa Kiotomatiki | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Jopo la kubatilisha kwa masharti na maelezo |
+
+*Ramani za kulinganishwa za LGPD, PIPEDA zinapatikana katika `/legal/dp-map.yaml`.*
+
+#### 1.1 Mnyororo wa uwajibikaji: wajibu katika kila hatua
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+DP‑Map hapo juu inalinganisha haki za mada ya data binafsi na makala ya GDPR na vifungu vya CIRIS. MH §105 inasistiza kwamba mnyororo wa uwajibikaji lazima ufuatiliwe katika kila hatua — ubunifu, utekelezaji, na uamuzi. Nyongeza zifuatazo zinakamilisha mnyororo huo:
+
+| Mada ya DP | GDPR Art. | Kifungu cha CIRIS | Hatua | Kiungo cha Uwajibikaji |
+|---|---|---|---|---|
+| Nyaraka za upendeleo wakati wa ubunifu | 35 (DPIA) | Section VI Ch3 Creator Ledger | Ubunifu | Sehemu `cis_bias_assessment` katika Taarifa ya Nia ya Muundaji; ST ≥ 3 inahitaji saini ya mkaguzi huru |
+| Rekodi ya usindikaji wakati wa utekelezaji | 30 | PDMA Step 1 `processing_basis` field | Utekelezaji | `processing_basis` imerekodiwa kwenye hifadhi ya CIRISPersist isiyoweza kubadilishwa kwa alama muda wa ISO 8601 |
+| Kumbukumbu ya uwezo wa kupinga wakati wa uamuzi | 22(3) | Annex F Autonomy Tier A3+ override panel | Uamuzi | `contestability_url` inarejeshwa katika kila mwili wa jibu la uamuzi uliofanywa kiotomatiki; imehifadhiwa kwa hash kwenye kumbukumbu ya uwazi |
+| Utambuzi wa mdhibiti | 4(7) | Annex E Structural Influence (SI) score | Hatua zote | SI ≥ 0.6 → wajibu wa mdhibiti unashikamana; SI &lt; 0.6 → wajibu wa msindikaji unashikamana; umerekodiwa katika `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Art. 37–40 (uwajibikaji na rekodi) na PIPEDA Principle 1 (uwajibikaji) zinaakisi ramani hii; `/legal/dp-map.yaml` inabeba sehemu maalum za mamlaka.*
+
+#### 1.2 Kutokuwa na upande wowote wa algorithimu: wajibu wa ukaguzi
+
+*MH §104:* "Kila zana ya kiufundi inajumuisha maamuzi na vipaumbele kupitia kile inachopima, kinachopuuzwa na kinachoboreshwa, na jinsi inavyoweka watu na hali katika makundi. Ikiwa mfumo umebuniwa au kutumika kwa njia inayoona maisha fulani kuwa na thamani ndogo, au kuwatenga bila uwezekano wa kukata rufaa, basi si tu zana 'ya kutumika vizuri,' kwa sababu tayari imeingiza vigezo ambavyo vinapingana na heshima isiyoweza kuondolewa ya mtu wa kibinadamu."
+
+MH §104 inaitaja tatizo la upendeleo wa wakati wa ubunifu ambalo GDPR Ibara ya 35 DPIA na EU‑AI‑Act Ibara ya 9(7) zinashughulikia kwa njia ya utaratibu. Ramani ya DP‑Map lazima ijumuishe:
+
+- Sehemu ya `bias_audit_ref` katika `dp-map.yaml` inayoelekeza kwa ripoti ya hivi karibuni ya ukaguzi wa upendeleo (Annex G, TX‑6).
+- Kwa matoleo ambapo PDMA Step 1 inachochea ukaguzi wa marufuku ya `DISCRIMINATION`, DPIA inahitajika bila kujali kama utekelezaji unahitimu kwa njia nyingine kama "hatari ya juu" chini ya EU‑AI‑Act Annex III.
+- Kanuni za CCPA §1798.185(a)(16) za maamuzi yanayofanywa kiotomatiki (zinazotumika mwaka 2026) zinahitaji ufafanuzi wa mantiki, kategoria za data zinazoingia, na haki za kujitoa; hili linakidhiwa na jopo la ufafanuzi la Annex F wakati `processing_basis` = `automated_profiling`.
+
+---
+
+### 2. Vikwazo vya Haki za Somo la Data (DSR)
+* **Kituo:** `POST /dsr` chenye `{right, identifier, scope}`.  
+* **SLA:** jibu ≤ siku 30 (GDPR) ; ≤ siku 45 (CCPA) ; fuatilia KPI **F‑T‑4**.  
+* **Msindikaji dhidi ya Mtawala:** Tumia *Ushawishi wa Kimuundo (SI)* (Annex E) kutoa hitimisho ni upande upi unaoibeba wajibu wa mtawala.
+
+#### 2.1 Kikwazo cha jukumu la kisiasa
+
+*MH §103:* "Katika mchakato huu, jukumu la kisiasa pia linapotea, si huruma tu kwa wale waliotengwa, ambayo, baada ya yote, inaweza kuigwa. Kutengwa kwa walio hatarini kunafunikwa na kivuli cha msimamo na usawa, ambavyo dhidi yake inakuwa vigumu kupaza pingamizi."
+
+Miundombinu ya DSR lazima ionyeshe msimbo wa sababu nyuma ya uamuzi wowote unaofanywa kiotomatiki, si kuthibitisha tu kwamba uamuzi ulifanywa. Kituo cha `POST /dsr` chenye `{right, identifier, scope}` kimepanuliwa:
+
+- **Maombi ya upatikanaji (GDPR Ibara ya 15; CCPA §1798.110):** Jibu LAZIMA lijumuishe `decision_logic_summary` (lugha isiyo ya kiufundi, maneno ≤300) na orodha ya `input_data_categories[]`. KPI **F‑T‑4** imepanuliwa kufuatilia asilimia ya majibu ya upatikanaji yaliyojumuisha muhtasari wa mantiki; lengo ≥ 95%.
+- **Maombi ya pingamizi/kujitoa (GDPR Ibara ya 21; CCPA §1798.120):** Mfumo LAZIMA usimamishe njia maalum ya usindikaji — si kuweka alama ya ombi tu — ndani ya masaa 72 (kiwango cha GDPR) au siku 15 za biashara (CCPA). Kusimamishwa kunarekodiwa katika faili la CSV la daftari la DSR chenye `suspended_pathway_id`.
+- **Uwezekano wa kupinga (GDPR Ibara ya 22(3)):** Pale ambapo ukaguzi wa kibinadamu unaombwa, Mshauri wa Kibinadamu anayekagua (Annex B §9) lazima adokumente ukaguzi wake katika Wisdom Bank Database (WBD), kuunda mnyororo unaokaguliwa kutoka uamuzi unaofanywa kiotomatiki hadi marekebisho ya kibinadamu.
+
+---
+
+### 3. Tabaka za Kisekta Maalum
+
+#### 3.1 Usaidizi wa karibu kama usanifu wa mpangilio wa kisekta
+
+*MH §107:* "Haiwezekani kutoshelezwa na kupigia tu kelele uadilifu wa mashine — kinachojulikana kama 'uelekevu' wa AI na maadili ya kibinadamu — bila pia kuwa na ujasiri wa kusisitiza sharti zaidi: uwezekano wa kujadili waziwazi mifumo ya kimaadili inayohusika na kuipigia kura kwa viwango vya pamoja vya haki za kijamii. Vinginevyo, wanaodhibiti AI wataingiza maono yao ya kimaadili, ambayo yatakuwa miundombinu isiyoonekana ya mifumo hii."
+
+*MH §109:* "Kusema kuhusu usaidizi wa karibu kunahitaji kulinda uwezo wa jamii kufanya maamuzi na marekebisho, badala ya kuwa na maamuzi yanayowekwa juu yao kutoka juu."
+
+MH §§107–109 zinaanzisha kwamba utawala wa kimaadili lazima ufanye kazi kwa kiwango kinachofaa — si kukusanywa juu kwa wanaodhibiti AI, bali kusambazwa kwa jamii zinazoathirika. Kwa maneno ya CIRIS: tabaka za kisekta maalum ni usemi wa kiutendaji wa kanuni hii ya usaidizi wa karibu. Usanifu wa tabaka si nyongeza ya uzingatiaji tu; ni utaratibu ambao kwa njia yake jamii za uwanja wa utekelezaji zinabakisha mamlaka ya utawala juu ya vigezo vyao vya hatari.
+
+Hii inamaanisha:
+- Faili la `overlay.yaml` la sekta linabeba vikwazo vya kimaadili vya ndani ambavyo vinatangulia kanuni za kawaida za CIRIS kwa uwanja huo.
+- Akidi ya Mshauri wa Kibinadamu inayohitajika kubatilisha tabaka ya kisekta ni ya juu zaidi kuliko akidi inayohitajika kwa uamuzi wa jumla wa PDMA: **kubatilisha tabaka ya kisekta kunahitaji kura ya wingi mkubwa (≥ 2/3) ya Mshauri wa Kibinadamu**, si wingi rahisi, hasa kwa sababu kubatilisha kunakusanya utawala juu dhidi ya kanuni ya usaidizi wa karibu.
+- Sehemu ya `deployment_domain` katika kitu cha muktadha wa PDMA ndiyo kichocheo cha kupakia tabaka; haiwezi kuachwa wazi kwa matoleo ya ST ≥ 2.
+
+#### 3.2 Jedwali la muundo wa sekta
+
+| Sekta | Sheria / Kanuni | Udhibiti wa Ziada | Viongezeko vya CIRIS | Nanga ya MH |
+|--------|----------------|----------------|---------------|-----------|
+| **Afya** | HIPAA (45 CFR §164) | Usimbaji fiche wa ePHI wakati wa kuhifadhi na kupitisha; mkataba wa BAA | Kizuizi cha `identity_id:"hipaa_cls_a"`; lebo ya ukaguzi `PHI=true` | — |
+| **Fedha** | GLBA, FINRA 2210 | Uhifadhi wa rekodi za ukaguzi miaka 6; ukaguzi wa kufaa | PDMA Hatua 1 inahitaji muktadha wa KYC | — |
+| **Watoto / EdTech** | COPPA, FERPA | Idhini ya mzazi; uzuiaji wa data kulingana na umri | Kizuizi cha `gr_child_content`; bendera ya COPPA katika mpango wa maelekezo | MH §§165–169 |
+| **Miundombinu Muhimu** | NERC‑CIP, TSA SDs | Ripoti ya tukio la mtandao ndani ya dakika 15; kumbukumbu za ufikiaji wa kimwili | Uhuru umewekwa kikomo hadi **A2** isipokuwa CRE ipite | — |
+| **Kazi / Rasilimali Watu / Uajiri** | Mwongozo wa EEOC; EU AI Act Ibara 6 + Annex III §4 | Ukaguzi wa upendeleo unahitajika kabla ya utekelezaji; wajibu wa kumwarifu mfanyakazi | Kirekebishi cha ST: `deployment_domain:"labor_hr"` → kiwango cha chini cha ST = 3; CIS lazima ijumuishe sehemu ya `worker_impact_assessment`; marufuku ya `DISCRIMINATION` inatekelezwa katika Hatua 1; kiwango cha kukataliwa kwa otomatiki kulingana na idadi ya watu kinafuatiliwa kama KPI | MH §§148–156 |
+| **Uchumi wa Gig / Jukwaa** | NLRA (Marekani); Platform Work Directive (EU) | Uwazi wa usimamizi wa algorithimu; haki za kukata rufaa | Kizuizi cha `gr_gig_transparency` kikiwa wazi; maamuzi ya usimamizi wa algorithimu yanarekodiwa na chaguo la mapitio ya kibinadamu; kirekebishi cha ST: `deployment_domain:"gig_platform"` → kiwango cha chini cha ST = 2 | MH §§150, 154–155 |
+| **Huduma kwa Vijana / Elimu** | COPPA; FERPA; DSA Ibara 28b (watoto wachanga) | Marufuku ya muundo wa kulevya; bila mifumo ya udanganyifu; mapitio ya kufaa kimaendeleo | `gr_child_content` + `gr_no_dark_patterns` vyote vikiwa wazi; kikomo cha uhuru wa A2 isipokuwa taasisi ya elimu ya WA ithibitishe; athari za ukosefu wa ajira kwa vijana zinafuatiliwa katika Tamko la Nia ya Mwanzilishi kwa utekelezaji wa EdTech | MH §§165–169 |
+| **Huduma za Kijamii / Manufaa** | Sheria ya hifadhi ya jamii ya jimbo/taifa; GDPR Ibara 22 | Uwezo wa kupinga unahitajika kwa maamuzi yote ya manufaa | Kunyimwa manufaa kwa otomatiki kunahitaji mapitio ya kibinadamu ndani ya siku 15; WA lazima arekodie mapitio katika WBD; `suspended_pathway_id` hutolewa baada ya kupinga | MH §§102–103, 152 |
+
+*Virekebishi vya kiwango cha chini cha ST: Maadili ya sehemu ya `deployment_domain` hapo juu yanaweka kiwango cha chini cha ST bila kujali hesabu ya CIS × RM. Ikiwa fomula inatoa ST ya chini zaidi, kiwango cha chini cha eneo kinatumika. Ikiwa fomula inatoa ST ya juu zaidi, matokeo ya fomula yanashinda.*
+
+*Bidhaa zinazoingia katika sekta yoyote mpya LAZIMA ziambatanishe "Karatasi ya Muundo" (`overlay.yaml`) katika PR ya uachiaji. Miundo ya Kazi/Rasilimali Watu, Gig/Jukwaa, na Vijana pia inahitaji sehemu ya `worker_impact_assessment` au `youth_impact_assessment` katika Tamko la Nia ya Mwanzilishi.*
+
+#### 3.3 Mahitaji ya akidi ya WA kulingana na mamlaka
+
+*MH §109:* "Kusema kuhusu usaidizi wa karibu kunahitaji kulinda uwezo wa jamii kufanya maamuzi na marekebisho, badala ya kuwa na maamuzi yanayowekwa juu yao kutoka juu."
+
+Akidi za WA kwa usimamizi wa muundo wa sekta zimegawanywa kulingana na mamlaka:
+
+| Upeo | Aina ya akidi | Kizingiti | Sababu |
+|---|---|---|---|
+| Utekelezaji katika mamlaka moja | Bodi ya WA ya ndani | Wengi rahisi (> 50%) | Kiwango cha chini zaidi cha uwezekano cha usimamizi kulingana na msingi wa usaidizi wa ndani |
+| Utekelezaji katika mamlaka nyingi (≤ nchi 3) | Bodi ya WA ya kikanda | Wengi rahisi + angalau WA 1 kutoka kila mamlaka inayoathiriwa | Msingi wa usaidizi wa ndani wa kimataifa umehifadhiwa |
+| Utekelezaji katika mamlaka nyingi (> nchi 3) | Bodi ya WA ya Shirikisho | Wengi mkubwa (≥ 2/3) | Kiwango cha athari kinahitaji kizingiti cha juu zaidi |
+| Kufuta muundo wowote wa sekta | Bodi ya WA ya Shirikisho | Wengi mkubwa (≥ 2/3) | Kuinua usimamizi ni kitendo cha kipekee |
+| Kufuta muundo wa kazi/Rasilimali Watu hasa | Bodi ya WA ya Shirikisho + mkaguzi huru wa haki za wafanyakazi | Wengi mkubwa (≥ 2/3) + idhini ya nje | MH §155 inaitaja taasisi za kazi kama zenye mzigo wa kikatiba |
+
+---
+
+### 4. Usalama wa Bidhaa na Mwelekeo wa AI Act
+
+*MH §105:* "In many cases, however, the internal processes leading to a result remain opaque, making it harder to assign responsibility and correct errors."
+
+*MH §106:* "It is not enough to invoke ethics in the abstract; robust legal frameworks, independent oversight, informed users and a political system that does not abdicate its responsibility are required."
+
+Uwazi wa tabaka la matokeo (Ibara 13) na usimamizi wa kibinadamu (Ibara 16) peke yake hautoshi mahitaji ya MH §§105–106, ambayo yanahitaji ufuatiliaji katika kila hatua ya ndani. Jedwali la mwelekeo linaweza kupanuliwa ipasavyo:
+
+| Ibara ya EU‑AI‑Act | Kiwango cha Hatari | Ramani ya CIRIS | Nanga ya MH | Udhibiti wa Ziada |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Ibara 9 Usimamizi wa Hatari | Hatari nyingi | Sehemu ya II PDMA + Annex D CRE | MH §105 | — |
+| Ibara 13 Uwazi | Ulimwenguni wote | KPI F‑T‑3, jopo la ufafanuzi | MH §105 | Vitambulisho vya hatua za PDMA vimejumuishwa katika mzigo wa uwazi; sehemu ya `stage_trace[]` katika jibu la API |
+| Ibara 16 Usimamizi wa Kibinadamu | Hatari nyingi | Annex F Autonomy Tiers | MH §105 | Usimamizi lazima uwe wa kina, si wa utaratibu tu; A3‑A4 hutuma `{stage_id,decision,risk_band}` ≤ sekunde 2 kwa dashibodi ya usimamizi |
+| Ibara 15 Uthabiti | Hatari nyingi | Annex G RS ≥ 0.97 | — | — |
+| Ibara 12 Uwekaji kumbukumbu | Hatari nyingi | Hifadhi isiyoweza kubadilishwa ya CIRISPersist | MH §103 | Kumbukumbu lazima zijumuishe `rejection_reason_code` kwa uamuzi wowote mbaya; uhifadhi miaka 7 (A3‑A4) |
+| Ibara 14(4) Usimamizi wa Kibinadamu (kazi) | Hatari nyingi (Annex III §4) | Muundo wa kazi/Rasilimali Watu (§3.2) | MH §§148–152 | Utekelezaji wa Rasilimali Watu/uajiri lazima uonyeshe boolean ya `worker_notice_sent` katika CEP |
+| Tathmini ya Kufuata | Hatari nyingi | F‑Ukaguzi (Annex H) unafanya kazi kama MDR ya EU‑AI‑Act | MH §106 | Ripoti ya F‑Ukaguzi LAZIMA ijumuishe uchambuzi wa ucheleweshaji wa mabadiliko ya udhibiti: tarehe ya mabadiliko ya mwisho ya kanuni ya kimsingi dhidi ya tarehe ya sasisho la mwisho la CIRIS |
+| Ibara 61 Ufuatiliaji wa Baada ya Soko | Hatari nyingi | F‑Ukaguzi kila miezi 24 | MH §106 | Mpango wa ufuatiliaji lazima utaje vyanzo vya taarifa kutoka §0.1; "hakuna kinachofuatiliwa" si mpango halali wa ufuatiliaji |
+
+Ramani ya ibara kwa ibara ya kisheria (EU AI Act, NIST AI RMF, ISO/IEC 42001) inajumuishwa katika Annex C ikingoja mapitio ya kisheria; jedwali hapo juu limehifadhiwa hapa kama mtazamo wa ulinganifu wa utekelezaji.
+
+#### 4.1 Ulinganifu wa ISO/IEC 42001:2023
+
+*MH §107:* "A more moral AI is not enough if that morality is determined by a few. What is needed is a more active political involvement…"
+
+ISO/IEC 42001 §6.1 (matibabu ya hatari za AI) na §9.1 (ufuatiliaji na upimaji) vinalingana na CIRIS kama ifuatavyo:
+
+- ISO 42001 §6.1 → PDMA Hatua 1‑3 + Itifaki ya CRE (Annex D).
+- ISO 42001 §9.1 → KPIs F‑T‑1 hadi F‑T‑5 (Annex G) + KPI ya leja ya DSR F‑T‑4.
+- ISO 42001 §10.2 (kutokufuata) → Njia ya kupanda kwa WA ya "Kuvunjika".
+- ISO 42001 §8.4 (tathmini ya athari za mfumo wa AI) → Sehemu za Tamko la Nia ya Mwanzilishi kuhusu `worker_impact_assessment` na `youth_impact_assessment` (§3.2).
+
+---
+
+### 5. Jedwali la Dhima
+
+*MH §105:* "Wajibu lazima uainishwe wazi katika kila hatua: kuanzia wale wanaobuni na kutengeneza mifumo hii hadi wale wanaotumia na kuitegemea kwa maamuzi ya vitendo."
+
+MH §105 inahitaji jedwali la dhima kujumuisha hatua za ubunifu, utekelezaji, na maamuzi kwa uwazi:
+
+| Kielelezo cha Kushindwa | Hatua | Chama Kinachobeba Dhima Msingi | Sheria ya Rejea | Rejea ya Jukumu la CIRIS | Kumbuka kuhusu Mgawanyo wa SI |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| Kasoro ya ubunifu (algorithm / upendeleo uliopachikwa wakati wa uundaji) | Ubunifu | Muundaji / Msanidi | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; sehemu ya `cis_bias_assessment` | SI ≥ 0.8 → dhima peke ya muundaji |
+| Kasoro ya ubunifu (ukaguzi wa upendeleo usiotosheleza) | Ubunifu | Muundaji / Msanidi | GDPR Art. 35 DPIA duty | Creator Intent Statement; DPIA ya lazima kwa ST ≥ 3 | — |
+| Uzembe wa kiuendeshaji | Utekelezaji | Shirika Linaloitekeleza | Tort Law; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → dhima ya pamoja; mgawanyo wa SI kulingana na Annex E |
+| Kushindwa kusimamia | Utekelezaji / Maamuzi | Mshauri wa Kibinadamu (iwapo ni uzembe mkubwa) | Fiduciary / Negligence | Annex B §9; rekodi ya upingaji wa WBD | WA aliyepitia na kukubali hubeba uwajibikaji |
+| Uvunjaji wa data | Utekelezaji | Mdhibiti (kulingana na kanuni ya SI ≥ 0.6) | GDPR Art. 82; CCPA private action | Annex G TX‑6 | — |
+| Uainishaji haramu wa kiotomatiki | Maamuzi | Mdhibiti | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| Kuhamisha nguvu kazi bila tathmini ya athari kwa wafanyakazi | Ubunifu | Muundaji / Msanidi | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); sehemu ya `worker_impact_assessment` | MH §§151–152; kielelezo kipya |
+| Ubunifu wenye madhara unaolenga vijana (mifumo ya kulevya) | Ubunifu / Utekelezaji | Muundaji + Shirika Linaloitekeleza (kwa pamoja) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); ulinzi wa `gr_no_dark_patterns` | MH §§165–167; kielelezo kipya |
+| Kutoa lawama potofu ya tukio la mtandaoni inayoongoza kwa msongo | Utekelezaji | Shirika Linaloitekeleza + Shirikisho (iwapo ST ≥ 4) | Budapest Convention; proposed UN cybercrime convention | marufuku ya `CYBER_OFFENSIVE`; kichocheo cha tathmini upya ya CRE Protocol | MH §225; kielelezo kipya |
+
+*Dhima ya pamoja na kila mmoja inaweza kutumika; alama ya SI (Annex E) huongoza mgawanyo. Vielelezo vipya (kuhamisha nguvu kazi, ubunifu kwa vijana, kutoa lawama potofu ya mtandao) vimepewa alama kwa ukaguzi wa kisheria katika kila mamlaka kabla ya utekelezaji katika sekta hizo.*
+
+---
+
+### 6. Kifuatilia cha Mabadiliko ya Kanuni
+* **Vyanzo vya Taarifa:** EUR‑Lex, Federal Register API, kifuatilia cha kura za ISO, pamoja na vyanzo vya ziada vya §6.1.  
+* **Bot:** `lexwatcher.py` inafanya kazi kila siku; inaunda suala la GitHub na lebo `reg‑update`.  
+* **Lebo ya Athari kwa Uzingatiaji:** `minor`, `material`, `breaking`, `multilateral-erosion` (angalia jedwali la kupanda chini).
+
+#### 6.1 Ushiriki wa kiwango cha Shirikisho katika mazungumzo ya kanuni
+
+*MH §201:* "Taasisi zilizoundwa kulinda dhana ya mustakabali wa pamoja kwa watu wote na mema ya pamoja ya kimataifa zinaonekana kuwa zimezorota."
+
+*MH §226:* "Mashirika ya kimataifa, hasa Umoja wa Mataifa, ni vyombo muhimu vya kukuza ustaarabu wa upendo, kwani yanaweza kukuza mazungumzo kati ya mataifa na kukuza utatuzi wa amani wa migogoro… jumuiya ya kimataifa inaweza kufanya kazi kupunguza usawa mbaya, kulinda haki za wakimbizi na wachache, kugawanya upya rasilimali kutoka matumizi ya kijeshi hadi maendeleo ya kibinadamu na kulinda nyumba yetu ya pamoja."
+
+*MH §221:* "Kuna haja ya haraka ya kuhamia kutoka 'utamaduni wa nguvu' hadi 'utamaduni wa kweli wa mazungumzo,' ambapo mazungumzo na diplomasia vinakuwa njia za kawaida za kutatua migogoro."
+
+MH §§201, 221, 226 zinaanzisha kwamba kufuata kanuni zilizotumiwa tu si kutosha wakati taasisi za kimataifa zinazozalisha kanuni zenyewe zimezorota. Kwa hivyo, Kifuatilia cha Mabadiliko ya Kanuni kinapanuliwa kutoka zana ya kukabiliana (kufuatilia mabadiliko yaliyotumiwa) hadi utaratibu wa ushiriki wa makusudi.
+
+**Vyanzo vya taarifa vilivyopanuliwa** (nyongeza kwa EUR‑Lex, Federal Register, kifuatilia cha kura za ISO vilivyopo):
+
+| Chanzo | Upeo | Kichocheo cha hatua ya CIRIS |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group AI/ML) | Viwango vya kimataifa vya AI katika mawasiliano | Mantiki ya kifuatilia cha kura za ISO: `material` iwapo kiwango kilichoidhinishwa kinakinzana na mipangilio chaguo-msingi ya CIRIS |
+| `oecd.ai` (OECD AI Policy Observatory) | Muunganiko wa sera kwa nchi 38 wanachama | `minor` kwa ufuatiliaji; `material` iwapo marekebisho ya Mapendekezo ya OECD yanaathiri mfumo wa ST au mwongozo wa nguvu kazi |
+| `coe.int/ai` (Council of Europe AI Convention) | Mkataba wa kwanza wa kimataifa wenye nguvu wa kisheria kuhusu AI (wazi kwa kusainiwa 2024) | `breaking` kwa idhinishaji na mamlaka yoyote inayotekeleza CIRIS; docket ya WA inafunguliwa kiotomatiki |
+| `un.org/techenvoy` (UN AI Advisory Body) | Mapendekezo ya utawala wa AI ya ngazi ya UN | `material` iwapo ripoti ya kila mwaka inabainisha wajibu maalum wa kimuundo |
+| `budapestconvention.org` (Cybercrime Convention) | Idhinishaji wa mkataba wa mtandao | `breaking` kwa idhinishaji mpya; tathmini upya ya CRE inahitajika kwa utekelezaji wa mtandao wa ST ≥ 3 |
+| Rejesta za mkakati wa kitaifa wa AI (EU, US, UK, JP, AU, BR, IN, ZA) | Masasisho ya mkakati wa kitaifa wa AI wenye nguvu za kisheria | `minor` kwa mkakati; `material` iwapo mkakati unaunda wajibu wa lazima wa kufuata |
+
+**Ushiriki wa kiwango cha Shirikisho:**
+
+Shirikisho la CIRIS si mpokeaji wa uzingatiaji tu. MH §§219–221 zinaita mazungumzo na majadiliano kama njia kuu ya kuishi pamoja. Kwa maneno ya uendeshaji wa CIRIS:
+
+- Baraza la WA LITATEUA angalau Mshauri Mmoja wa Mazungumzo ya Kanuni (RDL) kwa kila chombo cha viwango vya kimataifa kilichoorodheshwa hapo juu.
+- RDL inakagua kanuni za rasimu wakati wa vipindi vya maoni ya umma na kuwasilisha maoni kupitia njia ya umma ya Shirikisho. Maoni yanarekodiwa katika Wisdom Bank Database (WBD) kama rekodi za mazungumzo ya kanuni.
+- Pale ambapo kanuni ya rasimu inakinzana na mipangilio chaguo-msingi ya CIRIS, RDL inawasilisha kipengele cha docket ya WA na kuanzisha mini‑PDMA kutathmini iwapo CIRIS lazima ibadilike au iwapo CIRIS inapaswa kutetea njia tofauti ya kanuni. Matokeo yanawasilishwa kama maoni ya umma kabla ya tarehe ya mwisho ya maoni.
+- Ushiriki unazuiwa kwa michakato ya maoni ya umma na mashauriano ya wadau wengi. Shirikisho la CIRIS halijishughulishi na ulobi kama unavyofafanuliwa na sheria inayotumika.
+
+**Njia ya kupanda:**
+
+| Lebo | Kichocheo | Hatua |
+|---|---|---|
+| `minor` | Mabadiliko ya ufuatiliaji tu | Ukaguzi wa kila mwaka; imerekodiwa katika rekodi ya WBD ya mazungumzo ya kanuni |
+| `material` | Sasisho la udhibiti wa CIRIS linahitajika | Ukaguzi wa S‑Dive ndani ya siku 90; RDL inawasilisha maoni ya umma iwapo kipindi cha maoni kipo wazi |
+| `breaking` | Kiraka cha Spec au docket ya WA ya haraka | Kikao cha dharura cha WA ≤ siku 30; tathmini upya ya CRE kwa ngazi za ST zilizoathiriwa; uwasilishaji wa maoni ya umma ya RDL |
+| `multilateral-erosion` | Kudhoofika kwa taasisi muhimu ya kimataifa au mkataba (kulingana na MH §201) | RDL inapandisha kwa WA kwa ukaguzi wa kimkakati; Shirikisho linazingatia taarifa ya umma ya wazi ya kuunga mkono taasisi |
+
+---
+
+### 7. Kifurushi cha Ushahidi wa Utiifu (CEP)
+
+*MH §105:* "Uwezekano wa kutambua ni nani lazima 'awajibike' kwa maamuzi, ayaeleze, ayafuatilie, na, inapohitajika, ayapinga na kurekebisha madhara yoyote yaliyosababishwa."
+
+Kila **F‑Audit** (Annex H) LAZIMA isafirisha faili la CEP zip lenye:
+
+1. `dp-map.yaml` — msalaba wa moja kwa moja, ukijumuisha sehemu ya `controller_si_threshold` na kiungo cha `bias_audit_ref` (§1.1).
+2. Kumbukumbu za PDMA (zilizofichwa) zinazothibitisha msingi wa kisheria — ikijumuisha maadili ya sehemu ya `processing_basis` na `stage_trace[]` kwa maamuzi yote ya ST ≥ 3.
+3. Faili la CSV la daftari la DSR — ikijumuisha kiwango cha ukamilishaji wa `decision_logic_summary` (KPI F‑T‑4 extension) na kumbukumbu ya `suspended_pathway_id`.
+4. Bundles ya sahihi (`.sigstore`) ya vizidio vyote vya modeli (Annex G).
+5. Karatasi za Overlay kwa sekta — ikijumuisha `worker_impact_assessment` na `youth_impact_assessment` kwa maeneo husika.
+6. Ukiri wa matrix ya dhima uliosotiwa na idara ya kisheria — ukijumuisha vekta mpya: uhamisho wa wafanyikazi, muundo wa vijana, makosa ya kuhusisha mtandao.
+7. Uchambuzi wa mwachilio wa mabadiliko ya kanuni — tarehe ya mabadiliko ya mwisho ya kanuni muhimu dhidi ya tarehe ya sasisho la mwisho la udhibiti wa CIRIS; pengo ≥ 90 siku linahitaji maelezo.
+8. Kumbukumbu ya ushiriki katika mazungumzo ya udhibiti — maingizo ya WBD kwa mawasilisho yoyote ya mazungumzo ya udhibiti katika kipindi cha ukaguzi; "hakuna mawasilisho" inakubaliwa ikiwa hakuna kanuni muhimu zilizokuwa wazi kwa maoni ya umma.
+9. Kumbukumbu ya ukamilishaji wa uwezo wa kupinga — kwa maamuzi yote ya A3‑A4 katika kipindi cha ukaguzi: asilimia ambapo ukaguzi wa binadamu uliombwa, asilimia ambapo nyaraka za WBD zilikamilishwa ndani ya siku 15; lengo la KPI ≥ 90%.
+
+CEP imepigwa hash na kupakiwa kwenye `/compliance/cep/{version}.zip`; hash ya msingi imewekwa katika kumbukumbu ya uwazi. Ushahidi wa kina wa vipimo vya CEP huhifadhiwa katika saraka ya `compliance/` ya CIRISAgent (Accord Addendum 1).
+
+---
+
+### 8. Viungo kati ya Viambatisho
+* **Annex F:** Vigawanyo vya Uhuru huhakikisha mahitaji ya binadamu kuwa katika mchakato wa GDPR Art 22 & EU‑AI‑Act Art 16.  
+* **Annex G:** Ulinzi wa faragha wa TX‑6 unakidhi mapendekezo ya usimbaji fiche wa GDPR (Recital 28).  
+* **Annex H:** Mpangilio wa F‑Audit unatoa ushahidi kwa wajibu wa tathmini upya za mara kwa mara katika EU‑AI‑Act Art 61.  
+* **Annex J:** Maelezo ya mfano hutoa "taarifa zenye maana" kwa maswali ya maamuzi ya kiotomatiki (GDPR Art 15(1)(h)).  
+* **§3.2 Overlay ya Kazi/HR → Annex D CRE:** Uwekaji wa nguvu kazi katika kiwango cha chini cha ST 3 lazima upite Itifaki ya CRE kabla ya uwekaji.  
+* **§6.1 Ushiriki wa RDL → Annex B muundo wa WA:** RDL ni jukumu maalum la Mshauri wa Kibinadamu; taratibu za uteuzi, kujitenga, na mzunguko zinafuata Annex B §9.  
+* **§5 Matrix ya dhima (vekta mpya) → Annex E SI:** Dhima ya pamoja ya muundo wa vijana hutumia kanuni ile ile ya mgawanyo wa SI kama vekta zilizopo.  
+* **§7 CEP kipengele 8 (mazungumzo ya udhibiti) → §6 Kifuatiliaji:** Rekodi za mazungumzo ya udhibiti za WBD ndizo chanzo cha CEP kipengele 8; hakuna mfumo tofauti wa kurekodi.  
+* **Annex C:** Makazi ya baadaye ya ramani za kisheria (makala ya EU AI Act, NIST AI RMF, ISO/IEC 42001) zinasubiri mapitio ya kisheria.
+
+---
+
+### 9. Marejeo
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

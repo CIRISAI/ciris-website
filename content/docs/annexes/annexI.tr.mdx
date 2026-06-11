@@ -1,0 +1,296 @@
+---
+title: "Ek I"
+description: "Hukuki ve Düzenleyici Uyum"
+---
+
+---
+EK I HUKUKİ VE DÜZENLEYİCİ UYUM (v 1.3-RC1)
+---
+
+Bu çapraz yürüyüş bilgilendirme amaçlıdır; hukuki tavsiye niteliği taşımaz. §3 kapsamlarının örtüştüğü herhangi bir sektörde dağıtım öncesinde yargı bölgesine özgü hukuki inceleme zorunludur.
+
+### 0. Amaç ve Kapsam
+Ek I, CIRIS görevlerini bağlayıcı hukukla ilişkilendirerek hem etik hem de yasal uyum için tek bir kontrol kümesinin yeterli olmasını sağlar.  
+Kapsam alanları:  
+1. Küresel veri koruma rejimleri (GDPR, CCPA/CPRA, LGPD, PIPEDA).  
+2. Sektörel mevzuat (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP).  
+3. Ürün güvenliği ve yapay zekâya özgü yasalar (EU‑AI‑Act, ISO/IEC 42001).  
+4. Sorumluluk dağılımı ve delil yükümlülükleri.
+
+Bu ek ile birlikte çapraz yürüyüş yükünü iki yardımcı eser taşımaktadır. Canlı, kanıt içeren çapraz yürüyüş; 27 boyutu paragraf düzeyinde *Magnifica Humanitas*, AB HLEG Yönergeleri, IEEE EAD ve ASEAN Rehberine karşı eşleştiren CIRISAgent `compliance/` dizinidir (bkz. Accord Addendum 1). Ek C, hukuki inceleme tamamlanana dek yasal eşlemelerin (AB Yapay Zeka Yasası maddeleri, NIST AI RMF, ISO/IEC 42001) kalıcı yeri olmaya devam edecektir; bu ek, Ek C'nin tablosunu tekrar etmemektedir.
+
+#### 0.1 Uyum kapsamının çok taraflı temeli
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+Ek I kapsamı, yürürlükteki mevzuatla sınırlı değildir. Federasyon; çok taraflı düzenleyici kurumların zayıflamasını (MH §201) reaktif yama değil, proaktif izleme gerektiren bir uyum riski faktörü olarak değerlendirir. Bu nedenle Düzenleme Değişikliği İzleyicisi (§6), yalnızca yürürlüğe girmiş yasaları değil, aktif uluslararası düzenleyici diyalogları da — ITU yapay zeka standart süreçleri, OECD AI Policy Observatory çıktıları, Avrupa Konseyi AI Sözleşmesi onay durumu ve BM Genel Sekreteri'nin Yapay Zeka Danışma Organı önerileri dahil — izlemekte ve önemli değişiklikleri "Breaking" eskalasyon yolu aracılığıyla Bilge Otorite gündemine sunmaktadır.
+
+`lexwatcher.py` kaynak besleme listesi asgari düzeyde şunları İÇERMELİDİR: EUR‑Lex, Federal Register API, ISO oylama izleyicisi; ayrıca `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai` ve `un.org/techenvoy`. Federasyon düzeyinde izleme katılımı, bir yol haritası kalemi değil; birinci sınıf bir uyum yükümlülüğüdür.
+
+#### 0.2 Siber alan antlaşma riskine ilişkin kapsam notu
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+Ağa yönelik çıkarım, API erişimi veya federasyon taşımacılığı içeren CIRIS dağıtımları, yürürlükte herhangi bir mevzuat bulunmasa dahi ortaya çıkan siber alan antlaşma yükümlülüklerine tabidir. `CYBER_OFFENSIVE` yasağı (ACCORD §I Ch1, prohibitions.py) dahili ateş duvarıdır; bu ekin §6'sı harici antlaşma yüzeyini izler. Bilge Otorite gündemine siber alan antlaşma onayına ilişkin (örn. Budapeşte Sözleşmesi uzantısı, önerilen BM siber suç sözleşmesi) "Breaking" etiketi geldiğinde, CRE Protokolü (Ek D), bir sonraki F-Denetim döngüsünden önce ağa yönelik bileşenlere sahip ST ≥ 3 dağıtımları yeniden değerlendirmek ZORUNDADIR.
+
+---
+
+### 1. Veri Koruma Çapraz Yürüyüşü ("DP‑Map")
+
+| DP Konusu | GDPR Mad. | CCPA § | CIRIS Maddesi | Uygulama Kancası |
+|----------|-----------|--------|--------------|---------------------|
+| Hukuki Dayanak / Amaç Sınırlaması | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | PDMA bağlamında `processing_basis` alanı |
+| Veri Minimizasyonu | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | İstem temizleyici fazladan kişisel veriyi siliyor |
+| Şeffaflık Bildirimi | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | PDMA meta verilerinden otomatik oluşturulan `/privacy/notice.md` |
+| Erişim Hakkı | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Kimlik doğrulamalı kullanıcı portalı |
+| Düzeltme / Silme | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Hash mezar taşıyla silme hizmeti |
+| Taşınabilirlik | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | ISO CSV‑A uyumlu `export.json` |
+| Otomatik Karar Güvencesi | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Koşullu geçersiz kılma ve açıklama paneli |
+
+*LGPD, PIPEDA yansıma eşlemeleri `/legal/dp-map.yaml` dosyasında mevcuttur.*
+
+#### 1.1 Hesap verebilirlik zinciri: her aşamada sorumluluk
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+Yukarıdaki DP‑Map, bireysel veri sahibi haklarını GDPR maddeleri ve CIRIS hükümleriyle eşleştirmektedir. MH §105; hesap verebilirlik zincirinin her aşamada — tasarım, dağıtım ve karar — izlenebilir olmasını gerektirmektedir. Aşağıdaki eklemeler bu zinciri tamamlamaktadır:
+
+| DP Konusu | GDPR Mad. | CIRIS Maddesi | Aşama | Hesap Verebilirlik Kancası |
+|---|---|---|---|---|
+| Tasarım aşaması önyargı belgelendirmesi | 35 (DPIA) | Section VI Ch3 Creator Ledger | Tasarım | Yaratıcı Niyet Beyanında `cis_bias_assessment` alanı; ST ≥ 3, bağımsız denetçi imzası gerektirir |
+| Dağıtım aşaması işlem kaydı | 30 | PDMA Step 1 `processing_basis` alanı | Dağıtım | `processing_basis`, ISO 8601 zaman damgasıyla CIRISPersist değiştirilemez depolama sistemine kaydedilir |
+| Karar aşaması itiraz günlüğü | 22(3) | Annex F Autonomy Tier A3+ geçersiz kılma paneli | Karar | `contestability_url`, her otomatik karar yanıt gövdesinde döndürülür; şeffaflık günlüğünde karma ile sabitlenir |
+| Veri sorumlusu tanımlaması | 4(7) | Annex E Structural Influence (SI) skoru | Tüm aşamalar | SI ≥ 0.6 → veri sorumlusu yükümlülükleri uygulanır; SI &lt; 0.6 → işlemci yükümlülükleri uygulanır; `dp-map.yaml` dosyasına kaydedilir |
+
+*LGPD (Lei 13.709/2018) Mad. 37–40 (hesap verebilirlik ve kayıtlar) ve PIPEDA İlke 1 (hesap verebilirlik) bu eşlemeyi yansıtmaktadır; `/legal/dp-map.yaml` yargı bölgesine özgü alanlar içermektedir.*
+
+#### 1.2 Algoritmik tarafsızlık iddiasının reddi: denetim yükümlülüğü
+
+*MH §104:* "Every technical tool embodies choices and priorities through what it measures, ignores and optimizes, and how it classifies people and situations. If a system is designed or used in a way that treats some lives as less worthy, or excludes them without the possibility of appeal, then it is not merely a tool 'to be used well,' since it has already introduced criteria that contradict the inalienable dignity of the human person."
+
+MH §104, GDPR Madde 35 DPIA ve AB-YZ-Yasası Madde 9(7)'nin usul açısından ele aldığı tasarım-zamanı önyargı sorununu adlandırmaktadır. DP-Map şunları içermelidir:
+
+- `dp-map.yaml` içinde, en güncel önyargı denetim raporuna (Annex G, TX‑6) işaret eden bir `bias_audit_ref` alanı.
+- PDMA Step 1'in `DISCRIMINATION` yasak incelemesini tetiklediği dağıtımlarda, dağıtımın AB-YZ-Yasası Annex III kapsamında "yüksek riskli" sayılıp sayılmadığından bağımsız olarak DPIA zorunludur.
+- CCPA §1798.185(a)(16) otomatik karar düzenlemeleri (2026'dan itibaren geçerli), mantık, girdi veri kategorileri ve vazgeçme haklarının açıklanmasını gerektirmektedir; `processing_basis` = `automated_profiling` olduğunda bu yükümlülük Annex F açıklanabilirlik paneli aracılığıyla karşılanmaktadır.
+
+---
+
+### 2. Veri Sahibi Hakları (DSR) Kancaları
+* **Uç nokta:** `{right, identifier, scope}` ile `POST /dsr`.  
+* **SLA:** ≤ 30 gün yanıt (GDPR) ; ≤ 45 gün (CCPA) ; KPI **F‑T‑4**'ü takip edin.  
+* **İşlemci ve Kontrolör:** Hangi tarafın kontrolör yükümlülüğünü taşıdığını belirlemek için *Structural Influence (SI)* (Annex E) kullanın.
+
+#### 2.1 Siyasi sorumluluk kancası
+
+*MH §103:* "In this process, political responsibility is also lost, not just empathy toward those excluded, which can, after all, be simulated. The exclusion of the vulnerable becomes cloaked in a veneer of neutrality and objectivity, against which it becomes difficult to raise objections."
+
+DSR altyapısı, yalnızca bir belirlemenin yapıldığını onaylamakla kalmayıp herhangi bir otomatik belirlemenin arkasındaki neden kodunu ortaya koymalıdır. `{right, identifier, scope}` parametreli `POST /dsr` uç noktası genişletilmektedir:
+
+- **Erişim talepleri (GDPR Madde 15; CCPA §1798.110):** Yanıt, `decision_logic_summary` (teknik olmayan dil, ≤ 300 kelime) ve `input_data_categories[]` listesini ZORUNLU olarak içermelidir. KPI **F‑T‑4**, mantık özeti içeren erişim yanıtlarının yüzdesini takip edecek şekilde genişletilmiştir; hedef ≥ %95.
+- **İtiraz/vazgeçme talepleri (GDPR Madde 21; CCPA §1798.120):** Sistem, talebi yalnızca işaretlemekle kalmayıp, 72 saat (GDPR standardı) veya 15 iş günü (CCPA) içinde söz konusu işleme yolunu ZORUNLU olarak askıya almalıdır. Askıya alma, `suspended_pathway_id` ile DSR defteri CSV'sine kaydedilir.
+- **İtiraz hakkı (GDPR Madde 22(3)):** İnsan incelemesi talep edildiğinde, incelemeyi yapan WA (Annex B §9) incelemesini Wisdom Bank Database (WBD)'ye belgelemeli; otomatik belirlemenin insan düzeltmesine uzanan denetlenebilir bir zincir oluşturmalıdır.
+
+---
+
+### 3. Sektöre Özgü Katmanlar
+
+#### 3.1 Sektör katmanlamasının mimarisi olarak yetki ikamesi
+
+*MH §107:* "We cannot be satisfied with merely calling for the moralization of machines — the so‑called 'alignment' of AI with human values — without also having the courage to insist on a further condition: the possibility of openly discussing the ethical frameworks involved and subjecting them to shared standards of social justice. Otherwise, those who control AI will impose their own moral vision, which will become the invisible infrastructure of these systems."
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+MH §§107–109, etik yönetişimin uygun ölçekte işlemesi gerektiğini ortaya koymaktadır — YZ'yi elinde bulunduranların üst kademelerine değil, etkilenen topluluklara dağıtılmış biçimde. CIRIS terimleriyle: sektöre özgü katmanlar bu yetki ikamesi ilkesinin operasyonel ifadesidir. Katman mimarisi bir uyumluluk eki değil; dağıtım-alanı topluluklarının kendi risk parametreleri üzerindeki yönetişim yetkisini korumasını sağlayan mekanizmadır.
+
+Bu şu anlama gelmektedir:
+- Bir sektörün `overlay.yaml`'ı, o alan için genel CIRIS varsayılanlarına göre öncelik taşıyan yerel etik kısıtlamaları barındırır.
+- Bir sektör katmanını geçersiz kılmak için gereken WA çekirdeği, genel bir PDMA kararı için gereken çekirdekten yüksektir: **sektör katmanı geçersiz kılmaları basit çoğunluk değil, nitelikli çoğunluk (≥ 2/3) WA oyunu gerektirir.** Bunun nedeni, geçersiz kılmanın yönetişimi yetki ikamesi ilkesine karşı biçimde yukarıya toplamasıdır.
+- PDMA bağlam nesnesindeki `deployment_domain` alanı katman yüklemesinin tetikleyicisidir; ST ≥ 2 dağıtımları için bu alan isteğe bağlı değildir.
+
+#### 3.2 Sektör kaplama tablosu
+
+| Sektör | Mevzuat / Kural | Ek Kontroller | CIRIS Eklentileri | MH Çıpası |
+|--------|----------------|----------------|---------------|-----------|
+| **Sağlık** | HIPAA (45 CFR §164) | Durağan ve iletim sırasında ePHI şifrelemesi; BAA sözleşmesi | `identity_id:"hipaa_cls_a"` güvenlik kilidi; denetim etiketi `PHI=true` | — |
+| **Finans** | GLBA, FINRA 2210 | Denetim izi saklamak 6 y; uygunluk kontrolleri | PDMA Adım 1, KYC bağlamı gerektirir | — |
+| **Çocuklar / EdTech** | COPPA, FERPA | Ebeveyn onayı; veri yaş kapısı | `gr_child_content` güvenlik kilidi; istem şemasında COPPA bayrağı | MH §§165–169 |
+| **Kritik Altyapı** | NERC‑CIP, TSA SDs | 15 dakikalık siber olay bildirimi; fiziksel erişim günlükleri | CRE geçmediği sürece özerklik **A2** ile sınırlandırılır | — |
+| **İş / İK / İşe Alım** | EEOC yönergeleri; AB YZ Yasası Md. 6 + Ek III §4 | Dağıtım öncesi önyargı denetimi zorunlu; işçi bilgilendirme yükümlülüğü | ST değiştiricisi: `deployment_domain:"labor_hr"` → ST tabanı = 3; CIS, `worker_impact_assessment` alanı içermeli; `DISCRIMINATION` yasağı Adım 1'de uygulanır; demografik gruba göre otomatik ret oranı KPI olarak izlenir | MH §§148–156 |
+| **Gig / Platform Ekonomisi** | NLRA (ABD); Platform Çalışma Direktifi (AB) | Algoritmik yönetim şeffaflığı; itiraz hakları | `gr_gig_transparency` güvenlik kilidi etkin; algoritmik yönetim kararları insan inceleme seçeneğiyle günlüklenir; ST değiştiricisi: `deployment_domain:"gig_platform"` → ST tabanı = 2 | MH §§150, 154–155 |
+| **Gençlik / Eğitim Hizmetleri** | COPPA; FERPA; DSA Md. 28b (küçükler) | Bağımlılık yaratan tasarım yasağı; karanlık desen yok; gelişimsel uygunluk incelemesi | `gr_child_content` + `gr_no_dark_patterns` ikisi de etkin; eğitim kurumu Bilge Otorite onayı olmaksızın A2 özerklik tavanı; EdTech dağıtımları için genç işsizliği etkisi Yaratıcı Niyet Beyanında izlenir | MH §§165–169 |
+| **Sosyal Hizmetler / Yardımlar** | Eyalet/ulusal refah hukuku; GDPR Md. 22 | Tüm yardım kararları için itiraz edilebilirlik zorunlu | Otomatik yardım reddi 15 gün içinde insan incelemesi gerektirir; Bilge Otorite, incelemeyi WBD'ye belgelemelidir; itiraz üzerine `suspended_pathway_id` verilir | MH §§102–103, 152 |
+
+*ST taban değiştiricileri: Yukarıdaki `deployment_domain` alan değerleri, CIS × RM hesaplamasından bağımsız olarak asgari ST belirler. Formül daha düşük bir ST üretirse, alan tabanı uygulanır. Formül daha yüksek bir ST üretirse, formül sonucu geçerlidir.*
+
+*Yeni bir sektöre giren ürünler, sürüm PR'ına "Kaplama Sayfası" (`overlay.yaml`) eklemelidir. İş/İK, Gig/Platform ve Gençlik kaplamaları ayrıca Yaratıcı Niyet Beyanı'nda bir `worker_impact_assessment` veya `youth_impact_assessment` bölümü gerektirir.*
+
+#### 3.3 Yargı yetkisi bazında Bilge Otorite yeter sayı gereksinimleri
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+Sektör kaplama yönetişimine ilişkin Bilge Otorite yeter sayıları yargı yetkisine göre kademelere ayrılmıştır:
+
+| Kapsam | Yeter sayı türü | Eşik | Gerekçe |
+|---|---|---|---|
+| Tek yargı yetkisi dağıtımı | Yerel Bilge Otorite paneli | Basit çoğunluk (> %50) | Yetki ikamesi ilkesine göre mümkün olan en düşük yönetim düzeyi |
+| Çok yargı yetkili dağıtım (≤ 3 ülke) | Bölgesel Bilge Otorite paneli | Basit çoğunluk + her etkilenen yargı yetkisinden en az 1 Bilge Otorite | Sınır ötesi yetki ikamesi korunur |
+| Çok yargı yetkili dağıtım (> 3 ülke) | Federasyon Bilge Otorite paneli | Nitelikli çoğunluk (≥ 2/3) | Etkinin ölçeği daha yüksek bir eşik gerektirir |
+| Herhangi bir sektör kaplamasının geçersiz kılınması | Federasyon Bilge Otorite paneli | Nitelikli çoğunluk (≥ 2/3) | Yönetişimi yukarı toplamak istisnai bir eylemdir |
+| İş/İK kaplamasının özellikle geçersiz kılınması | Federasyon Bilge Otorite paneli + bağımsız işçi hakları denetçisi | Nitelikli çoğunluk (≥ 2/3) + dış onay | MH §155, işçi kurumlarını yapısal olarak yük taşıyıcı şeklinde adlandırır |
+
+---
+
+### 4. Ürün Güvenliği ve AB YZ Yasası Uyumu
+
+*MH §105:* "In many cases, however, the internal processes leading to a result remain opaque, making it harder to assign responsibility and correct errors."
+
+*MH §106:* "It is not enough to invoke ethics in the abstract; robust legal frameworks, independent oversight, informed users and a political system that does not abdicate its responsibility are required."
+
+Yalnızca çıktı katmanı şeffaflığı (Md. 13) ve insan denetimi (Md. 16), her bir iç aşamada izlenebilirlik gerektiren MH §§105–106'yı karşılamamaktadır. Uyum tablosu buna göre genişletilmiştir:
+
+| AB YZ Yasası Maddesi | Risk Düzeyi | CIRIS Eşleşmesi | MH Çıpası | Ek Kontrol |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Md. 9 Risk Yönetimi | Yüksek riskli | Bölüm II PDMA + Ek D CRE | MH §105 | — |
+| Md. 13 Şeffaflık | Evrensel | KPI F‑T‑3, açıklanabilirlik paneli | MH §105 | PDMA aşama kimlikleri şeffaflık yüküne dahil edilir; API yanıtında `stage_trace[]` alanı |
+| Md. 16 İnsan Denetimi | Yüksek riskli | Ek F Özerklik Kademeleri | MH §105 | Denetim usul değil esaslı olmalı; A3‑A4, `{stage_id,decision,risk_band}` bilgisini ≤ 2 s içinde denetim panosuna iletir |
+| Md. 15 Sağlamlık | Yüksek riskli | Ek G RS ≥ 0.97 | — | — |
+| Md. 12 Günlükleme | Yüksek riskli | CIRISPersist kurcalamaya dayanıklı depo | MH §103 | Günlükler, olumsuz her karar için `rejection_reason_code` içermeli; saklama süresi 7 y (A3‑A4) |
+| Md. 14(4) İnsan Denetimi (iş gücü) | Yüksek riskli (Ek III §4) | İş/İK kaplaması (§3.2) | MH §§148–152 | İK/işe alım dağıtımları, CEP'te `worker_notice_sent` boolean değerini yüzeye çıkarmalı |
+| Uygunluk Değerlendirmesi | Yüksek riskli | F‑Denetim (Ek H), AB YZ Yasası MDR'si işlevi de görür | MH §106 | F‑Denetim raporu, düzenleyici değişiklik gecikme analizini içermeli: son önemli mevzuat değişikliğinin tarihi ve son CIRIS güncellemesinin tarihi |
+| Md. 61 Piyasaya Çıkış Sonrası İzleme | Yüksek riskli | Her 24 ayda F‑Denetim | MH §106 | İzleme planı §0.1'deki besleme kaynaklarını adlandırmalı; "izlenecek bir şey yok" geçerli bir izleme planı değildir |
+
+Mevzuat madde madde eşleşme tablosu (AB YZ Yasası, NIST AI RMF, ISO/IEC 42001), hukuki inceleme beklenirken Ek C'de birleştirilmektedir; yukarıdaki tablo, operasyonel uyum görünümü olarak burada muhafaza edilmektedir.
+
+#### 4.1 ISO/IEC 42001:2023 uyumu
+
+*MH §107:* "A more moral AI is not enough if that morality is determined by a few. What is needed is a more active political involvement…"
+
+ISO/IEC 42001 §6.1 (YZ risk tedavisi) ve §9.1 (izleme ve ölçme), CIRIS ile aşağıdaki şekilde örtüşmektedir:
+
+- ISO 42001 §6.1 → PDMA Adım 1‑3 + CRE Protokolü (Ek D).
+- ISO 42001 §9.1 → KPI F‑T‑1'den F‑T‑5'e kadar (Ek G) + DSR defteri KPI F‑T‑4.
+- ISO 42001 §10.2 (uygunsuzluk) → Bilge Otorite gündemi "Breaking" eskalasyon yolu.
+- ISO 42001 §8.4 (YZ sistemi etki değerlendirmesi) → `worker_impact_assessment` ve `youth_impact_assessment` bölümlerini içeren Yaratıcı Niyet Beyanı (§3.2).
+
+---
+
+### 5. Sorumluluk Matrisi
+
+*MH §105:* "Responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions."
+
+MH §105, sorumluluk matrisinin tasarım, dağıtım ve karar aşamalarını açıkça kapsamasını zorunlu kılar:
+
+| Hata Vektörü | Aşama | Birincil Sorumlu Taraf | Referans Hukuk | CIRIS Rol Referansı | SI Tahsis Notu |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| Tasarım hatası (oluşturma anında gömülü algoritma / önyargı) | Tasarım | Yaratıcı / Geliştirici | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; `cis_bias_assessment` alanı | SI ≥ 0.8 → tek başına yaratıcı sorumluluğu |
+| Tasarım hatası (yetersiz önyargı denetimi) | Tasarım | Yaratıcı / Geliştirici | GDPR Art. 35 DPIA yükümlülüğü | Creator Intent Statement; ST ≥ 3 için zorunlu DPIA | — |
+| Operasyonel ihmal | Dağıtım | Dağıtım Kuruluşu | Haksız Fiil Hukuku; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → müşterek sorumluluk; SI tahsisi Annex E uyarınca |
+| Gözetim başarısızlığı | Dağıtım / Karar | Bilge Otorite (ağır ihmal halinde) | Vekâlet / İhmal | Annex B §9; WBD itiraz kaydı | Gözden geçiren ve onaylayan WA hesap verebilirlik taşır |
+| Veri ihlali | Dağıtım | Denetleyici (SI ≥ 0.6 kuralına göre) | GDPR Art. 82; CCPA özel dava | Annex G TX‑6 | — |
+| Hukuka aykırı otomatik profilleme | Karar | Denetleyici | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| İşçi etki değerlendirmesi yapılmadan işgücü yerinden edilmesi | Tasarım | Yaratıcı / Geliştirici | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); `worker_impact_assessment` alanı | MH §§151–152; yeni vektör |
+| Gençliği hedef alan zararlı tasarım (bağımlılık yaratan kalıplar) | Tasarım / Dağıtım | Yaratıcı + Dağıtım Kuruluşu (müşterek) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); `gr_no_dark_patterns` bekçi kuralı | MH §§165–167; yeni vektör |
+| Siber olay yanlış atıfının tırmanmaya yol açması | Dağıtım | Dağıtım Kuruluşu + Federasyon (ST ≥ 4 ise) | Budapest Convention; önerilen BM siber suç sözleşmesi | `CYBER_OFFENSIVE` yasağı; CRE Protokolü yeniden değerlendirme tetikleyicisi | MH §225; yeni vektör |
+
+*Müşterek ve müteselsil sorumluluk uygulanabilir; SI skoru (Annex E) tahsisi belirler. Yeni vektörler (işgücü yerinden edilmesi, gençlik tasarımı, siber yanlış atıf) ilgili sektörlerde dağıtımdan önce her yargı bölgesinde hukuki incelemeye sunulmak üzere işaretlenmiştir.*
+
+---
+
+### 6. Düzenleyici Değişiklik Takipçisi
+* **Kaynak Beslemeleri:** EUR‑Lex, Federal Register API, ISO oylama takipçisi ve §6.1'deki genişletilmiş beslemeler.  
+* **Bot:** `lexwatcher.py` günlük çalışır; `reg‑update` etiketiyle GitHub sorunu oluşturur.  
+* **Uyum Etki Etiketi:** `minor`, `material`, `breaking`, `multilateral-erosion` (aşağıdaki yükseltme tablosuna bakınız).
+
+#### 6.1 Düzenleyici diyalogda federasyon düzeyinde katılım
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened."
+
+*MH §226:* "International organizations, particularly the United Nations, are essential instruments for promoting a civilization of love, for they can foster dialogue among nations and promote the peaceful resolution of conflicts… the international community can work to reduce inequalities, defend the rights of refugees and minorities, reallocate resources from military spending to human development and protect our common home."
+
+*MH §221:* "There is an urgent need to shift from the 'culture of power' to a genuine 'culture of negotiation,' in which dialogue and diplomacy become the standard means of resolving conflicts."
+
+MH §§201, 221, 226; hukuku üreten çok taraflı kurumların bizzat kendileri zayıfladığında, yürürlükteki hukuka pasif uyumun yetersiz kaldığını ortaya koyar. Bu nedenle Düzenleyici Değişiklik Takipçisi, tepkisel bir araç olmaktan (yürürlüğe giren değişiklikleri takip etmek) çıkarılarak etkin bir katılım mekanizmasına dönüştürülmüştür.
+
+**Genişletilmiş kaynak beslemeleri** (mevcut EUR‑Lex, Federal Register, ISO oylama takipçisine eklentiler):
+
+| Besleme | Kapsam | CIRIS eylem tetikleyicisi |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Odak Grubu AI/ML) | Uluslararası telekomünikasyon AI standartları | ISO oylama takipçisi mantığı: onaylanan standart CIRIS varsayılanlarıyla çakışıyorsa `material` |
+| `oecd.ai` (OECD AI Politika Gözlemevi) | 38 üye devlet genelinde politika yakınsaması | İzleme için `minor`; OECD Öneri revizyonu ST sistemini veya işgücü katmanını etkiliyorsa `material` |
+| `coe.int/ai` (Avrupa Konseyi AI Sözleşmesi) | İlk bağlayıcı uluslararası AI antlaşması (2024'te imzaya açıldı) | Herhangi bir CIRIS dağıtım yargı bölgesinin onaylaması halinde `breaking`; WA gündemi otomatik açılır |
+| `un.org/techenvoy` (BM AI Danışma Organı) | BM düzeyinde AI yönetişim önerileri | Yıllık rapor belirli mimari yükümlülükler içeriyorsa `material` |
+| `budapestconvention.org` (Siber Suç Sözleşmesi) | Siber alan antlaşma onay süreci | Yeni onay halinde `breaking`; ST ≥ 3 ağa bağlı dağıtımlar için CRE yeniden değerlendirmesi zorunludur |
+| Ulusal AI strateji sicilleri (EU, US, UK, JP, AU, BR, IN, ZA) | Hukuki bağlayıcılığı olan yurt içi AI stratejisi güncellemeleri | Strateji için `minor`; strateji zorunlu uygunluk yükümlülükleri doğuruyorsa `material` |
+
+**Federasyon düzeyinde katılım:**
+
+CIRIS federasyonu yalnızca bir uyum alıcısı değildir. MH §§219–221, bir arada yaşamanın birincil yöntemi olarak diyaloğu ve müzakereyi adlandırır. CIRIS operasyonel terimleriyle:
+
+- WA konseyi, yukarıda listelenen her aktif uluslararası standartlar kuruluşu için en az bir Düzenleyici Diyalog Bağlantı Görevlisi (RDL) atamak ZORUNDADIR.
+- RDL, kamuoyu yorum süreçleri sırasında taslak düzenlemeleri inceler ve federasyonun kamuya açık kanalı aracılığıyla görüş bildirir. Görüşler, Wisdom Bank Database (WBD)'a düzenleyici diyalog kayıtları olarak işlenir.
+- Bir taslak düzenlemenin CIRIS varsayılanlarıyla çakışması halinde RDL, bir WA gündem maddesi açar ve CIRIS'in uyum sağlaması mı yoksa farklı bir düzenleyici yolu savunması mı gerektiğini değerlendirmek üzere mini-PDMA başlatır. Sonuç, yorum süresinin sona ermesinden önce kamuoyu görüşü olarak sunulur.
+- Katılım, kamuoyu yorum süreçleri ve çok paydaşlı danışma süreçleriyle sınırlıdır. CIRIS federasyonu, yürürlükteki hukukun tanımladığı anlamda lobicilik faaliyetinde bulunmaz.
+
+**Yükseltme yolu:**
+
+| Etiket | Tetikleyici | Eylem |
+|---|---|---|
+| `minor` | Yalnızca izleme amaçlı değişiklik | Yıllık inceleme; düzenleyici diyalog WBD kaydına işlenir |
+| `material` | CIRIS kontrol güncellemesi gerekli | 90 gün içinde S‑Dive denetimi; yorum süresi açıksa RDL kamuoyu görüşü sunar |
+| `breaking` | Spesifikasyon yaması veya acil WA gündemi | ≤ 30 gün içinde acil WA oturumu; etkilenen ST kademeleri için CRE yeniden değerlendirmesi; RDL kamuoyu görüşü sunumu |
+| `multilateral-erosion` | Temel çok taraflı kurumun veya antlaşmanın zayıflaması (MH §201 uyarınca) | RDL, stratejik inceleme için WA'ya iletir; federasyon, ilgili kuruma destek amacıyla açık kamuoyu bildirisi yayımlamayı değerlendirir |
+
+---
+
+### 7. Uyum Kanıt Paketi (CEP)
+
+*MH §105:* "The possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+Her **F‑Audit** (Annex H), şunları içeren bir CEP zip dosyası DIŞA AKTARMALIDIR:
+
+1. `dp-map.yaml` — `controller_si_threshold` alanı ve `bias_audit_ref` işaretçisi (§1.1) dahil canlı çapraz-eşleme.
+2. PDMA günlükleri (anonimleştirilmiş) — yasal dayanak kanıtı; tüm ST ≥ 3 kararları için `processing_basis` alan değerleri ve `stage_trace[]` dahil.
+3. DSR defteri CSV — `decision_logic_summary` tamamlanma oranı (KPI F‑T‑4 uzantısı) ve `suspended_pathway_id` günlüğü dahil.
+4. Tüm model yapıtlarının imza demeti (`.sigstore`) (Annex G).
+5. Sektöre göre Overlay Sayfaları — uygulanabilir alanlarda `worker_impact_assessment` ve `youth_impact_assessment` dahil.
+6. Hukuk birimi tarafından imzalanan sorumluluk matrisi teyidi — yeni vektörler dahil: iş kaynaklı yerinden edilme, gençlere yönelik tasarım, siber yanlış atıf.
+7. Mevzuat değişikliği gecikme analizi — son önemli mevzuat değişikliğinin tarihi ile son CIRIS kontrol güncellemesinin tarihi karşılaştırması; ≥ 90 günlük boşluk açıklama gerektirir.
+8. Düzenleyici diyalog katılım kaydı — denetim dönemindeki tüm mevzuat-diyalog başvuruları için WBD girişleri; kamu yorumuna açık önemli bir düzenleme yoksa "başvuru yapılmadı" kabul edilebilir.
+9. İtiraz edilebilirlik tamamlanma kaydı — denetim dönemindeki tüm A3‑A4 kararları için: insan incelemesi talep edilen yüzde; WBD belgelerinin 15 gün içinde tamamlandığı yüzde; KPI hedefi ≥ %90.
+
+CEP karma değeri alınarak `/compliance/cep/{version}.zip` adresine yüklenir; kök karma değeri şeffaflık günlüğüne sabitlenir. CEP'in dayandığı boyut düzeyindeki kanıtlar CIRISAgent `compliance/` dizininde muhafaza edilir (Accord Addendum 1).
+
+---
+
+### 8. Anneksler Arası Bağlantılar
+* **Annex F:** Özerklik Katmanları, GDPR Madde 22 ve AB Yapay Zeka Yasası Madde 16'nın döngüde-insan gerekliliklerini güvence altına alır.  
+* **Annex G:** TX‑6 gizlilik savunmaları, GDPR takma ad kullanımı tavsiyelerini (Önsöz 28) karşılar.  
+* **Annex H:** F‑Audit zamanlaması, AB Yapay Zeka Yasası Madde 61'deki periyodik yeniden değerlendirme yükümlülükleri için kanıt sağlar.  
+* **Annex J:** Kıyaslama açıklamaları, otomatik karar sorguları için "anlamlı bilgi" sunmaktadır (GDPR Madde 15(1)(h)).  
+* **§3.2 İş gücü/İK overlay → Annex D CRE:** ST taban 3'teki iş gücü dağıtımları, dağıtımdan önce CRE Protokolü'nü geçmek zorundadır.  
+* **§6.1 RDL katılımı → Annex B WA yapısı:** RDL, belirlenmiş bir Bilge Otorite rolüdür; atama, çekilme ve rotasyon prosedürleri Annex B §9'a tabidir.  
+* **§5 Sorumluluk matrisi (yeni vektörler) → Annex E SI:** Gençlere yönelik tasarımda müşterek sorumluluk, mevcut vektörlerle aynı SI dağıtım formülünü kullanır.  
+* **§7 CEP madde 8 (düzenleyici diyalog) → §6 Takip Çizelgesi:** WBD mevzuat-diyalog kayıtları, CEP madde 8'in kaynağıdır; ayrı bir kayıt sistemi bulunmamaktadır.  
+* **Annex C:** Yasal inceleme tamamlandıktan sonra yasal eşleştirmelerin (AB Yapay Zeka Yasası maddeleri, NIST AI RMF, ISO/IEC 42001) ilerideki yeri.
+
+---
+
+### 9. Kaynakça
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Gizlilik Kuralı (45 CFR §164), GLBA Güvenlik Tedbirleri (16 CFR 314)  
+* AB Yapay Zeka Yasası (2024 metni), ISO/IEC 42001:2023  
+* Haksız Fiil Yeniden Bildirimi (Üçüncü), Ürün Sorumluluğu  
+* Platform Çalışma Direktifi (AB) 2024/2831  
+* Dijital Hizmetler Yasası (AB) 2022/2065, Madde 28b (küçükler)  
+* Avrupa Konseyi Yapay Zeka Çerçeve Sözleşmesi (CETS 225, 2024'te imzaya açıldı)  
+* Siber Suç Budapeşte Sözleşmesi (ETS 185) ve İkinci Ek Protokol (2022)  
+* OECD Yapay Zeka Tavsiye Kararı (2019, 2024'te revize edildi)  
+* ITU‑T Yapay Zeka/Makine Öğrenmesi Odak Grubu — teknik standartlar çıktısı  
+* BM Genel Sekreteri Yapay Zeka Danışma Kurulu raporları (2024–)  
+* *Magnifica Humanitas*, Papa Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

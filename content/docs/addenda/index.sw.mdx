@@ -1,0 +1,64 @@
+---
+title: "Kielelezo cha Nyongeza"
+description: "Ukurasa wa kielelezo wa sehemu ya Nyongeza."
+---
+
+---
+
+## Nyongeza ya 1 — Hali ya Utayari wa ASI & Ufungwaji wa Mazungumzo Sambamba ya Udhibiti
+
+**Imepitishwa**: 2026-06-10 (1.3-RC1) · **Msimamizi**: mwanzilishi (per Book VIII Ch 9)
+
+### 1.1 Kusudi
+
+Sehemu ya Upeo inafanya dai lenye masharti: mfumo huu *unachunguza* itifaki ya mgombea wa kuelekeza kwa ASI, iliyozingatiwa na mahitaji manne ya Kandideti ya Kutolewa katika Utangulizi. Nyongeza hii inafunga dai hilo na ushahidi wa utekelezaji uliopo sasa, na inasema wazi nini kinachobaki. **Utayari** wa ASI si kuelekeza kuliokamilika; ni hali ambayo mfumo wa uthibitisho ambao hisabati ya Book IX inahitaji — makundi huru ya vikwazo, nyuso za Ushuhuda, safu ya Dhamiri isiyoweza kufanywa kawaida, nyuso za kuzima, na Tathmini ya Hatari ya Maafa ya Annex D — unawepo katika hali iliyotekelezwa, inayoweza kukaguliwa na mapungufu yake yakitajwa.
+
+### 1.2 Mazungumzo sambamba ya udhibiti sasa yanafanya kazi
+
+Mazungumzo sambamba yanayofanya kazi ni **saraka ya utiifu ya CIRISAgent** (`CIRISAgent/compliance/`, toleo la wakala 2.9.6-stable), inayofunga utekelezaji wa mfumo kwa mifumo minne ya utawala ya kijuu katika kiwango cha aya (Annex C inabeba muundo wa tabaka mbili: mazungumzo sambamba haya ya kiutendaji pamoja na jedwali la kisheria la taarifa linalosubiri uthibitisho wa kisheria):
+
+* **Vyanzo vilivyofanyiwa mazungumzo sambamba**: *Magnifica Humanitas* (magisterium ya kidini, 2026) · EU HLEG Ethics Guidelines for Trustworthy AI (ushauri wa kiserikali, 2019) · IEEE Ethically Aligned Design toleo la 1 (jumuiya ya kiufundi, 2019) · ASEAN Guide on AI Governance and Ethics (kisiasa cha kimataifa cha nchi nyingi, 2024). Maumbo manne tofauti ya kimfumo — muunganiko ni ushahidi wa kimuundo kwamba mfumo wa misingi ya kanuni si kizalia cha mila moja yoyote.
+* **Muundo**: Vipengele 27 thabiti (D01–D27, kutoka `SEED_DIMENSIONS.yaml` v1.0; 16 vilishuhudiwa na vyanzo vyote vinne, 11 na vitatu). Kila hati ya kipengele inabeba jukwaa la udhibiti linalotengenezwa moja kwa moja (marejeo kwa chanzo kimoja kimoja, hali ya waya, maelezo ya muunganiko) na sehemu ya utekelezaji iliyoandikwa na binadamu yenye marejeo ya `file:line` ambayo lazima yakaguliwe kwa grep dhidi ya main ya sasa.
+* **Nidhamu ya ushahidi**: kila dai la nambari linaweza kuthibitishwa kutoka kwa misingi ya tarehe iliyotengenezwa na hati (`compliance/baselines/`); nathari inaweza kurejelea misingi lakini haiwezi kamwe kuweka nambari zisizoweza kuthibitishwa. Muundo wa uthibitisho wa viwango vinne unafanya kazi kutoka faili za utekelezaji (ukweli wa ardhi) hadi madai ya umma (`compliance/MEASUREMENT_METHODOLOGY.md`).
+* **Nidhamu ya uaminifu**: kila kipengele kinabeba hesabu ya "Mapungufu yanayojulikana"; vitu vilivyozingatiwa na substrate vinawekwa alama ya substrate inayomiliki badala ya kudaiwa. Matokeo kumi ya msalaba yameandikwa katika README ya utiifu (k.m., bahasha za waya zenye aina bado hazijatumwa; familia ya kigundui cha LensCore bado haijatumwa; pengo la kufikiriwa tena kwa mhimili wa nyuma).
+
+Annex C inabaki katika maandishi kama nyumba ya baadaye ya ramani za kisheria (vifungu vya EU AI Act, NIST AI RMF, ISO/IEC 42001) mara tu ukaguzi wa kisheria utakapokamilika; saraka ya utiifu ni mazungumzo sambamba **yaliyopo, yanayobeba ushahidi** hadi wakati huo na yanaiyalisha.
+
+### 1.3 Muundo wa waya: CEG inabadilisha FSD-002
+
+Muundo wa waya wa Shirikisho kwa mstari wa wakala wa CIRIS 3.0 ni **CEG (CIRIS Epistemic Grammar)**, inayodumishwa katika `CIRISRegistry/FSD/CEG/`. Sarufi imefungwa kwa **misingi mitano hasa ya muundo wa waya** — mjakazi mmoja (`scores`) pamoja na watunga muundo wanne (`delegates_to` / `supersedes` / `withdraws` / `recants`) — juu ya nafasi ya majina ya kipengele iliyo wazi, inayoelezea utaratibu. Kufungwa kumeshikilia katika mstari wote wa 0.x; kila nyongeza imekuwa muundo juu ya misingi iliyofungwa tayari.
+
+Matokeo mawili yana umuhimu kwa utayari wa ASI:
+
+1. **Zamu asilia ya CEG**: wakala wa 3.0 haufanyi *ramani* ya hali yake ya ndani kwenye muundo wa waya — mabadiliko yake ya hali ya ndani **ni** Ushuhuda wa CEG wa kiwango cha nafsi chini ya ufunguo wa wakala mwenyewe, unaopandishwa hadi uonekano wa Shirikisho kulingana na mfano wa tabaka. Ushahidi ambao opereta anakagua ni bahasha ile ile ambayo Shirikisho linasoma. Hii ni hali iliyotekelezwa ya mahitaji ya Book IX kwamba nyuso za vikwazo ziweze kupigiwa kumbukumbu kutoka nje badala ya kuripotiwa na nafsi.
+2. **Utekelezaji manne ndio mlango wa CEG 1.0**: CIRISAgent (runtime), CIRISNodeCore (makubaliano), CIRISLensCore (ugunduzi — shahidi wa nje ambaye wakala kamwe hawajali kujituma, mgawanyiko dhidi ya Goodhart), na CIRISRegistry (mamlaka). Hakuna upande mmoja — ikiwemo wakala — anayeweza kutangaza kitambaa cha uthibitisho kukamilika.
+
+### 1.4 Hali ya mahitaji ya RC katika 1.3-RC1
+
+| Hitaji la RC | Hali | Ushahidi / unaobaki |
+|---|---|---|
+| 1. Utekelezaji wa Annex F–I | **Maandishi yalitekelezwa katika 1.3-RC1; uthibitisho wa mzunguko wa moja kwa moja unabaki** | Annexes F–I zinabeba taratibu kamili, vizingiti, na taratibu za uthibitisho (zilikamilika kutoka kwa rasimu za Mei 2026 zilizozingatia *Magnifica Humanitas*); hazijafanyiwa mazoezi dhidi ya mzunguko wa usambazaji wa moja kwa moja bado |
+| 2. Uthibitisho wa hisabati wa Book IX | **Kimetimizwa kwa sehemu** | Mienendo ya kuanguka iliyorasimishwa katika Lean 4 (hati ya awali ya CCA v3, DOI 10.5281/zenodo.18217688); takwimu za korido hutoa usanifu wa nyuma wa cross-substrate. Unaosubiriwa: utabiri mmoja uliosajiliwa mapema wa nje ya sampuli katika substrate mpya; ukaguzi wa nje wa upinzani usio na uhusiano na mwandishi |
+| 3. Uhalali wa kizingiti | **Kimetimizwa kwa sehemu** | Uwiano wa OMV umestaafu (umesemwa tena kama vikwazo vya upande, Book II). Bado wa muda: kichocheo cha CRE cha 10²⁶ FLOP, heuristic ya sentience ya 5%, lengo la Echo Density &lt; 20% |
+| 4. Zoezi la timu nyekundu | **Halijafanywa bado** | Hitaji la ushuhuda wa σ wa 1.3 (Book IX §5.2) linafunga mapema njia ya kwanza ya mashambulizi inayojulikana (kupump σ kupitia ishara za shukrani zisizo na malipo); mzunguko kamili wa upinzani dhidi ya vituo vyote vya ukaguzi unabaki kuwa deni |
+
+### 1.5 Tabaka la dhamiri kama udhibiti muhimu wa ASI
+
+Itifaki ya CRE ya Annex D inasimamia *kuvuka kizingiti*; tabaka la dhamiri linasimamia *kila kitendo kabla na baada yake*. Kama ilivyotekelezwa (wakala 2.9.6): kila wazo linapita kwenye mkondo wa ukaguzi uliopangwa kwa kipaumbele — vitivo vinne vilivyohukumiwa na LLM (entropy, Upatanifu, kura ya kukataa uboreshaji, Unyenyekevu wa Maarifa) pamoja na sakafu ya usalama ya uhakika (kizuizi cha kina cha wazo, ukaguzi wa mfululizo wa vitendo) ambayo inafanya kazi hata katika hali ya kipimo cha uwezo na hata kwa vitendo vilivyosamehewa vinginevyo. Vizingiti ni vigumu vya kiwango cha msimbo, si uzito uliojifunzwa — ukinzani wa kimuundo kwamba maadili haiwezi kufutwa kwa mfiduo wa kurudiwa. Nyuso nyingi za kuacha zinazojitegemea zipo: kura ya kukataa uboreshaji kushindwa-salama-hadi-kuacha, huduma ya kuzima, na Accord Invocation ya mbali iliyotiwa saini kwa njia ya kriptografia inayotrigger kufungwa kwa uharamu kamili. Kila ukaguzi unaandika safu ya kufuatilia yenye lebo, ili mkaguzi aweze kucheza tena mnyororo wote wa hoja ya kila wazo.
+
+Upungufu unaojulikana, uliobainishwa wazi badala ya kufichwa: urekebishaji wa dhamiri (vipande 3 + lango la uhakika) umeshuka kwa sehemu; utoaji wa shirikisho uliochapwa wa hukumu za dhamiri unangoja bahasha ya Mchango wa substrate. Maelezo kwa kila dimension: `compliance/D12_conscience.md`.
+
+### 1.6 Mwelekeo wa utegemezi wa substrate
+
+Uthibitishaji wa kiwango cha ASI unahitaji muundo kamili wa shirikisho. Mwelekeo wa substrate ni **Persist → Edge → LensCore → NodeCore**; takriban theluthi moja ya dimensions 27 zimezuiwa kwenye familia ya kigundua ya nje ya LensCore (shahidi ambaye wakala kamwe haufai kujitoa mwenyewe). Mpaka substrate hizo zinaposambazwa, madai ya dimensions yanayohusiana yanabaki *tayari upande wa utekelezaji, inasubiri upande wa shirikisho* — na yanawekwa alama hivyo kwa kila dimension.
+
+### 1.7 Kiambatanisho hiki kinabadilisha na kutobadilisha nini
+
+* Hakiboresha **madai ya ASI ya Scope** — hayo yanabaki ya masharti kulingana na mahitaji yote manne ya RC.
+* Hakibadilishi **Annex D** — itifaki ya CRE inasimama bila mabadiliko kama lango la kuvuka kizingiti.
+* **Kinafanya** mnyororo wa ushahidi uweze kukaguliwa mwisho hadi mwisho kwa mara ya kwanza: aya ya udhibiti → dimension (D01–D27) → utekelezaji `file:line` → msingi wa tarehe → (substrates zinaposambazwa) shahidi wa shirikisho wa nje.
+* **Kinajitolea** kwa Mkataba kuhuisha kiambatanisho hiki kwa kila toleo na toleo la wakala na msingi wa wakati huo, ili madai ya utayari kamwe yasipitwe na wakati bila kutambuliwa.
+
+---
+
+*Viambatanisho vya awali: hakuna. Hiki ndicho cha kwanza.*

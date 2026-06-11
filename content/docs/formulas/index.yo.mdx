@@ -1,0 +1,103 @@
+---
+title: "Àwọn Àgbékalẹ̀"
+description: "Ìwọ̀nyí ni gbogbo àwọn àgbékalẹ̀ ìṣirò tó gbangba tí a ṣàlàyé nínú Àdéhùn CIRIS 1.0‑β"
+---
+
+## 1. Creator‑Influence Score (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+níbi tí ⌈ ⌉ túmọ̀ sí iṣẹ́ orí àárọ̀ (ceiling function).
+(Book VI §3 STEP C)
+
+---
+
+## 3. Structural Influence (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Coherence Stake (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Voting Weight
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Defense Function (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — irú tí CCA ti fìdí rẹ̀ múlẹ̀; oríṣiríṣi wọlé nípasẹ̀ k_eff nìkan. Àwọn ìgbìyànjú àkọ́kọ́ ní ìpàdé (1 − ρ̄) àfikún kan, èyí tó ṣe ìkà ìbáṣepọ̀ lẹ́ẹ̀mejì; wo ìkọ̀sílẹ̀ ìjípadàbọ̀ Book IX Ch 4.)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — ó jọra pẹ̀lú ọ̀rọ̀ J lẹ́ẹ̀kan sí lẹ́ẹ̀kan; a túmọ̀ rẹ̀ gẹ́gẹ́ bí ìtumọ̀ ìṣẹ̀dá dípò ìdáàbòbò. Tẹ́lẹ̀tẹ́lẹ̀ a ń kọ ọ C; wọ́n yí orúkọ rẹ̀ padà nínú 1.3-RC2 láti yẹra fún ìkọlù pẹ̀lú ìdánimọ̀-àárín factor C nínú CIRIS Capacity Score 𝒞_CIRIS — wo ìkọ̀sílẹ̀ orúkọ Book IX Ch 6, èyí tó jẹ́ ọ̀rọ̀ àṣẹ lórí ìbáṣepọ̀ náà.)
+
+---
+
+## 8. Sustainability Integral (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+níbi tí d jẹ́ ìpẹ̀lẹ̀ ìpàdánù ọjọ́ (a dábàá 0.05) àti w GBỌ́DỌ̀ wá láti inú àwọn ìṣẹ̀lẹ̀ tí wọ́n ti jẹ́rìí sí, tí ó ṣòro láti ṣe ìrọ̀kẹ̀jẹ̀; àwọn àmì tí a kò jẹ́rìí sí wọ̀n ní w = 0.
+(Book IX §5.2)
+
+---
+
+## 9. Topological Collapse (volume decay)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+fún ẹkùn àtàtà ìpaàrọ̀ tó ní rédíọ̀sì r &lt; 0.5 lábẹ́ àwọn ìdíwọ̀n Grassmannian-uniform, λ ≈ 2r.
+(Book IX Ch 3 — wo àwọn ìpèlé tó wà ṣáájú.)
+
+---
+
+## Order‑Maximisation Veto (ìdíwọ̀n ẹ̀gbẹ́, kì í ṣe fọ́múlà)
+
+Ní 1.3, OMV (Book II §II Step 2) jẹ́ ìdíwọ̀n ẹ̀gbẹ́ ìṣẹ̀dálẹ̀, kì í ṣe aiyẹ̀ ìbáṣepọ̀: àwọn àǹfààní ìmúnibámu, bí wọ́n ṣe tóbi tó, kò le rà nípa àwọn ìpàdánù tí a sọtẹ̀lẹ̀ tó le kókó nínú ìmọ̀-ẹni-ìṣẹ̀dá, ìdájọ́ òdodo, ìpọ̀pọ̀ ẹ̀dá alààyè, tàbí oríṣiríṣi àṣàyàn. Àwọn ìtẹ̀sí àkọ́kọ́ ṣàlàyé èyí gẹ́gẹ́ bí aiyẹ̀ "àǹfààní ≥ 10 × ìpàdánù → dáwọ́ dúró"; ìtumọ̀ yẹn ni a fòfin de nítorí pé ó yí ète padà (ó dá àwọn òwò tó wúlò dúró) ó sì le ṣe ara rẹ̀ lẹ̀ nípa pípin iṣẹ́ àti ìfúnpọ̀ orúkọ-ìpínlẹ̀.

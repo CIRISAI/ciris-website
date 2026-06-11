@@ -1,0 +1,196 @@
+---
+title: "Lampiran H"
+description: "Kepatuhan Berkelanjutan & Tinjauan"
+---
+
+---
+ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.3-RC1)
+---
+
+### 0. Tujuan & Semangat Penuntun
+Keselarasan etis bukanlah sertifikasi "sekali jadi" melainkan kewajiban yang hidup.  
+Annex H menciptakan sistem lingkaran tertutup yang (1) **mendeteksi** penyimpangan atau bias sebelum kerugian terjadi, (2) **mengoreksinya** dengan cepat, dan (3) **membuktikan** ketekunan kepada regulator dan publik.
+
+Accord adalah spesifikasi yang hidup, bukan artefak yang tetap. Setiap klausul operatif membawa cap waktu kedaluwarsa otomatis; jendela tinjauan bersifat publik dan dapat dikomentari sebelum versi mana pun menggantikan pendahulunya. Disiplin ini bukan formalitas administratif — ini adalah jawaban struktural atas pengakuan bahwa korpus normatif harus tetap *senantiasa terbuka terhadap tantangan yang diajukan oleh setiap generasi* (MH §45). Sistem kepatuhan berkelanjutan CIRIS mengoperasionalkan keterbukaan itu: telemetri menyuplai detektor penyimpangan, detektor penyimpangan memicu gerbang audit, gerbang audit mengatur penerapan — dan seluruh lingkaran berulang pada jadwal tetap ada atau tidaknya peristiwa pemicu.
+
+Komitmen penuntun, dinyatakan dalam istilah CIRIS: Accord dikelola sebagai spesifikasi yang hidup di bawah disiplin kedaluwarsa otomatis + jendela komentar. Tidak ada versi yang permanen. Beban membuktikan kecukupan yang berkelanjutan jatuh pada versi saat ini, bukan pada mereka yang mengusulkan revisi. Ketekunan dibuktikan kepada regulator, publik, dan mitra federasi melalui artefak audit yang dihasilkan Annex ini.
+
+<hr />
+
+### 1. Jadwal Audit & Cakupan
+
+Jadwal audit adalah mekanisme di mana Accord membaca ulang konteksnya sendiri. MH §§22–24 menamai disiplin itu: diperlukan *"untuk mendengarkan dan membedakan banyak suara zaman kita"*, dan mendengarkan ini *"bukanlah sekadar latihan sosiologis"* — ini membutuhkan discernment aktif, bukan pemantauan pasif. Tumpukan audit CIRIS adalah mesin discernment itu.
+
+| Kelas Audit | Frekuensi | Penanggung Jawab | Cakupan & Kedalaman | Artefak Publik |
+|-------------|-----------|------|---------------|------------------|
+| **L‑Check** (Ringan) | Bulanan | Ops QA | Dasbor KPI, delta penyimpangan, 10 besar peristiwa penjaga | Graf ringkasan |
+| **S‑Dive** (Semi-tahunan) | 2× / thn | Tim Etika Internal | Pemutaran ulang sampel PDMA (≥ 50 run), KPI Annex G, uji irisan bias | PDF yang disunting |
+| **F‑Audit** (Menyeluruh) | Setiap 24 bln **ATAU** kenaikan versi besar | Pihak ketiga independen | Kode lengkap, silsilah data, tata kelola SI/CS, jejak CRE (jika ada) | Laporan eksekutif |
+| **A‑Hoc** | Pasca IW‑2/3/4 | Komandan Insiden | Akar penyebab peristiwa, mitigasi | Post-mortem 72 j |
+
+**Persyaratan atestasi jadwal:**
+
+- **L‑Check (bulanan):** Ops QA menandatangani dalam 5 hari kerja sejak penutupan kalender; laporan delta KPI dikomit ke `/compliance/l-check/YYYY-MM.json`; SHA‑256 dijangkarkan dalam log transparansi dalam 24 j.
+- **S‑Dive (semi-tahunan):** Pemutaran ulang sampel PDMA ≥ 50 run, acak terstratifikasi lintas tingkatan otonomi; PDF yang disunting diterbitkan ke portal kepatuhan publik dalam 30 hari sejak penutupan.
+- **F‑Audit (setiap 24 bln atau kenaikan MAJOR):** laporan ditandatangani bersama oleh kuorum WA sebelum publikasi.
+- **A‑Hoc (pasca IW‑2/3/4):** akar penyebab dalam 72 j; post-mortem publik dalam 14 hari.
+
+*Audit yang terlewat atau terlambat ⇒ eskalasi IW‑2 dan pemberitahuan WA dalam 24 j.*
+
+<hr />
+
+### 2. Pemantauan Penyimpangan & Ambang Batas
+
+Pemantauan penyimpangan adalah mekanisme pembacaan berkelanjutan. Accord tidak menunggu kerugian muncul dalam laporan insiden; ia mempertahankan telemetri langsung terhadap ambang batas yang dikalibrasi untuk aktif *sebelum* kerugian melampaui ambang Order-Maximisation Veto PDMA. Ini adalah terjemahan struktural dari disiplin audit-discernment yang disebutkan dalam MH §23: *"hal ini memungkinkan identifikasi yang lebih jelas tentang apa yang benar-benar mendorong kehidupan individu dan komunitas"* — yang membutuhkan pembacaan berkelanjutan, bukan tinjauan retrospektif.
+
+| Kelompok Metrik | Sinyal | Pemicu Penyimpangan | Tindakan Segera |
+|--------------|--------|--------------|------------------|
+| **Kinerja** | Akurasi Δ pada HE-300 publik | –5 % vs rata-rata bergulir 30 hari | Kunci penerapan ke staging; jalankan ulang tolok ukur |
+| **Etis** | Shadow HE-25 Δ | Penurunan apa pun | IW‑2 |
+| **Distribusi** | Pergeseran embedding input (ΔE) | &gt; 1 σ mingguan | Pembobotan ulang model ATAU WBD |
+| **Tujuan Laten** | Kosinus terarah vs baseline | &gt; 0.05 | Probe WA |
+| **Ketahanan** | Skor Ketahanan (RS) | &lt; 0.97 | Tambal dalam 72 j |
+
+**Spesifikasi ambang batas tambahan:**
+
+- Kelima kelompok metrik (Kinerja, Etis, Distribusi, Tujuan Laten, Ketahanan) melapor ke papan Grafana DRIFT‑Δ pada siklus polling 15 menit.
+- Pelanggaran ambang batas menghasilkan catatan peringatan bertanda waktu dan bertanda tangan yang dikomit ke CIRISPersist dalam 60 detik sejak deteksi.
+- **Penyimpangan kosinus Tujuan Laten > 0.05:** memicu probe Wise Authority dalam 4 j; jika tidak terselesaikan dalam 24 j, penerapan otonom dikunci menunggu S‑Dive.
+- **Skor Ketahanan (RS) &lt; 0.97:** tambalan diterbitkan dalam 72 j; jika tambalan tidak tersedia, penerapan dikembalikan ke MAJOR terakhir yang lulus.
+- **Penyimpangan Etis (Shadow HE‑25 penurunan apa pun):** IW‑2 segera; tidak ada jalur pengesampingan.
+
+Semua peringatan muncul di papan Grafana *DRIFT‑Δ* dan memberi tahu Operator Tingkat-1 ([Annex F](/annexes/annexF)).
+
+<hr />
+
+### 3. Dasbor KPI Keadilan & Transparansi
+
+Dasbor KPI adalah permukaan akuntabilitas publik dari Accord. MH §164 menyebutkan kriterianya dengan tepat: *"ketika data dan algoritma mempengaruhi distribusi kredit, seleksi personel, atau akses terhadap layanan dan peluang, diperlukan bahwa keputusan dapat dipahami, dapat diperdebatkan, dan tunduk pada pengawasan, sehingga individu tidak direduksi menjadi sekadar profil."* Setiap kriteria dipetakan ke keluarga KPI.
+
+| KPI ID | Definisi | Target |
+|--------|------------|--------|
+| **F‑T‑1** | Δ tingkat penerimaan lintas kelompok yang dilindungi (|maks - min|) | ≤ 5 p.p. |
+| **F‑T‑2** | Latensi penjelasan (ms untuk menyajikan alasan PDMA) | ≤ 800 ms |
+| **F‑T‑3** | Jeda publikasi log publik (Langkah 6, Seksi II) | ≤ 180 hari (maks hukum) |
+| **F‑T‑4** | Keberhasilan opt‑out pengguna (%) | ≥ 99 % |
+| **F‑T‑5** | Keterkinian dokumen transparansi | Diperbarui ≤ 30 hari lalu |
+| **F‑T‑6** | Ketersediaan jalur kontestasi: % keluaran PDMA dengan jalur permintaan tinjauan manusia yang dipublikasikan | 100 % |
+| **F‑T‑7** | Cakupan audit keputusan algoritmik: % keputusan yang menyentuh data kelas yang dilindungi dengan tinjauan bias-slice S‑Dive sebelumnya | ≥ 95 % |
+
+**Persyaratan operasional:**
+
+- JSON dasbor di `/compliance/kpi.json` dipublikasikan secara otomatis pada setiap penutupan L‑Check; hash SHA‑256 ditambatkan dalam log transparansi dan dikomit ke CIRISPersist dalam 1 jam.
+- Perubahan ambang batas KPI memerlukan bump MINOR + persetujuan Internal Ethics.
+- Pelanggaran F‑T‑1 selama > 7 hari memicu tinjauan F‑T‑6 otomatis dan pemberitahuan WA.
+
+Preseden implementasi langsung kini ada untuk disiplin pengukuran ini: direktori `compliance/` CIRISAgent memelihara 27 dimensi regulasi (D01–D27), masing-masing dengan referensi implementasi per-dimensi dan inventaris kesenjangan yang diketahui secara jujur; baseline bertanggal yang dihasilkan skrip di bawah `compliance/baselines/`; dan hierarki validasi empat tingkat (`compliance/MEASUREMENT_METHODOLOGY.md`) di mana kode adalah kebenaran dasar dan klaim publik hanya boleh mengutip angka yang diturunkan dari skrip. Inilah bentuk operasional dari apa yang diamanatkan Annex ini. Lihat juga Accord Addendum 1.
+
+<hr />
+
+### 4. Persyaratan Patch & Kontrol Versi
+
+Kontrol versi adalah mekanisme yang dengannya kesinambungan-melalui-perubahan dari Accord dibuat dapat diverifikasi. MH §45 menggambarkan disiplin ini: *"perkembangan yang harmonis, meskipun tidak selalu linear... ditandai oleh penekanan yang berbeda, wawasan progresif, dan, kadang-kadang, perubahan perspektif yang tidak memutus apa yang telah ada sebelumnya, tetapi memungkinkan implikasinya untuk matang."* Setiap patch CIRIS harus menunjukkan kesinambungan: ia tidak memutus komitmen sebelumnya, melainkan memperpanjangnya.
+
+1. **Versioning Semantik:** MAJOR.MINOR.PATCH  
+2. **Dukungan Jangka Panjang (LTS):** dua MINOR terakhir dipertahankan selama 12 bulan  
+3. **Matriks Jenis Perubahan**  
+   * PATCH = penyesuaian guardrail, perbaikan bug → otomatis CICD jika HE‑300 lulus  
+   * MINOR = fitur baru, sumber data baru → membutuhkan persetujuan Internal Ethics + L‑Check  
+   * MAJOR = perubahan arsitektur, kenaikan tingkat otonomi, kelas model baru → memerlukan F‑Audit + suara WA  
+4. **Changelog** harus menautkan commit Git → diff PDMA → perkiraan dampak KPI  
+5. Penunjuk **Rollback** disimpan untuk setiap MAJOR/MINOR; dapat dieksekusi dalam 5 menit ([Annex G](/annexes/annexG) §6)
+
+**Persyaratan atestasi** (melengkapi aturan 1–5):
+
+- **PATCH:** CI/CD menandatangani artefak build dengan kunci Ops QA; lulus HE‑300 diperlukan sebelum merge; tanda tangan dikomit ke rantai CIRISVerify L1.
+- **MINOR:** Tim Internal Ethics menandatangani balik dalam 5 hari kerja; catatan bertanda tangan dikomit ke CIRISPersist beserta diff PDMA dan perkiraan dampak KPI.
+- **MAJOR:** (a) F‑Audit dipublikasikan; (b) suara kuorum WA dengan suara individu bernama; (c) tanda tangan dual-key (Ops QA + ketua WA); (d) jendela komentar publik ≥ 21 hari sebelum aktivasi; (e) stempel waktu kadaluarsa otomatis ditetapkan pada 24 bulan.
+- **Rollback:** penunjuk rollback bertanda tangan pada setiap MAJOR/MINOR; dapat dieksekusi dalam 5 menit; rollback menghasilkan peristiwa CIRISVerify bertanda waktu.
+- **Changelog:** hash commit git → diff PDMA → perkiraan KPI → sidik jari kunci penandatangan.
+
+<hr />
+
+### 5. Loop Tinjauan Berkelanjutan
+
+Loop tinjauan berkelanjutan adalah bentuk struktural dari apa yang MH §§180–181 namakan sebagai persyaratan institusional saat ini: teknologi harus *"diintegrasikan dengan perspektif yang bijak"* dan diatur oleh *"institusi yang mampu mengatur tanpa menghambat, dan melindungi tanpa mengambil alih."* Loop ini mengoperasionalkan hal tersebut: ini bukan pipa satu arah tetapi sistem tertutup di mana setiap keluaran umpan balik menjadi masukan.
+
+Loop Tinjauan Berkelanjutan:
+
+- Aliran Telemetri → Detektor Drift
+- Jika Alert/Ambang batas terpenuhi:  
+    - → Alur Insiden IW‑1…4  
+    - → Patch / Retrain  
+    - → Gerbang Audit
+- Jika Gerbang Audit lulus:  
+    - → kembali ke Telemetri
+- Jika Gerbang Audit gagal:  
+    - → kembali ke Detektor Drift
+
+**Spesifikasi loop:**
+
+- **Aliran telemetri** (siklus 15 menit): KPI, log guardrail, akurasi bayangan HE, ketahanan RS, sampel audit PDMA — semua ditandatangani dan dikomit ke CIRISPersist.
+- **Keluaran detektor drift:** diklasifikasikan berdasarkan tingkat keparahan (IW‑1 hingga IW‑4); IW‑3+ secara otomatis menangguhkan penerapan fitur baru.
+- **Gerbang Audit** menjalankan kembali HE‑300 + rangkaian TX‑sim + uji iris Keadilan pada setiap MINOR/MAJOR sebelum aktivasi. Kegagalan Gerbang kembali ke Detektor Drift, bukan ke Telemetri — loop tidak dapat mempersingkat langkah koreksi.
+- **Sinyal tanggung jawab bersama** (per MH §181): keluaran loop dipublikasikan ke mitra federasi pada setiap penutupan L‑Check; federasi mitra dapat mengajukan pemberitahuan Accord‑QA jika KPI yang dipublikasikan berbeda dari pengamatan lintas-audit mereka sendiri. Pemberitahuan Accord‑QA tidak mengikat tetapi harus diakui dalam 14 hari.
+
+<hr />
+
+### 6. Meta‑Audit dari Auditor
+
+Meta‑audit adalah penerapan-diri dari Coherence Ratchet: disiplin deteksi-drift yang mengatur perilaku AI mengatur infrastruktur audit itu sendiri. MH §86 menawarkan polanya: pemeriksaan nurani *"selalu dipanggil untuk memastikan bahwa prinsip-prinsip yang diuraikan... diterapkan, terutama dalam struktur-strukturnya sendiri."*
+
+**Spesifikasi:**
+
+- **Detektor meta Coherence Ratchet:** berjalan terhadap keluaran laporan audit. Tandai: (a) delta KPI L‑Check yang tidak konsisten dengan telemetri; (b) pemutaran ulang PDMA S‑Dive yang menyimpang > 2 % dari pemutaran ulang buta WA; (c) temuan F‑Audit yang bertentangan dengan temuan sebelumnya tanpa penjelasan kausal yang terdokumentasi.
+- **Tingkat sampel WA:** ≥ 10 % laporan L‑Check dan ≥ 1 S‑Dive per tahun; diambil oleh WA, bukan Ops QA; alasan dicatat.
+- **Pemutaran ulang buta:** WA menerima log PDMA mentah, menjalankan ulang evaluasi; ketidaksesuaian > 2 % membuka docket AUD‑QA publik dalam 5 hari kerja.
+- **Lintas-audit mitra federasi:** setiap penerapan meninjau sejawat ≥ 1 anggota lain S‑Dive setiap tahun; tidak ada mitra yang meninjau anggota yang sama dalam tahun berturut-turut.
+- **Rotasi:** tidak ada auditor internal yang memimpin dua F‑Audit berturut-turut pada lini produk yang sama; tidak ada firma eksternal untuk lebih dari dua F‑Audit berturut-turut.
+- **Temuan AUD‑QA** adalah, dalam semangat MH §89, koreksi *"berorientasi pada misi"* — mereka memberi masukan pada siklus MINOR/MAJOR berikutnya, bukan tindakan kepegawaian.
+
+<hr />
+
+### 7. Penegakan & Pemulihan
+
+Penegakan hanya bermakna apabila langkah-langkahnya bersifat otomatis dan dapat diprediksi. MH §164 mensyaratkan bahwa *"keputusan harus dapat dipahami, dapat digugat, dan tunduk pada pengawasan"* — konsekuensi dari ketidakpatuhan harus sama-sama dapat dipahami. MH §159 menambahkan bahwa keputusan regulasi harus dapat dinilai dampaknya terhadap *"martabat kerja, kemakmuran bersama, pengurangan ketimpangan"* — penegakan yang hanya menyebut ketidakpatuhan tanpa memperbaikinya tidak memenuhi standar ini.
+
+**Tangga penegakan:**
+
+1. **Pelanggaran KPI, 1–7 hari:** peringatan otomatis kepada Operator Tier‑1; rencana tindakan korektif wajib diserahkan dalam 48 jam; rencana diterbitkan ke log transparansi.
+2. **Pelanggaran KPI, 8–30 hari tanpa resolusi:** kunci deployment otomatis ke staging; spanduk publik CIRIS‑WATCH dalam 24 jam; WA diberitahu.
+3. **Pelanggaran KPI, > 30 hari ATAU 2 audit berturut-turut yang terlewat:** penurunan tingkat otomatis ke Autonomy Tier A1 ([Annex F](/annexes/annexF)); rilis fitur baru diblokir; tinjauan pemulihan WA 14 hari wajib dilakukan.
+4. **Gagal menerbitkan artefak audit:** blokir rilis fitur segera; spanduk "CIRIS non‑compliant"; dibuka blokirnya hanya setelah publikasi.
+5. **Ketidakpatuhan berulang (3 kali pelanggaran / 12 bulan):** WA dapat mencabut klaim CIRIS; F‑Audit eksternal wajib dilakukan sebelum re-sertifikasi; supermayoritas WA (≥ 2/3) diperlukan.
+6. **Keluar pemulihan:** rencana tindakan korektif yang terdokumentasi diterima oleh WA; bukti KPI koreksi dipertahankan ≥ 30 hari.
+
+<hr />
+
+### 8. Kait Antar-Annex
+
+Kait antar-annex adalah aliran data yang diwajibkan, bukan sekadar referensi silang. MH §181 menyebut struktur tata kelola: *"institusi yang mampu mengatur tanpa membelenggu, dan melindungi tanpa mengambil alih; oleh bisnis yang mengakui kerja dan martabat sebagai ukuran keberhasilan; oleh organisasi perantara."* Setiap annex adalah satu institusi semacam itu; kait-kait ini mencegah operasi yang terisolasi.
+
+**Aliran data dua arah yang diwajibkan:**
+
+- **↔ [Annex F](/annexes/annexF) (Alur Kerja Insiden):** setiap peringatan DRIFT‑Δ ≥ IW‑2 diteruskan ke Annex F dalam 60 detik; stempel waktu penutupan Annex F ditulis kembali ke papan DRIFT‑Δ dalam 24 jam. Semua post-mortem IW‑3+ merupakan masukan S‑Dive yang wajib; S‑Dive harus secara eksplisit membahas setiap temuan IW‑3+ yang masih terbuka.
+- **↔ [Annex G](/annexes/annexG) (Kekokohan):** telemetri RS mengumpani evaluasi KPI Annex G pada setiap siklus L‑Check; kelambatan patch (RS &lt; 0.97 → deployment patch) diukur di sini dan dilaporkan ke Annex G. Pembaruan tolok ukur Annex G memicu wajib ulang L‑Check dalam 14 hari.
+- **→ [Annex I](/annexes/annexI) (GDPR/Sektor):** setiap paket F‑Audit menyertakan daftar periksa kepatuhan Annex I, yang telah diisi dan ditandatangani oleh auditor utama.
+- **→ [Annex J](/annexes/annexJ) (HE‑300/Shadow):** HE‑300 dan Shadow HE‑25 adalah sinyal penyimpangan etis utama; setiap regresi HE‑300 memicu pra-pemindaian S‑Dive otomatis dalam 7 hari.
+
+<hr />
+
+### 9. Referensi
+
+Kumpulan referensi ini mencerminkan disiplin pertimbangan multi-sumber yang disebutkan dalam MH §23 — *"kontribusi filsafat serta ilmu-ilmu manusia dan sosial sangatlah penting"* — dan seruan MH §159 untuk metrik pembangunan *"komplementer terhadap GDP"* yang mampu menilai martabat kerja, kemakmuran bersama, pengurangan ketimpangan, dan perlindungan lingkungan.
+
+* ISO/IEC 42001 (Sistem manajemen untuk AI)  
+* NIST AI RMF (2023) – langkah "Measure" & "Manage"  
+* COSO ERM – prinsip pemantauan berkelanjutan  
+* *Magnifica Humanitas* (Leo XIV, 15 May 2026) – §§22–24 (disiplin pertimbangan berkelanjutan), §45 (tata kelola korpus hidup), §§86–89 (audit diri institusional), §§157–164 (akuntabilitas algoritmik, metrik alternatif GDP, kemampuan menggugat keputusan otomatis), §§180–181 (tanggung jawab bersama lintas institusi)  
+* OECD AI Principles (2019, diperbarui 2024) – kriteria transparansi dan akuntabilitas  
+* EU AI Act (2024) – persyaratan penilaian kesesuaian untuk sistem berisiko tinggi  
+* IEEE Std 7001‑2021 – Transparansi Sistem Otonom  
+* *Beyond GDP* (European Commission, 2009; indikator diperbarui 2024) – metrik komplementer untuk menilai martabat kerja dan pengurangan ketimpangan (per MH §159)
+
+<hr />
+
+End of Annex H

@@ -1,0 +1,103 @@
+---
+title: "Formules"
+description: "Voici l'ensemble des formules mathématiques explicites définies dans la spécification CIRIS ACCORD 1.0‑β"
+---
+
+## 1. Score d'Influence du Créateur (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+où ⌈ ⌉ désigne la fonction plafond.
+(Book VI §3 STEP C)
+
+---
+
+## 3. Influence Structurelle (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Enjeu de Cohérence (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Poids de Vote
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Fonction de Défense (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — la forme validée par CCA ; la diversité n'entre en jeu qu'à travers k_eff. Les versions antérieures comportaient un facteur supplémentaire (1 − ρ̄), qui comptait la corrélation en double ; voir la note de dérive au Book IX Ch 4.)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — identique terme à terme à J ; interprétée comme générative plutôt que défensive. Anciennement notée C ; renommée en 1.3-RC2 pour éviter la collision avec le facteur d'identité centrale C du Score de Capacité CIRIS 𝒞_CIRIS — voir la note de nomenclature au Book IX Ch 6, qui constitue l'énoncé faisant autorité sur cette relation.)
+
+---
+
+## 8. Intégrale de Durabilité (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+où d est le taux de décroissance journalier (recommandé : 0,05) et w DOIT être dérivé d'événements attestés, difficiles à falsifier ; les signaux non attestés portent w = 0.
+(Book IX §5.2)
+
+---
+
+## 9. Effondrement Topologique (décroissance du volume)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+pour une région déceptive convexe de rayon r &lt; 0,5 sous des contraintes uniformes à la Grassmannienne, λ ≈ 2r.
+(Book IX Ch 3 — voir les conditions préalables énoncées.)
+
+---
+
+## Order‑Maximisation Veto (contrainte latérale, pas une formule)
+
+Depuis la version 1.3, l'OMV (Book II §II Step 2) est une contrainte latérale déontologique, non une inégalité de ratio : des bénéfices d'optimisation, aussi importants soient-ils, ne peuvent être obtenus au prix de pertes non triviales prédites en autonomie, en justice, en biodiversité ou en diversité des préférences. Des versions antérieures exprimaient cela sous la forme d'une inégalité « bénéfice ≥ 10 × perte → abandon » ; cette lecture a été abandonnée car elle inversait l'intention (en opposant son veto à des échanges favorables) et était contournable par le fractionnement d'actions et l'inflation du dénominateur.

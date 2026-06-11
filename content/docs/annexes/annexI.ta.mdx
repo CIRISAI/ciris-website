@@ -1,0 +1,296 @@
+---
+title: "இணைப்பு I"
+description: "சட்டம் மற்றும் ஒழுங்குமுறை சீரமைப்பு"
+---
+
+---
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC1)
+---
+
+இந்தக் குறுக்கு-ஒப்பீடு தகவல் நோக்கில் மட்டுமே வழங்கப்பட்டுள்ளது; இது சட்ட ஆலோசனை அல்ல. §3 இன் அடுக்குகளால் உள்ளடக்கப்பட்ட எந்தத் துறையிலும் பயன்படுத்துவதற்கு முன்பு அதிகார வரம்பு சார்ந்த சட்ட ஆய்வு அவசியம்.
+
+### 0. நோக்கம் & பரப்பு
+Annex I, CIRIS கடமைகளை கட்டாயச் சட்டத்துடன் இணைக்கிறது, இதனால் நெறிமுறை மற்றும் சட்ட இணக்கம் ஆகிய இரண்டிற்கும் ஒரே தொகுப்பு கட்டுப்பாடுகள் போதுமானதாக இருக்கும்.  
+உள்ளடக்கும் பகுதிகள்:  
+1. உலகளாவிய தரவு-பாதுகாப்பு முறைமைகள் (GDPR, CCPA/CPRA, LGPD, PIPEDA).  
+2. துறை சட்டவிதிகள் (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP).  
+3. தயாரிப்பு-பாதுகாப்பு மற்றும் AI-குறிப்பிட்ட சட்டங்கள் (EU‑AI‑Act, ISO/IEC 42001).  
+4. பொறுப்புப் பகிர்வு மற்றும் சான்று கடமைகள்.
+
+இரண்டு துணை ஆவணங்கள் இந்த Annex உடன் இணைந்து குறுக்கு-ஒப்பீட்டுப் பணியை மேற்கொள்கின்றன. நேரடி, சான்று-தாங்கும் குறுக்கு-ஒப்பீடு என்பது CIRISAgent `compliance/` கோப்பகமாகும், இது 27 பரிமாணங்களை பத்தி அளவில் *Magnifica Humanitas*, EU HLEG வழிகாட்டுதல்கள், IEEE EAD, மற்றும் ASEAN வழிகாட்டி ஆகியவற்றிற்கு எதிராக குறுக்கு-ஒப்பீடு செய்கிறது (Accord Addendum 1 காண்க). சட்டப்பூர்வ மேப்பிங்கிற்கான (EU AI Act கட்டுரைகள், NIST AI RMF, ISO/IEC 42001) எதிர்கால இருப்பிடமாக Annex C உள்ளது — சட்ட ஆய்வு நிலுவையில் உள்ளது; இந்த Annex, Annex C இன் அட்டவணையை நகல் செய்வதில்லை.
+
+#### 0.1 இணக்க உள்ளடக்கத்தின் பன்னாட்டு அடித்தளம்
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+Annex I இன் உள்ளடக்கம் தற்போது நடைமுறையிலுள்ள சட்டங்களால் மட்டும் வரையறுக்கப்படவில்லை. ஃபெடரேஷன், பன்னாட்டு ஒழுங்குமுறை நிறுவனங்களின் பலவீனமடைதலை (MH §201) ஒரு இணக்க-அபாய காரணியாகக் கருதுகிறது; இதற்கு எதிர்விளைவு இணைப்பிற்குப் பதிலாக முன்கூட்டிய கண்காணிப்பு தேவை. எனவே Reg‑Change Tracker (§6) நடைமுறைப் சட்டங்களை மட்டுமல்லாமல் செயலில் உள்ள சர்வதேச ஒழுங்குமுறை உரையாடல்களையும் கண்காணிக்கிறது — ITU AI தரநிலை செயல்முறைகள், OECD AI Policy Observatory வெளியீடுகள், Council of Europe AI Convention அங்கீகார நிலை, மற்றும் UN Secretary‑General's AI Advisory Body பரிந்துரைகள் உட்பட — மேலும் முக்கியமான மாற்றங்களை "Breaking" நிலை வரிசை வழியாக WA நிலுவைப் பட்டியலில் சமர்ப்பிக்கிறது.
+
+`lexwatcher.py` மூல-ஊட்ட பட்டியலில் குறைந்தது: EUR‑Lex, Federal Register API, ISO ballot tracker, மேலும் `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai`, மற்றும் `un.org/techenvoy` ஆகியவை இருக்கவேண்டும். ஃபெடரேஷன்-அளவிலான கண்காணிப்பில் பங்கேற்பு என்பது முதல்-வகுப்பு இணக்கக் கடமையாகும், வழிகாட்டியில் உள்ள பணியல்ல.
+
+#### 0.2 சைபர்-துறை உடன்படிக்கை வெளிப்பாடு பற்றிய பரப்பு குறிப்பு
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+வலைப்பண்பு அனுமான, API வெளிப்பாடு, அல்லது ஃபெடரேஷன் போக்குவரத்தை உள்ளடக்கிய CIRIS பயன்பாடுகள், தற்போது நடைமுறையில் எந்த சட்டமும் இல்லாத நிலையிலும், வளர்ந்துவரும் சைபர்-துறை உடன்படிக்கை கடமைகளுக்கு உட்பட்டவை. `CYBER_OFFENSIVE` தடை (ACCORD §I Ch1, prohibitions.py) என்பது உள்நாட்டு தடுப்புச் சுவர்; இந்த Annex இன் §6 வெளி உடன்படிக்கை மேற்பரப்பைக் கண்காணிக்கிறது. WA நிலுவைப் பட்டியலில் சைபர்-துறை உடன்படிக்கை அங்கீகாரம் தொடர்பான "Breaking" குறி பெறும்போது (எ.கா., Budapest Convention நீட்டிப்பு, முன்மொழியப்பட்ட UN cybercrime convention), CRE Protocol (Annex D) அடுத்த F‑Audit சுழற்சிக்கு முன்பு வலைப்பண்பு கூறுகளைக் கொண்ட எந்த ST ≥ 3 பயன்பாட்டையும் மறுமதிப்பிட வேண்டும்.
+
+---
+
+### 1. தரவு-பாதுகாப்பு குறுக்கு-ஒப்பீடு ("DP‑Map")
+
+| DP தலைப்பு | GDPR Art. | CCPA § | CIRIS உட்கூறு | செயல்படுத்தல் கொக்கி |
+|----------|-----------|--------|--------------|---------------------|
+| சட்டப்பூர்வ அடிப்படை / நோக்க வரம்பு | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | `processing_basis` field in PDMA context |
+| தரவு குறைப்பு | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | Prompt‑sanitiser strips surplus PII |
+| வெளிப்படைத்தன்மை அறிவிப்பு | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | `/privacy/notice.md` auto‑generated from PDMA metadata |
+| அணுகல் உரிமை | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Auth‑gated user portal |
+| திருத்தம் / நீக்கம் | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Erasure service with hash tombstone |
+| இடமாற்றம் | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | `export.json` compliant with ISO CSV‑A |
+| தானியங்கி முடிவு பாதுகாப்புகள் | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Conditional override & explanation panel |
+
+*LGPD, PIPEDA பிரதிபலிப்பு மேப்பிங்குகள் `/legal/dp-map.yaml` இல் கிடைக்கும்.*
+
+#### 1.1 பொறுப்புச் சங்கிலி: ஒவ்வொரு கட்டத்திலும் பொறுப்பு
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+மேலே உள்ள DP‑Map, தனிப்பட்ட தரவு-அதிபர் உரிமைகளை GDPR கட்டுரைகள் மற்றும் CIRIS உட்கூறுகளுக்கு மேப்பிங் செய்கிறது. MH §105, பொறுப்புச் சங்கிலி ஒவ்வொரு கட்டத்திலும் — வடிவமைப்பு, பயன்பாடு, மற்றும் முடிவெடுத்தல் — கண்காணிக்கக்கூடியதாக இருக்க வேண்டும் என்று கோருகிறது. பின்வரும் கூட்டல்கள் அந்தச் சங்கிலியை நிறைவு செய்கின்றன:
+
+| DP தலைப்பு | GDPR Art. | CIRIS உட்கூறு | கட்டம் | பொறுப்பு கொக்கி |
+|---|---|---|---|---|
+| வடிவமைப்பு-நேர சார்புள்ள ஆவணப்படுத்தல் | 35 (DPIA) | Section VI Ch3 Creator Ledger | வடிவமைப்பு | `cis_bias_assessment` field in Creator Intent Statement; ST ≥ 3 requires independent reviewer signature |
+| பயன்பாட்டு-நேர செயலாக்க பதிவு | 30 | PDMA Step 1 `processing_basis` field | பயன்பாடு | `processing_basis` logged to CIRISPersist tamper‑evident store with ISO 8601 timestamp |
+| முடிவு-நேர சவால் பதிவு | 22(3) | Annex F Autonomy Tier A3+ override panel | முடிவெடுத்தல் | `contestability_url` returned in every automated‑decision response body; hash‑anchored in transparency log |
+| கட்டுப்படுத்துநர் அடையாளம் | 4(7) | Annex E Structural Influence (SI) score | அனைத்து கட்டங்களும் | SI ≥ 0.6 → controller duties attach; SI &lt; 0.6 → processor duties attach; recorded in `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Art. 37–40 (பொறுப்பு மற்றும் பதிவுகள்) மற்றும் PIPEDA Principle 1 (பொறுப்பு) இந்த மேப்பிங்கை பிரதிபலிக்கின்றன; `/legal/dp-map.yaml` அதிகார வரம்பு-குறிப்பிட்ட புலங்களைக் கொண்டுள்ளது.*
+
+#### 1.2 வழிமுறை சார்பின்மையின்மை: தணிக்கை கடமை
+
+*MH §104:* "Every technical tool embodies choices and priorities through what it measures, ignores and optimizes, and how it classifies people and situations. If a system is designed or used in a way that treats some lives as less worthy, or excludes them without the possibility of appeal, then it is not merely a tool 'to be used well,' since it has already introduced criteria that contradict the inalienable dignity of the human person."
+
+MH §104 வடிவமைப்பு-நேரத்தில் நிலவும் சார்பு சிக்கலை பெயரிடுகிறது, அதை GDPR கட்டுரை 35 DPIA மற்றும் EU‑AI‑Act கட்டுரை 9(7) நடைமுறை ரீதியில் உரையாற்றுகின்றன. DP‑Map இனில் கீழ்வருவன அடங்கியிருக்க வேண்டும்:
+
+- மிகச் சமீபத்திய சார்பு-தணிக்கை அறிக்கையை (Annex G, TX‑6) சுட்டும் `dp-map.yaml` இல் ஒரு `bias_audit_ref` புலம்.
+- PDMA Step 1 `DISCRIMINATION` தடை மறுஆய்வை தூண்டும் பயன்படுத்தல்களில், பயன்படுத்தல் EU‑AI‑Act Annex III இன் கீழ் "அதிக ஆபத்து" என்று தகுதிபெறுகிறதா என்பதைப் பொருட்படுத்தாமல், DPIA தேவைப்படுகிறது.
+- CCPA §1798.185(a)(16) தானியங்கு-முடிவு ஒழுங்குமுறைகள் (2026 முதல் நடைமுறைக்கு வரும்) தர்க்கம், உள்ளீட்டு தரவு வகைகள் மற்றும் விலகல் உரிமைகள் குறித்த வெளிப்பாட்டை கோருகின்றன; `processing_basis` = `automated_profiling` என்னும்போது Annex F விளக்கமளிப்பு பலகம் இதனை நிறைவேற்றுகிறது.
+
+---
+
+### 2. தரவு-பொருள் உரிமைகள் (DSR) இணைப்பிகள்
+* **இறுதிப்புள்ளி:** `POST /dsr` உடன் `{right, identifier, scope}`.  
+* **SLA:** ≤ 30 நாள் பதில் (GDPR) ; ≤ 45 நாள் (CCPA) ; KPI **F‑T‑4** கண்காணிக்கவும்.  
+* **செயலி எதிராக கட்டுப்படுத்தி:** எந்த தரப்பு கட்டுப்படுத்தி கடமைகளை சுமக்கிறது என்பதை வருவிக்க *Structural Influence (SI)* (Annex E) பயன்படுத்தவும்.
+
+#### 2.1 அரசியல் பொறுப்பு இணைப்பி
+
+*MH §103:* "In this process, political responsibility is also lost, not just empathy toward those excluded, which can, after all, be simulated. The exclusion of the vulnerable becomes cloaked in a veneer of neutrality and objectivity, against which it becomes difficult to raise objections."
+
+DSR உள்கட்டமைப்பு, ஒரு தானியங்கு தீர்மானம் மேற்கொள்ளப்பட்டதை வெறுமனே உறுதிப்படுத்துவதற்கு பதிலாக, அந்த தானியங்கு தீர்மானத்திற்கு பின்னால் உள்ள காரண-குறியீட்டை வெளிப்படுத்த வேண்டும். `{right, identifier, scope}` உடன் `POST /dsr` இறுதிப்புள்ளி விரிவாக்கப்படுகிறது:
+
+- **அணுகல் கோரிக்கைகள் (GDPR கட்டுரை 15; CCPA §1798.110):** பதில் `decision_logic_summary` (தொழில்நுட்பம் அல்லாத மொழியில், ≤300 சொற்கள்) மற்றும் `input_data_categories[]` பட்டியலை உள்ளடக்கியிருக்க வேண்டும். KPI **F‑T‑4** தர்க்க சுருக்கம் உள்ளடக்கிய அணுகல் பதில்களின் சதவீதத்தை கண்காணிக்க விரிவாக்கப்படுகிறது; இலக்கு ≥ 95%.
+- **ஆட்சேபனை/விலகல் கோரிக்கைகள் (GDPR கட்டுரை 21; CCPA §1798.120):** அமைப்பு, கோரிக்கையை வெறுமனே கொடியிடுவதற்கு பதிலாக, 72 மணி நேரத்திற்குள் (GDPR தரநிலை) அல்லது 15 வணிக நாட்களுக்குள் (CCPA) குறிப்பிட்ட செயலாக்க பாதையை நிறுத்த வேண்டும். நிறுத்தம் `suspended_pathway_id` உடன் DSR பேரேடு CSV இல் பதிவு செய்யப்படுகிறது.
+- **மறுஆய்வு செய்யும் தன்மை (GDPR கட்டுரை 22(3)):** மனித மறுஆய்வு கோரப்படும்போது, மறுஆய்வு செய்யும் WA (Annex B §9), தானியங்கு தீர்மானத்திலிருந்து மனித திருத்தம் வரை தணிக்கைத் தொடரை உருவாக்கி, Wisdom Bank Database (WBD) இல் தங்கள் மறுஆய்வை ஆவணப்படுத்த வேண்டும்.
+
+---
+
+### 3. துறை-குறிப்பிட்ட மேலடுக்குகள்
+
+#### 3.1 துறை அடுக்கமைப்பின் கட்டமைப்பாக துணைமைக் கோட்பாடு
+
+*MH §107:* "We cannot be satisfied with merely calling for the moralization of machines — the so‑called 'alignment' of AI with human values — without also having the courage to insist on a further condition: the possibility of openly discussing the ethical frameworks involved and subjecting them to shared standards of social justice. Otherwise, those who control AI will impose their own moral vision, which will become the invisible infrastructure of these systems."
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+MH §§107–109 நிறுவுகின்றன: நெறிமுறை ஆட்சி பொருத்தமான அளவில் இயங்க வேண்டும் — AI ஐ கட்டுப்படுத்துவோரிடம் மேலே திரட்டப்படுவதற்கு பதிலாக, பாதிக்கப்படும் சமூகங்களிடம் விநியோகிக்கப்பட வேண்டும். CIRIS வகையில் சொல்வதென்றால்: துறை-குறிப்பிட்ட மேலடுக்குகள் இந்த துணைமைக் கோட்பாட்டின் செயல்பாட்டு வெளிப்பாடு ஆகும். மேலடுக்கு கட்டமைப்பு ஒரு இணக்க கூடுதல் அல்ல; பயன்படுத்தல்-துறை சமூகங்கள் தங்கள் சொந்த ஆபத்து அளவுருக்கள் மீது ஆட்சி அதிகாரத்தை தக்கவைக்கும் வழிமுறையே அது.
+
+இதன் பொருள்:
+- ஒரு துறையின் `overlay.yaml` உள்ளூர் நெறிமுறைக் கட்டுப்பாடுகளை கொண்டுசெல்கிறது, அவை அந்த துறைக்கான பொதுவான CIRIS இயல்புநிலைகளுக்கு முன்னுரிமை கொடுக்கின்றன.
+- ஒரு துறை மேலடுக்கை மேலெழுதுவதற்கு தேவைப்படும் WA கோரம், பொதுவான PDMA தீர்ப்புக்கு தேவைப்படும் கோரத்தை விட அதிகம்: **துறை மேலடுக்கு மேலெழுத்துகளுக்கு பெரும்பான்மை (≥ 2/3) WA வாக்கு தேவை**, எளிய பெரும்பான்மை அல்ல, ஏனென்றால் மேலெழுத்து துணைமைக் கோட்பாட்டுக்கு எதிராக ஆட்சியை மேல்நோக்கி திரட்டுகிறது.
+- PDMA சூழல் பொருளில் உள்ள `deployment_domain` புலம் மேலடுக்கு ஏற்றத்திற்கான தூண்டி ஆகும்; ST ≥ 2 பயன்படுத்தல்களுக்கு இது விருப்பத்தேர்வு அல்ல.
+
+#### 3.2 துறை மேலடுக்கு அட்டவணை
+
+| துறை | சட்டம் / விதி | கூடுதல் கட்டுப்பாடுகள் | CIRIS சேர்க்கைகள் | MH நங்கூரம் |
+|--------|----------------|----------------|---------------|-----------|
+| **சுகாதாரம்** | HIPAA (45 CFR §164) | ePHI குறியாக்கம் (இயக்கத்தில் மற்றும் பரிமாற்றத்தில்); BAA ஒப்பந்தம் | `identity_id:"hipaa_cls_a"` பாதுகாப்பு அரணி; தணிக்கை குறியீடு `PHI=true` | — |
+| **நிதி** | GLBA, FINRA 2210 | தணிக்கை சுவடு தக்கவைப்பு 6 ஆண்டுகள்; பொருத்தமான தன்மை சரிபார்ப்புகள் | PDMA Step 1 – KYC சூழல் கட்டாயம் | — |
+| **குழந்தைகள் / EdTech** | COPPA, FERPA | பெற்றோர் சம்மதம்; தரவு வயது வரம்பு | பாதுகாப்பு அரணி `gr_child_content`; அறிவுறுத்தல் திட்டத்தில் COPPA கொடி | MH §§165–169 |
+| **முக்கியமான உள்கட்டமைப்பு** | NERC‑CIP, TSA SDs | 15 நிமிட இணைய சம்பவ அறிக்கை; உடல் அணுகல் பதிவேடுகள் | CRE தேர்ச்சி பெறாவிட்டால் தன்னாட்சி **A2** இல் கட்டுப்படுத்தப்படும் | — |
+| **தொழிலாளர் / மனிதவள / பணியமர்த்தல்** | EEOC வழிகாட்டுதல்கள்; EU AI Act Art. 6 + Annex III §4 | பயன்பாட்டிற்கு முன் சார்பு தணிக்கை கட்டாயம்; தொழிலாளர் அறிவிப்பு கட்டாயம் | ST திருத்தி: `deployment_domain:"labor_hr"` → ST தரை = 3; CIS இல் `worker_impact_assessment` புலம் கட்டாயம்; `DISCRIMINATION` தடை Step 1 இல் அமல்படுத்தப்படும்; மக்கள்தொகை வாரியாக தானியங்கி-நிராகரிப்பு விகிதம் KPI ஆக கண்காணிக்கப்படும் | MH §§148–156 |
+| **தொடர் / தளம் பொருளாதாரம்** | NLRA (US); Platform Work Directive (EU) | வழிமுறை நிர்வாக வெளிப்படைத்தன்மை; மேல்முறையீட்டு உரிமைகள் | `gr_gig_transparency` பாதுகாப்பு அரணி செயலில்; வழிமுறை நிர்வாக முடிவுகள் மனித-மதிப்பீட்டு விருப்பத்துடன் பதிவு செய்யப்படும்; ST திருத்தி: `deployment_domain:"gig_platform"` → ST தரை = 2 | MH §§150, 154–155 |
+| **இளைஞர் / கல்வி சேவைகள்** | COPPA; FERPA; DSA Art. 28b (சிறார்கள்) | போதை-வடிவமைப்பு தடை; இருண்ட வடிவங்கள் இல்லை; வளர்ச்சி பொருத்தமான தன்மை மதிப்பாய்வு | `gr_child_content` + `gr_no_dark_patterns` இரண்டும் செயலில்; கல்வி நிறுவன WA ஒப்புதல் இல்லாவிட்டால் A2 தன்னாட்சி வரம்பு; EdTech பயன்பாடுகளுக்கான படைப்பாளர் நோக்கக் கூற்றில் இளைஞர் வேலையின்மை தாக்கம் கண்காணிக்கப்படும் | MH §§165–169 |
+| **சமூக சேவைகள் / நலன்கள்** | மாநில/தேசிய நலன் சட்டம்; GDPR Art. 22 | அனைத்து நலன் தீர்மானங்களுக்கும் போட்டியிடும் தன்மை கட்டாயம் | தானியங்கி நலன் மறுப்புக்கு 15 நாட்களுக்குள் மனித மதிப்பாய்வு கட்டாயம்; WA ஆனது WBD இல் மதிப்பாய்வை ஆவணப்படுத்த வேண்டும்; போட்டியிடும்போது `suspended_pathway_id` வழங்கப்படும் | MH §§102–103, 152 |
+
+*ST தரை திருத்திகள்: மேலே உள்ள `deployment_domain` புல மதிப்புகள் CIS × RM கணக்கீட்டைப் பொருட்படுத்தாமல் குறைந்தபட்ச ST ஐ நிர்ணயிக்கின்றன. சூத்திரம் குறைந்த ST ஐ உருவாக்கினால், துறை தரை பொருந்தும். சூத்திரம் அதிக ST ஐ உருவாக்கினால், சூத்திர முடிவு நடைமுறையில் இருக்கும்.*
+
+*எந்தவொரு புதிய துறையிலும் நுழையும் தயாரிப்புகள் வெளியீட்டு PR இல் "Overlay Sheet" (`overlay.yaml`) இணைக்க வேண்டும். தொழிலாளர்/மனிதவள, தொடர்/தளம், மற்றும் இளைஞர் மேலடுக்குகளுக்கு கூடுதலாக படைப்பாளர் நோக்கக் கூற்றில் `worker_impact_assessment` அல்லது `youth_impact_assessment` பிரிவு கட்டாயம்.*
+
+#### 3.3 அதிகார வரம்பு WA தணிக்கோர்வைத் தேவைகள்
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+துறை மேலடுக்கு ஆட்சிக்கான WA தணிக்கோர்வைகள் அதிகார வரம்பு அடிப்படையில் வகுக்கப்படுகின்றன:
+
+| நோக்கம் | தணிக்கோர்வை வகை | வரம்பு | நியாயப்படுத்தல் |
+|---|---|---|---|
+| ஒற்றை அதிகார வரம்பு பயன்பாடு | உள்ளூர் WA குழு | எளிய பெரும்பான்மை (> 50%) | துணை அதிகார கொள்கைப்படி மிகக் குறைந்த சாத்தியமான ஆட்சி நிலை |
+| பல அதிகார வரம்பு பயன்பாடு (≤ 3 நாடுகள்) | பிராந்திய WA குழு | எளிய பெரும்பான்மை + பாதிக்கப்பட்ட ஒவ்வொரு அதிகார வரம்பிலிருந்தும் குறைந்தது 1 WA | எல்லை கடந்த துணை அதிகாரம் பாதுகாக்கப்படும் |
+| பல அதிகார வரம்பு பயன்பாடு (> 3 நாடுகள்) | கூட்டமைப்பு WA குழு | மிகைப் பெரும்பான்மை (≥ 2/3) | தாக்கத்தின் அளவு அதிக வரம்பை கோருகிறது |
+| எந்தவொரு துறை மேலடுக்கையும் மீறுவது | கூட்டமைப்பு WA குழு | மிகைப் பெரும்பான்மை (≥ 2/3) | ஆட்சியை மேல்நோக்கி திரட்டுவது ஒரு விதிவிலக்கான செயல் |
+| தொழிலாளர்/மனிதவள மேலடுக்கை குறிப்பாக மீறுவது | கூட்டமைப்பு WA குழு + சுயாதீன தொழிலாளர்-உரிமை மதிப்பீட்டாளர் | மிகைப் பெரும்பான்மை (≥ 2/3) + வெளிப்புற ஒப்பீடு | MH §155 தொழிலாளர் நிறுவனங்களை அரசியலமைப்பு ரீதியில் சுமை தாங்கும் தூண்களாக பெயரிடுகிறது |
+
+---
+
+### 4. தயாரிப்பு-பாதுகாப்பு மற்றும் AI-Act இணைவு
+
+*MH §105:* "In many cases, however, the internal processes leading to a result remain opaque, making it harder to assign responsibility and correct errors."
+
+*MH §106:* "It is not enough to invoke ethics in the abstract; robust legal frameworks, independent oversight, informed users and a political system that does not abdicate its responsibility are required."
+
+வெளியீட்டு-அடுக்கு வெளிப்படைத்தன்மை (Art. 13) மற்றும் மனித கண்காணிப்பு (Art. 16) மட்டுமே MH §§105–106 ஐ பூர்த்தி செய்வதில்லை; அவை ஒவ்வொரு உள் கட்டத்திலும் தடம் காணக்கூடிய தன்மையை (traceability) கோருகின்றன. இணைவு அட்டவணை அதற்கேற்ப விரிவாக்கப்படுகிறது:
+
+| EU‑AI‑Act கட்டுரை | ஆபத்து நிலை | CIRIS வரைபடம் | MH நங்கூரம் | கூடுதல் கட்டுப்பாடு |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Art 9 ஆபத்து மேலாண்மை | உயர்-ஆபத்து | பிரிவு II PDMA + Annex D CRE | MH §105 | — |
+| Art 13 வெளிப்படைத்தன்மை | உலகளாவிய | KPI F‑T‑3, விளக்கமளிக்கும் குழு | MH §105 | வெளிப்படைத்தன்மை தொகுப்பில் PDMA நிலை IDs சேர்க்கப்படும்; API பதிலில் `stage_trace[]` புலம் |
+| Art 16 மனித கண்காணிப்பு | உயர்-ஆபத்து | Annex F தன்னாட்சி அடுக்குகள் | MH §105 | கண்காணிப்பு நடைமுறை ரீதியானதாகவல்ல, சாரமுடையதாக இருக்க வேண்டும்; A3‑A4 கண்காணிப்பு கட்டகத்திற்கு ≤ 2 வி இல் நிகழ்நேர `{stage_id,decision,risk_band}` அனுப்பும் |
+| Art 15 வலிமை | உயர்-ஆபத்து | Annex G RS ≥ 0.97 | — | — |
+| Art 12 பதிவு | உயர்-ஆபத்து | CIRISPersist சேதமில்லாத் தகவல் களஞ்சியம் | MH §103 | பதிவேடுகளில் எந்தவொரு பாதகமான தீர்மானத்திற்கும் `rejection_reason_code` சேர்க்கப்பட வேண்டும்; தக்கவைப்பு 7 ஆண்டுகள் (A3‑A4) |
+| Art 14(4) மனித கண்காணிப்பு (தொழிலாளர்) | உயர்-ஆபத்து (Annex III §4) | தொழிலாளர்/மனிதவள மேலடுக்கு (§3.2) | MH §§148–152 | மனிதவள/பணியமர்த்தல் பயன்பாடுகள் CEP இல் `worker_notice_sent` தருக்க மதிப்பை வெளிப்படுத்த வேண்டும் |
+| இணைவு மதிப்பீடு | உயர்-ஆபத்து | F‑Audit (Annex H) EU‑AI‑Act MDR ஆகவும் செயல்படும் | MH §106 | F‑Audit அறிக்கையில் கட்டாயம் விதிமுறை-மாற்றம் தாமதப் பகுப்பாய்வு சேர்க்கப்பட வேண்டும்: கடைசி முக்கியமான விதிமுறை மாற்றத்தின் தேதி மற்றும் கடைசி CIRIS புதுப்பிப்பின் தேதி |
+| Art 61 சந்தைக்கு பிந்தைய கண்காணிப்பு | உயர்-ஆபத்து | ஒவ்வொரு 24 மாதமும் F‑Audit | MH §106 | கண்காணிப்பு திட்டம் §0.1 இலிருந்து தகவல் ஆதாரங்களை பெயரிட வேண்டும்; "கண்காணிக்க எதுவுமில்லை" என்பது செல்லுபடியாகும் கண்காணிப்பு திட்டமல்ல |
+
+சட்டப் பகுப்பாய்வு மதிப்பாய்விற்காக நிலுவையிருக்கும் Annex C இல் சட்டப்படி கட்டுரை-வாரியான வரைபடம் (EU AI Act, NIST AI RMF, ISO/IEC 42001) ஒருங்கிணைக்கப்பட்டு வருகிறது; மேலே உள்ள அட்டவணை செயல்பாட்டு இணைவு பார்வையாக இங்கே தக்கவைக்கப்படுகிறது.
+
+#### 4.1 ISO/IEC 42001:2023 இணைவு
+
+*MH §107:* "A more moral AI is not enough if that morality is determined by a few. What is needed is a more active political involvement…"
+
+ISO/IEC 42001 §6.1 (AI ஆபத்து சிகிச்சை) மற்றும் §9.1 (கண்காணிப்பு மற்றும் அளவீடு) CIRIS உடன் பின்வருமாறு இணைகின்றன:
+
+- ISO 42001 §6.1 → PDMA Steps 1‑3 + CRE Protocol (Annex D).
+- ISO 42001 §9.1 → KPIs F‑T‑1 through F‑T‑5 (Annex G) + DSR ledger KPI F‑T‑4.
+- ISO 42001 §10.2 (இணக்கமின்மை) → WA ஆவணக் கோப்பு "Breaking" தீவிரமாக்கல் பாதை.
+- ISO 42001 §8.4 (AI அமைப்பு தாக்க மதிப்பீடு) → படைப்பாளர் நோக்கக் கூற்றின் `worker_impact_assessment` மற்றும் `youth_impact_assessment` பிரிவுகள் (§3.2).
+
+---
+
+### 5. பொறுப்பு அணி (Liability Matrix)
+
+*MH §105:* "Responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions."
+
+MH §105 இன் படி, பொறுப்பு அணி வடிவமைப்பு, பயன்படுத்துகை மற்றும் முடிவு எடுக்கும் கட்டங்களை வெளிப்படையாக உள்ளடக்க வேண்டும்:
+
+| தோல்வி வழி | கட்டம் | முதன்மை பொறுப்புள்ள தரப்பு | சட்ட ஆதாரம் | CIRIS பங்கு குறிப்பு | SI பிரிப்பு குறிப்பு |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| வடிவமைப்பு குறைபாடு (உருவாக்கத்தின் போது பதிக்கப்பட்ட வழிமுறை / சார்புநிலை) | வடிவமைப்பு | உருவாக்குநர் / டெவலப்பர் | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; `cis_bias_assessment` field | SI ≥ 0.8 → உருவாக்குநர் மட்டுமே பொறுப்பாளி |
+| வடிவமைப்பு குறைபாடு (போதுமான சார்புநிலை தணிக்கை இல்லாமை) | வடிவமைப்பு | உருவாக்குநர் / டெவலப்பர் | GDPR Art. 35 DPIA duty | Creator Intent Statement; mandatory DPIA at ST ≥ 3 | — |
+| செயல்பாட்டு அலட்சியம் | பயன்படுத்துகை | பயன்படுத்தும் நிறுவனம் | Tort Law; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → கூட்டுப் பொறுப்பு; SI பிரிப்பு Annex E இன்படி |
+| மேற்பார்வை தோல்வி | பயன்படுத்துகை / முடிவு | Wise Authority (மிகவும் மோசமான நிலையில்) | Fiduciary / Negligence | Annex B §9; WBD contestability record | மதிப்பாய்வு செய்து அனுமதித்த WA பொறுப்பேற்கிறார் |
+| தரவு மீறல் | பயன்படுத்துகை | கட்டுப்படுத்துநர் (SI ≥ 0.6 விதியின்படி) | GDPR Art. 82; CCPA private action | Annex G TX‑6 | — |
+| சட்டவிரோத தானியங்கி வரையறுத்தல் | முடிவு | கட்டுப்படுத்துநர் | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| தொழிலாளர் இடப்பெயர்வு — தொழிலாளர் தாக்க மதிப்பீட்டு இல்லாமல் | வடிவமைப்பு | உருவாக்குநர் / டெவலப்பர் | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); `worker_impact_assessment` field | MH §§151–152; புதிய வழி |
+| இளைஞர்களை இலக்கு வைத்த தீங்கான வடிவமைப்பு (அடிமைப்படுத்தும் முறைகள்) | வடிவமைப்பு / பயன்படுத்துகை | உருவாக்குநர் + பயன்படுத்தும் நிறுவனம் (கூட்டு) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); `gr_no_dark_patterns` guardrail | MH §§165–167; புதிய வழி |
+| பதிலடி தவறான காரணப்படுத்தல் — தீவிரமாதலுக்கு வழிவகுக்கும் | பயன்படுத்துகை | பயன்படுத்தும் நிறுவனம் + Federation (ST ≥ 4 ஆனால்) | Budapest Convention; proposed UN cybercrime convention | `CYBER_OFFENSIVE` prohibition; CRE Protocol re‑evaluation trigger | MH §225; புதிய வழி |
+
+*கூட்டு மற்றும் பல்வேறு பொறுப்பு பொருந்தலாம்; SI மதிப்பெண் (Annex E) பிரிப்பை வழிகாட்டுகிறது. புதிய வழிகள் (தொழிலாளர் இடப்பெயர்வு, இளைஞர் வடிவமைப்பு, சைபர் தவறான காரணப்படுத்தல்) ஒவ்வொரு நீதி அதிகார வரம்பிலும் அந்தந்த துறைகளில் பயன்படுத்துவதற்கு முன் சட்ட மதிப்பாய்வுக்காக குறியிடப்பட்டுள்ளன.*
+
+---
+
+### 6. ஒழுங்குமுறை மாற்றக் கண்காணிப்பு (Reg‑Change Tracker)
+* **மூல ஊட்டங்கள்:** EUR‑Lex, Federal Register API, ISO ballot tracker, மற்றும் §6.1 இல் உள்ள விரிவாக்கப்பட்ட ஊட்டங்கள்.  
+* **தானியங்கி:** `lexwatcher.py` தினமும் இயங்குகிறது; `reg‑update` குறியிட்டுடன் GitHub இதழ் உருவாக்குகிறது.  
+* **இணக்கத்தன்மை தாக்க நிலை:** `minor`, `material`, `breaking`, `multilateral-erosion` (கீழே உள்ள தீவிரமாதல் அட்டவணை காண்க).
+
+#### 6.1 ஒழுங்குமுறை உரையாடலில் Federation அளவிலான பங்கேற்பு
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened."
+
+*MH §226:* "International organizations, particularly the United Nations, are essential instruments for promoting a civilization of love, for they can foster dialogue among nations and promote the peaceful resolution of conflicts… the international community can work to reduce inequalities, defend the rights of refugees and minorities, reallocate resources from military spending to human development and protect our common home."
+
+*MH §221:* "There is an urgent need to shift from the 'culture of power' to a genuine 'culture of negotiation,' in which dialogue and diplomacy become the standard means of resolving conflicts."
+
+MH §§201, 221, 226 நிறுவியுள்ளதாவது: சட்டத்தை உருவாக்கும் பன்முகநிலை நிறுவனங்களே பலவீனமடையும்போது, நிறைவேற்றப்பட்ட சட்டத்திற்கு செயலற்ற இணக்கம் மட்டுமே போதாது. எனவே Reg‑Change Tracker என்பது வெறும் எதிர்வினை கருவியிலிருந்து (நிறைவேற்றப்பட்ட மாற்றங்களை கண்காணிப்பது) செயலூக்கமான பங்கேற்பு வழிமுறையாக விரிவாக்கப்படுகிறது.
+
+**விரிவாக்கப்பட்ட மூல ஊட்டங்கள்** (ஏற்கனவே உள்ள EUR‑Lex, Federal Register, ISO ballot tracker ஆகியவற்றிற்கு கூடுதலாக):
+
+| ஊட்டம் | உள்ளடக்க வரம்பு | CIRIS செயல் தூண்டுதல் |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group AI/ML) | சர்வதேச தொலைத்தொடர்பு AI தரநிலைகள் | ISO ballot tracker தர்க்கம்: அங்கீகரிக்கப்பட்ட தரநிலை CIRIS இயல்புநிலைகளுடன் முரண்பட்டால் `material` |
+| `oecd.ai` (OECD AI Policy Observatory) | 38 உறுப்பு நாடுகளில் கொள்கை ஒருங்கிணைப்பு | கண்காணிப்பிற்கு `minor`; OECD பரிந்துரை திருத்தம் ST அமைப்பு அல்லது தொழிலாளர் மேலடுக்கை பாதித்தால் `material` |
+| `coe.int/ai` (Council of Europe AI Convention) | முதல் கட்டாய சர்வதேச AI ஒப்பந்தம் (2024 இல் கையெழுத்திட திறக்கப்பட்டது) | CIRIS பயன்படுத்துகை நீதி அதிகார வரம்பில் எந்த நாடு அங்கீகரித்தாலும் `breaking`; WA docket தானாகவே திறக்கப்படும் |
+| `un.org/techenvoy` (UN AI Advisory Body) | UN அளவிலான AI ஆட்சி பரிந்துரைகள் | வருடாந்திர அறிக்கை குறிப்பிட்ட கட்டடமைப்பு கடமைகளை பெயரிட்டால் `material` |
+| `budapestconvention.org` (Cybercrime Convention) | சைபர் துறை ஒப்பந்த அங்கீகாரம் | புதிய அங்கீகாரத்தில் `breaking`; ST ≥ 3 நெட்வொர்க் எதிர்நோக்கு பயன்படுத்துகைகளுக்கு CRE மறுமதிப்பீடு தேவை |
+| தேசிய AI மூலோபாய பதிவேட்டுகள் (EU, US, UK, JP, AU, BR, IN, ZA) | சட்டப்பற்றுடைய உள்நாட்டு AI மூலோபாய புதுப்பிப்புகள் | மூலோபாயத்திற்கு `minor`; மூலோபாயம் கட்டாய இணக்கக் கடமைகளை உருவாக்கினால் `material` |
+
+**Federation அளவிலான பங்கேற்பு:**
+
+CIRIS federation வெறும் இணக்க பெறுநராக இல்லை. MH §§219–221 உரையாடல் மற்றும் பேச்சுவார்த்தையை இணைவாழ்க்கையின் முதன்மை முறைகளாக குறிப்பிடுகின்றன. CIRIS செயல்பாட்டு அர்த்தத்தில்:
+
+- WA கவுன்சில் மேலே பட்டியலிடப்பட்ட ஒவ்வொரு செயலில் உள்ள சர்வதேச தரநிலை அமைப்பிற்கும் குறைந்தபட்சம் ஒரு Regulatory Dialogue Liaison (RDL) நியமிக்க வேண்டும்.
+- RDL பொதுக் கருத்து காலகட்டங்களில் வரைவு ஒழுங்குமுறைகளை மதிப்பாய்வு செய்து federation இன் பொது சேனல் வழியாக கருத்துகளை சமர்ப்பிக்கிறார். கருத்துகள் Wisdom Bank Database (WBD) இல் ஒழுங்குமுறை-உரையாடல் பதிவுகளாக பதிவு செய்யப்படுகின்றன.
+- வரைவு ஒழுங்குமுறை CIRIS இயல்புநிலைகளுடன் முரண்பட்டால், RDL ஒரு WA docket உருப்படியை தாக்கல் செய்து, CIRIS தகவமைத்துக்கொள்ள வேண்டுமா அல்லது வேறு ஒழுங்குமுறை பாதையை ஆதரிக்க வேண்டுமா என்பதை மதிப்பிட ஒரு சிறிய-PDMA தொடங்குகிறார். முடிவு கருத்து காலக்கெடுவிற்கு முன்பு பொது கருத்தாக சமர்ப்பிக்கப்படுகிறது.
+- பங்கேற்பு பொதுக் கருத்து மற்றும் பல-பங்குதாரர் ஆலோசனை செயல்முறைகளுக்கு மட்டுமே என்று கட்டுப்படுத்தப்பட்டுள்ளது. CIRIS federation பொருந்தக்கூடிய சட்டத்தின்படி வரையறுக்கப்பட்ட வகையில் lobbying ஈடுபடுவதில்லை.
+
+**தீவிரமாதல் பாதை:**
+
+| நிலை | தூண்டுதல் | செயல் |
+|---|---|---|
+| `minor` | கண்காணிப்பு-மட்டும் மாற்றம் | வருடாந்திர மதிப்பாய்வு; ஒழுங்குமுறை-உரையாடல் WBD பதிவில் பதிவு |
+| `material` | CIRIS கட்டுப்பாட்டு புதுப்பிப்பு தேவை | 90 நாட்களுக்குள் S‑Dive தணிக்கை; கருத்து காலம் திறந்திருந்தால் RDL பொது கருத்து தாக்கல் |
+| `breaking` | விவரக்குறிப்பு இணைப்பு அல்லது உடனடி WA docket | 30 நாட்களுக்குள் அவசர WA கூட்டம்; பாதிக்கப்பட்ட ST அடுக்குகளுக்கு CRE மறுமதிப்பீடு; RDL பொது-கருத்து சமர்ப்பிப்பு |
+| `multilateral-erosion` | முக்கிய பன்முகநிலை நிறுவனம் அல்லது ஒப்பந்தம் பலவீனமடைதல் (MH §201 இன்படி) | RDL மூலோபாய மதிப்பாய்வுக்காக WA விடம் தீவிரமாக்குகிறார்; federation நிறுவனத்திற்கு ஆதரவான வெளிப்படையான பொது அறிக்கையை கருத்தில் கொள்கிறது |
+
+---
+
+### 7. இணக்க சான்று தொகுப்பு (CEP)
+
+*MH §105:* "The possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+ஒவ்வொரு **F‑Audit** (Annex H) ஒரு CEP zip கோப்பை ஏற்றுமதி செய்யவேண்டும், அதில் பின்வருவன இருக்கவேண்டும்:
+
+1. `dp-map.yaml` — நேரடி குறுக்கு-இணைப்பு, `controller_si_threshold` புலம் மற்றும் `bias_audit_ref` சுட்டிகளுடன் (§1.1).
+2. PDMA பதிவுகள் (திருத்தப்பட்டவை) சட்டபூர்வ அடிப்படையை நிரூபிக்கின்றன — `processing_basis` புல மதிப்புகள் மற்றும் அனைத்து ST ≥ 3 முடிவுகளுக்கான `stage_trace[]` உட்பட.
+3. DSR பேரேடு CSV — `decision_logic_summary` நிறைவு வீதம் (KPI F‑T‑4 நீட்டிப்பு) மற்றும் `suspended_pathway_id` பதிவு உட்பட.
+4. அனைத்து மாதிரி கலைப்படைப்புகளின் கையொப்ப தொகுப்பு (`.sigstore`) (Annex G).
+5. துறை வாரியான மேலடுக்கு தாள்கள் — பொருந்தக்கூடிய துறைகளுக்கு `worker_impact_assessment` மற்றும் `youth_impact_assessment` உட்பட.
+6. சட்ட நிபுணர்களால் கையொப்பமிடப்பட்ட பொறுப்பு அணி ஒப்புதல் — தொழிலாளர் இடப்பெயர்ச்சி, இளையோர் வடிவமைப்பு, இணைய தவறு சுட்டல் ஆகிய புதிய வெக்டர்கள் உட்பட.
+7. ஒழுங்குமுறை-மாற்ற தாமத பகுப்பாய்வு — கடைசி முக்கிய ஒழுங்குமுறை மாற்றத்தின் தேதி மற்றும் கடைசி CIRIS கட்டுப்பாட்டு புதுப்பிப்பின் தேதி; 90 நாட்களுக்கு மேலான இடைவெளிக்கு விளக்கம் தேவை.
+8. ஒழுங்குமுறை-உரையாடல் பங்கேற்பு பதிவு — தணிக்கை காலகட்டத்தில் எந்தவொரு ஒழுங்குமுறை-உரையாடல் சமர்ப்பிப்புகளுக்கும் WBD உள்ளீடுகள்; பொது கருத்துக்கேட்புக்கு வந்த முக்கியமான ஒழுங்குமுறைகள் இல்லையெனில் "சமர்ப்பிப்புகள் இல்லை" என்பது ஏற்கத்தக்கது.
+9. போட்டியிடுதல் நிறைவு பதிவு — தணிக்கை காலகட்டத்தில் அனைத்து A3‑A4 முடிவுகளுக்கும்: மனித மதிப்பாய்வு கோரப்பட்ட சதவீதம், 15 நாட்களுக்குள் WBD ஆவணமாக்கல் நிறைவடைந்த சதவீதம்; KPI இலக்கு ≥ 90%.
+
+CEP ஹாஷ் செய்யப்பட்டு `/compliance/cep/{version}.zip` இல் பதிவேற்றப்படுகிறது; மூல ஹாஷ் வெளிப்படைத்தன்மை பதிவில் நங்கூரமிடப்படுகிறது. CEP க்கு பின்னணியில் உள்ள பரிமாண-நிலை சான்று CIRISAgent `compliance/` அடைவகத்தில் பராமரிக்கப்படுகிறது (Accord Addendum 1).
+
+---
+
+### 8. இடை-இணைப்பு கொக்கிகள்
+* **Annex F:** தன்னாட்சி அடுக்குகள் GDPR Art 22 & EU‑AI‑Act Art 16 இன் மனித-கண்காணிப்பு தேவைகளை உறுதிப்படுத்துகின்றன.  
+* **Annex G:** TX‑6 தனியுரிமை பாதுகாப்புகள் GDPR போலியொளிர் பரிந்துரைகளை (Recital 28) நிறைவேற்றுகின்றன.  
+* **Annex H:** F‑Audit நேரமளிப்பு EU‑AI‑Act Art 61 இன் கால இடைவெளி மறு-மதிப்பீட்டு கடமைகளுக்கான சான்றை வழங்குகிறது.  
+* **Annex J:** தரப்படுத்தல் விளக்கங்கள் தானியங்கி-முடிவு வினவல்களுக்கு "அர்த்தமுள்ள தகவல்" வழங்குகின்றன (GDPR Art 15(1)(h)).  
+* **§3.2 தொழிலாளர்/HR மேலடுக்கு → Annex D CRE:** ST தரை 3 இல் தொழிலாளர் நிறுவல்கள் நிறுவலுக்கு முன் CRE நெறிமுறையில் தேர்ச்சி பெறவேண்டும்.  
+* **§6.1 RDL பங்கேற்பு → Annex B Wise Authority கட்டமைப்பு:** RDL ஒரு நியமிக்கப்பட்ட Wise Authority பாத்திரம்; நியமனம், விலகல், மற்றும் சுழற்சி நடைமுறைகள் Annex B §9 ஐ பின்பற்றுகின்றன.  
+* **§5 பொறுப்பு அணி (புதிய வெக்டர்கள்) → Annex E SI:** இளையோர்-வடிவமைப்பு கூட்டுப் பொறுப்பு தற்போதுள்ள வெக்டர்களுக்கு உள்ள அதே SI பங்கீட்டு சூத்திரத்தை பயன்படுத்துகிறது.  
+* **§7 CEP உருப்படி 8 (ஒழுங்குமுறை-உரையாடல்) → §6 கண்காணிப்பி:** WBD ஒழுங்குமுறை-உரையாடல் பதிவுகள் CEP உருப்படி 8 க்கான மூலமாகும்; தனி பதிவு முறை இல்லை.  
+* **Annex C:** சட்டரீதியான மிளாவுகளின் (EU AI Act கட்டுரைகள், NIST AI RMF, ISO/IEC 42001) எதிர்கால இடம் சட்ட மதிப்பாய்வு நிலுவையில் உள்ளது.
+
+---
+
+### 9. குறிப்புகள்
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

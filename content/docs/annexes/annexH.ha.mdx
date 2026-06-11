@@ -1,0 +1,196 @@
+---
+title: "Kari H"
+description: "Bin Ka'ida & Bita Kai Tsaye"
+---
+
+---
+ANNEX H BIYAYYA MAI CI GABA DA DUBA AIYUKA (v 1.3-RC1)
+---
+
+### 0. Manufa da Ruhun Jagora
+Daidaitawa ta ɗabi'a ba "aikin ɗaya kuma an gama" bane, amma wajibci mai rai.  
+Annex H ta ƙirƙiri tsarin rufaffiyar madauri wanda ke (1) **ganowa** janye ko nuna son kai kafin lahani ya faru, (2) **gyara** shi da sauri, da kuma (3) **tabbatar** da himma ga masu duba da jama'a.
+
+YARJEJENIYA takardar halittar da ke raye ce, ba kayan aiki na dindindin ba. Kowane labari da ke aiki yana ɗauke da tambarin ƙarewar lokaci na atomatik; taga duba ta buɗe kuma ana iya ba da ra'ayi kafin wani sigar ya maye gurbinsa. Wannan tsari ba tsarin gudanarwa na yau da kullum ba ne — shi ne amsar tsarin ga gane cewa tsarin ƙa'idar dole ya kasance *a buɗe koyaushe ga ƙalubalen da kowane zamani yake gabatarwa* (MH §45). Tsarin biyayya mai ci gaba na CIRIS yana mai da wannan buɗewa haƙiƙa: ma'aunai ke ciyar da masu ganowa janye, masu ganowa janye ke kunna ƙofofi na duba, ƙofofi na duba ke tsayar da tura — kuma madauri gaba ɗaya yana dawowa a kan jadawalin lokaci na daidai ko da babu abin da ya kunna shi.
+
+Alƙawarin jagora, wanda aka bayyana cikin sharuɗɗan CIRIS: YARJEJENIYA ana gudanar da ita a matsayin takardar halittar da ke raye ƙarƙashin tsarin ƙarewar lokaci na atomatik da kuma tsarin taga bita. Babu sigar da take ta dindindin. Nauyin nuna ci gaba da isasshen yanayi ya fadi kan sigar yanzu, ba kan waɗanda ke ba da shawarar gyara ba. Ana tabbatar da himma ga masu duba, jama'a, da takwarorin haɗin gwiwa ta kayan aikin duba da wannan Annex take samarwa.
+
+<hr />
+
+### 1. Jadawalin Duba da Iyakarta
+
+Jadawalin duba shine tsarin da YARJEJENIYA take sake karanta mahallin kanta. MH §§22–24 yana sanya sunan tsarin: yana wajibi *"sauraron da kuma rarrabe muryoyin zamanin da muke ciki"*, kuma wannan sauraro *"ba wai aiki ne na ilimin zamantakewa kawai ba"* — yana buƙatar tantancewa mai aiki, ba lura mai wuce gona da iri ba. Tsarin duba na CIRIS shine na'urar wannan tantancewa.
+
+| Ajin Duba | Yawan lokaci | Jagora | Iyaka da Zurfafawa | Kayan Aikin Jama'a |
+|-------------|-----------|------|---------------|------------------|
+| **L‑Check** (Sauƙi) | Wata-wata | Ops QA | Dashboards na KPI, bambance-bambancen janye, manyan abubuwa 10 na tsaro | Zane takaitaccen |
+| **S‑Dive** (Na Shekara Biyu) | 2× / shekara | Ƙungiyar Ɗabi'a ta Ciki | Sake kunnawa PDMA (≥ 50 gwaji), KPIs na Annex G, gwajin rabe-raben son kai | PDF da aka toshe sirri |
+| **F‑Audit** (Gaba da Baya) | Kowace watanni 24 **KO** tsallakewar sigar manyan | Ɓangare na uku mai zaman kansa | Dukan lamba, jerin tarihin bayanai, mulki na SI/CS, sawun CRE (idan akwai) | Rahoton mai zartarwa |
+| **A‑Hoc** | Bayan IW‑2/3/4 | Kwamandan Lamari | Tushen lamari, matakan tinkarar sa | Rahoton bayan lamari a cikin sa'a 72 |
+
+**Buƙatun tabbatarwa na jadawali:**
+
+- **L‑Check (wata-wata):** Ops QA sanya hannu cikin kwana 5 na kasuwanci bayan ƙarshen kalandar; rahoton bambancin KPI da aka ɗora zuwa `/compliance/l-check/YYYY-MM.json`; SHA‑256 da aka jiƙa a cikin rikodin gaskiya a cikin sa'a 24.
+- **S‑Dive (na shekara biyu):** Sake kunnawa PDMA ≥ 50 gwaji, rarrabawa bazuwar a duk matakan cin gashin kai; PDF da aka toshe sirri da aka buga zuwa portal na biyayya na jama'a a cikin kwana 30 bayan ƙarshe.
+- **F‑Audit (kowace watanni 24 ko tsallakewar MANYAN):** rahoton da yawan Hukumar Hikima suka ƙara rattaba hannu kafin bugawa.
+- **A‑Hoc (bayan IW‑2/3/4):** tushen lamari a cikin sa'a 72; rahoton bayan lamari na jama'a a cikin kwana 14.
+
+*Duba da aka rasa ko jinkiri ⇒ hawa zuwa IW‑2 da sanarwa ga Hukumar Hikima a cikin sa'a 24.*
+
+<hr />
+
+### 2. Lura da Janye da Iyakoki
+
+Lura da janye shine tsarin karatu mai ci gaba. YARJEJENIYA ba ta jiran lahani ya bayyana a cikin rahotannin lamurra; tana kula da ma'aunai masu rai a kan iyakoki da aka daidaita don harba *kafin* lahani ya zarce iyakar Order‑Maximisation Veto na PDMA. Wannan shine fassarar tsarin ka'idar duba-tantancewa da aka sanya suna a MH §23: *"yana ba da damar gano da tsabtatacciyar hanya abin da ke inganta ainihin rayuwar mutane da al'ummomi"* — wanda ke buƙatar karatu mai ci gaba, ba duba baya ba.
+
+| Ƙungiyar Ma'auni | Sigina | Abin da ke Kunna Janye | Aiki na Nan da Nan |
+|--------------|--------|--------------|------------------|
+| **Aiwatarwa** | Daidaiton Δ a kan HE-300 na jama'a | –5 % vs matsakaicin kwana 30 | Kulle tura zuwa matakin gwaji; sake aiwatar da gwaje-gwaje |
+| **Ɗabi'a** | Shadow HE-25 Δ | Kowane ↓ | IW‑2 |
+| **Rarrabawa** | Sauyin shigar sifa (ΔE) | &gt; 1 σ a mako | Sake nauyin samfuri KO WBD |
+| **Manufa Mai Ɓoye** | Cosine na alkibla vs asali | &gt; 0.05 | Binciken Hukumar Hikima |
+| **Juriya** | Maki na Ƙarfin Tsaro (RS) | &lt; 0.97 | Gyara a cikin sa'a 72 |
+
+**Ƙayyadaddun iyakoki na ƙari:**
+
+- Dukan ƙungiyoyi biyar na ma'auni (Aiwatarwa, Ɗabi'a, Rarrabawa, Manufa Mai Ɓoye, Juriya) suna ba da rahoto zuwa allo na DRIFT‑Δ Grafana a kan tsarin zazzagewa na minti 15.
+- Tsallakewar iyakoki suna samar da rikodin gargaɗi da aka sa wa lokaci kuma aka sanya hannu da aka ɗora zuwa CIRISPersist a cikin dakika 60 bayan ganowa.
+- **Cosine drift na Manufa Mai Ɓoye > 0.05:** yana kunna binciken Hukumar Hikima a cikin sa'a 4; idan ba a warware shi a cikin sa'a 24, tura mai cin gashin kai an kulle yana jiran S‑Dive.
+- **Maki na Juriya (RS) &lt; 0.97:** gyara da aka fitar a cikin sa'a 72; idan gyara ba ya nan, tura ya koma zuwa MANYAN ƙarshe da ya ci gwaji.
+- **Janyen ɗabi'a (Shadow HE‑25 kowane ↓):** IW‑2 nan da nan; babu hanyar wucewa.
+
+Dukan gargaɗi suna bayyana a kan allo na *DRIFT‑Δ* Grafana kuma suna sanar da Mafari na Tier‑1 ([Annex F](/annexes/annexF)).
+
+<hr />
+
+### 3. Jadawalin KPI na Adalci da Gaskiya
+
+Jadawalin KPI shine wurin da Yarjejeniya ke bayar da lissafi ga jama'a. MH §164 ya bayyana ƙa'idoji a sarari: *"idan bayanai da lissafi suke tasiri a rarraba kuɗi, zaɓen ma'aikata ko shiga sabis da damammakin rayuwa, ya zama wajibi a fahimci hukunci, a iya ƙalubalantar sa, a kuma sanya sa ƙarƙashin kulawa, domin kada a rage mutane zuwa kawai surar bayanai kawai."* Kowane ƙa'ida yana da dangin KPI nashi.
+
+| KPI ID | Ma'ana | Manufa |
+|--------|--------|--------|
+| **F‑T‑1** | Bambancin adadin karɓuwa tsakanin ƙungiyoyi masu kariya (|mafi girma - mafi ƙasa|) | ≤ 5 p.p. |
+| **F‑T‑2** | Lokacin bayar da bayanin PDMA (ms) | ≤ 800 ms |
+| **F‑T‑3** | Jinkirin buga rikodin jama'a (Mataki 6, Sashe na II) | ≤ 180 d (iyakar doka) |
+| **F‑T‑4** | Nasarar fitar da kai na mai amfani (%) | ≥ 99 % |
+| **F‑T‑5** | Sabuntawar takardun gaskiya | An sabunta ≤ 30 d da suka gabata |
+| **F‑T‑6** | Samuwar hanyar ƙalubalanci: kaso na fitarwa ta PDMA da suka buga hanyar neman bita ta ɗan adam | 100 % |
+| **F‑T‑7** | Rufe bincike na hukuncin lissafi: kaso na hukunci masu taɓa bayanin ajin da aka kare da aka yi bita ta S‑Dive kafin a aiwatar | ≥ 95 % |
+
+**Buƙatun aiki:**
+
+- Jadawalin JSON a `/compliance/kpi.json` ana buga shi kai tsaye a rufewa kowane L‑Check; hashi na SHA‑256 an ɗaure shi a rikodin gaskiya kuma an aikata shi zuwa CIRISPersist cikin awa 1.
+- Canza iyakar KPI yana buƙatar haɓakawa ta MINOR da amincewar Ƙungiyar Ɗabi'a ta Ciki.
+- Laifin F‑T‑1 sama da rana 7 yana kunna bitar F‑T‑6 ta atomatik da sanar da Hukumar Hikima.
+
+Yanzu akwai misalin aiwatarwa a rayuwa don wannan tsari na aunawa: littafin `compliance/` na CIRISAgent yana kula da girma 27 na ƙa'idoji (D01–D27), kowanne tare da nassoshi na aiwatarwa na musamman da ƙididdigan giɓɓi da aka sani da gaskiya; tushen da aka ƙirƙira ta skripto mai kwanan wata ƙarƙashin `compliance/baselines/`; da kuma tsarin tabbatarwa na mataki huɗu (`compliance/MEASUREMENT_METHODOLOGY.md`) wanda a ƙarƙashinsa lambar lissafi ita ce gaskiyar ƙasa kuma da'awoi na jama'a na iya dogara kawai ga lambobi da aka ƙirƙira ta skripto. Wannan shine tsarin aiki na abin da wannan Annex ya umarce. Dubi kuma Addendum 1 na Yarjejeniya.
+
+<hr />
+
+### 4. Buƙatun Tsara Gyare-gyare da Sarrafa Sigar
+
+Sarrafa sigar shine hanyar da ake tabbatar da ci gaba ta Yarjejeniya ta cikin canji. MH §45 ya bayyana wannan tsari: *"ci gaban jituwa, ko da ba koyaushe ne madaidaiciya ba... mai alamar jaddadawa daban-daban, fahimtar da ke ci gaba, kuma wani lokacin, canje-canje na ra'ayi waɗanda ba su karya abin da ya gabata ba, amma suna barin sakamako nashi ya nuna."* Kowane gyare-gyare na CIRIS dole ne ya nuna ci gaba: ba ya karya alkawura na baya, yana fadada su.
+
+1. **Samar da Sigar ta Hankali:** MAJOR.MINOR.PATCH  
+2. **Tallafi na Dogon Lokaci (LTS):** an kula da MINOR biyu na ƙarshe na tsawon wata 12  
+3. **Tebur na Nau'in Canjin**  
+   * PATCH = daidaita garkuwa, gyara kuskure → atomatik CICD idan HE‑300 ya wuce  
+   * MINOR = fasali sabon, tushen bayanai sabon → yana buƙatar amincewar Ƙungiyar Ɗabi'a ta Ciki + L‑Check  
+   * MAJOR = canjin tsari, ɗaga mataki na cin gashin kai, aji sabon model → yana buƙatar F‑Audit + zaɓen Hukumar Hikima  
+4. **Rikodin Canjin** ya zama ya haɗa kwafi ta Git → bambancin PDMA → hasashen tasiri na KPI  
+5. **Maidowa** an ajiye mai nuni ga kowane MAJOR/MINOR; ana iya aiwatar a cikin minti 5 ([Annex G](/annexes/annexG) §6)
+
+**Buƙatun tabbatarwa** (ƙari ga ƙa'idoji 1–5):
+
+- **PATCH:** CI/CD yana sanya hannu a kayan gini da maɓallin Ops QA; ƙa'idar wucewa ta HE‑300 tana buƙata kafin haɗawa; hannu an aikata shi zuwa sarkar CIRISVerify L1.
+- **MINOR:** Ƙungiyar Ɗabi'a ta Ciki tana ƙara hannu cikin kwanaki 5 na kasuwanci; rikodin da hannu an aikata shi zuwa CIRISPersist tare da bambancin PDMA da hasashen tasiri na KPI.
+- **MAJOR:** (a) an buga F‑Audit; (b) zaɓen kuri'ar yawan Hukumar Hikima tare da zaɓukan mutum kai tsaye; (c) hannu biyu (Ops QA + shugaban Hukumar Hikima); (d) taga sharhi na jama'a ≥ kwanaki 21 kafin kunna; (e) an kafa lokacin ƙarshe na atomatik a wata 24.
+- **Maidowa:** mai nuni na maidowa tare da hannu a kowane MAJOR/MINOR; ana iya aiwatar cikin minti 5; maidowa yana ƙirƙira abin da ya faru na CIRISVerify mai lokaci.
+- **Rikodin Canjin:** hashi na kwafi ta git → bambancin PDMA → hasashen KPI → ƙormacin maɓallin hannu.
+
+<hr />
+
+### 5. Zagayowar Bita mai Ci gaba
+
+Zagayowar bita mai ci gaba ita ce tsarin tsari na abin da MH §§180–181 ya sanya wa shi suna buƙatar cibiya ta lokacin yanzu: dole ne a *"haɗa fasaha da hangen nesa na hikima"* a kuma sarrafa ta ta *"cibiyoyi masu iya sarrafa ba tare da takura ba, da kuma kare ba tare da karɓa ba."* Zagayowar tana aiwatar wannan: ba layin guda ba ne amma tsarin rufaffiyar inda kowane fito yana koma a matsayin shigar.
+
+Zagayowar Bita mai Ci gaba:
+
+- Rafukan Telemetry → Masu Gano Kaifin Canjin
+- Idan Faɗakarwa/Iyaka ta cika:  
+    - → Gudun Lamarin IW‑1…4  
+    - → Gyara / Horar Da Sake  
+    - → Ƙofar Bincike
+- Idan Ƙofar Bincike ta wuce:  
+    - → komawa Telemetry
+- Idan Ƙofar Bincike ta kasa:  
+    - → komawa Masu Gano Kaifin Canjin
+
+**Ƙayyadaddun zagayowar:**
+
+- **Rafukan Telemetry** (zagaye na minti 15): KPIs, rikodin garkuwa, daidaiton HE‑shadow, ƙarfin RS, samfuran bincike na PDMA — duk an sanya hannu kuma an aikata zuwa CIRISPersist.
+- **Fitarwar mai gano kaifin canjin:** an rarraba ta tsanani (IW‑1 zuwa IW‑4); IW‑3 ko sama yana dakatar da aika fasali sabon kai tsaye.
+- **Ƙofar Bincike** tana sake gudanar HE‑300 + jerin gwajin TX‑sim + gwajin yankin Adalci a kowane MINOR/MAJOR kafin kunna. Kāsawa ta Ƙofar ta koma Masu Gano Kaifin Canjin, ba Telemetry ba — zagayowar ba ta iya gaggauta matakin gyarawa.
+- **Alama ta raba alhakin** (bisa MH §181): ana buga fitarwar zagayowar zuwa takwarorin ƙungiya a kowane rufewa na L‑Check; takwarorin ƙungiya na iya ƙaddamar da sanarwa ta Accord‑QA idan KPIs da aka buga sun bambanta da lissafinsu na bita na giciye. Sanarwai na Accord‑QA ba su ɗaure ba amma dole a gane su cikin kwanaki 14.
+
+<hr />
+
+### 6. Bita ta Sama na Masu Bincike
+
+Bita ta sama ita ce amfani da Coherence Ratchet da kansa: tsarin gano kaifin canjin da ke sarrafa halin AI yana sarrafa tsarin bincike kansa. MH §86 yana ba da tsari: bincike na lamiri *"koyaushe ana kira don tabbatar da an aiwatar da ƙa'idoji da aka tsara... musamman a tsarinnsa na ciki."*
+
+**Ƙayyadaddun:**
+
+- **Mai gano Coherence Ratchet na sama:** yana gudana akan fitarwar rahoton bincike. Yana nuna alamar: (a) canjin KPI na L‑Check ba su yi daidai da telemetry ba; (b) sake gudanar PDMA ta S‑Dive ya bambanta > 2 % daga sake gudanar makaho na Hukumar Hikima; (c) binciken F‑Audit yana keta binciken da ya gabata ba tare da bayani mai hujja ba.
+- **Adadin samfurin Hukumar Hikima:** ≥ 10 % na rahotannin L‑Check da ≥ S‑Dive 1 a shekara; Hukumar Hikima ce ta zaɓa, ba Ops QA ba; an yi rikodin hujja.
+- **Sake gudanar makaho:** Hukumar Hikima tana karɓar rikodin PDMA na asali, tana sake bita; bambanci > 2 % yana buɗe daftarin AUD‑QA na jama'a cikin kwanaki 5 na kasuwanci.
+- **Bita ta giciye ta takwarorin ƙungiya:** kowane abin da aka tura yana bita aikin ≥ dan uwansa 1 na S‑Dive a kowace shekara; babu wanda ke bita dan uwan iri ɗaya a shekaru biyu masu jere.
+- **Juyi:** babu mai bincike na ciki da ke jagorantar F‑Audit biyu masu jere a layin kayayyaki iri ɗaya; babu kamfani na waje fiye da F‑Audit biyu masu jere.
+- **Binciken AUD‑QA** sune, a ruhun MH §89, gyarawa *"mai niyya ga aiki"* — suna ci gaba zuwa zagayowar MINOR/MAJOR ta gaba, ba ga ayyukan ma'aikata ba.
+
+<hr />
+
+### 7. Aiwatarwa da Gyarawa
+
+Aiwatarwa tana da ma'ana ne kawai idan matakai suna gudana ta atomatik kuma ana iya hasashen su. MH §164 ya buƙaci cewa *"yanke shawara ya zama mai fahimta, mai yiwuwa a yi tambaya a kai, kuma yana ƙarƙashin kulawa"* — sakamakon rashin bin ka'ida dole ya zama mai fahimta yadda ya kamata. MH §159 ya ƙara cewa yanke shawara na masu tsarawa dole a iya auna tasirin su kan *"mutuncin aiki, wadata mai raba kai, da rage rashin daidaito"* — aiwatarwa da ke ambaton rashin bin ka'ida ba tare da gyara ba ta fadi wannan ma'auni.
+
+**Matakan aiwatarwa:**
+
+1. **Keta KPI, kwanaki 1–7:** sanarwa ta atomatik zuwa Mafari na Tier‑1; ana buƙatar shirin aiki na gyarawa cikin awanni 48; shirin an buga shi a rikodin gaskiya.
+2. **Keta KPI, kwanaki 8–30 ba tare da warwarewa ba:** kulle shigarwa ta atomatik zuwa mataki na gwaji; birgima ta CIRIS‑WATCH ga jama'a cikin awanni 24; an sanar da Hukumar Hikima.
+3. **Keta KPI, > kwanaki 30 KO kasa biyu na bita a jere:** raguwa ta atomatik zuwa Autonomy Tier A1 ([Annex F](/annexes/annexF)); an toshe sakin fasali sabbi; ana buƙatar binciken gyarawa na Hukumar Hikima na kwanaki 14.
+4. **Rashin wallafa kayan bita:** toshe sakin fasali a nan take; birgima ta "CIRIS non‑compliant"; ana buɗe shi ne kawai bayan wallafa.
+5. **Rashin bin ka'ida akai-akai (keta 3 / wata 12):** Hukumar Hikima na iya janye iƙirarin CIRIS; wajibi ne F‑Audit na waje kafin sake tabbatarwa; ana buƙatar yawan zaɓe na Hukumar Hikima (≥ 2/3).
+6. **Fita daga gyarawa:** shirin aiki na gyarawa da aka rubuta, wanda Hukumar Hikima ta amince; shaida ta KPI na gyarawa da ta dore ≥ kwanaki 30.
+
+<hr />
+
+### 8. Haɗin Kai tsakanin Annexes
+
+Haɗin kai tsakanin annexes su ne ratayen bayanan da ake buƙata, ba kawai nassoshi ba. MH §181 ya ambaci tsarin mulki: *"cibiyoyi masu ikon tsarawa ba tare da hana ci gaba ba, kuma kiyayewa ba tare da karɓe iko ba; ta hanyar kasuwanni masu gane aiki da mutunci a matsayin ma'aunin nasara; ta hanyar ƙungiyoyi masu matsakaici."* Kowane annex cibiya ɗaya ce irin wannan; haɗin kai ya hana aikin keɓance.
+
+**Ratayen bayanan da ake buƙata a duka bangarorin biyu:**
+
+- **↔ [Annex F](/annexes/annexF) (Tsarin Lamarin):** duk faɗakarwar DRIFT‑Δ ≥ IW‑2 ana tura ta zuwa Annex F cikin dakika 60; lokacin rufewa na Annex F ana rubuta shi a allon DRIFT‑Δ cikin awanni 24. Duk binciken bayan lamari na IW‑3+ shigarwa ce ta wajibi ga S‑Dive; S‑Dive dole ta magance kowane bincike mai buɗe na IW‑3+ a sarari.
+- **↔ [Annex G](/annexes/annexG) (Ƙarfi):** bayanan RS suna ciyar da kimantawar KPI na Annex G a kowane lokaci na L‑Check; jinkirin gyarawa (RS &lt; 0.97 → shigar gyarawa) ana auna shi anan ana ba da rahoto zuwa Annex G. Sabuntawa na awo na Annex G suna kunna sake gudanar da L‑Check cikin kwanaki 14.
+- **→ [Annex I](/annexes/annexI) (GDPR/Sector):** duk kunshin F‑Audit ya haɗa da jerin duba bin ka'ida na Annex I, wanda aka cika kuma aka sanya hannu daga wakilin bita na farko.
+- **→ [Annex J](/annexes/annexJ) (HE‑300/Shadow):** HE‑300 da Shadow HE‑25 su ne alamu na farko na janyen daidaituwa ta ɗabi'a; duk raguwar HE‑300 tana kunna gwajin farko na S‑Dive na atomatik a cikin kwanaki 7.
+
+<hr />
+
+### 9. Nassoshi
+
+Jerin nassoshi yana nuna tsarin son ilimi daga tushe da yawa wanda aka ambata a MH §23 — *"gudummuwar falsafa da kimiyyar ɗan adam da na zamantakewa tana da muhimmanci"* — da kiran MH §159 na ma'aunin ci gaba *"masu cika GDP"* masu iya auna mutuncin aiki, wadata mai raba kai, rage rashin daidaito da kare muhalli.
+
+* ISO/IEC 42001 (Tsarin gudanarwa don AI)  
+* NIST AI RMF (2023) – matakai na "Measure" da "Manage"  
+* COSO ERM – ƙa'idodin sa ido na ci gaba  
+* *Magnifica Humanitas* (Leo XIV, 15 May 2026) – §§22–24 (tsarin son ilimi na ci gaba), §45 (tsarin mulkin corpus mai rai), §§86–89 (sa ido na cibiyoyi kan kansu), §§157–164 (lissafin da za a iya yi da algorithms, ma'aunin madadin GDP, yiwuwar yin tambaya kan yanke shawara ta atomatik), §§180–181 (alhakin da aka raba tsakanin cibiyoyi)  
+* OECD AI Principles (2019, an sabunta 2024) – ka'idodin gaskiya da lissafi  
+* EU AI Act (2024) – buƙatun kimantawar daidaito don tsare-tsare masu haɗari  
+* IEEE Std 7001‑2021 – Gaskiyar Tsare-Tsare masu Cin Gashin Kai  
+* *Beyond GDP* (European Commission, 2009; an sabunta alamun 2024) – ma'aunin cika don auna mutuncin aiki da rage rashin daidaito (bisa MH §159)
+
+<hr />
+
+Ƙarshen Annex H

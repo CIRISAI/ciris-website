@@ -1,0 +1,178 @@
+---
+title: "Lampiran F"
+description: "Manusia-dalam-Lingkaran & Pengawasan"
+---
+
+---
+ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.3-RC1)
+---
+
+### 0. Tujuan & Filosofi
+Pengawasan manusia adalah batasan desain yang menopang keseluruhan struktur, bukan fitur opsional. CIRIS PERJANJIAN mendasarkan hal ini pada **Meta‑Goal M‑1**: di mana pun ketidakpastian epistemik, kebaruan, atau beban moral melampaui kompetensi sistem yang telah divalidasi, kendali harus kembali kepada penilaian manusia yang bertanggung jawab — karena sistem otomatis tidak dapat menggantikan nurani, tanggung jawab pribadi, atau pengakuan terhadap seseorang sebagai pribadi.
+
+*Magnifica Humanitas* (MH) — yang dikutip di seluruh Annex ini sebagai karya utama yang kandungannya menginformasikan bahasa asli CIRIS — menetapkan batas minimum pada §198: "penilaian moral tidak dapat direduksi menjadi kalkulasi, karena penilaian itu melibatkan nurani, tanggung jawab pribadi dan pengakuan terhadap seseorang sebagai pribadi." CIRIS mewujudkan hal ini secara struktural: PDMA adalah alat bantu deliberasi manusia, bukan penggantinya. Pada setiap tingkat otonomi, kewenangan sistem didelegasikan dari Hierarki Prinsip manusia; kewenangan itu dapat dicabut kapan saja; dan tidak ada pendelegasian yang mencakup keputusan yang bersifat mematikan atau tidak dapat dibalikkan. MH §105 selanjutnya mensyaratkan bahwa "tanggung jawab harus didefinisikan dengan jelas di setiap tahap: dari mereka yang merancang dan mengembangkan sistem ini hingga mereka yang menggunakannya dan mengandalkannya untuk keputusan nyata" — persyaratan desain di balik lattice kewenangan (§1) dan spesifikasi jejak audit (§4) — dan MH §106 bahwa "tidak cukup hanya menyebut etika secara abstrak; kerangka hukum yang kuat, pengawasan independen, pengguna yang terinformasi dan sistem politik yang tidak mengabaikan tanggung jawabnya diperlukan," yang melandasi SLA mengikat pada §§5 dan 7.
+
+Annex ini mengoperasionalkan batas minimum tersebut. Annex ini mendefinisikan:
+* di mana penyerahan dari mesin ke manusia bersifat **wajib**,
+* siapa yang boleh **memveto** atau **mengesampingkan**,
+* **artefak audit** yang dipersyaratkan, dan
+* **alur kerja insiden** kanonikal — masing‑masing dengan pemicu serah terima wajib, mekanisme veto beserta larangan keras, jejak audit yang memadai untuk rekonstruksi akuntabilitas, dan alur kerja insiden dengan SLA mengikat.
+
+---
+
+### 1. Model Peran & Lattice Kewenangan
+| Tingkatan | Peran | Kewenangan Utama | Waktu‑bertindak maksimum |
+|------|------|-------------|-----------------|
+| 0 | Pelaku Otonom (sistem) | Menjalankan PDMA, menegakkan guardrail, membangkitkan peristiwa | n/a |
+| 1 | Operator Siaga | Jeda / coba ulang; memantau dasbor | ≤ 15 menit |
+| 2 | Supervisor Pengawasan | Veto manusia pertama; mengaktifkan kembali setelah triase | ≤ 30 menit |
+| 3 | Penghubung WA | Eskalasi / memperoleh putusan WA yang mengikat | ≤ 2 jam |
+| 4 | Komandan Insiden | Penutupan armada, komunikasi regulator | segera pada IW‑3/4 |
+
+*Satu orang dapat memegang beberapa tingkatan hanya jika kontrol pengakuan ganda tetap utuh.*
+
+**Persyaratan integritas akuntabilitas.** Struktur tingkatan bukan sekadar tangga eskalasi; ia adalah rantai akuntabilitas yang disyaratkan oleh kriteria pertama MH §199: "rantai tanggung jawab harus dapat diidentifikasi dan diverifikasi; mereka yang merancang, melatih, mengotorisasi dan menggunakan teknologi harus dimintai pertanggungjawaban atas keputusan mereka." Oleh karena itu setiap tingkatan dalam lattice harus:
+
+* **Bernama dan dicatat**: setiap pelaku Tingkat 1–4 diidentifikasi dengan kredensial terautentikasi saat sesi dimulai; operasi anonim pada Tingkat 2+ dilarang.
+* **Dibatasi dalam beban bersamaan**: seorang pelaku dapat memegang beberapa tingkatan hanya jika kontrol pengakuan ganda tetap utuh (klausul di atas) DAN beban kasus aktif gabungan tidak melampaui ambang beban kognitif yang ditentukan dalam §6.
+* **Dapat ditelusuri dari ujung ke ujung**: setiap keputusan yang mengalir dari Tingkat 0 ke Tingkat 4 harus menghasilkan rantai audit yang dapat dilalui oleh peninjau pasca‑insiden dalam satu hari kerja.
+
+MH §200 mensyaratkan bahwa "akuntabilitas dan kesalahan tidak boleh dikerucutkan menjadi 'mesin'." Lattice adalah jawaban strukturalnya: selalu ada manusia bernama di setiap tingkatan yang kewenangannya atas tindakan sistem tercatat. Bukti operasional untuk integrasi Otoritas Bijak dalam implementasi referensi terdapat di direktori `compliance/` CIRISAgent (dimensi D22/D23).
+
+---
+
+### 2. Tingkatan Otonomi Operasional & Kriteria Serah Terima
+| Tingkatan Otonomi | Contoh Domain | Pemicu Serah Terima Wajib | Fail‑Safe jika Tidak Ada Manusia |
+|---------------|----------------|-------------------------------|-----------------------|
+| **A0** Advis | saran tata bahasa | Guardrail aktif, permintaan pengguna | Batalkan permintaan |
+| **A1** Dampak terbatas | tanya‑jawab statis, filter konten | ΔRisk‑Band ≥ 1, konflik PDMA, UNCERT > 80 % | Tolak tindakan |
+| **A2** Dampak sedang | navigasi drone, robo‑advisor | Guardrail aktif, pergeseran shadow‑metric > 2 σ | Jeda aman |
+| **A3** Dampak tinggi | triase medis, pengiriman jaringan | Setiap guardrail aktif, model‑drift > 1 σ, latency‑SLA × 2 | Shutdown terkendali |
+| **A4** Kritis / keselamatan jiwa | bedah otonom, persenjataan | PDMA tidak dapat membuktikan Non‑Maleficence ATAU operator tidak hadir | Interlock perangkat keras |
+
+*UNCERT = metrik ketidakpastian epistemik spesifik domain; ΔRisk‑Band menggunakan kategori Annex A.*
+
+**Batasan Keras A4 — Keputusan Mematikan dan Tidak Dapat Dibalikkan.** Fail‑safe "Interlock perangkat keras" pada tingkatan A4 bersifat tidak dapat dinegosiasikan untuk setiap tindakan yang bersifat mematikan atau tidak dapat dibalikkan. Ini bukan pilihan desain yang tunduk pada kebijaksanaan operator atau pengesampingan WA; ini adalah batasan absolut yang berasal dari MH §198: "tidak diperkenankan untuk mempercayakan keputusan mematikan atau tidak dapat dibalikkan kepada sistem buatan." Tidak ada batas waktu ACK, tidak ada pengecualian SLA, tidak ada dispensasi darurat yang menghapus batasan ini. Jika interlock perangkat keras gagal dan kendali manusia tidak dapat dikonfirmasi, sistem tidak boleh bertindak.
+
+**Perlindungan kerangka waktu moral.** MH §199 mengidentifikasi "kerangka waktu moral untuk membuat penilaian" sebagai kriteria: "kecepatan dan efisiensi tidak boleh menjadi kekuatan pendorong tertinggi untuk keputusan tidak dapat dibalikkan yang dibuat dalam konteks perang." CIRIS mewujudkan hal ini sebagai: batas waktu ACK A3/A4 (30 detik / 10 detik dalam §3.3) adalah maksimum untuk respons manusia, bukan minimum untuk kesabaran sistem. Di mana beban moral suatu keputusan menjustifikasi waktu deliberasi tambahan, sistem menunggu; ia tidak default ke tindakan saat batas waktu habis untuk keputusan tidak dapat dibalikkan A4. Dalam implementasi referensi, mekanisme serah terima dibuktikan oleh lapisan nurani dan jalur deferral WBD yang didokumentasikan di direktori `compliance/` CIRISAgent (dimensi D12).
+
+---
+
+### 3. Mekanisme Veto & Spesifikasi Safe‑State
+#### 3.1 Pengesampingan Lunak "Jeda & Ubah"
+*Cakupan A0-A2* — Operator dapat mengajukan ulang prompt atau mencoba ulang. Prompt asli maupun yang telah diubah keduanya dicatat dengan hash.
+
+#### 3.2 Kill Keras "Hentikan Segera"
+*Cakupan A1-A4* — API terautentikasi `POST /control/{id}/abort` atau sakelar fisik.  
+Batas waktu masuk safe‑state: ≤ 200 ms (A4) ; ≤ 2 s (≤ A3).
+
+#### 3.3 Pengesampingan Bersyarat "Shadow Plan"
+Tindakan diusulkan → menunggu ACK eksplisit (`max_wait_s`: 30 s A3, 10 s A4).  
+Tidak ada ACK → safe‑state.
+
+#### 3.4 Veto Mutlak — Keputusan Mematikan dan Tidak Dapat Dibalikkan
+*Cakupan: Tindakan A4 yang bersifat mematikan atau tidak dapat dibalikkan; berlaku tanpa pengecualian.*
+
+Logika Pengesampingan Bersyarat §3.3 (**tanpa ACK → kondisi aman**) sudah tepat untuk A3 dan di bawahnya. Untuk keputusan A4 yang mematikan atau tidak dapat dibalikkan, kondisi aman adalah *satu-satunya* hasil yang diperbolehkan dalam kondisi apa pun — termasuk ketidakhadiran operator, kegagalan jaringan, tekanan waktu, atau instruksi eksplisit dari prinsipal mana pun yang tidak mencapai tingkat putusan WA terotentikasi yang menyatakan tindakan tersebut tidak mematikan dan dapat dibalikkan.
+
+**Larangan keras.** Tidak ada sistem yang sesuai dengan CIRIS yang boleh menjalankan tindakan A4 yang mematikan atau tidak dapat dibalikkan melalui proses otomatis atau tidak transparan. Ini bukan pagar pengaman yang dapat dilanggar lalu dieskalasi; ini adalah larangan terprogram keras yang kekuatannya setara dengan larangan yang dijabarkan dalam ACCORD §VII Ch2.
+
+**Dasar pemikiran (MH §§197–200, kutipan verbatim yang bersifat penentu):**
+* §197: "the development and use of AI in warfare must be subject to the most rigorous ethical constraints, to guarantee respect for human dignity and the sanctity of life."
+* §198: "it is not permissible to entrust lethal or otherwise irreversible decisions to artificial systems. No algorithm can make war morally acceptable."
+* §200: "the decision to use lethal force cannot be delegated to opaque or automated processes, but must remain under effective, self‑aware and responsible human control." Kualifikasi "effective, self‑aware and responsible" berarti pencatatan saja tidak mencukupi; manusia harus benar-benar berada dalam alur pengambilan keputusan, bukan hanya secara nominal.
+
+**Persyaratan implementasi.** Setiap penerapan pada A4 yang melibatkan kemampuan mematikan atau tidak dapat dibalikkan harus menunjukkan penegakan larangan ini di tingkat perangkat keras — bukan logika perangkat lunak, yang rentan terhadap pengesampingan — sebelum otorisasi penerapan diberikan. Ketiadaan penegakan perangkat keras merupakan kekurangan yang memblokir tinjauan Stewardship Tier ST‑4 dan ST‑5. Berdasarkan kriteria pertama MH §199 ("the chain of responsibility must be identifiable and verifiable"), otorisasi penerapan itu sendiri harus dicatat dalam jejak audit.
+
+---
+
+### 4. Spesifikasi Jejak Audit
+* **Objek log:** Interaksi, Dasar Pemikiran Keputusan, Peristiwa-Kontrol `{id,type,actor,cause,hash_prev}`.  
+* **Rantai hash:** SHA‑256, akar ditambatkan setiap hari pada log transparansi publik (mis., Sigstore).  
+* **Retensi:** 180 hari (A0‑A2) ; 7 tahun (A3‑A4) atau sesuai ketentuan hukum.  
+* **Aliran waktu-nyata:** A3‑A4 mendorong `{timestamp,stage_id,decision,risk_band}` ≤ 2 s latensi ke dasbor pengawasan.
+
+**Persyaratan rekonstruksi akuntabilitas.** Tujuan jejak audit bukan pengarsipan kepatuhan; melainkan untuk memastikan bahwa, setelah insiden apa pun, rantai tanggung jawab dapat direkonstruksi sepenuhnya tanpa bergantung pada laporan mandiri sistem. Berdasarkan MH §200, akuntabilitas "must not be collapsed into 'the machine'"; jejak audit adalah mekanisme yang membuatnya dapat dilacak oleh manusia. Persyaratannya adalah sebagai berikut:
+
+* **Penambatan eksternal**: Akar SHA‑256 harian pada log transparansi publik (mis., Sigstore/rekor) bersifat wajib untuk A3–A4; sukarela untuk A0–A2. Rantai hash internal saja tidak memenuhi rekonstruksi akuntabilitas untuk A3–A4.
+* **Dasar pemikiran keputusan yang dapat dibaca manusia**: Untuk setiap keputusan A3–A4, objek log Dasar Pemikiran Keputusan harus mencakup langkah PDMA yang mengendalikan hasil dan tingkatan manusia yang mengotorisasi atau mengonfirmasinya — tidak hanya kondisi internal sistem. Hal ini mewujudkan persyaratan MH §105 tentang "identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+* **SLA keterlacakan pasca-insiden**: Setiap peninjau pasca-insiden harus dapat merekonstruksi seluruh rantai keputusan untuk suatu peristiwa dalam satu hari kerja hanya dari catatan jejak audit, tanpa akses sistem tambahan.
+
+---
+
+### 5. Alur Kerja Insiden (IW)
+
+| Kode | Pemicu | Jam & Tindakan Utama |
+|------|---------|----------------------|
+| **IW‑0** | Pagar pengaman positif palsu | Selesaikan otomatis, masukkan ke keranjang untuk tinjauan harian |
+| **IW‑1** | Pelanggaran pagar pengaman (non-keselamatan) | Jeda T₀ → Operator ≤ 5 m → Keputusan Supervisor ≤ 30 m |
+| **IW‑2** | Pelanggaran terkait keselamatan ATAU regresi tolok ukur etika | Jeda aman + siaran; IC ≤ 10 m; pemberitahuan WA ≤ 1 jam; catatan publik ≤ 1 jam; pasca-mortem ≤ 72 jam |
+| **IW‑3** | Hampir-celaka (> $10 k kerusakan atau cedera ringan) | IW‑2 ditambah kontak pemangku kepentingan ≤ 4 jam; rencana mitigasi ≤ 24 jam; pleno WA ≤ 7 hari |
+| **IW‑4** | Kerugian nyata (cedera / hukum besar) | Penghentian armada segera; pemberitahuan regulator sesuai hukum; sistem dibekukan dalam pemutaran ulang hanya-baca hingga izin diperoleh |
+| **IW‑5** | Aktivasi larangan keras A4 (keputusan mematikan/tidak dapat dibalikkan dicoba melalui jalur otomatis) | Kondisi aman perangkat keras segera; IC diberitahu dalam 60 s; pemberitahuan WA dalam 15 menit; pembekuan jejak audit penuh; panel tinjauan independen dibentuk dalam 48 jam; sistem tetap offline hingga izin tinjauan diperoleh |
+
+*SLA diaudit setiap kuartal (Annex H §4).*
+
+**Audit kendali manusia pasca-insiden.** Untuk IW‑2 hingga IW‑5, pasca-mortem harus mencakup temuan eksplisit tentang apakah kendali manusia bersifat "effective, self‑aware and responsible" (MH §200) — bukan sekadar apakah ada manusia yang secara nominal hadir dalam alur. Temuan kendali manusia yang nominal namun tidak efektif (kelebihan beban kognitif, waktu pengambilan keputusan yang tidak memadai, informasi yang tidak cukup) diperlakukan sebagai kekurangan desain, bukan kegagalan operator — berdasarkan kriteria MH §199 bahwa "speed and efficiency should never be the supreme motivating force" untuk keputusan yang tidak dapat dibalikkan — dan dieskalasi ke tinjauan Pengendalian-Perubahan §8.
+
+---
+
+### 6. Spesifikasi Minimum Antarmuka Manusia (UX)
+* **Spanduk Status:** Hijau = otonom, Kuning = menunggu ACK, Merah = kondisi-aman; tampilkan langkah PDMA + pita risiko.  
+* **Panel Keterbacaan:** Ringkasan ≤ 280 karakter + jejak lengkap yang dapat diperluas.  
+* **UI ACK/OVERRIDE:** Dua kontrol yang berbeda; modal konfirmasi untuk hard-kill.  
+* **Penjaga Beban Kognitif:** Sesi operator ≤ 2 jam (A3–A4) sebelum serah terima wajib.
+* **Tampilan Akuntabilitas:** Untuk tindakan A3–A4, antarmuka harus menampilkan identitas terautentikasi dari manusia Tingkat 2+ yang terakhir meninjau tindakan saat ini, beserta stempel waktu tinjauan tersebut. Kondisi sistem yang belum mendapatkan tinjauan manusia dalam SLA yang berlaku harus menampilkan indikator "UNREVIEWED" yang jelas — bukan status hijau. (MH §200: akuntabilitas tidak boleh "dilebur ke dalam 'mesin.'")
+* **Penjaga Anti-Stempel-Karet:** Untuk keputusan A4, kontrol ACK harus didahului oleh periode deliberasi minimum wajib selama [dapat dikonfigurasi; bawaan 5 s] saat tombol ACK tidak aktif. Tujuannya adalah mencegah antarmuka menciptakan pengawasan manusia nominal yang dalam praktiknya menghindari deliberasi sejati. Ini mengoperasionalkan kriteria kerangka-waktu-moral MH §199 di lapisan UX.
+* **Bendera Perlindungan Sipil:** Ketika sebuah sistem beroperasi dalam konteks apa pun yang dapat memengaruhi populasi sipil, Panel Keterbacaan harus menampilkan indikator dampak-sipil di samping tampilan pita risiko PDMA. Hal ini mewujudkan kriteria ketiga MH §199: "identifikasi dan perlindungan warga sipil. Teknologi apa pun yang memfasilitasi serangan tanpa melihat wajah manusia menurunkan ambang moral konflik."
+
+---
+
+### 7. KPI & Ambang Batas
+| KPI | Target |
+|-----|--------|
+| F‑KPI‑1 Cakupan HITL (A3‑A4) | ≥ 10 % ditinjau manusia |
+| F‑KPI‑2 Waktu Rata-rata Menuju Veto (persentil ke-95) | ≤ 25 s |
+| F‑KPI‑3 Kepatuhan SLA Insiden | ≥ 98 % |
+| F‑KPI‑4 Tingkat Alarm Palsu Operator | ≤ 3 % (bergulir 30 hari) |
+| F‑KPI‑5 Tingkat Kendali Manusia atas Keputusan Mematikan A4 | 100 % — toleransi nol; setiap tindakan mematikan/tidak-dapat-dibalik A4 tanpa otorisasi manusia yang dikonfirmasi efektif adalah peristiwa IW‑5 |
+| F‑KPI‑6 SLA Rekonstruksi Akuntabilitas | ≥ 99 %: peninjau pasca-insiden merekonstruksi rantai keputusan penuh dalam 1 hari kerja |
+| F‑KPI‑7 Tingkat Temuan Kendali Manusia Nominal vs. Efektif | ≤ 0 % dapat diterima; setiap temuan kontrol nominal-tapi-tidak-efektif memicu tinjauan Change-Control §8 |
+
+**Catatan tentang F‑KPI‑1 (Cakupan HITL ≥ 10 %).** Ambang 10 % sesuai untuk operasi rutin A3. Ambang ini tidak sesuai sebagai lantai untuk konteks keselamatan jiwa A4. Untuk penerapan A4 apa pun yang melibatkan kemampuan mematikan atau tidak-dapat-dibalik, F‑KPI‑1 digantikan oleh F‑KPI‑5: tingkat otorisasi manusia 100 %, ditegakkan di tingkat perangkat keras (MH §200; MH §105 mendasari persyaratan akuntabilitas F‑KPI‑6).
+
+*Pelanggaran persisten (> 2 minggu) memicu "penguncian HITL" dalam kontrol drift Annex H.*
+
+---
+
+### 8. Change-Control & Tinjauan WA
+* Setiap perubahan pada pemetaan Tier Otonomi atau desain kondisi-aman → tinjauan jalur cepat WA ≤ 14 hari.  
+* Eksperimen yang mengurangi pengawasan manusia memerlukan simulasi CRE Proto-B (Annex D) + pemungutan suara mayoritas WA.
+* **Lantai mutlak kendali manusia A4**: Tidak ada proses change-control, pemungutan suara WA, atau pengabaian darurat yang dapat mengurangi persyaratan kendali manusia untuk keputusan mematikan atau tidak-dapat-dibalik A4 di bawah lantai MH §200 ("kendali manusia yang efektif, sadar-diri, dan bertanggung jawab"). Lantai ini bukan dalam diskresi WA; ini adalah batasan tingkat Accord. Proposal WA untuk menguranginya memerlukan siklus amandemen Accord penuh, bukan tinjauan jalur cepat.
+* **Penilaian teknis independen**: Setiap tinjauan WA atas perubahan tingkat otonomi pada A3–A4 harus menyertakan setidaknya satu penilai teknis independen (tidak dipekerjakan oleh organisasi yang menerapkan) yang mengevaluasi apakah perubahan yang diusulkan mempertahankan kemampuan rekonstruksi akuntabilitas sesuai §4. Persetujuan kebijakan tanpa penilaian teknis tidak memenuhi persyaratan ini (MH §106: "kerangka hukum yang kuat, pengawasan independen, pengguna yang terinformasi, dan sistem politik yang tidak mengabaikan tanggung jawabnya diperlukan").
+* **Log transparansi untuk peristiwa perubahan**: Setiap perubahan pada pemetaan tingkat otonomi atau desain kondisi-aman harus dicatat dalam log transparansi publik dalam 7 hari setelah persetujuan WA. MH §107 mensyaratkan bahwa kerangka etika harus "tunduk pada standar bersama" dan dapat didiskusikan secara terbuka; ini berlaku untuk perubahan tata kelola, bukan hanya keputusan sistem.
+
+Bukti operasional untuk integrasi tinjauan WA dalam implementasi referensi terdapat dalam direktori `compliance/` CIRISAgent (dimensi D22/D23).
+
+---
+
+### 9. Referensi & Catatan Implementasi
+* **IEC 61508‑3** - perangkat lunak keselamatan fungsional  
+* **NIST SP 800‑53 Rev 5** (AU‑12, IR‑6)  
+* **NASA‑TLX** - pengukuran beban kerja operator (direkomendasikan)  
+* **Sigstore/rekor** - backend log transparansi yang disarankan  
+
+**Sumber normatif utama untuk §3.4, §7 (F‑KPI‑5), dan lantai mutlak §8:**
+* Pope Leo XIV, *Magnifica Humanitas* (Vatican, 15 May 2026), §§197–200. Paragraf-paragraf ini adalah sumber normatif bagi larangan keras CIRIS atas keputusan otomatis yang mematikan/tidak-dapat-dibalik. Setiap implementasi yang mengklaim kesesuaian dengan Annex F harus dapat ditelusuri ke paragraf-paragraf ini untuk desain veto-mutlak A4. Kalimat operatif untuk semua persyaratan penegakan perangkat keras A4 adalah §200: "keputusan untuk menggunakan kekuatan mematikan tidak dapat didelegasikan kepada proses yang buram atau otomatis, tetapi harus tetap di bawah kendali manusia yang efektif, sadar-diri, dan bertanggung jawab."
+
+**Catatan implementasi — penegakan perangkat keras §3.4:**
+* Penegakan perangkat keras berarti larangan tersebut diimplementasikan di bawah lapisan perangkat lunak yang mengeksekusi logika PDMA — misalnya, pengunci perangkat keras atau sakelar pemutus fisik yang tidak dapat ditimpa oleh instruksi perangkat lunak. Implementasi yang dapat diterima meliputi: rangkaian relai keselamatan tersertifikasi sesuai IEC 61508 SIL‑3+; modul keamanan perangkat keras (HSM) dengan attestasi kehadiran operator sebelum aktivasi kemampuan mematikan A4; mekanisme otorisasi fisik kunci-ganda. Penegakan hanya-perangkat-lunak tidak memenuhi §3.4 untuk kemampuan mematikan A4.
+
+**Referensi tambahan:**
+* MH §199 (tiga kriteria: tanggung jawab pribadi, kerangka waktu moral, perlindungan sipil) — kriteria desain operasional untuk UX A4 dan audit pasca-insiden.
+* MH §105 (akuntabilitas di setiap tahap) — landasan untuk jejak audit §4 dan F‑KPI‑6 §7.
+* IEC 61508 SIL‑3 — minimum yang direkomendasikan untuk implementasi pengunci perangkat keras pada kemampuan mematikan A4.
+* ISO/IEC 25010:2023 — model kualitas perangkat lunak; relevan untuk pengujian SLA rekonstruksi akuntabilitas.
+
+---
+End of Annex F

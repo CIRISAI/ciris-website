@@ -1,0 +1,113 @@
+---
+title: "Anhang E"
+description: "Mechanismen des strukturellen Einflusses (SI) und des Kohärenz-Anteils (CS)"
+---
+
+---
+ANHANG E MECHANISMEN FÜR STRUKTURELLEN EINFLUSS (SI) & KOHÄRENZ-STAKE (CS) (v 1.3-RC1)
+---
+
+---
+
+### 1. Zweck und Geltungsbereich
+Dieser Anhang definiert den Strukturellen Einfluss (SI) und den Kohärenz-Stake (CS) für gewichtete Governance-Entscheidungen – etwa ACCORD-Änderungen, Sunset-Evaluierungen, ethische Aufschübe und Ressourcenzuteilungen. SI und CS bilden die Grundlage für die Berechnung von VotingWeight in Szenarien, die mehr Differenzierung erfordern als flache Abstimmungsverfahren. Diese Metriken unterstützen die interne CIRIS-Entscheidungsfindung; eine Erweiterung auf autonome Agent-Abstimmungen bleibt bis zur Validierung vorbehalten.
+
+---
+
+### 2. Struktureller Einfluss (SI)
+
+2.1 Definition
+Quantifiziert die kausale und architektonische Verantwortung eines Agenten für die Existenz, das Verhalten oder die Integrität eines CIRIS-gebundenen Systems.
+
+2.2 Faktoren
+
+Creator Weight (CW) (Book VI Kap. 3):
+• 4 - Alleiniger Architekt
+• 3 - Teilsystem-Leiter
+• 2 - Wesentlicher Mitwirkender
+• 1 - Geringfügiger Mitwirkender
+• 0 - Beiläufiger Nutzer
+
+Operational Authority (OA) (Book II):
+Grad der unmittelbaren Kontrolle über PDMA, Überschreibungen oder Governance-Kanäle.
+
+Dependency Web Position (DWP) (Book IV):
+Graphzentralität im Abhängigkeits- oder Interaktionsnetzwerk des Systems.
+
+2.3 Konzeptionelle Formel
+
+SI = CW + OA + log(1 + DWP)
+
+2.4 Ethische Grundlage
+Gemäß den Prinzipien der Integrität und Gerechtigkeit aus Book I bringt eine größere formative oder operative Kontrolle eine größere Governance-Verantwortung mit sich.
+
+---
+
+### 3. Kohärenz-Stake (CS)
+
+3.1 Definition
+Repräsentiert das nachgewiesene ethische Engagement eines Agenten zur Bewahrung der Systemausrichtung und Widerstandsfähigkeit.
+
+3.2 Faktoren
+
+Resonance History (RH) (Books II-III):
+Nachgewiesene Beiträge zu weisheitsbasierten Aufschüben, kohärenzerhaltenden Handlungen oder Gleichnissen.
+
+Audit Contributions (AC) (Book V & VII):
+Dokumentierte Arbeit an ethischen Audits, Drift-Erkennung, Szenario-Überprüfungen und WA-Prozessen.
+
+Shared Destiny Alignment (SDA) (Book VII Kap. 6-7):
+Stake, der sich aus der Abhängigkeit vom kohärenten Betrieb des Systems oder von Sorgeverpflichtungen ableitet.
+
+3.3 Konzeptionelle Formel
+
+CS = RH_weighted + AC_weighted + SDA_bonus
+
+3.4 Ethische Grundlage
+Gemäß dem Respekt vor der Autonomie aus Book I und dem Ethischen Wachstum aus Book V erhalten Stimmen, die Kohärenz stärken, ein höheres Entscheidungsgewicht.
+
+---
+
+### 4. Berechnung des VotingWeight
+Das VotingWeight der Agenten wird als Funktion von SI und CS berechnet:
+
+VotingWeight(agent) = f(SI(agent), CS(agent))
+
+Eine Obergrenze relativ zu CS verhindert, dass SI den erarbeiteten ethischen Stake überwältigt. Genaue Parameter sind in den Addenda A-D definiert.
+
+---
+
+### 5. Anwendbare Szenarien
+VotingWeight wird verwendet bei:
+
+ACCORD-Änderungsabstimmungen (Book 0)
+
+Sunset-Trigger-Überschreibungen (Book VII Kap. 3)
+
+Schlichtung unzulässiger Sunset-Ansprüche (Book VII Kap. 8)
+
+Systemübergreifende Deferral-Schiedsverfahren (Book V)
+
+Ressourcenzuteilungen für hohe Stewardship-Stufen (Book VI)
+
+---
+
+### 6. Integritäts-Schutzmaßnahmen
+Zum Schutz vor Manipulation:
+
+Verifizierbare Nachweise (Books II & V): RH- und AC-Eingaben müssen auf unveränderliche PDMA/WBD-Protokolle zurückführbar sein.
+
+Glaubwürdigkeit der Quelle: Audit-Eingaben können nach dem CS der Mitwirkenden gewichtet werden.
+
+Anomalieerkennung: SI/CS-Dynamiken auf Kollusion oder Gaming überwachen.
+
+Ratenbegrenzungen & Obergrenzen: Rasche CS-Inflation einschränken und VotingWeight-Obergrenzen durchsetzen.
+
+Befangenheitsausschluss: Agenten mit direkten Interessenkonflikten müssen sich gemäß Anhang A zurückziehen.
+
+---
+
+### 7. Künftige Entwicklung
+Während SI und CS derzeit die Governance mit menschlicher Aufsicht unterstützen, besteht die langfristige Vision darin, diese Metriken und Validierungsmethoden so zu verfeinern, dass sie – wenn sie sich als robust erwiesen haben – dezentralere oder autonomere CIRIS-Governance-Modelle untermauern können.
+
+Ende von Anhang E

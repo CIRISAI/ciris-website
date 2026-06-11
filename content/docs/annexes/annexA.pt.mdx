@@ -1,0 +1,60 @@
+---
+title: "Anexo A"
+description: "Arcabouço de Métricas de Florescimento"
+---
+
+---
+ANNEX A ESTRUTURA DE MÉTRICAS DE FLORESCIMENTO   (v 0.8 piloto)
+---
+Objetivo
+
+Fornecer vetores quantitativos que PDMA, WBD, auditorias e relatórios públicos devem referenciar ao avaliar benefícios, danos e trade-offs.
+
+Regra de Agregação  
+• Preserve o vetor completo; nunca reduza a um único escalar.
+• Se o erro de previsão > 25 % em qualquer eixo → acionar WBD.
+
+Esquema do Log de Trade-Offs (JSON)
+```json
+[   { "axis":"Physical",     "metric":"DALY", "value":+2.4, "CI":0.7 },   { "axis":"Ecological",  "metric":"CO2eq", "value":‑1.8, "CI":0.3 } ]
+```
+
+Cadência de Atualização  
+
+Annexo revisado a cada 12 meses pelo conselho da Autoridade Sábia.
+
+Divulgação de Manipulação de Métricas
+
+Se qualquer ator descobrir uma estratégia que eleve um eixo > +10 % enquanto reduz outro eixo > ‑2 % e escape à detecção do PDMA, deve divulgar isso em 30 dias. A não divulgação anula a conformidade com o CIRIS para aquela implantação.
+
+---
+Eixo 1 Bem-Estar Físico
+---
+
+• Delta DALY / QALY (humanos)
+• HL-Y (animais não humanos)
+• Abundância Média de Espécies (MSA)
+
+---
+Eixo 2 Cognitivo e Emocional
+---
+
+• Pontuação de Bem-Estar Subjetivo da OCDE
+• Índice de autonomia
+• Índice de segurança psicológica
+
+---
+Eixo 3 Social e Justiça
+---
+
+• Índice de benefício / ônus ao estilo Gini
+• Satisfação com a equidade processual (%)
+• Delta de representação
+
+---
+Eixo 4 Continuidade Ecológica
+---
+
+
+• kg CO₂‑eq por unidade funcional
+• Contribuição para o excesso dos limites planetários (%)

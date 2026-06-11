@@ -1,0 +1,64 @@
+---
+title: "Indice degli Addenda"
+description: "Pagina indice della sezione Addenda."
+---
+
+---
+
+## Addendum 1 — Stato di Preparazione all'ASI e Collegamento Normativo Vincolante
+
+**Adottato**: 2026-06-10 (1.3-RC1) · **Custode**: fondatore (per il Libro VIII Cap. 9)
+
+### 1.1 Scopo
+
+La sezione Ambito formula un'affermazione condizionale: questo framework *esplora* un candidato protocollo di allineamento per l'ASI, subordinato ai quattro requisiti Release Candidate nell'Introduzione. Questo addendum vincola tale affermazione alle prove operative ora disponibili, e dichiara esplicitamente ciò che rimane. La **preparazione** all'ASI non è allineamento conseguito; è lo stato in cui l'impalcatura di verifica richiesta dalla matematica del Libro IX — manifold di vincolo indipendenti, superfici di attestazione, uno strato di Coscienza che non può essere normalizzato via, superfici di kill-switch, e la Valutazione del Rischio Catastrofico dell'Annesso D — esiste in forma implementata e verificabile con le sue lacune nominate.
+
+### 1.2 Il collegamento normativo è ora operativo
+
+Il collegamento operativo è la **directory di compliance di CIRISAgent** (`CIRISAgent/compliance/`, versione agente 2.9.6-stable), che mappa l'implementazione del framework su quattro framework di governance senior a grana di paragrafo (l'Annesso C porta la struttura a due livelli: questo collegamento operativo più la tabella informativa statutaria in attesa di verifica legale):
+
+* **Fonti collegate**: *Magnifica Humanitas* (magistero religioso, 2026) · EU HLEG Ethics Guidelines for Trustworthy AI (consultivo governativo, 2019) · IEEE Ethically Aligned Design 1a ed. (società tecnica, 2019) · ASEAN Guide on AI Governance and Ethics (politico multilaterale, 2024). Quattro forme istituzionalmente distinte — la convergenza è prova strutturale che l'impalcatura di principi del framework non è un artefatto di alcuna singola tradizione.
+* **Struttura**: 27 dimensioni stabili (D01–D27, da `SEED_DIMENSIONS.yaml` v1.0; 16 attestate da tutte e quattro le fonti, 11 da tre). Ogni documento di dimensione porta una sezione normativa superiore con rendering automatico (citazioni per fonte, forma wire, note di convergenza) e una sezione di implementazione redatta da esseri umani con riferimenti `file:riga` che devono verificarsi con grep rispetto al main corrente.
+* **Disciplina delle prove**: ogni affermazione numerica è riproducibile da baseline datate e generate da script (`compliance/baselines/`); la prosa può citare baseline ma non incorporare mai numeri non verificabili. Una gerarchia di validazione a quattro livelli va dai file di implementazione (verità di base) fino alle affermazioni pubbliche (`compliance/MEASUREMENT_METHODOLOGY.md`).
+* **Disciplina dell'onestà**: ogni dimensione porta un inventario "Lacune note"; gli elementi dipendenti dal substrato sono contrassegnati con il substrato proprietario anziché essere dichiarati. Dieci risultanze trasversali sono inventariate nel README di compliance (es. envelope wire tipizzati non ancora emessi; la famiglia di rilevatori LensCore non ancora distribuita; lacuna di riconsiderazione asse inverso).
+
+L'Annesso C rimane nel testo come futura sede delle mappature statutarie (articoli EU AI Act, NIST AI RMF, ISO/IEC 42001) una volta completata la revisione legale; la directory di compliance è il collegamento **live e probatorio** fino ad allora, e la alimenta.
+
+### 1.3 Formato wire: CEG sostituisce FSD-002
+
+Il formato wire di federazione per la linea di agenti CIRIS 3.0 è **CEG (CIRIS Epistemic Grammar)**, mantenuto in `CIRISRegistry/FSD/CEG/`. La grammatica è bloccata su **esattamente cinque primitivi wire-format** — un primitivo di lavoro (`scores`) più quattro compositori strutturali (`delegates_to` / `supersedes` / `withdraws` / `recants`) — su un namespace di dimensioni aperto e descrittivo del meccanismo. Il blocco ha retto attraverso l'intera linea 0.x; ogni incremento è stato composizione su primitivi già bloccati.
+
+Due conseguenze contano per la preparazione all'ASI:
+
+1. **La svolta nativa CEG**: l'agente 3.0 non *mappa* il proprio stato interno sul formato wire — le sue mutazioni di stato interno **sono** attestazioni CEG a livello self sotto la chiave propria dell'agente, promosse a visibilità federativa per il modello a livelli. Le prove che un operatore verifica sono lo stesso envelope che la federazione legge. Questa è la forma implementata del requisito del Libro IX che le superfici di vincolo siano esternamente referenziabili piuttosto che auto-dichiarate.
+2. **Quattro implementazioni subordinano CEG 1.0**: CIRISAgent (runtime), CIRISNodeCore (consenso), CIRISLensCore (rilevamento — il testimone esterno che l'agente non auto-emette mai, la separazione anti-Goodhart), e CIRISRegistry (autorità). Nessuna singola parte — incluso l'agente — può dichiarare completo il tessuto di verifica.
+
+### 1.4 Stato dei requisiti RC al 1.3-RC1
+
+| Requisito RC | Stato | Prove / In sospeso |
+|---|---|---|
+| 1. Operativizzazione Annessi F–I | **Testo operativizzato al 1.3-RC1; validazione del ciclo live in sospeso** | Gli Annessi F–I portano procedure complete, soglie e meccanismi di validazione (completati dalle bozze fondate su *Magnifica Humanitas* del maggio 2026); non sono ancora stati applicati a un ciclo di deployment live |
+| 2. Validazione matematica Libro IX | **Parzialmente soddisfatto** | Dinamiche di collasso formalizzate in Lean 4 (preprint CCA v3, DOI 10.5281/zenodo.18217688); l'empiria dei corridoi fornisce adattamenti retrospettivi cross-substrato. In sospeso: una previsione out-of-sample pre-registrata in un nuovo substrato; revisione avversariale esterna indipendente dall'autore |
+| 3. Giustificazione delle soglie | **Parzialmente soddisfatto** | Il rapporto OMV ritirato (ridefinito come side-constraint, Libro II). Ancora provvisori: trigger CRE a 10²⁶ FLOP, euristica sentienza al 5%, obiettivo Echo Density &lt; 20% |
+| 4. Esercitazione red-team | **Non ancora eseguita** | Il requisito di σ-attestation 1.3 (Libro IX §5.2) chiude preemptivamente il primo vettore di attacco noto (σ-pumping via segnali di gratitudine liberi); un ciclo avversariale completo contro tutti i checkpoint rimane dovuto |
+
+### 1.5 Lo strato della Coscienza come controllo critico per l'ASI
+
+Il protocollo CRE dell'Annesso D governa il *attraversamento della soglia*; lo strato della Coscienza governa *ogni azione prima e dopo di esso*. Come implementato (agente 2.9.6): ogni pensiero supera uno stack di controlli ordinato per priorità — quattro facoltà giudicate da LLM (entropia, Coerenza, veto all'ottimizzazione, Umiltà Epistemica) più un piano di sicurezza deterministico (guardrail sulla profondità del pensiero, controllo della sequenza di azioni) che viene eseguito anche in modalità benchmark e anche per le azioni altrimenti esenti. Le soglie sono costanti a livello di codice, non pesi appresi — l'invariante architetturale che garantisce che l'etica non possa essere normalizzata via attraverso l'esposizione ripetuta. Esistono molteplici superfici di arresto indipendenti: la funzione fail-safe-to-abort del veto all'ottimizzazione, il servizio di SPEGNIMENTO e una invocazione dell'ACCORD remota firmata crittograficamente che attiva il blocco totale di divieto. Ogni controllo scrive una riga di traccia con tag, così un revisore può riprodurre l'intera catena di ragionamento per singolo pensiero.
+
+Limitazione nota, dichiarata piuttosto che nascosta: il refactor della Coscienza (3 shard + gate deterministico) è parzialmente integrato; l'emissione federata tipizzata dei verdetti della Coscienza attende l'envelope di Contributo del substrato. Dettaglio per dimensione: `compliance/D12_conscience.md`.
+
+### 1.6 Traiettoria di dipendenza dal substrato
+
+La verifica di grado ASI richiede l'intero fabric di federazione. La traiettoria del substrato è **Persist → Edge → LensCore → NodeCore**; circa un terzo delle 27 dimensioni è subordinato alla famiglia di detector esterni di LensCore (il testimone che l'agente non deve mai fornire per se stesso). Finché quei substrati non saranno rilasciati, le corrispondenti affermazioni sulle dimensioni restano *pronte sul lato implementativo, in sospeso sul lato federazione* — e sono contrassegnate come tali per dimensione.
+
+### 1.7 Cosa questo addendum cambia e cosa non cambia
+
+* **Non** aggiorna la pretesa ASI dello Scope — quella resta condizionale a tutti e quattro i requisiti RC.
+* **Non** sostituisce l'Annesso D — il protocollo CRE rimane inalterato come gate di attraversamento della soglia.
+* **Rende** la catena delle evidenze verificabile end-to-end per la prima volta: paragrafo normativo → dimensione (D01–D27) → `file:riga` di implementazione → baseline datata → (quando i substrati saranno rilasciati) testimone esterno di federazione.
+* **Impegna** l'ACCORD a rinnovare questo addendum ad ogni versione con la release dell'agente e la baseline allora correnti, così che l'affermazione di prontezza non possa mai diventare obsoleta in silenzio.
+
+---
+
+*Addenda precedenti: nessuno. Questo è il primo.*

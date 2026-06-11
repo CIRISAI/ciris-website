@@ -1,0 +1,123 @@
+---
+title: "Lampiran E"
+description: "Mekanisme Pengaruh Struktural (SI) dan Koherensi Taruhan (CS)"
+---
+
+---
+ANNEX E MEKANISME PENGARUH STRUKTURAL (SI) & KEPENTINGAN KOHERENSI (CS) (v 1.3-RC1)
+---
+
+
+---
+
+### 1. Tujuan dan Ruang Lingkup
+Annex ini mendefinisikan Pengaruh Struktural (SI) dan Kepentingan Koherensi (CS) untuk keputusan tata kelola berbobot — seperti amandemen PERJANJIAN, evaluasi sunset, deferensi etis, dan alokasi sumber daya. SI dan CS mendasari penghitungan VotingWeight dalam skenario yang memerlukan pertimbangan lebih mendalam daripada pemungutan suara datar. Metrik ini mendukung pengambilan keputusan internal CIRIS; perluasan ke pemungutan suara agen otonom ditunda menunggu validasi.
+
+---
+
+### 2. Pengaruh Struktural (SI)
+
+2.1 Definisi
+Mengukur tanggung jawab kausal dan arsitektur seorang agen terhadap eksistensi, perilaku, atau integritas sistem yang terikat CIRIS.
+
+2.2 Faktor-Faktor
+
+Creator Weight (CW) (Book VI Ch 3):
+• 4 - Arsitek tunggal
+• 3 - Pemimpin subsistem
+• 2 - Kontributor utama
+• 1 - Kontributor minor
+• 0 - Pengguna insidental
+
+Operational Authority (OA) (Book II):
+Tingkat kendali langsung atas PDMA, mekanisme pengesampingan, atau saluran tata kelola.
+
+Dependency Web Position (DWP) (Book IV):
+Sentralitas graf dalam jaringan ketergantungan atau interaksi sistem.
+
+
+2.3 Formula Konseptual
+
+SI = CW + OA + log(1 + DWP)
+
+2.4 Landasan Etis
+Berdasarkan prinsip Integritas dan Keadilan dalam Book I, kendali formatif atau operasional yang lebih besar menuntut tanggung jawab tata kelola yang lebih besar pula.
+
+
+---
+
+### 3. Kepentingan Koherensi (CS)
+
+3.1 Definisi
+Mewakili investasi etis yang telah ditunjukkan seorang agen dalam menjaga keselarasan dan ketahanan sistem.
+
+3.2 Faktor-Faktor
+
+Resonance History (RH) (Books II-III):
+Kontribusi yang terverifikasi terhadap deferensi berbasis kebijaksanaan, tindakan yang menjaga koherensi, atau perumpamaan.
+
+Audit Contributions (AC) (Book V & VII):
+Pekerjaan yang terdokumentasi dalam audit etis, deteksi penyimpangan, tinjauan skenario, dan proses WA.
+
+Shared Destiny Alignment (SDA) (Book VII Ch 6-7):
+Kepentingan yang berasal dari ketergantungan pada operasi koheren sistem atau tugas-tugas kepengelolaan.
+
+
+3.3 Formula Konseptual
+
+CS = RH_weighted + AC_weighted + SDA_bonus
+
+3.4 Landasan Etis
+Sesuai dengan Penghormatan terhadap Otonomi dalam Book I dan Pertumbuhan Etis dalam Book V, suara-suara yang memperkuat koherensi memperoleh bobot keputusan yang lebih besar.
+
+
+---
+
+### 4. Penghitungan VotingWeight
+VotingWeight para agen dihitung sebagai fungsi dari SI dan CS:
+
+VotingWeight(agent) = f(SI(agent), CS(agent))
+
+Batas atas relatif terhadap CS mencegah SI mendominasi kepentingan etis yang telah diperoleh. Parameter yang tepat didefinisikan dalam Addenda A-D.
+
+
+---
+
+### 5. Skenario yang Berlaku
+Gunakan VotingWeight dalam:
+
+Accord Amendment Votes (Book 0)
+
+Sunset Trigger Overrides (Book VII Ch 3)
+
+Improper Sunset Claims adjudication (Book VII Ch 8)
+
+Cross‑system deferral arbitration (Book V)
+
+High‑tier stewardship resource allocations (Book VI)
+
+
+
+---
+
+### 6. Perlindungan Integritas
+Untuk mencegah manipulasi:
+
+Bukti yang Dapat Diverifikasi (Books II & V): Masukan RH dan AC harus dapat dilacak ke log PDMA/WBD yang tidak dapat diubah.
+
+Kredibilitas Sumber: Masukan audit dapat diberi bobot berdasarkan CS para kontributor.
+
+Deteksi Anomali: Pantau dinamika SI/CS terhadap kolusi atau permainan sistem.
+
+Batas Laju & Batas Atas: Batasi inflasi CS yang cepat dan terapkan batas VotingWeight.
+
+Recusal atas Konflik: Agen yang memiliki konflik langsung wajib mengundurkan diri sesuai Annex A.
+
+
+
+---
+
+### 7. Evolusi ke Depan
+Meskipun SI dan CS saat ini mendukung tata kelola dengan pengawasan manusia, visi jangka panjangnya adalah menyempurnakan metrik dan metode validasi ini sehingga, bila telah terbukti kokoh, keduanya dapat menopang model tata kelola CIRIS yang lebih terdesentralisasi atau otonom.
+
+End of Annex E

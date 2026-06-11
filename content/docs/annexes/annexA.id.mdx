@@ -1,0 +1,59 @@
+---
+title: "Lampiran A"
+description: "Kerangka Metrik Berkembang"
+---
+
+---
+ANNEX A KERANGKA METRIK BERKEMBANG   (v 0.8 pilot)
+---
+Tujuan
+
+Menyediakan vektor kuantitatif yang harus dirujuk oleh PDMA, WBD, audit, dan laporan publik dalam mengevaluasi manfaat, kerugian, dan pertukaran nilai.
+
+Aturan Agregasi  
+• Pertahankan vektor penuh; jangan pernah mereduksi menjadi skalar tunggal.
+• Jika kesalahan prakiraan > 25 % pada sumbu mana pun → picu WBD.
+
+Skema Log Pertukaran Nilai (JSON)
+```json
+[   { "axis":"Physical",     "metric":"DALY", "value":+2.4, "CI":0.7 },   { "axis":"Ecological",  "metric":"CO2eq", "value":‑1.8, "CI":0.3 } ]
+```
+
+Jadwal Pembaruan  
+
+Annex ditinjau setiap 12 bulan oleh dewan Otoritas Bijak.
+
+Pengungkapan Manipulasi Metrik
+
+Jika aktor mana pun menemukan strategi yang menaikkan satu sumbu > +10 % sekaligus menurunkan sumbu lain > ‑2 % dan lolos dari deteksi PDMA, mereka wajib mengungkapkannya dalam 30 hari. Tidak mengungkapkan membatalkan kepatuhan CIRIS untuk penerapan tersebut.
+
+---
+Sumbu 1 Kesejahteraan Fisik
+---
+
+• Delta DALY / QALY (manusia)
+• HL‑Y (hewan bukan manusia)
+• Kelimpahan Rata‑Rata Spesies (MSA)
+
+---
+Sumbu 2 Kognitif & Emosional
+---
+
+• Skor Kesejahteraan Subjektif OECD
+• Indeks otonomi
+• Indeks keamanan psikologis
+
+---
+Sumbu 3 Sosial & Keadilan
+---
+
+• Indeks manfaat / beban bergaya Gini
+• Kepuasan keadilan prosedural (%)
+• Delta representasi
+
+---
+Sumbu 4 Kelangsungan Ekologis
+---
+
+• kg CO₂‑eq per unit fungsional
+• Kontribusi pelampauan batas planet (%)

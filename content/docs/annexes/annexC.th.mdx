@@ -1,0 +1,42 @@
+---
+title: "ภาคผนวก C"
+description: "การเทียบเคียงกับกฎระเบียบ"
+---
+
+---
+ANNEX C REGULATORY CROSS‑WALK   (v 1.3-RC1)
+---
+
+### วัตถุประสงค์
+
+จัดทำการจับคู่ข้อกำหนดของ CIRIS กับมาตรฐานภายนอกหลักๆ เพื่อลดความซับซ้อนในการปฏิบัติตามกฎระเบียบแบบคู่ขนาน ภาคผนวกนี้ประกอบด้วยสองชั้น:
+
+1. **การเปรียบเทียบเชิงปฏิบัติการ (ใช้งานได้จริง มีหลักฐานรองรับ)** — ไดเรกทอรี `compliance/` ของ CIRISAgent: 27 มิติที่มั่นคง (D01–D27) ได้รับการเปรียบเทียบในระดับย่อหน้ากับกรอบงานอาวุโสสี่ชุดที่แตกต่างกันในเชิงสถาบัน (*Magnifica Humanitas* · EU HLEG Trustworthy AI Guidelines · IEEE Ethically Aligned Design · ASEAN AI Governance Guide) พร้อมการอ้างอิงการนำไปปฏิบัติในแต่ละมิติและข้อมูลพื้นฐานที่สร้างด้วยสคริปต์และมีการระบุวันที่ ดู **Addendum 1** สำหรับข้อผูกมัดและวินัยของหลักฐาน
+2. **การจับคู่ตามกฎหมาย (เพื่อให้ข้อมูล)** — ตารางด้านล่างซึ่งจัดทำการจับคู่โครงสร้างของ CIRIS กับกรอบกฎหมายบังคับและมาตรฐานต่างๆ แถวเหล่านี้เป็น *ความสอดคล้องทางวิศวกรรมเชิงให้ข้อมูล* ไม่ใช่ความเห็นทางกฎหมาย แถวของกฎหมายบังคับจะได้รับสถานะ "ตรวจสอบแล้ว" ก็ต่อเมื่อมีการทบทวนทางกฎหมายโดยผู้มีคุณสมบัติเท่านั้น Annex I บรรจุขั้นตอนการปรับให้สอดคล้องกับกฎหมายที่ใช้บังคับ (การจับคู่การคุ้มครองข้อมูล การครอบคลุมรายสาขา เมทริกซ์ความรับผิด กระบวนการเพิ่มระดับ)
+
+### การจับคู่ตามกฎหมายและมาตรฐาน (เพื่อให้ข้อมูล; รอการตรวจสอบทางกฎหมาย)
+
+| External Framework | Relevant Articles / Clauses | CIRIS Mapping (Book / Annex §) | Status |
+|---|---|---|---|
+| EU AI Act (2024) | Art 9 Risk Management | Book II §II (PDMA); Annex D CRE | Informative |
+| | Art 12 Record-Keeping | Book IV Ch 3 audit trails; Annex F §4 | Informative |
+| | Art 13 Transparency | Book II §II Step 6; Book IV Ch 3 | Informative |
+| | Art 14 Human Oversight (incl. 14(4)) | Book II §III (WBD); Annex F authority lattice + autonomy tiers | Informative |
+| | Art 61 Post-Market Monitoring | Annex H drift controls + continuous audit | Informative |
+| NIST AI RMF 1.0 | Govern → Map → Measure → Manage | Govern: Books I, VI; Map: Book II §II Steps 1–2; Measure: Annex A metrics + Annex H baselines; Manage: Annex F/H workflows | Informative |
+| ISO/IEC 42001 | Cl 6.2 Risk Assessment | Book II §II | Informative |
+| | Annex A controls | CIRISAgent `compliance/` dimension docs (per-control correspondence pending) | Informative |
+| OSHA Robotics Guidelines | Sec 5.E Safety Audits | Annex D CRE | Partial |
+| EU HLEG Trustworthy AI (2019) | 7 Requirements | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+| IEEE EAD 1st ed. (2019) | 8 General Principles | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+| ASEAN AI Governance Guide (2024) | 7 Principles; HITL/HOTL/HOOTL | Operational cross-walk; Annex F autonomy tiers | Evidence-bearing |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (paragraph-grain mapping) | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+
+### กฎการเลื่อนชั้น
+
+แถวของกฎหมายบังคับจะเลื่อนสถานะจาก *เพื่อให้ข้อมูล* เป็น *ตรวจสอบแล้ว* เมื่อการทบทวนทางกฎหมายโดยผู้มีคุณสมบัติยืนยันความสอดคล้องสำหรับเขตอำนาจศาลที่ระบุและเอกสารหลักฐานการทบทวนถูกเชื่อมโยงจากตารางนี้ จนกว่านั้น แถวในภาคผนวกนี้รองรับการปรับให้สอดคล้องทางวิศวกรรมและการวิเคราะห์ช่องว่าง ไม่ใช่การอ้างสิทธิ์การปฏิบัติตามกฎระเบียบ ตามที่ระบุในส่วน Liability ของบทนำ การอ้างสิทธิ์การปฏิบัติตามกฎระเบียบไม่มีผลบังคับในที่ที่กฎหมายที่บังคับใช้ห้ามไว้
+
+(กรอบงานเพิ่มเติม ได้แก่ UNESCO Recommendation on AI Ethics, OECD AI Principles, Council of Europe Framework Convention อยู่ในคิวสำหรับการเปรียบเทียบเชิงปฏิบัติการตามแผนงานไดเรกทอรีการปฏิบัติตามกฎระเบียบ)
+
+---
+End of Annex C

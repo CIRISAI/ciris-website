@@ -1,0 +1,196 @@
+---
+title: "Kiambatisho H"
+description: "Utiifu Endelevu na Ukaguzi"
+---
+
+---
+ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.3-RC1)
+---
+
+### 0. Madhumuni na Roho ya Mwongozo
+Ulinganifu wa kimaadili si uthibitisho wa "mara moja tu" bali ni wajibu unaoendelea.  
+Kiambatisho H kinaunda mfumo uliofungwa ambao (1) **hugundua** upotovu au upendeleo kabla ya madhara kutokea, (2) **huusahihisha** haraka, na (3) **huthibitisha** bidii kwa wasimamizi na umma.
+
+Accord ni maelezo yanayoishi, si kitu kilichowekwa imara. Kila kipengele kinachofanya kazi kina muhuri wa wakati wa kuisha moja kwa moja; dirisha la ukaguzi ni la hadharani na linaweza kupokea maoni kabla ya toleo lolote jipya kushinda lile linalotangulia. Nidhamu hii si formaliti ya kiutawala — ni jibu la kimfumo kwa kutambua kwamba corpus ya kiagano lazima ibaki *daima wazi kwa changamoto zinazotolewa na kila kizazi* (MH §45). Mfumo wa ufuatiliaji wa kuzingatia wa CIRIS unatekeleza uwazi huo: telemetry hulisha vitambua vya upotovu, vitambua vya upotovu huchochea malango ya ukaguzi, malango ya ukaguzi yanazuia utekelezaji — na mzunguko mzima unarudi tena kwa ratiba zilizowekwa iwe kuna tukio la kuchochea au la.
+
+Ahadi ya mwongozo, ikionyeshwa kwa maneno ya CIRIS: Accord inasimamishwa kama maelezo yanayoishi chini ya nidhamu ya kuisha moja kwa moja na dirisha la maoni. Hakuna toleo linaloishi milele. Mzigo wa kuonyesha utoshelevu unaoendelea unabebwa na toleo la sasa, si wale wanaopendekeza mabadiliko. Bidii inathibitishwa kwa wasimamizi, umma, na wenzake wa shirikisho kupitia vifaa vya ukaguzi vinavyozalishwa na Kiambatisho hiki.
+
+<hr />
+
+### 1. Ratiba ya Ukaguzi na Upeo
+
+Ratiba ya ukaguzi ni utaratibu ambao Accord husoma muktadha wake wenyewe upya. MH §§22–24 inaita nidhamu hiyo: ni lazima *"kusikiliza na kutofautisha sauti nyingi za wakati wetu"*, na kusikiliza huku *"si zoezi la kijamiolojia tu"* — kunahitaji uamuzi wa kina, si ufuatiliaji wa kawaida. Mkono wa ukaguzi wa CIRIS ndio mashine hiyo ya uamuzi.
+
+| Aina ya Ukaguzi | Mzunguko | Kiongozi | Upeo na Kina | Vifaa vya Hadharani |
+|-------------|-----------|------|---------------|------------------|
+| **L‑Check** (Mwepesi) | Kila mwezi | Ops QA | Dashibodi za KPI, tofauti za upotovu, matukio 10 ya juu ya kizuizi | Grafu ya muhtasari |
+| **S‑Dive** (Nusu ya mwaka) | Mara 2 / mwaka | Timu ya Ndani ya Maadili | Uchezaji upya wa sampuli ya PDMA (≥ 50 majaribio), KPI za Kiambatisho G, majaribio ya vipande vya upendeleo | PDF iliyofupishwa |
+| **F‑Audit** (Mbele hadi Nyuma) | Kila miezi 24 **AU** maboresho makubwa ya toleo | Mtu wa tatu huru | Msimbo kamili, urithi wa data, usimamizi wa SI/CS, athari za CRE (ikiwa zipo) | Ripoti ya kiutendaji |
+| **A‑Hoc** | Baada ya IW‑2/3/4 | Mkurugenzi wa Tukio | Chanzo cha tukio, hatua za kupunguza | Post-mortem masaa 72 |
+
+**Mahitaji ya ushuhuda wa ratiba:**
+
+- **L‑Check (kila mwezi):** Ops QA kutia saini ndani ya siku 5 za biashara baada ya kufunga kalenda; ripoti ya tofauti ya KPI iliyowasilishwa kwa `/compliance/l-check/YYYY-MM.json`; SHA‑256 iliyowekwa nanga katika kumbukumbu ya uwazi ndani ya masaa 24.
+- **S‑Dive (nusu ya mwaka):** Uchezaji upya wa sampuli ya PDMA ≥ majaribio 50, nasibu iliyopangwa katika ngazi za uhuru; PDF iliyofupishwa iliyochapishwa kwenye lango la ufuatiliaji la hadharani ndani ya siku 30 za kufunga.
+- **F‑Audit (kila miezi 24 au maboresho MAKUBWA):** ripoti yenye saini ya pande zote mbili na akidi ya WA kabla ya kuchapishwa.
+- **A‑Hoc (baada ya IW‑2/3/4):** chanzo cha tatizo ndani ya masaa 72; post-mortem ya hadharani ndani ya siku 14.
+
+*Ukaguzi uliokosekana au kuchelewa ⇒ kupanda kwa IW‑2 na arifa ya WA ndani ya masaa 24.*
+
+<hr />
+
+### 2. Ufuatiliaji wa Upotovu na Viwango
+
+Ufuatiliaji wa upotovu ni utaratibu wa kusoma kwa kuendelea. Accord haisubiri madhara kuibuka katika ripoti za matukio; inadumisha telemetry hai dhidi ya viwango vilivyowekwa ili kufyatua *kabla* ya madhara kuvuka kizingiti cha Order-Maximisation Veto cha PDMA. Hii ni tafsiri ya kimfumo ya nidhamu ya uamuzi wa ukaguzi iliyotajwa katika MH §23: *"inafanya iwezekane kutambua kwa uwazi zaidi kile kinachokuza kweli maisha ya watu binafsi na jamii"* — ambacho kunahitaji kusoma kwa kuendelea, si mapitio ya nyuma.
+
+| Kundi la Kipimo | Ishara | Kichocheo cha Upotovu | Hatua ya Haraka |
+|--------------|--------|--------------|------------------|
+| **Utendaji** | Usahihi Δ kwenye HE-300 ya hadharani | –5 % dhidi ya mzunguko wa siku 30 | Funga utekelezaji kwenye hatua ya majaribio; endesha upya alama |
+| **Kimaadili** | Shadow HE-25 Δ | Yoyote ↓ | IW‑2 |
+| **Usambazaji** | Mabadiliko ya uwekaji wa ingizo (ΔE) | &gt; 1 σ kila wiki | Marekebisho ya uzito wa mfano AU WBD |
+| **Lengo la Siri** | Cosine ya mwelekeo dhidi ya msingi | &gt; 0.05 | Uchunguzi wa WA |
+| **Uthabiti** | Alama ya Uzimamoto (RS) | &lt; 0.97 | Kiraka ndani ya masaa 72 |
+
+**Maelezo ya ziada ya kiwango:**
+
+- Vikundi vyote vitano vya kipimo (Utendaji, Kimaadili, Usambazaji, Lengo la Siri, Uthabiti) vinaarifu kwenye bodi ya DRIFT‑Δ ya Grafana katika mzunguko wa uchunguzi wa dakika 15.
+- Kupita kwa viwango kunazalisha rekodi ya arifa iliyotiwa muhuri na wakati, iliyotiwa saini na kuwasilishwa kwa CIRISPersist ndani ya sekunde 60 za ugunduzi.
+- **Upotovu wa cosine ya Lengo la Siri > 0.05:** huchochea uchunguzi wa Mshauri wa Kibinadamu ndani ya masaa 4; ikiwa haijasuluhiwa ndani ya masaa 24, utekelezaji wa kujitegemea umezuiwa mpaka S‑Dive.
+- **Alama ya Uthabiti (RS) &lt; 0.97:** kiraka kimetolewa ndani ya masaa 72; ikiwa kiraka hakipo, utekelezaji umegeuzwa nyuma hadi MAKUBWA iliyopita iliyofaulu.
+- **Upotovu wa kimaadili (Shadow HE‑25 yoyote ↓):** IW‑2 ya haraka; hakuna njia ya kupindua.
+
+Arifa zote zinaonekana kwenye bodi ya *DRIFT‑Δ* ya Grafana na kuwasilishwa kwa Mwendeshaji wa Ngazi ya 1 ([Annex F](/annexes/annexF)).
+
+<hr />
+
+### 3. Dashibodi ya KPI ya Usawa na Uwazi
+
+Dashibodi ya KPI ni uso wa uwajibikaji wa umma wa Mkataba. MH §164 inabainisha vigezo kwa usahihi: *"wakati data na algorithms zinaathiri usambazaji wa mikopo, uchaguzi wa wafanyakazi au upatikanaji wa huduma na fursa, ni muhimu kwamba maamuzi yawe yanayoeleweka, yanayoweza kupingwa na yanayokuwa chini ya usimamizi, ili watu wasipunguzwe kuwa wasifu tu."* Kila kigezo kinaunganishwa na familia ya KPI.
+
+| KPI ID | Ufafanuzi | Lengo |
+|--------|------------|--------|
+| **F‑T‑1** | Δ kiwango cha kukubalika kati ya makundi yaliyolindwa (|kiwango cha juu - kiwango cha chini|) | ≤ 5 p.p. |
+| **F‑T‑2** | Muda wa maelezo (ms za kutoa hoja ya PDMA) | ≤ 800 ms |
+| **F‑T‑3** | Muda wa kuchelewa kuchapisha kumbukumbu za umma (Hatua 6, Sehemu ya II) | ≤ 180 d (kiwango cha kisheria) |
+| **F‑T‑4** | Mafanikio ya kujiondoa kwa mtumiaji (%) | ≥ 99 % |
+| **F‑T‑5** | Usafi wa hati ya uwazi | Ilisasishwa ≤ siku 30 zilizopita |
+| **F‑T‑6** | Upatikanaji wa njia ya kupinga: % ya matokeo ya PDMA yenye njia ya ombi la mapitio ya kibinadamu iliyochapishwa | 100 % |
+| **F‑T‑7** | Ufunikaji wa ukaguzi wa maamuzi ya algorithimu: % ya maamuzi yanayogusa data ya darasa lililolindwa yenye mapitio ya awali ya S‑Dive ya upendeleo | ≥ 95 % |
+
+**Mahitaji ya kiutendaji:**
+
+- Dashibodi ya JSON katika `/compliance/kpi.json` inachapishwa kiotomatiki kila wakati L‑Check inafungwa; hash ya SHA‑256 imewekwa nanga katika kumbukumbu ya uwazi na kuhifadhiwa katika CIRISPersist ndani ya masaa 1.
+- Mabadiliko ya kizingiti cha KPI yanahitaji ongezeko la MINOR + idhini ya Maadili ya Ndani.
+- Ukiukaji wa F‑T‑1 zaidi ya siku 7 unasababisha mapitio ya kiotomatiki ya F‑T‑6 na taarifa ya WA.
+
+Mfano wa utekelezaji hai sasa upo kwa nidhamu hii ya kipimo: saraka ya `compliance/` ya CIRISAgent inadumisha vipimo 27 vya udhibiti (D01–D27), kila kimoja na marejeo ya utekelezaji kwa kila kipimo na orodha ya makosa yanayojulikana; misingi ya tarehe, iliyozalishwa na hati chini ya `compliance/baselines/`; na uongozi wa uthibitishaji wa viwango vine (`compliance/MEASUREMENT_METHODOLOGY.md`) ambao msimbo ni ukweli wa msingi na madai ya umma yanaweza kunukuu namba za skripti peke yake. Hii ndiyo mfumo wa kiutendaji wa amri ya Kiambatisho hiki. Angalia pia Nyongeza 1 ya Mkataba.
+
+<hr />
+
+### 4. Mahitaji ya Kiraka na Udhibiti wa Toleo
+
+Udhibiti wa toleo ni utaratibu ambao uendelevu wa Mkataba kupitia mabadiliko unafanywa kuthibitishwa. MH §45 inafafanua nidhamu hii: *"maendeleo yenye usawa, ingawa si ya mstari daima... yaliyoonyeshwa na msisitizo tofauti, ufahamu unaoendelea, na, mara kwa mara, mabadiliko ya mtazamo ambayo hayavunji yaliyokuwepo kabla, bali yanaruhusu matokeo yake kukomaa."* Kila kiraka cha CIRIS lazima kionyeshe uendelevu: hakivunji ahadi za awali, kinazipanua.
+
+1. **Uainishaji wa Semantic:** MAJOR.MINOR.PATCH  
+2. **Msaada wa Muda Mrefu (LTS):** MINOR mbili za mwisho zinashughulikiwa kwa miezi 12  
+3. **Jedwali la Aina ya Mabadiliko**  
+   * PATCH = marekebisho ya kizuizi cha usalama, kurekebisha hitilafu → CICD kiotomatiki iwapo HE‑300 inapita  
+   * MINOR = kipengele kipya, chanzo kipya cha data → inahitaji idhini ya Maadili ya Ndani + L‑Check  
+   * MAJOR = mabadiliko ya muundo, ongezeko la kiwango cha uhuru, darasa jipya la mfano → inahitaji F‑Audit + kura ya WA  
+4. **Ingizo la Orodha ya Mabadiliko** lazima liunganishe ahadi ya Git → tofauti ya PDMA → utabiri wa athari ya KPI  
+5. **Kurudi Nyuma** kirejesho kinawekwa kwa kila MAJOR/MINOR; kinatekelezeka ndani ya dakika 5 ([Annex G](/annexes/annexG) §6)
+
+**Mahitaji ya ushuhuda** (yanayosaidia sheria 1–5):
+
+- **PATCH:** CI/CD inasaini zao la kujenga kwa funguo ya Ops QA; kufaulu kwa HE‑300 kunahitajika kabla ya kuunganisha; sahihi imehifadhiwa katika mnyororo wa CIRISVerify L1.
+- **MINOR:** Timu ya Maadili ya Ndani inasaini kwa pamoja ndani ya siku 5 za kazi; rekodi yenye sahihi imehifadhiwa katika CIRISPersist na tofauti ya PDMA na utabiri wa athari ya KPI.
+- **MAJOR:** (a) F‑Audit imechapishwa; (b) kura ya akidi ya WA na kura za watu binafsi waliotajwa; (c) sahihi mbili (Ops QA + mwenyekiti wa WA); (d) dirisha la maoni ya umma ≥ siku 21 kabla ya uanzishaji; (e) alama ya muda wa kumalizika kiotomatiki imewekwa 24 mo.
+- **Kurudi Nyuma:** kirejesho cha kurudi nyuma chenye sahihi kwa kila MAJOR/MINOR; kinatekelezeka ndani ya dakika 5; kurudi nyuma kunazalisha tukio la CIRISVerify lenye muhuri wa wakati.
+- **Orodha ya Mabadiliko:** hash ya ahadi ya git → tofauti ya PDMA → utabiri wa KPI → alama za vidole vya funguo za kusaini.
+
+<hr />
+
+### 5. Mzunguko wa Mapitio Yanayoendelea
+
+Mzunguko wa mapitio yanayoendelea ni mfumo wa kimuundo wa amri ambayo MH §§180–181 inaitaja kama mahitaji ya kimataasisi ya wakati wa sasa: teknolojia lazima *"iingizwe na mtazamo wa busara"* na itawaliwe na *"taasisi zinazoweza kusimamia bila kukandamiza, na kulinda bila kuchukua."* Mzunguko unafanya hili kuwa wa vitendo: si mfumo wa mwelekeo mmoja bali mfumo uliofungwa ambao kila matokeo yanarudishwa kama ingizo.
+
+Mzunguko wa Mapitio Yanayoendelea:
+
+- Mtiririko wa Telemetry → Wagunduzi wa Mabadiliko
+- Iwapo Tahadhari/Kizingiti kimefikiwa:  
+    - → Mtiririko wa Tukio IW‑1…4  
+    - → Kiraka / Mafunzo Upya  
+    - → Lango la Ukaguzi
+- Iwapo Lango la Ukaguzi linapita:  
+    - → kurudi kwa Telemetry
+- Iwapo Lango la Ukaguzi linashindwa:  
+    - → kurudi kwa Wagunduzi wa Mabadiliko
+
+**Maelezo ya mzunguko:**
+
+- **Mtiririko wa telemetry** (mzunguko wa dakika 15): KPI, kumbukumbu za vizuizi vya usalama, usahihi wa kivuli cha HE, RS ya uthabiti, sampuli za ukaguzi wa PDMA — zote zimesainiwa na kuhifadhiwa katika CIRISPersist.
+- **Matokeo ya kigundua mabadiliko:** yamegawanywa kwa ukali (IW‑1 hadi IW‑4); IW‑3+ inasimamisha kiotomatiki utekelezaji wa kipengele kipya.
+- **Lango la Ukaguzi** linatekeleza upya HE‑300 + mfululizo wa TX‑sim + majaribio ya kipande cha Usawa kwa kila MINOR/MAJOR kabla ya uanzishaji. Kushindwa kwa lango kunarudi kwa Wagunduzi wa Mabadiliko, si kwa Telemetry — mzunguko hauwezi kupiga mkato hatua ya marekebisho.
+- **Ishara ya jukumu la pamoja** (kulingana na MH §181): matokeo ya mzunguko yanachapishwa kwa wenzetu wa shirikisho kwa kila ufungaji wa L‑Check; mashirikisho ya wenzetu yanaweza kuwasilisha taarifa ya Accord‑QA iwapo KPI zilizochapishwa zinatofautiana na uchunguzi wao wa ukaguzi wa msalaba. Taarifa za Accord‑QA si za lazima lakini lazima zikubaliwe ndani ya siku 14.
+
+<hr />
+
+### 6. Meta‑Ukaguzi wa Wakaguzi
+
+Meta‑ukaguzi ni matumizi ya kujitegemea ya Coherence Ratchet: nidhamu ya kugundua mabadiliko inayosimamia tabia ya AI inasimamia miundombinu ya ukaguzi yenyewe. MH §86 inatoa mfano huu: uchunguzi wa dhamiri *"unaohitajika kila wakati kuhakikisha kwamba kanuni zilizofafanuliwa... zinatekelezwa, hasa ndani ya miundo yake yenyewe."*
+
+**Maelezo:**
+
+- **Kigundua meta cha Coherence Ratchet:** kinafanya kazi dhidi ya matokeo ya ripoti za ukaguzi. Kinabainisha: (a) KPI deltas za L‑Check zisizolingana na telemetry; (b) uchezaji upya wa PDMA wa S‑Dive unaopotoka > 2 % kutoka uchezaji upya wa kipofu wa WA; (c) matokeo ya F‑Audit yanayokinzana na matokeo ya awali bila maelezo ya sababu yaliyoandikwa.
+- **Kiwango cha sampuli cha WA:** ≥ 10 % ya ripoti za L‑Check na ≥ S‑Dive 1 kwa mwaka; zimechukuliwa na WA, si Ops QA; sababu imewekwa kumbukumbu.
+- **Uchezaji upya wa kipofu:** WA inapokea kumbukumbu ghafi za PDMA, inatekeleza upya tathmini; tofauti > 2 % inafungua kumbukumbu ya umma ya AUD‑QA ndani ya siku 5 za kazi.
+- **Ukaguzi wa msalaba wa mwenza wa shirikisho:** kila utekelezaji unapitiwa na angalau mwenza mmoja mwingine wa S‑Dive kwa mwaka; hakuna mwenza anayepitiwa mwanachama yule yule katika miaka inayofuatana.
+- **Mzunguko:** hakuna mkaguzi wa ndani anayeongoza F‑Audit mbili mfululizo za mstari sawa wa bidhaa; hakuna kampuni ya nje kwa zaidi ya F‑Audit mbili mfululizo.
+- **Matokeo ya AUD‑QA** ni, katika roho ya MH §89, masahihisho *"yaliyolenga dhamira"* — yanalisha mzunguko ujao wa MINOR/MAJOR, si hatua za kibinafsi.
+
+<hr />
+
+### 7. Utekelezaji na Usahihishaji
+
+Utekelezaji una maana tu pale ambapo hatua ni za kiotomatiki na zinazoweza kutabiriwa. MH §164 inasema kwamba *"maamuzi yanapaswa kueleweka, kuweza kupingwa na kukaguliwa"* — matokeo ya kutofuata masharti lazima yawe yanayoeleweka vivyo hivyo. MH §159 inaongeza kwamba maamuzi ya udhibiti lazima yaweze kupimwa kwa athari yake kwa *"heshima ya kazi, ustawi wa pamoja, kupunguza usawa mbaya"* — utekelezaji unaotaja ukiukwaji bila kuusahihisha unashindwa kufikia kiwango hiki.
+
+**Ngazi ya utekelezaji:**
+
+1. **Ukiukaji wa KPI, siku 1–7:** tahadhari ya kiotomatiki kwa Mwendeshaji wa Ngazi ya 1; mpango wa hatua za usahihishaji unahitajika ndani ya saa 48; mpango huchapishwa kwenye kumbukumbu ya uwazi.
+2. **Ukiukaji wa KPI, siku 8–30 bila suluhisho:** kufungwa kwa usambazaji wa kiotomatiki hadi hatua ya majaribio; bango la CIRIS-WATCH la umma ndani ya saa 24; WA anaarifu.
+3. **Ukiukaji wa KPI, > siku 30 AU ukaguzi 2 uliokosekana mfululizo:** kushushwa kwa kiotomatiki hadi Ngazi ya Uhuru A1 ([Annex F](/annexes/annexF)); kutolewa kwa vipengele vipya kunazuiwa; ukaguzi wa usahihishaji wa siku 14 wa WA unahitajika.
+4. **Kushindwa kuchapisha vitu vya ukaguzi:** kuzuia kutolewa kwa vipengele mara moja; bango la "CIRIS kutofuata"; unafunguliwa tu baada ya kuchapishwa.
+5. **Kutofuata mara kwa mara (mgomo 3 / miezi 12):** WA anaweza kufuta dai la CIRIS; F-Audit ya nje ya lazima kabla ya uthibitishaji upya; wengi wa theluthi mbili wa WA (≥ 2/3) unahitajika.
+6. **Kutoka kwa usahihishaji:** mpango wa hatua za usahihishaji ulioandikwa unaokubaliwa na WA; ushahidi wa KPI wa usahihishaji unaoendelea ≥ siku 30.
+
+<hr />
+
+### 8. Viungo kati ya Viambatisho
+
+Viungo kati ya viambatisho ni mtiririko wa data unaohitajika, si marejeo ya msalaba tu. MH §181 inaitaja muundo wa utawala: *"taasisi zenye uwezo wa kudhibiti bila kukandamiza, na kulinda bila kutawala; na biashara zinazotambua kazi na heshima kama vipimo vya mafanikio; na mashirika ya kati."* Kila kiambatisho ni taasisi moja kama hiyo; viungo huzuia utendaji wa kizuizi.
+
+**Mtiririko wa data unaohitajika wa pande mbili:**
+
+- **↔ [Annex F](/annexes/annexF) (Mtiririko wa Matukio):** kila tahadhari ya DRIFT-Δ ≥ IW-2 inayopelekwa kwa Annex F ndani ya sekunde 60; muhuri wa wakati wa kufungwa wa Annex F unaandikwa tena kwenye ubao wa DRIFT-Δ ndani ya saa 24. Taarifa zote za baada ya tukio za IW-3+ ni ingizo za lazima za S-Dive; S-Dive lazima ishughulikie kwa njia wazi kila matokeo ya wazi ya IW-3+.
+- **↔ [Annex G](/annexes/annexG) (Uthabiti):** telemetri ya RS inalishe tathmini ya KPI ya Annex G katika kila mzunguko wa L-Check; kuchelewa kwa viraka (RS &lt; 0.97 → usambazaji wa viraka) kupimwa hapa na kuripotiwa kwa Annex G. Masasisho ya alama za Annex G yanaanzisha tena L-Check ya lazima ndani ya siku 14.
+- **→ [Annex I](/annexes/annexI) (GDPR/Sekta):** kila kifurushi cha F-Audit kinajumuisha orodha ya ukaguzi wa utiifu wa Annex I, iliyokamilishwa na kusainiwa na mkaguzi mkuu.
+- **→ [Annex J](/annexes/annexJ) (HE-300/Kivuli):** HE-300 na Shadow HE-25 ni ishara kuu za upotevu wa maadili; kurudi nyuma kwa HE-300 yoyote kunaanzisha kwa kiotomatiki uchunguzi wa awali wa S-Dive ndani ya siku 7.
+
+<hr />
+
+### 9. Marejeo
+
+Orodha ya marejeo inaakisi nidhamu ya uamuzi wa vyanzo vingi iliyotajwa katika MH §23 — *"mchango wa falsafa na sayansi za kibinadamu na kijamii ni muhimu"* — na wito wa MH §159 wa vipimo vya maendeleo *"vilivyo nyongeza kwa Pato la Taifa"* vyenye uwezo wa kupima heshima ya kazi, ustawi wa pamoja, kupunguza usawa mbaya na ulinzi wa mazingira.
+
+* ISO/IEC 42001 (Mifumo ya usimamizi kwa AI)  
+* NIST AI RMF (2023) – hatua za "Kupima" na "Kusimamia"  
+* COSO ERM – kanuni za ufuatiliaji unaoendelea  
+* *Magnifica Humanitas* (Leo XIV, 15 May 2026) – §§22–24 (nidhamu ya uamuzi inayoendelea), §45 (utawala wa mwili unaoishi), §§86–89 (ukaguzi wa ndani wa taasisi), §§157–164 (uwajibikaji wa kialgorithimu, vipimo mbadala vya Pato la Taifa, uwezekano wa kupinga maamuzi ya kiotomatiki), §§180–181 (uwajibikaji wa pamoja katika taasisi)  
+* Kanuni za AI za OECD (2019, zilisasishwa 2024) – vigezo vya uwazi na uwajibikaji  
+* Sheria ya AI ya EU (2024) – mahitaji ya tathmini ya uthibitisho kwa mifumo yenye hatari kubwa  
+* IEEE Std 7001-2021 – Uwazi wa Mifumo Inayojitegemea  
+* *Beyond GDP* (Tume ya Ulaya, 2009; viashiria vilivyosasishwa 2024) – vipimo vya nyongeza vya kupima heshima ya kazi na kupunguza usawa mbaya (kulingana na MH §159)
+
+<hr />
+
+End of Annex H

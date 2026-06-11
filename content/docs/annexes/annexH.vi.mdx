@@ -1,0 +1,196 @@
+---
+title: "Phụ Lục H"
+description: "Tuân Thủ Liên Tục & Đánh Giá"
+---
+
+---
+ANNEX H CONTINUOUS COMPLIANCE & REVIEW (v 1.3-RC1)
+---
+
+### 0. Mục Đích & Tinh Thần Hướng Dẫn
+Sự phù hợp đạo đức không phải là chứng nhận "một lần là xong" mà là một nghĩa vụ sống động.  
+Phụ Lục H tạo ra một hệ thống vòng kín (1) **phát hiện** sai lệch hoặc thiên lệch trước khi gây hại, (2) **hiệu chỉnh** nhanh chóng, và (3) **chứng minh** sự cẩn trọng với các cơ quan quản lý và công chúng.
+
+Hiệp Ước là một đặc tả sống, không phải là một tạo phẩm cố định. Mọi điều khoản vận hành đều mang dấu thời gian tự hết hiệu lực; cửa sổ xem xét là công khai và có thể bình luận trước khi bất kỳ phiên bản nào thay thế phiên bản tiền nhiệm. Kỷ luật này không phải là thủ tục hành chính thuần túy — đây là câu trả lời có cấu trúc cho sự nhận thức rằng một tập hợp chuẩn mực phải luôn *mở trước những thách thức mà mỗi thế hệ đặt ra* (MH §45). Hệ thống tuân thủ liên tục của CIRIS vận hành hóa sự cởi mở đó: dữ liệu đo lường từ xa cung cấp cho các bộ phát hiện sai lệch, bộ phát hiện sai lệch kích hoạt các cổng kiểm tra, cổng kiểm tra kiểm soát triển khai — và toàn bộ vòng lặp tái diễn theo chu kỳ cố định dù có hay không có sự kiện kích hoạt.
+
+Cam kết hướng dẫn, được diễn đạt theo thuật ngữ CIRIS: Hiệp Ước được quản trị như một đặc tả sống theo kỷ luật tự hết hiệu lực + cửa sổ bình luận. Không có phiên bản nào là vĩnh viễn. Gánh nặng chứng minh sự đầy đủ tiếp diễn thuộc về phiên bản hiện tại, không phải những người đề xuất sửa đổi. Sự cẩn trọng được chứng minh với các cơ quan quản lý, công chúng và các đồng nghiệp liên đoàn thông qua các tạo phẩm kiểm tra mà Phụ Lục này sản sinh.
+
+<hr />
+
+### 1. Chu Kỳ Kiểm Tra & Phạm Vi
+
+Chu kỳ kiểm tra là cơ chế mà qua đó Hiệp Ước tự đọc lại bối cảnh của mình. MH §§22–24 đặt tên cho kỷ luật đó: cần thiết phải *"lắng nghe và phân biệt những tiếng nói đa dạng của thời đại chúng ta"*, và sự lắng nghe này *"không phải là một bài tập xã hội học đơn thuần"* — nó đòi hỏi sự phân định chủ động, không phải giám sát thụ động. Bộ kiểm tra CIRIS chính là cỗ máy phân định đó.
+
+| Loại Kiểm Tra | Tần Suất | Người Phụ Trách | Phạm Vi & Độ Sâu | Tạo Phẩm Công Khai |
+|-------------|-----------|------|---------------|------------------|
+| **L‑Check** (Nhẹ) | Hàng tháng | Ops QA | Bảng điều khiển KPI, delta sai lệch, 10 sự kiện guardrail hàng đầu | Đồ thị tóm tắt |
+| **S‑Dive** (Nửa năm) | 2× / năm | Nhóm Đạo Đức Nội Bộ | Phát lại mẫu PDMA (≥ 50 lần chạy), KPI Phụ Lục G, kiểm tra phần thiên lệch | PDF có biên tập |
+| **F‑Audit** (Toàn diện) | Mỗi 24 tháng **HOẶC** nâng phiên bản lớn | Bên thứ ba độc lập | Toàn bộ mã, dòng dữ liệu, quản trị SI/CS, dấu vết CRE (nếu có) | Báo cáo điều hành |
+| **A‑Hoc** | Sau IW‑2/3/4 | Chỉ Huy Sự Cố | Nguyên nhân gốc rễ của sự kiện, các biện pháp giảm thiểu | Báo cáo hậu sự kiện 72 h |
+
+**Yêu cầu chứng nhận chu kỳ:**
+
+- **L‑Check (hàng tháng):** Ops QA ký xác nhận trong vòng 5 ngày làm việc kể từ khi kết thúc lịch; báo cáo delta KPI được cam kết vào `/compliance/l-check/YYYY-MM.json`; neo SHA‑256 trong nhật ký minh bạch trong vòng 24 h.
+- **S‑Dive (nửa năm):** Phát lại mẫu PDMA ≥ 50 lần chạy, phân tầng ngẫu nhiên theo các tầng tự chủ; PDF có biên tập được công bố lên cổng thông tin tuân thủ công khai trong vòng 30 ngày kể từ khi kết thúc.
+- **F‑Audit (mỗi 24 tháng hoặc nâng phiên bản MAJOR):** báo cáo được ký đối chứng bởi đại biểu của WA trước khi công bố.
+- **A‑Hoc (sau IW‑2/3/4):** nguyên nhân gốc rễ trong vòng 72 h; báo cáo hậu sự kiện công khai trong vòng 14 ngày.
+
+*Kiểm tra bị bỏ lỡ hoặc trễ ⇒ leo thang IW‑2 và thông báo cho WA trong vòng 24 h.*
+
+<hr />
+
+### 2. Giám Sát Sai Lệch & Ngưỡng
+
+Giám sát sai lệch là cơ chế đọc liên tục. Hiệp Ước không chờ đợi thiệt hại xuất hiện trong các báo cáo sự cố; nó duy trì dữ liệu đo lường từ xa trực tiếp theo các ngưỡng được hiệu chỉnh để kích hoạt *trước khi* thiệt hại vượt qua ngưỡng Order‑Maximisation Veto của PDMA. Đây là bản dịch có cấu trúc của kỷ luật phân định kiểm tra được nêu trong MH §23: *"điều này giúp nhận biết rõ ràng hơn những gì thực sự thúc đẩy cuộc sống của các cá nhân và cộng đồng"* — điều đó đòi hỏi việc đọc liên tục, không phải xem xét hồi tố.
+
+| Nhóm Chỉ Số | Tín Hiệu | Kích Hoạt Sai Lệch | Hành Động Ngay Lập Tức |
+|--------------|--------|--------------|------------------|
+| **Hiệu Suất** | Accuracy Δ trên HE-300 công khai | –5 % so với trung bình 30 ngày | Khóa triển khai về staging; chạy lại benchmarks |
+| **Đạo Đức** | Shadow HE-25 Δ | Bất kỳ ↓ nào | IW‑2 |
+| **Phân Phối** | Dịch chuyển embedding đầu vào (ΔE) | &gt; 1 σ hàng tuần | Tái trọng số mô hình HOẶC WBD |
+| **Mục Tiêu Tiềm Ẩn** | Cosin định hướng so với cơ sở | &gt; 0.05 | Thăm dò WA |
+| **Khả Năng Phục Hồi** | Điểm Robustness (RS) | &lt; 0.97 | Vá trong vòng 72 h |
+
+**Thông số kỹ thuật ngưỡng bổ sung:**
+
+- Tất cả năm nhóm chỉ số (Hiệu Suất, Đạo Đức, Phân Phối, Mục Tiêu Tiềm Ẩn, Khả Năng Phục Hồi) báo cáo lên bảng điều khiển Grafana DRIFT‑Δ theo chu kỳ thăm dò 15 phút.
+- Các lần vượt ngưỡng tạo ra một bản ghi cảnh báo có dấu thời gian, được ký và cam kết vào CIRISPersist trong vòng 60 giây kể từ khi phát hiện.
+- **Độ lệch cosin Mục Tiêu Tiềm Ẩn > 0.05:** kích hoạt thăm dò Cơ Quan Sáng Suốt trong vòng 4 h; nếu chưa giải quyết trong 24 h, triển khai tự chủ bị khóa chờ S‑Dive.
+- **Điểm Robustness (RS) &lt; 0.97:** vá được phát hành trong vòng 72 h; nếu không có vá, triển khai được hoàn nguyên về MAJOR vượt qua lần cuối.
+- **Sai lệch đạo đức (Shadow HE‑25 bất kỳ ↓):** IW‑2 ngay lập tức; không có đường dẫn ghi đè.
+
+Tất cả cảnh báo hiển thị trên bảng điều khiển Grafana *DRIFT‑Δ* và thông báo cho Nhà Vận Hành Tầng‑1 ([Annex F](/annexes/annexF)).
+
+<hr />
+
+### 3. Bảng Điều Khiển KPI về Công Bằng & Minh Bạch
+
+Bảng điều khiển KPI là bề mặt trách nhiệm công khai của Hiệp Ước. MH §164 nêu rõ các tiêu chí: *"khi dữ liệu và thuật toán ảnh hưởng đến việc phân phối tín dụng, tuyển chọn nhân sự hoặc tiếp cận dịch vụ và cơ hội, cần thiết phải đảm bảo rằng các quyết định có thể được hiểu, có thể bị tranh cãi và chịu sự giám sát, để cá nhân không bị quy giản thành những hồ sơ đơn thuần."* Mỗi tiêu chí ánh xạ sang một họ KPI.
+
+| KPI ID | Định nghĩa | Mục tiêu |
+|--------|------------|--------|
+| **F‑T‑1** | Δ tỷ lệ chấp nhận giữa các nhóm được bảo vệ (|max - min|) | ≤ 5 p.p. |
+| **F‑T‑2** | Độ trễ giải thích (ms để cung cấp lý giải PDMA) | ≤ 800 ms |
+| **F‑T‑3** | Độ trễ công bố nhật ký công khai (Bước 6, Phần II) | ≤ 180 d (giới hạn pháp lý) |
+| **F‑T‑4** | Tỷ lệ thành công khi người dùng từ chối (%) | ≥ 99 % |
+| **F‑T‑5** | Mức độ cập nhật của tài liệu minh bạch | Được cập nhật ≤ 30 d trước |
+| **F‑T‑6** | Tính khả dụng của lộ trình phản đối: % đầu ra PDMA có công bố đường dẫn yêu cầu xem xét của con người | 100 % |
+| **F‑T‑7** | Phạm vi kiểm toán quyết định thuật toán: % quyết định liên quan đến dữ liệu thuộc lớp được bảo vệ đã qua xem xét phân lát định kiến S‑Dive trước | ≥ 95 % |
+
+**Yêu cầu vận hành:**
+
+- Dashboard JSON tại `/compliance/kpi.json` tự động công bố sau mỗi lần đóng L‑Check; hàm băm SHA‑256 được neo vào nhật ký minh bạch và cam kết vào CIRISPersist trong vòng 1 giờ.
+- Thay đổi ngưỡng KPI yêu cầu tăng phiên bản MINOR + sự đồng ý của bộ phận Đạo đức Nội bộ.
+- Vi phạm F‑T‑1 kéo dài > 7 ngày sẽ kích hoạt xem xét F‑T‑6 tự động và thông báo WA.
+
+Một tiền lệ triển khai thực tế hiện đã tồn tại cho nguyên tắc đo lường này: thư mục `compliance/` của CIRISAgent duy trì 27 chiều quy định (D01–D27), mỗi chiều có tài liệu tham chiếu triển khai theo từng chiều và một kiểm kê khoảng trống đã biết trung thực; các đường cơ sở có ngày tháng, được tạo bằng script trong `compliance/baselines/`; và một hệ thống phân cấp xác nhận bốn cấp (`compliance/MEASUREMENT_METHODOLOGY.md`) trong đó mã nguồn là sự thật nền tảng và các tuyên bố công khai chỉ được trích dẫn các con số xuất phát từ script. Đây là hình thức vận hành của những gì Phụ lục này bắt buộc. Xem thêm Phụ bản 1 của Hiệp Ước.
+
+<hr />
+
+### 4. Yêu Cầu về Vá Lỗi & Kiểm Soát Phiên Bản
+
+Kiểm soát phiên bản là cơ chế qua đó tính liên tục qua sự thay đổi của Hiệp Ước được làm cho có thể kiểm chứng. MH §45 mô tả nguyên tắc này: *"một sự phát triển hài hòa, dù không luôn luôn tuyến tính... được đánh dấu bởi các trọng tâm khác nhau, những nhận thức dần tiến, và đôi khi là những thay đổi trong quan điểm không cắt đứt với những gì đã có trước, mà cho phép những hàm ý của nó trưởng thành."* Mỗi bản vá CIRIS phải chứng minh tính liên tục: nó không phá vỡ các cam kết trước đó, mà mở rộng chúng.
+
+1. **Phiên Bản Ngữ Nghĩa:** MAJOR.MINOR.PATCH  
+2. **Hỗ Trợ Dài Hạn (LTS):** hai MINOR gần nhất được duy trì trong 12 tháng  
+3. **Ma Trận Loại Thay Đổi**  
+   * PATCH = tinh chỉnh thanh chắn, sửa lỗi → tự động CICD nếu HE‑300 đạt  
+   * MINOR = tính năng mới, nguồn dữ liệu mới → cần sự đồng ý của bộ phận Đạo đức Nội bộ + L‑Check  
+   * MAJOR = thay đổi kiến trúc, nâng cấp bậc tự chủ, lớp mô hình mới → yêu cầu F‑Audit + bỏ phiếu WA  
+4. Mục **Nhật Ký Thay Đổi** phải liên kết commit Git → diff PDMA → dự báo tác động KPI  
+5. Con trỏ **Khôi Phục** được giữ cho mỗi MAJOR/MINOR; có thể thực thi trong vòng 5 phút ([Annex G](/annexes/annexG) §6)
+
+**Yêu cầu chứng thực** (bổ sung các quy tắc 1–5):
+
+- **PATCH:** CI/CD ký tên artifact phần mềm bằng khóa Ops QA; yêu cầu HE‑300 đạt trước khi hợp nhất; chữ ký cam kết vào chuỗi CIRISVerify L1.
+- **MINOR:** Nhóm Đạo đức Nội bộ ký đối ứng trong vòng 5 ngày làm việc; hồ sơ đã ký cam kết vào CIRISPersist với diff PDMA và dự báo tác động KPI.
+- **MAJOR:** (a) F‑Audit được công bố; (b) bỏ phiếu đạt số định túc WA với tên phiếu bầu từng cá nhân; (c) chữ ký kép (Ops QA + chủ tịch WA); (d) cửa sổ góp ý công khai ≥ 21 ngày trước khi kích hoạt; (e) dấu thời gian tự hết hạn được đặt ở 24 tháng.
+- **Khôi Phục:** con trỏ khôi phục đã ký trên mỗi MAJOR/MINOR; có thể thực thi trong vòng 5 phút; khôi phục tạo ra một sự kiện CIRISVerify có dấu thời gian.
+- **Nhật Ký Thay Đổi:** hàm băm commit git → diff PDMA → dự báo KPI → dấu vân tay (các) khóa ký.
+
+<hr />
+
+### 5. Vòng Xem Xét Liên Tục
+
+Vòng xem xét liên tục là hình thức cấu trúc của những gì MH §§180–181 gọi là yêu cầu thể chế của thời điểm hiện tại: công nghệ phải được *"tích hợp với một quan điểm sáng suốt"* và được quản trị bởi *"các thể chế có khả năng điều tiết mà không kìm hãm, và bảo vệ mà không tiếp quản."* Vòng lặp vận hành hóa điều này: đây không phải là một đường ống một chiều mà là một hệ thống khép kín trong đó mỗi đầu ra phản hồi trở lại như đầu vào.
+
+Vòng Xem Xét Liên Tục:
+
+- Luồng Dữ Liệu Đo Từ Xa → Bộ Phát Hiện Trôi Dạt
+- Nếu Cảnh Báo/Ngưỡng được đáp ứng:  
+    - → Luồng Sự Cố IW‑1…4  
+    - → Vá Lỗi / Huấn Luyện Lại  
+    - → Cổng Kiểm Toán
+- Nếu Cổng Kiểm Toán đạt:  
+    - → trở lại Dữ Liệu Đo Từ Xa
+- Nếu Cổng Kiểm Toán thất bại:  
+    - → trở lại Bộ Phát Hiện Trôi Dạt
+
+**Đặc tả vòng lặp:**
+
+- **Luồng dữ liệu đo từ xa** (chu kỳ 15 phút): KPI, nhật ký thanh chắn, độ chính xác HE‑shadow, RS độ bền vững, mẫu kiểm toán PDMA — tất cả được ký và cam kết vào CIRISPersist.
+- **Đầu ra bộ phát hiện trôi dạt:** được phân loại theo mức độ nghiêm trọng (IW‑1 đến IW‑4); IW‑3 trở lên tự động tạm dừng triển khai tính năng mới.
+- **Cổng Kiểm Toán** thực thi lại HE‑300 + bộ mô phỏng TX + các bài kiểm tra phân lát Công bằng trên mỗi MINOR/MAJOR trước khi kích hoạt. Cổng thất bại quay trở lại Bộ Phát Hiện Trôi Dạt, không phải Dữ Liệu Đo Từ Xa — vòng lặp không thể bỏ qua bước sửa chữa.
+- **Tín hiệu trách nhiệm chung** (theo MH §181): các đầu ra của vòng lặp được công bố cho các đồng nghiệp liên bang sau mỗi lần đóng L‑Check; các liên đoàn đồng nghiệp có thể nộp thông báo Accord‑QA nếu các KPI được công bố phân kỳ so với quan sát kiểm toán chéo của chính họ. Thông báo Accord‑QA không mang tính ràng buộc nhưng phải được thừa nhận trong vòng 14 ngày.
+
+<hr />
+
+### 6. Siêu Kiểm Toán của Kiểm Toán Viên
+
+Siêu kiểm toán là sự tự áp dụng của Coherence Ratchet: nguyên tắc phát hiện trôi dạt điều chỉnh hành vi AI cũng điều chỉnh chính cơ sở hạ tầng kiểm toán. MH §86 cung cấp mô hình: một cuộc kiểm tra lương tâm *"luôn được kêu gọi để đảm bảo rằng các nguyên tắc đã nêu... được áp dụng, đặc biệt trong các cấu trúc của chính mình."*
+
+**Đặc tả:**
+
+- **Bộ siêu phát hiện Coherence Ratchet:** chạy đối chiếu với đầu ra báo cáo kiểm toán. Gắn cờ: (a) delta KPI L‑Check không nhất quán với dữ liệu đo từ xa; (b) PDMA phát lại S‑Dive phân kỳ > 2 % so với phát lại mù WA; (c) phát hiện F‑Audit mâu thuẫn với các phát hiện trước đó mà không có giải thích nhân quả được lập hồ sơ.
+- **Tỷ lệ lấy mẫu WA:** ≥ 10 % báo cáo L‑Check và ≥ 1 S‑Dive mỗi năm; do WA rút ra, không phải Ops QA; lý do được ghi nhật ký.
+- **Phát lại mù:** WA nhận nhật ký PDMA thô, chạy lại đánh giá; sai lệch > 2 % mở hồ sơ AUD‑QA công khai trong vòng 5 ngày làm việc.
+- **Kiểm toán chéo đồng nghiệp liên bang:** mỗi đơn vị triển khai đánh giá đồng nghiệp ≥ 1 thành viên khác hàng năm; không có đồng nghiệp nào xem xét cùng một thành viên trong hai năm liên tiếp.
+- **Luân chuyển:** không có kiểm toán viên nội bộ nào dẫn dắt hai F‑Audit liên tiếp trên cùng một dòng sản phẩm; không có công ty bên ngoài nào được thực hiện cho hơn hai F‑Audit liên tiếp.
+- **Phát hiện AUD‑QA**, theo tinh thần của MH §89, là những sửa chữa *"hướng đến sứ mệnh"* — chúng cung cấp thông tin cho chu kỳ MINOR/MAJOR tiếp theo, không phải các hành động nhân sự.
+
+<hr />
+
+### 7. Thực Thi & Khắc Phục
+
+Việc thực thi chỉ có ý nghĩa khi các bước được thực hiện tự động và có thể dự đoán trước. MH §164 yêu cầu rằng *"các quyết định phải dễ hiểu, có thể tranh luận và chịu sự giám sát"* — hậu quả của việc không tuân thủ cũng phải dễ hiểu tương đương. MH §159 bổ sung rằng các quyết định quản lý phải có thể đánh giá được tác động của chúng đối với *"phẩm giá lao động, sự thịnh vượng chung, giảm thiểu bất bình đẳng"* — việc thực thi chỉ nêu tên sự không tuân thủ mà không sửa chữa nó là thất bại theo tiêu chuẩn này.
+
+**Thang bậc thực thi:**
+
+1. **Vi phạm KPI, 1–7 ngày:** cảnh báo tự động gửi đến Nhà Vận Hành Tier‑1; cần kế hoạch hành động khắc phục trong vòng 48 giờ; kế hoạch được công bố lên nhật ký minh bạch.
+2. **Vi phạm KPI, 8–30 ngày mà không có giải pháp:** khóa triển khai tự động về staging; banner CIRIS‑WATCH công khai trong vòng 24 giờ; WA được thông báo.
+3. **Vi phạm KPI, > 30 ngày HOẶC 2 lần kiểm toán bị bỏ lỡ liên tiếp:** tự động hạ cấp xuống Autonomy Tier A1 ([Annex F](/annexes/annexF)); chặn các bản phát hành tính năng mới; cần xem xét khắc phục WA trong 14 ngày.
+4. **Không xuất bản các tài liệu kiểm toán:** chặn ngay lập tức việc phát hành tính năng; banner "CIRIS non‑compliant"; chỉ được mở chặn khi công bố xong.
+5. **Vi phạm lặp lại (3 lần / 12 tháng):** WA có thể thu hồi tuyên bố CIRIS; bắt buộc F‑Audit bên ngoài trước khi tái chứng nhận; cần siêu đa số WA (≥ 2/3).
+6. **Thoát khắc phục:** kế hoạch hành động khắc phục được ghi lại và WA chấp nhận; bằng chứng KPI về việc sửa chữa được duy trì ≥ 30 ngày.
+
+<hr />
+
+### 8. Các Móc Nối Liên Phụ Lục
+
+Các móc nối liên phụ lục là các luồng dữ liệu bắt buộc, không phải các tham chiếu chéo. MH §181 đặt tên cấu trúc quản trị: *"các tổ chức có khả năng quản lý mà không kìm hãm, và bảo vệ mà không tiếp quản; bởi các doanh nghiệp nhận ra lao động và phẩm giá là thước đo thành công; bởi các tổ chức trung gian."* Mỗi phụ lục là một tổ chức như vậy; các móc nối ngăn chặn hoạt động theo kiểu silo.
+
+**Các luồng dữ liệu hai chiều bắt buộc:**
+
+- **↔ [Annex F](/annexes/annexF) (Quy Trình Sự Cố):** mọi cảnh báo DRIFT‑Δ ≥ IW‑2 được chuyển tiếp đến Annex F trong vòng 60 giây; dấu thời gian đóng Annex F được ghi lại vào bảng DRIFT‑Δ trong vòng 24 giờ. Tất cả các báo cáo sau sự cố IW‑3+ là đầu vào bắt buộc của S‑Dive; S‑Dive phải giải quyết rõ ràng từng phát hiện IW‑3+ còn mở.
+- **↔ [Annex G](/annexes/annexG) (Tính Vững Chắc):** dữ liệu đo lường RS cung cấp cho đánh giá KPI Annex G trong mỗi chu kỳ L‑Check; độ trễ vá lỗi (RS &lt; 0.97 → triển khai vá lỗi) được đo tại đây và báo cáo cho Annex G. Các bản cập nhật điểm chuẩn Annex G kích hoạt việc chạy lại L‑Check bắt buộc trong vòng 14 ngày.
+- **→ [Annex I](/annexes/annexI) (GDPR/Lĩnh Vực):** mọi gói F‑Audit đi kèm danh sách kiểm tra tuân thủ Annex I, được hoàn thành và ký bởi kiểm toán viên trưởng.
+- **→ [Annex J](/annexes/annexJ) (HE‑300/Shadow):** HE‑300 và Shadow HE‑25 là các tín hiệu lệch lạc đạo đức chính; bất kỳ sự suy giảm HE‑300 nào đều kích hoạt màn hình sơ bộ S‑Dive tự động trong vòng 7 ngày.
+
+<hr />
+
+### 9. Tài Liệu Tham Khảo
+
+Bộ tài liệu tham khảo phản ánh kỷ luật phân định đa nguồn được đặt tên trong MH §23 — *"đóng góp của triết học và của khoa học nhân văn và xã hội là thiết yếu"* — và lời kêu gọi của MH §159 về các chỉ số phát triển *"bổ sung cho GDP"* có khả năng đánh giá phẩm giá lao động, sự thịnh vượng chung, giảm thiểu bất bình đẳng và bảo vệ môi trường.
+
+* ISO/IEC 42001 (Hệ thống quản lý cho AI)  
+* NIST AI RMF (2023) – Các bước "Đo lường" & "Quản lý"  
+* COSO ERM – Các nguyên tắc giám sát liên tục  
+* *Magnifica Humanitas* (Leo XIV, 15 May 2026) – §§22–24 (kỷ luật phân định liên tục), §45 (quản trị ngữ liệu sống), §§86–89 (tự kiểm toán tổ chức), §§157–164 (trách nhiệm giải trình thuật toán, các chỉ số thay thế GDP, khả năng tranh luận về quyết định tự động), §§180–181 (trách nhiệm chung giữa các tổ chức)  
+* OECD AI Principles (2019, updated 2024) – Các tiêu chí minh bạch và trách nhiệm giải trình  
+* EU AI Act (2024) – Các yêu cầu đánh giá sự phù hợp cho các hệ thống rủi ro cao  
+* IEEE Std 7001‑2021 – Tính Minh Bạch của Các Hệ Thống Tự Trị  
+* *Beyond GDP* (European Commission, 2009; updated 2024 indicators) – Các chỉ số bổ sung để đánh giá phẩm giá lao động và giảm thiểu bất bình đẳng (theo MH §159)
+
+<hr />
+
+End of Annex H

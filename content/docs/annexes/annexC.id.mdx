@@ -1,0 +1,42 @@
+---
+title: "Lampiran C"
+description: "Pemetaan Lintas Regulasi"
+---
+
+---
+LAMPIRAN C PEMETAAN SILANG REGULASI   (v 1.3-RC1)
+---
+
+### Tujuan
+
+Memetakan klausul-klausul CIRIS ke standar eksternal utama guna menyederhanakan kepatuhan ganda. Lampiran ini memuat dua lapisan:
+
+1. **Pemetaan silang operasional (aktif, berbasis bukti)** — direktori `compliance/` CIRISAgent: 27 dimensi stabil (D01–D27) dipetakan silang pada butir paragraf terhadap empat kerangka senior yang secara institusional berbeda (*Magnifica Humanitas* · Panduan AI Tepercaya EU HLEG · IEEE Ethically Aligned Design · Panduan Tata Kelola AI ASEAN), dengan referensi implementasi per dimensi serta baseline tertanggal yang dibuat oleh skrip. Lihat **Addendum 1** untuk ketentuan pengikatan dan disiplin bukti.
+2. **Pemetaan perundang-undangan (informatif)** — tabel di bawah ini, yang memetakan struktur CIRIS ke kerangka hukum mengikat dan standar. Baris-baris ini merupakan *korespondensi rekayasa yang bersifat informatif*, bukan pendapat hukum; baris perundang-undangan naik ke status "terverifikasi" hanya setelah tinjauan hukum dilakukan. Annex I memuat prosedur penyelarasan hukum operatif (pemetaan perlindungan data, overlay sektoral, matriks tanggung jawab, umpan eskalasi).
+
+### Pemetaan perundang-undangan dan standar (informatif; menunggu verifikasi hukum)
+
+| Kerangka Eksternal | Pasal / Klausul Relevan | Pemetaan CIRIS (Buku / Lampiran §) | Status |
+|---|---|---|---|
+| EU AI Act (2024) | Art 9 Manajemen Risiko | Book II §II (PDMA); Annex D CRE | Informatif |
+| | Art 12 Penyimpanan Catatan | Book IV Ch 3 jejak audit; Annex F §4 | Informatif |
+| | Art 13 Transparansi | Book II §II Step 6; Book IV Ch 3 | Informatif |
+| | Art 14 Pengawasan Manusia (termasuk 14(4)) | Book II §III (WBD); Annex F kisi otoritas + tingkatan otonomi | Informatif |
+| | Art 61 Pemantauan Pasca-Pasar | Annex H kontrol penyimpangan + audit berkelanjutan | Informatif |
+| NIST AI RMF 1.0 | Govern → Map → Measure → Manage | Govern: Books I, VI; Map: Book II §II Steps 1–2; Measure: Annex A metrics + Annex H baselines; Manage: Annex F/H workflows | Informatif |
+| ISO/IEC 42001 | Cl 6.2 Penilaian Risiko | Book II §II | Informatif |
+| | Annex A controls | Dokumen dimensi `compliance/` CIRISAgent (korespondensi per-kontrol menunggu) | Informatif |
+| OSHA Robotics Guidelines | Sec 5.E Audit Keselamatan | Annex D CRE | Parsial |
+| EU HLEG Trustworthy AI (2019) | 7 Persyaratan | Pemetaan silang operasional, dimensi D01–D27 | Berbasis Bukti |
+| IEEE EAD 1st ed. (2019) | 8 Prinsip Umum | Pemetaan silang operasional, dimensi D01–D27 | Berbasis Bukti |
+| ASEAN AI Governance Guide (2024) | 7 Prinsip; HITL/HOTL/HOOTL | Pemetaan silang operasional; Annex F tingkatan otonomi | Berbasis Bukti |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (pemetaan butir paragraf) | Pemetaan silang operasional, dimensi D01–D27 | Berbasis Bukti |
+
+### Aturan kenaikan status
+
+Suatu baris perundang-undangan berpindah dari *Informatif* ke *Terverifikasi* apabila tinjauan hukum yang memenuhi kualifikasi mengonfirmasi korespondensi tersebut untuk yurisdiksi tertentu dan artefak tinjauan tersebut ditautkan dari tabel ini. Hingga saat itu, baris-baris dalam lampiran ini mendukung penyelarasan rekayasa dan analisis kesenjangan, bukan klaim kepatuhan; sesuai bagian Tanggung Jawab dalam Pendahuluan, klaim kepatuhan tidak berlaku di mana dilarang oleh hukum yang berlaku.
+
+(Kerangka tambahan — Rekomendasi UNESCO tentang Etika AI, Prinsip AI OECD, Konvensi Kerangka Dewan Eropa — telah dimasukkan dalam antrean untuk pemetaan silang operasional sesuai peta jalan direktori kepatuhan.)
+
+---
+End of Annex C

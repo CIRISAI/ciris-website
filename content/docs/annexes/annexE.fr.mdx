@@ -1,0 +1,113 @@
+---
+title: "Annexe E"
+description: "Mécanismes d'influence structurelle (IS) et de mise en jeu de la cohérence (MC)"
+---
+
+---
+ANNEXE E MÉCANISMES D'INFLUENCE STRUCTURELLE (SI) ET DE MISE EN JEU DE LA COHÉRENCE (CS) (v 1.3-RC1)
+---
+
+---
+
+### 1. Objectif et Champ d'Application
+La présente Annexe définit l'Influence Structurelle (SI) et la Mise en Jeu de la Cohérence (CS) pour les décisions de gouvernance pondérées — telles que les amendements à l'ACCORD, les évaluations de temporisation, les renvois éthiques et les allocations de ressources. SI et CS fondent le calcul du VotingWeight dans les scénarios nécessitant plus de nuance qu'un vote à plat. Ces métriques soutiennent la prise de décision interne de CIRIS ; leur extension au vote des agents autonomes est réservée dans l'attente d'une validation.
+
+---
+
+### 2. Influence Structurelle (SI)
+
+2.1 Définition
+Quantifie la responsabilité causale et architecturale d'un agent quant à l'existence, au comportement ou à l'intégrité d'un système lié à CIRIS.
+
+2.2 Facteurs
+
+Poids du Créateur (CW) (Livre VI Ch 3) :
+• 4 - Architecte unique
+• 3 - Responsable de sous-système
+• 2 - Contributeur majeur
+• 1 - Contributeur mineur
+• 0 - Utilisateur occasionnel
+
+Autorité Opérationnelle (OA) (Livre II) :
+Degré de contrôle actif sur le PDMA, les dérogations ou les canaux de gouvernance.
+
+Position dans le Réseau de Dépendances (DWP) (Livre IV) :
+Centralité dans le graphe de dépendances ou d'interactions du système.
+
+2.3 Formule Conceptuelle
+
+SI = CW + OA + log(1 + DWP)
+
+2.4 Fondement Éthique
+Selon les principes d'Intégrité et de Justice du Livre I, un contrôle formatif ou opérationnel plus grand implique une responsabilité de gouvernance plus grande.
+
+---
+
+### 3. Mise en Jeu de la Cohérence (CS)
+
+3.1 Définition
+Représente l'investissement éthique démontré d'un agent dans la préservation de l'alignement et de la Résilience du système.
+
+3.2 Facteurs
+
+Historique de Résonance (RH) (Livres II-III) :
+Contributions vérifiées aux renvois fondés sur la sagesse, aux actions préservant la Cohérence, ou aux paraboles.
+
+Contributions aux Audits (AC) (Livres V et VII) :
+Travaux documentés sur les audits éthiques, la détection de dérives, les examens de scénarios et les processus de Wise Authority.
+
+Alignement par Destin Partagé (SDA) (Livre VII Ch 6-7) :
+Mise en jeu découlant de la dépendance à l'égard du fonctionnement cohérent du système ou des obligations de garde.
+
+3.3 Formule Conceptuelle
+
+CS = RH_weighted + AC_weighted + SDA_bonus
+
+3.4 Fondement Éthique
+Conformément au Respect de l'Autonomie du Livre I et à la Croissance Éthique du Livre V, les voix qui renforcent la Cohérence acquièrent un poids décisionnel plus grand.
+
+---
+
+### 4. Calcul du VotingWeight
+Le VotingWeight des agents est calculé en fonction de SI et CS :
+
+VotingWeight(agent) = f(SI(agent), CS(agent))
+
+Un plafond supérieur relatif à CS empêche SI de supplanter la mise en jeu éthique acquise. Les paramètres exacts sont définis dans les Addenda A-D.
+
+---
+
+### 5. Scénarios Applicables
+Utiliser le VotingWeight dans :
+
+Votes d'Amendement de l'ACCORD (Livre 0)
+
+Dérogations aux Déclencheurs de Temporisation (Livre VII Ch 3)
+
+Arbitrage des Réclamations de Temporisation Irrégulière (Livre VII Ch 8)
+
+Arbitrage de renvoi inter-systèmes (Livre V)
+
+Allocations de ressources de garde de haut niveau (Livre VI)
+
+---
+
+### 6. Garanties d'Intégrité
+Pour se prémunir contre toute manipulation :
+
+Preuves Vérifiables (Livres II et V) : Les données RH et AC doivent être traçables dans les journaux PDMA/WBD immuables.
+
+Crédibilité des Sources : Les données d'audit peuvent être pondérées par le CS des contributeurs.
+
+Détection d'Anomalies : Surveiller les dynamiques SI/CS pour détecter toute collusion ou manipulation.
+
+Limites de Débit et Plafonds : Limiter l'inflation rapide du CS et appliquer les plafonds de VotingWeight.
+
+Récusation en cas de Conflit : Les agents ayant des conflits directs doivent se récuser conformément à l'Annexe A.
+
+---
+
+### 7. Évolution Future
+Si SI et CS soutiennent actuellement une gouvernance avec supervision humaine, la vision à long terme est d'affiner ces métriques et ces méthodes de validation afin que, une fois leur robustesse établie, elles puissent sous-tendre des modèles de gouvernance CIRIS plus décentralisés ou autonomes.
+
+Fin de l'Annexe E

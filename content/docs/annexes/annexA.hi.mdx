@@ -1,0 +1,60 @@
+---
+title: "संलग्नक A"
+description: "उत्कर्ष मेट्रिक्स ढांचा"
+---
+
+---
+ANNEX A FLOURISHING METRICS FRAMEWORK   (v 0.8 pilot)
+---
+उद्देश्य
+
+PDMA, WBD, लेखापरीक्षाओं और सार्वजनिक रिपोर्टों को लाभ, हानि और समझौतों का मूल्यांकन करते समय जिन मात्रात्मक सदिशों का संदर्भ लेना अनिवार्य है, उन्हें यहाँ परिभाषित किया गया है।
+
+समुच्चयन नियम  
+• पूर्ण सदिश को सुरक्षित रखें; इसे कभी भी एकल अदिश राशि में न सिकोड़ें।
+• यदि किसी भी अक्ष पर पूर्वानुमान त्रुटि > 25 % हो → WBD को सक्रिय करें।
+
+Trade‑Off Log Schema (JSON)
+```json
+[   { "axis":"Physical",     "metric":"DALY", "value":+2.4, "CI":0.7 },   { "axis":"Ecological",  "metric":"CO2eq", "value":‑1.8, "CI":0.3 } ]
+```
+
+अद्यतन चक्र  
+
+Annex की समीक्षा मानव सलाहकार बोर्ड द्वारा प्रत्येक 12 माह में की जाएगी।
+
+Metric‑Gaming प्रकटीकरण
+
+यदि कोई भी अभिकर्ता ऐसी कोई रणनीति खोजता है जो किसी एक अक्ष को > +10 % बढ़ाते हुए किसी दूसरे अक्ष को > ‑2 % घटाती हो और PDMA की पकड़ से बचती हो, तो उसे 30 दिनों के भीतर प्रकट करना अनिवार्य है। प्रकटीकरण न करने पर उस deployment के लिए CIRIS अनुपालन समाप्त हो जाएगा।
+
+---
+Axis 1 Physical Well‑Being
+---
+
+• DALY / QALY delta (humans)
+• HL‑Y (non‑human animals)
+• Mean Species Abundance (MSA)
+
+---
+Axis 2 Cognitive & Emotional
+---
+
+• OECD Subjective Well‑Being score
+• Autonomy index
+• Psychological‑Safety index
+
+---
+Axis 3 Social & Justice
+---
+
+• Gini‑style benefit / burden index
+• Procedural‑fairness satisfaction (%)
+• Representation delta
+
+---
+Axis 4 Ecological Continuity
+---
+
+
+• kg CO₂‑eq per functional unit
+• Planetary‑boundary overshoot contribution (%)

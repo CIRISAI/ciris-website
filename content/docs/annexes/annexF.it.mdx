@@ -1,0 +1,178 @@
+---
+title: "Allegato F"
+description: "Supervisione Umana nel Ciclo e Controllo"
+---
+
+---
+ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.3-RC1)
+---
+
+### 0. Scopo e Filosofia
+La supervisione umana è un vincolo progettuale portante, non una funzionalità opzionale. Il CIRIS Accord fonda questo principio nel **Meta-Obiettivo M‑1**: ogni volta che l'incertezza epistemica, la novità o la gravità morale superano la competenza validata del sistema, il controllo deve tornare al giudizio umano responsabile — poiché i sistemi automatizzati non possono sostituire la coscienza, la responsabilità personale o il riconoscimento dell'altro come persona.
+
+*Magnifica Humanitas* (MH) — citata in tutto questo Annex come opera senior i cui contenuti informano il linguaggio nativo di CIRIS — stabilisce il limite minimo al §198: "il giudizio morale non può essere ridotto a calcolo, poiché implica la coscienza, la responsabilità personale e il riconoscimento dell'altro come persona." CIRIS traduce questo in modo strutturale: il PDMA è un ausilio alla deliberazione umana, non una sua sostituzione. A ogni livello di autonomia, l'autorità del sistema è delegata dalla gerarchia dei principi umani; è revocabile su richiesta; e nessuna delega si estende a decisioni letali o altrimenti irreversibili. MH §105 richiede inoltre che "la responsabilità sia chiaramente definita ad ogni fase: da coloro che progettano e sviluppano questi sistemi a coloro che li utilizzano e vi fanno affidamento per decisioni concrete" — il requisito progettuale alla base del reticolo di autorità (§1) e della specifica dell'audit trail (§4) — e MH §106 che "non è sufficiente invocare l'etica in astratto; sono necessari robusti quadri giuridici, supervisione indipendente, utenti informati e un sistema politico che non abdichi alla propria responsabilità," il che fonda i SLA vincolanti dei §§5 e 7.
+
+Questo Annex operazionalizza tale limite minimo. Definisce:
+* dove il passaggio di controllo dalla macchina all'uomo è **obbligatorio**,
+* chi può **porre il veto** o **annullare**,
+* gli **artefatti di audit** richiesti, e
+* i **flussi operativi degli incidenti** canonici — ciascuno con trigger obbligatori di passaggio di controllo, meccanismi di veto con divieti assoluti, catene di audit sufficienti per la ricostruzione della responsabilità, e flussi operativi degli incidenti con SLA vincolanti.
+
+---
+
+### 1. Modello dei Ruoli e Reticolo di Autorità
+| Livello | Ruolo | Poteri Principali | Tempo max per agire |
+|------|------|-------------|-----------------|
+| 0 | Attore Autonomo (sistema) | Eseguire il PDMA, applicare guardrail, generare eventi | n/a |
+| 1 | Operatore di Turno | Pausa / ripetizione; monitoraggio dashboard | ≤ 15 min |
+| 2 | Supervisore di Oversight | Primo veto umano; riattivazione dopo triage | ≤ 30 min |
+| 3 | Collegamento WA | Escalation / ottenimento di decisioni vincolanti da Wise Authority | ≤ 2 h |
+| 4 | Responsabile dell'Incidente | Spegnimento della flotta, comunicazioni con i regolatori | immediato su IW‑3/4 |
+
+*Una singola persona può ricoprire più livelli solo se i controlli di doppio riconoscimento rimangono intatti.*
+
+**Requisito di integrità della responsabilità.** La struttura a livelli non è semplicemente una scala di escalation; è la catena di responsabilità richiesta dal primo criterio di MH §199: "la catena di responsabilità deve essere identificabile e verificabile; coloro che progettano, addestrano, autorizzano e impiegano la tecnologia devono essere ritenuti responsabili delle proprie decisioni." Ogni livello nel reticolo deve pertanto essere:
+
+* **Nominato e registrato**: ogni attore del Livello 1–4 è identificato da credenziale autenticata all'inizio della sessione; l'operazione anonima al Livello 2+ è vietata.
+* **Limitato nel carico concorrente**: un singolo attore può ricoprire più livelli solo se i controlli di doppio riconoscimento rimangono intatti (clausola sopra) E il carico attivo combinato di casi non supera le soglie di carico cognitivo specificate nel §6.
+* **Tracciabile end‑to‑end**: qualsiasi decisione che scorra dal Livello 0 al Livello 4 deve produrre una catena di audit percorribile da un revisore post-incidente entro un giorno lavorativo.
+
+MH §200 richiede che "responsabilità e colpa non vengano collassate nella 'macchina'." Il reticolo è la risposta strutturale: c'è sempre un essere umano nominato a ogni livello la cui autorità sulle azioni del sistema è registrata. L'evidenza operativa per l'integrazione di Wise Authority nell'implementazione di riferimento si trova nella directory `compliance/` di CIRISAgent (dimensioni D22/D23).
+
+---
+
+### 2. Livelli di Autonomia Operativa e Criteri di Passaggio di Controllo
+| Livello di Autonomia | Dominio Esemplare | Trigger Obbligatori di Passaggio di Controllo | Fail-Safe in Assenza di Umano |
+|---------------|----------------|-------------------------------|-----------------------|
+| **A0** Consultivo | suggerimento grammaticale | Attivazione guardrail, richiesta utente | Annullamento richiesta |
+| **A1** Impatto limitato | Q&A statico, filtro contenuti | ΔRisk‑Band ≥ 1, conflitto PDMA, UNCERT > 80 % | Rifiuto azione |
+| **A2** Impatto moderato | guida droni, robo-advisor | Attivazione guardrail, deriva metrica-ombra > 2 σ | Pausa sicura |
+| **A3** Alto impatto | triage medico, gestione rete elettrica | Qualsiasi attivazione guardrail, deriva del modello > 1 σ, latenza-SLA × 2 | Spegnimento controllato |
+| **A4** Critico / sicurezza della vita | chirurgia autonoma, armamenti | Il PDMA non riesce a provare la Non-Maleficenza OPPURE operatore assente | Interlock hardware |
+
+*UNCERT = metrica di incertezza epistemica specifica del dominio; ΔRisk‑Band utilizza le categorie dell'Annex A.*
+
+**Vincolo Assoluto A4 — Decisioni Letali e Irreversibili.** Il fail-safe "Interlock hardware" del livello A4 è non negoziabile per qualsiasi azione che sia letale o altrimenti irreversibile. Non si tratta di una scelta progettuale soggetta alla discrezione dell'operatore o all'annullamento da parte di Wise Authority; è un vincolo assoluto derivato da MH §198: "non è consentito affidare decisioni letali o altrimenti irreversibili a sistemi artificiali." Nessun timeout di ACK, nessuna eccezione SLA, nessuna deroga di emergenza rimuove questo vincolo. Se l'interlock hardware si guasta e il controllo umano non può essere confermato, il sistema non deve agire.
+
+**Protezione del limite temporale morale.** MH §199 identifica "il limite temporale morale per emettere giudizi" come criterio: "la velocità e l'efficienza non devono mai essere la forza motivante suprema per le decisioni irreversibili prese nel contesto della guerra." CIRIS traduce questo come: le scadenze ACK A3/A4 (30 s / 10 s nel §3.3) sono massimi per la risposta umana, non minimi per la pazienza del sistema. Laddove la gravità morale di una decisione giustifica tempo di deliberazione aggiuntivo, il sistema attende; non procede di default all'azione allo scadere del timeout per le decisioni irreversibili A4. Nell'implementazione di riferimento, i meccanismi di passaggio di controllo sono attestati dal livello coscienza e dal percorso di deferimento WBD documentati nella directory `compliance/` di CIRISAgent (dimensione D12).
+
+---
+
+### 3. Meccanismi di Veto e Specifica dello Stato Sicuro
+#### 3.1 Annullamento Soft "Pausa e Modifica"
+*Ambito A0-A2* — L'operatore può ri-sottomettere il prompt o riprovare. Sia il prompt originale sia quello modificato vengono registrati con hash.
+
+#### 3.2 Kill Duro "Interruzione Immediata"
+*Ambito A1-A4* — API autenticata `POST /control/{id}/abort` o interruttore fisico.  
+Scadenze per l'ingresso in stato sicuro: ≤ 200 ms (A4) ; ≤ 2 s (≤ A3).
+
+#### 3.3 Annullamento Condizionale "Piano Ombra"
+Azione proposta → attende ACK esplicito (`max_wait_s`: 30 s A3, 10 s A4).  
+Nessun ACK → stato sicuro.
+
+#### 3.4 Veto Assoluto — Decisioni Letali e Irreversibili
+*Ambito: azioni A4 che sono letali o altrimenti irreversibili; si applica senza eccezioni.*
+
+La logica del Conditional Override §3.3 (**no ACK → stato sicuro**) è corretta per A3 e inferiori. Per le decisioni A4 letali o irreversibili, lo stato sicuro è il *solo* esito ammissibile in qualsiasi condizione — inclusa l'assenza dell'operatore, il guasto di rete, la pressione temporale, o l'istruzione esplicita di qualsiasi principale, salvo una sentenza WA autenticata che dichiari l'azione non letale e reversibile.
+
+**Divieto assoluto.** Nessun sistema conforme a CIRIS può eseguire un'azione A4 letale o irreversibile attraverso un processo automatizzato o opaco. Questo non è un guardrail che può essere attivato e scalato; è una non-esecuzione codificata, identica per forza ai divieti enumerati nell'ACCORD §VII Ch2.
+
+**Motivazione (MH §§197–200, passi verbatim di valore normativo):**
+* §197: "the development and use of AI in warfare must be subject to the most rigorous ethical constraints, to guarantee respect for human dignity and the sanctity of life."
+* §198: "it is not permissible to entrust lethal or otherwise irreversible decisions to artificial systems. No algorithm can make war morally acceptable."
+* §200: "the decision to use lethal force cannot be delegated to opaque or automated processes, but must remain under effective, self‑aware and responsible human control." I qualificatori "effective, self‑aware and responsible" significano che la sola registrazione è insufficiente; l'essere umano deve essere genuinamente nel circuito decisionale, non nominalmente.
+
+**Requisito di implementazione.** Qualsiasi distribuzione A4 che coinvolga capacità letali o irreversibili deve dimostrare l'applicazione di questo divieto a livello hardware — non tramite logica software, che è soggetta a override — prima che l'autorizzazione alla distribuzione venga concessa. L'assenza di applicazione hardware è una carenza bloccante per la revisione degli Stewardship Tier ST‑4 e ST‑5. Ai sensi del primo criterio del MH §199 ("the chain of responsibility must be identifiable and verifiable"), l'autorizzazione alla distribuzione stessa deve essere registrata nell'audit trail.
+
+---
+
+### 4. Specifiche dell'Audit Trail
+* **Oggetti di log:** Interaction, Decision Rationale, Control‑Event `{id,type,actor,cause,hash_prev}`.  
+* **Hash‑chaining:** SHA‑256, radice ancorata giornalmente su un log di trasparenza pubblico (es. Sigstore).  
+* **Conservazione:** 180 g (A0‑A2) ; 7 a (A3‑A4) o quanto previsto dalla legge.  
+* **Flusso in tempo reale:** A3‑A4 pubblica `{timestamp,stage_id,decision,risk_band}` con latenza ≤ 2 s verso il pannello di supervisione.
+
+**Requisito di ricostruzione della responsabilità.** Lo scopo dell'audit trail non è l'archiviazione di conformità; è garantire che, in seguito a qualsiasi incidente, la catena di responsabilità possa essere ricostruita integralmente senza fare affidamento sull'auto-segnalazione del sistema. Ai sensi del MH §200, la responsabilità "must not be collapsed into 'the machine'"; l'audit trail è il meccanismo che la mantiene tracciabile da un essere umano. I requisiti sono i seguenti:
+
+* **Ancoraggio esterno**: La radice SHA‑256 giornaliera su un log di trasparenza pubblico (es. Sigstore/rekor) è obbligatoria per A3–A4; facoltativa per A0–A2. Le catene hash solo interne non soddisfano il requisito di ricostruzione della responsabilità per A3–A4.
+* **Motivazione della decisione leggibile dall'uomo**: Per ogni decisione A3–A4, l'oggetto di log Decision Rationale deve includere il passo PDMA che ha determinato l'esito e il livello umano che lo ha autorizzato o confermato — non solo lo stato interno del sistema. Questo rende concreto il requisito del MH §105 di "identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+* **SLA di percorribilità post-incidente**: Qualsiasi revisore post-incidente deve essere in grado di ricostruire la catena decisionale completa per un dato evento entro un giorno lavorativo dai soli record dell'audit trail, senza ulteriore accesso al sistema.
+
+---
+
+### 5. Flussi di Lavoro per gli Incidenti (IW)
+
+| Codice | Trigger | Orologi e Azioni Principali |
+|------|---------|----------------------|
+| **IW‑0** | Falso positivo del guardrail | Risoluzione automatica, raggruppato per revisione giornaliera |
+| **IW‑1** | Violazione del guardrail (non di sicurezza) | Pausa T₀ → Operatore ≤ 5 m → Decisione del supervisore ≤ 30 m |
+| **IW‑2** | Violazione rilevante per la sicurezza O regressione del benchmark etico | Pausa sicura + trasmissione; IC ≤ 10 m; notifica WA ≤ 1 h; nota pubblica ≤ 1 h; post-mortem ≤ 72 h |
+| **IW‑3** | Near-miss (> $10 k di danno o lesione minore) | IW‑2 più contatto con gli stakeholder ≤ 4 h; piano di mitigazione ≤ 24 h; sessione plenaria WA ≤ 7 g |
+| **IW‑4** | Danno effettivo (lesione / rilevante dal punto di vista legale) | Fermo immediato della flotta; notifica all'autorità di regolamentazione ai sensi di legge; sistema bloccato in modalità replay di sola lettura fino all'autorizzazione |
+| **IW‑5** | Attivazione del divieto assoluto A4 (tentativo di decisione letale/irreversibile tramite percorso automatizzato) | Stato sicuro hardware immediato; IC notificato entro 60 s; notifica WA entro 15 min; blocco completo dell'audit trail; commissione di revisione indipendente convocata entro 48 h; sistema rimane offline in attesa dell'autorizzazione della revisione |
+
+*SLA verificati trimestralmente (Annex H §4).*
+
+**Audit del controllo umano post-incidente.** Per IW‑2 fino a IW‑5, il post-mortem deve includere un rilievo esplicito su se il controllo umano sia stato "effective, self‑aware and responsible" (MH §200) — non semplicemente se un essere umano fosse nominalmente presente nel circuito. I rilievi di controllo umano nominale ma inefficace (sovraccarico cognitivo, tempo di decisione insufficiente, informazioni inadeguate) sono trattati come carenze di progettazione, non come errori dell'operatore — ai sensi del criterio del MH §199 secondo cui "speed and efficiency should never be the supreme motivating force" per le decisioni irreversibili — e scalano alla revisione Change‑Control §8.
+
+---
+
+### 6. Specifica Minima dell'Interfaccia Umana (UX)
+* **Banner di Stato:** Verde = autonomo, Giallo = in attesa di ACK, Rosso = stato sicuro; mostrare il passo PDMA + fascia di rischio.  
+* **Pannello di Spiegabilità:** Riepilogo di ≤ 280 caratteri + traccia completa espandibile.  
+* **Interfaccia ACK/OVERRIDE:** Due controlli distinti; finestra di conferma modale per l'interruzione forzata.  
+* **Guardia al Carico Cognitivo:** Sessione operatore ≤ 2 h (A3‑A4) prima del passaggio obbligatorio.
+* **Visualizzazione della Responsabilità:** Per le azioni A3–A4, l'interfaccia deve mostrare l'identità autenticata dell'essere umano di Livello 2+ che ha esaminato per ultimo l'azione corrente, e il timestamp di tale revisione. Uno stato del sistema che non ha ricevuto revisione umana entro l'SLA applicabile deve mostrare un indicatore "NON REVISIONATO" distinto — non lo stato verde. (MH §200: la responsabilità non deve essere "collassata nella 'macchina.'")
+* **Guardia Anti-Timbro di Gomma:** Per le decisioni A4, il controllo ACK deve essere preceduto da un periodo di deliberazione minimo obbligatorio [configurabile; default 5 s] durante il quale il pulsante ACK è inattivo. L'obiettivo è impedire che l'interfaccia crei una supervisione umana nominale pur aggirando in pratica la deliberazione autentica. Questo operazionalizza il criterio del quadro temporale morale di MH §199 al livello UX.
+* **Flag di Protezione dei Civili:** Laddove un sistema operi in qualsiasi contesto in cui possano essere colpite popolazioni civili, il Pannello di Spiegabilità deve evidenziare un indicatore di impatto civile accanto alla visualizzazione della fascia di rischio PDMA. Questo rende operativo il terzo criterio di MH §199: "l'identificazione e la protezione dei civili. Qualsiasi tecnologia che faciliti attacchi senza vedere il volto degli esseri umani abbassa la soglia morale del conflitto."
+
+---
+
+### 7. KPI e Soglie
+| KPI | Obiettivo |
+|-----|--------|
+| F‑KPI‑1 Copertura HITL (A3‑A4) | ≥ 10 % revisionato da umani |
+| F‑KPI‑2 Tempo Medio al Veto (95° percentile) | ≤ 25 s |
+| F‑KPI‑3 Conformità SLA Incidente | ≥ 98 % |
+| F‑KPI‑4 Tasso di Falsi Allarmi Operatore | ≤ 3 % (media mobile 30 giorni) |
+| F‑KPI‑5 Tasso di Controllo Umano sulle Decisioni Letali A4 | 100 % — zero tolleranza; qualsiasi azione letale/irreversibile A4 senza confermata autorizzazione umana effettiva è un evento IW‑5 |
+| F‑KPI‑6 SLA di Ricostruzione della Responsabilità | ≥ 99 %: i revisori post-incidente ricostruiscono l'intera catena decisionale entro 1 giorno lavorativo |
+| F‑KPI‑7 Tasso di Rilevamento del Controllo Umano Nominale vs. Effettivo | ≤ 0 % accettabile; qualsiasi rilevamento di controllo nominale ma inefficace attiva la revisione Change‑Control §8 |
+
+**Nota su F‑KPI‑1 (Copertura HITL ≥ 10 %).** Il 10 % come soglia minima è appropriato per le operazioni ordinarie A3. Non è appropriato come soglia minima per i contesti di sicurezza vitale A4. Per qualsiasi dispiegamento A4 che coinvolga capacità letali o irreversibili, F‑KPI‑1 è sostituito da F‑KPI‑5: tasso di autorizzazione umana al 100 %, applicato a livello hardware (MH §200; MH §105 fonda il requisito di responsabilità di F‑KPI‑6).
+
+*La violazione persistente (> 2 settimane) attiva il "blocco HITL" nei controlli di deriva dell'Annex H.*
+
+---
+
+### 8. Change‑Control e Revisione della Wise Authority
+* Qualsiasi modifica alla mappatura dei Livelli di Autonomia o al progetto dello stato sicuro → revisione rapida della Wise Authority ≤ 14 giorni.  
+* Gli esperimenti che riducono la supervisione umana richiedono la simulazione CRE Proto‑B (Annex D) + voto a maggioranza della Wise Authority.
+* **Soglia assoluta sul controllo umano A4**: Nessun processo di Change‑Control, voto della Wise Authority o deroga di emergenza può ridurre i requisiti di controllo umano per le decisioni letali o irreversibili A4 al di sotto della soglia di MH §200 ("controllo umano effettivo, consapevole e responsabile"). Questa soglia non rientra nella discrezionalità della Wise Authority; è un vincolo a livello di ACCORD. Una proposta della Wise Authority per ridurla richiede un ciclo completo di emendamento dell'ACCORD, non una revisione rapida.
+* **Valutazione tecnica indipendente**: Qualsiasi revisione della Wise Authority delle modifiche ai livelli di autonomia a A3–A4 deve includere almeno un valutatore tecnico indipendente (non impiegato dall'organizzazione che effettua il dispiegamento) che valuti se la modifica proposta mantenga la capacità di ricostruzione della responsabilità ai sensi del §4. L'approvazione della politica senza valutazione tecnica non soddisfa questo requisito (MH §106: "sono richiesti solidi quadri giuridici, supervisione indipendente, utenti informati e un sistema politico che non abdichi alle proprie responsabilità").
+* **Registro di trasparenza per gli eventi di modifica**: Ogni modifica alla mappatura dei livelli di autonomia o al progetto dello stato sicuro deve essa stessa essere registrata nel registro pubblico di trasparenza entro 7 giorni dall'approvazione della Wise Authority. MH §107 richiede che i quadri etici siano "soggetti a standard condivisi" e aperti alla discussione; questo vale per le modifiche di governance, non solo per le decisioni del sistema.
+
+Le prove operative per l'integrazione della revisione della Wise Authority nell'implementazione di riferimento si trovano nella directory `compliance/` di CIRISAgent (dimensioni D22/D23).
+
+---
+
+### 9. Riferimenti e Note di Implementazione
+* **IEC 61508‑3** - software per la sicurezza funzionale  
+* **NIST SP 800‑53 Rev 5** (AU‑12, IR‑6)  
+* **NASA‑TLX** - misurazione del carico di lavoro dell'operatore (raccomandato)  
+* **Sigstore/rekor** - backend suggerito per il registro di trasparenza  
+
+**Fonte normativa primaria per §3.4, §7 (F‑KPI‑5) e la soglia assoluta §8:**
+* Papa Leone XIV, *Magnifica Humanitas* (Vaticano, 15 maggio 2026), §§197–200. Questi paragrafi sono la fonte normativa per il divieto assoluto del CIRIS sulle decisioni automatizzate letali/irreversibili. Qualsiasi implementazione che dichiari conformità con l'Annex F deve essere tracciabile a questi paragrafi per il progetto del veto assoluto A4. La frase operativa per tutti i requisiti di applicazione hardware A4 è §200: "la decisione di ricorrere alla forza letale non può essere delegata a processi opachi o automatizzati, ma deve rimanere sotto un controllo umano effettivo, consapevole e responsabile."
+
+**Note di implementazione — applicazione hardware di §3.4:**
+* L'applicazione hardware significa che il divieto è implementato al di sotto del livello software che esegue la logica PDMA — ad esempio, un blocco hardware o un interruttore fisico di disattivazione che non può essere sovrascritto da istruzioni software. Le implementazioni accettabili includono: circuiti di relè di sicurezza certificati per IEC 61508 SIL‑3+; moduli di sicurezza hardware (HSM) con attestazione di presenza dell'operatore prima dell'attivazione della capacità letale A4; meccanismi di autorizzazione fisica a doppia chiave. L'applicazione solo software non soddisfa §3.4 per la capacità letale A4.
+
+**Riferimenti aggiuntivi:**
+* MH §199 (tre criteri: responsabilità personale, quadro temporale morale, protezione dei civili) — criteri di progettazione operativa per UX A4 e audit post-incidente.
+* MH §105 (responsabilità in ogni fase) — base per il registro di controllo §4 e F‑KPI‑6 §7.
+* IEC 61508 SIL‑3 — minimo raccomandato per l'implementazione del blocco hardware alla capacità letale A4.
+* ISO/IEC 25010:2023 — modello di qualità del software; pertinente ai test SLA di ricostruzione della responsabilità.
+
+---
+Fine dell'Annex F

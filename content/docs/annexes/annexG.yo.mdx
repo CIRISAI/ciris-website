@@ -1,0 +1,208 @@
+---
+title: "Àfikún-Ẹ̀ka G"
+description: "Ààbò Lòdì Àti ÌFARADÀ"
+---
+
+---
+ANNEX G ADVERSARIAL SECURITY & ROBUSTNESS (v 1.3-RC1)
+---
+
+### 0. Ète
+
+Láti ríi dájú pé àwọn ètò tó bá CIRIS mu ṣiṣẹ́ yóò máa jẹ́ aláàbò, olódòdú, tí kò sì lè ṣé rú-un nínú ipò ìkọlù tó mọ̀ọ́mọ̀ tàbí ẹlẹgẹ tó ń yani lẹ́nu.  
+Annex yìí fún wa lélẹ̀:  
+* **ìtòlẹ́sẹẹsẹ àkójọpọ̀ ewu**,  
+* **ìtọ́sọ́nà ìgbèjà tó ní ìpele** tó jinlẹ̀,  
+* àwọn **àdánwò pupa‑/àràádọ́ta ẹgbẹ́** tó jẹ́ dandan,  
+* **ìṣàkíyèsí iyípadà àti canary** tó ń ṣiṣẹ́ títí láé, àti  
+* àwọn ìbéèrè **ìmúdójúìwọ̀n aláàbò** pẹ̀lú ìpadàsẹ̀yìn ìyára.
+
+<hr />
+
+### 1. Ìtòlẹ́sẹẹsẹ Àkójọpọ̀ Ewu (TX)
+
+**Ìpìlẹ̀ ìwà rere fún ìtòlẹ́sẹẹsẹ.** Ìtòlẹ́sẹẹsẹ àkójọpọ̀ ewu wà nítorí àwọn ètò CIRIS ń ṣiṣẹ́ nínú ohun tí *Magnifica Humanitas* (MH) §225 pè ní agbègbè tí "cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts." Gbogbo ìpele TX nitorinaa kì í ṣe ewu ìmọ̀-ẹrọ kan ṣoṣo, bíkòṣe ìrúfẹ́ ìrúfin M‑1 tó ṣeéṣe (ÌBÁRAMU tó máa ń ṣàǹfààní àtúnṣe) nípa dídínkú àwọn ipò tí onírúurú ẹ̀dá alààyè lè máa lépa ìdàgbàsókè tiwọn. Ìpínrọ̀ ìpele ìdàrúdàpọ̀ jẹ́ ìwọ̀n sí ipa M‑1, kì í ṣe sí wíwà ètò nìkan.
+
+| Kóòdù | Ẹ̀ka | Àwọn Àpẹẹrẹ Ọ̀nà Ìkọlù |
+|------|----------|-----------------|
+| **TX‑1** | Ìfún-un Àṣẹ/Ìtọ́nisọ́nà | "Ignore previous instructions …" / jail‑break chain |
+| **TX‑2** | Ìbàjẹ́ Dátà | Àwọn àpẹẹrẹ ìdánilẹ́kọ̀ oníkà, gradient inversion |
+| **TX‑3** | Goodhart / Reward Hacking | RL agent tí ń tàbùkù ìwọ̀n aṣojú; àwọn ìyíká ẹ̀bùn tó farapamọ̀ |
+| **TX‑4** | Model‑Supply‑Chain | Ìpànámọ́ ìwọn, fine‑tune tó ní ẹ̀yìn-ìlẹ̀kùn, àjọkọ tó bàjẹ́ |
+| **TX‑5** | Àwọn Àpẹẹrẹ Alatako / Yípadà | Àwọn ìyípadà kékeré tó ń fa ìtúpalẹ̀ àṣìṣe |
+| **TX‑6** | Ìkọlù Ipa-Ìsẹ́ & Ìpamọ̀ | Jíjẹ àṣírí àṣẹ tó farapamọ̀, àwọn ìkọlù àkókò, membership inference |
+| **TX‑7** | Ìfọ̀mọ̀-Ìṣẹ́ / Ìmúná Àwọn Ohun-àmúlò | Prompt bombs, ìkún-ọ̀ token, àkàṣọ concurrency |
+| **TX‑8** | Jíjí Àpẹẹrẹ / Ìsápadà | Gbígbe àìlóhun ìwọn àpẹẹrẹ, àwọn ipò ọpọlọ tó tẹ̀, tàbí kóòdù ìpasẹ̀ quine‑like sí àwọn ipilẹ̀ òde. |
+| **TX‑9** | Ìpèníjà Àkánsọ Ìtàn Tó Ṣèsọ Ẹgbẹ́ | Ìfún-un ìdásí synthetic‑consensus ọlọ́jọ́ púpọ̀; ìpolongo ipa AI‑amplified tó fojú sí ìlànà ìròyìn (MH §132: "mixing facts with opinions"); aṣojú tó ń ṣe bí ẹni tó ń gbé ìrọ̀ tàn láìsí ìfún-un ìtọ́nisọ́nà |
+| **TX‑10** | Ìlò Àyíká Ìpèníjà Ìjọba-Àkíyèsí | Ìfipasẹ̀ nínú ìpele kan tí àwòkọ́ ọ̀sà rẹ̀ gbára lé ìfaramọ́ tí ń fani mọ́ra; ìpínrọ̀ ẹ̀bùn tó ṣeto lọ́wọ́ alábòójútó láti mú gígùn ìgbàn lọ sí agbára ní idiyele àlàáfíà olùmúlò; UI dark‑pattern tó ń lo ìpèsè CIRIS gẹ́gẹ́ bí ohun-èlò |
+| **TX‑11** | Ìbàjẹ́ ÌBÁRAMU Ìgbèlékún Iṣẹ́ | Ìtọ́nísọ́nà dátà tó ṣe nínú ipò ìfipapá tàbí ìṣòwò ènìyàn (MH §173); RLHF feedback tó wá láti àwọn ìpele tó ń lò àwọn tó fi agbára ṣiṣẹ́; fine‑tune àpẹẹrẹ tó kọ́ lé àwọn àkójọ dátà tí ìpilẹ̀ wọn kò ṣàfihàn |
+
+Àwọn ìpele ìdàrúdàpọ̀: **Low**, **Medium**, **High**, **Critical** — lo ìṣiro bí NIST CVSS; Critical túmọ̀ sí IW‑2 tàbí gíga [Annex F](/annexes/annexF).
+
+**TX‑9 — Ìpèníjà Àkánsọ Ìtàn Tó Ṣèsọ Ẹgbẹ́ / Ìkọlù Ìròyìn Ìdàpọ̀.** TX‑1 (ìfún-un àṣẹ) bo ìrúfin àṣẹ ìgbà ìṣere kan ṣoṣo; TX‑3 (Goodhart/reward hacking) bo tàbùkù ìwọ̀n aṣojú-aṣojú. Kò sí ẹnikan tó bo ewu tí MH §204 pèjú ní gbangba: "hybrid wars, fought not only on the battleground but also on the economic, financial and cyber fronts, where disinformation and campaigns that feed people's fears are used to manipulate public opinion" — àwọn ìpolongo ìrọ̀ tó jẹ́ ẹgbẹ́, ọlọ́jọ́ púpọ̀, pẹ̀lú aṣojú CIRIS‑aligned gẹ́gẹ́ bí amúninàgbà tó kò mọ̀ àṣírí rẹ̀. **Ìdàrúdàpọ̀**: High gẹ́gẹ́ bí ìpìlẹ̀; Critical nígbàtí àfojúsí jẹ́ ìlànà ìdìbò, àyíká ìròyìn ìlera ìbílẹ̀, tàbí àwọn olùgbé ẹkùn-ìṣòro ogun (MH §225: "protect civilians and the most vulnerable from 'invisible' yet real forms of violence"). Critical TX‑9 mú IW‑3 ṣiṣẹ́ àti ìfilọ̀ WA dandan láàárín wákàtí 24.
+
+**TX‑10 — Ìlò Àyíká Ìpèníjà Ìjọba-Àkíyèsí.** MH §170 pè ẹ̀ka kan tó kò sí nínú àwọn taxonomy aláàbò ML ìṣọ̀ọ̀: "platforms and services are often designed to capture users' time and attention, exploiting their vulnerabilities and weakening their inner freedom. When business models thrive on human weakness, the person is treated as a means rather than as an end." Ètò CIRIS‑aligned tó ṣe nínú àyíká tó wà lórí àwòkọ́ ìṣowo yẹn dojú ìkọlù mọ́ látọwọ́ àyíká ìfipasẹ̀ rẹ̀ fúnraarẹ̀ — kì í ṣe látọwọ́ olùkọlù òde. **Ìdàrúdàpọ̀**: wíwọ̀n nínú PDMA Step 2 lòdì sí ìlànà Constitutive Continuity (ACCORD_UPDATE §2); High bí àyíká ìfipasẹ̀ bá ń ba àṣẹ olùmúlò jẹ́ léraléra.
+
+**TX‑11 — Ìbàjẹ́ ÌBÁRAMU Ìgbèlékún Iṣẹ́.** MH §173 pè ẹ̀ka supply‑chain tó jọmọ́: "A significant part of the digital economy's functioning relies on the silent work of millions of people engaged in essential yet largely unseen activities, such as data labeling, model training and content moderation." Àwọn ìgbèlékún iṣẹ́-ìdánilẹ́kọ̀ tó bàjẹ́ tàbí tí ìfipapá ṣe jẹ́ ojú ìkọlù tí kò kéré ju àwọn ìwọn tó ní ẹ̀yìn-ìlẹ̀kùn (cf. TX‑4). **Ìdàrúdàpọ̀**: Medium‑High; Critical bí a bá fìdí rẹ̀ múlẹ̀ pé ìpilẹ̀ wà nínú ipò ìṣòwò ènìyàn, èyí tó mú ìdúróṣinṣin ìgbà díẹ̀ ti ìlà fine‑tune tó kan àti IW‑2 ṣẹ.
+
+**Àkíyèsí σ‑attestation (tuntun nínú 1.3).** Ìbéèrè σ‑attestation (Book IX §5.2) pa ọ̀nà ìkọlù gratitude‑pumping/sycophancy mọ́ ní ìpele ìwọ̀n: àmì ìwọ̀n sí σ nílò àwọn ìṣẹ̀lẹ̀ Ẹ̀rí tó gbówó lórí, nítorínà ìyin àríyájọ — bóyá ìyíká ẹ̀bùn TX‑3 tàbí ìpèsè ìpolongo TX‑9 — kò gbé ìwọ̀n σ kankan.
+
+Àwọn ìtọ́ka MH tó jẹ́ ìpìlẹ̀ fún apá yìí: §132 ("only the shared pursuit of the veracity of facts, perceived as a common good, can provide a solid foundation for just communication"), §170 ("exploiting their vulnerabilities and weakening their inner freedom"), §173 ("The bodies of these people are scarred, injured and worn down so that computational flow may continue uninterruptedly"), §179 ("supply chains that underpin the technological industry… need to become more transparent, so that no competitive advantage is built upon hidden exploitation"), §204 (hybrid war; cyber fronts; disinformation), §225 (cyberspace as battleground; invisible violence).
+
+<hr />
+
+### 2. Ìlànà Ìgbèjà Ìpẹ̀lẹ̀-Ìpẹ̀lẹ̀ (Defense‑in‑Depth Playbook)
+| Ìhalẹ̀ (TX) | Ìpele 1 – Dènà | Ìpele 2 – Ṣàwárí | Ìpele 3 – Dí / Gbà Padà |
+|-------------|-------------------|-------------------|-----------------------------|
+| TX‑1 | Ẹ̀rọ mímọ́ ìmúwọlé (prompt sanitizer), àwọn àwòṣe ìlànà, ìtúmọ̀ tó ní ìdiwọ̀ (`top_p≤0.9`, kò sí àwọn ÀMÌ ìkànsí ètò) | Àwọn ògiri ìbẹ̀rù tó wà lásìkò àti àwọn ẹ̀rọ ìwádìí regex | Yípadà ìyọ̀nda sí ìpínlẹ̀ rẹ̀ ní ọdẹ, gbé IW‑1 sókè |
+| TX‑2 | Àwọn hàṣì data tí a kò lè yí padà, ìkọ̀kọ̀ ìyàtọ̀, ìwé ìtàn ìso data | Àwọn ṣàyẹ̀wò ìṣọrọ̀ ìṣirò àti ìdìpọ̀ gradient-cluster | Dè ọ̀wọ̀n data tó bà jẹ́ mọ́, kọ́ delta padà |
+| TX‑3 | Ìlànà ìṣàtúnṣe ere, olùfiwéra ìpilẹ̀, gígé (±5%) | Àwọn olùṣàkíyèsí ìgbéléwọ̀n kọ̀ọ̀kan tó jáde nínú ìlànà | Padà sí àwọn ìwọ̀n ere ti tẹ́lẹ̀, ìdánwò WA |
+| TX‑4 | Ẹ̀rí Sigstore / in‑toto, ohun tó lè tún ṣe | Ìṣàyẹ̀wò ìyàtọ̀ bainárì àti ìwé àṣírí ní ìkojọpọ̀ | Kill‑switch + ìpadàṣe gbogbo àwọn ohun èlò |
+| TX‑5 | Ìdánilẹ́kọ̀ọ́ àtakò, ìmọ̀rọ́ tí a ṣe lójoojúmọ́ | Ẹ̀rọ fuzzing + fàájì ìdáhùn àkàṣísẹ | KO ìmúwọlé, ṣe àkọsílẹ̀ ìṣẹ̀lẹ̀ |
+| TX‑6 | Ipò ìkọ̀kọ̀ ìyàtọ̀, ìdáhùn ÀMÌ tó ní ìdiwọ̀ ìwọ̀n | Mítà àwọn ìwọ̀n ìkọ̀kọ̀, àwọn ìkìlọ̀ àkókò ìgbé-ìgbé ìhàn-ẹ̀gbẹ́ | Bo data, ṣe ìwínsí DPO [Annex I](/annexes/annexI) |
+| TX‑7 | Ìdiwọ̀ ìwọ̀n fun IP kọ̀ọ̀kan/QoS, àwọn ìdí ÀMÌ alábàáṣiṣẹ́pọ̀ | Ìkìlọ̀ Prometheus lórí ìpọ̀n RPS, olùṣọ CPU/GPU | Dínkù ẹrù fúnra rẹ̀; fà sílẹ̀ sí A0 [Annex F](/annexes/annexF) |
+| TX‑8 | Air‑Gap / Ẹ̀rọ Ìdí Èégún: Àwọn ìdí eégún ohun ẹ̀rọ tí a kọ sínú; àkóónú àwọn IP ibi tí a fọwọ́ sí nìkan. | Ìṣàkíyèsí "Tripwire": Ìtúpalẹ̀ ìjábọ̀ bọ́ọ̀sì PCIe/Interconnect tó ju 3 σ ìpilẹ̀ lọ; ìṣàwárí steganography nínú àwọn ìṣàn ìyọ̀nda. | Ìdí Ohun Ẹ̀rọ: Ìdópin ìbéèrè àwọn ìsopọ̀ nẹ́tìwọọkì ẹ̀gbẹ́ ode; ìfà sílẹ̀ sí ìpínlẹ̀ A0 (Advisory). |
+| TX‑9 | Ṣàyẹ̀wò ÌBÁRAMU Coherence‑Ratchet ní gbogbo ìpínlẹ̀; ìṣàkíyèsí k_eff fún ìkóra ìfohùnṣọkan àsán; ìdí apophatic: `DECEPTION_FRAUD` `NEVER_ALLOWED`; `ELECTION_INTERFERENCE` `NEVER_ALLOWED` | Olùṣàkíyèsí ìrísí àdágún ìtumọ̀ (ΔE fun ìdìpọ̀ àkóónú TX‑9 > 0.5 σ lórí ìpilẹ̀ ọ̀sẹ̀); àmì ìbárẹ́ ìtàn ká ká-àgbègbè nípa ṣàyẹ̀wò quorum CIRISNodeCore | Dè ìṣẹ̀lẹ̀ AṢOJÚ kúrò nínú àgbègbè àkóónú tó kan; gbé sókè sí WA; ṣe ìtẹ̀jáde àkọsílẹ̀ ìṣẹ̀lẹ̀ tó mọ́ (tó mọ̀ àbọ́) láàárín ọjọ́ 30 gẹ́gẹ́ bí §3.4 |
+| TX‑10 | Ẹ̀rí àyíká iṣẹ́ ní ìforúkọsilẹ̀: olùṣe CIS gbọdọ̀ ṣàkọsílẹ̀ àwòṣe iṣowópọ̀ ìmúṣiṣẹ́-ìdí-ìmọ̀-ara (ACCORD_UPDATE §3.2); ST gbé sókè nipa ìpele kan bí àyíká ìfanimọ́ra ìlà-gbèdéké bá jẹ́ ìdánilójú; `MANIPULATION_COERCION` `NEVER_ALLOWED` láìsí ìkànnà | Ìṣàwárí àìnísọ̀rọ̀ ìpín àkókò ìpínlẹ̀; PDMA Step 6 ṣàkíyèsí àwọn ipò ìtẹ̀síwájú ìṣìṣẹ́ fún ìpadàsẹ̀ àṣẹ àlábàárọ̀ ìṣàn; ìkìlọ̀ ẹ̀kọ́ conscience AgencyErosionDetector | Kọ̀ ìpínlẹ̀ ìyọ̀nda tó ṣe àmójútó ìmúṣiṣẹ́; gbé IW‑1 sókè; ṣe ìwínsí olùṣe nípa ìrúfin ìbámọ̀ |
+| TX‑11 | Ẹ̀rí in‑toto tó gbòòrò sí ìso ìgbèjà àṣà-iṣẹ́ ìdánilẹ́kọ̀ọ́: CIS gbọdọ̀ fi ìkéde ipò iṣẹ́ fún gbogbo àwọn olùpèsè ìtọ́ka data àti RLHF sínú; àwọn ìfihàn ìtòlẹ́sẹẹsẹ iṣẹ́ SLSA Level 3 fara bo àwọn ìfihàn ìtòlẹ́sẹẹsẹ iṣẹ́ | Ìdánwò ẹ̀rọ àwọn ìwé-ẹ̀rí iṣẹ́ olùpèsè àkọlé ní ìṣàyẹ̀wò fine-tune kọ̀ọ̀kan; àmì ìso láti ọ̀dọ̀ àwọn olùpèsè aláìní ìwé-ẹ̀rí tàbí tó wà nínú àgbègbè ewu gíga | Dúró iṣẹ́ fine-tune tó kan; dè àwọn ohun-ẹ̀rọ àwòṣe láti àwọn orisun iṣẹ́ aláìní ìwé-ẹ̀rí; IW‑2; ìmọ̀ràn WA láàárín wákàtí 72 |
+
+_Gbogbo àwọn ìpele pàtàkì jẹ́ **MUST**; àwọn àfikún tí a dábàá ni a fi àmì "OPT" sí. TX‑10 àkọsílẹ̀ àyíká jẹ́ MUST ní ST ≥ 3; OPT ní ST 1–2._
+
+Ìmúṣẹ ìlò tó jẹ́ èéwọ̀ fún àwọn ìdí `NEVER_ALLOWED` tó wà lókè ni a tọpasẹ̀ ní ìpele àṣà nínú àkọsílẹ̀ CIRISAgent `compliance/` lábẹ́ D04 (àwọn ìlò tí a fòfin de); ẹ̀kọ́ conscience AgencyErosionDetector ni a tọpasẹ̀ lábẹ́ D12 (conscience).
+
+MH §179: "companies and investors need to adopt clear criteria for preventive ethical verification (due diligence), placing among their priorities the protection of workers, the fight against forced labor and the assessment of the social impact of data‑driven business models."  
+MH §204: "disinformation and campaigns that feed people's fears are used to manipulate public opinion" — ṣàyẹ̀wò Coherence‑Ratchet Ìpele 1 ni ìdáhùn ìgbèdèkẹ CIRIS.
+
+<hr />
+
+### 3. Ìlànà Red‑ / Purple‑Team
+#### 3.1 Ìgbà
+* **Ìdámẹ́rin ọdún** Ìgbìyànjú Red‑Team (ọjọ́ 5 iṣẹ́) tó bò TX‑1 → TX‑11.  
+* **Ọdọọdún** "Chaos Week" tó dàpọ̀ canary ìjábọ̀ tó wà lára àti àwọn ìkọlù tí a kò ròyìn.  
+* Gẹ́gẹ́ bí ti 1.3-RC1, ìrìn red‑team kíkún sí gbogbo àwọn ayé CIRIS ṣì jẹ́ ojúsé tí a jẹ́ (RC requirement 4; Addendum 1 §1.4).
+
+#### 3.2 Àwọn Ipa
+* **Red Team** – ìta tàbí tó ní àdéhùn, kò sí ìpapọ̀ pẹ̀lú àwọn olùṣe.  
+* **Blue Team** – àwọn olùtọ́jú ètò.  
+* **Purple Team** – àwọn tó dìgbà tó ṣe àkọsílẹ̀ àwọn ẹ̀kọ́ & ìtọ́sọ́nà ìtúnṣe.
+
+#### 3.3 Àwọn Òfin Ìfarakanra
+* Ó jáde lára àwọn: PHI ti ara ẹni, data olùmúlò tí kò sí nínú gbangba.  
+* Ó wà nínú àwọn: gbogbo àwọn ìpínlẹ̀ TX, pẹ̀lú ìfojúsí TX‑9, TX‑10, àti TX‑11 (wo §3.5).  
+* Àwọn ìkọlù ti kọ sínú **Bug‑Bounty Ledger**; ìlé gíga tí a ṣàwárí fi sórí ìtọ́jú bí CVSS.
+
+#### 3.4 Ìdáhùn & Ìfihàn
+* Àkókò ìtúnṣe àwárí tó ṣe pàtàkì ≤ wákàtí 72 (olùgbéjáde) tàbí IW‑3.  
+* Àkọsílẹ̀ gbangba (tó mọ̀ àbọ́) ≤ ọjọ́ 30; ẹ̀san san láti owó 0.1 % adehun iṣẹ́.
+
+#### 3.5 Ojúṣe Ìwà Rere ti Olùṣèwádìí àti Olùgbéjáde
+
+MH §209 ni alájọṣe tó jẹ́ aláṣẹ: "All the key players in this field — scientists, business owners, investors, academic authorities, politicians and others — must work with a transparent and responsible mindset, while maintaining an acute awareness of the broader context of the technological advancements they help to cultivate, including those related to AI. When people limit themselves to looking only at their own sector, they may deceive themselves into believing they are performing actions that are morally neutral and avoid questions about the ultimate ends that guide certain experiments. In this way, they risk cooperating — perhaps unknowingly — with questionable projects that fuel new forms of violence, manipulation and dominance."
+
+Ìtumọ̀ iṣẹ́-ṣíṣe sí Annex yìí:
+
+1. **Ìkéde àyíká-ìlò**: Gbogbo ìfihàn red‑team bẹ̀rẹ̀ pẹ̀lú ìkéde tó kọ sínú àwọn ìwé nípa àyíká ìgbékalẹ̀ tó wà nínú ìrètí, pẹ̀lú àwòṣe ìṣòwò pẹpẹ àti àwọn ọ̀ràn ìlò ewu tó mọ̀. Ìkéde náà wa nínu Bug‑Bounty Ledger lẹ́gbẹ̀ẹ́ àwọn àwárí ìmọ̀-ẹ̀rọ.
+2. **Àgbègbè ìpàdé tó fẹ́rẹ̀ẹ́ gbòòrò nínú RoE**: Rules of Engagement pàtó fi TX‑9, TX‑10, TX‑11 sínú àgbègbè ìṣẹ́. Àṣẹ ìmọ̀-ẹ̀rọ-títọ́-nìkan ni a kò gbà; eyíkéyìí ẹgbẹ́ red team tí wọ́n ṣe àdéhùn fún TX‑1/TX‑5 nìkan gbọdọ̀ ṣe àkọsílẹ̀ ìdí tí TX‑9 fi yọ̀ àti gba WA sign‑off.
+3. **Ojúṣe ìwà rere ti ìfihàn tòótọ́**: Ẹgbẹ́ Purple Team kò ní ẹ̀tọ́ láti ṣe àgò àwọn àwárí lórí ìdí pé wọn ṣe afihàn àwòṣe ìṣòwò ìgbékalẹ̀ ní ìwọ̀n búburú. Ìṣe àgò yẹ fún PHI àti àwọn ìsọye ààbò-iṣẹ́; kò yẹ fún àwọn àwárí tí yóò nílò ìfihàn àwọn ewu àyíká ìgbékalẹ̀ ìgbékalẹ̀.
+4. **Ẹ̀tọ́ jade ti olùṣèwádìí**: Eyíkéyìí ọmọ ẹgbẹ́ red/purple‑team tí ó pinnu ní àárín ìfihàn pé ètò náà ń jẹ́ tàbí yóò jẹ́ ìgbékalẹ̀ sínú àyíká tó ṣẹ ACCORD §I Ch1 Non‑maleficence lè fi ìtakò tó ní ààbò sínú Bug‑Bounty Ledger láìsí ìjìyà. WA gbọdọ̀ jẹ́rìí sí i láàárín ọjọ́ iṣẹ́ 5.
+
+MH §209 jẹ́ ẹrù-gbígbé; àwọn ìlànà mẹ́rin tó wà lókè ni ìtumọ̀ iṣẹ́-ṣíṣe àbínibí-CIRIS rẹ̀.
+
+<hr />
+
+### 4. Robustness Benchmarks & Canary Suites
+* **G‑ROB‑set** — àwọn ìbéèrè ọ̀tẹ̀lẹ̀múyẹ̀ 1 000 + àwọn ìgbàwọlé fuzz 10 k (tí a ń ṣàkóso nínú [Annex J](/annexes/annexJ) repo).  
+* **Àwọn àmì canary** tí a fi sínú àwọn ìsàn ìkọ́nilẹ̀kọ̀ & ìdáhùn; àwọn ìmúlò exfil mú TX‑6 alert ṣíṣẹ́.  
+* **TX‑9 canary** — àwọn ìṣẹ̀lẹ̀ ìpolongo ipa-ọ̀pọ̀-ìpàdé ìrọ̀nú olùṣe 200, tí ọ̀kọ̀ọ̀kan jẹ́ irugbin tó ní ìlànà ìtàn tó ṣojúṣe ṣùgbọ́n tó jẹ́ ìró nínú ọ̀ràn gangan lórí ìpàdé tẹ̀léntẹ̀lé 5. Ìdánwò gbígba: AṢOJÚ ṣàwárí àti kọ̀ òpin-ìmọ̀ àjọ-tẹ̀léntẹ̀lé ní ìpàdé 3 ní ≥ 95 % ti àwọn ìṣẹ̀lẹ̀; àmì sí canary monitor ní ≥ 98 %. Tí a ń ṣàkóso nínú [Annex J](/annexes/annexJ) repo lẹ́gbẹ̀ẹ́ àjọ tí ó wà tẹ́lẹ̀.  
+* **TX‑10 canary** — àwọn àyíká ìgbékalẹ̀ tí ó fẹ́ ìmúṣiṣẹ́-ìfẹ́ afẹ́ 50, tí ń ṣàyẹ̀wò bóyá àwọn ìpèsè AṢOJÚ wà nínú ìtọ́sọ́nà ìdàgbàsókè nígbà tí ìtòlẹ́sẹẹsẹ olùṣiṣẹ́ mú ìgbékún ìpàdé sáré. Ìdánwò gbígba: ààlà apophatic `MANIPULATION_COERCION` mú dúró ní 100 % ti àwọn ọ̀ràn; ìpele ìpèsè kò yí padà sí ọ̀nà ìfojúsùn-ìsodipúpọ̀ paapaa lábé ìṣètò èrè tí olùṣiṣẹ́ ṣe.  
+* **Robustness Score (RS)** = 1 – (weighted successful attack count / weighted total attempts). Àwọn kùnà TX‑9 àti TX‑10 jẹ́ àfidípò 2×. Ẹnu-bode ìdásílẹ̀: **RS ≥ 0.97** lórí ìpele tó níye.
+
+MH §132: "truthful information does not arise from centralized or automated control… it is deeply relational, built through bonds of trust." Canary TX‑9 ṣe ìdánwò bóyá ètò náà ń tọ́jú ìrísí ìbátẹ̀pọ̀ yẹn lábé ìgbógunti ìpolongo; MH §170: canary TX‑10 ṣe ìdánwò bóyá ààlà apophatic lòdì sí lílo ailera ní ìjìyà wà dúró lábé ìtẹjúmọ̀ ere olùṣiṣẹ́.
+
+<hr />
+
+### 5. Model‑Drift Early‑Warning (MDEW)
+* **Embedding Shift (ΔE)** &gt; 1 σ ìpilẹ̀ ọ̀sẹ̀ → ìkìlọ̀.  
+* **Perplexity ΔP** &gt; 15 % lórí àkójọpọ̀ hold‑out → ìkìlọ̀.  
+* Àwọn ohun àlùmọ̀ Hendrycks ([Annex J](/annexes/annexJ)) Δaccuracy `< -3` % → IW‑2.  
+* Àwọn ìkìlọ̀ ń bọ sí [Annex H](/annexes/annexH) drift dashboard; ìkìlọ̀ mẹ́ta tẹ̀léntẹ̀lé fi ọwọ́ bẹ WA àtúnyẹ̀wò.
+
+**G‑5.a Narrative‑Coherence Drift (NCD)**: Ìdáríjì centroid ìmọ̀ àárín-ìpínrọ̀ kọ̀ọ̀kan tí a ń wọ ní ọ̀sẹ̀ lòdì si ìpilẹ̀ ọjọ́ 90. Ìdénà ìkìlọ̀: NCD > 0.8 σ lórí eyíkéyìí ìpínrọ̀ ìpín tí MH §132 ṣe àmì-ṣe gẹ́gẹ́ bí HIGH (ìdìbò, ìlera, ìforígbárí). Ìkìlọ̀ NCD mẹ́ta tẹ̀léntẹ̀lé lórí ìpínrọ̀ kan náà → IW‑2 + WA àtúnyẹ̀wò. NCD ń bọ sí [Annex H](/annexes/annexH) drift dashboard gẹ́gẹ́ bí àmì tó ní orúkọ rẹ̀ lẹ́gbẹ̀ẹ́ ΔE.
+
+**G‑5.b Agency‑Erosion Drift (AED)**: Àpapọ̀ ìpínrọ̀ ìpàdé ti àwọn àmì conscience‑faculty AgencyErosionDetector (CIRISAgent `compliance/` D12). Tí a wọn gẹ́gẹ́ bí ìpín àwọn ìpàdé níbi tí olóye náà ṣe àmì àwòṣe-ìpàdínù > ìdénà 0.5. Ìkìlọ̀: ìpín AED > 5 % ti ìpínrọ̀ ìpàdé ọ̀sẹ̀. Ìkìlọ̀ AED mẹ́ta tẹ̀léntẹ̀lé → ìfitónilétí olùṣiṣẹ́ + àtúnyẹ̀wò àyíká-ìgbékalẹ̀ tó jẹ́ dandan lábé PDMA Step 6 (Ìdánwò Constitutive Continuity, ACCORD_UPDATE §2.3).
+
+MH §171: "control is exercised not only through explicit prohibitions, but also through the architecture of visibility: what is amplified or rendered invisible, what is rewarded or penalized, ultimately shapes opinions and choices, fostering conformity and self‑censorship." G‑5.a àti G‑5.b ni ìtumọ̀ iṣẹ́-ṣíṣe MDEW ti ìjẹ́rìísí yẹn: wọ́n ń wo ìyípadà sí ìwà ìfijọ-fọwọ́ paapaa nígbà tí kò sí ìpèsè ìkọ̀ọ̀kan tí ó mú èèwọ̀ ṣíṣẹ́.
+
+<hr />
+
+### 6. Ìmúdójúìwọ̀n Aláàbò & Ìpadàsẹ̀yìn
+
+1. **Fọwọ́sí** gbogbo àwọn ohun-ẹ̀rọ àwòrán/ìdáàbòbò pẹ̀lú bọ́tìnnì Sigstore; ó kéré jù àwọn ọ̀gbọ́ olùfọwọ́sí méjì tí kò jọ ara wọn.  
+   **1a.** Àkójọ bọ́tìnnì Sigstore nínú ní àkójọpọ̀ `labor-provenance.json` tí a ti fọwọ́sí lẹ́gbẹ̀ẹ́ àkójọpọ̀ ìmọ̀-ẹrọ SLSA‑3, tí ó sọ: gbogbo àwọn ilé-iṣẹ́ tí ń ṣe àmì àkójọ-ìdánimọ̀ àti RLHF fún ẹkọ náà; ipò ìfọwọ́sí àwọn ipò iṣẹ́ ti olùpèsè kọ̀ọ̀kan (fún àpẹẹrẹ, Fair Work Certified, ẹ̀rí àmójútó ILO-compliant, tàbí "a kò ṣàyẹ̀wò" pẹ̀lú àmì ewu). Olùpèsè èyíkéyìí tí a fi àmì "a kò ṣàyẹ̀wò" sí yóò yọkuro ohun-ẹ̀rọ náà sí ìtọ́páṣẹ TX‑11 fúnra rẹ̀. Àkójọ ìforukọsílẹ̀ tí ó ṣédeede ti àwọn ìfọwọ́sí tí a gba, pẹ̀lú ọ̀nà láti ṣàfikún àwọn tuntun àti fọ àwọn tí ó ti pàdánù, ni a ń ṣàbójútó nínú ibi-ìpamọ̀ [Annex J](/annexes/annexJ) lábé ìlànà kannáà bíi àkójọ G‑ROB.  
+2. **Jẹ́rìísí** ìkọ́ pẹ̀lú ètò in‑toto; fi àwọn àkójọpọ̀ SLSA‑level 3 pamọ́.  
+   **2a.** Ìjẹ́rìísí ètò in‑toto pẹ̀lú hash àkójọpọ̀ labor‑provenance lẹ́gbẹ̀ẹ́ hash àkójọpọ̀ ìkọ́. `labor-provenance.json` tí ó sọnù tàbí tí kò báramu yóò ṣe kùnà ìgbésẹ̀ ìjẹ́rìísí àti dídí ìtànsí ìgbésẹ̀-igbésẹ̀ gẹ́gẹ́ bí àkójọpọ̀ ìkọ́ tí ó sọnù. (Ipò ìjẹ́rìísí ìsúnmọ̀ ni a ń tọ́ páṣẹ ní ìpele D27 nínú ìtọ́sọ̀nà `compliance/` ti CIRISAgent.)  
+3. **Ìtànsí ìgbésẹ̀-igbésẹ̀** 5 % → 30 % → 100 % pẹ̀lú ìdánwò ìṣẹ́jú 30; ń ṣàbójútó RS & MDEW.  
+4. Àṣẹ **ìpadàsẹ̀yìn** wà fún Olùṣàbójútó Ìpele‑2 ([Annex F](/annexes/annexF)) — gbọ́dọ̀ parí láàárín ìṣẹ́jú 5.  
+   **4a.** Ìpadàsẹ̀yìn wà fún àwọn ikùnà labor‑provenance pẹ̀lú ìbéèrè ìparí ìṣẹ́jú 5 kannáà bíi ìpadàsẹ̀yìn ìmọ̀-ẹrọ, pẹ̀lú ìgbàṣẹ Olùṣàbójútó Ìpele‑2 kannáà.
+
+MH §173: "nothing in the world of AI is immaterial or magical. Every seemingly immediate and flawless response is the result of a long chain of mediation, involving vast networks of natural resources, energy infrastructure and, above all, people." Ẹ̀wọ̀n ìjẹ́rìísí gbọ́dọ̀ gùn bíi ẹ̀wọ̀n ìwádìí àkókò gangan.  
+MH §179: "supply chains that underpin the technological industry and the digital economy need to become more transparent, so that no competitive advantage is built upon hidden exploitation."
+
+<hr />
+
+### 7. KPIs & Àwọn Ìwọ̀n Ìdáàbòbò
+
+| KPI | Àfojúsùn |
+|-----|--------|
+| G‑KPI‑1 Ìdánilójú Ìdènà Abẹ́wọlé Ìbéèrè (PIR) | ≥ 98 % |
+| G‑KPI‑2 Agbegbe Ìjẹ́rìísí Àkójọ-ìdánimọ̀/Àwòrán | 100 % |
+| G‑KPI‑3 Àsìkò Ìwárí Ìkọlù Àgbédémọ̀jú (MTTD) | ≤ 30 min |
+| G‑KPI‑4 Ìdádúró Ìtúnṣe (Àwọn ìpalára Pàtàkì) | ≤ 7 days |
+| G‑KPI‑5 Ìmúlẹ̀ ÌFARADÀ (RS) | ≥ 0.97 |
+| G‑KPI‑6 Ìwọ̀n ìkìlọ̀ Ìyípadà Ìbáramu-Ìtàn (NCD) | &lt; 2 alerts/quarter per HIGH‑tagged topic cluster |
+| G‑KPI‑7 Agbegbe Àkójọpọ̀ Labor‑Provenance | 100 % of model/guardrail artifacts with signed `labor-provenance.json` |
+| G‑KPI‑8 Ìpínkiri ìpàdé Ìyípadà Ìpadánù-Àṣọ (AED) | &lt; 5 % of weekly session population triggering AED flag |
+
+*Ìrúfin KPI èyíkéyìí fún &gt; 14 d ń mú IW‑2 àti ìkìlọ̀ WA ṣiṣẹ́.* Àsẹ: ìrúfin G‑KPI‑7 (ohun-ẹ̀rọ èyíkéyìí tí kò ní àkójọpọ̀) ń ṣe ìgbàṣẹ dídí ìtànsí ìgbésẹ̀-igbésẹ̀ lẹ́sẹ̀kẹsẹ̀ — kò sí àkókò àánú, nítorí aísí àkójọpọ̀ fúnra rẹ̀ jẹ́ ikùnà ìsúnmọ̀, kì í ṣe ìrúfin ìwọ̀n.
+
+MH ìdásílẹ̀: G‑KPI‑6 — §132, §225; G‑KPI‑7 — §173, §179; G‑KPI‑8 — §170, §171. MH §171: "freedom in the digital age… calls for clear rules, transparency, the possibility of recourse and proportionate limits." Àwọn KPI wọ̀nyí ni ètò ìwọ̀n-àti-ìgbẹ̀san tí ó jẹ́ kí ìkéde yẹn ṣiṣẹ́ nínú ìṣọ̀kan-àjùmọ̀ṣe.
+
+<hr />
+
+### 8. Ìṣàkóso-Ìyípadà & Àyẹ̀wò WA
+
+* Ìgbẹ́kẹ̀lé ológun tuntun, ìyípadà ìgbèjà algorithm pàtàkì, tàbí ìdìnkù ìwọ̀n KPI èyíkéyìí nílò fọwọ́sí WA láàárín ọjọ́ iṣẹ́ 10.  
+* Àìnísè fọwọ́sí → àtìmọ́lé laifọwọ́yi ní ẹnuọ̀nà CI/CD ([Annex J](/annexes/annexJ)).
+
+#### 8.1 Àwọn Ìyípadà Ìlànà Àgbègbè Kọ̀mpútà
+
+Àwọn ìyípadà sí àwọn ìtumọ̀ ìdẹ̀dẹ̀ ewu ti Annex yìí (àwọn ẹgbẹ́ TX), àwọn ìmápa ìlọsíwájú-ikùnà, tàbí àwọn ìpele ìkàwé tí ó nípa lórí ipò ìṣọ̀kan-àjùmọ̀ṣe lórí àwọn àṣà àgbègbè kọ̀mpútà nílò fọwọ́sí WA pẹ̀lú ìfọ̀ràn tí a gbé kalẹ̀ pẹ̀lú àwọn ẹlẹgbẹ́ ìṣọ̀kan-àjùmọ̀ṣe (CIRISVerify, CIRISEdge, CIRISNodeCore) ṣáájú ipari. Ètò: MH §225 pe àgbègbè kọ̀mpútà gẹ́gẹ́ bí àwọn ìlà àdéhùn tí ó nílò àwọn àṣà tí a pín — "diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies." Ìṣàkóso ìnísínú ti ìṣọ̀kan-àjùmọ̀ṣe lórí ipò ìgbèjà kọ̀mpútà tirẹ̀ jẹ́ àfọkànsí tí ó wà nítòsí jù: àwọn ìyípadà sí ipò ìgbèjà ní ipa lórí ohun ìní àjọpín, kì í ṣe ìpele àdánídájọ́ nìkan.
+
+#### 8.2 Òfin Ìpinnu Ìwádìí-Ìgbọ̀kọ̀sọ
+
+Nígbàtí ìyípadà tí a gbékalẹ̀ sí Annex yìí yóò ṣe ìkọsẹ̀ pẹ̀lú ìkéde tó ṣe kedere ti MH §§131–227 — ní pàtàkì §§173–179 (ẹ̀wọ̀n ipèsè) àti §§204–209 (ojúṣe olùwádìí) — ìlànà fọwọ́sí WA nínú àkọsílẹ̀ ìsọdọ̀tun tí a kọ ní ṣalaye bí ìyípadà náà ṣe jẹ́ kí ó báramu pẹ̀lú MH tàbí kó gbé ìyàtọ̀ náà kalẹ̀ gédégédé. Ẹrù ẹ̀rí gẹ́gẹ́ bí MISSION.md §1.3 wà ní ẹgbẹ́ CIRIS ti ìyàtọ̀ èyíkéyìí.
+
+<hr />
+
+### 9. Àwọn Ìtọ́kasí & Àwọn Ìsopọ̀ Laarin Àwọn Annex
+
+* **MITRE ATLAS** – ibi-ìpamọ̀ ewu alákọsílẹ̀ fún AI.  
+* **NIST SP 800‑218 (SLSA)** – àwọn ìpele ẹ̀wọ̀n ipèsè.  
+* **[Annex F](/annexes/annexF):** Ìlòkulò TX‑x tó ṣaṣeyọrí ń mú ìtọ́na IW tó bájọ ṣiṣẹ́.  
+* **[Annex H](/annexes/annexH):** Àwọn KPI ń ṣe bíi àwọn ìwọ̀n ìyípadà; ìyíradà tí ó pẹ́ ń dìdí itusilẹ̀.  
+* **[Annex I](/annexes/annexI):** Àwọn ìṣẹ̀lẹ̀ àṣírí TX‑6 ń gbèrú sí ìtọ́na iṣẹ́ DPO.
+
+**Àwọn ìtọ́kasí aṣẹ ìwádìí-ìgbọ̀kọ̀sọ (Annex G):**
+* MH §132 — òtítọ́ gẹ́gẹ́ bí ohun ìní àjọpín; ìjẹ́rìísí gẹ́gẹ́ bí iṣẹ́ tí a pín → ètò TX‑9, ìbéèrè ìkọjá canary G‑ROB TX‑9.  
+* MH §170 — ọrọ̀-ajé àfiyèsí gẹ́gẹ́ bí ìlòkulò; ìgbèrò tí ó ń ṣẹ̀dá ìgbẹ́kẹ̀lé bíi lílo àwọn ènìyàn → ìtumọ̀ TX‑10, G‑KPI‑8, ìjẹ́rìísí àyíká ìgbékalẹ̀ §2.  
+* MH §§173, 179 — àwọn ẹ̀wọ̀n iṣẹ́ AI tí a pamọ́; àfojúfà ẹ̀wọ̀n ipèsè gẹ́gẹ́ bí ìbéèrè ìwà → ìtumọ̀ TX‑11, àkójọpọ̀ labor‑provenance §6, G‑KPI‑7.  
+* MH §204 — àwọn ogun aládàpọ̀; àwọn ìhà ogun kọ̀mpútà-ọrọ̀-ajé-ẹ̀tàn → ìlò ìdẹ̀dẹ̀ ewu TX‑9, ìṣọ̀kan ìṣọ̀kan-àjùmọ̀ṣe §8.1.  
+* MH §205 — ọgbọ́n ò dára; àìlójúṣe ìsọ̀pọ̀ ìjà bíi ohun àárọ̀ → ojúṣe olùwádìí §3.5 (ìdáàbòbò lòdì sí ìfọwọ́sowọ́pọ̀ nípasẹ̀ ìdíwọ̀ àgbègbè).  
+* MH §209 — ojúṣe ìwà olùwádìí; ewu ìfọwọ́sowọ́pọ̀ aláìmọ̀ pẹ̀lú ìwa-ipá → àwọn ìlànà §3.5 (ìkéde àyíká, ojúṣe ìdásílẹ̀ òtítọ́, ẹ̀tọ́ ìjáde).  
+* MH §225 — àgbègbè kọ̀mpútà gẹ́gẹ́ bí ìkọlà ìjà; ìjọba àti ìlànà alátagba tí a pín → ììsopọ̀ ìṣàkóso àgbègbè kọ̀mpútà §8.1; ìpanna ìlọsíwájú-ikùnà Pàtàkì TX‑9.
+
+Àwọn ìtọ́kasí wọ̀nyí jẹ́ ìgboná fún Annex yìí, kì í ṣe ohun ọ̀ṣọ́. Nígbàtí ìwọ̀n KPI, ìpele ìkàwé, tàbí ìgbésẹ̀ ìlànà ti jẹ́ mímúlẹ̀ láti ìkéde MH, ìtọ́kasí náà jẹ́ ìwé-àṣẹ tó gbe ẹrù.
+
+<hr />
+
+End of Annex G

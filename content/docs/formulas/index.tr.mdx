@@ -1,0 +1,103 @@
+---
+title: "Formüller"
+description: "CIRIS Anlaşması 1.0-β şartnamesinde tanımlanan tüm açık matematiksel formüller burada yer almaktadır."
+---
+
+## 1. Yaratıcı Etki Puanı (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+burada ⌈ ⌉ tavan fonksiyonunu ifade eder.
+(Book VI §3 STEP C)
+
+---
+
+## 3. Yapısal Etki (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Tutarlılık Payı (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Oy Ağırlığı
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Savunma Fonksiyonu (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — CCA tarafından doğrulanmış biçim; çeşitlilik yalnızca k_eff üzerinden girer. Önceki taslaklar ek bir (1 − ρ̄) çarpanı içeriyordu; bu çarpan korelasyonu çift saydığından kaldırıldı; bkz. Book IX Ch 4 sapma notu.)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — J terimiyle terim terim özdeştir; savunmacı değil, üretici olarak yorumlanır. Önceden C olarak yazılıyordu; 1.3-RC2'de CIRIS Kapasite Puanı 𝒞_CIRIS'in çekirdek kimlik çarpanı C ile çakışmayı önlemek amacıyla yeniden adlandırıldı — aralarındaki ilişkinin yetkili ifadesi olan Book IX Ch 6 adlandırma notuna bakınız.)
+
+---
+
+## 8. Sürdürülebilirlik İntegrali (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+burada d günlük bozunma oranıdır (önerilen değer 0.05) ve w, onaylanmış, taklit edilmesi maliyetli olaylardan türetilmek ZORUNDADIR; onaylanmamış sinyaller w = 0 alır.
+(Book IX §5.2)
+
+---
+
+## 9. Topolojik Çöküş (hacim azalması)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+Grassmannian-tekdüze kısıtlar altında r &lt; 0.5 yarıçaplı dışbükey aldatıcı bir bölge için, λ ≈ 2r.
+(Book IX Ch 3 — belirtilen ön koşullara bakınız.)
+
+---
+
+## Order‑Maximisation Veto (yan kısıt, formül değil)
+
+1.3 itibarıyla OMV (Book II §II Step 2), deontolojik bir yan kısıttır; orantı eşitsizliği değildir: ne kadar büyük olursa olsun, optimizasyon faydaları özerklik, adalet, biyoçeşitlilik veya tercih çeşitliliğindeki öngörülür önemsiz olmayan kayıplar pahasına satın alınamaz. Önceki sürümler bunu "fayda ≥ 10 × kayıp → iptal" eşitsizliği olarak ifade ediyordu; bu okuma, niyeti tersine çevirdiği (elverişli takaslara veto uyguladığı) ve eylem bölme ile payda şişirme yoluyla istismar edilebileceği için kullanımdan kaldırıldı.

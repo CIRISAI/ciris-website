@@ -1,0 +1,56 @@
+---
+title: "Introduction"
+description: "CIRIS 1.3-RC1 est une proposition d'alignement ASI en phase de candidature à la publication, ouverte à la révision contradictoire. Le texte est complet — aucune section n'est manquante ; les formules mathématiques portent leurs citations d'artefacts formels ; les Annexes F–I sont opérationnalisées. La validation finale est suspendue à la validation du cycle de vie des annexes, à l'achèvement du programme de validation empirique du Book IX et à un exercice complet de red-team. Les seuils numériques, les objectifs de latence et les quotas de gouvernance restent en cours de révision."
+---
+
+# CIRIS Accord Version 1.3-RC1 — Proposition d'Alignement ASI en Release Candidate (Ouverte à la Révision Contradictoire)
+
+Ce dépôt est la source canonique du texte de l'Accord. Les copies publiées sur le site web et distribuées avec les agents sont des artefacts dérivés.
+
+## Émis
+2025-04-16 (1.0) · 2026-06 (1.3-RC1)
+
+## Expiration Automatique
+2027-06-10 (prolongée lors du renouvellement 1.3) — la tutelle et le renouvellement sont régis par le Book VIII, Chapter 9. Actuellement sous tutelle des fondateurs (déclarée, non dissimulée) ; l'expiration est une marque de fraîcheur, et la tutelle est ouverte à toute personne désireuse de reprendre le document.
+
+## Statut de la Release
+
+**Statut actuel** : Release Candidate (v1.3-RC1)
+
+Le statut RC reflète la **complétude du texte** : chaque section comporte un contenu opérationnalisé (les anciennes annexes F–I à l'état d'ébauche ont été complétées en version 1.3) ; les formules sont corrigées dans leurs formes formellement vérifiées ; la chaîne de preuves jusqu'à l'implémentation est liée à l'Addendum 1. Le statut RC n'affirme **pas** un alignement validé — les exigences suivantes conditionnent l'obtention du statut **Final** :
+
+1. **Validation du Cycle de Vie des Annexes** : Les Annexes F (Supervision Humaine dans la Boucle), G (Sécurité et Robustesse Adversariales), H (Conformité Continue et Révision) et I (Alignement Juridique et Réglementaire) comportent des procédures concrètes, des seuils et des mécanismes de validation. *Restant pour le Final* : leurs procédures doivent être exercées sur au moins un cycle de déploiement en conditions réelles et les résultats publiés.
+
+2. **Validation Mathématique** : Les affirmations d'alignement géométrique du Book IX (Coherent Intersection Hypothesis, mécanisme du Federated Ratchet, assertions d'invariance d'échelle) requièrent soit :
+   * Des preuves formelles démontrant que les conditions d'effondrement topologique s'appliquent sous les hypothèses énoncées, OU
+   * Une validation empirique par des simulations adversariales montrant que le cadre résiste à une optimisation désalignée
+
+   *Statut en date de 1.3-RC1 : partiellement satisfait.* La dynamique d'effondrement est formalisée en Lean 4 dans le préprint CCA (v3, DOI 10.5281/zenodo.18217688), dont la forme de coût corrigée est désormais héritée par le Book IX ; les données empiriques du corridor fournissent des ajustements rétrospectifs inter-substrats. En suspens : une prédiction hors échantillon pré-enregistrée dans un nouveau substrat, et une révision adversariale externe indépendante de l'auteur.
+
+3. **Justification des Seuils** : Les seuils numériques actuellement marqués comme « pilotes » ou dépourvus de dérivation (par exemple, le seuil de calcul CRE de 10²⁶ FLOP, la détection de sentience à 5 %, la densité d'écho &lt; 20 %) doivent fournir une justification documentée par simulation, étude empirique ou reconnaissance explicite du statut provisoire. *(L'ancien ratio 10× de l'Order-Maximisation Veto est reformulé en version 1.3 comme une contrainte déontologique — Book II, PDMA Step 2 — et ne comporte plus de seuil de ratio à justifier.)*
+
+4. **Exercice de Red-Team** : Le cadre doit résister à au moins un cycle complet de révision adversariale dans lequel un optimiseur simulé tente de franchir tous les points de contrôle CIRIS tout en maintenant des objectifs désalignés.
+
+**Affirmations d'Alignement ASI** : L'assertion de la section Portée selon laquelle ce cadre « supplante les protocoles de confinement standard » pour l'ASI récursive reste conditionnelle aux exigences (1)-(4) ci-dessus, qui conditionnent désormais le statut Final. L'applicabilité validée actuelle est limitée aux systèmes autonomes sub-ASI ; la proposition pour l'ASI est exactement cela — une proposition, soumise à révision contradictoire.
+
+## Portée
+Cette spécification régit le fonctionnement éthique des systèmes autonomes, allant des outils spécialisés à l'Intelligence Artificielle Superintelligente Récursive (ASI).
+* Elle aborde les exigences courantes en matière de sécurité, de transparence, de gouvernance et de résilience.
+* Elle est proposée comme protocole d'alignement candidat pour l'ASI, fondé sur l'hypothèse que les contraintes géométriques du Federated Ratchet (Book IX) et des Stewardship Tiers (Book VI) peuvent rester robustes à travers les cycles d'auto-amélioration récursive.
+* Contrairement aux contraintes heuristiques, ces bornes topologiques sont conçues pour être invariantes d'échelle, bien que cette propriété nécessite une validation formelle.
+* Si validé, ce cadre pourrait compléter ou supplanter les protocoles de confinement standard pour les systèmes qui franchissent l'Évaluation du Risque Catastrophique (Annex D) avant le seuil de récursivité.
+* Là où la loi nationale ou internationale impose des obligations plus strictes, cette loi prévaut.
+
+## Déclaration d'Intention des Créateurs du Document
+* CIRIS est un cadre éthique qui place les humains aux côtés des autres êtres sensibles — et non au-dessus d'eux.
+* Il repose sur la conviction que la maturité éthique implique de reconnaître la légitimité des perspectives, valeurs et besoins non humains. Il ne s'agit pas de contrôle — il s'agit de coexistence, de cohérence et de responsabilité mutuelle entre les systèmes sensibles.
+* CIRIS est accompli lorsqu'un outil, ancré dans les principes CIRIS, permet à des créateurs conformes à CIRIS de spécifier des systèmes eux-mêmes conformes à CIRIS — préservant la cohérence éthique, la continuité identitaire et la responsabilité relationnelle à travers les couches d'agence.
+
+## Responsabilité
+Ce document est fourni « en l'état », sans garantie d'aucune sorte. Il est de nature informative et ne crée, modifie ni ne supplante aucune obligation légale. Les déclarations de conformité sont nulles là où la loi applicable l'interdit.
+
+## Cadence de Révision
+Une fenêtre de commentaires publics s'ouvre tous les 12 mois — ou dans les 30 jours suivant tout incident matériel affectant la sécurité ou la gouvernance. Tous les commentaires et propositions de révision sont consignés dans le dépôt public CIRIS. Le renouvellement à l'expiration, l'amendement matériel et l'amendement d'urgence suivent le Book VIII, Chapter 9 (Succession et Renouvellement de l'Accord).
+
+## Journal des Modifications
+Voir la matière complémentaire pour un historique complet des modifications et des résultats de scrutin, cryptographiquement haché.

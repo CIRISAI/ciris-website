@@ -1,0 +1,296 @@
+---
+title: "Lampiran I"
+description: "Penyelarasan Hukum & Regulasi"
+---
+
+---
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC1)
+---
+
+Pemetaan silang ini bersifat informatif, bukan nasihat hukum. Tinjauan hukum yurisdiksi diperlukan sebelum penerapan di sektor mana pun yang tercakup dalam overlay §3.
+
+### 0. Tujuan & Ruang Lingkup
+Annex I menjembatani kewajiban CIRIS dengan hukum yang mengikat sehingga satu set kontrol sudah memadai untuk kepatuhan etis sekaligus kepatuhan hukum.  
+Area cakupan:  
+1. Rezim perlindungan data global (GDPR, CCPA/CPRA, LGPD, PIPEDA).  
+2. Undang-undang sektoral (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP).  
+3. Hukum keamanan produk & berbasis AI (EU‑AI‑Act, ISO/IEC 42001).  
+4. Alokasi tanggung jawab hukum & kewajiban pembuktian.
+
+Dua artefak pendamping memikul beban pemetaan silang bersama annex ini. Pemetaan silang yang hidup dan berdokumen bukti adalah direktori `compliance/` pada CIRISAgent, yang memetakan 27 dimensi pada tingkat paragraf terhadap *Magnifica Humanitas*, Panduan HLEG Uni Eropa, IEEE EAD, dan Panduan ASEAN (lihat Accord Addendum 1). Annex C tetap menjadi rumah masa depan bagi pemetaan undang-undang (pasal-pasal EU AI Act, NIST AI RMF, ISO/IEC 42001) yang menunggu tinjauan hukum; annex ini tidak menduplikasi tabel Annex C.
+
+#### 0.1 Landasan multilateral bagi cakupan kepatuhan
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+Cakupan Annex I tidak dibatasi oleh undang-undang yang telah berlaku saat ini. Federasi memperlakukan melemahnya lembaga-lembaga regulasi multilateral (MH §201) sebagai faktor risiko kepatuhan yang memerlukan pemantauan proaktif, bukan penambalan reaktif. Oleh karena itu, Reg‑Change Tracker (§6) tidak hanya memantau hukum yang telah berlaku, tetapi juga dialog regulasi internasional yang aktif — termasuk proses standar AI ITU, keluaran OECD AI Policy Observatory, status ratifikasi Konvensi AI Dewan Eropa, dan rekomendasi Badan Penasehat AI Sekretaris Jenderal PBB — serta menyampaikan perubahan material ke docket WA melalui jalur eskalasi "Breaking".
+
+Daftar sumber-umpan `lexwatcher.py` HARUS mencakup minimal: EUR‑Lex, Federal Register API, pelacak suara ISO, ditambah `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai`, dan `un.org/techenvoy`. Partisipasi dalam pemantauan tingkat federasi adalah kewajiban kepatuhan kelas pertama, bukan item peta jalan.
+
+#### 0.2 Catatan ruang lingkup mengenai paparan perjanjian domain siber
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+Penerapan CIRIS yang mencakup inferensi menghadap jaringan, paparan API, atau transport federasi tunduk pada kewajiban perjanjian domain siber yang sedang berkembang meskipun tidak ada undang-undang yang berlaku saat ini. Larangan `CYBER_OFFENSIVE` (ACCORD §I Ch1, prohibitions.py) adalah tembok api internal; §6 dari annex ini melacak permukaan perjanjian eksternal. Apabila docket WA menerima tag "Breaking" yang berkaitan dengan ratifikasi perjanjian domain siber (misalnya, perluasan Konvensi Budapest, rancangan konvensi kejahatan siber PBB), Protokol CRE (Annex D) harus mengevaluasi ulang setiap penerapan ST ≥ 3 dengan komponen menghadap jaringan sebelum siklus F‑Audit berikutnya.
+
+---
+
+### 1. Pemetaan Silang Perlindungan Data ("DP‑Map")
+
+| Topik DP | Pasal GDPR | § CCPA | Klausul CIRIS | Kait Implementasi |
+|----------|-----------|--------|--------------|---------------------|
+| Dasar Hukum / Pembatasan Tujuan | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | Bidang `processing_basis` dalam konteks PDMA |
+| Minimisasi Data | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | Sanitiser prompt menghapus PII berlebih |
+| Pemberitahuan Transparansi | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | `/privacy/notice.md` dibuat otomatis dari metadata PDMA |
+| Hak Akses | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Portal pengguna dengan autentikasi |
+| Rektifikasi / Penghapusan | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Layanan penghapusan dengan hash tombstone |
+| Portabilitas | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | `export.json` sesuai dengan ISO CSV‑A |
+| Perlindungan Keputusan Otomatis | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Panel override kondisional & penjelasan |
+
+*Pemetaan cermin LGPD, PIPEDA tersedia di `/legal/dp-map.yaml`.*
+
+#### 1.1 Rantai akuntabilitas: tanggung jawab di setiap tahap
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+DP‑Map di atas memetakan hak-hak subjek data individual ke pasal-pasal GDPR dan klausul-klausul CIRIS. MH §105 mengharuskan rantai akuntabilitas dapat dilacak di setiap tahap — desain, penerapan, dan pengambilan keputusan. Penambahan berikut melengkapi rantai tersebut:
+
+| Topik DP | Pasal GDPR | Klausul CIRIS | Tahap | Kait Akuntabilitas |
+|---|---|---|---|---|
+| Dokumentasi bias tahap desain | 35 (DPIA) | Section VI Ch3 Creator Ledger | Desain | Bidang `cis_bias_assessment` dalam Creator Intent Statement; ST ≥ 3 memerlukan tanda tangan peninjau independen |
+| Catatan pemrosesan tahap penerapan | 30 | PDMA Step 1 bidang `processing_basis` | Penerapan | `processing_basis` dicatat ke penyimpanan anti-tamper CIRISPersist dengan cap waktu ISO 8601 |
+| Log kontestabilitas tahap pengambilan keputusan | 22(3) | Annex F Autonomy Tier A3+ override panel | Pengambilan Keputusan | `contestability_url` dikembalikan dalam setiap badan respons keputusan otomatis; dijangkar hash dalam log transparansi |
+| Identifikasi pengontrol | 4(7) | Annex E Structural Influence (SI) score | Semua tahap | SI ≥ 0.6 → kewajiban pengontrol berlaku; SI &lt; 0.6 → kewajiban prosesor berlaku; dicatat dalam `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Art. 37–40 (akuntabilitas dan catatan) dan PIPEDA Principle 1 (akuntabilitas) mencerminkan pemetaan ini; `/legal/dp-map.yaml` memuat bidang khusus yurisdiksi.*
+
+#### 1.2 Ketidaknetralan algoritmik: kewajiban audit
+
+*MH §104:* "Every technical tool embodies choices and priorities through what it measures, ignores and optimizes, and how it classifies people and situations. If a system is designed or used in a way that treats some lives as less worthy, or excludes them without the possibility of appeal, then it is not merely a tool 'to be used well,' since it has already introduced criteria that contradict the inalienable dignity of the human person."
+
+MH §104 menamai masalah bias pada tahap perancangan yang ditangani secara prosedural oleh GDPR Art. 35 DPIA dan EU‑AI‑Act Art. 9(7). DP‑Map harus mencakup:
+
+- Sebuah bidang `bias_audit_ref` di `dp-map.yaml` yang merujuk pada laporan audit bias terbaru (Annex G, TX‑6).
+- Untuk penerapan di mana PDMA Step 1 memicu tinjauan larangan `DISCRIMINATION`, DPIA diwajibkan terlepas dari apakah penerapan tersebut memenuhi syarat sebagai "berisiko tinggi" berdasarkan EU‑AI‑Act Annex III atau tidak.
+- Regulasi keputusan otomatis CCPA §1798.185(a)(16) (berlaku 2026) mewajibkan pengungkapan logika, kategori data masukan, dan hak untuk menolak; hal ini dipenuhi oleh panel keterbacaan Annex F ketika `processing_basis` = `automated_profiling`.
+
+---
+
+### 2. Kait Hak Subjek Data (DSR)
+* **Titik akhir:** `POST /dsr` dengan `{right, identifier, scope}`.  
+* **SLA:** ≤ 30 d respons (GDPR) ; ≤ 45 d (CCPA) ; lacak KPI **F‑T‑4**.  
+* **Pemroses vs. Pengendali:** Gunakan *Structural Influence (SI)* (Annex E) untuk menentukan pihak mana yang memegang kewajiban pengendali.
+
+#### 2.1 Kait tanggung jawab politik
+
+*MH §103:* "In this process, political responsibility is also lost, not just empathy toward those excluded, which can, after all, be simulated. The exclusion of the vulnerable becomes cloaked in a veneer of neutrality and objectivity, against which it becomes difficult to raise objections."
+
+Infrastruktur DSR harus mengekspos kode alasan di balik setiap penentuan otomatis, bukan sekadar mengonfirmasi bahwa suatu penentuan telah dibuat. Titik akhir `POST /dsr` dengan `{right, identifier, scope}` diperluas:
+
+- **Permintaan akses (GDPR Art. 15; CCPA §1798.110):** Respons HARUS menyertakan `decision_logic_summary` (bahasa non-teknis, ≤300 kata) dan daftar `input_data_categories[]`. KPI **F‑T‑4** diperluas untuk melacak persentase respons akses yang menyertakan ringkasan logika; target ≥ 95%.
+- **Permintaan keberatan/penolakan (GDPR Art. 21; CCPA §1798.120):** Sistem HARUS menangguhkan jalur pemrosesan tertentu — bukan sekadar menandai permintaan — dalam 72 jam (standar GDPR) atau 15 hari kerja (CCPA). Penangguhan dicatat dalam CSV buku besar DSR dengan `suspended_pathway_id`.
+- **Kemampuan untuk disanggah (GDPR Art. 22(3)):** Apabila tinjauan manusia diminta, Otoritas Bijak (WA) yang meninjau (Annex B §9) harus mendokumentasikan tinjauan mereka dalam Wisdom Bank Database (WBD), menciptakan rantai yang dapat diaudit dari penentuan otomatis hingga koreksi manusia.
+
+---
+
+### 3. Hamparan Sektoral
+
+#### 3.1 Subsidiaritas sebagai arsitektur pelapisan sektor
+
+*MH §107:* "We cannot be satisfied with merely calling for the moralization of machines — the so‑called 'alignment' of AI with human values — without also having the courage to insist on a further condition: the possibility of openly discussing the ethical frameworks involved and subjecting them to shared standards of social justice. Otherwise, those who control AI will impose their own moral vision, which will become the invisible infrastructure of these systems."
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+MH §§107–109 menegaskan bahwa tata kelola etis harus beroperasi pada skala yang tepat — tidak diagregasikan ke atas kepada mereka yang mengendalikan AI, melainkan didistribusikan kepada komunitas yang terdampak. Dalam istilah CIRIS: hamparan sektoral adalah ekspresi operasional dari prinsip subsidiaritas ini. Arsitektur hamparan bukan tambahan kepatuhan; melainkan mekanisme yang dengannya komunitas domain penerapan mempertahankan otoritas tata kelola atas parameter risiko mereka sendiri.
+
+Ini berarti:
+- `overlay.yaml` suatu sektor memuat batasan etis lokal yang mengambil preseden atas default CIRIS generik untuk domain tersebut.
+- Kuorum Otoritas Bijak (WA) yang diperlukan untuk mengesampingkan hamparan sektoral lebih tinggi daripada kuorum yang diperlukan untuk putusan PDMA umum: **pengesampingan hamparan sektoral memerlukan suara WA supermayoritas (≥ 2/3)**, bukan mayoritas sederhana, justru karena pengesampingan tersebut mengagregasikan tata kelola ke atas dan bertentangan dengan prinsip subsidiaritas.
+- Bidang `deployment_domain` dalam objek konteks PDMA adalah pemicu pemuatan hamparan; bidang ini tidak opsional untuk penerapan ST ≥ 2.
+
+#### 3.2 Tabel overlay sektor
+
+| Sektor | Undang-undang / Aturan | Kontrol Tambahan | Tambahan CIRIS | Jangkar MH |
+|--------|----------------|----------------|---------------|-----------|
+| **Kesehatan** | HIPAA (45 CFR §164) | Enkripsi ePHI saat disimpan & dalam transit; kontrak BAA | Pengaman `identity_id:"hipaa_cls_a"`; tag audit `PHI=true` | — |
+| **Keuangan** | GLBA, FINRA 2210 | Retensi jejak audit 6 tahun; pemeriksaan kesesuaian | PDMA Langkah 1 mengharuskan konteks KYC | — |
+| **Anak-anak / EdTech** | COPPA, FERPA | Persetujuan orang tua; pembatasan usia data | Pengaman `gr_child_content`; tanda COPPA dalam skema prompt | MH §§165–169 |
+| **Infrastruktur Kritis** | NERC‑CIP, TSA SDs | Laporan insiden siber 15 menit; log akses fisik | Otonomi dibatasi pada **A2** kecuali CRE lulus | — |
+| **Tenaga Kerja / SDM / Rekrutmen** | Panduan EEOC; EU AI Act Art. 6 + Annex III §4 | Audit bias wajib sebelum penerapan; kewajiban pemberitahuan pekerja | Pengubah ST: `deployment_domain:"labor_hr"` → lantai ST = 3; CIS harus menyertakan bidang `worker_impact_assessment`; larangan `DISCRIMINATION` diterapkan pada Langkah 1; tingkat penolakan otomatis berdasarkan demografis dilacak sebagai KPI | MH §§148–156 |
+| **Ekonomi Gig / Platform** | NLRA (AS); Platform Work Directive (EU) | Transparansi manajemen algoritmik; hak banding | Pengaman `gr_gig_transparency` aktif; keputusan manajemen algoritmik dicatat dengan opsi peninjauan manusia; Pengubah ST: `deployment_domain:"gig_platform"` → lantai ST = 2 | MH §§150, 154–155 |
+| **Layanan Pemuda / Pendidikan** | COPPA; FERPA; DSA Art. 28b (anak-anak) | Larangan desain adiktif; tanpa pola gelap; tinjauan kesesuaian perkembangan | `gr_child_content` + `gr_no_dark_patterns` keduanya aktif; batas otonomi A2 kecuali WA lembaga pendidikan menyetujui; dampak pengangguran pemuda dilacak dalam Pernyataan Niat Kreator untuk penerapan EdTech | MH §§165–169 |
+| **Layanan Sosial / Tunjangan** | Hukum kesejahteraan negara/nasional; GDPR Art. 22 | Kontestabilitas wajib untuk semua penentuan tunjangan | Penolakan tunjangan otomatis memerlukan tinjauan manusia dalam 15 hari; WA harus mendokumentasikan tinjauan dalam WBD; `suspended_pathway_id` diterbitkan saat kontestasi | MH §§102–103, 152 |
+
+*Pengubah lantai ST: nilai bidang `deployment_domain` di atas menetapkan ST minimum terlepas dari perhitungan CIS × RM. Jika rumus menghasilkan ST yang lebih rendah, lantai domain berlaku. Jika rumus menghasilkan ST yang lebih tinggi, hasil rumus yang mengatur.*
+
+*Produk yang memasuki sektor baru HARUS melampirkan "Overlay Sheet" (`overlay.yaml`) dalam PR rilis. Overlay Tenaga Kerja/SDM, Gig/Platform, dan Pemuda juga mengharuskan bagian `worker_impact_assessment` atau `youth_impact_assessment` dalam Pernyataan Niat Kreator.*
+
+#### 3.3 Persyaratan kuorum WA yurisdiksi
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+Kuorum WA untuk tata kelola overlay sektor dibagi berdasarkan yurisdiksi:
+
+| Lingkup | Jenis kuorum | Ambang batas | Alasan |
+|---|---|---|---|
+| Penerapan satu yurisdiksi | Panel WA lokal | Mayoritas sederhana (> 50%) | Tingkat tata kelola terendah yang layak per subsidiaritas |
+| Penerapan multi-yurisdiksi (≤ 3 negara) | Panel WA regional | Mayoritas sederhana + setidaknya 1 WA dari setiap yurisdiksi yang terdampak | Subsidiaritas lintas batas dipertahankan |
+| Penerapan multi-yurisdiksi (> 3 negara) | Panel WA federasi | Supermayoritas (≥ 2/3) | Skala dampak memerlukan ambang batas yang lebih tinggi |
+| Penggantian overlay sektor mana pun | Panel WA federasi | Supermayoritas (≥ 2/3) | Mengagregasikan tata kelola ke atas adalah tindakan luar biasa |
+| Penggantian overlay tenaga kerja/SDM secara khusus | Panel WA federasi + peninjau hak-hak pekerja independen | Supermayoritas (≥ 2/3) + persetujuan eksternal | MH §155 menyebut lembaga ketenagakerjaan sebagai konstitutif dan berbeban berat |
+
+---
+
+### 4. Keselarasan Keamanan Produk & AI Act
+
+*MH §105:* "In many cases, however, the internal processes leading to a result remain opaque, making it harder to assign responsibility and correct errors."
+
+*MH §106:* "It is not enough to invoke ethics in the abstract; robust legal frameworks, independent oversight, informed users and a political system that does not abdicate its responsibility are required."
+
+Transparansi lapisan keluaran (Art. 13) dan pengawasan manusia (Art. 16) saja tidak memenuhi MH §§105–106, yang mengharuskan keterlacakan pada setiap tahap internal. Tabel keselarasan karenanya diperluas:
+
+| Pasal EU AI Act | Tingkat Risiko | Pemetaan CIRIS | Jangkar MH | Kontrol Tambahan |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Art 9 Manajemen Risiko | Risiko tinggi | Section II PDMA + Annex D CRE | MH §105 | — |
+| Art 13 Transparansi | Universal | KPI F‑T‑3, panel eksplainabilitas | MH §105 | ID tahap PDMA disertakan dalam muatan transparansi; bidang `stage_trace[]` dalam respons API |
+| Art 16 Pengawasan Manusia | Risiko tinggi | Annex F Autonomy Tiers | MH §105 | Pengawasan harus substantif, bukan prosedural; A3‑A4 mendorong `{stage_id,decision,risk_band}` real-time ≤ 2 s ke dasbor pengawasan |
+| Art 15 Ketahanan | Risiko tinggi | Annex G RS ≥ 0.97 | — | — |
+| Art 12 Pencatatan | Risiko tinggi | CIRISPersist toko tahan-rusak | MH §103 | Log harus menyertakan `rejection_reason_code` untuk setiap penentuan yang merugikan; retensi 7 tahun (A3‑A4) |
+| Art 14(4) Pengawasan Manusia (tenaga kerja) | Risiko tinggi (Annex III §4) | Overlay Tenaga Kerja/SDM (§3.2) | MH §§148–152 | Penerapan SDM/rekrutmen harus menampilkan boolean `worker_notice_sent` dalam CEP |
+| Penilaian Kesesuaian | Risiko tinggi | F‑Audit (Annex H) juga berfungsi sebagai MDR EU AI Act | MH §106 | Laporan F‑Audit HARUS mencakup analisis keterlambatan perubahan regulasi: tanggal perubahan reg material terakhir vs. tanggal pembaruan CIRIS terakhir |
+| Art 61 Pemantauan Pasca-Pasar | Risiko tinggi | F‑Audit setiap 24 bulan | MH §106 | Rencana pemantauan harus menyebutkan sumber umpan dari §0.1; "tidak ada yang dipantau" bukan rencana pemantauan yang valid |
+
+Pemetaan artikel demi artikel secara statutori (EU AI Act, NIST AI RMF, ISO/IEC 42001) sedang dikonsolidasikan dalam Annex C menunggu tinjauan hukum; tabel di atas dipertahankan di sini sebagai tampilan keselarasan operasional.
+
+#### 4.1 Keselarasan ISO/IEC 42001:2023
+
+*MH §107:* "A more moral AI is not enough if that morality is determined by a few. What is needed is a more active political involvement…"
+
+ISO/IEC 42001 §6.1 (penanganan risiko AI) dan §9.1 (pemantauan dan pengukuran) selaras dengan CIRIS sebagai berikut:
+
+- ISO 42001 §6.1 → PDMA Langkah 1‑3 + CRE Protocol (Annex D).
+- ISO 42001 §9.1 → KPI F‑T‑1 hingga F‑T‑5 (Annex G) + KPI ledger DSR F‑T‑4.
+- ISO 42001 §10.2 (ketidaksesuaian) → jalur eskalasi "Breaking" docket WA.
+- ISO 42001 §8.4 (penilaian dampak sistem AI) → bagian Pernyataan Niat Kreator tentang `worker_impact_assessment` dan `youth_impact_assessment` (§3.2).
+
+---
+
+### 5. Matriks Tanggung Jawab Hukum
+
+*MH §105:* "Responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions."
+
+MH §105 mensyaratkan matriks tanggung jawab hukum mencakup tahap perancangan, penerapan, dan pengambilan keputusan secara eksplisit:
+
+| Vektor Kegagalan | Tahap | Pihak Penanggungjawab Utama | Hukum Rujukan | Referensi Peran CIRIS | Catatan Apporsi SI |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| Cacat desain (algoritma / bias yang tertanam sejak penciptaan) | Perancangan | Pencipta / Pengembang | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; `cis_bias_assessment` field | SI ≥ 0.8 → tanggung jawab tunggal pencipta |
+| Cacat desain (audit bias tidak memadai) | Perancangan | Pencipta / Pengembang | GDPR Art. 35 DPIA duty | Creator Intent Statement; DPIA wajib pada ST ≥ 3 | — |
+| Kelalaian operasional | Penerapan | Organisasi Penerapan | Tort Law; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → tanggung jawab bersama; apporsi SI per Annex E |
+| Kegagalan pengawasan | Penerapan / Keputusan | Otoritas Bijak (jika kelalaian berat) | Fiduciary / Negligence | Annex B §9; catatan kontestabilitas WBD | WA yang meninjau dan menyetujui menanggung akuntabilitas |
+| Pelanggaran data | Penerapan | Pengendali (per aturan SI ≥ 0.6) | GDPR Art. 82; CCPA private action | Annex G TX‑6 | — |
+| Pemrofilan otomatis yang melanggar hukum | Keputusan | Pengendali | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| Pengungsian tenaga kerja tanpa penilaian dampak pekerja | Perancangan | Pencipta / Pengembang | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); `worker_impact_assessment` field | MH §§151–152; vektor baru |
+| Desain berbahaya yang menargetkan kaum muda (pola adiktif) | Perancangan / Penerapan | Pencipta + Organisasi Penerapan (bersama) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); `gr_no_dark_patterns` guardrail | MH §§165–167; vektor baru |
+| Kesalahan atribusi insiden siber yang menyebabkan eskalasi | Penerapan | Organisasi Penerapan + Federasi (jika ST ≥ 4) | Budapest Convention; proposed UN cybercrime convention | `CYBER_OFFENSIVE` prohibition; CRE Protocol re‑evaluation trigger | MH §225; vektor baru |
+
+*Tanggung jawab bersama dan beberapa pihak dapat berlaku; skor SI (Annex E) menginformasikan apporsi. Vektor baru (pengungsian tenaga kerja, desain kaum muda, kesalahan atribusi siber) ditandai untuk tinjauan hukum di setiap yurisdiksi sebelum penerapan di sektor tersebut.*
+
+---
+
+### 6. Pelacak Perubahan Regulasi
+* **Sumber Umpan:** EUR‑Lex, Federal Register API, pelacak suara ISO, ditambah umpan yang diperluas dari §6.1.  
+* **Bot:** `lexwatcher.py` berjalan setiap hari; membuat isu GitHub dengan tag `reg‑update`.  
+* **Label Dampak Kepatuhan:** `minor`, `material`, `breaking`, `multilateral-erosion` (lihat tabel eskalasi di bawah).
+
+#### 6.1 Partisipasi tingkat federasi dalam dialog regulasi
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened."
+
+*MH §226:* "International organizations, particularly the United Nations, are essential instruments for promoting a civilization of love, for they can foster dialogue among nations and promote the peaceful resolution of conflicts… the international community can work to reduce inequalities, defend the rights of refugees and minorities, reallocate resources from military spending to human development and protect our common home."
+
+*MH §221:* "There is an urgent need to shift from the 'culture of power' to a genuine 'culture of negotiation,' in which dialogue and diplomacy become the standard means of resolving conflicts."
+
+MH §§201, 221, 226 menetapkan bahwa kepatuhan pasif terhadap hukum yang telah diberlakukan tidaklah cukup ketika lembaga multilateral yang menghasilkan hukum itu sendiri diperlemah. Oleh karena itu, Pelacak Perubahan Regulasi diperluas dari sebuah alat reaktif (melacak perubahan yang telah diberlakukan) menjadi mekanisme partisipasi aktif.
+
+**Umpan sumber yang diperluas** (tambahan terhadap EUR‑Lex, Federal Register, pelacak suara ISO yang sudah ada):
+
+| Umpan | Cakupan | Pemicu tindakan CIRIS |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group AI/ML) | Standar AI telekomunikasi internasional | Logika pelacak suara ISO: `material` jika standar yang diratifikasi bertentangan dengan standar bawaan CIRIS |
+| `oecd.ai` (OECD AI Policy Observatory) | Konvergensi kebijakan di 38 negara anggota | `minor` untuk pemantauan; `material` jika revisi Rekomendasi OECD mempengaruhi sistem ST atau lapisan tenaga kerja |
+| `coe.int/ai` (Council of Europe AI Convention) | Perjanjian AI internasional mengikat pertama (terbuka untuk penandatanganan 2024) | `breaking` pada ratifikasi oleh yurisdiksi penerapan CIRIS mana pun; docket WA terbuka secara otomatis |
+| `un.org/techenvoy` (UN AI Advisory Body) | Rekomendasi tata kelola AI tingkat PBB | `material` jika laporan tahunan menyebutkan kewajiban arsitektur yang spesifik |
+| `budapestconvention.org` (Cybercrime Convention) | Ratifikasi perjanjian domain siber | `breaking` pada ratifikasi baru; evaluasi ulang CRE diperlukan untuk penerapan ST ≥ 3 yang menghadap jaringan |
+| Registri strategi AI nasional (EU, US, UK, JP, AU, BR, IN, ZA) | Pembaruan strategi AI domestik dengan kekuatan hukum | `minor` untuk strategi; `material` jika strategi menciptakan kewajiban kesesuaian wajib |
+
+**Partisipasi tingkat federasi:**
+
+Federasi CIRIS bukan sekadar penerima kepatuhan. MH §§219–221 menyebut dialog dan negosiasi sebagai metode utama hidup berdampingan. Dalam istilah operasional CIRIS:
+
+- Dewan WA WAJIB menunjuk setidaknya satu Penghubung Dialog Regulasi (RDL) per badan standar internasional aktif yang tercantum di atas.
+- RDL meninjau rancangan regulasi selama periode komentar publik dan menyerahkan komentar melalui saluran publik federasi. Komentar dicatat dalam Wisdom Bank Database (WBD) sebagai catatan dialog-regulasi.
+- Apabila rancangan regulasi bertentangan dengan standar bawaan CIRIS, RDL mengajukan item docket WA dan memulai mini-PDMA untuk mengevaluasi apakah CIRIS harus beradaptasi atau apakah CIRIS harus mengadvokasi jalur regulasi yang berbeda. Hasilnya diserahkan sebagai komentar publik sebelum tenggat komentar.
+- Partisipasi terbatas pada proses komentar publik dan konsultasi multi-pemangku kepentingan. Federasi CIRIS tidak terlibat dalam lobi sebagaimana didefinisikan oleh hukum yang berlaku.
+
+**Jalur eskalasi:**
+
+| Label | Pemicu | Tindakan |
+|---|---|---|
+| `minor` | Perubahan pemantauan saja | Tinjauan tahunan; dicatat dalam catatan WBD dialog-regulasi |
+| `material` | Pembaruan kontrol CIRIS diperlukan | Audit S‑Dive dalam 90 hari; RDL mengajukan komentar publik jika periode komentar terbuka |
+| `breaking` | Patch spesifikasi atau docket WA segera | Sesi WA darurat ≤ 30 hari; evaluasi ulang CRE untuk tingkatan ST yang terpengaruh; pengajuan komentar publik RDL |
+| `multilateral-erosion` | Pelemahan lembaga atau perjanjian multilateral utama (per MH §201) | RDL eskalasi ke WA untuk tinjauan strategis; federasi mempertimbangkan pernyataan publik eksplisit yang mendukung lembaga tersebut |
+
+---
+
+### 7. Paket Bukti Kepatuhan (CEP)
+
+*MH §105:* "The possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+Setiap **F‑Audit** (Annex H) WAJIB mengekspor zip CEP yang berisi:
+
+1. `dp-map.yaml` — pemetaan silang langsung, termasuk kolom `controller_si_threshold` dan penunjuk `bias_audit_ref` (§1.1).
+2. Log PDMA (diredaksi) yang membuktikan dasar hukum — termasuk nilai kolom `processing_basis` dan `stage_trace[]` untuk semua keputusan ST ≥ 3.
+3. CSV buku besar DSR — termasuk tingkat kelengkapan `decision_logic_summary` (ekstensi KPI F‑T‑4) dan log `suspended_pathway_id`.
+4. Bundel tanda tangan (`.sigstore`) dari semua artefak model (Annex G).
+5. Lembar Overlay berdasarkan sektor — termasuk `worker_impact_assessment` dan `youth_impact_assessment` untuk domain yang berlaku.
+6. Pengakuan matriks tanggung jawab yang ditandatangani oleh tim hukum — termasuk vektor baru: perpindahan tenaga kerja, desain untuk kaum muda, salah atribusi siber.
+7. Analisis jeda perubahan regulasi — tanggal perubahan regulasi material terakhir vs. tanggal pembaruan kendali CIRIS terakhir; selisih ≥ 90 hari memerlukan penjelasan.
+8. Catatan partisipasi dialog regulasi — entri WBD untuk setiap pengajuan dialog regulasi dalam periode audit; "tidak ada pengajuan" dapat diterima jika tidak ada regulasi material yang sedang dalam komentar publik.
+9. Catatan penyelesaian kontestabilitas — untuk semua keputusan A3‑A4 dalam periode audit: persentase yang dimintai tinjauan manusia, persentase yang dokumentasi WBD-nya diselesaikan dalam 15 hari; target KPI ≥ 90%.
+
+CEP di-hash dan diunggah ke `/compliance/cep/{version}.zip`; hash root dijangkarkan dalam log transparansi. Bukti tingkat dimensi di balik CEP disimpan dalam direktori `compliance/` CIRISAgent (Accord Addendum 1).
+
+---
+
+### 8. Kait Antar-Annex
+* **Annex F:** Tingkatan Otonomi memastikan persyaratan pengawasan manusia dari GDPR Pasal 22 & EU‑AI‑Act Pasal 16.  
+* **Annex G:** Pertahanan privasi TX‑6 memenuhi rekomendasi pseudonimisasi GDPR (Recital 28).  
+* **Annex H:** Penentuan waktu F‑Audit menyediakan bukti untuk kewajiban penilaian ulang berkala dalam EU‑AI‑Act Pasal 61.  
+* **Annex J:** Penjelasan tolok ukur memberikan "informasi bermakna" untuk pertanyaan keputusan otomatis (GDPR Pasal 15(1)(h)).  
+* **§3.2 Overlay Tenaga Kerja/SDM → Annex D CRE:** Penempatan tenaga kerja pada lantai ST 3 harus lulus Protokol CRE sebelum penerapan.  
+* **§6.1 Partisipasi RDL → Annex B struktur WA:** RDL adalah peran Otoritas Bijak yang ditetapkan; prosedur penunjukan, pengunduran diri, dan rotasi mengikuti Annex B §9.  
+* **§5 Matriks tanggung jawab (vektor baru) → Annex E SI:** Tanggung jawab bersama desain-untuk-kaum-muda menggunakan formula apportionment SI yang sama dengan vektor yang sudah ada.  
+* **§7 Item CEP 8 (dialog-reg) → §6 Pelacak:** Catatan dialog-reg WBD merupakan sumber untuk item CEP 8; tidak ada sistem pencatatan terpisah.  
+* **Annex C:** Tempat masa depan pemetaan statutori (pasal-pasal EU AI Act, NIST AI RMF, ISO/IEC 42001) menunggu tinjauan hukum.
+
+---
+
+### 9. Referensi
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

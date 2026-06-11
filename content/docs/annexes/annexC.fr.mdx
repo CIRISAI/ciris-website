@@ -1,0 +1,42 @@
+---
+title: "Annexe C"
+description: "Tableau de concordance réglementaire"
+---
+
+---
+ANNEXE C CORRESPONDANCE RÉGLEMENTAIRE   (v 1.3-RC1)
+---
+
+### Objectif
+
+Mettre en correspondance les clauses CIRIS avec les principaux standards externes afin de simplifier la double conformité. Cette annexe comporte deux niveaux :
+
+1. **La correspondance opérationnelle (en vigueur, avec preuves à l'appui)** — le répertoire `compliance/` de CIRISAgent : 27 dimensions stables (D01–D27) mises en correspondance au grain du paragraphe avec quatre cadres directeurs institutionnellement distincts (*Magnifica Humanitas* · Lignes directrices sur l'IA digne de confiance du HLEG de l'UE · IEEE Ethically Aligned Design · Guide de gouvernance de l'IA de l'ASEAN), avec des références de mise en œuvre par dimension et des références de base datées générées par script. Voir l'**Addendum 1** pour le cadre contraignant et la discipline de la preuve.
+2. **La cartographie légale (informative)** — le tableau ci-dessous, mettant en correspondance les structures CIRIS avec les cadres de droit contraignant et de normalisation. Ces lignes constituent des *correspondances d'ingénierie informatives*, et non des avis juridiques ; les lignes légales accèdent au statut « vérifié » uniquement après révision juridique. L'Annexe I contient les procédures opérationnelles d'alignement légal (cartographie de la protection des données, superpositions sectorielles, matrice de responsabilité, flux d'escalade).
+
+### Cartographie légale et normative (informative ; vérification juridique en attente)
+
+| Cadre externe | Articles / Clauses pertinents | Correspondance CIRIS (Livre / Annexe §) | Statut |
+|---|---|---|---|
+| Loi européenne sur l'IA (2024) | Art 9 Gestion des risques | Livre II §II (PDMA) ; Annexe D CRE | Informative |
+| | Art 12 Tenue des registres | Livre IV Ch 3 pistes d'audit ; Annexe F §4 | Informative |
+| | Art 13 Transparence | Livre II §II Étape 6 ; Livre IV Ch 3 | Informative |
+| | Art 14 Supervision humaine (dont 14(4)) | Livre II §III (WBD) ; Annexe F treillis d'autorité + niveaux d'autonomie | Informative |
+| | Art 61 Surveillance post-commercialisation | Annexe H contrôles de dérive + audit continu | Informative |
+| NIST AI RMF 1.0 | Govern → Map → Measure → Manage | Gouverner : Livres I, VI ; Cartographier : Livre II §II Étapes 1–2 ; Mesurer : Annexe A métriques + Annexe H références de base ; Gérer : flux Annexe F/H | Informative |
+| ISO/IEC 42001 | Cl 6.2 Évaluation des risques | Livre II §II | Informative |
+| | Annexe A contrôles | Documents de dimension `compliance/` de CIRISAgent (correspondance par contrôle en attente) | Informative |
+| Directives OSHA sur la robotique | Sec 5.E Audits de sécurité | Annexe D CRE | Partielle |
+| Lignes directrices sur l'IA digne de confiance du HLEG de l'UE (2019) | 7 exigences | Correspondance opérationnelle, dimensions D01–D27 | Avec preuves |
+| IEEE EAD 1re éd. (2019) | 8 principes généraux | Correspondance opérationnelle, dimensions D01–D27 | Avec preuves |
+| Guide de gouvernance de l'IA de l'ASEAN (2024) | 7 principes ; HITL/HOTL/HOOTL | Correspondance opérationnelle ; Annexe F niveaux d'autonomie | Avec preuves |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (correspondance au grain du paragraphe) | Correspondance opérationnelle, dimensions D01–D27 | Avec preuves |
+
+### Règle de graduation
+
+Une ligne légale passe de *Informative* à *Vérifiée* lorsqu'une révision juridique qualifiée confirme la correspondance pour une juridiction nommée et que l'artefact de révision est lié depuis ce tableau. Dans l'intervalle, les lignes de cette annexe servent à l'alignement d'ingénierie et à l'analyse des lacunes, et non à des déclarations de conformité ; conformément à la section Responsabilité de l'Introduction, les déclarations de conformité sont nulles là où elles sont interdites par le droit applicable.
+
+(D'autres cadres — Recommandation de l'UNESCO sur l'éthique de l'IA, Principes de l'OCDE sur l'IA, Convention-cadre du Conseil de l'Europe — sont en file d'attente pour la correspondance opérationnelle conformément à la feuille de route du répertoire de conformité.)
+
+---
+Fin de l'Annexe C

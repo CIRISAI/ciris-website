@@ -1,0 +1,64 @@
+---
+title: "Indeks Addenda"
+description: "Halaman indeks untuk bagian Addenda."
+---
+
+---
+
+## Addendum 1 — Status Kesiapan ASI & Pengikatan Pemetaan Lintas Regulasi
+
+**Diadopsi**: 2026-06-10 (1.3-RC1) · **Steward**: founder (per Book VIII Ch 9)
+
+### 1.1 Tujuan
+
+Bagian Ruang Lingkup membuat klaim bersyarat: kerangka kerja ini *menjelajahi* kandidat protokol penyelarasan untuk ASI, yang bergantung pada empat persyaratan Release Candidate dalam Pendahuluan. Addendum ini mengikat klaim tersebut pada bukti operasional yang kini ada, dan menyatakan dengan jelas apa yang masih tersisa. **Kesiapan** ASI bukanlah penyelarasan yang telah tercapai; ini adalah kondisi di mana perancah verifikasi yang diharuskan oleh matematika Book IX — manifold kendala independen, permukaan atestasi, lapisan Nurani yang tidak dapat dinormalisasi, permukaan kill-switch, dan Evaluasi Risiko Katastrofik Annex D — ada dalam bentuk yang telah diimplementasikan dan dapat diaudit dengan kesenjangan yang disebutkan.
+
+### 1.2 Pemetaan lintas regulasi kini bersifat operasional
+
+Pemetaan lintas regulasi yang berjalan adalah **direktori kepatuhan CIRISAgent** (`CIRISAgent/compliance/`, rilis agen 2.9.6-stable), yang memetakan implementasi kerangka kerja ke empat kerangka tata kelola senior pada tingkat paragraf (Annex C memuat struktur dua lapis: pemetaan lintas regulasi operasional ini beserta tabel undang-undang informatif yang menunggu verifikasi hukum):
+
+* **Sumber yang dipetakan**: *Magnifica Humanitas* (magisterium keagamaan, 2026) · EU HLEG Ethics Guidelines for Trustworthy AI (penasihat pemerintah, 2019) · IEEE Ethically Aligned Design edisi ke-1 (lembaga teknis, 2019) · ASEAN Guide on AI Governance and Ethics (politik multilateral, 2024). Empat bentuk yang berbeda secara institusional — konvergensinya merupakan bukti struktural bahwa perancah prinsip kerangka kerja bukan merupakan artefak dari satu tradisi mana pun.
+* **Struktur**: 27 dimensi stabil (D01–D27, dari `SEED_DIMENSIONS.yaml` v1.0; 16 dibuktikan oleh semua empat sumber, 11 oleh tiga). Setiap dokumen dimensi memuat bagian atas regulasi yang dirender otomatis (kutipan per sumber, bentuk wire, catatan konvergensi) dan bagian implementasi yang ditulis manusia dengan referensi `file:line` yang harus dapat diverifikasi grep terhadap main saat ini.
+* **Disiplin bukti**: setiap klaim numerik dapat direproduksi dari dasar bertanggal yang dihasilkan skrip (`compliance/baselines/`); prosa dapat mengutip dasar tetapi tidak boleh menyematkan angka yang tidak dapat diverifikasi. Hierarki validasi empat tingkat berjalan dari file implementasi (kebenaran dasar) hingga klaim publik (`compliance/MEASUREMENT_METHODOLOGY.md`).
+* **Disiplin kejujuran**: setiap dimensi memuat inventaris "Kesenjangan yang diketahui"; item yang dibatasi substrat ditandai dengan substrat pemilik, bukan diklaim. Sepuluh temuan lintas dimensi diinventarisasi dalam README kepatuhan (mis., amplop wire bertipe yang belum dipancarkan; keluarga detektor LensCore yang belum dikirimkan; kesenjangan pertimbangan ulang sumbu-terbalik).
+
+Annex C tetap ada dalam teks sebagai rumah masa depan pemetaan undang-undang (pasal-pasal EU AI Act, NIST AI RMF, ISO/IEC 42001) setelah tinjauan hukum selesai; direktori kepatuhan adalah pemetaan lintas regulasi yang **langsung dan berbasis bukti** hingga saat itu, dan memberikan masukannya.
+
+### 1.3 Format wire: CEG menggantikan FSD-002
+
+Format wire federasi untuk lini agen CIRIS 3.0 adalah **CEG (CIRIS Epistemic Grammar)**, yang dikelola di `CIRISRegistry/FSD/CEG/`. Tata bahasa ini dikunci pada **tepat lima primitif format wire** — satu primitif pekerja keras (`scores`) ditambah empat komposer struktural (`delegates_to` / `supersedes` / `withdraws` / `recants`) — di atas namespace dimensi terbuka dan deskriptif mekanisme. Penguncian ini telah berlaku di seluruh lini 0.x; setiap kenaikan versi telah berupa komposisi atas primitif yang sudah dikunci.
+
+Dua konsekuensi penting untuk kesiapan ASI:
+
+1. **Beralih ke CEG-native**: agen 3.0 tidak *memetakan* kondisi internalnya ke format wire — mutasi kondisi internalnya **adalah** atestasi CEG tingkat-diri di bawah kunci agen sendiri, yang dipromosikan ke visibilitas federasi per model tier. Bukti yang diaudit oleh operator adalah amplop yang sama yang dibaca oleh federasi. Ini adalah bentuk implementasi dari persyaratan Book IX bahwa permukaan kendala harus dapat direferensikan secara eksternal, bukan dilaporkan sendiri.
+2. **Empat implementasi menjadi gerbang CEG 1.0**: CIRISAgent (runtime), CIRISNodeCore (konsensus), CIRISLensCore (deteksi — saksi eksternal yang tidak pernah dipancarkan sendiri oleh agen, pemisahan anti-Goodhart), dan CIRISRegistry (otoritas). Tidak satu pihak pun — termasuk agen — dapat menyatakan jaringan verifikasi telah lengkap.
+
+### 1.4 Status persyaratan RC pada 1.3-RC1
+
+| Persyaratan RC | Status | Bukti / yang masih tertunggak |
+|---|---|---|
+| 1. Operasionalisasi Annex F–I | **Teks dioperasionalkan pada 1.3-RC1; validasi siklus-langsung masih tertunggak** | Annex F–I memuat prosedur lengkap, ambang batas, dan mekanisme validasi (diselesaikan dari draf berdasarkan *Magnifica Humanitas* Mei 2026); belum pernah dijalankan terhadap siklus deployment langsung |
+| 2. Validasi matematis Book IX | **Terpenuhi sebagian** | Dinamika Coherence-Collapse diformalisasi dalam Lean 4 (pracetak CCA v3, DOI 10.5281/zenodo.18217688); empiris koridor memberikan kecocokan lintas substrat retrospektif. Yang masih tertunggak: satu prediksi out-of-sample yang telah dipra-registrasi dalam substrat baru; tinjauan adversarial eksternal independen dari penulis |
+| 3. Justifikasi ambang batas | **Terpenuhi sebagian** | Rasio OMV dihentikan (dinyatakan ulang sebagai kendala sisi, Book II). Masih provisional: pemicu CRE 10²⁶ FLOP, heuristik sentience 5%, target Echo Density &lt; 20% |
+| 4. Latihan red-team | **Belum dilakukan** | Persyaratan σ-atestasi 1.3 (Book IX §5.2) secara preemptif menutup vektor serangan pertama yang diketahui (σ-pumping melalui sinyal Ungkapan Syukur bebas); siklus adversarial penuh terhadap semua titik pemeriksaan masih menjadi kewajiban |
+
+### 1.5 Lapisan Nurani sebagai kontrol kritis-ASI
+
+Protokol CRE Annex D mengatur *threshold crossing*; lapisan Nurani mengatur *setiap tindakan sebelum dan sesudahnya*. Sebagaimana diimplementasikan (agen 2.9.6): setiap pemikiran melewati tumpukan pemeriksaan berurutan berdasarkan prioritas — empat fakultas yang dinilai LLM (entropi, Koherensi, optimization-veto, Kerendahan Hati Epistemik) ditambah lantai keamanan deterministik (penghalang kedalaman pemikiran, pemeriksaan urutan tindakan) yang berjalan bahkan dalam mode benchmark dan bahkan untuk tindakan yang sebaliknya dikecualikan. Ambang batas adalah konstanta tingkat kode, bukan bobot yang dipelajari — invarian arsitektur bahwa etika tidak dapat dinormalisasi oleh paparan berulang. Beberapa permukaan penghentian independen ada: fail-safe-to-abort pada optimization-veto, layanan shutdown, dan Accord Invocation jarak jauh yang ditandatangani secara kriptografis yang memicu penguncian larangan penuh. Setiap pemeriksaan menulis baris jejak bertanda, sehingga auditor dapat memutar ulang rantai penalaran lengkap per pemikiran.
+
+Keterbatasan yang diketahui, dinyatakan daripada disembunyikan: refaktor Nurani (3 pecahan + gerbang deterministik) telah mendarat sebagian; emisi federasi bertipe dari putusan Nurani menunggu amplop Contribution substrat. Detail per dimensi: `compliance/D12_conscience.md`.
+
+### 1.6 Trajektori ketergantungan substrat
+
+Verifikasi tingkat ASI memerlukan jaringan federasi penuh. Trajektori substrat adalah **Persist → Edge → LensCore → NodeCore**; kira-kira sepertiga dari 27 dimensi bergantung pada keluarga detektor eksternal LensCore (saksi yang tidak boleh pernah dipasok oleh agen itu sendiri). Hingga substrat tersebut dikirimkan, klaim dimensi yang bersangkutan tetap *siap di sisi implementasi, tertunda di sisi federasi* — dan ditandai demikian per dimensi.
+
+### 1.7 Apa yang addendum ini ubah dan tidak ubah
+
+* Ini **tidak** meningkatkan klaim ASI dalam Scope — itu tetap bersyarat pada keempat persyaratan RC.
+* Ini **tidak** menggantikan Annex D — protokol CRE tetap tidak dimodifikasi sebagai gerbang threshold-crossing.
+* Ini **memang** membuat rantai bukti dapat diaudit secara menyeluruh untuk pertama kalinya: paragraf regulasi → dimensi (D01–D27) → implementasi `file:line` → baseline bertanggal → (seiring substrat mendarat) saksi federasi eksternal.
+* Ini **memang** mengharuskan Accord untuk memperbarui addendum ini di setiap versi dengan rilis agen dan baseline terkini saat itu, sehingga klaim kesiapan tidak pernah dapat kedaluwarsa secara diam-diam.
+
+---
+
+*Addenda sebelumnya: tidak ada. Ini adalah yang pertama.*

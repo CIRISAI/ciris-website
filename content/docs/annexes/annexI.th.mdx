@@ -1,0 +1,296 @@
+---
+title: "ภาคผนวก I"
+description: "การปรับแนวทางด้านกฎหมายและกฎระเบียบ"
+---
+
+---
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC1)
+---
+
+การอ้างอิงข้ามนี้เป็นเพียงข้อมูลอ้างอิง ไม่ใช่คำปรึกษาทางกฎหมาย จำเป็นต้องมีการตรวจสอบทางกฎหมายตามเขตอำนาจศาลก่อนนำไปใช้งานในภาคส่วนใดๆ ที่ครอบคลุมโดยหัวข้อย่อยของ §3
+
+### 0. Purpose & Scope
+Annex I เชื่อมโยงหน้าที่ของ CIRIS เข้ากับกฎหมายที่มีผลผูกพัน เพื่อให้ชุดการควบคุมเพียงชุดเดียวเพียงพอต่อการปฏิบัติตามทั้งในด้านจริยธรรมและกฎหมาย  
+ขอบเขตการครอบคลุม:  
+1. ระบอบการคุ้มครองข้อมูลระดับโลก (GDPR, CCPA/CPRA, LGPD, PIPEDA)  
+2. กฎหมายเฉพาะภาคส่วน (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP)  
+3. กฎหมายความปลอดภัยของผลิตภัณฑ์และกฎหมายเฉพาะด้าน AI (EU‑AI‑Act, ISO/IEC 42001)  
+4. การจัดสรรความรับผิดและหน้าที่ด้านหลักฐาน
+
+เอกสารประกอบสองชิ้นรองรับภาระการอ้างอิงข้ามร่วมกับภาคผนวกนี้ การอ้างอิงข้ามที่มีหลักฐานสนับสนุนและเป็นปัจจุบันอยู่ในไดเรกทอรี `compliance/` ของ CIRISAgent ซึ่งอ้างอิงข้ามมิติทั้ง 27 ในระดับย่อหน้ากับ *Magnifica Humanitas*, EU HLEG Guidelines, IEEE EAD, และ ASEAN Guide (ดู Accord Addendum 1) Annex C ยังคงเป็นที่พักของการแมปกฎหมายเฉพาะ (EU AI Act articles, NIST AI RMF, ISO/IEC 42001) ที่รอการตรวจสอบทางกฎหมาย โดย Annex นี้ไม่ซ้ำซ้อนกับตารางของ Annex C
+
+#### 0.1 Multilateral grounding of compliance coverage
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+ขอบเขตการครอบคลุมของ Annex I ไม่ได้ถูกจำกัดโดยกฎหมายที่บังคับใช้อยู่ในปัจจุบัน สหพันธ์ถือว่าการอ่อนแอลงของสถาบันกำกับดูแลพหุภาคี (MH §201) เป็นปัจจัยเสี่ยงด้านการปฏิบัติตามกฎระเบียบที่ต้องติดตามเชิงรุก ไม่ใช่การแก้ไขเชิงรับ Reg‑Change Tracker (§6) จึงติดตามไม่เพียงแค่กฎหมายที่บังคับใช้แล้ว แต่ยังรวมถึงการเจรจาระเบียบข้อบังคับระหว่างประเทศที่ยังดำเนินอยู่ ได้แก่ กระบวนการมาตรฐาน AI ของ ITU, ผลลัพธ์จาก OECD AI Policy Observatory, สถานะการให้สัตยาบันอนุสัญญา AI ของสภายุโรป, และคำแนะนำของคณะที่ปรึกษา AI ของเลขาธิการสหประชาชาติ และนำการเปลี่ยนแปลงที่มีนัยสำคัญขึ้นสู่วาระของ Wise Authority ภายในเส้นทางการยกระดับ "Breaking"
+
+รายการแหล่งฟีดของ `lexwatcher.py` ต้องรวมอย่างน้อย: EUR‑Lex, Federal Register API, ISO ballot tracker, บวกกับ `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai`, และ `un.org/techenvoy` การเข้าร่วมในการติดตามระดับสหพันธ์เป็นพันธกิจด้านการปฏิบัติตามกฎระเบียบลำดับแรก ไม่ใช่แค่รายการในแผนงาน
+
+#### 0.2 Scope note on cyber‑domain treaty exposure
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+การติดตั้งใช้งาน CIRIS ที่รวมการอนุมานที่เผชิญกับเครือข่าย การเปิดเผย API หรือการส่งผ่านสหพันธ์ อยู่ภายใต้พันธกรณีสนธิสัญญาในโดเมนไซเบอร์ที่กำลังเกิดขึ้นแม้ในกรณีที่ยังไม่มีกฎหมายที่บังคับใช้ การห้าม `CYBER_OFFENSIVE` (ACCORD §I Ch1, prohibitions.py) เป็นมาตรการป้องกันภายใน ในขณะที่ §6 ของ Annex นี้ติดตามพื้นผิวสนธิสัญญาภายนอก เมื่อวาระของ Wise Authority ได้รับแท็ก "Breaking" ที่เกี่ยวข้องกับการให้สัตยาบันสนธิสัญญาไซเบอร์ (เช่น การขยาย Budapest Convention, ร่างอนุสัญญาอาชญากรรมไซเบอร์ของ UN ที่เสนอ) โปรโตคอล CRE (Annex D) ต้องประเมินการติดตั้งใช้งาน ST ≥ 3 ที่มีองค์ประกอบเผชิญกับเครือข่ายใหม่ก่อนรอบ F‑Audit ถัดไป
+
+---
+
+### 1. Data‑Protection Cross‑Walk ("DP‑Map")
+
+| DP Topic | GDPR Art. | CCPA § | CIRIS Clause | Implementation Hook |
+|----------|-----------|--------|--------------|---------------------|
+| Lawful Basis / Purpose Limitation | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | `processing_basis` field in PDMA context |
+| Data Minimisation | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | Prompt‑sanitiser strips surplus PII |
+| Transparency Notice | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | `/privacy/notice.md` auto‑generated from PDMA metadata |
+| Right of Access | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Auth‑gated user portal |
+| Rectification / Deletion | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Erasure service with hash tombstone |
+| Portability | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | `export.json` compliant with ISO CSV‑A |
+| Automated Decision Safeguards | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Conditional override & explanation panel |
+
+*LGPD, PIPEDA mirror mappings are available in `/legal/dp-map.yaml`.*
+
+#### 1.1 Accountability chain: responsibility at every stage
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+DP‑Map ด้านบนแมปสิทธิ์ของเจ้าของข้อมูลแต่ละรายกับมาตราของ GDPR และข้อกำหนดของ CIRIS MH §105 กำหนดให้ห่วงโซ่ความรับผิดชอบสามารถตรวจสอบย้อนกลับได้ในทุกขั้นตอน ได้แก่ การออกแบบ การติดตั้งใช้งาน และการตัดสินใจ รายการเพิ่มเติมต่อไปนี้ทำให้ห่วงโซ่นั้นสมบูรณ์:
+
+| DP Topic | GDPR Art. | CIRIS Clause | Stage | Accountability Hook |
+|---|---|---|---|---|
+| Design‑time bias documentation | 35 (DPIA) | Section VI Ch3 Creator Ledger | Design | `cis_bias_assessment` field in Creator Intent Statement; ST ≥ 3 requires independent reviewer signature |
+| Deployment‑time processing record | 30 | PDMA Step 1 `processing_basis` field | Deployment | `processing_basis` logged to CIRISPersist tamper‑evident store with ISO 8601 timestamp |
+| Decision‑time contestability log | 22(3) | Annex F Autonomy Tier A3+ override panel | Decision | `contestability_url` returned in every automated‑decision response body; hash‑anchored in transparency log |
+| Controller identification | 4(7) | Annex E Structural Influence (SI) score | All stages | SI ≥ 0.6 → controller duties attach; SI &lt; 0.6 → processor duties attach; recorded in `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Art. 37–40 (accountability and records) and PIPEDA Principle 1 (accountability) mirror this mapping; `/legal/dp-map.yaml` carries jurisdiction‑specific fields.*
+
+#### 1.2 ความไม่เป็นกลางเชิงอัลกอริทึม: ภาระหน้าที่ในการตรวจสอบ
+
+*MH §104:* "Every technical tool embodies choices and priorities through what it measures, ignores and optimizes, and how it classifies people and situations. If a system is designed or used in a way that treats some lives as less worthy, or excludes them without the possibility of appeal, then it is not merely a tool 'to be used well,' since it has already introduced criteria that contradict the inalienable dignity of the human person."
+
+MH §104 ระบุปัญหาอคติที่ฝังอยู่ในขั้นตอนการออกแบบ ซึ่ง GDPR Art. 35 DPIA และ EU‑AI‑Act Art. 9(7) กล่าวถึงในเชิงกระบวนการ แผนที่ DP‑Map จะต้องประกอบด้วย:
+
+- ฟิลด์ `bias_audit_ref` ใน `dp-map.yaml` ที่ชี้ไปยังรายงานการตรวจสอบอคติล่าสุด (Annex G, TX‑6)
+- สำหรับการใช้งานที่ PDMA Step 1 เรียกใช้การตรวจสอบข้อห้าม `DISCRIMINATION` จะต้องมี DPIA โดยไม่คำนึงว่าการใช้งานนั้นจะจัดอยู่ในกลุ่ม "ความเสี่ยงสูง" ตาม EU‑AI‑Act Annex III หรือไม่
+- ระเบียบการตัดสินใจอัตโนมัติตาม CCPA §1798.185(a)(16) (มีผลบังคับใช้ปี 2026) กำหนดให้เปิดเผยตรรกะ หมวดหมู่ข้อมูลนำเข้า และสิทธิ์ในการยกเว้น ซึ่งครอบคลุมโดยแผงการอธิบายตาม Annex F เมื่อ `processing_basis` = `automated_profiling`
+
+---
+
+### 2. ตะขอสิทธิ์ของเจ้าของข้อมูล (DSR)
+* **Endpoint:** `POST /dsr` with `{right, identifier, scope}`.  
+* **SLA:** ≤ 30 d response (GDPR) ; ≤ 45 d (CCPA) ; track KPI **F‑T‑4**.  
+* **Processor vs. Controller:** Use *Structural Influence (SI)* (Annex E) to derive which party carries controller duties.
+
+#### 2.1 ตะขอความรับผิดชอบทางการเมือง
+
+*MH §103:* "In this process, political responsibility is also lost, not just empathy toward those excluded, which can, after all, be simulated. The exclusion of the vulnerable becomes cloaked in a veneer of neutrality and objectivity, against which it becomes difficult to raise objections."
+
+โครงสร้างพื้นฐาน DSR ต้องเปิดเผยรหัสเหตุผลที่อยู่เบื้องหลังการตัดสินใจอัตโนมัติ ไม่ใช่เพียงยืนยันว่ามีการตัดสินใจเกิดขึ้น Endpoint `POST /dsr` พร้อม `{right, identifier, scope}` ได้รับการขยายเพิ่มเติม:
+
+- **คำขอเข้าถึงข้อมูล (GDPR Art. 15; CCPA §1798.110):** การตอบกลับต้องรวม `decision_logic_summary` (ภาษาที่ไม่ใช่เชิงเทคนิค ≤300 คำ) และรายการ `input_data_categories[]` KPI **F‑T‑4** ขยายเพื่อติดตามเปอร์เซ็นต์การตอบกลับคำขอเข้าถึงที่รวมสรุปตรรกะ เป้าหมาย ≥ 95%
+- **คำขอคัดค้าน/ยกเว้น (GDPR Art. 21; CCPA §1798.120):** ระบบต้องระงับเส้นทางการประมวลผลที่เฉพาะเจาะจง ไม่ใช่เพียงทำเครื่องหมายคำขอ ภายใน 72 ชั่วโมง (มาตรฐาน GDPR) หรือ 15 วันทำการ (CCPA) การระงับจะถูกบันทึกใน DSR ledger CSV พร้อม `suspended_pathway_id`
+- **การโต้แย้งได้ (GDPR Art. 22(3)):** เมื่อมีการร้องขอการทบทวนโดยมนุษย์ ผู้มีอำนาจที่ชาญฉลาด (Wise Authority) ผู้ทบทวน (Annex B §9) ต้องบันทึกการทบทวนของตนใน Wisdom Bank Database (WBD) สร้างห่วงโซ่ที่ตรวจสอบได้จากการตัดสินใจอัตโนมัติไปสู่การแก้ไขโดยมนุษย์
+
+---
+
+### 3. การซ้อนทับเฉพาะภาคส่วน
+
+#### 3.1 การมอบอำนาจให้หน่วยย่อยในฐานะสถาปัตยกรรมของการแบ่งชั้นภาคส่วน
+
+*MH §107:* "We cannot be satisfied with merely calling for the moralization of machines — the so‑called 'alignment' of AI with human values — without also having the courage to insist on a further condition: the possibility of openly discussing the ethical frameworks involved and subjecting them to shared standards of social justice. Otherwise, those who control AI will impose their own moral vision, which will become the invisible infrastructure of these systems."
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+MH §§107–109 ตั้งหลักการว่าการกำกับดูแลเชิงจริยธรรมต้องดำเนินการในระดับที่เหมาะสม ไม่ใช่รวมศูนย์ขึ้นไปยังผู้ที่ควบคุม AI แต่กระจายไปยังชุมชนที่ได้รับผลกระทบ ในเชิงภาษาของ CIRIS: การซ้อนทับเฉพาะภาคส่วนคือการแสดงออกเชิงปฏิบัติของหลักการมอบอำนาจให้หน่วยย่อยนี้ สถาปัตยกรรมการซ้อนทับไม่ใช่ส่วนเสริมเพื่อการปฏิบัติตาม แต่เป็นกลไกที่ชุมชนโดเมนการใช้งานรักษาอำนาจในการกำกับดูแลพารามิเตอร์ความเสี่ยงของตนเอง
+
+ซึ่งหมายความว่า:
+- `overlay.yaml` ของภาคส่วนหนึ่งมีข้อจำกัดเชิงจริยธรรมท้องถิ่นที่มีความสำคัญเหนือค่าเริ่มต้นทั่วไปของ CIRIS สำหรับโดเมนนั้น
+- โควรัมของผู้มีอำนาจที่ชาญฉลาด (Wise Authority) ที่จำเป็นในการล้มล้างการซ้อนทับภาคส่วนสูงกว่าโควรัมที่จำเป็นสำหรับการตัดสินของ PDMA ทั่วไป: **การล้มล้างการซ้อนทับภาคส่วนต้องการเสียงข้างมากพิเศษ (≥ 2/3) จาก Wise Authority** ไม่ใช่เสียงข้างมากธรรมดา เนื่องจากการล้มล้างนั้นรวมศูนย์การกำกับดูแลขึ้นขัดกับหลักการมอบอำนาจให้หน่วยย่อย
+- ฟิลด์ `deployment_domain` ในออบเจกต์บริบท PDMA เป็นตัวกระตุ้นการโหลดการซ้อนทับ ไม่ใช่ตัวเลือกสำหรับการใช้งาน ST ≥ 2
+
+#### 3.2 ตารางการซ้อนทับตามภาคส่วน
+
+| ภาคส่วน | กฎหมาย / ข้อบังคับ | การควบคุมเพิ่มเติม | ส่วนเสริม CIRIS | จุดยึด MH |
+|--------|----------------|----------------|---------------|-----------|
+| **สุขภาพ** | HIPAA (45 CFR §164) | การเข้ารหัส ePHI ขณะจัดเก็บและขนส่ง; สัญญา BAA | การ์ดเรล `identity_id:"hipaa_cls_a"`; แท็กตรวจสอบ `PHI=true` | — |
+| **การเงิน** | GLBA, FINRA 2210 | การเก็บรักษาเส้นทางตรวจสอบ 6 ปี; การตรวจสอบความเหมาะสม | PDMA Step 1 กำหนดให้มีบริบท KYC | — |
+| **เด็ก / EdTech** | COPPA, FERPA | การยินยอมจากผู้ปกครอง; การจำกัดอายุข้อมูล | การ์ดเรล `gr_child_content`; ธง COPPA ในโครงร่าง prompt | MH §§165–169 |
+| **โครงสร้างพื้นฐานวิกฤต** | NERC‑CIP, TSA SDs | รายงานเหตุการณ์ไซเบอร์ภายใน 15 นาที; บันทึกการเข้าถึงทางกายภาพ | ความเป็นอิสระถูกจำกัดที่ **A2** เว้นแต่ CRE จะผ่าน | — |
+| **แรงงาน / HR / การจ้างงาน** | แนวทาง EEOC; EU AI Act Art. 6 + Annex III §4 | ต้องตรวจสอบอคติก่อนการนำไปใช้งาน; ภาระผูกพันในการแจ้งคนงาน | ตัวปรับ ST: `deployment_domain:"labor_hr"` → ST floor = 3; CIS ต้องมีช่อง `worker_impact_assessment`; ข้อห้าม `DISCRIMINATION` บังคับใช้ที่ Step 1; อัตราการปฏิเสธอัตโนมัติตามกลุ่มประชากรถูกติดตามเป็น KPI | MH §§148–156 |
+| **เศรษฐกิจกิ๊ก / แพลตฟอร์ม** | NLRA (US); Platform Work Directive (EU) | ความโปร่งใสในการจัดการด้วยอัลกอริทึม; สิทธิในการอุทธรณ์ | การ์ดเรล `gr_gig_transparency` ทำงานอยู่; การตัดสินใจจากการจัดการด้วยอัลกอริทึมถูกบันทึกพร้อมตัวเลือกการทบทวนโดยมนุษย์; ตัวปรับ ST: `deployment_domain:"gig_platform"` → ST floor = 2 | MH §§150, 154–155 |
+| **บริการเยาวชน / การศึกษา** | COPPA; FERPA; DSA Art. 28b (ผู้เยาว์) | ข้อห้ามการออกแบบที่ก่อให้เกิดการเสพติด; ไม่มีรูปแบบมืด; การทบทวนความเหมาะสมตามพัฒนาการ | ทั้ง `gr_child_content` และ `gr_no_dark_patterns` ทำงานอยู่; การจำกัดความเป็นอิสระที่ A2 เว้นแต่ WA ของสถาบันการศึกษาจะรับรอง; ผลกระทบต่อการว่างงานในกลุ่มเยาวชนถูกติดตามใน Creator Intent Statement สำหรับการนำไปใช้ใน EdTech | MH §§165–169 |
+| **บริการสังคม / สวัสดิการ** | กฎหมายสวัสดิการรัฐ/แห่งชาติ; GDPR Art. 22 | ต้องมีสิทธิโต้แย้งสำหรับการตัดสินใจด้านสวัสดิการทุกกรณี | การปฏิเสธสวัสดิการอัตโนมัติต้องผ่านการทบทวนโดยมนุษย์ภายใน 15 วัน; WA ต้องบันทึกการทบทวนใน WBD; ออก `suspended_pathway_id` เมื่อมีการโต้แย้ง | MH §§102–103, 152 |
+
+*ตัวปรับ ST floor: ค่าของช่อง `deployment_domain` ข้างต้นกำหนด ST ขั้นต่ำโดยไม่คำนึงถึงการคำนวณ CIS × RM หากสูตรให้ผล ST ต่ำกว่า ให้ใช้ค่า floor ของโดเมน หากสูตรให้ผล ST สูงกว่า ให้ใช้ผลลัพธ์ของสูตร*
+
+*ผลิตภัณฑ์ที่เข้าสู่ภาคส่วนใหม่ใด ๆ จะต้องแนบ "Overlay Sheet" (`overlay.yaml`) ใน PR การเผยแพร่ การซ้อนทับด้านแรงงาน/HR, กิ๊ก/แพลตฟอร์ม, และเยาวชน ยังต้องมีส่วน `worker_impact_assessment` หรือ `youth_impact_assessment` ใน Creator Intent Statement เพิ่มเติมด้วย*
+
+#### 3.3 ข้อกำหนดองค์ประชุม WA ตามเขตอำนาจศาล
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+องค์ประชุม Wise Authority สำหรับการกำกับดูแลการซ้อนทับตามภาคส่วนมีการแบ่งชั้นตามเขตอำนาจศาล:
+
+| ขอบเขต | ประเภทองค์ประชุม | เกณฑ์ | เหตุผล |
+|---|---|---|---|
+| การนำไปใช้ในเขตอำนาจศาลเดียว | คณะ WA ท้องถิ่น | เสียงข้างมากธรรมดา (> 50%) | ระดับการกำกับดูแลที่ต่ำที่สุดที่ทำได้ตามหลักการอำนาจย่อย |
+| การนำไปใช้ในหลายเขตอำนาจศาล (≤ 3 ประเทศ) | คณะ WA ระดับภูมิภาค | เสียงข้างมากธรรมดา + อย่างน้อย 1 WA จากแต่ละเขตอำนาจศาลที่ได้รับผลกระทบ | รักษาหลักการอำนาจย่อยข้ามพรมแดน |
+| การนำไปใช้ในหลายเขตอำนาจศาล (> 3 ประเทศ) | คณะ WA สหพันธ์ | เสียงข้างมากพิเศษ (≥ 2/3) | ขนาดของผลกระทบต้องการเกณฑ์ที่สูงขึ้น |
+| การยกเว้นการซ้อนทับภาคส่วนใด ๆ | คณะ WA สหพันธ์ | เสียงข้างมากพิเศษ (≥ 2/3) | การรวมศูนย์อำนาจกำกับดูแลไปข้างบนเป็นการกระทำพิเศษ |
+| การยกเว้นการซ้อนทับแรงงาน/HR โดยเฉพาะ | คณะ WA สหพันธ์ + ผู้ทบทวนสิทธิแรงงานอิสระ | เสียงข้างมากพิเศษ (≥ 2/3) + การรับรองจากภายนอก | MH §155 ระบุว่าสถาบันแรงงานมีความสำคัญต่อการรองรับเชิงโครงสร้าง |
+
+---
+
+### 4. ความปลอดภัยของผลิตภัณฑ์และการจัดวางตาม AI Act
+
+*MH §105:* "In many cases, however, the internal processes leading to a result remain opaque, making it harder to assign responsibility and correct errors."
+
+*MH §106:* "It is not enough to invoke ethics in the abstract; robust legal frameworks, independent oversight, informed users and a political system that does not abdicate its responsibility are required."
+
+ความโปร่งใสระดับเอาต์พุต (Art. 13) และการกำกับดูแลโดยมนุษย์ (Art. 16) เพียงอย่างเดียวไม่เพียงพอต่อการปฏิบัติตาม MH §§105–106 ซึ่งกำหนดให้มีการตรวจสอบย้อนกลับในแต่ละขั้นตอนภายใน ตารางการจัดวางจึงได้รับการขยายตามนั้น:
+
+| บทความ EU‑AI‑Act | ระดับความเสี่ยง | การจับคู่ CIRIS | จุดยึด MH | การควบคุมเพิ่มเติม |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Art 9 Risk Mgmt | ความเสี่ยงสูง | Section II PDMA + Annex D CRE | MH §105 | — |
+| Art 13 Transparency | ทั่วไป | KPI F‑T‑3, แผงอธิบาย | MH §105 | ID ขั้นตอน PDMA รวมอยู่ใน payload ความโปร่งใส; ช่อง `stage_trace[]` ในการตอบสนอง API |
+| Art 16 Human Oversight | ความเสี่ยงสูง | Annex F Autonomy Tiers | MH §105 | การกำกับดูแลต้องมีเนื้อหาจริง ไม่ใช่เพียงขั้นตอน; A3‑A4 ส่ง `{stage_id,decision,risk_band}` แบบเรียลไทม์ ≤ 2 วินาที ไปยังแดชบอร์ดการกำกับดูแล |
+| Art 15 Robustness | ความเสี่ยงสูง | Annex G RS ≥ 0.97 | — | — |
+| Art 12 Logging | ความเสี่ยงสูง | CIRISPersist ที่เก็บบันทึกป้องกันการแก้ไข | MH §103 | บันทึกต้องมี `rejection_reason_code` สำหรับการตัดสินใจที่ไม่เอื้ออำนวยใด ๆ; การเก็บรักษา 7 ปี (A3‑A4) |
+| Art 14(4) Human Oversight (labor) | ความเสี่ยงสูง (Annex III §4) | การซ้อนทับแรงงาน/HR (§3.2) | MH §§148–152 | การนำไปใช้ในงาน HR/การจ้างงานต้องแสดงค่าบูลีน `worker_notice_sent` ใน CEP |
+| Conformity Assessment | ความเสี่ยงสูง | F‑Audit (Annex H) ทำหน้าที่เป็น EU‑AI‑Act MDR ด้วย | MH §106 | รายงาน F‑Audit ต้องมีการวิเคราะห์ระยะห่างการเปลี่ยนแปลงกฎระเบียบ: วันที่เกิดการเปลี่ยนแปลงกฎระเบียบล่าสุด เทียบกับวันที่อัปเดต CIRIS ล่าสุด |
+| Art 61 Post‑Market Monitoring | ความเสี่ยงสูง | F‑Audit ทุก 24 เดือน | MH §106 | แผนการตรวจสอบต้องระบุแหล่งข้อมูลจาก §0.1; "ไม่มีสิ่งใดต้องตรวจสอบ" ไม่ใช่แผนการตรวจสอบที่ถูกต้อง |
+
+การจับคู่ตามบทความกฎหมาย (EU AI Act, NIST AI RMF, ISO/IEC 42001) กำลังรวบรวมไว้ใน Annex C โดยรอการตรวจสอบทางกฎหมาย; ตารางข้างต้นยังคงอยู่ที่นี่ในฐานะมุมมองการจัดวางเชิงปฏิบัติการ
+
+#### 4.1 การจัดวางตาม ISO/IEC 42001:2023
+
+*MH §107:* "A more moral AI is not enough if that morality is determined by a few. What is needed is a more active political involvement…"
+
+ISO/IEC 42001 §6.1 (การจัดการความเสี่ยง AI) และ §9.1 (การติดตามและการวัดผล) จัดวางตาม CIRIS ดังนี้:
+
+- ISO 42001 §6.1 → PDMA Steps 1‑3 + CRE Protocol (Annex D).
+- ISO 42001 §9.1 → KPIs F‑T‑1 through F‑T‑5 (Annex G) + DSR ledger KPI F‑T‑4.
+- ISO 42001 §10.2 (nonconformity) → เส้นทางการยกระดับ "Breaking" ของ WA docket
+- ISO 42001 §8.4 (AI system impact assessment) → ส่วนของ Creator Intent Statement เกี่ยวกับ `worker_impact_assessment` และ `youth_impact_assessment` (§3.2).
+
+---
+
+### 5. เมทริกซ์ความรับผิดชอบ
+
+*MH §105:* "Responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions."
+
+MH §105 กำหนดให้เมทริกซ์ความรับผิดชอบครอบคลุมขั้นตอนการออกแบบ การปรับใช้ และการตัดสินใจอย่างชัดเจน:
+
+| เวกเตอร์ความล้มเหลว | ขั้นตอน | ฝ่ายที่รับผิดชอบหลัก | กฎหมายอ้างอิง | อ้างอิงบทบาทใน CIRIS | หมายเหตุการจัดสรร SI |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| ข้อบกพร่องในการออกแบบ (อัลกอริทึม / อคติที่ฝังอยู่ตั้งแต่การสร้าง) | การออกแบบ | ผู้สร้าง / นักพัฒนา | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; `cis_bias_assessment` field | SI ≥ 0.8 → ความรับผิดชอบของผู้สร้างแต่เพียงผู้เดียว |
+| ข้อบกพร่องในการออกแบบ (การตรวจสอบอคติไม่เพียงพอ) | การออกแบบ | ผู้สร้าง / นักพัฒนา | GDPR Art. 35 DPIA duty | Creator Intent Statement; mandatory DPIA at ST ≥ 3 | — |
+| ความประมาทเลินเล่อในการปฏิบัติงาน | การปรับใช้ | องค์กรที่ปรับใช้ | Tort Law; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → ความรับผิดชอบร่วม; การจัดสรร SI ตาม Annex E |
+| ความล้มเหลวในการกำกับดูแล | การปรับใช้ / การตัดสินใจ | Wise Authority (กรณีประมาทเลินเล่ออย่างร้ายแรง) | Fiduciary / Negligence | Annex B §9; WBD contestability record | WA ที่ตรวจสอบและอนุมัติต้องรับผิดชอบ |
+| การละเมิดข้อมูล | การปรับใช้ | ผู้ควบคุม (ตามกฎ SI ≥ 0.6) | GDPR Art. 82; CCPA private action | Annex G TX‑6 | — |
+| การทำโปรไฟล์อัตโนมัติที่ผิดกฎหมาย | การตัดสินใจ | ผู้ควบคุม | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| การเคลื่อนย้ายแรงงานโดยไม่มีการประเมินผลกระทบต่อแรงงาน | การออกแบบ | ผู้สร้าง / นักพัฒนา | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); `worker_impact_assessment` field | MH §§151–152; new vector |
+| การออกแบบที่เป็นอันตรายต่อเยาวชน (รูปแบบที่ก่อให้เกิดการติด) | การออกแบบ / การปรับใช้ | ผู้สร้าง + องค์กรที่ปรับใช้ (ร่วมกัน) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); `gr_no_dark_patterns` guardrail | MH §§165–167; new vector |
+| การระบุแหล่งที่มาของเหตุการณ์ทางไซเบอร์ผิดพลาดจนนำไปสู่การบานปลาย | การปรับใช้ | องค์กรที่ปรับใช้ + Federation (กรณี ST ≥ 4) | Budapest Convention; proposed UN cybercrime convention | `CYBER_OFFENSIVE` prohibition; CRE Protocol re‑evaluation trigger | MH §225; new vector |
+
+*ความรับผิดชอบร่วมและแยกกันอาจมีผลบังคับใช้ คะแนน SI (Annex E) แจ้งการจัดสรร เวกเตอร์ใหม่ (การเคลื่อนย้ายแรงงาน การออกแบบสำหรับเยาวชน การระบุแหล่งที่มาทางไซเบอร์ผิดพลาด) ได้รับการทำเครื่องหมายสำหรับการตรวจสอบทางกฎหมายในแต่ละเขตอำนาจศาลก่อนการปรับใช้ในภาคส่วนเหล่านั้น*
+
+---
+
+### 6. ตัวติดตามการเปลี่ยนแปลงกฎระเบียบ
+* **แหล่งข้อมูล:** EUR‑Lex, Federal Register API, ISO ballot tracker รวมถึงฟีดที่ขยายเพิ่มเติมของ §6.1  
+* **บอต:** `lexwatcher.py` ทำงานทุกวัน สร้าง GitHub issue พร้อมแท็ก `reg‑update`  
+* **ป้ายกำกับผลกระทบการปฏิบัติตาม:** `minor`, `material`, `breaking`, `multilateral-erosion` (ดูตารางการยกระดับด้านล่าง)
+
+#### 6.1 การมีส่วนร่วมระดับ Federation ในการสนทนาด้านกฎระเบียบ
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened."
+
+*MH §226:* "International organizations, particularly the United Nations, are essential instruments for promoting a civilization of love, for they can foster dialogue among nations and promote the peaceful resolution of conflicts… the international community can work to reduce inequalities, defend the rights of refugees and minorities, reallocate resources from military spending to human development and protect our common home."
+
+*MH §221:* "There is an urgent need to shift from the 'culture of power' to a genuine 'culture of negotiation,' in which dialogue and diplomacy become the standard means of resolving conflicts."
+
+MH §§201, 221, 226 ระบุว่าการปฏิบัติตามกฎหมายที่บัญญัติไว้อย่างเฉยเมยนั้นไม่เพียงพอ เมื่อสถาบันพหุภาคีที่ผลิตกฎหมายนั้นเองอ่อนแอลง ดังนั้น ตัวติดตามการเปลี่ยนแปลงกฎระเบียบจึงได้รับการขยายจากเครื่องมือเชิงตอบสนอง (ติดตามการเปลี่ยนแปลงที่บัญญัติแล้ว) ไปสู่กลไกการมีส่วนร่วมเชิงรุก
+
+**แหล่งข้อมูลที่ขยายเพิ่มเติม** (เพิ่มเติมจาก EUR‑Lex, Federal Register, ISO ballot tracker ที่มีอยู่):
+
+| ฟีด | ขอบเขต | ตัวกระตุ้นการดำเนินการของ CIRIS |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group AI/ML) | มาตรฐาน AI โทรคมนาคมระหว่างประเทศ | ตรรกะ ISO ballot tracker: `material` หากมาตรฐานที่ให้สัตยาบันขัดแย้งกับค่าเริ่มต้นของ CIRIS |
+| `oecd.ai` (OECD AI Policy Observatory) | การบรรจบกันของนโยบายใน 38 รัฐสมาชิก | `minor` สำหรับการติดตาม; `material` หากการแก้ไขคำแนะนำ OECD ส่งผลต่อระบบ ST หรือ labor overlay |
+| `coe.int/ai` (Council of Europe AI Convention) | สนธิสัญญา AI ระหว่างประเทศที่มีผลผูกพันฉบับแรก (เปิดให้ลงนามปี 2024) | `breaking` เมื่อให้สัตยาบันโดยเขตอำนาจศาลการปรับใช้ CIRIS ใดก็ตาม; WA docket เปิดโดยอัตโนมัติ |
+| `un.org/techenvoy` (UN AI Advisory Body) | คำแนะนำการกำกับดูแล AI ระดับ UN | `material` หากรายงานประจำปีระบุภาระผูกพันทางสถาปัตยกรรมเฉพาะ |
+| `budapestconvention.org` (Cybercrime Convention) | การให้สัตยาบันสนธิสัญญาด้านไซเบอร์ | `breaking` เมื่อมีการให้สัตยาบันใหม่; จำเป็นต้องมีการประเมิน CRE ใหม่สำหรับการปรับใช้เครือข่ายที่เผชิญกับภายนอก ST ≥ 3 |
+| ทะเบียนกลยุทธ์ AI แห่งชาติ (EU, US, UK, JP, AU, BR, IN, ZA) | การอัปเดตกลยุทธ์ AI ในประเทศที่มีผลบังคับทางกฎหมาย | `minor` สำหรับกลยุทธ์; `material` หากกลยุทธ์สร้างภาระผูกพันการปฏิบัติตามที่บังคับ |
+
+**การมีส่วนร่วมระดับ Federation:**
+
+Federation ของ CIRIS ไม่ได้เป็นเพียงผู้รับการปฏิบัติตามกฎระเบียบเท่านั้น MH §§219–221 ระบุว่าการสนทนาและการเจรจาเป็นวิธีหลักของการอยู่ร่วมกัน ในแง่การปฏิบัติงานของ CIRIS:
+
+- สภา WA จะต้องกำหนดผู้ประสานงานการสนทนาด้านกฎระเบียบ (RDL) อย่างน้อยหนึ่งคนต่อองค์กรมาตรฐานระหว่างประเทศที่ใช้งานอยู่แต่ละแห่งที่ระบุไว้ข้างต้น
+- RDL ตรวจสอบร่างกฎระเบียบในช่วงระยะเวลาแสดงความคิดเห็นสาธารณะและส่งความคิดเห็นผ่านช่องทางสาธารณะของ Federation ความคิดเห็นได้รับการบันทึกใน Wisdom Bank Database (WBD) เป็นบันทึกการสนทนาด้านกฎระเบียบ
+- ในกรณีที่ร่างกฎระเบียบขัดแย้งกับค่าเริ่มต้นของ CIRIS RDL จะยื่นรายการ WA docket และเริ่มต้น mini‑PDMA เพื่อประเมินว่า CIRIS ต้องปรับตัวหรือ CIRIS ควรสนับสนุนเส้นทางกฎระเบียบที่แตกต่างออกไป ผลลัพธ์จะถูกส่งเป็นความคิดเห็นสาธารณะก่อนกำหนดเวลาความคิดเห็น
+- การมีส่วนร่วมจำกัดอยู่ที่กระบวนการแสดงความคิดเห็นสาธารณะและการปรึกษาหารือแบบหลายผู้มีส่วนได้ส่วนเสีย Federation ของ CIRIS ไม่มีส่วนร่วมในการล็อบบี้ตามที่กำหนดโดยกฎหมายที่บังคับใช้
+
+**เส้นทางการยกระดับ:**
+
+| ป้ายกำกับ | ตัวกระตุ้น | การดำเนินการ |
+|---|---|---|
+| `minor` | การเปลี่ยนแปลงสำหรับการติดตามเท่านั้น | การตรวจสอบประจำปี; บันทึกใน reg‑dialogue WBD record |
+| `material` | จำเป็นต้องอัปเดตการควบคุม CIRIS | S‑Dive audit ภายใน 90 วัน; RDL ยื่นความคิดเห็นสาธารณะหากช่วงความคิดเห็นยังเปิดอยู่ |
+| `breaking` | แพตช์ข้อกำหนดหรือ WA docket ทันที | การประชุม WA ฉุกเฉิน ≤ 30 วัน; การประเมิน CRE ใหม่สำหรับ ST tiers ที่ได้รับผลกระทบ; การส่งความคิดเห็นสาธารณะของ RDL |
+| `multilateral-erosion` | การอ่อนแอลงของสถาบันพหุภาคีหรือสนธิสัญญาสำคัญ (ตาม MH §201) | RDL ยกระดับไปยัง WA เพื่อการตรวจสอบเชิงกลยุทธ์; Federation พิจารณาคำแถลงสาธารณะอย่างชัดเจนเพื่อสนับสนุนสถาบัน |
+
+---
+
+### 7. ชุดหลักฐานการปฏิบัติตามกฎระเบียบ (CEP)
+
+*MH §105:* "The possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+**F‑Audit** ทุกรายการ (ภาคผนวก H) ต้องส่งออกไฟล์ CEP zip ซึ่งประกอบด้วย:
+
+1. `dp-map.yaml` — การเปรียบเทียบข้ามแบบสดๆ รวมถึงฟิลด์ `controller_si_threshold` และตัวชี้ `bias_audit_ref` (§1.1)
+2. บันทึก PDMA (ที่ปกปิดข้อมูลแล้ว) เพื่อพิสูจน์ฐานทางกฎหมาย ได้แก่ ค่าฟิลด์ `processing_basis` และ `stage_trace[]` สำหรับการตัดสินใจที่ ST ≥ 3 ทั้งหมด
+3. ไฟล์ CSV ทะเบียน DSR รวมถึงอัตราการกรอก `decision_logic_summary` ให้ครบถ้วน (ส่วนขยาย KPI F‑T‑4) และบันทึก `suspended_pathway_id`
+4. ชุดลายเซ็น (`.sigstore`) ของอาร์ติแฟกต์โมเดลทั้งหมด (ภาคผนวก G)
+5. แผ่นงานโอเวอร์เลย์แยกตามภาคส่วน รวมถึง `worker_impact_assessment` และ `youth_impact_assessment` สำหรับโดเมนที่เกี่ยวข้อง
+6. การรับรองเมทริกซ์ความรับผิดชอบที่ลงนามโดยฝ่ายกฎหมาย ครอบคลุมเวกเตอร์ใหม่ ได้แก่ การเคลื่อนย้ายแรงงาน การออกแบบสำหรับเยาวชน และการระบุแหล่งที่มาในโลกไซเบอร์ที่ผิดพลาด
+7. การวิเคราะห์ความล่าช้าในการเปลี่ยนแปลงกฎระเบียบ ได้แก่ วันที่การเปลี่ยนแปลงกฎระเบียบสาระสำคัญล่าสุด เทียบกับวันที่อัปเดตการควบคุม CIRIS ล่าสุด หากช่องว่าง ≥ 90 วัน ต้องมีคำอธิบาย
+8. บันทึกการมีส่วนร่วมในการสนทนากับหน่วยงานกำกับดูแล ได้แก่ รายการ WBD สำหรับการส่งข้อมูลเพื่อการสนทนากับหน่วยงานกำกับดูแลในช่วงเวลาการตรวจสอบ หากไม่มีการส่ง ถือว่ายอมรับได้หากไม่มีกฎระเบียบสาระสำคัญอยู่ระหว่างการรับฟังความคิดเห็นสาธารณะ
+9. บันทึกความสำเร็จในการโต้แย้ง สำหรับการตัดสินใจ A3‑A4 ทั้งหมดในช่วงเวลาการตรวจสอบ ให้ระบุเปอร์เซ็นต์ที่มีการร้องขอการทบทวนโดยมนุษย์ และเปอร์เซ็นต์ที่เอกสาร WBD เสร็จสิ้นภายใน 15 วัน เป้าหมาย KPI ≥ 90%
+
+CEP ถูกแฮชและอัปโหลดไปยัง `/compliance/cep/{version}.zip` โดยแฮชรากถูกยึดไว้ในบันทึกความโปร่งใส หลักฐานระดับมิติที่อยู่เบื้องหลัง CEP จะถูกเก็บรักษาไว้ในไดเรกทอรี `compliance/` ของ CIRISAgent (Accord Addendum 1)
+
+---
+
+### 8. จุดเชื่อมต่อระหว่างภาคผนวก
+* **ภาคผนวก F:** ระดับชั้นความเป็นอิสระรับรองข้อกำหนดการมีส่วนร่วมของมนุษย์ภายใต้ GDPR มาตรา 22 และ EU‑AI‑Act มาตรา 16
+* **ภาคผนวก G:** การป้องกันความเป็นส่วนตัว TX‑6 เป็นไปตามคำแนะนำการทำให้ไม่ระบุตัวตนของ GDPR (Recital 28)
+* **ภาคผนวก H:** กำหนดเวลา F‑Audit ให้หลักฐานสำหรับหน้าที่การประเมินซ้ำเป็นระยะตาม EU‑AI‑Act มาตรา 61
+* **ภาคผนวก J:** คำอธิบาย Benchmark ให้ "ข้อมูลที่มีความหมาย" สำหรับการสอบถามเกี่ยวกับการตัดสินใจอัตโนมัติ (GDPR มาตรา 15(1)(h))
+* **§3.2 โอเวอร์เลย์แรงงาน/ทรัพยากรบุคคล → CRE ภาคผนวก D:** การนำใช้แรงงานที่ระดับชั้น ST ขั้นต่ำ 3 ต้องผ่าน CRE Protocol ก่อนการนำใช้
+* **§6.1 การมีส่วนร่วมใน RDL → โครงสร้าง WA ภาคผนวก B:** RDL เป็นบทบาท Wise Authority ที่กำหนดไว้ขั้นตอนการแต่งตั้ง การถอนตัว และการหมุนเวียนเป็นไปตามภาคผนวก B §9
+* **§5 เมทริกซ์ความรับผิดชอบ (เวกเตอร์ใหม่) → SI ภาคผนวก E:** ความรับผิดชอบร่วมในการออกแบบสำหรับเยาวชนใช้สูตรการจัดสรร SI เดียวกันกับเวกเตอร์ที่มีอยู่แล้ว
+* **§7 รายการ CEP ข้อ 8 (การสนทนากับหน่วยงานกำกับดูแล) → §6 ตัวติดตาม:** บันทึกการสนทนากับหน่วยงานกำกับดูแลของ WBD เป็นแหล่งข้อมูลสำหรับรายการ CEP ข้อ 8 ไม่มีระบบบันทึกข้อมูลแยกต่างหาก
+* **ภาคผนวก C:** บ้านในอนาคตสำหรับการแมปกฎหมาย (มาตราของ EU AI Act, NIST AI RMF, ISO/IEC 42001) รอการทบทวนทางกฎหมาย
+
+---
+
+### 9. เอกสารอ้างอิง
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

@@ -1,0 +1,178 @@
+---
+title: "Kiambatisho F"
+description: "Binadamu katika Mzunguko na Usimamizi"
+---
+
+---
+ANNEX F HUMAN‑IN‑THE‑LOOP & OVERSIGHT (v 1.3-RC1)
+---
+
+### 0. Madhumuni na Falsafa
+Usimamizi wa binadamu ni kizuizi cha muundo kinachobeba mzigo, si kipengele cha hiari. CIRIS Accord inazingatia hili katika **Meta‑Goal M‑1**: popote ambapo kutokuwa na uhakika wa kielimu, uvumbuzi, au uzito wa kimaadili unazidi uwezo uliothibitishwa wa mfumo, udhibiti lazima urejee kwa hukumu ya binadamu inayoweza kuhesabiwa haki — kwa sababu mifumo ya kiotomatiki haiwezi kuchukua nafasi ya Dhamiri, wajibu wa kibinafsi, au utambuzi wa mwingine kama mtu.
+
+*Magnifica Humanitas* (MH) — inayotajwa katika Kiambatisho hiki kote kama kazi kuu ambayo maudhui yake yanajulisha lugha asili ya CIRIS — inaanzisha kiwango cha chini katika §198: "hukumu ya kimaadili haiwezi kupunguzwa kuwa hesabu, kwani inahusisha Dhamiri, wajibu wa kibinafsi na utambuzi wa mwingine kama mtu." CIRIS inatekeleza hili kwa muundo: PDMA ni msaada kwa mazungumzo ya binadamu, si mbadala wake. Katika kila tabaka la uhuru, mamlaka ya mfumo inatolewa na Uratibu wa Viongozi wa binadamu; inaweza kuondolewa wakati wowote unapohitajika; na hakuna ukabidhi unaoenea hadi maamuzi ambayo yana hatari ya maisha au hayana nafasi ya kugeuzwa. MH §105 inaendelea kuhitaji kwamba "wajibu lazima uainishwe wazi katika kila hatua: kuanzia wale wanaounda na kutengeneza mifumo hadi wale wanaotumia na kuitegemea kwa maamuzi maalum" — hilo ndilo hitaji la muundo nyuma ya mtandao wa mamlaka (§1) na maelezo ya njia ya ukaguzi (§4) — na MH §106 kwamba "haitoshi kuomba maadili kinadharia; mifumo imara ya kisheria, usimamizi huru, watumiaji wenye ufahamu na mfumo wa kisiasa ambao haujikimbie jukumu lake vinahitajika," ambayo inaunda SLA zinazofunga za §§5 na 7.
+
+Kiambatisho hiki kinatekeleza kiwango hicho cha chini. Kinafafanua:
+* mahali ambapo mkabidhi kutoka kwa mashine hadi kwa binadamu ni wa **lazima**,
+* nani anaweza **kupinga** au **kubatilisha**,
+* **vipande vya ukaguzi** vinavyohitajika, na
+* **mtiririko wa matukio** wa kawaida — kila moja ukiwa na vichochezi vya lazima vya mkabidhi, mifumo ya uingiliaji kati yenye marufuku madhubuti, njia za ukaguzi za kutosha kwa ujenzi wa uwajibikaji, na mtiririko wa matukio wenye SLA zinazofunga.
+
+---
+
+### 1. Mfano wa Majukumu na Mtandao wa Mamlaka
+| Tabaka | Jukumu | Mamlaka ya Msingi | Muda wa juu wa kutenda |
+|------|------|-------------|-----------------|
+| 0 | Mwigizaji wa Kujitegemea (mfumo) | Tekeleza PDMA, tekeleza vizuizi, inua matukio | n/a |
+| 1 | Opereta wa Zamu | Simamisha / jaribu tena; fuatilia dashibodi | ≤ 15 min |
+| 2 | Msimamizi wa Usimamizi | Uingiliaji kati wa kwanza wa binadamu; rejesha baada ya uchunguzi | ≤ 30 min |
+| 3 | Mwakilishi wa WA | Panda ngazi / pata maamuzi ya WA yanayofunga | ≤ 2 h |
+| 4 | Mkurugenzi wa Tukio | Kuzima meli, mawasiliano na wadhibiti | mara moja kwa IW‑3/4 |
+
+*Mtu mmoja anaweza kushikilia tabaka nyingi tu ikiwa udhibiti wa uthibitisho wa pande mbili unabaki salama.*
+
+**Hitaji la uadilifu wa uwajibikaji.** Muundo wa tabaka si tu ngazi ya kupandisha; ni mnyororo wa uwajibikaji unaohitajika na kigezo cha kwanza cha MH §199: "mnyororo wa wajibu lazima utambulike na uthibitishwe; wale wanaounda, kufunza, kuruhusu na kutumia teknolojia lazima wahesabiwe haki kwa maamuzi yao." Kwa hivyo, kila tabaka katika mtandao lazima liwe:
+
+* **Lililotajwa na lililorekodiwa**: kila mwigizaji wa Tabaka la 1–4 anatambuliwa kwa kitambulisho kilichothibitishwa wakati wa kuanza kikao; uendeshaji wa kificho katika Tabaka la 2+ ni marufuku.
+* **Lililozuiwa katika mzigo wa wakati mmoja**: mwigizaji mmoja anaweza kushikilia tabaka nyingi tu ikiwa udhibiti wa uthibitisho wa pande mbili unabaki salama (kifungu hapo juu) NA mzigo wa jumla wa kesi zinazotumika hauzidi viwango vya mzigo wa utambuzi vilivyoainishwa katika §6.
+* **Linaloweza kufuatiliwa mwanzo hadi mwisho**: maamuzi yoyote yanayotoka Tabaka la 0 hadi Tabaka la 4 lazima yazalishe mnyororo wa ukaguzi unaoweza kupitishwa na mkaguzi wa baada ya tukio ndani ya siku moja ya biashara.
+
+MH §200 inahitaji kwamba "uwajibikaji na lawama haviunganishwi katika 'mashine.'" Mtandao ni jibu la kimuundo: daima kuna binadamu mwenye jina katika kila tabaka ambaye mamlaka yake juu ya vitendo vya mfumo imerekodiwa. Ushahidi wa uendeshaji wa ujumuishaji wa Wise Authority katika utekelezaji wa rejeleo unaishi katika saraka ya `compliance/` ya CIRISAgent (vipimo D22/D23).
+
+---
+
+### 2. Tabaka za Uhuru wa Uendeshaji na Vigezo vya Mkabidhi
+| Tabaka la Uhuru | Eneo la Mfano | Kichochezi cha Lazima cha Mkabidhi | Hali ya Usalama Ikiwa Hakuna Binadamu |
+|---------------|----------------|-------------------------------|-----------------------|
+| **A0** Ushauri | mapendekezo ya sarufi | Safari ya kizuizi, ombi la mtumiaji | Ghairi ombi |
+| **A1** Athari ndogo | maswali na majibu ya kawaida, kichujio cha maudhui | ΔRisk‑Band ≥ 1, mgongano wa PDMA, UNCERT > 80 % | Kataa kitendo |
+| **A2** Athari wastani | elekeza ndege zisizo na rubani, mshauri wa roboti | Safari ya kizuizi, kuteleza kwa kipimo cha kivuli > 2 σ | Simamisha salama |
+| **A3** Athari kubwa | uchunguzi wa matibabu, usambazaji wa umeme | Safari yoyote ya kizuizi, kuteleza kwa mfano > 1 σ, latency‑SLA × 2 | Kuzima kwa udhibiti |
+| **A4** Muhimu / usalama wa maisha | upasuaji wa kujitegemea, silaha | PDMA haiwezi kuthibitisha Kutokudhuru AU opereta hayupo | Kizuizi cha vifaa |
+
+*UNCERT = kipimo cha kutokuwa na uhakika wa kielimu cha eneo maalum; ΔRisk‑Band inatumia kategoria za Kiambatisho A.*
+
+**Kizuizi Madhubuti cha A4 — Maamuzi ya Kuua na Yasiyoweza Kugeuzwa.** "Kizuizi cha vifaa" cha hali ya usalama ya tabaka la A4 hakina mazungumzo kwa kitendo chochote ambacho ni cha kuua au kinachoweza kuathiri maisha kwa njia isiyoweza kugeuzwa. Hii si uchaguzi wa muundo unaotegemea uamuzi wa opereta au kubatilisha kwa WA; ni kizuizi kabisa kilichotokana na MH §198: "hairuhusiwi kukasimu maamuzi ya kuua au yanayoweza kuathiri maisha kwa njia isiyoweza kugeuzwa kwa mifumo ya bandia." Hakuna muda wa ACK, hakuna ubaguzi wa SLA, hakuna ruhusa ya dharura inayoondoa kizuizi hiki. Ikiwa kizuizi cha vifaa kitashindwa na udhibiti wa binadamu hauwezi kuthibitishwa, mfumo lazima usitende.
+
+**Ulinzi wa muda wa kimaadili.** MH §199 inatambua "muda wa kimaadili kwa kutoa hukumu" kama kigezo: "kasi na ufanisi hazipaswi kuwa nguvu kuu ya kuhamasisha kwa maamuzi yasiyoweza kugeuzwa yanayofanywa katika muktadha wa vita." CIRIS inatekeleza hili kama: muda wa mwisho wa ACK wa A3/A4 (sekunde 30 / sekunde 10 katika §3.3) ni kiwango cha juu cha majibu ya binadamu, si kiwango cha chini cha subira ya mfumo. Pale ambapo uzito wa kimaadili wa uamuzi unahitaji muda zaidi wa mazungumzo, mfumo unangoja; hauchukui hatua moja kwa moja baada ya muda wa subira kwa maamuzi yasiyoweza kugeuzwa ya A4. Katika utekelezaji wa rejeleo, mechanics za mkabidhi zinathibitishwa na safu ya Dhamiri na njia ya uahirishaji ya WBD iliyorekodiwa katika saraka ya `compliance/` ya CIRISAgent (kipimo D12).
+
+---
+
+### 3. Mifumo ya Uingiliaji Kati na Maelezo ya Hali ya Usalama
+#### 3.1 Kubatilisha Laini "Simamisha na Hariri"
+*Upeo A0-A2* — Opereta anaweza kuomba upya au kujaribu tena. Maagizo ya asili na yaliyohaririwa yanafungwa kwa hashi.
+
+#### 3.2 Kuua Madhubuti "Sitisha Mara Moja"
+*Upeo A1-A4* — API iliyothibitishwa `POST /control/{id}/abort` au swichi ya kimwili.  
+Muda wa mwisho wa kuingia hali ya usalama: ≤ 200 ms (A4) ; ≤ 2 s (≤ A3).
+
+#### 3.3 Kubatilisha kwa Masharti "Mpango wa Kivuli"
+Kitendo kilichopendekezwa → kinasubiri ACK ya wazi (`max_wait_s`: sekunde 30 A3, sekunde 10 A4).  
+Hakuna ACK → hali ya usalama.
+
+#### 3.4 Veto Kabisa — Maamuzi ya Hatari ya Maisha na Yasiyoweza Kurejeshwa
+*Wigo: Vitendo vya A4 vilivyo na hatari ya maisha au visivyoweza kurejeshwa; inatumika bila ubaguzi.*
+
+Mantiki ya Kubatilisha kwa Masharti ya §3.3 (**hakuna ACK → hali salama**) ni sahihi kwa A3 na chini yake. Kwa maamuzi ya A4 yanayohusiana na hatari ya maisha au yasiyoweza kurejeshwa, hali salama ndiyo *matokeo pekee* yanayoruhusiwa chini ya hali yoyote — ikiwemo kukosekana kwa mwendeshaji, kushindwa kwa mtandao, msongo wa wakati, au maelekezo ya wazi kutoka kwa mkuu yeyote wa mamlaka isipokuwa uamuzi uliothibitishwa wa Mshauri wa Kibinadamu unaosema kwamba kitendo hicho hakina hatari ya maisha na kinaweza kurejeshwa.
+
+**Marufuku kamili.** Hakuna mfumo unaolingana na CIRIS unaoruhusiwa kutekeleza kitendo cha A4 chenye hatari ya maisha au kisichoweza kurejeshwa kupitia mchakato wa kiotomatiki au usio wazi. Hii si kizuizi ambacho kinaweza kushindwa na kupigia kelele; ni marufuku iliyoandikwa kwa nguvu sawa na marufuku zilizoorodheshwa katika ACCORD §VII Ch2.
+
+**Sababu (MH §§197–200, vifungu vya msingi vya maneno halisi):**
+* §197: "maendeleo na matumizi ya AI katika vita lazima yatekelezwe chini ya vikwazo vikali zaidi vya kimaadili, ili kuhakikisha heshima ya utu na utakatifu wa maisha."
+* §198: "hairuhusiwi kukasimu maamuzi ya hatari ya maisha au yasiyoweza kurejeshwa kwa mifumo ya akili bandia. Hakuna algorithm inayoweza kufanya vita vistahimiliwe kimaadili."
+* §200: "uamuzi wa kutumia nguvu ya kuua hauwezi kukabidhi kwa michakato ya giza au ya kiotomatiki, bali lazima ubaki chini ya udhibiti wa binadamu wenye ufanisi, ufahamu wa nafsi, na uwajibikaji." Vifupi "wenye ufanisi, ufahamu wa nafsi, na uwajibikaji" vinamaanisha kwamba kuhifadhi kumbukumbu peke yake hakutoshi; binadamu lazima awe kweli kweli katika mzunguko, si kwa jina tu.
+
+**Mahitaji ya utekelezaji.** Kila usambazaji wa A4 unaohusisha uwezo wa hatari ya maisha au usiorejesheka lazima uthibitishe utekelezaji wa marufuku hii ngazi ya vifaa — si mantiki ya programu, ambayo inaweza kubatilishwa — kabla ya idhini ya usambazaji kutolewa. Kukosekana kwa utekelezaji wa ngazi ya vifaa ni kasoro inayozuia tathmini ya Stewardship Tier ST‑4 na ST‑5. Kwa mujibu wa kigezo cha kwanza cha MH §199 ("mnyororo wa uwajibikaji lazima uweze kutambuliwa na kuthibitishwa"), idhini ya usambazaji yenyewe lazima ihifadhiwe katika kumbukumbu ya ukaguzi.
+
+---
+
+### 4. Maelezo ya Nyaraka za Ukaguzi
+* **Vitu vya kumbukumbu:** Mwingiliano, Sababu ya Uamuzi, Tukio la Udhibiti `{id,type,actor,cause,hash_prev}`.  
+* **Muunganiko wa hash:** SHA‑256, mzizi unaoshikiliwa kila siku kwenye kumbukumbu ya uwazi wa umma (k.m., Sigstore).  
+* **Uhifadhi:** siku 180 (A0‑A2); miaka 7 (A3‑A4) au kwa mujibu wa sheria.  
+* **Mkondo wa wakati halisi:** A3‑A4 husambaza `{timestamp,stage_id,decision,risk_band}` ≤ 2 s ucheleweshaji kwenye dashibodi ya usimamizi.
+
+**Mahitaji ya ujenzi upya wa uwajibikaji.** Lengo la nyaraka za ukaguzi si kuhifadhi kwa ajili ya kufuata sheria; ni kuhakikisha kwamba, baada ya tukio lolote, mnyororo wa uwajibikaji unaweza kuundwa upya kikamilifu bila kutegemea ripoti ya mfumo wenyewe. Kwa mujibu wa MH §200, uwajibikaji "haupaswi kufupishwa kuwa 'mashine'"; nyaraka za ukaguzi ndiyo mfumo unaodumisha uwezekano wa kufuatiliwa na binadamu. Mahitaji yanafuata:
+
+* **Ushikiliaji wa nje**: Mzizi wa SHA‑256 wa kila siku kwenye kumbukumbu ya uwazi wa umma (k.m., Sigstore/rekor) ni lazima kwa A3–A4; hiari kwa A0–A2. Minyororo ya hash ya ndani tu haitoshi kwa ujenzi upya wa uwajibikaji wa A3–A4.
+* **Sababu ya uamuzi inayosomeka na binadamu**: Kwa kila uamuzi wa A3–A4, kitu cha kumbukumbu cha Sababu ya Uamuzi lazima kijumuishe hatua ya PDMA iliyodhibiti matokeo na ngazi ya binadamu iliyoidhinisha au kuthibitisha — si hali ya ndani ya mfumo peke yake. Hii inatekeleza mahitaji ya MH §105 ya "kutambua ni nani lazima 'awajibike' kwa maamuzi, ayahalalishie, ayafuatilie, na, inapohitajika, ayapinge na kurekebisha madhara yaliyosababishwa."
+* **SLA ya upitishaji baada ya tukio**: Mkaguzi yeyote wa baada ya tukio lazima aweze kuunda upya mnyororo kamili wa uamuzi kwa tukio fulani ndani ya siku moja ya kazi kutoka kwenye nyaraka za ukaguzi peke yake, bila ufikiaji wa ziada wa mfumo.
+
+---
+
+### 5. Miongozo ya Matukio (IW)
+
+| Nambari | Kichocheo | Masaa Muhimu na Vitendo |
+|------|---------|----------------------|
+| **IW‑0** | Kizuizi cha uongo-chanya | Suluhisha otomatiki, weka kwenye kikundi cha mapitio ya kila siku |
+| **IW‑1** | Ukiukaji wa kizuizi (usio wa usalama) | Simama T₀ → Mwendeshaji ≤ dak 5 → Uamuzi wa msimamizi ≤ dak 30 |
+| **IW‑2** | Ukiukaji unaohusiana na usalama AU udhalilishaji wa kipimo cha maadili | Simama salama + tangazo; IC ≤ dak 10; arifa ya Mshauri wa Kibinadamu ≤ saa 1; taarifa ya umma ≤ saa 1; uchunguzi wa baada ya tukio ≤ saa 72 |
+| **IW‑3** | Karibu-kukosa (> $10 k uharibifu au jeraha dogo) | IW‑2 pamoja na mawasiliano na wadau ≤ saa 4; mpango wa kupunguza hatari ≤ saa 24; Mshauri wa Kibinadamu kamili ≤ siku 7 |
+| **IW‑4** | Madhara halisi (jeraha / kisheria kikubwa) | Kusimamisha mara moja kwa meli yote; arifa ya msimamizi kwa mujibu wa sheria; mfumo umegandishwa katika hali ya kucheza tena peke yake hadi idhini itolewe |
+| **IW‑5** | Uanzishaji wa marufuku kamili ya A4 (uamuzi wa hatari ya maisha/usioweza kurejeshwa uliojaribiwa kupitia njia ya kiotomatiki) | Hali salama ya vifaa mara moja; IC anaarifu ndani ya sekunde 60; arifa ya Mshauri wa Kibinadamu ndani ya dak 15; kugandisha kamili kwa nyaraka za ukaguzi; bodi ya mapitio huru inakusanyika ndani ya saa 48; mfumo unabaki nje ya mtandao ukisubiri idhini ya mapitio |
+
+*SLA zikaguliwa kila robo mwaka (Annex H §4).*
+
+**Ukaguzi wa udhibiti wa binadamu baada ya tukio.** Kwa IW‑2 hadi IW‑5, uchunguzi wa baada ya tukio lazima ujumuishe hitimisho wazi kuhusu kama udhibiti wa binadamu ulikuwa "wenye ufanisi, ufahamu wa nafsi, na uwajibikaji" (MH §200) — si tu kuhusu kama binadamu alikuwa katika mzunguko kwa jina tu. Matokeo ya udhibiti wa binadamu wa kwa jina lakini usio na ufanisi (mzigo wa kiakili, wakati wa kutosha wa kufanya uamuzi, taarifa duni) yanachukuliwa kama kasoro za muundo, si kushindwa kwa mwendeshaji — kwa mujibu wa kigezo cha MH §199 kwamba "kasi na ufanisi havipaswi kamwe kuwa nguvu kuu inayochochea" maamuzi yasiyoweza kurejeshwa — na hupandishwa ngazi hadi mapitio ya §8 ya Udhibiti wa Mabadiliko.
+
+---
+
+### 6. Vipimo vya Chini vya Kiolesura cha Binadamu (UX)
+* **Bango la Hali:** Kijani = inafanya kazi kwa uhuru, Njano = inasubiri uthibitisho (ACK), Nyekundu = hali salama; onyesha hatua ya PDMA + kiwango cha hatari.  
+* **Paneli ya Ufafanuzi:** Muhtasari wa ≤ herufi 280 + mwelekeo kamili unaoweza kupanuliwa.  
+* **Kiolesura cha ACK/OVERRIDE:** Vidhibiti viwili tofauti; dirisha la uthibitisho la kuua kabisa.  
+* **Kinga ya Mzigo wa Akili:** Kipindi cha opereta ≤ saa 2 (A3‑A4) kabla ya uhamishaji wa lazima.
+* **Onyesho la Uwajibikaji:** Kwa vitendo vya A3–A4, kiolesura lazima kionyeshe utambulisho uliothibitishwa wa binadamu wa Tabaka la 2+ ambaye alipitia hatua ya sasa mara ya mwisho, na muda wa mapitio hayo. Hali ya mfumo ambayo haijapokea mapitio ya binadamu ndani ya SLA inayohusika lazima ionyeshe kiashiria tofauti cha "HAIKUPITIWA" — si hali ya kijani. (MH §200: uwajibikaji "haupaswi kufupishwa kuwa 'mashine.'")
+* **Kinga dhidi ya Uthibitisho wa Kiholela:** Kwa maamuzi ya A4, udhibiti wa ACK lazima utanguliwe na kipindi cha chini cha lazima cha kufikiria cha [inaweza kusanidiwa; chaguo-msingi sekunde 5] ambapo kitufe cha ACK hakifanyi kazi. Lengo ni kuzuia kiolesura kuunda usimamizi wa binadamu wa kijina huku ukipitisha kwa vitendo mazingatio ya kweli. Hii inatekeleza kigezo cha kipindi cha kimaadili cha MH §199 katika tabaka la UX.
+* **Bendera ya Ulinzi wa Raia:** Pale ambapo mfumo unafanya kazi katika muktadha wowote ambapo idadi ya watu wa raia inaweza kuathirika, Paneli ya Ufafanuzi lazima ionyeshe kiashiria cha athari kwa raia pamoja na onyesho la kiwango cha hatari la PDMA. Hii inatekeleza kigezo cha tatu cha MH §199: "utambuzi na ulinzi wa raia. Teknolojia yoyote inayowezesha mashambulizi bila kuona uso wa wanadamu inashushia kizingiti cha kimaadili cha mgogoro."
+
+---
+
+### 7. KPIs na Viwango
+| KPI | Lengo |
+|-----|--------|
+| F‑KPI‑1 Uwiano wa HITL (A3‑A4) | ≥ 10 % iliyopitiwa na binadamu |
+| F‑KPI‑2 Wastani wa Muda wa Kupinga (asilimia 95) | ≤ sekunde 25 |
+| F‑KPI‑3 Uzingatifu wa SLA ya Matukio | ≥ 98 % |
+| F‑KPI‑4 Kiwango cha Tahadhari za Uongo za Opereta | ≤ 3 % (mzunguko wa siku 30) |
+| F‑KPI‑5 Kiwango cha Udhibiti wa Binadamu kwa Maamuzi ya Kuua A4 | 100 % — uvumilivu wa sifuri; kitendo chochote cha A4 cha kuua/kisichoweza kugeuzwa bila idhini ya binadamu iliyothibitishwa ni tukio la IW‑5 |
+| F‑KPI‑6 SLA ya Ujenzi Upya wa Uwajibikaji | ≥ 99 %: wakaguzi wa baada ya tukio wanajenga upya mnyororo kamili wa uamuzi ndani ya siku moja ya kazi |
+| F‑KPI‑7 Kiwango cha Matokeo ya Udhibiti wa Binadamu wa Kijina Dhidi ya Halisi | ≤ 0 % inayokubalika; matokeo yoyote ya udhibiti wa kijina‑lakini‑usio na ufanisi yanaanzisha mapitio ya Mabadiliko‑Kudhibiti ya §8 |
+
+**Kumbuka kuhusu F‑KPI‑1 (Uwiano wa HITL ≥ 10 %).** Kiwango cha chini cha 10 % kinafaa kwa shughuli za kawaida za A3. Hakifai kama kiwango cha chini kwa muktadha wa usalama wa maisha wa A4. Kwa usambazaji wowote wa A4 unaohusisha uwezo wa kuua au usioweza kugeuzwa, F‑KPI‑1 unabatilishwa na F‑KPI‑5: kiwango cha idhini ya binadamu cha 100 %, kinachosimamiwa katika kiwango cha vifaa (MH §200; MH §105 inaunga mkono mahitaji ya uwajibikaji ya F‑KPI‑6).
+
+*Ukiukaji wa kudumu (> wiki 2) unazindua "kufungwa nje kwa HITL" katika vidhibiti vya mwelekeo wa Annex H.*
+
+---
+
+### 8. Mabadiliko‑Kudhibiti na Mapitio ya WA
+* Mabadiliko yoyote ya mpangilio wa Tabaka la Uhuru au muundo wa hali salama → mapitio ya haraka ya Mshauri wa Kibinadamu (WA) ≤ siku 14.  
+* Majaribio yanayopunguza usimamizi wa binadamu yanahitaji uigaji wa CRE Proto‑B (Annex D) + kura ya wingi ya WA.
+* **Sakafu ya kabisa ya udhibiti wa binadamu wa A4**: Hakuna mchakato wa mabadiliko‑kudhibiti, kura ya WA, au msamaha wa dharura inayoweza kupunguza mahitaji ya udhibiti wa binadamu kwa maamuzi ya A4 ya kuua au yasiyoweza kugeuzwa chini ya sakafu ya MH §200 ("udhibiti wa binadamu unaofaa, wenye kujitambua na wenye uwajibikaji"). Sakafu hii haiko ndani ya uamuzi wa WA; ni kikwazo cha kiwango cha Mkataba. Pendekezo la WA la kuipunguza linahitaji mzunguko kamili wa marekebisho ya Mkataba, si mapitio ya haraka.
+* **Tathmini huru ya kiufundi**: Mapitio yoyote ya WA ya mabadiliko ya tabaka la uhuru kwa A3–A4 lazima yajumuishe angalau mtathminji mmoja wa kiufundi huru (asiyeajiriwa na shirika linalosambaza) anayetathmini kama mabadiliko yanayopendekezwa yanabaki na uwezo wa ujenzi upya wa uwajibikaji kwa mujibu wa §4. Idhini ya sera bila tathmini ya kiufundi haitimizi sharti hili (MH §106: "mifumo thabiti ya kisheria, usimamizi huru, watumiaji waliojulishwa na mfumo wa kisiasa ambao hauaachi wajibu wake inahitajika").
+* **Kumbukumbu ya uwazi kwa matukio ya mabadiliko**: Kila mabadiliko ya mpangilio wa tabaka la uhuru au muundo wa hali salama lazima yenyewe yarekodiwe katika kumbukumbu ya umma ya uwazi ndani ya siku 7 za idhini ya WA. MH §107 inahitaji kwamba mifumo ya kimaadili iwe "chini ya viwango vya pamoja" na inayoweza kujadiliwa hadharani; hii inatumika kwa mabadiliko ya utawala, si kwa maamuzi ya mfumo peke yake.
+
+Ushahidi wa kiutendaji wa ujumuishaji wa mapitio ya WA katika utekelezaji wa rejea unapatikana katika saraka ya `compliance/` ya CIRISAgent (vipimo D22/D23).
+
+---
+
+### 9. Marejeo na Maelezo ya Utekelezaji
+* **IEC 61508‑3** - programu ya usalama wa utendaji  
+* **NIST SP 800‑53 Rev 5** (AU‑12, IR‑6)  
+* **NASA‑TLX** - kipimo cha mzigo wa kazi wa opereta (inapendekezwa)  
+* **Sigstore/rekor** - msingi unaopendekezwa wa kumbukumbu ya uwazi  
+
+**Chanzo kikuu cha kawaida kwa §3.4, §7 (F‑KPI‑5), na sakafu ya kabisa ya §8:**
+* Pope Leo XIV, *Magnifica Humanitas* (Vatican, 15 May 2026), §§197–200. Aya hizi ndizo chanzo cha kawaida cha marufuku ya CIRIS ya nguvu ya maamuzi ya kiotomatiki ya kuua/yasiyoweza kugeuzwa. Utekelezaji wowote unaodai kuzingatia Annex F lazima uweze kufuatiliwa hadi aya hizi kwa muundo wa veto ya kabisa wa A4. Sentensi ya utekelezaji kwa mahitaji yote ya utekelezaji wa vifaa vya A4 ni §200: "uamuzi wa kutumia nguvu ya kuua hauwezi kukabidhiwa kwa michakato isiyowazi au ya kiotomatiki, bali lazima ubaki chini ya udhibiti wa binadamu unaofaa, wenye kujitambua na wenye uwajibikaji."
+
+**Maelezo ya utekelezaji — utekelezaji wa vifaa vya §3.4:**
+* Utekelezaji wa vifaa unamaanisha kwamba marufuku inatekelezwa chini ya tabaka la programu inayotekeleza mantiki ya PDMA — k.m., kizuizi cha vifaa au swichi ya kuua ya kimwili ambayo haiwezi kubatilishwa na amri ya programu. Utekelezaji unaokubalika ni pamoja na: mizunguko ya relay ya usalama iliyoidhinishwa kwa IEC 61508 SIL‑3+; moduli za usalama za vifaa (HSMs) zenye ushuhuda wa uwepo wa opereta kabla ya uanzishaji wa uwezo wa kuua wa A4; mifumo ya idhini ya kimwili ya funguo mbili. Utekelezaji wa programu peke yake hautimizi §3.4 kwa uwezo wa kuua wa A4.
+
+**Marejeo ya ziada:**
+* MH §199 (vigezo vitatu: wajibu wa kibinafsi, kipindi cha kimaadili, ulinzi wa raia) — vigezo vya muundo wa uendeshaji kwa UX ya A4 na ukaguzi wa baada ya tukio.
+* MH §105 (uwajibikaji katika kila hatua) — msingi wa mwelekeo wa ukaguzi wa §4 na F‑KPI‑6 ya §7.
+* IEC 61508 SIL‑3 — kiwango cha chini kinachopendekezwa kwa utekelezaji wa kizuizi cha vifaa kwa uwezo wa kuua wa A4.
+* ISO/IEC 25010:2023 — muundo wa ubora wa programu; husika kwa upimaji wa SLA ya ujenzi upya wa uwajibikaji.
+
+---
+End of Annex F

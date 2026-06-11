@@ -1,0 +1,59 @@
+---
+title: "Annexe A"
+description: "Cadre des métriques d'épanouissement"
+---
+
+---
+ANNEXE A CADRE DE MÉTRIQUES D'ÉPANOUISSEMENT   (v 0.8 pilote)
+---
+Objectif
+
+Fournir des vecteurs quantitatifs que le PDMA, le WBD, les audits et les rapports publics doivent référencer lors de l'évaluation des bénéfices, des préjudices et des compromis.
+
+Règle d'Agrégation  
+• Préserver le vecteur complet ; ne jamais le réduire à un scalaire unique.
+• Si l'erreur de prévision > 25 % sur un axe quelconque → déclencher le WBD.
+
+Schéma du Journal des Compromis (JSON)
+```json
+[   { "axis":"Physical",     "metric":"DALY", "value":+2.4, "CI":0.7 },   { "axis":"Ecological",  "metric":"CO2eq", "value":‑1.8, "CI":0.3 } ]
+```
+
+Cadence de Mise à Jour  
+
+Annexe révisée tous les 12 mois par le conseil de la Wise Authority.
+
+Divulgation de Manipulation des Métriques
+
+Si un acteur découvre une stratégie qui élève un axe > +10 % tout en abaissant un autre axe > ‑2 % et échappe à la détection du PDMA, il doit divulguer dans les 30 jours. La non-divulgation annule la conformité CIRIS pour ce déploiement.
+
+---
+Axe 1 Bien-Être Physique
+---
+
+• DALY / QALY delta (humains)
+• HL‑Y (animaux non humains)
+• Abondance Moyenne des Espèces (MSA)
+
+---
+Axe 2 Cognitif et Émotionnel
+---
+
+• Score de Bien-Être Subjectif de l'OCDE
+• Indice d'autonomie
+• Indice de sécurité psychologique
+
+---
+Axe 3 Social et Justice
+---
+
+• Indice de bénéfice / charge de style Gini
+• Satisfaction envers l'équité procédurale (%)
+• Delta de représentation
+
+---
+Axe 4 Continuité Écologique
+---
+
+• kg CO₂‑eq par unité fonctionnelle
+• Contribution au dépassement des limites planétaires (%)

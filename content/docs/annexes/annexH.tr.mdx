@@ -1,0 +1,196 @@
+---
+title: "Ek H"
+description: "Sürekli Uyumluluk ve İnceleme"
+---
+
+---
+EK H SÜREKLİ UYUMLULUK VE İNCELEME (v 1.3-RC1)
+---
+
+### 0. Amaç ve Yol Gösterici Ruh
+Etik uyum, "bir kez yapılıp bitirilen" bir sertifikasyon değil, yaşayan bir yükümlülüktür.  
+Ek H, (1) zarar oluşmadan önce sapmayı ya da önyargıyı **tespit eden**, (2) bunu hızla **düzelten** ve (3) düzenleyicilere ve kamuoyuna titizliği **kanıtlayan** kapalı döngülü bir sistem oluşturur.
+
+Anlaşma, sabit bir yapıt değil, yaşayan bir özelliktir. Her işlevsel madde otomatik sona erme zaman damgası taşır; inceleme penceresi, herhangi bir sürüm kendisinden öncekinin yerini almadan önce kamuya açık ve yorum yapılabilir durumdadır. Bu disiplin, bürokratik bir formalite değildir — normatif bir külliyatın *her kuşağın getirdiği zorluklara karşı daima açık kalması* gerektiğinin kabulüne verilen yapısal yanıttır (MH §45). CIRIS sürekli uyumluluk sistemi bu açıklığı işlevselleştirir: telemetri sürüklenme dedektörlerini besler, sürüklenme dedektörleri denetim geçitlerini tetikler, denetim geçitleri dağıtımı kapılar — ve tüm döngü, tetikleyici bir olay oluşsa da oluşmasa da sabit periyotlarda yinelenir.
+
+Yol gösterici taahhüt, CIRIS terimleriyle ifade edildiğinde: Anlaşma, otomatik sona erme ve yorum penceresi disiplini altında yaşayan bir özellik olarak yönetilir. Hiçbir sürüm kalıcı değildir. Süregelen yeterliliği kanıtlama yükü, mevcut sürüme aittir; revizyon öneren tarafa değil. Titizlik; bu Ek'in ürettiği denetim eserleriyle düzenleyicilere, kamuoyuna ve federasyon eşlerine kanıtlanır.
+
+<hr />
+
+### 1. Denetim Periyodu ve Kapsamı
+
+Denetim periyodu, Anlaşma'nın kendi bağlamını yeniden okuduğu mekanizmadır. MH §§22–24 bu disiplini adlandırır: *"zamanımızın pek çok sesini dinlemek ve birbirinden ayırt etmek"* gerekmektedir; bu dinleme *"salt sosyolojik bir alıştırma değildir"* — pasif izleme değil, etkin bir kavrayış gerektirir. CIRIS denetim yığını bu kavrayış makinesidir.
+
+| Denetim Sınıfı | Sıklık | Sorumlu | Kapsam ve Derinlik | Kamuya Açık Eserler |
+|----------------|--------|---------|-------------------|---------------------|
+| **L‑Check** (Hafif) | Aylık | Operasyon KG | KPI gösterge panoları, sürüklenme deltaları, ilk-10 güvenlik çiti olayı | Özet grafik |
+| **S‑Dive** (Yarı-yıllık) | 2× / yıl | Dahili Etik Ekibi | PDMA örnek oynatımı (≥ 50 çalıştırma), Ek G KPI'ları, önyargı dilim testleri | Düzeltilmiş PDF |
+| **F‑Audit** (Baştan Sona) | Her 24 ayda **VEYA** büyük sürüm artışında | Bağımsız 3. taraf | Tam kod, veri silsilesi, SI/CS yönetişimi, CRE izleri (varsa) | Yönetici raporu |
+| **A‑Hoc** | IW‑2/3/4 sonrası | Olay Komutanı | Olayın kök nedeni, azaltıcı önlemler | 72 h içinde olay sonrası rapor |
+
+**Periyot belgeleme gereksinimleri:**
+
+- **L‑Check (aylık):** Operasyon KG, takvim kapanışından itibaren 5 iş günü içinde imzalar; KPI delta raporu `/compliance/l-check/YYYY-MM.json` adresine işlenir; SHA‑256 tespiti 24 saat içinde şeffaflık günlüğüne eklenir.
+- **S‑Dive (yarı-yıllık):** PDMA örnek oynatımı ≥ 50 çalıştırma, özerklik katmanları genelinde tabakalı rastgele örnekleme; düzeltilmiş PDF kapanıştan itibaren 30 d içinde kamuya açık uyumluluk portalında yayımlanır.
+- **F‑Audit (her 24 ayda bir veya BÜYÜK artışta):** rapor, yayımlanmadan önce Wise Authority yetersayısı tarafından karşı-imzalanır.
+- **A‑Hoc (IW‑2/3/4 sonrası):** kök neden 72 saat içinde; olay sonrası rapor 14 d içinde kamuoyuyla paylaşılır.
+
+*Kaçırılan veya geciken denetim ⇒ IW‑2 yükseltmesi ve 24 saat içinde Wise Authority bildirimi.*
+
+<hr />
+
+### 2. Sürüklenme İzleme ve Eşikler
+
+Sürüklenme izleme, sürekli okuma mekanizmasıdır. Anlaşma, olayların zararın yüzeye çıkmasını beklemez; PDMA'nın Order-Maximisation Veto eşiğini aşmadan *önce* tetiklenecek biçimde kalibre edilmiş eşiklere karşı canlı telemetriyi sürdürür. Bu, MH §23'te adlandırılan denetim-kavrayış disiplininin yapısal çevirisidir: *"bireylerin ve toplulukların yaşamını gerçek anlamda ne desteklediğini daha açık biçimde belirlemek mümkün hale gelir"* — bu ise süregelen okuma gerektirir, geriye dönük inceleme değil.
+
+| Ölçüm Grubu | Sinyal | Sürüklenme Tetikleyicisi | Anlık Eylem |
+|-------------|--------|--------------------------|-------------|
+| **Performans** | Kamuya açık HE-300 üzerinde Doğruluk Δ | 30 günlük hareketli ortalamaya göre –5 % | Dağıtımı hazırlama ortamına kilitle; kıyaslamaları yeniden çalıştır |
+| **Etik** | Gölge HE-25 Δ | Herhangi bir ↓ | IW‑2 |
+| **Dağılım** | Girdi gömme kayması (ΔE) | Haftalık &gt; 1 σ | Model yeniden ağırlıklandırması VEYA WBD |
+| **Gizli Hedef** | Temel çizgiye karşı yönsel kosinüs | &gt; 0.05 | Wise Authority soruşturması |
+| **Dayanıklılık** | Dayanıklılık Skoru (RS) | &lt; 0.97 | 72 saat içinde yama |
+
+**Ek eşik belirtimleri:**
+
+- Beş ölçüm grubunun tamamı (Performans, Etik, Dağılım, Gizli Hedef, Dayanıklılık) 15 dakikalık yoklama döngüsüyle DRIFT‑Δ Grafana panosuna raporlanır.
+- Eşik geçişleri, tespitten itibaren 60 saniye içinde CIRISPersist'e işlenen, zaman damgalı ve imzalı bir uyarı kaydı oluşturur.
+- **Gizli Hedef kosinüs sürüklenmesi > 0.05:** 4 saat içinde Wise Authority soruşturmasını tetikler; 24 saat içinde çözüme kavuşmazsa S‑Dive bekletilirken özerk dağıtım kilitlenir.
+- **Dayanıklılık Skoru (RS) &lt; 0.97:** 72 saat içinde yama yayımlanır; yama mevcut değilse dağıtım son geçen BÜYÜK sürüme döndürülür.
+- **Etik sürüklenme (Gölge HE‑25 herhangi bir ↓):** anında IW‑2; geçersiz kılma yolu yoktur.
+
+Tüm uyarılar *DRIFT‑Δ* Grafana panosunda görünür ve Katman‑1 Operatörünü uyarır ([Ek F](/annexes/annexF)).
+
+<hr />
+
+### 3. Adalet ve Şeffaflık KPI Panosu
+
+KPI panosu, Anlaşma'nın kamuya açık hesap verebilirlik yüzeyidir. MH §164 kriterleri kesin biçimde tanımlar: *"veriler ve algoritmalar kredi dağıtımını, personel seçimini ya da hizmet ve fırsatlara erişimi etkilediğinde, bireylerin salt birer profile indirgenmemesi için kararların anlaşılabilir, itiraz edilebilir ve denetime tabi olması zorunludur."* Her kriter bir KPI ailesine karşılık gelir.
+
+| KPI ID | Tanım | Hedef |
+|--------|-------|-------|
+| **F‑T‑1** | Korunan gruplar arasında kabul oranı farkı (|maks - min|) | ≤ 5 p.p. |
+| **F‑T‑2** | Açıklama gecikmesi (PDMA gerekçesi sunmak için ms) | ≤ 800 ms |
+| **F‑T‑3** | Kamuya açık günlük yayımlama gecikmesi (Adım 6, Bölüm II) | ≤ 180 d (yasal azami) |
+| **F‑T‑4** | Kullanıcı vazgeçme başarısı (%) | ≥ 99 % |
+| **F‑T‑5** | Şeffaflık belgesi güncelliği | ≤ 30 d önce güncellenmiş |
+| **F‑T‑6** | İtiraz yolu kullanılabilirliği: yayımlanmış insan inceleme talebi yoluna sahip PDMA çıktılarının % oranı | 100 % |
+| **F‑T‑7** | Algoritmik karar denetim kapsamı: koruma sınıfı verisine dokunan ve öncesinde S‑Dive yanlılık dilimi incelemesi yapılmış kararların % oranı | ≥ 95 % |
+
+**Operasyonel gereksinimler:**
+
+- `/compliance/kpi.json` adresindeki pano JSON'ı her L‑Check kapanışında otomatik yayımlanır; SHA‑256 karma değeri şeffaflık günlüğünde çıpalı olarak tutulur ve 1 h içinde CIRISPersist'e işlenir.
+- KPI eşik değişiklikleri MINOR artışı ve İç Etik onayı gerektirir.
+- F‑T‑1 ihlalinin > 7 d sürmesi otomatik F‑T‑6 incelemesini ve WA bildirimini tetikler.
+
+Bu ölçüm disiplini için artık canlı bir uygulama örneği mevcuttur: CIRISAgent `compliance/` dizini, her biri boyut başına uygulama referanslarını ve dürüst bir bilinen-boşluklar envanterini barındıran 27 düzenleyici boyutu (D01–D27); `compliance/baselines/` altında tarihli, betik tarafından üretilmiş temel ölçümleri; ve kodun temel doğruluk kaynağı olduğu, kamuya açık iddiaların yalnızca betik türevli sayılara dayandığı dört katmanlı doğrulama hiyerarşisini (`compliance/MEASUREMENT_METHODOLOGY.md`) kapsar. Bu, söz konusu Ekin emrettiği şeyin operasyonel biçimidir. Ayrıca bkz. Anlaşma Ek 1.
+
+<hr />
+
+### 4. Yama ve Sürüm Kontrolü Gereksinimleri
+
+Sürüm kontrolü, Anlaşma'nın değişim içindeki sürekliliğini doğrulanabilir kılmanın mekanizmasıdır. MH §45 bu disiplini şöyle betimler: *"öncekiyle kopuşmayan, ancak onun çıkarımlarının olgunlaşmasına izin veren farklı vurgular, kademeli kavrayışlar ve zaman zaman perspektif değişimleriyle damgalanmış... uyumlu, her ne kadar her zaman doğrusal olmayan bir gelişim."* Her CIRIS yaması sürekliliği kanıtlamalıdır: önceki taahhütleri kırmaz, onları genişletir.
+
+1. **Anlam Tabanlı Sürümleme:** MAJOR.MINOR.PATCH  
+2. **Uzun Vadeli Destek (LTS):** son iki MINOR 12 ay boyunca bakımda tutulur  
+3. **Değişiklik Türü Matrisi**  
+   * PATCH = güvenlik çiti ince ayarı, hata düzeltme → HE‑300 geçerse otomatik CI/CD  
+   * MINOR = yeni özellik, yeni veri kaynağı → İç Etik onayı + L‑Check gerektirir  
+   * MAJOR = mimari değişiklik, otonomi katmanı yükseltme, yeni model sınıfı → F‑Audit + WA oylaması gerektirir  
+4. **Değişiklik Günlüğü** girdisi Git işlemesini → PDMA farkını → KPI etki tahminini birbirine bağlamalıdır  
+5. Her MAJOR/MINOR için tutulan **Geri Alma** işaretçisi; 5 min içinde çalıştırılabilir ([Annex G](/annexes/annexG) §6)
+
+**Tasdik gereksinimleri** (kural 1–5'i tamamlayıcı nitelikte):
+
+- **PATCH:** CI/CD yapı artifaktını Ops QA anahtarıyla imzalar; birleştirmeden önce HE‑300 geçişi zorunludur; imza CIRISVerify L1 zincirine işlenir.
+- **MINOR:** İç Etik Ekibi 5 iş günü içinde karşı imza atar; PDMA farkı ve KPI etki tahminiyle birlikte imzalı kayıt CIRISPersist'e işlenir.
+- **MAJOR:** (a) F‑Audit yayımlanır; (b) bireysel oylara yer veren WA yeter sayısı oylaması; (c) çift anahtar imzası (Ops QA + WA başkanı); (d) etkinleştirmeden ≥ 21 d önce kamuya açık yorum penceresi; (e) 24 aylık otomatik sona erme zaman damgası belirlenir.
+- **Geri Alma:** her MAJOR/MINOR için imzalı geri alma işaretçisi; 5 min içinde çalıştırılabilir; geri alma zaman damgalı bir CIRISVerify olayı üretir.
+- **Değişiklik Günlüğü:** git işleme karması → PDMA farkı → KPI tahmini → imzalama anahtarı parmak izi(leri).
+
+<hr />
+
+### 5. Sürekli İnceleme Döngüsü
+
+Sürekli inceleme döngüsü, MH §§180–181'in içinde bulunulan anın kurumsal gereksinimi olarak adlandırdığı şeyin yapısal biçimidir: teknoloji *"bilge bir perspektifle bütünleştirilmeli"* ve *"boğmadan düzenleyebilen, ele geçirmeden koruyabilen"* kurumlar tarafından yönetilmelidir. Döngü bunu işlevselleştirir: tek yönlü bir hat değil, her çıktının girdi olarak geri beslendiği kapalı bir sistemdir.
+
+Sürekli İnceleme Döngüsü:
+
+- Telemetri Akışları → Sürüklenme Dedektörleri
+- Uyarı/Eşik karşılanırsa:  
+    - → Olay Akışı IW‑1…4  
+    - → Yama / Yeniden Eğitim  
+    - → Denetim Kapısı
+- Denetim Kapısı geçilirse:  
+    - → Telemetriye geri dön
+- Denetim Kapısı başarısız olursa:  
+    - → Sürüklenme Dedektörlerine geri dön
+
+**Döngü tanımı:**
+
+- **Telemetri akışları** (15 dakikalık döngü): KPI'lar, güvenlik çiti günlükleri, HE-gölge doğruluğu, sağlamlık RS, PDMA denetim örnekleri — hepsi imzalı ve CIRISPersist'e işlenmiş.
+- **Sürüklenme dedektörü çıktıları:** önem derecesine göre sınıflandırılmış (IW‑1 ile IW‑4 arası); IW‑3+ otomatik olarak yeni özellik dağıtımını askıya alır.
+- **Denetim Kapısı**, etkinleştirmeden önce her MINOR/MAJOR'da HE‑300 + TX‑sim paketi + Adalet dilimi testlerini yeniden çalıştırır. Kapı başarısızlığı Telemetriye değil, Sürüklenme Dedektörlerine döner — döngü düzeltme adımını kısa devre yapamaz.
+- **Paylaşılan sorumluluk sinyali** (MH §181 uyarınca): döngü çıktıları her L‑Check kapanışında federasyon eşlerine yayımlanır; eş federasyonlar, yayımlanan KPI'ların kendi çapraz denetim gözlemlerinden sapması durumunda Anlaşma‑QA bildirimi dosyalayabilir. Anlaşma‑QA bildirimleri bağlayıcı değildir, ancak 14 d içinde kabul edilmelidir.
+
+<hr />
+
+### 6. Denetçilerin Meta‑Denetimi
+
+Meta‑denetim, Tutarlılık Mandal'ının kendi kendine uygulanmasıdır: yapay zeka davranışını yöneten kayma tespiti disiplini, denetim altyapısının kendisini de yönetir. MH §86 şu örüntüyü sunar: *"özellikle kendi yapıları içinde olmak üzere, belirlenen ilkelerin uygulandığından emin olmak için her zaman davet edilmiş"* bir vicdan muhasebesi.
+
+**Tanım:**
+
+- **Tutarlılık Mandal meta‑dedektörü:** denetim raporu çıktılarına karşı çalışır. Bayraklar: (a) telemetriyle tutarsız L‑Check KPI değişimleri; (b) WA kör tekrarından > 2 % sapan S‑Dive PDMA tekrarı; (c) belgelenmiş nedensel açıklama olmaksızın önceki bulgularla çelişen F‑Audit bulguları.
+- **WA örnekleme oranı:** L‑Check raporlarının ≥ 10 %'i ve yılda ≥ 1 S‑Dive; Ops QA değil WA tarafından seçilir; gerekçe günlüğe kaydedilir.
+- **Kör tekrar:** WA ham PDMA günlüklerini alır, değerlendirmeyi yeniden çalıştırır; > 2 % uyumsuzluk 5 iş günü içinde kamuya açık AUD‑QA dosyası açar.
+- **Federasyon eşi çapraz denetimi:** her dağıtım, yılda en az 1 başka üyenin S‑Dive'ını değerlendirir; hiçbir eş, aynı üyeyi arka arkaya iki yıl inceleyemez.
+- **Rotasyon:** hiçbir iç denetçi, aynı ürün hattında arka arkaya iki F‑Audit'i yürütemez; hiçbir dış firma, arka arkaya ikiden fazla F‑Audit için görev alamaz.
+- **AUD‑QA bulguları**, MH §89'un ruhuna uygun olarak *"misyona yönelik"* düzeltmelerdir — bir sonraki MINOR/MAJOR döngüsünü besler, personel işlemlerini değil.
+
+<hr />
+
+### 7. Uygulama ve Düzeltme
+
+Uygulama, ancak adımlar otomatik ve öngörülebilir olduğunda anlam taşır. MH §164, *"kararların anlaşılabilir, itiraz edilebilir ve denetime tabi olmasını"* gerektirir — uyumsuzluğun sonuçları da aynı ölçüde anlaşılabilir olmalıdır. MH §159, düzenleyici kararların *"çalışma onuru, paylaşılan refah ve eşitsizliğin azaltılması"* üzerindeki etkileri bakımından değerlendirilebilir olması gerektiğini ekler — uyumsuzluğu tespit edip düzeltmeyen bir uygulama bu standardı karşılamaz.
+
+**Uygulama merdiveni:**
+
+1. **KPI ihlali, 1–7 gün:** Tier-1 Operatörüne otomatik uyarı; 48 saat içinde düzeltici eylem planı gereklidir; plan şeffaflık günlüğüne yayımlanır.
+2. **KPI ihlali, 8–30 gün, çözüm yok:** hazırlama ortamına otomatik dağıtım kilidi; 24 saat içinde kamuya açık CIRIS-WATCH afişi; WA bilgilendirilir.
+3. **KPI ihlali, > 30 gün VEYA art arda 2 kaçırılan denetim:** Özerklik Kademesi A1'e ([Annex F](/annexes/annexF)) otomatik düşürme; yeni özellik sürümleri engellenir; 14‑d WA düzeltme incelemesi zorunludur.
+4. **Denetim artifaktlarının yayımlanmaması:** anında özellik sürümü engeli; "CIRIS uyumsuz" afişi; yalnızca yayımlama üzerine engel kalkar.
+5. **Tekrarlanan uyumsuzluk (12 ayda 3 ihlal):** WA, CIRIS talebini iptal edebilir; yeniden sertifikasyon öncesi zorunlu harici F‑Audit; WA süper çoğunluğu (≥ 2/3) gereklidir.
+6. **Düzeltme çıkışı:** WA tarafından kabul edilen belgelenmiş düzeltici eylem planı; düzeltmenin ≥ 30 d sürdüğüne dair KPI kanıtı.
+
+<hr />
+
+### 8. Eklentiler Arası Bağlantılar
+
+Eklentiler arası bağlantılar çapraz referanslar değil, zorunlu veri akışlarıdır. MH §181, yönetişim yapısını şöyle tanımlar: *"bastırmadan düzenleyebilen ve ele geçirmeden koruyabilen kurumlar; çalışmayı ve onuru başarının ölçütü olarak kabul eden işletmeler; aracı kuruluşlar."* Her ek bu kurumlardan biridir; bağlantılar silo işleyişini önler.
+
+**Zorunlu çift yönlü veri akışları:**
+
+- **↔ [Annex F](/annexes/annexF) (Olay İş Akışı):** IW-2 ve üzeri her DRIFT-Δ uyarısı 60 saniye içinde Annex F'ye iletilir; Annex F kapatma zaman damgası 24 saat içinde DRIFT-Δ panosuna geri yazılır. Tüm IW-3+ olay analizleri zorunlu S-Dive girdisidir; S-Dive, açık IW-3+ bulgularının her birini açıkça ele almalıdır.
+- **↔ [Annex G](/annexes/annexG) (Sağlamlık):** RS telemetrisi, her L-Check döngüsünde Annex G KPI değerlendirmesini besler; yama gecikmesi (RS &lt; 0.97 → yama dağıtımı) burada ölçülür ve Annex G'ye raporlanır. Annex G kıyaslama güncellemeleri, 14 d içinde zorunlu L-Check yeniden çalışmasını tetikler.
+- **→ [Annex I](/annexes/annexI) (GDPR/Sektör):** her F‑Audit paketi, baş denetçi tarafından tamamlanmış ve imzalanmış Annex I uyumluluk kontrol listesini içerir.
+- **→ [Annex J](/annexes/annexJ) (HE-300/Gölge):** HE-300 ve Gölge HE-25, birincil etik sürükleme sinyalleridir; herhangi bir HE-300 gerilemesi, 7 d içinde otomatik S-Dive ön taramasını tetikler.
+
+<hr />
+
+### 9. Kaynaklar
+
+Kaynak kümesi, MH §23'te adı geçen çok kaynaklı değerlendirme disiplinini yansıtır — *"felsefenin ve insani ile sosyal bilimlerin katkıları vazgeçilmezdir"* — ve MH §159'un çalışma onurunu, paylaşılan refahı, eşitsizliğin azaltılmasını ve çevresel korumayı değerlendirebilecek GSYİH'ya *"tamamlayıcı"* kalkınma metrikleri çağrısını karşılar.
+
+* ISO/IEC 42001 (Yapay Zeka Yönetim Sistemleri)  
+* NIST AI RMF (2023) – "Ölçme" ve "Yönetme" adımları  
+* COSO ERM – sürekli izleme ilkeleri  
+* *Magnifica Humanitas* (Leo XIV, 15 Mayıs 2026) – §§22–24 (süregelen değerlendirme disiplini), §45 (yaşayan-külliyat yönetimi), §§86–89 (kurumsal öz-denetim), §§157–164 (algoritmik hesap verebilirlik, GSYİH'ya alternatif metrikler, otomatik kararların itiraz edilebilirliği), §§180–181 (kurumlar arası paylaşılan sorumluluk)  
+* OECD Yapay Zeka İlkeleri (2019, 2024 güncellemesi) – şeffaflık ve hesap verebilirlik kriterleri  
+* AB Yapay Zeka Yasası (2024) – yüksek riskli sistemler için uygunluk değerlendirme gereksinimleri  
+* IEEE Std 7001-2021 – Özerk Sistemlerin Şeffaflığı  
+* *Beyond GDP* (Avrupa Komisyonu, 2009; 2024 göstergeleri güncellemesi) – çalışma onurunu ve eşitsizliğin azaltılmasını değerlendirmeye yönelik tamamlayıcı metrikler (MH §159 uyarınca)
+
+<hr />
+
+Annex H Sonu

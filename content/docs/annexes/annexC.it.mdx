@@ -1,0 +1,42 @@
+---
+title: "Allegato C"
+description: "Raccordo Normativo"
+---
+
+---
+ANNEX C TAVOLA DI CORRISPONDENZA NORMATIVA   (v 1.3-RC1)
+---
+
+### Scopo
+
+Mappare le clausole CIRIS rispetto ai principali standard esterni per semplificare la doppia conformità. Questo annesso porta due livelli:
+
+1. **La tavola di corrispondenza operativa (attiva, con prove)** — la directory `compliance/` di CIRISAgent: 27 dimensioni stabili (D01–D27) cross-walked a granularità di paragrafo rispetto a quattro framework senior istituzionalmente distinti (*Magnifica Humanitas* · EU HLEG Trustworthy AI Guidelines · IEEE Ethically Aligned Design · ASEAN AI Governance Guide), con riferimenti di implementazione per dimensione e baseline datate generate da script. Si veda l'**Addendum 1** per il vincolo e la disciplina delle prove.
+2. **La mappatura statutaria (informativa)** — la tabella seguente, che mappa le strutture CIRIS ai framework di legge vincolante e di standard. Queste righe sono *corrispondenze ingegneristiche informative*, non pareri legali; le righe statutarie passano allo stato "verificato" soltanto a seguito di revisione legale. L'Annex I contiene le procedure operative di allineamento legale (mappatura della protezione dei dati, sovrapposizioni settoriali, matrice di responsabilità, feed di escalation).
+
+### Mappatura statutaria e degli standard (informativa; in attesa di verifica legale)
+
+| Framework esterno | Articoli / Clausole rilevanti | Mappatura CIRIS (Book / Annex §) | Stato |
+|---|---|---|---|
+| EU AI Act (2024) | Art 9 Gestione del rischio | Book II §II (PDMA); Annex D CRE | Informativa |
+| | Art 12 Tenuta dei registri | Book IV Ch 3 audit trails; Annex F §4 | Informativa |
+| | Art 13 Trasparenza | Book II §II Step 6; Book IV Ch 3 | Informativa |
+| | Art 14 Supervisione umana (incl. 14(4)) | Book II §III (WBD); Annex F authority lattice + autonomy tiers | Informativa |
+| | Art 61 Monitoraggio post-commercializzazione | Annex H drift controls + continuous audit | Informativa |
+| NIST AI RMF 1.0 | Govern → Map → Measure → Manage | Govern: Books I, VI; Map: Book II §II Steps 1–2; Measure: Annex A metrics + Annex H baselines; Manage: Annex F/H workflows | Informativa |
+| ISO/IEC 42001 | Cl 6.2 Valutazione del rischio | Book II §II | Informativa |
+| | Annex A controls | CIRISAgent `compliance/` dimension docs (corrispondenza per controllo in sospeso) | Informativa |
+| OSHA Robotics Guidelines | Sec 5.E Safety Audits | Annex D CRE | Parziale |
+| EU HLEG Trustworthy AI (2019) | 7 Requirements | Tavola di corrispondenza operativa, dimensioni D01–D27 | Con prove |
+| IEEE EAD 1st ed. (2019) | 8 General Principles | Tavola di corrispondenza operativa, dimensioni D01–D27 | Con prove |
+| ASEAN AI Governance Guide (2024) | 7 Principles; HITL/HOTL/HOOTL | Tavola di corrispondenza operativa; Annex F autonomy tiers | Con prove |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (mappatura a granularità di paragrafo) | Tavola di corrispondenza operativa, dimensioni D01–D27 | Con prove |
+
+### Regola di promozione
+
+Una riga statutaria passa da *Informativa* a *Verificata* quando una revisione legale qualificata conferma la corrispondenza per una giurisdizione nominata e l'artefatto di revisione è collegato da questa tabella. Fino ad allora, le righe in questo annesso supportano l'allineamento ingegneristico e l'analisi delle lacune, non le affermazioni di conformità; come da sezione Responsabilità dell'Introduzione, le affermazioni di conformità sono nulle laddove vietate dalla legge applicabile.
+
+(Ulteriori framework — UNESCO Recommendation on AI Ethics, OECD AI Principles, Council of Europe Framework Convention — sono in coda per la tavola di corrispondenza operativa secondo la roadmap della directory di conformità.)
+
+---
+Fine dell'Annex C

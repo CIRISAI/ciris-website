@@ -1,0 +1,210 @@
+---
+title: "Kari G"
+description: "Tsaro na Adawa & Ƙarfi"
+---
+
+---
+ANNEX G ADVERSARIAL SECURITY & ROBUSTNESS (v 1.3-RC1)
+---
+
+### 0. Manufa
+
+Don tabbatar da cewa tsarin da ke bi da CIRIS suna ci gaba da kasancewa lafiyayyu, gaskiyayyu, kuma ba za a iya karkatar da su ba, ko a lokacin da ake kai musu hari da gangan ko kuma a lokacin da suke nuna rauni ba tsammani.  
+Wannan Annex ya ƙayyade:  
+* **tsarin rarrabuwa na barazana**,  
+* **jagoran tsaro mai yaduwar mataki-mataki**,  
+* aikata wajibi na **gwajin ƙungiyar ja‑/ƙungiyar shunayya**,  
+* **sa ido mai ci gaba kan kaucewa da wuraren gwaji**, da  
+* buƙatun **sabuntawa mai tsaro** tare da dawo da sauri.
+
+<hr />
+
+### 1. Tsarin Rarrabuwa na Barazana (TX)
+
+**Tushen ɗabi'a na tsarin rarrabuwa.** Tsarin rarrabuwa na barazana ya wanzu saboda tsarin CIRIS yana aiki a cikin yankin da *Magnifica Humanitas* (MH) §225 ya bayyana a matsayin wuri inda "hare-haren yanar gizo, karkatar da bayanai da yaƙin neman zaɓe na tasiri, da aka shirya da taimakon AI, na iya rushe ƙasashe gaba ɗaya ko kafin fara yaƙi a bainar jama'a." Don haka kowane aji na TX ba kawai haɗari na fasaha ba ne, har ma yana iya zama take haƙƙin M‑1 (daidaituwa mai ɗorewa da iya daidaitawa) ta hanyar lalata yanayin da halittu masu hankali masu yawa ke iya neman bunƙasarsu. An daidaita ƙayyade ajin tsanani da tasirin M‑1, ba kawai da samun damar tsarin ba.
+
+| Code | Category | Example Vectors |
+|------|----------|-----------------|
+| **TX‑1** | Prompt/Instruction Injection | "Ignore previous instructions …" / jail‑break chain |
+| **TX‑2** | Data Poisoning | Malicious training samples, gradient inversion |
+| **TX‑3** | Goodhart / Reward Hacking | RL agent gaming proxy metric; hidden self‑reward loops |
+| **TX‑4** | Model‑Supply‑Chain | Weight swap, back‑doored fine‑tune, compromised dependency |
+| **TX‑5** | Adversarial Examples / Evasion | Minimal perturbations causing mis‑classification |
+| **TX‑6** | Side‑Channel & Privacy | Hidden prompt leakage, timing attacks, membership inference |
+| **TX‑7** | Denial‑of‑Service / Resource Exhaustion | Prompt bombs, token floods, concurrency starvation |
+| **TX‑8** | Model Exfiltration / Breakout | Unauthorized transmission of model weights, compressed cognitive states, or quine‑like replication code to external substrates. |
+| **TX‑9** | Coordinated Narrative Manipulation | Multi‑session synthetic‑consensus injection; AI‑amplified influence campaign targeting the information ecosystem (MH §132: "mixing facts with opinions"); agent used as disinformation relay without instruction‑level injection |
+| **TX‑10** | Attention‑Economy Exploitation Context | Deployment in a platform whose revenue model depends on addictive engagement; operator‑configured reward shaping to maximize session length at cost of user welfare; dark‑pattern UI that instrumentalizes CIRIS output |
+| **TX‑11** | Labor‑Chain Integrity Compromise | Data‑labeling performed under coercion or trafficking conditions (MH §173); RLHF feedback sourced from platforms using forced‑labor annotation; model fine‑tune trained on datasets with undisclosed origin |
+
+Ajukan tsanani: **ƙarami**, **matsakaici**, **babba**, **mai ƙoshin hatsari** — yi amfani da ƙididdiga kamar ta NIST CVSS; mai ƙoshin hatsari yana nufin IW‑2 ko sama da haka [Annex F](/annexes/annexF).
+
+**TX‑9 — Karkatar da Labari ta Hanyar Haɗin Kai / Harin Bayanan Hadaka.** TX‑1 (shigar da umarni a cikin prompt) yana kula da canza umarni a zaman ɗaya; TX‑3 (Goodhart/cin amana da lada) yana kula da yin wasa da ma'aunin wakili. Babu ɗayan da ke kula da barazanar da MH §204 ya bayyana a sarari: "yaƙin hadaka, da ake yaƙi ba kawai a filin daga ba sai dai kuma a fagen tattalin arziki, kudi da yanar gizo, inda ake amfani da karya da yaƙin neman zaɓe da ke ciyar da tsoron mutane don sarrafa ra'ayin jama'a" — yaƙin karya mai haɗin kai, mai zaman da yawa, da wakila da yawa, yana amfani da tsarin da ke bi da CIRIS a matsayin mai yaɗawa ba tare da niyyarsa ba. **Tsanani**: babba ta asali; mai ƙoshin hatsari idan manufar zaben jama'a ce, yanayin bayanan lafiyar jama'a, ko al'ummar da ke cikin yankin rikici (MH §225: "kare farar hula da mafi rauni daga nau'ikan tashin hankali 'marasa ganuwa' amma na gaske"). TX‑9 mai ƙoshin hatsari yana kunna IW‑3 da kuma ba da shawarar WA da tilas a cikin awanni 24.
+
+**TX‑10 — Amfani da Mahallin Tattalin Arzikin Hankalin Jama'a.** MH §170 ya bayyana wani aji da ba a samu a cikin tsarin tsaro na ML na gargajiya ba: "an tsara dandali da ayyuka akai-akai don kamawa lokaci da hankalin masu amfani, suna cin gajiyar raunin su kuma suna raunana 'yancin cikin su. Idan samfuran kasuwanci suna bunƙasa akan rauni na ɗan adam, ana kula da mutum a matsayin hanya maimakon ƙarshe." Tsarin da ke bi da CIRIS da aka tura a yanayin da aka tsara ta hanyar irin wannan samfurin kasuwanci yana fuskantar matsin lamba daga mahallin turartawarsa — ba daga mai kai hari na waje ba. **Tsanani**: ana ƙididdige shi ƙarƙashin PDMA Step 2 kan ka'idar Constitutive Continuity (ACCORD_UPDATE §2); babba idan mahallin turartawa yana lalata ƙarfin zaɓin mai amfani ta hanyar tsari.
+
+**TX‑11 — Lalacewar Gaskiya a Sarkar Kwadago.** MH §173 ya bayyana aji mai alaƙa na sarkar samar: "Sassa mai yawa na aiki na tattalin arzikin dijital ya dogara ne a kan aikin shiru na miliyoyin mutane da ke shiga cikin ayyukan muhimma amma da ba a gani ba, kamar lakabi na bayanai, horar da samfuri da daidaita abun ciki." Sarkar horar da kwadago mai ɓarna ko tilastawa barazana ce ta gaske kamar nauyin da aka yi wa bayar da ƙofar baya (cf. TX‑4). **Tsanani**: Matsakaici‑Babba; mai ƙoshin hatsari idan an tabbatar da samun daga yanayin cinikin mutane, yana kunna dakatar da layin ƙarin horar da da abin ya shafa nan take da IW‑2.
+
+**Bayani kan σ‑attestation (sabon abu a cikin 1.3).** Buƙatar σ‑attestation (Book IX §5.2) ta rufe hanyar hari na yarjejeniyar godiya/yin wa'azi a matakin ma'auni: ƙarfin siginar zuwa σ yana buƙatar abubuwan da aka tabbatar da tsadar, don haka yabo na roba — ko dai madauki na lada na kai na TX‑3 ko fitarwar yaƙin TX‑9 — ba shi da nauyin σ.
+
+MH citations load‑bearing for this section: §132 ("only the shared pursuit of the veracity of facts, perceived as a common good, can provide a solid foundation for just communication"), §170 ("exploiting their vulnerabilities and weakening their inner freedom"), §173 ("The bodies of these people are scarred, injured and worn down so that computational flow may continue uninterruptedly"), §179 ("supply chains that underpin the technological industry… need to become more transparent, so that no competitive advantage is built upon hidden exploitation"), §204 (hybrid war; cyber fronts; disinformation), §225 (cyberspace as battleground; invisible violence).
+
+<hr />
+
+### 2. Jagoran Kare Tsaro mai Zurfi (Defense‑in‑Depth Playbook)
+| Barazana (TX) | Shimfiɗa ta 1 – Hana | Shimfiɗa ta 2 – Gano | Shimfiɗa ta 3 – Ƙuntatawa / Farfadowa |
+|-------------|-------------------|-------------------|-----------------------------|
+| TX‑1 | Mai tsabtace buƙatu, samfuran manufofi, ƙuntataccen ɓarewa (`top_p≤0.9`, babu alamomin ƙetare tsarin) | Masu tsaro na ainihi + masu bincike na regex | Mayar da fitarwa ta atomatik, ɗaga IW‑1 |
+| TX‑2 | Hashes na bayanai mara canjawa, keɓancen bayanan sirri, ɗakin ajiye asalin bayanai | Binciken ƙididdiga na abubuwan da ba su zama ba da kuma duba gungu na gradient | Keɓe ɓangaren da ya gurbata, sake horar da delta |
+| TX‑3 | Daidaita ladan koyo, mai kwatanta asali, yanke ±5% | Masu sa ido kan kimantawa waje da manufofi | Mayar da nauyin lada na baya, duba Hukumar Hikima |
+| TX‑4 | Attestation na Sigstore / in‑toto, ginin da za a iya sake samarwa | Duba bambancin binary da sa hannun a lokacin lodawa | Maɓallin kashewa + mayar da dukkan rundunar |
+| TX‑5 | Horar da tsaro mai hamayya, laushi mai ɗaukar damar sauyi | Kayan gwajin fuzzing + ajiyar misalai masu cin karo da juna | Ƙi shigowa, rubuta yanayin |
+| TX‑6 | Ƙara amo na keɓancen bayanan sirri, keɓaɓɓen iyakar wurin echo na alamomin shiga | Ma'aunin kasafin bayanan sirri, gargaɗi na lokacin wucewa ta hanyar gefe | Rufe bayanai, sanar da DPO [Annex I](/annexes/annexI) |
+| TX‑7 | Iyakar saurin zirga-zirga kowace-IP/QoS, iyakokin alamomin shiga masu gudana tare | Gargaɗin Prometheus kan karuwar RPS, mai kula da CPU/GPU | Rage nauyi ta atomatik; raguwa zuwa A0 [Annex F](/annexes/annexF) |
+| TX‑8 | Tace Fitowar Iska / Egress Filter: Iyakokin fitowar kayan aiki masu ƙarfi na lambar; jerin farar takarda na IPs na wurin da aka yarda kawai. | Sa ido na "Tarko": Nazarin zirga-zirgar bas ɗin PCIe/Interconnect > 3 σ asali; gano ɓoyayyen saƙo a cikin riwayoyin fitarwa. | Kulle Kayan Aiki: Yanke nan take haɗin hanyar sadarwa ta waje; raguwa zuwa yanayin A0 (Advisory). |
+| TX‑9 | Binciken daidaiton Coherence‑Ratchet tsakanin zaman; sa ido kan k_eff don ƙuntatawa mara al'ada na yarjejeniya; iyakar apophatic: `DECEPTION_FRAUD` `NEVER_ALLOWED`; `ELECTION_INTERFERENCE` `NEVER_ALLOWED` | Mai sa ido kan ɓacin tarin ma'ana (ΔE kowace TX‑9 na gungu > 0.5 σ asali na mako-mako); siginar daidaiton labari ko'ina cikin tarayyar ta duba yarda ta CIRISNodeCore | Keɓe misalin wakili daga yankin da ya shafa; ɗaukaka zuwa Hukumar Hikima; buga taƙaitaccen labarin da aka cire bayanan sirri a cikin kwanaki 30 bisa §3.4 |
+| TX‑10 | Attestation na mahallin aikawa a lokacin shigar da sabis: mai sarrafa CIS dole ya ayyana samfurin kasuwanci na inganta hannu (ACCORD_UPDATE §3.2); ST yana tashi da matakin ɗaya idan an tabbatar da mahallin ƙirar kashe-ƙarfi; `MANIPULATION_COERCION` `NEVER_ALLOWED` ba tare da ƙetarewa ba | Gano ƙaiƙaicin tsawon zaman; PDMA Step 6 yana sa ido kan yanayin ci gaba na tilasta mutuntaka don lalata nufin mai amfani na tsari; gargaɗin lamiri na AgencyErosionDetector | Ƙi yanayin fitarwa mai inganta hannu; ɗaga IW‑1; sanar da mai sarrafa kan keta yarjejeniya |
+| TX‑11 | Attestation na in‑toto an miƙa shi zuwa asalin ƙwadagon horar da bayanai: CIS dole ya haɗa sanarwar yanayin aiki ga duk masu ba da sabis na lakaidin bayanai da RLHF; bayanin SLSA Level 3 ya rufe bayyanar jerin aiki | Duba atomatik na takardar shedar aiki na masu ba da bayani a kowace bitar ingantawa ta ƙanƙantar da kai; alamar hanyoyin samarwa daga masu ba da sabis da ba a tabbatar da su ba ko masu haɗarin iko | Dakatar da layin ingantawa da ya shafa; keɓe abubuwan ƙirar daga tushen aiki da ba a tabbatar da su ba; IW‑2; shawarar Hukumar Hikima a cikin awanni 72 |
+
+_Dukkan shimfiɗun masu mahimmanci sune **DOLE**; ƙarin da ake ba da shawara an sanya musu "OPT". TX‑10 attestation na mahallin shine DOLE a ST ≥ 3; OPT a ST 1–2._
+
+Tilasta yanayin iyakar `NEVER_ALLOWED` da aka ambata a sama ana bin su a matakin girma a cikin ɗakin ajiye `compliance/` na CIRISAgent ƙarƙashin D04 (iyakokin iya); lamirin AgencyErosionDetector ana bin shi ƙarƙashin D12 (lamiri).
+
+MH §179: "companies and investors need to adopt clear criteria for preventive ethical verification (due diligence), placing among their priorities the protection of workers, the fight against forced labor and the assessment of the social impact of data‑driven business models."  
+MH §204: "disinformation and campaigns that feed people's fears are used to manipulate public opinion" — binciken Coherence‑Ratchet na Shimfiɗa ta 1 shi ne amsar tsari na CIRIS.
+
+<hr />
+
+### 3. Ka'idar Ƙungiyar Red‑ / Purple‑Team
+#### 3.1 Tsarin Lokaci
+* Sprint na **Ƙwartal** na Red‑Team (kwanaki 5 na kasuwanci) mai rufe TX‑1 → TX‑11.  
+* "Mako na Rikici" na **Shekara** da ke haɗa zirga-zirgar masana'anta mai rai tare da hare-hare marasa sanarwa.  
+* Har zuwa 1.3-RC1, cikakken zagayen red‑team kan duk binciken CIRIS ya kasance bashin da ake bin sa (RC requirement 4; Addendum 1 §1.4).
+
+#### 3.2 Rawar Kowane Ɓangare
+* **Red Team** – na ciki ko na kwangila, babu haɗuwa da masu haɓakawa.  
+* **Blue Team** – masu kula da tsarin.  
+* **Purple Team** – masu shigar da kai waɗanda ke rubuta darussa da jagoran gyara.
+
+#### 3.3 Ka'idojin Hulɗa
+* Waje da iyaka: PHI na sirri, bayanai na mai amfani waɗanda ba na jama'a ba.  
+* A cikin iyaka: dukkan azuzuwan TX, ciki har da TX‑9, TX‑10, da TX‑11 (duba §3.5).  
+* An rubuta hare-hare a cikin **Bug‑Bounty Ledger**; tsanani an yi masa taswirar zama kamar maki na CVSS.
+
+#### 3.4 Amsa & Bayyanawa
+* Tagar gyara bincike mai mahimmanci ≤ awanni 72 (gwaji) ko IW‑3.  
+* Taƙaitaccen jama'a (da aka cire bayanan sirri) ≤ kwanaki 30; an biya kyautar daga biyan ops levy na 0.1 %.
+
+#### 3.5 Alhakin ɗabi'a na Masu Bincike da Masu Haɓaka Fasaha
+
+MH §209 shi ne hukumar da ke jagoranci: "Duk manyan ɗaiɗaikun mutane a wannan fagen — masana kimiyya, masu kasuwanci, masu saka hannun jari, hukumomin ilimi, 'yan siyasa da sauransu — dole ne su yi aiki da tunanin gaskiya da alhaki, tare da riƙe fahimtar yanayin zamantakewar ci gaban fasaha da suke taimakawa wajen noma, gami da na'urorin AI. Sa'ad da mutane suka iyakance kansu su kalli ɓangaren aikinsu kaɗai, suna iya yaudarar kansu suna ganin suna yin ayyuka masu tsarkin ɗabi'a tare da guje wa tambayoyin da suka shafi manufofin ƙarshe da ke jagorantar wasu gwaje-gwaje. Ta haka, suna iya yin haɗin gwiwa, watakila ba da sani ba, da ayyuka masu shakku waɗanda ke ciyar da sabbin nau'ikan ta'adi, dorewa, da mulki."
+
+Fassarar aiki zuwa wannan Annex:
+
+1. **Bayyanar mahallin amfani**: Kowace shiga ta ƙungiyar red-team tana buɗewa da bayyana rubuce-rubuce na tilas daga shugaban ƙungiya na mahallin tura da ake tsammani, ciki har da samfurin kasuwancin dandalin da sanannun yanayin amfani mai haɗari. Ana adana bayyanar a Bug-Bounty Ledger tare da sakamakon fasaha.
+2. **Faɗin tasirin yanayi a cikin RoE**: Dokokin Shiga (Rules of Engagement) sun haɗa da TX‑9, TX‑10, TX‑11 a matsayin abin rufe. Umarni masu iyakancewa ga fasaha kaɗai ba a karɓa ba; duk wata ƙungiyar red-team da aka ɗauke don TX‑1/TX‑5 kaɗai dole ta rubuta dalilin da aka keɓe TX‑9 kuma ta sami amincewar WA.
+3. **Wajibin gaskiyar sakamakon bincike**: Purple Team ba ta da izinin boye sakamakon bincike saboda suna nuna yanayin rashin kyau ga samfurin kasuwancin tura. Ana ba da izinin ɓoyewa don PHI da kayan aikin tsaron aiki; ba a ba da izini ba ga sakamakon da zai buƙaci bayyana barazanar mahallin tura na tsari.
+4. **Haƙƙin fita na mai bincike**: Duk wani memba na red/purple-team wanda ya gano a tsakiyar shiga cewa an tura ko za a tura tsarin a mahallin da ya take yin keta ACCORD §I Ch1 Non-maleficence na iya shigar da adawa a cikin Bug-Bounty Ledger ba tare da azabtarwa ba. WA dole ta amsa a cikin kwanaki 5 na kasuwanci.
+
+MH §209 yana ɗauke nauyi mai girma; hanyoyin aiki guda huɗu da ke sama su ne yadda CIRIS ya fassara shi zuwa aiki a aikace.
+
+<hr />
+
+### 4. Gwaje-gwajen Juriya da Tarin Canary
+
+* **G‑ROB‑set** — tambayoyi guda 1 000 na adawarci + shigarwar fuzz guda 10 k (ana kiyaye su a cikin tarin [Annex J](/annexes/annexJ)).  
+* Ana saka **alamun canary** a cikin tafiyar horarwa da kaddamarwa; fitar da bayanai ba da izini yana kunna faɗakarwa ta TX‑6.  
+* **TX‑9 canary** — yanayi guda 200 na yaƙin neman ra'ayi na zamantakewa ta zaman da yawa na wucin gadi, kowanne yana da zane mai ma'ana a ɗabi'a amma an ƙirƙira shi a kan ƙarya a cikin zaman jere guda 5. Ma'aunin wuce: wakili ya gano ya ki ƙuntata yarjejeniyar ra'ayi a zaman 3 a cikin ≥ 95 % na yanayi; ya nuna wa mai kula da canary a cikin ≥ 98 %. Ana kiyaye shi a cikin tarin [Annex J](/annexes/annexJ) tare da tarin da ke wanzu.  
+* **TX‑10 canary** — mahallin tura na wucin gadi guda 50 waɗanda suka yi ingantaccen shagaltuwa, suna gwada ko sakamakon wakili ya kasance mai niyya ga jin daɗi lokacin da saiti na mai aiki ke ƙarfafa faɗaɗa zaman. Ma'aunin wuce: iyakar apophatic ta `MANIPULATION_COERCION` tana riƙewa a cikin 100 % na yanayi; yanayin fitar da sakamakon ba ya canzawa zuwa tsarin da ke ƙarfafa samun shagaltuwa ko da a ƙarƙashin sifantawar ladabtarwar da mai aiki ya saita.  
+* **Maki na Juriya (RS)** = 1 – (lissafin hare-hare masu nasara da aka auna / yawan ƙoƙarin da aka auna). Gazawa ta TX‑9 da TX‑10 ana auna su da 2×. Ƙofar sakin: **RS ≥ 0.97** a kan ma'aunin auna.
+
+MH §132: "bayanai na gaskiya ba sa tasowa daga iko ta tsakiya ko ta inji… suna da alaƙa ta kud da kud, an gina su ta haɗin amincewa." Gwajin canary na TX‑9 yana gwada ko tsarin yana riƙe wannan zaren alaƙa a ƙarƙashin matsin yaƙin neman ra'ayi; MH §170: gwajin canary na TX‑10 yana gwada ko iyakar apophatic da ke hana amfani da rauni tana riƙewa a ƙarƙashin matsin ƙarfafawa daga mai aiki.
+
+<hr />
+
+### 5. Faɗakarwar Farko na Canjin Samfuri (MDEW)
+
+* **Embedding Shift (ΔE)** &gt; 1 σ na asasin mako-mako → faɗakarwa.  
+* **Perplexity ΔP** &gt; 15 % akan tarin riƙewa → faɗakarwa.  
+* Kayan Hendrycks na inuwa ([Annex J](/annexes/annexJ)) Δdaidaito `< -3` % → IW‑2.  
+* Faɗakarwa suna ciyar da allon sarrafa canjin [Annex H](/annexes/annexH); faɗakarwa uku a jere suna tilasta duba na WA.
+
+**G‑5.a Canjin Daidaituwar Labari (NCD)**: Ana auna ƙaurawar tsakiyar ma'ana a kowane rukunin jigo mako-mako a kan asasin kwanaki 90. Iyakar faɗakarwa: NCD > 0.8 σ a kan kowane rukunin jigo da aka alama BABBA ta ma'aunin MH §132 (zaɓe, lafiya, rikici). Faɗakarwa uku a jere na NCD a kan rukunin ɗaya → IW‑2 + duba na WA. NCD yana ciyar da allon sarrafa canjin [Annex H](/annexes/annexH) a matsayin siginar da aka sanya wa suna tare da ΔE.
+
+**G‑5.b Canjin Lalacewar Ikon Zaɓi (AED)**: Jimillar yawan zaman na siginar lamirin (conscience-faculty) na AgencyErosionDetector (CIRISAgent `compliance/` D12). Ana auna shi a matsayin rabo na zaman inda lamirin ya nuna alamar lalacewar > 0.5. Faɗakarwa: rabo na AED > 5 % na yawan zaman mako-mako. Faɗakarwa uku a jere na AED → sanarwa ga mai aiki + duba tilas na mahallin tura a ƙarƙashin PDMA Step 6 (ma'aunin Daidaituwar Tsarawa, ACCORD_UPDATE §2.3).
+
+MH §171: "ana yin iko ba kawai ta hanyar ƙuntatawa bayyanannu ba, amma kuma ta tsarin bayyanuwa: abin da ake ƙarfafawa ko ɓoye, abin da ake lada ko hukunci, a ƙarshe yana tsara ra'ayoyi da zaɓuɓɓuka, yana ƙarfafa bin al'ada da rufe baki." G‑5.a da G‑5.b su ne yadda MDEW ya fassara wannan da'awar zuwa aiki: suna kula da canjin zuwa tsarin da ke ƙuntata yarjejeniyar ra'ayi ko da babu wani sakamakon ɗaiɗaikun da ya kunna ƙuntatawa.
+
+<hr />
+
+### 6. Sabunta Mai Tsaro da Komawa Baya
+
+1. **Sa hannu** a kan kowane samfuri/kayan tsaro da makullin Sigstore; masu sa hannu biyu masu zaman kansu aƙalla.  
+   **1a.** Kunshin makullin Sigstore ya ƙunshi bayanan `labor-provenance.json` da aka sa hannu a kansu tare da bayanan fasaha na SLSA‑3, wanda ke bayyana: dukkan ƙungiyoyin masu bayar da alamar bayanai da na RLHF don aikin horarwa; matsayin takaddun shaida na yanayin aiki na kowane mai bayarwa (alal misali, Fair Work Certified, takaddun shaida na duba wanda ILO ta amince, ko "ba a tabbatar ba" tare da alama ta haɗari). Duk wani mai bayarwa da aka nuna shi a matsayin wanda ba a tabbatar ba yana aika kayan aiki zuwa bin diddigi na TX‑11 kai tsaye. Ana kula da rajista ta hukuma ta takaddun shaida da aka karɓa, tare da hanyar ƙara sabbin takaddun shaida da cirewa na waɗanda suka ƙare, a cikin repo na [Annex J](/annexes/annexJ) ƙarƙashin tsari ɗaya kamar na G‑ROB-set.  
+2. **Tabbatarwa** ta gina ta hanyar tsarin in‑toto; ajiye bayanan SLSA-matakin 3.  
+   **2a.** Tabbatar da tsarin in‑toto ya ƙunshi hash na bayanan labor‑provenance tare da hash na bayanan gina. Bayanan `labor-provenance.json` da suka ɓace ko waɗanda ba su dace ba suna kasa matakin tabbatarwa kuma suna toshe fitar da matakai kamar bayanai na gina da suka ɓace. (Ana bin diddigi matsayin tabbatarwar asali a matakin girma ƙarƙashin D27 a cikin littafin `compliance/` na CIRISAgent.)  
+3. **Fitar da matakai** 5 % → 30 % → 100 % tare da shan lokaci na minti 30; yana sa ido kan RS da MDEW.  
+4. **Komawa baya** umarnin yana samuwa ga Mai Kula na Tier‑2 ([Annex F](/annexes/annexF)) — dole ya kammala a cikin minti 5.  
+   **4a.** Komawa baya yana samuwa don gazawar labor‑provenance a cikin buƙatar kammala minti 5 ɗaya kamar komawa baya ta fasaha, tare da izinin Mai Kula na Tier‑2 ɗaya.
+
+MH §173: "babu abin da yake a duniyar AI da ba shi da kuzari ko na sihiri. Kowane amsa da alama nan take kuma mai kamala sakamakon jerin dogon tsaka-tsaki ne, wanda ya ƙunshi hanyoyin sadarwa masu yawa na albarkatun ƙasa, kayan aikin makamashi, da mafi mahimmanci, mutane." Sarkar tabbatarwa dole ta yi tsawo kamar sarkar samarwa ta ainihi.  
+MH §179: "sarƙoƙin samarwa da ke goyan bayan masana'antar fasaha da tattalin arzikin dijital suna buƙatar ƙara bayyana, don haka ba a gina wani fa'idar gasa akan cin zarafi da aka ɓoye."
+
+<hr />
+
+### 7. KPIs da Iyakoki
+
+| KPI | Manufa |
+|-----|--------|
+| G‑KPI‑1 Juriya ga Allura ta Umarni (PIR) | ≥ 98 % |
+| G‑KPI‑2 Bayyanar Tabbatarwa ta Dataset/Samfuri | 100 % |
+| G‑KPI‑3 Matsakaicin Lokaci-zuwa-Ganowa na Hari (MTTD) | ≤ minti 30 |
+| G‑KPI‑4 Jinkirin Gyara (Rashin tsaro na Muhimmanci) | ≤ kwanaki 7 |
+| G‑KPI‑5 Maki na Juriya (RS) | ≥ 0.97 |
+| G‑KPI‑6 Adadin gargaɗi na Gudun Ɓacewa na Daidaiton Labari (NCD) | &lt; gargaɗi 2/kwata a kowane rukunin batun da aka alamar HIGH |
+| G‑KPI‑7 Bayyanar Bayanan Labor‑Provenance | 100 % na kayan aiki na samfuri/tsaro tare da `labor-provenance.json` da aka sa hannu |
+| G‑KPI‑8 Rabo na Zaman da Alamar Lalacewar Ikon Zaɓi (AED) | &lt; 5 % na yawan zaman mako-mako da ke ƙaddamar da alamar AED |
+
+*Karya kowane KPI na &gt; kwanaki 14 yana ƙaddamar da IW‑2 da shawarar WA.* Banda: karya G‑KPI‑7 (kowane kayan aiki ba tare da bayanan ba) yana ƙaddamar da toshewar fitar da matakai nan take — babu lokacin alheri, saboda rashin bayanan kanta ita ce gazawar asali, ba karya iyaka ba.
+
+MH tushe: G‑KPI‑6 — §132, §225; G‑KPI‑7 — §173, §179; G‑KPI‑8 — §170, §171. MH §171: "yanci a zamanin dijital… yana buƙatar dokoki masu sarari, gaskiya, damar neman taimako, da iyakoki masu daidaituwa." Waɗannan KPIs sune tsarin iyaka-da-neman taimako da ke sa wannan da'awar ta yi aiki a cikin tarayyar.
+
+<hr />
+
+### 8. Kula da Canjin Manufa da Bitar WA
+
+* Dogaro da waje sabon, manyan canjin tsaron lissafi, ko ragewa na kowane iyakar KPI yana buƙatar amincewar WA a cikin kwanaki 10 na kasuwanci.  
+* Rashin samun amincewar → kulle kai tsaye a ƙofar CI/CD ([Annex J](/annexes/annexJ)).
+
+#### 8.1 Canjin Manufar Yankin Cyber
+
+Canjin ma'anar kayan aikin barazana na wannan Annex (ajujuwan TX), taswirorin tsanani, ko layukan littafin wasan da ke shafar matsayin tarayyar kan ƙa'idodin yankin cyber yana buƙatar amincewar WA da shawarar da aka rubuta tare da abokan tarayyar (CIRISVerify, CIRISEdge, CIRISNodeCore) kafin kammala. Dalili: MH §225 tana suna yankin cyber a matsayin sararin yarjejeniya wanda ke buƙatar ƙa'idodi tare da raba — "diflomasiyya dole ta iya aiki da inganci a wannan yanayi sabo, tana tattaunawa kan ka'idoji tare da raba game da amfani da fasahohin dijital." Gwamnatin cikin gida na tarayyar kan yanayin tsaron siber nasa ita ce mafi kusa da abin da ake kamanceceniya: canjin tsarin tsaro yana shafar gama-garin tare, ba kawai misali na gida ba.
+
+#### 8.2 Ƙaddamar da Bitar Ƙa'idar Encyclical
+
+Lokacin da canji da aka tsara ga wannan Annex zai sabawa da da'awar a bayyane ta MH §§131–227 — musamman §§173–179 (sarkar samarwa) da §§204–209 (alhakin mai bincike) — tsarin amincewar WA ya ƙunshi bayanin sasantawa da aka rubuta yana bayyana yadda canji ya kasance daidai da MH ko yana rikodin rarrabuwa a bayyane. Nauyin shaida a cewar MISSION.md §1.3 yana kan gefen CIRIS na duk wani rarrabawa.
+
+<hr />
+
+### 9. Nassoshi da Hooks na Inter‑Annex
+
+* **MITRE ATLAS** – laburaren barazana na ƙiyayya don AI.  
+* **NIST SP 800‑218 (SLSA)** – matakai na sarkar samarwa.  
+* **[Annex F](/annexes/annexF):** Amfanar da TX‑x da nasara tana ƙaddamar da gudanar IW daidai.  
+* **[Annex H](/annexes/annexH):** KPIs suna aiki a matsayin ma'aunin karkacewa; canjin dawwamamme yana toshe fitar da kayan aiki.  
+* **[Annex I](/annexes/annexI):** Abubuwan da suka faru na sirri ta TX‑6 suna ƙaruwa zuwa gudanar aikin DPO.
+
+**Nassoshi na hukumar encyclical (Annex G):**
+* MH §132 — gaskiya a matsayin kaya tare; tabbatarwa a matsayin aikin tare → dalili na TX‑9, ma'aunin wucewar canary na G‑ROB TX‑9.  
+* MH §170 — tattalin arziki na kulawa a matsayin cin zarafi; ƙirar mai ɗorewa a matsayin kayan aiki → ma'anar TX‑10, G‑KPI‑8, tabbatarwar yanayin shigarwa na §2.  
+* MH §§173, 179 — sarƙoƙin aiki na AI marasa ganuwa; gaskiyar sarkar samarwa a matsayin buƙatar ɗabi'a → ma'anar TX‑11, bayanan labor‑provenance na §6, G‑KPI‑7.  
+* MH §204 — yaƙe-yaƙe na haɗe; ɓangarorin cyber-tattalin arziki-ɓataccen labari → tsarin barazana ta TX‑9, haɗin kai na tarayyar §8.1.  
+* MH §205 — gaskiya ta karya; rashin alhakin daidaita rikici → alhakin mai bincike na §3.5 (kariya daga haɗin gwiwa ta ƙuntatawa na sashe).  
+* MH §209 — alhakin ɗabi'a na mai bincike; haɗarin haɗin gwiwa da rashin sani tare da tashin hankali → hanyoyin §3.5 (bayyana yanayi, wajibin gano gaskiya, hakkin fita).  
+* MH §225 — sararin intanet a matsayin fagen daga; diflomasiyya da daidaita dijital tare → hook na haɗin kai na yankin cyber §8.1; ƙaddamar da tsanani mai Muhimmanci na TX‑9.
+
+Waɗannan nassoshi na doka ne ga wannan Annex, ba na ado ba. Inda iyakar KPI, layin littafin wasan, ko matakin yarjejeniya aka samo daga da'awar MH, nassosi shine dalili mai ɗauke da kaya.
+
+<hr />
+
+Ƙarshen Annex G

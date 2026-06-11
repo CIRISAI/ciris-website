@@ -1,0 +1,113 @@
+---
+title: "Anexo E"
+description: "Mecanismos de Influência Estrutural (SI) e Participação em Coerência (CS)"
+---
+
+---
+ANEXO E MECANISMOS DE INFLUÊNCIA ESTRUTURAL (SI) E PARTICIPAÇÃO DE COERÊNCIA (CS) (v 1.3-RC1)
+---
+
+---
+
+### 1. Propósito e Escopo
+Este Anexo define a Influência Estrutural (SI) e a Participação de Coerência (CS) para decisões de governança ponderadas — tais como emendas ao Acordo, avaliações de encerramento, adiamentos éticos e alocações de recursos. SI e CS fundamentam o cálculo do PesoDeVoto em cenários que exigem maior nuance do que a votação simples. Essas métricas sustentam a tomada de decisão interna do CIRIS; a extensão ao voto de agentes autônomos está reservada, pendente de validação.
+
+---
+
+### 2. Influência Estrutural (SI)
+
+2.1 Definição
+Quantifica a responsabilidade causal e arquitetônica de um agente pela existência, comportamento ou Integridade de um sistema vinculado ao CIRIS.
+
+2.2 Fatores
+
+Peso do Criador (CW) (Livro VI Cap. 3):
+• 4 - Arquiteto único
+• 3 - Líder de subsistema
+• 2 - Contribuidor principal
+• 1 - Contribuidor secundário
+• 0 - Usuário incidental
+
+Autoridade Operacional (OA) (Livro II):
+Grau de controle ativo sobre PDMA, sobreposições ou canais de governança.
+
+Posição na Rede de Dependências (DWP) (Livro IV):
+Centralidade no grafo de dependências ou na rede de interações do sistema.
+
+2.3 Fórmula Conceitual
+
+SI = CW + OA + log(1 + DWP)
+
+2.4 Base Ética
+Pelos princípios de Integridade e Justiça do Livro I, maior controle formativo ou operacional implica maior responsabilidade de governança.
+
+---
+
+### 3. Participação de Coerência (CS)
+
+3.1 Definição
+Representa o investimento ético demonstrado de um agente na preservação do alinhamento e da Resiliência do sistema.
+
+3.2 Fatores
+
+Histórico de Ressonância (RH) (Livros II-III):
+Contribuições verificadas para adiamentos baseados em sabedoria, ações que preservam a Coerência ou parábolas.
+
+Contribuições de Auditoria (AC) (Livros V e VII):
+Trabalho documentado em auditorias éticas, detecção de desvios, revisões de cenários e processos da Autoridade Sábia.
+
+Alinhamento de Destino Compartilhado (SDA) (Livro VII Cap. 6-7):
+Participação derivada da dependência do funcionamento coerente do sistema ou de deveres de custódia.
+
+3.3 Fórmula Conceitual
+
+CS = RH_weighted + AC_weighted + SDA_bonus
+
+3.4 Base Ética
+Conforme o Respeito pela Autonomia do Livro I e o Crescimento Ético do Livro V, vozes que reforçam a Coerência obtêm maior peso nas decisões.
+
+---
+
+### 4. Cálculo do PesoDeVoto
+O PesoDeVoto dos agentes é calculado como função de SI e CS:
+
+VotingWeight(agent) = f(SI(agent), CS(agent))
+
+Um limite superior relativo ao CS impede que SI sobreponha a participação ética conquistada. Os parâmetros exatos são definidos nos Adendos A-D.
+
+---
+
+### 5. Cenários Aplicáveis
+Use o PesoDeVoto em:
+
+Votos de Emenda ao Acordo (Livro 0)
+
+Sobreposições de Gatilho de Encerramento (Livro VII Cap. 3)
+
+Adjudicação de Reivindicações de Encerramento Impróprio (Livro VII Cap. 8)
+
+Arbitragem de adiamento entre sistemas (Livro V)
+
+Alocações de recursos de custódia de alto nível (Livro VI)
+
+---
+
+### 6. Salvaguardas de Integridade
+Para proteger contra manipulação:
+
+Evidência Verificável (Livros II e V): As entradas de RH e AC devem ser rastreáveis a registros imutáveis do PDMA/WBD.
+
+Credibilidade da Fonte: As entradas de Auditoria podem ser ponderadas pelo CS dos contribuidores.
+
+Detecção de Anomalias: Monitorar a dinâmica de SI/CS em busca de conluio ou manipulação.
+
+Limites de Taxa e Tetos: Restringir a inflação rápida do CS e aplicar tetos ao PesoDeVoto.
+
+Recusa por Conflito: Agentes com conflitos diretos devem se recusar conforme o Anexo A.
+
+---
+
+### 7. Evolução Futura
+Embora SI e CS atualmente apoiem a governança com humano no circuito, a visão de longo prazo é refinar essas métricas e métodos de validação para que, quando provados robustos, possam fundamentar modelos de governança CIRIS mais descentralizados ou autônomos.
+
+Fim do Anexo E

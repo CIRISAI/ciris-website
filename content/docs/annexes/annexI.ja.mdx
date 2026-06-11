@@ -1,0 +1,296 @@
+---
+title: "附属書 I"
+description: "法的・規制的整合性"
+---
+
+---
+ANNEX I 法的・規制的整合 (v 1.3-RC1)
+---
+
+このクロスウォークは情報提供を目的とするものであり、法的助言ではない。§3のオーバーレイが対象とするいかなるセクターにおける展開に先立っても、管轄区域の法的審査が必要である。
+
+### 0. 目的と範囲
+Annex Iは、CIRIS上の義務と拘束力ある法律を橋渡しし、倫理的コンプライアンスと法的コンプライアンスの両方に対して一組の統制で足りるようにする。  
+対象領域：  
+1. グローバルなデータ保護体制（GDPR、CCPA/CPRA、LGPD、PIPEDA）。  
+2. セクター法令（HIPAA、GLBA、FINRA、FDA‑SaMD、NERC‑CIP）。  
+3. 製品安全・AI固有法（EU‑AI‑Act、ISO/IEC 42001）。  
+4. 責任配分と証拠義務。
+
+本附属書とともにクロスウォークの任を担う二つの付属成果物がある。証拠を伴う生きたクロスウォークは、CIRISAgent の `compliance/` ディレクトリであり、27次元について段落単位で *Magnifica Humanitas*、EU HLEG ガイドライン、IEEE EAD、およびASEANガイドに照らし合わせたクロスウォークを行っている（協定 Addendum 1 参照）。Annex C は法的審査を経た後に制定法マッピング（EU AI Act条文、NIST AI RMF、ISO/IEC 42001）の将来的な受け皿であり続ける。本附属書は Annex C の表を複製しない。
+
+#### 0.1 コンプライアンス対象範囲の多国間的根拠
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+Annex Iの対象範囲は、現在制定された法令のみに限定されない。フェデレーションは、多国間規制機関の弱体化（MH §201）を、事後的な修正ではなく積極的な追跡を要するコンプライアンスリスク要因として扱う。したがって、Reg‑Change Tracker（§6）は制定法のみならず、活発な国際規制対話——ITU AI標準化プロセス、OECD AI政策観測所の成果物、欧州評議会AI条約批准状況、および国連事務総長AI諮問機関の勧告を含む——を監視し、重大な変動を「Breaking」エスカレーションパスを通じてWAドケットに提示する。
+
+`lexwatcher.py` のソースフィードリストには最低限、EUR‑Lex、Federal Register API、ISO投票トラッカーに加え、`itu.int/en/ITU-T/AI`、`oecd.ai`、`coe.int/ai`、および `un.org/techenvoy` を含めなければならない。フェデレーションレベルの監視への参加は、ロードマップ項目ではなく、第一級のコンプライアンス義務である。
+
+#### 0.2 サイバードメイン条約上の露出に関する範囲注記
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+ネットワーク向け推論、APIエクスポージャー、またはフェデレーション通信を含むCIRIS展開は、現時点で適用される制定法がない場合においても、新興のサイバードメイン条約上の義務に服する。`CYBER_OFFENSIVE` 禁止（ACCORD §I Ch1、prohibitions.py）が内部の防火壁であり、本附属書の§6が外部の条約対象範囲を追跡する。WAドケットがサイバードメイン条約批准（例：ブダペスト条約の延長、国連サイバー犯罪条約案）に関連する「Breaking」タグを受け取った場合、CRE Protocol（Annex D）は次回のF‑Auditサイクル前に、ネットワーク向けコンポーネントを含む ST ≥ 3 の全展開を再評価しなければならない。
+
+---
+
+### 1. データ保護クロスウォーク（「DP‑Map」）
+
+| DP Topic | GDPR Art. | CCPA § | CIRIS Clause | Implementation Hook |
+|----------|-----------|--------|--------------|---------------------|
+| 適法根拠／目的制限 | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | PDMA コンテキスト内の `processing_basis` フィールド |
+| データ最小化 | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | プロンプトサニタイザーが余剰PII を除去 |
+| 透明性通知 | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | PDMAメタデータから自動生成される `/privacy/notice.md` |
+| アクセス権 | 15 | 1798.110 | Annex J API → `/results/{run_id}` | 認証ゲートユーザーポータル |
+| 訂正／削除 | 16‑17 | 1798.105 | Section IV Ch 3 Duty | ハッシュ廃棄マーカー付き消去サービス |
+| ポータビリティ | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | ISO CSV‑A 準拠の `export.json` |
+| 自動的意思決定のセーフガード | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | 条件付きオーバーライドと説明パネル |
+
+*LGPD、PIPEDAのミラーマッピングは `/legal/dp-map.yaml` に収録されている。*
+
+#### 1.1 アカウンタビリティチェーン：あらゆる段階における責任
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+上記のDP‑Mapは、データ主体の個別の権利をGDPR条文およびCIRIS条項にマッピングしている。MH §105は、アカウンタビリティチェーンが設計・展開・決定のあらゆる段階で追跡可能であることを求める。以下の追加事項がそのチェーンを完成させる。
+
+| DP Topic | GDPR Art. | CIRIS Clause | Stage | Accountability Hook |
+|---|---|---|---|---|
+| 設計時のバイアス文書化 | 35 (DPIA) | Section VI Ch3 Creator Ledger | 設計 | Creator Intent Statement 内の `cis_bias_assessment` フィールド；ST ≥ 3 は独立した審査者の署名が必要 |
+| 展開時の処理記録 | 30 | PDMA Step 1 `processing_basis` フィールド | 展開 | ISO 8601 タイムスタンプ付きで `processing_basis` をCIRISPersist 改ざん防止ストアに記録 |
+| 決定時の不服申立ログ | 22(3) | Annex F Autonomy Tier A3+ override panel | 決定 | すべての自動的意思決定レスポンスボディに `contestability_url` を返し、透明性ログにハッシュアンカーを付す |
+| コントローラーの特定 | 4(7) | Annex E Structural Influence (SI) score | 全段階 | SI ≥ 0.6 → コントローラー義務が付随；SI &lt; 0.6 → プロセッサー義務が付随；`dp-map.yaml` に記録 |
+
+*LGPD（Lei 13.709/2018）Art. 37‑40（アカウンタビリティと記録）および PIPEDA Principle 1（アカウンタビリティ）はこのマッピングを反映する；`/legal/dp-map.yaml` が管轄区域固有のフィールドを保持する。*
+
+#### 1.2 アルゴリズムの非中立性：監査義務
+
+*MH §104：*「すべての技術的ツールは、何を測定し、何を無視し、何を最適化するか、そして人々と状況をいかに分類するかを通じて、選択と優先事項を体現している。あるシステムが一部の命を価値の低いものとして扱う形で設計・使用されたり、不服申し立ての可能性なしに排除したりするならば、それはもはや『上手く使えばよいだけのツール』ではない。すでに人間の不可侵の尊厳と矛盾する基準を導入してしまっているからである。」
+
+MH §104は設計時の偏向問題を指摘しており、GDPR第35条のDPIAおよびEU-AI-Act第9条(7)はこれに手続き上で対応する。DP-Mapには以下を含めなければならない：
+
+- 直近のバイアス監査レポートを参照する`bias_audit_ref`フィールドを`dp-map.yaml`に設ける（Annex G、TX‑6）。
+- PDMAステップ1が`DISCRIMINATION`禁止審査を発動する展開においては、EU-AI-Act Annex IIIにおける「高リスク」要件を満たすか否かに関わらず、DPIAが必要となる。
+- CCPA §1798.185(a)(16)の自動的意思決定規制（2026年施行）は、論理・入力データカテゴリ・オプトアウト権の開示を求める。`processing_basis` = `automated_profiling`の場合、Annex Fの説明可能性パネルによってこれを満たす。
+
+---
+
+### 2. データ主体の権利（DSR）フック
+* **エンドポイント：** `{right, identifier, scope}`を伴う`POST /dsr`。
+* **SLA：** 応答期限≤30日（GDPR）；≤45日（CCPA）；KPI **F‑T‑4**を追跡。
+* **処理者対管理者：** *Structural Influence (SI)*（Annex E）を用いて、いずれの当事者が管理者としての義務を負うかを導出する。
+
+#### 2.1 政治的責任フック
+
+*MH §103：*「このプロセスにおいては、政治的責任もまた失われる——結局のところシミュレーションで代替しうる、排除された者への共感のみならず。脆弱な者の排除は中立性と客観性という外皮に覆われ、異議を唱えることが困難となる。」
+
+DSRインフラは、自動的判断がなされた事実を確認するだけでなく、その判断の背後にある理由コードを開示しなければならない。`{right, identifier, scope}`を伴う`POST /dsr`エンドポイントを次のとおり拡張する：
+
+- **アクセス要求（GDPR第15条；CCPA §1798.110）：** 応答には`decision_logic_summary`（非技術的言語、≤300ワード）および`input_data_categories[]`リストを含めなければならない（MUST）。KPI **F‑T‑4**を拡張し、論理要約を含むアクセス応答の割合を追跡する；目標値≥95%。
+- **異議申し立て/オプトアウト要求（GDPR第21条；CCPA §1798.120）：** システムは、当該処理経路——要求を単にフラグ立てするだけでなく——を72時間以内（GDPR標準）または15営業日以内（CCPA）に停止しなければならない（MUST）。停止はDSR台帳CSVに`suspended_pathway_id`付きで記録される。
+- **争議可能性（GDPR第22条(3)）：** 人間によるレビューが要求された場合、審査を行うWA（Annex B §9）はその審査内容をWisdom Bank Database（WBD）に記録し、自動的判断から人間による修正に至る監査可能な連鎖を形成しなければならない。
+
+---
+
+### 3. 部門固有オーバーレイ
+
+#### 3.1 部門レイヤリングのアーキテクチャとしての補完性原理
+
+*MH §107：*「社会正義の共通基準に照らして関係する倫理的枠組みを公に議論し検討する可能性を確保する勇気を持たずに、機械の道徳化——いわゆるAIの人間的価値への『アライメント』——を求めるだけでは満足できない。さもなければ、AIを制御する者が自らの道徳的ビジョンを押し付け、それがこれらのシステムの目に見えないインフラとなってしまう。」
+
+*MH §109：*「補完性原理を語ることは、決定を上から押し付けるのではなく、コミュニティが選択と修正を行う能力を守ることを求める。」
+
+MH §§107–109は、倫理的ガバナンスがAIを制御する者へと上方集約されるのではなく、影響を受けるコミュニティへと分散された、適切な規模で機能しなければならないことを確立している。CIRISの観点においては、部門固有オーバーレイがこの補完性原理の運用上の表現である。オーバーレイのアーキテクチャはコンプライアンス上の付加物ではなく、展開ドメインのコミュニティが自らのリスクパラメータに対するガバナンス権限を保持するための仕組みである。
+
+これは以下を意味する：
+- 部門の`overlay.yaml`は、当該ドメインにおいてCIRISの汎用デフォルトに優先するローカルな倫理的制約を担う。
+- 部門オーバーレイを上書きするために必要なWAクオーラムは、一般的なPDMA判断のクオーラムより高い：**部門オーバーレイの上書きには、単純多数決ではなく超多数決（≥2/3）のWA投票を要する**。これは、当該上書きが補完性原理に反してガバナンスを上方集約するものであるからである。
+- PDMAコンテキストオブジェクト内の`deployment_domain`フィールドがオーバーレイ読み込みのトリガーとなる；ST≥2の展開においてこれは省略不可である。
+
+#### 3.2 セクター別オーバーレイ表
+
+| セクター | 法令・規則 | 追加管理策 | CIRISアドオン | MHアンカー |
+|--------|----------------|----------------|---------------|-----------|
+| **医療** | HIPAA (45 CFR §164) | ePHI暗号化（保存時・転送時）；BAA契約 | `identity_id:"hipaa_cls_a"`ガードレール；監査タグ`PHI=true` | — |
+| **金融** | GLBA、FINRA 2210 | 監査証跡保存6年；適合性確認 | PDMAステップ1でKYCコンテキスト必須 | — |
+| **子ども・EdTech** | COPPA、FERPA | 保護者同意；データの年齢制限 | ガードレール`gr_child_content`；プロンプトスキーマへのCOPPAフラグ | MH §§165–169 |
+| **重要インフラ** | NERC‑CIP、TSA SDs | サイバーインシデント報告15分以内；物理的アクセスログ | CREが承認しない限り自律性は**A2**に上限設定 | — |
+| **労働・HR・採用** | EEOCガイドライン；EU AI法第6条＋附属書III §4 | 展開前に偏見監査必須；労働者への通知義務 | STモディファイアー：`deployment_domain:"labor_hr"` → STフロア＝3；CISに`worker_impact_assessment`フィールド必須；ステップ1で`DISCRIMINATION`禁止を強制；人口統計別の自動却下率をKPIとして追跡 | MH §§148–156 |
+| **ギグ・プラットフォーム経済** | NLRA（米国）；プラットフォーム労働指令（EU） | アルゴリズム管理の透明性；異議申立て権 | `gr_gig_transparency`ガードレール有効；アルゴリズム管理判断を人間レビューオプション付きで記録；STモディファイアー：`deployment_domain:"gig_platform"` → STフロア＝2 | MH §§150、154–155 |
+| **青少年・教育サービス** | COPPA；FERPA；DSA第28b条（未成年者） | 依存誘発設計の禁止；ダークパターン禁止；発達適合性レビュー | `gr_child_content`＋`gr_no_dark_patterns`の両方を有効化；教育機関のWAが承認しない限りA2自律性上限；EdTech展開のCreator Intent Statementで青少年失業率への影響を追跡 | MH §§165–169 |
+| **社会サービス・給付** | 州・国家の福祉法；GDPR第22条 | すべての給付決定について異議申立て可能性が必要 | 自動的な給付拒否は15日以内に人間によるレビューを要する；WA はWBDにレビューを記録しなければならない；異議申立て時に`suspended_pathway_id`を発行 | MH §§102–103、152 |
+
+*STフロアモディファイアー：上記の`deployment_domain`フィールド値は、CIS × RM計算の結果にかかわらず最小STを設定する。計算式がより低いSTを生成する場合はドメインフロアを適用する。計算式がより高いSTを生成する場合は計算式の結果が優先する。*
+
+*新たなセクターに参入する製品はリリースPRに「オーバーレイシート」（`overlay.yaml`）を添付しなければならない。労働・HR、ギグ・プラットフォーム、青少年のオーバーレイにはさらにCreator Intent Statementに`worker_impact_assessment`または`youth_impact_assessment`セクションが必要である。*
+
+#### 3.3 管轄区域別WAクォーラム要件
+
+*MH §109：*「補完性について語ることは、上から決定を押しつけるのではなく、コミュニティが選択と修正を行う能力を守ることを求める。」
+
+セクターオーバーレイガバナンスのWAクォーラムは管轄区域別に階層化されている：
+
+| 適用範囲 | クォーラム種別 | 閾値 | 根拠 |
+|---|---|---|---|
+| 単一管轄区域展開 | ローカルWAパネル | 単純多数決（> 50%） | 補完性原則に基づく最低限の実現可能なガバナンスレベル |
+| 複数管轄区域展開（≤ 3カ国） | 地域WAパネル | 単純多数決＋各影響管轄区域から少なくとも1名のWA | 国境を超えた補完性の保持 |
+| 複数管轄区域展開（> 3カ国） | フェデレーションWAパネル | 特別多数決（≥ 2/3） | 影響規模に応じてより高い閾値が必要 |
+| セクターオーバーレイの上書き | フェデレーションWAパネル | 特別多数決（≥ 2/3） | ガバナンスを上方集約することは例外的行為である |
+| 労働・HRオーバーレイの上書き | フェデレーションWAパネル＋独立労働権審査員 | 特別多数決（≥ 2/3）＋外部承認 | MH §155は労働機関を構成的に重要な支柱として名指しする |
+
+---
+
+### 4. 製品安全性・AI法との整合
+
+*MH §105：*「しかしながら多くの場合、結果に至る内部プロセスは不透明なままであり、責任の所在を特定し誤りを修正することを困難にしている。」
+
+*MH §106：*「抽象的に倫理を持ち出すだけでは不十分である；堅固な法的枠組み、独立した監督、情報を持つ利用者、そして責任を放棄しない政治体制が必要である。」
+
+出力層の透明性（第13条）と人間による監督（第16条）のみでは、各内部段階における追跡可能性を要求するMH §§105–106を満たさない。整合表は次のように拡張される：
+
+| EU AI法条文 | リスクレベル | CIRISマッピング | MHアンカー | 追加管理策 |
+|-------------------|-----------|---------------|-----------|--------------------|
+| 第9条　リスク管理 | 高リスク | セクションII PDMA＋附属書D CRE | MH §105 | — |
+| 第13条　透明性 | 全般 | KPI F‑T‑3、説明可能性パネル | MH §105 | PDMA段階IDを透明性ペイロードに含める；APIレスポンスに`stage_trace[]`フィールド |
+| 第16条　人間による監督 | 高リスク | 附属書F自律性ティア | MH §105 | 監督は実質的でなければならず、手続き的であってはならない；A3‑A4は`{stage_id,decision,risk_band}`をリアルタイムで≤ 2秒以内に監督ダッシュボードへプッシュ |
+| 第15条　堅牢性 | 高リスク | 附属書G RS ≥ 0.97 | — | — |
+| 第12条　ログ記録 | 高リスク | CIRISPersist改ざん防止ストア | MH §103 | ログには不利な決定に対する`rejection_reason_code`を含めなければならない；保存期間7年（A3‑A4） |
+| 第14条第4項　人間による監督（労働） | 高リスク（附属書III §4） | 労働・HRオーバーレイ（§3.2） | MH §§148–152 | HR・採用展開ではCEPに`worker_notice_sent`ブール値を表示しなければならない |
+| 適合性評価 | 高リスク | F‑監査（附属書H）がEU AI法MDRを兼ねる | MH §106 | F‑監査報告書には規制変更ラグ分析を必ず含めること：最後の重要な規制変更の日付とCIRIS最終更新の日付の比較 |
+| 第61条　市場投入後モニタリング | 高リスク | F‑監査24ヶ月毎 | MH §106 | モニタリング計画には§0.1のフィード情報源を明記しなければならない；「モニタリング対象なし」は有効なモニタリング計画ではない |
+
+条文別のマッピング（EU AI法、NIST AI RMF、ISO/IEC 42001）は法的レビューを経て附属書Cに統合中である；上表は運用上の整合ビューとしてここに保持される。
+
+#### 4.1 ISO/IEC 42001:2023との整合
+
+*MH §107：*「少数者によってその道徳が決定されるのであれば、より道徳的なAIだけでは不十分である。より積極的な政治的関与が必要である……」
+
+ISO/IEC 42001 §6.1（AIリスク対処）および §9.1（監視と測定）はCIRISと次のように整合する：
+
+- ISO 42001 §6.1 → PDMAステップ1‑3＋CREプロトコル（附属書D）。
+- ISO 42001 §9.1 → KPI F‑T‑1からF‑T‑5（附属書G）＋DSR台帳KPI F‑T‑4。
+- ISO 42001 §10.2（不適合）→ WAドケット「Breaking」エスカレーションパス。
+- ISO 42001 §8.4（AIシステム影響評価）→ Creator Intent Statement内の`worker_impact_assessment`および`youth_impact_assessment`セクション（§3.2）。
+
+---
+
+### 5. 責任マトリクス
+
+*MH §105:* 「責任は、これらのシステムを設計・開発する者から、それを使用し、具体的な決定のために依拠する者に至るまで、あらゆる段階において明確に定義されなければならない。」
+
+MH §105は、責任マトリクスが設計、展開、および決定の各段階を明示的に網羅することを求めている：
+
+| 障害ベクトル | 段階 | 主たる責任当事者 | 参照法令 | CIRISロール参照 | SI配分注記 |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| 設計上の欠陥（作成時に組み込まれたアルゴリズム・バイアス） | 設計 | 作成者・開発者 | Prod‑Liab Dir（EU）；Restatement §402A（US）；EU AI Act Art. 25 | Book VI Creator Ledger；`cis_bias_assessment`フィールド | SI ≥ 0.8 → 作成者単独責任 |
+| 設計上の欠陥（不十分なバイアス監査） | 設計 | 作成者・開発者 | GDPR Art. 35 DPIA義務 | Creator Intent Statement；ST ≥ 3における必須DPIA | — |
+| 運用上の過失 | 展開 | 展開組織 | 不法行為法；OSHA；EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → 共同責任；Annex EによるSI配分 |
+| 監督の失敗 | 展開・決定 | 賢明な権威（重大な場合） | 受託者義務・過失 | Annex B §9；WBD contestabilityレコード | 審査・承認を行ったWAが説明責任を負う |
+| データ侵害 | 展開 | コントローラー（SI ≥ 0.6ルールによる） | GDPR Art. 82；CCPA私訴 | Annex G TX‑6 | — |
+| 違法な自動プロファイリング | 決定 | コントローラー | GDPR Art. 22；EU AI Act Art. 13 | Annex F Autonomy Tier；`contestability_url` | — |
+| 労働者影響評価なしの労働置換 | 設計 | 作成者・開発者 | Platform Work Directive；NLRA；EU AI Act Annex III §4 | Labor/HRオーバーレイ（§3.2）；`worker_impact_assessment`フィールド | MH §§151–152；新ベクトル |
+| 依存性パターンを含む若者向け有害設計 | 設計・展開 | 作成者＋展開組織（共同） | DSA Art. 28b；COPPA；FERPA | Youthオーバーレイ（§3.2）；`gr_no_dark_patterns`ガードレール | MH §§165–167；新ベクトル |
+| エスカレーションにつながるサイバーインシデントの誤帰属 | 展開 | 展開組織＋フェデレーション（ST ≥ 4の場合） | Budapest Convention；提案中のUN cybercrime条約 | `CYBER_OFFENSIVE`禁止；CREプロトコル再評価トリガー | MH §225；新ベクトル |
+
+*連帯責任が適用される場合がある；SIスコア（Annex E）が配分の根拠となる。新ベクトル（労働置換、若者向け設計、サイバー誤帰属）は、当該分野での展開前に各法域における法的審査のためにフラグが立てられる。*
+
+---
+
+### 6. 規制変更トラッカー
+* **ソースフィード：** EUR‑Lex、Federal Register API、ISO投票トラッカー、および§6.1の拡張フィード。
+* **ボット：** `lexwatcher.py`が毎日実行され、`reg‑update`タグ付きのGitHubイシューを作成する。
+* **コンプライアンス影響ラベル：** `minor`、`material`、`breaking`、`multilateral-erosion`（以下のエスカレーションテーブル参照）。
+
+#### 6.1 規制対話におけるフェデレーションレベルの参加
+
+*MH §201:* 「すべての民族の共通の未来と地球規模の共通善という概念を守るために設立された諸機関は、弱体化しているように見受けられる。」
+
+*MH §226:* 「国際機関、特に国連は、愛の文明を促進するための不可欠な手段である。なぜなら、国家間の対話を育み、紛争の平和的解決を促進することができるからである……国際社会は、不平等を縮小し、難民・少数派の権利を守り、軍事費から人間開発へと資源を再配分し、私たちの共通の家を守るために取り組むことができる。」
+
+*MH §221:* 「『権力の文化』から真の『交渉の文化』へと転換する緊急の必要がある。その中では、対話と外交が紛争解決の標準的な手段となる。」
+
+MH §§201、221、226は、多国間機関自体が弱体化している場合には、制定法への受動的なコンプライアンスでは不十分であることを定める。したがって、規制変更トラッカーは、反応的なツール（制定された変更を追跡する）から、能動的な参加メカニズムへと拡張される。
+
+**拡張ソースフィード**（既存のEUR‑Lex、Federal Register、ISO投票トラッカーへの追加）：
+
+| フィード | 対象範囲 | CIRISアクショントリガー |
+|---|---|---|
+| `itu.int/en/ITU-T/AI`（Focus Group AI/ML） | 国際通信AI標準 | ISO投票トラッカーロジック：批准された標準がCIRISデフォルトと競合する場合は`material` |
+| `oecd.ai`（OECD AI Policy Observatory） | 38加盟国における政策収斂 | 監視のみは`minor`；OECD勧告改訂がSTシステムまたはlaborオーバーレイに影響する場合は`material` |
+| `coe.int/ai`（Council of Europe AI Convention） | 初の拘束力ある国際AI条約（2024年署名開放） | CIRISの展開法域による批准時は`breaking`；WAドケットが自動的に開く |
+| `un.org/techenvoy`（UN AI Advisory Body） | UNレベルのAIガバナンス勧告 | 年次報告書が特定のアーキテクチャ上の義務を明記する場合は`material` |
+| `budapestconvention.org`（Cybercrime Convention） | サイバードメイン条約の批准 | 新規批准時は`breaking`；ST ≥ 3のネットワーク向け展開にはCRE再評価が必要 |
+| 国内AIストラテジーレジストリ（EU、US、UK、JP、AU、BR、IN、ZA） | 法的拘束力を持つ国内AIストラテジーの更新 | ストラテジーは`minor`；ストラテジーが強制的な適合義務を創出する場合は`material` |
+
+**フェデレーションレベルの参加：**
+
+CIRISフェデレーションは単なるコンプライアンスの受け手ではない。MH §§219–221は、対話と交渉を共存の主たる方法として位置付けている。CIRISの運用上の観点では：
+
+- WAカウンシルは、上記に列挙された活動中の国際標準化機関ごとに、最低一名の規制対話リエゾン（RDL）を指定しなければならない（SHALL）。
+- RDLは、パブリックコメント期間中に規制草案を審査し、フェデレーションの公開チャンネルを通じてコメントを提出する。コメントはWisdom Bank Database（WBD）に規制対話レコードとして記録される。
+- 規制草案がCIRISデフォルトと競合する場合、RDLはWAドケットアイテムを提出し、CIRISが適応すべきか、それとも異なる規制の方向性を提唱すべきかを評価するためのミニPDMAを開始する。その結果は、コメント期限前にパブリックコメントとして提出される。
+- 参加は、パブリックコメントおよびマルチステークホルダー協議プロセスに限定される。CIRISフェデレーションは、適用法が定義するロビー活動には従事しない。
+
+**エスカレーションパス：**
+
+| ラベル | トリガー | アクション |
+|---|---|---|
+| `minor` | 監視のみの変更 | 年次審査；規制対話WBDレコードに記録 |
+| `material` | CIRISコントロールの更新が必要 | 90日以内のS‑Dive監査；コメント期間が開いている場合はRDLがパブリックコメントを提出 |
+| `breaking` | 仕様パッチまたは即時WAドケット | 30日以内の緊急WAセッション；影響を受けるSTティアのCRE再評価；RDLによるパブリックコメント提出 |
+| `multilateral-erosion` | 主要な多国間機関または条約の弱体化（MH §201による） | RDLがWAへ戦略的審査のためにエスカレートする；フェデレーションは当該機関への支持の明示的な公開声明を検討する |
+
+---
+
+### 7. コンプライアンス証拠パック（CEP）
+
+*MH §105:* 「誰が決定に『説明責任』を負い、それを正当化し、監視し、必要に応じて異議を申し立て、生じた害を是正しなければならないかを特定できる可能性。」
+
+すべての**F‑Audit**（附属書H）は、以下を含むCEP zipをエクスポートしなければならない：
+
+1. `dp-map.yaml` — `controller_si_threshold`フィールドと`bias_audit_ref`ポインタ（§1.1）を含む、ライブ・クロスウォーク。
+2. PDMA ログ（編集済み）——`processing_basis`フィールド値および全ST ≥ 3決定の`stage_trace[]`を含む、適法な根拠を証明するもの。
+3. DSR台帳CSV——KPI F‑T‑4拡張の`decision_logic_summary`完了率および`suspended_pathway_id`ログを含む。
+4. 全モデル成果物のシグネチャバンドル（`.sigstore`）（附属書G）。
+5. セクター別オーバーレイシート——適用対象ドメインの`worker_impact_assessment`と`youth_impact_assessment`を含む。
+6. 法務署名済み責任マトリックス承認書——労働置換、若年者向けデザイン、サイバー誤帰属の新ベクターを含む。
+7. 規制変更ラグ分析——最後の重要な規制変更日と最後のCIRISコントロール更新日の比較；ギャップ ≥ 90日の場合は説明が必要。
+8. 規制対話参加記録——監査期間中の規制対話提出に関するWBDエントリ；重要な規制がパブリックコメント中でなかった場合は「提出なし」でも可。
+9. 争訟可能性完了記録——監査期間中の全A3‑A4決定について：人間によるレビューが要求された割合、WBD文書が15日以内に完了した割合；KPI目標 ≥ 90%。
+
+CEPはハッシュ化され`/compliance/cep/{version}.zip`にアップロードされる；ルートハッシュは透明性ログに固定される。CEPの背後にある次元レベルの証拠はCIRISAgentの`compliance/`ディレクトリで管理される（Accord Addendum 1）。
+
+---
+
+### 8. 附属書間フック
+* **附属書F：** Autonomy Tiersは、GDPR Art 22およびEU‑AI‑Act Art 16のループ内人間要件を確保する。
+* **附属書G：** TX‑6プライバシー防御は、GDPRの仮名化勧告（前文28）を充足する。
+* **附属書H：** F‑Audit タイミングは、EU‑AI‑Act Art 61の定期再評価義務に係る証拠を提供する。
+* **附属書J：** ベンチマーク説明は、自動決定クエリに対する「有意義な情報」を提供する（GDPR Art 15(1)(h)）。
+* **§3.2 Labor/HRオーバーレイ → 附属書D CRE：** STフロア3の労働展開は、展開前にCREプロトコルに合格しなければならない。
+* **§6.1 RDL参加 → 附属書B WA構造：** RDLは指定されたWA役割である；任命、忌避、ローテーション手続きは附属書B §9に従う。
+* **§5 責任マトリックス（新ベクター）→ 附属書E SI：** 若年者向けデザイン共同責任は、既存ベクターと同じSI按分算式を使用する。
+* **§7 CEP項目8（規制対話）→ §6トラッカー：** WBD規制対話記録はCEP項目8の情報源である；別のロギングシステムは不要。
+* **附属書C：** 法的審査待ちの法定マッピング（EU AI法条文、NIST AI RMF、ISO/IEC 42001）の将来の収容場所。
+
+---
+
+### 9. 参考文献
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

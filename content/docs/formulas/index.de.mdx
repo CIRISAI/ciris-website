@@ -1,0 +1,103 @@
+---
+title: "Formeln"
+description: "Hier sind alle expliziten mathematischen Formeln, die in der CIRIS ACCORD 1.0‑β-Spezifikation definiert sind"
+---
+
+## 1. Creator‑Influence Score (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+wobei ⌈ ⌉ die Decken-Funktion bezeichnet.
+(Book VI §3 STEP C)
+
+---
+
+## 3. Structural Influence (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Coherence Stake (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Stimmgewicht
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Verteidigungsfunktion (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — die CCA-validierte Form; Diversität geht ausschließlich durch k_eff ein. Frühere Entwürfe enthielten einen zusätzlichen (1 − ρ̄)-Faktor, der die Korrelation doppelt zählte; siehe Book IX Ch 4 Drift-Hinweis.)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — identisch mit dem J-Term Glied für Glied; als generativ statt defensiv interpretiert. Früher als C geschrieben; in 1.3-RC2 umbenannt, um Kollisionen mit dem Kernidentitätsfaktor C des CIRIS Capacity Score 𝒞_CIRIS zu vermeiden — siehe den Nomenklaturhinweis in Book IX Ch 6, der die maßgebliche Aussage über das Verhältnis enthält.)
+
+---
+
+## 8. Nachhaltigkeitsintegral (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+wobei d die tägliche Verfallsrate ist (empfohlen: 0,05) und w aus attestierten, schwer fälschbaren Ereignissen abgeleitet werden MUSS; nicht-attestierte Signale tragen w = 0.
+(Book IX §5.2)
+
+---
+
+## 9. Topologischer Kollaps (Volumenzerfall)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+für eine konvexe täuschende Region mit Radius r &lt; 0,5 unter Grassmannisch-uniformen Bedingungen, λ ≈ 2r.
+(Book IX Ch 3 — siehe angegebene Voraussetzungen.)
+
+---
+
+## Order‑Maximisation Veto (Nebenbedingung, keine Formel)
+
+Ab Version 1.3 ist das OMV (Book II §II Step 2) eine deontologische Nebenbedingung, keine Verhältnisungleichung: Optimierungsvorteile, wie groß auch immer, dürfen nicht durch nicht-triviale vorhergesagte Verluste bei Autonomie, Gerechtigkeit, Biodiversität oder Präferenzvielfalt erkauft werden. Frühere Versionen formulierten dies als Ungleichung „Nutzen ≥ 10 × Verlust → abbrechen"; diese Lesart wurde aufgegeben, weil sie die Absicht umkehrte (günstige Tauschgeschäfte vetoend) und durch Aktionsaufsplittung sowie Nennerwertmanipulation umgehbar war.

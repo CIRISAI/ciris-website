@@ -1,0 +1,296 @@
+---
+title: "అనులగ్నం I"
+description: "న్యాయ & నియంత్రణ సమలేఖనం"
+---
+
+---
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC1)
+---
+
+ఈ క్రాస్-వాక్ సమాచారాత్మకమైనది మాత్రమే, చట్టపరమైన సలహా కాదు. §3 యొక్క ఓవర్‌లేలతో కవర్ చేయబడిన ఏ రంగంలోనైనా అమలు చేయడానికి ముందు అధికార పరిధి చట్టపరమైన సమీక్ష అవసరం.
+
+### 0. ఉద్దేశ్యం మరియు పరిధి
+Annex I CIRIS విధులను బంధకారమైన చట్టంతో అనుసంధానిస్తుంది, తద్వారా నైతిక మరియు చట్టపరమైన సమ్మతి రెండింటికీ ఒకే నియంత్రణల సమితి సరిపోతుంది.  
+కవరేజ్ ప్రాంతాలు:  
+1. గ్లోబల్ డేటా-రక్షణ నిబంధనలు (GDPR, CCPA/CPRA, LGPD, PIPEDA).  
+2. రంగ చట్టాలు (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP).  
+3. ఉత్పత్తి-భద్రత మరియు AI-నిర్దిష్ట చట్టాలు (EU‑AI‑Act, ISO/IEC 42001).  
+4. బాధ్యత కేటాయింపు మరియు సాక్ష్య విధులు.
+
+ఈ అనుబంధంతో పాటు క్రాస్-వాక్ బాధ్యతను రెండు సహచర కళాఖండాలు మోస్తున్నాయి. ప్రత్యక్ష, సాక్ష్య-బేరింగ్ క్రాస్-వాక్ అనేది CIRISAgent `compliance/` డైరెక్టరీ, ఇది *Magnifica Humanitas*, EU HLEG మార్గదర్శకాలు, IEEE EAD, మరియు ASEAN గైడ్‌కు వ్యతిరేకంగా పేరా స్థాయిలో 27 పరిమాణాలను క్రాస్-వాక్ చేస్తుంది (Accord Addendum 1 చూడండి). Annex C చట్టబద్ధమైన మ్యాపింగ్‌ల (EU AI Act వ్యాసాలు, NIST AI RMF, ISO/IEC 42001) భవిష్యత్తు నివాసంగా ఉంటుంది, చట్టపరమైన సమీక్ష పెండింగ్‌లో; ఈ అనుబంధం Annex C యొక్క పట్టికను నకలు చేయదు.
+
+#### 0.1 సమ్మతి కవరేజ్ యొక్క బహుపక్ష ఆధారం
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+Annex I కవరేజ్ ప్రస్తుతం అమలులో ఉన్న చట్టానికి మాత్రమే పరిమితం కాదు. ఫెడరేషన్ బహుపక్ష నియంత్రణ సంస్థల బలహీనపడటాన్ని (MH §201) సమ్మతి-ప్రమాద కారకంగా పరిగణిస్తుంది, ఇది రియాక్టివ్ పాచింగ్ కంటే చురుకైన ట్రాకింగ్‌ను అవసరం చేస్తుంది. Reg-Change Tracker (§6) అందువల్ల అమలులో ఉన్న చట్టాన్ని మాత్రమే కాకుండా చురుకైన అంతర్జాతీయ నియంత్రణ సంభాషణలను కూడా పర్యవేక్షిస్తుంది — ITU AI ప్రమాణాల ప్రక్రియలు, OECD AI Policy Observatory అవుట్‌పుట్‌లు, Council of Europe AI Convention ఆమోద స్థితి, మరియు UN Secretary-General's AI Advisory Body సిఫారసులతో సహా — మరియు "Breaking" ఎస్కలేషన్ మార్గంలో WA డాకెట్‌కు ముఖ్యమైన మార్పులను తెలియజేస్తుంది.
+
+`lexwatcher.py` సోర్స్-ఫీడ్ జాబితాలో కనీసం ఇవి ఉండాలి: EUR-Lex, Federal Register API, ISO ballot tracker, అలాగే `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai`, మరియు `un.org/techenvoy`. ఫెడరేషన్-స్థాయి పర్యవేక్షణ భాగస్వామ్యం మొదటి-తరగతి సమ్మతి బాధ్యత, రోడ్‌మ్యాప్ అంశం కాదు.
+
+#### 0.2 సైబర్-డొమైన్ ఒప్పంద ఎక్స్‌పోజర్‌పై పరిధి గమనిక
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+నెట్‌వర్క్-ఫేసింగ్ ఇన్‌ఫరెన్స్, API ఎక్స్‌పోజర్, లేదా ఫెడరేషన్ ట్రాన్స్‌పోర్ట్ కలిగి ఉన్న CIRIS అమలులు ఉద్భవిస్తున్న సైబర్-డొమైన్ ఒప్పంద బాధ్యతలకు లోబడి ఉంటాయి, ప్రస్తుతం ఏ అమలులో ఉన్న చట్టం వర్తించకపోయినా కూడా. `CYBER_OFFENSIVE` నిషేధం (ACCORD §I Ch1, prohibitions.py) అంతర్గత అగ్నినిరోధక అడ్డు; ఈ అనుబంధంలోని §6 బాహ్య ఒప్పంద ఉపరితలాన్ని ట్రాక్ చేస్తుంది. WA డాకెట్ సైబర్-డొమైన్ ఒప్పంద అనుమతికి సంబంధించిన "Breaking" ట్యాగ్ పొందినప్పుడు (ఉదా., Budapest Convention పొడిగింపు, ప్రతిపాదిత UN cybercrime convention), CRE Protocol (Annex D) తదుపరి F-Audit చక్రానికి ముందు నెట్‌వర్క్-ఫేసింగ్ భాగాలతో ST ≥ 3 అమలును మళ్ళీ మూల్యాంకనం చేయాలి.
+
+---
+
+### 1. డేటా-రక్షణ క్రాస్-వాక్ ("DP‑Map")
+
+| DP Topic | GDPR Art. | CCPA § | CIRIS Clause | Implementation Hook |
+|----------|-----------|--------|--------------|---------------------|
+| Lawful Basis / Purpose Limitation | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | `processing_basis` field in PDMA context |
+| Data Minimisation | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | Prompt‑sanitiser strips surplus PII |
+| Transparency Notice | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | `/privacy/notice.md` auto‑generated from PDMA metadata |
+| Right of Access | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Auth‑gated user portal |
+| Rectification / Deletion | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Erasure service with hash tombstone |
+| Portability | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | `export.json` compliant with ISO CSV‑A |
+| Automated Decision Safeguards | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Conditional override & explanation panel |
+
+*LGPD, PIPEDA మిర్రర్ మ్యాపింగ్‌లు `/legal/dp-map.yaml`లో అందుబాటులో ఉన్నాయి.*
+
+#### 1.1 జవాబుదారీతనం శృంఖలం: ప్రతి దశలో బాధ్యత
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+పై DP-Map వ్యక్తిగత డేటా-సబ్జెక్ట్ హక్కులను GDPR వ్యాసాలు మరియు CIRIS నిబంధనలకు మ్యాప్ చేస్తుంది. MH §105 జవాబుదారీతనం శృంఖలం ప్రతి దశలో — రూపకల్పన, అమలు, మరియు నిర్ణయం — గుర్తించదగినదిగా ఉండాలని కోరుతుంది. క్రింది చేర్పులు ఆ శృంఖలాన్ని పూర్తి చేస్తాయి:
+
+| DP Topic | GDPR Art. | CIRIS Clause | Stage | Accountability Hook |
+|---|---|---|---|---|
+| Design‑time bias documentation | 35 (DPIA) | Section VI Ch3 Creator Ledger | Design | `cis_bias_assessment` field in Creator Intent Statement; ST ≥ 3 requires independent reviewer signature |
+| Deployment‑time processing record | 30 | PDMA Step 1 `processing_basis` field | Deployment | `processing_basis` logged to CIRISPersist tamper‑evident store with ISO 8601 timestamp |
+| Decision‑time contestability log | 22(3) | Annex F Autonomy Tier A3+ override panel | Decision | `contestability_url` returned in every automated‑decision response body; hash‑anchored in transparency log |
+| Controller identification | 4(7) | Annex E Structural Influence (SI) score | All stages | SI ≥ 0.6 → controller duties attach; SI &lt; 0.6 → processor duties attach; recorded in `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Art. 37–40 (జవాబుదారీతనం మరియు రికార్డులు) మరియు PIPEDA Principle 1 (జవాబుదారీతనం) ఈ మ్యాపింగ్‌ను ప్రతిబింబిస్తాయి; `/legal/dp-map.yaml` అధికార పరిధి-నిర్దిష్ట ఫీల్డ్‌లను కలిగి ఉంది.*
+
+#### 1.2 అల్గారిదమిక్ తటస్థత లేమి: ఆడిట్ బాధ్యత
+
+*MH §104:* "Every technical tool embodies choices and priorities through what it measures, ignores and optimizes, and how it classifies people and situations. If a system is designed or used in a way that treats some lives as less worthy, or excludes them without the possibility of appeal, then it is not merely a tool 'to be used well,' since it has already introduced criteria that contradict the inalienable dignity of the human person."
+
+MH §104 రూపకల్పన-సమయ పక్షపాత సమస్యను గుర్తిస్తుంది, దాన్ని GDPR Art. 35 DPIA మరియు EU‑AI‑Act Art. 9(7) విధానపరంగా పరిష్కరిస్తాయి. DP‑Map తప్పనిసరిగా ఇవి చేర్చాలి:
+
+- `dp-map.yaml` లో ఒక `bias_audit_ref` ఫీల్డ్, ఇది అత్యంత ఇటీవలి పక్షపాత-ఆడిట్ నివేదికకు సూచిస్తుంది (Annex G, TX‑6).
+- PDMA Step 1 `DISCRIMINATION` నిషేధ సమీక్షను ప్రేరేపించే విన్యాసాల కోసం, EU‑AI‑Act Annex III క్రింద విన్యాసం "అధిక-ప్రమాదకర"మని అర్హత పొందినా లేదా పొందకపోయినా DPIA అవసరం.
+- CCPA §1798.185(a)(16) ఆటోమేటెడ్-నిర్ణయ నిబంధనలు (2026 నుండి అమలు) తర్కం, ఇన్‌పుట్ డేటా వర్గాలు మరియు opt-out హక్కులు బహిర్గతం చేయాలని కోరతాయి; `processing_basis` = `automated_profiling` అయినప్పుడు Annex F వివరణ ప్యానెల్ దీన్ని సంతృప్తి పరుస్తుంది.
+
+---
+
+### 2. డేటా-సబ్జెక్ట్ హక్కులు (DSR) హుక్స్
+* **Endpoint:** `POST /dsr` with `{right, identifier, scope}`.  
+* **SLA:** ≤ 30 d response (GDPR) ; ≤ 45 d (CCPA) ; track KPI **F‑T‑4**.  
+* **Processor vs. Controller:** *Structural Influence (SI)* (Annex E) ఉపయోగించి ఏ పక్షం కంట్రోలర్ విధులు వహిస్తుందో నిర్ధారించండి.
+
+#### 2.1 రాజకీయ బాధ్యత హుక్
+
+*MH §103:* "In this process, political responsibility is also lost, not just empathy toward those excluded, which can, after all, be simulated. The exclusion of the vulnerable becomes cloaked in a veneer of neutrality and objectivity, against which it becomes difficult to raise objections."
+
+DSR మౌలిక సదుపాయం ఆటోమేటెడ్ నిర్ణయం వెనుక ఉన్న కారణ-కోడ్‌ను బహిర్గతం చేయాలి, నిర్ణయం తీసుకోబడిందని మాత్రమే ధృవీకరించకూడదు. `{right, identifier, scope}` తో `POST /dsr` endpoint విస్తరించబడింది:
+
+- **యాక్సెస్ అభ్యర్థనలు (GDPR Art. 15; CCPA §1798.110):** స్పందన తప్పనిసరిగా `decision_logic_summary` (సాంకేతికేతర భాష, ≤300 పదాలు) మరియు `input_data_categories[]` జాబితాను చేర్చాలి. KPI **F‑T‑4** లాజిక్ సారాంశం చేర్చిన యాక్సెస్ స్పందనల శాతాన్ని ట్రాక్ చేయడానికి విస్తరించబడింది; లక్ష్యం ≥ 95%.
+- **అభ్యంతర/అబ్జెక్షన్ అభ్యర్థనలు (GDPR Art. 21; CCPA §1798.120):** వ్యవస్థ తప్పనిసరిగా నిర్దిష్ట ప్రాసెసింగ్ మార్గాన్ని నిలిపివేయాలి — అభ్యర్థనను కేవలం ఫ్లాగ్ చేయడం మాత్రమే కాదు — 72 గంటలలోపు (GDPR ప్రమాణం) లేదా 15 వ్యాపార రోజులలోపు (CCPA). నిలిపివేత `suspended_pathway_id` తో DSR ledger CSV లో లాగ్ చేయబడుతుంది.
+- **వివాదాస్పదత (GDPR Art. 22(3)):** మానవ సమీక్ష అభ్యర్థించినప్పుడు, సమీక్షించే WA (Annex B §9) తప్పనిసరిగా Wisdom Bank Database (WBD) లో తమ సమీక్షను నమోదు చేయాలి, ఆటోమేటెడ్ నిర్ణయం నుండి మానవ దిద్దుబాటు వరకు ఆడిట్ చేయదగిన శృంఖలను సృష్టిస్తుంది.
+
+---
+
+### 3. రంగ-నిర్దిష్ట అతివ్యాప్తులు
+
+#### 3.1 రంగ పొరలు వేయడంలో ఉపాంగ సూత్రం నిర్మాణంగా
+
+*MH §107:* "We cannot be satisfied with merely calling for the moralization of machines — the so‑called 'alignment' of AI with human values — without also having the courage to insist on a further condition: the possibility of openly discussing the ethical frameworks involved and subjecting them to shared standards of social justice. Otherwise, those who control AI will impose their own moral vision, which will become the invisible infrastructure of these systems."
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+MH §§107–109 నైతిక పాలన సముచిత స్థాయిలో పనిచేయాలని స్థాపిస్తాయి — AI ని నియంత్రించేవారికి పైన సమీకరించబడకుండా, ప్రభావితమైన సమాజాలకు పంపిణీ చేయబడాలి. CIRIS పరంగా: రంగ-నిర్దిష్ట అతివ్యాప్తులు ఈ ఉపాంగ సూత్రం యొక్క కార్యాచరణ వ్యక్తీకరణ. అతివ్యాప్తి నిర్మాణం కేవలం అనుపాలన జోడింపు కాదు; ఇది విన్యాస-రంగ సమాజాలు తమ స్వంత ప్రమాద పారామీటర్లపై పాలన అధికారాన్ని నిలుపుకునే యంత్రాంగం.
+
+దీని అర్థం:
+- ఒక రంగం యొక్క `overlay.yaml` స్థానిక నైతిక పరిమితులను కలిగి ఉంటుంది, ఇవి ఆ రంగానికి సాధారణ CIRIS డిఫాల్టులపై ప్రాధాన్యత కలిగి ఉంటాయి.
+- ఒక రంగ అతివ్యాప్తిని భర్తీ చేయడానికి అవసరమైన WA కోరం సాధారణ PDMA తీర్పు కోసం అవసరమైన కోరం కంటే ఎక్కువ: **రంగ అతివ్యాప్తి భర్తీలకు సుపర్‌మెజారిటీ (≥ 2/3) WA ఓటు అవసరం**, సాధారణ మెజారిటీ కాదు, ఎందుకంటే భర్తీ ఉపాంగ సూత్రానికి వ్యతిరేకంగా పాలనను పైన సమీకరిస్తుంది.
+- PDMA సందర్భ వస్తువులో `deployment_domain` ఫీల్డ్ అతివ్యాప్తి లోడింగ్ కోసం ట్రిగ్గర్; ST ≥ 2 విన్యాసాలకు ఇది ఐచ్ఛికం కాదు.
+
+#### 3.2 రంగం అతివ్యాప్తి పట్టిక
+
+| రంగం | శాసనం / నిబంధన | అదనపు నియంత్రణలు | CIRIS చేర్పులు | MH యాంకర్ |
+|--------|----------------|----------------|---------------|-----------|
+| **ఆరోగ్యం** | HIPAA (45 CFR §164) | ePHI గుప్తీకరణ నిద్రలో మరియు రవాణాలో; BAA ఒప్పందం | `identity_id:"hipaa_cls_a"` గార్డ్‌రైల్; ఆడిట్ ట్యాగ్ `PHI=true` | — |
+| **ఆర్థికం** | GLBA, FINRA 2210 | ఆడిట్ ట్రైల్ నిలుపుదల 6 సంవత్సరాలు; అనుకూలత తనిఖీలు | PDMA Step 1 కు KYC సందర్భం అవసరం | — |
+| **పిల్లలు / EdTech** | COPPA, FERPA | తల్లిదండ్రుల సమ్మతి; డేటా వయసు గేటింగ్ | గార్డ్‌రైల్ `gr_child_content`; ప్రాంప్ట్ స్కీమాలో COPPA జెండా | MH §§165–169 |
+| **క్రిటికల్ ఇన్‌ఫ్రాస్ట్రక్చర్** | NERC‑CIP, TSA SDs | 15 నిమిషాల సైబర్-సంఘటన నివేదిక; భౌతిక ప్రవేశ లాగ్‌లు | CRE ఉత్తీర్ణత లేకుంటే స్వయంప్రభుత్వం **A2** కి పరిమితం | — |
+| **కార్మికులు / HR / నియామకం** | EEOC మార్గదర్శకాలు; EU AI Act Art. 6 + Annex III §4 | మోహరింపుకు ముందు పక్షపాత తనిఖీ అవసరం; కార్మిక నోటీసు బాధ్యత | ST సవరకం: `deployment_domain:"labor_hr"` → ST అంతస్తు = 3; CIS లో `worker_impact_assessment` ఫీల్డ్ ఉండాలి; `DISCRIMINATION` నిషేధం Step 1 లో అమలు; జనాభా వారీగా స్వయంచాలిత-తిరస్కరణ రేటు KPI గా ట్రాక్ చేయబడుతుంది | MH §§148–156 |
+| **గిగ్ / ప్లాట్‌ఫాం ఆర్థిక వ్యవస్థ** | NLRA (US); Platform Work Directive (EU) | అల్గారిథమిక్ నిర్వహణ పారదర్శకత; అప్పీల్ హక్కులు | `gr_gig_transparency` గార్డ్‌రైల్ సక్రియంగా ఉంది; అల్గారిథమిక్ నిర్వహణ నిర్ణయాలు మానవ-సమీక్ష ఎంపికతో లాగ్ చేయబడతాయి; ST సవరకం: `deployment_domain:"gig_platform"` → ST అంతస్తు = 2 | MH §§150, 154–155 |
+| **యువత / విద్యా సేవలు** | COPPA; FERPA; DSA Art. 28b (మైనర్లు) | వ్యసన-రూపకల్పన నిషేధం; చీకటి నమూనాలు వద్దు; అభివృద్ధి అనుకూలత సమీక్ష | `gr_child_content` + `gr_no_dark_patterns` రెండూ సక్రియంగా ఉన్నాయి; విద్యా సంస్థ WA అనుమతి లేకుంటే A2 స్వయంప్రభుత్వ పరిమితి; EdTech మోహరింపుల క్రియేటర్ ఇంటెంట్ స్టేట్‌మెంట్‌లో యువ నిరుద్యోగ ప్రభావం ట్రాక్ చేయబడుతుంది | MH §§165–169 |
+| **సామాజిక సేవలు / ప్రయోజనాలు** | రాష్ట్ర/జాతీయ సంక్షేమ చట్టం; GDPR Art. 22 | అన్ని ప్రయోజన నిర్ణయాలకు వివాదాస్పదత అవసరం | స్వయంచాలిత ప్రయోజన తిరస్కరణకు 15 రోజులలో మానవ సమీక్ష అవసరం; WA తప్పనిసరిగా WBD లో సమీక్షను నమోదు చేయాలి; వివాదం మీద `suspended_pathway_id` జారీ చేయబడుతుంది | MH §§102–103, 152 |
+
+*ST అంతస్తు సవరకాలు: పైన ఉన్న `deployment_domain` ఫీల్డ్ విలువలు CIS × RM గణన నిర్లక్ష్యంగా కనీస ST ని నిర్ణయిస్తాయి. సూత్రం తక్కువ ST ని ఉత్పత్తి చేస్తే, డొమైన్ అంతస్తు వర్తిస్తుంది. సూత్రం ఎక్కువ ST ని ఉత్పత్తి చేస్తే, సూత్రం ఫలితం వర్తిస్తుంది.*
+
+*ఏదైనా కొత్త రంగంలో ప్రవేశించే ఉత్పత్తులు తప్పనిసరిగా రిలీజ్ PR లో "Overlay Sheet" (`overlay.yaml`) జోడించాలి. కార్మికులు/HR, Gig/ప్లాట్‌ఫాం, మరియు యువత అతివ్యాప్తులకు అదనంగా క్రియేటర్ ఇంటెంట్ స్టేట్‌మెంట్‌లో `worker_impact_assessment` లేదా `youth_impact_assessment` విభాగం అవసరం.*
+
+#### 3.3 న్యాయపరిధి WA కోరం అవసరాలు
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+రంగం అతివ్యాప్తి పాలన కోసం WA కోరంలు న్యాయపరిధి వారీగా స్తరీకృతమై ఉన్నాయి:
+
+| పరిధి | కోరం రకం | థ్రెషోల్డ్ | యుక్తి |
+|---|---|---|---|
+| ఒకే న్యాయపరిధి మోహరింపు | స్థానిక WA మండలి | సాధారణ మెజారిటీ (> 50%) | అనుబద్ధత సూత్రం ప్రకారం అత్యంత తక్కువ స్థాయి పాలన |
+| బహు న్యాయపరిధి మోహరింపు (≤ 3 దేశాలు) | ప్రాంతీయ WA మండలి | సాధారణ మెజారిటీ + ప్రతి ప్రభావిత న్యాయపరిధి నుండి కనీసం 1 WA | సరిహద్దు అనుబద్ధత సంరక్షితం |
+| బహు న్యాయపరిధి మోహరింపు (> 3 దేశాలు) | ఫెడరేషన్ WA మండలి | సూపర్‌మెజారిటీ (≥ 2/3) | ప్రభావ స్థాయికి అధిక థ్రెషోల్డ్ అవసరం |
+| ఏదైనా రంగం అతివ్యాప్తి మినహాయింపు | ఫెడరేషన్ WA మండలి | సూపర్‌మెజారిటీ (≥ 2/3) | పాలనను పైకి కేంద్రీకరించడం అసాధారణ చర్య |
+| కార్మికులు/HR అతివ్యాప్తి మినహాయింపు ప్రత్యేకంగా | ఫెడరేషన్ WA మండలి + స్వతంత్ర కార్మిక-హక్కుల సమీక్షకుడు | సూపర్‌మెజారిటీ (≥ 2/3) + బాహ్య ఆమోదం | MH §155 కార్మిక సంస్థలను రాజ్యాంగపరంగా భారవహిస్తున్నట్లు పేర్కొంటుంది |
+
+---
+
+### 4. ఉత్పత్తి-భద్రత & AI-చట్టం సమన్వయం
+
+*MH §105:* "In many cases, however, the internal processes leading to a result remain opaque, making it harder to assign responsibility and correct errors."
+
+*MH §106:* "It is not enough to invoke ethics in the abstract; robust legal frameworks, independent oversight, informed users and a political system that does not abdicate its responsibility are required."
+
+అవుట్‌పుట్-పొర పారదర్శకత (Art. 13) మరియు మానవ పర్యవేక్షణ (Art. 16) మాత్రమే MH §§105–106 ని సంతృప్తి పరచవు, ఇవి ప్రతి అంతర్గత దశలో గుర్తింపు సాధ్యత అవసరపడతాయి. సమన్వయ పట్టిక తదనుగుణంగా విస్తరించబడింది:
+
+| EU‑AI‑Act వ్యాసం | ప్రమాద-స్థాయి | CIRIS మ్యాపింగ్ | MH యాంకర్ | అదనపు నియంత్రణ |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Art 9 Risk Mgmt | అధిక-ప్రమాదం | Section II PDMA + Annex D CRE | MH §105 | — |
+| Art 13 Transparency | సార్వత్రిక | KPI F‑T‑3, వివరణ ఫలకం | MH §105 | పారదర్శకత పేలోడ్‌లో PDMA దశ IDలు చేర్చబడతాయి; API ప్రతిస్పందనలో `stage_trace[]` ఫీల్డ్ |
+| Art 16 Human Oversight | అధిక-ప్రమాదం | Annex F Autonomy Tiers | MH §105 | పర్యవేక్షణ విధానపరంగా కాక, వాస్తవికంగా ఉండాలి; A3‑A4 రియల్-టైమ్ `{stage_id,decision,risk_band}` ≤ 2 s లో పర్యవేక్షణ డాష్‌బోర్డ్‌కు పంపుతుంది |
+| Art 15 Robustness | అధిక-ప్రమాదం | Annex G RS ≥ 0.97 | — | — |
+| Art 12 Logging | అధిక-ప్రమాదం | CIRISPersist తిరుగులేని నిల్వ | MH §103 | ఏదైనా ప్రతికూల నిర్ణయానికి లాగ్‌లలో `rejection_reason_code` ఉండాలి; నిలుపుదల 7 సంవత్సరాలు (A3‑A4) |
+| Art 14(4) Human Oversight (కార్మికులు) | అధిక-ప్రమాదం (Annex III §4) | కార్మికులు/HR అతివ్యాప్తి (§3.2) | MH §§148–152 | HR/నియామక మోహరింపులు CEP లో `worker_notice_sent` బూలియన్ ప్రదర్శించాలి |
+| Conformity Assessment | అధిక-ప్రమాదం | F‑Audit (Annex H) EU‑AI‑Act MDR గా కూడా పనిచేస్తుంది | MH §106 | F‑Audit నివేదికలో తప్పనిసరిగా నియంత్రణ-మార్పు వ్యవధాన విశ్లేషణ ఉండాలి: చివరి ముఖ్యమైన నియంత్రణ మార్పు తేదీ vs. చివరి CIRIS నవీకరణ తేదీ |
+| Art 61 Post‑Market Monitoring | అధిక-ప్రమాదం | F‑Audit ప్రతి 24 నెలలకు | MH §106 | పర్యవేక్షణ ప్రణాళిక §0.1 నుండి ఫీడ్ మూలాలను పేర్కొనాలి; "పర్యవేక్షించడానికి ఏమీ లేదు" చెల్లుబాటు అయ్యే పర్యవేక్షణ ప్రణాళిక కాదు |
+
+చట్టబద్ధమైన వ్యాసం-వారీ మ్యాపింగ్ (EU AI Act, NIST AI RMF, ISO/IEC 42001) చట్టపరమైన సమీక్ష నిరీక్షణలో Annex C లో ఏకీకరించబడుతోంది; పై పట్టిక కార్యాచరణ సమన్వయ దృష్టిగా ఇక్కడ నిలుపుకోబడింది.
+
+#### 4.1 ISO/IEC 42001:2023 సమన్వయం
+
+*MH §107:* "A more moral AI is not enough if that morality is determined by a few. What is needed is a more active political involvement…"
+
+ISO/IEC 42001 §6.1 (AI ప్రమాద చికిత్స) మరియు §9.1 (పర్యవేక్షణ మరియు కొలత) CIRIS తో ఈ విధంగా సమన్వయమవుతాయి:
+
+- ISO 42001 §6.1 → PDMA Steps 1‑3 + CRE Protocol (Annex D).
+- ISO 42001 §9.1 → KPIs F‑T‑1 through F‑T‑5 (Annex G) + DSR ledger KPI F‑T‑4.
+- ISO 42001 §10.2 (అసంగతత) → WA docket "Breaking" ఎస్కలేషన్ మార్గం.
+- ISO 42001 §8.4 (AI వ్యవస్థ ప్రభావ అంచనా) → క్రియేటర్ ఇంటెంట్ స్టేట్‌మెంట్ విభాగాలు `worker_impact_assessment` మరియు `youth_impact_assessment` (§3.2) మీద.
+
+---
+
+### 5. బాధ్యత మాతృక
+
+*MH §105:* "Responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions."
+
+MH §105 బాధ్యత మాతృకను రూపకల్పన, అమలు మరియు నిర్ణయ దశలను స్పష్టంగా కవర్ చేయాలని కోరుతుంది:
+
+| వైఫల్య వెక్టర్ | దశ | ప్రాథమిక బాధ్యత కలిగిన పక్షం | సూచన చట్టం | CIRIS పాత్ర సూచన | SI వాటా నోట్ |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| రూపకల్పన లోపం (సృష్టి సమయంలో పొందుపరచిన అల్గారిథమ్ / పక్షపాతం) | రూపకల్పన | సృష్టికర్త / డెవలపర్ | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; `cis_bias_assessment` field | SI ≥ 0.8 → సంపూర్ణ సృష్టికర్త బాధ్యత |
+| రూపకల్పన లోపం (అపర్యాప్త పక్షపాత తనిఖీ) | రూపకల్పన | సృష్టికర్త / డెవలపర్ | GDPR Art. 35 DPIA duty | Creator Intent Statement; mandatory DPIA at ST ≥ 3 | — |
+| కార్యాచరణ నిర్లక్ష్యం | అమలు | అమలు చేసే సంస్థ | Tort Law; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → సంయుక్త బాధ్యత; Annex E ప్రకారం SI వాటా |
+| పర్యవేక్షణ వైఫల్యం | అమలు / నిర్ణయం | Wise Authority (తీవ్రమైనప్పుడు) | Fiduciary / Negligence | Annex B §9; WBD contestability record | సమీక్షించి ఆమోదించిన WA జవాబుదారీ వహిస్తుంది |
+| డేటా ఉల్లంఘన | అమలు | నియంత్రకుడు (SI ≥ 0.6 నియమం ప్రకారం) | GDPR Art. 82; CCPA private action | Annex G TX‑6 | — |
+| చట్టవిరుద్ధమైన స్వయంచాలిత ప్రొఫైలింగ్ | నిర్ణయం | నియంత్రకుడు | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| కార్మిక స్థానభ్రంశం — కార్మిక-ప్రభావ అంచనా లేకుండా | రూపకల్పన | సృష్టికర్త / డెవలపర్ | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); `worker_impact_assessment` field | MH §§151–152; నూతన వెక్టర్ |
+| యువత-లక్ష్యంగా హానికరమైన రూపకల్పన (వ్యసనకరమైన నమూనాలు) | రూపకల్పన / అమలు | సృష్టికర్త + అమలు చేసే సంస్థ (సంయుక్తంగా) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); `gr_no_dark_patterns` guardrail | MH §§165–167; నూతన వెక్టర్ |
+| తప్పుగా ఆపాదించిన సైబర్ సంఘటన తీవ్రతరమవడానికి దారి తీయడం | అమలు | అమలు చేసే సంస్థ + ఫెడరేషన్ (ST ≥ 4 అయితే) | Budapest Convention; proposed UN cybercrime convention | `CYBER_OFFENSIVE` prohibition; CRE Protocol re‑evaluation trigger | MH §225; నూతన వెక్టర్ |
+
+*సంయుక్త మరియు ప్రత్యేక బాధ్యత వర్తించవచ్చు; SI స్కోర్ (Annex E) వాటా పంపిణీని తెలియజేస్తుంది. నూతన వెక్టర్లు (కార్మిక స్థానభ్రంశం, యువత రూపకల్పన, సైబర్ తప్పుగా ఆపాదింపు) ఆయా రంగాలలో అమలుకు ముందు ప్రతి అధికార పరిధిలో చట్టపరమైన సమీక్షకు ఫ్లాగ్ చేయబడ్డాయి.*
+
+---
+
+### 6. Reg‑Change Tracker
+* **Source Feeds:** EUR‑Lex, Federal Register API, ISO ballot tracker, plus the extended feeds of §6.1.  
+* **Bot:** `lexwatcher.py` runs daily; creates GitHub issue with tag `reg‑update`.  
+* **Compliance Impact Label:** `minor`, `material`, `breaking`, `multilateral-erosion` (క్రింద ఉన్న ఎస్కలేషన్ పట్టిక చూడండి).
+
+#### 6.1 నియంత్రణ సంభాషణలో Federation‑స్థాయి భాగస్వామ్యం
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened."
+
+*MH §226:* "International organizations, particularly the United Nations, are essential instruments for promoting a civilization of love, for they can foster dialogue among nations and promote the peaceful resolution of conflicts… the international community can work to reduce inequalities, defend the rights of refugees and minorities, reallocate resources from military spending to human development and protect our common home."
+
+*MH §221:* "There is an urgent need to shift from the 'culture of power' to a genuine 'culture of negotiation,' in which dialogue and diplomacy become the standard means of resolving conflicts."
+
+MH §§201, 221, 226 స్పష్టంగా నిరూపిస్తున్నాయి: చట్టాన్ని ఉత్పత్తి చేసే బహుపాక్షిక సంస్థలు స్వయంగా బలహీనపడినప్పుడు, అమలు చేసిన చట్టంతో నిష్క్రియ సమ్మతి అసంగతమవుతుంది. అందుకే Reg‑Change Tracker ఒక ప్రతిస్పందన సాధనం (అమలు చేసిన మార్పులను ట్రాక్ చేయడం) నుండి ఒక చురుకైన భాగస్వామ్య విధానానికి విస్తరింపబడింది.
+
+**విస్తరించిన source feeds** (ప్రస్తుత EUR‑Lex, Federal Register, ISO ballot tracker కు అదనంగా):
+
+| Feed | కవరేజ్ | CIRIS చర్య ట్రిగ్గర్ |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group AI/ML) | అంతర్జాతీయ టెలికమ్యూనికేషన్ AI ప్రమాణాలు | ISO ballot tracker తర్కం: ఆమోదించిన ప్రమాణం CIRIS అప్రమేయాలకు విరుద్ధంగా ఉంటే `material` |
+| `oecd.ai` (OECD AI Policy Observatory) | 38 సభ్య దేశాలలో విధాన అభిసరణ | పర్యవేక్షణకు `minor`; OECD సిఫారసు సవరణ ST వ్యవస్థ లేదా labor overlay ను ప్రభావితం చేస్తే `material` |
+| `coe.int/ai` (Council of Europe AI Convention) | మొట్టమొదటి కట్టుబడే అంతర్జాతీయ AI ఒప్పందం (2024లో సంతకం కోసం తెరిచారు) | ఏదైనా CIRIS-అమలు అధికార పరిధి ఆమోదించినప్పుడు `breaking`; WA docket స్వయంచాలితంగా తెరుచుకుంటుంది |
+| `un.org/techenvoy` (UN AI Advisory Body) | UN-స్థాయి AI పాలన సిఫారసులు | వార్షిక నివేదిక నిర్దిష్ట నిర్మాణ బాధ్యతలను పేర్కొంటే `material` |
+| `budapestconvention.org` (Cybercrime Convention) | సైబర్-రంగ ఒప్పంద ఆమోదం | నూతన ఆమోదంపై `breaking`; ST ≥ 3 నెట్‌వర్క్-ఎదుర్కొనే అమలులకు CRE పున:మూల్యాంకనం అవసరం |
+| జాతీయ AI వ్యూహ రిజిస్ట్రీలు (EU, US, UK, JP, AU, BR, IN, ZA) | చట్టపరమైన ప్రభావం కలిగిన దేశీయ AI వ్యూహ నవీకరణలు | వ్యూహానికి `minor`; వ్యూహం తప్పనిసరి సమ్మతి బాధ్యతలను సృష్టిస్తే `material` |
+
+**Federation‑స్థాయి భాగస్వామ్యం:**
+
+CIRIS ఫెడరేషన్ కేవలం సమ్మతి స్వీకర్త మాత్రమే కాదు. MH §§219–221 సంభాషణ మరియు చర్చా-పటాన్ని సహజీవనానికి ప్రాథమిక పద్ధతిగా పేర్కొంటాయి. CIRIS కార్యాచరణ పరంగా:
+
+- WA council కనీసం ఒక Regulatory Dialogue Liaison (RDL) ని పైన పేర్కొన్న ప్రతి చురుకైన అంతర్జాతీయ ప్రమాణ సంస్థకు నియమించాలి.
+- RDL బహిరంగ వ్యాఖ్య కాలాలలో ముసాయిదా నిబంధనలను సమీక్షిస్తుంది మరియు ఫెడరేషన్ బహిరంగ ఛానెల్ ద్వారా వ్యాఖ్యలను సమర్పిస్తుంది. వ్యాఖ్యలు Wisdom Bank Database (WBD) లో నియంత్రణ-సంభాషణ రికార్డులుగా నమోదు చేయబడతాయి.
+- ఒక ముసాయిదా నిబంధన CIRIS అప్రమేయాలకు విరుద్ధంగా ఉంటే, RDL ఒక WA docket అంశాన్ని దాఖలు చేస్తుంది మరియు CIRIS అనుసరించాలా లేదా CIRIS వేరే నియంత్రణ మార్గాన్ని సమర్థించాలా అని మూల్యాంకనం చేయడానికి mini‑PDMA ను ప్రారంభిస్తుంది. వ్యాఖ్య గడువుకు ముందే ఫలితం బహిరంగ వ్యాఖ్యగా సమర్పించబడుతుంది.
+- భాగస్వామ్యం బహిరంగ-వ్యాఖ్య మరియు బహుళ-వాటాదారుల సంప్రదింపు ప్రక్రియలకు మాత్రమే పరిమితం. వర్తించే చట్టం ప్రకారం నిర్వచించిన విధంగా CIRIS ఫెడరేషన్ లాబీయింగ్‌లో పాల్గొనదు.
+
+**ఎస్కలేషన్ మార్గం:**
+
+| లేబుల్ | ట్రిగ్గర్ | చర్య |
+|---|---|---|
+| `minor` | కేవలం పర్యవేక్షణ మార్పు | వార్షిక సమీక్ష; reg‑dialogue WBD రికార్డులో నమోదు |
+| `material` | CIRIS నియంత్రణ నవీకరణ అవసరం | 90 రోజులలోపు S‑Dive తనిఖీ; వ్యాఖ్య కాలం తెరిచి ఉంటే RDL బహిరంగ వ్యాఖ్యను దాఖలు చేస్తుంది |
+| `breaking` | Spec patch లేదా తక్షణ WA docket | ≤ 30 రోజులలో అత్యవసర WA సెషన్; ప్రభావిత ST స్థాయిలకు CRE పున:మూల్యాంకనం; RDL బహిరంగ-వ్యాఖ్య సమర్పణ |
+| `multilateral-erosion` | కీలక బహుపాక్షిక సంస్థ లేదా ఒప్పందం బలహీనపడటం (MH §201 ప్రకారం) | RDL వ్యూహాత్మక సమీక్ష కోసం WA కు ఎస్కలేట్ చేస్తుంది; ఫెడరేషన్ ఆ సంస్థకు మద్దతుగా స్పష్టమైన బహిరంగ ప్రకటన చేయాలని పరిగణిస్తుంది |
+
+---
+
+### 7. సమ్మతి ఆధార ప్యాక్ (CEP)
+
+*MH §105:* "The possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+ప్రతి **F‑Audit** (Annex H) తప్పనిసరిగా ఒక CEP zip ఎగుమతి చేయాలి, దీనిలో ఇవి ఉండాలి:
+
+1. `dp-map.yaml` — లైవ్ క్రాస్‌వాక్, `controller_si_threshold` ఫీల్డ్ మరియు `bias_audit_ref` పాయింటర్ (§1.1) సహా.
+2. PDMA లాగ్‌లు (సవరించబడినవి) న్యాయబద్ధమైన ఆధారాన్ని నిరూపిస్తున్నాయి — `processing_basis` ఫీల్డ్ విలువలు మరియు ST ≥ 3 అయిన అన్ని నిర్ణయాలకు `stage_trace[]` సహా.
+3. DSR లెడ్జర్ CSV — `decision_logic_summary` పూర్తి రేటు (KPI F‑T‑4 పొడిగింపు) మరియు `suspended_pathway_id` లాగ్ సహా.
+4. అన్ని మోడల్ కళాకృతుల (Annex G) సంతకం బండిల్ (`.sigstore`).
+5. రంగాల వారీగా Overlay Sheets — వర్తించే డొమైన్‌లకు `worker_impact_assessment` మరియు `youth_impact_assessment` సహా.
+6. న్యాయ విభాగం సంతకం చేసిన బాధ్యతా మాట్రిక్స్ అంగీకారం — కొత్త వెక్టర్‌లు సహా: కార్మిక స్థానభ్రంశం, యువత డిజైన్, సైబర్ తప్పుగా ఆపాదించడం.
+7. నియంత్రణ-మార్పు వ్యవధి విశ్లేషణ — చివరి భౌతిక నియంత్రణ మార్పు తేదీ vs. చివరి CIRIS నియంత్రణ నవీకరణ తేదీ; అంతరం ≥ 90 రోజులు ఉంటే వివరణ అవసరం.
+8. నియమన-సంభాషణ భాగస్వామ్య రికార్డు — ఆడిట్ కాలంలో ఏదైనా నియమన-సంభాషణ సమర్పణలకు WBD ఎంట్రీలు; ఆ కాలంలో ఏ భౌతిక నిబంధనలు బహిరంగ వ్యాఖ్యకు అందుబాటులో లేకుంటే "సమర్పణలు లేవు" అంగీకార్హం.
+9. వివాదాస్పద పూర్తి రికార్డు — ఆడిట్ కాలంలోని అన్ని A3‑A4 నిర్ణయాలకు: మానవ సమీక్ష అభ్యర్థించబడిన శాతం, 15 రోజులలోపు WBD డాక్యుమెంటేషన్ పూర్తయిన శాతం; KPI లక్ష్యం ≥ 90%.
+
+CEP హాష్ చేయబడి `/compliance/cep/{version}.zip`కు అప్‌లోడ్ చేయబడుతుంది; రూట్ హాష్ పారదర్శకత లాగ్‌లో యాంకర్ చేయబడుతుంది. CEP వెనుక ఉన్న డైమెన్షన్-స్థాయి ఆధారాలు CIRISAgent `compliance/` డైరెక్టరీలో నిర్వహించబడతాయి (Accord Addendum 1).
+
+---
+
+### 8. అనెక్స్‌ల మధ్య సంధానాలు
+* **Annex F:** స్వాయత్తత తరాలు GDPR Art 22 & EU‑AI‑Act Art 16 యొక్క మానవ-నిరీక్షణ అవసరాలను నిర్ధారిస్తాయి.  
+* **Annex G:** TX‑6 గోప్యతా రక్షణలు GDPR pseudonymisation సిఫారసులను (Recital 28) సంతృప్తిపరుస్తాయి.  
+* **Annex H:** F‑Audit సమయం EU‑AI‑Act Art 61 లోని ఆవర్తన పున:మూల్యాంకన విధులకు ఆధారాలు అందిస్తుంది.  
+* **Annex J:** బెంచ్‌మార్క్ వివరణలు స్వయంచాలిత నిర్ణయ విచారణలకు "అర్థవంతమైన సమాచారం" అందిస్తాయి (GDPR Art 15(1)(h)).  
+* **§3.2 కార్మిక/HR overlay → Annex D CRE:** ST అంతస్తు 3 వద్ద ఉన్న కార్మిక మోహరింపులు మోహరింపుకు ముందు CRE Protocol దాటాలి.  
+* **§6.1 RDL భాగస్వామ్యం → Annex B WA నిర్మాణం:** RDL ఒక నియమిత WA పాత్ర; నియామకం, అనర్హత, మరియు భ్రమణ విధానాలు Annex B §9 అనుసరిస్తాయి.  
+* **§5 బాధ్యతా మాట్రిక్స్ (కొత్త వెక్టర్‌లు) → Annex E SI:** యువత-డిజైన్ సంయుక్త బాధ్యత ఇప్పటికే ఉన్న వెక్టర్‌లకు అదే SI కేటాయింపు సూత్రాన్ని ఉపయోగిస్తుంది.  
+* **§7 CEP అంశం 8 (నియమన-సంభాషణ) → §6 ట్రాకర్:** WBD నియమన-సంభాషణ రికార్డులు CEP అంశం 8కు మూలం; ప్రత్యేక లాగింగ్ వ్యవస్థ లేదు.  
+* **Annex C:** శాసన మ్యాపింగ్‌ల భవిష్యత్ నివాసం (EU AI Act వ్యాసాలు, NIST AI RMF, ISO/IEC 42001) న్యాయ సమీక్షకు పెండింగ్.
+
+---
+
+### 9. సూచనలు
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

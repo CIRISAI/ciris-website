@@ -1,0 +1,103 @@
+---
+title: "Công Thức"
+description: "Đây là tất cả các công thức toán học tường minh được định nghĩa trong đặc tả CIRIS Hiệp Ước 1.0‑β"
+---
+
+## 1. Điểm Ảnh Hưởng Của Người Tạo (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+trong đó ⌈ ⌉ ký hiệu hàm trần (ceiling function).
+(Book VI §3 STEP C)
+
+---
+
+## 3. Ảnh Hưởng Cấu Trúc (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Cổ Phần Tính Nhất Quán (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Trọng Số Bỏ Phiếu
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Hàm Phòng Thủ (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — dạng được CCA xác thực; tính đa dạng chỉ đi vào thông qua k_eff. Các bản thảo trước có thêm một nhân tử (1 − ρ̄), vốn tính trùng hệ số tương quan; xem ghi chú trôi dạt Book IX Ch 4.)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — đồng nhất với số hạng J từng chữ từng ký hiệu; được diễn giải theo nghĩa sinh tạo thay vì phòng thủ. Trước đây viết là C; đổi tên trong 1.3-RC2 để tránh xung đột với nhân tố nhận dạng cốt lõi C của CIRIS Capacity Score 𝒞_CIRIS — xem ghi chú danh pháp Book IX Ch 6, là phát biểu có thẩm quyền về mối quan hệ này.)
+
+---
+
+## 8. Tích Phân Bền Vững (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+trong đó d là tốc độ suy giảm hằng ngày (khuyến nghị 0.05) và w PHẢI bắt nguồn từ các sự kiện được chứng thực, khó giả mạo; tín hiệu không được chứng thực mang w = 0.
+(Book IX §5.2)
+
+---
+
+## 9. Sụp Đổ Tô-pô (suy giảm thể tích)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+với vùng lừa dối lồi có bán kính r &lt; 0.5 theo ràng buộc phân bố đều Grassmannian, λ ≈ 2r.
+(Book IX Ch 3 — xem các điều kiện tiên quyết đã nêu.)
+
+---
+
+## Order‑Maximisation Veto (ràng buộc bên, không phải công thức)
+
+Kể từ phiên bản 1.3, OMV (Book II §II Step 2) là một ràng buộc bên thuộc đạo đức học nghĩa vụ, không phải bất đẳng thức tỷ lệ: lợi ích tối ưu hóa, dù lớn đến đâu, cũng không được mua bằng những tổn thất dự đoán không tầm thường về quyền tự chủ, công lý, đa dạng sinh học, hoặc đa dạng sở thích. Các phiên bản trước diễn đạt điều này bằng bất đẳng thức "lợi ích ≥ 10 × tổn thất → hủy bỏ"; cách đọc đó đã bị bãi bỏ vì nó đảo ngược ý định (bác bỏ các giao dịch có lợi) và có thể bị khai thác thông qua phân tách hành động và thổi phồng mẫu số.

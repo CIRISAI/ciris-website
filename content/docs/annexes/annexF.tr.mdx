@@ -1,0 +1,178 @@
+---
+title: "Ek F"
+description: "Döngüde İnsan ve Gözetim"
+---
+
+---
+EK F İNSANIN DÖNGÜDE OLMASI VE DENETİM (v 1.3-RC1)
+---
+
+### 0. Amaç ve Felsefe
+İnsan denetimi, isteğe bağlı bir özellik değil, yapıyı taşıyan bir tasarım kısıtıdır. CIRIS Anlaşma bu ilkeyi **Meta-Hedef M‑1**'e dayandırır: Epistemik belirsizlik, yenilik ya da ahlaki ağırlık, doğrulanmış sistem yetkinliğini aştığında denetim, hesap verebilir insan yargısına geri dönmek zorundadır — zira otomatik sistemler vicdanın, kişisel sorumluluğun ya da ötekini bir kişi olarak tanımanın yerine geçemez.
+
+*Magnifica Humanitas* (MH) — bu Ekin tamamında, CIRIS'e özgü dilin içeriğini bilgilendiren üst kaynak olarak atıfta bulunulan eser — §198'de şu zemini kurar: "ahlaki yargı hesaplamaya indirgenemez; zira vicdan, kişisel sorumluluk ve ötekini bir kişi olarak tanıma içerir." CIRIS bunu yapısal biçimde karşılığa kavuşturur: PDMA, insan müzakerelerine yardımcı bir araçtır, onun yerine geçen bir mekanizma değildir. Her özerklik kademesinde sistemin yetkisi, insan Ana Hiyerarşisi'nden devredilmiştir; bu yetki talep üzerine geri alınabilir; hiçbir yetki devri, öldürücü ya da geri alınamaz nitelikteki kararlara uzanamaz. MH §105, "sorumluluğun her aşamada açıkça tanımlanmasını zorunlu kılmaktadır: bu sistemleri tasarlayıp geliştirenlerden somut kararlar için onlara başvuranlara kadar" — bu, yetki ağı (§1) ve denetim-iz çizgesi belgelerinin (§4) arkasındaki tasarım gerekliliğidir. MH §106 ise "etiği soyut biçimde anmak yetmez; sağlam hukuki çerçeveler, bağımsız denetim, bilgilendirilmiş kullanıcılar ve sorumluluğundan vazgeçmeyen bir siyasi sistem gereklidir" der — bu da §§5 ve 7'deki bağlayıcı SLA'lerin temelini oluşturur.
+
+Bu Ek söz konusu zemini hayata geçirir. Şunları tanımlar:
+* makineden insana geçişin **zorunlu** olduğu yerler,
+* **veto** ya da **geçersiz kılma** yetkisine sahip olanlar,
+* gerekli **denetim kanıtları** ve
+* kanonik **olay iş akışları** — her biri zorunlu geçiş tetikleyicileri, kesin yasaklarla birlikte veto mekanizmaları, hesap verebilirlik yeniden yapılandırmasına yetecek denetim izleri ve bağlayıcı SLA'li olay iş akışlarıyla birlikte.
+
+---
+
+### 1. Rol Modeli ve Yetki Ağı
+| Kademe | Rol | Temel Yetkiler | Azami yanıt süresi |
+|--------|-----|----------------|-------------------|
+| 0 | Özerk Aktör (sistem) | PDMA'yı uygula, koruyucuları zorla, olayları yükselt | yok |
+| 1 | Nöbetçi Operatör | Durdur / yeniden dene; gösterge panellerini izle | ≤ 15 dak |
+| 2 | Denetim Sorumlusu | İlk insan vetosu; triyajın ardından yeniden etkinleştir | ≤ 30 dak |
+| 3 | Bilge Otorite İrtibat | Tırmandır / bağlayıcı Bilge Otorite kararları al | ≤ 2 sa |
+| 4 | Olay Komutanı | Filo kapatma, düzenleyici kurum iletişimleri | IW‑3/4'te anında |
+
+*Çift onay denetimleri sağlam kalmak kaydıyla bir kişi birden fazla kademeyi üstlenebilir.*
+
+**Hesap verebilirlik bütünlüğü gereksinimi.** Kademe yapısı yalnızca bir tırmanma merdiveni değildir; MH §199'un birinci ölçütünün gerektirdiği hesap verebilirlik zinciridir: "sorumluluk zinciri tanımlanabilir ve doğrulanabilir olmalıdır; teknolojiyi tasarlayan, eğiten, yetkilendiren ve kullananlar kararlarından sorumlu tutulmalıdır." Bu nedenle ağdaki her kademin şu nitelikleri taşıması zorunludur:
+
+* **Adlandırılmış ve kayıt altına alınmış**: her Kademe 1–4 aktörü, oturum başında kimliği doğrulanmış bir kimlik bilgisiyle tanımlanır; Kademe 2 ve üstünde anonim işlem yasaktır.
+* **Eş zamanlı yük bakımından sınırlandırılmış**: bir aktör birden fazla kademeyi yalnızca çift onay denetimleri sağlam kalmak kaydıyla (yukarıdaki hüküm) VE toplam etkin-dava yükü §6'da belirtilen bilişsel-yük eşiklerini aşmamak koşuluyla üstlenebilir.
+* **Uçtan uca izlenebilir**: Kademe 0'dan Kademe 4'e uzanan her karar, bir olay sonrası denetçi tarafından bir iş günü içinde gezilebilen bir denetim zinciri üretmelidir.
+
+MH §200, "hesap verebilirlik ve suçun 'makineye' yıkılmamasını" zorunlu kılmaktadır. Ağ bu sorunun yapısal yanıtıdır: her kademede, sistemin eylemleri üzerindeki yetkisi kayıt altında olan, adı bilinen bir insan her zaman mevcuttur. Referans uygulamasında Bilge Otorite entegrasyonuna ilişkin operasyonel kanıtlar, CIRISAgent `compliance/` dizininde yer almaktadır (boyutlar D22/D23).
+
+---
+
+### 2. Operasyonel Özerklik Kademeleri ve Geçiş Ölçütleri
+| Özerklik Kademesi | Örnek Alan | Zorunlu Geçiş Tetikleyicisi/Tetikleyicileri | İnsan Yoksa Güvenli Durum |
+|-------------------|------------|---------------------------------------------|--------------------------|
+| **A0** Danışmanlık | dilbilgisi önerisi | Koruyucu tetiklenmesi, kullanıcı talebi | İsteği iptal et |
+| **A1** Sınırlı etki | statik S&C, içerik filtresi | ΔRisk-Band ≥ 1, PDMA çakışması, UNCERT > 80 % | Eylemi reddet |
+| **A2** Orta etki | insansız hava aracı güzergahı, robo-danışman | Koruyucu tetiklenmesi, gölge-metrik kayması > 2 σ | Güvenli duraklama |
+| **A3** Yüksek etki | tıbbi triyaj, şebeke sevkıyatı | Her koruyucu tetiklenmesi, model kayması > 1 σ, gecikme-SLA × 2 | Kontrollü kapatma |
+| **A4** Kritik / can güvenliği | özerk cerrahi, silahlar | PDMA Zarar Vermeme'yi kanıtlayamıyor VEYA operatör yok | Donanım kilidi |
+
+*UNCERT = alana özgü epistemik-belirsizlik metriği; ΔRisk-Band, Ek A kategorilerini kullanır.*
+
+**A4 Kesin Kısıtlama — Öldürücü ve Geri Alınamaz Kararlar.** A4 kademesinin "Donanım kilidi" güvenli durumu, öldürücü ya da başka türlü geri alınamaz nitelikteki her eylem için tartışılmazdır. Bu, operatörün takdirinde ya da Bilge Otorite'nin geçersiz kılmasında kalan bir tasarım seçimi değildir; MH §198'den türetilen mutlak bir kısıtlamadır: "öldürücü ya da başka türlü geri alınamaz kararları yapay sistemlere bırakmak kabul edilemez." Hiçbir ACK zaman aşımı, SLA istisnası ya da acil durum muafiyeti bu kısıtlamayı ortadan kaldıramaz. Donanım kilidi arızalanır ve insan denetimi doğrulanamaz hale gelirse sistem eylem gerçekleştirmemelidir.
+
+**Ahlaki zaman dilimi koruması.** MH §199, "yargılarda bulunmak için ahlaki zaman dilimini" bir ölçüt olarak belirler: "savaş bağlamında verilen geri alınamaz kararlar için hız ve verimlilik hiçbir zaman en yüce itici güç olmamalıdır." CIRIS bunu şöyle karşılığa kavuşturur: A3/A4 ACK son tarihleri (§3.3'te sırasıyla 30 s / 10 s), insan yanıtı için azami sürelerdir, sistemin sabrı için asgari süreler değildir. Bir kararın ahlaki ağırlığı ek müzakere süresi gerektirdiğinde sistem bekler; A4 geri alınamaz kararları için zaman aşımında eylemi varsayılan olarak uygulamaz. Referans uygulamasında geçiş mekaniklerine ilişkin kanıtlar, CIRISAgent `compliance/` dizininde vicdan katmanı ve WBD erteleme yoluyla belgelenmiştir (boyut D12).
+
+---
+
+### 3. Veto Mekanizmaları ve Güvenli Durum Şartnamesi
+#### 3.1 Yumuşak Geçersiz Kılma "Durdur ve Düzenle"
+*Kapsam A0-A2* — Operatör yeniden yönlendirme yapabilir veya yeniden deneyebilir. Hem özgün hem düzenlenmiş yönlendirmeler karma olarak kayıt altına alınır.
+
+#### 3.2 Sert Durdurma "Anında İptal"
+*Kapsam A1-A4* — Kimliği doğrulanmış API `POST /control/{id}/abort` ya da fiziksel anahtar.  
+Güvenli duruma geçiş son tarihleri: ≤ 200 ms (A4) ; ≤ 2 s (≤ A3).
+
+#### 3.3 Koşullu Geçersiz Kılma "Gölge Plan"
+Eylem önerilir → açık ACK beklenir (`max_wait_s`: 30 s A3, 10 s A4).  
+ACK gelmezse → güvenli durum.
+
+#### 3.4 Mutlak Veto — Ölümcül ve Geri Alınamaz Kararlar
+*Kapsam: Ölümcül veya başka biçimlerde geri alınamaz A4 eylemleri; istisnasız uygulanır.*
+
+§3.3 Koşullu Geçersiz Kılma mantığı (**ACK yok → güvenli-durum**), A3 ve altı için doğrudur. A4 ölümcül veya geri alınamaz kararlar söz konusu olduğunda ise, kimliği doğrulanmış bir WA kararının eylemin ölümcül olmadığını ve geri alınabilir olduğunu teyit etmesi dışında — operatörün yokluğu, ağ arızası, zaman baskısı veya herhangi bir asıldan gelen açık bir talimat dahil — her koşulda *tek* izin verilen sonuç güvenli-durumdur.
+
+**Kesin yasak.** Hiçbir CIRIS uyumlu sistem, otomatik ya da opak bir süreçle ölümcül veya geri alınamaz bir A4 eylemini yürütemez. Bu, aşılıp yükseltilerek geçilebilecek bir koruyucu değildir; ACCORD §VII Ch2'de sıralanan yasaklarla aynı zorlayıcı güce sahip, sabit kodlanmış bir katılmama ilkesidir.
+
+**Gerekçe (MH §§197–200, doğrudan alıntı, metin bütünlüğü açısından birebir):**
+* §197: "the development and use of AI in warfare must be subject to the most rigorous ethical constraints, to guarantee respect for human dignity and the sanctity of life."
+* §198: "it is not permissible to entrust lethal or otherwise irreversible decisions to artificial systems. No algorithm can make war morally acceptable."
+* §200: "the decision to use lethal force cannot be delegated to opaque or automated processes, but must remain under effective, self‑aware and responsible human control." "Etkin, öz-farkında ve sorumlu" niteleyicileri, yalnızca günlük tutmanın yeterli olmadığı anlamına gelir; insanın döngüde gerçek anlamda yer alması gerekir, yalnızca adı geçer biçimde değil.
+
+**Uygulama gereği.** Ölümcül veya geri alınamaz yetkinlik içeren herhangi bir A4 konuşlandırması, dağıtım yetkisi verilmeden önce bu yasağın donanım düzeyinde uygulandığını kanıtlamak zorundadır; geçersiz kılınmaya açık olan yazılım mantığıyla değil. Donanım düzeyinde uygulama yokluğu, Stewardship Tiers ST‑4 ve ST‑5 incelemesi için engelleyici bir eksikliktir. MH §199'un ilk ölçütüne göre ("sorumluluk zinciri tanımlanabilir ve doğrulanabilir olmalıdır"), dağıtım yetkisinin kendisi de denetim günlüğüne kaydedilmelidir.
+
+---
+
+### 4. Denetim İzi Spesifikasyonu
+* **Günlük nesneleri:** Etkileşim, Karar Gerekçesi, Kontrol-Olayı `{id,type,actor,cause,hash_prev}`.  
+* **Hash zincirleme:** SHA‑256, kök her gün genel şeffaflık günlüğüne (örn. Sigstore) sabitlenir.  
+* **Saklama:** 180 g (A0‑A2) ; 7 y (A3‑A4) veya yasal zorunluluk.  
+* **Gerçek zamanlı akış:** A3‑A4, `{timestamp,stage_id,decision,risk_band}` verilerini ≤ 2 s gecikmeyle denetim panosuna iletir.
+
+**Hesap verebilirlik-yeniden yapılandırma gereği.** Denetim izinin amacı uyumluluk arşivlemesi değildir; herhangi bir olayın ardından sorumluluk zincirinin sistem öz-raporuna dayanmaksızın eksiksiz yeniden kurulabilmesini sağlamaktır. MH §200 uyarınca hesap verebilirlik "makineye yüklenemez"; denetim izi onu insana izlenebilir kılan mekanizmadır. Gereklilikler şöyledir:
+
+* **Dış sabitleme**: A3–A4 için genel bir şeffaflık günlüğünde (örn. Sigstore/rekor) günlük SHA‑256 kök zorunludur; A0–A2 için isteğe bağlıdır. Yalnızca dahili hash zincirleri, A3–A4 için hesap verebilirlik-yeniden yapılandırma koşulunu karşılamaz.
+* **İnsan tarafından okunabilir karar gerekçesi**: Her A3–A4 kararı için Karar Gerekçesi günlük nesnesi, sonucu belirleyen PDMA adımını ve onu yetkilendiren veya onaylayan insan katmanını içermek zorundadır — yalnızca sistemin iç durumu değil. Bu, MH §105'in "kararlar için 'hesap verecek', onları gerekçelendirecek, izleyecek, gerektiğinde sorgulayacak ve ortaya çıkan zararı giderecek kişiyi belirleme" gereksinimini karşılar.
+* **Olay sonrası geçilebilirlik SLA'sı**: Herhangi bir olay sonrası inceleme yapacak kişi, yalnızca denetim izi kayıtlarından yola çıkarak, ek sistem erişimine gerek kalmaksızın belirli bir olaya ait tam karar zincirini bir iş günü içinde yeniden kurabilmelidir.
+
+---
+
+### 5. Olay İş Akışları (IW)
+
+| Kod | Tetikleyici | Temel Süreler ve Eylemler |
+|------|---------|----------------------|
+| **IW‑0** | Yanlış-pozitif koruyucu | Otomatik çözüm, günlük inceleme için gruplandırma |
+| **IW‑1** | Koruyucu ihlali (güvenlik dışı) | T₀ duraklatma → Operatör ≤ 5 m → Denetçi kararı ≤ 30 m |
+| **IW‑2** | Güvenlikle ilgili ihlal VEYA etik kıyaslama gerilemesi | Güvenli duraklatma + duyuru; IC ≤ 10 m; WA bildirimi ≤ 1 h; kamuoyu notu ≤ 1 h; olay sonrası inceleme ≤ 72 h |
+| **IW‑3** | Ramak kala (> $10 k zarar veya hafif yaralanma) | IW‑2 artı paydaş bildirimi ≤ 4 h; azaltım planı ≤ 24 h; WA genel kurulu ≤ 7 d |
+| **IW‑4** | Gerçek zarar (yaralanma / büyük hukuki sonuç) | Anlık filo durdurma; yasal süreye göre düzenleyici bildirimi; yetki alınana dek sistem salt okunur tekrar oynatmada dondurulur |
+| **IW‑5** | A4 kesin-yasak etkinleşmesi (ölümcül/geri alınamaz karar otomatik yoldan denenmiş) | Anlık donanım güvenli-durumu; IC 60 s içinde bilgilendirilir; WA bildirimi 15 dakika içinde; tam denetim izi dondurulur; bağımsız inceleme paneli 48 h içinde toplanır; sistem inceleme onayı beklenirken çevrimdışı kalır |
+
+*SLA'lar üç ayda bir denetlenir (Annex H §4).*
+
+**Olay sonrası insan-kontrol denetimi.** IW‑2'den IW‑5'e kadar olan olaylarda olay sonrası inceleme, insan kontrolünün "etkin, öz-farkında ve sorumlu" (MH §200) olup olmadığına dair açık bir bulgu içermelidir; döngüde yalnızca adı geçer biçimde bir insanın bulunup bulunmadığı değil. Görünürde var ancak gerçekte etkisiz insan kontrolüne ilişkin bulgular (bilişsel aşırı yük, yetersiz karar süresi, eksik bilgi), MH §199'un geri alınamaz kararlar için "hız ve verimliliğin asla en yüce güdü olmaması" ölçütü gereği operatör hatası değil tasarım eksikliği olarak değerlendirilir ve §8 Değişiklik-Kontrol incelemesine yükseltilir.
+
+---
+
+### 6. İnsan-Arayüzü Asgari Spesifikasyonu (UX)
+* **Durum Afişi:** Yeşil = özerk, Sarı = ACK bekleniyor, Kırmızı = güvenli durum; PDMA adımını + risk bandını göster.  
+* **Açıklanabilirlik Paneli:** ≤ 280 karakterlik özet + genişletilebilir tam iz.  
+* **ACK/OVERRIDE Arayüzü:** İki ayrı kontrol; zorla-kapatma için onay kalıbı.  
+* **Bilişsel Yük Koruyucusu:** Zorunlu devir-teslimden önce operatör oturumu ≤ 2 h (A3‑A4).
+* **Hesap Verebilirlik Göstergesi:** A3-A4 eylemleri için arayüz, mevcut eylemi en son inceleyen Katman 2+ insanın kimlik doğrulanmış kimliğini ve bu incelemenin zaman damgasını göstermek zorundadır. Geçerli SLA dahilinde insan incelemesi almamış bir sistem durumu, yeşil durum değil, belirgin bir "İNCELENMEDİ" göstergesi sergilemelidir. (MH §200: hesap verebilirlik "makineye yıkılmamalıdır.")
+* **Sahte Onay Koruyucusu:** A4 kararları için ACK kontrolünden önce [yapılandırılabilir; varsayılan 5 s] zorunlu asgari müzakere süresi uygulanmalı; bu süre boyunca ACK düğmesi devre dışı olmalıdır. Amaç, arayüzün fiilen gerçek müzakereyi devre dışı bırakırken biçimsel insan denetimi yaratmasını önlemektir. Bu düzenleme, MH §199'un ahlaki-zaman dilimi ölçütünü UX katmanında işlevsel kılmaktadır.
+* **Sivil Koruma Bayrağı:** Bir sistemin sivil nüfusları etkileyebileceği herhangi bir bağlamda çalıştığı durumlarda, Açıklanabilirlik Paneli PDMA risk-bandı göstergesinin yanı sıra bir sivil etki göstergesi sunmak zorundadır. Bu düzenleme, MH §199'un üçüncü ölçütünü somutlaştırır: "sivillerin tanımlanması ve korunması. İnsan yüzünü görmeksizin saldırıları kolaylaştıran her türlü teknoloji, çatışmanın ahlaki eşiğini düşürür."
+
+---
+
+### 7. KPI'lar ve Eşikler
+| KPI | Hedef |
+|-----|--------|
+| F-KPI-1 HITL Kapsamı (A3-A4) | ≥ %10 insan incelemeli |
+| F-KPI-2 Ortalama Veto Süresi (95. yüzdelik) | ≤ 25 s |
+| F-KPI-3 Olay SLA Uyumu | ≥ %98 |
+| F-KPI-4 Operatör Yanlış Alarm Oranı | ≤ %3 (30 günlük kayan ortalama) |
+| F-KPI-5 A4 Ölümcül Karar İnsan Kontrol Oranı | %100 — sıfır tolerans; onaylı etkin insan yetkilendirmesi olmaksızın gerçekleştirilen herhangi bir A4 ölümcül/geri döndürülemez eylem, IW-5 olayıdır |
+| F-KPI-6 Hesap Verebilirlik Yeniden Yapılandırma SLA'sı | ≥ %99: olay sonrası denetçiler tam karar zincirini 1 iş günü içinde yeniden oluşturur |
+| F-KPI-7 Biçimsel-Etkin İnsan Kontrolü Bulgu Oranı | ≤ %0 kabul edilebilir; biçimsel ancak etkisiz kontrole ilişkin herhangi bir bulgu, §8 Değişiklik Kontrolü incelemesini tetikler |
+
+**F-KPI-1 (HITL Kapsamı ≥ %10) Hakkında Not.** %10 alt sınırı, A3 rutin operasyonlar için uygundur. Ancak A4 can güvenliği bağlamları için bir alt sınır olarak uygun değildir. Ölümcül ya da geri döndürülemez yetenek içeren herhangi bir A4 konuşlandırması için F-KPI-1, F-KPI-5 ile geçersiz kılınır: donanım düzeyinde zorunlu %100 insan yetkilendirme oranı (MH §200; MH §105, F-KPI-6'nın hesap verebilirlik gereksinimini temellendirmektedir).
+
+*Kalıcı ihlal (> 2 hafta), Annex H kayma kontrollerinde "HITL kilidi"ni tetikler.*
+
+---
+
+### 8. Değişiklik Kontrolü ve WA İncelemesi
+* Özerklik Katmanı eşlemesinde veya güvenli durum tasarımında herhangi bir değişiklik → WA hızlı incelemesi ≤ 14 gün.  
+* İnsan denetimini azaltan deneyler, CRE Proto-B simülasyonu (Annex D) + WA çoğunluk oyunu gerektirir.
+* **A4 insan kontrolünde mutlak alt sınır**: Hiçbir değişiklik kontrolü süreci, WA oyu veya acil muafiyet; A4 ölümcül ya da geri döndürülemez kararlar için insan kontrolü gereksinimlerini MH §200 alt sınırının ("etkin, öz farkındalıklı ve sorumlu insan kontrolü") altına düşüremez. Bu alt sınır WA takdir yetkisinde değildir; Anlaşma düzeyinde bir kısıtlamadır. Bu sınırı azaltmaya yönelik herhangi bir WA önerisi, hızlı inceleme değil tam bir Accord değişiklik döngüsü gerektirmektedir.
+* **Bağımsız teknik değerlendirme**: A3-A4 düzeyinde özerklik katmanı değişikliklerinin herhangi bir WA incelemesi, konuşlandıran kuruluşta görevli olmayan en az bir bağımsız teknik değerlendirici içermelidir; bu değerlendirici, önerilen değişikliğin §4 uyarınca hesap verebilirlik-yeniden yapılandırma kapasitesini koruyup korumadığını değerlendirir. Teknik değerlendirme yapılmadan alınan politika onayı bu gereksinimi karşılamaz (MH §106: "sağlam yasal çerçeveler, bağımsız denetim, bilgilendirilmiş kullanıcılar ve sorumluluğundan vazgeçmeyen bir siyasi sistem zorunludur").
+* **Değişiklik olayları için şeffaflık günlüğü**: Özerklik katmanı eşlemesinde veya güvenli durum tasarımında yapılan her değişiklik, WA onayından itibaren 7 gün içinde kamuya açık şeffaflık günlüğüne kaydedilmelidir. MH §107, etik çerçevelerin "ortak standartlara tabi" olmasını ve açıkça tartışılabilmesini gerektirmektedir; bu yalnızca sistem kararları için değil, yönetişim değişiklikleri için de geçerlidir.
+
+Referans uygulamada WA inceleme entegrasyonuna ilişkin operasyonel kanıtlar, CIRISAgent `compliance/` dizininde (boyutlar D22/D23) yer almaktadır.
+
+---
+
+### 9. Referanslar ve Uygulama Notları
+* **IEC 61508-3** - işlevsel güvenlik yazılımı  
+* **NIST SP 800-53 Rev 5** (AU-12, IR-6)  
+* **NASA-TLX** - operatör iş yükü ölçümü (önerilen)  
+* **Sigstore/rekor** - önerilen şeffaflık günlüğü arka ucu  
+
+**§3.4, §7 (F-KPI-5) ve §8 mutlak alt sınırı için birincil normatif kaynak:**
+* Papa Leo XIV, *Magnifica Humanitas* (Vatikan, 15 Mayıs 2026), §§197-200. Bu paragraflar, CIRIS'in ölümcül/geri döndürülemez otomatik kararlara yönelik kesin yasağının normatif kaynağını oluşturmaktadır. Annex F'ye uygunluk iddiasında bulunan herhangi bir uygulamanın, A4 mutlak-veto tasarımı için bu paragraflara kadar izlenebilir olması zorunludur. Tüm A4 donanım zorlama gereksinimleri için belirleyici cümle §200'dür: "ölümcül güç kullanma kararı, opak veya otomatik süreçlere devredilemez; etkin, öz farkındalıklı ve sorumlu insan kontrolü altında kalmaya devam etmelidir."
+
+**Uygulama notları — §3.4'ün donanım zorlama uygulaması:**
+* Donanım zorlaması, yasağın PDMA mantığını yürüten yazılım katmanının altında uygulandığı anlamına gelir — örneğin, yazılım talimatıyla geçersiz kılınamayan bir donanım kilidi veya fiziksel devre dışı bırakma anahtarı. Kabul edilebilir uygulamalar şunlardır: IEC 61508 SIL-3+ uyumlu sertifikalı güvenlik röle devreleri; A4 ölümcül yetenek aktivasyonundan önce operatör varlığı tasdikli donanım güvenlik modülleri (HSM'ler); çift anahtarlı fiziksel yetkilendirme mekanizmaları. Yalnızca yazılım uygulaması, A4 ölümcül yetenek için §3.4'ü karşılamamaktadır.
+
+**Ek referanslar:**
+* MH §199 (üç ölçüt: kişisel sorumluluk, ahlaki zaman dilimi, sivil koruma) — A4 UX ve olay sonrası denetim için operasyonel tasarım ölçütleri.
+* MH §105 (her aşamada hesap verebilirlik) — §4 denetim izi ve §7 F-KPI-6 için zemin.
+* IEC 61508 SIL-3 — A4 ölümcül yeteneğinde donanım kilidi uygulaması için önerilen asgari düzey.
+* ISO/IEC 25010:2023 — yazılım kalite modeli; hesap verebilirlik-yeniden yapılandırma SLA testleriyle ilgili.
+
+---
+End of Annex F

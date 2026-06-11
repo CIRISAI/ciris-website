@@ -1,0 +1,42 @@
+---
+title: "Ek C"
+description: "Düzenleyici Çapraz Yürüyüş"
+---
+
+---
+EK C DÜZENLEYİCİ ÇAPRAZ REFERANS   (v 1.3-RC1)
+---
+
+### Amaç
+
+CIRIS maddelerini başlıca dış standartlarla eşleştirerek ikili uyum sürecini basitleştirmek. Bu ek iki katman içermektedir:
+
+1. **Operasyonel çapraz referans (canlı, kanıt destekli)** — CIRISAgent `compliance/` dizini: 27 sabit boyut (D01–D27), dört kurumsal açıdan birbirinden ayrışık kıdemli çerçeve (*Magnifica Humanitas* · AB YÜGR Güvenilir YZ Kılavuzları · IEEE Etik Açıdan Uyumlu Tasarım · ASEAN YZ Yönetişim Kılavuzu) ile paragraf düzeyinde çapraz referanslanmıştır; her boyut için uygulama atıfları ve tarihli, betik tarafından üretilen temel çizgiler mevcuttur. Bağlayıcı ve kanıt disiplini için **Ek 1**'e bakınız.
+2. **Yasal eşleştirme (bilgilendirici)** — aşağıdaki tablo, CIRIS yapılarını bağlayıcı hukuk ve standartlar çerçeveleriyle eşleştirmektedir. Bu satırlar *bilgilendirici mühendislik karşılıkları*dır; hukuki görüş niteliği taşımaz. Yasal satırlar, yalnızca hukuki incelemenin yazışmayı teyit etmesi ve inceleme kaydının bu tabloya bağlanması halinde "doğrulanmış" statüsüne geçer. Ek I, işletimsel hukuki uyum prosedürlerini kapsar (veri koruma eşleştirmesi, sektörel katmanlar, sorumluluk matrisi, eskalasyon beslemeleri).
+
+### Yasal ve standartlar eşleştirmesi (bilgilendirici; hukuki doğrulama beklemekte)
+
+| Dış Çerçeve | İlgili Maddeler / Hükümler | CIRIS Eşleştirmesi (Kitap / Ek §) | Durum |
+|---|---|---|---|
+| AB YZ Yasası (2024) | Mad. 9 Risk Yönetimi | Kitap II §II (PDMA); Ek D CRE | Bilgilendirici |
+| | Mad. 12 Kayıt Tutma | Kitap IV B. 3 denetim izleri; Ek F §4 | Bilgilendirici |
+| | Mad. 13 Şeffaflık | Kitap II §II Adım 6; Kitap IV B. 3 | Bilgilendirici |
+| | Mad. 14 İnsan Gözetimi (14(4) dahil) | Kitap II §III (WBD); Ek F otorite kafesi + otonomi kademeleri | Bilgilendirici |
+| | Mad. 61 Piyasa Sonrası İzleme | Ek H sapma kontrolleri + sürekli denetim | Bilgilendirici |
+| NIST AI RMF 1.0 | Yönet → Haritala → Ölç → Yönet | Yönet: Kitaplar I, VI; Haritala: Kitap II §II Adımlar 1–2; Ölç: Ek A metrikleri + Ek H temel çizgileri; Yönet: Ek F/H iş akışları | Bilgilendirici |
+| ISO/IEC 42001 | Md. 6.2 Risk Değerlendirmesi | Kitap II §II | Bilgilendirici |
+| | Ek A kontrolleri | CIRISAgent `compliance/` boyut belgeleri (kontrol başına yazışma beklemekte) | Bilgilendirici |
+| OSHA Robotik Kılavuzları | Bölüm 5.E Güvenlik Denetimleri | Ek D CRE | Kısmi |
+| AB YÜGR Güvenilir YZ (2019) | 7 Gereksinim | Operasyonel çapraz referans, boyutlar D01–D27 | Kanıt destekli |
+| IEEE EAD 1. baskı (2019) | 8 Genel İlke | Operasyonel çapraz referans, boyutlar D01–D27 | Kanıt destekli |
+| ASEAN YZ Yönetişim Kılavuzu (2024) | 7 İlke; HITL/HOTL/HOOTL | Operasyonel çapraz referans; Ek F otonomi kademeleri | Kanıt destekli |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (paragraf düzeyinde eşleştirme) | Operasyonel çapraz referans, boyutlar D01–D27 | Kanıt destekli |
+
+### Yükseltme kuralı
+
+Nitelikli hukuki inceleme, adlandırılmış bir yargı bölgesi için yazışmayı onayladığında ve inceleme kaydı bu tabloya bağlandığında yasal bir satır *Bilgilendirici*'den *Doğrulanmış*'a geçer. O zamana kadar bu ekteki satırlar, mühendislik uyumunu ve boşluk analizini destekler; uyum iddiasını desteklemez. Giriş'in Sorumluluk bölümünde belirtildiği üzere, uyum iddiaları yürürlükteki hukukun yasakladığı durumlarda geçersizdir.
+
+(Ek çerçeveler — UNESCO YZ Etiği Tavsiyesi, OECD YZ İlkeleri, Avrupa Konseyi Çerçeve Sözleşmesi — uyum dizini yol haritası uyarınca operasyonel çapraz referans için sıraya alınmıştır.)
+
+---
+Ek C Sonu

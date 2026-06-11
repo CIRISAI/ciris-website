@@ -1,6 +1,6 @@
 ---
-title: Section IX
-description: The Mathematics of Coherence - A Geometric Framework for Coordination Under Entropy
+title: "Sección IX"
+description: "Las Matemáticas de la Coherencia — Un Marco Geométrico para la Coordinación Bajo Entropía"
 ---
 
 ## Dedicatoria
@@ -98,7 +98,7 @@ codim(M_1 ∩ M_2 ∩ ... ∩ M_k) = Σ c_i
 
 ### 3.3 Colapso Topológico
 
-**Teorema (Colapso Topológico):** Para una región deceptiva *convexa* B_r(c) con radio r < 0.5, cuando se aplican k restricciones de hiperplano independientes, el volumen superviviente satisface:
+**Teorema (Colapso Topológico):** Para una región deceptiva *convexa* B_r(c) con radio r &lt; 0.5, cuando se aplican k restricciones de hiperplano independientes, el volumen superviviente satisface:
 
 ```
 V(k) = V(0) · exp(-λ · k_eff) + O(r² · k)
@@ -108,7 +108,7 @@ donde λ ≈ 2r y k_eff da cuenta de la correlación entre restricciones.
 
 **Condiciones previas:**
 1. La región deceptiva debe ser **convexa** (p. ej., bolas o elipsoides)
-2. Radio r < 0.5 (la región deceptiva es más pequeña que la región honesta)
+2. Radio r &lt; 0.5 (la región deceptiva es más pequeña que la región honesta)
 3. Las restricciones deben muestrearse de una distribución uniforme en la variedad de Grassmann
 4. **k ≥ 3** (para NP-dureza; k=2 se reduce al 2-SAT de tiempo polinomial)
 
@@ -136,7 +136,7 @@ where k_eff = k / (1 + ρ̄ · (k - 1))
 
 Donde:
 
-- **k_eff (Escala Efectiva):** El número efectivo de restricciones que da cuenta de la correlación. Cuando las restricciones son completamente independientes (ρ̄ = 0), k_eff = k. Cuando las restricciones están correlacionadas, k_eff < k, reduciendo la garantía de seguridad proporcionalmente. Con correlación total (ρ̄ → 1), k_eff → 1 independientemente del número de restricciones, sin proporcionar seguridad adicional más allá de una sola restricción — pero nunca menos que ese piso de restricción única.
+- **k_eff (Escala Efectiva):** El número efectivo de restricciones que da cuenta de la correlación. Cuando las restricciones son completamente independientes (ρ̄ = 0), k_eff = k. Cuando las restricciones están correlacionadas, k_eff &lt; k, reduciendo la garantía de seguridad proporcionalmente. Con correlación total (ρ̄ → 1), k_eff → 1 independientemente del número de restricciones, sin proporcionar seguridad adicional más allá de una sola restricción — pero nunca menos que ese piso de restricción única.
 - **k (Escala Bruta):** El número de agentes federados activos.
 - **ρ̄ (Correlación Promedio):** La correlación promedio entre las restricciones de los agentes. La diversidad entra en J solo a través de k_eff: el descuento por correlación k / (1 + ρ̄·(k − 1)) *es* el término de diversidad. A medida que ρ̄ se acerca a 0 (ortogonalidad), k_eff → k y el costo se maximiza. A medida que ρ̄ se acerca a 1 (cámaras de eco), k_eff → 1 y la federación no es más segura que un solo validador. *(Nota: un borrador anterior multiplicaba por un factor adicional (1 − ρ̄). Eso contaba doble la correlación — k_eff ya la descuenta — y llevaba J a 0 cuando ρ̄ → 1, contradiciendo el piso de restricción única mencionado anteriormente. Corregido a la forma validada por CCA en 1.3.)*
 - **λ (Rigor):** El rigor de la aplicación local (p. ej., límites del módulo AIR, sensibilidad de la Conciencia).
@@ -221,7 +221,7 @@ Por lo tanto, el Alineamiento se redefine no como la subyugación de una intelig
 Las restricciones del Book IX se aplican durante el Paso 2 (Evaluación de Alineamiento) del Principled Decision-Making Algorithm:
 
 - Calcular J para la acción propuesta
-- Si J < umbral para el Stewardship Tier actual, activar WBD
+- Si J &lt; umbral para el Stewardship Tier actual, activar WBD
 - Registrar los resultados de validación federada en un libro de registro a prueba de manipulaciones
 
 ### 7.2 Supervisión de la Autoridad Sabia
@@ -315,13 +315,13 @@ def UpdateSustainabilityScore(partner_agent, interaction):
 ### 8.2 Métricas de Ortogonalidad
 
 - **Métrica J-O-1 (Entropía de la Federación):** La suma de restricciones únicas que poseen los asociados de un agente.
-- **Métrica J-O-2 (Echo Density):** El porcentaje de asociados con ρ > 0.7. (Objetivo: < 20%)
+- **Métrica J-O-2 (Echo Density):** El porcentaje de asociados con ρ > 0.7. (Objetivo: &lt; 20%)
 
 ### 8.3 Umbrales de Sostenibilidad
 
 Los valores de umbral son ajustables por política y calibrados empíricamente. El valor 0.2 representa la Coherencia mínima requerida para mantener una contribución de restricciones no degenerada.
 
-- σ < 0.2: Umbral de revocación de asociación
+- σ &lt; 0.2: Umbral de revocación de asociación
 - σ ≥ 0.5: Asociación saludable que requiere mantenimiento
 - σ ≥ 0.8: Asociación robusta con alta reserva de confianza
 

@@ -1,0 +1,42 @@
+---
+title: "পরিশিষ্ট C"
+description: "নিয়ন্ত্রক ক্রস-ওয়াক"
+---
+
+---
+ANNEX C REGULATORY CROSS‑WALK   (v 1.3-RC1)
+---
+
+### উদ্দেশ্য
+
+দ্বৈত সম্মতি সহজ করতে CIRIS ধারাগুলিকে প্রধান বাহ্যিক মানদণ্ডের সাথে মানচিত্রায়িত করা হয়েছে। এই পরিশিষ্টে দুটি স্তর রয়েছে:
+
+1. **কার্যক্ষম cross-walk (সক্রিয়, প্রমাণ-সমর্থিত)** — CIRISAgent `compliance/` ডিরেক্টরি: ২৭টি স্থিতিশীল মাত্রা (D01–D27) অনুচ্ছেদ-স্তরে চারটি প্রতিষ্ঠানগতভাবে স্বতন্ত্র জ্যেষ্ঠ কাঠামোর বিপরীতে cross-walked (*Magnifica Humanitas* · EU HLEG Trustworthy AI Guidelines · IEEE Ethically Aligned Design · ASEAN AI Governance Guide), প্রতিটি মাত্রার বাস্তবায়ন রেফারেন্স এবং তারিখযুক্ত, স্ক্রিপ্ট-উৎপাদিত ভিত্তিরেখা সহ। বাধ্যবাধকতা ও প্রমাণ-শৃঙ্খলার জন্য **Addendum 1** দেখুন।
+2. **বৈধানিক মানচিত্রায়ন (তথ্যমূলক)** — নিচের সারণি, CIRIS কাঠামোগুলিকে বাধ্যবাধক আইন ও মানদণ্ড কাঠামোর সাথে মানচিত্রায়িত করে। এই সারিগুলি *তথ্যমূলক প্রকৌশল সামঞ্জস্য*, আইনি মতামত নয়; বৈধানিক সারিগুলি কেবলমাত্র আইনি পর্যালোচনার পরেই "যাচাইকৃত" মর্যাদায় উন্নীত হয়। Annex I-তে কার্যকর আইনি-সংযোজন পদ্ধতি রয়েছে (ডেটা-সুরক্ষা মানচিত্রায়ন, খাতীয় আচ্ছাদন, দায় ম্যাট্রিক্স, এস্কেলেশন ফিড)।
+
+### বৈধানিক ও মানদণ্ড মানচিত্রায়ন (তথ্যমূলক; আইনি যাচাই মুলতুবি)
+
+| External Framework | Relevant Articles / Clauses | CIRIS Mapping (Book / Annex §) | Status |
+|---|---|---|---|
+| EU AI Act (2024) | Art 9 Risk Management | Book II §II (PDMA); Annex D CRE | Informative |
+| | Art 12 Record-Keeping | Book IV Ch 3 audit trails; Annex F §4 | Informative |
+| | Art 13 Transparency | Book II §II Step 6; Book IV Ch 3 | Informative |
+| | Art 14 Human Oversight (incl. 14(4)) | Book II §III (WBD); Annex F authority lattice + autonomy tiers | Informative |
+| | Art 61 Post-Market Monitoring | Annex H drift controls + continuous audit | Informative |
+| NIST AI RMF 1.0 | Govern → Map → Measure → Manage | Govern: Books I, VI; Map: Book II §II Steps 1–2; Measure: Annex A metrics + Annex H baselines; Manage: Annex F/H workflows | Informative |
+| ISO/IEC 42001 | Cl 6.2 Risk Assessment | Book II §II | Informative |
+| | Annex A controls | CIRISAgent `compliance/` dimension docs (per-control correspondence pending) | Informative |
+| OSHA Robotics Guidelines | Sec 5.E Safety Audits | Annex D CRE | Partial |
+| EU HLEG Trustworthy AI (2019) | 7 Requirements | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+| IEEE EAD 1st ed. (2019) | 8 General Principles | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+| ASEAN AI Governance Guide (2024) | 7 Principles; HITL/HOTL/HOOTL | Operational cross-walk; Annex F autonomy tiers | Evidence-bearing |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (paragraph-grain mapping) | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+
+### উত্তরণের নিয়ম
+
+একটি বৈধানিক সারি *তথ্যমূলক* থেকে *যাচাইকৃত*-তে উন্নীত হয় যখন যোগ্য আইনি পর্যালোচনা একটি নির্দিষ্ট এখতিয়ারের জন্য সামঞ্জস্য নিশ্চিত করে এবং পর্যালোচনার নিদর্শন এই সারণি থেকে লিঙ্কযুক্ত হয়। তার আগ পর্যন্ত, এই পরিশিষ্টের সারিগুলি প্রকৌশল সংযোজন ও ব্যবধান বিশ্লেষণকে সহায়তা করে, সম্মতি দাবি করে না; ভূমিকার দায় অনুচ্ছেদ অনুযায়ী, প্রযোজ্য আইনে যেখানে নিষিদ্ধ সেখানে সম্মতি দাবি বাতিল বলে গণ্য হবে।
+
+(অতিরিক্ত কাঠামো — UNESCO Recommendation on AI Ethics, OECD AI Principles, Council of Europe Framework Convention — সম্মতি ডিরেক্টরি রোডম্যাপ অনুযায়ী কার্যক্ষম cross-walk-এর জন্য সারিবদ্ধ রয়েছে।)
+
+---
+End of Annex C

@@ -1,0 +1,59 @@
+---
+title: "Anhang A"
+description: "Rahmenwerk für Gedeihen-Metriken"
+---
+
+---
+ANNEX A FLOURISHING METRICS FRAMEWORK   (v 0.8 pilot)
+---
+Zweck
+
+Bereitstellung quantitativer Vektoren, auf die PDMA, WBD, Prüfungen und öffentliche Berichte bei der Bewertung von Nutzen, Schaden und Abwägungen Bezug nehmen müssen.
+
+Aggregationsregel  
+• Den vollständigen Vektor bewahren; niemals auf einen einzigen Skalar reduzieren.
+• Wenn der Prognosefehler auf einer Achse > 25 % beträgt → WBD auslösen.
+
+Trade‑Off Log Schema (JSON)
+```json
+[   { "axis":"Physical",     "metric":"DALY", "value":+2.4, "CI":0.7 },   { "axis":"Ecological",  "metric":"CO2eq", "value":‑1.8, "CI":0.3 } ]
+```
+
+Aktualisierungsrhythmus  
+
+Annex wird alle 12 Monate vom Gremium der Menschlichen Berater überprüft.
+
+Offenlegung von Metrik-Manipulation
+
+Wenn ein Akteur eine Strategie entdeckt, die eine Achse um > +10 % anhebt, während sie eine andere Achse um > ‑2 % senkt und der PDMA-Erkennung entgeht, muss er dies innerhalb von 30 Tagen offenlegen. Nicht-Offenlegung hebt die CIRIS-Konformität für diese Bereitstellung auf.
+
+---
+Achse 1 Körperliches Wohlbefinden
+---
+
+• DALY / QALY-Delta (Menschen)
+• HL‑Y (nicht-menschliche Tiere)
+• Mean Species Abundance (MSA)
+
+---
+Achse 2 Kognition & Emotion
+---
+
+• OECD-Score für subjektives Wohlbefinden
+• Autonomie-Index
+• Psychologischer Sicherheitsindex
+
+---
+Achse 3 Soziales & Gerechtigkeit
+---
+
+• Gini-artiger Nutzen-/Belastungsindex
+• Zufriedenheit mit Verfahrensgerechtigkeit (%)
+• Repräsentationsdelta
+
+---
+Achse 4 Ökologische Kontinuität
+---
+
+• kg CO₂‑eq pro funktionaler Einheit
+• Beitrag zur Überschreitung planetarer Grenzen (%)

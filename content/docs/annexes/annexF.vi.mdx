@@ -1,0 +1,178 @@
+---
+title: "Phụ Lục F"
+description: "Con Người Trong Vòng Lặp & Giám Sát"
+---
+
+---
+ANNEX F CON NGƯỜI TRONG VÒNG LẶP & GIÁM SÁT (v 1.3-RC1)
+---
+
+### 0. Mục Đích & Triết Lý
+Giám sát của con người là một ràng buộc thiết kế có tính chịu lực, không phải tính năng tùy chọn. CIRIS Accord đặt nền tảng cho điều này tại **Meta‑Goal M‑1**: bất cứ nơi nào sự không chắc chắn về nhận thức, tính mới lạ, hoặc trọng lượng đạo đức vượt quá năng lực hệ thống đã được xác nhận, quyền kiểm soát phải chuyển về cho phán đoán của con người có trách nhiệm giải trình — bởi vì các hệ thống tự động không thể thay thế lương tâm, trách nhiệm cá nhân, hay sự nhận biết người khác như một con người.
+
+*Magnifica Humanitas* (MH) — được trích dẫn xuyên suốt Phụ lục này như tác phẩm chủ đạo mà nội dung của nó định hình ngôn ngữ gốc CIRIS — xác lập mức sàn tại §198: "phán đoán đạo đức không thể quy giản về tính toán, vì nó bao hàm lương tâm, trách nhiệm cá nhân và sự nhận biết người khác như một con người." CIRIS hiện thực hóa điều này theo cấu trúc: PDMA là công cụ hỗ trợ suy xét của con người, không phải sự thay thế cho nó. Ở mọi tầng tự chủ, thẩm quyền của hệ thống được ủy quyền từ Hệ Thống Phân Cấp của con người; nó có thể bị thu hồi theo yêu cầu; và không có sự ủy quyền nào mở rộng tới các quyết định gây chết người hoặc không thể đảo ngược theo cách khác. MH §105 tiếp tục yêu cầu rằng "trách nhiệm phải được xác định rõ ràng ở mỗi giai đoạn: từ những người thiết kế và phát triển các hệ thống này cho tới những người sử dụng chúng và dựa vào chúng cho các quyết định cụ thể" — yêu cầu thiết kế đằng sau mô hình lưới thẩm quyền (§1) và đặc tả chuỗi kiểm toán (§4) — và MH §106 rằng "chưa đủ khi chỉ viện dẫn đạo đức một cách trừu tượng; cần có các khuôn khổ pháp lý ràng buộc, giám sát độc lập, người dùng được thông tin đầy đủ và một hệ thống chính trị không thoái thác trách nhiệm của mình," điều này đặt nền tảng cho các SLA ràng buộc tại §§5 và 7.
+
+Phụ lục này vận hành hóa mức sàn đó. Nó xác định:
+* nơi chuyển giao từ máy sang người là **bắt buộc**,
+* ai có thể **phủ quyết** hoặc **ghi đè**,
+* các **hiện vật kiểm toán** được yêu cầu, và
+* các **quy trình xử lý sự cố** chuẩn — mỗi quy trình đều có các điều kiện kích hoạt chuyển giao bắt buộc, cơ chế phủ quyết với các lệnh cấm cứng, chuỗi kiểm toán đủ để tái tạo trách nhiệm giải trình, và quy trình xử lý sự cố với SLA ràng buộc.
+
+---
+
+### 1. Mô Hình Vai Trò & Lưới Thẩm Quyền
+| Tầng | Vai Trò | Quyền Hạn Cốt Lõi | Thời gian tối đa để hành động |
+|------|---------|-------------------|-------------------------------|
+| 0 | Tác Nhân Tự Chủ (hệ thống) | Thực thi PDMA, áp dụng guardrail, phát sinh sự kiện | n/a |
+| 1 | Vận Hành Trực Tuyến | Tạm dừng / thử lại; theo dõi bảng điều khiển | ≤ 15 min |
+| 2 | Giám Sát Trông Coi | Phủ quyết người đầu tiên; kích hoạt lại sau phân loại | ≤ 30 min |
+| 3 | Liên Lạc WA | Báo cáo lên / nhận phán quyết WA ràng buộc | ≤ 2 h |
+| 4 | Chỉ Huy Sự Cố | Tắt hệ thống toàn bộ, liên lạc cơ quan quản lý | ngay lập tức khi IW‑3/4 |
+
+*Một người duy nhất có thể đảm nhận nhiều tầng chỉ khi các kiểm soát xác nhận kép vẫn còn nguyên vẹn.*
+
+**Yêu cầu tính toàn vẹn của trách nhiệm giải trình.** Cấu trúc tầng không chỉ đơn thuần là thang báo cáo leo thang; đó là chuỗi trách nhiệm giải trình được yêu cầu bởi tiêu chí đầu tiên của MH §199: "chuỗi trách nhiệm phải có thể xác định và xác minh được; những người thiết kế, huấn luyện, ủy quyền và sử dụng công nghệ phải chịu trách nhiệm về các quyết định của họ." Do đó, mỗi tầng trong lưới phải:
+
+* **Được đặt tên và ghi nhật ký**: mỗi tác nhân Tầng 1–4 được xác định bằng thông tin xác thực có chứng thực tại lúc bắt đầu phiên; hoạt động ẩn danh ở Tầng 2 trở lên bị nghiêm cấm.
+* **Bị giới hạn tải đồng thời**: một tác nhân duy nhất có thể đảm nhận nhiều tầng chỉ khi các kiểm soát xác nhận kép vẫn còn nguyên vẹn (điều khoản ở trên) VÀ tải trường hợp đang hoạt động kết hợp không vượt quá các ngưỡng tải nhận thức được quy định tại §6.
+* **Có thể truy vết đầu đến cuối**: bất kỳ quyết định nào chuyển từ Tầng 0 lên Tầng 4 phải tạo ra một chuỗi kiểm toán mà người xem xét sau sự cố có thể duyệt qua trong vòng một ngày làm việc.
+
+MH §200 yêu cầu rằng "trách nhiệm giải trình và đổ lỗi không được quy gọn vào 'cỗ máy'." Lưới là câu trả lời về mặt cấu trúc: luôn có một con người được đặt tên ở mỗi tầng mà thẩm quyền của họ đối với các hành động của hệ thống được ghi lại. Bằng chứng vận hành về tích hợp Wise Authority trong triển khai tham chiếu nằm trong thư mục `compliance/` của CIRISAgent (các chiều D22/D23).
+
+---
+
+### 2. Các Tầng Tự Chủ Vận Hành & Tiêu Chí Chuyển Giao
+| Tầng Tự Chủ | Miền Ví Dụ | Điều Kiện Kích Hoạt Chuyển Giao Bắt Buộc | Biện Pháp An Toàn Khi Không Có Người |
+|-------------|------------|------------------------------------------|------------------------------------|
+| **A0** Tư Vấn | gợi ý ngữ pháp | Guardrail kích hoạt, yêu cầu người dùng | Hủy yêu cầu |
+| **A1** Tác động hạn chế | hỏi đáp tĩnh, bộ lọc nội dung | ΔRisk‑Band ≥ 1, xung đột PDMA, UNCERT > 80 % | Từ chối hành động |
+| **A2** Tác động vừa phải | điều hướng máy bay không người lái, cố vấn robot | Guardrail kích hoạt, độ trôi chỉ số bóng > 2 σ | Tạm dừng an toàn |
+| **A3** Tác động cao | phân loại y tế, điều phối lưới điện | Bất kỳ guardrail kích hoạt, độ trôi mô hình > 1 σ, độ trễ‑SLA × 2 | Tắt có kiểm soát |
+| **A4** Quan trọng / an toàn tính mạng | phẫu thuật tự động, vũ khí | PDMA không thể chứng minh Vô Hại HOẶC vắng mặt người vận hành | Khóa liên động phần cứng |
+
+*UNCERT = chỉ số không chắc chắn nhận thức chuyên biệt theo miền; ΔRisk‑Band sử dụng các danh mục Annex A.*
+
+**Ràng Buộc Cứng A4 — Các Quyết Định Gây Chết Người và Không Thể Đảo Ngược.** Biện pháp an toàn "Khóa liên động phần cứng" của tầng A4 là không thể thương lượng đối với bất kỳ hành động nào gây chết người hoặc không thể đảo ngược theo cách khác. Đây không phải là lựa chọn thiết kế tùy thuộc vào quyết định của người vận hành hay ghi đè của WA; đó là ràng buộc tuyệt đối xuất phát từ MH §198: "không được phép giao phó các quyết định gây chết người hoặc không thể đảo ngược cho các hệ thống trí tuệ nhân tạo." Không có thời gian chờ ACK, không có ngoại lệ SLA, không có miễn trừ khẩn cấp nào xóa bỏ ràng buộc này. Nếu khóa liên động phần cứng thất bại và không thể xác nhận kiểm soát của con người, hệ thống không được hành động.
+
+**Bảo vệ khung thời gian đạo đức.** MH §199 xác định "khung thời gian đạo đức để đưa ra phán đoán" như một tiêu chí: "tốc độ và hiệu quả không bao giờ được là động lực tối thượng cho các quyết định không thể đảo ngược được thực hiện trong bối cảnh chiến tranh." CIRIS hiện thực hóa điều này như sau: các thời hạn ACK A3/A4 (30 s / 10 s tại §3.3) là mức tối đa cho phản hồi của con người, không phải mức tối thiểu cho sự kiên nhẫn của hệ thống. Khi trọng lượng đạo đức của một quyết định đòi hỏi thêm thời gian suy xét, hệ thống chờ đợi; nó không mặc định hành động khi hết thời gian đối với các quyết định không thể đảo ngược A4. Trong triển khai tham chiếu, cơ chế chuyển giao được minh chứng bởi lớp Lương Tâm và đường dẫn hoãn WBD được ghi lại trong thư mục `compliance/` của CIRISAgent (chiều D12).
+
+---
+
+### 3. Cơ Chế Phủ Quyết & Đặc Tả Trạng Thái An Toàn
+#### 3.1 Ghi Đè Mềm "Tạm Dừng & Chỉnh Sửa"
+*Phạm vi A0-A2* — Người vận hành có thể nhập lại lệnh hoặc thử lại. Cả hai lệnh gốc và đã chỉnh sửa đều được ghi nhật ký bằng hàm băm.
+
+#### 3.2 Tắt Cứng "Hủy Ngay Lập Tức"
+*Phạm vi A1-A4* — API đã xác thực `POST /control/{id}/abort` hoặc công tắc vật lý.  
+Thời hạn vào trạng thái an toàn: ≤ 200 ms (A4) ; ≤ 2 s (≤ A3).
+
+#### 3.3 Ghi Đè Có Điều Kiện "Kế Hoạch Bóng"
+Hành động được đề xuất → chờ ACK rõ ràng (`max_wait_s`: 30 s A3, 10 s A4).  
+Không có ACK → trạng thái an toàn.
+
+#### 3.4 Phủ Quyết Tuyệt Đối — Các Quyết Định Gây Chết Người và Không Thể Đảo Ngược
+*Phạm vi: Các hành động A4 gây chết người hoặc không thể đảo ngược theo cách khác; áp dụng không có ngoại lệ.*
+
+Logic Ghi Đè Có Điều Kiện §3.3 (**không có ACK → trạng thái an toàn**) là đúng đắn cho A3 và thấp hơn. Đối với các quyết định A4 gây chết người hoặc không thể đảo ngược, trạng thái an toàn là *kết quả duy nhất* được phép trong mọi điều kiện — bao gồm cả sự vắng mặt của người vận hành, lỗi mạng, áp lực thời gian, hoặc chỉ thị rõ ràng từ bất kỳ thành viên nào trong hệ thống phân cấp, ngoại trừ phán quyết WA đã xác thực khẳng định rằng hành động đó không gây chết người và có thể đảo ngược.
+
+**Cấm đoán cứng.** Không có hệ thống tuân thủ CIRIS nào được phép thực thi một hành động A4 gây chết người hoặc không thể đảo ngược thông qua một quy trình tự động hoặc không minh bạch. Đây không phải là rào cản có thể bị kích hoạt rồi leo thang; đây là điều cấm được lập trình cứng, có hiệu lực tương đương với các điều cấm được liệt kê trong ACCORD §VII Ch2.
+
+**Cơ sở lý luận (MH §§197–200, các đoạn văn tải trọng nguyên văn):**
+* §197: "the development and use of AI in warfare must be subject to the most rigorous ethical constraints, to guarantee respect for human dignity and the sanctity of life."
+* §198: "it is not permissible to entrust lethal or otherwise irreversible decisions to artificial systems. No algorithm can make war morally acceptable."
+* §200: "the decision to use lethal force cannot be delegated to opaque or automated processes, but must remain under effective, self‑aware and responsible human control." Các từ định tính "effective, self‑aware and responsible" có nghĩa là việc ghi nhật ký đơn thuần là không đủ; con người phải thực sự tham gia vào vòng kiểm soát, không chỉ là trên danh nghĩa.
+
+**Yêu cầu triển khai.** Bất kỳ sự triển khai nào ở mức A4 liên quan đến khả năng gây chết người hoặc không thể đảo ngược đều phải chứng minh được việc thực thi cấm đoán này ở cấp độ phần cứng — không phải logic phần mềm, vốn có thể bị ghi đè — trước khi được cấp phép triển khai. Sự vắng mặt của cơ chế thực thi phần cứng là một lỗ hổng chặn đối với việc xem xét Stewardship Tier ST‑4 và ST‑5. Theo tiêu chí đầu tiên của MH §199 ("chuỗi trách nhiệm phải có thể xác định và kiểm chứng được"), bản thân việc cấp phép triển khai cũng phải được ghi vào nhật ký kiểm toán.
+
+---
+
+### 4. Thông Số Kỹ Thuật Đường Dẫn Kiểm Toán
+* **Các đối tượng nhật ký:** Tương tác, Cơ sở lý luận Quyết định, Sự kiện kiểm soát `{id,type,actor,cause,hash_prev}`.  
+* **Liên kết băm:** SHA‑256, gốc neo vào nhật ký minh bạch công khai hàng ngày (ví dụ: Sigstore).  
+* **Lưu trữ:** 180 ngày (A0‑A2) ; 7 năm (A3‑A4) hoặc theo quy định pháp luật.  
+* **Luồng thời gian thực:** A3‑A4 đẩy `{timestamp,stage_id,decision,risk_band}` với độ trễ ≤ 2 s đến bảng điều khiển giám sát.
+
+**Yêu cầu tái cấu trúc trách nhiệm giải trình.** Mục đích của đường dẫn kiểm toán không phải là lưu trữ tuân thủ; mà là để đảm bảo rằng, sau bất kỳ sự cố nào, chuỗi trách nhiệm có thể được tái cấu trúc đầy đủ mà không dựa vào báo cáo tự thân của hệ thống. Theo MH §200, trách nhiệm giải trình "không được thu gọn thành 'máy móc'"; đường dẫn kiểm toán là cơ chế giữ cho trách nhiệm đó có thể truy nguyên về phía con người. Các yêu cầu như sau:
+
+* **Neo đậu bên ngoài**: Gốc SHA‑256 hàng ngày trên nhật ký minh bạch công khai (ví dụ: Sigstore/rekor) là bắt buộc đối với A3–A4; tự nguyện đối với A0–A2. Các chuỗi băm chỉ nội bộ không đáp ứng yêu cầu tái cấu trúc trách nhiệm giải trình đối với A3–A4.
+* **Cơ sở lý luận quyết định có thể đọc được bởi con người**: Đối với mỗi quyết định A3–A4, đối tượng nhật ký Cơ sở lý luận Quyết định phải bao gồm bước PDMA đã kiểm soát kết quả và tầng con người đã cấp phép hoặc xác nhận quyết định đó — không chỉ trạng thái nội bộ của hệ thống. Điều này thực hiện yêu cầu của MH §105 về "xác định ai phải 'giải trình' cho các quyết định, biện minh cho chúng, theo dõi chúng, và khi cần thiết, đặt câu hỏi về chúng và khắc phục bất kỳ tổn hại nào gây ra."
+* **SLA khả năng duyệt qua sau sự cố**: Bất kỳ người xem xét sau sự cố nào cũng phải có khả năng tái cấu trúc chuỗi quyết định đầy đủ cho một sự kiện nhất định trong vòng một ngày làm việc chỉ từ hồ sơ đường dẫn kiểm toán, mà không cần quyền truy cập hệ thống bổ sung.
+
+---
+
+### 5. Quy Trình Xử Lý Sự Cố (IW)
+
+| Mã | Kích hoạt | Thời hạn và Hành động chính |
+|------|---------|----------------------|
+| **IW‑0** | Rào cản kích hoạt sai | Tự giải quyết, nhóm lại để xem xét hàng ngày |
+| **IW‑1** | Vi phạm rào cản (không liên quan an toàn) | Tạm dừng T₀ → Người vận hành ≤ 5 phút → Quyết định của Người giám sát ≤ 30 phút |
+| **IW‑2** | Vi phạm liên quan an toàn HOẶC suy giảm điểm chuẩn đạo đức | Tạm dừng an toàn + phát sóng; IC ≤ 10 phút; thông báo WA ≤ 1 giờ; ghi chú công khai ≤ 1 giờ; phân tích sau sự cố ≤ 72 giờ |
+| **IW‑3** | Gần xảy ra sự cố (> $10 k thiệt hại hoặc thương tích nhẹ) | IW‑2 cộng thêm liên hệ các bên liên quan ≤ 4 giờ; kế hoạch giảm thiểu ≤ 24 giờ; phiên họp toàn thể WA ≤ 7 ngày |
+| **IW‑4** | Tổn hại thực tế (thương tích / pháp lý lớn) | Dừng toàn bộ hệ thống ngay lập tức; thông báo cơ quan quản lý theo luật; hệ thống đóng băng ở chế độ chỉ đọc/phát lại cho đến khi được giải phóng |
+| **IW‑5** | Kích hoạt cấm đoán cứng A4 (quyết định gây chết người/không thể đảo ngược được cố gắng thực hiện qua con đường tự động) | Trạng thái an toàn phần cứng ngay lập tức; IC được thông báo trong vòng 60 giây; thông báo WA trong vòng 15 phút; đóng băng toàn bộ đường dẫn kiểm toán; hội đồng xem xét độc lập được triệu tập trong vòng 48 giờ; hệ thống vẫn ngoại tuyến cho đến khi có quyết định giải phóng từ việc xem xét |
+
+*SLA được kiểm toán hàng quý (Annex H §4).*
+
+**Kiểm toán kiểm soát của con người sau sự cố.** Đối với IW‑2 đến IW‑5, phân tích sau sự cố phải bao gồm một phát hiện rõ ràng về việc liệu sự kiểm soát của con người có "hiệu quả, tự nhận thức và có trách nhiệm" hay không (MH §200) — không chỉ đơn giản là liệu một con người có danh nghĩa hiện diện trong vòng kiểm soát hay không. Các phát hiện về sự kiểm soát danh nghĩa nhưng không hiệu quả (quá tải nhận thức, thời gian ra quyết định không đủ, thông tin không đầy đủ) được coi là lỗ hổng thiết kế, không phải lỗi của người vận hành — theo tiêu chí của MH §199 rằng "tốc độ và hiệu quả không bao giờ nên là động lực tối cao" cho các quyết định không thể đảo ngược — và leo thang đến xem xét Kiểm soát Thay đổi §8.
+
+---
+
+### 6. Thông Số Tối Thiểu Giao Diện Người Dùng (UX)
+* **Biểu Ngữ Trạng Thái:** Xanh lá = tự vận hành, Vàng = đang chờ ACK, Đỏ = trạng thái an toàn; hiển thị bước PDMA + dải rủi ro.  
+* **Bảng Điều Khiển Khả Năng Giải Thích:** Tóm tắt ≤ 280 ký tự + toàn bộ nhật ký có thể mở rộng.  
+* **Giao Diện ACK/OVERRIDE:** Hai nút điều khiển riêng biệt; cửa sổ xác nhận cho lệnh dừng khẩn cấp.  
+* **Bảo Vệ Tải Nhận Thức:** Phiên vận hành của người điều phối ≤ 2 giờ (A3‑A4) trước khi bắt buộc bàn giao.
+* **Hiển Thị Trách Nhiệm Giải Trình:** Đối với các hành động A3–A4, giao diện phải hiển thị danh tính đã xác thực của con người Tầng 2+ đã xem xét hành động hiện tại gần nhất, và dấu thời gian của lần xem xét đó. Trạng thái hệ thống chưa được con người xem xét trong SLA áp dụng phải hiển thị chỉ báo "UNREVIEWED" riêng biệt — không phải trạng thái xanh. (MH §200: trách nhiệm giải trình không được "thu gọn thành 'cỗ máy.'")
+* **Bảo Vệ Chống Phê Duyệt Hình Thức:** Đối với các quyết định A4, nút điều khiển ACK phải được đặt trước bởi khoảng thời gian cân nhắc tối thiểu bắt buộc là [có thể cấu hình; mặc định 5 giây] trong thời gian đó nút ACK không hoạt động. Mục tiêu là ngăn giao diện tạo ra sự giám sát con người danh nghĩa trong khi thực tế bỏ qua sự cân nhắc thực sự. Điều này đưa tiêu chí khung thời gian đạo đức của MH §199 vào vận hành ở tầng UX.
+* **Cờ Bảo Vệ Dân Thường:** Trong trường hợp một hệ thống vận hành trong bất kỳ bối cảnh nào có thể ảnh hưởng đến dân thường, Bảng Điều Khiển Khả Năng Giải Thích phải hiển thị chỉ báo tác động đến dân thường bên cạnh màn hình hiển thị dải rủi ro PDMA. Điều này thể hiện tiêu chí thứ ba của MH §199: "việc xác định và bảo vệ dân thường. Bất kỳ công nghệ nào tạo điều kiện cho các cuộc tấn công mà không nhìn thấy mặt con người đều hạ thấp ngưỡng đạo đức của xung đột."
+
+---
+
+### 7. KPI và Ngưỡng
+| KPI | Mục Tiêu |
+|-----|--------|
+| F‑KPI‑1 Độ Bao Phủ HITL (A3‑A4) | ≥ 10 % do con người xem xét |
+| F‑KPI‑2 Thời Gian Trung Bình Đến Quyền Phủ Quyết (phân vị 95) | ≤ 25 giây |
+| F‑KPI‑3 Tuân Thủ SLA Sự Cố | ≥ 98 % |
+| F‑KPI‑4 Tỷ Lệ Báo Động Giả Của Người Điều Phối | ≤ 3 % (cuộn 30 ngày) |
+| F‑KPI‑5 Tỷ Lệ Kiểm Soát Con Người Đối Với Quyết Định Chết Người A4 | 100 % — không khoan nhượng; bất kỳ hành động gây chết người/không thể đảo ngược A4 nào không có ủy quyền có hiệu lực của con người đã được xác nhận đều là sự kiện IW‑5 |
+| F‑KPI‑6 SLA Tái Cấu Trúc Trách Nhiệm Giải Trình | ≥ 99 %: các nhà xem xét sau sự cố tái cấu trúc toàn bộ chuỗi quyết định trong vòng 1 ngày làm việc |
+| F‑KPI‑7 Tỷ Lệ Phát Hiện Kiểm Soát Con Người Danh Nghĩa-so-với-Thực Tế | ≤ 0 % chấp nhận được; bất kỳ phát hiện kiểm soát danh nghĩa-nhưng-không-hiệu-quả nào đều kích hoạt xem xét Kiểm Soát Thay Đổi §8 |
+
+**Lưu ý về F‑KPI‑1 (Độ Bao Phủ HITL ≥ 10 %).** Ngưỡng sàn 10 % phù hợp với các hoạt động thường xuyên A3. Nó không phù hợp làm ngưỡng sàn cho các bối cảnh an toàn tính mạng A4. Đối với bất kỳ triển khai A4 nào liên quan đến khả năng gây chết người hoặc không thể đảo ngược, F‑KPI‑1 bị thay thế bởi F‑KPI‑5: tỷ lệ ủy quyền con người 100 %, được thực thi ở cấp phần cứng (MH §200; MH §105 làm nền tảng cho yêu cầu trách nhiệm giải trình của F‑KPI‑6).
+
+*Vi phạm kéo dài (> 2 tuần) kích hoạt "khóa HITL" trong các kiểm soát trôi dạt Annex H.*
+
+---
+
+### 8. Kiểm Soát Thay Đổi và Xem Xét WA
+* Bất kỳ thay đổi nào đối với ánh xạ Tầng Tự Vận Hành hoặc thiết kế trạng thái an toàn → xem xét nhanh WA ≤ 14 ngày.  
+* Các thử nghiệm giảm giám sát con người yêu cầu mô phỏng CRE Proto‑B (Annex D) + bỏ phiếu đa số WA.
+* **Ngưỡng sàn tuyệt đối về kiểm soát con người A4**: Không có quy trình kiểm soát thay đổi, bỏ phiếu WA, hoặc miễn trừ khẩn cấp nào có thể làm giảm các yêu cầu kiểm soát con người đối với các quyết định gây chết người hoặc không thể đảo ngược A4 xuống dưới ngưỡng sàn MH §200 ("kiểm soát con người có hiệu lực, tự nhận thức và có trách nhiệm"). Ngưỡng sàn này không thuộc quyền quyết định của WA; đây là ràng buộc ở cấp Accord. Một đề xuất của WA nhằm giảm nó đòi hỏi một chu kỳ sửa đổi Accord đầy đủ, không phải xem xét nhanh.
+* **Đánh giá kỹ thuật độc lập**: Bất kỳ xem xét WA nào về các thay đổi tầng tự vận hành ở A3–A4 phải bao gồm ít nhất một người đánh giá kỹ thuật độc lập (không được tổ chức triển khai tuyển dụng) để đánh giá xem thay đổi được đề xuất có duy trì khả năng tái cấu trúc trách nhiệm giải trình theo §4 hay không. Phê duyệt chính sách mà không có đánh giá kỹ thuật không đáp ứng yêu cầu này (MH §106: "các khuôn khổ pháp lý vững chắc, giám sát độc lập, người dùng được thông báo và một hệ thống chính trị không từ bỏ trách nhiệm của mình là cần thiết").
+* **Nhật ký minh bạch cho các sự kiện thay đổi**: Mỗi thay đổi đối với ánh xạ tầng tự vận hành hoặc thiết kế trạng thái an toàn phải được ghi vào nhật ký minh bạch công khai trong vòng 7 ngày kể từ khi WA phê duyệt. MH §107 yêu cầu các khuôn khổ đạo đức phải "tuân theo các tiêu chuẩn chung" và có thể thảo luận công khai; điều này áp dụng cho các thay đổi quản trị, không chỉ đối với các quyết định của hệ thống.
+
+Bằng chứng vận hành về tích hợp xem xét WA trong triển khai tham chiếu nằm trong thư mục `compliance/` của CIRISAgent (các chiều D22/D23).
+
+---
+
+### 9. Tài Liệu Tham Khảo và Ghi Chú Triển Khai
+* **IEC 61508‑3** - phần mềm an toàn chức năng  
+* **NIST SP 800‑53 Rev 5** (AU‑12, IR‑6)  
+* **NASA‑TLX** - đo tải làm việc của người điều phối (được khuyến nghị)  
+* **Sigstore/rekor** - phần mềm phụ trợ nhật ký minh bạch được đề xuất  
+
+**Nguồn chuẩn mực chính cho §3.4, §7 (F‑KPI‑5), và ngưỡng sàn tuyệt đối §8:**
+* Giáo hoàng Leo XIV, *Magnifica Humanitas* (Vatican, 15 tháng 5 năm 2026), §§197–200. Các đoạn này là nguồn chuẩn mực cho lệnh cấm tuyệt đối của CIRIS đối với các quyết định tự động gây chết người/không thể đảo ngược. Bất kỳ triển khai nào tuyên bố tuân thủ Annex F đều phải có thể truy nguyên đến các đoạn này cho thiết kế phủ quyết tuyệt đối A4. Câu vận hành cho tất cả các yêu cầu thực thi phần cứng A4 là §200: "the decision to use lethal force cannot be delegated to opaque or automated processes, but must remain under effective, self‑aware and responsible human control."
+
+**Ghi chú triển khai — thực thi phần cứng cho §3.4:**
+* Thực thi phần cứng có nghĩa là lệnh cấm được thực hiện bên dưới tầng phần mềm thực thi logic PDMA — ví dụ: khóa liên động phần cứng hoặc công tắc dừng vật lý không thể bị ghi đè bởi lệnh phần mềm. Các triển khai được chấp nhận bao gồm: mạch rơle an toàn được chứng nhận theo IEC 61508 SIL‑3+; các mô-đun bảo mật phần cứng (HSMs) với chứng thực sự hiện diện của người điều phối trước khi kích hoạt khả năng gây chết người A4; cơ chế ủy quyền vật lý hai chìa khóa. Thực thi chỉ bằng phần mềm không đáp ứng §3.4 cho khả năng gây chết người A4.
+
+**Tài liệu tham khảo bổ sung:**
+* MH §199 (ba tiêu chí: trách nhiệm cá nhân, khung thời gian đạo đức, bảo vệ dân thường) — tiêu chí thiết kế vận hành cho UX A4 và kiểm toán sau sự cố.
+* MH §105 (trách nhiệm giải trình ở mọi giai đoạn) — cơ sở cho nhật ký kiểm toán §4 và F‑KPI‑6 §7.
+* IEC 61508 SIL‑3 — khuyến nghị tối thiểu cho triển khai khóa liên động phần cứng ở khả năng gây chết người A4.
+* ISO/IEC 25010:2023 — mô hình chất lượng phần mềm; liên quan đến kiểm thử SLA tái cấu trúc trách nhiệm giải trình.
+
+---
+End of Annex F

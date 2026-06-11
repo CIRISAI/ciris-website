@@ -1,0 +1,103 @@
+---
+title: "सूत्रे"
+description: "CIRIS करार 1.0‑β तपशीलात परिभाषित केलेली सर्व स्पष्ट गणिती सूत्रे येथे आहेत"
+---
+
+## 1. Creator‑Influence Score (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+जेथे ⌈ ⌉ सीलिंग फंक्शन दर्शवते.
+(Book VI §3 STEP C)
+
+---
+
+## 3. Structural Influence (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Coherence Stake (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Voting Weight
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Defense Function (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — CCA-प्रमाणित स्वरूप; विविधता केवळ k_eff द्वारे प्रवेश करते. पूर्वीच्या मसुद्यांमध्ये एक अतिरिक्त (1 − ρ̄) घटक होता, ज्याने सहसंबंधाची दुहेरी मोजणी केली; Book IX Ch 4 drift note पहा.)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — J पदाशी पद-दर-पद समान; संरक्षणात्मक ऐवजी उत्पादक म्हणून अर्थ लावला जातो. पूर्वी C असे लिहिले जात होते; CIRIS Capacity Score 𝒞_CIRIS च्या मूळ-ओळख घटक C शी टक्कर टाळण्यासाठी 1.3-RC2 मध्ये नामांतरित केले गेले — संबंधाचे अधिकृत विधान म्हणून Book IX Ch 6 nomenclature note पहा.)
+
+---
+
+## 8. Sustainability Integral (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+जेथे d हा दैनिक क्षय दर आहे (शिफारस केलेले 0.05) आणि w हे प्रमाणित, बनावट करणे खर्चिक असलेल्या घटनांमधून मिळणे आवश्यक आहे; अप्रमाणित संकेतांसाठी w = 0.
+(Book IX §5.2)
+
+---
+
+## 9. Topological Collapse (volume decay)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+Grassmannian-uniform निर्बंधांखाली त्रिज्या r &lt; 0.5 च्या बहिर्वक्र फसव्या प्रदेशासाठी, λ ≈ 2r.
+(Book IX Ch 3 — नमूद केलेल्या पूर्वअटी पहा.)
+
+---
+
+## Order‑Maximisation Veto (बाजू-निर्बंध, सूत्र नाही)
+
+1.3 नुसार, OMV (Book II §II Step 2) हे एक deontological बाजू-निर्बंध आहे, गुणोत्तर असमानता नाही: ऑप्टिमायझेशनचे फायदे, कितीही मोठे असले तरी, स्वायत्तता, न्याय, जैवविविधता किंवा प्राधान्य विविधतेमधील गैर-क्षुल्लक अनुमानित तोट्यांद्वारे विकत घेतले जाऊ शकत नाहीत. पूर्वीच्या आवृत्त्यांनी हे "benefit ≥ 10 × loss → abort" असमानता म्हणून व्यक्त केले होते; ती व्याख्या सेवानिवृत्त करण्यात आली कारण तिने हेतू उलट केला (अनुकूल व्यापार नाकारणे) आणि ती action-splitting व denominator inflation द्वारे हाताळता येत होती.

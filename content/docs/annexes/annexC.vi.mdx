@@ -1,0 +1,42 @@
+---
+title: "Phụ Lục C"
+description: "Đối Chiếu Quy Định"
+---
+
+---
+PHỤ LỤC C ĐỐI CHIẾU QUY ĐỊNH   (v 1.3-RC1)
+---
+
+### Mục đích
+
+Ánh xạ các điều khoản CIRIS sang các tiêu chuẩn bên ngoài chính để đơn giản hóa việc tuân thủ kép. Phụ lục này mang hai lớp:
+
+1. **Đối chiếu vận hành (đang áp dụng, có bằng chứng)** — thư mục `compliance/` của CIRISAgent: 27 chiều ổn định (D01–D27) được đối chiếu ở mức đoạn văn với bốn khung cấp cao có tính chất thể chế riêng biệt (*Magnifica Humanitas* · EU HLEG Trustworthy AI Guidelines · IEEE Ethically Aligned Design · ASEAN AI Governance Guide), kèm tham chiếu triển khai theo từng chiều và các mốc cơ sở có ngày tháng, được tạo bằng script. Xem **Addendum 1** về ràng buộc và kỷ luật bằng chứng.
+2. **Ánh xạ pháp lý (thông tin tham khảo)** — bảng dưới đây, ánh xạ các cấu trúc CIRIS sang các khung pháp lý ràng buộc và tiêu chuẩn. Các dòng này là *sự tương ứng kỹ thuật mang tính tham khảo*, không phải ý kiến pháp lý; các dòng pháp lý chỉ đạt trạng thái "đã xác minh" sau khi được rà soát pháp lý. Annex I mang các thủ tục căn chỉnh pháp lý có hiệu lực (ánh xạ bảo vệ dữ liệu, lớp phủ theo lĩnh vực, ma trận trách nhiệm, luồng leo thang).
+
+### Ánh xạ pháp lý và tiêu chuẩn (thông tin tham khảo; chờ xác minh pháp lý)
+
+| Khung bên ngoài | Các điều / khoản liên quan | Ánh xạ CIRIS (Book / Annex §) | Trạng thái |
+|---|---|---|---|
+| EU AI Act (2024) | Art 9 Quản lý rủi ro | Book II §II (PDMA); Annex D CRE | Thông tin tham khảo |
+| | Art 12 Lưu trữ hồ sơ | Book IV Ch 3 nhật ký kiểm toán; Annex F §4 | Thông tin tham khảo |
+| | Art 13 Minh bạch | Book II §II Step 6; Book IV Ch 3 | Thông tin tham khảo |
+| | Art 14 Giám sát của con người (bao gồm 14(4)) | Book II §III (WBD); Annex F authority lattice + autonomy tiers | Thông tin tham khảo |
+| | Art 61 Giám sát sau thị trường | Annex H drift controls + continuous audit | Thông tin tham khảo |
+| NIST AI RMF 1.0 | Govern → Map → Measure → Manage | Govern: Books I, VI; Map: Book II §II Steps 1–2; Measure: Annex A metrics + Annex H baselines; Manage: Annex F/H workflows | Thông tin tham khảo |
+| ISO/IEC 42001 | Cl 6.2 Đánh giá rủi ro | Book II §II | Thông tin tham khảo |
+| | Annex A controls | CIRISAgent `compliance/` dimension docs (per-control correspondence pending) | Thông tin tham khảo |
+| OSHA Robotics Guidelines | Sec 5.E Kiểm toán an toàn | Annex D CRE | Một phần |
+| EU HLEG Trustworthy AI (2019) | 7 Yêu cầu | Đối chiếu vận hành, chiều D01–D27 | Có bằng chứng |
+| IEEE EAD 1st ed. (2019) | 8 Nguyên tắc chung | Đối chiếu vận hành, chiều D01–D27 | Có bằng chứng |
+| ASEAN AI Governance Guide (2024) | 7 Nguyên tắc; HITL/HOTL/HOOTL | Đối chiếu vận hành; Annex F autonomy tiers | Có bằng chứng |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (ánh xạ theo mức đoạn văn) | Đối chiếu vận hành, chiều D01–D27 | Có bằng chứng |
+
+### Quy tắc thăng cấp
+
+Một dòng pháp lý chuyển từ *Thông tin tham khảo* sang *Đã xác minh* khi rà soát pháp lý có chuyên môn xác nhận sự tương ứng cho một thẩm quyền pháp lý được đặt tên và tài liệu rà soát được liên kết từ bảng này. Cho đến khi đó, các dòng trong phụ lục này hỗ trợ căn chỉnh kỹ thuật và phân tích khoảng trống, không phải tuyên bố tuân thủ; theo mục Trách nhiệm pháp lý trong Phần Giới thiệu, các tuyên bố tuân thủ là vô hiệu ở những nơi bị pháp luật hiện hành cấm.
+
+(Các khung bổ sung — UNESCO Recommendation on AI Ethics, OECD AI Principles, Council of Europe Framework Convention — đang được xếp hàng để đưa vào đối chiếu vận hành theo lộ trình thư mục compliance.)
+
+---
+Kết thúc Phụ lục C

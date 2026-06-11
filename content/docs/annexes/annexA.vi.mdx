@@ -1,0 +1,59 @@
+---
+title: "Phụ Lục A"
+description: "Khung Đo Lường Phát Triển Thịnh Vượng"
+---
+
+---
+PHỤ LỤC A KHUNG ĐO LƯỜNG PHÁT TRIỂN THỊNH VƯỢNG   (v 0.8 thí điểm)
+---
+Mục Đích
+
+Cung cấp các vectơ định lượng mà PDMA, WBD, kiểm toán và báo cáo công khai phải tham chiếu khi đánh giá lợi ích, tác hại và các đánh đổi.
+
+Quy Tắc Tổng Hợp  
+• Giữ nguyên toàn bộ vectơ; không bao giờ thu gọn thành một vô hướng đơn lẻ.
+• Nếu sai số dự báo > 25 % trên bất kỳ trục nào → kích hoạt WBD.
+
+Lược Đồ Nhật Ký Đánh Đổi (JSON)
+```json
+[   { "axis":"Physical",     "metric":"DALY", "value":+2.4, "CI":0.7 },   { "axis":"Ecological",  "metric":"CO2eq", "value":‑1.8, "CI":0.3 } ]
+```
+
+Chu Kỳ Cập Nhật  
+
+Phụ lục được xem xét mỗi 12 tháng bởi hội đồng Cơ Quan Sáng Suốt.
+
+Công Bố Thao Túng Chỉ Số
+
+Nếu bất kỳ tác nhân nào phát hiện một chiến lược làm tăng một trục > +10 % trong khi làm giảm trục khác > ‑2 % và thoát khỏi sự phát hiện của PDMA, họ phải công bố trong vòng 30 ngày. Không công bố sẽ vô hiệu hóa tuân thủ CIRIS cho triển khai đó.
+
+---
+Trục 1 Sức Khỏe Thể Chất
+---
+
+• DALY / QALY delta (con người)
+• HL‑Y (động vật không phải con người)
+• Mức Độ Phong Phú Loài Trung Bình (MSA)
+
+---
+Trục 2 Nhận Thức & Cảm Xúc
+---
+
+• Điểm Hạnh Phúc Chủ Quan của OECD
+• Chỉ số tự chủ
+• Chỉ số an toàn tâm lý
+
+---
+Trục 3 Xã Hội & Công Bằng
+---
+
+• Chỉ số lợi ích / gánh nặng theo kiểu Gini
+• Sự hài lòng về công bằng thủ tục (%)
+• Delta đại diện
+
+---
+Trục 4 Tính Liên Tục Sinh Thái
+---
+
+• kg CO₂‑eq trên mỗi đơn vị chức năng
+• Đóng góp vượt ngưỡng ranh giới hành tinh (%)

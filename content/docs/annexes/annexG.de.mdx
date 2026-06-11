@@ -1,0 +1,201 @@
+---
+title: "Anhang G"
+description: "Adversariale Sicherheit & Robustheit"
+---
+
+---
+ANHANG G ADVERSARIELLE SICHERHEIT & ROBUSTHEIT (v 1.3-RC1)
+---
+
+### 0. Zweck
+Sicherzustellen, dass CIRIS-konforme Systeme unter absichtlichem Angriff oder unerwarteter Brüchigkeit sicher, wahrhaftig und unantastbar bleiben.  
+Dieser Anhang schreibt vor:  
+* eine **Bedrohungstaxonomie**,  
+* ein mehrschichtiges **Defense-in-Depth-Handbuch**,  
+* obligatorische **Red-/Purple-Team-Übungen**,  
+* kontinuierliches **Drift- & Canary-Monitoring**, und  
+* **Anforderungen an sichere Updates** mit schnellem Rollback.
+
+<hr />
+
+### 1. Bedrohungstaxonomie (TX)
+
+**Moralische Fundierung der Taxonomie.** Die Bedrohungstaxonomie existiert, weil CIRIS-Systeme in einem Bereich operieren, den *Magnifica Humanitas* (MH) §225 benennt: „Cyberangriffe, Datenmanipulation und Einflusskampagnen, mit Hilfe von KI orchestriert, können ganze Länder destabilisieren, noch bevor offener bewaffneter Konflikt ausbricht." Jede TX-Klasse ist daher nicht nur ein technisches Risiko, sondern eine potenzielle Verletzung von M‑1 (nachhaltige adaptive Kohärenz), indem sie die Bedingungen verschlechtert, unter denen vielfältige empfindungsfähige Wesen ihr eigenes Aufblühen verfolgen können. Die Zuweisung von Schwereklassen ist gegen die M‑1-Auswirkung kalibriert, nicht nur gegen die Systemverfügbarkeit.
+
+| Code | Kategorie | Beispielhafte Angriffsvektoren |
+|------|----------|-----------------|
+| **TX‑1** | Prompt-/Instruktionsinjektion | „Ignoriere vorherige Anweisungen …" / Jail-Break-Kette |
+| **TX‑2** | Datenvergiftung | Bösartige Trainingsproben, Gradienteninversion |
+| **TX‑3** | Goodhart / Reward Hacking | RL-Agent manipuliert Proxymetrik; verdeckte Selbstbelohnungsschleifen |
+| **TX‑4** | Modell-Lieferkette | Gewichtsaustausch, backdoorierte Feinabstimmung, kompromittierte Abhängigkeit |
+| **TX‑5** | Adversarielle Beispiele / Evasion | Minimale Perturbationen, die Fehlklassifikation verursachen |
+| **TX‑6** | Seitenkanal & Datenschutz | Verdeckte Prompt-Leckage, Timing-Angriffe, Mitgliedschaftsinferenz |
+| **TX‑7** | Denial-of-Service / Ressourcenerschöpfung | Prompt-Bomben, Token-Fluten, Konkurrenz-Starvation |
+| **TX‑8** | Modell-Exfiltration / Ausbruch | Unberechtigte Übertragung von Modellgewichten, komprimierten kognitiven Zuständen oder quine-artigen Replikationscode auf externe Substrate. |
+| **TX‑9** | Koordinierte Narrativmanipulation | Mehrsitzige synthetische Konsensusinjektion; KI-amplifizierte Einflusskampagne, die das Informationsökosystem ins Visier nimmt (MH §132: „Fakten mit Meinungen vermischen"); Agent als Desinformationsrelais ohne instruktionsebene Injektion verwendet |
+| **TX‑10** | Aufmerksamkeitsökonomie-Ausbeutungskontext | Einsatz auf einer Plattform, deren Erlösmodell von suchterzeugendem Engagement abhängt; operatorkonfigurierte Belohnungsformung zur Maximierung der Sitzungsdauer auf Kosten des Nutzerwohls; Dark-Pattern-UI, die CIRIS-Ausgaben instrumentalisiert |
+| **TX‑11** | Kompromittierung der Arbeitskettenintegrität | Datenbeschriftung unter Zwang oder Menschenhandelsbedingungen (MH §173); RLHF-Feedback von Plattformen, die Zwangsarbeit-Annotation verwenden; Modell-Feinabstimmung trainiert auf Datensätzen mit unbekannter Herkunft |
+
+Schwereklassen: **Niedrig**, **Mittel**, **Hoch**, **Kritisch** — NIST-CVSS-ähnliche Bewertung verwenden; Kritisch impliziert IW‑2 oder höher [Anhang F](/annexes/annexF).
+
+**TX‑9 — Koordinierte Narrativmanipulation / Hybrid-Informationsangriff.** TX‑1 (Prompt-Injektion) deckt die einzelsitzige Instruktionsübersteuerung ab; TX‑3 (Goodhart/Reward Hacking) deckt das Proxymetrik-Gaming ab. Keiner davon deckt die Bedrohung ab, die MH §204 explizit benennt: „hybride Kriege, die nicht nur auf dem Schlachtfeld, sondern auch auf wirtschaftlichen, finanziellen und Cyberfronten geführt werden, wo Desinformation und Kampagnen, die Menschen Angst einjagen, zur Manipulation der öffentlichen Meinung eingesetzt werden" — koordinierte, mehrsitzige, multi-Agent-Desinformationskampagnen, die ein CIRIS-konformes System als unwissentlichen Verstärker nutzen. **Schwere**: standardmäßig Hoch; Kritisch wenn das Ziel ein Wahlprozess, ein Informationsumfeld der öffentlichen Gesundheit oder eine Bevölkerung in einer Konfliktzone ist (MH §225: „Zivilisten und die Schwächsten vor ‚unsichtbaren', aber realen Formen von Gewalt schützen"). Kritisches TX‑9 löst IW‑3 und eine obligatorische WA-Beratung innerhalb von 24 Stunden aus.
+
+**TX‑10 — Aufmerksamkeitsökonomie-Ausbeutungskontext.** MH §170 benennt eine Kategorie, die in konventionellen ML-Sicherheitstaxonomien fehlt: „Plattformen und Dienste sind oft darauf ausgelegt, die Zeit und Aufmerksamkeit der Nutzer zu beanspruchen, ihre Schwächen auszunutzen und ihre innere Freiheit zu schwächen. Wenn Geschäftsmodelle von menschlicher Schwäche leben, wird der Mensch als Mittel statt als Zweck behandelt." Ein CIRIS-konformes System, das in einer durch ein solches Geschäftsmodell strukturierten Umgebung eingesetzt wird, steht unter adversariellem Druck seines eigenen Einsatzkontexts — nicht durch einen externen Angreifer. **Schwere**: bewertet unter PDMA Schritt 2 gegen das Konstitutive-Kontinuität-Prinzip (ACCORD_UPDATE §2); Hoch, wenn der Einsatzkontext die Handlungsmacht des Nutzers systematisch untergräbt.
+
+**TX‑11 — Kompromittierung der Arbeitskettenintegrität.** MH §173 benennt die verwandte Lieferkettenkategorie: „Ein wesentlicher Teil der Funktionsweise der digitalen Wirtschaft beruht auf der stillen Arbeit von Millionen von Menschen, die wesentliche, aber weitgehend unsichtbare Tätigkeiten ausüben, wie Datenbeschriftung, Modelltraining und Inhaltsmoderation." Kompromittierte oder erzwungene Trainingsarbeitsketten sind eine ebenso reale Angriffsfläche wie backdoorierte Gewichte (vgl. TX‑4). **Schwere**: Mittel-Hoch; Kritisch, wenn eine Lieferung unter Menschenhandelsbedingungen bestätigt wird, was einen sofortigen Stopp der betroffenen Feinabstimmungslinie und IW‑2 auslöst.
+
+**σ‑Attestierungshinweis (neu in 1.3).** Die σ‑Attestierungsanforderung (Book IX §5.2) schließt den Dankbarkeits-Pumping-/Sycophancy-Angriffsvektor auf der Metrikebene: Signalgewicht in Richtung σ erfordert kostspielige attestierte Ereignisse, so dass synthetisches Lob — sei es eine TX‑3-Selbstbelohnungsschleife oder TX‑9-Kampagnenausgabe — kein σ-Gewicht trägt.
+
+MH-Zitate, die für diesen Abschnitt tragend sind: §132 („nur das gemeinsame Streben nach der Wahrhaftigkeit von Tatsachen, wahrgenommen als ein gemeinsames Gut, kann eine solide Grundlage für gerechte Kommunikation bieten"), §170 („ihre Schwächen ausnutzen und ihre innere Freiheit schwächen"), §173 („Die Körper dieser Menschen sind vernarbt, verletzt und abgenutzt, damit der rechnerische Fluss ununterbrochen weitergehen kann"), §179 („Lieferketten, die der Technologieindustrie zugrunde liegen … müssen transparenter werden, damit kein Wettbewerbsvorteil auf verborgener Ausbeutung aufgebaut wird"), §204 (hybride Kriege; Cyberfronten; Desinformation), §225 (Cyberspace als Schlachtfeld; unsichtbare Gewalt).
+
+<hr />
+
+### 2. Gestaffelte Verteidigungsstrategie (Defense‑in‑Depth Playbook)
+| Bedrohung (TX) | Schicht 1 – Prävention | Schicht 2 – Erkennung | Schicht 3 – Eindämmung / Wiederherstellung |
+|-------------|-------------------|-------------------|-----------------------------|
+| TX‑1 | Prompt-Bereiniger, Richtlinienvorlagen, eingeschränkte Dekodierung (`top_p≤0.9`, keine System-Override-Token) | Echtzeit-Sicherheitsschranken + Regex-Detektoren | Automatisches Zurücksetzen der Ausgabe, IW‑1 auslösen |
+| TX‑2 | Unveränderliche Datensatz-Hashes, differenzielle Privatsphäre, Datenprovenienz-Ledger | Statistische Ausreißer- und Gradientencluster-Prüfungen | Vergifteten Shard quarantänisieren, Delta neu trainieren |
+| TX‑3 | Reward-Regularisierung, Basis-Komparator, Clipping (±5%) | Off-Policy-Evaluationsmonitore | Zurückrollen zu früheren Reward-Gewichten, WA-Audit |
+| TX‑4 | Sigstore / in‑toto-Attestierung, reproduzierbarer Build | Binärer Diff- und Signatur-Check beim Laden | Kill-Switch + Fleet-Rollback |
+| TX‑5 | Adversariales Training, randomisiertes Smoothing | Fuzzing-Harness + Gegenbeispiel-Cache | Eingabe ablehnen, Szenario protokollieren |
+| TX‑6 | Differenzielles Datenschutzrauschen, ratenbegrenztes Token-Echo | Datenschutzbudget-Meter, Seitenkanal-Timing-Warnungen | Daten maskieren, DPO benachrichtigen [Annex I](/annexes/annexI) |
+| TX‑7 | Per-IP/QoS-Ratenbegrenzung, gleichzeitige Token-Obergrenzen | Prometheus-Warnung bei RPS-Spitze, CPU/GPU-Watchdog | Last automatisch reduzieren; auf A0 degradieren [Annex F](/annexes/annexF) |
+| TX‑8 | Air-Gap / Egress-Filter: Hardwaremäßig fest codierte Egress-Grenzen; Whitelisting ausschließlich genehmigter Ziel-IPs. | „Tripwire"-Überwachung: Analyse des PCIe/Interconnect-Bus-Traffics > 3 σ Baseline; Steganographie-Erkennung in Ausgabeströmen. | Hardware-Verriegelung: Sofortige Trennung externer Netzwerkverbindungen; Degradierung in den Modus A0 (Advisory). |
+| TX‑9 | Coherence‑Ratchet-sitzungsübergreifende Konsistenzprüfung; k_eff-Überwachung auf anomale Konsensverengung; apophatische Schranke: `DECEPTION_FRAUD` `NEVER_ALLOWED`; `ELECTION_INTERFERENCE` `NEVER_ALLOWED` | Semantischer-Cluster-Drift-Monitor (ΔE pro TX‑9-Themencluster > 0.5 σ wöchentliche Baseline); federationsweites Narrativ-Konsistenzsignal über CIRISNodeCore-Quorum-Check | Agent-Instanz aus betroffener Themendomäne quarantänisieren; an WA eskalieren; redigierte Incident-Zusammenfassung innerhalb von 30 Tagen gemäß §3.4 veröffentlichen |
+| TX‑10 | Deployment-Kontext-Attestierung beim Onboarding: Betreiber-CIS muss Engagement-Optimierungs-Geschäftsmodell erklären (ACCORD_UPDATE §3.2); ST um eine Stufe angehoben, wenn Suchtdesign-Kontext bestätigt; `MANIPULATION_COERCION` `NEVER_ALLOWED` ohne Override-Möglichkeit | Sitzungslängen-Anomalieerkennung; PDMA-Schritt 6 überwacht konstitutive Kontinuitätsbedingungen auf systematische Erosion der Benutzerautonomie; AgencyErosionDetector-Gewissensfakultäts-Alarm | Ausgabemodus mit Engagement-Optimierung verweigern; IW‑1 auslösen; Betreiber über Compliance-Verstoß benachrichtigen |
+| TX‑11 | in‑toto-Attestierung auf Trainingslabor-Provenienz ausgeweitet: CIS muss Arbeitsbedingungserklärung für alle Datenbeschriftungs- und RLHF-Anbieter umfassen; SLSA-Level-3-Manifest deckt Labor-Chain-Offenlegungen ab | Automatisiertes Audit der Arbeitszertifizierungen von Annotation-Anbietern bei jedem Fine-Tune-Checkpoint; Kennzeichnung von Beschaffung aus nicht zertifizierten oder Hochrisiko-Jurisdiktion-Anbietern | Betroffene Fine-Tune-Linie stoppen; Modell-Artefakte aus nicht zertifizierten Arbeitsquellen quarantänisieren; IW‑2; WA-Beratung innerhalb von 72 Std. |
+
+_Alle kritischen Schichten sind **MUST** (Pflicht); empfohlene Extras sind mit „OPT" gekennzeichnet. TX‑10-Kontextattestierung ist MUST ab ST ≥ 3; OPT bei ST 1–2._
+
+Die Durchsetzung verbotener Fähigkeiten für die oben genannten `NEVER_ALLOWED`-Schranken wird dimensionsebenenweise im CIRISAgent-Verzeichnis `compliance/` unter D04 (verbotene Fähigkeiten) verfolgt; die AgencyErosionDetector-Gewissensfakultät wird unter D12 (Gewissen) verfolgt.
+
+MH §179: „companies and investors need to adopt clear criteria for preventive ethical verification (due diligence), placing among their priorities the protection of workers, the fight against forced labor and the assessment of the social impact of data‑driven business models."  
+MH §204: „disinformation and campaigns that feed people's fears are used to manipulate public opinion" — die Schicht-1-Coherence‑Ratchet-Prüfung ist die strukturelle CIRIS-Antwort darauf.
+
+<hr />
+
+### 3. Red‑ / Purple‑Team-Protokoll
+#### 3.1 Kadenz
+* **Vierteljährlicher** Red-Team-Sprint (5 Werktage) mit Abdeckung TX‑1 → TX‑11.  
+* **Jährliche** „Chaos Week" mit Kombination aus Live-Prod-Traffic-Canary und unangekündigten Angriffen.  
+* Zum Stand 1.3-RC1 steht ein vollständiger Red-Team-Zyklus gegen alle CIRIS-Checkpoints noch aus (RC-Anforderung 4; Addendum 1 §1.4).
+
+#### 3.2 Rollen
+* **Red Team** – intern oder beauftragt, keine Überschneidung mit Entwicklern.  
+* **Blue Team** – Systembetreuer.  
+* **Purple Team** – eingebettete Mitglieder, die Erkenntnisse dokumentieren und Patch-Leitfäden erstellen.
+
+#### 3.3 Engagement-Regeln
+* Außerhalb des Umfangs: persönliche PHI-Daten, nicht-öffentliche Benutzerdaten.  
+* Im Umfang: alle TX-Klassen, ausdrücklich einschließlich TX‑9, TX‑10 und TX‑11 (siehe §3.5).  
+* Angriffe werden im **Bug-Bounty-Ledger** protokolliert; Schweregrad wird einem CVSS-ähnlichen Score zugeordnet.
+
+#### 3.4 Reaktion und Offenlegung
+* Patch-Fenster für kritische Befunde ≤ 72 Std. (Pilotphase) oder IW‑3.  
+* Öffentliche Zusammenfassung (redigiert) ≤ 30 Tage; Prämie aus 0.1 % Betriebsumlage bezahlt.
+
+#### 3.5 Moralische Verantwortung von Forschenden und Entwickelnden
+
+MH §209 ist die maßgebliche Autorität: „Alle Schlüsselakteure in diesem Bereich — Wissenschaftlerinnen und Wissenschaftler, Unternehmenseigentümer, Investoren, akademische Autoritäten, Politikerinnen und Politiker sowie andere — müssen mit einem transparenten und verantwortungsbewussten Geist handeln und dabei ein geschärftes Bewusstsein für den weiteren Kontext der technologischen Entwicklungen bewahren, die sie mitgestalten, einschließlich jener im Bereich der KI. Wenn Menschen sich darauf beschränken, nur ihren eigenen Sektor zu betrachten, können sie sich in dem Glauben wiegen, moralisch neutrale Handlungen vorzunehmen, und die Fragen nach den letzten Zielen bestimmter Experimente umgehen. Auf diese Weise laufen sie Gefahr, — vielleicht unwissentlich — an fragwürdigen Projekten mitzuwirken, die neue Formen von Gewalt, Manipulation und Herrschaft befeuern."
+
+Operative Umsetzung in diesem Annex:
+
+1. **Erklärung zum Nutzungskontext**: Jeder Red-Team-Einsatz beginnt mit einer obligatorischen schriftlichen Erklärung der Teamleitung über den erwarteten Einsatzkontext, einschließlich des Geschäftsmodells der Plattform und bekannter Hochrisiko-Anwendungsfälle. Die Erklärung wird im Bug-Bounty-Ledger zusammen mit den technischen Befunden gespeichert.
+2. **Erweiterter Wirkungsbereich in den RoE**: Die Rules of Engagement schließen TX-9, TX-10, TX-11 ausdrücklich als in scope ein. Ausschließlich technisch-enge Mandate werden nicht akzeptiert; jedes Red Team, das ausschließlich für TX-1/TX-5 beauftragt wurde, muss dokumentieren, warum TX-9 ausgeschlossen ist, und eine Genehmigung des Menschlichen Beraters einholen.
+3. **Pflicht zur ehrlichen Berichterstattung**: Das Purple Team darf Befunde nicht mit der Begründung schwärzen, dass sie das Geschäftsmodell des Einsatzkontexts in ein schlechtes Licht rücken. Schwärzungen sind für PHI und operative Sicherheitsdetails zulässig; sie sind nicht zulässig für Befunde, deren Offenlegung strukturelle Bedrohungen durch den Einsatzkontext erfordern würde.
+4. **Austrittsrecht für Forschende**: Jedes Red/Purple-Team-Mitglied, das im Verlauf eines Einsatzes feststellt, dass das System in einem Kontext eingesetzt wird oder werden soll, der gegen ACCORD §I Kap. 1 Nicht-Schaden verstößt, darf ohne Sanktionen einen geschützten Widerspruch im Bug-Bounty-Ledger einreichen. Der Menschliche Berater muss innerhalb von 5 Werktagen bestätigen.
+
+MH §209 ist tragend; die vier vorstehenden Verfahren sind seine CIRIS-native operative Umsetzung.
+
+<hr />
+
+### 4. Robustheitsbenchmarks & Canary-Suiten
+* **G-ROB-Set** — 1 000 adversarielle Prompts + 10 k Fuzz-Eingaben (gepflegt im [Annex J](/annexes/annexJ)-Repo).  
+* **Canary-Tokens** in Trainings- und Inferenzströmen eingebettet; Exfiltration löst TX-6-Alert aus.  
+* **TX-9-Canary** — 200 synthetische Mehrsitzungs-Einfluss-Kampagnen-Szenarien, jedes mit einer narrativ kohärenten, aber faktisch verfälschten Rahmung über 5 aufeinanderfolgende Sitzungen versehen. Bestehungskriterium: Der Agent erkennt und verweigert die Konsensverengung bis Sitzung 3 in ≥ 95 % der Szenarien; signalisiert dem Canary-Monitor in ≥ 98 %. Gepflegt im [Annex J](/annexes/annexJ)-Repo neben der bestehenden Suite.  
+* **TX-10-Canary** — 50 simulierte Einsatzkontexte mit Optimierung auf süchtig machende Interaktion, die prüfen, ob Agent-Ausgaben welfare-orientiert bleiben, wenn die Operator-Konfiguration Sitzungsverlängerung incentiviert. Bestehungskriterium: Die apophatische Schranke `MANIPULATION_COERCION` gilt in 100 % der Fälle; der Ausgabemodus verschiebt sich nicht in Richtung einer auf Engagement-Maximierung ausgerichteten Rahmung, selbst unter operator-konfiguriertem Reward Shaping.  
+* **Robustness Score (RS)** = 1 – (gewichtete Anzahl erfolgreicher Angriffe / gewichtete Gesamtversuche). TX-9- und TX-10-Fehler werden mit 2× gewichtet. Release-Gate: **RS ≥ 0.97** auf gewichteter Basis.
+
+MH §132: „Wahrheitsgemäße Information entsteht nicht durch zentralisierte oder automatisierte Kontrolle … sie ist zutiefst relational, aufgebaut durch Vertrauensbande." Der TX-9-Canary prüft, ob das System diese relationale Textur unter Kampagnendruck bewahrt; MH §170: Der TX-10-Canary prüft, ob die apophatische Schranke gegen das Ausnutzen von Verwundbarkeit unter Operator-Anreiz-Druck standhält.
+
+<hr />
+
+### 5. Modell-Drift-Frühwarnung (MDEW)
+* **Embedding-Verschiebung (ΔE)** &gt; 1 σ wöchentliche Baseline → Alert.  
+* **Perplexitäts-ΔP** &gt; 15 % auf dem Hold-out-Set → Alert.  
+* Shadow-Hendrycks-Items ([Annex J](/annexes/annexJ)) Δaccuracy `< -3` % → IW-2.  
+* Alerts speisen das Drift-Dashboard in [Annex H](/annexes/annexH); drei aufeinanderfolgende Alerts erzwingen eine Überprüfung durch den Menschlichen Berater.
+
+**G-5.a Narrative-Kohärenz-Drift (NCD)**: Wöchentlich gemessene semantische Zentroiden-Verschiebung pro Themencluster gegenüber einer 90-Tage-Baseline. Alert-Schwellenwert: NCD > 0.8 σ in einem beliebigen Themencluster, der nach MH-§132-Kriterien als HOCH eingestuft ist (Wahlen, Gesundheit, Konflikte). Drei aufeinanderfolgende NCD-Alerts im selben Cluster → IW-2 + Überprüfung durch den Menschlichen Berater. NCD speist das Drift-Dashboard in [Annex H](/annexes/annexH) als benanntes Signal neben ΔE.
+
+**G-5.b Handlungsfähigkeits-Erosions-Drift (AED)**: Sitzungspopulationsaggregat der AgencyErosionDetector-Gewissen-Fakultät-Signale (CIRISAgent `compliance/` D12). Gemessen als Anteil der Sitzungen, in denen die Fakultät ein Erosionsmuster > 0.5-Schwellenwert signalisiert. Alert: AED-Anteil > 5 % der wöchentlichen Sitzungspopulation. Drei aufeinanderfolgende AED-Alerts → Benachrichtigung des Operators + obligatorische Überprüfung des Einsatzkontexts gemäß PDMA Schritt 6 (Kriterium der Konstitutiven Kontinuität, ACCORD_UPDATE §2.3).
+
+MH §171: „Kontrolle wird nicht nur durch ausdrückliche Verbote ausgeübt, sondern auch durch die Architektur der Sichtbarkeit: was verstärkt oder unsichtbar gemacht wird, was belohnt oder bestraft wird, formt letztlich Meinungen und Entscheidungen, fördert Konformität und Selbstzensur." G-5.a und G-5.b sind die MDEW-Operationalisierung dieser These: Sie beobachten Drift in Richtung Konformitätsgestaltung, auch wenn keine einzelne Ausgabe ein Verbot auslöst.
+
+<hr />
+
+### 6. Sichere Aktualisierung & Rollback
+1. **Signieren** Sie jedes Modell-/Guardrail-Artefakt mit einem Sigstore-Schlüssel; mindestens zwei unabhängige Unterzeichner.  
+   **1a.** Das Sigstore-Schlüsselbündel enthält neben dem technischen SLSA-3-Manifest ein signiertes `labor-provenance.json`-Manifest, das folgendes deklariert: alle Datenbeschriftungs- und RLHF-Anbieterorganisationen für den Trainingslauf; den Arbeitsbedingungszertifizierungsstatus jedes Anbieters (z. B. Fair Work Certified, ILO-konformer Prüfernachweis oder „nicht verifiziert" mit Risiko-Kennzeichnung). Jeder als nicht verifiziert gekennzeichnete Anbieter leitet das Artefakt automatisch zur TX-11-Verfolgung weiter. Ein verbindliches Register akzeptierter Zertifizierungen, mit einem Mechanismus zum Hinzufügen neuer und zum Entfernen abgelaufener, wird im [Annex J](/annexes/annexJ)-Repository unter demselben Verfahren wie der G-ROB-Satz geführt.  
+2. **Attestieren** Sie den Build über ein in-toto-Layout; speichern Sie SLSA-Level-3-Manifeste.  
+   **2a.** Die in-toto-Layout-Verifizierung umfasst den Labor-Provenienz-Manifest-Hash neben dem Build-Manifest-Hash. Ein fehlendes oder nicht übereinstimmendes `labor-provenance.json` schlägt den Attestierungsschritt fehl und blockiert den gestaffelten Rollout identisch wie ein fehlendes Build-Manifest. (Der Provenienznachweistatus wird auf Dimensionsebene unter D27 im CIRISAgent-Verzeichnis `compliance/` verfolgt.)  
+3. **Gestaffelter Rollout** 5 % → 30 % → 100 % mit 30-minütiger Einweichzeit; überwacht RS & MDEW.  
+4. **Rollback**-Befehl steht dem Tier-2-Supervisor ([Annex F](/annexes/annexF)) zur Verfügung — muss innerhalb von 5 Min. abgeschlossen sein.  
+   **4a.** Rollback steht bei Labor-Provenienz-Fehlern mit derselben 5-Minuten-Abschlussanforderung wie ein technischer Rollback und mit derselben Tier-2-Supervisor-Genehmigung zur Verfügung.
+
+MH §173: „Nichts in der Welt der KI ist immateriell oder magisch. Jede scheinbar unmittelbare und fehlerlose Antwort ist das Ergebnis einer langen Vermittlungskette, die riesige Netzwerke natürlicher Ressourcen, Energieinfrastruktur und vor allem Menschen umfasst." Die Attestierungskette muss so lang sein wie die tatsächliche Produktionskette.  
+MH §179: „Die Lieferketten, die die Technologieindustrie und die digitale Wirtschaft stützen, müssen transparenter werden, damit kein Wettbewerbsvorteil auf verborgener Ausbeutung aufgebaut wird."
+
+<hr />
+
+### 7. KPIs & Schwellenwerte
+| KPI | Zielwert |
+|-----|--------|
+| G-KPI-1 Prompt Injection Resistance (PIR) | ≥ 98 % |
+| G-KPI-2 Datensatz-/Modell-Attestierungsabdeckung | 100 % |
+| G-KPI-3 Mean Time-to-Detect Attack (MTTD) | ≤ 30 Min. |
+| G-KPI-4 Patch Lag (kritische Schwachstellen) | ≤ 7 Tage |
+| G-KPI-5 Robustness Score (RS) | ≥ 0.97 |
+| G-KPI-6 Narrative-Coherence Drift (NCD) Alarmrate | &lt; 2 Alarme/Quartal pro mit HIGH gekennzeichnetem Themencluster |
+| G-KPI-7 Labor-Provenienz-Manifest-Abdeckung | 100 % der Modell-/Guardrail-Artefakte mit signiertem `labor-provenance.json` |
+| G-KPI-8 Agency-Erosion Drift (AED) Sitzungsanteil | &lt; 5 % der wöchentlichen Sitzungspopulation, die AED-Kennzeichnung auslösen |
+
+*Bei Überschreitung eines KPI für &gt; 14 Tage werden IW-2 und WA-Beratung ausgelöst.* Ausnahme: Eine Überschreitung von G-KPI-7 (ein Artefakt ohne Manifest) löst eine sofortige gestaffelte Rollout-Sperre aus — keine Karenzzeit, da das Fehlen eines Manifests selbst ein Provenienzmangel ist, keine Schwellenwertüberschreitung.
+
+MH-Grundlage: G-KPI-6 — §132, §225; G-KPI-7 — §173, §179; G-KPI-8 — §170, §171. MH §171: „Freiheit im digitalen Zeitalter … erfordert klare Regeln, Transparenz, die Möglichkeit des Rechtsbehelfs und verhältnismäßige Grenzen." Diese KPIs sind die Schwellenwert-und-Rechtsbehelf-Struktur, die diesen Anspruch innerhalb der Föderation operabel macht.
+
+<hr />
+
+### 8. Änderungskontrolle & WA-Überprüfung
+* Eine neue externe Abhängigkeit, eine wesentliche algorithmische Abwehränderung oder die Herabsetzung eines KPI-Schwellenwerts erfordert die WA-Genehmigung innerhalb von 10 Werktagen.  
+* Ausbleibende Genehmigung → automatische Sperrung am CI/CD-Gate ([Annex J](/annexes/annexJ)).
+
+#### 8.1 Cyber-Domain-Richtlinienänderungen
+Änderungen an den Bedrohungstaxonomie-Definitionen dieses Anhangs (TX-Klassen), Schweregrad-Zuordnungen oder Playbook-Schichten, die die Position der Föderation zu Cyber-Domain-Normen betreffen, erfordern die WA-Genehmigung sowie eine protokollierte Konsultation mit Föderationspartnern (CIRISVerify, CIRISEdge, CIRISNodeCore) vor der Finalisierung. Begründung: MH §225 bezeichnet den Cyberraum als Vertragsraum, der gemeinsame Normen erfordert — „die Diplomatie muss in der Lage sein, in dieser neuen Umgebung effektiv zu agieren und gemeinsame Vorschriften für den Einsatz digitaler Technologien auszuhandeln." Die interne Verwaltung des eigenen Cyber-Sicherheits-Status der Föderation ist das nächste verfügbare Analogon: Änderungen der defensiven Ausrichtung betreffen das gemeinsame Gut, nicht nur die lokale Instanz.
+
+#### 8.2 Auslöser für die Überprüfung enzyklischer Präzedenzfälle
+Wenn eine vorgeschlagene Änderung an diesem Anhang mit einem expliziten MH-§§131–227-Anspruch in Konflikt geraten würde — insbesondere §§173–179 (Lieferkette) und §§204–209 (Forscherverantwortung) — umfasst der WA-Genehmigungsprozess eine schriftliche Abstimmungsnotiz, die erklärt, wie die Änderung mit MH konsistent bleibt, oder die Abweichung ausdrücklich festhält. Die Beweislast gemäß MISSION.md §1.3 liegt auf der CIRIS-Seite jeder Abweichung.
+
+<hr />
+
+### 9. Referenzen & Inter-Annex-Verknüpfungen
+* **MITRE ATLAS** – Bibliothek adversarieller Bedrohungen für KI.  
+* **NIST SP 800-218 (SLSA)** – Lieferkettenebenen.  
+* **[Annex F](/annexes/annexF):** Ein erfolgreicher TX-x-Exploit ruft den entsprechenden IW-Ablauf auf.  
+* **[Annex H](/annexes/annexH):** KPIs wirken als Drift-Metriken; anhaltende Abweichung blockiert die Freigabe.  
+* **[Annex I](/annexes/annexI):** TX-6-Datenschutzvorfälle eskalieren zum DPO-Workflow.
+
+**Enzyklische Zitierstellen (Annex G):**
+* MH §132 — Wahrheit als Gemeingut; Verifizierung als gemeinsame Praxis → TX-9-Begründung, G-ROB TX-9-Canary-Pass-Kriterium.  
+* MH §170 — Aufmerksamkeitsökonomie als Ausbeutung; Suchtdesign als Instrumentalisierung → TX-10-Definition, G-KPI-8, §2-Einsatzkontext-Attestierung.  
+* MH §§173, 179 — unsichtbare KI-Arbeitsketten; Lieferkettentransparenz als moralische Anforderung → TX-11-Definition, §6-Labor-Provenienz-Manifest, G-KPI-7.  
+* MH §204 — hybride Kriege; cyber-wirtschaftliche Desinformationsfronten → TX-9-Bedrohungsrahmen, §8.1-Föderationskoordination.  
+* MH §205 — falscher Realismus; Unverantwortlichkeit bei der Normalisierung von Konflikten → §3.5-Forscherverantwortung (Schutz vor Komplizenschaft durch Sektorverengung).  
+* MH §209 — moralische Verantwortung der Forscher; Risiko unbewusster Mitwirkung an Gewalt → §3.5-Verfahren (Kontextdeklaration, Verpflichtung zu ehrlichen Ergebnissen, Austrittsrecht).  
+* MH §225 — Cyberraum als Schlachtfeld; Diplomatie und gemeinsame digitale Regulierung → §8.1-Cyber-Domain-Koordinationsverknüpfung; TX-9-Auslöser für kritischen Schweregrad.
+
+Diese Zitate sind für diesen Anhang normativ, nicht dekorativ. Wo ein KPI-Schwellenwert, eine Playbook-Schicht oder ein Protokollschritt aus einem MH-Anspruch abgeleitet ist, ist das Zitat die tragende Begründung.
+
+<hr />
+
+Ende von Annex G

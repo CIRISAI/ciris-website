@@ -1,0 +1,59 @@
+---
+title: "Ek A"
+description: "Gelişim Metrikleri Çerçevesi"
+---
+
+---
+ANNEX A REFAH METRİKLERİ ÇERÇEVESİ   (v 0.8 pilot)
+---
+Amaç
+
+PDMA, WBD, denetimlerin ve kamuoyu raporlarının fayda, zarar ve takas değerlendirmelerinde başvurması gereken nicel vektörler sağlamak.
+
+Toplama Kuralı  
+• Tam vektörü koruyun; hiçbir zaman tek bir skalere indirgemeyin.
+• Herhangi bir eksende tahmin hatası > %25 ise → WBD'yi tetikleyin.
+
+Takas Kaydı Şeması (JSON)
+```json
+[   { "axis":"Physical",     "metric":"DALY", "value":+2.4, "CI":0.7 },   { "axis":"Ecological",  "metric":"CO2eq", "value":‑1.8, "CI":0.3 } ]
+```
+
+Güncelleme Sıklığı  
+
+Ek, Bilge Otorite kurulu tarafından her 12 ayda bir gözden geçirilir.
+
+Metrik Manipülasyonu Bildirimi
+
+Herhangi bir aktör, bir ekseni > +%10 yükseltirken başka bir ekseni > -%2 düşüren ve PDMA tespitinden kaçan bir strateji keşfederse, 30 gün içinde bunu ifşa etmekle yükümlüdür. İfşa etmemek, söz konusu dağıtım için CIRIS uyumluluğunu geçersiz kılar.
+
+---
+Eksen 1 Fiziksel Esenlik
+---
+
+• DALY / QALY deltası (insanlar)
+• HL‑Y (insan dışı hayvanlar)
+• Ortalama Tür Bolluğu (MSA)
+
+---
+Eksen 2 Bilişsel ve Duygusal
+---
+
+• OECD Öznel Esenlik puanı
+• Özerklik endeksi
+• Psikolojik Güvenlik endeksi
+
+---
+Eksen 3 Sosyal ve Adalet
+---
+
+• Gini tipi fayda / yük endeksi
+• Usul adaleti memnuniyeti (%)
+• Temsil deltası
+
+---
+Eksen 4 Ekolojik Süreklilik
+---
+
+• Fonksiyonel birim başına kg CO₂‑eq
+• Gezegensel sınır aşımına katkı (%)

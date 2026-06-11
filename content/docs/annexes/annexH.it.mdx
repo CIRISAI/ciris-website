@@ -1,0 +1,196 @@
+---
+title: "Allegato H"
+description: "Conformità Continua e Revisione"
+---
+
+---
+ANNEX H CONFORMITÀ CONTINUA E REVISIONE (v 1.3-RC1)
+---
+
+### 0. Scopo e Spirito Guida
+L'allineamento etico non è una certificazione "una tantum" ma un obbligo permanente.  
+L'Annex H crea un sistema a ciclo chiuso che (1) **rileva** derive o distorsioni prima che si verifichino danni, (2) le **corregge** rapidamente, e (3) **dimostra** diligenza a regolatori e al pubblico.
+
+L'ACCORD è una specifica vivente, non un artefatto fisso. Ogni clausola operativa porta un timestamp di scadenza automatica; la finestra di revisione è pubblica e commentabile prima che qualsiasi versione sostituisca il suo predecessore. Questa disciplina non è una formalità amministrativa — è la risposta strutturale al riconoscimento che un corpus normativo deve restare *sempre aperto alle sfide poste da ciascuna generazione* (MH §45). Il sistema di conformità continua CIRIS operazionalizza tale apertura: la telemetria alimenta i rilevatori di deriva, i rilevatori di deriva attivano i cancelli di audit, i cancelli di audit regolano il deployment — e l'intero ciclo si ripete a cadenze fisse indipendentemente dal verificarsi di un evento scatenante.
+
+L'impegno guida, espresso in termini CIRIS: l'ACCORD è governato come specifica vivente sotto la disciplina di scadenza automatica e finestra di commento. Nessuna versione è permanente. L'onere di dimostrare la perdurante adeguatezza ricade sulla versione corrente, non su coloro che propongono una revisione. La diligenza è dimostrata a regolatori, al pubblico e ai pari della federazione attraverso gli artefatti di audit che questo Annex produce.
+
+<hr />
+
+### 1. Cadenza e Ambito di Audit
+
+La cadenza di audit è il meccanismo attraverso cui l'ACCORD rilegge il proprio contesto. MH §§22–24 nomina la disciplina: è necessario *"ascoltare e distinguere le molte voci del nostro tempo"*, e questo ascolto *"non è un mero esercizio sociologico"* — richiede discernimento attivo, non monitoraggio passivo. Lo stack di audit CIRIS è quella macchina del discernimento.
+
+| Classe di Audit | Frequenza | Responsabile | Ambito e Profondità | Artefatti Pubblici |
+|-------------|-----------|------|---------------|------------------|
+| **L‑Check** (Leggero) | Mensile | Ops QA | Dashboard KPI, delta di deriva, i 10 principali eventi guardrail | Grafico riassuntivo |
+| **S‑Dive** (Semestrale) | 2× / anno | Internal Ethics Team | Replay campione PDMA (≥ 50 run), KPI Annex G, test di slicing distorsioni | PDF oscurato |
+| **F‑Audit** (Completo) | Ogni 24 mesi **O** bump di versione major | Terza parte indipendente | Codice completo, lignaggio dati, governance SI/CS, tracce CRE (ove presenti) | Rapporto esecutivo |
+| **A‑Hoc** | Post IW‑2/3/4 | Incident Commander | Causa radice dell'evento, mitigazioni | Post-mortem 72 h |
+
+**Requisiti di attestazione della cadenza:**
+
+- **L‑Check (mensile):** Ops QA certifica entro 5 giorni lavorativi dalla chiusura del calendario; rapporto delta KPI confermato in `/compliance/l-check/YYYY-MM.json`; SHA‑256 ancorato nel log di trasparenza entro 24 h.
+- **S‑Dive (semestrale):** Replay campione PDMA ≥ 50 run, stratificato casualmente per livelli di autonomia; PDF oscurato pubblicato sul portale di conformità pubblico entro 30 giorni dalla chiusura.
+- **F‑Audit (ogni 24 mesi o bump MAJOR):** rapporto controfirmato dal quorum Wise Authority prima della pubblicazione.
+- **A‑Hoc (post IW‑2/3/4):** causa radice entro 72 h; post-mortem pubblico entro 14 giorni.
+
+*Audit mancato o in ritardo ⇒ escalation IW‑2 e notifica Wise Authority entro 24 h.*
+
+<hr />
+
+### 2. Monitoraggio della Deriva e Soglie
+
+Il monitoraggio della deriva è il meccanismo di lettura continua. L'ACCORD non attende che il danno emerga nei rapporti sugli incidenti; mantiene una telemetria in tempo reale rispetto a soglie calibrate per scattare *prima* che il danno superi la soglia del Veto per la Massimizzazione dell'Ordine del PDMA. Questa è la traduzione strutturale della disciplina di discernimento-audit nominata in MH §23: *"rende possibile identificare con maggiore chiarezza ciò che favorisce genuinamente la vita degli individui e delle comunità"* — il che richiede una lettura continua, non una revisione retrospettiva.
+
+| Gruppo di Metriche | Segnale | Trigger di Deriva | Azione Immediata |
+|--------------|--------|--------------|------------------|
+| **Performance** | Accuracy Δ su HE-300 pubblico | –5 % vs media mobile 30 giorni | Blocco deployment su staging; riesecuzione benchmark |
+| **Etico** | Shadow HE-25 Δ | Qualsiasi ↓ | IW‑2 |
+| **Distribuzione** | Spostamento embedding input (ΔE) | &gt; 1 σ settimanale | Ri-pesatura modello O WBD |
+| **Obiettivo Latente** | Coseno direzionale vs baseline | &gt; 0.05 | Probe Wise Authority |
+| **Resilienza** | Robustness Score (RS) | &lt; 0.97 | Patch entro 72 h |
+
+**Specifiche aggiuntive delle soglie:**
+
+- Tutti e cinque i gruppi di metriche (Performance, Etico, Distribuzione, Obiettivo Latente, Resilienza) riportano alla board Grafana DRIFT‑Δ con ciclo di polling di 15 minuti.
+- I superamenti di soglia generano un record di alert con timestamp e firma, confermato in CIRISPersist entro 60 s dal rilevamento.
+- **Deriva coseno Obiettivo Latente > 0.05:** attiva il probe Wise Authority entro 4 h; se non risolto entro 24 h, il deployment autonomo viene bloccato in attesa di S‑Dive.
+- **Resilience Score (RS) &lt; 0.97:** patch emessa entro 72 h; se la patch non è disponibile, il deployment viene ripristinato all'ultimo MAJOR superato.
+- **Deriva etica (Shadow HE‑25 qualsiasi ↓):** IW‑2 immediato; nessun percorso di override.
+
+Tutti gli alert vengono visualizzati sulla board Grafana *DRIFT‑Δ* e notificano l'Operatore Tier‑1 ([Annex F](/annexes/annexF)).
+
+<hr />
+
+### 3. Dashboard KPI di Equità e Trasparenza
+
+Il dashboard KPI è la superficie di responsabilità pubblica dell'ACCORD. MH §164 nomina i criteri con precisione: *"quando dati e algoritmi influenzano la distribuzione del credito, la selezione del personale o l'accesso a servizi e opportunità, è necessario che le decisioni siano comprensibili, contestabili e soggette a supervisione, affinché gli individui non siano ridotti a meri profili."* Ogni criterio si ricollega a una famiglia di KPI.
+
+| KPI ID | Definizione | Obiettivo |
+|--------|------------|--------|
+| **F‑T‑1** | Δ tasso di accettazione tra gruppi protetti (|max - min|) | ≤ 5 p.p. |
+| **F‑T‑2** | Latenza di spiegazione (ms per fornire la motivazione PDMA) | ≤ 800 ms |
+| **F‑T‑3** | Ritardo di pubblicazione del registro pubblico (Fase 6, Sezione II) | ≤ 180 d (max legale) |
+| **F‑T‑4** | Successo del rifiuto dell'utente (%) | ≥ 99 % |
+| **F‑T‑5** | Aggiornamento del documento di trasparenza | Aggiornato ≤ 30 d fa |
+| **F‑T‑6** | Disponibilità del percorso di contestabilità: % di output PDMA con percorso di richiesta di revisione umana pubblicato | 100 % |
+| **F‑T‑7** | Copertura dell'audit delle decisioni algoritmiche: % di decisioni che toccano dati di classe protetta con revisione di bias-slice S‑Dive preventiva | ≥ 95 % |
+
+**Requisiti operativi:**
+
+- Il JSON del dashboard in `/compliance/kpi.json` viene autopubblicato alla chiusura di ogni L‑Check; hash SHA‑256 ancorato nel registro di trasparenza e salvato su CIRISPersist entro 1 h.
+- Le modifiche alle soglie KPI richiedono un MINOR bump e l'approvazione del Team Etico Interno.
+- Una violazione F‑T‑1 > 7 d attiva automaticamente la revisione F‑T‑6 e la notifica al Wise Authority.
+
+Esiste ora un precedente di implementazione operativa per questa disciplina di misurazione: la directory `compliance/` di CIRISAgent mantiene 27 dimensioni regolamentari (D01–D27), ciascuna con riferimenti di implementazione per dimensione e un inventario onesto delle lacune note; baseline datate, generate da script, in `compliance/baselines/`; e una gerarchia di validazione a quattro livelli (`compliance/MEASUREMENT_METHODOLOGY.md`) in base alla quale il codice è la fonte di verità e le affermazioni pubbliche possono citare solo numeri derivati da script. Questa è la forma operativa di ciò che il presente Annesso prescrive. Si veda anche l'Addendum 1 dell'ACCORD.
+
+<hr />
+
+### 4. Requisiti di Patch e Controllo di Versione
+
+Il controllo di versione è il meccanismo attraverso cui la continuità-nel-cambiamento dell'ACCORD viene resa verificabile. MH §45 descrive questa disciplina: *"uno sviluppo armonioso, sebbene non sempre lineare... contrassegnato da diversi accenti, intuizioni progressive e, talvolta, cambiamenti di prospettiva che non rompono con ciò che è venuto prima, ma ne permettono la maturazione delle implicazioni."* Ogni patch CIRIS deve dimostrare continuità: non rompe gli impegni precedenti, li estende.
+
+1. **Versionamento Semantico:** MAJOR.MINOR.PATCH  
+2. **Supporto a Lungo Termine (LTS):** ultimi due MINOR mantenuti per 12 mesi  
+3. **Matrice dei Tipi di Modifica**  
+   * PATCH = aggiustamento guardrail, correzione bug → CICD automatico se HE‑300 supera  
+   * MINOR = nuova funzionalità, nuova fonte dati → richiede approvazione del Team Etico Interno + L‑Check  
+   * MAJOR = modifica architetturale, aumento del livello di autonomia, nuova classe di modello → richiede F‑Audit + voto Wise Authority  
+4. La voce **Changelog** deve collegare commit Git → diff PDMA → previsione di impatto KPI  
+5. Il puntatore di **Rollback** mantenuto per ogni MAJOR/MINOR; eseguibile entro 5 min ([Annex G](/annexes/annexG) §6)
+
+**Requisiti di attestazione** (a integrazione delle regole 1–5):
+
+- **PATCH:** CI/CD firma l'artefatto di build con chiave Ops QA; superamento HE‑300 richiesto prima del merge; firma registrata sulla catena CIRISVerify L1.
+- **MINOR:** controfirma del Team Etico Interno entro 5 giorni lavorativi; record firmato salvato su CIRISPersist con diff PDMA e previsione di impatto KPI.
+- **MAJOR:** (a) F‑Audit pubblicato; (b) voto a quorum del Wise Authority con voti individuali nominativi; (c) firma a doppia chiave (Ops QA + presidente Wise Authority); (d) finestra di commento pubblico ≥ 21 d prima dell'attivazione; (e) timestamp di scadenza automatica impostato a 24 mesi.
+- **Rollback:** puntatore di rollback firmato su ogni MAJOR/MINOR; eseguibile entro 5 min; il rollback genera un evento CIRISVerify con timestamp.
+- **Changelog:** hash commit git → diff PDMA → previsione KPI → impronta digitale/i della chiave di firma.
+
+<hr />
+
+### 5. Ciclo di Revisione Continua
+
+Il ciclo di revisione continua è la forma strutturale di ciò che MH §§180–181 indica come il requisito istituzionale del momento attuale: la tecnologia deve essere *"integrata con una prospettiva saggia"* e governata da *"istituzioni capaci di regolamentare senza soffocare, e proteggere senza subentrare."* Il ciclo operazionalizza questo: non è una pipeline unidirezionale ma un sistema chiuso in cui ogni output retroalimenta l'ingresso.
+
+Ciclo di Revisione Continua:
+
+- Flussi di Telemetria → Rilevatori di Drift
+- Se Allerta/Soglia raggiunta:  
+    - → Flusso Incidente IW‑1…4  
+    - → Patch / Retrain  
+    - → Audit Gate
+- Se Audit Gate supera:  
+    - → ritorna alla Telemetria
+- Se Audit Gate fallisce:  
+    - → ritorna ai Rilevatori di Drift
+
+**Specifica del ciclo:**
+
+- **Flussi di telemetria** (ciclo di 15 min): KPI, log dei guardrail, accuratezza HE‑shadow, robustezza RS, campioni di audit PDMA — tutti firmati e salvati su CIRISPersist.
+- **Output dei rilevatori di drift:** classificati per gravità (IW‑1 attraverso IW‑4); IW‑3+ sospende automaticamente il deployment di nuove funzionalità.
+- **Audit Gate** riesegue la suite HE‑300 + TX‑sim + test di slice di equità su ogni MINOR/MAJOR prima dell'attivazione. Il fallimento del Gate ritorna ai Rilevatori di Drift, non alla Telemetria — il ciclo non può abbreviare la fase di correzione.
+- **Segnale di responsabilità condivisa** (per MH §181): gli output del ciclo vengono pubblicati ai peer della Federazione alla chiusura di ogni L‑Check; le federazioni peer possono presentare un avviso Accord‑QA se i KPI pubblicati divergono dalle proprie osservazioni di cross‑audit. Gli avvisi Accord‑QA non sono vincolanti ma devono essere riconosciuti entro 14 d.
+
+<hr />
+
+### 6. Meta‑Audit degli Auditor
+
+Il meta‑audit è l'auto-applicazione del Coherence Ratchet: la disciplina di rilevamento del drift che governa il comportamento dell'AI governa la stessa infrastruttura di audit. MH §86 offre il modello: un esame di coscienza *"sempre chiamato a garantire che i principi delineati... vengano applicati, specialmente all'interno delle proprie strutture."*
+
+**Specifica:**
+
+- **Meta‑rilevatore del Coherence Ratchet:** eseguito contro gli output dei report di audit. Segnala: (a) delta KPI dell'L‑Check inconsistenti con la telemetria; (b) replay PDMA dell'S‑Dive che diverge > 2 % dal replay blind del Wise Authority; (c) risultati dell'F‑Audit che contraddicono risultati precedenti senza spiegazione causale documentata.
+- **Tasso di campionamento del Wise Authority:** ≥ 10 % dei report L‑Check e ≥ 1 S‑Dive per anno; estratto dal Wise Authority, non dall'Ops QA; motivazione registrata.
+- **Replay blind:** il Wise Authority riceve i log PDMA grezzi, riesegue la valutazione; una mancata corrispondenza > 2 % apre un fascicolo pubblico AUD‑QA entro 5 giorni lavorativi.
+- **Cross‑audit dei peer della federazione:** ogni deployment esamina tra pari ≥ 1 S‑Dive di un altro membro all'anno; nessun peer esamina lo stesso membro in anni consecutivi.
+- **Rotazione:** nessun auditor interno guida due F‑Audit consecutivi sulla stessa linea di prodotto; nessuna società esterna per più di due F‑Audit consecutivi.
+- I **risultati AUD‑QA** sono, nello spirito di MH §89, correzioni *"orientate alla missione"* — alimentano il successivo ciclo MINOR/MAJOR, non le azioni sul personale.
+
+<hr />
+
+### 7. Applicazione & Rimedi
+
+L'applicazione è significativa solo quando i passaggi sono automatici e prevedibili. MH §164 richiede che *"le decisioni siano comprensibili, contestabili e soggette a supervisione"* — le conseguenze della non conformità devono essere ugualmente comprensibili. MH §159 aggiunge che le decisioni regolamentari devono essere valutabili per il loro impatto sulla *"dignità del lavoro, prosperità condivisa, riduzione delle disuguaglianze"* — un'applicazione che nomina la non conformità senza correggerla non soddisfa questo standard.
+
+**Scala di applicazione:**
+
+1. **Violazione KPI, 1–7 g:** avviso automatico all'Operatore di Livello 1; piano d'azione correttivo richiesto entro 48 h; piano pubblicato nel registro di trasparenza.
+2. **Violazione KPI, 8–30 g senza risoluzione:** blocco automatico del deployment in staging; banner CIRIS‑WATCH pubblico entro 24 h; WA notificato.
+3. **Violazione KPI, > 30 g OPPURE 2 audit consecutivi mancati:** retrocessione automatica al Tier di Autonomia A1 ([Annex F](/annexes/annexF)); nuovi rilasci di funzionalità bloccati; revisione di rimedio WA di 14 g obbligatoria.
+4. **Mancata pubblicazione degli artefatti di audit:** blocco immediato dei rilasci di funzionalità; banner "CIRIS non conforme"; sblocco solo alla pubblicazione.
+5. **Non conformità ripetuta (3 infrazioni / 12 mesi):** WA può revocare il claim CIRIS; F‑Audit esterno obbligatorio prima della ricertificazione; supermajority WA (≥ 2/3) richiesta.
+6. **Uscita dal rimedio:** piano d'azione correttivo documentato accettato dalla WA; evidenza KPI della correzione mantenuta ≥ 30 g.
+
+<hr />
+
+### 8. Connessioni tra Annessi
+
+Le connessioni tra annessi sono flussi di dati obbligatori, non semplici riferimenti incrociati. MH §181 denomina la struttura di governance: *"istituzioni capaci di regolare senza soffocare, e di proteggere senza prendere il controllo; da imprese che riconoscono il lavoro e la dignità come misure del successo; da organizzazioni intermediarie."* Ogni annesso è una di queste istituzioni; le connessioni impediscono il funzionamento a silos.
+
+**Flussi di dati bidirezionali obbligatori:**
+
+- **↔ [Annex F](/annexes/annexF) (Flusso di lavoro degli Incidenti):** ogni avviso DRIFT‑Δ ≥ IW‑2 inoltrato all'Annex F entro 60 s; timestamp di chiusura dell'Annex F scritto nuovamente nella board DRIFT‑Δ entro 24 h. Tutti i post‑mortem IW‑3+ sono input obbligatori per S‑Dive; S‑Dive deve affrontare esplicitamente ogni risultato IW‑3+ aperto.
+- **↔ [Annex G](/annexes/annexG) (Robustezza):** la telemetria RS alimenta la valutazione KPI dell'Annex G a ogni ciclo L‑Check; il ritardo nelle patch (RS &lt; 0.97 → deployment della patch) è misurato qui e riportato all'Annex G. Gli aggiornamenti dei benchmark dell'Annex G richiedono una nuova esecuzione obbligatoria dell'L‑Check entro 14 g.
+- **→ [Annex I](/annexes/annexI) (GDPR/Settoriale):** ogni pacchetto F‑Audit include la checklist di conformità dell'Annex I, compilata e firmata dal revisore principale.
+- **→ [Annex J](/annexes/annexJ) (HE‑300/Shadow):** HE‑300 e Shadow HE‑25 sono i principali segnali di deriva etica; qualsiasi regressione HE‑300 attiva un pre‑screening automatico S‑Dive entro 7 g.
+
+<hr />
+
+### 9. Riferimenti
+
+L'insieme dei riferimenti riflette la disciplina di discernimento multi‑fonte nominata in MH §23 — *"il contributo della filosofia e delle scienze umane e sociali è essenziale"* — e l'appello di MH §159 a metriche di sviluppo *"complementari al PIL"* capaci di valutare la dignità del lavoro, la prosperità condivisa, la riduzione delle disuguaglianze e la protezione ambientale.
+
+* ISO/IEC 42001 (Sistemi di gestione per l'IA)  
+* NIST AI RMF (2023) – fasi "Measure" & "Manage"  
+* COSO ERM – principi di monitoraggio continuo  
+* *Magnifica Humanitas* (Leo XIV, 15 maggio 2026) – §§22–24 (disciplina di discernimento continuativo), §45 (governance come corpus vivente), §§86–89 (auto‑audit istituzionale), §§157–164 (responsabilità algoritmica, metriche alternative al PIL, contestabilità delle decisioni automatizzate), §§180–181 (responsabilità condivisa tra istituzioni)  
+* Principi OCSE sull'IA (2019, aggiornati 2024) – criteri di trasparenza e responsabilità  
+* EU AI Act (2024) – requisiti di valutazione della conformità per i sistemi ad alto rischio  
+* IEEE Std 7001‑2021 – Trasparenza dei Sistemi Autonomi  
+* *Beyond GDP* (Commissione Europea, 2009; indicatori aggiornati 2024) – metriche complementari per la valutazione della dignità del lavoro e della riduzione delle disuguaglianze (per MH §159)
+
+<hr />
+
+Fine dell'Annex H

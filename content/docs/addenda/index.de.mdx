@@ -1,0 +1,64 @@
+---
+title: "Zusätze-Index"
+description: "Indexseite für den Bereich Zusätze."
+---
+
+---
+
+## Addendum 1 — ASI-Bereitschaftsstatus & Regulatorischer Quervergleich (Binding)
+
+**Verabschiedet**: 2026-06-10 (1.3-RC1) · **Treuhänder**: Gründer (gemäß Book VIII Ch 9)
+
+### 1.1 Zweck
+
+Der Geltungsbereich macht eine bedingte Behauptung: Dieses Rahmenwerk *erkundet* ein Kandidaten-Ausrichtungsprotokoll für ASI, gebunden an die vier Release-Candidate-Anforderungen in der Einleitung. Dieses Addendum bindet diese Behauptung an die nun vorliegenden operativen Nachweise und benennt klar, was noch aussteht. ASI-**Bereitschaft** ist keine erzielte Ausrichtung; es ist der Zustand, in dem das Verifikations-Gerüst, das die Mathematik von Book IX erfordert — unabhängige Constraint-Mannigfaltigkeiten, Attestierungsoberflächen, eine Gewissensschicht, die nicht normalisiert werden kann, Kill-Switch-Oberflächen und die Katastrophenrisiko-Evaluierung aus Annex D — in implementierter, prüfbarer Form vorliegt, mit benannten Lücken.
+
+### 1.2 Der regulatorische Quervergleich ist nun operativ
+
+Der funktionierende Quervergleich ist das **CIRISAgent-Compliance-Verzeichnis** (`CIRISAgent/compliance/`, Agent-Release 2.9.6-stable), das die Implementierung des Rahmenwerks auf vier übergeordnete Governance-Rahmenwerke auf Absatzebene abbildet (Annex C trägt die zweischichtige Struktur: dieser operative Quervergleich plus die informative gesetzliche Tabelle, ausstehend bis zur rechtlichen Prüfung):
+
+* **Quervergleichene Quellen**: *Magnifica Humanitas* (religiöses Lehramt, 2026) · EU-HLEG-Leitlinien für eine vertrauenswürdige KI (staatliche Beratung, 2019) · IEEE Ethically Aligned Design 1. Aufl. (technische Gesellschaft, 2019) · ASEAN-Leitfaden zur KI-Governance und -Ethik (multilateral-politisch, 2024). Vier institutionell unterschiedliche Formen — die Konvergenz ist struktureller Nachweis dafür, dass das Prinzipiengerüst des Rahmenwerks kein Artefakt einer einzigen Tradition ist.
+* **Struktur**: 27 stabile Dimensionen (D01–D27, aus `SEED_DIMENSIONS.yaml` v1.0; 16 von allen vier Quellen bezeugt, 11 von dreien). Jedes Dimensionsdokument trägt einen automatisch gerenderten regulatorischen Kopfteil (quellenspezifische Zitate, Wire-Form, Konvergenzhinweise) und einen menschlich verfassten Implementierungsabschnitt mit `file:line`-Referenzen, die gegen den aktuellen Main-Branch grep-verifizierbar sein müssen.
+* **Nachweisdisziplin**: Jeder numerische Anspruch ist aus datierten, skriptgenerierten Baselines reproduzierbar (`compliance/baselines/`); Prosa darf Baselines zitieren, darf aber niemals nicht nachprüfbare Zahlen einbetten. Eine vierstufige Validierungshierarchie reicht von Implementierungsdateien (Wahrheitsquelle) bis zu öffentlichen Ansprüchen (`compliance/MEASUREMENT_METHODOLOGY.md`).
+* **Ehrlichkeitsdisziplin**: Jede Dimension trägt ein Inventar „Bekannte Lücken"; substratgebundene Punkte werden mit dem zuständigen Substrat gekennzeichnet, anstatt sie zu beanspruchen. Zehn übergreifende Befunde sind im Compliance-README inventarisiert (z. B. typisierte Wire-Envelopes noch nicht emittiert; die LensCore-Detectorfamilie noch nicht ausgeliefert; Lücke bei der Neubewertung der Umkehrachse).
+
+Annex C verbleibt im Text als künftiger Ort für gesetzliche Mappings (EU-KI-Akt-Artikel, NIST AI RMF, ISO/IEC 42001), sobald die Rechtsprüfung abgeschlossen ist; das Compliance-Verzeichnis ist bis dahin der **lebende, nachweisführende** Quervergleich und speist ihn.
+
+### 1.3 Wire-Format: CEG löst FSD-002 ab
+
+Das Föderations-Wire-Format für die CIRIS-3.0-Agentenlinie ist **CEG (CIRIS Epistemic Grammar)**, gepflegt unter `CIRISRegistry/FSD/CEG/`. Die Grammatik ist auf **genau fünf Wire-Format-Primitive** festgeschrieben — ein Arbeitstier (`scores`) plus vier strukturelle Kompositions-Primitive (`delegates_to` / `supersedes` / `withdraws` / `recants`) — über einen offenen, mechanismus-beschreibenden Dimensions-Namensraum. Die Festschreibung hat über die gesamte 0.x-Linie gehalten; jedes Inkrement war Komposition über bereits festgeschriebenen Primitiven.
+
+Zwei Konsequenzen sind für die ASI-Bereitschaft relevant:
+
+1. **Die CEG-native Wende**: Der 3.0-Agent *bildet* seinen internen Zustand nicht auf das Wire-Format ab — seine internen Zustandsmutationen **sind** CEG-Attestierungen auf Selbstebene unter dem eigenen Schlüssel des Agenten, die gemäß dem Tier-Modell zur Föderations-Sichtbarkeit befördert werden. Die Nachweise, die ein Operator prüft, sind dieselbe Envelope, die die Föderation liest. Dies ist die implementierte Form der Anforderung von Book IX, dass Constraint-Oberflächen extern referenzierbar statt selbst-berichtet sein müssen.
+2. **Vier Implementierungen bedingen CEG 1.0**: CIRISAgent (Runtime), CIRISNodeCore (Konsens), CIRISLensCore (Erkennung — der externe Zeuge, den der Agent nie selbst emittiert, die Anti-Goodhart-Trennung) und CIRISRegistry (Autorität). Keine einzelne Partei — den Agenten eingeschlossen — kann das Verifikationsgewebe für vollständig erklären.
+
+### 1.4 RC-Anforderungsstatus bei 1.3-RC1
+
+| RC-Anforderung | Status | Nachweis / Ausstehend |
+|---|---|---|
+| 1. Annex F–I Operationalisierung | **Text bei 1.3-RC1 operationalisiert; Live-Zyklusvalidierung ausstehend** | Annexes F–I tragen vollständige Verfahren, Schwellenwerte und Validierungsmechanismen (abgeschlossen aus den Mai-2026-Entwürfen auf Basis von *Magnifica Humanitas*); sie wurden noch nicht gegen einen Live-Deployment-Zyklus erprobt |
+| 2. Mathematische Validierung Book IX | **Teilweise erfüllt** | Kollaps-Dynamik in Lean 4 formalisiert (CCA-Preprint v3, DOI 10.5281/zenodo.18217688); Korridor-Empirie liefert retrospektive substratübergreifende Anpassungen. Ausstehend: eine vorab registrierte Out-of-Sample-Vorhersage in einem neuen Substrat; externe adversarielle Begutachtung unabhängig vom Autor |
+| 3. Schwellenwertbegründung | **Teilweise erfüllt** | OMV-Verhältnis zurückgezogen (neu gefasst als Nebenbedingung, Book II). Noch vorläufig: 10²⁶ FLOP CRE-Auslöser, 5 %-Sentienzheuristik, &lt; 20 % Echo-Dichte-Ziel |
+| 4. Red-Team-Übung | **Noch nicht durchgeführt** | Die 1.3-σ-Attestierungsanforderung (Book IX §5.2) schließt präventiv den ersten bekannten Angriffsvektor (σ-Pumping über freie Dankbarkeitssignale); ein vollständiger adversarieller Zyklus gegen alle Checkpoints steht noch aus |
+
+### 1.5 Die Gewissensschicht als ASI-kritische Steuerung
+
+Das Annex D CRE-Protokoll regelt die *Schwellenüberschreitung*; die Gewissensschicht regelt *jede Handlung davor und danach*. Wie implementiert (Agent 2.9.6): Jeder Gedanke durchläuft einen prioritätsgeordneten Prüfstapel — vier LLM-beurteilte Fakultäten (Entropie, Kohärenz, Optimierungs-Veto, epistemische Bescheidenheit) sowie ein deterministisches Sicherheitsfundament (Gedankentiefe-Schutzschranke, Aktionssequenzprüfung), das auch im Benchmark-Modus und auch für sonst ausgenommene Aktionen ausgeführt wird. Schwellenwerte sind Konstanten auf Code-Ebene, keine erlernten Gewichte — die architekturelle Invariante, dass Ethik nicht durch wiederholte Exposition normalisiert werden kann. Mehrere voneinander unabhängige Stoppflächen existieren: Optimierungs-Veto-Ausfallsicherung zum Abbruch, der Shutdown-Dienst sowie ein kryptographisch signierter Fernaufruf der Accord Invocation, der eine vollständige Verbotssperrung auslöst. Jede Prüfung schreibt eine markierte Trace-Zeile, sodass ein Prüfer die vollständige gedankenbezogene Begründungskette nachvollziehen kann.
+
+Bekannte Einschränkung, offen benannt statt verborgen: der Gewissens-Refaktor (3 Fragmente + deterministisches Gate) ist teilweise integriert; die typisierte Föderations-Emission von Gewissensurteilen wartet auf den Substrat-Beitragsenvelop. Detailangaben je Dimension: `compliance/D12_conscience.md`.
+
+### 1.6 Substrat-Abhängigkeitstrajektorie
+
+ASI-taugliche Verifikation erfordert das vollständige Föderationsgewebe. Die Substrat-Trajektorie lautet **Persist → Edge → LensCore → NodeCore**; ungefähr ein Drittel der 27 Dimensionen sind von der externen Detektor-Familie von LensCore abhängig (dem Zeugen, den der Agent niemals selbst liefern darf). Bis diese Substrate ausgeliefert sind, bleiben die entsprechenden Dimensionsansprüche *auf Implementierungsseite bereit, auf Föderationsseite ausstehend* — und sind als solche je Dimension gekennzeichnet.
+
+### 1.7 Was dieses Addendum ändert und was nicht
+
+* Es **upgradet nicht** den ASI-Anspruch des Geltungsbereichs — dieser bleibt an alle vier RC-Anforderungen geknüpft.
+* Es **ersetzt nicht** Annex D — das CRE-Protokoll besteht unverändert als Gate für die Schwellenüberschreitung.
+* Es **macht** die Beweiskette erstmals von Ende zu Ende prüfbar: regulatorischer Paragraph → Dimension (D01–D27) → Implementierung `file:line` → datierter Basisstand → (sobald Substrate ausgeliefert) externer Föderationszeuge.
+* Es **verpflichtet** den ACCORD dazu, dieses Addendum mit jeder Version unter dem dann aktuellen Agent-Release und Basisstand zu erneuern, damit der Bereitschaftsanspruch nie stillschweigend veralten kann.
+
+---
+
+*Frühere Addenda: keine. Dies ist das erste.*

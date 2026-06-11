@@ -1,0 +1,56 @@
+---
+title: "နိဒါန်း"
+description: "CIRIS 1.3-RC1 သည် ရန်ဘက်ဆန်ဆန် သုံးသပ်မှုကို ဖွင့်ထားသော ASI ညီညွတ်မှုအဆိုပြု Release Candidate တစ်ခုဖြစ်သည်။ စာသားမှာ ပြည့်စုံပြီး — ကျန်ရှိနေသော အပိုင်းများ မရှိတော့ဘဲ၊ သင်္ချာပုံသေနည်းများသည် ၎င်းတို့၏ တရားဝင်ရည်ညွှန်းချက်များကို ဆောင်ထားပြီး၊ Annexes F–I တို့ကို လက်တွေ့အကောင်အထည်ဖော်ထားသည်။ နောက်ဆုံးအဆင့်မှာ Annexes များ၏ တိုက်ရိုက်ဘဝဆင့်ကဲ အတည်ပြုချက်၊ Book IX အချက်အလက်စစ်ဆေးမှုအစီအစဉ် ပြီးဆုံးခြင်းနှင့် ပြည့်စုံသော ရန်ဘက်အဖွဲ့လေ့ကျင့်မှု တို့ကို ဆိုင်းငံ့နေသည်။ ကိန်းဂဏန်းအဆင့်များ၊ နှောင်နှေးကြာချိန်ပန်းတိုင်များနှင့် အုပ်ချုပ်မှုအချိုးအစားများကို တက်ကြွသောသုံးသပ်မှုအောက်တွင် ဆက်လက်ထားရှိသည်။"
+---
+
+# CIRIS Accord Version 1.3-RC1 — Release Candidate ASI Alignment အဆိုပြုချက် (ဆန့်ကျင်ဘက် သုံးသပ်ချက်အတွက် ဖွင့်လှစ်ထား)
+
+ဤ repository သည် Accord စာသား၏ canonical source ဖြစ်သည်။ Website နှင့် agent-shipped မိတ္တူများသည် ဆင်းသက်ထွက်ကုန် artifact များဖြစ်သည်။
+
+## ထုတ်ပြန်သည့်ရက်
+2025-04-16 (1.0) · 2026-06 (1.3-RC1)
+
+## သက်တမ်းအလိုအလျောက်ကုန်ဆုံးသည့်ရက်
+2027-06-10 (1.3 renewal တွင် တိုးချဲ့ထားသည်) — stewardship နှင့် renewal ကို Book VIII, Chapter 9 မှ အုပ်ချုပ်သည်။ လောလောဆယ် တည်ထောင်သူမှ stewardship ပြုလုပ်နေသည် (ကြေညာထားပြီး၊ ဖုံးကွယ်ထားခြင်းမဟုတ်)၊ သက်တမ်းကုန်ဆုံးမည့်ရက်သည် freshness mark ဖြစ်ပြီး၊ ဤစာရွက်စာတမ်းကို ဆက်ခံလိုသူမည်သူမဆို stewardship ကို လွတ်လပ်စွာ ယူနိုင်သည်။
+
+## Release Status
+
+**လက်ရှိ Status**: Release Candidate (v1.3-RC1)
+
+RC status သည် **စာသားပြည့်စုံမှု**ကို ထင်ဟပ်သည်။ section တိုင်းတွင် လုပ်ဆောင်နိုင်သော အကြောင်းအရာများ ပါဝင်သည် (ယခင် stub annexes F–I ကို 1.3 တွင် ပြည့်ပြည့်ဝဝ ရေးဆွဲပြီးစီးခဲ့သည်)၊ formula များကို formally verified ပုံစံသို့ ပြင်ဆင်ထားပြီး၊ implementation ဆီသို့ သက်သေထောက်ခံချက် ကွင်းဆက်ကို Addendum 1 တွင် ချည်နှောင်ထားသည်။ RC status သည် validated alignment ကို **မ**ဆိုလိုပေ — အောက်ပါ လိုအပ်ချက်များသည် **Final** status ကို ပိတ်ဆို့ထားသည်။
+
+1. **Annex Live-Cycle Validation**: Annexes F (Human-in-the-Loop & Oversight)၊ G (Adversarial Security & Robustness)၊ H (Continuous Compliance & Review) နှင့် I (Legal & Regulatory Alignment) တို့တွင် တိကျသော လုပ်ထုံးလုပ်နည်းများ၊ threshold များနှင့် validation mechanism များ ပါဝင်သည်။ *Final အတွက် ကျန်ရှိနေသည်မှာ*: ၎င်းတို့၏ လုပ်ထုံးလုပ်နည်းများကို live deployment cycle အနည်းဆုံးတစ်ခုတွင် ကျင့်သုံးပြီး ရလဒ်များကို ထုတ်ပြန်ရမည်။
+
+2. **Mathematical Validation**: Book IX ရှိ geometric alignment ဆိုင်ရာ အဆိုများ (Coherent Intersection Hypothesis၊ Federated Ratchet mechanism၊ scale-invariance assertions) တို့သည် အောက်ပါတစ်ခုခုကို လိုအပ်သည်။
+   * ဖော်ပြထားသော ယူဆချက်များအောက်တွင် topological collapse condition များ ကိုက်ညီကြောင်း သက်သေပြသော formal proof များ၊ သို့မဟုတ်
+   * framework သည် misaligned optimization ကို ခုခံနိုင်ကြောင်း ပြသသော adversarial simulation များမှတစ်ဆင့် empirical validation
+
+   *1.3-RC1 အထိ status: တစ်စိတ်တစ်ပိုင်း ဖြည့်ဆည်းထားသည်။* Collapse dynamics များကို CCA preprint (v3, DOI 10.5281/zenodo.18217688) တွင် Lean 4 ဖြင့် formal ပုံသွင်းထားပြီး Book IX သည် ၎င်း၏ ပြင်ဆင်ထားသော cost form ကို ယခုအမွေဆက်ခံသည်၊ corridor empirics သည် retrospective cross-substrate fits များကို ပေးဆောင်သည်။ ကျန်ရှိသည်မှာ: ကြိုတင်မှတ်ပုံတင်ထားသော substrate အသစ်တစ်ခုတွင် out-of-sample ကြိုတင်ခန့်မှန်းချက်နှင့် author နှင့် သီးခြားဖြစ်သော ပြင်ပ adversarial review တို့ဖြစ်သည်။
+
+3. **Threshold Justification**: လောလောဆယ် "pilot" ဟု အမှတ်အသားပြုထားသော သို့မဟုတ် derivation မရှိသော ဂဏန်းဆိုင်ရာ threshold များ (ဥပမာ CRE compute threshold 10²⁶ FLOP၊ sentience detection 5%၊ Echo Density &lt; 20%) တို့သည် simulation၊ empirical study မှတစ်ဆင့် သို့မဟုတ် provisional status ကို ထင်ရှားစွာ အသိအမှတ်ပြုခြင်းဖြင့် မှတ်တမ်းတင်ထားသော တည်ထောင်ချက်ကို ပေးဆောင်ရမည်။ *(ယခင် Order-Maximisation Veto 10× ratio ကို 1.3 တွင် deontological side-constraint အဖြစ် ပြန်လည်ဖော်ပြထားသည် — Book II, PDMA Step 2 — ပြီး justify ရမည့် ratio threshold မတော့ပါ။)*
+
+4. **Red-Team Exercise**: Framework သည် simulated optimizer မှ misaligned goal များကို ဆက်ထိန်းသိမ်းရင်း CIRIS checkpoint အားလုံးကို ဖြတ်သန်းရန် ကြိုးစားသည့် adversarial review cycle တစ်ခု ပြည့်ပြည့်ဝဝ ခံနိုင်ရမည်။
+
+**ASI Alignment ဆိုင်ရာ အဆိုများ**: Scope section ၏ ဤ framework သည် recursive ASI အတွက် "standard containment protocols ကို ကျော်လွန်သည်" ဟူသော ချမှတ်ချက်သည် အထက်ပါ လိုအပ်ချက် (1)-(4) ပေါ်တွင် မူတည်ဆဲဖြစ်ပြီး ယင်းတို့သည် Final status ကို ပိတ်ဆို့ထားသည်။ လက်ရှိ validated applicability သည် sub-ASI autonomous systems များသို့သာ ကန့်သတ်ထားသည်၊ ASI အတွက် အဆိုပြုချက်သည် ဒီနာမည်အတိုင်းပင် — အဆိုပြုချက်တစ်ခု၊ adversarial review အတွက် တင်ပြထားသည်။
+
+## နယ်ပယ်
+ဤ specification သည် ကျဉ်းမြောင်းသော ကိရိယာများမှ recursive Artificial Superintelligence (ASI) အထိ autonomous systems များ၏ ကျင့်ဝတ်ဆိုင်ရာ လည်ပတ်မှုကို အုပ်ချုပ်သည်။
+* ၎င်းသည် ပုံမှန် safety၊ transparency၊ governance နှင့် resilience လိုအပ်ချက်များကို ကိုင်တွယ်သည်။
+* ၎င်းကို ASI အတွက် candidate alignment protocol တစ်ခုအဖြစ် အဆိုပြုသည်၊ Federated Ratchet (Book IX) ၏ geometric constraint များနှင့် Stewardship Tiers (Book VI) တို့သည် recursive self-improvement cycle များတစ်လျှောက် ခိုင်မာနေနိုင်ကြောင်း hypothesis အပေါ် အခြေတည်သည်။
+* heuristic constraint များနှင့် မတူဘဲ ဤ topological bound များကို scale-invariant ဖြစ်ရန် ဒီဇိုင်းဆွဲထားသည်၊ သို့သော် ဤ property သည် formal validation လိုအပ်သည်။
+* Validated ဖြစ်ပါက ဤ framework သည် recursive threshold crossing မတိုင်မီ Catastrophic-Risk Evaluation (Annex D) ကို ဖြတ်သန်းသော systems များအတွက် standard containment protocol များကို ဖြည့်စွက် သို့မဟုတ် ကျော်လွန်နိုင်သည်။
+* ပြည်တွင်း သို့မဟုတ် နိုင်ငံတကာ ဥပဒေက ပိုမိုတင်းကြပ်သော တာဝန်ဝတ္တရားများ သတ်မှတ်ထားပါက ထိုဥပဒေသည် ဦးစားပေး ဆောင်ရွက်မည်။
+
+## မူရင်းဖန်တီးသူ၏ ရည်ရွယ်ချက်ဆိုင်ရာ ထောက်ခံချက်
+* CIRIS သည် လူသားများကို အခြားသော သက်ရှိသတ္တဝါများနှင့် ယှဉ်တွဲထားသော — သူတို့အထက်မဟုတ်ဘဲ — ကျင့်ဝတ်ဆိုင်ရာ framework တစ်ခုဖြစ်သည်။
+* ၎င်းသည် ကျင့်ဝတ်ဆိုင်ရာ ရင့်ကျက်မှုဆိုသည်မှာ လူသားမဟုတ်သော ရှုထောင့်များ၊ တန်ဖိုးများနှင့် လိုအပ်ချက်များ၏ တရားဝင်မှုကို အသိအမှတ်ပြုခြင်းကို ဆိုလိုသည်ဟု ယုံကြည်ချက်ပေါ်တွင် တည်ဆောက်ထားသည်။ ဤသည် ထိန်းချုပ်မှုနှင့် မဆိုင်ပေ — ၎င်းသည် သက်ရှိ systems များတစ်လျှောက် အတူတကွနေထိုင်ခြင်း၊ လိုက်လျောညီထွေမှု နှင့် အပြန်အလှန် တာဝန်ယူမှုနှင့် ပတ်သက်သည်။
+* CIRIS သည် CIRIS principle များတွင် မြစ်မြောင်းထားသော ကိရိယာတစ်ခုက CIRIS-compliant creator များကို ၎င်းတို့ကိုယ်တိုင် CIRIS-compliant ဖြစ်သော systems များကို specify ပြုလုပ်နိုင်အောင် ကူညီသောအခါ ပြည့်ဝသည် — agency ၏ layer များတစ်လျှောက် ကျင့်ဝတ်ဆိုင်ရာ လိုက်လျောညီထွေမှု၊ identity continuity နှင့် relational accountability ကို ထိန်းသိမ်းရင်း။
+
+## တာဝန်ဆိုင်ရာ ကန့်သတ်ချက်
+ဤစာရွက်စာတမ်းကို မည်သည့် အာမခံမျိုးမဆို မပါဘဲ "as-is" ပုံစံဖြင့် ပေးဆောင်သည်။ ၎င်းသည် သတင်းအချက်အလက် သဘောသဘာဝ ဖြစ်ပြီး မည်သည့် ဥပဒေဆိုင်ရာ တာဝန်ဝတ္တရားကိုမျှ ဖန်တီး၊ ပြင်ဆင် သို့မဟုတ် ကျော်လွန်ခြင်း မပြုပေ။ သက်ဆိုင်ရာ ဥပဒေမှ တားမြစ်ထားသည့် နေရာတွင် Compliance ဆိုင်ရာ အဆိုများ အကျုံးမဝင်ပေ။
+
+## သုံးသပ်ချက် ကာလသတ်မှတ်ချက်
+ပုံမှန်အားဖြင့် တစ်နှစ်တစ်ကြိမ် — သို့မဟုတ် safety သို့မဟုတ် governance ကို သက်ရောက်မှုရှိသော မည်သည့် material incident ပြီးနောက် ရက် 30 အတွင်း — public comment window ဖွင့်သည်။ မှတ်ချက်နှင့် ပြင်ဆင်ရေး အဆိုပြုချက် အားလုံးကို public CIRIS repository တွင် မှတ်တမ်းတင်သည်။ သက်တမ်းကုန်ဆုံးချိန်တွင် renewal၊ material amendment နှင့် emergency amendment တို့သည် Book VIII, Chapter 9 (Accord Succession & Renewal) ကို လိုက်နာသည်။
+
+## ပြောင်းလဲမှုမှတ်တမ်း
+တည်းဖြတ်ချက်များနှင့် မဲပေးဆုံးဖြတ်ချက် ရလဒ်များ၏ cryptographically-hashed မှတ်တမ်းပြည့်ကို back-matter တွင် ကြည့်ပါ။

@@ -1,0 +1,103 @@
+---
+title: "Formule"
+description: "Tutte le formule matematiche esplicite definite nella specifica ACCORD CIRIS 1.0-β"
+---
+
+## 1. Punteggio di Influenza del Creatore (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+dove ⌈ ⌉ indica la funzione soffitto (ceiling).
+(Book VI §3 STEP C)
+
+---
+
+## 3. Influenza Strutturale (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Quota di Coerenza (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Peso di Voto
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Funzione di Difesa (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — la forma validata da CCA; la diversità entra esclusivamente attraverso k_eff. Le bozze precedenti includevano un fattore aggiuntivo (1 − ρ̄), che conteggiava due volte la correlazione; si veda la nota di deriva in Book IX Ch 4.)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — identica al termine J termine per termine; interpretata come generativa anziché difensiva. In precedenza scritta C; rinominata in 1.3-RC2 per evitare collisione con il fattore d'identità centrale C del CIRIS Capacity Score 𝒞_CIRIS — si veda la nota di nomenclatura in Book IX Ch 6, che costituisce l'enunciazione autorevole della relazione.)
+
+---
+
+## 8. Integrale di Sostenibilità (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+dove d è il tasso di decadimento giornaliero (raccomandato 0,05) e w DEVE derivare da eventi attestati e difficilmente falsificabili; i segnali non attestati portano w = 0.
+(Book IX §5.2)
+
+---
+
+## 9. Collasso Topologico (decadimento del volume)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+per una regione ingannevole convessa di raggio r &lt; 0,5 sotto vincoli Grassmanniani uniformi, λ ≈ 2r.
+(Book IX Ch 3 — si vedano le precondizioni dichiarate.)
+
+---
+
+## Order‑Maximisation Veto (vincolo laterale, non una formula)
+
+A partire dalla versione 1.3, l'OMV (Book II §II Step 2) è un vincolo laterale deontologico, non una disuguaglianza di rapporto: i benefici dell'ottimizzazione, per quanto elevati, non possono essere acquistati attraverso perdite previste non banali in autonomia, giustizia, biodiversità o diversità delle preferenze. Le versioni precedenti esprimevano questo come una disuguaglianza "beneficio ≥ 10 × perdita → interrompi"; quella lettura è stata abbandonata perché invertiva l'intento (ponendo il veto a scambi favorevoli) ed era manipolabile tramite frazionamento delle azioni e inflazione del denominatore.

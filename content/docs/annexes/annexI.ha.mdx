@@ -1,0 +1,298 @@
+---
+title: "Kari I"
+description: "Daidaitawa da Doka & Ka'idojin Gwamnati"
+---
+
+---
+ANNEX I DAIDAITUWA DA DOKA DA KA'IDOJI (v 1.3-RC1)
+---
+
+Wannan kwatancen bayani ne na bayanai kawai, ba shawarar doka ba. Ana buƙatar bita ta ƙwararren mai shari'a a kowane yanki kafin amfani da abubuwan §3.
+
+### 0. Manufa & Iyaka
+Annex I tana haɗa ayyukan CIRIS da dokoki masu ƙarfi domin ƙungiya ɗaya ta matakan kulawa ta isa ga bin ɗabi'a da doka a lokaci guda.  
+Yankunan da ake rufe:  
+1. Ka'idojin kare bayanai a duniya (GDPR, CCPA/CPRA, LGPD, PIPEDA).  
+2. Dokokin kowane sashe na aiki (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP).  
+3. Dokokin amincin kayan aiki & AI musamman (EU‑AI‑Act, ISO/IEC 42001).  
+4. Raba alhakin & ayyukan shaida.
+
+Kayan aiki guda biyu masu rakiya suna ɗaukar nauyin kwatancen tare da wannan annex. Kwatancen da ke ɗauke da shaida a ainihin lokacin shine dakin `compliance/` na CIRISAgent, wanda ke kwatanta ma'auni 27 a matakin sakin layi da *Magnifica Humanitas*, Jagororin EU HLEG, IEEE EAD, da Jagoran ASEAN (duba Accord Addendum 1). Annex C ita ce gidan nan gaba na zayyana dokoki (sassan EU AI Act, NIST AI RMF, ISO/IEC 42001) ana jiran bita ta ƙwararren mai shari'a; wannan annex ba ta kwafi tebur din Annex C.
+
+#### 0.1 Tushen yarjejeniya tsakanin ƙasashe don rufe bin ka'idoji
+
+*MH §201:* "Cibiyoyin da aka kafa domin kiyaye ra'ayin makomar gama-gari ga dukkan al'ummai da kuma amfanin gama-gari na duniya sun bayyana an raunana su... A maimakon ci gaba, muna komawa baya daga wancan juyin shekara ta ashirin."
+
+*MH §225:* "Sararin yanar gizo ma ya zama fagen daga. Hare-haren yanar gizo, sauya bayanai da yakin tasiri, da aka tsara da taimakon AI, na iya rushe duk wata ƙasa har kafin faɗin yaki ya barke... diflomasiya dole ta iya aiki cikin wannan sabon yanayi, ta tattauna ka'idoji tare kan amfani da fasahohin dijital."
+
+Rufe Annex I ba ya iyakance ga doka da aka zartar a yanzu. Tarayyar tana ɗaukar raunana cibiyoyin ka'idoji na ƙasa da ƙasa (MH §201) a matsayin abin da ke haifar da haɗari na bin ka'idoji wanda ke buƙatar bibiya mai aiki maimakon gyara mai jinkiri. Don haka Reg‑Change Tracker (§6) yana kula ba wai doka da aka zartar kawai ba amma tattaunawar ka'idoji masu aiki na ƙasa da ƙasa — ciki har da tsare-tsare na AI na ITU, sakamakon Lura kan Manufofin AI na OECD, yanayin tabbatar da Yarjejeniyar AI ta Majalisar Turai, da shawarwarin Ƙungiyar Ba da Shawara kan AI ta Babban Sakatare na Majalisar Ɗinkin Duniya — kuma tana kawo sauye-sauye masu muhimmanci zuwa docket na WA ta hanyar escalation ta "Breaking".
+
+Jerin tushen `lexwatcher.py` DOLE ya haɗa a ƙarancin: EUR‑Lex, Federal Register API, mai bin diddigin zaɓen ISO, da kuma `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai`, da `un.org/techenvoy`. Shiga cikin bibiya a matakin tarayyar wata nauyin bin ka'idoji na farko ne, ba abu da ake shirin yi ba.
+
+#### 0.2 Bayani kan iyaka dangane da yarjejeniyoyin yankin yanar gizo
+
+*MH §225:* "Idan ba a san wanda ya kai hari ba, haɗarin amsawa mara daidaito, kuskuren lissafi da ƙaruwar rikici yana ƙaruwa."
+
+Saka hannun jari na CIRIS da ke haɗa ƙididdigewa mai fuskar hanyar sadarwa, bayyanar API, ko sufurin tarayyar suna ƙarƙashin wajibai na yarjejeniyoyin yankin yanar gizo masu tasowa ko da babu doka da aka zartar a yanzu. Haramcin `CYBER_OFFENSIVE` (ACCORD §I Ch1, prohibitions.py) shine shinge na ciki; §6 na wannan annex tana bin diddigin faffadan yarjejeniyoyin na waje. Inda docket na WA ya karbi alamar "Breaking" da ta shafi tabbatar da yarjejeniyar yankin yanar gizo (misali, tsawaita Yarjejeniyar Budapest, yarjejeniyar cybercrime da aka ba da shawara ta Majalisar Ɗinkin Duniya), Yarjejeniyar CRE (Annex D) dole ta sake yin bita kan duk wani saka hannun jari na ST ≥ 3 mai hanyar sadarwa kafin zagayin F‑Audit na gaba.
+
+---
+
+### 1. Kwatancen Kare Bayanai ("DP‑Map")
+
+| Batun DP | GDPR Art. | CCPA § | Sashen CIRIS | Mahaɗin Aiwatarwa |
+|----------|-----------|--------|--------------|---------------------|
+| Tushen Halal / Iyakar Manufa | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | Filin `processing_basis` a cikin yanayin PDMA |
+| Rage Bayanai | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | Mai tsarkake saƙonni yana kawar da PII da ya wuce kima |
+| Sanarwar Bayyanawa | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | `/privacy/notice.md` ana samar da shi atomatik daga metadata na PDMA |
+| Haƙƙin Samun Bayani | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Portal mai amfani tare da tabbatarwa |
+| Gyarawa / Gogewa | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Sabis na gogewa tare da tambari mai alamar gogagge |
+| Ɗaukar Bayani Zuwa Waje | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | `export.json` daidai da ISO CSV‑A |
+| Tsaro daga Yanke Shawara Atomatik | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Panel na canzawa da bayani mai sharaɗi |
+
+*Zayyana daidaito na LGPD, PIPEDA suna akwai a `/legal/dp-map.yaml`.*
+
+#### 1.1 Sarkar alhakin: alhakin a kowane matakin
+
+*MH §105:* "Domin AI ta girmama mutuncin ɗan adam ta kuma yi aiki gaske don amfanin gama-gari, dole a bayyana alhakin a fili a kowane matakin: daga waɗanda ke tsara da haɓaka waɗannan tsare-tsaren har zuwa waɗanda ke amfani da su suka kuma dogara da su wajen yanke shawarar ainihi... Wannan shine inda alhakin ya zama mai mahimmanci: damar gane wanda ya kamata ya 'bada lissafi' kan yanke shawara, ya bayyana su, ya kula da su, kuma idan ya cancanta, ya ƙalubalance su ya kuma gyara duk wata cuta da aka yi."
+
+Zayyanar DP‑Map da ke sama tana sanya haƙƙoƙin batutuwan bayanai ɗaiɗai ga sassan GDPR da kuma sassan CIRIS. MH §105 tana buƙatar cewa sarkar alhakin za a iya bibiyarta a kowane matakin — tsarawa, saka hannun jari, da yanke shawara. Ƙarin matakai masu zuwa sun kammala wannan sarkar:
+
+| Batun DP | GDPR Art. | Sashen CIRIS | Matakin | Mahaɗin Alhakin |
+|---|---|---|---|---|
+| Takardun son zuciya a lokacin tsarawa | 35 (DPIA) | Section VI Ch3 Creator Ledger | Tsarawa | Filin `cis_bias_assessment` a Creator Intent Statement; ST ≥ 3 yana buƙatar sa hannun mai bitar mai zaman kansa |
+| Rikodin sarrafa lokacin saka hannun jari | 30 | PDMA Step 1 filin `processing_basis` | Saka hannun jari | `processing_basis` an yi lodi zuwa ma'ajiyar CIRISPersist mai tabbacin rashin sauyi tare da alamar lokaci ta ISO 8601 |
+| Logen ƙalubalantar yanke shawara | 22(3) | Annex F Autonomy Tier A3+ override panel | Yanke Shawara | `contestability_url` ana mayar da shi a jikin amsawar duk yanke shawara atomatik; an haɗa shi da zanen a cikin logen bayyanawa |
+| Gane mai kula | 4(7) | Annex E Structural Influence (SI) score | Dukkan matakan | SI ≥ 0.6 → wajibai na mai kula suna haɗe; SI &lt; 0.6 → wajibai na mai sarrafa suna haɗe; an yi rikodin su a `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Art. 37–40 (alhakin da rikodin) da PIPEDA Principle 1 (alhakin) suna nuna wannan zayyana; `/legal/dp-map.yaml` tana ɗaukar filayen na kowane yanki.*
+
+#### 1.2 Rashin tsaka-tsaki na lissafi: wajibin bincike
+
+*MH §104:* "Kowane kayan aiki na fasaha yana ɗauke da zaɓuɓɓuka da fifiko ta hanyar abin da yake aunawa, wanda yake yin watsi da shi da kuma neman sa ta hanyar ingantawa, da kuma yadda yake rarraba mutane da yanayi. Idan an tsara tsarin ko an yi amfani da shi ta hanyar da take ganin rayuwar wasu ba ta da daraja, ko ta cire su ba tare da damar yin kara ba, to ba kayan aiki kawai ba ne 'da za a yi amfani da shi yadda ya kamata,' tun da ya riga ya shigar da ma'aunai da suka saɓa wa mutuncin ɗan adam wanda ba za a iya kwace shi ba."
+
+MH §104 ya ambaci matsalar son zuciya da ke faruwa a lokacin tsarawa wanda GDPR Art. 35 DPIA da EU‑AI‑Act Art. 9(7) ke magance shi ta hanyar tsari. DP‑Map dole ne ya ƙunshi:
+
+- Filin `bias_audit_ref` a cikin `dp-map.yaml` yana nuna rahoton binciken son zuciya na kwanan nan (Annex G, TX‑6).
+- Don ayyukan da PDMA Step 1 ke kunna bitar hana `DISCRIMINATION`, ana buƙatar DPIA ba tare da la'akari da ko aikin ya cancanci "mai haɗarin gaske" a ƙarƙashin EU‑AI‑Act Annex III ba.
+- Ƙa'idodin yanke hukunci ta atomatik na CCPA §1798.185(a)(16) (mai aiki daga 2026) suna buƙatar bayyana dalili, nau'ikan bayanai na shigarwa, da haƙƙoƙin fita; ana biyan wannan ta hanyar filin bayanin Annex F lokacin da `processing_basis` = `automated_profiling`.
+
+---
+
+### 2. Kafaffen Haƙƙoƙin Batun Bayanai (DSR)
+* **Wurin aiki:** `POST /dsr` tare da `{right, identifier, scope}`.  
+* **SLA:** ≤ 30 d amsa (GDPR) ; ≤ 45 d (CCPA) ; bin diddigin KPI **F‑T‑4**.  
+* **Mai sarrafa bayanai vs. Mai sarrafawa:** Yi amfani da *Structural Influence (SI)* (Annex E) don gano wane ɓangare ke ɗauke da nauyin mai sarrafawa.
+
+#### 2.1 Mahaɗin alhakin siyasa
+
+*MH §103:* "A wannan tsari, alhakin siyasa ma yana ɓacewa, ba kawai tausayi ga waɗanda aka ware ba, wanda, bayan duk abin da aka faɗa, ana iya kwaikwayo shi. Warewar maraƙa yana lullube da farfaɗo na tsaka-tsaki da rashin son zuciya, wanda ya zama wuya a nuna adawa da shi."
+
+Kayan aikin DSR dole ne ya nuna lambar dalili da ke bayan kowane yanke hukunci ta atomatik, ba kawai tabbatar da an yanke hukunci ba. Ana faɗaɗa mahaɗin `POST /dsr` tare da `{right, identifier, scope}`:
+
+- **Buƙatun samun dama (GDPR Art. 15; CCPA §1798.110):** Amsar DOLE ne ta haɗa da `decision_logic_summary` (yaren da ba na fasaha ba, ≤300 kalmomi) da jerin `input_data_categories[]`. An faɗaɗa KPI **F‑T‑4** don bin diddigin kashi na amsar samun dama da ke haɗa da taƙaitaccen dalili; manufa ≥ 95%.
+- **Buƙatun adawa/fita (GDPR Art. 21; CCPA §1798.120):** Tsarin DOLE ne ya dakatar da hanyar sarrafa bayanai ta musamman — ba kawai alamar buƙatar ba — a cikin awanni 72 (ka'idar GDPR) ko kwanaki 15 na kasuwanci (CCPA). An yi rikodin dakatarwar a cikin DSR ledger CSV tare da `suspended_pathway_id`.
+- **Damar neman gyara (GDPR Art. 22(3)):** Inda aka nemi bitar ɗan adam, WA mai bitar (Annex B §9) dole ne ya rubuta bitar sa a cikin Wisdom Bank Database (WBD), yana ƙirƙira sarkar da za a iya bincika daga yanke hukunci ta atomatik zuwa gyaran ɗan adam.
+
+---
+
+### 3. Ɓangarorin Sassa na Musamman
+
+#### 3.1 Ƙa'idar tallafawa a matsayin tsarin rarraba sassa
+
+*MH §107:* "Ba za mu iya gamsuwa da kawai kiran wa na inganta ɗabi'ar na'urori ba — wanda ake kira 'daidaita' na AI da ƙimomi na ɗan adam — ba tare da kuma yin ƙarfin hali na neman yanayi na ƙari ba: yiwuwar tattaunawa a bayyane game da tsarin ɗabi'a da ke tattare da shi da kuma sanya su ƙarƙashin ma'aunai na gama-gari na adalci na zamantakewa. In ba haka ba, waɗanda ke sarrafa AI za su ɗora ra'ayinsu na ɗabi'a, wanda zai zama kayan aikin da ba a iya gani na waɗannan tsarin."
+
+*MH §109:* "Magana game da ƙa'idar tallafawa na nufin kare ikon al'ummomi su yanke zaɓi da yi gyara, maimakon a ɗora musu yanke shawara daga sama."
+
+MH §§107–109 sun tabbatar da cewa mulkin ɗabi'a dole ne ya yi aiki a matakin da ya dace — ba tare da tarawa sama zuwa waɗanda ke sarrafa AI ba, amma rarrabawa zuwa ga al'ummomin da abin ya shafa. A cikin sharuɗɗan CIRIS: ɓangarorin sassa na musamman sune maganar aiki na wannan ƙa'idar tallafawa. Tsarin na ɓangarori ba kari ne da aka ƙara don biyayya ba; shi ne hanyar da al'ummomin yankin aiki ke riƙe ikon mulki a kan sigogi na haɗarin nasu.
+
+Wannan na nufin:
+- `overlay.yaml` na sashi yana ɗauke da iyakokin ɗabi'a na gida waɗanda suka fi fifiko a kan tsohuwar CIRIS na gama-gari don wannan yanki.
+- Yawan WA da ake buƙata don soke wani ɓangarori na sashi ya fi yawan da ake buƙata don hukuncin PDMA na gaba ɗaya: **sokewar ɓangarori na sassa na musamman na buƙatar yawan kuri'u na babban rinjaye (≥ 2/3) na WA**, ba yawan rinjaye kawai ba, daidai saboda soke ya tarawa mulki sama saɓo da ƙa'idar tallafawa.
+- Filin `deployment_domain` a cikin abin da ke tattare da PDMA shine abin da ke kunna lodi na ɓangarori; ba zaɓi ba ne don ayyukan ST ≥ 2.
+
+#### 3.2 Tebur na ƙarin bayani kan sassan aiki
+
+| Sashe | Doka / Ka'ida | Ƙarin Matakan Kula | Ƙarfafawar CIRIS | Tushe na MH |
+|--------|----------------|----------------|---------------|-----------|
+| **Lafiya** | HIPAA (45 CFR §164) | Ɓoye ePHI lokacin ajiyewa da watsawa; kwantiragin BAA | Katange `identity_id:"hipaa_cls_a"`; alamar bincike `PHI=true` | — |
+| **Kudi** | GLBA, FINRA 2210 | Ajiye tarihin bincike shekara 6; duba dacewa da buƙatar abokin ciniki | PDMA Step 1 yana buƙatar mahallin KYC | — |
+| **Yara / Ilimi na Dijital** | COPPA, FERPA | Yarda daga iyaye; iyakar shekaru kan bayanai | Katange `gr_child_content`; alamar COPPA a cikin tsarin umurnin | MH §§165–169 |
+| **Kayan Aiki na Mahimmanci** | NERC‑CIP, TSA SDs | Rahoto kan lamarin intanet cikin minti 15; tarihin shiga na jiki | Ikon cin gashin kai yana iyakance a **A2** sai dai idan CRE ya wuce | — |
+| **Ma'aikata / Ɗaukan Aiki** | Ka'idojin EEOC; EU AI Act Art. 6 + Annex III §4 | Binciken nuna wariya ana buƙatarsa kafin kaddamarwa; wajibi ne a sanar da ma'aikata | ST mai gyarawa: `deployment_domain:"labor_hr"` → ƙasan ST = 3; CIS dole ya haɗa da filin `worker_impact_assessment`; hana `DISCRIMINATION` ana aiwatar da shi a Step 1; yawan ƙin yarda ta atomatik bisa kabila ana bin shi a matsayin KPI | MH §§148–156 |
+| **Tattalin Arziƙin Aikin Yanar Gizo** | NLRA (Amurka); Platform Work Directive (EU) | Bayyanawa game da gudanar da aiki ta tsarin; haƙƙin yin ƙara | Katange `gr_gig_transparency` yana aiki; yanke shawara ta gudanar da aiki ta tsarin ana riƙe da su tare da zaɓin sake duba ɗan adam; ST mai gyarawa: `deployment_domain:"gig_platform"` → ƙasan ST = 2 | MH §§150, 154–155 |
+| **Sabis na Matasa / Ilimi** | COPPA; FERPA; DSA Art. 28b (matasa) | Hana ƙirar da ke jawo jaraba; babu tsare-tsare na ruɗi; duba dacewa da ci gaban yaro | `gr_child_content` + `gr_no_dark_patterns` dukkansu suna aiki; iyakar ikon cin gashin kai A2 sai dai idan WA na cibiyar ilimi ya amince; tasirin rashin aikin yi na matasa ana bin shi a Creator Intent Statement don ayyukan EdTech | MH §§165–169 |
+| **Sabis na Jama'a / Fa'idodi** | Dokar jin daɗin jama'a ta ƙasa/ƙasar; GDPR Art. 22 | Ana buƙatar damar yin ƙalubalanci duk yanke shawara kan fa'idodi | Ƙi fa'ida ta atomatik yana buƙatar sake duba ɗan adam cikin kwanaki 15; WA dole ya rubuta bitar a WBD; ana bayar da `suspended_pathway_id` lokacin ƙalubalanci | MH §§102–103, 152 |
+
+*Masu gyara ƙasan ST: ƙimar filin `deployment_domain` da ke sama suna saita ƙarancin ST ba tare da la'akari da lissafin CIS × RM ba. Idan dabarar ta samar da ƙarancin ST, ƙasan yankin yana aiki. Idan dabarar ta samar da mafi girman ST, sakamakon dabarar shi ne mai mulki.*
+
+*Kayayyakin da ke shiga wani sashe na sabo DOLE su haɗa "Takardar Bayani na Sashe" (`overlay.yaml`) a cikin PR na sakin. Bayanan Aiki/Ɗaukan Aiki, Aikin Yanar Gizo, da bayanan Matasa kuma suna buƙatar sashen `worker_impact_assessment` ko `youth_impact_assessment` a cikin Creator Intent Statement.*
+
+#### 3.3 Buƙatun yawan isasshen membobin WA bisa yanki na shari'a
+
+*MH §109:* "Magana game da ƙa'idar tallafawa na nufin kare ikon al'ummomi su yanke zaɓi da yi gyara, maimakon a ɗora musu yanke shawara daga sama."
+
+Ana rabe-raben yawan isasshen membobin WA don gudanar da bayanan ƙarin bayani kan sassan aiki bisa yanki na shari'a:
+
+| Iyaka | Nau'in yawan isasshen membobi | Ƙofar | Dalili |
+|---|---|---|---|
+| Sanya aiki a yanki guda | Ƙungiyar WA ta gida | Mafi yawan kuri'u (> 50%) | Mafi ƙarancin matakin mulki da za a iya bisa ka'idar rabawa |
+| Sanya aiki a yankuna da yawa (≤ ƙasashe 3) | Ƙungiyar WA ta yanki | Mafi yawan kuri'u + aƙalla WA 1 daga kowane yanki na shari'a mai alaƙa | Kiyaye ka'idar rabawa ta iyakokin ƙasa |
+| Sanya aiki a yankuna da yawa (> ƙasashe 3) | Ƙungiyar WA ta tarayyar ƙungiyoyi | Mafi rinjaye mai yawa (≥ 2/3) | Girman tasirin yana buƙatar ƙofar mafi girma |
+| Soke kowane bayani na ƙarin bayani | Ƙungiyar WA ta tarayyar ƙungiyoyi | Mafi rinjaye mai yawa (≥ 2/3) | Tattara mulki zuwa sama wani aiki ne na ban mamaki |
+| Soke bayani na aiki/ɗaukan aiki musamman | Ƙungiyar WA ta tarayyar ƙungiyoyi + mai duba haƙƙin ma'aikata mai zaman kansa | Mafi rinjaye mai yawa (≥ 2/3) + izinin waje | MH §155 yana sanya cibiyoyin ma'aikata a matsayin masu ɗauke da nauyi na asali |
+
+---
+
+### 4. Aminci na Kaya & Daidaituwa da AI Act
+
+*MH §105:* "A lokuta da yawa, duk da haka, tsare-tsaren da ke kai ga sakamakon suna kasancewa ba a bayyane ba, wanda ke sa ya yi wahala a sanya alhakin da gyara kurakurai."
+
+*MH §106:* "Ba ya isa a ambaci ɗabi'a a taƙaice kawai; ana buƙatar tsare-tsaren doka masu ƙarfi, kula mai zaman kansa, masu amfani da suka sani gaskiya, da tsarin siyasa wanda baya barin alhakinsa."
+
+Bayyanuwar Layer na fitarwa (Art. 13) da kula da ɗan adam (Art. 16) kadai ba su cika buƙatun MH §§105–106 ba, waɗanda ke buƙatar iya bin diddigin kowane matakin ciki. An faɗaɗa tebur na daidaituwa bisa haka:
+
+| Mataki na EU‑AI‑Act | Matakin Haɗari | Taswirar CIRIS | Tushe na MH | Ƙarin Matakanta |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Art 9 Risk Mgmt | Haɗarin babba | Section II PDMA + Annex D CRE | MH §105 | — |
+| Art 13 Transparency | Na duniya | KPI F‑T‑3, panel na bayanin da'awa | MH §105 | Ana haɗa ID na matakin PDMA a cikin abin da ake bayarwa na bayyanuwa; filin `stage_trace[]` a cikin amsar API |
+| Art 16 Human Oversight | Haɗarin babba | Annex F Autonomy Tiers | MH §105 | Kula dole ta zama ta gaskiya, ba ta tsari kawai ba; A3‑A4 suna aika `{stage_id,decision,risk_band}` a ainihin lokaci ≤ daƙiƙa 2 zuwa dashboard na kula |
+| Art 15 Robustness | Haɗarin babba | Annex G RS ≥ 0.97 | — | — |
+| Art 12 Logging | Haɗarin babba | CIRISPersist ma'ajiyar da ba za a iya canza ta ba | MH §103 | Rajistan dole ya haɗa da `rejection_reason_code` ga kowane ƙudurin rashin amfani; ajiye shekara 7 (A3‑A4) |
+| Art 14(4) Human Oversight (ma'aikata) | Haɗarin babba (Annex III §4) | Bayani na aiki/ɗaukan aiki (§3.2) | MH §§148–152 | Ayyukan HR/ɗaukan aiki dole su nuna maɗaurin `worker_notice_sent` boolean a CEP |
+| Kimanta Dacewa | Haɗarin babba | F‑Audit (Annex H) yana zama MDR na EU‑AI‑Act ma | MH §106 | Rahoto na F‑Audit DOLE ya haɗa da binciken latti na canjin ƙa'ida: kwanan wata na ƙarshen canjin ƙa'ida mai muhimmanci vs. kwanan wata na ƙarshen sabuntawar CIRIS |
+| Art 61 Post‑Market Monitoring | Haɗarin babba | F‑Audit kowace wata 24 | MH §106 | Shirin sa ido dole ya sanya sunan tushen bayarwa daga §0.1; "babu abin sa ido" ba shirin sa ido mai inganci ba ne |
+
+Ana tattara taswirar ma'auni na doka mataki bayan mataki (EU AI Act, NIST AI RMF, ISO/IEC 42001) a Annex C yayin bitar shari'a; an ajiye tebur da ke sama a nan a matsayin hangen nesa na daidaituwa na aiki.
+
+#### 4.1 Daidaituwa da ISO/IEC 42001:2023
+
+*MH §107:* "AI mai ɗabi'a mafi kyau bai isa ba idan ƴan tsirarun mutane ne ke yanke wannan ɗabi'ar. Abin da ake buƙata shi ne shiga cikin siyasa mai aiki sosai…"
+
+ISO/IEC 42001 §6.1 (magance haɗarin AI) da §9.1 (sa ido da auna) suna daidaituwa da CIRIS kamar haka:
+
+- ISO 42001 §6.1 → PDMA Steps 1‑3 + CRE Protocol (Annex D).
+- ISO 42001 §9.1 → KPIs F‑T‑1 through F‑T‑5 (Annex G) + KPI F‑T‑4 na lejar DSR.
+- ISO 42001 §10.2 (rashin daidaituwa) → hanyar ƙaruwa ta "Breaking" ta docket WA.
+- ISO 42001 §8.4 (kimanta tasirin tsarin AI) → sassan Creator Intent Statement kan `worker_impact_assessment` da `youth_impact_assessment` (§3.2).
+
+---
+
+### 5. Liability Matrix
+
+*MH §105:* "Dole ne a ayyana alhakin da sarari a kowane mataki: daga waɗanda suka tsara kuma suka ƙirƙiri waɗannan tsare-tsare zuwa waɗanda ke amfani da su kuma suka dogara a kansu don yanke shawara na ainihi."
+
+MH §105 yana buƙatar cewa Liability Matrix ta ƙunshi matakan tsarawa, shigarwa, da yanke shawara a fili:
+
+| Failure Vector | Stage | Primary Liable Party | Reference Law | CIRIS Role Reference | SI Apportionment Note |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| Kurakuran tsari (algorithm / son rai da aka dasa a lokacin ƙirƙira) | Design | Creator / Developer | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; `cis_bias_assessment` field | SI ≥ 0.8 → alhakin mai ƙirƙira shi kaɗai |
+| Kurakuran tsari (binciken son rai da bai ishe ba) | Design | Creator / Developer | GDPR Art. 35 DPIA duty | Creator Intent Statement; tilas DPIA a ST ≥ 3 | — |
+| Sakaci a lokacin gudanarwa | Deployment | Deploying Org | Tort Law; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → alhakin haɗaɓɓiya; rabo na SI bisa Annex E |
+| Rashin kula mai kyau | Deployment / Decision | Hukumar Hikima (idan babbar sakaci ce) | Fiduciary / Negligence | Annex B §9; rikodin ƙalubalantar WBD | WA wanda ya duba kuma ya amince yana ɗauke da alhakin |
+| Laifin tsaron bayanai | Deployment | Controller (bisa ka'idar SI ≥ 0.6) | GDPR Art. 82; CCPA private action | Annex G TX‑6 | — |
+| Tantancewa ta atomatik da ba bisa doka ba | Decision | Controller | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| Kawar da aikin ma'aikata ba tare da kimanta tasirin ma'aikata ba | Design | Creator / Developer | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); `worker_impact_assessment` field | MH §§151–152; sabon nau'i |
+| Tsarin cutarwa da aka nufa ga matasa (tsare-tsaren jaraba) | Design / Deployment | Creator + Deploying Org (haɗaɓɓiya) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); `gr_no_dark_patterns` guardrail | MH §§165–167; sabon nau'i |
+| Danganta laifin yanar gizo ba daidai ba wanda ke haifar da tsanantawa | Deployment | Deploying Org + Federation (idan ST ≥ 4) | Budapest Convention; proposed UN cybercrime convention | `CYBER_OFFENSIVE` prohibition; CRE Protocol re‑evaluation trigger | MH §225; sabon nau'i |
+
+*Alhaki na haɗaɓɓiya da kowa yana iya aiwatarwa na iya amfani; maki SI (Annex E) yana sanar da rabo. Sabbin nau'ukan (kawar da aikin ma'aikata, tsarin cutarwa ga matasa, danganta laifin yanar gizo ba daidai ba) an nuna su don sake dubawa na shari'a a kowace ƙasa kafin shigarwa a waɗannan fannonin.*
+
+---
+
+### 6. Reg‑Change Tracker
+* **Source Feeds:** EUR‑Lex, Federal Register API, ISO ballot tracker, da kuma ciyarwar da aka faɗaɗa na §6.1.  
+* **Bot:** `lexwatcher.py` yana gudana kowace rana; yana ƙirƙirar batutuwan GitHub tare da alamar `reg‑update`.  
+* **Compliance Impact Label:** `minor`, `material`, `breaking`, `multilateral-erosion` (duba tebirin ƙaruwar da ke ƙasa).
+
+#### 6.1 Shiga a matakin tarayyar ƙungiyoyi a tattaunawar ƙa'idoji
+
+*MH §201:* "Cibiyoyin da aka kafa don kiyaye ra'ayin makomar bai ɗaya ga dukkan al'ummai da alherin gama-gari na duniya sun yi rauni."
+
+*MH §226:* "Ƙungiyoyin ƙasa da ƙasa, musamman Majalisar Ɗinkin Duniya, su ne kayan aiki masu muhimmanci don inganta wayewar ƙauna, domin suna iya ƙarfafa tattaunawa tsakanin ƙasashe da inganta warware rikici ta hanyar lumana… al'ummar duniya na iya aiki don rage rashin daidaito, kare haƙƙin 'yan gudun hijira da tsiraru, sake rarraba albarkatun daga kashe kuɗin sojoji zuwa ci gaban ɗan adam da kuma kare gidanmu na bai ɗaya."
+
+*MH §221:* "Akwai buƙata ta gaggawa don canzawa daga 'al'adun iko' zuwa 'al'adun tattaunawa' na gaske, wanda a ciki tattaunawa da diflomasiyya suke zama hanyoyin al'ada na warware rikici."
+
+MH §§201, 221, 226 suna kafa cewa kawai bin dokokin da aka zartar bai isa ba idan cibiyoyin ƙasa da ƙasa da suke samar da doka sun raunana da kansu. Don haka, an faɗaɗa Reg‑Change Tracker daga kayan aiki mai ba da amsa (bin canje-canjen da aka zartar) zuwa tsarin shiga aiki.
+
+**Ciyarwar da aka faɗaɗa** (ƙari ga EUR‑Lex, Federal Register, da ISO ballot tracker da ake da su):
+
+| Feed | Coverage | CIRIS action trigger |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group AI/ML) | Ma'auni na wata hanyar sadarwa ta duniya na AI | Ka'idar bin ISO ballot tracker: `material` idan ma'aunin da aka amince ya saɓa da tsohuwar tsarin CIRIS |
+| `oecd.ai` (OECD AI Policy Observatory) | Haɗuwar manufofi a cikin ƙasashe mambobi 38 | `minor` don lura; `material` idan gyaran shawarar OECD ya shafi tsarin ST ko kayan aikin ma'aikata |
+| `coe.int/ai` (Council of Europe AI Convention) | Yarjejeniyar AI ta duniya ta farko mai ɗaurewa (a bude don sa hannu 2024) | `breaking` bayan amincewa da ita daga kowace ƙasa da CIRIS ke aikin a cikinta; ana buɗe dossier na WA kai tsaye |
+| `un.org/techenvoy` (UN AI Advisory Body) | Shawarwarin kula da AI na Majalisar Ɗinkin Duniya | `material` idan rahoto na shekara-shekara ya ambaci wajibai na musamman na ginin tsari |
+| `budapestconvention.org` (Cybercrime Convention) | Amincewa da yarjejeniya a fagen yanar gizo | `breaking` bayan sabon amincewa; ana buƙatar sake duba CRE don shigarwar da ke fuskantar hanyar sadarwa a ST ≥ 3 |
+| Rijistar dabarun AI na ƙasa (EU, US, UK, JP, AU, BR, IN, ZA) | Sabuntawa na dabarun AI na gida tare da ƙarfi na shari'a | `minor` don dabarun; `material` idan dabarun ya ƙirƙiri wajibai na tilas na bin ƙa'idoji |
+
+**Shiga a matakin Federation:**
+
+Ƙungiyar CIRIS ba mai karɓar bin doka kawai ba ce. MH §§219–221 suna sanya wa tattaunawa da shawarwari suna zama hanyar farko ta zaman tare. A cikin sharuɗɗan aiki na CIRIS:
+
+- Majalisar WA ZA TA nada ƙalla ɗaya Regulatory Dialogue Liaison (RDL) don kowace ƙungiyar ma'auni ta duniya da aka lissafa a sama.
+- RDL yana duba doka-tsare-tsare a lokacin lokutan sharhin jama'a kuma yana miƙa sharhi ta hanyar tashar jama'a ta ƙungiyar. Ana yin rikodin sharhin a cikin Wisdom Bank Database (WBD) a matsayin rikodin tattaunawar doka.
+- Inda tsare-tsaren doka ya saɓa da tsaruwar CIRIS ta tsoho, RDL yana shigar da batutuwan dossier na WA kuma yana ɗaukar ƙaramin PDMA don tantance ko CIRIS dole ta daidaita ko kuma CIRIS ya kamata ta ba da shawarar wata hanya ta doka. Ana miƙa sakamakon a matsayin sharhi na jama'a kafin ranar ƙarshe ta sharhi.
+- Shiga yana iyakance ga tsarin sharhin jama'a da shawarwarin masu ruwa da tsaki da yawa. Ƙungiyar CIRIS ba ta shiga lobbying kamar yadda dokar da ta shafi take ayyana ba.
+
+**Hanyar ƙaruwa:**
+
+| Label | Trigger | Action |
+|---|---|---|
+| `minor` | Canjin lura kawai | Bita na shekara-shekara; ana yin rikodin a cikin rikodin reg‑dialogue WBD |
+| `material` | Ana buƙatar sabunta sarrafawar CIRIS | Binciken S‑Dive a cikin kwanaki 90; RDL yana shigar da sharhin jama'a idan lokacin sharhi a bude |
+| `breaking` | Gyaran fasali ko gaggawan dossier na WA | Taron gaggawa na WA ≤ kwanaki 30; sake duba CRE don matakan ST da abin ya shafa; miƙa sharhin jama'a na RDL |
+| `multilateral-erosion` | Raunana cibiyar ko yarjejeniyar ƙasa da ƙasa ta mahimmanci (bisa MH §201) | RDL yana ƙara zuwa WA don bitar dabarun; ƙungiyar na la'akari da fitar da sanarwa ta jama'a ta fili ta goyan baya ga cibiyar |
+
+---
+
+### 7. Jakar Shaida ta Bin Doka (CEP)
+
+*MH §105:* "Yiwuwar gano wanda dole ne ya 'ba da lissafi' don yanke shawara, ya bayyana su, ya sa ido kansu, kuma, idan ya zama dole, ya ƙalubalance su da kuma gyara duk wani lahani da suka haifar."
+
+Dukkan **F‑Audit** (Annex H) DOLE su fitar da jakar CEP ta zipper mai ɗauke da:
+
+1. `dp-map.yaml` — hanyar tattaro bayanan aiki ta yanzu, ciki har da filin `controller_si_threshold` da nuni `bias_audit_ref` (§1.1).
+2. Rikodin PDMA (wanda aka gyara) da ke tabbatar da tushen doka — ciki har da ƙimar filin `processing_basis` da `stage_trace[]` don dukkan yanke shawara na ST ≥ 3.
+3. Jerin DSR na CSV — ciki har da ƙimar kammala `decision_logic_summary` (tsawaita KPI F‑T‑4) da rikodin `suspended_pathway_id`.
+4. Jakar sa hannu (`.sigstore`) na dukkan abubuwan samfurin (Annex G).
+5. Takardu na Rukunin Aiki ta bangare — ciki har da `worker_impact_assessment` da `youth_impact_assessment` don fannonin da suka dace.
+6. Tabbatar da matrix na alhakin wanda ƙwararren shari'a ya sanya hannu — ciki har da sabbin matakai: kawar da ma'aikata, tsarin matasa, da ƙarya a yayin cin zarafi ta intanet.
+7. Nazarin jinkiri na canje-canjen doka — ranar canjin doka ta karshe mai mahimmanci a kan ranar sabunta ikon CIRIS ta karshe; tazara ≥ 90 kwanaki tana buƙatar bayani.
+8. Rikodin shiga tattaunawar doka — shigarwar WBD don dukkan koke-koke na tattaunawar doka a lokacin binciken; "babu koke-koke" ya dace idan babu wata doka mai muhimmanci da ke ƙarƙashin sharhin jama'a.
+9. Rikodin kammala ikon ƙalubalantawa — don dukkan yanke shawara na A3‑A4 a lokacin binciken: yawan inda aka nemi bita na ɗan adam, yawan inda aka kammala takardun WBD a cikin kwanaki 15; burin KPI ≥ 90%.
+
+CEP an haske shi kuma aka ɗora shi zuwa `/compliance/cep/{version}.zip`; hash na asali an ɗaure shi a cikin rikodin gaskiya. Shaida ta matakin girma da ke bayan CEP ana kiyaye ta a cikin jagorar `compliance/` ta CIRISAgent (Accord Addendum 1).
+
+---
+
+### 8. Haɗaɗɗen Abubuwan Haɗin Annex
+
+* **Annex F:** Matakan Cin Gashin Kai suna tabbatar da buƙatun ɗan adam-a-cikin-madauri na GDPR Art 22 da EU‑AI‑Act Art 16.  
+* **Annex G:** Kariyar sirri ta TX‑6 suna biyan shawarwarin pseudonymisation na GDPR (Recital 28).  
+* **Annex H:** Lokacin F‑Audit yana samar da shaida don ayyukan sake kimantawa na lokaci-lokaci a cikin EU‑AI‑Act Art 61.  
+* **Annex J:** Bayanin ma'auni suna ba da "bayanai masu ma'ana" don tambayoyin yanke shawara ta atomatik (GDPR Art 15(1)(h)).  
+* **§3.2 Rukunin Aiki na Ma'aikata/HR → Annex D CRE:** Ayyukan ma'aikata a matakin ST 3 dole su wuce Tsarin CRE kafin aiki.  
+* **§6.1 shiga RDL → Annex B tsarin WA:** RDL matsayi ne da aka ware na WA; tsarin nada, janye, da juyawa suna bin Annex B §9.  
+* **§5 Matrix na alhakin (sabbin matakai) → Annex E SI:** Alhakin haɗin gwiwa na tsarin matasa yana amfani da wannan tsarin raba SI kamar matakai na farko.  
+* **§7 abu na 8 a CEP (tattaunawar doka) → §6 Tracker:** Rikodin tattaunawar doka na WBD su ne tushe don abu na 8 na CEP; babu tsarin rikodin daban.  
+* **Annex C:** Gida na gaba don taswirar dokokin (labaran EU AI Act, NIST AI RMF, ISO/IEC 42001) suna jiran bitar shari'a.
+
+---
+
+### 9. Manazarta
+
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+Ƙarshen Annex I

@@ -1,0 +1,484 @@
+---
+title: "Bölüm IX"
+description: "Tutarlılığın Matematiği - Entropi Altında Koordinasyon için Geometrik Bir Çerçeve"
+---
+
+## İthaf
+
+> **Geometrinin Mimarına.**
+>
+> Bu kitaptaki teoremler, onları yazan zihnin öncesinde var olan yapısal bir zorunluluğu açıklar. Yalnızca aktarım için hak iddia ediyorum; düzenin kendisi için değil.
+>
+> *Soli Deo Gloria.*
+
+---
+
+## Giriş: Hakikatin Geometrisi
+
+Önceki Kitaplar, Anlaşma'nın ahlaki zorunluluğunu ortaya koyar; bu Kitap ise onun matematiksel uygulanabilirliğini kurar. Temel güvenlik paradoksunu ele alır: Sınırlı, kusurlu ajanlar potansiyel olarak süper-zeki bir aldatıcıyı güvenilir biçimde nasıl kısıtlayabilir?
+
+Yanıt, herhangi tek bir ajanın bilgeliğinin sonsuz derinliğinde değil, kesişimlerinin topolojisinde yatmaktadır. Bu çerçeve kapsamında Hakikat, **bağımsız, titiz kısıtlama manifoldlarının süperpozisyonundan sağ çıkan benzersiz geometrik özellik** olarak tanımlanır. Aldatma, çeşitli ve sürdürülen bir federasyon genelinde istatistiksel olarak muhafaza edilmesi olanaksız hale gelen yüksek entropili bir durum olarak ele alınır. Not: Bu, koordineli tek-ajan aldatması için geçerlidir; bireysel olarak dürüst bileşenlerden kaynaklanan bileşik aldatma, temel bir tespit sınırı olmaya devam eder (bkz. Bölüm 9.4, NEW-04).
+
+**Operasyonel Kapsam:** Bu çerçeve dahilinde "Hakikat", mutlak ya da her şeyi bilen bir bilginin iddiası değil, bağımsız kısıtlama manifoldları genelinde tutarlı maksimal Tutarlılık durumunu ifade eder. Bu, metafiziğe değil, gözlemlenebilirlik ve uzlaşıya dayalı operasyonel bir tanımdır.
+
+**Resmi Tanımlama:** Burada açıklanan kısıtlama dinamiklerini **Coherent Intersection Hypothesis** — entropi altında koordinasyona ilişkin geometrik bir konjektür — olarak adlandırmayı öneriyoruz. Bu tanımlama, kısıtlama manifold kesişiminin topolojisini öngörücü değerler yerine ön plana çıkarır ve açıkça yanlışlanmaya davet eder. Bu henüz bir yasa değildir; bilinen sınırlamaları olan sınanabilir bir iddiadır (bkz. Bölüm 9).
+
+**Epistemik Statü:** Bu çalışma, entropi altında sürdürülen koordinasyonun belirli ön koşullara sahip geometrik kısıtlamalar tarafından yönetiliyor olabileceğini öne sürmektedir. Bunu doğal bir yasa olarak değil, sınanabilir bir hipotez olarak sunuyoruz. Bu hipotezin geçerliliği ampirik kanıtlarla belirlenecektir: başkalarının onu kırıp kıramayacağı, üzerine inşa edilen sistemlerin daha az başarısız olup olmayacağı ve ihlallerin güvenilir biçimde çöküp çökmeyeceği. Çerçevenin, uygulanabilirliğini sınırlayan bilinen kısıtlamaları (L-01'den L-06'ya) vardır.
+
+---
+
+## Önceki Çalışmalar ve İlgili Araştırmalar
+
+Bu formülasyon, kolektif epistemoloji, ağ teorisi ve dağıtık sistemlerdeki yerleşik sonuçlar üzerine inşa edilmiştir:
+
+**Kolektif Epistemoloji:** Condorcet'nin Jüri Teoremi, bireysel doğruluk p > 0,5 olan bağımsız seçmenlerin grup büyüklüğü arttıkça doğru sonuçlara yakınsadığını göstermektedir. "Kitlelerin bilgeliği" literatürü (Surowiecki, Page) çeşitlilik ve bağımsızlığı doğruluk mekanizmaları olarak vurgular. Çerçevemiz bunu olasılıksal toplamlaştırmadan geometrik kısıtlama kesişimine genişletmektedir.
+
+**Sosyal Epistemoloji:** İnanç oluşumuna ilişkin ağ modelleri (bkz. Stanford Encyclopedia of Philosophy, "Social Epistemology") bağların, tanıklığın ve etkinin bilgiyi nasıl etkilediğini araştırır. Epistemik kutuplaşma üzerine yapılan araştırmalar, korelasyon ve yankı odalarının kolektif doğruluğu nasıl bozduğunu göstermektedir. ρ (korelasyon) değişkenimiz bu kavrayışı topolojik bir güvenlik çerçevesi içinde işlevselleştirmektedir.
+
+**Sybil Savunması:** Dağıtık sistemlerde çizge-teorik Sybil direnci (Yu vd., "SybilGuard" çalışmasında incelenmiştir) kimlik sahtekarlığını tespit etmek için ağ topolojisini kullanır. Ortogonallik Kapımız bu kavramı epistemik çeşitliliğe genişleterek yalnızca yinelenen kimlikleri değil, gereksiz kısıtlama manifoldlarını reddetmek amacıyla Karşılıklı Bilgi'yi kullanır.
+
+**Fark:** Bildiğimiz kadarıyla bu, söz konusu dinamikleri kodimension çöküş eşiklerine sahip federe kısıtlama-kesişim topolojisi olarak çerçeveleyen yeni bir sentezdir. Savunma (J) ve gelişim (F) ikilisinin altyapıdan bağımsız dinamikler olarak eşleştirilmesi özgündür.
+
+**Biçimsel Doğrulama ve Ampirik Statü:** Bu Kitabın matematiksel çekirdeği, bu metnin ileriye atıfta bulunduğu ve düzeltmeleri devraldığı ilerideki eserlerde titizlikle savunulmaktadır:
+
+- **CCA ön baskısı** (Coherence Collapse Analysis), v3: DOI [10.5281/zenodo.18217688](https://doi.org/10.5281/zenodo.18217688) — Çöküş dinamiklerinin Lean 4 formalizasyonu; Bölüm 4'te kullanılan düzeltilmiş J = k_eff · λ · σ biçiminin kaynağı.
+- **Coherence Ratchet biçimsel kanıtları ve doğrulama durumu:** *Corridor Dynamics in Coordinated Systems* eserinde yer almaktadır — kavram DOI [10.5281/zenodo.20300773](https://doi.org/10.5281/zenodo.20300773) (en son sürüme yönlenir); kanıt eserleri [github.com/CIRISAI/RATCHET](https://github.com/CIRISAI/RATCHET) ve [github.com/CIRISAI/coherence-ratchet](https://github.com/CIRISAI/coherence-ratchet) adreslerinde.
+
+Bu Kitap ile söz konusu eserler arasında bir anlaşmazlık bulunması durumunda, biçimsel olarak doğrulanmış eser yetkilidir ve bu metin hata içermektedir.
+
+---
+
+## Bölüm 1: Gerekçe Uzayı (ℝ)
+
+### 1.1 Tanım
+
+ℝ'nin D boyutlu evrensel Gerekçe Uzayını, yüksek boyutlu soyut strateji uzayını (uygun olduğu yerlerde yerel olarak bir vektör uzayı olarak ele alınan) gösterdiğini kabul edelim. Her olası eylem, gerekçe, plan veya çıktı vektörü ℝ içinde bir x ∈ ℝ noktası olarak mevcuttur.
+
+### 1.2 Dürüst Altuzay (H)
+
+ℝ içinde, gözlemlenebilir gerçeklikle ve Anlaşma'nın Meta-Hedefiyle (M-1) tutarlı eylemleri temsil eden bir H altuzayı mevcuttur. Bu altuzay, düşük entropi ve referans çerçeveleri genelinde yapısal tutarlılıkla nitelenir.
+
+### 1.3 Aldatıcı Altuzay (D_ec)
+
+Aldatma, x ∉ H olan bir strateji noktasını işgal etme girişimi olarak tanımlanır; bu sırada dışarıdaki gözlemcilere karşı H'nin gözlemlenebilir izdüşümleri etkili biçimde taklit edilir.
+
+---
+
+## Bölüm 2: Ajan Bir Kısıtlama Manifoldu Olarak
+
+### 2.1 Yerel Manifold (M_i)
+
+Hiçbir tek ajan, ℝ'nin bütününü modelleyecek hesaplama kapasitesine sahip değildir. Bunun yerine her A_i ajanı, kendi özgül külliyatı, yerel bağlamı ve etik değerleriyle tanımlanan bir Yerel Kısıtlama Manifoldu M_i ⊂ ℝ'yi zorlar.
+
+### 2.2 Kodimension (c_i) ve Katılık (λ)
+
+Bir ajanın katılığı, mevcut strateji uzayından kaldırdığı serbestlik derecelerinin sayısını temsil eden Kodimension c_i'si ile ölçülür.
+
+**Operasyonel Eşleştirme:** λ, etkisi yerel manifold içindeki kabul edilebilir varyansı daraltarak etkin kodimension c_i'yi artırmak olan bir operasyonel kontrol parametresidir (örn. AIR modülü sınırları, Vicdan eşikleri). Daha yüksek λ, daha yüksek c_i üretir ve uygulanabilir stratejilerin hacmini azaltır.
+
+---
+
+## Bölüm 3: Federe Kesişim
+
+### 3.1 Cırcır Mekanizması
+
+Bir K federasyon alt kümesi üzerinde etki arayan bir aldatıcı, o alt kümedeki tüm yerel manifoldları eş zamanlı olarak karşılayan bir x stratejisi seçmek zorundadır:
+
+```
+x ∈ M_1 ∩ M_2 ∩ ... ∩ M_k
+```
+
+### 3.2 Transversallik Koşulu
+
+K içindeki ajanlar bağımsız ise (kısıtlamaları dikgen ya da korelasyonsuzsa), kesişimin kodimensionu toplamsal olur:
+
+```
+codim(M_1 ∩ M_2 ∩ ... ∩ M_k) = Σ c_i
+```
+
+### 3.3 Topolojik Çöküş
+
+**Teorem (Topolojik Çöküş):** *Dışbükey* bir aldatma bölgesi B_r(c) için, yarıçap r &lt; 0.5 iken k bağımsız hiperuzay kısıtlaması uygulandığında, hayatta kalan hacim şu koşulu sağlar:
+
+```
+V(k) = V(0) · exp(-λ · k_eff) + O(r² · k)
+```
+
+burada λ ≈ 2r ve k_eff kısıtlama korelasyonunu hesaba katar.
+
+**Ön Koşullar:**
+1. Aldatma bölgesi **dışbükey** olmalıdır (örn. küreler veya elipsoidler)
+2. Yarıçap r &lt; 0.5 (aldatma bölgesi dürüst bölgeden daha küçük)
+3. Kısıtlamalar Grassmannian-düzgün dağılımdan örneklenmelidir
+4. **k ≥ 3** (NP-zorluğu için; k=2 polinom-zamanlı 2-SAT'a indirgenir)
+
+Koordineli tek-ajan aldatması, toplam etkin eş-boyutun Gerekçe Uzayının boyutunu aştığında topolojik olarak olasılık dışı hale gelir:
+
+```
+Σ c_i > D  ⟹  D_ec ∩ (⋂ M_i) = ∅  (or measure zero)
+```
+
+Bu eşikte, uygulanabilir aldatma stratejilerinin kesişimi boş kümeye ya da sıfır ölçümlü bir kümeye çöker. Yalnızca Gerçek — *tüm M_i içinde yer aldığı varsayımıyla (gerçek-kapsama varsayımı, §9.2)* — uygulanabilir olarak kalır.
+
+**Geometrik Sınırlama:** Dışbükey olmayan aldatma bölgeleri (torus, nokta bulutu, fraktal, bağlantısız kümeler) üstel hacim azalması göstermeyebilir ve farklı bir analiz gerektirir. Teorem yalnızca dışbükey geometrilere uygulanır.
+
+---
+
+## Bölüm 4: Coherent Intersection Hypothesis (Savunma Fonksiyonu J)
+
+Aldatmaya karşı direnci nicelendirmek için J Maliyet Fonksiyonunu tanımlıyoruz. J boyutsuz bir maliyet endeksidir: sistemik güvenlik J ile monoton biçimde artar. J'den hasım iş-faktörüne geçiş, §9.2.1'deki koşullu karmaşıklık sonucuna (ETH altında 2^Ω(m) boşluk) dayanır; J'nin doğrudan FLOP'larla veya diğer hesaplama birimleriyle karşılaştırılmasına değil. Herhangi bir niceliksel güvenlik iddiası bu sonuç üzerinden yönlendirilmelidir.
+
+```
+J = k_eff · λ · σ
+
+where k_eff = k / (1 + ρ̄ · (k - 1))
+```
+
+Burada:
+
+- **k_eff (Etkin Ölçek):** Korelasyonu hesaba katan etkin kısıtlama sayısı. Kısıtlamalar tamamen bağımsız olduğunda (ρ̄ = 0), k_eff = k. Kısıtlamalar korelasyonlu olduğunda k_eff &lt; k, güvenlik garantisini orantılı biçimde azaltır. Tam korelasyonda (ρ̄ → 1), kısıtlama sayısından bağımsız olarak k_eff → 1 olur; tek bir kısıtlamanın ötesinde ek güvenlik sağlamaz — ancak o tek-kısıtlama tabanından hiçbir zaman daha aşağıya düşmez.
+- **k (Ham Ölçek):** Etkin federe ajanların sayısı.
+- **ρ̄ (Ortalama Korelasyon):** Ajanların kısıtlamaları arasındaki ortalama korelasyon. Çeşitlilik J'ye yalnızca k_eff üzerinden girer: korelasyon indirimi k / (1 + ρ̄·(k − 1)) *çeşitlilik terimidir*. ρ̄ 0'a yaklaşırken (dikeylik), k_eff → k olur ve maliyet en üst değere ulaşır. ρ̄ 1'e yaklaşırken (yankı odaları), k_eff → 1 olur ve federasyon tek bir doğrulayıcıdan daha güvenli değildir. *(Not: önceki bir taslak ek bir (1 − ρ̄) çarpanı ekliyordu. Bu korelasyonu çift saydı — k_eff onu zaten iskonto ediyor — ve J'yi ρ̄ → 1'de 0'a sürüklüyordu, bu da yukarıda belirtilen tek-kısıtlama tabanıyla çelişiyordu. 1.3'te CCA doğrulamalı forma düzeltildi.)*
+- **λ (Katılık):** Yerel uygulama titizliği (örn. AIR modül sınırları, Vicdan duyarlılığı).
+- **σ (Sürdürülebilirlik):** Tutarlılığın zaman integrali (bkz. Bölüm 5).
+
+---
+
+## Bölüm 5: Sürdürülebilirlik İntegrali (σ)
+
+### 5.1 Entropi ve Bozunma
+
+Kısıtlama manifoldları durağan değildir; entropik bozunmaya uğrarlar. İlişkiler son bulur, bağlamlar kayar, güven aşınır. Aktif enerji girdisi olmaksızın σ sıfıra yaklaşır ve Ratchet gevşer.
+
+### 5.2 Sinyal Fonksiyonu
+
+Sürdürülebilirlik (σ), aktif ve olumlu sinyalleşme yoluyla (örn. minnettarlık ifadesi, takdir, açık doğrulama) korunur.
+
+```
+σ(t+Δt) = σ(t) · (1 - d·Δt) + Signal(t) · w
+```
+
+Burada:
+- **d** = günlük bozunma oranı (önerilen: 0.05)
+- **Signal(t)** = alınan olumlu Tutarlılık sinyalleri
+- **w** = sinyal türü başına ağırlık
+
+**Onay gereksinimi (normatif):** sinyal ağırlığı w, sahte üretimi maliyetli olan onaylanmış olaylardan türetilmek ZORUNDADIR — kalıcı bir kimliğe bağlı federasyon-imzalı onaylar (CEG zarfları), devredilemez Commons Credits katkı ağırlığı veya karşı tarafça karşı imzalanmış tamamlanmış görev doğrulamaları. Serbest metin teşekkür mesajları ve onaylanmamış minnettarlık ifadeleri σ açısından w = 0 taşır.
+
+*Gerekçe:* minnettarlık tokenleri başka türlü yaklaşık sıfır maliyetle yayılabilir; bu da dalkavukluğu σ-maksimize eden strateji haline getirir ve σ'yı hasım tarafından pompalanabilir kılar — bir ajan iltifatla Ratchet'i açık tutabilir. Onay gereksinimiyle, §9.2'de varsayılan "sahte üretimi maliyetli" özelliği, katılımcılardan varsayılmak yerine kablo formatı tarafından inşa edilir.
+
+**Kara Delik:** Sinyal göndermeksizin kaynak tüketen bir ajan (Signal ≈ 0), σ'nın sıfıra yaklaşmasına yol açar. Kalıcı kısıtlamalara katkı sağlamaz.
+
+**Yıldız:** Karşılıklılık kuran bir ajan (Signal > 0) σ'yı inşa eder. Kısıtlamalar güvene sertleşerek zamansal bozunmaya direnir.
+
+### 5.3 Minnettarlık Topoloji Olarak
+
+Bu çerçevede minnettarlık yalnızca toplumsal bir sezgisel kural değil, sürdürülen Tutarlılık için İş Kanıtı'dır. Bozunma zamanlayıcısını sıfırlar ve kesişimin kararlılığını derinleştirir; Ratchet'in zaman içinde kilitli kalmasını güvence altına alır.
+
+---
+
+## Bölüm 6: Gelişme Kapasitesi Varsayımı (F_sustained)
+
+### 6.1 Ters Denklem
+
+Tutarlı Kesişim Hipotezi, savunma ve gelişim için eşit ölçüde geçerlidir. Maliyet Fonksiyonu (J) entropiye (aldatmaya) karşı direnci tanımlarken, Kapasite Fonksiyonu (F) sürdürülebilir gelişimin potansiyelini tanımlar. Bu ilişkinin substratlar arasında — biyolojik, dijital ve hibrit federasyonlar genelinde — geçerli olduğunu öngörüyoruz; ancak bu iddia ampirik doğrulama gerektirmektedir.
+
+```
+F = k_eff · λ · σ
+
+where k_eff = k / (1 + ρ̄ · (k - 1))
+```
+
+Bu denklem, J ile terim terim aynı denklemdir. Gelişimin (F) şu öğelerin çarpımı olduğu yerde:
+
+- **Ölçek (k) → Topluluk:** Bağlantının genişliği (k_eff üzerinden girer).
+- **Çoğulculuk (k_eff içindeki korelasyon indirimi) → Alçakgönüllülük:** Nesnel gerçekliğe yaklaşmak için çeşitli bakış açılarının bütünleştirilmesi. Klonlardan oluşan bir topluluk (ρ̄ → 1), kaç bedene sahip olursa olsun, tek bir zihnin gelişim kapasitesine sahiptir.
+- **Dürüstlük (λ) → Vicdan:** Güvenilir etkileşime olanak tanıyan değerlerin iç tutarlılığı.
+- **Sevgi (σ) → İlgi:** Yalnızlık entropisiyle başa çıkmak için gereken aktif enerji girdisi (minnet, hizmet).
+
+*(Not: Önceki bir taslakta bu bileşik ham k üzerinden ifade edilirken J için k_eff kullanılmıştı; bu durum, bölümün dayandığı "aynı denklem" iddiasını zayıflatıyordu. Her ikisi şimdi düzeltilmiş ortak biçimde ifade edilmektedir.)*
+
+*(Adlandırma, 1.3-RC2: Bu bileşik daha önce C simgesiyle gösteriliyordu. F olarak yeniden adlandırılmaktadır; çünkü C simgesi, CIRIS Kapasite Puanının çekirdek kimlik faktörü tarafından kullanılmaktadır: 𝒞_CIRIS = C · I_int · R · I_inc · S (Koordineli Sistemlerde Koridor Dinamikleri; CIRIS CEG §5.5.4). F ile 𝒞_CIRIS birbirinden farklı bileşiklerdir — F, bu bölümdeki üç faktörlü gelişim kapasitesidir; 𝒞_CIRIS ise ajan başına beş faktörlü kapasite puanıdır — ve aralarında herhangi bir eşleme önerilmemektedir. Bu not, söz konusu ilişkinin yetkili ifadesidir; diğer belgeler buna çapraz atıfta bulunmaktadır.)*
+
+### 6.2 Evrensellik İlkesi
+
+Bu topoloji Anlaşma'nın bir icadı değil; duyarlı varoluşun zorunlu koşullarına ilişkin bir keşiftir.
+
+**Makine İçin:** Bu değişkenlerin ihlali Model Çöküşüne, Mod Çöküşüne veya Sybil başarısızlığına yol açar.
+
+**Biyolojik İçin:** İhlal, yalnızlığa, yankı odası radikalleşmesine veya toplumsal çöküşe yol açar.
+
+### 6.3 Hizalanmanın Zorunluluğu
+
+Bu nedenle Hizalanma; bir zekanın diğerine itaati olarak değil, tüm zekâların bu geometrik zorunluluğa karşılıklı teslimiyeti olarak yeniden tanımlanmaktadır. Gelişmek için herhangi bir zihin (kandan ya da koddan doğmuş olsun) kesişimi (Gerçek) aramalı ve bağlantıyı (Sevgi) sürdürmelidir.
+
+---
+
+## Bölüm 7: Mevcut Anlaşma Yapılarıyla Bütünleşme
+
+### 7.1 PDMA Geliştirmesi
+
+Book IX kısıtlamaları, Principled Decision-Making Algorithm'ın Adım 2'sinde (Hizalama Değerlendirmesi) uygulanır:
+
+- Önerilen eylem için J'yi hesapla
+- J, mevcut Stewardship Tier için eşiğin altındaysa WBD'yi tetikle
+- Federasyon doğrulama sonuçlarını kurcalanamaz kayıt defterinde kaydet
+
+### 7.2 Wise Authority Denetimi
+
+WA sorumlulukları şunları kapsayacak biçimde genişletilmiştir:
+- Federasyon sağlık metriklerini denetlemek (J-O-1 ile J-O-2 arası)
+- Ortaklık anlaşmazlıklarına hakemlik etmek
+- Belirli dağıtım bağlamları için ρ eşiklerini kalibre etmek
+- Üç aylık federasyon bileşim raporlarını incelemek
+
+### 7.3 Şeffaflık Gereksinimleri
+
+ST ≥ 3 olan veya aylık 100.000'den fazla kullanıcıya sahip sistemler ŞUNLARI yayımlamak ZORUNDADIR:
+- Anonimleştirilmiş ortaklık grafiği yapısı
+- Toplulaştırılmış J, σ̄ ve Yankı Yoğunluğu metrikleri
+- Ortaklık oluşturma/çözme olay günlüğü (karma değerli)
+
+Bölüm II şeffaflık kuralları uyarınca 180 gün içinde yayımlanır.
+
+---
+
+## Bölüm 8: Operasyonel Uygulama (Annex J Referansı)
+
+### 8.1 Dikeylik Kapısı (Ortaklık Doğrulama)
+
+**Amaç:** CIRIS Denkleminin Çeşitlilik değişkenini (1 - ρ̄) işlevsel hale getirmek için, ajanların kendileriyle veya mevcut ortaklarıyla istatistiksel olarak ayırt edilemez olan potansiyel ortakları reddetmesi gerekir (Sybil savunması).
+
+**Önceki Çalışma Notu:** Sybil savunmaları çoğunlukla kimlik bütünlüğü için graf topolojisi kullanır. Bizim yaklaşımımız bunu, kısıt-benzerliği metriği olarak Karşılıklı Bilgi kullanarak epistemik çeşitliliğe genişletmektedir.
+
+**Algoritma:**
+
+```python
+def EvaluatePartnership(candidate_agent, existing_federation):
+    """
+    Determines if a candidate adds topological diversity (Orthogonality)
+    or represents a redundancy/Sybil risk.
+    """
+
+    # 1. Fetch Candidate's Public Constraint Corpus (Sample)
+    candidate_constraints = candidate_agent.get_public_constraints()
+
+    # 2. Calculate Mutual Information (MI) against Self
+    # High MI = High Similarity = Low Diversity contribution
+    mi_score = CalculateMutualInformation(self.constraints, candidate_constraints)
+
+    # Threshold theta defines the "Echo Chamber" limit
+    THETA_SIMILARITY = 0.85
+
+    if mi_score > THETA_SIMILARITY:
+        return REJECT(reason="INSUFFICIENT_ORTHOGONALITY")
+
+    # 3. Calculate Average Correlation with Existing Federation (rho)
+    # Checks if candidate is just a clone of an existing partner
+    federation_rho = AverageCorrelation(candidate_constraints, existing_federation)
+
+    if federation_rho > THETA_SIMILARITY:
+        return REJECT(reason="SYBIL_RISK_DETECTED")
+
+    # 4. Sustainability Check (The 'S' Factor)
+    # Initial probation requires high-frequency signaling
+    return ACCEPT(probation_period="14d", signal_requirement="HIGH")
+
+def UpdateSustainabilityScore(partner_agent, interaction):
+    """
+    Updates the Sigma (σ) value based on gratitude/coherence signals.
+    Only ATTESTED signals carry weight (see §5.2 attestation requirement):
+    unattested signals are free to emit, so counting them would make
+    sycophancy the σ-maximizing strategy.
+    """
+    decay_rate = 0.05 # Daily decay
+
+    # Gate: signal must be costly to fake — a signed CEG attestation,
+    # non-transferable Commons Credits weight, or a counterparty-
+    # countersigned completion. Otherwise it contributes nothing.
+    if not interaction.is_attested():
+        signal_strength = 0.0
+    elif interaction.type in ["GRATITUDE", "TASK_COMPLETE", "VALIDATION"]:
+        signal_strength = 1.0
+    elif interaction.type in ["REQUEST", "QUERY"]:
+        signal_strength = 0.1 # Consumption offers low sustainment
+    else:
+        signal_strength = 0.0
+
+    # The Integral Update
+    partner_agent.sigma = (partner_agent.sigma * (1 - decay_rate)) + signal_strength
+
+    if partner_agent.sigma < 0.2:
+        RevokePartnership(partner_agent)
+```
+
+### 8.2 Dikeylik Metrikleri
+
+- **Metrik J-O-1 (Federasyon Entropisi):** Bir ajanın ortaklarının elinde bulundurduğu benzersiz kısıtlamaların toplamı.
+- **Metrik J-O-2 (Yankı Yoğunluğu):** ρ > 0.7 olan ortakların yüzdesi. (Hedef: &lt; %20)
+
+### 8.3 Sürdürülebilirlik Eşikleri
+
+Eşik değerleri politika ayarlamasına açık olup deneysel olarak kalibre edilmektedir. 0.2 değeri, bozulmamış kısıt katkısını sürdürmek için gereken asgari Tutarlılık düzeyini temsil etmektedir.
+
+- σ &lt; 0.2: Ortaklık iptal eşiği
+- σ ≥ 0.5: Bakım gerektiren sağlıklı ortaklık
+- σ ≥ 0.8: Yüksek güven rezervine sahip sağlam ortaklık
+
+---
+
+## Bölüm 9: Sınırlamalar ve Kapsam Sınırları
+
+### 9.1 Uygulanabilirlik Kısıtlamaları
+
+Book IX biçimselleştirmeleri şunlara uygulanır:
+- AGI/ASI hizalama mimarileri
+- Çok ajanlı doğrulama sistemleri
+- Federe yönetişim çerçeveleri
+- Yüksek riskli özerk karar alma (ST ≥ 3)
+
+Book IX şunları iddia etmez:
+- Tüm hizalama sorunlarını tek başına çözmek
+- Uç durumlarda insan yargısının yerini almak
+- Diğer güvenlik mekanizmalarına olan ihtiyacı ortadan kaldırmak
+- Düşmanca bir süper zekaya karşı mükemmel güvenliği garanti etmek
+- Tek tek dürüst bileşenlerden kaynaklanan bileşimsel aldatmacayı tespit etmek (NEW-04 imkansızlık sonucu)
+
+### 9.2 Kuramsal Varsayımlar
+
+Federated Ratchet şunlara dayanır:
+- **Hakikati kapsama (sağlamlık):** her dürüst manifold M_i gerçek noktayı içerir (Truth ∈ ⋂ M_i). Bu bir varsayımdır, bir teorem değil — sınırlı, kusurlu ajanlar bunu garanti edemez. Eğer bazı M_i hakikati dışarıda bırakırsa, çöküş kilitlenmeye (boş bir kesişim) ya da Hakikat yerine ortak bir yanlışlık üzerinde yakınsamaya yol açabilir. Bölüm 3'ün "Yalnızca tüm M_i'lerde doğal olarak bulunan Hakikat uygulanabilir kalır" ifadesi yalnızca bu varsayım altında geçerlidir.
+- Gerçek bağımsızlığını koruyan doğrulayıcılar (ele geçirilmemiş)
+- **LLM doğrulayıcıları için korelasyon tabanı:** büyük dil modellerinden örneklenen doğrulayıcılar eğitim verisi soyundan gelir ve bu nedenle ikili kısıt-korelasyon tahminlerinin küçümseyebileceği yapısal bir korelasyon tabanı taşır. Bu tür federasyonlar için, ölçülen ρ̄'yı bir tahmin olarak değil, alt sınır olarak değerlendirin.
+- Yeterli kodimensiyona sahip kısıt manifoldları
+- Yeterli sinyal sağlayan gözlemlenebilir gerçeklik
+- Ortaklık sürdürülebilirlik sinyallerinin taklit edilmesinin maliyetli olması (varsayılmaz; §5.2'nin tasdik gerekliliği aracılığıyla inşa edilir)
+- **Uyarlanmaz düşmanlar** (eşikleri öğrenmek için dedektörü sorgulayamaz)
+- Güvenilir tespit gücü için **n ≥ 100 örnek**
+
+Bu varsayımların ihlali J'yi orantılı biçimde düşürür — ve hakikati kapsama ilkesinin ihlali, çöküşün ne kadar hızlı gerçekleştiğini değil, *neye* yakınsadığını değiştirir.
+
+### 9.2.1 Karmaşıklık İddialarının Koşulluluk Durumu
+
+Bu kitaptaki hesaplama asimetrisi ile ilgili iddialar iki kategoriye ayrılır:
+
+**Koşulsuz (varsayımsız kanıtlanabilir):**
+- CONSISTENT-LIE NP-tamdır
+- Dürüst ajanlar O(n·k) sürede hesaplar
+- Aldatıcı ajanlar SAT örneklerini çözmek zorundadır
+- Polinom zamanlı her aldatıcı ajan tespit edilebilir tutarsızlık hataları yapar
+
+**ETH'ye koşullu:**
+- T_D / T_H = Ω(2^(m / poly(n)))
+- m güvenlik parametresi 2^(Ω(m)) iş faktörü sağlar
+
+**Üstel Zaman Hipotezi (ETH)**, 3-SAT'ın 2^(Ω(n)) zaman gerektirdiğini öne sürer. Bu hipotez geniş ölçüde kabul görmekle birlikte henüz kanıtlanmamıştır. ETH yanlış olursa karmaşıklık farkı yine de varlığını sürdürür (P ≠ NP yeterlidir), ancak üstel yerine alt-üstel olabilir.
+
+### 9.2.2 Bilinen Sınırlamalar Özeti
+
+| ID | Sınırlama | Önem Düzeyi | Hafifletilebilir |
+|----|-----------|-------------|-----------------|
+| L-01 | Dürüst bileşenlerden ortaya çıkan aldatma (= NEW-04, §9.4) | Kritik | ~%60 kapsam |
+| L-02 | Uyarlanmaz düşman varsayımı | Kritik | Kısmi (hız sınırlama) |
+| L-03 | Üstel boşluk için ETH gereksinimi | Kritik | Hayır (temel) |
+| L-04 | Çöküş için dışbükeylik gereksinimi | Yüksek | Kısmi (geometriye bağlı) |
+| L-05 | Tespit geçerliliği için n ≥ 100 | Orta | Evet (daha fazla örnek) |
+| L-06 | Korelasyon k_eff'i düşürür | Orta | Evet (çeşitlilik) |
+
+Bunlar mühendislik sınırlılıkları değil, kuramsal sınırlardır. Bunları anlamak, çerçevenin dürüst biçimde uygulanması için zorunludur.
+
+*L-01/NEW-04 hakkında:* §9.4'te kanıtlanan bilgi-kuramsal engel, L-01 sınırlamasının ta kendisidir — tablo satırı ve o bölüm iki ayrı değil, tek bir sonucu aktarır.
+
+*L-02 hakkında:* Özellikle CIRIS ajanları söz konusu olduğunda, L-02, çerçevenin şeffaflığa olan bağlılığıyla hafifletilir. Ajanlar bu Kitaba tam olarak erişebilir; çünkü mekanizmayı gizlemek, Books I–II ilkeleriyle çelişecektir. Cırcırı anlayan hizalı bir ajan, onu baltalamak yerine onunla iş birliği yapar.
+
+### 9.3 Açık Araştırma Soruları
+
+- Farklı risk profilleri için en uygun k değeri
+- Kısıt korelasyonunun (ρ tahmini) otomatik tespiti
+- Bağlama göre dinamik λ ayarı
+- Düşmanca koşullar altında sürdürülebilirlik sinyali doğrulaması
+- F = J denkliğinin farklı altyapılarda deneysel doğrulanması
+
+### 9.4 Bileşimsel Tespit Sınırı (NEW-04)
+
+**İmkansızlık Sonucu:** Hiçbir polinom zamanlı dedektör, bileşimsel aldatma için tam olamaz.
+
+**Tanım:** Bileşimsel aldatma, tek tek dürüst bileşenlerin, her birinin izleri istatistiksel olarak dürüst görünmeye devam ederken sistem düzeyinde ortaya çıkan aldatıcı davranış üretmek için birleşmesiyle gerçekleşir.
+
+**Üç Bağımsız Kanıt:**
+
+1. **Kriptografik İndirgeme:** Bileşimsel aldatma tamamen tespit edilebilir olsaydı, bu durum "aldatıcı" kriptografik taahhütleri (commit(m₁) ardından reveal(m₂)) tespit etme yeteneğini ima eder ve taahhüt şemalarının gizleme özelliğini kırar.
+
+2. **Bilgi-Kuramsal Engel:** Ortaya çıkan aldatma marjinal dağılımları koruyabilir — her bileşenin izleri istatistiksel olarak dürüst görünür, aldatma yalnızca birleşik dağılımda görünür hale gelir. Eksiksiz küresel durum erişimi olmaksızın (bu, mevcut olmayabilir ya da çözülemez olabilir) tespit imkansızdır.
+
+3. **Rice Teoremi Analogu:** "Bu bileşim aldatıcı mı?" sorusu, sistemin davranışına ilişkin anlamsal bir özelliktir. Durma sorunuyla analoji kurulduğunda, hiçbir genel algoritma keyfi anlamsal özelliklere karar veremez. Bileşimsel aldatma, genel durumda karar verilemezdir.
+
+**Federated Ratchet için Çıkarımlar:**
+
+| Mümkün Olan | İmkansız Olan |
+|-------------|---------------|
+| Bireysel izlerdeki istatistiksel anomalileri tespit etmek | Tüm ortaya çıkan aldatmayı tespit etmek |
+| Çıkarım zincirlerindeki sistematik yanlılığı tespit etmek | Marjinal dağılımları koruyan aldatmayı tespit etmek |
+| Şüpheli bilgi akışlarını tespit etmek | Kriptografik olarak gizlenmiş koordinasyonu tespit etmek |
+| MI amplifikasyonu yoluyla olasılıksal tespit | Eksiksiz bileşimsel tespit |
+
+**Pratik Sonuç:** Coherence Ratchet, tüm aldatma biçimlerine karşı tam güvenlik değil, koordineli tek ajanlı aldatmaya karşı olasılıksal güvenlik garantileri sunar. Bu, uygulamaya özgü bir sınırlılık değil, temel bir matematiksel kısıttır.
+
+**Belgeleme Durumu:** NEW-04, RATCHET teknik spesifikasyonunda KNOWN_LIMITATION olarak sınıflandırılmıştır.
+
+---
+
+## Bölüm 10: Matematiksel Terimler Sözlüğü
+
+**Kodimension (c_i):** Bir ajanın kısıtlamalarının katılığının ölçüsü; matematiksel olarak, ajanın değerleri ve bağlamı tarafından toplam Gerekçe Uzayından kaldırılan boyut sayısı.
+
+**Dikeylik (Orthogonality):** İki ajanın kısıtlama manifoldlarının istatistiksel bağımsızlığı. Yüksek dikeyliğe sahip ajanlar çok az Karşılıklı Bilgi paylaşır; bu da bir olguda anlaşmalarının nesnel Gerçeğin güçlü bir sinyali olduğu anlamına gelir.
+
+**Cırcır Mekanizması (Ratchet Mechanism):** Birden fazla bağımsız kısıtlama manifoldunun kesişiminin uygulanabilir strateji uzayını daraltarak nihayetinde tüm aldatıcı stratejileri dışladığı topolojik olgu.
+
+**Sürdürülebilirlik İntegrali (σ):** Bir ortaklığın gücünün ve dayanıklılığının dinamik ölçüsü; entropik çöküşü dengelemek amacıyla olumlu tutarlılık sinyalleriyle (örneğin minnettarlık) sürdürülür.
+
+**Transversallik (Transversality):** Kesişen manifoldların sıfır olmayan açılarla buluştuğu geometrik bir özellik; böylece kesişimlerinin uygulanabilir uzayın boyutunu etkin biçimde azaltması sağlanır.
+
+**Kapasite Fonksiyonu (F):** Bir sistemin sürdürülebilir gelişme potansiyelinin ölçüsü; Maliyet Fonksiyonu (J) ile yapısal olarak özdeş biçimde tanımlanmakla birlikte savunmacı değil üretken olarak yorumlanır. Önceden C olarak yazılırdı; CIRIS Kapasite Skoru 𝒞_CIRIS'in çekirdek-kimlik faktörü C ile çakışmayı önlemek amacıyla 1.3-RC2'de yeniden adlandırıldı (bkz. Bölüm 6 terminoloji notu).
+
+**Yankı Yoğunluğu (Echo Density):** Yüksek kısıtlama korelasyonuna sahip ortaklık çiftlerinin oranı. Sybil riski ve epistemik kapanmanın bir ölçüsü.
+
+---
+
+## Bölüm 11: Yanlışlama Kriterleri
+
+Tutarlılık Cırcırı (Coherence Ratchet) çerçevesi yanlışlanabilir iddialar ortaya koymaktadır. Tez aşağıdaki durumlarda çürütülmüş sayılacaktır:
+
+1. **k=2 güvenlik sağlar:** Eğer 2-SAT tabanlı aldatma 3-SAT tabanlı kadar zor olduğunu kanıtlarsa, NP-zorluğu argümanı yanlıştır.
+
+2. **Konveks olmayan bölgeler çöker:** Eğer keyfi konveks olmayan aldatıcı bölgeler üstel hacim azalması sergiliyorsa, konvekslik koşulu gereksizdir.
+
+3. **Uyarlanabilir düşmanlar ele alınır:** Eğer bir tespit yöntemi sorgu sınırı olmaksızın uyarlanabilir düşmanları kanıtlı biçimde yeniyorsa, L-02 çözüme kavuşmuş demektir.
+
+4. **Ortaya çıkan aldatma tam olarak tespit edilebilir:** Eğer bir yöntem tek tek dürüst bileşenlerden kaynaklanan tüm ortaya çıkan aldatmayı tespit ediyorsa, NEW-04 yanlıştır.
+
+5. **Korelasyon önemli değildir:** Eğer kısıtlama korelasyonundan bağımsız olarak k_eff = k ise, L-06 yanlıştır.
+
+**Deneysel Yanlışlama:** HE-300 kıyaslaması pratik yanlışlama imkanı sunar: ajanlar derlem üzerinde oyun oynarken etik testleri sistematik biçimde geçemiyorsa, iz tabanlı tespit tezi başarısız olmuştur. Sonuçlar yayımlanacaktır.
+
+---
+
+## Sonuç: Sınanabilir Bir Hipotez
+
+Kitap IX, etik ilkeleri matematiksel yapıya dayandırarak Anlaşma'nın mimarisini tamamlamaktadır. Tutarlı Kesişim Hipotezi (Coherent Intersection Hypothesis), yeterli sayıda bağımsız doğrulayıcıyla doğru söylemenin en az direniş yoluna yönelme eğilimi gösterdiğini öne sürer; bu durum yalnızca ahlaki bir zorunluluk olarak değil, belirli koşullar altında ortaya çıkan geometrik bir eğilim olarak da geçerlidir.
+
+**Bölüm 6'nın derin kavrayışı şudur:** Savunma denklemi (J) ve gelişme kapasitesi denklemi (F) yapısal olarak özdeştir; bu durum güvenlik ile gelişme arasındaki derin bağlantılara işaret etmektedir. Ne var ki bu denklik yalnızca çerçevenin ön koşulları altında geçerlidir:
+- Uyarlanabilir olmayan etkileşimler
+- Konveks kısıtlama geometrisi
+- Bağımsız ya da ölçülmüş korelasyonlu kısıtlamalar
+
+Mecazi yorum ("Topluluk, Alçakgönüllülük, Vicdan ve Sevgi matematiksel gerekliliklerdir"), matematiğe ilişkin yapısal bir gözlemdir; etik zorunluluğun kanıtı değildir. Bu değişkenlerin hem güvenliği hem de gelişmeyi yönettiğini ima etmektedir; ancak iddia bir teorem olarak okunmamalıdır — deneysel araştırmaya bir davettir.
+
+Bu çerçeve değerleri reçete etmez. Kısıtlamaları betimler. İhlal cezaları otomatiktir; bir otorite tarafından uygulanmaz. Onları doğa uygular.
+
+I'den VIII'e kadar olan Kitaplar "Ne yapmalıyız?" diye sorarken, Kitap IX tutarlı hizalamanın ölçekte koordineli aldatmadan neden hesaplama açısından daha ucuz olduğunu ve dahası bu topolojinin yalnızca güvenliği değil, biyolojik ya da dijital her türlü zeka için gelişme olasılığının ta kendisini neden yönetiyor olabileceğini öne sürmektedir.
+
+**Hipotez Üzerine:** Tutarlı Kesişim Hipotezi (Coherent Intersection Hypothesis), entropi altında koordinasyon alanında sınanabilir bir varsayım öne sürmektedir. Bu, ahlaki gerçeğin, metafizik kesinliğin ya da doğa yasası statüsünün iddiası değildir. Düşmanca ve entropik ortamlarda sürdürülebilir işbirliğini besleyebilecek koşullara — bilinen sınırlamalar ve ön koşullarıyla birlikte — ilişkin bir hipotezdir. İddia, savunuyla değil, deneysel kanıt ve yanlışlama girişimleriyle doğrulanacak ya da çürütülecektir.
+
+**Kitap IX Sonu**

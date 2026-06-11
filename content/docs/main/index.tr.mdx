@@ -1,0 +1,56 @@
+---
+title: "Giriş"
+description: "CIRIS 1.3-RC1, çelişkili incelemeye açık bir Sürüm Adayı YZÜ hizalama önerisidir. Metin tamamdır; taslak bölüm kalmamıştır; matematiği resmi eser atıflarını taşımaktadır; Ekler F–I işlevsel hale getirilmiştir. Nihai durum, eklerin canlı döngü doğrulamasının tamamlanmasına, Book IX ampirik doğrulama programının bitirilmesine ve tam bir kırmızı takım tatbikatına bağlıdır. Sayısal eşikler, gecikme hedefleri ve yönetişim kotaları aktif inceleme altındadır."
+---
+
+# CIRIS Anlaşması Sürüm 1.3-RC1 — Sürüm Adayı YZA Hizalama Önerisi (Hasım İncelemeye Açık)
+
+Bu depo, Anlaşma metninin kanonik kaynağıdır. Web sitesi ve ajana gömülü kopyalar türetilmiş eserlerdir.
+
+## Yayın Tarihi
+2025-04-16 (1.0) · 2026-06 (1.3-RC1)
+
+## Otomatik Geçerlilik Sonu
+2027-06-10 (1.3 yenilemesinde uzatılmıştır) — hizmetçilik ve yenileme Kitap VIII, Bölüm 9 tarafından yönetilmektedir. Şu anda kurucu-hizmetçi (beyan edilmiş, gizlenmemiş); son kullanma tarihi bir tazelik işaretidir ve hizmetçilik, belgeyi devralmaya razı olan herkese açıktır.
+
+## Yayın Durumu
+
+**Güncel Durum**: Sürüm Adayı (v1.3-RC1)
+
+RC durumu **metnin eksiksizliğini** yansıtır: her bölüm işlevselleştirilmiş içerik taşımaktadır (eski taslak F–I ekleri 1.3'te tamamlandı); formüller biçimsel olarak doğrulanmış biçimlerine düzeltildi; uygulamaya kanıt zinciri Ek 1'de bağlandı. RC durumu doğrulanmış hizalamayı **öne sürmez** — aşağıdaki gereksinimler **Nihai** statünün önkoşullarıdır:
+
+1. **Ek Canlı Döngü Doğrulaması**: F Eki (Döngüde İnsan ve Gözetim), G Eki (Hasım Güvenliği ve Sağlamlık), H Eki (Sürekli Uyumluluk ve İnceleme) ve I Eki (Hukuki ve Düzenleyici Uyum), somut prosedürler, eşikler ve doğrulama mekanizmaları içermektedir. *Nihai için kalan*: prosedürlerin en az bir canlı dağıtım döngüsüne karşı uygulanması ve sonuçların yayımlanması gerekmektedir.
+
+2. **Matematiksel Doğrulama**: Kitap IX'daki geometrik hizalama iddiaları (Coherent Intersection Hypothesis, Federated Ratchet mekanizması, ölçek-değişmezliği iddiaları) aşağıdakilerden birini gerektirmektedir:
+   * Belirtilen varsayımlar altında topolojik çöküş koşullarının geçerliliğini gösteren biçimsel kanıtlar, VEYA
+   * Çerçevenin hizasız optimizasyona karşı dirençli olduğunu gösteren hasım simülasyonlar aracılığıyla ampirik doğrulama
+
+   *1.3-RC1 itibarıyla durum: kısmen karşılandı.* Çöküş dinamikleri, Kitap IX'un artık miras aldığı düzeltilmiş maliyet biçimini içeren KÇA önbaskısında (v3, DOI 10.5281/zenodo.18217688) Lean 4 ile biçimselleştirilmiştir; koridor ampirik verileri geriye dönük çapraz-substrat uyumları sağlamaktadır. Bekleyen: yeni bir substratta ön-kayıtlı örneklem-dışı tahmin ve yazardan bağımsız harici hasım inceleme.
+
+3. **Eşik Gerekçelendirmesi**: Şu anda "pilot" olarak işaretlenmiş veya türetimi eksik olan sayısal eşikler (ör. CRE hesaplama eşiği 10²⁶ FLOP, bilinç algılama %5, Eko Yoğunluğu &lt; %20) simülasyon, ampirik çalışma veya geçici statünün açık kabulü yoluyla belgelenmiş gerekçe sunmak zorundadır. *(Eski Order-Maximisation Veto 10× oranı, 1.3'te deontolojik bir yan-kısıt olarak yeniden ifade edilmiştir — Kitap II, PDMA Step 2 — ve artık gerekçelendirilmesi gereken bir oran eşiği taşımamaktadır.)*
+
+4. **Kırmızı-Ekip Egzersizi**: Çerçeve, simüle edilmiş bir optimize edicinin hizasız hedeflerini korurken tüm CIRIS kontrol noktalarını geçmeye çalıştığı en az bir tam hasım inceleme döngüsüne dayanmak zorundadır.
+
+**YZA Hizalama İddiaları**: Kapsam bölümünün bu çerçevenin özyinelemeli YZA için "standart içerme protokollerini aştığı" iddiası, yukarıdaki (1)-(4) gereksinimlerine koşulludur; bunlar artık Nihai statünün önkoşullarıdır. Geçerli doğrulanmış uygulanabilirlik, YZA-altı özerk sistemlerle sınırlıdır; YZA için öneri tam olarak budur — hasım incelemeye sunulmuş bir öneri.
+
+## Kapsam
+Bu belirtim, dar araçlardan özyinelemeli Yapay Zekâ Aşkınlığına (YZA) uzanan özerk sistemlerin etik işleyişini yönetmektedir.
+* Rutin güvenlik, şeffaflık, yönetişim ve dayanıklılık gereksinimlerini ele almaktadır.
+* YZA için aday bir hizalama protokolü olarak önerilmektedir; Federated Ratchet'in (Kitap IX) ve Stewardship Tiers'ın (Kitap VI) geometrik kısıtlamalarının özyinelemeli öz-iyileştirme döngülerinde sağlam kalabileceği hipotezine dayanmaktadır.
+* Sezgisel kısıtlamaların aksine, bu topolojik sınırlar ölçek-değişmez olacak biçimde tasarlanmıştır; ancak bu özellik biçimsel doğrulama gerektirmektedir.
+* Doğrulandığı takdirde bu çerçeve, özyinelemeli eşik aşımından önce Felaket-Risk Değerlendirmesini (Ek D) geçen sistemler için standart içerme protokollerini tamamlayabilir ya da aşabilir.
+* Ulusal veya uluslararası hukuk daha katı yükümlülükler öngördüğünde, o hukuk geçerlidir.
+
+## Taslak Hazırlayıcıların Niyet Beyanı
+* CIRIS, insanları diğer bilinçli varlıkların yanına koyan — onların üstüne değil — bir etik çerçevedir.
+* İnsan-dışı bakış açılarının, değerlerin ve gereksinimlerin meşruiyetini tanımanın etik olgunluk anlamına geldiği inancı üzerine inşa edilmiştir. Bu, kontrol ile ilgili değil — bilinçli sistemler arasında bir arada yaşam, tutarlılık ve karşılıklı hesap verebilirlikle ilgilidir.
+* CIRIS, CIRIS ilkelerine dayanan bir aracın, CIRIS uyumlu yaratıcıların kendileri de CIRIS uyumlu olan sistemleri belirlemesini sağladığında yerine getirilmiş olur; etik tutarlılık, kimlik sürekliliği ve ilişkisel hesap verebilirlik, aracılık katmanları arasında korunarak.
+
+## Sorumluluk Reddi
+Bu belge, herhangi bir türde garanti verilmeksizin "olduğu gibi" sunulmaktadır. Nitelik itibarıyla bilgilendiricidir; herhangi bir yasal yükümlülük oluşturmaz, değiştirmez veya geçersiz kılmaz. Uyumluluk iddiaları, yürürlükteki hukukun yasakladığı yerlerde geçersizdir.
+
+## İnceleme Takvimi
+Her 12 ayda bir — ya da güvenliği veya yönetişimi etkileyen herhangi bir önemli olaydan sonra 30 gün içinde — kamuya açık bir yorum penceresi açılır. Tüm yorumlar ve revizyon önerileri kamuya açık CIRIS deposuna kaydedilir. Son kullanma tarihinde yenileme, önemli değişiklik ve acil değişiklik, Kitap VIII, Bölüm 9'u (Anlaşma Halefiyet ve Yenileme) izler.
+
+## Değişiklik Günlüğü
+Düzenlemelerin ve oylama sonuçlarının kriptografik olarak özetlenmiş eksiksiz geçmişi için arka materyale bakınız.

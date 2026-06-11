@@ -1,0 +1,103 @@
+---
+title: "Lissafai"
+description: "Ga dukkan lissafin lissafi na yau da kullum da aka bayyana a cikin fasahar CIRIS Accord 1.0‑β"
+---
+
+## 1. Maki na Tasirin Mahalici (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Matsayin Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+inda ⌈ ⌉ ke nuna aikin rufin lissafi (ceiling function).
+(Book VI §3 STEP C)
+
+---
+
+## 3. Tasirin Tsari (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Hannun Daidaituwa (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Nauyin Kuri'a
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Aikin Kariya (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — sifar da CCA ta tabbatar; bambanci yana shiga ta k_eff kaɗai. Daftarori na farko sun ƙunshi ƙarin abu na (1 − ρ̄), wanda ya ƙidaya haɗin kai sau biyu; duba faɗin ƙayyade a Book IX Ch 4.)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — iri ɗaya da J kalma-da-kalma; an fassara shi a matsayin mai haifuwa maimakon mai kariya. Tun da farko an rubuta shi C; an sake masa suna a 1.3-RC2 don gujewa karo da abin da ke cikin ƙirar asali C na CIRIS Capacity Score 𝒞_CIRIS — duba bayanan suna a Book IX Ch 6, wanda shi ne maganar iko game da dangantakar su.)
+
+---
+
+## 8. Lissafin Dorewa (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+inda d shine ƙimar lalacewa ta yau da kullum (ana ba da shawarar 0.05) kuma w DOLE ya fito daga abubuwan da aka tabbatar, masu tsadar yin zamba; alamu da ba a tabbatar da su ba suna ɗauke da w = 0.
+(Book IX §5.2)
+
+---
+
+## 9. Rushewar Topology (raguwar girma)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+don yankin mai gangara da mai yaudarar da ke da madaurin r &lt; 0.5 ƙarƙashin ƙuntatawa ta Grassmannian-uniform, λ ≈ 2r.
+(Book IX Ch 3 — duba yanayin da aka bayyana.)
+
+---
+
+## Order‑Maximisation Veto (ƙuntatawa ta gefe, ba dabara ba)
+
+Tun daga 1.3, OMV (Book II §II Step 2) ƙuntatawa ta ɗabi'a ce ta doka, ba rashin daidaituwa na rabo ba: anfanin ingantawa, ko da yake suna da girma, ba za a iya saya ta hanyar hasarar da aka annabta mai muhimmanci a cikin ikon kai, adalci, bambancin halittu, ko bambancin fifiko. Sigar da ta gabata ta bayyana wannan a matsayin "anfani ≥ 10 × hasara → dakatar"; an yi ritaya da wannan karanta domin ta juyar da niyyar (ta toshe cinikin da ke da amfani) kuma za a iya cuta ta ta hanyar raba ayyuka da kumbura na mai rarrabewa.

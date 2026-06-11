@@ -1,0 +1,297 @@
+---
+title: "Phụ Lục I"
+description: "Căn Chỉnh Pháp Lý & Quy Định"
+---
+
+---
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC1)
+---
+
+Tài liệu đối chiếu này mang tính thông tin, không phải tư vấn pháp lý. Cần có đánh giá pháp lý theo từng thẩm quyền trước khi triển khai trong bất kỳ lĩnh vực nào được bao phủ bởi các lớp phủ của §3.
+
+### 0. Mục Đích & Phạm Vi
+Phụ Lục I kết nối các nghĩa vụ CIRIS với luật ràng buộc để một bộ kiểm soát duy nhất đủ đáp ứng cả tuân thủ đạo đức lẫn tuân thủ pháp lý.  
+Các lĩnh vực bao phủ:  
+1. Các chế độ bảo vệ dữ liệu toàn cầu (GDPR, CCPA/CPRA, LGPD, PIPEDA).  
+2. Các đạo luật ngành (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP).  
+3. Các luật an toàn sản phẩm & đặc thù AI (EU‑AI‑Act, ISO/IEC 42001).  
+4. Phân bổ trách nhiệm pháp lý & nghĩa vụ chứng cứ.
+
+Hai tài liệu đồng hành gánh vác phần đối chiếu cùng với phụ lục này. Tài liệu đối chiếu trực tiếp, mang bằng chứng là thư mục `compliance/` của CIRISAgent, đối chiếu 27 chiều ở cấp độ đoạn văn với *Magnifica Humanitas*, Hướng dẫn EU HLEG, IEEE EAD, và Hướng dẫn ASEAN (xem Accord Addendum 1). Annex C vẫn là nơi lưu trữ các ánh xạ luật định (các điều khoản EU AI Act, NIST AI RMF, ISO/IEC 42001) đang chờ rà soát pháp lý; phụ lục này không trùng lặp bảng của Annex C.
+
+#### 0.1 Cơ sở đa phương của phạm vi tuân thủ
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+Phạm vi bao phủ của Phụ Lục I không bị giới hạn bởi luật hiện đã được ban hành. Liên bang coi sự suy yếu của các thể chế quy định đa phương (MH §201) là một yếu tố rủi ro tuân thủ đòi hỏi theo dõi chủ động thay vì vá lỗi phản ứng. Do đó, Reg‑Change Tracker (§6) không chỉ theo dõi luật đã ban hành mà còn theo dõi các cuộc đối thoại quy định quốc tế đang hoạt động — bao gồm các quy trình tiêu chuẩn AI của ITU, các kết quả từ OECD AI Policy Observatory, tình trạng phê chuẩn Công ước AI của Hội đồng Châu Âu, và các khuyến nghị của Cơ quan Tư vấn AI của Tổng thư ký Liên hợp quốc — và đưa các thay đổi trọng yếu vào lịch xử lý WA theo lộ trình leo thang "Breaking".
+
+Danh sách nguồn cấp dữ liệu `lexwatcher.py` PHẢI bao gồm tối thiểu: EUR‑Lex, Federal Register API, trình theo dõi phiếu bầu ISO, cộng thêm `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai`, và `un.org/techenvoy`. Tham gia giám sát ở cấp liên bang là nghĩa vụ tuân thủ hạng nhất, không phải một mục trong lộ trình.
+
+#### 0.2 Ghi chú phạm vi về nguy cơ tiếp xúc hiệp ước trong lĩnh vực không gian mạng
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+Các triển khai CIRIS bao gồm suy luận hướng mạng, phơi bày API, hoặc truyền tải liên bang đều chịu sự ràng buộc của các nghĩa vụ hiệp ước lĩnh vực không gian mạng đang hình thành, ngay cả khi chưa có đạo luật nào hiện hành áp dụng. Lệnh cấm `CYBER_OFFENSIVE` (ACCORD §I Ch1, prohibitions.py) là ranh giới phòng thủ nội bộ; §6 của phụ lục này theo dõi bề mặt hiệp ước bên ngoài. Khi lịch xử lý WA nhận được thẻ "Breaking" liên quan đến phê chuẩn hiệp ước lĩnh vực không gian mạng (ví dụ: mở rộng Công ước Budapest, đề xuất Công ước tội phạm mạng của LHQ), Giao thức CRE (Annex D) phải đánh giá lại mọi triển khai ST ≥ 3 có các thành phần hướng mạng trước chu kỳ F‑Audit tiếp theo.
+
+---
+
+### 1. Đối Chiếu Bảo Vệ Dữ Liệu ("DP‑Map")
+
+| Chủ Đề DP | Điều GDPR | CCPA § | Khoản CIRIS | Hook Triển Khai |
+|----------|-----------|--------|--------------|---------------------|
+| Cơ Sở Hợp Pháp / Giới Hạn Mục Đích | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | Trường `processing_basis` trong ngữ cảnh PDMA |
+| Tối Thiểu Hóa Dữ Liệu | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | Bộ làm sạch lệnh nhắc loại bỏ PII dư thừa |
+| Thông Báo Minh Bạch | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | `/privacy/notice.md` được tự động tạo từ siêu dữ liệu PDMA |
+| Quyền Truy Cập | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Cổng thông tin người dùng được xác thực |
+| Chỉnh Sửa / Xóa | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Dịch vụ xóa với hàm băm mộ bia |
+| Khả Năng Di Chuyển | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | `export.json` tuân thủ ISO CSV‑A |
+| Bảo Vệ Quyết Định Tự Động | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Bảng ghi đè có điều kiện & giải thích |
+
+*Các ánh xạ tương đương LGPD, PIPEDA có trong `/legal/dp-map.yaml`.*
+
+#### 1.1 Chuỗi trách nhiệm giải trình: trách nhiệm ở mỗi giai đoạn
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+DP‑Map ở trên ánh xạ các quyền của chủ thể dữ liệu cá nhân với các điều khoản GDPR và các khoản CIRIS. MH §105 yêu cầu chuỗi trách nhiệm giải trình phải có thể truy vết ở mỗi giai đoạn — thiết kế, triển khai, và quyết định. Các bổ sung sau đây hoàn thiện chuỗi đó:
+
+| Chủ Đề DP | Điều GDPR | Khoản CIRIS | Giai Đoạn | Hook Trách Nhiệm Giải Trình |
+|---|---|---|---|---|
+| Tài liệu thiên kiến tại thời điểm thiết kế | 35 (DPIA) | Section VI Ch3 Creator Ledger | Thiết kế | Trường `cis_bias_assessment` trong Tuyên bố Ý định Người tạo; ST ≥ 3 yêu cầu chữ ký người đánh giá độc lập |
+| Bản ghi xử lý tại thời điểm triển khai | 30 | PDMA Step 1 trường `processing_basis` | Triển khai | `processing_basis` được ghi vào kho lưu trữ chống giả mạo CIRISPersist với dấu thời gian ISO 8601 |
+| Nhật ký khả năng tranh tụng tại thời điểm quyết định | 22(3) | Annex F Autonomy Tier A3+ override panel | Quyết định | `contestability_url` được trả về trong mọi nội dung phản hồi quyết định tự động; neo bằng hàm băm trong nhật ký minh bạch |
+| Nhận diện người kiểm soát | 4(7) | Annex E Structural Influence (SI) score | Mọi giai đoạn | SI ≥ 0.6 → gắn nghĩa vụ người kiểm soát; SI &lt; 0.6 → gắn nghĩa vụ bộ xử lý; được ghi trong `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Điều 37–40 (trách nhiệm giải trình và hồ sơ) và PIPEDA Nguyên tắc 1 (trách nhiệm giải trình) ánh xạ tương đương; `/legal/dp-map.yaml` chứa các trường đặc thù theo thẩm quyền.*
+
+#### 1.2 Tính không trung lập của thuật toán: nghĩa vụ kiểm toán
+
+*MH §104:* "Every technical tool embodies choices and priorities through what it measures, ignores and optimizes, and how it classifies people and situations. If a system is designed or used in a way that treats some lives as less worthy, or excludes them without the possibility of appeal, then it is not merely a tool 'to be used well,' since it has already introduced criteria that contradict the inalienable dignity of the human person."
+
+MH §104 đặt tên cho vấn đề thiên kiến tại thời điểm thiết kế mà GDPR Điều 35 DPIA và EU-AI-Act Điều 9(7) giải quyết theo thủ tục. DP-Map phải bao gồm:
+
+- Trường `bias_audit_ref` trong `dp-map.yaml` trỏ đến báo cáo kiểm toán thiên kiến gần nhất (Annex G, TX-6).
+- Đối với các triển khai trong đó PDMA Step 1 kích hoạt việc xem xét lệnh cấm `DISCRIMINATION`, một DPIA là bắt buộc bất kể liệu triển khai đó có đủ điều kiện là "rủi ro cao" theo EU-AI-Act Annex III hay không.
+- Các quy định về quyết định tự động CCPA §1798.185(a)(16) (có hiệu lực từ 2026) yêu cầu công bố logic, danh mục dữ liệu đầu vào và quyền từ chối; điều này được đáp ứng bởi bảng khả năng giải thích Annex F khi `processing_basis` = `automated_profiling`.
+
+---
+
+### 2. Các Móc Nối Quyền Chủ Thể Dữ Liệu (DSR)
+* **Endpoint:** `POST /dsr` với `{right, identifier, scope}`.  
+* **SLA:** ≤ 30 ngày phản hồi (GDPR) ; ≤ 45 ngày (CCPA) ; theo dõi KPI **F-T-4**.  
+* **Đơn vị xử lý so với Đơn vị kiểm soát:** Sử dụng *Structural Influence (SI)* (Annex E) để xác định bên nào chịu trách nhiệm của đơn vị kiểm soát.
+
+#### 2.1 Móc nối trách nhiệm chính trị
+
+*MH §103:* "In this process, political responsibility is also lost, not just empathy toward those excluded, which can, after all, be simulated. The exclusion of the vulnerable becomes cloaked in a veneer of neutrality and objectivity, against which it becomes difficult to raise objections."
+
+Hạ tầng DSR phải công khai mã lý do đằng sau bất kỳ quyết định tự động nào, không chỉ đơn thuần xác nhận rằng một quyết định đã được đưa ra. Endpoint `POST /dsr` với `{right, identifier, scope}` được mở rộng:
+
+- **Yêu cầu truy cập (GDPR Điều 15; CCPA §1798.110):** Phản hồi PHẢI bao gồm `decision_logic_summary` (ngôn ngữ phi kỹ thuật, ≤300 từ) và danh sách `input_data_categories[]`. KPI **F-T-4** được mở rộng để theo dõi tỷ lệ phần trăm các phản hồi truy cập có kèm tóm tắt logic; mục tiêu ≥ 95%.
+- **Yêu cầu phản đối/từ chối (GDPR Điều 21; CCPA §1798.120):** Hệ thống PHẢI tạm dừng lộ trình xử lý cụ thể đó — không chỉ đơn giản gắn cờ yêu cầu — trong vòng 72 giờ (tiêu chuẩn GDPR) hoặc 15 ngày làm việc (CCPA). Việc tạm dừng được ghi lại trong CSV sổ cái DSR với `suspended_pathway_id`.
+- **Khả năng tranh luận (GDPR Điều 22(3)):** Khi một đánh giá bởi con người được yêu cầu, Cơ Quan Sáng Suốt (WA) đánh giá (Annex B §9) phải ghi lại đánh giá của họ trong Wisdom Bank Database (WBD), tạo ra một chuỗi có thể kiểm toán từ quyết định tự động đến sự điều chỉnh của con người.
+
+---
+
+### 3. Các Lớp Phủ Theo Ngành
+
+#### 3.1 Nguyên tắc bổ trợ như kiến trúc của việc phân lớp theo ngành
+
+*MH §107:* "We cannot be satisfied with merely calling for the moralization of machines — the so-called 'alignment' of AI with human values — without also having the courage to insist on a further condition: the possibility of openly discussing the ethical frameworks involved and subjecting them to shared standards of social justice. Otherwise, those who control AI will impose their own moral vision, which will become the invisible infrastructure of these systems."
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+MH §§107–109 thiết lập rằng quản trị đạo đức phải vận hành ở quy mô phù hợp — không được tổng hợp lên trên cho những người kiểm soát AI, mà phải được phân phối đến các cộng đồng bị ảnh hưởng. Trong thuật ngữ CIRIS: các lớp phủ theo ngành là biểu hiện vận hành của nguyên tắc bổ trợ này. Kiến trúc lớp phủ không phải là một phần bổ sung tuân thủ; đó là cơ chế mà qua đó các cộng đồng theo lĩnh vực triển khai giữ lại quyền quản trị đối với các tham số rủi ro của riêng họ.
+
+Điều này có nghĩa là:
+- `overlay.yaml` của một ngành mang các ràng buộc đạo đức địa phương được ưu tiên hơn các giá trị mặc định chung của CIRIS cho lĩnh vực đó.
+- Số đại biểu WA cần thiết để ghi đè một lớp phủ theo ngành cao hơn số đại biểu cần thiết cho một phán quyết PDMA chung: **việc ghi đè lớp phủ theo ngành đòi hỏi phiếu bầu WA siêu đa số (≥ 2/3)**, không phải đa số đơn giản, chính xác vì việc ghi đè này tổng hợp quản trị lên trên chống lại nguyên tắc bổ trợ.
+- Trường `deployment_domain` trong đối tượng ngữ cảnh PDMA là điều kiện kích hoạt việc tải lớp phủ; nó không phải là tùy chọn đối với các triển khai ST ≥ 2.
+
+#### 3.2 Bảng lớp phủ theo lĩnh vực
+
+| Lĩnh vực | Luật / Quy tắc | Kiểm soát bổ sung | Bổ sung CIRIS | Điểm neo MH |
+|--------|----------------|----------------|---------------|-----------|
+| **Y tế** | HIPAA (45 CFR §164) | Mã hóa ePHI khi lưu trữ & truyền tải; hợp đồng BAA | Bộ bảo vệ `identity_id:"hipaa_cls_a"`; thẻ kiểm toán `PHI=true` | — |
+| **Tài chính** | GLBA, FINRA 2210 | Lưu giữ nhật ký kiểm toán 6 năm; kiểm tra tính phù hợp | PDMA Step 1 yêu cầu bối cảnh KYC | — |
+| **Trẻ em / Công nghệ giáo dục** | COPPA, FERPA | Sự đồng ý của phụ huynh; kiểm soát độ tuổi dữ liệu | Bộ bảo vệ `gr_child_content`; cờ COPPA trong lược đồ prompt | MH §§165–169 |
+| **Cơ sở hạ tầng quan trọng** | NERC‑CIP, TSA SDs | Báo cáo sự cố mạng trong 15 phút; nhật ký truy cập vật lý | Quyền tự chủ giới hạn ở **A2** trừ khi CRE thông qua | — |
+| **Lao động / Nhân sự / Tuyển dụng** | Hướng dẫn EEOC; EU AI Act Art. 6 + Annex III §4 | Yêu cầu kiểm toán thiên kiến trước khi triển khai; nghĩa vụ thông báo cho người lao động | Bộ điều chỉnh ST: `deployment_domain:"labor_hr"` → sàn ST = 3; CIS phải bao gồm trường `worker_impact_assessment`; lệnh cấm `DISCRIMINATION` được thực thi ở Step 1; tỷ lệ từ chối tự động theo nhân khẩu học được theo dõi như KPI | MH §§148–156 |
+| **Kinh tế gig / Nền tảng** | NLRA (Hoa Kỳ); Platform Work Directive (EU) | Minh bạch quản lý thuật toán; quyền khiếu nại | Bộ bảo vệ `gr_gig_transparency` đang hoạt động; các quyết định quản lý thuật toán được ghi lại kèm lựa chọn xem xét của con người; bộ điều chỉnh ST: `deployment_domain:"gig_platform"` → sàn ST = 2 | MH §§150, 154–155 |
+| **Dịch vụ thanh thiếu niên / Giáo dục** | COPPA; FERPA; DSA Art. 28b (trẻ vị thành niên) | Cấm thiết kế gây nghiện; không được dùng mẫu tối; xem xét tính phù hợp với sự phát triển | Cả `gr_child_content` + `gr_no_dark_patterns` đều đang hoạt động; giới hạn quyền tự chủ A2 trừ khi WA của cơ sở giáo dục ký xác nhận; tác động việc làm của thanh niên được theo dõi trong Creator Intent Statement cho các triển khai EdTech | MH §§165–169 |
+| **Dịch vụ xã hội / Phúc lợi** | Luật phúc lợi quốc gia/tiểu bang; GDPR Art. 22 | Yêu cầu có thể tranh chấp cho mọi quyết định phúc lợi | Từ chối phúc lợi tự động yêu cầu xem xét của con người trong vòng 15 ngày; WA phải ghi lại quá trình xem xét trong WBD; `suspended_pathway_id` được cấp khi tranh chấp | MH §§102–103, 152 |
+
+*Bộ điều chỉnh sàn ST: các giá trị trường `deployment_domain` nêu trên đặt ST tối thiểu bất kể kết quả tính toán CIS × RM. Nếu công thức cho ra ST thấp hơn, sàn theo lĩnh vực được áp dụng. Nếu công thức cho ra ST cao hơn, kết quả công thức được áp dụng.*
+
+*Các sản phẩm bước vào bất kỳ lĩnh vực mới nào PHẢI đính kèm "Overlay Sheet" (`overlay.yaml`) trong release PR. Các lớp phủ Lao động/Nhân sự, Gig/Nền tảng và Thanh thiếu niên bổ sung yêu cầu phần `worker_impact_assessment` hoặc `youth_impact_assessment` trong Creator Intent Statement.*
+
+#### 3.3 Yêu cầu số đại biểu WA theo thẩm quyền
+
+*MH §109:* "To speak of subsidiarity calls for protecting the ability of communities to make choices and corrections, rather than having decisions imposed on them from above."
+
+Số đại biểu WA cho quản trị lớp phủ theo lĩnh vực được phân tầng theo thẩm quyền:
+
+| Phạm vi | Loại số đại biểu | Ngưỡng | Lý do |
+|---|---|---|---|
+| Triển khai đơn thẩm quyền | Hội đồng WA địa phương | Đa số đơn giản (> 50%) | Cấp quản trị thấp nhất có thể theo nguyên tắc bổ trợ |
+| Triển khai đa thẩm quyền (≤ 3 quốc gia) | Hội đồng WA khu vực | Đa số đơn giản + ít nhất 1 WA từ mỗi thẩm quyền bị ảnh hưởng | Bảo tồn nguyên tắc bổ trợ xuyên biên giới |
+| Triển khai đa thẩm quyền (> 3 quốc gia) | Hội đồng WA liên bang | Siêu đa số (≥ 2/3) | Quy mô tác động đòi hỏi ngưỡng cao hơn |
+| Ghi đè bất kỳ lớp phủ lĩnh vực nào | Hội đồng WA liên bang | Siêu đa số (≥ 2/3) | Tổng hợp quản trị lên trên là hành động ngoại lệ |
+| Ghi đè lớp phủ lao động/nhân sự cụ thể | Hội đồng WA liên bang + người xem xét quyền lao động độc lập | Siêu đa số (≥ 2/3) + chữ ký bên ngoài | MH §155 xác định các tổ chức lao động là cấu trúc chịu tải thiết yếu |
+
+---
+
+### 4. Sự phù hợp với An toàn sản phẩm & Đạo luật AI
+
+*MH §105:* "In many cases, however, the internal processes leading to a result remain opaque, making it harder to assign responsibility and correct errors."
+
+*MH §106:* "It is not enough to invoke ethics in the abstract; robust legal frameworks, independent oversight, informed users and a political system that does not abdicate its responsibility are required."
+
+Minh bạch ở lớp đầu ra (Art. 13) và giám sát của con người (Art. 16) đơn thuần không đáp ứng MH §§105–106, vốn yêu cầu khả năng truy xuất ở từng giai đoạn nội bộ. Bảng căn chỉnh theo đó được mở rộng như sau:
+
+| Điều khoản EU AI Act | Mức rủi ro | Ánh xạ CIRIS | Điểm neo MH | Kiểm soát bổ sung |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Art 9 Quản lý rủi ro | Rủi ro cao | Section II PDMA + Annex D CRE | MH §105 | — |
+| Art 13 Minh bạch | Phổ quát | KPI F‑T‑3, bảng giải thích | MH §105 | ID giai đoạn PDMA được đưa vào tải trọng minh bạch; trường `stage_trace[]` trong phản hồi API |
+| Art 16 Giám sát con người | Rủi ro cao | Annex F Autonomy Tiers | MH §105 | Giám sát phải mang tính thực chất, không chỉ thủ tục; A3‑A4 đẩy `{stage_id,decision,risk_band}` theo thời gian thực ≤ 2 giây đến bảng điều khiển giám sát |
+| Art 15 Tính vững chắc | Rủi ro cao | Annex G RS ≥ 0.97 | — | — |
+| Art 12 Ghi nhật ký | Rủi ro cao | Kho lưu trữ chống giả mạo CIRISPersist | MH §103 | Nhật ký phải bao gồm `rejection_reason_code` cho mọi quyết định bất lợi; lưu giữ 7 năm (A3‑A4) |
+| Art 14(4) Giám sát con người (lao động) | Rủi ro cao (Annex III §4) | Lớp phủ Lao động/Nhân sự (§3.2) | MH §§148–152 | Các triển khai nhân sự/tuyển dụng phải hiển thị boolean `worker_notice_sent` trong CEP |
+| Đánh giá sự phù hợp | Rủi ro cao | F‑Audit (Annex H) đồng thời là MDR theo EU AI Act | MH §106 | Báo cáo F‑Audit PHẢI bao gồm phân tích độ trễ thay đổi quy định: ngày thay đổi quy định trọng yếu gần nhất so với ngày cập nhật CIRIS gần nhất |
+| Art 61 Giám sát sau thị trường | Rủi ro cao | F‑Audit mỗi 24 tháng | MH §106 | Kế hoạch giám sát phải nêu tên các nguồn cung cấp từ §0.1; "không có gì để giám sát" không phải là kế hoạch giám sát hợp lệ |
+
+Ánh xạ từng điều khoản theo luật định (EU AI Act, NIST AI RMF, ISO/IEC 42001) đang được hợp nhất trong Annex C chờ xem xét pháp lý; bảng trên được giữ lại ở đây như góc nhìn căn chỉnh vận hành.
+
+#### 4.1 Sự phù hợp với ISO/IEC 42001:2023
+
+*MH §107:* "A more moral AI is not enough if that morality is determined by a few. What is needed is a more active political involvement…"
+
+ISO/IEC 42001 §6.1 (xử lý rủi ro AI) và §9.1 (giám sát và đo lường) phù hợp với CIRIS như sau:
+
+- ISO 42001 §6.1 → PDMA Steps 1‑3 + CRE Protocol (Annex D).
+- ISO 42001 §9.1 → KPIs F‑T‑1 đến F‑T‑5 (Annex G) + KPI F‑T‑4 sổ cái DSR.
+- ISO 42001 §10.2 (không phù hợp) → Đường leo thang "Breaking" của hồ sơ WA.
+- ISO 42001 §8.4 (đánh giá tác động hệ thống AI) → Các phần Creator Intent Statement về `worker_impact_assessment` và `youth_impact_assessment` (§3.2).
+
+---
+
+### 5. Ma Trận Trách Nhiệm Pháp Lý
+
+*MH §105:* "Responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions."
+
+MH §105 yêu cầu ma trận trách nhiệm pháp lý phải bao quát rõ ràng các giai đoạn thiết kế, triển khai và quyết định:
+
+| Véc-tơ Thất Bại | Giai Đoạn | Bên Chịu Trách Nhiệm Chính | Luật Tham Chiếu | Tham Chiếu Vai Trò CIRIS | Ghi Chú Phân Bổ SI |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| Lỗi thiết kế (thuật toán / sai lệch được nhúng vào lúc tạo ra) | Thiết kế | Người tạo / Nhà phát triển | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; `cis_bias_assessment` field | SI ≥ 0.8 → trách nhiệm pháp lý duy nhất thuộc người tạo |
+| Lỗi thiết kế (kiểm toán sai lệch không đầy đủ) | Thiết kế | Người tạo / Nhà phát triển | GDPR Art. 35 DPIA duty | Creator Intent Statement; mandatory DPIA at ST ≥ 3 | — |
+| Sơ suất vận hành | Triển khai | Tổ chức triển khai | Tort Law; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → trách nhiệm liên đới; phân bổ SI theo Annex E |
+| Thất bại giám sát | Triển khai / Quyết định | Cơ Quan Sáng Suốt (nếu cố tình vi phạm nặng) | Fiduciary / Negligence | Annex B §9; WBD contestability record | Cơ Quan Sáng Suốt nào đã xem xét và phê duyệt thì chịu trách nhiệm |
+| Vi phạm dữ liệu | Triển khai | Bên kiểm soát (theo quy tắc SI ≥ 0.6) | GDPR Art. 82; CCPA private action | Annex G TX‑6 | — |
+| Lập hồ sơ tự động trái pháp luật | Quyết định | Bên kiểm soát | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| Dịch chuyển lao động mà không có đánh giá tác động đối với người lao động | Thiết kế | Người tạo / Nhà phát triển | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); `worker_impact_assessment` field | MH §§151–152; véc-tơ mới |
+| Thiết kế gây hại nhắm vào thanh thiếu niên (các mẫu gây nghiện) | Thiết kế / Triển khai | Người tạo + Tổ chức triển khai (liên đới) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); `gr_no_dark_patterns` guardrail | MH §§165–167; véc-tơ mới |
+| Quy kết sai sự cố mạng dẫn đến leo thang | Triển khai | Tổ chức triển khai + Liên đoàn (nếu ST ≥ 4) | Budapest Convention; proposed UN cybercrime convention | `CYBER_OFFENSIVE` prohibition; CRE Protocol re‑evaluation trigger | MH §225; véc-tơ mới |
+
+*Trách nhiệm liên đới và chịu trách nhiệm độc lập có thể áp dụng; điểm số SI (Annex E) làm cơ sở phân bổ. Các véc-tơ mới (dịch chuyển lao động, thiết kế nhắm vào thanh thiếu niên, quy kết sai về mạng) được gắn cờ để xem xét pháp lý tại từng thẩm quyền trước khi triển khai trong các lĩnh vực đó.*
+
+---
+
+### 6. Trình Theo Dõi Thay Đổi Quy Định
+
+* **Nguồn Cấp Dữ Liệu:** EUR‑Lex, Federal Register API, ISO ballot tracker, cộng với các nguồn cấp dữ liệu mở rộng của §6.1.  
+* **Bot:** `lexwatcher.py` chạy hàng ngày; tạo GitHub issue với thẻ `reg‑update`.  
+* **Nhãn Tác Động Tuân Thủ:** `minor`, `material`, `breaking`, `multilateral-erosion` (xem bảng leo thang bên dưới).
+
+#### 6.1 Sự tham gia cấp liên đoàn trong đối thoại quy định
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened."
+
+*MH §226:* "International organizations, particularly the United Nations, are essential instruments for promoting a civilization of love, for they can foster dialogue among nations and promote the peaceful resolution of conflicts… the international community can work to reduce inequalities, defend the rights of refugees and minorities, reallocate resources from military spending to human development and protect our common home."
+
+*MH §221:* "There is an urgent need to shift from the 'culture of power' to a genuine 'culture of negotiation,' in which dialogue and diplomacy become the standard means of resolving conflicts."
+
+MH §§201, 221, 226 xác lập rằng việc tuân thủ thụ động với luật đã được ban hành là không đủ khi chính các tổ chức đa phương sản sinh ra luật đó đang bị suy yếu. Do đó, Trình Theo Dõi Thay Đổi Quy Định được mở rộng từ một công cụ phản ứng (theo dõi các thay đổi đã ban hành) thành một cơ chế tham gia chủ động.
+
+**Nguồn cấp dữ liệu mở rộng** (bổ sung cho EUR‑Lex, Federal Register, ISO ballot tracker hiện có):
+
+| Nguồn cấp | Phạm vi | Điều kiện kích hoạt hành động CIRIS |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group AI/ML) | Tiêu chuẩn AI viễn thông quốc tế | Lôgic ISO ballot tracker: `material` nếu tiêu chuẩn được phê chuẩn xung đột với mặc định CIRIS |
+| `oecd.ai` (OECD AI Policy Observatory) | Hội tụ chính sách trên 38 quốc gia thành viên | `minor` để theo dõi; `material` nếu sửa đổi Khuyến nghị OECD ảnh hưởng đến hệ thống ST hoặc lớp phủ lao động |
+| `coe.int/ai` (Council of Europe AI Convention) | Hiệp ước AI quốc tế ràng buộc đầu tiên (mở ký năm 2024) | `breaking` khi có thẩm quyền triển khai CIRIS nào phê chuẩn; docket Cơ Quan Sáng Suốt tự động mở |
+| `un.org/techenvoy` (UN AI Advisory Body) | Khuyến nghị quản trị AI cấp Liên Hợp Quốc | `material` nếu báo cáo thường niên nêu đích danh các nghĩa vụ kiến trúc cụ thể |
+| `budapestconvention.org` (Cybercrime Convention) | Phê chuẩn hiệp ước lĩnh vực mạng | `breaking` khi có phê chuẩn mới; cần đánh giá lại CRE cho các triển khai hướng mạng ST ≥ 3 |
+| Các cơ quan đăng ký chiến lược AI quốc gia (EU, US, UK, JP, AU, BR, IN, ZA) | Cập nhật chiến lược AI trong nước có hiệu lực pháp lý | `minor` cho chiến lược; `material` nếu chiến lược tạo ra nghĩa vụ tuân thủ bắt buộc |
+
+**Sự tham gia cấp liên đoàn:**
+
+Liên đoàn CIRIS không đơn thuần là bên thụ hưởng tuân thủ. MH §§219–221 đặt tên đối thoại và đàm phán là phương pháp chính yếu của sự cùng tồn tại. Trong thuật ngữ vận hành của CIRIS:
+
+- Hội đồng Cơ Quan Sáng Suốt CẦN chỉ định ít nhất một Đặc Phái Viên Đối Thoại Quy Định (RDL) cho mỗi cơ quan tiêu chuẩn quốc tế đang hoạt động được liệt kê ở trên.
+- RDL xem xét các quy định dự thảo trong các giai đoạn lấy ý kiến công khai và nộp ý kiến thông qua kênh công khai của liên đoàn. Các ý kiến được ghi lại trong Wisdom Bank Database (WBD) dưới dạng hồ sơ đối thoại quy định.
+- Khi một quy định dự thảo xung đột với các mặc định CIRIS, RDL nộp một mục docket Cơ Quan Sáng Suốt và khởi xướng một mini-PDMA để đánh giá xem liệu CIRIS phải thích nghi hay CIRIS nên vận động cho một lộ trình quy định khác. Kết quả được nộp dưới dạng ý kiến công khai trước thời hạn lấy ý kiến.
+- Sự tham gia giới hạn ở các quy trình lấy ý kiến công khai và tham vấn đa bên. Liên đoàn CIRIS không tham gia vận động hành lang theo định nghĩa của luật áp dụng.
+
+**Lộ trình leo thang:**
+
+| Nhãn | Điều kiện kích hoạt | Hành động |
+|---|---|---|
+| `minor` | Thay đổi chỉ để theo dõi | Xem xét hàng năm; ghi lại trong hồ sơ WBD đối thoại quy định |
+| `material` | Cần cập nhật kiểm soát CIRIS | Kiểm toán S‑Dive trong vòng 90 ngày; RDL nộp ý kiến công khai nếu giai đoạn lấy ý kiến còn mở |
+| `breaking` | Vá thông số kỹ thuật hoặc docket Cơ Quan Sáng Suốt khẩn cấp | Phiên họp Cơ Quan Sáng Suốt khẩn cấp ≤ 30 ngày; đánh giá lại CRE cho các tầng ST bị ảnh hưởng; nộp ý kiến công khai của RDL |
+| `multilateral-erosion` | Làm suy yếu tổ chức hoặc hiệp ước đa phương quan trọng (theo MH §201) | RDL leo thang lên Cơ Quan Sáng Suốt để xem xét chiến lược; liên đoàn cân nhắc tuyên bố công khai rõ ràng bày tỏ sự ủng hộ đối với tổ chức đó |
+
+---
+
+### 7. Gói Bằng Chứng Tuân Thủ (CEP)
+
+*MH §105:* "Khả năng xác định ai phải 'chịu trách nhiệm' về các quyết định, giải thích chúng, giám sát chúng, và khi cần thiết, phản bác chúng và khắc phục bất kỳ thiệt hại nào phát sinh."
+
+Mỗi **F‑Audit** (Annex H) PHẢI xuất một tệp zip CEP chứa:
+
+1. `dp-map.yaml` — bảng đối chiếu trực tiếp, bao gồm trường `controller_si_threshold` và con trỏ `bias_audit_ref` (§1.1).
+2. Nhật ký PDMA (đã biên tập) chứng minh cơ sở hợp pháp — bao gồm giá trị trường `processing_basis` và `stage_trace[]` cho tất cả các quyết định ST ≥ 3.
+3. Tệp CSV sổ cái DSR — bao gồm tỷ lệ hoàn thành `decision_logic_summary` (mở rộng KPI F‑T‑4) và nhật ký `suspended_pathway_id`.
+4. Gói chữ ký (`.sigstore`) của tất cả hiện vật mô hình (Annex G).
+5. Các Trang Phủ theo lĩnh vực — bao gồm `worker_impact_assessment` và `youth_impact_assessment` cho các lĩnh vực áp dụng.
+6. Xác nhận ma trận trách nhiệm pháp lý được ký bởi bộ phận pháp lý — bao gồm các vector mới: dịch chuyển lao động, thiết kế dành cho thanh thiếu niên, quy kết sai trong không gian mạng.
+7. Phân tích độ trễ thay đổi quy định — ngày thay đổi quy định quan trọng gần nhất so với ngày cập nhật kiểm soát CIRIS gần nhất; khoảng cách ≥ 90 ngày yêu cầu giải thích.
+8. Hồ sơ tham gia đối thoại quy định — các mục WBD cho bất kỳ đề xuất đối thoại quy định nào trong kỳ kiểm toán; "không có đề xuất" là chấp nhận được nếu không có quy định quan trọng nào đang được bình luận công khai.
+9. Hồ sơ hoàn thành khả năng tranh luận — đối với tất cả các quyết định A3‑A4 trong kỳ kiểm toán: phần trăm các trường hợp có yêu cầu xem xét của con người, phần trăm các trường hợp tài liệu WBD được hoàn thành trong vòng 15 ngày; mục tiêu KPI ≥ 90%.
+
+CEP được băm và tải lên `/compliance/cep/{version}.zip`; băm gốc được neo vào nhật ký minh bạch. Bằng chứng cấp chiều đằng sau CEP được duy trì trong thư mục `compliance/` của CIRISAgent (Accord Addendum 1).
+
+---
+
+### 8. Liên Kết Giữa Các Annex
+* **Annex F:** Các Tầng Tự Chủ đảm bảo các yêu cầu giám sát của con người theo GDPR Art 22 & EU‑AI‑Act Art 16.  
+* **Annex G:** Các biện pháp bảo vệ quyền riêng tư TX‑6 đáp ứng các khuyến nghị về bút danh hóa dữ liệu của GDPR (Recital 28).  
+* **Annex H:** Thời điểm F‑Audit cung cấp bằng chứng cho các nghĩa vụ đánh giá lại định kỳ trong EU‑AI‑Act Art 61.  
+* **Annex J:** Các giải thích chuẩn mực cung cấp "thông tin có ý nghĩa" cho các truy vấn về quyết định tự động (GDPR Art 15(1)(h)).  
+* **§3.2 Lớp phủ Lao động/Nhân sự → Annex D CRE:** Các triển khai lao động ở sàn ST 3 phải vượt qua Giao thức CRE trước khi triển khai.  
+* **§6.1 Tham gia RDL → Cấu trúc Cơ Quan Sáng Suốt Annex B:** RDL là vai trò Cơ Quan Sáng Suốt được chỉ định; thủ tục bổ nhiệm, hồi tị và luân chuyển tuân theo Annex B §9.  
+* **§5 Ma trận trách nhiệm pháp lý (các vector mới) → Annex E SI:** Trách nhiệm pháp lý liên đới trong thiết kế dành cho thanh thiếu niên sử dụng công thức phân bổ SI giống như các vector hiện có.  
+* **§7 Mục CEP 8 (đối thoại quy định) → §6 Bộ theo dõi:** Các bản ghi đối thoại quy định WBD là nguồn cho mục CEP 8; không có hệ thống ghi nhật ký riêng biệt.  
+* **Annex C:** Nơi lưu trữ trong tương lai cho các ánh xạ theo luật định (các điều khoản EU AI Act, NIST AI RMF, ISO/IEC 42001) chờ xem xét pháp lý.
+
+---
+
+### 9. Tài Liệu Tham Khảo
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

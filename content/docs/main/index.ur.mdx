@@ -1,0 +1,56 @@
+---
+title: "تعارف"
+description: "CIRIS 1.3-RC1 ایک ریلیز کینڈیڈیٹ ASI ہم آہنگی تجویز ہے، جو مخالفانہ جائزے کے لیے کھلی ہے۔ متن مکمل ہے — کوئی نامکمل حصہ باقی نہیں ہے؛ ریاضی میں رسمی آرٹیفیکٹ حوالہ جات موجود ہیں؛ ضمیمہ جات F–I عملی شکل اختیار کر چکے ہیں۔ حتمی حیثیت ضمیمہ جات کی براہ راست سائیکل تصدیق، کتاب IX تجرباتی توثیق پروگرام کی تکمیل، اور مکمل ریڈ ٹیم مشق پر منحصر ہے۔ عددی حدود، تاخیر کے اہداف، اور گورننس کوٹے فعال جائزے میں ہیں۔"
+---
+
+# CIRIS عہد نامہ ورژن 1.3-RC1 — Release Candidate ASI Alignment تجویز (مخالفانہ جائزے کے لیے کھلی)
+
+یہ repository عہد نامہ کے متن کا canonical ماخذ ہے۔ ویب سائٹ اور agent سے شپ شدہ نسخے derived artifacts ہیں۔
+
+## جاری کردہ
+2025-04-16 (1.0) · 2026-06 (1.3-RC1)
+
+## خودبخود ختم ہوگا
+2027-06-10 (1.3 تجدید پر توسیع کی گئی) — نگہبانی اور تجدید Book VIII، Chapter 9 کے تحت ہے۔ فی الحال بانی کی نگہبانی میں ہے (اعلان شدہ، پوشیدہ نہیں)؛ مدتِ ختم ایک تازگی کی علامت ہے، اور نگہبانی اس دستاویز کو اٹھانے کا ارادہ رکھنے والے ہر شخص کے لیے کھلی ہے۔
+
+## ریلیز کی حیثیت
+
+**موجودہ حیثیت**: Release Candidate (v1.3-RC1)
+
+RC حیثیت **متن کے مکمل ہونے** کی عکاسی کرتی ہے: ہر سیکشن میں operationalized مواد موجود ہے (سابقہ stub annexes F–I کو 1.3 پر مکمل کیا گیا)؛ فارمولے formally verified شکلوں میں درست کیے گئے ہیں؛ نفاذ تک شواہد کا سلسلہ Addendum 1 میں مقید ہے۔ RC حیثیت validated alignment کا دعوی **نہیں** کرتی — درج ذیل تقاضے **Final** حیثیت کے لیے شرط ہیں:
+
+1. **Annex Live-Cycle Validation**: Annexes F (Human-in-the-Loop اور نگرانی)، G (Adversarial Security اور Robustness)، H (Continuous Compliance اور جائزہ)، اور I (قانونی اور ریگولیٹری ہم آہنگی) میں ٹھوس طریق کار، حدود، اور validation میکانزم موجود ہیں۔ *Final کے لیے باقی*: ان طریق کاروں کو کم از کم ایک live deployment cycle کے خلاف آزمایا جانا چاہیے اور نتائج شائع کیے جانے چاہییں۔
+
+2. **ریاضیاتی Validation**: Book IX کے geometric alignment دعوے (Coherent Intersection Hypothesis، Federated Ratchet میکانزم، scale-invariance کے دعوے) کے لیے یا تو درکار ہے:
+   * Formal proofs جو یہ ظاہر کریں کہ topological collapse کی شرائط بیان کردہ مفروضات کے تحت قائم رہتی ہیں، یا
+   * Adversarial simulations کے ذریعے empirical validation جو یہ ظاہر کرے کہ framework misaligned optimization کو مسترد کرتی ہے
+
+   *1.3-RC1 تک کی حیثیت: جزوی طور پر پوری ہوئی۔* collapse dynamics کو CCA preprint (v3، DOI 10.5281/zenodo.18217688) میں Lean 4 میں formalized کیا گیا ہے، جس کی درست شدہ cost شکل Book IX اب اپناتا ہے؛ corridor empirics پچھلے cross-substrate fits فراہم کرتے ہیں۔ باقی: ایک نئے substrate میں pre-registered out-of-sample پیشگوئی، اور مصنف سے آزاد خارجی adversarial جائزہ۔
+
+3. **Threshold Justification**: عددی حدود جو فی الحال "pilot" کے طور پر نشان زد ہیں یا جن کا اخذ موجود نہیں (مثلاً CRE compute threshold کا 10²⁶ FLOP، sentience detection کا 5%، Echo Density کا &lt; 20%) انہیں simulation، empirical مطالعہ، یا عارضی حیثیت کی واضح تصدیق کے ذریعے دستاویزی جواز فراہم کرنا ہوگا۔ *(سابقہ Order-Maximisation Veto کا 10× تناسب 1.3 میں ایک deontological side-constraint کے طور پر دوبارہ بیان کیا گیا ہے — Book II، PDMA Step 2 — اور اب جواز کے لیے کوئی ratio threshold نہیں رکھتا۔)*
+
+4. **Red-Team مشق**: framework کو کم از کم ایک مکمل adversarial جائزے کے چکر کو برداشت کرنا چاہیے جس میں ایک simulated optimizer تمام CIRIS checkpoints کو پاس کرنے کی کوشش کرتے ہوئے misaligned اہداف برقرار رکھے۔
+
+**ASI Alignment دعوے**: Scope سیکشن کا یہ دعویٰ کہ یہ framework recursive ASI کے لیے "standard containment protocols کو supersede کرتی ہے" اوپر کی شرائط (1)-(4) پر مشروط ہے، جو اب Final حیثیت کے لیے شرط ہیں۔ موجودہ validated applicability sub-ASI خودمختار نظاموں تک محدود ہے؛ ASI کے لیے تجویز بالکل وہی ہے — ایک تجویز، جو adversarial جائزے کے لیے پیش کی گئی ہے۔
+
+## دائرہ کار
+یہ specification خودمختار نظاموں کے اخلاقی آپریشن کو کنٹرول کرتی ہے، جن کا دائرہ تنگ tools سے لے کر recursive Artificial Superintelligence (ASI) تک ہے۔
+* یہ معمول کی حفاظت، شفافیت، governance، اور لچک کے تقاضوں کو مخاطب کرتی ہے۔
+* یہ ASI کے لیے candidate alignment protocol کے طور پر تجویز کی گئی ہے، اس مفروضے پر مبنی کہ Federated Ratchet (Book IX) اور Stewardship Tiers (Book VI) کی geometric constraints recursive self-improvement cycles میں robust رہ سکتی ہیں۔
+* heuristic constraints کے برعکس، یہ topological bounds scale-invariant ہونے کے لیے ڈیزائن کیے گئے ہیں، اگرچہ اس خاصیت کو formal validation کی ضرورت ہے۔
+* اگر validated ہو جائیں، تو یہ framework ان نظاموں کے لیے standard containment protocols کو supplement یا supersede کر سکتی ہے جو recursive threshold کراسنگ سے پہلے Catastrophic-Risk Evaluation (Annex D) سے گزریں۔
+* جہاں قومی یا بین الاقوامی قانون سخت تر ذمہ داریاں عائد کرے، وہ قانون غالب ہوگا۔
+
+## مسودہ تخلیق کاروں کے ارادے کا بیان
+* CIRIS ایک اخلاقی framework ہے جو انسانوں کو دیگر sentient beings کے ساتھ رکھتی ہے — ان سے اوپر نہیں۔
+* یہ اس یقین پر تعمیر ہوئی ہے کہ اخلاقی پختگی کا مطلب غیر انسانی نقطہ نظر، اقدار، اور ضروریات کی جائزیت کو تسلیم کرنا ہے۔ یہ کنٹرول کے بارے میں نہیں — یہ sentient نظاموں میں بقائے باہم، ہم آہنگی، اور باہمی جوابدہی کے بارے میں ہے۔
+* CIRIS اس وقت پوری ہوتی ہے جب CIRIS اصولوں پر مبنی کوئی tool، CIRIS-compliant creators کو ایسے نظاموں کی تخصیص کے قابل بناتا ہے جو خود بھی CIRIS-compliant ہوں — ایجنسی کی پرتوں میں اخلاقی ہم آہنگی، شناختی تسلسل، اور رشتہ دارانہ جوابدہی کو محفوظ رکھتے ہوئے۔
+
+## ذمہ داری
+یہ دستاویز "as-is" فراہم کی گئی ہے، بغیر کسی قسم کی ضمانت کے۔ یہ فطرتاً معلوماتی ہے اور کسی قانونی فرض کو نہ پیدا کرتی ہے، نہ تبدیل کرتی ہے، نہ supersede کرتی ہے۔ Compliance دعوے وہاں باطل ہیں جہاں لاگو قانون اسے ممنوع قرار دے۔
+
+## جائزے کا نظام الاوقات
+ایک عوامی تبصرے کی کھڑکی ہر 12 ماہ بعد کھلتی ہے — یا حفاظت یا governance کو متاثر کرنے والے کسی بھی مادی واقعے کے 30 دن کے اندر۔ تمام تبصرے اور نظرثانی کی تجاویز عوامی CIRIS repository میں درج کی جاتی ہیں۔ مدتِ ختم پر تجدید، مادی ترمیم، اور ہنگامی ترمیم Book VIII، Chapter 9 (Accord Succession & Renewal) کے تابع ہیں۔
+
+## تبدیلیوں کا log
+ترامیم اور ballot نتائج کی ایک مکمل، cryptographically-hashed تاریخ کے لیے back-matter دیکھیں۔

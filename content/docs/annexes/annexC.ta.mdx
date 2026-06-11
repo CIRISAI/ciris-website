@@ -1,0 +1,42 @@
+---
+title: "இணைப்பு C"
+description: "ஒழுங்குமுறை குறுக்கு-ஒப்பீடு"
+---
+
+---
+ANNEX C REGULATORY CROSS‑WALK   (v 1.3-RC1)
+---
+
+### நோக்கம்
+
+இரட்டை இணக்கத்தை எளிமைப்படுத்த CIRIS பிரிவுகளை முக்கிய வெளிப்புற தரநிலைகளுடன் வரைபடமிடுதல். இந்த இணைப்பு இரண்டு அடுக்குகளைக் கொண்டுள்ளது:
+
+1. **செயல்பாட்டு குறுக்கு-நடை (நேரடி, சான்று-தாங்கி)** — CIRISAgent `compliance/` அடைவு: நான்கு நிறுவன-வேறுபட்ட மூத்த கட்டமைப்புகளுக்கு எதிராக (*Magnifica Humanitas* · EU HLEG Trustworthy AI Guidelines · IEEE Ethically Aligned Design · ASEAN AI Governance Guide) பத்தி-அளவில் குறுக்கு-நடை செய்யப்பட்ட 27 நிலையான பரிமாணங்கள் (D01–D27), பரிமாண-வாரியான செயலாக்க குறிப்புகள் மற்றும் தேதியிட்ட, கணினி-உருவாக்கிய அடிக்கோடுகளுடன். கட்டுப்பாடு மற்றும் சான்று ஒழுக்கத்திற்கு **Addendum 1** காண்க.
+2. **சட்டப்பூர்வ வரைபடம் (தகவல்தரும்)** — கீழேயுள்ள அட்டவணை, CIRIS கட்டமைப்புகளை கட்டுப்பாட்டு-சட்டம் மற்றும் தரநிலை கட்டமைப்புகளுடன் வரைபடமிடுகிறது. இந்த வரிசைகள் *தகவல்தரும் பொறியியல் தொடர்புகள்*, சட்ட கருத்துக்கள் அல்ல; சட்டப்பூர்வ வரிசைகள் சட்ட மதிப்பாய்வின் மூலம் மட்டுமே "சரிபார்க்கப்பட்டது" நிலைக்கு உயரும். Annex I இயக்கமுறையான சட்ட-சீரமைப்பு நடைமுறைகளை (தரவு-பாதுகாப்பு வரைபடம், துறை மேலடுக்குகள், பொறுப்பு அணி, அதிகரிப்பு ஓட்டங்கள்) கொண்டுள்ளது.
+
+### சட்டப்பூர்வ மற்றும் தரநிலை வரைபடம் (தகவல்தரும்; சட்ட சரிபார்ப்பு நிலுவையில்)
+
+| வெளிப்புற கட்டமைப்பு | தொடர்புடைய சட்டப்பிரிவுகள் / பிரிவுகள் | CIRIS வரைபடம் (Book / Annex §) | நிலை |
+|---|---|---|---|
+| EU AI Act (2024) | Art 9 Risk Management | Book II §II (PDMA); Annex D CRE | Informative |
+| | Art 12 Record-Keeping | Book IV Ch 3 audit trails; Annex F §4 | Informative |
+| | Art 13 Transparency | Book II §II Step 6; Book IV Ch 3 | Informative |
+| | Art 14 Human Oversight (incl. 14(4)) | Book II §III (WBD); Annex F authority lattice + autonomy tiers | Informative |
+| | Art 61 Post-Market Monitoring | Annex H drift controls + continuous audit | Informative |
+| NIST AI RMF 1.0 | Govern → Map → Measure → Manage | Govern: Books I, VI; Map: Book II §II Steps 1–2; Measure: Annex A metrics + Annex H baselines; Manage: Annex F/H workflows | Informative |
+| ISO/IEC 42001 | Cl 6.2 Risk Assessment | Book II §II | Informative |
+| | Annex A controls | CIRISAgent `compliance/` dimension docs (per-control correspondence pending) | Informative |
+| OSHA Robotics Guidelines | Sec 5.E Safety Audits | Annex D CRE | Partial |
+| EU HLEG Trustworthy AI (2019) | 7 Requirements | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+| IEEE EAD 1st ed. (2019) | 8 General Principles | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+| ASEAN AI Governance Guide (2024) | 7 Principles; HITL/HOTL/HOOTL | Operational cross-walk; Annex F autonomy tiers | Evidence-bearing |
+| *Magnifica Humanitas* (2026) | 245 ¶¶ (paragraph-grain mapping) | Operational cross-walk, dimensions D01–D27 | Evidence-bearing |
+
+### தரமேற்றல் விதி
+
+ஒரு சட்டப்பூர்வ வரிசை *தகவல்தரும்* நிலையிலிருந்து *சரிபார்க்கப்பட்டது* நிலைக்கு மாறும்போது, தகுதிவாய்ந்த சட்ட மதிப்பாய்வு ஒரு குறிப்பிட்ட அதிகார வரம்பிற்கான தொடர்பை உறுதிப்படுத்தி மதிப்பாய்வு கலைப்பொருள் இந்த அட்டவணையிலிருந்து இணைக்கப்படும். அதுவரை, இந்த இணைப்பிலுள்ள வரிசைகள் பொறியியல் சீரமைப்பு மற்றும் இடைவெளி பகுப்பாய்வை ஆதரிக்கின்றன, இணக்க கோரிக்கைகளை அல்ல; அறிமுகப் பிரிவின் பொறுப்பு பிரிவின்படி, பொருந்தும் சட்டத்தால் தடைசெய்யப்பட்ட இடங்களில் இணக்க கோரிக்கைகள் செல்லாதவை.
+
+(கூடுதல் கட்டமைப்புகள் — UNESCO Recommendation on AI Ethics, OECD AI Principles, Council of Europe Framework Convention — இணக்க அடைவு வரைபடத்தின்படி செயல்பாட்டு குறுக்கு-நடைக்காக வரிசையில் உள்ளன.)
+
+---
+End of Annex C

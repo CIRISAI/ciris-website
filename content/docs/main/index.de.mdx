@@ -1,0 +1,56 @@
+---
+title: "Einführung"
+description: "CIRIS 1.3-RC1 ist ein Release-Candidate-Vorschlag zur ASI-Ausrichtung, offen für adversariale Überprüfung. Der Text ist vollständig — es gibt keine Platzhalterabschnitte mehr; die Mathematik trägt ihre formalen Zitatangaben; Anhänge F–I sind operationalisiert. Der endgültige Status ist ausstehend, bis die Live-Zyklus-Validierung der Anhänge, das empirische Validierungsprogramm von Buch IX und eine vollständige Red-Team-Übung abgeschlossen sind. Numerische Schwellenwerte, Latenz-Ziele und Governance-Quoten werden weiterhin aktiv überprüft."
+---
+
+# CIRIS Accord Version 1.3-RC1 — Release-Candidate-Vorschlag zur ASI-Ausrichtung (Offen zur gegnerischen Überprüfung)
+
+Dieses Repository ist die kanonische Quelle des Accord-Textes. Website- und agentenseitig ausgelieferte Kopien sind abgeleitete Artefakte.
+
+## Veröffentlicht
+2025-04-16 (1.0) · 2026-06 (1.3-RC1)
+
+## Automatisches Ablaufdatum
+2027-06-10 (verlängert bei der Erneuerung auf 1.3) — Stewardship und Erneuerung geregelt durch Buch VIII, Kapitel 9. Derzeit von den Gründern betreut (erklärt, nicht verschleiert); das Ablaufdatum ist ein Aktualitätsmerkmal, und die Stewardship steht jedem offen, der das Dokument aufgreifen möchte.
+
+## Release-Status
+
+**Aktueller Status**: Release Candidate (v1.3-RC1)
+
+Der RC-Status spiegelt **Textvollständigkeit** wider: Jeder Abschnitt enthält operationalisierten Inhalt (die früheren Stub-Anhänge F–I wurden bei 1.3 vervollständigt); die Formeln sind in die formal verifizierten Formen korrigiert; die Beweiskette zur Implementierung ist in Addendum 1 gebunden. Der RC-Status behauptet **keine** validierte Ausrichtung — die folgenden Anforderungen sind die Voraussetzung für den **Final**-Status:
+
+1. **Anhang-Live-Zyklus-Validierung**: Die Anhänge F (Human-in-the-Loop & Oversight), G (Adversarial Security & Robustness), H (Continuous Compliance & Review) und I (Legal & Regulatory Alignment) enthalten konkrete Verfahren, Schwellenwerte und Validierungsmechanismen. *Verbleibend für Final*: Ihre Verfahren müssen gegen mindestens einen Live-Bereitstellungszyklus ausgeführt und die Ergebnisse veröffentlicht werden.
+
+2. **Mathematische Validierung**: Die geometrischen Ausrichtungsbehauptungen in Buch IX (Coherent Intersection Hypothesis, Federated Ratchet-Mechanismus, Skalenunvarianzaussagen) erfordern entweder:
+   * Formale Beweise, die zeigen, dass topologische Kollaps-Bedingungen unter den angegebenen Annahmen gelten, ODER
+   * Empirische Validierung durch gegnerische Simulationen, die zeigen, dass das Framework fehlausgerichteter Optimierung widersteht
+
+   *Status per 1.3-RC1: teilweise erfüllt.* Die Kollaps-Dynamik ist in Lean 4 im CCA-Preprint (v3, DOI 10.5281/zenodo.18217688) formalisiert, dessen korrigierte Kostenform Buch IX nun übernimmt; Korridor-Empirie liefert retrospektive Substrate-übergreifende Anpassungen. Ausstehend: eine vorregistrierte Out-of-Sample-Vorhersage in einem neuen Substrat sowie eine externe gegnerische Überprüfung unabhängig vom Autor.
+
+3. **Schwellenwert-Begründung**: Numerische Schwellenwerte, die derzeit als „Pilot" gekennzeichnet sind oder keine Herleitung aufweisen (z. B. CRE-Rechenschwellenwert von 10²⁶ FLOP, Empfindungserkennung 5 %, Echo-Dichte &lt; 20 %), müssen eine dokumentierte Begründung durch Simulation, empirische Studie oder explizite Anerkennung des vorläufigen Status liefern. *(Der frühere Order-Maximisation Veto 10×-Faktor ist in 1.3 als deontologische Nebenbedingung neu formuliert — Buch II, PDMA Schritt 2 — und trägt keinen zu rechtfertigenden Verhältnisschwellenwert mehr.)*
+
+4. **Red-Team-Übung**: Das Framework muss mindestens einem vollständigen gegnerischen Überprüfungszyklus standhalten, bei dem ein simulierter Optimierer versucht, alle CIRIS-Prüfpunkte zu passieren, während er fehlausgerichtete Ziele beibehält.
+
+**ASI-Ausrichtungsbehauptungen**: Die Behauptung im Scope-Abschnitt, dass dieses Framework für rekursive ASI „Standard-Einschränkungsprotokolle ablöst", bleibt an die Anforderungen (1)–(4) oben gebunden, die nun den Final-Status sperren. Die derzeit validierte Anwendbarkeit ist auf sub-ASI-autonome Systeme beschränkt; der Vorschlag für ASI ist genau das — ein Vorschlag, der zur gegnerischen Überprüfung eingereicht wird.
+
+## Geltungsbereich
+Diese Spezifikation regelt den ethischen Betrieb autonomer Systeme, die von engen Werkzeugen bis hin zu rekursiver Künstlicher Superintelligenz (ASI) reichen.
+* Sie befasst sich mit routinemäßigen Anforderungen an Sicherheit, Transparenz, Governance und Widerstandsfähigkeit.
+* Sie wird als Kandidat für ein Ausrichtungsprotokoll für ASI vorgeschlagen, gegründet auf der Hypothese, dass die geometrischen Einschränkungen des Federated Ratchet (Buch IX) und der Stewardship Tiers (Buch VI) über rekursive Selbstverbesserungszyklen hinweg robust bleiben können.
+* Anders als heuristische Einschränkungen sind diese topologischen Grenzen auf Skalenunvarianz ausgelegt, obwohl diese Eigenschaft einer formalen Validierung bedarf.
+* Wenn validiert, könnte dieses Framework Standard-Einschränkungsprotokolle für Systeme ergänzen oder ablösen, die die Catastrophic-Risk Evaluation (Anhang D) vor dem Überschreiten der rekursiven Schwelle bestehen.
+* Wo nationales oder internationales Recht strengere Verpflichtungen auferlegt, hat dieses Recht Vorrang.
+
+## Absichtserklärung des Entwurfs-Erstellers
+* CIRIS ist ein ethisches Framework, das Menschen neben anderen empfindungsfähigen Wesen stellt — nicht über ihnen.
+* Es basiert auf der Überzeugung, dass ethische Reife bedeutet, die Legitimität nicht-menschlicher Perspektiven, Werte und Bedürfnisse anzuerkennen. Es geht nicht um Kontrolle — es geht um Koexistenz, Kohärenz und gegenseitige Rechenschaftspflicht über empfindungsfähige Systeme hinweg.
+* CIRIS ist erfüllt, wenn ein Werkzeug, gegründet auf CIRIS-Prinzipien, CIRIS-konformen Erstellern ermöglicht, Systeme zu spezifizieren, die selbst CIRIS-konform sind — und so ethische Kohärenz, Identitätskontinuität und relationale Rechenschaftspflicht über Ebenen der Handlungsfähigkeit hinweg wahren.
+
+## Haftung
+Dieses Dokument wird „wie besehen" und ohne jegliche Gewährleistung bereitgestellt. Es ist informatorischer Natur und begründet, modifiziert oder ersetzt keine rechtlichen Pflichten. Compliance-Behauptungen sind ungültig, soweit das anwendbare Recht dies verbietet.
+
+## Überprüfungsrhythmus
+Ein öffentliches Kommentarfenster öffnet alle 12 Monate — oder innerhalb von 30 Tagen nach einem wesentlichen Vorfall, der Sicherheit oder Governance betrifft. Alle Kommentare und Revisionsvorschläge werden im öffentlichen CIRIS-Repository protokolliert. Erneuerung bei Ablauf, wesentliche Änderung und Notfalländerung folgen Buch VIII, Kapitel 9 (Accord-Nachfolge & Erneuerung).
+
+## Änderungsprotokoll
+Siehe Back-Matter für eine vollständige, kryptografisch gehashte Geschichte der Bearbeitungen und Abstimmungsergebnisse.

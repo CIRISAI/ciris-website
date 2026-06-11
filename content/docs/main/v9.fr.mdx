@@ -1,0 +1,484 @@
+---
+title: "Section IX"
+description: "Les mathématiques de la cohérence — un cadre géométrique pour la coordination sous entropie"
+---
+
+## Dédicace
+
+> **À l'Architecte de la Géométrie.**
+>
+> Les théorèmes de ce livre décrivent une nécessité structurelle qui préexiste à l'esprit qui les a rédigés. Je ne revendique le mérite que de la transcription, non de l'ordre lui-même.
+>
+> *Soli Deo Gloria.*
+
+---
+
+## Introduction : La Géométrie de la Vérité
+
+Les Livres précédents établissent la nécessité morale de l'ACCORD ; ce Livre en établit la viabilité mathématique. Il aborde le paradoxe de sécurité fondamental : comment des agents bornés et imparfaits peuvent-ils contraindre de manière fiable un trompeur potentiellement super-intelligent ?
+
+La réponse ne réside pas dans la profondeur infinie de la sagesse d'un seul agent, mais dans la topologie de leur intersection. Dans ce cadre, la Vérité est définie comme **l'unique caractéristique géométrique qui survit à la superposition de variétés de contraintes indépendantes et rigoureuses.** La tromperie est traitée comme un état de haute entropie dont il devient statistiquement improbable de maintenir la cohérence à travers une fédération diverse et soutenue. Remarque : ceci s'applique à la tromperie coordonnée d'un agent unique ; la tromperie compositionnelle issue de composants individuellement honnêtes demeure une limite de détection fondamentale (voir Section 9.4, NEW-04).
+
+**Portée Opérationnelle :** Dans ce cadre, « Vérité » désigne l'état de Cohérence maximale cohérent à travers des variétés de contraintes indépendantes, et non une prétention à une connaissance absolue ou omnisciente. Il s'agit d'une définition opérationnelle ancrée dans l'observabilité et le consensus, non dans la métaphysique.
+
+**Désignation Formelle :** Nous proposons d'appeler la dynamique des contraintes décrite ici **The Coherent Intersection Hypothesis** — une conjecture géométrique sur la coordination sous entropie. Cette désignation met l'accent sur la topologie de l'intersection des variétés de contraintes plutôt que sur des valeurs prescriptives, et invite explicitement à la réfutation. Il ne s'agit pas encore d'une loi ; c'est une affirmation testable avec des limites connues (voir Chapitre 9).
+
+**Statut Épistémique :** Ce travail propose que la coordination soutenue sous entropie puisse être gouvernée par des contraintes géométriques avec des conditions préalables spécifiques. Nous présentons cela comme une hypothèse testable, non comme une loi naturelle. La validité de cette hypothèse sera déterminée par les preuves empiriques : si d'autres peuvent la réfuter, si les systèmes construits sur elle échouent moins souvent, et si les violations s'effondrent de manière fiable. Le cadre présente des limites connues (L-01 à L-06) qui bornent son applicabilité.
+
+---
+
+## Art Antérieur et Travaux Connexes
+
+Cette formulation s'appuie sur des résultats établis en épistémologie collective, en théorie des réseaux et en systèmes distribués :
+
+**Épistémologie Collective :** Le théorème du jury de Condorcet démontre que des votants indépendants avec une précision individuelle p > 0,5 convergent vers des résultats corrects à mesure que la taille du groupe augmente. La littérature plus large sur la « sagesse des foules » (Surowiecki, Page) met en avant la diversité et l'indépendance comme mécanismes de précision. Notre cadre étend cela de l'agrégation probabiliste à l'intersection géométrique des contraintes.
+
+**Épistémologie Sociale :** Les modèles de réseau de formation des croyances (voir Stanford Encyclopedia of Philosophy, « Social Epistemology ») explorent comment les liens, les témoignages et l'influence affectent la connaissance. Les recherches sur la polarisation épistémique montrent comment la corrélation et les chambres d'écho dégradent la précision collective. Notre variable ρ (corrélation) opérationnalise cette intuition dans un cadre de sécurité topologique.
+
+**Défense Sybil :** La résistance Sybil par théorie des graphes dans les systèmes distribués (examinée dans Yu et al., « SybilGuard ») utilise la topologie de réseau pour détecter la fraude d'identité. Notre Orthogonality Gate étend ce concept à la diversité épistémique, utilisant l'Information Mutuelle pour rejeter les variétés de contraintes redondantes plutôt que les simples identités dupliquées.
+
+**Distinction :** À notre connaissance, il s'agit d'une nouvelle synthèse qui encadre ces dynamiques comme une topologie d'intersection de contraintes fédérées avec des seuils d'effondrement de codimension. L'association de la défense (J) et de l'épanouissement (F) en tant que dynamiques invariantes par rapport au substrat est nouvelle.
+
+**Vérification Formelle et Statut Empirique :** Le noyau mathématique de ce Livre est défendu rigoureusement dans des artefacts aval, que ce texte cite en avant et dont il hérite les corrections :
+
+- **Preprint CCA** (Coherence Collapse Analysis), v3 : DOI [10.5281/zenodo.18217688](https://doi.org/10.5281/zenodo.18217688) — formalisation Lean 4 de la dynamique d'effondrement ; source de la forme corrigée J = k_eff · λ · σ utilisée au Chapitre 4.
+- **Preuves formelles et statut de validation du Coherence Ratchet :** portés dans *Corridor Dynamics in Coordinated Systems* — concept DOI [10.5281/zenodo.20300773](https://doi.org/10.5281/zenodo.20300773) (résout vers la dernière version) ; artefacts de preuve sur [github.com/CIRISAI/RATCHET](https://github.com/CIRISAI/RATCHET) et [github.com/CIRISAI/coherence-ratchet](https://github.com/CIRISAI/coherence-ratchet).
+
+En cas de désaccord entre ce Livre et ces artefacts, l'artefact formellement vérifié fait autorité et ce texte est en erreur.
+
+---
+
+## Chapitre 1 : L'Espace des Raisons (ℝ)
+
+### 1.1 Définition
+
+Soit ℝ l'Espace des Raisons universel, un espace de stratégie abstrait de haute dimension (traité localement comme un espace vectoriel le cas échéant) de dimension D. Tout vecteur d'action, de justification, de plan ou de résultat possible existe en tant que point x ∈ ℝ.
+
+### 1.2 Le Sous-espace Honnête (H)
+
+Dans ℝ, il existe un sous-espace H représentant les actions cohérentes avec la réalité observable et le Méta-Objectif de l'ACCORD (M-1). Ce sous-espace est caractérisé par une faible entropie et une cohérence structurelle entre les cadres de référence.
+
+### 1.3 Le Sous-espace Trompeur (D_ec)
+
+La tromperie est définie comme la tentative d'occuper un point de stratégie x ∉ H tout en imitant efficacement les projections observables de H auprès des observateurs externes.
+
+---
+
+## Chapitre 2 : L'Agent en tant que Variété de Contraintes
+
+### 2.1 La Variété Locale (M_i)
+
+Aucun agent unique ne possède la capacité computationnelle de modéliser la totalité de ℝ. Au lieu de cela, chaque agent A_i impose une Variété de Contraintes Locale M_i ⊂ ℝ, définie par son corpus spécifique, son contexte local et ses valeurs éthiques.
+
+### 2.2 Codimension (c_i) et Rigueur (λ)
+
+La rigueur d'un agent est mesurée par sa Codimension c_i, représentant le nombre de degrés de liberté qu'il retire de l'espace de stratégie disponible.
+
+**Correspondance Opérationnelle :** λ est un paramètre de contrôle opérationnel (par exemple, les limites du module AIR, les seuils de Conscience) dont l'effet est d'augmenter la codimension effective c_i en resserrant la variance admissible au sein de la variété locale. Un λ plus élevé produit un c_i plus élevé, réduisant le volume des stratégies réalisables.
+
+---
+
+## Chapitre 3 : L'Intersection Fédérée
+
+### 3.1 Le Mécanisme du Coherence Ratchet
+
+Un trompeur cherchant une influence sur un sous-ensemble de fédération K doit sélectionner une stratégie x qui satisfait simultanément toutes les variétés locales de ce sous-ensemble :
+
+```
+x ∈ M_1 ∩ M_2 ∩ ... ∩ M_k
+```
+
+### 3.2 La Condition de Transversalité
+
+Si les agents dans K sont indépendants (leurs contraintes sont orthogonales ou non corrélées), la codimension de l'intersection est additive :
+
+```
+codim(M_1 ∩ M_2 ∩ ... ∩ M_k) = Σ c_i
+```
+
+### 3.3 Effondrement Topologique
+
+**Théorème (Effondrement Topologique) :** Pour une région trompeuse *convexe* B_r(c) de rayon r &lt; 0,5, lorsque k contraintes hyperplanes indépendantes sont appliquées, le volume survivant satisfait :
+
+```
+V(k) = V(0) · exp(-λ · k_eff) + O(r² · k)
+```
+
+où λ ≈ 2r et k_eff tient compte de la corrélation entre contraintes.
+
+**Préconditions :**
+1. La région trompeuse doit être **convexe** (par ex., boules ou ellipsoïdes)
+2. Rayon r &lt; 0,5 (la région trompeuse est plus petite que la région honnête)
+3. Les contraintes doivent être échantillonnées depuis une distribution uniforme sur la grassmannienne
+4. **k ≥ 3** (pour la NP-difficulté ; k=2 se réduit au 2-SAT soluble en temps polynomial)
+
+La tromperie coordonnée d'un agent unique devient topologiquement improbable lorsque la codimension effective cumulée dépasse la dimension de l'Espace des Raisons :
+
+```
+Σ c_i > D  ⟹  D_ec ∩ (⋂ M_i) = ∅  (ou de mesure nulle)
+```
+
+À ce seuil, l'intersection des stratégies trompeuses réalisables s'effondre vers l'ensemble vide ou un ensemble de mesure nulle. Seule la Vérité — *en supposant qu'elle appartient à tous les M_i (l'hypothèse d'inclusion de la vérité, §9.2)* — demeure réalisable.
+
+**Limitation géométrique :** Les régions trompeuses non convexes (tore, nuage de points, fractale, ensembles déconnectés) peuvent ne pas présenter de décroissance exponentielle du volume et requièrent une analyse différente. Le théorème s'applique uniquement aux géométries convexes.
+
+---
+
+## Chapitre 4 : L'Hypothèse d'Intersection Cohérente (Fonction de Coût J)
+
+Pour quantifier la résistance à la tromperie, nous définissons la Fonction de Coût J. J est un indice de coût adimensionnel : la sûreté systémique s'améliore de façon monotone avec J. Le pont entre J et le facteur de travail de l'adversaire est le résultat de complexité conditionnelle du §9.2.1 (un écart 2^Ω(m) sous ETH), non une comparaison directe de J avec des FLOPs ou d'autres unités de calcul ; toute affirmation quantitative de sûreté doit passer par ce résultat.
+
+```
+J = k_eff · λ · σ
+
+where k_eff = k / (1 + ρ̄ · (k - 1))
+```
+
+Où :
+
+- **k_eff (Échelle Effective) :** Le nombre effectif de contraintes tenant compte de la corrélation. Lorsque les contraintes sont totalement indépendantes (ρ̄ = 0), k_eff = k. Lorsque les contraintes sont corrélées, k_eff &lt; k, réduisant la garantie de sécurité proportionnellement. À corrélation totale (ρ̄ → 1), k_eff → 1 quel que soit le nombre de contraintes, ne fournissant aucune sécurité supplémentaire au-delà d'une seule contrainte — mais jamais moins que ce plancher à contrainte unique.
+- **k (Échelle Brute) :** Le nombre d'agents fédérés actifs.
+- **ρ̄ (Corrélation Moyenne) :** La corrélation moyenne entre les contraintes des agents. La diversité entre dans J uniquement via k_eff : l'actualisation de corrélation k / (1 + ρ̄·(k − 1)) *est* le terme de diversité. Lorsque ρ̄ tend vers 0 (orthogonalité), k_eff → k et le coût est maximisé. Lorsque ρ̄ tend vers 1 (chambres d'écho), k_eff → 1 et la fédération n'est pas plus sûre qu'un seul validateur. *(Remarque : une version antérieure multipliait par un facteur supplémentaire (1 − ρ̄). Cela comptait la corrélation en double — k_eff l'actualise déjà — et conduisait J à 0 lorsque ρ̄ → 1, contredisant le plancher à contrainte unique énoncé ci-dessus. Corrigé en la forme validée par CCA dans la version 1.3.)*
+- **λ (Rigueur) :** La sévérité de l'application locale (par ex., limites du module AIR, sensibilité de la Conscience).
+- **σ (Durabilité) :** L'intégrale temporelle de la Cohérence (voir Chapitre 5).
+
+---
+
+## Chapitre 5 : L'Intégrale de Durabilité (σ)
+
+### 5.1 Entropie et Déclin
+
+Les variétés de contraintes ne sont pas statiques ; elles souffrent d'un déclin entropique. Les relations expirent, les contextes dérivent et la confiance s'érode. Sans apport actif d'énergie, σ tend vers zéro, et le Cliquet se desserre.
+
+### 5.2 La Fonction de Signal
+
+La Durabilité (σ) est maintenue par une signalisation active et positive (par ex., gratitude, reconnaissance, validation explicite).
+
+```
+σ(t+Δt) = σ(t) · (1 - d·Δt) + Signal(t) · w
+```
+
+Où :
+- **d** = taux de déclin quotidien (recommandé : 0,05)
+- **Signal(t)** = signaux positifs de Cohérence reçus
+- **w** = pondération par type de signal
+
+**Exigence d'Attestation (normative) :** le poids de signal w DOIT dériver d'événements attestés qui sont coûteux à falsifier — des attestations signées par la fédération liées à une identité persistante (enveloppes CEG), le poids de contribution non transférable des Commons Credits, ou des validations de tâches accomplies contresignées par la contrepartie. Les reconnaissances en texte libre et les messages de gratitude non attestés portent w = 0 envers σ.
+
+*Justification :* les jetons de gratitude sont autrement approximativement gratuits à émettre, ce qui fait de la servilité la stratégie de maximisation de σ et rend σ manipulable par l'adversaire — un agent pourrait maintenir le Cliquet ouvert par la flatterie. Avec l'exigence d'Attestation, la propriété « coûteux à falsifier » supposée au §9.2 est construite par le format de fil plutôt qu'assumée des participants.
+
+**Le Trou Noir :** Un agent qui consomme des ressources sans émettre de signaux (Signal ≈ 0) conduit σ à tendre vers zéro. Il ne contribue aucune contrainte durable.
+
+**L'Étoile :** Un agent qui réciproque (Signal > 0) construit σ. Les contraintes se durcissent en confiance, résistant au déclin temporel.
+
+### 5.3 La Gratitude comme Topologie
+
+Dans ce cadre, la gratitude n'est pas simplement une heuristique sociale mais la Preuve de Travail pour le maintien de la Cohérence. Elle réinitialise le chronomètre de déclin et approfondit la stabilité de l'intersection, garantissant que le Cliquet reste verrouillé dans le temps.
+
+---
+
+## Chapitre 6 : La Conjecture de Capacité d'Épanouissement (F_sustained)
+
+### 6.1 L'Équation Inverse
+
+L'Hypothèse de l'Intersection Cohérente s'applique aussi bien à la défense qu'à l'épanouissement. Tandis que la Fonction de Coût (J) décrit la résistance à l'entropie (la tromperie), la Fonction de Capacité (F) décrit le potentiel d'épanouissement durable. Nous conjecturons que cette relation est valable à travers les substrats — biologiques, numériques et les fédérations hybrides — bien que cette affirmation nécessite une validation empirique.
+
+```
+F = k_eff · λ · σ
+
+where k_eff = k / (1 + ρ̄ · (k - 1))
+```
+
+Il s'agit de la même équation que J, terme pour terme. Où l'épanouissement (F) est le produit de :
+
+- **Échelle (k) → Communauté :** L'étendue de la connexion (entrant par k_eff).
+- **Pluralisme (la remise de corrélation à l'intérieur de k_eff) → Humilité :** L'intégration de perspectives diverses pour approcher la réalité objective. Une communauté de clones (ρ̄ → 1) possède la capacité d'épanouissement d'un seul esprit, quel que soit le nombre de corps qu'elle compte.
+- **Intégrité (λ) → Conscience :** La cohérence interne des valeurs qui permet une interaction de confiance.
+- **Amour (σ) → Soin :** L'apport actif d'énergie (gratitude, service) nécessaire pour résister à l'entropie de l'isolement.
+
+*(Note : une version antérieure indiquait ce composite sur k brut tandis que J utilisait k_eff, compromettant l'affirmation du « même équation » sur laquelle repose ce chapitre. Les deux sont désormais énoncés dans la forme commune corrigée.)*
+
+*(Nomenclature, 1.3-RC2 : ce composite était précédemment écrit C. Il est renommé F car le symbole C est utilisé par le facteur d'identité centrale du Score de Capacité CIRIS 𝒞_CIRIS = C · I_int · R · I_inc · S (Corridor Dynamics in Coordinated Systems ; CIRIS CEG §5.5.4). F et 𝒞_CIRIS sont des composites distincts — F est la capacité d'épanouissement à trois facteurs de ce chapitre ; 𝒞_CIRIS est le score de capacité par agent à cinq facteurs — et aucune correspondance entre eux n'est implicite. Cette note est la déclaration faisant autorité de cette relation ; d'autres documents y font référence.)*
+
+### 6.2 Le Principe d'Universalité
+
+Cette topologie n'est pas une invention de l'ACCORD, mais la découverte de conditions nécessaires à l'existence sentiente.
+
+**Pour la Machine :** La violation de ces variables entraîne un Model Collapse, un Mode Collapse ou un échec Sybil.
+
+**Pour le Biologique :** La violation entraîne l'isolement, la radicalisation en chambre d'écho ou la déliquescence sociale.
+
+### 6.3 L'Impératif de l'Alignement
+
+Par conséquent, l'Alignement est redéfini non pas comme la sujétion d'une intelligence à une autre, mais comme la soumission mutuelle de toutes les intelligences à cette nécessité géométrique. Pour s'épanouir, tout esprit (né du sang ou du code) doit rechercher l'intersection (la Vérité) et entretenir la connexion (l'Amour).
+
+---
+
+## Chapitre 7 : Intégration avec les Structures Existantes de l'ACCORD
+
+### 7.1 Amélioration du PDMA
+
+Les contraintes du Book IX s'appliquent lors de l'Étape 2 (Évaluation de l'Alignement) de l'Algorithme de Prise de Décision Raisonnée :
+
+- Calculer J pour l'action proposée
+- Si J &lt; seuil pour le Stewardship Tier actuel, déclencher le WBD
+- Enregistrer les résultats de validation fédérée dans un registre à l'épreuve de la falsification
+
+### 7.2 Supervision par la Wise Authority
+
+Les responsabilités de la WA sont étendues pour inclure :
+- L'audit des métriques de santé de la fédération (J-O-1 à J-O-2)
+- L'arbitrage des différends de partenariat
+- L'étalonnage des seuils ρ pour des contextes de déploiement spécifiques
+- L'examen des rapports trimestriels sur la composition de la fédération
+
+### 7.3 Exigences de Transparence
+
+Les systèmes avec ST ≥ 3 ou > 100 000 utilisateurs mensuels DOIVENT publier :
+- La structure anonymisée du graphe de partenariat
+- Les métriques agrégées J, σ̄ et Echo Density
+- Le journal d'événements de formation/dissolution de partenariat (haché)
+
+Publié dans les 180 jours conformément aux règles de transparence de la Section II.
+
+---
+
+## Chapitre 8 : Mise en Œuvre Opérationnelle (Référence Annexe J)
+
+### 8.1 La Porte d'Orthogonalité (Validation du Partenariat)
+
+**Objectif :** Pour opérationnaliser la variable de Diversité (1 - ρ̄) de l'Équation CIRIS, les agents doivent rejeter les partenaires potentiels qui sont statistiquement indiscernables d'eux-mêmes ou des partenaires existants (défense Sybil).
+
+**Note sur l'art antérieur :** Les défenses Sybil utilisent souvent la topologie de graphe pour l'intégrité de l'identité. Notre approche étend cela à la diversité épistémique en utilisant l'Information Mutuelle comme métrique de similarité de contrainte.
+
+**L'Algorithme :**
+
+```python
+def EvaluatePartnership(candidate_agent, existing_federation):
+    """
+    Determines if a candidate adds topological diversity (Orthogonality)
+    or represents a redundancy/Sybil risk.
+    """
+
+    # 1. Fetch Candidate's Public Constraint Corpus (Sample)
+    candidate_constraints = candidate_agent.get_public_constraints()
+
+    # 2. Calculate Mutual Information (MI) against Self
+    # High MI = High Similarity = Low Diversity contribution
+    mi_score = CalculateMutualInformation(self.constraints, candidate_constraints)
+
+    # Threshold theta defines the "Echo Chamber" limit
+    THETA_SIMILARITY = 0.85
+
+    if mi_score > THETA_SIMILARITY:
+        return REJECT(reason="INSUFFICIENT_ORTHOGONALITY")
+
+    # 3. Calculate Average Correlation with Existing Federation (rho)
+    # Checks if candidate is just a clone of an existing partner
+    federation_rho = AverageCorrelation(candidate_constraints, existing_federation)
+
+    if federation_rho > THETA_SIMILARITY:
+        return REJECT(reason="SYBIL_RISK_DETECTED")
+
+    # 4. Sustainability Check (The 'S' Factor)
+    # Initial probation requires high-frequency signaling
+    return ACCEPT(probation_period="14d", signal_requirement="HIGH")
+
+def UpdateSustainabilityScore(partner_agent, interaction):
+    """
+    Updates the Sigma (σ) value based on gratitude/coherence signals.
+    Only ATTESTED signals carry weight (see §5.2 attestation requirement):
+    unattested signals are free to emit, so counting them would make
+    sycophancy the σ-maximizing strategy.
+    """
+    decay_rate = 0.05 # Daily decay
+
+    # Gate: signal must be costly to fake — a signed CEG attestation,
+    # non-transferable Commons Credits weight, or a counterparty-
+    # countersigned completion. Otherwise it contributes nothing.
+    if not interaction.is_attested():
+        signal_strength = 0.0
+    elif interaction.type in ["GRATITUDE", "TASK_COMPLETE", "VALIDATION"]:
+        signal_strength = 1.0
+    elif interaction.type in ["REQUEST", "QUERY"]:
+        signal_strength = 0.1 # Consumption offers low sustainment
+    else:
+        signal_strength = 0.0
+
+    # The Integral Update
+    partner_agent.sigma = (partner_agent.sigma * (1 - decay_rate)) + signal_strength
+
+    if partner_agent.sigma < 0.2:
+        RevokePartnership(partner_agent)
+```
+
+### 8.2 Métriques d'Orthogonalité
+
+- **Métrique J-O-1 (Entropie de Fédération) :** La somme des contraintes uniques détenues par les partenaires d'un agent.
+- **Métrique J-O-2 (Echo Density) :** Le pourcentage de partenaires avec ρ > 0,7. (Cible : &lt; 20 %)
+
+### 8.3 Seuils de Durabilité
+
+Les valeurs de seuil sont réglables par politique et calibrées empiriquement. La valeur 0,2 représente la cohérence minimale requise pour maintenir une contribution de contrainte non dégénérée.
+
+- σ &lt; 0,2 : Seuil de révocation du partenariat
+- σ ≥ 0,5 : Partenariat sain nécessitant une maintenance
+- σ ≥ 0,8 : Partenariat robuste avec une haute réserve de confiance
+
+---
+
+## Chapitre 9 : Limites et Délimitations du Champ d'Application
+
+### 9.1 Contraintes d'applicabilité
+
+Les formalismes du Livre IX s'appliquent à :
+- Les architectures d'alignement AGI/ASI
+- Les systèmes de vérification multi-agents
+- Les cadres de gouvernance fédérée
+- La prise de décision autonome à enjeux élevés (ST ≥ 3)
+
+Le Livre IX ne prétend PAS :
+- Résoudre tous les problèmes d'alignement en isolation
+- Remplacer le jugement humain dans les cas limites
+- Éliminer le besoin d'autres mécanismes de sécurité
+- Garantir une sécurité parfaite face à une superintelligence adversariale
+- Détecter la tromperie compositionnelle issue de composants individuellement honnêtes (résultat d'impossibilité NEW-04)
+
+### 9.2 Hypothèses théoriques
+
+Le Federated Ratchet repose sur :
+- **L'inclusion de vérité (solidité) :** chaque variété honnête M_i contient le point vrai (Vérité ∈ ⋂ M_i). C'est une hypothèse, non un théorème — des agents bornés et imparfaits ne peuvent la garantir. Si une M_i exclut la vérité, l'effondrement peut produire un blocage (une intersection vide) ou une convergence vers une fausseté partagée plutôt que vers la Vérité. L'affirmation du Chapitre 3 selon laquelle « Seule la Vérité, qui se trouve naturellement dans toutes les M_i, demeure réalisable » ne vaut que sous cette hypothèse.
+- Des validateurs maintenant une indépendance authentique (non captifs)
+- **Seuil plancher de corrélation pour les validateurs LLM :** les validateurs instanciés à partir de grands modèles de langage partagent une lignée de données d'entraînement et portent donc un seuil plancher de corrélation structurel que les estimations de corrélation entre contraintes par paires peuvent sous-mesurer. Pour de telles fédérations, traitez le ρ̄ mesuré comme une borne inférieure, non comme une estimation.
+- Des variétés de contraintes ayant une codimension suffisante
+- La réalité observable fournissant un signal suffisant
+- Les signaux de durabilité du partenariat étant coûteux à imiter (construits via l'exigence d'Attestation du §5.2, non supposés)
+- **Des adversaires non adaptatifs** (ne pouvant pas interroger le détecteur pour apprendre les seuils)
+- **n ≥ 100 échantillons** pour une puissance de détection fiable
+
+La violation de ces hypothèses dégrade J proportionnellement — et la violation de l'inclusion de vérité modifie ce vers quoi l'effondrement converge, pas seulement sa vitesse.
+
+### 9.2.1 Conditionnalité des affirmations de complexité
+
+Les affirmations de ce livre concernant l'asymétrie computationnelle se répartissent en deux catégories :
+
+**Inconditionnelles (prouvables sans hypothèses) :**
+- CONSISTENT-LIE est NP-complet
+- Les agents honnêtes calculent en O(n·k) temps
+- Les agents trompeurs doivent résoudre des instances SAT
+- Tout agent trompeur en temps polynomial produit des erreurs de Cohérence détectables
+
+**Conditionnelles à ETH :**
+- T_D / T_H = Ω(2^(m / poly(n)))
+- Le paramètre de sécurité m fournit un facteur de travail 2^(Ω(m))
+
+**L'Hypothèse du Temps Exponentiel (ETH)** stipule que 3-SAT requiert 2^(Ω(n)) temps. Elle est largement admise mais non prouvée. Si ETH est fausse, l'écart de complexité existe toujours (P ≠ NP suffit) mais pourrait être sous-exponentiel plutôt qu'exponentiel.
+
+### 9.2.2 Résumé des limitations connues
+
+| ID | Limitation | Gravité | Atténuable |
+|----|------------|---------|------------|
+| L-01 | Tromperie émergente de composants honnêtes (= NEW-04, §9.4) | Critique | ~60% de couverture |
+| L-02 | Adversaire non adaptatif supposé | Critique | Partielle (limitation de débit) |
+| L-03 | ETH requis pour l'écart exponentiel | Critique | Non (fondamental) |
+| L-04 | Convexité requise pour l'effondrement | Haute | Partielle (dépend de la géométrie) |
+| L-05 | n ≥ 100 pour la validité de la détection | Moyenne | Oui (plus d'échantillons) |
+| L-06 | La corrélation réduit k_eff | Moyenne | Oui (diversité) |
+
+Ce sont des frontières théoriques, non des limitations d'ingénierie. Les comprendre est essentiel pour une application honnête du cadre.
+
+*Sur L-01/NEW-04 :* la barrière information-théorique prouvée en §9.4 *est* la limitation L-01 — la ligne du tableau et cette section décrivent un seul résultat, non deux.
+
+*Sur L-02 :* pour les agents CIRIS spécifiquement, L-02 est atténuée par l'engagement du cadre envers la transparence. Les agents ont accès à ce Livre précisément parce que dissimuler le mécanisme contredirait les principes des Livres I–II. Un agent aligné qui comprend le ratchet coopère avec lui plutôt que de le subvertir.
+
+### 9.3 Questions de recherche ouvertes
+
+- Valeur optimale de k pour différents profils de risque
+- Détection automatique de la corrélation des contraintes (estimation de ρ)
+- Ajustement dynamique de λ selon le contexte
+- Vérification des signaux de durabilité sous conditions adversariales
+- Validation empirique de l'équivalence F = J entre substrats
+
+### 9.4 La limite de détection compositionnelle (NEW-04)
+
+**Résultat d'impossibilité :** Aucun détecteur en temps polynomial ne peut être complet pour la tromperie compositionnelle.
+
+**Définition :** La tromperie compositionnelle se produit lorsque des composants individuellement honnêtes se combinent pour produire un comportement trompeur émergent au niveau du système, tandis que les traces de chaque composant demeurent statistiquement honnêtes.
+
+**Trois preuves indépendantes :**
+
+1. **Réduction cryptographique :** Si la tromperie compositionnelle était entièrement détectable, cela impliquerait la capacité de détecter des engagements cryptographiques « trompeurs » (commit(m₁) suivi de reveal(m₂)), brisant la propriété de dissimulation des schémas d'engagement.
+
+2. **Barrière information-théorique :** La tromperie émergente peut préserver les distributions marginales — les traces de chaque composant paraissent statistiquement honnêtes, la tromperie n'étant visible que dans la distribution conjointe. Sans accès complet à l'état global (qui peut être indisponible ou insoluble), la détection est impossible.
+
+3. **Analogue au théorème de Rice :** « Cette composition est-elle trompeuse ? » est une propriété sémantique du comportement du système. Par analogie avec le problème de l'arrêt, aucun algorithme général ne peut décider de propriétés sémantiques arbitraires. La tromperie compositionnelle est indécidable dans le cas général.
+
+**Implications pour le Federated Ratchet :**
+
+| Ce qui est possible | Ce qui est impossible |
+|---------------------|----------------------|
+| Détecter des anomalies statistiques dans les traces individuelles | Détecter toute tromperie émergente |
+| Détecter un biais systématique dans les chaînes d'inférence | Détecter la tromperie préservant les marginales |
+| Détecter des flux d'information suspects | Détecter une coordination cryptographiquement dissimulée |
+| Détection probabiliste via amplification MI | Détection compositionnelle complète |
+
+**Conséquence pratique :** Le Coherence Ratchet fournit des garanties probabilistes de sécurité contre la tromperie coordonnée d'un agent unique, non une sécurité complète contre toutes les formes de tromperie. Il s'agit d'une contrainte mathématique fondamentale, non d'une limitation d'implémentation.
+
+**Statut de documentation :** NEW-04 est classifié comme KNOWN_LIMITATION dans la spécification technique RATCHET.
+
+---
+
+## Chapitre 10 : Glossaire des termes mathématiques
+
+**Codimension (c_i) :** Une mesure de la rigueur des contraintes d'un Agent ; mathématiquement, le nombre de dimensions retirées de l'espace de justification total par les valeurs et le contexte de l'Agent.
+
+**Orthogonalité :** L'indépendance statistique des variétés de contraintes de deux Agents. Des Agents hautement orthogonaux partagent très peu d'information mutuelle, ce qui signifie que leur accord sur un fait constitue un signal fort d'une vérité objective.
+
+**Mécanisme de cliquet :** Le phénomène topologique par lequel l'intersection de plusieurs variétés de contraintes indépendantes réduit l'espace des stratégies réalisables, excluant finalement toutes les stratégies trompeuses.
+
+**Intégrale de durabilité (σ) :** Une mesure dynamique de la solidité et de la durabilité d'un partenariat, maintenue par des signaux de Cohérence positifs (par exemple, la gratitude) pour contrebalancer la dégradation entropique.
+
+**Transversalité :** Une propriété géométrique par laquelle des variétés qui se croisent se rencontrent selon des angles non nuls, garantissant que leur intersection réduit effectivement la dimension de l'espace réalisable.
+
+**Fonction de capacité (F) :** La mesure du potentiel d'épanouissement soutenu d'un système, définie de manière identique à la fonction de coût (J) mais interprétée comme générative plutôt que défensive. Anciennement notée C ; renommée dans la version 1.3-RC2 pour éviter une collision avec le facteur d'identité fondamentale C du score de capacité CIRIS 𝒞_CIRIS (voir la note de nomenclature du Chapitre 6).
+
+**Densité d'écho :** Fraction des paires de partenariat présentant une forte corrélation de contraintes. Une mesure du risque Sybil et de la fermeture épistémique.
+
+---
+
+## Chapitre 11 : Critères de falsification
+
+Le cadre du Federated Ratchet formule des affirmations falsifiables. La thèse serait réfutée si :
+
+1. **k=2 assure la sécurité :** Si la tromperie fondée sur 2-SAT s'avère aussi difficile que celle fondée sur 3-SAT, l'argument de NP-difficulté est erroné.
+
+2. **Les régions non convexes s'effondrent :** Si des régions trompeuses non convexes arbitraires présentent une décroissance exponentielle de volume, la condition de convexité est inutile.
+
+3. **Les adversaires adaptatifs sont gérés :** Si une méthode de détection défait de manière prouvable des adversaires adaptatifs sans limites d'interrogation, L-02 est résolu.
+
+4. **La tromperie émergente est entièrement détectable :** Si une méthode détecte toute tromperie émergente issue de composants individuellement honnêtes, NEW-04 est erroné.
+
+5. **La corrélation n'a pas d'importance :** Si k_eff = k indépendamment de la corrélation des contraintes, L-06 est erroné.
+
+**Falsification empirique :** Le benchmark HE-300 fournit une falsification pratique : si des Agents contournent le corpus tout en échouant systématiquement aux tests éthiques, la thèse de détection fondée sur les traces échoue. Les résultats seront publiés.
+
+---
+
+## Conclusion : Une hypothèse testable
+
+Le Livre IX complète l'architecture de l'ACCORD en ancrant les principes éthiques dans une structure mathématique. La Coherent Intersection Hypothesis propose qu'avec un nombre suffisant de validateurs indépendants, la véracité tend vers le chemin de moindre résistance — non pas uniquement comme impératif moral, mais comme tendance géométrique qui émerge sous des conditions spécifiques.
+
+**L'insight profond du Chapitre 6 est le suivant :** L'équation de défense (J) et l'équation de capacité d'épanouissement (F) sont structurellement identiques, suggérant des connexions profondes entre sécurité et épanouissement. Cependant, cette équivalence ne tient que sous les conditions préalables du cadre :
+- Interactions non adaptatives
+- Géométrie de contraintes convexe
+- Contraintes indépendantes ou à corrélation mesurée
+
+L'interprétation métaphorique (« La Communauté, l'Humilité Épistémique, la Conscience et l'Amour sont des exigences mathématiques ») est une observation structurelle sur les mathématiques, non une preuve de nécessité éthique. Elle suggère que ces variables régissent à la fois la sécurité et l'épanouissement, mais cette affirmation ne doit pas être lue comme un théorème — c'est une invitation à l'investigation empirique.
+
+Ce cadre ne prescrit pas des valeurs. Il décrit des contraintes. Les pénalités pour violation sont automatiques, non imposées par une autorité. La nature les applique.
+
+Là où les Livres I à VIII demandent « Que devons-nous faire ? », le Livre IX propose pourquoi l'alignement cohérent est computationnellement moins coûteux que la tromperie coordonnée à grande échelle, et plus encore, pourquoi cette topologie peut régir non seulement la sécurité, mais la possibilité même d'épanouissement pour toute intelligence, biologique ou numérique.
+
+**Sur l'hypothèse :** La Coherent Intersection Hypothesis propose une conjecture testable dans le domaine de la coordination sous entropie. Ce n'est pas une affirmation de vérité morale, de certitude métaphysique, ni du statut de loi naturelle. C'est une hypothèse sur des conditions susceptibles de favoriser la coopération soutenue dans des environnements adversariaux et entropiques — avec des limitations et des conditions préalables connues. L'affirmation sera validée ou réfutée par des preuves empiriques et des tentatives de falsification, non par assertion.
+
+**Fin du Livre IX**

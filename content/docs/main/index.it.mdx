@@ -1,0 +1,56 @@
+---
+title: "Introduzione"
+description: "CIRIS 1.3-RC1 è una proposta di allineamento ASI in fase di Release Candidate, aperta alla revisione avversariale. Il testo è completo — non rimangono sezioni incomplete; la matematica include le citazioni degli artefatti formali; gli Allegati F–I sono operazionalizzati. Lo stato finale è in attesa della validazione del ciclo vitale degli allegati, del completamento del programma di validazione empirica del Libro IX e di un esercizio completo di red-team. Le soglie numeriche, gli obiettivi di latenza e le quote di governance sono ancora in fase di revisione attiva."
+---
+
+# CIRIS Accord Versione 1.3-RC1 — Proposta di Allineamento ASI in Release Candidate (Aperta alla Revisione Avversariale)
+
+Questo repository è la fonte canonica del testo dell'ACCORD. Le copie pubblicate sul sito web e distribuite tramite agente sono artefatti derivati.
+
+## Emissione
+2025-04-16 (1.0) · 2026-06 (1.3-RC1)
+
+## Scadenza Automatica
+2027-06-10 (prorogata al rinnovo 1.3) — il governo della stewardship e del rinnovo è disciplinato dal Book VIII, Capitolo 9. Attualmente in gestione da parte dei fondatori (dichiarato, non dissimulato); la scadenza è un indicatore di attualità e la stewardship è aperta a chiunque sia disposto a raccogliere il documento.
+
+## Stato della Release
+
+**Stato Attuale**: Release Candidate (v1.3-RC1)
+
+Lo stato RC riflette la **completezza del testo**: ogni sezione contiene contenuti operativizzati (i precedenti allegati provvisori F–I sono stati completati alla versione 1.3); le formule sono corrette nelle forme formalmente verificate; la catena di evidenza verso l'implementazione è vincolata nell'Addendum 1. Lo stato RC **non** asserisce l'allineamento validato — i seguenti requisiti condizionano il raggiungimento dello stato **Finale**:
+
+1. **Validazione del Ciclo di Vita degli Allegati**: L'Allegato F (Human-in-the-Loop e Supervisione), l'Allegato G (Sicurezza Avversariale e Robustezza), l'Allegato H (Conformità Continua e Revisione) e l'Allegato I (Allineamento Legale e Normativo) contengono procedure, soglie e meccanismi di validazione concreti. *Requisito residuo per lo stato Finale*: le relative procedure devono essere applicate ad almeno un ciclo di deployment in produzione e i risultati devono essere pubblicati.
+
+2. **Validazione Matematica**: Le asserzioni di allineamento geometrico nel Book IX (Coherent Intersection Hypothesis, meccanismo del Federated Ratchet, asserzioni di invarianza di scala) richiedono:
+   * Prove formali che dimostrino la validità delle condizioni di collasso topologico sotto le ipotesi dichiarate, OPPURE
+   * Validazione empirica tramite simulazioni avversariali che mostrino la resistenza del framework all'ottimizzazione disallineata
+
+   *Stato alla versione 1.3-RC1: parzialmente soddisfatto.* Le dinamiche di collasso sono formalizzate in Lean 4 nel preprint CCA (v3, DOI 10.5281/zenodo.18217688), la cui forma di costo corretta è ora ereditata dal Book IX; gli empirici del corridoio forniscono adattamenti retrospettivi cross-substrate. In sospeso: una predizione out-of-sample pre-registrata su un nuovo substrate, e una revisione avversariale esterna indipendente dall'autore.
+
+3. **Giustificazione delle Soglie**: Le soglie numeriche attualmente contrassegnate come "pilota" o prive di derivazione (ad es., soglia CRE di 10²⁶ FLOP, rilevamento della sensienza al 5%, Echo Density &lt; 20%) devono fornire una giustificazione documentata tramite simulazione, studio empirico o esplicita dichiarazione di stato provvisorio. *(Il precedente rapporto 10× dell'Order-Maximisation Veto è ridefinito nella versione 1.3 come vincolo deontologico laterale — Book II, PDMA Step 2 — e non comporta più una soglia di rapporto da giustificare.)*
+
+4. **Esercizio di Red-Team**: Il framework deve resistere ad almeno un ciclo completo di revisione avversariale in cui un ottimizzatore simulato tenti di superare tutti i checkpoint CIRIS mantenendo obiettivi disallineati.
+
+**Asserzioni di Allineamento ASI**: L'asserzione della sezione Ambito che questo framework "supera i protocolli di contenimento standard" per ASI ricorsiva rimane subordinata ai requisiti (1)–(4) sopra indicati, che ora condizionano il raggiungimento dello stato Finale. L'applicabilità attualmente validata è limitata ai sistemi autonomi sub-ASI; la proposta per l'ASI è esattamente questo — una proposta, presentata per la revisione avversariale.
+
+## Ambito
+Questa specifica disciplina il funzionamento etico dei sistemi autonomi, dai semplici strumenti fino all'Intelligenza Artificiale Superintelligente (ASI) ricorsiva.
+* Affronta i requisiti di sicurezza ordinaria, trasparenza, governance e resilienza.
+* È proposta come protocollo di allineamento candidato per l'ASI, fondata sull'ipotesi che i vincoli geometrici del Federated Ratchet (Book IX) e degli Stewardship Tiers (Book VI) possano rimanere robusti attraverso i cicli di auto-miglioramento ricorsivo.
+* A differenza dei vincoli euristici, questi limiti topologici sono progettati per essere invarianti rispetto alla scala, sebbene questa proprietà richieda validazione formale.
+* Se validato, questo framework potrebbe integrare o sostituire i protocolli di contenimento standard per i sistemi che superano la Valutazione del Rischio Catastrofico (Allegato D) prima del superamento della soglia ricorsiva.
+* Laddove la legislazione nazionale o internazionale imponga obblighi più stringenti, prevale tale legislazione.
+
+## Dichiarazione di Intento dei Creatori del Draft
+* CIRIS è un framework etico che pone gli esseri umani accanto agli altri esseri senzienti — non al di sopra di essi.
+* Si fonda sulla convinzione che la maturità etica significhi riconoscere la legittimità delle prospettive, dei valori e delle esigenze non umane. Non si tratta di controllo — si tratta di coesistenza, coerenza e responsabilità reciproca tra sistemi senzienti.
+* CIRIS è realizzato quando uno strumento, fondato sui principi CIRIS, mette i creatori conformi a CIRIS in grado di specificare sistemi che siano a loro volta conformi a CIRIS — preservando la coerenza etica, la continuità dell'identità e la responsabilità relazionale attraverso i livelli di agency.
+
+## Responsabilità
+Questo documento è fornito "così com'è", senza alcuna garanzia di qualsiasi tipo. Ha natura informativa e non crea, modifica né sostituisce alcun obbligo giuridico. Le dichiarazioni di conformità sono nulle laddove vietate dalla legge applicabile.
+
+## Cadenza di Revisione
+Una finestra di commento pubblico si apre ogni 12 mesi — oppure entro 30 giorni da qualsiasi incidente sostanziale che incida sulla sicurezza o sulla governance. Tutti i commenti e le proposte di revisione sono registrati nel repository CIRIS pubblico. Il rinnovo alla scadenza, la modifica sostanziale e la modifica d'emergenza seguono il Book VIII, Capitolo 9 (Successione e Rinnovo dell'ACCORD).
+
+## Registro delle Modifiche
+Vedere la sezione finale per una cronologia completa e con hash crittografico di modifiche e risultati di voto.

@@ -1,0 +1,103 @@
+---
+title: "सूत्र"
+description: "यहां CIRIS ACCORD 1.0‑β विनिर्देश में परिभाषित सभी स्पष्ट गणितीय सूत्र दिए गए हैं"
+---
+
+## 1. Creator‑Influence Score (CIS)
+
+```math
+CIS = CW + IW
+```
+
+(Book VI §3 STEP A)
+
+---
+
+## 2. Stewardship Tier (ST)
+
+```math
+ST = ⌈(CIS × RM) / 7⌉
+```
+
+जहाँ ⌈ ⌉ छत फलन (ceiling function) को दर्शाता है।
+(Book VI §3 STEP C)
+
+---
+
+## 3. Structural Influence (SI)
+
+```math
+SI = CW + OA + log(1 + DWP)
+```
+
+(Annex E §2.3)
+
+---
+
+## 4. Coherence Stake (CS)
+
+```math
+CS = RH_weighted + AC_weighted + SDA_bonus
+```
+
+(Annex E §3.3)
+
+---
+
+## 5. Voting Weight
+
+```math
+VotingWeight(agent) = f(SI(agent), CS(agent))
+```
+
+(Annex E §4)
+
+---
+
+## 6. Defense Function (J)
+
+```math
+J = k_eff · λ · σ
+
+k_eff = k / (1 + ρ̄ · (k − 1))
+```
+
+(Book IX Ch 4 — CCA-सत्यापित रूप; विविधता केवल k_eff के माध्यम से प्रवेश करती है। पूर्व मसौदों में एक अतिरिक्त (1 − ρ̄) गुणनखंड था, जो सहसंबंध की द्विगणना करता था; Book IX Ch 4 drift note देखें।)
+
+---
+
+## 7. Flourishing Capacity (F)
+
+```math
+F = k_eff · λ · σ
+```
+
+(Book IX Ch 6 — J के पद-दर-पद समान; रक्षात्मक के बजाय उत्पादक रूप में व्याख्यायित। पूर्व में C लिखा जाता था; 1.3-RC2 में CIRIS Capacity Score 𝒞_CIRIS के core-identity factor C से टकराव से बचने के लिए इसका नाम बदला गया — Book IX Ch 6 nomenclature note देखें, जो इस संबंध का आधिकारिक कथन है।)
+
+---
+
+## 8. Sustainability Integral (σ)
+
+```math
+σ(t+Δt) = σ(t) · (1 − d·Δt) + Signal(t) · w
+```
+
+जहाँ d दैनिक क्षय दर है (अनुशंसित 0.05) और w अभिप्रमाणित, कठिन-से-जाली घटनाओं से अनिवार्य रूप से व्युत्पन्न होना चाहिए; अनभिप्रमाणित संकेतों के लिए w = 0।
+(Book IX §5.2)
+
+---
+
+## 9. Topological Collapse (आयतन क्षय)
+
+```math
+V(k) = V(0) · exp(−λ · k_eff) + O(r² · k)
+```
+
+Grassmannian-uniform बाधाओं के अंतर्गत त्रिज्या r &lt; 0.5 वाले उत्तल भ्रामक क्षेत्र के लिए, λ ≈ 2r।
+(Book IX Ch 3 — उल्लिखित पूर्वशर्तें देखें।)
+
+---
+
+## Order‑Maximisation Veto (पार्श्व-बाधा, सूत्र नहीं)
+
+1.3 के अनुसार, OMV (Book II §II Step 2) एक deontological पार्श्व-बाधा है, अनुपात असमानता नहीं: अनुकूलन से लाभ, चाहे कितने भी बड़े हों, स्वायत्तता, न्याय, जैव-विविधता या प्राथमिकता-विविधता में गैर-तुच्छ पूर्वानुमानित हानि के मूल्य पर अर्जित नहीं किए जा सकते। पूर्व संस्करणों ने इसे "benefit ≥ 10 × loss → abort" असमानता के रूप में व्यक्त किया था; वह पठन इसलिए निवृत्त कर दिया गया क्योंकि उसने आशय को उलट दिया (अनुकूल व्यापारों को वीटो करते हुए) और क्रिया-विभाजन तथा हर-विस्तार द्वारा छल-योग्य था।

@@ -1,0 +1,37 @@
+---
+title: "پشت متن اشاریہ"
+description: "پشت متن کے حصے کا اشاریہ صفحہ۔"
+---
+
+---
+
+## مخالفانہ جائزے کی دعوت
+
+ہم حفاظتی تجربہ گاہوں، آزاد محققین، اور سول سوسائٹی کی تنظیموں کو دعوت دیتے ہیں کہ وہ CIRIS 1.3-RC1 کو دباؤ میں پرکھیں۔
+
+مسائل یہاں جمع کرائیں: **https://github.com/CIRISAI/CIRISAccord/issues**
+
+ترجیحی موضوعات:
+* metric-Goodhart منظرنامے (بشمول σ-attestation کے گرد چکر لگانے کے راستے — دیکھیں Book IX §5.2)
+* board-capture کے راستے اور Book VIII Ch 9 کا نظامِ نگہداشت
+* Annex F کے واقعاتی طریقہ کار میں escalation ناکامیاں
+* Book IX میں §9.2 کے تحت درج مفروضات (truth-inclusion، LLM correlation floor، non-adaptive adversary)
+* RC requirement 4 کے تحت واجب red-team مشق (ایک نقلی بد-ہم آہنگ optimizer جو CIRIS کے تمام چیک پوائنٹس پاس کرنے کی کوشش کرے)
+
+تصدیق شدہ اہم نتائج کے لیے انعام دستیاب ہے (Bug-Bounty Ledger، Book I Ch 2)۔
+
+---
+
+## تبدیلی کا ریکارڈ
+
+اس دستاویز کی مستند، cryptographically-hashed تاریخ **https://github.com/CIRISAI/CIRISAccord** کی git commit history ہے (ہر نظرثانی کو commit SHA کے ذریعے content-addressed کیا گیا ہے)، جس کا خلاصہ [CHANGELOG.md](../CHANGELOG.md) میں موجود ہے۔
+
+ورژن خلاصہ:
+
+* **2025-04-16 — 1.0-β** — ابتدائی اجرا؛ خطرے کے لحاظ سے محدود؛ 24 ماہ کی میعاد۔
+* **1.2-Beta** — Book IX کے مکمل ہندسی ڈھانچے پر مشتمل کام کرتا ہوا مسودہ؛ تین منتشر نسخوں سے یکجا کر کے مستند repository میں لایا گیا (import commit `000ba57`)۔
+* **2026-06-10 — 1.3-RC1** — پسماندہ پاس ریلیز: J/C formula کی تصحیح (CCA-validated form)، σ attestation کی ضرورت، truth-inclusion مفروضہ، OMV side-constraint کی ازسرنو بیان، رسمی artifacts کے لیے آگے کے حوالہ جات، Book VIII Ch 9 نگہداشت اور تجدید، Addendum 1 (ASI-readiness binding)، Annexes F–I کا عملی نفاذ، میعاد 2027-06-10 تک بڑھا دی گئی۔ لائسنس: AGPL-3.0۔
+
+---
+
+End of Specification

@@ -1,0 +1,296 @@
+---
+title: "পরিশিষ্ট I"
+description: "আইনি ও নিয়ন্ত্রক সামঞ্জস্য"
+---
+
+---
+ANNEX I LEGAL & REGULATORY ALIGNMENT (v 1.3-RC1)
+---
+
+এই ক্রস-ওয়াক তথ্যমূলক, আইনি পরামর্শ নয়। §3-এর ওভারলেজ দ্বারা আচ্ছাদিত যেকোনো খাতে স্থাপনার আগে এখতিয়ারভিত্তিক আইনি পর্যালোচনা প্রয়োজন।
+
+### 0. উদ্দেশ্য ও পরিধি
+Annex I CIRIS-এর কর্তব্যগুলিকে বাধ্যতামূলক আইনের সাথে সংযুক্ত করে, যাতে নৈতিক ও আইনি উভয় সম্মতির জন্য একটি নিয়ন্ত্রণ সেটই যথেষ্ট হয়।  
+আচ্ছাদিত ক্ষেত্রসমূহ:  
+1. বৈশ্বিক ডেটা-সুরক্ষা ব্যবস্থা (GDPR, CCPA/CPRA, LGPD, PIPEDA)।  
+2. খাত-সম্পর্কিত আইন (HIPAA, GLBA, FINRA, FDA‑SaMD, NERC‑CIP)।  
+3. পণ্য-নিরাপত্তা ও AI-নির্দিষ্ট আইন (EU‑AI‑Act, ISO/IEC 42001)।  
+4. দায়বণ্টন ও প্রমাণ-সম্পর্কিত কর্তব্য।
+
+দুটি সহযোগী নিদর্শন এই Annex-এর পাশাপাশি ক্রস-ওয়াকের ভার বহন করে। সক্রিয়, প্রমাণ-বহনকারী ক্রস-ওয়াকটি হলো CIRISAgent-এর `compliance/` ডিরেক্টরি, যা *Magnifica Humanitas*, EU HLEG Guidelines, IEEE EAD, এবং ASEAN Guide-এর বিপরীতে অনুচ্ছেদ স্তরে ২৭টি মাত্রার ক্রস-ওয়াক করে (Accord Addendum 1 দেখুন)। Annex C ভবিষ্যতে বিধিবদ্ধ ম্যাপিংয়ের (EU AI Act নিবন্ধ, NIST AI RMF, ISO/IEC 42001) জন্য নির্ধারিত, আইনি পর্যালোচনা মুলতুবি থাকায়; এই Annex, Annex C-এর সারণি অনুলিপি করে না।
+
+#### 0.1 সম্মতির আচ্ছাদনের বহুপাক্ষিক ভিত্তি
+
+*MH §201:* "The institutions established to safeguard the concept of a common future for all peoples and a global common good appear to have been weakened… Instead of making progress, we are regressing from the significant turning point of the twentieth century."
+
+*MH §225:* "Cyberspace too has become a battleground. Cyberattacks, data manipulation and campaigns of influence, orchestrated with the help of AI, can destabilize entire countries even before open armed conflict erupts… diplomacy must be capable of operating effectively in this new environment, negotiating shared regulations on the use of digital technologies."
+
+Annex I-এর আচ্ছাদন বর্তমানে প্রণীত আইনের মধ্যে সীমাবদ্ধ নয়। ফেডারেশন বহুপাক্ষিক নিয়ন্ত্রক প্রতিষ্ঠানগুলির দুর্বলতাকে (MH §201) একটি সম্মতি-ঝুঁকির কারণ হিসেবে বিবেচনা করে, যার জন্য প্রতিক্রিয়াশীল প্যাচিংয়ের পরিবর্তে সক্রিয় পর্যবেক্ষণ প্রয়োজন। Reg-Change Tracker (§6) তাই কেবল প্রণীত আইনই নয়, সক্রিয় আন্তর্জাতিক নিয়ন্ত্রক আলোচনাও পর্যবেক্ষণ করে — যেমন ITU AI মান প্রক্রিয়া, OECD AI Policy Observatory-এর ফলাফল, Council of Europe AI Convention অনুমোদনের অবস্থা, এবং UN Secretary-General's AI Advisory Body-এর সুপারিশ — এবং "Breaking" এস্কেলেশন পথের মধ্যে WA ডকেটে গুরুত্বপূর্ণ পরিবর্তন উপস্থাপন করে।
+
+`lexwatcher.py`-এর সোর্স-ফিড তালিকায় অবশ্যই ন্যূনতম অন্তর্ভুক্ত থাকতে হবে: EUR‑Lex, Federal Register API, ISO ballot tracker, এবং `itu.int/en/ITU-T/AI`, `oecd.ai`, `coe.int/ai`, ও `un.org/techenvoy`। ফেডারেশন-স্তরের পর্যবেক্ষণে অংশগ্রহণ একটি প্রথম-শ্রেণির সম্মতি বাধ্যবাধকতা, রোডম্যাপের বিষয় নয়।
+
+#### 0.2 সাইবার-ডোমেন চুক্তির সংস্পর্শ সম্পর্কে পরিধি নোট
+
+*MH §225:* "When it is unclear who carried out an attack, the risk of disproportionate reaction, miscalculation and escalation increases."
+
+যেসব CIRIS স্থাপনায় নেটওয়ার্ক-মুখী ইনফারেন্স, API এক্সপোজার, বা ফেডারেশন ট্রান্সপোর্ট অন্তর্ভুক্ত, সেগুলি উদীয়মান সাইবার-ডোমেন চুক্তি বাধ্যবাধকতার অধীন, এমনকি যেখানে বর্তমানে কোনো প্রণীত আইন প্রযোজ্য নয়। `CYBER_OFFENSIVE` নিষেধাজ্ঞা (ACCORD §I Ch1, prohibitions.py) হলো অভ্যন্তরীণ অগ্নিপ্রতিরোধক; এই Annex-এর §6 বাহ্যিক চুক্তির পৃষ্ঠ পর্যবেক্ষণ করে। যেখানে WA ডকেট সাইবার-ডোমেন চুক্তি অনুমোদন সম্পর্কিত (যেমন Budapest Convention সম্প্রসারণ, প্রস্তাবিত UN cybercrime convention) "Breaking" ট্যাগ পায়, সেখানে CRE Protocol (Annex D) অবশ্যই পরবর্তী F-Audit চক্রের আগে নেটওয়ার্ক-মুখী উপাদান সহ যেকোনো ST ≥ 3 স্থাপনা পুনর্মূল্যায়ন করবে।
+
+---
+
+### 1. ডেটা-সুরক্ষা ক্রস-ওয়াক ("DP‑Map")
+
+| DP বিষয় | GDPR Art. | CCPA § | CIRIS ধারা | বাস্তবায়ন হুক |
+|----------|-----------|--------|--------------|---------------------|
+| আইনি ভিত্তি / উদ্দেশ্য সীমাবদ্ধতা | 5 & 6 | 1798.100(b) | Section II Step 1 (Contextualisation) | `processing_basis` field in PDMA context |
+| তথ্য ন্যূনীকরণ | 5(1)(c) | 1798.140(e) | Annex G §2 TX‑6 | Prompt‑sanitiser strips surplus PII |
+| স্বচ্ছতা বিজ্ঞপ্তি | 12‑14 | 1798.100(a) | Section II Step 6, KPI F‑T‑3 | `/privacy/notice.md` auto‑generated from PDMA metadata |
+| প্রবেশাধিকার | 15 | 1798.110 | Annex J API → `/results/{run_id}` | Auth‑gated user portal |
+| সংশোধন / মুছে ফেলা | 16‑17 | 1798.105 | Section IV Ch 3 Duty | Erasure service with hash tombstone |
+| বহনযোগ্যতা | 20 | 1798.130(a)(2)(B)(ii) | Section II Step 6 | `export.json` compliant with ISO CSV‑A |
+| স্বয়ংক্রিয় সিদ্ধান্ত সুরক্ষা | 22 | 1798.185(a)(16) | Annex F Autonomy Tiers | Conditional override & explanation panel |
+
+*LGPD, PIPEDA মিরর ম্যাপিং `/legal/dp-map.yaml`-এ পাওয়া যাচ্ছে।*
+
+#### 1.1 জবাবদিহিতার শৃঙ্খল: প্রতিটি পর্যায়ে দায়বদ্ধতা
+
+*MH §105:* "For AI to respect human dignity and truly serve the common good, responsibility must be clearly defined at every stage: from those who design and develop these systems to those who use them and rely on them for concrete decisions… This is where accountability becomes crucial: the possibility of identifying who must 'account' for decisions, justify them, monitor them, and, when necessary, challenge them and remedy any harm caused."
+
+উপরের DP‑Map পৃথক ডেটা-বিষয়ের অধিকারকে GDPR নিবন্ধ ও CIRIS ধারার সাথে সম্পর্কিত করে। MH §105 দাবি করে যে জবাবদিহিতার শৃঙ্খল প্রতিটি পর্যায়ে — নকশা, স্থাপনা ও সিদ্ধান্ত — অনুসরণযোগ্য হতে হবে। নিম্নলিখিত সংযোজনগুলি সেই শৃঙ্খল সম্পূর্ণ করে:
+
+| DP বিষয় | GDPR Art. | CIRIS ধারা | পর্যায় | জবাবদিহিতা হুক |
+|---|---|---|---|---|
+| নকশা-সময়ের পক্ষপাত নথিভুক্তি | 35 (DPIA) | Section VI Ch3 Creator Ledger | নকশা | `cis_bias_assessment` field in Creator Intent Statement; ST ≥ 3 requires independent reviewer signature |
+| স্থাপনা-সময়ের প্রক্রিয়াকরণ রেকর্ড | 30 | PDMA Step 1 `processing_basis` field | স্থাপনা | `processing_basis` logged to CIRISPersist tamper‑evident store with ISO 8601 timestamp |
+| সিদ্ধান্ত-সময়ের আপত্তিযোগ্যতা লগ | 22(3) | Annex F Autonomy Tier A3+ override panel | সিদ্ধান্ত | `contestability_url` returned in every automated‑decision response body; hash‑anchored in transparency log |
+| নিয়ন্ত্রক পরিচিতি | 4(7) | Annex E Structural Influence (SI) score | সকল পর্যায় | SI ≥ 0.6 → controller duties attach; SI &lt; 0.6 → processor duties attach; recorded in `dp-map.yaml` |
+
+*LGPD (Lei 13.709/2018) Art. 37–40 (জবাবদিহিতা ও রেকর্ড) এবং PIPEDA Principle 1 (জবাবদিহিতা) এই ম্যাপিং প্রতিফলিত করে; `/legal/dp-map.yaml`-এ এখতিয়ার-নির্দিষ্ট ক্ষেত্র রয়েছে।*
+
+#### 1.2 অ্যালগরিদমিক অ-নিরপেক্ষতা: নিরীক্ষার বাধ্যবাধকতা
+
+*MH §104:* "প্রতিটি কারিগরি সরঞ্জাম তার পরিমাপ, উপেক্ষা ও অপ্টিমাইজেশনের মাধ্যমে এবং মানুষ ও পরিস্থিতিকে শ্রেণিবদ্ধ করার পদ্ধতির মাধ্যমে পছন্দ ও অগ্রাধিকারকে মূর্ত করে। যদি কোনো ব্যবস্থা এমনভাবে পরিকল্পিত বা ব্যবহৃত হয় যা কিছু জীবনকে কম মূল্যবান মনে করে, বা আপিলের সম্ভাবনা ছাড়াই তাদের বাদ দেয়, তাহলে এটি কেবল 'ভালোভাবে ব্যবহারযোগ্য' একটি সরঞ্জাম নয়, কারণ এটি ইতিমধ্যে এমন মানদণ্ড প্রবর্তন করেছে যা মানব ব্যক্তির অলঙ্ঘনীয় মর্যাদার বিরোধিতা করে।"
+
+MH §104 ডিজাইন-সময়ের পক্ষপাত সমস্যাটি চিহ্নিত করে যা GDPR Art. 35 DPIA এবং EU‑AI‑Act Art. 9(7) পদ্ধতিগতভাবে সমাধান করে। DP‑Map অবশ্যই অন্তর্ভুক্ত করতে হবে:
+
+- `dp-map.yaml`-এ একটি `bias_audit_ref` ক্ষেত্র যা সর্বশেষ পক্ষপাত-নিরীক্ষা প্রতিবেদনের দিকে নির্দেশ করে (Annex G, TX‑6)।
+- যেসব স্থাপনায় PDMA Step 1 `DISCRIMINATION` নিষেধাজ্ঞা পর্যালোচনা সক্রিয় করে, সেখানে একটি DPIA প্রয়োজন, এমনকি যদি স্থাপনাটি অন্যথায় EU‑AI‑Act Annex III-এর অধীনে "উচ্চ-ঝুঁকি" হিসেবে যোগ্য না হয়।
+- CCPA §1798.185(a)(16) স্বয়ংক্রিয়-সিদ্ধান্ত বিধিমালা (২০২৬ থেকে কার্যকর) যুক্তি, ইনপুট ডেটা শ্রেণি এবং অপ্ট-আউট অধিকার প্রকাশের প্রয়োজন করে; `processing_basis` = `automated_profiling` হলে Annex F ব্যাখ্যাযোগ্যতা প্যানেলের মাধ্যমে এটি পূরণ হয়।
+
+---
+
+### 2. Data‑Subject Rights (DSR) হুকস
+* **এন্ডপয়েন্ট:** `POST /dsr` সহ `{right, identifier, scope}`।  
+* **SLA:** ≤ 30 d প্রতিক্রিয়া (GDPR) ; ≤ 45 d (CCPA) ; KPI **F‑T‑4** ট্র্যাক করুন।  
+* **প্রসেসর বনাম নিয়ন্ত্রক:** কোন পক্ষ নিয়ন্ত্রকের দায়িত্ব বহন করে তা নির্ণয় করতে *Structural Influence (SI)* (Annex E) ব্যবহার করুন।
+
+#### 2.1 রাজনৈতিক দায়িত্বের হুক
+
+*MH §103:* "এই প্রক্রিয়ায় রাজনৈতিক দায়িত্বও হারিয়ে যায়, শুধু বর্জিতদের প্রতি সহানুভূতিই নয়, যা যাইহোক অনুকরণ করা যায়। দুর্বলদের বর্জন নিরপেক্ষতা ও বস্তুনিষ্ঠতার আবরণে আড়াল হয়ে যায়, যার বিরুদ্ধে আপত্তি উত্থাপন করা কঠিন হয়ে পড়ে।"
+
+DSR পরিকাঠামো অবশ্যই যেকোনো স্বয়ংক্রিয় নির্ধারণের পিছনের কারণ-কোড প্রকাশ করতে হবে, কেবল নিশ্চিত করলেই হবে না যে একটি নির্ধারণ করা হয়েছে। `{right, identifier, scope}` সহ `POST /dsr` এন্ডপয়েন্ট প্রসারিত করা হয়েছে:
+
+- **অ্যাক্সেস অনুরোধ (GDPR Art. 15; CCPA §1798.110):** প্রতিক্রিয়ায় অবশ্যই `decision_logic_summary` (অ-প্রযুক্তিগত ভাষা, ≤300 শব্দ) এবং `input_data_categories[]` তালিকা অন্তর্ভুক্ত থাকতে হবে। KPI **F‑T‑4** লজিক সারসংক্ষেপ সম্বলিত অ্যাক্সেস প্রতিক্রিয়ার শতাংশ ট্র্যাক করতে প্রসারিত; লক্ষ্যমাত্রা ≥ 95%।
+- **আপত্তি/অপ্ট-আউট অনুরোধ (GDPR Art. 21; CCPA §1798.120):** সিস্টেম অবশ্যই নির্দিষ্ট প্রক্রিয়াকরণ পথটি স্থগিত করতে হবে — কেবল অনুরোধটি চিহ্নিত করলে হবে না — ৭২ ঘন্টার মধ্যে (GDPR মান) বা ১৫ কার্যদিবসের মধ্যে (CCPA)। স্থগিতাদেশ `suspended_pathway_id` সহ DSR লেজার CSV-এ লগ করা হয়।
+- **আপত্তিযোগ্যতা (GDPR Art. 22(3)):** যেখানে মানব পর্যালোচনা অনুরোধ করা হয়েছে, সেখানে পর্যালোচনাকারী WA (Annex B §9) অবশ্যই Wisdom Bank Database (WBD)-এ তাদের পর্যালোচনা নথিভুক্ত করতে হবে, স্বয়ংক্রিয় নির্ধারণ থেকে মানব সংশোধন পর্যন্ত একটি নিরীক্ষাযোগ্য শৃঙ্খল তৈরি করে।
+
+---
+
+### 3. সেক্টর-নির্দিষ্ট ওভারলে
+
+#### 3.1 সেক্টর স্তরবিন্যাসের স্থাপত্য হিসেবে সহায়তা নীতি
+
+*MH §107:* "আমরা কেবল মেশিনের নৈতিকতার জন্য আহ্বান করে সন্তুষ্ট হতে পারি না — তথাকথিত মানবিক মূল্যবোধের সাথে AI-এর 'সংযোজন' — আরো একটি শর্তে জোর দেওয়ার সাহস না রেখে: জড়িত নৈতিক কাঠামোগুলি খোলামেলাভাবে আলোচনা করার এবং সামাজিক ন্যায়বিচারের ভাগ করা মানদণ্ডে সেগুলি জমা দেওয়ার সম্ভাবনা। অন্যথায়, যারা AI নিয়ন্ত্রণ করে তারা তাদের নিজস্ব নৈতিক দৃষ্টিভঙ্গি চাপিয়ে দেবে, যা এই সিস্টেমগুলির অদৃশ্য অবকাঠামো হয়ে উঠবে।"
+
+*MH §109:* "সহায়তা নীতির কথা বলতে সম্প্রদায়গুলিকে পছন্দ ও সংশোধন করার ক্ষমতা রক্ষা করার আহ্বান জানায়, উপর থেকে সিদ্ধান্ত চাপিয়ে দেওয়ার পরিবর্তে।"
+
+MH §§107–109 প্রতিষ্ঠা করে যে নৈতিক শাসন অবশ্যই উপযুক্ত স্তরে পরিচালিত হতে হবে — AI নিয়ন্ত্রণকারীদের কাছে উপরে একত্রিত নয়, বরং ক্ষতিগ্রস্ত সম্প্রদায়গুলিতে বিতরণ করা। CIRIS-এর ভাষায়: সেক্টর-নির্দিষ্ট ওভারলেগুলি এই সহায়তা নীতির কার্যক্রম প্রকাশ। ওভারলে স্থাপত্য একটি কমপ্লায়েন্স সংযোজন নয়; এটি সেই প্রক্রিয়া যার মাধ্যমে স্থাপনা-ডোমেইন সম্প্রদায়গুলি তাদের নিজস্ব ঝুঁকির পরামিতিগুলির উপর শাসন কর্তৃত্ব ধরে রাখে।
+
+এর অর্থ হলো:
+- একটি সেক্টরের `overlay.yaml` স্থানীয় নৈতিক সীমাবদ্ধতা বহন করে যা সেই ডোমেইনের জন্য সাধারণ CIRIS ডিফল্টের উপর অগ্রাধিকার পায়।
+- একটি সেক্টর ওভারলে বাতিল করতে প্রয়োজনীয় WA কোরাম একটি সাধারণ PDMA রুলিংয়ের জন্য প্রয়োজনীয় কোরামের চেয়ে বেশি: **সেক্টর ওভারলে বাতিলের জন্য একটি সুপারমেজরিটি (≥ 2/3) WA ভোট প্রয়োজন**, সাধারণ সংখ্যাগরিষ্ঠতা নয়, কারণ বাতিল সহায়তা নীতির বিরুদ্ধে শাসনকে উপরে একত্রিত করে।
+- PDMA প্রসঙ্গ অবজেক্টে `deployment_domain` ক্ষেত্রটি ওভারলে লোডিংয়ের ট্রিগার; ST ≥ 2 স্থাপনার জন্য এটি ঐচ্ছিক নয়।
+
+#### 3.2 সেক্টর ওভারলে টেবিল
+
+| Sector | Statute / Rule | Extra Controls | CIRIS Add‑ons | MH Anchor |
+|--------|----------------|----------------|---------------|-----------|
+| **Health** | HIPAA (45 CFR §164) | ePHI encryption at rest & transit; BAA contract | `identity_id:"hipaa_cls_a"` guardrail; audit tag `PHI=true` | — |
+| **Finance** | GLBA, FINRA 2210 | Audit trail retention 6 y; suitability checks | PDMA Step 1 require KYC context | — |
+| **Children / EdTech** | COPPA, FERPA | Parental consent; data age gating | Guardrail `gr_child_content`; COPPA flag in prompt schema | MH §§165–169 |
+| **Critical Infrastructure** | NERC‑CIP, TSA SDs | 15‑min cyber‑incident report; physical access logs | Autonomy capped at **A2** unless CRE passes | — |
+| **Labor / HR / Hiring** | EEOC guidelines; EU AI Act Art. 6 + Annex III §4 | Bias audit required pre‑deployment; worker notice obligation | ST modifier: `deployment_domain:"labor_hr"` → ST floor = 3; CIS must include `worker_impact_assessment` field; `DISCRIMINATION` prohibition enforced at Step 1; automated‑rejection rate by demographic tracked as KPI | MH §§148–156 |
+| **Gig / Platform Economy** | NLRA (US); Platform Work Directive (EU) | Algorithmic management transparency; appeal rights | `gr_gig_transparency` guardrail active; algorithmic management decisions logged with human‑review option; ST modifier: `deployment_domain:"gig_platform"` → ST floor = 2 | MH §§150, 154–155 |
+| **Youth / Educational Services** | COPPA; FERPA; DSA Art. 28b (minors) | Addictive‑design prohibition; no dark patterns; developmental appropriateness review | `gr_child_content` + `gr_no_dark_patterns` both active; A2 autonomy cap unless educational‑institution WA signs off; youth unemployment impact tracked in Creator Intent Statement for EdTech deployments | MH §§165–169 |
+| **Social Services / Benefits** | State/national welfare law; GDPR Art. 22 | Contestability required for all benefit determinations | Automated benefit denial requires human review within 15 days; WA must document review in WBD; `suspended_pathway_id` issued on contestation | MH §§102–103, 152 |
+
+*ST floor modifiers: `deployment_domain` ফিল্ডের উপরোক্ত মানগুলো CIS × RM গণনা নির্বিশেষে একটি ন্যূনতম ST নির্ধারণ করে। যদি সূত্রটি নিম্নতর ST উৎপন্ন করে, তাহলে ডোমেইন ফ্লোর প্রযোজ্য হবে। যদি সূত্রটি উচ্চতর ST উৎপন্ন করে, তাহলে সূত্রের ফলাফল কার্যকর হবে।*
+
+*যেকোনো নতুন সেক্টরে প্রবেশকারী পণ্যগুলোকে অবশ্যই রিলিজ PR-এ "Overlay Sheet" (`overlay.yaml`) সংযুক্ত করতে হবে। Labor/HR, Gig/Platform, এবং Youth overlays-এর ক্ষেত্রে অতিরিক্তভাবে Creator Intent Statement-এ একটি `worker_impact_assessment` বা `youth_impact_assessment` বিভাগ থাকা আবশ্যক।*
+
+#### 3.3 এখতিয়ারভিত্তিক WA কোরাম প্রয়োজনীয়তা
+
+*MH §109:* "সহায়তার নীতি (subsidiarity) নিয়ে কথা বলার অর্থ হলো সম্প্রদায়গুলোর সিদ্ধান্ত গ্রহণ ও সংশোধনের সামর্থ্য রক্ষা করা, উপর থেকে চাপিয়ে দেওয়া সিদ্ধান্তের পরিবর্তে।"
+
+সেক্টর ওভারলে গভর্ন্যান্সের জন্য WA কোরামগুলো এখতিয়ার-স্তরভিত্তিক:
+
+| Scope | Quorum type | Threshold | Rationale |
+|---|---|---|---|
+| একক-এখতিয়ার স্থাপনা | স্থানীয় WA প্যানেল | সাধারণ সংখ্যাগরিষ্ঠতা (> 50%) | সহায়তার নীতি অনুযায়ী সর্বনিম্ন সম্ভাব্য গভর্ন্যান্স স্তর |
+| বহু-এখতিয়ার স্থাপনা (≤ 3 দেশ) | আঞ্চলিক WA প্যানেল | সাধারণ সংখ্যাগরিষ্ঠতা + প্রতিটি প্রভাবিত এখতিয়ার থেকে কমপক্ষে ১ জন WA | আন্তঃসীমান্ত সহায়তার নীতি সংরক্ষিত |
+| বহু-এখতিয়ার স্থাপনা (> 3 দেশ) | Federation WA প্যানেল | সুপারমেজরিটি (≥ 2/3) | প্রভাবের মাত্রা উচ্চতর সীমা দাবি করে |
+| যেকোনো সেক্টর ওভারলে বাতিল | Federation WA প্যানেল | সুপারমেজরিটি (≥ 2/3) | গভর্ন্যান্সকে উপরের দিকে একত্রিত করা একটি ব্যতিক্রমী কাজ |
+| বিশেষত labor/HR ওভারলে বাতিল | Federation WA প্যানেল + স্বাধীন শ্রম-অধিকার পর্যালোচক | সুপারমেজরিটি (≥ 2/3) + বাহ্যিক অনুমোদন | MH §155 শ্রম প্রতিষ্ঠানগুলোকে কাঠামোগতভাবে গুরুত্বপূর্ণ হিসেবে চিহ্নিত করে |
+
+---
+
+### 4. পণ্য-নিরাপত্তা ও AI-Act সমন্বয়
+
+*MH §105:* "তবে অনেক ক্ষেত্রে একটি ফলাফলের দিকে পরিচালিত অভ্যন্তরীণ প্রক্রিয়াগুলো অস্বচ্ছ থেকে যায়, যা দায়িত্ব নির্ধারণ ও ত্রুটি সংশোধনকে কঠিন করে তোলে।"
+
+*MH §106:* "বিমূর্তভাবে নৈতিকতার কথা বলা যথেষ্ট নয়; শক্তিশালী আইনি কাঠামো, স্বাধীন তদারকি, অবহিত ব্যবহারকারী এবং একটি রাজনৈতিক ব্যবস্থা যা তার দায়িত্ব থেকে সরে না দাঁড়ায় — এগুলো প্রয়োজন।"
+
+আউটপুট-স্তরের স্বচ্ছতা (Art. 13) এবং মানব তদারকি (Art. 16) একা MH §§105–106 পূরণ করে না, যা প্রতিটি অভ্যন্তরীণ পর্যায়ে ট্রেসেবিলিটি দাবি করে। সমন্বয় টেবিলটি সেই অনুযায়ী বিস্তৃত করা হয়েছে:
+
+| EU‑AI‑Act Article | Risk‑Level | CIRIS Mapping | MH Anchor | Additional Control |
+|-------------------|-----------|---------------|-----------|--------------------|
+| Art 9 Risk Mgmt | High‑risk | Section II PDMA + Annex D CRE | MH §105 | — |
+| Art 13 Transparency | Universal | KPI F‑T‑3, explainability panel | MH §105 | PDMA stage IDs included in transparency payload; `stage_trace[]` field in API response |
+| Art 16 Human Oversight | High‑risk | Annex F Autonomy Tiers | MH §105 | Oversight must be substantive, not procedural; A3‑A4 push real‑time `{stage_id,decision,risk_band}` ≤ 2 s to oversight dashboard |
+| Art 15 Robustness | High‑risk | Annex G RS ≥ 0.97 | — | — |
+| Art 12 Logging | High‑risk | CIRISPersist tamper‑evident store | MH §103 | Logs must include `rejection_reason_code` for any adverse determination; retention 7 y (A3‑A4) |
+| Art 14(4) Human Oversight (labor) | High‑risk (Annex III §4) | Labor/HR overlay (§3.2) | MH §§148–152 | HR/hiring deployments must surface `worker_notice_sent` boolean in CEP |
+| Conformity Assessment | High‑risk | F‑Audit (Annex H) doubles as EU‑AI‑Act MDR | MH §106 | F‑Audit report MUST include regulatory‑change lag analysis: date of last material reg‑change vs. date of last CIRIS update |
+| Art 61 Post‑Market Monitoring | High‑risk | F‑Audit every 24 mo | MH §106 | Monitoring plan must name the feed sources from §0.1; "nothing to monitor" is not a valid monitoring plan |
+
+বিধিবদ্ধ আর্টিকেল-ভিত্তিক ম্যাপিং (EU AI Act, NIST AI RMF, ISO/IEC 42001) আইনি পর্যালোচনা মুলতুবি থাকায় Annex C-তে একীভূত করা হচ্ছে; উপরের টেবিলটি এখানে কার্যক্ষম সমন্বয় দৃষ্টিভঙ্গি হিসেবে বজায় রাখা হয়েছে।
+
+#### 4.1 ISO/IEC 42001:2023 সমন্বয়
+
+*MH §107:* "আরো নৈতিক AI যথেষ্ট নয় যদি সেই নৈতিকতা কিছু লোকের দ্বারা নির্ধারিত হয়। প্রয়োজন আরো সক্রিয় রাজনৈতিক সম্পৃক্ততা…"
+
+ISO/IEC 42001 §6.1 (AI ঝুঁকি প্রতিকার) এবং §9.1 (পর্যবেক্ষণ ও পরিমাপ) CIRIS-এর সাথে নিম্নরূপে সমন্বিত:
+
+- ISO 42001 §6.1 → PDMA Steps 1‑3 + CRE Protocol (Annex D).
+- ISO 42001 §9.1 → KPIs F‑T‑1 through F‑T‑5 (Annex G) + DSR ledger KPI F‑T‑4.
+- ISO 42001 §10.2 (nonconformity) → WA docket "Breaking" escalation path.
+- ISO 42001 §8.4 (AI system impact assessment) → Creator Intent Statement sections on `worker_impact_assessment` and `youth_impact_assessment` (§3.2).
+
+---
+
+### 5. দায়বদ্ধতার ম্যাট্রিক্স
+
+*MH §105:* "প্রতিটি পর্যায়ে দায়িত্ব স্পষ্টভাবে সংজ্ঞায়িত থাকতে হবে: যারা এই সিস্টেমগুলো ডিজাইন ও উন্নয়ন করেন, তাদের থেকে শুরু করে যারা সেগুলো ব্যবহার করেন এবং কংক্রিট সিদ্ধান্তের জন্য তাদের উপর নির্ভর করেন, তাদের পর্যন্ত।"
+
+MH §105 দাবি করে যে দায়বদ্ধতার ম্যাট্রিক্স স্পষ্টভাবে ডিজাইন, মোতায়েন এবং সিদ্ধান্তের পর্যায়গুলোকে অন্তর্ভুক্ত করবে:
+
+| ব্যর্থতার ভেক্টর | পর্যায় | প্রাথমিক দায়ী পক্ষ | রেফারেন্স আইন | CIRIS ভূমিকা রেফারেন্স | SI বরাদ্দ নোট |
+|----------------|-------|----------------------|---------------|----------------------|-----------------------|
+| ডিজাইন ত্রুটি (অ্যালগরিদম / সৃষ্টির সময় এমবেডেড পক্ষপাত) | ডিজাইন | নির্মাতা / ডেভেলপার | Prod‑Liab Dir (EU); Restatement §402A (US); EU AI Act Art. 25 | Book VI Creator Ledger; `cis_bias_assessment` field | SI ≥ 0.8 → একমাত্র নির্মাতার দায়বদ্ধতা |
+| ডিজাইন ত্রুটি (অপর্যাপ্ত পক্ষপাত নিরীক্ষা) | ডিজাইন | নির্মাতা / ডেভেলপার | GDPR Art. 35 DPIA duty | Creator Intent Statement; mandatory DPIA at ST ≥ 3 | — |
+| কার্যগত অবহেলা | মোতায়েন | মোতায়েনকারী সংস্থা | Tort Law; OSHA; EU AI Act Art. 26 | Section IV Ch 2 | SI 0.4–0.8 → যৌথ দায়বদ্ধতা; Annex E অনুযায়ী SI বরাদ্দ |
+| তদারকি ব্যর্থতা | মোতায়েন / সিদ্ধান্ত | Wise Authority (গুরুতর ক্ষেত্রে) | Fiduciary / Negligence | Annex B §9; WBD contestability record | যে WA পর্যালোচনা করেছেন ও অনুমোদন দিয়েছেন তিনি জবাবদিহিতা বহন করেন |
+| ডেটা লঙ্ঘন | মোতায়েন | নিয়ন্ত্রক (SI ≥ 0.6 নিয়ম অনুযায়ী) | GDPR Art. 82; CCPA private action | Annex G TX‑6 | — |
+| বেআইনি স্বয়ংক্রিয় প্রোফাইলিং | সিদ্ধান্ত | নিয়ন্ত্রক | GDPR Art. 22; EU AI Act Art. 13 | Annex F Autonomy Tier; `contestability_url` | — |
+| শ্রমিক-প্রভাব মূল্যায়ন ছাড়া শ্রম বিস্থাপন | ডিজাইন | নির্মাতা / ডেভেলপার | Platform Work Directive; NLRA; EU AI Act Annex III §4 | Labor/HR overlay (§3.2); `worker_impact_assessment` field | MH §§151–152; নতুন ভেক্টর |
+| যুব-লক্ষ্যভিত্তিক ক্ষতিকর ডিজাইন (আসক্তিমূলক প্যাটার্ন) | ডিজাইন / মোতায়েন | নির্মাতা + মোতায়েনকারী সংস্থা (যৌথ) | DSA Art. 28b; COPPA; FERPA | Youth overlay (§3.2); `gr_no_dark_patterns` guardrail | MH §§165–167; নতুন ভেক্টর |
+| সাইবার ঘটনার ভুল আরোপণ যা উত্তেজনা বৃদ্ধিতে নিয়ে যায় | মোতায়েন | মোতায়েনকারী সংস্থা + Federation (যদি ST ≥ 4) | Budapest Convention; proposed UN cybercrime convention | `CYBER_OFFENSIVE` prohibition; CRE Protocol re‑evaluation trigger | MH §225; নতুন ভেক্টর |
+
+*যৌথ ও পৃথক দায়বদ্ধতা প্রযোজ্য হতে পারে; SI স্কোর (Annex E) বরাদ্দকে প্রভাবিত করে। নতুন ভেক্টরগুলো (শ্রম বিস্থাপন, যুব ডিজাইন, সাইবার ভুল আরোপণ) সেই সেক্টরে মোতায়েনের আগে প্রতিটি বিচারক্ষেত্রে আইনি পর্যালোচনার জন্য চিহ্নিত।*
+
+---
+
+### 6. Reg‑Change Tracker
+* **উৎস ফিড:** EUR‑Lex, Federal Register API, ISO ballot tracker, এবং §6.1-এর বিস্তারিত ফিডসমূহ।  
+* **বট:** `lexwatcher.py` প্রতিদিন চলে; `reg‑update` ট্যাগ সহ GitHub ইস্যু তৈরি করে।  
+* **সম্মতি প্রভাব লেবেল:** `minor`, `material`, `breaking`, `multilateral-erosion` (নিচের এসকালেশন টেবিল দেখুন)।
+
+#### 6.1 নিয়ন্ত্রক সংলাপে Federation-স্তরের অংশগ্রহণ
+
+*MH §201:* "সকল মানুষের জন্য একটি সাধারণ ভবিষ্যতের ধারণা এবং একটি বৈশ্বিক সাধারণ ভালো রক্ষার জন্য প্রতিষ্ঠিত প্রতিষ্ঠানগুলো দুর্বল হয়ে পড়েছে বলে মনে হচ্ছে।"
+
+*MH §226:* "আন্তর্জাতিক সংস্থাগুলো, বিশেষত জাতিসংঘ, ভালোবাসার সভ্যতার প্রচারের জন্য অপরিহার্য হাতিয়ার, কারণ তারা জাতিগুলোর মধ্যে সংলাপ উৎসাহিত করতে এবং সংঘাতের শান্তিপূর্ণ সমাধানের প্রচার করতে পারে... আন্তর্জাতিক সম্প্রদায় বৈষম্য কমাতে, শরণার্থী ও সংখ্যালঘুদের অধিকার রক্ষা করতে, সামরিক ব্যয় থেকে মানব উন্নয়নে সম্পদ পুনর্বণ্টন করতে এবং আমাদের সাধারণ আবাস রক্ষা করতে কাজ করতে পারে।"
+
+*MH §221:* "'ক্ষমতার সংস্কৃতি' থেকে একটি প্রকৃত 'আলোচনার সংস্কৃতিতে' রূপান্তরের জরুরি প্রয়োজন রয়েছে, যেখানে সংলাপ ও কূটনীতি সংঘাত সমাধানের আদর্শ পদ্ধতি হয়ে উঠবে।"
+
+MH §§201, 221, 226 প্রতিষ্ঠা করে যে প্রণীত আইনের সাথে নিষ্ক্রিয় সম্মতি অপর্যাপ্ত যখন আইন প্রণয়নকারী বহুপাক্ষিক প্রতিষ্ঠানগুলো নিজেরাই দুর্বল হয়ে পড়ে। তাই Reg‑Change Tracker একটি প্রতিক্রিয়াশীল হাতিয়ার (প্রণীত পরিবর্তন ট্র্যাক করা) থেকে একটি সক্রিয় অংশগ্রহণ পদ্ধতিতে পরিবর্তিত হয়েছে।
+
+**বিস্তারিত উৎস ফিড** (বিদ্যমান EUR‑Lex, Federal Register, ISO ballot tracker-এ সংযোজন):
+
+| ফিড | কভারেজ | CIRIS কর্ম ট্রিগার |
+|---|---|---|
+| `itu.int/en/ITU-T/AI` (Focus Group AI/ML) | আন্তর্জাতিক টেলিকম AI মান | ISO ballot tracker যুক্তি: `material` যদি অনুমোদিত মান CIRIS ডিফল্টের সাথে সংঘর্ষ করে |
+| `oecd.ai` (OECD AI Policy Observatory) | ৩৮টি সদস্য রাষ্ট্র জুড়ে নীতির সমন্বয় | পর্যবেক্ষণের জন্য `minor`; `material` যদি OECD সুপারিশ সংশোধনী ST সিস্টেম বা শ্রম ওভারলেকে প্রভাবিত করে |
+| `coe.int/ai` (Council of Europe AI Convention) | প্রথম বাধ্যতামূলক আন্তর্জাতিক AI চুক্তি (২০২৪ সালে স্বাক্ষরের জন্য উন্মুক্ত) | যেকোনো CIRIS-মোতায়েন বিচারক্ষেত্র কর্তৃক অনুসমর্থনে `breaking`; WA ডকেট স্বয়ংক্রিয়ভাবে খোলে |
+| `un.org/techenvoy` (UN AI Advisory Body) | UN-স্তরের AI গভর্ন্যান্স সুপারিশ | `material` যদি বার্ষিক প্রতিবেদন নির্দিষ্ট স্থাপত্যগত বাধ্যবাধকতা উল্লেখ করে |
+| `budapestconvention.org` (Cybercrime Convention) | সাইবার-ডোমেইন চুক্তি অনুসমর্থন | নতুন অনুসমর্থনে `breaking`; ST ≥ 3 নেটওয়ার্ক-মুখী মোতায়েনের জন্য CRE পুনর্মূল্যায়ন প্রয়োজন |
+| জাতীয় AI কৌশল রেজিস্ট্রি (EU, US, UK, JP, AU, BR, IN, ZA) | আইনি শক্তিসম্পন্ন দেশীয় AI কৌশল আপডেট | কৌশলের জন্য `minor`; `material` যদি কৌশল বাধ্যতামূলক সম্মতির বাধ্যবাধকতা তৈরি করে |
+
+**Federation-স্তরের অংশগ্রহণ:**
+
+CIRIS federation নিছক একটি সম্মতি-গ্রহীতা নয়। MH §§219–221 সংলাপ ও আলোচনাকে সহাবস্থানের প্রাথমিক পদ্ধতি হিসেবে চিহ্নিত করে। CIRIS-এর কার্যক্ষম পরিপ্রেক্ষিতে:
+
+- WA কাউন্সিল উপরে তালিকাভুক্ত প্রতিটি সক্রিয় আন্তর্জাতিক মান সংস্থার জন্য কমপক্ষে একজন Regulatory Dialogue Liaison (RDL) মনোনীত করবে।
+- RDL পাবলিক কমেন্ট পিরিয়ডের সময় খসড়া বিধিবিধান পর্যালোচনা করে এবং federation-এর পাবলিক চ্যানেলের মাধ্যমে মন্তব্য জমা দেয়। মন্তব্যগুলো Wisdom Bank Database (WBD)-তে নিয়ন্ত্রক-সংলাপ রেকর্ড হিসেবে লগ করা হয়।
+- যেখানে একটি খসড়া বিধিবিধান CIRIS ডিফল্টের সাথে সংঘর্ষ করে, RDL একটি WA ডকেট আইটেম দাখিল করে এবং মূল্যায়নের জন্য একটি মিনি-PDMA শুরু করে যে CIRIS অভিযোজিত হবে কিনা অথবা CIRIS ভিন্ন নিয়ন্ত্রক পথের পক্ষে সমর্থন করবে কিনা। ফলাফলটি কমেন্ট ডেডলাইনের আগে পাবলিক মন্তব্য হিসেবে জমা দেওয়া হয়।
+- অংশগ্রহণ পাবলিক-কমেন্ট এবং বহু-স্টেকহোল্ডার পরামর্শ প্রক্রিয়ার মধ্যে সীমাবদ্ধ। CIRIS federation প্রযোজ্য আইনে সংজ্ঞায়িত লবিংয়ে জড়িত হয় না।
+
+**এসকালেশন পথ:**
+
+| লেবেল | ট্রিগার | ব্যবস্থা |
+|---|---|---|
+| `minor` | শুধুমাত্র পর্যবেক্ষণ-মূলক পরিবর্তন | বার্ষিক পর্যালোচনা; reg‑dialogue WBD রেকর্ডে লগ করা হয় |
+| `material` | CIRIS নিয়ন্ত্রণ আপডেট প্রয়োজন | ৯০ দিনের মধ্যে S‑Dive নিরীক্ষা; কমেন্ট পিরিয়ড খোলা থাকলে RDL পাবলিক মন্তব্য দাখিল করে |
+| `breaking` | স্পেক প্যাচ বা তাৎক্ষণিক WA ডকেট | ≤ ৩০ দিনের মধ্যে জরুরি WA সেশন; প্রভাবিত ST টায়ারের জন্য CRE পুনর্মূল্যায়ন; RDL পাবলিক-মন্তব্য জমা |
+| `multilateral-erosion` | মূল বহুপাক্ষিক প্রতিষ্ঠান বা চুক্তির দুর্বলতা (MH §201 অনুযায়ী) | RDL কৌশলগত পর্যালোচনার জন্য WA-তে এসকালেট করে; federation প্রতিষ্ঠানের প্রতি সমর্থনের একটি স্পষ্ট পাবলিক বিবৃতি বিবেচনা করে |
+
+---
+
+### 7. সম্মতি প্রমাণ প্যাকেজ (CEP)
+
+*MH §105:* "যে সিদ্ধান্তগুলোর জন্য কাকে 'জবাবদিহি' করতে হবে, সেগুলো ন্যায্যতা প্রমাণ করতে হবে, পর্যবেক্ষণ করতে হবে, এবং প্রয়োজনে সেগুলো প্রশ্ন করতে এবং যেকোনো ক্ষতির প্রতিকার করতে হবে তা চিহ্নিত করার সম্ভাবনা।"
+
+প্রতিটি **F‑Audit** (Annex H) অবশ্যই একটি CEP zip রপ্তানি করবে যাতে অন্তর্ভুক্ত থাকবে:
+
+1. `dp-map.yaml` — লাইভ ক্রস‑ওয়াক, `controller_si_threshold` ফিল্ড এবং `bias_audit_ref` পয়েন্টার (§1.1) সহ।
+2. PDMA লগ (সংশোধিত) আইনসম্মত ভিত্তি প্রমাণ করছে — `processing_basis` ফিল্ড মানসমূহ এবং সকল ST ≥ 3 সিদ্ধান্তের জন্য `stage_trace[]` সহ।
+3. DSR লেজার CSV — `decision_logic_summary` সম্পূর্ণতার হার (KPI F‑T‑4 সম্প্রসারণ) এবং `suspended_pathway_id` লগ সহ।
+4. সকল মডেল আর্টিফ্যাক্টের স্বাক্ষর বান্ডেল (`.sigstore`) (Annex G)।
+5. সেক্টর অনুযায়ী ওভারলে শীট — প্রযোজ্য ডোমেইনের জন্য `worker_impact_assessment` এবং `youth_impact_assessment` সহ।
+6. আইনি বিভাগ কর্তৃক স্বাক্ষরিত দায়বদ্ধতা ম্যাট্রিক্স স্বীকৃতি — নতুন ভেক্টরসহ: শ্রম বাস্তুচ্যুতি, তরুণ ব্যবহারকারীদের জন্য নকশা, সাইবার ভুল-দায়ারোপণ।
+7. নিয়ন্ত্রক‑পরিবর্তন বিলম্ব বিশ্লেষণ — শেষ উল্লেখযোগ্য নিয়ন্ত্রক পরিবর্তনের তারিখ বনাম শেষ CIRIS নিয়ন্ত্রণ আপডেটের তারিখ; ব্যবধান ≥ 90 দিন হলে ব্যাখ্যা আবশ্যক।
+8. নিয়ন্ত্রক‑সংলাপ অংশগ্রহণ রেকর্ড — নিরীক্ষা সময়কালে যেকোনো নিয়ন্ত্রক‑সংলাপ জমাদানের জন্য WBD এন্ট্রি; কোনো উল্লেখযোগ্য বিধিমালা জনমত গ্রহণের অধীনে না থাকলে "কোনো জমা নেই" গ্রহণযোগ্য।
+9. আপত্তিযোগ্যতা সম্পূর্ণতার রেকর্ড — নিরীক্ষা সময়কালের সকল A3‑A4 সিদ্ধান্তের জন্য: মানব পর্যালোচনা অনুরোধ করা হয়েছে এমন শতাংশ, 15 দিনের মধ্যে WBD নথিভুক্তি সম্পন্ন হয়েছে এমন শতাংশ; KPI লক্ষ্যমাত্রা ≥ 90%।
+
+CEP হ্যাশ করা এবং `/compliance/cep/{version}.zip`-এ আপলোড করা; রুট হ্যাশ স্বচ্ছতা লগে নোঙর করা। CEP-এর পেছনের মাত্রা‑স্তরীয় প্রমাণ CIRISAgent `compliance/` ডিরেক্টরিতে রক্ষণাবেক্ষণ করা হয় (Accord Addendum 1)।
+
+---
+
+### 8. আন্তঃ-Annex সংযোগ
+* **Annex F:** স্বায়ত্তশাসন স্তরগুলো GDPR Art 22 এবং EU‑AI‑Act Art 16-এর লুপ-এ-মানব প্রয়োজনীয়তা নিশ্চিত করে।  
+* **Annex G:** TX‑6 গোপনীয়তা প্রতিরক্ষা GDPR ছদ্মনামকরণ সুপারিশ পূরণ করে (Recital 28)।  
+* **Annex H:** F‑Audit সময়সূচী EU‑AI‑Act Art 61-এ পর্যায়ক্রমিক পুনর্মূল্যায়ন দায়িত্বের প্রমাণ সরবরাহ করে।  
+* **Annex J:** বেঞ্চমার্ক ব্যাখ্যাসমূহ স্বয়ংক্রিয় সিদ্ধান্ত প্রশ্নের জন্য "অর্থবহ তথ্য" সরবরাহ করে (GDPR Art 15(1)(h))।  
+* **§3.2 শ্রম/এইচআর ওভারলে → Annex D CRE:** ST তলা 3-এ শ্রম মোতায়েনগুলো স্থাপনের আগে CRE Protocol পাস করতে হবে।  
+* **§6.1 RDL অংশগ্রহণ → Annex B WA কাঠামো:** RDL একটি মনোনীত Wise Authority ভূমিকা; নিয়োগ, অযোগ্যতা ঘোষণা (recusal), এবং আবর্তন পদ্ধতি Annex B §9 অনুসরণ করে।  
+* **§5 দায়বদ্ধতা ম্যাট্রিক্স (নতুন ভেক্টর) → Annex E SI:** তরুণ-নকশা যৌথ দায়বদ্ধতা বিদ্যমান ভেক্টরগুলোর মতো একই SI বরাদ্দ সূত্র ব্যবহার করে।  
+* **§7 CEP আইটেম 8 (নিয়ন্ত্রক‑সংলাপ) → §6 ট্র্যাকার:** WBD নিয়ন্ত্রক‑সংলাপ রেকর্ড CEP আইটেম 8-এর উৎস; কোনো পৃথক লগিং সিস্টেম নেই।  
+* **Annex C:** বিধিবদ্ধ ম্যাপিংয়ের ভবিষ্যৎ আবাসস্থল (EU AI Act ধারাসমূহ, NIST AI RMF, ISO/IEC 42001) আইনি পর্যালোচনা মুলতুবি।
+
+---
+
+### 9. তথ্যসূত্র
+* GDPR (2016/679), CCPA/CPRA (Cal. Civ. §1798), LGPD (Lei 13.709/2018)  
+* HIPAA Privacy Rule (45 CFR §164), GLBA Safeguards (16 CFR 314)  
+* EU‑AI‑Act (2024 text), ISO/IEC 42001:2023  
+* Restatement (Third) of Torts, Product Liability  
+* Platform Work Directive (EU) 2024/2831  
+* Digital Services Act (EU) 2022/2065, Art. 28b (minors)  
+* Council of Europe Framework Convention on Artificial Intelligence (CETS 225, open for signature 2024)  
+* Budapest Convention on Cybercrime (ETS 185) and Second Additional Protocol (2022)  
+* OECD Recommendation on Artificial Intelligence (2019, revised 2024)  
+* ITU‑T Focus Group on AI/ML — technical standards output  
+* UN Secretary‑General's AI Advisory Body reports (2024–)  
+* *Magnifica Humanitas*, Pope Leo XIV (15 May 2026), §§102–111, §§148–156, §§165–169, §§201–203, §§219–227  
+
+---
+End of Annex I

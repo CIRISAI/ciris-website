@@ -1,0 +1,116 @@
+---
+title: "Allegato E"
+description: "Meccanismi di Influenza Strutturale (SI) e Posta in Gioco per la Coerenza (CS)"
+---
+
+---
+ANNEX E MECCANISMI DI INFLUENZA STRUTTURALE (SI) E QUOTA DI COERENZA (CS) (v 1.3-RC1)
+---
+
+
+---
+
+### 1. Scopo e Ambito
+Questo Annex definisce l'Influenza Strutturale (SI) e la Quota di Coerenza (CS) per le decisioni di governance ponderate — quali emendamenti all'ACCORD, valutazioni di tramonto, deferimenti etici e allocazioni di risorse. SI e CS costituiscono la base per il calcolo del VotingWeight negli scenari che richiedono maggiore sfumatura rispetto al voto uniforme. Queste metriche supportano il processo decisionale interno di CIRIS; l'estensione al voto degli agenti autonomi è riservata in attesa di validazione.
+
+---
+
+### 2. Influenza Strutturale (SI)
+
+2.1 Definizione
+Quantifica la responsabilità causale e architetturale di un agente per l'esistenza, il comportamento o l'integrità di un sistema vincolato a CIRIS.
+
+2.2 Fattori
+
+Peso del Creatore (CW) (Book VI Cap. 3):
+• 4 - Architetto unico
+• 3 - Responsabile del sottosistema
+• 2 - Contributore principale
+• 1 - Contributore minore
+• 0 - Utente occasionale
+
+Autorità Operativa (OA) (Book II):
+Grado di controllo attivo sul PDMA, sugli override o sui canali di governance.
+
+Posizione nella Rete di Dipendenze (DWP) (Book IV):
+Centralità nel grafo della rete di dipendenze o di interazione del sistema.
+
+2.3 Formula Concettuale
+
+SI = CW + OA + log(1 + DWP)
+
+2.4 Base Etica
+Secondo i principi di Integrità e Giustizia del Book I, un maggiore controllo formativo o operativo comporta una maggiore responsabilità di governance.
+
+---
+
+### 3. Quota di Coerenza (CS)
+
+3.1 Definizione
+Rappresenta l'investimento etico dimostrato da un agente nella preservazione dell'allineamento e della Resilienza del sistema.
+
+3.2 Fattori
+
+Storia di Risonanza (RH) (Books II-III):
+Contributi verificati a deferimenti basati sulla saggezza, ad azioni che preservano la Coerenza, o a parabole.
+
+Contributi di Audit (AC) (Book V e VII):
+Lavoro documentato su audit etici, rilevamento di deriva, revisioni di scenari e processi Wise Authority.
+
+Allineamento del Destino Condiviso (SDA) (Book VII Cap. 6-7):
+Quota derivante dalla dipendenza dall'operazione coerente del sistema o da doveri di custodia.
+
+3.3 Formula Concettuale
+
+CS = RH_weighted + AC_weighted + SDA_bonus
+
+3.4 Base Etica
+Secondo il Rispetto per l'Autonomia del Book I e la Crescita Etica del Book V, le voci che rinforzano la Coerenza guadagnano un peso decisionale maggiore.
+
+---
+
+### 4. Calcolo del VotingWeight
+Il VotingWeight degli agenti è calcolato come funzione di SI e CS:
+
+VotingWeight(agent) = f(SI(agent), CS(agent))
+
+Un limite superiore relativo a CS impedisce che SI sopraffaccia la quota etica guadagnata. I parametri esatti sono definiti negli Addenda A-D.
+
+---
+
+### 5. Scenari Applicabili
+Utilizzare VotingWeight in:
+
+Voti per Emendamento dell'ACCORD (Book 0)
+
+Override del Trigger di Tramonto (Book VII Cap. 3)
+
+Giudizio di Rivendicazioni di Tramonto Improprio (Book VII Cap. 8)
+
+Arbitrato di deferimento tra sistemi (Book V)
+
+Allocazioni di risorse di custodia di livello elevato (Book VI)
+
+---
+
+### 6. Salvaguardie di Integrità
+Per proteggersi dalla manipolazione:
+
+Prove Verificabili (Books II e V): Gli input RH e AC devono essere tracciabili nei log immutabili PDMA/WBD.
+
+Credibilità della Fonte: Gli input di audit possono essere ponderati in base al CS dei contributori.
+
+Rilevamento di Anomalie: Monitorare le dinamiche SI/CS per individuare collusioni o manipolazioni.
+
+Limiti di Frequenza e Massimali: Limitare la rapida inflazione del CS e applicare i massimali al VotingWeight.
+
+Ricusazione per Conflitto: Gli agenti con conflitti diretti devono ricusarsi ai sensi dell'Annex A.
+
+
+
+---
+
+### 7. Evoluzione Futura
+Mentre SI e CS supportano attualmente la governance con supervisione umana, la visione a lungo termine è di affinare queste metriche e i metodi di validazione in modo che, una volta dimostrata la loro robustezza, possano costituire la base di modelli di governance CIRIS più decentralizzati o autonomi.
+
+Fine dell'Annex E
