@@ -15,8 +15,19 @@ import {
 
 export * from "./shared";
 
-const README_URL = `${REGISTRY_RAW}/${CEG_README_PATH}`;
-const NAMESPACE_URL = `${REGISTRY_RAW}/${CEG_NAMESPACE_PATH}`;
+// Next's fetch Data Cache (force-cache below) persists across builds, so the
+// first cached registry response gets pinned forever — that is how the version
+// badge silently froze on an old cut. Bust the cache key once per build (the
+// deploy's commit SHA in CI, build time locally) so every deploy re-fetches the
+// registry's current main. The buster is a query param raw.githubusercontent
+// ignores, so the bytes are unchanged.
+const BUILD_REV =
+  process.env.CF_PAGES_COMMIT_SHA ||
+  process.env.GITHUB_SHA ||
+  process.env.VERCEL_GIT_COMMIT_SHA ||
+  String(Date.now());
+const README_URL = `${REGISTRY_RAW}/${CEG_README_PATH}?cb=${BUILD_REV}`;
+const NAMESPACE_URL = `${REGISTRY_RAW}/${CEG_NAMESPACE_PATH}?cb=${BUILD_REV}`;
 
 // CEG 0.1 §5 namespace mapping. §5 lives in its own file (05_namespace.md)
 // as of the directory-based 18-file layout. Headings are ## §5.x (top-level
@@ -274,7 +285,7 @@ async function fetchCommitSha(): Promise<{
   short: string;
   full: string;
 }> {
-  const url = `https://api.github.com/repos/CIRISAI/CIRISRegistry/commits?path=${encodeURIComponent(CEG_DIR)}&per_page=1`;
+  const url = `https://api.github.com/repos/CIRISAI/CIRISRegistry/commits?path=${encodeURIComponent(CEG_DIR)}&per_page=1&cb=${BUILD_REV}`;
   try {
     const resp = await fetch(url, {
       cache: "force-cache",
