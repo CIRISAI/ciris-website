@@ -1790,5 +1790,51 @@
     "claimH2": "Tunachokidai, na tunachokidai sivyo.",
     "claimP1": "Hatujamaliza usalama wa AI. Tumejenga kipande kimoja cha jibu moja, na tunakijaribu wazi.",
     "claimP2Html": "Timu za nje bado hazijakagua kazi yetu. Tunasema hivyo wazi. Nadharia kamili na hesabu zinaishi katika <a href=\"/papers\" class=\"text-brand-primary hover:underline\">makala zetu nne</a>. Msimbo uko wazi. Tukikosea, njia ya kuonyesha hivyo iko wazi pia. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Tazama hali ya utafiti wa sasa.</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · hutamkwa kama “soup”",
+    "headline": "Mtandao bora zaidi, bila makampuni makubwa ya teknolojia na vituo vikubwa vya data.",
+    "intro1": "CEWP ni mtandao unaopita moja kwa moja kati ya vifaa ulivyo navyo tayari, badala ya kupita katika takriban maghala makubwa elfu kumi yanayoendeshwa na makampuni matano. Watu, mawakala wa AI, na mashirika husaini machapisho yao wenyewe, na mtandao hupima saini hizo ili kubaini cha kuamini.",
+    "intro2": "Sehemu ya kati ya leo hugharimu takriban megatani 175 za CO2 kwa mwaka na hujilimbikiza data ya kila mtu katika makampuni matano. CEWP huendeshwa kwenye vifaa ulivyo navyo tayari, haitangazi kamwe maudhui yako ya ndani kwa mtandao wote, na hufanya kila dai muhimu kuwa kitu cha waya kilichosainiwa unachoweza kusoma.",
+    "watchLabel": "Tazama maelezo ya dakika 7",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "Pata CIRIS kwenye App Store",
+    "ctaGooglePlay": "Pata CIRIS kwenye Google Play",
+    "shippingNote": "<b>CIRIS 2.9.x inapatikana sasa.</b> Iweke leo kwenye iPhone au Android. Seti kamili ya vipengele vya CEWP itatolewa kupitia <b>June and July 2026</b>.",
+    "deepTechTitle": "Unataka teknolojia ya kina?",
+    "deepTechBody": "Kiigaji shirikishi, hesabu za uaminifu za nishati kwa daraja la kifaa, modeli ya unyanyasaji kwa kila kundi, ulinganisho dhidi ya IPFS / Bluesky / Solid / Nostr / Filecoin, hifadhi saba huria.",
+    "ctaDetails": "Ona kiigaji na hesabu →",
+    "ctaRepo": "Hifadhi ya CEWP kwenye GitHub"
+  },
+  "grammar": {
+    "releasedLabel": "imetolewa",
+    "prefixFamilies": "familia za viambishi awali",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "Ona nani alisema. Ona nani anakubali. Amua mwenyewe.",
+    "intro": "Dunia inasonga kwa kasi kuliko wengi wetu wanavyoweza kuhakiki ukweli. Vyanzo vinapingana. Mawakala husema bila kusaini. Marekebisho mara chache hupata asili. CEG ni muundo mdogo wa pamoja unaoweka saini kwenye kila dai, ukiwa na njia unayoweza kufuata, ili usome nani anasema nini, nani amepinga, na nini kilibadilika, na ufanye uamuzi wako mwenyewe bila kukata tamaa au kujisalimisha kwa chanzo chochote kimoja.",
+    "pdfReader": "Soma toleo la kibinadamu (PDF)",
+    "pdfFull": "Maelezo kamili (PDF)",
+    "pdfNoteSuffix": "imeondolewa uhariri kwa ajili ya usomaji wa kibinadamu",
+    "whatIsTitle": "Hii ni nini",
+    "whatIsBody": "Kila dai husafiri katika bahasha ndogo iliyosainiwa: nani alilifanya, linahusu nini, wanajiamini kiasi gani, wanataja ushahidi gani, lilifanywa lini. Watu wengine, mashirika, na mawakala wa AI huongeza bahasha kuzunguka, wakikubali, wakikataa, wakirekebisha, wakibadilisha. Njia inasomeka mwanzo hadi mwisho.",
+    "whyTitle": "Kwa nini tuliifanya",
+    "whyBody": "Imani katika “ukweli ni nini” inavunjika kwa sababu msingi wa chini haupo. Bila muundo wa pamoja wa madai, kila sauti hubuni yake, njia hazishonani pamoja, na njia pekee ya kukabiliana ni kuchagua upande. CEG ni sehemu ndogo, ya kati ya kawaida inayoruhusu sauti nyingi kusomana na kumruhusu msomaji kujenga uamuzi wake mwenyewe.",
+    "comparableTitle": "Kinachofanana",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, hisia ile ile, lakini upeo finyu zaidi",
+      "<strong>W3C Verifiable Credentials</strong>, sherehe nzito zaidi, hakuna hadithi ya muundo",
+      "<strong>Community Notes</strong>, njia zinazosomeka, jukwaa moja",
+      "<strong>Sigstore / SLSA</strong>, jamaa wa msururu wa usambazaji wa msimbo; CEG huujumlisha umbo"
+    ],
+    "doTitle1": "Ona nani alisema",
+    "doBody1": "Kila dai hubeba saini, tarehe, linahusu nini, na limejengwa juu ya nini. Hakuna madai yasiyo na jina yanayopotea katika mlisho; hakuna utambulisho unaopotea kwa picha ya skrini.",
+    "doTitle2": "Ona nani mwingine alichangia",
+    "doBody2": "Wasainishaji wengine huongeza bahasha zao wenyewe kuzunguka dai, wakikubali, wakikataa, wakirekebisha, wakibadilisha. Unaona kwaya nzima na vielelezo nyuma ya kila sauti, si tu yule aliyepiga kelele zaidi.",
+    "doTitle3": "Amua mwenyewe",
+    "doBody3": "Imani si kitu ambacho mfumo hukukabidhi. Wewe huchagua sauti unazozipima, kwa uzito gani, na juu ya nini. Muundo ni ule ule kwa kila mtu; uamuzi ni wako.",
+    "deepTitle": "Unataka teknolojia ya kina?",
+    "deepBody": "Kisomaji kamili cha maelezo, kinachoonyeshwa moja kwa moja kutoka kwa rejista: primitivi za 1+4, familia na sehemu za bahasha, sera za muundo, nafasi ya majina huria, mfululizo wa matoleo, na kichunguzi shirikishi cha uthibitisho.",
+    "ctaSpecReader": "Fungua kisomaji cha maelezo →",
+    "ctaExplore": "Jenga mnyororo kwenye kivinjari →"
   }
 }

@@ -1790,5 +1790,51 @@
     "claimH2": "Ohun tí a sọ, àti ohun tí a kò sọ.",
     "claimP1": "A kò ti ṣe ìdápadà ìsẹ̀lẹ̀ AI. A ti kọ́ apá kan ìdáhùn kan, a sì ń dán an wò ní gbangba.",
     "claimP2Html": "Àwọn ẹgbẹ́ ode oni kò ti ṣàyẹ̀wò iṣẹ́ wa. A sọ ìyẹn ní gbangba. Ìmọ̀ ọna pípé àti ìṣirò wà nínú àwọn <a href=\"/papers\" class=\"text-brand-primary hover:underline\">ìwé mẹ́rin</a> wa. Kóòdù náà ṣí sílẹ̀. Bí a bá jẹ́ àṣìṣe, ọ̀nà fífi hàn bẹ́ẹ̀ wà ní gbangba pẹ̀lú. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Wo ipò ìwádìí lọwọlọwọ.</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · a n pe e bi “soup”",
+    "headline": "Intaneti to dara ju, lai si awon ile-ise imo ero nla ati awon ile-isise data nla.",
+    "intro1": "CEWP ni intaneti ti a n da lo taara laarin awon ero ti o ti ni tele, dipo ki o koja ninu nnkan bi egberun mewa ile itoju nla ti awon ile-ise marun n sakoso. Awon eniyan, awon asoju AI, ati awon ajo n fi owo si awon ifiranse won, hanyar n won awon ifowosi yen lati mo ohun ti yoo gbekele.",
+    "intro2": "Alalaaarin oni n na nnkan bi 175 megatons ti CO2 ni odoodun o si n ko data gbogbo eniyan jo sinu ile-ise marun. CEWP n sise lori ero ti o ti ni tele, ko ni i polowo akoonu agbegbe re fun iyoku nettiwoki rara, o si n so gbogbo ariyanjiyan pataki di nnkan to ni ifowosi ti o le ka.",
+    "watchLabel": "Wo alaye iseju 7-minute",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "Gba CIRIS lori App Store",
+    "ctaGooglePlay": "Gba CIRIS lori Google Play",
+    "shippingNote": "<b>CIRIS 2.9.x wa bayi.</b> Fi sori ero loni lori iPhone tabi Android. Gbogbo eto ise CEWP ni kikun yoo jade ni akoko <b>June and July 2026</b>.",
+    "deepTechTitle": "Se o fe imo ero ti o jinle?",
+    "deepTechBody": "Ero afarawe ibanisoro, isiro agbara olododo nipa iru ero, awoṣe ilokulo fun ipele kookan, ifiwera pelu IPFS / Bluesky / Solid / Nostr / Filecoin, ati awon ibi ipamo meje ti o sii.",
+    "ctaDetails": "Wo ero afarawe ati isiro naa →",
+    "ctaRepo": "Ibi ipamo CEWP lori GitHub"
+  },
+  "grammar": {
+    "releasedLabel": "ti tu sile",
+    "prefixFamilies": "awon idile ifaaju",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "Wo eni to so o. Wo eni to gba. Pinnu fun ara re.",
+    "intro": "Aye n lo ni iyara ju bi opolopo wa se le se ayewo otito re. Awon orisun n tako ara won. Awon asoju n soro lai fowosi. Awon atunse koni igba pe won n ba ti akoko ba. CEG je apewon kekere ti a n pin ti o fi ifowosi si gbogbo ariyanjiyan, pelu ona ti o le tele, ki o le ka eni to so kini, eni to ti tako, ati ohun to yipada, ki o si se ipinnu tire lai juwo tabi tepa fun orisun kanṣoṣo kankan.",
+    "pdfReader": "Ka atejade fun eniyan (PDF)",
+    "pdfFull": "Apejuwe pipe (PDF)",
+    "pdfNoteSuffix": "ti a yo okowe kuro, fun kika eniyan",
+    "whatIsTitle": "Kini eyi je",
+    "whatIsBody": "Gbogbo ariyanjiyan n rin irin-ajo ninu apoowe kekere ti a fowosi: eni to se e, ohun ti o je nipa re, bi won se ni idaniloju to, eri wo ni won toka si, igba ti a se e. Awon eniyan miiran, awon ajo, ati awon asoju AI n fi awon apoowe kun ni ayika re, ti won n gba, ti won n tako, ti won n tunse, ti won n ropo. A le ka ona naa lati ibere de opin.",
+    "whyTitle": "Idi ti a fi se e",
+    "whyBody": "Igbekele ninu “ohun to je otito” n baje nitori ipile ti o wa labe re ti sonu. Lai si apewon ariyanjiyan ti a n pin, ohun kookan n da tire sile, awon ona ko le so ara won po, ona kanṣoṣo lati ba a doju ni lati yan ialaye kan. CEG ni aarin kekere, ti o rorun ti o n je ki ohun pupo ka ara won ti o si n je ki oluka ko idajo tire.",
+    "comparableTitle": "Ohun ti o le fiwera",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, irufe imo kanna, sugbon pelu agbegbe to kere pupo",
+      "<strong>W3C Verifiable Credentials</strong>, ayeye to wuwo, lai si itan idapo",
+      "<strong>Community Notes</strong>, awon ona to seeka, pepele kanṣoṣo",
+      "<strong>Sigstore / SLSA</strong>, awon ibatan pq-ipese koodu; CEG n fe apere naa gboro"
+    ],
+    "doTitle1": "Wo eni to so o",
+    "doBody1": "Gbogbo ariyanjiyan ni ifowosi, ojo, ohun ti o je nipa re, ati ohun ti o gbele. Ko si awon ariyanjiyan alailorukọ ti o sonu ninu feed; ko si idamo ti o sonu nitori aworan ifihan.",
+    "doTitle2": "Wo eni miiran to da ohun re sile",
+    "doBody2": "Awon olufowosi miiran n fi apoowe tiwon kun ni ayika ariyanjiyan naa, ti won n gba, ti won n tako, ti won n tunse, ti won n ropo. O ri gbogbo ijoọ ati eri ti o wa leyin ohun kookan, kii se eni to pariwo julo nikan.",
+    "doTitle3": "Pinnu fun ara re",
+    "doBody3": "Igbekele kii se nnkan ti eto fi le e lowo. Iwo ni o yan awon ohun ti o won, iwon melo ni, ati lori kini. Apewon naa je kanna fun gbogbo eniyan; idajo ni tire.",
+    "deepTitle": "Se o fe imo ero ti o jinle?",
+    "deepBody": "Oluka apejuwe pipe, ti a se afihan re laaye lati inu ibi iforukosile: awon ipilese 1+4, awon idile ati awon aaye apoowe, awon ilana idapo, aaye oruko ti o sii, isaaju awon eya, ati aṣawari ifowosi ibanisoro.",
+    "ctaSpecReader": "Ṣii oluka apejuwe →",
+    "ctaExplore": "Ko pq kan ninu aṣawakiri →"
   }
 }

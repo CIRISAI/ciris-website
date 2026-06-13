@@ -1790,5 +1790,51 @@
     "claimH2": "Ne iddia ediyoruz ve ne etmiyoruz.",
     "claimP1": "Yapay zeka güvenliğini çözmedik. Bir yanıtın bir parçasını inşa ettik ve açık biçimde test ediyoruz.",
     "claimP2Html": "Dış ekipler çalışmamızı henüz denetlemedi. Bunu açıkça söylüyoruz. Tam teori ve matematik <a href=\"/papers\" class=\"text-brand-primary hover:underline\">dört makalede</a> yer alıyor. Kod açık. Yanılıyorsak bunu göstermenin yolu da açıkta. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Mevcut araştırma durumuna bakın.</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · İngilizce “soup” (çorba) gibi okunur",
+    "headline": "Büyük teknoloji şirketleri ve devasa veri merkezleri olmadan daha iyi bir internet.",
+    "intro1": "CEWP, beş şirketin işlettiği yaklaşık on bin dev depo üzerinden geçmek yerine, zaten sahip olduğunuz cihazlar arasında doğrudan yönlendirilen internettir. İnsanlar, yapay zeka ajanları ve kuruluşlar kendi gönderilerini imzalar, ve ağ kime güveneceğini bulmak için bu imzaları tartar.",
+    "intro2": "Bugünün aracısı yılda yaklaşık 175 megatons CO2'ye mal oluyor ve herkesin verisini beş şirkette topluyor. CEWP zaten sahip olduğunuz donanımda çalışır, yerel içeriğinizi asla ağın geri kalanına duyurmaz, ve taşıyıcı her iddiayı okuyabileceğiniz imzalı bir veri parçasına dönüştürür.",
+    "watchLabel": "7-minute açıklayıcı videoyu izleyin",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "CIRIS'i App Store'dan edinin",
+    "ctaGooglePlay": "CIRIS'i Google Play'den edinin",
+    "shippingNote": "<b>CIRIS 2.9.x şimdi yayında.</b> Bugün iPhone veya Android'e kurun. Tüm CEWP özellik seti <b>June and July 2026</b> boyunca devreye giriyor.",
+    "deepTechTitle": "Derin teknik ayrıntıları mı istiyorsunuz?",
+    "deepTechBody": "Etkileşimli simülatör, cihaz sınıfına göre dürüst enerji hesapları, her grup için kötüye kullanım modeli, IPFS / Bluesky / Solid / Nostr / Filecoin ile karşılaştırmalar, yedi açık depo.",
+    "ctaDetails": "Simülatörü ve hesapları görün →",
+    "ctaRepo": "GitHub'daki CEWP deposu"
+  },
+  "grammar": {
+    "releasedLabel": "yayınlandı",
+    "prefixFamilies": "önek aileleri",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "Kimin söylediğini görün. Kimin katıldığını görün. Kendiniz karar verin.",
+    "intro": "Dünya, çoğumuzun gerçekleri doğrulayabileceğinden daha hızlı ilerliyor. Kaynaklar çelişiyor. Ajanlar imzasız konuşuyor. Düzeltmeler nadiren orijinaline yetişiyor. CEG, her iddiaya bir imza koyan küçük ortak bir biçimdir, takip edebileceğiniz bir iz ile birlikte, böylece kimin ne söylediğini, kimin karşı çıktığını ve neyin değiştiğini okuyabilir, ve tek bir kaynağa boyun eğmeden ya da pes etmeden kendi kararınızı verebilirsiniz.",
+    "pdfReader": "İnsanlar için sürümü okuyun (PDF)",
+    "pdfFull": "Tam teknik belge (PDF)",
+    "pdfNoteSuffix": "insan okuması için yorumlardan arındırılmış",
+    "whatIsTitle": "Bu nedir",
+    "whatIsBody": "Her iddia küçük, imzalı bir zarf içinde yolculuk eder: kim yaptı, neyle ilgili, ne kadar emin, hangi kanıtı gösteriyor, ne zaman yapıldı. Başka insanlar, kuruluşlar ve yapay zeka ajanları bunun etrafına zarflar ekler, katılarak, karşı çıkarak, düzelterek, yerine geçerek. İz baştan sona okunabilir.",
+    "whyTitle": "Bunu neden yaptık",
+    "whyBody": "“Neyin doğru olduğuna” olan güven çöküyor çünkü altındaki temel eksik. Ortak bir iddia biçimi olmadan, her ses kendininkini icat ediyor, izler birbirine dikilmiyor, ve baş etmenin tek yolu bir taraf seçmek oluyor. CEG, birçok sesin birbirini okumasına ve okuyucunun kendi yargısını oluşturmasına imkan veren küçük, sade bir temeldir.",
+    "comparableTitle": "Neyle kıyaslanabilir",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, aynı içgüdü, çok daha dar kapsam",
+      "<strong>W3C Verifiable Credentials</strong>, daha ağır tören, kompozisyon hikayesi yok",
+      "<strong>Community Notes</strong>, okunabilir izler, tek platform",
+      "<strong>Sigstore / SLSA</strong>, kod tedarik zinciri kuzenleri; CEG bu biçimi genelleştirir"
+    ],
+    "doTitle1": "Kimin söylediğini görün",
+    "doBody1": "Her iddia bir imza, bir tarih, neyle ilgili olduğunu ve neye dayandığını taşır. Akışta kaybolan anonim iddialar yok; ekran görüntüsüne kurban giden atıf yok.",
+    "doTitle2": "Başka kimin görüş bildirdiğini görün",
+    "doBody2": "Diğer imzacılar iddianın etrafına kendi zarflarını ekler, katılarak, karşı çıkarak, düzelterek, yerine geçerek. En yüksek sesle bağıranı değil, tüm koroyu ve her sesin arkasındaki kanıtları görürsünüz.",
+    "doTitle3": "Kendiniz karar verin",
+    "doBody3": "Güven, sistemin size verdiği bir şey değildir. Hangi sesleri tartacağınızı, ne kadar tartacağınızı ve neye göre tartacağınızı siz seçersiniz. Biçim herkes için aynıdır; yargı sizindir.",
+    "deepTitle": "Derin teknik ayrıntıları mı istiyorsunuz?",
+    "deepBody": "Kayıttan canlı olarak oluşturulan tam teknik belge okuyucusu: 1+4 ilkel öğeleri, aileler ve zarf alanları, kompozisyon politikaları, açık ad alanı, sürüm soyağacı ve etkileşimli bir tasdik gezgini.",
+    "ctaSpecReader": "Teknik belge okuyucusunu açın →",
+    "ctaExplore": "Tarayıcıda bir zincir oluşturun →"
   }
 }

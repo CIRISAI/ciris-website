@@ -1790,5 +1790,51 @@
     "claimH2": "Lo que afirmamos, y lo que no.",
     "claimP1": "No hemos resuelto la seguridad de la IA. Hemos construido una pieza de una respuesta posible, y la estamos probando de forma abierta.",
     "claimP2Html": "Equipos externos aún no han verificado nuestro trabajo. Lo decimos claramente. La teoría completa y las matemáticas están en nuestros <a href=\"/papers\" class=\"text-brand-primary hover:underline\">cuatro artículos</a>. El código es abierto. Si estamos equivocados, la forma de demostrarlo también es pública. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Ver el estado actual de la investigación.</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · se pronuncia como “soup” (sopa en inglés)",
+    "headline": "Un internet mejor, sin las grandes tecnológicas ni centros de datos enormes.",
+    "intro1": "CEWP es el internet enrutado directamente entre los dispositivos que ya tienes, en lugar de pasar por unas diez mil bodegas gigantes que manejan cinco empresas. Las personas, los agentes de IA y las organizaciones firman sus propias publicaciones, y la red sopesa esas firmas para decidir en qué confiar.",
+    "intro2": "El intermediario de hoy cuesta unos 175 megatons de CO2 al año y concentra los datos de todos en cinco empresas. CEWP funciona con el hardware que ya tienes, nunca anuncia tu contenido local al resto de la red, y convierte cada afirmación importante en un artefacto firmado que puedes leer.",
+    "watchLabel": "Mira la explicación de 7-minute",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "Consigue CIRIS en la App Store",
+    "ctaGooglePlay": "Consigue CIRIS en Google Play",
+    "shippingNote": "<b>CIRIS 2.9.x ya está disponible.</b> Instálalo hoy en iPhone o Android. El conjunto completo de funciones de CEWP se irá lanzando durante <b>June and July 2026</b>.",
+    "deepTechTitle": "¿Quieres la parte técnica a fondo?",
+    "deepTechBody": "El simulador interactivo, las cuentas honestas de energía por tipo de dispositivo, el modelo de abuso por grupo, las comparaciones contra IPFS / Bluesky / Solid / Nostr / Filecoin, los siete repositorios abiertos.",
+    "ctaDetails": "Ve el simulador y las cuentas →",
+    "ctaRepo": "Repositorio de CEWP en GitHub"
+  },
+  "grammar": {
+    "releasedLabel": "publicado",
+    "prefixFamilies": "familias de prefijos",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "Ve quién lo dijo. Ve quién está de acuerdo. Decide por ti mismo.",
+    "intro": "El mundo se mueve más rápido de lo que la mayoría podemos verificar. Las fuentes se contradicen. Los agentes hablan sin firmar. Las correcciones casi nunca alcanzan al original. CEG es un pequeño formato compartido que pone una firma en cada afirmación, con un rastro que puedes seguir, para que leas quién dice qué, quién lo ha rebatido y qué cambió, y tomes tu propia decisión sin rendirte ni ceder ante ninguna fuente.",
+    "pdfReader": "Lee la edición para personas (PDF)",
+    "pdfFull": "Especificación completa (PDF)",
+    "pdfNoteSuffix": "sin editorializar, para lectura humana",
+    "whatIsTitle": "Qué es esto",
+    "whatIsBody": "Cada afirmación viaja en un pequeño sobre firmado: quién la hizo, de qué trata, qué tan seguro está, qué evidencia cita, cuándo se hizo. Otras personas, organizaciones y agentes de IA añaden sobres alrededor, de acuerdo, en desacuerdo, corrigiendo, reemplazando. El rastro se puede leer de principio a fin.",
+    "whyTitle": "Por qué lo hicimos",
+    "whyBody": "La confianza en “lo que es cierto” se está rompiendo porque falta la base que la sostiene. Sin un formato compartido para las afirmaciones, cada voz inventa el suyo, los rastros no se unen, y la única forma de manejarlo es elegir un bando. CEG es ese punto medio pequeño y austero que deja que muchas voces se lean entre sí y deja que el lector forme su propio veredicto.",
+    "comparableTitle": "Qué es comparable",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, el mismo instinto, con un alcance mucho más estrecho",
+      "<strong>W3C Verifiable Credentials</strong>, más ceremonia, sin historia de composición",
+      "<strong>Community Notes</strong>, rastros legibles, una sola plataforma",
+      "<strong>Sigstore / SLSA</strong>, primos de la cadena de suministro de código; CEG generaliza la forma"
+    ],
+    "doTitle1": "Ve quién lo dijo",
+    "doBody1": "Cada afirmación lleva una firma, una fecha, de qué trata y en qué se basa. Nada de afirmaciones anónimas que se pierden en el feed; nada de atribuciones perdidas en una captura de pantalla.",
+    "doTitle2": "Ve quién más opinó",
+    "doBody2": "Otros firmantes añaden sus propios sobres alrededor de la afirmación, de acuerdo, en desacuerdo, corrigiendo, reemplazando. Ves todo el coro y los recibos detrás de cada voz, no solo a quien gritó más fuerte.",
+    "doTitle3": "Decide por ti mismo",
+    "doBody3": "La confianza no es algo que el sistema te entregue. Tú eliges qué voces sopesas, con cuánto peso y sobre qué. El formato es el mismo para todos; el veredicto es tuyo.",
+    "deepTitle": "¿Quieres la parte técnica a fondo?",
+    "deepBody": "El lector completo de la especificación, renderizado en vivo desde el registro: las primitivas 1+4, las familias y los campos del sobre, las políticas de composición, el espacio de nombres abierto, el linaje de versiones, y un explorador interactivo de atestaciones.",
+    "ctaSpecReader": "Abre el lector de la especificación →",
+    "ctaExplore": "Construye una cadena en el navegador →"
   }
 }

@@ -1790,5 +1790,51 @@
     "claimH2": "Ce que nous affirmons, et ce que nous n'affirmons pas.",
     "claimP1": "Nous n'avons pas résolu la sûreté de l'IA. Nous avons construit une pièce d'une réponse, et nous la testons ouvertement.",
     "claimP2Html": "Des équipes extérieures n'ont pas encore vérifié notre travail. Nous le disons clairement. La théorie complète et les mathématiques se trouvent dans nos <a href=\"/papers\" class=\"text-brand-primary hover:underline\">quatre articles</a>. Le code est ouvert. Si nous avons tort, la façon de le montrer l'est aussi. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Voir l'état actuel de la recherche.</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · prononcé comme « soup »",
+    "headline": "Un meilleur internet, sans les géants de la tech ni les centres de données géants.",
+    "intro1": "CEWP, c'est l'internet acheminé directement entre les appareils que vous possédez déjà, au lieu de passer par environ dix mille entrepôts géants gérés par cinq entreprises. Les personnes, les agents IA et les organisations signent leurs propres publications, et le réseau pèse ces signatures pour déterminer ce qui mérite confiance.",
+    "intro2": "L'intermédiaire actuel coûte environ 175 megatons de CO2 par an et concentre les données de tout le monde dans cinq entreprises. CEWP fonctionne sur le matériel que vous avez déjà, ne diffuse jamais votre contenu local au reste du réseau, et fait de chaque affirmation porteuse un artefact wire signé que vous pouvez lire.",
+    "watchLabel": "Regardez l'explication de 7-minute",
+    "videoCaption": "« Dismantling the Hyperscaler » · YouTube",
+    "ctaAppStore": "Obtenez CIRIS sur l'App Store",
+    "ctaGooglePlay": "Obtenez CIRIS sur Google Play",
+    "shippingNote": "<b>CIRIS 2.9.x est disponible dès maintenant.</b> Installez-le aujourd'hui sur iPhone ou Android. L'ensemble complet des fonctionnalités CEWP sera déployé au cours de <b>June and July 2026</b>.",
+    "deepTechTitle": "Vous voulez la technique en profondeur ?",
+    "deepTechBody": "Le simulateur interactif, le calcul énergétique honnête par classe d'appareil, le modèle d'abus par cohorte, les comparaisons avec IPFS / Bluesky / Solid / Nostr / Filecoin, les sept dépôts ouverts.",
+    "ctaDetails": "Voir le simulateur et le calcul →",
+    "ctaRepo": "Dépôt CEWP sur GitHub"
+  },
+  "grammar": {
+    "releasedLabel": "publié",
+    "prefixFamilies": "familles de préfixes",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "Voyez qui l'a dit. Voyez qui est d'accord. Décidez par vous-même.",
+    "intro": "Le monde avance plus vite que la plupart d'entre nous ne peuvent vérifier les faits. Les sources se contredisent. Les agents parlent sans signer. Les corrections rattrapent rarement l'original. CEG est un petit format partagé qui appose une signature sur chaque affirmation, avec une trace que vous pouvez suivre, pour que vous lisiez qui dit quoi, qui a contesté, et ce qui a changé, et que vous formiez votre propre jugement sans renoncer ni vous soumettre à une seule source.",
+    "pdfReader": "Lire l'édition pour humains (PDF)",
+    "pdfFull": "Spécification complète (PDF)",
+    "pdfNoteSuffix": "déséditorialisé pour une lecture humaine",
+    "whatIsTitle": "De quoi il s'agit",
+    "whatIsBody": "Chaque affirmation voyage dans une petite enveloppe signée : qui l'a faite, sur quoi elle porte, à quel point on est sûr, quelles preuves sont citées, quand elle a été faite. D'autres personnes, organisations et agents IA ajoutent des enveloppes autour, en approuvant, en contestant, en corrigeant, en remplaçant. La trace est lisible d'un bout à l'autre.",
+    "whyTitle": "Pourquoi nous l'avons fait",
+    "whyBody": "La confiance dans « ce qui est vrai » s'effondre parce que la base qui la soutient manque. Sans un format d'affirmation partagé, chaque voix invente le sien, les traces ne se rejoignent pas, et la seule façon de s'en sortir est de choisir un camp. CEG est le petit milieu sobre qui permet à de nombreuses voix de se lire entre elles et permet à un lecteur de construire son propre verdict.",
+    "comparableTitle": "Ce qui est comparable",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, le même instinct, une portée bien plus étroite",
+      "<strong>W3C Verifiable Credentials</strong>, un cérémonial plus lourd, sans logique de composition",
+      "<strong>Community Notes</strong>, des traces lisibles, une seule plateforme",
+      "<strong>Sigstore / SLSA</strong>, cousins de la chaîne d'approvisionnement du code ; CEG en généralise la forme"
+    ],
+    "doTitle1": "Voyez qui l'a dit",
+    "doBody1": "Chaque affirmation porte une signature, une date, son sujet, et ce sur quoi elle repose. Plus d'assertions anonymes perdues dans le fil ; plus d'attribution perdue à cause d'une capture d'écran.",
+    "doTitle2": "Voyez qui d'autre s'est exprimé",
+    "doBody2": "D'autres signataires ajoutent leurs propres enveloppes autour de l'affirmation, en approuvant, en contestant, en corrigeant, en remplaçant. Vous voyez tout le chœur et les preuves derrière chaque voix, pas seulement celle qui a crié le plus fort.",
+    "doTitle3": "Décidez par vous-même",
+    "doBody3": "La confiance n'est pas quelque chose que le système vous remet. Vous choisissez les voix que vous pesez, à quel point, et sur quoi. Le format est le même pour tous ; le verdict est le vôtre.",
+    "deepTitle": "Vous voulez la technique en profondeur ?",
+    "deepBody": "Le lecteur de spécification complet, rendu en direct depuis le registre : les primitives 1+4, les familles et les champs d'enveloppe, les politiques de composition, l'espace de noms ouvert, la lignée des versions, et un explorateur d'attestation interactif.",
+    "ctaSpecReader": "Ouvrir le lecteur de spécification →",
+    "ctaExplore": "Construire une chaîne dans le navigateur →"
   }
 }

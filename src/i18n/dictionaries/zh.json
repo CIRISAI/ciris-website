@@ -1790,5 +1790,51 @@
     "claimH2": "我们主张什么，不主张什么。",
     "claimP1": "我们并未解决 AI 安全问题。我们建立了一个答案的一个片段，并在公开环境中测试它。",
     "claimP2Html": "外部团队尚未核验我们的工作。我们坦率地说明这一点。完整理论和数学推导在我们的 <a href=\"/papers\" class=\"text-brand-primary hover:underline\">四篇论文</a>中。代码是开放的。如果我们有误，指出的方式也同样是公开的。<a href=\"/research-status\" class=\"text-brand-primary hover:underline\">查看当前研究现状。</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · 读音像英文 “soup”（汤）",
+    "headline": "更好的互联网，不靠大型科技公司，也不靠庞大的数据中心。",
+    "intro1": "CEWP 让互联网直接在你已经拥有的设备之间传输，而不是经过由五家公司运营的大约一万座巨型仓库。人、AI 智能体和机构都给自己的内容签名，网络再根据这些签名来判断该信任什么。",
+    "intro2": "今天的中间环节每年大约排放 175 megatons 的 CO2，还把所有人的数据集中在五家公司手里。CEWP 运行在你已经拥有的硬件上，绝不把你本地的内容推送给网络上的其他人，并且把每一条关键声明都做成你能读懂的、带签名的传输记录。",
+    "watchLabel": "观看 7-minute 讲解视频",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "在 App Store 获取 CIRIS",
+    "ctaGooglePlay": "在 Google Play 获取 CIRIS",
+    "shippingNote": "<b>CIRIS 2.9.x 现已发布。</b> 今天就能在 iPhone 或 Android 上安装。完整的 CEWP 功能将在 <b>June and July 2026</b> 陆续推出。",
+    "deepTechTitle": "想了解底层技术？",
+    "deepTechBody": "交互式模拟器、诚实的分设备类别能耗计算、按人群划分的滥用模型、与 IPFS / Bluesky / Solid / Nostr / Filecoin 的对比，以及七个开源仓库。",
+    "ctaDetails": "查看模拟器和计算 →",
+    "ctaRepo": "GitHub 上的 CEWP 仓库"
+  },
+  "grammar": {
+    "releasedLabel": "已发布",
+    "prefixFamilies": "前缀族",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "看清是谁说的。看清谁赞同。自己来判断。",
+    "intro": "世界变化的速度，比我们大多数人能核实的速度还快。各种来源互相矛盾。智能体不带签名就发声。更正很少能追上原文。CEG 是一种小巧的共享格式，它给每一条声明都加上签名，并留下你可以一路追踪的痕迹，这样你就能看清谁在说什么、谁提出了反对、有什么发生了改变，从而做出自己的判断，既不必放弃，也不必盲从任何单一来源。",
+    "pdfReader": "阅读大众版（PDF）",
+    "pdfFull": "完整规范（PDF）",
+    "pdfNoteSuffix": "去编辑化处理，便于人类阅读",
+    "whatIsTitle": "这是什么",
+    "whatIsBody": "每一条声明都装在一个小小的、带签名的信封里：谁提出的、关于什么、有多确信、引用了什么证据、是什么时候提出的。其他人、机构和 AI 智能体会在它外面再加信封，表示赞同、反对、更正、取代。整条痕迹从头到尾都可以阅读。",
+    "whyTitle": "我们为什么做它",
+    "whyBody": "人们对“什么是真的”的信任正在崩塌，因为底层缺了一块根基。没有一种共享的声明格式，每个声音都自己发明一套，痕迹拼不到一起，唯一的应对办法就是选边站。CEG 就是那个小巧、克制的中间层，它让许多声音能够互相阅读，也让读者构建出自己的判断。",
+    "comparableTitle": "有什么可以类比",
+    "comparable": [
+      "<strong>PGP web of trust</strong>，出发点相同，范围窄得多",
+      "<strong>W3C Verifiable Credentials</strong>，仪式更繁重，没有组合的思路",
+      "<strong>Community Notes</strong>，痕迹可读，但只在单一平台",
+      "<strong>Sigstore / SLSA</strong>，是代码供应链领域的近亲；CEG 把这种形态推广开来"
+    ],
+    "doTitle1": "看清是谁说的",
+    "doBody1": "每一条声明都带着签名、日期、主题，以及它依据什么。没有匿名断言在信息流里消失；也没有归属在一张截图里丢失。",
+    "doTitle2": "看清还有谁参与了",
+    "doBody2": "其他签名者会在这条声明外面加上自己的信封，表示赞同、反对、更正、取代。你看到的是完整的合唱，以及每个声音背后的凭据，而不只是嗓门最大的那一个。",
+    "doTitle3": "自己来判断",
+    "doBody3": "信任不是系统直接发给你的。你来挑选要权衡哪些声音、给多大分量、针对什么。格式对每个人都一样；判断由你自己做出。",
+    "deepTitle": "想了解底层技术？",
+    "deepBody": "完整的规范阅读器，由注册表实时渲染：1+4 原语、各个族与信封字段、组合策略、开放命名空间、版本谱系，以及一个交互式的证明浏览器。",
+    "ctaSpecReader": "打开规范阅读器 →",
+    "ctaExplore": "在浏览器里构建一条链 →"
   }
 }

@@ -1790,5 +1790,51 @@
     "closeLink2": "The CIRIS mission (M-1)",
     "closeLink3": "The Accord",
     "closeLink4": "Federation (3.X plan)"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · pronounced “soup”",
+    "headline": "A better internet, without big tech and massive datacenters.",
+    "intro1": "CEWP is the internet routed directly between the devices you already own, instead of through about ten thousand giant warehouses run by five companies. People, AI agents, and organizations sign their own posts, and the network weighs those signatures to work out what to trust.",
+    "intro2": "Today’s middle costs about 175 megatons of CO2 a year and concentrates everyone’s data in five companies. CEWP runs on hardware you already have, never advertises your local content to the rest of the network, and makes every load-bearing claim a signed wire artifact you can read.",
+    "watchLabel": "Watch the 7-minute explainer",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "Get CIRIS on the App Store",
+    "ctaGooglePlay": "Get CIRIS on Google Play",
+    "shippingNote": "<b>CIRIS 2.9.x is shipping now.</b> Install today on iPhone or Android. The full CEWP feature set rolls out through <b>June and July 2026</b>.",
+    "deepTechTitle": "Want the deep tech?",
+    "deepTechBody": "The interactive simulator, the honest device-class energy math, the per-cohort abuse model, comparisons against IPFS / Bluesky / Solid / Nostr / Filecoin, the seven open repos.",
+    "ctaDetails": "See the simulator and the math →",
+    "ctaRepo": "CEWP repo on GitHub"
+  },
+  "grammar": {
+    "releasedLabel": "released",
+    "prefixFamilies": "prefix families",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "See who said it. See who agrees. Decide for yourself.",
+    "intro": "The world is moving faster than most of us can fact-check it. Sources contradict. Agents speak unsigned. Corrections rarely catch the original. CEG is a small shared format that puts a signature on every claim, with a trail you can follow, so you can read who’s saying what, who’s pushed back, and what changed, and make your own call without giving up or giving in to any one source.",
+    "pdfReader": "Read the human edition (PDF)",
+    "pdfFull": "Full spec (PDF)",
+    "pdfNoteSuffix": "de-editorialized for human reading",
+    "whatIsTitle": "What this is",
+    "whatIsBody": "Every claim travels in a small signed envelope: who made it, what it’s about, how confident they are, what evidence they cite, when it was made. Other people, organisations, and AI agents add envelopes around it, agreeing, disagreeing, correcting, superseding. The trail is readable end-to-end.",
+    "whyTitle": "Why we made it",
+    "whyBody": "Trust in “what’s true” is breaking down because the substrate underneath is missing. Without a shared claim format, every voice invents its own, the trails don’t stitch together, and the only way to cope is to pick a side. CEG is the small, austere middle that lets many voices read each other and lets a reader build their own verdict.",
+    "comparableTitle": "What’s comparable",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, same instinct, much narrower scope",
+      "<strong>W3C Verifiable Credentials</strong>, heavier ceremony, no composition story",
+      "<strong>Community Notes</strong>, readable trails, single platform",
+      "<strong>Sigstore / SLSA</strong>, code-supply-chain cousins; CEG generalises the shape"
+    ],
+    "doTitle1": "See who said it",
+    "doBody1": "Every claim carries a signature, a date, what it’s about, and what it’s based on. No anonymous assertions getting lost in the feed; no attribution lost to a screenshot.",
+    "doTitle2": "See who else weighed in",
+    "doBody2": "Other signers add their own envelopes around the claim, agreeing, disagreeing, correcting, superseding. You see the full chorus and the receipts behind each voice, not just whoever shouted loudest.",
+    "doTitle3": "Decide for yourself",
+    "doBody3": "Trust isn’t something the system hands you. You pick the voices you weigh, how heavily, and on what. The format is the same for everyone; the verdict is yours.",
+    "deepTitle": "Want the deep tech?",
+    "deepBody": "The full spec reader, rendered live from the registry: the 1+4 primitives, the families and envelope fields, the composition policies, the open namespace, the version lineage, and an interactive attestation explorer.",
+    "ctaSpecReader": "Open the spec reader →",
+    "ctaExplore": "Build a chain in the browser →"
   }
 }

@@ -1790,5 +1790,51 @@
     "claimH2": "Những gì chúng tôi tuyên bố, và những gì chúng tôi không tuyên bố.",
     "claimP1": "Chúng tôi chưa giải quyết được vấn đề an toàn AI. Chúng tôi đã xây dựng một mảnh của một câu trả lời, và chúng tôi đang kiểm tra nó một cách công khai.",
     "claimP2Html": "Các nhóm bên ngoài chưa kiểm tra công việc của chúng tôi. Chúng tôi nói thẳng điều đó. Toàn bộ lý thuyết và toán học nằm trong <a href=\"/papers\" class=\"text-brand-primary hover:underline\">bốn bài báo</a> của chúng tôi. Mã nguồn là mở. Nếu chúng tôi sai, cách chứng minh điều đó cũng ở nơi công khai. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Xem tình trạng nghiên cứu hiện tại.</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · đọc như “soup”",
+    "headline": "Một internet tốt hơn, không cần các hãng công nghệ lớn và những trung tâm dữ liệu khổng lồ.",
+    "intro1": "CEWP là internet được định tuyến trực tiếp giữa các thiết bị bạn đã có, thay vì đi qua khoảng mười nghìn nhà kho khổng lồ do năm công ty vận hành. Con người, tác nhân AI, và tổ chức ký lên bài đăng của chính họ, và mạng lưới cân nhắc các chữ ký đó để xác định điều gì đáng tin.",
+    "intro2": "Lớp trung gian hiện nay tốn khoảng 175 megatons CO2 mỗi năm và gom dữ liệu của mọi người vào năm công ty. CEWP chạy trên phần cứng bạn đã có, không bao giờ quảng bá nội dung cục bộ của bạn ra phần còn lại của mạng, và biến mỗi tuyên bố trọng yếu thành một tạo phẩm wire có chữ ký mà bạn có thể đọc được.",
+    "watchLabel": "Xem video giải thích 7-minute",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "Tải CIRIS trên App Store",
+    "ctaGooglePlay": "Tải CIRIS trên Google Play",
+    "shippingNote": "<b>CIRIS 2.9.x đã có mặt ngay bây giờ.</b> Cài đặt hôm nay trên iPhone hoặc Android. Bộ tính năng CEWP đầy đủ sẽ ra mắt dần trong <b>June and July 2026</b>.",
+    "deepTechTitle": "Bạn muốn tìm hiểu công nghệ sâu hơn?",
+    "deepTechBody": "Trình mô phỏng tương tác, phép tính năng lượng trung thực theo loại thiết bị, mô hình lạm dụng theo từng nhóm, so sánh với IPFS / Bluesky / Solid / Nostr / Filecoin, bảy kho mã nguồn mở.",
+    "ctaDetails": "Xem trình mô phỏng và phép tính →",
+    "ctaRepo": "Kho CEWP trên GitHub"
+  },
+  "grammar": {
+    "releasedLabel": "đã phát hành",
+    "prefixFamilies": "họ tiền tố",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "Xem ai đã nói. Xem ai đồng tình. Tự bạn quyết định.",
+    "intro": "Thế giới đang chuyển động nhanh hơn khả năng kiểm chứng của hầu hết chúng ta. Các nguồn mâu thuẫn nhau. Tác nhân phát biểu mà không ký. Đính chính hiếm khi bắt kịp bản gốc. CEG là một định dạng chung nhỏ gọn đặt một chữ ký lên mỗi tuyên bố, kèm một dấu vết bạn có thể lần theo, để bạn đọc được ai nói gì, ai đã phản bác, và điều gì đã thay đổi, rồi tự đưa ra phán đoán của riêng mình mà không bỏ cuộc hay khuất phục trước bất kỳ một nguồn nào.",
+    "pdfReader": "Đọc bản dành cho người (PDF)",
+    "pdfFull": "Đặc tả đầy đủ (PDF)",
+    "pdfNoteSuffix": "đã lược bỏ phần biên tập để con người dễ đọc",
+    "whatIsTitle": "Đây là gì",
+    "whatIsBody": "Mỗi tuyên bố di chuyển trong một phong bì nhỏ có chữ ký: ai tạo ra nó, nó nói về điều gì, họ tự tin đến mức nào, họ trích dẫn bằng chứng gì, được tạo khi nào. Người khác, tổ chức, và tác nhân AI thêm phong bì bao quanh nó, đồng tình, phản đối, đính chính, thay thế. Dấu vết có thể đọc được từ đầu đến cuối.",
+    "whyTitle": "Vì sao chúng tôi tạo ra nó",
+    "whyBody": "Niềm tin vào “điều gì là đúng” đang sụp đổ vì nền tảng bên dưới đã biến mất. Không có một định dạng tuyên bố chung, mỗi tiếng nói tự nghĩ ra định dạng riêng, các dấu vết không khớp với nhau, và cách duy nhất để xoay xở là chọn một phe. CEG là phần trung gian nhỏ gọn, giản dị giúp nhiều tiếng nói đọc được nhau và giúp người đọc xây dựng phán đoán của riêng mình.",
+    "comparableTitle": "Những thứ tương đồng",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, cùng bản năng, phạm vi hẹp hơn nhiều",
+      "<strong>W3C Verifiable Credentials</strong>, thủ tục nặng nề hơn, không có câu chuyện ghép nối",
+      "<strong>Community Notes</strong>, dấu vết đọc được, một nền tảng duy nhất",
+      "<strong>Sigstore / SLSA</strong>, họ hàng của chuỗi cung ứng mã; CEG tổng quát hóa hình dạng đó"
+    ],
+    "doTitle1": "Xem ai đã nói",
+    "doBody1": "Mỗi tuyên bố mang theo một chữ ký, một ngày tháng, nói về điều gì, và dựa trên cái gì. Không còn những khẳng định ẩn danh lạc trôi trong dòng tin; không còn nguồn gốc bị mất vì một ảnh chụp màn hình.",
+    "doTitle2": "Xem ai khác đã lên tiếng",
+    "doBody2": "Những người ký khác thêm phong bì của riêng họ bao quanh tuyên bố, đồng tình, phản đối, đính chính, thay thế. Bạn thấy cả dàn hợp xướng và bằng chứng đằng sau mỗi tiếng nói, không chỉ ai hét to nhất.",
+    "doTitle3": "Tự bạn quyết định",
+    "doBody3": "Niềm tin không phải là thứ hệ thống trao cho bạn. Bạn chọn những tiếng nói mình cân nhắc, nặng đến đâu, và về điều gì. Định dạng giống nhau cho mọi người; phán đoán là của bạn.",
+    "deepTitle": "Bạn muốn tìm hiểu công nghệ sâu hơn?",
+    "deepBody": "Trình đọc đặc tả đầy đủ, kết xuất trực tiếp từ sổ đăng ký: các nguyên thủy 1+4, các họ và các trường phong bì, các chính sách ghép nối, không gian tên mở, dòng dõi phiên bản, và một trình khám phá chứng thực tương tác.",
+    "ctaSpecReader": "Mở trình đọc đặc tả →",
+    "ctaExplore": "Dựng một chuỗi trong trình duyệt →"
   }
 }

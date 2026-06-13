@@ -2127,5 +2127,241 @@ export const MARKETING_OG: Record<
       "title": "تحقیق کی صورتحال: پروڈکشن AI Traces پر موثر جہت پذیری",
       "description": "پروڈکشن ایجنٹ traces پر Kish فارمولہ سے موثر جہت پذیری کی پیمائش، نیز Alignment Manifold اور Coherence Singularity کی رسمی بنیادیں۔"
     }
+  },
+  "/grammar": {
+    "en": {
+      "title": "CEG: A Signature on Every Claim, a Trail You Can Follow",
+      "description": "The CIRIS Epistemic Grammar is a small shared format that signs every claim, so you can see who said it, who pushed back, and what changed, then decide for yourself."
+    },
+    "es": {
+      "title": "CEG: Una firma en cada afirmación, un rastro que puedes seguir",
+      "description": "La CIRIS Epistemic Grammar es un pequeño formato compartido que firma cada afirmación, para que veas quién lo dijo, quién lo rebatió y qué cambió, y luego decidas por ti mismo."
+    },
+    "am": {
+      "title": "CEG፦ በእያንዳንዱ ማረጋገጫ ላይ ፊርማ፣ ልትከተለው የምትችለው አሻራ",
+      "description": "የ CIRIS Epistemic Grammar እያንዳንዱን ማረጋገጫ የሚፈርም ትንሽ የጋራ ቅርጸት ነው፣ ስለዚህ ማን እንዳለው፣ ማን እንደተቃወመና ምን እንደተቀየረ ማየት ትችላለህ፣ ከዚያም ለራስህ ወስን።"
+    },
+    "ha": {
+      "title": "CEG: Sa hannu kan kowane da'awa, sawu da za ka iya bi",
+      "description": "CIRIS Epistemic Grammar karamin tsari ne da ake rabawa wanda yake sa hannu kan kowane da'awa, domin ka ga wanda ya fada, wa ya ki amincewa, da abin da ya canza, sannan ka yanke shawara da kanka."
+    },
+    "yo": {
+      "title": "CEG: Ifowosi lori gbogbo ariyanjiyan, ona ti o le tele",
+      "description": "CIRIS Epistemic Grammar je apewon kekere ti a n pin ti o fi ifowosi si gbogbo ariyanjiyan, ki o le ri eni to so o, eni to tako, ati ohun to yipada, ki o si pinnu fun ara re."
+    },
+    "sw": {
+      "title": "CEG: Saini kwenye Kila Dai, Njia Unayoweza Kufuata",
+      "description": "CIRIS Epistemic Grammar ni muundo mdogo wa pamoja unaosaini kila dai, ili uone nani alisema, nani alipinga, na nini kilibadilika, kisha uamue mwenyewe."
+    },
+    "ta": {
+      "title": "CEG: ஒவ்வொரு கூற்றிலும் ஒரு கையொப்பம், நீங்கள் பின்தொடரக்கூடிய ஒரு தடம்",
+      "description": "CIRIS Epistemic Grammar என்பது ஒவ்வொரு கூற்றிலும் கையொப்பமிடும் ஒரு சிறிய பகிரப்பட்ட வடிவம், இதனால் யார் சொன்னது, யார் எதிர்த்தது, என்ன மாறியது என்பதைப் பார்த்து, பின்னர் நீங்களே முடிவு செய்யலாம்."
+    },
+    "te": {
+      "title": "CEG: ప్రతి వాదనపై ఒక సంతకం, మీరు అనుసరించగల ఒక దారి",
+      "description": "CIRIS Epistemic Grammar అనేది ప్రతి వాదనపై సంతకం చేసే ఒక చిన్న భాగస్వామ్య ఫార్మాట్, తద్వారా ఎవరు చెప్పారో, ఎవరు ఎదురు తిరిగారో, ఏమి మారిందో మీరు చూసి, ఆపై మీరే నిర్ణయించుకోవచ్చు."
+    },
+    "mr": {
+      "title": "CEG: प्रत्येक दाव्यावर एक साइन, तुम्ही अनुसरू शकाल अशी खूण",
+      "description": "CIRIS Epistemic Grammar हे एक छोटे सामायिक स्वरूप आहे जे प्रत्येक दावा साइन करते, जेणेकरून कोणी म्हटले, कोणी विरोध केला, आणि काय बदलले हे तुम्ही पाहू शकाल, आणि मग स्वतः ठरवू शकाल."
+    },
+    "pa": {
+      "title": "CEG: ਹਰ ਦਾਅਵੇ ਉੱਤੇ ਇੱਕ ਦਸਤਖਤ, ਇੱਕ ਅਜਿਹੀ ਪੈੜ ਜਿਸ ਦਾ ਤੁਸੀਂ ਪਿੱਛਾ ਕਰ ਸਕਦੇ ਹੋ",
+      "description": "CIRIS Epistemic Grammar ਇੱਕ ਛੋਟਾ ਸਾਂਝਾ ਫਾਰਮੈਟ ਹੈ ਜੋ ਹਰ ਦਾਅਵੇ ਉੱਤੇ ਦਸਤਖਤ ਕਰਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਦੇਖ ਸਕੋ ਕਿਸ ਨੇ ਕਿਹਾ, ਕਿਸ ਨੇ ਜਵਾਬ ਦਿੱਤਾ, ਅਤੇ ਕੀ ਬਦਲਿਆ, ਫਿਰ ਆਪ ਹੀ ਫ਼ੈਸਲਾ ਕਰੋ।"
+    },
+    "my": {
+      "title": "CEG: ဆိုဆုံးချက်တိုင်းပေါ် လက်မှတ်တစ်ခု၊ သင်လိုက်နိုင်သော ခြေရာတစ်ခု",
+      "description": "CIRIS Epistemic Grammar သည် ဆိုဆုံးချက်တိုင်းကို လက်မှတ်ထိုးပေးသော သေးငယ်သည့် မျှဝေ format တစ်ခုဖြစ်ပြီး၊ မည်သူ ပြောသည်၊ မည်သူ တုံ့ပြန်သည်၊ ဘာပြောင်းလဲသည်ကို သင်မြင်နိုင်ကာ ထို့နောက် ကိုယ်တိုင် ဆုံးဖြတ်နိုင်သည်။"
+    },
+    "bn": {
+      "title": "CEG: প্রতিটি দাবিতে একটি সই, এমন একটি পথ যা আপনি অনুসরণ করতে পারেন",
+      "description": "CIRIS Epistemic Grammar হলো একটি ছোট ভাগ করা ফরম্যাট যা প্রতিটি দাবিতে সই করে, যাতে আপনি দেখতে পারেন কে বলেছে, কে পাল্টা বলেছে, আর কী বদলেছে, তারপর নিজেই সিদ্ধান্ত নিতে পারেন।"
+    },
+    "hi": {
+      "title": "CEG: हर दावे पर एक साइन, एक निशान जिसे आप फॉलो कर सकें",
+      "description": "CIRIS Epistemic Grammar एक छोटा साझा प्रारूप है जो हर दावे को साइन करता है, ताकि आप देख सकें किसने कहा, किसने विरोध किया, और क्या बदला, फिर खुद फैसला करें।"
+    },
+    "vi": {
+      "title": "CEG: Một Chữ Ký Trên Mỗi Tuyên Bố, Một Dấu Vết Bạn Có Thể Lần Theo",
+      "description": "CIRIS Epistemic Grammar là một định dạng chung nhỏ gọn ký lên mỗi tuyên bố, để bạn thấy ai đã nói, ai phản bác, và điều gì đã thay đổi, rồi tự bạn quyết định."
+    },
+    "id": {
+      "title": "CEG: Tanda Tangan pada Setiap Klaim, Jejak yang Bisa Anda Ikuti",
+      "description": "CIRIS Epistemic Grammar adalah format bersama kecil yang menandatangani setiap klaim, sehingga Anda bisa melihat siapa yang mengatakannya, siapa yang membantah, dan apa yang berubah, lalu memutuskan sendiri."
+    },
+    "th": {
+      "title": "CEG: ลายเซ็นบนทุกคำกล่าวอ้าง ร่องรอยที่คุณติดตามได้",
+      "description": "CIRIS Epistemic Grammar คือรูปแบบร่วมเล็กๆ ที่ลงนามทุกคำกล่าวอ้าง คุณจึงเห็นว่าใครพูด ใครโต้แย้ง และอะไรเปลี่ยนไป แล้วตัดสินใจด้วยตัวเอง"
+    },
+    "tr": {
+      "title": "CEG: Her iddiada bir imza, takip edebileceğiniz bir iz",
+      "description": "CIRIS Epistemic Grammar, her iddiayı imzalayan küçük ortak bir biçimdir, böylece kimin söylediğini, kimin karşı çıktığını ve neyin değiştiğini görüp kendiniz karar verebilirsiniz."
+    },
+    "uk": {
+      "title": "CEG: підпис на кожному твердженні, слід, який можна простежити",
+      "description": "CIRIS Epistemic Grammar — це невеликий спільний формат, що підписує кожне твердження, тож ви бачите, хто його сказав, хто заперечив і що змінилося, а потім вирішуєте самі."
+    },
+    "ru": {
+      "title": "CEG: подпись на каждом утверждении, след, который можно проследить",
+      "description": "CIRIS Epistemic Grammar — это небольшой общий формат, который подписывает каждое утверждение, так что вы видите, кто его сказал, кто возразил и что изменилось, а затем решаете сами."
+    },
+    "ko": {
+      "title": "CEG: 모든 주장에 서명을, 따라갈 수 있는 흔적을",
+      "description": "CIRIS Epistemic Grammar는 모든 주장에 서명하는 작은 공유 형식입니다. 누가 말했는지, 누가 반박했는지, 무엇이 바뀌었는지 보고 스스로 판단하세요."
+    },
+    "ja": {
+      "title": "CEG: すべての主張に署名を、たどれる軌跡を",
+      "description": "CIRIS Epistemic Grammarは、すべての主張に署名する小さな共有フォーマットです。誰が言い、誰が反論し、何が変わったかを見て、自分で判断できます。"
+    },
+    "zh": {
+      "title": "CEG：给每一条声明加签名，留下你能追踪的痕迹",
+      "description": "CIRIS Epistemic Grammar 是一种小巧的共享格式，它给每一条声明都加上签名，让你看清是谁说的、谁提出了反对、有什么发生了改变，然后自己来判断。"
+    },
+    "de": {
+      "title": "CEG: Eine Signatur auf jeder Aussage, eine Spur, der du folgen kannst",
+      "description": "Die CIRIS Epistemic Grammar ist ein kleines gemeinsames Format, das jede Aussage signiert, damit du siehst, wer es gesagt hat, wer widersprochen hat und was sich geändert hat, und dann selbst entscheidest."
+    },
+    "fr": {
+      "title": "CEG : une signature sur chaque affirmation, une trace à suivre",
+      "description": "La CIRIS Epistemic Grammar est un petit format partagé qui signe chaque affirmation, pour que vous voyiez qui l'a dit, qui a contesté, et ce qui a changé, puis décidiez par vous-même."
+    },
+    "it": {
+      "title": "CEG: Una firma su ogni affermazione, una traccia che puoi seguire",
+      "description": "La CIRIS Epistemic Grammar è un piccolo formato condiviso che firma ogni affermazione, così puoi vedere chi l'ha detto, chi ha replicato e cosa è cambiato, e poi decidere da solo."
+    },
+    "pt": {
+      "title": "CEG: Uma assinatura em cada afirmação, um rastro que você pode seguir",
+      "description": "A CIRIS Epistemic Grammar é um pequeno formato compartilhado que assina cada afirmação, para você ver quem disse, quem rebateu e o que mudou, e então decidir por conta própria."
+    },
+    "ar": {
+      "title": "CEG: توقيع على كل ادعاء، وأثر يمكنك تتبعه",
+      "description": "إن CIRIS Epistemic Grammar صيغة مشتركة صغيرة توقّع كل ادعاء، حتى ترى من قاله، ومن اعترض، وما الذي تغيّر، ثم تقرر بنفسك."
+    },
+    "fa": {
+      "title": "CEG: یک امضا روی هر ادعا، ردی که می‌توانید دنبالش کنید",
+      "description": "CIRIS Epistemic Grammar یک قالب مشترک کوچک است که هر ادعا را امضا می‌کند، تا ببینید چه کسی گفت، چه کسی مخالفت کرد و چه چیزی تغییر کرد، و سپس خودتان تصمیم بگیرید."
+    },
+    "ur": {
+      "title": "CEG: ہر دعوے پر ایک دستخط، ایک سراغ جسے آپ پکڑ سکتے ہیں",
+      "description": "CIRIS Epistemic Grammar ایک چھوٹا مشترکہ فارمیٹ ہے جو ہر دعوے پر دستخط کرتا ہے، تاکہ آپ دیکھ سکیں کس نے کہا، کس نے مخالفت کی، اور کیا بدلا، پھر خود فیصلہ کریں۔"
+    }
+  },
+  "/cewp": {
+    "en": {
+      "title": "CEWP: A Better Internet, Without Big Tech",
+      "description": "The CIRIS Epistemic Web Platform (pronounced “soup”): the internet routed directly between your own devices, no datacenters in the middle, every claim signed and readable."
+    },
+    "es": {
+      "title": "CEWP: Un internet mejor, sin las grandes tecnológicas",
+      "description": "La CIRIS Epistemic Web Platform (se pronuncia como “soup”): el internet enrutado directamente entre tus propios dispositivos, sin centros de datos en medio, cada afirmación firmada y legible."
+    },
+    "am": {
+      "title": "CEWP፦ የተሻለ ኢንተርኔት፣ ያለ ትላልቅ የቴክ ኩባንያዎች",
+      "description": "የ CIRIS Epistemic Web Platform (እንደ “soup” ይነበባል)፦ በራስህ መሣሪያዎች መካከል በቀጥታ የሚተላለፍ ኢንተርኔት፣ መካከል ምንም የመረጃ ማዕከል የለም፣ እያንዳንዱ ማረጋገጫ የተፈረመና ሊነበብ የሚችል።"
+    },
+    "ha": {
+      "title": "CEWP: Intanet mafi kyau, ba tare da manyan kamfanonin fasaha ba",
+      "description": "CIRIS Epistemic Web Platform (ana furta shi kamar “soup”): intanet da ake tura shi kai tsaye tsakanin na'urorinka, babu cibiyoyin bayanai a tsakiya, kowane da'awa an sa hannu kuma ana iya karantawa."
+    },
+    "yo": {
+      "title": "CEWP: Intaneti to dara ju, lai si awon ile-ise imo ero nla",
+      "description": "CIRIS Epistemic Web Platform (a n pe e bi “soup”): intaneti ti a n da lo taara laarin awon ero tire, lai si ile-isise data ni aarin, gbogbo ariyanjiyan ni ifowosi to si seeka."
+    },
+    "sw": {
+      "title": "CEWP: Mtandao Bora Zaidi, Bila Makampuni Makubwa ya Teknolojia",
+      "description": "CIRIS Epistemic Web Platform (hutamkwa “soup”): mtandao unaopita moja kwa moja kati ya vifaa vyako mwenyewe, bila vituo vya data katikati, kila dai limesainiwa na linasomeka."
+    },
+    "ta": {
+      "title": "CEWP: பெரிய டெக் இல்லாத ஒரு சிறந்த இணையம்",
+      "description": "CIRIS Epistemic Web Platform (“soup” என உச்சரிக்கப்படும்): உங்கள் சொந்த சாதனங்களுக்கு இடையே நேரடியாக வழியமைக்கப்படும் இணையம், நடுவில் டேட்டா மையங்கள் இல்லை, ஒவ்வொரு கூற்றும் கையொப்பமிட்டது மற்றும் படிக்கக்கூடியது."
+    },
+    "te": {
+      "title": "CEWP: పెద్ద టెక్ లేకుండా ఒక మెరుగైన ఇంటర్నెట్",
+      "description": "CIRIS Epistemic Web Platform (“soup” అని ఉచ్చరిస్తారు): మీ సొంత పరికరాల మధ్య నేరుగా రూట్ చేయబడే ఇంటర్నెట్, మధ్యలో డేటాసెంటర్లు లేవు, ప్రతి వాదన సంతకం చేయబడింది మరియు చదవగలిగేది."
+    },
+    "mr": {
+      "title": "CEWP: मोठ्या टेकशिवाय, एक चांगले इंटरनेट",
+      "description": "CIRIS Epistemic Web Platform (“soup” सारखे उच्चारले जाते): थेट तुमच्या स्वतःच्या उपकरणांमध्ये राउट होणारे इंटरनेट, मध्ये कोणतेही डेटासेंटर नाही, प्रत्येक दावा साइन केलेला आणि वाचनीय."
+    },
+    "pa": {
+      "title": "CEWP: ਵੱਡੀ ਟੈਕ ਤੋਂ ਬਿਨਾਂ ਇੱਕ ਬਿਹਤਰ ਇੰਟਰਨੈੱਟ",
+      "description": "CIRIS Epistemic Web Platform (“soup” ਵਾਂਗ ਉਚਾਰਿਆ ਜਾਂਦਾ ਹੈ): ਉਹ ਇੰਟਰਨੈੱਟ ਜੋ ਤੁਹਾਡੇ ਆਪਣੇ ਡਿਵਾਈਸਾਂ ਵਿਚਕਾਰ ਸਿੱਧਾ ਰੂਟ ਹੁੰਦਾ ਹੈ, ਵਿਚਕਾਰ ਕੋਈ ਡੇਟਾਸੈਂਟਰ ਨਹੀਂ, ਹਰ ਦਾਅਵਾ ਦਸਤਖਤ ਕੀਤਾ ਅਤੇ ਪੜ੍ਹਨਯੋਗ।"
+    },
+    "my": {
+      "title": "CEWP: နည်းပညာကုမ္ပဏီကြီးများ မပါဘဲ ပိုကောင်းသော အင်တာနက်",
+      "description": "CIRIS Epistemic Web Platform (“soup” ဟု အသံထွက်သည်): သင့်ကိုယ်ပိုင် ကိရိယာများကြားတွင် တိုက်ရိုက် လမ်းကြောင်းချသော အင်တာနက်၊ အလယ်တွင် ဒေတာစင်တာ မရှိ၊ ဆိုဆုံးချက်တိုင်း လက်မှတ်ထိုးထားပြီး ဖတ်နိုင်သည်။"
+    },
+    "bn": {
+      "title": "CEWP: বড় টেক ছাড়াই একটি উন্নত ইন্টারনেট",
+      "description": "CIRIS Epistemic Web Platform (উচ্চারণ “soup”): এমন ইন্টারনেট যা সরাসরি আপনার নিজের ডিভাইসের মধ্যে রুট হয়, মাঝখানে কোনো ডেটাসেন্টার নেই, প্রতিটি দাবি সই করা আর পড়ার যোগ্য।"
+    },
+    "hi": {
+      "title": "CEWP: बड़ी टेक के बिना, एक बेहतर इंटरनेट",
+      "description": "CIRIS Epistemic Web Platform (“soup” की तरह बोला जाता है): वह इंटरनेट जो सीधे आपके अपने उपकरणों के बीच रूट होता है, बीच में कोई डेटासेंटर नहीं, हर दावा साइन किया हुआ और पढ़ने योग्य।"
+    },
+    "vi": {
+      "title": "CEWP: Một Internet Tốt Hơn, Không Cần Công Nghệ Lớn",
+      "description": "CIRIS Epistemic Web Platform (đọc như “soup”): internet được định tuyến trực tiếp giữa các thiết bị của chính bạn, không có trung tâm dữ liệu ở giữa, mỗi tuyên bố đều được ký và đọc được."
+    },
+    "id": {
+      "title": "CEWP: Internet yang Lebih Baik, Tanpa Teknologi Raksasa",
+      "description": "CIRIS Epistemic Web Platform (dilafalkan “soup”): internet yang dialihkan langsung antara perangkat Anda sendiri, tanpa pusat data di tengah, setiap klaim ditandatangani dan dapat dibaca."
+    },
+    "th": {
+      "title": "CEWP: อินเทอร์เน็ตที่ดีกว่า โดยไม่ต้องพึ่งบริษัทเทคโนโลยียักษ์ใหญ่",
+      "description": "CIRIS Epistemic Web Platform (ออกเสียงว่า “soup”) อินเทอร์เน็ตที่ส่งข้อมูลตรงระหว่างอุปกรณ์ของคุณเอง ไม่มีศูนย์ข้อมูลคั่นกลาง ทุกคำกล่าวอ้างลงนามแล้วและอ่านได้"
+    },
+    "tr": {
+      "title": "CEWP: Büyük teknoloji olmadan daha iyi bir internet",
+      "description": "CIRIS Epistemic Web Platform (“soup” gibi okunur): kendi cihazlarınız arasında doğrudan yönlendirilen, ortada veri merkezi olmayan, her iddiası imzalı ve okunabilir bir internet."
+    },
+    "uk": {
+      "title": "CEWP: кращий інтернет, без великих техкомпаній",
+      "description": "CIRIS Epistemic Web Platform (вимовляється “soup”): інтернет, маршрутизований напряму між вашими власними пристроями, без дата-центрів посередині, кожне твердження підписане й читабельне."
+    },
+    "ru": {
+      "title": "CEWP: лучший интернет, без крупных техкомпаний",
+      "description": "CIRIS Epistemic Web Platform (произносится “soup”): интернет, маршрутизируемый напрямую между вашими собственными устройствами, без дата-центров посередине, каждое утверждение подписано и читаемо."
+    },
+    "ko": {
+      "title": "CEWP: 거대 기술기업 없이 더 나은 인터넷",
+      "description": "CIRIS Epistemic Web Platform (“soup”라고 발음): 중간에 데이터센터 없이 여러분 자신의 기기들 사이로 직접 연결되는 인터넷, 모든 주장은 서명되고 읽을 수 있습니다."
+    },
+    "ja": {
+      "title": "CEWP: 巨大テック企業に頼らない、より良いインターネット",
+      "description": "CIRIS Epistemic Web Platform（「soup」と発音）。間にデータセンターを置かず、あなた自身の端末どうしを直接つなぐインターネット。すべての主張は署名され、読み取れます。"
+    },
+    "zh": {
+      "title": "CEWP：更好的互联网，不靠大型科技公司",
+      "description": "CIRIS Epistemic Web Platform（读音像英文 “soup”）：让互联网直接在你自己的设备之间传输，中间没有数据中心，每一条声明都带签名、可阅读。"
+    },
+    "de": {
+      "title": "CEWP: Ein besseres Internet, ohne Big Tech",
+      "description": "Die CIRIS Epistemic Web Platform (ausgesprochen „soup“): das Internet direkt zwischen deinen eigenen Geräten geleitet, ohne Rechenzentren in der Mitte, jede Aussage signiert und lesbar."
+    },
+    "fr": {
+      "title": "CEWP : un meilleur internet, sans les géants de la tech",
+      "description": "La CIRIS Epistemic Web Platform (prononcée « soup ») : l'internet acheminé directement entre vos propres appareils, sans centres de données au milieu, chaque affirmation signée et lisible."
+    },
+    "it": {
+      "title": "CEWP: Un internet migliore, senza le grandi aziende tecnologiche",
+      "description": "La CIRIS Epistemic Web Platform (si pronuncia come l'inglese “soup”): internet instradato direttamente tra i tuoi dispositivi, niente datacenter nel mezzo, ogni affermazione firmata e leggibile."
+    },
+    "pt": {
+      "title": "CEWP: Uma internet melhor, sem as grandes empresas de tecnologia",
+      "description": "A CIRIS Epistemic Web Platform (pronunciada como “soup”): a internet roteada diretamente entre seus dispositivos, sem datacenters no meio, cada afirmação assinada e legível."
+    },
+    "ar": {
+      "title": "CEWP: إنترنت أفضل، بلا شركات التقنية الكبرى",
+      "description": "إن CIRIS Epistemic Web Platform (تُنطق مثل “soup”): الإنترنت الموجَّه مباشرة بين أجهزتك الخاصة، بلا مراكز بيانات في الوسط، وكل ادعاء موقّع وقابل للقراءة."
+    },
+    "fa": {
+      "title": "CEWP: اینترنتی بهتر، بدون شرکت‌های بزرگ فناوری",
+      "description": "CIRIS Epistemic Web Platform (تلفظ مانند واژه‌ی انگلیسی “soup”): اینترنتی که مستقیم میان دستگاه‌های خودتان مسیریابی می‌شود، بدون مرکز داده در میانه، با هر ادعای امضاشده و قابل‌خواندن."
+    },
+    "ur": {
+      "title": "CEWP: ایک بہتر انٹرنیٹ، بڑی ٹیک کے بغیر",
+      "description": "CIRIS Epistemic Web Platform (تلفظ انگریزی لفظ “soup” جیسا): انٹرنیٹ جو براہِ راست آپ کے اپنے آلات کے درمیان روٹ ہوتا ہے، بیچ میں کوئی ڈیٹا سینٹر نہیں، ہر دعویٰ دستخط شدہ اور پڑھنے کے قابل۔"
+    }
   }
 };

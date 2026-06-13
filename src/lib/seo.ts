@@ -13,12 +13,44 @@ import { MARKETING_OG } from "./marketing-og";
 // since Next.js overwrites (does not deep-merge) openGraph across segments.
 export const DEFAULT_OG_IMAGE = "/og/og-default.jpg";
 
+// The brand card, localized: /og/og-default.jpg (en) or /og/<locale>/og-default.jpg.
+export function defaultOgImage(locale: string = DEFAULT_LOCALE): string {
+  return locale === DEFAULT_LOCALE
+    ? DEFAULT_OG_IMAGE
+    : `/og/${locale}/og-default.jpg`;
+}
+
+// Pages that have bespoke designed cards in scripts/og/ (everything else falls
+// back to the localized brand card). The /sections reader uses ogSectionsImage.
+const DESIGNED_OG_CARDS: ReadonlySet<string> = new Set([
+  "/",
+  "/install",
+  "/about",
+  "/how-it-works",
+  "/trust",
+  "/vision",
+  "/safety",
+  "/crowdsourcing-alignment",
+  "/first-contact",
+  "/federation",
+  "/compare",
+  "/safety-vs-censorship",
+  "/services",
+  "/models",
+  "/mdd",
+  "/coherence-ratchet",
+  "/coherence-collapse-analysis",
+  "/research-status",
+]);
+
 // Per-page social-preview card (designed 1200x630 art with a localized title
 // zone). Slug mirrors the page path: "/" -> og-home, "/trust" -> og-trust.
 // English cards live at /og/<slug>.jpg; each locale gets its own composited
 // card at /og/<locale>/<slug>.jpg (same art, in-language title). Regenerate via
-// scripts/og/generate.py. Only the marketing pages in MARKETING_OG have a card.
+// scripts/og/generate.py. Pages without a bespoke card (e.g. /grammar, /cewp)
+// fall back to the localized brand card.
 export function ogImage(basePath: string, locale: string = DEFAULT_LOCALE): string {
+  if (!DESIGNED_OG_CARDS.has(basePath)) return defaultOgImage(locale);
   const slug =
     basePath === "/" ? "og-home" : "og" + basePath.replace(/\//g, "-");
   return locale === DEFAULT_LOCALE

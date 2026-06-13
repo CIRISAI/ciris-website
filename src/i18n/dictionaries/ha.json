@@ -1790,5 +1790,51 @@
     "claimH2": "Abin da muke da'awa, da kuma abin da ba mu yi ba.",
     "claimP1": "Ba mu warware amincin AI ba. Mun gina ɓangare guda ɗaya na amsa guda ɗaya, kuma muna gwada shi a fili.",
     "claimP2Html": "Ƙungiyoyi na waje har yanzu ba su duba aikin mu ba. Muna cewa haka a fili. Cikakken ka'idar da lissafi suna zaune a cikin <a href=\"/papers\" class=\"text-brand-primary hover:underline\">takardu huɗu</a>. Lambar buɗaɗɗe ce. Idan mun yi kuskure, hanyar nuna shi a fili ma. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Duba matsayin bincike na yanzu.</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · ana furta shi kamar “soup”",
+    "headline": "Intanet mafi kyau, ba tare da manyan kamfanonin fasaha da manyan cibiyoyin bayanai ba.",
+    "intro1": "CEWP shi ne intanet da ake tura shi kai tsaye tsakanin na'urorin da ka riga ka mallaka, maimakon ratsa cikin kusan rumbuna dubu goma masu girma da kamfanoni biyar ke sarrafawa. Mutane, da wakilan AI, da kungiyoyi suna sa hannu kan rubuce-rubucensu, sannan hanyar sadarwa tana auna wadannan sa hannun don gano abin da za a amince da shi.",
+    "intro2": "Mai shiga tsakani na yau yana kashe kusan 175 megatons na CO2 a kowace shekara kuma yana tara bayanan kowa a kamfanoni biyar. CEWP yana gudana a kan na'urar da ka riga ka mallaka, ba ya taba tallata abun cikinka na cikin gida ga sauran hanyar sadarwa, kuma yana mai da kowane da'awar mai muhimmanci wani abu da aka sa hannu kuma za ka iya karantawa.",
+    "watchLabel": "Kalli bayanin na 7-minute",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "Sami CIRIS a App Store",
+    "ctaGooglePlay": "Sami CIRIS a Google Play",
+    "shippingNote": "<b>CIRIS 2.9.x yana samuwa yanzu.</b> Sanya shi yau a iPhone ko Android. Cikakken tarin ayyukan CEWP zai fito a tsawon <b>June and July 2026</b>.",
+    "deepTechTitle": "Kana son zurfin fasaha?",
+    "deepTechBody": "Na'urar kwaikwayo mai hulda, ingantaccen lissafin makamashi bisa nau'in na'ura, samfurin cin zarafi bisa kowane rukuni, kwatance da IPFS / Bluesky / Solid / Nostr / Filecoin, da bayanan ajiya guda bakwai bude.",
+    "ctaDetails": "Ga na'urar kwaikwayo da lissafin →",
+    "ctaRepo": "Wurin ajiyar CEWP a GitHub"
+  },
+  "grammar": {
+    "releasedLabel": "an fitar",
+    "prefixFamilies": "iyalan gaba-gaba",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "Ka ga wanda ya fada. Ka ga wanda ya yarda. Ka yanke shawara da kanka.",
+    "intro": "Duniya tana tafiya da sauri fiye da yadda yawancinmu za mu iya tantance gaskiya. Tushe suna saba juna. Wakilai suna magana ba tare da sa hannu ba. Gyare-gyare ba kasafai suke kaiwa ga na asali ba. CEG karamin tsari ne da ake rabawa wanda yake sa hannu kan kowane da'awa, tare da sawu da za ka iya bi, domin ka karanta wa ya ce me, wa ya ki amincewa, da abin da ya canza, sannan ka yanke shawararka ba tare da ka mika wuya ko ka bari wani tushe daya ya rinjayeka ba.",
+    "pdfReader": "Karanta bugu na mutane (PDF)",
+    "pdfFull": "Cikakken takardun bayani (PDF)",
+    "pdfNoteSuffix": "an cire gyaran edita, domin karatun mutum",
+    "whatIsTitle": "Mene ne wannan",
+    "whatIsBody": "Kowane da'awa yana tafiya cikin karamar ambulan da aka sa hannu: wa ya yi shi, game da me yake, yaya tabbacinsu yake, wace shaida suke ambata, lokacin da aka yi shi. Sauran mutane, da kungiyoyi, da wakilan AI suna kara ambulan kewaye da shi, suna yarda, suna kin yarda, suna gyara, suna maye gurbi. Ana iya karanta sawun daga farko zuwa karshe.",
+    "whyTitle": "Me ya sa muka yi shi",
+    "whyBody": "Amincewa da “abin da yake gaskiya” yana durkushewa domin tushen da yake karkashinsa ya bata. Idan babu tsarin da'awa da ake rabawa, kowane murya yana kirkiro nasa, sawun ba sa hadewa, kuma hanya daya tak ta jurewa shi ne zaben gefe. CEG shi ne karamin, sauki tsakiyar da yake bari muryoyi da yawa su karanta juna kuma su bar mai karatu ya gina hukuncinsa.",
+    "comparableTitle": "Abin da ake iya kwatantawa",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, irin wannan dabi'a, amma da yanki mai kunci sosai",
+      "<strong>W3C Verifiable Credentials</strong>, biki mai nauyi, ba tare da labarin hadawa ba",
+      "<strong>Community Notes</strong>, sawu masu karantawa, dandamali daya",
+      "<strong>Sigstore / SLSA</strong>, dangin sarkar samar da lambar code; CEG yana fadada siffar"
+    ],
+    "doTitle1": "Ka ga wanda ya fada",
+    "doBody1": "Kowane da'awa yana dauke da sa hannu, kwanan wata, game da me yake, da abin da ya dogara a kai. Babu da'awoyi marasa suna da suka bata cikin feed; babu danganta da ta bata saboda hoton allo.",
+    "doTitle2": "Ka ga wanda kuma ya ba da ra'ayi",
+    "doBody2": "Sauran masu sa hannu suna kara nasu ambulan kewaye da da'awar, suna yarda, suna kin yarda, suna gyara, suna maye gurbi. Kana ganin dukkan murya da shaidu a bayan kowace murya, ba kawai wanda ya yi tsawa mafi karfi ba.",
+    "doTitle3": "Ka yanke shawara da kanka",
+    "doBody3": "Amincewa ba abu ne da tsarin ke ba ka ba. Kai ne ke zaban muryoyin da kake auna, da nauyin nawa, da kuma a kan me. Tsarin daya ne ga kowa; hukuncin naka ne.",
+    "deepTitle": "Kana son zurfin fasaha?",
+    "deepBody": "Cikakken mai karanta takardun bayani, da aka nuna kai tsaye daga rajista: na'urorin 1+4 na asali, iyalai da filayen ambulan, manufofin hadawa, sararin suna a bude, jerin gado na sigogi, da mai bincike na tabbatarwa mai hulda.",
+    "ctaSpecReader": "Bude mai karanta takardun bayani →",
+    "ctaExplore": "Gina sarka cikin birawsa →"
   }
 }

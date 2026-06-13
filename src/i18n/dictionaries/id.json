@@ -1790,5 +1790,51 @@
     "claimH2": "Apa yang kami klaim, dan apa yang tidak.",
     "claimP1": "Kami belum memecahkan keamanan AI. Kami telah membangun satu bagian dari satu jawaban, dan kami mengujinya secara terbuka.",
     "claimP2Html": "Tim luar belum memeriksa pekerjaan kami. Kami mengatakannya dengan jelas. Teori lengkap dan matematikanya ada dalam <a href=\"/papers\" class=\"text-brand-primary hover:underline\">empat makalah</a> kami. Kodenya terbuka. Jika kami salah, cara untuk menunjukkannya juga terbuka. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Lihat status penelitian saat ini.</a>"
+  },
+  "cewp": {
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · dilafalkan seperti “soup”",
+    "headline": "Internet yang lebih baik, tanpa perusahaan teknologi raksasa dan pusat data berukuran besar.",
+    "intro1": "CEWP adalah internet yang dialihkan langsung antara perangkat yang sudah Anda miliki, alih-alih melalui sekitar sepuluh ribu gudang raksasa yang dijalankan oleh lima perusahaan. Orang, agen AI, dan organisasi menandatangani unggahan mereka sendiri, dan jaringan menimbang tanda tangan itu untuk menentukan apa yang layak dipercaya.",
+    "intro2": "Perantara saat ini menelan biaya sekitar 175 megatons CO2 per tahun dan memusatkan data semua orang di lima perusahaan. CEWP berjalan di perangkat keras yang sudah Anda miliki, tidak pernah mengiklankan konten lokal Anda ke seluruh jaringan, dan menjadikan setiap klaim penting sebagai artefak wire bertanda tangan yang dapat Anda baca.",
+    "watchLabel": "Tonton penjelasan 7-menit",
+    "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
+    "ctaAppStore": "Dapatkan CIRIS di App Store",
+    "ctaGooglePlay": "Dapatkan CIRIS di Google Play",
+    "shippingNote": "<b>CIRIS 2.9.x sudah tersedia sekarang.</b> Pasang hari ini di iPhone atau Android. Rangkaian fitur lengkap CEWP diluncurkan sepanjang <b>June and July 2026</b>.",
+    "deepTechTitle": "Ingin teknologi yang mendalam?",
+    "deepTechBody": "Simulator interaktif, perhitungan energi yang jujur per kelas perangkat, model penyalahgunaan per kelompok, perbandingan terhadap IPFS / Bluesky / Solid / Nostr / Filecoin, tujuh repositori terbuka.",
+    "ctaDetails": "Lihat simulator dan perhitungannya →",
+    "ctaRepo": "Repositori CEWP di GitHub"
+  },
+  "grammar": {
+    "releasedLabel": "dirilis",
+    "prefixFamilies": "keluarga awalan",
+    "eyebrow": "CEG · CIRIS Epistemic Grammar",
+    "headline": "Lihat siapa yang mengatakannya. Lihat siapa yang setuju. Putuskan sendiri.",
+    "intro": "Dunia bergerak lebih cepat daripada yang bisa kita periksa kebenarannya. Sumber saling bertentangan. Agen berbicara tanpa tanda tangan. Koreksi jarang menyusul yang asli. CEG adalah format bersama yang kecil yang menaruh tanda tangan pada setiap klaim, dengan jejak yang bisa Anda ikuti, sehingga Anda dapat membaca siapa yang mengatakan apa, siapa yang membantah, dan apa yang berubah, lalu membuat keputusan sendiri tanpa menyerah atau tunduk pada satu sumber pun.",
+    "pdfReader": "Baca edisi untuk manusia (PDF)",
+    "pdfFull": "Spesifikasi lengkap (PDF)",
+    "pdfNoteSuffix": "tanpa editorial agar mudah dibaca manusia",
+    "whatIsTitle": "Apa ini",
+    "whatIsBody": "Setiap klaim berjalan dalam amplop kecil bertanda tangan: siapa yang membuatnya, tentang apa, seberapa yakin mereka, bukti apa yang mereka kutip, kapan dibuat. Orang lain, organisasi, dan agen AI menambahkan amplop di sekelilingnya, menyetujui, menolak, mengoreksi, menggantikan. Jejaknya dapat dibaca dari ujung ke ujung.",
+    "whyTitle": "Mengapa kami membuatnya",
+    "whyBody": "Kepercayaan terhadap “apa yang benar” runtuh karena fondasi di bawahnya hilang. Tanpa format klaim bersama, setiap suara membuat formatnya sendiri, jejaknya tidak terjalin, dan satu-satunya cara bertahan adalah memilih satu pihak. CEG adalah perantara yang kecil dan sederhana yang membuat banyak suara saling membaca dan membuat pembaca menyusun keputusannya sendiri.",
+    "comparableTitle": "Apa yang sebanding",
+    "comparable": [
+      "<strong>PGP web of trust</strong>, naluri yang sama, cakupan jauh lebih sempit",
+      "<strong>W3C Verifiable Credentials</strong>, prosedur lebih berat, tanpa cerita komposisi",
+      "<strong>Community Notes</strong>, jejak yang dapat dibaca, satu platform",
+      "<strong>Sigstore / SLSA</strong>, sepupu rantai-pasok kode; CEG menggeneralisasi bentuknya"
+    ],
+    "doTitle1": "Lihat siapa yang mengatakannya",
+    "doBody1": "Setiap klaim membawa tanda tangan, tanggal, tentang apa, dan berdasarkan apa. Tidak ada pernyataan anonim yang hilang di umpan; tidak ada atribusi yang hilang karena tangkapan layar.",
+    "doTitle2": "Lihat siapa lagi yang ikut bicara",
+    "doBody2": "Penanda tangan lain menambahkan amplop mereka sendiri di sekeliling klaim, menyetujui, menolak, mengoreksi, menggantikan. Anda melihat seluruh paduan suara dan bukti di balik setiap suara, bukan hanya yang paling keras berteriak.",
+    "doTitle3": "Putuskan sendiri",
+    "doBody3": "Kepercayaan bukan sesuatu yang diberikan sistem kepada Anda. Anda yang memilih suara mana yang Anda timbang, seberapa berat, dan atas dasar apa. Formatnya sama untuk semua orang; keputusannya milik Anda.",
+    "deepTitle": "Ingin teknologi yang mendalam?",
+    "deepBody": "Pembaca spesifikasi lengkap, dirender langsung dari registri: primitif 1+4, keluarga dan kolom amplop, kebijakan komposisi, ruang nama terbuka, garis keturunan versi, dan penjelajah atestasi interaktif.",
+    "ctaSpecReader": "Buka pembaca spesifikasi →",
+    "ctaExplore": "Bangun rantai di peramban →"
   }
 }
