@@ -1,14 +1,15 @@
-// LineagePanel — the rapid 0.x lineage between the existing
-// version-specific panels and the live spec head.
+// LineagePanel — the rapid lineage between the existing version-specific
+// panels and the live spec head.
 //
 // MediaTierPanel covers 0.3 in depth; ConsentTierPanel covers 0.6 in
-// depth. The four versions in between (0.7, 0.8, 0.9, 0.10 RC1) each
-// landed substantive surface that deserves a callout without a full
-// panel. The lineage table is the page's single source of truth for
-// "what shipped when" between the dedicated panels.
+// depth. Every cut since then landed substantive surface that deserves a
+// callout without a full panel. The lineage table is the page's single
+// source of truth for "what shipped when" between the dedicated panels.
 //
-// Order is newest-first (the RC1 head on top) so a reader checking
-// "what's current" sees it immediately.
+// Order is newest-first (the 1.0-RC2 head on top) so a reader checking
+// "what's current" sees it immediately. RC1 froze the wire surface; RC2
+// completed the design surface (the one scheduled additive cut), so the
+// two RC rows carry a badge.
 
 import { REGISTRY_BLOB, CEG_DIR } from "../lib/shared";
 
@@ -20,10 +21,133 @@ type LineageRow = {
   headline: string;
   body: React.ReactNode;
   anchors: Array<{ label: string; href: string }>;
-  status?: "rc1" | "shipped";
+  status?: "rc2" | "rc1" | "shipped";
 };
 
 const ROWS: LineageRow[] = [
+  {
+    version: "1.0-RC2",
+    date: "2026-06-10",
+    headline: "Operational-data envelopes · the design surface completes",
+    status: "rc2",
+    body: (
+      <>
+        The one scheduled additive cut, and the last. Cross-region
+        operational data (orgs, memberships, partner licenses) becomes
+        signed CEG envelopes: three new subject_kinds (§5.6.8.13){" "}
+        <code>organization</code>, <code>org_membership</code>, and{" "}
+        <code>partner_record</code>, under one rule, federate only the
+        trust and authz projection; PII and business detail stay
+        region-local. Org and membership are single-signer role-gated;{" "}
+        <code>partner_record</code> takes an M-of-N steward quorum, with
+        admission quorum and merge quorum kept distinct. New §10.1.6
+        declares per-subject_kind merge intents with a skew bound at
+        admission. The sixteenth independent path; no 1+4 change. The wire
+        surface stays frozen and the design surface is now complete, with
+        no further additions scheduled.
+      </>
+    ),
+    anchors: [
+      { label: "§5.6.8.13 operational data", href: `${CEG_BLOB}/05_namespace.md` },
+      { label: "§10.1.6 merge intents", href: `${CEG_BLOB}/10_endpoints.md` },
+    ],
+  },
+  {
+    version: "1.0-RC1",
+    date: "2026-06-10",
+    headline: "The freeze cut · wire surface frozen",
+    status: "rc1",
+    body: (
+      <>
+        Five honesty and safety patches, two pins, and the canonical-bytes
+        resolution, then freeze. Provenance contracts are redesigned as JCS
+        (RFC 8785) objects with pinned <code>domain</code> members, retiring
+        TupleHash128 so there is one canonicalization family. §10.5.3 adds
+        removal coalescing (all removals in one transparency-log window
+        batch into a single rotation, capping the rekey cascade regardless
+        of churn) plus a public-broadcast exemption. Forward secrecy is
+        stated honestly (KEM rotation bounds future exposure only), and
+        fail-secure exclusion now emits a §7.7 <code>hard_case</code> into
+        the affected cohort instead of failing silently. No 1+4 change.
+      </>
+    ),
+    anchors: [
+      { label: "§5.2.1 provenance (JCS)", href: `${CEG_BLOB}/05_namespace.md` },
+      { label: "§10.5.3 removal coalescing", href: `${CEG_BLOB}/10_endpoints.md` },
+    ],
+  },
+  {
+    version: "0.18",
+    date: "2026-06-09",
+    headline: "Recipient encryption-key registration",
+    status: "shipped",
+    body: (
+      <>
+        The at-rest DEK cascade needs each recipient&rsquo;s
+        content-encryption keys, but the federation directory carries only
+        signing keys (Ed25519 + ML-DSA-65), and ML-KEM is not derivable from
+        ML-DSA. 0.18 adds an optional <code>encryption_pubkeys</code>{" "}
+        field-set on <code>identity_occurrence</code> (x25519 + ML-KEM-768),
+        structurally parallel to <code>transport_destination</code>:
+        self-certified, hybrid-signed, and rotatable without touching the
+        signing identity. A recipient with no valid ML-KEM key is excluded
+        from the grant (content stays encrypted), never downgraded to
+        plaintext. Content-KEM, signing, and Reticulum transport are three
+        separate keypairs, never reused. No 1+4 change.
+      </>
+    ),
+    anchors: [
+      { label: "§5.6.8.8.2 encryption_pubkeys", href: `${CEG_BLOB}/05_namespace.md` },
+    ],
+  },
+  {
+    version: "0.17",
+    date: "2026-06-09",
+    headline: "Three crypto tiers · self/family, Community, Commons",
+    status: "shipped",
+    body: (
+      <>
+        The old binary cut (self and family encrypt; everything else
+        plaintext) is replaced by three tiers. self/family stays encrypted
+        and structurally invisible. <b>Community</b> (<code>community</code>,{" "}
+        <code>affiliations</code>) is encrypted under a per-community DEK
+        with cleartext provenance: byte-confidential to members, discoverable
+        by provenance. <b>Commons</b> (<code>species</code>,{" "}
+        <code>biosphere</code>, <code>federation</code>) stays plaintext for
+        anyone to inspect. The community DEK is the §10.5.3 epoch-DEK
+        cascade, so a community is a stream its members subscribe to
+        cryptographically. Mandatory, not opt-in. No 1+4 change.
+      </>
+    ),
+    anchors: [
+      { label: "§8.1.13.3 holder-inspectability", href: `${CEG_BLOB}/08_composition.md` },
+      { label: "§10.5.3 epoch DEK", href: `${CEG_BLOB}/10_endpoints.md` },
+    ],
+  },
+  {
+    version: "0.16",
+    date: "2026-06-09",
+    headline: "Agent-identity hardening + cross-impl byte determinism",
+    status: "shipped",
+    body: (
+      <>
+        A pins-and-determinism wave over the locked 1+4 set, with no
+        wire-format change. §10.1.5 adds the attestation tier model:{" "}
+        <code>local</code> (deferred-signature, producer-only authority)
+        versus <code>federation</code> (hybrid-signed, visible), plus{" "}
+        <code>promote</code>. §8.1.12.7 &ldquo;Self at login&rdquo; binds one
+        hybrid hardware-rooted user identity to app and agent occurrences
+        sharing one Self DEK. §0.9.2.1 pins the three things JCS does not
+        (array element ordering, byte-field to lowercase hex, timestamp
+        form), and PQC at rest (<code>wrap_algorithm: v2</code>,
+        X25519 + ML-KEM-768) becomes mandatory down to self/family.
+      </>
+    ),
+    anchors: [
+      { label: "§10.1.5 attestation tiers", href: `${CEG_BLOB}/10_endpoints.md` },
+      { label: "§0.9.2.1 determinism", href: `${CEG_BLOB}/00_conformance.md` },
+    ],
+  },
   {
     version: "0.15",
     date: "2026-06-06",
@@ -254,9 +378,9 @@ function LineageItem({ r }: { r: LineageRow }) {
                 <code className="rounded bg-slate-100 px-2 py-0.5 font-mono text-[13px] font-bold text-slate-800 dark:bg-gray-800 dark:text-slate-100">
                   CEG {r.version}
                 </code>
-                {r.status === "rc1" ? (
+                {r.status === "rc1" || r.status === "rc2" ? (
                   <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
-                    RC1
+                    {r.status === "rc2" ? "RC2" : "RC1"}
                   </span>
                 ) : null}
                 <span className="text-[11px] text-slate-500">{r.date}</span>
@@ -299,20 +423,22 @@ export default function LineagePanel() {
       <header className="space-y-1">
         <div className="flex flex-wrap items-baseline gap-2">
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
-            What&rsquo;s new, through 0.15
+            What&rsquo;s new, through 1.0-RC2
           </h2>
-          <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">
-            lineage
+          <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+            wire frozen · design complete
           </span>
         </div>
         <p className="max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">
           Multimedia tier (0.3) and subject-side consent (0.6) get
           their own panels above. The list below is the rapid lineage
-          for everything else, newest first. The 1+4 structural set
-          stays untouched across every entry; each row is either a
-          new envelope field, a new dimension family, a new
-          subject_kind, a new composition policy, or a representation-
-          only wire-break that doesn&rsquo;t change the primitive set.
+          for everything else, newest first. 1.0-RC1 froze the wire
+          surface and 1.0-RC2 completed the design surface, so the spec
+          is now feature-stable. The 1+4 structural set stays untouched
+          across every entry; each row is either a new envelope field, a
+          new dimension family, a new subject_kind, a new composition
+          policy, or a representation-only wire-break that doesn&rsquo;t
+          change the primitive set.
         </p>
       </header>
 
@@ -325,7 +451,7 @@ export default function LineagePanel() {
       {older.length > 0 ? (
         <details className="group rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-950">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
-            <span>Older versions (0.3 through {older[0].version})</span>
+            <span>Older versions ({older[0].version} and earlier)</span>
             <span aria-hidden className="text-slate-400 transition group-open:rotate-90">
               ›
             </span>

@@ -258,7 +258,10 @@ function extractSpecVersion(text: string): {
   specVersion: string;
   lastUpdated: string;
 } {
-  const versionMatch = text.match(/\*\*Version\*\*:\s*([0-9.]+(?:\s*\([^)]+\))?)/);
+  // Capture the version token up to the first space or "(", so release-
+  // candidate suffixes survive (e.g. "1.0-RC2 (Release Candidate ...)" ->
+  // "1.0-RC2", not "1.0").
+  const versionMatch = text.match(/\*\*Version\*\*:\s*([0-9][^\s(]*)/);
   // Status format: "Public Working Draft (2026-05-28). ..."
   const statusMatch = text.match(/\*\*Status\*\*:[^(]*\((\d{4}-\d{2}-\d{2})\)/);
   return {
