@@ -6,10 +6,10 @@
 // callout without a full panel. The lineage table is the page's single
 // source of truth for "what shipped when" between the dedicated panels.
 //
-// Order is newest-first (the 1.0-RC2 head on top) so a reader checking
-// "what's current" sees it immediately. RC1 froze the wire surface; RC2
-// completed the design surface (the one scheduled additive cut), so the
-// two RC rows carry a badge.
+// Order is newest-first (the 1.0-RC4 head on top) so a reader checking
+// "what's current" sees it immediately. The RC rows carry a badge: RC1
+// froze the wire surface, RC2 completed the design surface, RC3 was a
+// clarity cut, RC4 ratified the last reserved §RC slot.
 
 import { REGISTRY_BLOB, CEG_DIR } from "../lib/shared";
 
@@ -21,10 +21,53 @@ type LineageRow = {
   headline: string;
   body: React.ReactNode;
   anchors: Array<{ label: string; href: string }>;
-  status?: "rc2" | "rc1" | "shipped";
+  status?: "rc" | "rc2" | "rc1" | "shipped";
 };
 
 const ROWS: LineageRow[] = [
+  {
+    version: "1.0-RC4",
+    date: "2026-06-12",
+    headline: "§RC ratified · the consent_role Counter-RII gate",
+    status: "rc",
+    body: (
+      <>
+        The one reserved §RC slot is filled (new §7.0.2), ratifying the
+        Accord §RC <code>consent_role</code> semantics at the{" "}
+        <code>ConsentGate.lean</code> defaults with zero proof delta. The
+        revocation chain is <code>BaseRole</code>-only and non-recursive
+        (overwrite-on-revoke; any retained history lives in a separate audit
+        surface, never embedded in the <code>consent_role</code> field), and{" "}
+        <code>Peer</code>-role nodes are suppressed from Counter-RII. No wire
+        change; the design surface stays complete.
+      </>
+    ),
+    anchors: [
+      { label: "§7.0.2 consent_role", href: `${CEG_BLOB}/07_reserved.md` },
+    ],
+  },
+  {
+    version: "1.0-RC3",
+    date: "2026-06-12",
+    headline: "Clarity cut · the fabric-node trust model",
+    status: "rc",
+    body: (
+      <>
+        Four clarifications plus one canonical-encoding addition, all
+        additive on the frozen surface. The load-bearing one: §7.0.1
+        fabric-node separation-of-powers. A fabric node (the headless
+        cohabitation runtime, where <code>agent = fabric node + brain</code>)
+        that co-locates substrate, steward, detector, and witness roles in
+        one process is <b>custody, not consolidation of authority</b>.
+        Authority stays quorum-bound (a vote, not a verdict), observation
+        stays non-authoritative by namespace, and observation can never
+        manufacture authority. Plus the NodeCode shorthand. No wire change.
+      </>
+    ),
+    anchors: [
+      { label: "§7.0.1 fabric-node", href: `${CEG_BLOB}/07_reserved.md` },
+    ],
+  },
   {
     version: "1.0-RC2",
     date: "2026-06-10",
@@ -378,9 +421,9 @@ function LineageItem({ r }: { r: LineageRow }) {
                 <code className="rounded bg-slate-100 px-2 py-0.5 font-mono text-[13px] font-bold text-slate-800 dark:bg-gray-800 dark:text-slate-100">
                   CEG {r.version}
                 </code>
-                {r.status === "rc1" || r.status === "rc2" ? (
+                {/-RC\d+$/.test(r.version) ? (
                   <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
-                    {r.status === "rc2" ? "RC2" : "RC1"}
+                    {r.version.split("-")[1]}
                   </span>
                 ) : null}
                 <span className="text-[11px] text-slate-500">{r.date}</span>
@@ -423,7 +466,7 @@ export default function LineagePanel() {
       <header className="space-y-1">
         <div className="flex flex-wrap items-baseline gap-2">
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
-            What&rsquo;s new, through 1.0-RC2
+            What&rsquo;s new, through 1.0-RC4
           </h2>
           <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-semibold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
             wire frozen · design complete
@@ -433,8 +476,9 @@ export default function LineagePanel() {
           Multimedia tier (0.3) and subject-side consent (0.6) get
           their own panels above. The list below is the rapid lineage
           for everything else, newest first. 1.0-RC1 froze the wire
-          surface and 1.0-RC2 completed the design surface, so the spec
-          is now feature-stable. The 1+4 structural set stays untouched
+          surface, 1.0-RC2 completed the design surface, and RC3 and RC4
+          are clarity and ratification cuts, so the spec is now
+          feature-stable. The 1+4 structural set stays untouched
           across every entry; each row is either a new envelope field, a
           new dimension family, a new subject_kind, a new composition
           policy, or a representation-only wire-break that doesn&rsquo;t

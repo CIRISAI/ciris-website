@@ -301,23 +301,40 @@ async function fetchCommitSha(): Promise<{
   }
 }
 
+// Fetch text with a longer timeout and a couple of retries. The cache-buster
+// forces a live network fetch every build, so a transient raw.githubusercontent
+// hiccup would otherwise fail the whole deploy; retry rather than break.
+async function fetchTextWithRetry(
+  url: string,
+  label: string,
+  attempts = 3,
+): Promise<string> {
+  let lastErr: unknown;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const resp = await fetch(url, {
+        cache: "force-cache",
+        signal: AbortSignal.timeout(20000),
+      });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      return await resp.text();
+    } catch (e) {
+      lastErr = e;
+      if (i < attempts - 1) {
+        await new Promise((r) => setTimeout(r, 1500 * (i + 1)));
+      }
+    }
+  }
+  throw new Error(
+    `Failed to fetch ${label} after ${attempts} attempts: ${String(lastErr)}. CEG is the source of truth — no fallback to FSD-002.`,
+  );
+}
+
 export const getRegistrySource = cache(async (): Promise<RegistrySource> => {
-  const [readmeResp, nsResp] = await Promise.all([
-    fetch(README_URL, { cache: "force-cache" }),
-    fetch(NAMESPACE_URL, { cache: "force-cache" }),
+  const [readmeText, text] = await Promise.all([
+    fetchTextWithRetry(README_URL, CEG_README_PATH),
+    fetchTextWithRetry(NAMESPACE_URL, CEG_NAMESPACE_PATH),
   ]);
-  if (!readmeResp.ok) {
-    throw new Error(
-      `Failed to fetch ${CEG_README_PATH}: HTTP ${readmeResp.status}. CEG 0.1 is the source of truth — no fallback to FSD-002.`,
-    );
-  }
-  if (!nsResp.ok) {
-    throw new Error(
-      `Failed to fetch ${CEG_NAMESPACE_PATH}: HTTP ${nsResp.status}. The §5 namespace file is required.`,
-    );
-  }
-  const readmeText = await readmeResp.text();
-  const text = await nsResp.text();
   const { specVersion, lastUpdated } = extractSpecVersion(readmeText);
   const sha = await fetchCommitSha();
 
