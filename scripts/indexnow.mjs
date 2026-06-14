@@ -34,14 +34,36 @@ function readSitemapUrls() {
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim());
 }
 
-async function submit(urlList) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function postOnce(urlList) {
   const res = await fetch(ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json; charset=utf-8" },
     body: JSON.stringify({ host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList }),
   });
-  // 200 OK or 202 Accepted both mean success; 4xx tells us the key/host is off.
   return res.status;
+}
+
+// 200 OK / 202 Accepted = success. 403 / 429 = throttling (the key is fine, we
+// just submitted too much too fast); retry with backoff. Other 4xx (400 bad
+// request, 422 host/key mismatch) are real errors — return without retrying.
+async function submit(urlList) {
+  const backoffs = [5000, 15000, 45000];
+  for (let attempt = 0; ; attempt++) {
+    let status;
+    try {
+      status = await postOnce(urlList);
+    } catch (e) {
+      status = `error: ${e.message}`;
+    }
+    const ok = status === 200 || status === 202;
+    const throttled = status === 403 || status === 429 || String(status).startsWith("error");
+    if (ok || !throttled || attempt >= backoffs.length) return status;
+    const wait = backoffs[attempt];
+    console.log(`[indexnow] HTTP ${status} (throttled) — retrying in ${wait / 1000}s`);
+    await sleep(wait);
+  }
 }
 
 async function main() {
