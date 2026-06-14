@@ -1836,5 +1836,27 @@
     "deepBody": "Il lettore completo delle specifiche, generato dal vivo dal registro: le primitive 1+4, le famiglie e i campi della busta, le politiche di composizione, lo spazio dei nomi aperto, la storia delle versioni e un esploratore interattivo delle attestazioni.",
     "ctaSpecReader": "Apri il lettore delle specifiche →",
     "ctaExplore": "Costruisci una catena nel browser →"
+  },
+  "epistemicWeb": {
+    "eyebrow": "Il Web Epistemico",
+    "headline": "Cos'è un web epistemico?",
+    "intro": "Il web di oggi è bravissimo a mostrarti le cose e pessimo nel dirti se crederci. Vedi un post, un prezzo, un'affermazione, ma non chi ci sta davvero dietro, su cosa si basa, o chi ha contestato. Un web epistemico risolve questo alla radice: ogni affermazione viaggia firmata, così puoi vedere chi l'ha detta, su cosa si regge, e come altri l'hanno confermata, corretta o sostituita.",
+    "p2": "Pensalo come il web con le sue ricevute. Niente di importante è anonimo. Ogni affermazione si può risalire fino a una firma e in avanti fino a ogni risposta. Smetti di dover scegliere da che parte stare sulla fiducia e inizi a poter controllare da solo.",
+    "biggerTitle": "Questo è più grande dell'IA",
+    "biggerBody": "E non riguarda solo le affermazioni, o l'IA. Lo stesso progetto che firma un'affermazione può portare tutto quello che fai online oggi: videochiamate, dirette, giochi, file, messaggi, tutto instradato direttamente tra i dispositivi che le persone già possiedono. Nessun data center nel mezzo. Nessuna manciata di aziende a possedere i tubi. Crittografia post-quantistica per impostazione predefinita. È un sostituto completo di Internet, ricostruito senza l'intermediario, che rende obsoleti i grandi data center e le grandi aziende tech che stanno tra te e tutti gli altri.",
+    "howTitle": "Come CIRIS lo rende reale",
+    "howLede": "Due pezzi open-source, entrambi in arrivo lungo il 2026. Uno è la lingua in cui è scritta ogni affermazione. Uno è la rete che la trasporta, e tutto il resto.",
+    "grammarCardEyebrow": "La lingua",
+    "grammarCardTitle": "CEG — una firma su ogni affermazione",
+    "grammarCardBody": "La CIRIS Epistemic Grammar è il piccolo formato condiviso che il web epistemico parla: chi ha fatto un'affermazione, di cosa parla, cosa cita, e come si lega ad altre affermazioni. Leggila, e puoi leggere l'intera traccia.",
+    "grammarCardCta": "Guarda la grammatica →",
+    "cewpCardEyebrow": "La rete",
+    "cewpCardTitle": "CEWP — Internet, senza l'intermediario",
+    "cewpCardBody": "La CIRIS Epistemic Web Platform è quell'Internet, che funziona davvero. Porta streaming, chiamate, giochi, file e affermazioni firmate direttamente tra i tuoi dispositivi su una mesh con crittografia post-quantistica, senza data center e senza grandi aziende tech nel mezzo. Tutto quello che fai online oggi, più veloce e privato, senza l'intermediario.",
+    "cewpCardCta": "Guarda la piattaforma →",
+    "appTitle": "Non è un'idea per un giorno lontano",
+    "appBody": "CIRIS è in arrivo ora. L'agente che parla questa grammatica e viaggia su questa rete si installa sul tuo telefono oggi, e la rete completa esce lungo il 2026.",
+    "ctaAppStore": "Scarica CIRIS sull'App Store",
+    "ctaGooglePlay": "Scarica CIRIS su Google Play"
   }
 }

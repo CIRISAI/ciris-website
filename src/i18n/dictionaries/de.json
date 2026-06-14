@@ -1836,5 +1836,27 @@
     "deepBody": "Der vollständige Spezifikations-Reader, live aus der Registry gerendert: die 1+4 Primitive, die Familien und Umschlagfelder, die Kompositionsrichtlinien, der offene Namensraum, die Versionsabstammung und ein interaktiver Attestierungs-Explorer.",
     "ctaSpecReader": "Spezifikations-Reader öffnen →",
     "ctaExplore": "Baue eine Kette im Browser →"
+  },
+  "epistemicWeb": {
+    "eyebrow": "Das Epistemische Web",
+    "headline": "Was ist ein epistemisches Web?",
+    "intro": "Das heutige Web ist großartig darin, dir Dinge zu zeigen, und schrecklich darin, dir zu sagen, ob du sie glauben sollst. Du siehst einen Beitrag, einen Preis, eine Behauptung, aber nicht, wer wirklich dahintersteht, worauf sie sich stützt oder wer ihr widersprochen hat. Ein epistemisches Web behebt das an der Wurzel: Jede Behauptung reist signiert, sodass du sehen kannst, wer sie gesagt hat, worauf sie beruht und wie andere ihr zugestimmt, sie korrigiert oder ersetzt haben.",
+    "p2": "Stell es dir als das Web mit seinen Belegen vor. Nichts Tragendes ist anonym. Jede Behauptung lässt sich zurück bis zu einer Signatur und vorwärts bis zu jeder Antwort verfolgen. Du musst dich beim Vertrauen nicht mehr auf eine Seite schlagen, sondern kannst selbst nachprüfen.",
+    "biggerTitle": "Das ist größer als KI",
+    "biggerBody": "Und es geht nicht nur um Behauptungen oder um KI. Genau das Design, das eine Behauptung signiert, kann alles tragen, was du heute online tust: Videoanrufe, Livestreams, Spiele, Dateien, Nachrichten, alles direkt zwischen den Geräten geleitet, die die Leute schon besitzen. Keine Rechenzentren in der Mitte. Keine Handvoll Firmen, denen die Leitungen gehören. Post-Quanten-Verschlüsselung von Haus aus. Es ist ein vollständiger Ersatz für das Internet, neu gebaut ohne Mittelsmann, was die großen Rechenzentren und die großen Tech-Konzerne, die zwischen dir und allen anderen sitzen, überflüssig macht.",
+    "howTitle": "Wie CIRIS es Wirklichkeit werden lässt",
+    "howLede": "Zwei Open-Source-Teile, beide erscheinen über 2026 hinweg. Eines ist die Sprache, in der jede Behauptung geschrieben ist. Eines ist das Netzwerk, das sie trägt, und alles andere.",
+    "grammarCardEyebrow": "Die Sprache",
+    "grammarCardTitle": "CEG — eine Signatur auf jeder Behauptung",
+    "grammarCardBody": "Die CIRIS Epistemic Grammar ist das kleine gemeinsame Format, das das epistemische Web spricht: wer eine Behauptung aufgestellt hat, worum es geht, was sie zitiert und wie sie mit anderen Behauptungen zusammenhängt. Lies sie, und du kannst die ganze Spur lesen.",
+    "grammarCardCta": "Die Grammatik ansehen →",
+    "cewpCardEyebrow": "Das Netzwerk",
+    "cewpCardTitle": "CEWP — das Internet, ohne Mittelsmann",
+    "cewpCardBody": "Die CIRIS Epistemic Web Platform ist genau dieses Internet, tatsächlich in Betrieb. Sie überträgt Streaming, Anrufe, Gaming, Dateien und signierte Behauptungen direkt zwischen deinen Geräten über ein post-quanten-verschlüsseltes Mesh, ohne Rechenzentren und ohne große Tech-Konzerne in der Mitte. Alles, was du heute online tust, schneller und privat, ohne Mittelsmann.",
+    "cewpCardCta": "Die Plattform ansehen →",
+    "appTitle": "Das ist keine Irgendwann-Idee",
+    "appBody": "CIRIS erscheint jetzt. Der Agent, der diese Grammatik spricht und auf diesem Netzwerk fährt, lässt sich heute auf deinem Handy installieren, und das vollständige Netzwerk wird über 2026 hinweg ausgerollt.",
+    "ctaAppStore": "CIRIS im App Store holen",
+    "ctaGooglePlay": "CIRIS bei Google Play holen"
   }
 }

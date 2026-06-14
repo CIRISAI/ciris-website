@@ -1836,5 +1836,27 @@
     "deepBody": "The full spec reader, rendered live from the registry: the 1+4 primitives, the families and envelope fields, the composition policies, the open namespace, the version lineage, and an interactive attestation explorer.",
     "ctaSpecReader": "Open the spec reader →",
     "ctaExplore": "Build a chain in the browser →"
+  },
+  "epistemicWeb": {
+    "eyebrow": "The Epistemic Web",
+    "headline": "What is an epistemic web?",
+    "intro": "Today’s web is great at showing you things and terrible at telling you whether to believe them. You see a post, a price, a claim, but not who really stands behind it, what they based it on, or who has pushed back. An epistemic web fixes that at the root: every claim travels signed, so you can see who said it, what it rests on, and how others have agreed, corrected, or replaced it.",
+    "p2": "Think of it as the web with its receipts. Nothing load-bearing is anonymous. Any claim can be traced back to a signature and forward to every response. You stop having to pick a side on trust and start being able to check for yourself.",
+    "biggerTitle": "This is bigger than AI",
+    "biggerBody": "And it is not just about claims, or about AI. The same design that signs a claim can carry everything you do online today: video calls, live streams, games, files, messages, all of it routed straight between the devices people already own. No data centers in the middle. No handful of companies owning the pipes. Post-quantum encryption by default. It is a complete replacement for the internet, rebuilt without the middleman, which makes the big data centers and big tech that sit between you and everyone else obsolete.",
+    "howTitle": "How CIRIS makes it real",
+    "howLede": "Two open-source pieces, both shipping through 2026. One is the language every claim is written in. One is the network that carries it, and everything else.",
+    "grammarCardEyebrow": "The language",
+    "grammarCardTitle": "CEG — a signature on every claim",
+    "grammarCardBody": "The CIRIS Epistemic Grammar is the small shared format the epistemic web speaks: who made a claim, what it’s about, what it cites, and how it relates to other claims. Read it, and you can read the whole trail.",
+    "grammarCardCta": "See the grammar →",
+    "cewpCardEyebrow": "The network",
+    "cewpCardTitle": "CEWP — the internet, without the middleman",
+    "cewpCardBody": "The CIRIS Epistemic Web Platform is that internet, actually running. It carries streaming, calls, gaming, files, and signed claims directly between your devices over a post-quantum encrypted mesh, with no data centers and no big tech in the middle. Everything you do online today, faster and private, without the middleman.",
+    "cewpCardCta": "See the platform →",
+    "appTitle": "It’s not a someday idea",
+    "appBody": "CIRIS is shipping now. The agent that speaks this grammar and rides this network installs on your phone today, and the full network rolls out through 2026.",
+    "ctaAppStore": "Get CIRIS on the App Store",
+    "ctaGooglePlay": "Get CIRIS on Google Play"
   }
 }

@@ -1836,5 +1836,27 @@
     "deepBody": "Trình đọc đặc tả đầy đủ, kết xuất trực tiếp từ sổ đăng ký: các nguyên thủy 1+4, các họ và các trường phong bì, các chính sách ghép nối, không gian tên mở, dòng dõi phiên bản, và một trình khám phá chứng thực tương tác.",
     "ctaSpecReader": "Mở trình đọc đặc tả →",
     "ctaExplore": "Dựng một chuỗi trong trình duyệt →"
+  },
+  "epistemicWeb": {
+    "eyebrow": "Web Tri Thức",
+    "headline": "Web tri thức là gì?",
+    "intro": "Web ngày nay rất giỏi cho bạn xem mọi thứ nhưng rất tệ trong việc cho bạn biết có nên tin chúng hay không. Bạn thấy một bài đăng, một mức giá, một tuyên bố, nhưng không thấy ai thực sự đứng sau nó, họ dựa vào đâu, hay ai đã phản bác. Web tri thức sửa điều đó từ gốc rễ: mỗi tuyên bố đều di chuyển kèm chữ ký, nên bạn có thể thấy ai đã nói nó, nó dựa trên cái gì, và người khác đã đồng ý, sửa lại, hay thay thế nó ra sao.",
+    "p2": "Hãy hình dung đó là web kèm theo bằng chứng của nó. Không có điều gì quan trọng mà ẩn danh. Bất kỳ tuyên bố nào cũng có thể truy ngược về một chữ ký và truy xuôi tới mọi phản hồi. Bạn không còn phải chọn phe về chuyện ai đáng tin, mà bắt đầu có thể tự mình kiểm chứng.",
+    "biggerTitle": "Điều này lớn hơn cả AI",
+    "biggerBody": "Và nó không chỉ về tuyên bố, hay về AI. Chính thiết kế ký một tuyên bố cũng có thể mang theo mọi thứ bạn làm trực tuyến hôm nay: gọi video, phát trực tiếp, chơi game, tệp tin, tin nhắn, tất cả được định tuyến thẳng giữa các thiết bị mà mọi người đã có. Không có trung tâm dữ liệu ở giữa. Không có một nhúm công ty sở hữu đường ống. Mã hóa hậu lượng tử theo mặc định. Đây là sự thay thế hoàn toàn cho internet, được xây dựng lại mà không cần trung gian, khiến các trung tâm dữ liệu lớn và các ông lớn công nghệ ngồi giữa bạn và mọi người khác trở nên lỗi thời.",
+    "howTitle": "Cách CIRIS biến nó thành hiện thực",
+    "howLede": "Hai phần mã nguồn mở, cả hai đều ra mắt trong suốt năm 2026. Một phần là ngôn ngữ mà mọi tuyên bố được viết bằng. Một phần là mạng lưới chuyên chở nó, và mọi thứ khác.",
+    "grammarCardEyebrow": "Ngôn ngữ",
+    "grammarCardTitle": "CEG — một chữ ký trên mỗi tuyên bố",
+    "grammarCardBody": "CIRIS Epistemic Grammar là định dạng chung nhỏ gọn mà web tri thức dùng để nói: ai đưa ra một tuyên bố, nó về điều gì, nó trích dẫn gì, và nó liên hệ ra sao với các tuyên bố khác. Đọc nó, và bạn có thể đọc trọn cả vết đường.",
+    "grammarCardCta": "Xem ngữ pháp →",
+    "cewpCardEyebrow": "Mạng lưới",
+    "cewpCardTitle": "CEWP — internet, không cần trung gian",
+    "cewpCardBody": "CIRIS Epistemic Web Platform chính là internet đó, đang thực sự chạy. Nó chuyên chở phát trực tuyến, cuộc gọi, game, tệp tin, và các tuyên bố đã ký thẳng giữa các thiết bị của bạn qua một mạng lưới mã hóa hậu lượng tử, không có trung tâm dữ liệu và không có ông lớn công nghệ ở giữa. Mọi thứ bạn làm trực tuyến hôm nay, nhanh hơn và riêng tư, không cần trung gian.",
+    "cewpCardCta": "Xem nền tảng →",
+    "appTitle": "Đây không phải ý tưởng của một ngày nào đó",
+    "appBody": "CIRIS đang ra mắt ngay bây giờ. Tác nhân nói ngôn ngữ này và đi trên mạng lưới này cài được vào điện thoại của bạn hôm nay, và mạng lưới đầy đủ sẽ triển khai trong suốt năm 2026.",
+    "ctaAppStore": "Tải CIRIS trên App Store",
+    "ctaGooglePlay": "Tải CIRIS trên Google Play"
   }
 }

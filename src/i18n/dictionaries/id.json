@@ -1836,5 +1836,27 @@
     "deepBody": "Pembaca spesifikasi lengkap, dirender langsung dari registri: primitif 1+4, keluarga dan kolom amplop, kebijakan komposisi, ruang nama terbuka, garis keturunan versi, dan penjelajah atestasi interaktif.",
     "ctaSpecReader": "Buka pembaca spesifikasi →",
     "ctaExplore": "Bangun rantai di peramban →"
+  },
+  "epistemicWeb": {
+    "eyebrow": "Web Epistemik",
+    "headline": "Apa itu web epistemik?",
+    "intro": "Web saat ini hebat dalam menunjukkan banyak hal kepada Anda, tetapi buruk dalam memberi tahu apakah Anda harus memercayainya. Anda melihat sebuah unggahan, harga, atau klaim, tetapi tidak melihat siapa yang sebenarnya berdiri di belakangnya, apa dasarnya, atau siapa yang sudah membantahnya. Web epistemik memperbaiki itu dari akarnya: setiap klaim bergerak dengan tanda tangan, sehingga Anda bisa melihat siapa yang mengatakannya, apa landasannya, dan bagaimana orang lain telah menyetujui, mengoreksi, atau menggantinya.",
+    "p2": "Bayangkan web ini lengkap dengan buktinya. Tidak ada hal penting yang anonim. Klaim apa pun bisa ditelusuri mundur ke sebuah tanda tangan dan maju ke setiap tanggapan. Anda tidak perlu lagi memilih pihak soal kepercayaan dan mulai bisa memeriksanya sendiri.",
+    "biggerTitle": "Ini lebih besar daripada AI",
+    "biggerBody": "Dan ini bukan hanya soal klaim, atau soal AI. Rancangan yang sama yang menandatangani sebuah klaim bisa membawa segala hal yang Anda lakukan online hari ini: panggilan video, siaran langsung, game, file, pesan, semuanya dialirkan langsung antarperangkat yang sudah dimiliki orang. Tidak ada pusat data di tengah. Tidak ada segelintir perusahaan yang menguasai saluran. Enkripsi pasca-kuantum secara default. Ini adalah pengganti internet sepenuhnya, dibangun ulang tanpa perantara, yang membuat pusat data besar dan perusahaan teknologi besar yang duduk di antara Anda dan semua orang menjadi usang.",
+    "howTitle": "Bagaimana CIRIS mewujudkannya",
+    "howLede": "Dua bagian sumber terbuka, keduanya dirilis sepanjang 2026. Satu adalah bahasa tempat setiap klaim ditulis. Satu adalah jaringan yang membawanya, dan segala hal lainnya.",
+    "grammarCardEyebrow": "Bahasanya",
+    "grammarCardTitle": "CEG — tanda tangan pada setiap klaim",
+    "grammarCardBody": "CIRIS Epistemic Grammar adalah format bersama yang kecil yang dipakai web epistemik: siapa yang membuat klaim, tentang apa, apa yang dikutipnya, dan bagaimana hubungannya dengan klaim lain. Bacalah, dan Anda bisa membaca seluruh jejaknya.",
+    "grammarCardCta": "Lihat tata bahasanya →",
+    "cewpCardEyebrow": "Jaringannya",
+    "cewpCardTitle": "CEWP — internet, tanpa perantara",
+    "cewpCardBody": "CIRIS Epistemic Web Platform adalah internet itu, yang benar-benar berjalan. Ia membawa streaming, panggilan, game, file, dan klaim bertanda tangan langsung antarperangkat Anda melalui jaringan mesh terenkripsi pasca-kuantum, tanpa pusat data dan tanpa perusahaan teknologi besar di tengah. Segala hal yang Anda lakukan online hari ini, lebih cepat dan pribadi, tanpa perantara.",
+    "cewpCardCta": "Lihat platformnya →",
+    "appTitle": "Ini bukan ide suatu hari nanti",
+    "appBody": "CIRIS dirilis sekarang. Agen yang berbicara dalam tata bahasa ini dan menumpang jaringan ini bisa dipasang di ponsel Anda hari ini, dan jaringan lengkapnya diluncurkan sepanjang 2026.",
+    "ctaAppStore": "Dapatkan CIRIS di App Store",
+    "ctaGooglePlay": "Dapatkan CIRIS di Google Play"
   }
 }

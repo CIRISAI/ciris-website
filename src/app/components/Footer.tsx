@@ -41,6 +41,7 @@ const navigation: Navigation = {
   support: [
     { name: "Compare", href: "/compare", key: "compare" },
     { name: "Compliance", href: "/compliance", key: "compliance" },
+    { name: "The Epistemic Web", href: "/epistemic-web", key: "epistemicWeb" },
     { name: "CEWP (soup)", href: "/cewp", key: "cewp" },
     { name: "Grammar (CEG)", href: "/grammar", key: "grammar" },
     { name: "Mystery game", href: "/game", key: "game" },

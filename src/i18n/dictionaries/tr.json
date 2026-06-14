@@ -1836,5 +1836,27 @@
     "deepBody": "Kayıttan canlı olarak oluşturulan tam teknik belge okuyucusu: 1+4 ilkel öğeleri, aileler ve zarf alanları, kompozisyon politikaları, açık ad alanı, sürüm soyağacı ve etkileşimli bir tasdik gezgini.",
     "ctaSpecReader": "Teknik belge okuyucusunu açın →",
     "ctaExplore": "Tarayıcıda bir zincir oluşturun →"
+  },
+  "epistemicWeb": {
+    "eyebrow": "Epistemik Web",
+    "headline": "Epistemik web nedir?",
+    "intro": "Bugünün webi size bir şeyler göstermekte harika, ama onlara inanıp inanmamanızı söylemekte berbat. Bir gönderi, bir fiyat, bir iddia görürsünüz, ama arkasında gerçekte kimin durduğunu, neye dayandığını ya da kimin itiraz ettiğini görmezsiniz. Epistemik web bunu kökünden çözer: her iddia imzalı şekilde dolaşır, böylece kimin söylediğini, neye dayandığını ve başkalarının nasıl onayladığını, düzelttiğini ya da yerine koyduğunu görebilirsiniz.",
+    "p2": "Bunu makbuzlarıyla birlikte gelen web olarak düşünün. Önemli hiçbir şey anonim değildir. Herhangi bir iddia geriye doğru bir imzaya, ileriye doğru her yanıta kadar izlenebilir. Güven konusunda bir taraf seçmek zorunda kalmayı bırakır, kendiniz kontrol edebilir hale gelirsiniz.",
+    "biggerTitle": "Bu, yapay zekadan daha büyük",
+    "biggerBody": "Ve mesele yalnızca iddialarla ya da yapay zekayla ilgili değil. Bir iddiayı imzalayan aynı tasarım, bugün internette yaptığınız her şeyi taşıyabilir: görüntülü aramalar, canlı yayınlar, oyunlar, dosyalar, mesajlar, hepsi insanların zaten sahip olduğu cihazlar arasında doğrudan yönlendirilir. Ortada veri merkezi yok. Boruları elinde tutan bir avuç şirket yok. Varsayılan olarak post-kuantum şifreleme. Bu, aracısız yeniden inşa edilmiş, internetin eksiksiz bir yenisidir; sizinle herkes arasında duran büyük veri merkezlerini ve büyük teknoloji şirketlerini geçersiz kılar.",
+    "howTitle": "CIRIS bunu nasıl gerçek kılıyor",
+    "howLede": "İki açık kaynak parça, ikisi de 2026 boyunca geliyor. Biri, her iddianın yazıldığı dildir. Biri, onu ve geri kalan her şeyi taşıyan ağdır.",
+    "grammarCardEyebrow": "Dil",
+    "grammarCardTitle": "CEG — her iddiada bir imza",
+    "grammarCardBody": "CIRIS Epistemic Grammar, epistemik webin konuştuğu küçük ortak biçimdir: bir iddiayı kimin yaptığı, neyle ilgili olduğu, neyi alıntıladığı ve diğer iddialarla nasıl ilişkilendiği. Onu okuyun, tüm izi okuyabilirsiniz.",
+    "grammarCardCta": "Dilbilgisini görün →",
+    "cewpCardEyebrow": "Ağ",
+    "cewpCardTitle": "CEWP — internet, aracısız",
+    "cewpCardBody": "CIRIS Epistemic Web Platform, gerçekten çalışan o internettir. Yayınları, aramaları, oyunları, dosyaları ve imzalı iddiaları, post-kuantum şifreli bir örgü ağ üzerinden, ortada veri merkezi ve büyük teknoloji şirketi olmadan doğrudan cihazlarınız arasında taşır. Bugün internette yaptığınız her şey, daha hızlı ve gizli, aracısız.",
+    "cewpCardCta": "Platformu görün →",
+    "appTitle": "Bir gün gelecek bir fikir değil",
+    "appBody": "CIRIS şimdi geliyor. Bu dilbilgisini konuşan ve bu ağ üzerinde giden ajan, bugün telefonunuza yükleniyor ve ağın tamamı 2026 boyunca yayılıyor.",
+    "ctaAppStore": "CIRIS'i App Store'dan edinin",
+    "ctaGooglePlay": "CIRIS'i Google Play'den edinin"
   }
 }

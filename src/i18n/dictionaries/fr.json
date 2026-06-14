@@ -1836,5 +1836,27 @@
     "deepBody": "Le lecteur de spécification complet, rendu en direct depuis le registre : les primitives 1+4, les familles et les champs d'enveloppe, les politiques de composition, l'espace de noms ouvert, la lignée des versions, et un explorateur d'attestation interactif.",
     "ctaSpecReader": "Ouvrir le lecteur de spécification →",
     "ctaExplore": "Construire une chaîne dans le navigateur →"
+  },
+  "epistemicWeb": {
+    "eyebrow": "Le Web Épistémique",
+    "headline": "Qu'est-ce qu'un web épistémique ?",
+    "intro": "Le web d'aujourd'hui excelle à vous montrer des choses et échoue lamentablement à vous dire s'il faut les croire. Vous voyez une publication, un prix, une affirmation, mais pas qui se tient vraiment derrière, sur quoi elle se fonde, ni qui l'a contestée. Un web épistémique corrige cela à la racine : chaque affirmation circule signée, pour que vous puissiez voir qui l'a dite, sur quoi elle repose, et comment d'autres l'ont approuvée, corrigée ou remplacée.",
+    "p2": "Voyez-le comme le web accompagné de ses preuves. Rien d'important n'est anonyme. Toute affirmation peut être remontée jusqu'à une signature et suivie en avant jusqu'à chaque réponse. Vous n'avez plus à choisir un camp sur la confiance, vous pouvez vérifier par vous-même.",
+    "biggerTitle": "C'est plus grand que l'IA",
+    "biggerBody": "Et il ne s'agit pas seulement d'affirmations, ni d'IA. La même conception qui signe une affirmation peut transporter tout ce que vous faites en ligne aujourd'hui : appels vidéo, diffusions en direct, jeux, fichiers, messages, le tout acheminé directement entre les appareils que les gens possèdent déjà. Pas de centres de données au milieu. Pas une poignée d'entreprises propriétaires des tuyaux. Chiffrement post-quantique par défaut. C'est un remplacement complet d'internet, reconstruit sans intermédiaire, ce qui rend obsolètes les grands centres de données et les géants de la tech assis entre vous et tous les autres.",
+    "howTitle": "Comment CIRIS le rend réel",
+    "howLede": "Deux briques open source, toutes deux déployées tout au long de 2026. L'une est la langue dans laquelle chaque affirmation est écrite. L'autre est le réseau qui la transporte, et tout le reste.",
+    "grammarCardEyebrow": "La langue",
+    "grammarCardTitle": "CEG — une signature sur chaque affirmation",
+    "grammarCardBody": "La CIRIS Epistemic Grammar est le petit format partagé que parle le web épistémique : qui a fait une affirmation, de quoi elle parle, ce qu'elle cite, et comment elle se relie aux autres affirmations. Lisez-la, et vous pouvez lire toute la piste.",
+    "grammarCardCta": "Voir la grammaire →",
+    "cewpCardEyebrow": "Le réseau",
+    "cewpCardTitle": "CEWP — internet, sans intermédiaire",
+    "cewpCardBody": "La CIRIS Epistemic Web Platform, c'est cet internet, qui tourne pour de vrai. Elle transporte le streaming, les appels, les jeux, les fichiers et les affirmations signées directement entre vos appareils sur un maillage chiffré post-quantique, sans centres de données et sans géants de la tech au milieu. Tout ce que vous faites en ligne aujourd'hui, plus rapide et privé, sans intermédiaire.",
+    "cewpCardCta": "Voir la plateforme →",
+    "appTitle": "Ce n'est pas une idée pour un jour lointain",
+    "appBody": "CIRIS sort maintenant. L'agent qui parle cette langue et roule sur ce réseau s'installe sur votre téléphone dès aujourd'hui, et le réseau complet se déploie tout au long de 2026.",
+    "ctaAppStore": "Obtenir CIRIS sur l'App Store",
+    "ctaGooglePlay": "Obtenir CIRIS sur Google Play"
   }
 }

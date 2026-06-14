@@ -2363,5 +2363,123 @@ export const MARKETING_OG: Record<
       "title": "CEWP: ایک بہتر انٹرنیٹ، بڑی ٹیک کے بغیر",
       "description": "CIRIS Epistemic Web Platform (تلفظ انگریزی لفظ “soup” جیسا): انٹرنیٹ جو براہِ راست آپ کے اپنے آلات کے درمیان روٹ ہوتا ہے، بیچ میں کوئی ڈیٹا سینٹر نہیں، ہر دعویٰ دستخط شدہ اور پڑھنے کے قابل۔"
     }
+  },
+  "/epistemic-web": {
+    "en": {
+      "title": "The Epistemic Web: The Internet, Without the Middleman",
+      "description": "A web where every claim is signed and checkable, and everything you do online (streaming, calls, gaming, files) runs directly between your devices. Post-quantum encrypted, no data centers, no big tech. CIRIS makes it real with CEG and CEWP."
+    },
+    "es": {
+      "title": "La web epistémica: internet, sin el intermediario",
+      "description": "Una web donde cada afirmación está firmada y se puede comprobar, y todo lo que haces en línea (transmisiones, llamadas, juegos, archivos) corre directamente entre tus dispositivos. Cifrado poscuántico, sin centros de datos, sin grandes tecnológicas. CIRIS lo hace realidad con CEG y CEWP."
+    },
+    "am": {
+      "title": "የእውቀት ድር፦ በይነመረብ፣ ያለ መሃከለኛ",
+      "description": "እያንዳንዱ ይዘት የተፈረመና ሊረጋገጥ የሚችል ድር፣ እና በመስመር ላይ የምታደርገው ሁሉ (ስርጭት፣ ጥሪዎች፣ ጨዋታ፣ ፋይሎች) በመሳሪያዎችህ መካከል በቀጥታ ይሰራል። ድኅረ-ኳንተም የተመሰጠረ፣ ምንም የመረጃ ማዕከላት የሉም፣ ምንም ትላልቅ የቴክ ኩባንያዎች የሉም። CIRIS በ CEG እና CEWP እውን ያደርገዋል።"
+    },
+    "ha": {
+      "title": "Yanar Gizon Sani: Yanar Gizo, Ba Tare da Dan Tsakiya Ba",
+      "description": "Yanar gizo inda kowace da'awa take da sa hannu kuma ana iya duba ta, kuma duk abin da kake yi a yanar gizo (watsa shirye-shirye, kira, wasanni, fayiloli) yana gudana kai tsaye tsakanin na'urorinka. Mai sirrin bayan-quantum, babu cibiyoyin bayanai, babu manyan kamfanonin fasaha. CIRIS ya sa shi ya zama gaskiya da CEG da CEWP."
+    },
+    "yo": {
+      "title": "Wẹ́ẹ̀bù Ìmọ̀: Íńtánẹ́ẹ̀tì, Láìsí Alárinà",
+      "description": "Wẹ́ẹ̀bù níbi tí gbogbo ẹ̀sùn ti ní ìfọwọ́sí tí a sì lè ṣàyẹ̀wò, àti gbogbo ohun tí o ń ṣe lórí ayélujára (ìgbóhùnsáfẹ́fẹ́, ìpè, eré, fáìlì) ń ṣiṣẹ́ tààrà láàrin àwọn ẹ̀rọ rẹ. Pẹ̀lú ìpamọ́ lẹ́yìn-kúọ́ntọ̀mù, láìsí ibùdó dátà, láìsí ilé-iṣẹ́ ẹ̀rọ ńlá. CIRIS sọ ọ́ di òtítọ́ pẹ̀lú CEG àti CEWP."
+    },
+    "sw": {
+      "title": "Mtandao wa Maarifa: Intaneti, Bila Mpatanishi",
+      "description": "Mtandao ambao kila dai limetiwa saini na linaweza kuhakikiwa, na kila kitu unachofanya mtandaoni (matangazo, simu, michezo, faili) hupita moja kwa moja kati ya vifaa vyako. Umesimbwa kuhimili quantum, bila vituo vya data, bila teknolojia kubwa. CIRIS inalifanya liwe halisi kwa CEG na CEWP."
+    },
+    "ta": {
+      "title": "எபிஸ்டெமிக் வலை: இணையம், இடைத்தரகர் இல்லாமல்",
+      "description": "ஒவ்வொரு கூற்றும் கையொப்பமிடப்பட்டு சரிபார்க்கக்கூடிய ஒரு வலை, மேலும் நீங்கள் ஆன்லைனில் செய்யும் அனைத்தும் (ஸ்ட்ரீமிங், அழைப்புகள், கேமிங், கோப்புகள்) உங்கள் சாதனங்களுக்கு இடையே நேரடியாக இயங்குகிறது. போஸ்ட்-குவாண்டம் என்கிரிப்ட் செய்யப்பட்டது, தரவு மையங்கள் இல்லை, பெரிய தொழில்நுட்பம் இல்லை. CIRIS இதை CEG மற்றும் CEWP மூலம் நிஜமாக்குகிறது."
+    },
+    "te": {
+      "title": "ఎపిస్టెమిక్ వెబ్: ఇంటర్నెట్, మధ్యవర్తి లేకుండా",
+      "description": "ప్రతి వాదన సంతకం చేయబడి, తనిఖీ చేయదగిన ఒక వెబ్, మరియు మీరు ఆన్‌లైన్‌లో చేసే ప్రతిదీ (స్ట్రీమింగ్, కాల్స్, గేమింగ్, ఫైళ్లు) మీ పరికరాల మధ్య నేరుగా నడుస్తుంది. పోస్ట్-క్వాంటం ఎన్‌క్రిప్టెడ్, డేటా సెంటర్లు లేవు, పెద్ద టెక్ లేదు. CIRIS దీన్ని CEG మరియు CEWP తో నిజం చేస్తుంది."
+    },
+    "mr": {
+      "title": "ज्ञानमूलक वेब: इंटरनेट, मध्यस्थाशिवाय",
+      "description": "असे वेब जिथे प्रत्येक दावा स्वाक्षरी केलेला आणि तपासण्याजोगा आहे, आणि तुम्ही ऑनलाइन जे काही करता (स्ट्रीमिंग, कॉल, गेमिंग, फायली) ते थेट तुमच्या उपकरणांदरम्यान चालते. पोस्ट-क्वांटम एन्क्रिप्टेड, कोणतेही डेटा सेंटर नाही, कोणतीही मोठी टेक कंपनी नाही. CIRIS हे CEG आणि CEWP सह खरे करते."
+    },
+    "pa": {
+      "title": "ਐਪਿਸਟੈਮਿਕ ਵੈੱਬ: ਇੰਟਰਨੈੱਟ, ਵਿਚੋਲੇ ਤੋਂ ਬਿਨਾਂ",
+      "description": "ਇੱਕ ਵੈੱਬ ਜਿੱਥੇ ਹਰ ਦਾਅਵਾ ਦਸਤਖਤ ਕੀਤਾ ਅਤੇ ਜਾਂਚਣਯੋਗ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਆਨਲਾਈਨ ਜੋ ਵੀ ਕਰਦੇ ਹੋ (ਸਟ੍ਰੀਮਿੰਗ, ਕਾਲਾਂ, ਗੇਮਿੰਗ, ਫਾਈਲਾਂ) ਉਹ ਤੁਹਾਡੇ ਡਿਵਾਈਸਾਂ ਵਿਚਕਾਰ ਸਿੱਧਾ ਚੱਲਦਾ ਹੈ। ਪੋਸਟ-ਕੁਆਂਟਮ ਐਨਕ੍ਰਿਪਟਡ, ਕੋਈ ਡਾਟਾ ਸੈਂਟਰ ਨਹੀਂ, ਕੋਈ ਵੱਡੀ ਟੈਕ ਨਹੀਂ। CIRIS ਇਸ ਨੂੰ CEG ਅਤੇ CEWP ਨਾਲ ਅਸਲੀ ਬਣਾਉਂਦਾ ਹੈ।"
+    },
+    "my": {
+      "title": "အသိပညာဆိုင်ရာ ဝဘ်— အင်တာနက်၊ ကြားပွဲစားမပါဘဲ",
+      "description": "ဆိုဆုံးမချက်တိုင်း လက်မှတ်ထိုးပြီး စစ်ဆေးနိုင်သော ဝဘ်တစ်ခု၊ ထို့ပြင် သင် အွန်လိုင်းပေါ်တွင် လုပ်ဆောင်သမျှ (streaming၊ ခေါ်ဆိုမှုများ၊ ဂိမ်းကစားခြင်း၊ ဖိုင်များ) သည် သင့်စက်ပစ္စည်းများအကြား တိုက်ရိုက် လည်ပတ်သည်။ ကွမ်တမ်လွန် ကုဒ်ဝှက်ထား၊ ဒေတာစင်တာမရှိ၊ ကြီးမားသည့် နည်းပညာကုမ္ပဏီမရှိ။ CIRIS က ၎င်းကို CEG နှင့် CEWP ဖြင့် အမှန်တကယ် ဖြစ်စေသည်။"
+    },
+    "bn": {
+      "title": "এপিস্টেমিক ওয়েব: ইন্টারনেট, দালাল ছাড়াই",
+      "description": "একটি ওয়েব যেখানে প্রতিটি দাবি স্বাক্ষরিত আর যাচাইযোগ্য, আর আপনি অনলাইনে যা কিছু করেন (স্ট্রিমিং, কল, গেমিং, ফাইল) তা সরাসরি আপনার ডিভাইসগুলোর মধ্যে চলে। পোস্ট-কোয়ান্টাম এনক্রিপ্টেড, কোনো ডেটা সেন্টার নেই, কোনো বড় প্রযুক্তি নেই। CIRIS এটিকে CEG আর CEWP দিয়ে বাস্তব করে।"
+    },
+    "hi": {
+      "title": "ज्ञानमूलक वेब: इंटरनेट, बिचौलिए के बिना",
+      "description": "एक ऐसा वेब जहाँ हर दावा हस्ताक्षरित और जाँचने योग्य है, और आप ऑनलाइन जो कुछ भी करते हैं (स्ट्रीमिंग, कॉल, गेमिंग, फ़ाइलें) वह सीधे आपके उपकरणों के बीच चलता है। पोस्ट-क्वांटम एन्क्रिप्टेड, कोई डेटा सेंटर नहीं, कोई बड़ी टेक कंपनी नहीं। CIRIS इसे CEG और CEWP के साथ सच कर देता है।"
+    },
+    "vi": {
+      "title": "Web Tri Thức: Internet, Không Cần Trung Gian",
+      "description": "Một web nơi mọi tuyên bố đều được ký và kiểm chứng được, và mọi thứ bạn làm trực tuyến (phát trực tuyến, cuộc gọi, game, tệp tin) chạy thẳng giữa các thiết bị của bạn. Mã hóa hậu lượng tử, không trung tâm dữ liệu, không ông lớn công nghệ. CIRIS biến nó thành hiện thực với CEG và CEWP."
+    },
+    "id": {
+      "title": "Web Epistemik: Internet, Tanpa Perantara",
+      "description": "Web tempat setiap klaim ditandatangani dan bisa diperiksa, dan segala hal yang Anda lakukan online (streaming, panggilan, game, file) berjalan langsung antarperangkat Anda. Terenkripsi pasca-kuantum, tanpa pusat data, tanpa perusahaan teknologi besar. CIRIS mewujudkannya dengan CEG dan CEWP."
+    },
+    "th": {
+      "title": "เว็บแห่งความรู้: อินเทอร์เน็ตที่ไม่มีคนกลาง",
+      "description": "เว็บที่ทุกคำกล่าวอ้างลงลายเซ็นและตรวจสอบได้ และทุกอย่างที่คุณทำออนไลน์ (สตรีม โทร เกม ไฟล์) วิ่งตรงระหว่างอุปกรณ์ของคุณ เข้ารหัสแบบทนทานต่อควอนตัม ไม่มีศูนย์ข้อมูล ไม่มีบิ๊กเทค CIRIS ทำให้มันเป็นจริงด้วย CEG และ CEWP"
+    },
+    "tr": {
+      "title": "Epistemik Web: İnternet, Aracısız",
+      "description": "Her iddianın imzalı ve kontrol edilebilir olduğu, internette yaptığınız her şeyin (yayın, arama, oyun, dosyalar) doğrudan cihazlarınız arasında çalıştığı bir web. Post-kuantum şifreli, veri merkezi yok, büyük teknoloji yok. CIRIS bunu CEG ve CEWP ile gerçek kılıyor."
+    },
+    "uk": {
+      "title": "Епістемічна мережа: інтернет без посередника",
+      "description": "Мережа, де кожне твердження підписане й перевірне, а все, що ви робите онлайн (стрімінг, дзвінки, ігри, файли), іде напряму між вашими пристроями. Постквантове шифрування, жодних центрів обробки даних, жодних великих техкомпаній. CIRIS втілює це за допомогою CEG і CEWP."
+    },
+    "ru": {
+      "title": "Эпистемическая сеть: интернет без посредника",
+      "description": "Сеть, где каждое утверждение подписано и проверяемо, а всё, что вы делаете онлайн (стриминг, звонки, игры, файлы), идёт напрямую между вашими устройствами. Постквантовое шифрование, никаких центров обработки данных, никаких крупных технокомпаний. CIRIS делает это реальным с помощью CEG и CEWP."
+    },
+    "ko": {
+      "title": "인식의 웹: 중개자 없는 인터넷",
+      "description": "모든 주장이 서명되고 검증 가능한 웹, 그리고 여러분이 온라인에서 하는 모든 것(스트리밍, 통화, 게임, 파일)이 기기 사이로 곧장 오가는 웹. 양자내성 암호화, 데이터 센터 없음, 빅테크 없음. CIRIS가 CEG와 CEWP로 이를 현실로 만듭니다."
+    },
+    "ja": {
+      "title": "認識のウェブ：仲介者のいないインターネット",
+      "description": "あらゆる主張が署名され、確かめられるウェブ。そして、あなたがオンラインでするすべて（ストリーミング、通話、ゲーム、ファイル）が、あなたの端末どうしを直接つないで動きます。ポスト量子暗号、データセンターなし、ビッグテックなし。CIRISがCEGとCEWPでこれを実現します。"
+    },
+    "zh": {
+      "title": "认知网络：去掉中间商的互联网",
+      "description": "一个每句说法都带签名、都可查证的网络，你在线上做的一切（流媒体、通话、游戏、文件）都在你的设备之间直接传输。后量子加密，没有数据中心，没有大型科技公司。CIRIS 用 CEG 和 CEWP 让它成真。"
+    },
+    "de": {
+      "title": "Das Epistemische Web: Das Internet, ohne Mittelsmann",
+      "description": "Ein Web, in dem jede Behauptung signiert und prüfbar ist, und alles, was du online tust (Streaming, Anrufe, Gaming, Dateien), direkt zwischen deinen Geräten läuft. Post-quanten-verschlüsselt, keine Rechenzentren, keine großen Tech-Konzerne. CIRIS macht es mit CEG und CEWP real."
+    },
+    "fr": {
+      "title": "Le Web Épistémique : Internet, Sans Intermédiaire",
+      "description": "Un web où chaque affirmation est signée et vérifiable, et où tout ce que vous faites en ligne (streaming, appels, jeux, fichiers) circule directement entre vos appareils. Chiffré post-quantique, sans centres de données, sans géants de la tech. CIRIS le rend réel avec CEG et CEWP."
+    },
+    "it": {
+      "title": "Il Web Epistemico: Internet, Senza l'Intermediario",
+      "description": "Un web dove ogni affermazione è firmata e verificabile, e tutto quello che fai online (streaming, chiamate, giochi, file) corre direttamente tra i tuoi dispositivi. Con crittografia post-quantistica, niente data center, niente grandi aziende tech. CIRIS lo rende reale con CEG e CEWP."
+    },
+    "pt": {
+      "title": "A Web Epistêmica: A Internet, Sem o Intermediário",
+      "description": "Uma web onde cada afirmação é assinada e verificável, e tudo o que você faz online (streaming, chamadas, jogos, arquivos) roda direto entre seus aparelhos. Com criptografia pós-quântica, sem data centers, sem gigantes de tecnologia. O CIRIS torna isso real com CEG e CEWP."
+    },
+    "ar": {
+      "title": "الويب المعرفي: الإنترنت، دون الوسيط",
+      "description": "ويب يكون فيه كل ادعاء موقّعًا وقابلًا للتحقق، وكل ما تفعله على الإنترنت (البث، المكالمات، الألعاب، الملفات) يجري مباشرة بين أجهزتك. مشفّر بتشفير ما بعد الكم، بلا مراكز بيانات، بلا شركات تقنية كبرى. CIRIS يجعله حقيقة عبر CEG وCEWP."
+    },
+    "fa": {
+      "title": "وب معرفتی: اینترنت، بدون واسطه",
+      "description": "وبی که در آن هر ادعا امضاشده و قابل‌بررسی است، و هر کاری که آنلاین انجام می‌دهید (پخش، تماس‌ها، بازی، فایل‌ها) مستقیم میان دستگاه‌های شما اجرا می‌شود. رمزنگاری پساکوانتومی، بدون مرکز داده، بدون فناوری بزرگ. CIRIS آن را با CEG و CEWP واقعی می‌کند."
+    },
+    "ur": {
+      "title": "علمی ویب: انٹرنیٹ، بیچ والے کے بغیر",
+      "description": "ایک ایسا ویب جہاں ہر دعویٰ دستخط شدہ اور قابلِ جانچ ہے، اور جو کچھ آپ آن لائن کرتے ہیں (اسٹریمنگ، کالیں، گیمنگ، فائلیں) سیدھا آپ کے آلات کے درمیان چلتا ہے۔ پوسٹ کوانٹم انکرپٹڈ، نہ ڈیٹا سینٹر، نہ بڑی ٹیک۔ CIRIS اسے CEG اور CEWP سے حقیقت بناتا ہے۔"
+    }
   }
 };
