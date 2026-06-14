@@ -1,6 +1,15 @@
+import Link from "next/link";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
+
+// DOI -> on-site paper page (with Highwire citation_* tags for Scholar).
+const SLUG_BY_DOI: Record<string, string> = {
+  "10.5281/zenodo.20300773": "corridor-dynamics",
+  "10.5281/zenodo.18217688": "coherence-collapse",
+  "10.5281/zenodo.19839280": "constrained-reasoning-chains",
+  "10.5281/zenodo.18137161": "cirisagent-framework",
+};
 
 type Paper = {
   title: string;
@@ -111,14 +120,12 @@ export default function PapersPage() {
                   </span>
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  <a
-                    href={paper.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/papers/${SLUG_BY_DOI[paper.doi]}`}
                     className="hover:text-brand-primary"
                   >
                     {paper.title}
-                  </a>
+                  </Link>
                 </h2>
                 <p className="mt-1 text-sm font-medium text-gray-500 dark:text-gray-400">
                   {paper.subtitle}
@@ -131,14 +138,20 @@ export default function PapersPage() {
                     <li key={finding}>{finding}</li>
                   ))}
                 </ul>
-                <p className="mt-4 text-sm">
+                <p className="mt-4 flex flex-wrap gap-x-4 text-sm">
+                  <Link
+                    href={`/papers/${SLUG_BY_DOI[paper.doi]}`}
+                    className="font-medium text-brand-primary hover:underline"
+                  >
+                    Read the paper →
+                  </Link>
                   <a
                     href={paper.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-brand-primary hover:underline"
+                    className="font-medium text-gray-500 hover:text-brand-primary hover:underline dark:text-gray-400"
                   >
-                    Read on Zenodo →
+                    On Zenodo ↗
                   </a>
                 </p>
               </article>
