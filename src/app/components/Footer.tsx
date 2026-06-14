@@ -54,6 +54,7 @@ const navigation: Navigation = {
   ],
   company: [
     { name: "About", href: "/about", key: "about" },
+    { name: "Events & Talks", href: "/events", key: "events" },
     { name: "Vision", href: "/vision", key: "vision" },
     { name: "Thesis", href: "/coherence-ratchet", key: "thesis" },
     { name: "Methodology", href: "/mdd", key: "methodology" },
