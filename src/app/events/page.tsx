@@ -161,9 +161,87 @@ function Section({ title, items }: { title: string; items: EventItem[] }) {
   );
 }
 
+// Structured data so Google can surface the talks as event + video rich
+// results. Only events/videos with firm dates and real URLs are included.
+const eventsJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Event",
+      name: "Secure & Sovereign AI Workshop (Foresight Institute)",
+      startDate: "2026-07-18",
+      endDate: "2026-07-19",
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: "Berlin",
+        address: { "@type": "PostalAddress", addressLocality: "Berlin", addressCountry: "DE" },
+      },
+      url: "https://foresight.org/events/2026-secure-sovereign-ai-workshop/",
+      organizer: { "@type": "Organization", name: "Foresight Institute", url: "https://foresight.org/" },
+      performer: { "@type": "Person", name: "Eric Moore" },
+      description: "CIRIS presenting at the Foresight Institute Secure & Sovereign AI Workshop.",
+    },
+    {
+      "@type": "Event",
+      name: "CIRIS: An Open-Source Ethical AI Governance Framework, Agentic Engineering Chicago",
+      startDate: "2026-04-28",
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: "TeamWorking by TechNexus, Lyric Opera House",
+        address: { "@type": "PostalAddress", addressLocality: "Chicago", addressRegion: "IL", addressCountry: "US" },
+      },
+      url: "https://luma.com/fg2png4u",
+      performer: { "@type": "Person", name: "Eric Moore" },
+      description: "In-person CIRISAgent demo at Agentic Engineering Chicago.",
+    },
+    {
+      "@type": "Event",
+      name: "Building AI with a Conscience, IEEE Madison Section",
+      startDate: "2026-02-09",
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: "Madison Central Library",
+        address: { "@type": "PostalAddress", addressLocality: "Madison", addressRegion: "WI", addressCountry: "US" },
+      },
+      url: "https://enotice.vtools.ieee.org/public/191195",
+      organizer: { "@type": "Organization", name: "IEEE Madison Section" },
+      performer: { "@type": "Person", name: "Eric Moore" },
+      description: "Invited talk and live demo.",
+    },
+    {
+      "@type": "VideoObject",
+      name: "CIRIS: An Open-Source Ethical AI Governance Framework (Agentic Engineering Chicago)",
+      description: "In-person CIRISAgent demo at Agentic Engineering Chicago.",
+      thumbnailUrl: "https://i.ytimg.com/vi/Jgdw9WvjTMc/hqdefault.jpg",
+      uploadDate: "2026-04-28",
+      contentUrl: "https://youtu.be/Jgdw9WvjTMc",
+      embedUrl: "https://www.youtube.com/embed/Jgdw9WvjTMc",
+    },
+    {
+      "@type": "VideoObject",
+      name: "AI Getting Smarter: How Do We Keep It Ethical? Exploring the CIRIS Covenant",
+      description: "Talk on the CIRIS Covenant and keeping AI ethical.",
+      thumbnailUrl: "https://i.ytimg.com/vi/JoJUd9oJ8CU/hqdefault.jpg",
+      uploadDate: "2025-04-17",
+      contentUrl: "https://www.youtube.com/watch?v=JoJUd9oJ8CU",
+      embedUrl: "https://www.youtube.com/embed/JoJUd9oJ8CU",
+    },
+  ],
+};
+
 export default function EventsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
+      />
       <FloatingNav navItems={navItems} />
       <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-gray-950 dark:via-black dark:to-gray-950">
         <div className="mx-auto max-w-3xl px-4 pb-20 pt-40 md:px-6 md:pt-44">

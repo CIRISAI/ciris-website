@@ -89,13 +89,13 @@ export function localizedSeo(basePath: string, locale: string): Metadata {
       url,
       siteName: "CIRIS",
       locale: ogLocale(locale),
-      images: [image],
+      images: [{ url: image, alt: title || "CIRIS" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: [{ url: image, alt: title || "CIRIS" }],
     },
   };
 }

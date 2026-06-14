@@ -102,6 +102,16 @@ const jsonLd = {
       ],
     },
     {
+      "@type": "WebSite",
+      "@id": "https://ciris.ai/#website",
+      url: "https://ciris.ai",
+      name: "CIRIS",
+      alternateName: "CIRIS L3C",
+      description: DESCRIPTION,
+      publisher: { "@id": "https://ciris.ai/#organization" },
+      inLanguage: "en",
+    },
+    {
       "@type": "Product",
       "@id": "https://ciris.ai/#product",
       name: "CIRIS Agent",
