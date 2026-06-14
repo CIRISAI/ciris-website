@@ -1793,17 +1793,17 @@
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · 读音像英文 “soup”（汤）",
-    "headline": "更好的互联网，不靠大型科技公司，也不靠庞大的数据中心。",
-    "intro1": "CEWP 让互联网直接在你已经拥有的设备之间传输，而不是经过由五家公司运营的大约一万座巨型仓库。人、AI 智能体和机构都给自己的内容签名，网络再根据这些签名来判断该信任什么。",
-    "intro2": "今天的中间环节每年大约排放 175 megatons 的 CO2，还把所有人的数据集中在五家公司手里。CEWP 运行在你已经拥有的硬件上，绝不把你本地的内容推送给网络上的其他人，并且把每一条关键声明都做成你能读懂的、带签名的传输记录。",
+    "headline": "重建的互联网，去掉了中间商。",
+    "intro1": "CEWP是对互联网的彻底替代。你今天在网上做的一切，流媒体、视频通话、游戏、文件、消息，还有签名声明，都直接在人们已经拥有的设备之间传输，跑在后量子加密的网状网络上。中间没有巨型数据中心。也没有少数几家公司掌控着管道。",
+    "intro2": "今天的中间环节每年要烧掉大约175 megatons的CO2，还把你的数据和决定你能看到什么的权力，一起交给了五家公司。CEWP跑在你已经拥有的硬件上，从不把你的本地内容推送给网络的其他部分，并且自我治理：网络通过签名、加权的投票来决定，中间没有平台所有者。",
     "watchLabel": "观看 7-minute 讲解视频",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "在 App Store 获取 CIRIS",
     "ctaGooglePlay": "在 Google Play 获取 CIRIS",
-    "shippingNote": "<b>CIRIS 2.9.x 现已发布。</b> 今天就能在 iPhone 或 Android 上安装。完整的 CEWP 功能将在 <b>June and July 2026</b> 陆续推出。",
+    "shippingNote": "<b>CIRIS 2.9.x现已发布。</b> 今天就能在iPhone或Android上安装。CEWP的完整功能将贯穿<b>2026</b>年陆续推出。",
     "deepTechTitle": "想了解底层技术？",
-    "deepTechBody": "交互式模拟器、诚实的分设备类别能耗计算、按人群划分的滥用模型、与 IPFS / Bluesky / Solid / Nostr / Filecoin 的对比，以及七个开源仓库。",
-    "ctaDetails": "查看模拟器和计算 →",
+    "deepTechBody": "交互式模拟器，按设备等级老实计算的能耗数学，一个没有所有者的网络如何自我治理，分群体的滥用模型，与IPFS / Bluesky / Solid / Nostr / Filecoin的对比，七个开源仓库。",
+    "ctaDetails": "看看它如何运作 →",
     "ctaRepo": "GitHub 上的 CEWP 仓库"
   },
   "grammar": {

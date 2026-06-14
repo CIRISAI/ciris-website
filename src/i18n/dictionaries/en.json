@@ -1793,17 +1793,17 @@
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · pronounced “soup”",
-    "headline": "A better internet, without big tech and massive datacenters.",
-    "intro1": "CEWP is the internet routed directly between the devices you already own, instead of through about ten thousand giant warehouses run by five companies. People, AI agents, and organizations sign their own posts, and the network weighs those signatures to work out what to trust.",
-    "intro2": "Today’s middle costs about 175 megatons of CO2 a year and concentrates everyone’s data in five companies. CEWP runs on hardware you already have, never advertises your local content to the rest of the network, and makes every load-bearing claim a signed wire artifact you can read.",
+    "headline": "The internet, rebuilt without the middleman.",
+    "intro1": "CEWP is a complete replacement for the internet. Everything you do online today, streaming, video calls, gaming, files, messages, and signed claims, routed directly between the devices people already own, over a post-quantum encrypted mesh. No giant data centers in the middle. No handful of companies owning the pipes.",
+    "intro2": "Today’s middle costs about 175 megatons of CO2 a year and hands five companies both your data and the power to decide what you see. CEWP runs on hardware you already have, never advertises your local content to the rest of the network, and governs itself: the network decides through signed, weighted votes, with no platform owner in the middle.",
     "watchLabel": "Watch the 7-minute explainer",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "Get CIRIS on the App Store",
     "ctaGooglePlay": "Get CIRIS on Google Play",
-    "shippingNote": "<b>CIRIS 2.9.x is shipping now.</b> Install today on iPhone or Android. The full CEWP feature set rolls out through <b>June and July 2026</b>.",
+    "shippingNote": "<b>CIRIS 2.9.x is shipping now.</b> Install today on iPhone or Android. The full CEWP feature set rolls out through <b>2026</b>.",
     "deepTechTitle": "Want the deep tech?",
-    "deepTechBody": "The interactive simulator, the honest device-class energy math, the per-cohort abuse model, comparisons against IPFS / Bluesky / Solid / Nostr / Filecoin, the seven open repos.",
-    "ctaDetails": "See the simulator and the math →",
+    "deepTechBody": "The interactive simulator, the honest device-class energy math, how a network with no owner governs itself, the per-cohort abuse model, comparisons against IPFS / Bluesky / Solid / Nostr / Filecoin, the seven open repos.",
+    "ctaDetails": "See how it works →",
     "ctaRepo": "CEWP repo on GitHub"
   },
   "grammar": {

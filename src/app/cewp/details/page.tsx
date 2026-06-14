@@ -51,6 +51,96 @@ export default function CewpDetailsPage() {
             <WhyCewp />
           </div>
 
+          {/* How a network with no owner governs itself — grounded in
+              CIRISNodeCore, the federation-consensus layer. */}
+          <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
+            <header className="mb-4 max-w-3xl space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                The part everyone forgets
+              </p>
+              <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white md:text-2xl">
+                How a network with no owner governs itself
+              </h2>
+              <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">
+                Deleting the data centers is the easy half. The hard half
+                is the thing the data center also did: decide who is
+                trusted, what is allowed, and what you get to see. On
+                today&rsquo;s internet that is a company. CEWP has no
+                company, so the network has to do it itself. That is{" "}
+                <a
+                  href="https://github.com/CIRISAI/CIRISNodeCore"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-brand-primary hover:underline"
+                >
+                  CIRISNodeCore
+                </a>
+                , the consensus layer: eleven signed primitives, no central
+                scorer, authority living in the agreement across nodes
+                rather than in any one of them.
+              </p>
+            </header>
+            <div className="grid gap-4 md:grid-cols-2">
+              <GovPoint title="Decisions are weighted votes, not headcounts">
+                Every decision is a signed vote, weighted by{" "}
+                <strong>Credits</strong> (your track record of
+                participation) and <strong>Expertise</strong> (validated
+                competence in a specific domain and language). Not
+                one-dollar-one-vote, and not one-account-one-vote, so
+                buying or flooding accounts buys nothing.
+              </GovPoint>
+              <GovPoint title="Hard calls route to people who actually know">
+                When a judgment needs human expertise, the network defers
+                it to the people with a validated track record in that
+                exact (domain, language) cell, rather than to whoever is
+                loudest or most senior.
+              </GovPoint>
+              <GovPoint title="Moderation with no moderator">
+                Abuse is handled by a signed accusation backed by stake,
+                independent witnesses that must be diverse, adjudication by
+                a Wise-Authority quorum, and <strong>slashing</strong> of
+                actors proven rogue. No central trust-and-safety team, and
+                the cost of a false accusation falls on the accuser.
+              </GovPoint>
+              <GovPoint title="Nothing is locked in forever">
+                Any verdict can be reopened through{" "}
+                <strong>Reconsideration</strong> on new evidence, a
+                procedural error, or a compromised quorum. It is the
+                universal exit from lock-in, applied to stewards and
+                founders by the same rule as anyone else.
+              </GovPoint>
+              <GovPoint title="Rules crowdsourced, verdicts machined">
+                People propose the rules (rubrics) and the questions; a
+                foundation-model judge applies them the same way every
+                time, against machine-checkable criteria. Both the rules
+                and the judge are themselves open to calibration.
+              </GovPoint>
+              <GovPoint title="Sock puppets don’t scale">
+                Every action is on a signed audit chain, which the Coherence
+                Ratchet reads for the patterns Sybil swarms and
+                coordinated-inauthentic behaviour leave behind. Reputation
+                is earned over time and cannot be minted.
+              </GovPoint>
+            </div>
+            <p className="mt-4 max-w-3xl text-xs leading-5 text-slate-500 dark:text-slate-400">
+              Spec + primitives:{" "}
+              <a
+                href="https://github.com/CIRISAI/CIRISNodeCore/blob/main/MISSION.md"
+                target="_blank"
+                rel="noreferrer"
+                className="text-brand-primary hover:underline"
+              >
+                CIRISNodeCore MISSION
+              </a>
+              . The same self-governance powers the per-language safety
+              batteries on the{" "}
+              <Link href="/crowdsourcing-alignment" className="text-brand-primary hover:underline">
+                crowdsourcing-alignment
+              </Link>{" "}
+              page.
+            </p>
+          </section>
+
           {/* The seven (now eight) repos. CIRISConformance lives next to the
               substrate sisters per the recent split-out. */}
           <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900">
@@ -118,6 +208,25 @@ export default function CewpDetailsPage() {
       </main>
       <Footer />
     </>
+  );
+}
+
+function GovPoint({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-gray-800 dark:bg-gray-950">
+      <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+        {title}
+      </h3>
+      <p className="mt-1.5 text-[13px] leading-6 text-slate-600 dark:text-slate-300">
+        {children}
+      </p>
+    </div>
   );
 }
 

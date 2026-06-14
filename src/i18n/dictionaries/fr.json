@@ -1793,17 +1793,17 @@
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · prononcé comme « soup »",
-    "headline": "Un meilleur internet, sans les géants de la tech ni les centres de données géants.",
-    "intro1": "CEWP, c'est l'internet acheminé directement entre les appareils que vous possédez déjà, au lieu de passer par environ dix mille entrepôts géants gérés par cinq entreprises. Les personnes, les agents IA et les organisations signent leurs propres publications, et le réseau pèse ces signatures pour déterminer ce qui mérite confiance.",
-    "intro2": "L'intermédiaire actuel coûte environ 175 megatons de CO2 par an et concentre les données de tout le monde dans cinq entreprises. CEWP fonctionne sur le matériel que vous avez déjà, ne diffuse jamais votre contenu local au reste du réseau, et fait de chaque affirmation porteuse un artefact wire signé que vous pouvez lire.",
+    "headline": "Internet, reconstruit sans l’intermédiaire.",
+    "intro1": "CEWP est un remplacement complet d’internet. Tout ce que vous faites en ligne aujourd’hui, streaming, appels vidéo, jeux, fichiers, messages et déclarations signées, acheminé directement entre les appareils que les gens possèdent déjà, sur un maillage chiffré post-quantique. Pas de gigantesques centres de données au milieu. Pas une poignée d’entreprises qui possèdent les tuyaux.",
+    "intro2": "L’intermédiaire d’aujourd’hui coûte environ 175 megatons de CO2 par an et donne à cinq entreprises à la fois vos données et le pouvoir de décider ce que vous voyez. CEWP fonctionne sur le matériel que vous avez déjà, ne fait jamais la publicité de votre contenu local auprès du reste du réseau, et se gouverne lui-même : le réseau décide par des votes signés et pondérés, sans propriétaire de plateforme au milieu.",
     "watchLabel": "Regardez l'explication de 7-minute",
     "videoCaption": "« Dismantling the Hyperscaler » · YouTube",
     "ctaAppStore": "Obtenez CIRIS sur l'App Store",
     "ctaGooglePlay": "Obtenez CIRIS sur Google Play",
-    "shippingNote": "<b>CIRIS 2.9.x est disponible dès maintenant.</b> Installez-le aujourd'hui sur iPhone ou Android. L'ensemble complet des fonctionnalités CEWP sera déployé au cours de <b>June and July 2026</b>.",
+    "shippingNote": "<b>CIRIS 2.9.x est disponible dès maintenant.</b> Installez-le aujourd’hui sur iPhone ou Android. L’ensemble complet des fonctionnalités CEWP se déploie tout au long de <b>2026</b>.",
     "deepTechTitle": "Vous voulez la technique en profondeur ?",
-    "deepTechBody": "Le simulateur interactif, le calcul énergétique honnête par classe d'appareil, le modèle d'abus par cohorte, les comparaisons avec IPFS / Bluesky / Solid / Nostr / Filecoin, les sept dépôts ouverts.",
-    "ctaDetails": "Voir le simulateur et le calcul →",
+    "deepTechBody": "Le simulateur interactif, le calcul énergétique honnête par classe d’appareil, comment un réseau sans propriétaire se gouverne lui-même, le modèle d’abus par cohorte, les comparaisons avec IPFS / Bluesky / Solid / Nostr / Filecoin, les sept dépôts ouverts.",
+    "ctaDetails": "Voyez comment ça marche →",
     "ctaRepo": "Dépôt CEWP sur GitHub"
   },
   "grammar": {
