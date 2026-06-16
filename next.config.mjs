@@ -24,6 +24,13 @@ const config = {
       ...(webpackConfig.experiments ?? {}),
       asyncWebAssembly: true,
     };
+    // Disable webpack's persistent filesystem cache. Cloudflare restores a
+    // stale, multi-GB .next/cache from its build cache that webpack then
+    // thrashes on for minutes before the build VM OOM/internal-errors; a clean
+    // (uncached) build is ~90s and reliable. We give up incremental-rebuild
+    // speed (which CF's poisoned cache wasn't delivering anyway) for a build
+    // that can't be wedged by a bad restored cache.
+    webpackConfig.cache = false;
     return webpackConfig;
   },
 };
