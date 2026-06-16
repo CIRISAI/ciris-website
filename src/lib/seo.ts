@@ -41,6 +41,11 @@ const DESIGNED_OG_CARDS: ReadonlySet<string> = new Set([
   "/coherence-ratchet",
   "/coherence-collapse-analysis",
   "/research-status",
+  "/epistemic-web",
+  "/cewp",
+  "/grammar",
+  "/events",
+  "/papers",
 ]);
 
 // Per-page social-preview card (designed 1200x630 art with a localized title

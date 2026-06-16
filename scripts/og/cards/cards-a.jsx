@@ -35,7 +35,7 @@ function OGHome() {
           <line x1="965" y1="68" x2="1118" y2="156" stroke={C.rose} strokeWidth="3" strokeLinecap="round" />
         </g>
         {/* link phone -> home box */}
-        <path d="M905 410 C955 410 965 360 1006 348" stroke={_mix(a,0.7)} strokeWidth="2.4" fill="none" strokeDasharray="2 9" strokeLinecap="round" />
+        <path className="og-flow" d="M905 410 C955 410 965 360 1006 348" stroke={_mix(a,0.7)} strokeWidth="2.4" fill="none" strokeDasharray="2 9" strokeLinecap="round" />
         {/* home box (local) */}
         <g transform="translate(1006,300)">
           <path d="M0 36 L40 8 L80 36 L80 96 L0 96 Z" fill={_mix(a,0.10)} stroke={a} strokeWidth="2" />
@@ -43,7 +43,7 @@ function OGHome() {
           <circle cx="40" cy="8" r="4" fill={a} filter="url(#glow)" />
         </g>
         {/* signed badge */}
-        <g transform="translate(640,470)" filter="url(#glow)">
+        <g className="og-twinkle" transform="translate(640,470)" filter="url(#glow)">
           <circle cx="0" cy="0" r="26" fill={_mix(C.ok,0.14)} stroke={C.ok} strokeWidth="2" />
           <path d="M-11 1 L-3 9 L12 -9" stroke={C.ok} strokeWidth="3.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </g>
@@ -79,7 +79,7 @@ function OGInstall() {
   return (
     <Card accent={a} eyebrow="ciris.ai / install" title="Install the<br/>CIRIS Agent">
       <Stage>
-        <path d="M470 320 C560 320 560 150 660 150 M470 350 C560 350 560 330 660 330 M470 380 C560 380 560 510 660 510"
+        <path className="og-flow" d="M470 320 C560 320 560 150 660 150 M470 350 C560 350 560 330 660 330 M470 380 C560 380 560 510 660 510"
               stroke={_mix(a,0.5)} strokeWidth="2" fill="none" strokeDasharray="2 8" strokeLinecap="round" />
       </Stage>
       {/* App Store */}
@@ -125,7 +125,7 @@ function OGAbout() {
             <circle cx={x} cy={y-r*0.35} r={r*0.34} fill={a} /></g>
         ))}
         {/* mission-lock: padlock fused with compass mark */}
-        <g transform="translate(820,360)" filter="url(#glow)">
+        <g className="og-twinkle" transform="translate(820,360)" filter="url(#glow)">
           <path d="M-34 0 a34 34 0 0 1 68 0" fill="none" stroke={a} strokeWidth="6" />
           <rect x="-52" y="0" width="104" height="86" rx="16" fill={_mix(a,0.14)} stroke={a} strokeWidth="2.5" />
         </g>
@@ -152,7 +152,7 @@ function OGHow() {
         {/* flowing dot trail */}
         {xs.slice(0,4).map((x,i)=><polygon key={i} points={`${x+74},${y-5} ${x+86},${y} ${x+74},${y+5}`} fill={_mix(a,0.7)} />)}
         {/* replayable loop arrow */}
-        <path d={`M${xs[4]} ${y+34} C${xs[4]} 360 ${xs[0]} 360 ${xs[0]} ${y+34}`} fill="none" stroke={_mix(a,0.45)} strokeWidth="2" strokeDasharray="3 8" />
+        <path className="og-flow" d={`M${xs[4]} ${y+34} C${xs[4]} 360 ${xs[0]} 360 ${xs[0]} ${y+34}`} fill="none" stroke={_mix(a,0.45)} strokeWidth="2" strokeDasharray="3 8" />
         <polygon points={`${xs[0]-6},${y+30} ${xs[0]+6},${y+30} ${xs[0]},${y+40}`} fill={_mix(a,0.7)} />
         <Lbl x={(xs[0]+xs[4])/2} y={392} anchor="middle" fill={C.mute} size={14}>replayable · auditable</Lbl>
         {/* nodes */}
@@ -194,7 +194,7 @@ function OGTrust() {
           <circle cx="22" cy="20" r="6" fill={C.violet} />
           <Lbl x={40} y={25} fill={C.dim} size={14}>ML-DSA-65</Lbl>
         </g>
-        <path d="M712 170 C745 200 745 220 760 250 M720 360 C748 330 748 300 760 270" stroke={_mix(a,0.45)} strokeWidth="2" fill="none" strokeDasharray="2 7" />
+        <path className="og-flow" d="M712 170 C745 200 745 220 760 250 M720 360 C748 330 748 300 760 270" stroke={_mix(a,0.45)} strokeWidth="2" fill="none" strokeDasharray="2 7" />
         {/* hash-chained ledger blocks */}
         {[0,1,2,3].map(i=>(
           <g key={i} transform={`translate(${bx + i*(bw+gap)},${by-26})`}>
@@ -223,7 +223,7 @@ function OGVision() {
           <path d="M505 360 a40 40 0 0 1 80 0" fill="none" stroke={C.dim} strokeWidth="2.4" />
         </g>
         {/* many warm interlinked figures (right), glowing */}
-        <g filter="url(#softglow)">
+        <g className="og-twinkle" filter="url(#softglow)">
           <g stroke={_mix(warm,0.4)} strokeWidth="1.8" fill="none">
             <path d="M760 200 L900 160 L1030 230 M900 160 L960 320 M1030 230 L1100 350 M760 200 L820 360 M960 320 L1080 360 M820 360 L960 320 M900 160 L1030 230" />
           </g>

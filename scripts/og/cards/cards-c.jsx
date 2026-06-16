@@ -13,7 +13,7 @@ function OGServices() {
     <Card accent={a} eyebrow="services" title="Same Price.<br/>Everywhere.">
       <Stage>
         {/* one honest price tag */}
-        <g transform="translate(740,170) rotate(-6 160 160)">
+        <g className="og-twinkle" transform="translate(740,170) rotate(-6 160 160)">
           <path d="M40 0 L300 0 L300 230 L170 320 L40 230 Z" fill={mc(a,0.10)} stroke={a} strokeWidth="2.4" filter="url(#glow)" />
           <circle cx="170" cy="46" r="16" fill="none" stroke={a} strokeWidth="2.4" />
           <circle cx="170" cy="46" r="5" fill={a} />
@@ -44,7 +44,7 @@ function OGModels() {
               {[0,1,2,3,4].map(k=>(
                 <rect key={k} x="24" y={48+k*30} width={140 - (k%2)*40} height="14" rx="7" fill={mc(col, 0.18 + k*0.06)} />
               ))}
-              <circle cx="156" cy="34" r="5" fill={col} filter="url(#glow)" />
+              <circle className="og-twinkle" cx="156" cy="34" r="5" fill={col} filter="url(#glow)" />
               <Lbl3 x={24} y={222} fill={Cc.dim} size={16} fam="Geist, sans-serif" weight="600">{name}</Lbl3>
             </g>
           );
@@ -76,7 +76,7 @@ function OGMdd() {
           const hl = i===3;
           return (
             <g key={i}>
-              <rect x={px[i]} y={topY} width="56" height={baseY-topY} fill={hl?mc(a,0.18):mc(col,0.05)} stroke={hl?a:mc(col,0.4)} strokeWidth={hl?2.6:1.6} filter={hl?'url(#glow)':undefined} />
+              <rect className={hl?'og-twinkle':undefined} x={px[i]} y={topY} width="56" height={baseY-topY} fill={hl?mc(a,0.18):mc(col,0.05)} stroke={hl?a:mc(col,0.4)} strokeWidth={hl?2.6:1.6} filter={hl?'url(#glow)':undefined} />
               <Lbl3 x={px[i]+28} y={topY-44} anchor="middle" fill={hl?a:Cc.dim} size={15} fam="Geist, sans-serif" weight={hl?'600':'500'}>{name}</Lbl3>
               {hl && <Lbl3 x={px[i]+28} y={topY+ (baseY-topY)/2} anchor="middle" fill={a} size={22} weight="700" fam="Geist, sans-serif">04</Lbl3>}
             </g>
@@ -100,7 +100,7 @@ function OGRatchet() {
   return (
     <Card accent={a} eyebrow="coherence ratchet" title="It Only Turns<br/>One Way">
       <Stage>
-        <polygon points={pts.join(' ')} fill={mc(a,0.10)} stroke={a} strokeWidth="2.2" filter="url(#glow)" />
+        <polygon className="og-spin" points={pts.join(' ')} fill={mc(a,0.10)} stroke={a} strokeWidth="2.2" filter="url(#glow)" />
         <circle cx={cx} cy={cy} r="34" fill={Cc.bgElev} stroke={a} strokeWidth="2" />
         <circle cx={cx} cy={cy} r="8" fill={a} />
         {/* pawl arm */}
@@ -124,20 +124,24 @@ function OGCollapse() {
     <Card accent={a} eyebrow="coherence-collapse analysis" title="Collapse to<br/>Coherence">
       <Stage>
         {/* intersecting constraint manifolds collapsing to a point */}
+        <g className="og-spin">
         {[0,1,2,3].map(i=>{
           const rot = i*45;
           return <ellipse key={i} cx={cx} cy={cy} rx="220" ry="80" fill="none" stroke={mc(i%2?Cc.cyan:a, 0.35)} strokeWidth="1.6" transform={`rotate(${rot} ${cx} ${cy})`} />;
         })}
+        </g>
         {/* singularity boundary */}
         <circle cx={cx} cy={cy} r="60" fill="none" stroke={mc(a,0.4)} strokeWidth="1.4" strokeDasharray="3 7" />
         {/* collapse point */}
         <circle cx={cx} cy={cy} r="13" fill={a} filter="url(#softglow)" />
         <circle cx={cx} cy={cy} r="26" fill="none" stroke={a} strokeWidth="2" />
         {/* converging arrows */}
+        <g className="og-flow">
         {[0,90,180,270].map((ang,i)=>{
           const r=(ang*Math.PI)/180; const x=cx+Math.cos(r)*150, y=cy+Math.sin(r)*150;
           return <line key={i} x1={x} y1={y} x2={cx+Math.cos(r)*40} y2={cy+Math.sin(r)*40} stroke={mc(a,0.5)} strokeWidth="1.6" strokeDasharray="2 7" />;
         })}
+        </g>
         {/* Kish formula motif */}
         <g transform="translate(470,180)">
           <rect x="0" y="0" width="180" height="56" rx="10" fill={Cc.bgCard} stroke={Cc.border} strokeWidth="1.4" />
@@ -166,10 +170,12 @@ function OGResearch() {
         <line x1={x0} y1={y0} x2={x0} y2={y0-h} stroke={Cc.border} strokeWidth="1.6" />
         {[0.25,0.5,0.75].map((k,i)=><line key={i} x1={x0} y1={y0-h*k} x2={x0+w} y2={y0-h*k} stroke={mc('#FFFFFF',0.05)} strokeWidth="1" />)}
         {/* scatter telemetry */}
+        <g className="og-twinkle">
         {Array.from({length:42}).map((_,i)=>{
           const px = x0 + Math.random()*w, py = y0 - Math.random()*h*0.7*Math.exp(-(px-x0)/w*1.6);
           return <circle key={i} cx={px} cy={py} r="3" fill={mc(a,0.4)} />;
         })}
+        </g>
         {/* curve */}
         <path d={'M'+pts.map(p=>p.join(' ')).join(' L ')} fill="none" stroke={a} strokeWidth="3" filter="url(#glow)" />
         {pts.map((p,i)=><circle key={i} cx={p[0]} cy={p[1]} r="5" fill={a} />)}

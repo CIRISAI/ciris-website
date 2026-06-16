@@ -2,7 +2,6 @@ import Link from "next/link";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
-import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata = {
   title: "Events & Talks: Where CIRIS Is Showing Up | CIRIS",
@@ -15,14 +14,14 @@ export const metadata = {
     title: "Events & Talks: Where CIRIS Is Showing Up",
     description:
       "Upcoming events, past talks, and recorded interviews from the CIRIS project, with recordings where available.",
-    images: [DEFAULT_OG_IMAGE],
+    images: ["/og/og-events.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Events & Talks: Where CIRIS Is Showing Up",
     description:
       "Upcoming events, past talks, and recorded interviews from the CIRIS project.",
-    images: [DEFAULT_OG_IMAGE],
+    images: ["/og/og-events.jpg"],
   },
 };
 

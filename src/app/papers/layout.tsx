@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "The papers — empirical and formal backing for CIRIS",
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
     title: "The papers — empirical and formal backing for CIRIS",
     description:
       "Four papers, one /papers page. Corridor Dynamics, Coherence Collapse Analysis, Constrained Reasoning Chains, CIRISAgent Framework. With permanent DOIs and explicit scope limits.",
-    images: [DEFAULT_OG_IMAGE],
+    images: ["/og/og-papers.jpg"],
   },
 };
 

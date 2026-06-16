@@ -10,7 +10,6 @@ import { notFound } from "next/navigation";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
-import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 const SITE = "https://ciris.ai";
 const AUTHOR = "Eric Moore";
@@ -147,13 +146,13 @@ export async function generateMetadata({
       url: pageUrl,
       title: p.citationTitle,
       description: p.summary.slice(0, 200),
-      images: [DEFAULT_OG_IMAGE],
+      images: ["/og/og-papers.jpg"],
     },
     twitter: {
       card: "summary_large_image",
       title: p.displayTitle,
       description: p.summary.slice(0, 200),
-      images: [DEFAULT_OG_IMAGE],
+      images: ["/og/og-papers.jpg"],
     },
     other: citation,
   };

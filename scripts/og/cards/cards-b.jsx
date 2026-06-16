@@ -22,7 +22,7 @@ function OGSafety() {
           </g>
         ))}
         {/* multilingual shield with 29 */}
-        <g transform="translate(1010,360)">
+        <g className="og-twinkle" transform="translate(1010,360)">
           <path d="M0 -78 L72 -52 L72 22 C72 70 38 96 0 112 C-38 96 -72 70 -72 22 L-72 -52 Z"
                 fill={mb(Cb.cyan,0.10)} stroke={Cb.cyan} strokeWidth="2.2" filter="url(#glow)" />
           <Lbl2 x={0} y={6} anchor="middle" fill={Cb.text} size={46} weight="600" fam="Geist, sans-serif">29</Lbl2>
@@ -30,7 +30,7 @@ function OGSafety() {
         </g>
       </Stage>
       {/* emergency stop button */}
-      <div style={{ position: 'absolute', left: 690, top: 180, width: 210, height: 210, borderRadius: '50%',
+      <div className="og-float" style={{ position: 'absolute', left: 690, top: 180, width: 210, height: 210, borderRadius: '50%',
         background: `radial-gradient(circle at 38% 32%, ${mb(Cb.rose,0.95)}, ${mb('#8E1733',0.95)})`,
         border: `8px solid ${Cb.bgElev}`, boxShadow: `0 0 0 4px ${mb(Cb.rose,0.4)}, 0 40px 80px -30px rgba(225,75,127,0.6)`,
         display: 'grid', placeItems: 'center' }}>
@@ -72,7 +72,7 @@ function OGCrowd() {
             <stop offset="0" stopColor={Cb.g1} /><stop offset="0.5" stopColor={Cb.g2} /><stop offset="1" stopColor={Cb.g3} />
           </linearGradient>
         </defs>
-        <circle cx={cx} cy={cy} r={R+30} fill="none" stroke="url(#sigGrad)" strokeWidth="3" strokeDasharray="3 10" opacity="0.6" />
+        <circle className="og-flow" cx={cx} cy={cy} r={R+30} fill="none" stroke="url(#sigGrad)" strokeWidth="3" strokeDasharray="3 10" opacity="0.6" />
       </Stage>
       {/* diff edit card (collaborative) */}
       <div style={{ position: 'absolute', left: 470, top: 220, width: 184, height: 168, borderRadius: 14, background: Cb.bgCard, border: `1px solid ${Cb.border}`, padding: '16px 18px', fontFamily: 'Geist Mono, monospace', fontSize: 14, boxShadow: '0 24px 50px -26px rgba(0,0,0,0.8)' }}>
@@ -93,7 +93,7 @@ function OGFirst() {
     <Card accent={a} eyebrow="first contact" title="Co-Emerging<br/>With Us">
       <Stage>
         {/* a growing form: shared trunk, human roots below, emergent branches above */}
-        <g stroke={a} strokeWidth="2" fill="none" filter="url(#glow)">
+        <g className="og-twinkle" stroke={a} strokeWidth="2" fill="none" filter="url(#glow)">
           {/* trunk */}
           <path d="M820 360 L820 270" strokeWidth="3" />
           {/* branches up (emergent) */}
@@ -125,7 +125,7 @@ function OGFed() {
           {links.map(([s,e],i)=><line key={i} x1={nodes[s][0]} y1={nodes[s][1]} x2={nodes[e][0]} y2={nodes[e][1]} />)}
         </g>
         {/* supervision chain — dashed oversight from a hub */}
-        <g stroke={mb(Cb.cyan,0.7)} strokeWidth="2" fill="none" strokeDasharray="2 8" strokeLinecap="round">
+        <g className="og-flow" stroke={mb(Cb.cyan,0.7)} strokeWidth="2" fill="none" strokeDasharray="2 8" strokeLinecap="round">
           <path d="M820 320 L720 150 M820 320 L1000 360 M820 320 L640 340" />
         </g>
         {nodes.map(([x,y],i)=>(
@@ -213,7 +213,7 @@ function OGSvC() {
         {(()=>{ const ang = Math.PI - 0.62*Math.PI; const x=cx+Math.cos(ang)*150, y=cy-Math.sin(ang)*150;
           return <g><line x1={cx} y1={cy} x2={x} y2={y} stroke={a} strokeWidth="4" strokeLinecap="round" filter="url(#glow)" /><circle cx={cx} cy={cy} r="14" fill={Cb.bgElev} stroke={a} strokeWidth="2.5" /></g>; })()}
         {/* crowd dots (left) vs machine verdict (right) */}
-        <g fill={mb(Cb.ok,0.6)}>{[[480,180],[510,210],[470,240],[520,260],[490,290]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="6" />)}</g>
+        <g className="og-twinkle" fill={mb(Cb.ok,0.6)}>{[[480,180],[510,210],[470,240],[520,260],[490,290]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="6" />)}</g>
         <Lbl2 x={480} y={150} fill={Cb.dim} size={14}>crowd rules</Lbl2>
         <g transform="translate(1120,200)"><rect x="-70" y="-20" width="80" height="40" rx="9" fill={mb(Cb.rose,0.14)} stroke={Cb.rose} strokeWidth="1.6" /><Lbl2 x={-30} y={5} anchor="middle" fill={Cb.dim} size={13}>verdict</Lbl2></g>
       </Stage>

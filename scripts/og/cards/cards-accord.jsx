@@ -13,6 +13,14 @@ function OGAccord({ accent, book = 'Book IX', version = '1.3-RC2' }) {
       background: `radial-gradient(120% 80% at 50% -12%, ${ma(a,0.16)} 0%, transparent 52%), ${Ca.bgDeep}`,
       fontFamily: 'Geist, sans-serif', color: Ca.text, userSelect: 'none',
     }}>
+      {/* calm ambient drift + signature rim (motion; still = poster) */}
+      <div className="og-aurora" style={{ position: 'absolute', top: '-22%', left: '50%', width: 720, height: 560, marginLeft: -360, pointerEvents: 'none',
+        background: `radial-gradient(closest-side, ${ma(a,0.30)}, transparent 70%), radial-gradient(closest-side, ${ma(Ca.g2,0.16)}, transparent 70%)`,
+        backgroundPosition: '40% 30%, 60% 60%', backgroundSize: '66% 66%, 54% 54%', backgroundRepeat: 'no-repeat',
+        filter: 'blur(9px)', mixBlendMode: 'screen' }} />
+      <div className="og-rim" style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, pointerEvents: 'none',
+        background: `linear-gradient(90deg, transparent 2%, ${Ca.g1} 30%, ${Ca.g2} 58%, ${Ca.g3} 82%, transparent 99%)`,
+        opacity: 0.8, filter: 'blur(0.4px)', maskImage: 'linear-gradient(90deg, transparent, #000 22%, #000 92%, transparent)' }} />
       {/* engraved double-rule border within the safe area */}
       <div style={{ position: 'absolute', left: 56, top: 50, right: 56, bottom: 50, border: `1px solid ${ma(a,0.45)}` }} />
       <div style={{ position: 'absolute', left: 66, top: 60, right: 66, bottom: 60, border: `1px solid ${ma('#FFFFFF',0.07)}` }} />
@@ -33,13 +41,17 @@ function OGAccord({ accent, book = 'Book IX', version = '1.3-RC2' }) {
           <filter id="sealglow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="9" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
         </defs>
         <circle cx="200" cy="200" r="150" fill="none" stroke={ma(a,0.3)} strokeWidth="1.4" />
-        <circle cx="200" cy="200" r="128" fill="none" stroke={ma(a,0.5)} strokeWidth="2" filter="url(#sealglow)" />
+        <circle className="og-twinkle" cx="200" cy="200" r="128" fill="none" stroke={ma(a,0.5)} strokeWidth="2" filter="url(#sealglow)" />
         {/* tick ring */}
+        <g className="og-spin">
         {Array.from({length:48}).map((_,i)=>{ const an=(i/48)*Math.PI*2; const r1=150,r2= i%4===0?138:144;
           return <line key={i} x1={200+Math.cos(an)*r1} y1={200+Math.sin(an)*r1} x2={200+Math.cos(an)*r2} y2={200+Math.sin(an)*r2} stroke={ma(a,0.4)} strokeWidth="1.2" />; })}
+        </g>
       </svg>
-      <div style={{ position: 'absolute', left: '50%', top: 234, transform: 'translateX(-50%)', display: 'grid', placeItems: 'center' }}>
-        <Mark size={118} color={a} />
+      <div style={{ position: 'absolute', left: '50%', top: 234, transform: 'translateX(-50%)' }}>
+        <div className="og-breathe" style={{ transformOrigin: '50% 50%', display: 'grid', placeItems: 'center' }}>
+          <Mark size={118} color={a} />
+        </div>
       </div>
 
       {/* section title — the localized overlay (title zone) */}

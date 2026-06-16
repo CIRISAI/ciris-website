@@ -103,6 +103,7 @@ def build_page(locale, tr):
 <script type="text/babel" data-presets="react">{rd('cards-a.jsx')}</script>
 <script type="text/babel" data-presets="react">{rd('cards-b.jsx')}</script>
 <script type="text/babel" data-presets="react">{rd('cards-c.jsx')}</script>
+<script type="text/babel" data-presets="react">{rd('cards-d.jsx')}</script>
 <script type="text/babel" data-presets="react">{rd('cards-accord.jsx')}</script>
 <script type="text/babel" data-presets="react">{rd('cards-default.jsx')}</script>
 <script type="text/babel" data-presets="react">
@@ -116,7 +117,13 @@ def build_page(locale, tr):
       var props = {{}};
       if (name === 'OGAccord') {{ if (book) props.book = book; if (accent) props.accent = window.CIRIS[accent] || accent; }}
       ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(Comp, props));
-      (document.fonts ? document.fonts.ready : Promise.resolve()).then(function(){{ setTimeout(function(){{ document.title='READY'; }}, 500); }});
+      // The card is the og:image poster: keep CSS motion OFF (no body.motion)
+      // and freeze SMIL to a fixed frame so the still is deterministic and
+      // not mid-clump. Then signal ready for the screenshot.
+      (document.fonts ? document.fonts.ready : Promise.resolve()).then(function(){{ setTimeout(function(){{
+        document.querySelectorAll('svg').forEach(function(s){{ try {{ s.setCurrentTime(1.2); s.pauseAnimations(); }} catch(e){{}} }});
+        document.title='READY';
+      }}, 500); }});
     }}
     var t=setInterval(function(){{ if(window.Card && window[name]){{ clearInterval(t); go(); }} }}, 40);
     setTimeout(function(){{ clearInterval(t); go(); }}, 6000);
