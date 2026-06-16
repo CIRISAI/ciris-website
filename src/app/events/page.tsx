@@ -14,14 +14,15 @@ export const metadata = {
     title: "Events & Talks: Where CIRIS Is Showing Up",
     description:
       "Upcoming events, past talks, and recorded interviews from the CIRIS project, with recordings where available.",
-    images: ["/og/og-events.jpg"],
+    images: [{ url: "/og/og-events.gif", type: "image/gif", width: 1200, height: 630, alt: "Events & Talks: Where CIRIS Is Showing Up" }],
+    videos: [{ url: "https://ciris.ai/og/og-events.mp4", type: "video/mp4", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Events & Talks: Where CIRIS Is Showing Up",
     description:
       "Upcoming events, past talks, and recorded interviews from the CIRIS project.",
-    images: ["/og/og-events.jpg"],
+    images: ["/og/og-events.gif"],
   },
 };
 

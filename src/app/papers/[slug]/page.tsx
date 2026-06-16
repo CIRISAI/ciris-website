@@ -146,13 +146,14 @@ export async function generateMetadata({
       url: pageUrl,
       title: p.citationTitle,
       description: p.summary.slice(0, 200),
-      images: ["/og/og-papers.jpg"],
+      images: [{ url: "/og/og-papers.gif", type: "image/gif", width: 1200, height: 630, alt: p.displayTitle }],
+      videos: [{ url: `${SITE}/og/og-papers.mp4`, type: "video/mp4", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: p.displayTitle,
       description: p.summary.slice(0, 200),
-      images: ["/og/og-papers.jpg"],
+      images: ["/og/og-papers.gif"],
     },
     other: citation,
   };

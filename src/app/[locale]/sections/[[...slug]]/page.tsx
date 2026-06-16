@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { getMDXComponents } from "@/mdx-components";
 import { ogLocale } from "@/i18n/config";
-import { ogSectionsImage } from "@/lib/seo";
+import { ogSectionsImage, ogSectionsVideo } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -46,6 +46,7 @@ export async function generateMetadata(props: {
   const title = page.data.title;
   const description = page.data.description;
   const image = ogSectionsImage(locale);
+  const video = ogSectionsVideo(locale);
   const url = `/${locale}/sections` + (slug?.length ? "/" + slug.join("/") : "");
   return {
     title,
@@ -57,7 +58,8 @@ export async function generateMetadata(props: {
       url,
       siteName: "CIRIS",
       locale: ogLocale(locale),
-      images: [image],
+      images: [{ url: image, type: "image/gif", width: 1200, height: 630, alt: title }],
+      videos: [{ url: video, type: "video/mp4", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",

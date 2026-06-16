@@ -1,7 +1,7 @@
 import { source } from "@/lib/source";
 import { i18n } from "@/lib/i18n";
 import { ogLocale } from "@/i18n/config";
-import { ogSectionsImage } from "@/lib/seo";
+import { ogSectionsImage, ogSectionsVideo } from "@/lib/seo";
 import { DocsPage, DocsBody, DocsDescription, DocsTitle } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
@@ -57,7 +57,8 @@ export async function generateMetadata(props: {
       url,
       siteName: "CIRIS",
       locale: ogLocale(EN),
-      images: [ogSectionsImage(EN)],
+      images: [{ url: ogSectionsImage(EN), type: "image/gif", width: 1200, height: 630, alt: title }],
+      videos: [{ url: ogSectionsVideo(EN), type: "video/mp4", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",

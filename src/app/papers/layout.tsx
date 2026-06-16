@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     title: "The papers — empirical and formal backing for CIRIS",
     description:
       "Four papers, one /papers page. Corridor Dynamics, Coherence Collapse Analysis, Constrained Reasoning Chains, CIRISAgent Framework. With permanent DOIs and explicit scope limits.",
-    images: ["/og/og-papers.jpg"],
+    images: [{ url: "/og/og-papers.gif", type: "image/gif", width: 1200, height: 630, alt: "The papers — empirical and formal backing for CIRIS" }],
+    videos: [{ url: "https://ciris.ai/og/og-papers.mp4", type: "video/mp4", width: 1200, height: 630 }],
   },
 };
 
