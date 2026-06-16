@@ -27,30 +27,49 @@ ROOT = G.ROOT
 OUT = G.OUT
 SCALE = 1                # deviceScaleFactor for crisp capture
 LOOP_SEC = 3.0           # loop length
-FPS = 10                 # frames per second
+FPS = 12                 # frames per second
 N_FRAMES = int(LOOP_SEC * FPS)
 
-# Animation CSS from the design (body.motion gates the CSS-class loops; SMIL runs
-# on its own). Injected so the motion exists to be seeked.
+# Capture-time animation. The cards' on-page motion runs on slow, decorative
+# periods (aurora 10s, spin 26s, ...) that show almost nothing across a short
+# loop, so for the SHARE IMAGE we re-time every animation to complete a whole
+# number of cycles within LOOP_SEC (= seamless loop, no seam jump) and pump the
+# amplitudes up so the motion actually reads at thumbnail size. Every period
+# below divides 3s (1.5 or 3.0). SMIL durations are normalized to match in
+# __ogNormalizeSmil so the traveling packets/dashes loop seamlessly too.
 ANIM_CSS = """
-@keyframes ogBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-@keyframes ogAurora{0%{transform:translate(0,0) rotate(0deg) scale(1)}33%{transform:translate(-46px,26px) rotate(8deg) scale(1.08)}66%{transform:translate(28px,-18px) rotate(-5deg) scale(0.96)}100%{transform:translate(0,0) rotate(0deg) scale(1)}}
-@keyframes ogPulse{0%,100%{opacity:.5}50%{opacity:1}}
-@keyframes ogFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes ogSheen{0%{transform:translateX(-40%) skewX(-18deg);opacity:0}40%{opacity:.5}60%{opacity:.5}100%{transform:translateX(120%) skewX(-18deg);opacity:0}}
+@keyframes ogBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+@keyframes ogAurora{0%{transform:translate(0,0) rotate(0deg) scale(1)}25%{transform:translate(-78px,44px) rotate(11deg) scale(1.16)}50%{transform:translate(46px,-34px) rotate(-9deg) scale(0.88)}75%{transform:translate(64px,32px) rotate(7deg) scale(1.12)}100%{transform:translate(0,0) rotate(0deg) scale(1)}}
+@keyframes ogPulse{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes ogFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+@keyframes ogSheen{0%{transform:translateX(-65%) skewX(-18deg);opacity:0}35%{opacity:.7}50%{opacity:.75}65%{opacity:.7}100%{transform:translateX(150%) skewX(-18deg);opacity:0}}
 @keyframes ogSpin{to{transform:rotate(360deg)}}
-@keyframes ogTwinkle{0%,100%{opacity:.45}50%{opacity:1}}
-body.motion .og-breathe{animation:ogBreathe 4.6s ease-in-out infinite;will-change:transform;transform-box:fill-box;transform-origin:center;}
-body.motion .og-aurora{animation:ogAurora 10s ease-in-out infinite;transform-origin:60% 40%;will-change:transform;}
-body.motion .og-rim{animation:ogPulse 4.2s ease-in-out infinite;}
-body.motion .og-radiate{animation:ogPulse 3.4s ease-in-out infinite;}
-body.motion .og-sheen{animation:ogSheen 7s ease-in-out infinite;}
-body.motion .og-spin{animation:ogSpin 26s linear infinite;transform-box:fill-box;transform-origin:center;}
-body.motion .og-twinkle{animation:ogTwinkle 3s ease-in-out infinite;}
+@keyframes ogTwinkle{0%,100%{opacity:.2}50%{opacity:1}}
+body.motion .og-breathe{animation:ogBreathe 1.5s ease-in-out infinite;will-change:transform;transform-box:fill-box;transform-origin:center;}
+/* aurora: brighter + more saturated so the drift actually reads (capture only) */
+body.motion .og-aurora{animation:ogAurora 3s ease-in-out infinite;transform-origin:60% 40%;will-change:transform;filter:blur(8px) brightness(1.8) saturate(1.35) !important;}
+body.motion .og-rim{animation:ogPulse 1.5s ease-in-out infinite;}
+body.motion .og-radiate{animation:ogPulse 1.5s ease-in-out infinite;}
+/* sheen: the shipped art paints it at ~8% so a full sweep is invisible; for the
+   share image repaint it as a bold light bar that clearly crosses every card */
+body.motion .og-sheen{animation:ogSheen 3s ease-in-out infinite;mix-blend-mode:screen;
+  background:linear-gradient(100deg,transparent 16%,rgba(255,255,255,0.14) 42%,rgba(150,212,255,0.46) 52%,rgba(255,255,255,0.14) 62%,transparent 84%) !important;
+  mask-image:radial-gradient(140% 105% at 60% 40%,#000 0%,transparent 84%) !important;}
+body.motion .og-spin{animation:ogSpin 3s linear infinite;transform-box:fill-box;transform-origin:center;}
+body.motion .og-twinkle{animation:ogTwinkle 1.5s ease-in-out infinite;}
 """
 
 SEEK_JS = r"""
 window.__ogReady = false;
+// Re-time SMIL (traveling packets, dashed-flow strokes) so each completes a
+// whole number of cycles per LOOP_SEC and loops seamlessly with the CSS.
+window.__ogNormalizeSmil = function(loop){
+  document.querySelectorAll('animateMotion').forEach(function(a){ a.setAttribute('dur', (loop/2)+'s'); });
+  document.querySelectorAll('animate').forEach(function(a){
+    if(a.getAttribute('attributeName')==='stroke-dashoffset') a.setAttribute('dur', (loop/2)+'s');
+  });
+  document.querySelectorAll('svg').forEach(function(s){ try{ s.setCurrentTime(0); }catch(e){} });
+};
 window.__ogSeek = function(t){
   document.querySelectorAll('svg').forEach(function(s){ try{ s.setCurrentTime(t); s.pauseAnimations(); }catch(e){} });
   (document.getAnimations ? document.getAnimations() : []).forEach(function(a){ try{ a.pause(); a.currentTime = t*1000; }catch(e){} });
@@ -132,6 +151,8 @@ def render_card_frames(page_path, slug, card, book, accent, frames_dir):
             if cdp.evaluate("!!(window.__ogReady && window.Card)"):
                 break
             time.sleep(0.1)
+        # re-time SMIL to the loop now that the card's SVG is in the DOM
+        cdp.evaluate(f"window.__ogNormalizeSmil({LOOP_SEC})")
         clip = {"x": 0, "y": 0, "width": 1200, "height": 630, "scale": 1}
         for i in range(N_FRAMES):
             t = (i / N_FRAMES) * LOOP_SEC
