@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Robot, ShieldCheck, Heart } from "@phosphor-icons/react";
+import { Robot, Heart } from "@phosphor-icons/react";
 import { delocalizePath, localizeHref } from "@/i18n/config";
 import { getChrome } from "@/i18n/chrome";
 
@@ -24,6 +24,7 @@ export const FloatingNav = ({
     subtitle?: string;
     icon?: React.JSX.Element;
     key?: string;
+    golden?: boolean;
   }[];
   className?: string;
   locale?: string;
@@ -81,25 +82,25 @@ export const FloatingNav = ({
         {/* Top Row: Nav Items */}
         <div className="hidden md:flex items-center gap-6 mb-3">
           {navItems.map((navItem: any, idx: number) => {
-            const isInstall = navItem.link === "/install";
+            const isGolden = !!navItem.golden;
             const t = tr(navItem);
             return (
               <Link
                 key={`link=${idx}`}
                 href={t.href}
                 className={cn(
-                  isInstall
+                  isGolden
                     ? "flex flex-col items-center text-brand-primary font-semibold hover:text-brand-secondary transition-colors"
                     : "flex flex-col items-center text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors"
                 )}
               >
-                <span className={cn("text-sm", isInstall ? "font-semibold" : "font-medium")}>
+                <span className={cn("text-sm", isGolden ? "font-semibold" : "font-medium")}>
                   {t.name}
                 </span>
                 <span
                   className={cn(
                     "text-[10px] uppercase tracking-wider",
-                    isInstall
+                    isGolden
                       ? "text-brand-primary/70"
                       : "text-neutral-500 dark:text-neutral-400"
                   )}
@@ -114,7 +115,7 @@ export const FloatingNav = ({
         {/* Mobile Nav Items */}
         <div className="flex md:hidden items-center gap-1.5 mb-2 flex-wrap justify-center">
           {navItems.map((navItem: any, idx: number) => {
-            const isInstall = navItem.link === "/install";
+            const isGolden = !!navItem.golden;
             const t = tr(navItem);
             return (
               <Link
@@ -122,7 +123,7 @@ export const FloatingNav = ({
                 href={t.href}
                 className={cn(
                   "text-[10px] whitespace-nowrap transition-colors",
-                  isInstall
+                  isGolden
                     ? "text-brand-primary font-semibold hover:text-brand-secondary"
                     : "font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
                 )}
@@ -133,16 +134,8 @@ export const FloatingNav = ({
           })}
         </div>
 
-        {/* Bottom Row: Product Buttons - Sage, Scout (centered), Medical */}
+        {/* Bottom Row: Product Buttons - Scout (centered), Medical */}
         <div className="flex items-center gap-3">
-          <Link
-            href={"https://sage.ciris.ai"}
-            className="text-neutral-700 border border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all dark:text-neutral-300 dark:border-neutral-600 dark:hover:border-neutral-500 dark:hover:bg-neutral-800"
-          >
-            <ShieldCheck size={18} />
-            <span className="hidden sm:inline">Sage</span>
-          </Link>
-
           <Link
             href={"https://scout.ciris.ai"}
             className="bg-[#5865F2] hover:bg-[#4752C4] text-white flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition-all hover:shadow-md"

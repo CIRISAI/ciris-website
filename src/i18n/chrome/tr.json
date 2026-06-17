@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "Yükle",
-      "subtitle": "Ajanı edinin"
+      "subtitle": "Bugün sahiplenin"
     },
     "coherenceRatchet": {
       "name": "Tutarlılık Mandal",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "Araştırma",
-      "subtitle": "Makaleler ve İz Arşivi"
+      "subtitle": "Makaleler ve kanıt"
     },
     "accord": {
       "name": "Anlaşma",
-      "subtitle": "Çerçeveyi Okuyun"
+      "subtitle": "Çerçeve"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "Açık Kaynak Kod"
+      "subtitle": "Açık kaynak"
+    },
+    "epistemicWeb": {
+      "name": "Bilgi Ağı",
+      "subtitle": "Merkezi olmayan bir internet"
+    },
+    "safety": {
+      "name": "Güvenlik",
+      "subtitle": "Güvenlik gerekçesi"
+    },
+    "howItWorks": {
+      "name": "Nasıl çalışır",
+      "subtitle": "Ajanın içi"
     }
   },
   "footer": {

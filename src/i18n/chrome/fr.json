@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "Installer",
-      "subtitle": "Obtenir l'Agent"
+      "subtitle": "À vous, dès aujourd'hui"
     },
     "coherenceRatchet": {
       "name": "Coherence Ratchet",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "Recherche",
-      "subtitle": "Articles et Corpus de Traces"
+      "subtitle": "Articles et preuves"
     },
     "accord": {
       "name": "Accord",
-      "subtitle": "Lire le Cadre"
+      "subtitle": "Le cadre"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "Code Open Source"
+      "subtitle": "Code ouvert"
+    },
+    "epistemicWeb": {
+      "name": "Web épistémique",
+      "subtitle": "Un internet sans centre"
+    },
+    "safety": {
+      "name": "Sécurité",
+      "subtitle": "Le dossier de sécurité"
+    },
+    "howItWorks": {
+      "name": "Fonctionnement",
+      "subtitle": "À l'intérieur de l'agent"
     }
   },
   "footer": {

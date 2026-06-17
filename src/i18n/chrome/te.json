@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "ఇన్‌స్టాల్",
-      "subtitle": "ఏజెంట్ పొందండి"
+      "subtitle": "ఈరోజే మీ సొంతం"
     },
     "coherenceRatchet": {
       "name": "సంఘటన రాచెట్",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "పరిశోధన",
-      "subtitle": "పేపర్లు & ట్రేస్ కామన్స్"
+      "subtitle": "పత్రాలు & రుజువు"
     },
     "accord": {
       "name": "ఒప్పందం",
-      "subtitle": "చట్రాన్ని చదవండి"
+      "subtitle": "ఆ చట్రం"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "ఓపెన్ సోర్స్ కోడ్"
+      "subtitle": "ఓపెన్ సోర్స్"
+    },
+    "epistemicWeb": {
+      "name": "విజ్ఞాన వెబ్",
+      "subtitle": "కేంద్రం లేని ఇంటర్నెట్"
+    },
+    "safety": {
+      "name": "భద్రత",
+      "subtitle": "భద్రత కేసు"
+    },
+    "howItWorks": {
+      "name": "ఇది ఎలా పనిచేస్తుంది",
+      "subtitle": "ఏజెంట్ లోపల"
     }
   },
   "footer": {

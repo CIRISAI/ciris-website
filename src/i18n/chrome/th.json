@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "ติดตั้ง",
-      "subtitle": "รับเอเจนต์"
+      "subtitle": "เป็นเจ้าของวันนี้"
     },
     "coherenceRatchet": {
       "name": "ฟันเฟืองความสอดคล้อง",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "การวิจัย",
-      "subtitle": "บทความและคลังร่องรอย"
+      "subtitle": "เอกสารและหลักฐาน"
     },
     "accord": {
       "name": "ข้อตกลง",
-      "subtitle": "อ่านกรอบงาน"
+      "subtitle": "กรอบแนวคิด"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "โค้ดโอเพนซอร์ส"
+      "subtitle": "โอเพนซอร์ส"
+    },
+    "epistemicWeb": {
+      "name": "เว็บแห่งความรู้",
+      "subtitle": "อินเทอร์เน็ตที่ไม่มีศูนย์กลาง"
+    },
+    "safety": {
+      "name": "ความปลอดภัย",
+      "subtitle": "กรณีความปลอดภัย"
+    },
+    "howItWorks": {
+      "name": "วิธีทำงาน",
+      "subtitle": "ภายในเอเจนต์"
     }
   },
   "footer": {

@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "ጫን",
-      "subtitle": "ወኪሉን ያውርዱ"
+      "subtitle": "ዛሬ ያግኙት"
     },
     "coherenceRatchet": {
       "name": "ተቀናጀነት ራቸት",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "ምርምር",
-      "subtitle": "ጽሁፎችና የክትትል ሀብቶች"
+      "subtitle": "ጥናቶች እና ማስረጃ"
     },
     "accord": {
       "name": "ስምምነት",
-      "subtitle": "ማዕቀፉን ያንብቡ"
+      "subtitle": "ማዕቀፉ"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "ክፍት ምንጭ ኮድ"
+      "subtitle": "ክፍት ምንጭ"
+    },
+    "epistemicWeb": {
+      "name": "የእውቀት ድር",
+      "subtitle": "ማዕከል የሌለው ኢንተርኔት"
+    },
+    "safety": {
+      "name": "ደህንነት",
+      "subtitle": "የደህንነት ማስረጃ"
+    },
+    "howItWorks": {
+      "name": "እንዴት እንደሚሰራ",
+      "subtitle": "በወኪሉ ውስጥ"
     }
   },
   "footer": {

@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "Instalar",
-      "subtitle": "Obtenha o Agente"
+      "subtitle": "Use hoje mesmo"
     },
     "coherenceRatchet": {
       "name": "Catraca de Coerência",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "Pesquisa",
-      "subtitle": "Artigos e Repositório de Rastros"
+      "subtitle": "Artigos e provas"
     },
     "accord": {
       "name": "Acordo",
-      "subtitle": "Leia o Framework"
+      "subtitle": "O framework"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "Código Aberto"
+      "subtitle": "Código aberto"
+    },
+    "epistemicWeb": {
+      "name": "Web Epistêmica",
+      "subtitle": "Uma internet sem centro"
+    },
+    "safety": {
+      "name": "Segurança",
+      "subtitle": "O caso de segurança"
+    },
+    "howItWorks": {
+      "name": "Como funciona",
+      "subtitle": "Por dentro do agente"
     }
   },
   "footer": {

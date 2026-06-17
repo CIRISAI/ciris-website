@@ -147,7 +147,13 @@
         "accord": "El ACCORD",
         "accordNote": "El marco ético público",
         "research": "Estado de la investigación",
-        "researchNote": "Lo que respalda el corpus de trazas"
+        "researchNote": "Lo que respalda el corpus de trazas",
+        "epistemicWeb": "Web Epistémica",
+        "epistemicWebNote": "Un internet sin centro",
+        "safety": "Seguridad",
+        "safetyNote": "El caso de seguridad",
+        "howItWorks": "Cómo funciona",
+        "howItWorksNote": "Dentro del agente"
       }
     }
   },
@@ -1858,14 +1864,14 @@
     "appBody": "CIRIS se está lanzando ahora. El agente que habla esta gramática y viaja por esta red se instala en tu teléfono hoy, y la red completa se despliega a lo largo de 2026.",
     "ctaAppStore": "Consigue CIRIS en la App Store",
     "ctaGooglePlay": "Consigue CIRIS en Google Play",
-        "reel": {
+    "reel": {
       "watchLabel": "Ver · la malla, en movimiento",
       "caption": "Un recorrido silencioso y continuo por cómo CIRIS crece desde una identidad sellada hasta una malla que se repara sola, sin ningún centro. Mueve la línea de tiempo o toca un capítulo para saltar entre escenas.",
       "title": "LA MALLA, EN MOVIMIENTO",
       "scenes": [
         {
           "label": "LA ESTRELLA QUE REEMPLAZAMOS",
-          "cap": "Hoy, \u201cpresencia a escala\u201d significa un único centro de datos hipermasivo, con un límite muy claro sobre quién cabe.",
+          "cap": "Hoy, “presencia a escala” significa un único centro de datos hipermasivo, con un límite muy claro sobre quién cabe.",
           "badge": "CTX",
           "badgeDesc": "El estado actual",
           "stats": [

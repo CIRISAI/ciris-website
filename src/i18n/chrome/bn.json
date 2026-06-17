@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "ইনস্টল",
-      "subtitle": "এজেন্ট নিন"
+      "subtitle": "আজই নিজের করুন"
     },
     "coherenceRatchet": {
       "name": "সামঞ্জস্য র‍্যাচেট",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "গবেষণা",
-      "subtitle": "পেপার ও ট্রেস কমনস"
+      "subtitle": "গবেষণাপত্র ও প্রমাণ"
     },
     "accord": {
       "name": "Accord",
-      "subtitle": "কাঠামো পড়ুন"
+      "subtitle": "কাঠামো"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "ওপেন সোর্স কোড"
+      "subtitle": "ওপেন সোর্স"
+    },
+    "epistemicWeb": {
+      "name": "জ্ঞান-জাল",
+      "subtitle": "কেন্দ্রহীন ইন্টারনেট"
+    },
+    "safety": {
+      "name": "নিরাপত্তা",
+      "subtitle": "নিরাপত্তার যুক্তি"
+    },
+    "howItWorks": {
+      "name": "এটি কীভাবে কাজ করে",
+      "subtitle": "এজেন্টের ভেতরে"
     }
   },
   "footer": {

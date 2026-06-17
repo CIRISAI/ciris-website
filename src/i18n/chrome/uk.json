@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "Встановити",
-      "subtitle": "Отримати агент"
+      "subtitle": "Володійте вже сьогодні"
     },
     "coherenceRatchet": {
       "name": "Храповик узгодженості",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "Дослідження",
-      "subtitle": "Статті та корпус трасувань"
+      "subtitle": "Статті та докази"
     },
     "accord": {
       "name": "Угода",
-      "subtitle": "Читати базу"
+      "subtitle": "Структура"
     },
     "github": {
       "name": "GitHub",
       "subtitle": "Відкритий код"
+    },
+    "epistemicWeb": {
+      "name": "Мережа знань",
+      "subtitle": "Інтернет без центру"
+    },
+    "safety": {
+      "name": "Безпека",
+      "subtitle": "Обґрунтування безпеки"
+    },
+    "howItWorks": {
+      "name": "Як це працює",
+      "subtitle": "Всередині агента"
     }
   },
   "footer": {

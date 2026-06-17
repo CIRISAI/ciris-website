@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "Installieren",
-      "subtitle": "Den Agenten holen"
+      "subtitle": "Ab heute deins"
     },
     "coherenceRatchet": {
       "name": "Kohärenz-Ratsche",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "Forschung",
-      "subtitle": "Publikationen & Trace Commons"
+      "subtitle": "Studien und Belege"
     },
     "accord": {
       "name": "Accord",
-      "subtitle": "Das Rahmenwerk lesen"
+      "subtitle": "Das Rahmenwerk"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "Open-Source-Code"
+      "subtitle": "Open Source"
+    },
+    "epistemicWeb": {
+      "name": "Wissensnetz",
+      "subtitle": "Ein Internet ohne Zentrum"
+    },
+    "safety": {
+      "name": "Sicherheit",
+      "subtitle": "Der Sicherheitsnachweis"
+    },
+    "howItWorks": {
+      "name": "So funktioniert es",
+      "subtitle": "Im Inneren des Agenten"
     }
   },
   "footer": {

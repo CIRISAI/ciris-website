@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "インストール",
-      "subtitle": "エージェントを入手"
+      "subtitle": "今日から自分のものに"
     },
     "coherenceRatchet": {
       "name": "一貫性ラチェット",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "研究",
-      "subtitle": "論文とトレースコモンズ"
+      "subtitle": "論文と証拠"
     },
     "accord": {
       "name": "協定",
-      "subtitle": "枠組みを読む"
+      "subtitle": "その枠組み"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "オープンソースコード"
+      "subtitle": "オープンソース"
+    },
+    "epistemicWeb": {
+      "name": "知のウェブ",
+      "subtitle": "中心のないインターネット"
+    },
+    "safety": {
+      "name": "安全性",
+      "subtitle": "安全性の論拠"
+    },
+    "howItWorks": {
+      "name": "仕組み",
+      "subtitle": "エージェントの内側"
     }
   },
   "footer": {

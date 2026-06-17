@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "ਇੰਸਟਾਲ",
-      "subtitle": "ਏਜੰਟ ਲਓ"
+      "subtitle": "ਅੱਜ ਹੀ ਆਪਣਾ ਬਣਾਓ"
     },
     "coherenceRatchet": {
       "name": "ਇਕਸਾਰਤਾ ਰੈਚੇਟ",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "ਖੋਜ",
-      "subtitle": "ਪੇਪਰ ਅਤੇ ਟਰੇਸ ਕਾਮਨਜ਼"
+      "subtitle": "ਪੇਪਰ ਅਤੇ ਸਬੂਤ"
     },
     "accord": {
       "name": "ਇਕਰਾਰਨਾਮਾ",
-      "subtitle": "ਢਾਂਚਾ ਪੜ੍ਹੋ"
+      "subtitle": "ਉਹ ਢਾਂਚਾ"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "ਖੁੱਲ੍ਹਾ ਸਰੋਤ ਕੋਡ"
+      "subtitle": "ਓਪਨ ਸੋਰਸ"
+    },
+    "epistemicWeb": {
+      "name": "ਗਿਆਨ ਵੈੱਬ",
+      "subtitle": "ਬਿਨਾਂ ਕੇਂਦਰ ਵਾਲਾ ਇੰਟਰਨੈੱਟ"
+    },
+    "safety": {
+      "name": "ਸੁਰੱਖਿਆ",
+      "subtitle": "ਸੁਰੱਖਿਆ ਮਾਮਲਾ"
+    },
+    "howItWorks": {
+      "name": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+      "subtitle": "ਏਜੰਟ ਦੇ ਅੰਦਰ"
     }
   },
   "footer": {

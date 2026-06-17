@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "इन्स्टॉल करा",
-      "subtitle": "एजंट मिळवा"
+      "subtitle": "आजच आपलं करा"
     },
     "coherenceRatchet": {
       "name": "सुसंगतता रॅचेट",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "संशोधन",
-      "subtitle": "पेपर आणि ट्रेस संग्रह"
+      "subtitle": "पेपर्स आणि पुरावा"
     },
     "accord": {
       "name": "करार",
-      "subtitle": "चौकट वाचा"
+      "subtitle": "ती चौकट"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "ओपन सोर्स कोड"
+      "subtitle": "ओपन सोर्स"
+    },
+    "epistemicWeb": {
+      "name": "ज्ञान वेब",
+      "subtitle": "केंद्र नसलेले इंटरनेट"
+    },
+    "safety": {
+      "name": "सुरक्षा",
+      "subtitle": "सुरक्षा प्रकरण"
+    },
+    "howItWorks": {
+      "name": "हे कसे चालते",
+      "subtitle": "एजंटच्या आत"
     }
   },
   "footer": {

@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "설치",
-      "subtitle": "에이전트 다운로드"
+      "subtitle": "오늘 바로 내 것으로"
     },
     "coherenceRatchet": {
       "name": "일관성 래칫",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "연구",
-      "subtitle": "논문 및 추적 공유지"
+      "subtitle": "논문과 근거"
     },
     "accord": {
       "name": "협약",
-      "subtitle": "프레임워크 읽기"
+      "subtitle": "그 틀"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "오픈 소스 코드"
+      "subtitle": "오픈 소스"
+    },
+    "epistemicWeb": {
+      "name": "지식의 웹",
+      "subtitle": "중심이 없는 인터넷"
+    },
+    "safety": {
+      "name": "안전성",
+      "subtitle": "안전성 입증"
+    },
+    "howItWorks": {
+      "name": "작동 원리",
+      "subtitle": "에이전트 속으로"
     }
   },
   "footer": {

@@ -46,14 +46,19 @@ export default function HomeContent({ t }: { t: Dictionary }) {
   const ex = home.explore.links;
 
   const exploreLinks: Array<{ href: string; label: string; note: string }> = [
+    // golden paths first
+    { href: "/epistemic-web", label: ex.epistemicWeb, note: ex.epistemicWebNote },
+    { href: "/safety", label: ex.safety, note: ex.safetyNote },
     { href: "/install", label: ex.install, note: ex.installNote },
+    { href: "/how-it-works", label: ex.howItWorks, note: ex.howItWorksNote },
+    // supporting
+    { href: "/compare", label: ex.compare, note: ex.compareNote },
+    { href: "/research-status", label: ex.research, note: ex.researchNote },
+    { href: "/sections/main", label: ex.accord, note: ex.accordNote },
+    // deeper
     { href: "/cewp", label: ex.cewp, note: ex.cewpNote },
-    { href: "/cewp/details", label: ex.cewpDetails, note: ex.cewpDetailsNote },
     { href: "/grammar", label: ex.grammar, note: ex.grammarNote },
     { href: "/game", label: ex.game, note: ex.gameNote },
-    { href: "/compare", label: ex.compare, note: ex.compareNote },
-    { href: "/sections/main", label: ex.accord, note: ex.accordNote },
-    { href: "/research-status", label: ex.research, note: ex.researchNote },
   ];
 
   return (

@@ -10,7 +10,7 @@
     },
     "install": {
       "name": "நிறுவு",
-      "subtitle": "முகவரை பெறு"
+      "subtitle": "இன்றே சொந்தமாக்கு"
     },
     "coherenceRatchet": {
       "name": "ஒத்திசைவு சக்கரம்",
@@ -26,15 +26,27 @@
     },
     "research": {
       "name": "ஆராய்ச்சி",
-      "subtitle": "கட்டுரைகள் & தடயக் களஞ்சியம்"
+      "subtitle": "ஆய்வுகள் & சான்று"
     },
     "accord": {
       "name": "உடன்படிக்கை",
-      "subtitle": "கட்டமைப்பை படி"
+      "subtitle": "கட்டமைப்பு"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "திறந்த மூல குறியீடு"
+      "subtitle": "திறந்த மூலம்"
+    },
+    "epistemicWeb": {
+      "name": "அறிவு வலை",
+      "subtitle": "மையம் இல்லாத இணையம்"
+    },
+    "safety": {
+      "name": "பாதுகாப்பு",
+      "subtitle": "பாதுகாப்பு வழக்கு"
+    },
+    "howItWorks": {
+      "name": "எப்படி செயல்படுகிறது",
+      "subtitle": "முகவருக்குள்"
     }
   },
   "footer": {
