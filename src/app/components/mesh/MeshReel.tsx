@@ -185,15 +185,6 @@ export default function MeshReel({ t }: { t: ReelStrings }) {
       <div className={styles.stage}>
         <canvas ref={canvasRef} aria-hidden="true" className={styles.canvas} />
 
-        {/* top chrome */}
-        <div className={styles.top}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <span style={{ width: 8, height: 8, borderRadius: 2, background: "#22C0E8", boxShadow: "0 0 12px #22C0E8" }} />
-            <span style={{ font: `600 12px ${mono}`, letterSpacing: "0.16em", color: "#9AA3AF" }}>CIRIS · ALM</span>
-          </div>
-          <span style={{ font: `500 11px ${mono}`, letterSpacing: "0.14em", color: "#6B7280" }}>{t.title}</span>
-        </div>
-
         {/* transport controls (overlaid on the globe, always) */}
         <div className={styles.transport}>
           <button

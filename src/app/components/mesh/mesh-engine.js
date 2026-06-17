@@ -1013,9 +1013,12 @@ export function createEngine(canvas, opts) {
     return idx;
   }
 
-  // seamless hero — full rotating globe, always breathing + flowing
-  function renderHeroSteady(t, introT) {
+  // seamless hero — full rotating globe, always breathing + flowing. `scale`
+  // enlarges the globe (handy when the hero canvas is tall/narrow and the 16:9
+  // letterbox would otherwise shrink it).
+  function renderHeroSteady(t, introT, scale) {
     resetCam(); bg();
+    if (scale && scale !== 1) cam.zoom = scale;
     const intro = introT == null ? 1 : easeOut(clamp(introT, 0, 1));
     drawGlobe({ ang: spin(t, 0.12, 0.6), t, grow: intro, flow: intro * 0.55, presence: true });
   }

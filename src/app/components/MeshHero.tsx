@@ -13,7 +13,7 @@ import { useEffect, useRef } from "react";
 
 type Engine = {
   resize: () => void;
-  renderHeroSteady: (t: number, introT: number) => void;
+  renderHeroSteady: (t: number, introT: number, scale?: number) => void;
 };
 
 export default function MeshHero({ className }: { className?: string }) {
@@ -35,6 +35,9 @@ export default function MeshHero({ className }: { className?: string }) {
     // Scale to the viewport; the globe reads fine with fewer on small screens.
     const w = typeof window !== "undefined" ? window.innerWidth : 1280;
     const nodes = w < 768 ? 3500 : w < 1280 ? 6000 : 8000;
+    // The cover canvas is full-bleed and tall, so the engine's 16:9 letterbox
+    // shrinks the globe, worst on a narrow phone. Zoom it up, more on mobile.
+    const scale = w < 768 ? 1.55 : w < 1280 ? 1.3 : 1.15;
     const t0 = performance.now();
     const now = () => (reduced ? 8 : (performance.now() - t0) / 1000 + 8);
 
@@ -44,11 +47,11 @@ export default function MeshHero({ className }: { className?: string }) {
       engine = mod.createEngine(canvasRef.current, { nodes });
       engine.resize();
       // Paint a complete frame up front so there's no empty flash.
-      engine.renderHeroSteady(now(), 1);
+      engine.renderHeroSteady(now(), 1, scale);
       ro = new ResizeObserver(() => {
         if (!engine) return;
         engine.resize();
-        engine.renderHeroSteady(now(), 1);
+        engine.renderHeroSteady(now(), 1, scale);
       });
       ro.observe(canvasRef.current);
 
@@ -56,7 +59,7 @@ export default function MeshHero({ className }: { className?: string }) {
 
       const loop = () => {
         if (!engine) return;
-        engine.renderHeroSteady(now(), 1);
+        engine.renderHeroSteady(now(), 1, scale);
         raf = requestAnimationFrame(loop);
       };
       raf = requestAnimationFrame(loop);
