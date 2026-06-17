@@ -20,6 +20,7 @@ import { DEFAULT_LOCALE } from "@/i18n/config";
 
 import Funnel from "@/ciris-handoff/components/Funnel/Funnel";
 import MeshFlow from "@/ciris-handoff/components/MeshFlow/MeshFlow";
+import MeshHero from "@/app/components/MeshHero";
 import MetroRing from "@/ciris-handoff/components/MetroRing/MetroRing";
 import PrivacyRadar from "@/ciris-handoff/components/PrivacyRadar/PrivacyRadar";
 import AttestationLedger from "@/ciris-handoff/components/AttestationLedger/AttestationLedger";
@@ -68,9 +69,10 @@ export default function HomeContent({ t }: { t: Dictionary }) {
       <main className="ciris-dark home-narrative">
         {/* === 00 · Cover === */}
         <Reveal as="section" className="hsec hsec-cover" id="cover">
-          <div className="hsec-mesh" aria-hidden>
-            <MeshFlow />
+          <div className="hsec-mesh hsec-mesh-globe" aria-hidden>
+            <MeshHero className="mesh-hero-canvas" />
           </div>
+          <div className="cover-scrim" aria-hidden />
           <div className="hsec-inner cover-inner">
             <div className="eyebrow rise">
               <span className="eb-dot" /> {home.cover.eyebrow}

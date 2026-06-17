@@ -58,6 +58,31 @@
   width: 100%;
   height: 100%;
 }
+/* the rotating-globe canvas hero reads brighter than the SVG mesh, so let it
+ * sit a touch stronger, and fade it in on load */
+.home-narrative .hsec-mesh-globe {
+  opacity: 0.9;
+}
+.home-narrative .mesh-hero-canvas {
+  animation: mesh-hero-fade 1.4s ease forwards;
+}
+@keyframes mesh-hero-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* left + bottom scrim so the headline/CTA stay legible over the globe */
+.home-narrative .cover-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(100deg, rgba(9, 12, 16, 0.94) 0%, rgba(9, 12, 16, 0.74) 30%, rgba(9, 12, 16, 0) 60%),
+    linear-gradient(to top, rgba(9, 12, 16, 0.8) 0%, rgba(9, 12, 16, 0) 32%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-narrative .mesh-hero-canvas { animation: none; opacity: 1; }
+}
 
 /* --- type --- */
 .home-narrative .eyebrow {
