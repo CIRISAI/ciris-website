@@ -10,6 +10,7 @@ import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
+import MeshReel from "@/app/components/mesh/MeshReel";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizedPath } from "@/i18n/config";
 
@@ -50,6 +51,19 @@ export default function EpistemicWebContent({ t }: { t: Dictionary }) {
               {e.p2}
             </p>
           </header>
+
+          {/* The ALM story, animated — the live "Mesh, In Motion" reel */}
+          <section className="mt-10">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand-primary">
+              Watch · the mesh, in motion
+            </p>
+            <MeshReel />
+            <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">
+              A silent, looping walk through how CIRIS grows from one sealed
+              identity into a self-healing mesh with no center. Scrub the
+              timeline or tap a chapter to jump between scenes.
+            </p>
+          </section>
 
           {/* The reframe: this is a complete internet replacement, not just AI */}
           <section className="mt-8 rounded-2xl border-l-4 border-brand-primary bg-brand-primary/5 p-5 dark:bg-brand-primary/10">
