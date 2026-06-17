@@ -214,223 +214,174 @@ export default function MeshReel() {
   const mono = "var(--font-geist-mono), 'Geist Mono', ui-monospace, monospace";
 
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        aspectRatio: "16 / 9",
-        minHeight: 320,
-        background: "#0D1117",
-        overflow: "hidden",
-        borderRadius: 16,
-        border: "1px solid #222A33",
-        fontFamily: "var(--font-geist-sans), Geist, system-ui, sans-serif",
-        color: "#F4F5F7",
-      }}
-    >
-      <canvas
-        ref={canvasRef}
-        aria-hidden="true"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", display: "block" }}
-      />
+    <div className={styles.reel}>
+      <div className={styles.stage}>
+        <canvas ref={canvasRef} aria-hidden="true" className={styles.canvas} />
 
-      {/* top chrome */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "18px 22px",
-          pointerEvents: "none",
-          zIndex: 5,
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ width: 8, height: 8, borderRadius: 2, background: "#22C0E8", boxShadow: "0 0 12px #22C0E8" }} />
-          <span style={{ font: `600 12px ${mono}`, letterSpacing: "0.16em", color: "#9AA3AF" }}>CIRIS · ALM</span>
-        </div>
-        <span style={{ font: `500 11px ${mono}`, letterSpacing: "0.14em", color: "#6B7280" }}>THE MESH, IN MOTION</span>
-      </div>
-
-      {/* scene number + title + caption + badges */}
-      <div style={{ position: "absolute", left: 22, bottom: 92, zIndex: 5, maxWidth: "52%", pointerEvents: "none" }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
-          <span style={{ font: `600 12px ${mono}`, color: "#419CA0", letterSpacing: "0.1em" }}>{cur.no}</span>
-          <span style={{ font: `600 12px ${mono}`, color: "#6B7280", letterSpacing: "0.16em" }}>{sc ? sc.label : ""}</span>
-        </div>
-        <p
-          key={idx}
-          className={styles.rise}
-          style={{
-            margin: 0,
-            fontSize: "clamp(16px, 2.4vw, 28px)",
-            fontWeight: 600,
-            lineHeight: 1.18,
-            letterSpacing: "-0.01em",
-            textWrap: "balance",
-          }}
-        >
-          {cur.cap}
-        </p>
-        <div style={{ display: "flex", gap: 8, marginTop: 14, flexWrap: "wrap" }}>
-          {cur.badges.map((b, i) => {
-            const [bg, fg, bd] = BADGE[b[2]] || BADGE.mute;
-            return (
-              <span
-                key={"b" + idx + i}
-                className={styles.badge}
-                title={b[1]}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                  padding: "5px 10px",
-                  borderRadius: 6,
-                  font: `600 10px ${mono}`,
-                  letterSpacing: "0.1em",
-                  background: bg,
-                  color: fg,
-                  border: `1px solid ${bd}`,
-                }}
-              >
-                <span style={{ width: 5, height: 5, borderRadius: "50%", background: fg }} />
-                {b[0]}
-              </span>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* HUD readout (right) */}
-      <div
-        style={{
-          position: "absolute",
-          right: 22,
-          bottom: 92,
-          zIndex: 5,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
-          gap: 12,
-          pointerEvents: "none",
-        }}
-      >
-        {cur.stats.map((s, i) => (
-          <div key={"s" + idx + i} style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
-            <span style={{ font: `700 clamp(20px, 3vw, 32px) ${mono}`, lineHeight: 1, color: s[2], fontVariantNumeric: "tabular-nums" }}>
-              {s[0]}
-            </span>
-            <span style={{ font: `500 10px ${mono}`, letterSpacing: "0.14em", color: "#6B7280", marginTop: 6 }}>{s[1]}</span>
+        {/* top chrome */}
+        <div className={styles.top}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ width: 8, height: 8, borderRadius: 2, background: "#22C0E8", boxShadow: "0 0 12px #22C0E8" }} />
+            <span style={{ font: `600 12px ${mono}`, letterSpacing: "0.16em", color: "#9AA3AF" }}>CIRIS · ALM</span>
           </div>
-        ))}
-      </div>
+          <span style={{ font: `500 11px ${mono}`, letterSpacing: "0.14em", color: "#6B7280" }}>THE MESH, IN MOTION</span>
+        </div>
 
-      {/* transport controls */}
-      <div
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 6,
-          padding: "16px 22px 18px",
-          background: "linear-gradient(to top, rgba(13,17,23,0.92), rgba(13,17,23,0))",
-          display: "flex",
-          alignItems: "center",
-          gap: 16,
-        }}
-      >
-        <button
-          onClick={toggle}
-          aria-label={playing ? "Pause" : "Play"}
-          style={{
-            flex: "none",
-            width: 40,
-            height: 40,
-            borderRadius: "50%",
-            border: "1px solid #2A323C",
-            background: "#151B24",
-            color: "#F4F5F7",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 14,
-          }}
-        >
-          {playing ? "❚❚" : "►"}
-        </button>
-        <button
-          onClick={restart}
-          aria-label="Restart"
-          style={{
-            flex: "none",
-            width: 40,
-            height: 40,
-            borderRadius: "50%",
-            border: "1px solid #2A323C",
-            background: "transparent",
-            color: "#9AA3AF",
-            cursor: "pointer",
-            fontSize: 14,
-          }}
-        >
-          ↺
-        </button>
-        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 9 }}>
-          <div
-            ref={trackRef}
-            onClick={scrub}
-            style={{ position: "relative", height: 18, display: "flex", alignItems: "center", cursor: "pointer" }}
+        {/* transport controls (overlaid on the globe, always) */}
+        <div className={styles.transport}>
+          <button
+            onClick={toggle}
+            aria-label={playing ? "Pause" : "Play"}
+            style={{
+              flex: "none",
+              width: 40,
+              height: 40,
+              borderRadius: "50%",
+              border: "1px solid #2A323C",
+              background: "#151B24",
+              color: "#F4F5F7",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 14,
+            }}
           >
-            <div style={{ position: "absolute", left: 0, right: 0, height: 3, borderRadius: 2, background: "#222A33" }} />
-            <div ref={fillRef} style={{ position: "absolute", left: 0, height: 3, borderRadius: 2, background: "#22C0E8", width: "0%" }} />
+            {playing ? "❚❚" : "►"}
+          </button>
+          <button
+            onClick={restart}
+            aria-label="Restart"
+            style={{
+              flex: "none",
+              width: 40,
+              height: 40,
+              borderRadius: "50%",
+              border: "1px solid #2A323C",
+              background: "transparent",
+              color: "#9AA3AF",
+              cursor: "pointer",
+              fontSize: 14,
+            }}
+          >
+            ↺
+          </button>
+          <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 9 }}>
             <div
-              ref={headRef}
-              style={{
-                position: "absolute",
-                width: 11,
-                height: 11,
-                borderRadius: "50%",
-                background: "#F4F5F7",
-                boxShadow: "0 0 0 3px rgba(34,192,232,0.25)",
-                left: "0%",
-                transform: "translateX(-50%)",
-              }}
-            />
-            <div style={{ position: "absolute", left: 0, right: 0, top: 14 }}>
-              {scenes.map((s) => (
-                <button
-                  key={"tk" + s.id}
-                  title={s.label}
-                  aria-label={"Jump to " + s.label}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    seek(s.start + 0.05);
-                  }}
-                  style={{
-                    position: "absolute",
-                    left: (s.start / (totalRef.current || 1)) * 100 + "%",
-                    width: 1,
-                    height: 5,
-                    padding: 0,
-                    border: "none",
-                    background: "#39434F",
-                    cursor: "pointer",
-                  }}
-                />
-              ))}
+              ref={trackRef}
+              onClick={scrub}
+              style={{ position: "relative", height: 18, display: "flex", alignItems: "center", cursor: "pointer" }}
+            >
+              <div style={{ position: "absolute", left: 0, right: 0, height: 3, borderRadius: 2, background: "#222A33" }} />
+              <div ref={fillRef} style={{ position: "absolute", left: 0, height: 3, borderRadius: 2, background: "#22C0E8", width: "0%" }} />
+              <div
+                ref={headRef}
+                style={{
+                  position: "absolute",
+                  width: 11,
+                  height: 11,
+                  borderRadius: "50%",
+                  background: "#F4F5F7",
+                  boxShadow: "0 0 0 3px rgba(34,192,232,0.25)",
+                  left: "0%",
+                  transform: "translateX(-50%)",
+                }}
+              />
+              <div style={{ position: "absolute", left: 0, right: 0, top: 14 }}>
+                {scenes.map((s) => (
+                  <button
+                    key={"tk" + s.id}
+                    title={s.label}
+                    aria-label={"Jump to " + s.label}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      seek(s.start + 0.05);
+                    }}
+                    style={{
+                      position: "absolute",
+                      left: (s.start / (totalRef.current || 1)) * 100 + "%",
+                      width: 1,
+                      height: 5,
+                      padding: 0,
+                      border: "none",
+                      background: "#39434F",
+                      cursor: "pointer",
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between", font: `500 11px ${mono}`, color: "#6B7280" }}>
+              <span ref={timeRef}>0:00</span>
+              <span>{fmt(totalRef.current)}</span>
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between", font: `500 11px ${mono}`, color: "#6B7280" }}>
-            <span ref={timeRef}>0:00</span>
-            <span>{fmt(totalRef.current)}</span>
+        </div>
+      </div>
+
+      {/* caption + HUD: overlaid on the globe on desktop, stacked below it on
+          mobile (a 16:9 canvas is too short to read text over on a phone) */}
+      <div className={styles.chrome}>
+        <div className={styles.caption}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
+            <span style={{ font: `600 12px ${mono}`, color: "#419CA0", letterSpacing: "0.1em" }}>{cur.no}</span>
+            <span style={{ font: `600 12px ${mono}`, color: "#6B7280", letterSpacing: "0.16em" }}>{sc ? sc.label : ""}</span>
+          </div>
+          <p
+            key={idx}
+            className={styles.rise}
+            style={{
+              margin: 0,
+              fontSize: "clamp(16px, 2.4vw, 28px)",
+              fontWeight: 600,
+              lineHeight: 1.18,
+              letterSpacing: "-0.01em",
+              textWrap: "balance",
+            }}
+          >
+            {cur.cap}
+          </p>
+          <div style={{ display: "flex", gap: 8, marginTop: 14, flexWrap: "wrap" }}>
+            {cur.badges.map((b, i) => {
+              const [bg, fg, bd] = BADGE[b[2]] || BADGE.mute;
+              return (
+                <span
+                  key={"b" + idx + i}
+                  className={styles.badge}
+                  title={b[1]}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                    padding: "5px 10px",
+                    borderRadius: 6,
+                    font: `600 10px ${mono}`,
+                    letterSpacing: "0.1em",
+                    background: bg,
+                    color: fg,
+                    border: `1px solid ${bd}`,
+                  }}
+                >
+                  <span style={{ width: 5, height: 5, borderRadius: "50%", background: fg }} />
+                  {b[0]}
+                </span>
+              );
+            })}
           </div>
         </div>
+
+        {cur.stats.length > 0 && (
+          <div className={styles.hud}>
+            {cur.stats.map((s, i) => (
+              <div key={"s" + idx + i} style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
+                <span style={{ font: `700 clamp(20px, 3vw, 32px) ${mono}`, lineHeight: 1, color: s[2], fontVariantNumeric: "tabular-nums" }}>
+                  {s[0]}
+                </span>
+                <span style={{ font: `500 10px ${mono}`, letterSpacing: "0.14em", color: "#6B7280", marginTop: 6 }}>{s[1]}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

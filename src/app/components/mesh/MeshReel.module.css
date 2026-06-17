@@ -1,5 +1,110 @@
-/* Caption + badge entrance for the master reel chrome (rebuilt natively from
-   the design handoff; support.js is intentionally not ported). */
+/* "The Mesh, In Motion" reel chrome — rebuilt natively from the design handoff
+   (support.js intentionally not ported). The caption + HUD overlay the globe on
+   desktop (player look) but stack BELOW it on mobile, where a 16:9 canvas is too
+   short to read text over. Both sit on the same dark card so text stays
+   white-on-dark either way. */
+
+.reel {
+  position: relative;
+  background: #0d1117;
+  border: 1px solid #222a33;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: var(--font-geist-sans), Geist, system-ui, sans-serif;
+  color: #f4f5f7;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.transport {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  padding: 14px 18px 16px;
+  background: linear-gradient(to top, rgba(13, 17, 23, 0.92), rgba(13, 17, 23, 0));
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* caption (left) + HUD (right) */
+.chrome {
+  display: flex;
+  gap: 16px;
+  padding: 16px 18px 18px;
+}
+.caption {
+  min-width: 0;
+  flex: 1;
+}
+.hud {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex: none;
+}
+
+/* desktop: overlay the caption/HUD on the globe, clear of the transport bar */
+@media (min-width: 700px) {
+  .chrome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    z-index: 5;
+    pointer-events: none;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .caption {
+    max-width: 52%;
+    flex: 0 1 auto;
+  }
+}
+
+/* mobile: caption/HUD flow BELOW the globe (still on the dark card) */
+@media (max-width: 699.98px) {
+  .chrome {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .hud {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+  }
+}
+
+/* caption + badge entrance */
 .rise {
   animation: meshReelRise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
 }
