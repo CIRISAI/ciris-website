@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "seguro por estrutura, aberto por princípio, gentil por design",
       "h1": "Uma IA que você pode <em>realmente possuir</em>.",
       "sub": "Um aplicativo. <b>Sem data centers.</b> Cada afirmação que ela faz, <b>assinada.</b>",
       "appStoreAria": "Instalar CIRIS na App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "Não é uma ideia para um dia qualquer",
     "appBody": "O CIRIS está chegando agora. O agente que fala essa gramática e anda nessa rede se instala no seu celular hoje, e a rede completa é lançada ao longo de 2026.",
     "ctaAppStore": "Baixe o CIRIS na App Store",
-    "ctaGooglePlay": "Baixe o CIRIS no Google Play"
+    "ctaGooglePlay": "Baixe o CIRIS no Google Play",
+    "reel": {
+      "watchLabel": "Assista · a malha, em movimento",
+      "caption": "Um passeio silencioso e em loop por como o CIRIS cresce de uma única identidade selada para uma malha que se cura sozinha, sem centro. Arraste a linha do tempo ou toque em um capítulo para pular entre as cenas.",
+      "title": "A MALHA, EM MOVIMENTO",
+      "scenes": [
+        {
+          "label": "A ESTRELA QUE ESTAMOS SUBSTITUINDO",
+          "cap": "Hoje, “presença em escala” significa um único datacenter gigante, e um teto rígido sobre quem cabe.",
+          "badge": "CTX",
+          "badgeDesc": "O cenário atual",
+          "stats": [
+            "ESTRELA CENTRAL"
+          ]
+        },
+        {
+          "label": "UMA CÓPIA ENTRA",
+          "cap": "O CIRIS começa com uma única cópia selada. Uma identidade que entra na malha e não pode ser falsificada.",
+          "badge": "MEDIDO",
+          "badgeDesc": "Identidade selada já disponível hoje",
+          "stats": [
+            "CÓPIA SELADA"
+          ]
+        },
+        {
+          "label": "O TECIDO CRESCE",
+          "cap": "Cada nó traz o próximo. Vizinhos se ligam a vizinhos, então o tecido cresce sozinho, sem centro do qual depender.",
+          "badge": "MODELO",
+          "badgeDesc": "Expansão projetada",
+          "stats": [
+            "NÓS PARES",
+            "LINKS / NÓ"
+          ]
+        },
+        {
+          "label": "PRESENÇA EM ESCALA",
+          "cap": "Cada nó é uma presença viva, um participante, não um espectador. Milhares, todos ao mesmo tempo.",
+          "badge": "MODELO",
+          "badgeDesc": "Topologia alvo",
+          "stats": [
+            "PRESENÇAS VIVAS"
+          ]
+        },
+        {
+          "label": "ENTREGA HOLOGRÁFICA",
+          "cap": "A entrega é holográfica: fluxos em camadas re-renderizados para cada espectador, nunca um único feed fixo.",
+          "badge": "FRONTEIRA",
+          "badgeDesc": "Em pesquisa ativa",
+          "stats": [
+            "CAMADAS",
+            "RENDERIZADORES"
+          ]
+        },
+        {
+          "label": "ELE LEVA UM GOLPE E SE CURA",
+          "cap": "Uma região inteira cai, e a malha contorna ela e se cura. A presença nunca pisca.",
+          "badge": "MODELO",
+          "badgeDesc": "Redirecionamento + reparo em custódia",
+          "stats": [
+            "REDIRECIONAR (s)",
+            "ORIGEM + REPARO"
+          ]
+        },
+        {
+          "label": "O SELO",
+          "cap": "Selado de ponta a ponta. Os transportadores movem os bytes; nenhum deles pode ler o que está dentro.",
+          "badge": "MEDIDO",
+          "badgeDesc": "Selagem ponta a ponta já disponível hoje",
+          "stats": [
+            "SELO DA CAMADA"
+          ]
+        },
+        {
+          "label": "A SALA O SUSTENTA",
+          "cap": "Sem estrela. Sem ponto único. A própria sala sustenta a presença.",
+          "badge": "CIRIS",
+          "badgeDesc": "Malha Viva Autônoma",
+          "stats": []
+        }
+      ]
+    }
   }
 }

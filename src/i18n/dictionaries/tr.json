@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "yapıyla güvenli, ilkeyle açık, tasarımla nazik",
       "h1": "Gerçekten <em>sahip olabileceğiniz</em> bir yapay zeka.",
       "sub": "Tek uygulama. <b>Veri merkezi yok.</b> Yaptığı her iddia, <b>imzalı.</b>",
       "appStoreAria": "CIRIS'i App Store'dan yükleyin",
@@ -1857,6 +1857,86 @@
     "appTitle": "Bir gün gelecek bir fikir değil",
     "appBody": "CIRIS şimdi geliyor. Bu dilbilgisini konuşan ve bu ağ üzerinde giden ajan, bugün telefonunuza yükleniyor ve ağın tamamı 2026 boyunca yayılıyor.",
     "ctaAppStore": "CIRIS'i App Store'dan edinin",
-    "ctaGooglePlay": "CIRIS'i Google Play'den edinin"
+    "ctaGooglePlay": "CIRIS'i Google Play'den edinin",
+    "reel": {
+      "watchLabel": "İzle · ağ, hareket halinde",
+      "caption": "CIRIS'in tek bir mühürlü kimlikten, merkezi olmayan, kendini onaran bir ağa nasıl büyüdüğünü gösteren sessiz, döngüsel bir yolculuk. Zaman çizgisini kaydırın ya da sahneler arasında geçmek için bir bölüme dokunun.",
+      "title": "AĞ, HAREKET HALİNDE",
+      "scenes": [
+        {
+          "label": "YERİNE GEÇTİĞİMİZ YILDIZ",
+          "cap": "Bugün “büyük ölçekte varlık” demek, tek bir dev veri merkezi ve kimin sığacağına dair sert bir tavan demek.",
+          "badge": "BAĞLAM",
+          "badgeDesc": "Mevcut durum",
+          "stats": [
+            "MERKEZİ YILDIZ"
+          ]
+        },
+        {
+          "label": "İÇERİ TEK KOPYA",
+          "cap": "CIRIS tek bir mühürlü kopyadan başlar. Ağa giren ve taklit edilemeyen bir kimlik.",
+          "badge": "ÖLÇÜLDÜ",
+          "badgeDesc": "Mühürlü kimlik bugün hazır",
+          "stats": [
+            "MÜHÜRLÜ KOPYA"
+          ]
+        },
+        {
+          "label": "DOKU BÜYÜR",
+          "cap": "Her düğüm bir sonrakini getirir. Komşular komşulara bağlanır, böylece doku kendini büyütür, bel bağlanacak bir merkez olmadan.",
+          "badge": "MODEL",
+          "badgeDesc": "Öngörülen yayılma",
+          "stats": [
+            "EŞ DÜĞÜMLER",
+            "BAĞLANTI / DÜĞÜM"
+          ]
+        },
+        {
+          "label": "BÜYÜK ÖLÇEKTE VARLIK",
+          "cap": "Her düğüm canlı bir varlıktır, bir katılımcıdır, izleyici değil. Binlerce, hepsi aynı anda.",
+          "badge": "MODEL",
+          "badgeDesc": "Hedef topoloji",
+          "stats": [
+            "CANLI VARLIKLAR"
+          ]
+        },
+        {
+          "label": "HOLOGRAFİK İLETİM",
+          "cap": "İletim holografiktir: katmanlı akışlar her izleyici için yeniden işlenir, asla tek sabit bir yayın değil.",
+          "badge": "ÖNCÜ",
+          "badgeDesc": "Etkin araştırmada",
+          "stats": [
+            "KATMANLI KABUKLAR",
+            "İŞLEME TUTUCULARI"
+          ]
+        },
+        {
+          "label": "DARBE ALIR VE İYİLEŞİR",
+          "cap": "Bütün bir bölge düşer ve ağ etrafından yeniden yol bulup iyileşir. Varlık hiç kesintiye uğramaz.",
+          "badge": "MODEL",
+          "badgeDesc": "Yeniden yönlendirme + emanet onarımı",
+          "stats": [
+            "YENİDEN YÖNLENDİRME (sn)",
+            "KAYNAK + ONARIM"
+          ]
+        },
+        {
+          "label": "MÜHÜR",
+          "cap": "Uçtan uca mühürlü. Taşıyıcılar baytları taşır; hiçbiri içeride ne olduğunu okuyamaz.",
+          "badge": "ÖLÇÜLDÜ",
+          "badgeDesc": "Uçtan uca mühürleme bugün hazır",
+          "stats": [
+            "KABUK MÜHRÜ"
+          ]
+        },
+        {
+          "label": "ONU ODA TAŞIR",
+          "cap": "Yıldız yok. Tek bir nokta yok. Varlığı odanın kendisi taşır.",
+          "badge": "CIRIS",
+          "badgeDesc": "Otonomik Canlı Ağ",
+          "stats": []
+        }
+      ]
+    }
   }
 }

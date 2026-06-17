@@ -1,14 +1,41 @@
 {
-  "_meta": { "locale": "en", "origin": "source" },
+  "_meta": {
+    "locale": "en",
+    "origin": "source"
+  },
   "nav": {
-    "firstContact": { "name": "First Contact", "subtitle": "Start Here: the Why" },
-    "install": { "name": "Install", "subtitle": "Get the Agent" },
-    "coherenceRatchet": { "name": "Coherence Ratchet", "subtitle": "The Pressure" },
-    "federation": { "name": "Federation", "subtitle": "The Response" },
-    "compare": { "name": "Compare", "subtitle": "See the Safety Case" },
-    "research": { "name": "Research", "subtitle": "Papers & Trace Commons" },
-    "accord": { "name": "Accord", "subtitle": "Read the Framework" },
-    "github": { "name": "GitHub", "subtitle": "Open Source Code" }
+    "firstContact": {
+      "name": "First Contact",
+      "subtitle": "Start Here: the Why"
+    },
+    "install": {
+      "name": "Install",
+      "subtitle": "Get the Agent"
+    },
+    "coherenceRatchet": {
+      "name": "Coherence Ratchet",
+      "subtitle": "The Pressure"
+    },
+    "federation": {
+      "name": "Federation",
+      "subtitle": "The Response"
+    },
+    "compare": {
+      "name": "Compare",
+      "subtitle": "See the Safety Case"
+    },
+    "research": {
+      "name": "Research",
+      "subtitle": "Papers & Trace Commons"
+    },
+    "accord": {
+      "name": "Accord",
+      "subtitle": "Read the Framework"
+    },
+    "github": {
+      "name": "GitHub",
+      "subtitle": "Open Source Code"
+    }
   },
   "footer": {
     "desc": "Open coherence infrastructure. AGPL-3.0 | Mission-locked.",
@@ -49,6 +76,7 @@
       "privacyPolicy": "Privacy Policy",
       "safetyPolicy": "Safety Policy",
       "warrantCanary": "Warrant Canary"
-    }
+    },
+    "tagline": "safe by structure, open by principle, kind by design"
   }
 }

@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "sicher durch Struktur, offen aus Prinzip, freundlich im Entwurf",
       "h1": "Eine KI, die Sie <em>wirklich besitzen</em> können.",
       "sub": "Eine App. <b>Keine Rechenzentren.</b> Jede Aussage, die sie macht, <b>signiert.</b>",
       "appStoreAria": "CIRIS im App Store installieren",
@@ -1857,6 +1857,86 @@
     "appTitle": "Das ist keine Irgendwann-Idee",
     "appBody": "CIRIS erscheint jetzt. Der Agent, der diese Grammatik spricht und auf diesem Netzwerk fährt, lässt sich heute auf deinem Handy installieren, und das vollständige Netzwerk wird über 2026 hinweg ausgerollt.",
     "ctaAppStore": "CIRIS im App Store holen",
-    "ctaGooglePlay": "CIRIS bei Google Play holen"
+    "ctaGooglePlay": "CIRIS bei Google Play holen",
+    "reel": {
+      "watchLabel": "Ansehen · das Netz in Bewegung",
+      "caption": "Ein stiller Rundgang in Schleife zeigt, wie CIRIS aus einer einzigen versiegelten Identität zu einem selbstheilenden Netz ohne Mitte heranwächst. Schieben Sie die Zeitleiste oder tippen Sie auf ein Kapitel, um zwischen den Szenen zu springen.",
+      "title": "DAS NETZ IN BEWEGUNG",
+      "scenes": [
+        {
+          "label": "DER STERN, DEN WIR ERSETZEN",
+          "cap": "Heute bedeutet „Präsenz im großen Maßstab“ ein einziges riesiges Rechenzentrum und eine harte Grenze dafür, wer hineinpasst.",
+          "badge": "KTX",
+          "badgeDesc": "Der heutige Stand",
+          "stats": [
+            "ZENTRALER STERN"
+          ]
+        },
+        {
+          "label": "EINE KOPIE HINEIN",
+          "cap": "CIRIS beginnt mit einer einzigen versiegelten Kopie. Eine Identität, die ins Netz kommt und nicht gefälscht werden kann.",
+          "badge": "GEMESSEN",
+          "badgeDesc": "Versiegelte Identität ist heute da",
+          "stats": [
+            "VERSIEGELTE KOPIE"
+          ]
+        },
+        {
+          "label": "DAS GEWEBE WÄCHST",
+          "cap": "Jeder Knoten holt den nächsten dazu. Nachbarn verbinden sich mit Nachbarn, so wächst das Gewebe von selbst, ohne Mitte, auf die es angewiesen wäre.",
+          "badge": "MODELL",
+          "badgeDesc": "Erwartete Ausbreitung",
+          "stats": [
+            "NACHBARKNOTEN",
+            "VERBINDUNGEN / KNOTEN"
+          ]
+        },
+        {
+          "label": "PRÄSENZ IM GROSSEN MASSSTAB",
+          "cap": "Jeder Knoten ist eine lebendige Präsenz, ein Teilnehmer, kein Zuschauer. Tausende, alle zugleich.",
+          "badge": "MODELL",
+          "badgeDesc": "Ziel-Topologie",
+          "stats": [
+            "LEBENDIGE PRÄSENZEN"
+          ]
+        },
+        {
+          "label": "HOLOGRAFISCHE ÜBERTRAGUNG",
+          "cap": "Die Übertragung ist holografisch: geschichtete Ströme, die für jeden Betrachter neu gezeichnet werden, niemals ein einziger fester Feed.",
+          "badge": "GRENZE",
+          "badgeDesc": "In aktiver Forschung",
+          "stats": [
+            "GESCHICHTETE HÜLLEN",
+            "RENDER-TRÄGER"
+          ]
+        },
+        {
+          "label": "ES WIRD GETROFFEN UND HEILT",
+          "cap": "Eine ganze Region fällt aus, und das Netz leitet darum herum und heilt sich. Die Präsenz blinzelt nie.",
+          "badge": "MODELL",
+          "badgeDesc": "Umleitung + Treuhand-Reparatur",
+          "stats": [
+            "UMLEITUNG (s)",
+            "QUELLE + REPARATUR"
+          ]
+        },
+        {
+          "label": "DAS SIEGEL",
+          "cap": "Von Anfang bis Ende versiegelt. Träger bewegen die Bytes; keiner von ihnen kann lesen, was darin steckt.",
+          "badge": "GEMESSEN",
+          "badgeDesc": "Durchgängige Versiegelung ist heute da",
+          "stats": [
+            "HÜLLEN-SIEGEL"
+          ]
+        },
+        {
+          "label": "DER RAUM TRÄGT SIE",
+          "cap": "Kein Stern. Kein einzelner Punkt. Der Raum selbst trägt die Präsenz.",
+          "badge": "CIRIS",
+          "badgeDesc": "Autonomes lebendiges Netz",
+          "stats": []
+        }
+      ]
+    }
   }
 }

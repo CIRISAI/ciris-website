@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "àbò nípasẹ̀ ètò, ṣíṣí nípasẹ̀ ìlànà, rere nípasẹ̀ ìpèsè",
       "h1": "AI tí o lè <em>ní gidi gidi</em>.",
       "sub": "Ọ̀kan àpò. <b>Kò sí ilé-iṣẹ́ ìpamọ́ dátà.</b> Gbogbo ohun tó sọ, <b>fìdí rẹ̀ múlẹ̀.</b>",
       "appStoreAria": "Fi CIRIS sórí fóònù rẹ lórí App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "Kì í ṣe èrò ọjọ́ kan lọ́jọ́ iwájú",
     "appBody": "CIRIS ń jáde báyìí. Aṣojú tó ń sọ gírámà yìí tó sì ń gun nẹ́tíwọ̀kì yìí fi ara rẹ̀ sórí fóònù rẹ lónìí, gbogbo nẹ́tíwọ̀kì náà sì ń yọ jádé jákèjádò 2026.",
     "ctaAppStore": "Gba CIRIS lórí App Store",
-    "ctaGooglePlay": "Gba CIRIS lórí Google Play"
+    "ctaGooglePlay": "Gba CIRIS lórí Google Play",
+    "reel": {
+      "watchLabel": "Wo · àsọ, ní ìgbòkègbodò",
+      "caption": "Ìrìnnà alaidára tó ń yípo, tó ń fihàn bí CIRIS ṣe ń dàgbà láti ìdánimọ̀ kan tí a fi asà mú títí dé àsọ tó ń wòsàn fúnrarẹ̀, pẹ̀lú kò sí àárín. Fa àkókò sẹ́yìn siwájú tàbí tẹ orí abala kan láti fò sí àwọn ìwòye.",
+      "title": "ÀSỌ, NÍ ÌGBÒKÈGBODÒ",
+      "scenes": [
+        {
+          "label": "ÌRÀ TÍ A Ń RỌ́PÒ",
+          "cap": "Lónìí, \"ìwàláàyè ní iwọ̀n ńlá\" túmọ̀ sí ilé-iṣẹ́ ìpamọ́ dátà ńlá kan, àti ìdíwọ̀ tó le lórí ẹni tó bá wọ.",
+          "badge": "ÀYÍ",
+          "badgeDesc": "Ipò tó wà báyìí",
+          "stats": [
+            "ÌRÀ ÀÁRÍN"
+          ]
+        },
+        {
+          "label": "ÈKÒ KAN WỌ",
+          "cap": "CIRIS bẹ̀rẹ̀ láti ìdáwọlé kan tí a fi asà mú. Ìdánimọ̀ tó wọ àsọ tí a kò lè ṣe èké rẹ̀.",
+          "badge": "TÍ Ń RÁN",
+          "badgeDesc": "Ìdánimọ̀ tí a fi asà mú ń rán lónìí",
+          "stats": [
+            "ÈKÒ TÍ A FI ASÀ MÚ"
+          ]
+        },
+        {
+          "label": "ÀSỌ Ń DÀGBÀ",
+          "cap": "Nọ́dù kọ̀ọ̀kan mú èyí tó tẹ̀lé wá. Àwọn adúgbò sopọ̀ mọ́ àwọn adúgbò, àsọ náà sì ń dàgbà fúnrarẹ̀, pẹ̀lú kò sí àárín láti gbára lé.",
+          "badge": "ÀWÒṢE",
+          "badgeDesc": "Ìtóbi tí a ṣeríi",
+          "stats": [
+            "PEER NODES",
+            "LINKS / NODE"
+          ]
+        },
+        {
+          "label": "ÌWÀLÁÀYÈ NÍ IWỌ̀N ŃLÁ",
+          "cap": "Nọ́dù kọ̀ọ̀kan jẹ́ ìwàláàyè tí ó wà láàyè, olùkópa, kì í ṣe olùwò. Ẹgbẹ̀rún, gbogbo rẹ̀ pẹ̀lú ara wọn.",
+          "badge": "ÀWÒṢE",
+          "badgeDesc": "Ètò àfojúsọ́nà",
+          "stats": [
+            "LIVE PRESENCES"
+          ]
+        },
+        {
+          "label": "JIṢẸ́ BÍI ÀWÒRÁN",
+          "cap": "Jiṣẹ́ dà bíi àwòrán tí a gbékalẹ̀ ní ọ̀pọ̀lọpọ̀ ìpele: àwọn ìṣàn tí a fi ìpele kọ tí a tún ṣe àfihàn fún olùwò kọ̀ọ̀kan, kò sí ìfúnnilẹ̀kọ̀ kan tó dúró.",
+          "badge": "ÌWÁDÌÍ",
+          "badgeDesc": "Nínú ìwádìí tó ń lọ",
+          "stats": [
+            "LAYERED SHELLS",
+            "RENDER HOLDERS"
+          ]
+        },
+        {
+          "label": "O GBÀ ILU TI O SÌ WÒSÀn",
+          "cap": "Ẹkùn kan kọjá lọ, àsọ náà sì ń yìípadà kọjá rẹ̀ tí ó sì ń wòsàn. Ìwàláàyè kò fara ríni.",
+          "badge": "ÀWÒṢE",
+          "badgeDesc": "Ìpadà ọ̀nà + àtúnṣe ìfipamọ́",
+          "stats": [
+            "REROUTE (s)",
+            "SOURCE + REPAIR"
+          ]
+        },
+        {
+          "label": "ASÀ",
+          "cap": "A fi asà mú láti ìbẹ̀rẹ̀ dé òpin. Àwọn gbìngbìn ń gbé àwọn bytes; kò sí ọ̀kan nínú wọn tó lè kà ohun tó wà nínú.",
+          "badge": "TÍ Ń RÁN",
+          "badgeDesc": "Asà E2E ń rán lónìí",
+          "stats": [
+            "SHELL SEAL"
+          ]
+        },
+        {
+          "label": "YÀRÁ GBÉ E",
+          "cap": "Kò sí ìrà. Kò sí àmì kan. Yàrá fúnrarẹ̀ ló gbé ìwàláàyè.",
+          "badge": "CIRIS",
+          "badgeDesc": "Àsọ Aláàárùn Tó Ń Gbé",
+          "stats": []
+        }
+      ]
+    }
   }
 }

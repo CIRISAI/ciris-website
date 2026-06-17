@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "an toàn nhờ cấu trúc, mở nhờ nguyên tắc, tử tế nhờ thiết kế",
       "h1": "Một AI bạn có thể <em>thực sự làm chủ</em>.",
       "sub": "Một ứng dụng. <b>Không có trung tâm dữ liệu.</b> Mọi tuyên bố nó đưa ra đều được <b>ký số.</b>",
       "appStoreAria": "Cài đặt CIRIS trên App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "Đây không phải ý tưởng của một ngày nào đó",
     "appBody": "CIRIS đang ra mắt ngay bây giờ. Tác nhân nói ngôn ngữ này và đi trên mạng lưới này cài được vào điện thoại của bạn hôm nay, và mạng lưới đầy đủ sẽ triển khai trong suốt năm 2026.",
     "ctaAppStore": "Tải CIRIS trên App Store",
-    "ctaGooglePlay": "Tải CIRIS trên Google Play"
+    "ctaGooglePlay": "Tải CIRIS trên Google Play",
+    "reel": {
+      "watchLabel": "Xem · lưới, đang chuyển động",
+      "caption": "Một hành trình lặng lẽ, lặp lại, cho thấy CIRIS lớn lên thế nào từ một danh tính được niêm phong thành một lưới tự lành, không có trung tâm. Kéo dòng thời gian hoặc chạm vào một chương để nhảy giữa các cảnh.",
+      "title": "LƯỚI, ĐANG CHUYỂN ĐỘNG",
+      "scenes": [
+        {
+          "label": "NGÔI SAO MÀ TA ĐANG THAY THẾ",
+          "cap": "Hôm nay, “hiện diện ở quy mô lớn” nghĩa là một trung tâm dữ liệu khổng lồ, và một giới hạn cứng về ai được tham gia.",
+          "badge": "NGỮ CẢNH",
+          "badgeDesc": "Hiện trạng",
+          "stats": [
+            "NGÔI SAO TRUNG TÂM"
+          ]
+        },
+        {
+          "label": "MỘT BẢN SAO ĐI VÀO",
+          "cap": "CIRIS bắt đầu từ một bản sao được niêm phong duy nhất. Một danh tính bước vào lưới và không thể bị làm giả.",
+          "badge": "ĐÃ ĐO",
+          "badgeDesc": "Danh tính niêm phong đã có hôm nay",
+          "stats": [
+            "BẢN SAO NIÊM PHONG"
+          ]
+        },
+        {
+          "label": "TẤM LƯỚI LỚN LÊN",
+          "cap": "Mỗi nút kéo theo nút tiếp theo. Hàng xóm nối với hàng xóm, nên tấm lưới tự lớn lên, không cần một trung tâm nào để dựa vào.",
+          "badge": "MÔ HÌNH",
+          "badgeDesc": "Mức lan tỏa dự kiến",
+          "stats": [
+            "NÚT NGANG HÀNG",
+            "LIÊN KẾT / NÚT"
+          ]
+        },
+        {
+          "label": "HIỆN DIỆN Ở QUY MÔ LỚN",
+          "cap": "Mỗi nút là một sự hiện diện sống, một người tham gia, không phải người xem. Hàng nghìn, cùng một lúc.",
+          "badge": "MÔ HÌNH",
+          "badgeDesc": "Cấu trúc mục tiêu",
+          "stats": [
+            "HIỆN DIỆN SỐNG"
+          ]
+        },
+        {
+          "label": "TRUYỀN TẢI DẠNG HOLOGRAM",
+          "cap": "Truyền tải theo dạng hologram: các luồng nhiều lớp được dựng lại riêng cho từng người xem, không bao giờ là một nguồn cố định.",
+          "badge": "TIÊN PHONG",
+          "badgeDesc": "Đang nghiên cứu",
+          "stats": [
+            "LỚP VỎ",
+            "BỘ DỰNG HÌNH"
+          ]
+        },
+        {
+          "label": "BỊ ĐÁNH VÀ TỰ LÀNH",
+          "cap": "Cả một vùng sụp đổ, và lưới định tuyến vòng qua nó rồi tự lành. Sự hiện diện không hề chớp tắt.",
+          "badge": "MÔ HÌNH",
+          "badgeDesc": "Định tuyến lại + sửa chữa ký gửi",
+          "stats": [
+            "ĐỊNH TUYẾN LẠI (giây)",
+            "NGUỒN + SỬA CHỮA"
+          ]
+        },
+        {
+          "label": "DẤU NIÊM PHONG",
+          "cap": "Niêm phong từ đầu đến cuối. Bên vận chuyển di chuyển các byte; không một ai trong số họ đọc được bên trong là gì.",
+          "badge": "ĐÃ ĐO",
+          "badgeDesc": "Niêm phong đầu cuối đã có hôm nay",
+          "stats": [
+            "NIÊM PHONG VỎ"
+          ]
+        },
+        {
+          "label": "CĂN PHÒNG NÂNG ĐỠ NÓ",
+          "cap": "Không ngôi sao. Không điểm duy nhất. Chính căn phòng nâng đỡ sự hiện diện.",
+          "badge": "CIRIS",
+          "badgeDesc": "Lưới Sống Tự Vận Hành",
+          "stats": []
+        }
+      ]
+    }
   }
 }

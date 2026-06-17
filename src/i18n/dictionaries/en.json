@@ -1857,6 +1857,86 @@
     "appTitle": "It’s not a someday idea",
     "appBody": "CIRIS is shipping now. The agent that speaks this grammar and rides this network installs on your phone today, and the full network rolls out through 2026.",
     "ctaAppStore": "Get CIRIS on the App Store",
-    "ctaGooglePlay": "Get CIRIS on Google Play"
+    "ctaGooglePlay": "Get CIRIS on Google Play",
+    "reel": {
+      "watchLabel": "Watch · the mesh, in motion",
+      "caption": "A silent, looping walk through how CIRIS grows from one sealed identity into a self-healing mesh with no center. Scrub the timeline or tap a chapter to jump between scenes.",
+      "title": "THE MESH, IN MOTION",
+      "scenes": [
+        {
+          "label": "THE STAR WE’RE REPLACING",
+          "cap": "Today, “presence at scale” means one hyperscale datacenter, and a hard ceiling on who fits.",
+          "badge": "CTX",
+          "badgeDesc": "The status quo",
+          "stats": [
+            "CENTRAL STAR"
+          ]
+        },
+        {
+          "label": "ONE COPY IN",
+          "cap": "CIRIS starts from a single sealed copy. An identity that enters the mesh and cannot be forged.",
+          "badge": "MEASURED",
+          "badgeDesc": "Sealed identity ships today",
+          "stats": [
+            "SEALED COPY"
+          ]
+        },
+        {
+          "label": "THE FABRIC GROWS",
+          "cap": "Each node brings on the next. Neighbors link to neighbors, so the fabric grows itself, with no center to depend on.",
+          "badge": "MODEL",
+          "badgeDesc": "Projected fan-out",
+          "stats": [
+            "PEER NODES",
+            "LINKS / NODE"
+          ]
+        },
+        {
+          "label": "PRESENCE AT SCALE",
+          "cap": "Every node is a live presence, a participant, not a viewer. Thousands, all at once.",
+          "badge": "MODEL",
+          "badgeDesc": "Target topology",
+          "stats": [
+            "LIVE PRESENCES"
+          ]
+        },
+        {
+          "label": "HOLOGRAPHIC DELIVERY",
+          "cap": "Delivery is holographic: layered streams re-rendered per viewer, never a single fixed feed.",
+          "badge": "FRONTIER",
+          "badgeDesc": "In active research",
+          "stats": [
+            "LAYERED SHELLS",
+            "RENDER HOLDERS"
+          ]
+        },
+        {
+          "label": "IT GETS HIT AND HEALS",
+          "cap": "A whole region drops, and the mesh reroutes around it and heals. Presence never blinks.",
+          "badge": "MODEL",
+          "badgeDesc": "Reroute + escrow repair",
+          "stats": [
+            "REROUTE (s)",
+            "SOURCE + REPAIR"
+          ]
+        },
+        {
+          "label": "THE SEAL",
+          "cap": "Sealed end to end. Carriers move the bytes; not one of them can read what is inside.",
+          "badge": "MEASURED",
+          "badgeDesc": "E2E sealing ships today",
+          "stats": [
+            "SHELL SEAL"
+          ]
+        },
+        {
+          "label": "THE ROOM CARRIES IT",
+          "cap": "No star. No single point. The room itself carries the presence.",
+          "badge": "CIRIS",
+          "badgeDesc": "Autonomic Living Mesh",
+          "stats": []
+        }
+      ]
+    }
   }
 }

@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "sicuro per struttura, aperto per principio, gentile per progetto",
       "h1": "Un'IA che puoi <em>davvero possedere</em>.",
       "sub": "Un'app. <b>Nessun data center.</b> Ogni affermazione che fa, <b>firmata.</b>",
       "appStoreAria": "Installa CIRIS su App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "Non è un'idea per un giorno lontano",
     "appBody": "CIRIS è in arrivo ora. L'agente che parla questa grammatica e viaggia su questa rete si installa sul tuo telefono oggi, e la rete completa esce lungo il 2026.",
     "ctaAppStore": "Scarica CIRIS sull'App Store",
-    "ctaGooglePlay": "Scarica CIRIS su Google Play"
+    "ctaGooglePlay": "Scarica CIRIS su Google Play",
+    "reel": {
+      "watchLabel": "Guarda · la rete in movimento",
+      "caption": "Una passeggiata silenziosa e in loop mostra come CIRIS cresce da una sola identità sigillata fino a una rete senza centro che si ripara da sola. Trascina la linea del tempo o tocca un capitolo per saltare tra le scene.",
+      "title": "LA RETE IN MOVIMENTO",
+      "scenes": [
+        {
+          "label": "LA STELLA CHE STIAMO SOSTITUENDO",
+          "cap": "Oggi “presenza su larga scala” significa un solo enorme centro dati, e un limite netto su chi può entrare.",
+          "badge": "CTX",
+          "badgeDesc": "Lo stato attuale",
+          "stats": [
+            "STELLA CENTRALE"
+          ]
+        },
+        {
+          "label": "UNA COPIA DENTRO",
+          "cap": "CIRIS parte da una sola copia sigillata. Un’identità che entra nella rete e non può essere falsificata.",
+          "badge": "MISURATO",
+          "badgeDesc": "L’identità sigillata è già disponibile",
+          "stats": [
+            "COPIA SIGILLATA"
+          ]
+        },
+        {
+          "label": "IL TESSUTO CRESCE",
+          "cap": "Ogni nodo porta con sé il successivo. I vicini si collegano ai vicini, così il tessuto cresce da solo, senza un centro da cui dipendere.",
+          "badge": "MODELLO",
+          "badgeDesc": "Diffusione prevista",
+          "stats": [
+            "NODI PARI",
+            "COLLEGAMENTI / NODO"
+          ]
+        },
+        {
+          "label": "PRESENZA SU LARGA SCALA",
+          "cap": "Ogni nodo è una presenza viva, un partecipante, non uno spettatore. Migliaia, tutti insieme.",
+          "badge": "MODELLO",
+          "badgeDesc": "Topologia obiettivo",
+          "stats": [
+            "PRESENZE VIVE"
+          ]
+        },
+        {
+          "label": "CONSEGNA OLOGRAFICA",
+          "cap": "La consegna è olografica: flussi a strati ridisegnati per ogni spettatore, mai un unico flusso fisso.",
+          "badge": "FRONTIERA",
+          "badgeDesc": "In ricerca attiva",
+          "stats": [
+            "GUSCI A STRATI",
+            "PORTATORI DI RESA"
+          ]
+        },
+        {
+          "label": "VIENE COLPITA E GUARISCE",
+          "cap": "Un’intera regione cade, e la rete le gira intorno e guarisce. La presenza non si spegne mai.",
+          "badge": "MODELLO",
+          "badgeDesc": "Reinstradamento + riparazione in deposito",
+          "stats": [
+            "REINSTRADAMENTO (s)",
+            "FONTE + RIPARAZIONE"
+          ]
+        },
+        {
+          "label": "IL SIGILLO",
+          "cap": "Sigillato da un capo all’altro. I corrieri spostano i byte; nessuno di loro può leggere cosa c’è dentro.",
+          "badge": "MISURATO",
+          "badgeDesc": "Il sigillo end-to-end è già disponibile",
+          "stats": [
+            "SIGILLO DEL GUSCIO"
+          ]
+        },
+        {
+          "label": "LO SPAZIO LA SOSTIENE",
+          "cap": "Nessuna stella. Nessun punto unico. Lo spazio stesso sostiene la presenza.",
+          "badge": "CIRIS",
+          "badgeDesc": "Rete viva autonoma",
+          "stats": []
+        }
+      ]
+    }
   }
 }

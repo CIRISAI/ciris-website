@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "salama kwa muundo, wazi kwa kanuni, na huruma kwa makusudi",
       "h1": "AI unayeweza <em>kumiliki kweli</em>.",
       "sub": "Programu moja. <b>Bila vituo vya data.</b> Kila dai analolifanya, <b>limetia saini.</b>",
       "appStoreAria": "Sakinisha CIRIS kwenye App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "Si wazo la siku fulani",
     "appBody": "CIRIS inazinduliwa sasa. Wakala anayezungumza sarufi hii na kupanda mtandao huu husakinishwa kwenye simu yako leo, na mtandao kamili unatolewa hadi mwaka 2026.",
     "ctaAppStore": "Pata CIRIS kwenye App Store",
-    "ctaGooglePlay": "Pata CIRIS kwenye Google Play"
+    "ctaGooglePlay": "Pata CIRIS kwenye Google Play",
+    "reel": {
+      "watchLabel": "Tazama · kitambaa, kikisogea",
+      "caption": "Mwendo wa kimya, unaorudi mara kwa mara, unaoonyesha jinsi CIRIS inavyokua kutoka kwa nakala moja iliyofungwa hadi kwenye kitambaa kinachojipona bila kituo. Sogeza mstari wa wakati au gusa sura ili kuruka kati ya matukio.",
+      "title": "KITAMBAA, KIKISOGEA",
+      "scenes": [
+        {
+          "label": "NYOTA TUNAYOIBADILISHA",
+          "cap": "Leo, \"uwepo kwa wingi\" maana yake ni kituo kimoja kikubwa sana cha data, na kikomo kigumu cha nani anayeweza kuingia.",
+          "badge": "MUK",
+          "badgeDesc": "Hali ilivyo sasa",
+          "stats": [
+            "NYOTA KUU"
+          ]
+        },
+        {
+          "label": "NAKALA MOJA INAINGIA",
+          "cap": "CIRIS inaanza kutoka kwa nakala moja iliyofungwa. Utambulisho unaoingia kwenye kitambaa na hauwezi kuigwa.",
+          "badge": "KIPIMO",
+          "badgeDesc": "Utambulisho uliofungwa unasafirishwa leo",
+          "stats": [
+            "NAKALA ILIYOFUNGWA"
+          ]
+        },
+        {
+          "label": "KITAMBAA KINAKUA",
+          "cap": "Kila nodi inaleta inayofuata. Majirani wanaunganika na majirani, hivyo kitambaa kinakua chenyewe, bila kituo cha kutegemea.",
+          "badge": "MFANO",
+          "badgeDesc": "Upanukaji uliokadiriwa",
+          "stats": [
+            "NODI ZA MARIKA",
+            "LINKS / NODE"
+          ]
+        },
+        {
+          "label": "UWEPO KWA WINGI",
+          "cap": "Kila nodi ni uwepo hai, mshiriki, si mtazamaji. Maelfu, yote kwa wakati mmoja.",
+          "badge": "MFANO",
+          "badgeDesc": "Muundo unaolengwa",
+          "stats": [
+            "UWEPO HAI"
+          ]
+        },
+        {
+          "label": "UTOAJI WA HOLOGRAMU",
+          "cap": "Utoaji ni wa hologramu: mikondo yenye tabaka inayochorwa upya kwa kila mtazamaji, kamwe si mtiririko mmoja uliowekwa.",
+          "badge": "MIPAKA",
+          "badgeDesc": "Katika utafiti unaoendelea",
+          "stats": [
+            "MAKOMBORA YA TABAKA",
+            "RENDER HOLDERS"
+          ]
+        },
+        {
+          "label": "INAPIGWA NA INAPONA",
+          "cap": "Eneo zima linaanguka, na kitambaa kinaelekeza upya kuzunguka na kupona. Uwepo hauzimiki kamwe.",
+          "badge": "MFANO",
+          "badgeDesc": "Reroute + escrow repair",
+          "stats": [
+            "REROUTE (s)",
+            "SOURCE + REPAIR"
+          ]
+        },
+        {
+          "label": "MUHURI",
+          "cap": "Umefungwa mwanzo hadi mwisho. Wabeba wanahamisha baiti, hakuna hata mmoja wao anayeweza kusoma kilichomo ndani.",
+          "badge": "KIPIMO",
+          "badgeDesc": "Ufungaji wa E2E unasafirishwa leo",
+          "stats": [
+            "MUHURI WA GANDA"
+          ]
+        },
+        {
+          "label": "CHUMBA KINABEBA",
+          "cap": "Hakuna nyota. Hakuna hatua moja. Chumba chenyewe kinabeba uwepo.",
+          "badge": "CIRIS",
+          "badgeDesc": "Kitambaa Hai cha Kujitegemea",
+          "stats": []
+        }
+      ]
+    }
   }
 }

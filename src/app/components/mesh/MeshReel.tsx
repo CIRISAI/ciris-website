@@ -2,12 +2,15 @@
 
 // MeshReel — "The Mesh, In Motion": the 67s, 8-scene ALM explainer reel. The
 // canvas animation is drawn by the shared mesh-engine (engine.render(t)); the
-// chrome (eyebrow, scene title, caption + provenance badges, HUD readout, and
-// the scrubbable transport bar) is rebuilt natively here from the design
-// handoff (support.js is intentionally not ported).
+// chrome (scene title, caption + provenance badge, HUD readout, scrubbable
+// transport bar) is rebuilt natively here from the design handoff (support.js
+// is intentionally not ported).
 //
-// Captions are de-em-dashed to match the site's house style. The per-frame bar
-// updates are imperative (refs) so only scene changes trigger a React render.
+// All display text is localized: it comes in via `t` (the epistemicWeb.reel
+// dictionary slice). Language-neutral bits — stat VALUES, colors, badge kind,
+// scene number, timeline timing — stay in the component so translators can't
+// break the numbers. Per-frame bar updates are imperative (refs) so only scene
+// changes trigger a React render.
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./MeshReel.module.css";
@@ -27,72 +30,29 @@ const BADGE: Record<string, [string, string, string]> = {
   comm: ["rgba(65,156,160,0.14)", "#52C4C8", "rgba(65,156,160,0.4)"],
 };
 
-type Meta = {
-  no: string;
-  cap: string;
-  badges: [string, string, string][]; // [text, srLabel, kind]
-  stats: [string, string, string][]; // [value, label, color]
-};
-
-const META: Meta[] = [
-  {
-    no: "01",
-    cap: 'Today, "presence at scale" means one hyperscale datacenter, and a hard ceiling on who fits.',
-    badges: [["CTX", "The status quo", "mute"]],
-    stats: [["1", "CENTRAL STAR", "#E14B7F"]],
-  },
-  {
-    no: "02",
-    cap: "CIRIS starts from a single sealed copy. An identity that enters the mesh and cannot be forged.",
-    badges: [["MEASURED", "Sealed identity ships today", "ok"]],
-    stats: [["1", "SEALED COPY", "#B08A3E"]],
-  },
-  {
-    no: "03",
-    cap: "Each node brings on the next. Neighbors link to neighbors, so the fabric grows itself, with no center to depend on.",
-    badges: [["MODEL", "Projected fan-out", "info"]],
-    stats: [
-      ["2 → 2,000", "PEER NODES", "#419CA0"],
-      ["~5", "LINKS / NODE", "#9AA3AF"],
-    ],
-  },
-  {
-    no: "04",
-    cap: "Every node is a live presence, a participant, not a viewer. Thousands, all at once.",
-    badges: [["MODEL", "Target topology", "info"]],
-    stats: [["2,000", "LIVE PRESENCES", "#22C0E8"]],
-  },
-  {
-    no: "05",
-    cap: "Delivery is holographic: layered streams re-rendered per viewer, never a single fixed feed.",
-    badges: [["FRONTIER", "In active research", "magenta"]],
-    stats: [
-      ["3", "LAYERED SHELLS", "#22C0E8"],
-      ["30", "RENDER HOLDERS", "#7A6FD6"],
-    ],
-  },
-  {
-    no: "06",
-    cap: "A whole region drops, and the mesh reroutes around it and heals. Presence never blinks.",
-    badges: [["MODEL", "Reroute + escrow repair", "info"]],
-    stats: [
-      ["< 1", "REROUTE (s)", "#4ADE80"],
-      ["20 + 6", "SOURCE + REPAIR", "#B08A3E"],
-    ],
-  },
-  {
-    no: "07",
-    cap: "Sealed end to end. Carriers move the bytes; not one of them can read what is inside.",
-    badges: [["MEASURED", "E2E sealing ships today", "ok"]],
-    stats: [["2", "SHELL SEAL", "#B08A3E"]],
-  },
-  {
-    no: "08",
-    cap: "No star. No single point. The room itself carries the presence.",
-    badges: [["CIRIS", "Autonomic Living Mesh", "comm"]],
-    stats: [],
-  },
+// One badge kind per scene (provenance), and the language-neutral stat values
+// + colors per scene. The stat LABELS are localized (from the dict), ordered to
+// line up with these values.
+const BADGE_KIND = ["mute", "ok", "info", "info", "magenta", "info", "ok", "comm"];
+const STAT_STYLE: { value: string; color: string }[][] = [
+  [{ value: "1", color: "#E14B7F" }],
+  [{ value: "1", color: "#B08A3E" }],
+  [{ value: "2 → 2,000", color: "#419CA0" }, { value: "~5", color: "#9AA3AF" }],
+  [{ value: "2,000", color: "#22C0E8" }],
+  [{ value: "3", color: "#22C0E8" }, { value: "30", color: "#7A6FD6" }],
+  [{ value: "< 1", color: "#4ADE80" }, { value: "20 + 6", color: "#B08A3E" }],
+  [{ value: "2", color: "#B08A3E" }],
+  [],
 ];
+
+export type ReelScene = {
+  label: string;
+  cap: string;
+  badge: string;
+  badgeDesc: string;
+  stats: string[]; // labels, ordered to match STAT_STYLE for this scene
+};
+export type ReelStrings = { title: string; scenes: ReelScene[] };
 
 const fmt = (s: number) => {
   const m = Math.floor(s / 60);
@@ -100,7 +60,7 @@ const fmt = (s: number) => {
   return m + ":" + String(ss).padStart(2, "0");
 };
 
-export default function MeshReel() {
+export default function MeshReel({ t }: { t: ReelStrings }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
   const fillRef = useRef<HTMLDivElement | null>(null);
@@ -185,9 +145,9 @@ export default function MeshReel() {
     };
   }, []);
 
-  const seek = (t: number) => {
+  const seek = (sec: number) => {
     const eng = engineRef.current;
-    tRef.current = Math.max(0, Math.min(totalRef.current - 0.01, t));
+    tRef.current = Math.max(0, Math.min(totalRef.current - 0.01, sec));
     if (eng) setIdx(eng.render(tRef.current));
     syncBar();
   };
@@ -209,8 +169,15 @@ export default function MeshReel() {
     seek(((e.clientX - r.left) / r.width) * totalRef.current);
   };
 
-  const cur = META[idx] || META[0];
-  const sc = scenes[idx];
+  const scene = t.scenes[idx] || t.scenes[0];
+  const no = String(idx + 1).padStart(2, "0");
+  const badgeKind = BADGE_KIND[idx] || "mute";
+  const stats = (STAT_STYLE[idx] || []).map((s, j) => ({
+    value: s.value,
+    color: s.color,
+    label: scene.stats[j] ?? "",
+  }));
+  const [badgeBg, badgeFg, badgeBd] = BADGE[badgeKind] || BADGE.mute;
   const mono = "var(--font-geist-mono), 'Geist Mono', ui-monospace, monospace";
 
   return (
@@ -224,7 +191,7 @@ export default function MeshReel() {
             <span style={{ width: 8, height: 8, borderRadius: 2, background: "#22C0E8", boxShadow: "0 0 12px #22C0E8" }} />
             <span style={{ font: `600 12px ${mono}`, letterSpacing: "0.16em", color: "#9AA3AF" }}>CIRIS · ALM</span>
           </div>
-          <span style={{ font: `500 11px ${mono}`, letterSpacing: "0.14em", color: "#6B7280" }}>THE MESH, IN MOTION</span>
+          <span style={{ font: `500 11px ${mono}`, letterSpacing: "0.14em", color: "#6B7280" }}>{t.title}</span>
         </div>
 
         {/* transport controls (overlaid on the globe, always) */}
@@ -291,8 +258,8 @@ export default function MeshReel() {
                 {scenes.map((s) => (
                   <button
                     key={"tk" + s.id}
-                    title={s.label}
-                    aria-label={"Jump to " + s.label}
+                    title={t.scenes[s.id]?.label ?? s.label}
+                    aria-label={"Jump to " + (t.scenes[s.id]?.label ?? s.label)}
                     onClick={(e) => {
                       e.stopPropagation();
                       seek(s.start + 0.05);
@@ -324,8 +291,8 @@ export default function MeshReel() {
       <div className={styles.chrome}>
         <div className={styles.caption}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
-            <span style={{ font: `600 12px ${mono}`, color: "#419CA0", letterSpacing: "0.1em" }}>{cur.no}</span>
-            <span style={{ font: `600 12px ${mono}`, color: "#6B7280", letterSpacing: "0.16em" }}>{sc ? sc.label : ""}</span>
+            <span style={{ font: `600 12px ${mono}`, color: "#419CA0", letterSpacing: "0.1em" }}>{no}</span>
+            <span style={{ font: `600 12px ${mono}`, color: "#6B7280", letterSpacing: "0.16em" }}>{scene.label}</span>
           </div>
           <p
             key={idx}
@@ -339,45 +306,39 @@ export default function MeshReel() {
               textWrap: "balance",
             }}
           >
-            {cur.cap}
+            {scene.cap}
           </p>
           <div style={{ display: "flex", gap: 8, marginTop: 14, flexWrap: "wrap" }}>
-            {cur.badges.map((b, i) => {
-              const [bg, fg, bd] = BADGE[b[2]] || BADGE.mute;
-              return (
-                <span
-                  key={"b" + idx + i}
-                  className={styles.badge}
-                  title={b[1]}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 6,
-                    padding: "5px 10px",
-                    borderRadius: 6,
-                    font: `600 10px ${mono}`,
-                    letterSpacing: "0.1em",
-                    background: bg,
-                    color: fg,
-                    border: `1px solid ${bd}`,
-                  }}
-                >
-                  <span style={{ width: 5, height: 5, borderRadius: "50%", background: fg }} />
-                  {b[0]}
-                </span>
-              );
-            })}
+            <span
+              className={styles.badge}
+              title={scene.badgeDesc}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                padding: "5px 10px",
+                borderRadius: 6,
+                font: `600 10px ${mono}`,
+                letterSpacing: "0.1em",
+                background: badgeBg,
+                color: badgeFg,
+                border: `1px solid ${badgeBd}`,
+              }}
+            >
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: badgeFg }} />
+              {scene.badge}
+            </span>
           </div>
         </div>
 
-        {cur.stats.length > 0 && (
+        {stats.length > 0 && (
           <div className={styles.hud}>
-            {cur.stats.map((s, i) => (
+            {stats.map((s, i) => (
               <div key={"s" + idx + i} style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
-                <span style={{ font: `700 clamp(20px, 3vw, 32px) ${mono}`, lineHeight: 1, color: s[2], fontVariantNumeric: "tabular-nums" }}>
-                  {s[0]}
+                <span style={{ font: `700 clamp(20px, 3vw, 32px) ${mono}`, lineHeight: 1, color: s.color, fontVariantNumeric: "tabular-nums" }}>
+                  {s.value}
                 </span>
-                <span style={{ font: `500 10px ${mono}`, letterSpacing: "0.14em", color: "#6B7280", marginTop: 6 }}>{s[1]}</span>
+                <span style={{ font: `500 10px ${mono}`, letterSpacing: "0.14em", color: "#6B7280", marginTop: 6 }}>{s.label}</span>
               </div>
             ))}
           </div>

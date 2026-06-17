@@ -158,7 +158,7 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
           <div className="space-y-8">
             <LogoIcon className="text-brand-primary h-16 w-auto" />
             <p className="text-sm font-medium tracking-wide text-brand-primary">
-              safe by structure, open by principle, kind by design
+              {f.tagline}
             </p>
             <p className="text-sm/6 text-balance">{f.desc}</p>
             <div className="flex gap-x-6"></div>

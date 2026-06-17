@@ -55,13 +55,11 @@ export default function EpistemicWebContent({ t }: { t: Dictionary }) {
           {/* The ALM story, animated — the live "Mesh, In Motion" reel */}
           <section className="mt-10">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand-primary">
-              Watch · the mesh, in motion
+              {e.reel.watchLabel}
             </p>
-            <MeshReel />
+            <MeshReel t={e.reel} />
             <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">
-              A silent, looping walk through how CIRIS grows from one sealed
-              identity into a self-healing mesh with no center. Scrub the
-              timeline or tap a chapter to jump between scenes.
+              {e.reel.caption}
             </p>
           </section>
 

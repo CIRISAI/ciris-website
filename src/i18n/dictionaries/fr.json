@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "sûr par sa structure, ouvert par principe, bienveillant par conception",
       "h1": "Une IA que vous pouvez <em>vraiment posséder</em>.",
       "sub": "Une seule appli. <b>Pas de centres de données.</b> Chaque affirmation qu'elle fait, <b>signée.</b>",
       "appStoreAria": "Installer CIRIS sur l'App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "Ce n'est pas une idée pour un jour lointain",
     "appBody": "CIRIS sort maintenant. L'agent qui parle cette langue et roule sur ce réseau s'installe sur votre téléphone dès aujourd'hui, et le réseau complet se déploie tout au long de 2026.",
     "ctaAppStore": "Obtenir CIRIS sur l'App Store",
-    "ctaGooglePlay": "Obtenir CIRIS sur Google Play"
+    "ctaGooglePlay": "Obtenir CIRIS sur Google Play",
+    "reel": {
+      "watchLabel": "Regarder · le maillage en mouvement",
+      "caption": "Une promenade silencieuse en boucle montre comment CIRIS grandit, d’une seule identité scellée vers un maillage sans centre qui se répare tout seul. Faites glisser la chronologie ou touchez un chapitre pour passer d’une scène à l’autre.",
+      "title": "LE MAILLAGE EN MOUVEMENT",
+      "scenes": [
+        {
+          "label": "L’ÉTOILE QUE NOUS REMPLAÇONS",
+          "cap": "Aujourd’hui, « la présence à grande échelle » veut dire un seul centre de données géant, et une limite stricte sur qui peut entrer.",
+          "badge": "CTX",
+          "badgeDesc": "L’état actuel",
+          "stats": [
+            "ÉTOILE CENTRALE"
+          ]
+        },
+        {
+          "label": "UNE COPIE ENTRE",
+          "cap": "CIRIS part d’une seule copie scellée. Une identité qui entre dans le maillage et ne peut pas être falsifiée.",
+          "badge": "MESURÉ",
+          "badgeDesc": "L’identité scellée existe déjà",
+          "stats": [
+            "COPIE SCELLÉE"
+          ]
+        },
+        {
+          "label": "LE TISSU GRANDIT",
+          "cap": "Chaque nœud amène le suivant. Les voisins se relient aux voisins, donc le tissu grandit de lui-même, sans centre dont dépendre.",
+          "badge": "MODÈLE",
+          "badgeDesc": "Diffusion prévue",
+          "stats": [
+            "NŒUDS PAIRS",
+            "LIENS / NŒUD"
+          ]
+        },
+        {
+          "label": "LA PRÉSENCE À GRANDE ÉCHELLE",
+          "cap": "Chaque nœud est une présence vivante, un participant, pas un spectateur. Des milliers, tous à la fois.",
+          "badge": "MODÈLE",
+          "badgeDesc": "Topologie visée",
+          "stats": [
+            "PRÉSENCES VIVANTES"
+          ]
+        },
+        {
+          "label": "DIFFUSION HOLOGRAPHIQUE",
+          "cap": "La diffusion est holographique : des flux en couches redessinés pour chaque personne, jamais un seul flux figé.",
+          "badge": "FRONTIÈRE",
+          "badgeDesc": "En recherche active",
+          "stats": [
+            "COUCHES EMPILÉES",
+            "PORTEURS DE RENDU"
+          ]
+        },
+        {
+          "label": "IL ENCAISSE ET SE RÉPARE",
+          "cap": "Une région entière tombe, et le maillage la contourne et se répare. La présence ne cligne jamais.",
+          "badge": "MODÈLE",
+          "badgeDesc": "Reroutage + réparation sous séquestre",
+          "stats": [
+            "REROUTAGE (s)",
+            "SOURCE + RÉPARATION"
+          ]
+        },
+        {
+          "label": "LE SCEAU",
+          "cap": "Scellé de bout en bout. Les porteurs déplacent les octets ; aucun d’eux ne peut lire ce qu’il y a à l’intérieur.",
+          "badge": "MESURÉ",
+          "badgeDesc": "Le scellement de bout en bout existe déjà",
+          "stats": [
+            "SCEAU DE COQUE"
+          ]
+        },
+        {
+          "label": "L’ESPACE LE PORTE",
+          "cap": "Pas d’étoile. Pas de point unique. L’espace lui-même porte la présence.",
+          "badge": "CIRIS",
+          "badgeDesc": "Maillage vivant autonome",
+          "stats": []
+        }
+      ]
+    }
   }
 }

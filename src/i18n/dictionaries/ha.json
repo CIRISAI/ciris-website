@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "lafiya ta tsari, buɗewa ta ƙa’ida, kirki ta ƙira",
       "h1": "AI da za ku <em>mallaka gaske</em>.",
       "sub": "App ɗaya. <b>Ba daɗakin sabar ba.</b> Kowane da'awar da ya yi, <b>an sanya hannu.</b>",
       "appStoreAria": "Sanya CIRIS daga App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "Ba tunani na wani lokaci nan gaba ba ne",
     "appBody": "CIRIS yana fitowa yanzu. Wakilin da ke magana da wannan nahawu kuma yake hawa wannan hanyar sadarwa yana shigowa cikin wayarka a yau, kuma cikakkiyar hanyar sadarwar tana fitowa cikin 2026.",
     "ctaAppStore": "Samu CIRIS a kan App Store",
-    "ctaGooglePlay": "Samu CIRIS a kan Google Play"
+    "ctaGooglePlay": "Samu CIRIS a kan Google Play",
+    "reel": {
+      "watchLabel": "Kalli · yaɗin, yana motsi",
+      "caption": "Tafiya ta hankali, mai maimaituwa, ta nuna yadda CIRIS ke girma daga kwafi ɗaya mai tambari zuwa yaɗi mai warkar da kansa wanda ba shi da tsakiya. Motsa layin lokaci ko taɓa babi don tsallake wurare.",
+      "title": "YAƊIN, YANA MOTSI",
+      "scenes": [
+        {
+          "label": "TAURARON DA MUKE MAYE GURBINSA",
+          "cap": "A yau, “kasancewar a sikeli” na nufin cibiyar bayanai ɗaya mai girma sosai, da iyaka mai tsanani kan wanda ya dace.",
+          "badge": "MAHALLIN",
+          "badgeDesc": "Halin da ake ciki yanzu",
+          "stats": [
+            "TAURARO NA TSAKIYA"
+          ]
+        },
+        {
+          "label": "KWAFI ƊAYA YA SHIGA",
+          "cap": "CIRIS yana farawa daga kwafi ɗaya mai tambari. Asali da ke shiga yaɗin kuma ba za a iya jarraba shi ba.",
+          "badge": "AN AUNA",
+          "badgeDesc": "Asalin da aka kulle yana fitowa yau",
+          "stats": [
+            "KWAFI MAI TAMBARI"
+          ]
+        },
+        {
+          "label": "YAƊIN NA GIRMA",
+          "cap": "Kowane kumburi yana kawo na gaba. Maƙwabta suna haɗa da maƙwabta, don haka yaɗin yana girma da kansa, ba tare da tsakiya da za a dogara da shi ba.",
+          "badge": "HASASHE",
+          "badgeDesc": "Fitar da aka yi hasashe",
+          "stats": [
+            "KUMBURAN TAKWARORI",
+            "LINKS / NODE"
+          ]
+        },
+        {
+          "label": "KASANCEWA A SIKELI",
+          "cap": "Kowane kumburi kasancewa ce mai rai, mahalarcin gaskiya, ba mai kallo ba. Dubun-dubatar, duka lokaci ɗaya.",
+          "badge": "HASASHE",
+          "badgeDesc": "Tsarin da ake niyya",
+          "stats": [
+            "KASANCEWA MAI RAI"
+          ]
+        },
+        {
+          "label": "ISAR DA SAƘO TA HOLOGRAFU",
+          "cap": "Isar da saƙo na holographic ne: igiyoyin da aka shimfiɗa ana sake nuna su ga kowane mai kallo, ba watsawa ɗaya mai tsayi ba.",
+          "badge": "BINCIKE",
+          "badgeDesc": "Ana bincike a yanzu",
+          "stats": [
+            "ƁAWON DA AKA SHIMFIƊA",
+            "MASU NUNA"
+          ]
+        },
+        {
+          "label": "YA SAMU BUGI SANNAN YA WARKE",
+          "cap": "Yanki gaba ɗaya ya fadi, yaɗin kuma yana sake tafiya a kewayensa sannan ya warke. Kasancewa ba ta taɓa yin blink ba.",
+          "badge": "HASASHE",
+          "badgeDesc": "Sake tafiya + gyara ajiya",
+          "stats": [
+            "REROUTE (s)",
+            "SOURCE + REPAIR"
+          ]
+        },
+        {
+          "label": "TAMBARIN",
+          "cap": "An kulle daga ƙarshe zuwa ƙarshe. Masu ɗauke suna motsa bytes; ba ɗaya daga cikinsu zai iya karanta abin da ke ciki ba.",
+          "badge": "AN AUNA",
+          "badgeDesc": "Kulle E2E yana fitowa yau",
+          "stats": [
+            "TAMBARIN ƁAWA"
+          ]
+        },
+        {
+          "label": "ƊAKIN YA ƊAUKE SHI",
+          "cap": "Babu tauraro. Babu wurin ɗaya. Ɗakin kansa yana ɗauke da kasancewa.",
+          "badge": "CIRIS",
+          "badgeDesc": "Yaɗin Mai Rai Na Atomatik",
+          "stats": []
+        }
+      ]
+    }
   }
 }

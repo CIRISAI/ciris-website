@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "segura por estructura, abierta por principio, amable por diseño",
       "h1": "Una IA que <em>realmente te pertenece</em>.",
       "sub": "Una app. <b>Sin centros de datos.</b> Cada afirmación que hace, <b>firmada.</b>",
       "appStoreAria": "Instalar CIRIS en el App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "No es una idea para algún día",
     "appBody": "CIRIS se está lanzando ahora. El agente que habla esta gramática y viaja por esta red se instala en tu teléfono hoy, y la red completa se despliega a lo largo de 2026.",
     "ctaAppStore": "Consigue CIRIS en la App Store",
-    "ctaGooglePlay": "Consigue CIRIS en Google Play"
+    "ctaGooglePlay": "Consigue CIRIS en Google Play",
+        "reel": {
+      "watchLabel": "Ver · la malla, en movimiento",
+      "caption": "Un recorrido silencioso y continuo por cómo CIRIS crece desde una identidad sellada hasta una malla que se repara sola, sin ningún centro. Mueve la línea de tiempo o toca un capítulo para saltar entre escenas.",
+      "title": "LA MALLA, EN MOVIMIENTO",
+      "scenes": [
+        {
+          "label": "LA ESTRELLA QUE REEMPLAZAMOS",
+          "cap": "Hoy, \u201cpresencia a escala\u201d significa un único centro de datos hipermasivo, con un límite muy claro sobre quién cabe.",
+          "badge": "CTX",
+          "badgeDesc": "El estado actual",
+          "stats": [
+            "ESTRELLA CENTRAL"
+          ]
+        },
+        {
+          "label": "UNA COPIA ENTRA",
+          "cap": "CIRIS parte de una única copia sellada. Una identidad que entra a la malla y no puede falsificarse.",
+          "badge": "MEDIDO",
+          "badgeDesc": "Identidad sellada disponible hoy",
+          "stats": [
+            "COPIA SELLADA"
+          ]
+        },
+        {
+          "label": "LA TRAMA CRECE",
+          "cap": "Cada nodo incorpora al siguiente. Los vecinos se conectan con vecinos, y la trama crece sola, sin ningún centro del que depender.",
+          "badge": "MODELO",
+          "badgeDesc": "Expansión proyectada",
+          "stats": [
+            "NODOS PARES",
+            "LINKS / NODE"
+          ]
+        },
+        {
+          "label": "PRESENCIA A ESCALA",
+          "cap": "Cada nodo es una presencia activa, un participante, no un espectador. Miles, todos al mismo tiempo.",
+          "badge": "MODELO",
+          "badgeDesc": "Topología objetivo",
+          "stats": [
+            "PRESENCIAS ACTIVAS"
+          ]
+        },
+        {
+          "label": "ENTREGA HOLOGRÁFICA",
+          "cap": "La entrega es holográfica: capas de flujo que se renderizan por separado para cada receptor, nunca una sola transmisión fija.",
+          "badge": "FRONTERA",
+          "badgeDesc": "En investigación activa",
+          "stats": [
+            "CAPAS DE SHELL",
+            "RENDER HOLDERS"
+          ]
+        },
+        {
+          "label": "RECIBE EL GOLPE Y SE CURA",
+          "cap": "Toda una región cae, y la malla redirige el tráfico alrededor y se cura. La presencia nunca parpadea.",
+          "badge": "MODELO",
+          "badgeDesc": "Redirección + reparación en custodia",
+          "stats": [
+            "REROUTE (s)",
+            "SOURCE + REPAIR"
+          ]
+        },
+        {
+          "label": "EL SELLO",
+          "cap": "Sellado de extremo a extremo. Los transportistas mueven los bytes, pero ninguno puede leer lo que hay dentro.",
+          "badge": "MEDIDO",
+          "badgeDesc": "Sellado E2E disponible hoy",
+          "stats": [
+            "SHELL SEAL"
+          ]
+        },
+        {
+          "label": "LA SALA LO SOSTIENE",
+          "cap": "Sin estrella. Sin punto único. La sala misma lleva la presencia.",
+          "badge": "CIRIS",
+          "badgeDesc": "Malla Viva Autónoma",
+          "stats": []
+        }
+      ]
+    }
   }
 }

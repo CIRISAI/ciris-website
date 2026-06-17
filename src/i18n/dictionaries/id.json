@@ -19,7 +19,7 @@
   },
   "home": {
     "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
+      "eyebrow": "aman karena struktur, terbuka karena prinsip, baik karena desain",
       "h1": "AI yang benar-benar bisa <em>kamu miliki</em>.",
       "sub": "Satu aplikasi. <b>Tanpa pusat data.</b> Setiap klaim yang dibuat, <b>ditandatangani.</b>",
       "appStoreAria": "Pasang CIRIS di App Store",
@@ -1857,6 +1857,86 @@
     "appTitle": "Ini bukan ide suatu hari nanti",
     "appBody": "CIRIS dirilis sekarang. Agen yang berbicara dalam tata bahasa ini dan menumpang jaringan ini bisa dipasang di ponsel Anda hari ini, dan jaringan lengkapnya diluncurkan sepanjang 2026.",
     "ctaAppStore": "Dapatkan CIRIS di App Store",
-    "ctaGooglePlay": "Dapatkan CIRIS di Google Play"
+    "ctaGooglePlay": "Dapatkan CIRIS di Google Play",
+    "reel": {
+      "watchLabel": "Tonton · jaring, dalam gerak",
+      "caption": "Perjalanan yang sunyi dan berulang tentang bagaimana CIRIS tumbuh dari satu identitas tersegel menjadi jaring yang menyembuhkan diri tanpa pusat. Geser garis waktu atau ketuk sebuah bab untuk berpindah antar adegan.",
+      "title": "JARING, DALAM GERAK",
+      "scenes": [
+        {
+          "label": "BINTANG YANG KAMI GANTIKAN",
+          "cap": "Hari ini, “kehadiran dalam skala besar” berarti satu pusat data raksasa, dan batas keras tentang siapa yang muat.",
+          "badge": "KONTEKS",
+          "badgeDesc": "Keadaan saat ini",
+          "stats": [
+            "BINTANG PUSAT"
+          ]
+        },
+        {
+          "label": "SATU SALINAN MASUK",
+          "cap": "CIRIS dimulai dari satu salinan tersegel. Sebuah identitas yang masuk ke jaring dan tidak bisa dipalsukan.",
+          "badge": "TERUKUR",
+          "badgeDesc": "Identitas tersegel sudah hadir hari ini",
+          "stats": [
+            "SALINAN TERSEGEL"
+          ]
+        },
+        {
+          "label": "JARING ITU TUMBUH",
+          "cap": "Setiap simpul membawa simpul berikutnya. Tetangga terhubung ke tetangga, jadi jaring tumbuh sendiri, tanpa pusat untuk diandalkan.",
+          "badge": "MODEL",
+          "badgeDesc": "Penyebaran yang diproyeksikan",
+          "stats": [
+            "SIMPUL SETARA",
+            "TAUTAN / SIMPUL"
+          ]
+        },
+        {
+          "label": "KEHADIRAN DALAM SKALA BESAR",
+          "cap": "Setiap simpul adalah kehadiran yang hidup, peserta, bukan penonton. Ribuan, sekaligus.",
+          "badge": "MODEL",
+          "badgeDesc": "Topologi target",
+          "stats": [
+            "KEHADIRAN HIDUP"
+          ]
+        },
+        {
+          "label": "PENGIRIMAN HOLOGRAFIK",
+          "cap": "Pengiriman bersifat holografik: aliran berlapis yang dirender ulang untuk tiap penonton, tidak pernah satu umpan tetap.",
+          "badge": "PERBATASAN",
+          "badgeDesc": "Sedang diteliti",
+          "stats": [
+            "LAPISAN CANGKANG",
+            "PEMEGANG RENDER"
+          ]
+        },
+        {
+          "label": "TERKENA DAN MENYEMBUH",
+          "cap": "Satu wilayah penuh putus, dan jaring mengalihkan rute di sekitarnya lalu menyembuh. Kehadiran tidak pernah berkedip.",
+          "badge": "MODEL",
+          "badgeDesc": "Alih rute + perbaikan titipan",
+          "stats": [
+            "ALIH RUTE (d)",
+            "SUMBER + PERBAIKAN"
+          ]
+        },
+        {
+          "label": "SEGEL",
+          "cap": "Tersegel dari ujung ke ujung. Pembawa memindahkan byte; tak satu pun dari mereka bisa membaca isinya.",
+          "badge": "TERUKUR",
+          "badgeDesc": "Penyegelan ujung ke ujung sudah hadir hari ini",
+          "stats": [
+            "SEGEL CANGKANG"
+          ]
+        },
+        {
+          "label": "RUANGAN MEMBAWANYA",
+          "cap": "Tanpa bintang. Tanpa titik tunggal. Ruangan itu sendiri yang membawa kehadiran.",
+          "badge": "CIRIS",
+          "badgeDesc": "Jaring Hidup Otonomik",
+          "stats": []
+        }
+      ]
+    }
   }
 }
