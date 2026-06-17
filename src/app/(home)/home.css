@@ -97,6 +97,13 @@
   align-items: center;
   gap: 12px;
 }
+/* the cover eyebrow carries the lowercase brand tagline, not an all-caps kicker */
+.home-narrative .eyebrow.eyebrow-tagline {
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-size: 14px;
+  color: var(--text-dim);
+}
 .home-narrative .eb-dot {
   width: 9px;
   height: 9px;

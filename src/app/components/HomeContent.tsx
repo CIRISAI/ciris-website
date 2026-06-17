@@ -74,7 +74,7 @@ export default function HomeContent({ t }: { t: Dictionary }) {
           </div>
           <div className="cover-scrim" aria-hidden />
           <div className="hsec-inner cover-inner">
-            <div className="eyebrow rise">
+            <div className="eyebrow eyebrow-tagline rise">
               <span className="eb-dot" /> {home.cover.eyebrow}
             </div>
             <h1 className="cover-h1 rise d1" dangerouslySetInnerHTML={h(home.cover.h1)} />
