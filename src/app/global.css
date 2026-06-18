@@ -90,6 +90,16 @@ body {
   --color-fd-border: #2a323c;
 }
 
+/* fumadocs `.prose` (the Accord/docs reader) colors headings + links with the
+   brand purples, which go low-contrast on dark. Force readable light values.
+   These selectors out-specify the prose defaults. */
+.dark .prose :is(h1, h2, h3, h4, h5, h6) {
+  color: #ece9ff;
+}
+.dark .prose a {
+  color: #b3a9ff;
+}
+
 @utility container {
   margin-inline: auto;
 }
