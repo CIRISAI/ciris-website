@@ -2,6 +2,17 @@
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
 
+/* The site is dark by design — the hero/reel canvases render on black, so a
+   light theme on any chrome (nav, footer, cards) clashes. Make the `dark:`
+   variant class-based (Tailwind v4 defaults it to prefers-color-scheme) and pin
+   `.dark` on <html> in the layout so the whole site is dark regardless of OS. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  color-scheme: dark;
+  background-color: #0d1117;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #3b21a8;

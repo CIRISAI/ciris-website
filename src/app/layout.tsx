@@ -213,7 +213,7 @@ const jsonLd = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang="en" className={`dark ${inter.className}`} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: LOCALE_GUARD }} />
         <script
