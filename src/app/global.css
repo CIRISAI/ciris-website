@@ -69,8 +69,25 @@ body {
 }
 
 .dark .prose {
-  color: #b8b8b8;
+  color: #c3c8d0;
   --tw-prose-headings: #ffffff;
+}
+
+/* Dark-mode color tokens. The brand purples in :root/@theme are tuned for a
+   light background; on dark they go muddy and low-contrast (purple headings on
+   near-black). Lift foreground to near-white, links/accents to a readable
+   lavender, and fumadocs surfaces to dark. */
+.dark {
+  --background: #0d1117;
+  --foreground: #e8eaed;
+  --color-fd-foreground: #e8eaed;
+  --color-fd-muted-foreground: #9aa3af;
+  --color-fd-primary: #b3a9ff;
+  --color-fd-secondary: #1a222c;
+  --color-fd-accent: #232b38;
+  --color-fd-card: #151b24;
+  --color-fd-muted: #151b24;
+  --color-fd-border: #2a323c;
 }
 
 @utility container {

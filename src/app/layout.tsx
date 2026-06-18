@@ -220,7 +220,11 @@ export default function Layout({ children }: { children: ReactNode }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <RootProvider>{children}</RootProvider>
+        {/* The site is dark by design (canvas/video backgrounds are black).
+            Force the theme dark so it never follows the OS preference. */}
+        <RootProvider theme={{ defaultTheme: "dark", forcedTheme: "dark", enableSystem: false }}>
+          {children}
+        </RootProvider>
       </body>
     </html>
   );
