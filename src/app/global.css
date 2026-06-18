@@ -99,6 +99,12 @@ body {
 .dark .prose a {
   color: #b3a9ff;
 }
+/* fumadocs auto-links headings (<h2><a>…</a></h2>); without this the link color
+   above would override the heading color. Let heading anchors keep the heading
+   color so headings read crisp and only body links are lavender. */
+.dark .prose :is(h1, h2, h3, h4, h5, h6) a {
+  color: inherit;
+}
 
 @utility container {
   margin-inline: auto;
