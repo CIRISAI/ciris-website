@@ -4,11 +4,11 @@
 // language) and CEWP (/cewp, the network).
 
 import { localizedSeo } from "@/lib/seo";
-import EpistemicWebContent from "@/app/components/EpistemicWebContent";
+import EpistemicWebV2 from "@/app/components/EpistemicWebV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/epistemic-web", "en");
 
 export default function EpistemicWebPage() {
-  return <EpistemicWebContent t={getDictionary("en")} />;
+  return <EpistemicWebV2 t={getDictionary("en")} locale="en" />;
 }

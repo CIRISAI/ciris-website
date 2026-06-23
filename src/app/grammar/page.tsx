@@ -4,7 +4,7 @@
 // (/grammar/details) and workshop (/grammar/explore) stay English-only.
 
 import { localizedSeo } from "@/lib/seo";
-import GrammarBaseContent from "@/app/components/GrammarBaseContent";
+import GrammarV2 from "@/app/components/GrammarV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getRegistrySource, CEG_READER_PDF, CEG_FULL_PDF } from "./lib/source";
 
@@ -13,7 +13,7 @@ export const metadata = localizedSeo("/grammar", "en");
 export default async function GrammarPage() {
   const source = await getRegistrySource();
   return (
-    <GrammarBaseContent
+    <GrammarV2
       t={getDictionary("en")}
       specVersion={source.specVersion}
       releasedDate={source.fsdLastUpdated}

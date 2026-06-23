@@ -4,7 +4,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import CewpBaseContent from "@/app/components/CewpBaseContent";
+import CewpV2 from "@/app/components/CewpV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
 
@@ -29,6 +29,7 @@ export default async function LocalizedCewp({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <CewpBaseContent t={dict} />;
+  const resolved = isLocale(locale) ? locale : "en";
+  const dict = getDictionary(resolved);
+  return <CewpV2 t={dict} locale={resolved} />;
 }

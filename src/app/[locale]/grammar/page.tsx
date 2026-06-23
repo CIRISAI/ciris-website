@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import GrammarBaseContent from "@/app/components/GrammarBaseContent";
+import GrammarV2 from "@/app/components/GrammarV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
 import {
@@ -38,7 +38,7 @@ export default async function LocalizedGrammar({
   const source = await getRegistrySource();
   const dict = getDictionary(isLocale(locale) ? locale : "en");
   return (
-    <GrammarBaseContent
+    <GrammarV2
       t={dict}
       specVersion={source.specVersion}
       releasedDate={source.fsdLastUpdated}

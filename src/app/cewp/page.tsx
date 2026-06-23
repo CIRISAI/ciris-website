@@ -3,11 +3,11 @@
 // src/app/[locale]/cewp/. The deep-tech simulator stays English at /cewp/details.
 
 import { localizedSeo } from "@/lib/seo";
-import CewpBaseContent from "@/app/components/CewpBaseContent";
+import CewpV2 from "@/app/components/CewpV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/cewp", "en");
 
 export default function CewpPage() {
-  return <CewpBaseContent t={getDictionary("en")} />;
+  return <CewpV2 t={getDictionary("en")} locale="en" />;
 }

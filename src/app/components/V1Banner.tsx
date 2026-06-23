@@ -33,6 +33,9 @@ const V2_ROUTES = new Set([
   "/coherence-collapse-analysis",
   "/coherence-ratchet",
   "/install",
+  "/epistemic-web",
+  "/cewp",
+  "/grammar",
 ]);
 
 export default function V1Banner() {

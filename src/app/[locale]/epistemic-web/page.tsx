@@ -3,7 +3,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import EpistemicWebContent from "@/app/components/EpistemicWebContent";
+import EpistemicWebV2 from "@/app/components/EpistemicWebV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
 
@@ -28,6 +28,7 @@ export default async function LocalizedEpistemicWeb({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <EpistemicWebContent t={dict} />;
+  const resolved = isLocale(locale) ? locale : "en";
+  const dict = getDictionary(resolved);
+  return <EpistemicWebV2 t={dict} locale={resolved} />;
 }
