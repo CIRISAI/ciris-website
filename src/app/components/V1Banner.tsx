@@ -18,6 +18,8 @@ const V2_ROUTES = new Set([
   "/paths/big-tech",
   "/federation",
   "/vision",
+  "/how-it-works",
+  "/research-status",
 ]);
 
 export default function V1Banner() {

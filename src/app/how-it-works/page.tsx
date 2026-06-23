@@ -3,11 +3,12 @@
 // src/app/[locale]/how-it-works/.
 
 import { localizedSeo } from "@/lib/seo";
-import HowItWorksContent from "@/app/components/HowItWorksContent";
+import HowItWorksV2 from "@/app/components/HowItWorksV2";
 import { getDictionary } from "@/i18n/dictionaries";
+import { DEFAULT_LOCALE } from "@/i18n/config";
 
 export const metadata = localizedSeo("/how-it-works", "en");
 
 export default function HowItWorksPage() {
-  return <HowItWorksContent t={getDictionary("en")} />;
+  return <HowItWorksV2 t={getDictionary("en")} locale={DEFAULT_LOCALE} />;
 }

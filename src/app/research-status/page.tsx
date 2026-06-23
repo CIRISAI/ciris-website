@@ -3,11 +3,11 @@
 // at src/app/[locale]/research-status/.
 
 import { localizedSeo } from "@/lib/seo";
-import ResearchStatusContent from "@/app/components/ResearchStatusContent";
+import ResearchStatusV2 from "@/app/components/ResearchStatusV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/research-status", "en");
 
 export default function ResearchStatusPage() {
-  return <ResearchStatusContent t={getDictionary("en")} />;
+  return <ResearchStatusV2 t={getDictionary("en")} locale="en" />;
 }

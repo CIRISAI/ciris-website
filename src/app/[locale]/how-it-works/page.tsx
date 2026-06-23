@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import HowItWorksContent from "@/app/components/HowItWorksContent";
+import HowItWorksV2 from "@/app/components/HowItWorksV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -36,5 +36,5 @@ export default async function LocalizedHowItWorks({
 }) {
   const { locale } = await params;
   const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <HowItWorksContent t={dict} />;
+  return <HowItWorksV2 t={dict} locale={locale} />;
 }
