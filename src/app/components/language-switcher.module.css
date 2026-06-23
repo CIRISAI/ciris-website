@@ -10,10 +10,11 @@
   z-index: 50;
 }
 
-/* In-nav variant: sits in normal flow, panel drops downward. */
+/* In-nav variant: sits in normal flow (relative so the absolute dropdown
+   anchors to the pill, not a distant ancestor), panel drops downward. */
 .rootInline {
-  position: static;
-  right: auto;
+  position: relative;
+  inset-inline-end: auto;
   bottom: auto;
   z-index: 40;
 }
@@ -25,7 +26,10 @@
 .rootInline .label {
   min-width: 4.5rem;
 }
-.panelDown {
+/* .panel.panelDown (two classes) outranks the later .panel rule so `bottom`
+   actually resets to auto — otherwise the panel gets both top+bottom and
+   collapses to a sliver. */
+.panel.panelDown {
   top: calc(100% + 0.5rem);
   bottom: auto;
 }
