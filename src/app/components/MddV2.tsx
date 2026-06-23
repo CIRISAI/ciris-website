@@ -171,6 +171,7 @@ export default function MddV2({ t, locale }: { t: Dictionary; locale: string }) 
     <ContentShell
       locale={locale}
       accent="brass"
+      graphicId="g14"
       kicker={m.heroEyebrow}
       title={m.h1}
       lede={m.heroPara}

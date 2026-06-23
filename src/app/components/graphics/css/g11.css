@@ -1,0 +1,18 @@
+/* Graphic 11 — Safety. Actions cycle through the conscience gate (~3.2s); gate
+   pulses on each pass; the human halt sits calm and always lit (~4.4s).
+   Freezes under prefers-reduced-motion. */
+.g11 .flow { stroke-dasharray: 4 7; animation: g11flow calc(2.4s / var(--sp, 1)) linear infinite; }
+@keyframes g11flow { to { stroke-dashoffset: -22; } }
+.g11 .act { offset-rotate: 0deg; animation: g11act calc(3.2s / var(--sp, 1)) cubic-bezier(.5, 0, .5, 1) infinite; }
+@keyframes g11act { 0% { offset-distance: 0%; opacity: 0; } 8% { opacity: 1; } 44% { offset-distance: 46%; } 54% { offset-distance: 54%; } 92% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+.g11 .gate { transform-box: fill-box; transform-origin: center; animation: g11gate calc(3.2s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g11gate { 0%, 38% { opacity: .5; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } 62%, 100% { opacity: .5; transform: scale(1); } }
+.g11 .gatecore { transform-box: fill-box; transform-origin: center; animation: g11gc calc(3.2s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g11gc { 0%, 40% { opacity: .35; } 50% { opacity: .9; } 60%, 100% { opacity: .35; } }
+.g11 .pass { transform-box: fill-box; transform-origin: center; animation: g11pass calc(3.2s / var(--sp, 1)) ease-out infinite; opacity: 0; }
+@keyframes g11pass { 0%, 50% { opacity: 0; transform: scale(.6); } 58% { opacity: .8; transform: scale(1.1); } 80%, 100% { opacity: 0; transform: scale(1.4); } }
+.g11 .haltglow { transform-box: fill-box; transform-origin: center; animation: g11halt calc(4.4s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g11halt { 0%, 100% { opacity: .5; } 50% { opacity: .82; } }
+.g11 .spin { transform-box: fill-box; transform-origin: center; animation: g11spin calc(26s / var(--sp, 1)) linear infinite; }
+@keyframes g11spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .g11 * { animation: none !important; } }

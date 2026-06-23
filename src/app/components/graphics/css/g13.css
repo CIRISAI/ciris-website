@@ -1,0 +1,14 @@
+/* Graphic 13 — Grammar. Typed prefixes slide in & snap, the statement composes, the seal sets with a pop (~6s loop). Freezes assembled under prefers-reduced-motion. */
+.g13 .pfx{transform-box:fill-box;transform-origin:center;animation:g13pfx calc(6s / var(--sp,1)) ease-in-out infinite}
+.g13 .p0{animation-delay:calc(0s / var(--sp,1))}
+.g13 .p1{animation-delay:calc(.5s / var(--sp,1))}
+.g13 .p2{animation-delay:calc(1s / var(--sp,1))}
+.g13 .p3{animation-delay:calc(1.5s / var(--sp,1))}
+@keyframes g13pfx{0%{opacity:0;transform:translateX(var(--from,-30px))}10%,16%{opacity:1;transform:translateX(var(--from,-30px))}26%{opacity:1;transform:translateX(0)}82%{opacity:1;transform:translateX(0)}92%,100%{opacity:0;transform:translateX(0)}}
+.g13 .line{animation:g13line calc(6s / var(--sp,1)) ease-in-out infinite;opacity:0}
+@keyframes g13line{0%,30%{opacity:0}40%{opacity:1}86%{opacity:1}96%,100%{opacity:0}}
+.g13 .seal{transform-box:fill-box;transform-origin:center;animation:g13seal calc(6s / var(--sp,1)) cubic-bezier(.34,1.56,.64,1) infinite;opacity:0}
+@keyframes g13seal{0%,46%{opacity:0;transform:scale(.4) rotate(-30deg)}58%{opacity:1;transform:scale(1) rotate(0)}86%{opacity:1;transform:scale(1) rotate(0)}96%,100%{opacity:0;transform:scale(1) rotate(0)}}
+.g13 .sealring{transform-box:fill-box;transform-origin:center;animation:g13ring calc(6s / var(--sp,1)) ease-out infinite;opacity:0}
+@keyframes g13ring{0%,52%{opacity:0;transform:scale(.6)}60%{opacity:.7;transform:scale(1.15)}74%{opacity:0;transform:scale(1.5)}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.g13 *{animation:none!important}.g13 .pfx,.g13 .line,.g13 .seal{opacity:1}.g13 .pfx{transform:none}}

@@ -45,6 +45,7 @@ export default function CoherenceRatchetV2({ t, locale }: { t: Dictionary; local
     <ContentShell
       locale={locale}
       accent="violet"
+      graphicId="g16"
       kicker={cr.kicker}
       title="The Coherence Ratchet"
       lede="Why a powerful mind has to show its work."

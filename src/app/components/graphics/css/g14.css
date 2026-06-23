@@ -1,0 +1,8 @@
+/* Graphic 14 — Mission-Driven Development. Mission beam descends and locks set; structure tries to drift, then holds (~5.5s). Freezes locked under prefers-reduced-motion. */
+.g14 .beam{transform-box:fill-box;transform-origin:center top;animation:g14beam calc(5.5s / var(--sp,1)) ease-in-out infinite}
+@keyframes g14beam{0%{opacity:0;transform:translateY(-40px) scaleY(.4)}16%{opacity:1;transform:translateY(0) scaleY(1)}100%{opacity:1;transform:translateY(0) scaleY(1)}}
+.g14 .lock{transform-box:fill-box;transform-origin:center;animation:g14lock calc(5.5s / var(--sp,1)) ease-in-out infinite}
+@keyframes g14lock{0%,14%{opacity:0}24%{opacity:1}48%{opacity:1}56%{opacity:.55}68%{opacity:1}100%{opacity:1}}
+.g14 .drift{animation:g14drift calc(5.5s / var(--sp,1)) ease-in-out infinite}
+@keyframes g14drift{0%,24%{transform:translateX(0)}34%{transform:translateX(3px)}40%{transform:translateX(0)}100%{transform:translateX(0)}}
+@media (prefers-reduced-motion: reduce){.g14 *{animation:none!important}.g14 .beam,.g14 .lock{opacity:1;transform:none}}

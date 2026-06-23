@@ -38,6 +38,7 @@ export default function GrammarV2({
     <ContentShell
       locale={locale}
       accent="brass"
+      graphicId="g13"
       kicker={g.eyebrow}
       title={g.headline}
       lede={g.intro}

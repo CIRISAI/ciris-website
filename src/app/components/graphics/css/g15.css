@@ -1,0 +1,14 @@
+/* Graphic 15 — Trust Seal. Both signatures draw, the dual seal sets, a quantum sweep crosses and the seal pulses through intact (~6s loop). Freezes sealed under prefers-reduced-motion. */
+.g15 .sig{stroke-dasharray:var(--len,200);stroke-dashoffset:var(--len,200);animation:g15sig calc(6s / var(--sp,1)) ease-in-out infinite}
+.g15 .sigA{animation-delay:calc(.2s / var(--sp,1))}
+.g15 .sigB{animation-delay:calc(1.1s / var(--sp,1))}
+@keyframes g15sig{0%{stroke-dashoffset:var(--len,200)}18%,82%{stroke-dashoffset:0}96%,100%{stroke-dashoffset:var(--len,200)}}
+.g15 .keypulse{transform-box:fill-box;transform-origin:center;animation:g15key calc(6s / var(--sp,1)) ease-in-out infinite}
+@keyframes g15key{0%,100%{opacity:.5}10%{opacity:1}}
+.g15 .sweep{transform-box:fill-box;transform-origin:center;animation:g15sweep calc(6s / var(--sp,1)) ease-in-out infinite;opacity:0}
+@keyframes g15sweep{0%,40%{opacity:0;transform:translateX(-260px)}48%{opacity:.55}56%{opacity:.55}64%{opacity:0;transform:translateX(260px)}100%{opacity:0;transform:translateX(260px)}}
+.g15 .survive{transform-box:fill-box;transform-origin:center;animation:g15surv calc(6s / var(--sp,1)) ease-out infinite}
+@keyframes g15surv{0%,52%{opacity:.55;transform:scale(1)}58%{opacity:1;transform:scale(1.08)}66%{opacity:.9;transform:scale(1)}100%{opacity:.9;transform:scale(1)}}
+.g15 .rec{transform-box:fill-box;transform-origin:center;animation:g15rec calc(6s / var(--sp,1)) ease-in-out infinite}
+@keyframes g15rec{0%,52%{opacity:.45}58%{opacity:1}100%{opacity:.7}}
+@media (prefers-reduced-motion: reduce){.g15 *{animation:none!important}.g15 .sig{stroke-dashoffset:0}.g15 .survive,.g15 .rec{opacity:1}}

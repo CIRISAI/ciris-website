@@ -28,7 +28,7 @@ export default function TrustV2({ t, locale }: { t: Dictionary; locale: string }
       kicker={tr.headerSubheadline}
       title={tr.headerHeadline}
       lede={tr.headerDescription}
-      graphicId="g03"
+      graphicId="g15"
       backHref="/"
       backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}

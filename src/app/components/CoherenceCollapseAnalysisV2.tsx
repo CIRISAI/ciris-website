@@ -79,6 +79,7 @@ export default function CoherenceCollapseAnalysisV2({
     <ContentShell
       locale={locale}
       accent="rose"
+      graphicId="g16"
       kicker={c.eyebrow}
       title={c.h1}
       lede={c.heroPara}

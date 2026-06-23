@@ -20,6 +20,7 @@ export default function SafetyV2({ t, locale }: { t: Dictionary; locale: string 
     <ContentShell
       locale={locale}
       accent="ok"
+      graphicId="g11"
       kicker={sf.heroSubheadline}
       title={sf.heroHeadline}
       lede={sf.heroDescription}
