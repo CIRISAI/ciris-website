@@ -43,7 +43,6 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
                   bigTech: lh("/paths/big-tech"),
                 }}
               />
-              <p className={styles.artCaption}>{l.doorsNote}</p>
             </div>
             <div className={styles.heroText}>
               <h1 className={styles.h1}>
