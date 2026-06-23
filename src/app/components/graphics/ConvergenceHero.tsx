@@ -246,15 +246,64 @@ export default function ConvergenceHero({
     };
   }, []);
 
-  const labelBase = {
-    position: "absolute" as const,
-    fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
-    fontSize: "11px",
-    fontWeight: 500,
-    letterSpacing: "0.04em",
-    whiteSpace: "nowrap" as const,
-    pointerEvents: "none" as const,
-  };
+  // The four problem nodes — one per stream source. Each shows a small icon
+  // (phone / receipt / agent-node / datacenter) + a label, color-matched to its
+  // stream. Positions are physical (left/right) to match the canvas streams,
+  // which do not mirror under RTL.
+  const NODES = [
+    {
+      key: "consumerAi" as const,
+      color: "#22C0E8",
+      pos: { top: "2%", left: "2%" } as const,
+      align: "flex-start" as const,
+      icon: (
+        <>
+          <rect x="7" y="2.5" width="10" height="19" rx="2.5" />
+          <line x1="10.5" y1="18.5" x2="13.5" y2="18.5" />
+        </>
+      ),
+    },
+    {
+      key: "misinformation" as const,
+      color: "#E14B7F",
+      pos: { top: "2%", right: "2%" } as const,
+      align: "flex-end" as const,
+      icon: (
+        <>
+          <path d="M6.5 3 h8 l3 3 v15 h-11 z" />
+          <line x1="9" y1="10" x2="15" y2="10" />
+          <line x1="9" y1="13.5" x2="15" y2="13.5" />
+          <line x1="9" y1="17" x2="12.5" y2="17" />
+        </>
+      ),
+    },
+    {
+      key: "superalignment" as const,
+      color: "#7A6FD6",
+      pos: { bottom: "2%", left: "2%" } as const,
+      align: "flex-start" as const,
+      icon: (
+        <>
+          <path d="M12 2.6 19 6.8 19 15.2 12 19.4 5 15.2 5 6.8 Z" />
+          <circle cx="12" cy="12" r="2.4" />
+        </>
+      ),
+    },
+    {
+      key: "bigTech" as const,
+      color: "#419CA0",
+      pos: { bottom: "2%", right: "2%" } as const,
+      align: "flex-end" as const,
+      icon: (
+        <>
+          <rect x="3.5" y="4" width="17" height="5.5" rx="1.2" />
+          <rect x="3.5" y="11.5" width="17" height="5.5" rx="1.2" />
+          <circle cx="7" cy="6.75" r="0.9" />
+          <circle cx="7" cy="14.25" r="0.9" />
+        </>
+      ),
+    },
+  ];
 
   return (
     <div
@@ -265,28 +314,63 @@ export default function ConvergenceHero({
       <canvas ref={canvasRef} aria-hidden="true" style={{ display: "block", width: "100%", height: "100%" }} />
       {labels && (
         <>
-          <span style={{ ...labelBase, left: "1%", top: "6%", color: "#22C0E8", textAlign: "left" }}>
-            {labels.consumerAi}
-          </span>
-          <span style={{ ...labelBase, right: "1%", top: "7%", color: "#E14B7F", textAlign: "right" }}>
-            {labels.misinformation}
-          </span>
-          <span style={{ ...labelBase, left: "1%", bottom: "6%", color: "#7A6FD6", textAlign: "left" }}>
-            {labels.superalignment}
-          </span>
-          <span style={{ ...labelBase, right: "1%", bottom: "6%", color: "#419CA0", textAlign: "right" }}>
-            {labels.bigTech}
-          </span>
+          {NODES.map((n) => (
+            <div
+              key={n.key}
+              style={{
+                position: "absolute",
+                ...n.pos,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: n.align,
+                gap: "6px",
+                color: n.color,
+                pointerEvents: "none",
+              }}
+            >
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke={n.color}
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ filter: `drop-shadow(0 0 6px ${n.color}55)` }}
+              >
+                {n.icon}
+              </svg>
+              <span
+                style={{
+                  fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  letterSpacing: "0.01em",
+                  whiteSpace: "nowrap",
+                  textAlign: n.align === "flex-end" ? "right" : "left",
+                  textShadow: "0 1px 8px rgba(0,0,0,0.6)",
+                }}
+              >
+                {labels[n.key]}
+              </span>
+            </div>
+          ))}
           <span
             style={{
-              ...labelBase,
+              position: "absolute",
               left: "50%",
-              top: "64%",
+              top: "63%",
               transform: "translateX(-50%)",
-              color: "#bfefff",
-              fontSize: "10px",
-              letterSpacing: "0.12em",
+              fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
+              fontSize: "11px",
+              fontWeight: 600,
+              letterSpacing: "0.16em",
               textTransform: "uppercase",
+              color: "#bfefff",
+              whiteSpace: "nowrap",
+              pointerEvents: "none",
+              textShadow: "0 1px 10px rgba(0,0,0,0.7)",
             }}
           >
             {labels.oneFloor}
