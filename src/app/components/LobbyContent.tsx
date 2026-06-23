@@ -12,13 +12,6 @@ import StoreBadges from "@/app/components/graphics/StoreBadges";
 import SiteHeader from "@/app/components/SiteHeader";
 import styles from "./lobby.module.css";
 
-const ACCENT: Record<string, string> = {
-  cyan: styles.cyan,
-  teal: styles.teal,
-  violet: styles.violet,
-  rose: styles.rose,
-};
-
 export default function LobbyContent({ t }: { t: Dictionary }) {
   const locale = t._meta.locale;
   const isLocalized = locale !== DEFAULT_LOCALE;
@@ -53,7 +46,16 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
               </p>
             </div>
             <div className={styles.heroArt}>
-              <ConvergenceHero labels={l.heroLabels} />
+              <ConvergenceHero
+                labels={l.heroLabels}
+                links={{
+                  consumerAi: lh("/paths/consumer-ai"),
+                  misinformation: lh("/paths/misinformation"),
+                  superalignment: lh("/paths/superalignment"),
+                  bigTech: lh("/paths/big-tech"),
+                }}
+              />
+              <p className={styles.artCaption}>{l.doorsNote}</p>
             </div>
           </div>
 
@@ -77,27 +79,6 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
           </div>
           <StoreBadges labels={l.store} className={styles.stores} />
           <div className={styles.ctahint}>{l.ctaHint}</div>
-        </section>
-
-        <div className={styles.doorsHead}>
-          <h2>{l.doorsHead}</h2>
-          <span className={styles.q}>{l.doorsNote}</span>
-        </div>
-        <section className={styles.doors}>
-          {l.doors.map((d) => (
-            <Link
-              key={d.k}
-              href={lh(d.href)}
-              className={`${styles.door} ${ACCENT[d.accent] ?? styles.cyan} ${d.heavy ? styles.heavy : ""}`}
-            >
-              <span className={styles.glow} />
-              <div className={styles.bar} />
-              <div className={styles.k}>{d.k}</div>
-              <h3>{d.h}</h3>
-              <p>{d.p}</p>
-              <span className={styles.go}>{d.go} →</span>
-            </Link>
-          ))}
         </section>
 
         <section className={styles.conv}>

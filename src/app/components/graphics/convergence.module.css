@@ -1,0 +1,24 @@
+/* Clickable fear-node in the convergence hero. The canvas is the backdrop; each
+   corner node (icon + label) is the actual link to its path page. */
+.node {
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.16s ease, filter 0.16s ease, opacity 0.16s ease;
+  border-radius: 8px;
+  outline: none;
+}
+.node:hover,
+.node:focus-visible {
+  transform: scale(1.06);
+  filter: brightness(1.3);
+}
+.node .go {
+  font-size: 11px;
+  opacity: 0;
+  transition: opacity 0.16s ease;
+}
+.node:hover .go,
+.node:focus-visible .go {
+  opacity: 0.85;
+}

@@ -90,13 +90,16 @@ body {
   --tw-prose-headings: #ffffff;
 }
 
-/* Dark-mode color tokens. The brand purples in :root/@theme are tuned for a
-   light background; on dark they go muddy and low-contrast (purple headings on
-   near-black). Lift foreground to near-white, links/accents to a readable
-   lavender, and fumadocs surfaces to dark. */
+/* Dark surface tokens, applied UNCONDITIONALLY (:root) as well as under .dark.
+   The site is dark by design, but next-themes (fumadocs RootProvider) wipes the
+   `.dark` class off <html> on client-side navigation — without these at :root
+   the page would fall back to the light fumadocs theme (white body, unreadable
+   text) until a full reload. --color-fd-background is the body backdrop. */
+:root,
 .dark {
   --background: #0d1117;
   --foreground: #e8eaed;
+  --color-fd-background: #0d1117;
   --color-fd-foreground: #e8eaed;
   --color-fd-muted-foreground: #9aa3af;
   --color-fd-primary: #b3a9ff;

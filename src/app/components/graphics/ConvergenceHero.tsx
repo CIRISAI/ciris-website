@@ -8,6 +8,8 @@
 // serves all 29 locales. Freezes to a still frame under prefers-reduced-motion.
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
+import nodeStyles from "./convergence.module.css";
 
 export type ConvergenceLabels = {
   consumerAi: string;
@@ -17,12 +19,25 @@ export type ConvergenceLabels = {
   oneFloor: string;
 };
 
+export type ConvergenceLinks = {
+  consumerAi: string;
+  misinformation: string;
+  superalignment: string;
+  bigTech: string;
+};
+
 export default function ConvergenceHero({
   className,
   labels,
+  links,
+  go,
 }: {
   className?: string;
   labels?: ConvergenceLabels;
+  /** When provided, each corner fear-node links to its path page. */
+  links?: ConvergenceLinks;
+  /** Short "go" affordance shown on hover (e.g. "explore →"), localized. */
+  go?: string;
 }) {
   const stageRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -314,48 +329,76 @@ export default function ConvergenceHero({
       <canvas ref={canvasRef} aria-hidden="true" style={{ display: "block", width: "100%", height: "100%" }} />
       {labels && (
         <>
-          {NODES.map((n) => (
-            <div
-              key={n.key}
-              style={{
-                position: "absolute",
-                ...n.pos,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: n.align,
-                gap: "6px",
-                color: n.color,
-                pointerEvents: "none",
-              }}
-            >
-              <svg
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={n.color}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                style={{ filter: `drop-shadow(0 0 6px ${n.color}55)` }}
+          {NODES.map((n) => {
+            const href = links?.[n.key];
+            const wrapStyle = {
+              position: "absolute" as const,
+              ...n.pos,
+              display: "flex",
+              flexDirection: "column" as const,
+              alignItems: n.align,
+              gap: "6px",
+              color: n.color,
+            };
+            const inner = (
+              <>
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke={n.color}
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  style={{ filter: `drop-shadow(0 0 6px ${n.color}55)` }}
+                >
+                  {n.icon}
+                </svg>
+                <span
+                  style={{
+                    fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
+                    fontSize: "13px",
+                    fontWeight: 600,
+                    letterSpacing: "0.01em",
+                    lineHeight: 1.25,
+                    maxWidth: "10em",
+                    textAlign: n.align === "flex-end" ? "right" : "left",
+                    textShadow: "0 1px 8px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  {labels[n.key]}
+                </span>
+                {href && go && (
+                  <span
+                    className={nodeStyles.go}
+                    style={{
+                      fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
+                      fontWeight: 600,
+                      textAlign: n.align === "flex-end" ? "right" : "left",
+                    }}
+                  >
+                    {go}
+                  </span>
+                )}
+              </>
+            );
+            return href ? (
+              <Link
+                key={n.key}
+                href={href}
+                className={nodeStyles.node}
+                style={wrapStyle}
+                aria-label={labels[n.key]}
               >
-                {n.icon}
-              </svg>
-              <span
-                style={{
-                  fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
-                  fontSize: "14px",
-                  fontWeight: 600,
-                  letterSpacing: "0.01em",
-                  whiteSpace: "nowrap",
-                  textAlign: n.align === "flex-end" ? "right" : "left",
-                  textShadow: "0 1px 8px rgba(0,0,0,0.6)",
-                }}
-              >
-                {labels[n.key]}
-              </span>
-            </div>
-          ))}
+                {inner}
+              </Link>
+            ) : (
+              <div key={n.key} style={{ ...wrapStyle, pointerEvents: "none" }}>
+                {inner}
+              </div>
+            );
+          })}
           <span
             style={{
               position: "absolute",
