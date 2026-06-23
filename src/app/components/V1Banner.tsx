@@ -8,12 +8,15 @@
 import { usePathname } from "next/navigation";
 import { delocalizePath } from "@/i18n/config";
 
+// Routes already rebuilt in the v2 dark-blueprint style — the banner hides on
+// these. Grows as more kept pages are rebuilt.
 const V2_ROUTES = new Set([
   "/",
   "/paths/consumer-ai",
   "/paths/superalignment",
   "/paths/misinformation",
   "/paths/big-tech",
+  "/federation",
 ]);
 
 export default function V1Banner() {

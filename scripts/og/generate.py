@@ -104,6 +104,7 @@ def build_page(locale, tr):
 <script type="text/babel" data-presets="react">{rd('cards-b.jsx')}</script>
 <script type="text/babel" data-presets="react">{rd('cards-c.jsx')}</script>
 <script type="text/babel" data-presets="react">{rd('cards-d.jsx')}</script>
+<script type="text/babel" data-presets="react">{rd('cards-paths.jsx')}</script>
 <script type="text/babel" data-presets="react">{rd('cards-accord.jsx')}</script>
 <script type="text/babel" data-presets="react">{rd('cards-default.jsx')}</script>
 <script type="text/babel" data-presets="react">

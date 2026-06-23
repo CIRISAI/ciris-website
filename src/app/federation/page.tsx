@@ -2,17 +2,12 @@
 // fed the English dictionary. Localized variants live at src/app/[locale]/federation/.
 
 import { localizedSeo } from "@/lib/seo";
-import Shell from "./Shell";
-import SimpleContent from "./SimpleContent";
+import FederationV2 from "./FederationV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/federation", "en");
 
 export default function FederationPage() {
   const t = getDictionary("en");
-  return (
-    <Shell level="simple" locale="en">
-      <SimpleContent t={t} />
-    </Shell>
-  );
+  return <FederationV2 t={t} locale="en" />;
 }

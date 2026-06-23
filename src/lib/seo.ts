@@ -58,10 +58,24 @@ const DESIGNED_OG_CARDS: ReadonlySet<string> = new Set([
   "/grammar",
   "/events",
   "/papers",
+  "/paths/consumer-ai",
+  "/paths/superalignment",
+  "/paths/misinformation",
+  "/paths/big-tech",
 ]);
+
+// A few page paths use a hand-picked card slug that differs from the default
+// derivation (the /paths/* heroes render as og-path-* singular).
+const OG_SLUG_OVERRIDES: Readonly<Record<string, string>> = {
+  "/paths/consumer-ai": "og-path-consumer-ai",
+  "/paths/superalignment": "og-path-superalignment",
+  "/paths/misinformation": "og-path-misinformation",
+  "/paths/big-tech": "og-path-big-tech",
+};
 
 // The card slug for a page path: "/" -> og-home, "/trust" -> og-trust.
 function ogSlug(basePath: string): string {
+  if (basePath in OG_SLUG_OVERRIDES) return OG_SLUG_OVERRIDES[basePath];
   return basePath === "/" ? "og-home" : "og" + basePath.replace(/\//g, "-");
 }
 
