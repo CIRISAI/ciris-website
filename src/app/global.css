@@ -97,17 +97,27 @@ body {
    text) until a full reload. --color-fd-background is the body backdrop. */
 :root,
 .dark {
-  --background: #0d1117;
-  --foreground: #e8eaed;
-  --color-fd-background: #0d1117;
-  --color-fd-foreground: #e8eaed;
-  --color-fd-muted-foreground: #9aa3af;
-  --color-fd-primary: #b3a9ff;
-  --color-fd-secondary: #1a222c;
-  --color-fd-accent: #232b38;
-  --color-fd-card: #151b24;
-  --color-fd-muted: #151b24;
-  --color-fd-border: #2a323c;
+  /* !important so neither a dropped .dark class (next-themes wipes it on
+     back/forward navigation) nor the fumadocs preset's @theme light tokens
+     (which can out-order this in the production build) can revert the surface
+     to white. The site is forced-dark by design. */
+  --background: #0d1117 !important;
+  --foreground: #e8eaed !important;
+  --color-fd-background: #0d1117 !important;
+  --color-fd-foreground: #e8eaed !important;
+  --color-fd-muted-foreground: #9aa3af !important;
+  --color-fd-primary: #b3a9ff !important;
+  --color-fd-secondary: #1a222c !important;
+  --color-fd-accent: #232b38 !important;
+  --color-fd-card: #151b24 !important;
+  --color-fd-muted: #151b24 !important;
+  --color-fd-border: #2a323c !important;
+}
+
+/* Belt-and-suspenders: force the body backdrop dark directly, independent of
+   token resolution, so the forced-dark site can never flash white. */
+body {
+  background-color: #0d1117 !important;
 }
 
 /* fumadocs `.prose` (the Accord/docs reader) colors headings + links with the
