@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import VisionContent from "@/app/components/VisionContent";
+import VisionV2 from "@/app/components/VisionV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -36,5 +36,5 @@ export default async function LocalizedVision({
 }) {
   const { locale } = await params;
   const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <VisionContent t={dict} />;
+  return <VisionV2 t={dict} />;
 }

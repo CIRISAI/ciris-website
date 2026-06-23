@@ -17,6 +17,7 @@ const V2_ROUTES = new Set([
   "/paths/misinformation",
   "/paths/big-tech",
   "/federation",
+  "/vision",
 ]);
 
 export default function V1Banner() {

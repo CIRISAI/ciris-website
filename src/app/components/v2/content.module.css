@@ -50,6 +50,12 @@
 .paragraph a:hover { border-bottom-color: var(--accent); }
 .footnote { font-family: ui-monospace, monospace; font-size: 13px; line-height: 1.5; color: var(--color-mute); margin: 14px 0 0; }
 
+/* Manifesto treatment (The Reaching). A standalone bright line for the turns,
+   and a quiet italic dedication. */
+.lead { font-size: clamp(20px, 2.7vw, 27px); line-height: 1.36; letter-spacing: -0.015em; font-weight: 600; color: var(--color-text); margin: 6px 0 30px; max-width: 24ch; }
+.leadAccent { color: var(--accent); }
+.dedication { font-size: clamp(16px, 1.9vw, 18px); line-height: 1.6; color: var(--color-dim); font-style: italic; margin: 30px 0 0; }
+
 /* Accent-tinted callout box (border + faint fill). */
 .callout { margin: 0 0 40px; padding: 22px 24px; border-radius: 14px;
   border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--color-line));

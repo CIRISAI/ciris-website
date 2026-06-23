@@ -3,11 +3,11 @@
 // src/app/[locale]/vision/.
 
 import { localizedSeo } from "@/lib/seo";
-import VisionContent from "@/app/components/VisionContent";
+import VisionV2 from "@/app/components/VisionV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/vision", "en");
 
 export default function VisionPage() {
-  return <VisionContent t={getDictionary("en")} />;
+  return <VisionV2 t={getDictionary("en")} />;
 }
