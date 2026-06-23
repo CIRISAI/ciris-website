@@ -24,7 +24,7 @@ export default function SafetyV2({ t, locale }: { t: Dictionary; locale: string 
       title={sf.heroHeadline}
       lede={sf.heroDescription}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Hero links: source + Accord */}

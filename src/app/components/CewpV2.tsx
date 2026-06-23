@@ -33,7 +33,7 @@ export default function CewpV2({ t, locale }: { t: Dictionary; locale: string })
       lede={c.intro1}
       graphicId="g06"
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       <section className={s.section}>

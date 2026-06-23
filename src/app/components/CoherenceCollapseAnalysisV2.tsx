@@ -83,7 +83,7 @@ export default function CoherenceCollapseAnalysisV2({
       title={c.h1}
       lede={c.heroPara}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Badges + hero CTAs */}

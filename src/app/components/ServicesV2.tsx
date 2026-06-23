@@ -26,7 +26,7 @@ export default function ServicesV2({ t, locale }: { t: Dictionary; locale: strin
       title={sv.heroHeading}
       lede={sv.heroSub}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Try CIRIS now — Scout preview */}

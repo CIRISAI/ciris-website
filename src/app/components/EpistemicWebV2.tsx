@@ -27,7 +27,7 @@ export default function EpistemicWebV2({ t, locale }: { t: Dictionary; locale: s
       title={e.headline}
       lede={e.intro}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* The signature ALM explainer reel — featured full-width hero visual. */}

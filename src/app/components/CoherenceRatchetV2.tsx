@@ -12,12 +12,18 @@ import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShe
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
 const h = (str: string) => ({ __html: str });
 
-function LevelPill({ locale }: { locale: string }) {
+function LevelPill({
+  locale,
+  levels,
+}: {
+  locale: string;
+  levels: { simple: string; advanced: string; srLabel: string };
+}) {
   const lh = (href: string) => localizeHref(href, locale);
   return (
-    <div role="tablist" aria-label="Reading level" className={s.levelPill}>
+    <div role="tablist" aria-label={levels.srLabel} className={s.levelPill}>
       <span className={`${s.levelTab} ${s.levelTabActive}`} role="tab" aria-selected="true">
-        Plain English
+        {levels.simple}
       </span>
       <Link
         className={s.levelTab}
@@ -25,7 +31,7 @@ function LevelPill({ locale }: { locale: string }) {
         role="tab"
         aria-selected="false"
       >
-        Advanced
+        {levels.advanced}
       </Link>
     </div>
   );
@@ -43,11 +49,11 @@ export default function CoherenceRatchetV2({ t, locale }: { t: Dictionary; local
       title="The Coherence Ratchet"
       lede="Why a powerful mind has to show its work."
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       <div className={s.section}>
-        <LevelPill locale={locale} />
+        <LevelPill locale={locale} levels={t.common.levels} />
       </div>
 
       <div className={s.notice}>

@@ -27,7 +27,7 @@ export default function AboutV2({ t, locale }: { t: Dictionary; locale: string }
       kicker={about.header.subheadline}
       title={about.header.headline}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Funding / volunteers */}

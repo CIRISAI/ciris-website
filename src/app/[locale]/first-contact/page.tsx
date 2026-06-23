@@ -7,12 +7,7 @@ import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
 import FirstContactV2 from "@/app/components/FirstContactV2";
 import { getDictionary } from "@/i18n/dictionaries";
-import {
-  PREFIXED_LOCALES,
-  LOCALES,
-  localizedPath,
-  isLocale,
-} from "@/i18n/config";
+import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
 
 export function generateStaticParams() {
   return PREFIXED_LOCALES.map((locale) => ({ locale }));

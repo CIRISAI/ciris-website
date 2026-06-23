@@ -60,7 +60,7 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
           <div className={styles.score}>
             {l.stats.map((s) => (
               <div className={styles.stat} key={s.l}>
-                <div className={styles.statV}>{s.v}</div>
+                <div className={styles.statV} dir="ltr">{s.v}</div>
                 <div className={styles.statL}>
                   {s.l}{" "}
                   <span className={`${styles.tag} ${s.tag === "measured" ? styles.measured : styles.model}`}>

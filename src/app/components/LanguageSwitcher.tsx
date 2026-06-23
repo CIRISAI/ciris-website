@@ -25,12 +25,20 @@ export default function LanguageSwitcher({
   currentLocale,
   large = false,
   inline = false,
+  labels,
 }: {
   currentLocale: string;
   large?: boolean;
   /** Render in-flow (e.g. inside the top nav) instead of fixed bottom-right. */
   inline?: boolean;
+  /** Localized UI strings (t.common.langSwitcher); falls back to English. */
+  labels?: { label: string; cta: string; current: string };
 }) {
+  const ls = labels ?? {
+    label: "Language",
+    cta: "Read this in your language",
+    current: "Current language",
+  };
   const pathname = usePathname() || "/";
   const { path: basePath } = delocalizePath(pathname);
 
@@ -68,7 +76,7 @@ export default function LanguageSwitcher({
     >
       {open && (
         <div className={`${styles.panel} ${inline ? styles.panelDown : ""}`} role="menu">
-          <div className={styles.panelHead}>Read this in your language</div>
+          <div className={styles.panelHead}>{ls.cta}</div>
           {LOCALES.map((l) => {
             const isActive = l.code === currentLocale;
             return (
@@ -96,7 +104,7 @@ export default function LanguageSwitcher({
         className={`${styles.pill} ${large ? styles.pillLarge : ""}`}
         aria-haspopup="menu"
         aria-expanded={open}
-        aria-label={`Change language — currently ${here.name}`}
+        aria-label={`${ls.label}: ${here.name}`}
         onClick={() => setOpen((o) => !o)}
       >
         <svg

@@ -31,7 +31,7 @@ export default function FirstContactV2({ t, locale }: { t: Dictionary; locale: s
       title={fc.heroHeadline}
       lede={fc.heroDescription}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Two paths */}

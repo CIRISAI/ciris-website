@@ -20,7 +20,7 @@ export default function VisionV2({ t }: { t: Dictionary }) {
       kicker={r.kicker}
       title={r.title}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {r.open.map((p, i) => (

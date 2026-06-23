@@ -463,7 +463,7 @@ export default function CrowdsourcingAlignmentV2({ t, locale }: { t: Dictionary;
       title={ca.heroH1}
       lede={ca.heroBody1}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Hero status pills + remaining hero prose */}

@@ -5,7 +5,7 @@
 
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { PREFIXED_LOCALES, isLocale, DEFAULT_LOCALE } from "@/i18n/config";
+import { PREFIXED_LOCALES, isLocale, DEFAULT_LOCALE, localeMeta } from "@/i18n/config";
 import HtmlLangSetter from "@/app/components/HtmlLangSetter";
 
 export function generateStaticParams() {
@@ -23,10 +23,16 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   if (!isLocale(locale) || locale === DEFAULT_LOCALE) notFound();
+  // Emit dir/lang server-side so RTL locales (ar, fa, ur) paint correctly on
+  // first render instead of flashing LTR until HtmlLangSetter's effect runs.
+  // display:contents keeps the body's flex layout intact; dir is inherited.
+  const dir = localeMeta(locale).dir;
   return (
     <>
       <HtmlLangSetter locale={locale} />
-      {children}
+      <div dir={dir} lang={locale} style={{ display: "contents" }}>
+        {children}
+      </div>
     </>
   );
 }

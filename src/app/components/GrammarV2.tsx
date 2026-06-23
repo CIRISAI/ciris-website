@@ -42,7 +42,7 @@ export default function GrammarV2({
       title={g.headline}
       lede={g.intro}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Live spec figures — version / release date / prefix-family count. */}

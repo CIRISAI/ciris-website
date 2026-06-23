@@ -34,7 +34,7 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
       title={c.h1}
       lede={c.heroDescription}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Three Types of AI */}

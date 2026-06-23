@@ -33,7 +33,7 @@ export default function HowItWorksV2({ t, locale }: { t: Dictionary; locale: str
       lede={hiw.header.description}
       graphicId="g07"
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* What is CIRIS */}

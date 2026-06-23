@@ -53,7 +53,7 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
       lede={rs.heroPara}
       graphicId="g06"
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Status pills + corpus snapshot */}

@@ -30,7 +30,7 @@ export default function TrustV2({ t, locale }: { t: Dictionary; locale: string }
       lede={tr.headerDescription}
       graphicId="g03"
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Header CTAs */}

@@ -29,7 +29,7 @@ export default function SafetyVsCensorshipV2({ t, locale }: { t: Dictionary; loc
       title={sc.h1}
       lede={sc.heroPara}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* The failure mode */}

@@ -28,7 +28,7 @@ export default function ModelsV2({ t, locale }: { t: Dictionary; locale: string 
       title={m.h1}
       lede={m.heroPara}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Current Lineup */}

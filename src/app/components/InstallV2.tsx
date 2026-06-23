@@ -117,7 +117,7 @@ export default function InstallV2({ t, locale }: { t: Dictionary; locale: string
       title={i.h1}
       lede={i.heroPara1}
       backHref="/"
-      backLabel="back to the lobby"
+      backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
       {/* Mobile app — the prominent, fastest path. */}
