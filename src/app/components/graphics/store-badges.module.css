@@ -1,0 +1,35 @@
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 14px;
+  border-radius: 11px;
+  border: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text);
+  text-decoration: none;
+  min-width: 158px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.badge:hover {
+  border-color: color-mix(in srgb, var(--color-cyan) 45%, var(--color-line));
+  transform: translateY(-1px);
+}
+
+.glyph { width: 22px; height: 22px; flex: none; }
+
+.text { display: flex; flex-direction: column; line-height: 1.15; }
+.top {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: var(--color-dim);
+}
+.bottom {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}

@@ -8,6 +8,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import ConvergenceHero from "@/app/components/graphics/ConvergenceHero";
+import StoreBadges from "@/app/components/graphics/StoreBadges";
 import SiteHeader from "@/app/components/SiteHeader";
 import styles from "./lobby.module.css";
 
@@ -74,6 +75,7 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
             <Link className={`${styles.btn} ${styles.btnP}`} href={lh("/install")}>{l.ctaInstall} →</Link>
             <Link className={`${styles.btn} ${styles.btnS}`} href={lh("/install")}>{l.ctaPip}</Link>
           </div>
+          <StoreBadges labels={l.store} className={styles.stores} />
           <div className={styles.ctahint}>{l.ctaHint}</div>
         </section>
 

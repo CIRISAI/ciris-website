@@ -12,7 +12,9 @@ export default function SiteHeader({ locale }: { locale: string }) {
   return (
     <nav className={styles.nav}>
       <Link className={styles.brand} href={lh("/")}>
-        <span className={styles.dot} /> CIRIS
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className={styles.logo} src="/logo.svg" alt="CIRIS" width={26} height={20} />
+        CIRIS
         <span className={styles.brandTag}> · safe by structure, open by principle, kind by design</span>
       </Link>
       <div className={styles.navlinks}>

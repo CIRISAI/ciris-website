@@ -3,6 +3,7 @@
 
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; font-size: 13px; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; gap: 10px; font-family: ui-monospace, monospace; letter-spacing: 0.04em; color: var(--color-dim); text-decoration: none; }
+.logo { height: 20px; width: auto; flex: none; }
 .brandTag { color: var(--color-mute); }
 @media (max-width: 720px) { .brandTag { display: none; } }
 .dot { width: 9px; height: 9px; border-radius: 2px; background: var(--color-cyan); box-shadow: 0 0 12px var(--color-cyan); flex: none; }
@@ -38,7 +39,8 @@
 .btn { display: inline-flex; align-items: center; gap: 9px; border-radius: 11px; padding: 13px 20px; font-weight: 600; font-size: 15px; text-decoration: none; }
 .btnP { background: var(--color-cyan); color: #06222b; }
 .btnS { border: 1px solid var(--color-line); color: var(--color-text); background: rgba(255, 255, 255, 0.04); font-family: ui-monospace, monospace; font-size: 14px; }
-.ctahint { font-family: ui-monospace, monospace; font-size: 12px; color: var(--color-mute); margin-top: 8px; }
+.stores { margin-top: 14px; }
+.ctahint { font-family: ui-monospace, monospace; font-size: 12px; color: var(--color-mute); margin-top: 12px; }
 
 
 .doorsHead { display: flex; align-items: baseline; gap: 14px; margin: 48px 0 18px; flex-wrap: wrap; }

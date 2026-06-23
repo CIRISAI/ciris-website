@@ -7,6 +7,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import SvgGraphic, { PATH_GRAPHIC } from "@/app/components/graphics/SvgGraphic";
+import StoreBadges from "@/app/components/graphics/StoreBadges";
 import SiteHeader from "@/app/components/SiteHeader";
 import styles from "./path.module.css";
 
@@ -81,6 +82,7 @@ export default function PathStaircase({ t, slug }: { t: Dictionary; slug: string
         <div className={styles.cta}>
           <Link href={lh("/install")} className={styles.ctaBtn}>{c.cta} &rarr;</Link>
         </div>
+        <StoreBadges labels={t.lobby.store} className={styles.stores} />
       </main>
     </>
   );
