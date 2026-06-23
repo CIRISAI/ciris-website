@@ -56,6 +56,21 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
       backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
+      {/* Measured scoreboard (relocated from the lobby — the proof lives here). */}
+      <div className={s.scoreboard}>
+        {t.lobby.stats.map((st) => (
+          <div className={s.scoreStat} key={st.l}>
+            <div className={s.scoreV} dir="ltr">{st.v}</div>
+            <div className={s.scoreL}>
+              {st.l}{" "}
+              <span className={`${s.scoreTag} ${st.tag === "measured" ? s.scoreMeasured : s.scoreModel}`}>
+                {st.tag}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+
       {/* Status pills + corpus snapshot */}
       <div className={s.section}>
         <p className={s.footnote}>

@@ -31,6 +31,15 @@
   background-size: cover, 28px 28px, 28px 28px; }
 .heroGraphic { width: 100%; max-width: 380px; }
 
+/* Measured scoreboard (moved here from the lobby — proof lives on the proof page). */
+.scoreboard { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 40px; }
+.scoreStat { border: 1px solid var(--color-line); border-radius: 10px; padding: 12px 14px; background: var(--color-panel); min-width: 150px; flex: 1 1 150px; }
+.scoreV { font-family: ui-monospace, monospace; font-size: 19px; font-weight: 600; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.scoreL { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-mute); margin-top: 5px; }
+.scoreTag { display: inline-block; font-family: ui-monospace, monospace; font-size: 9px; letter-spacing: 0.12em; padding: 2px 6px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+.scoreMeasured { color: var(--color-ok); background: rgba(74, 222, 128, 0.12); border: 1px solid rgba(74, 222, 128, 0.35); }
+.scoreModel { color: var(--color-brass); background: rgba(176, 138, 62, 0.12); border: 1px solid rgba(176, 138, 62, 0.4); }
+
 /* Reading-level pill (simple / advanced toggle), dark v2 styling. */
 .levelPill { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-panel); }
 .levelTab { border-radius: 999px; padding: 7px 16px; font-size: 13px; font-weight: 500; text-decoration: none; color: var(--color-dim); }

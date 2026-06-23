@@ -58,20 +58,6 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
             </div>
           </div>
 
-          <div className={styles.score}>
-            {l.stats.map((s) => (
-              <div className={styles.stat} key={s.l}>
-                <div className={styles.statV} dir="ltr">{s.v}</div>
-                <div className={styles.statL}>
-                  {s.l}{" "}
-                  <span className={`${styles.tag} ${s.tag === "measured" ? styles.measured : styles.model}`}>
-                    {s.tag}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
           <div className={styles.cta}>
             <Link className={`${styles.btn} ${styles.btnP}`} href={lh("/install")}>{l.ctaInstall} →</Link>
             <Link className={`${styles.btn} ${styles.btnS}`} href={lh("/install")}>{l.ctaPip}</Link>
