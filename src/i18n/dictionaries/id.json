@@ -1946,124 +1946,124 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · jaringan epistemik",
+    "h1pre": "Ternyata ini semua adalah ",
+    "h1accent": "masalah yang sama.",
+    "lede": "AI pribadi yang benar-benar kamu miliki. AI yang bisa kita jaga agar tetap jujur. Web tempat kamu bisa memeriksa apa yang benar. Internet yang tidak butuh Big Tech.",
+    "turnPre": "Keempatnya punya satu kesamaan: ",
+    "turnAccent": "pusat kendali yang terpaksa kamu percaya.",
+    "turnPost": " Hilangkan itu, dan keempat hal ini berubah sekaligus. Kami sudah membangunnya. Tersedia di ponselmu hari ini.",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "identitas pasca-kuantum",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "kripto per inti",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "pulih saat kehilangan 33%",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "lulus/gagal kesesuaian",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "server per manusia",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "Pasang di ponselmu",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "gratis · sumber terbuka · App Store · Google Play · pip · Docker",
+    "doorsHead": "Mulai dari yang paling terasa.",
+    "doorsNote": "// setiap pintu menuju tempat yang sama",
     "doors": [
       {
-        "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "k": "AI Konsumen",
+        "h": "Tidak ada AI yang bisa kupercaya untuk keluargaku.",
+        "p": "AI pribadi yang berjalan di ponselmu. Tidak ada pusat data di belakangnya. 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan setiap klaim yang dibuat sudah ditandatangani agar bisa kamu periksa.",
+        "go": "Lihat bagaimana ia menjaga privasi",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
-        "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "k": "Big Tech & Pusat Data",
+        "h": "Lima perusahaan memiliki segalanya yang kulakukan.",
+        "p": "Internet berjalan di sekitar 10.000 gedung yang dimiliki oleh lima perusahaan. Kami mengukur bahwa itu tidak harus begitu: 5 miliar orang cukup di perangkat keras server rumahan, sekitar satu server per sepuluh manusia.",
+        "go": "Lihat internet tanpa pemilik",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
         "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "h": "AI berkembang lebih cepat dari siapa pun yang bertanggung jawab atasnya.",
+        "p": "Tempatkan AI di dalam jaringan tempat setiap tindakannya ditandatangani. Menjaganya tetap jujur pun bukan lagi janji satu perusahaan, melainkan sesuatu yang dipaksakan oleh jaringan itu sendiri.",
+        "go": "Lihat bagaimana keselarasan menjadi mekanis",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
-        "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "k": "Misinformasi",
+        "h": "Aku tidak tahu lagi mana yang benar.",
+        "p": "Setiap klaim membawa buktinya sendiri: siapa yang mengatakannya, dasarnya apa, dan siapa yang setuju, mengoreksi, atau menggantinya. Kamu berhenti menebak siapa yang harus dipercaya dan mulai memeriksa sendiri.",
+        "go": "Lihat web dengan bukti nyata",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "Empat ketakutan, satu fondasi. Pengganti internet adalah pengganti ChatGPT.",
+    "convergenceAccent": "Substrat yang sama, setiap pintu.",
+    "footL": "CIRISAgent · jaringan epistemik · AGPL-3.0, terkunci pada misi",
+    "footR": "CIRIS 3.0 sedang diluncurkan · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "Ketakutannya",
+      "Cara kerjanya",
+      "Yang berubah",
+      "Lalu"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "Empat ketakutan, satu fondasi. Hilangkan pusat kendali yang terpaksa kamu percaya, dan keempat hal ini berubah sekaligus.",
+    "seeAlsoHead": "Fondasi yang sama, dilihat dari pintu lain",
+    "cta": "Pasang di ponselmu",
+    "back": "kembali ke lobi"
   },
   "paths": {
     "consumer-ai": {
-      "kicker": "Consumer AI",
+      "kicker": "AI Konsumen",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "AI pribadi yang berjalan di ponselmu",
+      "metaDesc": "AI pribadi yang kamu miliki. Berjalan di ponselmu tanpa pusat data di belakangnya. Sekitar 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan setiap klaim yang dibuat sudah ditandatangani.",
+      "h1": "Tidak ada AI yang benar-benar bisa kamu miliki.",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "Setiap kata yang kamu berikan kepada AI tersimpan di gedung orang lain. Itu melatih model orang lain dan hidup di catatan orang lain. Syaratnya bisa berubah besok, dan kamu tidak akan tahu.",
+        "CIRIS berjalan di ponselmu. Tidak ada pusat data di belakangnya. Sekitar 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan bagian kecil yang keluar sudah disegel sebelum pergi.",
+        "Privasi berhenti menjadi janji dan menjadi fakta tentang di mana datamu secara fisik berada. Tidak ada pusat yang bisa bocor. Dan setiap klaim yang dibuat AI sudah ditandatangani, jadi kamu bisa memeriksanya, bukan sekadar mempercayainya.",
+        "Perhatikan apa yang baru saja terjadi. Alasan mengapa ini bisa privat adalah karena tidak butuh Big Tech sama sekali. Tanda tangan yang sama yang memungkinkan kamu memeriksa satu klaim adalah yang menjaga seluruh web tetap jujur, dan yang membuat AI yang kuat tetap bisa dipertanggungjawabkan."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Internet tanpa Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Web dengan bukti nyata",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "Keselarasan yang bisa kamu periksa",
           "href": "/paths/superalignment"
         }
       ]
@@ -2071,80 +2071,80 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "Superalignment sebagai sifat jaringan",
+      "metaDesc": "Tempatkan agen AI di dalam jaringan yang bisa dipertanggungjawabkan secara kriptografis dan setiap tindakannya ditandatangani. Menjaganya tetap jujur bukan lagi kebijakan lab, melainkan sesuatu yang dipaksakan oleh jaringan.",
+      "h1": "AI berkembang lebih cepat dari siapa pun yang bertanggung jawab atasnya.",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "Kita membangun pikiran yang tidak bisa kita audit. Mereka diatur oleh aturan yang bisa ditulis ulang oleh satu perusahaan, di dalam sistem yang tidak bisa dilihat oleh siapa pun di luar perusahaan itu. Kita diminta percaya pada lab.",
+        "CIRIS menempatkan AI di dalam jaringan tempat setiap tindakannya adalah catatan yang ditandatangani. Seseorang, sebuah AI, dan sebuah organisasi semuanya membawa jenis identitas yang sama, dan semuanya dimintai pertanggungjawaban yang sama.",
+        "Menjaga AI tetap jujur bukan lagi kebijakan yang diharapkan satu perusahaan bisa bertahan. Itu menjadi sesuatu yang dipaksakan oleh jaringan. Kamu tidak percaya pada siaran pers. Kamu membaca tanda tangannya.",
+        "Jaringan yang bisa meminta pertanggungjawaban AI superkuat adalah, berdasarkan bentuknya, internet tanpa pusat. Catatan bertanda tangan yang sama memungkinkan siapa saja memeriksa apa yang benar, dan mereka berjalan di atas substrat pribadi yang sama dengan AI di ponselmu."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Internet tanpa Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Web dengan bukti nyata",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI pribadi yang kamu miliki",
           "href": "/paths/consumer-ai"
         }
       ]
     },
     "misinformation": {
-      "kicker": "Misinformation",
+      "kicker": "Misinformasi",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "Web dengan bukti nyata: periksa sendiri apa yang benar",
+      "metaDesc": "Di CIRIS setiap klaim yang penting dikirim dengan tanda tangan: siapa yang mengatakannya, dasarnya apa, dan siapa yang setuju, mengoreksi, atau menggantinya. Kamu berhenti menebak siapa yang harus dipercaya dan mulai memeriksa.",
+      "h1": "Kamu tidak tahu lagi mana yang benar.",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "Kamu melihat sebuah postingan, harga, klaim. Kamu tidak bisa melihat siapa yang benar-benar berdiri di baliknya, dasarnya apa, atau siapa yang sudah membantahnya. Kepercayaan menjadi seperti melempar koin.",
+        "Di CIRIS setiap klaim yang penting dikirim dengan tanda tangan. Bukan centang yang diberikan platform, melainkan rangkaian tanda tangan yang bisa kamu periksa sendiri: siapa yang mengatakannya, dasarnya apa, dan siapa yang setuju, mengoreksi, atau menggantinya.",
+        "Kebenaran berhenti menjadi sesuatu yang diputuskan platform untukmu. Itu menjadi sesuatu yang bisa kamu, atau AI-mu, periksa dari bukti yang ada. Kamu berhenti memilih pihak berdasarkan kepercayaan dan mulai bisa memverifikasi.",
+        "Web tempat setiap klaim membawa buktinya tidak punya satu pemilik kebenaran. Bukti yang sama itu yang membuat AI tetap jujur, dan semuanya berjalan di atas substrat yang tidak butuh Big Tech."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Keselarasan yang bisa kamu periksa",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Internet tanpa Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI pribadi yang kamu miliki",
           "href": "/paths/consumer-ai"
         }
       ]
     },
     "big-tech": {
-      "kicker": "Big Tech & Datacenters",
+      "kicker": "Big Tech & Pusat Data",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "Internet tanpa pusat data",
+      "metaDesc": "Kami mengukur bahwa internet tidak butuh 10.000 gedung hyperscale-nya: 5 miliar orang cukup di perangkat keras server rumahan biasa, sekitar satu server per sepuluh manusia. Tanpa DNS, tanpa pusat.",
+      "h1": "Lima perusahaan memiliki segalanya yang kamu lakukan.",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "Hampir semua yang kamu posting, tonton, atau kirim melewati sekitar 10.000 gedung besar. Lima perusahaan menjalankan sebagian besar di antaranya. Mereka memiliki tanah tempat kehidupan digitalmu berdiri, kunci penguncinya, dan tombol matikannya.",
+        "CIRIS menunjukkan bahwa gedung-gedung itu tidak diperlukan. Kami mengukurnya: lima miliar orang cukup di perangkat keras server rumahan biasa, sekitar satu server untuk setiap sepuluh manusia. Tidak ada DNS yang bisa direbut, tidak ada server pusat. Kamu ditemukan berdasarkan kuncimu, bukan izin dari siapa pun.",
+        "Ketergantungan turun hampir ke nol, karena kunci identitasmu adalah milikmu untuk dibawa. Dan penghapusan berhenti menjadi janji perusahaan. Datamu bertahan, tersebar dalam potongan-potongan di seluruh jaringan, selama berabad-abad di mesin komoditas.",
+        "Internet tanpa pusat juga merupakan satu-satunya tempat AI benar-benar bisa dimintai pertanggungjawaban, satu-satunya tempat sebuah klaim bisa membawa buktinya sendiri, dan satu-satunya tempat datamu benar-benar milikmu."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Keselarasan yang bisa kamu periksa",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "Web dengan bukti nyata",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI pribadi yang kamu miliki",
           "href": "/paths/consumer-ai"
         }
       ]

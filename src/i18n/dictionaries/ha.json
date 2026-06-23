@@ -1946,124 +1946,124 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · yanar gizo na ilimi",
+    "h1pre": "Ya bayyana cewa waɗannan duka ",
+    "h1accent": "matsala ɗaya ce.",
+    "lede": "AI mai zaman kansa da kai ke da'aukar. AI da za mu iya riƙe da shi amintacce. Yanar gizo da za ka iya duba abin da yake gaskiya. Intanet da ba ta buƙatar Big Tech.",
+    "turnPre": "Suna da abu ɗaya: ",
+    "turnAccent": "cibiya da aka tilasta maka amincewa da ita.",
+    "turnPost": " Ka cire ta, duk huɗu za su canja lokaci ɗaya. Mun gina wannan. Yana a wayar ka yau.",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "shaida ta post-quantum",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "crypto a kowace core",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "yana murmurewa da asarar 33%",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "gwajin yarda ya ci nasara/ya kasa",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "sabobi a kowace mutane goma",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "Saka a wayar ka",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "kyauta · buɗe tushe · App Store · Google Play · pip · Docker",
+    "doorsHead": "Fara daga inda ya fi zafi.",
+    "doorsNote": "// kowane kofar na kai wurin ɗaya",
     "doors": [
       {
         "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "h": "Babu AI da zan amince da ita tare da iyalina.",
+        "p": "AI mai zaman kansa da ke gudana a wayar ka. Babu cibiyar bayanai a bayan sa. Kashi 65% na abin da ka yi ba ya bar na'urar, kuma kowane iƙirari da ta yi yana da sa hannun da za ka duba.",
+        "go": "Duba yadda take zaman kansa",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
         "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "h": "Kamfanoni biyar ne ke da iko a kan duk abin da nake yi.",
+        "p": "Intanet tana gudana a cikin gine-gine kusan 10,000 da kamfanoni biyar ke da su. Mun auna cewa ba dole ba ne: mutane biliyan 5 za su dace a na'urorin gida na sabobi, kusan sabar ɗaya ga mutane goma.",
+        "go": "Duba intanet ba tare da mai shi ba",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
         "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "h": "AI tana yin gudu da sauri fiye da kowa mai ɗaukar alhakin ta.",
+        "p": "Ka sanya AI a cikin hanyar sadarwa inda kowace mataki ta ɗauka na da sa hannun. To, riƙe ta da aminci ya daina zama alkawarin kamfani ɗaya, ya zama wani abu da hanyar sadarwar ke aiwatarwa.",
+        "go": "Duba yadda daidaitawa ta zama na inji",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
         "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "h": "Ba zan iya gane abin da yake gaskiya ba kuma.",
+        "p": "Kowace iƙirari tana ɗauke da hujjojinta: wanda ya faɗa, abin da ta dogara a kansa, da kuma wanda ya yarda, ya gyara, ko ya maye gurbinta. Ka daina hasashen wanda za ka amince da shi, ka fara duba da kanka.",
+        "go": "Duba yanar gizo tare da hujjoji",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "Tsoro huɗu, tushe ɗaya. Madadin intanet shine madadin ChatGPT.",
+    "convergenceAccent": "Tushe ɗaya, kowane kofa.",
+    "footL": "CIRISAgent · yanar gizo na ilimi · AGPL-3.0, an kulle da manufa",
+    "footR": "CIRIS 3.0 yana fitowa · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "Tsoro",
+      "Yadda yake aiki",
+      "Abin da ke canzawa",
+      "Sa'an nan"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "Tsoro huɗu, tushe ɗaya. Ka cire cibiyar da aka tilasta maka amincewa da ita, duk huɗu za su canja lokaci ɗaya.",
+    "seeAlsoHead": "Tushe ɗaya, an gane shi daga sauran kofofin",
+    "cta": "Saka a wayar ka",
+    "back": "koma zauren farko"
   },
   "paths": {
     "consumer-ai": {
       "kicker": "Consumer AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "AI mai zaman kansa da ke gudana a wayar ka",
+      "metaDesc": "AI mai zaman kansa da kai ke da'aukar. Tana gudana a wayar ka ba tare da cibiyar bayanai a bayan ta ba. Kusan kashi 65% na abin da ka yi ba ya bar na'urar, kuma kowace iƙirari da ta yi tana da sa hannun.",
+      "h1": "Babu AI da za ka iya mallaka gaske.",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "Kowace kalmar da ka ba AI tana sauka a ginin wani. Tana horar da samfurin wani kuma tana rayuwa a cikin rikodin wani. Sharuɗɗan na iya canzawa gobe, ba za ka ma san haka ba.",
+        "CIRIS tana gudana a wayar ka. Babu cibiyar bayanai a bayan ta. Kusan kashi 65% na abin da ka yi ba ya bar na'urar, kuma ɓangaren ƙarami da ke fita an rufe shi kafin ya fita.",
+        "Zaman kansa ya daina zama alkawari ya zama gaskiya ta inda bayanan ka ke zaune a zahiri. Babu cibiya da za ta zubar. Kuma kowace iƙirari da AI ta yi tana da sa hannun, don haka za ka iya dubawa maimakon amincewa.",
+        "Lura da abin da ya faru. Dalilin da yasa za ta iya zama mai zaman kansa shi ne ba ta buƙatar Big Tech kwata-kwata. Sa hannun da ke barin ka duba iƙirari ɗaya shi ne ke riƙe dukan yanar gizon da aminci, kuma ke riƙe AI mai ƙarfi da alhakin."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Intanet ba tare da Big Tech ba",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Yanar gizo tare da hujjoji",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "Daidaitawa da za ka iya duba",
           "href": "/paths/superalignment"
         }
       ]
@@ -2071,26 +2071,26 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "Superalignment a matsayin dukiyar hanyar sadarwa",
+      "metaDesc": "Ka sanya wakili na AI a cikin hanyar sadarwa mai sa hannun da lissafin kididdiga, kowace mataki ta ɗauka tana da sa hannun. Riƙe ta da aminci ya daina zama manufar dakin bincike ya zama wani abu da hanyar sadarwar ke aiwatarwa.",
+      "h1": "AI tana yin gudu da sauri fiye da kowa mai ɗaukar alhakin ta.",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "Muna gina tunani da ba za mu iya duba ba. Ana mulkar su da dokoki da kamfani ɗaya ke iya sake rubuta su, a cikin tsarin da babu wanda ke wajen kamfanin zai iya gani. Ana roƙon mu amince da dakin binciken.",
+        "CIRIS tana sanya AI a cikin hanyar sadarwa inda kowace mataki ta ɗauka rikodin da aka sa hannun ne. Mutum, AI, da ƙungiya duka suna ɗauke da irin nau'in shaida ɗaya, kuma duka ana riƙe su da lissafi ɗaya.",
+        "Riƙe AI da aminci ya daina zama manufar da kamfani ɗaya ke fatan ta yi. Ya zama wani abu da hanyar sadarwar ke aiwatarwa. Ba za ka amince da sanarwar ba. Ka karanta sa hannun.",
+        "Hanyar sadarwa da ke iya riƙe AI mai ƙarfi da alhakin ita ce, ta siffarta, intanet ba tare da cibiya ba. Irin waɗannan rikodi masu sa hannun na barin kowa ya duba abin da yake gaskiya, kuma suna gudana a cikin irin wannan tushe mai zaman kansa kamar AI a wayar ka."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Intanet ba tare da Big Tech ba",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Yanar gizo tare da hujjoji",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI mai zaman kansa da kai ke da'aukar",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2098,26 +2098,26 @@
     "misinformation": {
       "kicker": "Misinformation",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "Yanar gizo tare da hujjoji: ka duba abin da yake gaskiya da kanka",
+      "metaDesc": "A cikin CIRIS kowace iƙirari mai muhimmanci tana tafiya tare da sa hannun: wanda ya faɗa, abin da ta dogara a kansa, da kuma wanda ya yarda, ya gyara, ko ya maye gurbinta. Ka daina hasashen wanda za ka amince da shi, ka fara duba.",
+      "h1": "Ba za ka iya gane abin da yake gaskiya ba kuma.",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "Ka ga wata saƙo, farashin, iƙirari. Ba za ka iya ganin wanda ke gaske a bayan ta ba, abin da ta dogara a kansa, ko wanda ya yi adawa. Amana ta zama jifar tsabar kudi.",
+        "A cikin CIRIS kowace iƙirari mai muhimmanci tana tafiya tare da sa hannun. Ba alamar da dandali ke bayarwa ba, amma sarƙar sa hannun da za ka iya duba da kanka: wanda ya faɗa, abin da ta dogara a kansa, da kuma wanda ya yarda, ya gyara, ko ya maye gurbinta.",
+        "Gaskiya ta daina zama wani abu da dandali ke yanke maka shawara a kansa. Ta zama wani abu da kai, ko AI ka, za ka iya duba daga hujjojin. Ka daina zaɓar ɓangare bisa amana ka fara iya tabbatarwa.",
+        "Yanar gizo inda kowace iƙirari tana ɗauke da hujjojinta ba ta da mai shi ɗaya na gaskiya. Waɗannan hujjojin ɗin su ne ke riƙe AI da aminci, kuma suna tafiya a cikin irin wannan tushe da ba ta buƙatar Big Tech."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Daidaitawa da za ka iya duba",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Intanet ba tare da Big Tech ba",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI mai zaman kansa da kai ke da'aukar",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2125,26 +2125,26 @@
     "big-tech": {
       "kicker": "Big Tech & Datacenters",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "Intanet ba tare da cibiyoyin bayanai ba",
+      "metaDesc": "Mun auna cewa intanet ba ta buƙatar gine-ginenta 10,000 masu girma: mutane biliyan 5 za su dace a na'urorin gida na sabobi na yau da kullum, kusan sabar ɗaya ga mutane goma. Babu DNS, babu cibiya.",
+      "h1": "Kamfanoni biyar ne ke da iko a kan duk abin da ka yi.",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "Kusan duk abin da ka aika, ka kallo, ko ka aikewa yana wucewa ta cikin gine-gine masu girma kusan 10,000. Kamfanoni biyar ne ke gudanar da yawancinsu. Suna da iko a kan ƙasar da rayuwar dijital ka ke tsayawa a kanta, makullin, da maɓallin kashe.",
+        "CIRIS tana nuna cewa gine-ginen ba dole ba ne. Mun auna shi: mutane biliyan biyar za su dace a na'urorin sabobi na yau da kullum na gida, kusan sabar ɗaya ga kowace mutane goma. Babu DNS da za a kame, babu sabobin tsakiya. Ana nemo ka da mabuɗin ka, ba ta izini ba.",
+        "Kulle-kulle ya sauka kusan sifili, domin mabuɗin shaida ka shi ne naka ka ɗauka. Kuma share fayil ya daina zama alkawarin kamfani. Bayanan ka na rayuwa, sun bazu a yanki-yanki a duk hanyar sadarwar, na ƙarni a na'urori masu saukin kudi.",
+        "Intanet ba tare da cibiya ba ita ce kawai wurin da AI za a iya gaske riƙe ta da alhakin, wurin da iƙirari za ta iya ɗauke da hujjojinta, da kuma wurin da bayanan ka na gaskiya nasa ne."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Daidaitawa da za ka iya duba",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "Yanar gizo tare da hujjoji",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI mai zaman kansa da kai ke da'aukar",
           "href": "/paths/consumer-ai"
         }
       ]

@@ -1946,124 +1946,124 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · 知識のウェブ",
+    "h1pre": "実は、これらは",
+    "h1accent": "すべて同じ問題だった。",
+    "lede": "本当に自分のものにできるプライベートAI。正直さを保てるAI。何が本当か確かめられるウェブ。大手テック企業に頼らないインターネット。",
+    "turnPre": "これらに共通することが一つある。",
+    "turnAccent": "強制的に信頼させられる中心。",
+    "turnPost": " それをなくせば、四つすべてが一度に変わる。私たちはそれを作った。今日、あなたのスマホで使える。",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "ポスト量子ID",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "コアあたりの暗号処理",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "33%パケットロスでも復旧",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "適合テスト 合格/失敗",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "人10人あたりサーバー1台",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "スマホにインストール",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "無料・オープンソース・App Store・Google Play・pip・Docker",
+    "doorsHead": "一番気になるところから始めよう。",
+    "doorsNote": "// どの入り口からでも、同じ場所にたどり着く",
     "doors": [
       {
         "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "h": "家族に安心して使わせられるAIがない。",
+        "p": "スマホで動くプライベートAI。データセンターは不要。あなたの行動の65%はデバイスの外に出ない。AIが出した情報は署名付きで、自分で確認できる。",
+        "go": "プライバシーの仕組みを見る",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
         "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "h": "自分のことは全部、5社に握られている。",
+        "p": "インターネットは、5社が所有する約1万棟の建物で動いている。実はそれは必要ない、と私たちは計測で確かめた。50億人分のデータが、家庭用サーバーで収まる。人10人あたりサーバー1台の計算だ。",
+        "go": "誰も所有しないインターネットを見る",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
         "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "h": "AIの暴走に、誰も責任を取れていない。",
+        "p": "AIをネットワークの中に置き、すべての行動に署名を付ける。そうすれば、AIを正直に保つことは一企業の約束ではなく、ネットワークが強制するものになる。",
+        "go": "整合性が仕組みになる方法を見る",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
         "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "h": "何が本当か、もう分からない。",
+        "p": "すべての主張に「領収書」が付く。誰が言ったか、何を根拠にしているか、誰が同意・訂正・差し替えたか。誰を信じるか迷うのをやめて、自分で確かめられるようになる。",
+        "go": "領収書付きのウェブを見る",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "四つの不安、一つの土台。インターネットの置き換えは、ChatGPTの置き換えでもある。",
+    "convergenceAccent": "同じ基盤、すべての入り口。",
+    "footL": "CIRISAgent · 知識のウェブ · AGPL-3.0, mission-locked",
+    "footR": "CIRIS 3.0 展開中・Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "不安",
+      "仕組み",
+      "何が変わるか",
+      "その先へ"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "四つの不安、一つの土台。強制的に信頼させられる中心をなくせば、四つすべてが一度に変わる。",
+    "seeAlsoHead": "同じ土台を、別の入り口から見る",
+    "cta": "スマホにインストール",
+    "back": "ロビーに戻る"
   },
   "paths": {
     "consumer-ai": {
       "kicker": "Consumer AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "スマホで動くプライベートAI",
+      "metaDesc": "本当に自分のものにできるプライベートAI。データセンター不要でスマホで動く。行動の約65%はデバイスの外に出ない。すべての情報は署名付き。",
+      "h1": "本当に自分のものにできるAIは、まだない。",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "AIに伝えた言葉は、すべて誰かの建物に届く。誰かのモデルを学習させ、誰かのログに残る。利用規約はいつでも変わる可能性があり、あなたは気づかないかもしれない。",
+        "CIRISはスマホで動く。データセンターは不要。あなたの行動の約65%はデバイスの外に出ない。外に出る小さな部分も、送信前に暗号化される。",
+        "プライバシーは約束ではなく、データが物理的にどこにあるかという事実になる。漏れる中心はない。AIが出す情報は署名付きだから、信じるのではなく、確認できる。",
+        "ここで気づくことがある。プライベートでいられるのは、Big Techをまったく必要としないからだ。一つの情報を確かめる署名は、ウェブ全体を正直に保つものと同じ。そして強力なAIに責任を持たせるものとも同じだ。"
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Techのないインターネット",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "領収書付きのウェブ",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "確認できる整合性",
           "href": "/paths/superalignment"
         }
       ]
@@ -2071,26 +2071,26 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "ネットワークの性質としての超整合性",
+      "metaDesc": "AIエージェントを暗号で説明責任のあるネットワークに置けば、すべての行動が署名付き記録になる。正直さを保つことは研究室の方針ではなく、ネットワークが強制するものになる。",
+      "h1": "AIの暴走に、誰も責任を取れていない。",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "私たちは監査できない知性を作っている。一企業が書き換えられるルールで管理され、その企業の外には見えないシステムの中にある。私たちは研究室を信じるよう求められている。",
+        "CIRISはAIをネットワークの中に置き、すべての行動を署名付き記録にする。人、AI、組織はすべて同じ種類のIDを持ち、同じ基準で責任を問われる。",
+        "AIを正直に保つことは、一企業が守り続けることを期待される方針ではなくなる。ネットワークが強制するものになる。プレスリリースを信じるのではなく、署名を読めばいい。",
+        "超人的なAIに責任を持てるネットワークは、その構造上、中心のないインターネットでもある。同じ署名付き記録で誰でも真実を確認でき、スマホのAIと同じプライベートな基盤で動く。"
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Techのないインターネット",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "領収書付きのウェブ",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "本当に自分のものにできるAI",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2098,26 +2098,26 @@
     "misinformation": {
       "kicker": "Misinformation",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "領収書付きのウェブ、自分で真実を確かめよう",
+      "metaDesc": "CIRISでは重要な主張はすべて署名付きで伝わる。誰が言ったか、何を根拠にしているか、誰が同意・訂正・差し替えたか。誰を信じるか迷うのをやめて、確認できるようになる。",
+      "h1": "何が本当か、もう分からない。",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "投稿、価格、主張を見かける。本当に誰が発信しているのか、何を根拠にしているのか、誰が反論したのかが見えない。信頼はコイントスになってしまった。",
+        "CIRISでは重要な主張はすべて署名付きで伝わる。プラットフォームが配るチェックマークではなく、自分で確認できる署名の連鎖だ。誰が言ったか、何を根拠にしているか、誰が同意・訂正・差し替えたか。",
+        "真実はプラットフォームが決めるものではなくなる。あなた、またはあなたのAIが、領収書から確認できるものになる。どちらかの味方をするのではなく、自分で検証できるようになる。",
+        "すべての主張に領収書が付くウェブには、真実の一人の所有者はいない。その同じ領収書がAIを正直に保ち、Big Techを必要としない同じ基盤の上で動く。"
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "確認できる整合性",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Techのないインターネット",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "本当に自分のものにできるAI",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2125,26 +2125,26 @@
     "big-tech": {
       "kicker": "Big Tech & Datacenters",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "データセンターのないインターネット",
+      "metaDesc": "インターネットに1万棟の巨大施設は必要ない、と私たちは計測で確かめた。50億人分が普通の家庭用サーバーに収まる。人10人あたり約1台。DNS不要、中心なし。",
+      "h1": "5社があなたのすることすべてを所有している。",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "あなたが投稿・視聴・送信するほぼすべては、約1万棟の巨大施設を通る。5社がそのほとんどを運営している。あなたのデジタルライフの土台、ロックイン、そしてオフスイッチを所有している。",
+        "CIRISはその施設が必要ないことを示す。私たちは計測した。50億人が普通の家庭用サーバーに収まる。人10人あたり約1台。乗っ取られるDNSも中央サーバーも不要。あなたは許可ではなく、自分の鍵で見つけられる。",
+        "ロックインはほぼゼロになる。IDの鍵は自分で持ち運べるからだ。削除も企業の約束ではなくなる。あなたのデータはネットワーク全体に分散して残り、普通のマシンで何世紀も生き続ける。",
+        "中心のないインターネットは、AIが本当に責任を問われる唯一の場所でもある。主張が自分の証明を持てる唯一の場所でもある。そしてあなたのデータが本当にあなたのものになる唯一の場所でもある。"
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "確認できる整合性",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "領収書付きのウェブ",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "本当に自分のものにできるAI",
           "href": "/paths/consumer-ai"
         }
       ]

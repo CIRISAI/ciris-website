@@ -1946,13 +1946,13 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · epistemic web",
+    "h1pre": "ဒါတွေဟာ ",
+    "h1accent": "ပြဿနာတစ်ခုထဲပဲ။",
+    "lede": "သင်တကယ်ပိုင်တဲ့ ကိုယ်ပိုင် AI တစ်ခု။ ကျွန်တော်တို့ စစ်ဆေးနိုင်တဲ့ AI။ ဘာသည်မှန်သည်ကို စစ်ဆေးနိုင်တဲ့ ဝဘ်တစ်ခု။ Big Tech မလိုတဲ့ အင်တာနက်တစ်ခု။",
+    "turnPre": "ဒါတွေ အားလုံးမှာ တစ်ခုတည်း ဆက်နွှယ်နေသည်: ",
+    "turnAccent": "သင် မင်္ဂလာနဲ့ ယုံကြည်ရတဲ့ အလယ်ဗဟို တစ်ခု။",
+    "turnPost": " ဒါကို ဖယ်ရှားလိုက်တာနဲ့ လေးခုလုံး တစ်ပြိုင်နက် ပြောင်းသွားတယ်။ ကျွန်တော်တို့ အဲဒါကို တည်ဆောက်ပြီးပြီ။ ယနေ့ သင့်ဖုန်းမှာ ရှိနေပြီ။",
     "stats": [
       {
         "v": "161.9 µs",
@@ -1961,12 +1961,12 @@
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "core တစ်ခုလျှင် crypto",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "33% ဆုံးရှုံးမှုမှာ ပြန်ရသည်",
         "tag": "measured"
       },
       {
@@ -1976,94 +1976,94 @@
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "လူတစ်ဦးလျှင် server အရေအတွက်",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "ဖုန်းမှာ Install လုပ်ပါ",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "အခမဲ့ · open source · App Store · Google Play · pip · Docker",
+    "doorsHead": "ဘယ်နေရာမှာ နာနေသလဲ ဆိုတဲ့ ဒီနေရာကနေ စပါ။",
+    "doorsNote": "// တံခါးတိုင်း တစ်နေရာတည်းကို ရောက်သည်",
     "doors": [
       {
         "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "h": "မိသားစုကို ယုံကြည်ပေးနိုင်တဲ့ AI မရှိဘူး။",
+        "p": "သင့်ဖုန်းမှာ run တဲ့ ကိုယ်ပိုင် AI တစ်ခု။ နောက်မှာ data center မရှိ။ သင်လုပ်တာ 65% ဟာ ဖုန်းကိုမထွက်ဘဲ ကျန်ရှိသည်၊ AI ပြောတဲ့ ကိုးကားချက်တိုင်းကို သင် စစ်ဆေးနိုင်အောင် လက်မှတ်ထိုးထားသည်။",
+        "go": "ဘယ်လိုသာယာကြောင်း ကြည့်ပါ",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
         "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "h": "ကုမ္ပဏီငါးခုက ငါ့လုပ်ငန်းတိုင်းကို ပိုင်ဆိုင်နေတယ်။",
+        "p": "အင်တာနက်ဟာ ကုမ္ပဏီငါးခုပိုင်တဲ့ အဆောက်အဦ ၁၀,၀၀၀ ခန့်မှာ run နေသည်။ ကျွန်တော်တို့ တိုင်းတာကြည့်ပြီ: လူဘီလီယံ ၅ ဦးဟာ home-server hardware မှာ ဆန့်ဝင်သည်၊ လူ ၁၀ ဦးလျှင် server တစ်ခုခန့်ပဲ လိုသည်။",
+        "go": "ပိုင်ရှင်မဲ့ အင်တာနက်ကို ကြည့်ပါ",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
         "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "h": "AI ဟာ တာဝန်ကျမည့်သူ မဆုံးနိုင်အောင် ရှိနေသည်။",
+        "p": "AI ကို network တစ်ခုထဲ ထည့်ပြီး သူလုပ်တဲ့ ကြိုးပမ်းမှုတိုင်းကို လက်မှတ်ထိုးပါ။ ဒါဆို AI ကို ရိုးသားအောင် ထိမ်းသိမ်းတာဟာ ကုမ္ပဏီတစ်ခု ပေးတဲ့ ကတိတစ်ခုမဟုတ်တော့ဘဲ network က တင်းကြပ်တဲ့ အရာဖြစ်သွားသည်။",
+        "go": "alignment ဘယ်လိုဖြစ်လာသလဲ ကြည့်ပါ",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
         "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "h": "ဘာသည်မှန်သည်ကို မခွဲခြားနိုင်တော့ဘူး။",
+        "p": "ကိုးကားချက်တိုင်းမှာ သက်သေပါသည်: ဘယ်သူပြောသလဲ၊ ဘာကို အခြေခံသလဲ၊ ဘယ်သူ သဘောတူ ဆန့်ကျင် သို့မဟုတ် အစားထိုးခဲ့သလဲ။ ဘယ်သူ ယုံရမယ်ဆိုတာ မှန်းဆနေရတာကနေ သင်ကိုယ်တိုင် စစ်ဆေးနိုင်ဖို့ ပြောင်းသွားသည်။",
+        "go": "သက်သေနဲ့ ဝဘ်ကို ကြည့်ပါ",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "ကြောက်စိတ်လေးခု၊ အခြေ တစ်ခုတည်း။ အင်တာနက်ကို အစားထိုးတာဟာ ChatGPT ကို အစားထိုးတာနဲ့ တူသည်။",
+    "convergenceAccent": "တူညီသော substrate၊ တံခါးတိုင်း။",
+    "footL": "CIRISAgent · epistemic web · AGPL-3.0, mission-locked",
+    "footR": "CIRIS 3.0 ထုတ်လွှတ်နေသည် · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "ကြောက်စိတ်",
+      "ဘယ်လို အလုပ်လုပ်သလဲ",
+      "ဘာ ပြောင်းသွားသလဲ",
+      "ဒါပြီးရင်"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "ကြောက်စိတ်လေးခု၊ အခြေ တစ်ခုတည်း။ မင်္ဂလာနဲ့ ယုံကြည်ရတဲ့ ဗဟိုကို ဖယ်ရှားလိုက်တာနဲ့ လေးခုလုံး တစ်ပြိုင်နက် ပြောင်းသွားသည်။",
+    "seeAlsoHead": "တူညီသော အခြေ၊ အခြား တံခါးများမှ မြင်ရသည်",
+    "cta": "ဖုန်းမှာ Install လုပ်ပါ",
+    "back": "lobby သို့ ပြန်သွားပါ"
   },
   "paths": {
     "consumer-ai": {
       "kicker": "Consumer AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "သင့်ဖုန်းမှာ run တဲ့ ကိုယ်ပိုင် AI",
+      "metaDesc": "သင်ပိုင်တဲ့ ကိုယ်ပိုင် AI တစ်ခု။ နောက်မှာ data center မရှိဘဲ သင့်ဖုန်းမှာ run သည်။ သင်လုပ်တာ 65% ခန့်ဟာ ဖုန်းကိုမထွက်ဘဲ ကျန်ရှိပြီး AI ပြောတဲ့ ကိုးကားချက်တိုင်းကို လက်မှတ်ထိုးထားသည်။",
+      "h1": "တကယ်ပိုင်နိုင်တဲ့ AI မရှိဘူး။",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "AI ကို သင်ပေးတဲ့ စကားတိုင်းဟာ တစ်ယောက်ယောက်ရဲ့ အဆောက်အဦကို ရောက်သွားသည်။ တစ်ယောက်ယောက်ရဲ့ model ကို သင်ကြားပေးနေသည်၊ တစ်ယောက်ယောက်ရဲ့ log တွေမှာ သိမ်းဆည်းထားသည်။ terms တွေ မနက်ဖြန် ပြောင်းနိုင်ပြီး သင် သိတောင်မသိဘဲ ဖြစ်နိုင်သည်။",
+        "CIRIS ဟာ သင့်ဖုန်းမှာ run သည်။ နောက်မှာ data center မရှိ။ သင်လုပ်တာ 65% ခန့်ဟာ ဖုန်းကိုမထွက်ဘဲ ကျန်ရှိပြီး ထွက်သွားတဲ့ အနည်းငယ်ကို ပေးပို့မတိုင်မှာ ကာကွယ်ထားသည်။",
+        "ကိုယ်ရေးကိုယ်တာဟာ ကတိတစ်ခုမဟုတ်တော့ဘဲ သင့် data ရုပ်ဝတ္ထု တည်ရှိရာ အချက်အလက်ဖြစ်သွားသည်။ ပေါက်ကြားနိုင်တဲ့ ဗဟိုမရှိတော့ဘူး။ AI ပြောတဲ့ ကိုးကားချက်တိုင်းကို လက်မှတ်ထိုးထားပြီး ယုံကြည်မယ့်အစား စစ်ဆေးနိုင်သည်။",
+        "ဘာဖြစ်သွားသလဲ သတိပြုပါ။ ကိုယ်ရေးကိုယ်တာ ဖြစ်နိုင်တာဟာ Big Tech လုံးဝ မလိုတော့လို့ပဲ။ ကိုးကားချက်တစ်ခု စစ်ဆေးနိုင်တဲ့ လက်မှတ်တွေဟာ ဝဘ်တစ်ခုလုံးကို ရိုးသားအောင် ထိမ်းသိမ်းနိုင်ပြီး အစွမ်းထက်တဲ့ AI ကိုလည်း တာဝန်ခံနိုင်အောင် ထိမ်းသိမ်းနိုင်သည်။"
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech မဲ့ အင်တာနက်",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "သက်သေနဲ့ ဝဘ်",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "စစ်ဆေးနိုင်တဲ့ alignment",
           "href": "/paths/superalignment"
         }
       ]
@@ -2071,26 +2071,26 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "Network ရဲ့ ဂုဏ်သတ္တိအဖြစ် Superalignment",
+      "metaDesc": "AI agent ကို လက်မှတ်တင်ပြနိုင်တဲ့ network ထဲ ထည့်ပြီး သူလုပ်တဲ့ ကြိုးပမ်းမှုတိုင်းကို မှတ်တမ်းတင်ပါ။ AI ကို ရိုးသားအောင် ထိမ်းသိမ်းတာဟာ lab ပေါ်လစီမဟုတ်တော့ဘဲ network က တင်းကြပ်သည်။",
+      "h1": "AI ဟာ တာဝန်ကျနိုင်သူ မဆုံးနိုင်အောင် ရှိနေသည်။",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "ကျွန်တော်တို့ စစ်ဆေးမရနိုင်တဲ့ စိတ်တွေ တည်ဆောက်နေသည်။ ကုမ္ပဏီတစ်ခုတည်း ပြန်ရေးနိုင်တဲ့ စည်းမျဉ်းတွေနဲ့ ထောင်ချောက်ချထားသည်၊ ကုမ္ပဏီပြင်ဘက်မှ ဘယ်သူမှ မမြင်နိုင်တဲ့ စနစ်တွေထဲမှာ ရှိသည်။ lab ကို ယုံကြည်ဖို့ ကျွန်တော်တို့ကို တောင်းဆိုသည်။",
+        "CIRIS ဟာ AI ကို network တစ်ခုထဲ ထည့်ပြီး သူလုပ်တဲ့ ကြိုးပမ်းမှုတိုင်းဟာ လက်မှတ်ထိုးထားတဲ့ မှတ်တမ်းဖြစ်သည်။ လူတစ်ဦး၊ AI တစ်ခု နှင့် အဖွဲ့အစည်းတစ်ခုဟာ တူညီသော identity အမျိုးအစားကို ဆောင်ကြပြီး အားလုံး တူညီသောတာဝန်ကို ခံယူသည်။",
+        "AI ကို ရိုးသားအောင် ထိမ်းသိမ်းတာဟာ ကုမ္ပဏီတစ်ခုက မျှော်လင့်တဲ့ ပေါ်လစီမဟုတ်တော့ဘဲ network က တင်းကြပ်တဲ့ အရာဖြစ်သွားသည်။ သတင်းထုတ်ပြန်ချက်ကို မယုံတော့ဘဲ လက်မှတ်တွေ ဖတ်သည်။",
+        "လူ့အသိဉာဏ်ထက် ကျော်လွန်သော AI ကို တာဝန်ခံနိုင်တဲ့ network ဟာ ပုံသဏ္ဍာန်အရ ဗဟိုမဲ့ အင်တာနက်ဖြစ်သည်။ တူညီသော လက်မှတ်ထိုးမှတ်တမ်းတွေဟာ ဘယ်သူမဆို ဘာမှန်သလဲ စစ်ဆေးနိုင်ပြီး သင့်ဖုန်းမှာရှိတဲ့ AI နဲ့ တူညီသော ကိုယ်ပိုင် substrate ပေါ်မှာ run သည်။"
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech မဲ့ အင်တာနက်",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "သက်သေနဲ့ ဝဘ်",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "သင်ပိုင်တဲ့ ကိုယ်ပိုင် AI",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2098,26 +2098,26 @@
     "misinformation": {
       "kicker": "Misinformation",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "သက်သေနဲ့ ဝဘ်: ဘာမှန်သလဲ ကိုယ်တိုင် စစ်ဆေးပါ",
+      "metaDesc": "CIRIS မှာ အရေးကြီးတဲ့ ကိုးကားချက်တိုင်းဟာ လက်မှတ်ထိုးပို့သည်: ဘယ်သူပြောသလဲ၊ ဘာကို အခြေခံသလဲ၊ ဘယ်သူ သဘောတူ ဆန့်ကျင် သို့မဟုတ် အစားထိုးခဲ့သလဲ။ မှန်းဆနေရတာ ရပ်ပြီး စစ်ဆေးနိုင်သည်။",
+      "h1": "ဘာသည်မှန်သည်ကို မသိနိုင်တော့ဘူး။",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "post တစ်ခု၊ ဈေးနှုန်းတစ်ခု၊ ကိုးကားချက်တစ်ခု မြင်သည်။ တကယ်ဘယ်သူ နောက်မှာ ရပ်နေသလဲ၊ ဘာကို အခြေခံသလဲ၊ ဘယ်သူ ဆန့်ကျင်ခဲ့သလဲ မမြင်နိုင်ဘူး။ ယုံကြည်မှုဟာ တစ်ဖက်တည်း ဆုံးဖြတ်ရတဲ့ အရာဖြစ်သွားသည်။",
+        "CIRIS မှာ အရေးကြီးတဲ့ ကိုးကားချက်တိုင်းဟာ လက်မှတ်ထိုးပါလာသည်။ platform ပေးတဲ့ checkmark မဟုတ်ဘဲ သင်ကိုယ်တိုင် စစ်ဆေးနိုင်တဲ့ လက်မှတ်တွဲဆက်တစ်ခု: ဘယ်သူပြောသလဲ၊ ဘာကို အခြေခံသလဲ၊ ဘယ်သူ သဘောတူ ဆန့်ကျင် သို့မဟုတ် အစားထိုးခဲ့သလဲ။",
+        "အမှန်တရားဟာ platform တစ်ခုက သင့်အတွက် ဆုံးဖြတ်ပေးတဲ့ အရာမဟုတ်တော့ဘူး။ သင် သို့မဟုတ် သင့် AI ဟာ သက်သေတွေကနေ စစ်ဆေးနိုင်တဲ့ အရာဖြစ်သွားသည်။ ဘက်တစ်ဖက်ကို မဆုံးဖြတ်ရတော့ဘဲ စစ်ဆေးနိုင်သည်။",
+        "ကိုးကားချက်တိုင်း သက်သေပါတဲ့ ဝဘ်မှာ အမှန်တရားကို တစ်ဦးတည်း ပိုင်ဆိုင်သူ မရှိတော့ဘူး။ ထိုသက်သေတွေဟာ AI ကို ရိုးသားအောင် ထိမ်းသိမ်းတဲ့ အရာဖြစ်ပြီး Big Tech မလိုတဲ့ တူညီသော substrate ပေါ်မှာ run သည်။"
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "စစ်ဆေးနိုင်တဲ့ alignment",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech မဲ့ အင်တာနက်",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "သင်ပိုင်တဲ့ ကိုယ်ပိုင် AI",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2125,26 +2125,26 @@
     "big-tech": {
       "kicker": "Big Tech & Datacenters",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "data center မဲ့ အင်တာနက်",
+      "metaDesc": "ကျွန်တော်တို့ တိုင်းတာကြည့်ပြီ: hyperscale အဆောက်အဦ ၁၀,၀၀၀ ဟာ မလိုဘဲ လူဘီလီယံ ၅ ဦးဟာ ရိုးရိုး home-server hardware မှာ ဆန့်ဝင်သည်၊ လူ ၁၀ ဦးလျှင် server တစ်ခုခန့်။ DNS မလိုဘဲ ဗဟိုမဲ့။",
+      "h1": "ကုမ္ပဏီငါးခုက သင်လုပ်တာ အားလုံးကို ပိုင်ဆိုင်နေသည်။",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "သင် post တင်တာ၊ ကြည့်တာ၊ ပေးပို့တာ နီးပါးအားလုံးဟာ ကြီးမားသော အဆောက်အဦ ၁၀,၀၀၀ ခန့်ကတဆင့် ဖြတ်သန်းသည်။ ကုမ္ပဏီငါးခုက ၎င်းတို့ အများစုကို run နေသည်။ သင့် ဒစ်ဂျစ်တယ် ဘဝ တည်ရှိသော မြေကြီး၊ ချည်နှောင်မှု နှင့် ပိတ်ဆို့မှုကို ၎င်းတို့ပိုင်သည်။",
+        "CIRIS ဟာ ထိုအဆောက်အဦတွေ မလိုကြောင်း ပြသသည်။ ကျွန်တော်တို့ တိုင်းတာကြည့်ပြီ: လူဘီလီယံ ၅ ဦးဟာ ရိုးရိုး home-server hardware မှာ ဆန့်ဝင်သည်၊ လူ ၁၀ ဦးလျှင် server တစ်ခုခန့်သာ လိုသည်။ ဖမ်းဆုပ်ရန် DNS မရှိ၊ ဗဟို server မရှိ။ ခွင့်ပြုချက်မဟုတ်ဘဲ သင့် key ဖြင့် သင့်ကို တွေ့ရသည်။",
+        "သင်ရဲ့ identity key ဟာ သင်သယ်နိုင်တဲ့ အရာဖြစ်တဲ့အတွက် ချည်နှောင်မှု နီးပါး သုညထိ ကျဆင်းသည်။ ဖျက်ဆီးမှုဟာ ကုမ္ပဏီရဲ့ ကတိမဟုတ်တော့ဘူး။ သင့် data ဟာ network တစ်လျှောက် အပိုင်းအစ ကွဲပြားကာ ကုန်ကျစရိတ် သက်သာသောစက်တွေပေါ်မှာ ရာစုနှစ်ကြာ ရှင်သန်သည်။",
+        "ဗဟိုမဲ့ အင်တာနက်ဟာ AI ကို တကယ်တာဝန်ခံနိုင်တဲ့ တစ်ခုတည်းသောနေရာ၊ ကိုးကားချက်မှာ သက်သေပါနိုင်တဲ့ တစ်ခုတည်းသောနေရာ နှင့် သင့် data တကယ်သင့်ပိုင်တဲ့ တစ်ခုတည်းသောနေရာဖြစ်သည်။"
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "စစ်ဆေးနိုင်တဲ့ alignment",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "သက်သေနဲ့ ဝဘ်",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "သင်ပိုင်တဲ့ ကိုယ်ပိုင် AI",
           "href": "/paths/consumer-ai"
         }
       ]

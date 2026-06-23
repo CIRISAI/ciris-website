@@ -1946,205 +1946,205 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · mạng tri thức",
+    "h1pre": "Hóa ra đây là ",
+    "h1accent": "cùng một vấn đề.",
+    "lede": "Một AI riêng tư mà bạn thực sự sở hữu. AI mà chúng ta có thể giữ trung thực. Một web nơi bạn có thể kiểm tra điều gì là thật. Một internet không cần Big Tech.",
+    "turnPre": "Chúng có chung một điều: ",
+    "turnAccent": "một trung tâm mà bạn buộc phải tin.",
+    "turnPost": " Xóa nó đi, và cả bốn thứ thay đổi cùng lúc. Chúng tôi đã xây dựng điều đó. Nó đang có trên điện thoại của bạn hôm nay.",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "danh tính chống lượng tử",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "mã hóa mỗi lõi",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "phục hồi khi mất 33% gói tin",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "kiểm tra tuân thủ đạt/trượt",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "máy chủ trên mỗi người dùng",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "Cài đặt trên điện thoại của bạn",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "miễn phí · mã nguồn mở · App Store · Google Play · pip · Docker",
+    "doorsHead": "Bắt đầu từ nỗi lo của bạn.",
+    "doorsNote": "// mọi cửa đều dẫn đến cùng một nơi",
     "doors": [
       {
-        "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "k": "AI Tiêu Dùng",
+        "h": "Không có AI nào tôi dám tin cho gia đình mình.",
+        "p": "Một AI riêng tư chạy trên điện thoại của bạn. Không có trung tâm dữ liệu đằng sau. 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và mọi thông tin nó đưa ra đều được ký số để bạn có thể kiểm tra.",
+        "go": "Xem cách nó bảo mật riêng tư",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
-        "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "k": "Big Tech & Trung Tâm Dữ Liệu",
+        "h": "Năm công ty sở hữu mọi thứ tôi làm.",
+        "p": "Internet chạy trong khoảng 10.000 tòa nhà do năm công ty sở hữu. Chúng tôi đo được rằng không cần phải như vậy: 5 tỷ người có thể dùng phần cứng máy chủ gia đình, khoảng một máy chủ cho mỗi mười người.",
+        "go": "Xem internet không có chủ sở hữu",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
-        "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "k": "Kiểm Soát Siêu AI",
+        "h": "AI đang vượt khỏi tầm kiểm soát của bất kỳ ai.",
+        "p": "Đưa AI vào một mạng nơi mọi hành động nó thực hiện đều được ký số. Khi đó, việc giữ cho nó trung thực không còn là lời hứa của một công ty mà trở thành điều mà chính mạng lưới bảo đảm.",
+        "go": "Xem cách kiểm soát AI trở thành cơ chế",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
-        "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "k": "Thông Tin Sai Lệch",
+        "h": "Tôi không còn biết điều gì là thật nữa.",
+        "p": "Mọi thông tin đều mang theo bằng chứng: ai nói, dựa trên gì, và ai đồng ý, đính chính hay thay thế nó. Bạn không còn phải đoán nên tin ai mà có thể tự kiểm tra.",
+        "go": "Xem web có bằng chứng",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "Bốn nỗi lo, một nền tảng. Thứ thay thế internet cũng là thứ thay thế ChatGPT.",
+    "convergenceAccent": "Cùng một nền, mọi cửa.",
+    "footL": "CIRISAgent · mạng tri thức · AGPL-3.0, khóa sứ mệnh",
+    "footR": "CIRIS 3.0 đang triển khai · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "Nỗi lo",
+      "Cách hoạt động",
+      "Điều gì thay đổi",
+      "Và tiếp theo"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "Bốn nỗi lo, một nền tảng. Xóa trung tâm mà bạn buộc phải tin, và cả bốn thứ thay đổi cùng lúc.",
+    "seeAlsoHead": "Cùng một nền tảng, nhìn từ các cửa khác",
+    "cta": "Cài đặt trên điện thoại của bạn",
+    "back": "quay lại sảnh chờ"
   },
   "paths": {
     "consumer-ai": {
-      "kicker": "Consumer AI",
+      "kicker": "AI Tiêu Dùng",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "AI riêng tư chạy trên điện thoại của bạn",
+      "metaDesc": "Một AI riêng tư bạn sở hữu. Nó chạy trên điện thoại không cần trung tâm dữ liệu. Khoảng 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và mọi thông tin nó đưa ra đều được ký số.",
+      "h1": "Không có AI nào bạn thực sự có thể sở hữu.",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "Mọi từ bạn nói với AI đều đến trong tòa nhà của người khác. Nó huấn luyện mô hình của người khác và nằm trong nhật ký của người khác. Điều khoản có thể thay đổi ngày mai, và bạn sẽ không hay biết.",
+        "CIRIS chạy trên điện thoại của bạn. Không có trung tâm dữ liệu đằng sau. Khoảng 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và phần nhỏ có đi ra ngoài thì được mã hóa trước khi gửi đi.",
+        "Riêng tư không còn là lời hứa mà trở thành sự thật về nơi dữ liệu của bạn thực sự nằm. Không có trung tâm nào để rò rỉ. Và mọi thông tin AI đưa ra đều được ký số, để bạn có thể kiểm tra thay vì phải tin.",
+        "Hãy để ý điều vừa xảy ra. Lý do nó có thể riêng tư là vì nó không cần Big Tech chút nào. Những chữ ký giúp bạn kiểm tra một thông tin cũng chính là thứ giữ cho toàn bộ web trung thực, và giữ cho một AI mạnh mẽ có trách nhiệm."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Một internet không có Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Một web có bằng chứng",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "Kiểm soát AI mà bạn có thể xem",
           "href": "/paths/superalignment"
         }
       ]
     },
     "superalignment": {
-      "kicker": "Superalignment",
+      "kicker": "Kiểm Soát Siêu AI",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "Kiểm soát siêu AI như một thuộc tính của mạng lưới",
+      "metaDesc": "Đưa một AI vào mạng có trách nhiệm mật mã và mọi hành động nó thực hiện đều được ký số. Giữ cho nó trung thực không còn là chính sách của phòng lab mà là điều mạng lưới bảo đảm.",
+      "h1": "AI đang vượt khỏi tầm kiểm soát của bất kỳ ai.",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "Chúng ta đang xây dựng những trí tuệ mà chúng ta không thể kiểm tra. Chúng bị chi phối bởi các quy tắc mà một công ty có thể viết lại, trong các hệ thống mà không ai bên ngoài công ty đó có thể thấy. Chúng ta được yêu cầu tin vào phòng lab.",
+        "CIRIS đưa AI vào một mạng nơi mọi hành động nó thực hiện đều là một bản ghi được ký số. Một người, một AI, và một tổ chức đều mang cùng một loại danh tính, và tất cả đều phải chịu trách nhiệm theo cùng một chuẩn.",
+        "Giữ cho AI trung thực không còn là chính sách mà một công ty hy vọng sẽ giữ vững. Nó trở thành điều mà chính mạng lưới bảo đảm. Bạn không tin vào thông cáo báo chí. Bạn đọc các chữ ký.",
+        "Một mạng có thể buộc một AI siêu mạnh phải chịu trách nhiệm, xét về hình dạng của nó, là một internet không có trung tâm. Những bản ghi được ký số đó cho phép bất kỳ ai kiểm tra điều gì là thật, và chúng chạy trên cùng nền tảng riêng tư như AI trên điện thoại của bạn."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Một internet không có Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Một web có bằng chứng",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "Một AI riêng tư bạn sở hữu",
           "href": "/paths/consumer-ai"
         }
       ]
     },
     "misinformation": {
-      "kicker": "Misinformation",
+      "kicker": "Thông Tin Sai Lệch",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "Web có bằng chứng: tự kiểm tra điều gì là thật",
+      "metaDesc": "Trên CIRIS mọi thông tin quan trọng đều được ký số khi truyền đi: ai nói, dựa trên gì, và ai đồng ý, đính chính hay thay thế nó. Bạn không còn phải đoán nên tin ai.",
+      "h1": "Bạn không còn biết điều gì là thật nữa.",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "Bạn thấy một bài đăng, một giá cả, một thông tin. Bạn không thể thấy ai thực sự đứng sau nó, nó dựa trên gì, hay ai đã phản bác. Niềm tin đã trở thành việc tung đồng xu.",
+        "Trên CIRIS mọi thông tin quan trọng đều được ký số khi truyền đi. Không phải dấu kiểm tra mà một nền tảng phát ra, mà là một chuỗi chữ ký bạn có thể tự kiểm tra: ai nói, dựa trên gì, và ai đồng ý, đính chính hay thay thế nó.",
+        "Sự thật không còn là thứ một nền tảng quyết định cho bạn. Nó trở thành thứ bạn, hay AI của bạn, có thể kiểm tra từ các bằng chứng. Bạn không còn chọn phe theo niềm tin mà bắt đầu có thể xác minh.",
+        "Một web nơi mọi thông tin mang theo bằng chứng không có chủ sở hữu duy nhất của sự thật. Những bằng chứng đó cũng chính là thứ giữ cho AI trung thực, và chúng chạy trên cùng nền tảng không cần Big Tech."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Kiểm soát AI mà bạn có thể xem",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Một internet không có Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "Một AI riêng tư bạn sở hữu",
           "href": "/paths/consumer-ai"
         }
       ]
     },
     "big-tech": {
-      "kicker": "Big Tech & Datacenters",
+      "kicker": "Big Tech & Trung Tâm Dữ Liệu",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "Một internet không có trung tâm dữ liệu",
+      "metaDesc": "Chúng tôi đo được rằng internet không cần 10.000 tòa nhà siêu lớn: 5 tỷ người có thể dùng phần cứng máy chủ gia đình thông thường, khoảng một máy chủ cho mỗi mười người. Không DNS, không trung tâm.",
+      "h1": "Năm công ty sở hữu mọi thứ bạn làm.",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "Hầu hết mọi thứ bạn đăng, xem hay gửi đều đi qua khoảng 10.000 tòa nhà khổng lồ. Năm công ty vận hành hầu hết chúng. Họ sở hữu nền tảng mà cuộc sống số của bạn đứng trên, cùng với sự phụ thuộc và nút tắt.",
+        "CIRIS cho thấy những tòa nhà đó là không cần thiết. Chúng tôi đo được: năm tỷ người vừa vặn với phần cứng máy chủ gia đình thông thường, khoảng một máy chủ cho mỗi mười người. Không có DNS để chiếm quyền kiểm soát, không có máy chủ trung tâm. Bạn được tìm thấy bằng khóa của mình, không phải bằng sự cho phép.",
+        "Sự phụ thuộc giảm xuống gần bằng không, vì khóa danh tính của bạn là của bạn để mang theo. Và việc xóa dữ liệu không còn là lời hứa của công ty. Dữ liệu của bạn tồn tại, được phân tán thành từng mảnh trên khắp mạng lưới, trong nhiều thế kỷ trên các máy thông thường.",
+        "Một internet không có trung tâm cũng là nơi duy nhất một AI có thể thực sự bị buộc phải chịu trách nhiệm, nơi duy nhất một thông tin có thể tự mang theo bằng chứng, và nơi duy nhất dữ liệu của bạn thực sự là của bạn."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Kiểm soát AI mà bạn có thể xem",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "Một web có bằng chứng",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "Một AI riêng tư bạn sở hữu",
           "href": "/paths/consumer-ai"
         }
       ]

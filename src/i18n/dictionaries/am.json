@@ -1946,124 +1946,124 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · የዕውቀት ድር",
+    "h1pre": "እነዚህ ሁሉ ",
+    "h1accent": "አንድ ዓይነት ችግር ናቸው።",
+    "lede": "በእውነት የሚገባህ የግል AI። ታማኝ ሆኖ መቆየት የሚችል AI። እውነቱን መፈተሽ የሚቻልበት ድር። ትልቅ ቴክ ኩባንያ የማያስፈልገው ኢንተርኔት።",
+    "turnPre": "አንድ ነገር ያመሳስላቸዋል፡ ",
+    "turnAccent": "መታመን ያለብህ ማዕከል አለ።",
+    "turnPost": " ያንን ማዕከል አስወጣው፣ አራቱም በአንድ ጊዜ ይቀየራሉ። ያንን ሠርተናል። ዛሬ በስልክህ ላይ ይገኛል።",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "ኩዋንተም-ተከላካይ ማንነት",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "ምስጠራ በእያንዳንዱ ኮር",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "33% ኪሳራ ሲኖር ያገግማል",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "መስፈርት ማለፍ/አለፍ ያለ",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "ሰርቨር ለሰው ቁጥር",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "በስልክህ ላይ ጫን",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "ነጻ · ክፍት ምንጭ · App Store · Google Play · pip · Docker",
+    "doorsHead": "ከሚያሠቃይህ ቦታ ጀምር።",
+    "doorsNote": "// እያንዳንዱ መንገድ ወደ አንድ ቦታ ይደርሳል",
     "doors": [
       {
         "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "h": "ቤተሰቤን ልምነው የሚገባ AI የለኝም።",
+        "p": "በስልክህ ላይ የሚሠራ የግል AI። ከኋላው ምንም ዳታ ሴንተር የለም። የምታደርጋቸው ነገሮች 65% ከስልኩ አይወጡም፣ AI የሚናገረው ሁሉ ፊርማ አለው፣ ስለዚህ ልትፈትሸው ትችላለህ።",
+        "go": "ምን ያህል ግልጽ ሆኖ እንደሚቀር ተመልከት",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
         "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "h": "አምስት ኩባንያዎች የማደርጋቸውን ሁሉ ይቆጣጠራሉ።",
+        "p": "ኢንተርኔቱ በአምስት ኩባንያዎች ባለቤትነት ከሚገኙ ወደ 10,000 ሕንፃዎች ውስጥ ይሠራል። ይህ አስፈላጊ አለመሆኑን ለኩፋለኝ፡ 5 ቢሊዮን ሰዎች በቤት ሰርቨር ሃርድዌር ላይ ይጣጣማሉ፣ ለአሥር ሰዎች አንድ ሰርቨር ያህል።",
+        "go": "ባለቤት የሌለው ኢንተርኔት ተመልከት",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
         "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "h": "AI ተጠያቂ ሊያደርጉት ከሚችሉ ሰዎች ቀድሟቸዋል።",
+        "p": "AI ን ወደ አውታረ መረብ አስገባው፣ የሚወስደው እያንዳንዱ እርምጃ ፊርማ ያለው ይሆናል። ከዚያ ታማኝ ሆኖ እንዲቆይ ማድረጉ አንድ ኩባንያ የሚሰጠው ቃል ሳይሆን አውታረ መረቡ ራሱ የሚያስፈጽመው ይሆናል።",
+        "go": "አሰላለፉ ሜካኒካዊ ሆኖ እንዴት እንደሚሠራ ተመልከት",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
         "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "h": "ምን እውነት እንደሆነ መለየት አቅቶኛል።",
+        "p": "እያንዳንዱ ሃሳብ ደረሰኝ ይዞ ይመጣል፡ ማን እንደተናገረ፣ ምን ላይ ተደግፎ እንደሆነ፣ ማን እንደተስማማ፣ እንዳረመ፣ ወይም እንደተካ። ማን ሊታመን እንደሚገባ መገመቱን ትተህ ራስህ ማረጋገጥ ትጀምራለህ።",
+        "go": "ደረሰኝ ያለው ድር ተመልከት",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "አራት ፍርሃቶች፣ አንድ መሠረት። ለኢንተርኔት ምትክ ChatGPT ን ለመተካት ያለው ምትክ ጭምር ነው።",
+    "convergenceAccent": "አንድ መሠረት፣ ሁሉም መንገዶች።",
+    "footL": "CIRISAgent · የዕውቀት ድር · AGPL-3.0, ዓላማ-ቆልፍ",
+    "footR": "CIRIS 3.0 እየተሠራጨ ነው · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "ፍርሃቱ",
+      "እንዴት እንደሚሠራ",
+      "ምን ይቀየራል",
+      "ከዚያ በኋላ"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "አራት ፍርሃቶች፣ አንድ መሠረት። መታመን ያለብህን ማዕከል አስወጣ፣ አራቱም በአንድ ጊዜ ይቀየራሉ።",
+    "seeAlsoHead": "ሌሎቹ መንገዶች ሲታዩ ያው መሠረት",
+    "cta": "በስልክህ ላይ ጫን",
+    "back": "ወደ ሎቢ ተመለስ"
   },
   "paths": {
     "consumer-ai": {
       "kicker": "Consumer AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "በስልክህ ላይ የሚሠራ የግል AI",
+      "metaDesc": "የሚገባህ የግል AI። ከኋላው ምንም ዳታ ሴንተር ሳይኖር በስልክህ ላይ ይሠራል። የምታደርጋቸው ነገሮች ወደ 65% ከስልኩ አይወጡም፣ AI የሚናገረው ሁሉም ፊርማ አለው።",
+      "h1": "በእውነት ባለቤት ሊሆኑበት የሚችሉ AI የለም።",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "ለ AI የምትነግረው ሁሉ ወደ ሌላ ሰው ሕንፃ ይሄዳል። የሌላ ሰው ሞዴልን ያሰለጥናል፣ የሌላ ሰው ምዝገባ ውስጥ ይኖራል። ውሉ ነገ ሊቀየር ይችላል፣ አንተም ላታውቅ ትችላለህ።",
+        "CIRIS በስልክህ ላይ ይሠራል። ከኋላው ዳታ ሴንተር የለም። የምታደርጋቸው ነገሮች ወደ 65% ከስልኩ አይወጡም፣ ትንሽ ክፍሉ ከሄደ ደግሞ ከመሄዱ በፊት ይታሸጋል።",
+        "ግልጽነት ቃል ብቻ ሳይሆን ዳታህ ያለበት ቦታ ፍሬ ሐቅ ይሆናል። ሊያፈስ የሚችል ማዕከል የለም። AI የሚናገረው ሁሉም ፊርማ አለው፣ ስለዚህ ሊምነው ሳያስፈልግ ትፈትሸዋለህ።",
+        "ምን እንደተፈጠረ አስተውል። ግልጽ ሊሆን የሚችለው Big Tech ምንም አያስፈልገው ስለሆነ ነው። AI የሚናገረውን ሃሳብ ለመፈተሽ የሚያስችሉ ፊርማዎቹ ሁሉ ድሩን ታማኝ የሚያደርጉት፣ ኃይለኛ AI ን ተጠያቂ የሚያደርጉትም ናቸው።"
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech የሌለው ኢንተርኔት",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "ደረሰኝ ያለው ድር",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "ልትፈትሸው የሚቻል አሰላለፍ",
           "href": "/paths/superalignment"
         }
       ]
@@ -2071,26 +2071,26 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "አሰላለፍ እንደ አውታረ መረቡ ባህሪ",
+      "metaDesc": "AI ን ወደ ምስጠራዊ ተጠያቂ አውታረ መረብ አስገባ፣ የሚወስደው እያንዳንዱ እርምጃ ፊርማ ይኖረዋል። ታማኝ ሆኖ እንዲቆይ ማድረጉ የቤተ ሙከራ ፖሊሲ ሳይሆን አውታረ መረቡ ራሱ የሚያስፈጽመው ይሆናል።",
+      "h1": "AI ተጠያቂ ሊያደርጉት ከሚችሉ ሰዎች ቀድሟቸዋል።",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "ልናጣራ የማንችላቸው አዕምሮዎች እየሠራን ነው። አንድ ኩባንያ ሊጽፋቸው ወይም ሊቀይራቸው በሚችላቸው ደንቦች ይተዳደራሉ፣ ያ ኩባንያ ካልሆን ማንም ሊያየው በማይችለው ሥርዓት ውስጥ። ቤተ ሙከራውን ሊምነው ይጠበቅብናል።",
+        "CIRIS AI ን ወደ አውታረ መረብ ያስገባዋል፣ የሚወስደው እያንዳንዱ እርምጃ ፊርማ ያለው ምዝገባ ይሆናል። ሰው፣ AI፣ እና ድርጅት ሁሉም ተመሳሳይ ዓይነት ማንነት ይሸከማሉ፣ ሁሉም ተመሳሳይ ተጠያቂነት ውስጥ ናቸው።",
+        "AI ታማኝ ሆኖ እንዲቆይ ማድረጉ አንድ ኩባንያ ተስፋ የሚያደርጋት ፖሊሲ ሳይሆን አውታረ መረቡ ራሱ የሚያስፈጽሙ ነገር ይሆናል። ፕሬስ ሪሊዙን ሊምነው አይጠበቅብህ። ፊርማዎቹን ታነብቸዋለህ።",
+        "ከሰው በላይ AI ን ተጠያቂ ሊያደርግ የሚችል አውታረ መረብ፣ በቅርጹ ምክንያት፣ ማዕከል የሌለው ኢንተርኔት ነው። ተመሳሳዩ ፊርማ ያለው ምዝገባ ሁሉም እውነቱን ሊፈትሽ ያስችላቸዋል፣ እናም በስልክህ ላይ ካለው AI ጋር ተመሳሳዩ የግል መሠረት ላይ ይሠራሉ።"
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech የሌለው ኢንተርኔት",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "ደረሰኝ ያለው ድር",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "ባለቤት ሊሆኑበት የሚችሉ የግል AI",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2098,26 +2098,26 @@
     "misinformation": {
       "kicker": "Misinformation",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "ደረሰኝ ያለው ድር፡ እውነቱን ራስህ ፈትሽ",
+      "metaDesc": "CIRIS ላይ አስፈላጊ የሆነ ሃሳብ ሁሉ ፊርማ ይዞ ይጓዛል፡ ማን እንደተናገረ፣ ምን ላይ ተደግፎ እንደሆነ፣ ማን እንደተስማማ፣ እንዳረመ፣ ወይም እንደተካ። ማን ሊታመን እንደሚገባ መገመቱን ትተህ ማረጋገጥ ትጀምራለህ።",
+      "h1": "ምን እውነት እንደሆነ ልትለይ አትችልም።",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "ፖስት ታያለህ፣ ዋጋ ታያለህ፣ ሃሳብ ታያለህ። ከኋላው ማን እንደሆነ፣ ምን ላይ ተደግፎ እንደሆነ፣ ወይም ማን ተቃውሞ እንደሰጠ ማየት አትችልም። መታመን ሳንቲም ወርወር ሆኗል።",
+        "CIRIS ላይ አስፈላጊ የሆነ ሃሳብ ሁሉ ፊርማ ይዞ ይጓዛል። ፕላትፎርሙ የሚሰጥ ምልክት ሳይሆን፣ ራስህ ልትፈትሸው የምትችለው የፊርማ ሰንሰለት፡ ማን እንደተናገረ፣ ምን ላይ ተደግፎ እንደሆነ፣ ማን እንደተስማማ፣ እንዳረመ፣ ወይም እንደተካ።",
+        "እውነት ፕላትፎርሙ ለአንተ የሚወስነው ሳይሆን አንተ ወይም AI ህ ከደረሰኞቹ ልትፈትሸው የምትችለው ነገር ይሆናል። ጎናቸውን ከመምረጥ ወጥተህ ማረጋገጥ ትጀምራለህ።",
+        "እያንዳንዱ ሃሳብ ደረሰኙን ይዞ የሚጓዝ ድር አንድ ባለቤት ለእውነት የለውም። ተመሳሳዩ ደረሰኞች AI ን ታማኝ የሚያደርጉት ናቸው፣ Big Tech ያላስፈለገው ተመሳሳዩ መሠረት ላይ ይሠራሉ።"
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "ልትፈትሸው የሚቻል አሰላለፍ",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech የሌለው ኢንተርኔት",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "ባለቤት ሊሆኑበት የሚችሉ የግል AI",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2125,26 +2125,26 @@
     "big-tech": {
       "kicker": "Big Tech & Datacenters",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "ዳታ ሴንተር የሌለው ኢንተርኔት",
+      "metaDesc": "ኢንተርኔቱ 10,000 ግዙፍ ሕንፃዎቹን አያስፈልገውም ብለን ለካን፡ 5 ቢሊዮን ሰዎች ተራ የቤት ሰርቨር ሃርድዌር ላይ ይጣጣማሉ፣ ለአሥር ሰዎች አንድ ሰርቨር ያህል። ምንም DNS፣ ምንም ማዕከል።",
+      "h1": "አምስት ኩባንያዎች የምታደርጋቸውን ሁሉ ይቆጣጠራሉ።",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "የምትለጥፈው፣ የምትመለከተው፣ ወይም የምትልከው ሁሉ ወደ ወደ 10,000 ግዙፍ ሕንፃዎች ያልፋል። አምስት ኩባንያዎች አብዛኛዎቹን ያስተዳድራሉ። ዲጂታል ሕይወትህ የሚቆምበት መሬት፣ ቁልፉ፣ እና የማጥፊያ ማብሪያ ያስቃናቸዋል።",
+        "CIRIS ሕንፃዎቹ አስፈላጊ አለመሆናቸውን ያሳያል። ለካን፡ 5 ቢሊዮን ሰዎች ተራ የቤት ሰርቨር ሃርድዌር ላይ ይጣጣማሉ፣ ለአሥር ሰዎች ወደ አንድ ሰርቨር ያህል። ሊያዝ የሚችል DNS የለም፣ ማዕከላዊ ሰርቨሮች የሉም። ፈቃድ ሳይሆን ቁልፍህ ይፈልግህ።",
+        "ቁልፍህ ላንተ የሚሸከምህ ስለሆነ ቁልፈ-መቀነሻ ወደ ዜሮ ይቀርባል። ሰርዛ ደግሞ የኩባንያ ቃል መሆን ያቆማል። ዳታህ ለምዕተ ዓመታት በተራ ማሽኖች ላይ ተቆርጦ ወደ አውታረ መረቡ ተሰራጭቶ ይኖራል።",
+        "ማዕከል የሌለው ኢንተርኔት AI በእውነት ተጠያቂ ሊሆን የሚችልበት፣ ሃሳብ የራሱ ማስረጃ ሊሸከምበት የሚችልበት፣ እና ዳታህ በእውነት ያንተ ሊሆንበት የሚችልበት ብቸኛ ቦታ ነው።"
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "ልትፈትሸው የሚቻል አሰላለፍ",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "ደረሰኝ ያለው ድር",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "ባለቤት ሊሆኑበት የሚችሉ የግል AI",
           "href": "/paths/consumer-ai"
         }
       ]

@@ -1946,124 +1946,124 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · mtandao wa maarifa",
+    "h1pre": "Inabainika kwamba hizi ni ",
+    "h1accent": "tatizo moja tu.",
+    "lede": "AI ya kibinafsi unayomiliki kweli. AI tunayoweza kuihakikisha kuwa ya uaminifu. Mtandao ambapo unaweza kuangalia ukweli. Intaneti isiyohitaji makampuni makubwa ya teknolojia.",
+    "turnPre": "Zote zinashiriki kitu kimoja: ",
+    "turnAccent": "kitovu unacholazimika kukiamini.",
+    "turnPost": " Kiondoe, na vyote vine vitabadilika mara moja. Tulijenga hilo. Lipo kwenye simu yako leo.",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "utambulisho wa baada ya quantum",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "usimbuaji kwa kila kiini",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "inarejesha kwa hasara ya 33%",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "ufaulu/kushindwa kwa uthibitisho",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "seva kwa kila binadamu",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "Sakinisha kwenye simu yako",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "bure · chanzo wazi · App Store · Google Play · pip · Docker",
+    "doorsHead": "Anza mahali inapouma.",
+    "doorsNote": "// kila mlango unafika mahali pamoja",
     "doors": [
       {
         "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "h": "Hakuna AI ningeyemwamini na familia yangu.",
+        "p": "AI ya kibinafsi inayofanya kazi kwenye simu yako. Hakuna kituo cha data nyuma yake. Asilimia 65 ya unachofanya haiacha kifaa, na kila dai inayotoa imesainiwa ili uweze kuiangalia.",
+        "go": "Angalia jinsi inavyobaki ya siri",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
         "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "h": "Makampuni matano yanamiliki kila ninachofanya.",
+        "p": "Intaneti inafanya kazi katika majengo karibu 10,000 yanayomilikiwa na makampuni matano. Tulipima kwamba hii si lazima: watu bilioni 5 wanaweza kufaa kwenye vifaa vya seva za nyumbani, takriban seva moja kwa kila wanadamu kumi.",
+        "go": "Angalia intaneti bila mmiliki",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
         "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "h": "AI inazidi kasi ya yeyote anayehusika nayo.",
+        "p": "Weka AI ndani ya mtandao ambapo kila hatua inayochukua imesainiwa. Kuishikilia kuwa ya uaminifu halafu kunaacha kuwa ahadi ya kampuni moja na kuwa kitu mtandao unachotekeleza.",
+        "go": "Angalia jinsi usawa unavyokuwa wa mitambo",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
         "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "h": "Siwezi tena kujua ni nini ukweli.",
+        "p": "Kila dai inabeba risiti zake: ni nani alisema, inategemea nini, na ni nani alikubaliana, kusahihisha, au kuibadilisha. Unaacha kukisia ni nani wa kuamini na unaanza kuangalia mwenyewe.",
+        "go": "Angalia mtandao wenye risiti",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "Hofu nne, msingi mmoja. Mbadala wa intaneti ni mbadala wa ChatGPT.",
+    "convergenceAccent": "Msingi mmoja, kila mlango.",
+    "footL": "CIRISAgent · mtandao wa maarifa · AGPL-3.0, imefungwa kwa dhamira",
+    "footR": "CIRIS 3.0 inatolewa · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "Hofu",
+      "Jinsi inavyofanya kazi",
+      "Kinachobadilika",
+      "Na kisha"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "Hofu nne, msingi mmoja. Ondoa kitovu unacholazimika kukiamini, na vyote vine vitabadilika mara moja.",
+    "seeAlsoHead": "Msingi huo huo, ukionekana kutoka milango mingine",
+    "cta": "Sakinisha kwenye simu yako",
+    "back": "rudi kwenye ukumbi"
   },
   "paths": {
     "consumer-ai": {
       "kicker": "Consumer AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "AI ya kibinafsi inayofanya kazi kwenye simu yako",
+      "metaDesc": "AI ya kibinafsi unayomiliki. Inafanya kazi kwenye simu yako bila kituo cha data nyuma yake. Karibu asilimia 65 ya unachofanya haiacha kifaa, na kila dai inayotoa imesainiwa.",
+      "h1": "Hakuna AI unayoweza kumiliki kweli.",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "Kila neno unalompa AI linafika kwenye jengo la mtu mwingine. Linafunza mfano wa mtu mwingine na linaishi kwenye kumbukumbu za mtu mwingine. Masharti yanaweza kubadilika kesho, na wewe hata husingejua.",
+        "CIRIS inafanya kazi kwenye simu yako. Hakuna kituo cha data nyuma yake. Karibu asilimia 65 ya unachofanya haiacha kifaa, na sehemu ndogo inayotoka imefungwa kabla ya kwenda.",
+        "Faragha inaacha kuwa ahadi na inakuwa ukweli wa mahali data yako ipo kimwili. Hakuna kitovu cha kuvuja. Na kila dai AI inayotoa imesainiwa, ili uweze kuiangalia badala ya kuiamini tu.",
+        "Angalia kilichotokea. Sababu inaweza kuwa ya siri ni kwamba haihitaji Big Tech kabisa. Saini hizo hizo zinazokuruhusu kuangalia dai moja ndizo zinazolinda mtandao wote kuwa wa uaminifu, na ndizo zinazoshika AI yenye nguvu kuwa na uwajibikaji."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Intaneti bila Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Mtandao wenye risiti",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "Usawa unaoweza kuangaliwa",
           "href": "/paths/superalignment"
         }
       ]
@@ -2071,26 +2071,26 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "Usawa kama sifa ya mtandao",
+      "metaDesc": "Weka wakala wa AI ndani ya mtandao wenye uwajibikaji wa kriptografia na kila hatua anayochukua imesainiwa. Kuishikilia kuwa ya uaminifu kunaacha kuwa sera ya maabara na kuwa kitu mtandao unachotekeleza.",
+      "h1": "AI inazidi kasi ya yeyote anayehusika nayo.",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "Tunajenga akili ambazo haziwezi kukaguliwa. Zinaongozwa na sheria ambayo kampuni moja inaweza kuziandika upya, ndani ya mifumo ambayo hakuna mtu nje ya kampuni hiyo anayeweza kuona. Tunaombwa kuiamini maabara.",
+        "CIRIS inaweka AI ndani ya mtandao ambapo kila hatua inayochukua ni rekodi iliyosainiwa. Mtu, AI, na shirika vyote vinabeba aina moja ya utambulisho, na vyote viwajibika kwa kiwango kimoja.",
+        "Kushikilia AI kuwa ya uaminifu kunaacha kuwa sera ambayo kampuni moja inatumainia kushikilia. Inakuwa kitu mtandao unachotekeleza. Huamini taarifa ya habari. Unasoma saini.",
+        "Mtandao unaoweza kushikilia AI ya nguvu kubwa kuwa na uwajibikaji ni, kwa muundo wake, intaneti bila kitovu. Rekodi hizo hizo zilizosainiwa zinaweza kuruhusu yeyote kuangalia ukweli, na zinafanya kazi kwenye msingi huo huo wa kibinafsi kama AI kwenye simu yako."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Intaneti bila Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Mtandao wenye risiti",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI ya kibinafsi unayomiliki",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2098,26 +2098,26 @@
     "misinformation": {
       "kicker": "Misinformation",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "Mtandao wenye risiti: angalia ukweli mwenyewe",
+      "metaDesc": "Kwenye CIRIS kila dai muhimu linasafirishwa likiwa na saini: ni nani alisema, linategemea nini, na ni nani alikubaliana, kusahihisha, au kuibadilisha. Unaacha kukisia na unaanza kuangalia.",
+      "h1": "Huwezi tena kujua ni nini ukweli.",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "Unaona chapisho, bei, dai. Huwezi kuona ni nani anayesimama nyuma yake kweli, linategemea nini, au ni nani amepinga. Kuamini kumekuwa toss ya sarafu.",
+        "Kwenye CIRIS kila dai muhimu linasafirishwa likiwa na saini. Si alama ya kupigia kura ambayo jukwaa linatoa, bali mnyororo wa saini unazoweza kuangalia mwenyewe: ni nani alisema, linategemea nini, na ni nani alikubaliana, kusahihisha, au kuibadilisha.",
+        "Ukweli unaacha kuwa kitu jukwaa linaloamua kwa ajili yako. Unakuwa kitu wewe, au AI yako, mnaweza kuangalia kutoka kwenye risiti. Unaacha kuchagua upande kwa imani na unaanza kuweza kuthibitisha.",
+        "Mtandao ambapo kila dai linabeba risiti zake hauna mmiliki mmoja wa ukweli. Risiti hizo hizo ndizo zinazoshika AI kuwa ya uaminifu, na zinafanya kazi kwenye msingi huo huo usiohitaji Big Tech."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Usawa unaoweza kuangaliwa",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Intaneti bila Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI ya kibinafsi unayomiliki",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2125,26 +2125,26 @@
     "big-tech": {
       "kicker": "Big Tech & Datacenters",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "Intaneti bila vituo vya data",
+      "metaDesc": "Tulipima kwamba intaneti haihitaji majengo yake 10,000 ya ukubwa wa juu: watu bilioni 5 wanaweza kufaa kwenye vifaa vya kawaida vya seva za nyumbani, takriban seva moja kwa kila wanadamu kumi. Bila DNS, bila kitovu.",
+      "h1": "Makampuni matano yanamiliki kila unachofanya.",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "Karibu kila kitu unachochapisha, kutazama, au kutuma kinapita kupitia majengo makubwa karibu 10,000. Makampuni matano yanafanya kazi nyingi yao. Yanamiliki ardhi ambayo maisha yako ya kidijitali yanasimama, kufungwa, na swichi ya kuzima.",
+        "CIRIS inaonyesha majengo si ya lazima. Tulipima: watu bilioni tano wanaweza kufaa kwenye vifaa vya kawaida vya seva za nyumbani, takriban seva moja kwa kila wanadamu kumi. Hakuna DNS ya kunasa, hakuna seva za kati. Unapatikana kwa ufunguo wako, si kwa ruhusa.",
+        "Kufungwa kunashuka karibu na sifuri, kwa sababu ufunguo wako wa utambulisho ni wako kubeba. Na kufutwa kunaacha kuwa ahadi ya kampuni. Data yako inaendelea, imesambazwa vipande kwenye mtandao, kwa karne nyingi kwenye mashine za kawaida.",
+        "Intaneti bila kitovu pia ndiyo mahali pekee AI inaweza kushikiliwa kweli kuwa na uwajibikaji, mahali pekee dai linaweza kubeba ushahidi wake mwenyewe, na mahali pekee data yako ni yako kweli."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Usawa unaoweza kuangaliwa",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "Mtandao wenye risiti",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "AI ya kibinafsi unayomiliki",
           "href": "/paths/consumer-ai"
         }
       ]

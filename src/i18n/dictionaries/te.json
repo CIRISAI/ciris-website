@@ -1946,124 +1946,124 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · జ్ఞాన జాలం",
+    "h1pre": "ఇవన్నీ ",
+    "h1accent": "ఒకే సమస్య అని తేలింది.",
+    "lede": "మీకు నిజంగా సొంతమైన ప్రైవేట్ AI. నిజాయితీగా ఉంచగలిగే AI. నిజమేమిటో తనిఖీ చేయగల వెబ్. పెద్ద టెక్ సంస్థలు అక్కరలేని ఇంటర్నెట్.",
+    "turnPre": "అన్నింటిలో ఒక్క విషయం ఉంది: ",
+    "turnAccent": "నమ్మక తప్పని ఒక కేంద్రం.",
+    "turnPost": " దాన్ని తీసేస్తే, నాలుగూ ఒకేసారి మారతాయి. మేం దాన్ని నిర్మించాం. ఈరోజే మీ ఫోన్‌లో ఉంది.",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "పోస్ట్-క్వాంటమ్ గుర్తింపు",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "ప్రతి కోర్‌కు క్రిప్టో వేగం",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "33% నష్టంలో కూడా కోలుకుంటుంది",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "అనుగుణత పాస్/ఫెయిల్",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "ప్రతి పది మందికి ఒక సర్వర్",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "మీ ఫోన్‌లో ఇన్‌స్టాల్ చేయండి",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "ఉచితం · ఓపెన్ సోర్స్ · App Store · Google Play · pip · Docker",
+    "doorsHead": "మీకు సమస్యగా అనిపించే చోటి నుండి మొదలుపెట్టండి.",
+    "doorsNote": "// ప్రతి దారీ ఒకే చోటికి చేరుతుంది",
     "doors": [
       {
         "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "h": "నా కుటుంబాన్ని నమ్మగలిగే AI నాకు లేదు.",
+        "p": "మీ ఫోన్‌లో నడిచే ప్రైవేట్ AI. వెనక డేటా సెంటర్ ఏమీ లేదు. మీరు చేసే పనిలో 65% ఎప్పుడూ పరికరం వదలదు. AI చేసే ప్రతి వాదన సంతకం చేయబడి ఉంటుంది, మీరే తనిఖీ చేయవచ్చు.",
+        "go": "ఇది ఎలా ప్రైవేట్‌గా ఉంటుందో చూడండి",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
         "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "h": "ఐదు సంస్థలు నేను చేసే అన్నింటినీ నియంత్రిస్తున్నాయి.",
+        "p": "ఇంటర్నెట్ ఐదు సంస్థలకు చెందిన దాదాపు 10,000 భవనాల్లో నడుస్తుంది. ఇది అవసరం లేదని మేం కొలిచాం. 500 కోట్ల మంది హోమ్-సర్వర్ హార్డ్‌వేర్‌పై సరిపోతారు, దాదాపు పది మందికి ఒక సర్వర్.",
+        "go": "యజమాని లేని ఇంటర్నెట్ చూడండి",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
         "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "h": "AI దాని బాధ్యత వహించే వారి కంటే వేగంగా పరిగెడుతోంది.",
+        "p": "AI తీసుకున్న ప్రతి చర్య సంతకం చేయబడే నెట్‌వర్క్‌లో దాన్ని పెట్టండి. అప్పుడు దాన్ని నిజాయితీగా ఉంచడం ఒక సంస్థ ఇచ్చే వాగ్దానంగా కాకుండా నెట్‌వర్క్ అమలు చేసే విషయంగా మారుతుంది.",
+        "go": "అమరిక ఎలా యాంత్రికమవుతుందో చూడండి",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
         "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "h": "ఇక నాకు ఏది నిజమో తెలియడం లేదు.",
+        "p": "ప్రతి వాదన దాని ఆధారాలు మోస్తుంది. ఎవరు చెప్పారు, దేని మీద ఆధారపడింది, ఎవరు అంగీకరించారు, సరిచేశారు లేదా మార్చారు. ఎవరిని నమ్మాలో అంచనా వేయడం ఆపి, మీరే తనిఖీ చేయడం మొదలుపెడతారు.",
+        "go": "ఆధారాలతో వెబ్ చూడండి",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "నాలుగు భయాలు, ఒకే పునాది. ఇంటర్నెట్‌కు ప్రత్యామ్నాయమే ChatGPT‌కు ప్రత్యామ్నాయం.",
+    "convergenceAccent": "ఒకే పునాది, ప్రతి దారికీ.",
+    "footL": "CIRISAgent · జ్ఞాన జాలం · AGPL-3.0, లక్ష్యబద్ధంగా లాక్ చేయబడింది",
+    "footR": "CIRIS 3.0 విడుదల అవుతోంది · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "భయం",
+      "ఇది ఎలా పని చేస్తుంది",
+      "ఏం మారుతుంది",
+      "తర్వాత ఏమవుతుంది"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "నాలుగు భయాలు, ఒకే పునాది. మీరు నమ్మక తప్పని కేంద్రాన్ని తొలగించండి, నాలుగూ ఒకేసారి మారతాయి.",
+    "seeAlsoHead": "మిగతా దారుల నుండి చూసిన అదే పునాది",
+    "cta": "మీ ఫోన్‌లో ఇన్‌స్టాల్ చేయండి",
+    "back": "లాబీకి తిరిగి వెళ్ళండి"
   },
   "paths": {
     "consumer-ai": {
       "kicker": "Consumer AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "మీ ఫోన్‌లో నడిచే ప్రైవేట్ AI",
+      "metaDesc": "మీకు సొంతమైన ప్రైవేట్ AI. డేటా సెంటర్ లేకుండా మీ ఫోన్‌లో నడుస్తుంది. మీరు చేసే పనిలో దాదాపు 65% పరికరం వదలదు. AI చేసే ప్రతి వాదన సంతకం చేయబడి ఉంటుంది.",
+      "h1": "మీకు నిజంగా సొంతమైన AI ఏదీ లేదు.",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "మీరు AI‌కి చెప్పే ప్రతి మాట ఇంకెవరి బిల్డింగ్‌లో చేరుతుంది. అది వేరే వారి మోడల్‌కు శిక్షణ ఇస్తుంది, వేరే వారి లాగ్‌లలో నిల్వ అవుతుంది. నిబంధనలు రేపు మారవచ్చు, మీకు తెలియదు కూడా.",
+        "CIRIS మీ ఫోన్‌లో నడుస్తుంది. వెనక డేటా సెంటర్ లేదు. మీరు చేసే పనిలో దాదాపు 65% పరికరం వదలదు. వెళ్ళే చిన్న భాగం కూడా ముందే సీల్ చేయబడి వెళ్తుంది.",
+        "ప్రైవసీ ఒక వాగ్దానంగా కాకుండా, మీ డేటా భౌతికంగా ఉన్న స్థలాన్ని బట్టి నిజమవుతుంది. లీక్ అవ్వడానికి కేంద్రమే లేదు. AI చేసే ప్రతి వాదన సంతకం చేయబడి ఉంటుంది, మీరు నమ్మడం కాదు, తనిఖీ చేయవచ్చు.",
+        "ఇప్పుడు జరిగింది గమనించండి. ఇది ప్రైవేట్‌గా ఉండగలిగే కారణం Big Tech అవసరం లేకపోవడమే. ఒక వాదనను తనిఖీ చేయనిచ్చే సంతకాలే మొత్తం వెబ్‌ను నిజాయితీగా ఉంచుతాయి, శక్తిమంతమైన AI‌ని బాధ్యత వహింపజేస్తాయి."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech లేని ఇంటర్నెట్",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "ఆధారాలతో వెబ్",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "తనిఖీ చేయగల అమరిక",
           "href": "/paths/superalignment"
         }
       ]
@@ -2071,26 +2071,26 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "నెట్‌వర్క్ లక్షణంగా సూపర్‌అలైన్‌మెంట్",
+      "metaDesc": "AI ఏజెంట్‌ను క్రిప్టోగ్రాఫిక్ బాధ్యత కలిగిన నెట్‌వర్క్‌లో పెట్టండి. అది తీసుకున్న ప్రతి చర్య సంతకం అవుతుంది. నిజాయితీగా ఉంచడం ల్యాబ్ విధానంగా కాకుండా నెట్‌వర్క్ అమలు చేసే విషయంగా మారుతుంది.",
+      "h1": "AI దాని బాధ్యత వహించే వారి కంటే వేగంగా పరిగెడుతోంది.",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "మేం తనిఖీ చేయలేని మనసులను నిర్మిస్తున్నాం. వాటిని ఒక సంస్థ మళ్ళీ రాయగలిగే నియమాలు నియంత్రిస్తున్నాయి, ఆ సంస్థ వెలుపల ఎవరూ చూడలేని వ్యవస్థల్లో ఉన్నాయి. మనం ల్యాబ్‌ను నమ్మాలని కోరబడుతున్నాం.",
+        "CIRIS AI‌ని ఒక నెట్‌వర్క్‌లో పెడుతుంది, అక్కడ అది తీసుకున్న ప్రతి చర్య సంతకం చేయబడిన రికార్డు. ఒక వ్యక్తి, AI, మరియు సంస్థ అందరూ ఒకే రకమైన గుర్తింపు కలిగి ఉంటారు, అందరూ ఒకే విధంగా జవాబుదారీగా ఉంటారు.",
+        "AI‌ని నిజాయితీగా ఉంచడం ఒక సంస్థ ఆశించే విధానంగా కాకుండా నెట్‌వర్క్ అమలు చేసే విషయంగా మారుతుంది. మీరు ప్రెస్ రిలీజ్ నమ్మరు. సంతకాలు చదువుతారు.",
+        "సూపర్‌హ్యూమన్ AI‌ని బాధ్యత వహింపజేయగల నెట్‌వర్క్, దాని స్వరూపం వల్ల, కేంద్రం లేని ఇంటర్నెట్. అదే సంతకం చేయబడిన రికార్డులు ఎవరికైనా నిజమేమిటో తనిఖీ చేయనిస్తాయి, మీ ఫోన్‌లోని AI‌తో పాటు అదే ప్రైవేట్ పునాదిపై నడుస్తాయి."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech లేని ఇంటర్నెట్",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "ఆధారాలతో వెబ్",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "మీకు సొంతమైన ప్రైవేట్ AI",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2098,26 +2098,26 @@
     "misinformation": {
       "kicker": "Misinformation",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "ఆధారాలతో వెబ్: నిజమేమిటో మీరే తనిఖీ చేయండి",
+      "metaDesc": "CIRIS‌లో ముఖ్యమైన ప్రతి వాదన సంతకంతో ప్రయాణిస్తుంది. ఎవరు చెప్పారు, దేని మీద ఆధారపడింది, ఎవరు అంగీకరించారు, సరిచేశారు లేదా మార్చారు. ఎవరిని నమ్మాలో అంచనా వేయడం ఆపి, తనిఖీ మొదలుపెట్టండి.",
+      "h1": "ఇక మీకు ఏది నిజమో తెలియడం లేదు.",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "మీరు ఒక పోస్ట్, ధర, వాదన చూస్తారు. దీని వెనక నిజంగా ఎవరు నిలబడ్డారు, ఇది దేనిపై ఆధారపడింది, ఎవరు వ్యతిరేకించారు అని మీరు చూడలేరు. నమ్మకం నాణెం తిప్పడంలా మారిపోయింది.",
+        "CIRIS‌లో ముఖ్యమైన ప్రతి వాదన సంతకంతో ప్రయాణిస్తుంది. ఒక వేదిక ఇచ్చే చెక్‌మార్క్ కాదు, మీరే తనిఖీ చేయగల సంతకాల గొలుసు. ఎవరు చెప్పారు, దేనిపై ఆధారపడింది, ఎవరు అంగీకరించారు, సరిచేశారు లేదా మార్చారు.",
+        "నిజమేమిటో ఒక వేదిక మీకు నిర్ణయించడం ఆగుతుంది. మీరు లేదా మీ AI ఆధారాల నుండి తనిఖీ చేయగలిగే విషయంగా మారుతుంది. ఏ వైపు నమ్మాలో ఎంచుకోవడం ఆపి, మీరే నిర్థారించగలుగుతారు.",
+        "ప్రతి వాదన ఆధారాలు మోసే వెబ్‌కు నిజానికి ఒక్క యజమాని లేరు. అదే ఆధారాలు AI‌ని నిజాయితీగా ఉంచుతాయి, Big Tech అవసరం లేని అదే పునాదిపై నడుస్తాయి."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "తనిఖీ చేయగల అమరిక",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Big Tech లేని ఇంటర్నెట్",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "మీకు సొంతమైన ప్రైవేట్ AI",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2125,26 +2125,26 @@
     "big-tech": {
       "kicker": "Big Tech & Datacenters",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "డేటా సెంటర్లు లేని ఇంటర్నెట్",
+      "metaDesc": "ఇంటర్నెట్‌కు దాని 10,000 హైపర్‌స్కేల్ భవనాలు అవసరం లేదని మేం కొలిచాం. 500 కోట్ల మంది సాధారణ హోమ్-సర్వర్ హార్డ్‌వేర్‌పై సరిపోతారు, దాదాపు పది మందికి ఒక సర్వర్. DNS లేదు, కేంద్రం లేదు.",
+      "h1": "ఐదు సంస్థలు మీరు చేసే అన్నింటినీ నియంత్రిస్తున్నాయి.",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "మీరు పోస్ట్ చేసేది, చూసేది, పంపేది దాదాపు అన్నీ సుమారు 10,000 పెద్ద భవనాల గుండా వెళ్తాయి. ఐదు సంస్థలు వాటిలో చాలా వాటిని నడుపుతాయి. మీ డిజిటల్ జీవితం నిలబడే నేలను, లాక్-ఇన్‌ను, ఆఫ్ స్విచ్‌ను వారు నియంత్రిస్తారు.",
+        "CIRIS చూపిస్తుంది, భవనాలు అవసరం లేదు. మేం కొలిచాం: 500 కోట్ల మంది సాధారణ హోమ్-సర్వర్ హార్డ్‌వేర్‌పై సరిపోతారు, దాదాపు పది మందికి ఒక సర్వర్. అనుమతి ఇవ్వడానికి DNS లేదు, కేంద్ర సర్వర్లు లేవు. మీరు మీ కీ ద్వారా కనుగొనబడతారు.",
+        "లాక్-ఇన్ దాదాపు శూన్యానికి దిగుతుంది, ఎందుకంటే మీ గుర్తింపు కీ మీరే మోయవచ్చు. మరియు తొలగింపు సంస్థ వాగ్దానంగా ఉండటం ఆగుతుంది. మీ డేటా నెట్‌వర్క్ అంతటా చిన్న ముక్కలుగా వ్యాపించి, సాధారణ మెషీన్లపై శతాబ్దాలు మనుగడ సాగిస్తుంది.",
+        "కేంద్రం లేని ఇంటర్నెట్ AI‌ని నిజంగా బాధ్యత వహింపజేయగల ఏకైక స్థలం, ఒక వాదన తన స్వంత రుజువు మోయగల ఏకైక స్థలం, మీ డేటా నిజంగా మీదిగా ఉండగల ఏకైక స్థలం."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "తనిఖీ చేయగల అమరిక",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "ఆధారాలతో వెబ్",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "మీకు సొంతమైన ప్రైవేట్ AI",
           "href": "/paths/consumer-ai"
         }
       ]

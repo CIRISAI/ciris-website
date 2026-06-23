@@ -1946,205 +1946,205 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · 认知之网",
+    "h1pre": "原来这些都是 ",
+    "h1accent": "同一个问题。",
+    "lede": "一个真正属于你的私人 AI。我们能让 AI 保持诚实。一个你可以自己核实真相的网络。一个不需要大科技公司的互联网。",
+    "turnPre": "它们有一个共同点：",
+    "turnAccent": "一个你被迫信任的中心。",
+    "turnPost": " 去掉它，四件事同时改变。我们做到了。今天就在你的手机上。",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "后量子身份验证",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "每核加密速度",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "33% 丢包时仍可恢复",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "合规测试通过/失败",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "服务器与人的比例",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "安装到你的手机",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "免费 · 开源 · App Store · Google Play · pip · Docker",
+    "doorsHead": "从最让你担心的地方开始。",
+    "doorsNote": "// 每扇门通向同一个地方",
     "doors": [
       {
-        "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "k": "消费者 AI",
+        "h": "没有哪个 AI 是我愿意让家人使用的。",
+        "p": "一个在手机上运行的私人 AI，背后没有数据中心。你做的事情有 65% 永远不会离开设备，它给出的每一个说法都有签名，你可以自己核实。",
+        "go": "看它如何保护隐私",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
-        "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "k": "大科技公司与数据中心",
+        "h": "我做的所有事都被五家公司掌控。",
+        "p": "互联网运行在约一万栋大楼里，由五家公司拥有。我们测量发现这并非必要：50 亿人可以用家用服务器硬件承载，大约每十个人一台服务器。",
+        "go": "看没有所有者的互联网",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
-        "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "k": "超级对齐",
+        "h": "AI 的发展速度已经超过了任何负责任的人。",
+        "p": "把 AI 放进一个网络，让它的每一个行为都有签名记录。这样，让 AI 保持诚实就不再是某家公司的承诺，而是网络本身来执行的事情。",
+        "go": "看对齐如何变成机械约束",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
-        "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "k": "错误信息",
+        "h": "我再也分不清什么是真的了。",
+        "p": "每一个说法都带着凭证：谁说的、依据是什么、谁同意、谁纠正或谁替换了它。你不用再猜该信任谁，可以自己去查。",
+        "go": "看带有凭证的网络",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "四种担忧，同一个基础。互联网的替代品，就是 ChatGPT 的替代品。",
+    "convergenceAccent": "同一个底层，每扇门都通向它。",
+    "footL": "CIRISAgent · 认知之网 · AGPL-3.0，使命锁定",
+    "footR": "CIRIS 3.0 正在推出 · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "担忧是什么",
+      "它怎么运作",
+      "什么会改变",
+      "然后呢"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "四种担忧，同一个基础。去掉那个你被迫信任的中心，四件事同时改变。",
+    "seeAlsoHead": "同一个基础，从其他门看过去",
+    "cta": "安装到你的手机",
+    "back": "返回首页"
   },
   "paths": {
     "consumer-ai": {
-      "kicker": "Consumer AI",
+      "kicker": "消费者 AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "在你手机上运行的私人 AI",
+      "metaDesc": "一个属于你的私人 AI。它在你手机上运行，背后没有数据中心。你做的约 65% 的事情永远不会离开设备，它给出的每个说法都有签名。",
+      "h1": "没有哪个 AI 是你真正拥有的。",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "你对 AI 说的每一句话都落在别人的楼里。它训练别人的模型，存在别人的日志里。使用条款明天可以改变，而你甚至不会知道。",
+        "CIRIS 在你的手机上运行。背后没有数据中心。你做的事情约有 65% 永远不会离开设备，那一小部分离开的内容在发出去之前也已加密保护。",
+        "隐私不再是一个承诺，而是你数据实际存放位置决定的事实。没有中心可以泄露。AI 给出的每个说法都有签名，你可以自己核实，而不是盲目信任。",
+        "注意刚刚发生了什么。它能做到私密，是因为它根本不需要大科技公司。让你能核实一个说法的签名，正是让整个网络保持诚实的东西，也是让强大 AI 负起责任的东西。"
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "没有大科技公司的互联网",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "带有凭证的网络",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "可以核实的对齐",
           "href": "/paths/superalignment"
         }
       ]
     },
     "superalignment": {
-      "kicker": "Superalignment",
+      "kicker": "超级对齐",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "作为网络属性的超级对齐",
+      "metaDesc": "把 AI 放进一个可用密码学核查的网络，它的每个行为都有签名记录。让 AI 保持诚实不再是实验室的规定，而是网络本身来执行的事情。",
+      "h1": "AI 的发展速度已经超过了任何负责任的人。",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "我们正在构建无法审计的智能体。它们受一家公司可以随时改写的规则约束，运行在外人看不见的系统里。我们被要求信任这个实验室。",
+        "CIRIS 把 AI 放进一个网络，让它的每个行为都成为有签名的记录。一个人、一个 AI、一个组织都使用同一种身份，接受同样的约束。",
+        "让 AI 保持诚实，不再是某家公司希望能维持的一项政策，而是网络本身来执行的事情。你不用信任新闻稿，你可以读签名。",
+        "一个能让超级 AI 负责的网络，从其结构来说，就是一个没有中心的互联网。同样的签名记录让任何人都能核实真相，它们运行在和你手机上那个私人 AI 相同的底层上。"
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "没有大科技公司的互联网",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "带有凭证的网络",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "属于你的私人 AI",
           "href": "/paths/consumer-ai"
         }
       ]
     },
     "misinformation": {
-      "kicker": "Misinformation",
+      "kicker": "错误信息",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "带有凭证的网络：自己核实什么是真的",
+      "metaDesc": "在 CIRIS 上，每一个重要的说法都带着签名传递：谁说的、依据是什么、谁同意、谁纠正或谁替换了它。你不用再猜该信任谁，可以自己去查。",
+      "h1": "你再也分不清什么是真的了。",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "你看到一篇帖子、一个价格、一个说法。你看不到背后真正是谁，它的依据是什么，有没有人提出质疑。信任变成了一次猜硬币。",
+        "在 CIRIS 上，每一个重要的说法都带着签名传递。不是平台颁发的认证标志，而是一条你自己可以核查的签名链：谁说的、依据是什么、谁同意、谁纠正或谁替换了它。",
+        "真相不再是平台替你决定的东西，而是你或你的 AI 可以从凭证中核实的东西。你不用再选边站，而是可以自己去验证。",
+        "一个每个说法都带着凭证的网络，没有哪个人独占真相。这些凭证也正是让 AI 保持诚实的东西，它们运行在同一个不需要大科技公司的底层上。"
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "可以核实的对齐",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "没有大科技公司的互联网",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "属于你的私人 AI",
           "href": "/paths/consumer-ai"
         }
       ]
     },
     "big-tech": {
-      "kicker": "Big Tech & Datacenters",
+      "kicker": "大科技公司与数据中心",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "没有数据中心的互联网",
+      "metaDesc": "我们测量发现互联网不需要那一万栋超大规模建筑：50 亿人可以用普通家用服务器硬件承载，大约每十个人一台服务器。没有 DNS，没有中心。",
+      "h1": "五家公司掌控着你做的所有事。",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "你发布、观看或发送的几乎所有内容，都要经过约一万栋巨型建筑。五家公司运营着其中大部分。他们拥有你数字生活所站立的地基，以及锁定你的权力和关闭的开关。",
+        "CIRIS 证明这些建筑并非必要。我们测量过：50 亿人可以用普通家用服务器硬件承载，大约每十个人一台服务器。没有 DNS 可以被控制，没有中央服务器。你通过你的密钥被找到，而不是通过谁的许可。",
+        "锁定降到接近零，因为你的身份密钥是你自己可以带走的。删除也不再是某家公司的承诺。你的数据会以碎片形式分布在网络中存活，在普通硬件上保存数百年。",
+        "一个没有中心的互联网，也是唯一一个 AI 能真正被追责的地方，唯一一个说法能携带自己的证明的地方，也是唯一一个你的数据真正属于你的地方。"
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "可以核实的对齐",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "带有凭证的网络",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "属于你的私人 AI",
           "href": "/paths/consumer-ai"
         }
       ]

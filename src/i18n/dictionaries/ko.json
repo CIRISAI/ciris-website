@@ -1946,205 +1946,205 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · 지식의 웹",
+    "h1pre": "알고 보면 이것들은 ",
+    "h1accent": "모두 같은 문제입니다.",
+    "lede": "진짜 내 것인 개인 AI. 정직하게 유지할 수 있는 AI. 무엇이 사실인지 확인할 수 있는 웹. 빅테크가 필요 없는 인터넷.",
+    "turnPre": "이 모두가 공통으로 가진 것이 있습니다. ",
+    "turnAccent": "어쩔 수 없이 믿어야 하는 중심.",
+    "turnPost": " 그것을 없애면 네 가지가 한꺼번에 바뀝니다. 우리는 그것을 만들었습니다. 지금 바로 당신의 폰에 올릴 수 있습니다.",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "포스트 양자 신원 확인",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "코어당 암호화 속도",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "33% 손실에서도 복구",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "적합성 통과/실패",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "사람 10명당 서버 1대",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "폰에 설치하기",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "무료 · 오픈 소스 · App Store · Google Play · pip · Docker",
+    "doorsHead": "가장 불편한 곳에서 시작하세요.",
+    "doorsNote": "// 어느 문으로 들어와도 같은 곳에 닿습니다",
     "doors": [
       {
-        "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "k": "일반 소비자 AI",
+        "h": "가족에게 맡길 수 있는 AI가 없습니다.",
+        "p": "폰에서 실행되는 개인 AI입니다. 뒤에 데이터 센터가 없습니다. 내가 하는 것의 65%는 기기 밖으로 나가지 않고, AI가 하는 모든 주장은 서명이 되어 있어 직접 확인할 수 있습니다.",
+        "go": "어떻게 개인 정보를 지키는지 보기",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
-        "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "k": "빅테크와 데이터 센터",
+        "h": "내가 하는 모든 것을 다섯 회사가 소유하고 있습니다.",
+        "p": "인터넷은 다섯 회사가 소유한 약 10,000개의 건물에서 돌아갑니다. 우리는 그럴 필요가 없다는 것을 측정했습니다. 50억 명이 가정용 서버 하드웨어에 들어갑니다. 사람 열 명당 서버 하나 정도입니다.",
+        "go": "주인 없는 인터넷 보기",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
-        "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "k": "초정렬",
+        "h": "AI가 책임질 수 있는 속도보다 빠르게 달리고 있습니다.",
+        "p": "AI를 모든 행동이 서명되는 네트워크 안에 둡니다. 그러면 AI를 정직하게 유지하는 것이 한 회사의 약속이 아니라 네트워크가 강제하는 것이 됩니다.",
+        "go": "정렬이 어떻게 기계적으로 작동하는지 보기",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
-        "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "k": "잘못된 정보",
+        "h": "무엇이 사실인지 더 이상 모르겠습니다.",
+        "p": "모든 주장에는 영수증이 붙어 있습니다. 누가 말했는지, 무엇을 근거로 했는지, 누가 동의하거나 수정하거나 대체했는지. 누구를 믿어야 할지 추측하는 대신 직접 확인할 수 있습니다.",
+        "go": "영수증이 있는 웹 보기",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "네 가지 두려움, 하나의 바닥. 인터넷의 대안은 ChatGPT의 대안이기도 합니다.",
+    "convergenceAccent": "같은 기반, 모든 문.",
+    "footL": "CIRISAgent · 지식의 웹 · AGPL-3.0, 미션 고정",
+    "footR": "CIRIS 3.0 출시 중 · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "두려움",
+      "작동 방식",
+      "무엇이 바뀌는가",
+      "그 다음은"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "네 가지 두려움, 하나의 바닥. 어쩔 수 없이 믿어야 했던 중심을 없애면 네 가지가 한꺼번에 바뀝니다.",
+    "seeAlsoHead": "다른 문에서 본 같은 바닥",
+    "cta": "폰에 설치하기",
+    "back": "로비로 돌아가기"
   },
   "paths": {
     "consumer-ai": {
-      "kicker": "Consumer AI",
+      "kicker": "일반 소비자 AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "폰에서 실행되는 개인 AI",
+      "metaDesc": "내 것인 개인 AI. 데이터 센터 없이 폰에서 실행됩니다. 내가 하는 것의 약 65%는 기기 밖으로 나가지 않고, AI가 하는 모든 주장은 서명되어 있습니다.",
+      "h1": "진짜 내 것이라고 할 수 있는 AI가 없습니다.",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "AI에게 하는 모든 말은 남의 건물에 쌓입니다. 남의 모델을 학습시키고 남의 로그에 남습니다. 약관은 내일 바뀔 수 있고, 나는 그것도 모릅니다.",
+        "CIRIS는 내 폰에서 실행됩니다. 뒤에 데이터 센터가 없습니다. 내가 하는 것의 약 65%는 기기를 벗어나지 않고, 나가는 작은 부분도 나가기 전에 봉인됩니다.",
+        "개인 정보 보호가 약속이 아니라 데이터가 물리적으로 어디에 있느냐의 문제가 됩니다. 유출될 중심이 없습니다. AI가 하는 모든 주장은 서명되어 있어 믿는 대신 직접 확인할 수 있습니다.",
+        "방금 무슨 일이 일어났는지 보세요. 개인적일 수 있는 이유는 빅테크가 전혀 필요하지 않기 때문입니다. 하나의 주장을 확인하게 해주는 서명이 웹 전체를 정직하게 유지하고, 강력한 AI에게 책임을 묻습니다."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "빅테크 없는 인터넷",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "영수증이 있는 웹",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "확인할 수 있는 정렬",
           "href": "/paths/superalignment"
         }
       ]
     },
     "superalignment": {
-      "kicker": "Superalignment",
+      "kicker": "초정렬",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "네트워크의 속성으로서의 초정렬",
+      "metaDesc": "AI 에이전트를 암호화 방식으로 책임을 묻는 네트워크 안에 두면 모든 행동이 서명됩니다. AI를 정직하게 유지하는 것이 연구소 정책이 아니라 네트워크가 강제하는 것이 됩니다.",
+      "h1": "AI가 책임질 수 있는 사람보다 빠르게 달리고 있습니다.",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "우리는 감사할 수 없는 마음을 만들고 있습니다. 한 회사가 다시 쓸 수 있는 규칙으로 운영되고, 그 회사 외부에서는 아무도 볼 수 없는 시스템 안에 있습니다. 우리는 연구소를 믿으라는 말을 듣습니다.",
+        "CIRIS는 AI를 모든 행동이 서명된 기록이 되는 네트워크 안에 둡니다. 사람, AI, 조직 모두 같은 종류의 신원을 가지고 같은 방식으로 책임을 집니다.",
+        "AI를 정직하게 유지하는 것이 한 회사가 지키길 바라는 정책이 아니라 네트워크가 강제하는 것이 됩니다. 보도 자료를 믿는 것이 아니라 서명을 읽습니다.",
+        "초인간적인 AI에게 책임을 물을 수 있는 네트워크는 그 구조상 중심이 없는 인터넷입니다. 같은 서명된 기록이 누구든 사실을 확인하게 해주고, 폰의 AI와 같은 개인 기반 위에서 실행됩니다."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "빅테크 없는 인터넷",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "영수증이 있는 웹",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "내 것인 개인 AI",
           "href": "/paths/consumer-ai"
         }
       ]
     },
     "misinformation": {
-      "kicker": "Misinformation",
+      "kicker": "잘못된 정보",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "영수증이 있는 웹: 무엇이 사실인지 직접 확인하세요",
+      "metaDesc": "CIRIS에서는 중요한 모든 주장이 서명되어 전달됩니다. 누가 말했는지, 무엇을 근거로 했는지, 누가 동의하거나 수정하거나 대체했는지. 누구를 믿어야 할지 추측하는 것을 멈추고 직접 확인할 수 있습니다.",
+      "h1": "무엇이 사실인지 더 이상 알 수 없습니다.",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "게시물, 가격, 주장을 봅니다. 그 뒤에 실제로 누가 있는지, 무엇을 근거로 하는지, 누가 반박했는지 알 수 없습니다. 신뢰가 동전 던지기가 되었습니다.",
+        "CIRIS에서는 중요한 모든 주장이 서명되어 전달됩니다. 플랫폼이 주는 체크 표시가 아니라 직접 확인할 수 있는 서명 체인입니다. 누가 말했는지, 무엇을 근거로 했는지, 누가 동의하거나 수정하거나 대체했는지.",
+        "진실이 플랫폼이 결정하는 것이 아니라 나 또는 내 AI가 영수증을 보고 확인할 수 있는 것이 됩니다. 신뢰로 편을 고르는 것을 멈추고 직접 검증할 수 있게 됩니다.",
+        "모든 주장이 영수증을 가진 웹에는 단일한 진실의 소유자가 없습니다. 같은 영수증이 AI를 정직하게 유지하고, 빅테크가 필요 없는 같은 기반 위에서 실행됩니다."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "확인할 수 있는 정렬",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "빅테크 없는 인터넷",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "내 것인 개인 AI",
           "href": "/paths/consumer-ai"
         }
       ]
     },
     "big-tech": {
-      "kicker": "Big Tech & Datacenters",
+      "kicker": "빅테크와 데이터 센터",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "데이터 센터 없는 인터넷",
+      "metaDesc": "인터넷이 10,000개의 초대형 건물이 필요하지 않다는 것을 측정했습니다. 50억 명이 일반 가정용 서버 하드웨어에 들어갑니다. 사람 열 명당 서버 하나 정도입니다. DNS도 없고, 중심도 없습니다.",
+      "h1": "다섯 회사가 내가 하는 모든 것을 소유하고 있습니다.",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "내가 올리고, 보고, 보내는 거의 모든 것이 약 10,000개의 거대한 건물을 통과합니다. 다섯 회사가 대부분을 운영합니다. 그들은 내 디지털 생활이 서 있는 땅, 잠금장치, 그리고 전원 스위치를 소유하고 있습니다.",
+        "CIRIS는 그 건물들이 필요하지 않다는 것을 보여줍니다. 우리가 측정했습니다. 50억 명이 일반 가정용 서버 하드웨어에 들어갑니다. 사람 열 명당 서버 하나 정도입니다. 장악할 DNS도 없고, 중앙 서버도 없습니다. 나의 키로 찾을 수 있고, 허락이 필요 없습니다.",
+        "신원 키가 내 것이어서 잠금이 거의 사라집니다. 그리고 삭제가 회사의 약속이 아니게 됩니다. 내 데이터는 네트워크 전체에 조각으로 나뉘어 수백 년 동안 일반 기기에서 살아남습니다.",
+        "중심이 없는 인터넷은 AI가 진정으로 책임을 질 수 있는 유일한 곳이기도 합니다. 주장이 자체 증거를 가질 수 있는 유일한 곳, 내 데이터가 진짜 내 것인 유일한 곳입니다."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "확인할 수 있는 정렬",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "영수증이 있는 웹",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "내 것인 개인 AI",
           "href": "/paths/consumer-ai"
         }
       ]

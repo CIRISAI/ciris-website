@@ -1946,124 +1946,124 @@
     }
   },
   "lobby": {
-    "eyebrow": "CIRIS · the epistemic web",
-    "h1pre": "It turns out these are ",
-    "h1accent": "all the same problem.",
-    "lede": "A private AI you actually own. AI we can keep honest. A web where you can check what is true. An internet that needs no Big Tech.",
-    "turnPre": "They share one thing: ",
-    "turnAccent": "a center you are forced to trust.",
-    "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
+    "eyebrow": "CIRIS · il web epistemico",
+    "h1pre": "Si scopre che questi sono ",
+    "h1accent": "tutti lo stesso problema.",
+    "lede": "Un'IA privata che possiedi davvero. Un'IA che possiamo tenere onesta. Un web dove puoi verificare cosa è vero. Un internet che non ha bisogno delle grandi aziende tech.",
+    "turnPre": "Hanno una cosa in comune: ",
+    "turnAccent": "un centro di cui sei costretto a fidarti.",
+    "turnPost": " Toglilo, e tutti e quattro cambiano insieme. Noi lo abbiamo costruito. Oggi è sul tuo telefono.",
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "identità post-quantistica",
         "tag": "measured"
       },
       {
         "v": "2.24 GiB/s",
-        "l": "crypto per core",
+        "l": "crittografia per core",
         "tag": "measured"
       },
       {
         "v": "99.6%",
-        "l": "recovers at 33% loss",
+        "l": "si recupera con il 33% di perdita",
         "tag": "measured"
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "conformità passato/fallito",
         "tag": "measured"
       },
       {
         "v": "1 : 10",
-        "l": "servers per humans",
+        "l": "server per persone",
         "tag": "model"
       }
     ],
-    "ctaInstall": "Install on your phone",
+    "ctaInstall": "Installalo sul tuo telefono",
     "ctaPip": "pip install ciris-agent",
-    "ctaHint": "free · open source · App Store · Google Play · pip · Docker",
-    "doorsHead": "Start where it hurts.",
-    "doorsNote": "// every door arrives at the same place",
+    "ctaHint": "gratuito · open source · App Store · Google Play · pip · Docker",
+    "doorsHead": "Parti dal problema che senti di più.",
+    "doorsNote": "// ogni porta arriva nello stesso posto",
     "doors": [
       {
         "k": "Consumer AI",
-        "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
-        "go": "See how it stays private",
+        "h": "Non c'è nessuna IA di cui mi fiderei con la mia famiglia.",
+        "p": "Un'IA privata che funziona sul tuo telefono. Nessun centro dati dietro. Il 65% di quello che fai non lascia mai il dispositivo, e ogni affermazione che fa è firmata così puoi verificarla.",
+        "go": "Scopri come rimane privata",
         "accent": "cyan",
         "heavy": true,
         "href": "/paths/consumer-ai"
       },
       {
         "k": "Big Tech & Datacenters",
-        "h": "Five companies own everything I do.",
-        "p": "The internet runs in about 10,000 buildings owned by five firms. We measured that it does not have to: 5 billion people fit on home-server hardware, about one server per ten humans.",
-        "go": "See the internet with no owner",
+        "h": "Cinque aziende possiedono tutto quello che faccio.",
+        "p": "Internet gira in circa 10.000 edifici di proprietà di cinque aziende. Abbiamo misurato che non deve essere così: 5 miliardi di persone stanno su hardware da server casalingo, circa un server ogni dieci persone.",
+        "go": "Scopri un internet senza proprietari",
         "accent": "teal",
         "heavy": true,
         "href": "/paths/big-tech"
       },
       {
         "k": "Superalignment",
-        "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "h": "L'IA sta superando chiunque ne sia responsabile.",
+        "p": "Metti l'IA dentro una rete dove ogni azione che compie è firmata. Così tenerla onesta non è più una promessa di un'azienda, ma qualcosa che la rete stessa fa rispettare.",
+        "go": "Scopri come l'allineamento diventa meccanico",
         "accent": "violet",
         "heavy": false,
         "href": "/paths/superalignment"
       },
       {
         "k": "Misinformation",
-        "h": "I cannot tell what is true anymore.",
-        "p": "Every claim carries its receipts: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking for yourself.",
-        "go": "See the web with receipts",
+        "h": "Non riesco più a capire cosa è vero.",
+        "p": "Ogni affermazione porta le sue prove: chi l'ha fatta, su cosa si basa, e chi ha concordato, corretto o sostituito. Smetti di indovinare di chi fidarti e inizi a verificare tu stesso.",
+        "go": "Scopri il web con le prove",
         "accent": "rose",
         "heavy": false,
         "href": "/paths/misinformation"
       }
     ],
-    "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
-    "convergenceAccent": "Same substrate, every door.",
-    "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 0.4"
+    "convergence": "Quattro paure, un unico fondamento. Il sostituto di internet è il sostituto di ChatGPT.",
+    "convergenceAccent": "Stesso substrato, ogni porta.",
+    "footL": "CIRISAgent · il web epistemico · AGPL-3.0, mission-locked",
+    "footR": "CIRIS 3.0 in distribuzione · Constitution 0.4"
   },
   "pathsCommon": {
     "stepLabels": [
-      "The fear",
-      "How it works",
-      "What changes",
-      "And then"
+      "La paura",
+      "Come funziona",
+      "Cosa cambia",
+      "E poi"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
-    "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "summit": "Quattro paure, un unico fondamento. Togli il centro di cui sei costretto a fidarti, e tutti e quattro cambiano insieme.",
+    "seeAlsoHead": "Lo stesso fondamento, visto dalle altre porte",
+    "cta": "Installalo sul tuo telefono",
+    "back": "torna alla lobby"
   },
   "paths": {
     "consumer-ai": {
       "kicker": "Consumer AI",
       "accent": "cyan",
-      "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "metaTitle": "Un'IA privata che funziona sul tuo telefono",
+      "metaDesc": "Un'IA privata che possiedi tu. Funziona sul tuo telefono senza nessun centro dati dietro. Circa il 65% di quello che fai non lascia mai il dispositivo, e ogni affermazione che fa è firmata.",
+      "h1": "Non esiste nessuna IA che puoi davvero possedere.",
       "steps": [
-        "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
-        "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
-        "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
+        "Ogni parola che dai a un'IA finisce nell'edificio di qualcun altro. Addestra il modello di qualcun altro e vive nei log di qualcun altro. I termini possono cambiare domani, e tu non lo sapresti nemmeno.",
+        "CIRIS funziona sul tuo telefono. Non c'è nessun centro dati dietro. Circa il 65% di quello che fai non lascia mai il dispositivo, e la piccola parte che esce viene sigillata prima di andarsene.",
+        "La privacy smette di essere una promessa e diventa un fatto su dove si trovano fisicamente i tuoi dati. Non c'è nessun centro da cui perdere dati. E ogni affermazione che fa l'IA è firmata, così puoi verificarla invece di fidarti ciecamente.",
+        "Nota cosa è appena successo. Il motivo per cui può essere privata è che non ha bisogno delle grandi aziende tech. Le stesse firme che ti permettono di verificare una singola affermazione sono quelle che tengono onesto l'intero web, e quelle che rendono responsabile un'IA potente."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Un internet senza Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Un web con le prove",
           "href": "/paths/misinformation"
         },
         {
-          "label": "Alignment you can check",
+          "label": "Allineamento che puoi verificare",
           "href": "/paths/superalignment"
         }
       ]
@@ -2071,26 +2071,26 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
-      "h1": "AI is outrunning anyone accountable for it.",
+      "metaTitle": "Il superallineamento come proprietà della rete",
+      "metaDesc": "Metti un agente IA dentro una rete crittograficamente responsabile e ogni azione che compie è firmata. Tenerlo onesto smette di essere una politica di laboratorio e diventa qualcosa che la rete fa rispettare.",
+      "h1": "L'IA sta superando chiunque ne sia responsabile.",
       "steps": [
-        "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
-        "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "Stiamo costruendo menti che non possiamo controllare. Sono governate da regole che un'azienda può riscrivere, dentro sistemi che nessuno fuori da quell'azienda può vedere. Ci viene chiesto di fidarci del laboratorio.",
+        "CIRIS mette l'IA dentro una rete dove ogni azione che compie è un registro firmato. Una persona, un'IA e un'organizzazione hanno tutti lo stesso tipo di identità, e tutti rispondono allo stesso modo.",
+        "Tenere l'IA onesta smette di essere una politica che un'azienda spera di rispettare. Diventa qualcosa che la rete fa rispettare. Non ti fidi del comunicato stampa. Leggi le firme.",
+        "Una rete che può rendere responsabile un'IA sovrumana è, per la sua forma, un internet senza centro. Gli stessi registri firmati permettono a chiunque di verificare cosa è vero, e girano sullo stesso substrato privato dell'IA sul tuo telefono."
       ],
       "seeAlso": [
         {
-          "label": "An internet with no Big Tech",
+          "label": "Un internet senza Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A web with receipts",
+          "label": "Un web con le prove",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "Un'IA privata che possiedi tu",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2098,26 +2098,26 @@
     "misinformation": {
       "kicker": "Misinformation",
       "accent": "rose",
-      "metaTitle": "The web with receipts: check what is true yourself",
-      "metaDesc": "On CIRIS every claim that matters travels signed: who said it, what it rests on, and who agreed, corrected, or replaced it. You stop guessing who to trust and start checking.",
-      "h1": "You cannot tell what is true anymore.",
+      "metaTitle": "Il web con le prove: verifica tu stesso cosa è vero",
+      "metaDesc": "Su CIRIS ogni affermazione importante viaggia firmata: chi l'ha fatta, su cosa si basa, e chi ha concordato, corretto o sostituito. Smetti di indovinare di chi fidarti e inizi a verificare.",
+      "h1": "Non riesci più a capire cosa è vero.",
       "steps": [
-        "You see a post, a price, a claim. You cannot see who really stands behind it, what it is based on, or who has pushed back. Trust has become a coin flip.",
-        "On CIRIS every claim that matters travels signed. Not a checkmark a platform hands out, but a chain of signatures you can check yourself: who said it, what it rests on, and who agreed, corrected, or replaced it.",
-        "Truth stops being something a platform decides for you. It becomes something you, or your AI, can check from the receipts. You stop picking a side on trust and start being able to verify.",
-        "A web where every claim carries its receipts has no single owner of the truth. Those same receipts are what keep an AI honest, and they ride on the same substrate that needs no Big Tech."
+        "Vedi un post, un prezzo, un'affermazione. Non puoi vedere chi c'è davvero dietro, su cosa si basa, o chi ha contestato. La fiducia è diventata un lancio di moneta.",
+        "Su CIRIS ogni affermazione importante viaggia firmata. Non un segno di spunta che una piattaforma assegna, ma una catena di firme che puoi verificare tu stesso: chi l'ha fatta, su cosa si basa, e chi ha concordato, corretto o sostituito.",
+        "La verità smette di essere qualcosa che una piattaforma decide per te. Diventa qualcosa che tu, o la tua IA, puoi verificare dalle prove. Smetti di scegliere da che parte stare per fiducia e inizi a poter verificare.",
+        "Un web dove ogni affermazione porta le sue prove non ha un unico proprietario della verità. Quelle stesse prove tengono onesta un'IA, e girano sullo stesso substrato che non ha bisogno delle grandi aziende tech."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Allineamento che puoi verificare",
           "href": "/paths/superalignment"
         },
         {
-          "label": "An internet with no Big Tech",
+          "label": "Un internet senza Big Tech",
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "Un'IA privata che possiedi tu",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2125,26 +2125,26 @@
     "big-tech": {
       "kicker": "Big Tech & Datacenters",
       "accent": "teal",
-      "metaTitle": "An internet with no datacenters",
-      "metaDesc": "We measured that the internet does not need its 10,000 hyperscale buildings: 5 billion people fit on ordinary home-server hardware, about one server per ten humans. No DNS, no center.",
-      "h1": "Five companies own everything you do.",
+      "metaTitle": "Un internet senza centri dati",
+      "metaDesc": "Abbiamo misurato che internet non ha bisogno dei suoi 10.000 edifici giganti: 5 miliardi di persone stanno su hardware da server casalingo, circa un server ogni dieci persone. Niente DNS, nessun centro.",
+      "h1": "Cinque aziende possiedono tutto quello che fai.",
       "steps": [
-        "Almost everything you post, watch, or send passes through about 10,000 giant buildings. Five companies run most of them. They own the ground your digital life stands on, the lock-in, and the off switch.",
-        "CIRIS shows the buildings are not necessary. We measured it: five billion people fit on ordinary home-server hardware, about one server for every ten humans. No DNS to capture, no central servers. You are found by your key, not by permission.",
-        "Lock-in drops to near zero, because your identity key is yours to carry. And deletion stops being a company's promise. Your data survives, spread in pieces across the network, for centuries on commodity machines.",
-        "An internet with no center is also the only place an AI can truly be held accountable, the only place a claim can carry its own proof, and the only place your data is actually yours."
+        "Quasi tutto quello che pubblichi, guardi o invii passa attraverso circa 10.000 edifici enormi. Cinque aziende ne gestiscono la maggior parte. Possiedono il terreno su cui si regge la tua vita digitale, il blocco e l'interruttore.",
+        "CIRIS dimostra che quegli edifici non sono necessari. Lo abbiamo misurato: cinque miliardi di persone stanno su hardware da server casalingo, circa un server ogni dieci persone. Nessun DNS da controllare, nessun server centrale. Sei trovato dalla tua chiave, non da un permesso.",
+        "Il blocco scende quasi a zero, perché la tua chiave di identità è tua da portare. E la cancellazione smette di essere una promessa di un'azienda. I tuoi dati sopravvivono, distribuiti in pezzi attraverso la rete, per secoli su macchine comuni.",
+        "Un internet senza centro è anche l'unico posto dove un'IA può essere davvero ritenuta responsabile, l'unico posto dove un'affermazione può portare la sua prova, e l'unico posto dove i tuoi dati sono davvero tuoi."
       ],
       "seeAlso": [
         {
-          "label": "Alignment you can check",
+          "label": "Allineamento che puoi verificare",
           "href": "/paths/superalignment"
         },
         {
-          "label": "A web with receipts",
+          "label": "Un web con le prove",
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "Un'IA privata che possiedi tu",
           "href": "/paths/consumer-ai"
         }
       ]
