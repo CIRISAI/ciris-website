@@ -8,7 +8,9 @@
     "indexnow": "INDEXNOW_SUBMIT=1 node scripts/indexnow.mjs",
     "dev": "next dev --turbo",
     "start": "next start",
-    "postinstall": "fumadocs-mdx"
+    "postinstall": "fumadocs-mdx",
+    "build:safe": "node scripts/safe-build.mjs",
+    "build:diag": "(dmesg 2>/dev/null||journalctl -k 2>/dev/null)|grep -iE \"out of memory|oom-kill|killed process\"|tail -20; echo ---; free -h"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
