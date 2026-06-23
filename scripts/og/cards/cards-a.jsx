@@ -12,58 +12,76 @@ const Lbl = ({ x, y, children, fill, anchor = 'start', size = 15 }) => (
 );
 
 /* ---------------------------------------------------------------- HOME */
+// Round-2: field convergence. Four colour-streams (Consumer AI / Misinformation
+// / Superalignment / Big Tech) curve inward from the corners of a right-weighted
+// field and fuse into one luminous floor — the static landscape counterpart to
+// the on-page ConvergenceHero. Text-free; the headline composites bottom-left.
 function OGHome() {
-  const a = C.teal;
+  const a = C.cyan;
+  // right-weighted convergence field, ~ square, centred at (cx,cy)
+  const cx = 880, cy = 312, F = 250; // field half-size
+  const floorY = cy + F * 0.30;
+  // four sources, colour-matched to the four paths (physical corners)
+  const SRC = [
+    { c: C.cyan,   x: cx - F * 0.70, y: cy - F * 0.70 }, // consumer ai (TL)
+    { c: C.rose,   x: cx + F * 0.70, y: cy - F * 0.66 }, // misinformation (TR)
+    { c: C.violet, x: cx - F * 0.72, y: cy + F * 0.66 }, // superalignment (BL)
+    { c: C.teal,   x: cx + F * 0.72, y: cy + F * 0.66 }, // big tech (BR)
+  ];
+  // a curved stream from a source into the centre (control bowed by the normal)
+  const stream = (s) => {
+    const dx = cx - s.x, dy = cy - s.y, L = Math.hypot(dx, dy);
+    const mx = (s.x + cx) / 2, my = (s.y + cy) / 2;
+    const ctlx = mx + (-dy / L) * F * 0.34, ctly = my + (dx / L) * F * 0.34;
+    return `M${s.x} ${s.y} Q${ctlx} ${ctly} ${cx} ${cy}`;
+  };
   return (
-    <Card accent={a} eyebrow="ciris.ai" title="An AI You Can<br/>Actually Own">
+    <Card accent={a} eyebrow="the convergence" title="It turns out these are<br/>all the same problem." glow={C.violet}>
       <Stage>
-        {/* faint mesh */}
-        <g stroke={_mix(a,0.22)} strokeWidth="1.4" fill="none">
-          <path d="M690 90 L860 60 L1010 130 M860 60 L900 200 M1010 130 L1120 250 M900 200 L1060 320 M690 90 L760 230" />
-        </g>
-        <g fill={_mix(a,0.55)}>
-          {[[690,90,4],[860,60,5],[1010,130,6],[900,200,4],[1120,250,4],[760,230,3]].map(([x,y,r],i)=>
-            <circle key={i} cx={x} cy={y} r={r} />)}
-        </g>
-        {/* crossed-out data center (dim, upper) */}
-        <g opacity="0.5">
-          <g stroke={C.mute} strokeWidth="1.6" fill="none">
-            <rect x="982" y="78" width="120" height="30" rx="5" />
-            <rect x="982" y="116" width="120" height="30" rx="5" />
+        <defs>
+          <radialGradient id="oh-core" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#e8fbff" stopOpacity="0.95" />
+            <stop offset="40%" stopColor={a} stopOpacity="0.45" />
+            <stop offset="100%" stopColor={a} stopOpacity="0" />
+          </radialGradient>
+          {SRC.map((s,i)=>(
+            <linearGradient key={i} id={`oh-s${i}`} gradientUnits="userSpaceOnUse"
+              x1={s.x} y1={s.y} x2={cx} y2={cy}>
+              <stop offset="0" stopColor={s.c} stopOpacity="0" />
+              <stop offset="0.45" stopColor={s.c} stopOpacity="0.85" />
+              <stop offset="1" stopColor="#dff7ff" stopOpacity="0.95" />
+            </linearGradient>
+          ))}
+        </defs>
+        {/* four converging streams (broad soft + bright core, twice each) */}
+        {SRC.map((s,i)=>(
+          <g key={i} filter="url(#softglow)">
+            <path d={stream(s)} stroke={`url(#oh-s${i})`} strokeWidth="14" fill="none"
+                  strokeLinecap="round" opacity="0.22" />
+            <path d={stream(s)} stroke={`url(#oh-s${i})`} strokeWidth="3.4" fill="none"
+                  strokeLinecap="round" />
           </g>
-          <circle cx="996" cy="93" r="3" fill={C.mute} /><circle cx="996" cy="131" r="3" fill={C.mute} />
-          <line x1="965" y1="68" x2="1118" y2="156" stroke={C.rose} strokeWidth="3" strokeLinecap="round" />
+        ))}
+        {/* source nodes */}
+        {SRC.map((s,i)=>(
+          <g key={i}>
+            <circle cx={s.x} cy={s.y} r="9" fill={_mix(s.c,0.18)} stroke={s.c} strokeWidth="2" />
+            <circle cx={s.x} cy={s.y} r="3" fill={s.c} />
+          </g>
+        ))}
+        {/* the luminous floor (shared substrate) the streams fuse into */}
+        <g filter="url(#softglow)">
+          <ellipse cx={cx} cy={floorY} rx={F * 0.62} ry={F * 0.085}
+                   fill="#96e8ff" opacity="0.10" />
+          <line x1={cx - F * 0.5} y1={floorY} x2={cx + F * 0.5} y2={floorY}
+                stroke="#bdf0ff" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
         </g>
-        {/* link phone -> home box */}
-        <path className="og-flow" d="M905 410 C955 410 965 360 1006 348" stroke={_mix(a,0.7)} strokeWidth="2.4" fill="none" strokeDasharray="2 9" strokeLinecap="round" />
-        {/* home box (local) */}
-        <g transform="translate(1006,300)">
-          <path d="M0 36 L40 8 L80 36 L80 96 L0 96 Z" fill={_mix(a,0.10)} stroke={a} strokeWidth="2" />
-          <rect x="30" y="62" width="20" height="34" fill={_mix(a,0.5)} />
-          <circle cx="40" cy="8" r="4" fill={a} filter="url(#glow)" />
-        </g>
-        {/* signed badge */}
-        <g className="og-twinkle" transform="translate(640,470)" filter="url(#glow)">
-          <circle cx="0" cy="0" r="26" fill={_mix(C.ok,0.14)} stroke={C.ok} strokeWidth="2" />
-          <path d="M-11 1 L-3 9 L12 -9" stroke={C.ok} strokeWidth="3.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        {/* convergence core */}
+        <circle cx={cx} cy={cy} r={F * 0.34} fill="url(#oh-core)" />
+        <g filter="url(#bloom)">
+          <circle cx={cx} cy={cy} r="7" fill="#e8fbff" />
         </g>
       </Stage>
-      {/* phone */}
-      <div style={{ position: 'absolute', left: 720, top: 150, width: 188, height: 340,
-        borderRadius: 30, border: `2px solid ${C.borderS}`, background: C.bg,
-        boxShadow: `0 40px 90px -30px rgba(0,0,0,0.8), 0 0 0 6px ${_mix(a,0.06)}`, overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: 12, left: '50%', transform: 'translateX(-50%)', width: 56, height: 6, borderRadius: 3, background: C.borderS }} />
-        <div style={{ padding: '40px 22px 0', display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <Mark size={30} color={a} />
-          <div style={{ height: 11, width: '78%', borderRadius: 6, background: _mix(a,0.32) }} />
-          <div style={{ height: 11, width: '94%', borderRadius: 6, background: C.bgCard }} />
-          <div style={{ height: 11, width: '60%', borderRadius: 6, background: C.bgCard }} />
-          <div style={{ marginTop: 10, alignSelf: 'flex-end', height: 38, width: 120, borderRadius: 12, background: _mix(a,0.18), border: `1px solid ${_mix(a,0.5)}`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: C.ok, boxShadow: `0 0 8px ${C.ok}` }} />
-            <span style={{ fontFamily: 'Geist Mono, monospace', fontSize: 12, color: C.dim }}>signed</span>
-          </div>
-        </div>
-      </div>
     </Card>
   );
 }
@@ -210,34 +228,96 @@ function OGTrust() {
   );
 }
 
-/* -------------------------------------------------------------- VISION */
-function OGVision() {
-  const warm = C.rose;
+/* ----------------------------------------------------- VISION / REACHING */
+// Round-2 bespoke card for /vision ("The Reaching"). A quiet chain of widening
+// rungs ascends toward a crowning glow (atoms -> cells -> people -> beyond),
+// with rising motes — the static landscape counterpart to the on-page
+// ReachingGraphic. Weighted right so the bottom-left title zone stays clear.
+// Subdued by design; text-free, title composites in the Card title zone.
+function OGReaching() {
+  const a = C.violet;
+  const cx = 880;            // ascent axis, right-weighted
+  const topY = 70, botY = 560;
+  const N = 12;
+  // rungs: narrow + bright near the top crown, wide + dim near the base
+  const rungs = Array.from({ length: N }, (_, i) => {
+    const f = i / (N - 1);                 // 0 at base, 1 at crown
+    const y = botY + (topY - botY) * f;
+    const hw = 168 + (40 - 168) * f;       // half-width: 168 -> 40
+    const b = 0.16 + f * 0.66;             // brightness
+    return { y, hw, b };
+  });
+  // rising motes (deterministic; this is a still poster)
+  const motes = Array.from({ length: 22 }, (_, i) => {
+    const r = (i * 9973) % 1000 / 1000;
+    const r2 = (i * 7333 + 137) % 1000 / 1000;
+    return {
+      x: cx + (r * 2 - 1) * 150,
+      y: topY + r2 * (botY - topY),
+      rad: 0.8 + r * 1.8,
+      f: 1 - r2,
+    };
+  });
   return (
-    <Card accent={warm} eyebrow="vision" title="A Hopeful<br/>Alternative">
+    <Card accent={a} eyebrow="vision / the reaching" title="The Reaching" glow={C.rose}>
       <Stage>
-        {/* cold walled-off figure (left, grey, boxed) */}
-        <g opacity="0.65">
-          <rect x="470" y="150" width="150" height="300" rx="10" fill="none" stroke={C.mute} strokeWidth="1.6" strokeDasharray="6 7" />
-          <circle cx="545" cy="250" r="26" fill="none" stroke={C.dim} strokeWidth="2.4" />
-          <path d="M505 360 a40 40 0 0 1 80 0" fill="none" stroke={C.dim} strokeWidth="2.4" />
+        <defs>
+          <linearGradient id="or-axis" x1="0" y1={botY} x2="0" y2={topY} gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor={a} stopOpacity="0" />
+            <stop offset="1" stopColor="#beb4f5" stopOpacity="0.34" />
+          </linearGradient>
+          <radialGradient id="or-crown" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#cfc7f2" stopOpacity="0.85" />
+            <stop offset="45%" stopColor={a} stopOpacity="0.30" />
+            <stop offset="100%" stopColor={a} stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        {/* central ascent axis, brightening upward */}
+        <line x1={cx} y1={botY} x2={cx} y2={topY - 6} stroke="url(#or-axis)" strokeWidth="1.4" />
+        {/* the chain of reaching rungs + the side rails between them */}
+        <g strokeLinecap="round" fill="none">
+          {rungs.map((r, i) => {
+            const op = (r.b * 0.85).toFixed(3);
+            const next = rungs[i + 1];
+            return (
+              <g key={i}>
+                <line x1={cx - r.hw} y1={r.y} x2={cx + r.hw} y2={r.y}
+                      stroke="#b0a6ec" strokeWidth="1.6" opacity={op} />
+                {next && (
+                  <>
+                    <path d={`M${cx - r.hw} ${r.y} Q${cx} ${(r.y + next.y) / 2 - 8} ${cx - next.hw} ${next.y}`}
+                          stroke={_mix(a, 0.36)} strokeWidth="1.1" opacity={op} />
+                    <path d={`M${cx + r.hw} ${r.y} Q${cx} ${(r.y + next.y) / 2 - 8} ${cx + next.hw} ${next.y}`}
+                          stroke={_mix(a, 0.36)} strokeWidth="1.1" opacity={op} />
+                  </>
+                )}
+              </g>
+            );
+          })}
         </g>
-        {/* many warm interlinked figures (right), glowing */}
-        <g className="og-twinkle" filter="url(#softglow)">
-          <g stroke={_mix(warm,0.4)} strokeWidth="1.8" fill="none">
-            <path d="M760 200 L900 160 L1030 230 M900 160 L960 320 M1030 230 L1100 350 M760 200 L820 360 M960 320 L1080 360 M820 360 L960 320 M900 160 L1030 230" />
-          </g>
-          {[[760,200,20,C.rose],[900,160,26,C.violet],[1030,230,22,C.cyan],[960,320,22,C.brass],[1100,350,18,C.rose],[820,360,18,C.teal],[1080,360,18,C.violet]].map(([x,y,r,col],i)=>(
-            <g key={i}>
-              <circle cx={x} cy={y} r={r} fill={_mix(col,0.18)} stroke={col} strokeWidth="2" />
-              <circle cx={x} cy={y-r*0.34} r={r*0.32} fill={col} />
-              <path d={`M${x-r*0.7} ${y+r*0.9} a${r*0.7} ${r*0.7} 0 0 1 ${r*1.4} 0`} fill={col} opacity="0.85" />
+        {/* rung endpoint nodes (the reaching hands) */}
+        <g>
+          {rungs.map((r, i) => (
+            <g key={i} fill="#cfc7f2" opacity={(r.b * 0.9).toFixed(3)}>
+              <circle cx={cx - r.hw} cy={r.y} r={1.6 + r.b * 1.6} />
+              <circle cx={cx + r.hw} cy={r.y} r={1.6 + r.b * 1.6} />
             </g>
           ))}
+        </g>
+        {/* rising motes */}
+        <g fill="#beb4f5">
+          {motes.map((m, i) => (
+            <circle key={i} cx={m.x} cy={m.y} r={m.rad} opacity={(0.18 + m.f * 0.42).toFixed(3)} />
+          ))}
+        </g>
+        {/* the crown: where the chain dissolves into light */}
+        <circle cx={cx} cy={topY} r="150" fill="url(#or-crown)" />
+        <g filter="url(#bloom)">
+          <circle cx={cx} cy={topY} r="5.5" fill="#efeaff" />
         </g>
       </Stage>
     </Card>
   );
 }
 
-Object.assign(window, { OGHome, OGInstall, OGAbout, OGHow, OGTrust, OGVision });
+Object.assign(window, { OGHome, OGInstall, OGAbout, OGHow, OGTrust, OGReaching });
