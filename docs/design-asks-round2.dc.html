@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CIRIS Graphics Ask — Round 2</title>
+<style>
+  :root{--bg:#0D1117;--panel:#11161d;--line:#222a33;--grid:rgba(255,255,255,.04);--text:#e8eaed;--dim:#9aa3af;--mute:#6b7280;--teal:#419CA0;--cyan:#22C0E8;--violet:#7A6FD6;--rose:#E14B7F;--brass:#B08A3E;--ok:#4ADE80;--mono:ui-monospace,SFMono-Regular,Menlo,monospace;--sans:ui-sans-serif,system-ui,-apple-system,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.55;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+  .wrap{max-width:880px;margin:0 auto;padding:48px 24px 80px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+  h1{font-size:34px;letter-spacing:-.02em;margin:10px 0 8px}
+  .sub{color:var(--dim);max-width:64ch;margin:0 0 8px}
+  h2{font-size:13px;font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin:42px 0 14px;border-top:1px solid var(--line);padding-top:22px}
+  .tokens{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+  .chip{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:6px;padding:5px 9px;display:flex;align-items:center;gap:7px;color:var(--dim)}
+  .sw{width:11px;height:11px;border-radius:3px}
+  .rule{background:rgba(225,75,127,.08);border:1px solid rgba(225,75,127,.35);border-radius:10px;padding:14px 16px;margin:14px 0;color:#f3c7d6}
+  .rule b{color:#fff}
+  .g{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:16px 18px;margin:10px 0}
+  .g .n{font-family:var(--mono);font-size:12px;color:var(--mute)}
+  .g h3{margin:4px 0 6px;font-size:18px}
+  .g p{margin:0;color:var(--dim);font-size:14px}
+  .g .star{color:var(--cyan)}
+  .lab{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;padding:2px 7px;border-radius:5px;margin-left:8px;vertical-align:middle}
+  .anim{color:var(--ok);background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.35)}
+  .static{color:var(--brass);background:rgba(176,138,62,.12);border:1px solid rgba(176,138,62,.4)}
+  .new{color:var(--cyan);background:rgba(34,192,232,.12);border:1px solid rgba(34,192,232,.35)}
+  a{color:var(--cyan)}
+  ul{margin:0 0 14px;padding-left:20px}li{margin:6px 0;color:var(--dim)}li b{color:var(--text)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">CIRIS · site rebuild · round 2</div>
+  <h1>Graphics ask — round 2</h1>
+  <p class="sub">Round 1 shipped the convergence hero (01), the four path heroes (02–05), and the static proof set (06–10) — all wired and live. After a full quality pass on the rebuilt v2 site, here is what would most raise the bar. Same constraints as round 1 (see <b>“Graphics Brief”</b>): dark blueprint, <b>text-free</b> (labels overlaid from the dictionary, one asset serves all 29 languages), &lt;300KB, honors <code>prefers-reduced-motion</code>, holds on a 4-year-old Android.</p>
+
+  <div class="tokens">
+    <span class="chip"><span class="sw" style="background:#419CA0"></span>teal #419CA0</span>
+    <span class="chip"><span class="sw" style="background:#22C0E8"></span>cyan #22C0E8</span>
+    <span class="chip"><span class="sw" style="background:#7A6FD6"></span>violet #7A6FD6</span>
+    <span class="chip"><span class="sw" style="background:#E14B7F"></span>rose #E14B7F</span>
+    <span class="chip"><span class="sw" style="background:#B08A3E"></span>brass #B08A3E</span>
+    <span class="chip"><span class="sw" style="background:#4ADE80"></span>ok #4ADE80</span>
+    <span class="chip"><span class="sw" style="background:#bfefff"></span>core #bfefff</span>
+  </div>
+  <div class="rule"><b>HARD RULE — no baked text</b>, same as round 1. Shapes, lines, motion only; every label overlaid at render. Keep art mirror-safe: the site now emits <code>dir=rtl</code> server-side for ar/fa/ur, so no left/right-meaningful arrows baked into the art.</div>
+
+  <h2>A — Hero graphics for pages that still lead with text only</h2>
+  <p class="sub" style="font-size:14px">The brief wanted every path/concept/proof page to lead with one rich graphic. These rebuilt pages currently have none (or reuse another page’s art).</p>
+
+  <div class="g"><div class="n">A1<span class="lab anim">animated</span><span class="lab new">highest value</span></div><h3><span class="star">★</span> /safety — the conscience + the human stop</h3><p>A running agent whose every action passes through a conscience gate; one control, a physical <i>halt</i>, sits in a human hand outside the machine and is the only thing never automated. Reads as “safety is structural, and the off-switch is human.” Accent ok / rose. The gate pulses; the halt is calm, always lit.</p></div>
+  <div class="g"><div class="n">A2<span class="lab anim">animated · subdued</span><span class="lab new">highest value</span></div><h3><span class="star">★</span> /vision “The Reaching” — a quiet reaching motif</h3><p>A slow, faint chain of reaching gestures / rungs ascending toward light (atoms → cells → people → beyond), resolving upward. Must be <i>subdued</i> — it sits behind a long first-person manifesto and must never compete with the prose. Violet / core, very low contrast, slow. The convergence hero’s quieter sibling; the emotional centerpiece.</p></div>
+  <div class="g"><div class="n">A3<span class="lab anim">light motion</span></div><h3>/grammar (the Constitution) — prefixes composing into a sealed statement</h3><p>Small typed prefixes snap together into one signed/sealed line (the epistemic grammar → a constitution seal). Accent brass / violet. The seal sets.</p></div>
+  <div class="g"><div class="n">A4<span class="lab static">static or 1 motion</span></div><h3>/mdd — mission as the fourth foundation</h3><p>Three pillars (logic · schemas · protocols) plus a fourth beam (mission) that locks the structure so it cannot drift. Accent brass.</p></div>
+  <div class="g"><div class="n">A5<span class="lab anim">animated</span></div><h3>/trust — a bespoke post-quantum identity seal (replaces reused g03)</h3><p>One identity key producing a dual signature (Ed25519 + ML-DSA-65) that seals a record; the seal survives a “quantum” sweep. Accent teal / cyan. Animate the double-seal.</p></div>
+  <div class="g"><div class="n">A6<span class="lab static">static</span></div><h3>/coherence-ratchet &amp; /coherence-collapse-analysis — the deck’s math, dark</h3><p>(a) a ratchet that only turns one way (coherence can rise, not silently fall); (b) the effective-dimensionality / diversity-collapse curve with the singularity boundary. Accent violet / rose.</p></div>
+
+  <h2>B — OG social-card refresh (1200×630, text-free art + composited title)</h2>
+  <div class="g"><div class="n">B1<span class="lab new">priority</span></div><h3><span class="star">★</span> og-home / the convergence card</h3><p>The current home OG still uses the round-0 Model-A brand art. Refresh it to the <b>field-convergence</b> look (four streams → one floor) so the share preview matches the new hero.</p></div>
+  <div class="g"><div class="n">B2<span class="lab new">priority</span></div><h3><span class="star">★</span> a bespoke “The Reaching” / vision OG card</h3><p>Quiet, the reaching motif from A2, title composited.</p></div>
+  <div class="g"><div class="n">B3<span class="lab static">lower priority</span></div><h3>refresh remaining kept-page OG cards to the v2 look</h3><p>trust · federation · how-it-works · research-status · install · epistemic-web, as the A-series art lands.</p></div>
+
+  <h2>C — Tuning</h2>
+  <ul>
+    <li><b>Convergence hero:</b> a touch more core brightness + stream density on small screens (it reads a little faint on mobile). Keep the four corner labels’ breathing room at &lt;420px.</li>
+    <li><b>Direction-neutral art:</b> the app emits <code>dir=rtl</code> server-side and pins canvas labels to the matching stream, so just keep avoiding any left/right-meaningful baked arrows (none currently do).</li>
+  </ul>
+
+  <h2>Handoff format (unchanged)</h2>
+  <ul>
+    <li>Each as a self-contained prototype (HTML / CSS / SVG, or canvas JS) we re-integrate as a React component.</li>
+    <li>Text-free; mark label anchors so we can wire the dictionary overlays.</li>
+    <li>Short README with tokens + motion timings. Reference “Reference - Home Lobby” + the round-1 graphics in this project.</li>
+  </ul>
+</div>
+</body>
+</html>
