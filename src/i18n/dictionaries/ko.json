@@ -2026,7 +2026,14 @@
     "convergence": "네 가지 두려움, 하나의 바닥. 인터넷의 대안은 ChatGPT의 대안이기도 합니다.",
     "convergenceAccent": "같은 기반, 모든 문.",
     "footL": "CIRISAgent · 지식의 웹 · AGPL-3.0, 미션 고정",
-    "footR": "CIRIS 3.0 출시 중 · Constitution 0.4"
+    "footR": "CIRIS 3.0 출시 중 · Constitution 0.4",
+    "heroLabels": {
+      "consumerAi": "Consumer AI",
+      "bigTech": "Big Tech",
+      "superalignment": "Superalignment",
+      "misinformation": "Misinformation",
+      "oneFloor": "One floor"
+    }
   },
   "pathsCommon": {
     "stepLabels": [

@@ -1,0 +1,17 @@
+/* Graphic 02 — Consumer AI. Orbit ~7s, glow breathe ~4s, shield pulse ~5s,
+   upload-cut flicker. Freezes under prefers-reduced-motion. */
+.g02 .dot {
+  offset-path: path('M300,200 a40,118 0 1,0 0,236 a40,118 0 1,0 0,-236');
+  offset-rotate: 0deg;
+  animation: g02orbit calc(7s / var(--sp, 1)) linear infinite;
+}
+@keyframes g02orbit { to { offset-distance: 100%; } }
+.g02 .glow { animation: g02breathe calc(4.2s / var(--sp, 1)) ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes g02breathe { 0%, 100% { opacity: .4; } 50% { opacity: .78; } }
+.g02 .shield { animation: g02shield calc(5.4s / var(--sp, 1)) ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes g02shield { 0%, 100% { opacity: .22; transform: scale(1); } 50% { opacity: .46; transform: scale(1.025); } }
+.g02 .sever { animation: g02sever calc(2.6s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g02sever { 0%, 100% { opacity: .65; } 50% { opacity: .2; } }
+.g02 .ring { animation: g02spin calc(46s / var(--sp, 1)) linear infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes g02spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .g02 * { animation: none !important; } }

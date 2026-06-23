@@ -24,9 +24,12 @@ const CYCLE_MS = 2100;
 export default function LanguageSwitcher({
   currentLocale,
   large = false,
+  inline = false,
 }: {
   currentLocale: string;
   large?: boolean;
+  /** Render in-flow (e.g. inside the top nav) instead of fixed bottom-right. */
+  inline?: boolean;
 }) {
   const pathname = usePathname() || "/";
   const { path: basePath } = delocalizePath(pathname);
@@ -59,12 +62,12 @@ export default function LanguageSwitcher({
 
   return (
     <div
-      className={styles.root}
+      className={`${styles.root} ${inline ? styles.rootInline : ""}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       {open && (
-        <div className={styles.panel} role="menu">
+        <div className={`${styles.panel} ${inline ? styles.panelDown : ""}`} role="menu">
           <div className={styles.panelHead}>Read this in your language</div>
           {LOCALES.map((l) => {
             const isActive = l.code === currentLocale;

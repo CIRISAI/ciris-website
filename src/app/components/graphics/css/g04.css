@@ -1,0 +1,18 @@
+/* Graphic 04 — Misinformation. Provenance graph unfurls top->down over ~4s,
+   holds, resets (~9s loop). Freezes assembled under prefers-reduced-motion. */
+.g04 .nd { transform-box: fill-box; transform-origin: center; }
+.g04 .n1 { animation: g04n1 calc(9s / var(--sp, 1)) ease-in-out infinite; }
+.g04 .n2 { animation: g04n2 calc(9s / var(--sp, 1)) ease-in-out infinite; }
+.g04 .n3 { animation: g04n3 calc(9s / var(--sp, 1)) ease-in-out infinite; }
+.g04 .n4 { animation: g04n4 calc(9s / var(--sp, 1)) ease-in-out infinite; }
+.g04 .e1 { animation: g04e1 calc(9s / var(--sp, 1)) ease-in-out infinite; }
+.g04 .e2 { animation: g04e2 calc(9s / var(--sp, 1)) ease-in-out infinite; }
+.g04 .e3 { animation: g04e3 calc(9s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g04n1 { 0%, 3% { opacity: 0; transform: scale(.6); } 8% { opacity: 1; transform: scale(1); } 88% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes g04n2 { 0%, 15% { opacity: 0; transform: scale(.6); } 21% { opacity: 1; transform: scale(1); } 88% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes g04n3 { 0%, 28% { opacity: 0; transform: scale(.6); } 34% { opacity: 1; transform: scale(1); } 88% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes g04n4 { 0%, 42% { opacity: 0; transform: scale(.6); } 49% { opacity: 1; transform: scale(1); } 88% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes g04e1 { 0%, 9% { opacity: 0; } 14% { opacity: .6; } 88% { opacity: .6; } 100% { opacity: 0; } }
+@keyframes g04e2 { 0%, 22% { opacity: 0; } 28% { opacity: .6; } 88% { opacity: .6; } 100% { opacity: 0; } }
+@keyframes g04e3 { 0%, 35% { opacity: 0; } 42% { opacity: .6; } 88% { opacity: .6; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .g04 * { animation: none !important; } }

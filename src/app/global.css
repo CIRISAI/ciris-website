@@ -57,6 +57,23 @@ body {
   --color-fd-accent: #dbd6ef;
   --color-fd-muted-foreground: #7b70ff;
   --tw-prose-body: #3e3e3e;
+
+  /* CIRIS "dark blueprint" design tokens — used by the v2 lobby + path
+     staircases (lobby.module.css, path.module.css) and the graphics layer.
+     In @theme so Tailwind v4 emits them to :root (a plain :root block gets
+     stripped). The site is forced-dark, so single values suffice. */
+  --color-bg: #0d1117;
+  --color-panel: #11161d;
+  --color-line: #222a33;
+  --color-text: #e8eaed;
+  --color-dim: #9aa3af;
+  --color-mute: #6b7280;
+  --color-teal: #419ca0;
+  --color-cyan: #22c0e8;
+  --color-violet: #7a6fd6;
+  --color-rose: #e14b7f;
+  --color-brass: #b08a3e;
+  --color-ok: #4ade80;
 }
 
 .prose {

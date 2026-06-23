@@ -6,6 +6,8 @@ import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
+import SvgGraphic, { PATH_GRAPHIC } from "@/app/components/graphics/SvgGraphic";
+import SiteHeader from "@/app/components/SiteHeader";
 import styles from "./path.module.css";
 
 const ACCENT: Record<string, string> = {
@@ -32,6 +34,7 @@ export default function PathStaircase({ t, slug }: { t: Dictionary; slug: string
         />
       )}
       <main className={`${styles.wrap} ${ACCENT[p.accent] ?? styles.cyan}`}>
+        <SiteHeader locale={locale} />
         <p className={styles.back}>
           <Link href={lh("/")}>&larr; {c.back}</Link>
         </p>
@@ -40,7 +43,11 @@ export default function PathStaircase({ t, slug }: { t: Dictionary; slug: string
           <p className={styles.kicker}>{p.kicker}</p>
           <h1 className={styles.h1}>{p.h1}</h1>
           <div className={styles.heroArt} aria-hidden="true">
-            <span className={styles.bar} />
+            {PATH_GRAPHIC[slug] ? (
+              <SvgGraphic id={PATH_GRAPHIC[slug]} className={styles.heroGraphic} />
+            ) : (
+              <span className={styles.bar} />
+            )}
           </div>
         </header>
 

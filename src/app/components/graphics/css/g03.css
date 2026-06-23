@@ -1,0 +1,11 @@
+/* Graphic 03 — Superalignment. Signed-artifact transit ~3.4s, peer flash on
+   arrival, agent breathes. Freezes under prefers-reduced-motion. */
+.g03 .tok { animation: g03tok calc(3.4s / var(--sp, 1)) ease-in-out infinite; offset-rotate: 0deg; }
+@keyframes g03tok { 0% { offset-distance: 0%; opacity: 0; } 9% { opacity: 1; } 80% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+.g03 .flash { transform-box: fill-box; transform-origin: center; animation: g03flash calc(3.4s / var(--sp, 1)) ease-out infinite; opacity: 0; }
+@keyframes g03flash { 0%, 80% { opacity: 0; transform: scale(.5); } 90% { opacity: .85; transform: scale(1.15); } 100% { opacity: 0; transform: scale(1.45); } }
+.g03 .agent { transform-box: fill-box; transform-origin: center; animation: g03pulse calc(3.4s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g03pulse { 0%, 100% { opacity: .85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+.g03 .agentglow { transform-box: fill-box; transform-origin: center; animation: g03glow calc(3.4s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g03glow { 0%, 100% { opacity: .3; } 50% { opacity: .65; } }
+@media (prefers-reduced-motion: reduce) { .g03 * { animation: none !important; } .g03 .tok { opacity: .9; } .g03 .flash { opacity: .4; transform: scale(1.1); } }

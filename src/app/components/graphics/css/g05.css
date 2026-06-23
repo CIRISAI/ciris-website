@@ -1,0 +1,37 @@
+/* Graphic 05 — Big Tech. Animation CSS, ported verbatim from the design team. */
+.g05 .frag {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: g05frag calc(10s / var(--sp, 1)) ease-in-out infinite;
+}
+@keyframes g05frag {
+  0%, 12% { transform: translate(0, 0) scale(1); }
+  40%, 72% { transform: translate(var(--dx, 0), var(--dy, 0)) scale(.55); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.g05 .link {
+  animation: g05link calc(10s / var(--sp, 1)) ease-in-out infinite;
+  opacity: 0;
+}
+@keyframes g05link {
+  0%, 38% { opacity: 0; }
+  44% { opacity: .5; }
+  70% { opacity: .5; }
+  78% { opacity: 0; }
+  100% { opacity: 0; }
+}
+.g05 .shell {
+  animation: g05shell calc(10s / var(--sp, 1)) ease-in-out infinite;
+}
+@keyframes g05shell {
+  0%, 12% { opacity: .85; }
+  24% { opacity: 0; }
+  76% { opacity: 0; }
+  90% { opacity: .85; }
+  100% { opacity: .85; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .g05 .frag { animation: none; transform: translate(var(--dx, 0), var(--dy, 0)) scale(.55); }
+  .g05 .link { animation: none; opacity: .5; }
+  .g05 .shell { animation: none; opacity: 0; }
+}

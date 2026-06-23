@@ -10,6 +10,26 @@
   z-index: 50;
 }
 
+/* In-nav variant: sits in normal flow, panel drops downward. */
+.rootInline {
+  position: static;
+  right: auto;
+  bottom: auto;
+  z-index: 40;
+}
+.rootInline .pill {
+  padding: 0.4rem 0.7rem;
+  font-size: 0.82rem;
+  gap: 0.4rem;
+}
+.rootInline .label {
+  min-width: 4.5rem;
+}
+.panelDown {
+  top: calc(100% + 0.5rem);
+  bottom: auto;
+}
+
 .pill {
   position: relative;
   display: inline-flex;

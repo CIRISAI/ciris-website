@@ -2026,7 +2026,14 @@
     "convergence": "Quatro medos, uma base. O substituto da internet é o substituto do ChatGPT.",
     "convergenceAccent": "Mesma base, todas as portas.",
     "footL": "CIRISAgent · a rede epistêmica · AGPL-3.0, missão protegida",
-    "footR": "CIRIS 3.0 em implantação · Constitution 0.4"
+    "footR": "CIRIS 3.0 em implantação · Constitution 0.4",
+    "heroLabels": {
+      "consumerAi": "Consumer AI",
+      "bigTech": "Big Tech",
+      "superalignment": "Superalignment",
+      "misinformation": "Misinformation",
+      "oneFloor": "One floor"
+    }
   },
   "pathsCommon": {
     "stepLabels": [

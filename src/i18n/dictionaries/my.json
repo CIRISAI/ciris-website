@@ -2026,7 +2026,14 @@
     "convergence": "ကြောက်စိတ်လေးခု၊ အခြေ တစ်ခုတည်း။ အင်တာနက်ကို အစားထိုးတာဟာ ChatGPT ကို အစားထိုးတာနဲ့ တူသည်။",
     "convergenceAccent": "တူညီသော substrate၊ တံခါးတိုင်း။",
     "footL": "CIRISAgent · epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 ထုတ်လွှတ်နေသည် · Constitution 0.4"
+    "footR": "CIRIS 3.0 ထုတ်လွှတ်နေသည် · Constitution 0.4",
+    "heroLabels": {
+      "consumerAi": "Consumer AI",
+      "bigTech": "Big Tech",
+      "superalignment": "Superalignment",
+      "misinformation": "Misinformation",
+      "oneFloor": "One floor"
+    }
   },
   "pathsCommon": {
     "stepLabels": [
