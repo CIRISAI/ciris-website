@@ -4,7 +4,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import HomeContent from "@/app/components/HomeContent";
+import LobbyContent from "@/app/components/LobbyContent";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -35,5 +35,5 @@ export default async function LocalizedHome({
 }) {
   const { locale } = await params;
   const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <HomeContent t={dict} />;
+  return <LobbyContent t={dict} />;
 }

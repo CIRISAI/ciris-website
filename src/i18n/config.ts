@@ -87,6 +87,10 @@ export function ogLocale(code: string): string {
 // else stays on its English URL so we never link to a route that 404s.
 export const LOCALIZED_ROUTES: ReadonlySet<string> = new Set([
   "/",
+  "/paths/consumer-ai",
+  "/paths/superalignment",
+  "/paths/misinformation",
+  "/paths/big-tech",
   "/install",
   "/about",
   "/how-it-works",
