@@ -31,20 +31,8 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
         <SiteHeader locale={locale} />
 
         <section className={styles.hero}>
+          <p className={styles.eyebrow}>{l.eyebrow}</p>
           <div className={styles.heroTop}>
-            <div className={styles.heroText}>
-              <p className={styles.eyebrow}>{l.eyebrow}</p>
-              <h1 className={styles.h1}>
-                {l.h1pre}
-                <span className={styles.accent}>{l.h1accent}</span>
-              </h1>
-              <p className={styles.lede}>{l.lede}</p>
-              <p className={styles.turn}>
-                {l.turnPre}
-                <b>{l.turnAccent}</b>
-                {l.turnPost}
-              </p>
-            </div>
             <div className={styles.heroArt}>
               <ConvergenceHero
                 labels={l.heroLabels}
@@ -56,6 +44,17 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
                 }}
               />
               <p className={styles.artCaption}>{l.doorsNote}</p>
+            </div>
+            <div className={styles.heroText}>
+              <h1 className={styles.h1}>
+                {l.h1pre}
+                <span className={styles.accent}>{l.h1accent}</span>
+              </h1>
+              <p className={styles.turn}>
+                {l.turnPre}
+                <b>{l.turnAccent}</b>
+                {l.turnPost}
+              </p>
             </div>
           </div>
 
