@@ -2,11 +2,11 @@
 // fed the English dictionary. Localized variants live at src/app/[locale]/trust/.
 
 import { localizedSeo } from "@/lib/seo";
-import TrustContent from "@/app/components/TrustContent";
+import TrustV2 from "@/app/components/TrustV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/trust", "en");
 
 export default function TrustPage() {
-  return <TrustContent t={getDictionary("en")} />;
+  return <TrustV2 t={getDictionary("en")} locale="en" />;
 }

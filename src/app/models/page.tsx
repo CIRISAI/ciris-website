@@ -3,11 +3,11 @@
 // src/app/[locale]/models/.
 
 import { localizedSeo } from "@/lib/seo";
-import ModelsContent from "@/app/components/ModelsContent";
+import ModelsV2 from "@/app/components/ModelsV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/models", "en");
 
 export default function ModelsPage() {
-  return <ModelsContent t={getDictionary("en")} />;
+  return <ModelsV2 t={getDictionary("en")} locale="en" />;
 }

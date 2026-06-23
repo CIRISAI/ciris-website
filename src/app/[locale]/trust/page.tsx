@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import TrustContent from "@/app/components/TrustContent";
+import TrustV2 from "@/app/components/TrustV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -35,6 +35,7 @@ export default async function LocalizedTrust({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <TrustContent t={dict} />;
+  const resolved = isLocale(locale) ? locale : "en";
+  const dict = getDictionary(resolved);
+  return <TrustV2 t={dict} locale={resolved} />;
 }

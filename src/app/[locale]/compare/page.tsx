@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import CompareContent from "@/app/components/CompareContent";
+import CompareV2 from "@/app/components/CompareV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -35,6 +35,7 @@ export default async function LocalizedCompare({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <CompareContent t={dict} />;
+  const resolved = isLocale(locale) ? locale : "en";
+  const dict = getDictionary(resolved);
+  return <CompareV2 t={dict} locale={resolved} />;
 }

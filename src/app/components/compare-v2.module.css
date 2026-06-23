@@ -1,0 +1,42 @@
+/* Co-located table styles for the v2 "dark-blueprint" /compare page. The
+   landscape comparison matrix is too wide/structured for the content.module
+   card vocab, so it gets its own dark-themed table here. Tones (ok/warn/bad/
+   neutral) map onto the same semantic colors the v1 table used per cell, driven
+   by a data-tone attribute rather than the localized cell text. */
+
+.tableWrap { overflow-x: auto; margin: 0 0 18px; border: 1px solid var(--color-line);
+  border-radius: 14px; background: var(--color-panel); }
+
+.table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 720px; }
+
+.table thead th {
+  padding: 14px 14px; text-align: center; font-weight: 600; font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-dim);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, var(--color-line));
+  white-space: nowrap; }
+.table thead th.colProject { text-align: left; }
+.table thead th.colEcho { color: var(--color-violet); }
+
+.table tbody td { padding: 13px 14px; text-align: center; color: var(--color-dim);
+  border-bottom: 1px solid var(--color-line); }
+.table tbody tr:last-child td { border-bottom: none; }
+.table tbody td.colProject { text-align: left; color: var(--color-text); font-weight: 500; }
+.table tbody td.colProject a { color: inherit; text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+.table tbody td.colProject a:hover { border-bottom-color: var(--accent); }
+
+/* Highlighted hero row (CIRIS). */
+.rowHero { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.rowHero td.colProject { color: var(--accent); font-weight: 600; }
+.rowHero td { color: color-mix(in srgb, var(--color-ok) 75%, var(--color-text)); font-weight: 600; }
+.rowHero td.colEcho { color: var(--color-violet); }
+
+/* Cell tones (semantic per-cell coloring, preserved from v1). */
+.table tbody td[data-tone="ok"] { color: var(--color-ok); font-weight: 600; }
+.table tbody td[data-tone="warn"] { color: var(--color-brass); font-weight: 600; }
+.table tbody td[data-tone="bad"] { color: var(--color-rose); font-weight: 600; }
+.table tbody td[data-tone="echo"] { color: var(--color-violet); font-weight: 600; }
+.table tbody td[data-tone="neutral"] { color: var(--color-mute); }
+
+.tableFootnote { font-family: ui-monospace, monospace; font-size: 13px;
+  line-height: 1.5; color: var(--color-mute); margin: 0; }

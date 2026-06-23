@@ -3,11 +3,11 @@
 // src/app/[locale]/mdd/.
 
 import { localizedSeo } from "@/lib/seo";
-import MddContent from "@/app/components/MddContent";
+import MddV2 from "@/app/components/MddV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/mdd", "en");
 
 export default function MddPage() {
-  return <MddContent t={getDictionary("en")} />;
+  return <MddV2 t={getDictionary("en")} locale="en" />;
 }

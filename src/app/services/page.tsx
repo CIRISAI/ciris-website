@@ -3,11 +3,11 @@
 // src/app/[locale]/services/.
 
 import { localizedSeo } from "@/lib/seo";
-import ServicesContent from "@/app/components/ServicesContent";
+import ServicesV2 from "@/app/components/ServicesV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/services", "en");
 
 export default function ServicesPage() {
-  return <ServicesContent t={getDictionary("en")} />;
+  return <ServicesV2 t={getDictionary("en")} locale="en" />;
 }

@@ -20,6 +20,14 @@ const V2_ROUTES = new Set([
   "/vision",
   "/how-it-works",
   "/research-status",
+  "/about",
+  "/trust",
+  "/safety",
+  "/services",
+  "/compare",
+  "/mdd",
+  "/models",
+  "/first-contact",
 ]);
 
 export default function V1Banner() {

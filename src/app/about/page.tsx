@@ -2,11 +2,11 @@
 // fed the English dictionary. Localized variants live at src/app/[locale]/about/.
 
 import { localizedSeo } from "@/lib/seo";
-import AboutContent from "@/app/components/AboutContent";
+import AboutV2 from "@/app/components/AboutV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/about", "en");
 
 export default function AboutPage() {
-  return <AboutContent t={getDictionary("en")} />;
+  return <AboutV2 t={getDictionary("en")} locale="en" />;
 }

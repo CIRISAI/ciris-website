@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import ModelsContent from "@/app/components/ModelsContent";
+import ModelsV2 from "@/app/components/ModelsV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -35,6 +35,7 @@ export default async function LocalizedModels({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <ModelsContent t={dict} />;
+  const resolved = isLocale(locale) ? locale : "en";
+  const dict = getDictionary(resolved);
+  return <ModelsV2 t={dict} locale={resolved} />;
 }

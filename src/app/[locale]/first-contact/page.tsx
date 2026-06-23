@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import FirstContactContent from "@/app/components/FirstContactContent";
+import FirstContactV2 from "@/app/components/FirstContactV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -36,5 +36,5 @@ export default async function LocalizedFirstContact({
 }) {
   const { locale } = await params;
   const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <FirstContactContent t={dict} />;
+  return <FirstContactV2 t={dict} locale={locale} />;
 }

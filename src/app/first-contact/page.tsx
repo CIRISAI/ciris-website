@@ -3,11 +3,11 @@
 // src/app/[locale]/first-contact/.
 
 import { localizedSeo } from "@/lib/seo";
-import FirstContactContent from "@/app/components/FirstContactContent";
+import FirstContactV2 from "@/app/components/FirstContactV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/first-contact", "en");
 
 export default function FirstContactPage() {
-  return <FirstContactContent t={getDictionary("en")} />;
+  return <FirstContactV2 t={getDictionary("en")} locale="en" />;
 }

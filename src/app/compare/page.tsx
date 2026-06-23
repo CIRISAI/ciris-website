@@ -3,11 +3,11 @@
 // src/app/[locale]/compare/.
 
 import { localizedSeo } from "@/lib/seo";
-import CompareContent from "@/app/components/CompareContent";
+import CompareV2 from "@/app/components/CompareV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/compare", "en");
 
 export default function ComparePage() {
-  return <CompareContent t={getDictionary("en")} />;
+  return <CompareV2 t={getDictionary("en")} locale="en" />;
 }
