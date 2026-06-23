@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { PREFIXED_LOCALES, LOCALIZED_ROUTES } from "@/i18n/config";
 import { DEFAULT_OG_IMAGE, DEFAULT_OG_VIDEO } from "@/lib/seo";
+import V1Banner from "@/app/components/V1Banner";
 
 // Universal language persistence: a locale chosen anywhere (marketing pages or
 // the /sections reader) is stored, and this guard redirects localizable pages to
@@ -223,6 +224,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         {/* The site is dark by design (canvas/video backgrounds are black).
             Force the theme dark so it never follows the OS preference. */}
         <RootProvider theme={{ defaultTheme: "dark", forcedTheme: "dark", enableSystem: false }}>
+          <V1Banner />
           {children}
         </RootProvider>
       </body>
