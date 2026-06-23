@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (modèles GPT)",
     "techDetail3Item3": "Autres fournisseurs compatibles OpenAI",
     "ctaPara": "Prêt à commencer ?",
-    "ctaBtn": "Installer CIRIS Agent"
+    "ctaBtn": "Installer CIRIS Agent",
+    "kicker": "CIRIS hébergé"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "Nous sollicitons des commentaires de la part de tout le monde.",
     "engageP1Html": "Les issues GitHub sur <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> sont l'endroit pour s'exprimer. Vous n'avez pas besoin d'être développeur. Vous n'avez pas besoin de connaître le code. Si quelque chose sur ce site vous semble incorrect, ou si vous voyez un problème avec ce qui est en cours de construction, ouvrez une issue et dites-le. Les issues les plus utiles désignent une partie précise du système et proposent ce qui devrait changer, mais tout engagement honnête est le bienvenu.",
     "engageP2Html": "L'accord qui fonde l'ensemble du projet, ce que CIRIS doit aux personnes et ce que les personnes doivent en retour, se trouve à <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> et reste ouvert à la révision. Si quelque chose dedans ne vous convient pas, c'est aussi une issue GitHub qui vaut la peine d'être ouverte.",
-    "engageP3": "Les issues substantielles sont lues. Le travail avance à son propre rythme."
+    "engageP3": "Les issues substantielles sont lues. Le travail avance à son propre rythme.",
+    "kicker": "Une fédération d'égaux"
   },
   "models": {
     "h1": "Quels LLM nous utilisons et pourquoi",
@@ -1805,7 +1807,8 @@
     "cirisP3": "Quand l'indépendance réelle tombe trop bas, l'agent traite sa propre réflexion comme fragile et demande à une personne de regarder.",
     "claimH2": "Ce que nous affirmons, et ce que nous n'affirmons pas.",
     "claimP1": "Nous n'avons pas résolu la sûreté de l'IA. Nous avons construit une pièce d'une réponse, et nous la testons ouvertement.",
-    "claimP2Html": "Des équipes extérieures n'ont pas encore vérifié notre travail. Nous le disons clairement. La théorie complète et les mathématiques se trouvent dans nos <a href=\"/papers\" class=\"text-brand-primary hover:underline\">quatre articles</a>. Le code est ouvert. Si nous avons tort, la façon de le montrer l'est aussi. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Voir l'état actuel de la recherche.</a>"
+    "claimP2Html": "Des équipes extérieures n'ont pas encore vérifié notre travail. Nous le disons clairement. La théorie complète et les mathématiques se trouvent dans nos <a href=\"/papers\" class=\"text-brand-primary hover:underline\">quatre articles</a>. Le code est ouvert. Si nous avons tort, la façon de le montrer l'est aussi. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Voir l'état actuel de la recherche.</a>",
+    "kicker": "Banc d'essai de recherche"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · prononcé comme « soup »",

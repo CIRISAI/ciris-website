@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (GPT models)",
     "techDetail3Item3": "इतर OpenAI-compatible providers",
     "ctaPara": "सुरू करायला तयार आहात?",
-    "ctaBtn": "CIRIS Agent Install करा"
+    "ctaBtn": "CIRIS Agent Install करा",
+    "kicker": "Hosted CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "आम्ही कोणाकडूनही प्रतिक्रिया मागवत आहोत.",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> वरील GitHub issues हे योगदान देण्याचे ठिकाण आहे. Developer असणे आवश्यक नाही. Codebase माहीत असणे आवश्यक नाही. या site वरील एखादी गोष्ट तुम्हाला चुकीची वाटत असेल, किंवा जे बनवले जात आहे त्यात तुम्हाला काही समस्या दिसत असेल, तर issue उघडून सांगा. सर्वात उपयुक्त issues system च्या एका विशिष्ट भागाला नाव देतात आणि काय बदलावे याचे सुचवतात, पण कोणताही प्रामाणिक प्रतिसाद स्वागतार्ह आहे.",
     "engageP2Html": "संपूर्ण project ला आधार देणारा accord — CIRIS लोकांना काय देणे लागतो, आणि लोक त्याला काय देणे लागतात — <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> वर आहे आणि review साठी उघडा आहे. त्यात काहीतरी तुम्हाला योग्य वाटत नसेल, तर तेदेखील GitHub issue उघडण्यासारखे आहे.",
-    "engageP3": "Substantive issues वाचले जातात. काम आपल्या गतीने पुढे जाते."
+    "engageP3": "Substantive issues वाचले जातात. काम आपल्या गतीने पुढे जाते.",
+    "kicker": "समान दर्जाचे महासंघ"
   },
   "models": {
     "h1": "आम्ही कोणते LLM वापरतो आणि का",
@@ -1805,7 +1807,8 @@
     "cirisP3": "जेव्हा वास्तविक स्वातंत्र्य खूप कमी होते, तेव्हा एजंट आपल्या स्वतःच्या विचारांना नाजूक मानतो आणि एखाद्या व्यक्तीला पाहण्यास सांगतो.",
     "claimH2": "आम्ही काय दावा करतो, आणि काय नाही.",
     "claimP1": "आम्ही AI सुरक्षा सोडवलेली नाही. आम्ही एका उत्तराचा एक तुकडा तयार केला आहे, आणि आम्ही ते खुल्यात तपासत आहोत.",
-    "claimP2Html": "बाहेरच्या संघांनी अद्याप आमचे काम तपासलेले नाही. आम्ही हे स्पष्टपणे सांगतो. संपूर्ण सिद्धांत आणि गणित आमच्या <a href=\"/papers\" class=\"text-brand-primary hover:underline\">चार पेपरमध्ये</a> आहे. कोड उघडा आहे. जर आम्ही चुकीचे असलो, तर ते दाखवण्याचा मार्ग देखील उघड्यात आहे. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">सध्याची संशोधन स्थिती पाहा.</a>"
+    "claimP2Html": "बाहेरच्या संघांनी अद्याप आमचे काम तपासलेले नाही. आम्ही हे स्पष्टपणे सांगतो. संपूर्ण सिद्धांत आणि गणित आमच्या <a href=\"/papers\" class=\"text-brand-primary hover:underline\">चार पेपरमध्ये</a> आहे. कोड उघडा आहे. जर आम्ही चुकीचे असलो, तर ते दाखवण्याचा मार्ग देखील उघड्यात आहे. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">सध्याची संशोधन स्थिती पाहा.</a>",
+    "kicker": "संशोधन प्रयोगभूमी"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · इंग्रजी शब्द “soup” (सूप) सारखे उच्चारले जाते",

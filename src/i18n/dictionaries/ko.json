@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI(GPT 모델)",
     "techDetail3Item3": "기타 OpenAI 호환 제공업체",
     "ctaPara": "시작할 준비가 되셨나요?",
-    "ctaBtn": "CIRIS Agent 설치"
+    "ctaBtn": "CIRIS Agent 설치",
+    "kicker": "호스팅 CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "누구에게나 의견을 요청합니다.",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a>의 GitHub 이슈가 의견을 낼 수 있는 곳입니다. 개발자일 필요도 없습니다. 코드베이스를 알 필요도 없습니다. 이 사이트에서 뭔가 이상하게 읽히거나 구축 중인 것에 문제가 보이면 이슈를 열고 말씀해 주세요. 가장 유용한 이슈는 시스템의 특정 부분을 지목하고 변경해야 할 것을 제안하지만, 진정성 있는 참여라면 어떤 것이든 환영합니다.",
     "engageP2Html": "프로젝트 전체의 근거가 되는 협약, CIRIS가 사람들에게 지는 의무와 사람들이 CIRIS에 지는 의무는 <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a>에 있으며 검토를 위해 열려 있습니다. 그 안의 무언가가 불편하다면, 그것도 열어볼 만한 GitHub 이슈입니다.",
-    "engageP3": "실질적인 이슈는 읽힙니다. 작업은 자체 속도로 진행됩니다."
+    "engageP3": "실질적인 이슈는 읽힙니다. 작업은 자체 속도로 진행됩니다.",
+    "kicker": "동등한 자들의 연합"
   },
   "models": {
     "h1": "우리가 사용하는 LLM과 그 이유",
@@ -1805,7 +1807,8 @@
     "cirisP3": "실제 독립성이 너무 낮아지면, 에이전트는 자신의 생각을 취약하게 여기고 사람에게 살펴봐 달라고 요청합니다.",
     "claimH2": "우리가 주장하는 것, 그리고 주장하지 않는 것.",
     "claimP1": "우리는 AI 안전 문제를 해결하지 않았습니다. 하나의 답 중 한 부분을 만들었고, 공개적으로 테스트하고 있습니다.",
-    "claimP2Html": "외부 팀들이 아직 우리의 작업을 검증하지 않았습니다. 우리는 이것을 솔직하게 말합니다. 전체 이론과 수학은 <a href=\"/papers\" class=\"text-brand-primary hover:underline\">4편의 논문</a>에 있습니다. 코드는 공개되어 있습니다. 우리가 틀렸다면, 보여주는 방법도 공개되어 있습니다. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">현재 연구 현황을 확인하세요.</a>"
+    "claimP2Html": "외부 팀들이 아직 우리의 작업을 검증하지 않았습니다. 우리는 이것을 솔직하게 말합니다. 전체 이론과 수학은 <a href=\"/papers\" class=\"text-brand-primary hover:underline\">4편의 논문</a>에 있습니다. 코드는 공개되어 있습니다. 우리가 틀렸다면, 보여주는 방법도 공개되어 있습니다. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">현재 연구 현황을 확인하세요.</a>",
+    "kicker": "연구 실험장"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · “soup”라고 발음",

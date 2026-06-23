@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (مدل‌های GPT)",
     "techDetail3Item3": "سایر ارائه‌دهندگان سازگار با OpenAI",
     "ctaPara": "آماده شروع هستید؟",
-    "ctaBtn": "نصب CIRIS Agent"
+    "ctaBtn": "نصب CIRIS Agent",
+    "kicker": "CIRIS میزبانی‌شده"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "نظرات هر کسی را می‌خواهیم.",
     "engageP1Html": "Issues در GitHub روی <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> جایی است که می‌توانید نظر دهید. نیازی نیست توسعه‌دهنده باشید. نیازی نیست کدبیس را بدانید. اگر چیزی در این سایت اشتباه به نظر می‌رسد، یا اگر مشکلی در آنچه ساخته می‌شود می‌بینید، یک issue باز کنید و بگویید. مفیدترین issues بخش مشخصی از سیستم را نام می‌برند و پیشنهاد می‌کنند چه چیزی باید تغییر کند، اما هر مشارکت صادقانه‌ای خوشامد است.",
     "engageP2Html": "پیمانی که کل پروژه را بنیان می‌گذارد، آنچه CIRIS به مردم بدهکار است، و آنچه مردم در برابر CIRIS بدهکارند، در <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> است و برای بررسی باز می‌ماند. اگر چیزی در آن درست به نظر نمی‌رسد، آن هم یک issue در GitHub ارزش باز کردن دارد.",
-    "engageP3": "Issues جدی خوانده می‌شوند. کار با سرعت خودش پیش می‌رود."
+    "engageP3": "Issues جدی خوانده می‌شوند. کار با سرعت خودش پیش می‌رود.",
+    "kicker": "فدراسیونی از برابران"
   },
   "models": {
     "h1": "چه مدل‌های زبانی استفاده می‌کنیم و چرا",
@@ -1805,7 +1807,8 @@
     "cirisP3": "وقتی استقلال واقعی خیلی پایین می‌رود، عامل تفکر خودش را شکننده می‌پندارد و از یک نفر می‌خواهد نگاهی بیندازد.",
     "claimH2": "آنچه ادعا می‌کنیم، و آنچه ادعا نمی‌کنیم.",
     "claimP1": "ما ایمنی هوش مصنوعی را حل نکرده‌ایم. یک تکه از یک پاسخ ساخته‌ایم، و آن را به‌صورت آشکار آزمایش می‌کنیم.",
-    "claimP2Html": "تیم‌های خارجی هنوز کار ما را بررسی نکرده‌اند. این را صادقانه می‌گوییم. نظریه کامل و ریاضیات در <a href=\"/papers\" class=\"text-brand-primary hover:underline\">چهار مقاله</a> ما هستند. کد باز است. اگر اشتباه می‌کنیم، راه نشان دادنش هم باز است. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">وضعیت فعلی پژوهش را ببینید.</a>"
+    "claimP2Html": "تیم‌های خارجی هنوز کار ما را بررسی نکرده‌اند. این را صادقانه می‌گوییم. نظریه کامل و ریاضیات در <a href=\"/papers\" class=\"text-brand-primary hover:underline\">چهار مقاله</a> ما هستند. کد باز است. اگر اشتباه می‌کنیم، راه نشان دادنش هم باز است. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">وضعیت فعلی پژوهش را ببینید.</a>",
+    "kicker": "بستر پژوهشی آزمایشی"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · تلفظ مانند واژه‌ی انگلیسی “soup”",

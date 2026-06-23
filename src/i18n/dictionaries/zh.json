@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI（GPT系列模型）",
     "techDetail3Item3": "其他OpenAI兼容提供商",
     "ctaPara": "准备好开始了吗？",
-    "ctaBtn": "安装CIRIS Agent"
+    "ctaBtn": "安装CIRIS Agent",
+    "kicker": "托管 CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "我们欢迎任何人提出意见。",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a>的GitHub议题是发表意见的地方。您不必是开发者，不必了解代码库。如果本站某处内容让您觉得不对，或者您发现正在构建的内容存在问题，请开一个议题说明。最有用的议题会指出系统的具体部分并提出应该更改的内容，但任何真诚的参与都欢迎。",
     "engageP2Html": "支撑整个项目的协议（Accord）——CIRIS对人的承诺，以及人对CIRIS的回馈——在<a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a>，持续开放审阅。如果其中某处让您感到不妥，那也值得开一个GitHub议题。",
-    "engageP3": "有实质内容的议题会被阅读。工作按自己的节奏推进。"
+    "engageP3": "有实质内容的议题会被阅读。工作按自己的节奏推进。",
+    "kicker": "平等者联盟"
   },
   "models": {
     "h1": "我们使用哪些LLM及原因",
@@ -1805,7 +1807,8 @@
     "cirisP3": "当真正的独立性降得过低时，智能体会将自己的思考视为脆弱的，并请求人来查看。",
     "claimH2": "我们主张什么，不主张什么。",
     "claimP1": "我们并未解决 AI 安全问题。我们建立了一个答案的一个片段，并在公开环境中测试它。",
-    "claimP2Html": "外部团队尚未核验我们的工作。我们坦率地说明这一点。完整理论和数学推导在我们的 <a href=\"/papers\" class=\"text-brand-primary hover:underline\">四篇论文</a>中。代码是开放的。如果我们有误，指出的方式也同样是公开的。<a href=\"/research-status\" class=\"text-brand-primary hover:underline\">查看当前研究现状。</a>"
+    "claimP2Html": "外部团队尚未核验我们的工作。我们坦率地说明这一点。完整理论和数学推导在我们的 <a href=\"/papers\" class=\"text-brand-primary hover:underline\">四篇论文</a>中。代码是开放的。如果我们有误，指出的方式也同样是公开的。<a href=\"/research-status\" class=\"text-brand-primary hover:underline\">查看当前研究现状。</a>",
+    "kicker": "研究试验台"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · 读音像英文 “soup”（汤）",

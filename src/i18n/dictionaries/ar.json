@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (نماذج GPT)",
     "techDetail3Item3": "مزودون آخرون متوافقون مع OpenAI",
     "ctaPara": "هل أنت مستعد للبدء؟",
-    "ctaBtn": "ثبّت CIRIS Agent"
+    "ctaBtn": "ثبّت CIRIS Agent",
+    "kicker": "CIRIS المُستضاف"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "نطلب تعليقات من أي شخص.",
     "engageP1Html": "مشكلات GitHub على <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> هي المكان للتعبير عن رأيك. لا تحتاج إلى أن تكون مطورًا. لا تحتاج إلى معرفة قاعدة الكود. إذا قرأت شيئًا على هذا الموقع يبدو خاطئًا، أو رأيت مشكلة فيما يُبنى، افتح مشكلة وقلها. أكثر المشكلات فائدة هي التي تُسمّي جزءًا محددًا من النظام وتقترح ما يجب تغييره، لكن أي تفاعل صادق مرحَّب به.",
     "engageP2Html": "الميثاق الذي يُؤسَّس عليه المشروع بأكمله، ما يدين به CIRIS للناس وما يدين به الناس له، موجود في <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> وهو مفتوح للمراجعة. إذا كان شيء فيه لا يرتاح له بالك، فهذا أيضًا مشكلة GitHub تستحق الفتح.",
-    "engageP3": "المشكلات الجوهرية تُقرأ. يسير العمل بوتيرته الخاصة."
+    "engageP3": "المشكلات الجوهرية تُقرأ. يسير العمل بوتيرته الخاصة.",
+    "kicker": "اتحاد من أنداد"
   },
   "models": {
     "h1": "نماذج LLM التي نستخدمها ولماذا",
@@ -1805,7 +1807,8 @@
     "cirisP3": "حين تنخفض الاستقلالية الحقيقية كثيراً، يعامل الوكيل تفكيره الخاص كهشّ ويطلب من شخص ما النظر فيه.",
     "claimH2": "ما ندّعيه وما لا ندّعيه.",
     "claimP1": "لم نحلّ مشكلة أمان الذكاء الاصطناعي. بنينا قطعةً واحدةً من إجابة واحدة، ونختبرها في الفضاء المفتوح.",
-    "claimP2Html": "لم تتحقق فِرق خارجية من عملنا بعد. نقول ذلك بصراحة. النظرية الكاملة والرياضيات موجودتان في <a href=\"/papers\" class=\"text-brand-primary hover:underline\">أوراقنا الأربع</a>. الكود مفتوح. والطريقة لإثبات خطئنا مفتوحة أيضاً. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">اطّلع على حالة البحث الراهنة.</a>"
+    "claimP2Html": "لم تتحقق فِرق خارجية من عملنا بعد. نقول ذلك بصراحة. النظرية الكاملة والرياضيات موجودتان في <a href=\"/papers\" class=\"text-brand-primary hover:underline\">أوراقنا الأربع</a>. الكود مفتوح. والطريقة لإثبات خطئنا مفتوحة أيضاً. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">اطّلع على حالة البحث الراهنة.</a>",
+    "kicker": "بيئة بحث تجريبية"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · تُنطق مثل كلمة “soup”",

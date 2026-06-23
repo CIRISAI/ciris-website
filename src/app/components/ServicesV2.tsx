@@ -22,7 +22,7 @@ export default function ServicesV2({ t, locale }: { t: Dictionary; locale: strin
     <ContentShell
       locale={locale}
       accent="ok"
-      kicker="CIRIS Services"
+      kicker={sv.kicker}
       title={sv.heroHeading}
       lede={sv.heroSub}
       backHref="/"

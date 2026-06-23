@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (GPT ماڈل)",
     "techDetail3Item3": "دیگر OpenAI سے مطابقت رکھنے والے فراہم کنندگان",
     "ctaPara": "شروع کرنے کے لیے تیار ہیں؟",
-    "ctaBtn": "CIRIS Agent انسٹال کریں"
+    "ctaBtn": "CIRIS Agent انسٹال کریں",
+    "kicker": "Hosted CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "ہم ہر کسی سے تبصرے مانگ رہے ہیں۔",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> پر GitHub issues وہ جگہ ہے جہاں آپ اپنی رائے دے سکتے ہیں۔ آپ کو ڈیولپر ہونے کی ضرورت نہیں۔ آپ کو کوڈ بیس جاننے کی ضرورت نہیں۔ اگر اس سائٹ پر کچھ آپ کو غلط لگے، یا اگر آپ جو بنایا جا رہا ہے اس میں کوئی مسئلہ دیکھیں، ایک issue کھولیں اور بتائیں۔ سب سے مفید issues نظام کے کسی مخصوص حصے کو نام دیتے ہیں اور بتاتے ہیں کہ کیا بدلنا چاہیے، لیکن کوئی بھی ایمانداری سے کی گئی شمولیت خوش آمدید ہے۔",
     "engageP2Html": "وہ Accord جو پورے منصوبے کی بنیاد ہے، CIRIS کے لوگوں سے کیا فرض ہے، اور لوگ اس کے بدلے میں کیا دیتے ہیں، <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> پر ہے اور جائزے کے لیے کھلا ہے۔ اگر اس میں کوئی بات آپ کو ٹھیک نہ لگے، وہ بھی GitHub issue کھولنے کے قابل ہے۔",
-    "engageP3": "اہم issues پڑھے جاتے ہیں۔ کام اپنی رفتار سے آگے بڑھتا رہتا ہے۔"
+    "engageP3": "اہم issues پڑھے جاتے ہیں۔ کام اپنی رفتار سے آگے بڑھتا رہتا ہے۔",
+    "kicker": "برابروں کا اتحاد"
   },
   "models": {
     "h1": "ہم کون سے LLM استعمال کرتے ہیں اور کیوں",
@@ -1805,7 +1807,8 @@
     "cirisP3": "جب حقیقی آزادی بہت کم ہو جائے تو ایجنٹ اپنی سوچ کو نازک سمجھتا ہے اور کسی انسان سے دیکھنے کو کہتا ہے۔",
     "claimH2": "ہم کیا دعویٰ کرتے ہیں، اور کیا نہیں۔",
     "claimP1": "ہم نے AI کی حفاظت حل نہیں کی ہے۔ ہم نے ایک جواب کا ایک حصہ بنایا ہے، اور ہم اسے کھلے میدان میں آزما رہے ہیں۔",
-    "claimP2Html": "باہری ٹیموں نے ابھی تک ہمارا کام نہیں جانچا۔ ہم یہ صاف کہتے ہیں۔ مکمل نظریہ اور ریاضی ہمارے <a href=\"/papers\" class=\"text-brand-primary hover:underline\">چار مقالوں</a> میں ہے۔ کوڈ کھلا ہے۔ اگر ہم غلط ہیں تو اسے دکھانے کا طریقہ بھی کھلے میدان میں ہے۔ <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">موجودہ تحقیقی صورتِ حال دیکھیں۔</a>"
+    "claimP2Html": "باہری ٹیموں نے ابھی تک ہمارا کام نہیں جانچا۔ ہم یہ صاف کہتے ہیں۔ مکمل نظریہ اور ریاضی ہمارے <a href=\"/papers\" class=\"text-brand-primary hover:underline\">چار مقالوں</a> میں ہے۔ کوڈ کھلا ہے۔ اگر ہم غلط ہیں تو اسے دکھانے کا طریقہ بھی کھلے میدان میں ہے۔ <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">موجودہ تحقیقی صورتِ حال دیکھیں۔</a>",
+    "kicker": "تحقیقی تجربہ گاہ"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · تلفظ انگریزی لفظ “soup” جیسا",

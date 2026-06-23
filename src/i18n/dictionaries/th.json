@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (โมเดล GPT)",
     "techDetail3Item3": "ผู้ให้บริการอื่นที่เข้ากันได้กับ OpenAI",
     "ctaPara": "พร้อมเริ่มใช้งานแล้วหรือยัง?",
-    "ctaBtn": "ติดตั้ง CIRIS Agent"
+    "ctaBtn": "ติดตั้ง CIRIS Agent",
+    "kicker": "CIRIS แบบโฮสต์"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "เรากำลังขอความคิดเห็นจากทุกคน",
     "engageP1Html": "GitHub issues บน <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> คือที่สำหรับแสดงความเห็น คุณไม่จำเป็นต้องเป็นนักพัฒนา คุณไม่จำเป็นต้องรู้ codebase ถ้ามีบางสิ่งในเว็บไซต์นี้ที่ดูผิดสำหรับคุณ หรือถ้าคุณเห็นปัญหากับสิ่งที่กำลังสร้าง เปิด issue และบอก issues ที่มีประโยชน์มากที่สุดระบุส่วนเฉพาะของระบบและเสนอสิ่งที่ควรเปลี่ยน แต่การมีส่วนร่วมอย่างซื่อสัตย์ใด ๆ ก็ยินดีต้อนรับ",
     "engageP2Html": "ข้อตกลงที่รองรับโครงการทั้งหมด สิ่งที่ CIRIS เป็นหนี้ต่อผู้คน และสิ่งที่ผู้คนเป็นหนี้กลับ อยู่ที่ <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> และยังเปิดให้ตรวจสอบ ถ้ามีบางสิ่งในนั้นที่ไม่ถูกต้องสำหรับคุณ นั่นก็เป็น GitHub issue ที่คุ้มค่าที่จะเปิด",
-    "engageP3": "issues ที่มีเนื้อหาสาระจะถูกอ่าน งานดำเนินต่อไปตามจังหวะของตัวเอง"
+    "engageP3": "issues ที่มีเนื้อหาสาระจะถูกอ่าน งานดำเนินต่อไปตามจังหวะของตัวเอง",
+    "kicker": "สหพันธ์แห่งความเท่าเทียม"
   },
   "models": {
     "h1": "โมเดล LLM ที่เราใช้และเหตุผล",
@@ -1805,7 +1807,8 @@
     "cirisP3": "เมื่อความเป็นอิสระจริงลดลงต่ำเกินไป เอเจนต์จะถือว่าการคิดของตัวเองเปราะบางและขอให้คนมาดู",
     "claimH2": "สิ่งที่เราอ้าง และสิ่งที่เราไม่อ้าง",
     "claimP1": "เราไม่ได้แก้ปัญหาความปลอดภัยของ AI เราได้สร้างหนึ่งส่วนของหนึ่งคำตอบ และเรากำลังทดสอบมันในที่เปิด",
-    "claimP2Html": "ทีมภายนอกยังไม่ได้ตรวจสอบการทำงานของเรา เราพูดอย่างชัดเจน ทฤษฎีทั้งหมดและคณิตศาสตร์อยู่ใน<a href=\"/papers\" class=\"text-brand-primary hover:underline\">บทความสี่ชิ้น</a>ของเรา โค้ดเป็นแบบเปิด ถ้าเราผิด วิธีการแสดงก็เป็นแบบเปิดเช่นกัน <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">ดูสถานะการวิจัยปัจจุบัน</a>"
+    "claimP2Html": "ทีมภายนอกยังไม่ได้ตรวจสอบการทำงานของเรา เราพูดอย่างชัดเจน ทฤษฎีทั้งหมดและคณิตศาสตร์อยู่ใน<a href=\"/papers\" class=\"text-brand-primary hover:underline\">บทความสี่ชิ้น</a>ของเรา โค้ดเป็นแบบเปิด ถ้าเราผิด วิธีการแสดงก็เป็นแบบเปิดเช่นกัน <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">ดูสถานะการวิจัยปัจจุบัน</a>",
+    "kicker": "แพลตฟอร์มวิจัยทดลอง"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · ออกเสียงว่า “soup”",

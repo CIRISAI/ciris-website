@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (GPT models)",
     "techDetail3Item3": "Other OpenAI-compatible providers",
     "ctaPara": "Ready to get started?",
-    "ctaBtn": "Install CIRIS Agent"
+    "ctaBtn": "Install CIRIS Agent",
+    "kicker": "Hosted CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "We are requesting comments from anyone.",
     "engageP1Html": "GitHub issues on <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> is the place to weigh in. You do not need to be a developer. You do not need to know the codebase. If something on this site reads wrong to you, or if you see a problem with what is being built, open an issue and say so. The most useful issues name a specific part of the system and propose what should change, but any honest engagement is welcome.",
     "engageP2Html": "The accord that grounds the whole project, what CIRIS owes to people, and what people owe back, is at <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> and remains open for review. If something in it does not sit right with you, that is also a GitHub issue worth opening.",
-    "engageP3": "Substantive issues are read. The work proceeds at its own pace."
+    "engageP3": "Substantive issues are read. The work proceeds at its own pace.",
+    "kicker": "A federation of equals"
   },
   "models": {
     "h1": "What LLMs We Use and Why",
@@ -1526,7 +1528,8 @@
     "cirisP3": "When real independence drops too low, the agent treats its own thinking as fragile and asks a person to look.",
     "claimH2": "What we claim, and what we do not.",
     "claimP1": "We have not solved AI safety. We have built one piece of one answer, and we are testing it in the open.",
-    "claimP2Html": "Outside teams have not yet checked our work. We say so plainly. The full theory and the math live in our <a href=\"/papers\" class=\"text-brand-primary hover:underline\">four papers</a>. The code is open. If we are wrong, the way to show it is in the open too. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">See the current research status.</a>"
+    "claimP2Html": "Outside teams have not yet checked our work. We say so plainly. The full theory and the math live in our <a href=\"/papers\" class=\"text-brand-primary hover:underline\">four papers</a>. The code is open. If we are wrong, the way to show it is in the open too. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">See the current research status.</a>",
+    "kicker": "Research testbed"
   },
   "researchStatus": {
     "heroLabel": "Research status",

@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI（GPTモデル）",
     "techDetail3Item3": "その他のOpenAI互換プロバイダー",
     "ctaPara": "始める準備はできましたか？",
-    "ctaBtn": "CIRISエージェントをインストール"
+    "ctaBtn": "CIRISエージェントをインストール",
+    "kicker": "ホスト型 CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "誰からでもコメントを受け付けています。",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a>のGitHubイシューが意見を述べる場所です。開発者である必要はありません。コードベースを知っている必要もありません。このサイトの何かがおかしいと感じたり、構築されているものに問題が見えたりしたら、イシューを開いて伝えてください。最も役立つイシューは、システムの特定の部分を指摘し、変えるべき内容を提案するものですが、誠実な参加はすべて歓迎です。",
     "engageP2Html": "プロジェクト全体の基盤となっている協定、CIRISが人々に対して負うもの、そして人々がCIRISに対して負うものは、<a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a>にあり、レビューを受け付けています。何かが腑に落ちない場合も、GitHubイシューを開く価値があります。",
-    "engageP3": "内容のあるイシューは読まれます。作業は独自のペースで進みます。"
+    "engageP3": "内容のあるイシューは読まれます。作業は独自のペースで進みます。",
+    "kicker": "平等な連合体"
   },
   "models": {
     "h1": "使用しているLLMとその理由",
@@ -1805,7 +1807,8 @@
     "cirisP3": "真の独立性が十分に低くなると、エージェントは自身の考えを脆弱として扱い、人間に確認を求めます。",
     "claimH2": "私たちが主張すること、主張しないこと。",
     "claimP1": "私たちはAI安全性を解決したわけではありません。一つの答えの一部を構築し、公開の場でテストしています。",
-    "claimP2Html": "外部チームはまだ私たちの作業を確認していません。そのことをはっきり述べています。完全な理論と数学は私たちの<a href=\"/papers\" class=\"text-brand-primary hover:underline\">四本の論文</a>にあります。コードは公開されています。私たちが間違っている場合、それを示す方法も公開の場にあります。<a href=\"/research-status\" class=\"text-brand-primary hover:underline\">現在の研究ステータスを確認してください。</a>"
+    "claimP2Html": "外部チームはまだ私たちの作業を確認していません。そのことをはっきり述べています。完全な理論と数学は私たちの<a href=\"/papers\" class=\"text-brand-primary hover:underline\">四本の論文</a>にあります。コードは公開されています。私たちが間違っている場合、それを示す方法も公開の場にあります。<a href=\"/research-status\" class=\"text-brand-primary hover:underline\">現在の研究ステータスを確認してください。</a>",
+    "kicker": "研究実験基盤"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · 「soup」と発音",

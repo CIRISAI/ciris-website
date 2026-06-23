@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (GPT ਮਾਡਲ)",
     "techDetail3Item3": "ਹੋਰ OpenAI-ਅਨੁਕੂਲ ਪ੍ਰੋਵਾਈਡਰ",
     "ctaPara": "ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ ਹੋ?",
-    "ctaBtn": "CIRIS Agent ਇੰਸਟਾਲ ਕਰੋ"
+    "ctaBtn": "CIRIS Agent ਇੰਸਟਾਲ ਕਰੋ",
+    "kicker": "Hosted CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "ਅਸੀਂ ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ ਤੋਂ ਟਿੱਪਣੀਆਂ ਮੰਗ ਰਹੇ ਹਾਂ।",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> 'ਤੇ GitHub ਮੁੱਦੇ ਰਾਏ ਦੇਣ ਦੀ ਜਗ੍ਹਾ ਹਨ। ਤੁਹਾਨੂੰ ਡਿਵੈਲਪਰ ਹੋਣ ਦੀ ਲੋੜ ਨਹੀਂ। ਤੁਹਾਨੂੰ ਕੋਡਬੇਸ ਜਾਣਨ ਦੀ ਲੋੜ ਨਹੀਂ। ਜੇ ਇਸ ਸਾਈਟ 'ਤੇ ਕੁਝ ਗਲਤ ਲੱਗਦਾ ਹੈ, ਜਾਂ ਜੇ ਤੁਸੀਂ ਜੋ ਬਣਾਇਆ ਜਾ ਰਿਹਾ ਹੈ ਉਸ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਦੇਖਦੇ ਹੋ, ਤਾਂ ਇੱਕ ਮੁੱਦਾ ਖੋਲ੍ਹੋ ਅਤੇ ਕਹੋ। ਸਭ ਤੋਂ ਉਪਯੋਗੀ ਮੁੱਦੇ ਸਿਸਟਮ ਦੇ ਕਿਸੇ ਖਾਸ ਹਿੱਸੇ ਦਾ ਨਾਮ ਦਿੰਦੇ ਹਨ ਅਤੇ ਦੱਸਦੇ ਹਨ ਕਿ ਕੀ ਬਦਲਣਾ ਚਾਹੀਦਾ ਹੈ, ਪਰ ਕੋਈ ਵੀ ਇਮਾਨਦਾਰ ਭਾਗੀਦਾਰੀ ਸੁਆਗਤਯੋਗ ਹੈ।",
     "engageP2Html": "ਪੂਰੇ ਪ੍ਰੋਜੈਕਟ ਦਾ ਆਧਾਰ ਬਣਨ ਵਾਲਾ ਇਕਰਾਰਨਾਮਾ, ਜੋ CIRIS ਲੋਕਾਂ ਦਾ ਕੀ ਰਿਣੀ ਹੈ ਅਤੇ ਲੋਕ ਵਾਪਸ ਕੀ ਦਿੰਦੇ ਹਨ, <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> 'ਤੇ ਹੈ ਅਤੇ ਸਮੀਖਿਆ ਲਈ ਖੁੱਲ੍ਹਾ ਹੈ। ਜੇ ਇਸ ਵਿੱਚ ਕੁਝ ਤੁਹਾਨੂੰ ਸਹੀ ਨਹੀਂ ਲੱਗਦਾ, ਇਹ ਵੀ ਖੋਲ੍ਹਣ ਯੋਗ GitHub ਮੁੱਦਾ ਹੈ।",
-    "engageP3": "ਮਹੱਤਵਪੂਰਨ ਮੁੱਦੇ ਪੜ੍ਹੇ ਜਾਂਦੇ ਹਨ। ਕੰਮ ਆਪਣੀ ਰਫ਼ਤਾਰ ਨਾਲ ਅੱਗੇ ਵਧਦਾ ਹੈ।"
+    "engageP3": "ਮਹੱਤਵਪੂਰਨ ਮੁੱਦੇ ਪੜ੍ਹੇ ਜਾਂਦੇ ਹਨ। ਕੰਮ ਆਪਣੀ ਰਫ਼ਤਾਰ ਨਾਲ ਅੱਗੇ ਵਧਦਾ ਹੈ।",
+    "kicker": "ਬਰਾਬਰਾਂ ਦੀ ਸੰਘ"
   },
   "models": {
     "h1": "ਅਸੀਂ ਕਿਹੜੇ LLM ਵਰਤਦੇ ਹਾਂ ਅਤੇ ਕਿਉਂ",
@@ -1805,7 +1807,8 @@
     "cirisP3": "ਜਦੋਂ ਅਸਲੀ ਆਜ਼ਾਦੀ ਬਹੁਤ ਘੱਟ ਜਾਂਦੀ ਹੈ, ਏਜੰਟ ਆਪਣੀ ਸੋਚ ਨੂੰ ਕਮਜ਼ੋਰ ਮੰਨਦਾ ਹੈ ਅਤੇ ਕਿਸੇ ਇਨਸਾਨ ਨੂੰ ਦੇਖਣ ਲਈ ਕਹਿੰਦਾ ਹੈ।",
     "claimH2": "ਅਸੀਂ ਕੀ ਦਾਅਵਾ ਕਰਦੇ ਹਾਂ, ਅਤੇ ਕੀ ਨਹੀਂ ਕਰਦੇ।",
     "claimP1": "ਅਸੀਂ AI ਸੁਰੱਖਿਆ ਦਾ ਹੱਲ ਨਹੀਂ ਕੀਤਾ। ਅਸੀਂ ਇੱਕ ਜਵਾਬ ਦਾ ਇੱਕ ਟੁਕੜਾ ਬਣਾਇਆ ਹੈ, ਅਤੇ ਅਸੀਂ ਇਸਨੂੰ ਖੁੱਲ੍ਹੇ ਆਮ ਟੈਸਟ ਕਰ ਰਹੇ ਹਾਂ।",
-    "claimP2Html": "ਬਾਹਰੀ ਟੀਮਾਂ ਨੇ ਅਜੇ ਸਾਡੇ ਕੰਮ ਦੀ ਜਾਂਚ ਨਹੀਂ ਕੀਤੀ। ਅਸੀਂ ਇਹ ਸਾਫ਼ ਕਹਿੰਦੇ ਹਾਂ। ਪੂਰੀ ਥਿਊਰੀ ਅਤੇ ਗਣਿਤ ਸਾਡੇ <a href=\"/papers\" class=\"text-brand-primary hover:underline\">ਚਾਰ ਪੇਪਰਾਂ</a> ਵਿੱਚ ਹੈ। ਕੋਡ ਖੁੱਲ੍ਹਾ ਹੈ। ਜੇ ਅਸੀਂ ਗਲਤ ਹਾਂ, ਇਹ ਦਿਖਾਉਣ ਦਾ ਤਰੀਕਾ ਵੀ ਖੁੱਲ੍ਹਾ ਹੈ। <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">ਮੌਜੂਦਾ ਖੋਜ ਸਥਿਤੀ ਦੇਖੋ।</a>"
+    "claimP2Html": "ਬਾਹਰੀ ਟੀਮਾਂ ਨੇ ਅਜੇ ਸਾਡੇ ਕੰਮ ਦੀ ਜਾਂਚ ਨਹੀਂ ਕੀਤੀ। ਅਸੀਂ ਇਹ ਸਾਫ਼ ਕਹਿੰਦੇ ਹਾਂ। ਪੂਰੀ ਥਿਊਰੀ ਅਤੇ ਗਣਿਤ ਸਾਡੇ <a href=\"/papers\" class=\"text-brand-primary hover:underline\">ਚਾਰ ਪੇਪਰਾਂ</a> ਵਿੱਚ ਹੈ। ਕੋਡ ਖੁੱਲ੍ਹਾ ਹੈ। ਜੇ ਅਸੀਂ ਗਲਤ ਹਾਂ, ਇਹ ਦਿਖਾਉਣ ਦਾ ਤਰੀਕਾ ਵੀ ਖੁੱਲ੍ਹਾ ਹੈ। <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">ਮੌਜੂਦਾ ਖੋਜ ਸਥਿਤੀ ਦੇਖੋ।</a>",
+    "kicker": "ਖੋਜ ਪ੍ਰਯੋਗਸ਼ਾਲਾ"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · “soup” ਵਾਂਗ ਉਚਾਰਿਆ ਜਾਂਦਾ ਹੈ",

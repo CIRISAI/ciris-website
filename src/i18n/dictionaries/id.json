@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (model GPT)",
     "techDetail3Item3": "Penyedia kompatibel OpenAI lainnya",
     "ctaPara": "Siap memulai?",
-    "ctaBtn": "Instal CIRIS Agent"
+    "ctaBtn": "Instal CIRIS Agent",
+    "kicker": "CIRIS Terkelola"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "Kami meminta komentar dari siapa saja.",
     "engageP1Html": "Isu GitHub di <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> adalah tempat untuk menyampaikan pendapat. Anda tidak perlu menjadi pengembang. Anda tidak perlu mengetahui basis kode. Jika ada sesuatu di situs ini yang terasa salah bagi Anda, atau jika Anda melihat masalah dengan apa yang sedang dibangun, buka isu dan sampaikan. Isu yang paling berguna menyebutkan bagian spesifik sistem dan mengusulkan apa yang harus diubah, tetapi keterlibatan jujur apa pun disambut.",
     "engageP2Html": "Accord yang mendasari seluruh proyek ini, apa yang CIRIS berutang kepada manusia, dan apa yang manusia berutang kembali, ada di <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> dan tetap terbuka untuk ditinjau. Jika ada sesuatu di dalamnya yang tidak terasa benar bagi Anda, itu juga merupakan isu GitHub yang layak dibuka.",
-    "engageP3": "Isu-isu substantif dibaca. Pekerjaan berlanjut dengan kecepatannya sendiri."
+    "engageP3": "Isu-isu substantif dibaca. Pekerjaan berlanjut dengan kecepatannya sendiri.",
+    "kicker": "Federasi yang setara"
   },
   "models": {
     "h1": "LLM yang Kami Gunakan dan Alasannya",
@@ -1805,7 +1807,8 @@
     "cirisP3": "Ketika kemandirian nyata turun terlalu rendah, agen memperlakukan pemikirannya sendiri sebagai rapuh dan meminta seseorang untuk melihatnya.",
     "claimH2": "Apa yang kami klaim, dan apa yang tidak.",
     "claimP1": "Kami belum memecahkan keamanan AI. Kami telah membangun satu bagian dari satu jawaban, dan kami mengujinya secara terbuka.",
-    "claimP2Html": "Tim luar belum memeriksa pekerjaan kami. Kami mengatakannya dengan jelas. Teori lengkap dan matematikanya ada dalam <a href=\"/papers\" class=\"text-brand-primary hover:underline\">empat makalah</a> kami. Kodenya terbuka. Jika kami salah, cara untuk menunjukkannya juga terbuka. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Lihat status penelitian saat ini.</a>"
+    "claimP2Html": "Tim luar belum memeriksa pekerjaan kami. Kami mengatakannya dengan jelas. Teori lengkap dan matematikanya ada dalam <a href=\"/papers\" class=\"text-brand-primary hover:underline\">empat makalah</a> kami. Kodenya terbuka. Jika kami salah, cara untuk menunjukkannya juga terbuka. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Lihat status penelitian saat ini.</a>",
+    "kicker": "Wahana riset"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · dilafalkan seperti “soup”",

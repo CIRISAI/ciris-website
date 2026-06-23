@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (GPT modelleri)",
     "techDetail3Item3": "Diğer OpenAI uyumlu sağlayıcılar",
     "ctaPara": "Başlamaya hazır mısınız?",
-    "ctaBtn": "CIRIS Agent'ı Yükle"
+    "ctaBtn": "CIRIS Agent'ı Yükle",
+    "kicker": "Hosted CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "Herkesten yorum istiyoruz.",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> üzerindeki GitHub sorunları görüş bildirmek için doğru yerdir. Geliştirici olmanız gerekmez. Kod tabanını bilmeniz gerekmez. Bu sitede yanlış okunan bir şey varsa ya da inşa edilen şeyde bir sorun görüyorsanız, bir sorun açın ve belirtin. En yararlı sorunlar sistemin belirli bir bölümünü adlandırır ve neyin değişmesi gerektiğini önerir, ancak her dürüst katılım memnuniyetle karşılanır.",
     "engageP2Html": "Tüm projenin dayandığı anlaşma; CIRIS'in insanlara karşı yükümlülükleri ve insanların karşılıklı yükümlülükleri <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> adresindedir ve incelemeye açık kalmaya devam etmektedir. İçinde sizi rahatsız eden bir şey varsa bu da açılmaya değer bir GitHub sorunudur.",
-    "engageP3": "Kapsamlı sorunlar okunur. Çalışmalar kendi hızında ilerler."
+    "engageP3": "Kapsamlı sorunlar okunur. Çalışmalar kendi hızında ilerler.",
+    "kicker": "Eşitler federasyonu"
   },
   "models": {
     "h1": "Kullandığımız Dil Modelleri ve Nedenleri",
@@ -1805,7 +1807,8 @@
     "cirisP3": "Gerçek bağımsızlık çok düştüğünde, ajan kendi düşüncesini kırılgan sayar ve bir insanın bakmasını ister.",
     "claimH2": "Ne iddia ediyoruz ve ne etmiyoruz.",
     "claimP1": "Yapay zeka güvenliğini çözmedik. Bir yanıtın bir parçasını inşa ettik ve açık biçimde test ediyoruz.",
-    "claimP2Html": "Dış ekipler çalışmamızı henüz denetlemedi. Bunu açıkça söylüyoruz. Tam teori ve matematik <a href=\"/papers\" class=\"text-brand-primary hover:underline\">dört makalede</a> yer alıyor. Kod açık. Yanılıyorsak bunu göstermenin yolu da açıkta. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Mevcut araştırma durumuna bakın.</a>"
+    "claimP2Html": "Dış ekipler çalışmamızı henüz denetlemedi. Bunu açıkça söylüyoruz. Tam teori ve matematik <a href=\"/papers\" class=\"text-brand-primary hover:underline\">dört makalede</a> yer alıyor. Kod açık. Yanılıyorsak bunu göstermenin yolu da açıkta. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Mevcut araştırma durumuna bakın.</a>",
+    "kicker": "Araştırma platformu"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · İngilizce “soup” (çorba) gibi okunur",

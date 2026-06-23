@@ -4,7 +4,7 @@
 
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
+import { DEFAULT_LOCALE, localizeHref, localeMeta } from "@/i18n/config";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import SvgGraphic, { PATH_GRAPHIC } from "@/app/components/graphics/SvgGraphic";
 import StoreBadges from "@/app/components/graphics/StoreBadges";
@@ -24,6 +24,7 @@ export default function PathStaircase({ t, slug }: { t: Dictionary; slug: string
   const p = t.paths[slug as keyof typeof t.paths];
   const c = t.pathsCommon;
   const lh = (href: string) => localizeHref(href, locale);
+  const backArrow = localeMeta(locale).dir === "rtl" ? "→" : "←";
 
   return (
     <>
@@ -37,7 +38,7 @@ export default function PathStaircase({ t, slug }: { t: Dictionary; slug: string
       <main className={`${styles.wrap} ${ACCENT[p.accent] ?? styles.cyan}`}>
         <SiteHeader locale={locale} />
         <p className={styles.back}>
-          <Link href={lh("/")}>&larr; {c.back}</Link>
+          <Link href={lh("/")}>{backArrow} {c.back}</Link>
         </p>
 
         <header className={styles.head}>

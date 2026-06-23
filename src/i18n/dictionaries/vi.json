@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (các mô hình GPT)",
     "techDetail3Item3": "Các nhà cung cấp tương thích OpenAI khác",
     "ctaPara": "Sẵn sàng bắt đầu?",
-    "ctaBtn": "Cài Đặt CIRIS Agent"
+    "ctaBtn": "Cài Đặt CIRIS Agent",
+    "kicker": "CIRIS được lưu trữ"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "Chúng tôi đang yêu cầu ý kiến từ bất kỳ ai.",
     "engageP1Html": "Các vấn đề GitHub trên <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> là nơi để đóng góp ý kiến. Bạn không cần phải là nhà phát triển. Bạn không cần biết codebase. Nếu có gì đó trên trang này đọc không đúng với bạn, hoặc nếu bạn thấy vấn đề với những gì đang được xây dựng, hãy mở một vấn đề và nói ra. Những vấn đề hữu ích nhất nêu tên một phần cụ thể của hệ thống và đề xuất những gì cần thay đổi, nhưng bất kỳ sự tham gia trung thực nào đều được chào đón.",
     "engageP2Html": "Hiệp ước làm nền tảng cho toàn bộ dự án, những gì CIRIS nợ con người và những gì con người nợ lại, ở tại <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> và vẫn mở để xem xét. Nếu có gì đó trong đó không phù hợp với bạn, đó cũng là một vấn đề GitHub đáng mở.",
-    "engageP3": "Các vấn đề thực chất được đọc. Công việc tiến hành theo nhịp độ của riêng nó."
+    "engageP3": "Các vấn đề thực chất được đọc. Công việc tiến hành theo nhịp độ của riêng nó.",
+    "kicker": "Liên minh bình đẳng"
   },
   "models": {
     "h1": "Những LLM Chúng Tôi Dùng và Lý Do",
@@ -1805,7 +1807,8 @@
     "cirisP3": "Khi sự độc lập thực sự giảm xuống quá thấp, tác nhân coi suy nghĩ của mình là mong manh và yêu cầu một người nhìn vào.",
     "claimH2": "Những gì chúng tôi tuyên bố, và những gì chúng tôi không tuyên bố.",
     "claimP1": "Chúng tôi chưa giải quyết được vấn đề an toàn AI. Chúng tôi đã xây dựng một mảnh của một câu trả lời, và chúng tôi đang kiểm tra nó một cách công khai.",
-    "claimP2Html": "Các nhóm bên ngoài chưa kiểm tra công việc của chúng tôi. Chúng tôi nói thẳng điều đó. Toàn bộ lý thuyết và toán học nằm trong <a href=\"/papers\" class=\"text-brand-primary hover:underline\">bốn bài báo</a> của chúng tôi. Mã nguồn là mở. Nếu chúng tôi sai, cách chứng minh điều đó cũng ở nơi công khai. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Xem tình trạng nghiên cứu hiện tại.</a>"
+    "claimP2Html": "Các nhóm bên ngoài chưa kiểm tra công việc của chúng tôi. Chúng tôi nói thẳng điều đó. Toàn bộ lý thuyết và toán học nằm trong <a href=\"/papers\" class=\"text-brand-primary hover:underline\">bốn bài báo</a> của chúng tôi. Mã nguồn là mở. Nếu chúng tôi sai, cách chứng minh điều đó cũng ở nơi công khai. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Xem tình trạng nghiên cứu hiện tại.</a>",
+    "kicker": "Môi trường nghiên cứu thử nghiệm"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · đọc như “soup”",

@@ -9,7 +9,7 @@
 // page's hero graphic. Defaults to cyan.
 
 import Link from "next/link";
-import { localizeHref, DEFAULT_LOCALE } from "@/i18n/config";
+import { localizeHref, DEFAULT_LOCALE, localeMeta } from "@/i18n/config";
 import SiteHeader from "@/app/components/SiteHeader";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import SvgGraphic from "@/app/components/graphics/SvgGraphic";
@@ -51,6 +51,7 @@ export default function ContentShell({
 }) {
   const isLocalized = locale !== DEFAULT_LOCALE;
   const lh = (href: string) => localizeHref(href, locale);
+  const backArrow = localeMeta(locale).dir === "rtl" ? "→" : "←";
 
   return (
     <>
@@ -61,7 +62,7 @@ export default function ContentShell({
       <main className={`${styles.wrap} ${ACCENT[accent]}`}>
         {backHref && (
           <p className={styles.back}>
-            <Link href={lh(backHref)}>&larr; {backLabel ?? "back"}</Link>
+            <Link href={lh(backHref)}>{backArrow} {backLabel ?? "back"}</Link>
           </p>
         )}
 

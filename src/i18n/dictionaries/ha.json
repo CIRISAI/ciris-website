@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (ƙira na GPT)",
     "techDetail3Item3": "Sauran masu samarwa masu dacewa da OpenAI",
     "ctaPara": "Shirye ka fara?",
-    "ctaBtn": "Shigar da CIRIS Agent"
+    "ctaBtn": "Shigar da CIRIS Agent",
+    "kicker": "CIRIS Mai Masaukin Baƙi"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "Muna roƙon ra'ayi daga kowa.",
     "engageP1Html": "Batutuwa na GitHub akan <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> shine wurin da za a bayyana ra'ayi. Ba sai ka zama mai haɓaka ba. Ba sai ka san ƙwaƙwalwar lambar ba. Idan wani abu a wannan shafi ya karanta maka ba daidai ba, ko kuma idan ka ga matsala tare da abin da ake ginawa, buɗe batun ka ce haka. Batutuwa mafi amfani suna suna wani ɓangare na tsarin kuma suna ba da shawara kan abin da ya kamata a canja, amma kowane shiga na gaskiya ana maraba da shi.",
     "engageP2Html": "Yarjejeniyar da ke kafa dukkan aikin, abin da CIRIS ke bin mutane, da abin da mutane ke bin mu, tana a <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> kuma tana buɗe don sake duba. Idan wani abu a cikinta bai daidaita maka ba, shi ma batun GitHub ne da ya cancanci buɗewa.",
-    "engageP3": "Ana karanta batutuwa masu ƙima. Aikin yana ci gaba da kansa."
+    "engageP3": "Ana karanta batutuwa masu ƙima. Aikin yana ci gaba da kansa.",
+    "kicker": "Tarayyar daidaito"
   },
   "models": {
     "h1": "Waɗanne LLMs Muke Amfani da su da Dalilinsa",
@@ -1805,7 +1807,8 @@
     "cirisP3": "Lokacin da zaman kansa na ainihi ya faɗi ƙasa sosai, wakili yana kula da kansa tunanin a matsayin mai rauni kuma yana roƙon mutum ya duba.",
     "claimH2": "Abin da muke da'awa, da kuma abin da ba mu yi ba.",
     "claimP1": "Ba mu warware amincin AI ba. Mun gina ɓangare guda ɗaya na amsa guda ɗaya, kuma muna gwada shi a fili.",
-    "claimP2Html": "Ƙungiyoyi na waje har yanzu ba su duba aikin mu ba. Muna cewa haka a fili. Cikakken ka'idar da lissafi suna zaune a cikin <a href=\"/papers\" class=\"text-brand-primary hover:underline\">takardu huɗu</a>. Lambar buɗaɗɗe ce. Idan mun yi kuskure, hanyar nuna shi a fili ma. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Duba matsayin bincike na yanzu.</a>"
+    "claimP2Html": "Ƙungiyoyi na waje har yanzu ba su duba aikin mu ba. Muna cewa haka a fili. Cikakken ka'idar da lissafi suna zaune a cikin <a href=\"/papers\" class=\"text-brand-primary hover:underline\">takardu huɗu</a>. Lambar buɗaɗɗe ce. Idan mun yi kuskure, hanyar nuna shi a fili ma. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Duba matsayin bincike na yanzu.</a>",
+    "kicker": "Filin gwajin bincike"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · ana furta shi kamar “soup”",

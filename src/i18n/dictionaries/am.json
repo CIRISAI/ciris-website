@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (GPT ሞዴሎች)",
     "techDetail3Item3": "ሌሎች OpenAI-ተኳሃኝ አቅራቢዎች",
     "ctaPara": "ለመጀመር ዝግጁ ነዎት?",
-    "ctaBtn": "CIRIS Agent ጫኑ"
+    "ctaBtn": "CIRIS Agent ጫኑ",
+    "kicker": "የተስተናገደ CIRIS"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "ከማንኛውም ሰው ሃሳብ ጠይቃለን።",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> ላይ GitHub ጉዳዮቹ ሃሳብ ለማቅረቢ ቦታ ነው። ዲቨሎፐር ሊሆኑ አያስፈልግም። ኮዱን ሊያውቁ አያስፈልግም። ይህ ድረ-ገፅ ላይ ምንም ሲሳሳት ሲያዩ፣ ወይም ምን እየተሠራ ካለው ጋር ችግር ሲፈልጉ፣ ጉዳይ ክፍቱ እና ያስረዱ። በጣም ጠቃሚ ጉዳዮቹ ስርዓቱ ቁርጥ ክፍሉን ይጠቅሳሉ እና ምን ሊቀየር ይገባው ሐሳብ ያቀርባሉ፣ ግን ቀጥተኛ ሃሳብ ሁሉ ጥሩ ነው።",
     "engageP2Html": "ሙሉ ፕሮጀክቱ መሠረት ያደረገው ስምምነት - CIRIS ለሰዎች ምን ዕዳ አለበት፣ ሰዎችም ምን ዕዳ አለባቸው - <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> ላይ ሆኖ ለፍተሻ ክፍት ነው። ሆኖ ምንም ሲሳሳት ካዩ፣ ያ ደግሞ GitHub ጉዳይ ሊሆን የሚያስፈልግ ነው።",
-    "engageP3": "ትርጉም ያላቸው ጉዳዮቹ ይነበባሉ። ሥራ ፍጥነቱ ሥጋቱ ነው።"
+    "engageP3": "ትርጉም ያላቸው ጉዳዮቹ ይነበባሉ። ሥራ ፍጥነቱ ሥጋቱ ነው።",
+    "kicker": "የእኩሎች ፌዴሬሽን"
   },
   "models": {
     "h1": "ምን LLM እንጠቀማለን እና ለምን",
@@ -1805,7 +1807,8 @@
     "cirisP3": "ትክክለኛ ነፃነቱ ዝቅ ሲሆን፣ ወኪሉ ምክንያቱ ሊሰበር ሆኖ ሰው ሊፈትሽ ይጠይቃሉ።",
     "claimH2": "ምን ሚናገሩ — እና ምን ሚናገሩ ሳይሆን።",
     "claimP1": "AI ደህንነቱ አልፈታንም። አንዱ ጅምሩ አንዱ ቁራጭ ሠርተናል — ክፍቱ ቦታ ፈትሸናለን።",
-    "claimP2Html": "ውጪ ቡድኖቻቸው ሥራን ገና አልፈተሹም። ቀጥ ብለን እናወጣዋለን። ሙሉ ቲዎሪ እና ሂሳቡ <a href=\"/papers\" class=\"text-brand-primary hover:underline\">አራት ጽሑፎቻቸን</a> ውስጥ ናቸው። ኮዱ ክፍቱ ነው። ስንሳሳቱ ሊያሳዩ ያሉ ቦታ ደግሞ ክፍቱ ነው። <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">አሁን ያለ የምርምር ሁኔታ ይመልከቱ።</a>"
+    "claimP2Html": "ውጪ ቡድኖቻቸው ሥራን ገና አልፈተሹም። ቀጥ ብለን እናወጣዋለን። ሙሉ ቲዎሪ እና ሂሳቡ <a href=\"/papers\" class=\"text-brand-primary hover:underline\">አራት ጽሑፎቻቸን</a> ውስጥ ናቸው። ኮዱ ክፍቱ ነው። ስንሳሳቱ ሊያሳዩ ያሉ ቦታ ደግሞ ክፍቱ ነው። <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">አሁን ያለ የምርምር ሁኔታ ይመልከቱ።</a>",
+    "kicker": "የምርምር መድረክ"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · እንደ “soup” ይነበባል",

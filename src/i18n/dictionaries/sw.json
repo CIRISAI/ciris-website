@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (modeli za GPT)",
     "techDetail3Item3": "Watoa huduma wengine wanaooana na OpenAI",
     "ctaPara": "Uko tayari kuanza?",
-    "ctaBtn": "Sakinisha CIRIS Agent"
+    "ctaBtn": "Sakinisha CIRIS Agent",
+    "kicker": "CIRIS Inayosimamiwa"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "Tunaomba maoni kutoka kwa kila mtu.",
     "engageP1Html": "Masuala ya GitHub kwenye <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> ndio mahali pa kutoa maoni. Huhitaji kuwa msanidi. Huhitaji kujua msingi wa msimbo. Kama kitu kwenye tovuti hii kinakusomea vibaya, au kama unaona tatizo na kinachojengwa, fungua suala na useme hivyo. Masuala yenye manufaa zaidi yanabainisha sehemu mahususi ya mfumo na kupendekeza kinachopaswa kubadilika, lakini ushirikiano wowote wa uaminifu unakaribisha.",
     "engageP2Html": "Mkataba unaounga mkono mradi wote, CIRIS inadaiwa kwa watu, na watu wanaodaiwa nyuma, uko kwenye <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> na unabaki wazi kwa mapitio. Kama kitu ndani yake hakukusadishi, hiyo pia ni suala la GitHub linalostahili kufunguliwa.",
-    "engageP3": "Masuala ya kina yanasomwa. Kazi inaendelea kwa kasi yake yenyewe."
+    "engageP3": "Masuala ya kina yanasomwa. Kazi inaendelea kwa kasi yake yenyewe.",
+    "kicker": "Muungano wa washirika sawa"
   },
   "models": {
     "h1": "Modeli za LLM Tunazotumia na Sababu Zake",
@@ -1805,7 +1807,8 @@
     "cirisP3": "Uhuru wa kweli ukipungua sana, wakala unachukulia mawazo yake mwenyewe kuwa dhaifu na kuomba mtu atazame.",
     "claimH2": "Tunachokidai, na tunachokidai sivyo.",
     "claimP1": "Hatujamaliza usalama wa AI. Tumejenga kipande kimoja cha jibu moja, na tunakijaribu wazi.",
-    "claimP2Html": "Timu za nje bado hazijakagua kazi yetu. Tunasema hivyo wazi. Nadharia kamili na hesabu zinaishi katika <a href=\"/papers\" class=\"text-brand-primary hover:underline\">makala zetu nne</a>. Msimbo uko wazi. Tukikosea, njia ya kuonyesha hivyo iko wazi pia. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Tazama hali ya utafiti wa sasa.</a>"
+    "claimP2Html": "Timu za nje bado hazijakagua kazi yetu. Tunasema hivyo wazi. Nadharia kamili na hesabu zinaishi katika <a href=\"/papers\" class=\"text-brand-primary hover:underline\">makala zetu nne</a>. Msimbo uko wazi. Tukikosea, njia ya kuonyesha hivyo iko wazi pia. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Tazama hali ya utafiti wa sasa.</a>",
+    "kicker": "Mazingira ya utafiti"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · hutamkwa kama “soup”",

@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (modelos GPT)",
     "techDetail3Item3": "Otros proveedores compatibles con OpenAI",
     "ctaPara": "¿Listo para empezar?",
-    "ctaBtn": "Instalar CIRIS Agent"
+    "ctaBtn": "Instalar CIRIS Agent",
+    "kicker": "CIRIS alojado"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "Pedimos comentarios a cualquier persona.",
     "engageP1Html": "Los issues de GitHub en <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> son el lugar para opinar. No necesitas ser desarrollador. No necesitas conocer el código. Si algo en este sitio te parece incorrecto, o si ves un problema con lo que se está construyendo, abre un issue y dilo. Los issues más útiles nombran una parte específica del sistema y proponen qué debería cambiar, pero cualquier participación honesta es bienvenida.",
     "engageP2Html": "El accord que sostiene todo el proyecto, lo que CIRIS debe a las personas y lo que las personas deben a cambio, está en <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> y sigue abierto a revisión. Si algo en él no te convence, también vale la pena abrir un issue en GitHub.",
-    "engageP3": "Los issues sustanciales se leen. El trabajo avanza a su propio ritmo."
+    "engageP3": "Los issues sustanciales se leen. El trabajo avanza a su propio ritmo.",
+    "kicker": "Una federación de iguales"
   },
   "models": {
     "h1": "Qué LLM usamos y por qué",
@@ -1805,7 +1807,8 @@
     "cirisP3": "Cuando la independencia real cae demasiado, el agente trata su propio razonamiento como frágil y pide a una persona que lo revise.",
     "claimH2": "Lo que afirmamos, y lo que no.",
     "claimP1": "No hemos resuelto la seguridad de la IA. Hemos construido una pieza de una respuesta posible, y la estamos probando de forma abierta.",
-    "claimP2Html": "Equipos externos aún no han verificado nuestro trabajo. Lo decimos claramente. La teoría completa y las matemáticas están en nuestros <a href=\"/papers\" class=\"text-brand-primary hover:underline\">cuatro artículos</a>. El código es abierto. Si estamos equivocados, la forma de demostrarlo también es pública. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Ver el estado actual de la investigación.</a>"
+    "claimP2Html": "Equipos externos aún no han verificado nuestro trabajo. Lo decimos claramente. La teoría completa y las matemáticas están en nuestros <a href=\"/papers\" class=\"text-brand-primary hover:underline\">cuatro artículos</a>. El código es abierto. Si estamos equivocados, la forma de demostrarlo también es pública. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Ver el estado actual de la investigación.</a>",
+    "kicker": "Plataforma de investigación"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · se pronuncia como “soup” (sopa en inglés)",

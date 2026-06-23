@@ -88,7 +88,7 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
             <Link
               key={d.k}
               href={lh(d.href)}
-              className={`${styles.door} ${ACCENT[d.accent]} ${d.heavy ? styles.heavy : ""}`}
+              className={`${styles.door} ${ACCENT[d.accent] ?? styles.cyan} ${d.heavy ? styles.heavy : ""}`}
             >
               <span className={styles.glow} />
               <div className={styles.bar} />

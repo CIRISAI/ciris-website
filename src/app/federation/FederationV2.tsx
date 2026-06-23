@@ -42,7 +42,7 @@ export default function FederationV2({ t, locale }: { t: Dictionary; locale: str
     <ContentShell
       locale={locale}
       accent="teal"
-      kicker="The CIRIS Federation"
+      kicker={f.kicker}
       title={sh.h1}
       lede={sh.subtitleSimple}
       graphicId="g08"

@@ -1358,7 +1358,8 @@
     "techDetail3Item2": "OpenAI (àwọn àkópọ̀ àṣàrò ìlànà GPT)",
     "techDetail3Item3": "Àwọn olùpèsè mìíràn tó bára mu OpenAI",
     "ctaPara": "Ṣetan láti bẹ̀rẹ̀?",
-    "ctaBtn": "Fi CIRIS Agent sórí ẹrọ"
+    "ctaBtn": "Fi CIRIS Agent sórí ẹrọ",
+    "kicker": "CIRIS Alejo"
   },
   "federation": {
     "shell": {
@@ -1411,7 +1412,8 @@
     "engageH2": "A ń béèrè àwọn ìròyìn láti ọ̀dọ̀ ẹnikẹ́ni.",
     "engageP1Html": "Àwọn ìṣòro GitHub lórí <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> ni ibi tí o lè sọ̀rọ̀. Ẹ kò nílò láti jẹ́ olùgbéjáde. Ẹ kò nílò láti mọ ipilẹ̀ kóodù. Bí nǹkan kan lórí ìkànnì yìí kò dára sí ọ, tàbí bí o bá rí ìṣòro pẹ̀lú ohun tí a ń kọ́, ṣi ìṣòro kan kí o sọ̀. Àwọn ìṣòro tí ó wúlò jù ló ń dárúkọ apá pàtàkì kan nínú ètò kí wọ́n sì fi hàn ohun tí o yẹ kí a yípadà, ṣùgbọ́n kíkópa tòótọ́ kankan ni a kí.",
     "engageP2Html": "Àdéhùn tí ó dúró mú gbogbo iṣẹ́ àkọ́kọ́, ohun tí CIRIS jẹ̀ sí àwọn ènìyàn, àti ohun tí àwọn ènìyàn jẹ̀ padà, wà ní <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> tí ó ṣì wà ní ìhan fún àyẹ̀wò. Bí nǹkan kan nínú rẹ̀ kò bára mu ọ, ìyẹn sì jẹ́ ìṣòro GitHub tí ó tọ́ láti ṣii.",
-    "engageP3": "Àwọn ìṣòro pàtàkì ni a kà. Iṣẹ́ ń tẹ̀síwájú ní ìyáralù tirẹ̀."
+    "engageP3": "Àwọn ìṣòro pàtàkì ni a kà. Iṣẹ́ ń tẹ̀síwájú ní ìyáralù tirẹ̀.",
+    "kicker": "Ajọpọ awọn dogba"
   },
   "models": {
     "h1": "Àwọn LLM Tí A Ń Lò Àti Ìdí Rẹ̀",
@@ -1805,7 +1807,8 @@
     "cirisP3": "Nígbà tí ìlọ́tọ̀ gidi ṣubú jù kékeré lọ, aṣojú ń tọ́jú ìronú tirẹ̀ gẹ́gẹ́ bí aláìlera tó béèrè kí ènìyàn wo.",
     "claimH2": "Ohun tí a sọ, àti ohun tí a kò sọ.",
     "claimP1": "A kò ti ṣe ìdápadà ìsẹ̀lẹ̀ AI. A ti kọ́ apá kan ìdáhùn kan, a sì ń dán an wò ní gbangba.",
-    "claimP2Html": "Àwọn ẹgbẹ́ ode oni kò ti ṣàyẹ̀wò iṣẹ́ wa. A sọ ìyẹn ní gbangba. Ìmọ̀ ọna pípé àti ìṣirò wà nínú àwọn <a href=\"/papers\" class=\"text-brand-primary hover:underline\">ìwé mẹ́rin</a> wa. Kóòdù náà ṣí sílẹ̀. Bí a bá jẹ́ àṣìṣe, ọ̀nà fífi hàn bẹ́ẹ̀ wà ní gbangba pẹ̀lú. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Wo ipò ìwádìí lọwọlọwọ.</a>"
+    "claimP2Html": "Àwọn ẹgbẹ́ ode oni kò ti ṣàyẹ̀wò iṣẹ́ wa. A sọ ìyẹn ní gbangba. Ìmọ̀ ọna pípé àti ìṣirò wà nínú àwọn <a href=\"/papers\" class=\"text-brand-primary hover:underline\">ìwé mẹ́rin</a> wa. Kóòdù náà ṣí sílẹ̀. Bí a bá jẹ́ àṣìṣe, ọ̀nà fífi hàn bẹ́ẹ̀ wà ní gbangba pẹ̀lú. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Wo ipò ìwádìí lọwọlọwọ.</a>",
+    "kicker": "Ile-iṣẹ iwadi"
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · a n pe e bi “soup”",
