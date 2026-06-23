@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import CrowdsourcingAlignmentContent from "@/app/components/CrowdsourcingAlignmentContent";
+import CrowdsourcingAlignmentV2 from "@/app/components/CrowdsourcingAlignmentV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -35,6 +35,7 @@ export default async function LocalizedCrowdsourcingAlignment({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <CrowdsourcingAlignmentContent t={dict} />;
+  const resolved = isLocale(locale) ? locale : "en";
+  const dict = getDictionary(resolved);
+  return <CrowdsourcingAlignmentV2 t={dict} locale={resolved} />;
 }

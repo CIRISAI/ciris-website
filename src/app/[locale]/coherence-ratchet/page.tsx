@@ -5,8 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import Shell from "@/app/coherence-ratchet/Shell";
-import SimpleContent from "@/app/coherence-ratchet/SimpleContent";
+import CoherenceRatchetV2 from "@/app/components/CoherenceRatchetV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -37,9 +36,5 @@ export default async function LocalizedCoherenceRatchet({
 }) {
   const { locale } = await params;
   const t = getDictionary(isLocale(locale) ? locale : "en");
-  return (
-    <Shell level="simple" locale={locale} mtBanner={t.common.mtBanner}>
-      <SimpleContent t={t} />
-    </Shell>
-  );
+  return <CoherenceRatchetV2 t={t} locale={locale} />;
 }

@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import InstallContent from "@/app/components/InstallContent";
+import InstallV2 from "@/app/components/InstallV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -35,6 +35,7 @@ export default async function LocalizedInstall({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <InstallContent t={dict} />;
+  const safeLocale = isLocale(locale) ? locale : "en";
+  const dict = getDictionary(safeLocale);
+  return <InstallV2 t={dict} locale={safeLocale} />;
 }

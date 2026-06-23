@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import SafetyVsCensorshipContent from "@/app/components/SafetyVsCensorshipContent";
+import SafetyVsCensorshipV2 from "@/app/components/SafetyVsCensorshipV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import {
   PREFIXED_LOCALES,
@@ -35,6 +35,7 @@ export default async function LocalizedSafetyVsCensorship({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <SafetyVsCensorshipContent t={dict} />;
+  const resolved = isLocale(locale) ? locale : "en";
+  const dict = getDictionary(resolved);
+  return <SafetyVsCensorshipV2 t={dict} locale={resolved} />;
 }

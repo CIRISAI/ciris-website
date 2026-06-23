@@ -3,11 +3,11 @@
 // src/app/[locale]/install/.
 
 import { localizedSeo } from "@/lib/seo";
-import InstallContent from "@/app/components/InstallContent";
+import InstallV2 from "@/app/components/InstallV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/install", "en");
 
 export default function InstallPage() {
-  return <InstallContent t={getDictionary("en")} />;
+  return <InstallV2 t={getDictionary("en")} locale="en" />;
 }

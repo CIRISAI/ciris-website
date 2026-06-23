@@ -3,11 +3,11 @@
 // live at src/app/[locale]/crowdsourcing-alignment/.
 
 import { localizedSeo } from "@/lib/seo";
-import CrowdsourcingAlignmentContent from "@/app/components/CrowdsourcingAlignmentContent";
+import CrowdsourcingAlignmentV2 from "@/app/components/CrowdsourcingAlignmentV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/crowdsourcing-alignment", "en");
 
 export default function CrowdsourcingAlignmentPage() {
-  return <CrowdsourcingAlignmentContent t={getDictionary("en")} />;
+  return <CrowdsourcingAlignmentV2 t={getDictionary("en")} locale="en" />;
 }

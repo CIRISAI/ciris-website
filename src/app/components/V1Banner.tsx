@@ -28,6 +28,11 @@ const V2_ROUTES = new Set([
   "/mdd",
   "/models",
   "/first-contact",
+  "/crowdsourcing-alignment",
+  "/safety-vs-censorship",
+  "/coherence-collapse-analysis",
+  "/coherence-ratchet",
+  "/install",
 ]);
 
 export default function V1Banner() {
