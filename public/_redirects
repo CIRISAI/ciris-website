@@ -4,3 +4,7 @@
 # Legacy "covenant" naming → current "accord" naming
 /ciris_covenant.txt  /ciris_accord.txt  301
 /ciris_covenant.pdf  /ciris_accord.pdf  301
+
+# Proof page renamed from /research-status (2026-06-24)
+/research-status        /proof        301
+/:loc/research-status   /:loc/proof   301

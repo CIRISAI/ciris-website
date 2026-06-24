@@ -286,7 +286,7 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
           </div>
         </div>
         <p className={s.footnote}>
-          <Link href={lh("/research-status")}>{c.researchLink}</Link>
+          <Link href={lh("/proof")}>{c.researchLink}</Link>
         </p>
       </div>
 

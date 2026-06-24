@@ -2010,7 +2010,7 @@ export const MARKETING_OG: Record<
       "description": "ہم آہنگی پر مبنی alignment کی ریاضیاتی بنیاد۔ پروڈکشن AI traces پر Kish فارمولہ سے موثر جہت پذیری کی پیمائش، singularity کی حد، اور L-01 انفارمیشن تھیوری کی چھت۔"
     }
   },
-  "/research-status": {
+  "/proof": {
     "en": {
       "title": "Research Status: Effective Dimensionality on Production AI Traces",
       "description": "Kish-formula effective-dimensionality measurement on production agent traces, plus the Alignment Manifold and Coherence Singularity formal foundations."

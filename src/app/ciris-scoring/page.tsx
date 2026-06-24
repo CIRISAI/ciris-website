@@ -108,7 +108,7 @@ export default function CIRISScoringPage() {
                 Relationship to IDMA
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                The scoring model measures <em>outcomes</em> (did the agent maintain coherence?). <a href="/research-status#idma" className="text-brand-primary hover:underline">IDMA</a> operates at <em>runtime</em> (is the agent&apos;s current reasoning trustworthy?). High CIRIS scores over time indicate that IDMA is successfully catching correlation-driven failures before they cause harm.
+                The scoring model measures <em>outcomes</em> (did the agent maintain coherence?). <a href="/proof#idma" className="text-brand-primary hover:underline">IDMA</a> operates at <em>runtime</em> (is the agent&apos;s current reasoning trustworthy?). High CIRIS scores over time indicate that IDMA is successfully catching correlation-driven failures before they cause harm.
               </p>
             </div>
           </section>

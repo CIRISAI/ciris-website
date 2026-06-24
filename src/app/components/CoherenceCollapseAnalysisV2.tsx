@@ -175,7 +175,7 @@ export default function CoherenceCollapseAnalysisV2({
           <Link href={lh("/coherence-ratchet")} className={`${s.btn} ${s.btnP}`}>
             {c.closingCta1}
           </Link>
-          <Link href={lh("/research-status")} className={`${s.btn} ${s.btnS}`}>
+          <Link href={lh("/proof")} className={`${s.btn} ${s.btnS}`}>
             {c.closingCta2}
           </Link>
           <a

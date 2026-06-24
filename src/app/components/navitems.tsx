@@ -47,7 +47,7 @@ const navItems = [
   {
     name: "Research",
     subtitle: "Papers & proof",
-    link: "/research-status",
+    link: "/proof",
     key: "research",
     icon: <IconFlask className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },

@@ -1,8 +1,8 @@
-// Localized research-status page (/es/research-status, /am/research-status,
-// /ha/research-status, /yo/research-status, etc.).
+// Localized proof page (/es/proof, /am/proof,
+// /ha/proof, /yo/proof, etc.).
 // Thin entry point over the shared ResearchStatusContent, fed the locale's
 // dictionary. hreflang alternates point search engines at every locale's
-// research-status page so the right one surfaces per reader.
+// proof page so the right one surfaces per reader.
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
@@ -22,7 +22,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return localizedSeo("/research-status", locale);
+  return localizedSeo("/proof", locale);
 }
 
 export default async function LocalizedResearchStatus({

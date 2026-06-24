@@ -160,7 +160,7 @@ export default function PapersPage() {
 
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="/research-status"
+              href="/proof"
               className="inline-block rounded-lg bg-brand-primary px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90"
             >
               Research status
