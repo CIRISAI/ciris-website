@@ -1506,10 +1506,26 @@
     "engProofH2": "实测网络性能",
     "engProofBody": "上方的研究成果是证明的一半，另一半是承载它的网络。fabric 传输的每一个字节都经过后量子签名，成本在公开的 CI 运行器上实测得出，而非建模估算。自己运行，结果完全一致。",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "单 CPU 核心每秒处理的后量子签名事件数", "tag": "measured" },
-      { "v": "0", "l": "400 节点间的跨组数据泄露次数", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "每核心端到端加密吞吐量", "tag": "measured" },
-      { "v": "97.6%", "l": "在 20% 持有者离线时语料库仍可重建的比例", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "单 CPU 核心每秒处理的后量子签名事件数",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "400 节点间的跨组数据泄露次数",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "每核心端到端加密吞吐量",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "在 20% 持有者离线时语料库仍可重建的比例",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "查看全部实测数据，并自行复现",
     "flagshipBadge": "旗舰综合论文",
@@ -1533,7 +1549,7 @@
     "datasetEyebrow": "开放数据集",
     "datasetTitle": "CIRISAI/reasoning-traces",
     "datasetBody": "与《Constrained Reasoning Chains》研究一同发布的隐私保护推理追踪语料库，是该测量论文绘制地图所依赖的原始材料。",
-    "hfOrgTitle": "CIRISAI on Hugging Face",
+    "hfOrgTitle": "CIRISAI 在 Hugging Face 上",
     "hfOrgBody": "公开数据集与模型的完整组织页面 →",
     "sourceRepoNote": "综合论文的源代码仓库和 Lean 形式化湖：<a href=\"https://github.com/CIRISAI/coherence-ratchet\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold text-brand-primary hover:underline\">github.com/CIRISAI/coherence-ratchet</a>。",
     "mathEyebrow": "数学基础",

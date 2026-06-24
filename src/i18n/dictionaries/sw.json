@@ -279,7 +279,7 @@
       "bypass2Title": "Kina cha Mawazo",
       "bypass2Body": "Je, mantiki imezidi kina cha juu? Inasababisha DEFER kuzuia vitanzi visivyo na mwisho na kupandisha suala kwa wanadamu.",
       "facultiesHeading": "Vitivo vya Kimaadili (hufanya kazi kwa hatua zisizo na msamaha)",
-      "faculty1Title": "Entropy",
+      "faculty1Title": "Msongo",
       "faculty1Body": "Je, hatua inazuia kutokuwa na uhakika wa habari unaofaa? Inazuia madai ya kupita kiasi.",
       "faculty2Title": "Upatanifu",
       "faculty2Body": "Je, hatua inadumisha uthabiti wa ndani na ahadi na sababu zilizopita?",
@@ -1076,7 +1076,7 @@
     "resourceStatusNotYet": "bado haipo kwa {langCode}",
     "resourceLoadingMsg": "Inapakia kutoka GitHub...",
     "resourceErrorMsg": "Imeshindwa kupakia: {error}. Fungua kiungo cha GitHub moja kwa moja.",
-    "polyglotPill": "polyglot"
+    "polyglotPill": "msemaji wa lugha nyingi"
   },
   "firstContact": {
     "heroHeadline": "Mawasiliano ya Kwanza.",
@@ -1506,10 +1506,26 @@
     "engProofH2": "Mtandao, ukipimwa",
     "engProofBody": "Utafiti ulio juu ni nusu moja ya uthibitisho. Nusu nyingine ni mtandao unaobeba data hiyo. Kila baiti ambayo mtandao unasogeza imesainiwa kwa njia ya post-quantum, na gharama hupimwa kwenye CI runner ya umma, si kukadiriwa. Iendeshe mwenyewe na utapata nambari zile zile.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "matukio yaliyosainiwa kwa post-quantum yaliyoingizwa kwenye CPU core moja", "tag": "measured" },
-      { "v": "0", "l": "uvujaji wa data kati ya vikundi kwenye nodi 400", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "kasi ya end-to-end encryption kwa kila core", "tag": "measured" },
-      { "v": "97.6%", "l": "ya corpus inajengwa upya wakati asilimia 20 ya washikaji wako nje ya mtandao", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "matukio yaliyosainiwa kwa post-quantum yaliyoingizwa kwenye CPU core moja",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "uvujaji wa data kati ya vikundi kwenye nodi 400",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "kasi ya end-to-end encryption kwa kila core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "ya corpus inajengwa upya wakati asilimia 20 ya washikaji wako nje ya mtandao",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Ona kila nambari iliyopimwa, na uirudie mwenyewe",
     "flagshipBadge": "Makala kuu ya muhtasari",
@@ -1943,7 +1959,7 @@
           "label": "INAPIGWA NA INAPONA",
           "cap": "Eneo zima linaanguka, na kitambaa kinaelekeza upya kuzunguka na kupona. Uwepo hauzimiki kamwe.",
           "badge": "MFANO",
-          "badgeDesc": "Reroute + escrow repair",
+          "badgeDesc": "Panga upya njia + rekebisha akaunti ya amana",
           "stats": [
             "REROUTE (s)",
             "SOURCE + REPAIR"

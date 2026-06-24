@@ -638,7 +638,7 @@
     "card9Copy": "Генеруйте звіти, узгоджені з фреймворками SOC2, HIPAA та GDPR. Повний журнал аудиту всіх адміністративних операцій. Кожна дія зафіксована та атрибутована.",
     "identityActivationHeadline": "Активація ідентичності",
     "identityActivationSubheadline": "Ідентичність — це фундамент. Впевненість — це цінність.",
-    "tierCommunityName": "Community",
+    "tierCommunityName": "Спільнота",
     "tierCommunityPrice": "$1.50",
     "tierCommunityPriceSub": "за одну ідентичність агента",
     "tierCommunityIssuance": "Збір за видачу",
@@ -653,7 +653,7 @@
     "tierCommunityFeature3": "Криптографічний журнал аудиту",
     "tierCommunityFeature4": "Підтримка спільноти",
     "tierCommunityBtn": "Активувати зараз",
-    "tierProfessionalName": "Professional",
+    "tierProfessionalName": "Професійний",
     "tierProfessionalPrice": "$15.00",
     "tierProfessionalPriceSub": "активація + $10/агент/міс",
     "tierProfessionalIssuance": "Збір за видачу",
@@ -668,7 +668,7 @@
     "tierProfessionalFeature3": "Авторизація можливостей",
     "tierProfessionalFeature4": "SLA підтримки",
     "tierProfessionalBtn": "Зв'язатися з відділом продажів",
-    "tierEnterpriseName": "Enterprise",
+    "tierEnterpriseName": "Корпоративний",
     "tierEnterprisePrice": "$125.00",
     "tierEnterprisePriceSub": "активація + $100/агент/міс",
     "tierEnterpriseIssuance": "Збір за видачу",
@@ -683,7 +683,7 @@
     "tierEnterpriseFeature3": "Документація аудиту (відповідно до SOC2/HIPAA/GDPR)",
     "tierEnterpriseFeature4": "Підтримка розслідування інцидентів",
     "tierEnterpriseBtn": "Зв'язатися з відділом продажів",
-    "tierSafetyCriticalName": "Safety-Critical",
+    "tierSafetyCriticalName": "Критично важливий для безпеки",
     "tierSafetyCriticalPrice": "$1,250",
     "tierSafetyCriticalPriceSub": "активація + індивідуальна щомісячна оплата",
     "tierSafetyCriticalIssuance": "Збір за видачу",
@@ -1220,7 +1220,7 @@
     "rowHatcat": "HatCat",
     "rowHatcatChecks": "Так",
     "rowHatcatRules": "Частково",
-    "rowHatcatConscience": "Steering",
+    "rowHatcatConscience": "Керування",
     "rowHatcatProof": "Частково",
     "rowHatcatOpenSource": "CC0",
     "rowHatcatEcho": "Ні",
@@ -1348,7 +1348,7 @@
     "priority3Label": "Платні кредити (Stripe)",
     "priority3Sub": "$0.10 за взаємодію · Використовуються лише після вичерпання безкоштовних кредитів",
     "techHeading": "Технічні деталі",
-    "techDetail1Summary": "API Endpoint",
+    "techDetail1Summary": "Кінцева точка API",
     "techDetail1Para": "API-endpoint, сумісний з OpenAI, для CIRIS Agent",
     "techDetail2Summary": "Автентифікація",
     "techDetail2Para": "Автентифікація за API-ключем через заголовок Authorization:",
@@ -1359,7 +1359,7 @@
     "techDetail3Item3": "Інші провайдери, сумісні з OpenAI",
     "ctaPara": "Готові розпочати?",
     "ctaBtn": "Встановити CIRIS Agent",
-    "kicker": "Hosted CIRIS"
+    "kicker": "Хостинг CIRIS"
   },
   "federation": {
     "shell": {
@@ -1506,10 +1506,26 @@
     "engProofH2": "Тканина виміряна",
     "engProofBody": "Дослідження вище це одна половина доказу. Інша половина це мережа, яка його переносить. Кожен байт, який переміщує тканина, підписаний post-quantum-підписом, а витрати вимірюються на публічному CI runner, а не моделюються. Запустіть самостійно, і ви отримаєте ті самі числа.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "подій із post-quantum-підписом оброблено на одному CPU core", "tag": "measured" },
-      { "v": "0", "l": "витоків даних між групами на 400 вузлах", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "пропускна здатність наскрізного шифрування на одне ядро", "tag": "measured" },
-      { "v": "97.6%", "l": "корпусу відновлюється при 20% власників у офлайні", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "подій із post-quantum-підписом оброблено на одному CPU core",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "витоків даних між групами на 400 вузлах",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "пропускна здатність наскрізного шифрування на одне ядро",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "корпусу відновлюється при 20% власників у офлайні",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Перегляньте всі виміряні числа та відтворіть їх самостійно",
     "flagshipBadge": "Провідна синтезувальна стаття",
@@ -1643,7 +1659,7 @@
   "mdd": {
     "heroBadgeMethodology": "Методологія",
     "heroBadgeActive": "Активна: v1.0",
-    "heroEyebrow": "Mission Driven Development",
+    "heroEyebrow": "Розробка з місією",
     "h1": "Місія як четверта основа архітектури програмного забезпечення.",
     "heroPara": "Більшість програм запитують, як щось побудувати. Mission Driven Development (MDD) додає одне питання спочатку: навіщо ми це будуємо і чи відповідає цей вибір даній меті? CIRIS був побудований саме так, тому етика є частиною дизайну, а не правилом, доданим після.",
     "fourEyebrow": "Чотирикомпонентна модель",

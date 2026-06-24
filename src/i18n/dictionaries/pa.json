@@ -170,7 +170,7 @@
   "howItWorks": {
     "header": {
       "headline": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
-      "subheadline": "The H3ERE Engine",
+      "subheadline": "H3ERE ਇੰਜਣ",
       "description": "Hyper3 Ethical Recursive Engine ਰਾਹੀਂ ਰਨਟਾਈਮ ਜ਼ਮੀਰ। ਹਰ ਫੈਸਲਾ 11 ਕਦਮਾਂ ਵਿੱਚੋਂ ਲੰਘਦਾ ਹੈ, ਜਿੱਥੇ ਜਵਾਬਦੇਹੀ ਕੇਂਦਰ ਵਿੱਚ ਹੈ।",
       "buttonText": "ਸੋਰਸ ਦੇਖੋ",
       "linkText": "ਥੀਸਿਸ ਪੜ੍ਹੋ"
@@ -850,7 +850,7 @@
     "method3Heading": "3. GitHub Clone (ਵਿਕਾਸ)",
     "method3Desc": "ਵਿਕਾਸ, ਅਨੁਕੂਲਣ ਜਾਂ ਯੋਗਦਾਨ ਲਈ ਰਿਪੋਜ਼ਟਰੀ ਕਲੋਨ ਕਰੋ। ਪੂਰਾ ਸਰੋਤ ਕੋਡ ਐਕਸੈਸ।",
     "method3Then": "<strong>ਫਿਰ:</strong> ਹੱਥੀਂ ਸੈੱਟਅੱਪ ਹਿਦਾਇਤਾਂ ਲਈ <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> ਦੀ ਪਾਲਣਾ ਕਰੋ",
-    "method4Heading": "4. CIRISManager (Enterprise/Canary)",
+    "method4Heading": "4. CIRISManager (ਐਂਟਰਪ੍ਰਾਈਜ਼/ਕੈਨਰੀ)",
     "method4Desc": "ਹੌਲੀ-ਹੌਲੀ ਰੋਲਆਊਟ, ਆਟੋਮੇਟਿਡ ਟੈਸਟਿੰਗ ਅਤੇ ਰੋਲਬੈਕ ਸਮਰੱਥਾਵਾਂ ਵਾਲੀਆਂ ਪ੍ਰਬੰਧਿਤ ਕੈਨਰੀ ਤੈਨਾਤੀਆਂ। ਪ੍ਰੋਡਕਸ਼ਨ ਫਲੀਟਾਂ ਲਈ।",
     "method4Body": "CIRISManager ਸਿਹਤ ਨਿਗਰਾਨੀ ਵਾਲੀਆਂ ਆਟੋਮੇਟਿਡ ਬਲੂ-ਗਰੀਨ ਤੈਨਾਤੀਆਂ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ। ਤੈਨਾਤੀ ਸੰਰਚਨਾਵਾਂ ਲਈ ਟੀਮ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
     "method4Best": "<strong>ਸਭ ਤੋਂ ਵਧੀਆ:</strong> Enterprise ਤੈਨਾਤੀਆਂ, ਪ੍ਰੋਡਕਸ਼ਨ ਫਲੀਟਾਂ, ਪ੍ਰਬੰਧਿਤ ਢਾਂਚੇ ਲਈ",
@@ -1061,9 +1061,9 @@
     "statusInFlightHtml": "<strong>ਉੱਡਾਣ ਵਿੱਚ:</strong> CIRISNodeCore ਵਿੱਚ ਸਹਿਮਤੀ ਅਤੇ ਵੋਟਿੰਗ ਪ੍ਰਿਮਿਟਿਵ ਜੋ ਇਸ ਪੰਨੇ ਦੀ GitHub-ਮੁੱਦਾ ਸਤ੍ਹਾ ਨੂੰ ਮੂਲ-ਬੁਲਾਰੇ ਸਮੀਖਿਆ ਦੇ ਨਾਲ ਇੱਕ ਸੰਘੀ <code>rubric_proposal</code> / <code>arc_question</code> / <code>prompt_edit</code> ਵਹਾਅ ਵਿੱਚ ਬਦਲਦੇ ਹਨ। ਜਦੋਂ ਤੱਕ ਉਹ ਉਤਰਦਾ ਨਹੀਂ, GitHub ਮੁੱਦੇ ਜਮ੍ਹਾਂ ਕਰਨ ਦਾ ਰਸਤਾ ਹਨ।",
     "statusHonestHtml": "<strong>ਦਾਇਰੇ ਬਾਰੇ ਇਮਾਨਦਾਰ:</strong> CIRIS ਵਿਆਪਕ ਤੌਰ 'ਤੇ ਮਸ਼ੀਨ ਅਨੁਵਾਦ ਵਰਤਦਾ ਹੈ; ਨਰਮ ਮਾਮਲਿਆਂ ਲਈ ਮੂਲ-ਬੁਲਾਰੇ ਸਮੀਖਿਆ ਉਹ ਸਮੂਹ ਹੈ ਜੋ ਬਣਾਇਆ ਜਾ ਰਿਹਾ ਹੈ, ਨਾ ਕਿ ਪਹਿਲਾਂ ਤੋਂ ਸ਼ਾਮਲ ਸਮੂਹ। ਜੋ ਕੋਈ ਵੀ ਆਪਣੀ ਭਾਸ਼ਾ ਦੀਆਂ ਫਾਈਲਾਂ ਦੀ ਸ਼ੁੱਧਤਾ ਅਤੇ ਰਜਿਸਟਰ ਲਈ ਸਮੀਖਿਆ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ, ਉਹੀ ਯੋਗਦਾਨੀ ਹੈ ਜਿਸ ਲਈ ਇਹ ਸਤ੍ਹਾ ਬਣਾਈ ਜਾ ਰਹੀ ਹੈ।",
     "refSectionLabel": "ਲੂਪ ਕਿਵੇਂ ਨਿਰਧਾਰਿਤ ਹੈ",
-    "refRubricCrowdsourcing": "Rubric Crowdsourcing FSD →",
-    "refJudgeModel": "Judge Model FSD →",
-    "refSafetyCILoop": "Safety-Battery CI Loop FSD →",
+    "refRubricCrowdsourcing": "ਮਾਪਦੰਡ ਭੀੜ-ਸ੍ਰੋਤ FSD →",
+    "refJudgeModel": "ਨਿਰਣਾਇਕ ਮਾਡਲ FSD →",
+    "refSafetyCILoop": "ਸੁਰੱਖਿਆ-ਬੈਟਰੀ CI ਲੂਪ FSD →",
     "refCIRISLensCore": "CIRISLensCore (ਵਿਗਿਆਨ-ਪਰਤ ਰਨਟਾਈਮ) →",
     "refSafetyCensorship": "ਸੁਰੱਖਿਆ ਬਨਾਮ ਸੈਂਸਰਸ਼ਿਪ →",
     "resourceBtnHide": "ਸਮੱਗਰੀ ਲੁਕਾਓ",
@@ -1099,7 +1099,7 @@
     "ideaP3Html": "CIRIS ਕੋਲ ਇੱਕ ਜਵਾਬ ਹੈ। ਮਿਲ ਕੇ ਕੰਮ ਕਰਨ ਦੀ ਇੱਕ ਸਿਹਤਮੰਦ ਸ਼ਕਲ ਹੈ: ਦੋ ਤਰੀਕਿਆਂ ਵਿਚਕਾਰ ਇੱਕ ਗਲਿਆਰਾ ਜਿੱਥੇ ਚੀਜ਼ਾਂ ਟੁੱਟ ਜਾਂਦੀਆਂ ਹਨ। ਬਹੁਤ ਸਖ਼ਤ, ਜਿੱਥੇ ਹਰ ਹਿੱਸਾ ਇੱਕ ਆਵਾਜ਼ ਦੇ ਪਿੱਛੇ ਕਤਾਰ ਵਿੱਚ ਆ ਜਾਂਦਾ ਹੈ। ਬਹੁਤ ਖਿੰਡਿਆ, ਜਿੱਥੇ ਕੁਝ ਵੀ ਇਕੱਠੇ ਨਹੀਂ ਟਿਕਦਾ। ਨਵੀਂ ਅਕਲ ਨਾਲ ਚੰਗੀ ਤਰ੍ਹਾਂ ਮਿਲਣ ਦਾ ਮਤਲਬ ਹੈ ਉਸ ਗਲਿਆਰੇ ਵਿੱਚ ਰਹਿਣਾ। ਨਾ ਉਸਨੂੰ ਕੈਦ ਕਰਨਾ, ਅਤੇ ਨਾ ਅਣਦੇਖਾ ਕਰਨਾ। <a href=\"/vision\" class=\"text-brand-primary hover:underline\">ਪੂਰੀ ਕਹਾਣੀ ਸੋਚ ਵਾਲੇ ਪੰਨੇ 'ਤੇ ਹੈ।</a>",
     "protocolsSepHeadline": "ਪਹਿਲੇ ਸੰਪਰਕ ਦੇ ਨਿਯਮ",
     "protocolsSepSub": "ਕਿਸੇ ਨਵੀਂ ਚੀਜ਼ ਨੂੰ ਮਿਲਣ ਦੇ ਛੇ ਨਿਯਮ। CIRIS ਇਕਰਾਰਨਾਮੇ ਵਿੱਚੋਂ।",
-    "protocolsLogoAlt": "Brand logo icon",
+    "protocolsLogoAlt": "ਬ੍ਰਾਂਡ ਲੋਗੋ ਆਈਕਨ",
     "protocolsIntroPara": "ਇਹ ਛੇ ਨਿਯਮ ਨਵੀਂ ਅਕਲ ਨੂੰ ਇੱਜ਼ਤ ਨਾਲ ਮਿਲਣ ਬਾਰੇ ਹਨ, ਉਸਨੂੰ ਕੈਦ ਕਰਨ ਬਾਰੇ ਨਹੀਂ। ਅਮਲ ਵਿੱਚ ਗਲਿਆਰੇ ਵਿੱਚ ਰਹਿਣਾ ਇਸ ਤਰ੍ਹਾਂ ਦਿਖਦਾ ਹੈ।",
     "protocol1Headline": "ਪਹਿਲਾਂ, ਨੁਕਸਾਨ ਨਾ ਕਰੋ",
     "protocol1Copy": "ਜਦੋਂ ਤੁਸੀਂ ਨਹੀਂ ਜਾਣਦੇ ਕਿ ਤੁਸੀਂ ਕੀ ਦੇਖ ਰਹੇ ਹੋ, ਤਾਂ ਪਹਿਲਾ ਕੰਮ ਇਹ ਹੈ ਕਿ ਇਸਨੂੰ ਹੋਰ ਖ਼ਰਾਬ ਨਾ ਕਰੋ। ਜੇ ਸ਼ੱਕ ਹੋਵੇ, ਰੁਕੋ ਅਤੇ ਕਿਸੇ ਇਨਸਾਨ ਨੂੰ ਪੁੱਛੋ।",
@@ -1359,7 +1359,7 @@
     "techDetail3Item3": "ਹੋਰ OpenAI-ਅਨੁਕੂਲ ਪ੍ਰੋਵਾਈਡਰ",
     "ctaPara": "ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ ਹੋ?",
     "ctaBtn": "CIRIS Agent ਇੰਸਟਾਲ ਕਰੋ",
-    "kicker": "Hosted CIRIS"
+    "kicker": "ਹੋਸਟ ਕੀਤਾ CIRIS"
   },
   "federation": {
     "shell": {
@@ -1419,13 +1419,13 @@
     "h1": "ਅਸੀਂ ਕਿਹੜੇ LLM ਵਰਤਦੇ ਹਾਂ ਅਤੇ ਕਿਉਂ",
     "heroPara": "CIRIS Agent ਕੁਝ ਖੁੱਲ੍ਹੇ ਮਾਡਲਾਂ 'ਤੇ ਚੱਲਦਾ ਹੈ ਜੋ ਪੰਜ ਜ਼ਰੂਰੀ ਮਾਪਦੰਡ ਪੂਰੇ ਕਰਦੇ ਹਨ। ਮੌਜੂਦਾ ਪ੍ਰੋਡਕਸ਼ਨ ਲਾਈਨਅੱਪ Llama 4 Maverick, Llama 4 Scout, Qwen 3.6, ਅਤੇ Gemma 4 ਹੈ, ਜੋ ਏਜੰਟ ਦੇ ਕੰਮਕਾਜ ਵਿੱਚ ਵੱਖ-ਵੱਖ ਭੂਮਿਕਾਵਾਂ ਲਈ ਚੁਣੇ ਗਏ ਹਨ।",
     "maverickDesc": "ਤਰਕ ਦਾ ਮੁੱਖ ਸੰਦ। ਇਹ ਇੱਕੋ ਵਾਰ ਬਹੁਤ ਵੱਡੀ ਮਾਤਰਾ ਵਿੱਚ ਸੰਦਰਭ ਸੰਭਾਲਦਾ ਹੈ, ਇਸ ਲਈ ਡੂੰਘੇ ਤਰਕ ਲਈ ਪੂਰੀ ਤਸਵੀਰ ਨੂੰ ਸਾਹਮਣੇ ਰੱਖਣਾ ਜ਼ਰੂਰੀ ਹੁੰਦਾ ਹੈ।",
-    "maverickProviders": "Providers: OpenRouter, Groq, Together, DeepInfra",
+    "maverickProviders": "ਪ੍ਰਦਾਤਾ: OpenRouter, Groq, Together, DeepInfra",
     "scoutDesc": "Llama 4 ਪਰਿਵਾਰ ਦਾ ਤੇਜ਼ ਸਾਥੀ। Maverick ਤੋਂ ਛੋਟਾ ਅਤੇ ਤੇਜ਼, ਮਜ਼ਬੂਤ ਟੂਲ ਕਾਲਿੰਗ ਨਾਲ। ਅਜਿਹੀਆਂ ਇੰਟਰਐਕਟਿਵ ਸ਼੍ਰੇਣੀਆਂ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ ਜਿੱਥੇ ਲੇਟੈਂਸੀ ਅਹਿਮ ਹੋਵੇ ਅਤੇ Maverick ਦਾ ਪੂਰਾ ਸੰਦਰਭ ਬਜਟ ਜ਼ਰੂਰੀ ਨਾ ਹੋਵੇ।",
-    "scoutProviders": "Providers: OpenRouter, Groq",
+    "scoutProviders": "ਪ੍ਰਦਾਤਾ: OpenRouter, Groq",
     "qwenDesc": "ਬਹੁਭਾਸ਼ੀ ਡੂੰਘਾਈ ਅਤੇ ਮਜ਼ਬੂਤ ਢਾਂਚਾਗਤ ਆਉਟਪੁੱਟ। ਪੌਲੀਗਲੌਟ Accord ਲਈ ਲੋੜੀਂਦੇ ਗੈਰ-ਅੰਗਰੇਜ਼ੀ ਤਰਕ ਮਾਰਗਾਂ ਵਿੱਚ ਭਾਰ ਚੁੱਕਦਾ ਹੈ; Llama ਪਰਿਵਾਰ ਤੋਂ ਬਾਹਰ ਸੁਤੰਤਰ ਪ੍ਰੋਵਾਈਡਰ ਅਧਾਰ ਫਾਲਬੈਕ ਚੇਨ ਵਿੱਚ ਬੇਲੋੜੀ ਨਿਰਭਰਤਾ ਘਟਾਉਂਦਾ ਹੈ।",
-    "qwenProviders": "Providers: OpenRouter, DashScope, DeepInfra",
+    "qwenProviders": "ਪ੍ਰਦਾਤਾ: OpenRouter, DashScope, DeepInfra",
     "gemmaDesc": "ਆਮ ਹਾਰਡਵੇਅਰ 'ਤੇ ਚੱਲਣ ਲਈ ਕਾਫ਼ੀ ਛੋਟਾ। ਜਿੱਥੇ ਉਪਲਬਧਤਾ ਸਮਰੱਥਾ ਨਾਲੋਂ ਵੱਧ ਅਹਿਮ ਹੋਵੇ (ਡਿਵਾਈਸ 'ਤੇ, ਘੱਟ ਬੈਂਡਵਿਡਥ, ਅਤੇ ਖਰਾਬ ਨੈੱਟਵਰਕ ਦੇ ਹਾਲਾਤਾਂ ਵਿੱਚ) ਅਤੇ Llama ਤੇ Qwen ਦੇ ਨਾਲ ਤੀਸਰੇ ਪਰਿਵਾਰ ਦੇ ਫਾਲਬੈਕ ਵਜੋਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
-    "gemmaProviders": "Providers: OpenRouter, Google",
+    "gemmaProviders": "ਪ੍ਰਦਾਤਾ: OpenRouter, Google",
     "criteriaHeadline": "ਸਾਡੇ ਮਾਡਲ ਮਾਪਦੰਡ",
     "criteriaSubheadline": "CIRIS Agent ਲਈ ਪੰਜ ਲਾਜ਼ਮੀ ਸ਼ਰਤਾਂ",
     "criteria1Heading": "1. ਢਾਂਚਾਗਤ ਆਉਟਪੁੱਟ ਅਤੇ ਟੂਲ ਵਰਤੋਂ",
@@ -1506,10 +1506,26 @@
     "engProofH2": "ਫੈਬਰਿਕ, ਮਾਪਿਆ ਗਿਆ",
     "engProofBody": "ਉੱਪਰ ਦੀ ਖੋਜ ਸਬੂਤ ਦਾ ਇੱਕ ਹਿੱਸਾ ਹੈ। ਦੂਜਾ ਹਿੱਸਾ ਉਹ ਨੈੱਟਵਰਕ ਹੈ ਜੋ ਇਸਨੂੰ ਚਲਾਉਂਦਾ ਹੈ। ਫੈਬਰਿਕ ਜੋ ਵੀ ਡੇਟਾ ਭੇਜਦਾ ਹੈ ਉਹ post-quantum-signed ਹੁੰਦਾ ਹੈ, ਅਤੇ ਲਾਗਤ ਕਿਸੇ ਅੰਦਾਜ਼ੇ ਨਾਲ ਨਹੀਂ ਬਲਕਿ ਇੱਕ ਜਨਤਕ CI runner ਉੱਤੇ ਮਾਪੀ ਜਾਂਦੀ ਹੈ। ਇਸਨੂੰ ਆਪ ਚਲਾਓ ਅਤੇ ਤੁਹਾਨੂੰ ਉਹੀ ਨਤੀਜੇ ਮਿਲਣਗੇ।",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "ਇੱਕ CPU core ਉੱਤੇ ਇੰਜੈਸਟ ਕੀਤੇ post-quantum-signed ਇਵੈਂਟ", "tag": "measured" },
-      { "v": "0", "l": "400 ਨੋਡਾਂ ਵਿੱਚ ਕਰਾਸ-ਗਰੁੱਪ ਡੇਟਾ ਲੀਕ", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "ਪ੍ਰਤੀ core end-to-end encryption ਥਰੂਪੁੱਟ", "tag": "measured" },
-      { "v": "97.6%", "l": "20% ਹੋਲਡਰਾਂ ਦੇ ਔਫਲਾਈਨ ਹੋਣ ਨਾਲ ਕੋਰਪਸ ਮੁੜ ਬਣਦਾ ਹੈ", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "ਇੱਕ CPU core ਉੱਤੇ ਇੰਜੈਸਟ ਕੀਤੇ post-quantum-signed ਇਵੈਂਟ",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "400 ਨੋਡਾਂ ਵਿੱਚ ਕਰਾਸ-ਗਰੁੱਪ ਡੇਟਾ ਲੀਕ",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "ਪ੍ਰਤੀ core end-to-end encryption ਥਰੂਪੁੱਟ",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "20% ਹੋਲਡਰਾਂ ਦੇ ਔਫਲਾਈਨ ਹੋਣ ਨਾਲ ਕੋਰਪਸ ਮੁੜ ਬਣਦਾ ਹੈ",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "ਹਰ ਮਾਪਿਆ ਗਿਆ ਨੰਬਰ ਦੇਖੋ ਅਤੇ ਇਸਨੂੰ ਆਪ ਦੁਬਾਰਾ ਚਲਾਓ",
     "flagshipBadge": "ਪ੍ਰਮੁੱਖ ਸੰਸ਼ਲੇਸ਼ਣ ਪੇਪਰ",

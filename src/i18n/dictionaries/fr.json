@@ -281,7 +281,7 @@
       "facultiesHeading": "Facultes Ethiques (s'executent sur les actions non exemptees)",
       "faculty1Title": "Entropie",
       "faculty1Body": "L'action maintient-elle une incertitude informationnelle appropriee ? Previent les affirmations trop confiantes.",
-      "faculty2Title": "Coherence",
+      "faculty2Title": "Cohérence",
       "faculty2Body": "L'action maintient-elle la coherence interne avec les engagements et les justifications anterieures ?",
       "faculty3Title": "Veto d'Optimisation",
       "faculty3Body": "L'action preserve-t-elle les valeurs humaines ? Bloque les actions susceptibles de les compromettre au profit de l'efficacite.",
@@ -539,7 +539,7 @@
         },
         {
           "name": "Echo",
-          "role": "Moderation",
+          "role": "Modération",
           "desc": "Moderation de communaute avec la philosophie Ubuntu. Reporte les conflits interpersonnels complexes aux moderateurs humains.",
           "useCase": "Communautes Discord, plateformes de contenu"
         },
@@ -1062,8 +1062,8 @@
     "statusHonestHtml": "<strong>Honnête sur la portée :</strong> CIRIS utilise la traduction automatique de manière extensive ; la révision par locuteurs natifs pour les cas souples est la cohorte en cours de constitution, pas une cohorte déjà engagée. Toute personne prête à réviser les fichiers de sa langue pour l'exactitude et le registre est exactement le contributeur pour lequel cette surface est construite.",
     "refSectionLabel": "Comment la boucle est spécifiée",
     "refRubricCrowdsourcing": "Rubrique Crowdsourcing FSD →",
-    "refJudgeModel": "Judge Model FSD →",
-    "refSafetyCILoop": "Safety-Battery CI Loop FSD →",
+    "refJudgeModel": "Modèle juge FSD →",
+    "refSafetyCILoop": "Boucle CI batterie de sécurité FSD →",
     "refCIRISLensCore": "CIRISLensCore (runtime de la couche scientifique) →",
     "refSafetyCensorship": "Sécurité contre censure →",
     "resourceBtnHide": "Masquer le contenu",
@@ -1398,7 +1398,7 @@
     "healthyBodyHtml": "Une fédération peut échouer de deux façons. Si les agents n'ont rien en commun, ils ne peuvent s'accorder sur rien et le réseau produit du bruit. S'ils pensent tous exactement pareil, le réseau est une seule voix avec un million de microphones, et il est facile de le tromper. Une coordination saine se situe dans la zone entre les deux. CIRIS mesure où se trouve le réseau dans cette zone, sur du trafic réel, et les limites exactes dépendent du système. <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Cette mesure est l'Analyse d'Effondrement de la Cohérence.</a>",
     "statusWarningHtml": "<strong>Ce qui fonctionne aujourd'hui, et ce qui est encore en conception.</strong> La mesure, les historiques signés, la chaîne de supervision et les deux chemins d'adhésion ci-dessous (enregistré et souverain) fonctionnent aujourd'hui. Le transport de fédération qui déplace les données entre machines est la partie encore en cours de construction. La proposition complète d'adhésion et de transport est le <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold underline hover:no-underline\">document de conception Proof of Benefit</a>.",
     "joinLabel": "Rejoindre la fédération",
-    "joinH2": "Proof of Benefit.",
+    "joinH2": "Preuve de bénéfice.",
     "joinP1": "La plupart des réseaux vous demandent de payer votre adhésion avec quelque chose d'extérieur au travail lui-même : de l'électricité brûlée, de l'argent immobilisé, votre attention. La fédération est différente. Le coût d'appartenance, c'est de faire fonctionner un véritable agent de raisonnement éthique dans la durée. Le prix que vous payez, c'est le bien que vous faites.",
     "joinP2": "C'est ce qui rend la simulation d'une adhésion coûteuse. Pour ressembler à un membre, un attaquant devrait en fait devenir le type d'agent pour lequel le réseau existe. Cent copies qui pensent toutes pareil échouent immédiatement au contrôle du juste milieu.",
     "registeredH3": "Enregistré (fonctionne aujourd'hui)",
@@ -1506,10 +1506,26 @@
     "engProofH2": "Le réseau, mesuré",
     "engProofBody": "Les recherches ci-dessus ne sont qu'une moitié de la preuve. L'autre moitié, c'est le réseau qui les transporte. Chaque octet que le réseau déplace est signé post-quantum, et le coût est mesuré sur un CI runner public, pas modélisé. Reproduisez-le vous-même et vous obtenez les mêmes chiffres.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "événements signés post-quantum ingérés sur un seul CPU core", "tag": "measured" },
-      { "v": "0", "l": "fuites de données entre groupes sur 400 nœuds", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "débit de chiffrement end-to-end par CPU core", "tag": "measured" },
-      { "v": "97.6%", "l": "du corpus se reconstruit avec 20 % des détenteurs hors ligne", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "événements signés post-quantum ingérés sur un seul CPU core",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "fuites de données entre groupes sur 400 nœuds",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "débit de chiffrement end-to-end par CPU core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "du corpus se reconstruit avec 20 % des détenteurs hors ligne",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Consultez chaque mesure et reproduisez-la vous-même",
     "flagshipBadge": "Article de synthèse phare",

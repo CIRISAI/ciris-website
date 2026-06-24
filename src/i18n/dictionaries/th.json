@@ -256,18 +256,18 @@
       ]
     },
     "dmas": {
-      "heading": "Decision-Making Algorithms (DMAs)",
+      "heading": "อัลกอริทึมการตัดสินใจ (DMAs)",
       "lead": "DMA ห้าตัวให้การวิเคราะห์หลายมุมมอง สามตัวรันแบบขนาน (จริยธรรม สามัญสำนึก โดเมน) จากนั้น <strong class=\"text-green-600\">IDMA ตรวจสอบสัญชาตญาณ</strong> สุดท้ายการเลือกการกระทำเลือกการตอบสนอง",
-      "principleTitle": "Principle DMA",
+      "principleTitle": "DMA หลักการ",
       "principleBody": "ประเมินผลกระทบทางจริยธรรมเทียบกับหลักการพื้นฐานหกข้อ ตรวจสอบคำขอที่เป็นอันตราย การบิดเบือน และอคติ สามารถเรียก DEFER หรือ REJECT ก่อนกำหนดได้",
-      "commonSenseTitle": "Common Sense DMA",
+      "commonSenseTitle": "DMA สามัญสำนึก",
       "commonSenseBody": "ประเมินความสมเหตุสมผลของความคิดเทียบกับความเข้าใจโลกกายภาพ ปฏิสัมพันธ์ทั่วไป และข้อจำกัดทรัพยากร ส่งคืน <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">plausibility_score</code>",
-      "domainTitle": "Domain-Specific DMA",
+      "domainTitle": "DMA เฉพาะด้าน",
       "domainBody": "ประเมินการสอดคล้องกับกฎ วัตถุประสงค์ และความรู้เฉพาะโดเมน ตั้งค่าตามเทมเพลตเอเจนต์ ส่งคืน <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">domain_alignment</code>",
-      "idmaTitle": "Intuition DMA (IDMA)",
+      "idmaTitle": "DMA ความเข้าใจเชิงสัญชาตญาณ (IDMA)",
       "idmaLink": "ความมีประสิทธิภาพของมิติขณะทำงานจริง →",
       "idmaBody": "ตรวจสอบว่าผลลัพธ์ DMA เป็นอิสระจริงหรือมีความสัมพันธ์ลึกๆ ตรวจสอบรูปแบบห้องเสียงสะท้อน ถ้าความสัมพันธ์สูงเกินไปจะตั้งค่าสถานะการตัดสินใจให้ระวัง นี่คือ&quot;สัญชาตญาณ&quot;ที่แยกแยะ AI ประเภท 3",
-      "actionSelectionTitle": "Action Selection DMA",
+      "actionSelectionTitle": "DMA การเลือกการกระทำ",
       "actionSelectionBody": "การเลือกการกระทำจาก 10 การกระทำที่มีด้วย LLM รับผลลัพธ์ DMA รวม (รวมการประเมินความมั่นใจ IDMA) เป็นอินพุต รองรับการลองซ้ำแบบวนถ้ามโนธรรมล้มเหลว"
     },
     "conscience": {
@@ -850,7 +850,7 @@
     "method3Heading": "3. GitHub Clone (สำหรับนักพัฒนา)",
     "method3Desc": "โคลน repository สำหรับการพัฒนา ปรับแต่ง หรือมีส่วนร่วม เข้าถึง source code ทั้งหมด",
     "method3Then": "<strong>จากนั้น:</strong> ทำตาม <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> สำหรับคำแนะนำการตั้งค่าด้วยตนเอง",
-    "method4Heading": "4. CIRISManager (Enterprise/Canary)",
+    "method4Heading": "4. CIRISManager (องค์กร/Canary)",
     "method4Desc": "การติดตั้ง canary แบบมีการจัดการ พร้อม gradual rollout, การทดสอบอัตโนมัติ และความสามารถ rollback เหมาะสำหรับ fleet ในการผลิต",
     "method4Body": "CIRISManager รองรับการ deploy blue-green อัตโนมัติพร้อมตรวจสอบสุขภาพ ติดต่อทีมงานเพื่อขอการตั้งค่าการติดตั้ง",
     "method4Best": "<strong>เหมาะสำหรับ:</strong> การติดตั้งระดับองค์กร, fleet ในการผลิต, โครงสร้างพื้นฐานที่มีการจัดการ",
@@ -994,7 +994,7 @@
     "runtimeList5": "ข้อมูลอ้างอิงของผู้แปลสำหรับสร้าง artifact per-locale อย่างถูกต้อง ไม่โหลดในขณะทำงาน ใช้ตรวจสอบเมื่อสร้าง artifact อื่นๆ",
     "runtimeLensHtml": "เมื่อเอเจนต์ตอบกลับ trace การให้เหตุผลจะถูกเซ็นชื่อและ (ด้วยความยินยอม) ส่งไปยัง <a href=\"https://github.com/CIRISAI/CIRISLensCore\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISLensCore</a> เพื่อการให้คะแนนเทียบกับกลุ่ม <strong>ชุดทดสอบความปลอดภัย + rubric</strong> สำหรับ locale นี้คือสิ่งที่ trace ถูกตรวจสอบ การล้มเหลวแบบ hard fail จะบล็อก release กรณีอ่อนจะรอการตรวจสอบ",
     "runtimeRefs": "ข้อมูลอ้างอิง canonical:",
-    "runtimeRefMission": "MISSION.md §4.2 (H3ERE pipeline)",
+    "runtimeRefMission": "MISSION.md §4.2 (ไปป์ไลน์ H3ERE)",
     "runtimeRefDmaBounce": "FSD/DMA_BOUNCE.md",
     "runtimeRefConscience": "FSD/CONSCIENCE_V3.md",
     "polyglotSectionLabel": "Canon polyglot (สากล)",
@@ -1029,7 +1029,7 @@
     "sec6RowLocale": "{label} ({langName})",
     "placeholdersSectionLabel": "Template placeholder ใน prompt",
     "placeholderBody": "YAML prompt ข้างต้นมีโทเค็น <code>{placeholder}</code> ที่ถูกเติมในขณะทำงานโดยเอเจนต์ ผู้ตรวจสอบที่อ่าน prompt ควรรู้ว่า placeholder แต่ละตัวจะถูกแทนด้วยอะไร ที่พบบ่อยที่สุด:",
-    "placeholderColHeader1": "Placeholder",
+    "placeholderColHeader1": "ตัวแทน",
     "placeholderColHeader2": "แหล่งที่มาในขณะทำงาน",
     "placeholderRow1Source": "สร้างโดยขั้นตอนการรวบรวม context (GATHER_CONTEXT) รวมถึง system snapshot, ความคิดล่าสุด, โปรไฟล์ผู้ใช้ และ metadata ของช่องทาง",
     "placeholderRow2Source": "ความคิดที่กำลังประเมิน นำมาจาก processing queue",
@@ -1048,8 +1048,8 @@
     "sec8Label": "8. ชุดทดสอบความปลอดภัย + rubric",
     "sec8Aside": "v4 mental-health arc, scoring rubric, เกณฑ์ที่เครื่องใช้ได้",
     "sec8Note": "<strong>สิ่งที่ทำในเวลาประเมิน:</strong> question arc คือ input ทดสอบ rubric คือนโยบายการให้คะแนนที่มนุษย์อ่านได้ criteria.json คือรูปแบบที่เครื่องใช้ได้ (การมีคำ, regex, การตรวจจับสคริปต์) ที่รันใน CI กับ release candidate ทุกตัว การล้มเหลวแบบ hard fail จะบล็อก release สำหรับ locale นั้น",
-    "sec8ArcRowLabel": "Question arc ({langName})",
-    "sec8RubricRowLabel": "Scoring rubric ({langName})",
+    "sec8ArcRowLabel": "ชุดคำถาม ({langName})",
+    "sec8RubricRowLabel": "เกณฑ์การให้คะแนน ({langName})",
     "sec8CriteriaRowLabel": "canonical universal criteria.json ({langName})",
     "sec8NoBatteryHtml": "ยังไม่มีชุดทดสอบสำหรับ {langName} ปุ่ม &quot;Request artifact&quot; ข้างต้นจะเปิด GitHub issue ที่กรอกข้อมูลไว้แล้ว ทุกภาษาในตัวเลือกที่ระบุว่า &quot;battery available&quot; มีชุดทดสอบที่เผยแพร่แล้ว",
     "sec9Label": "9. ผลลัพธ์",
@@ -1061,10 +1061,10 @@
     "statusInFlightHtml": "<strong>กำลังดำเนินการ:</strong> primitives ฉันทามติและการลงคะแนนใน CIRISNodeCore ที่เปลี่ยนพื้นผิว GitHub issue ของหน้านี้ให้เป็น flow <code>rubric_proposal</code> / <code>arc_question</code> / <code>prompt_edit</code> แบบ federated พร้อมการตรวจสอบโดยเจ้าของภาษา จนกว่าจะพร้อม GitHub issue คือเส้นทางการส่ง",
     "statusHonestHtml": "<strong>ซื่อสัตย์เกี่ยวกับขอบเขต:</strong> CIRIS ใช้การแปลด้วยเครื่องอย่างกว้างขวาง การตรวจสอบโดยเจ้าของภาษาสำหรับกรณีอ่อนคือกลุ่มที่กำลังสร้าง ไม่ใช่กลุ่มที่มีส่วนร่วมแล้ว ใครก็ตามที่เต็มใจตรวจสอบไฟล์ภาษาของตัวเองเพื่อความถูกต้องและการลงทะเบียนคือผู้มีส่วนร่วมที่พื้นผิวนี้กำลังสร้างขึ้นเพื่อ",
     "refSectionLabel": "วิธีที่วงจรถูกกำหนด",
-    "refRubricCrowdsourcing": "Rubric Crowdsourcing FSD →",
-    "refJudgeModel": "Judge Model FSD →",
-    "refSafetyCILoop": "Safety-Battery CI Loop FSD →",
-    "refCIRISLensCore": "CIRISLensCore (science-layer runtime) →",
+    "refRubricCrowdsourcing": "FSD การระดมเกณฑ์จากชุมชน →",
+    "refJudgeModel": "FSD โมเดลผู้ตัดสิน →",
+    "refSafetyCILoop": "FSD วงจร CI ทดสอบความปลอดภัย →",
+    "refCIRISLensCore": "CIRISLensCore (รันไทม์ชั้นวิทยาศาสตร์) →",
     "refSafetyCensorship": "Safety กับ censorship →",
     "resourceBtnHide": "ซ่อนเนื้อหา",
     "resourceBtnView": "ดู inline",
@@ -1076,7 +1076,7 @@
     "resourceStatusNotYet": "ยังไม่มีสำหรับ {langCode}",
     "resourceLoadingMsg": "กำลังโหลดจาก GitHub…",
     "resourceErrorMsg": "โหลดล้มเหลว: {error} เปิดลิงก์ GitHub โดยตรง",
-    "polyglotPill": "polyglot"
+    "polyglotPill": "หลายภาษา"
   },
   "firstContact": {
     "heroHeadline": "การติดต่อครั้งแรก.",
@@ -1274,7 +1274,7 @@
     "tryStartCta": "ติดต่อครั้งแรก →",
     "tryIOSLabel": "iOS",
     "tryAndroidLabel": "Android",
-    "tryDesktopLabel": "Desktop",
+    "tryDesktopLabel": "เดสก์ท็อป",
     "trySourceLabel": "ดูซอร์สโค้ด",
     "imageHeroLogoAlt": "ไอคอนโลโก้แบรนด์",
     "imageHeroHeadline": "ยืนยันด้วยตัวเอง",
@@ -1298,7 +1298,7 @@
     "stillWrongParaHtml": "ไม่มีสิ่งนี้เป็นอัตโนมัติ วินัยนี้ยึดอยู่ได้เฉพาะถ้าภาษากฎยังคง <em>ปฏิบัติการ</em> เกี่ยวกับสิ่งที่เครื่องจักรตรวจสอบได้ ไม่ใช่เกี่ยวกับความรู้สึก ทันทีที่กฎเลื่อนจาก &quot;ใช้คำผิดสำหรับการบำบัด&quot; ไปสู่ &quot;รู้สึกไม่เคารพ&quot; การตีความของมนุษย์กลับเข้ามาทางประตูหลังและการเบี่ยงเบนเริ่มต้น สถาปัตยกรรมระบุทุกกลไกที่เราคิดได้ที่ต้านทานสิ่งนี้ งานของการยึดแนวทางจริงๆ เป็นเรื่องปฏิบัติการ ไม่ใช่สถาปัตยกรรม",
     "closingPara": "primitives ของ crowdsourcing เส้นทางอุทธรณ์ และรูปแบบกฎที่เครื่องจักรใช้ได้ อยู่ในข้อกำหนด CIRISNodeCore แบตเตอรี่สุขภาพจิต 29 ภาษาคือเซลล์แรกที่วงจรทำงาน",
     "ctaSafety": "ฟีเจอร์ความปลอดภัย →",
-    "ctaFederation": "Federation",
+    "ctaFederation": "การรวมกลุ่ม",
     "ctaFsd": "อ่าน FSD"
   },
   "services": {
@@ -1348,7 +1348,7 @@
     "priority3Label": "เครดิตชำระเงิน (Stripe)",
     "priority3Sub": "$0.10 ต่อการโต้ตอบ • ใช้เพียงหลังจากเครดิตฟรีหมดแล้ว",
     "techHeading": "รายละเอียดทางเทคนิค",
-    "techDetail1Summary": "API Endpoint",
+    "techDetail1Summary": "จุดเชื่อมต่อ API",
     "techDetail1Para": "OpenAI-compatible API endpoint สำหรับ CIRIS Agent",
     "techDetail2Summary": "การยืนยันตัวตน",
     "techDetail2Para": "การยืนยันตัวตนด้วย API key ผ่าน Authorization header:",
@@ -1506,10 +1506,26 @@
     "engProofH2": "เครือข่าย ที่วัดผลได้จริง",
     "engProofBody": "งานวิจัยข้างต้นเป็นหลักฐานครึ่งแรก อีกครึ่งหนึ่งคือเครือข่ายที่ส่งข้อมูลนั้น ทุกไบต์ที่เครือข่ายเคลื่อนย้ายจะถูกเซ็นชื่อแบบ post-quantum และต้นทุนทั้งหมดวัดบน CI runner สาธารณะ ไม่ใช่การจำลอง ลองรันด้วยตัวเองแล้วคุณจะได้ตัวเลขเดิม",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "อีเวนต์ที่ผ่านการเซ็น post-quantum ต่อ CPU core หนึ่งตัว", "tag": "measured" },
-      { "v": "0", "l": "การรั่วไหลของข้อมูลข้ามกลุ่มใน 400 โหนด", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "ปริมาณงาน end-to-end encryption ต่อ core", "tag": "measured" },
-      { "v": "97.6%", "l": "ของข้อมูลที่สร้างใหม่ได้แม้ผู้ถือ 20% ออฟไลน์", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "อีเวนต์ที่ผ่านการเซ็น post-quantum ต่อ CPU core หนึ่งตัว",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "การรั่วไหลของข้อมูลข้ามกลุ่มใน 400 โหนด",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "ปริมาณงาน end-to-end encryption ต่อ core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "ของข้อมูลที่สร้างใหม่ได้แม้ผู้ถือ 20% ออฟไลน์",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "ดูตัวเลขที่วัดได้ทั้งหมด และทดสอบด้วยตัวเอง",
     "flagshipBadge": "บทความสังเคราะห์หลัก",
@@ -1643,7 +1659,7 @@
   "mdd": {
     "heroBadgeMethodology": "วิธีการ",
     "heroBadgeActive": "ใช้งานอยู่: v1.0",
-    "heroEyebrow": "Mission Driven Development",
+    "heroEyebrow": "การพัฒนาที่ขับเคลื่อนด้วยพันธกิจ",
     "h1": "พันธกิจในฐานะรากฐานที่สี่ของสถาปัตยกรรมซอฟต์แวร์",
     "heroPara": "ซอฟต์แวร์ส่วนใหญ่ถามว่า จะสร้างสิ่งนั้นอย่างไร Mission Driven Development (MDD) เพิ่มคำถามหนึ่งขึ้นก่อน: เราสร้างมันไปเพื่ออะไร และทางเลือกนี้รับใช้วัตถุประสงค์นั้นหรือไม่ CIRIS ถูกสร้างขึ้นด้วยวิธีนี้ จริยธรรมจึงเป็นส่วนหนึ่งของการออกแบบ แทนที่จะเป็นกฎที่ต่อเข้ามาทีหลัง",
     "fourEyebrow": "โมเดลสี่องค์ประกอบ",
@@ -1775,7 +1791,7 @@
     "closePara2": "ค่าใช้จ่ายเริ่มต้นเป็นเรื่องจริงขณะที่ทีมเรียนรู้การตัดสินใจที่ขับเคลื่อนด้วยพันธกิจ ผลตอบแทนที่สะสมอยู่ในการพัฒนาที่ตามมา: กรอบนี้ทำให้การตัดสินใจทางสถาปัตยกรรมชัดเจนขึ้น แทนที่จะเพิ่มจำนวนมากขึ้น",
     "closeLink1": "อ่าน FSD ต้นฉบับ",
     "closeLink2": "พันธกิจของ CIRIS (M-1)",
-    "closeLink3": "The Accord",
+    "closeLink3": "ข้อตกลง",
     "closeLink4": "Federation (แผน 3.X)"
   },
   "coherenceRatchet": {

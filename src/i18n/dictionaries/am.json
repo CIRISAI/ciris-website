@@ -1076,7 +1076,7 @@
     "resourceStatusNotYet": "ለ {langCode} ገና አይደለም",
     "resourceLoadingMsg": "ከ GitHub በመጫን ላይ…",
     "resourceErrorMsg": "ሊጫን አልተቻለም: {error}። GitHub ሊንኩን ቀጥተኛ ክፈቱ።",
-    "polyglotPill": "polyglot"
+    "polyglotPill": "ባለብዙ ቋንቋ"
   },
   "firstContact": {
     "heroHeadline": "የመጀመሪያ ግንኙነት።",
@@ -1506,10 +1506,26 @@
     "engProofH2": "ፋብሪኩ፣ እንደተለካ",
     "engProofBody": "ከላይ ያለው ምርምር የማስረጃው አንድ ግማሽ ነው። ሌላው ግማሽ ደግሞ የሚሸከመው ኔትወርክ ነው። ፋብሪኩ የሚያንቀሳቅሰው እያንዳንዱ ባይት post-quantum-signed ነው። ወጪው የሚለካው በህዝባዊ CI runner ላይ ነው፣ በሞዴል አይደለም። እርስዎ ራሱ ቢሞክሩ፣ ተመሳሳይ ቁጥሮችን ያገኛሉ።",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "post-quantum-signed ክስተቶች በአንድ CPU core ላይ የተቀበሉ", "tag": "measured" },
-      { "v": "0", "l": "በ400 ኖዶች ውስጥ ያሉ ቡድኖች መካከል የተፈጠሩ የመረጃ ፍሰቶች", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "end-to-end encryption ፍጥነት በእያንዳንዱ core", "tag": "measured" },
-      { "v": "97.6%", "l": "ከያዦቹ 20% ከመስመር ውጭ ሆነው ኮርፐሱ ዳግም ይገነባል", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "post-quantum-signed ክስተቶች በአንድ CPU core ላይ የተቀበሉ",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "በ400 ኖዶች ውስጥ ያሉ ቡድኖች መካከል የተፈጠሩ የመረጃ ፍሰቶች",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "end-to-end encryption ፍጥነት በእያንዳንዱ core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "ከያዦቹ 20% ከመስመር ውጭ ሆነው ኮርፐሱ ዳግም ይገነባል",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "እያንዳንዱ የተለካ ቁጥር ይመልከቱ፣ ራሱ ያረጋግጡ",
     "flagshipBadge": "ዋነኛ ዳሰሳ ጽሑፍ",

@@ -1359,7 +1359,7 @@
     "techDetail3Item3": "Diğer OpenAI uyumlu sağlayıcılar",
     "ctaPara": "Başlamaya hazır mısınız?",
     "ctaBtn": "CIRIS Agent'ı Yükle",
-    "kicker": "Hosted CIRIS"
+    "kicker": "Barındırılan CIRIS"
   },
   "federation": {
     "shell": {
@@ -1506,10 +1506,26 @@
     "engProofH2": "Ağ, ölçüldü",
     "engProofBody": "Yukarıdaki araştırma kanıtın yarısı. Diğer yarısı onu taşıyan ağ. Ağın taşıdığı her bayt post-quantum imzalı ve maliyet, tahmin değil, herkese açık bir CI runner üzerinde ölçüldü. Kendin çalıştır, aynı sayıları görürsün.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "tek CPU core üzerinde işlenen post-quantum imzalı olay", "tag": "measured" },
-      { "v": "0", "l": "400 düğümdeki gruplar arası veri sızıntısı", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "core başına uçtan uca şifreleme hızı", "tag": "measured" },
-      { "v": "97.6%", "l": "sahiplerin %20'si çevrimdışıyken korpus yeniden oluşturma başarısı", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "tek CPU core üzerinde işlenen post-quantum imzalı olay",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "400 düğümdeki gruplar arası veri sızıntısı",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "core başına uçtan uca şifreleme hızı",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "sahiplerin %20'si çevrimdışıyken korpus yeniden oluşturma başarısı",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Tüm ölçülen sayılara bak ve kendin doğrula",
     "flagshipBadge": "Öne çıkan sentez makalesi",

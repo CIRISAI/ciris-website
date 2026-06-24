@@ -135,7 +135,7 @@
       "appStore": "App Store",
       "googlePlay": "Google Play",
       "ctahint": "বিনামূল্যে · ওপেন সোর্স",
-      "foot1": "github.com/CIRISAI · AGPL-3.0 · mission-locked",
+      "foot1": "github.com/CIRISAI · AGPL-3.0 · লক্ষ্য-নির্ধারিত",
       "foot2": "একটি AI যা আপনার নিজের হতে পারে"
     },
     "explore": {
@@ -561,7 +561,7 @@
       "body": "এটি এমন দায়বদ্ধতা যা এজেন্ট কাজ করার সময় চলে, একটি প্রশিক্ষণ ধাপ বা নীতি দলিল নয়।<br />এমন পদ্ধতি যা রানটাইমে নির্বাহ, নিরীক্ষা এবং স্থগিত করে।",
       "safetyBtn": "নিরাপত্তা বৈশিষ্ট্য",
       "compareBtn": "পদ্ধতি তুলনা",
-      "coherenceBtn": "Coherence Ratchet",
+      "coherenceBtn": "সংগতি র‍্যাচেট",
       "scoringBtn": "CIRIS স্কোরিং"
     }
   },
@@ -986,7 +986,7 @@
     "runtimeList1Label": "স্থানীয়করণ স্ট্রিং:",
     "runtimeList2Label": "Accord (প্রতি-লোকেল):",
     "runtimeList2": "এজেন্ট যে কাঠামোর অধীনে কাজ করে, এই ব্যবহারকারীর ভাষায়। প্রতিটি বিবেক মূল্যায়নে লোড হয়।",
-    "runtimeList3Label": "Comprehensive Guide:",
+    "runtimeList3Label": "বিস্তারিত গাইড:",
     "runtimeList3": "এজেন্ট এই লোকেলে কীভাবে যোগাযোগ করে তার রেজিস্টার, বাগধারা ও প্রাসঙ্গিক নির্দেশিকা। প্রতিটি ইন্টারঅ্যাকশনের সিস্টেম প্রম্পটে লোড হয়।",
     "runtimeList4Label": "DMA প্রম্পট (৭টি ফাইল):",
     "runtimeList4": "উপরের পাইপলাইন চালানো সিস্টেম প্রম্পট: ৪টি প্রথম-পাস (PDMA, CSDMA, DSDMA, IDMA) + অ্যাকশন সিলেক্টর (ASPDMA) + দুটি ক্রিয়া-নির্দিষ্ট দ্বিতীয়-পাস ভ্যারিয়েন্ট (TOOL-এর জন্য TSASPDMA, DEFER-এর জন্য DSASPDMA)।",
@@ -994,7 +994,7 @@
     "runtimeList5": "প্রতি-লোকেল আর্টিফ্যাক্ট সঠিকভাবে করার জন্য অনুবাদকের রেফারেন্স। রানটাইমে লোড হয় না; অন্যগুলো রচনার সময় পরামর্শ নেওয়া হয়।",
     "runtimeLensHtml": "এজেন্ট সাড়া দিলে, যুক্তির ট্রেসটি সাইন করা হয় এবং (সম্মতিতে) <a href=\"https://github.com/CIRISAI/CIRISLensCore\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISLensCore</a>-এ কোহোর্ট-আপেক্ষিক স্কোরিংয়ের জন্য প্রবাহিত হয়। এই লোকেলের <strong>সেফটি ব্যাটারি + রুব্রিক</strong> হলো যার বিপরীতে ট্রেসটি পরীক্ষা করা হয়। হার্ড ফেইল রিলিজ ব্লক করে; সফট কেস পর্যালোচনার জন্য সারিবদ্ধ হয়।",
     "runtimeRefs": "প্রামাণিক রেফারেন্স:",
-    "runtimeRefMission": "MISSION.md §4.2 (H3ERE pipeline)",
+    "runtimeRefMission": "MISSION.md §4.2 (H3ERE পাইপলাইন)",
     "runtimeRefDmaBounce": "FSD/DMA_BOUNCE.md",
     "runtimeRefConscience": "FSD/CONSCIENCE_V3.md",
     "polyglotSectionLabel": "পলিগ্লট ক্যানন (সর্বজনীন)",
@@ -1016,7 +1016,7 @@
     "sec4Label": "৪. Comprehensive Guide",
     "sec4Aside": "অপারেশনাল + রেজিস্টার নির্দেশিকা, প্রতিটি LLM কলে লোড হয়",
     "sec4Note": "<strong>রানটাইমে এটি কী করে:</strong> গাইডটি জানায় এজেন্ট এই লোকেলে কীভাবে যোগাযোগ করে: রেজিস্টার (আনুষ্ঠানিক বনাম অনানুষ্ঠানিক), বাগধারা, কী স্থগিত করতে হবে, কী প্রত্যাখ্যান করতে হবে, কী ব্যাখ্যা করতে হবে। প্রতিটি ইন্টারঅ্যাকশনের সিস্টেম প্রম্পটে লোড হয়।",
-    "sec4RowLabel": "Comprehensive Guide ({langName})",
+    "sec4RowLabel": "বিস্তারিত গাইড ({langName})",
     "sec5Label": "৫. DMA প্রম্পট (৭টি যুক্তিপ্রক্রিয়া পর্যায়)",
     "sec5Aside": "প্রতিটি যুক্তিপ্রক্রিয়া পর্যায় চালানো সিস্টেম প্রম্পট",
     "sec5NoteHtml": "<strong>রানটাইমে এগুলো কী করে:</strong> প্রতিটি এজেন্ট অ্যাকশন এই প্রম্পটগুলোর প্রতিটির অধীনে পরিচালিত হয়। আউটপুটগুলো বিবেক স্তরে প্রবাহিত হয়; বিবেক হয় অ্যাকশনটি পাস করে দেয় বা স্থগিতকরণে রুট করে। <strong>PDMA</strong> হলো একমাত্র পলিগ্লট DMA। এর প্রম্পট সর্বজনীন এবং লোকেল নির্বিশেষে লোড হয়। অন্য ছয়টি প্রতি-লোকেল; ইংরেজির জন্য, বেস পথটিই প্রম্পট (কোনো <code>localized/en/</code> ডিরেক্টরি নেই)।",
@@ -1061,9 +1061,9 @@
     "statusInFlightHtml": "<strong>চলমান:</strong> CIRISNodeCore-এর কনসেনসাস ও ভোটিং প্রিমিটিভ যা এই পেজের GitHub-ইস্যু পৃষ্ঠকে মাতৃভাষী পর্যালোচনাসহ একটি ফেডারেটেড <code>rubric_proposal</code> / <code>arc_question</code> / <code>prompt_edit</code> ফ্লোতে পরিণত করে। সেটা না আসা পর্যন্ত, GitHub ইস্যু হলো জমা দেওয়ার পথ।",
     "statusHonestHtml": "<strong>সুযোগ সম্পর্কে সৎ:</strong> CIRIS ব্যাপকভাবে মেশিন ট্রান্সলেশন ব্যবহার করে; সফট কেসের জন্য মাতৃভাষী পর্যালোচনা হলো যে কোহোর্ট তৈরি হচ্ছে, এমন কোহোর্ট নয় যা ইতিমধ্যে নিযুক্ত। যে কেউ তাদের ভাষার ফাইলগুলো নির্ভুলতা ও রেজিস্টারের জন্য পর্যালোচনা করতে ইচ্ছুক তারাই এই পৃষ্ঠটি যাদের জন্য তৈরি হচ্ছে সেই অবদানকারী।",
     "refSectionLabel": "লুপটি কীভাবে নির্দিষ্ট করা আছে",
-    "refRubricCrowdsourcing": "Rubric Crowdsourcing FSD →",
-    "refJudgeModel": "Judge Model FSD →",
-    "refSafetyCILoop": "Safety-Battery CI Loop FSD →",
+    "refRubricCrowdsourcing": "রুব্রিক ক্রাউডসোর্সিং FSD →",
+    "refJudgeModel": "বিচারক মডেল FSD →",
+    "refSafetyCILoop": "নিরাপত্তা-ব্যাটারি CI লুপ FSD →",
     "refCIRISLensCore": "CIRISLensCore (বিজ্ঞান-স্তর রানটাইম) →",
     "refSafetyCensorship": "সেফটি বনাম সেন্সরশিপ →",
     "resourceBtnHide": "বিষয়বস্তু লুকান",
@@ -1224,7 +1224,7 @@
     "rowHatcatProof": "আংশিক",
     "rowHatcatOpenSource": "CC0",
     "rowHatcatEcho": "না",
-    "rowEthicsBoards": "Ethics Boards / Governance Frameworks",
+    "rowEthicsBoards": "নৈতিকতা বোর্ড / পরিচালনা কাঠামো",
     "rowEthicsBoardsChecks": "না",
     "rowEthicsBoardsRules": "হ্যাঁ",
     "rowEthicsBoardsConscience": "না",
@@ -1298,7 +1298,7 @@
     "stillWrongParaHtml": "এর কিছুই স্বয়ংক্রিয় নয়। নিয়মের ভাষা <em>পরিচালনামূলক</em> থাকলেই কেবল নিয়মটি বজায় থাকে, এমন বিষয়ে যা একটি যন্ত্র যাচাই করতে পারে, অনুভূতি সম্পর্কে নয়। যে মুহূর্তে একটি নিয়ম &quot;থেরাপির জন্য ভুল শব্দ ব্যবহার করে&quot; থেকে &quot;অসম্মানজনক মনে হয়&quot; এর দিকে সরে যায়, মানবিক ব্যাখ্যা পিছনের দরজা দিয়ে ফিরে আসে এবং সরে যাওয়া শুরু হয়। কাঠামো এর বিরুদ্ধে প্রতিরোধকারী প্রতিটি প্রক্রিয়ার নাম রাখে; প্রকৃতপক্ষে সীমানা ধরে রাখার কাজটি কাঠামোগত নয়, পরিচালনামূলক।",
     "closingPara": "ক্রাউডসোর্সিং আদিমতা, আপিলের পথ এবং যন্ত্র-প্রযোজ্য নিয়মের ফর্ম্যাট CIRISNodeCore স্পেসিফিকেশনে আছে। ২৯ ভাষার মানসিক স্বাস্থ্য ব্যাটারি হলো প্রথম কক্ষ যেখানে লুপ চলে।",
     "ctaSafety": "নিরাপত্তা বৈশিষ্ট্য →",
-    "ctaFederation": "Federation",
+    "ctaFederation": "ফেডারেশন",
     "ctaFsd": "FSD পড়ুন"
   },
   "services": {
@@ -1506,10 +1506,26 @@
     "engProofH2": "ফ্যাব্রিক, পরিমাপ করা হয়েছে",
     "engProofBody": "উপরের গবেষণা প্রমাণের একটি অর্ধেক। অন্য অর্ধেক হলো যে নেটওয়ার্ক এটি বহন করে। ফ্যাব্রিক যে প্রতিটি বাইট স্থানান্তর করে তা post-quantum-signed, এবং খরচ একটি পাবলিক CI runner-এ পরিমাপ করা হয়, মডেল করা নয়। নিজে চালান এবং আপনি একই সংখ্যা পাবেন।",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "একটি CPU core-এ গৃহীত post-quantum-signed ইভেন্ট", "tag": "measured" },
-      { "v": "0", "l": "৪০০ নোড জুড়ে গ্রুপ-পার-গ্রুপ ডেটা ফাঁস", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "প্রতি core-এ end-to-end encryption থ্রুপুট", "tag": "measured" },
-      { "v": "97.6%", "l": "২০% হোল্ডার অফলাইন থাকলেও কর্পাস পুনর্নির্মাণ হয়", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "একটি CPU core-এ গৃহীত post-quantum-signed ইভেন্ট",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "৪০০ নোড জুড়ে গ্রুপ-পার-গ্রুপ ডেটা ফাঁস",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "প্রতি core-এ end-to-end encryption থ্রুপুট",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "২০% হোল্ডার অফলাইন থাকলেও কর্পাস পুনর্নির্মাণ হয়",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "প্রতিটি পরিমাপ করা সংখ্যা দেখুন এবং নিজে যাচাই করুন",
     "flagshipBadge": "প্রধান সংশ্লেষণ পেপার",
@@ -1643,7 +1659,7 @@
   "mdd": {
     "heroBadgeMethodology": "পদ্ধতিবিদ্যা",
     "heroBadgeActive": "সক্রিয়: v1.0",
-    "heroEyebrow": "Mission Driven Development",
+    "heroEyebrow": "লক্ষ্যভিত্তিক উন্নয়ন",
     "h1": "সফটওয়্যার আর্কিটেকচারের চতুর্থ ভিত্তি হিসেবে মিশন।",
     "heroPara": "বেশিরভাগ সফটওয়্যার জিজ্ঞেস করে কীভাবে তৈরি করতে হবে। Mission Driven Development (MDD) তার আগে একটি প্রশ্ন যোগ করে: আমরা কেন এটি তৈরি করছি, এবং এই সিদ্ধান্তটি কি সেই উদ্দেশ্য পূরণ করে? CIRIS এইভাবে তৈরি হয়েছে, তাই নৈতিকতা ডিজাইনের অংশ, পরে যোগ করা কোনো নিয়ম নয়।",
     "fourEyebrow": "চার-উপাদানের মডেল",

@@ -1029,7 +1029,7 @@
     "sec6RowLocale": "{label} ({langName})",
     "placeholdersSectionLabel": "ప్రాంప్ట్‌లలో టెంప్లేట్ placeholder లు",
     "placeholderBody": "పైన YAML ప్రాంప్ట్‌లు <code>{placeholder}</code> టోకెన్‌లు కలిగి ఉంటాయి, అవి రన్‌టైమ్‌లో ఏజెంట్ నింపుతాయి. ప్రాంప్ట్ చదివే సమీక్షకుడు ప్రతి placeholder ఏ విలువతో భర్తీ చేయబడుతుందో తెలుసుకోవాలి. అత్యంత సాధారణమైనవి:",
-    "placeholderColHeader1": "Placeholder",
+    "placeholderColHeader1": "స్థానధారకం",
     "placeholderColHeader2": "రన్‌టైమ్‌లో మూలం",
     "placeholderRow1Source": "సందర్భ-సేకరణ దశ (GATHER_CONTEXT) నిర్మిస్తుంది. సిస్టమ్ స్నాప్‌షాట్, ఇటీవలి ఆలోచనలు, వినియోగదారు ప్రొఫైల్, మరియు ఛానల్ మెటాడేటా ఉంటాయి.",
     "placeholderRow2Source": "మూల్యాంకించబడుతున్న ఆలోచన, ప్రాసెసింగ్ క్యూ నుండి తీసుకోబడింది.",
@@ -1061,10 +1061,10 @@
     "statusInFlightHtml": "<strong>ప్రగతిలో:</strong> CIRISNodeCore లోని consensus మరియు voting primitives ఈ పేజీ GitHub-issue ఉపరితలాన్ని స్థానిక వక్త సమీక్షతో federated <code>rubric_proposal</code> / <code>arc_question</code> / <code>prompt_edit</code> ప్రవాహంగా మారుస్తాయి. అది వచ్చే వరకు, GitHub issues సమర్పణ మార్గం.",
     "statusHonestHtml": "<strong>పరిధి గురించి నిజాయితీగా:</strong> CIRIS మెషిన్ అనువాదాన్ని విస్తృతంగా ఉపయోగిస్తుంది; సాఫ్ట్ కేసుల కోసం స్థానిక వక్త సమీక్ష నిర్మించబడుతున్న cohort, ఇప్పటికే నిమగ్నమైన cohort కాదు. తమ భాష ఫైళ్ళు ఖచ్చితత్వం మరియు register కోసం సమీక్షించడానికి ఇష్టపడే ఎవరైనా ఈ ఉపరితలం నిర్మించబడుతున్న సహకారి.",
     "refSectionLabel": "లూప్ ఎలా నిర్దేశించబడుతుందో",
-    "refRubricCrowdsourcing": "Rubric Crowdsourcing FSD →",
-    "refJudgeModel": "Judge Model FSD →",
-    "refSafetyCILoop": "Safety-Battery CI Loop FSD →",
-    "refCIRISLensCore": "CIRISLensCore (science-layer runtime) →",
+    "refRubricCrowdsourcing": "రూబ్రిక్ క్రౌడ్‌సోర్సింగ్ FSD →",
+    "refJudgeModel": "జడ్జ్ మోడల్ FSD →",
+    "refSafetyCILoop": "సేఫ్టీ-బ్యాటరీ CI లూప్ FSD →",
+    "refCIRISLensCore": "CIRISLensCore (సైన్స్-లేయర్ రన్‌టైమ్) →",
     "refSafetyCensorship": "సేఫ్టీ vs సెన్సార్‌షిప్ →",
     "resourceBtnHide": "విషయం దాచు",
     "resourceBtnView": "ఇన్‌లైన్ చూడు",
@@ -1076,7 +1076,7 @@
     "resourceStatusNotYet": "{langCode} కోసం ఇంకా లేదు",
     "resourceLoadingMsg": "GitHub నుండి లోడ్ అవుతోంది…",
     "resourceErrorMsg": "లోడ్ విఫలమైంది: {error}. GitHub లింక్ నేరుగా తెరవండి.",
-    "polyglotPill": "polyglot"
+    "polyglotPill": "బహుభాషా"
   },
   "firstContact": {
     "heroHeadline": "మొట్టమొదటి సంప్రదింపు.",
@@ -1359,7 +1359,7 @@
     "techDetail3Item3": "ఇతర OpenAI-అనుకూల ప్రొవైడర్లు",
     "ctaPara": "ప్రారంభించడానికి సిద్ధంగా ఉన్నారా?",
     "ctaBtn": "CIRIS Agent ఇన్‌స్టాల్ చేయండి",
-    "kicker": "Hosted CIRIS"
+    "kicker": "హోస్ట్ చేయబడిన CIRIS"
   },
   "federation": {
     "shell": {
@@ -1506,10 +1506,26 @@
     "engProofH2": "ఫ్యాబ్రిక్, కొలవబడింది",
     "engProofBody": "పై పరిశోధన రుజువులో మొదటి సగం. రెండవ సగం దానిని మోసే నెట్‌వర్క్. ఫ్యాబ్రిక్ పంపే ప్రతి బైట్ post-quantum సంతకం చేయబడింది, మరియు ఖర్చు ఒక బహిరంగ CI runner లో కొలవబడింది, నమూనాతో కాదు. మీరు మీకు మీరే అమలు చేసినా అదే సంఖ్యలు వస్తాయి.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "ఒక CPU core పై తీసుకోబడిన post-quantum సంతకం చేయబడిన ఈవెంట్లు", "tag": "measured" },
-      { "v": "0", "l": "400 నోడ్‌ల మధ్య క్రాస్-గ్రూప్ డేటా లీక్‌లు", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "ఒక core కి end-to-end encryption నిర్గమ సామర్థ్యం", "tag": "measured" },
-      { "v": "97.6%", "l": "20% హోల్డర్లు ఆఫ్‌లైన్‌లో ఉన్నప్పుడు కార్పస్ తిరిగి నిర్మించే శాతం", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "ఒక CPU core పై తీసుకోబడిన post-quantum సంతకం చేయబడిన ఈవెంట్లు",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "400 నోడ్‌ల మధ్య క్రాస్-గ్రూప్ డేటా లీక్‌లు",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "ఒక core కి end-to-end encryption నిర్గమ సామర్థ్యం",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "20% హోల్డర్లు ఆఫ్‌లైన్‌లో ఉన్నప్పుడు కార్పస్ తిరిగి నిర్మించే శాతం",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "ప్రతి కొలిచిన సంఖ్య చూడండి, మరియు మీకు మీరే దాన్ని పునరుత్పత్తి చేయండి",
     "flagshipBadge": "ప్రధాన సంశ్లేషణ పేపర్",
@@ -1643,7 +1659,7 @@
   "mdd": {
     "heroBadgeMethodology": "పద్ధతి",
     "heroBadgeActive": "క్రియాశీలం: v1.0",
-    "heroEyebrow": "Mission Driven Development",
+    "heroEyebrow": "లక్ష్య ఆధారిత అభివృద్ధి",
     "h1": "సాఫ్ట్‌వేర్ నిర్మాణానికి నాలుగో పునాది: మిషన్.",
     "heroPara": "చాలా సాఫ్ట్‌వేర్ ఒక విషయాన్ని ఎలా నిర్మించాలో మాత్రమే అడుగుతుంది. Mission Driven Development (MDD) అంతకు ముందు ఒక ప్రశ్న జోడిస్తుంది: మనం దీన్ని ఎందుకు నిర్మిస్తున్నాం, ఈ ఎంపిక ఆ ఉద్దేశాన్ని నెరవేరుస్తుందా? CIRIS ఇదే విధంగా నిర్మించబడింది, కాబట్టి నైతికత తర్వాత జోడించిన నియమంగా కాకుండా డిజైన్‌లోనే భాగంగా ఉంది.",
     "fourEyebrow": "నాలుగు-భాగాల నమూనా",
@@ -1775,8 +1791,8 @@
     "closePara2": "బృందం మిషన్-నడిచే నిర్ణయ తీసుకోవడం నేర్చుకుంటున్నప్పుడు ప్రారంభ అదనపు భారం నిజంగా ఉంటుంది. తర్వాతి అభివృద్ధిలో సంచిత లాభం ఉంటుంది: చట్రం నిర్మాణ ఎంపికలను స్పష్టపరుస్తుంది, వాటిని పెంచే బదులు.",
     "closeLink1": "మూల FSD చదవండి",
     "closeLink2": "CIRIS మిషన్ (M-1)",
-    "closeLink3": "The Accord",
-    "closeLink4": "Federation (3.X plan)"
+    "closeLink3": "ఒప్పందం",
+    "closeLink4": "సమాఖ్య (3.X ప్రణాళిక)"
   },
   "coherenceRatchet": {
     "shell": {

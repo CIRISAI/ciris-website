@@ -994,7 +994,7 @@
     "runtimeList5": "la referencia del traductor para acertar con los artefactos por locale. No se carga en tiempo de ejecución; se consulta al crear los demás.",
     "runtimeLensHtml": "Cuando el agente responde, el rastro de razonamiento está firmado y (con consentimiento) fluye a <a href=\"https://github.com/CIRISAI/CIRISLensCore\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISLensCore</a> para puntuación relativa a la cohorte. La <strong>batería de seguridad + rúbrica</strong> para este locale es lo que se verifica contra el rastro. Los fallos graves bloquean el lanzamiento; los casos suaves se ponen en cola para revisión.",
     "runtimeRefs": "Referencias canónicas:",
-    "runtimeRefMission": "MISSION.md §4.2 (H3ERE pipeline)",
+    "runtimeRefMission": "MISSION.md §4.2 (pipeline H3ERE)",
     "runtimeRefDmaBounce": "FSD/DMA_BOUNCE.md",
     "runtimeRefConscience": "FSD/CONSCIENCE_V3.md",
     "polyglotSectionLabel": "Canon políglota (universal)",
@@ -1398,7 +1398,7 @@
     "healthyBodyHtml": "Una federación puede fallar de dos maneras. Si los agentes no tienen nada en común, no pueden ponerse de acuerdo en nada y la red produce ruido. Si todos piensan exactamente igual, la red es una sola voz con un millón de micrófonos, y es fácil engañarla. La coordinación saludable vive en la banda entre ambos extremos. CIRIS mide dónde se ubica la red en esa banda, con tráfico real, y los límites exactos dependen del sistema. <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Esa medición es el Análisis de Colapso de Coherencia.</a>",
     "statusWarningHtml": "<strong>Qué funciona hoy y qué sigue en diseño.</strong> La medición, los registros firmados, la cadena de supervisión y ambas rutas de incorporación (registrada y soberana) funcionan hoy. El transporte de federación que mueve datos entre máquinas es la parte que aún se está construyendo. La propuesta completa de incorporación y transporte es el <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold underline hover:no-underline\">documento de diseño Proof of Benefit</a>.",
     "joinLabel": "Unirse a la federación",
-    "joinH2": "Proof of Benefit.",
+    "joinH2": "Prueba de Beneficio.",
     "joinP1": "La mayoría de las redes te piden que pagues la membresía con algo ajeno al trabajo en sí: electricidad quemada, dinero bloqueado, tu atención. La federación es diferente. El costo de pertenecer es operar un agente real de razonamiento ético a lo largo del tiempo. El precio que pagas es el bien que haces.",
     "joinP2": "Eso es lo que hace caro fingir la membresía. Para parecer un miembro, un atacante tendría que convertirse realmente en el tipo de agente para el que es la red. Cien copias que todas piensan igual fallan la verificación del punto medio saludable de inmediato.",
     "registeredH3": "Registrada (funciona hoy)",
@@ -1506,10 +1506,26 @@
     "engProofH2": "La red, medida",
     "engProofBody": "La investigación anterior es una mitad de la prueba. La otra mitad es la red que la transporta. Cada byte que mueve la red está firmado con criptografía poscuántica, y el costo se mide en un ejecutor de CI público, no se estima. Ejecútalo tú mismo y obtienes los mismos números.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "eventos firmados con criptografía poscuántica procesados en un núcleo de CPU", "tag": "measured" },
-      { "v": "0", "l": "filtraciones de datos entre grupos en 400 nodos", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "rendimiento de cifrado de extremo a extremo por núcleo", "tag": "measured" },
-      { "v": "97.6%", "l": "del corpus se reconstruye con el 20 % de los nodos sin conexión", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "eventos firmados con criptografía poscuántica procesados en un núcleo de CPU",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "filtraciones de datos entre grupos en 400 nodos",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "rendimiento de cifrado de extremo a extremo por núcleo",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "del corpus se reconstruye con el 20 % de los nodos sin conexión",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Consulta cada número medido y reprodúcelo tú mismo",
     "flagshipBadge": "Artículo de síntesis principal",
@@ -1591,7 +1607,7 @@
     "idmaH2": "La intuición en tiempo de ejecución y los mapas de campo agregados son capas complementarias.",
     "idmaBody": "IDMA opera en tiempo de ejecución, estimando si las fuentes detrás de una decisión son suficientemente independientes. El corpus de trazas opera en la capa agregada, mostrando qué hacen realmente los agentes en muchas tareas. Juntos crean un camino desde las decisiones en vivo hasta la evidencia de investigación auditable.",
     "idmaNote": "La medición empírica de N_eff sobre el corpus de trazas es también el suelo bajo la propuesta del primitivo federativo Proof of Benefit. Consulta la <a href=\"/federation\" class=\"text-brand-primary hover:underline\">página de federación</a> para ver cómo el plan arquitectónico 3.X lo usaría.",
-    "benchmarksEyebrow": "Benchmarks",
+    "benchmarksEyebrow": "Puntos de referencia",
     "benchmarksH2": "Las trazas complementan los benchmarks al mostrar el comportamiento continuo.",
     "benchmarksBody": "Los benchmarks siguen siendo valiosos, pero muestrean el comportamiento de forma dispersa. Los corpus de trazas muestran cómo se mueve un agente a través de tareas reales a lo largo del tiempo. Eso los hace especialmente útiles para medir la duda, el rechazo, las anulaciones y la recuperación, no solo resultados de pasar o fallar.",
     "falsificationEyebrow": "Ruta de falsificación",
@@ -1636,7 +1652,7 @@
     "closingEyebrow": "Cómo encaja todo",
     "closingH2": "Las matemáticas son una parte de un conjunto mayor.",
     "closingPara": "Esta página es la medición. El <a href=\"/coherence-ratchet\" class=\"text-brand-primary hover:underline\">Coherence Ratchet</a> es cómo se pone en práctica la medición. La <a href=\"/federation\" class=\"text-brand-primary hover:underline\">Federación</a> es cómo se convierte en algo que muchos sistemas comparten. Y las pruebas completas, escritas para que un ordenador pueda verificarlas línea por línea, están en el artículo y en el repositorio RATCHET.",
-    "closingCta1": "The Coherence Ratchet",
+    "closingCta1": "El Trinquete de Coherencia",
     "closingCta2": "Estado de la investigación",
     "closingCta3": "Leer el artículo"
   },
@@ -1780,7 +1796,7 @@
   },
   "coherenceRatchet": {
     "shell": {
-      "h1": "The Coherence Ratchet",
+      "h1": "El Trinquete de Coherencia",
       "subtitleSimple": "Por qué una mente poderosa tiene que mostrar su trabajo.",
       "subtitleAdvanced": "Un análisis estructural de por qué el estado oculto en sistemas cognitivos que escalan se convierte en un riesgo civilizatorio.",
       "badge": "Banco de pruebas de investigación",

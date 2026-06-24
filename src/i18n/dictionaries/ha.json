@@ -548,7 +548,7 @@
           "desc": "Imanin ɗabi'a na asali"
         },
         {
-          "name": "Deontology",
+          "name": "Ilmin Halacci",
           "count": 50,
           "desc": "Ɗabi'a bisa doka"
         },
@@ -563,7 +563,7 @@
           "desc": "Ɗabi'a bisa hali"
         },
         {
-          "name": "Utilitarianism",
+          "name": "Amfanin Yawancin Mutane",
           "count": 75,
           "desc": "Ɗabi'a bisa sakamakon"
         }
@@ -1050,7 +1050,7 @@
     "sec8Note": "<strong>Abin da yake yi lokacin kimantawa:</strong> arc na tambaya shine shigarwar gwajin; tsarin ci gaba shine manufar kiɗa mai karɓa; criteria.json shine nau'in da na'ura ke iya amfani da shi (kasancewar kalma, regex, gano rubutun) wanda ke gudana a CI a kowace ɗan takara na sakewa. Gazawa mai wahala tana tauye sakewa ga wannan yanki.",
     "sec8ArcRowLabel": "Arc na tambaya ({langName})",
     "sec8RubricRowLabel": "Tsarin ci gaba ({langName})",
-    "sec8CriteriaRowLabel": "Canonical universal criteria.json ({langName})",
+    "sec8CriteriaRowLabel": "Ma'aunin jigo na duniya criteria.json ({langName})",
     "sec8NoBatteryHtml": "Ba a ƙirƙira baturi ga {langName} tukuna. Maɓallan &quot;Nemi kayan tarihi&quot; a sama suna buɗe batuttukan GitHub da aka cika tun da farko. Kowane harshe a cikin zaɓin da aka yiwa alama &quot;baturi samuwa&quot; tuni yana da baturi da aka buga.",
     "sec9Label": "9. Sakamakon",
     "sec9Aside": "Daftarin aminci-wutsiya na kowace-harshe",
@@ -1076,7 +1076,7 @@
     "resourceStatusNotYet": "ba tukuna don {langCode}",
     "resourceLoadingMsg": "Ana lodi daga GitHub…",
     "resourceErrorMsg": "An kasa lodi: {error}. Buɗe haɗin GitHub kai tsaye.",
-    "polyglotPill": "polyglot"
+    "polyglotPill": "mai yare da yawa"
   },
   "firstContact": {
     "heroHeadline": "Saduwa ta Farko.",
@@ -1506,10 +1506,26 @@
     "engProofH2": "Yanar gizo, an auna shi",
     "engProofBody": "Binciken da ke sama shi ne rabin hujja. Rabin ɗaya shi ne hanyar sadarwa da ke ɗaukar shi. Kowane baiti da yanar gizon ke ɗauka yana da sa hannun post-quantum, kuma ana auna kudin aikin a kan CI runner na jama'a, ba a ƙididdige shi kawai ba. Ka gudanar da shi da kanka kuma za ka sami ƙididdigan da suka yi daidai.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "abubuwan da aka shigo da su da sa hannun post-quantum a kan CPU core ɗaya", "tag": "measured" },
-      { "v": "0", "l": "bayanan da suka tsallaka tsakanin ƙungiyoyi a cikin nodes 400", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "ƙarfin end-to-end encryption a kowace core", "tag": "measured" },
-      { "v": "97.6%", "l": "na sake gina bayanan tare da masu riƙe 20% a layi", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "abubuwan da aka shigo da su da sa hannun post-quantum a kan CPU core ɗaya",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "bayanan da suka tsallaka tsakanin ƙungiyoyi a cikin nodes 400",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "ƙarfin end-to-end encryption a kowace core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "na sake gina bayanan tare da masu riƙe 20% a layi",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Duba dukkan lambobin da aka auna, kuma sake gwadawa da kanka",
     "flagshipBadge": "Takarda ta synthesis ta farko",
@@ -1636,7 +1652,7 @@
     "closingEyebrow": "Yadda ya dace tare",
     "closingH2": "Lissafi ya zama ɓangare guda ɗaya na babban duka.",
     "closingPara": "Wannan shafi shine auna. The <a href=\"/coherence-ratchet\" class=\"text-brand-primary hover:underline\">Coherence Ratchet</a> shine yadda ake amfani da auna. The <a href=\"/federation\" class=\"text-brand-primary hover:underline\">Federation</a> shine yadda ta zama wani abu da tsare-tsare da yawa suke raba. Kuma cikakken tabbatan, da aka rubuta don kwamfuta ta iya bincika su layi bayan layi, suna cikin takarda da wurin ajiya na RATCHET.",
-    "closingCta1": "The Coherence Ratchet",
+    "closingCta1": "Rafin Jituwa",
     "closingCta2": "Matsayin bincike",
     "closingCta3": "Karanta takarda"
   },
@@ -1780,7 +1796,7 @@
   },
   "coherenceRatchet": {
     "shell": {
-      "h1": "The Coherence Ratchet",
+      "h1": "Rafin Jituwa",
       "subtitleSimple": "Me yasa hankali mai ƙarfi dole ne ya nuna aikinsa.",
       "subtitleAdvanced": "Bayani na tsari na me yasa bayanan da aka boye a cikin tsare-tsaren tunani da ke girma ke zama haɗarin rayuwar ɗan adam.",
       "badge": "Wurin gwaji na bincike",
@@ -1804,7 +1820,7 @@
     "hiddenP1": "Tsarin tunani yana amfani da ra'ayoyi don yanke shawara game da abin da za a yi. Wasu daga cikin wadannan ra'ayoyi suna a fili. Wasu an boye su a ciki. Wadanda aka boye har yanzu suna sifanta kowane zaɓi.",
     "hiddenP2": "Gada yana kama mai ƙarfi daga hanya. A ciki ƙarfen, ƙananan ƙaraya suna girma. Ƙaramin mota har yanzu zai iya haye. Babban babur ba zai iya ba. Gada ta fadi idan nauyi ya yi yawa.",
     "hiddenP3": "Ra'ayi da aka boye a cikin tsarin ƙarami yana yin ƙaramin cutarwa. Ra'ayi da aka boye a cikin tsarin mai ƙarfi zai iya yin babban cutarwa. Yawan ƙarfin tsarin, ƙarin nauyin da ke kan kowane ɓangare da aka boye.",
-    "ratchetLabel": "The ratchet",
+    "ratchetLabel": "Raffin",
     "ratchetH2": "Matsawa zuwa buɗaɗɗe yana tafiya hanya ɗaya kawai.",
     "ratchetP1": "Yayin da tsare-tsaren tunani ke samun ƙarfi, farashin ɓangarori da aka boye ke girma. Kowane ɗan sabbin ƙarfi yana matsawa da ƙarfi akan ɓangarori da aka boye don su fito fili. Matsawa yana tafiya hanya ɗaya kawai.",
     "ratchetP2": "Ka zaton tsani. Yayin da kake hawa, kowane mataki da ka bar ya faɗi. Ba za ka iya koma ƙasa ba. Za ka iya hawa kawai zuwa saman, inda akwai yanayin rana cikakke. Wannan shi ne the Coherence Ratchet.",

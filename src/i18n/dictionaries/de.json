@@ -527,7 +527,7 @@
       "items": [
         {
           "name": "Sage",
-          "role": "Compliance",
+          "role": "Konformität",
           "desc": "GDPR/DSAR-Automatisierung. 30-tägige Compliance-Workflows. Identitätsauflösung, Datenerfassung, Paketierung.",
           "useCase": "Regulierte Branchen, Datenschutz-Compliance"
         },
@@ -562,7 +562,7 @@
       "safetyBtn": "Sicherheitsfunktionen",
       "compareBtn": "Ansätze vergleichen",
       "coherenceBtn": "Kohärenz-Ratchet",
-      "scoringBtn": "CIRIS Scoring"
+      "scoringBtn": "CIRIS-Bewertung"
     }
   },
   "trust": {
@@ -653,7 +653,7 @@
     "tierCommunityFeature3": "Kryptografisches Prüfprotokoll",
     "tierCommunityFeature4": "Community-Support",
     "tierCommunityBtn": "Jetzt aktivieren",
-    "tierProfessionalName": "Professional",
+    "tierProfessionalName": "Professionell",
     "tierProfessionalPrice": "$15.00",
     "tierProfessionalPriceSub": "Aktivierung + $10/Agent/Monat",
     "tierProfessionalIssuance": "Ausstellungsgebühr",
@@ -1007,7 +1007,7 @@
     "sec2Label": "2. Lokalisierungsstrings",
     "sec2Aside": "Benutzerseitiger Text in jedem Sprachgebiet",
     "sec2Note": "<strong>Was es zur Laufzeit tut:</strong> der JSON-Baum trägt Fehlermeldungen, Agent-Antwortvorlagen, Handler-Folgeanweisungen, Discord-Embed-Labels und Adapter-Tool-Beschreibungen. Der Agent sucht Schlüssel nach Kategorie bei jeder Benutzerinteraktion.",
-    "sec2RowLabel": "Strings ({langName})",
+    "sec2RowLabel": "Zeichenketten ({langName})",
     "sec2FootHtml": "Oberste Abschnitte zum Prüfen: <code>agent</code> (benutzerseitige Antwortvorlagen), <code>handlers</code> (Folgeanweisungen in den LLM-Kontext eingespeist), <code>prompts</code> (Formatierer + Eskalierung + Krisenfragmente), <code>errors</code>, <code>discord</code>, <code>adapters.*</code>, <code>mobile</code>.",
     "sec3Label": "3. Der Accord",
     "sec3Aside": "Ethisches Framework, sprachspezifisch (v1.2-Beta)",
@@ -1398,7 +1398,7 @@
     "healthyBodyHtml": "Eine Föderation kann auf zwei Arten scheitern. Haben die Agenten nichts gemeinsam, können sie sich auf nichts einigen, und das Netzwerk produziert Rauschen. Denken sie alle genau gleich, ist das Netzwerk eine Stimme mit einer Million Mikrofonen und leicht zu täuschen. Gesunde Koordination lebt im Bereich dazwischen. CIRIS misst, wo das Netzwerk in diesem Bereich steht, auf echtem Datenverkehr, und die genauen Grenzen hängen vom System ab. <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Diese Messung ist die Kohärenz-Kollaps-Analyse.</a>",
     "statusWarningHtml": "<strong>Was heute läuft und was noch entworfen wird.</strong> Die Messung, die signierten Aufzeichnungen, die Aufsichtskette und beide Beitrittswege (registriert und souverän) laufen heute. Der Föderations-Transport, der Daten zwischen Maschinen bewegt, ist der Teil, der noch ausgebaut wird. Der vollständige Beitritts- und Transport-Vorschlag ist das <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold underline hover:no-underline\">Proof-of-Benefit-Designdokument</a>.",
     "joinLabel": "Der Föderationsbeitritt",
-    "joinH2": "Proof of Benefit.",
+    "joinH2": "Nachweis des Nutzens.",
     "joinP1": "Die meisten Netzwerke verlangen, dass Sie mit etwas außerhalb der Arbeit selbst für die Mitgliedschaft bezahlen: verbrannter Strom, gesperrtes Geld, Ihre Aufmerksamkeit. Die Föderation ist anders. Der Preis für die Zugehörigkeit besteht darin, über einen längeren Zeitraum einen echten ethischen Denk-Agenten zu betreiben. Der Preis, den Sie zahlen, ist das Gute, das Sie tun.",
     "joinP2": "Das macht das Vortäuschen einer Mitgliedschaft teuer. Um wie ein Mitglied auszusehen, müsste ein Angreifer tatsächlich die Art von Agent werden, für die das Netzwerk gedacht ist. Hundert Kopien, die alle gleich denken, scheitern sofort an der Gesunde-Mitte-Prüfung.",
     "registeredH3": "Registriert (läuft heute)",
@@ -1506,10 +1506,26 @@
     "engProofH2": "Das Netzwerk, gemessen",
     "engProofBody": "Die obige Forschung ist eine Hälfte des Beweises. Die andere Hälfte ist das Netzwerk, das sie trägt. Jedes Byte, das das Netzwerk bewegt, ist post-quantum-signiert, und die Kosten werden auf einem öffentlichen CI-Runner gemessen, nicht modelliert. Führe es selbst aus und du erhältst dieselben Zahlen.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "post-quantum-signierte Ereignisse auf einem CPU-Kern verarbeitet", "tag": "measured" },
-      { "v": "0", "l": "gruppenübergreifende Datenlecks auf 400 Knoten", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "Ende-zu-Ende-Verschlüsselungsdurchsatz pro Kern", "tag": "measured" },
-      { "v": "97.6%", "l": "der Korpuswiederherstellungen bei 20 % offline geschalteten Haltern", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "post-quantum-signierte Ereignisse auf einem CPU-Kern verarbeitet",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "gruppenübergreifende Datenlecks auf 400 Knoten",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "Ende-zu-Ende-Verschlüsselungsdurchsatz pro Kern",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "der Korpuswiederherstellungen bei 20 % offline geschalteten Haltern",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Alle gemessenen Zahlen ansehen und selbst reproduzieren",
     "flagshipBadge": "Flagship-Synthesepapier",
@@ -1636,14 +1652,14 @@
     "closingEyebrow": "Wie es zusammenpasst",
     "closingH2": "Die Mathematik ist ein Teil eines grosseren Ganzen.",
     "closingPara": "Diese Seite ist die Messung. Der <a href=\"/coherence-ratchet\" class=\"text-brand-primary hover:underline\">Coherence Ratchet</a> ist, wie die Messung eingesetzt wird. Die <a href=\"/federation\" class=\"text-brand-primary hover:underline\">Foderation</a> ist, wie sie zu etwas wird, das viele Systeme teilen. Und die vollstandigen Beweise, so geschrieben, dass ein Computer sie Zeile fur Zeile prufen kann, stecken im Paper und im RATCHET-Repository.",
-    "closingCta1": "The Coherence Ratchet",
+    "closingCta1": "Die Kohärenzratsche",
     "closingCta2": "Forschungsstand",
     "closingCta3": "Paper lesen"
   },
   "mdd": {
     "heroBadgeMethodology": "Methodik",
     "heroBadgeActive": "Aktiv: v1.0",
-    "heroEyebrow": "Mission Driven Development",
+    "heroEyebrow": "Missionsorientierte Entwicklung",
     "h1": "Mission als viertes Fundament der Softwarearchitektur.",
     "heroPara": "Die meiste Software fragt, wie man etwas baut. Mission Driven Development (MDD) stellt zuerst eine andere Frage: Warum bauen wir das, und dient diese Entscheidung diesem Zweck? CIRIS wurde so entwickelt, damit Ethik Teil des Designs ist, statt eine Regel, die nachtraeglich angeschraubt wird.",
     "fourEyebrow": "Das Vier-Komponenten-Modell",
@@ -1780,7 +1796,7 @@
   },
   "coherenceRatchet": {
     "shell": {
-      "h1": "The Coherence Ratchet",
+      "h1": "Die Kohärenzratsche",
       "subtitleSimple": "Warum ein machtig denkender Geist seine Arbeit zeigen muss.",
       "subtitleAdvanced": "Eine strukturelle Erklarung, warum verborgene Zustande in skalierenden kognitiven Systemen zu einem zivilisatorischen Risiko werden.",
       "badge": "Forschungsumgebung",

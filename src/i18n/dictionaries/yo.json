@@ -1076,7 +1076,7 @@
     "resourceStatusNotYet": "kò tíì fún {langCode}",
     "resourceLoadingMsg": "Ń fà sínú láti GitHub…",
     "resourceErrorMsg": "Kùnà láti fà sínú: {error}. Ṣí ọ̀nà GitHub tààrà.",
-    "polyglotPill": "polyglot"
+    "polyglotPill": "onírúurú èdè"
   },
   "firstContact": {
     "heroHeadline": "Ìpàdé Àkọ́kọ́.",
@@ -1274,7 +1274,7 @@
     "tryStartCta": "Ìbáradé àkọ́kọ́ →",
     "tryIOSLabel": "iOS",
     "tryAndroidLabel": "Android",
-    "tryDesktopLabel": "Desktop",
+    "tryDesktopLabel": "Kọ̀ǹpútà Alágbèéká",
     "trySourceLabel": "Wo Orísun",
     "imageHeroLogoAlt": "Àmì àwòrán orúkọ iṣẹ́",
     "imageHeroHeadline": "Fìdí Rẹ̀ Múlẹ̀ Fúnra Rẹ.",
@@ -1298,7 +1298,7 @@
     "stillWrongParaHtml": "Kò sí nkan nínú èyí tó jẹ́ aláìfọwọ́sowọ́pọ̀. Ìlànà náà wà nìkan tí èdè òfin bá wà <em>ní ìṣiṣẹ́</em>, nípa àwọn nkan tí ẹrọ lè ṣàyẹ̀wò, kì í ṣe nípa àwọn ìmọ̀lára. Nígbàtí òfin kan bá yípadà láti &quot;lo ọ̀rọ̀ àṣìṣe fún ìtọjú&quot; sí &quot;máa ń fẹ́ àìbọ̀wọ̀,&quot; ìtumọ̀ ènìyàn wọlé nípasẹ̀ ẹnu-bode ẹ̀yìn tí ìyípadà sì bẹ̀rẹ̀. Ìpẹlẹ̀ àpẹrẹ darúkọ gbogbo èrọ tí a lè rò pé ó ń dènà èyí; iṣẹ́ ti dídúró lórí ìlà jẹ́ ti ìṣiṣẹ́, kì í ṣe ti ìpẹlẹ̀ àpẹrẹ.",
     "closingPara": "Àwọn ohun èlò ìgbà-ara-ẹni, àwọn ọ̀nà ẹbẹ̀, àti àkàrà òfin tó ṣeéló fún ẹrọ wà nínú àpẹrẹ CIRISNodeCore. Àwọn idánwò ìlera ọpọlọ ní èdè 29 ni sẹ́ẹ̀lì àkọ́kọ́ nínú èyí tí ìtò náà ń ṣiṣẹ́.",
     "ctaSafety": "Àwọn ẹ̀yà ààbò →",
-    "ctaFederation": "Federation",
+    "ctaFederation": "Ìṣọ̀kan",
     "ctaFsd": "Ka FSD"
   },
   "services": {
@@ -1506,10 +1506,26 @@
     "engProofH2": "Àwọn wiwọn ìsopọ̀",
     "engProofBody": "Ìwádìí tó wà lókè jẹ́ ìdajì ẹ̀rí. Ìdajì kejì ni ìsopọ̀ tí ó gbé e. Gbogbo bẹ̀ẹ̀tì tí ìsopọ̀ ń gbé ni a ti fọwọ́sí pẹ̀lú ọ̀nà post-quantum, a sì ń ṣe ìwọ̀n ìná lórí CI runner gbangba, kì í ṣe àkóbẹ̀rẹ̀. Ṣe é fúnra rẹ, àwọn nọ́mbà náà yóò jẹ́ kanna.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "àwọn ìṣẹ̀lẹ̀ tí a fọwọ́sí post-quantum tí a gbé wọlé lórí CPU core kan", "tag": "measured" },
-      { "v": "0", "l": "ìjákulẹ̀ àlàyé láàárín àwọn ẹgbẹ́ lára ojú-ọpọlọpọ̀ ìpinlẹ̀ 400", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "ìyára end-to-end encryption fún CPU core kọ̀ọ̀kan", "tag": "measured" },
-      { "v": "97.6%", "l": "nínú àtúnkọ corpus pẹ̀lú 20% àwọn olùdìmọ̀ tí kò sí nílé", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "àwọn ìṣẹ̀lẹ̀ tí a fọwọ́sí post-quantum tí a gbé wọlé lórí CPU core kan",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "ìjákulẹ̀ àlàyé láàárín àwọn ẹgbẹ́ lára ojú-ọpọlọpọ̀ ìpinlẹ̀ 400",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "ìyára end-to-end encryption fún CPU core kọ̀ọ̀kan",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "nínú àtúnkọ corpus pẹ̀lú 20% àwọn olùdìmọ̀ tí kò sí nílé",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Wo gbogbo àwọn wiwọn, kí o sì tún ṣe é fúnra rẹ",
     "flagshipBadge": "Àkọwé ìṣọ̀kan àkọ́kọ́",

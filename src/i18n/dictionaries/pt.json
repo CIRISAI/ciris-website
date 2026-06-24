@@ -562,7 +562,7 @@
       "safetyBtn": "Recursos de Segurança",
       "compareBtn": "Comparar Abordagens",
       "coherenceBtn": "Catraca de Coerência",
-      "scoringBtn": "CIRIS Scoring"
+      "scoringBtn": "Pontuação CIRIS"
     }
   },
   "trust": {
@@ -713,7 +713,7 @@
     "pqPostQuantumVal": "ML-DSA-65 (FIPS 204)",
     "pqTransparencyLabel": "Transparência",
     "pqTransparencyVal": "Log em árvore Merkle SHA-256",
-    "pqAntiRollbackLabel": "Anti-Rollback",
+    "pqAntiRollbackLabel": "Proteção contra Reversão",
     "pqAntiRollbackVal": "Rastreamento de revisão monotônico",
     "platformHeadline": "Suporte de Plataforma",
     "platformSubheadline": "Desktop. Mobile. Servidor.",
@@ -721,7 +721,7 @@
     "platformDesktopItem1": "Linux (x86_64, ARM64)",
     "platformDesktopItem2": "macOS (Apple Silicon, Intel)",
     "platformDesktopItem3": "Windows (x86_64)",
-    "platformMobileH4": "Mobile",
+    "platformMobileH4": "Celular",
     "platformMobileItem1": "Android (ARM64, ARM32, x86_64)",
     "platformMobileItem2": "iOS (ARM64 + Simulador)",
     "platformPythonH4": "Python (PyPI)",
@@ -1007,7 +1007,7 @@
     "sec2Label": "2. Strings de localização",
     "sec2Aside": "Texto visível ao usuário em cada idioma",
     "sec2Note": "<strong>O que faz em tempo de execução:</strong> a árvore JSON carrega mensagens de erro, modelos de resposta do agente, pensamentos de acompanhamento do manipulador, rótulos de incorporações do Discord e descrições de ferramentas do adaptador. O agente busca chaves por categoria em cada interação com o usuário.",
-    "sec2RowLabel": "Strings ({langName})",
+    "sec2RowLabel": "Textos ({langName})",
     "sec2FootHtml": "Seções de nível superior para inspecionar: <code>agent</code> (modelos de resposta visíveis ao usuário), <code>handlers</code> (pensamentos de acompanhamento injetados no contexto do LLM), <code>prompts</code> (fragmentos de formatador + escalação + crise), <code>errors</code>, <code>discord</code>, <code>adapters.*</code>, <code>mobile</code>.",
     "sec3Label": "3. O Acordo",
     "sec3Aside": "Framework ético, por idioma (v1.2-Beta)",
@@ -1029,7 +1029,7 @@
     "sec6RowLocale": "{label} ({langName})",
     "placeholdersSectionLabel": "Placeholders de modelo nos prompts",
     "placeholderBody": "Os prompts YAML acima contêm tokens <code>{placeholder}</code> que são preenchidos em tempo de execução pelo agente. Um revisor que lê um prompt deve saber pelo que cada placeholder será substituído. Os mais comuns:",
-    "placeholderColHeader1": "Placeholder",
+    "placeholderColHeader1": "Espaço Reservado",
     "placeholderColHeader2": "Fonte em tempo de execução",
     "placeholderRow1Source": "Construído pela etapa de coleta de contexto (GATHER_CONTEXT). Inclui o instantâneo do sistema, pensamentos recentes, perfil do usuário e metadados do canal.",
     "placeholderRow2Source": "O pensamento sendo avaliado, retirado da fila de processamento.",
@@ -1274,7 +1274,7 @@
     "tryStartCta": "Primeiro contato →",
     "tryIOSLabel": "iOS",
     "tryAndroidLabel": "Android",
-    "tryDesktopLabel": "Desktop",
+    "tryDesktopLabel": "Computador",
     "trySourceLabel": "Ver Código-Fonte",
     "imageHeroLogoAlt": "Ícone do logotipo da marca",
     "imageHeroHeadline": "Verifique Você Mesmo.",
@@ -1298,7 +1298,7 @@
     "stillWrongParaHtml": "Nada disso é automático. A disciplina só se mantém se a linguagem das regras continuar <em>operacional</em>, sobre coisas que uma máquina pode verificar, não sobre sentimentos. No momento em que uma regra escorrega de &quot;usa a palavra errada para terapia&quot; para &quot;parece desrespeitoso,&quot; a interpretação humana reentra pela porta dos fundos e o desvio começa. A arquitetura nomeia cada mecanismo que conseguimos imaginar para resistir a isso; o trabalho de realmente manter a linha é operacional, não arquitetural.",
     "closingPara": "As primitivas de colaboração, os caminhos de recurso e o formato de regras aplicável por máquina estão na especificação do CIRISNodeCore. As baterias de saúde mental em 29 idiomas são a primeira célula onde o ciclo funciona.",
     "ctaSafety": "Recursos de segurança →",
-    "ctaFederation": "Federation",
+    "ctaFederation": "Federação",
     "ctaFsd": "Leia o FSD"
   },
   "services": {
@@ -1398,7 +1398,7 @@
     "healthyBodyHtml": "Uma federação pode falhar de duas formas. Se os agentes não têm nada em comum, eles não conseguem concordar em nada e a rede produz ruído. Se todos pensam exatamente igual, a rede é uma única voz com um milhão de microfones, e é fácil enganá-la. A coordenação saudável vive na faixa entre esses dois extremos. CIRIS mede onde a rede se encontra nessa faixa, com tráfego real, e as bordas exatas dependem do sistema. <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Essa medição é a Análise de Colapso de Coerência.</a>",
     "statusWarningHtml": "<strong>O que funciona hoje e o que ainda está em design.</strong> A medição, os registros assinados, a cadeia de supervisão e ambos os caminhos de entrada (registrado e soberano) funcionam hoje. O transporte de federação que move dados entre máquinas é a parte ainda sendo construída. A proposta completa de entrada e transporte é o <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold underline hover:no-underline\">documento de design Proof of Benefit</a>.",
     "joinLabel": "Entrar na federação",
-    "joinH2": "Proof of Benefit.",
+    "joinH2": "Prova de Benefício.",
     "joinP1": "A maioria das redes pede que você pague a adesão com algo fora do trabalho em si: eletricidade queimada, dinheiro bloqueado, sua atenção. A federação é diferente. O custo de pertencer é operar um agente real de raciocínio ético ao longo do tempo. O preço que você paga é o bem que você faz.",
     "joinP2": "É isso que torna caro fingir adesão. Para parecer um membro, um atacante teria que se tornar de verdade o tipo de agente para o qual a rede existe. Cem cópias que pensam exatamente igual falham imediatamente na verificação do meio saudável.",
     "registeredH3": "Registrada (funciona hoje)",
@@ -1506,10 +1506,26 @@
     "engProofH2": "A rede, medida",
     "engProofBody": "A pesquisa acima é metade da prova. A outra metade é a rede que a sustenta. Cada byte que a rede move é assinado com criptografia pós-quântica, e o custo é medido em um CI runner público, não estimado. Execute você mesmo e obterá os mesmos números.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "eventos assinados com criptografia pós-quântica processados em um CPU core", "tag": "measured" },
-      { "v": "0", "l": "vazamentos de dados entre grupos em 400 nós", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "throughput de criptografia de ponta a ponta por core", "tag": "measured" },
-      { "v": "97.6%", "l": "do corpus é reconstruído com 20% dos nós offline", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "eventos assinados com criptografia pós-quântica processados em um CPU core",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "vazamentos de dados entre grupos em 400 nós",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "throughput de criptografia de ponta a ponta por core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "do corpus é reconstruído com 20% dos nós offline",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Veja cada número medido e reproduza você mesmo",
     "flagshipBadge": "Artigo de síntese principal",
@@ -1591,7 +1607,7 @@
     "idmaH2": "Intuição em tempo de execução e mapas de campo agregados são camadas complementares.",
     "idmaBody": "O IDMA funciona em tempo de execução, estimando se as fontes por trás de uma decisão são suficientemente independentes. O corpus de traços funciona na camada agregada, mostrando o que os agentes realmente fazem ao longo de muitas tarefas. Juntos, criam um caminho de decisões ao vivo para evidências de pesquisa auditáveis.",
     "idmaNote": "A medição empírica de N_eff no corpus de traços também é o piso sob a primitiva de federação Proof of Benefit proposta. Veja a <a href=\"/federation\" class=\"text-brand-primary hover:underline\">página de federação</a> para saber como o plano arquitetural 3.X a usaria.",
-    "benchmarksEyebrow": "Benchmarks",
+    "benchmarksEyebrow": "Referências de Desempenho",
     "benchmarksH2": "Traços complementam benchmarks mostrando comportamento contínuo.",
     "benchmarksBody": "Benchmarks ainda são valiosos, mas amostram o comportamento de forma esparsa. Corpora de traços mostram como um agente se move por tarefas reais ao longo do tempo. Isso os torna especialmente úteis para medir hesitação, recusa, substituições e recuperação em vez de apenas resultados de aprovação/reprovação.",
     "falsificationEyebrow": "Caminho de falsificação",
@@ -1636,7 +1652,7 @@
     "closingEyebrow": "Como tudo se encaixa",
     "closingH2": "A matemática é uma parte de um todo maior.",
     "closingPara": "Esta página é a medição. O <a href=\"/coherence-ratchet\" class=\"text-brand-primary hover:underline\">Coherence Ratchet</a> é como a medição é colocada em prática. A <a href=\"/federation\" class=\"text-brand-primary hover:underline\">Federação</a> é como ela se torna algo que muitos sistemas compartilham. E as provas completas, escritas para que um computador possa verificá-las linha por linha, estão no artigo e no repositório RATCHET.",
-    "closingCta1": "The Coherence Ratchet",
+    "closingCta1": "A Catraca de Coerência",
     "closingCta2": "Status da pesquisa",
     "closingCta3": "Ler o artigo"
   },
@@ -1780,7 +1796,7 @@
   },
   "coherenceRatchet": {
     "shell": {
-      "h1": "The Coherence Ratchet",
+      "h1": "A Catraca de Coerência",
       "subtitleSimple": "Por que uma mente poderosa tem que mostrar seu trabalho.",
       "subtitleAdvanced": "Uma explicação estrutural de por que o estado oculto em sistemas cognitivos que escalam se torna um risco civilizacional.",
       "badge": "Testbed de pesquisa",

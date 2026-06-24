@@ -562,7 +562,7 @@
       "safetyBtn": "Funzioni di sicurezza",
       "compareBtn": "Confronta gli approcci",
       "coherenceBtn": "Ratchet di coerenza",
-      "scoringBtn": "CIRIS Scoring"
+      "scoringBtn": "Punteggio CIRIS"
     }
   },
   "trust": {
@@ -638,7 +638,7 @@
     "card9Copy": "Genera report allineati ai framework SOC2, HIPAA e GDPR. Traccia di audit completa di tutte le operazioni amministrative. Ogni azione è registrata e attribuibile.",
     "identityActivationHeadline": "Attivazione dell'Identità",
     "identityActivationSubheadline": "L'identità è la base. La garanzia è il valore.",
-    "tierCommunityName": "Community",
+    "tierCommunityName": "Comunità",
     "tierCommunityPrice": "$1,50",
     "tierCommunityPriceSub": "per identità agente",
     "tierCommunityIssuance": "Commissione di emissione",
@@ -653,7 +653,7 @@
     "tierCommunityFeature3": "Traccia di audit crittografica",
     "tierCommunityFeature4": "Supporto community",
     "tierCommunityBtn": "Attiva Ora",
-    "tierProfessionalName": "Professional",
+    "tierProfessionalName": "Professionale",
     "tierProfessionalPrice": "$15,00",
     "tierProfessionalPriceSub": "attivazione + $10/agente/mese",
     "tierProfessionalIssuance": "Commissione di emissione",
@@ -683,7 +683,7 @@
     "tierEnterpriseFeature3": "Documentazione di audit (allineata a SOC2/HIPAA/GDPR)",
     "tierEnterpriseFeature4": "Supporto alle indagini sugli incidenti",
     "tierEnterpriseBtn": "Contatta il Reparto Vendite",
-    "tierSafetyCriticalName": "Safety-Critical",
+    "tierSafetyCriticalName": "Sicurezza Critica",
     "tierSafetyCriticalPrice": "$1.250",
     "tierSafetyCriticalPriceSub": "attivazione + mensile personalizzato",
     "tierSafetyCriticalIssuance": "Commissione di emissione",
@@ -709,7 +709,7 @@
     "pqReadyBody": "Ogni risposta include doppie firme: Ed25519 dall'hardware per la sicurezza classica e ML-DSA-65 dal software per la resistenza quantistica. Entrambe devono essere verificate. Questa è un'infrastruttura disponibile dal giorno uno, non un elemento di roadmap.",
     "pqClassicalLabel": "Classico",
     "pqClassicalVal": "Ed25519 (legato all'hardware)",
-    "pqPostQuantumLabel": "Post-Quantum",
+    "pqPostQuantumLabel": "Post-Quantistico",
     "pqPostQuantumVal": "ML-DSA-65 (FIPS 204)",
     "pqTransparencyLabel": "Trasparenza",
     "pqTransparencyVal": "Log ad albero Merkle SHA-256",
@@ -984,7 +984,7 @@
     "runtimeBody2Html": "Due strati si sovrappongono a ogni chiamata LLM. Lo <strong>strato poliglotta</strong> è universale. Il <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT_compressed.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\"><strong>Braided Monolith</strong></a> (default di produzione, ~7KB) e il <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">Polyglot Accord completo</a> triangolano i concetti attraverso le codifiche più dense di molte tradizioni, caricati indipendentemente da chi sta chiedendo. Lo <strong>strato per-locale</strong> è ciò che questa pagina espone: l'Accord, la Guida, i prompt DMA (4 primo passaggio + 3 secondo passaggio specifici per verbo), le stringhe UI e il glossario, tutto nella lingua dell'utente.",
     "runtimeList1": "Stringhe di localizzazione: ogni messaggio rivolto all'utente: testo di errore, modelli di risposta dell'agente, pensieri di follow-up del handler iniettati nel contesto LLM.",
     "runtimeList1Label": "Stringhe di localizzazione:",
-    "runtimeList2Label": "Accord (per-locale):",
+    "runtimeList2Label": "Accord (per lingua):",
     "runtimeList2": "il framework sotto cui opera l'agente, nella lingua di questo utente. Caricato in ogni valutazione della coscienza.",
     "runtimeList3Label": "Guida Completa:",
     "runtimeList3": "registro, idioma e guida contestuale su come l'agente comunica in questo locale. Caricata nel prompt di sistema per ogni interazione.",
@@ -1398,7 +1398,7 @@
     "healthyBodyHtml": "Una Federazione può fallire in due modi. Se gli agenti non hanno nulla in comune, non riescono a concordare su nulla e la rete produce rumore. Se pensano tutti esattamente allo stesso modo, la rete è una voce con un milione di microfoni, e è facile ingannarla. Il coordinamento sano vive nella fascia intermedia. CIRIS misura dove si trova la rete in quella fascia, sul traffico reale, e i confini esatti dipendono dal sistema. <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Quella misurazione è l'Analisi del Collasso della Coerenza.</a>",
     "statusWarningHtml": "<strong>Cosa funziona oggi e cosa è ancora in fase di progettazione.</strong> La misurazione, i registri firmati, la catena di supervisione e i due percorsi di adesione descritti di seguito (registrato e sovrano) funzionano oggi. Il trasporto federativo che sposta i dati tra macchine è la parte ancora in costruzione. La proposta completa di adesione e trasporto è il <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold underline hover:no-underline\">documento di progettazione Proof of Benefit</a>.",
     "joinLabel": "Entrare nella Federazione",
-    "joinH2": "Proof of Benefit.",
+    "joinH2": "Prova di Beneficio.",
     "joinP1": "La maggior parte delle reti ti chiede di pagare l'appartenenza con qualcosa di esterno al lavoro stesso: elettricità bruciata, denaro bloccato, la tua attenzione. La Federazione è diversa. Il costo dell'appartenenza è gestire un agente di ragionamento etico reale nel tempo. Il prezzo che paghi è il bene che fai.",
     "joinP2": "Questo è ciò che rende costoso falsificare l'appartenenza. Per sembrare un membro, un attaccante dovrebbe diventare davvero il tipo di agente per cui la rete esiste. Cento copie che pensano tutte allo stesso modo falliscono subito il controllo del giusto equilibrio.",
     "registeredH3": "Registrato (funziona oggi)",
@@ -1506,10 +1506,26 @@
     "engProofH2": "La rete, misurata",
     "engProofBody": "La ricerca qui sopra è una metà della prova. L'altra metà è la rete che la trasporta. Ogni byte che la rete sposta è firmato con crittografia post-quantum, e il costo è misurato su un CI runner pubblico, non simulato. Eseguilo tu stesso e otterrai gli stessi numeri.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "eventi post-quantum firmati acquisiti su un singolo CPU core", "tag": "measured" },
-      { "v": "0", "l": "perdite di dati tra gruppi su 400 nodi", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "throughput di crittografia end-to-end per core", "tag": "measured" },
-      { "v": "97.6%", "l": "dei dati del corpus ricostruiti con il 20% dei nodi offline", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "eventi post-quantum firmati acquisiti su un singolo CPU core",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "perdite di dati tra gruppi su 400 nodi",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "throughput di crittografia end-to-end per core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "dei dati del corpus ricostruiti con il 20% dei nodi offline",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Guarda ogni numero misurato e riproducilo tu stesso",
     "flagshipBadge": "Articolo di sintesi principale",
@@ -1636,14 +1652,14 @@
     "closingEyebrow": "Come si inserisce nel quadro generale",
     "closingH2": "La matematica è una parte di un insieme più grande.",
     "closingPara": "Questa pagina è la misurazione. Il <a href=\"/coherence-ratchet\" class=\"text-brand-primary hover:underline\">Coherence Ratchet</a> è come la misurazione viene messa al lavoro. La <a href=\"/federation\" class=\"text-brand-primary hover:underline\">Federazione</a> è come diventa qualcosa che molti sistemi condividono. E le dimostrazioni complete, scritte in modo che un computer possa verificarle riga per riga, si trovano nell'articolo e nel repository RATCHET.",
-    "closingCta1": "The Coherence Ratchet",
+    "closingCta1": "La Ruota a Cricchetto della Coerenza",
     "closingCta2": "Stato della ricerca",
     "closingCta3": "Leggi l'articolo"
   },
   "mdd": {
     "heroBadgeMethodology": "Metodologia",
     "heroBadgeActive": "Attiva: v1.0",
-    "heroEyebrow": "Mission Driven Development",
+    "heroEyebrow": "Sviluppo Guidato dalla Missione",
     "h1": "La missione come quarta fondazione dell'architettura software.",
     "heroPara": "La maggior parte del software chiede come costruire qualcosa. Il Mission Driven Development (MDD) aggiunge prima una domanda: perche lo stiamo costruendo, e questa scelta serve a quello scopo? CIRIS e stato costruito in questo modo, cosi l'etica fa parte del progetto invece di essere una regola aggiunta in seguito.",
     "fourEyebrow": "Il modello a quattro componenti",
@@ -1780,7 +1796,7 @@
   },
   "coherenceRatchet": {
     "shell": {
-      "h1": "The Coherence Ratchet",
+      "h1": "La Ruota a Cricchetto della Coerenza",
       "subtitleSimple": "Perché una mente potente deve mostrare il proprio lavoro.",
       "subtitleAdvanced": "Un resoconto strutturale del perché lo stato nascosto nei sistemi cognitivi che scalano diventa un rischio per la civiltà.",
       "badge": "Banco di prova per la ricerca",

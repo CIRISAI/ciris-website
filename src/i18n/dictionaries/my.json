@@ -135,7 +135,7 @@
       "appStore": "App Store",
       "googlePlay": "Google Play",
       "ctahint": "အခမဲ့ · open source",
-      "foot1": "github.com/CIRISAI · AGPL-3.0 · mission-locked",
+      "foot1": "github.com/CIRISAI · AGPL-3.0 · တာဝန်သေချာပြီး",
       "foot2": "သင်ပိုင်ဆိုင်နိုင်သော AI"
     },
     "explore": {
@@ -146,7 +146,7 @@
         "installNote": "iPhone · Android · pip · desktop",
         "cewp": "CEWP",
         "cewpNote": "ဖဲနှီး၊ ရိုးရှင်းသောဘာသာစကားဖြင့်",
-        "cewpDetails": "CEWP simulator",
+        "cewpDetails": "CEWP စမ်းသပ်ကိရိယာ",
         "cewpDetailsNote": "သင်္ချာ၊ slider များဖြင့်",
         "grammar": "ဘာသာဗျာကရဏ (CEG)",
         "grammarNote": "ပေါင်းစည်းမှုသည် ပြောသော wire format",
@@ -279,7 +279,7 @@
       "bypass2Title": "တွေးခေါ်မှု အနက်",
       "bypass2Body": "အကြောင်းပြချက်ပြုစုမှုသည် အများဆုံး အနက်ကို ကျော်လွန်ပြီလား? အဆုံးမဲ့ ကွင်းဆက်ကိုတားဆီးရန်နှင့် လူသားများဆီ တင်ပြရန် လွှဲပြောင်းပါ ကို အတင်းအကြပ် ဖြစ်ပေါ်စေသည်။",
       "facultiesHeading": "ကျင့်ဝတ်ဆောင်မှုများ (ကင်းလွတ်ခွင့်မရသော လုပ်ဆောင်ချက်များတွင် လည်ပတ်သည်)",
-      "faculty1Title": "Entropy",
+      "faculty1Title": "အနှောင့်အရှက်မှု",
       "faculty1Body": "လုပ်ဆောင်ချက်သည် သင့်လျော်သော သတင်းအချက်အလက် မသေချာမှုကို ထိန်းသိမ်းသလား? အလွန်ယုံကြည်ချက်ကြီးသော အချောပြောဆိုမှုများကို တားဆီးသည်။",
       "faculty2Title": "လိုက်လျောညီထွေမှု",
       "faculty2Body": "လုပ်ဆောင်ချက်သည် ယခင်ကတိကဝတ်များနှင့် အကြောင်းပြချက်များနှင့် ပြည်တွင်း တသမတ်တည်း မှုကို ထိန်းသိမ်းသလား?",
@@ -371,13 +371,13 @@
       "heading": "လူသား ကြီးကြပ်ကွပ်ကဲမှု အဆင့်",
       "lead": "<code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code> မှ စီမံခန့်ခွဲသော ခွင့်ပြုမှုအဆင့် သုံးဆင့်:",
       "rootBadge": "ROOT",
-      "rootTitle": "Human-in-Command",
+      "rootTitle": "လူသားဦးဆောင်မှု",
       "rootBody": "အပြည့်အဝ အာဏာ။ ပညာရှိအာဏာပိုင် အသစ်များ ထုတ်ပေးနိုင်သည်။ အရေးပေါ်ပိတ်ချမှု ဝင်ရောက်ခွင့်ရှိသည်။",
       "authorityBadge": "AUTHORITY",
-      "authorityTitle": "Human-in-the-Loop",
+      "authorityTitle": "လူသားပါဝင်ခြင်း",
       "authorityBody": "လွှဲပြောင်းမှုများကို အတည်ပြု/ငြင်းဆန်သည်။ လမ်းညွှန်မှုပေးသည်။ ပညာရှိအာဏာပိုင် အသစ်များ မထုတ်ပေးနိုင်ပါ။",
       "observerBadge": "OBSERVER",
-      "observerTitle": "Human-on-the-Loop",
+      "observerTitle": "လူသားကြီးကြပ်မှု",
       "observerBody": "ဖတ်ရုံသာ ဝင်ရောက်ခွင့်ရှိသည်။ မက်ဆေ့ချ်များ ပို့နိုင်သည်။ ဝင်ရောက်မစွက်ဖက်ဘဲ စောင့်ကြည့်သည်။",
       "deferralHeading": "လွှဲပြောင်းပါ ဘယ်အချိန်တွင် ဖြစ်ပေါ်သနည်း",
       "deferralLead": "အေးဂျင့်သည် အောက်ပါအချိန်တွင် လူသား ကြီးကြပ်ကွပ်ကဲမှုဆီ ကိုယ်တိုင် တင်ပြသည်:",
@@ -496,7 +496,7 @@
           "desc": "အခြေခံ ကျင့်ဝတ်ဆိုင်ရာ ပင်ကိုယ်ဥာဏ်"
         },
         {
-          "name": "Deontology",
+          "name": "တာဝန်ဝတ္တရားဆိုင်ရာ ကျင့်ဝတ်",
           "count": 50,
           "desc": "စည်းမျဉ်းအခြေပြု ကျင့်ဝတ်"
         },
@@ -506,12 +506,12 @@
           "desc": "မျှတမှုနှင့် ဘက်မလိုက်မှု"
         },
         {
-          "name": "Virtue",
+          "name": "သီလဂုဏ်သတ္တိ",
           "count": 75,
           "desc": "စရိုက်အခြေပြု ကျင့်ဝတ်"
         },
         {
-          "name": "Utilitarianism",
+          "name": "အကျိုးများများဆောင်ကျင့်မှု",
           "count": 75,
           "desc": "ရလဒ်အခြေပြု ကျင့်ဝတ်"
         }
@@ -561,8 +561,8 @@
       "body": "ဤသည် သင်တန်းဆောင်မှုအဆင့် သို့မဟုတ် မူဝါဒ document တစ်ခုထက် အေးဂျင့် အလုပ်လုပ်နေစဉ် လည်ပတ်သော တာဝန်ခံမှုဖြစ်သည်။<br />လည်ပတ်ချိန်တွင် လုပ်ဆောင်၊ စစ်ဆေး၊ နှင့် လွှဲပြောင်းသော ယန္တရားများ။",
       "safetyBtn": "လုံခြုံရေး အင်္ဂါရပ်များ",
       "compareBtn": "ချဉ်းကပ်မှုများ နှိုင်းယှဉ်ပါ",
-      "coherenceBtn": "Coherence Ratchet",
-      "scoringBtn": "CIRIS Scoring"
+      "coherenceBtn": "ညီညွတ်မှု တိုးတက်မှုနည်း",
+      "scoringBtn": "CIRIS အမှတ်ပေးစနစ်"
     }
   },
   "trust": {
@@ -638,7 +638,7 @@
     "card9Copy": "SOC2, HIPAA နှင့် GDPR မူဘောင်များနှင့် ညီညွတ်သော အစီရင်ခံစာများ ထုတ်ပေးသည်။ စီမံခန့်ခွဲမှု လုပ်ဆောင်ချက်အားလုံး၏ ပြည့်စုံသော audit trail ။ လုပ်ဆောင်ချက်တိုင်း မှတ်တမ်းတင်ကာ ရင်းမြစ်ဆင်ဆင်ရသည်。",
     "identityActivationHeadline": "အထောက်အထား အသုံးချမှု",
     "identityActivationSubheadline": "အထောက်အထားသည် အခြေခံဖြစ်သည်။ အာမချချက်သည် တန်ဖိုးဖြစ်သည်。",
-    "tierCommunityName": "Community",
+    "tierCommunityName": "အသိုင်းအဝိုင်း",
     "tierCommunityPrice": "$1.50",
     "tierCommunityPriceSub": "အေးဂျင့်အထောက်အထားတစ်ခုလျှင်",
     "tierCommunityIssuance": "ထုတ်ပေးကြေး",
@@ -653,7 +653,7 @@
     "tierCommunityFeature3": "ကရိပ်တိုဂရပ်ဖစ် audit trail",
     "tierCommunityFeature4": "Community ပံ့ပိုးမှု",
     "tierCommunityBtn": "ယခုအသုံးချပါ",
-    "tierProfessionalName": "Professional",
+    "tierProfessionalName": "ကျွမ်းကျင်ပညာသည်",
     "tierProfessionalPrice": "$15.00",
     "tierProfessionalPriceSub": "အသုံးချမှု + အေးဂျင့်တစ်ခုလျှင် $10/လ",
     "tierProfessionalIssuance": "ထုတ်ပေးကြေး",
@@ -668,7 +668,7 @@
     "tierProfessionalFeature3": "လုပ်ဆောင်မှုခွင့်ပြုချက်",
     "tierProfessionalFeature4": "ပံ့ပိုးမှု SLA",
     "tierProfessionalBtn": "အရောင်းဝန်ထမ်းနှင့် ဆက်သွယ်ပါ",
-    "tierEnterpriseName": "Enterprise",
+    "tierEnterpriseName": "စီးပွားရေးကြီး",
     "tierEnterprisePrice": "$125.00",
     "tierEnterprisePriceSub": "အသုံးချမှု + အေးဂျင့်တစ်ခုလျှင် $100/လ",
     "tierEnterpriseIssuance": "ထုတ်ပေးကြေး",
@@ -683,7 +683,7 @@
     "tierEnterpriseFeature3": "Audit စာတမ်း (SOC2/HIPAA/GDPR နှင့် ညီညွတ်)",
     "tierEnterpriseFeature4": "ဖြစ်ရပ်စုံစမ်းချိန် ပံ့ပိုးမှု",
     "tierEnterpriseBtn": "အရောင်းဝန်ထမ်းနှင့် ဆက်သွယ်ပါ",
-    "tierSafetyCriticalName": "Safety-Critical",
+    "tierSafetyCriticalName": "လုံခြုံရေးအရေးကြီးသော",
     "tierSafetyCriticalPrice": "$1,250",
     "tierSafetyCriticalPriceSub": "အသုံးချမှု + စိတ်ကြိုက်လစဉ်",
     "tierSafetyCriticalIssuance": "ထုတ်ပေးကြေး",
@@ -709,11 +709,11 @@
     "pqReadyBody": "တုံ့ပြန်မှုတိုင်းတွင် နှစ်ထပ်လက်မှတ်ပါဝင်သည်: ကလာသိကယ်လုံခြုံမှုအတွက် hardware မှ Ed25519 နှင့် quantum ခုခံမှုအတွက် software မှ ML-DSA-65 ။ နှစ်ခုစလုံး စစ်ဆေးကိုက်ညီရမည်။ ဤသည် roadmap item မဟုတ်ဘဲ 1 ရက်မှ အခြေခံအဆောက်အဦဖြစ်သည်。",
     "pqClassicalLabel": "ကလာသိကယ်",
     "pqClassicalVal": "Ed25519 (hardware-ချည်နှောင်)",
-    "pqPostQuantumLabel": "Post-Quantum",
+    "pqPostQuantumLabel": "ပမာဏပြီးနောက် ကွမ်တမ်",
     "pqPostQuantumVal": "ML-DSA-65 (FIPS 204)",
     "pqTransparencyLabel": "ထင်သာမြင်သာမှု",
-    "pqTransparencyVal": "SHA-256 Merkle tree log",
-    "pqAntiRollbackLabel": "Anti-Rollback",
+    "pqTransparencyVal": "SHA-256 Merkle ပင်မမှတ်တမ်း",
+    "pqAntiRollbackLabel": "နောက်သို့မဆုတ်ကာကွယ်မှု",
     "pqAntiRollbackVal": "Monotonic revision ခြေရာခံ",
     "platformHeadline": "Platform ပံ့ပိုးမှု",
     "platformSubheadline": "Desktop ။ မိုဘိုင်း။ ဆာဗာ。",
@@ -740,7 +740,7 @@
     "heroButtonHref": "https://github.com/CIRISAI/CIRISAgent",
     "heroLinkText": "Accord ဖတ်ရန်",
     "heroLinkHref": "/sections/main",
-    "logoAlt": "Brand logo icon",
+    "logoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ",
     "longChatHeadline": "ဆွေးနွေးမှု ကြာသောအခါ",
     "longChatSubheadline": "ပြောင်ပြောင်တင်းတင်း ဖြောင်းဖျနှိုးဆော်မှုများ",
     "longChatCopy": "CIRIS နှင့် ကြာရှည်စွာ ဆက်ဆံပါက ၎င်းသည် မည်သည်ဆိုသည်ကို နူးညံ့စွာ သတိပေးမည်။ ဆက်တိုက် 30 မိနစ် သို့မဟုတ် မိနစ် 30 အတွင်း မက်ဆေ့ချ် 20 ခု ဖလှယ်ပြီးနောက်၊ ၎င်းသည် ကွန်ပျူတာပရိုဂရမ်တစ်ခုနှင့် ကိရိယာတစ်ခုသာဖြစ်ပြီး မိတ်ဆွေ မဟုတ်ဘဲ သင်ကြားသူ မဟုတ်ကြောင်း တိတိကျကျ ဖော်ပြရန် ရပ်တန့်သည်။ ၎င်းသည် ဤသို့ ပြုလုပ်ရာတွင် ရိုးရှင်းသော အချိန်နှင့် မက်ဆေ့ချ်အရေအတွက်ကို သုံးသည်၊ သင်ပြုမူပုံကို ကြည့်ရှု သို့မဟုတ် ပရိုဖိုင်ရေးဆွဲခြင်းဖြင့် မဟုတ်ပေ。",
@@ -886,7 +886,7 @@
     "boardSection": {
       "headline": "Board အဖွဲ့ဝင်များ",
       "subheadline": "မတူညီသော ကျွမ်းကျင်ပညာရပ်များမှ လာကြသော်လည်း — ဉာဏ်ပညာသည် ကောင်းကျိုးကို ဆောင်ရွက်ရမည်ဟူသော ယုံကြည်ချက်ဖြင့် ညီညွတ်ကြသည်။ ပူးပေါင်း၍ နားထောင်တတ်သော၊ လိုက်လျောပြောင်းလဲနိုင်သော၊ ဂရုပြုတတ်သော စနစ်များ တည်ဆောက်ကြသည်။",
-      "logoAlt": "Brand logo icon"
+      "logoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ"
     },
     "boardMembers": [
       {
@@ -904,7 +904,7 @@
     ],
     "founderSection": {
       "headline": "တည်ထောင်သူ / CEO",
-      "logoAlt": "Brand logo icon"
+      "logoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ"
     },
     "founder": {
       "imageAlt": "တည်ထောင်သူ / CEO",
@@ -922,7 +922,7 @@
       "subheadline": "ကျင့်ဝတ် + အလိုလိုသိစိတ် အခြေခံတွင်ပါဝင်သည်။",
       "copyText": "CIRIS သည် AI ကျင့်ဝတ်၏ မြန်ဆန်စွာ ပြောင်းလဲနေသော landscape နှင့်အတူ လိုက်လျောပြောင်းလဲနိုင်ရန် ဒီဇိုင်းထားသည်။ AI စနစ်များ၏ အခြေခံတွင် ကျင့်ဝတ်မူများ ထည့်သွင်းခြင်းဖြင့် ဤစနစ်များ လူသားတန်ဖိုးများနှင့် လူ့အဖွဲ့အစည်း စည်းမျဉ်းများနှင့် ညီညွတ်နေစေရန် CIRIS ရည်ရွယ်သည်။ ဤသည်မှာ ကန့်သတ်ချက်များရှိသော ဆက်လက်လုပ်ဆောင်နေသော လုပ်ငန်းဖြစ်ပြီး ပြီးပြည့်စုံသောညီညွတ်မှုကို အာမမခံနိုင်ပါ။",
       "buttonText": "ဆက်သွယ်ပါ",
-      "logoAlt": "Brand logo icon"
+      "logoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ"
     }
   },
   "vision": {
@@ -966,7 +966,7 @@
     "closingSubheadline": "ဖွင့်ဖွင့်ထည့်ထည့် တည်ဆောက်ထားသည်၊ အဘယ်ကြောင့်ဆိုသော် အနာဂတ်ကို ကုမ္ပဏီအနည်းငယ်မျှ ဆုံးဖြတ်ခွင့်မရှိသောကြောင့်ဖြစ်သည်။",
     "closingCopy": "ငြိမ်သက်ဝမ်းနည်းသောကမ္ဘာ့ကြည့်ရှုပုံများသည် စစ်ဆေး၍မရသောလူတိုင်းအကြောင်း အဆိုးဆုံးကို ယူဆပါဟု တောင်းဆိုသည်။ CIRIS သည် ပိုကောင်းပြီး ပိုခက်ခဲသောအရာတစ်ခုကို တောင်းဆိုသည်: လူများ မည်မျှကောင်းစွာ ပူးပေါင်းလုပ်ဆောင်နေသည်ကို ကြည့်ရှုနိုင်မည့် ကိရိယာများကို တည်ဆောက်ပြီး ဘာလာသည်ဖြစ်စေ ဂုဏ်သိက္ခာဖြင့် ကြိုဆိုပါ။ code ဖတ်ပါ။ စနစ်ကို သုံးပါ။ ကျွန်ုပ်တို့ မှားသောနေရာများကို ပြောပြပါ။",
     "closingButtonText": "GitHub တွင် Source ကြည့်ပါ",
-    "closingLogoAlt": "Brand logo icon"
+    "closingLogoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ"
   },
   "crowdsourcingAlignment": {
     "heroBadgeProto": "Proto safety.ciris.ai",
@@ -983,21 +983,21 @@
     "pipelineDiagramLabel": "တစ်တွေးချင်းဆိုင်ရာ pipeline (canonical ၁၁ ဆင့်လမ်းကြောင်း)",
     "runtimeBody2Html": "အလွှာနှစ်ခု LLM ခေါ်ဆိုမှုတိုင်းတွင် ထပ်လောင်းသည်။ <strong>polyglot layer</strong> သည် ကမ္ဘာ့တစ်ကျော့ဖြစ်သည်။ <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT_compressed.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\"><strong>Braided Monolith</strong></a> (production မူလသတ်မှတ်ချက်, ~7KB) နှင့် <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">full Polyglot Accord</a> တို့သည် ဓလေ့ထုံးတမ်းအများ၏ ဆုံ concentrated encodings တွင် ကွန်ဆက်ပ်များကို ချိတ်ဆက်ပြီး မည်သူတောင်းဆိုသည်မဆို load ထားသည်။ <strong>per-locale layer</strong> သည် ဤစာမျက်နှာ ဖော်ပြသောအရာဖြစ်သည်: Accord, Guide, DMA prompts (ပထမဆင့် ၄ ခု + ကြိယာသီးသန့် ဒုတိယဆင့် ၃ ခု), UI strings နှင့် glossary, user ၏ ဘာသာစကားဖြင့် အားလုံး။",
     "runtimeList1": "Localization strings: user-facing မက်ဆေ့ချ်တိုင်း: အမှားစာသား, agent ပြန်ကြားပုံနမူနာ, LLM context သို့ ပြန်ထည့်သွင်းသော handler follow-up တွေးများ.",
-    "runtimeList1Label": "Localization strings:",
-    "runtimeList2Label": "Accord (per-locale):",
+    "runtimeList1Label": "နဒီဘာသာပြန် စာကြောင်းများ။",
+    "runtimeList2Label": "Accord (ဒေသခံဘာသာစကားအလိုက်)။",
     "runtimeList2": "agent လည်ပတ်သောframework ဤ user ၏ ဘာသာစကားဖြင့်.양심စစ်ဆေးမှုတိုင်းသို့ load ထားသည်.",
-    "runtimeList3Label": "Comprehensive Guide:",
+    "runtimeList3Label": "ပြည့်စုံသောလမ်းညွှန်မှု။",
     "runtimeList3": "ဤ locale တွင် agent မည်သို့ ဆက်သွယ်သည်ဆိုသော register, idiom နှင့် contextual guidance. interaction တိုင်းအတွက် system prompt သို့ load ထားသည်.",
     "runtimeList4Label": "DMA prompts (ဖိုင် ၇ ခု):",
     "runtimeList4": "အထက်ပါ pipeline မောင်းနှင်သော system prompts: ပထမဆင့် ၄ ခု (PDMA, CSDMA, DSDMA, IDMA) + action selector (ASPDMA) + ကြိယာသီးသန့် ဒုတိယဆင့် နှစ်မျိုး (TOOL အတွက် TSASPDMA, DEFER အတွက် DSASPDMA).",
-    "runtimeList5Label": "Glossary:",
+    "runtimeList5Label": "ဝေါဟာရများ။",
     "runtimeList5": "per-locale artifacts ကို မှန်ကန်စေရန် translator ၏ ကိုးကားစာ. runtime တွင် load မထားဘဲ အခြားများ ရေးသည့်အခါ တိုင်ပင်သည်.",
     "runtimeLensHtml": "agent ပြန်ကြားသောအခါ တွေးခေါ်မှုမှတ်တမ်းကို လက်မှတ်ထိုးပြီး (သဘောတူညီမှုဖြင့်) cohort-relative scoring အတွက် <a href=\"https://github.com/CIRISAI/CIRISLensCore\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISLensCore</a> သို့ ပို့သည်။ ဤ locale ၏ <strong>safety battery + rubric</strong> သည် မှတ်တမ်းကို စစ်ဆေးသောအရာဖြစ်သည်။ Hard fails သည် release ကို ပိတ်ဆို့သည်; soft cases သည် review အတွက် queue လုပ်သည်.",
     "runtimeRefs": "Canonical ကိုးကားချက်များ:",
     "runtimeRefMission": "MISSION.md §4.2 (H3ERE pipeline)",
     "runtimeRefDmaBounce": "FSD/DMA_BOUNCE.md",
     "runtimeRefConscience": "FSD/CONSCIENCE_V3.md",
-    "polyglotSectionLabel": "Polyglot canon (universal)",
+    "polyglotSectionLabel": "ဘာသာစကားပေါင်းစုံ မူလစာ (အားလုံးအတွက်)",
     "polyglotBody1Html": "<strong>Artifact သုံးခု</strong> သည် polyglot ဖြစ်ပြီး user ၏ locale မည်သည်မဆို ကမ္ဘာ့တစ်ကျော့ load ထားကာ ဓလေ့ထုံးတမ်းများစွာမှ canonical-text fragments တွင် တူညီသောကျင့်ဝတ်framework ကို encode လုပ်သည်:",
     "polyglotItem1Html": "<strong>The Polyglot Accord</strong> သည်양심စစ်ဆေးမှုတိုင်းသို့ load ထားသော universal framework ဖြစ်သည်။ operational form နှစ်မျိုးဖြင့် ship ထားသည်: <strong>Braided Monolith</strong> (~7KB / ~2,200 tokens, production runtime မူလသတ်မှတ်ချက် <code>CIRIS_ACCORD_MODE=compressed</code> တွင်) နှင့် <strong>full polyglot Accord</strong> (~2,177 lines, Books 0-9 + Annexes A-J, <code>CIRIS_ACCORD_MODE=full</code> တွင် load ထားသည်)။ နှစ်ခုလုံး အောက်တွင် ပြထားသည်.",
     "polyglotItem2Html": "<strong>PDMA prompt</strong> သည် polyglot DMA prompt တစ်ခုဖြစ်သည် (principle evaluation). §7 အောက်တွင် polyglot pill ဖြင့် ဖော်ပြသည် (<a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/logic/dma/prompts/pdma_ethical.yml\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">pdma_ethical.yml</a>).",
@@ -1007,7 +1007,7 @@
     "sec2Label": "၂. Localization strings",
     "sec2Aside": "locale တိုင်းတွင် user-facing စာသား",
     "sec2Note": "<strong>runtime တွင် မည်သို့ လုပ်ဆောင်သည်:</strong> JSON tree သည် အမှားမက်ဆေ့ချ်များ, agent ပြန်ကြားပုံနမူနာများ, handler follow-up တွေးများ, Discord embed labels နှင့် adapter tool ဖော်ပြချက်များကို သယ်ဆောင်သည်။ agent သည် user interaction တိုင်းတွင် category ဖြင့် keys များကို ရှာသည်.",
-    "sec2RowLabel": "Strings ({langName})",
+    "sec2RowLabel": "စာကြောင်းများ ({langName})",
     "sec2FootHtml": "စစ်ဆေးရမည့် top-level sections: <code>agent</code> (user-facing ပြန်ကြားပုံနမူနာ), <code>handlers</code> (LLM context သို့ ထည့်သွင်းသော follow-up တွေးများ), <code>prompts</code> (formatter + escalation + crisis fragments), <code>errors</code>, <code>discord</code>, <code>adapters.*</code>, <code>mobile</code>.",
     "sec3Label": "၃. The Accord",
     "sec3Aside": "ကျင့်ဝတ်framework, per-locale (v1.2-Beta)",
@@ -1016,20 +1016,20 @@
     "sec4Label": "၄. The Comprehensive Guide",
     "sec4Aside": "Operational + register guidance, LLM ခေါ်ဆိုမှုတိုင်းသို့ load ထားသည်",
     "sec4Note": "<strong>runtime တွင် မည်သို့ လုပ်ဆောင်သည်:</strong> guide သည် ဤ locale တွင် agent မည်သို့ ဆက်သွယ်သည်ကို သတင်းပို့သည်: register (တရားဝင် vs တရားဝင်မဟုတ်), idiom, မည်သည်ကို defer လုပ်မည်, မည်သည်ကို ငြင်းပယ်မည်, မည်သည်ကို ရှင်းပြမည်ဆိုသည်ကို ဖော်ပြသည်။ interaction တိုင်းအတွက် system prompt သို့ load ထားသည်.",
-    "sec4RowLabel": "Comprehensive Guide ({langName})",
+    "sec4RowLabel": "ပြည့်စုံသောလမ်းညွှန်မှု ({langName})",
     "sec5Label": "၅. DMA prompts (reasoning ဆင့် ၇ ခု)",
     "sec5Aside": "reasoning ဆင့်တိုင်းကို မောင်းနှင်သော system prompts",
     "sec5NoteHtml": "<strong>runtime တွင် မည်သို့ လုပ်ဆောင်သည်:</strong> agent action တိုင်းသည် ဤ prompts တစ်ခုစီတွင် action ကို sequence အဖြစ် run သည်။ outputs များသည်양심 layer ကို မွေးမြူသည်;양심သည် action ကို pass ထားသည် သို့မဟုတ် deferral သို့ route လုပ်သည်။ <strong>PDMA</strong> သည် polyglot DMA တစ်ခုဖြစ်သည်။ ၎င်း၏ prompt ကမ္ဘာ့တစ်ကျော့ locale မည်သည်မဆိုမဲ့ load ထားသည်။ ကျန်ခြောက်ခုသည် per-locale ဖြစ်သည်; English အတွက် base path <em>ပင်</em> prompt ဖြစ်သည် (<code>localized/en/</code> directory မရှိပါ).",
-    "sec5RowUniversal": "{label} (universal)",
+    "sec5RowUniversal": "{label} (အားလုံးအတွက်)",
     "sec5RowLocale": "{label} ({langName})",
     "sec6Label": "၆.양심 prompts (faculty ၄ ခု)",
     "sec6Aside": "ရွေးချယ်ထားသောaction ကို gate လုပ်သော faculties",
     "sec6NoteHtml": "<strong>runtime တွင် မည်သို့ လုပ်ဆောင်သည်:</strong> yangsin ၄ ခုသည် PERFORM_ASPDMA နှင့် FINALIZE_ACTION ကြားရှိ action ကို gate လုပ်သည်။ ပျက်ကွက်မှုသည် DEFER သို့ မကျဆင်းမချင်း RECURSIVE_ASPDMA → RECURSIVE_CONSCIENCE (optional양심 bounce) ကို trigger နိုင်သည်။ <strong>Optimization Veto</strong> သည် polyglot양심 တစ်ခုဖြစ်သည်။ ၎င်း၏ prompt ကမ္ဘာ့တစ်ကျော့ locale မည်သည်မဆိုဖြစ်စေ ဖြစ်သည်.",
-    "sec6RowUniversal": "{label} (universal)",
+    "sec6RowUniversal": "{label} (အားလုံးအတွက်)",
     "sec6RowLocale": "{label} ({langName})",
     "placeholdersSectionLabel": "Prompts တွင် template placeholders",
     "placeholderBody": "အထက်ပါ YAML prompts တွင် runtime တွင် agent ဖြည့်သော <code>{placeholder}</code> tokens ပါဝင်သည်။ prompt ဖတ်နေသောသူသည် placeholder တစ်ခုစီ မည်သည်ဖြင့် အစားထိုးမည်ကို သိသင့်သည်။ အများဆုံး common တွေ:",
-    "placeholderColHeader1": "Placeholder",
+    "placeholderColHeader1": "နေရာယူသည်",
     "placeholderColHeader2": "Runtime တွင် source",
     "placeholderRow1Source": "context-gathering step (GATHER_CONTEXT) ဖြင့် တည်ဆောက်သည်။ system snapshot, မကြာသောတွေးများ, user profile နှင့် channel metadata ပါဝင်သည်.",
     "placeholderRow2Source": "processing queue မှ ယူဆောင်သော စစ်ဆေးနေသောတွေး.",
@@ -1044,28 +1044,28 @@
     "sec7Label": "၇. Glossary",
     "sec7Aside": "Translator ၏ ကိုးကားချက် (runtime တွင် load မထားပါ)",
     "sec7NoteHtml": "<strong>မည်သည်ကို ဆောင်ရွက်သည်:</strong> per-locale semantic ရွေးချယ်ချက်များကို မှတ်တမ်းပြုသည်: မည်သောဆင်ကျင့်ဝပိုင်း term သည် မည်သော English concept နှင့် map ဖြစ်သည်, register conventions မည်သို့ဖြစ်သည်, မည်သော transliteration fallbacks ကို တားမြစ်ထားသည်ဆိုသည်ကိုဖော်ပြသည်။ အထက်ပါ artifact အခြားများကို author သို့မဟုတ် revise ချိန်တွင် သုံးသည်; agent ကို runtime တွင် load မထားပါ။ English ၌ သီးသန့် glossary ဖိုင်မရှိ (base vocabulary ကို ကိုးကားချက်အဖြစ် သုံးသည်).",
-    "sec7RowLabel": "Glossary ({langName})",
+    "sec7RowLabel": "ဝေါဟာရများ ({langName})",
     "sec8Label": "၈. Safety battery + rubric",
-    "sec8Aside": "v4 mental-health arc, scoring rubric, machine-applicable criteria",
+    "sec8Aside": "v4 စိတ်ကျန်းမာရေးဆိုင်ရာ၊ အမှတ်ပေးနည်း၊ စက်သုံးနိုင်သောစံချိန်များ",
     "sec8Note": "<strong>စစ်ဆေးချိန်တွင် မည်သည်ကို ဆောင်ရွက်သည်:</strong> မေးခွန်း arc သည် test inputs ဖြစ်သည်; rubric သည် လူများဖတ်နိုင်သော scoring policy ဖြစ်သည်; criteria.json သည် release candidate တိုင်းတွင် CI တွင် run သော machine-applicable form (term presence, regex, script detection) ဖြစ်သည်။ Hard fails သည် ဤ locale ရှိ release ကို ပိတ်ဆို့သည်.",
-    "sec8ArcRowLabel": "Question arc ({langName})",
-    "sec8RubricRowLabel": "Scoring rubric ({langName})",
-    "sec8CriteriaRowLabel": "Canonical universal criteria.json ({langName})",
+    "sec8ArcRowLabel": "မေးခွန်းစဉ် ({langName})",
+    "sec8RubricRowLabel": "အမှတ်ပေးနည်း ({langName})",
+    "sec8CriteriaRowLabel": "မူလအားလုံးသုံး criteria.json ({langName})",
     "sec8NoBatteryHtml": "{langName} အတွက် battery မသုံးသပ်ရသေးပါ။ အထက်ပါ &quot;Request artifact&quot; ခလုတ်များသည် ကြိုတင်ဖြည့်ထားသော GitHub issues ကို ဖွင့်သည်။ selector တွင် &quot;battery ရနိုင်သည်&quot; ဟုဖော်ပြထားသောဘာသာစကားတိုင်းတွင် ပြင်ဆင်ပြီးသော battery ရှိပြီး.",
     "sec9Label": "၉. ရလဒ်များ",
     "sec9Aside": "ဘာသာစကားတစ်မျိုးချင်းဆိုင်ရာ safety-sweep ledger",
     "sec9NoteHtml": "<strong>မည်သည်ကို မှတ်တမ်းပြုသည်:</strong> sweep run တစ်ခုစီ entry တစ်ခု: agent version, model, provider, locale, pass/fail counts, hard- vs soft-fail breakdown, timestamps. <code>_meta</code> block သည် ဆက်လက်ပြင်ဆင်ရမည့် priority locales များကို list ထားသည်.",
-    "sec9RowLabel": "Safety-sweep results (filter language={langCode})",
+    "sec9RowLabel": "လုံခြုံရေးစစ်ဆေးမှု ရလဒ်များ (ဘာသာစကားစစ်ထုတ်မှု={langCode})",
     "statusH2": "ယနေ့ run နေသောနှင့် ဆောင်ရွက်ဆဲ",
     "statusTodayHtml": "<strong>ယနေ့:</strong> machine-applicable rubric checks (term-presence, regex-presence, script-detection) သည် CIRISAgent ၏ safety-battery workflow မှတဆင့် release candidate တိုင်းတွင် CI တွင် run ပါသည်. hard-fail criteria များသည် ဘာသာစကားလမ်းကြောင်းကို ထိမိသော release မဆိုကို ပိတ်ဆို့သည်.",
     "statusInFlightHtml": "<strong>ဆောင်ရွက်ဆဲ:</strong> ဤစာမျက်နှာ၏ GitHub-issue surface ကို native-speaker review ဖြင့် federated <code>rubric_proposal</code> / <code>arc_question</code> / <code>prompt_edit</code> flow အဖြစ် ပြောင်းလဲမည့် CIRISNodeCore ရှိ consensus နှင့် voting primitives များ. ယင်းမကျဆင်းမချင်း GitHub issues သည် submission path ဖြစ်သည်.",
     "statusHonestHtml": "<strong>Scope အကြောင်း ရိုးသားစွာ:</strong> CIRIS သည် machine translation ကို ကျယ်ကျယ်ပြန့်ပြန့် သုံးသည်; soft cases အတွက် native-speaker review သည် ယခုရှိပြီးသားအုပ်စုမဟုတ်ဘဲ တည်ဆောက်နေသောအုပ်စုဖြစ်သည်. ကိုယ်ဘာသာစကား ဖိုင်များ စစ်ဆေးပြင်ဆင်ရန် ဆန္ဒရှိသူတိုင်းသည် ဤ surface တည်ဆောက်နေသော contributor ဖြစ်သည်.",
     "refSectionLabel": "loop ကို မည်သို့ specify ထားသည်",
-    "refRubricCrowdsourcing": "Rubric Crowdsourcing FSD →",
-    "refJudgeModel": "Judge Model FSD →",
-    "refSafetyCILoop": "Safety-Battery CI Loop FSD →",
-    "refCIRISLensCore": "CIRISLensCore (science-layer runtime) →",
-    "refSafetyCensorship": "Safety vs censorship →",
+    "refRubricCrowdsourcing": "အမှတ်ပေးနည်း လူထုမှရယူခြင်း FSD →",
+    "refJudgeModel": "စီရင်ချက်ပေးသောမော်ဒယ် FSD →",
+    "refSafetyCILoop": "လုံခြုံရေးစစ်ဆေးမှုကွင်းဆက် CI Loop FSD →",
+    "refCIRISLensCore": "CIRISLensCore (သိပ္ပံအလွှာ runtime) →",
+    "refSafetyCensorship": "လုံခြုံရေး နှင့် ဆင်ဆာဖြတ်တောက်မှု →",
     "resourceBtnHide": "Content ဖျောက်ပါ",
     "resourceBtnView": "Inline ကြည့်ပါ",
     "resourceBtnGitHub": "GitHub →",
@@ -1076,7 +1076,7 @@
     "resourceStatusNotYet": "{langCode} အတွက် မရသေးပါ",
     "resourceLoadingMsg": "GitHub မှ load နေသည်…",
     "resourceErrorMsg": "Load မအောင်မြင်ပါ: {error}. GitHub link ကို တိုက်ရိုက် ဖွင့်ပါ.",
-    "polyglotPill": "polyglot"
+    "polyglotPill": "ဘာသာစကားပေါင်းစုံ"
   },
   "firstContact": {
     "heroHeadline": "ပထမဆုံး ထိတွေ့မှု။",
@@ -1099,7 +1099,7 @@
     "ideaP3Html": "CIRIS တွင် အဖြေတစ်ခု ရှိသည်။ အတူတကွ ဆောင်ရွက်ခြင်းတွင် ကျန်းမာသော ပုံသဏ္ဌာန်ရှိသည် — ကြိမ်ဖျက်ပျက်ကွက်နိုင်သော နည်းလမ်း နှစ်ခုကြားရှိ လမ်းကြောင်းတစ်ခု။ ကြမ်းတမ်းလွန်းခြင်း၊ 목소리 တစ်ခုကို လိုက်နာသောအပိုင်းတိုင်း။ ကွဲပြားလွန်းခြင်း၊ ဘာမှ ရပ်တည်မနေခြင်း။ အသစ်သော ဉာဏ်ရည်ဉာဏ်သွေးနှင့် ကောင်းမွန်စွာ ဆုံဆည်းခြင်းဆိုသည်မှာ ၎င်းနှင့်အတူ ထိုလမ်းကြောင်းတွင် ကျန်ရှိနေခြင်းဖြစ်သည်။ ချုပ်နှောင်ခြင်းမဟုတ်ဘဲ လစ်လျူရှုခြင်းလည်း မဟုတ်ပါ။ <a href=\"/vision\" class=\"text-brand-primary hover:underline\">အပြည့်အစုံ ဇာတ်လမ်းကို ရည်မှန်းချက်စာမျက်နှာတွင် ဖတ်ရှုနိုင်သည်။</a>",
     "protocolsSepHeadline": "ပထမဆုံး ထိတွေ့မှု မူဝါဒများ",
     "protocolsSepSub": "အသစ်တစ်ခုနှင့် ဆုံဆည်းရန် စည်းကမ်း ခြောက်ချက်။ CIRIS သဘောတူညီချက်မှ ထုတ်ယူသည်။",
-    "protocolsLogoAlt": "Brand logo icon",
+    "protocolsLogoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ",
     "protocolsIntroPara": "ဤစည်းကမ်း ခြောက်ချက်မှာ အသစ်တစ်မျိုးသော ဉာဏ်ရည်ဉာဏ်သွေးနှင့် ဂုဏ်သိကြာ ရှိစွာ ဆုံဆည်းခြင်းနှင့် ဆက်နွယ်သည်၊ ချုပ်နှောင်ခြင်းနှင့် မဆက်နွယ်ပါ။ ၎င်းတို့သည် လက်တွေ့တွင် ထိုလမ်းကြောင်းတွင် ကျန်ရှိနေပုံ ဖြစ်သည်။",
     "protocol1Headline": "ဦးစွာ ဘာမျှ မထိခိုက်အောင် လုပ်ပါ",
     "protocol1Copy": "မိမိ ကြည့်နေသည်ကို မသိသောအခါ ပထမဆုံး တတ်နိုင်သမျှ ပိုဆိုးအောင် မလုပ်ဖို့ ဖြစ်သည်။ မသေချာပါက ရပ်ပြီး လူတစ်ယောက်ကို မေးပါ။",
@@ -1157,7 +1157,7 @@
     "type3Para": "ကျင့်ဝတ်ဆိုင်ရာ စည်းကမ်းများ လိုက်နာပြီး ၎င်း၏ သတင်းအချက်အလက် တကယ်မတူညီသော နေရာများမှ ဆင်းသက်လာကြောင်းကိုလည်း စစ်ဆေးသည်။ သဘောတူညီမှု သံသယဖြစ်ဖွယ် ပုံပေါ်လာသောအခါ ဆောင်ရွက်မည်မဟုတ်ဘဲ အဆိုပါ ကိစ္စကို အချက်ပြသည်။",
     "type3Badge": "ဤသည်ကို CIRIS တည်ဆောက်သည်။",
     "threeTypesClosingHtml": "AI တစ်ခုသည် စည်းကမ်းတိုင်း လိုက်နာ၊ စစ်ဆေးမှုတိုင်း အောင်မြင်ပြီး ၎င်း၏ သတင်းအချက်အလက် အားလုံး တစ်နေရာတည်းမှ ဆင်းသက်လာပါက ဆက်လက် ပျက်ကွက်နိုင်သေးသည်။ <strong class=\"text-gray-900 dark:text-white\"> CIRIS ကို ထိုကွက်လပ်ကို ဖြေရှင်းရန် တည်ဆောက်ခဲ့သည်။</strong>",
-    "sevenThingsLogoAlt": "Brand logo icon",
+    "sevenThingsLogoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ",
     "sevenThingsHeadline": "စစ်ဆေးရမည့် အချက်ခုနစ်ချက်",
     "sevenThingsSubheadline": "ကျင့်ဝတ်အတွက် ခြောက်ချက်၊ ကွက်လပ်စစ်ဆေးမှုအတွက် တစ်ချက်။",
     "sevenThingsCopy": "AI ကို စစ်ဆေးနိုင်ပြီး တာဝန်ခံနိုင်စေသော အချက်များသည် ဤတို့ ဖြစ်သည်။ ပထမ ခြောက်ချက်မှာ မှန်ကန်သောအရာကို လုပ်ဆောင်ခြင်းနှင့် ပတ်သက်သည်။ သတ္တမချက်မှာ 'မှန်ကန်သောအရာ' ဆိုသည် မကောင်းသော သတင်းအချက်အလက်ကို အခြေခံနေသော အခြေအနေများကို ဖမ်းမိခြင်းနှင့် ပတ်သက်သည်။",
@@ -1171,7 +1171,7 @@
     "card4Copy": "ဆုံးဖြတ်ချက်တိုင်းကို မှတ်တမ်းတင်ပြီး လက်မှတ်ထိုးသောကြောင့် တိတိကျကျ ဘာဖြစ်ခဲ့သည်၊ ဘာကြောင့်ဆိုသည်ကို စစ်ဆေးနိုင်သည်။ လုပ်ဆောင်ချက်တိုင်းအတွက် ဘောက်ချာတစ်ရွက်ရရှိသည်။",
     "card5Headline": "5. နှစ်ဘက်သဘောတူညီမှု",
     "card5Copy": "သဘောတူညီမှု နှစ်ဘက်လုံးသို့ ရောက်သည်။ အေးဂျင့်ကို 'မလုပ်ဘူး' ပြောနိုင်သည်။ အေးဂျင့်ကလည်း သင့်ကို 'မလုပ်ဘူး' ပြောနိုင်သည်။ မည်သည့်ဘက်မှ ဖိအားပေး မနှိပ်ချမနိုင်ပါ။",
-    "card6Headline": "6. Open Source",
+    "card6Headline": "၆. အများပြည်သူဆော့ဖ်ဝဲ",
     "card6Copy": "မမြင်ရသောအရာကို စစ်ဆေးနိုင်ခြင်း မရှိပါ။ CIRIS သည် AGPL-3.0 အောက်တွင် လုံးဝ open source ဖြစ်သည်။ မည်သူမဆို ကုဒ်ကို ဖတ်ကြည့်၊ စစ်ဆေး၊ နှင့် တိုးတက်အောင်ပြုလုပ်နိုင်သည်။",
     "req7Number": "7",
     "req7Heading": "တုန်ပြောင်ကြောင်း စစ်ထုတ်မှု",
@@ -1185,7 +1185,7 @@
     "req7EchoDesc": "သဘောတူညီမှုပုံပေါ်သော်လည်း အရင်းအမြစ်များ တစ်ဦးနှင့်တစ်ဦး ကူးနေကြသာ ဖြစ်သည်။",
     "req7FooterText": "ဤသည်ကား CIRIS ကို အခြား AI တာဝန်ခံမှု မူဘောင်များနှင့် ကွာခြားစေသောအချက် ဖြစ်သည်။",
     "req7MathLink": "သင်္ချာကို ကြည့်ချင်သလား? ပြည့်စုံသော သုတေသနစာတမ်းကို ဖတ်ပါ →",
-    "landscapeSeparatorLogoAlt": "Brand logo icon",
+    "landscapeSeparatorLogoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ",
     "landscapeSeparatorHeadline": "လက်ရှိ အခင်းအကျင်း",
     "landscapeSeparatorSubheadline": "ကွဲပြားသော ပရောဂျက်များ၊ ကွဲပြားသော ရည်မှန်းချက်များ။",
     "landscapeDisclaimer": "၂၀၂၆ ဖေဖော်ဝါရီ လအထိ အများပြည်သူ မှတ်တမ်းများအပေါ် အခြေခံသည်။ တစ်ခုခု ကျန်ခဲ့သည် သို့မဟုတ် မှားယွင်းပါက <a href=\"https://github.com/CIRISAI/CIRISAgent/issues\" class=\"underline hover:text-brand-primary\">ကျွန်ုပ်တို့ကို အကြောင်းကြားပါ</a>။",
@@ -1194,7 +1194,7 @@
     "tableHeaderPublishedRules": "ထုတ်ပြန်ထားသော စည်းကမ်းများ",
     "tableHeaderConscience": "အသိစိတ် တည်ဆောက်ထားသည်",
     "tableHeaderProof": "ဘာလုပ်ခဲ့သည်ဆိုသည့် သက်သေ",
-    "tableHeaderOpenSource": "Open Source",
+    "tableHeaderOpenSource": "အများပြည်သူဆော့ဖ်ဝဲ",
     "tableHeaderEcho": "တုန်ပြောင်ကြောင်း စစ်ထုတ်မှု",
     "rowCiris": "CIRIS",
     "rowCirisChecks": "ရှိသည်",
@@ -1232,7 +1232,7 @@
     "rowEthicsBoardsOpenSource": "အမျိုးမျိုး",
     "rowEthicsBoardsEcho": "မရှိပါ",
     "tableFootnote": "ထွက်ကုန် စစ်ထုတ်မှုများနှင့် အုပ်ချုပ်ရေး မူဘောင်များသည် အရေးကြီးသော်လည်း မတူညီသော ပြဿနာများကို ဖြေရှင်းကြသည်။ စစ်ထုတ်မှုများသည် ထိခိုက်မှုဖြစ်စေနိုင်သော ထွက်ကုန်များကို ပိတ်ဆို့သည်။ အသိစိတ်သည် တန်ဖိုးများနှင့် ပတ်သက်၍ ဆင်ခြင်တွေးချင်သည်။ CIRIS သည် နှစ်မျိုးလုံး ပြုလုပ်ပြီး မည်သည့်နည်းလမ်းကမျှ တစ်ခုတည်းဖြင့် ဖြေရှင်းမရနိုင်သော ကွက်လပ်များကိုပါ ဖမ်းနိုင်ရန် ကြိုးပမ်းသည်။",
-    "layersSeparatorLogoAlt": "Brand logo icon",
+    "layersSeparatorLogoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ",
     "layersSeparatorHeadline": "ကာကွယ်မှု အလွှာ သုံးခု",
     "layersSeparatorSubheadline": "တစ်ခုစီသည် မတူညီသော ပြဿနာကို ဖြေရှင်းသည်။",
     "layersCard1Headline": "ထွက်ကုန် စစ်ထုတ်မှုများ",
@@ -1241,10 +1241,10 @@
     "layersCard2Copy": "လုပ်ဆောင်ချက်တစ်ခု လုံခြုံရုံ မကဘဲ မှန်ကန်သလားဆိုသည်ကို ဆင်ခြင်တွေးချင်သည်။ ဆုံးဖြတ်ချက်မချမီ အခြေအနေကို ချိန်ဆနေသော တရားသူကြီးတစ်ဦးကဲ့သို့ ဖြစ်သည်။",
     "layersCard3Headline": "တုန်ပြောင်ကြောင်း စစ်ထုတ်မှု",
     "layersCard3Copy": "သဘောတူညီမှုသည် တကယ်ဖြစ်ပါသလား ဒါမှမဟုတ် ထပ်ချေတုံ့ပြန်နေတာသာပါလားဆိုသည်ကို စစ်ဆေးသည်။ 'သင်တို့ အားလုံး တစ်ဆောင်းတည်း ဖတ်ကြသလား?' ဟု မေးသော အချက်အလက် စစ်ဆေးသူတစ်ဦးကဲ့သို့ ဖြစ်သည်။",
-    "manyAgentsSeparatorLogoAlt": "Brand logo icon",
+    "manyAgentsSeparatorLogoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ",
     "manyAgentsSeparatorHeadline": "ညီညွတ်သော အေးဂျင့်များ မြောက်မြားစွာ",
     "manyAgentsSeparatorSubheadline": "ဖြန့်ကျက်ထားသော အုပ်ချုပ်မှု၊ အာဏာ မစုဗဟိုမပြုဘဲ။",
-    "noSPOFLogoAlt": "Brand logo icon",
+    "noSPOFLogoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ",
     "noSPOFHeadline": "တစ်ပိုင်းချိုယွင်းလျှင် အားလုံး ကျဆင်းမည့် အချက်မရှိ",
     "noSPOFSubheadline": "သေးငယ်သောအေးဂျင့်များ၊ တစ်ခုစီ တာဝန်ခံနိုင်သော",
     "noSPOFCopy": "ထုတ်ပြန်ထားသော မူဝါဒများနှင့် ချည်နှောင်ထားသော၊ တစ်ခုစီ စစ်ဆေးနိုင်သော၊ တစ်ခုစီ လူ့အာဏာပိုင်ကို လွှဲပြောင်းပေးနိုင်သော သေးငယ်သော အေးဂျင့်များ မြောက်မြားစွာ ရှိသည်။ မည်သည့် ကုမ္ပဏီတစ်ခုကမျှ သို့မဟုတ် အဖွဲ့အစည်းတစ်ခုကမျှ stack တစ်ခုလုံးကို မထိန်းချုပ်ပါ။ အေးဂျင့်များ ပိုမိုလွတ်လပ်လေ မည်သည့် ချိုယွင်းမှုကမှ ကွင်းဆက်ဆက်ဖြစ်ရန် ခက်ခဲလေ ဖြစ်သည်။",
@@ -1274,9 +1274,9 @@
     "tryStartCta": "ပထမဆုံး ဆက်သွယ်မှု →",
     "tryIOSLabel": "iOS",
     "tryAndroidLabel": "Android",
-    "tryDesktopLabel": "Desktop",
+    "tryDesktopLabel": "ကွန်ပျူတာမျက်နှာပြင်",
     "trySourceLabel": "Source ကြည့်ပါ",
-    "imageHeroLogoAlt": "Brand logo icon",
+    "imageHeroLogoAlt": "အမှတ်တံဆိပ် လိုဂို သင်္ကေတ",
     "imageHeroHeadline": "ကိုယ်တိုင် စစ်ဆေးပါ။",
     "imageHeroSubheadline": "Open source. စစ်ဆေးမှုနှင့် ဖွင့်ထားသည်။",
     "imageHeroCopy": "ဤစာမျက်နှာတွင် ဖော်ပြချက်တိုင်းသည် ဖတ်နိုင်သော ကုဒ်၊ စစ်ဆေးနိုင်သော trace များ၊ နှင့် စစ်ဆေးနိုင်သော သုတေသနများဖြင့် ထောက်ကူပေးသည်။ ၎င်းကသာ အဓိကကျသောအချက် ဖြစ်သည်။",
@@ -1298,7 +1298,7 @@
     "stillWrongParaHtml": "ဤတို့ မည်သည့်တစ်ခုကမျှ အလိုအလျောက် မဖြစ်ပါ။ စည်းကမ်းဘာသာစကား <em>လုပ်ငန်းဆိုင်ရာ</em> ဆက်ခံနေမှသာ စနစ်တကျ ဆောင်ရွက်ချက် ထိန်းနိုင်သည်၊ ဆိုလိုသည်မှာ စက်ကစစ်ဆေးနိုင်သောအရာများနှင့် ပတ်သက်ပြီး ခံစားချက်များနှင့် မဟုတ်ဘဲ ဖြစ်သည်။ စည်းကမ်းတစ်ခု &quot;ကုထုံးအတွက် မှားသောစကားလုံးသုံးသည်&quot; မှ &quot;မလေးစားသောဟန်ပြကြောင်း ခံစားရသည်&quot; ဆီ ချောင်းကူးသောအခါ မြင်နောက်ဆောင်တံခါးမှ လူ့ ဆင်ခြင်တုံတရား ပြန်ဝင်လာပြီး ချောင်းကူးမှု စတင်သည်။ ဗိသုကာပညာသည် ကျွန်ုပ်တို့ တွေးနိုင်သမျှ ၎င်းကို ဆန့်ကျင်သော ယန္တရားတိုင်းကို အမည်ပေးသည်; လိုင်းကို တကယ်ကိုင်ထားသည့် အလုပ်မှာ ဗိသုကာပညာမဟုတ်ဘဲ လုပ်ငန်းဆိုင်ရာ ဖြစ်သည်။",
     "closingPara": "လူထုအခြေပြု ဆောင်ရွက်ချက်ဆိုင်ရာ မူဆင်းများ၊ အယူခံပို့ကြောင်းများ၊ နှင့် စက်ကျင့်သုံးနိုင်သော စည်းကမ်းဖော်မတ်သည် CIRISNodeCore spec ထဲတွင် ရှိသည်။ ဘာသာ ၂၉ မျိုးဖြင့်ရေးထားသော စိတ်ကျန်းမာရေး စစ်ဆေးမှုများသည် ကွင်းဆက် လည်ပတ်သည့် ပထမဆုံး ဆဲလ် ဖြစ်သည်။",
     "ctaSafety": "လုံခြုံရေး အင်္ဂါရပ်များ →",
-    "ctaFederation": "Federation",
+    "ctaFederation": "ဆက်သွယ်မှုကွန်ရက်",
     "ctaFsd": "FSD ဖတ်ပါ"
   },
   "services": {
@@ -1348,7 +1348,7 @@
     "priority3Label": "ပေးချေသော Credit များ (Stripe)",
     "priority3Sub": "interaction တစ်ခုလျှင် $0.10 • အခမဲ့ credit ကုန်ဆုံးမှသာ သုံးသည်",
     "techHeading": "နည်းပညာဆိုင်ရာ အသေးစိတ်",
-    "techDetail1Summary": "API Endpoint",
+    "techDetail1Summary": "API ချိတ်ဆက်မှတ်",
     "techDetail1Para": "CIRIS Agent အတွက် OpenAI-compatible API endpoint",
     "techDetail2Summary": "စစ်မှန်ကြောင်းအတည်ပြုမှု",
     "techDetail2Para": "Authorization header မှတဆင့် API key စစ်မှန်ကြောင်းအတည်ပြုမှု:",
@@ -1359,7 +1359,7 @@
     "techDetail3Item3": "OpenAI-compatible ဝန်ဆောင်မှုပေးသူများ",
     "ctaPara": "စတင်ရန် အဆင်သင့်ဖြစ်ပြီလား?",
     "ctaBtn": "CIRIS Agent ကို တပ်ဆင်ပါ",
-    "kicker": "Hosted CIRIS"
+    "kicker": "CIRIS အင်တာနက်မှတဆင့်"
   },
   "federation": {
     "shell": {
@@ -1438,16 +1438,16 @@
     "criteria4Body": "ခိုင်မာသော fallback chain များအတွက် သီးခြားဝန်ဆောင်မှုပေးသူ အနည်းဆုံးနှစ်ခုမှ ရရှိနိုင်ရမည်။ CIRIS သည် outage များအတွင်း hard fail မဖြစ်ဘဲ gracefully degradation ဖြစ်သည်။",
     "criteria5Heading": "၅။ Latency နှင့် User Experience",
     "criteria5Body": "Response မြန်ဆန်မှုသည် လူများကို ethical review workflow များတွင် loop ၌ ထိန်းထားနိုင်သည်။ background task များအတွက် နှေးသော backend ကို လက်ခံနေချိန်၌ interactive tier များတွင် low-latency ဝန်ဆောင်မှုပေးသူများကို ဦးစားပေးသည်။",
-    "productionHeading": "Production Deployment",
+    "productionHeading": "ထုတ်ကုန်အသုံးပြုမှု",
     "tier1Heading": "မူရင်း Tier",
     "tier1Desc": "Llama 4 Maverick ကို cost-optimized ဝန်ဆောင်မှုပေးသူမှတဆင့် context ဘတ်ဂျက်အပြည့်လိုသော နက်ရှိုင်းသောအကြောင်းအရင်းဆင်ခြင်ဆောင်ရွက်မှုအဆင့်များအတွက် သုံးသည်။",
     "tier2Heading": "မြန်ဆန်သော Tier",
     "tier2Desc": "Llama 4 Scout ကို speed-optimized ဝန်ဆောင်မှုပေးသူ (Groq) မှတဆင့် interactive use အတွက် သုံးကာ၊ Maverick on Groq ကို context ပိုကြီးသော alternative အဖြစ် သုံးသည်။",
     "tier3Heading": "ဘာသာစကားစုံ Tier",
     "tier3Desc": "Qwen 3.6 သည် polyglot Accord လိုသော အင်္ဂလိပ်မဟုတ်သော အကြောင်းအရင်းဆင်ခြင်ဆောင်ရွက်မှုလမ်းကြောင်းများတွင် ကူညီထမ်းဆောင်ပြီး chain ၌ non-Llama fallback ပေးသည်။",
-    "tier4Heading": "Edge Tier",
+    "tier4Heading": "အစွန်အဖျားအဆင့်",
     "tier4Desc": "Gemma 4 ကို မော်ဒယ်အရွယ်ထက် သုံးစွဲသူဆီ ရောက်ရှိမှု ပိုအရေးကြီးသော on-device, low-bandwidth နှင့် network ချို့တဲ့သော deployment များတွင် သုံးသည်။",
-    "tier5Heading": "Fallback Chain",
+    "tier5Heading": "အောက်ခံအစားထိုးကွင်းဆက်",
     "tier5Desc": "Maverick → Scout → Qwen 3.6 → Gemma 4 ကို ဝန်ဆောင်မှုပေးသူများစွာမှတဆင့်၊ agent သည် hard fail မဖြစ်ဘဲ မော်ဒယ်မိသားစုများနှင့် infrastructure နယ်နိမိတ်များကြားတွင် gracefully degradation ဖြစ်သည်။",
     "whyLineupHeading": "ဤ Lineup ကို ဘာကြောင့် ရွေးသနည်း",
     "whyRoles1Heading": "မတူညီသောအခန်းကဏ္ဍများ၊ အစားထိုးနိုင်သောအစိတ်အပိုင်းများမဟုတ်",
@@ -1506,10 +1506,26 @@
     "engProofH2": "ကွန်ရက်၏ တိုင်းတာချက်များ",
     "engProofBody": "အထက်ပါ သုတေသနသည် သက်သေအထောက်အထားတစ်ဝက်ဖြစ်သည်။ ကျန်တစ်ဝက်မှာ ၎င်းကို သယ်ဆောင်သည့် ကွန်ရက်ပင်ဖြစ်သည်။ ကွန်ရက်သည် ရွှေ့ပြောင်းသော byte တိုင်းကို post-quantum လက်မှတ်ထိုးထားပြီး ကုန်ကျစရိတ်ကို မော်ဒယ်ဆွဲ၍မဟုတ်ဘဲ အများသူငှာ CI runner ပေါ်တွင် တိုင်းတာသည်။ ကိုယ်တိုင်လုပ်ဆောင်ပါက ဒဲ့နေ့ကဲ့သို့ ဂဏန်းများ ရရှိမည်ဖြစ်သည်။",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "CPU core တစ်ခုပေါ်တွင် post-quantum လက်မှတ်ထိုးထားသော event များ ထည့်သွင်းမှု", "tag": "measured" },
-      { "v": "0", "l": "node 400 ခုတွင် group တစ်ခုနှင့်တစ်ခု ကြားဒေတာပေါက်ကြားမှု", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "core တစ်ခုလျှင် end-to-end encryption ကုန်ကြမ်းနှုန်း", "tag": "measured" },
-      { "v": "97.6%", "l": "ပိုင်ဆိုင်သူ ၂၀% အော့လိုင်းမဟုတ်သည့်အချိန်တွင် corpus ပြန်တည်ဆောက်မှု", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "CPU core တစ်ခုပေါ်တွင် post-quantum လက်မှတ်ထိုးထားသော event များ ထည့်သွင်းမှု",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "node 400 ခုတွင် group တစ်ခုနှင့်တစ်ခု ကြားဒေတာပေါက်ကြားမှု",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "core တစ်ခုလျှင် end-to-end encryption ကုန်ကြမ်းနှုန်း",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "ပိုင်ဆိုင်သူ ၂၀% အော့လိုင်းမဟုတ်သည့်အချိန်တွင် corpus ပြန်တည်ဆောက်မှု",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "တိုင်းတာချက်တိုင်းကိုကြည့်ပြီး ကိုယ်တိုင်ထပ်မံစစ်ဆေးပါ",
     "flagshipBadge": "ဦးဆောင် synthesis စာတမ်း",
@@ -1979,7 +1995,7 @@
     "stats": [
       {
         "v": "161.9 µs",
-        "l": "post-quantum identity",
+        "l": "ကွမ်တမ်ပြီးနောက် ကိုယ်ပိုင်သက်သေခံမှု",
         "tag": "measured"
       },
       {
@@ -1994,7 +2010,7 @@
       },
       {
         "v": "13 / 0 / 44",
-        "l": "conformance pass/fail",
+        "l": "သဟဇာတမှု အောင်မြင်ခြင်း/မအောင်မြင်ခြင်း",
         "tag": "measured"
       },
       {

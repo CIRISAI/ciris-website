@@ -854,7 +854,7 @@
     "method4Desc": "段階的ロールアウト・自動テスト・ロールバック機能を備えたマネージドカナリアデプロイ。本番フリート向けです。",
     "method4Body": "CIRISManagerはヘルスモニタリング付きのブルーグリーン自動デプロイを提供します。デプロイ設定についてはチームまでお問い合わせください。",
     "method4Best": "<strong>最適な用途：</strong> エンタープライズデプロイ・本番フリート・マネージドインフラ",
-    "helloHeading": "Hello, CIRIS",
+    "helloHeading": "こんにちは、CIRIS",
     "helloSub": "初回レスポンスまでの最短経路。エージェントを起動してPythonから呼び出します。以下の2ブロックはそのままコピー&ペーストできます。",
     "helloStep1Heading": "1. エージェントを起動する",
     "helloStep1Desc": "APIアダプターを実行します。デフォルトはポート8080。ローカル開発時はOBSERVERアクセスに認証は不要です。",
@@ -1506,10 +1506,26 @@
     "engProofH2": "ネットワークの実測値",
     "engProofBody": "上記の研究は証明の前半です。後半は、それを運ぶネットワークです。ファブリックが転送するすべてのバイトはポスト量子署名されており、コストはモデル計算ではなく、公開CIランナーで実測されています。自分で実行すれば、同じ数値が得られます。",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "1つのCPUコアで取り込んだポスト量子署名済みイベント", "tag": "measured" },
-      { "v": "0", "l": "400ノード間でのグループをまたいだデータ漏洩", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "コアあたりのエンドツーエンド暗号化スループット", "tag": "measured" },
-      { "v": "97.6%", "l": "保持者の20%がオフラインでもコーパスを再構築できる割合", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "1つのCPUコアで取り込んだポスト量子署名済みイベント",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "400ノード間でのグループをまたいだデータ漏洩",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "コアあたりのエンドツーエンド暗号化スループット",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "保持者の20%がオフラインでもコーパスを再構築できる割合",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "すべての実測値を確認し、自分で再現する",
     "flagshipBadge": "代表的な統合論文",
@@ -1533,7 +1549,7 @@
     "datasetEyebrow": "オープンデータセット",
     "datasetTitle": "CIRISAI/reasoning-traces",
     "datasetBody": "Constrained Reasoning Chains研究と同時に公開されたプライバシー保護型推論トレースコーパスで、測定論文がマップを描く際の原材料となっています。",
-    "hfOrgTitle": "CIRISAI on Hugging Face",
+    "hfOrgTitle": "Hugging Face上のCIRISAI",
     "hfOrgBody": "公開データセットとモデルの全組織 →",
     "sourceRepoNote": "統合論文のソースリポジトリおよびLeanフォーマルレイク：<a href=\"https://github.com/CIRISAI/coherence-ratchet\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold text-brand-primary hover:underline\">github.com/CIRISAI/coherence-ratchet</a>。",
     "mathEyebrow": "数学的基礎",

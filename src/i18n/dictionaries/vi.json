@@ -562,7 +562,7 @@
       "safetyBtn": "Tính Năng An Toàn",
       "compareBtn": "So Sánh Các Phương Pháp",
       "coherenceBtn": "Con Cóc Tính Nhất Quán",
-      "scoringBtn": "CIRIS Scoring"
+      "scoringBtn": "Chấm điểm CIRIS"
     }
   },
   "trust": {
@@ -1062,8 +1062,8 @@
     "statusHonestHtml": "<strong>Trung thực về phạm vi:</strong> CIRIS sử dụng dịch máy rộng rãi; đánh giá của người nói bản ngữ đối với các trường hợp mềm là nhóm đang được xây dựng, không phải nhóm đã tham gia. Bất kỳ ai sẵn sàng xem xét các tệp ngôn ngữ của họ về độ chính xác và văn phong là chính xác là người đóng góp mà bề mặt này đang được xây dựng cho.",
     "refSectionLabel": "Cách vòng lặp được chỉ định",
     "refRubricCrowdsourcing": "Tiêu chí Crowdsourcing FSD →",
-    "refJudgeModel": "Judge Model FSD →",
-    "refSafetyCILoop": "Safety-Battery CI Loop FSD →",
+    "refJudgeModel": "FSD mô hình Giám khảo →",
+    "refSafetyCILoop": "FSD vòng lặp CI Pin an toàn →",
     "refCIRISLensCore": "CIRISLensCore (thời điểm chạy lớp khoa học) →",
     "refSafetyCensorship": "An toàn vs kiểm duyệt →",
     "resourceBtnHide": "Ẩn nội dung",
@@ -1398,7 +1398,7 @@
     "healthyBodyHtml": "Một liên minh có thể thất bại theo hai cách. Nếu các tác nhân không có điểm chung, chúng không thể đồng ý về bất cứ điều gì, và mạng lưới tạo ra tiếng ồn. Nếu tất cả chúng đều suy nghĩ giống hệt nhau, mạng lưới là một giọng nói với triệu chiếc micro, và rất dễ đánh lừa. Sự phối hợp lành mạnh sống trong khoảng giữa hai thất bại đó. CIRIS đo vị trí của mạng lưới trong khoảng đó, trên lưu lượng thực tế, và các ranh giới chính xác phụ thuộc vào hệ thống. <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Phép đo đó là Phân Tích Sụp Đổ Tính Nhất Quán.</a>",
     "statusWarningHtml": "<strong>Những gì chạy ngày nay, và những gì vẫn đang trong thiết kế.</strong> Phép đo, các hồ sơ có chữ ký, chuỗi giám sát và cả hai con đường tham gia bên dưới (đã đăng ký và độc lập) đều hoạt động ngày nay. Giao thức liên minh di chuyển dữ liệu giữa các máy là phần vẫn đang được xây dựng. Đề xuất tham gia và giao thức đầy đủ là <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/PROOF_OF_BENEFIT_FEDERATION.md\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold underline hover:no-underline\">tài liệu thiết kế Proof of Benefit</a>.",
     "joinLabel": "Tham gia liên minh",
-    "joinH2": "Proof of Benefit.",
+    "joinH2": "Bằng chứng lợi ích.",
     "joinP1": "Hầu hết các mạng lưới yêu cầu bạn trả phí thành viên bằng thứ gì đó bên ngoài công việc thực tế: điện năng đốt cháy, tiền bị khóa, sự chú ý của bạn. Liên minh thì khác. Chi phí để thuộc về là vận hành một tác nhân suy luận đạo đức thực sự theo thời gian. Giá bạn trả là điều tốt bạn làm.",
     "joinP2": "Đó là điều làm cho việc giả mạo tư cách thành viên trở nên tốn kém. Để trông giống như một thành viên, kẻ tấn công phải thực sự trở thành loại tác nhân mà mạng lưới phục vụ. Một trăm bản sao đều suy nghĩ giống nhau sẽ thất bại ngay trong bài kiểm tra điểm giữa lành mạnh.",
     "registeredH3": "Đã đăng ký (hoạt động ngày nay)",
@@ -1506,10 +1506,26 @@
     "engProofH2": "Mạng lưới, đã được đo lường",
     "engProofBody": "Các nghiên cứu ở trên là một nửa bằng chứng. Nửa còn lại là mạng lưới truyền tải dữ liệu đó. Mọi byte mà mạng lưới di chuyển đều được ký bằng mã hóa post-quantum, và chi phí được đo trên một CI runner công khai, không phải mô phỏng. Tự chạy thử và bạn sẽ nhận được kết quả giống hệt.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "sự kiện được ký post-quantum nhận vào trên một CPU core", "tag": "measured" },
-      { "v": "0", "l": "rò rỉ dữ liệu giữa các nhóm qua 400 nút", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "thông lượng mã hóa end-to-end trên mỗi core", "tag": "measured" },
-      { "v": "97.6%", "l": "kho dữ liệu được khôi phục khi 20% người lưu giữ ngoại tuyến", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "sự kiện được ký post-quantum nhận vào trên một CPU core",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "rò rỉ dữ liệu giữa các nhóm qua 400 nút",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "thông lượng mã hóa end-to-end trên mỗi core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "kho dữ liệu được khôi phục khi 20% người lưu giữ ngoại tuyến",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "Xem mọi con số đã đo, và tự kiểm chứng lại",
     "flagshipBadge": "Bài báo tổng hợp hàng đầu",
@@ -1636,7 +1652,7 @@
     "closingEyebrow": "Cách tất cả kết hợp lại",
     "closingH2": "Toán học là một phần của một tổng thể lớn hơn.",
     "closingPara": "Trang này là phép đo. <a href=\"/coherence-ratchet\" class=\"text-brand-primary hover:underline\">Coherence Ratchet</a> là cách phép đo được đưa vào sử dụng. <a href=\"/federation\" class=\"text-brand-primary hover:underline\">Federation</a> là cách nó trở thành điều mà nhiều hệ thống cùng chia sẻ. Và các chứng minh đầy đủ, được viết để máy tính có thể kiểm tra từng dòng, nằm trong bài báo và kho lưu trữ RATCHET.",
-    "closingCta1": "The Coherence Ratchet",
+    "closingCta1": "Cơ chế Tăng tiến Mạch lạc",
     "closingCta2": "Tình trạng nghiên cứu",
     "closingCta3": "Đọc bài báo"
   },
@@ -1780,7 +1796,7 @@
   },
   "coherenceRatchet": {
     "shell": {
-      "h1": "The Coherence Ratchet",
+      "h1": "Cơ chế Tăng tiến Mạch lạc",
       "subtitleSimple": "Tại sao một trí tuệ mạnh mẽ phải thể hiện cách làm việc của mình.",
       "subtitleAdvanced": "Một giải thích có cấu trúc về lý do tại sao trạng thái ẩn trong các hệ thống nhận thức đang mở rộng quy mô trở thành rủi ro văn minh.",
       "badge": "Bệ thử nghiệm nghiên cứu",
