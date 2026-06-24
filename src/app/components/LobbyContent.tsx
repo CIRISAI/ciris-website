@@ -54,6 +54,12 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
                 <b>{l.turnAccent}</b>
                 {l.turnPost}
               </p>
+              {/* A tiny strip of undeniable facts — legitimacy, stated not shown. */}
+              <ul className={styles.facts} aria-label="At a glance">
+                {l.facts.map((f) => (
+                  <li className={styles.fact} key={f}>{f}</li>
+                ))}
+              </ul>
             </div>
           </div>
 
