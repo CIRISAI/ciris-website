@@ -1502,6 +1502,16 @@
     "corpusItem2": "不同智能体占据同一评分空间的不同区域。",
     "corpusItem3": "这些区域对当前的可观测性和运营商工具已具实用价值。",
     "corpusItem4": "随着架构细节和规模的提升，同一语料库将变得更有价值。",
+    "engProofEyebrow": "工程",
+    "engProofH2": "实测网络性能",
+    "engProofBody": "上方的研究成果是证明的一半，另一半是承载它的网络。fabric 传输的每一个字节都经过后量子签名，成本在公开的 CI 运行器上实测得出，而非建模估算。自己运行，结果完全一致。",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "单 CPU 核心每秒处理的后量子签名事件数", "tag": "measured" },
+      { "v": "0", "l": "400 节点间的跨组数据泄露次数", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "每核心端到端加密吞吐量", "tag": "measured" },
+      { "v": "97.6%", "l": "在 20% 持有者离线时语料库仍可重建的比例", "tag": "measured" }
+    ],
+    "engProofCta": "查看全部实测数据，并自行复现",
     "flagshipBadge": "旗舰综合论文",
     "flagshipMeta": "v2 · 2026年5月22日 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

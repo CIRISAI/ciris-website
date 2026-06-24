@@ -1502,6 +1502,16 @@
     "corpusItem2": "Agentes diferentes ocupam regiões diferentes do mesmo espaço de pontuações.",
     "corpusItem3": "Essas regiões são úteis hoje para observabilidade e ferramentas de operadores.",
     "corpusItem4": "O mesmo corpus se torna mais valioso conforme o detalhe do esquema e a escala melhoram.",
+    "engProofEyebrow": "Engenharia",
+    "engProofH2": "A rede, medida",
+    "engProofBody": "A pesquisa acima é metade da prova. A outra metade é a rede que a sustenta. Cada byte que a rede move é assinado com criptografia pós-quântica, e o custo é medido em um CI runner público, não estimado. Execute você mesmo e obterá os mesmos números.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "eventos assinados com criptografia pós-quântica processados em um CPU core", "tag": "measured" },
+      { "v": "0", "l": "vazamentos de dados entre grupos em 400 nós", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "throughput de criptografia de ponta a ponta por core", "tag": "measured" },
+      { "v": "97.6%", "l": "do corpus é reconstruído com 20% dos nós offline", "tag": "measured" }
+    ],
+    "engProofCta": "Veja cada número medido e reproduza você mesmo",
     "flagshipBadge": "Artigo de síntese principal",
     "flagshipMeta": "v2 · 22 de maio de 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

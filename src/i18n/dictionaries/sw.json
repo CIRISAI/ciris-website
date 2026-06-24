@@ -1502,6 +1502,16 @@
     "corpusItem2": "Mawakala tofauti wanakaa katika maeneo tofauti ya anga ya alama moja.",
     "corpusItem3": "Maeneo hayo yanafaa kwa uangalizi na zana za waendeshaji leo.",
     "corpusItem4": "Hazina hiyo hiyo inakuwa na thamani zaidi kadri maelezo ya muundo na ukubwa unavyoongezeka.",
+    "engProofEyebrow": "Uhandisi",
+    "engProofH2": "Mtandao, ukipimwa",
+    "engProofBody": "Utafiti ulio juu ni nusu moja ya uthibitisho. Nusu nyingine ni mtandao unaobeba data hiyo. Kila baiti ambayo mtandao unasogeza imesainiwa kwa njia ya post-quantum, na gharama hupimwa kwenye CI runner ya umma, si kukadiriwa. Iendeshe mwenyewe na utapata nambari zile zile.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "matukio yaliyosainiwa kwa post-quantum yaliyoingizwa kwenye CPU core moja", "tag": "measured" },
+      { "v": "0", "l": "uvujaji wa data kati ya vikundi kwenye nodi 400", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "kasi ya end-to-end encryption kwa kila core", "tag": "measured" },
+      { "v": "97.6%", "l": "ya corpus inajengwa upya wakati asilimia 20 ya washikaji wako nje ya mtandao", "tag": "measured" }
+    ],
+    "engProofCta": "Ona kila nambari iliyopimwa, na uirudie mwenyewe",
     "flagshipBadge": "Makala kuu ya muhtasari",
     "flagshipMeta": "v2 · Mei 22, 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

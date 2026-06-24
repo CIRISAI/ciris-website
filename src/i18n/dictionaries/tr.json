@@ -1502,6 +1502,16 @@
     "corpusItem2": "Farklı ajanlar aynı skor uzayının farklı bölgelerini kaplıyor.",
     "corpusItem3": "Bu bölgeler bugün gözlemlenebilirlik ve operatör araçları için kullanışlı.",
     "corpusItem4": "Şema ayrıntısı ve ölçek geliştikçe aynı korpus daha değerli hale geliyor.",
+    "engProofEyebrow": "Mühendislik",
+    "engProofH2": "Ağ, ölçüldü",
+    "engProofBody": "Yukarıdaki araştırma kanıtın yarısı. Diğer yarısı onu taşıyan ağ. Ağın taşıdığı her bayt post-quantum imzalı ve maliyet, tahmin değil, herkese açık bir CI runner üzerinde ölçüldü. Kendin çalıştır, aynı sayıları görürsün.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "tek CPU core üzerinde işlenen post-quantum imzalı olay", "tag": "measured" },
+      { "v": "0", "l": "400 düğümdeki gruplar arası veri sızıntısı", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "core başına uçtan uca şifreleme hızı", "tag": "measured" },
+      { "v": "97.6%", "l": "sahiplerin %20'si çevrimdışıyken korpus yeniden oluşturma başarısı", "tag": "measured" }
+    ],
+    "engProofCta": "Tüm ölçülen sayılara bak ve kendin doğrula",
     "flagshipBadge": "Öne çıkan sentez makalesi",
     "flagshipMeta": "v2 · 22 Mayıs 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

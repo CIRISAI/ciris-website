@@ -1502,6 +1502,16 @@
     "corpusItem2": "የተለያዩ ወኪሎች በጋራ ውጤት ቦታ ውስጥ የተለያዩ ክልሎችን ይይዛሉ።",
     "corpusItem3": "እነዚያ ክልሎች ዛሬ ለታዛቢነት እና ለኦፕሬተር መሣሪያዎች ጠቃሚ ናቸው።",
     "corpusItem4": "ዝርዝር ፕሮቶኮሉ እና ስፋቱ ሲሻሻሉ ተመሳሳዩ ምንጭ የበለጠ ዋጋ ያገኛል።",
+    "engProofEyebrow": "ምህንድስና",
+    "engProofH2": "ፋብሪኩ፣ እንደተለካ",
+    "engProofBody": "ከላይ ያለው ምርምር የማስረጃው አንድ ግማሽ ነው። ሌላው ግማሽ ደግሞ የሚሸከመው ኔትወርክ ነው። ፋብሪኩ የሚያንቀሳቅሰው እያንዳንዱ ባይት post-quantum-signed ነው። ወጪው የሚለካው በህዝባዊ CI runner ላይ ነው፣ በሞዴል አይደለም። እርስዎ ራሱ ቢሞክሩ፣ ተመሳሳይ ቁጥሮችን ያገኛሉ።",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "post-quantum-signed ክስተቶች በአንድ CPU core ላይ የተቀበሉ", "tag": "measured" },
+      { "v": "0", "l": "በ400 ኖዶች ውስጥ ያሉ ቡድኖች መካከል የተፈጠሩ የመረጃ ፍሰቶች", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "end-to-end encryption ፍጥነት በእያንዳንዱ core", "tag": "measured" },
+      { "v": "97.6%", "l": "ከያዦቹ 20% ከመስመር ውጭ ሆነው ኮርፐሱ ዳግም ይገነባል", "tag": "measured" }
+    ],
+    "engProofCta": "እያንዳንዱ የተለካ ቁጥር ይመልከቱ፣ ራሱ ያረጋግጡ",
     "flagshipBadge": "ዋነኛ ዳሰሳ ጽሑፍ",
     "flagshipMeta": "v2 · ግንቦት 22፣ 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

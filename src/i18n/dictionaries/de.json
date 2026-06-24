@@ -1502,6 +1502,16 @@
     "corpusItem2": "Verschiedene Agenten belegen unterschiedliche Bereiche desselben Score-Raums.",
     "corpusItem3": "Diese Bereiche sind heute schon nutzlich fur die Beobachtbarkeit und fur Operator-Werkzeuge.",
     "corpusItem4": "Derselbe Korpus wird wertvoller, wenn Schemadetails und Umfang zunehmen.",
+    "engProofEyebrow": "Technik",
+    "engProofH2": "Das Netzwerk, gemessen",
+    "engProofBody": "Die obige Forschung ist eine Hälfte des Beweises. Die andere Hälfte ist das Netzwerk, das sie trägt. Jedes Byte, das das Netzwerk bewegt, ist post-quantum-signiert, und die Kosten werden auf einem öffentlichen CI-Runner gemessen, nicht modelliert. Führe es selbst aus und du erhältst dieselben Zahlen.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "post-quantum-signierte Ereignisse auf einem CPU-Kern verarbeitet", "tag": "measured" },
+      { "v": "0", "l": "gruppenübergreifende Datenlecks auf 400 Knoten", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "Ende-zu-Ende-Verschlüsselungsdurchsatz pro Kern", "tag": "measured" },
+      { "v": "97.6%", "l": "der Korpuswiederherstellungen bei 20 % offline geschalteten Haltern", "tag": "measured" }
+    ],
+    "engProofCta": "Alle gemessenen Zahlen ansehen und selbst reproduzieren",
     "flagshipBadge": "Flagship-Synthesepapier",
     "flagshipMeta": "v2 · 22. Mai 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

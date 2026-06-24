@@ -1502,6 +1502,16 @@
     "corpusItem2": "Diferentes agentes ocupan distintas regiones del mismo espacio de puntuaciones.",
     "corpusItem3": "Esas regiones son útiles hoy para la observabilidad y las herramientas de operadores.",
     "corpusItem4": "El mismo corpus adquiere más valor a medida que mejoran el detalle del esquema y la escala.",
+    "engProofEyebrow": "Ingeniería",
+    "engProofH2": "La red, medida",
+    "engProofBody": "La investigación anterior es una mitad de la prueba. La otra mitad es la red que la transporta. Cada byte que mueve la red está firmado con criptografía poscuántica, y el costo se mide en un ejecutor de CI público, no se estima. Ejecútalo tú mismo y obtienes los mismos números.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "eventos firmados con criptografía poscuántica procesados en un núcleo de CPU", "tag": "measured" },
+      { "v": "0", "l": "filtraciones de datos entre grupos en 400 nodos", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "rendimiento de cifrado de extremo a extremo por núcleo", "tag": "measured" },
+      { "v": "97.6%", "l": "del corpus se reconstruye con el 20 % de los nodos sin conexión", "tag": "measured" }
+    ],
+    "engProofCta": "Consulta cada número medido y reprodúcelo tú mismo",
     "flagshipBadge": "Artículo de síntesis principal",
     "flagshipMeta": "v2 · 22 de mayo de 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

@@ -1502,6 +1502,16 @@
     "corpusItem2": "Wakilan da suka bambanta suna zaune a yankuna daban-daban na wannan filin maki.",
     "corpusItem3": "Wadannan yankuna suna da amfani don kula da tsarin da kayan aikin mai amfani a yau.",
     "corpusItem4": "Wannan tarin yana ƙara samun ƙima yayin da bayani ya ƙara zama dalla-dalla kuma girma ya ƙaru.",
+    "engProofEyebrow": "Injiniya",
+    "engProofH2": "Yanar gizo, an auna shi",
+    "engProofBody": "Binciken da ke sama shi ne rabin hujja. Rabin ɗaya shi ne hanyar sadarwa da ke ɗaukar shi. Kowane baiti da yanar gizon ke ɗauka yana da sa hannun post-quantum, kuma ana auna kudin aikin a kan CI runner na jama'a, ba a ƙididdige shi kawai ba. Ka gudanar da shi da kanka kuma za ka sami ƙididdigan da suka yi daidai.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "abubuwan da aka shigo da su da sa hannun post-quantum a kan CPU core ɗaya", "tag": "measured" },
+      { "v": "0", "l": "bayanan da suka tsallaka tsakanin ƙungiyoyi a cikin nodes 400", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "ƙarfin end-to-end encryption a kowace core", "tag": "measured" },
+      { "v": "97.6%", "l": "na sake gina bayanan tare da masu riƙe 20% a layi", "tag": "measured" }
+    ],
+    "engProofCta": "Duba dukkan lambobin da aka auna, kuma sake gwadawa da kanka",
     "flagshipBadge": "Takarda ta synthesis ta farko",
     "flagshipMeta": "v2 · Mayu 22, 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

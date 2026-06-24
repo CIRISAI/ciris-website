@@ -1502,6 +1502,16 @@
     "corpusItem2": "Différents agents occupent des régions distinctes du même espace de scores.",
     "corpusItem3": "Ces régions sont utiles dès aujourd'hui pour l'observabilité et les outils opérateurs.",
     "corpusItem4": "Le même corpus prend de la valeur à mesure que la granularité du schéma et l'échelle s'améliorent.",
+    "engProofEyebrow": "Ingénierie",
+    "engProofH2": "Le réseau, mesuré",
+    "engProofBody": "Les recherches ci-dessus ne sont qu'une moitié de la preuve. L'autre moitié, c'est le réseau qui les transporte. Chaque octet que le réseau déplace est signé post-quantum, et le coût est mesuré sur un CI runner public, pas modélisé. Reproduisez-le vous-même et vous obtenez les mêmes chiffres.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "événements signés post-quantum ingérés sur un seul CPU core", "tag": "measured" },
+      { "v": "0", "l": "fuites de données entre groupes sur 400 nœuds", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "débit de chiffrement end-to-end par CPU core", "tag": "measured" },
+      { "v": "97.6%", "l": "du corpus se reconstruit avec 20 % des détenteurs hors ligne", "tag": "measured" }
+    ],
+    "engProofCta": "Consultez chaque mesure et reproduisez-la vous-même",
     "flagshipBadge": "Article de synthèse phare",
     "flagshipMeta": "v2 · 22 mai 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

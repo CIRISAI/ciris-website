@@ -1544,6 +1544,16 @@
     "corpusItem2": "Different agents occupy different regions of the same score space.",
     "corpusItem3": "Those regions are useful for observability and operator tooling today.",
     "corpusItem4": "The same corpus becomes more valuable as schema detail and scale improve.",
+    "engProofEyebrow": "Engineering",
+    "engProofH2": "The fabric, measured",
+    "engProofBody": "The research above is one half of the proof. The other half is the network that carries it. Every byte the fabric moves is post-quantum-signed, and the cost is measured on a public CI runner, not modeled. Run it yourself and you get the same numbers.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "post-quantum-signed events ingested on one CPU core", "tag": "measured" },
+      { "v": "0", "l": "cross-group data leaks across 400 nodes", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "end-to-end encryption throughput per core", "tag": "measured" },
+      { "v": "97.6%", "l": "of the corpus rebuilds with 20% of holders offline", "tag": "measured" }
+    ],
+    "engProofCta": "See every measured number, and reproduce it yourself",
     "flagshipBadge": "Flagship synthesis paper",
     "flagshipMeta": "v2 · May 22, 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

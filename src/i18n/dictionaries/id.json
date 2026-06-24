@@ -1502,6 +1502,16 @@
     "corpusItem2": "Agen yang berbeda menempati wilayah berbeda dalam ruang skor yang sama.",
     "corpusItem3": "Wilayah-wilayah tersebut berguna untuk observabilitas dan alat operator saat ini.",
     "corpusItem4": "Korpus yang sama menjadi lebih berharga seiring peningkatan detail skema dan skala.",
+    "engProofEyebrow": "Rekayasa",
+    "engProofH2": "Jaringan, terukur",
+    "engProofBody": "Penelitian di atas adalah separuh dari bukti. Separuh lainnya adalah jaringan yang membawanya. Setiap byte yang dipindahkan jaringan ini ditandatangani secara post-quantum, dan biayanya diukur di CI runner publik, bukan dimodelkan. Jalankan sendiri dan Anda mendapat angka yang sama.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "event bertanda tangan post-quantum yang diterima dalam satu CPU core", "tag": "measured" },
+      { "v": "0", "l": "kebocoran data lintas grup di 400 node", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "throughput enkripsi end-to-end per core", "tag": "measured" },
+      { "v": "97.6%", "l": "korpus dapat dibangun ulang saat 20% pemegang offline", "tag": "measured" }
+    ],
+    "engProofCta": "Lihat setiap angka terukur, dan reproduksi sendiri",
     "flagshipBadge": "Makalah sintesis unggulan",
     "flagshipMeta": "v2 · 22 Mei 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

@@ -1502,6 +1502,16 @@
     "corpusItem2": "Các tác nhân khác nhau chiếm các vùng khác nhau trong cùng một không gian điểm.",
     "corpusItem3": "Những vùng đó hữu ích cho khả năng quan sát và công cụ vận hành ngay hôm nay.",
     "corpusItem4": "Cùng một kho dữ liệu sẽ có giá trị hơn khi chi tiết lược đồ và quy mô được cải thiện.",
+    "engProofEyebrow": "Kỹ thuật",
+    "engProofH2": "Mạng lưới, đã được đo lường",
+    "engProofBody": "Các nghiên cứu ở trên là một nửa bằng chứng. Nửa còn lại là mạng lưới truyền tải dữ liệu đó. Mọi byte mà mạng lưới di chuyển đều được ký bằng mã hóa post-quantum, và chi phí được đo trên một CI runner công khai, không phải mô phỏng. Tự chạy thử và bạn sẽ nhận được kết quả giống hệt.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "sự kiện được ký post-quantum nhận vào trên một CPU core", "tag": "measured" },
+      { "v": "0", "l": "rò rỉ dữ liệu giữa các nhóm qua 400 nút", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "thông lượng mã hóa end-to-end trên mỗi core", "tag": "measured" },
+      { "v": "97.6%", "l": "kho dữ liệu được khôi phục khi 20% người lưu giữ ngoại tuyến", "tag": "measured" }
+    ],
+    "engProofCta": "Xem mọi con số đã đo, và tự kiểm chứng lại",
     "flagshipBadge": "Bài báo tổng hợp hàng đầu",
     "flagshipMeta": "v2 · 22 tháng 5, 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

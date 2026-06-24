@@ -1502,6 +1502,16 @@
     "corpusItem2": "Àwọn aṣojú oríṣiríṣi wà ní àwọn ẹkùn oríṣiríṣi ní àyè ìwọ̀n kan náà.",
     "corpusItem3": "Àwọn ẹkùn wọ̀nyí wúlò fún ìwoye àti irinṣẹ́ olùṣiṣẹ́ lónìí.",
     "corpusItem4": "Corpus kan náà di iye díẹ̀ síi bí àlàyé ìlànà àti ìwọ̀n bá pọ̀ sí i.",
+    "engProofEyebrow": "Ẹ̀rọ",
+    "engProofH2": "Àwọn wiwọn ìsopọ̀",
+    "engProofBody": "Ìwádìí tó wà lókè jẹ́ ìdajì ẹ̀rí. Ìdajì kejì ni ìsopọ̀ tí ó gbé e. Gbogbo bẹ̀ẹ̀tì tí ìsopọ̀ ń gbé ni a ti fọwọ́sí pẹ̀lú ọ̀nà post-quantum, a sì ń ṣe ìwọ̀n ìná lórí CI runner gbangba, kì í ṣe àkóbẹ̀rẹ̀. Ṣe é fúnra rẹ, àwọn nọ́mbà náà yóò jẹ́ kanna.",
+    "engProofStats": [
+      { "v": "2,374 / s", "l": "àwọn ìṣẹ̀lẹ̀ tí a fọwọ́sí post-quantum tí a gbé wọlé lórí CPU core kan", "tag": "measured" },
+      { "v": "0", "l": "ìjákulẹ̀ àlàyé láàárín àwọn ẹgbẹ́ lára ojú-ọpọlọpọ̀ ìpinlẹ̀ 400", "tag": "measured" },
+      { "v": "2.6 GiB/s", "l": "ìyára end-to-end encryption fún CPU core kọ̀ọ̀kan", "tag": "measured" },
+      { "v": "97.6%", "l": "nínú àtúnkọ corpus pẹ̀lú 20% àwọn olùdìmọ̀ tí kò sí nílé", "tag": "measured" }
+    ],
+    "engProofCta": "Wo gbogbo àwọn wiwọn, kí o sì tún ṣe é fúnra rẹ",
     "flagshipBadge": "Àkọwé ìṣọ̀kan àkọ́kọ́",
     "flagshipMeta": "v2 · May 22, 2026 · DOI 10.5281/zenodo.20300773",
     "flagshipTitle": "Corridor Dynamics in Coordinated Systems",

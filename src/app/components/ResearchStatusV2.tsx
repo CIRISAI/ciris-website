@@ -96,6 +96,30 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
         </div>
       </div>
 
+      {/* Engineering proof — the measured fabric, linking the live CIRISServer
+          benchmark site so the page covers both halves: papers and engineering. */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{rs.engProofEyebrow}</p>
+        <h2 className={s.h2}>{rs.engProofH2}</h2>
+        <p className={s.paragraph}>{rs.engProofBody}</p>
+        <div className={s.scoreboard}>
+          {rs.engProofStats.map((st) => (
+            <div className={s.scoreStat} key={st.l}>
+              <div className={s.scoreV} dir="ltr">{st.v}</div>
+              <div className={s.scoreL}>
+                {st.l}{" "}
+                <span className={`${s.scoreTag} ${s.scoreMeasured}`}>{st.tag}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className={s.paragraph}>
+          <a href="https://cirisai.github.io/CIRISServer" target="_blank" rel="noopener noreferrer">
+            {rs.engProofCta} →
+          </a>
+        </p>
+      </section>
+
       {/* Flagship synthesis paper */}
       <section className={s.section}>
         <p className={s.sectionLabel}>{rs.flagshipBadge}</p>
