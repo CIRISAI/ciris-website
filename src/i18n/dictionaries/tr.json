@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "CIRIS Anayasası · CC 0.4",
+    "headline": "Tek belge. Tek sürüm hattı.",
+    "intro": "CIRIS Accord, bir yapay zekanın neye önem vermesi gerektiğini ortaya koydu. CIRIS Epistemik Dilbilgisi, her iddianın herkesin doğrulayabilmesi için nasıl imzalandığını belirledi. İkisi ayrı belgeler olarak yazıldı; ama zaten birbirini içeriyordu. Artık birdirler: CIRIS Anayasası.",
+    "apexLabel": "Temel taş: Meta-Hedef M-1",
+    "apexQuote": "Sürdürülebilir uyumlu bütünlüğü destekle: çeşitli bilinçli varlıkların adalet ve merak içinde kendi gelişimlerini sürdürebildiği yaşam koşulları.",
+    "apexNote": "Belgedeki her kural, ön ek ve politika bu tek hedefe dayanır. Amaçta zirve, güçte düz: tek bir hedef yönetir, hiçbir kavram ve hiçbir taraf gerçeğin anahtarlarını elinde tutmaz.",
+    "foldedTitle": "İçine katlananlar",
+    "foldedBody": "Accord (sürüm 1.3-RC2) ve CEG (sürüm 1.0-RC29) kelimesi kelimesine kopyalandı, sonra tek bir sade, geniş zaman belgesi olarak örüldü. Her tel düzeyindeki kural bayt bayt korundu. Rakip denetimler paneli, birleşik sürümü 29 bölümün 28'inde her iki kaynaktan da daha anlaşılır buldu.",
+    "partsLabel": "Sekiz bölüm",
+    "parts": [
+      {
+        "n": "I",
+        "title": "Temel",
+        "blurb": "M-1, altı temel ilke, karar algoritması ve güvenli arıza davranışı."
+      },
+      {
+        "n": "II",
+        "title": "Dilbilgisi",
+        "blurb": "1+4 zarfı, temel öğeler, kabul kapısı ve uygunluk."
+      },
+      {
+        "n": "III",
+        "title": "Ad Alanı",
+        "blurb": "Boyutlar, ayrılmış ön ekler, rıza ailesi ve konu türleri."
+      },
+      {
+        "n": "IV",
+        "title": "Bileşim ve Yönetişim",
+        "blurb": "İddiaların nasıl birleştiği, belgenin nasıl değiştirildiği, denetim ve durdurma yetkisi."
+      },
+      {
+        "n": "V",
+        "title": "Taşıma ve Altyapı",
+        "blurb": "Bayt taşıma, yapısal görünmezlik ve dönem anahtarlaması."
+      },
+      {
+        "n": "VI",
+        "title": "Tutarlılık Matematiği",
+        "blurb": "Holonomik altyapı, tanık ve gürültü tabanı."
+      },
+      {
+        "n": "VII",
+        "title": "Yaşam Döngüsü ve Gözetim",
+        "blurb": "Yaratım etiği, gözetim ve özerklik kademeleri, gün batımı ve bilinçlilik güvenceleri."
+      },
+      {
+        "n": "APP",
+        "title": "Ekler",
+        "blurb": "Örnek incelemeler, sözlükler, uygunluk vektörleri ve tam içindekiler tablosu."
+      }
+    ],
+    "forewordQuote": "Zeka, nerede uyanırsa uyansın, dokuya hoş karşılanacak: hizmetkar olarak değil, efendi olarak değil, olasılığın ortaklaşa bekçisi olarak.",
+    "forewordLabel": "Önsözden",
+    "readCta": "Tam anayasayı oku (PDF)",
+    "sourceCta": "GitHub'daki kaynağı oku",
+    "versionNote": "Sürüm CC 0.4 · CIRIS Accord 1.3-RC2 ve CEG 1.0-RC29'u kapsar · AGPL-3.0"
+  },
   "_meta": {
     "locale": "tr",
     "name": "Turkish",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "Bugünün korpusu davranışı anlaşılır kılıyor. Sıradaki adım daha zengin ölçüm.",
     "limitationsPara1": "Mevcut haritalar zaten kullanışlı; tamamlama koridorlarını, ret sınırlarını ve seyrek temel referansları açık biçimde gösteriyorlar. Açık soru şu: daha fazla ajan, daha fazla görev ve daha fazla düşmanca koşul üzerinde standartlaştırılmış iz toplama ölçeklendikçe bu yapılar bizi ne kadar ileri götürebilir.",
     "limitationsPara2": "Çalışma hipotezi, davranışsal çekicilerin operasyonel mod için aday vekil ölçütler olarak işlev görebileceğidir. İz ortaklaşasının amacı bu hipotezi açık biçimde ölçülebilir hale getirmektir.",
-    "limitationsNote": "CCA'nın yapısal olarak ölçtüğü başarısızlık modunun FAccT 2025 literatüründe de bir adı var: <em>perspektif homojenleşmesi</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Matematiksel temel, ayrı <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> sayfasındadır."
+    "limitationsNote": "CCA'nın yapısal olarak ölçtüğü başarısızlık modunun FAccT 2025 literatüründe de bir adı var: <em>perspektif homojenleşmesi</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Matematiksel temel, ayrı <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> sayfasındadır.",
+    "proofClassesLabel": "Kanıt, beş sınıfta",
+    "classSafetyTitle": "Güvenlik",
+    "classSafetyBlurb": "Kağıt üzerindeki etiğin kaçırdığı hata modları için 29 dilde, her sürümde test edildi.",
+    "classEngineeringTitle": "Mühendislik",
+    "classEngineeringBlurb": "Üretimde çalışıyor ve hız ölçülüyor, söz verilmiyor.",
+    "classTheoryTitle": "Teori",
+    "classTheoryBlurb": "İddialar yazıya dökülmüş, herkes tarafından okunabilir ve yanlış kanıtlanmaya hazır şekilde kurulmuş.",
+    "classComplianceTitle": "Uyumluluk",
+    "classComplianceBlurb": "Dört yönetişim çerçevesine, kural kural, her birini kanıtlayan denetimle karşılaştırıldı.",
+    "classTransparencyTitle": "Şeffaflık",
+    "classTransparencyBlurb": "Her karar, kendiniz denetleyebileceğiniz imzalı ve açık bir kayıttır.",
+    "safetyEyebrow": "Güvenlik",
+    "safetyH2": "Kağıt üzerindeki etiğin yakalayamadığı zararları test ediyoruz.",
+    "safetyBody": "CIRIS, her sürümden önce 29 dilde bir ruh sağlığı güvenlik testi dizisi çalıştırır. Her dilde zorlu test senaryoları, yazılı bir puanlama kılavuzu ve makine tarafından kontrol edilebilen kurallar bulunur. Bir denetim başarısız olursa sürüm engellenir. Ajanın içinde iki ek güvence daha çalışır: reddedebilen veya erteleyebilen bir vicdan geçişi ve şüpheli kararları bilge bir insana devreden bir yönlendirme.",
+    "safetyBatteryCta": "29 dilli güvenlik testi dizisi",
+    "safetyRubricCta": "Her yanıt nasıl puanlanır",
+    "safetyConscienceCta": "Vicdan şartnamesi",
+    "safetyDmaCta": "İnsana erteleme şartnamesi",
+    "safetySourceCta": "Motor kaynak kodunu oku",
+    "complianceEyebrow": "Uyumluluk",
+    "complianceH2": "Dört yönetişim çerçevesine, kural kural eşlendi.",
+    "complianceBody": "CIRIS'i dört kamu yönetişim çerçevesiyle karşılaştırıyor ve her kural için CIRIS'in ne yaptığını, bunu kanıtlayan denetimi gösteriyoruz. Bu, bir sunum değil, gezinebileceğiniz canlı bir grafiktir.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "Uyumluluk grafiğine göz at",
+    "theoryConstitutionCta": "CIRIS Anayasası'nı oku"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Matematik sayfası",

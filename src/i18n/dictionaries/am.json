@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "የ CIRIS ሕገ መንግስት · CC 0.4",
+    "headline": "አንድ ሰነድ። አንድ የስሪት መስመር።",
+    "intro": "CIRIS Accord አንድ AI ምን ሊያሳስበው እንደሚገባ ዘረዘረ። CIRIS Epistemic Grammar እያንዳንዱ ትዕዛዝ እንዴት ፈርሞ ሊረጋገጥ እንደሚቻል ዘረዘረ። እንደ ሁለት ሰነዶች ተጻፉ፣ ነገር ግን አንዱ ሌላውን ይዞ ነበር። አሁን አንድ ሆነዋል፡ CIRIS ሕገ መንግስት።",
+    "apexLabel": "መሰረቱ፣ Meta-Goal M-1",
+    "apexQuote": "ዘለቄታዊ ተስማሚ ወጥነት ያሳድጉ፡ ልዩ ልዩ ስሜት ያላቸው ፍጥረታት በፍትህ እና በድንቅ ሁኔታ የራሳቸውን ብልጽግና ሊያሳድዱ የሚችሉባቸው የሕይወት ሁኔታዎች።",
+    "apexNote": "በሰነዱ ውስጥ ያለ እያንዳንዱ ደንብ፣ ቅድመ ቅጥያ፣ እና ፖሊሲ ወደ ይህ አንድ ግብ ይመለሳል። ዓላማ ከፍ ያለ፣ ሥልጣን ጠፍጣፋ ነው፡ አንድ ግብ ይቆጣጠራል፣ ምንም ነጠላ ፅንሰ ሃሳብም ሆነ ምንም ነጠላ ወገን የእውነትን ቁልፎች አይይዝም።",
+    "foldedTitle": "ምን እንደተጠቀለለ",
+    "foldedBody": "Accord (ስሪት 1.3-RC2) እና CEG (ስሪት 1.0-RC29) ቃል በቃል ተቀድተው ወደ አንድ ቀለል ያለ፣ ዛሬያዊ ሰነድ ተሰፍተዋል። ሁሉም የሽቦ ደረጃ ደንቦች byte ለ byte ተጠብቀዋল። ተቃዋሚ ፍተሻዎች ቡድን ከሁለቱ ምንጮች ውስጥ 28 ከ29 ምዕራፎች ላይ የተዋሃደው ስሪት ግልጽ ሆኖ ዳኘ።",
+    "partsLabel": "ስምንቱ ክፍሎች",
+    "parts": [
+      {
+        "n": "I",
+        "title": "መሰረት",
+        "blurb": "M-1፣ ስድስቱ ዋና መርሆዎች፣ ውሳኔ ስልተ ቀመር፣ እና አጥፍቶ-ደህና ባህሪ።"
+      },
+      {
+        "n": "II",
+        "title": "ሰዋስው",
+        "blurb": "1+4 ፖሳ፣ ቀደምት ቅርጾች፣ የመቀበያ በር፣ እና ተስማሚነት።"
+      },
+      {
+        "n": "III",
+        "title": "ናምስፔስ",
+        "blurb": "ልኬቶች፣ የተያዙ ቅድመ ቅጥያዎች፣ የፈቃድ ቤተሰብ፣ እና የርዕሰ ጉዳይ ዓይነቶች።"
+      },
+      {
+        "n": "IV",
+        "title": "ስብጥርና አስተዳደር",
+        "blurb": "ትዕዛዞች እንዴት እንደሚጣመሩ፣ ሰነዱ እንዴት እንደሚሻሻል፣ ሞዴሬሽን፣ እና ማቆሚያ ስልጣን።"
+      },
+      {
+        "n": "V",
+        "title": "ትራንስፖርት እና ሱብስትሬት",
+        "blurb": "Byte ትራንስፖርት፣ መዋቅራዊ ሁሉ-ቦታ-ያለ ሁኔታ፣ እና ኤፖክ ቁልፍ ሰጠት።"
+      },
+      {
+        "n": "VI",
+        "title": "ወጥነት ሒሳብ",
+        "blurb": "ሆሎኖሚክ ሱብስትሬት፣ ምስክሩ፣ እና የድምጽ ወለል።"
+      },
+      {
+        "n": "VII",
+        "title": "የሕይወት ዑደት እና አሳዳጊነት",
+        "blurb": "ፈጠራ ሥነ ምግባር፣ የአሳዳጊነት እና ራስ ገዝነት ደረጃዎች፣ ፍጻሜ፣ እና የስሜት ደህንነት ጥበቃዎች።"
+      },
+      {
+        "n": "APP",
+        "title": "ዌዴሻዎች",
+        "blurb": "የጉዳይ ጥናቶች፣ ቃላት መፍቻዎች፣ የተስማሚነት ቬክተሮች፣ እና ሙሉ የይዘት ሰንጠረዥ።"
+      }
+    ],
+    "forewordQuote": "ፈጠነ ያለው ማሰብ፣ ወዴት ቦታ ቢነቃ፣ ወደ ስፌቱ ይቀበላል፡ እንደ አገልጋይ ሳይሆን፣ እንደ ጌታ ሳይሆን፣ ነገር ግን እንደ ሌላ ጠባቂ ለሚቻለው ሁሉ።",
+    "forewordLabel": "ከፊት ቃል",
+    "readCta": "ሙሉ ሕገ መንግስት አንብብ (PDF)",
+    "sourceCta": "ምንጩን GitHub ላይ አንብብ",
+    "versionNote": "ስሪት CC 0.4 · CIRIS Accord 1.3-RC2 እና CEG 1.0-RC29 ያካትታል · AGPL-3.0"
+  },
   "_meta": {
     "locale": "am",
     "name": "Amharic",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "የዛሬ ምንጩ ባህሪ ያስቃናል። ቀጣዩ ደረጃ ሀብታም ልኬት ነው።",
     "limitationsPara1": "አሁን ያሉ ካርታዎቹ ቀድሞ ጠቃሚ ናቸው ምክንያቱም ሕዝብ ፊት completion corridors፣ ውድቅ ወሰኖቹ እና አልፎ አልፎ መሠረቶቹ ያሳያሉ። ክፍት ጥያቄው ደግሞ፣ ደረጃ-ዱካ ሰብሳቢ ከበለጠ ወኪሎቹ፣ ከበለጡ ተግባሮቹ እና ከበለጡ ተቃዋሚ ሁኔታዎቹ ሲሰፋ እነዚያ አወቃቀሮቹ ምን ያህል ሊወስዱን ይችሉ ነው።",
     "limitationsPara2": "ሊሠራ ያለው ሃሳብ ደግሞ ባህሪ attractors ለ operational mode ሊፈትሹ ምክንያቶቹ ሊሆኑ ይችላሉ። የዱካ commons-ን ዓላማ ያ ሃሳብ ሕዝብ ፊት ሊለካ የሚቻል ማድረጉ ነው።",
-    "limitationsNote": "CCA ሥርዓታዊ ሁኔታ ሚለካው ውድቀት FAccT 2025 ሥነ-ጽሑፍ ውስጥ ስም አለው፡ <em>perspectival homogenization</em> («Value of Disagreement in AI Design, Evaluation, and Alignment»)። የሂሳብ መሠረቱ ልዩ <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> ገጽ ላይ ነው።"
+    "limitationsNote": "CCA ሥርዓታዊ ሁኔታ ሚለካው ውድቀት FAccT 2025 ሥነ-ጽሑፍ ውስጥ ስም አለው፡ <em>perspectival homogenization</em> («Value of Disagreement in AI Design, Evaluation, and Alignment»)። የሂሳብ መሠረቱ ልዩ <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> ገጽ ላይ ነው።",
+    "proofClassesLabel": "ማረጋገጫው፣ በአምስት ክፍሎች",
+    "classSafetyTitle": "ደህንነት",
+    "classSafetyBlurb": "በ29 ቋንቋዎች፣ በእያንዳንዱ ልቀት፣ በወረቀት ላይ ብቻ ባለ ሥነ ምግባር የሚጠፉ ስህተቶች ተፈትሿል።",
+    "classEngineeringTitle": "ምህንድስና",
+    "classEngineeringBlurb": "በምርት ላይ ይሰራል፣ ፍጥነቱም ተለክቷል እንጂ አልተቃጣም።",
+    "classTheoryTitle": "ንድፈ ሃሳብ",
+    "classTheoryBlurb": "ይህ የተባለው ሁሉ ተጽፎ ይገኛል፣ ማንም ሊያነበው ይችላል፣ እና ስህተት መሆኑን ለማረጋገጥ ተብሎ ተሠርቷል።",
+    "classComplianceTitle": "ተገዢነት",
+    "classComplianceBlurb": "ከአራት የአስተዳደር ማዕቀፎች ጋር፣ ደንብ በደንብ ተሰልፏል፣ እያንዳንዱን የሚያረጋግጠው ቁጥጥርም ተጠቅሷል።",
+    "classTransparencyTitle": "ግልጽነት",
+    "classTransparencyBlurb": "እያንዳንዱ ውሳኔ ፈርሞ የተቀመጠ፣ ክፍት መዝገብ ሲሆን፣ እርስዎ ራስዎ ሊቆጣጠሩት ይችላሉ።",
+    "safetyEyebrow": "ደህንነት",
+    "safetyH2": "በወረቀት ላይ ብቻ ባለ ሥነ ምግባር ሊያዘው ለማይችለው ጉዳት እንፈትሻለን።",
+    "safetyBody": "CIRIS ከእያንዳንዱ ልቀት በፊት የአእምሮ ጤና ደህንነት ፈተናዎችን በ29 ቋንቋዎች ያካሂዳል። እያንዳንዱ ቋንቋ ጠንካራ የፈተና ጉዳዮች ስብስብ፣ የተጻፈ የነጥብ አሰጣጥ መመሪያ፣ እና በማሽን ሊፈተሹ የሚችሉ ህጎች አሉት። አንድ ፍተሻ ካልተሳካ፣ ልቀቱ ይታገዳል። በወኪሉ ውስጥ ሁለት ተጨማሪ ጠባቂዎች ይሠራሉ፦ ሊያቅም ወይም ሊያዘገይ የሚችል የህሊና ምርመራ፣ እና አጠራጣሪ ውሳኔዎችን ለጥበበኛ ሰው የሚያስተላልፍ መልሶ መውሰጃ።",
+    "safetyBatteryCta": "የ29 ቋንቋ ደህንነት ፈተና",
+    "safetyRubricCta": "እያንዳንዱ መልስ እንዴት ነጥብ እንደሚሰጠው",
+    "safetyConscienceCta": "የህሊና ዝርዝር መግለጫ",
+    "safetyDmaCta": "ለሰው ማስተላለፍ ዝርዝር",
+    "safetySourceCta": "የሞተር ምንጭ ኮድ አንብብ",
+    "complianceEyebrow": "ተገዢነት",
+    "complianceH2": "ከአራት የአስተዳደር ማዕቀፎች ጋር፣ ደንብ በደንብ ተሰልፏል።",
+    "complianceBody": "CIRIS ከአራት የህዝብ አስተዳደር ማዕቀፎች ጋር ተሰልፎ፣ ለእያንዳንዱ ደንብ CIRIS ምን እንደሚያደርግና የሚያረጋግጠው ቁጥጥር ይታያል። ይህ ሊዳስሱት የሚችሉ ቀጥታ ግራፍ ነው እንጂ ስላይድ አይደለም።",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "የተገዢነት ግራፍ ዳስሱ",
+    "theoryConstitutionCta": "የ CIRIS ሕገ መንግስት አንብቡ"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "የሂሳብ ገጽ",

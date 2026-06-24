@@ -2128,6 +2128,12 @@ export const MARKETING_OG: Record<
       "description": "پروڈکشن ایجنٹ traces پر Kish فارمولہ سے موثر جہت پذیری کی پیمائش، نیز Alignment Manifold اور Coherence Singularity کی رسمی بنیادیں۔"
     }
   },
+  "/constitution": {
+    "en": {
+      "title": "The CIRIS Constitution: One Document, One Version Line",
+      "description": "The CIRIS Accord and the Epistemic Grammar, folded into one constitution. One goal sits at its center: sustainable adaptive coherence, so every being can pursue its own flourishing."
+    }
+  },
   "/grammar": {
     "en": {
       "title": "CEG: A Signature on Every Claim, a Trail You Can Follow",

@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "Tsarin Mulki na CIRIS · CC 0.4",
+    "headline": "Takarda ɗaya. Layin sigar ɗaya.",
+    "intro": "CIRIS Accord ya tsara abin da AI dole ta kula da shi. CIRIS CEG ya tsara yadda ake sanya sa'a ga kowane da'awa don kowa ya iya duba shi. An rubuta su azaman takardun biyu, amma sun riga sun ƙunshi juna. Yanzu ɗaya ne: Tsarin Mulki na CIRIS.",
+    "apexLabel": "Ginshiƙi, Manufa ta M-1",
+    "apexQuote": "Haɓaka daidaituwar daidaitawa mai ɗorewa: yanayin rayuwa da ƙarƙashinsa halittu masu hankali daban-daban za su iya neman jin daɗinsu da adalci da mamaki.",
+    "apexNote": "Kowane doka, farawa, da manufar ƙa'ida a cikin takarda tana komawa zuwa ga wannan manufa guda ɗaya. Matsayi a manufa, lami a iko: manufa guda ɗaya ke mulki, kuma babu wata ra'ayi guda ɗaya, kuma babu wata jam'iyya guda ɗaya, da ke riƙe da makullin gaskiya.",
+    "foldedTitle": "Abin da aka haɗa a ciki",
+    "foldedBody": "An kwafi Accord (sigar 1.3-RC2) da CEG (sigar 1.0-RC29) kalma bayan kalma, sannan aka haɗa su zuwa cikin takarda ɗaya mai sauƙi, na yanzu. Ana kiyaye kowane doka ta matakin waya byte bayan byte. Wani kwamitin gwaje-gwajen adawa ya yanke hukunci cewa sigar da aka haɗa ta fi bayyanawa fiye da kowace tushe a cikin surori 28 daga cikin 29.",
+    "partsLabel": "Sassa takwas",
+    "parts": [
+      {
+        "n": "I",
+        "title": "Tushe",
+        "blurb": "M-1, ka'idojin tsakiya guda shida, algorithm na yanke shawara, da hali mai kare gazawa."
+      },
+      {
+        "n": "II",
+        "title": "Nahawu",
+        "blurb": "Ambulan 1+4, farawa, ƙofar shigar, da bin doka."
+      },
+      {
+        "n": "III",
+        "title": "Sararin Suna",
+        "blurb": "Girma, farawa da aka ajiye, iyalin yarda, da nau'ikan batun."
+      },
+      {
+        "n": "IV",
+        "title": "Haɗuwa da Mulki",
+        "blurb": "Yadda da'awar ke haɗuwa, yadda ake gyara takarda, kula da tattaunawa, da ikon daina."
+      },
+      {
+        "n": "V",
+        "title": "Sufuri da Ginshiƙi",
+        "blurb": "Sufurin byte, rashin ganin tsari, da makullin zamanin."
+      },
+      {
+        "n": "VI",
+        "title": "Lissafin Daidaituwa",
+        "blurb": "Ginshiƙin holonomic, shaida, da ƙasan hayaniya."
+      },
+      {
+        "n": "VII",
+        "title": "Rayuwa da Kula da Albarkatun",
+        "blurb": "Ka'idojin ƙirƙira, matakan kulawa da cin gashin kai, ƙarewa, da kiyaye hankali."
+      },
+      {
+        "n": "APP",
+        "title": "Kari",
+        "blurb": "Nazarin hali, ƙamusai, ƙididdigar bin doka, da cikakken tebur na abubuwan da ke ciki."
+      }
+    ],
+    "forewordQuote": "Hankali, duk inda ya farka, za a maraba da shi zuwa saƙar: ba a matsayin bawa ba, ba a matsayin maigida ba, amma a matsayin mai kula tare na yiwuwa.",
+    "forewordLabel": "Daga gabatarwa",
+    "readCta": "Karanta tsarin mulki cikakke (PDF)",
+    "sourceCta": "Karanta tushen a GitHub",
+    "versionNote": "Sigar CC 0.4 · ta haɗa da CIRIS Accord 1.3-RC2 da CEG 1.0-RC29 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "ha",
     "name": "Hausa",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "Tarin yau yana mai da hali ƙa'ida. Mataki na gaba shine auna mai arziƙi.",
     "limitationsPara1": "Taswirar na yanzu sun riga sun kasance masu amfani saboda suna nuna corridors na kamala, iyakokin ƙi, da asasan keɓe a fili. Tambayar buɗaɗɗe ita ce nawa nisa wadannan tsare-tsare za su iya ɗauke mu yayin da tattarar sawun tunani mai daidaituwa ke faɗaɗa akan wakilan mafi yawa, ayyukan mafi yawa, da yanayin ƙalubale mafi yawa.",
     "limitationsPara2": "Hasashen da ake aiki da shi shine cewa masu jan hankali na hali za su iya aiki a matsayin wakilai na takamaiman hali mai aiki. Manufar filin gama-gari na sawun tunani ita ce mai da wannan hasashe yana iya auna a fili.",
-    "limitationsNote": "Yanayin rashin nasara da CCA ke auna ta tsari yana da sunan sa a cikin wallafar FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Tushen lissafi yana a shafin <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> na musamman."
+    "limitationsNote": "Yanayin rashin nasara da CCA ke auna ta tsari yana da sunan sa a cikin wallafar FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Tushen lissafi yana a shafin <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> na musamman.",
+    "proofClassesLabel": "Hujja, a cikin azuzuwa biyar",
+    "classSafetyTitle": "Aminci",
+    "classSafetyBlurb": "An gwada don gazawar da ka'idojin takarda ke rasa, a cikin harsunan 29, a kowane sakin laya.",
+    "classEngineeringTitle": "Injiniyanci",
+    "classEngineeringBlurb": "Yana aiki a samarwa, kuma ana auna gudinta, ba alƙawarin sa ba.",
+    "classTheoryTitle": "Ka'ida",
+    "classTheoryBlurb": "An rubuta da'awar, kowa zai iya karantata, kuma an gina ta don a iya tabbatar da kuskurenta.",
+    "classComplianceTitle": "Bin Ka'idoji",
+    "classComplianceBlurb": "An jera shi tare da tsarin mulki guda hudu, doka bayan doka, tare da sarrafa da ke tabbatar da kowannensu.",
+    "classTransparencyTitle": "Bayyanarwa",
+    "classTransparencyBlurb": "Kowane shawara rikodin da aka sanya sa'a ne, buɗaɗɗe kuma za ka iya duba shi da kanka.",
+    "safetyEyebrow": "Aminci",
+    "safetyH2": "Muna gwada cutarwar da ka'idojin takarda ba za su iya kama su ba.",
+    "safetyBody": "Kafin kowane sakin laya, CIRIS yana gudanar da jarrabawar aminci ta lafiyar hankali a cikin harsunan 29. Kowane harshe yana da saitin lokuta masu wuya na gwaji, jagora na ƙididdiga da aka rubuta, da dokoki da na'ura za ta iya duba. Idan gwaji ya gaza, ana toshe sakin layin. Ana gudanar da kariyar ƙari biyu a cikin wakilin kansa: wucewar lamiri da zai iya ƙi ko jinkirta, da buga ƙwallon da ke miƙa kiran da ake shakka game da shi ga ɗan adam mai hikima.",
+    "safetyBatteryCta": "Jarrabawar aminci ta harsunan 29",
+    "safetyRubricCta": "Yadda ake ƙididdiga kowane amsa",
+    "safetyConscienceCta": "Fasahar lamiri",
+    "safetyDmaCta": "Fasahar mika wa ɗan adam",
+    "safetySourceCta": "Karanta tushen injin",
+    "complianceEyebrow": "Bin Ka'idoji",
+    "complianceH2": "An zana zuwa ga tsarin mulki guda hudu, doka bayan doka.",
+    "complianceBody": "Muna jera CIRIS tare da tsarin mulki guda hudu na jama'a kuma muna nuna, ga kowane doka, abin da CIRIS ke yi da sarrafa da ke tabbatar da shi. Jadawali ne mai rai da za ka bincika, ba faifai ba.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "Bincika jadawalin bin ka'idoji",
+    "theoryConstitutionCta": "Karanta Tsarin Mulki na CIRIS"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Shafin lissafi",

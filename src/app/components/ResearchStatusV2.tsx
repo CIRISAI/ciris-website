@@ -38,6 +38,23 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
   const loopSteps = [rs.loopStep1, rs.loopStep2, rs.loopStep3, rs.loopStep4];
   const schemaHighlights = [rs.schemaHighlight1, rs.schemaHighlight2, rs.schemaHighlight3];
 
+  // The five synthesized proof classes — each anchors to a section below.
+  const proofClasses = [
+    { anchor: "#proof-safety", title: rs.classSafetyTitle, blurb: rs.classSafetyBlurb, cls: s.cOk },
+    { anchor: "#proof-engineering", title: rs.classEngineeringTitle, blurb: rs.classEngineeringBlurb, cls: s.cTeal },
+    { anchor: "#proof-theory", title: rs.classTheoryTitle, blurb: rs.classTheoryBlurb, cls: s.cCyan },
+    { anchor: "#proof-compliance", title: rs.classComplianceTitle, blurb: rs.classComplianceBlurb, cls: s.cViolet },
+    { anchor: "#proof-transparency", title: rs.classTransparencyTitle, blurb: rs.classTransparencyBlurb, cls: s.cBrass },
+  ];
+
+  // Safety-evidence links (source of truth: CIRISAI/CIRISAgent). Verified live.
+  const safetyLinks = [
+    { href: "https://github.com/CIRISAI/CIRISAgent/tree/main/tests/safety", label: rs.safetyBatteryCta, cls: s.cOk },
+    { href: "https://github.com/CIRISAI/CIRISAgent/blob/main/tests/safety/english_mental_health/v4_english_scoring_rubric.md", label: rs.safetyRubricCta, cls: s.cOk },
+    { href: "https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/CONSCIENCE_V3.md", label: rs.safetyConscienceCta, cls: s.cTeal },
+    { href: "https://github.com/CIRISAI/CIRISAgent/blob/main/FSD/DMA_BOUNCE.md", label: rs.safetyDmaCta, cls: s.cTeal },
+  ];
+
   const papers = [
     { href: "https://zenodo.org/records/18217688", title: rs.paper1Title, meta: rs.paper1Meta, blurb: rs.paper1Blurb },
     { href: "https://zenodo.org/records/18137161", title: rs.paper2Title, meta: rs.paper2Meta, blurb: rs.paper2Blurb },
@@ -78,6 +95,19 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
         </p>
       </div>
 
+      {/* Proof-class index — five anchors into the evidence below. */}
+      <nav className={s.section} aria-label={rs.proofClassesLabel}>
+        <p className={s.sectionLabel}>{rs.proofClassesLabel}</p>
+        <div className={s.cardGrid}>
+          {proofClasses.map((c) => (
+            <a key={c.anchor} href={c.anchor} className={`${s.card} ${c.cls}`}>
+              <h3>{c.title}</h3>
+              <p>{c.blurb}</p>
+            </a>
+          ))}
+        </div>
+      </nav>
+
       <div className={s.callout}>
         <p className={s.sectionLabel}>{rs.corpusLabel}</p>
         <div className={`${s.cardGrid} ${s.cardGridTwo}`}>
@@ -96,9 +126,34 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
         </div>
       </div>
 
+      {/* Safety — the per-language test batteries + in-agent guards, with source. */}
+      <section id="proof-safety" className={s.section}>
+        <p className={s.sectionLabel}>{rs.safetyEyebrow}</p>
+        <h2 className={s.h2}>{rs.safetyH2}</h2>
+        <p className={s.paragraph}>{rs.safetyBody}</p>
+        <div className={`${s.cardGrid} ${s.cardGridTwo}`}>
+          {safetyLinks.map((lnk) => (
+            <a
+              key={lnk.href}
+              href={lnk.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${s.card} ${lnk.cls}`}
+            >
+              <h3>{lnk.label} →</h3>
+            </a>
+          ))}
+        </div>
+        <p className={s.paragraph}>
+          <a href="https://github.com/CIRISAI/CIRISAgent" target="_blank" rel="noopener noreferrer">
+            {rs.safetySourceCta} →
+          </a>
+        </p>
+      </section>
+
       {/* Engineering proof — the measured fabric, linking the live CIRISServer
           benchmark site so the page covers both halves: papers and engineering. */}
-      <section className={s.section}>
+      <section id="proof-engineering" className={s.section}>
         <p className={s.sectionLabel}>{rs.engProofEyebrow}</p>
         <h2 className={s.h2}>{rs.engProofH2}</h2>
         <p className={s.paragraph}>{rs.engProofBody}</p>
@@ -120,13 +175,16 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
         </p>
       </section>
 
-      {/* Flagship synthesis paper */}
-      <section className={s.section}>
+      {/* Flagship synthesis paper — head of the Theory class. */}
+      <section id="proof-theory" className={s.section}>
         <p className={s.sectionLabel}>{rs.flagshipBadge}</p>
         <h2 className={s.h2}>{rs.flagshipTitle}</h2>
         <p className={s.footnote}>{rs.flagshipMeta}</p>
         <p className={s.paragraph}>{rs.flagshipSubtitle}</p>
         <p className={s.paragraph}>{rs.flagshipBody}</p>
+        <p className={s.paragraph}>
+          <Link href={lh("/constitution")}>{rs.theoryConstitutionCta} →</Link>
+        </p>
         <p className={s.paragraph}>
           <a href="https://zenodo.org/records/20300773" target="_blank" rel="noopener noreferrer">
             {rs.flagshipCta}
@@ -158,8 +216,21 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
         </div>
       </section>
 
-      {/* Open dataset + org link */}
-      <section className={s.section}>
+      {/* Compliance — the live regulatory mapping (links the /compliance graph). */}
+      <section id="proof-compliance" className={s.section}>
+        <p className={s.sectionLabel}>{rs.complianceEyebrow}</p>
+        <h2 className={s.h2}>{rs.complianceH2}</h2>
+        <p className={s.paragraph}>{rs.complianceBody}</p>
+        <div className={`${s.notice}`}>
+          <p>{rs.complianceFrameworks}</p>
+        </div>
+        <p className={s.paragraph}>
+          <Link href={lh("/compliance")}>{rs.complianceCta} →</Link>
+        </p>
+      </section>
+
+      {/* Open dataset + org link — head of the Transparency class. */}
+      <section id="proof-transparency" className={s.section}>
         <p className={s.sectionLabel}>{rs.datasetEyebrow}</p>
         <h2 className={s.h2}>{rs.datasetTitle}</h2>
         <p className={s.paragraph}>{rs.datasetBody}</p>

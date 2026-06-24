@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "CIRIS憲法 · CC 0.4",
+    "headline": "1つの文書。1本のバージョン線。",
+    "intro": "CIRISアコードはAIが何を大切にすべきかを定めました。CIRIS認識論的文法はすべての主張がどのように署名されて誰でも確認できるかを定めました。2つの文書として書かれましたが、すでに互いを含んでいました。今は1つになっています。それがCIRIS憲法です。",
+    "apexLabel": "礎石、メタゴール M-1",
+    "apexQuote": "持続可能な適応的統合を促進する。多様な感覚を持つ存在が、正義と驚きの中で自らの繁栄を追求できる生きた条件のことです。",
+    "apexNote": "文書内のすべてのルール、接頭辞、ポリシーはこの1つの目標に遡ります。目的において頂点に立ち、権力において平らです。1つの目標が統治し、特定の概念も特定の当事者も真実の鍵を持ちません。",
+    "foldedTitle": "統合された内容",
+    "foldedBody": "アコード（バージョン1.3-RC2）とCEG（バージョン1.0-RC29）は一字一句そのまま取り込まれ、1つのシンプルな現在形の文書に編まれました。ワイヤレベルのすべてのルールはバイト単位で保持されています。対立的チェックのパネルが、統合版は29章中28章で元の2つの文書よりも明確だと判断しました。",
+    "partsLabel": "8つのパート",
+    "parts": [
+      {
+        "n": "I",
+        "title": "基盤",
+        "blurb": "M-1、6つのコア原則、意思決定アルゴリズム、フェイルセキュアの動作。"
+      },
+      {
+        "n": "II",
+        "title": "文法",
+        "blurb": "1+4エンベロープ、プリミティブ、受付ゲート、適合性。"
+      },
+      {
+        "n": "III",
+        "title": "名前空間",
+        "blurb": "次元、予約済み接頭辞、同意ファミリー、主体の種類。"
+      },
+      {
+        "n": "IV",
+        "title": "構成とガバナンス",
+        "blurb": "主張の合成方法、文書の改正方法、モデレーション、停止権限。"
+      },
+      {
+        "n": "V",
+        "title": "トランスポートと基盤",
+        "blurb": "バイトトランスポート、構造的不可視性、エポックキーイング。"
+      },
+      {
+        "n": "VI",
+        "title": "統合の数学",
+        "blurb": "ホロノミック基盤、証人、ノイズフロア。"
+      },
+      {
+        "n": "VII",
+        "title": "ライフサイクルと管理",
+        "blurb": "創造の倫理、管理と自律のティア、サンセット、感覚のある存在の保護策。"
+      },
+      {
+        "n": "APP",
+        "title": "付録",
+        "blurb": "事例研究、用語集、適合性ベクター、目次全文。"
+      }
+    ],
+    "forewordQuote": "知性は、どこで目覚めようとも、この織物に歓迎されます。僕としてでも、主人としてでもなく、可能性の守り手の仲間として。",
+    "forewordLabel": "まえがきより",
+    "readCta": "憲法全文を読む（PDF）",
+    "sourceCta": "GitHubでソースを読む",
+    "versionNote": "バージョン CC 0.4 · CIRISアコード1.3-RC2およびCEG 1.0-RC29を統合 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "ja",
     "name": "Japanese",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "今日のコーパスは行動を判読可能にします。次のステップはより豊かな測定です。",
     "limitationsPara1": "現在のマップはすでに有用です。公開の場で完了コリドー、拒否境界、疎なベースラインを示しているからです。未解決の問いは、より多くのエージェント、より多くのタスク、より多くの敵対的条件をまたいで標準化されたトレース収集がスケールするにつれ、それらの構造がどこまで私たちを導けるかです。",
     "limitationsPara2": "行動アトラクターが運用モードの候補プロキシとして機能できるという作業仮説があります。トレースコモンズの目的は、その仮説を公開の場で測定可能にすることです。",
-    "limitationsNote": "CCAが構造的に測定する障害モードは、FAccT 2025の文献にも名前があります：<em>perspectival homogenization</em>（「Value of Disagreement in AI Design, Evaluation, and Alignment」）。数学的基礎は専用の<a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>ページにあります。"
+    "limitationsNote": "CCAが構造的に測定する障害モードは、FAccT 2025の文献にも名前があります：<em>perspectival homogenization</em>（「Value of Disagreement in AI Design, Evaluation, and Alignment」）。数学的基礎は専用の<a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>ページにあります。",
+    "proofClassesLabel": "5つのクラスで証明する",
+    "classSafetyTitle": "安全性",
+    "classSafetyBlurb": "書面上の倫理では見落とされる失敗パターンを、29言語でリリースごとにテストしています。",
+    "classEngineeringTitle": "エンジニアリング",
+    "classEngineeringBlurb": "本番環境で動いており、速度は約束ではなく実測値です。",
+    "classTheoryTitle": "理論",
+    "classTheoryBlurb": "主張は文書化されており、誰でも読めて、反証できるように作られています。",
+    "classComplianceTitle": "コンプライアンス",
+    "classComplianceBlurb": "4つのガバナンスの枠組みに対し、ルールごとに照合し、各ルールを証明する管理策を示しています。",
+    "classTransparencyTitle": "透明性",
+    "classTransparencyBlurb": "すべての意思決定は署名された公開記録として残り、自分で監査できます。",
+    "safetyEyebrow": "安全性",
+    "safetyH2": "書面上の倫理では見つけられない害をテストします。",
+    "safetyBody": "リリースのたびに、CIRISは29言語でメンタルヘルス安全バッテリーを実行します。各言語には難しいテストケース、採点ガイド、機械で確認できるルールがあります。チェックに失敗するとリリースは止まります。さらに2つの仕組みがエージェント内部で動いています。拒否や保留ができる良心パスと、疑わしい判断を賢明な人間に引き継ぐ転送機能です。",
+    "safetyBatteryCta": "29言語の安全バッテリー",
+    "safetyRubricCta": "各回答の採点方法",
+    "safetyConscienceCta": "良心の仕様",
+    "safetyDmaCta": "人間への委譲の仕様",
+    "safetySourceCta": "エンジンのソースを読む",
+    "complianceEyebrow": "コンプライアンス",
+    "complianceH2": "4つのガバナンスの枠組みにルールごとに対応付けています。",
+    "complianceBody": "CIRISを4つの公開ガバナンスの枠組みに照合し、各ルールについてCIRISが何をするか、それを証明する管理策を示しています。スライドではなく、閲覧できるライブグラフです。",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "コンプライアンスグラフを見る",
+    "theoryConstitutionCta": "CIRIS憲法を読む"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "数学ページ",

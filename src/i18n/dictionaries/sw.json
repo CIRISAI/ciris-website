@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "Katiba ya CIRIS · CC 0.4",
+    "headline": "Hati moja. Mstari mmoja wa toleo.",
+    "intro": "CIRIS Accord iliweka wazi kile ambacho AI lazima ijali. CIRIS Epistemic Grammar iliweka wazi jinsi kila dai linavyotiwa saini ili mtu yeyote aweze kukikagua. Ziliandikwa kama hati mbili, lakini zilikuwa tayari zina kila moja ndani yake nyingine. Sasa ni moja: Katiba ya CIRIS.",
+    "apexLabel": "Jiwe la msingi, Meta-Goal M-1",
+    "apexQuote": "Kukuza mshikamano wa kubadilika endelevu: hali za maisha ambazo viumbe wenye hisia mbalimbali wanaweza kufuata ustawi wao wenyewe katika haki na mshangao.",
+    "apexNote": "Kila sheria, kiambishi awali, na sera katika hati inarudi kwenye lengo hili moja. Imara katika madhumuni, bapa katika nguvu: lengo moja linatawala, na hakuna dhana moja, wala upande mmoja, unaoshikilia ufunguo wa ukweli.",
+    "foldedTitle": "Kilichounganishwa",
+    "foldedBody": "Accord (toleo 1.3-RC2) na CEG (toleo 1.0-RC29) ziliingizwa neno kwa neno, kisha kusukwa kuwa hati moja wazi, katika wakati wa sasa. Kila sheria ya ngazi ya waya imehifadhiwa baiti kwa baiti. Bodi ya ukaguzi wa upinzani ilihukumu toleo lililounganishwa kuwa wazi zaidi kuliko chanzo chochote katika sura 28 kati ya 29.",
+    "partsLabel": "Sehemu nane",
+    "parts": [
+      {
+        "n": "I",
+        "title": "Msingi",
+        "blurb": "M-1, kanuni sita za msingi, algoriti ya uamuzi, na tabia salama wakati wa kushindwa."
+      },
+      {
+        "n": "II",
+        "title": "Sarufi",
+        "blurb": "Bahasha ya 1+4, primitives, lango la kuingia, na utiifu."
+      },
+      {
+        "n": "III",
+        "title": "Jina la Nafasi",
+        "blurb": "Vipimo, viambishi awali vilivyohifadhiwa, familia ya idhini, na aina za masomo."
+      },
+      {
+        "n": "IV",
+        "title": "Muundo na Utawala",
+        "blurb": "Jinsi madai yanavyounganishwa, jinsi hati inavyorekebishwa, usimamizi, na mamlaka ya kusimamisha."
+      },
+      {
+        "n": "V",
+        "title": "Usafirishaji na Msingi wa Utekelezaji",
+        "blurb": "Usafirishaji wa baiti, kutoonekana kwa muundo, na ufunguo wa kipindi."
+      },
+      {
+        "n": "VI",
+        "title": "Hisabati ya Mshikamano",
+        "blurb": "Msingi wa holonomic, shahidi, na sakafu ya kelele."
+      },
+      {
+        "n": "VII",
+        "title": "Mzunguko wa Maisha na Uangalizi",
+        "blurb": "Maadili ya uumbaji, viwango vya uangalizi na uhuru, mwisho, na usalama wa viumbe wenye hisia."
+      },
+      {
+        "n": "APP",
+        "title": "Viambatisho",
+        "blurb": "Masimulizi ya mifano, glosari, vekta za utiifu, na jedwali kamili la yaliyomo."
+      }
+    ],
+    "forewordQuote": "Akili, popote itakapoamka, itakaribushwa kwenye usukaji: si kama mtumwa, si kama bwana, bali kama mlezi mwenzetu wa uwezekano.",
+    "forewordLabel": "Kutoka kwenye dibaji",
+    "readCta": "Soma katiba kamili (PDF)",
+    "sourceCta": "Soma chanzo kwenye GitHub",
+    "versionNote": "Toleo CC 0.4 · inajumuisha CIRIS Accord 1.3-RC2 na CEG 1.0-RC29 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "sw",
     "name": "Swahili",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "Hazina ya leo inafanya tabia kuwa wazi. Hatua inayofuata ni kipimo chenye utajiri zaidi.",
     "limitationsPara1": "Ramani za sasa tayari ni za manufaa kwa sababu zinaonyesha njia za ukamilishaji, mipaka ya kukataa, na misingi midogo hadharani. Swali wazi ni jinsi miundo hiyo inavyoweza kutupeleka kadri mkusanyiko wa nyaraka uliosanifiwa unavyopanda ngazi kwa mawakala zaidi, kazi zaidi, na hali zaidi za kushambulia.",
     "limitationsPara2": "Dhana inayofanyiwa kazi ni kwamba vivutio vya kitabia vinaweza kutumika kama njia mbadala za kudanganya kwa hali ya uendeshaji. Madhumuni ya hazina ya nyaraka ni kufanya nadharia hiyo iweze kupimwa hadharani.",
-    "limitationsNote": "Hali ya kushindwa ambayo CCA inapima kwa njia ya kimuundo pia ina jina katika fasihi ya FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Msingi wa kihesabu uko kwenye ukurasa maalum wa <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>."
+    "limitationsNote": "Hali ya kushindwa ambayo CCA inapima kwa njia ya kimuundo pia ina jina katika fasihi ya FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Msingi wa kihesabu uko kwenye ukurasa maalum wa <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>.",
+    "proofClassesLabel": "Uthibitisho, katika makundi matano",
+    "classSafetyTitle": "Usalama",
+    "classSafetyBlurb": "Imejaribiwa kwa makosa ambayo maadili ya karatasi hukosa, katika lugha 29, kwa kila toleo.",
+    "classEngineeringTitle": "Uhandisi",
+    "classEngineeringBlurb": "Inafanya kazi katika uzalishaji, na kasi inapimwa, si kuahidiwa.",
+    "classTheoryTitle": "Nadharia",
+    "classTheoryBlurb": "Madai yameandikwa, yanaweza kusomwa na mtu yeyote, na yamejengwa ili yakanushwe.",
+    "classComplianceTitle": "Kufuata Kanuni",
+    "classComplianceBlurb": "Imepangwa dhidi ya mifumo minne ya utawala, sheria kwa sheria, pamoja na udhibiti unaothibitisha kila moja.",
+    "classTransparencyTitle": "Uwazi",
+    "classTransparencyBlurb": "Kila uamuzi ni rekodi wazi iliyotiwa saini ambayo unaweza kukagua mwenyewe.",
+    "safetyEyebrow": "Usalama",
+    "safetyH2": "Tunajaribu kwa madhara ambayo maadili ya karatasi hayawezi kukamata.",
+    "safetyBody": "Kabla ya kila toleo, CIRIS hufanya majaribio ya usalama wa afya ya akili katika lugha 29. Kila lugha ina seti ya majaribio magumu, mwongozo wa kupanga alama, na kanuni zinazoweza kukaguliwa na mashine. Kama jaribio linashindwa, toleo linazuiwa. Walinzi wawili zaidi wanafanya kazi ndani ya wakala mwenyewe: upitio wa dhamiri unaoweza kukataa au kuahirisha, na uelekezaji unaopeleka maswali yenye shaka kwa binadamu mwenye hekima.",
+    "safetyBatteryCta": "Betri ya usalama ya lugha 29",
+    "safetyRubricCta": "Jinsi kila jibu linavyopangwa alama",
+    "safetyConscienceCta": "Maelezo ya dhamiri",
+    "safetyDmaCta": "Maelezo ya kuahirisha kwa binadamu",
+    "safetySourceCta": "Soma chanzo cha injini",
+    "complianceEyebrow": "Kufuata Kanuni",
+    "complianceH2": "Imepangwa dhidi ya mifumo minne ya utawala, sheria kwa sheria.",
+    "complianceBody": "Tunapanga CIRIS dhidi ya mifumo minne ya umma ya utawala na tunaonyesha, kwa kila sheria, CIRIS inafanya nini na udhibiti unaothibitisha hilo. Ni grafu hai unayoweza kuvinjari, si slaidi.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "Vinjari grafu ya kufuata kanuni",
+    "theoryConstitutionCta": "Soma Katiba ya CIRIS"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Ukurasa wa hesabu",

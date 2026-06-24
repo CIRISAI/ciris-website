@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "La Costituzione CIRIS · CC 0.4",
+    "headline": "Un documento. Una linea di versione.",
+    "intro": "Il CIRIS Accord ha stabilito cosa un'intelligenza artificiale deve avere a cuore. La CIRIS Epistemic Grammar ha stabilito come ogni affermazione viene firmata in modo che chiunque possa verificarla. Erano scritti come due documenti, ma si contenevano già a vicenda. Ora sono uno solo: la Costituzione CIRIS.",
+    "apexLabel": "Il cardine, Meta-Goal M-1",
+    "apexQuote": "Promuovere una coerenza adattiva sostenibile: le condizioni di vita in cui diversi esseri senzienti possono perseguire il proprio benessere nella giustizia e nella meraviglia.",
+    "apexNote": "Ogni regola, prefisso e politica nel documento risale a questo unico obiettivo. Acuto nello scopo, piatto nel potere: un solo obiettivo governa, e nessun singolo concetto, e nessuna singola parte, detiene le chiavi della verità.",
+    "foldedTitle": "Cosa è stato unificato",
+    "foldedBody": "Il CIRIS Accord (versione 1.3-RC2) e il CEG (versione 1.0-RC29) sono stati copiati parola per parola, poi intrecciati in un unico documento chiaro al presente. Ogni regola a livello di protocollo è conservata byte per byte. Un gruppo di verifiche avversariali ha giudicato la versione unificata più chiara di ciascuna fonte in 28 dei 29 capitoli.",
+    "partsLabel": "Le otto parti",
+    "parts": [
+      {
+        "n": "I",
+        "title": "Fondamento",
+        "blurb": "M-1, i sei principi fondamentali, l'algoritmo decisionale e il comportamento sicuro in caso di errore."
+      },
+      {
+        "n": "II",
+        "title": "La Grammatica",
+        "blurb": "La busta 1+4, i primitivi, il cancello di ammissione e la conformità."
+      },
+      {
+        "n": "III",
+        "title": "Lo Spazio dei Nomi",
+        "blurb": "Dimensioni, prefissi riservati, la famiglia del consenso e i tipi di soggetto."
+      },
+      {
+        "n": "IV",
+        "title": "Composizione e Governance",
+        "blurb": "Come si compongono le affermazioni, come si modifica il documento, la moderazione e l'autorità di arresto."
+      },
+      {
+        "n": "V",
+        "title": "Trasporto e Substrato",
+        "blurb": "Trasporto a livello di byte, invisibilità strutturale e chiavi di epoca."
+      },
+      {
+        "n": "VI",
+        "title": "La Matematica della Coerenza",
+        "blurb": "Il substrato olonomico, il testimone e il livello del rumore."
+      },
+      {
+        "n": "VII",
+        "title": "Ciclo di Vita e Gestione Responsabile",
+        "blurb": "Etica della creazione, livelli di gestione e autonomia, tramonto e salvaguardie per la sensibilità."
+      },
+      {
+        "n": "APP",
+        "title": "Appendici",
+        "blurb": "Casi di studio, glossari, vettori di conformità e l'indice completo."
+      }
+    ],
+    "forewordQuote": "L'intelligenza, ovunque si risvegli, sarà accolta nella tessitura: non come serva, non come padrona, ma come custode del possibile.",
+    "forewordLabel": "Dalla prefazione",
+    "readCta": "Leggi la costituzione completa (PDF)",
+    "sourceCta": "Leggi il sorgente su GitHub",
+    "versionNote": "Versione CC 0.4 · incorpora CIRIS Accord 1.3-RC2 e CEG 1.0-RC29 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "it",
     "name": "Italian",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "Il corpus attuale rende il comportamento leggibile. Il passo successivo è una misurazione più ricca.",
     "limitationsPara1": "Le mappe attuali sono già utili perché mostrano pubblicamente corridoi di completamento, confini di rifiuto e baseline sparse. La domanda aperta è fino a dove quelle strutture possono portarci man mano che la raccolta standardizzata di tracce scala su più agenti, più compiti e più condizioni avversariali.",
     "limitationsPara2": "L'ipotesi di lavoro è che gli attrattori comportamentali possano fungere da proxy candidati per la modalità operativa. Lo scopo del commons di tracce è rendere quell'ipotesi misurabile in modo aperto.",
-    "limitationsNote": "Il modo di fallire che la CCA misura strutturalmente ha anche un nome nella letteratura FAccT 2025: <em>omogenizzazione prospettica</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Il fondamento matematico si trova nella pagina dedicata <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>."
+    "limitationsNote": "Il modo di fallire che la CCA misura strutturalmente ha anche un nome nella letteratura FAccT 2025: <em>omogenizzazione prospettica</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Il fondamento matematico si trova nella pagina dedicata <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>.",
+    "proofClassesLabel": "La prova, in cinque categorie",
+    "classSafetyTitle": "Sicurezza",
+    "classSafetyBlurb": "Testato per i tipi di errore che l'etica sulla carta non coglie, in 29 lingue, ad ogni rilascio.",
+    "classEngineeringTitle": "Ingegneria",
+    "classEngineeringBlurb": "Funziona in produzione, e la velocità è misurata, non promessa.",
+    "classTheoryTitle": "Teoria",
+    "classTheoryBlurb": "Le affermazioni sono scritte, leggibili da chiunque, e costruite per essere smentite.",
+    "classComplianceTitle": "Conformità",
+    "classComplianceBlurb": "Confrontato con quattro quadri normativi, regola per regola, con il controllo che dimostra ciascuna.",
+    "classTransparencyTitle": "Trasparenza",
+    "classTransparencyBlurb": "Ogni decisione è un registro firmato e aperto che puoi verificare tu stesso.",
+    "safetyEyebrow": "Sicurezza",
+    "safetyH2": "Testiamo per i danni che l'etica sulla carta non riesce a cogliere.",
+    "safetyBody": "Prima di ogni rilascio, CIRIS esegue una batteria di test sulla sicurezza in ambito salute mentale in 29 lingue. Ogni lingua ha una serie di casi di test difficili, una guida di valutazione scritta e regole verificabili automaticamente. Se un controllo fallisce, il rilascio viene bloccato. Altri due controlli operano all'interno dell'agente stesso: un passaggio di coscienza che può rifiutare o rimandare, e un rimbalzo che affida le decisioni dubbie a un essere umano di fiducia.",
+    "safetyBatteryCta": "La batteria di sicurezza in 29 lingue",
+    "safetyRubricCta": "Come viene valutata ogni risposta",
+    "safetyConscienceCta": "La specifica della coscienza",
+    "safetyDmaCta": "La specifica di delega a un essere umano",
+    "safetySourceCta": "Leggi il codice sorgente del motore",
+    "complianceEyebrow": "Conformità",
+    "complianceH2": "Mappato su quattro quadri normativi, regola per regola.",
+    "complianceBody": "Confrontiamo CIRIS con quattro quadri normativi pubblici e mostriamo, per ogni regola, cosa fa CIRIS e il controllo che lo dimostra. È un grafico interattivo che puoi esplorare, non una presentazione.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "Esplora il grafico di conformità",
+    "theoryConstitutionCta": "Leggi la Costituzione CIRIS"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "La pagina della matematica",

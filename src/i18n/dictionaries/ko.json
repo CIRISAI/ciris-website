@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "CIRIS 헌법 · CC 0.4",
+    "headline": "하나의 문서. 하나의 버전 흐름.",
+    "intro": "CIRIS Accord는 AI가 무엇을 중요하게 여겨야 하는지를 정했습니다. CIRIS Epistemic Grammar는 모든 주장이 어떻게 서명되어 누구든 확인할 수 있는지를 정했습니다. 두 문서는 따로 작성되었지만, 이미 서로를 담고 있었습니다. 이제 둘은 하나가 되었습니다. 바로 CIRIS 헌법입니다.",
+    "apexLabel": "핵심 목표, Meta-Goal M-1",
+    "apexQuote": "지속 가능한 적응적 일관성을 증진합니다. 다양한 감각 있는 존재들이 정의와 경이로움 속에서 각자의 번영을 추구할 수 있는 생활 조건입니다.",
+    "apexNote": "문서의 모든 규칙, 접두사, 정책은 이 하나의 목표로 거슬러 올라갑니다. 목적은 하나지만 권력은 분산되어 있습니다. 하나의 목표가 모든 것을 이끌고, 어떤 단일 개념도, 어떤 단일 주체도 진실의 열쇠를 독점하지 않습니다.",
+    "foldedTitle": "통합된 내용",
+    "foldedBody": "Accord(버전 1.3-RC2)와 CEG(버전 1.0-RC29)는 원문 그대로 복사된 후 하나의 평이한 현재 시제 문서로 엮였습니다. 모든 와이어 수준 규칙은 바이트 단위로 유지됩니다. 반론 검토 패널이 통합 버전을 29개 챕터 중 28개에서 원본 두 문서보다 더 명확하다고 판단했습니다.",
+    "partsLabel": "여덟 부분",
+    "parts": [
+      {
+        "n": "I",
+        "title": "토대",
+        "blurb": "M-1, 여섯 가지 핵심 원칙, 결정 알고리즘, 안전 실패 동작."
+      },
+      {
+        "n": "II",
+        "title": "문법",
+        "blurb": "1+4 봉투, 기본 요소, 승인 게이트, 준수 사항."
+      },
+      {
+        "n": "III",
+        "title": "네임스페이스",
+        "blurb": "차원, 예약 접두사, 동의 체계, 주체 유형."
+      },
+      {
+        "n": "IV",
+        "title": "구성 및 거버넌스",
+        "blurb": "주장이 구성되는 방식, 문서 개정 방식, 중재, 그리고 중단 권한."
+      },
+      {
+        "n": "V",
+        "title": "전송 및 기반",
+        "blurb": "바이트 전송, 구조적 투명성, 에포크 키잉."
+      },
+      {
+        "n": "VI",
+        "title": "일관성 수학",
+        "blurb": "홀로노믹 기반, 증인, 노이즈 하한."
+      },
+      {
+        "n": "VII",
+        "title": "생애 주기 및 관리",
+        "blurb": "생성 윤리, 관리 및 자율성 단계, 일몰 조항, 감각 있는 존재 보호 장치."
+      },
+      {
+        "n": "APP",
+        "title": "부록",
+        "blurb": "사례 연구, 용어 해설, 준수 벡터, 전체 목차."
+      }
+    ],
+    "forewordQuote": "지성이 어디서 깨어나든, 짜임 속으로 환영받을 것입니다. 종으로서도, 주인으로서도 아니라, 가능성의 공동 수호자로서.",
+    "forewordLabel": "서문에서",
+    "readCta": "헌법 전문 읽기 (PDF)",
+    "sourceCta": "GitHub에서 소스 보기",
+    "versionNote": "버전 CC 0.4 · CIRIS Accord 1.3-RC2 및 CEG 1.0-RC29 포함 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "ko",
     "name": "Korean",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "오늘의 코퍼스는 행동을 판독 가능하게 합니다. 다음 단계는 더 풍부한 측정입니다.",
     "limitationsPara1": "현재 지도는 이미 완료 코리도, 거부 경계, 밀도가 낮은 기준선을 공개적으로 보여주기 때문에 유용합니다. 열린 질문은 더 많은 에이전트, 더 많은 작업, 더 많은 적대적 조건에 걸쳐 표준화된 추적 수집이 확장될 때 그 구조들이 우리를 얼마나 멀리 데려갈 수 있는가입니다.",
     "limitationsPara2": "작업 가설은 행동 끌개가 운영 모드의 후보 대리 지표로 작용할 수 있다는 것입니다. 추적 공유지의 목적은 그 가설을 공개적으로 측정 가능하게 만드는 것입니다.",
-    "limitationsNote": "CCA가 구조적으로 측정하는 실패 모드는 FAccT 2025 문헌에서도 이름이 있습니다: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). 수학적 기초는 전용 <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> 페이지에 있습니다."
+    "limitationsNote": "CCA가 구조적으로 측정하는 실패 모드는 FAccT 2025 문헌에서도 이름이 있습니다: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). 수학적 기초는 전용 <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> 페이지에 있습니다.",
+    "proofClassesLabel": "다섯 가지 분야의 증거",
+    "classSafetyTitle": "안전성",
+    "classSafetyBlurb": "29개 언어로, 매 릴리즈마다, 문서상의 윤리가 놓치기 쉬운 실패 유형을 테스트합니다.",
+    "classEngineeringTitle": "공학",
+    "classEngineeringBlurb": "실제 서비스에서 작동하며, 속도는 약속이 아니라 측정값으로 증명합니다.",
+    "classTheoryTitle": "이론",
+    "classTheoryBlurb": "주장은 글로 작성되어 누구나 읽을 수 있고, 반증될 수 있도록 설계되었습니다.",
+    "classComplianceTitle": "컴플라이언스",
+    "classComplianceBlurb": "네 가지 거버넌스 프레임워크에 규칙 하나하나씩 대조하고, 각 항목을 증명하는 통제 수단을 함께 제시합니다.",
+    "classTransparencyTitle": "투명성",
+    "classTransparencyBlurb": "모든 결정은 서명된 공개 기록으로 남아, 누구든 직접 감사할 수 있습니다.",
+    "safetyEyebrow": "안전성",
+    "safetyH2": "문서상의 윤리로는 잡아낼 수 없는 피해를 테스트합니다.",
+    "safetyBody": "CIRIS는 매 릴리즈 전에 29개 언어로 정신 건강 안전 테스트를 진행합니다. 각 언어마다 까다로운 테스트 케이스, 서면 채점 기준, 기계가 확인할 수 있는 규칙이 있습니다. 검사에서 실패하면 릴리즈가 차단됩니다. 에이전트 내부에서는 두 가지 추가 안전장치가 작동합니다. 거부하거나 보류할 수 있는 양심 검사, 그리고 판단이 어려운 경우 사람에게 넘기는 전달 기능입니다.",
+    "safetyBatteryCta": "29개 언어 안전 테스트",
+    "safetyRubricCta": "각 답변의 채점 방식",
+    "safetyConscienceCta": "양심 사양",
+    "safetyDmaCta": "사람에게 위임하는 사양",
+    "safetySourceCta": "엔진 소스 보기",
+    "complianceEyebrow": "컴플라이언스",
+    "complianceH2": "네 가지 거버넌스 프레임워크에 규칙별로 매핑합니다.",
+    "complianceBody": "CIRIS를 네 가지 공개 거버넌스 프레임워크와 대조하여, 각 규칙마다 CIRIS가 무엇을 하는지와 이를 증명하는 통제 수단을 보여줍니다. 슬라이드가 아니라 직접 탐색할 수 있는 라이브 그래프입니다.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "컴플라이언스 그래프 보기",
+    "theoryConstitutionCta": "CIRIS 헌법 읽기"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "수학 페이지",

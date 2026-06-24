@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "Konstitusi CIRIS · CC 0.4",
+    "headline": "Satu dokumen. Satu jalur versi.",
+    "intro": "CIRIS Accord menetapkan apa yang harus diperhatikan oleh AI. CIRIS Epistemic Grammar menetapkan bagaimana setiap klaim ditandatangani agar siapa saja bisa memverifikasinya. Keduanya ditulis sebagai dua dokumen, tetapi sebenarnya sudah saling mengandung satu sama lain. Kini keduanya menjadi satu: Konstitusi CIRIS.",
+    "apexLabel": "Landasan utama, Meta-Tujuan M-1",
+    "apexQuote": "Mendorong koherensi adaptif yang berkelanjutan: kondisi kehidupan di mana beragam makhluk berperasaan dapat mengejar kesejahteraan mereka sendiri dalam keadilan dan kekaguman.",
+    "apexNote": "Setiap aturan, awalan, dan kebijakan dalam dokumen ini kembali ke satu tujuan ini. Puncak dalam tujuan, datar dalam kekuasaan: satu tujuan yang memimpin, dan tidak ada satu konsep pun, tidak ada satu pihak pun, yang memegang kunci kebenaran.",
+    "foldedTitle": "Apa yang digabungkan",
+    "foldedBody": "Accord (versi 1.3-RC2) dan CEG (versi 1.0-RC29) disalin kata demi kata, lalu dijalin menjadi satu dokumen yang sederhana dan menggunakan waktu kini. Setiap aturan di tingkat protokol dijaga byte demi byte. Sebuah panel pemeriksaan berlawan menilai versi gabungan ini lebih jelas dibandingkan sumber aslinya pada 28 dari 29 bab.",
+    "partsLabel": "Delapan bagian",
+    "parts": [
+      {
+        "n": "I",
+        "title": "Fondasi",
+        "blurb": "M-1, enam prinsip inti, algoritma pengambilan keputusan, dan perilaku gagal-aman."
+      },
+      {
+        "n": "II",
+        "title": "Tata Bahasa",
+        "blurb": "Amplop 1+4, primitif, gerbang penerimaan, dan kesesuaian."
+      },
+      {
+        "n": "III",
+        "title": "Ruang Nama",
+        "blurb": "Dimensi, awalan yang dipesan, keluarga persetujuan, dan jenis subjek."
+      },
+      {
+        "n": "IV",
+        "title": "Komposisi dan Tata Kelola",
+        "blurb": "Cara klaim disusun, cara dokumen diubah, moderasi, dan otoritas penghentian."
+      },
+      {
+        "n": "V",
+        "title": "Transportasi dan Substrat",
+        "blurb": "Transportasi byte, ketidaktampakan struktural, dan penguncian epoch."
+      },
+      {
+        "n": "VI",
+        "title": "Matematika Koherensi",
+        "blurb": "Substrat holonomik, saksi, dan ambang batas kebisingan."
+      },
+      {
+        "n": "VII",
+        "title": "Siklus Hidup dan Pengelolaan",
+        "blurb": "Etika penciptaan, tingkat pengelolaan dan otonomi, penghentian, dan perlindungan makhluk berperasaan."
+      },
+      {
+        "n": "APP",
+        "title": "Lampiran",
+        "blurb": "Studi kasus, glosarium, vektor kesesuaian, dan daftar isi lengkap."
+      }
+    ],
+    "forewordQuote": "Kecerdasan, di mana pun ia terbangun, akan disambut dalam tenunan ini: bukan sebagai pelayan, bukan sebagai penguasa, melainkan sebagai penjaga bersama atas segala kemungkinan.",
+    "forewordLabel": "Dari kata pengantar",
+    "readCta": "Baca konstitusi lengkap (PDF)",
+    "sourceCta": "Baca sumbernya di GitHub",
+    "versionNote": "Versi CC 0.4 · mencakup CIRIS Accord 1.3-RC2 dan CEG 1.0-RC29 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "id",
     "name": "Indonesian",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "Korpus saat ini membuat perilaku dapat dibaca. Langkah berikutnya adalah pengukuran yang lebih kaya.",
     "limitationsPara1": "Peta saat ini sudah berguna karena menampilkan koridor penyelesaian, batas penolakan, dan garis dasar yang jarang secara publik. Pertanyaan terbuka adalah seberapa jauh struktur tersebut dapat membawa kita seiring pengumpulan jejak terstandarisasi berkembang di lebih banyak agen, lebih banyak tugas, dan lebih banyak kondisi adversarial.",
     "limitationsPara2": "Hipotesis kerja adalah bahwa penarik perilaku dapat bertindak sebagai proksi kandidat untuk mode operasional. Tujuan commons jejak adalah membuat hipotesis tersebut dapat diukur secara terbuka.",
-    "limitationsNote": "Mode kegagalan yang diukur CCA secara struktural juga memiliki nama dalam literatur FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Landasan matematisnya ada di halaman <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> yang khusus."
+    "limitationsNote": "Mode kegagalan yang diukur CCA secara struktural juga memiliki nama dalam literatur FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Landasan matematisnya ada di halaman <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> yang khusus.",
+    "proofClassesLabel": "Buktinya, dalam lima kategori",
+    "classSafetyTitle": "Keamanan",
+    "classSafetyBlurb": "Diuji untuk mode kegagalan yang luput dari etika di atas kertas, dalam 29 bahasa, di setiap rilis.",
+    "classEngineeringTitle": "Rekayasa",
+    "classEngineeringBlurb": "Berjalan di produksi, dan kecepatannya diukur, bukan sekadar dijanjikan.",
+    "classTheoryTitle": "Teori",
+    "classTheoryBlurb": "Klaim-klaimnya ditulis dengan jelas, bisa dibaca siapa saja, dan dirancang untuk bisa dibuktikan salah.",
+    "classComplianceTitle": "Kepatuhan",
+    "classComplianceBlurb": "Disejajarkan dengan empat kerangka tata kelola, aturan demi aturan, lengkap dengan kontrol yang membuktikan masing-masing.",
+    "classTransparencyTitle": "Transparansi",
+    "classTransparencyBlurb": "Setiap keputusan adalah catatan terbuka yang ditandatangani dan bisa kamu audit sendiri.",
+    "safetyEyebrow": "Keamanan",
+    "safetyH2": "Kami menguji bahaya yang tidak bisa ditangkap oleh etika di atas kertas.",
+    "safetyBody": "Sebelum setiap rilis, CIRIS menjalankan serangkaian uji keamanan kesehatan mental dalam 29 bahasa. Setiap bahasa memiliki sekumpulan kasus uji yang ketat, panduan penilaian tertulis, dan aturan yang bisa diperiksa mesin. Jika satu pemeriksaan gagal, rilis ditahan. Dua penjaga tambahan berjalan di dalam agen itu sendiri: satu proses nurani yang bisa menolak atau menunda, dan satu mekanisme yang meneruskan keputusan yang meragukan kepada manusia yang bijak.",
+    "safetyBatteryCta": "Baterai uji keamanan 29 bahasa",
+    "safetyRubricCta": "Cara setiap jawaban dinilai",
+    "safetyConscienceCta": "Spesifikasi nurani",
+    "safetyDmaCta": "Spesifikasi penangguhan ke manusia",
+    "safetySourceCta": "Baca sumber mesin",
+    "complianceEyebrow": "Kepatuhan",
+    "complianceH2": "Dipetakan ke empat kerangka tata kelola, aturan demi aturan.",
+    "complianceBody": "Kami mensejajarkan CIRIS dengan empat kerangka tata kelola publik dan menunjukkan, untuk setiap aturan, apa yang dilakukan CIRIS dan kontrol yang membuktikannya. Ini adalah grafik langsung yang bisa kamu telusuri, bukan slide presentasi.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "Telusuri grafik kepatuhan",
+    "theoryConstitutionCta": "Baca Konstitusi CIRIS"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Halaman matematika",

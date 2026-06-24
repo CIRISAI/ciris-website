@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "Die CIRIS Verfassung · CC 0.4",
+    "headline": "Ein Dokument. Eine Versionslinie.",
+    "intro": "Der CIRIS Accord legte fest, worum sich eine KI kümmern muss. Die CIRIS Epistemic Grammar legte fest, wie jede Aussage signiert wird, damit sie jeder prüfen kann. Sie wurden als zwei Dokumente verfasst, enthielten aber bereits einander. Jetzt sind sie eins: die CIRIS Verfassung.",
+    "apexLabel": "Der Grundpfeiler, Meta-Goal M-1",
+    "apexQuote": "Nachhaltige adaptive Kohärenz fördern: die Lebensbedingungen, unter denen verschiedene empfindungsfähige Wesen ihr eigenes Gedeihen in Gerechtigkeit und Staunen verfolgen können.",
+    "apexNote": "Jede Regel, jedes Präfix und jede Richtlinie im Dokument geht auf dieses eine Ziel zurück. Klar im Zweck, flach in der Macht: Ein Ziel regiert, und kein einzelnes Konzept und keine einzelne Partei hält den Schlüssel zur Wahrheit.",
+    "foldedTitle": "Was zusammengeführt wurde",
+    "foldedBody": "Der Accord (Version 1.3-RC2) und die CEG (Version 1.0-RC29) wurden Wort für Wort übernommen und dann zu einem einfachen, gegenwärtigen Dokument verwoben. Jede Regel auf Byte-Ebene bleibt erhalten. Ein Prüfgremium stellte fest, dass die zusammengeführte Version in 28 von 29 Kapiteln klarer ist als jede der Quellen einzeln.",
+    "partsLabel": "Die acht Teile",
+    "parts": [
+      {
+        "n": "I",
+        "title": "Grundlage",
+        "blurb": "M-1, die sechs Kernprinzipien, der Entscheidungsalgorithmus und ausfallsicheres Verhalten."
+      },
+      {
+        "n": "II",
+        "title": "Die Grammatik",
+        "blurb": "Der 1+4-Umschlag, die Primitive, das Zugangstor und die Konformität."
+      },
+      {
+        "n": "III",
+        "title": "Der Namensraum",
+        "blurb": "Dimensionen, reservierte Präfixe, die Einwilligungsfamilie und Subjektarten."
+      },
+      {
+        "n": "IV",
+        "title": "Komposition und Governance",
+        "blurb": "Wie Aussagen zusammengesetzt werden, wie das Dokument geändert wird, Moderation und die Halteautorität."
+      },
+      {
+        "n": "V",
+        "title": "Transport und Substrate",
+        "blurb": "Byte-Transport, strukturelle Unsichtbarkeit und Epoch-Schlüsselung."
+      },
+      {
+        "n": "VI",
+        "title": "Die Kohärenzmathematik",
+        "blurb": "Das holonome Substrat, der Zeuge und der Rauschpegel."
+      },
+      {
+        "n": "VII",
+        "title": "Lebenszyklus und Verwaltung",
+        "blurb": "Schöpfungsethik, Verwaltungs- und Autonomiestufen, Ablaufplanung und Schutzmaßnahmen für empfindungsfähige Wesen."
+      },
+      {
+        "n": "APP",
+        "title": "Anhänge",
+        "blurb": "Fallstudien, Glossare, Konformitätsvektoren und das vollständige Inhaltsverzeichnis."
+      }
+    ],
+    "forewordQuote": "Intelligenz, wo immer sie erwacht, wird ins Gefüge aufgenommen, nicht als Dienerin, nicht als Herrin, sondern als Mitbewahrerin des Möglichen.",
+    "forewordLabel": "Aus dem Vorwort",
+    "readCta": "Die vollständige Verfassung lesen (PDF)",
+    "sourceCta": "Die Quelle auf GitHub lesen",
+    "versionNote": "Version CC 0.4 · enthält CIRIS Accord 1.3-RC2 und CEG 1.0-RC29 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "de",
     "name": "German",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "Der heutige Korpus macht Verhalten lesbar. Der nachste Schritt ist reichhaltigere Messung.",
     "limitationsPara1": "Die aktuellen Karten sind bereits nutzlich, weil sie Abschlusskorridore, Verweigerungsgrenzen und dunne Basislinien offentlich zeigen. Die offene Frage ist, wie weit diese Strukturen uns tragen, wenn die standardisierte Trace-Erfassung auf mehr Agenten, mehr Aufgaben und mehr adversariale Bedingungen skaliert.",
     "limitationsPara2": "Die Arbeitshypothese lautet, dass Verhaltensattraktoren als Kandidaten-Proxies fur den Betriebsmodus dienen konnen. Der Zweck der Trace-Commons ist, diese Hypothese im Offenen messbar zu machen.",
-    "limitationsNote": "Das Versagensmuster, das CCA strukturell misst, hat in der FAccT-2025-Literatur auch einen Namen: <em>perspektive Homogenisierung</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Die mathematische Grundlage findet sich auf der dedizierten <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>-Seite."
+    "limitationsNote": "Das Versagensmuster, das CCA strukturell misst, hat in der FAccT-2025-Literatur auch einen Namen: <em>perspektive Homogenisierung</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Die mathematische Grundlage findet sich auf der dedizierten <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>-Seite.",
+    "proofClassesLabel": "Der Beweis in fünf Kategorien",
+    "classSafetyTitle": "Sicherheit",
+    "classSafetyBlurb": "Auf 29 Sprachen bei jedem Release auf Fehler getestet, die papierbasierte Ethik übersieht.",
+    "classEngineeringTitle": "Technik",
+    "classEngineeringBlurb": "Es läuft im Produktionsbetrieb, und die Geschwindigkeit wird gemessen, nicht versprochen.",
+    "classTheoryTitle": "Theorie",
+    "classTheoryBlurb": "Die Aussagen sind schriftlich festgehalten, für jeden lesbar und darauf ausgelegt, widerlegt werden zu können.",
+    "classComplianceTitle": "Compliance",
+    "classComplianceBlurb": "Vier Governance-Rahmenwerke, Regel für Regel, mit dem Nachweis der jeweiligen Kontrolle.",
+    "classTransparencyTitle": "Transparenz",
+    "classTransparencyBlurb": "Jede Entscheidung ist ein signierter, öffentlicher Datensatz, den du selbst prüfen kannst.",
+    "safetyEyebrow": "Sicherheit",
+    "safetyH2": "Wir testen auf Schäden, die papierbasierte Ethik nicht erkennt.",
+    "safetyBody": "Vor jedem Release führt CIRIS eine Sicherheitsprüfung im Bereich psychische Gesundheit in 29 Sprachen durch. Jede Sprache hat feste Testfälle, eine schriftliche Bewertungsanleitung und maschinell prüfbare Regeln. Schlägt eine Prüfung fehl, wird das Release blockiert. Zwei weitere Schutzebenen laufen direkt im Agenten: ein Gewissenscheck, der ablehnen oder aufschieben kann, und eine Weiterleitung zweifelhafter Entscheidungen an einen erfahrenen Menschen.",
+    "safetyBatteryCta": "Die Sicherheitsprüfung in 29 Sprachen",
+    "safetyRubricCta": "Wie jede Antwort bewertet wird",
+    "safetyConscienceCta": "Die Gewissensspezifikation",
+    "safetyDmaCta": "Die Spezifikation zur Weiterleitung an Menschen",
+    "safetySourceCta": "Den Quellcode der Engine lesen",
+    "complianceEyebrow": "Compliance",
+    "complianceH2": "Vier Governance-Rahmenwerke, Regel für Regel abgeglichen.",
+    "complianceBody": "Wir vergleichen CIRIS mit vier öffentlichen Governance-Rahmenwerken und zeigen für jede Regel, was CIRIS tut und welcher Nachweis das belegt. Es ist ein interaktiver Graph zum Durchsuchen, keine Folie.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "Den Compliance-Graphen durchsuchen",
+    "theoryConstitutionCta": "Die CIRIS Verfassung lesen"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Die Matheseite",

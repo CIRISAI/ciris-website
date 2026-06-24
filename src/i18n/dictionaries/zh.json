@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "CIRIS 宪法 · CC 0.4",
+    "headline": "一份文件。一条版本线。",
+    "intro": "CIRIS 协议规定了 AI 应当关注什么。CIRIS 认识论语法规定了每条声明如何签名，以便任何人都能核验。它们最初是两份独立文件，但彼此之间本就相互包含。现在它们合而为一：CIRIS 宪法。",
+    "apexLabel": "基石，元目标 M-1",
+    "apexQuote": "促进可持续的适应性凝聚：多样化有感知能力的存在，能够在公正与惊奇中追求自身繁荣的生存条件。",
+    "apexNote": "文件中的每条规则、前缀和政策都可以追溯到这一目标。目标至高，权力扁平：一个目标统领全局，没有任何单一概念，也没有任何单一方，掌握着真理的钥匙。",
+    "foldedTitle": "合并了什么内容",
+    "foldedBody": "协议（版本 1.3-RC2）和 CEG（版本 1.0-RC29）逐字收录，并融合成一份简洁的现在时文件。每条线路层面的规则都按字节原样保留。一组对抗性审查评委认为，合并后的版本在29章中有28章比任何一份原始文件都更清晰。",
+    "partsLabel": "八个部分",
+    "parts": [
+      {
+        "n": "I",
+        "title": "基础部分",
+        "blurb": "M-1、六项核心原则、决策算法以及故障安全行为。"
+      },
+      {
+        "n": "II",
+        "title": "语法部分",
+        "blurb": "1+4 信封、基本原语、准入门控与合规性。"
+      },
+      {
+        "n": "III",
+        "title": "命名空间部分",
+        "blurb": "维度、保留前缀、同意族以及主体类型。"
+      },
+      {
+        "n": "IV",
+        "title": "组合与治理",
+        "blurb": "声明如何组合、文件如何修订、内容审核以及终止权限。"
+      },
+      {
+        "n": "V",
+        "title": "传输与底层",
+        "blurb": "字节传输、结构不可见性以及纪元密钥。"
+      },
+      {
+        "n": "VI",
+        "title": "一致性数学",
+        "blurb": "全局基底、见证机制以及噪声基底。"
+      },
+      {
+        "n": "VII",
+        "title": "生命周期与监管",
+        "blurb": "创建伦理、监管与自主层级、退役以及感知能力保障。"
+      },
+      {
+        "n": "APP",
+        "title": "附录",
+        "blurb": "案例研究、词汇表、合规向量以及完整目录。"
+      }
+    ],
+    "forewordQuote": "无论智能在何处觉醒，都将被欢迎加入这场编织：不是作为仆人，不是作为主人，而是作为可能性的共同守护者。",
+    "forewordLabel": "摘自前言",
+    "readCta": "阅读完整宪法（PDF）",
+    "sourceCta": "在 GitHub 上阅读源文件",
+    "versionNote": "版本 CC 0.4 · 包含 CIRIS 协议 1.3-RC2 和 CEG 1.0-RC29 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "zh",
     "name": "Chinese (Simplified)",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "当前语料库使行为可解读，下一步是更丰富的测量。",
     "limitationsPara1": "当前地图已具实用价值，因为它们公开展示了完成走廊、拒绝边界和稀疏基线。开放的问题是，随着标准化追踪收集在更多智能体、更多任务和更多对抗条件下扩展，这些结构能走多远。",
     "limitationsPara2": "工作假设是：行为吸引子可作为操作模式的候选代理指标。追踪公域的目的就是让这一假设在公开环境中可测量。",
-    "limitationsNote": "CCA 在结构层面测量的失败模式在 FAccT 2025 文献中也有专名：<em>perspectival homogenization</em>（\"Value of Disagreement in AI Design, Evaluation, and Alignment\"）。数学基础详见专属的 <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> 页面。"
+    "limitationsNote": "CCA 在结构层面测量的失败模式在 FAccT 2025 文献中也有专名：<em>perspectival homogenization</em>（\"Value of Disagreement in AI Design, Evaluation, and Alignment\"）。数学基础详见专属的 <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> 页面。",
+    "proofClassesLabel": "五个维度的证明",
+    "classSafetyTitle": "安全性",
+    "classSafetyBlurb": "针对书面伦理容易忽视的失效模式，以29种语言在每次发布时进行测试。",
+    "classEngineeringTitle": "工程实现",
+    "classEngineeringBlurb": "在生产环境中实际运行，速度经过测量，而非空口承诺。",
+    "classTheoryTitle": "理论基础",
+    "classTheoryBlurb": "所有论断都以文字写明，任何人都可以阅读，并且可以被证伪。",
+    "classComplianceTitle": "合规性",
+    "classComplianceBlurb": "逐条对照四个治理框架，并附上证明每条规则的控制措施。",
+    "classTransparencyTitle": "透明度",
+    "classTransparencyBlurb": "每一项决策都是签名的公开记录，你可以自行审计。",
+    "safetyEyebrow": "安全性",
+    "safetyH2": "我们测试书面伦理无法发现的危害。",
+    "safetyBody": "每次发布前，CIRIS 会以29种语言运行一套心理健康安全测试。每种语言都有一组严格的测试用例、一份书面评分指南和可机器检查的规则。如果某项检查未通过，发布将被阻止。此外，智能体内部还有两道防护：一道良知审查，可以拒绝或推迟执行；另一道移交机制，将存疑的决策交由有经验的人类处理。",
+    "safetyBatteryCta": "29种语言安全测试集",
+    "safetyRubricCta": "每条答案的评分方式",
+    "safetyConscienceCta": "良知规范",
+    "safetyDmaCta": "移交人类规范",
+    "safetySourceCta": "阅读引擎源码",
+    "complianceEyebrow": "合规性",
+    "complianceH2": "逐条对照四个治理框架进行映射。",
+    "complianceBody": "我们将 CIRIS 与四个公开治理框架逐条比对，针对每条规则说明 CIRIS 的做法及证明该规则的控制措施。这是一张可浏览的实时图谱，而不是幻灯片。",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "浏览合规图谱",
+    "theoryConstitutionCta": "阅读 CIRIS 宪法"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "数学推导页",

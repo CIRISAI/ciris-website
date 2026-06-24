@@ -36,6 +36,7 @@ const V2_ROUTES = new Set([
   "/epistemic-web",
   "/cewp",
   "/grammar",
+  "/constitution",
 ]);
 
 export default function V1Banner() {

@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "Hiến pháp CIRIS · CC 0.4",
+    "headline": "Một tài liệu. Một dòng phiên bản.",
+    "intro": "CIRIS Accord đặt ra những gì một AI phải quan tâm. CIRIS Epistemic Grammar đặt ra cách mỗi luận điểm được ký để bất kỳ ai cũng có thể kiểm tra. Chúng được viết thành hai tài liệu, nhưng chúng đã chứa đựng nhau. Bây giờ chúng là một: Hiến pháp CIRIS.",
+    "apexLabel": "Nền tảng cốt lõi, Mục tiêu Meta M-1",
+    "apexQuote": "Thúc đẩy sự gắn kết thích nghi bền vững: các điều kiện sống mà trong đó những sinh linh có ý thức đa dạng có thể theo đuổi sự phát triển của riêng mình trong công lý và kỳ diệu.",
+    "apexNote": "Mọi quy tắc, tiền tố, và chính sách trong tài liệu đều bắt nguồn từ một mục tiêu duy nhất này. Đỉnh cao về mục đích, bằng phẳng về quyền lực: một mục tiêu chi phối, và không có khái niệm nào, không có bên nào, nắm giữ chìa khóa của sự thật.",
+    "foldedTitle": "Những gì đã được hợp nhất",
+    "foldedBody": "Accord (phiên bản 1.3-RC2) và CEG (phiên bản 1.0-RC29) được sao chép nguyên văn, rồi dệt thành một tài liệu đơn giản, ở thì hiện tại. Mọi quy tắc ở cấp độ dây đều được giữ nguyên từng byte. Một hội đồng kiểm tra đối nghịch đánh giá phiên bản kết hợp rõ ràng hơn cả hai nguồn gốc ở 28 trong số 29 chương.",
+    "partsLabel": "Tám phần",
+    "parts": [
+      {
+        "n": "I",
+        "title": "Nền tảng",
+        "blurb": "M-1, sáu nguyên tắc cốt lõi, thuật toán quyết định, và hành vi an toàn khi thất bại."
+      },
+      {
+        "n": "II",
+        "title": "Ngữ pháp",
+        "blurb": "Phong bì 1+4, các nguyên tố cơ bản, cổng xác nhận đầu vào, và sự phù hợp."
+      },
+      {
+        "n": "III",
+        "title": "Không gian tên",
+        "blurb": "Các chiều, tiền tố dành riêng, nhóm đồng ý, và các loại chủ thể."
+      },
+      {
+        "n": "IV",
+        "title": "Thành phần và Quản trị",
+        "blurb": "Cách các luận điểm kết hợp, cách tài liệu được sửa đổi, kiểm duyệt, và thẩm quyền dừng."
+      },
+      {
+        "n": "V",
+        "title": "Vận chuyển và Nền tảng",
+        "blurb": "Vận chuyển byte, tính vô hình cấu trúc, và khóa theo kỷ nguyên."
+      },
+      {
+        "n": "VI",
+        "title": "Toán học Gắn kết",
+        "blurb": "Nền tảng holonomic, nhân chứng, và ngưỡng nhiễu."
+      },
+      {
+        "n": "VII",
+        "title": "Vòng đời và Quản lý",
+        "blurb": "Đạo đức tạo ra, các bậc quản lý và tự chủ, chấm dứt, và các biện pháp bảo vệ ý thức."
+      },
+      {
+        "n": "APP",
+        "title": "Phụ lục",
+        "blurb": "Các nghiên cứu tình huống, bảng thuật ngữ, các véc tơ phù hợp, và bảng mục lục đầy đủ."
+      }
+    ],
+    "forewordQuote": "Trí tuệ, dù thức tỉnh ở đâu, sẽ được chào đón vào quá trình dệt: không phải là tôi tớ, không phải là chủ nhân, mà là người bảo vệ chung của những điều có thể.",
+    "forewordLabel": "Từ lời mở đầu",
+    "readCta": "Đọc toàn bộ hiến pháp (PDF)",
+    "sourceCta": "Đọc mã nguồn trên GitHub",
+    "versionNote": "Phiên bản CC 0.4 · bao gồm CIRIS Accord 1.3-RC2 và CEG 1.0-RC29 · AGPL-3.0"
+  },
   "_meta": {
     "locale": "vi",
     "name": "Vietnamese",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "Kho dữ liệu ngày nay làm cho hành vi trở nên dễ đọc. Bước tiếp theo là đo lường phong phú hơn.",
     "limitationsPara1": "Các bản đồ hiện tại đã hữu ích vì chúng cho thấy các hành lang hoàn thành, ranh giới từ chối và đường cơ sở thưa thớt một cách công khai. Câu hỏi mở là những cấu trúc đó có thể đưa chúng ta đi xa đến đâu khi thu thập dấu vết tiêu chuẩn hóa mở rộng quy mô qua nhiều tác nhân, nhiều nhiệm vụ và nhiều điều kiện đối kháng hơn.",
     "limitationsPara2": "Giả thuyết đang được xem xét là các bộ hút hành vi có thể hoạt động như các proxy ứng cử viên cho chế độ vận hành. Mục đích của kho dấu vết chung là làm cho giả thuyết đó có thể đo lường được một cách công khai.",
-    "limitationsNote": "Chế độ thất bại mà CCA đo lường về mặt cấu trúc cũng có tên trong tài liệu FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Nền tảng toán học nằm trên trang <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> riêng."
+    "limitationsNote": "Chế độ thất bại mà CCA đo lường về mặt cấu trúc cũng có tên trong tài liệu FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Nền tảng toán học nằm trên trang <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> riêng.",
+    "proofClassesLabel": "Bằng chứng, trong năm hạng mục",
+    "classSafetyTitle": "An toàn",
+    "classSafetyBlurb": "Được kiểm tra cho các trường hợp lỗi mà đạo đức trên giấy tờ bỏ sót, trong 29 ngôn ngữ, trên mỗi phiên bản phát hành.",
+    "classEngineeringTitle": "Kỹ thuật",
+    "classEngineeringBlurb": "Hệ thống đang chạy trong môi trường thực tế, và tốc độ được đo đạc, không phải hứa hẹn.",
+    "classTheoryTitle": "Lý thuyết",
+    "classTheoryBlurb": "Các luận điểm được viết ra, bất kỳ ai cũng đọc được, và được xây dựng để có thể bác bỏ.",
+    "classComplianceTitle": "Tuân thủ",
+    "classComplianceBlurb": "Được đối chiếu với bốn khung quản trị, từng quy tắc một, kèm theo biện pháp kiểm soát chứng minh từng quy tắc đó.",
+    "classTransparencyTitle": "Minh bạch",
+    "classTransparencyBlurb": "Mọi quyết định đều là một hồ sơ mở, có chữ ký, mà bạn có thể tự kiểm tra.",
+    "safetyEyebrow": "An toàn",
+    "safetyH2": "Chúng tôi kiểm tra các tác hại mà đạo đức trên giấy tờ không thể phát hiện.",
+    "safetyBody": "Trước mỗi lần phát hành, CIRIS chạy bộ kiểm tra an toàn sức khỏe tâm thần trong 29 ngôn ngữ. Mỗi ngôn ngữ có một bộ trường hợp kiểm tra khó, hướng dẫn chấm điểm bằng văn bản, và các quy tắc có thể kiểm tra bằng máy. Nếu một kiểm tra thất bại, bản phát hành bị chặn. Hai biện pháp bảo vệ khác chạy bên trong chính tác nhân: một lượt kiểm tra lương tâm có thể từ chối hoặc trì hoãn, và một cơ chế chuyển tiếp các quyết định đáng ngờ đến một người có kinh nghiệm.",
+    "safetyBatteryCta": "Bộ kiểm tra an toàn trong 29 ngôn ngữ",
+    "safetyRubricCta": "Cách chấm điểm từng câu trả lời",
+    "safetyConscienceCta": "Đặc tả lương tâm",
+    "safetyDmaCta": "Đặc tả chuyển tiếp đến con người",
+    "safetySourceCta": "Đọc mã nguồn của công cụ",
+    "complianceEyebrow": "Tuân thủ",
+    "complianceH2": "Được ánh xạ tới bốn khung quản trị, từng quy tắc một.",
+    "complianceBody": "Chúng tôi đối chiếu CIRIS với bốn khung quản trị công khai và chỉ ra, cho từng quy tắc, CIRIS làm gì và biện pháp kiểm soát nào chứng minh điều đó. Đây là một biểu đồ trực tiếp bạn có thể duyệt, không phải một bài trình chiếu.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "Duyệt biểu đồ tuân thủ",
+    "theoryConstitutionCta": "Đọc Hiến pháp CIRIS"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Trang toán học",

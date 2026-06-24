@@ -111,6 +111,7 @@ export const LOCALIZED_ROUTES: ReadonlySet<string> = new Set([
   "/grammar",
   "/cewp",
   "/epistemic-web",
+  "/constitution",
 ]);
 
 /**

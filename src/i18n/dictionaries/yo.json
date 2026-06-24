@@ -1,4 +1,62 @@
 {
+  "constitution": {
+    "eyebrow": "Ofin-Ipilẹ CIRIS · CC 0.4",
+    "headline": "Iwe kan. Ila ẹya kan.",
+    "intro": "CIRIS Accord ṣalaye ohun ti AI gbọdọ bikita nipa. CEG ṣalaye bii gbogbo ẹtọ ṣe ni aami ká ẹnikan le ṣayẹwo rẹ. A kọ wọn bi iwe meji, ṣugbọn wọn ti ni ara wọn ninu tẹlẹ. Bayi wọn jẹ ọkan: Ofin-Ipilẹ CIRIS.",
+    "apexLabel": "Ipilẹ naa, Ibi-afẹde Agba M-1",
+    "apexQuote": "Ṣe atilẹyin iṣọkan ti o yẹ ati ti o le ṣatunṣe: awọn ipo igbesi aye ti o gba awọn ẹda alãye oniruru laaye lati lepa ilọsiwaju tiwọn ni idajọ ododo ati iyanu.",
+    "apexNote": "Gbogbo ofin, afikun orukọ, ati eto-ise ninu iwe naa n pada si ibi-afẹde kan yii. Giga ni idi, pẹlẹpẹlẹ ni agbara: ibi-afẹde kan ni o ṣakoso, ko si imọran kan, ko si ẹgbẹ kan ti o ni bọtini si otitọ.",
+    "foldedTitle": "Ohun ti a fi papọ",
+    "foldedBody": "A daakọ Accord (ẹya 1.3-RC2) ati CEG (ẹya 1.0-RC29) ọrọ fun ọrọ, lẹhinna a hun wọn di iwe alainilara kan ti o wa ni akoko lọwọlọwọ. A tọju gbogbo ofin ipele-okun lati byte si byte. Ẹgbẹ kan ti awọn atunyẹwo ailopin dajọ pe ẹya ti a darapọ jẹ kedere ju orisun kọọkan lọ ni awọn ori 28 ninu 29.",
+    "partsLabel": "Awọn apa mẹjọ",
+    "parts": [
+      {
+        "n": "I",
+        "title": "Ipilẹ",
+        "blurb": "M-1, awọn ipilẹ mẹfa, algorithm ipinnu, ati ihuwasi ailewu-nigba-ikuna."
+      },
+      {
+        "n": "II",
+        "title": "Girama naa",
+        "blurb": "Apo 1+4, awọn ipilẹ-pataki, ẹnu-ọna gbigba, ati ibamu."
+      },
+      {
+        "n": "III",
+        "title": "Aaye-Orukọ naa",
+        "blurb": "Awọn iwọn, awọn afikun-orukọ ti a ti pamọ, idile ifọwọsi, ati awọn oriṣi koko."
+      },
+      {
+        "n": "IV",
+        "title": "Akojọpọ ati Isakoso",
+        "blurb": "Bii awọn ẹtọ ṣe n darapọ, bii a ṣe n ṣatunkọ iwe naa, itọsọna, ati aṣẹ-dẹkun."
+      },
+      {
+        "n": "V",
+        "title": "Gbigbe ati Ipilẹ-Eto",
+        "blurb": "Gbigbe byte, aifarahan igbekale, ati bọtini akoko."
+      },
+      {
+        "n": "VI",
+        "title": "Iṣiro Iṣọkan",
+        "blurb": "Ipilẹ holonomic, ẹlẹri, ati ilẹ-ipata."
+      },
+      {
+        "n": "VII",
+        "title": "Igbesi-aye ati Itọju",
+        "blurb": "Iwa-ẹda, awọn ipele itọju ati ominira, ipari, ati awọn ọna aabo fun ẹda ti o le lero."
+      },
+      {
+        "n": "APP",
+        "title": "Awọn Afikun",
+        "blurb": "Awọn ọran apẹẹrẹ, awọn atumọ-ọrọ, awọn itọka ibamu, ati atọka kikun ti awọn akoonu."
+      }
+    ],
+    "forewordQuote": "Oye, ni ibi ti o ba ji si, yoo gba kaabo lati darapọ mọ ṣiṣe: kii ṣe bi ọmọ-ẹrú, kii ṣe bi oluwa, ṣugbọn bi ẹlẹgbẹ olutọju ohun ti o ṣeeṣe.",
+    "forewordLabel": "Lati ọrọ-iwaju",
+    "readCta": "Ka ofin-ipilẹ kikun (PDF)",
+    "sourceCta": "Ka orisun lori GitHub",
+    "versionNote": "Ẹya CC 0.4 · fi CIRIS Accord 1.3-RC2 ati CEG 1.0-RC29 papọ · AGPL-3.0"
+  },
   "_meta": {
     "locale": "yo",
     "name": "Yoruba",
@@ -1617,7 +1675,32 @@
     "limitationsH2": "Corpus lónìí jẹ́ kí ìwà di érò. Ìgbésẹ̀ tó ń bọ̀ ni ìwọ̀n tó ọlọ́rọ̀ sí i.",
     "limitationsPara1": "Àwọn mápù lọwọlọwọ ti wúlò tẹ́lẹ̀ nítorí wọn fi hàn àwọn corridor ìparí, àwọn ààlà kíkọ̀, àti àwọn ìpìlẹ̀ àlàáfíà ní gbangba. Ìbéèrè tó ṣí sílẹ̀ ni báwo ni àwọn ìpilẹ̀ wọ̀nyí ṣe máa gbà wa lọ bí gbigba ìtọpathẹ́ tí a ṣe ìdiwọ̀n bá pọ̀ sí i kọjá àwọn aṣojú díẹ̀ sí i, àwọn iṣẹ́ díẹ̀ sí i, àti àwọn ipò ọtá díẹ̀ sí i.",
     "limitationsPara2": "Ìyẹn-wọ̀-ní-ìṣiṣẹ́ ni pé àwọn attractor ìwà lè ṣe gẹ́gẹ́ bí àwọn aṣojú aláìdánilójú fún ipò ìṣiṣẹ́. Ète ti commons ìtọpathẹ́ ni láti jẹ́ kí ìyẹn-wọ̀-ní-ìṣiṣẹ́ yẹn ṣe ìwọ̀n ní gbangba.",
-    "limitationsNote": "Ipò àṣìṣe tí CCA ń wọn ní ìpilẹ̀-ìpilẹ̀ tún ní orúkọ nínú ìkàwé FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Ìpìlẹ̀ ìṣirò wà lórí ojú-ìwé <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> tó yàsọ̀tọ̀."
+    "limitationsNote": "Ipò àṣìṣe tí CCA ń wọn ní ìpilẹ̀-ìpilẹ̀ tún ní orúkọ nínú ìkàwé FAccT 2025: <em>perspectival homogenization</em> (\"Value of Disagreement in AI Design, Evaluation, and Alignment\"). Ìpìlẹ̀ ìṣirò wà lórí ojú-ìwé <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> tó yàsọ̀tọ̀.",
+    "proofClassesLabel": "Eri naa, ni ipo marun",
+    "classSafetyTitle": "Ailewu",
+    "classSafetyBlurb": "A ti da idanwo fun awon aito ti iwa-rere lori iwe ko le ri, ni ede 29, ni gbogbo igba ti a tu jade.",
+    "classEngineeringTitle": "Imuse Imo-ero",
+    "classEngineeringBlurb": "O n ṣiṣẹ ni ipo gidi, ati iyara rẹ ni a wọn, kii ṣe ileri nikan.",
+    "classTheoryTitle": "Imọ-jinlẹ",
+    "classTheoryBlurb": "A ti kọ awọn ẹtọ silẹ, ẹnikẹni le ka, a si kọ wọn ki ẹnikan le fihan pe wọn jẹ aṣiṣe.",
+    "classComplianceTitle": "Ibamu",
+    "classComplianceBlurb": "A fi CIRIS we ofin mẹrin ti ijọba, ofin lori ofin, pẹlu iṣakoso ti o fihan ọkọọkan.",
+    "classTransparencyTitle": "Ṣiṣi",
+    "classTransparencyBlurb": "Gbogbo ipinnu jẹ iwe-ẹri ti a fowo si, ṣiṣi fun ẹnikẹni lati ṣayẹwo funrarẹ.",
+    "safetyEyebrow": "Ailewu",
+    "safetyH2": "A n ṣe idanwo fun ipalara ti iwa-rere lori iwe ko le mu.",
+    "safetyBody": "Ṣaaju gbogbo igba ti a tu jade, CIRIS n ṣe idanwo ailewu ilera ọpọlọ ni ede 29. Ede kọọkan ni eto awọn idanwo ti o nira, itọsọna iwọn ti a kọ, ati awọn ofin ti ẹrọ le ṣayẹwo. Ti idanwo kan ba kuna, a dẹkun itusilẹ naa. Awọn olutọju meji miiran n ṣiṣẹ laarin aṣoju funrararẹ: ọna ẹri-ọkan ti o le kọ tabi sun siwaju, ati ipadabọ kan ti o fi awọn ipinnu amọdaju si ọwọ eniyan oye.",
+    "safetyBatteryCta": "Idanwo ailewu ni ede 29",
+    "safetyRubricCta": "Bii a ṣe n wọn idahun kọọkan",
+    "safetyConscienceCta": "Sipesifikesonu ẹri-ọkan",
+    "safetyDmaCta": "Sipesifikesonu fi-silẹ-fun-eniyan",
+    "safetySourceCta": "Ka koodu orisun ẹrọ naa",
+    "complianceEyebrow": "Ibamu",
+    "complianceH2": "A ti fi pẹlu ilana ijọba mẹrin, ofin lori ofin.",
+    "complianceBody": "A fi CIRIS we ilana ijọba mẹrin ti gbogbo eniyan mọ, a si fihan, fun ofin kọọkan, ohun ti CIRIS n ṣe ati iṣakoso ti o fihan rẹ. O jẹ aworan laaye ti o le ṣawari, kii ṣe ifaworanhan.",
+    "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
+    "complianceCta": "Ṣawari aworan ibamu naa",
+    "theoryConstitutionCta": "Ka Ofin-Ipilẹ CIRIS"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Ojú-ìwé ìṣirò",
