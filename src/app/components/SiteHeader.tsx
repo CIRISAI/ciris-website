@@ -24,7 +24,7 @@ export default function SiteHeader({ locale }: { locale: string }) {
       </Link>
       <div className={styles.navlinks}>
         <a className="g" href={lh("/install")}>{nav.install}</a>
-        <a href={lh("/research-status")}>{nav.proof}</a>
+        <a href={lh("/proof")}>{nav.proof}</a>
         <a href={lh("/constitution")}>{nav.constitution}</a>
         <a href="https://github.com/CIRISAI/CIRISAgent">GitHub</a>
         <LanguageSwitcher currentLocale={locale} inline labels={t.common.langSwitcher} />

@@ -2010,6 +2010,12 @@ export const MARKETING_OG: Record<
       "description": "ہم آہنگی پر مبنی alignment کی ریاضیاتی بنیاد۔ پروڈکشن AI traces پر Kish فارمولہ سے موثر جہت پذیری کی پیمائش، singularity کی حد، اور L-01 انفارمیشن تھیوری کی چھت۔"
     }
   },
+  "/proof": {
+    "en": {
+      "title": "Proof: Don't Take Our Word for It",
+      "description": "Five classes of evidence you can check yourself: safety batteries, measured engineering, theory papers, regulatory compliance, and open, signed traces."
+    }
+  },
   "/research-status": {
     "en": {
       "title": "Research Status: Effective Dimensionality on Production AI Traces",
