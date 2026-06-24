@@ -1,0 +1,38 @@
+/* Graphic 17 — Proof. Sequential five-class verify (~10s loop): each class
+   glyph + its verdict-ring segment lights in turn, a signal travels inward,
+   then the master seal pops. Selectors scoped under .g17. var(--sp) speed
+   defaults to 1. Freezes "proven" under prefers-reduced-motion. */
+.g17 .pfA { animation: g17a calc(10s / var(--sp, 1)) ease-in-out infinite; }
+.g17 .pfB { animation: g17b calc(10s / var(--sp, 1)) ease-in-out infinite; }
+.g17 .pfC { animation: g17c calc(10s / var(--sp, 1)) ease-in-out infinite; }
+.g17 .pfD { animation: g17d calc(10s / var(--sp, 1)) ease-in-out infinite; }
+.g17 .pfE { animation: g17e calc(10s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g17a { 0%,5%{opacity:.2} 10%{opacity:1} 90%{opacity:1} 96%,100%{opacity:.2} }
+@keyframes g17b { 0%,19%{opacity:.2} 24%{opacity:1} 90%{opacity:1} 96%,100%{opacity:.2} }
+@keyframes g17c { 0%,33%{opacity:.2} 38%{opacity:1} 90%{opacity:1} 96%,100%{opacity:.2} }
+@keyframes g17d { 0%,47%{opacity:.2} 52%{opacity:1} 90%{opacity:1} 96%,100%{opacity:.2} }
+@keyframes g17e { 0%,61%{opacity:.2} 66%{opacity:1} 90%{opacity:1} 96%,100%{opacity:.2} }
+.g17 .dotA { animation: g17da calc(10s / var(--sp, 1)) ease-in infinite; }
+.g17 .dotB { animation: g17db calc(10s / var(--sp, 1)) ease-in infinite; }
+.g17 .dotC { animation: g17dc calc(10s / var(--sp, 1)) ease-in infinite; }
+.g17 .dotD { animation: g17dd calc(10s / var(--sp, 1)) ease-in infinite; }
+.g17 .dotE { animation: g17de calc(10s / var(--sp, 1)) ease-in infinite; }
+@keyframes g17da { 0%,4%{offset-distance:0%;opacity:0} 6%{opacity:1} 10%{offset-distance:100%;opacity:1} 12%,100%{offset-distance:100%;opacity:0} }
+@keyframes g17db { 0%,18%{offset-distance:0%;opacity:0} 20%{opacity:1} 24%{offset-distance:100%;opacity:1} 26%,100%{offset-distance:100%;opacity:0} }
+@keyframes g17dc { 0%,32%{offset-distance:0%;opacity:0} 34%{opacity:1} 38%{offset-distance:100%;opacity:1} 40%,100%{offset-distance:100%;opacity:0} }
+@keyframes g17dd { 0%,46%{offset-distance:0%;opacity:0} 48%{opacity:1} 52%{offset-distance:100%;opacity:1} 54%,100%{offset-distance:100%;opacity:0} }
+@keyframes g17de { 0%,60%{offset-distance:0%;opacity:0} 62%{opacity:1} 66%{offset-distance:100%;opacity:1} 68%,100%{offset-distance:100%;opacity:0} }
+.g17 .seal { transform-box: fill-box; transform-origin: center; animation: g17seal calc(10s / var(--sp, 1)) cubic-bezier(.34,1.56,.64,1) infinite; }
+@keyframes g17seal { 0%,72%{opacity:0;transform:scale(.4)} 78%{opacity:1;transform:scale(1.16)} 83%,90%{opacity:1;transform:scale(1)} 96%,100%{opacity:0;transform:scale(.4)} }
+.g17 .sealglow { transform-box: fill-box; transform-origin: center; animation: g17glow calc(10s / var(--sp, 1)) ease-in-out infinite; opacity: 0; }
+@keyframes g17glow { 0%,74%{opacity:0} 80%{opacity:.7} 90%{opacity:.5} 96%,100%{opacity:0} }
+.g17 .pend { animation: g17pend calc(10s / var(--sp, 1)) ease-in-out infinite; }
+@keyframes g17pend { 0%{opacity:.5} 72%{opacity:.5} 78%{opacity:0} 100%{opacity:0} }
+.g17 .spin { transform-box: fill-box; transform-origin: 300px 300px; animation: g17spin calc(40s / var(--sp, 1)) linear infinite; }
+@keyframes g17spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .g17 * { animation: none !important; }
+  .g17 .pfA, .g17 .pfB, .g17 .pfC, .g17 .pfD, .g17 .pfE, .g17 .seal, .g17 .sealglow { opacity: 1; }
+  .g17 .seal { transform: scale(1); }
+  .g17 .pend, .g17 .dotA, .g17 .dotB, .g17 .dotC, .g17 .dotD, .g17 .dotE { opacity: 0; }
+}

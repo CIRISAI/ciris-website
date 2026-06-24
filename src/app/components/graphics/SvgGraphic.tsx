@@ -19,6 +19,7 @@ import "./css/g13.css";
 import "./css/g14.css";
 import "./css/g15.css";
 import "./css/g16.css";
+import "./css/g17.css";
 import g02 from "./svg/g02";
 import g03 from "./svg/g03";
 import g04 from "./svg/g04";
@@ -33,6 +34,7 @@ import g13 from "./svg/g13";
 import g14 from "./svg/g14";
 import g15 from "./svg/g15";
 import g16 from "./svg/g16";
+import g17 from "./svg/g17";
 
 const REGISTRY: Record<string, string> = {
   g02,
@@ -49,6 +51,7 @@ const REGISTRY: Record<string, string> = {
   g14,
   g15,
   g16,
+  g17,
 };
 
 export default function SvgGraphic({ id, className }: { id: string; className?: string }) {

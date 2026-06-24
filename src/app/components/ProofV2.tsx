@@ -9,17 +9,18 @@ import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
 import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import ProofClassIcon from "@/app/components/graphics/ProofClassIcon";
 
 export default function ProofV2({ t, locale }: { t: Dictionary; locale: string }) {
   const rs = t.researchStatus;
   const lh = (href: string) => localizeHref(href, locale);
 
   const proofClasses = [
-    { anchor: "#proof-safety", title: rs.classSafetyTitle, blurb: rs.classSafetyBlurb, cls: s.cOk },
-    { anchor: "#proof-engineering", title: rs.classEngineeringTitle, blurb: rs.classEngineeringBlurb, cls: s.cTeal },
-    { anchor: "#proof-theory", title: rs.classTheoryTitle, blurb: rs.classTheoryBlurb, cls: s.cCyan },
-    { anchor: "#proof-compliance", title: rs.classComplianceTitle, blurb: rs.classComplianceBlurb, cls: s.cViolet },
-    { anchor: "#proof-transparency", title: rs.classTransparencyTitle, blurb: rs.classTransparencyBlurb, cls: s.cBrass },
+    { anchor: "#proof-safety", icon: "safety", title: rs.classSafetyTitle, blurb: rs.classSafetyBlurb, cls: s.cOk },
+    { anchor: "#proof-engineering", icon: "engineering", title: rs.classEngineeringTitle, blurb: rs.classEngineeringBlurb, cls: s.cTeal },
+    { anchor: "#proof-theory", icon: "theory", title: rs.classTheoryTitle, blurb: rs.classTheoryBlurb, cls: s.cCyan },
+    { anchor: "#proof-compliance", icon: "compliance", title: rs.classComplianceTitle, blurb: rs.classComplianceBlurb, cls: s.cViolet },
+    { anchor: "#proof-transparency", icon: "transparency", title: rs.classTransparencyTitle, blurb: rs.classTransparencyBlurb, cls: s.cBrass },
   ];
 
   // Safety-evidence links (source of truth: CIRISAI/CIRISAgent). Verified live.
@@ -37,7 +38,7 @@ export default function ProofV2({ t, locale }: { t: Dictionary; locale: string }
       kicker={rs.proofHeroKicker}
       title={rs.proofHeroTitle}
       lede={rs.proofHeroLede}
-      graphicId="g06"
+      graphicId="g17"
       backHref="/"
       backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
@@ -48,7 +49,10 @@ export default function ProofV2({ t, locale }: { t: Dictionary; locale: string }
         <div className={s.cardGrid}>
           {proofClasses.map((c) => (
             <a key={c.anchor} href={c.anchor} className={`${s.card} ${c.cls}`}>
-              <h3>{c.title}</h3>
+              <h3 style={{ display: "flex", alignItems: "center", gap: 9 }}>
+                <ProofClassIcon name={c.icon} className={s.cardIcon} />
+                {c.title}
+              </h3>
               <p>{c.blurb}</p>
             </a>
           ))}
