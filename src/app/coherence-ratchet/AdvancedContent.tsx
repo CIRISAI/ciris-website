@@ -237,7 +237,7 @@ export default function AdvancedContent() {
             If the claim is wrong, the records are where the wrongness will
             show up first.{" "}
             <a
-              href="/proof"
+              href="/research-status"
               className="text-brand-primary hover:underline"
             >
               See the current research status.

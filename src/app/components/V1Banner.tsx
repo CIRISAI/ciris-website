@@ -19,7 +19,7 @@ const V2_ROUTES = new Set([
   "/federation",
   "/vision",
   "/how-it-works",
-  "/proof",
+  "/research-status",
   "/about",
   "/trust",
   "/safety",

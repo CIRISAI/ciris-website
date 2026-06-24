@@ -1,4 +1,4 @@
-// v2 "dark-blueprint" proof page. Renders the SAME t.researchStatus.*
+// v2 "dark-blueprint" research-status page. Renders the SAME t.researchStatus.*
 // dictionary keys the old ResearchStatusContent did — no copy is rewritten or
 // re-translated here — inside the reusable ContentShell. Accent "ok" (a measured
 // green) reads as quiet, evidenced proof. Three text-free proof graphics are
@@ -73,20 +73,6 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
       backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
-      {/* Proof-class index — the five classes lead the page; each anchors into
-          the evidence below. */}
-      <nav className={s.section} aria-label={rs.proofClassesLabel}>
-        <p className={s.sectionLabel}>{rs.proofClassesLabel}</p>
-        <div className={s.cardGrid}>
-          {proofClasses.map((c) => (
-            <a key={c.anchor} href={c.anchor} className={`${s.card} ${c.cls}`}>
-              <h3>{c.title}</h3>
-              <p>{c.blurb}</p>
-            </a>
-          ))}
-        </div>
-      </nav>
-
       {/* Measured scoreboard (relocated from the lobby — the proof lives here). */}
       <div className={s.scoreboard}>
         {t.lobby.stats.map((st) => (
@@ -102,12 +88,25 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
         ))}
       </div>
 
-      {/* Status line */}
+      {/* Status pills + corpus snapshot */}
       <div className={s.section}>
         <p className={s.footnote}>
           {rs.heroLabel} · {rs.heroUpdated}
         </p>
       </div>
+
+      {/* Proof-class index — five anchors into the evidence below. */}
+      <nav className={s.section} aria-label={rs.proofClassesLabel}>
+        <p className={s.sectionLabel}>{rs.proofClassesLabel}</p>
+        <div className={s.cardGrid}>
+          {proofClasses.map((c) => (
+            <a key={c.anchor} href={c.anchor} className={`${s.card} ${c.cls}`}>
+              <h3>{c.title}</h3>
+              <p>{c.blurb}</p>
+            </a>
+          ))}
+        </div>
+      </nav>
 
       <div className={s.callout}>
         <p className={s.sectionLabel}>{rs.corpusLabel}</p>

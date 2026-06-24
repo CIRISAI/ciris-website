@@ -131,7 +131,7 @@ export default function HowItWorksV2({ t, locale }: { t: Dictionary; locale: str
           <div className={`${s.card} ${s.cOk}`}>
             <h3>
               {hiw.dmas.idmaTitle}{" "}
-              <Link href={lh("/proof#idma")}>{hiw.dmas.idmaLink}</Link>
+              <Link href={lh("/research-status#idma")}>{hiw.dmas.idmaLink}</Link>
             </h3>
             <p dangerouslySetInnerHTML={h(hiw.dmas.idmaBody)} />
           </div>

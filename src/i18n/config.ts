@@ -107,7 +107,7 @@ export const LOCALIZED_ROUTES: ReadonlySet<string> = new Set([
   "/mdd",
   "/coherence-ratchet",
   "/coherence-collapse-analysis",
-  "/proof",
+  "/research-status",
   "/grammar",
   "/cewp",
   "/epistemic-web",

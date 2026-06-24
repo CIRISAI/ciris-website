@@ -52,7 +52,7 @@ const DESIGNED_OG_CARDS: ReadonlySet<string> = new Set([
   "/mdd",
   "/coherence-ratchet",
   "/coherence-collapse-analysis",
-  "/proof",
+  "/research-status",
   "/epistemic-web",
   "/cewp",
   "/grammar",
