@@ -100,6 +100,16 @@ export default function TrustV2({ t, locale }: { t: Dictionary; locale: string }
         <p className={s.paragraph}>{tr.multiSourceCopy}</p>
       </section>
 
+      {/* The Constitutional Kill Switch */}
+      <section id="kill-switch" className={s.section}>
+        <p className={s.sectionLabel}>{tr.killSwitchSubheadline}</p>
+        <h2 className={s.h2}>{tr.killSwitchHeadline}</h2>
+        <p className={s.paragraph}>{tr.killSwitchBody}</p>
+        <div className={s.callout}>
+          <p className={s.paragraph}>{tr.killSwitchNote}</p>
+        </div>
+      </section>
+
       {/* Unified Attestation */}
       <section className={s.section}>
         <p className={s.sectionLabel}>{tr.unifiedAttestationSubheadline}</p>

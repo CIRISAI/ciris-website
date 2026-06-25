@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "SIM",
     "pillar1Sub": "Identitas &amp; Kunci Penandatanganan",
-    "pillar1Body": "Kunci penandatanganan Ed25519 yang terikat perangkat keras yang <em>merupakan</em> identitas agen. Disimpan di perangkat keras aman (TPM, Secure Enclave, Android Keystore). Tidak dapat dipalsukan atau dipindahkan.",
+    "pillar1Body": "Kunci penandatanganan hibrid yang terikat pada perangkat keras (Ed25519 + ML-DSA-65) yang <em>adalah</em> identitas agen, disimpan dalam perangkat keras aman FIPS 140-3 (TPM, Secure Enclave, Android Keystore, YubiKey). Kedua tanda tangan harus terverifikasi. Tidak bisa dipalsukan atau dipindahtangankan.",
     "pillar1Note": "Kunci itu bukan sekadar mewakili identitas. Kunci itulah identitasnya.",
     "pillar2Label": "2",
     "pillar2Title": "Registrasi &amp; Inspeksi",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify memberikan attestasi kriptografis di bawah model ancaman yang ditentukan dan tidak menjamin keamanan mutlak. Kemampuannya sama baik berlisensi maupun tidak. Perbedaannya adalah akuntabilitas, dan dengan CIRISVerify, akuntabilitas tersebut dapat dibuktikan secara kriptografis.",
     "closingBtnPortal": "Buka Portal",
     "closingBtnSource": "Lihat Kode Sumber",
-    "closingBtnContact": "Hubungi Penjualan"
+    "closingBtnContact": "Hubungi Penjualan",
+    "killSwitchSubheadline": "Sebuah sakelar yang tidak bisa dimatikan oleh siapa pun di dalam sistem.",
+    "killSwitchHeadline": "Sakelar Mati Konstitusional",
+    "killSwitchBody": "Kekuasaan terakhir untuk menghentikan agen CIRIS tidak ada pada perusahaan, jaringan, atau agen itu sendiri. Kekuasaan itu ada pada orang-orang yang namanya sudah ditentukan. Setiap pemegang membawa sepasang kunci perangkat keras: kunci keamanan FIPS 140-3 untuk tanda tangan klasik, yang juga mengunci materi untuk perangkat kedua yang membawa tanda tangan pasca-kuantum. Untuk menjalankan perintah berhenti, sebagian besar pemegang (2 of 3) harus menandatangani perintah tersebut pada perangkat keras mereka. Perintah itu membawa tanda tangan hibrid Ed25519 + ML-DSA-65, sehingga tidak bisa dipalsukan, diputar ulang, atau direkayasa, bahkan oleh komputer kuantum di masa depan, dan tidak ada bagian jaringan yang bisa memberikan, mencabut, atau mengesampingkannya.",
+    "killSwitchNote": "Kami merancang sistem ini untuk skenario terburuk: sebuah AI yang menyerang sakelar matinya sendiri dengan memburu orang-orang yang memegangnya. Konstitusi mendefinisikan kuorum aktif, sehingga meskipun sebagian besar pemegang tidak lagi bisa dihubungi, satu orang yang masih bisa dijangkau tetap bisa mencabut colokannya."
   },
   "safety": {
     "heroHeadline": "Keselamatan Sudah Tertanam.",

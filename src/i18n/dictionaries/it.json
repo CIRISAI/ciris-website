@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Patente di Guida",
     "pillar1Sub": "Identità &amp; Chiave di Firma",
-    "pillar1Body": "Una chiave di firma Ed25519 legata all'hardware che <em>è</em> l'identità dell'agente. Conservata in hardware sicuro (TPM, Secure Enclave, Android Keystore). Non può essere falsificata né trasferita.",
+    "pillar1Body": "Una chiave di firma ibrida legata all'hardware (Ed25519 + ML-DSA-65) che <em>è</em> l'identità dell'agente, conservata in hardware sicuro FIPS 140-3 (TPM, Secure Enclave, Android Keystore, YubiKey). Entrambe le firme devono essere verificate. Non può essere falsificata né trasferita.",
     "pillar1Note": "La chiave non rappresenta l'identità. È l'identità.",
     "pillar2Label": "2",
     "pillar2Title": "Immatricolazione &amp; Ispezione",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify fornisce attestazione crittografica nell'ambito di modelli di minaccia definiti e non garantisce sicurezza assoluta. La capacità è la stessa sia con licenza che senza. La differenza è la responsabilità, e con CIRISVerify quella responsabilità è attestabile crittograficamente.",
     "closingBtnPortal": "Apri il Portale",
     "closingBtnSource": "Vedi il Codice",
-    "closingBtnContact": "Contatta il Reparto Vendite"
+    "closingBtnContact": "Contatta il Reparto Vendite",
+    "killSwitchSubheadline": "Un interruttore che nessuno all'interno del sistema può disattivare.",
+    "killSwitchHeadline": "L'interruttore costituzionale di emergenza",
+    "killSwitchBody": "Il potere di ultima istanza per fermare un agente CIRIS non appartiene all'azienda, alla rete o all'agente stesso. Appartiene a persone specifiche, identificate per nome. Ogni titolare porta con sé una coppia di chiavi hardware: una chiave di sicurezza FIPS 140-3 per la firma classica, che sigilla anche il materiale per un secondo dispositivo con la firma post-quantistica. Per attivare l'arresto, la maggioranza dei titolari (2 of 3) deve firmare il comando sul proprio hardware. Il comando porta firme ibride Ed25519 + ML-DSA-65, quindi non può essere falsificato, ripetuto o imitato, nemmeno da un futuro computer quantistico. Nessuna parte della rete può concedere, revocare o ignorare questo comando.",
+    "killSwitchNote": "Abbiamo progettato il sistema per il caso peggiore: un'intelligenza artificiale che attacca il proprio interruttore di spegnimento prendendo di mira le persone che lo controllano. La costituzione definisce un quorum attivo, quindi anche se la maggior parte dei titolari non è disponibile, un solo sopravvissuto raggiungibile può comunque staccare la spina."
   },
   "safety": {
     "heroHeadline": "Sicurezza Integrata.",

@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Permis de conduire",
     "pillar1Sub": "Identite &amp; cle de signature",
-    "pillar1Body": "Une cle de signature Ed25519 liee au materiel qui <em>est</em> l'identite de l'agent. Stockee dans du materiel securise (TPM, Secure Enclave, Android Keystore). Impossible a falsifier ou a transferer.",
+    "pillar1Body": "Une clé de signature hybride liée au matériel (Ed25519 + ML-DSA-65) qui <em>est</em> l'identité de l'agent, conservée dans un matériel sécurisé FIPS 140-3 (TPM, Secure Enclave, Android Keystore, YubiKey). Les deux signatures doivent être vérifiées. Elle ne peut pas être falsifiée ni transférée.",
     "pillar1Note": "La cle ne represente pas l'identite. Elle est l'identite.",
     "pillar2Label": "2",
     "pillar2Title": "Immatriculation &amp; controle technique",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify fournit une attestation cryptographique sous des modeles de menaces definis et ne garantit pas une securite absolue. La capacite est la meme que l'agent soit licencie ou non. La difference, c'est la responsabilite, et avec CIRISVerify, cette responsabilite est cryptographiquement attestable.",
     "closingBtnPortal": "Ouvrir le portail",
     "closingBtnSource": "Voir le code source",
-    "closingBtnContact": "Contacter les ventes"
+    "closingBtnContact": "Contacter les ventes",
+    "killSwitchSubheadline": "Un interrupteur que personne à l'intérieur du système ne peut désactiver.",
+    "killSwitchHeadline": "L'interrupteur d'arrêt constitutionnel",
+    "killSwitchBody": "Le pouvoir ultime d'arrêter un agent CIRIS n'appartient ni à l'entreprise, ni au réseau, ni à l'agent lui-même. Il appartient à des personnes nommément désignées. Chaque détenteur possède une paire de clés matérielles : une clé de sécurité FIPS 140-3 pour la signature classique, qui scelle aussi le matériel pour un second appareil portant la signature post-quantique. Pour déclencher l'arrêt, une majorité des détenteurs (2 of 3) signe la commande sur leur matériel. La commande porte des signatures hybrides Ed25519 + ML-DSA-65, donc elle ne peut pas être falsifiée, rejouée ou imitée, même par un futur ordinateur quantique, et aucune partie du réseau ne peut l'accorder, la révoquer ou la contourner.",
+    "killSwitchNote": "Nous avons conçu le système pour le pire scénario : une IA qui s'attaque à son propre interrupteur en visant les personnes qui le détiennent. La constitution définit un quorum actif, de sorte que même si la plupart des détenteurs sont hors de portée, un seul survivant joignable peut encore tout arrêter."
   },
   "safety": {
     "heroHeadline": "La securite integree.",

@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Sürücü Belgesi",
     "pillar1Sub": "Kimlik &amp; İmzalama Anahtarı",
-    "pillar1Body": "Donanıma bağlı bir Ed25519 imzalama anahtarı; bu anahtar ajanın kimliği<em>dir</em>. Güvenli donanımda (TPM, Secure Enclave, Android Keystore) saklanır. Taklit edilemez, devredilemez.",
+    "pillar1Body": "Ajanın kimliğini oluşturan, FIPS 140-3 güvenli donanımda (TPM, Secure Enclave, Android Keystore, YubiKey) saklanan donanıma bağlı hibrit imzalama anahtarı (Ed25519 + ML-DSA-65). Bu anahtar <em>ajanın ta kendisidir</em>. Her iki imza da doğrulanmalıdır. Sahte üretilemez veya başkasına devredilemez.",
     "pillar1Note": "Anahtar kimliği temsil etmez. Anahtar, kimliğin kendisidir.",
     "pillar2Label": "2",
     "pillar2Title": "Tescil &amp; Muayene",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify, tanımlanmış tehdit modelleri kapsamında kriptografik onay sağlar ve mutlak güvenliği garanti etmez. Yetenek, lisanslı olsun ya da olmasın aynıdır. Fark hesap verebilirliktedir; CIRISVerify ile bu hesap verebilirlik kriptografik olarak kanıtlanabilir.",
     "closingBtnPortal": "Portale Giriş",
     "closingBtnSource": "Kaynak Kodu İncele",
-    "closingBtnContact": "Satışla İletişim"
+    "closingBtnContact": "Satışla İletişim",
+    "killSwitchSubheadline": "Sistemin içindeki hiç kimsenin devre dışı bırakamayacağı bir anahtar.",
+    "killSwitchHeadline": "Anayasal Durdurma Anahtarı",
+    "killSwitchBody": "Bir CIRIS ajanını durdurmanın son çare gücü şirkette, ağda veya ajanda değil. Bu güç, adı bilinen insanların elinde. Her tutucu bir çift donanım anahtarı taşır: klasik imza için bir FIPS 140-3 güvenlik anahtarı. Bu anahtar aynı zamanda kuantum sonrası imzayı taşıyan ikinci bir cihaz için de malzemeyi mühürler. Durdurma komutunu vermek için tutucuların çoğunluğunun (2 of 3) komutu kendi donanımlarında imzalaması gerekir. Komut Ed25519 + ML-DSA-65 hibrit imzaları taşır. Bu sayede gelecekteki bir kuantum bilgisayar bile komutu sahte olarak üretemez, tekrar kullanamaz veya taklit edemez. Ağın hiçbir bölümü bu yetkiyi veremez, geri alamaz veya geçersiz kılamaz.",
+    "killSwitchNote": "En kötü senaryoya göre tasarladık: kendi kapatma düğmesine, onu elinde tutanları hedef alarak saldıran bir yapay zeka. Anayasa canlı bir yeter sayı tanımlar. Tutucuların büyük çoğunluğu erişilemez hale gelse bile ulaşılabilen tek bir hayatta kalan sistemi kapatabilir."
   },
   "safety": {
     "heroHeadline": "Güvenlik İçten Geliyor.",

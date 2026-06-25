@@ -830,7 +830,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Lasisin Direba",
     "pillar1Sub": "Asali &amp; Maɓallin Sa-hannu",
-    "pillar1Body": "Maɓallin sa-hannu na Ed25519 da ke ɗaure a na'ura wanda <em>shine</em> asalin wakili. An adana shi a cikin na'ura mai aminci (TPM, Secure Enclave, Android Keystore). Ba za a iya ƙirƙira shi ko canja shi ba.",
+    "pillar1Body": "Maɓallin sa hannu na haɗe da aka ɗaure da kayan aiki (Ed25519 + ML-DSA-65) wanda <em>shine</em> asalin wakilin, ana riƙe da shi a cikin kayan aikin tsaro na FIPS 140-3 (TPM, Secure Enclave, Android Keystore, YubiKey). Dole ne a tabbatar da sa hannun biyu. Ba za a iya ƙararta ko canja wurinsa ba.",
     "pillar1Note": "Maɓallin ba ya wakiltar asali. Shi ne asalin.",
     "pillar2Label": "2",
     "pillar2Title": "Rajista &amp; Duba",
@@ -981,7 +981,11 @@
     "closingBody": "CIRISVerify yana ba da tabbacin sirri a ƙarƙashin samfurin barazana da aka ayyana kuma baya tabbatar da tsaro cikakke. Iya aiki ɗaya ne ko da aka samu lasisi ko a'a. Bambancin shine alƙawari, kuma tare da CIRISVerify, wannan alƙawari ana iya tabbatar da shi ta hanyar sirri.",
     "closingBtnPortal": "Buɗe Tashar",
     "closingBtnSource": "Duba Masomin",
-    "closingBtnContact": "Tuntubi Tallace-Tallace"
+    "closingBtnContact": "Tuntubi Tallace-Tallace",
+    "killSwitchSubheadline": "Wata maɓalli wadda babu wanda ke cikin tsarin zai iya kashe ta.",
+    "killSwitchHeadline": "Maɓallin Tsarin Mulki na Kashe",
+    "killSwitchBody": "Ikon karshe na dakatar da wakilin CIRIS baya zaune tare da kamfani, hanyar sadarwa, ko wakilin. Yana zaune tare da mutane da aka ambata sunayensu. Kowane mai riƙe yana ɗauke da nau'i biyu na maɓallan kayan aiki: maɓallin tsaro na FIPS 140-3 don sa hannun gargajiya, wanda kuma yana rufe kayan ga na'ura ta biyu da ke ɗauke da sa hannun bayan lokacin kwantam. Don fitar da umarni na tsayawa, mafi yawan masu riƙe (2 of 3) suna sanya hannu a kan umarnin a kan kayan aikinsu. Umarni yana ɗauke da sa hannun Ed25519 + ML-DSA-65 na haɗe, saboda haka ba za a iya ƙarartashi, sake amfani da shi, ko yin karya game da shi ba, ko da kwamfuta ta kwantam ta gaba, kuma babu wani ɓangare na hanyar sadarwa da zai iya ba da izini, cirewa, ko sauya shi.",
+    "killSwitchNote": "Mun tsara don mafi munin yanayi: wata AI da ke kai hari kan maɓallinta ta hanyar kai hari kan mutanen da ke riƙe da ita. Kundin tsarin mulki yana ayyana ƙungiyar da ke da rai, don haka ko da yake mafi yawan masu riƙe sun ɓace, mai tsira guda ɗaya da za a iya kaiwa har yanzu zai iya kashe tsarin."
   },
   "vision": {
     "heroHeadline": "Ka cancanci wannan.",

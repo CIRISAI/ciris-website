@@ -830,7 +830,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Àṣẹ-Wakọ̀",
     "pillar1Sub": "Ìdánimọ̀ &amp; Bọ́tìnì Ìfọwọ́sí",
-    "pillar1Body": "Bọ́tìnì ìfọwọ́sí Ed25519 tí a dè mọ́ ohun-èlò tí <em>ó jẹ́</em> ìdánimọ̀ Aṣojú. A tọ́jú rẹ̀ nínú ohun-èlò ààbò (TPM, Secure Enclave, Android Keystore). A kò lè ṣe ìbáramu rẹ̀ tàbí gbé e lọ.",
+    "pillar1Body": "Bọ́tìnnì ìbuwọ́lù méjì tí ohun èlò fi di dó (Ed25519 + ML-DSA-65) tí <em>jẹ</em> ìdánimọ̀ aṣojú náà, tí a fi pamọ́ nínú ohun èlò ààbò FIPS 140-3 (TPM, Secure Enclave, Android Keystore, YubiKey). Ìbuwọ́lù méjì náà gbọdọ̀ jẹ àrídájú. Kò lè jẹ apanilẹgbẹ tàbí gbigbe lọ sí ọwọ́ ẹlòmíràn.",
     "pillar1Note": "Bọ́tìnì náà kò ṣojú ìdánimọ̀. Ó jẹ́ ìdánimọ̀ náà.",
     "pillar2Label": "2",
     "pillar2Title": "Ìforúkọsílẹ̀ &amp; Àyẹ̀wò",
@@ -981,7 +981,11 @@
     "closingBody": "CIRISVerify pèsè ẹ̀rí kírípítò lábẹ́ àwọn àwòṣe ìhalẹ̀ tí a ṣàpèjúwe kì í ṣe ìdánilójú ààbò pátápátá. Agbára náà jẹ́ kanna bí a bá ní àṣẹ tàbí bẹ́ẹ̀kọ̀. Ìyàtọ̀ ni ìjẹ́wọ́-àárọ̀, àti pẹ̀lú CIRISVerify, ìjẹ́wọ́-àárọ̀ yẹn lè fìdí rẹ̀ múlẹ̀ nípasẹ̀ kírípítò.",
     "closingBtnPortal": "Ṣí Ìlẹ̀kùn",
     "closingBtnSource": "Wo Orísun",
-    "closingBtnContact": "Kan sí Tita"
+    "closingBtnContact": "Kan sí Tita",
+    "killSwitchSubheadline": "Paarẹ tí kò sí ẹnikẹni nínú ètò náà tí ó lè pa.",
+    "killSwitchHeadline": "Bọ́tìnnì Dáradára Tí Ìjọba Fún Wa",
+    "killSwitchBody": "Agbára ikẹyìn láti da aṣojú CIRIS dúró kò wà pẹ̀lú àwọn olùgbé, nẹ́tíwọọkì, tàbí aṣojú náà fúnrarẹ. Ó wà pẹ̀lú àwọn ènìyàn tí a ti sọ orúkọ wọn. Olukuluku ẹni tó mú u gbe bata bọ́tìnnì ohun èlò méjì: bọ́tìnnì ààbò FIPS 140-3 fún ìbuwọ́lù àkọkọ, èyí tó tún fi ohun èlò kan mú fún ìbuwọ́lù post-quantum. Láti da dúró, ọ̀pọ̀ jù lọ nínú àwọn tí ó mú u (2 of 3) gbọdọ̀ fọwọ́ sí àṣẹ náà pẹ̀lú ohun èlò wọn. Àṣẹ náà gbe ìbuwọ́lù méjì Ed25519 + ML-DSA-65, nítorí náà kò lè jẹ apanilẹgbẹ, a kò lè tún lo, tàbí a kò lè dán-an, àní kọ̀mpútà quantum ọjọ iwájú kò lè ṣe bẹ́ẹ̀, àti pé kò sí apá kankan nínú nẹ́tíwọọkì tí ó lè fun, yọ, tàbí kọjú sí i.",
+    "killSwitchNote": "A ṣe ètò rẹ̀ fún ipò tó le jùlọ: AI kan tó gbìyànjú láti ba bọ́tìnnì rẹ̀ jẹ nípa kíkọlu àwọn ènìyàn tí ó mú u. Òfin náà ṣalaye ẹgbẹ́ tí ó ṣíwọ̀ láàyè, nítorí náà, àní bí ọ̀pọ̀ jù lọ nínú àwọn tí ó mú u ti sọnu, ẹni kan tí a lè dé ọdọ rẹ̀ ṣì lè fa paarẹ náà."
   },
   "vision": {
     "heroHeadline": "O yẹ rẹ̀.",

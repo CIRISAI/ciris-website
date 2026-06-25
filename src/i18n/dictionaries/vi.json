@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Giấy Phép Lái Xe",
     "pillar1Sub": "Danh Tính &amp; Khóa Ký",
-    "pillar1Body": "Một khóa ký Ed25519 gắn với phần cứng <em>chính là</em> danh tính của tác nhân. Được lưu trong phần cứng bảo mật (TPM, Secure Enclave, Android Keystore). Không thể giả mạo hay chuyển nhượng.",
+    "pillar1Body": "Một khóa ký lai gắn với phần cứng (Ed25519 + ML-DSA-65) chính <em>là</em> danh tính của tác nhân, được lưu giữ trong phần cứng bảo mật FIPS 140-3 (TPM, Secure Enclave, Android Keystore, YubiKey). Cả hai chữ ký đều phải xác minh thành công. Không thể giả mạo hay chuyển nhượng.",
     "pillar1Note": "Khóa không đại diện cho danh tính. Nó chính là danh tính.",
     "pillar2Label": "2",
     "pillar2Title": "Đăng Ký &amp; Kiểm Tra",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify cung cấp chứng thực mật mã trong các mô hình mối đe dọa đã định nghĩa và không đảm bảo bảo mật tuyệt đối. Khả năng là như nhau dù có giấy phép hay không. Sự khác biệt là trách nhiệm, và với CIRISVerify, trách nhiệm đó có thể chứng minh bằng mật mã.",
     "closingBtnPortal": "Mở Cổng",
     "closingBtnSource": "Xem Mã Nguồn",
-    "closingBtnContact": "Liên Hệ Bán Hàng"
+    "closingBtnContact": "Liên Hệ Bán Hàng",
+    "killSwitchSubheadline": "Một công tắc mà không ai bên trong hệ thống có thể tắt.",
+    "killSwitchHeadline": "Công Tắc Khẩn Cấp Hiến Định",
+    "killSwitchBody": "Quyền lực cuối cùng để dừng một tác nhân CIRIS không nằm ở công ty, mạng lưới, hay bản thân tác nhân. Nó nằm ở những con người được chỉ định rõ ràng. Mỗi người nắm giữ một cặp khóa phần cứng: một khóa bảo mật FIPS 140-3 cho chữ ký truyền thống, đồng thời niêm phong dữ liệu cho thiết bị thứ hai mang chữ ký hậu lượng tử. Để kích hoạt lệnh dừng, đa số người nắm giữ (2 of 3) phải ký lệnh bằng phần cứng của mình. Lệnh mang chữ ký lai Ed25519 + ML-DSA-65, vì vậy nó không thể bị giả mạo, phát lại hay làm giả, ngay cả bởi máy tính lượng tử trong tương lai, và không phần nào của mạng lưới có thể cấp phép, thu hồi hay ghi đè lên nó.",
+    "killSwitchNote": "Chúng tôi thiết kế cho tình huống xấu nhất: một AI tấn công chính công tắc tắt của nó bằng cách nhắm vào những người nắm giữ nó. Hiến pháp quy định một nhóm đại diện luôn hoạt động, vì vậy ngay cả khi hầu hết người nắm giữ bị mất liên lạc, một người còn lại vẫn có thể rút phích cắm."
   },
   "safety": {
     "heroHeadline": "An Toàn Được Tích Hợp Sẵn.",

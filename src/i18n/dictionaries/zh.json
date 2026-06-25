@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "驾照",
     "pillar1Sub": "身份与签名密钥",
-    "pillar1Body": "一个绑定硬件的Ed25519签名密钥，<em>就是</em>智能体的身份。存储在安全硬件中（TPM、安全飞地、Android Keystore）。无法伪造或转移。",
+    "pillar1Body": "一个绑定在硬件上的混合签名密钥（Ed25519 + ML-DSA-65），它<em>就是</em>智能体的身份，保存在符合 FIPS 140-3 标准的安全硬件中（TPM、Secure Enclave、Android Keystore、YubiKey）。两个签名都必须通过验证，无法被伪造或转移。",
     "pillar1Note": "密钥不代表身份，它本身就是身份。",
     "pillar2Label": "2",
     "pillar2Title": "注册与检验",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify在特定威胁模型下提供密码学认证，不保证绝对安全。无论是否获得许可，能力都是相同的。区别在于问责制，而有了CIRISVerify，这种问责制是可以密码学证明的。",
     "closingBtnPortal": "打开门户",
     "closingBtnSource": "查看源代码",
-    "closingBtnContact": "联系销售"
+    "closingBtnContact": "联系销售",
+    "killSwitchSubheadline": "系统内部没有人能关闭的开关。",
+    "killSwitchHeadline": "宪法级紧急停止开关",
+    "killSwitchBody": "最后那道叫停 CIRIS 智能体的权力，不属于公司，不属于网络，也不属于智能体本身。它掌握在指定的人手中。每位持有人都带着一对硬件密钥：一把用于经典签名的 FIPS 140-3 安全密钥，它同时还会封存材料，交给第二台承载后量子签名的设备。要触发叫停，多数持有人 (2 of 3) 在各自的硬件上对命令签名。该命令带有 Ed25519 + ML-DSA-65 混合签名，因此无法被伪造、重放或冒充，即便面对未来的量子计算机也是如此，网络的任何部分都无法授予、撤销或推翻它。",
+    "killSwitchNote": "我们为最坏的情况做了设计：一个 AI 可能会攻击自己的关闭开关，针对持有者下手。宪法定义了一个动态法定人数，所以即使大多数持有者失联，只要有一位可联系到的幸存者，仍然可以拔掉插头。"
   },
   "safety": {
     "heroHeadline": "安全性是内置的。",

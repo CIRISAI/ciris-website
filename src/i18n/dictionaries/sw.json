@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Leseni ya Udereva",
     "pillar1Sub": "Utambulisho &amp; Funguo ya Kusaini",
-    "pillar1Body": "Funguo ya kusaini Ed25519 iliyofungwa kwa vifaa ambayo <em>ndiyo</em> utambulisho wa wakala. Hifadhiwa katika vifaa salama (TPM, Secure Enclave, Android Keystore). Haiwezi kuigwa au kuhamishwa.",
+    "pillar1Body": "Ufunguo wa saini wa mseto uliofungwa kwa maunzi (Ed25519 + ML-DSA-65) ambao <em>ndio</em> utambulisho wa wakala, unaotumiwa kwenye maunzi salama ya FIPS 140-3 (TPM, Secure Enclave, Android Keystore, YubiKey). Saini zote mbili lazima zithibitishwe. Hauwezi kughushiwa wala kuhamishwa.",
     "pillar1Note": "Funguo haiwakilishi utambulisho. Ndiyo utambulisho wenyewe.",
     "pillar2Label": "2",
     "pillar2Title": "Usajili &amp; Ukaguzi",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify hutoa ushuhuda wa kriptografia chini ya mifano ya vitisho iliyoainishwa na haihakikishi usalama kamili. Uwezo ni sawa iwe umeidhinishwa au la. Tofauti ni uwajibikaji, na kwa CIRISVerify, uwajibikaji huo unathibitishwa kwa kriptografia.",
     "closingBtnPortal": "Fungua Tovuti",
     "closingBtnSource": "Tazama Msimbo",
-    "closingBtnContact": "Wasiliana na Mauzo"
+    "closingBtnContact": "Wasiliana na Mauzo",
+    "killSwitchSubheadline": "Swichi ambayo hakuna mtu ndani ya mfumo anayeweza kuizima.",
+    "killSwitchHeadline": "Swichi ya Dharura ya Katiba",
+    "killSwitchBody": "Mamlaka ya mwisho ya kusimamisha wakala wa CIRIS haipo kwa kampuni, wala mtandao, wala wakala mwenyewe. Ipo kwa watu maalum walioorodheshwa. Kila mmoja wao ana jozi ya funguo za maunzi: ufunguo wa usalama wa FIPS 140-3 kwa saini ya kawaida, ambao pia unafunga nyenzo kwa kifaa cha pili kinachobeba saini ya post-quantum. Ili kutoa amri ya kusimama, wengi wa wamiliki (2 of 3) lazima wasaini amri hiyo kwa maunzi yao. Amri inabeba saini za mseto za Ed25519 + ML-DSA-65, kwa hivyo haiwezi kudanganywa, kurudiwa, wala kughushiwa, hata na kompyuta ya quantum ya siku zijazo, na hakuna sehemu ya mtandao inayoweza kutoa, kufuta, au kubatilisha idhini hiyo.",
+    "killSwitchNote": "Tuliunda mfumo huu kwa ajili ya hali mbaya zaidi: akili bandia inayojaribu kuharibu swichi yake ya kuzimika kwa kushambulia watu wanaoshikilia funguo hizo. Katiba inabainisha idadi ya chini ya wamiliki wanaohitajika wakati wowote, kwa hivyo hata kama wamiliki wengi wamepotea, mtu mmoja anayepatikana bado anaweza kuzima mfumo."
   },
   "safety": {
     "heroHeadline": "Usalama Umejengwa Ndani.",

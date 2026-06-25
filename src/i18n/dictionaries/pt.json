@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Carteira de Motorista",
     "pillar1Sub": "Identidade &amp; Chave de Assinatura",
-    "pillar1Body": "Uma chave de assinatura Ed25519 vinculada ao hardware que <em>é</em> a identidade do agente. Armazenada em hardware seguro (TPM, Secure Enclave, Android Keystore). Não pode ser falsificada nem transferida.",
+    "pillar1Body": "Uma chave de assinatura híbrida vinculada ao hardware (Ed25519 + ML-DSA-65) que <em>é</em> a identidade do agente, protegida em hardware seguro FIPS 140-3 (TPM, Secure Enclave, Android Keystore, YubiKey). As duas assinaturas precisam ser verificadas. Não pode ser falsificada nem transferida.",
     "pillar1Note": "A chave não representa a identidade. Ela é a identidade.",
     "pillar2Label": "2",
     "pillar2Title": "Registro &amp; Vistoria",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify fornece atestação criptográfica sob modelos de ameaça definidos e não garante segurança absoluta. A capacidade é a mesma com ou sem licença. A diferença é a responsabilidade, e com CIRISVerify, essa responsabilidade é atestável criptograficamente.",
     "closingBtnPortal": "Abrir Portal",
     "closingBtnSource": "Ver Código",
-    "closingBtnContact": "Falar com Vendas"
+    "closingBtnContact": "Falar com Vendas",
+    "killSwitchSubheadline": "Um interruptor que ninguém dentro do sistema pode desativar.",
+    "killSwitchHeadline": "O Interruptor de Emergência Constitucional",
+    "killSwitchBody": "O poder de parar um agente CIRIS em último caso não pertence à empresa, à rede, nem ao próprio agente. Ele pertence a pessoas específicas. Cada titular carrega um par de chaves físicas: uma chave de segurança FIPS 140-3 para a assinatura clássica, que também protege o material para um segundo dispositivo que carrega a assinatura pós-quântica. Para acionar a parada, a maioria dos titulares (2 of 3) assina o comando no próprio hardware. O comando carrega assinaturas híbridas Ed25519 + ML-DSA-65, portanto não pode ser falsificado, repetido ou forjado, nem mesmo por um computador quântico do futuro, e nenhuma parte da rede pode conceder, revogar ou substituir esse comando.",
+    "killSwitchNote": "Projetamos para o pior cenário: uma IA que ataca seu próprio desligamento indo atrás das pessoas que controlam esse poder. A constituição define um quórum ativo, então mesmo que a maioria dos titulares seja perdida, um único sobrevivente acessível ainda pode desligar o sistema."
   },
   "safety": {
     "heroHeadline": "Segurança Integrada.",

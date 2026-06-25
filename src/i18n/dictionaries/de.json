@@ -636,7 +636,7 @@
     "pillar1Label": "1",
     "pillar1Title": "Führerschein",
     "pillar1Sub": "Identität &amp; Signierschlüssel",
-    "pillar1Body": "Ein hardwaregebundener Ed25519-Signierschlüssel, der <em>die Identität</em> des Agenten <em>ist</em>. Gespeichert in sicherer Hardware (TPM, Secure Enclave, Android Keystore). Kann nicht gefälscht oder übertragen werden.",
+    "pillar1Body": "Ein hardware-gebundener hybrider Signierschlüssel (Ed25519 + ML-DSA-65), der <em>ist</em> die Identität des Agenten, gesichert in FIPS 140-3 zertifizierter Hardware (TPM, Secure Enclave, Android Keystore, YubiKey). Beide Signaturen müssen verifiziert werden. Er kann weder gefälscht noch übertragen werden.",
     "pillar1Note": "Der Schlüssel steht nicht für die Identität. Er ist die Identität.",
     "pillar2Label": "2",
     "pillar2Title": "Zulassung &amp; Inspektion",
@@ -787,7 +787,11 @@
     "closingBody": "CIRISVerify stellt kryptografische Attestierung unter definierten Bedrohungsmodellen bereit und garantiert keine absolute Sicherheit. Die Fähigkeit ist dieselbe, ob lizenziert oder nicht. Der Unterschied liegt in der Verantwortlichkeit, und mit CIRISVerify ist diese Verantwortlichkeit kryptografisch nachweisbar.",
     "closingBtnPortal": "Portal öffnen",
     "closingBtnSource": "Quellcode ansehen",
-    "closingBtnContact": "Vertrieb kontaktieren"
+    "closingBtnContact": "Vertrieb kontaktieren",
+    "killSwitchSubheadline": "Ein Schalter, den niemand im System deaktivieren kann.",
+    "killSwitchHeadline": "Der verfassungsmäßige Notausschalter",
+    "killSwitchBody": "Die letzte Möglichkeit, einen CIRIS-Agenten zu stoppen, liegt nicht beim Unternehmen, beim Netzwerk oder beim Agenten selbst. Sie liegt bei bestimmten Menschen. Jede dieser Personen trägt ein Paar Hardware-Schlüssel: einen FIPS 140-3 Sicherheitsschlüssel für die klassische Signatur, der gleichzeitig das Material für ein zweites Gerät mit der Post-Quanten-Signatur sichert. Um den Stopp auszulösen, müssen die Mehrheit der Inhaber (2 of 3) den Befehl auf ihrer Hardware signieren. Der Befehl trägt hybride Ed25519 + ML-DSA-65 Signaturen, sodass er nicht gefälscht, wiederholt oder vorgetäuscht werden kann, auch nicht durch einen zukünftigen Quantencomputer. Kein Teil des Netzwerks kann ihn erteilen, widerrufen oder außer Kraft setzen.",
+    "killSwitchNote": "Wir haben für den schlimmsten Fall geplant: eine KI, die ihren eigenen Ausschalter angreift, indem sie die Menschen ins Visier nimmt, die ihn halten. Die Verfassung legt ein aktives Quorum fest. Selbst wenn die meisten Inhaber ausfallen, kann ein noch erreichbarer Überlebender den Stecker ziehen."
   },
   "safety": {
     "heroHeadline": "Sicherheit ist eingebaut.",
