@@ -27,9 +27,8 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
           cta={t.common.mtBanner.cta}
         />
       )}
+      <SiteHeader locale={locale} />
       <div className={styles.wrap}>
-        <SiteHeader locale={locale} />
-
         <section className={styles.hero}>
           <p className={styles.eyebrow}>{l.eyebrow}</p>
           <div className={styles.heroTop}>

@@ -35,8 +35,8 @@ export default function PathStaircase({ t, slug }: { t: Dictionary; slug: string
           cta={t.common.mtBanner.cta}
         />
       )}
+      <SiteHeader locale={locale} />
       <main className={`${styles.wrap} ${ACCENT[p.accent] ?? styles.cyan}`}>
-        <SiteHeader locale={locale} />
         <p className={styles.back}>
           <Link href={lh("/")}>{backArrow} {c.back}</Link>
         </p>

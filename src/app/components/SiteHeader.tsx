@@ -14,21 +14,26 @@ export default function SiteHeader({ locale }: { locale: string }) {
   const t = getDictionary(locale);
   const nav = t.common.nav;
 
+  // Self-contained wrap so the header is identical on every page (1120px, same
+  // as the lobby), regardless of how narrow the page's content column is. Render
+  // it at root level — never inside a page's content <main> — or it insets.
   return (
-    <nav className={styles.nav}>
-      <Link className={styles.brand} href={lh("/")}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className={styles.logo} src="/logo.svg" alt="CIRIS" width={26} height={20} />
-        CIRIS
-        <span className={styles.brandTag}> · safe by structure, open by principle, kind by design</span>
-      </Link>
-      <div className={styles.navlinks}>
-        <a className="g" href={lh("/install")}>{nav.install}</a>
-        <a href={lh("/proof")}>{nav.proof}</a>
-        <a href={lh("/constitution")}>{nav.constitution}</a>
-        <a href="https://github.com/CIRISAI/CIRISAgent">GitHub</a>
-        <LanguageSwitcher currentLocale={locale} inline labels={t.common.langSwitcher} />
-      </div>
-    </nav>
+    <div className={styles.wrap}>
+      <nav className={styles.nav}>
+        <Link className={styles.brand} href={lh("/")}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className={styles.logo} src="/logo.svg" alt="CIRIS" width={26} height={20} />
+          CIRIS
+          <span className={styles.brandTag}> · safe by structure, open by principle, kind by design</span>
+        </Link>
+        <div className={styles.navlinks}>
+          <a className="g" href={lh("/install")}>{nav.install}</a>
+          <a href={lh("/proof")}>{nav.proof}</a>
+          <a href={lh("/constitution")}>{nav.constitution}</a>
+          <a href="https://github.com/CIRISAI/CIRISAgent">GitHub</a>
+          <LanguageSwitcher currentLocale={locale} inline labels={t.common.langSwitcher} />
+        </div>
+      </nav>
+    </div>
   );
 }
