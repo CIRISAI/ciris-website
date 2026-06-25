@@ -21,6 +21,7 @@ const V2_ROUTES = new Set([
   "/how-it-works",
   "/research-status",
   "/proof",
+  "/verification",
   "/about",
   "/trust",
   "/safety",

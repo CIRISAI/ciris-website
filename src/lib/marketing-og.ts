@@ -2010,6 +2010,12 @@ export const MARKETING_OG: Record<
       "description": "ہم آہنگی پر مبنی alignment کی ریاضیاتی بنیاد۔ پروڈکشن AI traces پر Kish فارمولہ سے موثر جہت پذیری کی پیمائش، singularity کی حد، اور L-01 انفارمیشن تھیوری کی چھت۔"
     }
   },
+  "/verification": {
+    "en": {
+      "title": "Continuous Verification: How the Sausage Gets Made",
+      "description": "The CI matrix that mechanically enforces CIRIS's safety boundaries before any image is minted. 15,000+ tests, bottom-up across six projects, cryptographically signed."
+    }
+  },
   "/proof": {
     "en": {
       "title": "Proof: Don't Take Our Word for It",

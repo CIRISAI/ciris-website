@@ -114,6 +114,9 @@ export default function ProofV2({ t, locale }: { t: Dictionary; locale: string }
             {rs.engProofCta} →
           </a>
         </p>
+        <p className={s.paragraph}>
+          <Link href="/verification">{rs.engVerificationCta} →</Link>
+        </p>
       </section>
 
       {/* Theory — points down into the deep research, papers, and constitution. */}
