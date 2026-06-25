@@ -19,7 +19,8 @@ const Lbl = ({ x, y, children, fill, anchor = 'start', size = 15 }) => (
 function OGHome() {
   const a = C.cyan;
   // right-weighted convergence field, ~ square, centred at (cx,cy)
-  const cx = 880, cy = 312, F = 250; // field half-size
+  const cx = 854, cy = 312, F = 250; // field half-size (nudged left so the
+  // right-edge problem labels keep margin)
   const floorY = cy + F * 0.30;
   // four sources, colour-matched to the four paths (physical corners)
   const SRC = [
@@ -68,6 +69,20 @@ function OGHome() {
             <circle cx={s.x} cy={s.y} r="9" fill={_mix(s.c,0.18)} stroke={s.c} strokeWidth="2" />
             <circle cx={s.x} cy={s.y} r="3" fill={s.c} />
           </g>
+        ))}
+        {/* name the four problems at their source nodes — so the card SAYS what
+            is converging, not just shows abstract streams. Bright light-tints of
+            each node colour so they stay colour-coded but read easily on the dark
+            field. Localized via OG_TR (reuses the home hero's heroLabels). */}
+        {[
+          { i: 0, t: 'No AI you can trust',      dy: -25, c: '#a9e7ff' },
+          { i: 1, t: "Can't tell what's true",   dy: -25, c: '#ffaecb' },
+          { i: 2, t: 'AI outrunning everyone',   dy: 41,  c: '#cabff9' },
+          { i: 3, t: 'Big Tech owns everything', dy: 41,  c: '#8fd9dc' },
+        ].map(({ i, t, dy, c }) => (
+          <text key={`lbl${i}`} x={SRC[i].x} y={SRC[i].y + dy} textAnchor="middle"
+                fontFamily="Geist Mono, monospace" fontSize="19" fontWeight="500" letterSpacing="0.02em"
+                fill={c}>{window.ogTr(t)}</text>
         ))}
         {/* the luminous floor (shared substrate) the streams fuse into */}
         <g filter="url(#softglow)">

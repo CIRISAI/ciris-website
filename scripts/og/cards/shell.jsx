@@ -66,9 +66,9 @@ window.Mark = Mark;
 // Corner brand lockup: mark + CIRIS wordmark.
 function Lockup({ markColor }) {
   return (
-    <div style={{ position: 'absolute', top: 54, left: 72, display: 'flex', alignItems: 'center', gap: 14, zIndex: 5 }}>
-      <Mark size={34} color={markColor || CIRIS.teal} />
-      <span style={{ fontFamily: 'Geist, sans-serif', fontWeight: 600, fontSize: 25, letterSpacing: '0.26em', color: CIRIS.text, paddingLeft: 2 }}>CIRIS</span>
+    <div style={{ position: 'absolute', top: 50, left: 72, display: 'flex', alignItems: 'center', gap: 17, zIndex: 5 }}>
+      <Mark size={53} color={markColor || CIRIS.teal} />
+      <span style={{ fontFamily: 'Geist, sans-serif', fontWeight: 600, fontSize: 38, letterSpacing: '0.26em', color: CIRIS.text, paddingLeft: 2 }}>CIRIS</span>
     </div>
   );
 }
@@ -85,7 +85,7 @@ const CHIP_GLYPHS = {
 };
 function Chip({ kind }) {
   return (
-    <svg width="52" height="52" viewBox="0 0 56 56" style={{ display: 'block' }} aria-hidden="true">
+    <svg width="81" height="81" viewBox="0 0 56 56" style={{ display: 'block' }} aria-hidden="true">
       <rect x="1" y="1" width="54" height="54" rx="14" fill="#11161d" stroke="#2a313b" />
       {CHIP_GLYPHS[kind]}
     </svg>
@@ -141,15 +141,17 @@ function Card({ accent = CIRIS.teal, eyebrow, title, children, atmos, scrim = tr
           lineHeight: 1.07, letterSpacing: ogLatin() ? '-0.022em' : 'normal', color: CIRIS.text, textWrap: 'pretty', overflowWrap: 'break-word', maxWidth: 624 }}
           dangerouslySetInnerHTML={{ __html: ogTr(title) }} />
       </div>
-      {/* CTA row — store/source chips + localized get-it-now + accent bar. */}
-      <div style={{ position: 'absolute', left: 60, top: 468, display: 'flex', gap: 14, zIndex: 5 }}>
+      {/* CTA row — store/source chips + localized get-it-now + accent bar.
+          Sized up so the logo, chips, and CTA stay recognizable at the small
+          thumbnail size social feeds (LinkedIn etc.) render share cards at. */}
+      <div style={{ position: 'absolute', left: 60, top: 446, display: 'flex', gap: 16, zIndex: 5 }}>
         <Chip kind="apple" /><Chip kind="gplay" /><Chip kind="docker" /><Chip kind="github" />
       </div>
-      <div style={{ position: 'absolute', left: 60, top: 538, display: 'inline-flex', alignItems: 'center',
-        height: 26, padding: '0 12px', borderRadius: 6, background: 'rgba(13,17,23,0.5)', border: '1px dashed #3a424d',
-        fontFamily: OG_MONO, fontSize: 11, letterSpacing: '0.1em', textTransform: ogLatin() ? 'uppercase' : 'none',
+      <div style={{ position: 'absolute', left: 60, top: 540, display: 'inline-flex', alignItems: 'center',
+        height: 45, padding: '0 20px', borderRadius: 9, background: 'rgba(13,17,23,0.5)', border: '1px dashed #3a424d',
+        fontFamily: OG_MONO, fontSize: 21, fontWeight: 500, letterSpacing: '0.1em', textTransform: ogLatin() ? 'uppercase' : 'none',
         color: CIRIS.dim, zIndex: 5, direction: ogDir(), whiteSpace: 'nowrap' }}>{ogTr('GET IT NOW')}</div>
-      <div style={{ position: 'absolute', left: 60, top: 574, width: 300, height: 3, borderRadius: 1.5, background: accent, zIndex: 5 }} />
+      <div style={{ position: 'absolute', left: 60, top: 594, width: 340, height: 4, borderRadius: 2, background: accent, zIndex: 5 }} />
       {/* safe-area guide (toggle) */}
       <div className="og-safe" style={{ position: 'absolute', left: 40, top: 45, width: 1120, height: 540,
         border: '1px dashed rgba(255,255,255,0.22)', borderRadius: 4, pointerEvents: 'none', display: 'none', zIndex: 6 }} />
