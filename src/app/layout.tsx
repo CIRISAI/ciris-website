@@ -1,6 +1,7 @@
 import "./global.css";
 import { RootProvider } from "fumadocs-ui/provider";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { PREFIXED_LOCALES, LOCALIZED_ROUTES } from "@/i18n/config";
@@ -26,8 +27,21 @@ var curFull=path==='/'?'/':path+'/';
 if(t!==curFull)location.replace(t);
 }catch(e){}})();`;
 
-const inter = Inter({
-  subsets: ["latin"],
+// The site's fonts live here, on the ONE root layout. Previously the (home) and
+// /about route groups each rendered their own <html><body> with these fonts,
+// which produced a second <html> with no `dark` class — on client navigation
+// React reconciled <html> to that version and wiped `.dark`, flashing the page
+// white. There is now exactly one <html>; the theme can't be wiped.
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const fontBrandRegular = localFont({
+  src: "../fonts/AspektaVF.woff2",
+  variable: "--font-brand-regular",
+  display: "swap",
+  style: "normal",
+  weight: "100 900",
+  preload: true,
+  fallback: ["sans-serif"],
 });
 
 const TITLE =
@@ -214,8 +228,10 @@ const jsonLd = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`dark ${inter.className}`} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body
+        className={`flex flex-col min-h-screen antialiased ${fontBrandRegular.className} ${geistSans.variable} ${geistMono.variable}`}
+      >
         <script dangerouslySetInnerHTML={{ __html: LOCALE_GUARD }} />
         <script
           type="application/ld+json"
