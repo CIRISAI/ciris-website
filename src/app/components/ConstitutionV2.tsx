@@ -12,7 +12,9 @@ import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShe
 
 const REPO = "https://github.com/CIRISAI/CIRISRegistry";
 const CONST_DIR = `${REPO}/tree/main/FSD/CIRIS_Constitution`;
-const PDF = `${REPO}/blob/main/FSD/CIRIS_Constitution/ciris-constitution-0.4.pdf`;
+// Self-hosted so the read CTA downloads the reader PDF directly (the `download`
+// attribute only forces a download for same-origin files, not a GitHub blob URL).
+const PDF = "/ciris-constitution-0.4.pdf";
 
 // Per-part source files, in the same order as constitution.parts.
 const PART_FILES = [
@@ -87,7 +89,7 @@ export default function ConstitutionV2({ t, locale }: { t: Dictionary; locale: s
       {/* Read it / read the source. */}
       <section className={s.cta}>
         <div className={s.ctaRow}>
-          <a href={PDF} target="_blank" rel="noopener noreferrer" className={`${s.btn} ${s.btnP}`}>
+          <a href={PDF} download className={`${s.btn} ${s.btnP}`}>
             {c.readCta}
           </a>
           <a href={CONST_DIR} target="_blank" rel="noopener noreferrer" className={`${s.btn} ${s.btnS}`}>
