@@ -621,6 +621,12 @@
       "compareBtn": "Comparar Abordagens",
       "coherenceBtn": "Catraca de Coerência",
       "scoringBtn": "Pontuação CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "O pipeline de consciência",
+      "h2": "Os agentes de hoje agem. O CIRIS decide, com responsabilidade.",
+      "body1": "Um agente de IA comum vai direto do prompt para os tokens e depois para a ação. O CIRIS adiciona uma etapa que não existe em nenhum outro lugar. Antes de qualquer ação acontecer, a decisão passa por um pipeline de consciência: ela é avaliada, verificada em relação à constituição e transformada em um registro assinado e testemunhado que qualquer pessoa pode verificar. A ação só acontece se esse registro for válido.",
+      "body2": "É isso que faz do CIRIS menos um agente e mais uma instituição. Ele tem memória, leis, delegação, responsabilidade e um registro que ninguém pode alterar em silêncio, a mesma estrutura que permite às sociedades humanas confiar umas nas outras em grande escala. A parte nova não é a criptografia. É que uma decisão importante precisa se tornar responsável antes de poder agir."
     }
   },
   "trust": {
@@ -791,7 +797,8 @@
     "killSwitchSubheadline": "Um interruptor que ninguém dentro do sistema pode desativar.",
     "killSwitchHeadline": "O Interruptor de Emergência Constitucional",
     "killSwitchBody": "O poder de parar um agente CIRIS em último caso não pertence à empresa, à rede, nem ao próprio agente. Ele pertence a pessoas específicas. Cada titular carrega um par de chaves físicas: uma chave de segurança FIPS 140-3 para a assinatura clássica, que também protege o material para um segundo dispositivo que carrega a assinatura pós-quântica. Para acionar a parada, a maioria dos titulares (2 of 3) assina o comando no próprio hardware. O comando carrega assinaturas híbridas Ed25519 + ML-DSA-65, portanto não pode ser falsificado, repetido ou forjado, nem mesmo por um computador quântico do futuro, e nenhuma parte da rede pode conceder, revogar ou substituir esse comando.",
-    "killSwitchNote": "Projetamos para o pior cenário: uma IA que ataca seu próprio desligamento indo atrás das pessoas que controlam esse poder. A constituição define um quórum ativo, então mesmo que a maioria dos titulares seja perdida, um único sobrevivente acessível ainda pode desligar o sistema."
+    "killSwitchNote": "Projetamos para o pior cenário: uma IA que ataca seu próprio desligamento indo atrás das pessoas que controlam esse poder. A constituição define um quórum ativo, então mesmo que a maioria dos titulares seja perdida, um único sobrevivente acessível ainda pode desligar o sistema.",
+    "pillarsProtects": "A criptografia não é o ponto central. O que ela protege é o seguinte: cada decisão importante vira um registro responsável que pode ser verificado de forma independente, em vez de algo que você simplesmente precisa acreditar."
   },
   "safety": {
     "heroHeadline": "Segurança Integrada.",
@@ -2307,7 +2314,8 @@
     "title": "O Alcance",
     "open": [
       "Uma criança estende a mão e confia em quem a segura. O universo não faz outra coisa. Átomos se alcançam e viram moléculas. Células se alcançam e viram corpos. Pessoas atravessam um vazio que não podem verificar, em direção a filhos que ainda não nasceram, e chamam isso de amor. Em cada degrau onde isso importa, a mesma forma: duas agências se alcançando, em confiança, por algo maior do que qualquer uma delas sozinha consegue segurar.",
-      "Construímos uma internet que esqueceu isso. Ela colocou uma máquina entre cada mão estendida e fez da máquina a coisa em que você confia. Ela observou o alcance e o vendeu de volta. Deixou uma voz falar com uma criança sem que ninguém respondesse pelo que ela disse."
+      "Construímos uma internet que esqueceu isso. Ela colocou uma máquina entre cada mão estendida e fez da máquina a coisa em que você confia. Ela observou o alcance e o vendeu de volta. Deixou uma voz falar com uma criança sem que ninguém respondesse pelo que ela disse.",
+      "A escada nunca parou nas pessoas. As pessoas chegam às comunidades, as comunidades chegam às civilizações, e nenhuma civilização se sustenta só com boa vontade. Esse alcance constrói uma estrutura para carregar seu próprio peso: tribunais, contratos, constituições, revisão por pares, identidade, lei. Essa estrutura é a consciência que demos à sociedade, a forma como estranhos passam a confiar uns nos outros em grande escala. Agora um novo tipo de mente se aproxima de nós, mais rápido do que tudo isso, e chega sem nada disso. Inteligência sem instituições não se sustenta, por mais alinhada que fosse no dia em que foi lançada."
     ],
     "honors": "O CIRIS honra o alcance em vez de interceptá-lo.",
     "body": [

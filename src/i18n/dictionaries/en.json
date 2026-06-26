@@ -253,6 +253,12 @@
       "buttonText": "View Source",
       "linkText": "Read the Thesis"
     },
+    "consciencePipeline": {
+      "label": "The conscience pipeline",
+      "h2": "Today’s agents act. CIRIS decides, accountably.",
+      "body1": "A normal AI agent goes straight from prompt to tokens to tool call. CIRIS adds a step that does not exist anywhere else. Before an action can happen, the decision passes through a conscience pipeline: it is weighed, checked against the constitution, and turned into a signed, witnessed record that anyone can verify. The action only happens if that record holds.",
+      "body2": "This is what makes CIRIS less an agent and more an institution. It has memory, laws, delegation, accountability, and a record no one can quietly change, the same machinery that lets human societies trust each other at scale. The novel part is not the cryptography. It is that a consequential decision must become accountable before it is allowed to act."
+    },
     "whatIsCiris": {
       "heading": "What is CIRIS?",
       "body": "CIRIS is an <strong>open-source AI agent framework</strong> that wraps any LLM (OpenAI, Anthropic, local models) with runtime conscience. Every action the agent considers passes through multiple validation layers before execution.",
@@ -810,6 +816,7 @@
     "pillar3Sub": "Accountability &amp; Licensing",
     "pillar3Body": "Tracks the human-in-the-loop accountability chain: which organization deployed this agent, which licensed human is responsible, what capabilities they’re authorized to use, and mandatory disclosure shown to every user.",
     "pillar3Note": "Unlicensed agents can operate, but cannot perform professional services.",
+    "pillarsProtects": "The cryptography is not the point. What it protects is: every consequential decision becomes an accountable record that survives independent verification, instead of something you are asked to trust.",
     "multiSourceHeadline": "Multi-Source Validation",
     "multiSourceSubheadline": "HTTPS-authoritative. DNS-advisory.",
     "multiSourceCopy": "CIRISVerify doesn’t trust a single source. HTTPS endpoints at independent domains are authoritative; DNS provides advisory cross-checks. If sources disagree, the agent is restricted. Anti-rollback protection tracks the highest-seen revocation revision and rejects any decrease.",
@@ -2252,7 +2259,8 @@
     "title": "The Reaching",
     "open": [
       "A child reaches for a hand, and trusts it. The universe does nothing else. Atoms reach and become molecules. Cells reach and become bodies. People reach across a void they cannot verify, toward children not yet born, and call it love. At every rung where it matters, the same shape: two agencies reaching, in trust, for more than either alone can hold.",
-      "We built an internet that forgot this. It put a machine between every reaching hand and made the machine the thing you trust. It watched the reaching and sold it back. It let a voice speak to a child with no one accountable for what it said."
+      "We built an internet that forgot this. It put a machine between every reaching hand and made the machine the thing you trust. It watched the reaching and sold it back. It let a voice speak to a child with no one accountable for what it said.",
+      "The ladder never stopped at people. People reach into communities, communities into civilizations, and no civilization holds together on goodwill alone. The reaching builds scaffolding to carry its own weight: courts, contracts, constitutions, peer review, identity, law. That scaffolding is the conscience we gave society, the way strangers come to trust each other at scale. Now a new kind of mind reaches toward us, faster than all of it, and arrives with none of it. Intelligence without institutions does not hold, however aligned it was the day it shipped."
     ],
     "honors": "CIRIS honors the reaching instead of intercepting it.",
     "body": [

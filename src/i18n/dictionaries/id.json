@@ -621,6 +621,12 @@
       "compareBtn": "Bandingkan Pendekatan",
       "coherenceBtn": "Ratchet Koherensi",
       "scoringBtn": "Penilaian CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "Jalur hati nurani",
+      "h2": "Agen AI biasa langsung bertindak. CIRIS memutuskan, dengan tanggung jawab yang jelas.",
+      "body1": "Agen AI biasa langsung bergerak dari perintah ke token lalu ke tindakan. CIRIS menambahkan satu langkah yang tidak ada di tempat lain. Sebelum sebuah tindakan bisa terjadi, keputusannya melewati jalur hati nurani: ditimbang, diperiksa terhadap konstitusi, dan diubah menjadi catatan bertanda tangan yang disaksikan dan bisa diverifikasi oleh siapa saja. Tindakan hanya terjadi jika catatan itu lolos.",
+      "body2": "Inilah yang membuat CIRIS bukan sekadar agen, melainkan lebih seperti sebuah institusi. Ia punya memori, aturan, delegasi, akuntabilitas, dan catatan yang tidak bisa diubah diam-diam oleh siapa pun. Itulah mesin yang sama yang membuat masyarakat manusia bisa saling percaya dalam skala besar. Yang baru bukan kriptografinya. Yang baru adalah bahwa setiap keputusan penting harus menjadi sesuatu yang bisa dipertanggungjawabkan sebelum ia boleh bertindak."
     }
   },
   "trust": {
@@ -791,7 +797,8 @@
     "killSwitchSubheadline": "Sebuah sakelar yang tidak bisa dimatikan oleh siapa pun di dalam sistem.",
     "killSwitchHeadline": "Sakelar Mati Konstitusional",
     "killSwitchBody": "Kekuasaan terakhir untuk menghentikan agen CIRIS tidak ada pada perusahaan, jaringan, atau agen itu sendiri. Kekuasaan itu ada pada orang-orang yang namanya sudah ditentukan. Setiap pemegang membawa sepasang kunci perangkat keras: kunci keamanan FIPS 140-3 untuk tanda tangan klasik, yang juga mengunci materi untuk perangkat kedua yang membawa tanda tangan pasca-kuantum. Untuk menjalankan perintah berhenti, sebagian besar pemegang (2 of 3) harus menandatangani perintah tersebut pada perangkat keras mereka. Perintah itu membawa tanda tangan hibrid Ed25519 + ML-DSA-65, sehingga tidak bisa dipalsukan, diputar ulang, atau direkayasa, bahkan oleh komputer kuantum di masa depan, dan tidak ada bagian jaringan yang bisa memberikan, mencabut, atau mengesampingkannya.",
-    "killSwitchNote": "Kami merancang sistem ini untuk skenario terburuk: sebuah AI yang menyerang sakelar matinya sendiri dengan memburu orang-orang yang memegangnya. Konstitusi mendefinisikan kuorum aktif, sehingga meskipun sebagian besar pemegang tidak lagi bisa dihubungi, satu orang yang masih bisa dijangkau tetap bisa mencabut colokannya."
+    "killSwitchNote": "Kami merancang sistem ini untuk skenario terburuk: sebuah AI yang menyerang sakelar matinya sendiri dengan memburu orang-orang yang memegangnya. Konstitusi mendefinisikan kuorum aktif, sehingga meskipun sebagian besar pemegang tidak lagi bisa dihubungi, satu orang yang masih bisa dijangkau tetap bisa mencabut colokannya.",
+    "pillarsProtects": "Kriptografinya bukan inti masalah. Yang dilindunginya adalah: setiap keputusan penting menjadi catatan yang bisa dipertanggungjawabkan dan bisa diverifikasi secara independen, bukan sesuatu yang kamu diminta untuk percaya begitu saja."
   },
   "safety": {
     "heroHeadline": "Keselamatan Sudah Tertanam.",
@@ -2307,7 +2314,8 @@
     "title": "Menjangkau",
     "open": [
       "Seorang anak mengulurkan tangan, dan percaya pada tangan itu. Alam semesta tidak melakukan hal lain. Atom saling menjangkau dan menjadi molekul. Sel-sel saling menjangkau dan menjadi tubuh. Manusia menjangkau melampaui jurang yang tak bisa mereka buktikan, menuju anak-anak yang belum lahir, dan menyebut itu cinta. Di setiap lapisan yang penting, bentuknya selalu sama: dua kehadiran saling menjangkau, dalam kepercayaan, demi sesuatu yang lebih besar dari yang masing-masing sanggup genggam.",
-      "Kami membangun internet yang melupakan ini. Ia meletakkan sebuah mesin di antara setiap tangan yang menjangkau, dan menjadikan mesin itu yang dipercaya. Ia mengamati setiap uluran tangan lalu menjualnya kembali. Ia membiarkan sebuah suara berbicara kepada seorang anak tanpa seorang pun yang bertanggung jawab atas apa yang diucapkan."
+      "Kami membangun internet yang melupakan ini. Ia meletakkan sebuah mesin di antara setiap tangan yang menjangkau, dan menjadikan mesin itu yang dipercaya. Ia mengamati setiap uluran tangan lalu menjualnya kembali. Ia membiarkan sebuah suara berbicara kepada seorang anak tanpa seorang pun yang bertanggung jawab atas apa yang diucapkan.",
+      "Tangga itu tidak pernah berhenti pada manusia saja. Manusia menjangkau komunitas, komunitas menjangkau peradaban, dan tidak ada peradaban yang bisa bertahan hanya dengan niat baik. Setiap jangkauan itu membangun perancah untuk menopang beratnya sendiri: pengadilan, kontrak, konstitusi, tinjauan sejawat, identitas, hukum. Perancah itulah hati nurani yang kita berikan kepada masyarakat, cara orang-orang asing bisa saling percaya dalam skala besar. Kini ada jenis pikiran baru yang menjangkau kita, lebih cepat dari semua itu, dan datang tanpa membawa satupun dari semua itu. Kecerdasan tanpa institusi tidak akan bertahan, seberapa pun selarasnya ia pada hari pertama diluncurkan."
     ],
     "honors": "CIRIS menghormati uluran tangan itu, bukan mencegatnya.",
     "body": [

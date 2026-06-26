@@ -36,6 +36,16 @@ export default function HowItWorksV2({ t, locale }: { t: Dictionary; locale: str
       backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
+      {/* The conscience pipeline — the mechanism, and why CIRIS is an institution. */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{hiw.consciencePipeline.label}</p>
+        <h2 className={s.h2}>{hiw.consciencePipeline.h2}</h2>
+        <p className={s.paragraph}>{hiw.consciencePipeline.body1}</p>
+        <div className={s.callout}>
+          <p className={s.paragraph}>{hiw.consciencePipeline.body2}</p>
+        </div>
+      </section>
+
       {/* What is CIRIS */}
       <section className={s.section}>
         <h2 className={s.h2}>{hiw.whatIsCiris.heading}</h2>

@@ -621,6 +621,12 @@
       "compareBtn": "Linganisha Mbinu",
       "coherenceBtn": "Ratchet ya Upatanifu",
       "scoringBtn": "Upimaji wa CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "Mfumo wa dhamiri",
+      "h2": "Mawakala wa leo wanachukua hatua. CIRIS inaamua, kwa uwajibikaji.",
+      "body1": "Wakala wa kawaida wa AI huenda moja kwa moja kutoka kwa amri hadi maneno hadi tendo. CIRIS inaongeza hatua ambayo haipo mahali pengine popote. Kabla ya tendo lolote kutokea, uamuzi hupita kwenye mfumo wa dhamiri: unapimwa, unaangaliwa dhidi ya katiba, na kugeuzwa kuwa rekodi iliyosainiwa na kushuhudiwa ambayo mtu yeyote anaweza kuthibitisha. Tendo linafanyika tu ikiwa rekodi hiyo inashikilia.",
+      "body2": "Hii ndiyo inayofanya CIRIS kuwa si wakala tu, bali taasisi zaidi. Ina kumbukumbu, sheria, uwakilishi, uwajibikaji, na rekodi ambayo hakuna anayeweza kuibadilisha kimya kimya, mashine ile ile inayoruhusu jamii za wanadamu kuamini kila mmoja kwa kiwango kikubwa. Sehemu mpya si usimbaji fiche. Ni kwamba uamuzi mkubwa lazima uwe na uwajibikaji kabla ya kuruhusiwa kutenda."
     }
   },
   "trust": {
@@ -791,7 +797,8 @@
     "killSwitchSubheadline": "Swichi ambayo hakuna mtu ndani ya mfumo anayeweza kuizima.",
     "killSwitchHeadline": "Swichi ya Dharura ya Katiba",
     "killSwitchBody": "Mamlaka ya mwisho ya kusimamisha wakala wa CIRIS haipo kwa kampuni, wala mtandao, wala wakala mwenyewe. Ipo kwa watu maalum walioorodheshwa. Kila mmoja wao ana jozi ya funguo za maunzi: ufunguo wa usalama wa FIPS 140-3 kwa saini ya kawaida, ambao pia unafunga nyenzo kwa kifaa cha pili kinachobeba saini ya post-quantum. Ili kutoa amri ya kusimama, wengi wa wamiliki (2 of 3) lazima wasaini amri hiyo kwa maunzi yao. Amri inabeba saini za mseto za Ed25519 + ML-DSA-65, kwa hivyo haiwezi kudanganywa, kurudiwa, wala kughushiwa, hata na kompyuta ya quantum ya siku zijazo, na hakuna sehemu ya mtandao inayoweza kutoa, kufuta, au kubatilisha idhini hiyo.",
-    "killSwitchNote": "Tuliunda mfumo huu kwa ajili ya hali mbaya zaidi: akili bandia inayojaribu kuharibu swichi yake ya kuzimika kwa kushambulia watu wanaoshikilia funguo hizo. Katiba inabainisha idadi ya chini ya wamiliki wanaohitajika wakati wowote, kwa hivyo hata kama wamiliki wengi wamepotea, mtu mmoja anayepatikana bado anaweza kuzima mfumo."
+    "killSwitchNote": "Tuliunda mfumo huu kwa ajili ya hali mbaya zaidi: akili bandia inayojaribu kuharibu swichi yake ya kuzimika kwa kushambulia watu wanaoshikilia funguo hizo. Katiba inabainisha idadi ya chini ya wamiliki wanaohitajika wakati wowote, kwa hivyo hata kama wamiliki wengi wamepotea, mtu mmoja anayepatikana bado anaweza kuzima mfumo.",
+    "pillarsProtects": "Usimbaji fiche si ndio muhimu. Kinacholindwa ndicho kinachohusika: kila uamuzi mkubwa unakuwa rekodi inayoweza kukaguliwa, inayostahimili uthibitishaji wa mtu mwingine, badala ya kitu unachoombwa kukiamini tu."
   },
   "safety": {
     "heroHeadline": "Usalama Umejengwa Ndani.",
@@ -2307,7 +2314,8 @@
     "title": "Kufikia",
     "open": [
       "Mtoto hunyoosha mkono, akitafuta kushikwa, naye anaamini. Ulimwengu haufanyi kitu kingine chochote. Atomi hufikiana na kuwa molekuli. Seli hufikiana na kuwa miili. Watu hufikiana kupitia ukiwa ambao hawawezi kuthibitisha, wakielekea watoto ambao bado hawajazaliwa, na huita hilo upendo. Katika kila ngazi inayohusika, umbo moja linajitokeza: vyombo viwili vikiwa vinanyoosha mikono, kwa imani, vikiwa vinatafuta zaidi ya ambalo kila kimoja kinaweza kushikilia peke yake.",
-      "Tulijenga mtandao ambao ulisahau hilo. Uliweka mashine kati ya kila mkono unaonyooshwa na kuifanya mashine ndiyo unayoamini. Uliangalia kufikiana na kuuza tena. Ulimruhusu sauti kuzungumza na mtoto bila mtu yeyote kuwajibika kwa aliyosema."
+      "Tulijenga mtandao ambao ulisahau hilo. Uliweka mashine kati ya kila mkono unaonyooshwa na kuifanya mashine ndiyo unayoamini. Uliangalia kufikiana na kuuza tena. Ulimruhusu sauti kuzungumza na mtoto bila mtu yeyote kuwajibika kwa aliyosema.",
+      "Ngazi haikuishia kwa watu. Watu wanafikia jamii, jamii zinafikia ustaarabu, na hakuna ustaarabu unaoshikamana kwa nia njema peke yake. Kufikia huku kunajengea mifumo ya kustahimili uzito wake mwenyewe: mahakama, mikataba, katiba, ukaguzi wa wenzao, utambulisho, sheria. Mifumo hiyo ndiyo dhamiri tuliyoipa jamii, njia ambayo wageni wanakuja kuamini kila mmoja kwa kiwango kikubwa. Sasa aina mpya ya akili inatufikia, haraka zaidi ya vyote hivyo, na inafika bila chochote kati ya hivyo. Akili bila taasisi haishikamani, iwe ilikuwa ikiendana vipi siku ilipotolewa."
     ],
     "honors": "CIRIS inakubaliana na kufikiana badala ya kukizuia.",
     "body": [

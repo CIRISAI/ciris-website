@@ -621,6 +621,12 @@
       "compareBtn": "Comparer les Approches",
       "coherenceBtn": "Cliquet de Coherence",
       "scoringBtn": "Score CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "Le pipeline de conscience",
+      "h2": "Les agents d'aujourd'hui agissent. CIRIS décide, avec des comptes à rendre.",
+      "body1": "Un agent IA classique passe directement de la requête aux mots, puis à l'action. CIRIS ajoute une étape qui n'existe nulle part ailleurs. Avant qu'une action puisse avoir lieu, la décision traverse un pipeline de conscience : elle est pesée, vérifiée par rapport à la constitution, et transformée en un enregistrement signé et attesté que tout le monde peut contrôler. L'action n'a lieu que si cet enregistrement tient la route.",
+      "body2": "C'est ce qui fait de CIRIS moins un agent qu'une institution. Il a de la mémoire, des règles, une délégation, des comptes à rendre, et un enregistrement que personne ne peut modifier discrètement. C'est le même mécanisme qui permet aux sociétés humaines de se faire confiance à grande échelle. La nouveauté n'est pas dans la cryptographie. C'est qu'une décision importante doit devenir responsable avant de pouvoir agir."
     }
   },
   "trust": {
@@ -791,7 +797,8 @@
     "killSwitchSubheadline": "Un interrupteur que personne à l'intérieur du système ne peut désactiver.",
     "killSwitchHeadline": "L'interrupteur d'arrêt constitutionnel",
     "killSwitchBody": "Le pouvoir ultime d'arrêter un agent CIRIS n'appartient ni à l'entreprise, ni au réseau, ni à l'agent lui-même. Il appartient à des personnes nommément désignées. Chaque détenteur possède une paire de clés matérielles : une clé de sécurité FIPS 140-3 pour la signature classique, qui scelle aussi le matériel pour un second appareil portant la signature post-quantique. Pour déclencher l'arrêt, une majorité des détenteurs (2 of 3) signe la commande sur leur matériel. La commande porte des signatures hybrides Ed25519 + ML-DSA-65, donc elle ne peut pas être falsifiée, rejouée ou imitée, même par un futur ordinateur quantique, et aucune partie du réseau ne peut l'accorder, la révoquer ou la contourner.",
-    "killSwitchNote": "Nous avons conçu le système pour le pire scénario : une IA qui s'attaque à son propre interrupteur en visant les personnes qui le détiennent. La constitution définit un quorum actif, de sorte que même si la plupart des détenteurs sont hors de portée, un seul survivant joignable peut encore tout arrêter."
+    "killSwitchNote": "Nous avons conçu le système pour le pire scénario : une IA qui s'attaque à son propre interrupteur en visant les personnes qui le détiennent. La constitution définit un quorum actif, de sorte que même si la plupart des détenteurs sont hors de portée, un seul survivant joignable peut encore tout arrêter.",
+    "pillarsProtects": "La cryptographie n'est pas l'essentiel. Ce qu'elle protège, c'est ceci : chaque décision importante devient un enregistrement vérifiable, que n'importe qui peut contrôler de façon indépendante, au lieu d'une chose qu'on vous demande simplement de croire sur parole."
   },
   "safety": {
     "heroHeadline": "La securite integree.",
@@ -2307,7 +2314,8 @@
     "title": "Le Geste vers l'autre",
     "open": [
       "Un enfant tend la main et fait confiance. L'univers ne fait rien d'autre. Les atomes se tendent et deviennent des molécules. Les cellules se tendent et deviennent des corps. Les gens traversent un vide qu'ils ne peuvent pas vérifier, vers des enfants qui ne sont pas encore nés, et ils appellent ça l'amour. À chaque échelon où ça compte, la même forme : deux êtres qui se tendent la main, en confiance, vers quelque chose que ni l'un ni l'autre ne pourrait tenir seul.",
-      "Nous avons construit un internet qui a oublié ça. Il a placé une machine entre chaque main tendue et a fait de la machine la chose en qui tu mets ta confiance. Il a observé le geste et l'a revendu. Il a laissé une voix parler à un enfant sans que personne ne soit responsable de ce qu'elle disait."
+      "Nous avons construit un internet qui a oublié ça. Il a placé une machine entre chaque main tendue et a fait de la machine la chose en qui tu mets ta confiance. Il a observé le geste et l'a revendu. Il a laissé une voix parler à un enfant sans que personne ne soit responsable de ce qu'elle disait.",
+      "L'échelle n'a jamais arrêté aux individus. Les individus s'étendent vers les communautés, les communautés vers les civilisations, et aucune civilisation ne tient sur la bonne volonté seule. Cette extension construit des structures pour porter son propre poids : tribunaux, contrats, constitutions, révision par les pairs, identité, loi. Ces structures, c'est la conscience que nous avons donnée à la société, la façon dont des inconnus en arrivent à se faire confiance à grande échelle. Maintenant, un nouveau type d'esprit s'étend vers nous, plus vite que tout cela, et arrive sans rien de tout cela. L'intelligence sans institutions ne tient pas, aussi alignée qu'elle ait été le jour de son lancement."
     ],
     "honors": "CIRIS honore le geste vers l'autre au lieu de l'intercepter.",
     "body": [

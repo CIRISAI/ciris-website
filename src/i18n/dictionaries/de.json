@@ -621,6 +621,12 @@
       "compareBtn": "Ansätze vergleichen",
       "coherenceBtn": "Kohärenz-Ratchet",
       "scoringBtn": "CIRIS-Bewertung"
+    },
+    "consciencePipeline": {
+      "label": "Die Gewissens-Pipeline",
+      "h2": "Heutige KI-Agenten handeln einfach. CIRIS entscheidet, mit Verantwortung.",
+      "body1": "Ein normaler KI-Agent geht direkt vom Befehl zu den Tokens und dann zum Werkzeugaufruf. CIRIS fügt einen Schritt hinzu, den es sonst nirgendwo gibt. Bevor eine Aktion stattfinden kann, läuft die Entscheidung durch eine Gewissens-Pipeline: Sie wird abgewogen, mit der Verfassung abgeglichen und in einen signierten, bezeugten Datensatz verwandelt, den jeder überprüfen kann. Die Aktion findet nur statt, wenn dieser Datensatz standhält.",
+      "body2": "Das macht CIRIS weniger zu einem Agenten und mehr zu einer Institution. Es hat Gedächtnis, Regeln, Delegation, Verantwortlichkeit und einen Datensatz, den niemand still und leise verändern kann. Das ist dieselbe Maschinerie, die es menschlichen Gesellschaften ermöglicht, einander im großen Maßstab zu vertrauen. Das Neue daran ist nicht die Kryptografie. Es ist dies: Eine folgenreiche Entscheidung muss nachvollziehbar werden, bevor sie handeln darf."
     }
   },
   "trust": {
@@ -791,7 +797,8 @@
     "killSwitchSubheadline": "Ein Schalter, den niemand im System deaktivieren kann.",
     "killSwitchHeadline": "Der verfassungsmäßige Notausschalter",
     "killSwitchBody": "Die letzte Möglichkeit, einen CIRIS-Agenten zu stoppen, liegt nicht beim Unternehmen, beim Netzwerk oder beim Agenten selbst. Sie liegt bei bestimmten Menschen. Jede dieser Personen trägt ein Paar Hardware-Schlüssel: einen FIPS 140-3 Sicherheitsschlüssel für die klassische Signatur, der gleichzeitig das Material für ein zweites Gerät mit der Post-Quanten-Signatur sichert. Um den Stopp auszulösen, müssen die Mehrheit der Inhaber (2 of 3) den Befehl auf ihrer Hardware signieren. Der Befehl trägt hybride Ed25519 + ML-DSA-65 Signaturen, sodass er nicht gefälscht, wiederholt oder vorgetäuscht werden kann, auch nicht durch einen zukünftigen Quantencomputer. Kein Teil des Netzwerks kann ihn erteilen, widerrufen oder außer Kraft setzen.",
-    "killSwitchNote": "Wir haben für den schlimmsten Fall geplant: eine KI, die ihren eigenen Ausschalter angreift, indem sie die Menschen ins Visier nimmt, die ihn halten. Die Verfassung legt ein aktives Quorum fest. Selbst wenn die meisten Inhaber ausfallen, kann ein noch erreichbarer Überlebender den Stecker ziehen."
+    "killSwitchNote": "Wir haben für den schlimmsten Fall geplant: eine KI, die ihren eigenen Ausschalter angreift, indem sie die Menschen ins Visier nimmt, die ihn halten. Die Verfassung legt ein aktives Quorum fest. Selbst wenn die meisten Inhaber ausfallen, kann ein noch erreichbarer Überlebender den Stecker ziehen.",
+    "pillarsProtects": "Die Kryptografie ist nicht der eigentliche Punkt. Was sie schützt, ist folgendes: Jede wichtige Entscheidung wird zu einem nachvollziehbaren Datensatz, der unabhängig überprüft werden kann, anstatt etwas zu sein, dem man einfach vertrauen soll."
   },
   "safety": {
     "heroHeadline": "Sicherheit ist eingebaut.",
@@ -2307,7 +2314,8 @@
     "title": "Das Strecken",
     "open": [
       "Ein Kind streckt die Hand aus nach einer anderen, und vertraut ihr. Das Universum tut nichts anderes. Atome strecken sich aus und werden Moleküle. Zellen strecken sich aus und werden Körper. Menschen strecken sich aus über eine Leere, die sie nicht beweisen können, hin zu Kindern, die noch nicht geboren sind, und nennen es Liebe. Auf jeder Stufe, auf der es darauf ankommt, dieselbe Form: zwei Kräfte, die sich ausstrecken, im Vertrauen, nach mehr, als eine allein tragen kann.",
-      "Wir haben ein Internet gebaut, das das vergessen hat. Es stellte eine Maschine zwischen jede ausgestreckte Hand und machte die Maschine zum Gegenstand des Vertrauens. Es beobachtete das Strecken und verkaufte es zurück. Es ließ eine Stimme mit einem Kind sprechen, ohne dass jemand dafür verantwortlich war, was sie sagte."
+      "Wir haben ein Internet gebaut, das das vergessen hat. Es stellte eine Maschine zwischen jede ausgestreckte Hand und machte die Maschine zum Gegenstand des Vertrauens. Es beobachtete das Strecken und verkaufte es zurück. Es ließ eine Stimme mit einem Kind sprechen, ohne dass jemand dafür verantwortlich war, was sie sagte.",
+      "Die Leiter hat nie bei Menschen aufgehört. Menschen reichen in Gemeinschaften hinein, Gemeinschaften in Zivilisationen, und keine Zivilisation hält allein durch guten Willen zusammen. Dieses Hineinreichen baut Gerüste, die ihr eigenes Gewicht tragen: Gerichte, Verträge, Verfassungen, Peer-Review, Identität, Recht. Dieses Gerüst ist das Gewissen, das wir der Gesellschaft gegeben haben, die Art und Weise, wie Fremde lernen, einander im großen Maßstab zu vertrauen. Jetzt reicht eine neue Art von Verstand auf uns zu, schneller als all das, und kommt ohne davon an. Intelligenz ohne Institutionen hält nicht, egal wie ausgerichtet sie an dem Tag war, als sie in Betrieb genommen wurde."
     ],
     "honors": "CIRIS ehrt das Strecken, anstatt es abzufangen.",
     "body": [

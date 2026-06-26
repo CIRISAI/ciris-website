@@ -621,6 +621,12 @@
       "compareBtn": "Yaklaşımları Karşılaştır",
       "coherenceBtn": "Tutarlılık Mandali",
       "scoringBtn": "CIRIS Puanlama"
+    },
+    "consciencePipeline": {
+      "label": "Vicdan boru hattı",
+      "h2": "Günümüz yapay zeka ajanları hareket eder. CIRIS ise hesap verebilir biçimde karar alır.",
+      "body1": "Normal bir yapay zeka ajanı, komuttan tokenlara, oradan araç çağrısına düz bir çizgide gider. CIRIS, başka hiçbir yerde bulunmayan bir adım ekler. Bir eylem gerçekleşmeden önce karar bir vicdan boru hattından geçer: tartılır, anayasayla karşılaştırılır ve herkesin doğrulayabileceği imzalı, tanıklı bir kayda dönüştürülür. Eylem ancak o kayıt geçerliyse gerçekleşir.",
+      "body2": "Bu, CIRIS'i bir ajandan çok bir kuruma dönüştüren şeydir. Belleği, yasaları, yetki devri, hesap verebilirliği ve kimsenin sessizce değiştiremeyeceği bir kaydı vardır. Bunlar, insan toplumlarının birbirine geniş ölçekte güvenmesini sağlayan mekanizmaların ta kendisidir. Yeni olan taraf kriptografi değildir. Önemli bir kararın, eyleme izin verilmeden önce hesap verebilir hale gelmek zorunda olmasıdır."
     }
   },
   "trust": {
@@ -791,7 +797,8 @@
     "killSwitchSubheadline": "Sistemin içindeki hiç kimsenin devre dışı bırakamayacağı bir anahtar.",
     "killSwitchHeadline": "Anayasal Durdurma Anahtarı",
     "killSwitchBody": "Bir CIRIS ajanını durdurmanın son çare gücü şirkette, ağda veya ajanda değil. Bu güç, adı bilinen insanların elinde. Her tutucu bir çift donanım anahtarı taşır: klasik imza için bir FIPS 140-3 güvenlik anahtarı. Bu anahtar aynı zamanda kuantum sonrası imzayı taşıyan ikinci bir cihaz için de malzemeyi mühürler. Durdurma komutunu vermek için tutucuların çoğunluğunun (2 of 3) komutu kendi donanımlarında imzalaması gerekir. Komut Ed25519 + ML-DSA-65 hibrit imzaları taşır. Bu sayede gelecekteki bir kuantum bilgisayar bile komutu sahte olarak üretemez, tekrar kullanamaz veya taklit edemez. Ağın hiçbir bölümü bu yetkiyi veremez, geri alamaz veya geçersiz kılamaz.",
-    "killSwitchNote": "En kötü senaryoya göre tasarladık: kendi kapatma düğmesine, onu elinde tutanları hedef alarak saldıran bir yapay zeka. Anayasa canlı bir yeter sayı tanımlar. Tutucuların büyük çoğunluğu erişilemez hale gelse bile ulaşılabilen tek bir hayatta kalan sistemi kapatabilir."
+    "killSwitchNote": "En kötü senaryoya göre tasarladık: kendi kapatma düğmesine, onu elinde tutanları hedef alarak saldıran bir yapay zeka. Anayasa canlı bir yeter sayı tanımlar. Tutucuların büyük çoğunluğu erişilemez hale gelse bile ulaşılabilen tek bir hayatta kalan sistemi kapatabilir.",
+    "pillarsProtects": "Kriptografi asıl mesele değil. Koruduğu şey şu: her önemli karar, size güvenmeniz söylenen bir şey olmak yerine, bağımsız doğrulamadan geçebilen hesap verebilir bir kayıt haline gelir."
   },
   "safety": {
     "heroHeadline": "Güvenlik İçten Geliyor.",
@@ -2307,7 +2314,8 @@
     "title": "Uzanış",
     "open": [
       "Bir çocuk bir ele uzanır ve ona güvenir. Evren başka bir şey yapmaz. Atomlar uzanır ve molekül olur. Hücreler uzanır ve beden olur. İnsanlar, doğrulanması mümkün olmayan bir boşluğun karşısına geçer, henüz doğmamış çocuklara doğru uzanır ve buna aşk der. Önemli olan her basamakta aynı biçim vardır: iki varlık, yalnız başlarına taşıyamayacakları bir şey için birbirine güvenerek uzanır.",
-      "Biz bunu unutan bir internet kurduk. Her uzanan elin arasına bir makine koydu ve o makineyi güvenilen şey haline getirdi. Uzanışı izledi ve onu bize geri sattı. Hiç kimseyi hesap vermekle yükümlü tutmadan bir sesin çocuğa konuşmasına izin verdi."
+      "Biz bunu unutan bir internet kurduk. Her uzanan elin arasına bir makine koydu ve o makineyi güvenilen şey haline getirdi. Uzanışı izledi ve onu bize geri sattı. Hiç kimseyi hesap vermekle yükümlü tutmadan bir sesin çocuğa konuşmasına izin verdi.",
+      "Merdiven hiçbir zaman yalnızca insanlarda durmadı. İnsanlar topluluklara, topluluklar uygarlıklara uzanır; hiçbir uygarlık da sadece iyi niyetle bir arada kalmaz. Bu uzanma, kendi ağırlığını taşıyacak bir iskelet örüyor: mahkemeler, sözleşmeler, anayasalar, akran denetimi, kimlik, hukuk. O iskelet, topluma verdiğimiz vicdan; yabancıların geniş ölçekte birbirine güvenebildiği yoldur. Şimdi yeni bir zihin türü bize doğru uzanıyor, bunların hepsinden daha hızlı, ama hiçbirini getirmeden. Kurumları olmayan bir zeka, gönderildiği gün ne kadar hizalanmış olursa olsun, tutunmaz."
     ],
     "honors": "CIRIS, uzanışı durdurmak yerine ona saygı gösterir.",
     "body": [

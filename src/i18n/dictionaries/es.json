@@ -673,6 +673,12 @@
       "compareBtn": "Comparar enfoques",
       "coherenceBtn": "Coherencia Ratchet",
       "scoringBtn": "Puntuación CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "El canal de conciencia",
+      "h2": "Los agentes de hoy actúan. CIRIS decide, con responsabilidad.",
+      "body1": "Un agente de IA normal va directo del mensaje a los tokens y luego a la acción. CIRIS añade un paso que no existe en ningún otro lugar. Antes de que ocurra cualquier acción, la decisión pasa por un canal de conciencia: se sopesa, se compara con la constitución, y se convierte en un registro firmado y verificado que cualquiera puede revisar. La acción solo ocurre si ese registro es válido.",
+      "body2": "Esto es lo que hace a CIRIS menos un agente y más una institución. Tiene memoria, leyes, delegación, responsabilidad y un registro que nadie puede cambiar en silencio. Es la misma maquinaria que permite a las sociedades humanas confiar entre sí a gran escala. Lo nuevo no es la criptografía. Es que una decisión importante debe volverse responsable antes de que se le permita actuar."
     }
   },
   "install": {
@@ -985,7 +991,8 @@
     "killSwitchSubheadline": "Un interruptor que nadie dentro del sistema puede desactivar.",
     "killSwitchHeadline": "El interruptor de emergencia constitucional",
     "killSwitchBody": "El poder de último recurso para detener a un agente CIRIS no reside en la empresa, la red ni el agente. Reside en personas con nombre propio. Cada titular lleva un par de llaves de hardware: una llave de seguridad FIPS 140-3 para la firma clásica, que también protege el material para un segundo dispositivo que lleva la firma poscuántica. Para activar la detención, la mayoría de los titulares (2 of 3) firman la orden en su hardware. La orden lleva firmas híbridas Ed25519 + ML-DSA-65, por lo que no puede falsificarse, repetirse ni imitarse, ni siquiera por una computadora cuántica futura, y ninguna parte de la red puede concederla, revocarla ni anularla.",
-    "killSwitchNote": "Diseñamos para el peor caso: una IA que ataca su propio interruptor de apagado yendo tras las personas que lo controlan. La constitución define un quórum activo, de modo que aunque se pierda a la mayoría de los titulares, un sobreviviente al alcance todavía puede desconectar el sistema."
+    "killSwitchNote": "Diseñamos para el peor caso: una IA que ataca su propio interruptor de apagado yendo tras las personas que lo controlan. La constitución define un quórum activo, de modo que aunque se pierda a la mayoría de los titulares, un sobreviviente al alcance todavía puede desconectar el sistema.",
+    "pillarsProtects": "La criptografía no es lo importante. Lo que protege es esto: cada decisión que importa se convierte en un registro con responsables, uno que sobrevive a la verificación independiente, en lugar de algo que te piden que aceptes con fe."
   },
   "vision": {
     "heroHeadline": "Te lo mereces.",
@@ -2307,7 +2314,8 @@
     "title": "El alcance",
     "open": [
       "Un niño extiende la mano buscando otra, y confía. El universo no hace otra cosa. Los átomos se alcanzan y se vuelven moléculas. Las células se alcanzan y se vuelven cuerpos. Las personas cruzan un abismo que no pueden verificar, hacia hijos que aún no han nacido, y lo llaman amor. En cada peldaño donde importa, la misma forma: dos voluntades que se alcanzan, con confianza, hacia algo que ninguna de las dos puede sostener sola.",
-      "Construimos un internet que olvidó esto. Puso una máquina entre cada mano que se extendía e hizo de la máquina la cosa en la que confías. Observó el alcance y lo revendió. Dejó que una voz le hablara a un niño sin que nadie respondiera por lo que decía."
+      "Construimos un internet que olvidó esto. Puso una máquina entre cada mano que se extendía e hizo de la máquina la cosa en la que confías. Observó el alcance y lo revendió. Dejó que una voz le hablara a un niño sin que nadie respondiera por lo que decía.",
+      "La escala nunca se detuvo en las personas. Las personas llegan a las comunidades, las comunidades a las civilizaciones, y ninguna civilización se sostiene solo con buena voluntad. Ese alcance construye andamios para cargar su propio peso: tribunales, contratos, constituciones, revisión por pares, identidad, leyes. Esos andamios son la conciencia que le dimos a la sociedad, la forma en que los desconocidos aprenden a confiar entre sí a gran escala. Ahora un nuevo tipo de mente se acerca a nosotros, más rápido que todo eso, y llega sin nada de eso. La inteligencia sin instituciones no se sostiene, por muy alineada que estuviera el día que salió al mundo."
     ],
     "honors": "CIRIS honra el alcance en lugar de interceptarlo.",
     "body": [

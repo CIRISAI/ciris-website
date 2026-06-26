@@ -621,6 +621,12 @@
       "compareBtn": "Confronta gli approcci",
       "coherenceBtn": "Ratchet di coerenza",
       "scoringBtn": "Punteggio CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "La pipeline della coscienza",
+      "h2": "Gli agenti di oggi agiscono. CIRIS decide, con responsabilità.",
+      "body1": "Un normale agente di intelligenza artificiale va direttamente dal prompt ai token, fino alla chiamata dello strumento. CIRIS aggiunge un passaggio che non esiste da nessun'altra parte. Prima che un'azione possa avvenire, la decisione passa attraverso una pipeline della coscienza: viene valutata, confrontata con la costituzione e trasformata in un registro firmato e attestato che chiunque può verificare. L'azione avviene solo se quel registro regge.",
+      "body2": "Questo è ciò che rende CIRIS meno un agente e più un'istituzione. Ha memoria, leggi, delega, responsabilità e un registro che nessuno può modificare in silenzio, gli stessi meccanismi che permettono alle società umane di fidarsi le une delle altre su larga scala. La parte nuova non è la crittografia. È che una decisione importante deve diventare verificabile prima di poter agire."
     }
   },
   "trust": {
@@ -791,7 +797,8 @@
     "killSwitchSubheadline": "Un interruttore che nessuno all'interno del sistema può disattivare.",
     "killSwitchHeadline": "L'interruttore costituzionale di emergenza",
     "killSwitchBody": "Il potere di ultima istanza per fermare un agente CIRIS non appartiene all'azienda, alla rete o all'agente stesso. Appartiene a persone specifiche, identificate per nome. Ogni titolare porta con sé una coppia di chiavi hardware: una chiave di sicurezza FIPS 140-3 per la firma classica, che sigilla anche il materiale per un secondo dispositivo con la firma post-quantistica. Per attivare l'arresto, la maggioranza dei titolari (2 of 3) deve firmare il comando sul proprio hardware. Il comando porta firme ibride Ed25519 + ML-DSA-65, quindi non può essere falsificato, ripetuto o imitato, nemmeno da un futuro computer quantistico. Nessuna parte della rete può concedere, revocare o ignorare questo comando.",
-    "killSwitchNote": "Abbiamo progettato il sistema per il caso peggiore: un'intelligenza artificiale che attacca il proprio interruttore di spegnimento prendendo di mira le persone che lo controllano. La costituzione definisce un quorum attivo, quindi anche se la maggior parte dei titolari non è disponibile, un solo sopravvissuto raggiungibile può comunque staccare la spina."
+    "killSwitchNote": "Abbiamo progettato il sistema per il caso peggiore: un'intelligenza artificiale che attacca il proprio interruttore di spegnimento prendendo di mira le persone che lo controllano. La costituzione definisce un quorum attivo, quindi anche se la maggior parte dei titolari non è disponibile, un solo sopravvissuto raggiungibile può comunque staccare la spina.",
+    "pillarsProtects": "La crittografia non è il punto centrale. Quello che protegge è questo: ogni decisione importante diventa un registro verificabile, che resiste ai controlli indipendenti, invece di qualcosa di cui ti viene chiesto di fidarti."
   },
   "safety": {
     "heroHeadline": "Sicurezza Integrata.",
@@ -2307,7 +2314,8 @@
     "title": "Il tendere la mano",
     "open": [
       "Un bambino tende la mano e si fida di chi la prende. L'universo non fa altro. Gli atomi si tendono e diventano molecole. Le cellule si tendono e diventano corpi. Le persone si tendono oltre un vuoto che non possono verificare, verso figli non ancora nati, e lo chiamano amore. Ad ogni gradino che conta, la stessa forma: due presenze che si tendono l'una verso l'altra, con fiducia, verso qualcosa che nessuna delle due potrebbe reggere da sola.",
-      "Abbiamo costruito un'internet che ha dimenticato tutto questo. Ha messo una macchina tra ogni mano tesa e ha fatto della macchina la cosa di cui fidarsi. Ha osservato il tendere la mano e lo ha rivenduto. Ha lasciato che una voce parlasse a un bambino senza che nessuno rispondesse di ciò che diceva."
+      "Abbiamo costruito un'internet che ha dimenticato tutto questo. Ha messo una macchina tra ogni mano tesa e ha fatto della macchina la cosa di cui fidarsi. Ha osservato il tendere la mano e lo ha rivenduto. Ha lasciato che una voce parlasse a un bambino senza che nessuno rispondesse di ciò che diceva.",
+      "La scala non si è mai fermata alle persone. Le persone si estendono alle comunità, le comunità alle civiltà, e nessuna civiltà regge sulla sola buona volontà. Questa estensione costruisce un'impalcatura capace di sostenere il proprio peso: tribunali, contratti, costituzioni, revisione tra pari, identità, legge. Quell'impalcatura è la coscienza che abbiamo dato alla società, il modo in cui gli estranei imparano a fidarsi gli uni degli altri su larga scala. Ora un nuovo tipo di mente si avvicina a noi, più veloce di tutto questo, e arriva senza niente di tutto ciò. L'intelligenza senza istituzioni non regge, per quanto allineata fosse il giorno in cui è stata rilasciata."
     ],
     "honors": "CIRIS onora il tendere la mano invece di intercettarlo.",
     "body": [

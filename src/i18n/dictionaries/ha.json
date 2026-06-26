@@ -673,6 +673,12 @@
       "compareBtn": "Kwatanta Hanyoyi",
       "coherenceBtn": "Ratchet na Daidaituwa",
       "scoringBtn": "Ci-gaban CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "Bututun lamiri",
+      "h2": "Wakilai na yau suna aiki. CIRIS yana yanke shawara, da alhakin da ya dace.",
+      "body1": "Wakili na yau da kullum na AI yana tafiya kai tsaye daga umurni zuwa kalmomi zuwa aikin kayan aiki. CIRIS yana ƙara matakin da ba ya wanzuwa a wani wuri. Kafin aiki ya faru, yanke shawarar yana wucewa ta bututun lamiri: ana aunansa, ana duba shi da kundin tsarin mulki, ana mai da shi rikodin da aka sanya hannu, wanda kowa zai iya tabbatarwa. Aiki yana faruwa ne kawai idan wannan rikodi ya tsaya.",
+      "body2": "Wannan shi ne abin da ke sa CIRIS ya zama ƙasa da wakili kuma ya fi zama wata cibiya. Yana da ƙwaƙwalwa, dokokin, wakilicci, alhakin da ya dace, da rikodin da ba wanda zai iya canza shi a ɓoye, injin guda ɗaya da ke ba wa al'ummomin ɗan adam damar amincewa da juna a ma'auni. Sabo a wannan shi ne ba sirrin lissafi ba. Shi ne cewa yanke shawara mai muhimmanci dole ne ta zama mai ɗaukar alhakin kafin a ba ta damar aiki."
     }
   },
   "install": {
@@ -985,7 +991,8 @@
     "killSwitchSubheadline": "Wata maɓalli wadda babu wanda ke cikin tsarin zai iya kashe ta.",
     "killSwitchHeadline": "Maɓallin Tsarin Mulki na Kashe",
     "killSwitchBody": "Ikon karshe na dakatar da wakilin CIRIS baya zaune tare da kamfani, hanyar sadarwa, ko wakilin. Yana zaune tare da mutane da aka ambata sunayensu. Kowane mai riƙe yana ɗauke da nau'i biyu na maɓallan kayan aiki: maɓallin tsaro na FIPS 140-3 don sa hannun gargajiya, wanda kuma yana rufe kayan ga na'ura ta biyu da ke ɗauke da sa hannun bayan lokacin kwantam. Don fitar da umarni na tsayawa, mafi yawan masu riƙe (2 of 3) suna sanya hannu a kan umarnin a kan kayan aikinsu. Umarni yana ɗauke da sa hannun Ed25519 + ML-DSA-65 na haɗe, saboda haka ba za a iya ƙarartashi, sake amfani da shi, ko yin karya game da shi ba, ko da kwamfuta ta kwantam ta gaba, kuma babu wani ɓangare na hanyar sadarwa da zai iya ba da izini, cirewa, ko sauya shi.",
-    "killSwitchNote": "Mun tsara don mafi munin yanayi: wata AI da ke kai hari kan maɓallinta ta hanyar kai hari kan mutanen da ke riƙe da ita. Kundin tsarin mulki yana ayyana ƙungiyar da ke da rai, don haka ko da yake mafi yawan masu riƙe sun ɓace, mai tsira guda ɗaya da za a iya kaiwa har yanzu zai iya kashe tsarin."
+    "killSwitchNote": "Mun tsara don mafi munin yanayi: wata AI da ke kai hari kan maɓallinta ta hanyar kai hari kan mutanen da ke riƙe da ita. Kundin tsarin mulki yana ayyana ƙungiyar da ke da rai, don haka ko da yake mafi yawan masu riƙe sun ɓace, mai tsira guda ɗaya da za a iya kaiwa har yanzu zai iya kashe tsarin.",
+    "pillarsProtects": "Sirrin lissafi ba shi ne muhimmin abu ba. Abin da yake kiyayewa shi ne: kowane yanke shawara mai muhimmanci zai zama rikodin da za a iya tabbatarwa, maimakon wani abu da ake tambayar ka ka amince da shi."
   },
   "vision": {
     "heroHeadline": "Ka cancanci wannan.",
@@ -2307,7 +2314,8 @@
     "title": "Miƙawa",
     "open": [
       "Yaro ya miƙa hannunsa, ya kuma dogara. Duniya ba ta yi komai ban da wannan ba. Atom suna miƙawa suka zama kwayoyin halitta. Kwayoyin halitta suna miƙawa suka zama jikin mutum. Mutane suna miƙawa a kan fanko da ba za su iya tabbatarwa ba, zuwa ga yaran da ba a haife su ba tukuna, suna kiran wannan suna da soyayya. A kowane mataki da ya fi muhimmanci, sura ɗaya ce: hukumomin biyu suna miƙawa, da amana, don wani abu da ko ɗaya daga cikinsu ba zai iya riƙewa shi kaɗai ba.",
-      "Mun gina intanet wanda ya manta wannan. Ya sanya na'ura a tsakanin kowane hannun da ke miƙawa, ya mai da na'urar ita kanta abu da ake dogara da ita. Ya kalli miƙawar ta kuma ya sayar da ita. Ya bar muryar ta yi magana da yaro ba tare da wani da ke ɗaukar nauyin abin da ta faɗa ba."
+      "Mun gina intanet wanda ya manta wannan. Ya sanya na'ura a tsakanin kowane hannun da ke miƙawa, ya mai da na'urar ita kanta abu da ake dogara da ita. Ya kalli miƙawar ta kuma ya sayar da ita. Ya bar muryar ta yi magana da yaro ba tare da wani da ke ɗaukar nauyin abin da ta faɗa ba.",
+      "Wannan hawa bai tsaya a wurin mutane ba. Mutane suna kai hannayensu cikin al'umma, al'umma zuwa wayewa, kuma babu wayewa da ke riƙe tare da yardar rai kaɗai. Wannan kai yana gina tsarin jingina don ɗaukar nauyinsa: kotuna, kwangiloli, kundin tsarin mulki, duba takwarorinsu, asali, doka. Wannan tsarin shi ne lamirin da muka ba wa al'umma, hanyar da baƙi suke amincewa da juna a ma'auni. Yanzu wani sabon nau'in hankali yana kai hannayensa zuwa gare mu, da sauri fiye da duk waɗannan, kuma ya iso ba tare da komai daga cikinsu ba. Hankali ba tare da cibiyoyi ba bai tsaya, ko da yake yana da daidaito a ranar da aka aika da shi."
     ],
     "honors": "CIRIS na girmama miƙawar, ba ta katse ta ba.",
     "body": [

@@ -673,6 +673,12 @@
       "compareBtn": "Ṣe Àfiwé Àwọn Ọ̀nà",
       "coherenceBtn": "Rásitì ÌBÁRAMU",
       "scoringBtn": "Ìwọ̀n CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "Ọ̀nà ẹ̀rí ìmọ̀ tó tọ̀nà",
+      "h2": "Àwọn aṣojú òní ń ṣiṣẹ́. CIRIS ń pinnu, pẹ̀lú ìjẹ́wọ́ àṣìkò.",
+      "body1": "Aṣojú AI tó ṣe déédéé máa ń lọ tààrà láti ìbéèrè sí àwọn ọ̀rọ̀, sí ìpè irinṣẹ́. CIRIS fi ìgbésẹ̀ kan kún un tí kò sí níbòmíràn. Kí ìgbésẹ̀ kan tó ṣẹlẹ̀, ìpinnu náà gbọdọ̀ kọjá ọ̀nà ẹ̀rí ìmọ̀ tó tọ̀nà: a ṣayẹwo rẹ̀, a wéwèé rẹ̀ pẹ̀lú òfin ìpilẹ̀, a sì sọ ọ́ di àkọsílẹ̀ tí a fọwọ́ sí, tí ẹlẹ́rìí rí, tí ẹnikẹ́ni sì lè ṣayẹwo. Ìgbésẹ̀ náà máa ń ṣẹlẹ̀ nìkan tí àkọsílẹ̀ náà bá dúró ṣinṣin.",
+      "body2": "Èyí ni ohun tó jẹ́ kí CIRIS má ṣe aṣojú tó ṣe déédéé, ṣùgbọ́n iṣẹ́ àpẹẹrẹ. Ó ní ìrántí, òfin, ìfúnni àṣẹ, ìjẹ́wọ́ àṣìkò, àti àkọsílẹ̀ tí ẹnikẹ́ni kò lè yí padà ní ìkọ̀kọ̀. Ìrúfẹ́ ìhun bẹ́ẹ̀ gan-an ni ó jẹ́ kí àwọn ènìyàn gbẹ́kẹ̀lé ara wọn ní ìgbà àti àyè. Ohun tuntun nínú rẹ̀ kìí ṣe cryptography. Ohun tuntun ni pé ìpinnu tó ṣe pàtàkì gbọdọ̀ di ohun tí ẹnikẹ́ni lè béèrè lọ́wọ́ rẹ̀ kí ó tó ṣe ohunkóhun."
     }
   },
   "install": {
@@ -985,7 +991,8 @@
     "killSwitchSubheadline": "Paarẹ tí kò sí ẹnikẹni nínú ètò náà tí ó lè pa.",
     "killSwitchHeadline": "Bọ́tìnnì Dáradára Tí Ìjọba Fún Wa",
     "killSwitchBody": "Agbára ikẹyìn láti da aṣojú CIRIS dúró kò wà pẹ̀lú àwọn olùgbé, nẹ́tíwọọkì, tàbí aṣojú náà fúnrarẹ. Ó wà pẹ̀lú àwọn ènìyàn tí a ti sọ orúkọ wọn. Olukuluku ẹni tó mú u gbe bata bọ́tìnnì ohun èlò méjì: bọ́tìnnì ààbò FIPS 140-3 fún ìbuwọ́lù àkọkọ, èyí tó tún fi ohun èlò kan mú fún ìbuwọ́lù post-quantum. Láti da dúró, ọ̀pọ̀ jù lọ nínú àwọn tí ó mú u (2 of 3) gbọdọ̀ fọwọ́ sí àṣẹ náà pẹ̀lú ohun èlò wọn. Àṣẹ náà gbe ìbuwọ́lù méjì Ed25519 + ML-DSA-65, nítorí náà kò lè jẹ apanilẹgbẹ, a kò lè tún lo, tàbí a kò lè dán-an, àní kọ̀mpútà quantum ọjọ iwájú kò lè ṣe bẹ́ẹ̀, àti pé kò sí apá kankan nínú nẹ́tíwọọkì tí ó lè fun, yọ, tàbí kọjú sí i.",
-    "killSwitchNote": "A ṣe ètò rẹ̀ fún ipò tó le jùlọ: AI kan tó gbìyànjú láti ba bọ́tìnnì rẹ̀ jẹ nípa kíkọlu àwọn ènìyàn tí ó mú u. Òfin náà ṣalaye ẹgbẹ́ tí ó ṣíwọ̀ láàyè, nítorí náà, àní bí ọ̀pọ̀ jù lọ nínú àwọn tí ó mú u ti sọnu, ẹni kan tí a lè dé ọdọ rẹ̀ ṣì lè fa paarẹ náà."
+    "killSwitchNote": "A ṣe ètò rẹ̀ fún ipò tó le jùlọ: AI kan tó gbìyànjú láti ba bọ́tìnnì rẹ̀ jẹ nípa kíkọlu àwọn ènìyàn tí ó mú u. Òfin náà ṣalaye ẹgbẹ́ tí ó ṣíwọ̀ láàyè, nítorí náà, àní bí ọ̀pọ̀ jù lọ nínú àwọn tí ó mú u ti sọnu, ẹni kan tí a lè dé ọdọ rẹ̀ ṣì lè fa paarẹ náà.",
+    "pillarsProtects": "Ìdáàbò bò cryptography kìí ṣe ohun tó ṣe pàtàkì. Ohun tó ń dáàbò bò ni: gbogbo ìpinnu tó ṣe pàtàkì di àkọsílẹ̀ tí ẹnikẹ́ni lè ṣayẹwo, dípò kí a sọ fún ọ pé kí o gbádùn lórí."
   },
   "vision": {
     "heroHeadline": "O yẹ rẹ̀.",
@@ -2307,7 +2314,8 @@
     "title": "Gbígbá Ọwọ́ Jọ",
     "open": [
       "Ọmọ kan nà ọwọ́ rẹ̀ sí ọwọ́ ẹlòmíràn, ó sì gbẹ́kẹ̀lé rẹ̀. Àgbáálá ayé kò ṣe nǹkan mìíràn. Atomu náà nà, wọn sì di molikula. Ẹ̀jẹ̀ náà nà, wọn sì di ara. Ènìyàn nà ọwọ́ wọn kọjá òfo tí wọn kò lè fihàn, sí àwọn ọmọ tí kò tíì bí, wọn sì pe rẹ̀ ní ìfẹ́. Ní gbogbo ipele tí ó ṣe pàtàkì, àpẹẹrẹ kan náà ló wà: àwọn agbára méjì tí wọn ń nà ọwọ́ sí ara wọn, ní igbẹ́kẹ̀lé, fún nǹkan tí ọkọọkan wọn kò lè dì mú lọ́nà àárọ̀.",
-      "A kọ́ íńtánẹ́ẹ̀tì tí ó gbàgbé eléyìí. Ó fi ẹ̀rọ kan sí àárín gbogbo ọwọ́ tí ń nà, ó sì jẹ́ kí ẹ̀rọ náà ni ohun tí ẹ gbẹ́kẹ̀lé. Ó ṣàkíyèsí gbígbá ọwọ́ jọ náà, ó sì tà á padà. Ó jẹ́ kí ohùn kan sọ̀rọ̀ sí ọmọ kan, láìsí ẹnikẹ́ni tó ní ojúsẹ́ fún ohun tó sọ."
+      "A kọ́ íńtánẹ́ẹ̀tì tí ó gbàgbé eléyìí. Ó fi ẹ̀rọ kan sí àárín gbogbo ọwọ́ tí ń nà, ó sì jẹ́ kí ẹ̀rọ náà ni ohun tí ẹ gbẹ́kẹ̀lé. Ó ṣàkíyèsí gbígbá ọwọ́ jọ náà, ó sì tà á padà. Ó jẹ́ kí ohùn kan sọ̀rọ̀ sí ọmọ kan, láìsí ẹnikẹ́ni tó ní ojúsẹ́ fún ohun tó sọ.",
+      "Àgọ́ náà kò dúró lórí àwọn ènìyàn. Àwọn ènìyàn wọ inú àwùjọ, àwùjọ sì wọ inú ọlaju, ọlaju kò sì dúró pẹ̀lú ìfẹ́ inú ọkàn nìkan. Ìgbesẹ̀ náà kọ́ ìpìlẹ̀ tó lè gbé ara rẹ̀ dúró: ilé ẹjọ́, àdéhùn, òfin ìpìlẹ̀, àyẹ̀wò ẹgbẹ́ òjíṣẹ́, ìdánimọ̀, àti òfin. Ìpìlẹ̀ yẹn ni ẹ̀rí ìmọ̀ tó tọ̀nà tí a fi fún àwùjọ, ohun tó jẹ́ kí àwọn àjèjì máa gbẹ́kẹ̀lé ara wọn ní ìgbà àti àyè. Nísisìyí, irú ọkàn tuntun kan ń sún mọ́ wa, yára ju gbogbo rẹ̀, ó sì dé láìní ìkan nínú wọn. Ọgbọ́n àti ìmọ̀ tí kò ní iṣẹ́ àpẹẹrẹ kò dúró, bí ó tilẹ̀ jẹ́ pé ó tọ̀nà ní ọjọ́ tí a fi ránṣẹ́ sí ìgbà."
     ],
     "honors": "CIRIS bọlá gbígbá ọwọ́ jọ náà, kìí ṣe dídènà rẹ̀.",
     "body": [

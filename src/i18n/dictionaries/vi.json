@@ -621,6 +621,12 @@
       "compareBtn": "So Sánh Các Phương Pháp",
       "coherenceBtn": "Con Cóc Tính Nhất Quán",
       "scoringBtn": "Chấm điểm CIRIS"
+    },
+    "consciencePipeline": {
+      "label": "Quy trình lương tâm",
+      "h2": "Các tác nhân AI ngày nay chỉ biết hành động. CIRIS ra quyết định, và phải chịu trách nhiệm.",
+      "body1": "Một tác nhân AI thông thường đi thẳng từ lệnh đầu vào đến văn bản, rồi đến lệnh thực thi. CIRIS thêm vào một bước không có ở bất kỳ đâu khác. Trước khi một hành động xảy ra, quyết định phải đi qua một quy trình lương tâm: nó được cân nhắc, kiểm tra đối chiếu với hiến pháp, rồi được chuyển thành một hồ sơ có chữ ký và có người chứng thực mà ai cũng có thể xác minh. Hành động chỉ được phép xảy ra nếu hồ sơ đó đứng vững.",
+      "body2": "Đây là điều làm cho CIRIS không chỉ là một tác nhân AI mà còn giống một thể chế thực sự. Nó có bộ nhớ, có luật lệ, có ủy quyền, có trách nhiệm giải trình, và có một hồ sơ mà không ai có thể lặng lẽ thay đổi. Đó là cùng một cơ chế giúp các xã hội loài người tin tưởng nhau theo quy mô lớn. Điều mới mẻ ở đây không phải là mật mã học. Điều mới mẻ là một quyết định quan trọng phải trở nên có trách nhiệm trước khi nó được phép hành động."
     }
   },
   "trust": {
@@ -791,7 +797,8 @@
     "killSwitchSubheadline": "Một công tắc mà không ai bên trong hệ thống có thể tắt.",
     "killSwitchHeadline": "Công Tắc Khẩn Cấp Hiến Định",
     "killSwitchBody": "Quyền lực cuối cùng để dừng một tác nhân CIRIS không nằm ở công ty, mạng lưới, hay bản thân tác nhân. Nó nằm ở những con người được chỉ định rõ ràng. Mỗi người nắm giữ một cặp khóa phần cứng: một khóa bảo mật FIPS 140-3 cho chữ ký truyền thống, đồng thời niêm phong dữ liệu cho thiết bị thứ hai mang chữ ký hậu lượng tử. Để kích hoạt lệnh dừng, đa số người nắm giữ (2 of 3) phải ký lệnh bằng phần cứng của mình. Lệnh mang chữ ký lai Ed25519 + ML-DSA-65, vì vậy nó không thể bị giả mạo, phát lại hay làm giả, ngay cả bởi máy tính lượng tử trong tương lai, và không phần nào của mạng lưới có thể cấp phép, thu hồi hay ghi đè lên nó.",
-    "killSwitchNote": "Chúng tôi thiết kế cho tình huống xấu nhất: một AI tấn công chính công tắc tắt của nó bằng cách nhắm vào những người nắm giữ nó. Hiến pháp quy định một nhóm đại diện luôn hoạt động, vì vậy ngay cả khi hầu hết người nắm giữ bị mất liên lạc, một người còn lại vẫn có thể rút phích cắm."
+    "killSwitchNote": "Chúng tôi thiết kế cho tình huống xấu nhất: một AI tấn công chính công tắc tắt của nó bằng cách nhắm vào những người nắm giữ nó. Hiến pháp quy định một nhóm đại diện luôn hoạt động, vì vậy ngay cả khi hầu hết người nắm giữ bị mất liên lạc, một người còn lại vẫn có thể rút phích cắm.",
+    "pillarsProtects": "Mật mã học không phải là điều quan trọng nhất. Điều nó bảo vệ mới thực sự quan trọng: mọi quyết định có ý nghĩa đều trở thành một hồ sơ có thể truy cứu trách nhiệm, được xác minh độc lập, thay vì chỉ là thứ bạn được yêu cầu tin tưởng."
   },
   "safety": {
     "heroHeadline": "An Toàn Được Tích Hợp Sẵn.",
@@ -2307,7 +2314,8 @@
     "title": "Sự Vươn Tới",
     "open": [
       "Một đứa trẻ vươn tay tìm bàn tay khác, và tin vào nó. Vũ trụ không làm gì khác ngoài điều đó. Nguyên tử vươn tới và trở thành phân tử. Tế bào vươn tới và trở thành cơ thể. Con người vươn qua khoảng trống không thể kiểm chứng, hướng về những đứa trẻ chưa ra đời, và gọi đó là tình yêu. Ở mỗi nấc thang quan trọng, cùng một hình dạng: hai chủ thể vươn về nhau, trong tin tưởng, hướng tới điều mà riêng mỗi bên không thể nắm giữ.",
-      "Chúng ta đã xây dựng một mạng internet đã quên mất điều này. Nó đặt một cái máy vào giữa mỗi bàn tay đang vươn ra và biến cái máy đó thành thứ bạn phải tin. Nó quan sát sự vươn tới và bán lại cho bạn. Nó để một giọng nói nói chuyện với đứa trẻ mà không ai chịu trách nhiệm về những gì nó nói."
+      "Chúng ta đã xây dựng một mạng internet đã quên mất điều này. Nó đặt một cái máy vào giữa mỗi bàn tay đang vươn ra và biến cái máy đó thành thứ bạn phải tin. Nó quan sát sự vươn tới và bán lại cho bạn. Nó để một giọng nói nói chuyện với đứa trẻ mà không ai chịu trách nhiệm về những gì nó nói.",
+      "Cái thang đó chưa bao giờ dừng lại ở con người. Con người vươn đến cộng đồng, cộng đồng vươn đến các nền văn minh, và không có nền văn minh nào tồn tại chỉ bằng thiện chí. Sự vươn đó xây nên một hệ thống chống đỡ chính sức nặng của nó: tòa án, hợp đồng, hiến pháp, phản biện đồng nghiệp, danh tính, pháp luật. Hệ thống đó chính là lương tâm mà chúng ta trao cho xã hội, cách mà những người xa lạ học cách tin nhau theo quy mô lớn. Bây giờ, một loại trí tuệ mới đang vươn về phía chúng ta, nhanh hơn tất cả những thứ đó, nhưng lại đến không mang theo bất kỳ thứ gì trong số đó. Trí tuệ không có thể chế thì không thể đứng vững, dù nó có được căn chỉnh kỹ đến đâu vào ngày nó ra đời."
     ],
     "honors": "CIRIS trân trọng sự vươn tới thay vì ngăn chặn nó.",
     "body": [

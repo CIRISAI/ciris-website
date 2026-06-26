@@ -91,6 +91,9 @@ export default function TrustV2({ t, locale }: { t: Dictionary; locale: string }
             <p className={s.footnote}>{tr.pillar3Note}</p>
           </div>
         </div>
+        <div className={s.callout}>
+          <p className={s.paragraph}>{tr.pillarsProtects}</p>
+        </div>
       </section>
 
       {/* Multi-Source Validation */}
