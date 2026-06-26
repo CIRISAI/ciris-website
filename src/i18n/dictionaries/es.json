@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "Verifícalo tú mismo.",
     "imageHeroSubheadline": "Código abierto. Abierto al escrutinio.",
     "imageHeroCopy": "Cada afirmación en esta página está respaldada por código que puedes leer, rastros que puedes verificar e investigación que puedes comprobar. Ese es el punto.",
-    "imageHeroButtonText": "Ver código fuente en GitHub"
+    "imageHeroButtonText": "Ver código fuente en GitHub",
+    "landscape": {
+      "kicker": "El panorama de la superalineación",
+      "title": "La mayor parte del campo está alineando el modelo. CIRIS está construyendo las instituciones a su alrededor.",
+      "lede": "Hay dos maneras honestas de hacer que la IA poderosa sea segura. Una es entrenar los valores del modelo hasta confiar en ellos. La otra es asumir que el modelo podría estar equivocado, y hacer que lo que hace sea verificable, de forma abierta, ante personas y sistemas que cualquiera pueda comprobar. CIRIS toma el segundo camino. Aquí está todo el panorama, mapeado con honestidad, y dónde encajamos en él.",
+      "branchLabel": "Dos caminos",
+      "branchH2": "Confiar en los pesos, o verificar el comportamiento",
+      "branchPlain": "La corriente principal de la seguridad en IA intenta hacer que un modelo sea bueno por dentro: entrenar sus valores, estudiar sus pensamientos, hacerlo debatir consigo mismo. Ese trabajo importa. CIRIS apuesta por el otro camino. Asumir que un modelo capaz podría estar desalineado, y en lugar de confiar en su mente, hacer que sus acciones importantes sean verificables ante personas y otros sistemas que puedan comprobarlo.",
+      "branchRigor": "En los propios términos del campo, CIRIS se ubica en la rama institucional y de control, junto al control de IA y la IA de seguridad garantizada, no en la corriente principal de internalización de valores de RLHF, la IA constitucional, el debate y la interpretabilidad. Su respuesta a la supervisión escalable, cómo supervisas algo más inteligente que tú, es verificar el marco de rendición de cuentas, no el razonamiento. Una firma, un quórum, una auditoría encadenada por hash siguen siendo baratos de verificar incluso cuando la decisión detrás de ellos es sobrehumana. Alinea sistemas de muchos agentes capaces a lo largo del tiempo, no los valores de una sola mente.",
+      "singletonLabel": "La línea que mantenemos",
+      "singletonH2": "No intenta alinear una IA todopoderosa. A propósito.",
+      "singletonPlain": "La rendición de cuentas necesita más de una parte. Alguien ante quien responder. Una forma de verificación que no pueda ser silenciada. Un equilibrio de poder que ningún lado pueda capturar. Una súper-inteligencia singular no tiene nada de eso, así que no hay manera honesta de hacerla responsable. CIRIS está construido para el otro futuro: muchos agentes capaces, personas y organizaciones cuyas decisiones importantes son todas verificables de forma independiente.",
+      "singletonRigor": "Así que la postura es explícita. Un ASI singleton no es un sistema que alinear sino una condición que prevenir. Concentrar capacidad sobrehumana en un solo lugar sin rendición de cuentas, en esta etapa del desarrollo institucional humano, es ilegítimo, porque ninguna institución es lo suficientemente madura para hacerlo responsable, y ese es precisamente el peligro. En los propios términos del marco, un singleton es el colapso de voz única ρ→1 que el modelo de corredor nombra como un fallo de coordinación, no un éxito. El hecho de que nuestras garantías se sostengan en una federación y se erosionen frente a un singleton no es un vacío que estemos tapando. Es el régimen que nos negamos a legitimar, mantenido como un compromiso, no solo como una predicción.",
+      "rwLabel": "Trabajo relacionado, con honestidad",
+      "rwH2": "Cada vecino cercano llena algunas casillas. Una fila las llena todas.",
+      "rwIntro": "CIRIS tiene pares intelectuales serios, cada uno fuerte en su propio campo. El punto de esta tabla no es que las ideas sean inéditas. Es que casi nadie ha construido y lanzado todo el conjunto como un único sistema con rendición de cuentas. Cada fila a continuación es un linaje real que vale la pena leer. Solo la última fila marca todas las columnas, y esa integración es la afirmación.",
+      "rwColApproach": "Enfoque",
+      "rwColWho": "Trabajo más cercano",
+      "rwColMechanism": "Mecanismo",
+      "rwColRuntime": "En tiempo de ejecución, no de entrenamiento",
+      "rwColCrypto": "Firma la decisión",
+      "rwColConstitution": "Constitución en tiempo de ejecución",
+      "rwColFederated": "Verificación federada",
+      "rwColConformance": "Conformidad ejecutable",
+      "rwColShipping": "En producción",
+      "rwStatus": {
+        "yes": "Sí",
+        "no": "No",
+        "partial": "Parcial",
+        "research": "Investigación",
+        "theory": "Teoría",
+        "components": "Partes"
+      },
+      "rwRows": [
+        {
+          "approach": "La tesis institucional",
+          "who": "Gillian Hadfield",
+          "mechanism": "Infraestructura normativa y mercados regulatorios, como teoría y política"
+        },
+        {
+          "approach": "Grafos de gobernanza",
+          "who": "IA institucional (Pierucci et al.)",
+          "mechanism": "Grafos públicos de estados legales y sanciones, como prototipo de investigación"
+        },
+        {
+          "approach": "Gobernanza constitucional en cadena",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Separación de poderes como contratos inteligentes, prerregistrados en una red de prueba"
+        },
+        {
+          "approach": "Asumir que el modelo está desalineado",
+          "who": "Redwood Research (control de IA)",
+          "mechanism": "Monitoreo y pruebas de ataque dentro de un solo despliegue"
+        },
+        {
+          "approach": "Seguridad demostrable, externalizada",
+          "who": "davidad, Bengio, el linaje GS-AI",
+          "mechanism": "Pruebas formales sobre modelos del mundo"
+        },
+        {
+          "approach": "Constitución en el momento del entrenamiento",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "Valores entrenados en los pesos, una organización"
+        },
+        {
+          "approach": "Procedencia criptográfica",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Firmar la procedencia de medios, demostrar que una inferencia fue ejecutada"
+        },
+        {
+          "approach": "DAG de razonamiento firmado",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "Un grafo firmado de pasos de derivación de IA, como borrador de especificación"
+        },
+        {
+          "approach": "Inferencia atestiguada por hardware",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Ejecuta inferencia en un enclave seguro que firma la salida"
+        },
+        {
+          "approach": "Identidad descentralizada y federación",
+          "who": "atproto, Bittensor",
+          "mechanism": "Federación social o de cómputo, sin capa de conciencia"
+        },
+        {
+          "approach": "Protocolos de agentes",
+          "who": "MCP, A2A",
+          "mechanism": "Interoperabilidad de herramientas y agentes, sin gobernanza"
+        },
+        {
+          "approach": "Conjuntos de evaluación de seguridad y conformidad",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Pruebas de referencia ejecutables que puntúan el comportamiento del modelo, no las decisiones"
+        },
+        {
+          "approach": "Auditoría de terceros y federada",
+          "who": "Red AISI, GovAI",
+          "mechanism": "Institutos independientes prueban conjuntamente los sistemas desplegados"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "Este sistema",
+          "mechanism": "Cadena de conciencia hacia artefactos firmados, constitución en tiempo de ejecución, federación poscuántica"
+        }
+      ],
+      "rwFootnote": "Mapeado a partir de trabajo público hasta junio de 2026, cada fila citada a continuación. Si tenemos un vecino cercano incorrecto, díganos y corregiremos la fila.",
+      "rwSourcesLabel": "Fuentes",
+      "seeAlsoCta": "Dónde se ubica esto en el panorama de la superalineación"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "Un riesgo en nuestro propio diseño",
@@ -2240,6 +2348,10 @@
         "Una red que puede hacer responsable a una IA sobrehumana es, por su forma, un internet sin centro. Los mismos registros firmados permiten que cualquiera verifique qué es verdad, y corren sobre la misma base privada que la IA en tu teléfono."
       ],
       "seeAlso": [
+        {
+          "label": "Dónde se ubica esto en el panorama de la superalineación",
+          "href": "/compare"
+        },
         {
           "label": "Un internet sin grandes tecnológicas",
           "href": "/paths/big-tech"

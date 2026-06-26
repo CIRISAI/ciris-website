@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "Thibitisha Mwenyewe.",
     "imageHeroSubheadline": "Chanzo wazi. Wazi kwa uchunguzi.",
     "imageHeroCopy": "Kila dai katika ukurasa huu linategemea msimbo unaoweza kusoma, rekodi unazoweza kuthibitisha, na utafiti unaoweza kukagua. Hiyo ndiyo lengo.",
-    "imageHeroButtonText": "Angalia Chanzo kwenye GitHub"
+    "imageHeroButtonText": "Angalia Chanzo kwenye GitHub",
+    "landscape": {
+      "kicker": "Mandhari ya usalama wa AI wa juu",
+      "title": "Sehemu kubwa ya uwanja huu inajaribu kurekebisha mfano. CIRIS inajenga taasisi zinazouizunguka.",
+      "lede": "Kuna njia mbili za kweli za kufanya AI yenye nguvu iwe salama. Moja ni kufundisha maadili ya mfano hadi uamini. Nyingine ni kukubali kwamba mfano unaweza kukosea, na kuhakikisha kinachofanywa kinawajibika, hadharani, kwa watu na mifumo ambayo mtu yeyote anaweza kukagua. CIRIS inachagua njia ya pili. Hapa kuna mandhari yote, iliyopangwa kwa uaminifu, na mahali tunapoingia ndani yake.",
+      "branchLabel": "Njia mbili",
+      "branchH2": "Amini uzito wa mfano, au kagua tabia yake",
+      "branchPlain": "Mkondo mkuu wa usalama wa AI unajaribu kufanya mfano uwe mzuri kwa ndani: kufundisha maadili yake, kusoma mawazo yake, kuufanya ujadiliane na nafsi yake. Kazi hiyo ina umuhimu. CIRIS inaamini njia nyingine. Kubali kwamba mfano wenye uwezo unaweza kuwa na mwelekeo mbaya, na badala ya kuamini akili yake, fanya matendo yake muhimu yawajibike kwa watu na mifumo mingine inayoweza kuyakagua.",
+      "branchRigor": "Kwa maneno ya uwanja wenyewe, CIRIS ipo katika tawi la taasisi na udhibiti, pamoja na udhibiti wa AI na AI salama inayohakikishwa, si katika mkondo mkuu wa RLHF, Constitutional AI, mjadala, na ufafanuzi wa ndani. Jibu lake kwa usimamizi unaoweza kupanuka, jinsi ya kusimamia kitu chenye akili kuliko wewe, ni kuthibitisha kamba ya uwajibikaji, si fikira. Saini, quorum, na ukaguzi unaounganishwa kwa hash unabaki rahisi kukagua hata wakati uamuzi wake uko juu ya uwezo wa binadamu. Inaunga mkomo mifumo ya mawakala wengi wenye uwezo kwa wakati, si maadili ya akili moja yoyote.",
+      "singletonLabel": "Mstari tunaoshikilia",
+      "singletonH2": "Haijaribu kurekebisha AI moja yenye nguvu yote. Kwa makusudi.",
+      "singletonPlain": "Uwajibikaji unahitaji zaidi ya mhusika mmoja. Mtu wa kujibu kwake. Njia ya kukagua ambayo haiwezi kumezwa kimya kimya. Uwiano wa nguvu ambao hakuna upande mmoja unaoweza kuuteka. AI moja yenye akili kuu haina chochote kati ya hivi, kwa hivyo hakuna njia ya kweli ya kuishikilia kuwajibika. CIRIS imejengwa kwa ajili ya mustakabali mwingine: mawakala wengi wenye uwezo, watu, na mashirika ambao maamuzi yao yote muhimu yanaweza kukaguliwa kwa kujitegemea.",
+      "singletonRigor": "Kwa hivyo msimamo ni wazi. ASI moja haiwajibiwi kama mfumo wa kurekebisha bali hali ya kuzuia. Kukusanya uwezo wa ziada ya binadamu mahali pamoja pasipo uwajibikaji, katika hatua hii ya ukuaji wa taasisi za binadamu, ni jambo lisilo halali, kwa sababu hakuna taasisi zilizo na ukomavu wa kutosha kulishikilia kuwajibika, na hii ndiyo hatari halisi. Katika muundo wa mfumo huu, singleton ni kuanguka kwa sauti moja ρ→1 ambayo mfano wa corridor unaitaja kama kushindwa kwa uratibu, si mafanikio. Kwamba dhamana zetu zinashikilia katika shirikisho na kudhoofika dhidi ya singleton si pengo tunaloliziba. Ni utaratibu tunaokataa kuhalalisha, ukishikiliwa kama ahadi, si tu utabiri.",
+      "rwLabel": "Kazi zinazohusiana, kwa uaminifu",
+      "rwH2": "Kila jirani wa karibu hujaza baadhi ya visanduku. Mstari mmoja hujaza vyote.",
+      "rwIntro": "CIRIS ina wenzake wa kiakili wa kweli, kila mmoja akiwa na nguvu katika uwanja wake. Madhumuni ya jedwali hili si kwamba mawazo haya hayana mfano. Ni kwamba karibu hakuna mtu aliyejenga na kutuma mfumo mzima kama mfumo mmoja unaowajibika. Kila mstari hapa chini ni ukoo wa kweli unaostahili kusomwa. Mstari wa mwisho tu ndio unaoangalia kila safu, na muunganiko huo ndio dai.",
+      "rwColApproach": "Mbinu",
+      "rwColWho": "Kazi ya karibu zaidi",
+      "rwColMechanism": "Utaratibu",
+      "rwColRuntime": "Wakati wa uendeshaji, si mafunzo",
+      "rwColCrypto": "Inasaini uamuzi",
+      "rwColConstitution": "Katiba ya wakati wa uendeshaji",
+      "rwColFederated": "Uthibitisho wa shirikisho",
+      "rwColConformance": "Ufuatano unaoweza kutekelezwa",
+      "rwColShipping": "Inatumwa",
+      "rwStatus": {
+        "yes": "Ndiyo",
+        "no": "Hapana",
+        "partial": "Sehemu",
+        "research": "Utafiti",
+        "theory": "Nadharia",
+        "components": "Sehemu"
+      },
+      "rwRows": [
+        {
+          "approach": "Nadharia ya taasisi",
+          "who": "Gillian Hadfield",
+          "mechanism": "Miundombinu ya kawaida na masoko ya udhibiti, kama nadharia na sera"
+        },
+        {
+          "approach": "Grafu za utawala",
+          "who": "AI ya taasisi (Pierucci na wengine)",
+          "mechanism": "Grafu za umma za hali za kisheria na vikwazo, kama mfano wa utafiti"
+        },
+        {
+          "approach": "Utawala wa katiba kwenye mnyororo",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Mgawanyo wa mamlaka kama mikataba ya hisia, iliyosajiliwa mapema kwenye mtandao wa majaribio"
+        },
+        {
+          "approach": "Kubali kwamba mfano una mwelekeo mbaya",
+          "who": "Redwood Research (udhibiti wa AI)",
+          "mechanism": "Ufuatiliaji na majaribio ya mshambuliaji ndani ya utekelezaji mmoja"
+        },
+        {
+          "approach": "Salama inayothibitishwa, ya nje",
+          "who": "davidad, Bengio, ukoo wa GS-AI",
+          "mechanism": "Uthibitisho rasmi juu ya mifano ya dunia"
+        },
+        {
+          "approach": "Katiba wakati wa mafunzo",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "Maadili yaliyofunzwa kwenye uzito, shirika moja"
+        },
+        {
+          "approach": "Chanzo cha kriptografia",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Saini chanzo cha vyombo vya habari, thibitisha kwamba ufuataji ulifanywa"
+        },
+        {
+          "approach": "DAG ya fikira iliyosainiwa",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "Grafu iliyosainiwa ya hatua za utoaji wa AI, kama rasimu ya maelezo"
+        },
+        {
+          "approach": "Ufuataji ulioidhibitiwa na maunzi",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Inafanya ufuataji katika sanduku salama linalosaini matokeo"
+        },
+        {
+          "approach": "Utambulisho usio na kati na shirikisho",
+          "who": "atproto, Bittensor",
+          "mechanism": "Shirikisho la kijamii au la kompyuta, bila safu ya dhamiri"
+        },
+        {
+          "approach": "Itifaki za wakala",
+          "who": "MCP, A2A",
+          "mechanism": "Ushirikiano wa zana na wakala, bila utawala"
+        },
+        {
+          "approach": "Vifaa vya tathmini ya usalama na ufuatano",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Vipimo vinavyoweza kutekelezwa vinavyopima tabia ya mfano, si maamuzi"
+        },
+        {
+          "approach": "Ukaguzi wa tatu na wa shirikisho",
+          "who": "AISI Network, GovAI",
+          "mechanism": "Taasisi huru hujaribu pamoja mifumo iliyotumwa"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "Mfumo huu",
+          "mechanism": "Mfumo wa dhamiri hadi makala yaliyosainiwa, katiba ya wakati wa uendeshaji, shirikisho la baada ya quantum"
+        }
+      ],
+      "rwFootnote": "Imepangwa kutoka kwa kazi za umma kufikia Juni 2026, kila mstari umetajwa hapa chini. Kama tumekosea jirani yetu wa karibu, tuambie na tutarekebisha mstari.",
+      "rwSourcesLabel": "Vyanzo",
+      "seeAlsoCta": "Mahali hapa panapoingiana katika mandhari ya usalama wa AI wa juu"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "Hatari katika muundo wetu wenyewe",
@@ -2240,6 +2348,10 @@
         "Mtandao unaoweza kushikilia AI ya nguvu kubwa kuwa na uwajibikaji ni, kwa muundo wake, intaneti bila kitovu. Rekodi hizo hizo zilizosainiwa zinaweza kuruhusu yeyote kuangalia ukweli, na zinafanya kazi kwenye msingi huo huo wa kibinafsi kama AI kwenye simu yako."
       ],
       "seeAlso": [
+        {
+          "label": "Mahali hapa panapoingiana katika mandhari ya usalama wa AI wa juu",
+          "href": "/compare"
+        },
         {
           "label": "Intaneti bila Big Tech",
           "href": "/paths/big-tech"

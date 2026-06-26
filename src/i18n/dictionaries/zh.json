@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "自己验证。",
     "imageHeroSubheadline": "开源，接受审查。",
     "imageHeroCopy": "本页的每项声明都有可读的代码、可验证的追踪记录和可查的研究作为支撑。这就是重点所在。",
-    "imageHeroButtonText": "在 GitHub 上查看源代码"
+    "imageHeroButtonText": "在 GitHub 上查看源代码",
+    "landscape": {
+      "kicker": "超级对齐全景",
+      "title": "大多数领域在对齐模型本身。CIRIS 在构建围绕它的制度体系。",
+      "lede": "要让强大的 AI 真正安全，有两条诚实的路。一条是训练模型的价值观，直到你信任它。另一条是假设模型可能出错，让它的行为公开、可查，受人和系统的约束。CIRIS 走的是第二条路。这里是整个全景，客观呈现，以及我们在其中的位置。",
+      "branchLabel": "两条路",
+      "branchH2": "信任权重，还是检验行为",
+      "branchPlain": "AI 安全的主流做法是从内部让模型变好：训练它的价值观，研究它的思维，让它自我辩论。这项工作很重要。CIRIS 押注另一条路：假设一个有能力的模型可能存在偏差，与其信任它的判断，不如让它的重要行动对人和其他系统公开负责，接受检验。",
+      "branchRigor": "用该领域自己的术语来说，CIRIS 属于制度与控制分支，与 AI 控制和 GS-AI 并列，而不属于 RLHF、Constitutional AI、辩论和可解释性的价值内化主流。对于可扩展监督，即如何监督比你更聪明的东西，CIRIS 的答案是验证问责框架，而不是推理过程。签名、法定人数、哈希链审计即便面对超人决策，验证成本依然低廉。它对齐的是众多有能力的智能体随时间形成的系统，而不是任何单一思维的价值观。",
+      "singletonLabel": "我们坚守的界线",
+      "singletonH2": "它不尝试对齐一个全能 AI。这是故意的。",
+      "singletonPlain": "问责需要不止一方：有人可以被追责，有方法可以检验且无法被悄悄吞没，有权力平衡让任何一方都无法独占。单一超级智能不具备这些条件，因此没有诚实的方式让它承担责任。CIRIS 为另一种未来而构建：许多有能力的智能体、人类和组织，其重要决策都可以独立核查。",
+      "singletonRigor": "因此，这一立场是明确的。单一 ASI 不是一个需要对齐的系统，而是一种需要防止的状态。在人类制度发展的这个阶段，将超人能力集中于一个不可问责的地方是不合法的，因为没有任何制度成熟到足以约束它，这正是危险所在。在该框架自身的术语中，单一体就是 ρ→1 单一声音崩溃，这是走廊模型所称的协调失败，而非成功。我们的保障在联盟中有效，面对单一体则会瓦解，这不是我们要修补的漏洞，而是我们拒绝赋予合法性的体制，这是一种承诺，而不仅仅是预测。",
+      "rwLabel": "相关工作，如实呈现",
+      "rwH2": "每个近邻都填满了一些格子。只有一行全部填满。",
+      "rwIntro": "CIRIS 有认真的学术同行，各自在本领域都很强。这张表格的用意不是说这些想法前所未有，而是说几乎没有人把整个技术栈作为一个可问责的系统构建并交付出来。下面每一行都是值得深入了解的真实传承。只有最后一行勾选了所有列，而这种整合正是我们的主张。",
+      "rwColApproach": "方法",
+      "rwColWho": "最近相关工作",
+      "rwColMechanism": "机制",
+      "rwColRuntime": "运行时，而非训练时",
+      "rwColCrypto": "为决策签名",
+      "rwColConstitution": "运行时宪法",
+      "rwColFederated": "联邦验证",
+      "rwColConformance": "可执行合规",
+      "rwColShipping": "已交付",
+      "rwStatus": {
+        "yes": "是",
+        "no": "否",
+        "partial": "部分",
+        "research": "研究",
+        "theory": "理论",
+        "components": "局部"
+      },
+      "rwRows": [
+        {
+          "approach": "制度论点",
+          "who": "Gillian Hadfield",
+          "mechanism": "规范性基础设施和监管市场，作为理论与政策"
+        },
+        {
+          "approach": "治理图",
+          "who": "制度 AI（Pierucci 等人）",
+          "mechanism": "法律状态和制裁的公共图，作为研究原型"
+        },
+        {
+          "approach": "链上宪法治理",
+          "who": "AgentCity（Ruan、Zhang）",
+          "mechanism": "权力分立作为智能合约，预先注册于测试网"
+        },
+        {
+          "approach": "假设模型存在偏差",
+          "who": "Redwood Research（AI 控制）",
+          "mechanism": "在单一部署内进行监控和红队测试"
+        },
+        {
+          "approach": "可证明安全，外部化",
+          "who": "davidad、Bengio 及 GS-AI 传承",
+          "mechanism": "基于世界模型的形式化证明"
+        },
+        {
+          "approach": "训练时的宪法",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "将价值观训练进权重，由单一组织负责"
+        },
+        {
+          "approach": "密码学溯源",
+          "who": "C2PA、zkML（EZKL、Giza）",
+          "mechanism": "签署媒体来源，证明推理已执行"
+        },
+        {
+          "approach": "有签名的推理 DAG",
+          "who": "Proof of Insight（Arclio）",
+          "mechanism": "AI 推导步骤的有签名图，作为草案规范"
+        },
+        {
+          "approach": "硬件证明推理",
+          "who": "Phala、Marlin、Attestable Audits",
+          "mechanism": "在安全隔离区中运行推理并对输出签名"
+        },
+        {
+          "approach": "去中心化身份与联邦",
+          "who": "atproto、Bittensor",
+          "mechanism": "社交或算力联邦，无良知层"
+        },
+        {
+          "approach": "智能体协议",
+          "who": "MCP、A2A",
+          "mechanism": "工具和智能体互操作，无治理"
+        },
+        {
+          "approach": "安全评估与合规套件",
+          "who": "MLCommons、METR、HarmBench",
+          "mechanism": "对模型行为评分的可执行基准，而非决策"
+        },
+        {
+          "approach": "第三方与联邦审计",
+          "who": "AISI 网络、GovAI",
+          "mechanism": "独立机构联合测试已部署系统"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "本系统",
+          "mechanism": "良知流水线到有签名产物、运行时宪法、后量子联邦"
+        }
+      ],
+      "rwFootnote": "依据截至 2026 年 6 月的公开工作整理，每行均附引用。如有近邻信息有误，请告知我们，我们将修正该行。",
+      "rwSourcesLabel": "来源",
+      "seeAlsoCta": "本系统在超级对齐全景中的位置"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "我们自身设计中的一项风险",
@@ -2240,6 +2348,10 @@
         "一个能让超级 AI 负责的网络，从其结构来说，就是一个没有中心的互联网。同样的签名记录让任何人都能核实真相，它们运行在和你手机上那个私人 AI 相同的底层上。"
       ],
       "seeAlso": [
+        {
+          "label": "本系统在超级对齐全景中的位置",
+          "href": "/compare"
+        },
         {
           "label": "没有大科技公司的互联网",
           "href": "/paths/big-tech"

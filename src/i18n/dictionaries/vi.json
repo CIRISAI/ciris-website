@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "Tự Mình Xác Minh.",
     "imageHeroSubheadline": "Mã nguồn mở. Mở để kiểm tra.",
     "imageHeroCopy": "Mọi tuyên bố trên trang này đều được hỗ trợ bởi mã bạn có thể đọc, dấu vết bạn có thể xác minh và nghiên cứu bạn có thể kiểm tra. Đó là điểm mấu chốt.",
-    "imageHeroButtonText": "Xem Mã Nguồn Trên GitHub"
+    "imageHeroButtonText": "Xem Mã Nguồn Trên GitHub",
+    "landscape": {
+      "kicker": "Bức tranh siêu căn chỉnh",
+      "title": "Hầu hết lĩnh vực này đang căn chỉnh mô hình. CIRIS đang xây dựng các thể chế xung quanh nó.",
+      "lede": "Có hai cách trung thực để làm cho AI mạnh mẽ trở nên an toàn. Một là huấn luyện các giá trị của mô hình cho đến khi bạn tin tưởng chúng. Cách kia là giả định rằng mô hình có thể sai, và làm cho những gì nó thực hiện phải chịu trách nhiệm, một cách minh bạch, trước con người và các hệ thống mà bất kỳ ai cũng có thể kiểm tra. CIRIS chọn con đường thứ hai. Đây là toàn bộ bức tranh, được vẽ một cách công bằng, và vị trí của chúng tôi trong đó.",
+      "branchLabel": "Hai con đường",
+      "branchH2": "Tin tưởng các trọng số, hay kiểm tra hành vi",
+      "branchPlain": "Dòng chính của an toàn AI cố gắng làm cho mô hình tốt từ bên trong: huấn luyện các giá trị của nó, nghiên cứu suy nghĩ của nó, để nó tự tranh luận với chính mình. Công việc đó quan trọng. CIRIS đặt cược vào con đường kia. Giả định rằng một mô hình có năng lực có thể bị lệch lạc, và thay vì tin tưởng vào tâm trí của nó, hãy làm cho các hành động quan trọng của nó phải chịu trách nhiệm trước con người và các hệ thống khác có thể kiểm tra chúng.",
+      "branchRigor": "Theo thuật ngữ của lĩnh vực này, CIRIS thuộc nhánh thể chế và kiểm soát, cùng với kiểm soát AI và AI đảm bảo an toàn, chứ không phải dòng chính nội hóa giá trị của RLHF, Constitutional AI, tranh luận và khả năng diễn giải. Câu trả lời của nó cho giám sát có thể mở rộng, tức là cách bạn giám sát thứ gì đó thông minh hơn bạn, là xác minh phong bì trách nhiệm, không phải lý luận. Một chữ ký, một đại biểu số đông, một kiểm tra hash chuỗi vẫn rẻ để kiểm tra ngay cả khi quyết định đằng sau chúng là siêu nhân. Nó căn chỉnh các hệ thống gồm nhiều tác nhân có năng lực theo thời gian, không phải các giá trị của bất kỳ tâm trí đơn lẻ nào.",
+      "singletonLabel": "Ranh giới chúng tôi giữ",
+      "singletonH2": "Nó không cố gắng căn chỉnh một AI toàn năng duy nhất. Đó là chủ đích.",
+      "singletonPlain": "Trách nhiệm cần nhiều hơn một bên. Cần có người để trả lời. Cần một cách kiểm tra không thể bị nuốt chửng lặng lẽ. Cần một sự cân bằng quyền lực mà không bên nào có thể nắm bắt. Một siêu trí tuệ duy nhất không có bất kỳ điều nào trong số này, vì vậy không có cách trung thực nào để buộc nó phải chịu trách nhiệm. CIRIS được xây dựng cho tương lai kia: nhiều tác nhân có năng lực, con người và tổ chức mà các quyết định quan trọng của họ đều có thể được kiểm tra độc lập.",
+      "singletonRigor": "Vì vậy lập trường này là rõ ràng. Một ASI độc nhất không phải là hệ thống cần được căn chỉnh mà là điều kiện cần được ngăn chặn. Tập trung năng lực siêu nhân vào một nơi không chịu trách nhiệm, ở giai đoạn phát triển thể chế con người hiện nay, là không hợp pháp, vì không có thể chế nào đủ trưởng thành để buộc nó phải chịu trách nhiệm, và đó chính xác là mối nguy hiểm. Theo thuật ngữ của khung này, một thực thể độc nhất là sự sụp đổ tiếng nói đơn ρ→1 mà mô hình hành lang gọi là thất bại phối hợp, không phải thành công. Việc các đảm bảo của chúng tôi duy trì trong một liên đoàn và suy yếu trước một thực thể độc nhất không phải là khoảng trống chúng tôi đang vá lại. Đó là chế độ chúng tôi từ chối hợp pháp hóa, được giữ như một cam kết, không chỉ là một dự đoán.",
+      "rwLabel": "Công trình liên quan, một cách trung thực",
+      "rwH2": "Mỗi người hàng xóm gần điền vào một số ô. Một hàng điền vào tất cả.",
+      "rwIntro": "CIRIS có những người đồng nghiệp trí tuệ nghiêm túc, mỗi người mạnh trong lĩnh vực riêng của mình. Mục đích của bảng này không phải là các ý tưởng chưa từng có tiền lệ. Mà là hầu như không ai đã xây dựng và vận chuyển toàn bộ ngăn xếp như một hệ thống chịu trách nhiệm duy nhất. Mỗi hàng dưới đây là một dòng thực sự đáng đọc. Chỉ có hàng cuối cùng kiểm tra mọi cột, và sự tích hợp đó là tuyên bố.",
+      "rwColApproach": "Phương pháp",
+      "rwColWho": "Công trình gần nhất",
+      "rwColMechanism": "Cơ chế",
+      "rwColRuntime": "Thời gian chạy, không phải huấn luyện",
+      "rwColCrypto": "Ký quyết định",
+      "rwColConstitution": "Hiến pháp thời gian chạy",
+      "rwColFederated": "Xác minh liên đoàn",
+      "rwColConformance": "Tuân thủ có thể thực thi",
+      "rwColShipping": "Vận chuyển",
+      "rwStatus": {
+        "yes": "Có",
+        "no": "Không",
+        "partial": "Một phần",
+        "research": "Nghiên cứu",
+        "theory": "Lý thuyết",
+        "components": "Một phần"
+      },
+      "rwRows": [
+        {
+          "approach": "Luận điểm thể chế",
+          "who": "Gillian Hadfield",
+          "mechanism": "Cơ sở hạ tầng chuẩn mực và thị trường quy định, dưới dạng lý thuyết và chính sách"
+        },
+        {
+          "approach": "Đồ thị quản trị",
+          "who": "Institutional AI (Pierucci và cộng sự)",
+          "mechanism": "Đồ thị công khai về các trạng thái pháp lý và chế tài, dưới dạng nguyên mẫu nghiên cứu"
+        },
+        {
+          "approach": "Quản trị hiến pháp trên chuỗi",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Phân chia quyền lực dưới dạng hợp đồng thông minh, được đăng ký trước trên một mạng thử nghiệm"
+        },
+        {
+          "approach": "Giả định mô hình bị lệch lạc",
+          "who": "Redwood Research (kiểm soát AI)",
+          "mechanism": "Giám sát và kiểm tra đỏ trong một triển khai"
+        },
+        {
+          "approach": "Có thể chứng minh an toàn, bên ngoài hóa",
+          "who": "davidad, Bengio, dòng GS-AI",
+          "mechanism": "Bằng chứng hình thức trên các mô hình thế giới"
+        },
+        {
+          "approach": "Hiến pháp tại thời điểm huấn luyện",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "Các giá trị được huấn luyện vào trọng số, một tổ chức"
+        },
+        {
+          "approach": "Xuất xứ mật mã",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Ký xuất xứ phương tiện, chứng minh một suy luận đã chạy"
+        },
+        {
+          "approach": "DAG lý luận được ký",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "Một đồ thị được ký của các bước suy diễn AI, dưới dạng bản thảo đặc tả"
+        },
+        {
+          "approach": "Suy luận được chứng thực phần cứng",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Chạy suy luận trong một vùng enclave bảo mật ký đầu ra"
+        },
+        {
+          "approach": "Danh tính phi tập trung và liên đoàn",
+          "who": "atproto, Bittensor",
+          "mechanism": "Liên đoàn xã hội hoặc tính toán, không có lớp lương tâm"
+        },
+        {
+          "approach": "Giao thức tác nhân",
+          "who": "MCP, A2A",
+          "mechanism": "Khả năng tương tác công cụ và tác nhân, không có quản trị"
+        },
+        {
+          "approach": "Bộ đánh giá an toàn và tuân thủ",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Các điểm chuẩn có thể thực thi chấm điểm hành vi mô hình, không phải quyết định"
+        },
+        {
+          "approach": "Kiểm toán bên thứ ba và liên đoàn",
+          "who": "AISI Network, GovAI",
+          "mechanism": "Các viện độc lập cùng nhau kiểm tra các hệ thống đã triển khai"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "Hệ thống này",
+          "mechanism": "Chuỗi lương tâm đến các tạo phẩm được ký, hiến pháp thời gian chạy, liên đoàn hậu lượng tử"
+        }
+      ],
+      "rwFootnote": "Được lập bản đồ từ công trình công khai tính đến tháng 6 năm 2026, mỗi hàng được trích dẫn bên dưới. Nếu chúng tôi hiểu sai một người hàng xóm gần, hãy cho chúng tôi biết và chúng tôi sẽ sửa hàng đó.",
+      "rwSourcesLabel": "Nguồn",
+      "seeAlsoCta": "Vị trí của hệ thống này trong bức tranh siêu căn chỉnh"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "Một rủi ro trong thiết kế của chúng tôi",
@@ -2240,6 +2348,10 @@
         "Một mạng có thể buộc một AI siêu mạnh phải chịu trách nhiệm, xét về hình dạng của nó, là một internet không có trung tâm. Những bản ghi được ký số đó cho phép bất kỳ ai kiểm tra điều gì là thật, và chúng chạy trên cùng nền tảng riêng tư như AI trên điện thoại của bạn."
       ],
       "seeAlso": [
+        {
+          "label": "Vị trí của hệ thống này trong bức tranh siêu căn chỉnh",
+          "href": "/compare"
+        },
         {
           "label": "Một internet không có Big Tech",
           "href": "/paths/big-tech"

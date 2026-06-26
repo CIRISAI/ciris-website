@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "Tabbatar da Kanka.",
     "imageHeroSubheadline": "Buɗe tushen. Buɗe ga bincike.",
     "imageHeroCopy": "Kowane iƙirari a wannan shafin an tallafa shi da lambar da za ka karanta, sawun tunani da za ka tabbatar, da bincike da za ka duba. Wannan shi ne manufar.",
-    "imageHeroButtonText": "Duba Tushen a GitHub"
+    "imageHeroButtonText": "Duba Tushen a GitHub",
+    "landscape": {
+      "kicker": "Shimfidar superalignment",
+      "title": "Yawancin filin suna daidaita samfurin. CIRIS yana gina cibiyoyi a kewaye da shi.",
+      "lede": "Akwai hanyoyi biyu na gaskiya don sanya AI mai ƙarfi ya zama amintacce. Na farko shi ne horar da ƙimolin samfurin har sai kun amince da su. Na biyu shi ne ɗauka cewa samfurin na iya yin kuskure, kuma sanya abin da yake yi ya zama mai amsawa, a bainar jama'a, ga mutane da tsarukan da kowa zai iya duba. CIRIS yana bin hanyar ta biyu. Ga shimfidar dukkanin filin, an zana shi cikin gaskiya, da inda muke a ciki.",
+      "branchLabel": "Hanyoyi biyu",
+      "branchH2": "Amince da nauyin, ko duba hali",
+      "branchPlain": "Babbar hanyar amincin AI tana ƙoƙarin sanya samfurin ya zama mai kyau a ciki: horar da ƙimominsa, nazarin tunaninsa, barin ya muhawara da kansa. Wannan aiki yana da muhimmanci. CIRIS yana dogara kan hanyar ta biyu. Ka ɗauka cewa samfurin mai iya yin aiki na iya zama ba daidai ba, kuma maimakon amincewa da hankali nsa, sanya ayyukansa masu ma'ana su zama masu amsawa ga mutane da sauran tsaruka da za su iya duba su.",
+      "branchRigor": "A cikin kalmomin filin da kansa, CIRIS yana zaune a reshen cibiyoyi da sarrafawa, tare da sarrafa AI da kuma AI mai tabbatar da aminci, ba a babbar hanyar sanya ƙima ta ciki ta RLHF, Constitutional AI, muhawara, da fassara. Amsar sa ga kula da sikeli, yadda ake sa ido kan wani abu mafi wayo da kai, ita ce tabbatar da ambulance na amsawa, ba tunani ba. Sa hannun yatsatsi, yawan mutane, da duba cikin sarƙa ana samun su a kudi mai rahusa har da lokacin da yanke shawara a bayan su ya wuce ƙarfin ɗan adam. Yana daidaita tsarukan wakilan da yawa masu iya aiki a tsawon lokaci, ba ƙimomi na wata hankali ɗaya ba.",
+      "singletonLabel": "Layin da muke rike da shi",
+      "singletonH2": "Ba ta ƙoƙarin daidaita AI ɗaya mai iko duka. Da gangan.",
+      "singletonPlain": "Amsawa tana buƙatar fiye da ɓangare ɗaya. Wani da za a amsa masa. Hanya ta duba da ba za a iya haɗiye ta a asirce ba. Daidaiton iko da babu ɓangare ɗaya da zai iya karɓe shi. Hankali ɗaya mai ƙarfi-sama ba shi da ɗaya daga cikin waɗannan, don haka babu hanyar gaskiya ta riƙe shi da amsawa. CIRIS an gina shi don makomar ta biyu: wakilan da yawa masu iya aiki, mutane, da ƙungiyoyin da yanke shawarar su masu ma'ana duka ana iya duba su da 'yanci.",
+      "singletonRigor": "Don haka matsayin yana bayyane. ASI ɗaya ba tsari ne da za a daidaita shi ba amma yanayi ne da za a hana shi. Tattara ƙarfin da ya wuce ɗan adam a wuri ɗaya marar amsawa, a wannan matakin ci gaban cibiyoyin ɗan adam, ba shi da halal, domin babu cibiyoyi da suka balaga su isa su rike shi da amsawa, kuma wannan shine haɗarin daidai. A cikin kalmomin tsarin kansa, ɗaya shine rugujewa ρ→1 ta murya ɗaya da tsarin hanyar tana suna a matsayin gazawar daidaitawa, ba nasara ba. Cewa garantinmu suna aiki a cikin tarayyar kuma suna rauni a kan ɗaya ba giɓi muke gyarawa ba. Shi ne tsari da muke ƙi ba da halal, ana riƙe shi a matsayin alkawari, ba kawai hasashe ba.",
+      "rwLabel": "Ayyukan da suka shafi wannan, da gaskiya",
+      "rwH2": "Kowane makwabci na kusa yana cike wasu akwatunan. Jeri ɗaya yana cike su duka.",
+      "rwIntro": "CIRIS yana da takwarorin ilimi masu mahimmanci, kowannensu yana da ƙarfi a filinsa nsa. Manufar wannan tebur ba cewa ra'ayoyin ba su da misali ba. Shi ne cewa kusan babu wanda ya gina kuma ya tura dukkanin tarin a matsayin tsari ɗaya mai amsawa. Kowanne jeri a ƙasa layin gaske ne mai daraja a karanta. Jeri na ƙarshe kawai yana binciken kowane shafi, kuma wannan haɗaɗɗen shi ne da'awar.",
+      "rwColApproach": "Hanya",
+      "rwColWho": "Aikin da ya fi kusa",
+      "rwColMechanism": "Tsari",
+      "rwColRuntime": "Lokacin aiki, ba horo ba",
+      "rwColCrypto": "Yana sa hannun yatsatsi a kan yanke shawara",
+      "rwColConstitution": "Kundin tsarin mulki na lokacin aiki",
+      "rwColFederated": "Tabbatarwa ta tarayya",
+      "rwColConformance": "Mutunta da za a iya aiwatarwa",
+      "rwColShipping": "Ana aikawa",
+      "rwStatus": {
+        "yes": "Eh",
+        "no": "A'a",
+        "partial": "Wani ɓangare",
+        "research": "Bincike",
+        "theory": "Ka'ida",
+        "components": "Sassan"
+      },
+      "rwRows": [
+        {
+          "approach": "Muhawara ta cibiyoyi",
+          "who": "Gillian Hadfield",
+          "mechanism": "Kayan aikin ƙa'ida da kasuwar doka, a matsayin ka'ida da manufofin gwamnati"
+        },
+        {
+          "approach": "Zane-zanen mulki",
+          "who": "AI na Cibiyoyi (Pierucci da sauransu)",
+          "mechanism": "Zane-zanen jama'a na jihohin doka da hukunce-hukuncen, a matsayin tsarin bincike"
+        },
+        {
+          "approach": "Mulki na tsarin mulki a kan sarƙa",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Raba iko a matsayin kwangilolin wayo, an yi rajista a gaba akan testnet"
+        },
+        {
+          "approach": "Ka ɗauka cewa samfurin bai daidaita ba",
+          "who": "Redwood Research (sarrafa AI)",
+          "mechanism": "Sa ido da ja-in-ja a cikin shigarwar ɗaya"
+        },
+        {
+          "approach": "Amintacce tabbas, an fitar da shi",
+          "who": "davidad, Bengio, layin GS-AI",
+          "mechanism": "Hujjoji na yau da kullun akan tsarukan duniya"
+        },
+        {
+          "approach": "Kundin tsarin mulki a lokacin horo",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "Ƙimomi an horar da su cikin nauyin, ƙungiya ɗaya"
+        },
+        {
+          "approach": "Asalin cryptographic",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Sa hannun yatsatsi a asalin kafofin watsa labarai, tabbatar cewa an gudanar da nazari"
+        },
+        {
+          "approach": "DAG na tunani da aka sa hannun yatsatsi",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "Zane da aka sa hannun yatsatsi na matakan fitar da AI, a matsayin daftarin ƙayyadewa"
+        },
+        {
+          "approach": "Nazari da aka tabbatar da kayan masarufi",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Yana gudanar da nazari a cikin kulle mai aminci wanda ke sa hannun yatsatsi a sakamakon"
+        },
+        {
+          "approach": "Asalin rarrabuwa da tarayya",
+          "who": "atproto, Bittensor",
+          "mechanism": "Tarayya ta zamantakewa ko na lissafin, babu shigar lamiri"
+        },
+        {
+          "approach": "Yarjejeniyoyin wakili",
+          "who": "MCP, A2A",
+          "mechanism": "Kayan aiki da mu'amalar wakili, babu mulki"
+        },
+        {
+          "approach": "Gwaje-gwaje na aminci da tarin mutunta",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Binciken da za a iya aiwatarwa wanda ke ci gaba da hali na samfuri, ba yanke shawara ba"
+        },
+        {
+          "approach": "Duba na ɓangare na uku da na tarayya",
+          "who": "AISI Network, GovAI",
+          "mechanism": "Cibiyoyin 'yanci suna gwada tsarukan da aka tura tare"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "Wannan tsari",
+          "mechanism": "Layin lamiri zuwa abubuwan da aka sa hannun yatsatsi, kundin tsarin mulki na lokacin aiki, tarayya ta bayan-quantum"
+        }
+      ],
+      "rwFootnote": "An zana daga ayyukan jama'a zuwa Yuni 2026, kowanne jeri an nakalto a ƙasa. Idan mun samu makwabci na kusa ba daidai ba, sanar da mu kuma za mu gyara jerin.",
+      "rwSourcesLabel": "Tushe",
+      "seeAlsoCta": "Inda wannan ke zaune a cikin shimfidar superalignment"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "Haɗari a cikin tsarinmu namu",
@@ -2240,6 +2348,10 @@
         "Hanyar sadarwa da ke iya riƙe AI mai ƙarfi da alhakin ita ce, ta siffarta, intanet ba tare da cibiya ba. Irin waɗannan rikodi masu sa hannun na barin kowa ya duba abin da yake gaskiya, kuma suna gudana a cikin irin wannan tushe mai zaman kansa kamar AI a wayar ka."
       ],
       "seeAlso": [
+        {
+          "label": "Inda wannan ke zaune a cikin shimfidar superalignment",
+          "href": "/compare"
+        },
         {
           "label": "Intanet ba tare da Big Tech ba",
           "href": "/paths/big-tech"

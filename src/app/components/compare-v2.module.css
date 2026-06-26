@@ -40,3 +40,28 @@
 
 .tableFootnote { font-family: ui-monospace, monospace; font-size: 13px;
   line-height: 1.5; color: var(--color-mute); margin: 0; }
+
+/* Related-work matrix: wider, with three left-aligned text columns up front
+   (approach / closest work / mechanism) and six status columns after. */
+.rwTable { min-width: 1040px; }
+.rwTable thead th.colText { text-align: left; }
+.rwTable tbody td.colText { text-align: left; white-space: normal; color: var(--color-dim); }
+.rwTable tbody td.colApproach { color: var(--color-text); font-weight: 500; }
+.rwTable tbody td.colWho { color: var(--color-mute); }
+.rwTable .rowHero td.colApproach { color: var(--accent); font-weight: 600; }
+.rwTable .rowHero td.colWho,
+.rwTable .rowHero td.colText { color: color-mix(in srgb, var(--color-text) 80%, var(--accent)); }
+.rwTable tbody td.colWho a { color: inherit; text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+.rwTable tbody td.colWho a:hover { border-bottom-color: var(--accent); }
+
+/* Collapsible per-row sources under the matrix. */
+.sources { margin: 4px 0 18px; font-size: 13px; }
+.sources summary { cursor: pointer; color: var(--color-dim); font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase; font-size: 11px; }
+.sources ol { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 9px; }
+.sources li { color: var(--color-mute); line-height: 1.5; }
+.sources .srcRow { color: var(--color-text); font-weight: 500; margin-right: 8px; }
+.sources a { color: var(--color-dim); text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+.sources a:hover { color: var(--color-text); border-bottom-color: var(--accent); }

@@ -1173,6 +1173,114 @@
   },
   "compare": {
     "h1": "The Safest and Most Ethical AI in Production Today",
+    "landscape": {
+      "kicker": "The superalignment landscape",
+      "title": "Most of the field is aligning the model. CIRIS is building the institutions around it.",
+      "lede": "There are two honest ways to make powerful AI safe. One is to train the model's values until you trust them. The other is to assume the model could be wrong, and make what it does accountable, in the open, to people and systems anyone can check. CIRIS takes the second road. Here is the whole landscape, mapped fairly, and where we fit in it.",
+      "branchLabel": "Two roads",
+      "branchH2": "Trust the weights, or check the behavior",
+      "branchPlain": "The mainline of AI safety tries to make a model good on the inside: train its values, study its thoughts, have it debate itself. That work matters. CIRIS bets on the other road. Assume a capable model might be misaligned, and instead of trusting its mind, make its consequential actions accountable to people and other systems that can check them.",
+      "branchRigor": "In the field's own terms, CIRIS sits in the institutional and control branch, alongside AI control and guaranteed-safe AI, not the value-internalization mainline of RLHF, Constitutional AI, debate, and interpretability. Its answer to scalable oversight, how you supervise something smarter than you, is to verify the accountability envelope, not the reasoning. A signature, a quorum, a hash-chained audit stay cheap to check even when the decision behind them is superhuman. It aligns systems of many capable agents over time, not the values of any single mind.",
+      "singletonLabel": "The line we hold",
+      "singletonH2": "It does not try to align one all-powerful AI. On purpose.",
+      "singletonPlain": "Accountability needs more than one party. Someone to answer to. A way to check that cannot be quietly swallowed. A balance of power no one side can capture. A single super-intelligence has none of these, so there is no honest way to hold it to account. CIRIS is built for the other future: many capable agents, people, and organizations whose consequential decisions are all independently checkable.",
+      "singletonRigor": "So the stance is explicit. A singleton ASI is not a system to be aligned but a condition to be prevented. Concentrating superhuman capability in one unaccountable place, at this stage of human institutional development, is illegitimate, because no institutions are mature enough to hold it accountable, which is precisely the danger. In the framework's own terms a singleton is the ρ→1 single-voice collapse that the corridor model names as a coordination failure, not a success. That our guarantees hold across a federation and erode against a singleton is not a gap we are patching. It is the regime we refuse to legitimize, held as a commitment, not only a prediction.",
+      "rwLabel": "Related work, honestly",
+      "rwH2": "Every near-neighbor fills some boxes. One row fills them all.",
+      "rwIntro": "CIRIS has serious intellectual peers, each strong in its own field. The point of this table is not that the ideas are unprecedented. It is that almost no one has built and shipped the whole stack as one accountable system. Each row below is a real lineage worth reading. Only the last row checks every column, and that integration is the claim.",
+      "rwColApproach": "Approach",
+      "rwColWho": "Closest work",
+      "rwColMechanism": "Mechanism",
+      "rwColRuntime": "Runtime, not training",
+      "rwColCrypto": "Signs the decision",
+      "rwColConstitution": "Runtime constitution",
+      "rwColFederated": "Federated verification",
+      "rwColConformance": "Executable conformance",
+      "rwColShipping": "Shipping",
+      "rwStatus": {
+        "yes": "Yes",
+        "no": "No",
+        "partial": "Partial",
+        "research": "Research",
+        "theory": "Theory",
+        "components": "Parts"
+      },
+      "rwRows": [
+        {
+          "approach": "The institutional thesis",
+          "who": "Gillian Hadfield",
+          "mechanism": "Normative infrastructure and regulatory markets, as theory and policy"
+        },
+        {
+          "approach": "Governance graphs",
+          "who": "Institutional AI (Pierucci et al.)",
+          "mechanism": "Public graphs of legal states and sanctions, as a research prototype"
+        },
+        {
+          "approach": "Constitutional governance on-chain",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Separation of powers as smart contracts, pre-registered on a testnet"
+        },
+        {
+          "approach": "Assume the model is misaligned",
+          "who": "Redwood Research (AI control)",
+          "mechanism": "Monitoring and red-teaming inside one deployment"
+        },
+        {
+          "approach": "Provably-safe, externalized",
+          "who": "davidad, Bengio, the GS-AI lineage",
+          "mechanism": "Formal proofs over world models"
+        },
+        {
+          "approach": "Constitution at training time",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "Values trained into the weights, one organization"
+        },
+        {
+          "approach": "Cryptographic provenance",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Sign media provenance, prove an inference ran"
+        },
+        {
+          "approach": "Signed reasoning DAG",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "A signed graph of AI derivation steps, as a draft spec"
+        },
+        {
+          "approach": "Hardware-attested inference",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Runs inference in a secure enclave that signs the output"
+        },
+        {
+          "approach": "Decentralized identity and federation",
+          "who": "atproto, Bittensor",
+          "mechanism": "Social or compute federation, no conscience layer"
+        },
+        {
+          "approach": "Agent protocols",
+          "who": "MCP, A2A",
+          "mechanism": "Tool and agent interop, no governance"
+        },
+        {
+          "approach": "Safety eval and conformance suites",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Executable benchmarks that score model behavior, not decisions"
+        },
+        {
+          "approach": "Third-party and federated audit",
+          "who": "AISI Network, GovAI",
+          "mechanism": "Independent institutes jointly test deployed systems"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "This system",
+          "mechanism": "Conscience pipeline to signed artifacts, runtime constitution, post-quantum federation"
+        }
+      ],
+      "rwFootnote": "Mapped from public work as of June 2026, every row cited below. If we have a near-neighbor wrong, tell us and we will fix the row.",
+      "rwSourcesLabel": "Sources",
+      "seeAlsoCta": "Where this sits in the superalignment landscape"
+    },
     "heroSubheadline": "Without accountability, AI tends to extract more than it gives.",
     "heroDescription": "If you can't check the accountability, it's marketing. Here's what to look for, and how existing approaches compare.",
     "heroButtonText": "See How They Compare",
@@ -2185,6 +2293,10 @@
         "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
       ],
       "seeAlso": [
+        {
+          "label": "Where this sits in the superalignment landscape",
+          "href": "/compare"
+        },
         {
           "label": "An internet with no Big Tech",
           "href": "/paths/big-tech"

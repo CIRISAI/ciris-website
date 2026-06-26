@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "Kendiniz Doğrulayın.",
     "imageHeroSubheadline": "Açık kaynak. Denetime açık.",
     "imageHeroCopy": "Bu sayfadaki her iddia; okuyabileceğiniz kodla, doğrulayabileceğiniz izlerle ve inceleyebileceğiniz araştırmayla desteklenmektedir. Mesele de budur.",
-    "imageHeroButtonText": "GitHub'da Kaynağı Görüntüle"
+    "imageHeroButtonText": "GitHub'da Kaynağı Görüntüle",
+    "landscape": {
+      "kicker": "Süper hizalama manzarası",
+      "title": "Alanın büyük çoğunluğu modeli hizalamaya çalışıyor. CIRIS ise onun etrafındaki kurumları inşa ediyor.",
+      "lede": "Güçlü yapay zekayı güvenli kılmanın iki dürüst yolu var. Birincisi, modelin değerlerini güvenilir olana kadar eğitmek. İkincisi, modelin yanılıyor olabileceğini kabul edip yaptıklarını herkesin denetleyebileceği kişilere ve sistemlere karşı açık ve hesap verebilir kılmak. CIRIS ikinci yolu seçiyor. İşte tüm manzara, dürüstçe haritalanmış ve bizim nerede durduğumuz.",
+      "branchLabel": "İki yol",
+      "branchH2": "Ağırlıklara güven ya da davranışı denetle",
+      "branchPlain": "Yapay zeka güvenliğinin ana akımı, modeli içten iyi yapmaya çalışıyor: değerlerini eğitiyor, düşüncelerini inceliyor, kendisiyle tartışmasını sağlıyor. Bu çalışma önemli. CIRIS ise diğer yola inanıyor. Yetenekli bir modelin yanlış hizalanmış olabileceğini varsay ve zihnine güvenmek yerine, önemli eylemlerini bunları denetleyebilecek kişilere ve sistemlere karşı hesap verebilir kıl.",
+      "branchRigor": "Alanın kendi terimleriyle, CIRIS; RLHF, Anayasal Yapay Zeka, tartışma ve yorumlanabilirlik gibi değer içselleştirme ana akımının değil, kurumsal ve kontrol dalının içinde yer alıyor. Yapay zeka kontrolü ve garantili güvenli yapay zekayla aynı safta duruyor. Ölçeklenebilir gözetim sorusuna, yani senden daha akıllı bir şeyi nasıl denetlersin sorusuna verdiği yanıt, akıl yürütmeyi değil hesap verebilirlik zarfını doğrulamak. Bir imza, bir çekirdek, zincirlenmiş bir denetim kaydı, arkasındaki karar insanüstü bile olsa ucuza doğrulanabilir kalır. Tek bir zihnin değerlerini değil, zamanla birçok yetenekli etkenin oluşturduğu sistemleri hizalar.",
+      "singletonLabel": "Tuttuğumuz çizgi",
+      "singletonH2": "Tek, her şeye gücü yeten bir yapay zekayı hizalamaya çalışmıyor. Bilerek.",
+      "singletonPlain": "Hesap verebilirlik birden fazla taraf gerektirir. Yanıt verilecek biri. Sessizce yutulmayan bir denetim yolu. Hiçbir tarafın ele geçiremeyeceği bir güç dengesi. Tek bir süper zekada bunların hiçbiri yok, dolayısıyla onu hesap verebilir kılmanın dürüst bir yolu da yok. CIRIS başka bir gelecek için inşa edildi: önemli kararların tamamı bağımsız olarak doğrulanabilen, pek çok yetenekli etken, insan ve kuruluşun oluşturduğu bir dünya.",
+      "singletonRigor": "Bu nedenle tutum açık. Tekil bir ASI, hizalanacak bir sistem değil, önlenecek bir koşuldur. İnsani kurumsal gelişimin bu aşamasında, insanüstü yeteneği hesap veremez tek bir yerde yoğunlaştırmak meşru değildir. Çünkü hiçbir kurum onu hesap verebilir kılacak olgunluğa erişmemiştir; tehlike tam da budur. Çerçevenin kendi terimleriyle, tekil, koridor modelinin koordinasyon başarısı değil başarısızlık olarak tanımladığı ρ→1 tek ses çöküşüdür. Güvencelerimizin bir federasyon genelinde geçerli olup tekil karşısında aşınıyor olması bir açık değil, yamalanacak bir boşluk değil. Bu, meşrulaştırmayı reddettiğimiz rejimdir ve bu bir tahmin değil, bir taahhüttür.",
+      "rwLabel": "İlgili çalışmalar, dürüstçe",
+      "rwH2": "Hemen hemen her yakın komşu bazı kutuları dolduruyor. Tek bir satır hepsini dolduruyor.",
+      "rwIntro": "CIRIS'in kendi alanında güçlü, ciddi entelektüel akranları var. Bu tablonun amacı fikirlerin benzersiz olduğunu göstermek değil. Neredeyse hiç kimsenin tüm yığını tek bir hesap verebilir sistem olarak inşa edip kullanıma sunmadığını ortaya koymak. Aşağıdaki her satır, okunmaya değer gerçek bir süreklilik. Yalnızca son satır her sütunu işaretliyor ve bu entegrasyon bizim iddiamız.",
+      "rwColApproach": "Yaklaşım",
+      "rwColWho": "En yakın çalışma",
+      "rwColMechanism": "Mekanizma",
+      "rwColRuntime": "Eğitim değil, çalışma zamanı",
+      "rwColCrypto": "Kararı imzalar",
+      "rwColConstitution": "Çalışma zamanı anayasası",
+      "rwColFederated": "Federatif doğrulama",
+      "rwColConformance": "Yürütülebilir uyumluluk",
+      "rwColShipping": "Kullanımda",
+      "rwStatus": {
+        "yes": "Evet",
+        "no": "Hayır",
+        "partial": "Kısmi",
+        "research": "Araştırma",
+        "theory": "Teori",
+        "components": "Parçalar"
+      },
+      "rwRows": [
+        {
+          "approach": "Kurumsal tez",
+          "who": "Gillian Hadfield",
+          "mechanism": "Normatif altyapı ve düzenleyici piyasalar, teori ve politika olarak"
+        },
+        {
+          "approach": "Yönetişim grafları",
+          "who": "Kurumsal Yapay Zeka (Pierucci ve ark.)",
+          "mechanism": "Hukuki durumların ve yaptırımların kamuya açık grafları, bir araştırma prototipi olarak"
+        },
+        {
+          "approach": "Zincir üstünde anayasal yönetişim",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Bir test ağında önceden kaydedilmiş akıllı sözleşmeler olarak kuvvetler ayrılığı"
+        },
+        {
+          "approach": "Modelin yanlış hizalanmış olduğunu varsay",
+          "who": "Redwood Research (yapay zeka kontrolü)",
+          "mechanism": "Tek bir dağıtım içinde izleme ve kırmızı takım çalışması"
+        },
+        {
+          "approach": "Kanıtlanabilir güvenli, dışsallaştırılmış",
+          "who": "davidad, Bengio, GS-AI çizgisi",
+          "mechanism": "Dünya modelleri üzerinde biçimsel kanıtlar"
+        },
+        {
+          "approach": "Eğitim sırasında anayasa",
+          "who": "Anthropic Anayasal Yapay Zekası",
+          "mechanism": "Ağırlıklara işlenmiş değerler, tek bir kuruluş"
+        },
+        {
+          "approach": "Kriptografik köken kanıtı",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Medya kökenini imzala, bir çıkarımın çalıştığını kanıtla"
+        },
+        {
+          "approach": "İmzalı akıl yürütme DAG'ı",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "Taslak bir şartname olarak yapay zeka türetme adımlarının imzalı grafı"
+        },
+        {
+          "approach": "Donanım tasdikli çıkarım",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Çıktıyı imzalayan güvenli bir bölmede çıkarım çalıştırır"
+        },
+        {
+          "approach": "Merkeziyetsiz kimlik ve federasyon",
+          "who": "atproto, Bittensor",
+          "mechanism": "Sosyal veya işlem gücü federasyonu, vicdan katmanı yok"
+        },
+        {
+          "approach": "Etken protokolleri",
+          "who": "MCP, A2A",
+          "mechanism": "Araç ve etken birlikte çalışabilirliği, yönetişim yok"
+        },
+        {
+          "approach": "Güvenlik değerlendirme ve uyumluluk paketleri",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Model davranışını puanlayan yürütülebilir kıyaslama testleri, kararları değil"
+        },
+        {
+          "approach": "Üçüncü taraf ve federatif denetim",
+          "who": "AISI Ağı, GovAI",
+          "mechanism": "Bağımsız enstitüler, kullanımdaki sistemleri birlikte test eder"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "Bu sistem",
+          "mechanism": "İmzalı çıktılara vicdan boru hattı, çalışma zamanı anayasası, kuantum sonrası federasyon"
+        }
+      ],
+      "rwFootnote": "Haziran 2026 itibarıyla kamuya açık çalışmalardan haritalandı, her satır aşağıda atıflandırıldı. Yakın komşulardan birini yanlış aktardıysak bize bildirin, satırı düzeltelim.",
+      "rwSourcesLabel": "Kaynaklar",
+      "seeAlsoCta": "Bu sistemin süper hizalama manzarasındaki yeri"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "Kendi tasarımımızdaki bir risk",
@@ -2240,6 +2348,10 @@
         "İnsan üstü bir yapay zekayı hesap verebilir tutabilen bir ağ, şekli itibarıyla merkezsiz bir internettir. Aynı imzalı kayıtlar herkesin doğruyu kontrol etmesini sağlar ve telefonunuzdaki yapay zekayla aynı özel altyapı üzerinde çalışırlar."
       ],
       "seeAlso": [
+        {
+          "label": "Bu sistemin süper hizalama manzarasındaki yeri",
+          "href": "/compare"
+        },
         {
           "label": "Büyük Teknoloji olmayan bir internet",
           "href": "/paths/big-tech"

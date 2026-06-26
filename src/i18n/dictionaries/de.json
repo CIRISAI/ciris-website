@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "Selbst überprüfen.",
     "imageHeroSubheadline": "Open Source. Offen für Prüfung.",
     "imageHeroCopy": "Jede Aussage auf dieser Seite wird durch Code belegt, den Sie lesen können, durch Spuren, die Sie überprüfen können, und durch Forschung, die Sie nachschlagen können. Darum geht es.",
-    "imageHeroButtonText": "Quellcode auf GitHub anzeigen"
+    "imageHeroButtonText": "Quellcode auf GitHub anzeigen",
+    "landscape": {
+      "kicker": "Die Superalignment-Landschaft",
+      "title": "Der größte Teil des Feldes richtet das Modell aus. CIRIS baut die Institutionen darum herum.",
+      "lede": "Es gibt zwei ehrliche Wege, um leistungsfähige KI sicher zu machen. Der eine besteht darin, die Werte des Modells so lange zu trainieren, bis man ihnen vertrauen kann. Der andere geht davon aus, dass das Modell falsch liegen könnte, und macht das, was es tut, offen und für Menschen und Systeme nachvollziehbar, die jeder prüfen kann. CIRIS wählt den zweiten Weg. Hier ist die gesamte Landschaft, fair abgebildet, und wo wir darin stehen.",
+      "branchLabel": "Zwei Wege",
+      "branchH2": "Den Gewichten vertrauen oder das Verhalten prüfen",
+      "branchPlain": "Der Mainstream der KI-Sicherheit versucht, ein Modell von innen heraus gut zu machen: seine Werte trainieren, seine Gedanken untersuchen, es mit sich selbst debattieren lassen. Diese Arbeit ist wichtig. CIRIS setzt auf den anderen Weg. Es wird angenommen, dass ein fähiges Modell möglicherweise falsch ausgerichtet ist. Statt seinem Verstand zu vertrauen, werden seine folgenreichen Handlungen gegenüber Menschen und anderen Systemen verantwortlich gemacht, die sie prüfen können.",
+      "branchRigor": "In den eigenen Begriffen des Feldes gehört CIRIS zum institutionellen und kontrollorientierten Zweig, gemeinsam mit KI-Kontrolle und garantiert sicherer KI, nicht zur werteinternen Hauptlinie von RLHF, Constitutional AI, Debatte und Interpretierbarkeit. Seine Antwort auf skalierbare Aufsicht, also wie man etwas überwacht, das klüger ist als man selbst, besteht darin, den Verantwortlichkeitsrahmen zu überprüfen, nicht das Denken. Eine Signatur, ein Quorum, ein hash-verkettetes Audit bleiben günstig zu prüfen, auch wenn die dahinterstehende Entscheidung übermenschlich ist. Es richtet Systeme vieler fähiger Agenten über die Zeit aus, nicht die Werte eines einzelnen Geistes.",
+      "singletonLabel": "Die Linie, die wir halten",
+      "singletonH2": "Es versucht nicht, eine einzige allmächtige KI auszurichten. Absichtlich.",
+      "singletonPlain": "Verantwortlichkeit braucht mehr als eine Partei. Jemanden, dem man Rechenschaft schuldet. Eine Möglichkeit zur Überprüfung, die nicht stillschweigend beseitigt werden kann. Ein Machtgleichgewicht, das keine Seite allein übernehmen kann. Eine einzelne Superintelligenz hat nichts davon, daher gibt es keinen ehrlichen Weg, sie zur Verantwortung zu ziehen. CIRIS ist für die andere Zukunft gebaut: viele fähige Agenten, Menschen und Organisationen, deren folgenreiche Entscheidungen alle unabhängig überprüfbar sind.",
+      "singletonRigor": "Die Haltung ist daher klar formuliert. Eine Singleton-ASI ist kein System, das ausgerichtet werden soll, sondern ein Zustand, der verhindert werden muss. Übermenschliche Fähigkeiten an einem einzigen, nicht rechenschaftspflichtigen Ort zu konzentrieren, auf diesem Stand der menschlichen institutionellen Entwicklung, ist illegitim, weil keine Institution reif genug ist, sie zur Verantwortung zu ziehen, was genau die Gefahr ist. In den eigenen Begriffen des Rahmens ist ein Singleton der ρ→1 Einzelstimmen-Kollaps, den das Korridormodell als Koordinationsversagen bezeichnet, nicht als Erfolg. Dass unsere Garantien in einem Verbund gelten und gegenüber einem Singleton nachlassen, ist keine Lücke, die wir schließen. Es ist das Regime, das wir ablehnen zu legitimieren, gehalten als Verpflichtung, nicht nur als Vorhersage.",
+      "rwLabel": "Verwandte Arbeiten, ehrlich dargestellt",
+      "rwH2": "Jeder nahe Nachbar füllt einige Felder aus. Eine Zeile füllt sie alle.",
+      "rwIntro": "CIRIS hat ernsthafte intellektuelle Mitstreiter, jeder stark auf seinem eigenen Gebiet. Der Punkt dieser Tabelle ist nicht, dass die Ideen beispiellos sind. Es ist, dass fast niemand den gesamten Stack als ein einziges rechenschaftspflichtiges System gebaut und ausgeliefert hat. Jede Zeile unten ist eine echte Entwicklungslinie, die es wert ist, gelesen zu werden. Nur die letzte Zeile erfüllt jede Spalte, und diese Integration ist die eigentliche Aussage.",
+      "rwColApproach": "Ansatz",
+      "rwColWho": "Nächstverwandte Arbeiten",
+      "rwColMechanism": "Mechanismus",
+      "rwColRuntime": "Laufzeit, kein Training",
+      "rwColCrypto": "Signiert die Entscheidung",
+      "rwColConstitution": "Laufzeitverfassung",
+      "rwColFederated": "Föderierte Verifikation",
+      "rwColConformance": "Ausführbare Konformität",
+      "rwColShipping": "In Betrieb",
+      "rwStatus": {
+        "yes": "Ja",
+        "no": "Nein",
+        "partial": "Teilweise",
+        "research": "Forschung",
+        "theory": "Theorie",
+        "components": "Teile"
+      },
+      "rwRows": [
+        {
+          "approach": "Die institutionelle These",
+          "who": "Gillian Hadfield",
+          "mechanism": "Normative Infrastruktur und regulatorische Märkte, als Theorie und Politik"
+        },
+        {
+          "approach": "Governance-Graphen",
+          "who": "Institutional AI (Pierucci et al.)",
+          "mechanism": "Öffentliche Graphen rechtlicher Zustände und Sanktionen, als Forschungsprototyp"
+        },
+        {
+          "approach": "Verfassungsbasierte Governance auf der Blockchain",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Gewaltenteilung als Smart Contracts, vorab auf einem Testnetz registriert"
+        },
+        {
+          "approach": "Annahme: Das Modell ist falsch ausgerichtet",
+          "who": "Redwood Research (KI-Kontrolle)",
+          "mechanism": "Überwachung und Red-Teaming innerhalb einer einzigen Bereitstellung"
+        },
+        {
+          "approach": "Beweisbar sicher, externalisiert",
+          "who": "davidad, Bengio, die GS-AI-Linie",
+          "mechanism": "Formale Beweise über Weltmodelle"
+        },
+        {
+          "approach": "Verfassung zur Trainingszeit",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "In die Gewichte trainierte Werte, eine Organisation"
+        },
+        {
+          "approach": "Kryptographische Herkunft",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Medienherkunft signieren, beweisen, dass ein Inferenzlauf stattfand"
+        },
+        {
+          "approach": "Signierter Schlussfolgerungs-DAG",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "Ein signierter Graph von KI-Ableitungsschritten, als Entwurfsspezifikation"
+        },
+        {
+          "approach": "Hardware-bestätigte Inferenz",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Führt Inferenz in einer sicheren Enklave durch, die die Ausgabe signiert"
+        },
+        {
+          "approach": "Dezentrale Identität und Verbund",
+          "who": "atproto, Bittensor",
+          "mechanism": "Soziale oder Rechenverbünde, keine Gewissensschicht"
+        },
+        {
+          "approach": "Agentenprotokolle",
+          "who": "MCP, A2A",
+          "mechanism": "Werkzeug- und Agenteninteroperabilität, keine Governance"
+        },
+        {
+          "approach": "Sicherheitsbewertung und Konformitätssuiten",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Ausführbare Benchmarks, die Modellverhalten bewerten, keine Entscheidungen"
+        },
+        {
+          "approach": "Drittanbieter- und föderiertes Audit",
+          "who": "AISI Network, GovAI",
+          "mechanism": "Unabhängige Institute testen gemeinsam eingesetzte Systeme"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "Dieses System",
+          "mechanism": "Gewissens-Pipeline zu signierten Artefakten, Laufzeitverfassung, post-quantengesicherter Verbund"
+        }
+      ],
+      "rwFootnote": "Abgeleitet aus öffentlichen Arbeiten Stand Juni 2026, jede Zeile unten zitiert. Wenn wir einen nahen Nachbarn falsch dargestellt haben, teilen Sie es uns mit und wir korrigieren die Zeile.",
+      "rwSourcesLabel": "Quellen",
+      "seeAlsoCta": "Wo dies in der Superalignment-Landschaft steht"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "Ein Risiko in unserem eigenen Design",
@@ -2240,6 +2348,10 @@
         "Ein Netzwerk, das eine übermenschliche KI zur Verantwortung ziehen kann, ist seiner Form nach ein Internet ohne Mitte. Dieselben signierten Einträge erlauben es jedem zu prüfen, was stimmt, und sie laufen auf derselben privaten Grundlage wie die KI auf deinem Handy."
       ],
       "seeAlso": [
+        {
+          "label": "Wo dies in der Superalignment-Landschaft steht",
+          "href": "/compare"
+        },
         {
           "label": "Ein Internet ohne Big Tech",
           "href": "/paths/big-tech"

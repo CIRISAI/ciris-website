@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "Fìdí Rẹ̀ Múlẹ̀ Fúnra Rẹ.",
     "imageHeroSubheadline": "Orísun ìmọ̀ ṣí. Ṣí fún ìwádìí.",
     "imageHeroCopy": "Gbogbo ẹ̀rí lórí ojú-ewé yìí wà nínú kóòdù tí o lè kà, àwọn àkọsílẹ̀ tí o lè fìdí rẹ̀ múlẹ̀, àti ìwádìí tí o lè ṣàyẹ̀wò. Ìdí rẹ̀ náà ni.",
-    "imageHeroButtonText": "Wo Orísun lórí GitHub"
+    "imageHeroButtonText": "Wo Orísun lórí GitHub",
+    "landscape": {
+      "kicker": "Ilẹ-ìgbésí superalignment",
+      "title": "Pupọ ninu aaye yii n ṣe atunṣe awoṣe. CIRIS n kọ àwọn ilé-iṣẹ̀ tó yí i ká.",
+      "lede": "Ọ̀nà méjì tó ṣeéṣe wà láti mú AI tó lágbára ṣiṣẹ́ ní ààbò. Ọ̀kan ni láti kọ àwọn ìyeéwà awoṣe títí tí a fi gbẹ́kẹ̀lé rẹ̀. Ẹlòmíì ni láti gbà pé awoṣe náà lè ṣàṣìṣe, kí a sì mú ohun tó ń ṣe jẹ́ ohun tó ṣe é ṣàyẹ̀wò, ní gbangba, níwájú ènìyàn àti àwọn ètò tí ẹnikẹ́ni lè ṣayẹ̀wò. CIRIS gba ọ̀nà kejì. Èyí ni gbogbo ilẹ̀-ìgbésí náà, tí a ti ṣàpèjúwe dáadáa, àti ibi tí a wà nínú rẹ̀.",
+      "branchLabel": "Ọ̀nà méjì",
+      "branchH2": "Gbẹ́kẹ̀lé ìwọ̀n, tàbí ṣàyẹ̀wò ìṣesí",
+      "branchPlain": "Ọ̀nà àkọ́kọ́ nínú ààbò AI n gbìyànjú láti mú awoṣe dára ní inú: kọ àwọn ìyeéwà rẹ̀, kẹ́kọ̀ọ́ ìrònú rẹ̀, jẹ́ kó fi ara rẹ̀ jiyàn. Iṣẹ́ yẹn ṣe pàtàkì. CIRIS gbẹ́kẹ̀lé ọ̀nà kejì. Fojú inú wo pé awoṣe tó lágbára lè jẹ́ aláìṣedédé, kí a sì mú àwọn ìgbésẹ̀ tó ṣe pàtàkì rẹ̀ jẹ́ ohun tí àwọn ènìyàn àti àwọn ètò míì lè ṣàyẹ̀wò, dípò gbígbẹ̀kẹ̀lé ìrònú rẹ̀.",
+      "branchRigor": "Ní àwọn ọ̀rọ̀ aaye náà fúnrarẹ̀, CIRIS wà nínú ẹ̀ka ilé-iṣẹ̀ àti ìdarí, pẹ̀lú ìdarí AI àti GS-AI, kìí ṣe ọ̀nà àkọ́kọ́ ìmúdáṣán ìyeéwà ti RLHF, Constitutional AI, jíjiyàn, àti ìtumọ̀ ìnú. Ìdáhùn rẹ̀ sí ìrísí ìmójútó tó gbòòrò, bí o ṣe máa ń ṣe àbójútó ohun tó ní ọgbọ́n ju ọ lọ, ni láti ṣàyẹ̀wò àárọ̀ ìṣòye, kìí ṣe ìrònú. Àbọ̀, quorum, audit tó ní hash-chain máa ń dúró ní idiyele tó ṣe é ṣàyẹ̀wò kódà nígbà tí ìpinnu tó wà lẹ́yìn rẹ̀ jẹ́ superhuman. Ó ṣe atunṣe àwọn ètò ti ọ̀pọ̀ àwọn aṣojú tó lágbára lórí àkókò, kìí ṣe àwọn ìyeéwà ọkàn kan.",
+      "singletonLabel": "Ìlà tí a dì mú",
+      "singletonH2": "Kò gbìyànjú láti ṣe atunṣe AI kan tó ní agbára gbogbo. Ní ìmọ̀-ọ̀rọ̀.",
+      "singletonPlain": "Ìṣòye nílò ju ẹgbẹ́ kan lọ. Ẹnì kan láti fèsì sí. Ọ̀nà láti ṣàyẹ̀wò tí kò ṣeéjẹ́ mì ní ìkọ̀kọ̀. Ìdọ́gba agbára tí kò sí ẹgbẹ́ kan tó lè gba. AI kan tó ní ọgbọ́n gaan kò ní ẹyọkan nínú àwọn wọ̀nyí, nítorí náà kò sí ọ̀nà tó ṣeéṣe láti mú u ṣe àárọ̀ fún ohun tó ń ṣe. CIRIS jẹ́ fún ọjọ́-iwájú mìíràn: ọ̀pọ̀ àwọn aṣojú tó lágbára, ènìyàn, àti àwọn ilé-iṣẹ̀ tí àwọn ìpinnu pàtàkì wọn lè ṣàyẹ̀wò lọ́tọ̀ọ́tọ̀.",
+      "singletonRigor": "Nítorí náà ìdúró náà ṣe kedere. ASI kan tó jẹ́ singleton kìí ṣe ètò láti ṣe atunṣe ṣùgbọ́n ipò kan láti dènà. Ṣíkójọpọ̀ agbára superhuman ní ibi kan tí kò ní ìṣòye, ní ìpele ìdàgbàsókè ilé-iṣẹ̀ ènìyàn yìí, kò tọ̀nà, nítorí pé kò sí ilé-iṣẹ̀ tó pọn dandan tó lè mú u ṣe àárọ̀, èyí sì ni ewu tó gangan. Nínú àwọn ọ̀rọ̀ ètò náà fúnrarẹ̀, singleton jẹ́ ìṣúnkún ohun kan ṣoṣo ρ→1 tí àpẹẹrẹ corridor náà pè ní kùnà ìdarí, kìí ṣe àṣeyọrí. Pé àwọn ìdánilójú wa ń di àṣẹ kárí ẹgbẹ́ kan àti pé wọ́n máa ń rẹlẹ̀ níwájú singleton kìí ṣe àáyá tí a ń tù. Ó jẹ́ ìpele tí a kọ̀ láti fún un ní ìtẹ̀síwájú, tí a dì mú bí ìfarabalẹ̀, kìí ṣe àsọtẹ́lẹ̀ nìkan.",
+      "rwLabel": "Iṣẹ́ tó ní àjọṣepọ̀, ní ìmọ̀tọ̀",
+      "rwH2": "Gbogbo ẹni tó wà nítòsí kún àwọn apò kan. Ọ̀kan ṣoṣo kún gbogbo wọn.",
+      "rwIntro": "CIRIS ní àwọn ẹgbẹ́ ọgbọ́n tó ṣe pàtàkì, ọ̀kọ̀ọ̀kan tó lágbára nínú aaye tirẹ̀. Ète tábìlì yìí kìí ṣe pé àwọn èrò jẹ́ tuntun tó yàtọ̀. Ó ṣe pàtàkì pé ó fẹ́rẹ̀ẹ́ jẹ́ pé kò sí ẹnikẹ́ni tó ti kọ́ àti rán gbogbo ìpele gẹ́gẹ́ bí ètò ìṣòye kan ṣoṣo. Ọ̀kọ̀ọ̀kan ìlà tó wà nísàlẹ̀ jẹ́ ìsálẹ̀ tó tọ̀nà tó tọ́ sí kíkà. Ìlà ìkẹhìn ṣoṣo ni tó ṣàyẹ̀wò gbogbo ìlọ, àti ìmọ̀pọ̀ yẹn ni ẹ̀tọ́ náà.",
+      "rwColApproach": "Ọ̀nà",
+      "rwColWho": "Iṣẹ́ tó sunmọ jùlọ",
+      "rwColMechanism": "Ọ̀nà ṣiṣẹ́",
+      "rwColRuntime": "Àkókò ṣiṣẹ́, kìí ṣe ìdàgbàsókè",
+      "rwColCrypto": "Fọwọ́sí ìpinnu",
+      "rwColConstitution": "Òfin àkókò ṣiṣẹ́",
+      "rwColFederated": "Ìmójútó ẹgbẹ́ kan",
+      "rwColConformance": "Ìfaramọ́ tó ṣe é ṣe",
+      "rwColShipping": "Tí a ń rán",
+      "rwStatus": {
+        "yes": "Bẹ́ẹ̀ni",
+        "no": "Rárá",
+        "partial": "Ìdajì",
+        "research": "Ìwádìí",
+        "theory": "Àbá",
+        "components": "Àwọn apá"
+      },
+      "rwRows": [
+        {
+          "approach": "Ẹ̀kọ́ ilé-iṣẹ̀",
+          "who": "Gillian Hadfield",
+          "mechanism": "Àwọn ètò ìlànà àti àwọn ọjà ìdarí, gẹ́gẹ́ bí àbá àti ìlànà"
+        },
+        {
+          "approach": "Àwọn ojú ìwòye ìjọba",
+          "who": "Institutional AI (Pierucci et al.)",
+          "mechanism": "Àwọn ojú ìwòye gbangba ti àwọn ipo ofin àti ìjìyà, gẹ́gẹ́ bí àpẹẹrẹ ìwádìí"
+        },
+        {
+          "approach": "Ìdarí òfin lórí ẹ̀rọ",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Ìpínpín agbára bí àwọn adehun ọlọgbọ́n, tí a ti forúkọsilẹ̀ sáájú lórí testnet"
+        },
+        {
+          "approach": "Gbà pé awoṣe náà jẹ́ aláìṣedédé",
+          "who": "Redwood Research (AI control)",
+          "mechanism": "Ìmójútó àti ìdánwò pupa nínú iṣẹ́ kan ṣoṣo"
+        },
+        {
+          "approach": "Ààbò tó ṣe é jẹ́rìísí, tí a yọ jáde",
+          "who": "davidad, Bengio, ìsálẹ̀ GS-AI",
+          "mechanism": "Àwọn ẹ̀rí ìgbẹ́kẹ̀lé lórí àwọn àpẹẹrẹ ayé"
+        },
+        {
+          "approach": "Òfin ní àkókò ìdàgbàsókè",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "Àwọn ìyeéwà tí a kọ nínú ìwọ̀n, ilé-iṣẹ̀ kan ṣoṣo"
+        },
+        {
+          "approach": "Ẹ̀rí ìpilẹ̀ẹ̀ṣẹ̀ cryptographic",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Fọwọ́sí ìpilẹ̀ẹ̀ṣẹ̀ àwọn ohun èlò, fihan pé ìṣirò kan ṣiṣẹ́"
+        },
+        {
+          "approach": "DAG ìrònú tí a fọwọ́sí",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "Ojú ìwòye tí a fọwọ́sí ti àwọn ìgbésẹ̀ ipilẹṣẹ AI, gẹ́gẹ́ bí àpẹẹrẹ dàpọ̀"
+        },
+        {
+          "approach": "Ìṣirò tí a jẹ́rìísí ní ẹ̀rọ",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Ń ṣe ìṣirò nínú enclave aabo tó fọwọ́sí ìbọwọ̀"
+        },
+        {
+          "approach": "Ìdánimọ̀ àti ẹgbẹ́ tó pínpín",
+          "who": "atproto, Bittensor",
+          "mechanism": "Ẹgbẹ́ àwùjọ tàbí ìṣirò tó pínpín, láìsí ìpele ẹ̀rí-ọkàn"
+        },
+        {
+          "approach": "Àwọn ìlànà aṣojú",
+          "who": "MCP, A2A",
+          "mechanism": "Àjọṣepọ̀ ohun èlò àti aṣojú, láìsí ìdarí"
+        },
+        {
+          "approach": "Àwọn ìdánwò ààbò àti ìfaramọ́",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Àwọn àmọ̀ tó ṣe é ṣe tó ń fun ìṣesí awoṣe ni ọ̀pẹ, kìí ṣe àwọn ìpinnu"
+        },
+        {
+          "approach": "Ìgbéwọ̀n àgbẹ̀yọ̀ àti ẹgbẹ́ tó pínpín",
+          "who": "AISI Network, GovAI",
+          "mechanism": "Àwọn ilé-iṣẹ̀ àládàáṣiṣẹ́ ń ṣe ìdánwò àwọn ètò tí a fi sísẹ̀ pọ̀"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "Ètò yìí",
+          "mechanism": "Ìlọna conscience sí àwọn ohun tí a fọwọ́sí, òfin àkókò ṣiṣẹ́, ẹgbẹ́ post-quantum"
+        }
+      ],
+      "rwFootnote": "Tí a ṣàpèjúwe láti iṣẹ́ gbangba tí ó wà ní Okudu 2026, gbogbo ìlà tí a tọ́ka sí nísàlẹ̀. Tí a bá ṣe àṣìṣe lórí ẹni tó wà nítòsí wa, sọ fún wa a ó ṣe àtúnṣe ìlà náà.",
+      "rwSourcesLabel": "Àwọn ìtọ́kasí",
+      "seeAlsoCta": "Ibi tí èyí wà nínú ilẹ̀-ìgbésí superalignment"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "Ewu nínú ìpìlẹ̀ àpẹrẹ wa",
@@ -2240,6 +2348,10 @@
         "Nẹtiwọki ti o le jẹ ki AI ti o ga ju eniyan lọ jẹ iduro jẹ, nipa ọna rẹ, intanẹẹti laisi ile-iṣẹ. Awọn àkọsílẹ kanna ti a fọwọsi jẹ ki ẹnikẹni ṣayẹwo ohun ti o jẹ otitọ, wọn si n ṣiṣẹ lori ipilẹ ikọkọ kanna bi AI lori foonu rẹ."
       ],
       "seeAlso": [
+        {
+          "label": "Ibi tí èyí wà nínú ilẹ̀-ìgbésí superalignment",
+          "href": "/compare"
+        },
         {
           "label": "Intanẹẹti laisi Big Tech",
           "href": "/paths/big-tech"

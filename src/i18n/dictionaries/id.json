@@ -1349,7 +1349,115 @@
     "imageHeroHeadline": "Verifikasi Sendiri.",
     "imageHeroSubheadline": "Open source. Terbuka untuk diteliti.",
     "imageHeroCopy": "Setiap klaim di halaman ini didukung oleh kode yang bisa Anda baca, jejak yang bisa Anda verifikasi, dan penelitian yang bisa Anda periksa. Itulah intinya.",
-    "imageHeroButtonText": "Lihat Sumber di GitHub"
+    "imageHeroButtonText": "Lihat Sumber di GitHub",
+    "landscape": {
+      "kicker": "Lanskap superalignment",
+      "title": "Sebagian besar bidang ini berfokus pada penyelarasan model. CIRIS membangun institusi di sekitarnya.",
+      "lede": "Ada dua cara jujur untuk membuat AI yang kuat menjadi aman. Yang pertama adalah melatih nilai-nilai model sampai kita bisa mempercayainya. Yang kedua adalah mengasumsikan bahwa model bisa saja salah, dan membuat apa yang dilakukannya dapat dipertanggungjawabkan, secara terbuka, kepada orang-orang dan sistem yang bisa diperiksa siapa saja. CIRIS memilih jalan kedua. Berikut adalah seluruh lanskap, dipetakan secara adil, dan di mana kami berada di dalamnya.",
+      "branchLabel": "Dua jalan",
+      "branchH2": "Percaya pada bobot model, atau periksa perilakunya",
+      "branchPlain": "Arus utama keamanan AI berusaha membuat model baik dari dalam: melatih nilai-nilainya, mempelajari pemikirannya, membuatnya berdebat dengan dirinya sendiri. Pekerjaan itu penting. CIRIS bertaruh pada jalan yang lain. Asumsikan model yang mampu mungkin tidak selaras, dan daripada mempercayai pikirannya, buat tindakan-tindakan pentingnya dapat dipertanggungjawabkan kepada orang dan sistem lain yang bisa memeriksanya.",
+      "branchRigor": "Dalam istilah bidang ini sendiri, CIRIS berada di cabang institusional dan kontrol, bersama dengan kontrol AI dan AI yang dijamin aman, bukan arus utama internalisasi nilai dari RLHF, Constitutional AI, debat, dan interpretabilitas. Jawabannya terhadap pengawasan yang dapat diskalakan, yaitu bagaimana Anda mengawasi sesuatu yang lebih pintar dari Anda, adalah dengan memverifikasi selubung akuntabilitas, bukan penalarannya. Tanda tangan, kuorum, dan audit dengan rantai hash tetap murah untuk diperiksa bahkan ketika keputusan di baliknya bersifat superhuman. Ini menyelaraskan sistem dari banyak agen yang mampu dari waktu ke waktu, bukan nilai-nilai dari satu pikiran saja.",
+      "singletonLabel": "Garis yang kami pegang",
+      "singletonH2": "Ini tidak mencoba menyelaraskan satu AI yang mahakuasa. Dengan sengaja.",
+      "singletonPlain": "Akuntabilitas membutuhkan lebih dari satu pihak. Seseorang yang harus bertanggung jawab kepadanya. Cara memeriksa yang tidak bisa ditelan secara diam-diam. Keseimbangan kekuatan yang tidak bisa dikuasai satu sisi. Satu super-kecerdasan tidak memiliki satu pun dari ini, sehingga tidak ada cara jujur untuk memintanya bertanggung jawab. CIRIS dibangun untuk masa depan yang lain: banyak agen yang mampu, orang-orang, dan organisasi yang keputusan-keputusan pentingnya semuanya dapat diperiksa secara independen.",
+      "singletonRigor": "Jadi sikapnya jelas. ASI tunggal bukan sistem yang harus diselaraskan tetapi kondisi yang harus dicegah. Memusatkan kemampuan superhuman di satu tempat yang tidak dapat dipertanggungjawabkan, pada tahap perkembangan institusi manusia saat ini, adalah tidak sah, karena tidak ada institusi yang cukup matang untuk memintanya bertanggung jawab, dan itulah tepatnya bahayanya. Dalam istilah kerangka kerja ini sendiri, singleton adalah keruntuhan suara tunggal ρ→1 yang dinamai model koridor sebagai kegagalan koordinasi, bukan keberhasilan. Bahwa jaminan kami berlaku di seluruh federasi dan melemah terhadap singleton bukanlah celah yang sedang kami tambal. Itu adalah rezim yang kami tolak untuk dilegitimasi, dijaga sebagai komitmen, bukan hanya prediksi.",
+      "rwLabel": "Karya terkait, secara jujur",
+      "rwH2": "Setiap tetangga terdekat mengisi beberapa kotak. Satu baris mengisi semuanya.",
+      "rwIntro": "CIRIS memiliki rekan intelektual yang serius, masing-masing kuat di bidangnya sendiri. Tujuan tabel ini bukan bahwa ide-idenya belum pernah ada sebelumnya. Tujuannya adalah bahwa hampir tidak ada yang telah membangun dan mengirimkan seluruh tumpukan sebagai satu sistem yang akuntabel. Setiap baris di bawah ini adalah garis keturunan nyata yang layak dibaca. Hanya baris terakhir yang mencentang setiap kolom, dan integrasi itulah klaimnya.",
+      "rwColApproach": "Pendekatan",
+      "rwColWho": "Karya terdekat",
+      "rwColMechanism": "Mekanisme",
+      "rwColRuntime": "Runtime, bukan pelatihan",
+      "rwColCrypto": "Menandatangani keputusan",
+      "rwColConstitution": "Konstitusi runtime",
+      "rwColFederated": "Verifikasi terfederasi",
+      "rwColConformance": "Kesesuaian yang dapat dieksekusi",
+      "rwColShipping": "Dikirim",
+      "rwStatus": {
+        "yes": "Ya",
+        "no": "Tidak",
+        "partial": "Sebagian",
+        "research": "Riset",
+        "theory": "Teori",
+        "components": "Sebagian"
+      },
+      "rwRows": [
+        {
+          "approach": "Tesis institusional",
+          "who": "Gillian Hadfield",
+          "mechanism": "Infrastruktur normatif dan pasar regulasi, sebagai teori dan kebijakan"
+        },
+        {
+          "approach": "Graf tata kelola",
+          "who": "Institutional AI (Pierucci et al.)",
+          "mechanism": "Graf publik tentang status hukum dan sanksi, sebagai prototipe penelitian"
+        },
+        {
+          "approach": "Tata kelola konstitusional di rantai",
+          "who": "AgentCity (Ruan, Zhang)",
+          "mechanism": "Pemisahan kekuasaan sebagai kontrak pintar, pra-terdaftar di testnet"
+        },
+        {
+          "approach": "Asumsikan model tidak selaras",
+          "who": "Redwood Research (kontrol AI)",
+          "mechanism": "Pemantauan dan red-teaming dalam satu penerapan"
+        },
+        {
+          "approach": "Terbukti aman, diekternalisasi",
+          "who": "davidad, Bengio, garis keturunan GS-AI",
+          "mechanism": "Bukti formal atas model dunia"
+        },
+        {
+          "approach": "Konstitusi pada waktu pelatihan",
+          "who": "Anthropic Constitutional AI",
+          "mechanism": "Nilai dilatih ke dalam bobot, satu organisasi"
+        },
+        {
+          "approach": "Asal-usul kriptografis",
+          "who": "C2PA, zkML (EZKL, Giza)",
+          "mechanism": "Menandatangani asal-usul media, membuktikan inferensi berjalan"
+        },
+        {
+          "approach": "DAG penalaran bertanda tangan",
+          "who": "Proof of Insight (Arclio)",
+          "mechanism": "Graf bertanda tangan dari langkah-langkah derivasi AI, sebagai draf spesifikasi"
+        },
+        {
+          "approach": "Inferensi yang dibuktikan oleh perangkat keras",
+          "who": "Phala, Marlin, Attestable Audits",
+          "mechanism": "Menjalankan inferensi dalam enklave aman yang menandatangani keluarannya"
+        },
+        {
+          "approach": "Identitas terdesentralisasi dan federasi",
+          "who": "atproto, Bittensor",
+          "mechanism": "Federasi sosial atau komputasi, tanpa lapisan nurani"
+        },
+        {
+          "approach": "Protokol agen",
+          "who": "MCP, A2A",
+          "mechanism": "Interoperabilitas alat dan agen, tanpa tata kelola"
+        },
+        {
+          "approach": "Suite evaluasi keamanan dan kesesuaian",
+          "who": "MLCommons, METR, HarmBench",
+          "mechanism": "Tolok ukur yang dapat dieksekusi untuk menilai perilaku model, bukan keputusan"
+        },
+        {
+          "approach": "Audit pihak ketiga dan terfederasi",
+          "who": "AISI Network, GovAI",
+          "mechanism": "Institut independen secara bersama menguji sistem yang diterapkan"
+        },
+        {
+          "approach": "CIRIS",
+          "who": "Sistem ini",
+          "mechanism": "Pipeline nurani ke artefak bertanda tangan, konstitusi runtime, federasi pasca-kuantum"
+        }
+      ],
+      "rwFootnote": "Dipetakan dari karya publik per Juni 2026, setiap baris dikutip di bawah. Jika kami salah menggambarkan tetangga terdekat, beri tahu kami dan kami akan memperbaiki barisnya.",
+      "rwSourcesLabel": "Sumber",
+      "seeAlsoCta": "Di mana ini berada dalam lanskap superalignment"
+    }
   },
   "safetyVsCensorship": {
     "heroEyebrow": "Risiko dalam desain kami sendiri",
@@ -2240,6 +2348,10 @@
         "Jaringan yang bisa meminta pertanggungjawaban AI superkuat adalah, berdasarkan bentuknya, internet tanpa pusat. Catatan bertanda tangan yang sama memungkinkan siapa saja memeriksa apa yang benar, dan mereka berjalan di atas substrat pribadi yang sama dengan AI di ponselmu."
       ],
       "seeAlso": [
+        {
+          "label": "Di mana ini berada dalam lanskap superalignment",
+          "href": "/compare"
+        },
         {
           "label": "Internet tanpa Big Tech",
           "href": "/paths/big-tech"
