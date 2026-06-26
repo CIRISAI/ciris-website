@@ -259,48 +259,6 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
         </details>
       </section>
 
-      {/* Three Types of AI */}
-      <section className={s.section}>
-        <p className={s.sectionLabel}>{c.threeTypesTagline}</p>
-        <h2 className={s.h2}>{c.threeTypesHeading}</h2>
-        <p className={s.paragraph}>{c.threeTypesPara}</p>
-        <div className={s.cardGrid}>
-          <div className={`${s.card} ${s.cRose}`}>
-            <h3>
-              {c.type1Number}. {c.type1Heading}
-            </h3>
-            <p>
-              {c.type1Para}
-              <br />
-              <em>{c.type1Note}</em>
-              <br />
-              <b>{c.type1Warning}</b>
-            </p>
-          </div>
-          <div className={`${s.card} ${s.cBrass}`}>
-            <h3>
-              {c.type2Number}. {c.type2Heading}
-            </h3>
-            <p>
-              {c.type2Para}
-              <br />
-              <b>{c.type2Warning}</b>
-            </p>
-          </div>
-          <div className={`${s.card} ${s.cOk}`}>
-            <h3>
-              {c.type3Number}. {c.type3Heading}
-            </h3>
-            <p>
-              {c.type3Para}
-              <br />
-              <b>{c.type3Badge}</b>
-            </p>
-          </div>
-        </div>
-        <p className={s.paragraph} dangerouslySetInnerHTML={h(c.threeTypesClosingHtml)} />
-      </section>
-
       {/* Seven Things — intro */}
       <section className={s.section}>
         <p className={s.sectionLabel}>{c.sevenThingsSubheadline}</p>
@@ -467,16 +425,6 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
         </div>
       </section>
 
-      {/* Many Agents, No Single Point of Failure */}
-      <section className={s.section}>
-        <p className={s.sectionLabel}>{c.manyAgentsSeparatorSubheadline}</p>
-        <h2 className={s.h2}>{c.manyAgentsSeparatorHeadline}</h2>
-        <p className={s.paragraph}>{c.noSPOFCopy}</p>
-        <p className={s.footnote}>
-          <Link href={lh("/coherence-ratchet")}>{c.noSPOFLinkText}</Link>
-        </p>
-      </section>
-
       {/* Research Status */}
       <div className={`${s.callout} ${s.brass}`}>
         <h2 className={s.h2}>{c.researchHeading}</h2>
@@ -562,23 +510,6 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
             className={`${s.btn} ${s.btnS}`}
           >
             {c.trySourceLabel}
-          </a>
-        </div>
-      </section>
-
-      {/* Closing CTA (former image hero) */}
-      <section className={s.cta}>
-        <p className={s.sectionLabel}>{c.imageHeroSubheadline}</p>
-        <p className={s.ctaPara}>{c.imageHeroHeadline}</p>
-        <p className={s.paragraph}>{c.imageHeroCopy}</p>
-        <div className={s.ctaRow}>
-          <a
-            href="https://github.com/CIRISAI/CIRISAgent"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${s.btn} ${s.btnP}`}
-          >
-            {c.imageHeroButtonText}
           </a>
         </div>
       </section>
