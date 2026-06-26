@@ -1456,7 +1456,24 @@
       ],
       "rwFootnote": "Haziran 2026 itibarıyla kamuya açık çalışmalardan haritalandı, her satır aşağıda atıflandırıldı. Yakın komşulardan birini yanlış aktardıysak bize bildirin, satırı düzeltelim.",
       "rwSourcesLabel": "Kaynaklar",
-      "seeAlsoCta": "Bu sistemin süper hizalama manzarasındaki yeri"
+      "seeAlsoCta": "Bu sistemin süper hizalama manzarasındaki yeri",
+      "dimAlign": "Uyum",
+      "dimConsumer": "Tüketici Yapay Zekası",
+      "consumerH2": "Gerçekten kullandığın yapay zeka ile karşılaştırma",
+      "consumerLead": "Günlük asistanlar güçlü ve kullanımı kolaydır. Aynı zamanda başkasının bulutunda çalışırlar, kontrol edebileceğin bir kayıt tutmazlar ve adını söyleyebileceğin birine hesap vermezler. İşte aynı hesap verebilirlik testi, çoğu insanın her gün açtığı yapay zekaya uygulandı.",
+      "cuColAssistant": "Asistan",
+      "cuColPrinciples": "Yayımlanmış ilkeler",
+      "cuColProof": "Ne yaptığının kanıtı",
+      "cuColAsks": "Emin olmadığında bir insana sorar",
+      "cuColOpen": "Açık kaynak",
+      "cuColEcho": "Yankı odası kontrolü",
+      "cuFootnote": "Haziran 2026 itibarıyla kamuya açık ürün davranışına göre karşılaştırıldı. Her ilkeler bağlantısı, o şirketin kendi yayımladığı belgeye gider.",
+      "cuRows": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "CIRIS"
+      ]
     }
   },
   "safetyVsCensorship": {

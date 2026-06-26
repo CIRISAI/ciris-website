@@ -1456,7 +1456,24 @@
       ],
       "rwFootnote": "Được lập bản đồ từ công trình công khai tính đến tháng 6 năm 2026, mỗi hàng được trích dẫn bên dưới. Nếu chúng tôi hiểu sai một người hàng xóm gần, hãy cho chúng tôi biết và chúng tôi sẽ sửa hàng đó.",
       "rwSourcesLabel": "Nguồn",
-      "seeAlsoCta": "Vị trí của hệ thống này trong bức tranh siêu căn chỉnh"
+      "seeAlsoCta": "Vị trí của hệ thống này trong bức tranh siêu căn chỉnh",
+      "dimAlign": "Sự Cân Bằng",
+      "dimConsumer": "AI Tiêu Dùng",
+      "consumerH2": "So sánh với AI bạn thực sự dùng",
+      "consumerLead": "Các trợ lý hàng ngày rất mạnh mẽ và dễ sử dụng. Chúng cũng chạy trên đám mây của người khác, không lưu lại bất kỳ hồ sơ nào bạn có thể kiểm tra, và không chịu trách nhiệm trước bất kỳ ai bạn có thể nêu tên. Đây là bài kiểm tra trách nhiệm giải trình tương tự, áp dụng cho AI mà hầu hết mọi người mở ra mỗi ngày.",
+      "cuColAssistant": "Trợ Lý",
+      "cuColPrinciples": "Nguyên tắc đã công bố",
+      "cuColProof": "Bằng chứng về việc nó đã làm",
+      "cuColAsks": "Hỏi người khi không chắc",
+      "cuColOpen": "Mã nguồn mở",
+      "cuColEcho": "Kiểm tra buồng vọng",
+      "cuFootnote": "So sánh dựa trên hành vi sản phẩm công khai tính đến tháng 6 năm 2026. Mỗi liên kết nguyên tắc dẫn đến thông số kỹ thuật đã công bố của chính công ty đó.",
+      "cuRows": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "CIRIS"
+      ]
     }
   },
   "safetyVsCensorship": {

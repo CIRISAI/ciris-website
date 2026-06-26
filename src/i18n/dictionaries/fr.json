@@ -1456,7 +1456,24 @@
       ],
       "rwFootnote": "Cartographié à partir de travaux publics à partir de juin 2026, chaque ligne citée ci-dessous. Si nous avons mal représenté un voisin proche, dites-le nous et nous corrigerons la ligne.",
       "rwSourcesLabel": "Sources",
-      "seeAlsoCta": "La place de ce système dans le paysage du superalignement"
+      "seeAlsoCta": "La place de ce système dans le paysage du superalignement",
+      "dimAlign": "Alignement",
+      "dimConsumer": "IA grand public",
+      "consumerH2": "Comment CIRIS se compare à l'IA que vous utilisez vraiment",
+      "consumerLead": "Les assistants du quotidien sont puissants et faciles à utiliser. Ils fonctionnent aussi dans le cloud de quelqu'un d'autre, ne gardent aucune trace que vous pouvez vérifier, et ne répondent à personne que vous pouvez nommer. Voici le même test de responsabilité, appliqué à l'IA que la plupart des gens ouvrent chaque jour.",
+      "cuColAssistant": "Assistant",
+      "cuColPrinciples": "Principes publiés",
+      "cuColProof": "Preuve de ce qu'il a fait",
+      "cuColAsks": "Demande à un humain en cas de doute",
+      "cuColOpen": "Code source ouvert",
+      "cuColEcho": "Contrôle anti-chambre d'écho",
+      "cuFootnote": "Comparé sur le comportement public des produits en juin 2026. Chaque lien vers les principes renvoie à la spécification publiée par l'entreprise elle-même.",
+      "cuRows": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "CIRIS"
+      ]
     }
   },
   "safetyVsCensorship": {

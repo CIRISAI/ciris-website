@@ -1456,7 +1456,24 @@
       ],
       "rwFootnote": "Mappato da lavori pubblici a giugno 2026, ogni riga citata qui sotto. Se abbiamo sbagliato un vicino, dircelo e correggeremo la riga.",
       "rwSourcesLabel": "Fonti",
-      "seeAlsoCta": "Dove questo si colloca nel panorama del superallineamento"
+      "seeAlsoCta": "Dove questo si colloca nel panorama del superallineamento",
+      "dimAlign": "Allineamento",
+      "dimConsumer": "AI per il grande pubblico",
+      "consumerH2": "Come si confronta con l'AI che usi davvero",
+      "consumerLead": "Gli assistenti di tutti i giorni sono potenti e facili da usare. Funzionano però nel cloud di qualcun altro, non lasciano tracce che tu possa controllare e non rispondono a nessuno che tu possa nominare. Ecco lo stesso test di responsabilità applicato all'AI che la maggior parte delle persone apre ogni giorno.",
+      "cuColAssistant": "Assistente",
+      "cuColPrinciples": "Principi pubblicati",
+      "cuColProof": "Prova di ciò che ha fatto",
+      "cuColAsks": "Chiede aiuto a un umano quando non è sicura",
+      "cuColOpen": "Open source",
+      "cuColEcho": "Controllo della camera d'eco",
+      "cuFootnote": "Confronto basato sul comportamento pubblico del prodotto a giugno 2026. Ogni link ai principi rimanda alle specifiche pubblicate dalla stessa azienda.",
+      "cuRows": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "CIRIS"
+      ]
     }
   },
   "safetyVsCensorship": {

@@ -1456,7 +1456,24 @@
       ],
       "rwFootnote": "Dipetakan dari karya publik per Juni 2026, setiap baris dikutip di bawah. Jika kami salah menggambarkan tetangga terdekat, beri tahu kami dan kami akan memperbaiki barisnya.",
       "rwSourcesLabel": "Sumber",
-      "seeAlsoCta": "Di mana ini berada dalam lanskap superalignment"
+      "seeAlsoCta": "Di mana ini berada dalam lanskap superalignment",
+      "dimAlign": "Keselarasan",
+      "dimConsumer": "AI Konsumen",
+      "consumerH2": "Perbandingannya dengan AI yang benar-benar Anda gunakan",
+      "consumerLead": "Asisten sehari-hari ini canggih dan mudah digunakan. Mereka juga berjalan di cloud milik orang lain, tidak menyimpan catatan yang bisa Anda periksa, dan tidak bertanggung jawab kepada siapa pun yang bisa Anda sebut namanya. Berikut adalah uji akuntabilitas yang sama, diterapkan pada AI yang dibuka kebanyakan orang setiap hari.",
+      "cuColAssistant": "Asisten",
+      "cuColPrinciples": "Prinsip yang dipublikasikan",
+      "cuColProof": "Bukti apa yang dilakukannya",
+      "cuColAsks": "Bertanya ke manusia jika ragu",
+      "cuColOpen": "Sumber terbuka",
+      "cuColEcho": "Pemeriksaan ruang gema",
+      "cuFootnote": "Dibandingkan berdasarkan perilaku produk publik per Juni 2026. Setiap tautan prinsip mengarah ke spesifikasi yang diterbitkan oleh perusahaan itu sendiri.",
+      "cuRows": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "CIRIS"
+      ]
     }
   },
   "safetyVsCensorship": {

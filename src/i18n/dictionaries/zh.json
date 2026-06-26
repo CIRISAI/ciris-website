@@ -1456,7 +1456,24 @@
       ],
       "rwFootnote": "依据截至 2026 年 6 月的公开工作整理，每行均附引用。如有近邻信息有误，请告知我们，我们将修正该行。",
       "rwSourcesLabel": "来源",
-      "seeAlsoCta": "本系统在超级对齐全景中的位置"
+      "seeAlsoCta": "本系统在超级对齐全景中的位置",
+      "dimAlign": "对齐",
+      "dimConsumer": "消费者AI",
+      "consumerH2": "与你日常使用的AI相比",
+      "consumerLead": "日常助手功能强大，使用方便。但它们运行在别人的云端，没有你可以核查的记录，也没有你能指名道姓的负责人。以下是同一套问责测试，应用于大多数人每天打开的AI。",
+      "cuColAssistant": "助手",
+      "cuColPrinciples": "公开的原则",
+      "cuColProof": "行为证明",
+      "cuColAsks": "不确定时询问人类",
+      "cuColOpen": "开源",
+      "cuColEcho": "回音壁检查",
+      "cuFootnote": "依据2026年6月的公开产品行为进行比较。每个原则链接均指向该公司自己发布的规范。",
+      "cuRows": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "CIRIS"
+      ]
     }
   },
   "safetyVsCensorship": {

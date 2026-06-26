@@ -1456,7 +1456,24 @@
       ],
       "rwFootnote": "Abgeleitet aus öffentlichen Arbeiten Stand Juni 2026, jede Zeile unten zitiert. Wenn wir einen nahen Nachbarn falsch dargestellt haben, teilen Sie es uns mit und wir korrigieren die Zeile.",
       "rwSourcesLabel": "Quellen",
-      "seeAlsoCta": "Wo dies in der Superalignment-Landschaft steht"
+      "seeAlsoCta": "Wo dies in der Superalignment-Landschaft steht",
+      "dimAlign": "Ausrichtung",
+      "dimConsumer": "Verbraucher-KI",
+      "consumerH2": "So schneidet CIRIS im Vergleich zur KI ab, die du wirklich nutzt",
+      "consumerLead": "Die alltäglichen Assistenten sind leistungsstark und einfach zu bedienen. Sie laufen auch in der Cloud von jemand anderem, führen keine Aufzeichnungen, die du prüfen kannst, und antworten niemandem, den du benennen kannst. Hier ist derselbe Rechenschaftstest, angewendet auf die KI, die die meisten Menschen täglich öffnen.",
+      "cuColAssistant": "Assistent",
+      "cuColPrinciples": "Veröffentlichte Grundsätze",
+      "cuColProof": "Nachweis der Handlungen",
+      "cuColAsks": "Fragt einen Menschen bei Unsicherheit",
+      "cuColOpen": "Open Source",
+      "cuColEcho": "Echokammer-Prüfung",
+      "cuFootnote": "Verglichen am öffentlichen Produktverhalten vom Juni 2026. Jeder Link zu Grundsätzen führt zur eigenen veröffentlichten Spezifikation des jeweiligen Unternehmens.",
+      "cuRows": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "CIRIS"
+      ]
     }
   },
   "safetyVsCensorship": {
