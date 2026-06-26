@@ -4,8 +4,13 @@
    neutral) map onto the same semantic colors the v1 table used per cell, driven
    by a data-tone attribute rather than the localized cell text. */
 
+/* Break the comparison tables out of the 760px reading column so every column
+   is visible on desktop, while staying horizontally scrollable on mobile. The
+   margin-left:50% + translateX(-50%) pattern centers a wider band on the page;
+   94vw (capped at 1100px) keeps it inside the viewport with no page scroll. */
 .tableWrap { overflow-x: auto; margin: 0 0 18px; border: 1px solid var(--color-line);
-  border-radius: 14px; background: var(--color-panel); }
+  border-radius: 14px; background: var(--color-panel);
+  width: min(94vw, 1100px); margin-left: 50%; transform: translateX(-50%); }
 
 .table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 720px; }
 
@@ -41,9 +46,16 @@
 .tableFootnote { font-family: ui-monospace, monospace; font-size: 13px;
   line-height: 1.5; color: var(--color-mute); margin: 0; }
 
-/* Related-work matrix: wider, with three left-aligned text columns up front
-   (approach / closest work / mechanism) and six status columns after. */
-.rwTable { min-width: 1040px; }
+/* Related-work matrix: three left-aligned text columns up front (approach /
+   closest work / mechanism) and six status columns after. Status columns shrink
+   to their content so the text columns take the slack; tighter cell padding
+   keeps all nine columns inside the breakout band on desktop. */
+.rwTable { min-width: 1000px; }
+.rwTable thead th, .rwTable tbody td { padding: 11px 10px; }
+/* Status columns shrink to content; long headers wrap (so they don't force wide
+   columns), but the short Yes/No/Partial values stay on one line. */
+.rwTable thead th:not(.colText) { width: 1%; white-space: normal; vertical-align: bottom; }
+.rwTable tbody td:not(.colText) { width: 1%; white-space: nowrap; }
 .rwTable thead th.colText { text-align: left; }
 .rwTable tbody td.colText { text-align: left; white-space: normal; color: var(--color-dim); }
 .rwTable tbody td.colApproach { color: var(--color-text); font-weight: 500; }
@@ -51,9 +63,20 @@
 .rwTable .rowHero td.colApproach { color: var(--accent); font-weight: 600; }
 .rwTable .rowHero td.colWho,
 .rwTable .rowHero td.colText { color: color-mix(in srgb, var(--color-text) 80%, var(--accent)); }
+
+/* On small phones, drop the long Mechanism column to cut horizontal scroll;
+   approach + closest-work + the six status columns carry the comparison. */
+@media (max-width: 640px) {
+  .rwTable { min-width: 720px; }
+  .rwTable .colMech { display: none; }
+}
 .rwTable tbody td.colWho a { color: inherit; text-decoration: none;
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
 .rwTable tbody td.colWho a:hover { border-bottom-color: var(--accent); }
+
+/* Consumer table: 6 columns with longish headers. Let headers wrap so all
+   columns fit the breakout band instead of forcing horizontal scroll. */
+.cuTable thead th { white-space: normal; vertical-align: bottom; }
 
 /* Dimension dividers (01 Alignment / 02 Consumer AI): a prominent labeled rule
    so the page reads as exactly two comparisons. */

@@ -219,7 +219,7 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
               <tr>
                 <th className={`${table.colText}`}>{lz.rwColApproach}</th>
                 <th className={`${table.colText}`}>{lz.rwColWho}</th>
-                <th className={`${table.colText}`}>{lz.rwColMechanism}</th>
+                <th className={`${table.colText} ${table.colMech}`}>{lz.rwColMechanism}</th>
                 <th>{lz.rwColRuntime}</th>
                 <th>{lz.rwColCrypto}</th>
                 <th>{lz.rwColConstitution}</th>
@@ -238,7 +238,7 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
                     <td className={`${table.colText} ${table.colWho}`}>
                       <a href={RW_CITE[i].primary} target="_blank" rel="noopener noreferrer">{row.who}</a>
                     </td>
-                    <td className={`${table.colText}`}>{row.mechanism}</td>
+                    <td className={`${table.colText} ${table.colMech}`}>{row.mechanism}</td>
                     {(["runtime", "crypto", "constitution", "federated", "conformance", "shipping"] as const).map((col) => {
                       const key = st[col];
                       return (
@@ -284,7 +284,7 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
         <h2 className={s.h2}>{lz.consumerH2}</h2>
         <p className={s.paragraph}>{lz.consumerLead}</p>
         <div className={table.tableWrap}>
-          <table className={table.table}>
+          <table className={`${table.table} ${table.cuTable}`}>
             <thead>
               <tr>
                 <th className={table.colProject}>{lz.cuColAssistant}</th>
