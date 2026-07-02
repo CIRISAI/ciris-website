@@ -2458,5 +2458,191 @@
     "closeLine": "Xây dựng vì bạn không biết.",
     "tagline": "Mạng lưới nhận thức. Làm chủ nó ngay hôm nay.",
     "cta": "Cài đặt trên điện thoại của bạn"
+  },
+  "killSwitch": {
+    "kicker": "Bảo mật bạn có thể tự kiểm chứng",
+    "title": "Tự mình xác minh công tắc ngắt khẩn cấp của chúng tôi.",
+    "lede": "Hầu hết các tuyên bố về an toàn AI đều yêu cầu bạn tin tưởng. Tuyên bố này yêu cầu bạn kiểm chứng. Hãy clone kho mã, chạy một lệnh duy nhất, và xác nhận rằng các khóa có khả năng dừng một agent CIRIS thực sự nằm trên phần cứng đã được chứng nhận FIPS. Đừng tin ai cả, kể cả chúng tôi.",
+    "s1label": "Công tắc ngắt khẩn cấp theo hiến pháp",
+    "s1h2": "Những con người được nêu tên có thể dừng một agent CIRIS. Quyền lực này nằm trong phần cứng, không nằm trong công ty.",
+    "s1p1": "Một cơ chế dừng khẩn cấp cuối cùng, HUMANITY_ACCORD, được nắm giữ bởi những người được nêu tên cụ thể, không phải bởi công ty CIRIS, mạng lưới, hay bản thân agent. Không bên nào trong liên minh có thể cấp, thu hồi, hay ghi đè lên nó. Nó kích hoạt khi đạt số đông trực tiếp hai trên ba.",
+    "s1p2": "Mỗi khóa số đông là sự kết hợp của hai chữ ký gắn liền với nhau. Nửa Ed25519 bắt nguồn từ một YubiKey 5 đã được chứng nhận FIPS: được tạo ra bên trong thiết bị, không thể trích xuất, và yêu cầu chạm vật lý để ký. Nửa ML-DSA-65, chữ ký hậu lượng tử, là một khóa phần mềm được niêm phong vào một USB dưới cùng chiếc YubiKey đó, vì chưa có YubiKey nào tích hợp sẵn applet hậu lượng tử. Tổng cộng có sáu khóa, ba khóa đang hoạt động và ba khóa được lưu trữ dự phòng. Một lần kiểm tra thu hồi thất bại hoặc không xác định được coi là đã bị thu hồi, nên hệ thống luôn nghiêng về phía an toàn khi gặp lỗi.",
+    "s2label": "Xác minh độc lập",
+    "s2h2": "Chỉ một lệnh. Không cần phần cứng, không cần mạng, không cần tin chúng tôi.",
+    "s2p1": "Bộ công cụ kiểm chứng của chúng tôi chạy lại chính xác trình xác minh cổng kiểm soát truy cập của CIRISVerify đang dùng trong môi trường sản xuất, trên sáu chứng thực khóa đã được commit, đối chiếu với một bản sao cố định của gốc chứng thực công khai chính thức từ Yubico. Hãy clone kho mã CIRISVerify và chạy:",
+    "cmdCaption": "Xác nhận gốc chứng thực cố định này là thật bằng cách tải trực tiếp từ Yubico:",
+    "provesH": "Điều này chứng minh được gì",
+    "provesP": "Cả sáu khóa số đông đều liên kết về gốc chứng thực thật của Yubico, nghĩa là nửa chữ ký Ed25519 của chúng được tạo ra bên trong phần cứng YubiKey 5 thật, đã được chứng nhận FIPS: không thể trích xuất, yêu cầu chạm để ký, không thể giả mạo.",
+    "notProvesH": "Điều này không chứng minh được gì",
+    "notProvesP": "Nửa ML-DSA-65 là một khóa phần mềm được niêm phong vào USB dưới YubiKey, không được chứng thực bằng phần cứng. Bộ công cụ này không kiểm tra việc niêm phong USB hay số đông trực tiếp, vốn được thực thi riêng biệt. Chúng tôi muốn bạn biết chính xác những gì bằng chứng này bao quát.",
+    "s3label": "Được đo lường, không phải khẳng định suông",
+    "s3h2": "Mật mã hậu lượng tử đang chạy trong môi trường sản xuất thực tế, và mọi con số đều công khai.",
+    "measuredTag": "đã đo lường",
+    "measuredLabels": [
+      "sự kiện ký PQC mỗi lõi",
+      "giải mã AEAD mỗi lõi",
+      "trao đổi khóa PQC lai",
+      "rò rỉ giữa các nhóm, 50 đến 400 node"
+    ],
+    "s3p1": "Nguồn gốc hậu lượng tử không miễn phí, và chúng tôi không giấu chi phí này: ký kết hợp Ed25519 + ML-DSA-65 chạy chậm hơn khoảng mười lăm lần so với phương pháp cổ điển, xấp xỉ 550 micro giây so với 36 micro giây mỗi sự kiện. Kho dữ liệu lưu trữ có thể phục hồi thành công trong 97,6% số lần thử khi một phần năm số người giữ khóa ngoại tuyến, và 72,7% khi một phần ba ngoại tuyến. Các con số là trung vị đơn lõi trên một CI runner dùng chung, được tạo lại sau mỗi commit.",
+    "benchLink": "Xem mọi con số, được tạo lại sau mỗi commit",
+    "ctaPara": "Vấn đề cốt lõi là bạn không cần phải tin vào câu vừa rồi. Bạn có thể tự chạy kiểm tra.",
+    "btnGithub": "CIRISVerify trên GitHub",
+    "btnTrust": "Niềm tin được xây dựng như thế nào",
+    "btnVerif": "Bộ kiểm thử tuân thủ",
+    "sources": "Nguồn: CIRISVerify (chứng thực lưu ký Ed25519 + ML-DSA-65, gốc Yubico cố định), trang benchmark của CIRISServer (hiệu năng đã đo lường), Yubico PKI (gốc chứng thực). Các số liệu được cố định theo commit 0b73486, ngày 24/06/2026."
+  },
+  "owasp": {
+    "kicker": "Bản đồ ánh xạ bảo mật OWASP Agentic",
+    "title": "OWASP Top 10 cho các ứng dụng Agentic, được ánh xạ với CIRIS.",
+    "lede": "Với từng nguy cơ trong mười nguy cơ agentic mà OWASP đã nêu tên, đây là cơ chế cụ thể của CIRIS để xử lý nguy cơ đó, một mức độ bao phủ trung thực, và một trích dẫn bạn có thể tự kiểm chứng. Chúng tôi ánh xạ toàn bộ danh mục này, kể cả những chỗ chúng tôi còn thiếu sót.",
+    "callout": "Một mục đầy đủ, chín mục một phần, không có mục nào chỉ nói suông cho qua. Một trang tuyên bố cả mười mục đều đầy đủ sẽ chính là kiểu marketing mà chúng tôi khuyên bạn đừng tin. Các mức độ bao phủ dưới đây đã vượt qua sự xem xét của một người hoài nghi độc lập, người có nhiệm vụ tìm cách bác bỏ chúng, và ở những chỗ một cơ chế phòng vệ đã tồn tại trong nền tảng nhưng agent đang triển khai chưa kế thừa nó, chúng tôi ghi rõ điều đó ngay trong hàng tương ứng.",
+    "colRisk": "Nguy cơ",
+    "colCoverage": "Mức độ bao phủ",
+    "colHow": "Cách CIRIS xử lý",
+    "covFull": "Đầy đủ",
+    "covPartial": "Một phần",
+    "covRoadmap": "Lộ trình",
+    "covNone": "Không có",
+    "rows": [
+      {
+        "name": "Chiếm đoạt mục tiêu của agent",
+        "how": "Phòng thủ nhiều lớp: quét chèn lệnh (prompt-injection) trên các kỹ năng và tin nhắn được nhập vào, cô lập chèn lệnh qua hình ảnh (bộ đánh giá lương tâm không bao giờ thấy dữ liệu byte ảnh gốc), và một chuỗi lương tâm kiểm tra lại mọi hành động kết quả so với ý định ban đầu của người dùng trước khi thực thi. Hạn chế: việc quét đầu vào dựa trên mẫu và chưa tách biệt một cách hình thức giữa dữ liệu truy xuất và các chỉ thị."
+      },
+      {
+        "name": "Lạm dụng công cụ",
+        "how": "CIRISServer cung cấp danh sách cho phép/từ chối theo hành động cùng một danh sách cấm tuyệt đối được máy chủ thực thi, được kiểm tra trước khi một thao tác chạy, để một agent được ủy quyền không thể gọi một thao tác phá hoại mà nó chưa được cấp phép. Lưu ý: cơ chế này hiện đang bảo vệ tầng hạ tầng và chưa kiểm soát các lệnh gọi công cụ LLM của chính agent đang triển khai; việc kế thừa cho agent là một giai đoạn đã được lên kế hoạch."
+      },
+      {
+        "name": "Lạm dụng danh tính và đặc quyền",
+        "how": "Thẩm quyền có phạm vi giới hạn, được ủy quyền, và có thể thu hồi ngay trong nền tảng: các ràng buộc được mang theo trong các liên kết đã ký, một danh sách cấm tuyệt đối ngăn việc ủy quyền lại các quyền cao nhất để thẩm quyền không thể leo thang, chỉ được phê duyệt theo hướng thắt chặt, và thu hồi tức thì. Lưu ý: hiện được thực thi trên bề mặt thao tác của chủ sở hữu hạ tầng; việc kế thừa cho agent đang triển khai là một giai đoạn đã được lên kế hoạch."
+      },
+      {
+        "name": "Chuỗi cung ứng agentic",
+        "how": "Toàn vẹn bản dựng thông qua các bản kê khai mô-đun được ký hậu lượng tử của CIRISVerify (Ed25519 + ML-DSA-65 trên toàn bộ hash cây tệp), cùng với danh tính đã ký và được chứng thực cho các thành phần trong liên minh. Hạn chế: chỉ bao phủ chuỗi bản dựng và mô-đun của chính CIRIS, không bao phủ các máy chủ MCP bên thứ ba bất kỳ."
+      },
+      {
+        "name": "Thực thi mã ngoài dự kiến",
+        "how": "Các cổng lương tâm ngữ nghĩa (entropy, tính mạch lạc, phủ quyết tối ưu hóa) chạy trên mọi hành động công cụ trước khi thực thi, và trường hợp không chắc chắn sẽ được chuyển giao cho con người. Hạn chế: đây là kiểm tra ngữ nghĩa, không phải một sandbox mã tất định."
+      },
+      {
+        "name": "Đầu độc bộ nhớ và ngữ cảnh",
+        "how": "Mọi lần ghi vào bộ nhớ đồ thị đều là một hành động được quản trị, được lương tâm kiểm tra, vào một đồ thị có phạm vi giới hạn và có phiên bản, chứ không phải một hiệu ứng phụ âm thầm, vì vậy một lần ghi đầu độc tự nó cũng là một quyết định có thể kiểm toán. Hạn chế: việc chấm điểm độ tin cậy cho nội dung truy xuất mới chỉ thực hiện một phần."
+      },
+      {
+        "name": "Giao tiếp giữa các agent không an toàn",
+        "how": "CIRISEdge xác minh mọi tin nhắn giữa các agent qua một chuỗi bảy bước, kết thúc bằng việc xác minh chữ ký kết hợp Ed25519 + ML-DSA-65 (giới hạn kích thước, giải mã hóa có kiểu dữ liệu, danh sách schema cho phép, kiểm tra khóa đích, cửa sổ chống phát lại). Hạn chế: tầng truyền tải của liên minh vẫn đang được xây dựng."
+      },
+      {
+        "name": "Lỗi lan truyền dây chuyền",
+        "how": "Được giới hạn ở ba tầng độc lập: cầu dao ngắt mạch cho từng dịch vụ (đóng / mở / bán mở) bao quanh các lệnh gọi rủi ro, chuỗi lương tâm chặn một hành động sai trước khi nó lan truyền, và cách ly lưới đo được là không có rò rỉ giữa các nhóm trên phạm vi từ 50 đến 400 node."
+      },
+      {
+        "name": "Lợi dụng lòng tin giữa con người và agent",
+        "how": "Chuỗi lương tâm chấm điểm chính văn bản giải thích của agent, bao gồm lý do được hiển thị cho người xét duyệt, để phát hiện sự tự tin thái quá và thao túng trước khi con người nhìn thấy nó. Hạn chế: việc kiểm toán này dùng cùng họ mô hình với mô hình đang được kiểm tra."
+      },
+      {
+        "name": "Agent nổi loạn",
+        "how": "Ba tầng: sáu lương tâm kiểm soát mọi hành động có hệ quả trước khi thực thi, một dấu vết kiểm toán được ký và liên kết bằng hash giúp phát hiện hành vi che giấu sau khi xảy ra, và công tắc ngắt khẩn cấp luôn nghiêng về an toàn cho phép những con người được nêu tên dừng một agent lệch chuẩn. Hạn chế: việc phát hiện một agent lệch chuẩn tinh vi nhưng vẫn mạch lạc về bản chất là có giới hạn."
+      }
+    ],
+    "footnote": "OWASP Top 10 cho các ứng dụng Agentic, công bố tháng 12/2025. Được ánh xạ với CIRIS tính đến tháng 7/2026; hãy cho chúng tôi biết nếu có ô nào sai và chúng tôi sẽ sửa.",
+    "sourcesLabel": "Nguồn",
+    "ctaPara": "Danh mục phân loại này chỉ là một góc nhìn. Xem CIRIS đứng ở đâu giữa mọi cách tiếp cận về trách nhiệm giải trình AI, và cách công tắc ngắt khẩn cấp có thể được xác minh độc lập.",
+    "btnLandscape": "Toàn cảnh đầy đủ",
+    "btnVerify": "Xác minh công tắc ngắt khẩn cấp",
+    "btnOwasp": "Nguồn OWASP"
+  },
+  "euAiAct": {
+    "kicker": "Đạo luật AI của EU, theo từng điều khoản",
+    "title": "CIRIS tương thích với Đạo luật AI của EU như thế nào.",
+    "lede": "Với mỗi nghĩa vụ rủi ro cao trong Đạo luật AI của EU, đây là cơ chế đã triển khai của CIRIS tương ứng với nghĩa vụ đó, cùng nơi nó nằm trong Hiến pháp và trong mã nguồn. Các nghĩa vụ rủi ro cao có hiệu lực từ tháng 8/2026, vì vậy nội dung này được viết cho những người phải chịu trách nhiệm giải trình về điều đó.",
+    "bannerA": "Hãy đọc nội dung này như một ",
+    "bannerStrong": "sự tương ứng kỹ thuật mang tính tham khảo, không phải tư vấn pháp lý hay một đánh giá tuân thủ đã được chứng nhận",
+    "bannerB": ". Chính Hiến pháp CIRIS cũng đánh dấu các ánh xạ điều khoản này là “đang chờ rà soát pháp lý”. Mọi cơ chế dưới đây đều đã được xác minh trực tiếp trong mã nguồn bởi một người hoài nghi có nhiệm vụ bác bỏ nó, nhưng câu hỏi liệu điều đó có đáp ứng luật hay không là việc của luật sư của bạn, không phải của trang này.",
+    "colArticle": "Điều",
+    "colRequires": "Yêu cầu gì",
+    "colHow": "Cách CIRIS đáp ứng",
+    "rows": [
+      {
+        "art": "Article 9",
+        "requires": "Vận hành một quy trình quản lý rủi ro liên tục, xuyên suốt toàn bộ vòng đời: nhận diện, đánh giá, và giảm thiểu các rủi ro có thể lường trước, đặc biệt chú trọng đến các nhóm dễ bị tổn thương và, theo 9(7), đến thiên lệch dữ liệu huấn luyện.",
+        "how": "Mọi hành động đều đi qua một chuỗi quyết định năm giai đoạn (PDMA / CSDMA / DSDMA / IDMA / lựa chọn hành động) cộng với một tầng lương tâm trước khi thực thi, cùng với lệnh cấm PHÂN BIỆT ĐỐI XỬ được cài cứng và một dấu vết kiểm toán đã ký làm bằng chứng cho thấy các biện pháp đã phát huy tác dụng. Với rủi ro cực đoan hiếm gặp, cổng Đánh giá Rủi ro Thảm họa trong Hiến pháp yêu cầu một đội red-team độc lập và sự phê duyệt kép từ bên ngoài."
+      },
+      {
+        "art": "Article 12",
+        "requires": "Tự động ghi lại các sự kiện trong suốt vòng đời của hệ thống để hành vi có thể được truy vết.",
+        "how": "Một dấu vết kiểm toán đã ký và liên kết bằng hash (liên kết SHA-256, ký bằng Ed25519) thay vì một tệp log thông thường, để mọi hành động được ghi lại đều có thể phát hiện can thiệp và có thể xác minh độc lập."
+      },
+      {
+        "art": "Article 13",
+        "requires": "Vận hành đủ minh bạch để bên triển khai có thể diễn giải kết quả đầu ra và sử dụng hệ thống một cách đúng đắn.",
+        "how": "PDMA mang theo nghĩa vụ công bố giám sát liên tục, và API dấu vết lập luận công khai các mã định danh giai đoạn của quyết định cùng một lộ trình khiếu nại, để lập luận đằng sau một hành động có thể được kiểm tra chứ không mù mờ."
+      },
+      {
+        "art": "Article 14",
+        "requires": "Được thiết kế để có sự giám sát hiệu quả của con người, với khả năng con người can thiệp vào hoặc dừng hệ thống.",
+        "how": "Thang mức độ tự chủ từ A0 đến A4 phân loại mọi lần triển khai theo việc ai chịu trách nhiệm cho hành động, cơ chế Chuyển giao Dựa trên Trí tuệ chuyển các trường hợp không chắc chắn đến một Nhà chức trách Trí tuệ được nêu tên cụ thể, và công tắc ngắt khẩn cấp luôn nghiêng về an toàn cho phép những con người được nêu tên dừng agent."
+      },
+      {
+        "art": "Article 15",
+        "requires": "Chính xác, vững chắc, và an toàn về mạng trong suốt vòng đời, có khả năng chống chịu trước lỗi và sự thao túng đối kháng.",
+        "how": "Ký kết hợp hậu lượng tử (Ed25519 + ML-DSA-65) với xác minh đa nguồn hai trên ba luôn nghiêng về an toàn khi gặp lỗi, sổ tay ứng phó đối kháng trong Hiến pháp, và khả năng chống chịu đã được đo lường: không rò rỉ giữa các nhóm trên 400 node, và kho dữ liệu vẫn phục hồi được khi một phần năm số người giữ khóa ngoại tuyến."
+      },
+      {
+        "art": "Article 16",
+        "requires": "Nhà cung cấp AI rủi ro cao phải đảm bảo việc giám sát, ghi log, và tuân thủ được duy trì xuyên suốt.",
+        "how": "Một cổng lương tâm kiểm tra trước khi thực thi trên mọi hành động, cùng với các bậc tự chủ cao hơn đẩy mã định danh giai đoạn, kết luận, và mức độ rủi ro của mỗi quyết định lên giao diện giám sát của con người."
+      },
+      {
+        "art": "Article 50",
+        "requires": "Cho người dùng biết khi họ đang tương tác với AI, và đánh dấu nội dung do AI tạo ra theo cách máy có thể đọc được (áp dụng từ tháng 8/2026).",
+        "how": "Việc AI tự công bố danh tính đã được triển khai ngay từ hôm nay: cờ is_bot và công bố được cài cứng, thực thi theo ngôn ngữ địa phương trên mọi bộ chuyển đổi tin nhắn. Việc đánh dấu nội dung theo cách máy có thể đọc được thông qua C2PA Content Credentials đang được áp dụng ở ranh giới truyền thông cho thời hạn tháng 8/2026, vì vậy điều khoản này có một nhánh đã triển khai và một nhánh đang được áp dụng."
+      },
+      {
+        "art": "Article 72",
+        "requires": "Chủ động giám sát hệ thống trong thực tế sau khi triển khai và phản hồi các vấn đề trở lại.",
+        "how": "Vòng lặp tuân thủ liên tục trong Hiến pháp đưa các luồng dữ liệu đo từ xa vào phát hiện độ lệch rồi vào rà soát, một vòng giám sát thường trực chứ không phải một lần kiểm toán duy nhất, được hiển thị qua khả năng quan sát của CIRISLens."
+      }
+    ],
+    "footnote": "Được ánh xạ theo Hiến pháp CIRIS chính thức tính đến tháng 7/2026. Đây là sự tương ứng mang tính tham khảo, đang chờ rà soát pháp lý. Hãy cho chúng tôi biết nếu có ánh xạ nào sai và chúng tôi sẽ sửa.",
+    "sourcesLabel": "Nguồn",
+    "ctaPara": "Những cơ chế tương tự được ánh xạ với danh mục bảo mật, và toàn cảnh trách nhiệm giải trình đầy đủ.",
+    "btnOwasp": "Ánh xạ OWASP Agentic",
+    "btnLandscape": "Toàn cảnh đầy đủ",
+    "btnConstitution": "Hiến pháp"
+  },
+  "msCompare": {
+    "kicker": "So sánh theo tiêu chí cố định",
+    "title": "CIRIS so với Microsoft Agent Governance Toolkit",
+    "lede": "Hai nỗ lực nghiêm túc mã nguồn mở nhằm quản trị agent AI, được chấm điểm trên cùng tám tiêu chí từ các nguồn công khai, với trích dẫn cho mọi ô. Ở đâu Microsoft mạnh, chúng tôi nói rõ điều đó. Những khác biệt thực sự quan trọng là: đã triển khai thực tế, một hiến pháp được thực thi mà bạn không thể nới lỏng, và các bản ghi được ký hậu lượng tử.",
+    "sectionLabel": "So sánh trực tiếp",
+    "colCriterion": "Tiêu chí",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "Có",
+    "valPartial": "Một phần",
+    "valNo": "Không",
+    "criteria": [
+      "Thực thi chính sách trước khi hành động chạy",
+      "Bản ghi quyết định đã ký, có thể phát hiện can thiệp",
+      "Danh tính agent bằng mật mã",
+      "Công tắc ngắt khẩn cấp / thu hồi một agent nổi loạn",
+      "Hiến pháp được công bố và thực thi",
+      "Xác minh độc lập bởi bên thứ ba",
+      "Mã nguồn mở",
+      "Đã triển khai trong môi trường sản xuất"
+    ],
+    "footnote": "Được chấm điểm dựa trên tài liệu sản phẩm công khai tính đến tháng 7/2026. Nếu chúng tôi có ô nào sai, hãy cho chúng tôi biết và chúng tôi sẽ sửa.",
+    "sourcesLabel": "Nguồn",
+    "concLabel": "Điểm mạnh của mỗi bên",
+    "msTitle": "Những điểm mạnh thực sự của Microsoft",
+    "msBody": "Agent Control Specification là một môi trường thực thi chính sách phi trạng thái, tất định, và luôn khóa lại khi gặp lỗi một cách thực chất, với tám điểm can thiệp được nêu tên và một mô hình kết luận năm hướng (cho phép, cảnh báo, từ chối, chuyển cấp, biến đổi). Nó đã tích hợp danh tính Ed25519 dựa trên DID, một công tắc ngắt khẩn cấp, và kỹ thuật mã nguồn mở vững chắc theo giấy phép MIT dễ dãi, cùng khả năng tích hợp sâu với Azure và Entra cho doanh nghiệp.",
+    "cirisTitle": "Nơi CIRIS đi xa hơn",
+    "cirisBody": "Mọi hành động đều đi qua một chuỗi lương tâm trong thời gian thực trước khi thực thi, chứ không phải một bản ghi log sau sự việc. Dấu vết kiểm toán được liên kết bằng hash và ký hậu lượng tử, đồng thời được xác minh lại độc lập bởi một bộ kiểm thử tuân thủ riêng biệt. Công tắc ngắt khẩn cấp là một số đông hai trên ba của những con người được nêu tên, luôn nghiêng về an toàn khi gặp lỗi. Và hiến pháp là cố định và được công bố công khai, không phải một chính sách do người vận hành tự soạn ra với mặc định là cho phép.",
+    "ctaPara": "Đây chỉ là một hàng trong một bức tranh lớn hơn. Xem cả hai đứng ở đâu giữa mọi cách tiếp cận về trách nhiệm giải trình AI.",
+    "btnLandscape": "Toàn cảnh đầy đủ",
+    "btnCirisGh": "CIRIS trên GitHub",
+    "btnMsGh": "Microsoft toolkit"
   }
 }

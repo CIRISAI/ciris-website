@@ -2458,5 +2458,191 @@
     "closeLine": "Bilmediğin için inşa et.",
     "tagline": "Epistemik ağ. Bugün sahiplen.",
     "cta": "Telefonuna yükle"
+  },
+  "killSwitch": {
+    "kicker": "Kontrol edebileceğiniz güvenlik",
+    "title": "Acil durdurma anahtarımızı kendiniz doğrulayın.",
+    "lede": "Çoğu yapay zeka güvenliği iddiası sizden güven ister. Bu ise kontrol etmenizi ister. Depoyu klonlayın, tek bir komut çalıştırın ve bir CIRIS ajanını durdurabilecek anahtarların gerçek, FIPS sertifikalı donanımda bulunduğunu doğrulayın. Biz dahil kimseye güvenmeyin.",
+    "s1label": "Anayasal acil durdurma anahtarı",
+    "s1h2": "Belirlenmiş kişiler bir CIRIS ajanını durdurabilir. Bu güç şirkette değil, donanımda bulunur.",
+    "s1p1": "Son çare durdurma mekanizması olan HUMANITY_ACCORD, şirket olarak CIRIS, ağ veya ajanın kendisi tarafından değil, belirlenmiş kişiler tarafından elde tutulur. Federasyon içindeki hiçbir taraf bunu veremez, iptal edemez veya geçersiz kılamaz. Üçte iki canlı yeter sayı ile devreye girer.",
+    "s1p2": "Her yeter sayı anahtarı, birbirine bağlı iki imzanın melezidir. Ed25519 yarısı, FIPS sertifikalı bir YubiKey 5'e dayanır: cihazın içinde üretilir, dışarı çıkarılamaz ve imzalamak için fiziksel dokunma gerektirir. Kuantum sonrası imza olan ML-DSA-65 yarısı ise, henüz hiçbir YubiKey kuantum sonrası bir applet ile gelmediği için, aynı YubiKey altında bir USB belleğe mühürlenmiş bir yazılım anahtarıdır. Toplamda altı anahtar bulunur, üçü takılı ve üçü kasada. Başarısız veya bilinmeyen bir iptal kontrolü, iptal edilmiş sayılır, böylece sistem güvenli şekilde başarısız olur.",
+    "s2label": "Bağımsız doğrulama",
+    "s2h2": "Tek bir komut. Donanım yok, ağ yok, bize güven yok.",
+    "s2p1": "Doğrulama sistemimiz, CIRISVerify'ın üretimde kullanılan tam kabul kapısı doğrulayıcısını, altı taahhüt edilmiş anahtar onayı üzerinde, Yubico'nun kendi genel onay kökünün sabitlenmiş bir kopyasına karşı yeniden çalıştırır. CIRISVerify deposunu klonlayın ve şunu çalıştırın:",
+    "cmdCaption": "Sabitlenmiş kökün gerçek olduğunu, doğrudan Yubico'dan çekerek doğrulayın:",
+    "provesH": "Bunun kanıtladığı şey",
+    "provesP": "Altı yeter sayı anahtarının tamamı Yubico'nun gerçek onay köküne zincirlenir, yani Ed25519 imzalama yarıları gerçek, FIPS sertifikalı YubiKey 5 donanımının içinde üretilmiştir: dışarı çıkarılamaz, dokunma gerektiren, sahtesi yapılamayan.",
+    "notProvesH": "Kanıtlamadığı şey",
+    "notProvesP": "ML-DSA-65 yarısı, YubiKey altında USB'ye mühürlenmiş bir yazılım anahtarıdır, donanım tarafından onaylanmamıştır. Bu sistem, ayrı olarak uygulanan USB mühürlemesini veya canlı yeter sayıyı kontrol etmez. Bu makbuzun tam olarak neyi kapsadığını bilmenizi tercih ederiz.",
+    "s3label": "İddia edilmiş değil, ölçülmüş",
+    "s3h2": "Kuantum sonrası kriptografi üretimde çalışır ve her rakam herkese açıktır.",
+    "measuredTag": "ölçüldü",
+    "measuredLabels": [
+      "çekirdek başına PQC imzalı olay",
+      "çekirdek başına AEAD şifre çözme",
+      "melez PQC anahtar değişimi",
+      "gruplar arası sızıntı, 50 ila 400 düğüm"
+    ],
+    "s3p1": "Kuantum sonrası köken ücretsiz değildir ve maliyeti gizlemiyoruz: melez Ed25519 + ML-DSA-65 imzalama, klasik yönteme göre yaklaşık on beş kat daha yavaştır, olay başına yaklaşık 36 yerine 550 mikrosaniye. Saklanan veri kümesi, sahiplerin beşte biri çevrimdışıyken denemelerin 97.6%'sında, üçte biri çevrimdışıyken 72.7%'sinde yeniden oluşturulur. Rakamlar, paylaşılan bir CI çalıştırıcısında tek çekirdekli medyan değerlerdir ve her commit'te yeniden üretilir.",
+    "benchLink": "Her commit'te yeniden üretilen tüm rakamları görün",
+    "ctaPara": "Buradaki asıl amaç, yukarıdaki cümleye güvenmek zorunda kalmamanızdır. Kontrolü kendiniz çalıştırabilirsiniz.",
+    "btnGithub": "GitHub'da CIRISVerify",
+    "btnTrust": "Güven nasıl işler",
+    "btnVerif": "Uygunluk paketi",
+    "sources": "Kaynaklar: CIRISVerify (Ed25519 + ML-DSA-65 gözetim onayları, sabitlenmiş Yubico kökü), CIRISServer bench-site (ölçülen performans), Yubico PKI (onay kökü). Rakamlar 0b73486 commit'ine sabitlenmiştir, 2026-06-24."
+  },
+  "owasp": {
+    "kicker": "OWASP Agentic güvenlik eşlemesi",
+    "title": "Agentic Uygulamalar için OWASP İlk 10'u, CIRIS'e eşlendi.",
+    "lede": "OWASP'ın adlandırdığı on agentic tehdidin her biri için, bunu ele alan belirli CIRIS mekanizmasını, dürüst bir kapsam düzeyini ve kontrol edebileceğiniz bir kaynağı burada bulabilirsiniz. Yetersiz kaldığımız noktalar dahil, tüm sınıflandırmayı eşliyoruz.",
+    "callout": "Biri tam, dokuzu kısmi, hiçbiri geçiştirilmiş değil. On tanesinin de karşılandığını iddia eden bir sayfa, tam olarak size güvenmemenizi söylediğimiz türden bir pazarlama olurdu. Aşağıdaki kapsam düzeyleri, onları çürütmekle görevli ayrı bir şüpheciden geçti ve bir savunma altyapıda var olup henüz devreye alınan ajana geçmemişse, bunu ilgili satırda belirtiyoruz.",
+    "colRisk": "Risk",
+    "colCoverage": "Kapsam",
+    "colHow": "CIRIS bunu nasıl ele alıyor",
+    "covFull": "Tam",
+    "covPartial": "Kısmi",
+    "covRoadmap": "Yol haritasında",
+    "covNone": "Yok",
+    "rows": [
+      {
+        "name": "Ajan Hedefinin Ele Geçirilmesi",
+        "how": "Katmanlı savunma: içe aktarılan yetenekler ve mesajlar üzerinde prompt-injection taraması, görsel enjeksiyon izolasyonu (vicdan değerlendiricileri ham görüntü baytlarını asla görmez) ve ortaya çıkan her eylemi devreye girmeden önce kullanıcının asıl niyetine karşı yeniden kontrol eden bir vicdan hattı. Eksik: girdi taraması örüntü tabanlıdır ve alınan veriyi talimatlardan biçimsel olarak ayırmaz."
+      },
+      {
+        "name": "Araç Kötüye Kullanımı",
+        "how": "CIRISServer, bir işlem çalıştırılmadan önce kontrol edilen, sunucu tarafından uygulanan bir asla-listesiyle birlikte yetenek fiili izin/yasak listesi sunar, böylece yetki devredilen bir ajan kendisine tanınmamış yıkıcı bir işlemi çağıramaz. Uyarı: bu, bugün itibarıyla dokuma (fabric) katmanını korur ve henüz devreye alınan ajanın kendi LLM araç çağrılarını kapı altına almaz; ajana geçiş planlanan bir aşamadır."
+      },
+      {
+        "name": "Kimlik ve Yetki Suistimali",
+        "how": "Altyapıda kapsamlı, devredilmiş ve iptal edilebilir yetki: imzalı kenarlarda taşınan kısıtlamalar, yetkinin yükselmesini önlemek için en yüksek güçlerin yeniden devredilmesini engelleyen bir asla-listesi, yalnızca sıkılaştırma yönünde onay ve anında iptal. Uyarı: bugün itibarıyla dokumanın sahip-işlem yüzeyinde uygulanır; devreye alınan ajana geçiş planlanan bir aşamadır."
+      },
+      {
+        "name": "Agentic Tedarik Zinciri",
+        "how": "CIRISVerify'ın kuantum sonrası imzalı modül manifestoları (tam dosya ağacı özeti üzerinde Ed25519 + ML-DSA-65) aracılığıyla derleme bütünlüğü, ayrıca federasyona bağlı bileşenler için imzalı, onaylı kimlik. Eksik: CIRIS'in kendi derleme ve modül zincirini kapsar, keyfi üçüncü taraf MCP sunucularını değil."
+      },
+      {
+        "name": "Beklenmeyen Kod Çalıştırma",
+        "how": "Anlamsal vicdan kapıları (entropi, tutarlılık, optimizasyon-veto), her araç eylemi devreye girmeden önce çalışır ve belirsizlik durumunda karar bir insana bırakılır. Eksik: bu anlamsal bir inceleme olup, deterministik bir kod korumalı alanı (sandbox) değildir."
+      },
+      {
+        "name": "Bellek ve Bağlam Zehirlenmesi",
+        "how": "Grafik belleğe yapılan her yazma işlemi, sessiz bir yan etki değil, kapsamlı ve sürümlenmiş bir grafiğe yönelik, denetlenen ve vicdan kontrolünden geçen bir eylemdir; bu nedenle zehirleyici bir yazma işleminin kendisi denetlenebilir bir karardır. Eksik: alınan içeriğin güven puanlaması kısmidir."
+      },
+      {
+        "name": "Güvensiz Ajanlar Arası İletişim",
+        "how": "CIRISEdge, ajanlar arası her mesajı, melez Ed25519 + ML-DSA-65 imza doğrulamasıyla sona eren yedi adımlı bir hat üzerinden doğrular (boyut sınırı, tipli seri durum çözme, şema izin listesi, hedef anahtar kontrolü, tekrar oynatma penceresi). Eksik: federasyon taşıma katmanı hâlâ inşa edilmektedir."
+      },
+      {
+        "name": "Zincirleme Arızalar",
+        "how": "Üç bağımsız katmanda sınırlandırılır: riskli çağrılar etrafında hizmet başına devre kesiciler (kapalı / açık / yarı açık), kötü bir eylemin yayılmadan önce vicdan hattı tarafından durdurulması ve 50 ila 400 düğüm arasında sıfır gruplar arası sızıntı olarak ölçülen ağ izolasyonu."
+      },
+      {
+        "name": "İnsan-Ajan Güven İstismarı",
+        "how": "Vicdan hattı, bir insan incelemeciye gösterilen gerekçe dahil olmak üzere, ajanın kendi açıklayıcı metnini, bir insan görmeden önce aşırı özgüven ve manipülasyon açısından puanlar. Eksik: denetlediği model ailesinin aynısıyla denetim yapar."
+      },
+      {
+        "name": "Kontrolden Çıkan Ajanlar",
+        "how": "Üç katman: sonuç doğuran her eylemi çalıştırılmadan önce altı vicdan kapıya alır, özet zinciriyle imzalanmış bir denetim izi gizlemeyi sonradan tespit edilebilir kılar ve güvenli şekilde başarısız olan acil durdurma anahtarı, belirlenmiş kişilerin hizadan sapmış bir ajanı durdurmasına izin verir. Eksik: incelikli biçimde hizadan sapmış ama tutarlı görünen bir ajanı yakalamak doğası gereği sınırlıdır."
+      }
+    ],
+    "footnote": "Agentic Uygulamalar için OWASP İlk 10'u, Aralık 2025'te yayımlandı. Temmuz 2026 itibarıyla CIRIS'e eşlendi; bir hücrenin yanlış olduğunu düşünüyorsanız bize bildirin, düzeltelim.",
+    "sourcesLabel": "Kaynaklar",
+    "ctaPara": "Bu sınıflandırma tek bir bakış açısıdır. CIRIS'in, yapay zeka hesap verebilirliğine yönelik tüm yaklaşımlar arasında nerede durduğunu ve acil durdurma anahtarının nasıl bağımsız olarak doğrulanabildiğini görün.",
+    "btnLandscape": "Tüm manzara",
+    "btnVerify": "Acil durdurma anahtarını doğrulayın",
+    "btnOwasp": "OWASP kaynağı"
+  },
+  "euAiAct": {
+    "kicker": "AB Yapay Zeka Yasası, madde madde",
+    "title": "CIRIS'in AB Yapay Zeka Yasası ile uyumu.",
+    "lede": "AB Yapay Zeka Yasası'ndaki her yüksek riskli yükümlülük için, buna karşılık gelen ve devreye alınmış CIRIS mekanizmasını ve bunun Anayasa ile kodda nerede yer aldığını burada bulabilirsiniz. Yüksek riskli yükümlülükler Ağustos 2026'dan itibaren geçerli olacağından, bu sayfa bundan sorumlu olacak kişiler için yazılmıştır.",
+    "bannerA": "Bunu şu şekilde okuyun: ",
+    "bannerStrong": "hukuki tavsiye veya sertifikalı bir uygunluk değerlendirmesi değil, bilgilendirici bir mühendislik karşılığı",
+    "bannerB": ". CIRIS Anayasası'nın kendisi bu madde eşlemelerini \"hukuki incelemeyi bekliyor\" olarak işaretler. Aşağıdaki her mekanizma, çürütmekle görevli bir şüpheci tarafından kodda canlı olarak doğrulanmıştır, ancak bunun yasayı karşılayıp karşılamadığı sorusu bu sayfanın değil, hukuk danışmanınızın alanıdır.",
+    "colArticle": "Madde",
+    "colRequires": "Ne gerektirir",
+    "colHow": "CIRIS bunu nasıl ele alıyor",
+    "rows": [
+      {
+        "art": "Article 9",
+        "requires": "Sürekli, tüm yaşam döngüsünü kapsayan bir risk sürecini yürütün: öngörülebilir riskleri belirleyin, değerlendirin ve azaltın; savunmasız gruplara ve 9(7) uyarınca eğitim verisi önyargısına özel ağırlık verin.",
+        "how": "Her eylem, çalıştırılmadan önce beş aşamalı bir karar hattından (PDMA / CSDMA / DSDMA / IDMA / eylem seçimi) ve bir vicdan katmanından geçer; sabit kodlanmış bir DISCRIMINATION yasağı ve neyin işe yaradığını ölçen kayıt olarak imzalı bir denetim izi bulunur. Aşırı uç risk için, Anayasa'nın Katastrofik Risk Değerlendirme kapısı, bağımsız bir kırmızı takım ve ikili dış onay gerektirir."
+      },
+      {
+        "art": "Article 12",
+        "requires": "Sistemin yaşam süresi boyunca olayları otomatik olarak kaydedin, böylece davranış izlenebilir olsun.",
+        "how": "Düz bir günlük dosyası yerine imzalı, özet zinciriyle bağlanmış bir denetim izi (SHA-256 ile zincirlenmiş, Ed25519 ile imzalanmış); böylece kaydedilen her eylem müdahaleye karşı belirgin ve bağımsız olarak doğrulanabilir."
+      },
+      {
+        "art": "Article 13",
+        "requires": "Bir dağıtıcının çıktıyı yorumlayabileceği ve sistemi doğru şekilde kullanabileceği kadar şeffaf çalışın.",
+        "how": "PDMA, sürekli izleme yayımlama görevini taşır ve akıl yürütme izi API'si, kararın aşama kimliklerini ve bir itiraz yolunu ortaya çıkarır; böylece bir eylemin arkasındaki akıl yürütme opak değil, incelenebilir olur."
+      },
+      {
+        "art": "Article 14",
+        "requires": "Bir insanın sisteme müdahale edebileceği veya onu durdurabileceği şekilde, etkili insan gözetimi için tasarlayın.",
+        "how": "A0'dan A4'e kadar olan özerklik ölçeği, her dağıtımı eylemin sorumluluğunu kimin taşıdığına göre derecelendirir; Bilgelik Temelli Erteleme, belirsizliği belirlenmiş bir insan Bilge Otoriteye yönlendirir ve güvenli şekilde başarısız olan acil durdurma anahtarı, belirlenmiş kişilerin ajanı durdurmasına izin verir."
+      },
+      {
+        "art": "Article 15",
+        "requires": "Yaşam döngüsü boyunca doğru, sağlam ve siber güvenli olun; hataya ve kötü niyetli manipülasyona karşı dirençli olun.",
+        "how": "Üçte iki güvenli şekilde başarısız olan çok kaynaklı doğrulamayla melez kuantum sonrası imzalama (Ed25519 + ML-DSA-65), Anayasa'nın kötü niyetli dirence karşı eylem planı ve ölçülen dayanıklılık: 400 düğüm genelinde sıfır gruplar arası sızıntı ve sahiplerin beşte biri çevrimdışıyken veri kümesinin yeniden oluşturulması."
+      },
+      {
+        "art": "Article 16",
+        "requires": "Yüksek riskli yapay zeka sağlayıcıları, gözetim, kayıt tutma ve uygunluğun süreç boyunca yerinde olduğundan emin olmalıdır.",
+        "how": "Her eylemde çalıştırma öncesi bir vicdan kapısı, ayrıca her kararın aşama kimliğini, sonucunu ve risk bandını bir insan gözetim arayüzüne ileten daha yüksek özerklik katmanları."
+      },
+      {
+        "art": "Article 50",
+        "requires": "İnsanlara yapay zeka ile etkileşimde olduklarını bildirin ve yapay zeka tarafından üretilen içeriği makine tarafından okunabilir şekilde işaretleyin (Ağustos 2026'dan itibaren geçerlidir).",
+        "how": "Yapay zeka kendini bildirme özelliği bugün itibarıyla devrededir: is_bot bayrakları ve her mesaj bağdaştırıcısında sabit kodlanmış, yerel ayara göre uygulanan bildirim. C2PA Content Credentials aracılığıyla makine tarafından okunabilir içerik işaretlemesi, Ağustos 2026 son tarihi için medya sınırında benimsenmektedir; yani bu maddenin bir kolu devrede, bir kolu benimseme aşamasında."
+      },
+      {
+        "art": "Article 72",
+        "requires": "Sistemi dağıtımdan sonra sahada aktif olarak izleyin ve sorunları geri bildirin.",
+        "how": "Anayasa'nın sürekli uyum döngüsü, telemetri akışlarını sapma tespitine, oradan da incelemeye taşır; bu, tek seferlik bir denetim değil, CIRISLens gözlemlenebilirliği aracılığıyla ortaya çıkan sürekli bir izleme döngüsüdür."
+      }
+    ],
+    "footnote": "Temmuz 2026 itibarıyla kanonik CIRIS Anayasası'na göre eşlendi. Bilgilendirici karşılık, hukuki incelemeyi bekliyor. Bir eşlemenin yanlış olduğunu düşünüyorsanız bize bildirin, düzeltelim.",
+    "sourcesLabel": "Kaynaklar",
+    "ctaPara": "Aynı mekanizmaların güvenlik sınıflandırmasına eşlenmiş hali ve tüm hesap verebilirlik manzarası.",
+    "btnOwasp": "OWASP Agentic eşlemesi",
+    "btnLandscape": "Tüm manzara",
+    "btnConstitution": "Anayasa"
+  },
+  "msCompare": {
+    "kicker": "Karşılaştırma, sabit kriterler",
+    "title": "CIRIS ile Microsoft Agent Governance Toolkit karşılaştırması",
+    "lede": "Yapay zeka ajanlarını yönetmeye yönelik iki ciddi açık kaynak girişimi, kamuya açık kaynaklardan aynı sekiz kritere göre puanlandı ve her hücrede bir kaynak belirtildi. Microsoft'un güçlü olduğu yerlerde bunu söylüyoruz. Önemli olan farklar şunlardır: fiilen devrede olmak, gevşetemeyeceğiniz uygulanan bir anayasa ve kuantum sonrası imzalı kayıtlar.",
+    "sectionLabel": "Kafa kafaya",
+    "colCriterion": "Kriter",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "Evet",
+    "valPartial": "Kısmi",
+    "valNo": "Hayır",
+    "criteria": [
+      "Eylem çalıştırılmadan önce politikayı uygular",
+      "İmzalı, müdahaleye karşı belirgin karar kayıtları",
+      "Kriptografik ajan kimliği",
+      "Acil durdurma anahtarı / kontrolden çıkan bir ajanı iptal etme",
+      "Yayımlanmış, uygulanan anayasa",
+      "Bağımsız üçüncü taraf doğrulaması",
+      "Açık kaynak",
+      "Üretimde fiilen kullanımda"
+    ],
+    "footnote": "Temmuz 2026 itibarıyla kamuya açık ürün belgelerinden puanlandı. Bir hücreyi yanlış yazdıysak bize bildirin, düzeltelim.",
+    "sourcesLabel": "Kaynaklar",
+    "concLabel": "Her birinin iyi yaptığı şeyler",
+    "msTitle": "Microsoft'un gerçek güçlü yönleri",
+    "msBody": "Agent Control Specification, sekiz adlandırılmış müdahale noktası ve beş yönlü bir karar modeliyle (izin ver, uyar, reddet, yükselt, dönüştür) gerçek anlamda durumsuz, deterministik ve güvenli şekilde kapanan bir politika çalışma zamanıdır. DID tabanlı Ed25519 kimliği, bir acil durdurma anahtarı ve izin verici bir MIT lisansı altında güçlü açık kaynak mühendisliğiyle birlikte, kurumsal kullanım için derin Azure ve Entra entegrasyonu sunar.",
+    "cirisTitle": "CIRIS'in daha ileri gittiği noktalar",
+    "cirisBody": "Her eylem, çalıştırılmadan önce bir çalışma zamanı vicdan hattından geçer, bu sonradan tutulan bir günlük değildir. Denetim izi özet zinciriyle bağlanmış ve kuantum sonrası imzalanmıştır, ayrıca ayrı bir uygunluk paketi tarafından bağımsız olarak yeniden doğrulanır. Acil durdurma anahtarı, güvenli şekilde başarısız olan, üçte iki belirlenmiş kişi yeter sayısına dayalı bir mekanizmadır. Ve anayasa, varsayılan olarak izin veren, operatör tarafından yazılmış bir politika değil, sabit ve yayımlanmış bir belgedir.",
+    "ctaPara": "Bu, daha büyük bir tablonun tek bir satırı. İkisinin de yapay zeka hesap verebilirliğine yönelik tüm yaklaşımlar arasında nerede durduğunu görün.",
+    "btnLandscape": "Tüm manzara",
+    "btnCirisGh": "GitHub'da CIRIS",
+    "btnMsGh": "Microsoft toolkit'i"
   }
 }

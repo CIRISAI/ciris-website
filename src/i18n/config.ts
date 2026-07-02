@@ -113,6 +113,10 @@ export const LOCALIZED_ROUTES: ReadonlySet<string> = new Set([
   "/cewp",
   "/epistemic-web",
   "/constitution",
+  "/compare/microsoft-agent-governance",
+  "/compliance/owasp-agentic-top-10",
+  "/compliance/eu-ai-act",
+  "/security/post-quantum-kill-switch",
 ]);
 
 /**

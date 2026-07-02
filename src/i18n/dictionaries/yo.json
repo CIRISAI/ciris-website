@@ -2458,5 +2458,191 @@
     "closeLine": "Kọ́ ọ nítorí ẹ kò mọ̀.",
     "tagline": "Ayelujara ìmọ̀. Ni i lónì.",
     "cta": "Fi sínú fóònù rẹ"
+  },
+  "killSwitch": {
+    "kicker": "Aabo tí o lè fojú ṣayẹwo",
+    "title": "Ṣàyẹ̀wò switch ìdáduro wa fúnra rẹ.",
+    "lede": "Ọ̀pọ̀lọpọ̀ àwọn ìkéde nípa àìléwu AI ń béèrè fún ìgbẹ́kẹ̀lé rẹ. Èyí ń béèrè kí o ṣàyẹ̀wò rẹ̀ dípò bẹ́ẹ̀. Ṣe clone repo náà, ṣiṣẹ́ àṣẹ kan, kí o sì rí i dájú pé àwọn kọ́kọ́rọ́ tí ó lè dá agent CIRIS dúró wà lórí ohun èlò tòótọ́, tí a fọwọ́ sí gẹ́gẹ́ bí FIPS. Má ṣe gbẹ́kẹ̀lé ẹnikẹ́ni, títí kan àwa fúnra wa.",
+    "s1label": "Switch ìdáduro t'ó dá lórí ìlànà",
+    "s1h2": "Àwọn ènìyàn tí a dárúkọ ni ó lè dá agent CIRIS dúró. Agbára náà wà nínú ohun èlò, kì í ṣe lọ́wọ́ ilé-iṣẹ́.",
+    "s1p1": "Ìdáduro tí ó kẹ́yìn, HUMANITY_ACCORD, wà lọ́wọ́ àwọn ènìyàn tí a dárúkọ, kì í ṣe lọ́wọ́ CIRIS gẹ́gẹ́ bí ilé-iṣẹ́, tàbí nẹ́tíwọ́ọ̀kì náà, tàbí agent náà fúnra rẹ̀. Kò sí ẹgbẹ́ kankan nínú federation tí ó lè fúnni, mú padà, tàbí borí rẹ̀. Ó máa ń ṣiṣẹ́ nígbà tí méjì nínú mẹ́ta bá wà láàyè ní àkókò kan náà.",
+    "s1p2": "Kọ́kọ́rọ́ quorum kọ̀ọ̀kan jẹ́ àkópọ̀ hybrid ti àmì méjì tí a so pọ̀. Ìdajì Ed25519 fìdí múlẹ̀ nínú YubiKey 5 tí a fọwọ́ sí gẹ́gẹ́ bí FIPS: a ṣe é nínú ẹ̀rọ náà fúnra rẹ̀, a kò lè yọ ọ́ jáde, ó sì nílò ìfọwọ́kàn gidi kí ó tó fowó sí. Ìdajì ML-DSA-65, ìyẹn àmì post-quantum, jẹ́ kọ́kọ́rọ́ software tí a fi seal wé USB kan lábẹ́ YubiKey kan náà, nítorí kò sí YubiKey kankan tí ó ti ní applet post-quantum. Kọ́kọ́rọ́ mẹ́fà ni gbogbo rẹ̀, mẹ́ta wà ní ìlò, mẹ́ta sì wà ní ìpamọ́. Bí àyẹ̀wò ìfagilé kan bá kùnà tàbí kò dájú, a máa kà á sí pé a ti fagilé, nítorí náà ètò náà máa ń kùnà ní ọ̀nà tí ó ṣì ní ààbò.",
+    "s2label": "Ìṣàyẹ̀wò òmìnira",
+    "s2h2": "Àṣẹ kan ṣoṣo. Kò sí ohun èlò, kò sí nẹ́tíwọ́ọ̀kì, kò sí ìgbẹ́kẹ̀lé nínú wa tí a nílò.",
+    "s2p1": "Ohun èlò ìdánwò wa tún ń ṣiṣẹ́ verifier admission-gate gan-an tí CIRISVerify ń lò ní production lórí àwọn ẹ̀rí kọ́kọ́rọ́ mẹ́fà tí a ti fi lélẹ̀, ní ìfiwéra sí àdàkọ tí a pin mọ́ ti gbòngbò ẹ̀rí gbangba ti Yubico fúnra rẹ̀. Ṣe clone repository CIRISVerify kí o sì ṣiṣẹ́:",
+    "cmdCaption": "Rí i dájú pé gbòngbò tí a pin náà jẹ́ tòótọ́ nípa gbígbà á tààrà láti ọ̀dọ̀ Yubico:",
+    "provesH": "Ohun tí èyí fi hàn",
+    "provesP": "Gbogbo àwọn kọ́kọ́rọ́ quorum mẹ́fà náà so mọ́ gbòngbò ẹ̀rí gidi ti Yubico, nítorí náà a ṣe àwọn ìdajì ìforúkọsílẹ̀ Ed25519 wọn nínú ohun èlò YubiKey 5 tòótọ́ tí a fọwọ́ sí gẹ́gẹ́ bí FIPS: a kò lè yọ wọ́n jáde, wọ́n nílò ìfọwọ́kàn, wọn kò sì ṣe é párọ́ mọ́.",
+    "notProvesH": "Ohun tí kò fi hàn",
+    "notProvesP": "Ìdajì ML-DSA-65 jẹ́ kọ́kọ́rọ́ software tí a fi seal wé USB lábẹ́ YubiKey, kì í ṣe ohun tí ohun èlò fúnra rẹ̀ jẹ́rìí sí. Ohun èlò ìdánwò yìí kò ṣàyẹ̀wò seal USB náà tàbí quorum tí ó wà láàyè, èyí tí a fi ipá mú lọ́tọ̀ọ̀tọ̀. A fẹ́ kí o mọ ní pàtó ohun tí ẹ̀rí náà ń bo.",
+    "s3label": "A díwọ̀n rẹ̀, a kò kàn sọ̀rọ̀ nípa rẹ̀",
+    "s3h2": "Cryptography post-quantum ń ṣiṣẹ́ ní production, gbogbo nọ́mbà sì wà ní gbangba.",
+    "measuredTag": "a díwọ̀n",
+    "measuredLabels": [
+      "àwọn ìṣẹ̀lẹ̀ tí a fowó sí PQC fún core kọ̀ọ̀kan",
+      "AEAD decrypt fún core kọ̀ọ̀kan",
+      "ìṣàkúpọ̀ kọ́kọ́rọ́ PQC hybrid",
+      "jíjò kọjá ẹgbẹ́, láti 50 sí 400 nodes"
+    ],
+    "s3p1": "Ẹ̀rí ìpilẹ̀ṣẹ̀ post-quantum kò wá ní ọ̀fẹ́, a kò sì fi iye owó rẹ̀ pamọ́: ìforúkọsílẹ̀ hybrid Ed25519 + ML-DSA-65 ń ṣiṣẹ́ ní ìwọ̀n ìgbà mẹ́ẹ̀ẹ́dógún ju ti classical lọ, ní àyíká 550 microseconds ní àfiwé pẹ̀lú 36 fún ìṣẹ̀lẹ̀ kan. Ohun ìṣúra tí a fi pamọ́ ń tún kọ́ ní 97.6% nínú àwọn ìdánwò nígbà tí ìdá márùn-ún nínú àwọn olùdìmú bá wà ní offline, àti 72.7% nígbà tí ìdá mẹ́ta bá wà ní offline. Àwọn nọ́mbà náà jẹ́ agbedeméjì core-kan-ṣoṣo lórí ẹ̀rọ CI kan tí a pín, tí a sì tún ń mọ̀ọ́n ní gbogbo commit.",
+    "benchLink": "Wo gbogbo nọ́mbà, tí a ń tún ṣe ní gbogbo commit",
+    "ctaPara": "Gbogbo kókó ọ̀rọ̀ ni pé kò yẹ kí o gbẹ́kẹ̀lé gbólóhùn tí ó wà lókè yìí. O lè ṣe àyẹ̀wò náà fúnra rẹ.",
+    "btnGithub": "CIRISVerify lórí GitHub",
+    "btnTrust": "Bí ìgbẹ́kẹ̀lé ṣe ń ṣiṣẹ́",
+    "btnVerif": "Ẹgbẹ́ ìdánwò ìbámu",
+    "sources": "Àwọn orísun: CIRISVerify (ẹ̀rí ìtọ́jú Ed25519 + ML-DSA-65, gbòngbò Yubico tí a pin), ojúlé ìdánwò CIRISServer (iṣẹ́ tí a díwọ̀n), Yubico PKI (gbòngbò ẹ̀rí). Àwọn nọ́mbà tí a pin sí commit 0b73486, 2026-06-24."
+  },
+  "owasp": {
+    "kicker": "Àkàwé ààbò OWASP Agentic",
+    "title": "OWASP Top 10 fún àwọn Ohun Èlò Agentic, tí a fi wé CIRIS.",
+    "lede": "Fún ọ̀kọ̀ọ̀kan nínú àwọn ewu agentic mẹ́wàá tí OWASP dárúkọ, èyí ni ọ̀nà pàtó tí CIRIS gbà kojú rẹ̀, ìpele ìbòjú tí ó jẹ́ òtítọ́, àti ìtọ́kasí tí o lè ṣàyẹ̀wò. A ṣe àkàwé gbogbo taxonomy náà, títí kan ibi tí a kò tí ì dé.",
+    "callout": "Ọ̀kan ni kíkún, mẹ́sàn-án ni apá kan, kò sí ọ̀kan tí a kàn parọ́ nípa rẹ̀. Ojú-ìwé tí ó bá sọ pé gbogbo mẹ́wàá ni kíkún yóò jẹ́ gan-an ni ìpolówó tí a ń sọ fún ọ pé kí o má ṣe gbẹ́kẹ̀lé. Àwọn ìpele ìbòjú tí ó wà nísàlẹ̀ ti la ọwọ́ olùṣiyèméjì lọ́tọ̀ọ̀tọ̀ tí iṣẹ́ rẹ̀ ni láti já wọn lulẹ̀, níbi tí ààbò kan bá sì wà nínú ìpìlẹ̀ ṣùgbọ́n agent tí a fi ránṣẹ́ kò tí ì jogún rẹ̀, a máa sọ bẹ́ẹ̀ nínú ìlà náà.",
+    "colRisk": "Ewu",
+    "colCoverage": "Ìbòjú",
+    "colHow": "Bí CIRIS ṣe kojú rẹ̀",
+    "covFull": "Kíkún",
+    "covPartial": "Apá kan",
+    "covRoadmap": "Ètò ọjọ́ iwájú",
+    "covNone": "Kò sí",
+    "rows": [
+      {
+        "name": "Gbígba Èròngbà Agent Lọ́wọ́",
+        "how": "Ààbò ní ọ̀pọ̀lọpọ̀ ìpele: ṣíṣàyẹ̀wò prompt-injection lórí àwọn skills àti ìránṣẹ́ tí a gbé wọlé, ìyapa visual-injection (àwọn ẹ̀rí conscience kì í rí àwọn byte àwòrán tí kò ní ìlànà), àti ọ̀nà ìlànà conscience tí ó tún ṣàyẹ̀wò gbogbo ìgbésẹ̀ tí ó jáde padà sí èròngbà ìpilẹ̀ṣẹ̀ oníṣẹ́ náà kí ó tó ṣiṣẹ́. Àlàfo: ṣíṣàyẹ̀wò ìbáwọlé dá lórí àpẹẹrẹ, kò sì ya dátà tí a rí gbà sọ́tọ̀ kúrò nínú àwọn ìtọ́ni ní ọ̀nà tí ó dá lórí ìlànà."
+      },
+      {
+        "name": "Ìlò Ohun Èlò Ní Àṣìṣe",
+        "how": "CIRISServer ń gbé àkọsílẹ̀ allow/deny ti capability-verb pẹ̀lú àkọsílẹ̀ never tí server fi ipá mú, tí a ṣàyẹ̀wò kí iṣẹ́ kan tó ṣiṣẹ́, nítorí náà agent tí a fi àṣẹ fún kò lè pe iṣẹ́ apanirun tí a kò fún ní àṣẹ. Àlàfo: èyí ń dáàbò bo ìpele fabric lónìí, kò sì tí ì dí àwọn ìpè-ọ̀nà LLM tí agent fúnra rẹ̀ tí a fi ránṣẹ́ ń lò; jíjogún fún agent jẹ́ ìpele tí a ti gbèrò."
+      },
+      {
+        "name": "Ìlòkulò Ìdánimọ̀ àti Àǹfàní",
+        "how": "Àṣẹ tí a dá sí, tí a fi fún, tí a sì lè fagilé, nínú ìpìlẹ̀: àwọn ìdíwọ̀n tí a gbé kalẹ̀ nínú edges tí a fọwọ́ sí, àkọsílẹ̀ never tí ó dí ìtúnfúnni-ni-àwọn-agbára-tí ó ga jùlọ kí àṣẹ má bàa gòkè, ìfọwọ́sí tí ó lè le sí i nìkan, àti ìfagilé lẹ́sẹ̀kẹsẹ̀. Àlàfo: a fi ipá mú lórí ojú-ìwé owner-op ti fabric lónìí; jíjogún fún agent tí a fi ránṣẹ́ jẹ́ ìpele tí a ti gbèrò."
+      },
+      {
+        "name": "Ọ̀nà Ìpèsè Agentic",
+        "how": "Ìdúróṣinṣin ìkọ́lé nípasẹ̀ àwọn manifest module tí CIRISVerify fọwọ́ sí ní ọ̀nà post-quantum (Ed25519 + ML-DSA-65 lórí hash ti gbogbo ìtòsí fáìlì), pẹ̀lú ìdánimọ̀ tí a fọwọ́ sí, tí a jẹ́rìí sí, fún àwọn ẹ̀ka federated. Àlàfo: ó bo ìkọ́lé àti ẹ̀wọ̀n module ti CIRIS fúnra rẹ̀, kì í ṣe àwọn olùpin MCP alábàákẹ́gbẹ́ mìíràn lásán."
+      },
+      {
+        "name": "Ìṣiṣẹ́ Kóòdù Tí A Kò Retí",
+        "how": "Àwọn ẹnu-ọ̀nà conscience oníṣẹ̀-ọ̀rọ̀ (entropy, ìṣọ̀kan, optimization-veto) ń ṣiṣẹ́ lórí gbogbo ìgbésẹ̀ ohun èlò kí ó tó ṣiṣẹ́, àìdájú sì ń lọ sí ọwọ́ ènìyàn. Àlàfo: èyí jẹ́ àyẹ̀wò oníṣẹ̀-ọ̀rọ̀, kì í ṣe sandbox kóòdù tí ó dájú."
+      },
+      {
+        "name": "Májèlé Ìrántí àti Àyíká",
+        "how": "Gbogbo kíkọ sínú ìrántí graph jẹ́ ìgbésẹ̀ tí a darí, tí conscience ti ṣàyẹ̀wò, sínú graph tí a dá sí, tí ó ní ẹ̀dà, kì í ṣe ipa ẹ̀gbẹ́ tí ó dákẹ́, nítorí náà kíkọ tí ó ní májèlé fúnra rẹ̀ jẹ́ ìpinnu tí a lè ṣàyẹ̀wò. Àlàfo: ìwọ̀n ìgbẹ́kẹ̀lé lórí àkóónú tí a rí gbà jẹ́ apá kan."
+      },
+      {
+        "name": "Ìbánisọ̀rọ̀ Agent-sí-Agent Tí Kò Ní Ààbò",
+        "how": "CIRISEdge ń ṣàyẹ̀wò gbogbo ìránṣẹ́ agent-sí-agent nípasẹ̀ ọ̀nà ìgbésẹ̀ méje tí ó parí ní ìfẹsẹ̀múlẹ̀ àmì hybrid Ed25519 + ML-DSA-65 (ààlà ìwọ̀n, deserialize tí a fi irú fún, àkọsílẹ̀ allow ti schema, àyẹ̀wò kọ́kọ́rọ́ ìdámọ̀, fèrèsé replay). Àlàfo: a ṣì ń kọ́ ọ̀nà transport federation náà."
+      },
+      {
+        "name": "Àwọn Ìkùnà Tí Ó Ń Tẹ̀síwájú",
+        "how": "A dí ní ìpele mẹ́ta ọ̀tọ̀ọ̀tọ̀: circuit breakers fún ìṣẹ́ kọ̀ọ̀kan (tí a ti pa / tí ó ṣí / ìdajì-ṣí) yí àwọn ìpè tí ó léwu ká, ọ̀nà ìlànà conscience tí ó ń dá ìgbésẹ̀ búburú dúró kí ó tó tàn kálẹ̀, àti ìyapa mesh tí a díwọ̀n sí òdo jíjò kọjá ẹgbẹ́ láàrin 50 sí 400 nodes."
+      },
+      {
+        "name": "Ìlòkulò Ìgbẹ́kẹ̀lé Ènìyàn-Agent",
+        "how": "Ọ̀nà ìlànà conscience ń díwọ̀n ọ̀rọ̀ àlàyé agent fúnra rẹ̀, títí kan ìdí tí a fi hàn olùṣàtúnyẹ̀wò ènìyàn, fún ìgbọ́kànlé àṣejù àti ìṣàkóso-ọkàn kí ènìyàn tó rí i rárá. Àlàfo: ó ń ṣàyẹ̀wò pẹ̀lú irú model kan náà tí ó ń ṣàyẹ̀wò."
+      },
+      {
+        "name": "Àwọn Agent Aṣáájú-ọ̀nà",
+        "how": "Ìpele mẹ́ta: consciences mẹ́fà ń ṣàyẹ̀wò gbogbo ìgbésẹ̀ tí ó léwu kí ó tó ṣiṣẹ́, ìtọpa audit tí a fowó sí, tí a so pọ̀ pẹ̀lú hash, mú kí a lè rí ìpamọ́ lẹ́yìn-ọ̀-rẹyìn, àti switch ìdáduro tí ó ṣì ní ààbò ń jẹ́ kí àwọn ènìyàn tí a dárúkọ dá agent tí kò bá ìlànà mu dúró. Àlàfo: mímu agent tí kò bá ìlànà mu ṣùgbọ́n tí ó ṣì dà bí ẹni pé ó bá a mu jáde jẹ́ nǹkan tí ààlà rẹ̀ wà ní ìwà rẹ̀."
+      }
+    ],
+    "footnote": "OWASP Top 10 fún àwọn Ohun Èlò Agentic, tí a tẹ̀ jáde ní Oṣù Kejìlá 2025. Tí a fi wé CIRIS bí ó ti wà ní Oṣù Keje 2026; sọ fún wa bí ẹ̀ka kan bá jẹ́ àṣìṣe, a ó sì tún ṣe é.",
+    "sourcesLabel": "Àwọn orísun",
+    "ctaPara": "Taxonomy náà jẹ́ ojú-ìwòye kan ṣoṣo. Wo ibi tí CIRIS wà láàrin gbogbo ọ̀nà tí a ń gbà bójú tó ìgbẹ́kẹ̀lé AI, àti bí a ṣe lè ṣàyẹ̀wò switch ìdáduro náà lọ́tọ̀ọ̀tọ̀.",
+    "btnLandscape": "Gbogbo àyíká náà",
+    "btnVerify": "Ṣàyẹ̀wò switch ìdáduro náà",
+    "btnOwasp": "Orísun OWASP"
+  },
+  "euAiAct": {
+    "kicker": "EU AI Act, article kọ̀ọ̀kan",
+    "title": "Bí CIRIS ṣe bá EU AI Act mu.",
+    "lede": "Fún ọ̀kọ̀ọ̀kan nínú àwọn ojúṣe onípele-ewu gíga nínú EU AI Act, èyí ni ọ̀nà CIRIS tí a ti fi lélẹ̀ tí ó bá a mu àti ibi tí ó wà nínú Constitution àti kóòdù náà. Àwọn ojúṣe onípele-ewu gíga bẹ̀rẹ̀ láti Oṣù Kẹjọ 2026, nítorí náà a kọ èyí fún àwọn tí yóò dá lóhùn fún un.",
+    "bannerA": "Kà èyí gẹ́gẹ́ bí ",
+    "bannerStrong": "ìbáramu ẹ̀rọ-ìṣẹ́ tí ó ń fúnni ní ìsọfúnni, kì í ṣe ìmọ̀ràn òfin tàbí àyẹ̀wò ìbáramu tí a fọwọ́ sí",
+    "bannerB": ". Constitution CIRIS fúnra rẹ̀ ń sàmì sí àwọn àkàwé article wọ̀nyí gẹ́gẹ́ bí “tí ó ń dúró de àyẹ̀wò òfin.” A ti ṣàyẹ̀wò ọ̀nà kọ̀ọ̀kan tí ó wà nísàlẹ̀ ní kóòdù láàyè látọ̀dọ̀ olùṣiyèméjì tí iṣẹ́ rẹ̀ ni láti já a lulẹ̀, ṣùgbọ́n ìbéèrè bóyá èyí bá òfin mu jẹ́ ti agbẹjọ́rò rẹ, kì í ṣe ti ojú-ìwé yìí.",
+    "colArticle": "Article",
+    "colRequires": "Ohun tí ó béèrè",
+    "colHow": "Bí CIRIS ṣe kojú rẹ̀",
+    "rows": [
+      {
+        "art": "Article 9",
+        "requires": "Ṣiṣẹ́ ètò ewu kan tí ó ń tẹ̀síwájú, tí ó bo gbogbo ìgbésí ayé: ṣàmì, díwọ̀n, kí o sì dín àwọn ewu tí a lè sọ tẹ́lẹ̀ kù, pẹ̀lú ìtẹnumọ́ pàtàkì lórí àwọn ẹgbẹ́ tí kò ní ààbò tó àti, gẹ́gẹ́ bí 9(7), lórí ìṣàṣìṣàkóso dátà ìdánilẹ́kọ̀ọ́.",
+        "how": "Gbogbo ìgbésẹ̀ ń kọjá ọ̀nà ìpinnu ìpele márùn-ún (PDMA / CSDMA / DSDMA / IDMA / yíyan ìgbésẹ̀) pẹ̀lú ìpele conscience kí ó tó ṣiṣẹ́, pẹ̀lú ìdèèra DISCRIMINATION tí a kọ sínú kóòdù àti ìtọpa audit tí a fowó sí gẹ́gẹ́ bí àkọsílẹ̀ tí ó fi hàn pé ìwọ̀n náà ṣiṣẹ́. Fún ewu tí ó ga jùlọ, ẹnu-ọ̀nà Ìdíwọ̀n Ewu Ìparun ti Constitution béèrè fún ẹgbẹ́ red-team tí ó dá dúró àti ìfọwọ́sí méjì láti òde."
+      },
+      {
+        "art": "Article 12",
+        "requires": "Kọ àwọn ìṣẹ̀lẹ̀ sílẹ̀ lẹ́sẹ̀kẹsẹ̀ jálẹ̀ ìgbésí ayé ètò náà kí ìwà rẹ̀ lè jẹ́ èyí tí a lè tọpasẹ̀.",
+        "how": "Ìtọpa audit tí a fowó sí, tí a so pọ̀ pẹ̀lú hash (SHA-256 chained, Ed25519-signed) dípò fáìlì log lásán, nítorí náà gbogbo ìgbésẹ̀ tí a kọ sílẹ̀ jẹ́ èyí tí ìyípadà rẹ̀ yóò fi ara hàn, tí a sì lè ṣàyẹ̀wò rẹ̀ lọ́tọ̀ọ̀tọ̀."
+      },
+      {
+        "art": "Article 13",
+        "requires": "Ṣiṣẹ́ ní ìtànṣán tó fún deployer láti lè ye ìjáde náà kí ó sì lo ètò náà ní ọ̀nà tí ó tọ́.",
+        "how": "PDMA ń gbé iṣẹ́ ìtẹ̀jáde tí ó ń bójú tó lemọ́lemọ́, API ìtọpa ìrò-ọkàn sì ń fi àwọn ID ìpele ìpinnu àti ọ̀nà ìjiyàn hàn, nítorí náà ìrò tí ó wà lẹ́yìn ìgbésẹ̀ kan jẹ́ èyí tí a lè yẹ̀wò dípò kí ó jẹ́ ohun tí a kò lè rí."
+      },
+      {
+        "art": "Article 14",
+        "requires": "Ṣe àpẹrẹ fún àbójútó ènìyàn tí ó munadoko, pẹ̀lú agbára fún ènìyàn láti dásí tàbí dá ètò náà dúró.",
+        "how": "Ìwọ̀n òmìnira láti A0 sí A4 ń dá ìwọ̀n ipò kọ̀ọ̀kan lé lórí ẹni tí ó ru ìgbésẹ̀ náà, Ìfagile-Tí-Ó-Dá-Lé-Ọgbọ́n ń darí àìdájú sí ọ̀dọ̀ Wise Authority ènìyàn tí a dárúkọ, switch ìdáduro tí ó ṣì ní ààbò sì ń jẹ́ kí àwọn ènìyàn tí a dárúkọ dá agent náà dúró."
+      },
+      {
+        "art": "Article 15",
+        "requires": "Jẹ́ pípéye, ó lágbára, kí ó sì ní ààbò cybersecurity jálẹ̀ ìgbésí ayé rẹ̀, kí ó lè kojú àṣìṣe àti ìṣàkóso àtakò.",
+        "how": "Ìforúkọsílẹ̀ hybrid post-quantum (Ed25519 + ML-DSA-65) pẹ̀lú ìfẹsẹ̀múlẹ̀ orísun-ọ̀pọ̀ 2-nínú-3 tí ó ṣì ní ààbò, ìlànà ìkọjú-àtakò ti Constitution, àti agbára tí a díwọ̀n: òdo jíjò kọjá ẹgbẹ́ láàrin nodes 400, àti ìtúnkọ́ ìṣúra náà pẹ̀lú ìdá márùn-ún nínú àwọn olùdìmú tí ó wà ní offline."
+      },
+      {
+        "art": "Article 16",
+        "requires": "Àwọn olùpèsè AI onípele-ewu gíga gbọ́dọ̀ rí i dájú pé àbójútó, ìkọsílẹ̀, àti ìbáramu wà ní ìṣíṣẹ́ jálẹ̀.",
+        "how": "Ẹnu-ọ̀nà conscience ṣáájú-ìṣiṣẹ́ lórí gbogbo ìgbésẹ̀, pẹ̀lú àwọn ìpele òmìnira tí ó ga jù tí ó ń tì ID ìpele ìpinnu kọ̀ọ̀kan, ìdájọ́, àti ìwọ̀n ewu sí ojú-ìwé àbójútó ènìyàn."
+      },
+      {
+        "art": "Article 50",
+        "requires": "Sọ fún àwọn ènìyàn nígbà tí wọ́n bá ń bá AI lò, kí o sì sàmì sí àkóónú tí AI dá ní ọ̀nà tí ẹ̀rọ lè kà (ó bẹ̀rẹ̀ láti Oṣù Kẹjọ 2026).",
+        "how": "Ìfihàn-ara-ẹni AI ti wà lónìí: àmì is_bot àti ìfihàn tí a kọ sínú kóòdù, tí a fi ipá mú gẹ́gẹ́ bí locale, lórí gbogbo adapter ìránṣẹ́. A ń gba ìsàmì àkóónú tí ẹ̀rọ lè kà nípasẹ̀ C2PA Content Credentials ní ààlà media fún àkókò ìparí Oṣù Kẹjọ 2026, nítorí náà apá kan article yìí ti ṣiṣẹ́, apá kejì sì ń gbà á."
+      },
+      {
+        "art": "Article 72",
+        "requires": "Bójú tó ètò náà lọ́wọ́lọ́wọ́ ní pápá lẹ́yìn tí a bá ti gbé e kalẹ̀, kí o sì mú àwọn ìṣòro padà wá.",
+        "how": "Àyíká ìbáramu tí ó ń tẹ̀síwájú ti Constitution ń darí àwọn ìṣàn telemetry sínú ìwádìí ìyapa sínú àtúnyẹ̀wò, àyíká àbójútó tí ó dúró dípò àyẹ̀wò ẹ̀ẹ̀kan, tí a fi hàn nípasẹ̀ àbójútó CIRISLens."
+      }
+    ],
+    "footnote": "Tí a fi wé Constitution CIRIS gẹ́gẹ́ bí ó ti wà ní Oṣù Keje 2026. Ìbáramu tí ó ń fúnni ní ìsọfúnni, tí ó ń dúró de àyẹ̀wò òfin. Sọ fún wa bí àkàwé kan bá jẹ́ àṣìṣe, a ó sì tún ṣe é.",
+    "sourcesLabel": "Àwọn orísun",
+    "ctaPara": "Àwọn ọ̀nà kan náà tí a fi wé taxonomy ààbò, àti gbogbo àyíká ìgbẹ́kẹ̀lé.",
+    "btnOwasp": "Àkàwé OWASP Agentic",
+    "btnLandscape": "Gbogbo àyíká náà",
+    "btnConstitution": "Constitution náà"
+  },
+  "msCompare": {
+    "kicker": "Àfiwé, àwọn ìdíwọ̀n tí ó dúró ṣinṣin",
+    "title": "CIRIS àti Microsoft Agent Governance Toolkit",
+    "lede": "Ìgbìyànjú méjì tí ó jẹ́ pàtàkì, tí ó jẹ́ orísun-ìṣí, láti bójú tó àwọn agent AI, tí a díwọ̀n pẹ̀lú ìdíwọ̀n mẹ́jọ kan náà láti orísun gbangba, pẹ̀lú ìtọ́kasí lórí ẹ̀ka kọ̀ọ̀kan. Níbi tí Microsoft bá lágbára, a máa sọ bẹ́ẹ̀. Àwọn ìyàtọ̀ tí ó ṣe pàtàkì ni pé ó ti ń ṣiṣẹ́ nítòótọ́, constitution tí a fi ipá mú tí o kò lè sún kù, àti àkọsílẹ̀ tí a fowó sí ní ọ̀nà post-quantum.",
+    "sectionLabel": "Ojú-sí-ojú",
+    "colCriterion": "Ìdíwọ̀n",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "Bẹ́ẹ̀ni",
+    "valPartial": "Apá kan",
+    "valNo": "Rárá",
+    "criteria": [
+      "Ó fi ipá mú ìlànà kí ìgbésẹ̀ tó ṣiṣẹ́",
+      "Àkọsílẹ̀ ìpinnu tí a fowó sí, tí ìyípadà rẹ̀ yóò fi ara hàn",
+      "Ìdánimọ̀ agent tí a fi cryptography dá",
+      "Switch ìdáduro / ìfagilé agent aṣáájú-ọ̀nà",
+      "Constitution tí a tẹ̀ jáde, tí a fi ipá mú",
+      "Ìṣàyẹ̀wò òmìnira láti ọwọ́ ẹgbẹ́ kẹta",
+      "Orísun-ìṣí",
+      "Ó ń ṣiṣẹ́ ní production"
+    ],
+    "footnote": "A díwọ̀n láti inú àwọn ìwé ọjà gbangba bí wọ́n ti wà ní Oṣù Keje 2026. Bí a bá ní ẹ̀ka kan tí ó jẹ́ àṣìṣe, sọ fún wa, a ó sì tún ṣe é.",
+    "sourcesLabel": "Àwọn orísun",
+    "concLabel": "Ohun tí ọ̀kọ̀ọ̀kan ṣe dáadáa",
+    "msTitle": "Àwọn agbára tòótọ́ ti Microsoft",
+    "msBody": "Agent Control Specification jẹ́ ètò ìlànà tí ó dájú, tí kò ní ipò, tí ó máa ń kùnà ní ọ̀nà tí ó dí, pẹ̀lú ojú ìdásí mẹ́jọ tí a dárúkọ àti àwòṣe ìdájọ́ márùn-ún (allow, warn, deny, escalate, transform). Ó ń gbé ìdánimọ̀ Ed25519 tí ó dá lórí DID, switch ìdáduro pàjáwìrì, àti iṣẹ́-ẹ̀rọ orísun-ìṣí tí ó lágbára lábẹ́ ìwé àṣẹ MIT tí kò le, pẹ̀lú ìsopọ̀ jíjinlẹ̀ pẹ̀lú Azure àti Entra fún àwọn ilé-iṣẹ́ ńlá.",
+    "cirisTitle": "Ibi tí CIRIS bá gbéyẹsẹ̀ síwájú sí i",
+    "cirisBody": "Gbogbo ìgbésẹ̀ ń kọjá ọ̀nà ìlànà conscience ní àkókò-gidi kí ó tó ṣiṣẹ́, kì í ṣe log tí a kọ lẹ́yìn. Ìtọpa audit náà ti so pọ̀ pẹ̀lú hash, tí a fowó sí ní ọ̀nà post-quantum, tí ẹgbẹ́ ìbáramu ọ̀tọ̀ọ̀tọ̀ sì tún ṣàyẹ̀wò rẹ̀ lọ́tọ̀ọ̀tọ̀. Switch ìdáduro náà jẹ́ quorum ènìyàn-tí-a-dárúkọ 2-nínú-3 tí ó ṣì ní ààbò. Constitution náà sì dúró ṣinṣin, tí a sì tẹ̀ jáde, kì í ṣe ìlànà tí olùṣàkóso kọ tí ó ń gba láàyè ní àṣẹ.",
+    "ctaPara": "Èyí jẹ́ ìlà kan ṣoṣo nínú àwòrán tí ó tóbi jù. Wo ibi tí àwọn méjèèjì wà láàrin gbogbo ọ̀nà tí a ń gbà bójú tó ìgbẹ́kẹ̀lé AI.",
+    "btnLandscape": "Gbogbo àyíká náà",
+    "btnCirisGh": "CIRIS lórí GitHub",
+    "btnMsGh": "Ohun èlò Microsoft"
   }
 }

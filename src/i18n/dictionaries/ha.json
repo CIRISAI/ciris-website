@@ -2458,5 +2458,191 @@
     "closeLine": "Gina shi saboda ba ka sani ba.",
     "tagline": "Yanar gizon gaskiya. Riƙe shi yau.",
     "cta": "Saka shi a wayarka"
+  },
+  "killSwitch": {
+    "kicker": "Tsaro da za ka iya bincika",
+    "title": "Tabbatar da maɓallin dakatarwarmu da kanka.",
+    "lede": "Yawancin ikirarin tsaro na AI suna neman amincewarka. Wannan yana neman ka bincika shi. Yi clone na repo, gudanar da umarni ɗaya, sannan ka tabbatar cewa maɓallan da za su iya dakatar da wakilin CIRIS suna kan kayan aikin FIPS-certified na gaske. Kada ka amince da kowa, ko da mu.",
+    "s1label": "Maɓallin dakatarwa na kundin tsarin mulki",
+    "s1h2": "Mutane da aka ambata da suna za su iya dakatar da wakilin CIRIS. Ikon yana zaune a cikin kayan aiki, ba a kamfanin ba.",
+    "s1p1": "Dakatarwa ta ƙarshe, HUMANITY_ACCORD, mutane da aka ambata da suna ne ke riƙe da ita, ba kamfanin CIRIS ba, ba hanyar sadarwar ba, ko wakilin da kansa. Babu wani ɓangare a cikin ƙungiyar da zai iya ba da izini, soke, ko ƙetare ta. Tana aiki bisa yarjejeniyar mutum biyu daga cikin uku masu rai.",
+    "s1p2": "Kowane maɓallin ƙuruwam gauraye ne na sa hannu guda biyu da aka ɗaura tare. Rabin Ed25519 yana da tushe a cikin YubiKey 5 mai FIPS-certified: an ƙirƙira shi a cikin na'urar, ba za a iya fitar da shi ba, kuma yana buƙatar taɓawa ta zahiri don sa hannu. Rabin ML-DSA-65, wato sa hannun bayan-quantum, maɓallin software ne wanda aka lulluɓe cikin hatimi zuwa sandar USB a ƙarƙashin wannan YubiKey ɗin, domin har yanzu babu YubiKey da ke tare da applet na bayan-quantum. Maɓallai shida ne gaba ɗaya, uku a shirye kuma uku a ajiye. Ana ɗaukar bincike na sokewa da ya kasa ko wanda ba a sani ba a matsayin an soke shi, don haka tsarin yana kasawa cikin aminci.",
+    "s2label": "Tabbatarwa mai zaman kanta",
+    "s2h2": "Umarni ɗaya. Babu kayan aiki, babu hanyar sadarwa, babu bukatar amincewa da mu.",
+    "s2p1": "Tsarin tabbatarwarmu yana sake gudanar da tabbatacciyar hanyar tantance shigar samarwa ta CIRISVerify a kan shaidun maɓallai shida da aka aiwatar, a kwatanta da kwafin da aka ɗora na tushen shaidar jama'a na Yubico. Yi clone na repository na CIRISVerify sannan ka gudanar da:",
+    "cmdCaption": "Tabbatar cewa tushen da aka ɗora na gaskiya ne ta hanyar jan sa kai tsaye daga Yubico:",
+    "provesH": "Abin da wannan ke tabbatarwa",
+    "provesP": "Duk maɓallan ƙuruwam guda shida suna haɗuwa da tushen shaidar Yubico na gaske, don haka an ƙirƙiri rabin sa hannunsu na Ed25519 a cikin kayan aikin YubiKey 5 na gaske mai FIPS-certified: ba za a iya fitar da su ba, ana buƙatar taɓawa, kuma ba za a iya ƙirƙira ƙarya ba.",
+    "notProvesH": "Abin da ba ya tabbatarwa",
+    "notProvesP": "Rabin ML-DSA-65 maɓallin software ne wanda aka lulluɓe cikin hatimi zuwa USB a ƙarƙashin YubiKey, ba a tabbatar da shi ta kayan aiki ba. Wannan tsarin ba ya duba hatimin USB ko ƙuruwam mai rai, waɗanda ake tilasta su daban. Mun fi so ka san ainihin abin da rasit ɗin ya rufe.",
+    "s3label": "An auna, ba a ikirarta kawai ba",
+    "s3h2": "Sirrin bayan-quantum yana aiki a cikin samarwa, kuma kowace lamba a bayyane take ga jama'a.",
+    "measuredTag": "an auna",
+    "measuredLabels": [
+      "Abubuwan da PQC ta sa hannu a kowane core",
+      "Buɗe rufaffiyar AEAD a kowane core",
+      "Musayar maɓallin PQC gauraye",
+      "Zubowar bayanai tsakanin ƙungiyoyi, nodes 50 zuwa 400"
+    ],
+    "s3p1": "Asalin bayan-quantum ba kyauta ba ne, kuma ba mu ɓoye tsadar sa ba: sa hannun gauraye na Ed25519 + ML-DSA-65 yana gudana kusan sau goma sha biyar a hankali fiye da na gargajiya, kimanin microseconds 550 idan aka kwatanta da 36 a kowane lamari. Ana sake gina bayanan da aka ajiye a cikin 97.6% na gwaje-gwajen lokacin da kashi ɗaya cikin biyar na masu riƙewa ba su kan layi ba, da kuma 72.7% lokacin da kashi ɗaya cikin uku ba su kan layi ba. Lambobin sun kasance matsakaicin single-core a kan CI runner da aka raba, ana sake ƙirƙira su a kowane commit.",
+    "benchLink": "Duba kowace lamba, ana sake ƙirƙira ta a kowane commit",
+    "ctaPara": "Manufar duka ita ce kada ka buƙaci amincewa da jimlar da ke sama. Za ka iya gudanar da bincike da kanka.",
+    "btnGithub": "CIRISVerify a kan GitHub",
+    "btnTrust": "Yadda amana take aiki",
+    "btnVerif": "Tsarin daidaituwa",
+    "sources": "Majiyoyi: CIRISVerify (shaidun riƙewa na Ed25519 + ML-DSA-65, tushen Yubico da aka ɗora), rukunin gwaji na CIRISServer (aikin da aka auna), Yubico PKI (tushen shaida). An ɗora lambobi a commit 0b73486, 2026-06-24."
+  },
+  "owasp": {
+    "kicker": "Taswirar tsaro na OWASP Agentic",
+    "title": "Manyan Hatsari 10 na OWASP don Aikace-aikacen Agentic, an tsara su tare da CIRIS.",
+    "lede": "Ga kowanne daga cikin hatsarori goma na agentic da OWASP ta ambata, ga takamaiman tsarin CIRIS da ke magance shi, matakin rufe hatsarin da gaskiya, da kuma tushen bayani da za ka iya bincika. Muna tsara dukkan tsarin, har da inda muke gazawa.",
+    "callout": "Ɗaya cikakke, tara na sashi, babu wanda aka wuce gona da iri a kai. Shafi da zai ce goma duka cikakke zai zama daidai da tallar da muke gaya maka kada ka amince da ita. Matakan rufe hatsari da ke ƙasa sun jure wa mai shakka daban wanda aikinsa shine ya rushe su, kuma inda kariya take a cikin tushen tsari amma wakilin da aka aiwatar bai gaje ta ba tukuna, muna faɗin haka a jerin.",
+    "colRisk": "Hatsari",
+    "colCoverage": "Rufewa",
+    "colHow": "Yadda CIRIS ke magance shi",
+    "covFull": "Cikakke",
+    "covPartial": "Sashi",
+    "covRoadmap": "Tsarin gaba",
+    "covNone": "Babu",
+    "rows": [
+      {
+        "name": "Sacen Manufar Wakili",
+        "how": "Kariya mai zurfi: bincike na allurar prompt a kan ƙwarewa da saƙonnin da aka shigo da su, keɓe allurar gani (masu tantance lamiri ba sa taɓa ganin bytes na hoto kai tsaye), da kuma tsarin lamiri wanda ke sake duba kowane aiki da zai fito domin tabbatar da yana daidai da niyyar asali ta mai amfani kafin ya faru. Gibi: bincike na shigarwa yana bisa tsari ne kawai kuma ba ya raba bayanan da aka samo daga umarni bisa ƙa'ida."
+      },
+      {
+        "name": "Amfani da Kayan Aiki ba daidai ba",
+        "how": "CIRISServer yana tare da jerin izini/hani na iyawa da kuma jerin da ba a taɓa ba wanda uwar garke ke tilastawa, ana duba shi kafin aiki ya gudana, don haka wakilin da aka ba wa iko ba zai iya kiran wani aiki mai lalatawa da ba a ba shi izini ba. Gargaɗi: wannan yana kare matakin fabric a yau kuma har yanzu ba ya sarrafa kiran kayan aikin LLM na wakilin da aka aiwatar da kansa; gadon wakili wani mataki ne da aka tsara na gaba."
+      },
+      {
+        "name": "Cin Zarafin Shaida da Gata",
+        "how": "Iko mai iyaka, wanda aka ba wa wani, kuma ana iya sokewa a cikin tsarin: ƙuntatawa da ke ɗauke a cikin gefuna masu sa hannu, jerin da ba a taɓa ba wanda ke hana sake bayar da manyan iko domin ikon kada ya haura, amincewa da ake ƙarawa tsauri kawai, da sokewa nan take. Gargaɗi: ana tilasta shi a saman ayyukan mai iko na fabric a yau; gadon wakilin da aka aiwatar wani mataki ne da aka tsara na gaba."
+      },
+      {
+        "name": "Sarkar Samarwa ta Agentic",
+        "how": "Amincin gini ta hanyar takardun module na CIRISVerify da aka sa hannu bayan-quantum (Ed25519 + ML-DSA-65 a kan cikakken hash na bishiyar fayil), tare da shaida mai sa hannu ga sassan ƙungiyar tarayya. Gibi: yana rufe ginin CIRIS da sarkar module nasa kawai, ba uwar garke na MCP na wani na uku ba."
+      },
+      {
+        "name": "Gudanar da Code ba zato ba tsammani",
+        "how": "Ƙofofin lamiri na ma'ana (entropy, daidaituwa, veto na inganta) suna aiki a kan kowane aikin kayan aiki kafin ya faru, kuma rashin tabbas yana komawa ga ɗan adam. Gibi: wannan bita ce ta ma'ana, ba akwatin gwaji na code mai tabbaci ba."
+      },
+      {
+        "name": "Guba ga Ƙwaƙwalwa da Yanayin Magana",
+        "how": "Kowane rubutu zuwa ƙwaƙwalwar graph aiki ne da ake sarrafawa, wanda lamiri ya duba, zuwa cikin graph mai iyaka da sigar da aka lasafta, ba wani sakamako na ɓoye ba, don haka rubutun guba shi kansa shawara ce da za a iya bincika. Gibi: kimanta amincewa da abun da aka samo bai cika ba."
+      },
+      {
+        "name": "Sadarwa Tsakanin Wakilai marar Tsaro",
+        "how": "CIRISEdge yana tabbatar da kowane saƙo tsakanin wakilai ta hanyar matakai bakwai wanda ke ƙarewa da tabbatar da sa hannun gauraye na Ed25519 + ML-DSA-65 (iyakar girma, deserialize mai nau'i, jerin izinin schema, duba maɓallin wurin da aka nufa, taga na sake kunnawa). Gibi: ana ci gaba da gina hanyar jigilar ƙungiyar tarayya."
+      },
+      {
+        "name": "Gazawa Mai Yaɗuwa",
+        "how": "An iyakance ta matakai uku masu zaman kansu: masu karya na'ura a kowane hidima (rufe / buɗe / rabin buɗe) a kewayen kiran da ke da hatsari, tsarin lamiri wanda ke tsayar da aiki mara kyau kafin ya yaɗu, da keɓewar mesh da aka auna a matsayin sifili na zuban bayanai tsakanin ƙungiyoyi a nodes 50 zuwa 400."
+      },
+      {
+        "name": "Cin Zarafin Amincewa Tsakanin Ɗan Adam da Wakili",
+        "how": "Tsarin lamiri yana kimanta rubutun bayanin wakili nasa, har da dalilin da aka nuna wa mai bitar ɗan adam, don gwada wuce gona da iri na tabbaci da magudi kafin ɗan adam ya taɓa gan shi. Gibi: yana bincike ne da irin nau'in model ɗin da yake duba."
+      },
+      {
+        "name": "Wakilai Marasa Biyayya",
+        "how": "Matakai uku: lamiri shida suna hana kowane aiki mai sakamako kafin ya faru, hanyar bincike mai sa hannu wanda aka haɗa da hash yana sanya ɓoyewa ta zama abin ganewa bayan haka, kuma maɓallin dakatarwa mai kasawa cikin aminci yana ba wa mutane da aka ambata da suna damar dakatar da wakili wanda ba ya bin daidai. Gibi: kama wakilin da ba ya bin daidai a hankali amma har yanzu mai daidaituwa a bayyane, iyaka ce ta asali."
+      }
+    ],
+    "footnote": "Manyan Hatsari 10 na OWASP don Aikace-aikacen Agentic, an buga a Disamba 2025. An tsara su tare da CIRIS tun daga Yuli 2026; ka gaya mana idan wani sel ba daidai ba ne kuma za mu gyara shi.",
+    "sourcesLabel": "Majiyoyi",
+    "ctaPara": "Tsarin nan gilashin kallo ɗaya ne kawai. Duba inda CIRIS take tsaye tsakanin dukkan hanyoyin da ake bi don tantance AI, da kuma yadda za a tabbatar da maɓallin dakatarwa da kanka.",
+    "btnLandscape": "Cikakken hoton yanayin",
+    "btnVerify": "Tabbatar da maɓallin dakatarwa",
+    "btnOwasp": "Tushen OWASP"
+  },
+  "euAiAct": {
+    "kicker": "EU AI Act, mataki bisa mataki",
+    "title": "Yadda CIRIS ke daidaita da EU AI Act.",
+    "lede": "Ga kowace wajibcin hatsari mai girma a cikin EU AI Act, ga tsarin CIRIS da aka aiwatar wanda ya dace da shi da kuma inda yake a cikin Kundin Tsarin Mulki da code. Wajibcin hatsari mai girma ya fara aiki daga Agusta 2026, don haka an rubuta wannan don mutanen da dole ne su ba da amsa a kai.",
+    "bannerA": "Karanta wannan a matsayin ",
+    "bannerStrong": "wasiƙar injiniya mai ba da bayani, ba shawarar shari'a ko tantancewar daidaituwa da aka tabbatar ba",
+    "bannerB": ". Kundin Tsarin Mulki na CIRIS da kansa yana yiwa waɗannan tsare-tsaren mataki alama “ana jiran bitar shari'a.” An tabbatar da kowane tsari da ke ƙasa a cikin code na gaske ta mai shakka wanda aikinsa shine ya karyata shi, amma tambayar ko hakan ya gamsar da doka wani abu ne da lauyanka zai amsa, ba wannan shafi ba.",
+    "colArticle": "Mataki",
+    "colRequires": "Abin da yake buƙata",
+    "colHow": "Yadda CIRIS ke magance shi",
+    "rows": [
+      {
+        "art": "Mataki 9",
+        "requires": "Gudanar da tsarin gudanar da hatsari mai ci gaba a cikin dukkan rayuwar tsari: gano, kimanta, da rage hatsarorin da za a iya hango, tare da mai da hankali musamman kan ƙungiyoyi masu rauni da kuma, bisa ga 9(7), kan son zuciya na bayanan horo.",
+        "how": "Kowane aiki yana wucewa ta matakan yanke shawara guda biyar (PDMA / CSDMA / DSDMA / IDMA / zaɓin aiki) tare da matakin lamiri kafin ya faru, tare da haramcin DISCRIMINATION da aka rubuta cikin code da hanyar bincike mai sa hannu a matsayin bayanan da ke auna aikin da aka yi. Domin hatsarin da ke da girma ƙwarai, ƙofar Kimanta Hatsari Mai Girma ta Kundin Tsarin Mulki tana buƙatar ƙungiyar red-team mai zaman kanta da amincewar waje biyu."
+      },
+      {
+        "art": "Mataki 12",
+        "requires": "Yin rikodin abubuwan da suka faru kai tsaye a duk rayuwar tsari domin a iya bin diddigin hali.",
+        "how": "Hanyar bincike mai sa hannu wanda aka haɗa da hash (an haɗa da SHA-256, an sa hannu da Ed25519) maimakon fayil ɗin rikodi mai sauƙi, don haka kowane aikin da aka rubuta yana bayyana idan an tsoma baki kuma ana iya tabbatar da shi da kanka."
+      },
+      {
+        "art": "Mataki 13",
+        "requires": "Yin aiki a bayyane isashe har wanda ya aiwatar da shi zai iya fahimtar sakamakon kuma ya yi amfani da tsarin daidai.",
+        "how": "PDMA yana ɗauke da wajibcin buga sa ido mai ci gaba, kuma API na bin diddigin dalili yana buɗe IDs na matakan shawarar tare da hanyar ƙalubalantawa, don haka dalilin da ke bayan aiki abin bincike ne maimakon a rufe."
+      },
+      {
+        "art": "Mataki 14",
+        "requires": "Ƙira don sa ido na ɗan adam mai tasiri, tare da ɗan adam wanda zai iya shiga tsakani ko dakatar da tsarin.",
+        "how": "Ma'aunin 'yancin kai daga A0 zuwa A4 yana kimanta kowane aiwatarwa bisa ga wanda ke ɗaukar nauyin aikin, Komawa Bisa Hikima yana tura rashin tabbas zuwa ga Hukumar Hikima ta ɗan adam da aka ambata da suna, kuma maɓallin dakatarwa mai kasawa cikin aminci yana ba wa mutane da aka ambata da suna damar dakatar da wakili."
+      },
+      {
+        "art": "Mataki 15",
+        "requires": "Zama daidai, mai ƙarfi, kuma mai tsaron yanar gizo a duk rayuwar tsari, mai jurewa kuskure da magudin abokan gaba.",
+        "how": "Sa hannun gauraye na bayan-quantum (Ed25519 + ML-DSA-65) tare da tabbatarwa daga majiyoyi da yawa mai kasawa cikin aminci na 2-daga-cikin-3, littafin ƙa'idodin ƙarfin jurewa abokan gaba na Kundin Tsarin Mulki, da jurewa da aka auna: sifili na zuban bayanai tsakanin ƙungiyoyi a nodes 400, da kuma sake gina bayanan lokacin da kashi ɗaya cikin biyar na masu riƙewa ba su kan layi ba."
+      },
+      {
+        "art": "Mataki 16",
+        "requires": "Masu samar da AI mai hatsari mai girma dole ne su tabbatar da cewa sa ido, rikodi, da daidaituwa suna nan a duk lokaci.",
+        "how": "Ƙofar lamiri kafin aiwatarwa a kan kowane aiki, tare da matakan 'yancin kai mafi girma waɗanda ke turo ID na matakin shawara, hukunci, da matakin hatsari zuwa saman sa ido na ɗan adam."
+      },
+      {
+        "art": "Mataki 50",
+        "requires": "Gaya wa mutane lokacin da suke hulɗa da AI, tare da yiwa abun da AI ta ƙirƙira alama da za a iya karantawa ta na'ura (yana aiki daga Agusta 2026).",
+        "how": "Bayyana kai na AI yana aiki a yau: alamun is_bot da bayyanawa da aka rubuta cikin code kuma ake tilastawa bisa yare a kan kowane mai daidaita saƙo. Ana ɗaukar yiwa abun da za a iya karantawa ta na'ura alama ta hanyar C2PA Content Credentials a iyakar kafofin watsa labarai domin ranar ƙarshe ta Agusta 2026, don haka wannan mataki yana da wani ɓangare da aka riga aka aiwatar da wani ɓangare da ake ci gaba da ɗauka."
+      },
+      {
+        "art": "Mataki 72",
+        "requires": "Sa ido kan tsarin a fagage bayan aiwatarwa kuma a mayar da matsalolin baya.",
+        "how": "Zagayowar bin ƙa'ida mai ci gaba ta Kundin Tsarin Mulki tana gudanar da bayanan telemetry zuwa gano karkacewa zuwa bita, wata zagayowar sa ido ta dindindin maimakon bincike na sau ɗaya, wanda ake gani ta hanyar sa idon CIRISLens."
+      }
+    ],
+    "footnote": "An tsara shi bisa Kundin Tsarin Mulki na CIRIS na hukuma tun daga Yuli 2026. Wasiƙar ba da bayani ce, ana jiran bitar shari'a. Ka gaya mana idan wani tsari ba daidai ba ne kuma za mu gyara shi.",
+    "sourcesLabel": "Majiyoyi",
+    "ctaPara": "Irin waɗannan tsare-tsare da aka tsara tare da tsarin tsaro, da kuma cikakken hoton yanayin tantancewa.",
+    "btnOwasp": "Taswirar OWASP Agentic",
+    "btnLandscape": "Cikakken hoton yanayin",
+    "btnConstitution": "Kundin Tsarin Mulki"
+  },
+  "msCompare": {
+    "kicker": "Kwatance, ma'auni na tabbatacce",
+    "title": "CIRIS a kan Microsoft Agent Governance Toolkit",
+    "lede": "Yunƙurin gaske guda biyu na open-source don shugabanci na wakilan AI, an kimanta su bisa ma'auni takwas iri ɗaya daga majiyoyi na jama'a, tare da tushen bayani a kan kowane sel. Inda Microsoft take da ƙarfi, muna faɗin haka. Bambance-bambancen da suka fi muhimmanci su ne aiwatarwa, kundin tsarin mulki mai tilastawa da ba za a iya sassauta shi ba, da kuma bayanan da aka sa hannu bayan-quantum.",
+    "sectionLabel": "Kai da kai",
+    "colCriterion": "Ma'auni",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "Ee",
+    "valPartial": "Sashi",
+    "valNo": "A'a",
+    "criteria": [
+      "Tana tilasta ƙa'ida kafin aiki ya gudana",
+      "Bayanan shawara masu sa hannu waɗanda ke bayyana idan an tsoma baki",
+      "Shaidar wakili ta hanyar sirri",
+      "Maɓallin dakatarwa / sokewa wakili marar biyayya",
+      "Kundin tsarin mulki da aka buga kuma ake tilastawa",
+      "Tabbatarwa ta wani na uku mai zaman kansa",
+      "Open source",
+      "Ana aiwatarwa a samarwa"
+    ],
+    "footnote": "An kimanta daga takardun samfur na jama'a tun daga Yuli 2026. Idan mun yi kuskure a wani sel, ka gaya mana kuma za mu gyara shi.",
+    "sourcesLabel": "Majiyoyi",
+    "concLabel": "Abin da kowanne ke yi da kyau",
+    "msTitle": "Ƙarfin Microsoft na gaske",
+    "msBody": "Ƙayyadaddun Sarrafa Wakili tsari ne na gaske na runtime na ƙa'ida wanda ba shi da yanayi, mai tabbaci, kuma yana kasawa cikin rufewa, tare da wurare takwas na shiga tsakani da aka ambata da suna da kuma tsarin hukunci mai hanyoyi biyar (bari, gargaɗi, hana, ɗaga, canza). Yana tare da shaidar Ed25519 bisa DID, maɓallin dakatarwa na gaggawa, da injiniyar open-source mai ƙarfi a ƙarƙashin lasisin MIT mai sassaucin ra'ayi, tare da haɗin kai mai zurfi da Azure da Entra don kamfanoni.",
+    "cirisTitle": "Inda CIRIS ta wuce gaba",
+    "cirisBody": "Kowane aiki yana wucewa ta tsarin lamiri na runtime kafin ya faru, ba rikodin bayan-haka ba. Hanyar bincike an haɗa ta da hash kuma an sa mata hannu bayan-quantum, kuma ana sake tabbatar da ita da kanta ta hanyar tsarin daidaituwa daban. Maɓallin dakatarwa yarjejeniya ce mai kasawa cikin aminci ta mutum biyu daga cikin uku da aka ambata da suna. Kuma kundin tsarin mulki tabbatacce ne kuma an buga shi, ba ƙa'idar da mai aiki ya rubuta wadda take barin komai ta tsohuwa ba.",
+    "ctaPara": "Wannan layi ɗaya ne kawai na babban hoto. Duba inda dukansu biyu suke tsaye tsakanin dukkan hanyoyin tantance AI.",
+    "btnLandscape": "Cikakken hoton yanayin",
+    "btnCirisGh": "CIRIS a kan GitHub",
+    "btnMsGh": "Kayan aikin Microsoft"
   }
 }

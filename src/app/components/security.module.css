@@ -1,0 +1,60 @@
+/* Co-located styles for the /security pages: a terminal command block a skeptic
+   can copy, plus a compact source list. Reused across the "verify it yourself"
+   sections. */
+
+.cmd {
+  display: block;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-left: 2px solid var(--accent);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 10px 0 4px;
+  overflow-x: auto;
+  color: var(--color-text);
+  white-space: pre;
+}
+
+.cmdCaption {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--color-mute);
+  margin: 0 0 16px;
+}
+
+/* Two-tone "what this proves / does not prove" split. */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+@media (max-width: 600px) {
+  .split { grid-template-columns: 1fr; }
+}
+.proves, .notProves {
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: var(--color-panel);
+}
+.proves { border-top: 2px solid var(--color-ok); }
+.notProves { border-top: 2px solid var(--color-brass); }
+.proves h4, .notProves h4 {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+.proves h4 { color: var(--color-ok); }
+.notProves h4 { color: var(--color-brass); }
+.proves p, .notProves p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-dim);
+}

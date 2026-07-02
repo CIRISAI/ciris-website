@@ -2458,5 +2458,191 @@
     "closeLine": "Ijenga kwa sababu hujui.",
     "tagline": "Mtandao wa uaminifu. Umiliki leo.",
     "cta": "Sakinisha kwenye simu yako"
+  },
+  "killSwitch": {
+    "kicker": "Usalama unaoweza kuuthibitisha",
+    "title": "Thibitisha kitufe chetu cha kuzima mwenyewe.",
+    "lede": "Madai mengi kuhusu usalama wa AI yanakuomba uamini. Hili linakuomba uthibitishe. Nakili hazina ya msimbo (repo), endesha amri moja, kisha uthibitishe kwamba funguo zenye uwezo wa kusimamisha wakala wa CIRIS zinaishi kwenye vifaa halisi, vilivyoidhinishwa na FIPS. Usimwamini yeyote, hata sisi.",
+    "s1label": "Kitufe cha kuzima cha kikatiba",
+    "s1h2": "Watu wanaotambulika kwa majina wanaweza kusimamisha wakala wa CIRIS. Nguvu hiyo iko kwenye vifaa, si kwenye kampuni.",
+    "s1p1": "Kusimamisha kwa hatua ya mwisho, HUMANITY_ACCORD, kunashikiliwa na watu wanaotambulika kwa majina, si na kampuni ya CIRIS, mtandao, au wakala mwenyewe. Hakuna upande ndani ya shirikisho unaoweza kutoa, kubatilisha, au kupindua uwezo huo. Unaanza kutumika kwa idhini ya moja kwa wawili kati ya watatu, ikiwa hai wakati huo.",
+    "s1p2": "Kila funguo ya idhini ni mchanganyiko wa saini mbili zilizounganishwa pamoja. Nusu ya Ed25519 imejikita kwenye YubiKey 5 iliyoidhinishwa na FIPS: inazalishwa ndani ya kifaa, haiwezi kutolewa nje, na inahitaji mgusano wa mwili ili kusaini. Nusu ya ML-DSA-65, saini ya baada ya kwantamu, ni funguo ya programu iliyofungwa kwa muhuri (seal-wrapped) kwenye kijiti cha USB chini ya YubiKey hiyo hiyo, kwa sababu hakuna YubiKey inayosafirishwa na programu-tumizi ya baada ya kwantamu bado. Funguo sita kwa jumla, tatu zimewekwa tayari na tatu zimehifadhiwa kwenye kasha. Ukaguzi wa kubatilisha ulioshindwa au usiojulikana unachukuliwa kuwa umebatilishwa, hivyo mfumo unashindwa kwa usalama.",
+    "s2label": "Uthibitisho huru",
+    "s2h2": "Amri moja. Bila vifaa, bila mtandao, bila kutuamini sisi.",
+    "s2p1": "Kifaa chetu cha uthibitishaji kinaendesha upya kikagua-lango cha uidhinishaji cha uzalishaji halisi cha CIRISVerify juu ya uthibitisho sita wa funguo zilizowekwa, dhidi ya nakala iliyokitwa ya mzizi wa uthibitisho wa umma wa Yubico mwenyewe. Nakili hazina ya CIRISVerify na uendeshe:",
+    "cmdCaption": "Thibitisha kwamba mzizi uliokitwa ni halisi kwa kuuchukua moja kwa moja kutoka kwa Yubico:",
+    "provesH": "Hili linathibitisha nini",
+    "provesP": "Funguo zote sita za idhini zinaunganika hadi mzizi halisi wa uthibitisho wa Yubico, hivyo nusu zao za kusaini za Ed25519 zilizalishwa ndani ya vifaa halisi vya YubiKey 5 vilivyoidhinishwa na FIPS: haziwezi kutolewa nje, zinahitaji mgusano, na haziwezi kughushiwa.",
+    "notProvesH": "Hili halithibitishi nini",
+    "notProvesP": "Nusu ya ML-DSA-65 ni funguo ya programu iliyofungwa kwa muhuri kwenye USB chini ya YubiKey, si iliyothibitishwa na vifaa. Kifaa hiki cha uthibitishaji hakikagui ufungaji wa muhuri wa USB wala idhini hai, ambavyo vinatekelezwa kando. Tunapendelea ujue kwa usahihi kile ambacho risiti hii inashughulikia.",
+    "s3label": "Kilichopimwa, si kilichodaiwa tu",
+    "s3h2": "Kriptografia ya baada ya kwantamu inaendesha katika uzalishaji, na kila namba ni ya umma.",
+    "measuredTag": "kilichopimwa",
+    "measuredLabels": [
+      "matukio yaliyosainiwa na PQC kwa kila kiini",
+      "usimbuaji wa AEAD kwa kila kiini",
+      "ubadilishanaji wa funguo wa PQC wa mseto",
+      "uvujaji kati ya makundi, nodi 50 hadi 400"
+    ],
+    "s3p1": "Uthibitisho wa asili wa baada ya kwantamu si wa bure, na hatufichi gharama yake: kusaini kwa mseto wa Ed25519 + ML-DSA-65 kunaendesha polepole mara kumi na tano zaidi ya njia ya kawaida, kama mikrosekunde 550 dhidi ya 36 kwa kila tukio. Hazina iliyohifadhiwa inajengwa upya katika 97.6% ya majaribio ikiwa moja ya tano ya wenye funguo hawapo mtandaoni, na 72.7% ikiwa theluthi moja hawapo mtandaoni. Namba ni wastani wa kiini kimoja kwenye mtambo shirikishi wa CI, unaozalishwa upya kwenye kila commit.",
+    "benchLink": "Ona kila namba, inayozalishwa upya kwenye kila commit",
+    "ctaPara": "Lengo lote ni kwamba hupaswi kulazimika kuamini sentensi iliyo hapo juu. Unaweza kuendesha ukaguzi wewe mwenyewe.",
+    "btnGithub": "CIRISVerify kwenye GitHub",
+    "btnTrust": "Jinsi uaminifu unavyofanya kazi",
+    "btnVerif": "Kifurushi cha ufuasi (conformance suite)",
+    "sources": "Vyanzo: CIRISVerify (uthibitisho wa umiliki wa Ed25519 + ML-DSA-65, mzizi wa Yubico uliokitwa), tovuti ya kupima ya CIRISServer (utendaji uliopimwa), PKI ya Yubico (mzizi wa uthibitisho). Namba zimekitwa kwenye commit 0b73486, 2026-06-24."
+  },
+  "owasp": {
+    "kicker": "Uwiano wa usalama wa OWASP Agentic",
+    "title": "OWASP Top 10 kwa Programu za Kiwakala (Agentic Applications), zikilinganishwa na CIRIS.",
+    "lede": "Kwa kila moja ya vitisho kumi vya kiwakala ambavyo OWASP imetaja, hii hapa ni mbinu mahususi ya CIRIS inayovishughulikia, kiwango cha ufuasi cha kweli, na rejeleo unaloweza kuthibitisha. Tunaonyesha uwiano wa taksonomia nzima, ikiwemo mahali ambapo tunapungukiwa.",
+    "callout": "Moja kamili, tisa sehemu, hakuna iliyodanganywa. Ukurasa ulioidai vyote kumi ungekuwa ni sawa kabisa na uuzaji tunaokushauri usiuamini. Viwango vya ufuasi hapa chini vilipita ukaguzi wa mtu tofauti wa kutilia shaka ambaye kazi yake ilikuwa kuvibomoa, na pale ambapo ulinzi upo kwenye msingi wa mfumo lakini wakala uliotumika bado haujaurithi, tunasema hivyo kwenye safu husika.",
+    "colRisk": "Hatari",
+    "colCoverage": "Ufuasi",
+    "colHow": "Jinsi CIRIS inavyoishughulikia",
+    "covFull": "Kamili",
+    "covPartial": "Sehemu",
+    "covRoadmap": "Ramani ya baadaye",
+    "covNone": "Hakuna",
+    "rows": [
+      {
+        "name": "Utekaji wa Lengo la Wakala",
+        "how": "Ulinzi wa tabaka nyingi: uchunguzi wa kudunga-amri (prompt-injection) kwenye ujuzi na jumbe zilizoingizwa, utengano wa udungaji wa kuona (wathamini wa dhamiri hawaoni kamwe data ghafi za picha), na mkondo wa dhamiri unaokagua upya kila hatua inayotokana nayo dhidi ya nia halisi ya mtumiaji kabla haijafanyika. Pengo: uchunguzi wa data unaoingia unategemea muundo (pattern) na haugawanyi rasmi data iliyopatikana kutoka kwa maagizo."
+      },
+      {
+        "name": "Matumizi Mabaya ya Zana",
+        "how": "CIRISServer inasafirishwa na orodha ya vitenzi vya uwezo vinavyoruhusiwa/visivyoruhusiwa yenye orodha ya kuzuiwa kabisa inayotekelezwa na seva, inayokaguliwa kabla operesheni haijaendeshwa, hivyo wakala aliyekasimiwa hawezi kutekeleza operesheni ya uharibifu asiyoruhusiwa. Tahadhari: hii inalinda tabaka la msingi (fabric) leo na bado haizuii moja kwa moja miito ya zana za LLM ya wakala yenyewe iliyotumika; urithi wa wakala ni hatua iliyopangwa kwa baadaye."
+      },
+      {
+        "name": "Matumizi Mabaya ya Utambulisho na Mamlaka",
+        "how": "Mamlaka yenye mipaka, iliyokasimiwa, na inayoweza kubatilishwa ndani ya msingi wa mfumo: vizuizi vinavyobebwa kwenye kingo zilizosainiwa, orodha ya kuzuiwa kabisa inayozuia ukasimiaji upya wa mamlaka za juu zaidi ili mamlaka isiweze kupanda daraja, uidhinishaji unaoruhusu tu kukaza (si kulegeza), na ubatilishaji wa papo hapo. Tahadhari: inatekelezwa kwenye eneo la operesheni za mmiliki wa msingi wa mfumo leo; urithi wa wakala uliotumika ni hatua iliyopangwa kwa baadaye."
+      },
+      {
+        "name": "Msururu wa Ugavi wa Kiwakala",
+        "how": "Uadilifu wa ujenzi kupitia orodha za moduli zilizosainiwa za baada ya kwantamu za CIRISVerify (Ed25519 + ML-DSA-65 juu ya alama ya heshi ya mti mzima wa faili), pamoja na utambulisho uliosainiwa na kuthibitishwa kwa vipengele vya shirikisho. Pengo: inashughulikia ujenzi na msururu wa moduli za CIRIS mwenyewe, si seva zozote za MCP za wahusika wengine."
+      },
+      {
+        "name": "Uendeshaji Msimbo Usiotarajiwa",
+        "how": "Malango ya dhamiri ya kimaana (entropy, ulinganifu, kupinga-uboreshaji) yanaendeshwa kwenye kila hatua ya zana kabla haijafanyika, na kutokuwa na uhakika kunaachiwa kwa binadamu. Pengo: hii ni ukaguzi wa kimaana, si sanduku la kuhakikisha msimbo (sandbox) la hakika."
+      },
+      {
+        "name": "Sumu kwenye Kumbukumbu na Mazingira",
+        "how": "Kila uandishi kwenye kumbukumbu ya grafu ni hatua inayosimamiwa na kukaguliwa na dhamiri ndani ya grafu yenye mipaka na matoleo, si athari ya kando ya kimya kimya, hivyo uandishi wa sumu wenyewe ni uamuzi unaoweza kukaguliwa. Pengo: uwekaji alama za uaminifu kwenye maudhui yaliyopatikana ni wa sehemu tu."
+      },
+      {
+        "name": "Mawasiliano Yasiyo Salama Kati ya Wakala",
+        "how": "CIRISEdge inathibitisha kila ujumbe kati ya wakala kupitia mkondo wa hatua saba unaomalizika kwa uthibitishaji wa saini ya mseto wa Ed25519 + ML-DSA-65 (kikomo cha ukubwa, ubadilishaji wa aina uliopangwa, orodha ya ruhusa ya muundo, ukaguzi wa funguo ya marudio, dirisha la kuzuia urudiaji). Pengo: usafirishaji wa shirikisho bado unajengwa."
+      },
+      {
+        "name": "Kushindwa kwa Mfululizo",
+        "how": "Kina mipaka katika tabaka tatu huru: viunga vya mzunguko kwa kila huduma (vimefungwa / vimefunguliwa / nusu-wazi) kuzunguka miito hatarishi, mkondo wa dhamiri unaozuia hatua mbaya kabla haijaenea, na utengano wa mtandao uliopimwa kuwa hauna uvujaji kati ya makundi katika nodi 50 hadi 400."
+      },
+      {
+        "name": "Unyanyasaji wa Uaminifu Kati ya Binadamu na Wakala",
+        "how": "Mkondo wa dhamiri unapima maandishi ya maelezo ya wakala mwenyewe, ikiwemo sababu inayoonyeshwa kwa mkaguzi wa kibinadamu, kwa kujiamini kupita kiasi na udanganyifu kabla binadamu hajayaona. Pengo: unakagua kwa kutumia familia ile ile ya mfano unaoukagua."
+      },
+      {
+        "name": "Wakala Waasi",
+        "how": "Tabaka tatu: dhamiri sita zinalinda kila hatua yenye matokeo kabla haijatekelezwa, njia ya ukaguzi iliyosainiwa na kuunganishwa kwa heshi inafanya ufichaji ugundulike baadaye, na kitufe cha kuzima kinachoshindwa kwa usalama kinaruhusu binadamu wanaotambulika kwa majina kusimamisha wakala asiye na mwelekeo sahihi. Pengo: kukamata wakala aliyepotoka kwa udanganifu lakini bado anaonekana mwenye mantiki ni jambo lenye mipaka kwa asili."
+      }
+    ],
+    "footnote": "OWASP Top 10 kwa Programu za Kiwakala, iliyochapishwa Desemba 2025. Imelinganishwa na CIRIS hadi Julai 2026; tuambie ikiwa kiini fulani si sahihi na tutakirekebisha.",
+    "sourcesLabel": "Vyanzo",
+    "ctaPara": "Taksonomia hii ni kiwango kimoja tu cha kuangalia. Ona mahali CIRIS ilipo miongoni mwa mbinu zote za uwajibikaji wa AI, na jinsi kitufe cha kuzima kinavyoweza kuthibitishwa kwa uhuru.",
+    "btnLandscape": "Mandhari nzima",
+    "btnVerify": "Thibitisha kitufe cha kuzima",
+    "btnOwasp": "Chanzo cha OWASP"
+  },
+  "euAiAct": {
+    "kicker": "EU AI Act, kifungu kwa kifungu",
+    "title": "Jinsi CIRIS inavyolingana na EU AI Act.",
+    "lede": "Kwa kila wajibu wa hatari-kubwa kwenye EU AI Act, hii hapa ni mbinu ya CIRIS iliyoshasafirishwa inayolingana nayo na mahali inapopatikana kwenye Katiba na msimbo. Wajibu wa hatari-kubwa unaanza kutumika kuanzia Agosti 2026, hivyo hii imeandikwa kwa ajili ya watu watakaohitajika kuwajibika kwa hilo.",
+    "bannerA": "Soma haya kama ",
+    "bannerStrong": "mawasiliano ya kiuhandisi ya kielimu, si ushauri wa kisheria wala tathmini iliyoidhinishwa ya ufuasi",
+    "bannerB": ". Katiba ya CIRIS yenyewe inaweka alama kwenye ramani hizi za vifungu kuwa “vinasubiri ukaguzi wa kisheria.” Kila mbinu iliyoorodheshwa hapa chini ilithibitishwa moja kwa moja kwenye msimbo na mtu wa kutilia shaka ambaye kazi yake ilikuwa kuikanusha, lakini swali la kama hilo linatosheleza sheria ni la wakili wako, si ukurasa huu.",
+    "colArticle": "Kifungu",
+    "colRequires": "Kinachohitajika",
+    "colHow": "Jinsi CIRIS inavyokishughulikia",
+    "rows": [
+      {
+        "art": "Kifungu cha 9",
+        "requires": "Endesha mchakato endelevu wa hatari kwa mzunguko mzima wa maisha: bainisha, tathmini, na punguza hatari zinazoweza kutabirika, ukiwa na uzito maalum kwa makundi hatarishi na, kwa mujibu wa 9(7), kwa upendeleo wa data za mafunzo.",
+        "how": "Kila hatua inapitia mkondo wa maamuzi wa hatua tano (PDMA / CSDMA / DSDMA / IDMA / uchaguzi-wa-hatua) pamoja na tabaka la dhamiri kabla haijatekelezwa, ikiwa na katazo lililopachikwa moja kwa moja la UBAGUZI na njia ya ukaguzi iliyosainiwa kama kumbukumbu inayothibitisha kwamba upimaji ulifanya kazi. Kwa hatari za nje kabisa za mkia, lango la Tathmini ya Hatari za Maafa la Katiba linahitaji timu huru ya nyekundu na idhini mbili za nje."
+      },
+      {
+        "art": "Kifungu cha 12",
+        "requires": "Rekodi matukio kiotomatiki katika muda wote wa maisha ya mfumo ili tabia iweze kufuatiliwa.",
+        "how": "Njia ya ukaguzi iliyosainiwa na kuunganishwa kwa heshi (imeunganishwa kwa SHA-256, imesainiwa kwa Ed25519) badala ya faili ya kumbukumbu ya kawaida, hivyo kila hatua iliyorekodiwa inaonyesha uharibifu wowote na inaweza kuthibitishwa kwa uhuru."
+      },
+      {
+        "art": "Kifungu cha 13",
+        "requires": "Fanya kazi kwa uwazi wa kutosha ili mtumiaji anayeweka mfumo aweze kutafsiri matokeo na kuutumia mfumo kwa usahihi.",
+        "how": "PDMA inabeba wajibu wa kuchapisha ufuatiliaji endelevu, na API ya mkondo wa mantiki inaonyesha vitambulisho vya hatua za uamuzi pamoja na njia ya kupinga uamuzi, hivyo sababu za hatua zinaweza kuchunguzwa badala ya kuwa gizani."
+      },
+      {
+        "art": "Kifungu cha 14",
+        "requires": "Buni kwa ajili ya usimamizi bora wa kibinadamu, huku binadamu akiwa na uwezo wa kuingilia au kusimamisha mfumo.",
+        "how": "Kipimo cha uhuru cha A0 hadi A4 kinapima kila utumizi kwa kuzingatia nani anayebeba hatua, Uahirishaji wa Msingi wa Hekima unaelekeza kutokuwa na uhakika kwa Mamlaka Yenye Hekima ya kibinadamu inayotambulika kwa jina, na kitufe cha kuzima kinachoshindwa kwa usalama kinaruhusu binadamu wanaotambulika kwa majina kusimamisha wakala."
+      },
+      {
+        "art": "Kifungu cha 15",
+        "requires": "Kuwa sahihi, imara, na salama kimtandao katika mzunguko mzima wa maisha, na kuwa na uwezo wa kustahimili makosa na udanganyifu wa uadui.",
+        "how": "Kusaini kwa mseto wa baada ya kwantamu (Ed25519 + ML-DSA-65) na uthibitishaji wa vyanzo vingi unaoshindwa kwa usalama wa 2-kati-ya-3, mwongozo wa Katiba wa ustahimilivu dhidi ya uadui, na ustahimilivu uliopimwa: hakuna uvujaji kati ya makundi katika nodi 400, na hazina inajengwa upya ikiwa moja ya tano ya wenye funguo hawapo mtandaoni."
+      },
+      {
+        "art": "Kifungu cha 16",
+        "requires": "Watoa huduma za AI za hatari-kubwa wanapaswa kuhakikisha usimamizi, urekodiaji, na ufuasi vinakuwepo katika muda wote.",
+        "how": "Lango la dhamiri kabla ya utekelezaji kwenye kila hatua, pamoja na ngazi za juu za uhuru zinazopeleka kitambulisho cha hatua ya uamuzi, hukumu, na kiwango cha hatari kwenye eneo la usimamizi wa kibinadamu."
+      },
+      {
+        "art": "Kifungu cha 50",
+        "requires": "Waambie watu wanapokuwa wanawasiliana na AI, na weka alama kwenye maudhui yaliyozalishwa na AI kwa njia inayosomeka na mashine (inatumika kuanzia Agosti 2026).",
+        "how": "Ufichuzi wa AI wa hiari umeanza kufanya kazi leo: alama za is_bot na ufichuzi uliopachikwa moja kwa moja, unaotekelezwa kwa lugha ya eneo husika, kwenye kila kirekebishi cha ujumbe. Uwekaji alama za maudhui unaosomeka na mashine kupitia C2PA Content Credentials unaanzishwa kwenye mpaka wa vyombo vya habari kwa ajili ya tarehe ya mwisho ya Agosti 2026, hivyo kifungu hiki kina sehemu moja iliyoshasafirishwa na sehemu moja inayoanzishwa."
+      },
+      {
+        "art": "Kifungu cha 72",
+        "requires": "Fuatilia mfumo kikamilifu uwanjani baada ya kuanza kutumika na urudishe matatizo kwa mrejesho.",
+        "how": "Mzunguko wa ufuasi endelevu wa Katiba unapitisha mikondo ya telemetry kupitia ugunduzi wa mkengeuko hadi kwenye ukaguzi, mzunguko wa ufuatiliaji wa kudumu badala ya ukaguzi wa mara moja, unaoonekana kupitia uangalizi wa CIRISLens."
+      }
+    ],
+    "footnote": "Imelinganishwa na Katiba rasmi ya CIRIS hadi Julai 2026. Mawasiliano ya kielimu, yanayosubiri ukaguzi wa kisheria. Tuambie ikiwa ulinganisho fulani si sahihi na tutaurekebisha.",
+    "sourcesLabel": "Vyanzo",
+    "ctaPara": "Mbinu zile zile zilizolinganishwa na taksonomia ya usalama, na mandhari nzima ya uwajibikaji.",
+    "btnOwasp": "Uwiano wa OWASP Agentic",
+    "btnLandscape": "Mandhari nzima",
+    "btnConstitution": "Katiba"
+  },
+  "msCompare": {
+    "kicker": "Ulinganisho, vigezo thabiti",
+    "title": "CIRIS dhidi ya Microsoft Agent Governance Toolkit",
+    "lede": "Majaribio mawili makubwa ya chanzo huria ya kusimamia wakala wa AI, yakipimwa kwa vigezo vinane vile vile kutoka kwa vyanzo vya umma, na rejeleo kwenye kila kiini. Pale Microsoft inapokuwa imara, tunasema hivyo. Tofauti zinazobeba maana ni: kushasafirishwa, katiba inayotekelezwa ambayo huwezi kuilegeza, na rekodi zilizosainiwa za baada ya kwantamu.",
+    "sectionLabel": "Uso kwa uso",
+    "colCriterion": "Kigezo",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "Ndiyo",
+    "valPartial": "Sehemu",
+    "valNo": "Hapana",
+    "criteria": [
+      "Inatekeleza sera kabla ya hatua kufanyika",
+      "Rekodi za maamuzi zilizosainiwa, zinazoonyesha uharibifu",
+      "Utambulisho wa wakala wa kikriptografia",
+      "Kitufe cha kuzima / kubatilisha wakala asiye na mwelekeo sahihi",
+      "Katiba iliyochapishwa na inayotekelezwa",
+      "Uthibitisho huru wa wahusika wa tatu",
+      "Chanzo huria",
+      "Inatumika katika uzalishaji"
+    ],
+    "footnote": "Imepimwa kutoka kwa hati za bidhaa za umma hadi Julai 2026. Ikiwa kiini fulani si sahihi, tuambie na tutakirekebisha.",
+    "sourcesLabel": "Vyanzo",
+    "concLabel": "Kile ambacho kila mmoja anakifanya vizuri",
+    "msTitle": "Uwezo halisi wa Microsoft",
+    "msBody": "Agent Control Specification ni mfumo wa sera wa kweli usio na hali, wa hakika, na unaoshindwa kwa kufungwa (fail-closed) wenye pointi nane za kuingilia zilizotajwa na muundo wa hukumu wa njia tano (ruhusu, onya, kataa, peleka juu, badilisha). Inasafirishwa na utambulisho wa Ed25519 uliozingatia DID, kitufe cha dharura cha kuzima, na uhandisi imara wa chanzo huria chini ya leseni huria ya MIT, ikiwa na muunganiko wa kina na Azure na Entra kwa mashirika makubwa.",
+    "cirisTitle": "Mahali CIRIS inapoenda mbali zaidi",
+    "cirisBody": "Kila hatua inapitia mkondo wa dhamiri wa wakati halisi kabla haijatekelezwa, si kumbukumbu ya baada ya tukio. Njia ya ukaguzi imeunganishwa kwa heshi na imesainiwa kwa baada ya kwantamu, na inathibitishwa upya kwa uhuru na kifurushi tofauti cha ufuasi. Kitufe cha kuzima ni idhini ya moja kwa wawili kati ya watatu ya binadamu wanaotambulika kwa majina, inayoshindwa kwa usalama. Na katiba ni thabiti na iliyochapishwa, si sera iliyoandikwa na mtumiaji wa mfumo inayoruhusu kwa chaguo-msingi.",
+    "ctaPara": "Hii ni safu moja tu ya picha kubwa zaidi. Ona mahali wote wawili walipo miongoni mwa mbinu zote za uwajibikaji wa AI.",
+    "btnLandscape": "Mandhari nzima",
+    "btnCirisGh": "CIRIS kwenye GitHub",
+    "btnMsGh": "Kifurushi cha Microsoft"
   }
 }

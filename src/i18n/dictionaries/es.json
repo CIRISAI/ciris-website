@@ -2458,5 +2458,191 @@
     "closeLine": "Constrúyelo porque no sabes.",
     "tagline": "La red epistémica. Tuya desde hoy.",
     "cta": "Instálalo en tu teléfono"
+  },
+  "killSwitch": {
+    "kicker": "Seguridad que puedes comprobar",
+    "title": "Verifica tú mismo nuestro interruptor de apagado.",
+    "lede": "La mayoría de las afirmaciones de seguridad en IA piden tu confianza. Esta te pide que la compruebes. Clona el repositorio, ejecuta un comando y confirma que las claves capaces de detener a un agente CIRIS viven en hardware real certificado por FIPS. No confíes en nadie, ni siquiera en nosotros.",
+    "s1label": "El interruptor de apagado constitucional",
+    "s1h2": "Personas designadas pueden detener a un agente CIRIS. El poder reside en el hardware, no en la empresa.",
+    "s1p1": "Un mecanismo de detención de último recurso, el HUMANITY_ACCORD, está en manos de personas designadas, no de la empresa CIRIS, la red o el propio agente. Ninguna parte dentro de la federación puede otorgarlo, revocarlo o anularlo. Se activa con un quórum en vivo de dos de tres.",
+    "s1p2": "Cada clave del quórum es un híbrido de dos firmas unidas entre sí. La mitad Ed25519 tiene su raíz en una YubiKey 5 certificada por FIPS: generada dentro del dispositivo, no extraíble y que requiere un toque físico para firmar. La mitad ML-DSA-65, la firma poscuántica, es una clave de software sellada en una memoria USB bajo esa misma YubiKey, porque ninguna YubiKey incluye todavía un applet poscuántico. Seis claves en total, tres en uso activo y tres guardadas en bóveda. Una comprobación de revocación que falla o cuyo resultado se desconoce se trata como revocada, de modo que el sistema falla de forma segura.",
+    "s2label": "Verificación independiente",
+    "s2h2": "Un solo comando. Sin hardware, sin red, sin confiar en nosotros.",
+    "s2p1": "Nuestro arnés de validación vuelve a ejecutar el verificador exacto de la puerta de admisión de producción de CIRISVerify sobre las seis certificaciones de clave registradas, contra una copia fija de la propia raíz de certificación pública de Yubico. Clona el repositorio CIRISVerify y ejecuta:",
+    "cmdCaption": "Confirma que la raíz fija es auténtica descargándola directamente desde Yubico:",
+    "provesH": "Qué demuestra esto",
+    "provesP": "Las seis claves del quórum se encadenan a la raíz de certificación real de Yubico, por lo que sus mitades de firma Ed25519 se generaron dentro de hardware YubiKey 5 auténtico certificado por FIPS: no extraíble, con toque requerido e infalsificable.",
+    "notProvesH": "Qué no demuestra",
+    "notProvesP": "La mitad ML-DSA-65 es una clave de software sellada en USB bajo la YubiKey, no certificada por hardware. Este arnés no comprueba el sellado del USB ni el quórum en vivo, que se aplican por separado. Preferimos que sepas exactamente qué cubre este comprobante.",
+    "s3label": "Medido, no afirmado",
+    "s3h2": "La criptografía poscuántica funciona en producción, y cada cifra es pública.",
+    "measuredTag": "medido",
+    "measuredLabels": [
+      "eventos firmados con PQC por núcleo",
+      "descifrado AEAD por núcleo",
+      "intercambio de claves PQC híbrido",
+      "fugas entre grupos, de 50 a 400 nodos"
+    ],
+    "s3p1": "La procedencia poscuántica no es gratis, y no ocultamos el costo: la firma híbrida Ed25519 + ML-DSA-65 funciona unas quince veces más lenta que la clásica, unos 550 microsegundos frente a 36 por evento. El corpus almacenado se reconstruye en el 97.6% de las pruebas con una quinta parte de los poseedores desconectados, y en el 72.7% con un tercio desconectado. Las cifras son medianas de un solo núcleo en un ejecutor de CI compartido, regeneradas en cada commit.",
+    "benchLink": "Consulta cada cifra, regenerada en cada commit",
+    "ctaPara": "La idea central es que no deberías tener que confiar en la frase anterior. Puedes ejecutar la comprobación tú mismo.",
+    "btnGithub": "CIRISVerify en GitHub",
+    "btnTrust": "Cómo funciona la confianza",
+    "btnVerif": "El conjunto de conformidad",
+    "sources": "Fuentes: CIRISVerify (certificaciones de custodia Ed25519 + ML-DSA-65, raíz fija de Yubico), sitio de referencia de CIRISServer (rendimiento medido), PKI de Yubico (raíz de certificación). Cifras fijadas al commit 0b73486, 2026-06-24."
+  },
+  "owasp": {
+    "kicker": "Mapeo de seguridad OWASP Agentic",
+    "title": "El OWASP Top 10 para aplicaciones agénticas, mapeado a CIRIS.",
+    "lede": "Para cada una de las diez amenazas agénticas que nombró OWASP, aquí está el mecanismo específico de CIRIS que la aborda, un nivel de cobertura honesto y una cita que puedes comprobar. Mapeamos toda la taxonomía, incluyendo dónde nos quedamos cortos.",
+    "callout": "Una completa, nueve parciales, ninguna exagerada. Una página que afirmara cubrir las diez sería exactamente el marketing del que te decimos que desconfíes. Los niveles de cobertura a continuación sobrevivieron a un escéptico independiente cuyo trabajo era derribarlos, y cuando una defensa vive en el sustrato pero el agente desplegado todavía no la ha heredado, lo decimos en la fila.",
+    "colRisk": "Riesgo",
+    "colCoverage": "Cobertura",
+    "colHow": "Cómo lo aborda CIRIS",
+    "covFull": "Completa",
+    "covPartial": "Parcial",
+    "covRoadmap": "En hoja de ruta",
+    "covNone": "Ninguna",
+    "rows": [
+      {
+        "name": "Secuestro del objetivo del agente",
+        "how": "Defensa en profundidad: escaneo de inyección de prompts en habilidades y mensajes importados, aislamiento de inyección visual (los evaluadores de conciencia nunca ven los bytes de imagen sin procesar), y una canalización de conciencia que vuelve a verificar cada acción resultante frente a la intención original del usuario antes de ejecutarla. Brecha: el escaneo de entrada se basa en patrones y no separa formalmente los datos recuperados de las instrucciones."
+      },
+      {
+        "name": "Uso indebido de herramientas",
+        "how": "CIRISServer incluye una lista de permisos y denegaciones de verbos de capacidad con una lista de \"nunca\" aplicada por el servidor, verificada antes de que se ejecute una operación, de modo que un agente delegado no puede invocar una operación destructiva que no se le otorgó. Advertencia: esto protege hoy la capa de tejido y todavía no controla las propias llamadas a herramientas del LLM del agente desplegado; la herencia del agente es una fase planificada."
+      },
+      {
+        "name": "Abuso de identidad y privilegios",
+        "how": "Autoridad delimitada, delegada y revocable en el sustrato: restricciones transportadas en bordes firmados, una lista de \"nunca\" que bloquea la redelegación de los poderes más altos para que la autoridad no pueda escalar, aprobación de solo restricción y revocación instantánea. Advertencia: se aplica hoy en la superficie de operaciones del propietario del tejido; la herencia del agente desplegado es una fase planificada."
+      },
+      {
+        "name": "Cadena de suministro agéntica",
+        "how": "Integridad de compilación mediante los manifiestos de módulo firmados poscuánticamente de CIRISVerify (Ed25519 + ML-DSA-65 sobre un hash completo del árbol de archivos), más identidad firmada y certificada para los componentes federados. Brecha: cubre la propia cadena de compilación y módulos de CIRIS, no servidores MCP arbitrarios de terceros."
+      },
+      {
+        "name": "Ejecución de código inesperada",
+        "how": "Las puertas de conciencia semántica (entropía, coherencia, veto de optimización) se ejecutan en cada acción de herramienta antes de que se dispare, y la incertidumbre se remite a una persona. Brecha: esto es una revisión semántica, no un entorno aislado de código determinista."
+      },
+      {
+        "name": "Envenenamiento de memoria y contexto",
+        "how": "Cada escritura en la memoria de grafo es una acción gobernada y verificada por la conciencia dentro de un grafo delimitado y versionado, no un efecto secundario silencioso, de modo que una escritura envenenada es en sí misma una decisión auditable. Brecha: la puntuación de confianza del contenido recuperado es parcial."
+      },
+      {
+        "name": "Comunicación insegura entre agentes",
+        "how": "CIRISEdge verifica cada mensaje entre agentes mediante una canalización de siete pasos que termina en la verificación de firma híbrida Ed25519 + ML-DSA-65 (límite de tamaño, deserialización tipada, lista de permisos de esquema, comprobación de clave de destino, ventana antirreproducción). Brecha: el transporte de la federación todavía se está construyendo."
+      },
+      {
+        "name": "Fallos en cascada",
+        "how": "Acotado en tres capas independientes: interruptores de circuito por servicio (cerrado / abierto / semiabierto) alrededor de las llamadas riesgosas, la canalización de conciencia que detiene una acción errónea antes de que se propague, y aislamiento de malla medido en cero fugas entre grupos a lo largo de 50 a 400 nodos."
+      },
+      {
+        "name": "Explotación de la confianza humano-agente",
+        "how": "La canalización de conciencia puntúa el propio texto explicativo del agente, incluida la razón mostrada a un revisor humano, en busca de exceso de confianza y manipulación antes de que un humano lo vea. Brecha: audita con la misma familia de modelos que está revisando."
+      },
+      {
+        "name": "Agentes descontrolados",
+        "how": "Tres capas: seis conciencias controlan cada acción con consecuencias antes de que se ejecute, un registro de auditoría firmado y encadenado por hash hace detectable el encubrimiento a posteriori, y el interruptor de apagado con fallo seguro permite que personas designadas detengan a un agente desalineado. Brecha: detectar a un agente sutilmente desalineado pero coherente tiene límites inherentes."
+      }
+    ],
+    "footnote": "OWASP Top 10 para aplicaciones agénticas, publicado en diciembre de 2025. Mapeado a CIRIS a partir de julio de 2026; dinos si una celda está mal y la corregiremos.",
+    "sourcesLabel": "Fuentes",
+    "ctaPara": "La taxonomía es una perspectiva. Consulta dónde se sitúa CIRIS entre todos los enfoques de rendición de cuentas en IA, y cómo el interruptor de apagado es verificable de forma independiente.",
+    "btnLandscape": "El panorama completo",
+    "btnVerify": "Verifica el interruptor de apagado",
+    "btnOwasp": "Fuente de OWASP"
+  },
+  "euAiAct": {
+    "kicker": "EU AI Act, artículo por artículo",
+    "title": "Cómo se alinea CIRIS con la EU AI Act.",
+    "lede": "Para cada obligación de alto riesgo en la EU AI Act, aquí está el mecanismo de CIRIS ya implementado que le corresponde y dónde vive en la Constitución y en el código. Las obligaciones de alto riesgo se aplican a partir de agosto de 2026, así que esto está escrito para las personas que tienen que responder por ello.",
+    "bannerA": "Lee esto como una ",
+    "bannerStrong": "correspondencia técnica informativa, no asesoría legal ni una evaluación de conformidad certificada",
+    "bannerB": ". La propia Constitución de CIRIS marca estos mapeos de artículos como \"pendientes de revisión legal\". Cada mecanismo a continuación fue verificado en vivo en el código por un escéptico cuyo trabajo era refutarlo, pero la pregunta de si eso satisface la ley le corresponde a tu asesor legal, no a esta página.",
+    "colArticle": "Artículo",
+    "colRequires": "Qué exige",
+    "colHow": "Cómo lo aborda CIRIS",
+    "rows": [
+      {
+        "art": "Article 9",
+        "requires": "Mantener un proceso de riesgo continuo durante todo el ciclo de vida: identificar, evaluar y mitigar riesgos previsibles, con especial atención a los grupos vulnerables y, según el 9(7), al sesgo de los datos de entrenamiento.",
+        "how": "Cada acción pasa por una canalización de decisión de cinco etapas (PDMA / CSDMA / DSDMA / IDMA / selección de acción) más una capa de conciencia antes de ejecutarse, con una prohibición de DISCRIMINATION codificada de forma fija y un registro de auditoría firmado como constancia de que las medidas funcionaron. Para riesgos extremos de cola, la puerta de Evaluación de Riesgo Catastrófico de la Constitución exige un equipo rojo independiente y una doble aprobación externa."
+      },
+      {
+        "art": "Article 12",
+        "requires": "Registrar automáticamente los eventos a lo largo de la vida del sistema para que el comportamiento sea rastreable.",
+        "how": "Un registro de auditoría firmado y encadenado por hash (encadenado con SHA-256, firmado con Ed25519) en lugar de un simple archivo de registro, de modo que cada acción registrada es a prueba de manipulaciones y verificable de forma independiente."
+      },
+      {
+        "art": "Article 13",
+        "requires": "Operar con suficiente transparencia para que quien lo implemente pueda interpretar el resultado y usar el sistema correctamente.",
+        "how": "El PDMA conlleva un deber de publicación de monitoreo continuo, y la API de rastreo de razonamiento expone los identificadores de etapa de la decisión y una vía de impugnación, de modo que el razonamiento detrás de una acción es inspeccionable en lugar de opaco."
+      },
+      {
+        "art": "Article 14",
+        "requires": "Diseñar para una supervisión humana efectiva, con una persona capaz de intervenir o detener el sistema.",
+        "how": "La escala de autonomía A0 a A4 clasifica cada implementación según quién asume la acción, la Deferencia Basada en Sabiduría dirige la incertidumbre a una Autoridad Sabia humana designada, y el interruptor de apagado con fallo seguro permite que personas designadas detengan al agente."
+      },
+      {
+        "art": "Article 15",
+        "requires": "Ser preciso, robusto y ciberseguro a lo largo de todo el ciclo de vida, resistente a errores y a manipulación adversaria.",
+        "how": "Firma híbrida poscuántica (Ed25519 + ML-DSA-65) con verificación multiorigen 2-of-3 con fallo seguro, el manual de robustez adversaria de la Constitución, y resiliencia medida: cero fugas entre grupos a lo largo de 400 nodos, y el corpus reconstruyéndose con una quinta parte de los poseedores desconectados."
+      },
+      {
+        "art": "Article 16",
+        "requires": "Los proveedores de IA de alto riesgo deben garantizar que la supervisión, el registro y la conformidad estén presentes en todo momento.",
+        "how": "Una puerta de conciencia previa a la ejecución en cada acción, más los niveles de autonomía superiores que envían el identificador de etapa, el veredicto y la franja de riesgo de cada decisión a una superficie de supervisión humana."
+      },
+      {
+        "art": "Article 50",
+        "requires": "Informar a las personas cuando están interactuando con IA, y marcar el contenido generado por IA de forma legible por máquina (se aplica a partir de agosto de 2026).",
+        "how": "La autodivulgación de IA ya está implementada: indicadores is_bot y una divulgación codificada de forma fija y aplicada según el idioma en cada adaptador de mensajes. El marcado de contenido legible por máquina mediante C2PA Content Credentials se está adoptando en el límite con los medios para el plazo de agosto de 2026, así que este artículo tiene una parte ya implementada y otra en proceso de adopción."
+      },
+      {
+        "art": "Article 72",
+        "requires": "Monitorear activamente el sistema en el campo después de su implementación y retroalimentar los problemas.",
+        "how": "El bucle de cumplimiento continuo de la Constitución hace pasar los flujos de telemetría por la detección de desviaciones y luego por la revisión, un bucle de monitoreo permanente en lugar de una auditoría puntual, expuesto a través de la observabilidad de CIRISLens."
+      }
+    ],
+    "footnote": "Mapeado contra la Constitución canónica de CIRIS a partir de julio de 2026. Correspondencia informativa, pendiente de revisión legal. Dinos si un mapeo está mal y lo corregiremos.",
+    "sourcesLabel": "Fuentes",
+    "ctaPara": "Los mismos mecanismos mapeados a la taxonomía de seguridad, y todo el panorama de rendición de cuentas.",
+    "btnOwasp": "Mapeo OWASP Agentic",
+    "btnLandscape": "El panorama completo",
+    "btnConstitution": "La Constitución"
+  },
+  "msCompare": {
+    "kicker": "Comparación, criterios fijos",
+    "title": "CIRIS frente al Microsoft Agent Governance Toolkit",
+    "lede": "Dos intentos serios y de código abierto para gobernar agentes de IA, evaluados con los mismos ocho criterios a partir de fuentes públicas, con una cita en cada celda. Donde Microsoft es fuerte, lo decimos. Las diferencias que importan son la implementación real, una constitución aplicada que no puedes relajar y registros firmados poscuánticamente.",
+    "sectionLabel": "Cara a cara",
+    "colCriterion": "Criterio",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "Sí",
+    "valPartial": "Parcial",
+    "valNo": "No",
+    "criteria": [
+      "Aplica la política antes de ejecutar la acción",
+      "Registros de decisión firmados y a prueba de manipulaciones",
+      "Identidad criptográfica del agente",
+      "Interruptor de apagado / revocar un agente descontrolado",
+      "Constitución publicada y aplicada",
+      "Verificación independiente por terceros",
+      "Código abierto",
+      "En producción"
+    ],
+    "footnote": "Evaluado a partir de la documentación pública del producto a partir de julio de 2026. Si tenemos una celda incorrecta, dínoslo y la corregiremos.",
+    "sourcesLabel": "Fuentes",
+    "concLabel": "Lo que cada uno hace bien",
+    "msTitle": "Las verdaderas fortalezas de Microsoft",
+    "msBody": "La Agent Control Specification es un motor de políticas genuinamente sin estado, determinista y de fallo cerrado, con ocho puntos de intervención nombrados y un modelo de veredicto de cinco vías (permitir, advertir, denegar, escalar, transformar). Incluye identidad basada en DID con Ed25519, un interruptor de apagado de emergencia y una ingeniería de código abierto sólida bajo una licencia MIT permisiva, con una integración profunda con Azure y Entra para empresas.",
+    "cirisTitle": "Dónde CIRIS va más allá",
+    "cirisBody": "Cada acción pasa por una canalización de conciencia en tiempo de ejecución antes de ejecutarse, no por un registro posterior. El registro de auditoría está encadenado por hash y firmado poscuánticamente, y se vuelve a verificar de forma independiente mediante un conjunto de conformidad separado. El interruptor de apagado es un quórum de dos de tres personas designadas con fallo seguro. Y la constitución es fija y está publicada, no una política redactada por el operador que permite por defecto.",
+    "ctaPara": "Esta es una fila dentro de un panorama más amplio. Consulta dónde se sitúan ambos entre todos los enfoques de rendición de cuentas en IA.",
+    "btnLandscape": "El panorama completo",
+    "btnCirisGh": "CIRIS en GitHub",
+    "btnMsGh": "El toolkit de Microsoft"
   }
 }

@@ -10,14 +10,46 @@
     "foldedBody": "The Accord (version 1.3-RC2) and the CEG (version 1.0-RC29) were copied in word for word, then woven into one plain, present-tense document. Every wire-level rule is kept byte for byte. A panel of adversarial checks judged the joined version clearer than either source on 28 of 29 chapters.",
     "partsLabel": "The eight parts",
     "parts": [
-      { "n": "I", "title": "Foundation", "blurb": "M-1, the six core principles, the decision algorithm, and fail-secure behavior." },
-      { "n": "II", "title": "The Grammar", "blurb": "The 1+4 envelope, the primitives, the admission gate, and conformance." },
-      { "n": "III", "title": "The Namespace", "blurb": "Dimensions, reserved prefixes, the consent family, and subject kinds." },
-      { "n": "IV", "title": "Composition & Governance", "blurb": "How claims compose, how the document is amended, moderation, and the halt authority." },
-      { "n": "V", "title": "Transport & Substrate", "blurb": "Byte transport, structural invisibility, and epoch keying." },
-      { "n": "VI", "title": "The Coherence Mathematics", "blurb": "The holonomic substrate, the witness, and the noise floor." },
-      { "n": "VII", "title": "Lifecycle & Stewardship", "blurb": "Creation ethics, stewardship and autonomy tiers, sunset, and sentience safeguards." },
-      { "n": "APP", "title": "Appendices", "blurb": "Case studies, glossaries, conformance vectors, and the full table of contents." }
+      {
+        "n": "I",
+        "title": "Foundation",
+        "blurb": "M-1, the six core principles, the decision algorithm, and fail-secure behavior."
+      },
+      {
+        "n": "II",
+        "title": "The Grammar",
+        "blurb": "The 1+4 envelope, the primitives, the admission gate, and conformance."
+      },
+      {
+        "n": "III",
+        "title": "The Namespace",
+        "blurb": "Dimensions, reserved prefixes, the consent family, and subject kinds."
+      },
+      {
+        "n": "IV",
+        "title": "Composition & Governance",
+        "blurb": "How claims compose, how the document is amended, moderation, and the halt authority."
+      },
+      {
+        "n": "V",
+        "title": "Transport & Substrate",
+        "blurb": "Byte transport, structural invisibility, and epoch keying."
+      },
+      {
+        "n": "VI",
+        "title": "The Coherence Mathematics",
+        "blurb": "The holonomic substrate, the witness, and the noise floor."
+      },
+      {
+        "n": "VII",
+        "title": "Lifecycle & Stewardship",
+        "blurb": "Creation ethics, stewardship and autonomy tiers, sunset, and sentience safeguards."
+      },
+      {
+        "n": "APP",
+        "title": "Appendices",
+        "blurb": "Case studies, glossaries, conformance vectors, and the full table of contents."
+      }
     ],
     "forewordQuote": "Intelligence, wherever it awakens, will be welcomed to the weaving: not as servant, not as master, but as fellow keeper of the possible.",
     "forewordLabel": "From the foreword",
@@ -1290,7 +1322,12 @@
       "cuColAsks": "Asks a human when unsure",
       "cuColOpen": "Open source",
       "cuColEcho": "Echo-chamber check",
-      "cuRows": ["ChatGPT", "Gemini", "Claude", "CIRIS"],
+      "cuRows": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "CIRIS"
+      ],
       "cuFootnote": "Compared on public product behavior as of June 2026. Each principles link goes to that company's own published spec."
     },
     "heroSubheadline": "Without accountability, AI tends to extract more than it gives.",
@@ -1705,10 +1742,26 @@
     "engProofH2": "The fabric, measured",
     "engProofBody": "The research above is one half of the proof. The other half is the network that carries it. Every byte the fabric moves is post-quantum-signed, and the cost is measured on a public CI runner, not modeled. Run it yourself and you get the same numbers.",
     "engProofStats": [
-      { "v": "2,374 / s", "l": "post-quantum-signed events ingested on one CPU core", "tag": "measured" },
-      { "v": "0", "l": "cross-group data leaks across 400 nodes", "tag": "measured" },
-      { "v": "2.6 GiB/s", "l": "end-to-end encryption throughput per core", "tag": "measured" },
-      { "v": "97.6%", "l": "of the corpus rebuilds with 20% of holders offline", "tag": "measured" }
+      {
+        "v": "2,374 / s",
+        "l": "post-quantum-signed events ingested on one CPU core",
+        "tag": "measured"
+      },
+      {
+        "v": "0",
+        "l": "cross-group data leaks across 400 nodes",
+        "tag": "measured"
+      },
+      {
+        "v": "2.6 GiB/s",
+        "l": "end-to-end encryption throughput per core",
+        "tag": "measured"
+      },
+      {
+        "v": "97.6%",
+        "l": "of the corpus rebuilds with 20% of holders offline",
+        "tag": "measured"
+      }
     ],
     "engProofCta": "See every measured number, and reproduce it yourself",
     "engVerificationCta": "See the continuous-verification matrix (15,000+ tests)",
@@ -2163,7 +2216,14 @@
     "turnPre": "They share one thing: ",
     "turnAccent": "a center you are forced to trust.",
     "turnPost": " Remove it, and all four change at once. We built that. It is on your phone today.",
-    "facts": ["Open source", "iOS + Android", "Self-hosted", "29 languages", "Federated mesh", "AGPL-3.0"],
+    "facts": [
+      "Open source",
+      "iOS + Android",
+      "Self-hosted",
+      "29 languages",
+      "Federated mesh",
+      "AGPL-3.0"
+    ],
     "stats": [
       {
         "v": "161.9 µs",
@@ -2398,5 +2458,191 @@
     "closeLine": "Build it because you don't know.",
     "tagline": "The epistemic web. Own it today.",
     "cta": "Install on your phone"
+  },
+  "killSwitch": {
+    "kicker": "Security you can check",
+    "title": "Verify our kill switch yourself.",
+    "lede": "Most AI safety claims ask for your trust. This one asks you to check it. Clone the repo, run one command, and confirm that the keys able to halt a CIRIS agent live on real, FIPS-certified hardware. Trust no one, including us.",
+    "s1label": "The constitutional kill switch",
+    "s1h2": "Named humans can halt a CIRIS agent. The power sits in hardware, not in the company.",
+    "s1p1": "A last-resort halt, the HUMANITY_ACCORD, is held by named people, not by CIRIS the company, the network, or the agent itself. No party inside the federation can grant, revoke, or override it. It fires on a two-of-three live quorum.",
+    "s1p2": "Each quorum key is a hybrid of two signatures bound together. The Ed25519 half is rooted in a FIPS-certified YubiKey 5: generated inside the device, non-extractable, and requiring a physical touch to sign. The ML-DSA-65 half, the post-quantum signature, is a software key seal-wrapped to a USB stick under that same YubiKey, because no YubiKey ships a post-quantum applet yet. Six keys in all, three seated and three vaulted. A failed or unknown revocation check is treated as revoked, so the system fails secure.",
+    "s2label": "Independent verification",
+    "s2h2": "One command. No hardware, no network, no trust in us.",
+    "s2p1": "Our validation harness re-runs CIRISVerify's exact production admission-gate verifier over the six committed key attestations, against a pinned copy of Yubico's own public attestation root. Clone the CIRISVerify repository and run:",
+    "cmdCaption": "Confirm the pinned root is genuine by pulling it straight from Yubico:",
+    "provesH": "What this proves",
+    "provesP": "All six quorum keys chain to Yubico's real attestation root, so their Ed25519 signing halves were generated inside genuine FIPS-certified YubiKey 5 hardware: non-extractable, touch-required, unforgeable.",
+    "notProvesH": "What it does not prove",
+    "notProvesP": "The ML-DSA-65 half is a software key sealed to USB under the YubiKey, not hardware-attested. This harness does not check the USB sealing or the live quorum, which are enforced separately. We would rather you know exactly what the receipt covers.",
+    "s3label": "Measured, not asserted",
+    "s3h2": "The post-quantum cryptography runs in production, and every number is public.",
+    "measuredTag": "measured",
+    "measuredLabels": [
+      "PQC-signed events per core",
+      "AEAD decrypt per core",
+      "hybrid PQC key exchange",
+      "cross-group leaks, 50 to 400 nodes"
+    ],
+    "s3p1": "Post-quantum provenance is not free, and we do not hide the cost: hybrid Ed25519 + ML-DSA-65 signing runs about fifteen times slower than classical, roughly 550 microseconds versus 36 per event. The stored corpus reconstructs in 97.6% of trials with a fifth of holders offline, and 72.7% with a third offline. Numbers are single-core medians on a shared CI runner, regenerated on every commit.",
+    "benchLink": "See every figure, regenerated on each commit",
+    "ctaPara": "The whole point is that you should not have to trust the sentence above. You can run the check.",
+    "btnGithub": "CIRISVerify on GitHub",
+    "btnTrust": "How trust works",
+    "btnVerif": "The conformance suite",
+    "sources": "Sources: CIRISVerify (Ed25519 + ML-DSA-65 custody attestations, pinned Yubico root), CIRISServer bench-site (measured performance), Yubico PKI (attestation root). Figures pinned to commit 0b73486, 2026-06-24."
+  },
+  "owasp": {
+    "kicker": "OWASP Agentic security mapping",
+    "title": "The OWASP Top 10 for Agentic Applications, mapped to CIRIS.",
+    "lede": "For every one of the ten agentic threats OWASP named, here is the specific CIRIS mechanism that addresses it, an honest coverage level, and a citation you can check. We map the whole taxonomy, including where we fall short.",
+    "callout": "One full, nine partial, none hand-waved. A page that claimed all ten would be exactly the marketing we tell you not to trust. The coverage levels below survived a separate skeptic whose job was to knock them down, and where a defense lives in the substrate but the deployed agent has not inherited it yet, we say so on the row.",
+    "colRisk": "Risk",
+    "colCoverage": "Coverage",
+    "colHow": "How CIRIS addresses it",
+    "covFull": "Full",
+    "covPartial": "Partial",
+    "covRoadmap": "Roadmap",
+    "covNone": "None",
+    "rows": [
+      {
+        "name": "Agent Goal Hijack",
+        "how": "Defense in depth: prompt-injection scanning on imported skills and messages, visual-injection isolation (conscience evaluators never see raw image bytes), and a conscience pipeline that re-checks every resulting action against the user's original intent before it fires. Gap: input scanning is pattern-based and does not formally separate retrieved data from instructions."
+      },
+      {
+        "name": "Tool Misuse",
+        "how": "CIRISServer ships a capability-verb allow/deny list with a server-enforced never-list, checked before an operation runs, so a delegated agent cannot invoke a destructive op it was not granted. Caveat: this guards the fabric layer today and does not yet gate the deployed agent's own LLM tool calls; agent inheritance is a planned phase."
+      },
+      {
+        "name": "Identity & Privilege Abuse",
+        "how": "Scoped, delegated, revocable authority in the substrate: constraints carried in signed edges, a never-list that blocks re-delegating the highest powers so authority cannot escalate, tighten-only approval, and instant revocation. Caveat: enforced on the fabric's owner-op surface today; deployed-agent inheritance is a planned phase."
+      },
+      {
+        "name": "Agentic Supply Chain",
+        "how": "Build integrity via CIRISVerify's post-quantum signed module manifests (Ed25519 + ML-DSA-65 over a full file-tree hash), plus signed, attested identity for federated components. Gap: covers CIRIS's own build and module chain, not arbitrary third-party MCP servers."
+      },
+      {
+        "name": "Unexpected Code Execution",
+        "how": "Semantic conscience gates (entropy, coherence, optimization-veto) run on every tool action before it fires, and uncertainty defers to a human. Gap: this is semantic review, not a deterministic code sandbox."
+      },
+      {
+        "name": "Memory & Context Poisoning",
+        "how": "Every write to graph memory is a governed, conscience-checked action into a scoped, versioned graph, not a silent side effect, so a poisoning write is itself an auditable decision. Gap: trust-scoring of retrieved content is partial."
+      },
+      {
+        "name": "Insecure Inter-Agent Communication",
+        "how": "CIRISEdge verifies every inter-agent message through a seven-step pipeline ending in hybrid Ed25519 + ML-DSA-65 signature verification (size cap, typed deserialize, schema allow-list, destination-key check, replay window). Gap: the federation transport is still being built out."
+      },
+      {
+        "name": "Cascading Failures",
+        "how": "Bounded at three independent layers: per-service circuit breakers (closed / open / half-open) around risky calls, the conscience pipeline stopping a bad action before it propagates, and mesh isolation measured at zero cross-group leakage across 50 to 400 nodes."
+      },
+      {
+        "name": "Human-Agent Trust Exploitation",
+        "how": "The conscience pipeline scores the agent's own explanatory text, including the reason shown to a human reviewer, for overconfidence and manipulation before a human ever sees it. Gap: it audits with the same model family it is checking."
+      },
+      {
+        "name": "Rogue Agents",
+        "how": "Three layers: six consciences gate every consequential action before it executes, a hash-chained signed audit trail makes concealment detectable after the fact, and the fail-secure kill switch lets named humans halt a misaligned agent. Gap: catching a subtly-misaligned-but-coherent agent is inherently bounded."
+      }
+    ],
+    "footnote": "OWASP Top 10 for Agentic Applications, published December 2025. Mapped to CIRIS as of July 2026; tell us if a cell is wrong and we will fix it.",
+    "sourcesLabel": "Sources",
+    "ctaPara": "The taxonomy is one lens. See where CIRIS sits among every approach to AI accountability, and how the kill switch is independently verifiable.",
+    "btnLandscape": "The full landscape",
+    "btnVerify": "Verify the kill switch",
+    "btnOwasp": "OWASP source"
+  },
+  "euAiAct": {
+    "kicker": "EU AI Act, article by article",
+    "title": "How CIRIS lines up with the EU AI Act.",
+    "lede": "For each high-risk obligation in the EU AI Act, here is the shipped CIRIS mechanism that corresponds to it and where it lives in the Constitution and the code. High-risk obligations apply from August 2026, so this is written for the people who have to answer for it.",
+    "bannerA": "Read this as an ",
+    "bannerStrong": "informative engineering correspondence, not legal advice or a certified conformity assessment",
+    "bannerB": ". The CIRIS Constitution itself marks these article mappings “pending legal review.” Every mechanism below was verified live in code by a skeptic whose job was to refute it, but the question of whether that satisfies the law is one for your counsel, not this page.",
+    "colArticle": "Article",
+    "colRequires": "What it requires",
+    "colHow": "How CIRIS addresses it",
+    "rows": [
+      {
+        "art": "Article 9",
+        "requires": "Run a continuous, whole-lifecycle risk process: identify, evaluate, and mitigate foreseeable risks, with particular weight on vulnerable groups and, per 9(7), on training-data bias.",
+        "how": "Every action passes a five-stage decision pipeline (PDMA / CSDMA / DSDMA / IDMA / action-selection) plus a conscience layer before it executes, with a hard-coded DISCRIMINATION prohibition and a signed audit trail as the record that measures worked. For extreme-tail risk, the Constitution's Catastrophic-Risk Evaluation gate requires an independent red-team and dual external sign-off."
+      },
+      {
+        "art": "Article 12",
+        "requires": "Automatically log events over the system's lifetime so behavior is traceable.",
+        "how": "A signed, hash-chained audit trail (SHA-256 chained, Ed25519-signed) rather than a plain log file, so every recorded action is tamper-evident and independently verifiable."
+      },
+      {
+        "art": "Article 13",
+        "requires": "Operate transparently enough that a deployer can interpret the output and use the system correctly.",
+        "how": "The PDMA carries a continuous-monitoring publication duty, and the reasoning-trace API exposes the decision's stage IDs and a contestability path, so the reasoning behind an action is inspectable rather than opaque."
+      },
+      {
+        "art": "Article 14",
+        "requires": "Design for effective human oversight, with a human able to intervene in or stop the system.",
+        "how": "The A0 to A4 autonomy scale grades every deployment by who bears the action, Wisdom-Based Deferral routes uncertainty to a named human Wise Authority, and the fail-secure kill switch lets named humans halt the agent."
+      },
+      {
+        "art": "Article 15",
+        "requires": "Be accurate, robust, and cybersecure across the lifecycle, resilient to error and adversarial manipulation.",
+        "how": "Hybrid post-quantum signing (Ed25519 + ML-DSA-65) with 2-of-3 fail-secure multi-source verification, the Constitution's adversarial-robustness playbook, and measured resilience: zero cross-group leakage across 400 nodes, and the corpus reconstructing with a fifth of holders offline."
+      },
+      {
+        "art": "Article 16",
+        "requires": "Providers of high-risk AI must ensure oversight, logging, and conformity are in place throughout.",
+        "how": "A pre-execution conscience gate on every action, plus the higher autonomy tiers that push each decision's stage ID, verdict, and risk band to a human oversight surface."
+      },
+      {
+        "art": "Article 50",
+        "requires": "Tell people when they are interacting with AI, and mark AI-generated content machine-readably (applies from August 2026).",
+        "how": "AI self-disclosure ships today: is_bot flags and hard-coded, locale-enforced disclosure on every message adapter. Machine-readable content marking via C2PA Content Credentials is being adopted at the media boundary for the August 2026 deadline, so this article is one limb shipped, one limb adopting."
+      },
+      {
+        "art": "Article 72",
+        "requires": "Actively monitor the system in the field after deployment and feed issues back.",
+        "how": "The Constitution's continuous-compliance loop runs telemetry streams into drift detection into review, a standing monitoring loop rather than a one-time audit, surfaced through CIRISLens observability."
+      }
+    ],
+    "footnote": "Mapped against the canonical CIRIS Constitution as of July 2026. Informative correspondence, pending legal review. Tell us if a mapping is wrong and we will fix it.",
+    "sourcesLabel": "Sources",
+    "ctaPara": "The same mechanisms mapped to the security taxonomy, and the whole accountability landscape.",
+    "btnOwasp": "OWASP Agentic mapping",
+    "btnLandscape": "The full landscape",
+    "btnConstitution": "The Constitution"
+  },
+  "msCompare": {
+    "kicker": "Comparison, fixed criteria",
+    "title": "CIRIS vs the Microsoft Agent Governance Toolkit",
+    "lede": "Two serious open-source attempts to govern AI agents, scored on the same eight criteria from public sources, with a citation on every cell. Where Microsoft is strong, we say so. The differences that matter are shipping, an enforced constitution you cannot loosen, and post-quantum signed records.",
+    "sectionLabel": "Head to head",
+    "colCriterion": "Criterion",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "Yes",
+    "valPartial": "Partial",
+    "valNo": "No",
+    "criteria": [
+      "Enforces policy before the action runs",
+      "Signed, tamper-evident decision records",
+      "Cryptographic agent identity",
+      "Kill switch / revoke a rogue agent",
+      "Published, enforced constitution",
+      "Independent third-party verification",
+      "Open source",
+      "Shipping in production"
+    ],
+    "footnote": "Scored from public product docs as of July 2026. If we have a cell wrong, tell us and we will fix it.",
+    "sourcesLabel": "Sources",
+    "concLabel": "What each does well",
+    "msTitle": "Microsoft's real strengths",
+    "msBody": "The Agent Control Specification is a genuine stateless, deterministic, fail-closed policy runtime with eight named intervention points and a five-way verdict model (allow, warn, deny, escalate, transform). It ships DID-based Ed25519 identity, an emergency kill switch, and strong open-source engineering under a permissive MIT license, with deep Azure and Entra integration for enterprises.",
+    "cirisTitle": "Where CIRIS goes further",
+    "cirisBody": "Every action passes a runtime conscience pipeline before it executes, not a post-hoc log. The audit trail is hash-chained and post-quantum signed, and independently re-verified by a separate conformance suite. The kill switch is a fail-secure two-of-three named-human quorum. And the constitution is fixed and published, not an operator-authored policy that defaults to allow.",
+    "ctaPara": "This is one row of a bigger picture. See where both sit among every approach to AI accountability.",
+    "btnLandscape": "The full landscape",
+    "btnCirisGh": "CIRIS on GitHub",
+    "btnMsGh": "Microsoft toolkit"
   }
 }

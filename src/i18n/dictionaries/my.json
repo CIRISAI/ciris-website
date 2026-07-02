@@ -2458,5 +2458,191 @@
     "closeLine": "မသိသောကြောင့် တည်ဆောက်ပါ။",
     "tagline": "သိပ္ပံပညာဝက်ဘ်။ ယနေ့ပင် ပိုင်ဆိုင်ပါ။",
     "cta": "သင့်တယ်လီဖုန်းတွင် ထည့်သွင်းပါ"
+  },
+  "killSwitch": {
+    "kicker": "သင်ကိုယ်တိုင် စစ်ဆေးနိုင်သော လုံခြုံရေး",
+    "title": "ကျွန်ုပ်တို့၏ kill switch ကို သင်ကိုယ်တိုင် အတည်ပြုပါ။",
+    "lede": "AI ဘေးကင်းရေးဆိုင်ရာ အခိုင်အမာပြောဆိုချက်အများစုသည် သင့်ယုံကြည်မှုကို တောင်းဆိုကြသည်။ ဤတစ်ခုမူ သင့်ကိုယ်တိုင် စစ်ဆေးရန် တောင်းဆိုသည်။ repo ကို clone လုပ်ပြီး command တစ်ခုတည်းကို run လုပ်ကာ CIRIS agent ကို ရပ်တန့်နိုင်သော key များသည် တကယ့် FIPS လက်မှတ်ရ hardware ပေါ်တွင် တည်ရှိနေကြောင်း အတည်ပြုပါ။ ကျွန်ုပ်တို့ အပါအဝင် မည်သူ့ကိုမျှ မယုံပါနှင့်။",
+    "s1label": "ဖွဲ့စည်းပုံအခြေခံ kill switch",
+    "s1h2": "အမည်တပ်ထားသော လူသားများသည် CIRIS agent ကို ရပ်တန့်နိုင်သည်။ ထိုအာဏာသည် ကုမ္ပဏီတွင် မဟုတ်ဘဲ hardware တွင် တည်ရှိသည်။",
+    "s1p1": "အဆုံးစွန်ရပ်တန့်ခြင်း HUMANITY_ACCORD ကို ကုမ္ပဏီဖြစ်သော CIRIS၊ ကွန်ရက် သို့မဟုတ် agent ကိုယ်တိုင်က ကိုင်တွယ်ခြင်း မဟုတ်ဘဲ အမည်တပ်ထားသော လူများက ကိုင်တွယ်ထားသည်။ federation အတွင်းရှိ မည်သည့်ပါတီကမျှ ၎င်းကို ခွင့်ပြုခြင်း၊ ရုပ်သိမ်းခြင်း သို့မဟုတ် ကျော်လွှားခြင်း မပြုနိုင်ပါ။ ၎င်းသည် သုံးပုံနှစ်ပုံ live quorum ဖြင့် အလုပ်လုပ်သည်။",
+    "s1p2": "quorum key တစ်ခုစီသည် လက်မှတ်နှစ်ခုကို ပေါင်းစပ်ထားသော hybrid ဖြစ်သည်။ Ed25519 ဝက်ကွက်သည် FIPS လက်မှတ်ရ YubiKey 5 တွင် အခြေခံသည်။ device အတွင်း၌ ထုတ်လုပ်ထားပြီး ထုတ်ယူ၍မရဘဲ လက်မှတ်ရေးထိုးရန် ရုပ်ပိုင်းဆိုင်ရာ ထိတွေ့မှု လိုအပ်သည်။ ML-DSA-65 ဝက်ကွက်ဖြစ်သော post-quantum လက်မှတ်မှာ post-quantum applet မထုတ်လုပ်ရသေးသော YubiKey အောက်တွင် USB stick တစ်ခုသို့ seal-wrapped လုပ်ထားသော software key ဖြစ်သည်။ စုစုပေါင်း key ခြောက်ခု ရှိပြီး သုံးခုကို တပ်ဆင်ထားကာ သုံးခုကို ဗောင်တွင် သိမ်းထားသည်။ ရုပ်သိမ်းမှု စစ်ဆေးခြင်း မအောင်မြင်ခြင်း သို့မဟုတ် မသိရခြင်းကို ရုပ်သိမ်းပြီးဟု သတ်မှတ်သောကြောင့် စနစ်သည် fail secure ဖြစ်သည်။",
+    "s2label": "လွတ်လပ်သော အတည်ပြုမှု",
+    "s2h2": "command တစ်ခုတည်း။ hardware မလို၊ network မလို၊ ကျွန်ုပ်တို့ကို ယုံကြည်ရန် မလိုပါ။",
+    "s2p1": "ကျွန်ုပ်တို့၏ validation harness သည် CIRISVerify ၏ production admission gate verifier အတိအကျကို commit ထားသော key attestation ခြောက်ခုအပေါ် Yubico ၏ ကိုယ်ပိုင် public attestation root pinned copy နှင့် နှိုင်းယှဉ်ကာ ထပ်မံ run လုပ်ပေးသည်။ CIRISVerify repository ကို clone လုပ်ပြီး run လုပ်ပါ။",
+    "cmdCaption": "pinned root အစစ်ဟုတ်မဟုတ် Yubico ထံမှ တိုက်ရိုက် ဆွဲယူ၍ အတည်ပြုပါ။",
+    "provesH": "ဤအရာ သက်သေပြသည့်အချက်",
+    "provesP": "quorum key ခြောက်ခုလုံးသည် Yubico ၏ တကယ့် attestation root သို့ ချိတ်ဆက်ထားသဖြင့် ၎င်းတို့၏ Ed25519 လက်မှတ်ရေးထိုးသည့် ဝက်ကွက်များကို တကယ့် FIPS လက်မှတ်ရ YubiKey 5 hardware အတွင်း၌ ထုတ်လုပ်ခဲ့ကြောင်း သိရသည်။ ထုတ်ယူ၍မရ၊ ထိတွေ့မှု လိုအပ်၍ အတုပြုလုပ်၍မရပါ။",
+    "notProvesH": "ဤအရာ သက်သေမပြသည့်အချက်",
+    "notProvesP": "ML-DSA-65 ဝက်ကွက်သည် YubiKey အောက်ရှိ USB တွင် seal ချထားသော software key ဖြစ်ပြီး hardware attested မဟုတ်ပါ။ ဤ harness သည် သီးခြားစီ အတည်ဖြစ်စေသော USB sealing သို့မဟုတ် live quorum ကို မစစ်ဆေးပါ။ ဤ receipt က မည်သည့်အရာများကို လွှမ်းခြုံသည်ကို သင် အတိအကျ သိစေလိုပါသည်။",
+    "s3label": "တိုင်းတာထားသည်၊ ခန့်မှန်းထားခြင်း မဟုတ်",
+    "s3h2": "post-quantum cryptography သည် production တွင် အလုပ်လုပ်နေပြီး ကိန်းဂဏန်း တိုင်းသည် အများသိရှိနိုင်သည်။",
+    "measuredTag": "တိုင်းတာထားသည်",
+    "measuredLabels": [
+      "core တစ်ခုလျှင် PQC လက်မှတ်ရေးထိုး events",
+      "core တစ်ခုလျှင် AEAD decrypt",
+      "hybrid PQC key exchange",
+      "node 50 မှ 400 ကြား cross-group leak"
+    ],
+    "s3p1": "post-quantum provenance သည် အခမဲ့ မဟုတ်ပါ၊ ကျွန်ုပ်တို့ ကုန်ကျစရိတ်ကို မဖုံးကွယ်ပါ။ hybrid Ed25519 + ML-DSA-65 လက်မှတ်ရေးထိုးမှုသည် classical ထက် ခန့်မှန်းခြေ ၁၅ ဆ နှေးသည်။ event တစ်ခုလျှင် ခန့်မှန်းခြေ 550 microsecond နှင့် 36 microsecond ခန့် နှိုင်းယှဉ်ရလျှင်ဖြစ်သည်။ သိမ်းဆည်းထားသော corpus သည် holder ၅ ပုံ ၁ ပုံ offline ဖြစ်နေချိန် စမ်းသပ်မှု၏ 97.6% တွင် ပြန်လည်တည်ဆောက်နိုင်ပြီး holder ၃ ပုံ ၁ ပုံ offline ဖြစ်နေချိန် 72.7% တွင် ပြန်လည်တည်ဆောက်နိုင်သည်။ ကိန်းဂဏန်းများသည် မျှဝေထားသော CI runner ပေါ်ရှိ single-core median များဖြစ်ပြီး commit တိုင်းတွင် ပြန်လည်ထုတ်လုပ်ထားသည်။",
+    "benchLink": "commit တိုင်းတွင် ပြန်လည်ထုတ်လုပ်ထားသော ကိန်းဂဏန်းအားလုံးကို ကြည့်ရှုပါ",
+    "ctaPara": "အဓိကရည်ရွယ်ချက်မှာ အထက်ပါ စာကြောင်းကို သင် ယုံကြည်ရန် မလိုအပ်ခြင်းပင် ဖြစ်သည်။ သင်ကိုယ်တိုင် စစ်ဆေးနိုင်သည်။",
+    "btnGithub": "GitHub ပေါ်ရှိ CIRISVerify",
+    "btnTrust": "ယုံကြည်မှု မည်သို့အလုပ်လုပ်သနည်း",
+    "btnVerif": "conformance suite",
+    "sources": "ရင်းမြစ်များ: CIRISVerify (Ed25519 + ML-DSA-65 custody attestation, pinned Yubico root), CIRISServer bench-site (တိုင်းတာထားသော စွမ်းဆောင်ရည်), Yubico PKI (attestation root)။ ကိန်းဂဏန်းများကို commit 0b73486, 2026-06-24 တွင် pin လုပ်ထားသည်။"
+  },
+  "owasp": {
+    "kicker": "OWASP Agentic လုံခြုံရေး mapping",
+    "title": "Agentic Applications များအတွက် OWASP Top 10 ကို CIRIS နှင့် mapping ပြုလုပ်ထားသည်။",
+    "lede": "OWASP မှ အမည်ပေးထားသော agentic ခြိမ်းခြောက်မှု ၁၀ ခုအနက် တစ်ခုစီအတွက် ၎င်းကို ဖြေရှင်းသည့် တိကျသော CIRIS mechanism၊ ရိုးသားသော coverage level နှင့် သင် စစ်ဆေးနိုင်သော ကိုးကားချက်ကို ဖော်ပြထားသည်။ ကျွန်ုပ်တို့ အားနည်းသည့်နေရာများ အပါအဝင် taxonomy တစ်ခုလုံးကို mapping ပြုလုပ်ထားသည်။",
+    "callout": "တစ်ခု full ဖြစ်ပြီး ကိုးခု partial ဖြစ်ကာ တစ်ခုမျှ ဖုံးကွယ်ခြင်း မရှိပါ။ ဆယ်ခုလုံးကို claim လုပ်သည့် စာမျက်နှာသည် ကျွန်ုပ်တို့ သင့်ကို မယုံကြည်ရန် ပြောနေသော marketing အတိအကျပင် ဖြစ်လိမ့်မည်။ အောက်ပါ coverage level များသည် ၎င်းတို့ကို ဖြိုချရန် တာဝန်ရှိသော သီးခြား skeptic တစ်ဦး၏ စစ်ဆေးမှုကို ကျော်လွှားနိုင်ခဲ့သည်။ ကာကွယ်မှုတစ်ခုသည် substrate တွင် ရှိသော်လည်း deploy လုပ်ထားသော agent က မရရှိသေးသောနေရာများတွင် ကျွန်ုပ်တို့ အဆိုပါ row တွင် ရှင်းလင်းစွာ ဖော်ပြထားသည်။",
+    "colRisk": "အန္တရာယ်",
+    "colCoverage": "Coverage",
+    "colHow": "CIRIS က ၎င်းကို မည်သို့ဖြေရှင်းသနည်း",
+    "covFull": "အပြည့်အဝ",
+    "covPartial": "တစ်စိတ်တစ်ပိုင်း",
+    "covRoadmap": "Roadmap",
+    "covNone": "မရှိ",
+    "rows": [
+      {
+        "name": "Agent Goal Hijack",
+        "how": "အလွှာများစွာ ကာကွယ်ခြင်း: import လုပ်ထားသော skill နှင့် message များတွင် prompt injection scanning ပြုလုပ်ခြင်း၊ visual injection isolation (conscience evaluator များသည် raw image byte များကို ဘယ်တော့မှ မမြင်ပါ) နှင့် ရလဒ်ဖြစ်သော action တိုင်းကို ၎င်း မဆောင်ရွက်မီ user ၏ မူလ ရည်ရွယ်ချက်နှင့် ပြန်လည်စစ်ဆေးပေးသည့် conscience pipeline တို့ ပါဝင်သည်။ အားနည်းချက်: input scanning သည် pattern အခြေခံဖြစ်ပြီး ရယူထားသော data နှင့် instruction များကို တရားဝင် ခွဲခြားမပေးပါ။"
+      },
+      {
+        "name": "Tool Misuse",
+        "how": "CIRISServer သည် operation တစ်ခု run မလုပ်မီ စစ်ဆေးသော server-enforced never-list ပါသည့် capability-verb allow/deny list ကို ထုတ်ပေးထားသည်။ ထို့ကြောင့် delegate လုပ်ထားသော agent သည် ခွင့်မပြုထားသော ဖျက်ဆီးနိုင်သည့် operation ကို ခေါ်ယူ၍ မရနိုင်ပါ။ သတိပေးချက်: ယခုအချိန်တွင် ၎င်းသည် fabric layer ကိုသာ ကာကွယ်ပေးထားပြီး deploy လုပ်ထားသော agent ၏ ကိုယ်ပိုင် LLM tool call များကို မထိန်းချုပ်သေးပါ။ agent inheritance သည် စီစဉ်ထားသော အဆင့်တစ်ခု ဖြစ်သည်။"
+      },
+      {
+        "name": "Identity & Privilege Abuse",
+        "how": "substrate အတွင်း scope သတ်မှတ်ထားသော၊ delegate လုပ်နိုင်သော၊ ရုပ်သိမ်းနိုင်သော အခွင့်အာဏာ: လက်မှတ်ရေးထိုးထားသော edge များတွင် ပါရှိသော ကန့်သတ်ချက်များ၊ အာဏာမြင့်တက်လာခြင်း မဖြစ်စေရန် အမြင့်ဆုံးအာဏာများကို ပြန်လည် delegate ပြုလုပ်ခြင်းကို တားဆီးသော never-list၊ တင်းကျပ်ရုံသာ ပြုလုပ်နိုင်သော approval နှင့် ချက်ချင်းရုပ်သိမ်းနိုင်ခြင်း တို့ ပါဝင်သည်။ သတိပေးချက်: ယခုအချိန်တွင် fabric ၏ owner-op surface ပေါ်တွင်သာ အတည်ဖြစ်စေထားပြီး deploy လုပ်ထားသော agent inheritance သည် စီစဉ်ထားသော အဆင့်တစ်ခု ဖြစ်သည်။"
+      },
+      {
+        "name": "Agentic Supply Chain",
+        "how": "CIRISVerify ၏ post-quantum လက်မှတ်ရေးထိုးထားသော module manifest များ (file-tree hash အပြည့်အစုံအပေါ် Ed25519 + ML-DSA-65) နှင့် federated component များအတွက် လက်မှတ်ရေးထိုးထား၍ attest ပြုလုပ်ထားသော identity မှတစ်ဆင့် build integrity ကို ရရှိသည်။ အားနည်းချက်: CIRIS ၏ ကိုယ်ပိုင် build နှင့် module chain ကိုသာ လွှမ်းခြုံပြီး third-party MCP server များကို မလွှမ်းခြုံပါ။"
+      },
+      {
+        "name": "Unexpected Code Execution",
+        "how": "semantic conscience gate များ (entropy, coherence, optimization veto) သည် tool action တိုင်း မဆောင်ရွက်မီ run လုပ်ပြီး မသေချာမှုရှိပါက လူသားထံ လွှဲပြောင်းသည်။ အားနည်းချက်: ဤသည်မှာ semantic review ဖြစ်ပြီး deterministic code sandbox မဟုတ်ပါ။"
+      },
+      {
+        "name": "Memory & Context Poisoning",
+        "how": "graph memory ထဲသို့ ရေးသွင်းမှု တိုင်းသည် scope သတ်မှတ်ထားသော version graph ထဲသို့ ဆိတ်ဆိတ် side effect အနေနှင့် မဟုတ်ဘဲ ထိန်းချုပ်ထားသော၊ conscience-checked action တစ်ခု ဖြစ်သည်။ ထို့ကြောင့် poisoning ဖြစ်စေသည့် write တစ်ခုသည် စစ်ဆေးနိုင်သော ဆုံးဖြတ်ချက် တစ်ခု ဖြစ်လာသည်။ အားနည်းချက်: ရယူထားသော content ၏ trust scoring သည် တစ်စိတ်တစ်ပိုင်းသာ ဖြစ်သည်။"
+      },
+      {
+        "name": "Insecure Inter-Agent Communication",
+        "how": "CIRISEdge သည် inter-agent message တိုင်းကို hybrid Ed25519 + ML-DSA-65 signature verification ဖြင့် အဆုံးသတ်သော ခုနစ်ဆင့် pipeline တစ်ခုမှတစ်ဆင့် စစ်ဆေးသည် (size cap, typed deserialize, schema allow-list, destination-key check, replay window)။ အားနည်းချက်: federation transport ကို ဆက်လက်တည်ဆောက်နေဆဲ ဖြစ်သည်။"
+      },
+      {
+        "name": "Cascading Failures",
+        "how": "လွတ်လပ်သော အလွှာသုံးထပ်ဖြင့် ကန့်သတ်ထားသည်: အန္တရာယ်ရှိသော call များအတွက် per-service circuit breaker (closed / open / half-open)၊ မကောင်းသော action တစ်ခု ပျံ့နှံ့မသွားမီ ရပ်တန့်ပေးသော conscience pipeline နှင့် node 50 မှ 400 ကြားတွင် cross-group leakage သုည ရှိကြောင်း တိုင်းတာထားသော mesh isolation တို့ ဖြစ်သည်။"
+      },
+      {
+        "name": "Human-Agent Trust Exploitation",
+        "how": "conscience pipeline သည် human reviewer တစ်ဦးက မမြင်မီ agent ၏ ကိုယ်ပိုင် ရှင်းလင်းချက် စာသား (reviewer ကို ပြသသည့် အကြောင်းရင်း အပါအဝင်) ကို overconfidence နှင့် manipulation အတွက် score ပေးသည်။ အားနည်းချက်: ၎င်းသည် စစ်ဆေးနေသော model family တူညီသည့် model ဖြင့်ပင် audit ပြုလုပ်ထားသည်။"
+      },
+      {
+        "name": "Rogue Agents",
+        "how": "အလွှာသုံးထပ်: conscience ခြောက်ခုသည် အကျိုးဆက်ရှိသော action တိုင်းကို မဆောင်ရွက်မီ gate ပေးသည်၊ hash-chained လက်မှတ်ရေးထိုးထားသော audit trail က ဖုံးကွယ်မှုကို နောက်ပိုင်း တွေ့ရှိနိုင်စေသည်၊ fail-secure kill switch က အမည်တပ်ထားသော လူများအား လမ်းလွှဲနေသော agent ကို ရပ်တန့်ခွင့်ပေးသည်။ အားနည်းချက်: သိမ်ငယ်စွာ လမ်းလွှဲနေသော်လည်း ညီညွတ်နေဆဲဖြစ်သည့် agent ကို ဖမ်းယူခြင်းသည် သဘာဝအားဖြင့် ကန့်သတ်ချက် ရှိသည်။"
+      }
+    ],
+    "footnote": "Agentic Applications များအတွက် OWASP Top 10 ကို 2025 ခုနှစ် ဒီဇင်ဘာလတွင် ထုတ်ပြန်ခဲ့သည်။ 2026 ခုနှစ် ဇူလိုင်လအထိ CIRIS နှင့် mapping ပြုလုပ်ထားသည်။ cell တစ်ခုခု မှားယွင်းနေပါက ကျွန်ုပ်တို့ကို အသိပေးပါက ပြင်ဆင်ပေးပါမည်။",
+    "sourcesLabel": "ရင်းမြစ်များ",
+    "ctaPara": "taxonomy သည် ရှုထောင့်တစ်ခုသာ ဖြစ်သည်။ AI accountability ဆိုင်ရာ ချဉ်းကပ်မှုအားလုံးအနက် CIRIS မည်သို့ ရပ်တည်နေသည်နှင့် kill switch ကို မည်သို့ လွတ်လပ်စွာ အတည်ပြုနိုင်သည်ကို ကြည့်ရှုပါ။",
+    "btnLandscape": "အပြည့်အစုံ landscape",
+    "btnVerify": "kill switch ကို အတည်ပြုပါ",
+    "btnOwasp": "OWASP ရင်းမြစ်"
+  },
+  "euAiAct": {
+    "kicker": "EU AI Act ကို article အလိုက်",
+    "title": "CIRIS သည် EU AI Act နှင့် မည်သို့ ကိုက်ညီသနည်း။",
+    "lede": "EU AI Act ရှိ high-risk တာဝန်တစ်ခုစီအတွက် ၎င်းနှင့် ကိုက်ညီသော ထုတ်ပြန်ပြီးသား CIRIS mechanism နှင့် ၎င်းသည် Constitution နှင့် code တွင် မည်သည့်နေရာ၌ ရှိသည်ကို ဖော်ပြထားသည်။ High-risk တာဝန်များသည် 2026 ခုနှစ် သြဂုတ်လမှစတင်၍ သက်ရောက်မည်ဖြစ်သောကြောင့် ဤစာမျက်နှာသည် ဤအတွက် တာဝန်ယူဖြေကြားရမည့်သူများအတွက် ရေးသားထားသည်။",
+    "bannerA": "ဤစာမျက်နှာကို ",
+    "bannerStrong": "ဥပဒေအကြံဉာဏ် သို့မဟုတ် လက်မှတ်ရ conformity assessment မဟုတ်ဘဲ အချက်အလက်ပေးသော engineering correspondence တစ်ခု",
+    "bannerB": " အဖြစ် ဖတ်ရှုပါ။ CIRIS Constitution ကိုယ်တိုင်ကပင် ဤ article mapping များကို \"pending legal review\" ဟု အမှတ်အသားပြုထားသည်။ အောက်ပါ mechanism တိုင်းကို ၎င်းအား ငြင်းဆန်ရန် တာဝန်ရှိသော skeptic တစ်ဦးက code တွင် တိုက်ရိုက် အတည်ပြုခဲ့သည်။ သို့သော် ၎င်းသည် ဥပဒေနှင့် ကိုက်ညီမကိုက်ညီ ဆိုသည့် မေးခွန်းမှာ ဤစာမျက်နှာအတွက် မဟုတ်ဘဲ သင့် ရှေ့နေအတွက် ဖြစ်သည်။",
+    "colArticle": "Article",
+    "colRequires": "လိုအပ်ချက်",
+    "colHow": "CIRIS က ၎င်းကို မည်သို့ဖြေရှင်းသနည်း",
+    "rows": [
+      {
+        "art": "Article 9",
+        "requires": "စဉ်ဆက်မပြတ်ဖြစ်သော lifecycle တစ်ခုလုံးဆိုင်ရာ risk process တစ်ခု ဆောင်ရွက်ရန်: ရှုမြင်နိုင်သော အန္တရာယ်များကို ဖော်ထုတ်ခြင်း၊ အကဲဖြတ်ခြင်းနှင့် လျှော့ချခြင်း၊ ထိခိုက်လွယ်သော အုပ်စုများနှင့် 9(7) အရ training-data bias အပေါ်တွင် အထူးအလေးထားခြင်း တို့ ပါဝင်သည်။",
+        "how": "action တိုင်းသည် ၎င်း မဆောင်ရွက်မီ ငါးဆင့်ပါ ဆုံးဖြတ်ချက် pipeline (PDMA / CSDMA / DSDMA / IDMA / action-selection) နှင့် conscience layer တစ်ခုကို ဖြတ်သန်းရသည်။ hard-coded DISCRIMINATION တားမြစ်ချက်နှင့် ရလဒ်ကို တိုင်းတာသည့် မှတ်တမ်းအဖြစ် လက်မှတ်ရေးထိုးထားသော audit trail တို့ ပါဝင်သည်။ အလွန်အန္တရာယ်များသော risk အတွက် Constitution ၏ Catastrophic-Risk Evaluation gate က လွတ်လပ်သော red-team နှင့် ပြင်ပ dual sign-off ကို လိုအပ်သည်။"
+      },
+      {
+        "art": "Article 12",
+        "requires": "စနစ်၏ သက်တမ်းတစ်လျှောက် event များကို အလိုအလျောက် log ချထားခြင်းဖြင့် အပြုအမူများကို ခြေရာခံနိုင်စေခြင်း။",
+        "how": "ရိုးရှင်းသော log file အစား SHA-256 ဖြင့် chain ချိတ်ထား၍ Ed25519 ဖြင့် လက်မှတ်ရေးထိုးထားသော hash-chained audit trail တစ်ခု ဖြစ်သည်။ ထို့ကြောင့် မှတ်တမ်းတင်ထားသော action တိုင်းသည် ပြင်ဆင်ခြင်းကို ထောက်ပြနိုင်ပြီး လွတ်လပ်စွာ အတည်ပြုနိုင်သည်။"
+      },
+      {
+        "art": "Article 13",
+        "requires": "deployer တစ်ဦးက output ကို အဓိပ္ပာယ်ဖွင့်ဆိုနိုင်ပြီး စနစ်ကို မှန်ကန်စွာ အသုံးပြုနိုင်ရန် လုံလောက်စွာ ပွင့်လင်းစွာ လည်ပတ်ခြင်း။",
+        "how": "PDMA တွင် စဉ်ဆက်မပြတ် စောင့်ကြည့်မှု ထုတ်ပြန်ရသည့် တာဝန် ပါဝင်သည်။ reasoning-trace API က ဆုံးဖြတ်ချက်၏ stage ID များနှင့် ကန့်ကွက်နိုင်သည့် လမ်းကြောင်းကို ဖော်ထုတ်ပေးသည်။ ထို့ကြောင့် action တစ်ခု၏ နောက်ကွယ်ရှိ ဆင်ခြင်တုံတရားသည် ဖုံးကွယ်ထားခြင်း မဟုတ်ဘဲ စစ်ဆေးနိုင်သည်။"
+      },
+      {
+        "art": "Article 14",
+        "requires": "လူသားတစ်ဦးက စနစ်ကို ဝင်ရောက်စွက်ဖက်နိုင်ခြင်း သို့မဟုတ် ရပ်တန့်နိုင်ခြင်းရှိသော ထိရောက်သည့် human oversight အတွက် ဒီဇိုင်းဆွဲထားခြင်း။",
+        "how": "A0 မှ A4 အထိ autonomy scale သည် action ကို မည်သူက တာဝန်ယူသည်ဟု deployment တိုင်းကို အဆင့်သတ်မှတ်သည်။ Wisdom-Based Deferral က မသေချာမှုများကို အမည်တပ်ထားသော လူသား Wise Authority ထံ လမ်းကြောင်းလွှဲပေးသည်။ fail-secure kill switch က အမည်တပ်ထားသော လူများအား agent ကို ရပ်တန့်ခွင့်ပေးသည်။"
+      },
+      {
+        "art": "Article 15",
+        "requires": "lifecycle တစ်လျှောက်လုံးတွင် တိကျပြီး ခိုင်မာကာ cyber လုံခြုံမှု ရှိစေရန်၊ အမှားများနှင့် adversarial manipulation ကို ခံနိုင်ရည်ရှိစေရန်။",
+        "how": "2-of-3 fail-secure multi-source verification ပါသော hybrid post-quantum လက်မှတ်ရေးထိုးမှု (Ed25519 + ML-DSA-65)၊ Constitution ၏ adversarial-robustness playbook နှင့် တိုင်းတာထားသော resilience: node 400 တစ်လျှောက် cross-group leakage သုည ရှိခြင်းနှင့် holder ၅ ပုံ ၁ ပုံ offline ဖြစ်နေချိန် corpus ပြန်လည်တည်ဆောက်နိုင်ခြင်း တို့ ဖြစ်သည်။"
+      },
+      {
+        "art": "Article 16",
+        "requires": "high-risk AI ပံ့ပိုးပေးသူများသည် oversight၊ logging နှင့် conformity တို့ တစ်လျှောက်လုံး ရှိစေရန် သေချာစေရမည်။",
+        "how": "action တိုင်း၌ pre-execution conscience gate တစ်ခုနှင့် ဆုံးဖြတ်ချက် တစ်ခုစီ၏ stage ID၊ verdict နှင့် risk band ကို human oversight surface သို့ ပို့ပေးသော အဆင့်မြင့် autonomy tier များ တို့ ပါဝင်သည်။"
+      },
+      {
+        "art": "Article 50",
+        "requires": "လူများအား AI နှင့် အပြန်အလှန် ဆက်သွယ်နေသည်ကို အသိပေးပြီး AI-ထုတ်လုပ်သော content ကို machine-readable အနေဖြင့် အမှတ်အသားပြုရန် (2026 ခုနှစ် သြဂုတ်လမှစတင်၍ သက်ရောက်သည်)။",
+        "how": "AI self-disclosure ကို ယနေ့ ထုတ်ပြန်ပြီး ဖြစ်သည်: is_bot flag များနှင့် message adapter တိုင်းတွင် hard-coded, locale-enforced disclosure ပါဝင်သည်။ C2PA Content Credentials မှတစ်ဆင့် machine-readable content အမှတ်အသားပြုမှုကို 2026 ခုနှစ် သြဂုတ်လ deadline အတွက် media boundary တွင် အသုံးချနေပြီ ဖြစ်သောကြောင့် ဤ article သည် တစ်ဖက်တွင် ထုတ်ပြန်ပြီးသား၊ တစ်ဖက်တွင် အသုံးချနေဆဲ ဖြစ်သည်။"
+      },
+      {
+        "art": "Article 72",
+        "requires": "deployment ပြီးနောက် စနစ်ကို field တွင် တက်ကြွစွာ စောင့်ကြည့်ပြီး ပြဿနာများကို ပြန်လည် ပေါင်းစပ်ခြင်း။",
+        "how": "Constitution ၏ continuous-compliance loop သည် telemetry stream များကို drift detection သို့၊ ထို့နောက် review သို့ ဆက်လက် run လုပ်ပေးသည်။ တစ်ကြိမ်တည်း audit မဟုတ်ဘဲ CIRISLens observability မှတစ်ဆင့် ဖော်ထုတ်ပေးသော ဆက်တိုက် monitoring loop တစ်ခု ဖြစ်သည်။"
+      }
+    ],
+    "footnote": "2026 ခုနှစ် ဇူလိုင်လအထိ canonical CIRIS Constitution နှင့် နှိုင်းယှဉ် mapping ပြုလုပ်ထားသည်။ pending legal review ဖြစ်သော အချက်အလက်ပေးသော correspondence ဖြစ်သည်။ mapping တစ်ခုခု မှားယွင်းနေပါက ကျွန်ုပ်တို့ကို အသိပေးပါက ပြင်ဆင်ပေးပါမည်။",
+    "sourcesLabel": "ရင်းမြစ်များ",
+    "ctaPara": "အလားတူ mechanism များကို security taxonomy နှင့် accountability landscape တစ်ခုလုံးနှင့် mapping ပြုလုပ်ထားသည်။",
+    "btnOwasp": "OWASP Agentic mapping",
+    "btnLandscape": "အပြည့်အစုံ landscape",
+    "btnConstitution": "Constitution"
+  },
+  "msCompare": {
+    "kicker": "နှိုင်းယှဉ်ချက်၊ တည်ငြိမ်သော criteria",
+    "title": "CIRIS နှင့် Microsoft Agent Governance Toolkit",
+    "lede": "AI agent များကို ထိန်းချုပ်ရန် လေးနက်သော open-source ကြိုးပမ်းမှု နှစ်ခုကို public ရင်းမြစ်များမှ criteria ရှစ်ခု တူညီစွာ ဖြင့် score ပေးထားပြီး cell တိုင်း၌ ကိုးကားချက် ပါဝင်သည်။ Microsoft အားကောင်းသော နေရာများတွင် ကျွန်ုပ်တို့ ထိုအတိုင်း ဖော်ပြသည်။ အရေးကြီးသော ကွာခြားချက်များမှာ ထုတ်ပြန်ပြီးဖြစ်ခြင်း၊ သင် ချေဖျက်၍ မရသော enforced constitution နှင့် post-quantum လက်မှတ်ရေးထိုးထားသော မှတ်တမ်းများ ဖြစ်သည်။",
+    "sectionLabel": "တိုက်ရိုက်နှိုင်းယှဉ်ချက်",
+    "colCriterion": "Criterion",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "ဟုတ်ကဲ့",
+    "valPartial": "တစ်စိတ်တစ်ပိုင်း",
+    "valNo": "မဟုတ်ပါ",
+    "criteria": [
+      "action မ run မီ policy ကို အတည်ဖြစ်စေခြင်း",
+      "လက်မှတ်ရေးထိုးထားပြီး ပြင်ဆင်ခြင်းကို ထောက်ပြနိုင်သော ဆုံးဖြတ်ချက် မှတ်တမ်းများ",
+      "Cryptographic agent identity",
+      "Kill switch / လမ်းလွှဲနေသော agent ကို ရုပ်သိမ်းခြင်း",
+      "ထုတ်ပြန်ထားပြီး အတည်ဖြစ်စေထားသော constitution",
+      "လွတ်လပ်သော third-party အတည်ပြုမှု",
+      "Open source",
+      "production တွင် ထုတ်ပြန်ထားခြင်း"
+    ],
+    "footnote": "2026 ခုနှစ် ဇူလိုင်လအထိ public product document များမှ score ပေးထားသည်။ cell တစ်ခုခု မှားယွင်းနေပါက ကျွန်ုပ်တို့ကို အသိပေးပါက ပြင်ဆင်ပေးပါမည်။",
+    "sourcesLabel": "ရင်းမြစ်များ",
+    "concLabel": "တစ်ခုစီ ကောင်းမွန်သောအချက်များ",
+    "msTitle": "Microsoft ၏ တကယ့် အားသာချက်များ",
+    "msBody": "Agent Control Specification သည် intervention point ရှစ်ခုနှင့် verdict model ငါးမျိုး (allow, warn, deny, escalate, transform) ပါဝင်သော တကယ့် stateless, deterministic, fail-closed policy runtime တစ်ခု ဖြစ်သည်။ DID-based Ed25519 identity၊ emergency kill switch နှင့် permissive MIT license အောက်ရှိ ခိုင်မာသော open-source engineering ကို ထုတ်ပေးထားပြီး enterprise များအတွက် Azure နှင့် Entra နှင့် နက်ရှိုင်းသော integration ရှိသည်။",
+    "cirisTitle": "CIRIS ထပ်မံ ဆောင်ရွက်ထားသောနေရာများ",
+    "cirisBody": "action တိုင်းသည် ၎င်း မဆောင်ရွက်မီ post-hoc log မဟုတ်ဘဲ runtime conscience pipeline ကို ဖြတ်သန်းရသည်။ audit trail သည် hash-chained ဖြစ်ပြီး post-quantum လက်မှတ်ရေးထိုးထားကာ သီးခြား conformance suite တစ်ခုက လွတ်လပ်စွာ ပြန်လည် အတည်ပြုပေးသည်။ kill switch သည် fail-secure two-of-three named-human quorum တစ်ခု ဖြစ်သည်။ constitution မှာလည်း ပုံသေဖြစ်၍ ထုတ်ပြန်ထားပြီး default အနေဖြင့် ခွင့်ပြုသည့် operator-authored policy မဟုတ်ပါ။",
+    "ctaPara": "ဤသည်မှာ ပုံရိပ်ကြီးတစ်ခု၏ row တစ်ကြောင်းသာ ဖြစ်သည်။ AI accountability ဆိုင်ရာ ချဉ်းကပ်မှုအားလုံးအနက် နှစ်ခုစလုံး မည်သို့ ရပ်တည်နေသည်ကို ကြည့်ရှုပါ။",
+    "btnLandscape": "အပြည့်အစုံ landscape",
+    "btnCirisGh": "GitHub ပေါ်ရှိ CIRIS",
+    "btnMsGh": "Microsoft toolkit"
   }
 }

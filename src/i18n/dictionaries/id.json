@@ -2458,5 +2458,191 @@
     "closeLine": "Bangunlah karena kamu tidak tahu.",
     "tagline": "Jaringan epistemik. Miliki hari ini.",
     "cta": "Pasang di ponselmu"
+  },
+  "killSwitch": {
+    "kicker": "Keamanan yang dapat Anda periksa",
+    "title": "Verifikasi sendiri kill switch kami.",
+    "lede": "Sebagian besar klaim keamanan AI meminta kepercayaan Anda. Yang ini meminta Anda untuk memeriksanya. Clone repo, jalankan satu perintah, dan pastikan bahwa kunci yang mampu menghentikan agen CIRIS benar-benar berada pada perangkat keras bersertifikat FIPS. Jangan percaya siapa pun, termasuk kami.",
+    "s1label": "Kill switch konstitusional",
+    "s1h2": "Manusia yang telah ditunjuk dapat menghentikan agen CIRIS. Kekuasaan ini berada pada perangkat keras, bukan pada perusahaan.",
+    "s1p1": "Penghentian jalan terakhir, HUMANITY_ACCORD, dipegang oleh orang-orang yang telah ditunjuk, bukan oleh CIRIS sebagai perusahaan, jaringan, atau agen itu sendiri. Tidak ada pihak di dalam federasi yang dapat memberikan, mencabut, atau membatalkannya. Mekanisme ini aktif berdasarkan kuorum langsung dua dari tiga.",
+    "s1p2": "Setiap kunci kuorum adalah hibrida dari dua tanda tangan yang terikat bersama. Bagian Ed25519 berakar pada YubiKey 5 bersertifikat FIPS: dibuat di dalam perangkat, tidak dapat diekstraksi, dan memerlukan sentuhan fisik untuk menandatangani. Bagian ML-DSA-65, tanda tangan pasca-kuantum, adalah kunci perangkat lunak yang disegel ke stik USB di bawah YubiKey yang sama, karena belum ada YubiKey yang menyertakan applet pasca-kuantum. Total enam kunci, tiga terpasang dan tiga tersimpan di brankas. Pemeriksaan pencabutan yang gagal atau tidak diketahui statusnya diperlakukan sebagai dicabut, sehingga sistem gagal secara aman.",
+    "s2label": "Verifikasi independen",
+    "s2h2": "Satu perintah. Tanpa perangkat keras, tanpa jaringan, tanpa perlu memercayai kami.",
+    "s2p1": "Kerangka validasi kami menjalankan ulang verifier gerbang admisi produksi CIRISVerify yang persis sama terhadap enam atestasi kunci yang telah di-commit, dibandingkan dengan salinan root atestasi publik Yubico yang telah dipatok (pinned). Clone repositori CIRISVerify dan jalankan:",
+    "cmdCaption": "Pastikan root yang telah dipatok itu asli dengan mengambilnya langsung dari Yubico:",
+    "provesH": "Apa yang dibuktikan ini",
+    "provesP": "Keenam kunci kuorum terhubung secara rantai ke root atestasi asli Yubico, sehingga bagian penandatanganan Ed25519 mereka dibuat di dalam perangkat keras YubiKey 5 asli bersertifikat FIPS: tidak dapat diekstraksi, memerlukan sentuhan, dan tidak dapat dipalsukan.",
+    "notProvesH": "Apa yang tidak dibuktikan",
+    "notProvesP": "Bagian ML-DSA-65 adalah kunci perangkat lunak yang disegel ke USB di bawah YubiKey, bukan yang diatestasi oleh perangkat keras. Kerangka ini tidak memeriksa penyegelan USB atau kuorum langsung, yang diberlakukan secara terpisah. Kami lebih memilih Anda tahu persis apa yang dicakup oleh bukti ini.",
+    "s3label": "Diukur, bukan sekadar diklaim",
+    "s3h2": "Kriptografi pasca-kuantum ini berjalan di produksi, dan setiap angka bersifat publik.",
+    "measuredTag": "diukur",
+    "measuredLabels": [
+      "peristiwa bertanda tangan PQC per inti",
+      "dekripsi AEAD per inti",
+      "pertukaran kunci PQC hibrida",
+      "kebocoran lintas grup, 50 hingga 400 node"
+    ],
+    "s3p1": "Provenans pasca-kuantum tidak gratis, dan kami tidak menyembunyikan biayanya: penandatanganan hibrida Ed25519 + ML-DSA-65 berjalan sekitar lima belas kali lebih lambat dibanding metode klasik, kira-kira 550 mikrodetik dibanding 36 per peristiwa. Korpus yang tersimpan berhasil direkonstruksi pada 97,6% percobaan dengan seperlima pemegang kunci offline, dan 72,7% dengan sepertiga offline. Angka-angka ini adalah median inti tunggal pada runner CI bersama, yang dihasilkan ulang pada setiap commit.",
+    "benchLink": "Lihat setiap angka, dihasilkan ulang pada setiap commit",
+    "ctaPara": "Intinya, Anda tidak perlu memercayai kalimat di atas. Anda bisa menjalankan pemeriksaannya sendiri.",
+    "btnGithub": "CIRISVerify di GitHub",
+    "btnTrust": "Cara kerja kepercayaan",
+    "btnVerif": "Rangkaian uji konformansi",
+    "sources": "Sumber: CIRISVerify (atestasi kustodian Ed25519 + ML-DSA-65, root Yubico yang dipatok), situs benchmark CIRISServer (kinerja terukur), PKI Yubico (root atestasi). Angka dipatok pada commit 0b73486, 2026-06-24."
+  },
+  "owasp": {
+    "kicker": "Pemetaan keamanan Agentic OWASP",
+    "title": "OWASP Top 10 for Agentic Applications, dipetakan ke CIRIS.",
+    "lede": "Untuk setiap satu dari sepuluh ancaman agentic yang disebutkan OWASP, berikut ini mekanisme spesifik CIRIS yang menanganinya, tingkat cakupan yang jujur, dan sitasi yang dapat Anda periksa. Kami memetakan seluruh taksonomi, termasuk bagian yang masih kurang.",
+    "callout": "Satu penuh, sembilan sebagian, tidak ada yang dilebih-lebihkan. Halaman yang mengklaim semua sepuluh terpenuhi justru akan menjadi pemasaran yang kami minta Anda untuk tidak percayai. Tingkat cakupan di bawah ini telah bertahan dari pengujian seorang skeptis terpisah yang tugasnya adalah menjatuhkannya, dan ketika sebuah pertahanan ada pada substrat tetapi agen yang sudah diterapkan belum mewarisinya, kami menyatakannya di baris tersebut.",
+    "colRisk": "Risiko",
+    "colCoverage": "Cakupan",
+    "colHow": "Cara CIRIS mengatasinya",
+    "covFull": "Penuh",
+    "covPartial": "Sebagian",
+    "covRoadmap": "Peta jalan",
+    "covNone": "Tidak ada",
+    "rows": [
+      {
+        "name": "Pembajakan Tujuan Agen",
+        "how": "Pertahanan berlapis: pemindaian prompt-injection pada skill dan pesan yang diimpor, isolasi visual-injection (evaluator conscience tidak pernah melihat byte gambar mentah), dan pipeline conscience yang memeriksa ulang setiap tindakan yang dihasilkan terhadap maksud asli pengguna sebelum dijalankan. Kesenjangan: pemindaian input berbasis pola dan tidak secara formal memisahkan data yang diambil dari instruksi."
+      },
+      {
+        "name": "Penyalahgunaan Tool",
+        "how": "CIRISServer menyertakan daftar izin/tolak berbasis capability-verb dengan daftar larangan (never-list) yang diberlakukan oleh server, diperiksa sebelum operasi dijalankan, sehingga agen yang didelegasikan tidak dapat memanggil operasi destruktif yang tidak diberikan kepadanya. Catatan: saat ini fitur ini menjaga lapisan fabric dan belum mengatur pemanggilan tool LLM milik agen yang diterapkan itu sendiri; pewarisan pada agen adalah fase yang direncanakan."
+      },
+      {
+        "name": "Penyalahgunaan Identitas dan Hak Akses",
+        "how": "Otoritas yang dibatasi ruang lingkupnya, didelegasikan, dan dapat dicabut di dalam substrat: batasan dibawa dalam edge bertanda tangan, daftar larangan yang mencegah pendelegasian ulang kekuasaan tertinggi sehingga otoritas tidak dapat meningkat, persetujuan yang hanya bisa diperketat, dan pencabutan instan. Catatan: saat ini diberlakukan pada permukaan owner-op fabric; pewarisan pada agen yang diterapkan adalah fase yang direncanakan."
+      },
+      {
+        "name": "Rantai Pasokan Agentic",
+        "how": "Integritas build melalui manifes modul bertanda tangan pasca-kuantum dari CIRISVerify (Ed25519 + ML-DSA-65 di atas hash pohon berkas lengkap), ditambah identitas bertanda tangan dan teratestasi untuk komponen federasi. Kesenjangan: mencakup rantai build dan modul milik CIRIS sendiri, bukan server MCP pihak ketiga secara sembarangan."
+      },
+      {
+        "name": "Eksekusi Kode Tak Terduga",
+        "how": "Gerbang conscience semantik (entropi, koherensi, veto optimisasi) berjalan pada setiap tindakan tool sebelum dijalankan, dan ketidakpastian dialihkan ke manusia. Kesenjangan: ini adalah tinjauan semantik, bukan sandbox kode yang deterministik."
+      },
+      {
+        "name": "Peracunan Memori dan Konteks",
+        "how": "Setiap penulisan ke memori graf adalah tindakan yang diatur dan diperiksa oleh conscience ke dalam graf yang dibatasi ruang lingkupnya dan diberi versi, bukan efek samping yang diam-diam terjadi, sehingga penulisan yang beracun pun tetap menjadi keputusan yang dapat diaudit. Kesenjangan: penilaian kepercayaan (trust-scoring) atas konten yang diambil masih sebagian."
+      },
+      {
+        "name": "Komunikasi Antar-Agen yang Tidak Aman",
+        "how": "CIRISEdge memverifikasi setiap pesan antar-agen melalui pipeline tujuh langkah yang berakhir pada verifikasi tanda tangan hibrida Ed25519 + ML-DSA-65 (batas ukuran, deserialisasi bertipe, daftar izin skema, pemeriksaan kunci tujuan, jendela replay). Kesenjangan: transport federasi masih dalam pembangunan."
+      },
+      {
+        "name": "Kegagalan Beruntun",
+        "how": "Dibatasi pada tiga lapisan independen: circuit breaker per layanan (closed / open / half-open) di sekitar pemanggilan yang berisiko, pipeline conscience yang menghentikan tindakan buruk sebelum menyebar, dan isolasi mesh yang terukur nol kebocoran lintas grup di seluruh 50 hingga 400 node."
+      },
+      {
+        "name": "Eksploitasi Kepercayaan Manusia-Agen",
+        "how": "Pipeline conscience menilai teks penjelasan agen itu sendiri, termasuk alasan yang ditampilkan kepada peninjau manusia, untuk mendeteksi kepercayaan diri berlebihan dan manipulasi sebelum manusia sempat melihatnya. Kesenjangan: audit ini menggunakan keluarga model yang sama dengan yang sedang diperiksa."
+      },
+      {
+        "name": "Agen Nakal",
+        "how": "Tiga lapisan: enam conscience menjaga setiap tindakan yang berdampak sebelum dijalankan, jejak audit bertanda tangan dan berantai hash membuat penyembunyian dapat dideteksi setelah kejadian, dan kill switch yang gagal secara aman memungkinkan manusia yang ditunjuk menghentikan agen yang menyimpang. Kesenjangan: mendeteksi agen yang menyimpang secara halus namun tetap koheren pada dasarnya memiliki batas."
+      }
+    ],
+    "footnote": "OWASP Top 10 for Agentic Applications, diterbitkan Desember 2025. Dipetakan ke CIRIS per Juli 2026. Beri tahu kami jika ada sel yang salah dan kami akan memperbaikinya.",
+    "sourcesLabel": "Sumber",
+    "ctaPara": "Taksonomi ini hanyalah satu sudut pandang. Lihat posisi CIRIS di antara setiap pendekatan akuntabilitas AI, dan bagaimana kill switch ini dapat diverifikasi secara independen.",
+    "btnLandscape": "Lanskap lengkap",
+    "btnVerify": "Verifikasi kill switch",
+    "btnOwasp": "Sumber OWASP"
+  },
+  "euAiAct": {
+    "kicker": "EU AI Act, pasal demi pasal",
+    "title": "Bagaimana CIRIS sejalan dengan EU AI Act.",
+    "lede": "Untuk setiap kewajiban berisiko tinggi dalam EU AI Act, berikut ini mekanisme CIRIS yang sudah dirilis dan berkaitan dengannya, serta letaknya di dalam Constitution dan kode. Kewajiban berisiko tinggi berlaku mulai Agustus 2026, sehingga halaman ini ditulis untuk orang-orang yang harus mempertanggungjawabkannya.",
+    "bannerA": "Bacalah ini sebagai ",
+    "bannerStrong": "korespondensi teknik yang bersifat informatif, bukan nasihat hukum atau penilaian kesesuaian bersertifikat",
+    "bannerB": ". CIRIS Constitution sendiri menandai pemetaan pasal-pasal ini sebagai “menunggu tinjauan hukum.” Setiap mekanisme di bawah ini telah diverifikasi langsung di dalam kode oleh seorang skeptis yang tugasnya adalah menyanggahnya, tetapi pertanyaan apakah hal itu memenuhi persyaratan hukum adalah urusan penasihat hukum Anda, bukan halaman ini.",
+    "colArticle": "Pasal",
+    "colRequires": "Apa yang disyaratkan",
+    "colHow": "Cara CIRIS mengatasinya",
+    "rows": [
+      {
+        "art": "Article 9",
+        "requires": "Jalankan proses risiko yang berkelanjutan dan mencakup seluruh siklus hidup: identifikasi, evaluasi, dan mitigasi risiko yang dapat diperkirakan, dengan bobot khusus pada kelompok rentan dan, sesuai 9(7), pada bias data pelatihan.",
+        "how": "Setiap tindakan melewati pipeline keputusan lima tahap (PDMA / CSDMA / DSDMA / IDMA / pemilihan tindakan) ditambah lapisan conscience sebelum dijalankan, dengan larangan DISCRIMINATION yang tertanam secara permanen dan jejak audit bertanda tangan sebagai catatan yang membuktikan langkah-langkah tersebut berhasil. Untuk risiko ekstrem, gerbang Catastrophic-Risk Evaluation dalam Constitution mensyaratkan red-team independen dan persetujuan ganda dari pihak eksternal."
+      },
+      {
+        "art": "Article 12",
+        "requires": "Catat peristiwa secara otomatis sepanjang masa pakai sistem sehingga perilakunya dapat dilacak.",
+        "how": "Jejak audit bertanda tangan dan berantai hash (dirantai dengan SHA-256, ditandatangani dengan Ed25519), bukan sekadar berkas log biasa, sehingga setiap tindakan yang tercatat tahan terhadap perubahan diam-diam dan dapat diverifikasi secara independen."
+      },
+      {
+        "art": "Article 13",
+        "requires": "Beroperasi dengan cukup transparan sehingga pihak penerap dapat menafsirkan keluarannya dan menggunakan sistem dengan benar.",
+        "how": "PDMA membawa kewajiban publikasi pemantauan berkelanjutan, dan API reasoning-trace mengekspos ID tahapan keputusan serta jalur untuk mengajukan keberatan, sehingga alasan di balik suatu tindakan dapat diperiksa, bukan tersembunyi."
+      },
+      {
+        "art": "Article 14",
+        "requires": "Dirancang untuk pengawasan manusia yang efektif, dengan manusia yang mampu melakukan intervensi terhadap atau menghentikan sistem.",
+        "how": "Skala otonomi A0 hingga A4 menilai setiap penerapan berdasarkan siapa yang menanggung tindakan tersebut, Wisdom-Based Deferral mengalihkan ketidakpastian ke seorang Wise Authority manusia yang telah ditunjuk, dan kill switch yang gagal secara aman memungkinkan manusia yang ditunjuk menghentikan agen."
+      },
+      {
+        "art": "Article 15",
+        "requires": "Akurat, tangguh, dan aman secara siber sepanjang siklus hidup, tahan terhadap kesalahan dan manipulasi yang bermusuhan.",
+        "how": "Penandatanganan pasca-kuantum hibrida (Ed25519 + ML-DSA-65) dengan verifikasi multi-sumber dua dari tiga yang gagal secara aman, playbook ketahanan terhadap serangan bermusuhan dari Constitution, dan ketahanan yang terukur: nol kebocoran lintas grup di seluruh 400 node, dan korpus yang berhasil direkonstruksi dengan seperlima pemegang kunci offline."
+      },
+      {
+        "art": "Article 16",
+        "requires": "Penyedia AI berisiko tinggi harus memastikan pengawasan, pencatatan log, dan kesesuaian diterapkan secara menyeluruh.",
+        "how": "Gerbang conscience pra-eksekusi pada setiap tindakan, ditambah tingkat otonomi yang lebih tinggi yang mengirimkan ID tahapan, putusan, dan tingkat risiko setiap keputusan ke permukaan pengawasan manusia."
+      },
+      {
+        "art": "Article 50",
+        "requires": "Beri tahu orang-orang saat mereka berinteraksi dengan AI, dan tandai konten hasil AI secara dapat dibaca mesin (berlaku mulai Agustus 2026).",
+        "how": "Pengungkapan diri sebagai AI sudah tersedia hari ini: flag is_bot dan pengungkapan yang tertanam secara permanen serta diberlakukan sesuai locale pada setiap adapter pesan. Penandaan konten yang dapat dibaca mesin melalui C2PA Content Credentials sedang diadopsi pada batas media untuk memenuhi tenggat Agustus 2026, sehingga pasal ini satu bagiannya sudah dirilis, satu bagian lagi sedang diadopsi."
+      },
+      {
+        "art": "Article 72",
+        "requires": "Pantau sistem secara aktif di lapangan setelah penerapan dan umpan-balikkan masalah yang ditemukan.",
+        "how": "Loop kepatuhan berkelanjutan dari Constitution mengalirkan data telemetri ke deteksi penyimpangan lalu ke tinjauan, sebuah loop pemantauan yang berjalan terus-menerus, bukan audit satu kali, dan ditampilkan melalui observabilitas CIRISLens."
+      }
+    ],
+    "footnote": "Dipetakan terhadap CIRIS Constitution kanonis per Juli 2026. Korespondensi yang bersifat informatif, menunggu tinjauan hukum. Beri tahu kami jika ada pemetaan yang salah dan kami akan memperbaikinya.",
+    "sourcesLabel": "Sumber",
+    "ctaPara": "Mekanisme yang sama dipetakan ke taksonomi keamanan, dan seluruh lanskap akuntabilitas.",
+    "btnOwasp": "Pemetaan Agentic OWASP",
+    "btnLandscape": "Lanskap lengkap",
+    "btnConstitution": "Constitution"
+  },
+  "msCompare": {
+    "kicker": "Perbandingan, kriteria tetap",
+    "title": "CIRIS vs Microsoft Agent Governance Toolkit",
+    "lede": "Dua upaya sumber terbuka yang serius untuk mengatur agen AI, dinilai berdasarkan delapan kriteria yang sama dari sumber publik, dengan sitasi pada setiap sel. Ketika Microsoft unggul, kami menyatakannya secara jujur. Perbedaan yang benar-benar penting adalah sudah dirilis atau belum, constitution yang diberlakukan dan tidak dapat dilonggarkan, serta catatan bertanda tangan pasca-kuantum.",
+    "sectionLabel": "Perbandingan langsung",
+    "colCriterion": "Kriteria",
+    "colCiris": "CIRIS",
+    "colMs": "Microsoft Agent Governance Toolkit",
+    "valYes": "Ya",
+    "valPartial": "Sebagian",
+    "valNo": "Tidak",
+    "criteria": [
+      "Memberlakukan kebijakan sebelum tindakan dijalankan",
+      "Catatan keputusan bertanda tangan yang tahan terhadap perubahan diam-diam",
+      "Identitas agen kriptografis",
+      "Kill switch / mencabut agen nakal",
+      "Constitution yang diterbitkan dan diberlakukan",
+      "Verifikasi independen oleh pihak ketiga",
+      "Sumber terbuka",
+      "Sudah dirilis di produksi"
+    ],
+    "footnote": "Dinilai berdasarkan dokumentasi produk publik per Juli 2026. Jika ada sel yang salah, beri tahu kami dan kami akan memperbaikinya.",
+    "sourcesLabel": "Sumber",
+    "concLabel": "Kelebihan masing-masing",
+    "msTitle": "Kekuatan nyata Microsoft",
+    "msBody": "Agent Control Specification adalah runtime kebijakan yang benar-benar stateless, deterministik, dan fail-closed, dengan delapan titik intervensi bernama dan model putusan lima arah (allow, warn, deny, escalate, transform). Sistem ini menyertakan identitas berbasis DID dengan Ed25519, kill switch darurat, dan rekayasa sumber terbuka yang kuat di bawah lisensi permisif MIT, dengan integrasi mendalam ke Azure dan Entra untuk perusahaan.",
+    "cirisTitle": "Di mana CIRIS melangkah lebih jauh",
+    "cirisBody": "Setiap tindakan melewati pipeline conscience saat runtime sebelum dijalankan, bukan sekadar log yang dibuat setelah kejadian. Jejak audit dirantai hash dan ditandatangani pasca-kuantum, serta diverifikasi ulang secara independen oleh rangkaian uji konformansi terpisah. Kill switch-nya adalah kuorum dua dari tiga manusia yang ditunjuk dan gagal secara aman. Dan constitution-nya bersifat tetap dan diterbitkan, bukan kebijakan buatan operator yang secara default mengizinkan.",
+    "ctaPara": "Ini hanyalah satu baris dari gambaran yang lebih besar. Lihat posisi keduanya di antara setiap pendekatan akuntabilitas AI.",
+    "btnLandscape": "Lanskap lengkap",
+    "btnCirisGh": "CIRIS di GitHub",
+    "btnMsGh": "Toolkit Microsoft"
   }
 }
