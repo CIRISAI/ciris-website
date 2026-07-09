@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Apri il lettore delle specifiche →",
     "ctaExplore": "Costruisci una catena nel browser →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Architettura della fiducia",
+    "headlineLead": "Decodificare CIRIS:",
+    "headlineAccent": "lo stack olografico",
+    "lede": "Cinque livelli su un'unica primitiva firmata. Tocca un livello per vedere cosa fa, poi apri la pagina che lo approfondisce.",
+    "exploreCta": "Esplora",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "promuovere una coerenza adattiva sostenibile, le condizioni di vita in cui esseri diversi possono perseguire la propria fioritura nella giustizia e nella meraviglia.",
+    "statusBadge": "Rete avviata · in produzione già oggi",
+    "ascendLabel": "Le affermazioni salgono, ancorate a Meta-Goal M-1",
+    "primitiveFoot": "Un'unica primitiva firmata sotto tutto il resto",
+    "layers": {
+      "app": {
+        "name": "Applicazioni",
+        "descriptor": "Condotta",
+        "tag": "Dove agiscono agenti e persone",
+        "role": "Questa è la superficie che persone e agenti toccano. Ogni azione che conta è un'affermazione firmata: puoi vedere chi l'ha fatta, aveva il consenso per farla e può essere annullata. Il protocollo non trasporterà nient'altro.",
+        "primitivesLabel": "Cosa agisce qui",
+        "primitives": [
+          {
+            "label": "Agenti autonomi",
+            "note": "La loro condotta è limitata, tracciabile e revocabile da ogni livello sottostante."
+          },
+          {
+            "label": "Persone e comunità",
+            "note": "Scrivono le proprie regole locali sopra le parti condivise."
+          },
+          {
+            "label": "Giudizio locale",
+            "note": "Decidi cosa è vero a partire da prove firmate, non dal verdetto di una piattaforma."
+          }
+        ],
+        "notes": [
+          {
+            "title": "La scommessa sulla sicurezza",
+            "body": "Non « addestrare un modello finché non ti fidi di esso ». Piuttosto, rendere ogni azione importante verificabile da persone che il modello non controlla."
+          }
+        ],
+        "cta": "Ottieni l'app →"
+      },
+      "gov": {
+        "name": "Governance",
+        "descriptor": "Verdetti",
+        "tag": "Come la rete si governa da sé",
+        "role": "Politica locale e supervisione umana, scritte nelle stesse affermazioni firmate e soggette alle stesse regole. Un software non può portare responsabilità morale, quindi il potere di fermare tutto resta a persone nominate, a condizioni che nessuno all'interno della rete può togliere loro.",
+        "primitivesLabel": "Come governa",
+        "primitives": [
+          {
+            "label": "Reticolo di autorità",
+            "note": "La fiducia è delegata in catene. Una comunità deve avere un dovere reale per entrare."
+          },
+          {
+            "label": "Deferenza all'Autorità saggia",
+            "note": "Persone nominate detengono il potere di fermare tutto. In caso di dubbio, il sistema le interpella."
+          },
+          {
+            "label": "Quorum inverso, sicuro per default",
+            "note": "Essere presenti conferisce autorità. Essere assenti la perde."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Ancorata a Meta-Goal M-1",
+            "body": "Ogni meccanismo nasce da un'unica promessa: una coerenza adattiva sostenibile."
+          }
+        ],
+        "cta": "Guarda come viene governata →"
+      },
+      "ceg": {
+        "name": "Grammatica",
+        "descriptor": "Significato",
+        "tag": "La grammatica epistemica CIRIS",
+        "role": "Come le affermazioni firmate acquisiscono significato e si combinano. Uno spazio dei nomi condiviso con un rigido cancello a quattro test mantiene il formato del filo verificabile dalla macchina, usando solo fatti semplici, e lascia le opinioni alla politica locale.",
+        "primitivesLabel": "Come le affermazioni significano",
+        "primitives": [
+          {
+            "label": "Prefissi verificabili dalla macchina",
+            "note": "Come detection:correlated_action, mai parole vaghe come « inganno »."
+          },
+          {
+            "label": "Limiti rigidi",
+            "note": "prohibited:{category}: 22 linee rosse che un agente non può mai varcare."
+          },
+          {
+            "label": "Compositori strutturali",
+            "note": "delegates_to, supersedes, withdraws, recants: come un'affermazione ne cambia un'altra."
+          }
+        ],
+        "notes": [
+          {
+            "title": "L'autorità non è la verità",
+            "body": "Il protocollo registra chi ha detto cosa, perché e sotto quale autorità. Non registra mai cosa è vero."
+          }
+        ],
+        "cta": "Guarda la grammatica →"
+      },
+      "env": {
+        "name": "La Busta",
+        "descriptor": "La primitiva",
+        "tag": "Un'unica superficie congelata",
+        "role": "La primitiva universale, resa reale: un'unica busta firmata. Identità, consenso, prova, governance e delega si riducono tutte a quest'unica cosa, un'affermazione firmata che puoi tracciare e annullare, direttamente nel formato del filo. I suoi campi sono fissi. Il modo in cui si combinano è la Grammatica.",
+        "primitivesLabel": "Campi della busta",
+        "hero": {
+          "body": "Tutto si riduce a questo.",
+          "workhorse": {
+            "label": "L'affermazione firmata",
+            "note": "Un'unica busta porta identità, consenso e prova insieme."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "La fonte: l'identità crittografica dell'autore."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Consenso: dà al soggetto il diritto di revocare a livello di protocollo."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "Collega l'affermazione a una prova che puoi verificare."
+          },
+          {
+            "label": "dimension",
+            "note": "Il prefisso dello spazio dei nomi che dice cosa viene affermato."
+          },
+          {
+            "label": "score and confidence",
+            "note": "I numeri su cui agisce la politica di un consumatore."
+          }
+        ],
+        "notes": [
+          {
+            "title": "L'attestazione è la primitiva universale",
+            "body": "Non è un livello sopra la busta. È il contenuto della busta. Ecco perché non c'è un livello « Attestazioni » separato."
+          },
+          {
+            "title": "Il consenso è integrato",
+            "body": "Chiunque sia nominato in subject_key_ids può ritirarsi a livello di filo, imposto dal substrato, non da un'app."
+          }
+        ],
+        "cta": "Guarda la piattaforma →"
+      },
+      "transport": {
+        "name": "Trasporto",
+        "descriptor": "Substrato",
+        "tag": "Il substrato peer-to-peer",
+        "role": "Una rete peer-to-peer post-quantistica che trasporta streaming, messaggi, file e affermazioni firmate direttamente tra i dispositivi che le persone già possiedono, senza un proprietario di piattaforma nel mezzo. La crittografia non è un livello sopra. È il modo in cui il substrato si tiene insieme.",
+        "primitivesLabel": "Il substrato",
+        "primitives": [
+          {
+            "label": "Filo post-quantistico",
+            "note": "X25519 con ML-KEM-768. Righe di federazione firmate con Ed25519 e ML-DSA-65."
+          },
+          {
+            "label": "Invisibilità strutturale",
+            "note": "Gli ambiti privati non inviano alcun annuncio di directory, quindi i pari non possono nemmeno trovare i dati."
+          },
+          {
+            "label": "Rete peer-to-peer",
+            "note": "Nessun proprietario di piattaforma. Niente da sequestrare, citare in giudizio o spegnere."
+          }
+        ],
+        "notes": [
+          {
+            "title": "La governance vive nel filo",
+            "body": "È imposta all'interno del trasporto, dello stoccaggio e del formato del filo stesso, non in un raccoglitore di politiche accanto."
+          }
+        ],
+        "cta": "Guarda come viene verificata →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Il Web Epistemico",
     "headline": "Cos'è un web epistemico?",

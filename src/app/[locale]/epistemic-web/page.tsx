@@ -3,7 +3,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import EpistemicWebV2 from "@/app/components/EpistemicWebV2";
+import CirisStackView from "@/app/components/stack/CirisStackView";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
 
@@ -30,5 +30,5 @@ export default async function LocalizedEpistemicWeb({
   const { locale } = await params;
   const resolved = isLocale(locale) ? locale : "en";
   const dict = getDictionary(resolved);
-  return <EpistemicWebV2 t={dict} locale={resolved} />;
+  return <CirisStackView t={dict} locale={resolved} />;
 }

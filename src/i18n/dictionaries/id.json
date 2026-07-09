@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Buka pembaca spesifikasi →",
     "ctaExplore": "Bangun rantai di peramban →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Arsitektur kepercayaan",
+    "headlineLead": "Memahami CIRIS:",
+    "headlineAccent": "tumpukan holografik",
+    "lede": "Lima lapisan di atas satu primitif bertanda tangan. Ketuk sebuah lapisan untuk melihat cara kerjanya, lalu buka halaman yang membahasnya secara mendalam.",
+    "exploreCta": "Jelajahi",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "mendorong koherensi adaptif yang berkelanjutan, yaitu kondisi hidup yang memungkinkan beragam makhluk mengejar kesejahteraan mereka sendiri dalam keadilan dan keajaiban.",
+    "statusBadge": "Jaringan mesh telah ditanam · sudah dipakai hari ini",
+    "ascendLabel": "Klaim naik ke atas, berpijak pada Meta-Goal M-1",
+    "primitiveFoot": "Satu primitif bertanda tangan yang mendasari semuanya",
+    "layers": {
+      "app": {
+        "name": "Aplikasi",
+        "descriptor": "Tindakan",
+        "tag": "Tempat agen dan orang bertindak",
+        "role": "Ini adalah permukaan yang disentuh orang dan agen. Setiap tindakan yang penting adalah klaim bertanda tangan: Anda bisa melihat siapa yang melakukannya, mereka punya izin untuk melakukannya, dan tindakan itu bisa ditarik kembali. Protokol tidak akan membawa hal lain.",
+        "primitivesLabel": "Apa yang bertindak di sini",
+        "primitives": [
+          {
+            "label": "Agen otonom",
+            "note": "Perilaku mereka dibatasi, bisa dilacak, dan bisa dicabut oleh setiap lapisan di bawahnya."
+          },
+          {
+            "label": "Orang dan komunitas",
+            "note": "Mereka menulis aturan lokal mereka sendiri di atas bagian yang dibagikan bersama."
+          },
+          {
+            "label": "Penilaian lokal",
+            "note": "Anda memutuskan apa yang benar dari bukti bertanda tangan, bukan dari putusan sebuah platform."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Taruhan keamanan",
+            "body": "Bukan “latih sebuah model sampai Anda memercayainya.” Sebaliknya, buat setiap tindakan penting bisa diperiksa oleh orang yang tidak dikendalikan oleh model."
+          }
+        ],
+        "cta": "Dapatkan aplikasinya →"
+      },
+      "gov": {
+        "name": "Tata Kelola",
+        "descriptor": "Putusan",
+        "tag": "Cara jaringan mengatur dirinya sendiri",
+        "role": "Kebijakan lokal dan pengawasan manusia, ditulis dalam klaim bertanda tangan yang sama dan tunduk pada aturan yang sama. Perangkat lunak tidak bisa memikul tanggung jawab moral, jadi kuasa untuk menghentikan tetap ada pada manusia yang disebut namanya, dengan syarat yang tidak bisa diambil oleh siapa pun di dalam jaringan.",
+        "primitivesLabel": "Cara ia mengatur",
+        "primitives": [
+          {
+            "label": "Kisi otoritas",
+            "note": "Kepercayaan didelegasikan dalam rantai. Sebuah komunitas harus memikul kewajiban nyata untuk bergabung."
+          },
+          {
+            "label": "Penundaan ke Wise-Authority",
+            "note": "Manusia yang disebut namanya memegang kuasa untuk menghentikan. Saat ragu, sistem bertanya kepada mereka."
+          },
+          {
+            "label": "Kuorum terbalik, gagal-aman",
+            "note": "Kehadiran memberikan otoritas. Ketidakhadiran menghilangkannya."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Berpijak pada Meta-Goal M-1",
+            "body": "Setiap mekanisme berasal dari satu janji: koherensi adaptif yang berkelanjutan."
+          }
+        ],
+        "cta": "Lihat cara ia diatur →"
+      },
+      "ceg": {
+        "name": "Tata Bahasa",
+        "descriptor": "Makna",
+        "tag": "CIRIS Epistemic Grammar",
+        "role": "Cara klaim bertanda tangan memperoleh makna dan digabungkan. Sebuah namespace bersama dengan gerbang empat-uji yang ketat menjaga format wire tetap bisa diperiksa mesin, hanya memakai fakta polos, dan menyerahkan pendapat kepada kebijakan lokal.",
+        "primitivesLabel": "Cara klaim bermakna",
+        "primitives": [
+          {
+            "label": "Prefiks yang bisa diperiksa mesin",
+            "note": "Seperti detection:correlated_action, bukan kata kabur seperti “penipuan.”"
+          },
+          {
+            "label": "Batas keras",
+            "note": "prohibited:{category}: 22 garis merah yang tidak boleh dilanggar sebuah agen."
+          },
+          {
+            "label": "Penggabung struktural",
+            "note": "delegates_to, supersedes, withdraws, recants: cara satu klaim mengubah klaim lain."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Otoritas bukan kebenaran",
+            "body": "Protokol mencatat siapa mengatakan apa, mengapa, dan atas otoritas apa. Ia tidak pernah mencatat apa yang benar."
+          }
+        ],
+        "cta": "Lihat tata bahasanya →"
+      },
+      "env": {
+        "name": "Amplop",
+        "descriptor": "Sang primitif",
+        "tag": "Satu permukaan yang dibekukan",
+        "role": "Primitif universal, diwujudkan: satu amplop bertanda tangan. Identitas, izin, bukti, tata kelola, dan delegasi semuanya menyusut menjadi satu hal ini, sebuah klaim bertanda tangan yang bisa Anda lacak dan tarik kembali, langsung di format wire. Kolomnya sudah tetap. Cara kolom itu digabungkan adalah Tata Bahasa.",
+        "primitivesLabel": "Kolom amplop",
+        "hero": {
+          "body": "Semuanya menyusut menjadi ini.",
+          "workhorse": {
+            "label": "Klaim bertanda tangan",
+            "note": "Satu amplop membawa identitas, izin, dan bukti sekaligus."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "Sumbernya: identitas kriptografis si pembuat."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Izin: memberi subjek hak untuk mencabut di tingkat protokol."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "Menautkan klaim ke bukti yang bisa Anda audit."
+          },
+          {
+            "label": "dimension",
+            "note": "Prefiks namespace yang menyatakan apa yang sedang diklaim."
+          },
+          {
+            "label": "score and confidence",
+            "note": "Angka-angka yang menjadi dasar tindakan kebijakan konsumen."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Atestasi adalah primitif universal",
+            "body": "Ia bukan lapisan di atas amplop. Ia adalah isi amplop itu sendiri. Itulah sebabnya tidak ada lapisan “Atestasi” yang terpisah."
+          },
+          {
+            "title": "Izin sudah tertanam",
+            "body": "Siapa pun yang disebut dalam subject_key_ids bisa menarik diri di tingkat wire, ditegakkan oleh substrat, bukan oleh sebuah aplikasi."
+          }
+        ],
+        "cta": "Lihat platformnya →"
+      },
+      "transport": {
+        "name": "Transportasi",
+        "descriptor": "Substrat",
+        "tag": "Substrat peer-to-peer",
+        "role": "Sebuah jaringan mesh pasca-kuantum, peer-to-peer yang membawa streaming, pesan, berkas, dan klaim bertanda tangan langsung antar perangkat yang sudah dimiliki orang, tanpa pemilik platform di tengah. Kriptografi bukan lapisan di atasnya. Ia adalah cara substrat menyatukan dirinya sendiri.",
+        "primitivesLabel": "Substratnya",
+        "primitives": [
+          {
+            "label": "Wire pasca-kuantum",
+            "note": "X25519 dengan ML-KEM-768. Baris federasi ditandatangani dengan Ed25519 dan ML-DSA-65."
+          },
+          {
+            "label": "Ketaktampakan struktural",
+            "note": "Lingkup privat tidak mengirim iklan direktori, jadi peer bahkan tidak bisa menemukan datanya."
+          },
+          {
+            "label": "Jaringan mesh peer-to-peer",
+            "note": "Tanpa pemilik platform. Tidak ada yang bisa disita, dipanggil pengadilan, atau dimatikan."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Tata kelola hidup di dalam wire",
+            "body": "Ia ditegakkan di dalam transportasi, penyimpanan, dan format wire itu sendiri, bukan dalam berkas kebijakan di sebelahnya."
+          }
+        ],
+        "cta": "Lihat cara ia diverifikasi →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Web Epistemik",
     "headline": "Apa itu web epistemik?",

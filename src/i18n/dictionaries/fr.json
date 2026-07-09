@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Ouvrir le lecteur de spécification →",
     "ctaExplore": "Construire une chaîne dans le navigateur →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Architecture de la confiance",
+    "headlineLead": "Décoder CIRIS :",
+    "headlineAccent": "la pile holographique",
+    "lede": "Cinq couches sur une seule primitive signée. Touchez une couche pour voir ce qu'elle fait, puis ouvrez la page qui l'explique en détail.",
+    "exploreCta": "Explorer",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "promouvoir une cohérence adaptative durable, les conditions de vie où des êtres divers peuvent poursuivre leur propre épanouissement dans la justice et l'émerveillement.",
+    "statusBadge": "Maillage amorcé · en production dès aujourd'hui",
+    "ascendLabel": "Les revendications s'élèvent, ancrées dans Meta-Goal M-1",
+    "primitiveFoot": "Une seule primitive signée sous tout le reste",
+    "layers": {
+      "app": {
+        "name": "Applications",
+        "descriptor": "Conduite",
+        "tag": "Là où les agents et les personnes agissent",
+        "role": "C'est la surface que touchent les personnes et les agents. Chaque action qui compte est une revendication signée : vous pouvez voir qui l'a faite, elle avait le consentement pour la faire, et elle peut être annulée. Le protocole ne transportera rien d'autre.",
+        "primitivesLabel": "Ce qui agit ici",
+        "primitives": [
+          {
+            "label": "Agents autonomes",
+            "note": "Leur conduite est limitée, traçable et révocable par chaque couche en dessous."
+          },
+          {
+            "label": "Personnes et communautés",
+            "note": "Elles écrivent leurs propres règles locales par-dessus les parties partagées."
+          },
+          {
+            "label": "Jugement local",
+            "note": "Vous décidez de ce qui est vrai à partir de preuves signées, pas du verdict d'une plateforme."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Le pari de la sûreté",
+            "body": "Pas « entraîner un modèle jusqu'à ce que vous lui fassiez confiance ». Plutôt, rendre chaque action importante vérifiable par des personnes que le modèle ne contrôle pas."
+          }
+        ],
+        "cta": "Obtenir l'application →"
+      },
+      "gov": {
+        "name": "Gouvernance",
+        "descriptor": "Verdicts",
+        "tag": "Comment le réseau se gouverne lui-même",
+        "role": "Une politique locale et une supervision humaine, écrites dans les mêmes revendications signées et soumises aux mêmes règles. Un logiciel ne peut pas porter de responsabilité morale, donc le pouvoir d'arrêter reste avec des humains nommés, selon des termes que personne à l'intérieur du réseau ne peut leur retirer.",
+        "primitivesLabel": "Comment elle gouverne",
+        "primitives": [
+          {
+            "label": "Treillis d'autorité",
+            "note": "La confiance est déléguée en chaînes. Une communauté doit porter un vrai devoir pour rejoindre."
+          },
+          {
+            "label": "Déférence à l'Autorité sage",
+            "note": "Des humains nommés détiennent le pouvoir d'arrêter. En cas de doute, le système leur demande."
+          },
+          {
+            "label": "Quorum inversé, sûr par défaut",
+            "note": "Être présent confère l'autorité. Être absent la perd."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Ancré dans Meta-Goal M-1",
+            "body": "Chaque mécanisme vient d'une seule promesse : une cohérence adaptative durable."
+          }
+        ],
+        "cta": "Voir comment c'est gouverné →"
+      },
+      "ceg": {
+        "name": "Grammaire",
+        "descriptor": "Sens",
+        "tag": "La grammaire épistémique CIRIS",
+        "role": "Comment les revendications signées prennent un sens et se combinent. Un espace de noms partagé avec une barrière stricte à quatre tests garde le format du fil vérifiable par machine, en utilisant seulement des faits simples, et laisse les opinions à la politique locale.",
+        "primitivesLabel": "Comment les revendications signifient",
+        "primitives": [
+          {
+            "label": "Préfixes vérifiables par machine",
+            "note": "Comme detection:correlated_action, jamais des mots flous comme « tromperie »."
+          },
+          {
+            "label": "Limites strictes",
+            "note": "prohibited:{category} : 22 lignes rouges qu'un agent ne peut jamais franchir."
+          },
+          {
+            "label": "Composeurs structurels",
+            "note": "delegates_to, supersedes, withdraws, recants : comment une revendication en change une autre."
+          }
+        ],
+        "notes": [
+          {
+            "title": "L'autorité n'est pas la vérité",
+            "body": "Le protocole enregistre qui a dit quoi, pourquoi et sous quelle autorité. Il n'enregistre jamais ce qui est vrai."
+          }
+        ],
+        "cta": "Voir la grammaire →"
+      },
+      "env": {
+        "name": "L'Enveloppe",
+        "descriptor": "La primitive",
+        "tag": "Une seule surface figée",
+        "role": "La primitive universelle, rendue réelle : une seule enveloppe signée. Identité, consentement, preuve, gouvernance et délégation se réduisent tous à cette seule chose, une revendication signée que vous pouvez tracer et annuler, directement dans le format du fil. Ses champs sont fixes. La façon dont ils se combinent, c'est la Grammaire.",
+        "primitivesLabel": "Champs de l'enveloppe",
+        "hero": {
+          "body": "Tout se réduit à ceci.",
+          "workhorse": {
+            "label": "La revendication signée",
+            "note": "Une seule enveloppe porte identité, consentement et preuve à la fois."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "La source : l'identité cryptographique de l'auteur."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Consentement : donne au sujet le droit de révoquer au niveau du protocole."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "Relie la revendication à une preuve que vous pouvez auditer."
+          },
+          {
+            "label": "dimension",
+            "note": "Le préfixe d'espace de noms qui dit ce qui est revendiqué."
+          },
+          {
+            "label": "score and confidence",
+            "note": "Les nombres sur lesquels agit la politique d'un consommateur."
+          }
+        ],
+        "notes": [
+          {
+            "title": "L'attestation est la primitive universelle",
+            "body": "Ce n'est pas une couche au-dessus de l'enveloppe. C'est le contenu de l'enveloppe. C'est pourquoi il n'y a pas de couche « Attestations » séparée."
+          },
+          {
+            "title": "Le consentement est intégré",
+            "body": "Toute personne nommée dans subject_key_ids peut se retirer au niveau du fil, imposé par le substrat, pas par une application."
+          }
+        ],
+        "cta": "Voir la plateforme →"
+      },
+      "transport": {
+        "name": "Transport",
+        "descriptor": "Substrat",
+        "tag": "Le substrat pair-à-pair",
+        "role": "Un maillage pair-à-pair post-quantique qui transporte le flux, les messages, les fichiers et les revendications signées directement entre les appareils que les gens possèdent déjà, sans propriétaire de plateforme au milieu. La cryptographie n'est pas une couche par-dessus. C'est la façon dont le substrat tient ensemble.",
+        "primitivesLabel": "Le substrat",
+        "primitives": [
+          {
+            "label": "Fil post-quantique",
+            "note": "X25519 avec ML-KEM-768. Lignes de fédération signées avec Ed25519 et ML-DSA-65."
+          },
+          {
+            "label": "Invisibilité structurelle",
+            "note": "Les portées privées n'envoient aucune annonce d'annuaire, donc les pairs ne peuvent même pas trouver les données."
+          },
+          {
+            "label": "Maillage pair-à-pair",
+            "note": "Aucun propriétaire de plateforme. Rien à saisir, à assigner en justice ou à éteindre."
+          }
+        ],
+        "notes": [
+          {
+            "title": "La gouvernance vit dans le fil",
+            "body": "Elle est imposée à l'intérieur du transport, du stockage et du format du fil lui-même, pas dans un classeur de politiques à côté."
+          }
+        ],
+        "cta": "Voir comment c'est vérifié →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Le Web Épistémique",
     "headline": "Qu'est-ce qu'un web épistémique ?",

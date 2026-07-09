@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Ṣii oluka apejuwe →",
     "ctaExplore": "Ko pq kan ninu aṣawakiri →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Ilana igbekele",
+    "headlineLead": "Titumo CIRIS:",
+    "headlineAccent": "akopo holographic",
+    "lede": "Ipele marun lori ipile kan ti a fowo si. Te ipele kan lati ri ohun ti o nse, leyin naa si ero oju-iwe ti o salaye re ni kikun.",
+    "exploreCta": "Se awari",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "gbega isokan ti o duro sinsin ti o si le mu ara re ba ipo mu, iyen ni ipo igbe aye ti o je ki awon eda oniruuru le lepa idagbasoke ti ara won ninu idajo ododo ati iyanu.",
+    "statusBadge": "A ti gbin mesh · o nsise loni",
+    "ascendLabel": "Awon esun n goke, ti won gbongbo si Meta-Goal M-1",
+    "primitiveFoot": "Ipile kan ti a fowo si labe gbogbo re",
+    "layers": {
+      "app": {
+        "name": "Awon ohun elo",
+        "descriptor": "Iwa",
+        "tag": "Ibi ti awon aso ati eniyan ti nse",
+        "role": "Eyi ni oju ti eniyan ati aso ba fowo kan. Gbogbo ise ti o se pataki je esun ti a fowo si: o le ri eni ti o se, o ni ase lati se, o si le fa a pada. Ilana naa ko ni gbe ohun miran.",
+        "primitivesLabel": "Ohun ti nse ise nibi",
+        "primitives": [
+          {
+            "label": "Awon aso oloto-ara-eni",
+            "note": "Iwa won ni ipinnu, o le tele wa, gbogbo ipele ti o wa nisale si le fa a pada."
+          },
+          {
+            "label": "Eniyan ati agbegbe",
+            "note": "Won ko awon ofin agbegbe ti ara won lori awon ohun ti a pin."
+          },
+          {
+            "label": "Idajo agbegbe",
+            "note": "Iwo ni o pinnu ohun ti o je otito lati inu eri ti a fowo si, kii se lati inu idajo ojukan-eyo kan."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Ijafafa aabo",
+            "body": "Kii se \"ko awoṣe kan koto ti o fi gbekele e.\" Dipo eyi, so gbogbo ise pataki di eyi ti awon eniyan ti awoṣe ko ni ikapa lori won le se ayewo."
+          }
+        ],
+        "cta": "Gba ohun elo naa →"
+      },
+      "gov": {
+        "name": "Ijoba",
+        "descriptor": "Awon idajo",
+        "tag": "Bi nẹtiwọki ti nse akoso ara re",
+        "role": "Eto agbegbe ati abojuto eniyan, ti a ko ninu esun ti a fowo si kanna ti a si di mu labe ofin kanna. Sọfitiweeri ko le gbe eru ojuse iwarere, nitori naa agbara lati dawo duro wa lowo awon eniyan ti a daruko, lori awon ipinnu ti ko si eniyan ninu nẹtiwọki ti o le gba kuro.",
+        "primitivesLabel": "Bi o ti nse akoso",
+        "primitives": [
+          {
+            "label": "Eto agbara igbekele",
+            "note": "A fi igbekele le eniyan lowo ninu ẹwọn. Agbegbe kan gbodo di ojuse gidi mu koto le darapo."
+          },
+          {
+            "label": "Ifihan si Wise-Authority",
+            "note": "Awon eniyan ti a daruko ni agbara lati dawo duro. Nigba ti ko ba da loju, eto naa yoo bi won."
+          },
+          {
+            "label": "Ipin abo, fail-secure",
+            "note": "Wiwa nibe fun ase. Aisi nibe fa ipadanu re."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Ti gbongbo si Meta-Goal M-1",
+            "body": "Gbogbo eto wa lati inu ileri kan: isokan ti o duro sinsin ti o si le mu ara re ba ipo mu."
+          }
+        ],
+        "cta": "Wo bi a ti nse akoso re →"
+      },
+      "ceg": {
+        "name": "Girama",
+        "descriptor": "Itumo",
+        "tag": "CIRIS Epistemic Grammar",
+        "role": "Bi awon esun ti a fowo si ti ngba itumo ti won si npapo. Aye oruko ti a pin pelu enu-ona four-test ti o le mu ki apere okun waya je eyi ti ero le se ayewo, ti o nlo awon otito ti o han nikan, ti o si fi awon ero sile fun eto agbegbe.",
+        "primitivesLabel": "Bi awon esun ti ni itumo",
+        "primitives": [
+          {
+            "label": "Awon iwaju ti ero le se ayewo",
+            "note": "Bii detection:correlated_action, kii se oro alaimoye bii \"itanje.\""
+          },
+          {
+            "label": "Awon ala lile",
+            "note": "prohibited:{category}: laini pupa 22 ti aso ko le koja lae."
+          },
+          {
+            "label": "Awon apapo eto",
+            "note": "delegates_to, supersedes, withdraws, recants: bi esun kan ti npa omiran da."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Agbara kii se otito",
+            "body": "Ilana naa nko eni ti o so ohun, idi, ati labe agbara wo. Ko ni nko ohun ti o je otito lae."
+          }
+        ],
+        "cta": "Wo girama naa →"
+      },
+      "env": {
+        "name": "Apo-iwe",
+        "descriptor": "Ipile akoko",
+        "tag": "Oju kan ti a ti di",
+        "role": "Ipile agbaye, ti a se ni gidi: apo-iwe kan ti a fowo si. Idanimo, ase, eri, ijoba, ati ifiranse gbogbo won da pada si ohun kan yii, iyen esun ti a fowo si ti o le tele ti o si le fa pada, taara ninu apere okun waya. A ti so awon aaye re ro. Bi won ti npapo ni Girama.",
+        "primitivesLabel": "Awon aaye apo-iwe",
+        "hero": {
+          "body": "Ohun gbogbo da pada si eyi.",
+          "workhorse": {
+            "label": "Esun ti a fowo si",
+            "note": "Apo-iwe kan gbe idanimo, ase, ati eri papo ni akoko kan."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "Orisun: idanimo cryptographic ti eni to se."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Ase: o fun eni ti oro naa da lori ni eto lati fa a pada ni ipele ilana."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "O so esun naa po mo eri ti o le se ayewo."
+          },
+          {
+            "label": "dimension",
+            "note": "Iwaju oruko-aaye ti o so ohun ti a nsesun re."
+          },
+          {
+            "label": "score and confidence",
+            "note": "Awon nomba ti eto olumulo nsise lori won."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Ijeri ni ipile agbaye",
+            "body": "Kii se ipele kan lori apo-iwe. O ni akoonu apo-iwe. Idi niyi ti ko si ipele \"Awon Ijeri\" ti o ya soto."
+          },
+          {
+            "title": "A ko ase sinu",
+            "body": "Enikeni ti a daruko ninu subject_key_ids le fa a pada ni ipele waya, ipile ni o mu u se, kii se ohun elo."
+          }
+        ],
+        "cta": "Wo pepe naa →"
+      },
+      "transport": {
+        "name": "Igbe-lo",
+        "descriptor": "Ipile",
+        "tag": "Ipile larin-egbe",
+        "role": "Mesh post-quantum, larin-egbe ti o ngbe iṣan, iranse, faili, ati awon esun ti a fowo si taara larin awon ero ti eniyan ti ni tele, lai si oni-pepe kan ni aarin. Cryptography kii se ipele lori oke. Ohun niyi ti ipile fi ndi ara re mu papo.",
+        "primitivesLabel": "Ipile",
+        "primitives": [
+          {
+            "label": "Waya post-quantum",
+            "note": "X25519 pelu ML-KEM-768. A fowo si awon laini isokan pelu Ed25519 ati ML-DSA-65."
+          },
+          {
+            "label": "Airi ti eto",
+            "note": "Awon ibi asiri ko ranse ipolongo ilana, nitori naa awon egbe ko le ri data naa pelu."
+          },
+          {
+            "label": "Mesh larin-egbe",
+            "note": "Ko si oni-pepe. Ko si ohun ti a le gba, pe si kootu, tabi pa kuro."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Ijoba ngbe inu waya",
+            "body": "A mu u se ninu igbe-lo, ipamo, ati apere okun waya funra re, kii se ninu iwe eto ti o wa leba re."
+          }
+        ],
+        "cta": "Wo bi a ti nse ijeri re →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Wẹ́ẹ̀bù Ìmọ̀",
     "headline": "Kí ni wẹ́ẹ̀bù ìmọ̀?",

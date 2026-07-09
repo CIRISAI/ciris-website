@@ -2106,6 +2106,113 @@
     "ctaSpecReader": "Open the spec reader →",
     "ctaExplore": "Build a chain in the browser →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Architecture of trust",
+    "headlineLead": "Decoding CIRIS:",
+    "headlineAccent": "the holographic stack",
+    "lede": "Five layers over one signed primitive. Tap a layer to see what it does, then open the page that goes deep on it.",
+    "exploreCta": "Explore",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "promote sustainable adaptive coherence, the living conditions under which diverse beings can pursue their own flourishing in justice and wonder.",
+    "statusBadge": "Mesh seeded · in production today",
+    "ascendLabel": "Claims rise up, grounded in Meta-Goal M-1",
+    "primitiveFoot": "One signed primitive underneath it all",
+    "layers": {
+      "app": {
+        "name": "Applications",
+        "descriptor": "Conduct",
+        "tag": "Where agents and people act",
+        "role": "This is the surface people and agents touch. Every action that matters is a signed claim: you can see who did it, they had consent to do it, and it can be taken back. The protocol will not carry anything else.",
+        "primitivesLabel": "What acts here",
+        "primitives": [
+          { "label": "Autonomous agents", "note": "Their conduct is limited, traceable, and revocable by every layer below." },
+          { "label": "People and communities", "note": "They write their own local rules on top of the shared parts." },
+          { "label": "Local judgment", "note": "You decide what is true from signed evidence, not from a platform’s verdict." }
+        ],
+        "notes": [
+          { "title": "The safety bet", "body": "Not “train a model until you trust it.” Instead, make every important action checkable by people the model does not control." }
+        ],
+        "cta": "Get the app →"
+      },
+      "gov": {
+        "name": "Governance",
+        "descriptor": "Verdicts",
+        "tag": "How the network governs itself",
+        "role": "Local policy and human oversight, written in the same signed claims and held to the same rules. Software cannot carry moral responsibility, so the power to halt stays with named humans, on terms no one inside the network can take away.",
+        "primitivesLabel": "How it governs",
+        "primitives": [
+          { "label": "Authority lattice", "note": "Trust is delegated in chains. A community has to hold real duty to join." },
+          { "label": "Wise-Authority deferral", "note": "Named humans hold the power to halt. When unsure, the system asks them." },
+          { "label": "Reverse quorum, fail-secure", "note": "Being present grants authority. Being absent forfeits it." }
+        ],
+        "notes": [
+          { "title": "Grounded in Meta-Goal M-1", "body": "Every mechanism comes from one promise: sustainable adaptive coherence." }
+        ],
+        "cta": "See how it is governed →"
+      },
+      "ceg": {
+        "name": "Grammar",
+        "descriptor": "Meaning",
+        "tag": "The CIRIS Epistemic Grammar",
+        "role": "How signed claims get meaning and combine. A shared namespace with a strict four-test gate keeps the wire format machine-checkable, using plain facts only, and leaves opinions to local policy.",
+        "primitivesLabel": "How claims mean",
+        "primitives": [
+          { "label": "Machine-checkable prefixes", "note": "Like detection:correlated_action, never fuzzy words like “deception.”" },
+          { "label": "Hard limits", "note": "prohibited:{category}: 22 red lines an agent can never cross." },
+          { "label": "Structural composers", "note": "delegates_to, supersedes, withdraws, recants: how one claim changes another." }
+        ],
+        "notes": [
+          { "title": "Authority is not truth", "body": "The protocol records who said what, why, and under what authority. It never records what is true." }
+        ],
+        "cta": "See the grammar →"
+      },
+      "env": {
+        "name": "The Envelope",
+        "descriptor": "The primitive",
+        "tag": "One frozen surface",
+        "role": "The universal primitive, made real: one signed envelope. Identity, consent, evidence, governance, and delegation all reduce to this one thing, a signed claim you can trace and take back, right in the wire format. Its fields are fixed. How they combine is Grammar.",
+        "primitivesLabel": "Envelope fields",
+        "hero": {
+          "body": "Everything reduces to this.",
+          "workhorse": { "label": "The signed claim", "note": "One envelope carries identity, consent, and evidence at once." },
+          "composers": [
+            { "label": "delegates_to" },
+            { "label": "supersedes" },
+            { "label": "withdraws" },
+            { "label": "recants" }
+          ]
+        },
+        "primitives": [
+          { "label": "attesting_key_id", "note": "The source: the maker’s cryptographic identity." },
+          { "label": "subject_key_ids", "note": "Consent: gives the subject the right to revoke at the protocol level." },
+          { "label": "evidence_refs", "note": "Links the claim to proof you can audit." },
+          { "label": "dimension", "note": "The namespace prefix that says what is being claimed." },
+          { "label": "score and confidence", "note": "The numbers a consumer’s policy acts on." }
+        ],
+        "notes": [
+          { "title": "Attestation is the universal primitive", "body": "It is not a layer above the envelope. It is the envelope’s content. That is why there is no separate “Attestations” layer." },
+          { "title": "Consent is built in", "body": "Anyone named in subject_key_ids can withdraw at the wire level, enforced by the substrate, not by an app." }
+        ],
+        "cta": "See the platform →"
+      },
+      "transport": {
+        "name": "Transport",
+        "descriptor": "Substrate",
+        "tag": "The peer-to-peer substrate",
+        "role": "A post-quantum, peer-to-peer mesh that carries streaming, messages, files, and signed claims straight between the devices people already own, with no platform owner in the middle. Cryptography is not a layer on top. It is how the substrate holds itself together.",
+        "primitivesLabel": "The substrate",
+        "primitives": [
+          { "label": "Post-quantum wire", "note": "X25519 with ML-KEM-768. Federation rows signed with Ed25519 and ML-DSA-65." },
+          { "label": "Structural invisibility", "note": "Private scopes send no directory advert, so peers cannot even find the data." },
+          { "label": "Peer-to-peer mesh", "note": "No platform owner. Nothing to seize, subpoena, or switch off." }
+        ],
+        "notes": [
+          { "title": "Governance lives in the wire", "body": "It is enforced inside transport, storage, and the wire format itself, not in a policy binder next to it." }
+        ],
+        "cta": "See how it is verified →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "The Epistemic Web",
     "headline": "What is an epistemic web?",

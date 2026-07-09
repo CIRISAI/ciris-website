@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Fungua kisomaji cha maelezo →",
     "ctaExplore": "Jenga mnyororo kwenye kivinjari →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Muundo wa uaminifu",
+    "headlineLead": "Kufumbua CIRIS:",
+    "headlineAccent": "rundo la holografia",
+    "lede": "Tabaka tano juu ya kipengele kimoja kilichotiwa saini. Gusa tabaka ili kuona linalofanya, kisha fungua ukurasa unaolieleza kwa kina.",
+    "exploreCta": "Chunguza",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "kukuza mshikamano wa kubadilika unaodumu, yaani hali za maisha zinazowawezesha viumbe mbalimbali kufuata ustawi wao wenyewe katika haki na mshangao.",
+    "statusBadge": "Mtandao umeanzishwa · unatumika leo",
+    "ascendLabel": "Madai hupanda juu, yakiegemea Meta-Goal M-1",
+    "primitiveFoot": "Kipengele kimoja kilichotiwa saini kinachotegemeza yote",
+    "layers": {
+      "app": {
+        "name": "Programu",
+        "descriptor": "Mwenendo",
+        "tag": "Mahali ambapo mawakala na watu hutenda",
+        "role": "Hii ndiyo sehemu ambayo watu na mawakala hugusa. Kila kitendo muhimu ni dai lililotiwa saini: unaweza kuona nani alikifanya, walikuwa na ruhusa ya kukifanya, na kinaweza kutenguliwa. Itifaki haitabeba kitu kingine chochote.",
+        "primitivesLabel": "Kinachotenda hapa",
+        "primitives": [
+          {
+            "label": "Mawakala huru",
+            "note": "Mwenendo wao umewekewa mipaka, unaweza kufuatiliwa, na unaweza kutenguliwa na kila tabaka lililo chini yake."
+          },
+          {
+            "label": "Watu na jamii",
+            "note": "Wanaandika sheria zao za kienyeji juu ya sehemu zinazoshirikiwa."
+          },
+          {
+            "label": "Uamuzi wa kienyeji",
+            "note": "Wewe unaamua kilicho kweli kutokana na ushahidi uliotiwa saini, si kutokana na hukumu ya jukwaa."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Dau la usalama",
+            "body": "Si “funza modeli hadi uiamini.” Badala yake, fanya kila kitendo muhimu kiweze kukaguliwa na watu ambao modeli haiwadhibiti."
+          }
+        ],
+        "cta": "Pata programu →"
+      },
+      "gov": {
+        "name": "Utawala",
+        "descriptor": "Hukumu",
+        "tag": "Jinsi mtandao unavyojitawala",
+        "role": "Sera za kienyeji na usimamizi wa binadamu, ulioandikwa katika madai yaleyale yaliyotiwa saini na unaofuata sheria zilezile. Programu haiwezi kubeba wajibu wa kimaadili, kwa hivyo mamlaka ya kusimamisha yanabaki kwa binadamu waliotajwa majina, kwa masharti ambayo hakuna yeyote ndani ya mtandao anaweza kuyaondoa.",
+        "primitivesLabel": "Jinsi unavyotawala",
+        "primitives": [
+          {
+            "label": "Kimiani cha mamlaka",
+            "note": "Uaminifu hukabidhiwa katika minyororo. Jamii lazima ibebe wajibu halisi ili kujiunga."
+          },
+          {
+            "label": "Kuahirisha kwa Wise-Authority",
+            "note": "Binadamu waliotajwa majina wanashikilia mamlaka ya kusimamisha. Wakati wa kutokuwa na uhakika, mfumo huwauliza."
+          },
+          {
+            "label": "Akidi ya kinyume, kushindwa kwa usalama",
+            "note": "Kuwepo hutoa mamlaka. Kutokuwepo hupoteza mamlaka."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Kuegemea Meta-Goal M-1",
+            "body": "Kila utaratibu unatokana na ahadi moja: mshikamano wa kubadilika unaodumu."
+          }
+        ],
+        "cta": "Ona jinsi unavyotawaliwa →"
+      },
+      "ceg": {
+        "name": "Sarufi",
+        "descriptor": "Maana",
+        "tag": "CIRIS Epistemic Grammar",
+        "role": "Jinsi madai yaliyotiwa saini yanavyopata maana na kuunganishwa. Namespace inayoshirikiwa yenye lango kali la majaribio manne huifanya muundo wa wire uweze kukaguliwa na mashine, ikitumia mambo ya wazi tu, na kuacha maoni kwa sera za kienyeji.",
+        "primitivesLabel": "Jinsi madai yanavyomaanisha",
+        "primitives": [
+          {
+            "label": "Viambishi vinavyoweza kukaguliwa na mashine",
+            "note": "Kama detection:correlated_action, si maneno yasiyoeleweka kama “udanganyifu.”"
+          },
+          {
+            "label": "Mipaka migumu",
+            "note": "prohibited:{category}: mistari 22 nyekundu ambayo wakala hawezi kamwe kuivuka."
+          },
+          {
+            "label": "Viunganishi vya kimuundo",
+            "note": "delegates_to, supersedes, withdraws, recants: jinsi dai moja linavyobadilisha jingine."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Mamlaka si ukweli",
+            "body": "Itifaki huandika nani alisema nini, kwa nini, na chini ya mamlaka gani. Kamwe haiandiki kilicho kweli."
+          }
+        ],
+        "cta": "Ona sarufi →"
+      },
+      "env": {
+        "name": "Bahasha",
+        "descriptor": "Kipengele",
+        "tag": "Sehemu moja iliyogandishwa",
+        "role": "Kipengele cha ulimwengu wote, kilichofanywa halisi: bahasha moja iliyotiwa saini. Utambulisho, ruhusa, ushahidi, utawala, na ukabidhi yote yanapungua hadi kitu hiki kimoja, dai lililotiwa saini unaloweza kulifuatilia na kulitengua, moja kwa moja katika muundo wa wire. Sehemu zake zimewekwa. Jinsi zinavyounganishwa ndiyo Sarufi.",
+        "primitivesLabel": "Sehemu za bahasha",
+        "hero": {
+          "body": "Kila kitu kinapungua hadi hiki.",
+          "workhorse": {
+            "label": "Dai lililotiwa saini",
+            "note": "Bahasha moja hubeba utambulisho, ruhusa, na ushahidi kwa wakati mmoja."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "Chanzo: utambulisho wa kikriptografia wa mtengenezaji."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Ruhusa: humpa mhusika haki ya kutengua katika kiwango cha itifaki."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "Huunganisha dai na uthibitisho unaoweza kuukagua."
+          },
+          {
+            "label": "dimension",
+            "note": "Kiambishi cha namespace kinachosema kinachodaiwa."
+          },
+          {
+            "label": "score and confidence",
+            "note": "Namba ambazo sera ya mtumiaji hutenda juu yake."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Uthibitisho ni kipengele cha ulimwengu wote",
+            "body": "Si tabaka juu ya bahasha. Ni yaliyomo ndani ya bahasha yenyewe. Ndiyo sababu hakuna tabaka tofauti la “Uthibitisho.”"
+          },
+          {
+            "title": "Ruhusa imejengwa ndani",
+            "body": "Yeyote aliyetajwa katika subject_key_ids anaweza kujiondoa katika kiwango cha wire, kikitekelezwa na substrati, si na programu."
+          }
+        ],
+        "cta": "Ona jukwaa →"
+      },
+      "transport": {
+        "name": "Usafirishaji",
+        "descriptor": "Substrati",
+        "tag": "Substrati ya rika-kwa-rika",
+        "role": "Mtandao wa rika-kwa-rika wa baada ya kwantamu unaobeba utiririshaji, ujumbe, faili, na madai yaliyotiwa saini moja kwa moja kati ya vifaa ambavyo watu tayari wanavimiliki, bila mmiliki wa jukwaa katikati. Kriptografia si tabaka lililo juu. Ndiyo jinsi substrati inavyojishikamanisha yenyewe.",
+        "primitivesLabel": "Substrati",
+        "primitives": [
+          {
+            "label": "Wire ya baada ya kwantamu",
+            "note": "X25519 na ML-KEM-768. Safu za shirikisho zimetiwa saini kwa Ed25519 na ML-DSA-65."
+          },
+          {
+            "label": "Kutoonekana kwa kimuundo",
+            "note": "Maeneo ya faragha hayatumi tangazo la orodha, kwa hivyo rika haziwezi hata kupata data."
+          },
+          {
+            "label": "Mtandao wa rika-kwa-rika",
+            "note": "Hakuna mmiliki wa jukwaa. Hakuna cha kunyakua, kuita mahakamani, au kuzima."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Utawala unaishi ndani ya wire",
+            "body": "Unatekelezwa ndani ya usafirishaji, uhifadhi, na muundo wa wire wenyewe, si katika kabrasha la sera lililo pembeni."
+          }
+        ],
+        "cta": "Ona jinsi unavyothibitishwa →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Mtandao wa Maarifa",
     "headline": "Mtandao wa maarifa ni nini?",

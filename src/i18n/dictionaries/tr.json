@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Teknik belge okuyucusunu açın →",
     "ctaExplore": "Tarayıcıda bir zincir oluşturun →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Güven mimarisi",
+    "headlineLead": "CIRIS'in şifresini çözüyoruz:",
+    "headlineAccent": "holografik yığın",
+    "lede": "Tek bir imzalı ilkelin üzerinde beş katman. Ne yaptığını görmek için bir katmana dokunun, sonra onu derinlemesine anlatan sayfayı açın.",
+    "exploreCta": "Keşfet",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "sürdürülebilir uyarlanabilir tutarlılığı, yani farklı varlıkların adalet ve hayranlık içinde kendi gelişimlerinin peşinden gidebileceği yaşam koşullarını desteklemek.",
+    "statusBadge": "Ağ ekildi · bugün üretimde",
+    "ascendLabel": "İddialar Meta-Goal M-1'e dayanarak yükselir",
+    "primitiveFoot": "Her şeyin altında tek bir imzalı ilkel",
+    "layers": {
+      "app": {
+        "name": "Uygulamalar",
+        "descriptor": "Davranış",
+        "tag": "Aracıların ve insanların eylemde bulunduğu yer",
+        "role": "Bu, insanların ve aracıların dokunduğu yüzeydir. Önemli olan her eylem imzalı bir iddiadır: bunu kimin yaptığını, buna rızası olduğunu ve geri alınabileceğini görebilirsiniz. Protokol başka hiçbir şeyi taşımaz.",
+        "primitivesLabel": "Burada ne eylemde bulunur",
+        "primitives": [
+          {
+            "label": "Özerk aracılar",
+            "note": "Davranışları alttaki her katman tarafından sınırlı, izlenebilir ve geri alınabilirdir."
+          },
+          {
+            "label": "İnsanlar ve topluluklar",
+            "note": "Paylaşılan parçaların üzerine kendi yerel kurallarını yazarlar."
+          },
+          {
+            "label": "Yerel yargı",
+            "note": "Neyin doğru olduğuna bir platformun kararına göre değil, imzalı kanıta göre siz karar verirsiniz."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Güvenlik bahsi",
+            "body": "\"Güvenene kadar bir modeli eğit\" değil. Bunun yerine, önemli olan her eylemi modelin kontrol etmediği kişilerce denetlenebilir kıl."
+          }
+        ],
+        "cta": "Uygulamayı edinin →"
+      },
+      "gov": {
+        "name": "Yönetişim",
+        "descriptor": "Kararlar",
+        "tag": "Ağın kendini nasıl yönettiği",
+        "role": "Yerel politika ve insan denetimi, aynı imzalı iddialarla yazılır ve aynı kurallara tabidir. Yazılım ahlaki sorumluluk taşıyamaz, bu yüzden durdurma yetkisi adı belirtilmiş insanlarda kalır, ağın içindeki hiç kimsenin geri alamayacağı koşullarla.",
+        "primitivesLabel": "Nasıl yönetir",
+        "primitives": [
+          {
+            "label": "Yetki kafesi",
+            "note": "Güven zincirler halinde devredilir. Katılmak için bir topluluğun gerçek bir görev üstlenmesi gerekir."
+          },
+          {
+            "label": "Bilge-Yetki'ye erteleme",
+            "note": "Adı belirtilmiş insanlar durdurma yetkisini elinde tutar. Emin olmadığında sistem onlara danışır."
+          },
+          {
+            "label": "Ters yeter sayı, arızada güvenli",
+            "note": "Bulunmak yetki verir. Bulunmamak yetkiyi kaybettirir."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Meta-Goal M-1'e dayanır",
+            "body": "Her mekanizma tek bir sözden gelir: sürdürülebilir uyarlanabilir tutarlılık."
+          }
+        ],
+        "cta": "Nasıl yönetildiğini görün →"
+      },
+      "ceg": {
+        "name": "Dilbilgisi",
+        "descriptor": "Anlam",
+        "tag": "CIRIS Epistemik Dilbilgisi",
+        "role": "İmzalı iddiaların nasıl anlam kazandığı ve birleştiği. Katı bir dört-test kapısına sahip paylaşılan bir ad alanı, tel biçimini makinece denetlenebilir tutar, yalnızca sade olguları kullanır ve görüşleri yerel politikaya bırakır.",
+        "primitivesLabel": "İddialar nasıl anlam taşır",
+        "primitives": [
+          {
+            "label": "Makinece denetlenebilir önekler",
+            "note": "detection:correlated_action gibi, asla \"aldatma\" gibi bulanık sözcükler değil."
+          },
+          {
+            "label": "Kesin sınırlar",
+            "note": "prohibited:{category}: bir aracının asla aşamayacağı 22 kırmızı çizgi."
+          },
+          {
+            "label": "Yapısal birleştiriciler",
+            "note": "delegates_to, supersedes, withdraws, recants: bir iddianın diğerini nasıl değiştirdiği."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Yetki doğru değildir",
+            "body": "Protokol kimin ne dediğini, neden dediğini ve hangi yetkiyle dediğini kaydeder. Neyin doğru olduğunu asla kaydetmez."
+          }
+        ],
+        "cta": "Dilbilgisini görün →"
+      },
+      "env": {
+        "name": "Zarf",
+        "descriptor": "İlkel",
+        "tag": "Tek bir dondurulmuş yüzey",
+        "role": "Gerçek kılınmış evrensel ilkel: tek bir imzalı zarf. Kimlik, rıza, kanıt, yönetişim ve devir, hepsi bu tek şeye indirgenir, izleyebileceğiniz ve geri alabileceğiniz imzalı bir iddiaya, doğrudan tel biçiminin içinde. Alanları sabittir. Nasıl birleştikleri Dilbilgisi'dir.",
+        "primitivesLabel": "Zarf alanları",
+        "hero": {
+          "body": "Her şey buna indirgenir.",
+          "workhorse": {
+            "label": "İmzalı iddia",
+            "note": "Tek bir zarf kimliği, rızayı ve kanıtı aynı anda taşır."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "Kaynak: yapanın kriptografik kimliği."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Rıza: özneye protokol düzeyinde geri alma hakkı verir."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "İddiayı denetleyebileceğiniz bir kanıta bağlar."
+          },
+          {
+            "label": "dimension",
+            "note": "Neyin iddia edildiğini söyleyen ad alanı öneki."
+          },
+          {
+            "label": "score and confidence",
+            "note": "Bir tüketicinin politikasının üzerine göre eylemde bulunduğu sayılar."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Tasdik, evrensel ilkeldir",
+            "body": "Zarfın üstünde bir katman değildir. Zarfın içeriğidir. Bu yüzden ayrı bir \"Tasdikler\" katmanı yoktur."
+          },
+          {
+            "title": "Rıza içine gömülüdür",
+            "body": "subject_key_ids içinde adı geçen herkes tel düzeyinde geri alabilir, bunu bir uygulama değil altyapı zorunlu kılar."
+          }
+        ],
+        "cta": "Platformu görün →"
+      },
+      "transport": {
+        "name": "Taşıma",
+        "descriptor": "Altyapı",
+        "tag": "Eşten eşe altyapı",
+        "role": "Akış, mesaj, dosya ve imzalı iddiaları, ortada bir platform sahibi olmadan, insanların zaten sahip olduğu cihazlar arasında doğrudan taşıyan post-kuantum, eşten eşe bir ağ. Kriptografi üstteki bir katman değildir. Altyapının kendini bir arada tutma biçimidir.",
+        "primitivesLabel": "Altyapı",
+        "primitives": [
+          {
+            "label": "Post-kuantum tel",
+            "note": "ML-KEM-768 ile X25519. Federasyon satırları Ed25519 ve ML-DSA-65 ile imzalanır."
+          },
+          {
+            "label": "Yapısal görünmezlik",
+            "note": "Özel kapsamlar dizin duyurusu göndermez, bu yüzden eşler veriyi bulamaz bile."
+          },
+          {
+            "label": "Eşten eşe ağ",
+            "note": "Platform sahibi yok. Ele geçirilecek, mahkemeye çağrılacak veya kapatılacak bir şey yok."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Yönetişim telin içinde yaşar",
+            "body": "Yanındaki bir politika klasöründe değil, taşımanın, depolamanın ve tel biçiminin kendisinin içinde zorunlu kılınır."
+          }
+        ],
+        "cta": "Nasıl doğrulandığını görün →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Epistemik Web",
     "headline": "Epistemik web nedir?",

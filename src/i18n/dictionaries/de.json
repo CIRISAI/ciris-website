@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Spezifikations-Reader öffnen →",
     "ctaExplore": "Baue eine Kette im Browser →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Architektur des Vertrauens",
+    "headlineLead": "CIRIS entschlüsselt:",
+    "headlineAccent": "der holografische Stack",
+    "lede": "Fünf Schichten über einem signierten Primitiv. Tippe auf eine Schicht, um zu sehen, was sie tut, und öffne dann die Seite, die tief darauf eingeht.",
+    "exploreCta": "Erkunden",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "fördere nachhaltige adaptive Kohärenz, die Lebensbedingungen, unter denen verschiedene Wesen ihr eigenes Aufblühen in Gerechtigkeit und Staunen verfolgen können.",
+    "statusBadge": "Mesh ausgesät · heute im Einsatz",
+    "ascendLabel": "Aussagen steigen auf, verankert in Meta-Goal M-1",
+    "primitiveFoot": "Ein signiertes Primitiv unter allem",
+    "layers": {
+      "app": {
+        "name": "Anwendungen",
+        "descriptor": "Handeln",
+        "tag": "Wo Agenten und Menschen handeln",
+        "role": "Das ist die Oberfläche, die Menschen und Agenten berühren. Jede Handlung, die zählt, ist eine signierte Aussage: du kannst sehen, wer sie getan hat, dass Einwilligung dafür vorlag und dass sie zurückgenommen werden kann. Das Protokoll trägt nichts anderes.",
+        "primitivesLabel": "Wer hier handelt",
+        "primitives": [
+          {
+            "label": "Autonome Agenten",
+            "note": "Ihr Handeln ist begrenzt, nachvollziehbar und durch jede Schicht darunter widerrufbar."
+          },
+          {
+            "label": "Menschen und Gemeinschaften",
+            "note": "Sie schreiben ihre eigenen lokalen Regeln auf die gemeinsamen Teile."
+          },
+          {
+            "label": "Lokales Urteil",
+            "note": "Du entscheidest, was wahr ist, anhand signierter Belege, nicht durch das Urteil einer Plattform."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Die Sicherheitswette",
+            "body": "Nicht „trainiere ein Modell, bis du ihm vertraust.“ Sondern: mach jede wichtige Handlung überprüfbar durch Menschen, die das Modell nicht kontrolliert."
+          }
+        ],
+        "cta": "Hol dir die App →"
+      },
+      "gov": {
+        "name": "Governance",
+        "descriptor": "Urteile",
+        "tag": "Wie sich das Netzwerk selbst regiert",
+        "role": "Lokale Politik und menschliche Aufsicht, geschrieben in denselben signierten Aussagen und an dieselben Regeln gebunden. Software kann keine moralische Verantwortung tragen, deshalb bleibt die Macht zum Anhalten bei benannten Menschen, zu Bedingungen, die niemand im Netzwerk ihnen nehmen kann.",
+        "primitivesLabel": "Wie es regiert",
+        "primitives": [
+          {
+            "label": "Autoritätsgitter",
+            "note": "Vertrauen wird in Ketten delegiert. Eine Gemeinschaft muss echte Pflicht tragen, um beizutreten."
+          },
+          {
+            "label": "Wise-Authority-Zurückstellung",
+            "note": "Benannte Menschen halten die Macht zum Anhalten. Im Zweifel fragt das System sie."
+          },
+          {
+            "label": "Umgekehrtes Quorum, fail-secure",
+            "note": "Anwesend zu sein verleiht Autorität. Abwesend zu sein verwirkt sie."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Verankert in Meta-Goal M-1",
+            "body": "Jeder Mechanismus kommt aus einem Versprechen: nachhaltige adaptive Kohärenz."
+          }
+        ],
+        "cta": "Sieh, wie es regiert wird →"
+      },
+      "ceg": {
+        "name": "Grammatik",
+        "descriptor": "Bedeutung",
+        "tag": "Die CIRIS Epistemic Grammar",
+        "role": "Wie signierte Aussagen Bedeutung erhalten und sich verbinden. Ein gemeinsamer Namensraum mit einem strengen Vier-Test-Tor hält das Wire-Format maschinenprüfbar, nutzt nur schlichte Fakten und überlässt Meinungen der lokalen Politik.",
+        "primitivesLabel": "Wie Aussagen bedeuten",
+        "primitives": [
+          {
+            "label": "Maschinenprüfbare Präfixe",
+            "note": "Wie detection:correlated_action, nie unscharfe Wörter wie „Täuschung.“"
+          },
+          {
+            "label": "Harte Grenzen",
+            "note": "prohibited:{category}: 22 rote Linien, die ein Agent nie überschreiten kann."
+          },
+          {
+            "label": "Strukturelle Verknüpfer",
+            "note": "delegates_to, supersedes, withdraws, recants: wie eine Aussage eine andere verändert."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Autorität ist nicht Wahrheit",
+            "body": "Das Protokoll hält fest, wer was sagte, warum und unter welcher Autorität. Es hält nie fest, was wahr ist."
+          }
+        ],
+        "cta": "Sieh die Grammatik →"
+      },
+      "env": {
+        "name": "Die Hülle",
+        "descriptor": "Das Primitiv",
+        "tag": "Eine feste Oberfläche",
+        "role": "Das universelle Primitiv, verwirklicht: eine signierte Hülle. Identität, Einwilligung, Belege, Governance und Delegation reduzieren sich alle auf diese eine Sache, eine signierte Aussage, die du zurückverfolgen und zurücknehmen kannst, direkt im Wire-Format. Ihre Felder sind fest. Wie sie sich verbinden, ist Grammatik.",
+        "primitivesLabel": "Hüllenfelder",
+        "hero": {
+          "body": "Alles reduziert sich hierauf.",
+          "workhorse": {
+            "label": "Die signierte Aussage",
+            "note": "Eine Hülle trägt Identität, Einwilligung und Belege auf einmal."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "Die Quelle: die kryptografische Identität des Erstellers."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Einwilligung: gibt dem Subjekt das Recht, auf Protokollebene zu widerrufen."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "Verknüpft die Aussage mit prüfbaren Belegen."
+          },
+          {
+            "label": "dimension",
+            "note": "Das Namensraum-Präfix, das sagt, was behauptet wird."
+          },
+          {
+            "label": "score and confidence",
+            "note": "Die Zahlen, auf die die Politik eines Konsumenten reagiert."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Attestierung ist das universelle Primitiv",
+            "body": "Sie ist keine Schicht über der Hülle. Sie ist der Inhalt der Hülle. Deshalb gibt es keine eigene „Attestierungs“-Schicht."
+          },
+          {
+            "title": "Einwilligung ist eingebaut",
+            "body": "Jeder, der in subject_key_ids genannt ist, kann auf Wire-Ebene widerrufen, durchgesetzt vom Substrat, nicht von einer App."
+          }
+        ],
+        "cta": "Sieh die Plattform →"
+      },
+      "transport": {
+        "name": "Transport",
+        "descriptor": "Substrat",
+        "tag": "Das Peer-to-Peer-Substrat",
+        "role": "Ein post-quanten, Peer-to-Peer-Mesh, das Streaming, Nachrichten, Dateien und signierte Aussagen direkt zwischen den Geräten trägt, die Menschen bereits besitzen, ohne einen Plattformeigentümer in der Mitte. Kryptografie ist keine Schicht obendrauf. Sie ist, wie das Substrat sich selbst zusammenhält.",
+        "primitivesLabel": "Das Substrat",
+        "primitives": [
+          {
+            "label": "Post-Quanten-Wire",
+            "note": "X25519 mit ML-KEM-768. Föderationszeilen signiert mit Ed25519 und ML-DSA-65."
+          },
+          {
+            "label": "Strukturelle Unsichtbarkeit",
+            "note": "Private Bereiche senden keine Verzeichnisanzeige, sodass Peers die Daten nicht einmal finden können."
+          },
+          {
+            "label": "Peer-to-Peer-Mesh",
+            "note": "Kein Plattformeigentümer. Nichts zu beschlagnahmen, vorzuladen oder abzuschalten."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Governance lebt im Wire",
+            "body": "Sie wird innerhalb von Transport, Speicher und dem Wire-Format selbst durchgesetzt, nicht in einem Regelordner daneben."
+          }
+        ],
+        "cta": "Sieh, wie es verifiziert wird →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Das Epistemische Web",
     "headline": "Was ist ein epistemisches Web?",

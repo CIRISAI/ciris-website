@@ -249,3 +249,13 @@ h4 {
 .ceg-source-html .ceg-analysis-arrow {
   font-size: 0.8em;
 }
+
+/* CIRIS Stack (/epistemic-web) holographic animations. Kept global because the
+   component references them from inline `animation`, which cannot see a
+   CSS-Modules-scoped keyframe name. See components/stack/cirisStack.module.css. */
+@keyframes cirisHoloIn { 0% { opacity: 0; transform: translateY(-8px) scale(0.99); filter: blur(6px); } 100% { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes cirisHoloFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes cirisScan { from { background-position: 0 0; } to { background-position: 0 220px; } }
+@keyframes cirisBeamPulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.95; } }
+@keyframes cirisShimmer { 0%, 100% { opacity: 0.72; } 50% { opacity: 1; } }
+@keyframes cirisBeat { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }

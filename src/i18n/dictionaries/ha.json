@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Bude mai karanta takardun bayani →",
     "ctaExplore": "Gina sarka cikin birawsa →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Ginin amana",
+    "headlineLead": "Fassarar CIRIS:",
+    "headlineAccent": "tarin holographic",
+    "lede": "Matakai biyar a kan tushe guda daya da aka sa hannu. Danna wani matako don ganin abin da yake yi, sannan ka bude shafin da ya yi bayaninsa sosai.",
+    "exploreCta": "Bincika",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "inganta jitujitu mai dorewa da saukin daidaitawa, wato yanayin rayuwa da ke ba da damar halittu daban-daban su nemi ci gaban kansu cikin adalci da al'ajabi.",
+    "statusBadge": "An shuka mesh · yana aiki a yau",
+    "ascendLabel": "Da'awoyi na hawa sama, sun samo asali daga Meta-Goal M-1",
+    "primitiveFoot": "Tushe guda daya da aka sa hannu a karkashin kome",
+    "layers": {
+      "app": {
+        "name": "Aikace-aikace",
+        "descriptor": "Dabi'a",
+        "tag": "Inda wakilai da mutane ke aiki",
+        "role": "Wannan shi ne saman da mutane da wakilai ke taba. Duk wani aiki mai muhimmanci da'awa ce da aka sa hannu: kana iya ganin wanda ya yi shi, yana da izini ya yi shi, kuma ana iya janye shi. Yarjejeniyar ba za ta dauki komai ba face wannan.",
+        "primitivesLabel": "Abin da ke aiki a nan",
+        "primitives": [
+          {
+            "label": "Wakilai masu cin gashin kansu",
+            "note": "An iyakance dabi'unsu, ana iya bin diddiginsu, kuma kowane matako da ke kasa yana iya janye su."
+          },
+          {
+            "label": "Mutane da al'ummomi",
+            "note": "Suna rubuta ka'idojinsu na cikin gida a kan bangarorin da aka raba."
+          },
+          {
+            "label": "Hukuncin cikin gida",
+            "note": "Kai ne ka yanke abin da yake gaskiya daga shaidar da aka sa hannu, ba daga hukuncin dandali ba."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Fatan tsaro",
+            "body": "Ba \"a horar da wani samfuri har sai ka amince da shi ba.\" A maimakon haka, ka sa duk wani muhimmin aiki ya zama abin da mutanen da samfurin ba ya sarrafa su ke iya dubawa."
+          }
+        ],
+        "cta": "Sami manhajar →"
+      },
+      "gov": {
+        "name": "Shugabanci",
+        "descriptor": "Hukunce-hukunce",
+        "tag": "Yadda hanyar sadarwa ke gudanar da kanta",
+        "role": "Ka'idar cikin gida da kula da dan Adam, an rubuta su cikin da'awoyin da aka sa hannu iri daya kuma an rike su bisa ka'idoji iri daya. Manhaja ba za ta iya daukar nauyin dabi'a ba, saboda haka ikon dakatarwa ya kasance a hannun mutane da aka ambaci sunayensu, bisa sharuddan da babu wani a cikin hanyar sadarwar da zai iya kwace.",
+        "primitivesLabel": "Yadda yake gudanarwa",
+        "primitives": [
+          {
+            "label": "Tsarin ikon amana",
+            "note": "Ana ba da amana cikin sarkoki. Al'umma dole ta rike ainihin nauyi kafin ta shiga."
+          },
+          {
+            "label": "Mika ga Wise-Authority",
+            "note": "Mutane da aka ambaci sunayensu su ke da ikon dakatarwa. Idan ba a tabbata ba, tsarin yana tambayarsu."
+          },
+          {
+            "label": "Kididdiga a baya, fail-secure",
+            "note": "Kasancewa yana ba da iko. Rashin kasancewa yana rasa shi."
+          }
+        ],
+        "notes": [
+          {
+            "title": "An samo asali daga Meta-Goal M-1",
+            "body": "Kowace hanya ta samo asali daga alkawari guda: jitujitu mai dorewa da saukin daidaitawa."
+          }
+        ],
+        "cta": "Duba yadda ake gudanar da shi →"
+      },
+      "ceg": {
+        "name": "Nahawu",
+        "descriptor": "Ma'ana",
+        "tag": "CIRIS Epistemic Grammar",
+        "role": "Yadda da'awoyin da aka sa hannu ke samun ma'ana da hadewa. Sunan sarari da aka raba tare da kofar four-test mai tsauri yana sa tsarin waya ya zama abin dubawa ta na'ura, ta amfani da bayanai bayyanannu kadai, kuma yana barin ra'ayoyi ga ka'idar cikin gida.",
+        "primitivesLabel": "Yadda da'awoyi ke da ma'ana",
+        "primitives": [
+          {
+            "label": "Fararrun da na'ura ke iya dubawa",
+            "note": "Kamar detection:correlated_action, ba kalmomi masu shakku kamar \"yaudara\" ba."
+          },
+          {
+            "label": "Iyakoki masu tsauri",
+            "note": "prohibited:{category}: layuka ja 22 da wakili ba zai taba tsallakawa ba."
+          },
+          {
+            "label": "Masu hadawa na tsari",
+            "note": "delegates_to, supersedes, withdraws, recants: yadda wata da'awa ke canza wata."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Iko ba gaskiya ba ne",
+            "body": "Yarjejeniyar tana rubuta wanda ya fadi me, don me, da kuma karkashin wace iko. Ba ta taba rubuta abin da yake gaskiya ba."
+          }
+        ],
+        "cta": "Duba nahawun →"
+      },
+      "env": {
+        "name": "Ambulan",
+        "descriptor": "Tushen farko",
+        "tag": "Saman daskararre guda daya",
+        "role": "Tushen duniya, an sanya shi na gaske: ambulan guda daya da aka sa hannu. Shaida, izini, hujja, shugabanci, da wakilci duk sun koma ga wannan abu guda, wato da'awa da aka sa hannu wadda za ka iya bin diddiginta ka kuma janye ta, kai tsaye a cikin tsarin waya. An gyara filayensa. Yadda suke hadewa shi ne Nahawu.",
+        "primitivesLabel": "Filayen ambulan",
+        "hero": {
+          "body": "Kome ya koma ga wannan.",
+          "workhorse": {
+            "label": "Da'awar da aka sa hannu",
+            "note": "Ambulan guda daya yana dauke da shaida, izini, da hujja a lokaci guda."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "Tushen: shaidar sirri ta wanda ya yi."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Izini: yana ba wanda ake magana a kansa 'yancin janyewa a matakin yarjejeniya."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "Yana hada da'awar da hujjar da za ka iya dubawa."
+          },
+          {
+            "label": "dimension",
+            "note": "Fararren sunan sarari da ke fadin abin da ake da'awa."
+          },
+          {
+            "label": "score and confidence",
+            "note": "Lambobin da ka'idar mai amfani ke aiki da su."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Shaida ita ce tushen duniya",
+            "body": "Ba wani matako ne a saman ambulan ba. Ita ce abin da ke cikin ambulan. Shi ya sa babu wani matako na \"Shaidu\" daban."
+          },
+          {
+            "title": "An gina izini a ciki",
+            "body": "Duk wanda aka ambata a cikin subject_key_ids yana iya janyewa a matakin waya, tsarin tushe ne ke aiwatar da shi, ba manhaja ba."
+          }
+        ],
+        "cta": "Duba dandali →"
+      },
+      "transport": {
+        "name": "Sufuri",
+        "descriptor": "Tushen tsari",
+        "tag": "Tushen tsakanin takwarori",
+        "role": "Wata mesh ta post-quantum, ta tsakanin takwarori wadda ke dauke da yawo, sakonni, fayiloli, da da'awoyin da aka sa hannu kai tsaye tsakanin na'urorin da mutane suka riga suka mallaka, ba tare da mai dandali a tsakiya ba. Sirri ba matako ne a sama ba. Shi ne yadda tushen tsari ke rike kansa tare.",
+        "primitivesLabel": "Tushen tsari",
+        "primitives": [
+          {
+            "label": "Wayar post-quantum",
+            "note": "X25519 tare da ML-KEM-768. An sa hannu kan layukan hadin gwiwa da Ed25519 da ML-DSA-65."
+          },
+          {
+            "label": "Rashin ganuwa na tsari",
+            "note": "Iyakokin sirri ba sa aika tallar shiryayye, don haka takwarori ba za su ma iya samun bayanan ba."
+          },
+          {
+            "label": "Mesh tsakanin takwarori",
+            "note": "Babu mai dandali. Babu abin da za a kwace, a kira kotu, ko a kashe."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Shugabanci na zaune a cikin waya",
+            "body": "Ana aiwatar da shi a cikin sufuri, ajiya, da tsarin waya kansa, ba a cikin littafin ka'ida a gefensa ba."
+          }
+        ],
+        "cta": "Duba yadda ake tabbatar da shi →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Yanar Gizon Sani",
     "headline": "Menene yanar gizon sani?",

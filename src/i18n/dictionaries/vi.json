@@ -2106,6 +2106,193 @@
     "ctaSpecReader": "Mở trình đọc đặc tả →",
     "ctaExplore": "Dựng một chuỗi trong trình duyệt →"
   },
+  "stack": {
+    "eyebrow": "CIRIS · Kiến trúc của niềm tin",
+    "headlineLead": "Giải mã CIRIS:",
+    "headlineAccent": "ngăn xếp toàn ảnh",
+    "lede": "Năm lớp trên một nguyên thể đã ký. Chạm vào một lớp để xem nó làm gì, rồi mở trang đi sâu về lớp đó.",
+    "exploreCta": "Khám phá",
+    "metaGoalLabel": "Meta-Goal M-1",
+    "metaGoal": "thúc đẩy sự gắn kết thích ứng bền vững, những điều kiện sống để các sinh thể đa dạng có thể theo đuổi sự phát triển của chính mình trong công lý và niềm kỳ diệu.",
+    "statusBadge": "Mạng lưới đã gieo mầm · đang vận hành hôm nay",
+    "ascendLabel": "Các tuyên bố vươn lên, bắt rễ từ Meta-Goal M-1",
+    "primitiveFoot": "Một nguyên thể đã ký nằm dưới tất cả",
+    "layers": {
+      "app": {
+        "name": "Ứng dụng",
+        "descriptor": "Hành xử",
+        "tag": "Nơi tác nhân và con người hành động",
+        "role": "Đây là bề mặt mà con người và tác nhân chạm vào. Mọi hành động quan trọng đều là một tuyên bố đã ký: bạn có thể thấy ai đã làm, họ có sự đồng ý để làm, và nó có thể được thu hồi. Giao thức sẽ không mang theo bất cứ thứ gì khác.",
+        "primitivesLabel": "Ai hành động ở đây",
+        "primitives": [
+          {
+            "label": "Tác nhân tự chủ",
+            "note": "Hành xử của chúng bị giới hạn, có thể truy vết, và có thể thu hồi bởi mọi lớp bên dưới."
+          },
+          {
+            "label": "Con người và cộng đồng",
+            "note": "Họ tự viết luật lệ địa phương của mình trên các phần chung."
+          },
+          {
+            "label": "Phán đoán địa phương",
+            "note": "Bạn quyết định điều gì là đúng từ bằng chứng đã ký, không phải từ phán quyết của một nền tảng."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Đặt cược an toàn",
+            "body": "Không phải “huấn luyện một mô hình cho đến khi bạn tin nó.” Thay vào đó, làm cho mọi hành động quan trọng đều có thể được kiểm tra bởi những người mà mô hình không kiểm soát."
+          }
+        ],
+        "cta": "Tải ứng dụng →"
+      },
+      "gov": {
+        "name": "Quản trị",
+        "descriptor": "Phán quyết",
+        "tag": "Cách mạng lưới tự quản trị",
+        "role": "Chính sách địa phương và sự giám sát của con người, được viết trong cùng những tuyên bố đã ký và giữ theo cùng những luật lệ. Phần mềm không thể mang trách nhiệm đạo đức, nên quyền dừng lại nằm ở những con người có tên, theo các điều khoản mà không ai bên trong mạng lưới có thể lấy đi.",
+        "primitivesLabel": "Nó quản trị thế nào",
+        "primitives": [
+          {
+            "label": "Mạng lưới thẩm quyền",
+            "note": "Niềm tin được ủy thác theo chuỗi. Một cộng đồng phải gánh nghĩa vụ thật sự để tham gia."
+          },
+          {
+            "label": "Chuyển cho Thẩm quyền Sáng suốt",
+            "note": "Những con người có tên nắm quyền dừng lại. Khi không chắc, hệ thống hỏi họ."
+          },
+          {
+            "label": "Túc số ngược, an toàn khi thất bại",
+            "note": "Có mặt thì được trao thẩm quyền. Vắng mặt thì mất nó."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Bắt rễ từ Meta-Goal M-1",
+            "body": "Mọi cơ chế đều đến từ một lời hứa: sự gắn kết thích ứng bền vững."
+          }
+        ],
+        "cta": "Xem cách nó được quản trị →"
+      },
+      "ceg": {
+        "name": "Ngữ pháp",
+        "descriptor": "Ý nghĩa",
+        "tag": "Ngữ pháp Nhận thức CIRIS",
+        "role": "Cách các tuyên bố đã ký có được ý nghĩa và kết hợp lại. Một không gian tên chung với cổng bốn phép thử nghiêm ngặt giữ cho định dạng truyền dẫn có thể kiểm tra bằng máy, chỉ dùng sự thật thuần túy, và để ý kiến cho chính sách địa phương.",
+        "primitivesLabel": "Cách tuyên bố mang ý nghĩa",
+        "primitives": [
+          {
+            "label": "Tiền tố có thể kiểm tra bằng máy",
+            "note": "Như detection:correlated_action, không bao giờ dùng từ mơ hồ như “lừa dối.”"
+          },
+          {
+            "label": "Giới hạn cứng",
+            "note": "prohibited:{category}: 22 lằn ranh đỏ mà một tác nhân không bao giờ được vượt qua."
+          },
+          {
+            "label": "Bộ kết hợp cấu trúc",
+            "note": "delegates_to, supersedes, withdraws, recants: cách một tuyên bố thay đổi một tuyên bố khác."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Thẩm quyền không phải sự thật",
+            "body": "Giao thức ghi lại ai đã nói gì, vì sao, và dưới thẩm quyền nào. Nó không bao giờ ghi lại điều gì là đúng."
+          }
+        ],
+        "cta": "Xem ngữ pháp →"
+      },
+      "env": {
+        "name": "Phong bì",
+        "descriptor": "Nguyên thể",
+        "tag": "Một bề mặt đã đóng băng",
+        "role": "Nguyên thể phổ quát, được hiện thực hóa: một phong bì đã ký. Danh tính, sự đồng ý, bằng chứng, quản trị, và ủy thác đều quy về một thứ này, một tuyên bố đã ký mà bạn có thể truy vết và thu hồi, ngay trong định dạng truyền dẫn. Các trường của nó là cố định. Cách chúng kết hợp là Ngữ pháp.",
+        "primitivesLabel": "Các trường của phong bì",
+        "hero": {
+          "body": "Mọi thứ quy về điều này.",
+          "workhorse": {
+            "label": "Tuyên bố đã ký",
+            "note": "Một phong bì mang danh tính, sự đồng ý, và bằng chứng cùng một lúc."
+          },
+          "composers": [
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
+          ]
+        },
+        "primitives": [
+          {
+            "label": "attesting_key_id",
+            "note": "Nguồn: danh tính mật mã của người tạo ra."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Sự đồng ý: trao cho chủ thể quyền thu hồi ở cấp giao thức."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "Liên kết tuyên bố với bằng chứng mà bạn có thể kiểm toán."
+          },
+          {
+            "label": "dimension",
+            "note": "Tiền tố không gian tên cho biết điều gì đang được tuyên bố."
+          },
+          {
+            "label": "score and confidence",
+            "note": "Những con số mà chính sách của người dùng hành động dựa vào."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Chứng thực là nguyên thể phổ quát",
+            "body": "Nó không phải một lớp nằm trên phong bì. Nó là nội dung của phong bì. Đó là lý do không có một lớp “Chứng thực” riêng."
+          },
+          {
+            "title": "Sự đồng ý được tích hợp sẵn",
+            "body": "Bất kỳ ai được nêu tên trong subject_key_ids đều có thể thu hồi ở cấp truyền dẫn, được thực thi bởi nền tảng cơ sở, không phải bởi một ứng dụng."
+          }
+        ],
+        "cta": "Xem nền tảng →"
+      },
+      "transport": {
+        "name": "Truyền dẫn",
+        "descriptor": "Nền tảng cơ sở",
+        "tag": "Nền tảng cơ sở ngang hàng",
+        "role": "Một mạng lưới ngang hàng, hậu lượng tử, mang theo luồng truyền, tin nhắn, tệp, và các tuyên bố đã ký thẳng giữa những thiết bị mà con người đã sở hữu, không có chủ nền tảng nào ở giữa. Mật mã không phải một lớp ở trên. Nó là cách nền tảng cơ sở tự gắn kết với chính mình.",
+        "primitivesLabel": "Nền tảng cơ sở",
+        "primitives": [
+          {
+            "label": "Truyền dẫn hậu lượng tử",
+            "note": "X25519 với ML-KEM-768. Các hàng liên kết được ký bằng Ed25519 và ML-DSA-65."
+          },
+          {
+            "label": "Vô hình về cấu trúc",
+            "note": "Các phạm vi riêng tư không gửi quảng bá thư mục, nên các đầu mối ngang hàng thậm chí không thể tìm thấy dữ liệu."
+          },
+          {
+            "label": "Mạng lưới ngang hàng",
+            "note": "Không có chủ nền tảng. Không có gì để tịch thu, triệu tập, hay tắt đi."
+          }
+        ],
+        "notes": [
+          {
+            "title": "Quản trị sống trong lớp truyền dẫn",
+            "body": "Nó được thực thi bên trong truyền dẫn, lưu trữ, và chính định dạng truyền dẫn, không phải trong một tập chính sách nằm bên cạnh."
+          }
+        ],
+        "cta": "Xem cách nó được xác minh →"
+      }
+    }
+  },
   "epistemicWeb": {
     "eyebrow": "Web Tri Thức",
     "headline": "Web tri thức là gì?",
