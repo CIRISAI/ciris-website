@@ -259,3 +259,14 @@ h4 {
 @keyframes cirisBeamPulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.95; } }
 @keyframes cirisShimmer { 0%, 100% { opacity: 0.72; } 50% { opacity: 1; } }
 @keyframes cirisBeat { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+
+/* Reduced-motion guard for the CIRIS interactive scenes (Stack, Safety Arch).
+   The scenes carry decorative idle loops (holo float, scan, beam pulse). Wrappers
+   set data-ciris-scene; honoring the OS preference disables those loops. */
+@media (prefers-reduced-motion: reduce) {
+  [data-ciris-scene] * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+  }
+}

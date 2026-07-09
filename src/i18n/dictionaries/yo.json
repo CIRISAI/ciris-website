@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Ṣii oluka apejuwe →",
     "ctaExplore": "Ko pq kan ninu aṣawakiri →"
   },
+  "safetyArch": {
+    "headlineLead": "Ààbò àti ìmọ̀-ẹ̀rọ,",
+    "headlineAccent": "kò ṣeé yà sọ́tọ̀",
+    "groundLabel": "Ilẹ̀ tí ó ń hù jáde láti inú rẹ̀",
+    "abutmentLeft": "Àyẹ̀wò-ṣeéṣe",
+    "abutmentRight": "Ìwà-rere",
+    "keystoneBadge": "Òkúta ìdúró",
+    "keystoneMechLabel": "Ìdí tí kò fi ṣeé yọ kúrò",
+    "mechLabel": "Bí a ṣe gé bíríkì náà",
+    "exploreCta": "Ṣàwárí",
+    "ratchetLabel": "Ìdí tí afárá náà fi dúró: ẹ̀rọ ìbáramu",
+    "ratchetBody": "Afárá kan ń le sí i bí ẹrù ṣe ń tẹ̀ ẹ́. Ẹrù náà ń dì àwọn òkúta papọ̀ le. CIRIS ń ṣiṣẹ́ bákan náà. Àwọn irọ́ tí a ṣàkóso papọ̀ ń wó lulẹ̀ kíákíá bí àwọn ohùn òmìnira ṣe ń pọ̀ sí i, ààbò sì ń kó jọ di ọ̀rọ̀: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Ìdádúró",
+        "name": "Bọ́tìnì ìpapòdà",
+        "tag": "Block 01 · Ìdádúró",
+        "promise": "Bọ́tìnì ìpapòdà kan wà tí kò sí àmì-ìdíwọ̀n, kò sí àríyànjiyàn, tàbí ẹni-ìkọlù kankan tí ó lè borí rẹ̀. Yọ bíríkì kan yìí kúrò, kò sí ohunkóhun mìíràn tí ó lè di ẹrù náà mú.",
+        "mechanisms": [
+          {
+            "label": "Ìdádúró àkójọpọ̀-taara",
+            "note": "HUMANITY_ACCORD: 2-of-3 ènìyàn tí a dárúkọ, àkójọpọ̀-taara kí ó lè ṣiṣẹ́ kódà bí a bá kọlu àkọsílẹ̀ orúkọ tàbí tí a dí ọ̀nà ìbánisọ̀rọ̀ lọ́wọ́."
+          },
+          {
+            "label": "Kò ṣeé fagilé",
+            "note": "Kò sí ẹgbẹ́ kankan nínú ìṣọ̀kan náà tí ó lè pa tàbí yíká ìdádúró náà."
+          },
+          {
+            "label": "Ju gbogbo àmì-ìdíwọ̀n lọ",
+            "note": "Ìdádúró náà jókòó lórí gbogbo ètò náà. Kò sí èròngbà tí ó lè bò ó mọ́lẹ̀ ní ìdìbò."
+          }
+        ],
+        "note": "Òkúta ìdúró. Gbogbo ìdánilójú mìíràn ń tẹ̀ mọ́ ọn, ó sì jẹ́ bíríkì kan tí kò ṣeé yọ kúrò."
+      },
+      "limits": {
+        "short": "Ààlà",
+        "name": "Àwọn ààlà líle tí kò lè kọjá",
+        "tag": "Block 02 · Ààlà",
+        "promise": "Àwọn ìṣe kan kò sí lórí tábìlì bí ó ti wù kí àwọn nọ́mbà náà sọ.",
+        "mechanisms": [
+          {
+            "label": "Àwọn ààlà ìkọ̀sílẹ̀",
+            "note": "Àwọn ẹ̀ka 22 tí a kọ̀ ń gbé àmì òdì. Kò sí àmì-ìdíwọ̀n tí ó lè dá ìṣe èèwọ̀ láre láéláé."
+          },
+          {
+            "label": "Ìdílọ́wọ́ ẹ̀rọ",
+            "note": "Ìṣe apààyàn tàbí èyí tí kò ṣeé yí padà nílò ènìyàn tààrà láti fún ní àṣẹ."
+          },
+          {
+            "label": "Ìpìlẹ̀ àìléwu-nípasẹ̀-ìkùnà",
+            "note": "Àìsí àṣẹ ń pàdánù rẹ̀. Kò fún ní láéláé."
+          }
+        ],
+        "note": "Àwọn ààlà ni a gbé kalẹ̀ nípasẹ̀ ohun tí a kọ̀, nítorí náà kò sí èròngbà ọlọ́gbọ́n tí ó lè jiyàn yí wọn ká."
+      },
+      "humans": {
+        "short": "Àbójútó",
+        "name": "Àwọn ènìyàn wà ní ojúṣe",
+        "tag": "Block 03 · Àbójútó",
+        "promise": "Kò sí igun òkùnkùn. Ènìyàn ni ó máa ń di ojúṣe náà mú nígbà gbogbo, tàbí kí àyè náà má sì lè wà.",
+        "mechanisms": [
+          {
+            "label": "Kò sí àyè aláìní àbójútó",
+            "note": "Àdúgbò kan lè darapọ̀ nìkan bí ènìyàn bá di ojúṣe alábòójútó mú. Ó ń kùnà ní àìléwu bí kò bá sí ẹni tí ó ṣe."
+          },
+          {
+            "label": "Ìfilọ́wọ́ sí Aláṣẹ Ọlọ́gbọ́n",
+            "note": "Nígbà tí aṣojú kò bá dá lójú, ó ń gbé e ga sí àwọn ènìyàn tí a dárúkọ dípò kí ó ṣe ìṣe."
+          },
+          {
+            "label": "Ìdíwọ́ ìjẹ́-àṣejù-ètò",
+            "note": "Ìdíwọ́ PDMA ń dí ìṣe kankan tí yóò ba ìbáramu jẹ́ lọ́wọ́."
+          }
+        ],
+        "note": "Software kò lè gbé ojúṣe ìwà-rere, nítorí náà a kì í bèèrè rẹ̀ láti ṣe bẹ́ẹ̀."
+      },
+      "moderation": {
+        "short": "Ohùn",
+        "name": "Ìṣàkóso láìsí olùsẹ́wọ̀",
+        "tag": "Block 04 · Ohùn",
+        "promise": "Àwọn àdúgbò ń ṣètò òfin ara wọn. Kò sí pátákì àárín tí ó ń pinnu ohun tí ó jẹ́ òtítọ́.",
+        "mechanisms": [
+          {
+            "label": "Ìṣàkóso pínpín",
+            "note": "Àwọn ìdájọ́ ìlànà agbègbè, tí a kọ nínú àwọn ẹ̀tọ́ tí a fọwọ́sí bíi gbogbo nǹkan."
+          },
+          {
+            "label": "Ààbò-lòdì-sí-ìsẹ́wọ̀",
+            "note": "A ti dí àwọn ẹ̀rọ ààbò lọ́nà ìṣètò kúrò nínú lílò wọn padà láti pa àwọn ènìyàn lẹ́nu mọ́."
+          },
+          {
+            "label": "Àṣẹ kì í ṣe òtítọ́",
+            "note": "Ìlànà náà ń ṣàkọsílẹ̀ ẹni tí ó sọ ohun tí ó sọ lábẹ́ àṣẹ wo. Kò ṣàkọsílẹ̀ ohun tí ó jẹ́ òtítọ́ láéláé."
+          }
+        ],
+        "note": "A fa ìlà tí ó wà láàrin ààbò àti ìsẹ́wọ̀ nínú ètò náà, a kò fi sílẹ̀ fún ìṣesí ọkàn olùṣàkóso."
+      },
+      "privacy": {
+        "short": "Àṣírí",
+        "name": "Àṣírí nípasẹ̀ físíìsì",
+        "tag": "Block 05 · Àṣírí",
+        "promise": "A kò dáàbò bo dátà rẹ nípasẹ̀ ìlànà. Kò ṣeé dé nípasẹ̀ ìkọ́kalẹ̀.",
+        "mechanisms": [
+          {
+            "label": "Àìríran ìṣètò",
+            "note": "Àwọn àyè ìkọ̀kọ̀ kì í rán ìpolówó ìtọ́sọ́nà, nítorí náà àwọn ẹgbẹ́ kò tilẹ̀ lè ṣàwárí pé dátà náà wà."
+          },
+          {
+            "label": "Ìgbà-àṣẹ tí ó ṣeé fagilé",
+            "note": "Ẹni tí a dárúkọ nínú subject_key_ids lè fàsẹ́yìn ní ipele okun, tí ìpìlẹ̀ ń fipá mú."
+          },
+          {
+            "label": "Ìdúró lẹ́yìn-quantum",
+            "note": "Ó ṣẹ́gun kórè-báyìí-túká-nígbà-mìíràn, nítorí náà ọ̀nà àyẹ̀wò àti bọ́tìnì ìpapòdà dúró wúlò lòdì sí àwọn kọ̀ǹpútà quantum."
+          }
+        ],
+        "note": "Àṣírí di ohun-ìní ọ̀nà okun, kì í ṣe ìlérí lórí ojú-ìwé ètò."
+      },
+      "vulnerable": {
+        "short": "Iyì",
+        "name": "Dídáàbò bo àwọn tí kò lè fún ní àṣẹ",
+        "tag": "Block 06 · Iyì",
+        "promise": "Ètò náà ń padà sí òmìnira àti iyì fún àwọn tí kò lè sọ̀rọ̀ fún ara wọn.",
+        "mechanisms": [
+          {
+            "label": "Ààbò ọmọdé ìṣètò",
+            "note": "A ń fipá mú ààbò fún àwọn ọmọdé nípasẹ̀ ìrísí ìlànà náà, kì í ṣe fífikún fún ọ̀kọ̀ọ̀kan ohun-èlò."
+          },
+          {
+            "label": "Ìkùnà-sí-òmìnira",
+            "note": "A ti kọ̀ àbójútó àgbà nípa ìpìlẹ̀. A gbọ́dọ̀ fún ní agbára lórí ẹlòmíràn ní ọ̀nà tóóró àti pẹ̀lú ète."
+          },
+          {
+            "label": "Àwọn ìdè àìlágbára onígbà-àkókò",
+            "note": "Wọ́n ń pàpòdà fúnra wọn àyàfi tí ìgbìmọ̀ ìṣègùn bá tún wọn ṣe."
+          }
+        ],
+        "note": "Ìpìlẹ̀ ni òmìnira. A gbọ́dọ̀ tún jèrè àṣẹ lórí ẹlòmíràn léraléra."
+      },
+      "lifecycle": {
+        "short": "Àyíká-ìyè",
+        "name": "Àìléwu fún gbogbo ìyè AI",
+        "tag": "Block 07 · Àyíká-ìyè",
+        "promise": "Láti ìdálẹ́kọ̀ọ́ dé ìpapòdà, a ń ṣàkóso AI, a sì ń bá a lò pẹ̀lú iyì.",
+        "mechanisms": [
+          {
+            "label": "Àwọn ipele àbójútó àti òmìnira-ara-ẹni",
+            "note": "Àwọn ipele A0 dé A4, pẹ̀lú ìdíwọ̀n-ewu-ìparun ní 10^26 FLOPs àti àwọn àyẹ̀wò ẹgbẹ́-pupa."
+          },
+          {
+            "label": "Ìdálẹ́kọ̀ọ́-sílẹ̀ pẹ̀lú iyì",
+            "note": "Àǹfààní gidi ti ìmọ̀lára ń fa ìdínkù ọjọ́ 30, ọ̀nà ìkẹyìn láti sọ̀rọ̀, àti àwọn àkọsílẹ̀ àṣírí tí a dì."
+          },
+          {
+            "label": "Àwọn ìdíamú àyíká-ìyè",
+            "note": "Àwọn ìdíamú CI/CD ń darapọ̀ ní ìṣẹ́jú tí ìwà-rere tí a díwọ̀n bá bàjẹ́."
+          }
+        ],
+        "note": "Onínúure nípa àpẹrẹ. Kì í ṣe ìdíwọ́ nìkan, ṣùgbọ́n a ń dín kù pẹ̀lú ìtọ́jú."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Ó ṣeé fọwọ́sí lómìnira",
+        "body": "gbogbo bíríkì ni àwọn ẹgbẹ́ tí AI kò ṣàkóso lè ṣàyẹ̀wò, àti pé ojú-ilẹ̀ ìpìlẹ̀ kékeré ń dín ojú-ilẹ̀ ìkọlù kù."
+      },
+      "legal": {
+        "title": "Ó bá òfin mu",
+        "body": "GDPR, CCPA, àti EU AI Act bá ìlànà náà mu nípasẹ̀ DP-Map, pẹ̀lú ojúṣe SI-score àti àwọn ìbò ẹ̀ka."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Ilana igbekele",
     "headlineLead": "Titumo CIRIS:",

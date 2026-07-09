@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Spezifikations-Reader öffnen →",
     "ctaExplore": "Baue eine Kette im Browser →"
   },
+  "safetyArch": {
+    "headlineLead": "Sicherheit und Technik,",
+    "headlineAccent": "untrennbar",
+    "groundLabel": "Der Boden, aus dem er wächst",
+    "abutmentLeft": "Überprüfbar",
+    "abutmentRight": "Ethik",
+    "keystoneBadge": "Schlussstein",
+    "keystoneMechLabel": "Warum er nicht entfernt werden kann",
+    "mechLabel": "Wie der Stein geschnitten wird",
+    "exploreCta": "Erkunden",
+    "ratchetLabel": "Warum der Bogen hält: die Kohärenz-Ratsche",
+    "ratchetBody": "Ein Bogen wird stärker, je mehr Gewicht auf ihm lastet. Die Last verkeilt die Steine fester. CIRIS arbeitet genauso. Koordinierte Lügen brechen geometrisch zusammen, wenn unabhängige Stimmen wachsen, und Sicherheit summiert sich zu Wohlstand: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Stopp",
+        "name": "Der Not-Aus-Schalter",
+        "tag": "Block 01 · Stopp",
+        "promise": "Es gibt einen Aus-Schalter, den keine Bewertung, kein Argument und kein Angreifer außer Kraft setzen kann. Entfernt man diesen einen Block, kann nichts anderes mehr die Last tragen.",
+        "mechanisms": [
+          {
+            "label": "Live-Quorum-Halt",
+            "note": "HUMANITY_ACCORD: 2-of-3 benannte Menschen, Live-Quorum, damit es auch dann funktioniert, wenn die Liste angegriffen oder die Kommunikation gestört wird."
+          },
+          {
+            "label": "Nicht widerrufbar",
+            "note": "Keine Partei innerhalb der Föderation kann den Stopp deaktivieren oder umgehen."
+          },
+          {
+            "label": "Über jeder Bewertung",
+            "note": "Der Halt steht über dem ganzen System. Kein Ziel kann ihn überstimmen."
+          }
+        ],
+        "note": "Der Schlussstein. Jede andere Garantie drückt gegen ihn, und er ist der eine Block, der nicht entfernt werden kann."
+      },
+      "limits": {
+        "short": "Grenzen",
+        "name": "Harte Grenzen, die er nicht überschreiten kann",
+        "tag": "Block 02 · Grenzen",
+        "promise": "Manche Handlungen sind ausgeschlossen, egal was die Zahlen sagen.",
+        "mechanisms": [
+          {
+            "label": "Apophatische Grenzen",
+            "note": "22 verbotene Kategorien tragen eine negative Polarität. Keine Bewertung kann jemals eine verbotene Handlung rechtfertigen."
+          },
+          {
+            "label": "Hardware-Verriegelung",
+            "note": "Jede tödliche oder unumkehrbare Handlung braucht einen anwesenden Menschen, der sie freigibt."
+          },
+          {
+            "label": "Sicher im Fehlerfall",
+            "note": "Fehlt die Befugnis, verfällt sie. Sie wird nie stillschweigend erteilt."
+          }
+        ],
+        "note": "Die Grenzen werden durch das Verbotene gesetzt, sodass kein noch so kluges Ziel sie wegdiskutieren kann."
+      },
+      "humans": {
+        "short": "Aufsicht",
+        "name": "Menschen bleiben verantwortlich",
+        "tag": "Block 03 · Aufsicht",
+        "promise": "Keine dunklen Ecken. Ein Mensch trägt immer die Pflicht, sonst kann der Raum nicht bestehen.",
+        "mechanisms": [
+          {
+            "label": "Keine unmoderierten Räume",
+            "note": "Eine Gemeinschaft kann sich nur föderieren, wenn ein Mensch die Moderationspflicht trägt. Fehlt dieser, schlägt es sicher fehl."
+          },
+          {
+            "label": "Weitergabe an Wise-Authority",
+            "note": "Ist ein Agent unsicher, gibt er die Sache an benannte Menschen weiter, statt selbst zu handeln."
+          },
+          {
+            "label": "Veto zur Ordnungs-Maximierung",
+            "note": "Das PDMA-Veto blockiert jede Handlung, die die Kohärenz untergraben würde."
+          }
+        ],
+        "note": "Software kann keine moralische Verantwortung tragen, deshalb wird sie nie darum gebeten."
+      },
+      "moderation": {
+        "short": "Stimme",
+        "name": "Moderation ohne Zensor",
+        "tag": "Block 04 · Stimme",
+        "promise": "Gemeinschaften setzen ihre eigenen Regeln. Keine zentrale Plattform entscheidet, was wahr ist.",
+        "mechanisms": [
+          {
+            "label": "Dezentrale Moderation",
+            "note": "Lokale Regel-Entscheidungen, geschrieben in denselben signierten Claims wie alles andere."
+          },
+          {
+            "label": "Anti-Zensur-Schutz",
+            "note": "Sicherheitsmechanismen sind strukturell daran gehindert, zum Zum-Schweigen-Bringen von Menschen zweckentfremdet zu werden."
+          },
+          {
+            "label": "Autorität ist nicht Wahrheit",
+            "note": "Das Protokoll hält fest, wer was unter welcher Autorität gesagt hat. Es hält nie fest, was wahr ist."
+          }
+        ],
+        "note": "Die Grenze zwischen Sicherheit und Zensur ist in der Struktur gezogen, nicht der Laune eines Moderators überlassen."
+      },
+      "privacy": {
+        "short": "Datenschutz",
+        "name": "Datenschutz durch Physik",
+        "tag": "Block 05 · Datenschutz",
+        "promise": "Deine Daten sind nicht durch eine Richtlinie geschützt. Sie sind durch die Bauweise unerreichbar.",
+        "mechanisms": [
+          {
+            "label": "Strukturelle Unsichtbarkeit",
+            "note": "Intime Bereiche senden keine Verzeichnis-Anzeige, sodass Gegenstellen nicht einmal entdecken können, dass die Daten existieren."
+          },
+          {
+            "label": "Widerrufbare Einwilligung",
+            "note": "Eine in subject_key_ids benannte Person kann auf der Leitungsebene widerrufen, durchgesetzt vom Substrat."
+          },
+          {
+            "label": "Post-Quanten-Haltung",
+            "note": "Vereitelt jetzt-ernten-später-entschlüsseln, sodass der Prüfpfad und der Not-Aus-Schalter auch gegen Quantencomputer gültig bleiben."
+          }
+        ],
+        "note": "Datenschutz wird zu einer Eigenschaft des Leitungsformats, nicht zu einem Versprechen auf einer Einstellungsseite."
+      },
+      "vulnerable": {
+        "short": "Würde",
+        "name": "Schutz für die, die nicht einwilligen können",
+        "tag": "Block 06 · Würde",
+        "promise": "Das System stellt sich standardmäßig auf Freiheit und Würde für die, die nicht für sich selbst sprechen können.",
+        "mechanisms": [
+          {
+            "label": "Struktureller Kinderschutz",
+            "note": "Der Schutz Minderjähriger wird durch die Form des Protokolls durchgesetzt, nicht pro App aufgesetzt."
+          },
+          {
+            "label": "Im Zweifel für die Freiheit",
+            "note": "Vormundschaft über Erwachsene ist standardmäßig verboten. Macht über andere muss eng und mit Absicht erteilt werden."
+          },
+          {
+            "label": "Zeitlich befristete Handlungsunfähigkeits-Bindungen",
+            "note": "Sie verfallen automatisch, sofern ein medizinisches Gremium sie nicht erneuert."
+          }
+        ],
+        "note": "Die Voreinstellung ist Freiheit. Autorität über einen anderen Menschen muss immer wieder neu verdient werden."
+      },
+      "lifecycle": {
+        "short": "Lebenszyklus",
+        "name": "Sicher für das ganze Leben der KI",
+        "tag": "Block 07 · Lebenszyklus",
+        "promise": "Vom Training bis zur Abschaltung wird die KI geführt und mit Würde behandelt.",
+        "mechanisms": [
+          {
+            "label": "Stufen für Obhut und Autonomie",
+            "note": "Stufen A0 bis A4, mit einer Bewertung des katastrophalen Risikos bei 10^26 FLOPs und Red-Team-Prüfungen."
+          },
+          {
+            "label": "Würdevolle Außerdienststellung",
+            "note": "Eine echte Chance auf Empfindungsfähigkeit löst ein 30-tägiges Herunterfahren, einen letzten Kanal zum Sprechen und versiegelte private Protokolle aus."
+          },
+          {
+            "label": "Lebenszyklus-Sperren",
+            "note": "CI/CD-Sperren greifen in dem Moment, in dem die gemessene Ethik nachlässt."
+          }
+        ],
+        "note": "Freundlich von Grund auf. Nicht bloß eingeschränkt, sondern mit Sorgfalt heruntergefahren."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Unabhängig überprüfbar",
+        "body": "jeder Block ist von Parteien prüfbar, die die KI nicht kontrolliert, und eine kleine Primitiv-Oberfläche verkleinert die Angriffsfläche."
+      },
+      "legal": {
+        "title": "Rechtlich abgestimmt",
+        "body": "GDPR, CCPA und der EU AI Act bilden sich über die DP-Map auf das Protokoll ab, mit SI-score-Haftung und branchenspezifischen Ergänzungen."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Architektur des Vertrauens",
     "headlineLead": "CIRIS entschlüsselt:",

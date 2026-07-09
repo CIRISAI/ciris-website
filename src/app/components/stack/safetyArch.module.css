@@ -1,0 +1,38 @@
+/* Chrome for the CIRIS Safety Arch (the /safety umbrella). The interactive SVG
+ * scene + holographic panel are inline-styled in the component (hue-dependent);
+ * this module owns page chrome, the centered column, and the SVG font wiring.
+ * The scene's idle animations reuse the ciris* keyframes in global.css, and the
+ * reduced-motion guard lives there too (keyed off [data-ciris-scene]). */
+
+.page {
+  min-height: 100vh;
+  color: #f4f5f7;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01" 1, "cv11" 1;
+  -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(201, 106, 56, 0.09), transparent 42%),
+    radial-gradient(circle at 92% 100%, rgba(122, 111, 214, 0.12), transparent 46%),
+    radial-gradient(circle at 90% 4%, rgba(34, 192, 232, 0.06), transparent 40%),
+    #080b10;
+}
+
+.inner { max-width: 560px; margin: 0 auto; padding: 22px 18px 40px; }
+
+.back { margin: 0 0 16px; font: 500 13px/1 var(--font-geist-mono), ui-monospace, monospace; }
+.back a { color: #9aa3af; text-decoration: none; }
+.back a:hover { color: #22c0e8; }
+
+.h1 { font-weight: 600; letter-spacing: -0.02em; font-size: clamp(22px, 6vw, 30px); line-height: 1.15; margin: 0 0 14px; }
+.h1 em { color: #419ca0; font-style: normal; }
+
+/* SVG scene: sans by default, mono for the marked labels (var() can't live in an
+ * SVG presentation attribute, so it's wired through CSS here). */
+.scene { display: block; overflow: visible; width: 100%; }
+.scene text { font-family: var(--font-geist-sans); }
+.scene .mono { font-family: var(--font-geist-mono); }
+
+.sceneWrap { width: clamp(300px, 100%, 500px); margin: 0 auto; position: relative; }
+
+.footline { margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.06); font: 500 10px/1.5 var(--font-geist-mono), ui-monospace, monospace; color: #4b5563; letter-spacing: 0.02em; }
+.footline span { color: #9aa3af; }

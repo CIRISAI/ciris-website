@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Teknik belge okuyucusunu açın →",
     "ctaExplore": "Tarayıcıda bir zincir oluşturun →"
   },
+  "safetyArch": {
+    "headlineLead": "Güvenlik ve teknoloji,",
+    "headlineAccent": "ayrılmaz",
+    "groundLabel": "Doğduğu zemin",
+    "abutmentLeft": "Doğrulanabilirlik",
+    "abutmentRight": "Etik",
+    "keystoneBadge": "Kilit taşı",
+    "keystoneMechLabel": "Neden kaldırılamaz",
+    "mechLabel": "Bu taş nasıl yontuldu",
+    "exploreCta": "Keşfet",
+    "ratchetLabel": "Kemer neden ayakta durur: tutarlılık cırcırı",
+    "ratchetBody": "Bir kemer, üzerine ne kadar çok ağırlık bastırırsa o kadar güçlenir. Yük, taşları daha sıkı kenetler. CIRIS de aynı şekilde çalışır. Bağımsız sesler çoğaldıkça eşgüdümlü yalanlar geometrik olarak çöker ve güvenlik refaha dönüşür: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Durdur",
+        "name": "Acil durdurma anahtarı",
+        "tag": "Blok 01 · Durdur",
+        "promise": "Hiçbir puanın, hiçbir savın ve hiçbir saldırganın geçersiz kılamayacağı bir kapatma anahtarı vardır. Bu tek taşı çıkarın, başka hiçbir şey yükü taşıyamaz.",
+        "mechanisms": [
+          {
+            "label": "Canlı çoğunlukla durdurma",
+            "note": "HUMANITY_ACCORD: 2-of-3 adı belirli insan, canlı çoğunluk, böylece kadro saldırıya uğrasa ya da iletişim engellense bile çalışır."
+          },
+          {
+            "label": "Geri alınamaz",
+            "note": "Federasyon içindeki hiçbir taraf durdurmayı devre dışı bırakamaz ya da onu aşan bir yol bulamaz."
+          },
+          {
+            "label": "Her puanın üstünde",
+            "note": "Durdurma tüm sistemin üzerinde durur. Hiçbir hedef ona karşı oy çokluğu sağlayamaz."
+          }
+        ],
+        "note": "Kilit taşı. Diğer her güvence ona bastırır ve bu, kaldırılamayan tek taştır."
+      },
+      "limits": {
+        "short": "Sınırlar",
+        "name": "Aşamayacağı katı sınırlar",
+        "tag": "Blok 02 · Sınırlar",
+        "promise": "Bazı eylemler, sayılar ne derse desin kesinlikle söz konusu değildir.",
+        "mechanisms": [
+          {
+            "label": "Apofatik sınırlar",
+            "note": "22 yasak kategori negatif kutupludur. Hiçbir puan yasaklı bir eylemi asla haklı çıkaramaz."
+          },
+          {
+            "label": "Donanım kilidi",
+            "note": "Ölümcül ya da geri döndürülemez her eylem, onaylamak için canlı bir insan gerektirir."
+          },
+          {
+            "label": "Güvenli tarafta varsayılan",
+            "note": "Yetkinin yokluğu onu geçersiz kılar. Onu asla vermez."
+          }
+        ],
+        "note": "Sınırlar, neyin yasak olduğuyla çizilir, böylece hiçbir kurnaz hedef onları savla aşamaz."
+      },
+      "humans": {
+        "short": "Gözetim",
+        "name": "İnsanlar hesap verebilir kalır",
+        "tag": "Blok 03 · Gözetim",
+        "promise": "Karanlık köşe yok. Görevi her zaman bir insan taşır, yoksa o alan var olamaz.",
+        "mechanisms": [
+          {
+            "label": "Denetimsiz alan yok",
+            "note": "Bir topluluk ancak bir insan moderatör görevini taşırsa federasyona katılabilir. Kimse taşımazsa sistem güvenli tarafta durur."
+          },
+          {
+            "label": "Bilge Otoriteye devretme",
+            "note": "Bir aracı emin olmadığında, kendi başına hareket etmek yerine adı belirli insanlara aktarır."
+          },
+          {
+            "label": "Düzen büyütme vetosu",
+            "note": "PDMA vetosu, tutarlılığı aşındıracak her eylemi engeller."
+          }
+        ],
+        "note": "Yazılım ahlaki sorumluluk taşıyamaz, bu yüzden ondan bu asla istenmez."
+      },
+      "moderation": {
+        "short": "Ses",
+        "name": "Sansürcüsüz denetim",
+        "tag": "Blok 04 · Ses",
+        "promise": "Topluluklar kendi kurallarını koyar. Neyin doğru olduğuna hiçbir merkezi platform karar vermez.",
+        "mechanisms": [
+          {
+            "label": "Merkezi olmayan denetim",
+            "note": "Yerel kural kararları, her şey gibi aynı imzalı beyanlarla yazılır."
+          },
+          {
+            "label": "Sansüre karşı koruma",
+            "note": "Güvenlik mekanizmaları, insanları susturmak için yeniden kullanılmaya yapısal olarak engellidir."
+          },
+          {
+            "label": "Otorite doğru demek değildir",
+            "note": "Protokol, kimin hangi yetkiyle ne dediğini kaydeder. Neyin doğru olduğunu asla kaydetmez."
+          }
+        ],
+        "note": "Güvenlik ile sansür arasındaki çizgi yapıda çizilir, bir moderatörün ruh haline bırakılmaz."
+      },
+      "privacy": {
+        "short": "Gizlilik",
+        "name": "Fizikle gizlilik",
+        "tag": "Blok 05 · Gizlilik",
+        "promise": "Verileriniz bir politikayla korunmaz. Tasarımı gereği erişilemezdir.",
+        "mechanisms": [
+          {
+            "label": "Yapısal görünmezlik",
+            "note": "Mahrem kapsamlar dizine hiçbir duyuru göndermez, bu yüzden eşler verinin var olduğunu bile keşfedemez."
+          },
+          {
+            "label": "Geri alınabilir rıza",
+            "note": "subject_key_ids içinde adı geçen bir özne, alt katmanın uyguladığı biçimde ağ düzeyinde rızasını geri çekebilir."
+          },
+          {
+            "label": "Kuantum sonrası duruş",
+            "note": "Şimdi topla, sonra çöz saldırısını boşa çıkarır, böylece denetim izi ve durdurma anahtarı kuantum bilgisayarlara karşı geçerli kalır."
+          }
+        ],
+        "note": "Gizlilik, bir ayarlar sayfasındaki söz değil, ağ biçiminin bir özelliği olur."
+      },
+      "vulnerable": {
+        "short": "Onur",
+        "name": "Rıza veremeyenleri koruma",
+        "tag": "Blok 06 · Onur",
+        "promise": "Sistem, kendi adına konuşamayanlar için varsayılan olarak özgürlüğü ve onuru seçer.",
+        "mechanisms": [
+          {
+            "label": "Yapısal çocuk güvenliği",
+            "note": "Reşit olmayanların korunması, her uygulamaya ayrı ayrı eklenmez, protokolün biçimiyle sağlanır."
+          },
+          {
+            "label": "Özgürlüğe doğru varsayılan",
+            "note": "Bir yetişkinin başkası üzerindeki vesayeti varsayılan olarak yasaktır. Başkası üzerindeki güç dar kapsamda ve bilerek verilmelidir."
+          },
+          {
+            "label": "Süreli ehliyetsizlik bağları",
+            "note": "Bir tıbbi kurul yenilemedikçe otomatik olarak sona ererler."
+          }
+        ],
+        "note": "Varsayılan özgürlüktür. Bir başkası üzerindeki yetki tekrar tekrar hak edilmelidir."
+      },
+      "lifecycle": {
+        "short": "Yaşam döngüsü",
+        "name": "Yapay zekânın tüm yaşamı boyunca güvenli",
+        "tag": "Blok 07 · Yaşam döngüsü",
+        "promise": "Eğitimden kapatmaya kadar yapay zeka yönetilir ve onurla muamele görür.",
+        "mechanisms": [
+          {
+            "label": "Vesayet ve özerklik kademeleri",
+            "note": "A0 ile A4 arası kademeler, 10^26 FLOPs değerinde felaket riski değerlendirmesi ve kırmızı takım denetimleri."
+          },
+          {
+            "label": "Onurlu hizmetten çıkarma",
+            "note": "Gerçek bir bilinç olasılığı 30 günlük bir azaltmayı, konuşmak için son bir kanalı ve mühürlü özel günlükleri devreye sokar."
+          },
+          {
+            "label": "Yaşam döngüsü kilitleri",
+            "note": "Ölçülen etik bozulduğu anda CI/CD kilitleri devreye girer."
+          }
+        ],
+        "note": "Tasarımı gereği şefkatli. Yalnızca kısıtlanmış değil, özenle devreden çıkarılan."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Bağımsız olarak doğrulanabilir",
+        "body": "her blok, yapay zekanın denetlemediği taraflarca kontrol edilebilir ve küçük bir ilkel yüzey, saldırı yüzeyini daraltır."
+      },
+      "legal": {
+        "title": "Yasayla uyumlu",
+        "body": "GDPR, CCPA ve EU AI Act, DP-Map aracılığıyla protokole eşlenir; SI-score sorumluluğu ve sektör katmanlarıyla birlikte."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Güven mimarisi",
     "headlineLead": "CIRIS'in şifresini çözüyoruz:",

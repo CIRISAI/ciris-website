@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Mở trình đọc đặc tả →",
     "ctaExplore": "Dựng một chuỗi trong trình duyệt →"
   },
+  "safetyArch": {
+    "headlineLead": "An toàn và công nghệ,",
+    "headlineAccent": "không thể tách rời",
+    "groundLabel": "Nền tảng mà nó mọc lên từ đó",
+    "abutmentLeft": "Có thể kiểm chứng",
+    "abutmentRight": "Đạo đức",
+    "keystoneBadge": "Đá chốt vòm",
+    "keystoneMechLabel": "Vì sao không thể gỡ bỏ nó",
+    "mechLabel": "Cách khối đá được đẽo",
+    "exploreCta": "Khám phá",
+    "ratchetLabel": "Vì sao nhịp vòm đứng vững: bánh cóc mạch lạc",
+    "ratchetBody": "Một vòm cầu càng chịu nhiều sức nặng thì càng vững chắc hơn. Tải trọng khóa các viên đá chặt hơn. CIRIS hoạt động theo cùng cách đó. Những lời dối trá phối hợp sụp đổ theo cấp số nhân khi các tiếng nói độc lập tăng lên, và sự an toàn tích tụ thành thịnh vượng: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Dừng",
+        "name": "Công tắc ngắt",
+        "tag": "Block 01 · Dừng",
+        "promise": "Có một công tắc tắt mà không điểm số nào, không lập luận nào, và không kẻ tấn công nào có thể vượt qua. Gỡ bỏ khối đá này thì không gì khác còn chịu nổi tải trọng.",
+        "mechanisms": [
+          {
+            "label": "Dừng bằng túc số trực tiếp",
+            "note": "HUMANITY_ACCORD: 2-of-3 người có tên, túc số trực tiếp nên nó vẫn hoạt động ngay cả khi danh sách bị tấn công hoặc liên lạc bị gây nhiễu."
+          },
+          {
+            "label": "Không thể thu hồi",
+            "note": "Không bên nào bên trong liên hiệp có thể vô hiệu hóa hay đi vòng qua lệnh dừng."
+          },
+          {
+            "label": "Trên mọi điểm số",
+            "note": "Lệnh dừng nằm trên toàn bộ hệ thống. Không mục tiêu nào có thể áp đảo nó bằng lá phiếu."
+          }
+        ],
+        "note": "Viên đá chốt vòm. Mọi bảo đảm khác đều tựa vào nó, và đây là viên đá duy nhất không thể gỡ bỏ."
+      },
+      "limits": {
+        "short": "Giới hạn",
+        "name": "Ranh giới cứng nó không thể vượt qua",
+        "tag": "Block 02 · Ranh giới",
+        "promise": "Một số hành động bị loại bỏ dù các con số có nói gì đi nữa.",
+        "mechanisms": [
+          {
+            "label": "Ranh giới phủ định",
+            "note": "22 loại bị cấm mang cực tính âm. Không điểm số nào có thể biện minh cho một hành động bị cấm."
+          },
+          {
+            "label": "Khóa liên động phần cứng",
+            "note": "Bất kỳ hành động gây chết người hay không thể đảo ngược nào cũng cần một con người trực tiếp cho phép."
+          },
+          {
+            "label": "Mặc định an toàn khi lỗi",
+            "note": "Sự thiếu vắng thẩm quyền làm mất thẩm quyền đó. Nó không bao giờ tự cấp thẩm quyền."
+          }
+        ],
+        "note": "Ranh giới được đặt ra bởi những gì bị cấm, nên không mục tiêu khôn khéo nào có thể lập luận đi vòng qua chúng."
+      },
+      "humans": {
+        "short": "Giám sát",
+        "name": "Con người luôn chịu trách nhiệm",
+        "tag": "Block 03 · Giám sát",
+        "promise": "Không có góc tối. Một con người luôn giữ nghĩa vụ, nếu không thì không gian đó không thể tồn tại.",
+        "mechanisms": [
+          {
+            "label": "Không có không gian không được kiểm duyệt",
+            "note": "Một cộng đồng chỉ có thể liên hiệp nếu một con người giữ nghĩa vụ điều hành. Nó thất bại an toàn nếu không ai giữ."
+          },
+          {
+            "label": "Chuyển lên Cơ quan Sáng suốt",
+            "note": "Khi một tác nhân không chắc chắn, nó chuyển việc lên những con người có tên thay vì tự hành động."
+          },
+          {
+            "label": "Quyền phủ quyết tối đa hóa trật tự",
+            "note": "Quyền phủ quyết PDMA chặn mọi hành động làm xói mòn sự mạch lạc."
+          }
+        ],
+        "note": "Phần mềm không thể gánh trách nhiệm đạo đức, nên nó không bao giờ bị yêu cầu làm vậy."
+      },
+      "moderation": {
+        "short": "Tiếng nói",
+        "name": "Kiểm duyệt mà không cần người kiểm duyệt",
+        "tag": "Block 04 · Tiếng nói",
+        "promise": "Các cộng đồng tự đặt ra quy tắc của mình. Không nền tảng trung tâm nào quyết định điều gì là đúng.",
+        "mechanisms": [
+          {
+            "label": "Kiểm duyệt phi tập trung",
+            "note": "Các phán quyết chính sách địa phương, được viết trong cùng những tuyên bố đã ký như mọi thứ khác."
+          },
+          {
+            "label": "Bảo vệ chống kiểm duyệt",
+            "note": "Các cơ chế an toàn về mặt cấu trúc bị cấm dùng lại để bịt miệng người khác."
+          },
+          {
+            "label": "Thẩm quyền không phải là sự thật",
+            "note": "Giao thức ghi lại ai nói gì dưới thẩm quyền nào. Nó không bao giờ ghi lại điều gì là sự thật."
+          }
+        ],
+        "note": "Ranh giới giữa an toàn và kiểm duyệt được vạch trong cấu trúc, không phó mặc cho tâm trạng của một người kiểm duyệt."
+      },
+      "privacy": {
+        "short": "Riêng tư",
+        "name": "Riêng tư bằng vật lý",
+        "tag": "Block 05 · Riêng tư",
+        "promise": "Dữ liệu của bạn không được bảo vệ bằng một chính sách. Nó không thể chạm tới được ngay từ cách xây dựng.",
+        "mechanisms": [
+          {
+            "label": "Vô hình về mặt cấu trúc",
+            "note": "Các phạm vi thân mật không gửi quảng cáo thư mục nào, nên các bên ngang hàng thậm chí không thể phát hiện dữ liệu tồn tại."
+          },
+          {
+            "label": "Sự đồng ý có thể thu hồi",
+            "note": "Một chủ thể được nêu tên trong subject_key_ids có thể rút lui ở mức đường truyền, được nền tảng thực thi."
+          },
+          {
+            "label": "Tư thế hậu lượng tử",
+            "note": "Đánh bại kiểu thu thập ngay giải mã sau, nên nhật ký kiểm toán và công tắc ngắt vẫn hợp lệ trước các máy tính lượng tử."
+          }
+        ],
+        "note": "Riêng tư trở thành một thuộc tính của định dạng đường truyền, không phải một lời hứa trên trang cài đặt."
+      },
+      "vulnerable": {
+        "short": "Phẩm giá",
+        "name": "Bảo vệ những người không thể đồng ý",
+        "tag": "Block 06 · Phẩm giá",
+        "promise": "Hệ thống mặc định là tự do và phẩm giá cho những người không thể tự lên tiếng cho mình.",
+        "mechanisms": [
+          {
+            "label": "An toàn trẻ em về mặt cấu trúc",
+            "note": "Bảo vệ trẻ vị thành niên được thực thi bởi hình dạng của giao thức, không phải gắn thêm cho từng ứng dụng."
+          },
+          {
+            "label": "Mặc định về tự do",
+            "note": "Quyền giám hộ của người lớn bị cấm theo mặc định. Quyền lực đối với người khác phải được trao một cách hẹp và có chủ đích."
+          },
+          {
+            "label": "Ràng buộc về mất năng lực có giới hạn thời gian",
+            "note": "Chúng tự hết hiệu lực trừ khi một hội đồng y tế gia hạn."
+          }
+        ],
+        "note": "Mặc định là tự do. Thẩm quyền đối với người khác phải được giành lại nhiều lần."
+      },
+      "lifecycle": {
+        "short": "Vòng đời",
+        "name": "An toàn suốt cả đời của AI",
+        "tag": "Block 07 · Vòng đời",
+        "promise": "Từ lúc huấn luyện đến khi tắt máy, AI được quản trị, và được đối xử có phẩm giá.",
+        "mechanisms": [
+          {
+            "label": "Các cấp giám hộ và tự chủ",
+            "note": "Các cấp từ A0 đến A4, với một đánh giá rủi ro thảm khốc ở mức 10^26 FLOPs và các cuộc kiểm định của đội đỏ."
+          },
+          {
+            "label": "Ngừng hoạt động có phẩm giá",
+            "note": "Một khả năng thực sự về tri giác kích hoạt một giai đoạn giảm dần 30 ngày, một kênh cuối cùng để lên tiếng, và nhật ký riêng tư được niêm phong."
+          },
+          {
+            "label": "Khóa vòng đời",
+            "note": "Các khóa CI/CD kích hoạt ngay khi đạo đức đo được suy giảm."
+          }
+        ],
+        "note": "Tử tế theo thiết kế. Không chỉ bị ràng buộc, mà được ngừng lại với sự chăm sóc."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Có thể kiểm chứng độc lập",
+        "body": "mỗi khối đá đều có thể được kiểm tra bởi các bên mà AI không kiểm soát, và một bề mặt nguyên thủy nhỏ làm thu hẹp bề mặt tấn công."
+      },
+      "legal": {
+        "title": "Phù hợp về mặt pháp lý",
+        "body": "GDPR, CCPA, và EU AI Act ánh xạ lên giao thức thông qua DP-Map, với trách nhiệm pháp lý SI-score và các lớp phủ theo ngành."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Kiến trúc của niềm tin",
     "headlineLead": "Giải mã CIRIS:",

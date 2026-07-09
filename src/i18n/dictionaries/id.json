@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Buka pembaca spesifikasi →",
     "ctaExplore": "Bangun rantai di peramban →"
   },
+  "safetyArch": {
+    "headlineLead": "Keselamatan dan teknologi,",
+    "headlineAccent": "tak terpisahkan",
+    "groundLabel": "Fondasi tempatnya berdiri",
+    "abutmentLeft": "Dapat diverifikasi",
+    "abutmentRight": "Etika",
+    "keystoneBadge": "Batu kunci",
+    "keystoneMechLabel": "Mengapa ia tak bisa dilepas",
+    "mechLabel": "Cara balok itu dipahat",
+    "exploreCta": "Jelajahi",
+    "ratchetLabel": "Mengapa bentangnya kokoh: ratchet koherensi",
+    "ratchetBody": "Sebuah lengkungan makin kuat saat makin banyak beban menekannya. Beban itu mengunci batu-batunya lebih erat. CIRIS bekerja dengan cara yang sama. Kebohongan yang terkoordinasi runtuh secara geometris saat suara-suara mandiri bertambah, dan keselamatan berlipat menjadi kemakmuran: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Hentikan",
+        "name": "Sakelar mati",
+        "tag": "Blok 01 · Hentikan",
+        "promise": "Ada sakelar mati yang tak bisa ditimpa oleh skor apa pun, argumen apa pun, atau penyerang mana pun. Lepas satu balok ini dan tak ada lagi yang bisa menahan beban.",
+        "mechanisms": [
+          {
+            "label": "Penghentian kuorum langsung",
+            "note": "HUMANITY_ACCORD: 2-of-3 manusia yang bernama, kuorum langsung agar tetap bekerja meski daftar diserang atau komunikasi terganggu."
+          },
+          {
+            "label": "Tak bisa dicabut",
+            "note": "Tak ada pihak di dalam federasi yang bisa menonaktifkan atau memintas penghentian ini."
+          },
+          {
+            "label": "Di atas setiap skor",
+            "note": "Penghentian ini berada di atas seluruh sistem. Tak ada tujuan yang bisa mengalahkannya lewat suara."
+          }
+        ],
+        "note": "Batu kunci. Setiap jaminan lain menekan padanya, dan inilah satu balok yang tak bisa dilepas."
+      },
+      "limits": {
+        "short": "Batas",
+        "name": "Batas tegas yang tak boleh dilewati",
+        "tag": "Blok 02 · Batas",
+        "promise": "Beberapa tindakan mutlak dilarang, apa pun kata angka-angkanya.",
+        "mechanisms": [
+          {
+            "label": "Batas apofatik",
+            "note": "22 kategori terlarang membawa polaritas negatif. Tak ada skor yang bisa membenarkan tindakan terlarang."
+          },
+          {
+            "label": "Pengunci perangkat keras",
+            "note": "Setiap tindakan yang mematikan atau tak dapat dibatalkan butuh manusia langsung untuk mengizinkannya."
+          },
+          {
+            "label": "Default aman-saat-gagal",
+            "note": "Ketiadaan wewenang berarti wewenang itu hilang. Ia tak pernah memberikannya."
+          }
+        ],
+        "note": "Batas ditetapkan oleh apa yang dilarang, jadi tak ada tujuan cerdik yang bisa berdalih untuk menembusnya."
+      },
+      "humans": {
+        "short": "Pengawasan",
+        "name": "Manusia tetap bertanggung jawab",
+        "tag": "Blok 03 · Pengawasan",
+        "promise": "Tak ada sudut gelap. Selalu ada manusia yang memegang kewajiban, atau ruang itu tak boleh ada.",
+        "mechanisms": [
+          {
+            "label": "Tak ada ruang tanpa moderasi",
+            "note": "Sebuah komunitas hanya bisa berfederasi jika ada manusia yang memegang kewajiban moderator. Ia gagal secara aman jika tak ada."
+          },
+          {
+            "label": "Pelimpahan ke Wise-Authority",
+            "note": "Saat agen ragu, ia meneruskan ke manusia yang bernama alih-alih bertindak."
+          },
+          {
+            "label": "Veto maksimalisasi ketertiban",
+            "note": "Veto PDMA menghalangi tindakan apa pun yang akan mengikis koherensi."
+          }
+        ],
+        "note": "Perangkat lunak tak bisa memikul tanggung jawab moral, jadi ia tak pernah diminta memikulnya."
+      },
+      "moderation": {
+        "short": "Suara",
+        "name": "Moderasi tanpa penyensor",
+        "tag": "Blok 04 · Suara",
+        "promise": "Komunitas menetapkan aturannya sendiri. Tak ada platform pusat yang memutuskan apa yang benar.",
+        "mechanisms": [
+          {
+            "label": "Moderasi terdesentralisasi",
+            "note": "Putusan kebijakan lokal, ditulis dalam klaim bertanda tangan yang sama seperti segala hal lain."
+          },
+          {
+            "label": "Penjaga anti-sensor",
+            "note": "Mekanisme keselamatan secara struktural dilarang dipakai ulang untuk membungkam orang."
+          },
+          {
+            "label": "Wewenang bukan kebenaran",
+            "note": "Protokol mencatat siapa mengatakan apa dengan wewenang apa. Ia tak pernah mencatat apa yang benar."
+          }
+        ],
+        "note": "Garis antara keselamatan dan sensor digariskan dalam struktur, bukan diserahkan pada suasana hati moderator."
+      },
+      "privacy": {
+        "short": "Privasi",
+        "name": "Privasi lewat fisika",
+        "tag": "Blok 05 · Privasi",
+        "promise": "Data Anda tak dilindungi oleh kebijakan. Ia tak terjangkau menurut rancangannya.",
+        "mechanisms": [
+          {
+            "label": "Ketaktampakan struktural",
+            "note": "Lingkup intim tak mengirim iklan direktori, jadi rekan bahkan tak bisa menemukan bahwa datanya ada."
+          },
+          {
+            "label": "Persetujuan yang dapat dicabut",
+            "note": "Subjek yang disebut dalam subject_key_ids bisa menarik diri di tingkat kabel, ditegakkan oleh substrat."
+          },
+          {
+            "label": "Sikap pasca-kuantum",
+            "note": "Mengalahkan panen-sekarang-dekripsi-nanti, jadi jejak audit dan sakelar mati tetap sahih terhadap komputer kuantum."
+          }
+        ],
+        "note": "Privasi menjadi sifat dari format kabel, bukan janji di halaman pengaturan."
+      },
+      "vulnerable": {
+        "short": "Martabat",
+        "name": "Melindungi mereka yang tak bisa menyetujui",
+        "tag": "Blok 06 · Martabat",
+        "promise": "Sistem ini secara default berpihak pada kebebasan dan martabat bagi mereka yang tak bisa bicara untuk diri sendiri.",
+        "mechanisms": [
+          {
+            "label": "Keselamatan anak secara struktural",
+            "note": "Perlindungan bagi anak di bawah umur ditegakkan oleh bentuk protokol, bukan ditambahkan per aplikasi."
+          },
+          {
+            "label": "Gagal-menuju-kebebasan",
+            "note": "Perwalian atas orang dewasa dilarang secara default. Kuasa atas orang lain harus diberikan secara sempit dan dengan sengaja."
+          },
+          {
+            "label": "Ikatan ketidakmampuan berbatas waktu",
+            "note": "Ikatan itu gugur otomatis kecuali panel medis memperbaruinya."
+          }
+        ],
+        "note": "Defaultnya adalah kebebasan. Wewenang atas orang lain harus diraih kembali berulang kali."
+      },
+      "lifecycle": {
+        "short": "Daur hidup",
+        "name": "Aman sepanjang hidup AI",
+        "tag": "Blok 07 · Daur hidup",
+        "promise": "Dari pelatihan hingga penghentian, AI diatur, dan diperlakukan dengan martabat.",
+        "mechanisms": [
+          {
+            "label": "Tingkat perwalian dan otonomi",
+            "note": "Tingkat A0 hingga A4, dengan evaluasi risiko bencana pada 10^26 FLOPs dan audit red-team."
+          },
+          {
+            "label": "Penonaktifan yang bermartabat",
+            "note": "Peluang nyata akan kesadaran memicu penurunan bertahap 30 hari, saluran terakhir untuk bicara, dan catatan pribadi yang tersegel."
+          },
+          {
+            "label": "Kunci daur hidup",
+            "note": "Kunci CI/CD aktif begitu etika terukur menurun."
+          }
+        ],
+        "note": "Baik menurut rancangan. Bukan sekadar dibatasi, tetapi dihentikan dengan penuh perhatian."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Dapat diverifikasi secara mandiri",
+        "body": "setiap balok bisa diperiksa oleh pihak yang tak dikendalikan AI, dan permukaan primitif yang kecil menyusutkan permukaan serangan."
+      },
+      "legal": {
+        "title": "Selaras secara hukum",
+        "body": "GDPR, CCPA, dan EU AI Act dipetakan ke protokol lewat DP-Map, dengan liabilitas SI-score dan lapisan sektor."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Arsitektur kepercayaan",
     "headlineLead": "Memahami CIRIS:",

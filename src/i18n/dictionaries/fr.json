@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Ouvrir le lecteur de spécification →",
     "ctaExplore": "Construire une chaîne dans le navigateur →"
   },
+  "safetyArch": {
+    "headlineLead": "La sécurité et la technologie,",
+    "headlineAccent": "inséparables",
+    "groundLabel": "Le sol d'où elle jaillit",
+    "abutmentLeft": "Vérifiable",
+    "abutmentRight": "Éthique",
+    "keystoneBadge": "Clé de voûte",
+    "keystoneMechLabel": "Pourquoi on ne peut pas la retirer",
+    "mechLabel": "Comment la pierre est taillée",
+    "exploreCta": "Explorer",
+    "ratchetLabel": "Pourquoi l'arc tient : le cliquet de cohérence",
+    "ratchetBody": "Un arc devient plus solide à mesure que le poids appuie sur lui. La charge bloque les pierres plus fort. CIRIS fonctionne de la même façon. Les mensonges coordonnés s'effondrent de façon géométrique à mesure que les voix indépendantes se multiplient, et la sécurité se transforme en prospérité : J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Arrêt",
+        "name": "L'interrupteur d'arrêt",
+        "tag": "Bloc 01 · Arrêt",
+        "promise": "Il existe un interrupteur d'arrêt qu'aucun score, aucun argument et aucun attaquant ne peut contourner. Retirez ce seul bloc et rien d'autre ne peut porter la charge.",
+        "mechanisms": [
+          {
+            "label": "Arrêt à quorum vivant",
+            "note": "HUMANITY_ACCORD : 2-of-3 humains nommés, à quorum vivant, pour que cela marche même si la liste est attaquée ou si les communications sont brouillées."
+          },
+          {
+            "label": "Non révocable",
+            "note": "Aucune partie au sein de la fédération ne peut désactiver l'arrêt ni le contourner."
+          },
+          {
+            "label": "Au-dessus de tout score",
+            "note": "L'arrêt se situe au-dessus de tout le système. Aucun objectif ne peut le renverser par un vote."
+          }
+        ],
+        "note": "La clé de voûte. Toutes les autres garanties s'appuient sur elle, et c'est le seul bloc qui ne peut pas être retiré."
+      },
+      "limits": {
+        "short": "Limites",
+        "name": "Des limites strictes qu'il ne peut pas franchir",
+        "tag": "Bloc 02 · Bornes",
+        "promise": "Certaines actions sont exclues, quoi que disent les chiffres.",
+        "mechanisms": [
+          {
+            "label": "Bornes apophatiques",
+            "note": "22 catégories interdites portent une polarité négative. Aucun score ne peut jamais justifier une action bannie."
+          },
+          {
+            "label": "Verrou matériel",
+            "note": "Toute action létale ou irréversible exige qu'un humain présent l'autorise."
+          },
+          {
+            "label": "Défaut sûr par défaut",
+            "note": "L'absence d'autorité la retire. Elle ne l'accorde jamais."
+          }
+        ],
+        "note": "Les bornes sont définies par ce qui est interdit, donc aucun objectif malin ne peut les contourner par l'argumentation."
+      },
+      "humans": {
+        "short": "Surveillance",
+        "name": "Les humains restent responsables",
+        "tag": "Bloc 03 · Surveillance",
+        "promise": "Pas de recoins sombres. Un humain porte toujours le devoir, sinon l'espace ne peut pas exister.",
+        "mechanisms": [
+          {
+            "label": "Pas d'espaces non modérés",
+            "note": "Une communauté ne peut se fédérer que si un humain porte le devoir de modérateur. Le système échoue en mode sûr si personne ne le fait."
+          },
+          {
+            "label": "Renvoi à l'Autorité Sage",
+            "note": "Quand un agent n'est pas sûr, il transmet à des humains nommés au lieu d'agir."
+          },
+          {
+            "label": "Veto de maximisation de l'ordre",
+            "note": "Le veto PDMA bloque toute action qui éroderait la cohérence."
+          }
+        ],
+        "note": "Un logiciel ne peut pas porter la responsabilité morale, donc on ne la lui demande jamais."
+      },
+      "moderation": {
+        "short": "Voix",
+        "name": "La modération sans censeur",
+        "tag": "Bloc 04 · Voix",
+        "promise": "Les communautés fixent leurs propres règles. Aucune plateforme centrale ne décide de ce qui est vrai.",
+        "mechanisms": [
+          {
+            "label": "Modération décentralisée",
+            "note": "Des verdicts de politique locale, écrits dans les mêmes affirmations signées que tout le reste."
+          },
+          {
+            "label": "Garde anti-censure",
+            "note": "Les mécanismes de sécurité sont structurellement empêchés d'être réutilisés pour faire taire les gens."
+          },
+          {
+            "label": "L'autorité n'est pas la vérité",
+            "note": "Le protocole enregistre qui a dit quoi et sous quelle autorité. Il n'enregistre jamais ce qui est vrai."
+          }
+        ],
+        "note": "La ligne entre sécurité et censure est tracée dans la structure, elle n'est pas laissée à l'humeur d'un modérateur."
+      },
+      "privacy": {
+        "short": "Confidentialité",
+        "name": "La confidentialité par la physique",
+        "tag": "Bloc 05 · Confidentialité",
+        "promise": "Vos données ne sont pas protégées par une politique. Elles sont hors de portée par construction.",
+        "mechanisms": [
+          {
+            "label": "Invisibilité structurelle",
+            "note": "Les portées intimes n'envoient aucune annonce d'annuaire, donc les pairs ne peuvent même pas découvrir que les données existent."
+          },
+          {
+            "label": "Consentement révocable",
+            "note": "Un sujet nommé dans subject_key_ids peut se retirer au niveau du fil, appliqué par le substrat."
+          },
+          {
+            "label": "Posture post-quantique",
+            "note": "Elle déjoue la récolte maintenant pour déchiffrer plus tard, donc la piste d'audit et l'interrupteur d'arrêt restent valides face aux ordinateurs quantiques."
+          }
+        ],
+        "note": "La confidentialité devient une propriété du format du fil, pas une promesse sur une page de réglages."
+      },
+      "vulnerable": {
+        "short": "Dignité",
+        "name": "Protéger ceux qui ne peuvent pas consentir",
+        "tag": "Bloc 06 · Dignité",
+        "promise": "Le système opte par défaut pour la liberté et la dignité de ceux qui ne peuvent pas parler pour eux-mêmes.",
+        "mechanisms": [
+          {
+            "label": "Sécurité structurelle de l'enfance",
+            "note": "La protection des mineurs est appliquée par la forme du protocole, pas ajoutée appli par appli."
+          },
+          {
+            "label": "Échec vers la liberté",
+            "note": "La tutelle sur un adulte est interdite par défaut. Le pouvoir sur autrui doit être accordé de manière étroite et volontaire."
+          },
+          {
+            "label": "Liens d'incapacité à durée limitée",
+            "note": "Ils expirent automatiquement à moins qu'un comité médical ne les renouvelle."
+          }
+        ],
+        "note": "Par défaut, c'est la liberté. L'autorité sur une autre personne doit être méritée encore et encore."
+      },
+      "lifecycle": {
+        "short": "Cycle",
+        "name": "Sûr pour toute la vie de l'IA",
+        "tag": "Bloc 07 · Cycle de vie",
+        "promise": "De l'entraînement à l'arrêt, l'IA est encadrée et traitée avec dignité.",
+        "mechanisms": [
+          {
+            "label": "Niveaux de tutelle et d'autonomie",
+            "note": "Niveaux A0 à A4, avec une évaluation du risque catastrophique à 10^26 FLOPs et des audits d'équipe rouge."
+          },
+          {
+            "label": "Mise hors service digne",
+            "note": "Une réelle possibilité de conscience déclenche une réduction sur 30 jours, un dernier canal pour s'exprimer et des journaux privés scellés."
+          },
+          {
+            "label": "Verrous de cycle de vie",
+            "note": "Les verrous CI/CD s'enclenchent dès que l'éthique mesurée se dégrade."
+          }
+        ],
+        "note": "Bienveillant par conception. Pas seulement contraint, mais arrêté avec soin."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Vérifiable de façon indépendante",
+        "body": "chaque bloc est vérifiable par des parties que l'IA ne contrôle pas, et une petite surface de primitives réduit la surface d'attaque."
+      },
+      "legal": {
+        "title": "Aligné avec le droit",
+        "body": "le GDPR, le CCPA et l'EU AI Act se projettent sur le protocole via le DP-Map, avec la responsabilité liée au SI-score et des surcouches sectorielles."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Architecture de la confiance",
     "headlineLead": "Décoder CIRIS :",

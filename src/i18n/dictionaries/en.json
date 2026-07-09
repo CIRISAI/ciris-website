@@ -2106,6 +2106,109 @@
     "ctaSpecReader": "Open the spec reader →",
     "ctaExplore": "Build a chain in the browser →"
   },
+  "safetyArch": {
+    "headlineLead": "Safety and technology,",
+    "headlineAccent": "inseparable",
+    "groundLabel": "The ground it springs from",
+    "abutmentLeft": "Verifiable",
+    "abutmentRight": "Ethics",
+    "keystoneBadge": "Keystone",
+    "keystoneMechLabel": "Why it cannot be removed",
+    "mechLabel": "How the block is cut",
+    "exploreCta": "Explore",
+    "ratchetLabel": "Why the span holds: the coherence ratchet",
+    "ratchetBody": "An arch grows stronger the more weight presses on it. The load locks the stones tighter. CIRIS works the same way. Coordinated lies collapse geometrically as independent voices grow, and safety compounds into prosperity: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Halt",
+        "name": "The kill switch",
+        "tag": "Block 01 · Halt",
+        "promise": "There is an off-switch that no score, no argument, and no attacker can override. Remove this one block and nothing else can hold the load.",
+        "mechanisms": [
+          { "label": "Live-quorum halt", "note": "HUMANITY_ACCORD: 2-of-3 named humans, live-quorum so it works even if the roster is attacked or comms are jammed." },
+          { "label": "Non-revocable", "note": "No party inside the federation can disable or route around the stop." },
+          { "label": "Above every score", "note": "The halt sits over the whole system. No objective can outvote it." }
+        ],
+        "note": "The keystone. Every other guarantee presses against it, and it is the one block that cannot be removed."
+      },
+      "limits": {
+        "short": "Limits",
+        "name": "Hard limits it can’t cross",
+        "tag": "Block 02 · Bounds",
+        "promise": "Some actions are off the table no matter what the numbers say.",
+        "mechanisms": [
+          { "label": "Apophatic bounds", "note": "22 prohibited categories carry negative polarity. No score can ever justify a banned action." },
+          { "label": "Hardware interlock", "note": "Any lethal or irreversible action needs a live human to authorize it." },
+          { "label": "Fail-secure default", "note": "The absence of authority forfeits it. It never grants it." }
+        ],
+        "note": "Bounds are set by what is forbidden, so no clever objective can argue around them."
+      },
+      "humans": {
+        "short": "Oversight",
+        "name": "Humans stay accountable",
+        "tag": "Block 03 · Oversight",
+        "promise": "No dark corners. A human always holds the duty, or the space cannot exist.",
+        "mechanisms": [
+          { "label": "No unmoderated spaces", "note": "A community can only federate if a human holds the moderator duty. It fails secure if none does." },
+          { "label": "Wise-Authority deferral", "note": "When an agent is unsure, it escalates to named humans instead of acting." },
+          { "label": "Order-maximisation veto", "note": "The PDMA veto blocks any action that would erode coherence." }
+        ],
+        "note": "Software cannot carry moral responsibility, so it is never asked to."
+      },
+      "moderation": {
+        "short": "Voice",
+        "name": "Moderation without a censor",
+        "tag": "Block 04 · Voice",
+        "promise": "Communities set their own rules. No central platform decides what is true.",
+        "mechanisms": [
+          { "label": "Decentralized moderation", "note": "Local policy verdicts, written in the same signed claims as everything else." },
+          { "label": "Anti-censorship guard", "note": "Safety mechanisms are structurally barred from being reused to silence people." },
+          { "label": "Authority is not truth", "note": "The protocol records who said what under what authority. It never records what is true." }
+        ],
+        "note": "The line between safety and censorship is drawn in the structure, not left to a moderator’s mood."
+      },
+      "privacy": {
+        "short": "Privacy",
+        "name": "Privacy by physics",
+        "tag": "Block 05 · Privacy",
+        "promise": "Your data is not protected by a policy. It is unreachable by construction.",
+        "mechanisms": [
+          { "label": "Structural invisibility", "note": "Intimate scopes send no directory advert, so peers cannot even discover the data exists." },
+          { "label": "Revocable consent", "note": "A subject named in subject_key_ids can withdraw at the wire level, enforced by the substrate." },
+          { "label": "Post-quantum posture", "note": "Defeats harvest-now-decrypt-later, so the audit trail and kill switch stay valid against quantum computers." }
+        ],
+        "note": "Privacy becomes a property of the wire format, not a promise on a settings page."
+      },
+      "vulnerable": {
+        "short": "Dignity",
+        "name": "Protecting those who can’t consent",
+        "tag": "Block 06 · Dignity",
+        "promise": "The system defaults to liberty and dignity for those who cannot speak for themselves.",
+        "mechanisms": [
+          { "label": "Structural child safety", "note": "Protection for minors is enforced by the protocol’s shape, not bolted on per app." },
+          { "label": "Fail-to-liberty", "note": "Adult stewardship is banned by default. Power over another must be granted narrowly and on purpose." },
+          { "label": "Time-boxed incapacity bindings", "note": "They lapse automatically unless a medical panel renews them." }
+        ],
+        "note": "The default is freedom. Authority over another person has to be re-earned again and again."
+      },
+      "lifecycle": {
+        "short": "Lifecycle",
+        "name": "Safe for the AI’s whole life",
+        "tag": "Block 07 · Lifecycle",
+        "promise": "From training to shutdown, the AI is governed, and treated with dignity.",
+        "mechanisms": [
+          { "label": "Stewardship and autonomy tiers", "note": "Tiers A0 to A4, with a catastrophic-risk evaluation at 10^26 FLOPs and red-team audits." },
+          { "label": "Dignified decommissioning", "note": "A real chance of sentience triggers a 30-day ramp-down, a final channel to speak, and sealed private logs." },
+          { "label": "Lifecycle locks", "note": "CI/CD locks engage the moment measured ethics degrade." }
+        ],
+        "note": "Kind by design. Not merely constrained, but wound down with care."
+      }
+    },
+    "threads": {
+      "verify": { "title": "Independently verifiable", "body": "every block is checkable by parties the AI does not control, and a small primitive surface shrinks the attack surface." },
+      "legal": { "title": "Legally aligned", "body": "GDPR, CCPA, and the EU AI Act map onto the protocol through the DP-Map, with SI-score liability and sector overlays." }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Architecture of trust",
     "headlineLead": "Decoding CIRIS:",

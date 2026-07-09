@@ -5,7 +5,7 @@
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import SafetyV2 from "@/app/components/SafetyV2";
+import SafetyArchView from "@/app/components/stack/SafetyArchView";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
 
@@ -31,5 +31,5 @@ export default async function LocalizedSafety({
 }) {
   const { locale } = await params;
   const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <SafetyV2 t={dict} locale={locale} />;
+  return <SafetyArchView t={dict} locale={locale} />;
 }

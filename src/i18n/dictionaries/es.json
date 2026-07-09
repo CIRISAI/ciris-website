@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Abre el lector de la especificación →",
     "ctaExplore": "Construye una cadena en el navegador →"
   },
+  "safetyArch": {
+    "headlineLead": "Seguridad y tecnología,",
+    "headlineAccent": "inseparables",
+    "groundLabel": "El suelo del que nace",
+    "abutmentLeft": "Verificable",
+    "abutmentRight": "Ética",
+    "keystoneBadge": "Clave",
+    "keystoneMechLabel": "Por qué no se puede quitar",
+    "mechLabel": "Cómo se talla el bloque",
+    "exploreCta": "Explorar",
+    "ratchetLabel": "Por qué se sostiene el arco: el trinquete de coherencia",
+    "ratchetBody": "Un arco se vuelve más fuerte cuanto más peso presiona sobre él. La carga aprieta las piedras aún más. CIRIS funciona igual. Las mentiras coordinadas se derrumban de forma geométrica a medida que crecen las voces independientes, y la seguridad se acumula hasta convertirse en prosperidad: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Parada",
+        "name": "El interruptor de apagado",
+        "tag": "Bloque 01 · Parada",
+        "promise": "Existe un interruptor de apagado que ningún puntaje, ningún argumento y ningún atacante puede anular. Quita este bloque y nada más podrá sostener la carga.",
+        "mechanisms": [
+          {
+            "label": "Parada por quórum en vivo",
+            "note": "HUMANITY_ACCORD: 2-of-3 personas nombradas, con quórum en vivo para que funcione incluso si se ataca la lista o se bloquean las comunicaciones."
+          },
+          {
+            "label": "No revocable",
+            "note": "Ninguna parte dentro de la federación puede desactivar la parada ni esquivarla."
+          },
+          {
+            "label": "Por encima de todo puntaje",
+            "note": "La parada está sobre todo el sistema. Ningún objetivo puede vencerla por voto."
+          }
+        ],
+        "note": "La piedra clave. Cada otra garantía presiona contra ella, y es el único bloque que no se puede quitar."
+      },
+      "limits": {
+        "short": "Límites",
+        "name": "Límites duros que no puede cruzar",
+        "tag": "Bloque 02 · Límites",
+        "promise": "Algunas acciones quedan descartadas sin importar lo que digan los números.",
+        "mechanisms": [
+          {
+            "label": "Límites apofáticos",
+            "note": "22 categorías prohibidas llevan polaridad negativa. Ningún puntaje puede jamás justificar una acción vetada."
+          },
+          {
+            "label": "Bloqueo por hardware",
+            "note": "Toda acción letal o irreversible necesita que una persona en vivo la autorice."
+          },
+          {
+            "label": "Predeterminado seguro ante fallos",
+            "note": "La ausencia de autoridad la pierde. Nunca la concede."
+          }
+        ],
+        "note": "Los límites se definen por lo que está prohibido, así que ningún objetivo astuto puede rodearlos con argumentos."
+      },
+      "humans": {
+        "short": "Supervisión",
+        "name": "Las personas siguen siendo responsables",
+        "tag": "Bloque 03 · Supervisión",
+        "promise": "Sin rincones oscuros. Una persona siempre carga con el deber, o el espacio no puede existir.",
+        "mechanisms": [
+          {
+            "label": "Sin espacios sin moderar",
+            "note": "Una comunidad solo puede federarse si una persona carga con el deber de moderar. Falla de forma segura si nadie lo hace."
+          },
+          {
+            "label": "Aplazamiento a la Autoridad Sabia",
+            "note": "Cuando un agente no está seguro, escala a personas nombradas en vez de actuar."
+          },
+          {
+            "label": "Veto de maximización del orden",
+            "note": "El veto de PDMA bloquea cualquier acción que erosionaría la coherencia."
+          }
+        ],
+        "note": "El software no puede cargar con la responsabilidad moral, así que nunca se le pide."
+      },
+      "moderation": {
+        "short": "Voz",
+        "name": "Moderación sin censor",
+        "tag": "Bloque 04 · Voz",
+        "promise": "Las comunidades fijan sus propias reglas. Ninguna plataforma central decide qué es verdad.",
+        "mechanisms": [
+          {
+            "label": "Moderación descentralizada",
+            "note": "Veredictos de política locales, escritos en las mismas afirmaciones firmadas que todo lo demás."
+          },
+          {
+            "label": "Guardia anticensura",
+            "note": "Los mecanismos de seguridad están estructuralmente impedidos de reutilizarse para silenciar a la gente."
+          },
+          {
+            "label": "La autoridad no es la verdad",
+            "note": "El protocolo registra quién dijo qué y bajo qué autoridad. Nunca registra qué es verdad."
+          }
+        ],
+        "note": "La línea entre seguridad y censura se traza en la estructura, no se deja al humor de un moderador."
+      },
+      "privacy": {
+        "short": "Privacidad",
+        "name": "Privacidad por física",
+        "tag": "Bloque 05 · Privacidad",
+        "promise": "Tus datos no están protegidos por una política. Son inalcanzables por construcción.",
+        "mechanisms": [
+          {
+            "label": "Invisibilidad estructural",
+            "note": "Los ámbitos íntimos no envían ningún anuncio de directorio, así que los pares ni siquiera pueden descubrir que los datos existen."
+          },
+          {
+            "label": "Consentimiento revocable",
+            "note": "Un sujeto nombrado en subject_key_ids puede retirarse a nivel de cable, aplicado por el sustrato."
+          },
+          {
+            "label": "Postura poscuántica",
+            "note": "Derrota el recoger ahora y descifrar después, así que el registro de auditoría y el interruptor de apagado siguen siendo válidos frente a las computadoras cuánticas."
+          }
+        ],
+        "note": "La privacidad se vuelve una propiedad del formato del cable, no una promesa en una página de ajustes."
+      },
+      "vulnerable": {
+        "short": "Dignidad",
+        "name": "Proteger a quienes no pueden consentir",
+        "tag": "Bloque 06 · Dignidad",
+        "promise": "El sistema opta por defecto por la libertad y la dignidad de quienes no pueden hablar por sí mismos.",
+        "mechanisms": [
+          {
+            "label": "Seguridad infantil estructural",
+            "note": "La protección de los menores la impone la forma del protocolo, no se añade en cada aplicación."
+          },
+          {
+            "label": "Fallo hacia la libertad",
+            "note": "La tutela de adultos está prohibida por defecto. El poder sobre otra persona debe concederse de forma limitada y a propósito."
+          },
+          {
+            "label": "Vínculos de incapacidad con tiempo limitado",
+            "note": "Caducan de forma automática a menos que un panel médico los renueve."
+          }
+        ],
+        "note": "El valor por defecto es la libertad. La autoridad sobre otra persona hay que volver a ganarla una y otra vez."
+      },
+      "lifecycle": {
+        "short": "Ciclo",
+        "name": "Seguro durante toda la vida de la IA",
+        "tag": "Bloque 07 · Ciclo de vida",
+        "promise": "Desde el entrenamiento hasta el apagado, la IA está gobernada y se la trata con dignidad.",
+        "mechanisms": [
+          {
+            "label": "Niveles de tutela y autonomía",
+            "note": "Niveles A0 a A4, con una evaluación de riesgo catastrófico a 10^26 FLOPs y auditorías de equipo rojo."
+          },
+          {
+            "label": "Desmantelamiento digno",
+            "note": "Una posibilidad real de sintiencia activa una reducción gradual de 30 días, un canal final para hablar y registros privados sellados."
+          },
+          {
+            "label": "Cerrojos de ciclo de vida",
+            "note": "Los cerrojos de CI/CD se activan en el momento en que la ética medida se degrada."
+          }
+        ],
+        "note": "Amable por diseño. No solo limitada, sino apagada con cuidado."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Verificable de forma independiente",
+        "body": "cada bloque puede ser comprobado por partes que la IA no controla, y una superficie pequeña de primitivas reduce la superficie de ataque."
+      },
+      "legal": {
+        "title": "Alineado con la ley",
+        "body": "GDPR, CCPA y el EU AI Act se asignan al protocolo a través del DP-Map, con responsabilidad por SI-score y capas por sector."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Arquitectura de confianza",
     "headlineLead": "Descifrando CIRIS:",

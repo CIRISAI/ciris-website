@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Fungua kisomaji cha maelezo →",
     "ctaExplore": "Jenga mnyororo kwenye kivinjari →"
   },
+  "safetyArch": {
+    "headlineLead": "Usalama na teknolojia,",
+    "headlineAccent": "haviwezi kutenganishwa",
+    "groundLabel": "Msingi inaotokea",
+    "abutmentLeft": "Inayothibitishika",
+    "abutmentRight": "Maadili",
+    "keystoneBadge": "Jiwe kuu",
+    "keystoneMechLabel": "Kwa nini haliwezi kuondolewa",
+    "mechLabel": "Jinsi kizuizi kinavyochongwa",
+    "exploreCta": "Chunguza",
+    "ratchetLabel": "Kwa nini upinde unashikilia: ratchet ya mshikamano",
+    "ratchetBody": "Upinde huwa imara zaidi kadiri uzito unavyoukandamiza. Mzigo huyafunga mawe kwa nguvu zaidi. CIRIS hufanya kazi kwa njia ile ile. Uongo ulioratibiwa huanguka kijiometri kadiri sauti huru zinavyoongezeka, na usalama hukua kuwa ustawi: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Simamisha",
+        "name": "Swichi ya kuzima",
+        "tag": "Kizuizi 01 · Simamisha",
+        "promise": "Kuna swichi ya kuzima ambayo hakuna alama, hoja, wala mshambuliaji anayeweza kuipita. Ondoa kizuizi hiki kimoja na hakuna kingine kinachoweza kushikilia mzigo.",
+        "mechanisms": [
+          {
+            "label": "Kusimamisha kwa akidi hai",
+            "note": "HUMANITY_ACCORD: 2-of-3 wanadamu waliotajwa, akidi hai ili ifanye kazi hata kama orodha ikishambuliwa au mawasiliano yakizuiwa."
+          },
+          {
+            "label": "Isiyoweza kutenguliwa",
+            "note": "Hakuna upande ndani ya shirikisho unaoweza kuizima au kuipita simamisho hili."
+          },
+          {
+            "label": "Juu ya kila alama",
+            "note": "Simamisho hili liko juu ya mfumo mzima. Hakuna lengo linaloweza kulishinda kwa kura."
+          }
+        ],
+        "note": "Jiwe kuu. Kila dhamana nyingine inalikandamiza, nalo ni kizuizi pekee kisichoweza kuondolewa."
+      },
+      "limits": {
+        "short": "Mipaka",
+        "name": "Mipaka thabiti isiyoweza kuvukwa",
+        "tag": "Kizuizi 02 · Mipaka",
+        "promise": "Baadhi ya vitendo vimekatazwa kabisa bila kujali namba zinasema nini.",
+        "mechanisms": [
+          {
+            "label": "Mipaka ya apofatiki",
+            "note": "Makundi 22 yaliyokatazwa yana ncha hasi. Hakuna alama inayoweza kuhalalisha kitendo kilichokatazwa."
+          },
+          {
+            "label": "Kifungo cha maunzi",
+            "note": "Kitendo chochote cha kuua au kisichoweza kurudishwa kinahitaji mwanadamu hai kukiidhinisha."
+          },
+          {
+            "label": "Chaguo-msingi salama-inaposhindwa",
+            "note": "Kutokuwepo kwa mamlaka hupoteza mamlaka. Kamwe haitoi mamlaka."
+          }
+        ],
+        "note": "Mipaka huwekwa na kile kilichokatazwa, hivyo hakuna lengo lenye werevu linaloweza kupinga ili kuipita."
+      },
+      "humans": {
+        "short": "Usimamizi",
+        "name": "Wanadamu wanabaki kuwajibika",
+        "tag": "Kizuizi 03 · Usimamizi",
+        "promise": "Hakuna pembe za giza. Mwanadamu daima anashikilia wajibu, au nafasi haiwezi kuwepo.",
+        "mechanisms": [
+          {
+            "label": "Hakuna nafasi zisizo na usimamizi",
+            "note": "Jumuiya inaweza kushirikiana tu ikiwa mwanadamu anashikilia wajibu wa msimamizi. Inashindwa kwa usalama kama hakuna anayeshikilia."
+          },
+          {
+            "label": "Kupeleka kwa Wise-Authority",
+            "note": "Wakati wakala hana uhakika, hupeleka kwa wanadamu waliotajwa badala ya kutenda."
+          },
+          {
+            "label": "Kura ya turufu ya kuongeza mpangilio",
+            "note": "Kura ya turufu ya PDMA huzuia kitendo chochote kitakachomomonyoa mshikamano."
+          }
+        ],
+        "note": "Programu haiwezi kubeba wajibu wa kimaadili, hivyo kamwe haiombwi kuubeba."
+      },
+      "moderation": {
+        "short": "Sauti",
+        "name": "Usimamizi bila mkaguzi",
+        "tag": "Kizuizi 04 · Sauti",
+        "promise": "Jumuiya huweka sheria zao wenyewe. Hakuna jukwaa kuu linaloamua ni nini kweli.",
+        "mechanisms": [
+          {
+            "label": "Usimamizi uliogatuliwa",
+            "note": "Hukumu za sera za kienyeji, zilizoandikwa katika madai yaliyosainiwa yale yale kama kila kitu kingine."
+          },
+          {
+            "label": "Kinga dhidi ya udhibiti",
+            "note": "Mifumo ya usalama imezuiwa kimuundo isitumike tena kunyamazisha watu."
+          },
+          {
+            "label": "Mamlaka si kweli",
+            "note": "Itifaki hurekodi nani alisema nini chini ya mamlaka gani. Kamwe hairekodi ni nini kweli."
+          }
+        ],
+        "note": "Mstari kati ya usalama na udhibiti umechorwa katika muundo, hauachwi kwa hisia za msimamizi."
+      },
+      "privacy": {
+        "short": "Faragha",
+        "name": "Faragha kwa fizikia",
+        "tag": "Kizuizi 05 · Faragha",
+        "promise": "Data yako hailindwi na sera. Haifikiki kwa jinsi ilivyojengwa.",
+        "mechanisms": [
+          {
+            "label": "Kutoonekana kwa kimuundo",
+            "note": "Wigo wa faragha hautumi tangazo la orodha, hivyo wenzako hawawezi hata kugundua kuwa data ipo."
+          },
+          {
+            "label": "Ridhaa inayoweza kutenguliwa",
+            "note": "Mhusika aliyetajwa katika subject_key_ids anaweza kujiondoa katika kiwango cha waya, ikitekelezwa na msingi."
+          },
+          {
+            "label": "Mkao wa baada ya kwanta",
+            "note": "Hushinda vuna-sasa-fungua-baadaye, hivyo alama ya ukaguzi na swichi ya kuzima hubaki halali dhidi ya kompyuta za kwanta."
+          }
+        ],
+        "note": "Faragha huwa sifa ya muundo wa waya, si ahadi kwenye ukurasa wa mipangilio."
+      },
+      "vulnerable": {
+        "short": "Utu",
+        "name": "Kuwalinda wasioweza kuridhia",
+        "tag": "Kizuizi 06 · Utu",
+        "promise": "Mfumo huegemea uhuru na utu kwa wale wasioweza kujitetea wenyewe.",
+        "mechanisms": [
+          {
+            "label": "Usalama wa watoto kwa kimuundo",
+            "note": "Ulinzi kwa watoto wadogo hutekelezwa na umbo la itifaki, si kuongezwa kwa kila programu."
+          },
+          {
+            "label": "Kushindwa-kuelekea-uhuru",
+            "note": "Uangalizi wa watu wazima umekatazwa kwa chaguo-msingi. Uwezo juu ya mtu mwingine lazima utolewe kwa uwazi na kwa kusudi."
+          },
+          {
+            "label": "Vifungo vya kutoweza kwa muda maalum",
+            "note": "Vifungo hivyo huisha kiotomatiki isipokuwa jopo la matibabu likiviongeza muda."
+          }
+        ],
+        "note": "Chaguo-msingi ni uhuru. Mamlaka juu ya mtu mwingine lazima ipatikane upya tena na tena."
+      },
+      "lifecycle": {
+        "short": "Mzunguko",
+        "name": "Salama kwa maisha yote ya AI",
+        "tag": "Kizuizi 07 · Mzunguko",
+        "promise": "Kutoka mafunzo hadi kuzima, AI inatawaliwa, na inatendewa kwa utu.",
+        "mechanisms": [
+          {
+            "label": "Ngazi za uangalizi na uhuru",
+            "note": "Ngazi A0 hadi A4, na tathmini ya hatari ya maafa katika 10^26 FLOPs na ukaguzi wa red-team."
+          },
+          {
+            "label": "Kustaafisha kwa heshima",
+            "note": "Nafasi halisi ya ufahamu husababisha kupunguza polepole kwa siku 30, njia ya mwisho ya kuzungumza, na kumbukumbu za faragha zilizofungwa."
+          },
+          {
+            "label": "Vifungo vya mzunguko",
+            "note": "Vifungo vya CI/CD huanza kufanya kazi mara maadili yaliyopimwa yanaposhuka."
+          }
+        ],
+        "note": "Yenye wema kwa kubuni. Si kwa kuzuiliwa tu, bali kuzimwa kwa uangalifu."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Inayothibitishika kwa kujitegemea",
+        "body": "kila kizuizi kinaweza kukaguliwa na pande ambazo AI haizidhibiti, na uso mdogo wa primitiv hupunguza uso wa shambulio."
+      },
+      "legal": {
+        "title": "Inayolingana kisheria",
+        "body": "GDPR, CCPA, na EU AI Act zinaramaniwa kwenye itifaki kupitia DP-Map, na dhima ya SI-score na tabaka za sekta."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Muundo wa uaminifu",
     "headlineLead": "Kufumbua CIRIS:",

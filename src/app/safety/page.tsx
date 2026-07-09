@@ -3,11 +3,11 @@
 // src/app/[locale]/safety/.
 
 import { localizedSeo } from "@/lib/seo";
-import SafetyV2 from "@/app/components/SafetyV2";
+import SafetyArchView from "@/app/components/stack/SafetyArchView";
 import { getDictionary } from "@/i18n/dictionaries";
 
 export const metadata = localizedSeo("/safety", "en");
 
 export default function SafetyPage() {
-  return <SafetyV2 t={getDictionary("en")} locale="en" />;
+  return <SafetyArchView t={getDictionary("en")} locale="en" />;
 }

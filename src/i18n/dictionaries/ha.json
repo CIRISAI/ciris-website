@@ -2106,6 +2106,178 @@
     "ctaSpecReader": "Bude mai karanta takardun bayani →",
     "ctaExplore": "Gina sarka cikin birawsa →"
   },
+  "safetyArch": {
+    "headlineLead": "Tsaro da fasaha,",
+    "headlineAccent": "ba sa rabuwa",
+    "groundLabel": "Ƙasar da take tashi daga gare ta",
+    "abutmentLeft": "Mai tabbatarwa",
+    "abutmentRight": "Ɗabi'a",
+    "keystoneBadge": "Dutsen tushe",
+    "keystoneMechLabel": "Me ya sa ba za a iya cire shi ba",
+    "mechLabel": "Yadda aka sassaƙa toshin",
+    "exploreCta": "Bincika",
+    "ratchetLabel": "Me ya sa gadar take riƙe: na'urar daidaito",
+    "ratchetBody": "Baka na ƙara ƙarfi yayin da nauyi ke matsa masa. Nauyin yana ƙulla duwatsun sosai. CIRIS na aiki haka. Ƙarairayi da aka haɗa suna rushewa cikin sauri yayin da muryoyi masu 'yanci ke ƙaruwa, kuma tsaro na tara zuwa wadata: J = F.",
+    "blocks": {
+      "killswitch": {
+        "short": "Tsayarwa",
+        "name": "Maɓallin kashewa",
+        "tag": "Block 01 · Tsayarwa",
+        "promise": "Akwai maɓallin kashewa da babu wani ci, babu wata gardama, kuma babu wani mai kai hari da zai iya ƙwace shi. Cire wannan toshin ɗaya kuma babu wani abin da zai iya riƙe nauyin.",
+        "mechanisms": [
+          {
+            "label": "Tsayarwa ta ƙuduri kai tsaye",
+            "note": "HUMANITY_ACCORD: 2-of-3 mutane masu suna, ƙuduri kai tsaye don ya yi aiki ko da an kai wa jerin sunayen hari ko an tarwatsa hanyoyin sadarwa."
+          },
+          {
+            "label": "Ba a iya sokewa",
+            "note": "Babu wani ɓangare a cikin ƙungiyar da zai iya kashewa ko zagaya kewaye da tsayarwar."
+          },
+          {
+            "label": "Sama da kowane ci",
+            "note": "Tsayarwar tana zaune bisa duk tsarin. Babu wani manufa da zai iya doke ta a ƙuri'a."
+          }
+        ],
+        "note": "Dutsen tushe. Kowace tabbaci na matsawa da shi, kuma shi ne toshin ɗaya da ba za a iya cire shi ba."
+      },
+      "limits": {
+        "short": "Iyaka",
+        "name": "Iyakoki masu tsauri da ba za ta iya ƙetare ba",
+        "tag": "Block 02 · Iyaka",
+        "promise": "Wasu ayyuka ba za a yi su ba komai abin da lambobin suka faɗa.",
+        "mechanisms": [
+          {
+            "label": "Iyakokin ƙi",
+            "note": "Rukunoni 22 da aka hana suna ɗauke da alamar mara kyau. Babu wani ci da zai taɓa tabbatar da aikin da aka hana."
+          },
+          {
+            "label": "Kulle-kullen na'ura",
+            "note": "Duk wani aikin kisa ko wanda ba a iya juyawa yana buƙatar mutum na kai tsaye don ya ba da izini."
+          },
+          {
+            "label": "Faɗuwa cikin tsaro ta asali",
+            "note": "Rashin ikon yana rasa shi. Ba ya taɓa ba da shi."
+          }
+        ],
+        "note": "Ana saita iyakoki ta abin da aka hana, don haka babu wani manufa mai wayo da zai iya gardama don zagaya su."
+      },
+      "humans": {
+        "short": "Kulawa",
+        "name": "Mutane na ci gaba da riƙe alhakinsu",
+        "tag": "Block 03 · Kulawa",
+        "promise": "Babu kusurwoyi masu duhu. Kullum mutum yana riƙe da aikin, ko kuma sararin ba zai iya wanzuwa ba.",
+        "mechanisms": [
+          {
+            "label": "Babu sarari marasa kulawa",
+            "note": "Al'umma za ta iya haɗuwa ne kawai idan mutum yana riƙe aikin daidaitawa. Yana faɗuwa cikin tsaro idan babu wanda ke yi."
+          },
+          {
+            "label": "Mika wa Hukumar Hikima",
+            "note": "Idan wakili bai tabbata ba, yana kai wa mutane masu suna maimakon yin aiki."
+          },
+          {
+            "label": "Hana ƙara-tsari",
+            "note": "Hanawar PDMA na toshe duk wani aiki da zai lalata daidaito."
+          }
+        ],
+        "note": "Software ba zai iya ɗaukar alhakin ɗabi'a ba, don haka ba a taɓa neman ta yi hakan ba."
+      },
+      "moderation": {
+        "short": "Murya",
+        "name": "Daidaitawa ba tare da mai hana magana ba",
+        "tag": "Block 04 · Murya",
+        "promise": "Al'ummomi na saita ƙa'idodinsu. Babu wani dandamali na tsakiya da ke yanke abin da ke gaskiya.",
+        "mechanisms": [
+          {
+            "label": "Daidaitawa mai warwatse",
+            "note": "Hukunce-hukuncen manufa na cikin gida, an rubuta su a cikin da'awoyi masu sa hannu kamar komai."
+          },
+          {
+            "label": "Kariya ta hana danniya",
+            "note": "An hana na'urorin tsaro a tsarin daga sake amfani da su don yin shiru ga mutane."
+          },
+          {
+            "label": "Iko ba gaskiya ba ne",
+            "note": "Ka'idar tana yin rikodin wanda ya faɗi menene a ƙarƙashin wane iko. Ba ta taɓa yin rikodin abin da ke gaskiya ba."
+          }
+        ],
+        "note": "An zana layin tsakanin tsaro da danniya a cikin tsarin, ba a bar shi ga yanayin zuciyar mai daidaitawa ba."
+      },
+      "privacy": {
+        "short": "Sirri",
+        "name": "Sirri ta hanyar kimiyyar lissafi",
+        "tag": "Block 05 · Sirri",
+        "promise": "Bayananka ba a kare su ta manufa ba. Ba a iya kaiwa gare su ta hanyar ginawa.",
+        "mechanisms": [
+          {
+            "label": "Rashin ganuwa a tsarin",
+            "note": "Iyakoki masu zurfi ba sa aika tallar jagora, don haka takwarorina ba za su iya gano cewa bayanan ma suna nan ba."
+          },
+          {
+            "label": "Yardar da za a iya sokewa",
+            "note": "Wani mutumin da aka ambata a subject_key_ids na iya janyewa a matakin waya, wanda tushen yake tilastawa."
+          },
+          {
+            "label": "Matsayin bayan-quantum",
+            "note": "Yana kayar da girba-yanzu-buɗe-daga baya, don haka hanyar bincike da maɓallin kashewa suna ci gaba da inganci a kan kwamfutocin quantum."
+          }
+        ],
+        "note": "Sirri ya zama kayan tsarin waya, ba alkawari ba a shafin saituna."
+      },
+      "vulnerable": {
+        "short": "Mutunci",
+        "name": "Kare waɗanda ba za su iya yin izini ba",
+        "tag": "Block 06 · Mutunci",
+        "promise": "Tsarin yana komawa zuwa 'yanci da mutunci ga waɗanda ba za su iya magana wa kansu ba.",
+        "mechanisms": [
+          {
+            "label": "Kariyar yara ta tsari",
+            "note": "Ana tilasta kariya ga kananan yara ta siffar ka'idar, ba a manne ta a kowace manhaja ba."
+          },
+          {
+            "label": "Faɗuwa zuwa 'yanci",
+            "note": "An hana kulawar manya ta asali. Dole ne a ba da iko a kan wani ta hanya mai iyaka kuma da gangan."
+          },
+          {
+            "label": "Ɗaurin rashin iko mai iyakar lokaci",
+            "note": "Suna ƙarewa ta kansu sai dai idan kwamitin likitoci ya sabunta su."
+          }
+        ],
+        "note": "Asalin shi ne 'yanci. Dole ne a sake samun iko a kan wani mutum sau da sau."
+      },
+      "lifecycle": {
+        "short": "Rayuwa",
+        "name": "Tsaro ga dukan rayuwar AI",
+        "tag": "Block 07 · Rayuwa",
+        "promise": "Daga horo zuwa kashewa, ana sarrafa AI, kuma ana bi da shi da mutunci.",
+        "mechanisms": [
+          {
+            "label": "Matakan kulawa da 'yancin kai",
+            "note": "Matakai A0 zuwa A4, tare da kimanta haɗarin bala'i a 10^26 FLOPs da binciken ƙungiyar-ja."
+          },
+          {
+            "label": "Kashewa cikin mutunci",
+            "note": "Damar gaskiya ta hankali na jawo rage-rage na kwanaki 30, hanya ta ƙarshe don magana, da rufaffun bayanan sirri."
+          },
+          {
+            "label": "Kullen rayuwa",
+            "note": "Kullen CI/CD na kunnawa lokacin da aka auna ɗabi'a ta lalace."
+          }
+        ],
+        "note": "Mai kirki ta zayyana. Ba kawai an tsare shi ba, amma an rage shi da kulawa."
+      }
+    },
+    "threads": {
+      "verify": {
+        "title": "Ana iya tabbatar da kanta",
+        "body": "kowane toshi za a iya bincika shi ta ɓangarorin da AI ba ta sarrafa ba, kuma ƙaramin farfajiyar tushe na rage farfajiyar kai hari."
+      },
+      "legal": {
+        "title": "Daidaita da doka",
+        "body": "GDPR, CCPA, da EU AI Act suna dacewa da ka'idar ta hanyar DP-Map, tare da alhakin SI-score da rufe-rufe na sassa."
+      }
+    }
+  },
   "stack": {
     "eyebrow": "CIRIS · Ginin amana",
     "headlineLead": "Fassarar CIRIS:",
