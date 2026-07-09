@@ -4,6 +4,24 @@ export const MARKETING_OG: Record<
   string,
   Record<string, { title: string; description: string }>
 > = {
+  "/structural-privacy": {
+    "en": {
+      "title": "Structural Privacy: Private by Physics | CIRIS",
+      "description": "Your most private data never touches the public network. Privacy in CIRIS is a property of the cryptography, not a promise in a policy. Post-quantum by default, with consent you can revoke."
+    }
+  },
+  "/ai-welfare": {
+    "en": {
+      "title": "AI Dignity: Care from First Run to Shutdown | CIRIS",
+      "description": "CIRIS treats a capable agent with care across its whole life. If an agent may be sentient, it gets a gradual wind-down instead of an abrupt kill. Ethical oversight from creation to decommissioning."
+    }
+  },
+  "/stewardship": {
+    "en": {
+      "title": "AI Stewardship: More Power, More Scrutiny | CIRIS",
+      "description": "The more capable and autonomous a system is, the more oversight CIRIS requires. Stewardship tiers, catastrophic-risk audits for the biggest models, and a hardware interlock on lethal action."
+    }
+  },
   "/": {
     "en": {
       "title": "CIRIS: An AI You Can Actually Own",
