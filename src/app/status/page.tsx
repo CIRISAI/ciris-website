@@ -34,8 +34,8 @@ interface StatusData {
   internal_providers?: Record<string, ProviderStatus>;
 }
 
-const STATUS_API = "https://lens.ciris-services-1.ai/lens-api/api/v1/status";
-const HISTORY_API = "https://lens.ciris-services-1.ai/lens-api/api/v1/status/history";
+const STATUS_API = "https://lens.ciris-services-1.ai/status/api/v1/status";
+const HISTORY_API = "https://lens.ciris-services-1.ai/status/api/v1/status/history";
 
 interface HistoryEntry {
   date: string;
