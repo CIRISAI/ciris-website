@@ -1,17 +1,19 @@
 /**
  * CIRIS Trace Repository API Client (CIRISPersist v0.5.0)
  *
- * Talks to the lens-side pass-through of CIRISPersist's typed read
- * primitives:
- *   GET /api/v1/accord/repository/traces           -> TraceListPage
- *   GET /api/v1/accord/repository/traces/{id}      -> TraceDetail
+ * Talks to Node A's frozen read API (the /lens/api/v1 surface; the old
+ * /api/v1/accord/repository/* lens paths were retired in the v0.5.0 bridge
+ * cutover). Typed read primitives:
+ *   GET /lens/api/v1/detection_events        -> TraceListPage {items, next_cursor}
+ *   GET /lens/api/v1/detection_events/{id}   -> TraceDetail
  *
- * The list endpoint returns a flat array of trace summaries plus an
- * opaque cursor. Task grouping for the sidebar is derived client-side
+ * The list endpoint returns `items` (trace summaries) plus an opaque
+ * `next_cursor`. Task grouping for the sidebar is derived client-side
  * (one bucket per task_id, sorted by thought_depth).
  */
 
-const API_BASE = "https://lens.ciris-services-1.ai/api/v1/accord/repository";
+const API_BASE = "https://lens.ciris-services-1.ai/lens/api/v1";
+const TRACES_PATH = "detection_events";
 
 // ─────────────────────────── Wire types (v0.5.0) ──────────────────────────
 
@@ -153,7 +155,7 @@ async function fetchTracePage(
   const params = new URLSearchParams();
   params.set("limit", String(limit));
   if (cursor) params.set("cursor", cursor);
-  const response = await fetch(`${API_BASE}/traces?${params.toString()}`);
+  const response = await fetch(`${API_BASE}/${TRACES_PATH}?${params.toString()}`);
   if (!response.ok) {
     throw new Error(`Failed to fetch traces: ${response.status}`);
   }
@@ -200,7 +202,7 @@ export async function fetchPublicTraces(): Promise<ApiTraceListItem[]> {
  */
 export async function fetchTraceDetail(traceId: string): Promise<TraceDetail> {
   const response = await fetch(
-    `${API_BASE}/traces/${encodeURIComponent(traceId)}`,
+    `${API_BASE}/${TRACES_PATH}/${encodeURIComponent(traceId)}`,
   );
   if (!response.ok) {
     throw new Error(`Failed to fetch trace: ${response.status}`);
