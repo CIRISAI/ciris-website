@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "Bude mai karanta takardun bayani →",
     "ctaExplore": "Gina sarka cikin birawsa →"
   },
+  "contextualIntegrity": {
+    "kicker": "Mutuncin mahalli · Sirri a matsayin kwarara da ta dace",
+    "title": "Mutuncin mahalli, an gina shi cikin tsarin aika bayanai",
+    "lede": "Mutuncin mahalli tunani ne mai sauƙi mai suna sananne: sirri ba ɓoye abu ba ne, shi ne bayanai su gudana yadda mutanen da ke cikin wani mahalli suke tsammani. CIRIS bai liƙa wannan daga waje ba. Tsarin aika bayanai da kansa yana tabbatar da shi.",
+    "seoTitle": "Mutuncin Mahalli (Contextual Integrity), An Tabbatar a Matakin Aikawa | CIRIS",
+    "seoDescription": "Sigogin sirri guda biyar na Nissenbaum sun dace ɗaya-ɗaya da filayen aikawa na CIRIS. Wanda bayani ya shafa, mai aikawa, mai karɓa, irin bayani, da ƙa'idar isarwa, an sa hannu kuma ana iya sokewa. Sirri a matsayin kwarara da ta dace, an mai da shi tsari.",
+    "s1label": "Tunani",
+    "s1h2": "Menene mutuncin mahalli?",
+    "s1p1": "A shekarar 2004, masaniyar falsafa Helen Nissenbaum ta ba sirri ma'ana mafi kyau. Sirri ba batun ɓoye abubuwa ba ne. Ba akwatin alama ba ne da ke cewa \"Na yarda.\" Sirri shi ne kwararar bayanai da ta dace. Kowane ɓangaren rayuwa yana da nasa dokoki kan yadda bayanai ya kamata su motsa. Likitanka ya san cutarka, babu laifi. Likitanka ya sayar da ita ga mai talla, keta ne, ko da wata takarda ta ce zai iya.",
+    "s1p2": "Wannan ka'ida ta ambaci sassa biyar na kowace kwararar bayanai: wanda bayanin ya shafa, wanda ke aika shi, wanda ke karɓarsa, irin bayanin da yake, da kuma dokar da kwararar dole ta bi. Idan aka karya dokar mahalli, an karya sirri, ko da me kowa ya danna.",
+    "s2label": "Daidaitawa",
+    "s2h2": "Sigogin biyar su ne filayen aikawa na CIRIS",
+    "s2intro": "Kundin Tsarin Mulki na CIRIS bai taɓa amfani da kalmar mutuncin mahalli ba. Mun gano wannan dacewa ne bayan an gama ƙira. Kowanne daga cikin sigogin biyar na Nissenbaum fili ne da protocol ke sa wa hannu kuma yake tabbatarwa.",
+    "citePrefix": "Kundin Tsarin Mulki",
+    "params": [
+      {
+        "name": "1 · Wanda bayani ya shafa",
+        "body": "subject_key_ids yana ambaton mutumin da wata da'awa ta shafa, a cikin ambulan ɗin kanta. Wanda abin ya shafa na iya sokewa a matakin aikawa, ba mai samarwa kaɗai ba.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Mai aikawa",
+        "body": "attesting_key_id ita ce shaidar mai samarwa ta hanyar sa-hannun lambobi. An sa wa kowace da'awa hannu, don haka kowace kwarara tana da sanannen tushe.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Mai karɓa",
+        "body": "Fannoni uku daban-daban, an raba su da gangan: cohort_scope yana faɗin wanda zai iya gani, subject_key_ids yana faɗin wanda zai iya sokewa, delivery_mode yana faɗin wanda ke karɓa kai tsaye.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Irin bayani",
+        "body": "dimension kari ne a farkon suna wanda ke faɗin ainihin abin da ake da'awa. Gwajin shiga mai tsauri yana sa ya zama na zahiri kuma inji na iya tantancewa.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · Ƙa'idar isarwa",
+        "body": "consent:scope yana ambaton dokar da kwararar dole ta bi: retain, share, analyze, train, ko publish, tare da iyakoki kamar retain:90d da share:cohort:family.",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "Sashe mai wuya",
+    "s3h2": "Ƙa'idar isarwa, cikin sigar bytes",
+    "s3p1": "Siga ta biyar ita ce wadda sauran kowa yake barwa. Dokoki da takardun yarda na iya faɗin wane bayani aka tattara. Da ƙyar suke faɗin dokar da kwararar za ta bi daga baya. CIRIS ya mai da wannan doka ƙima da aka sa wa hannu, wadda inji zai iya karantawa, wadda wanda abin ya shafa yake fitarwa kuma zai iya janyewa. consent:scope:train shi ne mutum yana cewa eh ko a'a game da horar da AI, a cikin tsarin aika bayanai, ana iya sokewa a kowane lokaci.",
+    "s3p2": "Kuma sokewa tana da ƙarfi na gaske. Mai samarwa yana ɗaukar alkawarin wa'adin gogewa a lokacin da ya wallafa. Idan wanda abin ya shafa ya soke kuma wa'adin ya wuce ba tare da hujjar gogewa ba, hanyar sadarwar da kanta za ta tayar da siginar keta.",
+    "s4label": "Fiye da akwatin yarda",
+    "s4h2": "Abin da irin waɗannan kwararori za su iya yi",
+    "beyond": [
+      {
+        "title": "Sauyin mahalli ba ƙarya ba ne",
+        "body": "withdraws yana janye da'awa saboda rayuwa ta canja. recants yana amincewa cewa ƙarya ce tun lokacin da aka yi ta. Protocol ya san bambanci, kuma lissafin amana yana ɗaukar su daban-daban."
+      },
+      {
+        "title": "Mahallan kusanci ba sa bayyana",
+        "body": "Bayanan da aka keɓe wa iyali ba sa aika wata sanarwa a jerin adireshi. Baƙi ba za su iya kaiwa gare su ba, ba za su iya karanta su ba, ba ma za su san suna nan ba. Dokar kwarara mafi ƙarfi ita ce wadda hanyar sadarwa ba za ta iya bayyana karya ta ba."
+      },
+      {
+        "title": "Ƙa'idojin al'umma na iya sauyawa",
+        "body": "Iyakokin yarda ƙamus ne a buɗe. Al'ummomi suna ƙara sababbin dokokin kwarara ba tare da neman izini daga wani dandali ba, kuma manufar gida ce ke yanke abin da suke nufi."
+      }
+    ],
+    "s5label": "Sashen gaskiya",
+    "s5h2": "Mun iso nan ta wata hanya dabam",
+    "s5p1": "Ba a ƙera CIRIS don aiwatar da mutuncin mahalli ba. Ya girma ne daga tunanin dangantaka: mutum mutum ne ta wurin waɗansu mutane, don haka kowace da'awa dole ta ɗauki dangantakarta tare da ita. Ka bi wannan doka na tsawon lokaci, za ka ƙare a inda ka'idar Nissenbaum take nunawa: sirri shi ne kwarara da ta dace, kuma dokokin kwarara wurinsu yana cikin tsari. Hanyoyi biyu, wuri ɗaya. Namu yana fitowa a matsayin tsarin aika bayanai.",
+    "s6label": "Me ya sa yake da muhimmanci yanzu",
+    "s6h2": "Wakilan AI sun mai da wannan lamarin gaggawa",
+    "s6p1": "Mataimakan AI suna karanta kalanda, akwatunan saƙo, da bayanan lafiya. Fannin bincike yanzu yana auna ko suna zubar da bayanai tsakanin mahallai, kuma ma'aunin da suke amfani da shi shi ne mutuncin mahalli. Yawancin ayyuka suna ƙoƙarin koya wa samfurin yin hankali. CIRIS ya ɗauki ɗayan hanya: a sa kwararar da ba ta dace ba ta zama wadda ba za a iya bayyanawa ba.",
+    "sourcesLabel": "Majiyoyi",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "Karanta tsarin aikin da kanka.",
+    "btnConstitution": "Karanta kundin tsarin mulki →",
+    "btnPrivacy": "Sirri na tsari →",
+    "btnGrammar": "Nahawu →",
+    "btnCewp": "Dandali →",
+    "crossTitle": "Wannan shi ne mutuncin mahalli",
+    "crossBody": "Tsarin sirri da masu bincike ke amfani da shi wajen auna tsarukan AI yana da suna. CIRIS yana tabbatar da shi a cikin tsarin aika bayanai.",
+    "crossCta": "Menene mutuncin mahalli? →"
+  },
   "safetyArch": {
     "headlineLead": "Tsaro da fasaha,",
     "headlineAccent": "ba sa rabuwa",

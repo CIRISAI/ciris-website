@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "Abra o leitor da especificação →",
     "ctaExplore": "Construa uma cadeia no navegador →"
   },
+  "contextualIntegrity": {
+    "kicker": "Integridade contextual · Privacidade como fluxo apropriado",
+    "title": "Integridade contextual, embutida no formato de fio",
+    "lede": "Integridade contextual é uma ideia simples com um nome famoso: privacidade não é segredo, é informação fluindo do jeito que as pessoas de um contexto esperam. O CIRIS não acrescentou isso depois. O formato de fio impõe isso.",
+    "seoTitle": "Integridade contextual, imposta no nível do fio | CIRIS",
+    "seoDescription": "Os cinco parâmetros de privacidade de Nissenbaum correspondem um a um aos campos de fio do CIRIS. Sujeito, remetente, destinatário, tipo e princípio de transmissão, assinados e revogáveis. Privacidade como fluxo apropriado, tornada estrutural.",
+    "s1label": "A ideia",
+    "s1h2": "O que é integridade contextual?",
+    "s1p1": "Em 2004, a filósofa Helen Nissenbaum deu à privacidade uma definição melhor. Privacidade não é esconder coisas. Não é uma caixinha que diz \"eu concordo\". Privacidade é o fluxo apropriado da informação. Cada parte da vida tem suas próprias regras sobre como a informação deve se mover. Seu médico saber seu diagnóstico é normal. Seu médico vender isso a um anunciante é uma violação, mesmo que um formulário dissesse que ele podia.",
+    "s1p2": "A teoria nomeia cinco partes de todo fluxo de informação: sobre quem é a informação, quem envia, quem recebe, que tipo de informação é, e a regra que o fluxo deve seguir. Quebre a regra do contexto e a privacidade quebra, não importa no que alguém clicou.",
+    "s2label": "O mapeamento",
+    "s2h2": "Os cinco parâmetros são campos de fio do CIRIS",
+    "s2intro": "A Constituição do CIRIS nunca usa a expressão integridade contextual. Encontramos a correspondência depois que o design já estava pronto. Cada um dos cinco parâmetros de Nissenbaum é um campo que o protocolo assina e impõe.",
+    "citePrefix": "Constituição",
+    "params": [
+      {
+        "name": "1 · Sujeito dos dados",
+        "body": "subject_key_ids nomeia a pessoa sobre quem é uma afirmação, dentro do próprio envelope. O sujeito pode revogar no nível do fio, não só o produtor.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Remetente",
+        "body": "attesting_key_id é a identidade criptográfica do produtor. Toda afirmação é assinada, então todo fluxo tem uma origem com nome.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Destinatário",
+        "body": "Três eixos separados, mantidos à parte de propósito: cohort_scope diz quem pode ver, subject_key_ids diz quem pode revogar, delivery_mode diz quem recebe ativamente.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Tipo de informação",
+        "body": "dimension é um prefixo de espaço de nomes que diz exatamente o que está sendo afirmado. Um teste de admissão rigoroso o mantém objetivo e verificável por máquina.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · Princípio de transmissão",
+        "body": "consent:scope nomeia a regra que o fluxo deve seguir: retain, share, analyze, train ou publish, com limites como retain:90d e share:cohort:family.",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "A parte difícil",
+    "s3h2": "O princípio de transmissão, em bytes",
+    "s3p1": "O quinto parâmetro é o que todos os outros deixam de fora. Leis e formulários de consentimento podem dizer quais dados foram coletados. Raramente dizem a regra que o fluxo deve seguir depois. O CIRIS transforma essa regra num valor assinado e legível por máquina, que o sujeito emite e pode retirar. consent:scope:train é uma pessoa dizendo sim ou não ao treinamento de IA, no formato de fio, revogável a qualquer momento.",
+    "s3p2": "E a revogação tem dentes. Um produtor se compromete com uma janela de exclusão quando publica. Se o sujeito revoga e a janela passa sem prova de exclusão, a própria rede levanta um sinal de violação.",
+    "s4label": "Além da caixinha",
+    "s4h2": "O que fluxos assim podem fazer",
+    "beyond": [
+      {
+        "title": "Mudar de contexto não é mentir",
+        "body": "withdraws retira uma afirmação porque a vida mudou. recants admite que ela era falsa quando foi feita. O protocolo sabe a diferença, e a matemática de confiança trata cada caso de um jeito."
+      },
+      {
+        "title": "Contextos íntimos são invisíveis",
+        "body": "Dados com escopo de família não enviam nenhum anúncio de diretório. Quem está de fora não consegue rotear até eles, lê-los, nem sequer descobrir que existem. A regra de fluxo mais forte é aquela cuja quebra a rede nem consegue expressar."
+      },
+      {
+        "title": "Normas podem evoluir",
+        "body": "Escopos de consentimento são um vocabulário aberto. Comunidades adicionam novas regras de fluxo sem pedir permissão a uma plataforma, e a política local decide o que elas significam."
+      }
+    ],
+    "s5label": "A parte honesta",
+    "s5h2": "Chegamos aqui por outra estrada",
+    "s5p1": "O CIRIS não foi projetado para implementar integridade contextual. Ele cresceu de uma ideia relacional: uma pessoa é pessoa através de outras pessoas, então toda afirmação precisa carregar junto as suas relações. Siga essa regra por tempo suficiente e você chega aonde a teoria de Nissenbaum aponta: privacidade é fluxo apropriado, e as regras de fluxo pertencem à estrutura. Duas estradas, o mesmo lugar. A nossa é entregue como um formato de fio.",
+    "s6label": "Por que isso importa agora",
+    "s6h2": "Agentes de IA tornaram isso urgente",
+    "s6p1": "Assistentes de IA leem agendas, caixas de entrada e registros de saúde. O campo de pesquisa agora mede se eles vazam informação entre contextos, e o padrão usado nessa medição é a integridade contextual. A maior parte do trabalho tenta ensinar o modelo a ter cuidado. O CIRIS pega o outro caminho: tornar o fluxo inapropriado impossível de expressar.",
+    "sourcesLabel": "Fontes",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "Leia o mecanismo com seus próprios olhos.",
+    "btnConstitution": "Leia a constituição →",
+    "btnPrivacy": "Privacidade estrutural →",
+    "btnGrammar": "A gramática →",
+    "btnCewp": "A plataforma →",
+    "crossTitle": "Isto é integridade contextual",
+    "crossBody": "A estrutura de privacidade que os pesquisadores usam para avaliar sistemas de IA tem nome. O CIRIS a impõe no formato de fio.",
+    "crossCta": "O que é integridade contextual? →"
+  },
   "safetyArch": {
     "headlineLead": "Segurança e tecnologia,",
     "headlineAccent": "inseparáveis",

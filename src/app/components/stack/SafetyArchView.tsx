@@ -293,6 +293,15 @@ export default function SafetyArchView({ t, locale }: { t: Dictionary; locale: s
                     <div style={{ marginTop: 12, padding: "12px 14px", borderRadius: 11, background: `color-mix(in oklab, ${hue} 8%, transparent)`, border: `1px solid color-mix(in oklab, ${hue} 22%, transparent)` }}>
                       <span style={{ fontSize: 12.5, color: "#c6ccd4", lineHeight: 1.5, fontStyle: "italic" }}>{sb.note}</span>
                     </div>
+                    {/* Concept tag on the Privacy block: this guarantee IS
+                        contextual integrity; funnel to the anchor page. */}
+                    {SBLOCKS[sSel].id === "privacy" && (
+                      <p style={{ margin: "12px 0 0", fontSize: 13 }}>
+                        <Link href={lh("/contextual-integrity")} style={{ color: hue }}>
+                          {t.contextualIntegrity.crossCta}
+                        </Link>
+                      </p>
+                    )}
                   </>
                 ) : (
                   <>

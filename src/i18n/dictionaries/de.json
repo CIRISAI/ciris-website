@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "Spezifikations-Reader öffnen →",
     "ctaExplore": "Baue eine Kette im Browser →"
   },
+  "contextualIntegrity": {
+    "kicker": "Kontextuelle Integrität · Privatsphäre als angemessener Fluss",
+    "title": "Kontextuelle Integrität, eingebaut ins Wire-Format",
+    "lede": "Kontextuelle Integrität ist eine einfache Idee mit einem berühmten Namen: Privatsphäre ist nicht Geheimhaltung, sondern Information, die so fließt, wie die Menschen in einem Kontext es erwarten. CIRIS hat das nicht nachträglich angebaut. Das Wire-Format erzwingt es.",
+    "seoTitle": "Kontextuelle Integrität, im Wire-Format erzwungen | CIRIS",
+    "seoDescription": "Nissenbaums fünf Privatsphäre-Parameter passen eins zu eins auf die Wire-Felder von CIRIS. Subjekt, Sender, Empfänger, Typ und Übertragungsprinzip, signiert und widerrufbar. Privatsphäre als angemessener Fluss, strukturell verankert.",
+    "s1label": "Die Idee",
+    "s1h2": "Was ist kontextuelle Integrität?",
+    "s1p1": "Im Jahr 2004 gab die Philosophin Helen Nissenbaum der Privatsphäre eine bessere Definition. Privatsphäre heißt nicht, Dinge zu verstecken. Sie ist keine Checkbox mit „Ich stimme zu“. Privatsphäre ist der angemessene Fluss von Information. Jeder Lebensbereich hat eigene Regeln dafür, wie Information sich bewegen soll. Dass Ihr Arzt Ihre Diagnose kennt, ist in Ordnung. Dass er sie an einen Werbetreibenden verkauft, ist eine Verletzung, auch wenn ein Formular das erlaubt hat.",
+    "s1p2": "Die Theorie benennt fünf Teile jedes Informationsflusses: über wen die Information ist, wer sie sendet, wer sie empfängt, um welche Art von Information es geht, und welcher Regel der Fluss folgen muss. Wer die Regel des Kontexts bricht, verletzt die Privatsphäre, egal was irgendjemand angeklickt hat.",
+    "s2label": "Die Zuordnung",
+    "s2h2": "Die fünf Parameter sind Wire-Felder von CIRIS",
+    "s2intro": "Die CIRIS-Verfassung verwendet den Begriff kontextuelle Integrität an keiner Stelle. Wir haben die Übereinstimmung erst gefunden, als der Entwurf fertig war. Jeder der fünf Parameter von Nissenbaum ist ein Feld, das das Protokoll signiert und durchsetzt.",
+    "citePrefix": "Verfassung",
+    "params": [
+      {
+        "name": "1 · Betroffene Person",
+        "body": "subject_key_ids benennt die Person, um die es in einer Aussage geht, direkt in der Hülle selbst. Die betroffene Person kann auf Wire-Ebene widerrufen, nicht nur der Ersteller.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Sender",
+        "body": "attesting_key_id ist die kryptografische Identität des Erstellers. Jede Aussage ist signiert, also hat jeder Fluss eine benannte Quelle.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Empfänger",
+        "body": "Drei getrennte Achsen, mit Absicht auseinandergehalten: cohort_scope sagt, wer sehen darf, subject_key_ids sagt, wer widerrufen darf, delivery_mode sagt, wer aktiv empfängt.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Informationstyp",
+        "body": "dimension ist ein Namensraum-Präfix, das genau sagt, was behauptet wird. Ein strenger Zulassungstest hält es objektiv und maschinell prüfbar.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · Übertragungsprinzip",
+        "body": "consent:scope benennt die Regel, der der Fluss folgen muss: retain, share, analyze, train oder publish, mit Grenzen wie retain:90d und share:cohort:family.",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "Der schwierige Teil",
+    "s3h2": "Das Übertragungsprinzip, als Bytes",
+    "s3p1": "Den fünften Parameter lassen alle anderen fallen. Gesetze und Einwilligungsformulare können sagen, welche Daten gesammelt wurden. Sie sagen selten, welcher Regel der Fluss danach folgen muss. CIRIS macht diese Regel zu einem signierten, maschinenlesbaren Wert, den die betroffene Person selbst ausstellt und zurückziehen kann. consent:scope:train ist ein Mensch, der Ja oder Nein zum KI-Training sagt, im Wire-Format, jederzeit widerrufbar.",
+    "s3p2": "Und der Widerruf hat Zähne. Beim Veröffentlichen verpflichtet sich der Ersteller auf ein Löschfenster. Widerruft die betroffene Person und verstreicht das Fenster ohne Löschnachweis, gibt das Netzwerk selbst ein Verletzungssignal aus.",
+    "s4label": "Jenseits der Checkbox",
+    "s4h2": "Was solche Flüsse können",
+    "beyond": [
+      {
+        "title": "Kontextwechsel sind keine Lügen",
+        "body": "withdraws nimmt eine Aussage zurück, weil sich das Leben geändert hat. recants gibt zu, dass sie schon bei der Abgabe falsch war. Das Protokoll kennt den Unterschied, und die Vertrauensmathematik behandelt beide unterschiedlich."
+      },
+      {
+        "title": "Intime Kontexte sind unsichtbar",
+        "body": "Daten im Familien-Scope senden keine Ankündigung an ein Verzeichnis. Außenstehende können keine Route dorthin finden, sie nicht lesen und nicht einmal erfahren, dass es sie gibt. Die stärkste Flussregel ist eine, deren Bruch das Netzwerk gar nicht ausdrücken kann."
+      },
+      {
+        "title": "Normen können sich weiterentwickeln",
+        "body": "Consent-Scopes sind ein offenes Vokabular. Gemeinschaften fügen neue Flussregeln hinzu, ohne eine Plattform um Erlaubnis zu fragen, und lokale Richtlinien entscheiden, was sie bedeuten."
+      }
+    ],
+    "s5label": "Der ehrliche Teil",
+    "s5h2": "Wir sind über einen anderen Weg hier angekommen",
+    "s5p1": "CIRIS wurde nicht entworfen, um kontextuelle Integrität umzusetzen. Es wuchs aus einer relationalen Idee: Ein Mensch ist ein Mensch durch andere Menschen, also muss jede Aussage ihre Beziehungen mit sich tragen. Folgt man dieser Regel lange genug, landet man dort, wohin Nissenbaums Theorie zeigt: Privatsphäre ist angemessener Fluss, und die Flussregeln gehören in die Struktur. Zwei Wege, derselbe Ort. Unserer wird als Wire-Format ausgeliefert.",
+    "s6label": "Warum es jetzt zählt",
+    "s6h2": "KI-Agenten haben es dringend gemacht",
+    "s6p1": "KI-Assistenten lesen Kalender, Postfächer und Gesundheitsakten. Die Forschung misst inzwischen, ob sie Information zwischen Kontexten durchsickern lassen, und der Maßstab dabei ist kontextuelle Integrität. Die meisten Arbeiten versuchen, dem Modell Vorsicht beizubringen. CIRIS geht den anderen Weg: Der unangemessene Fluss lässt sich gar nicht erst ausdrücken.",
+    "sourcesLabel": "Quellen",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "Lesen Sie die Maschinerie selbst nach.",
+    "btnConstitution": "Die Verfassung lesen →",
+    "btnPrivacy": "Struktureller Datenschutz →",
+    "btnGrammar": "Die Grammatik →",
+    "btnCewp": "Die Plattform →",
+    "crossTitle": "Das ist kontextuelle Integrität",
+    "crossBody": "Das Privatsphäre-Framework, mit dem Forschende KI-Systeme beurteilen, hat einen Namen. CIRIS erzwingt es im Wire-Format.",
+    "crossCta": "Was ist kontextuelle Integrität? →"
+  },
   "safetyArch": {
     "headlineLead": "Sicherheit und Technik,",
     "headlineAccent": "untrennbar",

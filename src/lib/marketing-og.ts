@@ -4,6 +4,124 @@ export const MARKETING_OG: Record<
   string,
   Record<string, { title: string; description: string }>
 > = {
+  "/contextual-integrity": {
+    "en": {
+      "title": "Contextual Integrity, Enforced at the Wire | CIRIS",
+      "description": "Nissenbaum's five privacy parameters map one to one onto CIRIS wire fields. Subject, sender, recipient, type, and transmission principle, signed and revocable. Privacy as appropriate flow, made structural."
+    },
+    "am": {
+      "title": "የአውድ ታማኝነት፣ በሽቦ ደረጃ የሚፈጸም | CIRIS",
+      "description": "የNissenbaum አምስት የግላዊነት መለኪያዎች ከCIRIS የሽቦ መስኮች ጋር አንድ በአንድ ይዛመዳሉ። ባለቤት፣ ላኪ፣ ተቀባይ፣ ዓይነት እና የመተላለፊያ መርህ፣ የተፈረሙ እና የሚሻሩ። ግላዊነት እንደ ተገቢ ፍሰት፣ መዋቅራዊ የተደረገ።"
+    },
+    "ha": {
+      "title": "Mutuncin Mahalli (Contextual Integrity), An Tabbatar a Matakin Aikawa | CIRIS",
+      "description": "Sigogin sirri guda biyar na Nissenbaum sun dace ɗaya-ɗaya da filayen aikawa na CIRIS. Wanda bayani ya shafa, mai aikawa, mai karɓa, irin bayani, da ƙa'idar isarwa, an sa hannu kuma ana iya sokewa. Sirri a matsayin kwarara da ta dace, an mai da shi tsari."
+    },
+    "yo": {
+      "title": "Ìdúróṣinṣin Àyíká-ọ̀rọ̀ (Contextual Integrity), Tí a Fi Agbára Mú Ṣẹ Ní Ipele Ìfiránṣẹ́ | CIRIS",
+      "description": "Àwọn ìwọ̀n àṣírí márùn-ún ti Nissenbaum bá àwọn ààyè ìfiránṣẹ́ CIRIS mu ní ọ̀kọ̀ọ̀kan. Ẹni tí ọ̀rọ̀ kàn, olùfiránṣẹ́, olùgbà, irú ìsọfúnni, àti ìlànà ìtànkálẹ̀, tí a fọwọ́ sí, tí a sì lè fagi lé. Àṣírí gẹ́gẹ́ bí ìṣàn tí ó yẹ, tí a sọ di ara ìtòlẹ́sẹẹsẹ."
+    },
+    "sw": {
+      "title": "Uadilifu wa Muktadha, Unaotekelezwa Kwenye Wire | CIRIS",
+      "description": "Vigezo vitano vya faragha vya Nissenbaum vinalingana kimoja kwa kimoja na sehemu za wire za CIRIS. Mhusika, mtumaji, mpokeaji, aina, na kanuni ya usambazaji, vimesainiwa na vinaweza kubatilishwa. Faragha kama mtiririko unaofaa, imefanywa kuwa ya kimuundo."
+    },
+    "ta": {
+      "title": "சூழல் ஒருமைப்பாடு (Contextual Integrity): வயர் அளவில் நடைமுறை | CIRIS",
+      "description": "Nissenbaum-இன் ஐந்து தனியுரிமை அளவுருக்கள் CIRIS வயர் புலங்களுடன் ஒன்றுக்கு ஒன்று பொருந்துகின்றன. நபர், அனுப்புநர், பெறுநர், வகை, பரிமாற்ற விதி: கையொப்பமிடப்பட்டு, திரும்பப் பெறக்கூடியவை. சரியான ஓட்டமாகத் தனியுரிமை, கட்டமைப்பிலேயே."
+    },
+    "te": {
+      "title": "సందర్భోచిత సమగ్రత (Contextual Integrity): వైర్ స్థాయిలో అమలు | CIRIS",
+      "description": "Nissenbaum చెప్పిన ఐదు గోప్యతా పరామితులు CIRIS వైర్ ఫీల్డ్‌లతో ఒకదానికొకటి సరిపోతాయి. వ్యక్తి, పంపేవారు, స్వీకరించేవారు, రకం, ప్రసార నియమం: సంతకం చేయబడి, వెనక్కి తీసుకోగలిగేవి. సరైన ప్రవాహంగా గోప్యత, నిర్మాణంలోనే."
+    },
+    "mr": {
+      "title": "संदर्भीय अखंडता, थेट वायरवर लागू | CIRIS",
+      "description": "Nissenbaum यांचे पाच गोपनीयता पॅरामीटर CIRIS वायर फील्डशी एकास एक जुळतात. विषय-व्यक्ती, प्रेषक, प्राप्तकर्ता, प्रकार आणि प्रसारण तत्त्व, सर्व स्वाक्षरीबद्ध आणि मागे घेता येण्याजोगे. योग्य प्रवाह म्हणून गोपनीयता, थेट रचनेत बांधलेली."
+    },
+    "pa": {
+      "title": "ਪ੍ਰਸੰਗਿਕ ਅਖੰਡਤਾ (Contextual Integrity), ਵਾਇਰ ਪੱਧਰ ਉੱਤੇ ਲਾਗੂ | CIRIS",
+      "description": "Nissenbaum ਦੇ ਨਿੱਜਤਾ ਦੇ ਪੰਜ ਮਾਪਦੰਡ CIRIS ਦੇ ਵਾਇਰ ਫੀਲਡਾਂ ਨਾਲ ਇੱਕ-ਇੱਕ ਕਰਕੇ ਮੇਲ ਖਾਂਦੇ ਹਨ। ਵਿਸ਼ਾ, ਭੇਜਣ ਵਾਲਾ, ਪ੍ਰਾਪਤ ਕਰਨ ਵਾਲਾ, ਕਿਸਮ ਅਤੇ ਪ੍ਰਸਾਰ ਸਿਧਾਂਤ, ਸਭ ਦਸਤਖ਼ਤ ਕੀਤੇ ਅਤੇ ਵਾਪਸ ਲੈਣ ਯੋਗ। ਨਿੱਜਤਾ ਯਾਨੀ ਸਹੀ ਵਹਾਅ, ਢਾਂਚੇ ਵਿੱਚ ਹੀ ਬਣਾਈ ਹੋਈ।"
+    },
+    "my": {
+      "title": "ဆက်စပ်အခြေအနေဆိုင်ရာ ခိုင်မာမှု (Contextual Integrity) ကို ဝိုင်ယာအဆင့်မှာ ကျင့်သုံးစေခြင်း | CIRIS",
+      "description": "Nissenbaum ရဲ့ ကိုယ်ရေးကိုယ်တာလုံခြုံမှု ပါရာမီတာ ငါးခုဟာ CIRIS ဝိုင်ယာဖီးလ်တွေနဲ့ တစ်ခုချင်း တိုက်ရိုက်ကိုက်ညီပါတယ်။ အချက်အလက်ရှင်၊ ပေးပို့သူ၊ လက်ခံသူ၊ အမျိုးအစား၊ လက်ဆင့်ကမ်းမှုမူ၊ အားလုံး လက်မှတ်ထိုးထားပြီး ပြန်ရုပ်သိမ်းနိုင်ပါတယ်။ သင့်လျော်တဲ့ စီးဆင်းမှုအဖြစ် ကိုယ်ရေးကိုယ်တာလုံခြုံမှုကို ဖွဲ့စည်းပုံထဲမှာတင် ထည့်သွင်းထားပါတယ်။"
+    },
+    "bn": {
+      "title": "প্রাসঙ্গিক অখণ্ডতা, ওয়্যারেই কার্যকর | CIRIS",
+      "description": "Nissenbaum-এর পাঁচটি গোপনীয়তা প্যারামিটার CIRIS ওয়্যার ফিল্ডের সাথে এক-এক করে মিলে যায়। বিষয়-ব্যক্তি, প্রেরক, প্রাপক, ধরন, আর প্রেরণ নীতি, সব স্বাক্ষরিত ও প্রত্যাহারযোগ্য। যথাযথ প্রবাহ হিসেবে গোপনীয়তা, কাঠামোতেই গড়া।"
+    },
+    "hi": {
+      "title": "सांदर्भिक अखंडता, वायर स्तर पर लागू | CIRIS",
+      "description": "Nissenbaum के पाँच निजता पैरामीटर CIRIS के वायर फ़ील्ड से एक-से-एक मेल खाते हैं। विषय, भेजने वाला, पाने वाला, जानकारी का प्रकार और प्रसारण सिद्धांत, सब हस्ताक्षरित और वापस लेने योग्य। निजता यानी उचित प्रवाह, ढाँचे में ही निर्मित।"
+    },
+    "vi": {
+      "title": "Tính toàn vẹn ngữ cảnh, thực thi ngay trên đường truyền | CIRIS",
+      "description": "Năm tham số quyền riêng tư của Nissenbaum ánh xạ một đối một sang các trường truyền tải của CIRIS. Chủ thể, người gửi, người nhận, loại thông tin và nguyên tắc truyền, được ký và có thể thu hồi. Quyền riêng tư là dòng chảy phù hợp, trở thành cấu trúc."
+    },
+    "id": {
+      "title": "Integritas Kontekstual, Ditegakkan di Tingkat Wire | CIRIS",
+      "description": "Lima parameter privasi Nissenbaum terpetakan satu lawan satu ke field wire CIRIS. Subjek, pengirim, penerima, jenis, dan prinsip transmisi, ditandatangani dan dapat dicabut. Privasi sebagai aliran yang pantas, dibuat struktural."
+    },
+    "th": {
+      "title": "ความสมบูรณ์เชิงบริบท บังคับใช้ที่ระดับการส่งข้อมูล | CIRIS",
+      "description": "พารามิเตอร์ความเป็นส่วนตัวทั้งห้าของ Nissenbaum จับคู่แบบหนึ่งต่อหนึ่งกับฟิลด์การส่งข้อมูลของ CIRIS เจ้าของข้อมูล ผู้ส่ง ผู้รับ ประเภทข้อมูล และหลักการส่งต่อ ทั้งหมดถูกเซ็นกำกับและเพิกถอนได้ ความเป็นส่วนตัวคือการไหลที่เหมาะสม ทำให้เป็นเรื่องของโครงสร้าง"
+    },
+    "tr": {
+      "title": "Aktarım Formatında Zorunlu Kılınan Bağlamsal Bütünlük | CIRIS",
+      "description": "Nissenbaum'un beş mahremiyet parametresi CIRIS aktarım alanlarıyla bire bir eşleşir. Özne, gönderen, alıcı, tür ve iletim ilkesi: imzalı ve geri alınabilir. Uygun akış olarak mahremiyet, yapının kendisinde."
+    },
+    "uk": {
+      "title": "Контекстуальна цілісність, забезпечена на рівні протоколу | CIRIS",
+      "description": "П'ять параметрів приватності за Nissenbaum один в один відповідають полям формату CIRIS. Суб'єкт, відправник, отримувач, тип і принцип передачі: підписані та відкличні. Приватність як доречний потік, закріплена в структурі."
+    },
+    "ru": {
+      "title": "Контекстуальная целостность на уровне канала | CIRIS",
+      "description": "Пять параметров приватности по Nissenbaum один к одному ложатся на поля канала CIRIS. Субъект, отправитель, получатель, тип и принцип передачи: всё подписано и отзываемо. Приватность как уместный поток, закреплённая в структуре."
+    },
+    "ko": {
+      "title": "맥락적 무결성, 와이어 수준에서 강제하다 | CIRIS",
+      "description": "Nissenbaum의 다섯 가지 프라이버시 매개변수는 CIRIS 와이어 필드와 일대일로 대응합니다. 정보 주체, 발신자, 수신자, 정보 유형, 전송 원칙이 서명되고 철회 가능합니다. 적절한 흐름으로서의 프라이버시를 구조로 만들었습니다."
+    },
+    "ja": {
+      "title": "文脈的インテグリティをワイヤーで強制する | CIRIS",
+      "description": "Nissenbaumの5つのプライバシーパラメータは、CIRISのワイヤーフィールドと1対1で対応します。主体、送り手、受け手、種類、そして伝達原理。署名され、取り消し可能。適切な流れとしてのプライバシーを、構造にしました。"
+    },
+    "zh": {
+      "title": "情境完整性,在传输格式中强制执行 | CIRIS",
+      "description": "Nissenbaum 的五个隐私参数与 CIRIS 传输字段一一对应。主体、发送者、接收者、信息类型和传输原则,均经过签名并可撤销。隐私即恰当的流动,成为结构本身。"
+    },
+    "de": {
+      "title": "Kontextuelle Integrität, im Wire-Format erzwungen | CIRIS",
+      "description": "Nissenbaums fünf Privatsphäre-Parameter passen eins zu eins auf die Wire-Felder von CIRIS. Subjekt, Sender, Empfänger, Typ und Übertragungsprinzip, signiert und widerrufbar. Privatsphäre als angemessener Fluss, strukturell verankert."
+    },
+    "fr": {
+      "title": "Intégrité contextuelle, appliquée au niveau du réseau | CIRIS",
+      "description": "Les cinq paramètres de la vie privée de Nissenbaum correspondent un à un aux champs réseau de CIRIS. Sujet, émetteur, destinataire, type et principe de transmission, signés et révocables. La vie privée comme flux approprié, rendue structurelle."
+    },
+    "it": {
+      "title": "Integrità contestuale, applicata a livello di rete | CIRIS",
+      "description": "I cinque parametri della privacy di Nissenbaum corrispondono uno a uno ai campi di rete di CIRIS. Soggetto, mittente, destinatario, tipo e principio di trasmissione, firmati e revocabili. La privacy come flusso appropriato, resa strutturale."
+    },
+    "pt": {
+      "title": "Integridade contextual, imposta no nível do fio | CIRIS",
+      "description": "Os cinco parâmetros de privacidade de Nissenbaum correspondem um a um aos campos de fio do CIRIS. Sujeito, remetente, destinatário, tipo e princípio de transmissão, assinados e revogáveis. Privacidade como fluxo apropriado, tornada estrutural."
+    },
+    "ar": {
+      "title": "السلامة السياقية مفروضة في صيغة النقل | CIRIS",
+      "description": "معايير الخصوصية الخمسة عند Nissenbaum تقابل حقول النقل في CIRIS واحدا لواحد. الموضوع والمرسل والمستلم والنوع ومبدأ الإرسال، كلها موقعة وقابلة للإلغاء. الخصوصية كتدفق ملائم، مبنية في الهيكل نفسه."
+    },
+    "fa": {
+      "title": "یکپارچگی زمینه‌ای، اجراشده در قالب انتقال | CIRIS",
+      "description": "پنج پارامتر حریم خصوصی Nissenbaum یک به یک با فیلدهای انتقال CIRIS منطبق است. موضوع، فرستنده، گیرنده، نوع و اصل انتقال، همه امضاشده و قابل لغو. حریم خصوصی به معنای جریان مناسب، ساخته‌شده در خود ساختار."
+    },
+    "ur": {
+      "title": "سیاق و سباق کی سالمیت، وائر کی سطح پر نافذ | CIRIS",
+      "description": "Nissenbaum کے پانچ پرائیویسی پیرامیٹر CIRIS کے وائر فیلڈز سے ایک ایک کر کے ملتے ہیں۔ موضوع، بھیجنے والا، پانے والا، معلومات کی قسم اور ترسیل کا اصول، سب دستخط شدہ اور واپس لینے کے قابل۔ پرائیویسی یعنی مناسب بہاؤ، خود ڈھانچے میں شامل۔"
+    },
+    "es": {
+      "title": "Integridad contextual, aplicada a nivel del cable | CIRIS",
+      "description": "Los cinco parámetros de privacidad de Nissenbaum corresponden uno a uno con campos del cable de CIRIS. Sujeto, emisor, receptor, tipo y principio de transmisión, firmados y revocables. La privacidad como flujo apropiado, hecha estructural."
+    }
+  },
   "/structural-privacy": {
     "en": {
       "title": "Structural Privacy: Private by Physics | CIRIS",

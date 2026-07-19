@@ -10,6 +10,7 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
 const h = (str: string) => ({ __html: str });
@@ -122,6 +123,9 @@ export default function GrammarV2({
           </div>
         </div>
       </section>
+
+      {/* Concept tag: the envelope + consent family is contextual integrity. */}
+      <ContextualIntegrityCrossLink t={t} locale={locale} />
 
       {/* Deep tech CTA — the full spec reader + the workshop (English-only). */}
       <section className={s.cta}>

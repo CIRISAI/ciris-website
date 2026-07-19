@@ -16,6 +16,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
 import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
 import StoreBadges from "@/app/components/graphics/StoreBadges";
+import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
 const h = (str: string) => ({ __html: str });
@@ -72,6 +73,9 @@ export default function CewpV2({ t, locale }: { t: Dictionary; locale: string })
           <p dangerouslySetInnerHTML={h(c.shippingNote)} />
         </div>
       </section>
+
+      {/* Concept tag: CEWP's consent + cohort machinery is contextual integrity. */}
+      <ContextualIntegrityCrossLink t={t} locale={locale} />
 
       {/* The deep tech — details simulator + repo */}
       <div className={s.callout}>

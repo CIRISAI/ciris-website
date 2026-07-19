@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "Ouvrir le lecteur de spécification →",
     "ctaExplore": "Construire une chaîne dans le navigateur →"
   },
+  "contextualIntegrity": {
+    "kicker": "Intégrité contextuelle · La vie privée comme flux approprié",
+    "title": "L'intégrité contextuelle, intégrée au format réseau",
+    "lede": "L'intégrité contextuelle est une idée simple avec un nom célèbre : la vie privée n'est pas le secret, c'est l'information qui circule comme les personnes d'un contexte s'y attendent. CIRIS ne l'a pas ajoutée après coup. Le format réseau la fait respecter.",
+    "seoTitle": "Intégrité contextuelle, appliquée au niveau du réseau | CIRIS",
+    "seoDescription": "Les cinq paramètres de la vie privée de Nissenbaum correspondent un à un aux champs réseau de CIRIS. Sujet, émetteur, destinataire, type et principe de transmission, signés et révocables. La vie privée comme flux approprié, rendue structurelle.",
+    "s1label": "L'idée",
+    "s1h2": "Qu'est-ce que l'intégrité contextuelle ?",
+    "s1p1": "En 2004, la philosophe Helen Nissenbaum a donné une meilleure définition à la vie privée. La vie privée ne consiste pas à cacher des choses. Ce n'est pas une case à cocher qui dit « J'accepte ». La vie privée, c'est la circulation appropriée de l'information. Chaque partie de la vie a ses propres règles sur la façon dont l'information doit circuler. Que votre médecin connaisse votre diagnostic, c'est normal. Que votre médecin le vende à un annonceur, c'est une violation, même si un formulaire disait qu'il en avait le droit.",
+    "s1p2": "La théorie nomme cinq parties dans chaque flux d'information : de qui parle l'information, qui l'envoie, qui la reçoit, de quel type d'information il s'agit, et la règle que le flux doit suivre. Brisez la règle du contexte, et la vie privée est brisée, peu importe ce que quelqu'un a cliqué.",
+    "s2label": "La correspondance",
+    "s2h2": "Les cinq paramètres sont des champs réseau de CIRIS",
+    "s2intro": "La Constitution CIRIS n'utilise jamais l'expression intégrité contextuelle. Nous avons découvert la correspondance une fois la conception terminée. Chacun des cinq paramètres de Nissenbaum est un champ que le protocole signe et fait respecter.",
+    "citePrefix": "Constitution",
+    "params": [
+      {
+        "name": "1 · Sujet des données",
+        "body": "subject_key_ids nomme la personne concernée par une affirmation, à l'intérieur même de l'enveloppe. Le sujet peut révoquer au niveau du réseau, pas seulement le producteur.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Émetteur",
+        "body": "attesting_key_id est l'identité cryptographique du producteur. Chaque affirmation est signée, donc chaque flux a une source nommée.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Destinataire",
+        "body": "Trois axes séparés, gardés distincts à dessein : cohort_scope dit qui peut voir, subject_key_ids dit qui peut révoquer, delivery_mode dit qui reçoit activement.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Type d'information",
+        "body": "dimension est un préfixe d'espace de noms qui dit exactement ce qui est affirmé. Un test d'admission strict le garde objectif et vérifiable par machine.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · Principe de transmission",
+        "body": "consent:scope nomme la règle que le flux doit suivre : retain, share, analyze, train ou publish, avec des limites comme retain:90d et share:cohort:family.",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "La partie difficile",
+    "s3h2": "Le principe de transmission, en octets",
+    "s3p1": "Le cinquième paramètre est celui que tous les autres laissent tomber. Les lois et les formulaires de consentement peuvent dire quelles données ont été collectées. Ils disent rarement la règle que le flux doit suivre ensuite. CIRIS fait de cette règle une valeur signée et lisible par machine, que le sujet émet et peut reprendre. consent:scope:train, c'est une personne qui dit oui ou non à l'entraînement de l'IA, dans le format réseau, révocable à tout moment.",
+    "s3p2": "Et la révocation a du mordant. Un producteur s'engage sur un délai de suppression au moment de la publication. Si le sujet révoque et que le délai passe sans preuve de suppression, le réseau lui-même déclenche un signal de violation.",
+    "s4label": "Au-delà de la case à cocher",
+    "s4h2": "Ce que de tels flux rendent possible",
+    "beyond": [
+      {
+        "title": "Changer de contexte n'est pas mentir",
+        "body": "withdraws retire une affirmation parce que la vie a changé. recants reconnaît qu'elle était fausse au moment où elle a été faite. Le protocole connaît la différence, et le calcul de confiance les traite différemment."
+      },
+      {
+        "title": "Les contextes intimes sont invisibles",
+        "body": "Les données limitées à la famille n'envoient aucune annonce d'annuaire. Les personnes extérieures ne peuvent pas les atteindre, les lire, ni même apprendre qu'elles existent. La règle de flux la plus forte est celle dont le réseau ne peut même pas exprimer la violation."
+      },
+      {
+        "title": "Les normes peuvent évoluer",
+        "body": "Les périmètres de consentement forment un vocabulaire ouvert. Les communautés ajoutent de nouvelles règles de flux sans demander la permission à une plateforme, et la politique locale décide de leur sens."
+      }
+    ],
+    "s5label": "La partie honnête",
+    "s5h2": "Nous sommes arrivés ici par un autre chemin",
+    "s5p1": "CIRIS n'a pas été conçu pour mettre en œuvre l'intégrité contextuelle. Il est né d'une idée relationnelle : une personne est une personne à travers d'autres personnes, donc chaque affirmation doit porter ses relations avec elle. Suivez cette règle assez longtemps et vous arrivez là où pointe la théorie de Nissenbaum : la vie privée est un flux approprié, et les règles de flux appartiennent à la structure. Deux chemins, même endroit. Le nôtre est livré sous forme de format réseau.",
+    "s6label": "Pourquoi c'est important maintenant",
+    "s6h2": "Les agents IA ont rendu cela urgent",
+    "s6p1": "Les assistants IA lisent des calendriers, des boîtes mail et des dossiers médicaux. Le domaine de recherche mesure désormais s'ils laissent fuir des informations d'un contexte à l'autre, et la norme de référence est l'intégrité contextuelle. La plupart des travaux essaient d'apprendre au modèle à être prudent. CIRIS prend l'autre chemin : rendre le flux inapproprié impossible à exprimer.",
+    "sourcesLabel": "Sources",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "Lisez la mécanique par vous-même.",
+    "btnConstitution": "Lire la constitution →",
+    "btnPrivacy": "Vie privée structurelle →",
+    "btnGrammar": "La grammaire →",
+    "btnCewp": "La plateforme →",
+    "crossTitle": "C'est l'intégrité contextuelle",
+    "crossBody": "Le cadre de la vie privée que les chercheurs utilisent pour juger les systèmes d'IA a un nom. CIRIS le fait respecter dans le format réseau.",
+    "crossCta": "Qu'est-ce que l'intégrité contextuelle ? →"
+  },
   "safetyArch": {
     "headlineLead": "La sécurité et la technologie,",
     "headlineAccent": "inséparables",

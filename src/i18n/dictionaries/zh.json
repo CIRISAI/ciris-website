@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "打开规范阅读器 →",
     "ctaExplore": "在浏览器里构建一条链 →"
   },
+  "contextualIntegrity": {
+    "kicker": "情境完整性 · 隐私即恰当的信息流动",
+    "title": "内建于传输格式的情境完整性",
+    "lede": "情境完整性是一个有着响亮名字的简单想法:隐私不是保密,而是信息按照情境中人们的预期流动。CIRIS 不是事后补上这一点,而是由传输格式本身来强制执行。",
+    "seoTitle": "情境完整性,在传输格式中强制执行 | CIRIS",
+    "seoDescription": "Nissenbaum 的五个隐私参数与 CIRIS 传输字段一一对应。主体、发送者、接收者、信息类型和传输原则,均经过签名并可撤销。隐私即恰当的流动,成为结构本身。",
+    "s1label": "核心想法",
+    "s1h2": "什么是情境完整性?",
+    "s1p1": "2004 年,哲学家 Helen Nissenbaum 给隐私下了一个更好的定义。隐私不是把事情藏起来,也不是一个写着“我同意”的勾选框。隐私是信息的恰当流动。生活的每个领域都有自己的规则,规定信息该怎样移动。医生知道你的诊断,没有问题。医生把它卖给广告商,就是侵犯,哪怕某张表格说过可以。",
+    "s1p2": "这套理论指出,每一次信息流动都有五个部分:信息关于谁,谁发送,谁接收,是什么类型的信息,以及这次流动必须遵守的规则。违背了情境的规则,隐私就被破坏了,无论谁点过什么。",
+    "s2label": "对应关系",
+    "s2h2": "这五个参数就是 CIRIS 的传输字段",
+    "s2intro": "CIRIS 宪章从未使用情境完整性这个词。设计完成之后,我们才发现这种吻合。Nissenbaum 的五个参数,每一个都是协议签名并强制执行的字段。",
+    "citePrefix": "宪章",
+    "params": [
+      {
+        "name": "1 · 数据主体",
+        "body": "subject_key_ids 在信封内部直接写明声明是关于谁的。数据主体可以在传输层面撤销,而不是只有生产者才可以。",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · 发送者",
+        "body": "attesting_key_id 是生产者的密码学身份。每条声明都经过签名,所以每次流动都有一个署名的来源。",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · 接收者",
+        "body": "三条特意分开的轴线:cohort_scope 说明谁能看到,subject_key_ids 说明谁能撤销,delivery_mode 说明谁在主动接收。",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · 信息类型",
+        "body": "dimension 是一个命名空间前缀,准确说明声明的内容是什么。一套严格的准入检验让它保持客观,并可由机器核查。",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · 传输原则",
+        "body": "consent:scope 写明流动必须遵守的规则:retain、share、analyze、train 或 publish,还可以加上 retain:90d 和 share:cohort:family 这样的限制。",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "最难的部分",
+    "s3h2": "把传输原则写成字节",
+    "s3p1": "第五个参数是其他人都丢掉的那一个。法律和同意书可以说明收集了哪些数据,却很少说明之后的流动必须遵守什么规则。CIRIS 把这条规则变成一个经过签名、机器可读的值,由主体发出,也可以收回。consent:scope:train 就是一个人对 AI 训练说是或说否,写在传输格式里,随时可以撤销。",
+    "s3p2": "而且撤销是有力量的。生产者在发布时就承诺一个删除期限。如果主体撤销后,期限已过却没有删除证明,网络本身会发出违规信号。",
+    "s4label": "超越勾选框",
+    "s4h2": "这样的流动能做什么",
+    "beyond": [
+      {
+        "title": "情境变了不算说谎",
+        "body": "withdraws 是因为生活变了而收回一条声明。recants 是承认它当初就是假的。协议知道这两者的区别,信任计算也区别对待它们。"
+      },
+      {
+        "title": "亲密情境是隐形的",
+        "body": "家庭范围的数据不会发出任何目录广告。外人无法路由到它,无法读取它,甚至无法知道它存在。最强的流动规则,就是网络根本无法表达违反行为的规则。"
+      },
+      {
+        "title": "规范可以演化",
+        "body": "同意范围是一套开放词汇。社区可以添加新的流动规则,不必向任何平台请求许可,规则的含义由本地政策决定。"
+      }
+    ],
+    "s5label": "坦诚的部分",
+    "s5h2": "我们从另一条路走到了这里",
+    "s5p1": "CIRIS 的设计初衷并不是实现情境完整性。它源自一个关于关系的想法:人因他人而成为人,所以每条声明都必须带着它的关系一起走。把这条规则贯彻得足够久,你就会到达 Nissenbaum 的理论所指向的地方:隐私是恰当的流动,流动规则应当写进结构里。两条路,同一个终点。我们的这条,以传输格式的形式发布。",
+    "s6label": "为什么现在重要",
+    "s6h2": "AI 智能体让这件事变得紧迫",
+    "s6p1": "AI 助手会读取日历、收件箱和健康记录。研究领域现在会测量它们是否跨情境泄露信息,而衡量的标准就是情境完整性。大多数工作试图教模型学会小心。CIRIS 走另一条路:让不恰当的流动根本无法表达。",
+    "sourcesLabel": "资料来源",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "亲自读一读这套机制。",
+    "btnConstitution": "阅读宪章 →",
+    "btnPrivacy": "结构性隐私 →",
+    "btnGrammar": "语法 →",
+    "btnCewp": "平台 →",
+    "crossTitle": "这就是情境完整性",
+    "crossBody": "研究者用来评判 AI 系统的隐私框架有一个名字。CIRIS 在传输格式中强制执行它。",
+    "crossCta": "什么是情境完整性? →"
+  },
   "safetyArch": {
     "headlineLead": "安全与技术，",
     "headlineAccent": "密不可分",

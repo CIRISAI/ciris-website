@@ -9,6 +9,7 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
 const REPO = "https://github.com/CIRISAI/CIRISRegistry";
 const CONST_DIR = `${REPO}/tree/main/FSD/CIRIS_Constitution`;
@@ -85,6 +86,9 @@ export default function ConstitutionV2({ t, locale }: { t: Dictionary; locale: s
         <p className={s.sectionLabel}>{c.forewordLabel}</p>
         <p className={s.lead}>{c.forewordQuote}</p>
       </div>
+
+      {/* Concept tag: the wire-level consent machinery is contextual integrity. */}
+      <ContextualIntegrityCrossLink t={t} locale={locale} />
 
       {/* Read it / read the source. */}
       <section className={s.cta}>

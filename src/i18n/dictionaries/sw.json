@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "Fungua kisomaji cha maelezo →",
     "ctaExplore": "Jenga mnyororo kwenye kivinjari →"
   },
+  "contextualIntegrity": {
+    "kicker": "Uadilifu wa muktadha · Faragha kama mtiririko unaofaa",
+    "title": "Uadilifu wa muktadha, umejengwa ndani ya fomati ya wire",
+    "lede": "Uadilifu wa muktadha ni wazo rahisi lenye jina maarufu: faragha si usiri, ni taarifa kutiririka jinsi watu katika muktadha wanavyotarajia. CIRIS haikuliweka hili baadaye. Fomati ya wire ndiyo inayolitekeleza.",
+    "seoTitle": "Uadilifu wa Muktadha, Unaotekelezwa Kwenye Wire | CIRIS",
+    "seoDescription": "Vigezo vitano vya faragha vya Nissenbaum vinalingana kimoja kwa kimoja na sehemu za wire za CIRIS. Mhusika, mtumaji, mpokeaji, aina, na kanuni ya usambazaji, vimesainiwa na vinaweza kubatilishwa. Faragha kama mtiririko unaofaa, imefanywa kuwa ya kimuundo.",
+    "s1label": "Wazo lenyewe",
+    "s1h2": "Uadilifu wa muktadha ni nini?",
+    "s1p1": "Mwaka 2004, mwanafalsafa Helen Nissenbaum alitoa fasili bora zaidi ya faragha. Faragha si kuhusu kuficha mambo. Si kisanduku cha kutiki kinachosema \"Nakubali.\" Faragha ni mtiririko unaofaa wa taarifa. Kila sehemu ya maisha ina kanuni zake za jinsi taarifa inavyopaswa kusafiri. Daktari wako kujua utambuzi wako ni jambo la kawaida. Daktari wako kuiuza taarifa hiyo kwa mtangazaji ni ukiukaji, hata kama fomu ilisema anaweza.",
+    "s1p2": "Nadharia hii inataja sehemu tano za kila mtiririko wa taarifa: taarifa inamhusu nani, nani anayeituma, nani anayeipokea, ni taarifa ya aina gani, na kanuni ambayo mtiririko lazima uifuate. Vunja kanuni ya muktadha, na faragha imevunjika, bila kujali mtu yeyote alibofya nini.",
+    "s2label": "Ulinganifu",
+    "s2h2": "Vigezo vitano ni sehemu za wire za CIRIS",
+    "s2intro": "Katiba ya CIRIS haitumii kamwe msemo uadilifu wa muktadha. Tuliugundua ulinganifu huu baada ya usanifu kukamilika. Kila kigezo kati ya vitano vya Nissenbaum ni sehemu ambayo protokoli inaisaini na kuitekeleza.",
+    "citePrefix": "Katiba",
+    "params": [
+      {
+        "name": "1 · Mhusika wa data",
+        "body": "subject_key_ids inamtaja mtu ambaye dai linamhusu, ndani ya bahasha yenyewe. Mhusika anaweza kubatilisha katika ngazi ya wire, si mzalishaji peke yake.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Mtumaji",
+        "body": "attesting_key_id ni utambulisho wa kriptografia wa mzalishaji. Kila dai limesainiwa, hivyo kila mtiririko una chanzo chenye jina.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Mpokeaji",
+        "body": "Mihimili mitatu tofauti, imetenganishwa kwa makusudi: cohort_scope inasema nani anaweza kuona, subject_key_ids inasema nani anaweza kubatilisha, delivery_mode inasema nani anayepokea kwa vitendo.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Aina ya taarifa",
+        "body": "dimension ni kiambishi awali cha namespace kinachosema hasa kinachodaiwa. Jaribio kali la kukubaliwa linahakikisha inabaki ya kiuhalisia na inaweza kukaguliwa na mashine.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · Kanuni ya usambazaji",
+        "body": "consent:scope inataja kanuni ambayo mtiririko lazima uifuate: retain, share, analyze, train, au publish, pamoja na mipaka kama retain:90d na share:cohort:family.",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "Sehemu ngumu",
+    "s3h2": "Kanuni ya usambazaji, kama baiti",
+    "s3p1": "Kigezo cha tano ndicho ambacho wengine wote wanakiacha. Sheria na fomu za idhini zinaweza kusema data gani ilikusanywa. Mara chache husema kanuni ambayo mtiririko lazima uifuate baadaye. CIRIS inaifanya kanuni hiyo kuwa thamani iliyosainiwa, inayosomeka na mashine, ambayo mhusika anaitoa na anaweza kuirudisha. consent:scope:train ni mtu kusema ndiyo au hapana kwa mafunzo ya AI, ndani ya fomati ya wire, inayoweza kubatilishwa wakati wowote.",
+    "s3p2": "Na ubatilishaji una meno. Mzalishaji anajifunga kwa dirisha la ufutaji anapochapisha. Ikiwa mhusika atabatilisha na dirisha likapita bila uthibitisho wa ufutaji, mtandao wenyewe unatoa ishara ya uvunjaji.",
+    "s4label": "Zaidi ya kisanduku cha kutiki",
+    "s4h2": "Mitiririko kama hii inaweza kufanya nini",
+    "beyond": [
+      {
+        "title": "Mabadiliko ya muktadha si uongo",
+        "body": "withdraws inarudisha dai nyuma kwa sababu maisha yamebadilika. recants inakiri kwamba dai lilikuwa la uongo lilipotolewa. Protokoli inajua tofauti hiyo, na hesabu ya uaminifu inazichukulia kwa njia tofauti."
+      },
+      {
+        "title": "Miktadha ya karibu haionekani",
+        "body": "Data yenye upeo wa familia haitumi tangazo lolote la orodha. Watu wa nje hawawezi kuifikia, kuisoma, wala hata kujua kwamba ipo. Kanuni ya mtiririko yenye nguvu zaidi ni ile ambayo mtandao hauwezi hata kueleza kuivunja."
+      },
+      {
+        "title": "Kanuni za jamii zinaweza kubadilika",
+        "body": "Upeo wa idhini ni msamiati wazi. Jumuiya zinaongeza kanuni mpya za mtiririko bila kuomba ruhusa kwa jukwaa lolote, na sera ya mahali ndiyo inayoamua maana yake."
+      }
+    ],
+    "s5label": "Sehemu ya ukweli",
+    "s5h2": "Tulifika hapa kwa njia tofauti",
+    "s5p1": "CIRIS haikubuniwa kutekeleza uadilifu wa muktadha. Ilikua kutoka kwa wazo la kimahusiano: mtu ni mtu kupitia watu wengine, hivyo kila dai lazima libebe mahusiano yake pamoja nalo. Fuata kanuni hiyo kwa muda mrefu na utafika mahali ambapo nadharia ya Nissenbaum inaelekeza: faragha ni mtiririko unaofaa, na kanuni za mtiririko ni sehemu ya muundo. Njia mbili, mahali pamoja. Yetu inasafirishwa kama fomati ya wire.",
+    "s6label": "Kwa nini ni muhimu sasa",
+    "s6h2": "Mawakala wa AI wamefanya hili kuwa la dharura",
+    "s6p1": "Wasaidizi wa AI wanasoma kalenda, sanduku za barua pepe, na rekodi za afya. Uwanja wa utafiti sasa unapima kama wanavujisha taarifa kati ya miktadha, na kiwango wanachopimia ni uadilifu wa muktadha. Kazi nyingi zinajaribu kuufundisha modeli kuwa makini. CIRIS inachukua njia nyingine: kufanya mtiririko usiofaa usiweze kuelezwa kabisa.",
+    "sourcesLabel": "Vyanzo",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "Soma mitambo yake wewe mwenyewe.",
+    "btnConstitution": "Soma katiba →",
+    "btnPrivacy": "Faragha ya kimuundo →",
+    "btnGrammar": "Sarufi →",
+    "btnCewp": "Jukwaa →",
+    "crossTitle": "Huu ndio uadilifu wa muktadha",
+    "crossBody": "Mfumo wa faragha ambao watafiti wanautumia kupima mifumo ya AI una jina. CIRIS inautekeleza ndani ya fomati ya wire.",
+    "crossCta": "Uadilifu wa muktadha ni nini? →"
+  },
   "safetyArch": {
     "headlineLead": "Usalama na teknolojia,",
     "headlineAccent": "haviwezi kutenganishwa",

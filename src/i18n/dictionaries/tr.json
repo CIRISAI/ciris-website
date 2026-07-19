@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "Teknik belge okuyucusunu açın →",
     "ctaExplore": "Tarayıcıda bir zincir oluşturun →"
   },
+  "contextualIntegrity": {
+    "kicker": "Bağlamsal bütünlük · Uygun akış olarak mahremiyet",
+    "title": "Aktarım formatına işlenmiş bağlamsal bütünlük",
+    "lede": "Bağlamsal bütünlük, ünlü bir adı olan basit bir fikirdir: mahremiyet gizlilik değildir. Mahremiyet, bilginin bir bağlamdaki insanların beklediği şekilde akmasıdır. CIRIS bunu sonradan eklemedi. Aktarım formatının kendisi bunu zorunlu kılar.",
+    "seoTitle": "Aktarım Formatında Zorunlu Kılınan Bağlamsal Bütünlük | CIRIS",
+    "seoDescription": "Nissenbaum'un beş mahremiyet parametresi CIRIS aktarım alanlarıyla bire bir eşleşir. Özne, gönderen, alıcı, tür ve iletim ilkesi: imzalı ve geri alınabilir. Uygun akış olarak mahremiyet, yapının kendisinde.",
+    "s1label": "Fikir",
+    "s1h2": "Bağlamsal bütünlük nedir?",
+    "s1p1": "2004 yılında filozof Helen Nissenbaum mahremiyete daha iyi bir tanım kazandırdı. Mahremiyet bir şeyleri saklamak değildir. “Kabul ediyorum” yazan bir onay kutusu da değildir. Mahremiyet, bilginin uygun akışıdır. Hayatın her alanının, bilginin nasıl hareket etmesi gerektiğine dair kendi kuralları vardır. Doktorunuzun tanınızı bilmesi normaldir. Doktorunuzun bunu bir reklamcıya satması ise ihlaldir; bir formda izin yazsa bile.",
+    "s1p2": "Kuram, her bilgi akışının beş parçasını adlandırır: bilgi kimin hakkında, kim gönderiyor, kim alıyor, bilgi ne türden ve akışın uyması gereken kural ne. Bağlamın kuralını çiğnediğinizde mahremiyet bozulur; kim neye tıklamış olursa olsun.",
+    "s2label": "Eşleme",
+    "s2h2": "Beş parametre, CIRIS aktarım alanlarıdır",
+    "s2intro": "CIRIS Anayasası bağlamsal bütünlük ifadesini hiç kullanmaz. Bu örtüşmeyi tasarım bittikten sonra fark ettik. Nissenbaum'un beş parametresinin her biri, protokolün imzaladığı ve zorunlu kıldığı bir alandır.",
+    "citePrefix": "Anayasa",
+    "params": [
+      {
+        "name": "1 · Veri öznesi",
+        "body": "subject_key_ids, bir iddianın kimin hakkında olduğunu zarfın kendi içinde adlandırır. Geri almayı yalnızca üretici değil, öznenin kendisi de aktarım düzeyinde yapabilir.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Gönderen",
+        "body": "attesting_key_id, üreticinin kriptografik kimliğidir. Her iddia imzalıdır; böylece her akışın adı konmuş bir kaynağı olur.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Alıcı",
+        "body": "Bilerek ayrı tutulan üç ayrı eksen: cohort_scope kimin görebileceğini, subject_key_ids kimin geri alabileceğini, delivery_mode kimin etkin olarak aldığını söyler.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Bilgi türü",
+        "body": "dimension, tam olarak neyin iddia edildiğini söyleyen bir ad alanı önekidir. Katı bir kabul testi onu nesnel ve makineyle denetlenebilir tutar.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · İletim ilkesi",
+        "body": "consent:scope, akışın uyması gereken kuralı adlandırır: retain, share, analyze, train veya publish; retain:90d ve share:cohort:family gibi sınırlarla.",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "Zor kısım",
+    "s3h2": "Bayt olarak iletim ilkesi",
+    "s3p1": "Beşinci parametre, herkesin es geçtiği parametredir. Yasalar ve onam formları hangi verinin toplandığını söyleyebilir. Akışın sonrasında uyması gereken kuralı ise nadiren söylerler. CIRIS bu kuralı, öznenin yayımladığı ve geri alabildiği, imzalı ve makine tarafından okunabilir bir değere dönüştürür. consent:scope:train, bir insanın yapay zekâ eğitimine evet ya da hayır demesidir; doğrudan aktarım formatında ve her an geri alınabilir.",
+    "s3p2": "Ve geri almanın yaptırımı vardır. Üretici, veriyi yayımlarken bir silme penceresi taahhüt eder. Özne geri alır ve pencere silme kanıtı olmadan geçerse, ağın kendisi bir ihlal sinyali verir.",
+    "s4label": "Onay kutusunun ötesinde",
+    "s4h2": "Böyle akışlar neler yapabilir",
+    "beyond": [
+      {
+        "title": "Bağlam değişiklikleri yalan değildir",
+        "body": "withdraws, hayat değiştiği için bir iddiayı geri çeker. recants, iddianın baştan yanlış olduğunu kabul eder. Protokol aradaki farkı bilir ve güven matematiği ikisine farklı davranır."
+      },
+      {
+        "title": "Mahrem bağlamlar görünmezdir",
+        "body": "Aile kapsamındaki veriler dizine hiçbir duyuru göndermez. Dışarıdakiler ona yol bulamaz, onu okuyamaz, var olduğunu bile öğrenemez. En güçlü akış kuralı, ağın çiğnenmesini ifade bile edemediği kuraldır."
+      },
+      {
+        "title": "Normlar evrilebilir",
+        "body": "Onam kapsamları açık bir sözlüktür. Topluluklar, bir platformdan izin istemeden yeni akış kuralları ekler; bunların ne anlama geldiğine yerel politika karar verir."
+      }
+    ],
+    "s5label": "Dürüst kısım",
+    "s5h2": "Buraya başka bir yoldan geldik",
+    "s5p1": "CIRIS, bağlamsal bütünlüğü uygulamak için tasarlanmadı. İlişkisel bir fikirden büyüdü: insan, başka insanlar aracılığıyla insandır; bu yüzden her iddia ilişkilerini yanında taşımalıdır. Bu kurala yeterince uzun bağlı kalın, Nissenbaum'un kuramının işaret ettiği yere varırsınız: mahremiyet uygun akıştır ve akış kuralları yapının içine aittir. İki yol, aynı yer. Bizimki bir aktarım formatı olarak geliyor.",
+    "s6label": "Neden şimdi önemli",
+    "s6h2": "Yapay zekâ ajanları bunu acil hale getirdi",
+    "s6p1": "Yapay zekâ asistanları takvimleri, gelen kutularını ve sağlık kayıtlarını okuyor. Araştırma alanı artık bağlamlar arasında bilgi sızdırıp sızdırmadıklarını ölçüyor ve karşılaştırma yaptıkları standardın adı bağlamsal bütünlük. Çoğu çalışma modele dikkatli olmayı öğretmeye çalışıyor. CIRIS öbür yolu seçiyor: uygunsuz akışı ifade edilemez hale getirmek.",
+    "sourcesLabel": "Kaynaklar",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "Mekanizmayı kendiniz okuyun.",
+    "btnConstitution": "Anayasayı okuyun →",
+    "btnPrivacy": "Yapısal mahremiyet →",
+    "btnGrammar": "Gramer →",
+    "btnCewp": "Platform →",
+    "crossTitle": "Bu, bağlamsal bütünlüktür",
+    "crossBody": "Araştırmacıların yapay zekâ sistemlerini değerlendirmek için kullandığı mahremiyet çerçevesinin bir adı var. CIRIS onu aktarım formatında zorunlu kılar.",
+    "crossCta": "Bağlamsal bütünlük nedir? →"
+  },
   "safetyArch": {
     "headlineLead": "Güvenlik ve teknoloji,",
     "headlineAccent": "ayrılmaz",

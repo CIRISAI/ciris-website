@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "Buka pembaca spesifikasi →",
     "ctaExplore": "Bangun rantai di peramban →"
   },
+  "contextualIntegrity": {
+    "kicker": "Integritas kontekstual · Privasi sebagai aliran yang pantas",
+    "title": "Integritas kontekstual, tertanam dalam format wire",
+    "lede": "Integritas kontekstual adalah ide sederhana dengan nama terkenal: privasi bukan kerahasiaan, melainkan informasi yang mengalir sesuai harapan orang-orang dalam suatu konteks. CIRIS tidak menambahkannya belakangan. Format wire-nya yang menegakkannya.",
+    "seoTitle": "Integritas Kontekstual, Ditegakkan di Tingkat Wire | CIRIS",
+    "seoDescription": "Lima parameter privasi Nissenbaum terpetakan satu lawan satu ke field wire CIRIS. Subjek, pengirim, penerima, jenis, dan prinsip transmisi, ditandatangani dan dapat dicabut. Privasi sebagai aliran yang pantas, dibuat struktural.",
+    "s1label": "Idenya",
+    "s1h2": "Apa itu integritas kontekstual?",
+    "s1p1": "Pada 2004, filsuf Helen Nissenbaum memberi privasi definisi yang lebih baik. Privasi bukan soal menyembunyikan sesuatu. Privasi bukan kotak centang bertuliskan \"Saya setuju.\" Privasi adalah aliran informasi yang pantas. Setiap bagian kehidupan punya aturannya sendiri tentang bagaimana informasi boleh berpindah. Dokter Anda tahu diagnosis Anda, itu wajar. Dokter Anda menjualnya ke pengiklan, itu pelanggaran, meski sebuah formulir bilang mereka boleh.",
+    "s1p2": "Teori ini menyebut lima bagian dari setiap aliran informasi: tentang siapa informasi itu, siapa yang mengirim, siapa yang menerima, apa jenis informasinya, dan aturan yang harus diikuti aliran itu. Langgar aturan konteksnya, maka privasi ikut rusak, tidak peduli apa yang pernah diklik siapa pun.",
+    "s2label": "Pemetaannya",
+    "s2h2": "Lima parameter itu adalah field wire CIRIS",
+    "s2intro": "Konstitusi CIRIS tidak pernah memakai frasa integritas kontekstual. Kami menemukan kecocokannya setelah desainnya selesai. Kelima parameter Nissenbaum, semuanya, adalah field yang ditandatangani dan ditegakkan oleh protokol.",
+    "citePrefix": "Konstitusi",
+    "params": [
+      {
+        "name": "1 · Subjek data",
+        "body": "subject_key_ids menyebut orang yang menjadi pokok sebuah klaim, di dalam amplopnya sendiri. Subjek bisa mencabut di tingkat wire, bukan hanya produsennya.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Pengirim",
+        "body": "attesting_key_id adalah identitas kriptografis produsen. Setiap klaim ditandatangani, jadi setiap aliran punya sumber yang bernama.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Penerima",
+        "body": "Tiga sumbu terpisah, sengaja dijaga terpisah: cohort_scope menyatakan siapa yang boleh melihat, subject_key_ids menyatakan siapa yang boleh mencabut, delivery_mode menyatakan siapa yang aktif menerima.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Jenis informasi",
+        "body": "dimension adalah prefiks namespace yang menyatakan persis apa yang diklaim. Uji penerimaan yang ketat menjaganya tetap objektif dan bisa diperiksa mesin.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · Prinsip transmisi",
+        "body": "consent:scope menyebut aturan yang harus diikuti aliran itu: retain, share, analyze, train, atau publish, dengan batas seperti retain:90d dan share:cohort:family.",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "Bagian sulitnya",
+    "s3h2": "Prinsip transmisi, sebagai byte",
+    "s3p1": "Parameter kelima adalah yang paling sering dibuang pihak lain. Undang-undang dan formulir persetujuan bisa menyebut data apa yang dikumpulkan. Mereka jarang menyebut aturan yang harus diikuti aliran itu setelahnya. CIRIS menjadikan aturan itu nilai yang ditandatangani dan terbaca mesin, yang dikeluarkan subjek dan bisa ditarik kembali. consent:scope:train adalah seseorang berkata ya atau tidak pada pelatihan AI, di dalam format wire, dapat dicabut kapan saja.",
+    "s3p2": "Dan pencabutan itu punya gigi. Produsen berkomitmen pada jendela penghapusan saat menerbitkan. Jika subjek mencabut dan jendela itu lewat tanpa bukti penghapusan, jaringan itu sendiri menyalakan sinyal pelanggaran.",
+    "s4label": "Melampaui kotak centang",
+    "s4h2": "Apa yang bisa dilakukan aliran seperti ini",
+    "beyond": [
+      {
+        "title": "Perubahan konteks bukan kebohongan",
+        "body": "withdraws menarik kembali sebuah klaim karena hidup berubah. recants mengakui klaim itu salah sejak dibuat. Protokol tahu bedanya, dan matematika kepercayaan memperlakukan keduanya secara berbeda."
+      },
+      {
+        "title": "Konteks intim tidak terlihat",
+        "body": "Data berlingkup keluarga tidak mengirim pengumuman direktori sama sekali. Orang luar tidak bisa merutekan ke sana, membacanya, atau bahkan tahu bahwa data itu ada. Aturan aliran terkuat adalah aturan yang pelanggarannya bahkan tidak bisa diungkapkan oleh jaringan."
+      },
+      {
+        "title": "Norma bisa berkembang",
+        "body": "Lingkup persetujuan adalah kosakata terbuka. Komunitas menambah aturan aliran baru tanpa minta izin ke platform, dan kebijakan lokal yang menentukan maknanya."
+      }
+    ],
+    "s5label": "Bagian jujurnya",
+    "s5h2": "Kami tiba di sini lewat jalan yang berbeda",
+    "s5p1": "CIRIS tidak dirancang untuk menerapkan integritas kontekstual. Ia tumbuh dari ide relasional: seseorang menjadi pribadi melalui orang-orang lain, maka setiap klaim harus membawa relasinya bersamanya. Ikuti aturan itu cukup lama dan Anda sampai di tempat yang ditunjuk teori Nissenbaum: privasi adalah aliran yang pantas, dan aturan alirannya milik struktur. Dua jalan, tempat yang sama. Milik kami dikirim sebagai format wire.",
+    "s6label": "Mengapa penting sekarang",
+    "s6h2": "Agen AI membuat ini mendesak",
+    "s6p1": "Asisten AI membaca kalender, kotak masuk, dan rekam medis. Bidang riset kini mengukur apakah mereka membocorkan informasi lintas konteks, dan standar pengukurannya adalah integritas kontekstual. Kebanyakan upaya mencoba mengajari model agar berhati-hati. CIRIS mengambil jalan satunya: membuat aliran yang tidak pantas mustahil diungkapkan.",
+    "sourcesLabel": "Sumber",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "Baca sendiri mesinnya.",
+    "btnConstitution": "Baca konstitusinya →",
+    "btnPrivacy": "Privasi struktural →",
+    "btnGrammar": "Tata bahasanya →",
+    "btnCewp": "Platformnya →",
+    "crossTitle": "Inilah integritas kontekstual",
+    "crossBody": "Kerangka privasi yang dipakai para peneliti untuk menilai sistem AI punya nama. CIRIS menegakkannya di dalam format wire.",
+    "crossCta": "Apa itu integritas kontekstual? →"
+  },
   "safetyArch": {
     "headlineLead": "Keselamatan dan teknologi,",
     "headlineAccent": "tak terpisahkan",

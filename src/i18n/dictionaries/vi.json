@@ -2106,6 +2106,89 @@
     "ctaSpecReader": "Mở trình đọc đặc tả →",
     "ctaExplore": "Dựng một chuỗi trong trình duyệt →"
   },
+  "contextualIntegrity": {
+    "kicker": "Tính toàn vẹn ngữ cảnh · Quyền riêng tư là dòng chảy phù hợp",
+    "title": "Tính toàn vẹn ngữ cảnh, xây sẵn trong định dạng truyền tải",
+    "lede": "Tính toàn vẹn ngữ cảnh là một ý tưởng đơn giản mang cái tên nổi tiếng: quyền riêng tư không phải là sự bí mật, mà là thông tin chảy đúng theo cách mọi người trong một ngữ cảnh mong đợi. CIRIS không gắn thêm điều này vào sau. Chính định dạng truyền tải thực thi nó.",
+    "seoTitle": "Tính toàn vẹn ngữ cảnh, thực thi ngay trên đường truyền | CIRIS",
+    "seoDescription": "Năm tham số quyền riêng tư của Nissenbaum ánh xạ một đối một sang các trường truyền tải của CIRIS. Chủ thể, người gửi, người nhận, loại thông tin và nguyên tắc truyền, được ký và có thể thu hồi. Quyền riêng tư là dòng chảy phù hợp, trở thành cấu trúc.",
+    "s1label": "Ý tưởng",
+    "s1h2": "Tính toàn vẹn ngữ cảnh là gì?",
+    "s1p1": "Năm 2004, triết gia Helen Nissenbaum đưa ra một định nghĩa tốt hơn cho quyền riêng tư. Quyền riêng tư không phải là chuyện giấu giếm. Nó không phải là ô đánh dấu ghi “Tôi đồng ý”. Quyền riêng tư là dòng chảy thông tin phù hợp. Mỗi phần của cuộc sống có quy tắc riêng về cách thông tin nên di chuyển. Bác sĩ biết chẩn đoán của bạn là chuyện bình thường. Bác sĩ bán nó cho một công ty quảng cáo là vi phạm, dù một tờ mẫu có nói họ được phép.",
+    "s1p2": "Lý thuyết này nêu tên năm phần của mọi dòng thông tin: thông tin nói về ai, ai gửi, ai nhận, đó là loại thông tin gì, và quy tắc mà dòng chảy phải tuân theo. Phá vỡ quy tắc của ngữ cảnh là phá vỡ quyền riêng tư, bất kể ai đã bấm đồng ý điều gì.",
+    "s2label": "Sự tương ứng",
+    "s2h2": "Năm tham số chính là các trường truyền tải của CIRIS",
+    "s2intro": "Hiến pháp CIRIS chưa bao giờ dùng cụm từ tính toàn vẹn ngữ cảnh. Chúng tôi phát hiện sự trùng khớp sau khi thiết kế đã hoàn tất. Từng tham số trong năm tham số của Nissenbaum đều là một trường mà giao thức ký và thực thi.",
+    "citePrefix": "Hiến pháp",
+    "params": [
+      {
+        "name": "1 · Chủ thể dữ liệu",
+        "body": "subject_key_ids nêu tên người mà một tuyên bố nói về, ngay bên trong phong bì dữ liệu. Chủ thể có thể thu hồi ở tầng truyền tải, chứ không chỉ bên phát hành.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Người gửi",
+        "body": "attesting_key_id là danh tính mật mã của bên phát hành. Mọi tuyên bố đều được ký, nên mọi dòng chảy đều có nguồn được nêu tên.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Người nhận",
+        "body": "Ba trục riêng biệt, được cố ý tách rời: cohort_scope cho biết ai được xem, subject_key_ids cho biết ai được thu hồi, delivery_mode cho biết ai chủ động nhận.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Loại thông tin",
+        "body": "dimension là một tiền tố không gian tên, cho biết chính xác điều gì đang được tuyên bố. Một bài kiểm tra thu nhận nghiêm ngặt giữ cho nó khách quan và máy kiểm chứng được.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · Nguyên tắc truyền",
+        "body": "consent:scope nêu tên quy tắc mà dòng chảy phải tuân theo: retain, share, analyze, train hoặc publish, với các giới hạn như retain:90d và share:cohort:family.",
+        "cite": "CC 3.3.1"
+      }
+    ],
+    "s3label": "Phần khó",
+    "s3h2": "Nguyên tắc truyền, dưới dạng byte",
+    "s3p1": "Tham số thứ năm là phần mà mọi bên khác đều bỏ qua. Luật pháp và các mẫu đồng ý có thể nói dữ liệu nào đã được thu thập. Chúng hiếm khi nói quy tắc mà dòng chảy phải tuân theo sau đó. CIRIS biến quy tắc đó thành một giá trị được ký, máy đọc được, do chủ thể phát ra và có thể rút lại. consent:scope:train là một người nói có hoặc không với việc huấn luyện AI, ngay trong định dạng truyền tải, có thể thu hồi bất cứ lúc nào.",
+    "s3p2": "Và việc thu hồi có sức nặng thật. Bên phát hành cam kết một khoảng thời gian xóa ngay khi công bố. Nếu chủ thể thu hồi và thời hạn trôi qua mà không có bằng chứng xóa, chính mạng lưới sẽ phát tín hiệu vi phạm.",
+    "s4label": "Vượt ra ngoài ô đánh dấu",
+    "s4h2": "Những dòng chảy như vậy làm được gì",
+    "beyond": [
+      {
+        "title": "Ngữ cảnh thay đổi không phải là nói dối",
+        "body": "withdraws rút lại một tuyên bố vì cuộc sống đã thay đổi. recants thừa nhận nó sai ngay từ lúc đưa ra. Giao thức biết sự khác nhau, và phép toán niềm tin đối xử với hai điều đó theo hai cách khác nhau."
+      },
+      {
+        "title": "Các ngữ cảnh thân mật là vô hình",
+        "body": "Dữ liệu trong phạm vi gia đình không phát bất kỳ quảng bá danh bạ nào. Người ngoài không thể định tuyến tới nó, đọc nó, hay thậm chí biết nó tồn tại. Quy tắc dòng chảy mạnh nhất là quy tắc mà mạng lưới không thể diễn đạt việc phá vỡ."
+      },
+      {
+        "title": "Chuẩn mực có thể tiến hóa",
+        "body": "Phạm vi đồng ý là một bộ từ vựng mở. Các cộng đồng thêm quy tắc dòng chảy mới mà không cần xin phép nền tảng nào, và chính sách địa phương quyết định ý nghĩa của chúng."
+      }
+    ],
+    "s5label": "Phần thành thật",
+    "s5h2": "Chúng tôi đến đây từ một con đường khác",
+    "s5p1": "CIRIS không được thiết kế để hiện thực hóa tính toàn vẹn ngữ cảnh. Nó lớn lên từ một ý tưởng quan hệ: một con người là con người nhờ những con người khác, nên mọi tuyên bố phải mang theo các mối quan hệ của nó. Theo quy tắc đó đủ lâu, bạn sẽ đến đúng nơi lý thuyết của Nissenbaum chỉ tới: quyền riêng tư là dòng chảy phù hợp, và quy tắc dòng chảy thuộc về cấu trúc. Hai con đường, một điểm đến. Con đường của chúng tôi xuất xưởng dưới dạng một định dạng truyền tải.",
+    "s6label": "Vì sao điều này quan trọng lúc này",
+    "s6h2": "Các tác tử AI khiến việc này trở nên cấp bách",
+    "s6p1": "Trợ lý AI đọc lịch, hộp thư và hồ sơ sức khỏe. Giới nghiên cứu giờ đây đo xem chúng có làm rò rỉ thông tin giữa các ngữ cảnh hay không, và chuẩn mà họ dùng để đo chính là tính toàn vẹn ngữ cảnh. Hầu hết các công trình cố dạy mô hình biết cẩn trọng. CIRIS đi con đường còn lại: làm cho dòng chảy không phù hợp trở nên không thể diễn đạt.",
+    "sourcesLabel": "Nguồn",
+    "sources": [
+      "Helen Nissenbaum, Privacy as Contextual Integrity, Washington Law Review (2004)",
+      "Barth, Datta, Mitchell, Nissenbaum, Privacy and Contextual Integrity: Framework and Applications (2006)",
+      "Microsoft Research, Reducing Privacy Leaks in AI: Two Approaches to Contextual Integrity (2025)",
+      "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
+    ],
+    "ctaPara": "Hãy tự mình đọc bộ máy này.",
+    "btnConstitution": "Đọc hiến pháp →",
+    "btnPrivacy": "Quyền riêng tư cấu trúc →",
+    "btnGrammar": "Ngữ pháp →",
+    "btnCewp": "Nền tảng →",
+    "crossTitle": "Đây chính là tính toàn vẹn ngữ cảnh",
+    "crossBody": "Khuôn khổ quyền riêng tư mà giới nghiên cứu dùng để đánh giá các hệ thống AI có một cái tên. CIRIS thực thi nó trong định dạng truyền tải.",
+    "crossCta": "Tính toàn vẹn ngữ cảnh là gì? →"
+  },
   "safetyArch": {
     "headlineLead": "An toàn và công nghệ,",
     "headlineAccent": "không thể tách rời",
