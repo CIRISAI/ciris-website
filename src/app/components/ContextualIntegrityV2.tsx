@@ -45,6 +45,10 @@ export default function ContextualIntegrityV2({ t, locale }: { t: Dictionary; lo
       kicker={c.kicker}
       title={c.title}
       lede={c.lede}
+      // INTERIM hero: g13 (prefixes compose, seal sets) borrowed from /grammar
+      // until the bespoke CI graphic (g18, briefed in the design project as
+      // BRIEF-contextual-integrity-graphics.md) lands.
+      graphicId="g13"
       backHref="/"
       backLabel={t.pathsCommon.back}
       mtBanner={locale !== DEFAULT_LOCALE ? t.common.mtBanner : undefined}
