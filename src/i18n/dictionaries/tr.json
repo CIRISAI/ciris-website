@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · epistemik ağ",
+    "whatH1pre": "Özel bir yapay zeka, ",
+    "whatH1accent": "telefonunuzda.",
+    "whatLede": "Arkasında büyük teknoloji şirketlerinin veri merkezi yok. Yaptıklarınızın çoğu cihazınızdan hiç çıkmıyor ve yaptığı her iddia imzalı, böylece ona güvenmek yerine kendiniz kontrol edebilirsiniz. Ücretsiz, açık kaynak, sizin.",
     "h1pre": "Aslında bunların hepsi ",
     "h1accent": "aynı sorun.",
     "lede": "Ailene emanet edemeyeceğin bir yapay zeka. Her şeyine sahip olan beş şirket. Hesap sorulabilecek kimse olmadan ilerleyen yapay zeka. Neyin gerçek olduğunu anlayamadığın bir internet.",
@@ -2694,7 +2697,7 @@
       {
         "k": "Tüketici Yapay Zekası",
         "h": "Aileme güvenebileceğim bir yapay zeka yok.",
-        "p": "Telefonunuzda çalışan özel bir yapay zeka. Arkasında veri merkezi yok. Yaptıklarınızın yüzde 65'i cihazı hiç terk etmiyor, yaptığı her iddia imzalı olduğu için kendiniz kontrol edebilirsiniz.",
+        "p": "Telefonunuzda çalışan özel bir yapay zeka. Arkasında büyük teknoloji şirketlerinin veri merkezi yok. Yaptıklarınızın yüzde 65'i cihazı hiç terk etmiyor, yaptığı her iddia imzalı olduğu için kendiniz kontrol edebilirsiniz.",
         "go": "Nasıl gizli kaldığını görün",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "Tüketici Yapay Zekası",
       "accent": "cyan",
       "metaTitle": "Telefonunuzda çalışan özel yapay zeka",
-      "metaDesc": "Size ait olan özel bir yapay zeka. Arkasında veri merkezi olmadan telefonunuzda çalışır. Yaptıklarınızın yaklaşık yüzde 65'i cihazı hiç terk etmez ve yaptığı her iddia imzalıdır.",
+      "metaDesc": "Size ait olan özel bir yapay zeka. Arkasında büyük teknoloji şirketlerinin veri merkezi olmadan telefonunuzda çalışır. Yaptıklarınızın yaklaşık yüzde 65'i cihazı hiç terk etmez ve yaptığı her iddia imzalıdır.",
       "h1": "Gerçekten sahip olabileceğiniz bir yapay zeka yok.",
       "steps": [
         "Bir yapay zekaya söylediğiniz her şey başkasının binasına düşer. Başkasının modelini eğitir ve başkasının kayıtlarında yaşar. Şartlar yarın değişebilir, siz farkına bile varmazsınız.",
-        "CIRIS telefonunuzda çalışır. Arkasında veri merkezi yok. Yaptıklarınızın yaklaşık yüzde 65'i cihazı hiç terk etmez, çıkan küçük kısım ise gönderilmeden önce şifrelenir.",
+        "CIRIS telefonunuzda çalışır. Arkasında büyük teknoloji şirketlerinin veri merkezi yok. Yaptıklarınızın yaklaşık yüzde 65'i cihazı hiç terk etmez, çıkan küçük kısım ise gönderilmeden önce şifrelenir.",
         "Gizlilik artık bir söz değil, verilerinizin fiziksel olarak nerede durduğunun bir gerçeği haline gelir. Sızdırılacak bir merkez yok. Yapay zekanın yaptığı her iddia imzalıdır, bu yüzden güvenmek yerine kontrol edebilirsiniz.",
         "Şimdi olan şeye dikkat edin. Gizli olabilmesinin nedeni, Büyük Teknoloji'ye hiç ihtiyaç duymamasıdır. Bir iddiayı kontrol etmenizi sağlayan imzalar, tüm webi dürüst tutan ve güçlü bir yapay zekayı hesap verebilir kılan şeyin ta kendisidir."
       ],

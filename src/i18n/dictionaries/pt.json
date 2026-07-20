@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · a rede epistêmica",
+    "whatH1pre": "Uma IA privada, ",
+    "whatH1accent": "no seu celular.",
+    "whatLede": "Sem data center das big techs por trás. A maior parte do que você faz nunca sai do aparelho, e cada afirmação que ela faz é assinada, para você poder verificar em vez de só confiar. Gratuita, de código aberto, sua.",
     "h1pre": "Resulta que estes são ",
     "h1accent": "todos o mesmo problema.",
     "lede": "Uma IA que você não pode confiar com sua família. Cinco empresas que controlam tudo o que você faz. IA avançando sem ninguém responsável por ela. Uma web onde você não consegue saber o que é verdade.",
@@ -2694,7 +2697,7 @@
       {
         "k": "Consumer AI",
         "h": "Não existe IA em que eu confiaria com a minha família.",
-        "p": "Uma IA privada que roda no seu celular. Sem data center por trás. 65% do que você faz nunca sai do aparelho, e cada afirmação que ela faz é assinada para que você possa verificar.",
+        "p": "Uma IA privada que roda no seu celular. Sem data center das big techs por trás. 65% do que você faz nunca sai do aparelho, e cada afirmação que ela faz é assinada para que você possa verificar.",
         "go": "Veja como ela mantém a privacidade",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "Consumer AI",
       "accent": "cyan",
       "metaTitle": "IA privada que roda no seu celular",
-      "metaDesc": "Uma IA privada que você possui. Roda no seu celular sem data center por trás. Cerca de 65% do que você faz nunca sai do aparelho, e cada afirmação que ela faz é assinada.",
+      "metaDesc": "Uma IA privada que você possui. Roda no seu celular sem data center das big techs por trás. Cerca de 65% do que você faz nunca sai do aparelho, e cada afirmação que ela faz é assinada.",
       "h1": "Não existe IA que você possa realmente possuir.",
       "steps": [
         "Cada palavra que você dá a uma IA vai parar no prédio de outra pessoa. Ela treina o modelo de outra pessoa e fica nos registros de outra pessoa. Os termos podem mudar amanhã, e você nem saberia.",
-        "CIRIS roda no seu celular. Não há data center por trás. Cerca de 65% do que você faz nunca sai do aparelho, e a pequena parte que sai é protegida antes de ir.",
+        "CIRIS roda no seu celular. Não há data center das big techs por trás. Cerca de 65% do que você faz nunca sai do aparelho, e a pequena parte que sai é protegida antes de ir.",
         "Privacidade deixa de ser uma promessa e vira um fato de onde seus dados ficam fisicamente. Não há centro para vazar. E cada afirmação que a IA faz é assinada, então você pode verificar em vez de confiar.",
         "Perceba o que acabou de acontecer. A razão pela qual ela pode ser privada é que não precisa de Big Tech. As mesmas assinaturas que permitem verificar uma afirmação são o que mantém a web inteira honesta, e o que mantém uma IA poderosa responsável."
       ],

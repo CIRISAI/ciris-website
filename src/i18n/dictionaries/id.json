@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · jaringan epistemik",
+    "whatH1pre": "AI pribadi, ",
+    "whatH1accent": "di ponselmu.",
+    "whatLede": "Tidak ada pusat data perusahaan teknologi besar di belakangnya. Sebagian besar dari apa yang kamu lakukan tidak pernah meninggalkan perangkatmu, dan setiap klaim yang dibuat sudah ditandatangani, jadi kamu bisa memeriksanya, bukan sekadar memercayainya. Gratis, sumber terbuka, milikmu.",
     "h1pre": "Ternyata ini semua adalah ",
     "h1accent": "masalah yang sama.",
     "lede": "AI yang tidak bisa kamu percaya untuk keluargamu. Lima perusahaan yang menguasai semua yang kamu lakukan. AI yang melaju tanpa ada yang bertanggung jawab. Internet yang membuat kamu tidak bisa membedakan mana yang benar.",
@@ -2694,7 +2697,7 @@
       {
         "k": "AI Konsumen",
         "h": "Tidak ada AI yang bisa kupercaya untuk keluargaku.",
-        "p": "AI pribadi yang berjalan di ponselmu. Tidak ada pusat data di belakangnya. 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan setiap klaim yang dibuat sudah ditandatangani agar bisa kamu periksa.",
+        "p": "AI pribadi yang berjalan di ponselmu. Tidak ada pusat data perusahaan teknologi besar di belakangnya. 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan setiap klaim yang dibuat sudah ditandatangani agar bisa kamu periksa.",
         "go": "Lihat bagaimana ia menjaga privasi",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "AI Konsumen",
       "accent": "cyan",
       "metaTitle": "AI pribadi yang berjalan di ponselmu",
-      "metaDesc": "AI pribadi yang kamu miliki. Berjalan di ponselmu tanpa pusat data di belakangnya. Sekitar 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan setiap klaim yang dibuat sudah ditandatangani.",
+      "metaDesc": "AI pribadi yang kamu miliki. Berjalan di ponselmu tanpa pusat data perusahaan teknologi besar di belakangnya. Sekitar 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan setiap klaim yang dibuat sudah ditandatangani.",
       "h1": "Tidak ada AI yang benar-benar bisa kamu miliki.",
       "steps": [
         "Setiap kata yang kamu berikan kepada AI tersimpan di gedung orang lain. Itu melatih model orang lain dan hidup di catatan orang lain. Syaratnya bisa berubah besok, dan kamu tidak akan tahu.",
-        "CIRIS berjalan di ponselmu. Tidak ada pusat data di belakangnya. Sekitar 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan bagian kecil yang keluar sudah disegel sebelum pergi.",
+        "CIRIS berjalan di ponselmu. Tidak ada pusat data perusahaan teknologi besar di belakangnya. Sekitar 65% dari apa yang kamu lakukan tidak pernah meninggalkan perangkat, dan bagian kecil yang keluar sudah disegel sebelum pergi.",
         "Privasi berhenti menjadi janji dan menjadi fakta tentang di mana datamu secara fisik berada. Tidak ada pusat yang bisa bocor. Dan setiap klaim yang dibuat AI sudah ditandatangani, jadi kamu bisa memeriksanya, bukan sekadar mempercayainya.",
         "Perhatikan apa yang baru saja terjadi. Alasan mengapa ini bisa privat adalah karena tidak butuh Big Tech sama sekali. Tanda tangan yang sama yang memungkinkan kamu memeriksa satu klaim adalah yang menjaga seluruh web tetap jujur, dan yang membuat AI yang kuat tetap bisa dipertanggungjawabkan."
       ],

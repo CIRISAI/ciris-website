@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · le web épistémique",
+    "whatH1pre": "Une IA privée, ",
+    "whatH1accent": "sur votre téléphone.",
+    "whatLede": "Pas de centre de données des géants de la tech derrière elle. La plupart de ce que vous faites ne quitte jamais votre appareil, et chaque affirmation qu'elle fait est signée, pour que vous puissiez la vérifier au lieu de lui faire confiance. Gratuite, open source, à vous.",
     "h1pre": "En fait, c'est ",
     "h1accent": "tous le même problème.",
     "lede": "Une IA que vous ne pouvez pas confier à votre famille. Cinq entreprises qui contrôlent tout ce que vous faites. Une IA qui échappe à toute responsabilité. Un web où vous ne savez plus ce qui est vrai.",
@@ -2694,7 +2697,7 @@
       {
         "k": "IA grand public",
         "h": "Il n'y a pas d'IA à qui je ferais confiance pour ma famille.",
-        "p": "Une IA privée qui tourne sur votre téléphone. Pas de centre de données derrière elle. 65% de ce que vous faites ne quitte jamais l'appareil, et chaque affirmation qu'elle fait est signée pour que vous puissiez la vérifier.",
+        "p": "Une IA privée qui tourne sur votre téléphone. Pas de centre de données des géants de la tech derrière elle. 65% de ce que vous faites ne quitte jamais l'appareil, et chaque affirmation qu'elle fait est signée pour que vous puissiez la vérifier.",
         "go": "Voir comment elle reste privée",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "IA grand public",
       "accent": "cyan",
       "metaTitle": "Une IA privée qui tourne sur votre téléphone",
-      "metaDesc": "Une IA privée qui vous appartient. Elle tourne sur votre téléphone sans centre de données derrière elle. Environ 65% de ce que vous faites ne quitte jamais l'appareil, et chaque affirmation qu'elle fait est signée.",
+      "metaDesc": "Une IA privée qui vous appartient. Elle tourne sur votre téléphone sans centre de données des géants de la tech derrière elle. Environ 65% de ce que vous faites ne quitte jamais l'appareil, et chaque affirmation qu'elle fait est signée.",
       "h1": "Il n'existe pas d'IA que vous pouvez vraiment posséder.",
       "steps": [
         "Chaque mot que vous donnez à une IA atterrit dans le bâtiment de quelqu'un d'autre. Il entraîne le modèle de quelqu'un d'autre et vit dans les journaux de quelqu'un d'autre. Les conditions peuvent changer demain, et vous ne le sauriez même pas.",
-        "CIRIS tourne sur votre téléphone. Il n'y a pas de centre de données derrière lui. Environ 65% de ce que vous faites ne quitte jamais l'appareil, et la petite partie qui le quitte est scellée avant de partir.",
+        "CIRIS tourne sur votre téléphone. Il n'y a pas de centre de données des géants de la tech derrière lui. Environ 65% de ce que vous faites ne quitte jamais l'appareil, et la petite partie qui le quitte est scellée avant de partir.",
         "Privé cesse d'être une promesse et devient un fait, celui de l'endroit où vos données se trouvent physiquement. Il n'y a pas de centre qui peut fuiter. Et chaque affirmation que fait l'IA est signée, pour que vous puissiez la vérifier plutôt que de lui faire confiance.",
         "Remarquez ce qui vient de se passer. Si elle peut être privée, c'est parce qu'elle n'a pas du tout besoin des grandes entreprises tech. Les mêmes signatures qui vous permettent de vérifier une affirmation sont ce qui garde l'ensemble du web honnête, et ce qui rend une IA puissante responsable de ses actes."
       ],

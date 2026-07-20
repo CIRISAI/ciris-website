@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · mtandao wa maarifa",
+    "whatH1pre": "AI ya kibinafsi, ",
+    "whatH1accent": "kwenye simu yako.",
+    "whatLede": "Hakuna kituo cha data cha kampuni kubwa ya teknolojia nyuma yake. Sehemu kubwa ya unachofanya haiondoki kamwe kwenye kifaa chako, na kila dai inayotoa imesainiwa, hivyo unaweza kuikagua badala ya kuiamini tu. Ni bure, ni chanzo wazi, ni yako.",
     "h1pre": "Inabainika kwamba hizi ni ",
     "h1accent": "tatizo moja tu.",
     "lede": "AI ambayo huwezi kumwamini na familia yako. Makampuni matano yanayomiliki kila unachofanya. AI inayozidi kasi ya yeyote anayeweza kuisimamia. Mtandao ambapo huwezi kujua ni nini kweli.",
@@ -2694,7 +2697,7 @@
       {
         "k": "Consumer AI",
         "h": "Hakuna AI ningeyemwamini na familia yangu.",
-        "p": "AI ya kibinafsi inayofanya kazi kwenye simu yako. Hakuna kituo cha data nyuma yake. Asilimia 65 ya unachofanya haiacha kifaa, na kila dai inayotoa imesainiwa ili uweze kuiangalia.",
+        "p": "AI ya kibinafsi inayofanya kazi kwenye simu yako. Hakuna kituo cha data cha kampuni kubwa ya teknolojia nyuma yake. Asilimia 65 ya unachofanya haiacha kifaa, na kila dai inayotoa imesainiwa ili uweze kuiangalia.",
         "go": "Angalia jinsi inavyobaki ya siri",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "Consumer AI",
       "accent": "cyan",
       "metaTitle": "AI ya kibinafsi inayofanya kazi kwenye simu yako",
-      "metaDesc": "AI ya kibinafsi unayomiliki. Inafanya kazi kwenye simu yako bila kituo cha data nyuma yake. Karibu asilimia 65 ya unachofanya haiacha kifaa, na kila dai inayotoa imesainiwa.",
+      "metaDesc": "AI ya kibinafsi unayomiliki. Inafanya kazi kwenye simu yako bila kituo cha data cha kampuni kubwa ya teknolojia nyuma yake. Karibu asilimia 65 ya unachofanya haiacha kifaa, na kila dai inayotoa imesainiwa.",
       "h1": "Hakuna AI unayoweza kumiliki kweli.",
       "steps": [
         "Kila neno unalompa AI linafika kwenye jengo la mtu mwingine. Linafunza mfano wa mtu mwingine na linaishi kwenye kumbukumbu za mtu mwingine. Masharti yanaweza kubadilika kesho, na wewe hata husingejua.",
-        "CIRIS inafanya kazi kwenye simu yako. Hakuna kituo cha data nyuma yake. Karibu asilimia 65 ya unachofanya haiacha kifaa, na sehemu ndogo inayotoka imefungwa kabla ya kwenda.",
+        "CIRIS inafanya kazi kwenye simu yako. Hakuna kituo cha data cha kampuni kubwa ya teknolojia nyuma yake. Karibu asilimia 65 ya unachofanya haiacha kifaa, na sehemu ndogo inayotoka imefungwa kabla ya kwenda.",
         "Faragha inaacha kuwa ahadi na inakuwa ukweli wa mahali data yako ipo kimwili. Hakuna kitovu cha kuvuja. Na kila dai AI inayotoa imesainiwa, ili uweze kuiangalia badala ya kuiamini tu.",
         "Angalia kilichotokea. Sababu inaweza kuwa ya siri ni kwamba haihitaji Big Tech kabisa. Saini hizo hizo zinazokuruhusu kuangalia dai moja ndizo zinazolinda mtandao wote kuwa wa uaminifu, na ndizo zinazoshika AI yenye nguvu kuwa na uwajibikaji."
       ],

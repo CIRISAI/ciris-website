@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · mạng tri thức",
+    "whatH1pre": "Một AI riêng tư, ",
+    "whatH1accent": "trên điện thoại của bạn.",
+    "whatLede": "Không có trung tâm dữ liệu của tập đoàn công nghệ lớn nào đằng sau. Phần lớn những gì bạn làm không bao giờ rời khỏi thiết bị của bạn, và mọi thông tin nó đưa ra đều được ký số, nên bạn có thể kiểm tra thay vì chỉ tin suông. Miễn phí, mã nguồn mở, và là của bạn.",
     "h1pre": "Hóa ra đây là ",
     "h1accent": "cùng một vấn đề.",
     "lede": "Một AI bạn không dám tin tưởng với gia đình. Năm công ty nắm mọi thứ bạn làm. AI phát triển nhanh hơn bất kỳ ai có thể chịu trách nhiệm. Một mạng internet nơi bạn không biết đâu là sự thật.",
@@ -2694,7 +2697,7 @@
       {
         "k": "AI Tiêu Dùng",
         "h": "Không có AI nào tôi dám tin cho gia đình mình.",
-        "p": "Một AI riêng tư chạy trên điện thoại của bạn. Không có trung tâm dữ liệu đằng sau. 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và mọi thông tin nó đưa ra đều được ký số để bạn có thể kiểm tra.",
+        "p": "Một AI riêng tư chạy trên điện thoại của bạn. Không có trung tâm dữ liệu của tập đoàn công nghệ lớn nào đằng sau. 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và mọi thông tin nó đưa ra đều được ký số để bạn có thể kiểm tra.",
         "go": "Xem cách nó bảo mật riêng tư",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "AI Tiêu Dùng",
       "accent": "cyan",
       "metaTitle": "AI riêng tư chạy trên điện thoại của bạn",
-      "metaDesc": "Một AI riêng tư bạn sở hữu. Nó chạy trên điện thoại không cần trung tâm dữ liệu. Khoảng 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và mọi thông tin nó đưa ra đều được ký số.",
+      "metaDesc": "Một AI riêng tư bạn sở hữu. Nó chạy trên điện thoại không cần trung tâm dữ liệu của các tập đoàn công nghệ lớn. Khoảng 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và mọi thông tin nó đưa ra đều được ký số.",
       "h1": "Không có AI nào bạn thực sự có thể sở hữu.",
       "steps": [
         "Mọi từ bạn nói với AI đều đến trong tòa nhà của người khác. Nó huấn luyện mô hình của người khác và nằm trong nhật ký của người khác. Điều khoản có thể thay đổi ngày mai, và bạn sẽ không hay biết.",
-        "CIRIS chạy trên điện thoại của bạn. Không có trung tâm dữ liệu đằng sau. Khoảng 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và phần nhỏ có đi ra ngoài thì được mã hóa trước khi gửi đi.",
+        "CIRIS chạy trên điện thoại của bạn. Không có trung tâm dữ liệu của tập đoàn công nghệ lớn nào đằng sau. Khoảng 65% những gì bạn làm không bao giờ rời khỏi thiết bị, và phần nhỏ có đi ra ngoài thì được mã hóa trước khi gửi đi.",
         "Riêng tư không còn là lời hứa mà trở thành sự thật về nơi dữ liệu của bạn thực sự nằm. Không có trung tâm nào để rò rỉ. Và mọi thông tin AI đưa ra đều được ký số, để bạn có thể kiểm tra thay vì phải tin.",
         "Hãy để ý điều vừa xảy ra. Lý do nó có thể riêng tư là vì nó không cần Big Tech chút nào. Những chữ ký giúp bạn kiểm tra một thông tin cũng chính là thứ giữ cho toàn bộ web trung thực, và giữ cho một AI mạnh mẽ có trách nhiệm."
       ],

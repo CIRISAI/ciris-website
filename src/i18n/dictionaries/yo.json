@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · ayelujara ti o ni idaniloju",
+    "whatH1pre": "AI ikọkọ, ",
+    "whatH1accent": "lori foonu rẹ.",
+    "whatLede": "Ko si ile-iṣẹ data ti ile-iṣẹ imọ-ẹrọ nla lẹhin rẹ. Pupọ ninu ohun ti o ṣe ko lọ kuro ninu ẹrọ rẹ rara, gbogbo ẹtọ ti o ṣe ni a fọwọsi, nitorina o le ṣayẹwo rẹ dipo ki o kan gbẹkẹle rẹ. Ọfẹ ni, orisun ṣiṣi ni, tirẹ ni.",
     "h1pre": "O wa jade pe gbogbo iwonyi jẹ ",
     "h1accent": "iṣoro kan naa.",
     "lede": "AI ti o ko le gbẹkẹle fun ẹbi rẹ. Awọn ile-iṣẹ marun ti o ni ohun gbogbo ti o ṣe. AI ti o sare kọja ẹnikẹni ti o le dahun fun rẹ. Oju opo wẹẹbu ti o ko le mọ ohun ti o jẹ otitọ.",
@@ -2694,7 +2697,7 @@
       {
         "k": "Consumer AI",
         "h": "Ko si AI ti mo le gbẹkẹle fun ẹbi mi.",
-        "p": "AI ikọkọ ti o n ṣiṣẹ lori foonu rẹ. Ko si ile-iṣẹ data lẹhin rẹ. Ida 65% ti ohun ti o ṣe ko lọ kuro ninu ẹrọ, ati gbogbo ẹtọ ti o ṣe ni a fọwọsi ki o le ṣayẹwo rẹ.",
+        "p": "AI ikọkọ ti o n ṣiṣẹ lori foonu rẹ. Ko si ile-iṣẹ data ti ile-iṣẹ imọ-ẹrọ nla lẹhin rẹ. Ida 65% ti ohun ti o ṣe ko lọ kuro ninu ẹrọ, ati gbogbo ẹtọ ti o ṣe ni a fọwọsi ki o le ṣayẹwo rẹ.",
         "go": "Wo bi o ṣe wa ni ikọkọ",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "Consumer AI",
       "accent": "cyan",
       "metaTitle": "AI ikọkọ ti o n ṣiṣẹ lori foonu rẹ",
-      "metaDesc": "AI ikọkọ ti o jẹ tirẹ. O n ṣiṣẹ lori foonu rẹ laisi ile-iṣẹ data lẹhin rẹ. Nkan bii ida 65% ti ohun ti o ṣe ko lọ kuro ninu ẹrọ, ati gbogbo ẹtọ ti o ṣe ni a fọwọsi.",
+      "metaDesc": "AI ikọkọ ti o jẹ tirẹ. O n ṣiṣẹ lori foonu rẹ laisi ile-iṣẹ data ti ile-iṣẹ imọ-ẹrọ nla lẹhin rẹ. Nkan bii ida 65% ti ohun ti o ṣe ko lọ kuro ninu ẹrọ, ati gbogbo ẹtọ ti o ṣe ni a fọwọsi.",
       "h1": "Ko si AI ti o le jẹ tirẹ gangan.",
       "steps": [
         "Gbogbo ọrọ ti o fun AI de ile ẹlomiran. O kọ awoṣe ẹlomiran, o si wa ninu àkọsílẹ ẹlomiran. Awọn ofin le yipada ọla, o ko si mọ.",
-        "CIRIS n ṣiṣẹ lori foonu rẹ. Ko si ile-iṣẹ data lẹhin rẹ. Nkan bii ida 65% ti ohun ti o ṣe ko lọ kuro ninu ẹrọ, ati apakan kekere ti o jade ni a tii ṣaaju ki o to lọ.",
+        "CIRIS n ṣiṣẹ lori foonu rẹ. Ko si ile-iṣẹ data ti ile-iṣẹ imọ-ẹrọ nla lẹhin rẹ. Nkan bii ida 65% ti ohun ti o ṣe ko lọ kuro ninu ẹrọ, ati apakan kekere ti o jade ni a tii ṣaaju ki o to lọ.",
         "Ikọkọ dẹkun jijẹ ileri o di otitọ ti ibi ti data rẹ wa ni ti ara. Ko si ile-iṣẹ lati jo. Ati gbogbo ẹtọ ti AI sọ ni a fọwọsi, nitorinaa o le ṣayẹwo dipo lati gbẹkẹle.",
         "Ṣakiyesi ohun ti o ṣẹlẹ. Idi ti o le wa ni ikọkọ ni pe ko nilo Big Tech rara. Awọn ibuwọlu kanna ti o jẹ ki o ṣayẹwo ẹtọ kan ni ohun ti o jẹ ki ayelujara odidi wa ni otitọ, ati ohun ti o jẹ ki AI ti o lagbara jẹ iduro."
       ],

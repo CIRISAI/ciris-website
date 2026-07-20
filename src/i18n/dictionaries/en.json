@@ -2474,6 +2474,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · the epistemic web",
+    "whatH1pre": "A private AI, ",
+    "whatH1accent": "on your phone.",
+    "whatLede": "No Big Tech data center behind it. Most of what you do never leaves your device, and every claim it makes is signed, so you can check it instead of trusting it. Free, open source, yours.",
     "h1pre": "It turns out these are ",
     "h1accent": "all the same problem.",
     "lede": "An AI you cannot trust with your family. Five firms that own everything you do. AI outrunning anyone accountable for it. A web where you cannot tell what is true.",
@@ -2524,7 +2527,7 @@
       {
         "k": "Consumer AI",
         "h": "There is no AI I would trust with my family.",
-        "p": "A private AI that runs on your phone. No data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
+        "p": "A private AI that runs on your phone. No Big Tech data center behind it. 65% of what you do never leaves the device, and every claim it makes is signed so you can check it.",
         "go": "See how it stays private",
         "accent": "cyan",
         "heavy": true,
@@ -2593,11 +2596,11 @@
       "kicker": "Consumer AI",
       "accent": "cyan",
       "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
+      "metaDesc": "A private AI you own. It runs on your phone with no Big Tech data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
       "h1": "There is no AI you can actually own.",
       "steps": [
         "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
-        "CIRIS runs on your phone. There is no data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
+        "CIRIS runs on your phone. There is no Big Tech data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
         "Private stops being a promise and becomes a fact of where your data physically sits. There is no center to leak. And every claim the AI makes is signed, so you can check it instead of trusting it.",
         "Notice what just happened. The reason it can be private is that it does not need Big Tech at all. The same signatures that let you check one claim are what keep the whole web honest, and what keep a powerful AI accountable."
       ],

@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · das epistemische Web",
+    "whatH1pre": "Eine private KI, ",
+    "whatH1accent": "auf deinem Handy.",
+    "whatLede": "Kein Big-Tech-Rechenzentrum dahinter. Das meiste, was du tust, verlässt dein Gerät nie, und jede Aussage, die sie macht, ist signiert, damit du sie prüfen kannst, statt ihr einfach zu vertrauen. Kostenlos, Open Source, deine.",
     "h1pre": "Es stellt sich heraus, das ist ",
     "h1accent": "alles dasselbe Problem.",
     "lede": "Eine KI, der du deine Familie nicht anvertrauen kannst. Fünf Firmen, die alles besitzen, was du tust. Eine KI, die schneller wird als jede Kontrolle. Ein Netz, in dem du nicht mehr weißt, was stimmt.",
@@ -2694,7 +2697,7 @@
       {
         "k": "Consumer AI",
         "h": "Es gibt keine KI, der ich meine Familie anvertrauen würde.",
-        "p": "Eine private KI, die auf deinem Handy läuft. Kein Rechenzentrum dahinter. 65% von dem, was du tust, verlässt das Gerät nie, und jede Aussage, die sie macht, ist signiert, damit du sie prüfen kannst.",
+        "p": "Eine private KI, die auf deinem Handy läuft. Kein Big-Tech-Rechenzentrum dahinter. 65% von dem, was du tust, verlässt das Gerät nie, und jede Aussage, die sie macht, ist signiert, damit du sie prüfen kannst.",
         "go": "So bleibt es privat",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "Consumer AI",
       "accent": "cyan",
       "metaTitle": "Private KI, die auf deinem Handy läuft",
-      "metaDesc": "Eine private KI, die dir gehört. Sie läuft auf deinem Handy ohne Rechenzentrum dahinter. Etwa 65% von dem, was du tust, verlässt das Gerät nie, und jede Aussage ist signiert.",
+      "metaDesc": "Eine private KI, die dir gehört. Sie läuft auf deinem Handy ohne Big-Tech-Rechenzentrum dahinter. Etwa 65% von dem, was du tust, verlässt das Gerät nie, und jede Aussage ist signiert.",
       "h1": "Es gibt keine KI, die dir wirklich gehört.",
       "steps": [
         "Jedes Wort, das du einer KI gibst, landet in einem Gebäude, das jemand anderem gehört. Es trainiert ein fremdes Modell und lebt in fremden Protokollen. Die Bedingungen können sich morgen ändern, und du würdest es nicht einmal merken.",
-        "CIRIS läuft auf deinem Handy. Kein Rechenzentrum dahinter. Etwa 65% von dem, was du tust, verlässt das Gerät nie, und der kleine Teil, der es tut, wird versiegelt, bevor er geht.",
+        "CIRIS läuft auf deinem Handy. Kein Big-Tech-Rechenzentrum dahinter. Etwa 65% von dem, was du tust, verlässt das Gerät nie, und der kleine Teil, der es tut, wird versiegelt, bevor er geht.",
         "Privatsphäre ist dann kein Versprechen mehr, sondern eine Tatsache darüber, wo deine Daten physisch liegen. Es gibt keine Mitte, die lecken kann. Und jede Aussage, die die KI macht, ist signiert, damit du sie prüfen kannst, statt ihr zu vertrauen.",
         "Beachte, was gerade passiert ist. Der Grund, warum es privat sein kann, ist, dass es Big Tech überhaupt nicht braucht. Dieselben Signaturen, mit denen du eine Aussage prüfst, halten das ganze Web ehrlich und eine mächtige KI verantwortlich."
       ],

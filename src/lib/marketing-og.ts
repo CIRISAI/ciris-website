@@ -143,119 +143,119 @@ export const MARKETING_OG: Record<
   "/": {
     "en": {
       "title": "CIRIS: An AI You Can Actually Own",
-      "description": "One app. No data centers. Every claim it makes, signed. Open-source ethical AI you can run on your phone today — and check."
+      "description": "One app. No Big Tech data centers. Every claim it makes, signed. Open-source ethical AI you can run on your phone today — and check."
     },
     "es": {
       "title": "CIRIS: Una IA que puedes tener de verdad",
-      "description": "Una sola app. Sin centros de datos. Cada afirmación que hace, firmada. IA ética de código abierto que puedes ejecutar en tu teléfono hoy mismo — y verificar."
+      "description": "Una sola app. Sin centros de datos de las grandes tecnológicas. Cada afirmación que hace, firmada. IA ética de código abierto que puedes ejecutar en tu teléfono hoy mismo y verificar."
     },
     "am": {
       "title": "CIRIS፡ በእርስዎ ቁጥጥር ስር ያለ AI",
-      "description": "አንድ መተግበሪያ። ምንም ማዕከላዊ ዳታ ሴንተር የለም። ያቀረበው ሁሉ ፊርማ አለበት። ዛሬ በስልክዎ ላይ ሊሰሩ የሚችሉ፣ ሊፈትሹ የሚችሉ ክፍት ምንጭ윤리 AI።"
+      "description": "አንድ መተግበሪያ። ምንም የትልቅ ቴክ ኩባንያ ዳታ ሴንተር የለም። ያቀረበው ሁሉ ፊርማ አለበት። ዛሬ በስልክዎ ላይ ሊሰሩ የሚችሉ፣ ሊፈትሹ የሚችሉ ክፍት ምንጭ ሥነ ምግባራዊ AI።"
     },
     "ha": {
       "title": "CIRIS: AI da Ka Mallaka Gaskiya",
-      "description": "App guda ɗaya. Babu cibiyoyin bayanai. Duk abin da ya faɗa, an rattaba hannu. AI na ɗa'a mai buɗaɗɗen kode da za ka yi amfani da shi a wayar ka yau — kuma ka bincika."
+      "description": "App guda ɗaya. Babu cibiyoyin bayanai na manyan kamfanonin fasaha. Duk abin da ya faɗa, an rattaba hannu. AI na ɗa'a mai buɗaɗɗen kode da za ka yi amfani da shi a wayar ka yau, kuma ka bincika."
     },
     "yo": {
       "title": "CIRIS: AI Tí O Le Jẹ Tirẹ Gaan",
-      "description": "Ìbójú kan. Kò sí ilé ìtọ́jú data. Gbogbo ohun tó sọ, a fọwọ́ sí. AI ìwà rere, orisun-ìlà-açèsà tí o lè ṣiṣẹ́ lórí fóònù rẹ lónìí — àti ṣàyẹ̀wò."
+      "description": "Ìbójú kan. Kò sí ilé ìtọ́jú data ti àwọn ilé-iṣẹ́ ìmọ̀-ẹ̀rọ ńlá. Gbogbo ohun tó sọ, a fọwọ́ sí. AI ìwà rere, orisun ṣiṣi tí o lè ṣiṣẹ́ lórí fóònù rẹ lónìí, àti ṣàyẹ̀wò."
     },
     "sw": {
       "title": "CIRIS: AI Unayoweza Kumiliki Kweli",
-      "description": "Programu moja. Hakuna vituo vya data. Kila dai linasainiwa. AI ya kimaadili ya chanzo-wazi unayoweza kuendesha kwenye simu yako leo — na kuikagua."
+      "description": "Programu moja. Hakuna vituo vya data vya makampuni makubwa ya teknolojia. Kila dai linasainiwa. AI ya kimaadili ya chanzo-wazi unayoweza kuendesha kwenye simu yako leo, na kuikagua."
     },
     "ta": {
       "title": "CIRIS: உண்மையிலேயே உங்களுடையதாக இருக்கும் AI",
-      "description": "ஒரே ஒரு செயலி. டேட்டா சென்டர் இல்லை. ஒவ்வொரு முடிவும் கையொப்பமிடப்பட்டது. இன்றே உங்கள் தொலைபேசியில் இயங்கும் திறந்த மூல நெறிமுறை AI — சரிபார்க்கவும் செய்யலாம்."
+      "description": "ஒரே ஒரு செயலி. பெரிய டெக் நிறுவனங்களின் டேட்டா சென்டர் இல்லை. ஒவ்வொரு முடிவும் கையொப்பமிடப்பட்டது. இன்றே உங்கள் தொலைபேசியில் இயங்கும் திறந்த மூல நெறிமுறை AI, சரிபார்க்கவும் செய்யலாம்."
     },
     "te": {
       "title": "CIRIS: మీకు నిజంగా సొంతమయ్యే AI",
-      "description": "ఒక్క యాప్. డేటా సెంటర్లు అక్కర్లేదు. ప్రతి నిర్ణయం సంతకం చేయబడింది. మీ ఫోన్‌లో నేడే రన్ చేయగలిగే, తనిఖీ చేయగలిగే ఓపెన్-సోర్స్ నైతిక AI."
+      "description": "ఒక్క యాప్. పెద్ద టెక్ కంపెనీల డేటా సెంటర్లు అక్కర్లేదు. ప్రతి నిర్ణయం సంతకం చేయబడింది. మీ ఫోన్‌లో నేడే రన్ చేయగలిగే, తనిఖీ చేయగలిగే ఓపెన్-సోర్స్ నైతిక AI."
     },
     "mr": {
       "title": "CIRIS: एक AI जो खरोखर तुमचा असतो",
-      "description": "एकच अ‍ॅप. कोणतेही डेटा सेंटर नाही. प्रत्येक दाव्यावर सही केलेली. आज तुमच्या फोनवर चालवता येणारे ओपन-सोर्स नैतिक AI — आणि तपासता येणारे."
+      "description": "एकच अ‍ॅप. मोठ्या टेक कंपन्यांचे कोणतेही डेटा सेंटर नाही. प्रत्येक दाव्यावर सही केलेली. आज तुमच्या फोनवर चालवता येणारे ओपन-सोर्स नैतिक AI, आणि तपासता येणारे."
     },
     "pa": {
       "title": "CIRIS: ਇੱਕ AI ਜੋ ਸੱਚਮੁੱਚ ਤੁਹਾਡਾ ਆਪਣਾ ਹੈ",
-      "description": "ਇੱਕ ਐਪ। ਕੋਈ ਡੇਟਾ ਸੈਂਟਰ ਨਹੀਂ। ਹਰ ਦਾਅਵਾ ਦਸਤਖ਼ਤ ਕੀਤਾ। ਓਪਨ-ਸੋਰਸ ਨੈਤਿਕ AI ਜੋ ਤੁਸੀਂ ਅੱਜ ਆਪਣੇ ਫ਼ੋਨ 'ਤੇ ਚਲਾ ਸਕਦੇ ਹੋ — ਅਤੇ ਜਾਂਚ ਕਰ ਸਕਦੇ ਹੋ।"
+      "description": "ਇੱਕ ਐਪ। ਵੱਡੀਆਂ ਟੈਕ ਕੰਪਨੀਆਂ ਦਾ ਕੋਈ ਡੇਟਾ ਸੈਂਟਰ ਨਹੀਂ। ਹਰ ਦਾਅਵਾ ਦਸਤਖ਼ਤ ਕੀਤਾ। ਓਪਨ-ਸੋਰਸ ਨੈਤਿਕ AI ਜੋ ਤੁਸੀਂ ਅੱਜ ਆਪਣੇ ਫ਼ੋਨ 'ਤੇ ਚਲਾ ਸਕਦੇ ਹੋ, ਅਤੇ ਜਾਂਚ ਕਰ ਸਕਦੇ ਹੋ।"
     },
     "my": {
       "title": "CIRIS: သင်တကယ်ပိုင်ဆိုင်နိုင်သော AI",
-      "description": "တစ်ခုတည်းသောအက်ပ်။ ဒေတာစင်တာမလိုပါ။ ပြောသမျှ လက်မှတ်ထိုးအတည်ပြု။ ဖတ်စစ်နိုင်သော open-source윤리 AI — ယနေ့ပင် ဖုန်းပေါ်တင်သုံးပါ။"
+      "description": "တစ်ခုတည်းသောအက်ပ်။ နည်းပညာကုမ္ပဏီကြီးများ၏ ဒေတာစင်တာမလိုပါ။ ပြောသမျှ လက်မှတ်ထိုးအတည်ပြု။ ဖတ်စစ်နိုင်သော open-source ကျင့်ဝတ်ရှိ AI၊ ယနေ့ပင် ဖုန်းပေါ်တင်သုံးပါ။"
     },
     "bn": {
       "title": "CIRIS: যে AI সত্যিই আপনার নিজের",
-      "description": "একটি অ্যাপ। কোনো ডেটা সেন্টার নেই। প্রতিটি দাবি স্বাক্ষরিত। আজই আপনার ফোনে চালান — এবং যাচাই করুন।"
+      "description": "একটি অ্যাপ। বড় টেক কোম্পানির কোনো ডেটা সেন্টার নেই। প্রতিটি দাবি স্বাক্ষরিত। আজই আপনার ফোনে চালান, এবং যাচাই করুন।"
     },
     "hi": {
       "title": "CIRIS: एक AI जो सच में आपका अपना है",
-      "description": "एक ऐप। कोई डेटा सेंटर नहीं। हर दावे पर हस्ताक्षर। ओपन-सोर्स नैतिक AI जिसे आज अपने फोन पर चला सकते हैं — और जांच भी सकते हैं।"
+      "description": "एक ऐप। बड़ी टेक कंपनियों का कोई डेटा सेंटर नहीं। हर दावे पर हस्ताक्षर। ओपन-सोर्स नैतिक AI जिसे आज अपने फोन पर चला सकते हैं, और जांच भी सकते हैं।"
     },
     "vi": {
       "title": "CIRIS: AI Thực Sự Thuộc Về Bạn",
-      "description": "Một ứng dụng. Không cần trung tâm dữ liệu. Mọi tuyên bố đều được ký số. AI đạo đức mã nguồn mở chạy ngay trên điện thoại của bạn — và có thể kiểm chứng."
+      "description": "Một ứng dụng. Không cần trung tâm dữ liệu của các tập đoàn công nghệ lớn. Mọi tuyên bố đều được ký số. AI đạo đức mã nguồn mở chạy ngay trên điện thoại của bạn, và có thể kiểm chứng."
     },
     "id": {
       "title": "CIRIS: AI yang Benar-Benar Bisa Anda Miliki",
-      "description": "Satu aplikasi. Tanpa pusat data. Setiap klaim yang dibuat, ditandatangani. AI etis open-source yang bisa Anda jalankan di ponsel hari ini — dan bisa Anda periksa."
+      "description": "Satu aplikasi. Tanpa pusat data perusahaan teknologi besar. Setiap klaim yang dibuat, ditandatangani. AI etis open-source yang bisa Anda jalankan di ponsel hari ini, dan bisa Anda periksa."
     },
     "th": {
       "title": "CIRIS: AI ที่คุณเป็นเจ้าของได้จริง",
-      "description": "หนึ่งแอป ไม่มีดาต้าเซ็นเตอร์ ทุกคำที่มันพูด มีลายเซ็นรับรอง AI โอเพนซอร์สที่มีจริยธรรม รันบนมือถือวันนี้ได้เลย และตรวจสอบได้"
+      "description": "หนึ่งแอป ไม่มีดาต้าเซ็นเตอร์ของบริษัทเทคยักษ์ใหญ่ ทุกคำที่มันพูด มีลายเซ็นรับรอง AI โอเพนซอร์สที่มีจริยธรรม รันบนมือถือวันนี้ได้เลย และตรวจสอบได้"
     },
     "tr": {
       "title": "CIRIS: Gerçekten Sahip Olabileceğiniz Bir Yapay Zeka",
-      "description": "Tek uygulama. Veri merkezi yok. Her iddia imzalı. Bugün telefonunuzda çalıştırabileceğiniz, denetlenebilir açık kaynaklı etik yapay zeka."
+      "description": "Tek uygulama. Büyük teknoloji şirketlerinin veri merkezi yok. Her iddia imzalı. Bugün telefonunuzda çalıştırabileceğiniz, denetlenebilir açık kaynaklı etik yapay zeka."
     },
     "uk": {
       "title": "CIRIS: ШІ, який справді належить вам",
-      "description": "Один застосунок. Без дата-центрів. Кожне твердження — підписане. Відкритий етичний ШІ, який ви можете запустити на телефоні вже сьогодні — і перевірити."
+      "description": "Один застосунок. Без дата-центрів великих технологічних компаній. Кожне твердження підписане. Відкритий етичний ШІ, який ви можете запустити на телефоні вже сьогодні і перевірити."
     },
     "ru": {
       "title": "CIRIS: ИИ, который принадлежит вам",
-      "description": "Одно приложение. Никаких дата-центров. Каждое решение подписано криптографически. Этический ИИ с открытым кодом — запустите на телефоне прямо сейчас и проверьте."
+      "description": "Одно приложение. Никаких дата-центров техногигантов. Каждое решение подписано криптографически. Этический ИИ с открытым кодом. Запустите на телефоне прямо сейчас и проверьте."
     },
     "ko": {
       "title": "CIRIS: 진정으로 소유할 수 있는 AI",
-      "description": "앱 하나. 데이터 센터 없음. 모든 발언에 서명. 오늘 당장 스마트폰에서 실행하고 검증할 수 있는 오픈소스 윤리 AI."
+      "description": "앱 하나. 빅테크 데이터 센터 없음. 모든 발언에 서명. 오늘 당장 스마트폰에서 실행하고 검증할 수 있는 오픈소스 윤리 AI."
     },
     "ja": {
       "title": "CIRIS: 本当に自分のものにできるAI",
-      "description": "アプリひとつ。データセンター不要。すべての発言に署名済み。今すぐスマートフォンで動かせる、オープンソースの倫理的AIです。"
+      "description": "アプリひとつ。ビッグテックのデータセンター不要。すべての発言に署名済み。今すぐスマートフォンで動かせる、オープンソースの倫理的AIです。"
     },
     "zh": {
       "title": "CIRIS：真正属于你的 AI",
-      "description": "一个应用，无需数据中心，每条声明均有签名。开源伦理 AI，今天就能在手机上运行并自行验证。"
+      "description": "一个应用，无需科技巨头的数据中心，每条声明均有签名。开源伦理 AI，今天就能在手机上运行并自行验证。"
     },
     "de": {
       "title": "CIRIS: Eine KI, die Ihnen wirklich gehört",
-      "description": "Eine App. Keine Rechenzentren. Jede Aussage signiert. Ethische KI als Open Source – heute auf Ihrem Handy nutzbar und nachprüfbar."
+      "description": "Eine App. Keine Big-Tech-Rechenzentren. Jede Aussage signiert. Ethische KI als Open Source – heute auf Ihrem Handy nutzbar und nachprüfbar."
     },
     "fr": {
       "title": "CIRIS : une IA qui vous appartient vraiment",
-      "description": "Une seule app. Aucun data center. Chaque affirmation, signée. Une IA éthique open-source à lancer sur votre téléphone aujourd'hui — et à vérifier."
+      "description": "Une seule app. Aucun data center des géants de la tech. Chaque affirmation, signée. Une IA éthique open-source à lancer sur votre téléphone aujourd'hui et à vérifier."
     },
     "it": {
       "title": "CIRIS: Un'IA che puoi davvero possedere",
-      "description": "Un'app. Nessun data center. Ogni affermazione che fa, firmata. IA etica open-source che puoi eseguire sul tuo telefono oggi — e verificare."
+      "description": "Un'app. Nessun data center dei colossi tecnologici. Ogni affermazione che fa, firmata. IA etica open-source che puoi eseguire sul tuo telefono oggi e verificare."
     },
     "pt": {
       "title": "CIRIS: Uma IA que Você Pode Realmente Controlar",
-      "description": "Um app. Sem data centers. Cada afirmação que faz, assinada. IA ética de código aberto que você roda no seu celular hoje — e pode verificar."
+      "description": "Um app. Sem data centers das big techs. Cada afirmação que faz, assinada. IA ética de código aberto que você roda no seu celular hoje e pode verificar."
     },
     "ar": {
       "title": "CIRIS: ذكاء اصطناعي تملكه فعلاً",
-      "description": "تطبيق واحد. بلا مراكز بيانات. كل ادعاء يصدر عنه موقّع رقمياً. ذكاء اصطناعي أخلاقي مفتوح المصدر تشغّله على هاتفك اليوم — وتراجعه بنفسك."
+      "description": "تطبيق واحد. بلا مراكز بيانات لشركات التقنية العملاقة. كل ادعاء يصدر عنه موقّع رقمياً. ذكاء اصطناعي أخلاقي مفتوح المصدر تشغّله على هاتفك اليوم وتراجعه بنفسك."
     },
     "fa": {
       "title": "CIRIS: هوش مصنوعی که واقعاً مال خودتان است",
-      "description": "یک اپ. بدون مراکز داده. هر ادعایی که می‌کند، امضا شده. هوش مصنوعی اخلاقی متن‌باز که همین امروز روی گوشی‌تان اجرا می‌شود — و قابل بررسی است."
+      "description": "یک اپ. بدون مراکز دادهٔ غول‌های فناوری. هر ادعایی که می‌کند، امضا شده. هوش مصنوعی اخلاقی متن‌باز که همین امروز روی گوشی‌تان اجرا می‌شود و قابل بررسی است."
     },
     "ur": {
       "title": "CIRIS: ایک AI جو واقعی آپ کا اپنا ہو سکتا ہے",
-      "description": "ایک ایپ۔ کوئی ڈیٹا سینٹر نہیں۔ ہر دعوے پر دستخط۔ اوپن سورس اخلاقی AI جو آج آپ کے فون پر چل سکتا ہے — اور جانچا جا سکتا ہے۔"
+      "description": "ایک ایپ۔ بڑی ٹیک کمپنیوں کا کوئی ڈیٹا سینٹر نہیں۔ ہر دعوے پر دستخط۔ اوپن سورس اخلاقی AI جو آج آپ کے فون پر چل سکتا ہے اور جانچا جا سکتا ہے۔"
     }
   },
   "/install": {

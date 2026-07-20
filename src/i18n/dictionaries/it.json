@@ -2652,6 +2652,9 @@
   },
   "lobby": {
     "eyebrow": "CIRIS · il web epistemico",
+    "whatH1pre": "Un'IA privata, ",
+    "whatH1accent": "sul tuo telefono.",
+    "whatLede": "Nessun centro dati dei colossi tecnologici dietro. La maggior parte di quello che fai non lascia mai il dispositivo, e ogni affermazione che fa è firmata, così puoi verificarla invece di fidarti e basta. Gratuita, open source, tua.",
     "h1pre": "Si scopre che questi sono ",
     "h1accent": "tutti lo stesso problema.",
     "lede": "Un'IA di cui non puoi fidarti con la tua famiglia. Cinque aziende che controllano tutto quello che fai. Un'IA che supera chiunque ne sia responsabile. Un web dove non riesci a capire cosa è vero.",
@@ -2694,7 +2697,7 @@
       {
         "k": "Consumer AI",
         "h": "Non c'è nessuna IA di cui mi fiderei con la mia famiglia.",
-        "p": "Un'IA privata che funziona sul tuo telefono. Nessun centro dati dietro. Il 65% di quello che fai non lascia mai il dispositivo, e ogni affermazione che fa è firmata così puoi verificarla.",
+        "p": "Un'IA privata che funziona sul tuo telefono. Nessun centro dati dei colossi tecnologici dietro. Il 65% di quello che fai non lascia mai il dispositivo, e ogni affermazione che fa è firmata così puoi verificarla.",
         "go": "Scopri come rimane privata",
         "accent": "cyan",
         "heavy": true,
@@ -2771,11 +2774,11 @@
       "kicker": "Consumer AI",
       "accent": "cyan",
       "metaTitle": "Un'IA privata che funziona sul tuo telefono",
-      "metaDesc": "Un'IA privata che possiedi tu. Funziona sul tuo telefono senza nessun centro dati dietro. Circa il 65% di quello che fai non lascia mai il dispositivo, e ogni affermazione che fa è firmata.",
+      "metaDesc": "Un'IA privata che possiedi tu. Funziona sul tuo telefono senza nessun centro dati dei colossi tecnologici dietro. Circa il 65% di quello che fai non lascia mai il dispositivo, e ogni affermazione che fa è firmata.",
       "h1": "Non esiste nessuna IA che puoi davvero possedere.",
       "steps": [
         "Ogni parola che dai a un'IA finisce nell'edificio di qualcun altro. Addestra il modello di qualcun altro e vive nei log di qualcun altro. I termini possono cambiare domani, e tu non lo sapresti nemmeno.",
-        "CIRIS funziona sul tuo telefono. Non c'è nessun centro dati dietro. Circa il 65% di quello che fai non lascia mai il dispositivo, e la piccola parte che esce viene sigillata prima di andarsene.",
+        "CIRIS funziona sul tuo telefono. Non c'è nessun centro dati dei colossi tecnologici dietro. Circa il 65% di quello che fai non lascia mai il dispositivo, e la piccola parte che esce viene sigillata prima di andarsene.",
         "La privacy smette di essere una promessa e diventa un fatto su dove si trovano fisicamente i tuoi dati. Non c'è nessun centro da cui perdere dati. E ogni affermazione che fa l'IA è firmata, così puoi verificarla invece di fidarti ciecamente.",
         "Nota cosa è appena successo. Il motivo per cui può essere privata è che non ha bisogno delle grandi aziende tech. Le stesse firme che ti permettono di verificare una singola affermazione sono quelle che tengono onesto l'intero web, e quelle che rendono responsabile un'IA potente."
       ],
