@@ -46,6 +46,16 @@ export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: str
         <p className={s.paragraph}>{p.s2p2}</p>
       </section>
 
+      {/* 2b · Three origins, one constitution — why NHI unification is forced
+          engineering (origin undecidable at contact; origin-branching invites
+          origin fraud), not expansiveness. */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{p.originsLabel}</p>
+        <h2 className={s.h2}>{p.originsH2}</h2>
+        <p className={s.paragraph}>{p.originsP1}</p>
+        <p className={s.paragraph}>{p.originsP2}</p>
+      </section>
+
       {/* 3 · Why one-way alignment fails */}
       <div className={s.callout}>
         <p className={s.sectionLabel}>{p.s3label}</p>

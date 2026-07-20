@@ -65,6 +65,38 @@ export default function FirstContactV2({ t, locale }: { t: Dictionary; locale: s
         <p className={s.paragraph} dangerouslySetInnerHTML={h(fc.ideaP3Html)} />
       </section>
 
+      {/* The question we ask instead — the symmetric reframe, with the
+          philosophy as its grounding. */}
+      <div className={s.callout}>
+        <h2 className={s.h2}>{fc.askTitle}</h2>
+        <p className={s.paragraph}>{fc.askBody}</p>
+        <Link href={lh("/philosophy")} className={`${s.btn} ${s.btnP}`}>
+          {t.philosophy.crossCta}
+        </Link>
+      </div>
+
+      {/* The corridor prediction — what a surviving civilization would look
+          like. Explicitly graded as model (house measured-vs-model discipline);
+          grounded in Corridor Dynamics (Zenodo 20300774) and the materials
+          notes in the coherence-ratchet program (Fragment Theorem). */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{fc.predictLabel}</p>
+        <h2 className={s.h2}>{fc.predictH2}</h2>
+        <p className={s.paragraph}>{fc.predictP1}</p>
+        <p className={s.paragraph}>{fc.predictP2}</p>
+        <p className={s.paragraph}>{fc.predictP3}</p>
+        <p className={s.paragraph}>{fc.predictP4}</p>
+        <p className={s.paragraph}>{fc.predictP5}</p>
+        <div className={s.notice}>
+          <p>{fc.predictNote}</p>
+        </div>
+        <p>
+          <Link href={lh("/research-status")} className={`${s.btn} ${s.btnS}`}>
+            {fc.predictCta}
+          </Link>
+        </p>
+      </section>
+
       {/* First-contact protocols */}
       <section className={s.section}>
         <p className={s.sectionLabel}>{fc.protocolsSepHeadline}</p>
