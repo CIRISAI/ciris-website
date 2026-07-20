@@ -90,11 +90,14 @@ export default function FirstContactV2({ t, locale }: { t: Dictionary; locale: s
         <div className={s.notice}>
           <p>{fc.predictNote}</p>
         </div>
-        <p>
+        <div className={s.ctaRow}>
           <Link href={lh("/research-status")} className={`${s.btn} ${s.btnS}`}>
             {fc.predictCta}
           </Link>
-        </p>
+          <Link href={lh("/first-contact/theory")} className={`${s.btn} ${s.btnS}`}>
+            {fc.predictLineageCta}
+          </Link>
+        </div>
       </section>
 
       {/* First-contact protocols */}

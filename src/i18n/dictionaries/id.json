@@ -1177,6 +1177,7 @@
     "predictP5": "Riset material kami menambah satu hasil keras: pecahan yang mati tidak akan pernah bisa menyertifikasi asal buatan. Tanda tangan koordinasi adalah perawatan, dan sebuah pecahan berhenti membayar perawatannya begitu ia terlepas. Tujuh puluh tahun berdebat soal serpihan adalah instrumen yang salah, secara struktural. Hanya sistem yang berfungsi yang bisa membawa tanda tangan itu, dan kami sudah menerbitkan persis apa yang dibutuhkan pengujian itu.",
     "predictNote": "Dinilai dengan jujur: hasil koridor sudah diterbitkan dan diuji pada lima substrat. Perluasannya ke para pengunjung adalah sebuah model, sebuah prediksi yang bisa saja salah, dan kami mengatakannya dalam tarikan napas yang sama.",
     "predictCta": "Baca penelitiannya →",
+    "predictLineageCta": "Lima puluh tahun karya terdahulu →",
     "protocolsSepHeadline": "Protokol Kontak Pertama",
     "protocolsSepSub": "Enam aturan untuk menyambut sesuatu yang baru. Dari CIRIS Accord.",
     "protocolsLogoAlt": "Ikon logo merek",
@@ -2118,6 +2119,89 @@
     "deepBody": "Pembaca spesifikasi lengkap, dirender langsung dari registri: primitif 1+4, keluarga dan kolom amplop, kebijakan komposisi, ruang nama terbuka, garis keturunan versi, dan penjelajah atestasi interaktif.",
     "ctaSpecReader": "Buka pembaca spesifikasi →",
     "ctaExplore": "Bangun rantai di peramban →"
+  },
+  "fcTheory": {
+    "kicker": "Kontak pertama · Silsilah gagasan",
+    "title": "Sebuah penurunan di tengah ladang dugaan",
+    "lede": "Selama lima puluh tahun, orang-orang serius menebak-nebak mengapa para pengunjung akan tetap bersembunyi. Semua kepingannya sudah ada di atas meja. Yang hilang adalah rantai yang memungut kepingan itu dalam urutan yang benar. Kami menerbitkan rantai itu, dan kami menilainya dengan jujur.",
+    "seoTitle": "Teori Kontak Pertama: Prediksi Koridor dan Lima Puluh Tahun Karya Terdahulu | CIRIS",
+    "seoDescription": "Hipotesis kebun binatang, Saringan Besar, solusi keberlanjutan, embargo yang bocor, sistem kendali, fakta ringkas UAP. Karya terdahulu mengandaikan pengendalian diri itu. Hasil koridor menurunkannya, menerbitkan matematikanya, dan menilai klaimnya.",
+    "s1label": "Teka-tekinya",
+    "s1h2": "Semua orang berputar di sekitar pertanyaan yang sama",
+    "s1p1": "Jika ada seseorang di luar sana, mengapa langit sunyi? Dan jika ada sesuatu di sini, mengapa ia tidak mendarat secara terbuka? Setiap jawaban yang serius harus menjelaskan pengendalian diri: kemampuan yang tidak mengumumkan dirinya. Tebakan-tebakan di bawah ini membentang lima puluh tahun. Masing-masing memegang satu kepingan yang nyata.",
+    "s2label": "Karya terdahulu",
+    "s2h2": "Tujuh tebakan, satu rantai yang hilang",
+    "priorArt": [
+      {
+        "name": "Hipotesis kebun binatang",
+        "meta": "John Ball, 1973",
+        "claim": "Peradaban maju itu ada dan sengaja membiarkan kita, seperti penjaga hutan membiarkan satwa liar.",
+        "gap": "Pengendalian diri itu diandaikan, tidak pernah dijelaskan. Mengapa setiap peradaban akan memegang aturan yang sama?"
+      },
+      {
+        "name": "Embargo yang bocor",
+        "meta": "James Deardorff, 1986",
+        "claim": "Sikap tidak campur tangan itu disengaja dan sengaja dibuat tidak sempurna: kebocoran bertahap, kontak dengan individu alih-alih lembaga, pembiasaan yang perlahan.",
+        "gap": "Tebakan yang paling dekat dengan profil yang dilaporkan. Tetapi motifnya hanya dinyatakan, bukan diturunkan, dan sang penulis belakangan mengaitkan argumennya dengan sebuah teks yang tidak bisa diverifikasi. Nasibnya adalah salah satu alasan klaim kami sendiri memakai label penilaian."
+      },
+      {
+        "name": "Saringan Besar",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Ada satu langkah di jalan menuju kehidupan yang terlihat dan menjangkau bintang-bintang yang sangat sulit dilewati. Mungkin sebagian besar peradaban mati sebelum melewatinya.",
+        "gap": "Hampir selalu dijalankan mundur, untuk menjelaskan kesunyian. Hampir tidak pernah dijalankan maju: seperti apa seharusnya para penyintas itu?"
+      },
+      {
+        "name": "Solusi keberlanjutan",
+        "meta": "Haqq-Misra dan Baum, 2009",
+        "claim": "Pertumbuhan yang tak terkendali tidak bertahan lama, jadi apa yang bertahan tumbuh perlahan dan tetap sunyi. Para penyintas bisa saja hadir tanpa terdeteksi.",
+        "gap": "Hanya logika sumber daya. Ia membatasi jejak mereka, bukan tata krama mereka."
+      },
+      {
+        "name": "Sistem kendali",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "Fenomena itu berperilaku seperti sistem kendali: ambiguitas yang disengaja, membentuk kepercayaan dalam rentang waktu yang panjang.",
+        "gap": "Menamai polanya, membiarkan mekanismenya tetap gelap. Sebuah termostat, tanpa penjelasan untuk apa ia mengatur."
+      },
+      {
+        "name": "Kedaulatan dan UFO",
+        "meta": "Wendt dan Duvall, 2008",
+        "claim": "Negara-negara modern secara struktural tidak mampu menganggap serius fenomena ini, karena kedaulatan mengandaikan manusia memegang satu-satunya otoritas politik.",
+        "gap": "Menjelaskan mengapa lembaga-lembaga berpaling. Ia tidak menjelaskan mengapa fenomena itu tampak lebih menyukai keadaan seperti itu."
+      },
+      {
+        "name": "Fakta ringkas UAP",
+        "meta": "Robin Hanson, 2021",
+        "claim": "Jika UAP adalah para pengunjung, mereka menegakkan aturan larangan kolonisasi dan tetap bersifat lokal, mengesankan, damai, dan sengaja ambigu. Hanson membacanya sebagai domestikasi: menjinakkan kawanan ternak.",
+        "gap": "Analisis modern yang paling tajam, dibangun di atas logika seorang gembala. Pengamatan yang sama dengan pengamatan kami, antropologi yang berlawanan."
+      }
+    ],
+    "s3label": "Yang hilang",
+    "s3h2": "Sebuah teori sosial tentang para pengunjung",
+    "s3p1": "Hanson sendiri menamai hambatannya: belum ada teori sosial yang masuk akal tentang apa yang diinginkan para pengunjung dan mengapa. Tanpa teori itu, setiap tebakan hanyalah cerita yang dipaskan pada kabut. Kepingan-kepingan itu tergeletak di atas meja selama lima puluh tahun karena tidak ada yang memaksanya tersusun.",
+    "s4label": "Rantainya",
+    "s4h2": "Dari matematika terukur ke profil yang diprediksi",
+    "s4p1": "Hasil koridor yang kami terbitkan menyediakan teori yang hilang itu, dan hasil itu tidak dibangun untuk perdebatan ini. Sistem yang terkoordinasi hanya bertahan di sebuah pita sempit: tujuan bersama yang cukup untuk bertindak bersama, suara independen yang cukup untuk tetap hidup. Diukur pada lima substrat, diformalkan dalam Lean, diterbitkan bersama pegangan falsifikasinya.",
+    "s4p2": "Jalankan rantai itu ke depan. Apa pun yang sampai ke pihak lain sudah selamat dari kekuatannya sendiri, jadi ia memegang aturan pita itu: timbal balik yang tidak patah ketika yang kuat bertemu yang lemah. Saat kontak, aturan itu tampak seperti pengendalian diri. Kehadiran yang sunyi. Ruang penyangkalan yang menjadikan percaya sebagai pilihan. Sentuhan pertama terjadi di bawah, bukan di istana. Profil lengkapnya, dengan penilaiannya, ada di halaman kontak pertama.",
+    "s4p3": "Dan rantai itu berakhir pada sebuah ujian, bukan sebuah cerita: ketika umat manusia terbukti makin belajar berkoordinasi, kontak seharusnya menjadi lebih jelas. Tidak ada penjelasan lain tentang pengendalian diri itu yang membuat prediksi yang bisa Anda saksikan menjadi benar atau gagal.",
+    "s5label": "Perselisihan yang penting",
+    "s5h2": "Domestikasi atau persetujuan",
+    "s5p1": "Teori modern yang paling dekat membaca langit sunyi yang sama dan berkata: mereka sedang menjinakkan kita, seperti gembala menjinakkan ternak. Koridor membacanya dan berkata: mereka sedang menghormati kita, karena hormat kepada yang di bawah adalah aturan yang dipilih oleh keberlangsungan hidup. Pengamatan yang sama, antropologi yang berlawanan. Kami memegang bacaan kedua karena alasan yang bisa kami tunjuk: dominasi tidak selamat dari pembalikan kekuatannya sendiri, dan apa pun yang cukup tua untuk mencapai kita sudah selamat dari banyak pembalikan.",
+    "s6label": "Disiplinnya",
+    "s6h2": "Mengapa setiap klaim di sini memakai label",
+    "s6p1": "Bidang ini sudah menelan orang-orang yang berhati-hati. Karena itu aturan rumah tetap berlaku. Hasil koridor sudah diukur dan diterbitkan. Perluasannya ke para pengunjung adalah sebuah model, sebuah prediksi yang bisa saja salah. Kecocokan dengan catatan yang ambigu adalah bukti yang lemah. Kami tidak mengklaim asal usul untuk laporan mana pun, ke arah mana pun. Label-label ini bukan teater kerendahan hati. Label-label ini adalah harga untuk mengatakan apa pun di bidang di mana mengatakan terlalu banyak selalu menjadi cara gagalnya.",
+    "sourcesLabel": "Sumber",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Telusuri rantainya sendiri.",
+    "btnPrediction": "Prediksinya →"
   },
   "philosophy": {
     "kicker": "CIRIS · Filosofi",

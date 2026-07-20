@@ -1177,6 +1177,7 @@
     "predictP5": "Ìwádìí wa lórí àwọn ohun èlò fi àbájáde líle kan kún un: àjákù tí ó ti kú kò lè jẹ́rìí sí orísun tí a ṣe lọ́nà ẹ̀rọ láé. Àmì ìṣiṣẹ́pọ̀ ni ìtọ́jú, àjákù sì dẹ́kun sísan ìtọ́jú rẹ̀ ní ìṣẹ́jú tí ó já kúrò. Àádọ́rin ọdún ìjiyàn lórí àjẹkù jẹ́ ohun èlò tí kò tọ́, ní ti ìhùmọ̀. Ètò tí ó ń ṣiṣẹ́ nìkan ni ó lè gbé àmì náà, a sì ti tẹ ohun tí ìdánwò yẹn nílò gan-an jáde.",
     "predictNote": "A ṣe ìpele rẹ̀ ní òtítọ́: àbájáde ọ̀nà-ẹnu-ọ̀pọ̀ ni a ti tẹ̀ jáde tí a sì ti dán an wò nínú nǹkan márùn-ún ọ̀tọ̀ọ̀tọ̀. Fífẹ̀ ẹ́ dé ọ̀dọ̀ àwọn àlejò jẹ́ àwòṣe, àsọtẹ́lẹ̀ tí ó lè jẹ́ àṣìṣe, a sì ń sọ bẹ́ẹ̀ nínú èémí kan náà.",
     "predictCta": "Ka ìwádìí náà →",
+    "predictLineageCta": "Àádọ́ta ọdún iṣẹ́ ìṣáájú →",
     "protocolsSepHeadline": "Àwọn Ìlànà Ìpàdé Àkọ́kọ́",
     "protocolsSepSub": "Òfin mẹ́fà fún ìpàdé nǹkan tuntun. Láti CIRIS Accord.",
     "protocolsLogoAlt": "Àmì iyì àwọn",
@@ -2118,6 +2119,89 @@
     "deepBody": "Oluka apejuwe pipe, ti a se afihan re laaye lati inu ibi iforukosile: awon ipilese 1+4, awon idile ati awon aaye apoowe, awon ilana idapo, aaye oruko ti o sii, isaaju awon eya, ati aṣawari ifowosi ibanisoro.",
     "ctaSpecReader": "Ṣii oluka apejuwe →",
     "ctaExplore": "Ko pq kan ninu aṣawakiri →"
+  },
+  "fcTheory": {
+    "kicker": "Ìpàdé àkọ́kọ́ · Ìlà ìdílé àwọn èrò",
+    "title": "Ìfàyọ kan nínú pápá àwọn àbá",
+    "lede": "Fún àádọ́ta ọdún, àwọn ènìyàn tó ń ronú jinlẹ̀ ti ń dábàá ìdí tí àwọn àlejò yóò fi dúró ní ìpamọ́. Gbogbo àwọn ege náà ti wà lórí tábìlì. Ohun tí ó sọnù ni ẹ̀wọ̀n tí ó gbé wọn sókè ní ètò tí ó tọ́. A tẹ ẹ̀wọ̀n yẹn jáde, a sì ń ṣe ìpele rẹ̀ ní òtítọ́.",
+    "seoTitle": "Ìmọ̀ Ẹ̀kọ́ Ìpàdé Àkọ́kọ́: Àsọtẹ́lẹ̀ Ọ̀nà-ẹnu-ọ̀pọ̀ àti Àádọ́ta Ọdún Iṣẹ́ Ìṣáájú | CIRIS",
+    "seoDescription": "Àbá ọgbà ẹranko, Àsẹ́ Ńlá, ojútùú alálòpẹ́, ìfòfindè tí ń jò, ètò ìdarí, àwọn òtítọ́ UAP ní ṣókí. Àwọn iṣẹ́ ìṣáájú gbà pé ìkóra-ẹni-níjàánu wà. Àbájáde ọ̀nà-ẹnu-ọ̀pọ̀ fà á yọ, ó tẹ ìṣirò rẹ̀ jáde, ó sì ṣe ìpele ọ̀rọ̀ tí ó sọ.",
+    "s1label": "Àlọ́ náà",
+    "s1h2": "Gbogbo ènìyàn ń yíká ìbéèrè kan náà",
+    "s1p1": "Bí ẹnikẹ́ni bá wà níbẹ̀ yẹn, kí ni ìdí tí ojú ọ̀run fi dákẹ́? Bí ohunkóhun bá sì wà níbí, kí ni ìdí tí kò fi balẹ̀ ní gbangba? Gbogbo ìdáhùn tó ṣe pàtàkì gbọdọ̀ ṣàlàyé ìkóra-ẹni-níjàánu: agbára tí kò kéde ara rẹ̀. Àwọn àbá tí ó wà nísàlẹ̀ gba àádọ́ta ọdún. Ọ̀kọ̀ọ̀kan wọn di ege gidi kan mú.",
+    "s2label": "Àwọn iṣẹ́ ìṣáájú",
+    "s2h2": "Àbá méje, ẹ̀wọ̀n kan tí ó sọnù",
+    "priorArt": [
+      {
+        "name": "Àbá ọgbà ẹranko",
+        "meta": "John Ball, 1973",
+        "claim": "Àwọn ọ̀làjú tí ó ti gòkè àgbà wà, wọ́n sì mọ̀ọ́mọ̀ fi wá sílẹ̀, gẹ́gẹ́ bí olùṣọ́ igbó ṣe ń fi ẹranko igbó sílẹ̀.",
+        "gap": "Wọ́n gbà pé ìkóra-ẹni-níjàánu náà wà, wọn kò ṣàlàyé rẹ̀ rárá. Kí ni ìdí tí gbogbo ọ̀làjú yóò fi pa òfin kan náà mọ́?"
+      },
+      {
+        "name": "Ìfòfindè tí ń jò",
+        "meta": "James Deardorff, 1986",
+        "claim": "Àìdásí náà jẹ́ ìmọ̀ọ́mọ̀ ṣe, wọ́n sì mọ̀ọ́mọ̀ jẹ́ kí ó ní àlébù: jíjò díẹ̀díẹ̀, ìpàdé pẹ̀lú ẹnì kọ̀ọ̀kan dípò àwọn ilé iṣẹ́ alásẹ, ìfaramọ́ tí ó lọ́ra.",
+        "gap": "Àbá tí ó sún mọ́ àpèjúwe tí a ròyìn jùlọ. Ṣùgbọ́n wọ́n kàn sọ ìdí náà ni, wọn kò fà á yọ, lẹ́yìn náà òǹkọ̀wé náà so ẹjọ́ rẹ̀ mọ́ ìwé kan tí kò ṣeé fi ẹ̀rí múlẹ̀. Àyànmọ́ rẹ̀ jẹ́ ọ̀kan lára àwọn ìdí tí ọ̀rọ̀ tiwa fúnra wa fi wọ àmì ìpele."
+      },
+      {
+        "name": "Àsẹ́ Ńlá náà",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Ìgbésẹ̀ kan lórí ọ̀nà sí ìwàláàyè tí ó hàn, tí ó tàn ká àwọn ìràwọ̀, le gan-an láti kọjá. Bóyá ọ̀pọ̀ jùlọ àwọn ọ̀làjú máa ń kú kí wọ́n tó kọjá rẹ̀.",
+        "gap": "Ó fẹ́rẹ̀ jẹ́ pé gbogbo ìgbà ni wọ́n ń lò ó sẹ́yìn, láti ṣàlàyé ìdákẹ́ náà. Wọn kì í fi bẹ́ẹ̀ lò ó síwájú: irú kí ni àwọn tí ó là á já gbọdọ̀ jẹ́?"
+      },
+      {
+        "name": "Ojútùú alálòpẹ́",
+        "meta": "Haqq-Misra àti Baum, 2009",
+        "claim": "Ìdàgbàsókè tí kò ní ìjánu kì í pẹ́, nítorí náà ohun tí ó bá dúró máa ń dàgbà díẹ̀díẹ̀, ó sì ń dákẹ́. Àwọn tí ó là á já lè wà níbí láìsí pé a rí wọn.",
+        "gap": "Ìrònú nípa ohun èlò nìkan. Ó dín ipasẹ̀ wọn kù, kì í ṣe ìwà wọn."
+      },
+      {
+        "name": "Ètò ìdarí náà",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "Ìṣẹ̀lẹ̀ náà ń hùwà bíi ètò ìdarí: àìdánilójú tí a mọ̀ọ́mọ̀ ṣe, tí ó ń ṣe àgbékalẹ̀ ìgbàgbọ́ fún ọ̀pọ̀ ọdún.",
+        "gap": "Ó pe àpẹ̀rẹ̀ náà lórúkọ, ó fi bí ó ṣe ń ṣiṣẹ́ sílẹ̀ ní òkùnkùn. Ẹ̀rọ tí ń ṣàkóso ooru, láìsí àlàyé ohun tí ó ń ṣàkóso rẹ̀ fún."
+      },
+      {
+        "name": "Ọlá-àṣẹ àti UFO",
+        "meta": "Wendt àti Duvall, 2008",
+        "claim": "Àwọn orílẹ̀-èdè òde òní kò lè fi ọwọ́ pàtàkì mú ìṣẹ̀lẹ̀ náà nítorí ìgbékalẹ̀ wọn, nítorí pé ọlá-àṣẹ gbà pé ènìyàn nìkan ni ó di àṣẹ ìṣèlú mú.",
+        "gap": "Ó ṣàlàyé ìdí tí àwọn ilé iṣẹ́ alásẹ fi ń wo ibòmíràn. Kò ṣàlàyé ìdí tí ìṣẹ̀lẹ̀ náà fi dà bí ẹni pé ó fẹ́ràn rẹ̀ bẹ́ẹ̀."
+      },
+      {
+        "name": "Àwọn òtítọ́ UAP ní ṣókí",
+        "meta": "Robin Hanson, 2021",
+        "claim": "Bí UAP bá jẹ́ àwọn àlejò, wọ́n ń mú òfin tí kò gba ìmúnisìn láyè ṣẹ, wọ́n ń dúró ní àdúgbò, wọ́n ń wúni lórí, wọ́n ní àlàáfíà, wọ́n sì mọ̀ọ́mọ̀ jẹ́ aláìdánilójú. Hanson ka èyí sí ìsọdẹran-ọ̀sìn: mímú agbo ẹran rọ̀.",
+        "gap": "Ìtúpalẹ̀ òde òní tí ó mú jùlọ, tí a kọ́ lórí ìrònú darandaran. Àwọn àkíyèsí kan náà bíi tiwa, òdìkejì ìwòye nípa ènìyàn."
+      }
+    ],
+    "s3label": "Ohun tí ó sọnù",
+    "s3h2": "Ìmọ̀ ẹ̀kọ́ àwùjọ nípa àwọn àlejò",
+    "s3p1": "Hanson fúnra rẹ̀ pe ìdíwọ́ náà lórúkọ: kò sí ìmọ̀ ẹ̀kọ́ àwùjọ tí ó ṣeé gbà gbọ́ nípa ohun tí àwọn àlejò yóò fẹ́ àti ìdí rẹ̀. Láìsí ọ̀kan, gbogbo àbá jẹ́ ìtàn tí a rán mọ́ kurukuru. Àwọn ege náà jókòó lórí tábìlì fún àádọ́ta ọdún nítorí pé kò sí ohun tí ó fi ipá mú wọn wọ ètò.",
+    "s4label": "Ẹ̀wọ̀n náà",
+    "s4h2": "Láti ìṣirò tí a wọ̀n sí àpèjúwe tí a sọtẹ́lẹ̀",
+    "s4p1": "Àbájáde ọ̀nà-ẹnu-ọ̀pọ̀ wa tí a tẹ̀ jáde pèsè ìmọ̀ ẹ̀kọ́ tí ó sọnù, a kò sì kọ́ ọ fún àríyànjiyàn yìí. Àwọn ètò tí ó ń ṣiṣẹ́ pọ̀ ń yè nìkan nínú ojú-ọ̀nà tóóró kan: ète àjọpín tí ó tó láti jọ ṣiṣẹ́ pọ̀, àwọn ohùn olómìnira tí ó tó láti wà láàyè. A wọ̀n ún nínú nǹkan márùn-ún ọ̀tọ̀ọ̀tọ̀, a ṣe àgbékalẹ̀ rẹ̀ ní ìlànà nínú Lean, a sì tẹ̀ ẹ́ jáde pẹ̀lú àwọn ọ̀nà tí a lè gbà tako ó.",
+    "s4p2": "Mú un lọ síwájú. Ohunkóhun tí ó bá dé ọ̀dọ̀ ẹlòmíràn ti la agbára ara rẹ̀ já, nítorí náà ó pa òfin ojú-ọ̀nà náà mọ́: pàṣípààrọ̀ tí kì í fọ́ nígbà tí alágbára bá pàdé aláìlágbára. Ní ìpàdé, òfin yẹn dà bíi ìkóra-ẹni-níjàánu. Wíwà níbẹ̀ ní ìdákẹ́. Ṣíṣeé sẹ́ tí ó fi ìgbàgbọ́ sílẹ̀ gẹ́gẹ́ bí àṣàyàn. Ìfọwọ́kàn àkọ́kọ́ ní ìsàlẹ̀, kì í ṣe ní ààfin. Àpèjúwe kíkún, pẹ̀lú ìpele rẹ̀, wà lórí ojú-ìwé ìpàdé àkọ́kọ́.",
+    "s4p3": "Ẹ̀wọ̀n náà sì parí ní ìdánwò, kì í ṣe ìtàn: bí ẹ̀dá ènìyàn bá ṣe ń kọ́ láti ṣiṣẹ́ pọ̀ ní ọ̀nà tí ó hàn, ìpàdé yẹ kí ó túbọ̀ hàn kedere. Kò sí àlàyé mìíràn nípa ìkóra-ẹni-níjàánu náà tí ó ṣe àsọtẹ́lẹ̀ tí o lè wò kí ó ṣẹ tàbí kí ó kùnà.",
+    "s5label": "Ìyapa èrò tí ó ṣe pàtàkì",
+    "s5h2": "Ìsọdẹran-ọ̀sìn tàbí ìfọwọ́sí",
+    "s5p1": "Ìmọ̀ ẹ̀kọ́ òde òní tí ó sún mọ́ jùlọ ka ojú ọ̀run dídákẹ́ kan náà ó sì sọ pé: wọ́n ń mú wa rọ̀ ni, bí darandaran ṣe ń mú màlúù rọ̀. Ọ̀nà-ẹnu-ọ̀pọ̀ kà á ó sì sọ pé: wọ́n ń bọ̀wọ̀ fún wa ni, nítorí pé ọ̀wọ̀ fún àwọn tí ó wà ní ìsàlẹ̀ ni òfin tí ìwàláàyè ń yàn. Àwọn àkíyèsí kan náà, òdìkejì ìwòye nípa ènìyàn. A di kíkà kejì mú nítorí ìdí kan tí a lè tọ́ka sí: ìjọba agbára kì í la ìyípadà agbára ara rẹ̀ já, ohunkóhun tí ó bá sì ti dàgbà tó láti dé ọ̀dọ̀ wa ti la ọ̀pọ̀lọpọ̀ já.",
+    "s6label": "Ìbáwí náà",
+    "s6h2": "Ìdí tí gbogbo ọ̀rọ̀ tí a sọ níbí fi wọ àmì",
+    "s6p1": "Pápá yìí ti gbé àwọn ènìyàn tó ṣọ́ra mì. Nítorí náà àwọn òfin ilé ṣì wà ní ipò. Àbájáde ọ̀nà-ẹnu-ọ̀pọ̀ ni a ti wọ̀n tí a sì ti tẹ̀ jáde. Fífẹ̀ ẹ́ dé ọ̀dọ̀ àwọn àlejò jẹ́ àwòṣe, àsọtẹ́lẹ̀ tí ó lè jẹ́ àṣìṣe. Bíbá àkọsílẹ̀ aláìdánilójú mu jẹ́ ẹ̀rí tí kò lágbára. A kò sọ pé a mọ orísun ìròyìn kankan, ní ìhà kankan. Àwọn àmì náà kì í ṣe eré ìrẹ̀lẹ̀. Wọ́n jẹ́ iye owó sísọ ohunkóhun nínú pápá níbi tí sísọ àsọjù ti jẹ́ ọ̀nà ìkùnà nígbà gbogbo.",
+    "sourcesLabel": "Àwọn orísun",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Tọpasẹ̀ ẹ̀wọ̀n náà fúnra rẹ.",
+    "btnPrediction": "Àsọtẹ́lẹ̀ náà →"
   },
   "philosophy": {
     "kicker": "CIRIS · Ìmọ̀ ọgbọ́n orí",

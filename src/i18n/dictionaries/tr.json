@@ -1177,6 +1177,7 @@
     "predictP5": "Malzeme araştırmamız buna bir kesin sonuç ekliyor: ölü bir parça, mühendislik ürünü bir kökeni asla belgeleyemez. Koordinasyonun imzası bakımdır ve bir parça, koptuğu anda bakımını ödemeyi bırakmıştır. Enkaz üzerine yetmiş yıl tartışmak, yapısı gereği yanlış araçtı. İmzayı yalnızca çalışan bir sistem taşıyabilir ve o testin tam olarak ne gerektirdiğini yayımladık.",
     "predictNote": "Dürüstçe derecelendirilmiştir: koridor sonucu yayımlandı ve beş farklı zeminde test edildi. Bunun ziyaretçilere uzatılması ise bir modeldir, yanlış çıkabilecek bir öngörüdür ve bunu aynı nefeste söylüyoruz.",
     "predictCta": "Araştırmayı okuyun →",
+    "predictLineageCta": "Elli yıllık öncül çalışmalar →",
     "protocolsSepHeadline": "İlk Temas Protokolleri",
     "protocolsSepSub": "Yeni bir şeyle tanışmak için altı kural. CIRIS Anlaşması'ndan.",
     "protocolsLogoAlt": "Marka logo simgesi",
@@ -2118,6 +2119,89 @@
     "deepBody": "Kayıttan canlı olarak oluşturulan tam teknik belge okuyucusu: 1+4 ilkel öğeleri, aileler ve zarf alanları, kompozisyon politikaları, açık ad alanı, sürüm soyağacı ve etkileşimli bir tasdik gezgini.",
     "ctaSpecReader": "Teknik belge okuyucusunu açın →",
     "ctaExplore": "Tarayıcıda bir zincir oluşturun →"
+  },
+  "fcTheory": {
+    "kicker": "İlk temas · Öncüller",
+    "title": "Varsayımlarla dolu bir alanda bir türetme",
+    "lede": "Elli yıldır ciddi insanlar, ziyaretçilerin neden gizli kalacağını tahmin edip durdu. Parçaların hepsi masadaydı. Eksik olan, onları doğru sırayla toplayan zincirdi. O zinciri yayımladık ve onu dürüstçe derecelendiriyoruz.",
+    "seoTitle": "İlk Temas Teorisi: Koridor Öngörüsü ve Elli Yıllık Öncül Çalışmalar | CIRIS",
+    "seoDescription": "Hayvanat bahçesi hipotezi, Büyük Filtre, sürdürülebilirlik çözümü, sızdıran ambargo, kontrol sistemi, stilize UAP olguları. Öncül çalışmalar kendini tutmayı varsaydı. Koridor sonucu onu türetir, matematiğini yayımlar ve iddiayı derecelendirir.",
+    "s1label": "Bilmece",
+    "s1h2": "Herkes aynı sorunun etrafında dönüyor",
+    "s1p1": "Dışarıda biri varsa gökyüzü neden sessiz? Ve burada bir şey varsa neden açıkça inmiyor? Her ciddi yanıt kendini tutmayı açıklamak zorunda: kendini duyurmayan yetenek. Aşağıdaki tahminler elli yılı kapsıyor. Her biri gerçek bir parça taşıyor.",
+    "s2label": "Öncül çalışmalar",
+    "s2h2": "Yedi tahmin, bir eksik zincir",
+    "priorArt": [
+      {
+        "name": "Hayvanat bahçesi hipotezi",
+        "meta": "John Ball, 1973",
+        "claim": "İleri uygarlıklar var ve bizi bilerek rahat bırakıyorlar; tıpkı bir korucunun yaban hayatını rahat bıraktığı gibi.",
+        "gap": "Kendini tutma varsayılıyor ama hiç açıklanmıyor. Neden her uygarlık aynı kuralı tutsun?"
+      },
+      {
+        "name": "Sızdıran ambargo",
+        "meta": "James Deardorff, 1986",
+        "claim": "Karışmama kasıtlı ve kasıtlı olarak kusurlu: yavaş yavaş sızıntılar, kurumlarla değil tek tek kişilerle temas, ağır bir alıştırma.",
+        "gap": "Bildirilen profile en yakın tahmin. Ama gerekçe türetilmedi, öne sürüldü; yazar da davasını sonradan doğrulanamaz bir metne bağladı. Onun kaderi, kendi iddiamızın derecelendirme etiketleri taşımasının nedenlerinden biri."
+      },
+      {
+        "name": "Büyük Filtre",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Görünür, yıldızlara yayılan yaşama giden yolda bir adım çok zor geçiliyor. Belki çoğu uygarlık onu geçemeden ölüyor.",
+        "gap": "Neredeyse hep geriye doğru işletilir, sessizliği açıklamak için. Neredeyse hiç ileri doğru işletilmez: sağ kalanlar nasıl olmak zorunda?"
+      },
+      {
+        "name": "Sürdürülebilirlik çözümü",
+        "meta": "Haqq-Misra ve Baum, 2009",
+        "claim": "Kontrolsüz büyüme sürmez; o yüzden kalıcı olan, yavaş büyür ve sessiz kalır. Sağ kalanlar burada olup fark edilmemiş olabilir.",
+        "gap": "Yalnızca kaynak mantığı. Ayak izlerini sınırlar, tavırlarını değil."
+      },
+      {
+        "name": "Kontrol sistemi",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "Fenomen bir kontrol sistemi gibi davranır: tasarım gereği belirsizlik, uzun zaman dilimleri boyunca inancı biçimlendirme.",
+        "gap": "Deseni adlandırır, mekanizmayı karanlıkta bırakır. Neyi hedefleyerek ayarladığı anlatılmayan bir termostat."
+      },
+      {
+        "name": "Egemenlik ve UFO",
+        "meta": "Wendt ve Duvall, 2008",
+        "claim": "Modern devletler fenomeni ciddiye almaya yapısal olarak elverişsiz; çünkü egemenlik, tek siyasi otoritenin insanlarda olduğunu varsayar.",
+        "gap": "Kurumların neden başka yöne baktığını açıklar. Fenomenin bunu neden tercih eder göründüğünü açıklamaz."
+      },
+      {
+        "name": "Stilize UAP olguları",
+        "meta": "Robin Hanson, 2021",
+        "claim": "UAP'ler ziyaretçiyse, kolonileşme yasağı kuralını uyguluyorlar ve yerel, etkileyici, barışçıl ve bilerek belirsiz kalıyorlar. Hanson bunu evcilleştirme olarak okur: bir sürüyü yumuşatıp alıştırmak.",
+        "gap": "En keskin modern çözümleme, bir çobanın mantığı üzerine kurulu. Bizimkiyle aynı gözlemler, zıt antropoloji."
+      }
+    ],
+    "s3label": "Eksik olan neydi",
+    "s3h2": "Ziyaretçilerin bir toplum teorisi",
+    "s3p1": "Engeli Hanson'ın kendisi adlandırdı: ziyaretçilerin ne isteyeceğine ve neden isteyeceğine dair akla yatkın bir toplum teorisi yoktu. O olmadan her tahmin, sise göre biçilmiş bir hikâyedir. Parçalar elli yıl masada durdu; çünkü hiçbir şey onları sıraya girmeye zorlamadı.",
+    "s4label": "Zincir",
+    "s4h2": "Ölçülmüş matematikten öngörülen profile",
+    "s4p1": "Yayımladığımız koridor sonucu eksik teoriyi sağlıyor ve bu tartışma için kurulmadı. Koordine sistemler yalnızca dar bir bantta hayatta kalır: birlikte hareket edecek kadar ortak amaç, hayatta kalacak kadar bağımsız ses. Beş zeminde ölçüldü, Lean ile biçimselleştirildi, yanlışlanabileceği noktalarla birlikte yayımlandı.",
+    "s4p2": "Şimdi ileri doğru işletin. Başka birine ulaşan her şey kendi gücünden çoktan sağ çıkmıştır; demek ki bandın kuralını tutmuştur: güçlü zayıfla karşılaştığında kırılmayan karşılıklılık. Temas anında o kural kendini tutma gibi görünür. Sessiz varlık. İnancı bir seçim olarak bırakan inkâr edilebilirlik. İlk dokunuş tabanda, sarayda değil. Tam profil, derecelendirmesiyle birlikte, ilk temas sayfasında duruyor.",
+    "s4p3": "Ve zincir bir hikâyeyle değil, bir sınamayla biter: insanlık koordine olmayı gösterilebilir biçimde öğrendikçe, temas daha net hale gelmelidir. Kendini tutmanın başka hiçbir açıklaması, gerçekleşmesini ya da başarısız olmasını izleyebileceğiniz bir öngörüde bulunmaz.",
+    "s5label": "Önemli olan anlaşmazlık",
+    "s5h2": "Evcilleştirme mi, rıza mı",
+    "s5p1": "En yakın modern teori aynı sessiz gökyüzünü okur ve şöyle der: bizi yumuşatıp alıştırıyorlar, bir çobanın sığırı alıştırdığı gibi. Koridor onu okur ve şöyle der: bize saygı gösteriyorlar; çünkü tabandaki saygı, hayatta kalmanın seçtiği kuraldır. Aynı gözlemler, zıt antropoloji. İkinci okumayı, gösterebileceğimiz bir nedenle tutuyoruz: baskınlık kendi güç tersine dönüşlerinden sağ çıkmaz ve bize ulaşacak kadar yaşlı olan her şey bunların birçoğundan sağ çıkmıştır.",
+    "s6label": "Disiplin",
+    "s6h2": "Buradaki her iddia neden etiket taşıyor",
+    "s6p1": "Bu alan dikkatli insanları yuttu. O yüzden ev kuralları açık kalıyor. Koridor sonucu ölçüldü ve yayımlandı. Bunun ziyaretçilere uzatılması bir modeldir, yanlış çıkabilecek bir öngörüdür. Belirsiz bir kayıtla uyuşmak zayıf kanıttır. Hiçbir bildirim için, iki yönde de, köken iddiasında bulunmuyoruz. Etiketler alçakgönüllülük tiyatrosu değildir. Çok şey söylemenin her zaman başarısızlık biçimi olduğu bir alanda, herhangi bir şey söyleyebilmenin bedelidir.",
+    "sourcesLabel": "Kaynaklar",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Zinciri kendiniz izleyin.",
+    "btnPrediction": "Öngörü →"
   },
   "philosophy": {
     "kicker": "CIRIS · Felsefe",

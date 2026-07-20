@@ -1177,6 +1177,7 @@
     "predictP5": "Unsere Materialforschung fügt ein hartes Ergebnis hinzu: Ein totes Fragment kann niemals einen konstruierten Ursprung bescheinigen. Die Signatur von Koordination ist die Instandhaltung, und ein Fragment hat in dem Moment, in dem es abbrach, aufgehört, seine Instandhaltung zu bezahlen. Siebzig Jahre Streit über Trümmer waren strukturell das falsche Instrument. Nur ein funktionierendes System kann die Signatur tragen, und wir haben genau veröffentlicht, was dieser Test verlangt.",
     "predictNote": "Ehrlich eingestuft: Das Korridor-Ergebnis ist veröffentlicht und über fünf Substrate hinweg getestet. Seine Ausweitung auf Besucher ist ein Modell, eine Vorhersage, die falsch sein könnte, und wir sagen das im selben Atemzug.",
     "predictCta": "Lesen Sie die Forschung →",
+    "predictLineageCta": "Fünfzig Jahre Vorarbeiten →",
     "protocolsSepHeadline": "Erstkontakt-Protokolle",
     "protocolsSepSub": "Sechs Regeln für die Begegnung mit etwas Neuem. Aus dem CIRIS Accord.",
     "protocolsLogoAlt": "Markenlogo-Symbol",
@@ -2118,6 +2119,89 @@
     "deepBody": "Der vollständige Spezifikations-Reader, live aus der Registry gerendert: die 1+4 Primitive, die Familien und Umschlagfelder, die Kompositionsrichtlinien, der offene Namensraum, die Versionsabstammung und ein interaktiver Attestierungs-Explorer.",
     "ctaSpecReader": "Spezifikations-Reader öffnen →",
     "ctaExplore": "Baue eine Kette im Browser →"
+  },
+  "fcTheory": {
+    "kicker": "Erster Kontakt · Die Vorgeschichte",
+    "title": "Eine Herleitung in einem Feld von Vermutungen",
+    "lede": "Fünfzig Jahre lang haben ernsthafte Leute geraten, warum Besucher verborgen bleiben würden. Die Teile lagen alle auf dem Tisch. Was fehlte, war die Kette, die sie in der richtigen Reihenfolge aufnimmt. Wir haben diese Kette veröffentlicht, und wir stufen sie ehrlich ein.",
+    "seoTitle": "Theorie des Ersten Kontakts: Die Korridor-Vorhersage und fünfzig Jahre Vorarbeiten | CIRIS",
+    "seoDescription": "Zoo-Hypothese, Großer Filter, Nachhaltigkeitslösung, undichtes Embargo, Kontrollsystem, stilisierte UAP-Fakten. Die Vorarbeiten setzten die Zurückhaltung voraus. Das Korridor-Ergebnis leitet sie her, veröffentlicht die Mathematik und stuft die Behauptung ein.",
+    "s1label": "Das Rätsel",
+    "s1h2": "Alle kreisen um dieselbe Frage",
+    "s1p1": "Wenn jemand da draußen ist, warum ist der Himmel still? Und wenn etwas hier ist, warum landet es nicht offen? Jede ernsthafte Antwort muss Zurückhaltung erklären: Fähigkeit, die sich nicht ankündigt. Die Vermutungen unten umspannen fünfzig Jahre. Jede hält ein echtes Teilstück.",
+    "s2label": "Die Vorarbeiten",
+    "s2h2": "Sieben Vermutungen, eine fehlende Kette",
+    "priorArt": [
+      {
+        "name": "Die Zoo-Hypothese",
+        "meta": "John Ball, 1973",
+        "claim": "Fortgeschrittene Zivilisationen existieren und lassen uns absichtlich in Ruhe, so wie ein Ranger wilde Tiere in Ruhe lässt.",
+        "gap": "Die Zurückhaltung wird vorausgesetzt, nie erklärt. Warum sollte jede Zivilisation dieselbe Regel einhalten?"
+      },
+      {
+        "name": "Das undichte Embargo",
+        "meta": "James Deardorff, 1986",
+        "claim": "Die Nichteinmischung ist absichtlich und absichtlich unvollkommen: allmähliche Lecks, Kontakt mit Einzelnen statt mit Institutionen, eine langsame Eingewöhnung.",
+        "gap": "Die Vermutung, die dem berichteten Profil am nächsten kommt. Aber das Motiv wurde behauptet, nicht hergeleitet, und der Autor band seinen Fall später an einen nicht überprüfbaren Text. Sein Schicksal ist ein Grund, warum unsere eigene Behauptung Einstufungs-Etiketten trägt."
+      },
+      {
+        "name": "Der Große Filter",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Irgendein Schritt auf dem Weg zu sichtbarem, sternenumspannendem Leben ist sehr schwer zu schaffen. Vielleicht sterben die meisten Zivilisationen, bevor sie ihn schaffen.",
+        "gap": "Fast immer wird er rückwärts gerechnet, um die Stille zu erklären. Fast nie vorwärts: Wie müssen die Überlebenden beschaffen sein?"
+      },
+      {
+        "name": "Die Nachhaltigkeitslösung",
+        "meta": "Haqq-Misra und Baum, 2009",
+        "claim": "Unkontrolliertes Wachstum hält nicht, also wächst das, was bleibt, langsam und bleibt still. Überlebende könnten anwesend und unentdeckt sein.",
+        "gap": "Nur Ressourcenlogik. Sie begrenzt ihren Fußabdruck, nicht ihre Umgangsformen."
+      },
+      {
+        "name": "Das Kontrollsystem",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "Das Phänomen verhält sich wie ein Kontrollsystem: Mehrdeutigkeit mit Absicht, das Formen von Überzeugungen über lange Zeiträume.",
+        "gap": "Benennt das Muster, lässt den Mechanismus undurchsichtig. Ein Thermostat, ohne Erklärung, wofür er regelt."
+      },
+      {
+        "name": "Souveränität und das UFO",
+        "meta": "Wendt und Duvall, 2008",
+        "claim": "Moderne Staaten sind strukturell unfähig, das Phänomen ernst zu nehmen, weil Souveränität annimmt, dass Menschen die einzige politische Autorität halten.",
+        "gap": "Erklärt, warum Institutionen wegsehen. Es erklärt nicht, warum das Phänomen es so zu bevorzugen scheint."
+      },
+      {
+        "name": "Stilisierte UAP-Fakten",
+        "meta": "Robin Hanson, 2021",
+        "claim": "Wenn UAP Besucher sind, setzen sie eine Regel gegen Kolonisierung durch und bleiben lokal, beeindruckend, friedlich und absichtlich mehrdeutig. Hanson liest das als Domestizierung: das Zähmen einer Herde.",
+        "gap": "Die schärfste moderne Analyse, gebaut auf der Logik eines Hirten. Dieselben Beobachtungen wie unsere, entgegengesetzte Anthropologie."
+      }
+    ],
+    "s3label": "Was fehlte",
+    "s3h2": "Eine Sozialtheorie der Besucher",
+    "s3p1": "Hanson selbst benannte das Hindernis: Es gab keine plausible Sozialtheorie dazu, was Besucher wollen würden und warum. Ohne sie ist jede Vermutung eine Geschichte, die an einen Nebel angepasst wurde. Die Teile lagen fünfzig Jahre auf dem Tisch, weil nichts sie in eine Ordnung zwang.",
+    "s4label": "Die Kette",
+    "s4h2": "Von gemessener Mathematik zu einem vorhergesagten Profil",
+    "s4p1": "Unser veröffentlichtes Korridor-Ergebnis liefert die fehlende Theorie, und es wurde nicht für diese Debatte gebaut. Koordinierte Systeme überleben nur in einem schmalen Band: genug gemeinsames Ziel, um zusammen zu handeln, genug unabhängige Stimmen, um am Leben zu bleiben. Gemessen über fünf Substrate, formalisiert in Lean, veröffentlicht mit seinen Ansatzpunkten zur Widerlegung.",
+    "s4p2": "Rechnen Sie es vorwärts. Was auch immer jemand anderen erreicht, hat seine eigene Macht bereits überlebt, also hat es die Regel des Bandes eingehalten: Gegenseitigkeit, die nicht bricht, wenn die Starken auf die Schwachen treffen. Beim Kontakt sieht diese Regel wie Zurückhaltung aus. Stille Präsenz. Bestreitbarkeit, die den Glauben eine Wahl sein lässt. Erste Berührung am Boden, nicht im Palast. Das volle Profil, mit seiner Einstufung, steht auf der Seite zum Ersten Kontakt.",
+    "s4p3": "Und die Kette endet in einem Test, nicht in einer Geschichte: Wenn die Menschheit nachweisbar lernt, sich zu koordinieren, sollte der Kontakt klarer werden. Keine andere Erklärung der Zurückhaltung macht eine Vorhersage, bei der man zusehen könnte, wie sie eintrifft oder scheitert.",
+    "s5label": "Die Meinungsverschiedenheit, auf die es ankommt",
+    "s5h2": "Domestizierung oder Zustimmung",
+    "s5p1": "Die nächstliegende moderne Theorie liest denselben stillen Himmel und sagt: Sie zähmen uns, so wie ein Hirte Rinder zähmt. Der Korridor liest ihn und sagt: Sie respektieren uns, weil Respekt am Boden die Regel ist, die das Überleben auswählt. Dieselben Beobachtungen, entgegengesetzte Anthropologie. Wir halten die zweite Lesart aus einem Grund, auf den wir zeigen können: Dominanz überlebt die Umkehrungen ihrer eigenen Macht nicht, und was alt genug ist, um uns zu erreichen, hat viele davon überlebt.",
+    "s6label": "Die Disziplin",
+    "s6h2": "Warum jede Behauptung hier ein Etikett trägt",
+    "s6p1": "Dieses Feld hat sorgfältige Menschen verschluckt. Also bleiben die Hausregeln an. Das Korridor-Ergebnis ist gemessen und veröffentlicht. Seine Ausweitung auf Besucher ist ein Modell, eine Vorhersage, die falsch sein könnte. Zu einer mehrdeutigen Aktenlage zu passen ist ein schwacher Beleg. Wir behaupten für keinen Bericht eine Herkunft, in keiner Richtung. Die Etiketten sind kein Demuts-Theater. Sie sind der Preis dafür, in einem Feld überhaupt etwas zu sagen, in dem zu viel zu sagen schon immer die Art des Scheiterns war.",
+    "sourcesLabel": "Quellen",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Folgen Sie der Kette selbst.",
+    "btnPrediction": "Die Vorhersage →"
   },
   "philosophy": {
     "kicker": "CIRIS · Die Philosophie",

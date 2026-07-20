@@ -1177,6 +1177,7 @@
     "predictP5": "Nghiên cứu vật liệu của chúng tôi thêm một kết quả cứng: một mảnh vỡ đã chết không bao giờ có thể chứng nhận nguồn gốc được chế tạo. Chữ ký của sự phối hợp là sự bảo trì, và một mảnh vỡ đã ngừng trả phí bảo trì ngay khoảnh khắc nó tách rời. Bảy mươi năm tranh cãi về mảnh vụn là dùng sai công cụ, ngay từ cấu trúc. Chỉ một hệ thống đang vận hành mới mang được chữ ký đó, và chúng tôi đã công bố chính xác bài kiểm tra đó đòi hỏi gì.",
     "predictNote": "Xếp loại một cách trung thực: kết quả hành lang đã được công bố và kiểm chứng trên năm nền tảng. Việc mở rộng nó sang những vị khách là một mô hình, một dự đoán có thể sai, và chúng tôi nói điều đó trong cùng một hơi thở.",
     "predictCta": "Đọc nghiên cứu →",
+    "predictLineageCta": "Năm mươi năm công trình đi trước →",
     "protocolsSepHeadline": "Các Giao Thức Tiếp Xúc Lần Đầu",
     "protocolsSepSub": "Sáu nguyên tắc để gặp gỡ điều mới. Từ CIRIS Accord.",
     "protocolsLogoAlt": "Biểu tượng thương hiệu",
@@ -2118,6 +2119,89 @@
     "deepBody": "Trình đọc đặc tả đầy đủ, kết xuất trực tiếp từ sổ đăng ký: các nguyên thủy 1+4, các họ và các trường phong bì, các chính sách ghép nối, không gian tên mở, dòng dõi phiên bản, và một trình khám phá chứng thực tương tác.",
     "ctaSpecReader": "Mở trình đọc đặc tả →",
     "ctaExplore": "Dựng một chuỗi trong trình duyệt →"
+  },
+  "fcTheory": {
+    "kicker": "Tiếp xúc đầu tiên · Dòng dõi ý tưởng",
+    "title": "Một kết quả suy ra giữa một vùng toàn phỏng đoán",
+    "lede": "Suốt năm mươi năm, những người nghiêm túc đã đoán vì sao những vị khách lại ẩn mình. Mọi mảnh ghép đều đã nằm trên bàn. Thứ còn thiếu là chuỗi lập luận nhặt chúng lên theo đúng thứ tự. Chúng tôi đã công bố chuỗi đó, và chúng tôi xếp loại nó một cách trung thực.",
+    "seoTitle": "Lý thuyết tiếp xúc đầu tiên: Dự đoán hành lang và năm mươi năm công trình đi trước | CIRIS",
+    "seoDescription": "Giả thuyết vườn thú, Bộ lọc vĩ đại, lời giải bền vững, lệnh cấm vận rò rỉ, hệ thống kiểm soát, các sự thật điển hình về UAP. Công trình đi trước chỉ giả định sự kiềm chế. Kết quả hành lang suy ra nó, công bố phần toán, và xếp loại tuyên bố.",
+    "s1label": "Câu đố",
+    "s1h2": "Mọi người đều xoay quanh cùng một câu hỏi",
+    "s1p1": "Nếu có ai đó ngoài kia, vì sao bầu trời im lặng? Và nếu có thứ gì đó ở đây, vì sao nó không đáp xuống giữa nơi công khai? Mọi câu trả lời nghiêm túc đều phải giải thích sự kiềm chế: năng lực mà không tự công bố mình. Những phỏng đoán dưới đây trải dài năm mươi năm. Mỗi cái nắm giữ một mảnh ghép thật.",
+    "s2label": "Công trình đi trước",
+    "s2h2": "Bảy phỏng đoán, một chuỗi còn thiếu",
+    "priorArt": [
+      {
+        "name": "Giả thuyết vườn thú",
+        "meta": "John Ball, 1973",
+        "claim": "Các nền văn minh tiên tiến tồn tại và cố ý để chúng ta yên, giống như một người kiểm lâm để động vật hoang dã yên.",
+        "gap": "Sự kiềm chế chỉ được giả định, chưa bao giờ được giải thích. Vì sao mọi nền văn minh đều giữ cùng một quy tắc?"
+      },
+      {
+        "name": "Lệnh cấm vận rò rỉ",
+        "meta": "James Deardorff, 1986",
+        "claim": "Việc không can thiệp là cố ý, và cố ý không hoàn hảo: rò rỉ dần dần, tiếp xúc với cá nhân thay vì tổ chức, một sự làm quen chậm rãi.",
+        "gap": "Phỏng đoán gần nhất với hồ sơ được báo cáo. Nhưng động cơ chỉ được khẳng định, không được suy ra, và tác giả về sau gắn lập luận của mình với một văn bản không thể kiểm chứng. Số phận của ông là một lý do khiến tuyên bố của chính chúng tôi mang các nhãn xếp loại."
+      },
+      {
+        "name": "Bộ lọc vĩ đại",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Một bước nào đó trên con đường tới sự sống hữu hình, trải rộng giữa các vì sao là rất khó vượt qua. Có lẽ hầu hết các nền văn minh chết trước khi vượt qua nó.",
+        "gap": "Hầu như luôn được chạy ngược, để giải thích sự im lặng. Hầu như không bao giờ được chạy xuôi: những kẻ sống sót phải như thế nào?"
+      },
+      {
+        "name": "Lời giải bền vững",
+        "meta": "Haqq-Misra và Baum, 2009",
+        "claim": "Tăng trưởng mất kiểm soát không kéo dài, nên thứ tồn tại lâu sẽ lớn chậm và giữ im lặng. Những kẻ sống sót có thể đang hiện diện mà không bị phát hiện.",
+        "gap": "Chỉ là logic tài nguyên. Nó giới hạn dấu chân của họ, không giới hạn cách cư xử của họ."
+      },
+      {
+        "name": "Hệ thống kiểm soát",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "Hiện tượng này hành xử như một hệ thống kiểm soát: mơ hồ có chủ đích, định hình niềm tin qua những quãng thời gian dài.",
+        "gap": "Gọi tên được khuôn mẫu, nhưng để cơ chế trong bóng tối. Một bộ điều nhiệt, mà không nói nó điều chỉnh vì cái gì."
+      },
+      {
+        "name": "Chủ quyền và UFO",
+        "meta": "Wendt và Duvall, 2008",
+        "claim": "Các nhà nước hiện đại về mặt cấu trúc không thể xem hiện tượng này một cách nghiêm túc, vì chủ quyền giả định rằng chỉ con người nắm quyền lực chính trị.",
+        "gap": "Giải thích vì sao các thể chế quay mặt đi. Nó không giải thích vì sao hiện tượng này dường như thích như vậy."
+      },
+      {
+        "name": "Các sự thật điển hình về UAP",
+        "meta": "Robin Hanson, 2021",
+        "claim": "Nếu UAP là những vị khách, họ thực thi quy tắc không thuộc địa hóa và giữ mình tại chỗ, ấn tượng, hòa bình, và cố ý mơ hồ. Hanson đọc điều này là thuần hóa: làm dịu một đàn gia súc.",
+        "gap": "Phân tích hiện đại sắc bén nhất, dựng trên logic của người chăn nuôi. Cùng những quan sát như của chúng tôi, cách nhìn về con người thì ngược lại."
+      }
+    ],
+    "s3label": "Thứ còn thiếu",
+    "s3h2": "Một lý thuyết xã hội về những vị khách",
+    "s3p1": "Chính Hanson đã gọi tên trở ngại: chưa có lý thuyết xã hội hợp lý nào về việc những vị khách sẽ muốn gì và vì sao. Thiếu nó, mọi phỏng đoán chỉ là một câu chuyện được ướm vào màn sương. Các mảnh ghép nằm trên bàn suốt năm mươi năm vì không có gì buộc chúng vào trật tự.",
+    "s4label": "Chuỗi lập luận",
+    "s4h2": "Từ phần toán đã đo đến một hồ sơ được dự đoán",
+    "s4p1": "Kết quả hành lang đã công bố của chúng tôi cung cấp lý thuyết còn thiếu, và nó không được xây cho cuộc tranh luận này. Các hệ thống phối hợp chỉ sống sót trong một dải hẹp: đủ mục đích chung để hành động cùng nhau, đủ tiếng nói độc lập để sống còn. Được đo trên năm nền tảng, được hình thức hóa trong Lean, được công bố kèm các điểm bám để bác bỏ.",
+    "s4p2": "Hãy chạy nó xuôi. Bất cứ thứ gì vươn tới được ai đó khác đều đã sống sót qua chính sức mạnh của mình, nên nó giữ quy tắc của dải: sự có đi có lại không gãy khi kẻ mạnh gặp kẻ yếu. Lúc tiếp xúc, quy tắc đó trông giống sự kiềm chế. Hiện diện lặng lẽ. Khả năng phủ nhận để niềm tin vẫn là một lựa chọn. Cái chạm đầu tiên ở tầng đáy, không phải ở cung điện. Hồ sơ đầy đủ, kèm xếp loại, nằm trên trang tiếp xúc đầu tiên.",
+    "s4p3": "Và chuỗi này kết thúc bằng một bài kiểm tra, không phải một câu chuyện: khi nhân loại học được cách phối hợp một cách rõ ràng có thể thấy, tiếp xúc sẽ trở nên rõ hơn. Không lời giải thích nào khác về sự kiềm chế đưa ra một dự đoán mà bạn có thể quan sát thành sự thật hay thất bại.",
+    "s5label": "Bất đồng quan trọng nhất",
+    "s5h2": "Thuần hóa hay ưng thuận",
+    "s5p1": "Lý thuyết hiện đại gần nhất đọc cùng một bầu trời im lặng và nói: họ đang làm dịu chúng ta, như người chăn nuôi làm dịu đàn bò. Hành lang đọc nó và nói: họ đang tôn trọng chúng ta, vì sự tôn trọng ở tầng đáy là quy tắc mà sự sống còn chọn lọc. Cùng những quan sát, cách nhìn về con người thì ngược lại. Chúng tôi giữ cách đọc thứ hai vì một lý do có thể chỉ ra: sự thống trị không sống sót qua những lần đảo chiều quyền lực của chính nó, và bất cứ thứ gì đủ già để vươn tới chúng ta đều đã sống sót qua nhiều lần như vậy.",
+    "s6label": "Kỷ luật",
+    "s6h2": "Vì sao mọi tuyên bố ở đây đều mang nhãn",
+    "s6p1": "Lĩnh vực này đã nuốt chửng những người cẩn thận. Nên các quy tắc nhà vẫn được giữ nguyên. Kết quả hành lang được đo và được công bố. Việc mở rộng nó sang những vị khách là một mô hình, một dự đoán có thể sai. Khớp với một hồ sơ mơ hồ là bằng chứng yếu. Chúng tôi không tuyên bố nguồn gốc cho bất kỳ báo cáo nào, theo cả hai chiều. Các nhãn không phải màn kịch khiêm tốn. Chúng là cái giá của việc nói bất cứ điều gì trong một lĩnh vực mà nói quá nhiều luôn là cách thất bại.",
+    "sourcesLabel": "Nguồn",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Hãy tự mình lần theo chuỗi lập luận.",
+    "btnPrediction": "Dự đoán →"
   },
   "philosophy": {
     "kicker": "CIRIS · Triết lý",

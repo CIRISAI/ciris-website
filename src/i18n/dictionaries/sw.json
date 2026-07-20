@@ -1177,6 +1177,7 @@
     "predictP5": "Utafiti wetu wa vifaa unaongeza matokeo moja magumu: kipande kilichokufa hakiwezi kamwe kuthibitisha chanzo kilichoundwa kwa uhandisi. Sahihi ya uratibu ni utunzaji, na kipande kiliacha kulipa utunzaji wake wakati ule ule kilipomeguka. Miaka sabini ya kubishana juu ya vipande ilikuwa chombo kisicho sahihi, kimuundo. Ni mfumo unaofanya kazi pekee unaoweza kubeba sahihi hiyo, na tumechapisha hasa kile jaribio hilo linachohitaji.",
     "predictNote": "Daraja limetolewa kwa uaminifu: matokeo ya ukanda yamechapishwa na kupimwa katika vitu vitano tofauti kabisa. Kuupanua hadi kwa wageni ni modeli, utabiri unaoweza kukosea, na tunasema hivyo katika pumzi ile ile.",
     "predictCta": "Soma utafiti →",
+    "predictLineageCta": "Miaka hamsini ya kazi za awali →",
     "protocolsSepHeadline": "Itifaki za Mawasiliano ya Kwanza",
     "protocolsSepSub": "Sheria sita za kukutana na kitu kipya. Kutoka kwa Mkataba wa CIRIS.",
     "protocolsLogoAlt": "Nembo ya chapa",
@@ -2118,6 +2119,89 @@
     "deepBody": "Kisomaji kamili cha maelezo, kinachoonyeshwa moja kwa moja kutoka kwa rejista: primitivi za 1+4, familia na sehemu za bahasha, sera za muundo, nafasi ya majina huria, mfululizo wa matoleo, na kichunguzi shirikishi cha uthibitisho.",
     "ctaSpecReader": "Fungua kisomaji cha maelezo →",
     "ctaExplore": "Jenga mnyororo kwenye kivinjari →"
+  },
+  "fcTheory": {
+    "kicker": "Mawasiliano ya kwanza · Nasaba ya mawazo",
+    "title": "Hitimisho la hatua kwa hatua katika uwanja wa makisio",
+    "lede": "Kwa miaka hamsini, watu makini wamekisia kwa nini wageni wangebaki wamejificha. Vipande vyote vilikuwa mezani. Kilichokosekana ni mnyororo unaoviokota kwa mpangilio sahihi. Tulichapisha mnyororo huo, na tunaupa daraja kwa uaminifu.",
+    "seoTitle": "Nadharia ya Mawasiliano ya Kwanza: Utabiri wa Ukanda na Miaka Hamsini ya Kazi za Awali | CIRIS",
+    "seoDescription": "Dhana ya mbuga ya wanyama, Kichujio Kikuu, suluhisho la uendelevu, marufuku inayovuja, mfumo wa udhibiti, ukweli wa UAP uliorahisishwa. Kazi za awali zilidai kwamba kujizuia kupo. Matokeo ya ukanda yanaonyesha hatua kwa hatua sababu yake, yanachapisha hesabu, na yanalipa dai hilo daraja.",
+    "s1label": "Kitendawili",
+    "s1h2": "Kila mtu anazunguka swali lile lile",
+    "s1p1": "Kama kuna yeyote huko nje, kwa nini anga iko kimya? Na kama kuna kitu hapa, kwa nini hakitui hadharani? Kila jibu makini lazima lieleze kujizuia: uwezo usiojitangaza. Makisio yaliyo hapa chini yanaenea miaka hamsini. Kila moja lina kipande halisi.",
+    "s2label": "Kazi za awali",
+    "s2h2": "Makisio saba, mnyororo mmoja uliokosekana",
+    "priorArt": [
+      {
+        "name": "Dhana ya mbuga ya wanyama",
+        "meta": "John Ball, 1973",
+        "claim": "Ustaarabu ulioendelea upo huko nje, nao unatuacha kwa makusudi, kama vile mlinzi wa mbuga anavyowaacha wanyamapori.",
+        "gap": "Kujizuia huko kumedaiwa tu, hakujaelezwa kamwe. Kwa nini kila ustaarabu ungeshika kanuni ile ile?"
+      },
+      {
+        "name": "Marufuku inayovuja",
+        "meta": "James Deardorff, 1986",
+        "claim": "Kutokuingilia huko ni kwa makusudi, na kwa makusudi hakukamiliki: uvujaji wa taratibu, mawasiliano na watu binafsi badala ya taasisi, kuzoea polepole.",
+        "gap": "Kisio lililo karibu zaidi na wasifu ulioripotiwa. Lakini sababu ilitajwa tu, haikutolewa hatua kwa hatua, na baadaye mwandishi alifunga hoja yake kwenye andiko lisiloweza kuthibitishwa. Hatima yake ni sababu mojawapo inayofanya dai letu wenyewe livae lebo za daraja."
+      },
+      {
+        "name": "Kichujio Kikuu",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Hatua fulani kwenye njia ya kuelekea maisha yanayoonekana na kuenea kwenye nyota ni ngumu sana kupita. Labda ustaarabu mwingi hufa kabla ya kuipita.",
+        "gap": "Karibu kila mara hutumika kurudi nyuma, kueleza ukimya. Karibu kamwe hautumiki kwenda mbele: waokokaji watakuwa wa namna gani?"
+      },
+      {
+        "name": "Suluhisho la uendelevu",
+        "meta": "Haqq-Misra na Baum, 2009",
+        "claim": "Ukuaji usiozuilika haudumu, kwa hivyo kinachodumu hukua polepole na kukaa kimya. Waokokaji wangeweza kuwepo hapa bila kugunduliwa.",
+        "gap": "Mantiki ya rasilimali tu. Inaweka mpaka wa nyayo zao, si adabu zao."
+      },
+      {
+        "name": "Mfumo wa udhibiti",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "Jambo hili linajiendesha kama mfumo wa udhibiti: utata kwa makusudi, likiunda imani kwa vipindi virefu vya wakati.",
+        "gap": "Linaitaja ruwaza, lakini linaacha utaratibu gizani. Ni kama thermostat isiyoeleza inadhibiti kwa ajili ya nini."
+      },
+      {
+        "name": "Mamlaka kuu na UFO",
+        "meta": "Wendt na Duvall, 2008",
+        "claim": "Mataifa ya kisasa, kwa muundo wake, hayawezi kulichukulia jambo hili kwa uzito, kwa sababu mamlaka kuu inadhani binadamu ndio pekee wenye mamlaka ya kisiasa.",
+        "gap": "Inaeleza kwa nini taasisi zinatazama pembeni. Haielezi kwa nini jambo lenyewe linaonekana kupendelea hali hiyo."
+      },
+      {
+        "name": "Ukweli wa UAP uliorahisishwa",
+        "meta": "Robin Hanson, 2021",
+        "claim": "Kama UAP ni wageni, wanatekeleza kanuni ya kutokoloni, na wanabaki karibu, wa kuvutia, wenye amani, na wenye utata kwa makusudi. Hanson analisoma hili kama ufugaji: kulainisha kundi la mifugo.",
+        "gap": "Uchambuzi mkali zaidi wa kisasa, uliojengwa juu ya mantiki ya mfugaji. Uchunguzi ule ule kama wetu, anthropolojia iliyo kinyume."
+      }
+    ],
+    "s3label": "Kilichokosekana",
+    "s3h2": "Nadharia ya kijamii ya wageni",
+    "s3p1": "Hanson mwenyewe alikitaja kizuizi: hapakuwa na nadharia ya kijamii yenye kuaminika ya kile wageni wangetaka na kwa nini. Bila hiyo, kila kisio ni hadithi iliyoshonwa juu ya ukungu. Vipande vilikaa mezani kwa miaka hamsini kwa sababu hakuna kilichovilazimisha kupangika.",
+    "s4label": "Mnyororo",
+    "s4h2": "Kutoka hesabu iliyopimwa hadi wasifu uliotabiriwa",
+    "s4p1": "Matokeo yetu ya ukanda yaliyochapishwa yanatoa nadharia iliyokosekana, na hayakujengwa kwa ajili ya mjadala huu. Mifumo inayoratibiwa huishi tu ndani ya ukanda mwembamba: kusudi la pamoja la kutosha kutenda pamoja, sauti huru za kutosha kubaki hai. Yamepimwa katika vitu vitano tofauti kabisa, yamerasimishwa katika Lean, yamechapishwa pamoja na njia zake za kukanushwa.",
+    "s4p2": "Yaendeshe mbele. Chochote kinachomfikia mwingine tayari kimeokoka nguvu zake chenyewe, kwa hivyo kilishika kanuni ya ukanda: kubadilishana kusikovunjika wakati wenye nguvu wanapokutana na wanyonge. Wakati wa mawasiliano, kanuni hiyo inaonekana kama kujizuia. Uwepo wa kimya. Uwezekano wa kukanusha unaoacha imani kuwa chaguo. Mguso wa kwanza chini kabisa, si ikulu. Wasifu kamili, pamoja na daraja lake, uko kwenye ukurasa wa mawasiliano ya kwanza.",
+    "s4p3": "Na mnyororo unaishia kwenye jaribio, si hadithi: kadiri binadamu wanavyojifunza kuratibu kwa njia inayoonekana, mawasiliano yanapaswa kuwa wazi zaidi. Hakuna maelezo mengine ya kujizuia huko yanayotoa utabiri unaoweza kuutazama ukitimia au ukishindwa.",
+    "s5label": "Kutokubaliana muhimu",
+    "s5h2": "Ufugaji au ridhaa",
+    "s5p1": "Nadharia ya kisasa iliyo karibu zaidi inasoma anga ile ile ya kimya na kusema: wanatulainisha, kama mfugaji anavyolainisha ng'ombe. Ukanda unaisoma na kusema: wanatuheshimu, kwa sababu heshima kwa walio chini ndiyo kanuni ambayo kuokoka kunaichagua. Uchunguzi ule ule, anthropolojia iliyo kinyume. Tunashika usomaji wa pili kwa sababu tunayoweza kuionyesha: utawala wa nguvu hauokoki mabadiliko ya nguvu zake wenyewe, na chochote kilicho na umri wa kutosha kutufikia kimeokoka mabadiliko mengi.",
+    "s6label": "Nidhamu",
+    "s6h2": "Kwa nini kila dai hapa linavaa lebo",
+    "s6p1": "Uwanja huu umewameza watu makini. Kwa hivyo kanuni za nyumbani zinabaki. Matokeo ya ukanda yamepimwa na kuchapishwa. Kuyapanua hadi kwa wageni ni modeli, utabiri unaoweza kukosea. Kulingana na rekodi yenye utata ni ushahidi dhaifu. Hatudai asili ya ripoti yoyote, kwa upande wowote ule. Lebo hizi si tamthilia ya unyenyekevu. Ni gharama ya kusema chochote katika uwanja ambako kusema kupita kiasi kumekuwa daima njia ya kushindwa.",
+    "sourcesLabel": "Vyanzo",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Fuata mnyororo wewe mwenyewe.",
+    "btnPrediction": "Utabiri →"
   },
   "philosophy": {
     "kicker": "CIRIS · Falsafa",

@@ -1177,6 +1177,7 @@
     "predictP5": "Bincikenmu kan kayan halitta yana ƙara sakamako guda mai ƙarfi: guntun da ya mutu ba zai taɓa tabbatar da asalin da aka ƙera ba. Sa hannun haɗin kai shi ne kulawa, kuma guntu ya daina biyan kulawarsa daidai lokacin da ya ɓalle. Shekaru saba'in na jayayya a kan tarkace kayan aiki ne mara kyau, ta fuskar tsari. Tsarin da ke aiki ne kaɗai zai iya ɗaukar sa hannun, kuma mun wallafa ainihin abin da wannan gwajin yake bukata.",
     "predictNote": "An ba da daraja da gaskiya: sakamakon corridor an wallafa shi kuma an gwada shi a kan abubuwa guda biyar daban-daban. Faɗaɗa shi zuwa baƙi samfuri ne, hasashe da ka iya zama kuskure, kuma muna faɗin haka a cikin numfashi guda.",
     "predictCta": "Karanta binciken →",
+    "predictLineageCta": "Shekaru hamsin na ayyukan da suka gabata →",
     "protocolsSepHeadline": "Ka'idojin Saduwa ta Farko",
     "protocolsSepSub": "Ka'idoji shida don haduwa da wani abu sabon. Daga CIRIS Accord.",
     "protocolsLogoAlt": "Alamar tambarin kamfani",
@@ -2118,6 +2119,89 @@
     "deepBody": "Cikakken mai karanta takardun bayani, da aka nuna kai tsaye daga rajista: na'urorin 1+4 na asali, iyalai da filayen ambulan, manufofin hadawa, sararin suna a bude, jerin gado na sigogi, da mai bincike na tabbatarwa mai hulda.",
     "ctaSpecReader": "Bude mai karanta takardun bayani →",
     "ctaExplore": "Gina sarka cikin birawsa →"
+  },
+  "fcTheory": {
+    "kicker": "Saduwa ta farko · Zuriyar tunani",
+    "title": "Sakamakon da aka fitar mataki-mataki a cikin filin kintace",
+    "lede": "Tsawon shekaru hamsin, mutane masu zurfin tunani suna ta kintaton dalilin da ya sa baƙi za su kasance a ɓoye. Duk guntuwar suna nan a kan tebur. Abin da ya ɓace shi ne sarƙar da za ta ɗauke su bisa tsari daidai. Mun wallafa wannan sarƙa, kuma muna ba ta daraja da gaskiya.",
+    "seoTitle": "Ka'idar Saduwa ta Farko: Hasashen Corridor da Shekaru Hamsin na Ayyukan da Suka Gabata | CIRIS",
+    "seoDescription": "Hasashen gidan namun daji, Babban Matattara, maganin dorewa, takunkumin da ke yoyo, tsarin sarrafawa, taƙaitattun bayanan UAP. Ayyukan da suka gabata sun ɗauka cewa akwai kamun kai. Sakamakon corridor ya fitar da shi mataki-mataki, ya wallafa lissafin, kuma ya ba da'awar daraja.",
+    "s1label": "Kacici-kacici",
+    "s1h2": "Kowa yana kewaya tambaya ɗaya",
+    "s1p1": "Idan akwai wani a can, me ya sa sararin sama yake shiru? Kuma idan akwai wani abu a nan, me ya sa ba ya sauka a fili? Kowace amsa ta gaske dole ta bayyana kamun kai: iyawa da ba ta sanar da kanta. Kintace-kintacen da ke ƙasa sun kai shekaru hamsin. Kowanne yana riƙe da guntu na gaske.",
+    "s2label": "Ayyukan da suka gabata",
+    "s2h2": "Kintace bakwai, sarƙa ɗaya da ta ɓace",
+    "priorArt": [
+      {
+        "name": "Hasashen gidan namun daji",
+        "meta": "John Ball, 1973",
+        "claim": "Wayewa masu ci gaba suna nan, kuma da gangan suke barin mu, kamar yadda mai gadin daji yake barin namun daji.",
+        "gap": "An ɗauka cewa akwai kamun kai, ba a taɓa bayyana shi ba. Me zai sa kowace wayewa ta riƙe doka ɗaya?"
+      },
+      {
+        "name": "Takunkumin da ke yoyo",
+        "meta": "James Deardorff, 1986",
+        "claim": "Rashin tsoma bakin da gangan ne, kuma da gangan aka bar shi ba cikakke ba: yoyo a hankali, saduwa da daidaikun mutane maimakon hukumomi, sabawa a sannu-sannu.",
+        "gap": "Kintacen da ya fi kusa da siffar da aka ruwaito. Amma an faɗi dalilin ne kawai, ba a fitar da shi mataki-mataki ba, kuma daga baya marubucin ya danganta hujjarsa da wani rubutu da ba a iya tabbatarwa. Ƙaddararsa na ɗaya daga cikin dalilan da suka sa da'awarmu take sanye da alamomin daraja."
+      },
+      {
+        "name": "Babban Matattara",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Wani mataki a kan hanyar zuwa rayuwar da ake iya gani, mai ratsa taurari, yana da wuyar wucewa ƙwarai. Wataƙila yawancin wayewa suna mutuwa kafin su wuce shi.",
+        "gap": "Kusan kullum ana gudanar da shi baya-baya, don bayyana shirun. Kusan ba a taɓa gudanar da shi gaba ba: yaya waɗanda suka tsira za su kasance?"
+      },
+      {
+        "name": "Maganin dorewa",
+        "meta": "Haqq-Misra da Baum, 2009",
+        "claim": "Ci gaban da ya wuce gona da iri ba ya daɗewa, don haka abin da ya dore yana girma a hankali kuma yana zaman shiru. Waɗanda suka tsira suna iya kasancewa a nan ba tare da an gano su ba.",
+        "gap": "Dabarar albarkatu kawai. Tana iyakance sawunsu, ba ladabinsu ba."
+      },
+      {
+        "name": "Tsarin sarrafawa",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "Al'amarin yana nuna hali kamar tsarin sarrafawa: rashin tabbas da gangan, yana gyara imani a tsawon lokaci mai yawa.",
+        "gap": "Ya ambaci salon, ya bar hanyar aiki a duhu. Kamar thermostat ne, ba tare da bayanin abin da yake daidaitawa dominsa ba."
+      },
+      {
+        "name": "Ikon mulki da UFO",
+        "meta": "Wendt da Duvall, 2008",
+        "claim": "Ƙasashen zamani, saboda tsarinsu, ba za su iya ɗaukar al'amarin da muhimmanci ba, domin ikon mulki yana ɗauka cewa mutane ne kaɗai suke riƙe da ikon siyasa.",
+        "gap": "Yana bayyana dalilin da ya sa hukumomi suke kau da kai. Ba ya bayyana dalilin da ya sa al'amarin yake kama da yana son a kasance haka."
+      },
+      {
+        "name": "Taƙaitattun bayanan UAP",
+        "meta": "Robin Hanson, 2021",
+        "claim": "Idan UAP baƙi ne, suna aiwatar da dokar hana mulkin mallaka, kuma suna nan kusa, masu burgewa, masu lumana, masu rashin tabbas da gangan. Hanson yana ɗaukar wannan a matsayin mai da namun gida: lallashin garke.",
+        "gap": "Bincike mafi kaifi na zamani, wanda aka gina a kan tunanin makiyayi. Abubuwan lura ɗaya da namu, amma fahimtar ɗan adam ta akasi."
+      }
+    ],
+    "s3label": "Abin da ya ɓace",
+    "s3h2": "Ka'idar zamantakewa game da baƙin",
+    "s3p1": "Hanson da kansa ya ambaci matsalar: babu wata ka'idar zamantakewa mai gamsarwa game da abin da baƙi za su so da kuma dalilinsa. Ba tare da ita ba, kowane kintace labari ne da aka ɗinka a kan hazo. Guntuwar sun zauna a kan tebur tsawon shekaru hamsin domin babu abin da ya tilasta musu tsari.",
+    "s4label": "Sarƙar",
+    "s4h2": "Daga lissafin da aka auna zuwa siffar da aka yi hasashenta",
+    "s4p1": "Sakamakon corridor da muka wallafa yana ba da ka'idar da ta ɓace, kuma ba don wannan muhawara aka gina shi ba. Tsare-tsaren da ke aiki tare suna rayuwa ne kawai a cikin wani kunkuntar zango: manufa ta bai ɗaya da ta isa a yi aiki tare, muryoyi masu zaman kansu da suka isa a ci gaba da rayuwa. An auna shi a kan abubuwa guda biyar daban-daban, an rubuta shi bisa ƙa'ida a cikin Lean, an wallafa shi tare da hanyoyin karyata shi.",
+    "s4p2": "Gudanar da shi gaba. Duk abin da ya kai ga wani, ya riga ya tsira daga ikonsa na kansa, don haka ya riƙe dokar zangon: musaya da ba ta karye lokacin da mai ƙarfi ya sadu da mai rauni. A lokacin saduwa, wannan doka tana kama da kamun kai. Kasancewa a shiru. Damar musu da take barin imani ya zama zaɓi. Taɓawa ta farko a ƙasa, ba a fada ba. Cikakkiyar siffar, tare da darajarta, tana kan shafin saduwa ta farko.",
+    "s4p3": "Kuma sarƙar tana ƙarewa a kan gwaji, ba labari ba: yayin da ɗan adam yake ƙara koyon aiki tare a fili, saduwa ya kamata ta ƙara bayyana. Babu wani bayanin kamun kai da yake yin hasashen da za ka iya kallo ya tabbata ko ya kasa.",
+    "s5label": "Saɓanin da ke da muhimmanci",
+    "s5h2": "Mai da namun gida ko yarda",
+    "s5p1": "Ka'idar zamani mafi kusa tana karanta sararin sama ɗaya mai shiru ta ce: suna lallashin mu ne, kamar yadda makiyayi yake lallashin shanu. Corridor yana karanta shi ya ce: suna girmama mu ne, domin girmamawa ga waɗanda ke ƙasa ita ce dokar da tsira take zaɓa. Abubuwan lura ɗaya, fahimtar ɗan adam ta akasi. Muna riƙe da karatu na biyu saboda dalilin da za mu iya nunawa: danniya ba ta tsira daga juyawar ikonta, kuma duk abin da ya tsufa har ya kai gare mu ya tsira daga juyawa da yawa.",
+    "s6label": "Horo",
+    "s6h2": "Dalilin da ya sa kowace da'awa a nan take sanye da alama",
+    "s6p1": "Wannan fanni ya haɗiye mutane masu hankali. Don haka dokokin gida suna nan a kunne. Sakamakon corridor an auna shi kuma an wallafa shi. Faɗaɗa shi zuwa baƙi samfuri ne, hasashe da ka iya zama kuskure. Dacewa da rikodin da ba ta bayyana sarai ba shaida ce mai rauni. Ba mu da'awar asalin kowane rahoto, a kowace fuska. Alamomin ba wasan kwaikwayon tawali'u ba ne. Su ne kuɗin faɗin kome a fanni inda faɗin abin da ya wuce kima ya kasance koyaushe hanyar gazawa.",
+    "sourcesLabel": "Majiyoyi",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Ka bi sarƙar da kanka.",
+    "btnPrediction": "Hasashen →"
   },
   "philosophy": {
     "kicker": "CIRIS · Falsafar",

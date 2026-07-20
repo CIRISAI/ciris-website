@@ -4,6 +4,124 @@ export const MARKETING_OG: Record<
   string,
   Record<string, { title: string; description: string }>
 > = {
+  "/first-contact/theory": {
+    "en": {
+      "title": "First-Contact Theory: The Corridor Prediction and Fifty Years of Prior Art | CIRIS",
+      "description": "Zoo hypothesis, Great Filter, sustainability solution, leaky embargo, control system, stylized UAP facts. The prior art posited the restraint. The corridor result derives it, publishes the math, and grades the claim."
+    },
+    "am": {
+      "title": "የመጀመሪያ ግንኙነት ንድፈ ሐሳብ፦ የኮሪደሩ ትንበያ እና የሃምሳ ዓመታት ቀደምት ሥራ | CIRIS",
+      "description": "የመካነ አራዊት መላምት፣ ታላቁ ማጣሪያ፣ የዘላቂነት መፍትሔ፣ የሚያፈስ እገዳ፣ የመቆጣጠሪያ ሥርዓት፣ የተጠቃለሉ የUAP እውነታዎች። ቀደምት ሥራው ራስን መግዛቱን ገምቶ አስቀመጠው። የኮሪደሩ ውጤት ይመዝዘዋል፣ ሒሳቡን ያሳትማል፣ ለአባባሉም ደረጃ ይሰጣል።"
+    },
+    "ha": {
+      "title": "Ka'idar Saduwa ta Farko: Hasashen Corridor da Shekaru Hamsin na Ayyukan da Suka Gabata | CIRIS",
+      "description": "Hasashen gidan namun daji, Babban Matattara, maganin dorewa, takunkumin da ke yoyo, tsarin sarrafawa, taƙaitattun bayanan UAP. Ayyukan da suka gabata sun ɗauka cewa akwai kamun kai. Sakamakon corridor ya fitar da shi mataki-mataki, ya wallafa lissafin, kuma ya ba da'awar daraja."
+    },
+    "yo": {
+      "title": "Ìmọ̀ Ẹ̀kọ́ Ìpàdé Àkọ́kọ́: Àsọtẹ́lẹ̀ Ọ̀nà-ẹnu-ọ̀pọ̀ àti Àádọ́ta Ọdún Iṣẹ́ Ìṣáájú | CIRIS",
+      "description": "Àbá ọgbà ẹranko, Àsẹ́ Ńlá, ojútùú alálòpẹ́, ìfòfindè tí ń jò, ètò ìdarí, àwọn òtítọ́ UAP ní ṣókí. Àwọn iṣẹ́ ìṣáájú gbà pé ìkóra-ẹni-níjàánu wà. Àbájáde ọ̀nà-ẹnu-ọ̀pọ̀ fà á yọ, ó tẹ ìṣirò rẹ̀ jáde, ó sì ṣe ìpele ọ̀rọ̀ tí ó sọ."
+    },
+    "sw": {
+      "title": "Nadharia ya Mawasiliano ya Kwanza: Utabiri wa Ukanda na Miaka Hamsini ya Kazi za Awali | CIRIS",
+      "description": "Dhana ya mbuga ya wanyama, Kichujio Kikuu, suluhisho la uendelevu, marufuku inayovuja, mfumo wa udhibiti, ukweli wa UAP uliorahisishwa. Kazi za awali zilidai kwamba kujizuia kupo. Matokeo ya ukanda yanaonyesha hatua kwa hatua sababu yake, yanachapisha hesabu, na yanalipa dai hilo daraja."
+    },
+    "ta": {
+      "title": "முதல் தொடர்பு கோட்பாடு: தாழ்வாரக் கணிப்பும் ஐம்பது ஆண்டுகளின் முந்தைய ஆய்வுகளும் | CIRIS",
+      "description": "மிருகக்காட்சிசாலைக் கருதுகோள், பெரும் வடிகட்டி, நிலைத்தன்மைத் தீர்வு, கசிவுள்ள தடை, கட்டுப்பாட்டு அமைப்பு, UAP பற்றிய பொது உண்மைகள். முந்தைய ஆய்வுகள் இந்தத் தன்னடக்கத்தை வெறுமனே அனுமானித்தன. தாழ்வார முடிவு அதைப் படிப்படியாகப் பெற்று, கணிதத்தை வெளியிட்டு, உரிமைகோரலுக்கு மதிப்பீடு இடுகிறது."
+    },
+    "te": {
+      "title": "మొదటి సంప్రదింపు సిద్ధాంతం: మార్గం అంచనా మరియు యాభై ఏళ్ల మునుపటి పరిశోధన | CIRIS",
+      "description": "జూ పరికల్పన, గ్రేట్ ఫిల్టర్, సుస్థిరత పరిష్కారం, లీకయ్యే నిషేధం, నియంత్రణ వ్యవస్థ, UAP గురించి స్థూల వాస్తవాలు. మునుపటి పరిశోధన ఈ నిగ్రహాన్ని ఊహగా తీసుకుంది. మార్గం ఫలితం దాన్ని లెక్కతో రాబట్టి, గణితాన్ని ప్రచురించి, వాదనకు గ్రేడ్ ఇస్తుంది."
+    },
+    "mr": {
+      "title": "पहिल्या संपर्काचा सिद्धांत: कॉरिडॉर भाकीत आणि पन्नास वर्षांचे आधीचे संशोधन | CIRIS",
+      "description": "प्राणीसंग्रहालय गृहीतक, ग्रेट फिल्टर, शाश्वततेचा उपाय, गळकी बंदी, नियंत्रण प्रणाली, UAP ची ढोबळ तथ्ये. आधीच्या संशोधनाने हा संयम गृहीत धरला. कॉरिडॉरचा निकाल तो पायरीपायरीने काढतो, गणित प्रकाशित करतो, आणि दाव्याला दर्जा देतो."
+    },
+    "pa": {
+      "title": "ਪਹਿਲੇ ਸੰਪਰਕ ਦੀ ਥਿਊਰੀ: ਗਲਿਆਰੇ ਦੀ ਭਵਿੱਖਬਾਣੀ ਅਤੇ ਪੰਜਾਹ ਸਾਲਾਂ ਦੇ ਪੁਰਾਣੇ ਵਿਚਾਰ | CIRIS",
+      "description": "ਚਿੜੀਆਘਰ ਵਾਲੀ ਧਾਰਨਾ, ਮਹਾਨ ਛਾਣਨੀ, ਟਿਕਾਊਪਣ ਵਾਲਾ ਹੱਲ, ਚੋਂਦੀ ਪਾਬੰਦੀ, ਕੰਟਰੋਲ ਸਿਸਟਮ, UAP ਦੇ ਮੋਟੇ ਤੱਥ। ਪੁਰਾਣੇ ਵਿਚਾਰਾਂ ਨੇ ਸੰਜਮ ਨੂੰ ਬੱਸ ਮੰਨ ਲਿਆ। ਗਲਿਆਰੇ ਦਾ ਨਤੀਜਾ ਇਸਨੂੰ ਕੱਢ ਕੇ ਦਿਖਾਉਂਦਾ ਹੈ, ਹਿਸਾਬ ਛਾਪਦਾ ਹੈ, ਅਤੇ ਦਾਅਵੇ ਨੂੰ ਦਰਜਾ ਦਿੰਦਾ ਹੈ।"
+    },
+    "my": {
+      "title": "ပထမဆုံးအဆက်အသွယ် သီအိုရီ: လမ်းကြောင်းခန့်မှန်းချက်နှင့် နှစ်ငါးဆယ်ကြာ ရှေ့ပြေးအတွေးအမြင်များ | CIRIS",
+      "description": "တိရစ္ဆာန်ရုံ ယူဆချက်၊ ကြီးမြတ်သောစစ်ထုတ်မှု၊ ရေရှည်တည်တံ့မှုအဖြေ၊ ယိုစိမ့်နေသောပိတ်ပင်မှု၊ ထိန်းချုပ်မှုစနစ်၊ UAP ၏ ထင်ရှားသောအချက်များ။ ရှေ့ပြေးအတွေးအမြင်များက ချုပ်တည်းမှုကို ယူဆထားရုံသာ ဖြစ်သည်။ လမ်းကြောင်းရလဒ်က ၎င်းကို တွက်ထုတ်ပြီး သင်္ချာကို ထုတ်ဝေကာ အဆိုကို အဆင့်သတ်မှတ်သည်။"
+    },
+    "bn": {
+      "title": "প্রথম যোগাযোগের তত্ত্ব: করিডোর পূর্বাভাস এবং পঞ্চাশ বছরের আগের গবেষণা | CIRIS",
+      "description": "চিড়িয়াখানা অনুমান, গ্রেট ফিল্টার, টেকসইতার সমাধান, ছিদ্রযুক্ত নিষেধাজ্ঞা, নিয়ন্ত্রণ ব্যবস্থা, UAP-এর মোটা দাগের তথ্য। আগের গবেষণা এই সংযমকে ধরে নিয়েছিল। করিডোর ফলাফল তা ধাপে ধাপে বের করে, অঙ্কটা প্রকাশ করে, এবং দাবিটির গ্রেড দেয়।"
+    },
+    "hi": {
+      "title": "पहली मुलाकात का सिद्धांत: गलियारे का पूर्वानुमान और पचास साल का पहले का काम | CIRIS",
+      "description": "चिड़ियाघर परिकल्पना, महान फ़िल्टर, टिकाऊपन का हल, रिसती हुई पाबंदी, नियंत्रण प्रणाली, UAP के सामान्य तथ्य। पहले के काम ने संयम को मान लिया था। गलियारे का नतीजा उसे गणित से निकालता है, गणित प्रकाशित करता है, और दावे को दर्जा देता है।"
+    },
+    "vi": {
+      "title": "Lý thuyết tiếp xúc đầu tiên: Dự đoán hành lang và năm mươi năm công trình đi trước | CIRIS",
+      "description": "Giả thuyết vườn thú, Bộ lọc vĩ đại, lời giải bền vững, lệnh cấm vận rò rỉ, hệ thống kiểm soát, các sự thật điển hình về UAP. Công trình đi trước chỉ giả định sự kiềm chế. Kết quả hành lang suy ra nó, công bố phần toán, và xếp loại tuyên bố."
+    },
+    "id": {
+      "title": "Teori Kontak Pertama: Prediksi Koridor dan Lima Puluh Tahun Karya Terdahulu | CIRIS",
+      "description": "Hipotesis kebun binatang, Saringan Besar, solusi keberlanjutan, embargo yang bocor, sistem kendali, fakta ringkas UAP. Karya terdahulu mengandaikan pengendalian diri itu. Hasil koridor menurunkannya, menerbitkan matematikanya, dan menilai klaimnya."
+    },
+    "th": {
+      "title": "ทฤษฎีการติดต่อครั้งแรก: คำทำนายทางเดินและงานบุกเบิกห้าสิบปี | CIRIS",
+      "description": "สมมติฐานสวนสัตว์ ตัวกรองใหญ่ ทางออกแบบยั่งยืน การห้ามแบบมีรอยรั่ว ระบบควบคุม ข้อเท็จจริงเด่นของ UAP งานบุกเบิกเพียงตั้งข้อสันนิษฐานเรื่องความยับยั้งชั่งใจ ผลลัพธ์เรื่องทางเดินพิสูจน์มันออกมา ตีพิมพ์คณิตศาสตร์ และจัดระดับข้อกล่าวอ้าง"
+    },
+    "tr": {
+      "title": "İlk Temas Teorisi: Koridor Öngörüsü ve Elli Yıllık Öncül Çalışmalar | CIRIS",
+      "description": "Hayvanat bahçesi hipotezi, Büyük Filtre, sürdürülebilirlik çözümü, sızdıran ambargo, kontrol sistemi, stilize UAP olguları. Öncül çalışmalar kendini tutmayı varsaydı. Koridor sonucu onu türetir, matematiğini yayımlar ve iddiayı derecelendirir."
+    },
+    "uk": {
+      "title": "Теорія першого контакту: передбачення коридору і п'ятдесят років попередніх праць | CIRIS",
+      "description": "Гіпотеза зоопарку, Великий фільтр, рішення через сталість, діряве ембарго, система контролю, стилізовані факти про UAP. Попередні праці постулювали стриманість. Результат про коридор виводить її, публікує математику й оцінює заяву."
+    },
+    "ru": {
+      "title": "Теория первого контакта: предсказание коридора и пятьдесят лет предшествующих работ | CIRIS",
+      "description": "Гипотеза зоопарка, Великий фильтр, решение через устойчивость, дырявое эмбарго, система контроля, стилизованные факты о UAP. Предшествующие работы постулировали сдержанность. Результат о коридоре выводит её, публикует математику и оценивает заявление."
+    },
+    "ko": {
+      "title": "첫 번째 접촉 이론: 복도 예측과 오십 년의 선행 연구 | CIRIS",
+      "description": "동물원 가설, 거대한 필터, 지속 가능성 해법, 새는 봉쇄, 통제 시스템, 정형화된 UAP 사실들. 선행 연구는 자제를 가정했습니다. 복도 결과는 그것을 도출하고, 수학을 공개하고, 주장에 등급을 매깁니다."
+    },
+    "ja": {
+      "title": "ファーストコンタクト理論：回廊の予測と五十年の先行研究 | CIRIS",
+      "description": "動物園仮説、グレートフィルター、持続可能性による解、漏れのある封鎖、制御システム、様式化されたUAPの事実。先行研究は自制を仮定しました。回廊の結果はそれを導き出し、数学を公開し、主張に評価をつけます。"
+    },
+    "zh": {
+      "title": "初次接触理论：走廊预测与五十年的前人研究 | CIRIS",
+      "description": "动物园假说、大过滤器、可持续性解答、有漏洞的封锁、控制系统、程式化的 UAP 事实。前人研究假定了这种克制。走廊结果把它推导出来，公开数学，并为这一主张评级。"
+    },
+    "de": {
+      "title": "Theorie des Ersten Kontakts: Die Korridor-Vorhersage und fünfzig Jahre Vorarbeiten | CIRIS",
+      "description": "Zoo-Hypothese, Großer Filter, Nachhaltigkeitslösung, undichtes Embargo, Kontrollsystem, stilisierte UAP-Fakten. Die Vorarbeiten setzten die Zurückhaltung voraus. Das Korridor-Ergebnis leitet sie her, veröffentlicht die Mathematik und stuft die Behauptung ein."
+    },
+    "fr": {
+      "title": "Théorie du premier contact : la prédiction du corridor et cinquante ans de travaux antérieurs | CIRIS",
+      "description": "Hypothèse du zoo, Grand Filtre, solution de la durabilité, embargo qui fuit, système de contrôle, faits stylisés sur les UAP. Les travaux antérieurs ont posé la retenue. Le résultat du corridor la dérive, publie les mathématiques et classe l'affirmation."
+    },
+    "it": {
+      "title": "Teoria del primo contatto: la previsione del corridoio e cinquant'anni di lavori precedenti | CIRIS",
+      "description": "Ipotesi dello zoo, Grande Filtro, soluzione della sostenibilità, embargo che perde, sistema di controllo, fatti stilizzati sugli UAP. I lavori precedenti hanno postulato la moderazione. Il risultato del corridoio la deriva, pubblica la matematica e classifica l'affermazione."
+    },
+    "pt": {
+      "title": "Teoria do primeiro contato: a previsão do corredor e cinquenta anos de trabalho anterior | CIRIS",
+      "description": "Hipótese do zoológico, Grande Filtro, solução da sustentabilidade, embargo com vazamentos, sistema de controle, fatos estilizados sobre UAP. O trabalho anterior postulou a contenção. O resultado do corredor a deriva, publica a matemática e classifica a afirmação."
+    },
+    "ar": {
+      "title": "نظرية الاتصال الأول: تنبؤ الممر وخمسون عاماً من الأعمال السابقة | CIRIS",
+      "description": "فرضية حديقة الحيوان، المرشّح العظيم، حل الاستدامة، الحظر المتسرب، نظام التحكم، حقائق UAP النمطية. الأعمال السابقة افترضت ضبط النفس. نتيجة الممر تشتقه، وتنشر الرياضيات، وتقيّم الادعاء."
+    },
+    "fa": {
+      "title": "نظریه اولین تماس: پیش‌بینی دهلیز و پنجاه سال پیشینه | CIRIS",
+      "description": "فرضیه باغ‌وحش، فیلتر بزرگ، راه‌حل پایداری، تحریم نشت‌دار، سیستم کنترل، حقایق سبک‌وار UAP. پیشینه، خویشتن‌داری را فرض گرفت. نتیجه دهلیز آن را استنتاج می‌کند، ریاضیاتش را منتشر می‌کند، و ادعا را درجه‌بندی می‌کند."
+    },
+    "ur": {
+      "title": "پہلے رابطے کا نظریہ: گذرگاہ کی پیش گوئی اور پچاس سال کا سابقہ کام | CIRIS",
+      "description": "چڑیا گھر کا مفروضہ، عظیم فلٹر، پائیداری کا حل، رستی ہوئی پابندی، کنٹرول سسٹم، UAP کے نمایاں حقائق۔ سابقہ کام نے ضبطِ نفس کو فرض کیا۔ گذرگاہ کا نتیجہ اسے اخذ کرتا ہے، ریاضی شائع کرتا ہے، اور دعوے کو پرکھتا ہے۔"
+    },
+    "es": {
+      "title": "Teoría del primer contacto: la predicción del corredor y cincuenta años de trabajo previo | CIRIS",
+      "description": "Hipótesis del zoológico, Gran Filtro, solución de sostenibilidad, embargo con filtraciones, sistema de control, hechos estilizados sobre UAP. El trabajo previo postuló la contención. El resultado del corredor la deriva, publica las matemáticas y clasifica la afirmación."
+    }
+  },
   "/philosophy": {
     "en": {
       "title": "The CIRIS Philosophy: Owed What We Offer the Least of Us",

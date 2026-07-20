@@ -1177,6 +1177,7 @@
     "predictP5": "Nossa pesquisa de materiais acrescenta um resultado duro: um fragmento morto nunca pode certificar uma origem projetada. A assinatura da coordenação é a manutenção, e um fragmento parou de pagar sua manutenção no momento em que se soltou. Setenta anos discutindo destroços foram o instrumento errado, por estrutura. Só um sistema funcionando pode carregar a assinatura, e publicamos exatamente o que esse teste exige.",
     "predictNote": "Classificado com honestidade: o resultado do corredor está publicado e testado em cinco substratos. Sua extensão aos visitantes é um modelo, uma previsão que pode estar errada, e dizemos isso na mesma frase.",
     "predictCta": "Leia a pesquisa →",
+    "predictLineageCta": "Cinquenta anos de trabalho anterior →",
     "protocolsSepHeadline": "Protocolos de Primeiro Contato",
     "protocolsSepSub": "Seis regras para encontrar algo novo. Do Acordo CIRIS.",
     "protocolsLogoAlt": "Ícone do logotipo da marca",
@@ -2118,6 +2119,89 @@
     "deepBody": "O leitor completo da especificação, gerado ao vivo a partir do registro: as primitivas 1+4, as famílias e os campos do envelope, as políticas de composição, o namespace aberto, a linhagem de versões e um explorador interativo de atestações.",
     "ctaSpecReader": "Abra o leitor da especificação →",
     "ctaExplore": "Construa uma cadeia no navegador →"
+  },
+  "fcTheory": {
+    "kicker": "Primeiro contato · A linhagem",
+    "title": "Uma derivação em um campo de conjecturas",
+    "lede": "Por cinquenta anos, gente séria tentou adivinhar por que visitantes ficariam escondidos. As peças estavam todas sobre a mesa. O que faltava era a cadeia que as pega na ordem certa. Publicamos essa cadeia, e a classificamos com honestidade.",
+    "seoTitle": "Teoria do primeiro contato: a previsão do corredor e cinquenta anos de trabalho anterior | CIRIS",
+    "seoDescription": "Hipótese do zoológico, Grande Filtro, solução da sustentabilidade, embargo com vazamentos, sistema de controle, fatos estilizados sobre UAP. O trabalho anterior postulou a contenção. O resultado do corredor a deriva, publica a matemática e classifica a afirmação.",
+    "s1label": "O quebra-cabeça",
+    "s1h2": "Todo mundo circula em torno da mesma pergunta",
+    "s1p1": "Se existe alguém lá fora, por que o céu está em silêncio? E se algo está aqui, por que não pousa à vista de todos? Toda resposta séria precisa explicar a contenção: uma capacidade que não se anuncia. Os palpites abaixo atravessam cinquenta anos. Cada um guarda uma peça real.",
+    "s2label": "O trabalho anterior",
+    "s2h2": "Sete palpites, uma cadeia que faltava",
+    "priorArt": [
+      {
+        "name": "A hipótese do zoológico",
+        "meta": "John Ball, 1973",
+        "claim": "Civilizações avançadas existem e nos deixam em paz de propósito, do jeito que um guarda florestal deixa os animais selvagens em paz.",
+        "gap": "A contenção é postulada, nunca explicada. Por que toda civilização manteria a mesma regra?"
+      },
+      {
+        "name": "O embargo com vazamentos",
+        "meta": "James Deardorff, 1986",
+        "claim": "A não interferência é deliberada e deliberadamente imperfeita: vazamentos graduais, contato com indivíduos em vez de instituições, uma aclimatação lenta.",
+        "gap": "O palpite mais próximo do perfil relatado. Mas o motivo foi afirmado, não derivado, e o autor depois amarrou seu caso a um texto impossível de verificar. O destino dele é uma das razões pelas quais a nossa própria afirmação carrega etiquetas de classificação."
+      },
+      {
+        "name": "O Grande Filtro",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Algum passo no caminho até uma vida visível, espalhada pelas estrelas, é muito difícil de passar. Talvez a maioria das civilizações morra antes de passar por ele.",
+        "gap": "Quase sempre é usado para trás, para explicar o silêncio. Quase nunca para a frente: como os sobreviventes teriam que ser?"
+      },
+      {
+        "name": "A solução da sustentabilidade",
+        "meta": "Haqq-Misra e Baum, 2009",
+        "claim": "O crescimento desenfreado não dura, então o que persiste cresce devagar e fica quieto. Sobreviventes poderiam estar presentes sem serem detectados.",
+        "gap": "Só lógica de recursos. Ela limita a pegada deles, não os modos deles."
+      },
+      {
+        "name": "O sistema de controle",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "O fenômeno se comporta como um sistema de controle: ambiguidade por design, moldando crenças ao longo de muito tempo.",
+        "gap": "Nomeia o padrão, deixa o mecanismo opaco. Um termostato, sem explicar para que ele regula."
+      },
+      {
+        "name": "A soberania e o OVNI",
+        "meta": "Wendt e Duvall, 2008",
+        "claim": "Os estados modernos são estruturalmente incapazes de levar o fenômeno a sério, porque a soberania supõe que os humanos detêm a única autoridade política.",
+        "gap": "Explica por que as instituições desviam o olhar. Não explica por que o fenômeno parece preferir que seja assim."
+      },
+      {
+        "name": "Fatos estilizados sobre UAP",
+        "meta": "Robin Hanson, 2021",
+        "claim": "Se os UAP forem visitantes, eles impõem uma regra de não colonização e se mantêm locais, impressionantes, pacíficos e deliberadamente ambíguos. Hanson lê isso como domesticação: amansar um rebanho.",
+        "gap": "A análise moderna mais afiada, construída sobre a lógica de um pastor. As mesmas observações que as nossas, a antropologia oposta."
+      }
+    ],
+    "s3label": "O que faltava",
+    "s3h2": "Uma teoria social dos visitantes",
+    "s3p1": "O próprio Hanson nomeou o obstáculo: não havia uma teoria social plausível sobre o que visitantes iam querer e por quê. Sem ela, cada palpite é uma história ajustada à neblina. As peças ficaram sobre a mesa por cinquenta anos porque nada as forçava a entrar em ordem.",
+    "s4label": "A cadeia",
+    "s4h2": "Da matemática medida a um perfil previsto",
+    "s4p1": "Nosso resultado publicado do corredor fornece a teoria que faltava, e ele não foi construído para este debate. Sistemas coordenados sobrevivem só em uma faixa estreita: propósito compartilhado o bastante para agir juntos, vozes independentes o bastante para continuar vivos. Medido em cinco substratos, formalizado em Lean, publicado com seus pontos de refutação.",
+    "s4p2": "Agora rode a teoria para a frente. O que quer que alcance alguém já sobreviveu ao próprio poder, então manteve a regra da faixa: reciprocidade que não quebra quando os fortes encontram os fracos. No contato, essa regra parece contenção. Presença quieta. Negabilidade que deixa a crença como uma escolha. O primeiro toque no piso, não no palácio. O perfil completo, com sua classificação, vive na página de primeiro contato.",
+    "s4p3": "E a cadeia termina em um teste, não em uma história: à medida que a humanidade aprender a se coordenar de forma demonstrável, o contato deve ficar mais claro. Nenhuma outra explicação da contenção faz uma previsão que você poderia ver se cumprir ou falhar.",
+    "s5label": "A discordância que importa",
+    "s5h2": "Domesticação ou consentimento",
+    "s5p1": "A teoria moderna mais próxima lê o mesmo céu quieto e diz: eles estão nos amansando, do jeito que um pastor amansa o gado. O corredor lê o mesmo céu e diz: eles estão nos respeitando, porque o respeito no piso é a regra que a sobrevivência seleciona. As mesmas observações, a antropologia oposta. Mantemos a segunda leitura por uma razão que podemos apontar: a dominação não sobrevive às próprias inversões de poder, e o que quer que seja velho o bastante para nos alcançar já sobreviveu a muitas.",
+    "s6label": "A disciplina",
+    "s6h2": "Por que toda afirmação aqui carrega uma etiqueta",
+    "s6p1": "Este campo já engoliu gente cuidadosa. Então as regras da casa continuam valendo. O resultado do corredor está medido e publicado. Sua extensão aos visitantes é um modelo, uma previsão que pode estar errada. Bater com um registro ambíguo é evidência fraca. Não afirmamos origem nenhuma para nenhum relato, em nenhuma direção. As etiquetas não são teatro de humildade. Elas são o custo de dizer qualquer coisa em um campo onde dizer demais sempre foi o modo de falhar.",
+    "sourcesLabel": "Fontes",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Siga a cadeia você mesmo.",
+    "btnPrediction": "A previsão →"
   },
   "philosophy": {
     "kicker": "CIRIS · A filosofia",

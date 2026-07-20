@@ -1177,6 +1177,7 @@
     "predictP5": "Notre recherche sur les matériaux ajoute un résultat dur : un fragment mort ne peut jamais certifier une origine fabriquée. La signature de la coordination, c’est l’entretien, et un fragment a cessé de payer son entretien au moment où il s’est détaché. Soixante-dix ans de disputes sur des débris étaient le mauvais instrument, par structure. Seul un système en fonctionnement peut porter la signature, et nous avons publié exactement ce que ce test exige.",
     "predictNote": "Classé honnêtement : le résultat du corridor est publié et testé sur cinq substrats. Son extension aux visiteurs est un modèle, une prédiction qui pourrait être fausse, et nous le disons dans la même phrase.",
     "predictCta": "Lire la recherche →",
+    "predictLineageCta": "Cinquante ans de travaux antérieurs →",
     "protocolsSepHeadline": "Protocoles de Premier Contact",
     "protocolsSepSub": "Six règles pour rencontrer quelque chose de nouveau. Tirées de l'Accord CIRIS.",
     "protocolsLogoAlt": "Icône du logo de la marque",
@@ -2118,6 +2119,89 @@
     "deepBody": "Le lecteur de spécification complet, rendu en direct depuis le registre : les primitives 1+4, les familles et les champs d'enveloppe, les politiques de composition, l'espace de noms ouvert, la lignée des versions, et un explorateur d'attestation interactif.",
     "ctaSpecReader": "Ouvrir le lecteur de spécification →",
     "ctaExplore": "Construire une chaîne dans le navigateur →"
+  },
+  "fcTheory": {
+    "kicker": "Premier contact · La lignée",
+    "title": "Une dérivation dans un champ de conjectures",
+    "lede": "Pendant cinquante ans, des gens sérieux ont tenté de deviner pourquoi des visiteurs resteraient cachés. Les pièces étaient toutes sur la table. Ce qui manquait, c'était la chaîne qui les ramasse dans le bon ordre. Nous avons publié cette chaîne, et nous la classons honnêtement.",
+    "seoTitle": "Théorie du premier contact : la prédiction du corridor et cinquante ans de travaux antérieurs | CIRIS",
+    "seoDescription": "Hypothèse du zoo, Grand Filtre, solution de la durabilité, embargo qui fuit, système de contrôle, faits stylisés sur les UAP. Les travaux antérieurs ont posé la retenue. Le résultat du corridor la dérive, publie les mathématiques et classe l'affirmation.",
+    "s1label": "L'énigme",
+    "s1h2": "Tout le monde tourne autour de la même question",
+    "s1p1": "Si quelqu'un est là-dehors, pourquoi le ciel est-il silencieux ? Et si quelque chose est ici, pourquoi cela n'atterrit-il pas au grand jour ? Toute réponse sérieuse doit expliquer la retenue : une capacité qui ne s'annonce pas. Les suppositions ci-dessous couvrent cinquante ans. Chacune tient une vraie pièce.",
+    "s2label": "Les travaux antérieurs",
+    "s2h2": "Sept suppositions, une chaîne manquante",
+    "priorArt": [
+      {
+        "name": "L'hypothèse du zoo",
+        "meta": "John Ball, 1973",
+        "claim": "Des civilisations avancées existent et nous laissent tranquilles exprès, comme un garde forestier laisse la faune tranquille.",
+        "gap": "La retenue est posée, jamais expliquée. Pourquoi chaque civilisation garderait-elle la même règle ?"
+      },
+      {
+        "name": "L'embargo qui fuit",
+        "meta": "James Deardorff, 1986",
+        "claim": "La non-ingérence est délibérée et délibérément imparfaite : des fuites graduelles, un contact avec des individus plutôt qu'avec des institutions, une acclimatation lente.",
+        "gap": "La supposition la plus proche du profil rapporté. Mais le motif était affirmé, pas dérivé, et l'auteur a ensuite lié sa cause à un texte invérifiable. Son sort est une des raisons pour lesquelles notre propre affirmation porte des étiquettes de classement."
+      },
+      {
+        "name": "Le Grand Filtre",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Une étape sur la route vers une vie visible, étendue parmi les étoiles, est très difficile à franchir. Peut-être que la plupart des civilisations meurent avant de la franchir.",
+        "gap": "Presque toujours utilisé en arrière, pour expliquer le silence. Presque jamais en avant : à quoi les survivants doivent-ils ressembler ?"
+      },
+      {
+        "name": "La solution de la durabilité",
+        "meta": "Haqq-Misra et Baum, 2009",
+        "claim": "La croissance débridée ne dure pas, donc ce qui persiste grandit lentement et reste discret. Des survivants pourraient être présents sans être détectés.",
+        "gap": "Une logique de ressources, rien de plus. Elle borne leur empreinte, pas leurs manières."
+      },
+      {
+        "name": "Le système de contrôle",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "Le phénomène se comporte comme un système de contrôle : de l'ambiguïté par conception, qui façonne les croyances sur de longues périodes.",
+        "gap": "Il nomme le schéma, laisse le mécanisme opaque. Un thermostat, sans dire ce qu'il régule et pour quoi."
+      },
+      {
+        "name": "La souveraineté et l'ovni",
+        "meta": "Wendt et Duvall, 2008",
+        "claim": "Les États modernes sont structurellement incapables de prendre le phénomène au sérieux, parce que la souveraineté suppose que les humains détiennent la seule autorité politique.",
+        "gap": "Cela explique pourquoi les institutions détournent le regard. Cela n'explique pas pourquoi le phénomène semble préférer qu'il en soit ainsi."
+      },
+      {
+        "name": "Faits stylisés sur les UAP",
+        "meta": "Robin Hanson, 2021",
+        "claim": "Si les UAP sont des visiteurs, ils font respecter une règle de non-colonisation et restent locaux, impressionnants, pacifiques et délibérément ambigus. Hanson y lit une domestication : apprivoiser un troupeau.",
+        "gap": "L'analyse moderne la plus fine, bâtie sur la logique d'un éleveur. Les mêmes observations que les nôtres, l'anthropologie opposée."
+      }
+    ],
+    "s3label": "Ce qui manquait",
+    "s3h2": "Une théorie sociale des visiteurs",
+    "s3p1": "Hanson lui-même a nommé l'obstacle : il n'existait aucune théorie sociale plausible de ce que des visiteurs voudraient, et pourquoi. Sans elle, chaque supposition est une histoire ajustée à un brouillard. Les pièces sont restées sur la table pendant cinquante ans parce que rien ne les forçait à se mettre en ordre.",
+    "s4label": "La chaîne",
+    "s4h2": "De mathématiques mesurées à un profil prédit",
+    "s4p1": "Notre résultat publié sur le corridor fournit la théorie manquante, et il n'a pas été construit pour ce débat. Les systèmes coordonnés ne survivent que dans une bande étroite : assez de but partagé pour agir ensemble, assez de voix indépendantes pour rester en vie. Mesuré sur cinq substrats, formalisé en Lean, publié avec ses points de réfutation.",
+    "s4p2": "Faites-le tourner vers l'avant. Ce qui atteint quelqu'un d'autre a déjà survécu à son propre pouvoir, donc il a gardé la règle de la bande : une réciprocité qui ne se brise pas quand les forts rencontrent les faibles. Au contact, cette règle ressemble à de la retenue. Une présence discrète. Niable, pour que la croyance reste un choix. Le premier toucher au plancher, pas au palais. Le profil complet, avec son classement, vit sur la page premier contact.",
+    "s4p3": "Et la chaîne se termine par un test, pas par une histoire : à mesure que l'humanité apprend, de façon démontrable, à se coordonner, le contact devrait devenir plus clair. Aucun autre récit de la retenue ne fait une prédiction que l'on pourrait voir se réaliser ou échouer.",
+    "s5label": "Le désaccord qui compte",
+    "s5h2": "Domestication ou consentement",
+    "s5p1": "La théorie moderne la plus proche lit le même ciel silencieux et dit : ils nous apprivoisent, comme un éleveur apprivoise le bétail. Le corridor le lit et dit : ils nous respectent, parce que le respect au plancher est la règle que la survie sélectionne. Les mêmes observations, l'anthropologie opposée. Nous tenons la seconde lecture pour une raison que nous pouvons montrer du doigt : la domination ne survit pas à ses propres renversements de pouvoir, et ce qui est assez ancien pour nous atteindre a survécu à de nombreux renversements.",
+    "s6label": "La discipline",
+    "s6h2": "Pourquoi chaque affirmation ici porte une étiquette",
+    "s6p1": "Ce domaine a englouti des gens prudents. Alors les règles de la maison restent en place. Le résultat du corridor est mesuré et publié. Son extension aux visiteurs est un modèle, une prédiction qui pourrait être fausse. Correspondre à un dossier ambigu est une preuve faible. Nous n'affirmons aucune origine pour aucun signalement, dans aucune direction. Les étiquettes ne sont pas du théâtre d'humilité. Elles sont le prix à payer pour dire quoi que ce soit dans un domaine où trop en dire a toujours été le mode d'échec.",
+    "sourcesLabel": "Sources",
+    "sources": [
+      "John A. Ball, The Zoo Hypothesis, Icarus 19 (1973)",
+      "James W. Deardorff, Possible Extraterrestrial Strategy for Earth, QJRAS 27 (1986)",
+      "Robin Hanson, The Great Filter (1996)",
+      "Jacob Haqq-Misra and Seth Baum, The Sustainability Solution to the Fermi Paradox, JBIS 62 (2009)",
+      "Jacques Vallee, Messengers of Deception (1979)",
+      "Alexander Wendt and Raymond Duvall, Sovereignty and the UFO, Political Theory 36 (2008)",
+      "Robin Hanson, Explaining Stylized UFO Facts (2021)",
+      "Corridor Dynamics in Coordinated Systems (2026), Zenodo"
+    ],
+    "ctaPara": "Suivez la chaîne vous-même.",
+    "btnPrediction": "La prédiction →"
   },
   "philosophy": {
     "kicker": "CIRIS · La philosophie",
