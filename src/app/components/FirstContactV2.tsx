@@ -154,6 +154,9 @@ export default function FirstContactV2({ t, locale }: { t: Dictionary; locale: s
           <Link href={lh("/how-it-works")} className={`${s.btn} ${s.btnS}`}>
             {fc.accordCtaHow}
           </Link>
+          <Link href={lh("/philosophy")} className={`${s.btn} ${s.btnS}`}>
+            {t.philosophy.crossCta}
+          </Link>
           <Link href={lh("/trust")} className={`${s.btn} ${s.btnS}`}>
             {fc.accordCtaTrust}
           </Link>

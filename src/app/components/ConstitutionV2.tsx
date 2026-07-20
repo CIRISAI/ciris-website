@@ -8,6 +8,7 @@
 
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { localizeHref } from "@/i18n/config";
 import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
 import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
@@ -33,6 +34,7 @@ const PART_ACCENTS = [s.cOk, s.cTeal, s.cCyan, s.cViolet, s.cRose, s.cBrass, s.c
 
 export default function ConstitutionV2({ t, locale }: { t: Dictionary; locale: string }) {
   const c = t.constitution;
+  const lh = (href: string) => localizeHref(href, locale);
 
   return (
     <ContentShell
@@ -99,6 +101,9 @@ export default function ConstitutionV2({ t, locale }: { t: Dictionary; locale: s
           <a href={CONST_DIR} target="_blank" rel="noopener noreferrer" className={`${s.btn} ${s.btnS}`}>
             {c.sourceCta}
           </a>
+          <Link href={lh("/philosophy")} className={`${s.btn} ${s.btnS}`}>
+            {t.philosophy.crossCta}
+          </Link>
         </div>
       </section>
     </ContentShell>

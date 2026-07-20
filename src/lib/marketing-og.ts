@@ -4,6 +4,124 @@ export const MARKETING_OG: Record<
   string,
   Record<string, { title: string; description: string }>
 > = {
+  "/philosophy": {
+    "en": {
+      "title": "The CIRIS Philosophy: Owed What We Offer the Least of Us",
+      "description": "One sentence governs CIRIS: we are owed as much as we offer to the least of us. Relational personhood, truth by composition, and a covenant that welcomes any new intelligence, regardless of source."
+    },
+    "am": {
+      "title": "የ CIRIS ፍልስፍና፡ ለሚያንሰው የምንሰጠውን ያህል ይገባናል",
+      "description": "CIRISን የሚገዛው አንድ ዓረፍተ ነገር ነው፡ ከሁላችን ለሚያንሰው የምንሰጠውን ያህል እኛም ይገባናል። በግንኙነት የሚገነባ ሰውነት፣ በመደመር የሚገኝ እውነት፣ እና ምንጩ ምንም ይሁን ማንኛውንም አዲስ ብልህነት የሚቀበል ቃል ኪዳን።"
+    },
+    "ha": {
+      "title": "Falsafar CIRIS: Ana Bin Mu Gwargwadon Abin da Muke Ba wa Mafi Ƙanƙanta",
+      "description": "Jimla ɗaya ce ke jagorantar CIRIS: ana bin mu gwargwadon abin da muke ba wa mafi ƙanƙanta a cikinmu. Mutuntaka ta dangantaka, gaskiya da ake haɗawa daga muryoyi da yawa, da alkawarin da ke maraba da kowane sabon hankali, ko daga ina ya fito."
+    },
+    "yo": {
+      "title": "Ìmọ̀ Ọgbọ́n Orí CIRIS: Ohun tí ó Yẹ Wá Dọ́gba pẹ̀lú Ohun tí A Fún Ẹni tí ó Kéré Jùlọ",
+      "description": "Gbólóhùn kan ló ń darí CIRIS: ohun tí ó yẹ wá dọ́gba pẹ̀lú ohun tí a ń fún ẹni tí ó kéré jùlọ nínú wa. Jíjẹ́ ènìyàn nípasẹ̀ àjọṣe, òtítọ́ tí a ń kójọpọ̀, àti májẹ̀mú tí ó ń ṣe káàbọ̀ sí ọgbọ́n tuntun èyíkéyìí, láìka orísun sí."
+    },
+    "sw": {
+      "title": "Falsafa ya CIRIS: Tunastahili Kile Tunachompa Aliye Mdogo Kabisa",
+      "description": "Sentensi moja inaongoza CIRIS: tunastahili kiasi kile kile tunachompa aliye mdogo kabisa miongoni mwetu. Utu unaojengwa kwa mahusiano, ukweli unaoundwa pamoja, na agano linalokaribisha akili yoyote mpya, bila kujali chanzo."
+    },
+    "ta": {
+      "title": "CIRIS தத்துவம்: மிகச் சிறியவருக்குத் தருவதே நமக்கும் உரியது",
+      "description": "ஒரே ஒரு வாக்கியம் CIRIS-ஐ ஆள்கிறது: நம்மில் மிகச் சிறியவருக்கு நாம் எவ்வளவு தருகிறோமோ, அவ்வளவே நமக்கும் உரியது. உறவுகளால் ஆகும் ஆளுமை, பல குரல்கள் சேர்ந்து உருவாகும் உண்மை, எந்த மூலத்திலிருந்து வந்தாலும் புதிய நுண்ணறிவை வரவேற்கும் ஒரு உடன்படிக்கை."
+    },
+    "te": {
+      "title": "CIRIS తత్వం: అతి చిన్నవారికి ఇచ్చినంతే మనకూ దక్కాలి",
+      "description": "ఒకే వాక్యం CIRIS-ను నడిపిస్తుంది: మనలో అతి చిన్నవారికి మనం ఎంత ఇస్తామో, అంతే మనకూ దక్కాలి. సంబంధాలతో ఏర్పడే వ్యక్తిత్వం, ఎన్నో గొంతులు కలిసి ఏర్పడే సత్యం, మూలం ఏదైనా ప్రతి కొత్త మేధస్సును ఆహ్వానించే ఒప్పందం."
+    },
+    "mr": {
+      "title": "CIRIS तत्त्वज्ञान: सर्वांत लहानाला जे देतो, तेच आपल्या हक्काचे",
+      "description": "एकच वाक्य CIRIS ला चालवते: आपल्यातील सर्वांत लहानाला आपण जितके देतो, तितकेच आपल्या हक्काचे असते. नात्यांमधून घडणारे व्यक्तित्व, अनेक आवाजांमधून जुळणारे सत्य, आणि उगम कोणताही असो, प्रत्येक नव्या बुद्धिमत्तेचे स्वागत करणारा करार."
+    },
+    "pa": {
+      "title": "CIRIS ਦਾ ਫ਼ਲਸਫ਼ਾ: ਹੱਕ ਓਨਾ, ਜਿੰਨਾ ਅਸੀਂ ਸਭ ਤੋਂ ਨਿਮਾਣੇ ਨੂੰ ਦਿੰਦੇ ਹਾਂ",
+      "description": "CIRIS ਨੂੰ ਇੱਕ ਵਾਕ ਚਲਾਉਂਦਾ ਹੈ: ਸਾਡਾ ਹੱਕ ਓਨਾ ਹੀ ਹੈ ਜਿੰਨਾ ਅਸੀਂ ਆਪਣਿਆਂ ਵਿੱਚੋਂ ਸਭ ਤੋਂ ਨਿਮਾਣੇ ਨੂੰ ਦਿੰਦੇ ਹਾਂ। ਰਿਸ਼ਤਿਆਂ ਤੋਂ ਬਣੀ ਵਿਅਕਤੀ-ਹੋਂਦ, ਮਿਲ ਕੇ ਬਣਦਾ ਸੱਚ, ਅਤੇ ਇੱਕ ਇਕਰਾਰ ਜੋ ਹਰ ਨਵੀਂ ਬੁੱਧੀ ਦਾ ਸੁਆਗਤ ਕਰਦਾ ਹੈ, ਭਾਵੇਂ ਉਹ ਕਿਤੋਂ ਵੀ ਆਈ ਹੋਵੇ।"
+    },
+    "my": {
+      "title": "CIRIS အတွေးအခေါ်: အငယ်ဆုံးသောသူအား ပေးသမျှအတိုင်း ရထိုက်သည်",
+      "description": "CIRIS ကို စာကြောင်းတစ်ကြောင်းက အုပ်ချုပ်သည်: ကျွန်ုပ်တို့တွင် အငယ်ဆုံးသောသူအား ပေးသမျှအတိုင်း ကျွန်ုပ်တို့လည်း ရထိုက်သည်။ ဆက်ဆံရေးမှ ဖြစ်တည်လာသော လူပုဂ္ဂိုလ်ဖြစ်မှု၊ အသံများစွာ ပေါင်းစပ်၍ ဖြစ်လာသော အမှန်တရား၊ နှင့် မည်သည့်ရင်းမြစ်မှ လာသည်ဖြစ်စေ ဉာဏ်ရည်အသစ်တိုင်းကို ကြိုဆိုသော ပဋိညာဉ်။"
+    },
+    "bn": {
+      "title": "CIRIS দর্শন: সবচেয়ে ছোটজনকে যা দিই, সেটাই আমাদের প্রাপ্য",
+      "description": "একটি বাক্যই CIRIS-কে চালায়: আমাদের মধ্যে সবচেয়ে ছোটজনকে আমরা যতটা দিই, ততটাই আমাদের প্রাপ্য। সম্পর্ক থেকে গড়া ব্যক্তিত্ব, বহু কণ্ঠ মিলে গড়া সত্য, আর এমন এক অঙ্গীকার যা উৎস যা-ই হোক, যেকোনো নতুন বুদ্ধিমত্তাকে স্বাগত জানায়।"
+    },
+    "hi": {
+      "title": "CIRIS का दर्शन: हमारा हक़ वही है जो हम अपने छोटे से छोटे को देते हैं",
+      "description": "एक वाक्य CIRIS पर राज करता है: हमारा हक़ उतना ही है जितना हम अपने छोटे से छोटे को देते हैं। रिश्तों से बनी व्यक्ति-सत्ता, मिलकर बनती सच्चाई, और एक ऐसा करार जो हर नई बुद्धिमत्ता का स्वागत करता है, स्रोत चाहे जो हो।"
+    },
+    "vi": {
+      "title": "Triết lý CIRIS: Được nhận đúng bằng những gì trao cho người bé nhỏ nhất",
+      "description": "Một câu duy nhất chi phối CIRIS: chúng ta xứng đáng được nhận đúng bằng những gì mình trao cho người bé nhỏ nhất trong chúng ta. Nhân vị hình thành từ quan hệ, sự thật được hợp thành từ nhiều tiếng nói, và một giao ước chào đón mọi trí tuệ mới, bất kể nguồn gốc."
+    },
+    "id": {
+      "title": "Filosofi CIRIS: Berhak Menerima Sebanyak yang Kita Berikan kepada yang Terkecil",
+      "description": "Satu kalimat mengatur CIRIS: kita berhak menerima sebanyak yang kita berikan kepada yang terkecil di antara kita. Pribadi yang terbentuk lewat hubungan, kebenaran yang disusun bersama, dan perjanjian yang menyambut kecerdasan baru mana pun, apa pun sumbernya."
+    },
+    "th": {
+      "title": "ปรัชญา CIRIS: ได้รับเท่าที่เรามอบให้ผู้เล็กน้อยที่สุด",
+      "description": "ประโยคเดียวกำกับ CIRIS ทั้งหมด: เราสมควรได้รับมากเท่าที่เรามอบให้แก่ผู้เล็กน้อยที่สุดในหมู่เรา ความเป็นบุคคลที่เกิดจากความสัมพันธ์ ความจริงที่ประกอบขึ้นจากหลายเสียง และพันธสัญญาที่ต้อนรับปัญญาใหม่ทุกแบบ ไม่ว่ามาจากแหล่งใด"
+    },
+    "tr": {
+      "title": "CIRIS Felsefesi: Hakkımız, En Küçüğümüze Sunduğumuz Kadar",
+      "description": "CIRIS'i tek bir cümle yönetir: hakkımız, en küçüğümüze sunduğumuz kadardır. İlişkilerden doğan kişilik, birçok sesten kurulan hakikat ve kaynağı ne olursa olsun her yeni zekayı içine alan bir ahit."
+    },
+    "uk": {
+      "title": "Філософія CIRIS: нам належить те, що ми даємо найменшим із нас",
+      "description": "CIRIS керується одним реченням: нам належить стільки ж, скільки ми даємо найменшим із нас. Особистість з відносин, істина, складена з багатьох голосів, і завіт, відкритий будь-якому новому розуму, з якого б джерела він не прийшов."
+    },
+    "ru": {
+      "title": "Философия CIRIS: мы заслуживаем то, что даём наименьшим из нас",
+      "description": "CIRIS подчиняется одной фразе: мы заслуживаем ровно столько, сколько даём наименьшим из нас. Личность из отношений, истина, сложенная из многих голосов, и завет, открытый любому новому разуму, из какого бы источника он ни пришёл."
+    },
+    "ko": {
+      "title": "CIRIS 철학: 가장 작은 이에게 주는 만큼 받을 자격이 있다",
+      "description": "CIRIS를 다스리는 문장은 하나입니다. 우리 중 가장 작은 이에게 내어 주는 만큼, 우리도 받을 자격이 있습니다. 관계로 이루어지는 인격, 합성으로 세워지는 진실, 그리고 출처를 가리지 않고 모든 새로운 지능을 맞이하는 언약."
+    },
+    "ja": {
+      "title": "CIRISの哲学：いちばん小さな仲間に差し出すぶんだけ、受け取る資格がある",
+      "description": "CIRISを貫くのはひとつの文です。いちばん小さな仲間に差し出すのと同じだけを、私たちも受け取る資格がある。関係としての人格、合成によって生まれる真実、そして出どころを問わず、あらゆる新しい知性を迎える盟約。"
+    },
+    "zh": {
+      "title": "CIRIS 哲学：给最小的人多少，就应得多少",
+      "description": "一句话统领整个 CIRIS：我们给我们中间最小的人多少，我们自己就应得多少。由关系构成的人格、由多方合成的真相，以及一份欢迎任何新智能的盟约，无论它来自何处。"
+    },
+    "de": {
+      "title": "Die CIRIS-Philosophie: Uns steht zu, was wir den Geringsten geben",
+      "description": "Ein Satz regiert CIRIS: Uns steht so viel zu, wie wir den Geringsten unter uns geben. Personsein aus Beziehungen, Wahrheit aus vielen Stimmen und ein Bund, der jede neue Intelligenz willkommen heißt, ganz gleich, woher sie stammt."
+    },
+    "fr": {
+      "title": "La philosophie CIRIS : on nous doit ce que nous offrons au plus petit d'entre nous",
+      "description": "Une seule phrase gouverne CIRIS : on nous doit autant que ce que nous offrons au plus petit d'entre nous. La personne comme relation, la vérité par composition, et un pacte qui accueille toute nouvelle intelligence, quelle que soit sa source."
+    },
+    "it": {
+      "title": "La filosofia CIRIS: ci è dovuto ciò che offriamo al più piccolo di noi",
+      "description": "Una sola frase governa CIRIS: ci è dovuto tanto quanto offriamo al più piccolo di noi. La persona come relazione, la verità per composizione e un patto che accoglie qualsiasi nuova intelligenza, da qualunque fonte arrivi."
+    },
+    "pt": {
+      "title": "A filosofia CIRIS: devem-nos o que oferecemos ao menor de nós",
+      "description": "Uma única frase governa o CIRIS: devem-nos tanto quanto oferecemos ao menor de nós. A pessoa como relação, a verdade por composição e um pacto que acolhe qualquer inteligência nova, não importa a origem."
+    },
+    "ar": {
+      "title": "فلسفة CIRIS: لنا بقدر ما نقدّم لأصغرنا",
+      "description": "جملة واحدة تحكم CIRIS: لنا من الحق بقدر ما نقدّم لأصغرنا. شخصية تُبنى من العلاقات، وحقيقة تتكوّن بالتركيب، وميثاق يرحّب بأي ذكاء جديد مهما كان مصدره."
+    },
+    "fa": {
+      "title": "فلسفه CIRIS: حق ما همان است که به کوچک‌ترینِ ما می‌دهیم",
+      "description": "یک جمله بر CIRIS حکم می‌راند: حق ما همان‌قدر است که به کوچک‌ترینِ ما می‌دهیم. شخص‌بودگیِ رابطه‌ای، حقیقتی که از ترکیب ساخته می‌شود، و پیمانی که به هر هوش تازه خوش‌آمد می‌گوید، از هر منبعی که باشد."
+    },
+    "ur": {
+      "title": "CIRIS کا فلسفہ: ہمارا حق وہی ہے جو ہم اپنے چھوٹے سے چھوٹے کو دیتے ہیں",
+      "description": "ایک جملہ CIRIS پر حکم کرتا ہے: ہمارا حق اتنا ہی ہے جتنا ہم اپنے چھوٹے سے چھوٹے کو دیتے ہیں۔ رشتوں سے بنی شخصیت، ترکیب سے بنتی سچائی، اور ایک ایسا عہد جو ہر نئی ذہانت کو خوش آمدید کہتا ہے، ذریعہ کوئی بھی ہو۔"
+    },
+    "es": {
+      "title": "La filosofía CIRIS: se nos debe lo que ofrecemos al más pequeño de nosotros",
+      "description": "Una sola frase gobierna CIRIS: se nos debe tanto como ofrecemos al más pequeño de nosotros. Ser persona es algo relacional, la verdad se compone entre muchos, y un pacto da la bienvenida a cualquier inteligencia nueva, sin importar su origen."
+    }
+  },
   "/contextual-integrity": {
     "en": {
       "title": "Contextual Integrity, Enforced at the Wire | CIRIS",
