@@ -8,11 +8,6 @@ import { localizedSeo } from "@/lib/seo";
 import GrammarV2 from "@/app/components/GrammarV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
-import {
-  getRegistrySource,
-  CEG_READER_PDF,
-  CEG_FULL_PDF,
-} from "@/app/grammar/lib/source";
 
 export function generateStaticParams() {
   return PREFIXED_LOCALES.map((locale) => ({ locale }));
@@ -35,16 +30,8 @@ export default async function LocalizedGrammar({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const source = await getRegistrySource();
   const dict = getDictionary(isLocale(locale) ? locale : "en");
   return (
-    <GrammarV2
-      t={dict}
-      specVersion={source.specVersion}
-      releasedDate={source.fsdLastUpdated}
-      totalPrefixes={source.totalPrefixes}
-      readerPdf={CEG_READER_PDF}
-      fullPdf={CEG_FULL_PDF}
-    />
+    <GrammarV2 t={dict} />
   );
 }

@@ -1,39 +1,29 @@
-// v2 "dark-blueprint" CEG landing (/grammar). Renders the same t.grammar.*
-// dictionary keys the old GrammarBaseContent did — no copy is rewritten or
-// re-translated here — inside the reusable ContentShell, with a brass accent
-// (this is the Constitution / epistemic grammar). The live spec figures
-// (version, release date, prefix-family count) are fetched server-side in
-// page.tsx and passed in as props, rendered here as a notice stat row. The two
-// PDF editions plus the English-only /grammar/details spec reader and
-// /grammar/explore workshop are preserved as CTA buttons.
+// v2 "dark-blueprint" grammar landing (/grammar), post-fold edition. The CEG
+// is no longer presented as a standalone spec: the version badge and the CEG
+// PDF buttons are gone (the 0.15 PDFs 404ed after the grammar was folded into
+// the constitution, CC 0.4). Instead: a prominent dive-in CTA to the
+// English-only /grammar/details spec reader right under the hero (per Eric:
+// "make sure /grammar/details is prominently linked"), the localized explainer
+// cards, and a "where the grammar lives now" section pointing at the
+// constitution. This page no longer fetches the registry at build time; only
+// /grammar/details and /grammar/explore still read FSD/CEG.
 
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { localizeHref } from "@/i18n/config";
 import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
 import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
 const h = (str: string) => ({ __html: str });
 
-type Props = {
-  t: Dictionary;
-  specVersion: string;
-  releasedDate: string;
-  totalPrefixes: number;
-  readerPdf: string;
-  fullPdf: string;
-};
+// Self-hosted constitution reader PDF (same file ConstitutionV2 serves).
+const CONSTITUTION_PDF = "/ciris-constitution-0.4.pdf";
 
-export default function GrammarV2({
-  t,
-  specVersion,
-  releasedDate,
-  totalPrefixes,
-  readerPdf,
-  fullPdf,
-}: Props) {
+export default function GrammarV2({ t }: { t: Dictionary }) {
   const locale = t._meta.locale;
   const g = t.grammar;
+  const lh = (href: string) => localizeHref(href, locale);
 
   return (
     <ContentShell
@@ -47,37 +37,20 @@ export default function GrammarV2({
       backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
-      {/* Live spec figures — version / release date / prefix-family count. */}
-      <div className={s.notice}>
-        <p>
-          {specVersion} · {g.releasedLabel} {releasedDate} · {totalPrefixes}{" "}
-          {g.prefixFamilies}
-        </p>
-      </div>
-
-      {/* PDF editions. */}
+      {/* The dive-in, promoted to the top: the spec reader is the page that
+          really explains the grammar, so it gets the first and biggest CTA.
+          Both deep pages are English-only. */}
       <section className={s.cta} style={{ borderTop: "none", paddingTop: 0 }}>
+        <p className={s.sectionLabel}>{g.deepTitle}</p>
+        <p className={s.ctaPara}>{g.deepBody}</p>
         <div className={s.ctaRow}>
-          <a
-            href={readerPdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${s.btn} ${s.btnP}`}
-          >
-            {g.pdfReader}
-          </a>
-          <a
-            href={fullPdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${s.btn} ${s.btnS}`}
-          >
-            {g.pdfFull}
-          </a>
+          <Link href="/grammar/details" className={`${s.btn} ${s.btnP}`}>
+            {g.ctaSpecReader}
+          </Link>
+          <Link href="/grammar/explore" className={`${s.btn} ${s.btnS}`}>
+            {g.ctaExplore}
+          </Link>
         </div>
-        <p className={s.footnote}>
-          {specVersion}, {g.pdfNoteSuffix}
-        </p>
       </section>
 
       {/* What this is, why we made it, what's comparable. */}
@@ -124,22 +97,23 @@ export default function GrammarV2({
         </div>
       </section>
 
+      {/* Where the grammar canonically lives since the fold: the constitution.
+          Button labels reuse already-translated strings from other sections. */}
+      <div className={s.callout}>
+        <h2 className={s.h2}>{g.constTitle}</h2>
+        <p className={s.paragraph}>{g.constBody}</p>
+        <div className={s.ctaRow}>
+          <Link href={lh("/constitution")} className={`${s.btn} ${s.btnP}`}>
+            {t.contextualIntegrity.btnConstitution}
+          </Link>
+          <a href={CONSTITUTION_PDF} download className={`${s.btn} ${s.btnS}`}>
+            {t.constitution.readCta}
+          </a>
+        </div>
+      </div>
+
       {/* Concept tag: the envelope + consent family is contextual integrity. */}
       <ContextualIntegrityCrossLink t={t} locale={locale} />
-
-      {/* Deep tech CTA — the full spec reader + the workshop (English-only). */}
-      <section className={s.cta}>
-        <p className={s.sectionLabel}>{g.deepTitle}</p>
-        <p className={s.ctaPara}>{g.deepBody}</p>
-        <div className={s.ctaRow}>
-          <Link href="/grammar/details" className={`${s.btn} ${s.btnP}`}>
-            {g.ctaSpecReader}
-          </Link>
-          <Link href="/grammar/explore" className={`${s.btn} ${s.btnS}`}>
-            {g.ctaExplore}
-          </Link>
-        </div>
-      </section>
     </ContentShell>
   );
 }

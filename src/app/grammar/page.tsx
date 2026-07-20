@@ -1,25 +1,15 @@
-// English CEG landing (/grammar). Thin entry point over the shared
-// GrammarBaseContent, fed the English dictionary plus the live spec figures.
-// Localized variants live at src/app/[locale]/grammar/. The spec reader
-// (/grammar/details) and workshop (/grammar/explore) stay English-only.
+// English grammar landing (/grammar). Thin entry over the shared GrammarV2,
+// fed the English dictionary. Localized variants live at
+// src/app/[locale]/grammar/. Since the CEG folded into the constitution this
+// page no longer fetches the registry; the spec reader (/grammar/details) and
+// workshop (/grammar/explore) stay English-only and keep their live fetch.
 
 import { localizedSeo } from "@/lib/seo";
 import GrammarV2 from "@/app/components/GrammarV2";
 import { getDictionary } from "@/i18n/dictionaries";
-import { getRegistrySource, CEG_READER_PDF, CEG_FULL_PDF } from "./lib/source";
 
 export const metadata = localizedSeo("/grammar", "en");
 
-export default async function GrammarPage() {
-  const source = await getRegistrySource();
-  return (
-    <GrammarV2
-      t={getDictionary("en")}
-      specVersion={source.specVersion}
-      releasedDate={source.fsdLastUpdated}
-      totalPrefixes={source.totalPrefixes}
-      readerPdf={CEG_READER_PDF}
-      fullPdf={CEG_FULL_PDF}
-    />
-  );
+export default function GrammarPage() {
+  return <GrammarV2 t={getDictionary("en")} />;
 }
