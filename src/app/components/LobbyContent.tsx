@@ -61,8 +61,16 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
           <div className={styles.ctahint}>{l.ctaHint}</div>
         </section>
 
-        {/* THE WHY — the four problems, then the thesis they converge on. */}
+        {/* THE WHY — four huge problems, the swirl that fuses them, then the
+            punchline. Reads top-to-bottom: problems → convergence → thesis. */}
         <section className={styles.why}>
+          <p className={styles.whyProblemsHead}>{l.whyProblemsHead}</p>
+          <ul className={styles.whyProblems}>
+            <li>{l.heroLabels.consumerAi}</li>
+            <li>{l.heroLabels.bigTech}</li>
+            <li>{l.heroLabels.superalignment}</li>
+            <li>{l.heroLabels.misinformation}</li>
+          </ul>
           <div className={styles.whyArt}>
             <ConvergenceHero
               labels={l.heroLabels}
@@ -74,18 +82,15 @@ export default function LobbyContent({ t }: { t: Dictionary }) {
               }}
             />
           </div>
-          <div className={styles.whyText}>
-            <h2 className={styles.whyH2}>
-              {l.h1pre}
-              <span className={styles.accent}>{l.h1accent}</span>
-            </h2>
-            <p className={styles.whyLede}>{l.lede}</p>
-            <p className={styles.turn}>
-              {l.turnPre}
-              <b>{l.turnAccent}</b>
-              {l.turnPost}
-            </p>
-          </div>
+          <h2 className={styles.whyH2}>
+            {l.h1pre}
+            <span className={styles.accent}>{l.h1accent}</span>
+          </h2>
+          <p className={styles.turn}>
+            {l.turnPre}
+            <b>{l.turnAccent}</b>
+            {l.turnPost}
+          </p>
         </section>
 
         {/* The four doors — pick your fear, every one lands on the same floor. */}

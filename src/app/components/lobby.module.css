@@ -80,12 +80,11 @@
 .heroSolo { padding-bottom: 24px; }
 .heroSolo .h1 { max-width: 20ch; }
 .heroSolo .facts { margin: 0 0 26px; }
-.why { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 36px; align-items: center; padding: 26px 0 34px; border-top: 1px solid var(--color-line); }
-.whyArt { width: 100%; max-width: 440px; margin: 0 auto; justify-self: start; }
-.whyText { min-width: 0; }
-.whyH2 { font-size: clamp(26px, 3.6vw, 42px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 600; margin: 0 0 16px; }
-.whyLede { font-size: clamp(15px, 1.7vw, 18px); line-height: 1.55; color: var(--color-dim); max-width: 60ch; margin: 0 0 12px; }
-@media (max-width: 900px) {
-  .why { grid-template-columns: 1fr; gap: 16px; }
-  .whyArt { max-width: 360px; }
-}
+.why { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0; padding: 34px 0 34px; border-top: 1px solid var(--color-line); }
+.whyProblemsHead { font-family: ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-teal); margin: 0 0 18px; }
+.whyProblems { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.whyProblems li { font-size: clamp(20px, 3vw, 30px); font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; }
+.whyArt { width: 100%; max-width: 440px; margin: 6px auto 10px; }
+.whyH2 { font-size: clamp(26px, 3.6vw, 42px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 600; margin: 8px 0 16px; max-width: 22ch; }
+.why .turn { max-width: 56ch; }
+@media (max-width: 900px) { .whyArt { max-width: 360px; } }
