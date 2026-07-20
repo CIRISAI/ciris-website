@@ -411,7 +411,12 @@ export default function ConvergenceHero({
               letterSpacing: "0.16em",
               textTransform: "uppercase",
               color: "#bfefff",
-              whiteSpace: "nowrap",
+              // Label grew from "the same problem" to "Big Tech data centers";
+              // long translations may need two centered lines on small screens.
+              whiteSpace: "normal",
+              textAlign: "center",
+              maxWidth: "90%",
+              lineHeight: 1.35,
               pointerEvents: "none",
               textShadow: "0 1px 10px rgba(0,0,0,0.7)",
             }}
