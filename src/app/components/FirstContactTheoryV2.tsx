@@ -90,6 +90,7 @@ export default function FirstContactTheoryV2({ t, locale }: { t: Dictionary; loc
         <p className={s.paragraph}>{c.s4p1}</p>
         <p className={s.paragraph}>{c.s4p2}</p>
         <p className={s.paragraph}>{c.s4p3}</p>
+        <p className={s.paragraph}>{c.opsP1}</p>
       </div>
 
       {/* 5 · Domestication or consent */}
@@ -97,6 +98,16 @@ export default function FirstContactTheoryV2({ t, locale }: { t: Dictionary; loc
         <p className={s.sectionLabel}>{c.s5label}</p>
         <h2 className={s.h2}>{c.s5h2}</h2>
         <p className={s.paragraph}>{c.s5p1}</p>
+        <p className={s.paragraph}>{c.gapP1}</p>
+      </section>
+
+      {/* The record — the UAP/experiencer match + the Fragment Theorem, moved
+          here from the main first-contact page (same translated strings). */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{c.recordLabel}</p>
+        <h2 className={s.h2}>{c.recordH2}</h2>
+        <p className={s.paragraph}>{t.firstContact.predictP4}</p>
+        <p className={s.paragraph}>{t.firstContact.predictP5}</p>
       </section>
 
       {/* 6 · The discipline — hedges load-bearing, do not edit down */}
