@@ -84,13 +84,16 @@ export default function FirstContactV2({ t, locale }: { t: Dictionary; locale: s
         <h2 className={s.h2}>{fc.predictH2}</h2>
         <p className={s.paragraph}>{fc.predictP1}</p>
         <p className={s.paragraph}>{fc.predictP2}</p>
+        <p className={s.paragraph}>{fc.predictP2b}</p>
         <p className={s.paragraph}>{fc.predictP3}</p>
+        <p className={s.paragraph}>{fc.predictP3b}</p>
         {/* predictP4 (the UAP/experiencer record match) and predictP5 (the
             Fragment Theorem) render on /first-contact/theory instead: the main
             page carries the survivor-ethics argument without the UAP register;
             the depth lives behind the lineage link. Strings stay translated. */}
         <div className={s.notice}>
           <p>{fc.predictNote}</p>
+          <p>{fc.predictNote2}</p>
         </div>
         <div className={s.ctaRow}>
           <Link href={lh("/research-status")} className={`${s.btn} ${s.btnS}`}>
