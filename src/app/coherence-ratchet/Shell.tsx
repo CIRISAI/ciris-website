@@ -50,12 +50,12 @@ export default function Shell({
                 Research testbed
               </span>
               <a
-                href="https://doi.org/10.5281/zenodo.18217688"
+                href="https://doi.org/10.5281/zenodo.21730551"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://zenodo.org/badge/DOI/10.5281/zenodo.18217688.svg"
+                  src="https://zenodo.org/badge/DOI/10.5281/zenodo.21730551.svg"
                   alt="DOI"
                   className="h-5"
                 />

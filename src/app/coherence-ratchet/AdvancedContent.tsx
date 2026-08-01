@@ -207,7 +207,7 @@ export default function AdvancedContent() {
             </code>{" "}
             &mdash; is in{" "}
             <a
-              href="https://doi.org/10.5281/zenodo.18217688"
+              href="https://doi.org/10.5281/zenodo.21730551"
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-primary hover:underline"

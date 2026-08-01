@@ -39,7 +39,7 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
   const schemaHighlights = [rs.schemaHighlight1, rs.schemaHighlight2, rs.schemaHighlight3];
 
   const papers = [
-    { href: "https://zenodo.org/records/18217688", title: rs.paper1Title, meta: rs.paper1Meta, blurb: rs.paper1Blurb },
+    { href: "https://zenodo.org/records/21730551", title: rs.paper1Title, meta: rs.paper1Meta, blurb: rs.paper1Blurb },
     { href: "https://zenodo.org/records/18137161", title: rs.paper2Title, meta: rs.paper2Meta, blurb: rs.paper2Blurb },
     { href: "https://zenodo.org/records/19839280", title: rs.paper3Title, meta: rs.paper3Meta, blurb: rs.paper3Blurb },
   ];

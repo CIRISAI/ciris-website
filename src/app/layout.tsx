@@ -193,14 +193,14 @@ const jsonLd = {
     },
     {
       "@type": "ScholarlyArticle",
-      "@id": "https://zenodo.org/records/18217688",
+      "@id": "https://zenodo.org/records/21730551",
       name: "Coherence Collapse Analysis",
       description:
         "Engineering risk framework for correlation-driven diversity collapse in complex systems. Mathematical foundation for coherence-based alignment, including the Kish-formula effective-dimensionality measurement and the singularity boundary.",
       author: { "@type": "Person", "name": "Eric Moore" },
       publisher: { "@id": "https://ciris.ai/#organization" },
-      url: "https://zenodo.org/records/18217688",
-      sameAs: "https://doi.org/10.5281/zenodo.18217688",
+      url: "https://zenodo.org/records/21730551",
+      sameAs: "https://doi.org/10.5281/zenodo.21730551",
     },
     {
       "@type": "ScholarlyArticle",

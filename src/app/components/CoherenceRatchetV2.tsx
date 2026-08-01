@@ -61,11 +61,11 @@ export default function CoherenceRatchetV2({ t, locale }: { t: Dictionary; local
         <p>
           Research testbed ·{" "}
           <a
-            href="https://doi.org/10.5281/zenodo.18217688"
+            href="https://doi.org/10.5281/zenodo.21730551"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DOI 10.5281/zenodo.18217688
+            DOI 10.5281/zenodo.21730551
           </a>
         </p>
       </div>

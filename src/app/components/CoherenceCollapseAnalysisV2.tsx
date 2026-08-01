@@ -99,7 +99,7 @@ export default function CoherenceCollapseAnalysisV2({
         </div>
         <div className={s.ctaRow} style={{ marginTop: 18 }}>
           <a
-            href="https://zenodo.org/records/18217688"
+            href="https://zenodo.org/records/21730551"
             target="_blank"
             rel="noopener noreferrer"
             className={`${s.btn} ${s.btnP}`}
@@ -179,7 +179,7 @@ export default function CoherenceCollapseAnalysisV2({
             {c.closingCta2}
           </Link>
           <a
-            href="https://zenodo.org/records/18217688"
+            href="https://zenodo.org/records/21730551"
             target="_blank"
             rel="noopener noreferrer"
             className={`${s.btn} ${s.btnS}`}

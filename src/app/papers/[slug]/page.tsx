@@ -55,8 +55,8 @@ const PAPERS: Paper[] = [
     displayTitle: "Coherence Collapse Analysis",
     subtitle: "The engineering risk framework under the corridor idea",
     date: "2026/01/11",
-    doi: "10.5281/zenodo.18217688",
-    zenodo: "https://zenodo.org/records/18217688",
+    doi: "10.5281/zenodo.21730551",
+    zenodo: "https://zenodo.org/records/21730551",
     role: "Formal foundation",
     summary:
       "When the constraints governing a system become correlated, effective diversity collapses. Derives three collapse timelines, a singularity boundary, and a phase classification (chaos / healthy / rigidity). Verified with Monte Carlo simulation and Lean 4 proofs.",

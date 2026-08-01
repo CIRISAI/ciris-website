@@ -6,7 +6,7 @@ import navItems from "@/app/components/navitems";
 // DOI -> on-site paper page (with Highwire citation_* tags for Scholar).
 const SLUG_BY_DOI: Record<string, string> = {
   "10.5281/zenodo.20300773": "corridor-dynamics",
-  "10.5281/zenodo.18217688": "coherence-collapse",
+  "10.5281/zenodo.21730551": "coherence-collapse",
   "10.5281/zenodo.19839280": "constrained-reasoning-chains",
   "10.5281/zenodo.18137161": "cirisagent-framework",
 };
@@ -42,15 +42,15 @@ const papers: Paper[] = [
     title: "Coherence Collapse Analysis",
     subtitle:
       "The engineering risk framework under the corridor idea",
-    meta: "v3 · Jan 11, 2026",
-    doi: "10.5281/zenodo.18217688",
-    href: "https://zenodo.org/records/18217688",
+    meta: "v5 · Aug 1, 2026",
+    doi: "10.5281/zenodo.21730551",
+    href: "https://zenodo.org/records/21730551",
     role: "Formal foundation",
     summary:
-      "When the constraints governing a system become correlated, effective diversity collapses. Derives three collapse timelines, a singularity boundary, and a phase classification (chaos / healthy / rigidity). Verified with Monte Carlo simulation and Lean 4 proofs.",
+      "When the constraints governing a system become correlated, effective diversity collapses. Derives the assurance ceiling under correlation, collapse timelines, a singularity boundary, and a phase classification (chaos / healthy / rigidity). Verified with Monte Carlo simulation and Lean 4 proofs.",
     keyFindings: [
       "Effective constraint count: k_eff = k / (1 + ρ(k − 1)) → 1 as ρ → 1.",
-      "The k_eff identity formalizes coherence collapse under correlated constraint and is the mathematical content the Coherence Ratchet operationalizes.",
+      "The assurance ceiling: at correlation ρ, no amount of scale buys more than 1/ρ effective independent checks. Some aggregate harms are provably invisible to any per-part checker, an existence result the paper states as a limit on itself.",
     ],
   },
   {
