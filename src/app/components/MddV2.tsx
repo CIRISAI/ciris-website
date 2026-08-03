@@ -464,7 +464,7 @@ export default function MddV2({ t, locale }: { t: Dictionary; locale: string }) 
           <Link href={lh("/vision")} className={`${s.btn} ${s.btnS}`}>
             {m.closeLink2}
           </Link>
-          <Link href={lh("/sections/main")} className={`${s.btn} ${s.btnS}`}>
+          <Link href={lh("/constitution")} className={`${s.btn} ${s.btnS}`}>
             {m.closeLink3}
           </Link>
           <Link href={lh("/federation")} className={`${s.btn} ${s.btnS}`}>

@@ -59,7 +59,7 @@ const navigation: Navigation = {
     { name: "Thesis", href: "/coherence-ratchet", key: "thesis" },
     { name: "Methodology", href: "/mdd", key: "methodology" },
     { name: "Safety vs Censorship", href: "/safety-vs-censorship", key: "safetyVsCensorship" },
-    { name: "Principles", href: "/sections/main", key: "principles" },
+    { name: "Principles", href: "/constitution", key: "principles" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy", key: "privacyPolicy" },

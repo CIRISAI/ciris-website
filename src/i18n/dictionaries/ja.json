@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "CIRIS憲法 · CC 0.4",
+    "eyebrow": "CIRIS憲法 · CC 1.0-rc2",
     "headline": "1つの文書。1本のバージョン線。",
     "intro": "CIRISアコードはAIが何を大切にすべきかを定めました。CIRIS認識論的文法はすべての主張がどのように署名されて誰でも確認できるかを定めました。2つの文書として書かれましたが、すでに互いを含んでいました。今は1つになっています。それがCIRIS憲法です。",
     "apexLabel": "礎石、メタゴール M-1",
@@ -55,7 +55,9 @@
     "forewordLabel": "まえがきより",
     "readCta": "憲法全文を読む（PDF）",
     "sourceCta": "GitHubでソースを読む",
-    "versionNote": "バージョン CC 0.4 · CIRISアコード1.3-RC2およびCEG 1.0-RC29を統合 · AGPL-3.0"
+    "readerNotice": "You are reading the historical CIRIS Accord. The Accord and the CEG are now one document: the CIRIS Constitution.",
+    "readerNoticeCta": "Read the Constitution →",
+    "versionNote": "バージョン CC 1.0-rc2 · CIRISアコード1.3-RC2およびCEG 1.0-RC29を統合 · AGPL-3.0"
   },
   "_meta": {
     "locale": "ja",
@@ -808,7 +810,7 @@
     "heroButtonText": "GitHubでソースを見る",
     "heroButtonHref": "https://github.com/CIRISAI/CIRISAgent",
     "heroLinkText": "Accordを読む",
-    "heroLinkHref": "/sections/main",
+    "heroLinkHref": "/constitution",
     "logoAlt": "ブランドロゴアイコン",
     "longChatHeadline": "チャットが長くなったとき",
     "longChatSubheadline": "穏やかな現実確認のリマインダー",
@@ -1030,7 +1032,7 @@
     "ctaCorridorDynamics": "Corridor Dynamicsを読む",
     "ctaInstall": "CIRISをインストール",
     "ctaSeeCode": "コードを見る",
-    "moreDepthText": "さらに深く知りたいですか？数学は <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> に、ライブの証拠は <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a> に、そしてフレームワーク自体は <a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a> にあります。",
+    "moreDepthText": "さらに深く知りたいですか？数学は <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> に、ライブの証拠は <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a> に、そしてフレームワーク自体は <a href=\"/constitution\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a> にあります。",
     "closingHeadline": "これがポジティブな賭けです。",
     "closingSubheadline": "オープンに構築されています。なぜなら、未来は一握りの企業によって決められるべきではないからです。",
     "closingCopy": "暗い世界観は、確認できないすべての人について最悪を想定するよう求めます。CIRISはより良く、より難しいことを求めます。私たちがいかに上手く共に働いているかを人々が見られるツールを構築し、やってくるものに尊厳を持って向き合ってください。コードを読んでください。システムを使ってください。どこが間違っているか教えてください。",
@@ -1620,7 +1622,7 @@
     "engageLabel": "参加する場所",
     "engageH2": "誰からでもコメントを受け付けています。",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a>のGitHubイシューが意見を述べる場所です。開発者である必要はありません。コードベースを知っている必要もありません。このサイトの何かがおかしいと感じたり、構築されているものに問題が見えたりしたら、イシューを開いて伝えてください。最も役立つイシューは、システムの特定の部分を指摘し、変えるべき内容を提案するものですが、誠実な参加はすべて歓迎です。",
-    "engageP2Html": "プロジェクト全体の基盤となっている協定、CIRISが人々に対して負うもの、そして人々がCIRISに対して負うものは、<a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a>にあり、レビューを受け付けています。何かが腑に落ちない場合も、GitHubイシューを開く価値があります。",
+    "engageP2Html": "プロジェクト全体の基盤となっている協定、CIRISが人々に対して負うもの、そして人々がCIRISに対して負うものは、<a href=\"/ciris_constitution.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_constitution.txt</a>にあり、レビューを受け付けています。何かが腑に落ちない場合も、GitHubイシューを開く価値があります。",
     "engageP3": "内容のあるイシューは読まれます。作業は独自のペースで進みます。",
     "kicker": "平等な連合体"
   },
@@ -2004,7 +2006,7 @@
     "caseArchLi6": "Discordコミュニティをモデレートする本番デプロイ",
     "caseSuccessH3": "主要な成功要因",
     "caseSuccessLi1": "明確なメタゴール: M-1が明確な意思決定基準を提供する",
-    "caseSuccessLi2Html": "運用倫理: Accordの原則をコード制約として実装（<a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">Accordを読む</a>）",
+    "caseSuccessLi2Html": "運用倫理: Accordの原則をコード制約として実装（<a href=\"/constitution\" class=\"text-brand-primary hover:underline\">Accordを読む</a>）",
     "caseSuccessLi3": "持続可能な開発: 健全なリズムを強化するGraceコンパニオン",
     "caseSuccessLi4": "継続的なバリデーション: あらゆるアーキテクチャの決定に問いを立てる",
     "adoptEyebrow": "導入ガイドライン",
@@ -2896,7 +2898,7 @@
     "convergence": "四つの不安、一つの土台。インターネットの置き換えは、ChatGPTの置き換えでもある。",
     "convergenceAccent": "同じ基盤、すべての入り口。",
     "footL": "CIRISAgent · 知識のウェブ · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 展開中・Constitution 0.4",
+    "footR": "CIRIS 3.0 展開中・Constitution 1.0-rc2",
     "heroLabels": {
       "consumerAi": "信頼できるAIがない",
       "bigTech": "巨大企業がすべてを支配",

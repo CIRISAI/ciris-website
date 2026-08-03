@@ -1,6 +1,14 @@
-# Cloudflare Pages redirects
+# Cloudflare redirects
 # Format: <from> <to> <status>
 
-# Legacy "covenant" naming → current "accord" naming
-/ciris_covenant.txt  /ciris_accord.txt  301
-/ciris_covenant.pdf  /ciris_accord.pdf  301
+# Legacy "covenant" and "accord" document URLs → the CIRIS Constitution (latest).
+# The Accord and the CEG were folded into one document, the CIRIS Constitution;
+# every historical URL resolves to the current edition.
+/ciris_covenant.txt  /ciris_constitution.txt  301
+/ciris_covenant.pdf  /ciris_constitution.pdf  301
+/ciris_accord.txt    /ciris_constitution.txt  301
+/ciris_accord.pdf    /ciris_constitution.pdf  301
+
+# Version-pinned constitution PDF → latest (the pinned cut stays in git history
+# and in downstream vendored copies).
+/ciris-constitution-0.4.pdf  /ciris_constitution.pdf  301

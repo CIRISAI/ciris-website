@@ -47,7 +47,7 @@ const COMPONENTS = [
     cls: s.cBrass,
     role: "Ecosystem matrix and contract governance",
     body:
-      "Not a deployable binary. It defines the reference matrices and the integration boundaries every other project must satisfy before any combination of wheels is allowed to boot. The standard it tests against is the CIRIS Constitution (CC 0.4), the ecosystem's superalignment standard.",
+      "Not a deployable binary. It defines the reference matrices and the integration boundaries every other project must satisfy before any combination of wheels is allowed to boot. The standard it tests against is the CIRIS Constitution, the ecosystem's superalignment standard.",
     stages: [
       ["Cohabitation gates", "the real, separately-published wheels are installed together and driven in one process, where cross-wheel bugs that vanish in any single repo's combined build finally surface."],
       ["Real wheels, never mocks", "every assertion calls a published wheel and checks its behaviour. A missing feature is filed upstream and marked an expected failure, never skipped or worked around."],

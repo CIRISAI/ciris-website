@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "Конституция CIRIS · CC 0.4",
+    "eyebrow": "Конституция CIRIS · CC 1.0-rc2",
     "headline": "Один документ. Одна линия версий.",
     "intro": "Соглашение CIRIS определяло, о чём должен заботиться ИИ. Эпистемическая грамматика CIRIS определяла, как подписывается каждое утверждение, чтобы любой мог его проверить. Они были написаны как два документа, но уже содержали друг друга. Теперь они едины: Конституция CIRIS.",
     "apexLabel": "Краеугольный камень: метацель M-1",
@@ -55,7 +55,9 @@
     "forewordLabel": "Из предисловия",
     "readCta": "Читать полную конституцию (PDF)",
     "sourceCta": "Читать исходный код на GitHub",
-    "versionNote": "Версия CC 0.4 · включает CIRIS Accord 1.3-RC2 и CEG 1.0-RC29 · AGPL-3.0"
+    "readerNotice": "You are reading the historical CIRIS Accord. The Accord and the CEG are now one document: the CIRIS Constitution.",
+    "readerNoticeCta": "Read the Constitution →",
+    "versionNote": "Версия CC 1.0-rc2 · включает CIRIS Accord 1.3-RC2 и CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "ru",
@@ -808,7 +810,7 @@
     "heroButtonText": "Посмотреть код на GitHub",
     "heroButtonHref": "https://github.com/CIRISAI/CIRISAgent",
     "heroLinkText": "Читать Accord",
-    "heroLinkHref": "/sections/main",
+    "heroLinkHref": "/constitution",
     "logoAlt": "Логотип бренда",
     "longChatHeadline": "Когда разговор затянулся",
     "longChatSubheadline": "Мягкие напоминания о реальности",
@@ -1030,7 +1032,7 @@
     "ctaCorridorDynamics": "Читать Corridor Dynamics",
     "ctaInstall": "Установить CIRIS",
     "ctaSeeCode": "Посмотреть код",
-    "moreDepthText": "Хотите глубже? Математика — на странице <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Анализ коллапса когерентности</a>, живые данные — на странице <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Исследования</a>, а сам фреймворк — это <a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a>.",
+    "moreDepthText": "Хотите глубже? Математика — на странице <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Анализ коллапса когерентности</a>, живые данные — на странице <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Исследования</a>, а сам фреймворк — это <a href=\"/constitution\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a>.",
     "closingHeadline": "Это позитивная ставка.",
     "closingSubheadline": "Построено открыто, потому что будущее не должно решаться горсткой компаний.",
     "closingCopy": "Мрачные картины мира просят вас предполагать худшее о каждом, кого вы не можете проверить. CIRIS просит о чём-то лучшем и более сложном: создайте инструменты, которые позволят людям видеть, насколько хорошо они работают вместе, и встретить то, что грядёт, с достоинством. Читайте код. Используйте систему. Говорите нам, где мы ошибаемся.",
@@ -1620,7 +1622,7 @@
     "engageLabel": "Где можно высказаться",
     "engageH2": "Мы приглашаем комментарии от всех.",
     "engageP1Html": "Задачи GitHub в <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> — это место, где можно высказаться. Необязательно быть разработчиком. Необязательно знать кодовую базу. Если что-то на этом сайте читается неправильно или вы видите проблему в том, что строится, — откройте задачу и скажите об этом. Самые полезные задачи называют конкретную часть системы и предлагают, что нужно изменить, но любое честное участие приветствуется.",
-    "engageP2Html": "Accord, который лежит в основе всего проекта, — то, что CIRIS должен людям, и то, что люди должны в ответ, — находится по адресу <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> и остаётся открытым для проверки. Если что-то в нём вас не устраивает — это тоже стоит оформить как задачу на GitHub.",
+    "engageP2Html": "Accord, который лежит в основе всего проекта, — то, что CIRIS должен людям, и то, что люди должны в ответ, — находится по адресу <a href=\"/ciris_constitution.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_constitution.txt</a> и остаётся открытым для проверки. Если что-то в нём вас не устраивает — это тоже стоит оформить как задачу на GitHub.",
     "engageP3": "Содержательные задачи читаются. Работа движется в своём темпе.",
     "kicker": "Федерация равных"
   },
@@ -2004,7 +2006,7 @@
     "caseArchLi6": "Промышленное развёртывание для модерации Discord-сообществ",
     "caseSuccessH3": "Ключевые факторы успеха",
     "caseSuccessLi1": "Чёткая мета-цель: M-1 задаёт однозначные критерии для принятия решений",
-    "caseSuccessLi2Html": "Операционная этика: принципы Accord реализованы как ограничения в коде (<a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">читать Accord</a>)",
+    "caseSuccessLi2Html": "Операционная этика: принципы Accord реализованы как ограничения в коде (<a href=\"/constitution\" class=\"text-brand-primary hover:underline\">читать Accord</a>)",
     "caseSuccessLi3": "Устойчивая разработка: компаньон Grace обеспечивает здоровые ритмы",
     "caseSuccessLi4": "Постоянная валидация: каждое архитектурное решение проходит проверку",
     "adoptEyebrow": "Рекомендации по внедрению",
@@ -2896,7 +2898,7 @@
     "convergence": "Четыре страха, одно основание. Замена интернета, это и замена ChatGPT.",
     "convergenceAccent": "Одна платформа, каждая дверь.",
     "footL": "CIRISAgent · эпистемическая сеть · AGPL-3.0, привязан к миссии",
-    "footR": "CIRIS 3.0 развёртывается · Constitution 0.4",
+    "footR": "CIRIS 3.0 развёртывается · Constitution 1.0-rc2",
     "heroLabels": {
       "consumerAi": "Никакого ИИ, которому доверяешь",
       "bigTech": "Биг Тех владеет всем",

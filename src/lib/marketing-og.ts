@@ -125,7 +125,7 @@ export const MARKETING_OG: Record<
   "/philosophy": {
     "en": {
       "title": "The CIRIS Philosophy: Owed What We Offer the Least of Us",
-      "description": "One sentence governs CIRIS: we are owed as much as we offer to the least of us. Relational personhood, truth by composition, and a covenant that welcomes any new intelligence, regardless of source."
+      "description": "One sentence governs CIRIS: we are owed as much as we offer to the least of us. Relational personhood, truth by composition, and a constitution that welcomes any new intelligence, regardless of source."
     },
     "am": {
       "title": "የ CIRIS ፍልስፍና፡ ለሚያንሰው የምንሰጠውን ያህል ይገባናል",

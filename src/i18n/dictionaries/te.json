@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "CIRIS రాజ్యాంగం · CC 0.4",
+    "eyebrow": "CIRIS రాజ్యాంగం · CC 1.0-rc2",
     "headline": "ఒక పత్రం. ఒక వెర్షన్ లైన్.",
     "intro": "CIRIS Accord AI తప్పనిసరిగా పట్టించుకోవాల్సిన విషయాలను నిర్ధారించింది. CIRIS Epistemic Grammar ప్రతి వాదన ఎవరైనా తనిఖీ చేయగలిగేలా ఎలా సంతకం చేయబడుతుందో నిర్ధారించింది. అవి రెండు పత్రాలుగా రాయబడ్డాయి, కానీ అవి ఒకదానికొకటి ఇప్పటికే కలిగి ఉన్నాయి. ఇప్పుడు అవి ఒకటి: CIRIS రాజ్యాంగం.",
     "apexLabel": "మూలస్తంభం, మెటా-గోల్ M-1",
@@ -55,7 +55,9 @@
     "forewordLabel": "ముందుమాట నుండి",
     "readCta": "పూర్తి రాజ్యాంగం చదవండి (PDF)",
     "sourceCta": "GitHub లో సోర్స్ చదవండి",
-    "versionNote": "వెర్షన్ CC 0.4 · CIRIS Accord 1.3-RC2 మరియు CEG 1.0-RC29 కలిగి ఉంది · AGPL-3.0"
+    "readerNotice": "You are reading the historical CIRIS Accord. The Accord and the CEG are now one document: the CIRIS Constitution.",
+    "readerNoticeCta": "Read the Constitution →",
+    "versionNote": "వెర్షన్ CC 1.0-rc2 · CIRIS Accord 1.3-RC2 మరియు CEG 1.0-RC29 కలిగి ఉంది · AGPL-3.0"
   },
   "_meta": {
     "locale": "te",
@@ -808,7 +810,7 @@
     "heroButtonText": "GitHub లో సోర్స్ చూడండి",
     "heroButtonHref": "https://github.com/CIRISAI/CIRISAgent",
     "heroLinkText": "Accord చదవండి",
-    "heroLinkHref": "/sections/main",
+    "heroLinkHref": "/constitution",
     "logoAlt": "బ్రాండ్ లోగో చిహ్నం",
     "longChatHeadline": "చాట్ చాలా సేపు జరిగినప్పుడు",
     "longChatSubheadline": "మృదువైన వాస్తవిక గుర్తుపోళ్లు",
@@ -1030,7 +1032,7 @@
     "ctaCorridorDynamics": "Corridor Dynamics చదవండి",
     "ctaInstall": "CIRIS ఇన్‌స్టాల్ చేయండి",
     "ctaSeeCode": "కోడ్ చూడండి",
-    "moreDepthText": "మరింత లోతు కావాలా? గణితం <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> లో ఉంది, ప్రత్యక్ష ఆధారాలు <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a> లో ఉన్నాయి, మరియు ఫ్రేమ్‌వర్క్ స్వయంగా <a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a>.",
+    "moreDepthText": "మరింత లోతు కావాలా? గణితం <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> లో ఉంది, ప్రత్యక్ష ఆధారాలు <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a> లో ఉన్నాయి, మరియు ఫ్రేమ్‌వర్క్ స్వయంగా <a href=\"/constitution\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a>.",
     "closingHeadline": "ఇది సానుకూల పందెం.",
     "closingSubheadline": "తెరిచిగా నిర్మించబడింది, ఎందుకంటే భవిష్యత్తు కొన్ని సంస్థల చేతిలో నిర్ణయించబడకూడదు.",
     "closingCopy": "నిరాశాజనక ప్రపంచ దృక్పథాలు మీరు తనిఖీ చేయలేని ప్రతి ఒక్కరి గురించి అత్యంత చెడ్డదని భావించమని అడుగుతాయి. CIRIS మెరుగైనది మరియు కష్టమైనది అడుగుతుంది: మనం ఎంత బాగా కలిసి పని చేస్తున్నామో మనుషులు చూడగలిగే సాధనాలు నిర్మించండి, మరియు వచ్చేది గౌరవంతో కలవండి. కోడ్ చదవండి. వ్యవస్థ ఉపయోగించండి. మేము తప్పు చేసిన చోట చెప్పండి.",
@@ -1620,7 +1622,7 @@
     "engageLabel": "పాల్గొనే చోట",
     "engageH2": "మేము ఎవరి నుండైనా వ్యాఖ్యానాలు కోరుతున్నాం.",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a>-లో GitHub సమస్యలు పాల్గొనే స్థలం. మీరు డెవలపర్ అయి ఉండవలసిన అవసరం లేదు. కోడ్‌బేస్ తెలిసి ఉండవలసిన అవసరం లేదు. ఈ సైట్‌లో ఏదైనా మీకు తప్పుగా అనిపిస్తే, లేదా నిర్మించబడుతున్న దానిలో సమస్య కనిపిస్తే, సమస్య తెరిచి చెప్పండి. అత్యంత ఉపయోగకరమైన సమస్యలు సిస్టమ్‌లో నిర్దిష్ట భాగాన్ని పేర్కొని ఏమి మారాలో ప్రతిపాదిస్తాయి, కానీ ఏ నిజాయితీ పాల్గొనిక అయినా స్వాగతం.",
-    "engageP2Html": "మొత్తం ప్రాజెక్ట్‌ను ఆధారమైన ఒప్పందం, CIRIS మనుషులకు ఏమి రుణపడి ఉంది, మరియు మనుషులు తిరిగి ఏమి రుణపడి ఉన్నారు, <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a>-లో ఉంది మరియు సమీక్షకు తెరిచి ఉంది. దానిలో ఏదైనా మీకు సరిగ్గా అనిపించకపోతే, అది కూడా తెరవడానికి తగిన GitHub సమస్య.",
+    "engageP2Html": "మొత్తం ప్రాజెక్ట్‌ను ఆధారమైన ఒప్పందం, CIRIS మనుషులకు ఏమి రుణపడి ఉంది, మరియు మనుషులు తిరిగి ఏమి రుణపడి ఉన్నారు, <a href=\"/ciris_constitution.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_constitution.txt</a>-లో ఉంది మరియు సమీక్షకు తెరిచి ఉంది. దానిలో ఏదైనా మీకు సరిగ్గా అనిపించకపోతే, అది కూడా తెరవడానికి తగిన GitHub సమస్య.",
     "engageP3": "ముఖ్యమైన సమస్యలు చదవబడతాయి. పని దాని స్వంత వేగంతో కొనసాగుతుంది.",
     "kicker": "సమాన భాగస్వాముల సమాఖ్య"
   },
@@ -2004,7 +2006,7 @@
     "caseArchLi6": "Discord సమాజాలను నియంత్రించే ఉత్పత్తి విస్తరణ",
     "caseSuccessH3": "కీలక విజయ కారకాలు",
     "caseSuccessLi1": "స్పష్టమైన మెటా-లక్ష్యం: M-1 స్పష్టమైన నిర్ణయ ప్రమాణాలు అందిస్తుంది",
-    "caseSuccessLi2Html": "కార్యాచరణ నైతికత: Accord సూత్రాలు కోడ్ పరిమితులుగా అమలు చేయబడ్డాయి (<a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">Accord చదవండి</a>)",
+    "caseSuccessLi2Html": "కార్యాచరణ నైతికత: Accord సూత్రాలు కోడ్ పరిమితులుగా అమలు చేయబడ్డాయి (<a href=\"/constitution\" class=\"text-brand-primary hover:underline\">Accord చదవండి</a>)",
     "caseSuccessLi3": "స్థిరమైన అభివృద్ధి: ఆరోగ్యకరమైన లయలను అమలు చేసే Grace అనుచరుడు",
     "caseSuccessLi4": "నిరంతర ధృవీకరణ: ప్రతి నిర్మాణ నిర్ణయం సవాలు చేయబడింది",
     "adoptEyebrow": "దత్తత మార్గదర్శకాలు",
@@ -2896,7 +2898,7 @@
     "convergence": "నాలుగు భయాలు, ఒకే పునాది. ఇంటర్నెట్‌కు ప్రత్యామ్నాయమే ChatGPT‌కు ప్రత్యామ్నాయం.",
     "convergenceAccent": "ఒకే పునాది, ప్రతి దారికీ.",
     "footL": "CIRISAgent · జ్ఞాన జాలం · AGPL-3.0, లక్ష్యబద్ధంగా లాక్ చేయబడింది",
-    "footR": "CIRIS 3.0 విడుదల అవుతోంది · Constitution 0.4",
+    "footR": "CIRIS 3.0 విడుదల అవుతోంది · Constitution 1.0-rc2",
     "heroLabels": {
       "consumerAi": "నమ్మగలిగే AI లేదు",
       "bigTech": "బిగ్ టెక్ అన్నీ తన చేతుల్లో పెట్టుకుంది",

@@ -52,9 +52,9 @@ const navItems = [
     icon: <IconFlask className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
-    name: "Accord",
+    name: "Constitution",
     subtitle: "The framework",
-    link: "/sections/main",
+    link: "/constitution",
     key: "accord",
     icon: <IconBook className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },

@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "የ CIRIS ሕገ መንግስት · CC 0.4",
+    "eyebrow": "የ CIRIS ሕገ መንግስት · CC 1.0-rc2",
     "headline": "አንድ ሰነድ። አንድ የስሪት መስመር።",
     "intro": "CIRIS Accord አንድ AI ምን ሊያሳስበው እንደሚገባ ዘረዘረ። CIRIS Epistemic Grammar እያንዳንዱ ትዕዛዝ እንዴት ፈርሞ ሊረጋገጥ እንደሚቻል ዘረዘረ። እንደ ሁለት ሰነዶች ተጻፉ፣ ነገር ግን አንዱ ሌላውን ይዞ ነበር። አሁን አንድ ሆነዋል፡ CIRIS ሕገ መንግስት።",
     "apexLabel": "መሰረቱ፣ Meta-Goal M-1",
@@ -55,7 +55,9 @@
     "forewordLabel": "ከፊት ቃል",
     "readCta": "ሙሉ ሕገ መንግስት አንብብ (PDF)",
     "sourceCta": "ምንጩን GitHub ላይ አንብብ",
-    "versionNote": "ስሪት CC 0.4 · CIRIS Accord 1.3-RC2 እና CEG 1.0-RC29 ያካትታል · AGPL-3.0"
+    "readerNotice": "You are reading the historical CIRIS Accord. The Accord and the CEG are now one document: the CIRIS Constitution.",
+    "readerNoticeCta": "Read the Constitution →",
+    "versionNote": "ስሪት CC 1.0-rc2 · CIRIS Accord 1.3-RC2 እና CEG 1.0-RC29 ያካትታል · AGPL-3.0"
   },
   "_meta": {
     "locale": "am",
@@ -734,7 +736,7 @@
     "heroButtonText": "GitHub ላይ ምንጭ ኮድ ይመልከቱ",
     "heroButtonHref": "https://github.com/CIRISAI/CIRISAgent",
     "heroLinkText": "ስምምነቱን ያንብቡ",
-    "heroLinkHref": "/sections/main",
+    "heroLinkHref": "/constitution",
     "logoAlt": "የምርት ምልክት አዶ",
     "longChatHeadline": "ቻት ረዘም ሲል",
     "longChatSubheadline": "ቀስ ያለ እውነታ ማስታወሻዎች",
@@ -1030,7 +1032,7 @@
     "ctaCorridorDynamics": "Corridor Dynamics ያንብቡ",
     "ctaInstall": "CIRIS ይጫኑ",
     "ctaSeeCode": "ኮዱን ይመልከቱ",
-    "moreDepthText": "ተጨማሪ ጥልቀት ይፈልጋሉ? ሒሳቡ <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> ላይ ነው፣ ቀጥተኛ ማስረጃ <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a> ላይ ነው፣ ፍሬሜዌርኩ ራሱ <a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a> ነው።",
+    "moreDepthText": "ተጨማሪ ጥልቀት ይፈልጋሉ? ሒሳቡ <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> ላይ ነው፣ ቀጥተኛ ማስረጃ <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a> ላይ ነው፣ ፍሬሜዌርኩ ራሱ <a href=\"/constitution\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a> ነው።",
     "closingHeadline": "ይህ አወንታዊ ቁማሩ ነው።",
     "closingSubheadline": "ክፍት ሆኖ ሰርቷል፣ ምክንያቱም ወደፊቱ በጥቂት ኩባንያዎቻቸው ሊወሰን ስለሌለበት።",
     "closingCopy": "ሀዘናዊ ዓለም አመለካከቶቹ ልዩ ሆነው ስለሚፈልጉ ሁሉ ምርጡን ስለ ሊሆኑ እንዳያስቡ ያስቡ። CIRIS ምርጥ እና ከባዱን ነገር ይጠይቃል: ሰዎቹ አብሮ ምን ያህል ጥሩ ሆነን ሥራ ላይ እንዳለን ሊያዩ የሚችሉ መሳሪያዎቹን ይሰሩ፣ ምን ይሄ ጋር ባለ ክብር ያግኙት። ኮዱን ያንብቡ። ሥርዓቱን ይጠቀሙ። ስህቶቸን ያሳውቁን።",
@@ -1620,7 +1622,7 @@
     "engageLabel": "ሃሳብ ወደ ሚቀርብበት",
     "engageH2": "ከማንኛውም ሰው ሃሳብ ጠይቃለን።",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> ላይ GitHub ጉዳዮቹ ሃሳብ ለማቅረቢ ቦታ ነው። ዲቨሎፐር ሊሆኑ አያስፈልግም። ኮዱን ሊያውቁ አያስፈልግም። ይህ ድረ-ገፅ ላይ ምንም ሲሳሳት ሲያዩ፣ ወይም ምን እየተሠራ ካለው ጋር ችግር ሲፈልጉ፣ ጉዳይ ክፍቱ እና ያስረዱ። በጣም ጠቃሚ ጉዳዮቹ ስርዓቱ ቁርጥ ክፍሉን ይጠቅሳሉ እና ምን ሊቀየር ይገባው ሐሳብ ያቀርባሉ፣ ግን ቀጥተኛ ሃሳብ ሁሉ ጥሩ ነው።",
-    "engageP2Html": "ሙሉ ፕሮጀክቱ መሠረት ያደረገው ስምምነት - CIRIS ለሰዎች ምን ዕዳ አለበት፣ ሰዎችም ምን ዕዳ አለባቸው - <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> ላይ ሆኖ ለፍተሻ ክፍት ነው። ሆኖ ምንም ሲሳሳት ካዩ፣ ያ ደግሞ GitHub ጉዳይ ሊሆን የሚያስፈልግ ነው።",
+    "engageP2Html": "ሙሉ ፕሮጀክቱ መሠረት ያደረገው ስምምነት - CIRIS ለሰዎች ምን ዕዳ አለበት፣ ሰዎችም ምን ዕዳ አለባቸው - <a href=\"/ciris_constitution.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_constitution.txt</a> ላይ ሆኖ ለፍተሻ ክፍት ነው። ሆኖ ምንም ሲሳሳት ካዩ፣ ያ ደግሞ GitHub ጉዳይ ሊሆን የሚያስፈልግ ነው።",
     "engageP3": "ትርጉም ያላቸው ጉዳዮቹ ይነበባሉ። ሥራ ፍጥነቱ ሥጋቱ ነው።",
     "kicker": "የእኩሎች ፌዴሬሽን"
   },
@@ -2004,7 +2006,7 @@
     "caseArchLi6": "Discord ማህበረሰቦችን የሚቆጣጠር ምርት ተዘርግቷል",
     "caseSuccessH3": "ዋና ስኬት ምክንያቶች",
     "caseSuccessLi1": "ግልጽ ሜታ-ግብ፡ M-1 ግልጽ የሆነ የውሳኔ መስፈርት ይሰጣል",
-    "caseSuccessLi2Html": "ተግባራዊ ሥነ-ምግባር፡ ACCORD መርሆዎች እንደ ኮድ ገደቦች ተተግብረዋል (<a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">ስምምነቱን ያንብቡ</a>)",
+    "caseSuccessLi2Html": "ተግባራዊ ሥነ-ምግባር፡ ACCORD መርሆዎች እንደ ኮድ ገደቦች ተተግብረዋል (<a href=\"/constitution\" class=\"text-brand-primary hover:underline\">ስምምነቱን ያንብቡ</a>)",
     "caseSuccessLi3": "ዘላቂ ልማት፡ Grace ተጓዳኝ ጤናማ ሪትሞችን ያስፈጽማል",
     "caseSuccessLi4": "ቀጣይ ማረጋገጫ፡ እያንዳንዱ የአርኪቴክቸር ውሳኔ ይጠየቃል",
     "adoptEyebrow": "የማዳበሪያ መስፈርቶች",
@@ -2896,7 +2898,7 @@
     "convergence": "አራት ፍርሃቶች፣ አንድ መሠረት። ለኢንተርኔት ምትክ ChatGPT ን ለመተካት ያለው ምትክ ጭምር ነው።",
     "convergenceAccent": "አንድ መሠረት፣ ሁሉም መንገዶች።",
     "footL": "CIRISAgent · የዕውቀት ድር · AGPL-3.0, ዓላማ-ቆልፍ",
-    "footR": "CIRIS 3.0 እየተሠራጨ ነው · Constitution 0.4",
+    "footR": "CIRIS 3.0 እየተሠራጨ ነው · Constitution 1.0-rc2",
     "heroLabels": {
       "consumerAi": "የምታምነው AI የለም",
       "bigTech": "ቴክ ኩባንያዎች ሁሉን ተቆጣጠሩ",

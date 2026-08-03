@@ -188,7 +188,7 @@ export default function FirstContactV2({ t, locale }: { t: Dictionary; locale: s
         <h2 className={s.h2}>{fc.accordSepSub}</h2>
         <p className={s.paragraph}>{fc.accordBody}</p>
         <div className={s.ctaRow}>
-          <Link href={lh("/sections/main")} className={`${s.btn} ${s.btnP}`}>
+          <Link href={lh("/constitution")} className={`${s.btn} ${s.btnP}`}>
             {fc.accordCtaRead}
           </Link>
           <Link href={lh("/how-it-works")} className={`${s.btn} ${s.btnS}`}>

@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "CIRIS राज्यघटना · CC 0.4",
+    "eyebrow": "CIRIS राज्यघटना · CC 1.0-rc2",
     "headline": "एक दस्तऐवज. एक आवृत्ती ओळ.",
     "intro": "CIRIS Accord ने सांगितले की एआयने कशाची काळजी घ्यावी. CIRIS Epistemic Grammar ने सांगितले की प्रत्येक दावा कसा स्वाक्षरीत होतो जेणेकरून कोणीही तो तपासू शकेल. ते दोन दस्तऐवज म्हणून लिहिले गेले, पण ते आधीच एकमेकांत होते. आता ते एक आहेत: CIRIS राज्यघटना.",
     "apexLabel": "कोनशिला, मेटा-ध्येय M-1",
@@ -55,7 +55,9 @@
     "forewordLabel": "प्रस्तावनेतून",
     "readCta": "संपूर्ण राज्यघटना वाचा (PDF)",
     "sourceCta": "GitHub वर स्रोत वाचा",
-    "versionNote": "आवृत्ती CC 0.4 · CIRIS Accord 1.3-RC2 आणि CEG 1.0-RC29 समाविष्ट · AGPL-3.0"
+    "readerNotice": "You are reading the historical CIRIS Accord. The Accord and the CEG are now one document: the CIRIS Constitution.",
+    "readerNoticeCta": "Read the Constitution →",
+    "versionNote": "आवृत्ती CC 1.0-rc2 · CIRIS Accord 1.3-RC2 आणि CEG 1.0-RC29 समाविष्ट · AGPL-3.0"
   },
   "_meta": {
     "locale": "mr",
@@ -808,7 +810,7 @@
     "heroButtonText": "GitHub वर स्रोत पाहा",
     "heroButtonHref": "https://github.com/CIRISAI/CIRISAgent",
     "heroLinkText": "करार वाचा",
-    "heroLinkHref": "/sections/main",
+    "heroLinkHref": "/constitution",
     "logoAlt": "ब्रँड लोगो चिन्ह",
     "longChatHeadline": "गप्पा बराच वेळ चालल्या तेव्हा",
     "longChatSubheadline": "सौम्य वास्तव स्मरणपत्रे",
@@ -1030,7 +1032,7 @@
     "ctaCorridorDynamics": "Corridor Dynamics वाचा",
     "ctaInstall": "CIRIS स्थापित करा",
     "ctaSeeCode": "कोड पाहा",
-    "moreDepthText": "अधिक खोलात जायचे आहे? गणित <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> वर आहे, थेट पुरावा <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a> वर आहे, आणि फ्रेमवर्क स्वतःच <a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a> आहे.",
+    "moreDepthText": "अधिक खोलात जायचे आहे? गणित <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a> वर आहे, थेट पुरावा <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a> वर आहे, आणि फ्रेमवर्क स्वतःच <a href=\"/constitution\" class=\"text-brand-primary hover:underline\">CIRIS Accord</a> आहे.",
     "closingHeadline": "ही सकारात्मक पैज आहे.",
     "closingSubheadline": "खुले बांधले, कारण भविष्य काही मूठभर कंपन्यांनी ठरवले जाऊ नये.",
     "closingCopy": "उदास जागतिक दृष्टिकोन तुम्हाला प्रत्येकाबद्दल सर्वात वाईट गृहित धरण्यास सांगतात जे तुम्ही तपासू शकत नाही. CIRIS काहीतरी चांगले आणि कठीण मागते: असे साधने बनवा जे लोकांना दिसू देते आपण किती चांगले एकत्र काम करत आहोत, आणि येणाऱ्या गोष्टींना सन्मानाने भेटा. कोड वाचा. प्रणाली वापरा. आम्हाला सांगा जिथे आम्ही चुकत आहोत.",
@@ -1620,7 +1622,7 @@
     "engageLabel": "कुठे सहभागी व्हायचे",
     "engageH2": "आम्ही कोणाकडूनही प्रतिक्रिया मागवत आहोत.",
     "engageP1Html": "<a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAgent</a> वरील GitHub issues हे योगदान देण्याचे ठिकाण आहे. Developer असणे आवश्यक नाही. Codebase माहीत असणे आवश्यक नाही. या site वरील एखादी गोष्ट तुम्हाला चुकीची वाटत असेल, किंवा जे बनवले जात आहे त्यात तुम्हाला काही समस्या दिसत असेल, तर issue उघडून सांगा. सर्वात उपयुक्त issues system च्या एका विशिष्ट भागाला नाव देतात आणि काय बदलावे याचे सुचवतात, पण कोणताही प्रामाणिक प्रतिसाद स्वागतार्ह आहे.",
-    "engageP2Html": "संपूर्ण project ला आधार देणारा accord — CIRIS लोकांना काय देणे लागतो, आणि लोक त्याला काय देणे लागतात — <a href=\"/ciris_accord.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_accord.txt</a> वर आहे आणि review साठी उघडा आहे. त्यात काहीतरी तुम्हाला योग्य वाटत नसेल, तर तेदेखील GitHub issue उघडण्यासारखे आहे.",
+    "engageP2Html": "संपूर्ण project ला आधार देणारा accord — CIRIS लोकांना काय देणे लागतो, आणि लोक त्याला काय देणे लागतात — <a href=\"/ciris_constitution.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">/ciris_constitution.txt</a> वर आहे आणि review साठी उघडा आहे. त्यात काहीतरी तुम्हाला योग्य वाटत नसेल, तर तेदेखील GitHub issue उघडण्यासारखे आहे.",
     "engageP3": "Substantive issues वाचले जातात. काम आपल्या गतीने पुढे जाते.",
     "kicker": "समान दर्जाचे महासंघ"
   },
@@ -2004,7 +2006,7 @@
     "caseArchLi6": "Discord समुदाय नियंत्रित करणारे उत्पादन तैनाती",
     "caseSuccessH3": "मुख्य यश घटक",
     "caseSuccessLi1": "स्पष्ट meta-goal: M-1 अस्पष्ट निर्णय निकष पुरवतो",
-    "caseSuccessLi2Html": "परिचालन नैतिकता: Accord तत्त्वे कोड मर्यादा म्हणून अंमलात आणलेली (<a href=\"/sections/main\" class=\"text-brand-primary hover:underline\">Accord वाचा</a>)",
+    "caseSuccessLi2Html": "परिचालन नैतिकता: Accord तत्त्वे कोड मर्यादा म्हणून अंमलात आणलेली (<a href=\"/constitution\" class=\"text-brand-primary hover:underline\">Accord वाचा</a>)",
     "caseSuccessLi3": "शाश्वत विकास: निरोगी लय लागू करणारी Grace सहकारी",
     "caseSuccessLi4": "सतत सत्यापन: प्रत्येक आर्किटेक्चरल निर्णयाला आव्हान",
     "adoptEyebrow": "स्वीकारण्याच्या मार्गदर्शक सूचना",
@@ -2896,7 +2898,7 @@
     "convergence": "चार भीती, एक पाया. इंटरनेटची जागा घेणारी गोष्ट ChatGPT ची जागाही घेते.",
     "convergenceAccent": "एकच पाया, प्रत्येक दरवाजा.",
     "footL": "CIRISAgent · ज्ञानाचे जाळे · AGPL-3.0, ध्येयाशी बांधील",
-    "footR": "CIRIS 3.0 येत आहे · Constitution 0.4",
+    "footR": "CIRIS 3.0 येत आहे · Constitution 1.0-rc2",
     "heroLabels": {
       "consumerAi": "विश्वास ठेवता येत नाही",
       "bigTech": "सगळं मोठ्या कंपन्यांच्या हाती",

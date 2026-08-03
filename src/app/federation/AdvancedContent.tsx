@@ -175,18 +175,17 @@ export default function AdvancedContent() {
             warranted. Issues that do not meet that bar are still read.
           </p>
           <p>
-            The accord grounding the project&apos;s commitments, the
-            ethical foundation referenced by ACCORD &sect;VII and the humanity
-            accord, is at{" "}
+            The constitution grounding the project&apos;s commitments, the
+            ethical foundation the halt authority answers to, is at{" "}
             <a
-              href="/ciris_accord.txt"
+              href="/ciris_constitution.txt"
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-primary hover:underline"
             >
-              /ciris_accord.txt
+              /ciris_constitution.txt
             </a>{" "}
-            and remains open for review. Engagement with the accord text
+            and remains open for review. Engagement with the constitution text
             itself is welcome through the same GitHub-issues channel.
           </p>
           <p>

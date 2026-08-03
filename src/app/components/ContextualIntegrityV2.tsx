@@ -14,7 +14,7 @@ import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShe
 
 const A = { target: "_blank", rel: "noopener noreferrer" } as const;
 
-const CONST_BASE = "https://github.com/CIRISAI/CIRISRegistry/blob/main/FSD/CIRIS_Constitution";
+const CONST_BASE = "https://github.com/CIRISAI/CIRISConstitution/blob/main/constitution";
 // Constitution part file per mapping row, same order as t.contextualIntegrity.params.
 const PARAM_CITE_FILES = [
   "part_2_the_grammar.md", // CC 2.3  subject_key_ids

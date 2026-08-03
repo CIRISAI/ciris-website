@@ -1,8 +1,8 @@
 // v2 "dark-blueprint" front-door for the unified CIRIS Constitution. The Accord
 // (the ethics) and the CEG (the wire grammar) are no longer two documents — they
-// are folded into one ~120-page constitution (CC 0.4) that lives canonically in
-// CIRISAI/CIRISRegistry (FSD/CIRIS_Constitution). This page frames that whole,
-// surfaces the M-1 apex + the eight parts, and links out to the PDF and source.
+// are folded into one constitution (CC 1.0-rc2) that lives canonically in
+// CIRISAI/CIRISConstitution. This page frames that whole, surfaces the M-1 apex
+// + the eight parts, and links out to the PDF and source.
 // Every label comes from the dictionary (constitution.*); the GitHub URLs and
 // roman-numeral part numbers are language-neutral and live here.
 
@@ -12,11 +12,11 @@ import { localizeHref } from "@/i18n/config";
 import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
 import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
-const REPO = "https://github.com/CIRISAI/CIRISRegistry";
-const CONST_DIR = `${REPO}/tree/main/FSD/CIRIS_Constitution`;
+const REPO = "https://github.com/CIRISAI/CIRISConstitution";
+const CONST_DIR = `${REPO}/tree/main/constitution`;
 // Self-hosted so the read CTA downloads the reader PDF directly (the `download`
 // attribute only forces a download for same-origin files, not a GitHub blob URL).
-const PDF = "/ciris-constitution-0.4.pdf";
+const PDF = "/ciris_constitution.pdf";
 
 // Per-part source files, in the same order as constitution.parts.
 const PART_FILES = [
@@ -69,7 +69,7 @@ export default function ConstitutionV2({ t, locale }: { t: Dictionary; locale: s
           {c.parts.map((part, i) => (
             <a
               key={part.n}
-              href={`${REPO}/blob/main/FSD/CIRIS_Constitution/${PART_FILES[i]}`}
+              href={`${REPO}/blob/main/constitution/${PART_FILES[i]}`}
               target="_blank"
               rel="noopener noreferrer"
               className={`${s.card} ${PART_ACCENTS[i]}`}

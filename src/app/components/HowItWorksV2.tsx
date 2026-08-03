@@ -68,7 +68,7 @@ export default function HowItWorksV2({ t, locale }: { t: Dictionary; locale: str
         <p className={s.footnote}>
           <Link href={lh("/coherence-ratchet")}>{hiw.whatIsCiris.link1}</Link>
           {"  ·  "}
-          <Link href={lh("/sections/main")}>{hiw.whatIsCiris.link2}</Link>
+          <Link href={lh("/constitution")}>{hiw.whatIsCiris.link2}</Link>
           {"  ·  "}
           <a href="https://github.com/CIRISAI/CIRISAgent" target="_blank" rel="noopener noreferrer">
             {hiw.whatIsCiris.link3}

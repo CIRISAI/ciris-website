@@ -4,6 +4,7 @@ import { baseOptions } from "@/app/layout.config";
 import { source } from "@/lib/source";
 import SectionsI18nProvider from "@/app/components/SectionsI18nProvider";
 import LanguageSwitcher from "@/app/components/LanguageSwitcher";
+import SectionsConstitutionNotice from "@/app/components/SectionsConstitutionNotice";
 
 export default async function Layout({
   children,
@@ -17,6 +18,7 @@ export default async function Layout({
   return (
     <SectionsI18nProvider locale={locale}>
       <DocsLayout tree={tree} {...baseOptions}>
+        <SectionsConstitutionNotice locale={locale} />
         {children}
       </DocsLayout>
       <LanguageSwitcher currentLocale={locale} large />
