@@ -93,6 +93,63 @@ function dayUptime(entry: HistoryEntry): number | null {
   return typeof v === "number" ? v : null;
 }
 
+// The fabric is active/active: two regions serve simultaneously and several AI
+// providers back the same capability, so a component outage only impairs
+// service if every alternative in its group was down at the same time. Daily
+// aggregates cannot show overlap, but they bound it: overlapping downtime
+// cannot exceed the best member's downtime, so a capability's uptime is at
+// least its best member's. That floor is what the bar colors by; the raw
+// per-component numbers stay visible in the day detail.
+
+interface CapabilityGroup {
+  label: string;
+  uptime: number;
+  members: { key: string; uptime: number }[];
+}
+
+const GROUP_LABELS: Record<string, string> = {
+  "ai-providers": "AI providers",
+  "cirisproxy.service": "LLM proxy",
+  "cirisbilling.service": "Billing service",
+  "cirisbilling.google_oauth": "Google OAuth",
+  "cirisbilling.google_play": "Google Play",
+  "cirisbilling.postgresql": "Database",
+  "cirisproxy.billing": "Proxy to billing link",
+};
+
+function capabilityGroups(services: Record<string, ServiceDayStats>): CapabilityGroup[] {
+  const groups = new Map<string, { label: string; members: { key: string; uptime: number }[] }>();
+  for (const [key, stats] of Object.entries(services)) {
+    if (typeof stats.uptime_pct !== "number") continue;
+    const parts = key.split(".");
+    let gkey: string;
+    if (parts[0] === "global" && parts[1] === "cirisproxy") {
+      // Alternative LLM providers behind the same proxy: one capability.
+      gkey = "ai-providers";
+    } else if (parts.length === 3) {
+      // The same service in the US and EU regions: one capability.
+      gkey = `${parts[1]}.${parts[2]}`;
+    } else {
+      gkey = key;
+    }
+    const label = GROUP_LABELS[gkey] ?? prettyServiceKey(key).name;
+    const g = groups.get(gkey) ?? { label, members: [] };
+    g.members.push({ key, uptime: stats.uptime_pct });
+    groups.set(gkey, g);
+  }
+  return [...groups.values()].map((g) => ({
+    ...g,
+    uptime: Math.max(...g.members.map((m) => m.uptime)),
+  }));
+}
+
+/** Redundancy-adjusted service uptime for a day: the worst capability's floor. */
+function dayServiceUptime(entry: HistoryEntry): number | null {
+  const groups = capabilityGroups(entry.services ?? {});
+  if (groups.length === 0) return dayUptime(entry);
+  return Math.min(...groups.map((g) => g.uptime));
+}
+
 const OVERALL_META: Record<OverallLevel, { label: string; dot: string; badge: string }> = {
   operational: {
     label: "All systems operational",
@@ -287,24 +344,30 @@ function uptimeColor(uptime: number | null, status?: StatusLevel): string {
 }
 
 function DayDetail({ entry, onClose }: { entry: HistoryEntry; onClose: () => void }) {
-  const uptime = dayUptime(entry);
   const services = entry.services ?? {};
+  const groups = capabilityGroups(services).sort((a, b) => a.uptime - b.uptime);
+  const serviceUptime = dayServiceUptime(entry);
+  const serviceStatus: StatusLevel =
+    serviceUptime === null || serviceUptime >= 99.9
+      ? "operational"
+      : serviceUptime >= 95
+      ? "degraded"
+      : "outage";
   const rows = Object.entries(services)
     .map(([key, stats]) => ({ key, ...prettyServiceKey(key), ...stats }))
     .sort((a, b) => (a.uptime_pct ?? 100) - (b.uptime_pct ?? 100));
-  const regionRollups = Object.entries(entry.regions ?? {}).filter(
-    ([, r]) => typeof r.uptime_pct === "number"
-  );
 
   return (
     <div className="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-900/40">
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="font-semibold text-gray-900 dark:text-white">{entry.date}</span>
-          {uptime !== null && (
-            <span className="text-sm text-gray-600 dark:text-gray-300">{uptime.toFixed(2)}% uptime</span>
+          {serviceUptime !== null && (
+            <span className="text-sm text-gray-600 dark:text-gray-300">
+              {serviceUptime.toFixed(2)}% service uptime
+            </span>
           )}
-          {entry.status && <StatusBadge status={entry.status} size="sm" />}
+          {serviceUptime !== null && <StatusBadge status={serviceStatus} size="sm" />}
         </div>
         <button
           onClick={onClose}
@@ -315,18 +378,40 @@ function DayDetail({ entry, onClose }: { entry: HistoryEntry; onClose: () => voi
         </button>
       </div>
 
-      {regionRollups.length > 0 && (
-        <div className="mb-3 flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-300">
-          {regionRollups.map(([r, stats]) => (
-            <span key={r}>
-              {prettyServiceKey(`${r}.x.x`).region || r}: {stats.uptime_pct!.toFixed(2)}%
-            </span>
-          ))}
+      {groups.length > 0 && (
+        <div className="mb-4">
+          <p className="mb-2 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Service impact (a capability is down only when every alternative is down at once)
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {groups.map((g) => (
+              <span
+                key={g.label}
+                className={`rounded-full px-2.5 py-1 text-xs font-medium ${
+                  g.uptime >= 99.9
+                    ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300"
+                    : g.uptime >= 95
+                    ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300"
+                    : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300"
+                }`}
+                title={
+                  g.members.length > 1
+                    ? `Best of ${g.members.length} alternatives; floor on overlapping downtime`
+                    : "Single component"
+                }
+              >
+                {g.label}: {g.uptime.toFixed(1)}%
+              </span>
+            ))}
+          </div>
         </div>
       )}
 
       {rows.length > 0 ? (
         <div className="overflow-x-auto">
+          <p className="mb-1 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            Component detail
+          </p>
           <table className="w-full text-sm">
             <thead>
               <tr className="text-left text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
@@ -381,7 +466,7 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
     const dateStr = date.toISOString().split("T")[0];
 
     const entry = history.find((h) => h.date === dateStr);
-    const uptime = entry ? dayUptime(entry) : null;
+    const uptime = entry ? dayServiceUptime(entry) : null;
 
     let color: string;
     let title: string;
@@ -391,13 +476,15 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
       color = "bg-gray-300 dark:bg-gray-600";
       title = `${dateStr}: no data`;
     } else {
-      color = uptimeColor(uptime, entry.status);
+      // Color by the redundancy-adjusted floor, not the worst component: a
+      // provider dip with a healthy alternative is not degraded service.
+      color = uptimeColor(uptime);
       const incidents = Object.values(entry.services ?? {}).reduce(
         (sum, s) => sum + (s.outage_count ?? 0),
         0
       );
-      title = `${dateStr}: ${uptime.toFixed(2)}% uptime${
-        incidents > 0 ? ` · ${incidents} ${incidents === 1 ? "incident" : "incidents"}` : ""
+      title = `${dateStr}: ${uptime.toFixed(2)}% service uptime${
+        incidents > 0 ? ` · ${incidents} component ${incidents === 1 ? "incident" : "incidents"}` : ""
       }`;
     }
 
@@ -418,10 +505,10 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
     );
   }
 
-  const validHistory = history.filter((h) => dayUptime(h) !== null);
+  const validHistory = history.filter((h) => dayServiceUptime(h) !== null);
   const avgUptime =
     validHistory.length > 0
-      ? validHistory.reduce((sum, h) => sum + (dayUptime(h) as number), 0) / validHistory.length
+      ? validHistory.reduce((sum, h) => sum + (dayServiceUptime(h) as number), 0) / validHistory.length
       : null;
   const daysWithData = validHistory.length;
   const selectedEntry = selectedDate ? history.find((h) => h.date === selectedDate) : undefined;
@@ -433,7 +520,7 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
         <span>{days} days ago</span>
         {avgUptime !== null ? (
           <span className="font-medium text-gray-900 dark:text-white">
-            {avgUptime.toFixed(2)}% uptime ({daysWithData} {daysWithData === 1 ? "day" : "days"} of data)
+            {avgUptime.toFixed(2)}% service uptime ({daysWithData} {daysWithData === 1 ? "day" : "days"} of data)
           </span>
         ) : (
           <span>Collecting data...</span>
@@ -852,7 +939,8 @@ export default function StatusPage() {
                 <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                   <li>Status updates every 60 seconds automatically</li>
                   <li>Served by ciris-status, an open-source monitor that signs every health check into its own record (Ed25519 + ML-DSA-65)</li>
-                  <li>Multi-region monitoring: US (Chicago) and EU (Germany)</li>
+                  <li>Multi-region monitoring: US (Chicago) and EU (Germany), active/active with several AI providers behind the proxy</li>
+                  <li>Daily uptime is redundancy-adjusted: a component dip only counts against service when every alternative was down at the same time, and a capability&apos;s uptime is never lower than its best member&apos;s. Component-level numbers stay visible in each day&apos;s detail.</li>
                   <li>Latency measured from our infrastructure to each provider</li>
                   <li>Incident counts are incidents, not failed samples: one outage that spans many checks counts once</li>
                 </ul>
