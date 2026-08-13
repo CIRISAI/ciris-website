@@ -4,7 +4,16 @@ import { FloatingNav } from "@/app/components/ui/floating/nav";
 import Footer from "@/app/components/Footer";
 import navItems from "@/app/components/navitems";
 
+// Data comes from ciris-status (CIRISAI/CIRISStatus), a fabric node whose
+// StatusAdapter probes every target each cycle and signs the results into its
+// own record. Response shapes below mirror the documented contract in that
+// repo's README (v0.3.41+): per-day history carries `uptime_pct` (with an
+// `overall_uptime_pct` alias), a one-word `status`, per-region/service
+// breakdowns, and `outage_count` counting incidents, not samples.
+
 type StatusLevel = "operational" | "degraded" | "outage";
+// The aggregate rollup has two extra levels the per-service statuses never use.
+type OverallLevel = StatusLevel | "partial_outage" | "major_outage";
 
 interface ProviderStatus {
   status: StatusLevel;
@@ -22,7 +31,7 @@ interface RegionData {
 }
 
 interface StatusData {
-  status: StatusLevel;
+  status: OverallLevel;
   timestamp: string;
   last_incident: string | null;
   regions?: Record<string, RegionData>;
@@ -34,20 +43,87 @@ interface StatusData {
   internal_providers?: Record<string, ProviderStatus>;
 }
 
-const STATUS_API = "https://lens.ciris-services-1.ai/status/api/v1/status";
-const HISTORY_API = "https://lens.ciris-services-1.ai/status/api/v1/status/history";
+const API_BASE = "https://lens.ciris-services-1.ai/status/api/v1";
+const STATUS_API = `${API_BASE}/status`;
+const HISTORY_API = `${API_BASE}/status/history`;
+const CI_API = `${API_BASE}/ci`;
+
+interface ServiceDayStats {
+  uptime_pct?: number;
+  avg_latency_ms?: number;
+  outage_count?: number;
+}
+
+interface RegionDayStats {
+  uptime_pct?: number;
+  services?: Record<string, ServiceDayStats>;
+}
 
 interface HistoryEntry {
   date: string;
-  uptime_pct: number;
-  status: StatusLevel;
+  uptime_pct?: number;
+  overall_uptime_pct?: number; // alias kept by the API for compatibility
+  status?: StatusLevel;
+  outage_count?: number;
+  regions?: Record<string, RegionDayStats>;
+  services?: Record<string, ServiceDayStats>; // flat "region.stack.probe" keys
 }
 
 interface HistoryData {
   days: number;
   region: string | null;
   history: HistoryEntry[];
-  regions?: Record<string, HistoryEntry[]>;
+}
+
+type CiRunResult = "success" | "failure" | "in_progress" | "queued" | "cancelled";
+
+interface CiRepo {
+  repo: string;
+  runs: CiRunResult[];
+}
+
+interface CiData {
+  timestamp: string;
+  repos: CiRepo[];
+}
+
+/** The day's uptime number, whichever field the API spelled it with. */
+function dayUptime(entry: HistoryEntry): number | null {
+  const v = entry.uptime_pct ?? entry.overall_uptime_pct;
+  return typeof v === "number" ? v : null;
+}
+
+const OVERALL_META: Record<OverallLevel, { label: string; dot: string; badge: string }> = {
+  operational: {
+    label: "All systems operational",
+    dot: "bg-green-500",
+    badge: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
+  },
+  degraded: {
+    label: "Degraded performance",
+    dot: "bg-yellow-500",
+    badge: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
+  },
+  partial_outage: {
+    label: "Partial outage",
+    dot: "bg-orange-500",
+    badge: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+  },
+  major_outage: {
+    label: "Major outage",
+    dot: "bg-red-500",
+    badge: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
+  },
+  outage: {
+    label: "Outage",
+    dot: "bg-red-500",
+    badge: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
+  },
+};
+
+/** Unknown strings from a newer API render as degraded rather than crashing. */
+function overallMeta(status: string) {
+  return OVERALL_META[(status as OverallLevel) in OVERALL_META ? (status as OverallLevel) : "degraded"];
 }
 
 function StatusIndicator({ status }: { status: StatusLevel }) {
@@ -56,7 +132,7 @@ function StatusIndicator({ status }: { status: StatusLevel }) {
     degraded: "bg-yellow-500",
     outage: "bg-red-500",
   };
-  return <span className={`inline-block h-3 w-3 rounded-full ${colors[status]}`} />;
+  return <span className={`inline-block h-3 w-3 rounded-full ${colors[status] ?? "bg-gray-400"}`} />;
 }
 
 function StatusBadge({ status, size = "md" }: { status: StatusLevel; size?: "sm" | "md" }) {
@@ -72,8 +148,8 @@ function StatusBadge({ status, size = "md" }: { status: StatusLevel; size?: "sm"
   };
   const sizeClass = size === "sm" ? "px-2 py-0.5 text-xs" : "px-3 py-1 text-sm";
   return (
-    <span className={`rounded-full font-medium ${sizeClass} ${styles[status]}`}>
-      {labels[status]}
+    <span className={`rounded-full font-medium ${sizeClass} ${styles[status] ?? styles.degraded}`}>
+      {labels[status] ?? status}
     </span>
   );
 }
@@ -106,7 +182,17 @@ function ServiceSection({ title, children }: { title: string; children: React.Re
   );
 }
 
-function RegionCard({ regionKey, region, infrastructure }: { regionKey: string; region: RegionData; infrastructure?: ProviderStatus }) {
+function RegionCard({
+  regionKey,
+  region,
+  infrastructure,
+  avgUptime90d,
+}: {
+  regionKey: string;
+  region: RegionData;
+  infrastructure?: ProviderStatus;
+  avgUptime90d?: number | null;
+}) {
   const regionIcons: Record<string, string> = {
     us: "🇺🇸",
     eu: "🇪🇺",
@@ -151,13 +237,141 @@ function RegionCard({ regionKey, region, infrastructure }: { regionKey: string; 
             )}
           </div>
         )}
+        {typeof avgUptime90d === "number" && (
+          <div className="flex items-center justify-between text-sm pt-2 border-t border-gray-200 dark:border-gray-700">
+            <span className="text-gray-500 dark:text-gray-400">90-day uptime</span>
+            <span className="font-medium text-gray-700 dark:text-gray-300">{avgUptime90d.toFixed(2)}%</span>
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
+/** "us.cirisbilling.google_oauth" → { region: "US", name: "Billing · Google OAuth" } */
+function prettyServiceKey(key: string): { region: string; name: string } {
+  const REGION: Record<string, string> = { us: "US", eu: "EU", global: "Global" };
+  const STACK: Record<string, string> = { cirisbilling: "Billing", cirisproxy: "Proxy" };
+  const LEAF: Record<string, string> = {
+    google_oauth: "Google OAuth",
+    google_play: "Google Play",
+    postgresql: "PostgreSQL",
+    service: "Service",
+    billing: "Billing link",
+    groq: "Groq",
+    openrouter: "OpenRouter",
+    together: "Together AI",
+    brave_search: "Brave Search",
+  };
+  const parts = key.split(".");
+  if (parts.length === 3) {
+    const [region, stack, leaf] = parts;
+    const stackName = STACK[stack] ?? stack;
+    const leafName = LEAF[leaf] ?? leaf;
+    // "Billing · Service" reads redundantly; collapse to the stack's own name.
+    const name = leaf === "service" ? `${stackName} service` : `${stackName} · ${leafName}`;
+    return { region: REGION[region] ?? region, name };
+  }
+  return { region: "", name: key };
+}
+
+function uptimeColor(uptime: number | null, status?: StatusLevel): string {
+  if (status === "outage") return "bg-red-500";
+  if (status === "degraded") return "bg-yellow-500";
+  if (status === "operational") return "bg-green-500";
+  // No explicit status: infer from the number alone.
+  if (uptime === null) return "bg-gray-300 dark:bg-gray-600";
+  if (uptime >= 99.9) return "bg-green-500";
+  if (uptime >= 95) return "bg-yellow-500";
+  return "bg-red-500";
+}
+
+function DayDetail({ entry, onClose }: { entry: HistoryEntry; onClose: () => void }) {
+  const uptime = dayUptime(entry);
+  const services = entry.services ?? {};
+  const rows = Object.entries(services)
+    .map(([key, stats]) => ({ key, ...prettyServiceKey(key), ...stats }))
+    .sort((a, b) => (a.uptime_pct ?? 100) - (b.uptime_pct ?? 100));
+  const regionRollups = Object.entries(entry.regions ?? {}).filter(
+    ([, r]) => typeof r.uptime_pct === "number"
+  );
+
+  return (
+    <div className="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-900/40">
+      <div className="mb-3 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <span className="font-semibold text-gray-900 dark:text-white">{entry.date}</span>
+          {uptime !== null && (
+            <span className="text-sm text-gray-600 dark:text-gray-300">{uptime.toFixed(2)}% uptime</span>
+          )}
+          {entry.status && <StatusBadge status={entry.status} size="sm" />}
+        </div>
+        <button
+          onClick={onClose}
+          className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          aria-label="Close day detail"
+        >
+          ✕
+        </button>
+      </div>
+
+      {regionRollups.length > 0 && (
+        <div className="mb-3 flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-300">
+          {regionRollups.map(([r, stats]) => (
+            <span key={r}>
+              {prettyServiceKey(`${r}.x.x`).region || r}: {stats.uptime_pct!.toFixed(2)}%
+            </span>
+          ))}
+        </div>
+      )}
+
+      {rows.length > 0 ? (
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                <th className="py-1 pr-4 font-medium">Service</th>
+                <th className="py-1 pr-4 font-medium">Region</th>
+                <th className="py-1 pr-4 font-medium text-right">Uptime</th>
+                <th className="py-1 pr-4 font-medium text-right">Avg latency</th>
+                <th className="py-1 font-medium text-right">Incidents</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr key={row.key} className="border-t border-gray-200 dark:border-gray-700">
+                  <td className="py-1.5 pr-4 text-gray-900 dark:text-white">{row.name}</td>
+                  <td className="py-1.5 pr-4 text-gray-500 dark:text-gray-400">{row.region}</td>
+                  <td className={`py-1.5 pr-4 text-right font-medium ${
+                    (row.uptime_pct ?? 100) >= 99.9
+                      ? "text-green-700 dark:text-green-400"
+                      : (row.uptime_pct ?? 100) >= 95
+                      ? "text-yellow-700 dark:text-yellow-400"
+                      : "text-red-700 dark:text-red-400"
+                  }`}>
+                    {typeof row.uptime_pct === "number" ? `${row.uptime_pct.toFixed(1)}%` : "–"}
+                  </td>
+                  <td className="py-1.5 pr-4 text-right text-gray-500 dark:text-gray-400">
+                    {typeof row.avg_latency_ms === "number" ? `${row.avg_latency_ms}ms` : "–"}
+                  </td>
+                  <td className="py-1.5 text-right text-gray-500 dark:text-gray-400">
+                    {row.outage_count || 0}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p className="text-sm text-gray-500 dark:text-gray-400">No per-service breakdown for this day.</p>
+      )}
+    </div>
+  );
+}
+
 function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: number }) {
-  // Create array of days, showing gray for missing data
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+
   const today = new Date();
   const bars = [];
 
@@ -167,46 +381,50 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
     const dateStr = date.toISOString().split("T")[0];
 
     const entry = history.find((h) => h.date === dateStr);
+    const uptime = entry ? dayUptime(entry) : null;
 
-    // No data = gray, has data = color based on status
     let color: string;
     let title: string;
 
-    if (!entry) {
+    if (!entry || uptime === null) {
+      // A day the monitor has no numbers for is unknown, never an outage.
       color = "bg-gray-300 dark:bg-gray-600";
-      title = `${dateStr}: No data`;
+      title = `${dateStr}: no data`;
     } else {
-      const status = entry.status;
-      const uptime = entry.uptime_pct ?? 0;
-
-      color =
-        status === "outage"
-          ? "bg-red-500"
-          : status === "degraded"
-          ? "bg-yellow-500"
-          : uptime < 99.9
-          ? "bg-yellow-500"
-          : "bg-green-500";
-      title = `${dateStr}: ${uptime.toFixed(2)}% uptime`;
+      color = uptimeColor(uptime, entry.status);
+      const incidents = Object.values(entry.services ?? {}).reduce(
+        (sum, s) => sum + (s.outage_count ?? 0),
+        0
+      );
+      title = `${dateStr}: ${uptime.toFixed(2)}% uptime${
+        incidents > 0 ? ` · ${incidents} ${incidents === 1 ? "incident" : "incidents"}` : ""
+      }`;
     }
 
+    const selected = selectedDate === dateStr;
+    const clickable = !!entry && uptime !== null;
     bars.push(
-      <div
+      <button
         key={dateStr}
-        className={`h-8 flex-1 ${color} rounded-sm hover:opacity-80 transition-opacity cursor-pointer`}
+        type="button"
+        disabled={!clickable}
+        onClick={() => setSelectedDate(selected ? null : dateStr)}
+        className={`h-8 flex-1 ${color} rounded-sm transition-opacity ${
+          clickable ? "cursor-pointer hover:opacity-75" : "cursor-default"
+        } ${selected ? "ring-2 ring-brand-primary ring-offset-1 dark:ring-offset-gray-800" : ""}`}
         title={title}
+        aria-label={title}
       />
     );
   }
 
-  // Calculate overall uptime only from days with data
-  const validHistory = history.filter((h) => typeof h.uptime_pct === 'number');
+  const validHistory = history.filter((h) => dayUptime(h) !== null);
   const avgUptime =
     validHistory.length > 0
-      ? validHistory.reduce((sum, h) => sum + h.uptime_pct, 0) / validHistory.length
+      ? validHistory.reduce((sum, h) => sum + (dayUptime(h) as number), 0) / validHistory.length
       : null;
-
   const daysWithData = validHistory.length;
+  const selectedEntry = selectedDate ? history.find((h) => h.date === selectedDate) : undefined;
 
   return (
     <div>
@@ -221,6 +439,70 @@ function UptimeBar({ history, days = 90 }: { history: HistoryEntry[]; days?: num
           <span>Collecting data...</span>
         )}
         <span>Today</span>
+      </div>
+      {daysWithData > 0 && !selectedEntry && (
+        <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
+          Click a day for its per-service breakdown.
+        </p>
+      )}
+      {selectedEntry && <DayDetail entry={selectedEntry} onClose={() => setSelectedDate(null)} />}
+    </div>
+  );
+}
+
+const CI_RUN_META: Record<CiRunResult, { color: string; label: string }> = {
+  success: { color: "bg-green-500", label: "success" },
+  failure: { color: "bg-red-500", label: "failure" },
+  cancelled: { color: "bg-gray-300 dark:bg-gray-600", label: "cancelled" },
+  queued: { color: "bg-amber-400", label: "queued" },
+  in_progress: { color: "bg-amber-400 animate-pulse", label: "in progress" },
+};
+
+function BuildHealth({ ci }: { ci: CiData }) {
+  return (
+    <div className="mb-8">
+      <h2 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Build Health</h2>
+      <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
+        The last ten CI runs of each substrate repo, oldest to newest.
+      </p>
+      <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+        {ci.repos.map((repo) => {
+          const latest = repo.runs[repo.runs.length - 1];
+          return (
+            <div
+              key={repo.repo}
+              className="flex items-center justify-between gap-4 py-3 border-b border-gray-200 dark:border-gray-700 last:border-0"
+            >
+              <a
+                href={`https://github.com/CIRISAI/${repo.repo}/actions`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-gray-900 hover:text-brand-primary dark:text-white dark:hover:text-brand-primary"
+              >
+                {repo.repo}
+              </a>
+              <div className="flex items-center gap-3">
+                <div className="flex gap-1">
+                  {repo.runs.map((run, i) => {
+                    const meta = CI_RUN_META[run] ?? CI_RUN_META.cancelled;
+                    return (
+                      <span
+                        key={i}
+                        className={`inline-block h-4 w-2.5 rounded-sm ${meta.color}`}
+                        title={`Run ${i + 1} of ${repo.runs.length}: ${meta.label}`}
+                      />
+                    );
+                  })}
+                </div>
+                {latest && (
+                  <span className="hidden text-xs text-gray-500 dark:text-gray-400 sm:inline">
+                    {(CI_RUN_META[latest] ?? CI_RUN_META.cancelled).label}
+                  </span>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -256,6 +538,7 @@ function CollapsibleSection({ title, children, defaultOpen = false }: { title: s
 export default function StatusPage() {
   const [data, setData] = useState<StatusData | null>(null);
   const [history, setHistory] = useState<HistoryData | null>(null);
+  const [ci, setCi] = useState<CiData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -293,7 +576,7 @@ export default function StatusPage() {
       });
       if (response.ok) {
         const json = await response.json();
-        setHistory(json);
+        if (json && Array.isArray(json.history)) setHistory(json);
       }
     } catch (err) {
       // History is optional, just log for debugging
@@ -301,12 +584,33 @@ export default function StatusPage() {
     }
   }, []);
 
+  const fetchCi = useCallback(async () => {
+    try {
+      const response = await fetch(CI_API, {
+        mode: 'cors',
+        credentials: 'omit',
+      });
+      if (response.ok) {
+        const json = await response.json();
+        if (json && Array.isArray(json.repos)) setCi(json);
+      }
+    } catch (err) {
+      // Build health is optional, just log for debugging
+      console.warn('[CIRIS Status] CI fetch warning:', err);
+    }
+  }, []);
+
   useEffect(() => {
     fetchStatus();
     fetchHistory();
-    const interval = setInterval(fetchStatus, 60000);
+    fetchCi();
+    const interval = setInterval(() => {
+      fetchStatus();
+      fetchHistory();
+      fetchCi();
+    }, 60000);
     return () => clearInterval(interval);
-  }, [fetchStatus, fetchHistory]);
+  }, [fetchStatus, fetchHistory, fetchCi]);
 
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString("en-US", {
@@ -314,6 +618,7 @@ export default function StatusPage() {
       minute: "2-digit",
       second: "2-digit",
       hour12: false,
+      timeZone: "UTC",
     }) + " UTC";
   };
 
@@ -340,6 +645,17 @@ export default function StatusPage() {
     hetzner: "eu",
   };
 
+  // 90-day per-region averages from the history rollup, for the region cards.
+  const regionAvg = (regionKey: string): number | null => {
+    const entries = (history?.history ?? [])
+      .map((h) => h.regions?.[regionKey]?.uptime_pct)
+      .filter((v): v is number => typeof v === "number");
+    if (entries.length === 0) return null;
+    return entries.reduce((a, b) => a + b, 0) / entries.length;
+  };
+
+  const overall = data ? overallMeta(data.status) : null;
+
   return (
     <>
       <FloatingNav navItems={navItems} />
@@ -347,15 +663,20 @@ export default function StatusPage() {
         <div className="mx-auto max-w-4xl px-6 pt-44 pb-16">
           {/* Header */}
           <div className="mb-12">
-            <div className="flex items-center justify-between mb-4">
-              <h1 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-                CIRIS Status
-              </h1>
-              {data && <StatusBadge status={data.status} />}
-            </div>
+            <h1 className="mb-4 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+              CIRIS Status
+            </h1>
+            {data && overall && (
+              <div className="flex items-center gap-3">
+                <span className={`inline-block h-3.5 w-3.5 rounded-full ${overall.dot}`} />
+                <span className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {overall.label}
+                </span>
+              </div>
+            )}
             {lastUpdated && (
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Last updated: {formatTime(lastUpdated)}
+              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Last updated {formatTime(lastUpdated)} · refreshes every 60 seconds
               </p>
             )}
           </div>
@@ -400,6 +721,7 @@ export default function StatusPage() {
                           regionKey={key}
                           region={region}
                           infrastructure={data.infrastructure?.[infraKey]}
+                          avgUptime90d={regionAvg(key)}
                         />
                       );
                     })}
@@ -457,6 +779,9 @@ export default function StatusPage() {
                   ))}
                 </ServiceSection>
               )}
+
+              {/* Build Health (CI) */}
+              {ci && ci.repos.length > 0 && <BuildHealth ci={ci} />}
 
               {/* Infrastructure (Collapsible) */}
               <CollapsibleSection title="Infrastructure Details">
@@ -526,26 +851,35 @@ export default function StatusPage() {
                 </h2>
                 <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                   <li>Status updates every 60 seconds automatically</li>
-                  <li>Data sourced from CIRISLens observability platform</li>
+                  <li>Served by ciris-status, an open-source monitor that signs every health check into its own record (Ed25519 + ML-DSA-65)</li>
                   <li>Multi-region monitoring: US (Chicago) and EU (Germany)</li>
                   <li>Latency measured from our infrastructure to each provider</li>
+                  <li>Incident counts are incidents, not failed samples: one outage that spans many checks counts once</li>
                 </ul>
-                <div className="mt-4 flex gap-4">
+                <div className="mt-4 flex flex-wrap gap-4">
                   <a
-                    href="https://github.com/CIRISAI/CIRISLens"
+                    href="https://github.com/CIRISAI/CIRISStatus"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-brand-primary hover:underline"
                   >
-                    View CIRISLens Source
+                    View Source
                   </a>
                   <a
-                    href="https://lens.ciris-services-1.ai"
+                    href={STATUS_API}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-brand-primary hover:underline"
                   >
-                    Grafana Dashboard
+                    Raw JSON
+                  </a>
+                  <a
+                    href={`${HISTORY_API}?days=90`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-brand-primary hover:underline"
+                  >
+                    History JSON
                   </a>
                 </div>
               </div>
