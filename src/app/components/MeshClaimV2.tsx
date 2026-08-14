@@ -182,6 +182,19 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
         <p className={s.paragraph}>{m.pobP1}</p>
         <p className={s.paragraph}>{m.pobP2}</p>
         <p className={s.paragraph}>{m.pobP3}</p>
+        {/* Citation stays English verbatim in all locales, house style for
+            source lines. Same paper as lineage row l10 (opposite threat
+            model); this section answers its protocol-capture warning. */}
+        <p className={s.footnote}>
+          <a
+            href="https://arxiv.org/abs/2605.24538"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hu &amp; Rong, &ldquo;Is Decentralized AI Governable? From Regulative Policy to
+            Constitutive Protocol&rdquo; (arXiv 2605.24538)
+          </a>
+        </p>
       </section>
 
       {/* The invitation. */}
