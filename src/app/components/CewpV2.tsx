@@ -77,6 +77,17 @@ export default function CewpV2({ t, locale }: { t: Dictionary; locale: string })
       {/* Concept tag: CEWP's consent + cohort machinery is contextual integrity. */}
       <ContextualIntegrityCrossLink t={t} locale={locale} />
 
+      {/* Why this layer matters — the Mesh Claim, stated to be attacked. */}
+      <div className={s.callout}>
+        <h2 className={s.h2}>{c.meshTitle}</h2>
+        <p className={s.paragraph}>{c.meshBody}</p>
+        <div className={s.ctaRow}>
+          <Link href={localizeHref("/mesh-claim", locale)} className={`${s.btn} ${s.btnP}`}>
+            {t.meshClaim.crossCta}
+          </Link>
+        </div>
+      </div>
+
       {/* The deep tech — details simulator + repo */}
       <div className={s.callout}>
         <h2 className={s.h2}>{c.deepTechTitle}</h2>
