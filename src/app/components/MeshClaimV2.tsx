@@ -81,6 +81,22 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
         </div>
       </section>
 
+      {/* The false dichotomy: the conscience is what the mesh carries. This is
+          the point of CIRIS, not a side note: guardrails-vs-openness is refused
+          by combining a machine conscience with a capture-resistant mesh. */}
+      <div className={s.callout}>
+        <p className={s.sectionLabel}>{m.dichotLabel}</p>
+        <h2 className={s.h2}>{m.dichotH2}</h2>
+        <p className={s.paragraph}>{m.dichotP1}</p>
+        <p className={s.paragraph}>{m.dichotP2}</p>
+        <p className={s.paragraph}>{m.dichotP3}</p>
+        <div className={s.ctaRow}>
+          <Link href={lh("/constitution")} className={`${s.btn} ${s.btnS}`}>
+            {t.contextualIntegrity.btnConstitution}
+          </Link>
+        </div>
+      </div>
+
       {/* Running today: the baked root, the proven keys. */}
       <section className={s.section}>
         <p className={s.sectionLabel}>{m.runLabel}</p>
