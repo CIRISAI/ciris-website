@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 const TITLE = 'Post-Quantum AI Agent Kill Switch, Independently Verifiable | CIRIS';
-const DESC = 'CIRIS ships a constitutional AI agent kill switch on FIPS-certified YubiKey hardware with a hybrid Ed25519 + ML-DSA-65 (post-quantum) quorum. Verify the keys yourself with one command.';
+const DESC = 'CIRIS ships a constitutional AI agent kill switch on FIPS 140-3 YubiKey hardware with a hybrid Ed25519 + ML-DSA-65 (post-quantum) quorum. Verify the keys yourself with one command.';
 
 export async function generateMetadata({
   params,
