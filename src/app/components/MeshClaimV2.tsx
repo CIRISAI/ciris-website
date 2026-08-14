@@ -17,13 +17,19 @@ const SEED_URL =
 const GITHUB_ORG = "https://github.com/CIRISAI";
 const DISCORD = "https://discord.gg/SWGM7Gsvrv";
 
-// Lineage rows: neighbor positions and primary links, same order as l1..l5.
+// Lineage rows: neighbor positions and primary links, same order as l1..l9.
+// Adjacent work is linked as validation (per Eric): the diagnosis is shared;
+// the composition plus the shipped artifact is what differs.
 const LINEAGE_URLS = [
   "https://vitalik.eth.limo/general/2025/01/05/dacc2.html",
   "https://www.primeintellect.ai/blog/intellect-2",
   "https://intelligence-curse.ai/",
   "https://bittensor.com/",
   "https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/",
+  "https://aliceprotocol.org/",
+  "https://clea.research.vub.be/aic",
+  "https://anda.ai/",
+  "https://arxiv.org/abs/2607.22957",
 ];
 
 export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: string }) {
@@ -42,6 +48,10 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
     { name: m.l3n, body: m.l3b },
     { name: m.l4n, body: m.l4b },
     { name: m.l5n, body: m.l5b },
+    { name: m.l6n, body: m.l6b },
+    { name: m.l7n, body: m.l7b },
+    { name: m.l8n, body: m.l8b },
+    { name: m.l9n, body: m.l9b },
   ];
 
   return (
