@@ -30,6 +30,7 @@ const LINEAGE_URLS = [
   "https://clea.research.vub.be/aic",
   "https://anda.ai/",
   "https://arxiv.org/abs/2607.22957",
+  "https://arxiv.org/abs/2605.24538",
 ];
 
 export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: string }) {
@@ -52,6 +53,7 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
     { name: m.l7n, body: m.l7b },
     { name: m.l8n, body: m.l8b },
     { name: m.l9n, body: m.l9b },
+    { name: m.l10n, body: m.l10b },
   ];
 
   return (
@@ -193,6 +195,15 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
           </a>
         </div>
       </div>
+
+      {/* The intellectual ancestors: the premises anchored in fifty years of
+          scholarship (Hirschman, OSS forkability, Benkler, Ostrom, Lessig,
+          Zittrain, cypherpunk); the composition is what is claimed as ours. */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{m.ancestorsLabel}</p>
+        <p className={s.paragraph}>{m.ancestorsP1}</p>
+        <p className={s.paragraph}>{m.ancestorsP2}</p>
+      </section>
 
       {/* Lineage: the neighbors, named in good faith. */}
       <section className={s.section}>
