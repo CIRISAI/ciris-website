@@ -20,7 +20,9 @@ const CASCADE = [
 ];
 
 const STATS = [
-  { v: "16,000+", l: "test functions, measured" },
+  // The test count grows too fast to print a number that stays true; the
+  // harness counts it, this page doesn't assert it.
+  { v: "live", l: "test count, measured by the harness" },
   { v: "6", l: "projects in the chain" },
   { v: "124", l: "cohabitation gates" },
   { v: "27", l: "constitutional controls" },
@@ -140,7 +142,7 @@ export default function VerificationV2() {
       accent="teal"
       kicker="Continuous verification"
       title="Alignment you can check, not just trust."
-      lede="Most AI-safety groups publish ethics whitepapers. We publish the conformance suite that proves the system enforces its constitution, against the real, separately-shipped artifacts, before a single image is minted. Over 16,000 measured test functions run from the cryptographic foundation up. The bet is simple: a signature you cannot forge, a membership you cannot fake, an audit you cannot escape are external, independently verifiable constraints, not a model's self-report. This is the engineering tier of the alignment claim, the part that is checkable today."
+      lede="Most AI-safety groups publish ethics whitepapers. We publish the conformance suite that proves the system enforces its constitution, against the real, separately-shipped artifacts, before a single image is minted. Measured test functions run from the cryptographic foundation up; their count is read from the harness, not asserted here, because it grows too fast to print. The bet is simple: a signature you cannot forge, a membership you cannot fake, an audit you cannot escape are external, independently verifiable constraints, not a model's self-report. This is the engineering tier of the alignment claim, the part that is checkable today."
       backHref="/proof"
       backLabel="back to proof"
     >

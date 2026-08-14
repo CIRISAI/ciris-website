@@ -140,7 +140,7 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
         <p className={s.sectionLabel}>{m.softLabel}</p>
         <h2 className={s.h2}>{m.softH2}</h2>
         <p className={s.paragraph}>{m.softP0}</p>
-        <div className={`${s.cardGrid} ${s.cardGridTwo}`}>
+        <div className={s.cardGrid}>
           <div className={`${s.card} ${s.cBrass}`}>
             <h3>{m.a1t}</h3>
             <p>{m.a1b}</p>
@@ -148,6 +148,13 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
           <div className={`${s.card} ${s.cBrass}`}>
             <h3>{m.a2t}</h3>
             <p>{m.a2b}</p>
+          </div>
+          {/* The threshold bet: good-enough-is-good-enough named as the
+              assumption, and the capability × participation × coordination
+              question stated as open. */}
+          <div className={`${s.card} ${s.cBrass}`}>
+            <h3>{m.a3t}</h3>
+            <p>{m.a3b}</p>
           </div>
         </div>
       </section>
