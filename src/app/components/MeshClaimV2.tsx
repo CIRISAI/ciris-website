@@ -171,6 +171,19 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
         </div>
       </section>
 
+      {/* Proof of Benefit: the answer to protocol capture and to A2's
+          manufactured-humans worry. Mechanism per CIRISNodeCore MISSION
+          (P2 Commons Credits, P6 truth-grounding, P10 witness diversity,
+          P11 reconsideration, WA decay) and rc3 R1's admitted bet; the
+          primitives are spec-stage, hence "by design". */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{m.pobLabel}</p>
+        <h2 className={s.h2}>{m.pobH2}</h2>
+        <p className={s.paragraph}>{m.pobP1}</p>
+        <p className={s.paragraph}>{m.pobP2}</p>
+        <p className={s.paragraph}>{m.pobP3}</p>
+      </section>
+
       {/* The invitation. */}
       <div className={s.callout}>
         <p className={s.sectionLabel}>{m.breakLabel}</p>
