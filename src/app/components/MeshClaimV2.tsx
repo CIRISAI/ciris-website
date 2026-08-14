@@ -91,6 +91,11 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
         <p className={s.paragraph}>{m.dichotP2}</p>
         <p className={s.paragraph}>{m.dichotP3}</p>
         <div className={s.ctaRow}>
+          {/* The full-context version of this argument is the Safety Arch:
+              seven structural guarantees with the halt as keystone. */}
+          <Link href={lh("/safety")} className={`${s.btn} ${s.btnP}`}>
+            {m.dichotCtaSafety}
+          </Link>
           <Link href={lh("/constitution")} className={`${s.btn} ${s.btnS}`}>
             {t.contextualIntegrity.btnConstitution}
           </Link>
