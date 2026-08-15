@@ -2660,11 +2660,11 @@
       {
         "k": "Superalignment",
         "h": "AI is outrunning anyone accountable for it.",
-        "p": "Put the AI inside a network where every action it takes is signed. Then keeping it honest stops being a promise one company makes and becomes something the network enforces.",
-        "go": "See how alignment becomes mechanical",
+        "p": "Put the AI inside a post-quantum mesh where every action it takes is signed under a public constitution. Keeping it honest stops being a promise one company makes and becomes something the network enforces.",
+        "go": "Read the Constitutional Mesh",
         "accent": "violet",
         "heavy": false,
-        "href": "/paths/superalignment"
+        "href": "/constitutional-mesh"
       },
       {
         "k": "Misinformation",
@@ -2842,11 +2842,11 @@
     "cta": "Install on your phone"
   },
   "meshClaim": {
-      "seoTitle": "The Mesh Claim: Decentralized Coordination Is the Load-Bearing Layer of Open-Source AI Safety | CIRIS",
-      "seoDescription": "Open models and clever agent tooling are not enough. If AI power is going to stay spread out, people need a way to find and trust each other that nobody can capture. CIRIS built that layer, and this page invites you to break it.",
-      "eyebrow": "The Mesh Claim",
+      "seoTitle": "The Constitutional Mesh: The Load-Bearing Layer of Open-Source AI Safety | CIRIS",
+      "seoDescription": "CIRIS is a post-quantum decentralized constitutional mesh: a machine conscience on coordination built to resist capture. Open models and clever agent tooling are not enough. This page states the claim plainly and invites you to break it.",
+      "eyebrow": "The Constitutional Mesh",
       "headline": "The part that has to hold",
-      "lede": "Open AI models keep power from piling up in one place only if the people running them can find each other, check each other, and work together without a middleman anyone can buy, block, or break. That coordination layer is the load-bearing part. We built one. This page states the claim plainly so you can attack it.",
+      "lede": "CIRIS is a post-quantum decentralized constitutional mesh: a machine conscience riding coordination built to resist capture. Open AI models keep power from piling up in one place only if the people running them can find each other, check each other, and work together without a middleman anyone can buy, block, or break. That coordination layer is the load-bearing part. We built one. This page states the claim plainly so you can attack it.",
       "claimLabel": "The claim",
       "claimP1": "A decentralized coordination mesh, not open model weights and not clever agent tooling, is the load-bearing piece of any open-source plan for keeping AI power spread out. If a capture-resistant mesh can be built, many independent actors can deny any single company or state a lock on the future. If it cannot be built, the open-source safety argument fails on its own terms.",
       "claimP2": "The claim is stated in strong form on purpose. And the mesh is not a proposal. It is running. So the question is no longer whether such a thing could exist. It is whether this one resists capture, and that is a question you can answer by attacking it.",
@@ -2932,7 +2932,7 @@
     "l10n": "Constitutive protocol",
     "l10b": "The nearest scholarly neighbor approaches from the opposite direction: Hu and Rong ask how society can govern an AI that has become decentralized and uncapturable. We ask how society keeps some AI uncapturable when the rest becomes centralized and very powerful. Same architectural observation, opposite fear. Both can be right.",
     "lineageNote": "External positions summarized in good faith from public writing. If we have any of them wrong, that is worth an issue too.",
-      "crossCta": "Read the Mesh Claim"
+      "crossCta": "Explore the Constitutional Mesh"
   },
   "killSwitch": {
     "kicker": "Security you can check",
