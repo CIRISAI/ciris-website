@@ -210,6 +210,36 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
         </p>
       </section>
 
+      {/* The futures: hope led, the two-mesh stalemate stated plainly, the
+          mesh-dyad vs singleton-dyad comparison marked OPEN, all framed as
+          action under irreducible uncertainty. Flows directly into the
+          invitation below: the uncertainty is the thing to attack. */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{m.futLabel}</p>
+        <h2 className={s.h2}>{m.futH2}</h2>
+        <p className={s.paragraph}>{m.futP1}</p>
+        <p className={s.paragraph}>{m.futP2}</p>
+        <p className={s.paragraph}>{m.futP3}</p>
+        <p className={s.paragraph}>{m.futP4}</p>
+        {/* Scenario-model citations stay English verbatim, house source-line
+            style. AI 2027 = branch-point scenario form; Superintelligence
+            Strategy/MAIM = the singleton-dyad deterrence model (the
+            comparator futP3 leaves open); TASRA = the risk taxonomy. */}
+        <p className={s.footnote}>
+          <a href="https://ai-2027.com/" target="_blank" rel="noopener noreferrer">
+            AI 2027 (Kokotajlo et al.)
+          </a>
+          {"  ·  "}
+          <a href="https://arxiv.org/abs/2503.05628" target="_blank" rel="noopener noreferrer">
+            Superintelligence Strategy / MAIM (Hendrycks, Schmidt &amp; Wang)
+          </a>
+          {"  ·  "}
+          <a href="https://arxiv.org/abs/2306.06924" target="_blank" rel="noopener noreferrer">
+            TASRA (Critch &amp; Russell)
+          </a>
+        </p>
+      </section>
+
       {/* The invitation. */}
       <div className={s.callout}>
         <p className={s.sectionLabel}>{m.breakLabel}</p>
