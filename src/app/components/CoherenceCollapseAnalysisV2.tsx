@@ -2,7 +2,7 @@
 // t.coherenceCollapseAnalysis.* dictionary keys the old
 // CoherenceCollapseAnalysisContent did — no copy is rewritten or re-translated
 // here — inside the reusable ContentShell, with a rose (analysis/risk) accent.
-// The technical body (the idea, the one formula, the corridor, what we measured,
+// The technical body (the idea, the one formula, what we measured,
 // the honest ceiling, closing) is mapped onto the shared content.module
 // vocabulary: sectionLabel/h2 headers, paragraphs, callouts, the accent card
 // variants for the badges, and a centered mono panel for the literal formula.
@@ -41,10 +41,6 @@ interface CoherenceCollapseAnalysisNS {
   formulaPara2: string;
   formulaLi1: string;
   formulaLi2: string;
-  corridorEyebrow: string;
-  corridorH2: string;
-  corridorPara1: string;
-  corridorPara2: string;
   measuredEyebrow: string;
   measuredH2: string;
   measuredPara: string;
@@ -142,14 +138,6 @@ export default function CoherenceCollapseAnalysisV2({
         <p className={s.footnote} dangerouslySetInnerHTML={h(c.formulaLi1)} />
         <p className={s.footnote} dangerouslySetInnerHTML={h(c.formulaLi2)} />
       </section>
-
-      {/* The corridor */}
-      <div className={s.callout}>
-        <p className={s.sectionLabel}>{c.corridorEyebrow}</p>
-        <h2 className={s.h2}>{c.corridorH2}</h2>
-        <p className={s.paragraph}>{c.corridorPara1}</p>
-        <p className={s.paragraph} dangerouslySetInnerHTML={h(c.corridorPara2)} />
-      </div>
 
       {/* What we measured */}
       <section className={s.section}>

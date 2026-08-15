@@ -27,7 +27,7 @@ const papers: Paper[] = [
     title: "Corridor Dynamics in Coordinated Systems",
     subtitle:
       "An Integration of Operator Formalism, Relational Ontology, and Five-Substrate Empirical Validation",
-    meta: "v2 · May 22, 2026",
+    meta: "v6 · Jul 12, 2026",
     doi: "10.5281/zenodo.20300773",
     href: "https://zenodo.org/records/20300773",
     role: "Flagship synthesis paper",
