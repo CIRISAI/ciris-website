@@ -12,3 +12,10 @@
 # Version-pinned constitution PDF → latest (the pinned cut stays in git history
 # and in downstream vendored copies).
 /ciris-constitution-0.4.pdf  /ciris_constitution.pdf  301
+
+# The Mesh Claim's alternate name (per Eric: the better name), aliased to the
+# canonical URL already in circulation.
+/constitutional-mesh  /mesh-claim  301
+/constitutional-mesh/  /mesh-claim/  301
+/:locale/constitutional-mesh  /:locale/mesh-claim  301
+/:locale/constitutional-mesh/  /:locale/mesh-claim/  301
