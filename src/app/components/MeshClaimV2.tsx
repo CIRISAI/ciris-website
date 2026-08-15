@@ -230,6 +230,14 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
             AI 2027 (Kokotajlo et al.)
           </a>
           {"  ·  "}
+          {/* The follow-up: delay superintelligence to 2040 via a US-China
+              treaty by 2029 + verification. The treaty-delay comparator: its
+              mechanism is verification (the mesh's home turf), its
+              prerequisite is great-power agreement (the mesh needs none). */}
+          <a href="https://ai-2040.com/" target="_blank" rel="noopener noreferrer">
+            AI 2040: Plan A
+          </a>
+          {"  ·  "}
           <a href="https://arxiv.org/abs/2503.05628" target="_blank" rel="noopener noreferrer">
             Superintelligence Strategy / MAIM (Hendrycks, Schmidt &amp; Wang)
           </a>
