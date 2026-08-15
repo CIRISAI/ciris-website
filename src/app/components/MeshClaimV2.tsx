@@ -36,12 +36,15 @@ const LINEAGE_URLS = [
 export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: string }) {
   const m = t.meshClaim;
   const lh = (href: string) => localizeHref(href, locale);
+  // Each premise carries its epistemic status (measured / testable-in-principle
+  // / wager / definitional), per the reviewer's grading: a set presented as
+  // uniformly breakable implies each has a kill, and only P3 truly does.
   const premises = [
-    { title: m.p1t, body: m.p1b },
-    { title: m.p2t, body: m.p2b },
-    { title: m.p3t, body: m.p3b },
-    { title: m.p4t, body: m.p4b },
-    { title: m.p5t, body: m.p5b },
+    { title: m.p1t, body: m.p1b, status: m.p1s },
+    { title: m.p2t, body: m.p2b, status: m.p2s },
+    { title: m.p3t, body: m.p3b, status: m.p3s },
+    { title: m.p4t, body: m.p4b, status: m.p4s },
+    { title: m.p5t, body: m.p5b, status: m.p5s },
   ];
   const lineage = [
     { name: m.l1n, body: m.l1b },
@@ -85,6 +88,7 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
                 <span dir="ltr">P{i + 1}</span> · {p.title}
               </h3>
               <p>{p.body}</p>
+              <p className={s.footnote}>{p.status}</p>
             </div>
           ))}
         </div>
@@ -167,6 +171,15 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
           <div className={`${s.card} ${s.cBrass}`}>
             <h3>{m.a3t}</h3>
             <p>{m.a3b}</p>
+          </div>
+          {/* The instrument's own blind spot: N_eff is pairwise, and
+              parity-structured agreement reads as independent (RATCHET#9/#10,
+              model-scope, unmeasured on the mesh). Named because omitting the
+              attack our own diagnostic cannot see would be the page's genre
+              violated. */}
+          <div className={`${s.card} ${s.cBrass}`}>
+            <h3>{m.a4t}</h3>
+            <p>{m.a4b}</p>
           </div>
         </div>
       </section>
