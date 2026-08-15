@@ -1,4 +1,4 @@
-// The Mesh Claim anchor page (/mesh-claim): the site's strong-form statement
+// The Mesh Claim anchor page (/constitutional-mesh): the site's strong-form statement
 // that capture-resistant coordination, not open weights or harnesses, is the
 // load-bearing layer of open-source AI safety, stated so it can be attacked.
 // Plain-language register on-page; the adversarial long form lives off-site

@@ -1,4 +1,4 @@
-// Localized Mesh Claim anchor (/es/mesh-claim, ...). Thin entry over the
+// Localized Mesh Claim anchor (/es/constitutional-mesh, ...). Thin entry over the
 // shared MeshClaimV2, fed the locale's dictionary.
 
 import type { Metadata } from "next";
@@ -19,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return localizedSeo("/mesh-claim", locale);
+  return localizedSeo("/constitutional-mesh", locale);
 }
 
 export default async function Page({

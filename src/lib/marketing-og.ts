@@ -4,7 +4,7 @@ export const MARKETING_OG: Record<
   string,
   Record<string, { title: string; description: string }>
 > = {
-  "/mesh-claim": {
+  "/constitutional-mesh": {
     "en": {
       "title": "The Mesh Claim: Decentralized Coordination Is the Load-Bearing Layer of Open-Source AI Safety | CIRIS",
       "description": "Open models and clever agent tooling are not enough. If AI power is going to stay spread out, people need a way to find and trust each other that nobody can capture. CIRIS built that layer, and this page invites you to break it."

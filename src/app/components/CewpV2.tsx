@@ -82,7 +82,7 @@ export default function CewpV2({ t, locale }: { t: Dictionary; locale: string })
         <h2 className={s.h2}>{c.meshTitle}</h2>
         <p className={s.paragraph}>{c.meshBody}</p>
         <div className={s.ctaRow}>
-          <Link href={localizeHref("/mesh-claim", locale)} className={`${s.btn} ${s.btnP}`}>
+          <Link href={localizeHref("/constitutional-mesh", locale)} className={`${s.btn} ${s.btnP}`}>
             {t.meshClaim.crossCta}
           </Link>
         </div>
