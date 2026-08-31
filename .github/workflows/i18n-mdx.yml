@@ -98,18 +98,38 @@ jobs:
           # so rotating this key currently means three places, and SONAR_TOKEN
           # already proves the org path reaches this repo.
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Inputs come through the ENVIRONMENT, never interpolated into the
+          # script text. `${{ inputs.langs }}` spliced straight into a shell
+          # command is a script-injection hole: whoever can dispatch the
+          # workflow chooses that string.
+          IN_LANGS: ${{ inputs.langs }}
+          IN_LIMIT: ${{ inputs.limit }}
+          IN_OVERWRITE: ${{ inputs.overwrite }}
         run: |
           set -euo pipefail
-          test -n "${OPENROUTER_API_KEY:-}" || {
+          if [ -z "${OPENROUTER_API_KEY:-}" ]; then
             echo "::error::OPENROUTER_API_KEY is empty. Set it as a repository or organization secret."
             exit 1
-          }
-          args=""
-          if [ -n "${{ inputs.langs }}" ]; then
-            for l in $(echo "${{ inputs.langs }}" | tr ',' ' '); do args="$args --lang $l"; done
           fi
-          [ "${{ inputs.limit }}" != "0" ] && args="$args --limit ${{ inputs.limit }}"
-          [ "${{ inputs.overwrite }}" = "true" ] && args="$args --overwrite"
+          args=""
+          if [ -n "${IN_LANGS:-}" ]; then
+            for l in $(printf '%s' "$IN_LANGS" | tr ',' ' '); do
+              # Locale codes only. Anything else is refused rather than passed on.
+              case "$l" in
+                [a-z][a-z]) args="$args --lang $l" ;;
+                *) echo "::error::not a locale code: $l"; exit 1 ;;
+              esac
+            done
+          fi
+          if [ -n "${IN_LIMIT:-}" ] && [ "$IN_LIMIT" != "0" ]; then
+            case "$IN_LIMIT" in
+              ''|*[!0-9]*) echo "::error::limit must be a number: $IN_LIMIT"; exit 1 ;;
+              *) args="$args --limit $IN_LIMIT" ;;
+            esac
+          fi
+          if [ "${IN_OVERWRITE:-false}" = "true" ]; then
+            args="$args --overwrite"
+          fi
           echo "running: translate_mdx.py $args"
           python3 scripts/i18n/translate_mdx.py $args
 
@@ -123,8 +143,8 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           branch: i18n/mdx-${{ github.run_id }}
-          title: 'i18n: translated MDX (${{ inputs.langs || "all" }})'
-          commit-message: 'i18n: translated MDX for ${{ inputs.langs || "all locales" }}'
+          title: 'i18n: translated MDX'
+          commit-message: 'i18n: translated MDX'
           body: |
             Machine translation from `.github/workflows/i18n-mdx.yml`.
 
