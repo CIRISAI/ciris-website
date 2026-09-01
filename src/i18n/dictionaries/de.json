@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "Die CIRIS Verfassung · CC 1.0-rc2",
+    "eyebrow": "Die CIRIS Verfassung · CC 1.0-rc3",
     "headline": "Ein Dokument. Eine Versionslinie.",
     "intro": "Der CIRIS Accord legte fest, worum sich eine KI kümmern muss. Die CIRIS Epistemic Grammar legte fest, wie jede Aussage signiert wird, damit sie jeder prüfen kann. Sie wurden als zwei Dokumente verfasst, enthielten aber bereits einander. Jetzt sind sie eins: die CIRIS Verfassung.",
     "apexLabel": "Der Grundpfeiler, Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Aus dem Vorwort",
     "readCta": "Die vollständige Verfassung lesen (PDF)",
     "sourceCta": "Die Quelle auf GitHub lesen",
-    "versionNote": "Version CC 1.0-rc2 · enthält CIRIS Accord 1.3-RC2 und CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Version CC 1.0-rc3 · enthält CIRIS Accord 1.3-RC2 und CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "de",
@@ -2894,7 +2894,7 @@
     "convergence": "Vier Ängste, ein Fundament. Der Ersatz für das Internet ist auch der Ersatz für ChatGPT.",
     "convergenceAccent": "Gleiche Grundlage, jede Tür.",
     "footL": "CIRISAgent · das epistemische Web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 wird ausgerollt · Constitution 1.0-rc2",
+    "footR": "CIRIS 3.0 wird ausgerollt · Constitution 1.0-rc3",
     "heroLabels": {
       "consumerAi": "Kein KI, dem du vertraust",
       "bigTech": "Big Tech besitzt alles",

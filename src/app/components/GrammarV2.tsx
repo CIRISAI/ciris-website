@@ -1,7 +1,7 @@
 // v2 "dark-blueprint" grammar landing (/grammar), post-fold edition. The CEG
 // is no longer presented as a standalone spec: the version badge and the CEG
 // PDF buttons are gone (the 0.15 PDFs 404ed after the grammar was folded into
-// the constitution, CC 1.0-rc2). Instead: a prominent dive-in CTA to the
+// the constitution, CC 1.0-rc3). Instead: a prominent dive-in CTA to the
 // English-only /grammar/details spec reader right under the hero (per Eric:
 // "make sure /grammar/details is prominently linked"), the localized explainer
 // cards, and a "where the grammar lives now" section pointing at the

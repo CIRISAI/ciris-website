@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "CIRIS সংবিধান · CC 1.0-rc2",
+    "eyebrow": "CIRIS সংবিধান · CC 1.0-rc3",
     "headline": "একটি দলিল। একটি সংস্করণ লাইন।",
     "intro": "CIRIS Accord নির্ধারণ করেছিল একটি AI কী নিয়ে যত্নশীল হবে। CIRIS Epistemic Grammar নির্ধারণ করেছিল কীভাবে প্রতিটি দাবি স্বাক্ষরিত হবে যাতে যে কেউ তা যাচাই করতে পারে। এগুলো দুটি আলাদা দলিল হিসেবে লেখা হয়েছিল, কিন্তু এগুলো আগে থেকেই একে অপরকে ধারণ করত। এখন এগুলো এক: CIRIS সংবিধান।",
     "apexLabel": "ভিত্তিপ্রস্তর: মেটা-গোল M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "ভূমিকা থেকে",
     "readCta": "পূর্ণ সংবিধান পড়ুন (PDF)",
     "sourceCta": "GitHub-এ সোর্স পড়ুন",
-    "versionNote": "সংস্করণ CC 1.0-rc2 · CIRIS Accord 1.3-RC2 এবং CEG 1.0-RC29 অন্তর্ভুক্ত · AGPL-3.0"
+    "versionNote": "সংস্করণ CC 1.0-rc3 · CIRIS Accord 1.3-RC2 এবং CEG 1.0-RC29 অন্তর্ভুক্ত · AGPL-3.0"
   },
   "_meta": {
     "locale": "bn",
@@ -2894,7 +2894,7 @@
     "convergence": "চারটা ভয়, একটাই ভিত্তি। ইন্টারনেটের বিকল্প আর ChatGPT র বিকল্প একই জিনিস।",
     "convergenceAccent": "একই ভিত্তি, প্রতিটি দরজায়।",
     "footL": "CIRISAgent · জ্ঞানের জাল · AGPL-3.0, মিশন-লক্ড",
-    "footR": "CIRIS 3.0 চালু হচ্ছে · Constitution 1.0-rc2",
+    "footR": "CIRIS 3.0 চালু হচ্ছে · Constitution 1.0-rc3",
     "heroLabels": {
       "consumerAi": "বিশ্বাসযোগ্য AI নেই",
       "bigTech": "Big Tech সব নিয়ন্ত্রণ করে",

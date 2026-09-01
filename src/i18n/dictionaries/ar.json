@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "دستور CIRIS · CC 1.0-rc2",
+    "eyebrow": "دستور CIRIS · CC 1.0-rc3",
     "headline": "وثيقة واحدة. خط إصدار واحد.",
     "intro": "حدّد ميثاق CIRIS ما يجب أن يهتم به الذكاء الاصطناعي. وحدّدت قواعد المعرفة الخاصة بـ CIRIS كيف يُوقَّع كل تصريح ليتمكن أي شخص من التحقق منه. كُتبا كوثيقتين منفصلتين، لكنهما كانا يحتويان كل منهما على الآخر. الآن أصبحا واحداً: دستور CIRIS.",
     "apexLabel": "حجر الأساس: الهدف العام M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "من المقدمة",
     "readCta": "اقرأ الدستور كاملاً (PDF)",
     "sourceCta": "اقرأ المصدر على GitHub",
-    "versionNote": "الإصدار CC 1.0-rc2 · يتضمن ميثاق CIRIS 1.3-RC2 وCEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "الإصدار CC 1.0-rc3 · يتضمن ميثاق CIRIS 1.3-RC2 وCEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "ar",
@@ -2894,7 +2894,7 @@
     "convergence": "أربعة مخاوف، أرضية واحدة. البديل للإنترنت هو البديل لـ ChatGPT.",
     "convergenceAccent": "نفس القاعدة، كل الأبواب.",
     "footL": "CIRISAgent · الشبكة المعرفية · AGPL-3.0، مقيّد بالمهمة",
-    "footR": "CIRIS 3.0 قيد الإطلاق · Constitution 1.0-rc2",
+    "footR": "CIRIS 3.0 قيد الإطلاق · Constitution 1.0-rc3",
     "heroLabels": {
       "consumerAi": "لا ذكاء اصطناعي يمكن الوثوق به",
       "bigTech": "شركات كبرى تملك كل شيء",

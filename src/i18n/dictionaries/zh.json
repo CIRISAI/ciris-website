@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "CIRIS 宪法 · CC 1.0-rc2",
+    "eyebrow": "CIRIS 宪法 · CC 1.0-rc3",
     "headline": "一份文件。一条版本线。",
     "intro": "CIRIS 协议规定了 AI 应当关注什么。CIRIS 认识论语法规定了每条声明如何签名，以便任何人都能核验。它们最初是两份独立文件，但彼此之间本就相互包含。现在它们合而为一：CIRIS 宪法。",
     "apexLabel": "基石，元目标 M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "摘自前言",
     "readCta": "阅读完整宪法（PDF）",
     "sourceCta": "在 GitHub 上阅读源文件",
-    "versionNote": "版本 CC 1.0-rc2 · 包含 CIRIS 协议 1.3-RC2 和 CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "版本 CC 1.0-rc3 · 包含 CIRIS 协议 1.3-RC2 和 CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "zh",
@@ -2894,7 +2894,7 @@
     "convergence": "四种担忧，同一个基础。互联网的替代品，就是 ChatGPT 的替代品。",
     "convergenceAccent": "同一个底层，每扇门都通向它。",
     "footL": "CIRISAgent · 认知之网 · AGPL-3.0，使命锁定",
-    "footR": "CIRIS 3.0 正在推出 · Constitution 1.0-rc2",
+    "footR": "CIRIS 3.0 正在推出 · Constitution 1.0-rc3",
     "heroLabels": {
       "consumerAi": "没有可信赖的AI",
       "bigTech": "科技巨头掌控一切",

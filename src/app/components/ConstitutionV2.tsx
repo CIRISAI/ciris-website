@@ -1,6 +1,6 @@
 // v2 "dark-blueprint" front-door for the unified CIRIS Constitution. The Accord
 // (the ethics) and the CEG (the wire grammar) are no longer two documents — they
-// are folded into one constitution (CC 1.0-rc2) that lives canonically in
+// are folded into one constitution (CC 1.0-rc3) that lives canonically in
 // CIRISAI/CIRISConstitution. This page frames that whole, surfaces the M-1 apex
 // + the eight parts, and links out to the PDF and source.
 // Every label comes from the dictionary (constitution.*); the GitHub URLs and
