@@ -1,50 +1,16 @@
 "use client";
 
-// Migration banner for the not-yet-rebuilt (v1) pages. The home lobby and the
-// four path staircases are the new v2 surface; everywhere else still shows the
-// old design, so we nudge visitors to the new site while preserving the page's
-// URL + SEO. Hides itself on the v2 routes. Locale-aware link target.
+// Migration banner: the day/night hero landing is the new surface, and every
+// other page is the old look until the revamp reaches it. So the banner shows
+// everywhere EXCEPT the landing, and its link is the landing. Locale-aware.
 
 import { usePathname } from "next/navigation";
 import { delocalizePath } from "@/i18n/config";
 
-// Routes already rebuilt in the v2 dark-blueprint style — the banner hides on
-// these. Grows as more kept pages are rebuilt.
-const V2_ROUTES = new Set([
-  "/",
-  "/paths/consumer-ai",
-  "/paths/superalignment",
-  "/paths/misinformation",
-  "/paths/big-tech",
-  "/federation",
-  "/vision",
-  "/how-it-works",
-  "/research-status",
-  "/proof",
-  "/verification",
-  "/about",
-  "/trust",
-  "/safety",
-  "/services",
-  "/compare",
-  "/mdd",
-  "/models",
-  "/first-contact",
-  "/crowdsourcing-alignment",
-  "/safety-vs-censorship",
-  "/coherence-collapse-analysis",
-  "/coherence-ratchet",
-  "/install",
-  "/epistemic-web",
-  "/cewp",
-  "/grammar",
-  "/constitution",
-]);
-
 export default function V1Banner() {
   const pathname = usePathname() || "/";
   const { locale, path } = delocalizePath(pathname);
-  if (V2_ROUTES.has(path)) return null;
+  if (path === "/") return null;
 
   const home = locale === "en" ? "/" : `/${locale}`;
 
@@ -64,8 +30,8 @@ export default function V1Banner() {
         borderBottom: "1px solid rgba(34, 192, 232, 0.25)",
       }}
     >
-      CIRIS has a new look.{" "}
-      <span style={{ color: "#22c0e8", fontWeight: 600 }}>Visit the new site &rarr;</span>
+      CIRIS has a new home page.{" "}
+      <span style={{ color: "#22c0e8", fontWeight: 600 }}>See it &rarr;</span>
     </a>
   );
 }

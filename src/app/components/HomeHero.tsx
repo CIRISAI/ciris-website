@@ -322,6 +322,21 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
         <span>{hero.fact3}</span>
       </div>
 
+      {/* The clean bottom nav: the landing's only navigation (no top nav by
+          design). Small, dim, one row; the rest of the site hangs off it. */}
+      <nav className={styles.bottomNav} aria-label="Site">
+        <Link href={lh("/constitution")}>{hero.navConstitution}</Link>
+        <Link href={lh("/constitutional-mesh")}>{hero.navMesh}</Link>
+        <Link href={lh("/safety")}>{hero.navSafety}</Link>
+        <Link href={lh("/research-status")}>{hero.navResearch}</Link>
+        <Link href="/papers">{hero.navPapers}</Link>
+        <Link href="/reviews">{hero.navReviews}</Link>
+        <Link href="/status">{hero.navStatus}</Link>
+        <a href="https://github.com/CIRISAI" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </nav>
+
       <LanguageSwitcher currentLocale={locale} large />
     </div>
   );
