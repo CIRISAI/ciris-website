@@ -11,8 +11,8 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import { Instrument_Sans, Silkscreen } from "next/font/google";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { localizeHref } from "@/i18n/config";
-import LanguageSwitcher from "@/app/components/LanguageSwitcher";
+import { LOCALES, localeMeta, localizeHref, localizedPath } from "@/i18n/config";
+import { setLocalePref } from "@/i18n/pref";
 import styles from "./homeHero.module.css";
 
 const instrument = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
@@ -165,6 +165,7 @@ function paintLuminary(g: CanvasRenderingContext2D, W: number, H: number, t: num
 export default function HomeHero({ t, locale }: { t: Dictionary; locale: string }) {
   const hero = t.homeHero;
   const [dark, setDark] = useState<boolean | null>(null);
+  const [langOpen, setLangOpen] = useState(false);
   const groundRef = useRef<HTMLCanvasElement>(null);
   const lumRef = useRef<HTMLCanvasElement>(null);
   const terrainRef = useRef<{ night: boolean; cv: HTMLCanvasElement } | null>(null);
@@ -278,27 +279,62 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
         />
       </div>
 
-      {/* Header: brand left; theme toggle right (language pill floats site-wide). */}
+      {/* Header: brand left; language pill + theme toggle top right, matching
+          chips per the design (and Eric: language lives beside the toggle). */}
       <header className={styles.header}>
         <div className={styles.brand}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.svg" alt="CIRIS" width={28} height={22} style={{ filter: P.logoFilter }} />
           <span className={styles.wordmark}>CIRIS</span>
         </div>
-        <button
-          onClick={toggle}
-          title="Light / dark"
-          aria-label="Toggle day or night"
-          className={styles.themeToggle}
-          style={{ background: P.chipBg }}
-        >
-          <span className={styles.pip} style={{ background: P.lightPipBg }}>
-            <span className={styles.pipDotFill} style={{ background: P.lightPipDot }} />
-          </span>
-          <span className={styles.pip} style={{ background: P.darkPipBg }}>
-            <span className={styles.pipDotRing} style={{ borderColor: P.darkPipDot }} />
-          </span>
-        </button>
+        <div className={styles.chips}>
+          <div className={styles.langWrap}>
+            <button
+              onClick={() => setLangOpen((o) => !o)}
+              aria-expanded={langOpen}
+              aria-haspopup="listbox"
+              className={styles.langChip}
+              style={{ background: P.chipBg }}
+            >
+              <span className={styles.langRing} />
+              {localeMeta(locale)?.nativeName ?? "English"}
+            </button>
+            {langOpen && (
+              <div
+                className={styles.langPanel}
+                role="listbox"
+                style={{ background: P.pageBg, borderColor: "color-mix(in srgb, currentColor 16%, transparent)" }}
+              >
+                {LOCALES.map((l) => (
+                  <a
+                    key={l.code}
+                    role="option"
+                    aria-selected={l.code === locale}
+                    href={localizedPath("/", l.code)}
+                    onClick={() => setLocalePref(l.code)}
+                    className={l.code === locale ? styles.langActive : undefined}
+                  >
+                    {l.nativeName}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+          <button
+            onClick={toggle}
+            title="Light / dark"
+            aria-label="Toggle day or night"
+            className={styles.themeToggle}
+            style={{ background: P.chipBg }}
+          >
+            <span className={styles.pip} style={{ background: P.lightPipBg }}>
+              <span className={styles.pipDotFill} style={{ background: P.lightPipDot }} />
+            </span>
+            <span className={styles.pip} style={{ background: P.darkPipBg }}>
+              <span className={styles.pipDotRing} style={{ borderColor: P.darkPipDot }} />
+            </span>
+          </button>
+        </div>
       </header>
 
       {/* The claim, centered under the signet. */}
@@ -337,7 +373,6 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
         </a>
       </nav>
 
-      <LanguageSwitcher currentLocale={locale} large />
     </div>
   );
 }
