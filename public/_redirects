@@ -13,6 +13,14 @@
 # and in downstream vendored copies).
 /ciris-constitution-0.4.pdf  /ciris_constitution.pdf  301
 
+# The legacy Accord/Constitution reader (/sections/**) is retired; the
+# canonical document lives at /constitution (and in the CIRISConstitution
+# repo). Every reader URL, in every locale, forwards there.
+/sections  /constitution  301
+/sections/*  /constitution  301
+/:locale/sections  /:locale/constitution  301
+/:locale/sections/*  /:locale/constitution  301
+
 # The Mesh Claim's canonical home is /constitutional-mesh (per Eric: the
 # better name); the original launch URL forwards so circulated links keep
 # working.

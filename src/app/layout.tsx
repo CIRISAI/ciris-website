@@ -1,5 +1,5 @@
 import "./global.css";
-import { RootProvider } from "fumadocs-ui/provider";
+import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
@@ -8,8 +8,8 @@ import { PREFIXED_LOCALES, LOCALIZED_ROUTES } from "@/i18n/config";
 import { DEFAULT_OG_IMAGE, DEFAULT_OG_VIDEO } from "@/lib/seo";
 import V1Banner from "@/app/components/V1Banner";
 
-// Universal language persistence: a locale chosen anywhere (marketing pages or
-// the /sections reader) is stored, and this guard redirects localizable pages to
+// Universal language persistence: a locale chosen anywhere is stored, and
+// this guard redirects localizable pages to
 // it before paint, so the language "sticks" across the whole site. Built from
 // config so the path/locale lists never drift.
 const LOCALE_GUARD = `(function(){try{
@@ -20,7 +20,7 @@ var segs=path.split('/').filter(function(x){return x.length>0;});
 var cur=(segs.length>0&&P.indexOf(segs[0])>=0)?segs[0]:'en';
 if(cur===s)return;
 var base=(cur==='en')?path:('/'+segs.slice(1).join('/'));if(base==='')base='/';
-var ok=M.indexOf(base)>=0||base==='/sections'||base.indexOf('/sections/')===0;
+var ok=M.indexOf(base)>=0;
 if(!ok)return;
 var t=(s==='en')?base:('/'+s+base);if(t!=='/')t=t+'/';
 var curFull=path==='/'?'/':path+'/';
@@ -239,10 +239,15 @@ export default function Layout({ children }: { children: ReactNode }) {
         />
         {/* The site is dark by design (canvas/video backgrounds are black).
             Force the theme dark so it never follows the OS preference. */}
-        <RootProvider theme={{ defaultTheme: "dark", forcedTheme: "dark", enableSystem: false }}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          forcedTheme="dark"
+          enableSystem={false}
+        >
           <V1Banner />
           {children}
-        </RootProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

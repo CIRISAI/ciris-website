@@ -33,7 +33,7 @@ export function defaultOgVideo(locale: string = DEFAULT_LOCALE): string {
 }
 
 // Pages that have bespoke designed cards in scripts/og/ (everything else falls
-// back to the localized brand card). The /sections reader uses ogSectionsImage.
+// back to the localized brand card).
 const DESIGNED_OG_CARDS: ReadonlySet<string> = new Set([
   "/",
   "/install",
@@ -107,20 +107,7 @@ export function ogVideo(basePath: string, locale: string = DEFAULT_LOCALE): stri
   return base ? `${SITE}${base}.mp4` : null;
 }
 
-// The localized Accord/charter card for the /sections reader (all sections share
-// the one "constitutional document" card; the section name is the overlay).
-export function ogSectionsImage(locale: string = DEFAULT_LOCALE): string {
-  return locale === DEFAULT_LOCALE
-    ? "/og/og-sections.gif"
-    : `/og/${locale}/og-sections.gif`;
-}
 
-// The MP4 companion for the /sections card (absolute; see SITE note above).
-export function ogSectionsVideo(locale: string = DEFAULT_LOCALE): string {
-  return locale === DEFAULT_LOCALE
-    ? `${SITE}/og/og-sections.mp4`
-    : `${SITE}/og/${locale}/og-sections.mp4`;
-}
 
 // Full localized metadata for a marketing page: hreflang alternates + a
 // localized, per-page social preview (og/twitter title+description, og:locale).

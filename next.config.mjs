@@ -1,14 +1,9 @@
-import { createMDX } from 'fumadocs-mdx/next';
-
-const withMDX = createMDX();
-
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
-  // The localized Accord reader adds ~800 MDX pages; these reduce the build's
-  // peak memory so Cloudflare's build VM doesn't OOM during webpack compilation.
+  // Keeps the build's peak memory down on Cloudflare's build VM.
   experimental: {
     webpackMemoryOptimizations: true,
   },
@@ -35,4 +30,4 @@ const config = {
   },
 };
 
-export default withMDX(config);
+export default config;

@@ -1,5 +1,5 @@
 // Persisted language choice, so a locale picked anywhere (marketing pages or the
-// /sections reader) sticks across the whole site. Read by the redirect guard
+// site) sticks across the whole site. Read by the redirect guard
 // inlined in the root layout.
 export const LOCALE_PREF_KEY = "ciris-locale";
 

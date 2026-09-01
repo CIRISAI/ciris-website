@@ -1,6 +1,6 @@
 # CIRIS Website
 
-Next.js website for the CIRIS project. Uses Tailwind CSS, fumadocs for documentation.
+Next.js website for the CIRIS project. Uses Tailwind CSS. (The former fumadocs /sections reader is removed; the constitution lives at /constitution and in CIRISAI/CIRISConstitution.)
 
 ## Build & Deploy
 

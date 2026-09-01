@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import "fumadocs-ui/css/neutral.css";
-@import "fumadocs-ui/css/preset.css";
 
 /* The site is dark by design — the hero/reel canvases render on black, so a
    light theme on any chrome (nav, footer, cards) clashes. Make the `dark:`
@@ -91,10 +89,9 @@ body {
 }
 
 /* Dark surface tokens, applied UNCONDITIONALLY (:root) as well as under .dark.
-   The site is dark by design, but next-themes (fumadocs RootProvider) wipes the
-   `.dark` class off <html> on client-side navigation — without these at :root
-   the page would fall back to the light fumadocs theme (white body, unreadable
-   text) until a full reload. --color-fd-background is the body backdrop. */
+   The site is dark by design, but next-themes can wipe the `.dark` class off
+   <html> on client-side navigation; without these at :root the page could
+   flash light until a full reload. */
 :root,
 .dark {
   /* !important so neither a dropped .dark class (next-themes wipes it on
@@ -118,22 +115,6 @@ body {
    token resolution, so the forced-dark site can never flash white. */
 body {
   background-color: #0d1117 !important;
-}
-
-/* fumadocs `.prose` (the Accord/docs reader) colors headings + links with the
-   brand purples, which go low-contrast on dark. Force readable light values.
-   These selectors out-specify the prose defaults. */
-.dark .prose :is(h1, h2, h3, h4, h5, h6) {
-  color: #ece9ff;
-}
-.dark .prose a {
-  color: #b3a9ff;
-}
-/* fumadocs auto-links headings (<h2><a>…</a></h2>); without this the link color
-   above would override the heading color. Let heading anchors keep the heading
-   color so headings read crisp and only body links are lavender. */
-.dark .prose :is(h1, h2, h3, h4, h5, h6) a {
-  color: inherit;
 }
 
 @utility container {
