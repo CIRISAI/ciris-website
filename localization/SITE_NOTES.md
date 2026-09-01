@@ -47,3 +47,16 @@ glossary rows BEFORE their first lane run (see the Website Terms sections in
   auto-tops-up, so a 402 is transient lag — `drive.sh` backs off and retries.
 - The site-wide re-translation runs as bounded evaluate sweeps: strings that
   pass MQM cost one cached review and are kept; only failures pay for repair.
+
+## The sweep (site-wide re-translation)
+
+`sweep.py` runs the corpus through the evaluate lane as importance-ordered
+batches (chrome and install first, SEO tail last), one commit per batch, a
+spend ledger in `hard-cases/sweep-*-ledger.json`, and a self-imposed budget
+pause (Eric: "track the cost and pause if you exceed $50 to check progress").
+Provider outages (reviewer unreachable, a rung dying on 402 lag) are retried
+per language; genuine judge rejections are never retried — they go to the
+hard-cases file for judgment. A post-write guard reverts any single value
+that breaks keyset, leaf type, or runtime placeholders, keeping the rest of
+that language's accepted repairs. Dead copy is not paid for: `home.*` has no
+source references and `lobby.*` is retired except `lobby.store.*`.
