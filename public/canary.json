@@ -1,7 +1,7 @@
 {
   "canary": {
     "version": "1.0",
-    "timestamp": "2026-04-23T17:51:57.948917+00:00",
+    "timestamp": "2026-09-01T20:57:15.369196+00:00",
     "valid_until": null,
     "statements": [
       "We have NOT received any National Security Letters (NSLs)",
@@ -16,7 +16,7 @@
       "role": "root"
     }
   },
-  "signature": "tl-FSTi-jtBD-eCP_rn9yD64zmxG_jv4rImeYwZvw_woUQOP17UFHNoodeQgYFUOrUQWeNhkM7rC88ytOBqSAA",
+  "signature": "6r2hFnEb-J5h0_8YuX605BA3nw9nHmhhmKcrxfMdBWPfyXil5OFmWzfsHHbMxN8oSyv74vRkdDk83fQDl-txDw",
   "public_key": "QK0ZQ9FhWKMtP8YL3wXU_n0cmqYyV3HoDi-AIJgSHi0",
   "verify_instructions": "To verify: decode base64url signature and public_key, verify Ed25519 signature over JSON.stringify(canary, sortKeys=true, compact=true)"
 }
