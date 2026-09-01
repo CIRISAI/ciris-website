@@ -1,0 +1,174 @@
+# The localization pipeline, once — ported from CIRISAI/CIRISClient (#29).
+#
+# Differences from the client's lane, on purpose:
+#   - No emitter checkout and no vendoring digest: the website's canonical
+#     surface IS src/i18n/dictionaries/en.json (+ chrome/en.json); there is
+#     no upstream emitter set to reconcile against.
+#   - Two independent single-copy bundles instead of four mirrors: the
+#     `bundle` input selects dictionaries or chrome via LOCALIZE_BUNDLE
+#     (see localization/check_localization_sync.py, the website shim).
+#   - The structural gate is the pipeline's own parity check: every language
+#     must hold every en.json key. The lane writes only ACCEPTED values
+#     (fail-closed), so a failed lane still banks its good work.
+#
+# Secrets: OPENROUTER_API_KEY drives the model ladder (every rung, including
+# a family the Anthropic SDK cannot reach). ANTHROPIC_API_KEY is honoured
+# when present. LOCALIZE_PROVIDER picks when both are set.
+
+name: i18n lane
+
+on:
+  workflow_dispatch:
+    inputs:
+      lane:
+        description: "translate | evaluate | repair"
+        required: true
+        type: choice
+        options: [translate, evaluate, repair]
+      bundle:
+        description: "which tree to run"
+        required: true
+        type: choice
+        options: [dictionaries, chrome]
+      keys:
+        description: "fnmatch patterns over flat dotted keys, space-separated. Empty = whatever is missing"
+        required: false
+        default: ""
+        type: string
+      langs:
+        description: "language codes, space-separated. Empty = all 28"
+        required: false
+        default: ""
+        type: string
+      max_keys:
+        description: "refuse runs larger than this many key-values"
+        required: false
+        default: "400"
+        type: string
+      mode:
+        description: "fast | batch (batch is 50% cheaper, for backfills)"
+        required: false
+        default: "fast"
+        type: string
+      commit:
+        description: "push the result to the branch (false = report only)"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  lane:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      LOCALIZE_BUNDLE: ${{ inputs.bundle }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Plan (no API call)
+        id: plan
+        env:
+          LOCALIZE_PROVIDER: ${{ vars.LOCALIZE_PROVIDER || 'openrouter' }}
+        run: |
+          set -euo pipefail
+          args=""
+          for p in ${{ inputs.keys }}; do args="$args --keys $p"; done
+          for l in ${{ inputs.langs }}; do args="$args --lang $l"; done
+          echo "args=$args" >> "$GITHUB_OUTPUT"
+          python3 localization/localize.py --lane "${{ inputs.lane }}" $args \
+            --max-keys "${{ inputs.max_keys }}" --dry-run | tee plan.log
+          {
+            echo "### Plan — ${{ inputs.lane }} lane, ${{ inputs.bundle }} bundle"
+            echo '```'
+            cat plan.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Run the lane
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LOCALIZE_PROVIDER: ${{ vars.LOCALIZE_PROVIDER || 'openrouter' }}
+          LOCALIZE_LADDER: ${{ vars.LOCALIZE_LADDER }}
+          LOCALIZE_REVIEW_MODEL: ${{ vars.LOCALIZE_REVIEW_MODEL }}
+        run: |
+          set -euo pipefail
+          pip install --quiet anthropic
+          python3 localization/localize.py \
+            --lane "${{ inputs.lane }}" ${{ steps.plan.outputs.args }} \
+            --max-keys "${{ inputs.max_keys }}" \
+            --mode "${{ inputs.mode }}" \
+            --report i18n-report.json | tee lane.log
+          {
+            echo "### ${{ inputs.lane }} lane — ${{ inputs.bundle }}"
+            echo '```'
+            cat lane.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: MQM findings
+        if: always() && hashFiles('i18n-report.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: i18n-report-${{ inputs.lane }}-${{ inputs.bundle }}
+          path: i18n-report.json
+
+      - name: Guard (parity) — the actual gate
+        # always(): a lane that exited 1 still gets its bundle checked, so the
+        # operator sees both facts — which keys were rejected, and whether what
+        # DID land kept every language at parity with en.json.
+        if: always()
+        run: |
+          set -euo pipefail
+          python3 localization/localize.py --check
+          python3 - <<'PY'
+          import json, glob, os
+          bundle = {"dictionaries": "src/i18n/dictionaries",
+                    "chrome": "src/i18n/chrome"}[os.environ["LOCALIZE_BUNDLE"]]
+          for f in glob.glob(f"{bundle}/*.json"):
+              json.load(open(f, encoding="utf-8"))
+          print("all bundle files parse")
+          PY
+
+      - name: Commit
+        env:
+          BRANCH: ${{ github.ref_name }}
+        # ALWAYS, even when the lane exited 1: the lane writes only accepted
+        # values, so committing on failure banks the good work and leaves the
+        # rejected keys for the next run — the client learned this the hard
+        # way (587 good translations discarded per run, seven runs running).
+        if: always() && inputs.commit
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/i18n/dictionaries src/i18n/chrome
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -F - <<'MSG'
+          i18n: ${{ inputs.lane }} lane, ${{ inputs.bundle }} bundle
+
+          Machine translation, independently reviewed against MQM, repaired
+          where the review found a critical, major or terminology error. Every
+          value is machine-translated pending native review: the pipeline
+          guarantees terminology, structure and meaning, not native fluency.
+
+          Validated by the parity gate in this same run; MQM findings attached
+          to the run as i18n-report.json. Review like any other diff.
+          MSG
+            for attempt in 1 2 3; do
+              if git push; then exit 0; fi
+              echo "push rejected (attempt $attempt) — rebasing and retrying"
+              git pull --rebase --autostash origin "$BRANCH" || true
+            done
+            echo "::error::could not push after 3 attempts — the branch kept moving under the lane"
+            exit 1
+          fi
