@@ -51,8 +51,12 @@ _PLACEHOLDER = re.compile(r"\$\{[^}]*\}|\{[A-Za-z0-9_]+\}|%[0-9]*\$?[sd]")
 def flat_values(obj: dict, prefix: str = "", top: bool = True) -> Dict[str, Any]:
     """Map every leaf of a localization dict to its dotted address -> value.
 
-    Faithful to the client's semantics: dicts recurse, everything else
-    (strings AND lists) is a leaf, and ignored roots are skipped at the top.
+    DELIBERATE DIVERGENCE from the client: list-valued leaves are EXCLUDED
+    from the address space entirely. The client treats lists as single leaf
+    values; on the website that let an evaluate run hand a whole array to the
+    judge and write the returned STRING back over it (am/ar, 2026-09-01,
+    caught by tsc). Arrays (lobby.doors, stats, constitution.parts, ...) stay
+    with the manual splice pipeline until the write path understands them.
     """
     out: Dict[str, Any] = {}
     for k, v in obj.items():
@@ -61,6 +65,8 @@ def flat_values(obj: dict, prefix: str = "", top: bool = True) -> Dict[str, Any]
         key = f"{prefix}.{k}" if prefix else k
         if isinstance(v, dict):
             out.update(flat_values(v, key, False))
+        elif isinstance(v, list):
+            continue  # invisible to the lanes: not selectable, not writable
         else:
             out[key] = v
     return out
