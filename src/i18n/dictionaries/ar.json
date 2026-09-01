@@ -2809,23 +2809,6 @@
       ]
     }
   },
-  "homeHero": {
-    "kicker": "FREE · OPEN SOURCE · AGPL-3.0",
-    "h1": "You don't have to trust it, you can check it.",
-    "sub": "Scout shows its reasoning as it happens: every stage, every source, every action it took. Run it on your own machine or your own key, and read the whole record afterwards.",
-    "ctaChat": "Chat with Scout",
-    "ctaInstall": "Install",
-    "navConstitution": "Constitution",
-    "navMesh": "Constitutional Mesh",
-    "navSafety": "Safety",
-    "navResearch": "Research",
-    "navPapers": "Papers",
-    "navReviews": "Reviews",
-    "navStatus": "Status",
-    "fact1": "Self-hosted or bring your own key",
-    "fact2": "Every reasoning step signed and readable",
-    "fact3": "No accounts sold, no data pooled"
-  },
   "lobby": {
     "eyebrow": "CIRIS · الشبكة المعرفية",
     "whyProblemsHead": "أربع مشكلات ضخمة.",
@@ -3372,5 +3355,22 @@
     "btnLandscape": "المشهد الكامل",
     "btnCirisGh": "CIRIS على GitHub",
     "btnMsGh": "مجموعة أدوات Microsoft"
+  },
+  "homeHero": {
+    "kicker": "مجاني · مفتوح المصدر · AGPL-3.0",
+    "h1": "لا يتوجب عليك أن تثق به، يمكنك التحقق منه.",
+    "sub": "يعرض Scout تفكيره أثناء حدوثه: كل مرحلة، وكل مصدر، وكل إجراء اتخذه. شغّله على جهازك الخاص أو بمفتاحك الخاص، واقرأ السجل كاملاً بعد ذلك.",
+    "ctaChat": "تحدَّث مع Scout",
+    "ctaInstall": "تثبيت",
+    "navConstitution": "الدستور",
+    "navMesh": "الشبكة الدستورية",
+    "navSafety": "السلامة",
+    "navResearch": "البحث",
+    "navPapers": "الأوراق البحثية",
+    "navReviews": "المراجعات",
+    "navStatus": "الحالة",
+    "fact1": "استضافة ذاتية أو استخدام مفتاحك الخاص",
+    "fact2": "كل خطوة تفكير موقّعة وقابلة للقراءة",
+    "fact3": "لا حسابات تُباع، لا بيانات تُجمَّع"
   }
 }
