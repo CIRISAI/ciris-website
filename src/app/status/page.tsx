@@ -32,6 +32,8 @@ interface RegionData {
 
 interface StatusData {
   status: OverallLevel;
+  // Statuspage-v2 severity from the server's capability-aware rollup.
+  indicator?: string;
   timestamp: string;
   last_incident: string | null;
   regions?: Record<string, RegionData>;
@@ -59,10 +61,21 @@ interface RegionDayStats {
   services?: Record<string, ServiceDayStats>;
 }
 
+// Per-day capability SLI (CIRISStatus >= 0.3.44): availability measured at
+// the same instant server-side, not bounded from daily aggregates.
+interface DayCapability {
+  sli_pct?: number;
+  min_available?: number;
+  members?: string[];
+}
+
 interface HistoryEntry {
   date: string;
   uptime_pct?: number;
   overall_uptime_pct?: number; // alias kept by the API for compatibility
+  // The worst capability's measured availability; the bar colors by this.
+  service_uptime_pct?: number;
+  capabilities?: Record<string, DayCapability>;
   status?: StatusLevel;
   outage_count?: number;
   regions?: Record<string, RegionDayStats>;
@@ -143,11 +156,42 @@ function capabilityGroups(services: Record<string, ServiceDayStats>): Capability
   }));
 }
 
-/** Redundancy-adjusted service uptime for a day: the worst capability's floor. */
+/** Service uptime for a day. Server-first: `service_uptime_pct` is measured
+ * at the same instant per poll cycle (CIRISStatus >= 0.3.44), so it is exact
+ * where the client-side floor below is only a bound. The floor stays as the
+ * fallback for pre-0.3.44 shapes; a missing value renders as no data, never
+ * as 0 (the #26 lesson). */
 function dayServiceUptime(entry: HistoryEntry): number | null {
+  if (typeof entry.service_uptime_pct === "number") return entry.service_uptime_pct;
   const groups = capabilityGroups(entry.services ?? {});
   if (groups.length === 0) return dayUptime(entry);
   return Math.min(...groups.map((g) => g.uptime));
+}
+
+/** "region.eu" / "infra.vultr" / "provider.together" / "ai_providers" →
+ * a human label for the day-detail chips. Note the fabric owner's ruling
+ * (CIRISStatus FSD CAPABILITY_MONITORING §2.1): regions are NOT a redundancy
+ * pair — a regional outage is a regional outage — so region capabilities
+ * stay separate and must never be re-pooled client-side. */
+function prettyCapabilityName(key: string): string {
+  const NAMES: Record<string, string> = {
+    ai_providers: "AI providers",
+    "region.us": "US region",
+    "region.eu": "EU region",
+    "infra.vultr": "US hosting (Vultr)",
+    "infra.hetzner": "EU hosting (Hetzner)",
+    "infra.github": "Container registry",
+  };
+  if (NAMES[key]) return NAMES[key];
+  if (key.startsWith("provider.")) {
+    const leaf = key.slice("provider.".length);
+    const LEAF: Record<string, string> = {
+      openrouter: "OpenRouter", groq: "Groq", together: "Together AI",
+      deepinfra: "DeepInfra", brave_search: "Brave Search",
+    };
+    return LEAF[leaf] ?? leaf;
+  }
+  return key;
 }
 
 const OVERALL_META: Record<OverallLevel, { label: string; dot: string; badge: string }> = {
@@ -181,6 +225,21 @@ const OVERALL_META: Record<OverallLevel, { label: string; dot: string; badge: st
 /** Unknown strings from a newer API render as degraded rather than crashing. */
 function overallMeta(status: string) {
   return OVERALL_META[(status as OverallLevel) in OVERALL_META ? (status as OverallLevel) : "degraded"];
+}
+
+// Statuspage-v2 severity (server >= 0.3.44) → the headline meta. Preferred
+// over the worst-component `status` rollup because the server computes it
+// capability-aware (a provider dip with a live alternative is not degraded).
+const INDICATOR_TO_LEVEL: Record<string, OverallLevel> = {
+  none: "operational",
+  minor: "degraded",
+  major: "partial_outage",
+  critical: "major_outage",
+};
+
+function headlineMeta(data: { status: OverallLevel; indicator?: string }) {
+  const viaIndicator = data.indicator ? INDICATOR_TO_LEVEL[data.indicator] : undefined;
+  return overallMeta(viaIndicator ?? data.status);
 }
 
 function StatusIndicator({ status }: { status: StatusLevel }) {
@@ -345,7 +404,21 @@ function uptimeColor(uptime: number | null, status?: StatusLevel): string {
 
 function DayDetail({ entry, onClose }: { entry: HistoryEntry; onClose: () => void }) {
   const services = entry.services ?? {};
-  const groups = capabilityGroups(services).sort((a, b) => a.uptime - b.uptime);
+  // Chips: prefer the server's measured per-capability SLIs; fall back to the
+  // client-computed floor groups only for pre-0.3.44 entries.
+  const serverCaps = Object.entries(entry.capabilities ?? {})
+    .filter(([, c]) => typeof c.sli_pct === "number")
+    .map(([key, c]) => ({
+      label: prettyCapabilityName(key),
+      uptime: c.sli_pct as number,
+      members: c.members?.length ?? 1,
+    }));
+  const groups =
+    serverCaps.length > 0
+      ? serverCaps.sort((a, b) => a.uptime - b.uptime)
+      : capabilityGroups(services)
+          .map((g) => ({ label: g.label, uptime: g.uptime, members: g.members.length }))
+          .sort((a, b) => a.uptime - b.uptime);
   const serviceUptime = dayServiceUptime(entry);
   const serviceStatus: StatusLevel =
     serviceUptime === null || serviceUptime >= 99.9
@@ -381,7 +454,7 @@ function DayDetail({ entry, onClose }: { entry: HistoryEntry; onClose: () => voi
       {groups.length > 0 && (
         <div className="mb-4">
           <p className="mb-2 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-            Service impact (a capability is down only when every alternative is down at once)
+            Service impact, measured per capability at the same instant
           </p>
           <div className="flex flex-wrap gap-2">
             {groups.map((g) => (
@@ -395,8 +468,8 @@ function DayDetail({ entry, onClose }: { entry: HistoryEntry; onClose: () => voi
                     : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300"
                 }`}
                 title={
-                  g.members.length > 1
-                    ? `Best of ${g.members.length} alternatives; floor on overlapping downtime`
+                  g.members > 1
+                    ? `${g.members} alternatives; availability measured at the same instant`
                     : "Single component"
                 }
               >
@@ -741,7 +814,7 @@ export default function StatusPage() {
     return entries.reduce((a, b) => a + b, 0) / entries.length;
   };
 
-  const overall = data ? overallMeta(data.status) : null;
+  const overall = data ? headlineMeta(data) : null;
 
   return (
     <>
@@ -940,7 +1013,7 @@ export default function StatusPage() {
                   <li>Status updates every 60 seconds automatically</li>
                   <li>Served by ciris-status, an open-source monitor that signs every health check into its own record (Ed25519 + ML-DSA-65)</li>
                   <li>Multi-region monitoring: US (Chicago) and EU (Germany), active/active with several AI providers behind the proxy</li>
-                  <li>Daily uptime is redundancy-adjusted: a component dip only counts against service when every alternative was down at the same time, and a capability&apos;s uptime is never lower than its best member&apos;s. Component-level numbers stay visible in each day&apos;s detail.</li>
+                  <li>Daily service uptime is measured per capability at the same instant, server-side: a component dip only counts when every alternative in its capability was down at once. Regional outages count as regional outages; one region being healthy does not cover the other. Component-level numbers stay visible in each day&apos;s detail.</li>
                   <li>Latency measured from our infrastructure to each provider</li>
                   <li>Incident counts are incidents, not failed samples: one outage that spans many checks counts once</li>
                 </ul>
