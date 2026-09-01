@@ -150,3 +150,15 @@ This glossary defines the canonical translations for key CIRIS terms in Ukrainia
 | Trust | Довіра | Dovira | Стан довіри по кожній ідентичності |
 | Trust policies | Політики довіри | Polityky doviry | Правила автоматичної довіри в даному охопленні |
 | Coming Soon | Незабаром | Nezabarom | Заглушка для непоставлених функцій |
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | Конституційна мережа | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | Доказ користі (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | епістемічна мережа | The site's masthead phrase for the CIRIS stack |

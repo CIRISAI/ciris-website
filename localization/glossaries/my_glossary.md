@@ -148,3 +148,15 @@ This glossary defines the canonical translations for key CIRIS terms in Burmese.
 | Trust | ယုံကြည်မှု | Yone-kyi-hmu | Trust state per identity |
 | Trust policies | ယုံကြည်မှု မူဝါဒများ | Yone-kyi-hmu mu-wa-da-mya | Policies governing automatic trust |
 | Coming Soon | မကြာမီ ရောက်ရှိမည် | Ma-kya-mi yauk-shi-mi | Placeholder for unshipped features |
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | ဖွဲ့စည်းပုံဆိုင်ရာ မက်ရှ်ကွန်ရက် | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | အကျိုးသက်သေ (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | epistemic web | The site's masthead phrase for the CIRIS stack |

@@ -158,3 +158,15 @@ CEG 0.6 cohort-scope vocabulary used by the new Commons hub.
 ---
 
 *This glossary is the authoritative source for Bengali translations. All translators must consult this document before translating any CIRIS content.*
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | সাংবিধানিক মেশ | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | উপকারের প্রমাণ (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | জ্ঞানের জাল | The site's masthead phrase for the CIRIS stack |

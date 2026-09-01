@@ -157,3 +157,15 @@ CEG 0.6 cohort-scope vocabulary used by the new Commons hub.
 | Trust | विश्वास | Trust state per identity |
 | Trust policies | विश्वास धोरणे | Automatic-trust policies |
 | Coming Soon | लवकरच येत आहे | Placeholder for unshipped features |
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | घटनात्मक मेश | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | हिताचा पुरावा (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | ज्ञानाचे जाळे | The site's masthead phrase for the CIRIS stack |

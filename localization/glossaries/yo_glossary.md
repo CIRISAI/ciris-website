@@ -161,3 +161,15 @@ This glossary defines the canonical translations for key CIRIS terms in Yoruba. 
 |---------|------|---------|
 | 1.0 | 2026-03-27 | Initial glossary |
 | 1.1 | 2026-05-31 | Added CEG 0.6 cohort scope vocabulary for 2.9.4 Commons UX |
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | Àwọ̀n Ofin-Ipilẹ | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | Ẹ̀rí Àǹfààní (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | ayelujara ti o ni idaniloju | The site's masthead phrase for the CIRIS stack |

@@ -247,3 +247,15 @@ This glossary defines the canonical translations for key CIRIS terms in Simplifi
 ---
 
 *This glossary is the authoritative source for Chinese (Simplified) translations. All translators must consult this document before translating any CIRIS content.*
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | 宪法网状网络 | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | 效益证明（Proof of Benefit） | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | 认知之网 | The site's masthead phrase for the CIRIS stack |

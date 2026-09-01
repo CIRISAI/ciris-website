@@ -148,3 +148,15 @@ This glossary defines the canonical translations for key CIRIS terms in Thai. Al
 | Trust | ความเชื่อใจ | Khwaam-chêua-jai | Trust state per identity |
 | Trust policies | นโยบายความเชื่อใจ | Ná-yoh-baai-khwaam-chêua-jai | Policies governing automatic trust |
 | Coming Soon | เร็วๆ นี้ | Reo-reo-née | Placeholder for unshipped features |
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | ตาข่ายรัฐธรรมนูญ | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | พิสูจน์คุณประโยชน์ (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | เว็บแห่งความรู้ | The site's masthead phrase for the CIRIS stack |

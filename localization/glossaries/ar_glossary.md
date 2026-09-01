@@ -194,3 +194,15 @@ This glossary defines the canonical translations for key CIRIS terms in Arabic. 
 ---
 
 *This glossary is the authoritative source for Arabic translations. All translators must consult this document before translating any CIRIS content.*
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | الشبكة الدستورية | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | إثبات النفع (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | الشبكة المعرفية | The site's masthead phrase for the CIRIS stack |

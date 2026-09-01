@@ -173,3 +173,15 @@ This glossary defines the canonical translations for key CIRIS terms in Korean. 
 *이 용어집은 한국어 번역의 권위 있는 출처입니다. 모든 번역가는 CIRIS 콘텐츠를 번역하기 전에 이 문서를 참조해야 합니다.*
 
 *This glossary is the authoritative source for Korean translations. All translators must consult this document before translating any CIRIS content.*
+
+## Website Terms (ciris.ai)
+
+Coined on the website and already shipped in this language; these renderings
+are the established canon (harvested 2026-09-01 from the live dictionaries).
+Keep them exactly, including any article the rendering carries.
+
+| English | Rendering | Usage Context |
+|---------|-----------|---------------|
+| Constitutional Mesh | 헌법 메시 | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
+| Proof of Benefit | 유익증명 (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
+| epistemic web | 지식의 웹 | The site's masthead phrase for the CIRIS stack |
