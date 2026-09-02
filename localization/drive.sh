@@ -16,7 +16,7 @@
 #     Never resolve a hard case by weakening the reviewer or skipping rungs.
 #
 # Usage:
-#   LANE=translate|evaluate [BUNDLE=dictionaries|chrome] [KEYS="pat.* pat2.*"]
+#   LANE=translate|evaluate [BUNDLE=dictionaries|chrome] [KEYS="pat.* pat2.*"] [LANGS="yo am"]
 #   [MAX_KEYS=500] [ATTEMPTS=8] [BACKOFF=180] localization/drive.sh
 set -u
 cd "$(dirname "$0")/.."
@@ -39,6 +39,7 @@ fi
 
 keyargs=()
 for p in ${KEYS:-}; do keyargs+=(--keys "$p"); done
+for l in ${LANGS:-}; do keyargs+=(--lang "$l"); done
 
 last_report=""
 for attempt in $(seq 1 "$ATTEMPTS"); do
