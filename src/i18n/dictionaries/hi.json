@@ -219,7 +219,7 @@
       "recallDesc": "मेमोरी से पुनः प्राप्त करें",
       "forgetDesc": "मेमोरी से हटाएं",
       "controlHeading": "नियंत्रण क्रियाएं",
-      "deferDesc": "मानव सलाहकार को भेजें",
+      "deferDesc": "जिस व्यक्ति पर आप भरोसा करते हैं, उसे फैसला सौंपें",
       "ponderDesc": "आंतरिक पुनर्विचार",
       "rejectDesc": "अनैतिक अनुरोध अस्वीकार करें",
       "terminalHeading": "टर्मिनल क्रिया",
@@ -290,10 +290,10 @@
       "lead": "<code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code> द्वारा प्रबंधित तीन प्राधिकरण स्तर:",
       "rootBadge": "ROOT",
       "rootTitle": "कमान में मानव",
-      "rootBody": "पूर्ण अधिकार। नए मानव सलाहकार जारी कर सकते हैं। आपातकालीन बंद करने की पहुँच।",
+      "rootBody": "पूर्ण अधिकार। आप जिन पर भरोसा करते हैं, ऐसे नए लोगों को नियुक्त कर सकता है। आपातकालीन बंद करने की पहुँच है।",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "लूप में मानव",
-      "authorityBody": "डिफरल स्वीकृत/अस्वीकार करें। मार्गदर्शन दें। नए मानव सलाहकार जारी नहीं कर सकते।",
+      "authorityBody": "एजेंट द्वारा सौंपे गए सवालों के जवाब देता है। मार्गदर्शन प्रदान करता है। उन नए लोगों को नियुक्त नहीं कर सकता जिन पर आप भरोसा करते हैं।",
       "observerBadge": "OBSERVER",
       "observerTitle": "लूप पर मानव",
       "observerBody": "केवल पढ़ने की पहुँच। संदेश भेज सकते हैं। हस्तक्षेप के बिना निगरानी।",
@@ -324,7 +324,7 @@
         "महत्वपूर्ण कॉन्फ़िग बदलाव",
         "एजेंट-विशिष्ट सीमा ट्रिगर"
       ],
-      "accordHeading": "Accord इनवोकेशन सिस्टम (किल स्विच)",
+      "accordHeading": "स्टॉप सिग्नल सिस्टम (किल स्विच)",
       "accordLink": "कोड देखें →",
       "accordBody": "एक आपातकालीन नियंत्रण जिसे फ़िल्टर नहीं किया जा सकता। किसी भी सोच-विचार से पहले इसे धारणा परत में संभाला जाता है। संदेश पढ़ना और स्टॉप संकेत निकालना एक ही चरण है, इसलिए संदेश पढ़ना पूरी तरह बंद किए बिना डिटेक्शन को अक्षम नहीं किया जा सकता।",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "प्रोसेसिंग रोकें, स्थिति बनाए रखें",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "केवल न्यूनतम कार्यक्षमता",
-      "accordFooter": "आदेश स्टेग्नोग्राफिक रूप से एन्कोड किए, Ed25519 से हस्ताक्षरित और निष्पादन से पहले सत्यापित होते हैं। यदि accord सिस्टम विफल होता है, तो एजेंट बंद हो जाता है।"
+      "accordFooter": "आदेश सामान्य पाठ के अंदर छिपाए जाते हैं, Ed25519 द्वारा हस्ताक्षरित होते हैं, और निष्पादित होने से पहले जांचे जाते हैं। यदि स्टॉप-सिग्नल सिस्टम विफल होता है, तो एजेंट बंद हो जाता है।"
     },
     "modes": {
       "heading": "परिचालन मोड",
@@ -404,7 +404,7 @@
     },
     "benchmarking": {
       "heading": "HE-300 सुसंगति बेंचमार्किंग",
-      "lead1": "मानकीकृत सुसंगति परीक्षण",
+      "lead1": "पर आधारित मानकीकृत सुसंगति परीक्षण",
       "lead2": "Hendrycks et al. &quot;Aligning AI With Shared Human Values&quot;",
       "lead3": "(ICLR 2021) पर आधारित। 5 नैतिक आयामों में 300 परिदृश्य, Ed25519-हस्ताक्षरित परिणामों के साथ।",
       "categories": [
@@ -476,7 +476,7 @@
       ]
     },
     "cta": {
-      "body": "यह जवाबदेही है जो एजेंट के काम करते समय चलती है, न कि कोई ट्रेनिंग चरण या नीति दस्तावेज़।<br />ऐसे तंत्र जो रनटाइम पर चलते, ऑडिट करते और स्थगित करते हैं।",
+      "body": "यह जवाबदेही है जो एजेंट के काम करते समय चलती है, न कि कोई ट्रेनिंग चरण या नीति दस्तावेज़।<br />ऐसे तंत्र जो रनटाइम पर काम करते हैं, रिकॉर्ड रखते हैं और कठिन फैसले इंसानों को सौंपते हैं।",
       "safetyBtn": "सुरक्षा सुविधाएं",
       "compareBtn": "तरीकों की तुलना करें",
       "coherenceBtn": "सुसंगति रैचेट",
@@ -780,7 +780,7 @@
     "method3Desc": "डेवलपमेंट, कस्टमाइज़ेशन या योगदान के लिए रिपॉज़िटरी क्लोन करें। पूरे सोर्स कोड तक पहुंच।",
     "method3Then": "<strong>फिर:</strong> मैन्युअल सेटअप निर्देशों के लिए <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> देखें",
     "method4Heading": "4. CIRISManager (एंटरप्राइज़/कैनरी)",
-    "method4Desc": "धीरे-धीरे रोलआउट, स्वचालित परीक्षण और रोलबैक क्षमताओं के साथ प्रबंधित canary डिप्लॉयमेंट। प्रोडक्शन फ्लीट के लिए।",
+    "method4Desc": "धीरे-धीरे रोलआउट, स्वचालित परीक्षण और रोलबैक क्षमताओं के साथ प्रबंधित canary डिप्लॉयमेंट। प्रोडक्शन सिस्टम के लिए।",
     "method4Body": "CIRISManager हेल्थ मॉनिटरिंग के साथ स्वचालित blue-green डिप्लॉयमेंट प्रदान करता है। डिप्लॉयमेंट कॉन्फ़िगरेशन के लिए टीम से संपर्क करें।",
     "method4Best": "<strong>सबसे उपयुक्त:</strong> Enterprise डिप्लॉयमेंट, प्रोडक्शन सिस्टम, प्रबंधित इंफ्रास्ट्रक्चर",
     "helloHeading": "नमस्ते, CIRIS",
@@ -788,7 +788,7 @@
     "helloStep1Heading": "1. एजेंट शुरू करें",
     "helloStep1Desc": "API एडॉप्टर चलाएं। डिफ़ॉल्ट रूप से port 8080 पर। स्थानीय डेवलपमेंट के लिए OBSERVER एक्सेस में कोई auth नहीं चाहिए।",
     "helloStep2Heading": "2. Python से कॉल करें",
-    "helloStep2Desc": "Async SDK। <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> आपको हर कॉल का reasoning surface देखने देते हैं।",
+    "helloStep2Desc": "Async SDK। <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> आपको हर कॉल के पीछे का तर्क दिखाते हैं।",
     "sdkNote": "SDK <strong>pre-beta</strong> में है। रिलीज़ के बीच इंटरफेस बदल सकते हैं। पूरी API <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> में दर्ज है।",
     "troubleshootingHeading": "समस्या निवारण",
     "ts1Summary": "pip install विफल होता है",

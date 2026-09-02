@@ -219,7 +219,7 @@
       "recallDesc": "メモリから取得する",
       "forgetDesc": "メモリから削除する",
       "controlHeading": "制御アクション",
-      "deferDesc": "賢明な権威にエスカレーションする",
+      "deferDesc": "信頼できる人に意思決定を引き渡す",
       "ponderDesc": "内部で再考する",
       "rejectDesc": "非倫理的なリクエストを拒否する",
       "terminalHeading": "終了アクション",
@@ -290,10 +290,10 @@
       "lead": "<code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code>が管理する3段階の認可レベル：",
       "rootBadge": "ROOT",
       "rootTitle": "最終指揮者（Human-in-Command）",
-      "rootBody": "完全な権限。新しい賢明な権威を任命できます。緊急停止のアクセス権を持ちます。",
+      "rootBody": "完全な権限。新たに信頼できる人を任命できます。緊急停止のアクセス権を持ちます。",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "ループ内の人間（Human-in-the-Loop）",
-      "authorityBody": "委任を承認または拒否します。ガイダンスを提供します。新しい賢明な権威を任命することはできません。",
+      "authorityBody": "エージェントから引き渡された質問に回答します。ガイダンスを提供します。新たに信頼できる人を任命することはできません。",
       "observerBadge": "OBSERVER",
       "observerTitle": "ループ上の人間（Human-on-the-Loop）",
       "observerBody": "読み取り専用のアクセス。メッセージを送信できます。介入なしに監視します。",
@@ -324,7 +324,7 @@
         "重要な設定変更",
         "エージェント固有の境界トリガー"
       ],
-      "accordHeading": "協定発動システム（緊急停止）",
+      "accordHeading": "停止信号システム（緊急停止）",
       "accordLink": "コードを見る →",
       "accordBody": "フィルタリングして取り除くことのできない緊急制御です。思考が始まる前に、知覚レイヤーで処理されます。メッセージの読み取りと停止信号の抽出は一つのステップになっているため、メッセージの読み取りそのものを無効化しない限り、停止信号の検出を無効化することはできません。",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "処理を停止して状態を維持する",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "最小限の機能のみ",
-      "accordFooter": "コマンドはステガノグラフィーでエンコードされ、Ed25519署名され、実行前に検証されます。協定システムが失敗した場合、エージェントはシャットダウンします。"
+      "accordFooter": "コマンドは通常のテキストの中に隠され、Ed25519で署名され、実行前に検証されます。停止信号システムが失敗した場合、エージェントはシャットダウンします。"
     },
     "modes": {
       "heading": "動作モード",

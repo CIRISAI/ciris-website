@@ -219,7 +219,7 @@
       "recallDesc": "Recuperare dalla memoria",
       "forgetDesc": "Rimuovere dalla memoria",
       "controlHeading": "Azioni di controllo",
-      "deferDesc": "Escalare a Wise Authority",
+      "deferDesc": "Passa la decisione a una persona di cui ti fidi",
       "ponderDesc": "Riconsiderazione interna",
       "rejectDesc": "Rifiutare una richiesta non etica",
       "terminalHeading": "Azione terminale",
@@ -290,10 +290,10 @@
       "lead": "Tre livelli di autorizzazione gestiti da <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code>:",
       "rootBadge": "ROOT",
       "rootTitle": "Essere umano al comando",
-      "rootBody": "Piena autorità. Può emettere nuove Wise Authority. Accesso allo spegnimento d'emergenza.",
+      "rootBody": "Piena autorità. Può nominare nuove persone di cui ti fidi. Ha accesso allo spegnimento d'emergenza.",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "Essere umano nel ciclo",
-      "authorityBody": "Approva/rifiuta i deferimenti. Fornisce indicazioni. Non può creare nuove Wise Authority.",
+      "authorityBody": "Risponde alle domande che l'agente trasmette. Fornisce indicazioni. Non può nominare nuove persone di cui ti fidi.",
       "observerBadge": "OBSERVER",
       "observerTitle": "Essere umano sul ciclo",
       "observerBody": "Accesso in sola lettura. Può inviare messaggi. Monitora senza intervenire.",
@@ -324,7 +324,7 @@
         "Modifiche critiche alla configurazione",
         "Trigger specifici dei limiti dell'agente"
       ],
-      "accordHeading": "Sistema di invocazione dell'Accord (interruttore d'emergenza)",
+      "accordHeading": "Sistema del segnale di arresto (interruttore d'emergenza)",
       "accordLink": "Visualizza il codice →",
       "accordBody": "Un controllo d'emergenza che non può essere filtrato. Viene gestito nello strato di percezione, prima che avvenga qualsiasi ragionamento. La lettura di un messaggio e l'estrazione del segnale di arresto costituiscono un unico passaggio, quindi il rilevamento non può essere disattivato senza disattivare completamente la lettura dei messaggi.",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "Interrompe l'elaborazione, mantiene lo stato",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "Solo funzionalità minime",
-      "accordFooter": "I comandi sono codificati steganograficamente, firmati con Ed25519 e validati prima dell'esecuzione. Se il sistema dell'Accord fallisce, l'agente si arresta."
+      "accordFooter": "I comandi sono nascosti all'interno di testo ordinario, firmati con Ed25519 e controllati prima dell'esecuzione. Se il sistema del segnale di arresto fallisce, l'agente si arresta."
     },
     "modes": {
       "heading": "Modalità operative",
@@ -486,7 +486,7 @@
       "label": "La pipeline della coscienza",
       "h2": "Gli agenti di oggi agiscono. CIRIS decide, con responsabilità.",
       "body1": "Un normale agente di intelligenza artificiale va direttamente dal prompt ai token, fino alla chiamata dello strumento. CIRIS aggiunge un passaggio che non esiste da nessun'altra parte. Prima che un'azione possa avvenire, la decisione passa attraverso una pipeline della coscienza: viene valutata, confrontata con la costituzione e trasformata in un registro firmato e attestato che chiunque può verificare. L'azione avviene solo se quel registro regge.",
-      "body2": "Questo è ciò che rende CIRIS meno un agente e più un'istituzione. Ha memoria, leggi, delega, responsabilità e un registro che nessuno può modificare in silenzio, gli stessi meccanismi che permettono alle società umane di fidarsi le une delle altre su larga scala. La parte nuova non è la crittografia. È che una decisione importante deve diventare verificabile prima di poter agire."
+      "body2": "Questo è ciò che rende CIRIS meno un agente e più un'istituzione. Ha memoria, leggi, delega, responsabilità e un registro che nessuno può modificare in silenzio, gli stessi meccanismi che permettono alle grandi società umane di fidarsi le une delle altre. La parte nuova non è la crittografia. È che una decisione importante deve diventare responsabile prima che le sia consentito di agire."
     }
   },
   "trust": {
@@ -780,7 +780,7 @@
     "method3Desc": "Clona il repository per sviluppo, personalizzazione o contribuzione. Accesso completo al codice sorgente.",
     "method3Then": "<strong>Poi:</strong> Segui il <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> per le istruzioni di configurazione manuale",
     "method4Heading": "4. CIRISManager (Enterprise/Canary)",
-    "method4Desc": "Deployment canary gestiti con rilasci graduali, test automatizzati e capacità di rollback. Per flotte in produzione.",
+    "method4Desc": "Deployment canary gestiti con rilasci graduali, test automatizzati e capacità di rollback. Per sistemi in produzione.",
     "method4Body": "CIRISManager offre deployment blue-green automatizzati con monitoraggio dello stato. Contatta il team per le configurazioni di deployment.",
     "method4Best": "<strong>Ideale per:</strong> deployment enterprise, flotte in produzione, infrastrutture gestite",
     "helloHeading": "Ciao, CIRIS",
@@ -1959,7 +1959,7 @@
     "pdfNoteSuffix": "ripulita dai commenti per la lettura umana",
     "constTitle": "Dove vive la grammatica adesso",
     "constBody": "La grammatica non è più un documento separato. È stata inserita parola per parola nella Costituzione CIRIS, come Parti 2 e 3. Un documento, un'unica linea di versione. Le pagine di approfondimento qui leggono dallo stesso testo fisso della grammatica.",
-    "whatIsTitle": "Cos'è",
+    "whatIsTitle": "Cos'è questo",
     "whatIsBody": "Ogni affermazione viaggia in una piccola busta firmata: chi l'ha fatta, di cosa parla, quanto è sicuro, quali prove cita, quando è stata fatta. Altre persone, organizzazioni e agenti IA aggiungono buste attorno ad essa, concordando, dissentendo, correggendo, sostituendo. La traccia è leggibile dall'inizio alla fine.",
     "whyTitle": "Perché l'abbiamo creato",
     "whyBody": "La fiducia in “ciò che è vero” si sta sgretolando perché manca la base sottostante. Senza un formato condiviso per le affermazioni, ogni voce ne inventa uno proprio, le tracce non si cuciono insieme, e l'unico modo per cavarsela è schierarsi. CEG è la base piccola e austera che permette a molte voci di leggersi a vicenda e a chi legge di costruire il proprio verdetto.",
@@ -3219,7 +3219,7 @@
   },
   "homeHero": {
     "kicker": "GRATUITO · OPEN SOURCE · AGPL-3.0",
-    "h1": "Non devi fidarti dell'IA, puoi verificarla.",
+    "h1": "Non devi fidarti, puoi verificare.",
     "sub": "Ogni agente CIRIS mostra il proprio ragionamento mentre accade: ogni fase, ogni fonte, ogni azione che ha compiuto. Eseguilo sulla tua macchina o con la tua chiave, e leggi l'intero registro in seguito.",
     "ctaChat": "Prova Scout",
     "ctaInstall": "Installa l'app",

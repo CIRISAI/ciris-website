@@ -119,7 +119,7 @@
     },
     "pipeline": {
       "heading": "Đường Ống H3ERE",
-      "lead": "Mỗi nhiệm vụ đi qua 8 giai đoạn (12 bước bao gồm kiểm tra đệ quy). Đường ống được triển khai dưới dạng các lớp mixin tạo thành <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">ThoughtProcessor</code>. <span class=\"text-green-600 font-medium\">Bước 4 (IDMA)</span> là kiểm tra trực giác.",
+      "lead": "Mỗi nhiệm vụ đi qua 8 giai đoạn (12 bước bao gồm kiểm tra đệ quy). Đường Ống được triển khai dưới dạng các lớp mixin tạo thành <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">ThoughtProcessor</code>. <span class=\"text-green-600 font-medium\">Bước 4 (IDMA)</span> là kiểm tra trực giác.",
       "imgAlt": "Trực quan hóa Đường Ống H3ERE hiển thị luồng từ đầu vào nhiệm vụ qua phân tích DMA, kiểm tra lương tâm và thực thi hành động",
       "conditionalLabel": "(có điều kiện)",
       "steps": [
@@ -175,7 +175,7 @@
     },
     "dmas": {
       "heading": "Thuật Toán Ra Quyết Định (DMA)",
-      "lead": "Năm DMA cung cấp phân tích đa chiều. Ba DMA chạy song song (đạo đức, lẽ thường, lĩnh vực). Sau đó <strong class=\"text-green-600\">IDMA kiểm tra trực giác</strong>. Cuối cùng, lựa chọn hành động chọn phản hồi.",
+      "lead": "Năm DMA cung cấp phân tích đa chiều. Ba DMA chạy song song (đạo đức, lẽ thường, lĩnh vực). Sau đó <strong class=\"text-green-600\">IDMA kiểm tra trực giác</strong>. Cuối cùng, Lựa Chọn Hành Động sẽ chọn phản hồi.",
       "principleTitle": "DMA Nguyên Tắc",
       "principleBody": "Đánh giá hàm ý đạo đức so với sáu nguyên tắc nền tảng. Kiểm tra các yêu cầu gây hại, thao túng, thiên kiến. Có thể kích hoạt DEFER hoặc REJECT sớm.",
       "commonSenseTitle": "DMA Lẽ Thường",
@@ -193,7 +193,7 @@
       "lead": "Hai kiểm tra bỏ qua chạy trên mọi hành động. Bốn khả năng đạo đức chạy trên các hành động không được miễn. Nếu bất kỳ kiểm tra nào thất bại, hành động sẽ bị ghi đè.",
       "bypassHeading": "Kiểm Tra Bỏ Qua (chạy trên TẤT CẢ hành động)",
       "bypass1Title": "Trạng Thái Cập Nhật",
-      "bypass1Body": "Đã có thông tin mới đến chưa? Buộc PONDER để kết hợp bối cảnh đã cập nhật trước khi tiếp tục.",
+      "bypass1Body": "Đã có thông tin mới đến chưa? Buộc PONDER phải kết hợp bối cảnh đã cập nhật trước khi tiếp tục.",
       "bypass2Title": "Độ Sâu Suy Nghĩ",
       "bypass2Body": "Lập luận có vượt quá độ sâu tối đa không? Buộc DEFER để ngăn vòng lặp vô hạn và chuyển giao lên con người.",
       "facultiesHeading": "Khả Năng Đạo Đức (chạy trên hành động không được miễn)",
@@ -219,7 +219,7 @@
       "recallDesc": "Truy xuất từ bộ nhớ",
       "forgetDesc": "Xóa khỏi bộ nhớ",
       "controlHeading": "Hành Động Điều Khiển",
-      "deferDesc": "Chuyển giao lên Cơ Quan Sáng Suốt",
+      "deferDesc": "Chuyển giao quyết định cho một người mà bạn tin cậy",
       "ponderDesc": "Suy xét lại nội tại",
       "rejectDesc": "Từ chối yêu cầu phi đạo đức",
       "terminalHeading": "Hành Động Kết Thúc",
@@ -290,10 +290,10 @@
       "lead": "Ba cấp độ ủy quyền được quản lý bởi <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code>:",
       "rootBadge": "ROOT",
       "rootTitle": "Con Người Chỉ Huy",
-      "rootBody": "Toàn quyền. Có thể tạo Cơ Quan Sáng Suốt mới. Quyền truy cập tắt khẩn cấp.",
+      "rootBody": "Toàn quyền. Có thể chỉ định những người mới mà bạn tin cậy. Có quyền truy cập tắt máy khẩn cấp.",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "Con Người Trong Vòng Lặp",
-      "authorityBody": "Phê duyệt/từ chối các chuyển giao. Cung cấp hướng dẫn. Không thể tạo WA mới.",
+      "authorityBody": "Trả lời các câu hỏi mà tác nhân chuyển giao. Cung cấp hướng dẫn. Không thể chỉ định những người mới mà bạn tin cậy.",
       "observerBadge": "OBSERVER",
       "observerTitle": "Con Người Theo Dõi",
       "observerBody": "Chỉ đọc. Có thể gửi tin nhắn. Giám sát mà không can thiệp.",
@@ -324,7 +324,7 @@
         "Thay đổi cấu hình quan trọng",
         "Kích hoạt ranh giới đặc thù của tác nhân"
       ],
-      "accordHeading": "Hệ Thống Kích Hoạt Accord (Công Tắc Tắt)",
+      "accordHeading": "Hệ Thống Tín Hiệu Dừng (Công Tắc Tắt)",
       "accordLink": "Xem Mã →",
       "accordBody": "Một cơ chế kiểm soát khẩn cấp không thể bị lọc bỏ. Nó được xử lý trong lớp nhận thức, trước khi bất kỳ suy nghĩ nào diễn ra. Việc đọc tin nhắn và trích xuất tín hiệu dừng là một bước duy nhất, nên không thể tắt cơ chế phát hiện mà không tắt hoàn toàn việc đọc tin nhắn.",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "Dừng xử lý, duy trì trạng thái",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "Chỉ chức năng tối thiểu",
-      "accordFooter": "Các lệnh được mã hóa ẩn văn, ký Ed25519 và xác thực trước khi thực thi. Nếu hệ thống accord thất bại, tác nhân tắt máy."
+      "accordFooter": "Các lệnh được ẩn bên trong văn bản thông thường, được ký bằng Ed25519 và được kiểm tra trước khi thực thi. Nếu hệ thống tín hiệu dừng thất bại, tác nhân sẽ tắt máy."
     },
     "modes": {
       "heading": "Chế Độ Hoạt Động",
@@ -435,7 +435,7 @@
         }
       ],
       "fundingHeading": "Cần Tài Trợ: Cơ Sở Hạ Tầng Đánh Giá",
-      "fundingBody": "Chạy các đánh giá tính nhất quán ở quy mô lớn rất tốn kém. Mỗi kịch bản cần tối thiểu 13+ cuộc gọi LLM, trung bình 20+ với đuôi dài. Các bài kiểm tra tính nhất quán thúc đẩy các lần suy ngẫm, chuyển giao và từ chối cần nhiều vòng tiếp theo để đạt kết luận. Chúng tôi cần tài trợ để phát triển các đường ống đánh giá tự động và duy trì kiểm tra tính nhất quán liên tục.",
+      "fundingBody": "Chạy các đánh giá tính nhất quán ở quy mô lớn rất tốn kém. Mỗi kịch bản cần tối thiểu 13 cuộc gọi LLM, và thường là hơn 20 cuộc gọi. Các bài kiểm tra tính nhất quán khiến tác nhân phải suy ngẫm, chuyển giao và từ chối, và mỗi hành động đó cần nhiều vòng tiếp theo trước khi hoàn tất. Chúng tôi cần tài trợ để phát triển các hệ thống đánh giá tự động và duy trì việc xác minh tính nhất quán liên tục.",
       "ethicsEngineLink": "Xem EthicsEngine Enterprise →",
       "cirisLensLink": "Xem CIRISLens →"
     },
@@ -476,14 +476,14 @@
       ]
     },
     "cta": {
-      "body": "Đây là trách nhiệm giải trình hoạt động trong khi tác nhân làm việc, không phải một bước huấn luyện hay một tài liệu chính sách.<br />Các cơ chế thực thi, kiểm tra và chuyển giao tại thời gian chạy.",
+      "body": "Đây là trách nhiệm giải trình hoạt động trong khi tác nhân làm việc, thay vì một bước huấn luyện hay một tài liệu chính sách.<br />Các cơ chế thực thi, ghi lại nhật ký và chuyển giao các quyết định khó cho con người ngay trong lúc chạy.",
       "safetyBtn": "Tính Năng An Toàn",
       "compareBtn": "So Sánh Các Phương Pháp",
       "coherenceBtn": "Cơ chế siết chặt tính nhất quán",
       "scoringBtn": "CIRIS Chấm điểm"
     },
     "consciencePipeline": {
-      "label": "Quy trình lương tâm",
+      "label": "Đường Ống lương tâm",
       "h2": "Các tác nhân AI ngày nay chỉ biết hành động. CIRIS ra quyết định, và phải chịu trách nhiệm.",
       "body1": "Một tác nhân AI thông thường đi thẳng từ lệnh đầu vào đến văn bản, rồi đến lệnh thực thi. CIRIS thêm vào một bước không có ở bất kỳ đâu khác. Trước khi một hành động xảy ra, quyết định phải đi qua một quy trình lương tâm: nó được cân nhắc, kiểm tra đối chiếu với hiến pháp, rồi được chuyển thành một hồ sơ có chữ ký và có người chứng thực mà ai cũng có thể xác minh. Hành động chỉ được phép xảy ra nếu hồ sơ đó đứng vững.",
       "body2": "Đây là điều làm cho CIRIS không chỉ là một tác nhân AI mà còn giống một thể chế thực sự. Nó có bộ nhớ, có luật lệ, có ủy quyền, có trách nhiệm giải trình, và có một hồ sơ mà không ai có thể lặng lẽ thay đổi. Đó là cùng một cơ chế giúp các xã hội loài người tin tưởng nhau theo quy mô lớn. Điều mới mẻ ở đây không phải là mật mã học. Điều mới mẻ là một quyết định quan trọng phải trở nên có trách nhiệm trước khi nó được phép hành động."
@@ -1773,8 +1773,8 @@
     "seatH3": "Sứ mệnh",
     "seatDesc": "Khung đạo đức khách quan xác định mục đích và các ràng buộc của hệ thống.",
     "alignEyebrow": "Nguyên tắc cốt lõi",
-    "alignH2": "Tính Nhất Quán liên tục.",
-    "alignParaHtml": "Mọi quyết định kiến trúc phải thể hiện sự nhất quán với sứ mệnh đã tuyên bố. Logic được đặt câu hỏi: <em>liệu điều này có phục vụ sứ mệnh không?</em> Schema được kiểm chứng: <em>các cấu trúc dữ liệu này có hỗ trợ mục tiêu sứ mệnh không?</em> Giao thức được đánh giá: <em>các giao diện này có cho phép hoàn thành sứ mệnh không?</em>",
+    "alignH2": "Căn chỉnh liên tục.",
+    "alignParaHtml": "Mọi quyết định kiến trúc phải thể hiện sự căn chỉnh với sứ mệnh đã tuyên bố. Logic được đặt câu hỏi: <em>liệu điều này có phục vụ sứ mệnh không?</em> Các schema được kiểm chứng: <em>các cấu trúc dữ liệu này có hỗ trợ mục tiêu sứ mệnh không?</em> Các giao thức được đánh giá: <em>các giao diện này có cho phép hoàn thành sứ mệnh không?</em>",
     "reqEyebrow": "Yêu cầu khung sứ mệnh",
     "reqH2": "Sứ mệnh cần là gì để có thể gánh được trọng lượng.",
     "req1H3": "1. Nền tảng đạo đức khách quan",
@@ -3037,7 +3037,7 @@
     "lede": "Hầu hết các tuyên bố về an toàn AI đều yêu cầu bạn tin tưởng. Tuyên bố này yêu cầu bạn kiểm chứng. Hãy clone kho mã, chạy một lệnh duy nhất, và xác nhận rằng các khóa có khả năng dừng một tác nhân CIRIS thực sự nằm trên phần cứng đã được thẩm định theo FIPS 140-3. Đừng tin ai cả, kể cả chúng tôi.",
     "s1label": "Công tắc ngắt khẩn cấp theo hiến pháp",
     "s1h2": "Những con người được nêu tên có thể dừng một tác nhân CIRIS. Quyền lực này nằm trong phần cứng, không nằm trong công ty.",
-    "s1p1": "Một cơ chế dừng khẩn cấp cuối cùng, HUMANITY_ACCORD, được nắm giữ bởi những người được nêu tên cụ thể, không phải bởi công ty CIRIS, mạng lưới, hay bản thân agent. Không bên nào trong liên minh có thể cấp, thu hồi, hay ghi đè lên nó. Nó kích hoạt khi đạt số đông trực tiếp hai trên ba.",
+    "s1p1": "Một cơ chế dừng khẩn cấp cuối cùng, HUMANITY_ACCORD, được nắm giữ bởi những người được nêu tên cụ thể, không phải bởi công ty CIRIS, mạng lưới, hay bản thân tác nhân. Không bên nào trong liên minh có thể cấp, thu hồi, hay ghi đè lên nó. Nó kích hoạt khi đạt quorum đang hoạt động theo tỷ lệ hai trên ba.",
     "s1p2": "Mỗi khóa số đông là sự kết hợp của hai chữ ký gắn liền với nhau. Nửa Ed25519 bắt nguồn từ một YubiKey 5 FIPS, đã được thẩm định theo FIPS 140-3: được tạo ra bên trong thiết bị, không thể trích xuất, và yêu cầu chạm vật lý để ký. Nửa ML-DSA-65, chữ ký hậu lượng tử, là một khóa phần mềm được niêm phong vào một USB dưới cùng chiếc YubiKey đó, vì chưa có YubiKey nào tích hợp sẵn applet hậu lượng tử. Tổng cộng có sáu khóa, ba khóa đang hoạt động và ba khóa được lưu trữ dự phòng. Một lần kiểm tra thu hồi thất bại hoặc không xác định được coi là đã bị thu hồi, nên hệ thống luôn nghiêng về phía an toàn khi gặp lỗi.",
     "s2label": "Xác minh độc lập",
     "s2h2": "Chỉ một lệnh. Không cần phần cứng, không cần mạng, không cần tin chúng tôi.",
@@ -3046,7 +3046,7 @@
     "provesH": "Điều này chứng minh được gì",
     "provesP": "Cả sáu khóa số đông đều liên kết về gốc chứng thực thật của Yubico, nghĩa là nửa chữ ký Ed25519 của chúng được tạo ra bên trong phần cứng YubiKey 5 FIPS thật, dòng sản phẩm đã được thẩm định theo FIPS 140-3: không thể trích xuất, yêu cầu chạm để ký, không thể giả mạo. Bản thân các chứng chỉ chứng thực đã ghi lại dấu hiệu dòng FIPS, firmware 5.7.4, và chính sách luôn phải chạm, nên loại phần cứng được chứng minh bằng chuỗi chứng thực chứ không phải do chúng tôi tự nói.",
     "notProvesH": "Điều này không chứng minh được gì",
-    "notProvesP": "Nửa ML-DSA-65 là một khóa phần mềm được niêm phong vào USB dưới YubiKey, không được chứng thực bằng phần cứng. Bộ công cụ này không kiểm tra việc niêm phong USB hay số đông trực tiếp, vốn được thực thi riêng biệt. Chúng tôi muốn bạn biết chính xác những gì bằng chứng này bao quát.",
+    "notProvesP": "Nửa ML-DSA-65 là một khóa phần mềm được niêm phong vào USB dưới YubiKey, không được chứng thực bằng phần cứng. Bộ công cụ này không kiểm tra việc niêm phong USB hay quorum đang hoạt động, vốn được thực thi riêng biệt. Chúng tôi muốn bạn biết chính xác những gì biên lai này bao quát.",
     "s3label": "Được đo lường, không phải khẳng định suông",
     "s3h2": "Mật mã hậu lượng tử đang chạy trong môi trường sản xuất thực tế, và mọi con số đều công khai.",
     "measuredTag": "đã đo lường",
@@ -3057,7 +3057,7 @@
       "rò rỉ giữa các nhóm, 50 đến 400 node"
     ],
     "s3p1": "Nguồn gốc hậu lượng tử không miễn phí, và chúng tôi không giấu chi phí này: ký kết hợp Ed25519 + ML-DSA-65 chạy chậm hơn khoảng mười lăm lần so với phương pháp cổ điển, xấp xỉ 550 micro giây so với 36 micro giây mỗi sự kiện. Kho dữ liệu lưu trữ có thể phục hồi thành công trong 97,6% số lần thử khi một phần năm số người giữ khóa ngoại tuyến, và 72,7% khi một phần ba ngoại tuyến. Các con số là trung vị đơn lõi trên một CI runner dùng chung, được tạo lại sau mỗi commit.",
-    "benchLink": "Xem mọi con số, được tạo lại sau mỗi commit",
+    "benchLink": "Xem mọi hình minh họa, được tạo lại sau mỗi commit",
     "ctaPara": "Vấn đề cốt lõi là bạn không cần phải tin vào câu vừa rồi. Bạn có thể tự chạy kiểm tra.",
     "btnGithub": "CIRISVerify trên GitHub",
     "btnTrust": "Cách tin cậy hoạt động",

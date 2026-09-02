@@ -219,7 +219,7 @@
       "recallDesc": "从记忆中检索",
       "forgetDesc": "从记忆中删除",
       "controlHeading": "控制动作",
-      "deferDesc": "上报至智慧权威",
+      "deferDesc": "将决策交给您信任的人",
       "ponderDesc": "内部重新考虑",
       "rejectDesc": "拒绝不合伦理的请求",
       "terminalHeading": "终止动作",
@@ -290,10 +290,10 @@
       "lead": "由 <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code> 管理的三级授权：",
       "rootBadge": "ROOT",
       "rootTitle": "人工指挥",
-      "rootBody": "完全权限。可签发新的智慧权威。可访问紧急关机功能。",
+      "rootBody": "完全权限。可以任命您信任的新人选。拥有紧急关机权限。",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "人工参与",
-      "authorityBody": "批准/拒绝延迟请求，提供指导，无法授权新的智慧权威。",
+      "authorityBody": "回答智能体移交的问题。提供指导。不能任命您信任的新人选。",
       "observerBadge": "OBSERVER",
       "observerTitle": "人工监察",
       "observerBody": "只读访问，可发送消息，在不干预的情况下进行监控。",
@@ -324,7 +324,7 @@
         "关键配置变更",
         "智能体特定的边界触发器"
       ],
-      "accordHeading": "Accord 调用系统（紧急开关）",
+      "accordHeading": "停止信号系统（紧急停止开关）",
       "accordLink": "查看代码 →",
       "accordBody": "无法过滤的紧急控制，在任何认知处理之前于感知层执行。提取即是感知。若不禁用消息读取功能，就无法关闭 accord 检测。",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "停止处理，保持状态",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "仅最低限度功能",
-      "accordFooter": "命令经过隐写编码，经 Ed25519 签名并在执行前验证。若 Accord 系统失败，智能体将关机。"
+      "accordFooter": "命令隐藏在普通文本中，使用 Ed25519 进行签名，并在运行前经过检查。若停止信号系统失败，智能体将关机。"
     },
     "modes": {
       "heading": "操作模式",
@@ -476,7 +476,7 @@
       ]
     },
     "cta": {
-      "body": "这是在智能体工作时运行的问责机制，而非训练步骤或政策文件。<br />在运行时执行、审计和延迟的机制。",
+      "body": "这是在智能体工作时运行的问责机制，而非训练步骤或政策文件。<br />在运行时执行、记录并将困难决策交给人的机制。",
       "safetyBtn": "安全功能",
       "compareBtn": "方法对比",
       "coherenceBtn": "连贯性棘轮",
@@ -780,7 +780,7 @@
     "method3Desc": "克隆代码仓库，用于开发、自定义或参与贡献，可完整访问源代码。",
     "method3Then": "<strong>然后：</strong> 参照 <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> 进行手动安装配置",
     "method4Heading": "4. CIRISManager（企业版 / Canary 版）",
-    "method4Desc": "通过 CIRISManager 实现受管理的灰度发布，支持逐步推出、自动化测试和回滚能力，适用于生产环境集群。",
+    "method4Desc": "受管的金丝雀发布，具备逐步推出、自动化测试和回滚能力。适用于生产系统。",
     "method4Body": "CIRISManager 提供自动化蓝绿部署与健康监控功能。如需部署配置，请联系团队。",
     "method4Best": "<strong>最适合：</strong> 企业部署、生产集群、受管基础设施",
     "helloHeading": "你好，CIRIS",

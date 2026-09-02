@@ -175,7 +175,7 @@
     },
     "dmas": {
       "heading": "Karar Alma Algoritmaları (DMA'lar)",
-      "lead": "Beş DMA çok perspektifli analiz sağlar. Üçü paralel çalışır (etik, sağduyu, alan). Ardından <strong class=\"text-green-600\">IDMA sezgiyi kontrol eder</strong>. Son olarak eylem seçimi yanıtı belirler.",
+      "lead": "Beş DMA çok perspektifli analiz sağlar. Üçü paralel çalışır (etik, sağduyu, alan). Ardından <strong class=\"text-green-600\">IDMA sezgiyi kontrol eder</strong>. Son olarak Eylem Seçimi yanıtı belirler.",
       "principleTitle": "İlke DMA'sı",
       "principleBody": "Etik sonuçları altı temel ilkeye göre değerlendirir. Zararlı istekleri, manipülasyonu ve önyargıyı kontrol eder. Erken DEFER veya REJECT tetikleyebilir.",
       "commonSenseTitle": "Sağduyu DMA'sı",
@@ -219,7 +219,7 @@
       "recallDesc": "Bellekten getir",
       "forgetDesc": "Bellekten kaldır",
       "controlHeading": "Kontrol Eylemleri",
-      "deferDesc": "Bilge Otorite'ye ilet",
+      "deferDesc": "Kararı güvendiğiniz bir kişiye devredin",
       "ponderDesc": "İçsel yeniden değerlendirme",
       "rejectDesc": "Etik olmayan isteği reddet",
       "terminalHeading": "Terminal Eylem",
@@ -290,10 +290,10 @@
       "lead": "<code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code> tarafından yönetilen üç yetkilendirme düzeyi:",
       "rootBadge": "ROOT",
       "rootTitle": "Komutadaki İnsan",
-      "rootBody": "Tam yetki. Yeni Bilge Otoriteler oluşturabilir. Acil kapatmaya erişimi vardır.",
+      "rootBody": "Tam yetki. Güvendiğiniz yeni kişileri atayabilir. Acil kapatmaya erişimi vardır.",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "Döngüdeki İnsan",
-      "authorityBody": "Ertelemeleri onaylar veya reddeder. Rehberlik sağlar. Yeni Bilge Otoriteler oluşturamaz.",
+      "authorityBody": "Ajanın kendisine devrettiği soruları yanıtlar. Rehberlik sağlar. Güvendiğiniz yeni kişileri atayamaz.",
       "observerBadge": "OBSERVER",
       "observerTitle": "Döngü Üzerindeki İnsan",
       "observerBody": "Salt okunur erişim. Mesaj gönderebilir. Müdahale etmeden izler.",
@@ -324,7 +324,7 @@
         "Kritik yapılandırma değişiklikleri",
         "Ajana özgü sınır tetikleyicileri"
       ],
-      "accordHeading": "Anlaşma Çağrı Sistemi (Durdurma Anahtarı)",
+      "accordHeading": "Durdurma Sinyali Sistemi (Acil Durdurma Anahtarı)",
       "accordLink": "Kodu Görüntüle →",
       "accordBody": "Filtrelenemeyen bir acil durum kontrolü. Herhangi bir düşünme gerçekleşmeden önce algı katmanında ele alınır. Bir mesajı okumak ve durdurma sinyalini çıkarmak tek bir adımdır; bu nedenle mesaj okuma tamamen kapatılmadan algılama kapatılamaz.",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "İşlemi durdur, durumu koru",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "Yalnızca asgari işlevsellik",
-      "accordFooter": "Komutlar steganografik olarak kodlanır, Ed25519 ile imzalanır ve yürütülmeden önce doğrulanır. Anlaşma sistemi başarısız olursa ajan kapanır."
+      "accordFooter": "Komutlar sıradan metinlerin içine gizlenir, Ed25519 ile imzalanır ve çalıştırılmadan önce kontrol edilir. Durdurma sinyali sistemi başarısız olursa ajan kapanır."
     },
     "modes": {
       "heading": "Operasyonel Modlar",
@@ -440,7 +440,7 @@
       "cirisLensLink": "CIRISLens'i Görüntüle →"
     },
     "agents": {
-      "heading": "Özelleştirilmiş Ajan Şablonları",
+      "heading": "Uzmanlaşmış Ajan Şablonları",
       "lead": "Belirli amaçlar, değerler ve sınırlarla önceden yapılandırılmış kimlikler. YAML şablonlarında tanımlanmıştır.",
       "items": [
         {
@@ -476,14 +476,14 @@
       ]
     },
     "cta": {
-      "body": "Bu, bir eğitim adımı veya politika belgesi değil, ajan çalışırken yürütülen bir hesap verebilirliktir.<br />Çalışma zamanında yürüten, denetleyen ve erteleyebilen mekanizmalar.",
+      "body": "Bu, bir eğitim adımı veya politika belgesi değil, ajan çalışırken yürütülen bir hesap verebilirliktir.<br />Çalışma zamanında eyleme geçen, kayıt tutan ve zor kararları insanlara devreden mekanizmalar.",
       "safetyBtn": "Güvenlik Özellikleri",
       "compareBtn": "Yaklaşımları Karşılaştır",
       "coherenceBtn": "Tutarlılık Mandali",
       "scoringBtn": "CIRIS Puanlama"
     },
     "consciencePipeline": {
-      "label": "Vicdan boru hattı",
+      "label": "Vicdan Hattı",
       "h2": "Günümüz yapay zeka ajanları hareket eder. CIRIS ise hesap verebilir biçimde karar alır.",
       "body1": "Normal bir yapay zeka ajanı, komuttan tokenlara, oradan araç çağrısına düz bir çizgide gider. CIRIS, başka hiçbir yerde bulunmayan bir adım ekler. Bir eylem gerçekleşmeden önce karar bir vicdan boru hattından geçer: tartılır, anayasayla karşılaştırılır ve herkesin doğrulayabileceği imzalı, tanıklı bir kayda dönüştürülür. Eylem ancak o kayıt geçerliyse gerçekleşir.",
       "body2": "Bu, CIRIS'i bir ajandan çok bir kuruma dönüştüren şeydir. Belleği, yasaları, yetki devri, hesap verebilirliği ve kimsenin sessizce değiştiremeyeceği bir kaydı vardır. Bunlar, insan toplumlarının birbirine geniş ölçekte güvenmesini sağlayan mekanizmaların ta kendisidir. Yeni olan taraf kriptografi değildir. Önemli bir kararın, eyleme izin verilmeden önce hesap verebilir hale gelmek zorunda olmasıdır."
@@ -3057,12 +3057,12 @@
       "gruplar arası sızıntı, 50 ila 400 düğüm"
     ],
     "s3p1": "Kuantum sonrası köken ücretsiz değildir ve maliyeti gizlemiyoruz: melez Ed25519 + ML-DSA-65 imzalama, klasik yönteme göre yaklaşık on beş kat daha yavaştır, olay başına yaklaşık 36 yerine 550 mikrosaniye. Saklanan veri kümesi, sahiplerin beşte biri çevrimdışıyken denemelerin 97.6%'sında, üçte biri çevrimdışıyken 72.7%'sinde yeniden oluşturulur. Rakamlar, paylaşılan bir CI çalıştırıcısında tek çekirdekli medyan değerlerdir ve her commit'te yeniden üretilir.",
-    "benchLink": "Her commit'te yeniden üretilen tüm metrikleri görün",
+    "benchLink": "Her commit'te yeniden üretilen tüm değerleri görün",
     "ctaPara": "Buradaki asıl amaç, yukarıdaki cümleye güvenmek zorunda kalmamanızdır. Kontrolü kendiniz çalıştırabilirsiniz.",
     "btnGithub": "GitHub'da CIRISVerify",
     "btnTrust": "Güven nasıl işler",
     "btnVerif": "Uygunluk paketi",
-    "sources": "Kaynaklar: CIRISVerify (Ed25519 + ML-DSA-65 gözetim onayları, sabitlenmiş Yubico kökü), CIRISServer bench-site (ölçülen performans), Yubico PKI (onay kökü). Rakamlar 0b73486 commit'ine sabitlenmiştir, 2026-06-24."
+    "sources": "Kaynaklar: CIRISVerify (Ed25519 + ML-DSA-65 gözetim onayları, sabitlenmiş Yubico kökü), CIRISServer bench-site (ölçülen performans), Yubico PKI (onay kökü). Değerler 0b73486 commit'ine sabitlenmiştir, 2026-06-24."
   },
   "owasp": {
     "kicker": "OWASP Agentic güvenlik eşlemesi",

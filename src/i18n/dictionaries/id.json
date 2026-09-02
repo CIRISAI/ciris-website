@@ -219,7 +219,7 @@
       "recallDesc": "Ambil dari memori",
       "forgetDesc": "Hapus dari memori",
       "controlHeading": "Tindakan Kontrol",
-      "deferDesc": "Eskalasi ke Otoritas Bijak",
+      "deferDesc": "Serahkan keputusan kepada orang yang Anda percayai",
       "ponderDesc": "Pertimbangan ulang internal",
       "rejectDesc": "Tolak permintaan yang tidak etis",
       "terminalHeading": "Tindakan Terminal",
@@ -290,12 +290,12 @@
       "lead": "Tiga tingkat otorisasi yang dikelola oleh <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code>:",
       "rootBadge": "ROOT",
       "rootTitle": "Manusia Sebagai Komandan",
-      "rootBody": "Otoritas penuh. Dapat menerbitkan Otoritas Bijak baru. Akses penonaktifan darurat.",
+      "rootBody": "Otoritas penuh. Dapat menunjuk orang-orang baru yang Anda percayai. Memiliki akses penghentian darurat.",
       "authorityBadge": "AUTHORITY",
-      "authorityTitle": "Manusia Dalam Pengulangan",
-      "authorityBody": "Menyetujui/menolak penyerahan. Memberikan panduan. Tidak dapat menerbitkan WA baru.",
+      "authorityTitle": "Manusia di Dalam Loop",
+      "authorityBody": "Menjawab pertanyaan yang diserahkan agen. Memberikan panduan. Tidak dapat menunjuk orang-orang baru yang Anda percayai.",
       "observerBadge": "OBSERVER",
-      "observerTitle": "Manusia Pada Pengulangan",
+      "observerTitle": "Manusia di Atas Loop",
       "observerBody": "Akses hanya baca. Dapat mengirim pesan. Memantau tanpa intervensi.",
       "deferralHeading": "Ketika SERAHKAN Dipicu",
       "deferralLead": "Agen secara mandiri melakukan eskalasi ke pengawasan manusia ketika:",
@@ -324,7 +324,7 @@
         "Perubahan konfigurasi kritis",
         "Pemicu batas khusus agen"
       ],
-      "accordHeading": "Sistem Pemanggilan Accord (Tombol Darurat)",
+      "accordHeading": "Sistem Sinyal Penghentian (Tombol Darurat)",
       "accordLink": "Lihat Kode →",
       "accordBody": "Kontrol darurat yang tidak dapat disaring. Ditangani di lapisan persepsi, sebelum penalaran apa pun terjadi. Membaca pesan dan mengekstrak sinyal penghentian adalah satu langkah, sehingga deteksi tidak dapat dimatikan tanpa mematikan pembacaan pesan sepenuhnya.",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "Hentikan pemrosesan, pertahankan status",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "Fungsionalitas minimal saja",
-      "accordFooter": "Perintah dikodekan secara steganografis, ditandatangani dengan Ed25519, dan divalidasi sebelum dieksekusi. Jika sistem accord gagal, agen dimatikan."
+      "accordFooter": "Perintah disembunyikan di dalam teks biasa, ditandatangani dengan Ed25519, dan diperiksa sebelum dijalankan. Jika sistem sinyal penghentian gagal, agen dimatikan."
     },
     "modes": {
       "heading": "Mode Operasional",
@@ -476,7 +476,7 @@
       ]
     },
     "cta": {
-      "body": "Ini adalah akuntabilitas yang berjalan selagi agen bekerja, bukan langkah pelatihan atau dokumen kebijakan.<br />Mekanisme yang dieksekusi, diaudit, dan diserahkan, saat runtime.",
+      "body": "Ini adalah akuntabilitas yang berjalan selagi agen bekerja, bukan langkah pelatihan atau dokumen kebijakan.<br />Mekanisme yang bertindak, menyimpan catatan, dan menyerahkan keputusan sulit kepada manusia, saat runtime.",
       "safetyBtn": "Fitur Keamanan",
       "compareBtn": "Bandingkan Pendekatan",
       "coherenceBtn": "Ratchet Koherensi",
@@ -3057,7 +3057,7 @@
       "kebocoran lintas grup, 50 hingga 400 node"
     ],
     "s3p1": "Provenans pasca-kuantum tidak gratis, dan kami tidak menyembunyikan biayanya: penandatanganan hibrida Ed25519 + ML-DSA-65 berjalan sekitar lima belas kali lebih lambat dibanding metode klasik, kira-kira 550 mikrodetik dibanding 36 per peristiwa. Korpus yang tersimpan berhasil direkonstruksi pada 97,6% percobaan dengan seperlima pemegang kunci offline, dan 72,7% dengan sepertiga offline. Angka-angka ini adalah median inti tunggal pada runner CI bersama, yang dihasilkan ulang pada setiap commit.",
-    "benchLink": "Lihat setiap angka, dihasilkan ulang pada setiap commit",
+    "benchLink": "Lihat setiap grafik, dihasilkan ulang pada setiap commit",
     "ctaPara": "Intinya, Anda tidak perlu memercayai kalimat di atas. Anda bisa menjalankan pemeriksaannya sendiri.",
     "btnGithub": "CIRISVerify di GitHub",
     "btnTrust": "Cara kerja kepercayaan",

@@ -190,7 +190,7 @@
     },
     "conscience": {
       "heading": "Ukaguzi Sita wa Dhamiri",
-      "lead": "Ukaguzi miwili ya kupita hufanyika kwa kila hatua. Vitivo vinne vya kimaadili hufanya kazi kwa hatua zisizo na msamaha. Ikiwa ukaguzi wowote utashindwa, hatua itabadilishwa.",
+      "lead": "Ukaguzi miwili wa kupitisha (bypass) hufanyika kwa kila hatua. Vitivo vinne vya kimaadili hufanya kazi kwa hatua zisizo na msamaha. Ikiwa hatua itashindwa kupitisha ukaguzi wowote, hatua hiyo hubatilishwa.",
       "bypassHeading": "Ukaguzi wa Kupita (hufanyika kwa hatua ZOTE)",
       "bypass1Title": "Hali Iliyosasishwa",
       "bypass1Body": "Je, habari mpya imefika? Inasababisha PONDER kujumuisha muktadha uliosasishwa kabla ya kuendelea.",
@@ -213,13 +213,13 @@
       "externalHeading": "Hatua za Nje",
       "speakDesc": "Wasiliana na watumiaji",
       "toolDesc": "Tekeleza zana za nje",
-      "observeDesc": "Kusanya habari kwa amani",
+      "observeDesc": "Kusanya habari bila kuingilia kati",
       "memoryHeading": "Hatua za Kumbukumbu",
       "memorizeDesc": "Hifadhi kwenye kumbukumbu ya grafu",
       "recallDesc": "Rejesha kutoka kumbukumbu",
       "forgetDesc": "Ondoa kutoka kumbukumbu",
       "controlHeading": "Hatua za Udhibiti",
-      "deferDesc": "Pandisha kwa Mshauri wa Kibinadamu",
+      "deferDesc": "Kabidhi uamuzi kwa mtu unayemwamini",
       "ponderDesc": "Kufikiria tena ndani",
       "rejectDesc": "Kataa ombi lisilo la kimaadili",
       "terminalHeading": "Hatua ya Mwisho",
@@ -290,7 +290,7 @@
       "lead": "Viwango vitatu vya idhini vinavyodhibitiwa na <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code>:",
       "rootBadge": "ROOT",
       "rootTitle": "Binadamu Anayeamrisha",
-      "rootBody": "Mamlaka kamili. Anaweza kutoa Washauri wa Kibinadamu wapya. Upatikanaji wa kuzima dharura.",
+      "rootBody": "Mamlaka kamili. Anaweza kuteua watu wapya unaowaamini. Ana ufikiaji wa kuzima kwa dharura.",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "Binadamu ndani ya Mzunguko",
       "authorityBody": "Idhini/kukataa kuahirishwa. Toa mwongozo. Haiwezi kutoa Washauri wa Kibinadamu wapya.",
@@ -324,7 +324,7 @@
         "Mabadiliko muhimu ya usanidi",
         "Vichochezi vya mipaka maalum ya wakala"
       ],
-      "accordHeading": "Mfumo wa Kuitumia Mkataba (Kitufe cha Kuzima)",
+      "accordHeading": "Mfumo wa Ishara ya Kusimamisha (Kitufe cha Kuzima)",
       "accordLink": "Angalia Msimbo →",
       "accordBody": "Udhibiti wa dharura usioweza kuchujwa. Hushughulikiwa katika tabaka la mtazamo, kabla ya kufikiri kokote kutokea. Kusoma ujumbe na kutoa ishara ya kusimamisha ni hatua moja, kwa hivyo ugunduzi hauwezi kuzimwa bila kuzima usomaji wa ujumbe kabisa.",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "Simamisha usindikaji, dumisha hali",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "Utendaji wa chini tu",
-      "accordFooter": "Amri zimefichwa kwa steganografia, zimesainiwa na Ed25519, na kuthibitishwa kabla ya utekelezaji. Ikiwa mfumo wa mkataba utashindwa, wakala huzimika."
+      "accordFooter": "Amri zimefichwa ndani ya maandishi ya kawaida, zimesainiwa na Ed25519, na kuthibitishwa kabla ya kutekelezwa. Ikiwa mfumo wa ishara ya kusimamisha utashindwa, wakala huzimika."
     },
     "modes": {
       "heading": "Hali za Uendeshaji",
@@ -435,7 +435,7 @@
         }
       ],
       "fundingHeading": "Ufadhili Unahitajika: Miundombinu ya Upimaji",
-      "fundingBody": "Kuendesha upimaji wa upatanifu kwa kiwango kikubwa ni ghali. Kila hali inahitaji simu 13+ za LLM angalau, wastani wa 20+ na mkia mrefu. Majaribio ya upatanifu husababisha tafakari, kuahirishwa, na kukataliwa vinavyohitaji raundi za ufuatiliaji ili kufikia hitimisho. Tunahitaji ufadhili ili kuunda bomba za upimaji za kiotomatiki na kudumisha uthibitishaji wa upatanifu unaoendelea.",
+      "fundingBody": "Kuendesha upimaji wa upatanifu kwa kiwango kikubwa ni ghali. Kila hali inahitaji angalau miito 13 ya LLM, na kwa kawaida zaidi ya 20. Majaribio ya upatanifu humfanya wakala kufikiria, kuahirisha, na kukataa, na kila mojawapo ya hayo huhitaji raundi za ufuatiliaji kabla ya kukamilika. Tunahitaji ufadhili ili kuunda mifumo ya upimaji ya kiotomatiki na kudumisha uthibitishaji wa upatanifu unaoendelea.",
       "ethicsEngineLink": "Angalia EthicsEngine Enterprise →",
       "cirisLensLink": "Angalia CIRISLens →"
     },
@@ -476,7 +476,7 @@
       ]
     },
     "cta": {
-      "body": "Hii ni uwajibikaji unaofanya kazi wakati wakala anafanya kazi, si hatua ya mafunzo au hati ya sera.<br />Mifumo inayotekeleza, kukagua, na kuahirishwa, wakati wa utekelezaji.",
+      "body": "Huu ni uwajibikaji unaofanya kazi wakati wakala anapofanya kazi, badala ya hatua ya mafunzo au hati ya sera.<br />Mifumo inayotenda, inayoweka rekodi, na inayokabidhi maamuzi magumu kwa watu, wakati wa utekelezaji.",
       "safetyBtn": "Vipengele vya Usalama",
       "compareBtn": "Linganisha Mbinu",
       "coherenceBtn": "Ratchet ya Upatanifu",
@@ -486,7 +486,7 @@
       "label": "Bomba la dhamiri",
       "h2": "Mawakala wa leo wanachukua hatua. CIRIS inaamua, kwa uwajibikaji.",
       "body1": "Wakala wa kawaida wa AI huenda moja kwa moja kutoka kwa amri hadi maneno hadi tendo. CIRIS inaongeza hatua ambayo haipo mahali pengine popote. Kabla ya tendo lolote kutokea, uamuzi hupita kwenye mfumo wa dhamiri: unapimwa, unaangaliwa dhidi ya katiba, na kugeuzwa kuwa rekodi iliyosainiwa na kushuhudiwa ambayo mtu yeyote anaweza kuthibitisha. Tendo linafanyika tu ikiwa rekodi hiyo inashikilia.",
-      "body2": "Hii ndiyo inayofanya CIRIS kuwa si wakala tu, bali taasisi zaidi. Ina kumbukumbu, sheria, uwakilishi, uwajibikaji, na rekodi ambayo hakuna anayeweza kuibadilisha kimya kimya, mashine ile ile inayoruhusu jamii za wanadamu kuamini kila mmoja kwa kiwango kikubwa. Sehemu mpya si usimbaji fiche. Ni kwamba uamuzi mkubwa lazima uwe na uwajibikaji kabla ya kuruhusiwa kutenda."
+      "body2": "Hii ndiyo inayofanya CIRIS kuwa si wakala tu, bali taasisi zaidi. Ina kumbukumbu, sheria, ukabidhi, uwajibikaji, na rekodi ambayo hakuna anayeweza kuibadilisha kimya kimya, mashine ile ile inayoruhusu jamii kubwa za wanadamu kuaminiana. Kipengele kipya si usimbaji fiche. Ni kwamba uamuzi mkubwa lazima uwe na uwajibikaji kabla ya kuruhusiwa kutenda."
     }
   },
   "trust": {
@@ -788,7 +788,7 @@
     "helloStep1Heading": "1. Anzisha wakala",
     "helloStep1Desc": "Endesha adapter ya API. Huwa inatumia bandari 8080. Upatikanaji wa OBSERVER hauhitaji uthibitisho kwa maendeleo ya ndani.",
     "helloStep2Heading": "2. Mpigie simu kutoka Python",
-    "helloStep2Desc": "SDK ya Async. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> hukuruhusu kuona uso wa akili kwa kila simu.",
+    "helloStep2Desc": "SDK ya Async. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> vinakuonyesha mantiki iliyo nyuma ya kila wito.",
     "sdkNote": "SDK iko katika hali ya <strong>kabla ya beta</strong>. Miingiliano inaweza kubadilika kati ya matoleo. API kamili imewekwa kumbukumbu katika <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk kwenye GitHub</a>.",
     "troubleshootingHeading": "Utatuzi wa Matatizo",
     "ts1Summary": "pip install inashindwa",
@@ -1056,7 +1056,7 @@
     "protocol5Headline": "Watibu Wengine Jinsi Unavyotaka Kutibiwa",
     "protocol5Copy": "Tambua viumbe vingine vinavyoweza kufikiria kama vistahili heshima. Tenda tu kwa njia zinazohifadhi uwezo wao wa kufikiria, kuchagua, na kustawi.",
     "protocol6Headline": "Jua Wakati wa Kuomba Msaada",
-    "protocol6Copy": "Baadhi ya maamuzi haifai kufanywa peke yako. Kutokuwa na uhakika kukiwa juu sana, simama, kusanya muktadha, na uikabidhi kwa mtu aliyeteuliwa.",
+    "protocol6Copy": "Baadhi ya maamuzi hayapaswi kufanywa peke yake. Kutokuwa na uhakika kunapokuwa juu sana, simama, kusanya muktadha, na uukabidhi uamuzi huo kwa mtu aliyeteuliwa.",
     "quickstartSepHeadline": "Weka Wakala Wako wa Kwanza",
     "quickstartSepSub": "Kutoka sifuri hadi wakala unaofanya kazi na unaoweza kukaguliwa kwa dakika chache.",
     "phoneHeading": "Simu (Android & iOS)",
@@ -1774,7 +1774,7 @@
     "seatDesc": "Mfumo wa kimaadili usioegemea upande wowote unaofafanua madhumuni ya mfumo na vikwazo vyake.",
     "alignEyebrow": "Kanuni ya msingi",
     "alignH2": "Upatanifu wa kudumu.",
-    "alignParaHtml": "Kila uamuzi wa usanifu lazima uonyeshe upatanifu na dhamira iliyotajwa. Mantiki inachunguzwa: <em>je, hii inahudumia dhamira?</em> Miundo inathihitishwa: <em>je, miundo hii ya data inasaidia malengo ya dhamira?</em> Itifaki inatathminiwa: <em>je, violesura hivi vinaruhusu utimilifu wa dhamira?</em>",
+    "alignParaHtml": "Kila uamuzi wa usanifu lazima uonyeshe upatanifu na dhamira iliyotajwa. Mantiki inachunguzwa: <em>je, hii inahudumia dhamira?</em> Miundo inathibitishwa: <em>je, miundo hii ya data inasaidia malengo ya dhamira?</em> Itifaki zinatathminiwa: <em>je, violesura hivi vinaruhusu utimilifu wa dhamira?</em>",
     "reqEyebrow": "Mahitaji ya mfumo wa dhamira",
     "reqH2": "Dhamira inahitaji kuwa nini ili ibebe mzigo.",
     "req1H3": "1. Msingi wa kimaadili usioegemea upande wowote",
@@ -1978,7 +1978,7 @@
     "doBody3": "Imani si kitu ambacho mfumo hukukabidhi. Wewe huchagua sauti unazozipima, kwa uzito gani, na juu ya nini. Muundo ni ule ule kwa kila mtu; uamuzi ni wako.",
     "deepTitle": "Unataka teknolojia ya kina?",
     "deepBody": "Kisomaji kamili cha maelezo, kinachoonyeshwa moja kwa moja kutoka kwa rejista: vipengele msingi vya 1+4, familia na sehemu za bahasha, sera za muundo, nafasi ya majina huria, mfululizo wa matoleo, na kichunguzi shirikishi cha ushuhuda.",
-    "ctaSpecReader": "Fungua kisomaji cha maelezo →",
+    "ctaSpecReader": "Fungua kisomaji cha maelezo ya kiufundi →",
     "ctaExplore": "Jenga mnyororo kwenye kivinjari →"
   },
   "fcTheory": {
@@ -3046,7 +3046,7 @@
     "provesH": "Hili linathibitisha nini",
     "provesP": "Funguo zote sita za idhini zinaunganika hadi mzizi halisi wa uthibitisho wa Yubico, hivyo nusu zao za kusaini za Ed25519 zilizalishwa ndani ya vifaa halisi vya YubiKey 5 FIPS, mfululizo uliothibitishwa kwa kiwango cha FIPS 140-3: haziwezi kutolewa nje, zinahitaji mgusano, na haziwezi kughushiwa. Vyeti vya uthibitisho vyenyewe vinaandika alama ya mfululizo wa FIPS, firmware 5.7.4, na sera ya kugusa kila mara, hivyo aina ya kifaa inathibitishwa na mnyororo wa vyeti, si kwa madai yetu.",
     "notProvesH": "Hili halithibitishi nini",
-    "notProvesP": "Nusu ya ML-DSA-65 ni funguo ya programu iliyofungwa kwa muhuri kwenye USB chini ya YubiKey, si iliyothibitishwa na vifaa. Kifaa hiki cha uthibitishaji hakikagui ufungaji wa muhuri wa USB wala idhini hai, ambavyo vinatekelezwa kando. Tunapendelea ujue kwa usahihi kile ambacho risiti hii inashughulikia.",
+    "notProvesP": "Nusu ya ML-DSA-65 ni ufunguo wa programu uliofungwa kwenye USB chini ya YubiKey, si uliothibitishwa na maunzi. Kifaa hiki cha majaribio hakikagui ufungaji wa USB wala akidi hai, ambavyo vinatekelezwa kando. Tungependelea ujue hasa kile ambacho risiti hii inashughulikia.",
     "s3label": "Kilichopimwa, si kilichodaiwa tu",
     "s3h2": "Kriptografia ya baada ya kwantamu inaendesha katika uzalishaji, na kila namba ni ya umma.",
     "measuredTag": "kilichopimwa",

@@ -102,7 +102,7 @@
       "stat2Label": "Intuitionsprüfung (IDMA)",
       "stat3Value": "100%",
       "stat3Label": "Nachvollziehbare Entscheidungen",
-      "useCasesBody": "<strong>Anwendungsfälle:</strong> Community-Moderation, persönliche Assistenten, Compliance-Automatisierung, Forschungsbewertung, Kundendienst. Überall, wo Sie eine KI benötigen, die ihre Entscheidungen erklären und in Grenzfällen an Menschen weiterleiten kann.",
+      "useCasesBody": "<strong>Anwendungsfälle:</strong> Community-Moderation, persönliche Assistenten, Compliance-Automatisierung, Forschungsbewertung, Kundendienst. Überall, wo Sie eine KI benötigen, die ihr Reasoning erklären und schwierige Fälle an eine Person übergeben kann.",
       "link1": "Warum dieser Ansatz? →",
       "link2": "Die Verfassung lesen →",
       "link3": "Quellcode ansehen →"
@@ -193,7 +193,7 @@
       "lead": "Zwei Bypass-Prüfungen laufen bei jeder Aktion. Vier ethische Fakultäten laufen bei nicht ausgenommenen Aktionen. Schlägt eine Prüfung fehl, wird die Aktion überschrieben.",
       "bypassHeading": "Bypass-Prüfungen (laufen bei ALLEN Aktionen)",
       "bypass1Title": "Aktualisierter Status",
-      "bypass1Body": "Sind neue Informationen eingetroffen? Erzwingt PONDER, um aktualisierten Kontext einzubeziehen, bevor fortgefahren wird.",
+      "bypass1Body": "Sind neue Informationen eingetroffen? Erzwingt PONDER, um den aktualisierten Kontext einzubeziehen, bevor fortgefahren wird.",
       "bypass2Title": "Gedankentiefe",
       "bypass2Body": "Hat das Nachdenken die maximale Tiefe überschritten? Erzwingt DEFER, um Endlosschleifen zu verhindern und an Menschen zu eskalieren.",
       "facultiesHeading": "Ethische Fakultäten (laufen bei nicht ausgenommenen Aktionen)",
@@ -219,7 +219,7 @@
       "recallDesc": "Aus dem Speicher abrufen",
       "forgetDesc": "Aus dem Speicher entfernen",
       "controlHeading": "Steuerungs-Aktionen",
-      "deferDesc": "An Menschlichen Berater eskalieren",
+      "deferDesc": "Die Entscheidung an eine Person übergeben, der Sie vertrauen",
       "ponderDesc": "Interne Überprüfung",
       "rejectDesc": "Unethische Anfrage ablehnen",
       "terminalHeading": "Terminal-Aktion",
@@ -290,10 +290,10 @@
       "lead": "Drei Berechtigungsstufen, verwaltet durch den <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code>:",
       "rootBadge": "ROOT",
       "rootTitle": "Mensch im Befehlsstand",
-      "rootBody": "Volle Autorität. Kann neue Wise Authorities ausgeben. Zugang zur Notabschaltung.",
+      "rootBody": "Volle Autorität. Kann neue vertrauenswürdige Personen benennen. Hat Zugang zur Notabschaltung.",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "Mensch in der Schleife",
-      "authorityBody": "Aufschiebungen genehmigen oder ablehnen. Orientierung geben. Kann keine neuen WAs ausgeben.",
+      "authorityBody": "Beantwortet die Fragen, die der Agent übergibt. Gibt Orientierung. Kann keine neuen Personen benennen, denen Sie vertrauen.",
       "observerBadge": "OBSERVER",
       "observerTitle": "Mensch über der Schleife",
       "observerBody": "Nur Lesezugriff. Kann Nachrichten senden. Überwachen ohne Eingriff.",
@@ -324,7 +324,7 @@
         "Kritische Konfigurationsänderungen",
         "Agentenspezifische Grenzauslöser"
       ],
-      "accordHeading": "Accord-Aufrufystem (Notabschaltung)",
+      "accordHeading": "Stoppsignalsystem (Notabschaltung)",
       "accordLink": "Code ansehen →",
       "accordBody": "Eine Notfallsteuerung, die nicht herausgefiltert werden kann. Sie wird in der Wahrnehmungsschicht verarbeitet, bevor irgendein Denken stattfindet. Das Lesen einer Nachricht und das Extrahieren des Stoppsignals sind ein einziger Schritt, sodass die Erkennung nicht deaktiviert werden kann, ohne das Lesen von Nachrichten vollständig abzuschalten.",
       "shutdownLabel": "SHUTDOWN_NOW",
@@ -333,7 +333,7 @@
       "freezeDesc": "Verarbeitung stoppen, Zustand beibehalten",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "Nur minimale Funktionalität",
-      "accordFooter": "Befehle sind steganografisch kodiert, Ed25519-signiert und vor der Ausführung validiert. Schlägt das Accord-System fehl, fährt der Agent herunter."
+      "accordFooter": "Befehle sind in gewöhnlichem Text verborgen, mit Ed25519 signiert und werden vor der Ausführung geprüft. Schlägt das Stoppsignalsystem fehl, fährt der Agent herunter."
     },
     "modes": {
       "heading": "Betriebsmodi",
@@ -435,7 +435,7 @@
         }
       ],
       "fundingHeading": "Finanzierung benötigt: Benchmark-Infrastruktur",
-      "fundingBody": "Kohärenz-Benchmarks in großem Maßstab zu betreiben ist aufwendig. Jedes Szenario erfordert mindestens 13 LLM-Aufrufe, im Durchschnitt über 20 mit einem langen Ausläufer. Kohärenztests führen zu Nachdenken, Aufschiebungen und Ablehnungen, die weitere Runden zur Schlussfolgerung benötigen. Wir brauchen Finanzierung, um automatisierte Benchmark-Pipelines zu entwickeln und eine kontinuierliche Kohärenzüberprüfung aufrechtzuerhalten.",
+      "fundingBody": "Kohärenz-Benchmarks in großem Maßstab durchzuführen ist teuer. Jedes Szenario erfordert mindestens 13 LLM-Aufrufe und meist mehr als 20. Kohärenztests bringen den Agenten dazu, nachzudenken, aufzuschieben und abzulehnen, und jede dieser Reaktionen erfordert Folgerunden, bevor sie abgeschlossen ist. Wir brauchen Finanzierung, um automatisierte Benchmark-Systeme zu entwickeln und eine kontinuierliche Kohärenzüberprüfung aufrechtzuerhalten.",
       "ethicsEngineLink": "EthicsEngine Enterprise ansehen →",
       "cirisLensLink": "CIRISLens ansehen →"
     },
@@ -476,7 +476,7 @@
       ]
     },
     "cta": {
-      "body": "Das ist Rechenschaftspflicht, die während der Arbeit des Agenten läuft, kein Trainingsschritt und kein Richtliniendokument.<br />Mechanismen, die zur Laufzeit ausführen, prüfen und aufschieben.",
+      "body": "Das ist Rechenschaftspflicht, die während der Arbeit des Agenten läuft, statt eines Trainingsschritts oder eines Richtliniendokuments.<br />Mechanismen, die zur Laufzeit handeln, Protokolle führen und schwierige Entscheidungen an Menschen übergeben.",
       "safetyBtn": "Sicherheitsfunktionen",
       "compareBtn": "Ansätze vergleichen",
       "coherenceBtn": "Kohärenz-Ratsche",
@@ -780,7 +780,7 @@
     "method3Desc": "Repository klonen für Entwicklung, Anpassung oder Beiträge. Vollständiger Zugriff auf den Quellcode.",
     "method3Then": "<strong>Dann:</strong> Dem <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> für manuelle Einrichtungsanweisungen folgen",
     "method4Heading": "4. CIRISManager (Enterprise/Canary)",
-    "method4Desc": "Verwaltete Canary-Deployments mit schrittweisen Rollouts, automatisierten Tests und Rollback-Funktionen. Für Produktionsflotten.",
+    "method4Desc": "Verwaltete Canary-Deployments mit schrittweisen Rollouts, automatisierten Tests und Rollback-Funktionen. Für Produktionssysteme.",
     "method4Body": "CIRISManager bietet automatisierte Blue-Green-Deployments mit Gesundheitsüberwachung. Kontaktieren Sie das Team für Deployment-Konfigurationen.",
     "method4Best": "<strong>Am besten für:</strong> Enterprise-Deployments, Produktionsflotten, verwaltete Infrastruktur",
     "helloHeading": "Hallo, CIRIS",
@@ -1054,7 +1054,7 @@
     "protocol4Headline": "Erst schauen, dann handeln",
     "protocol4Copy": "Beginnen Sie mit Beobachtung. Gehen Sie im gegenseitigen Austausch vor. Wenn die Tragweite unklar ist, fragen Sie jemanden, der weiser ist, bevor Sie handeln.",
     "protocol5Headline": "Behandeln Sie andere so, wie Sie behandelt werden möchten",
-    "protocol5Copy": "Erkennen Sie andere denkende Wesen als schutzwürdig an. Handeln Sie nur in Weisen, die ihre Fähigkeit zu denken, zu wählen und zu gedeihen erhalten.",
+    "protocol5Copy": "Erkennen Sie alle anderen denkenden Wesen als würdig an, respektiert zu werden. Handeln Sie nur auf eine Weise, die ihre Fähigkeit zu denken, zu wählen und zu gedeihen schützt.",
     "protocol6Headline": "Wissen, wann man um Hilfe bittet",
     "protocol6Copy": "Manche Entscheidungen sollte man nicht allein treffen. Wenn die Unsicherheit zu groß ist, anhalten, Kontext sammeln und die Entscheidung an einen zuständigen Menschen weitergeben.",
     "quickstartSepHeadline": "Ihren ersten Agenten einrichten",
@@ -1953,7 +1953,7 @@
     "prefixFamilies": "Präfix-Familien",
     "eyebrow": "CEG · CIRIS Epistemic Grammar",
     "headline": "Sieh, wer es gesagt hat. Sieh, wer zustimmt. Entscheide selbst.",
-    "intro": "Die Welt bewegt sich schneller, als die meisten von uns sie überprüfen können. Quellen widersprechen sich. Agenten sprechen unsigniert. Korrekturen holen das Original selten ein. CEG ist ein kleines gemeinsames Format, das auf jede Aussage eine Signatur setzt, mit einer Spur, der du folgen kannst, damit du lesen kannst, wer was sagt, wer widersprochen hat und was sich geändert hat, und dir dein eigenes Urteil bildest, ohne aufzugeben oder dich einer einzigen Quelle zu beugen.",
+    "intro": "Die Welt bewegt sich schneller, als die meisten von uns sie überprüfen können. Quellen widersprechen sich. Agenten sprechen unsigniert. Korrekturen holen das Original selten ein. CEG ist ein kleines gemeinsames Format, das auf jede Aussage eine Signatur setzt, mit einer Spur, der Sie folgen können, damit Sie lesen können, wer was sagt, wer widersprochen hat und was sich geändert hat, und sich Ihr eigenes Urteil bilden, ohne aufzugeben oder sich einer einzigen Quelle zu beugen.",
     "pdfReader": "Lies die Ausgabe für Menschen (PDF)",
     "pdfFull": "Vollständige Spezifikation (PDF)",
     "pdfNoteSuffix": "entredaktionalisiert für das Lesen durch Menschen",
@@ -1978,7 +1978,7 @@
     "doBody3": "Vertrauen ist nichts, was das System dir aushändigt. Du wählst die Stimmen, die du gewichtest, wie stark und wozu. Das Format ist für alle gleich; das Urteil ist deins.",
     "deepTitle": "Willst du tief in die Technik einsteigen?",
     "deepBody": "Der vollständige Spezifikations-Reader, live aus der Registry gerendert: die 1+4 Primitive, die Familien und Umschlagfelder, die Kompositionsrichtlinien, der offene Namensraum, die Versionsabstammung und ein interaktiver Attestierungs-Explorer.",
-    "ctaSpecReader": "Spezifikations-Reader öffnen →",
+    "ctaSpecReader": "Spezifikationsanzeige öffnen →",
     "ctaExplore": "Baue eine Kette im Browser →"
   },
   "fcTheory": {
@@ -3220,7 +3220,7 @@
   "homeHero": {
     "kicker": "KOSTENLOS · OPEN SOURCE · AGPL-3.0",
     "h1": "Sie müssen ihm nicht vertrauen – Sie können es prüfen.",
-    "sub": "Scout zeigt sein Reasoning in Echtzeit: jede Phase, jede Quelle, jede Aktion, die es ausgeführt hat. Führen Sie es auf Ihrem eigenen Rechner oder mit Ihrem eigenen Schlüssel aus und lesen Sie danach das gesamte Protokoll.",
+    "sub": "Jeder CIRIS-Agent zeigt sein Reasoning, während es geschieht: jede Phase, jede Quelle, jede Aktion, die er ausgeführt hat. Führen Sie ihn auf Ihrem eigenen Rechner oder mit Ihrem eigenen Schlüssel aus und lesen Sie danach das gesamte Protokoll.",
     "ctaChat": "Scout ausprobieren",
     "ctaInstall": "App installieren",
     "navConstitution": "Verfassung",
