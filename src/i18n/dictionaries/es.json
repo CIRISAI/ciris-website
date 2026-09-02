@@ -718,7 +718,7 @@
     "card2Headline": "Integridad de Archivos",
     "card2Copy": "¿Ha sido modificado este carro? CIRISVerify obtiene el manifiesto de compilación desde CIRISRegistry y verifica con SHA-256 cada archivo. Verificaciones completas al inicio, comprobaciones aleatorias en tiempo de ejecución.",
     "card3Headline": "Validación de Fuente",
-    "card3Copy": "Déjame revisar tus placas. Se consultan múltiples fuentes independientes (HTTPS EE.UU., HTTPS UE, DNS EE.UU., DNS UE). Si no están de acuerdo, eso es sospechoso. El agente queda restringido.",
+    "card3Copy": "Déjame revisar tu registro. Se consultan múltiples fuentes independientes (HTTPS EE.UU., HTTPS UE, DNS EE.UU., DNS UE). Si no están de acuerdo, eso es sospechoso. El agente queda restringido.",
     "attestationLevelsH3": "Niveles de Atestación",
     "attestationLevelsSub": "La atestación unificada produce un nivel de confianza según cuántas verificaciones se superan.",
     "tableColLevel": "Nivel",
@@ -851,7 +851,7 @@
     "killSwitchSubheadline": "Un interruptor que nadie dentro del sistema puede desactivar.",
     "killSwitchHeadline": "El interruptor de emergencia constitucional",
     "killSwitchBody": "El poder de último recurso para detener a un agente CIRIS no reside en la empresa, la red ni el agente. Reside en personas con nombre propio. Cada titular lleva un par de llaves de hardware: una llave de seguridad FIPS 140-3 para la firma clásica, que también protege el material para un segundo dispositivo que lleva la firma poscuántica. Para activar la detención, la mayoría de los titulares (2 of 3) firman la orden en su hardware. La orden lleva firmas híbridas Ed25519 + ML-DSA-65, por lo que no puede falsificarse, repetirse ni imitarse, ni siquiera por una computadora cuántica futura, y ninguna parte de la red puede concederla, revocarla ni anularla.",
-    "killSwitchNote": "Diseñamos para el peor caso: una IA que ataca su propio interruptor de apagado yendo tras las personas que lo controlan. La constitución define un quórum activo, de modo que aunque se pierda a la mayoría de los titulares, un sobreviviente al alcance todavía puede desconectar el sistema.",
+    "killSwitchNote": "Diseñamos para el peor caso: una IA que ataca su propio interruptor de apagado yendo tras las personas que lo controlan. La Constitución define un quórum activo, de modo que aunque se pierda a la mayoría de los titulares, un sobreviviente al alcance todavía puede desconectar el sistema.",
     "pillarsProtects": "La criptografía no es lo importante. Lo que protege es esto: cada decisión que importa se convierte en un registro con responsables, uno que sobrevive a la verificación independiente, en lugar de algo que te piden que aceptes con fe."
   },
   "vision": {

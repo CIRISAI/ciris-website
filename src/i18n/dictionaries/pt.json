@@ -490,7 +490,7 @@
     }
   },
   "trust": {
-    "headerHeadline": "O Registro Civil para Agentes de IA",
+    "headerHeadline": "O Detran dos Agentes de IA",
     "headerSubheadline": "Identidade, Integridade e Responsabilidade, comprovadas criptograficamente.",
     "headerDescription": "CIRISVerify emite a carteira de motorista (identidade), realiza a vistoria do veículo (integridade) e acompanha o seguro (responsabilidade). Sem ele, qualquer agente poderia reivindicar ser qualquer coisa.",
     "headerButtonText": "Abrir Portal",
@@ -524,7 +524,7 @@
     "card2Headline": "Integridade de Arquivos",
     "card2Copy": "Este carro foi modificado? CIRISVerify busca o manifesto de compilação do CIRISRegistry e verifica com SHA-256 cada arquivo. Verificações completas na inicialização, verificações aleatórias em tempo de execução.",
     "card3Headline": "Validação de Fonte",
-    "card3Copy": "Deixa eu verificar sua placa. Várias fontes independentes (HTTPS US, HTTPS EU, DNS US, DNS EU) são consultadas. Se houver discordância, isso é suspeito. O agente é restrito.",
+    "card3Copy": "Deixa eu verificar seu registro. Várias fontes independentes (HTTPS US, HTTPS EU, DNS US, DNS EU) são consultadas. Se houver discordância, isso é suspeito. O agente é restrito.",
     "attestationLevelsH3": "Níveis de Atestação",
     "attestationLevelsSub": "A atestação unificada produz um nível de confiança com base no número de verificações aprovadas.",
     "tableColLevel": "Nível",
@@ -557,7 +557,7 @@
     "card7Headline": "Custódia de Chaves",
     "card7Copy": "Gere pares de chaves híbridos Ed25519 + ML-DSA-65 com criptografia de envelope AES-256-GCM. Auto-custódia ou custódia pelo portal, sua escolha. A metade pós-quântica está disponível hoje, não em um roadmap.",
     "card8Headline": "Resposta a Incidentes",
-    "card8Copy": "Controles de encerramento de emergência e revogação em massa. Suspenda licenças, cancele registros. Quando algo dá errado, o sistema responde em segundos.",
+    "card8Copy": "Controles de encerramento de emergência e revogação em massa. Suspenda licenças, revogue registros. Quando algo dá errado, o sistema responde em segundos.",
     "card9Headline": "Relatórios de Auditoria",
     "card9Copy": "Gere relatórios alinhados aos frameworks SOC2, HIPAA e GDPR. Trilha de auditoria completa de todas as operações administrativas. Cada ação é registrada e atribuída.",
     "identityActivationHeadline": "Ativação de Identidade",
@@ -657,7 +657,7 @@
     "killSwitchSubheadline": "Um interruptor que ninguém dentro do sistema pode desativar.",
     "killSwitchHeadline": "O Interruptor de Emergência Constitucional",
     "killSwitchBody": "O poder de parar um agente CIRIS em último caso não pertence à empresa, à rede, nem ao próprio agente. Ele pertence a pessoas específicas. Cada titular carrega um par de chaves físicas: uma chave de segurança FIPS 140-3 para a assinatura clássica, que também protege o material para um segundo dispositivo que carrega a assinatura pós-quântica. Para acionar a parada, a maioria dos titulares (2 of 3) assina o comando no próprio hardware. O comando carrega assinaturas híbridas Ed25519 + ML-DSA-65, portanto não pode ser falsificado, repetido ou forjado, nem mesmo por um computador quântico do futuro, e nenhuma parte da rede pode conceder, revogar ou substituir esse comando.",
-    "killSwitchNote": "Projetamos para o pior cenário: uma IA que ataca seu próprio desligamento indo atrás das pessoas que controlam esse poder. A constituição define um quórum ativo, então mesmo que a maioria dos titulares seja perdida, um único sobrevivente acessível ainda pode desligar o sistema.",
+    "killSwitchNote": "Projetamos para o pior cenário: uma IA que ataca seu próprio desligamento indo atrás das pessoas que controlam esse poder. A Constituição define um quórum ativo, então mesmo que a maioria dos titulares seja perdida, um único sobrevivente acessível ainda pode desligar o sistema.",
     "pillarsProtects": "A criptografia não é o ponto central. O que ela protege é o seguinte: cada decisão importante vira um registro responsável que pode ser verificado de forma independente, em vez de algo que você simplesmente precisa acreditar."
   },
   "safety": {

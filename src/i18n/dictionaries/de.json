@@ -490,7 +490,7 @@
     }
   },
   "trust": {
-    "headerHeadline": "Das Einwohnermeldeamt für KI-Agenten",
+    "headerHeadline": "Die Zulassungsstelle für KI-Agenten",
     "headerSubheadline": "Identität, Integrität und Verantwortlichkeit, kryptografisch nachweisbar.",
     "headerDescription": "CIRISVerify stellt den Führerschein aus (Identität), führt die Fahrzeuginspektion durch (Integrität) und verwaltet die Versicherung (Verantwortlichkeit). Ohne diese Prüfung könnte jeder Agent behaupten, irgendjemand zu sein.",
     "headerButtonText": "Portal öffnen",
@@ -516,7 +516,7 @@
     "pillar3Note": "Nicht lizenzierte Agenten können betrieben werden, dürfen aber keine professionellen Dienste erbringen.",
     "multiSourceHeadline": "Multi-Quellen-Validierung",
     "multiSourceSubheadline": "HTTPS als Autorität. DNS als Hinweis.",
-    "multiSourceCopy": "CIRISVerify vertraut keiner einzigen Quelle. HTTPS-Endpunkte an unabhängigen Domains sind maßgeblich; DNS liefert ergänzende Querprüfungen. Wenn Quellen nicht übereinstimmen, wird der Agent eingeschränkt. Der Anti-Rollback-Schutz verfolgt die höchste gesehene Sperr-Revision und lehnt jeden niedrigeren Wert ab.",
+    "multiSourceCopy": "CIRISVerify verlässt sich nicht auf eine einzelne Quelle. HTTPS-Endpunkte an unabhängigen Domains sind maßgeblich; DNS liefert ergänzende Querprüfungen. Wenn Quellen nicht übereinstimmen, wird der Agent eingeschränkt. Der Anti-Rollback-Schutz verfolgt die bisher höchste beobachtete Widerrufsrevision und lehnt jeden niedrigeren Wert ab.",
     "unifiedAttestationHeadline": "Einheitliche Attestierung",
     "unifiedAttestationSubheadline": "Die vollständige Hintergrundprüfung.",
     "card1Headline": "Schlüssel-Attestierung",
@@ -561,7 +561,7 @@
     "card9Headline": "Audit-Berichterstattung",
     "card9Copy": "Berichte erstellen, die auf SOC2, HIPAA und GDPR ausgerichtet sind. Vollständiges Prüfprotokoll aller administrativen Vorgänge. Jede Aktion wird protokolliert und ist zurückverfolgbar.",
     "identityActivationHeadline": "Identitätsaktivierung",
-    "identityActivationSubheadline": "Identität ist das Fundament. Sicherheit ist der Wert.",
+    "identityActivationSubheadline": "Identität ist das Fundament. Gewissheit ist der Wert.",
     "tierCommunityName": "Community",
     "tierCommunityPrice": "$1.50",
     "tierCommunityPriceSub": "pro Agent-Identität",
@@ -656,7 +656,7 @@
     "closingBtnContact": "Vertrieb kontaktieren",
     "killSwitchSubheadline": "Ein Schalter, den niemand im System deaktivieren kann.",
     "killSwitchHeadline": "Der verfassungsmäßige Notausschalter",
-    "killSwitchBody": "Die letzte Möglichkeit, einen CIRIS-Agenten zu stoppen, liegt nicht beim Unternehmen, beim Netzwerk oder beim Agenten selbst. Sie liegt bei bestimmten Menschen. Jede dieser Personen trägt ein Paar Hardware-Schlüssel: einen FIPS 140-3 Sicherheitsschlüssel für die klassische Signatur, der gleichzeitig das Material für ein zweites Gerät mit der Post-Quanten-Signatur sichert. Um den Stopp auszulösen, müssen die Mehrheit der Inhaber (2 of 3) den Befehl auf ihrer Hardware signieren. Der Befehl trägt hybride Ed25519 + ML-DSA-65 Signaturen, sodass er nicht gefälscht, wiederholt oder vorgetäuscht werden kann, auch nicht durch einen zukünftigen Quantencomputer. Kein Teil des Netzwerks kann ihn erteilen, widerrufen oder außer Kraft setzen.",
+    "killSwitchBody": "Die letzte Möglichkeit, einen CIRIS-Agenten zu stoppen, liegt nicht beim Unternehmen, beim Netzwerk oder beim Agenten selbst. Sie liegt bei namentlich benannten Menschen. Jede dieser Personen trägt ein Paar Hardwareschlüssel: einen FIPS 140-3-Sicherheitsschlüssel für die klassische Signatur, der gleichzeitig das Material für ein zweites Gerät mit der Post-Quanten-Signatur sichert. Um den Stopp auszulösen, muss die Mehrheit der Inhaber (2 von 3) den Befehl auf ihrer Hardware signieren. Der Befehl trägt hybride Ed25519 + ML-DSA-65-Signaturen, sodass er nicht gefälscht, wiederholt oder vorgetäuscht werden kann, auch nicht durch einen zukünftigen Quantencomputer, und kein Teil des Netzwerks kann ihn erteilen, widerrufen oder außer Kraft setzen.",
     "killSwitchNote": "Wir haben für den schlimmsten Fall geplant: eine KI, die ihren eigenen Ausschalter angreift, indem sie die Menschen ins Visier nimmt, die ihn halten. Die Verfassung legt ein aktives Quorum fest. Selbst wenn die meisten Inhaber ausfallen, kann ein noch erreichbarer Überlebender den Stecker ziehen.",
     "pillarsProtects": "Die Kryptografie ist nicht der eigentliche Punkt. Was sie schützt, ist folgendes: Jede wichtige Entscheidung wird zu einem nachvollziehbaren Datensatz, der unabhängig überprüft werden kann, anstatt etwas zu sein, dem man einfach vertrauen soll."
   },
