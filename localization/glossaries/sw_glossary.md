@@ -21,7 +21,7 @@ This glossary defines the canonical translations for key CIRIS terms in Swahili.
 
 | English | Swahili | Definition |
 |---------|---------|------------|
-| ACCORD | [DEPRECATED] Mkataba | DEPRECATED — superseded by the CIRIS Constitution. Do NOT coin a rendering for it. The ROLE (`accord holder`, `accord_custody`, `/v1/accord/*`) is live and follows the shipped strings, not this row. Was: The covenant governing agent behavior |
+| ACCORD | [DEPRECATED] Mkataba | DEPRECATED — superseded by the CIRIS Constitution. Do NOT coin a rendering for it. The ROLE (`accord holder`, `accord_custody`, `/v1/accord/*`) is live and follows the shipped strings, not this row. Was: The covenant governing agent behavior When the ENGLISH SOURCE itself says Accord (history: the document the Constitution replaced), keep the shipped rendering the anchors use and do not flag it; the retired term is in the source, not the translation. |
 | Wise Authority | Mshauri wa Kibinadamu | Human oversight entity |
 | Conscience | Dhamiri | Ethical filter mechanism |
 | Principal Hierarchy | Uratibu wa Viongozi | Chain of command for guidance |
@@ -178,6 +178,13 @@ This glossary defines the canonical translations for key CIRIS terms in Swahili.
 - Computer/internet terms often use English directly: "online" → "mtandaoni"
 - New technical concepts may use descriptive phrases: "blockchain" → "mnyororo wa vitalu"
 
+### UI labels and review conduct (ciris.ai)
+- Keys under `nav.*`, `footer.*`, `lobby.store.*`, and any key ending in `Label`, `Title`, `Btn`, `Cta`, `Head`, `Eyebrow`, `Kicker` or `name` are compact UI labels or headings. Translate them as a noun phrase in this language's own label convention: no leading article unless the language requires one on a label, and the language's own casing for labels.
+- Glossary casing is not normative (the glossary block header says so). Capitalization alone is never a finding, at any severity.
+- Agreement with this glossary or with the anchors is NOT a finding. Report a terminology finding only when the translation disagrees with them.
+- `lobby.store.*` strings are the two lines of an App Store / Google Play badge ("Download on the" + "App Store", "Get it on" + "Google Play"). Judge each line as half of the standard badge wording, never as a sentence.
+- When the English source itself says Accord (a historical reference to the document the Constitution replaced), keep the shipped rendering the anchors use. The retired term in the source is not a terminology finding.
+
 ## DSASPDMA Deferral Taxonomy Terms
 
 | English | Localized | Notes |
@@ -222,10 +229,9 @@ This glossary defines the canonical translations for key CIRIS terms in Swahili.
 
 ## Version History
 
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | 2026-03-27 | Initial glossary |
-| 1.1 | 2026-05-31 | Added CEG 0.6 cohort scope vocabulary for 2.9.4 Commons UX |
+- Version | Date | Changes
+- 1.0 | 2026-03-27 | Initial glossary
+- 1.1 | 2026-05-31 | Added CEG 0.6 cohort scope vocabulary for 2.9.4 Commons UX
 
 ---
 
@@ -243,3 +249,7 @@ Keep them exactly, including any article the rendering carries.
 | Proof of Benefit | Uthibitisho wa Manufaa (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | mtandao wa maarifa | The site's masthead phrase for the CIRIS stack |
 | Coherence Ratchet | Ratchet ya Upatanifu | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |
+| Constitution | Katiba | The CIRIS Constitution, the governing document (replaces the Accord); also the /constitution nav label |
+| CIRIS Scoring | Alama za CIRIS | Product name of the scoring page; keep the CIRIS mark as is |
+| safety case | Hoja ya usalama | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
+| Meta-Goal M-1 | Meta-Goal M-1 | The Constitution's top-level goal; M-1 is a label, keep it |

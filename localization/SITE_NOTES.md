@@ -60,3 +60,24 @@ hard-cases file for judgment. A post-write guard reverts any single value
 that breaks keyset, leaf type, or runtime placeholders, keeping the rest of
 that language's accepted repairs. Dead copy is not paid for: `home.*` has no
 source references and `lobby.*` is retired except `lobby.store.*`.
+
+## Context hygiene (2026-09-02)
+
+After the first two sweep batches: 77% of spend was gpt-5-pro and two-thirds
+of its attempts failed, on disputes that were not translation problems.
+Fixes live in the data the judge and repairer already read:
+
+- Glossaries: the Version History table is bullets (the parser read its
+  header as the term "Version -> Date"); ACCORD's deprecation note allows a
+  historical Accord in the English; Constitution / CIRIS Scoring / safety
+  case / Meta-Goal M-1 rows harvested from reviewed labels; a standing
+  "UI labels and review conduct" rule under Cultural Considerations.
+- The judge's own signal for English-first fixes: any key flagged in four
+  or more languages in a batch report. Fix the English before the next run.
+- Store badge labels (`lobby.store.*`) are two-line badge halves; the rule
+  tells the judge so. Do not translate them as sentences.
+- Queued for the pause (locale files cannot be edited while the lane
+  writes): translate the new keys (homeHero.ogTitle/ogDescription,
+  paths.consumer-ai.ogCardTitle), re-run the changed-English keys in both
+  bundles, splice the three seeAlso labels, harvest a "decision trace" row
+  once its label has been re-run.

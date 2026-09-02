@@ -80,7 +80,7 @@
       "constitution": "Constitution"
     },
     "levels": {
-      "simple": "Plain English",
+      "simple": "Plain language",
       "advanced": "Advanced",
       "srLabel": "Reading level"
     }
@@ -704,9 +704,9 @@
     "method3Desc": "Clone the repository for development, customization, or contributing. Full source code access.",
     "method3Then": "<strong>Then:</strong> Follow the <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> for manual setup instructions",
     "method4Heading": "4. CIRISManager (Enterprise/Canary)",
-    "method4Desc": "Managed canary deployments with gradual rollouts, automated testing, and rollback capabilities. For production fleets.",
+    "method4Desc": "Managed canary deployments with gradual rollouts, automated testing, and rollback capabilities. For production systems.",
     "method4Body": "CIRISManager provides automated blue-green deployments with health monitoring. Contact the team for deployment configurations.",
-    "method4Best": "<strong>Best for:</strong> Enterprise deployments, production fleets, managed infrastructure",
+    "method4Best": "<strong>Best for:</strong> Enterprise deployments, production systems, managed infrastructure",
     "helloHeading": "Hello, CIRIS",
     "helloSub": "The shortest path to a first response. Start the agent, then call it from Python. Both blocks below are copy-pasteable.",
     "helloStep1Heading": "1. Start the agent",
@@ -2718,10 +2718,10 @@
       "What changes",
       "And then"
     ],
-    "summit": "Four fears, one floor. Remove the center you are forced to trust, and all four change at once.",
-    "seeAlsoHead": "The same floor, seen from the other doors",
+    "summit": "Four fears, one answer. Remove the center you are forced to trust, and all four change at once.",
+    "seeAlsoHead": "The same answer, seen from the other fears",
     "cta": "Install on your phone",
-    "back": "back to the lobby"
+    "back": "back to the front page"
   },
   "paths": {
     "consumer-ai": {

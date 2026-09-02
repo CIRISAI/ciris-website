@@ -23,7 +23,7 @@ This glossary defines the canonical translations for key CIRIS terms in Hausa. A
 
 | English | Hausa | Definition |
 |---------|-------|------------|
-| ACCORD | [DEPRECATED] YARJEJENIYA | DEPRECATED — superseded by the CIRIS Constitution. Do NOT coin a rendering for it. The ROLE (`accord holder`, `accord_custody`, `/v1/accord/*`) is live and follows the shipped strings, not this row. Was: The covenant governing agent behavior |
+| ACCORD | [DEPRECATED] YARJEJENIYA | DEPRECATED — superseded by the CIRIS Constitution. Do NOT coin a rendering for it. The ROLE (`accord holder`, `accord_custody`, `/v1/accord/*`) is live and follows the shipped strings, not this row. Was: The covenant governing agent behavior When the ENGLISH SOURCE itself says Accord (history: the document the Constitution replaced), keep the shipped rendering the anchors use and do not flag it; the retired term is in the source, not the translation. |
 | Wise Authority | Hukumar Hikima | Human oversight entity |
 | Conscience | Lamiri | Ethical filter mechanism |
 | Principal Hierarchy | Tsarin Shugabanci | Chain of command for guidance |
@@ -134,6 +134,13 @@ This glossary defines the canonical translations for key CIRIS terms in Hausa. A
 - Secondary: Arabic script (Ajami) - used in religious contexts, traditional writing
 - This glossary standardizes on Boko for accessibility
 
+### UI labels and review conduct (ciris.ai)
+- Keys under `nav.*`, `footer.*`, `lobby.store.*`, and any key ending in `Label`, `Title`, `Btn`, `Cta`, `Head`, `Eyebrow`, `Kicker` or `name` are compact UI labels or headings. Translate them as a noun phrase in this language's own label convention: no leading article unless the language requires one on a label, and the language's own casing for labels.
+- Glossary casing is not normative (the glossary block header says so). Capitalization alone is never a finding, at any severity.
+- Agreement with this glossary or with the anchors is NOT a finding. Report a terminology finding only when the translation disagrees with them.
+- `lobby.store.*` strings are the two lines of an App Store / Google Play badge ("Download on the" + "App Store", "Get it on" + "Google Play"). Judge each line as half of the standard badge wording, never as a sentence.
+- When the English source itself says Accord (a historical reference to the document the Constitution replaced), keep the shipped rendering the anchors use. The retired term in the source is not a terminology finding.
+
 ## DSASPDMA Deferral Taxonomy Terms
 
 | English | Localized | Notes |
@@ -173,10 +180,9 @@ This glossary defines the canonical translations for key CIRIS terms in Hausa. A
 
 ## Version History
 
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | 2026-04-07 | Initial glossary |
-| 1.1 | 2026-05-31 | Added CEG 0.6 cohort-scope vocabulary for 2.9.4 Commons hub |
+- Version | Date | Changes
+- 1.0 | 2026-04-07 | Initial glossary
+- 1.1 | 2026-05-31 | Added CEG 0.6 cohort-scope vocabulary for 2.9.4 Commons hub
 
 ---
 
@@ -194,3 +200,7 @@ Keep them exactly, including any article the rendering carries.
 | Proof of Benefit | Hujjar Amfani (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | yanar gizo na ilimi | The site's masthead phrase for the CIRIS stack |
 | Coherence Ratchet | Ratchet na Daidaituwa | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |
+| Constitution | Tsarin Mulki | The CIRIS Constitution, the governing document (replaces the Accord); also the /constitution nav label |
+| CIRIS Scoring | CIRIS Ƙididdiga | Product name of the scoring page; keep the CIRIS mark as is |
+| safety case | Hujjar aminci | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
+| Meta-Goal M-1 | Meta-Goal M-1 | The Constitution's top-level goal; M-1 is a label, keep it |
