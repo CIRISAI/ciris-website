@@ -202,6 +202,11 @@ PRICE = {
     "anthropic/claude-haiku-4.5": (1.00, 5.00),
     "openai/gpt-5.1": (1.25, 10.00),
     "openai/gpt-5-pro": (15.00, 120.00),
+    # LOCAL PATCH (ciris-website, 2026-09-02): candidate top rungs, priced so
+    # the spend report stays honest when LOCALIZE_LADDER swaps gpt-5-pro out.
+    "google/gemini-3.1-pro-preview": (2.00, 12.00),
+    "openai/gpt-5.4": (2.50, 15.00),
+    "x-ai/grok-4.6": (2.00, 6.00),
     "claude-sonnet-5": (2.00, 10.00),
     "claude-opus-5": (5.00, 25.00),
 }
