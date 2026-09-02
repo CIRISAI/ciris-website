@@ -1561,8 +1561,8 @@
   "researchStatus": {
     "heroLabel": "Tình trạng nghiên cứu",
     "heroUpdated": "Cập nhật: 22 tháng 5, 2026",
-    "heroEyebrow": "Nghiên cứu Đồng thuận về AI qua Cộng đồng",
-    "heroH1": "CIRIS đang xây dựng một kho dấu vết mở để phục vụ nghiên cứu về đồng thuận.",
+    "heroEyebrow": "Nghiên cứu Căn chỉnh do Cộng đồng Đóng góp",
+    "heroH1": "CIRIS đang xây dựng một kho dấu vết mở để phục vụ nghiên cứu đồng thuận.",
     "heroPara": "Chúng tôi cung cấp miễn phí một ứng dụng AI. Với sự đồng ý của bạn, ứng dụng ghi lại hình dạng quá trình suy luận, không bao giờ lưu những từ riêng tư của bạn. Những bản ghi đó trở thành một bản đồ công khai mà các nhà nghiên cứu có thể nghiên cứu để tìm hiểu điều gì giữ AI trung thực khi nó mở rộng quy mô.",
     "heroCtaTrace": "Xem kho dấu vết trực tiếp",
     "heroCtaLens": "Xem mã nguồn Lens",
@@ -1652,7 +1652,7 @@
     "allyName": "Ally",
     "allyPaths": "104",
     "allyBreakdown": "82 hoàn thành, 19 ghi đè/lỗi, 3 đang hoạt động",
-    "allySummary": "Một hành lang hoàn thành ổn định với sự do dự rõ ràng bên trong cùng một bồn địa điểm cao.",
+    "allySummary": "Một hành lang hoàn thành ổn định với sự do dự rõ ràng bên trong cùng một vùng điểm số cao.",
     "scoutName": "Scout",
     "scoutPaths": "42",
     "scoutBreakdown": "39 hoàn thành, 2 từ chối, 1 ghi đè/lỗi",
@@ -1695,7 +1695,7 @@
     "classTheoryTitle": "Lý thuyết",
     "classTheoryBlurb": "Các luận điểm được viết ra, bất kỳ ai cũng đọc được, và được xây dựng để có thể bác bỏ.",
     "classComplianceTitle": "Tuân thủ",
-    "classComplianceBlurb": "Được đối chiếu với bốn khung quản trị, từng quy tắc một, kèm theo biện pháp kiểm soát chứng minh từng quy tắc đó.",
+    "classComplianceBlurb": "CIRIS được đối chiếu với bốn khung quản trị, từng quy tắc một, kèm theo kiểm tra chứng minh từng quy tắc đó.",
     "classTransparencyTitle": "Minh bạch",
     "classTransparencyBlurb": "Mọi quyết định đều là một hồ sơ mở, có chữ ký, mà bạn có thể tự kiểm tra.",
     "safetyEyebrow": "An toàn",
@@ -1716,7 +1716,7 @@
     "proofHeroTitle": "Đừng chỉ tin lời chúng tôi.",
     "proofHeroLede": "An toàn, kỹ thuật, lý thuyết, tuân thủ và minh bạch. Mỗi thứ đều có thể mở ra và kiểm tra trực tiếp, không phải lời khẳng định bạn phải tin mù quáng.",
     "proofResearchCta": "Xem toàn bộ nghiên cứu và nhật ký",
-    "engVerificationCta": "Xem bảng kiểm tra liên tục (15,000+ bài kiểm thử)"
+    "engVerificationCta": "Xem ma trận xác minh liên tục"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Trang toán học",

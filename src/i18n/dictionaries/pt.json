@@ -1617,7 +1617,7 @@
     "paper3Blurb": "O artigo de medição. Um estudo empírico de telemetria sobre o alinhamento de LLM com rastreamento ético padronizado, convertendo traços de raciocínio consentidos em mapas de corredores de conclusão, zonas de hesitação e limites de recusa. Publicado junto com o conjunto de dados aberto de traços de raciocínio.",
     "datasetEyebrow": "Conjunto de dados aberto",
     "datasetTitle": "CIRISAI/reasoning-traces",
-    "datasetBody": "O corpus de traços de raciocínio com privacidade preservada publicado junto com o estudo Constrained Reasoning Chains, a matéria-prima da qual o artigo de medição extrai seus mapas.",
+    "datasetBody": "O conjunto de traços de raciocínio, com detalhes privados removidos, disponibilizado junto com o estudo Constrained Reasoning Chains. O artigo de medição extrai seus mapas a partir dele.",
     "hfOrgTitle": "CIRISAI no Hugging Face",
     "hfOrgBody": "A organização completa de conjuntos de dados e modelos públicos →",
     "sourceRepoNote": "Repositório fonte e lago formal em Lean para o artigo de síntese: <a href=\"https://github.com/CIRISAI/coherence-ratchet\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold text-brand-primary hover:underline\">github.com/CIRISAI/coherence-ratchet</a>.",
@@ -1695,7 +1695,7 @@
     "classTheoryTitle": "Teoria",
     "classTheoryBlurb": "As afirmações estão escritas, qualquer pessoa pode ler, e foram feitas para ser contestadas.",
     "classComplianceTitle": "Conformidade",
-    "classComplianceBlurb": "Comparado a quatro estruturas de governança, regra por regra, com o controle que comprova cada uma.",
+    "classComplianceBlurb": "CIRIS comparado com quatro estruturas de governança, regra por regra, com o controle que comprova cada uma.",
     "classTransparencyTitle": "Transparência",
     "classTransparencyBlurb": "Cada decisão é um registro aberto e assinado que você mesmo pode auditar.",
     "safetyEyebrow": "Segurança",
@@ -1716,7 +1716,7 @@
     "proofHeroTitle": "Não precisa acreditar na nossa palavra.",
     "proofHeroLede": "Segurança, engenharia, teoria, conformidade e transparência. Cada item é algo que você pode abrir e verificar por conta própria, não uma afirmação que você precisa aceitar no fio.",
     "proofResearchCta": "Ver toda a pesquisa e os registros",
-    "engVerificationCta": "Veja a matriz de verificação contínua (15,000+ testes)"
+    "engVerificationCta": "Veja a matriz de verificação contínua"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "A página da matemática",

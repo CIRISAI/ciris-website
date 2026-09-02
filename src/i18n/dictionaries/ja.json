@@ -1695,7 +1695,7 @@
     "classTheoryTitle": "理論",
     "classTheoryBlurb": "主張は文書化されており、誰でも読めて、反証できるように作られています。",
     "classComplianceTitle": "コンプライアンス",
-    "classComplianceBlurb": "4つのガバナンスの枠組みに対し、ルールごとに照合し、各ルールを証明する管理策を示しています。",
+    "classComplianceBlurb": "CIRISを4つのガバナンスの枠組みとルールごとに比較し、各ルールについてそれを裏づけるチェックを示しています。",
     "classTransparencyTitle": "透明性",
     "classTransparencyBlurb": "すべての意思決定は署名された公開記録として残り、自分で監査できます。",
     "safetyEyebrow": "安全性",
@@ -1708,7 +1708,7 @@
     "safetySourceCta": "エンジンのソースを読む",
     "complianceEyebrow": "コンプライアンス",
     "complianceH2": "4つのガバナンスの枠組みにルールごとに対応付けています。",
-    "complianceBody": "CIRISを4つの公開ガバナンスの枠組みに照合し、各ルールについてCIRISが何をするか、それを証明する管理策を示しています。スライドではなく、閲覧できるライブグラフです。",
+    "complianceBody": "CIRISを4つの公開ガバナンスの枠組みと並べて比較し、各ルールについてCIRISが何をするか、それを証明するチェックを示しています。スライドではなく、閲覧できる動的なマップです。",
     "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
     "complianceCta": "コンプライアンスグラフを見る",
     "theoryConstitutionCta": "CIRIS憲法を読む",
@@ -1716,7 +1716,7 @@
     "proofHeroTitle": "私たちの言葉を信じなくていいです。",
     "proofHeroLede": "安全性、エンジニアリング、理論、コンプライアンス、透明性。どれも自分で開いて確認できるものです。信じるだけでいい主張ではありません。",
     "proofResearchCta": "すべての研究とトレースを見る",
-    "engVerificationCta": "継続的検証マトリックスを見る（15,000件以上のテスト）"
+    "engVerificationCta": "継続的検証マトリックスを見る"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "数学ページ",

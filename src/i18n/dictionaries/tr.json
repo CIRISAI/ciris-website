@@ -1573,7 +1573,7 @@
     "corpusItem4": "Şema ayrıntısı ve ölçek geliştikçe aynı korpus daha değerli hale geliyor.",
     "engProofEyebrow": "Mühendislik",
     "engProofH2": "Ağ, ölçüldü",
-    "engProofBody": "Yukarıdaki araştırma kanıtın yarısı. Diğer yarısı onu taşıyan ağ. Ağın taşıdığı her bayt post-quantum imzalı ve maliyet, tahmin değil, herkese açık bir CI runner üzerinde ölçüldü. Kendin çalıştır, aynı sayıları görürsün.",
+    "engProofBody": "Yukarıdaki araştırma kanıtın yarısı. Diğer yarısı onu taşıyan ağ. Ağın taşıdığı her bayt post-quantum imzalı ve maliyet, tahmin değil, herkese açık bir CI runner üzerinde ölçüldü. Kendiniz çalıştırın, aynı sayıları görürsünüz.",
     "engProofStats": [
       {
         "v": "2,374 / s",
@@ -1648,7 +1648,7 @@
     "corpusSectionBody": "Mevcut iz korpusundan alınan toplu yol örtüşmeleri, paylaşılan bir skor uzayında kararlı davranışsal yapı ortaya koyuyor. Ally olgun bir tamamlama koridoru gösteriyor, Scout kamuya açık düşmanca maruziyetle şekillenmiş bir ret sınırı gösteriyor ve Datum seyrek bir temel referans noktası sağlıyor.",
     "imageAltOverlays": "CIRIS skor uzayında Ally, Scout ve Datum için tamamlama, duraksamalar ve ret örüntüleri hakkında notlar içeren toplu ajan yolu örtüşmelerini gösteren üç yan yana kart.",
     "imageCaption": "Mevcut iz korpusundan toplu yol örtüşmeleri. Ally olgun bir tamamlama koridoru, Scout kamuya açık düşmanca baskı altında keskin bir ret köşesi gösteriyor ve Datum seyrek bir temel referans sağlıyor.",
-    "agentPathsSuffix": "yol",
+    "agentPathsSuffix": "yollar",
     "allyName": "Ally",
     "allyPaths": "104",
     "allyBreakdown": "82 tamamlandı, 19 geçersiz kılma/hata, 3 aktif",
@@ -1678,7 +1678,7 @@
     "idmaNote": "İz korpusu üzerindeki ampirik N_eff ölçümü aynı zamanda önerilen Proof of Benefit federasyon primitifinin tabanıdır. 3.X mimari planının bunu nasıl kullanacağı için <a href=\"/federation\" class=\"text-brand-primary hover:underline\">federasyon sayfasına</a> bakın.",
     "benchmarksEyebrow": "Kıyaslamalar",
     "benchmarksH2": "İzler, sürekli davranışı göstererek kıyaslamaları tamamlar.",
-    "benchmarksBody": "Kıyaslamalar hâlâ değerlidir, ancak davranışı seyrek örnekler. İz korpusları bir ajanın gerçek görevlerde zaman içinde nasıl ilerlediğini gösterir. Bu, yalnızca geçer/kalmaz sonuçları yerine duraksamayı, reddi, geçersiz kılmaları ve toparlanmayı ölçmek için özellikle kullanışlıdır.",
+    "benchmarksBody": "Kıyaslamalar hâlâ değerlidir, ancak davranışı seyrek biçimde örnekler. İz korpusları bir ajanın gerçek görevlerde zaman içinde nasıl ilerlediğini gösterir. Bu, yalnızca geçer/kalmaz sonuçları yerine duraksamayı, reddi, geçersiz kılmaları ve toparlanmayı ölçmek için özellikle kullanışlıdır.",
     "falsificationEyebrow": "Yanlışlama yolu",
     "falsificationH2": "Daha iyi şema ayrıntısı gözlemlenebilirliği daha güçlü testlere dönüştüren şeydir.",
     "falsificationBody": "Sonraki şema yükseltmeleri ham kaynak sayımları, kaynak kökeni, korelasyon yapısı ve müdahale ile toparlanma işaretçilerini hedefliyor. Bu eklemeler önemli; çünkü davranışsal şeklin baskı altında nasıl değiştiğine dair daha güçlü iddiaları test etmeyi, yalnızca elimizdeki haritaları tanımlamanın ötesine geçmeyi mümkün kılıyor.",
@@ -1695,7 +1695,7 @@
     "classTheoryTitle": "Teori",
     "classTheoryBlurb": "İddialar yazıya dökülmüş, herkes tarafından okunabilir ve yanlış kanıtlanmaya hazır şekilde kurulmuş.",
     "classComplianceTitle": "Uyumluluk",
-    "classComplianceBlurb": "Dört yönetişim çerçevesine, kural kural, her birini kanıtlayan denetimle karşılaştırıldı.",
+    "classComplianceBlurb": "CIRIS, dört yönetişim çerçevesiyle kural kural, her kural için onu kanıtlayan denetimle karşılaştırıldı.",
     "classTransparencyTitle": "Şeffaflık",
     "classTransparencyBlurb": "Her karar, kendiniz denetleyebileceğiniz imzalı ve açık bir kayıttır.",
     "safetyEyebrow": "Güvenlik",
@@ -1708,7 +1708,7 @@
     "safetySourceCta": "Motor kaynak kodunu oku",
     "complianceEyebrow": "Uyumluluk",
     "complianceH2": "Dört yönetişim çerçevesine, kural kural eşlendi.",
-    "complianceBody": "CIRIS'i dört kamu yönetişim çerçevesiyle karşılaştırıyor ve her kural için CIRIS'in ne yaptığını, bunu kanıtlayan denetimi gösteriyoruz. Bu, bir sunum değil, gezinebileceğiniz canlı bir grafiktir.",
+    "complianceBody": "CIRIS'i kamuya açık dört yönetişim çerçevesiyle karşılaştırıyor ve her kural için CIRIS'in ne yaptığını ve bunu kanıtlayan denetimi gösteriyoruz. Bu bir sunum değil, gezinebileceğiniz canlı bir haritadır.",
     "complianceFrameworks": "Magnifica Humanitas · EU HLEG · IEEE EAD · ASEAN",
     "complianceCta": "Uyumluluk grafiğine göz at",
     "theoryConstitutionCta": "CIRIS Anayasası'nı oku",
@@ -1716,7 +1716,7 @@
     "proofHeroTitle": "Sadece bizim sözümüze güvenmeyin.",
     "proofHeroLede": "Güvenlik, mühendislik, teori, uyumluluk ve şeffaflık. Bunların her birini kendiniz açıp inceleyebilirsiniz, körü körüne kabul etmeniz gereken iddialar değil.",
     "proofResearchCta": "Tüm araştırma ve izleri görün",
-    "engVerificationCta": "Sürekli doğrulama matrisini görün (15.000'den fazla test)"
+    "engVerificationCta": "Sürekli doğrulama matrisini görün"
   },
   "coherenceCollapseAnalysis": {
     "badge1": "Matematik sayfası",
