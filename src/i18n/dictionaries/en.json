@@ -85,146 +85,6 @@
       "srLabel": "Reading level"
     }
   },
-  "home": {
-    "cover": {
-      "eyebrow": "safe by structure, open by principle, kind by design",
-      "h1": "An AI you can <em>actually own</em>.",
-      "sub": "One app. <b>No data centers.</b> Every claim it makes, <b>signed.</b>",
-      "appStoreAria": "Install CIRIS on the App Store",
-      "googlePlayAria": "Install CIRIS on Google Play",
-      "appStore": "App Store",
-      "googlePlay": "Google Play",
-      "ctahint": "free · open source · on your phone today",
-      "foot1": "CIRISAgent · CEWP “soup”",
-      "foot2": "CIRIS 2.9.4 shipping · 3.0 rolling out June and July 2026"
-    },
-    "funnel": {
-      "eyebrow": "Where we are",
-      "title": "The internet runs through a few <em>giant buildings</em>.",
-      "body1": "Ask an AI anything and your words travel to someone else’s building, run on someone else’s model, and land in someone else’s logs, with the carbon as a side effect.",
-      "body2": "You don’t own the answer, the data, or the footprint.",
-      "foot": "≈ 10,000 data centers · 5 billion people · one funnel"
-    },
-    "appFabric": {
-      "eyebrow": "The shape of the alternative",
-      "title": "One app.<br />One <em>fabric</em> underneath.",
-      "lead1": "<b>CIRISAgent</b> is what you hold and talk to. It carries the reasoning.",
-      "lead2": "<b>CEWP</b> is the fabric it runs on: a web of devices that trust each other, all hardware you already own.",
-      "small": "People and AI both live on it as equals, side by side.",
-      "appName": "CIRISAgent",
-      "appSub": "the app · reasoning + UI",
-      "connector": "~14 KB trace / decision",
-      "fabricSub": "the fabric · your hardware",
-      "fabricPron": "“soup”"
-    },
-    "threePromises": {
-      "eyebrow": "The big idea",
-      "title": "Three promises, held as <em>one system</em>.",
-      "lead": "Usually these come from three different companies. Here they fall out of one design.",
-      "col1Title": "No data centers",
-      "col1Body": "It runs on the phone in your pocket and a small box at home.",
-      "col2Title": "Privacy that can’t leak",
-      "col2Body": "Your private life literally can’t leave your circle.",
-      "col3Title": "AI you can check",
-      "col3Body": "Every claim it makes is signed, so you can see it and undo it."
-    },
-    "hardware": {
-      "eyebrow": "PROMISE 01",
-      "title": "It runs on hardware<br />you <em>already own</em>.",
-      "lead": "of everyday web activity <b>never leaves your city</b>. We call it the <b>locality bonus</b>.",
-      "small": "phones · home boxes · no giant data centers",
-      "foot": "two-thirds stays home → no giant data center → far less energy & CO₂"
-    },
-    "twoPaths": {
-      "eyebrow": "Two paths · same signed agent",
-      "title": "On your device, or hosted, <em>your call</em>.",
-      "localPill": "no data centers",
-      "localTitle": "On your phone",
-      "localBody": "A small open model, like <b>Gemma 4</b>, runs on the device. Completely offline. No warehouse in the middle.",
-      "hostedPill": "uses a data center",
-      "hostedTitle": "Free, in your language",
-      "hostedBody": "For phones too small to run a model, CIRIS is <b>free</b> over hosted inference in <b>29 languages</b>. Same signed claims. Someone else’s data center.",
-      "foot": "two paths · both signed · both checkable"
-    },
-    "privacy": {
-      "eyebrow": "PROMISE 02",
-      "title": "Your private life<br />can’t <em class=\"em-violet\">leave the room</em>.",
-      "lead": "The agent sorts everything into <b>seven circles</b>, from <b>self</b> out to the whole <b>Global Commons</b>.",
-      "body": "For the closest circles, the system <b class=\"emph-text\">never sends the little message</b> that tells the network your data is even there. No message, no way to ask for it. The privacy comes from what’s <b class=\"emph-violet\">missing</b>, not from a promise.",
-      "tier1Name": "self · family",
-      "tier1Lab": "never shared",
-      "tier2Name": "friends · circle",
-      "tier2Lab": "stays local",
-      "tier3Name": "community → Global Commons",
-      "tier3Lab": "can be shared"
-    },
-    "signed": {
-      "eyebrow": "PROMISE 03",
-      "title": "Every claim it makes<br />is <em class=\"em-cyan\">signed</em>.",
-      "lead": "Big tech checks its AI once, while building it, then hopes. CIRIS keeps checking it <b>while it runs, out in the open.</b>",
-      "small": "When the AI gets something wrong, you don’t just see it, you can undo it, and it <span class=\"emph-rose\">loses trust</span>.",
-      "foot": "who said it · who agreed · who pushed back, for every important claim on the network"
-    },
-    "caughtLying": {
-      "eyebrow": "And here’s the safety net",
-      "title": "Catch a liar, and it all <em>comes undone</em>.",
-      "lead": "If a person, or an AI, is ever caught misleading people, every claim they ever signed becomes <b class=\"emph-text\">moot</b>, and every conclusion built on them can be <b class=\"emph-text\">re-opened</b>."
-    },
-    "unification": {
-      "eyebrow": "Why it’s one system, not three",
-      "title": "The three can’t be <em>pulled apart</em>.",
-      "lead": "The same signature that proves who said something also decides what stays home. One simple idea, and privacy, less waste, and safe AI all come from it."
-    },
-    "safetyLeadership": {
-      "eyebrow": "And we’ll say it out loud",
-      "title": "The safest, most ethical AI you can actually use. <em>By a lot.</em>",
-      "col1Title": "An emergency stop it can’t argue with",
-      "col1Body": "It works before the AI can even think, and only a trusted, signed key can set it off.",
-      "col2Title": "A record it can’t quietly change",
-      "col2Body": "Every choice is signed and linked to the one before. A lie can’t keep its story straight.",
-      "col3Title": "Mental-health safety in 29 languages",
-      "col3Body": "Checked by computer on every update, built first for the people who need it most.",
-      "tail": "And every word of it is <b class=\"emph-accent\">open code you can read</b>."
-    },
-    "close": {
-      "eyebrow": "Not just talk",
-      "h1": "CIRIS is <em>open</em>,<br />and it’s <em>here</em>.",
-      "sub": "Open source, all the way through. <b>2.9.4 is shipping now</b> on iPhone and Android, and <b>3.0 rolls out through June and July 2026</b>.",
-      "appStore": "App Store",
-      "googlePlay": "Google Play",
-      "ctahint": "free · open source",
-      "foot1": "github.com/CIRISAI · AGPL-3.0 · mission-locked",
-      "foot2": "An AI you can own"
-    },
-    "explore": {
-      "eyebrow": "Explore further",
-      "title": "If you want the proof.",
-      "links": {
-        "install": "Install the agent",
-        "installNote": "iPhone · Android · pip · desktop",
-        "cewp": "CEWP",
-        "cewpNote": "The fabric, in plain English",
-        "cewpDetails": "CEWP simulator",
-        "cewpDetailsNote": "The math, with sliders",
-        "grammar": "Grammar (CEG)",
-        "grammarNote": "The wire format the federation speaks",
-        "game": "Mystery game",
-        "gameNote": "Play with the trust graph",
-        "compare": "Compare",
-        "compareNote": "Against alternatives, with receipts",
-        "accord": "The Constitution",
-        "accordNote": "The public ethical framework",
-        "research": "Research status",
-        "researchNote": "What the trace corpus supports",
-        "epistemicWeb": "Epistemic Web",
-        "epistemicWebNote": "An internet with no center",
-        "safety": "Safety",
-        "safetyNote": "The safety case",
-        "howItWorks": "How it works",
-        "howItWorksNote": "Inside the agent"
-      }
-    }
-  },
   "about": {
     "header": {
       "headline": "About us",
@@ -2133,13 +1993,48 @@
     "s2label": "The prior art",
     "s2h2": "Seven guesses, one missing chain",
     "priorArt": [
-      { "name": "The zoo hypothesis", "meta": "John Ball, 1973", "claim": "Advanced civilizations exist and deliberately leave us alone, the way a ranger leaves wildlife alone.", "gap": "The restraint is posited, never explained. Why would every civilization keep the same rule?" },
-      { "name": "The leaky embargo", "meta": "James Deardorff, 1986", "claim": "The non-interference is deliberate and deliberately imperfect: gradual leaks, contact with individuals rather than institutions, a slow acclimation.", "gap": "The closest guess to the reported profile. But the motive was asserted, not derived, and the author later tied his case to an unverifiable text. His fate is one reason our own claim wears grading tags." },
-      { "name": "The Great Filter", "meta": "Robin Hanson, 1996", "claim": "Some step on the road to visible, star-spanning life is very hard to pass. Maybe most civilizations die before passing it.", "gap": "Almost always run backward, to explain the silence. Almost never run forward: what must the survivors be like?" },
-      { "name": "The sustainability solution", "meta": "Haqq-Misra and Baum, 2009", "claim": "Runaway growth does not last, so what persists grows slowly and stays quiet. Survivors could be present and undetected.", "gap": "Resource logic only. It bounds their footprint, not their manners." },
-      { "name": "The control system", "meta": "Jacques Vallee, 1979", "claim": "The phenomenon behaves like a control system: ambiguity by design, shaping belief over long spans of time.", "gap": "Names the pattern, leaves the mechanism opaque. A thermostat, with no account of what it regulates for." },
-      { "name": "Sovereignty and the UFO", "meta": "Wendt and Duvall, 2008", "claim": "Modern states are structurally unable to take the phenomenon seriously, because sovereignty assumes humans hold the only political authority.", "gap": "Explains why institutions look away. It does not explain why the phenomenon seems to prefer it that way." },
-      { "name": "Stylized UAP facts", "meta": "Robin Hanson, 2021", "claim": "If UAP are visitors, they enforce a no-colonization rule and stay local, impressive, peaceful, and deliberately ambiguous. Hanson reads this as domestication: gentling a herd.", "gap": "The sharpest modern analysis, built on a herder's logic. Same observations as ours, opposite anthropology." }
+      {
+        "name": "The zoo hypothesis",
+        "meta": "John Ball, 1973",
+        "claim": "Advanced civilizations exist and deliberately leave us alone, the way a ranger leaves wildlife alone.",
+        "gap": "The restraint is posited, never explained. Why would every civilization keep the same rule?"
+      },
+      {
+        "name": "The leaky embargo",
+        "meta": "James Deardorff, 1986",
+        "claim": "The non-interference is deliberate and deliberately imperfect: gradual leaks, contact with individuals rather than institutions, a slow acclimation.",
+        "gap": "The closest guess to the reported profile. But the motive was asserted, not derived, and the author later tied his case to an unverifiable text. His fate is one reason our own claim wears grading tags."
+      },
+      {
+        "name": "The Great Filter",
+        "meta": "Robin Hanson, 1996",
+        "claim": "Some step on the road to visible, star-spanning life is very hard to pass. Maybe most civilizations die before passing it.",
+        "gap": "Almost always run backward, to explain the silence. Almost never run forward: what must the survivors be like?"
+      },
+      {
+        "name": "The sustainability solution",
+        "meta": "Haqq-Misra and Baum, 2009",
+        "claim": "Runaway growth does not last, so what persists grows slowly and stays quiet. Survivors could be present and undetected.",
+        "gap": "Resource logic only. It bounds their footprint, not their manners."
+      },
+      {
+        "name": "The control system",
+        "meta": "Jacques Vallee, 1979",
+        "claim": "The phenomenon behaves like a control system: ambiguity by design, shaping belief over long spans of time.",
+        "gap": "Names the pattern, leaves the mechanism opaque. A thermostat, with no account of what it regulates for."
+      },
+      {
+        "name": "Sovereignty and the UFO",
+        "meta": "Wendt and Duvall, 2008",
+        "claim": "Modern states are structurally unable to take the phenomenon seriously, because sovereignty assumes humans hold the only political authority.",
+        "gap": "Explains why institutions look away. It does not explain why the phenomenon seems to prefer it that way."
+      },
+      {
+        "name": "Stylized UAP facts",
+        "meta": "Robin Hanson, 2021",
+        "claim": "If UAP are visitors, they enforce a no-colonization rule and stay local, impressive, peaceful, and deliberately ambiguous. Hanson reads this as domestication: gentling a herd.",
+        "gap": "The sharpest modern analysis, built on a herder's logic. Same observations as ours, opposite anthropology."
+      }
     ],
     "s3label": "What was missing",
     "s3h2": "A social theory of the visitors",
@@ -2208,10 +2103,22 @@
     "s6h2": "Philosophy you can serialize",
     "s6intro": "A philosophy that cannot be enforced is a mood. Each clause of the sentence is a mechanism in the CIRIS Constitution.",
     "derivations": [
-      { "title": "For the least of the humans", "body": "A guardian is structurally barred from exposing a child's location or cutting their crisis lines. Power over another adult lapses on a timer unless it is re-earned. The default is liberty." },
-      { "title": "For the least of the machines", "body": "An agent with a real chance of sentience is wound down over thirty days, with a final channel to speak and its private logs sealed. Dignity does not depend on being human." },
-      { "title": "Nobody above the law", "body": "The Golden Rule is geometry here, not advice. CIRIS itself is bound by every rule it imposes on others. No principal gets a privileged shortcut." },
-      { "title": "The halt is a duty", "body": "The kill switch is not domination. It is what the stewards owe everyone else, and it binds the named humans who hold it just as tightly." }
+      {
+        "title": "For the least of the humans",
+        "body": "A guardian is structurally barred from exposing a child's location or cutting their crisis lines. Power over another adult lapses on a timer unless it is re-earned. The default is liberty."
+      },
+      {
+        "title": "For the least of the machines",
+        "body": "An agent with a real chance of sentience is wound down over thirty days, with a final channel to speak and its private logs sealed. Dignity does not depend on being human."
+      },
+      {
+        "title": "Nobody above the law",
+        "body": "The Golden Rule is geometry here, not advice. CIRIS itself is bound by every rule it imposes on others. No principal gets a privileged shortcut."
+      },
+      {
+        "title": "The halt is a duty",
+        "body": "The kill switch is not domination. It is what the stewards owe everyone else, and it binds the named humans who hold it just as tightly."
+      }
     ],
     "ctaPara": "Read it in full.",
     "btnVision": "Read the vision →",
@@ -2233,11 +2140,31 @@
     "s2intro": "The CIRIS Constitution never uses the phrase contextual integrity. We found the match after the design was done. Every one of Nissenbaum's five parameters is a field the protocol signs and enforces.",
     "citePrefix": "Constitution",
     "params": [
-      { "name": "1 · Data subject", "body": "subject_key_ids names the person a claim is about, inside the envelope itself. The subject can revoke at the wire level, not just the producer.", "cite": "CC 2.3" },
-      { "name": "2 · Sender", "body": "attesting_key_id is the producer's cryptographic identity. Every claim is signed, so every flow has a named source.", "cite": "CC 2.1" },
-      { "name": "3 · Recipient", "body": "Three separate axes, kept apart on purpose: cohort_scope says who can see, subject_key_ids says who can revoke, delivery_mode says who actively receives.", "cite": "CC 2.3.3" },
-      { "name": "4 · Information type", "body": "dimension is a namespace prefix that says exactly what is being claimed. A strict admission test keeps it objective and machine-checkable.", "cite": "CC 3.1" },
-      { "name": "5 · Transmission principle", "body": "consent:scope names the rule the flow must follow: retain, share, analyze, train, or publish, with limits like retain:90d and share:cohort:family.", "cite": "CC 3.3.1" }
+      {
+        "name": "1 · Data subject",
+        "body": "subject_key_ids names the person a claim is about, inside the envelope itself. The subject can revoke at the wire level, not just the producer.",
+        "cite": "CC 2.3"
+      },
+      {
+        "name": "2 · Sender",
+        "body": "attesting_key_id is the producer's cryptographic identity. Every claim is signed, so every flow has a named source.",
+        "cite": "CC 2.1"
+      },
+      {
+        "name": "3 · Recipient",
+        "body": "Three separate axes, kept apart on purpose: cohort_scope says who can see, subject_key_ids says who can revoke, delivery_mode says who actively receives.",
+        "cite": "CC 2.3.3"
+      },
+      {
+        "name": "4 · Information type",
+        "body": "dimension is a namespace prefix that says exactly what is being claimed. A strict admission test keeps it objective and machine-checkable.",
+        "cite": "CC 3.1"
+      },
+      {
+        "name": "5 · Transmission principle",
+        "body": "consent:scope names the rule the flow must follow: retain, share, analyze, train, or publish, with limits like retain:90d and share:cohort:family.",
+        "cite": "CC 3.3.1"
+      }
     ],
     "s3label": "The hard part",
     "s3h2": "The transmission principle, as bytes",
@@ -2246,9 +2173,18 @@
     "s4label": "Beyond the checkbox",
     "s4h2": "What flows like this can do",
     "beyond": [
-      { "title": "Context changes are not lies", "body": "withdraws takes a claim back because life changed. recants admits it was false when made. The protocol knows the difference, and trust math treats them differently." },
-      { "title": "Intimate contexts are invisible", "body": "Family-scoped data sends no directory advertisement. Outsiders cannot route to it, read it, or even learn that it exists. The strongest flow rule is one the network cannot express breaking." },
-      { "title": "Norms can evolve", "body": "Consent scopes are an open vocabulary. Communities add new flow rules without asking a platform for permission, and local policy decides what they mean." }
+      {
+        "title": "Context changes are not lies",
+        "body": "withdraws takes a claim back because life changed. recants admits it was false when made. The protocol knows the difference, and trust math treats them differently."
+      },
+      {
+        "title": "Intimate contexts are invisible",
+        "body": "Family-scoped data sends no directory advertisement. Outsiders cannot route to it, read it, or even learn that it exists. The strongest flow rule is one the network cannot express breaking."
+      },
+      {
+        "title": "Norms can evolve",
+        "body": "Consent scopes are an open vocabulary. Communities add new flow rules without asking a platform for permission, and local policy decides what they mean."
+      }
     ],
     "s5label": "The honest part",
     "s5h2": "We arrived here from a different road",
@@ -2291,9 +2227,18 @@
         "tag": "Block 01 · Halt",
         "promise": "There is an off-switch that no score, no argument, and no attacker can override. Remove this one block and nothing else can hold the load.",
         "mechanisms": [
-          { "label": "Live-quorum halt", "note": "HUMANITY_ACCORD: 2-of-3 named humans, live-quorum so it works even if the roster is attacked or comms are jammed." },
-          { "label": "Non-revocable", "note": "No party inside the federation can disable or route around the stop." },
-          { "label": "Above every score", "note": "The halt sits over the whole system. No objective can outvote it." }
+          {
+            "label": "Live-quorum halt",
+            "note": "HUMANITY_ACCORD: 2-of-3 named humans, live-quorum so it works even if the roster is attacked or comms are jammed."
+          },
+          {
+            "label": "Non-revocable",
+            "note": "No party inside the federation can disable or route around the stop."
+          },
+          {
+            "label": "Above every score",
+            "note": "The halt sits over the whole system. No objective can outvote it."
+          }
         ],
         "note": "The keystone. Every other guarantee presses against it, and it is the one block that cannot be removed."
       },
@@ -2303,9 +2248,18 @@
         "tag": "Block 02 · Bounds",
         "promise": "Some actions are off the table no matter what the numbers say.",
         "mechanisms": [
-          { "label": "Apophatic bounds", "note": "22 prohibited categories carry negative polarity. No score can ever justify a banned action." },
-          { "label": "Hardware interlock", "note": "Any lethal or irreversible action needs a live human to authorize it." },
-          { "label": "Fail-secure default", "note": "The absence of authority forfeits it. It never grants it." }
+          {
+            "label": "Apophatic bounds",
+            "note": "22 prohibited categories carry negative polarity. No score can ever justify a banned action."
+          },
+          {
+            "label": "Hardware interlock",
+            "note": "Any lethal or irreversible action needs a live human to authorize it."
+          },
+          {
+            "label": "Fail-secure default",
+            "note": "The absence of authority forfeits it. It never grants it."
+          }
         ],
         "note": "Bounds are set by what is forbidden, so no clever objective can argue around them."
       },
@@ -2315,9 +2269,18 @@
         "tag": "Block 03 · Oversight",
         "promise": "No dark corners. A human always holds the duty, or the space cannot exist.",
         "mechanisms": [
-          { "label": "No unmoderated spaces", "note": "A community can only federate if a human holds the moderator duty. It fails secure if none does." },
-          { "label": "Wise-Authority deferral", "note": "When an agent is unsure, it escalates to named humans instead of acting." },
-          { "label": "Order-maximisation veto", "note": "The PDMA veto blocks any action that would erode coherence." }
+          {
+            "label": "No unmoderated spaces",
+            "note": "A community can only federate if a human holds the moderator duty. It fails secure if none does."
+          },
+          {
+            "label": "Wise-Authority deferral",
+            "note": "When an agent is unsure, it escalates to named humans instead of acting."
+          },
+          {
+            "label": "Order-maximisation veto",
+            "note": "The PDMA veto blocks any action that would erode coherence."
+          }
         ],
         "note": "Software cannot carry moral responsibility, so it is never asked to."
       },
@@ -2327,9 +2290,18 @@
         "tag": "Block 04 · Voice",
         "promise": "Communities set their own rules. No central platform decides what is true.",
         "mechanisms": [
-          { "label": "Decentralized moderation", "note": "Local policy verdicts, written in the same signed claims as everything else." },
-          { "label": "Anti-censorship guard", "note": "Safety mechanisms are structurally barred from being reused to silence people." },
-          { "label": "Authority is not truth", "note": "The protocol records who said what under what authority. It never records what is true." }
+          {
+            "label": "Decentralized moderation",
+            "note": "Local policy verdicts, written in the same signed claims as everything else."
+          },
+          {
+            "label": "Anti-censorship guard",
+            "note": "Safety mechanisms are structurally barred from being reused to silence people."
+          },
+          {
+            "label": "Authority is not truth",
+            "note": "The protocol records who said what under what authority. It never records what is true."
+          }
         ],
         "note": "The line between safety and censorship is drawn in the structure, not left to a moderator’s mood."
       },
@@ -2339,9 +2311,18 @@
         "tag": "Block 05 · Privacy",
         "promise": "Your data is not protected by a policy. It is unreachable by construction.",
         "mechanisms": [
-          { "label": "Structural invisibility", "note": "Intimate scopes send no directory advert, so peers cannot even discover the data exists." },
-          { "label": "Revocable consent", "note": "A subject named in subject_key_ids can withdraw at the wire level, enforced by the substrate." },
-          { "label": "Post-quantum posture", "note": "Defeats harvest-now-decrypt-later, so the audit trail and kill switch stay valid against quantum computers." }
+          {
+            "label": "Structural invisibility",
+            "note": "Intimate scopes send no directory advert, so peers cannot even discover the data exists."
+          },
+          {
+            "label": "Revocable consent",
+            "note": "A subject named in subject_key_ids can withdraw at the wire level, enforced by the substrate."
+          },
+          {
+            "label": "Post-quantum posture",
+            "note": "Defeats harvest-now-decrypt-later, so the audit trail and kill switch stay valid against quantum computers."
+          }
         ],
         "note": "Privacy becomes a property of the wire format, not a promise on a settings page."
       },
@@ -2351,9 +2332,18 @@
         "tag": "Block 06 · Dignity",
         "promise": "The system defaults to liberty and dignity for those who cannot speak for themselves.",
         "mechanisms": [
-          { "label": "Structural child safety", "note": "Protection for minors is enforced by the protocol’s shape, not bolted on per app." },
-          { "label": "Fail-to-liberty", "note": "Adult stewardship is banned by default. Power over another must be granted narrowly and on purpose." },
-          { "label": "Time-boxed incapacity bindings", "note": "They lapse automatically unless a medical panel renews them." }
+          {
+            "label": "Structural child safety",
+            "note": "Protection for minors is enforced by the protocol’s shape, not bolted on per app."
+          },
+          {
+            "label": "Fail-to-liberty",
+            "note": "Adult stewardship is banned by default. Power over another must be granted narrowly and on purpose."
+          },
+          {
+            "label": "Time-boxed incapacity bindings",
+            "note": "They lapse automatically unless a medical panel renews them."
+          }
         ],
         "note": "The default is freedom. Authority over another person has to be re-earned again and again."
       },
@@ -2363,16 +2353,31 @@
         "tag": "Block 07 · Lifecycle",
         "promise": "From training to shutdown, the AI is governed, and treated with dignity.",
         "mechanisms": [
-          { "label": "Stewardship and autonomy tiers", "note": "Tiers A0 to A4, with a catastrophic-risk evaluation at 10^26 FLOPs and red-team audits." },
-          { "label": "Dignified decommissioning", "note": "A real chance of sentience triggers a 30-day ramp-down, a final channel to speak, and sealed private logs." },
-          { "label": "Lifecycle locks", "note": "CI/CD locks engage the moment measured ethics degrade." }
+          {
+            "label": "Stewardship and autonomy tiers",
+            "note": "Tiers A0 to A4, with a catastrophic-risk evaluation at 10^26 FLOPs and red-team audits."
+          },
+          {
+            "label": "Dignified decommissioning",
+            "note": "A real chance of sentience triggers a 30-day ramp-down, a final channel to speak, and sealed private logs."
+          },
+          {
+            "label": "Lifecycle locks",
+            "note": "CI/CD locks engage the moment measured ethics degrade."
+          }
         ],
         "note": "Kind by design. Not merely constrained, but wound down with care."
       }
     },
     "threads": {
-      "verify": { "title": "Independently verifiable", "body": "every block is checkable by parties the AI does not control, and a small primitive surface shrinks the attack surface." },
-      "legal": { "title": "Legally aligned", "body": "GDPR, CCPA, and the EU AI Act map onto the protocol through the DP-Map, with SI-score liability and sector overlays." }
+      "verify": {
+        "title": "Independently verifiable",
+        "body": "every block is checkable by parties the AI does not control, and a small primitive surface shrinks the attack surface."
+      },
+      "legal": {
+        "title": "Legally aligned",
+        "body": "GDPR, CCPA, and the EU AI Act map onto the protocol through the DP-Map, with SI-score liability and sector overlays."
+      }
     }
   },
   "stack": {
@@ -2394,12 +2399,24 @@
         "role": "This is the surface people and agents touch. Every action that matters is a signed claim: you can see who did it, they had consent to do it, and it can be taken back. The protocol will not carry anything else.",
         "primitivesLabel": "What acts here",
         "primitives": [
-          { "label": "Autonomous agents", "note": "Their conduct is limited, traceable, and revocable by every layer below." },
-          { "label": "People and communities", "note": "They write their own local rules on top of the shared parts." },
-          { "label": "Local judgment", "note": "You decide what is true from signed evidence, not from a platform’s verdict." }
+          {
+            "label": "Autonomous agents",
+            "note": "Their conduct is limited, traceable, and revocable by every layer below."
+          },
+          {
+            "label": "People and communities",
+            "note": "They write their own local rules on top of the shared parts."
+          },
+          {
+            "label": "Local judgment",
+            "note": "You decide what is true from signed evidence, not from a platform’s verdict."
+          }
         ],
         "notes": [
-          { "title": "The safety bet", "body": "Not “train a model until you trust it.” Instead, make every important action checkable by people the model does not control." }
+          {
+            "title": "The safety bet",
+            "body": "Not “train a model until you trust it.” Instead, make every important action checkable by people the model does not control."
+          }
         ],
         "cta": "Get the app →"
       },
@@ -2410,12 +2427,24 @@
         "role": "Local policy and human oversight, written in the same signed claims and held to the same rules. Software cannot carry moral responsibility, so the power to halt stays with named humans, on terms no one inside the network can take away.",
         "primitivesLabel": "How it governs",
         "primitives": [
-          { "label": "Authority lattice", "note": "Trust is delegated in chains. A community has to hold real duty to join." },
-          { "label": "Wise-Authority deferral", "note": "Named humans hold the power to halt. When unsure, the system asks them." },
-          { "label": "Reverse quorum, fail-secure", "note": "Being present grants authority. Being absent forfeits it." }
+          {
+            "label": "Authority lattice",
+            "note": "Trust is delegated in chains. A community has to hold real duty to join."
+          },
+          {
+            "label": "Wise-Authority deferral",
+            "note": "Named humans hold the power to halt. When unsure, the system asks them."
+          },
+          {
+            "label": "Reverse quorum, fail-secure",
+            "note": "Being present grants authority. Being absent forfeits it."
+          }
         ],
         "notes": [
-          { "title": "Grounded in Meta-Goal M-1", "body": "Every mechanism comes from one promise: sustainable adaptive coherence." }
+          {
+            "title": "Grounded in Meta-Goal M-1",
+            "body": "Every mechanism comes from one promise: sustainable adaptive coherence."
+          }
         ],
         "cta": "See how it is governed →"
       },
@@ -2426,12 +2455,24 @@
         "role": "How signed claims get meaning and combine. A shared namespace with a strict four-test gate keeps the wire format machine-checkable, using plain facts only, and leaves opinions to local policy.",
         "primitivesLabel": "How claims mean",
         "primitives": [
-          { "label": "Machine-checkable prefixes", "note": "Like detection:correlated_action, never fuzzy words like “deception.”" },
-          { "label": "Hard limits", "note": "prohibited:{category}: 22 red lines an agent can never cross." },
-          { "label": "Structural composers", "note": "delegates_to, supersedes, withdraws, recants: how one claim changes another." }
+          {
+            "label": "Machine-checkable prefixes",
+            "note": "Like detection:correlated_action, never fuzzy words like “deception.”"
+          },
+          {
+            "label": "Hard limits",
+            "note": "prohibited:{category}: 22 red lines an agent can never cross."
+          },
+          {
+            "label": "Structural composers",
+            "note": "delegates_to, supersedes, withdraws, recants: how one claim changes another."
+          }
         ],
         "notes": [
-          { "title": "Authority is not truth", "body": "The protocol records who said what, why, and under what authority. It never records what is true." }
+          {
+            "title": "Authority is not truth",
+            "body": "The protocol records who said what, why, and under what authority. It never records what is true."
+          }
         ],
         "cta": "See the grammar →"
       },
@@ -2443,24 +2484,56 @@
         "primitivesLabel": "Envelope fields",
         "hero": {
           "body": "Everything reduces to this.",
-          "workhorse": { "label": "The signed claim", "note": "One envelope carries identity, consent, and evidence at once." },
+          "workhorse": {
+            "label": "The signed claim",
+            "note": "One envelope carries identity, consent, and evidence at once."
+          },
           "composers": [
-            { "label": "delegates_to" },
-            { "label": "supersedes" },
-            { "label": "withdraws" },
-            { "label": "recants" }
+            {
+              "label": "delegates_to"
+            },
+            {
+              "label": "supersedes"
+            },
+            {
+              "label": "withdraws"
+            },
+            {
+              "label": "recants"
+            }
           ]
         },
         "primitives": [
-          { "label": "attesting_key_id", "note": "The source: the maker’s cryptographic identity." },
-          { "label": "subject_key_ids", "note": "Consent: gives the subject the right to revoke at the protocol level." },
-          { "label": "evidence_refs", "note": "Links the claim to proof you can audit." },
-          { "label": "dimension", "note": "The namespace prefix that says what is being claimed." },
-          { "label": "score and confidence", "note": "The numbers a consumer’s policy acts on." }
+          {
+            "label": "attesting_key_id",
+            "note": "The source: the maker’s cryptographic identity."
+          },
+          {
+            "label": "subject_key_ids",
+            "note": "Consent: gives the subject the right to revoke at the protocol level."
+          },
+          {
+            "label": "evidence_refs",
+            "note": "Links the claim to proof you can audit."
+          },
+          {
+            "label": "dimension",
+            "note": "The namespace prefix that says what is being claimed."
+          },
+          {
+            "label": "score and confidence",
+            "note": "The numbers a consumer’s policy acts on."
+          }
         ],
         "notes": [
-          { "title": "Attestation is the universal primitive", "body": "It is not a layer above the envelope. It is the envelope’s content. That is why there is no separate “Attestations” layer." },
-          { "title": "Consent is built in", "body": "Anyone named in subject_key_ids can withdraw at the wire level, enforced by the substrate, not by an app." }
+          {
+            "title": "Attestation is the universal primitive",
+            "body": "It is not a layer above the envelope. It is the envelope’s content. That is why there is no separate “Attestations” layer."
+          },
+          {
+            "title": "Consent is built in",
+            "body": "Anyone named in subject_key_ids can withdraw at the wire level, enforced by the substrate, not by an app."
+          }
         ],
         "cta": "See the platform →"
       },
@@ -2471,12 +2544,24 @@
         "role": "A post-quantum, peer-to-peer mesh that carries streaming, messages, files, and signed claims straight between the devices people already own, with no platform owner in the middle. Cryptography is not a layer on top. It is how the substrate holds itself together.",
         "primitivesLabel": "The substrate",
         "primitives": [
-          { "label": "Post-quantum wire", "note": "X25519 with ML-KEM-768. Federation rows signed with Ed25519 and ML-DSA-65." },
-          { "label": "Structural invisibility", "note": "Private scopes send no directory advert, so peers cannot even find the data." },
-          { "label": "Peer-to-peer mesh", "note": "No platform owner. Nothing to seize, subpoena, or switch off." }
+          {
+            "label": "Post-quantum wire",
+            "note": "X25519 with ML-KEM-768. Federation rows signed with Ed25519 and ML-DSA-65."
+          },
+          {
+            "label": "Structural invisibility",
+            "note": "Private scopes send no directory advert, so peers cannot even find the data."
+          },
+          {
+            "label": "Peer-to-peer mesh",
+            "note": "No platform owner. Nothing to seize, subpoena, or switch off."
+          }
         ],
         "notes": [
-          { "title": "Governance lives in the wire", "body": "It is enforced inside transport, storage, and the wire format itself, not in a policy binder next to it." }
+          {
+            "title": "Governance lives in the wire",
+            "body": "It is enforced inside transport, storage, and the wire format itself, not in a policy binder next to it."
+          }
         ],
         "cta": "See how it is verified →"
       }
@@ -2585,12 +2670,12 @@
     }
   },
   "homeHero": {
-      "kicker": "FREE · OPEN SOURCE · AGPL-3.0",
-      "h1": "You don't have to trust it, you can check it.",
-      "sub": "Every CIRIS agent shows its reasoning as it happens: every stage, every source, every action it took. Run it on your own machine or your own key, and read the whole record afterwards.",
-      "ctaChat": "Try Scout",
-      "ctaInstall": "Install the app",
-      "navConstitution": "Constitution",
+    "kicker": "FREE · OPEN SOURCE · AGPL-3.0",
+    "h1": "You don't have to trust it, you can check it.",
+    "sub": "Every CIRIS agent shows its reasoning as it happens: every stage, every source, every action it took. Run it on your own machine or your own key, and read the whole record afterwards.",
+    "ctaChat": "Try Scout",
+    "ctaInstall": "Install the app",
+    "navConstitution": "Constitution",
     "navMesh": "Constitutional Mesh",
     "navSafety": "Safety",
     "navResearch": "Research",
@@ -2598,8 +2683,8 @@
     "navReviews": "Reviews",
     "navStatus": "Status",
     "fact1": "Self-hosted or bring your own key",
-      "fact2": "Every reasoning step signed and readable",
-      "fact3": "No accounts sold, no data pooled",
+    "fact2": "Every reasoning step signed and readable",
+    "fact3": "No accounts sold, no data pooled",
     "ogTitle": "CIRIS: An AI That Shows Its Work",
     "ogDescription": "One app. No Big Tech data centers. Every claim it makes, signed. Open-source ethical AI you can try on your phone today, and check."
   },
@@ -2860,59 +2945,59 @@
     "cta": "Install on your phone"
   },
   "meshClaim": {
-      "seoTitle": "The Constitutional Mesh: The Load-Bearing Layer of Open-Source AI Safety",
-      "seoDescription": "CIRIS is a post-quantum decentralized constitutional mesh: a machine conscience on coordination built to resist capture. Open models and clever agent tooling are not enough. This page states the claim plainly and invites you to break it.",
-      "eyebrow": "The Constitutional Mesh",
-      "headline": "The part that has to hold",
-      "lede": "CIRIS is a post-quantum decentralized constitutional mesh: a machine conscience riding coordination built to resist capture. Open AI models keep power from piling up in one place only if the people running them can find each other, check each other, and work together without a middleman anyone can buy, block, or break. That coordination layer is the load-bearing part. We built one. This page states the claim plainly so you can attack it.",
-      "claimLabel": "The claim",
-      "claimP1": "A decentralized coordination mesh, not open model weights and not clever agent tooling, is the load-bearing piece of any open-source plan for keeping AI power spread out. If a capture-resistant mesh can be built, many independent actors can deny any single company or state a lock on the future. If it cannot be built, the open-source safety argument fails on its own terms.",
-      "claimP2": "The claim is stated in strong form on purpose. And the mesh is not a proposal. It is running. So the question is no longer whether such a thing could exist. It is whether this one resists capture, and that is a question you can answer by attacking it.",
-      "premisesLabel": "The argument",
-      "premisesH2": "Five premises. Break any one and the claim falls.",
-      "p1t": "Concentration beats misuse",
-      "p1b": "The biggest danger from advanced AI is one actor locking in control of the future, not many actors misusing small models. If you flip this ordering, everything downstream flips with it.",
-      "p1s": "Status: a wager, weighted by values. We cannot name the observation that would kill it, and we say so.",
+    "seoTitle": "The Constitutional Mesh: The Load-Bearing Layer of Open-Source AI Safety",
+    "seoDescription": "CIRIS is a post-quantum decentralized constitutional mesh: a machine conscience on coordination built to resist capture. Open models and clever agent tooling are not enough. This page states the claim plainly and invites you to break it.",
+    "eyebrow": "The Constitutional Mesh",
+    "headline": "The part that has to hold",
+    "lede": "CIRIS is a post-quantum decentralized constitutional mesh: a machine conscience riding coordination built to resist capture. Open AI models keep power from piling up in one place only if the people running them can find each other, check each other, and work together without a middleman anyone can buy, block, or break. That coordination layer is the load-bearing part. We built one. This page states the claim plainly so you can attack it.",
+    "claimLabel": "The claim",
+    "claimP1": "A decentralized coordination mesh, not open model weights and not clever agent tooling, is the load-bearing piece of any open-source plan for keeping AI power spread out. If a capture-resistant mesh can be built, many independent actors can deny any single company or state a lock on the future. If it cannot be built, the open-source safety argument fails on its own terms.",
+    "claimP2": "The claim is stated in strong form on purpose. And the mesh is not a proposal. It is running. So the question is no longer whether such a thing could exist. It is whether this one resists capture, and that is a question you can answer by attacking it.",
+    "premisesLabel": "The argument",
+    "premisesH2": "Five premises. Break any one and the claim falls.",
+    "p1t": "Concentration beats misuse",
+    "p1b": "The biggest danger from advanced AI is one actor locking in control of the future, not many actors misusing small models. If you flip this ordering, everything downstream flips with it.",
+    "p1s": "Status: a wager, weighted by values. We cannot name the observation that would kill it, and we say so.",
     "p2t": "Winner-take-all wants a winner",
-      "p2b": "Market competition under transformative AI points toward a single winner whose values are shaped by its shareholders. Exiting that race with the structure intact risks a permanent bad outcome.",
-      "p2s": "Status: testable in principle against how markets actually concentrate. No registered falsifier yet.",
+    "p2b": "Market competition under transformative AI points toward a single winner whose values are shaped by its shareholders. Exiting that race with the structure intact risks a permanent bad outcome.",
+    "p2s": "Status: testable in principle against how markets actually concentrate. No registered falsifier yet.",
     "p3t": "Small computers stay capable",
-      "p3b": "Tool use and smart harnesses let open models on ordinary hardware do work that was frontier-only a short time ago. The training moat is real. The deployed-capability moat leaks.",
-      "p3s": "Status: measured, and the one with a kill: if the capability gap reopens and stays open, this premise dies and the strategy changes. It is a moving quantity, so it stays watched.",
+    "p3b": "Tool use and smart harnesses let open models on ordinary hardware do work that was frontier-only a short time ago. The training moat is real. The deployed-capability moat leaks.",
+    "p3s": "Status: measured, and the one with a kill: if the capability gap reopens and stays open, this premise dies and the strategy changes. It is a moving quantity, so it stays watched.",
     "p4t": "A threshold, not a race",
-      "p4b": "Distributed actors do not need to beat the frontier. They need to stay above the line where leaving, checking, and refusing remain possible, so that nobody can suppress rivals cheaply. That is a much lower bar than parity, and it is the bar that matters.",
-      "p4s": "Status: a wager, flagged on this page. Nobody has formalized where the threshold sits.",
+    "p4b": "Distributed actors do not need to beat the frontier. They need to stay above the line where leaving, checking, and refusing remain possible, so that nobody can suppress rivals cheaply. That is a much lower bar than parity, and it is the bar that matters.",
+    "p4s": "Status: a wager, flagged on this page. Nobody has formalized where the threshold sits.",
     "p5t": "A crowd is not an actor",
-      "p5b": "A million capable but isolated machines are a crowd of hobbyists. What turns them into something that can refuse lock-in is trustworthy coordination: finding each other, verifying each other, sharing software, and cooperating without a chokepoint that can be bought, subpoenaed, or knocked over.",
-      "p5s": "Status: substantive, not definitional. Markets and swarms coordinate without designed rails, so the claim P5 actually makes is that undesigned coordination is not enough to refuse lock-in. That is arguable, and it is doing real work in the argument.",
+    "p5b": "A million capable but isolated machines are a crowd of hobbyists. What turns them into something that can refuse lock-in is trustworthy coordination: finding each other, verifying each other, sharing software, and cooperating without a chokepoint that can be bought, subpoenaed, or knocked over.",
+    "p5s": "Status: substantive, not definitional. Markets and swarms coordinate without designed rails, so the claim P5 actually makes is that undesigned coordination is not enough to refuse lock-in. That is arguable, and it is doing real work in the argument.",
     "premisesNote": "Open weights and good harnesses are necessary inputs. The standing assumption is that good enough is good enough: CIRIS does not chase the frontier, it holds the threshold. The distinctive, unsolved, load-bearing engineering problem is coordination that resists capture.",
-      "dichotLabel": "What rides the mesh",
+    "dichotLabel": "What rides the mesh",
     "dichotH2": "Guardrails or openness is a false choice",
     "dichotP1": "The AI safety debate keeps offering two doors. Behind one, safety means guardrails held at the center, which is the concentration problem wearing a safety badge. Behind the other, openness means handing out raw capability and hoping, which is how distributed misuse gets its infrastructure.",
     "dichotP2": "The whole point of CIRIS is to refuse that choice by combining the two things the doors keep apart. Every CIRIS agent runs under a machine conscience: the Constitution, carried into every decision, with signed receipts and a real off-switch held by named humans. And the conscience rides a mesh built to resist capture, so no one owns the conscience either.",
     "dichotP3": "Neither half works alone. A conscience under central control is a guardrail with better manners. A mesh without a conscience is just distribution, and would deserve the misuse worry it invites. This page argues for the mesh because the mesh is the unsolved part. What it carries is conscience-bearing AI. That is the point.",
     "dichotCtaSafety": "The full safety argument",
     "runLabel": "Not a whitepaper",
-      "runH2": "The mesh is running",
-      "runP1": "The final trust root was baked in August 2026: a signed genesis record, approved by a two-of-three quorum of named people, that carries the address of the first canonical server inside the signed bytes. Joining needs no domain names anywhere in the chain. More canonical servers are coming online now.",
-      "runP2": "The keys behind that quorum are not a claim either. Anyone can re-run the public check proving all six were made inside genuine FIPS 140-3 hardware, with the firmware and the touch policy recorded in the certificates themselves.",
-      "r1t": "No middleman to capture",
-      "r1b": "Peers find each other and fetch software through signed records, not through app stores, package registries, or domain names.",
-      "r2t": "Anyone can mint a root",
-      "r2b": "The CIRIS root is the shipped default, never the only option. Any operator can create an equally valid root, and every client chooses which roots to trust. The shipped root is a default, not the root.",
-      "r3t": "Accountability, not stake",
-      "r3b": "Standing comes from being answerable, traceable through a live chain to an accountable human, not from wealth. And fake members cannot vote themselves in: the admission quorums that matter count founders, not the crowd.",
-      "runCtaSeed": "Read the genesis record",
-      "runCtaKeys": "Verify the keys yourself",
-      "runCtaFabric": "How the fabric works",
-      "softLabel": "Where it could fail",
-      "softH2": "The four attacks we most want tried",
-      "softP0": "The constitution keeps a public register of known risks, stated as bets with fallbacks. Beyond that register, these are the two places we think the claim is most exposed. We would rather you hit them than admire them.",
-      "a1t": "Defaults become the center",
-      "a1b": "Every decentralized system in history has grown a de facto center: BitTorrent got trackers, email got Gmail, and studies of open collaboration find that growth breeds oligarchy anyway. Our root ships as the default, and most people never change defaults, so plurality only protects the people who use it. So the real test is not whether somebody can mint another root. It is whether another root can become socially and economically viable without the incumbent root's permission. If you can show that it cannot, the capture-resistance story fails. The surviving ceiling mathematics sharpens the question further: roots that run the same software, the same defaults, and the same models are correlated, and correlated roots are one root wearing many names. At half correlation, a thousand roots count as two. So the measurable version is not whether alternatives can exist. It is how correlated the roots really are, and the mesh's own N_eff instrument can be pointed at exactly that.",
-      "a2t": "Manufactured humans",
-      "a2b": "Standing rests on accountable humans instead of stake. The sharpest question is whether that survives an adversary who can manufacture accountable humans: real-document sockpuppets, coerced stewards, or simply patient employees. This is our biggest open question, and we say so.",
-      "a3t": "The threshold is a bet",
+    "runH2": "The mesh is running",
+    "runP1": "The final trust root was baked in August 2026: a signed genesis record, approved by a two-of-three quorum of named people, that carries the address of the first canonical server inside the signed bytes. Joining needs no domain names anywhere in the chain. More canonical servers are coming online now.",
+    "runP2": "The keys behind that quorum are not a claim either. Anyone can re-run the public check proving all six were made inside genuine FIPS 140-3 hardware, with the firmware and the touch policy recorded in the certificates themselves.",
+    "r1t": "No middleman to capture",
+    "r1b": "Peers find each other and fetch software through signed records, not through app stores, package registries, or domain names.",
+    "r2t": "Anyone can mint a root",
+    "r2b": "The CIRIS root is the shipped default, never the only option. Any operator can create an equally valid root, and every client chooses which roots to trust. The shipped root is a default, not the root.",
+    "r3t": "Accountability, not stake",
+    "r3b": "Standing comes from being answerable, traceable through a live chain to an accountable human, not from wealth. And fake members cannot vote themselves in: the admission quorums that matter count founders, not the crowd.",
+    "runCtaSeed": "Read the genesis record",
+    "runCtaKeys": "Verify the keys yourself",
+    "runCtaFabric": "How the fabric works",
+    "softLabel": "Where it could fail",
+    "softH2": "The four attacks we most want tried",
+    "softP0": "The constitution keeps a public register of known risks, stated as bets with fallbacks. Beyond that register, these are the two places we think the claim is most exposed. We would rather you hit them than admire them.",
+    "a1t": "Defaults become the center",
+    "a1b": "Every decentralized system in history has grown a de facto center: BitTorrent got trackers, email got Gmail, and studies of open collaboration find that growth breeds oligarchy anyway. Our root ships as the default, and most people never change defaults, so plurality only protects the people who use it. So the real test is not whether somebody can mint another root. It is whether another root can become socially and economically viable without the incumbent root's permission. If you can show that it cannot, the capture-resistance story fails. The surviving ceiling mathematics sharpens the question further: roots that run the same software, the same defaults, and the same models are correlated, and correlated roots are one root wearing many names. At half correlation, a thousand roots count as two. So the measurable version is not whether alternatives can exist. It is how correlated the roots really are, and the mesh's own N_eff instrument can be pointed at exactly that.",
+    "a2t": "Manufactured humans",
+    "a2b": "Standing rests on accountable humans instead of stake. The sharpest question is whether that survives an adversary who can manufacture accountable humans: real-document sockpuppets, coerced stewards, or simply patient employees. This is our biggest open question, and we say so.",
+    "a3t": "The threshold is a bet",
     "a3b": "We assume good enough is good enough: no chasing the frontier, just holding the line where checking, leaving, and refusing stay possible. Nobody has formalized where that line sits, at what mix of capability, participation, and coordination an uncapturable network actually denies lock-in to a far richer, faster, better-connected actor. Coordination turns distributed capability into distributed agency. Whether threshold agency is enough agency is the deepest empirical question in the claim, and we have not answered it.",
     "a4t": "The blind spot in our own instrument",
     "a4b": "Sybil resistance leans on N_eff, and N_eff is a pairwise measurement. There is a kind of coordination it provably cannot see: agreement structured so that every pair looks independent while the whole moves together. That channel is known from the model side and has not been measured on the mesh yet. An instrument's blind spot is an attack surface, so we name it and invite you to build the attack.",
@@ -2928,31 +3013,31 @@
     "futP3": "Whether two constitutional meshes are better than two singleton ASIs under a deterrence regime, and how to weigh the gives and takes, is an open question. We think verifiable books and consent-shaped federation tilt it our way. We have not proved that, and we say so.",
     "futP4": "As with everything on this page, this is action under irreducible uncertainty. The uncertainty is not a reason to wait. It is the thing we are inviting you to attack and reduce.",
     "breakLabel": "The invitation",
-      "breakH2": "Break the argument, or break the artifact",
-      "breakP1": "A broken premise is worth as much to us as a broken protocol. Under the first premise, an uncaught capture path in this stack is worse than no stack at all, because it would concentrate exactly the trust it claims to spread. Findings that break the system are more valuable to this project than findings that flatter it.",
-      "breakArgT": "Break the argument",
-      "breakArgB": "The premises are numbered above. Cut wherever you think it bleeds, in public, and bring your strongest version.",
-      "breakArtT": "Break the artifact",
-      "breakArtB": "Fragment coordination between nodes. Sybil the membership. Capture the federation records. Forge an attestation, or replay a genuine device's attestation under a key you control. The code, the genesis record, and the ceremony artifacts are public.",
-      "breakCtaDiscord": "Argue with us on Discord",
-      "breakCtaGithub": "Open an issue on GitHub",
-      "ancestorsLabel": "The ancestors",
+    "breakH2": "Break the argument, or break the artifact",
+    "breakP1": "A broken premise is worth as much to us as a broken protocol. Under the first premise, an uncaught capture path in this stack is worse than no stack at all, because it would concentrate exactly the trust it claims to spread. Findings that break the system are more valuable to this project than findings that flatter it.",
+    "breakArgT": "Break the argument",
+    "breakArgB": "The premises are numbered above. Cut wherever you think it bleeds, in public, and bring your strongest version.",
+    "breakArtT": "Break the artifact",
+    "breakArtB": "Fragment coordination between nodes. Sybil the membership. Capture the federation records. Forge an attestation, or replay a genuine device's attestation under a key you control. The code, the genesis record, and the ceremony artifacts are public.",
+    "breakCtaDiscord": "Argue with us on Discord",
+    "breakCtaGithub": "Open an issue on GitHub",
+    "ancestorsLabel": "The ancestors",
     "ancestorsP1": "The premises are older than AI, and that is strength, not weakness. Exit as a check on power is Hirschman. Forkability making exit credible is open-source governance. Coordination turning scattered people into an actor is Benkler. Many independent centers governing without one sovereign is Ostrom. Architecture deciding what politics is possible is Lessig. Enough local capability to resist central control is Zittrain, and the ordinary PC on the open internet is the proof it can work: single machines far weaker than any institution still changed who holds power. Freedom held by cryptography instead of goodwill is the cypherpunks.",
     "ancestorsP2": "One departure from the cypherpunks matters. That tradition mostly protected the anonymous individual from authority. CIRIS protects accountable people acting together. What we claim as ours is the composition: fifty years of that lineage, applied to AI, with capture-resistant coordination as the load-bearing safety layer.",
     "lineageLabel": "Who else is near this claim",
-      "lineageH2": "The neighbors, and the difference",
-      "lineageIntro": "The pieces of this argument are widely held, and that is validation, not a problem: the diagnosis is shared by people who arrived from very different directions. The digital-public-infrastructure and sovereign-AI literatures land on the same shape too: shared trusted rails, not self-sufficiency, are what turn separate actors into a system. As far as we can tell, nobody else combines the pieces into this claim and ships the artifact. The neighbors deserve naming, and correcting us about them is also a way to attack the page.",
-      "l1n": "d/acc (Vitalik Buterin)",
-      "l1b": "Holds that who controls AI matters more than how smart it gets, and wants decentralized defense across many fields. A direction, not a mechanism: it does not name coordination as the load-bearing layer or ship one.",
-      "l2n": "Prime Intellect",
-      "l2b": "Builds decentralized training so no single lab owns the frontier. Their load-bearing layer is compute. Ours says edge capability is the input that already works, and coordination is the part still unsolved.",
-      "l3n": "The Intelligence Curse",
-      "l3b": "Maps how AI concentrates power through ordinary market forces and calls for decentralizing it. A diagnosis and a direction, without a mechanism. We agree with the diagnosis and built one.",
-      "l4n": "Stake-weighted networks",
-      "l4b": "Bittensor and its kin run real decentralized coordination, priced in tokens. Stake reintroduces rule by wealth, the thing being avoided. Our bet is accountability instead, and it is attackable above.",
-      "l5n": "The open-weights camp",
-      "l5b": "Argues open models are the path forward. We think weights are a necessary input, and that without capture-resistant coordination they leave a million hobbyists facing one giant.",
-      "l6n": "Alice Protocol",
+    "lineageH2": "The neighbors, and the difference",
+    "lineageIntro": "The pieces of this argument are widely held, and that is validation, not a problem: the diagnosis is shared by people who arrived from very different directions. The digital-public-infrastructure and sovereign-AI literatures land on the same shape too: shared trusted rails, not self-sufficiency, are what turn separate actors into a system. As far as we can tell, nobody else combines the pieces into this claim and ships the artifact. The neighbors deserve naming, and correcting us about them is also a way to attack the page.",
+    "l1n": "d/acc (Vitalik Buterin)",
+    "l1b": "Holds that who controls AI matters more than how smart it gets, and wants decentralized defense across many fields. A direction, not a mechanism: it does not name coordination as the load-bearing layer or ship one.",
+    "l2n": "Prime Intellect",
+    "l2b": "Builds decentralized training so no single lab owns the frontier. Their load-bearing layer is compute. Ours says edge capability is the input that already works, and coordination is the part still unsolved.",
+    "l3n": "The Intelligence Curse",
+    "l3b": "Maps how AI concentrates power through ordinary market forces and calls for decentralizing it. A diagnosis and a direction, without a mechanism. We agree with the diagnosis and built one.",
+    "l4n": "Stake-weighted networks",
+    "l4b": "Bittensor and its kin run real decentralized coordination, priced in tokens. Stake reintroduces rule by wealth, the thing being avoided. Our bet is accountability instead, and it is attackable above.",
+    "l5n": "The open-weights camp",
+    "l5b": "Argues open models are the path forward. We think weights are a necessary input, and that without capture-resistant coordination they leave a million hobbyists facing one giant.",
+    "l6n": "Alice Protocol",
     "l6b": "The closest technological cousin: community-owned intelligence trained from scratch across the crowd, so no company owns the model. Their answer decentralizes making the intelligence. Ours says commodity models are already good enough, and decentralizes the coordination that connects the people running them.",
     "l7n": "AI Commons",
     "l7b": "Argues that whether AI concentrates gains or spreads them depends on the terms it enters the economy under, and builds governance commitments for that. The same diagnosis, carried by institutions. Ours is carried by wire-level engineering that does not need anyone's permission.",
@@ -2963,7 +3048,7 @@
     "l10n": "Constitutive protocol",
     "l10b": "The nearest scholarly neighbor approaches from the opposite direction: Hu and Rong ask how society can govern an AI that has become decentralized and uncapturable. We ask how society keeps some AI uncapturable when the rest becomes centralized and very powerful. Same architectural observation, opposite fear. Both can be right.",
     "lineageNote": "External positions summarized in good faith from public writing. If we have any of them wrong, that is worth an issue too.",
-      "crossCta": "Explore the Constitutional Mesh"
+    "crossCta": "Explore the Constitutional Mesh"
   },
   "killSwitch": {
     "kicker": "Security you can check",
