@@ -207,6 +207,7 @@ PRICE = {
     "google/gemini-3.1-pro-preview": (2.00, 12.00),
     "openai/gpt-5.4": (2.50, 15.00),
     "x-ai/grok-4.6": (2.00, 6.00),
+    "google/gemini-3.7-flash": (0.75, 3.75),
     "claude-sonnet-5": (2.00, 10.00),
     "claude-opus-5": (5.00, 25.00),
 }
