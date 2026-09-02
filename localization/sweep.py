@@ -46,11 +46,11 @@ TRAILER = ("Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n"
            "Claude-Session: https://claude.ai/code/session_016pB47qFep7rPXfVJwytXBk")
 
 # The plan, in importance order: what a visitor meets first goes first. The
-# landing (homeHero) was drafted AND reviewed by the lane today, so it is not
-# re-reviewed. `home.*` is dead copy (no source references) and `lobby.*` is
+# landing (homeHero) is included: cheap, and it is the first thing anyone reads. `home.*` is dead copy (no source references) and `lobby.*` is
 # retired except the store badge labels, which every install CTA still uses.
 PLAN: List[Tuple[str, str, List[str]]] = [
     ("chrome",        "chrome",       ["nav.*", "footer.*"]),
+    ("hero",          "dictionaries", ["homeHero.*"]),
     ("shell-install", "dictionaries", ["common.*", "pathsCommon.*", "lobby.store.*",
                                         "install.*", "cewp.*", "constitution.*"]),
     ("safety",        "dictionaries", ["safety.*"]),
