@@ -277,15 +277,20 @@ def main() -> int:
     plan = PLAN
     if args.only:
         plan = [b for b in plan if b[0] in args.only]
+    only_langs = [l for l in args.langs.split(",") if l]
     if args.start_at:
         idx = [b[0] for b in plan].index(args.start_at)
         plan = plan[idx:]
 
-    if sh(["git", "diff", "--quiet", "--", "src/i18n"]).returncode:
-        log("src/i18n has uncommitted changes; refusing to sweep over them")
+    # Refuse to sweep over uncommitted work in the files THIS run will write:
+    # every locale file when unrestricted, only the named languages' files
+    # when --langs is given (another lane may be banking other languages).
+    dirty_paths = ["src/i18n"] if not only_langs else [
+        f"src/i18n/{b}/{l}.json" for b in ("dictionaries", "chrome") for l in only_langs]
+    if sh(["git", "diff", "--quiet", "--"] + dirty_paths).returncode:
+        log(f"uncommitted changes in {dirty_paths}; refusing to sweep over them")
         return 4
 
-    only_langs = [l for l in args.langs.split(",") if l]
     spent = 0.0
     kv_done = 0
     status = "complete"
