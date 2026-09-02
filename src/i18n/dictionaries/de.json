@@ -174,7 +174,7 @@
       ]
     },
     "dmas": {
-      "heading": "Entscheidungsalgorithmen (DMAs)",
+      "heading": "Algorithmen zur Entscheidungsfindung (DMAs)",
       "lead": "Fünf DMAs liefern eine Analyse aus mehreren Perspektiven. Drei laufen parallel (Ethik, gesunder Menschenverstand, Domäne). Dann <strong class=\"text-green-600\">prüft IDMA die Intuition</strong>. Schließlich wählt die Aktionsauswahl die Antwort.",
       "principleTitle": "Prinzipien-DMA",
       "principleBody": "Bewertet ethische Implikationen anhand der sechs Grundprinzipien. Prüft auf schädliche Anfragen, Manipulation und Vorurteile. Kann frühzeitig DEFER oder REJECT auslösen.",
@@ -479,8 +479,8 @@
       "body": "Das ist Rechenschaftspflicht, die während der Arbeit des Agenten läuft, kein Trainingsschritt und kein Richtliniendokument.<br />Mechanismen, die zur Laufzeit ausführen, prüfen und aufschieben.",
       "safetyBtn": "Sicherheitsfunktionen",
       "compareBtn": "Ansätze vergleichen",
-      "coherenceBtn": "Kohärenz-Ratchet",
-      "scoringBtn": "CIRIS-Bewertung"
+      "coherenceBtn": "Kohärenz-Ratsche",
+      "scoringBtn": "CIRIS Bewertung"
     },
     "consciencePipeline": {
       "label": "Die Gewissens-Pipeline",

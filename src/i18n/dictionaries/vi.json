@@ -256,7 +256,7 @@
       ]
     },
     "buses": {
-      "heading": "Sáu Bus Tin Nhắn",
+      "heading": "Sáu Bus Thông Điệp",
       "lead": "Lớp trừu tượng dịch vụ được quản lý bởi <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">BusManager</code>. Cho phép dự phòng nhà cung cấp, phân phối tải và khả năng kiểm tra.",
       "items": [
         {
@@ -479,8 +479,8 @@
       "body": "Đây là trách nhiệm giải trình hoạt động trong khi tác nhân làm việc, không phải một bước huấn luyện hay một tài liệu chính sách.<br />Các cơ chế thực thi, kiểm tra và chuyển giao tại thời gian chạy.",
       "safetyBtn": "Tính Năng An Toàn",
       "compareBtn": "So Sánh Các Phương Pháp",
-      "coherenceBtn": "Con Cóc Tính Nhất Quán",
-      "scoringBtn": "Chấm điểm CIRIS"
+      "coherenceBtn": "Cơ chế siết chặt tính nhất quán",
+      "scoringBtn": "CIRIS Chấm điểm"
     },
     "consciencePipeline": {
       "label": "Quy trình lương tâm",

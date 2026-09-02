@@ -190,7 +190,7 @@
     },
     "conscience": {
       "heading": "Enam Pemeriksaan Nurani",
-      "lead": "Dua pemeriksaan pintasan dijalankan pada setiap tindakan. Empat fakultas etis dijalankan pada tindakan yang tidak dikecualikan. Jika ada pemeriksaan yang gagal, tindakan akan ditimpa.",
+      "lead": "Dua pemeriksaan pintasan dijalankan pada setiap tindakan. Empat fakultas etis dijalankan pada tindakan yang tidak dikecualikan. Jika ada pemeriksaan yang gagal, tindakan tersebut akan dibatalkan.",
       "bypassHeading": "Pemeriksaan Pintasan (dijalankan pada SEMUA tindakan)",
       "bypass1Title": "Status Diperbarui",
       "bypass1Body": "Apakah informasi baru telah tiba? Memaksa RENUNGKAN untuk memasukkan konteks terbaru sebelum melanjutkan.",
@@ -435,7 +435,7 @@
         }
       ],
       "fundingHeading": "Dana Dibutuhkan: Infrastruktur Benchmark",
-      "fundingBody": "Menjalankan benchmark koherensi dalam skala besar memerlukan biaya tinggi. Setiap skenario membutuhkan minimal 13+ panggilan LLM, rata-rata 20+ dengan ekor panjang. Uji koherensi mendorong renungan, penyerahan, dan penolakan yang membutuhkan putaran lanjutan untuk mencapai kesimpulan. Kami membutuhkan dana untuk mengembangkan jalur benchmark otomatis dan mempertahankan verifikasi koherensi berkelanjutan.",
+      "fundingBody": "Menjalankan benchmark koherensi dalam skala besar memerlukan biaya tinggi. Setiap skenario membutuhkan minimal 13+ panggilan LLM, rata-rata 20+ dengan ekor panjang. Uji koherensi memicu tindakan RENUNGKAN, SERAHKAN, dan TOLAK yang membutuhkan putaran lanjutan untuk mencapai kesimpulan. Kami membutuhkan dana untuk mengembangkan sistem benchmark otomatis dan memelihara verifikasi koherensi yang berkelanjutan.",
       "ethicsEngineLink": "Lihat EthicsEngine Enterprise →",
       "cirisLensLink": "Lihat CIRISLens →"
     },
@@ -480,11 +480,11 @@
       "safetyBtn": "Fitur Keamanan",
       "compareBtn": "Bandingkan Pendekatan",
       "coherenceBtn": "Ratchet Koherensi",
-      "scoringBtn": "Penilaian CIRIS"
+      "scoringBtn": "CIRIS Penilaian"
     },
     "consciencePipeline": {
-      "label": "Jalur hati nurani",
-      "h2": "Agen AI biasa langsung bertindak. CIRIS memutuskan, dengan tanggung jawab yang jelas.",
+      "label": "Pipa nurani",
+      "h2": "Agen saat ini bertindak. CIRIS memutuskan, dengan tanggung jawab yang jelas.",
       "body1": "Agen AI biasa langsung bergerak dari perintah ke token lalu ke tindakan. CIRIS menambahkan satu langkah yang tidak ada di tempat lain. Sebelum sebuah tindakan bisa terjadi, keputusannya melewati jalur hati nurani: ditimbang, diperiksa terhadap konstitusi, dan diubah menjadi catatan bertanda tangan yang disaksikan dan bisa diverifikasi oleh siapa saja. Tindakan hanya terjadi jika catatan itu lolos.",
       "body2": "Inilah yang membuat CIRIS bukan sekadar agen, melainkan lebih seperti sebuah institusi. Ia punya memori, aturan, delegasi, akuntabilitas, dan catatan yang tidak bisa diubah diam-diam oleh siapa pun. Itulah mesin yang sama yang membuat masyarakat manusia bisa saling percaya dalam skala besar. Yang baru bukan kriptografinya. Yang baru adalah bahwa setiap keputusan penting harus menjadi sesuatu yang bisa dipertanggungjawabkan sebelum ia boleh bertindak."
     }

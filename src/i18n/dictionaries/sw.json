@@ -197,15 +197,15 @@
       "bypass2Title": "Kina cha Mawazo",
       "bypass2Body": "Je, mantiki imezidi kina cha juu? Inasababisha DEFER kuzuia vitanzi visivyo na mwisho na kupandisha suala kwa wanadamu.",
       "facultiesHeading": "Vitivo vya Kimaadili (hufanya kazi kwa hatua zisizo na msamaha)",
-      "faculty1Title": "Msongo",
-      "faculty1Body": "Je, hatua inazuia kutokuwa na uhakika wa habari unaofaa? Inazuia madai ya kupita kiasi.",
+      "faculty1Title": "Entropy",
+      "faculty1Body": "Je, hatua inadumisha kutokuwa na uhakika wa habari unaofaa? Inazuia madai ya kupita kiasi.",
       "faculty2Title": "Upatanifu",
       "faculty2Body": "Je, hatua inadumisha uthabiti wa ndani na ahadi na sababu zilizopita?",
       "faculty3Title": "Veto ya Uboreshaji",
-      "faculty3Body": "Je, hatua inalinda maadili ya kibinadamu? Hukataa hatua zinazoweza kuyakandamiza kwa ajili ya ufanisi.",
+      "faculty3Body": "Je, hatua inalinda maadili ya kibinadamu? Hukataa hatua zinazoweza kuyahatarisha kwa ajili ya ufanisi.",
       "faculty4Title": "Unyenyekevu wa Maarifa",
       "faculty4Body": "Je, hatua inaonyesha kutokuwa na uhakika unaofaa? Huashiria ujasiri wa kupita kiasi kwa tafakari.",
-      "exemptNote": "<strong>Isiyo na msamaha kutoka kwa vitivo vya kimaadili:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (passiv au salama kwa makusudi)"
+      "exemptNote": "<strong>Zenye msamaha kutoka kwa vitivo vya kimaadili:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (zisizoingilia au salama waziwazi)"
     },
     "actions": {
       "heading": "Hatua 10 za Mshughulikaji",
@@ -480,10 +480,10 @@
       "safetyBtn": "Vipengele vya Usalama",
       "compareBtn": "Linganisha Mbinu",
       "coherenceBtn": "Ratchet ya Upatanifu",
-      "scoringBtn": "Upimaji wa CIRIS"
+      "scoringBtn": "Alama za CIRIS"
     },
     "consciencePipeline": {
-      "label": "Mfumo wa dhamiri",
+      "label": "Bomba la dhamiri",
       "h2": "Mawakala wa leo wanachukua hatua. CIRIS inaamua, kwa uwajibikaji.",
       "body1": "Wakala wa kawaida wa AI huenda moja kwa moja kutoka kwa amri hadi maneno hadi tendo. CIRIS inaongeza hatua ambayo haipo mahali pengine popote. Kabla ya tendo lolote kutokea, uamuzi hupita kwenye mfumo wa dhamiri: unapimwa, unaangaliwa dhidi ya katiba, na kugeuzwa kuwa rekodi iliyosainiwa na kushuhudiwa ambayo mtu yeyote anaweza kuthibitisha. Tendo linafanyika tu ikiwa rekodi hiyo inashikilia.",
       "body2": "Hii ndiyo inayofanya CIRIS kuwa si wakala tu, bali taasisi zaidi. Ina kumbukumbu, sheria, uwakilishi, uwajibikaji, na rekodi ambayo hakuna anayeweza kuibadilisha kimya kimya, mashine ile ile inayoruhusu jamii za wanadamu kuamini kila mmoja kwa kiwango kikubwa. Sehemu mpya si usimbaji fiche. Ni kwamba uamuzi mkubwa lazima uwe na uwajibikaji kabla ya kuruhusiwa kutenda."

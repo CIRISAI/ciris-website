@@ -141,7 +141,7 @@
     "header": {
       "headline": "Yadda Yake Aiki",
       "subheadline": "Injin H3ERE",
-      "description": "Lamiri na aiki ta cikin Hyper3 Ethical Recursive Engine. Kowane yanke shawara yana gudana ta mataki 11 tare da lissafin ayyuka a tsakiya.",
+      "description": "Lamiri a lokacin gudanarwa ta cikin Hyper3 Ethical Recursive Engine. Kowane yanke shawara yana gudana ta mataki 11 tare da lissafin ayyuka a tsakiya.",
       "buttonText": "Duba Lambar",
       "linkText": "Karanta Rubutun Bincike"
     },
@@ -236,9 +236,9 @@
       "domainBody": "Yana kimanta jituwa da dokokin yanki, manufofi, da ilimi. An tsara shi a kowace samfurin wakili. Yana dawo da <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">domain_alignment</code>.",
       "idmaTitle": "DMA na Basira (IDMA)",
       "idmaLink": "Girman aiki na gaske a lokacin gudana →",
-      "idmaBody": "Yana bincika ko sakamakon DMA suna da 'yanci na gaske ko suna da alaƙa a asirce. Yana kula da tsarin ɗakin amsawa guda ɗaya. Idan alaƙar ta yi girma sosai, yana nuna yanke shawarar don a yi hankali. Wannan shine &quot;Basira&quot; wanda ke bambanta AI na Nau'i 3.",
+      "idmaBody": "Yana bincika ko sakamakon DMA suna da 'yanci na gaske ko suna da alaƙa a asirce. Yana kula da tsarin amsa kuwwa (echo chamber). Idan alaƙar ta yi girma sosai, yana nuna yanke shawarar don a yi hankali. Wannan shine &quot;Basira&quot; wanda ke bambanta AI na Nau'i 3.",
       "actionSelectionTitle": "DMA na Zaɓin Aiki",
-      "actionSelectionBody": "Zaɓi mai LLM daga ayyuka 10 da ake da su. Yana ɗaukar sakamakon DMA da aka tattara (gami da kimanton amincin IDMA) a matsayin shigarwa. Yana goyan bayan sake gwadawa mai maimaituwa idan lamiri ya gaza."
+      "actionSelectionBody": "Zaɓi da LLM ke yi daga ayyuka 10 da ake da su. Yana ɗaukar sakamakon DMA da aka tattara (gami da kimanton amincin IDMA) a matsayin shigarwa. Yana goyan bayan sake gwadawa mai maimaituwa idan lamiri ya gaza."
     },
     "conscience": {
       "heading": "Bincike Shida na Lamiri",
@@ -257,7 +257,7 @@
       "faculty3Body": "Shin aiki yana kiyaye dabi'un ɗan adam? Yana kin ayyukan da za su iya yiwa su lahani don ingancin aiki.",
       "faculty4Title": "Tawali'u na Ilimi",
       "faculty4Body": "Shin aiki yana nuna rashin tabbas daidai? Yana nuna dogaro da yawa don tunani.",
-      "exemptNote": "<strong>Ba a keɓance daga hukumomin ɗabi'a:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (wanda ba ya aiki ko wanda aka bayyana da aminci)"
+      "exemptNote": "<strong>An keɓe daga hukumomin ɗabi'a:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (wanda ba ya aiki ko wanda aka bayyana da aminci)"
     },
     "actions": {
       "heading": "Ayyuka 10 na Mai Kula",
@@ -265,7 +265,7 @@
       "externalHeading": "Ayyuka na Waje",
       "speakDesc": "Sadarwa da masu amfani",
       "toolDesc": "Aiwatar da kayan aiki na waje",
-      "observeDesc": "Tattara bayanai a hankali",
+      "observeDesc": "Tattara bayanai ba tare da tsoma baki kai tsaye ba",
       "memoryHeading": "Ayyuka na Ƙwaƙwalwa",
       "memorizeDesc": "Ajiye zuwa ƙwaƙwalwar zane na alaƙa",
       "recallDesc": "Dawo daga ƙwaƙwalwa",
@@ -487,7 +487,7 @@
         }
       ],
       "fundingHeading": "Akwai Buƙatar Tallafi: Ababen Kayan Gwaji",
-      "fundingBody": "Gudanar da gwajin daidaituwa a ma'auni babba yana da tsada. Kowane yanayi yana buƙatar ƙira 13+ na LLM mafi ƙaranci, matsakaici 20+ tare da wutsiya mai tsawo. Gwajin daidaituwa yana haifar da tunanin mai zurfi, miƙawa, da ƙin yarda waɗanda ke buƙatar zagaye na biyo baya don isa ƙarshewa. Muna buƙatar tallafi don haɓaka bututun gwajin atomatik da kula da tabbatarwar daidaituwa mai ci gaba.",
+      "fundingBody": "Gudanar da gwajin daidaituwa a mataki mai faɗi yana da tsada. Kowane yanayi yana buƙatar kira 13+ na LLM mafi ƙaranci, matsakaici 20+ tare da wutsiya mai tsawo. Gwajin daidaituwa yana haifar da tunani mai zurfi, miƙawa, da ƙin yarda waɗanda ke buƙatar zagaye na biyo baya don isa ƙarshe. Muna buƙatar tallafi don haɓaka tsarin gwaji na atomatik da kula da tabbatarwar daidaituwa mai ci gaba.",
       "ethicsEngineLink": "Duba EthicsEngine Enterprise →",
       "cirisLensLink": "Duba CIRISLens →"
     },
@@ -532,13 +532,13 @@
       "safetyBtn": "Fasalolin Tsaro",
       "compareBtn": "Kwatanta Hanyoyi",
       "coherenceBtn": "Ratchet na Daidaituwa",
-      "scoringBtn": "Ci-gaban CIRIS"
+      "scoringBtn": "CIRIS Ƙididdiga"
     },
     "consciencePipeline": {
-      "label": "Bututun lamiri",
+      "label": "Bututun sarrafa lamiri",
       "h2": "Wakilai na yau suna aiki. CIRIS yana yanke shawara, da alhakin da ya dace.",
-      "body1": "Wakili na yau da kullum na AI yana tafiya kai tsaye daga umurni zuwa kalmomi zuwa aikin kayan aiki. CIRIS yana ƙara matakin da ba ya wanzuwa a wani wuri. Kafin aiki ya faru, yanke shawarar yana wucewa ta bututun lamiri: ana aunansa, ana duba shi da kundin tsarin mulki, ana mai da shi rikodin da aka sanya hannu, wanda kowa zai iya tabbatarwa. Aiki yana faruwa ne kawai idan wannan rikodi ya tsaya.",
-      "body2": "Wannan shi ne abin da ke sa CIRIS ya zama ƙasa da wakili kuma ya fi zama wata cibiya. Yana da ƙwaƙwalwa, dokokin, wakilicci, alhakin da ya dace, da rikodin da ba wanda zai iya canza shi a ɓoye, injin guda ɗaya da ke ba wa al'ummomin ɗan adam damar amincewa da juna a ma'auni. Sabo a wannan shi ne ba sirrin lissafi ba. Shi ne cewa yanke shawara mai muhimmanci dole ne ta zama mai ɗaukar alhakin kafin a ba ta damar aiki."
+      "body1": "Wakili na yau da kullum na AI yana tafiya kai tsaye daga umurni zuwa kalmomi zuwa aikin kayan aiki. CIRIS yana ƙara matakin da ba ya wanzuwa a wani wuri. Kafin aiki ya faru, yanke shawarar yana wucewa ta bututun sarrafa lamiri: ana aunansa, ana duba shi da Tsarin Mulki, ana mai da shi rikodin da aka sanya hannu, wanda kowa zai iya tabbatarwa. Aiki yana faruwa ne kawai idan wannan rikodi ya tsaya.",
+      "body2": "Wannan shi ne abin da ke sa CIRIS ya zama ƙasa da wakili kuma ya fi zama wata cibiya. Yana da ƙwaƙwalwa, dokokin, wakilci, alhakin da ya dace, da rikodin da ba wanda zai iya canza shi a ɓoye, injin guda ɗaya da ke ba wa al'ummomin ɗan adam damar amincewa da juna a ma'auni. Sabo a wannan shi ne ba sirrin lissafi ba. Shi ne cewa yanke shawara mai muhimmanci dole ne ta zama mai ɗaukar alhakin kafin a ba ta damar aiki."
     }
   },
   "install": {

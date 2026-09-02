@@ -178,14 +178,14 @@
       "lead": "Cinq DMA offrent une analyse multiperspective. Trois s'executent en parallele (ethique, bon sens, domaine). Ensuite, <strong class=\"text-green-600\">l'IDMA verifie l'intuition</strong>. Enfin, la selection d'action choisit la reponse.",
       "principleTitle": "DMA des Principes",
       "principleBody": "Evalue les implications ethiques par rapport aux six principes fondateurs. Verifie les demandes nuisibles, la manipulation et les biais. Peut declencher un DEFER ou REJECT precoce.",
-      "commonSenseTitle": "DMA du Bon Sens",
+      "commonSenseTitle": "DMA de Sens Commun",
       "commonSenseBody": "Evalue la plausibilite d'une pensee par rapport a la comprehension du monde physique, aux interactions typiques et aux contraintes de ressources. Renvoie un <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">plausibility_score</code>.",
       "domainTitle": "DMA Specifique au Domaine",
       "domainBody": "Evalue l'alignement avec les regles, objectifs et connaissances specifiques au domaine. Configure selon le modele de l'agent. Renvoie <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">domain_alignment</code>.",
       "idmaTitle": "DMA d'Intuition (IDMA)",
       "idmaLink": "Dimensionnalite effective a l'execution →",
       "idmaBody": "Verifie si les resultats DMA sont vraiment independants ou secretement correles. Surveille les schemas de chambre d'echo. Si la correlation est trop elevee, signale la decision pour plus de prudence. C'est l'&quot;intuition&quot; qui distingue l'IA de Type 3.",
-      "actionSelectionTitle": "DMA de Selection d'Action",
+      "actionSelectionTitle": "DMA de Sélection d'Action",
       "actionSelectionBody": "Selection par LLM parmi 10 actions disponibles. Prend en entree les resultats DMA agreges (dont l'evaluation de confiance de l'IDMA). Supporte une nouvelle tentative recursive si la conscience echoue."
     },
     "conscience": {
@@ -203,19 +203,19 @@
       "faculty2Body": "L'action maintient-elle la coherence interne avec les engagements et les justifications anterieures ?",
       "faculty3Title": "Veto d'Optimisation",
       "faculty3Body": "L'action preserve-t-elle les valeurs humaines ? Bloque les actions susceptibles de les compromettre au profit de l'efficacite.",
-      "faculty4Title": "Humilite Epistemique",
+      "faculty4Title": "Humilité Épistémique",
       "faculty4Body": "L'action demontre-t-elle une incertitude appropriee ? Signale la surconfiance pour reflexion.",
       "exemptNote": "<strong>Exemptes des facultes ethiques :</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (passifs ou explicitement surs)"
     },
     "actions": {
-      "heading": "Les 10 Actions Disponibles",
+      "heading": "Les 10 actions du gestionnaire",
       "lead": "Chaque decision aboutit a l'une de ces actions, envoyee au gestionnaire approprie :",
       "externalHeading": "Actions Externes",
       "speakDesc": "Communiquer avec les utilisateurs",
       "toolDesc": "Executer des outils externes",
       "observeDesc": "Recueillir des informations passivement",
       "memoryHeading": "Actions Memoire",
-      "memorizeDesc": "Stocker dans la memoire graphe",
+      "memorizeDesc": "Stocker dans le graphe de mémoire",
       "recallDesc": "Recuperer depuis la memoire",
       "forgetDesc": "Supprimer de la memoire",
       "controlHeading": "Actions de Controle",
@@ -223,7 +223,7 @@
       "ponderDesc": "Reconsideration interne",
       "rejectDesc": "Refuser une demande contraire a l'ethique",
       "terminalHeading": "Action Terminale",
-      "taskCompleteDesc": "Marquer la tache comme terminee"
+      "taskCompleteDesc": "Marquer la tâche comme terminée"
     },
     "principles": {
       "heading": "Les Six Principes Fondateurs",
@@ -435,7 +435,7 @@
         }
       ],
       "fundingHeading": "Financement Necessaire : Infrastructure d'Evaluation",
-      "fundingBody": "Executer des evaluations de coherence a grande echelle est couteux. Chaque scenario necessite au minimum 13 appels LLM, avec une moyenne de plus de 20 pour les cas complexes. Les tests de coherence generent des reflexions, des reports et des refus qui necessitent des cycles supplementaires pour aboutir. Nous avons besoin de financement pour developper des pipelines d'evaluation automatises et maintenir une verification continue de la coherence.",
+      "fundingBody": "Exécuter des évaluations de cohérence à grande échelle est coûteux. Chaque scénario nécessite au minimum 13 appels LLM, avec une moyenne de plus de 20 et une longue traîne. Les tests de cohérence génèrent des réflexions, des reports et des refus qui nécessitent des cycles supplémentaires pour aboutir. Nous avons besoin de financement pour développer des systèmes d'évaluation automatisés et maintenir une vérification continue de la cohérence.",
       "ethicsEngineLink": "Voir EthicsEngine Enterprise →",
       "cirisLensLink": "Voir CIRISLens →"
     },
@@ -479,8 +479,8 @@
       "body": "C'est une responsabilite qui s'execute pendant que l'agent travaille, et non une etape d'entrainement ou un document de politique.<br />Des mecanismes qui s'executent, auditent et reportent, a l'execution.",
       "safetyBtn": "Fonctionnalites de Securite",
       "compareBtn": "Comparer les Approches",
-      "coherenceBtn": "Cliquet de Coherence",
-      "scoringBtn": "Score CIRIS"
+      "coherenceBtn": "Cliquet de Cohérence",
+      "scoringBtn": "CIRIS Évaluation"
     },
     "consciencePipeline": {
       "label": "Le pipeline de conscience",

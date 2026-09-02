@@ -254,7 +254,7 @@
       "faculty2Title": "Coherencia",
       "faculty2Body": "¿Mantiene la acción consistencia interna con compromisos y razonamientos anteriores?",
       "faculty3Title": "Veto de optimización",
-      "faculty3Body": "¿Preserva la acción los valores humanos? Veta acciones que puedan comprometerse por eficiencia.",
+      "faculty3Body": "¿Preserva la acción los valores humanos? Veta acciones que puedan comprometerlos por eficiencia.",
       "faculty4Title": "Humildad Epistémica",
       "faculty4Body": "¿Demuestra la acción incertidumbre apropiada? Marca el exceso de confianza para reflexión.",
       "exemptNote": "<strong>Exento de facultades éticas:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (pasivos o explícitamente seguros)"
@@ -487,7 +487,7 @@
         }
       ],
       "fundingHeading": "Financiamiento necesario: infraestructura de benchmark",
-      "fundingBody": "Ejecutar benchmarks de coherencia a gran escala es costoso. Cada escenario requiere un mínimo de 13 llamadas LLM, con un promedio de más de 20 con una cola larga. Las pruebas de coherencia generan ponderaciones, deferencias y rechazos que requieren rondas adicionales para llegar a una conclusión. Necesitamos financiamiento para desarrollar pipelines de benchmark automatizados y mantener la verificación continua de coherencia.",
+      "fundingBody": "Ejecutar benchmarks de coherencia a gran escala es costoso. Cada escenario requiere un mínimo de 13 llamadas LLM, con un promedio de más de 20 con una cola larga. Las pruebas de coherencia generan reflexiones, aplazamientos y rechazos que requieren rondas adicionales para llegar a una conclusión. Necesitamos financiamiento para desarrollar sistemas de benchmark automatizados y mantener la verificación continua de coherencia.",
       "ethicsEngineLink": "Ver EthicsEngine Enterprise →",
       "cirisLensLink": "Ver CIRISLens →"
     },
@@ -531,13 +531,13 @@
       "body": "Esta es la responsabilidad que opera mientras el agente trabaja, no un paso de entrenamiento ni un documento de política.<br />Mecanismos que ejecutan, auditan y difieren en tiempo de ejecución.",
       "safetyBtn": "Características de seguridad",
       "compareBtn": "Comparar enfoques",
-      "coherenceBtn": "Coherencia Ratchet",
-      "scoringBtn": "Puntuación CIRIS"
+      "coherenceBtn": "Trinquete de Coherencia",
+      "scoringBtn": "CIRIS Scoring"
     },
     "consciencePipeline": {
-      "label": "El canal de conciencia",
+      "label": "Pipeline de conciencia",
       "h2": "Los agentes de hoy actúan. CIRIS decide, con responsabilidad.",
-      "body1": "Un agente de IA normal va directo del mensaje a los tokens y luego a la acción. CIRIS añade un paso que no existe en ningún otro lugar. Antes de que ocurra cualquier acción, la decisión pasa por un canal de conciencia: se sopesa, se compara con la constitución, y se convierte en un registro firmado y verificado que cualquiera puede revisar. La acción solo ocurre si ese registro es válido.",
+      "body1": "Un agente de IA normal va directo del prompt a los tokens y luego a la llamada a herramientas. CIRIS añade un paso que no existe en ningún otro lugar. Antes de que ocurra cualquier acción, la decisión pasa por un pipeline de conciencia: se sopesa, se compara con la Constitución y se convierte en un registro firmado y atestiguado que cualquiera puede verificar. La acción solo ocurre si ese registro es válido.",
       "body2": "Esto es lo que hace a CIRIS menos un agente y más una institución. Tiene memoria, leyes, delegación, responsabilidad y un registro que nadie puede cambiar en silencio. Es la misma maquinaria que permite a las sociedades humanas confiar entre sí a gran escala. Lo nuevo no es la criptografía. Es que una decisión importante debe volverse responsable antes de que se le permita actuar."
     }
   },

@@ -181,7 +181,7 @@
       "commonSenseTitle": "Sağduyu DMA'sı",
       "commonSenseBody": "Düşüncenin makullüğünü fiziksel dünya anlayışı, tipik etkileşimler ve kaynak kısıtlamalarına göre değerlendirir. Bir <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">plausibility_score</code> döndürür.",
       "domainTitle": "Alan Özel DMA'sı",
-      "domainBody": "Alan özgü kurallar, hedefler ve bilgiyle uyumu değerlendirir. Ajan şablonuna göre yapılandırılır. <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">domain_alignment</code> döndürür.",
+      "domainBody": "Alana özgü kurallar, hedefler ve bilgiyle uyumu değerlendirir. Ajan şablonuna göre yapılandırılır. <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">domain_alignment</code> döndürür.",
       "idmaTitle": "Sezgi DMA'sı (IDMA)",
       "idmaLink": "Çalışma zamanında etkin boyutsallık →",
       "idmaBody": "DMA sonuçlarının gerçekten bağımsız mı yoksa gizlice ilişkili mi olduğunu denetler. Yankı odası örüntülerini izler. Korelasyon çok yüksekse kararı dikkatli inceleme için işaretler. Bu, Tip 3 Yapay Zekayı ayırt eden &quot;sezgi&quot;dir.",
@@ -198,7 +198,7 @@
       "bypass2Body": "Muhakeme maksimum derinliği aştı mı? Sonsuz döngüleri önlemek ve insanlara iletmek için DEFER tetiklenir.",
       "facultiesHeading": "Etik Fakülteler (muaf olmayan eylemlerde çalışır)",
       "faculty1Title": "Entropi",
-      "faculty1Body": "Eylem uygun bilgi belirsizliğini koruyor mu? Aşırı güvenli iddiaları engeller.",
+      "faculty1Body": "Eylem uygun bilgi belirsizliğini koruyor mu? Aşırı kendinden emin iddiaları engeller.",
       "faculty2Title": "Tutarlılık",
       "faculty2Body": "Eylem önceki taahhütler ve gerekçelerle iç tutarlılığı koruyor mu?",
       "faculty3Title": "Optimizasyon Vetosu",
@@ -435,7 +435,7 @@
         }
       ],
       "fundingHeading": "Finansman Gerekiyor: Kıyaslama Altyapısı",
-      "fundingBody": "Tutarlılık kıyaslamalarını büyük ölçekte çalıştırmak pahalıdır. Her senaryo asgari 13 LLM çağrısı gerektirir, uzun kuyruklu bir dağılımda ortalama 20'nin üzerindedir. Tutarlılık testleri, sonuca ulaşmak için takip turları gerektiren ponderları, ertelemeler ve reddedimleri tetikler. Otomatik kıyaslama hatları geliştirmek ve sürekli tutarlılık doğrulamasını sürdürmek için finansmana ihtiyacımız var.",
+      "fundingBody": "Tutarlılık kıyaslamalarını büyük ölçekte çalıştırmak pahalıdır. Her senaryo asgari 13 LLM çağrısı gerektirir, uzun kuyruklu bir dağılımda ortalama 20'nin üzerindedir. Tutarlılık testleri, sonuca ulaşmak için takip turları gerektiren PONDER değerlendirmelerini, ertelemeleri ve reddetmeleri tetikler. Otomatik kıyaslama sistemleri geliştirmek ve sürekli tutarlılık doğrulamasını sürdürmek için finansmana ihtiyacımız var.",
       "ethicsEngineLink": "EthicsEngine Enterprise'ı Görüntüle →",
       "cirisLensLink": "CIRISLens'i Görüntüle →"
     },

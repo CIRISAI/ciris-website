@@ -185,7 +185,7 @@
       "idmaTitle": "직관 DMA (IDMA)",
       "idmaLink": "런타임 유효 차원수 →",
       "idmaBody": "DMA 결과가 진정으로 독립적인지 또는 몰래 상관관계가 있는지 확인합니다. 에코챔버 패턴을 모니터링합니다. 상관관계가 너무 높으면 결정에 주의 표시를 합니다. 이것이 Type 3 AI를 구분하는 &quot;직관&quot;입니다.",
-      "actionSelectionTitle": "행동 선택 DMA",
+      "actionSelectionTitle": "작업 선택 DMA",
       "actionSelectionBody": "10가지 가능한 행동에서 LLM 기반으로 선택합니다. IDMA 신뢰도 평가를 포함한 집계된 DMA 결과를 입력으로 받습니다. 양심 검사 실패 시 재시도를 지원합니다."
     },
     "conscience": {
@@ -435,7 +435,7 @@
         }
       ],
       "fundingHeading": "지원 필요: 벤치마크 인프라",
-      "fundingBody": "대규모 일관성 벤치마크 실행은 비용이 많이 듭니다. 각 시나리오는 최소 13회 이상의 LLM 호출이 필요하며, 긴 꼬리를 포함하면 평균 20회 이상입니다. 일관성 테스트는 결론에 도달하기 위해 추가 라운드가 필요한 PONDER, DEFER, REJECT를 유발합니다. 자동화된 벤치마크 파이프라인을 개발하고 지속적인 일관성 검증을 유지하기 위한 지원이 필요합니다.",
+      "fundingBody": "대규모 일관성 벤치마크 실행은 비용이 많이 듭니다. 각 시나리오는 최소 13회 이상의 LLM 호출이 필요하며, 긴 꼬리를 포함하면 평균 20회 이상입니다. 일관성 테스트는 결론에 도달하기 위해 추가 라운드가 필요한 PONDER, DEFER, 거부를 유발합니다. 자동화된 벤치마크 시스템을 개발하고 지속적인 일관성 검증을 유지하기 위한 지원이 필요합니다.",
       "ethicsEngineLink": "EthicsEngine Enterprise 보기 →",
       "cirisLensLink": "CIRISLens 보기 →"
     },
@@ -479,8 +479,8 @@
       "body": "이것은 훈련 단계나 정책 문서가 아닌, 에이전트가 작동하는 동안 실행되는 책임입니다.<br />실행, 감사, 연기(DEFER)가 런타임에 이루어지는 메커니즘입니다.",
       "safetyBtn": "안전 기능",
       "compareBtn": "접근 방식 비교",
-      "coherenceBtn": "일관성 래칫",
-      "scoringBtn": "CIRIS 스코어링"
+      "coherenceBtn": "일관성 래칫 메커니즘",
+      "scoringBtn": "CIRIS 점수"
     },
     "consciencePipeline": {
       "label": "양심 파이프라인",
