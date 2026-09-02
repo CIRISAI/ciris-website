@@ -698,7 +698,7 @@
     "method1Req": "<strong>Ohun tó nílò:</strong> Python 3.10+",
     "otherMethodsHeading": "Àwọn Ọ̀nà Fífi Sórí Mìíràn",
     "method2Heading": "2. Docker Compose",
-    "method2Desc": "Ṣe CIRIS nínú àyíká àpótí tó yàsọ̀tọ̀. Tó dára jùlọ nígbà tí o bá fẹ́ àwọn fífipòsọ tó ṣee tún ṣe ní ìbùdó àdínísọ tàbí olùpèsè.",
+    "method2Desc": "Ṣe CIRIS nínú àyíká àpótí tó yàsọ̀tọ̀. Tó dára jùlọ nígbà tí o bá fẹ́ àwọn ìfisílẹ̀ tí a lè tún ṣe bákan náà lórí ẹ̀rọ àgbègbè tàbí lórí server.",
     "method2Req": "<strong>Ohun tó nílò:</strong> Docker Engine 20.10+, àfikún docker compose, ìbẹ̀wò iṣẹ́ tó ní fáìlì compose",
     "method3Heading": "3. GitHub Clone (Ìdàgbàsókè)",
     "method3Desc": "Daakọ àkójọpọ̀ fún ìdàgbàsókè, ìyípadà, tàbí fífúnni ní àfikún sí iṣẹ́ náà. Wíwọlé kóòdù orisun pátápátá.",
@@ -712,8 +712,8 @@
     "helloStep1Heading": "1. Bẹ̀rẹ̀ aṣojú",
     "helloStep1Desc": "Ṣe atúnṣe API. Àkọ́bẹ̀rẹ̀ si ìpèlé 8080. Wíwọlé OBSERVER kò nílò ìjẹ̀rísí fún ìdàgbàsókè àdínísọ.",
     "helloStep2Heading": "2. Pè é láti Python",
-    "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> jẹ́ kí o rí ojú-òde ìrònú fún gbogbo ìpè.",
-    "sdkNote": "SDK náà jẹ́ <strong>ṣáájú-beta</strong>. Àwọn atọ́kùn lè yí padà láàárín àwọn ìtújáde. Ojú API pátápátá (àwọn ojú-ọ̀nà 181 káàkiri àwọn ìpín 15) tí a ṣàkọsílẹ̀ nínú <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk lórí GitHub</a>.",
+    "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> ń fi ìrònú tó wà lẹ́yìn gbogbo ìpè hàn fún ọ.",
+    "sdkNote": "SDK náà jẹ́ <strong>ṣáájú-beta</strong>. Àwọn atọ́kùn lè yí padà láàárín àwọn ìtújáde. A ti ṣàkọsílẹ̀ API pátápátá nínú <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk lórí GitHub</a>.",
     "troubleshootingHeading": "Ṣíṣe Àtúnṣe Ìṣòro",
     "ts1Summary": "pip install kùnà",
     "ts1Step1": "Rí i dájú pé o ní Python 3.10 tàbí gíga jù:",
@@ -2927,7 +2927,7 @@
     "summit": "Iberu mẹrin, ilẹ kan. Yọ ile-iṣẹ ti o fi agbara mu ọ lati gbẹkẹle kuro, gbogbo mẹrin yipada ni akoko kan.",
     "seeAlsoHead": "Ilẹ̀ kan náà, tí a rí láti àwọn ẹnu-ọ̀nà mìíràn",
     "cta": "Fi sori foonu rẹ",
-    "back": "padà sí gbàngàn ìwọlé"
+    "back": "padà sí ojú-ìwé àkọ́kọ́"
   },
   "paths": {
     "consumer-ai": {
