@@ -326,6 +326,7 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-push", action="store_true")
     ap.add_argument("--langs", default="", help="comma list: restrict every batch to these languages (e.g. yo)")
+    ap.add_argument("--keys-file", default=None, help="run ONE batch named 'final' over the exact keys listed in this file (one per line, bundle=dictionaries), chunked like any batch")
     ap.add_argument("--shards", type=int, default=1, help="concurrent lane processes per batch, languages split round-robin (write-safe: one file per language)")
     args = ap.parse_args()
 
@@ -338,6 +339,9 @@ def main() -> int:
     hard: List[dict] = []
 
     plan = PLAN
+    if args.keys_file:
+        keys = [k.strip() for k in Path(args.keys_file).read_text().splitlines() if k.strip()]
+        plan = [("final", "dictionaries", keys)]
     if args.only:
         plan = [b for b in plan if b[0] in args.only]
     only_langs = [l for l in args.langs.split(",") if l]
