@@ -4,8 +4,8 @@
 
 import styles from "./store-badges.module.css";
 
-const APP_STORE = "https://apps.apple.com/us/app/cirisagent/id6758524415";
-const GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=ai.ciris.mobile";
+export const APP_STORE = "https://apps.apple.com/us/app/cirisagent/id6758524415";
+export const GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=ai.ciris.mobile";
 
 export type StoreLabels = {
   appleTop: string;

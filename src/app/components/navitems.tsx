@@ -15,7 +15,7 @@ import {
 const navItems = [
   {
     name: "Install",
-    subtitle: "Own it today",
+    subtitle: "Try it today",
     link: "/install",
     key: "install",
     golden: true,

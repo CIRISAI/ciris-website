@@ -1584,7 +1584,7 @@
     "supervisionCallout": "You do not need every AI agent to be the smartest, safest kind. You need a chain of supervision: simple agents watched by smarter agents, and those watched, in the end, by people. That chain is how you can run a lot of AI without losing track of whether it is serving human values.",
     "networkLabel": "What is actually being built",
     "networkH2": "Not one mind. A network of minds.",
-    "networkP1": "Most AI today is one model running on one company’s machines. CIRIS is different. Many agents run in many places, owned by many people. They are tied together by a few simple rules: how they prove who they are, how they record what they do, and how they check each other’s work.",
+    "networkP1": "Most AI today is one model running on one company’s machines. CIRIS is different. Many agents run in many places, run by many different people. They are tied together by a few simple rules: how they prove who they are, how they record what they do, and how they check each other’s work.",
     "networkP2": "When the network is working, it can do things no single agent could do alone. The intelligence lives in the agreement between agents, not inside any one of them. Nobody owns it. Nobody can quietly change it.",
     "networkP3": "Some people would call a system like that a superintelligence. We are open about the possibility. The way to keep it safe is the same idea that runs through every part of this page: every piece has to be open to view.",
     "chainLabel": "The chain of supervision",
@@ -2587,9 +2587,9 @@
   "homeHero": {
       "kicker": "FREE · OPEN SOURCE · AGPL-3.0",
       "h1": "You don't have to trust it, you can check it.",
-      "sub": "Scout shows its reasoning as it happens: every stage, every source, every action it took. Run it on your own machine or your own key, and read the whole record afterwards.",
-      "ctaChat": "Chat with Scout",
-      "ctaInstall": "Install",
+      "sub": "Every CIRIS agent shows its reasoning as it happens: every stage, every source, every action it took. Run it on your own machine or your own key, and read the whole record afterwards.",
+      "ctaChat": "Try Scout",
+      "ctaInstall": "Install the app",
       "navConstitution": "Constitution",
     "navMesh": "Constitutional Mesh",
     "navSafety": "Safety",
@@ -2599,7 +2599,9 @@
     "navStatus": "Status",
     "fact1": "Self-hosted or bring your own key",
       "fact2": "Every reasoning step signed and readable",
-      "fact3": "No accounts sold, no data pooled"
+      "fact3": "No accounts sold, no data pooled",
+    "ogTitle": "CIRIS: An AI That Shows Its Work",
+    "ogDescription": "One app. No Big Tech data centers. Every claim it makes, signed. Open-source ethical AI you can try on your phone today, and check."
   },
   "lobby": {
     "eyebrow": "CIRIS · the epistemic web",
@@ -2726,8 +2728,9 @@
       "kicker": "Consumer AI",
       "accent": "cyan",
       "metaTitle": "Private AI that runs on your phone",
-      "metaDesc": "A private AI you own. It runs on your phone with no Big Tech data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
-      "h1": "There is no AI you can actually own.",
+      "ogCardTitle": "A private AI you can try today.",
+      "metaDesc": "A private AI you can try today. It runs on your phone with no Big Tech data center behind it. About 65% of what you do never leaves the device, and every claim it makes is signed.",
+      "h1": "There is no AI that answers to you.",
       "steps": [
         "Every word you give an AI lands in someone else's building. It trains someone else's model and lives in someone else's logs. The terms can change tomorrow, and you would not even know.",
         "CIRIS runs on your phone. There is no Big Tech data center behind it. About 65% of what you do never leaves the device, and the small part that does is sealed before it goes.",
@@ -2775,7 +2778,7 @@
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "A private AI you can try today",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2802,7 +2805,7 @@
           "href": "/paths/big-tech"
         },
         {
-          "label": "A private AI you own",
+          "label": "A private AI you can try today",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2829,7 +2832,7 @@
           "href": "/paths/misinformation"
         },
         {
-          "label": "A private AI you own",
+          "label": "A private AI you can try today",
           "href": "/paths/consumer-ai"
         }
       ]
@@ -2853,7 +2856,7 @@
     "notBet": "That much is not a bet.",
     "dedication": "This is for the hands. The ones reaching, and the ones they reach toward.",
     "closeLine": "Build it because you don't know.",
-    "tagline": "The epistemic web. Own it today.",
+    "tagline": "The epistemic web. Try it today.",
     "cta": "Install on your phone"
   },
   "meshClaim": {

@@ -13,6 +13,7 @@ import { Instrument_Sans, Silkscreen } from "next/font/google";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { LOCALES, localeMeta, localizeHref, localizedPath } from "@/i18n/config";
 import { setLocalePref } from "@/i18n/pref";
+import StoreBadges from "./graphics/StoreBadges";
 import styles from "./homeHero.module.css";
 
 const instrument = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
@@ -349,6 +350,19 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
           <Link href={lh("/install")} className={styles.ctaSecondary}>
             {hero.ctaInstall}
           </Link>
+        </div>
+        {/* The app is on both stores today: the icon people will look for on
+            their phone, and the two badges that take them there. */}
+        <div className={styles.store}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/apple-touch-icon.png"
+            alt="CIRIS app icon"
+            width={44}
+            height={44}
+            className={styles.appIcon}
+          />
+          <StoreBadges labels={t.lobby.store} className={styles.storeBadges} />
         </div>
       </main>
 

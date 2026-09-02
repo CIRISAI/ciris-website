@@ -6,6 +6,7 @@ import {
   DEFAULT_LOCALE,
 } from "@/i18n/config";
 import { MARKETING_OG } from "./marketing-og";
+import { getDictionary } from "@/i18n/dictionaries";
 
 // The generic 1200x630 CIRIS brand card. Shared social-preview fallback for any
 // page without a bespoke designed card (and the site-wide default in the root
@@ -111,11 +112,22 @@ export function ogVideo(basePath: string, locale: string = DEFAULT_LOCALE): stri
 
 // Full localized metadata for a marketing page: hreflang alternates + a
 // localized, per-page social preview (og/twitter title+description, og:locale).
+function homeOg(locale: string): { title: string; description: string } | undefined {
+  const h = getDictionary(locale).homeHero as { ogTitle?: string; ogDescription?: string };
+  const title = h.ogTitle?.trim();
+  const description = h.ogDescription?.trim();
+  return title && description ? { title, description } : undefined;
+}
+
 export function localizedSeo(basePath: string, locale: string): Metadata {
   const og =
     MARKETING_OG[basePath]?.[locale] ?? MARKETING_OG[basePath]?.[DEFAULT_LOCALE];
-  const title = og?.title;
-  const description = og?.description;
+  // The landing's social title lives in the dictionary so the localization
+  // lane translates it like any other string; MARKETING_OG is the fallback
+  // until a locale has been filled.
+  const heroOg = basePath === "/" ? homeOg(locale) : undefined;
+  const title = heroOg?.title ?? og?.title;
+  const description = heroOg?.description ?? og?.description;
   const image = ogImage(basePath, locale);
   const video = ogVideo(basePath, locale);
   const languages: Record<string, string> = {};

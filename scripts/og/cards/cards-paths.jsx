@@ -13,7 +13,7 @@ function OGPathConsumer() {
   const a = Cp.cyan;
   const cx = 880, cy = 300; // hero center, right-weighted
   return (
-    <Card accent={a} eyebrow="paths / consumer ai" title="A private AI you<br/>actually own.">
+    <Card accent={a} eyebrow="paths / consumer ai" title="A private AI you<br/>can try today.">
       <Stage>
         <defs>
           <radialGradient id="pc-local" cx="50%" cy="52%" r="55%">

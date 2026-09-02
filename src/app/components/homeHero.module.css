@@ -204,6 +204,40 @@
   border-color: color-mix(in srgb, currentColor 40%, transparent);
 }
 
+.store {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.appIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(20, 24, 29, 0.18);
+}
+
+/* Restyle the shared badges to the hero's own palette (currentColor), since
+   this page runs its own day/night theme outside the site variables. */
+.storeBadges a {
+  color: inherit;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+}
+
+.storeBadges a:hover {
+  color: inherit;
+  border-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.storeBadges a > span > span:first-child {
+  color: inherit;
+  opacity: 0.6;
+}
+
 .facts {
   margin-top: auto;
   padding: 26px clamp(20px, 3.5vw, 44px) 0;
