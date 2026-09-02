@@ -202,7 +202,7 @@ def guard_and_fix(bundle: str) -> Dict[str, List[str]]:
         bad: List[str] = []
         for k, ev in en_flat.items():
             if k not in cur_flat:
-                bad.append(k); continue
+                continue  # not yet translated: the translate lane's job, not a violation
             cv = cur_flat[k]
             if type(cv) is not type(ev):
                 bad.append(k); continue
