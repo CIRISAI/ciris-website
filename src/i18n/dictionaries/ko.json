@@ -518,7 +518,7 @@
     "multiSourceSubheadline": "HTTPS가 권위적 기준. DNS는 보조 점검.",
     "multiSourceCopy": "CIRISVerify는 단일 출처를 신뢰하지 않습니다. 독립 도메인의 HTTPS 엔드포인트가 권위 있는 기준이 되고, DNS는 보조적인 교차 점검을 제공합니다. 출처들이 일치하지 않으면 에이전트는 제한됩니다. 롤백 방지 기능은 가장 높은 폐지 번호를 추적하여 낮아지는 경우를 거부합니다.",
     "unifiedAttestationHeadline": "통합 증명",
-    "unifiedAttestationSubheadline": "완전한 신원 조회.",
+    "unifiedAttestationSubheadline": "완전한 배경 조사.",
     "card1Headline": "키 증명",
     "card1Copy": "이 면허는 진짜인가요? 에이전트의 서명 키가 검증됩니다. 포털 발급 또는 임시 발급, 하드웨어 결속 또는 소프트웨어 전용 여부를 확인합니다. 무작위 도전으로 소유 여부를 증명합니다.",
     "card2Headline": "파일 무결성",

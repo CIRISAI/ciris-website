@@ -518,7 +518,7 @@
     "multiSourceSubheadline": "HTTPSが権威。DNSは補助的な確認。",
     "multiSourceCopy": "CIRISVerifyは単一のソースを信頼しません。独立したドメインのHTTPSエンドポイントが権威であり、DNSは補助的なクロスチェックを提供します。ソース間で不一致があれば、エージェントは制限されます。ロールバック防止機能は最高値の失効リビジョンを追跡し、減少を拒否します。",
     "unifiedAttestationHeadline": "統合証明",
-    "unifiedAttestationSubheadline": "完全な身元調査。",
+    "unifiedAttestationSubheadline": "完全なバックグラウンドチェック。",
     "card1Headline": "鍵の証明",
     "card1Copy": "このライセンスは本物か？エージェントの署名鍵が検証されます。ポータル発行またはエフェメラル、ハードウェア紐付けまたはソフトウェアのみ。ランダムチャレンジで所持を証明します。",
     "card2Headline": "ファイル整合性",
