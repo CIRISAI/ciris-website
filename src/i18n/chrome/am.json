@@ -6,11 +6,11 @@
   "nav": {
     "firstContact": {
       "name": "ቀዳሚ ግንኙነት",
-      "subtitle": "ከዚህ ጀምር: ለምን?"
+      "subtitle": "ከዚህ ይጀምሩ፡ CIRIS ለምን እንደሚኖር"
     },
     "install": {
       "name": "ጫን",
-      "subtitle": "ዛሬ ያግኙት"
+      "subtitle": "ዛሬ ይሞክሩት"
     },
     "coherenceRatchet": {
       "name": "ተቀናጀነት ራቸት",
@@ -22,7 +22,7 @@
     },
     "compare": {
       "name": "አወዳድር",
-      "subtitle": "የደህንነት ማስረጃን ይመልከቱ"
+      "subtitle": "የደህንነት ማብራሪያውን ይመልከቱ"
     },
     "research": {
       "name": "ምርምር",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "ሕገ መንግስት",
-      "subtitle": "ማዕቀፉ"
+      "subtitle": "የመሥራች ሰነዱ"
     },
     "github": {
       "name": "GitHub",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "ክፍት ተቀናጀነት መሠረተ ልማት። AGPL-3.0 | ተልዕኮ-ቆልፍ።",
+    "desc": "ክፍት ምንጭ የተቀናጀነት መሠረተ ልማት። AGPL-3.0። በተልዕኮው የታሰረ።",
     "headings": {
       "technology": "ቴክኖሎጂ",
       "resources": "ሀብቶች",
@@ -72,7 +72,7 @@
       "compliance": "ተገዢነት",
       "cewp": "CEWP (soup)",
       "grammar": "ሰዋስው (CEG)",
-      "game": "እንቆቅልሽ ጨዋታ",
+      "game": "የምሥጢር ጨዋታ",
       "firstContact": "ቀዳሚ ግንኙነት",
       "exploreTrace": "ክትትል ያስሱ",
       "scoring": "CIRIS ነጥብ አሰጣጥ",
@@ -81,7 +81,7 @@
       "status": "ሁኔታ",
       "about": "ስለ እኛ",
       "vision": "ራዕይ",
-      "thesis": "ጥናታዊ ጽሑፍ",
+      "thesis": "ቲሲስ",
       "methodology": "የአሠራር ዘዴ",
       "safetyVsCensorship": "ደህንነት ወይስ ሳንሱር",
       "principles": "መርሆዎች",

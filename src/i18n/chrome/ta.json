@@ -6,11 +6,11 @@
   "nav": {
     "firstContact": {
       "name": "முதல் தொடர்பு",
-      "subtitle": "இங்கே தொடங்கு: ஏன் என்று"
+      "subtitle": "இங்கே தொடங்கு: CIRIS ஏன் இருக்கிறது"
     },
     "install": {
       "name": "நிறுவு",
-      "subtitle": "இன்றே சொந்தமாக்கு"
+      "subtitle": "இன்றே முயற்சி செய்யுங்கள்"
     },
     "coherenceRatchet": {
       "name": "ஒத்திசைவு சக்கரம்",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "அரசியலமைப்பு",
-      "subtitle": "கட்டமைப்பு"
+      "subtitle": "அடிப்படை ஆவணம்"
     },
     "github": {
       "name": "GitHub",
@@ -46,11 +46,11 @@
     },
     "howItWorks": {
       "name": "எப்படி செயல்படுகிறது",
-      "subtitle": "முகவருக்குள்"
+      "subtitle": "முகவரின் உட்புற செயல்முறை"
     }
   },
   "footer": {
-    "desc": "திறந்த ஒத்திசைவு உள்கட்டமைப்பு. AGPL-3.0 | நோக்க-பூட்டப்பட்டது.",
+    "desc": "திறந்த மூல ஒத்திசைவு உள்கட்டமைப்பு. AGPL-3.0. அதன் நோக்கத்திற்கு உறுதிபூண்டது.",
     "headings": {
       "technology": "தொழில்நுட்பம்",
       "resources": "வளங்கள்",
@@ -74,7 +74,7 @@
       "grammar": "இலக்கணம் (CEG)",
       "game": "மர்ம விளையாட்டு",
       "firstContact": "முதல் தொடர்பு",
-      "exploreTrace": "ஒரு தடயத்தை ஆராயுங்கள்",
+      "exploreTrace": "ஒரு முடிவு தடயத்தை ஆராயுங்கள்",
       "scoring": "CIRIS மதிப்பெண்",
       "researchStatus": "ஆராய்ச்சி நிலை",
       "documentation": "ஆவணங்கள்",
@@ -83,7 +83,7 @@
       "vision": "தூரநோக்கு",
       "thesis": "ஆய்வுக்கட்டுரை",
       "methodology": "முறைமை",
-      "safetyVsCensorship": "பாதுகாப்பு எதிர் தணிக்கை",
+      "safetyVsCensorship": "பாதுகாப்பு vs தணிக்கை",
       "principles": "கொள்கைகள்",
       "privacyPolicy": "தனியுரிமை கொள்கை",
       "safetyPolicy": "பாதுகாப்பு கொள்கை",

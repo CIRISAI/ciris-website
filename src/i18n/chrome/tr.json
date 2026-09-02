@@ -6,11 +6,11 @@
   "nav": {
     "firstContact": {
       "name": "İlk Temas",
-      "subtitle": "Buradan başlayın: Neden?"
+      "subtitle": "Buradan başlayın: CIRIS neden var?"
     },
     "install": {
       "name": "Yükle",
-      "subtitle": "Bugün sahiplenin"
+      "subtitle": "Bugün deneyin"
     },
     "coherenceRatchet": {
       "name": "Tutarlılık Mandalı",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "Anayasa",
-      "subtitle": "Çerçeve"
+      "subtitle": "Kurucu belge"
     },
     "github": {
       "name": "GitHub",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "Açık tutarlılık altyapısı. AGPL-3.0 | Misyona kilitli.",
+    "desc": "Açık kaynak tutarlılık altyapısı. AGPL-3.0. Misyonuna bağlı.",
     "headings": {
       "technology": "Teknoloji",
       "resources": "Kaynaklar",
@@ -74,7 +74,7 @@
       "grammar": "Dilbilgisi (CEG)",
       "game": "Gizem oyunu",
       "firstContact": "İlk Temas",
-      "exploreTrace": "Bir İzi Keşfedin",
+      "exploreTrace": "Bir karar izini keşfedin",
       "scoring": "CIRIS Puanlama",
       "researchStatus": "Araştırma Durumu",
       "documentation": "Dokümantasyon",

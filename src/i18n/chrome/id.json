@@ -6,19 +6,19 @@
   "nav": {
     "firstContact": {
       "name": "Kontak Pertama",
-      "subtitle": "Mulai di Sini: Alasannya"
+      "subtitle": "Mulai di sini: mengapa CIRIS ada"
     },
     "install": {
       "name": "Pasang",
-      "subtitle": "Miliki hari ini"
+      "subtitle": "Coba hari ini"
     },
     "coherenceRatchet": {
       "name": "Ratchet Koherensi",
-      "subtitle": "Tekanannya"
+      "subtitle": "Tekanan"
     },
     "federation": {
       "name": "Federasi",
-      "subtitle": "Responsnya"
+      "subtitle": "Respons"
     },
     "compare": {
       "name": "Bandingkan",
@@ -30,11 +30,11 @@
     },
     "accord": {
       "name": "Konstitusi",
-      "subtitle": "Kerangkanya"
+      "subtitle": "Dokumen pendiriannya"
     },
     "github": {
       "name": "GitHub",
-      "subtitle": "Sumber terbuka"
+      "subtitle": "Open source"
     },
     "epistemicWeb": {
       "name": "Jaringan Epistemik",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "Infrastruktur koherensi terbuka. AGPL-3.0 | Terkunci pada misi.",
+    "desc": "Infrastruktur koherensi open-source. AGPL-3.0. Terikat pada misinya.",
     "headings": {
       "technology": "Teknologi",
       "resources": "Sumber Daya",
@@ -74,7 +74,7 @@
       "grammar": "Tata Bahasa (CEG)",
       "game": "Permainan misteri",
       "firstContact": "Kontak Pertama",
-      "exploreTrace": "Jelajahi Jejak",
+      "exploreTrace": "Jelajahi jejak keputusan",
       "scoring": "CIRIS Penilaian",
       "researchStatus": "Status Riset",
       "documentation": "Dokumentasi",
@@ -83,7 +83,7 @@
       "vision": "Visi",
       "thesis": "Tesis",
       "methodology": "Metodologi",
-      "safetyVsCensorship": "Keamanan vs Sensor",
+      "safetyVsCensorship": "Keamanan vs Penyensoran",
       "principles": "Prinsip",
       "privacyPolicy": "Kebijakan Privasi",
       "safetyPolicy": "Kebijakan Keamanan",

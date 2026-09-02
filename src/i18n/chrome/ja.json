@@ -5,12 +5,12 @@
   },
   "nav": {
     "firstContact": {
-      "name": "最初の接触",
-      "subtitle": "ここから始める：その理由"
+      "name": "ファーストコンタクト",
+      "subtitle": "ここから始める：CIRISが存在する理由"
     },
     "install": {
       "name": "インストール",
-      "subtitle": "今日から自分のものに"
+      "subtitle": "今日から試してみてください"
     },
     "coherenceRatchet": {
       "name": "一貫性ラチェット",
@@ -22,7 +22,7 @@
     },
     "compare": {
       "name": "比較",
-      "subtitle": "安全性の根拠を見る"
+      "subtitle": "安全性の論拠を見る"
     },
     "research": {
       "name": "研究",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "憲法",
-      "subtitle": "その枠組み"
+      "subtitle": "設立文書"
     },
     "github": {
       "name": "GitHub",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "オープンな一貫性インフラ。AGPL-3.0 | ミッションに固定されています。",
+    "desc": "オープンな一貫性インフラ。AGPL-3.0 | ミッションに結びついています。",
     "headings": {
       "technology": "テクノロジー",
       "resources": "リソース",
@@ -73,22 +73,22 @@
       "cewp": "CEWP (soup)",
       "grammar": "文法 (CEG)",
       "game": "謎解きゲーム",
-      "firstContact": "最初の接触",
-      "exploreTrace": "トレースの探索",
+      "firstContact": "ファーストコンタクト",
+      "exploreTrace": "意思決定トレースの探索",
       "scoring": "CIRIS スコアリング",
       "researchStatus": "研究状況",
       "documentation": "ドキュメント",
       "status": "ステータス",
       "about": "私たちについて",
       "vision": "ビジョン",
-      "thesis": "論文",
+      "thesis": "テーゼ",
       "methodology": "方法論",
-      "safetyVsCensorship": "安全性と検閲",
+      "safetyVsCensorship": "安全性 vs 検閲",
       "principles": "原則",
       "privacyPolicy": "プライバシーポリシー",
       "safetyPolicy": "安全性ポリシー",
       "warrantCanary": "Warrant Canary（令状カナリア）"
     },
-    "tagline": "構造によって安全に、原則によって開かれ、設計によって思いやりをもって"
+    "tagline": "構造により安全に、原則により開かれ、設計により思いやり深く"
   }
 }

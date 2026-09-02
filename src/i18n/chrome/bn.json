@@ -6,11 +6,11 @@
   "nav": {
     "firstContact": {
       "name": "প্রথম যোগাযোগ",
-      "subtitle": "এখান থেকে শুরু করুন: কেন"
+      "subtitle": "এখান থেকে শুরু করুন: CIRIS কেন বিদ্যমান"
     },
     "install": {
       "name": "ইনস্টল",
-      "subtitle": "আজই নিজের করুন"
+      "subtitle": "আজই ব্যবহার করে দেখুন"
     },
     "coherenceRatchet": {
       "name": "সামঞ্জস্য র‍্যাচেট",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "সংবিধান",
-      "subtitle": "কাঠামো"
+      "subtitle": "প্রতিষ্ঠার দলিল"
     },
     "github": {
       "name": "GitHub",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "ওপেন কোহেরেন্স অবকাঠামো। AGPL-3.0 | মিশন-লকড।",
+    "desc": "ওপেন সোর্স সামঞ্জস্য অবকাঠামো। AGPL-3.0। নিজের লক্ষ্যের সাথে আবদ্ধ।",
     "headings": {
       "technology": "প্রযুক্তি",
       "resources": "সম্পদ",
@@ -79,7 +79,7 @@
       "researchStatus": "গবেষণার অবস্থা",
       "documentation": "ডকুমেন্টেশন",
       "status": "অবস্থা",
-      "about": "সম্পর্কে",
+      "about": "পরিচিতি",
       "vision": "দৃষ্টিভঙ্গি",
       "thesis": "থিসিস",
       "methodology": "পদ্ধতি",

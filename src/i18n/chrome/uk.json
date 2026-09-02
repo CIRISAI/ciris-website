@@ -6,11 +6,11 @@
   "nav": {
     "firstContact": {
       "name": "Перший контакт",
-      "subtitle": "Почніть звідси: чому"
+      "subtitle": "Почніть звідси: чому існує CIRIS"
     },
     "install": {
       "name": "Встановити",
-      "subtitle": "Володійте вже сьогодні"
+      "subtitle": "Спробуйте вже сьогодні"
     },
     "coherenceRatchet": {
       "name": "Храповик узгодженості",
@@ -22,7 +22,7 @@
     },
     "compare": {
       "name": "Порівняти",
-      "subtitle": "Дивіться кейс безпеки"
+      "subtitle": "Дивіться обґрунтування безпеки"
     },
     "research": {
       "name": "Дослідження",
@@ -30,14 +30,14 @@
     },
     "accord": {
       "name": "Конституція",
-      "subtitle": "Структура"
+      "subtitle": "Установчий документ"
     },
     "github": {
       "name": "GitHub",
       "subtitle": "Відкритий код"
     },
     "epistemicWeb": {
-      "name": "Мережа знань",
+      "name": "Епістемічна мережа",
       "subtitle": "Інтернет без центру"
     },
     "safety": {
@@ -74,7 +74,7 @@
       "grammar": "Граматика (CEG)",
       "game": "Гра-загадка",
       "firstContact": "Перший контакт",
-      "exploreTrace": "Дослідити трасування",
+      "exploreTrace": "Дослідити трасування рішення",
       "scoring": "CIRIS Оцінювання",
       "researchStatus": "Стан досліджень",
       "documentation": "Документація",

@@ -6,11 +6,11 @@
   "nav": {
     "firstContact": {
       "name": "اولین تماس",
-      "subtitle": "از اینجا شروع کنید: چرایی"
+      "subtitle": "از اینجا شروع کنید: چرایی وجود CIRIS"
     },
     "install": {
       "name": "نصب",
-      "subtitle": "همین امروز مالکش شوید"
+      "subtitle": "همین امروز امتحانش کنید"
     },
     "coherenceRatchet": {
       "name": "چرخ‌دنده انسجام",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "قانون اساسی",
-      "subtitle": "چارچوب"
+      "subtitle": "سند بنیان‌گذار"
     },
     "github": {
       "name": "GitHub",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "زیرساخت انسجام باز. AGPL-3.0 | قفل‌شده به ماموریت.",
+    "desc": "زیرساخت انسجام متن‌باز. AGPL-3.0. متعهد به مأموریت خود.",
     "headings": {
       "technology": "فناوری",
       "resources": "منابع",
@@ -74,7 +74,7 @@
       "grammar": "دستور زبان (CEG)",
       "game": "بازی معمایی",
       "firstContact": "اولین تماس",
-      "exploreTrace": "کاوش در اثر",
+      "exploreTrace": "کاوش در مسیر تصمیم‌گیری",
       "scoring": "CIRIS امتیازدهی",
       "researchStatus": "وضعیت تحقیقات",
       "documentation": "مستندات",
@@ -89,6 +89,6 @@
       "safetyPolicy": "سیاست ایمنی",
       "warrantCanary": "Warrant Canary (نشان شفافیت قضایی)"
     },
-    "tagline": "ایمن با ساختار، باز بر اساس اصول، مهربان از روی طراحی"
+    "tagline": "ایمن با ساختار، باز بر اساس اصول، مهربان از نظر طراحی"
   }
 }

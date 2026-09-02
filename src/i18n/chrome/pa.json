@@ -6,11 +6,11 @@
   "nav": {
     "firstContact": {
       "name": "ਪਹਿਲਾ ਸੰਪਰਕ",
-      "subtitle": "ਇੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ: ਕਿਉਂ"
+      "subtitle": "ਇੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ: CIRIS ਕਿਉਂ ਮੌਜੂਦ ਹੈ"
     },
     "install": {
       "name": "ਇੰਸਟਾਲ",
-      "subtitle": "ਅੱਜ ਹੀ ਆਪਣਾ ਬਣਾਓ"
+      "subtitle": "ਅੱਜ ਹੀ ਇਸਨੂੰ ਅਜ਼ਮਾਓ"
     },
     "coherenceRatchet": {
       "name": "ਇਕਸਾਰਤਾ ਰੈਚੇਟ",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "ਸੰਵਿਧਾਨ",
-      "subtitle": "ਉਹ ਢਾਂਚਾ"
+      "subtitle": "ਸੰਸਥਾਪਕ ਦਸਤਾਵੇਜ਼"
     },
     "github": {
       "name": "GitHub",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "ਖੁੱਲ੍ਹੀ ਇਕਸਾਰਤਾ ਢਾਂਚਾ। AGPL-3.0 | ਮਿਸ਼ਨ-ਲਾਕਡ।",
+    "desc": "ਓਪਨ-ਸੋਰਸ ਇਕਸਾਰਤਾ ਬੁਨਿਆਦੀ ਢਾਂਚਾ। AGPL-3.0. ਆਪਣੇ ਮਿਸ਼ਨ ਨਾਲ ਬੱਝਿਆ ਹੋਇਆ।",
     "headings": {
       "technology": "ਤਕਨਾਲੋਜੀ",
       "resources": "ਸਰੋਤ",
