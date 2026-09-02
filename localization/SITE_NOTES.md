@@ -2,6 +2,9 @@
 
 `localize.py`, `glossary.py` and `TRANSLATION_GUIDE.md` are verbatim from
 CIRISAI/CIRISClient — keep them unmodified so upstream fixes port cleanly.
+ONE local patch, marked `LOCAL PATCH` in localize.py: `parse_json_reply(None)`
+raises ValueError (handled as an unparseable reply) instead of AttributeError
+(which killed a whole run when a rung returned no text). Propose it upstream.
 The site-owned pieces are `check_localization_sync.py` (the shim: two
 single-copy bundles, lists excluded from the address space) and `drive.sh`
 (retry/backoff/banked-work driver).

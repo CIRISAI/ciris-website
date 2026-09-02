@@ -597,6 +597,12 @@ def call_model(model: str, system: str, messages: List[dict], *, batch: bool = F
 
 
 def parse_json_reply(text: str) -> dict:
+    # LOCAL PATCH (ciris-website, 2026-09-02): a provider can return a message
+    # with no text at all (content null: a rung that spent its whole token cap
+    # on reasoning). Callers already handle ValueError as "unparseable reply";
+    # an AttributeError here killed a whole run instead. Propose upstream.
+    if text is None:
+        raise ValueError("empty reply (no text content)")
     text = text.strip()
     if text.startswith("```"):
         text = text.strip("`")
