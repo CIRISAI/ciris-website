@@ -4,7 +4,7 @@
     "headline": "Iwe kan. Ila ẹya kan.",
     "intro": "CIRIS Accord ṣalaye ohun ti AI gbọdọ bikita nipa. CIRIS Epistemic Grammar ṣalaye bí a ṣe ń fọwọ́ sí gbogbo ẹ̀sùn kí ẹnikẹ́ni lè ṣàyẹ̀wò rẹ̀. A kọ wọn bi iwe meji, ṣugbọn wọn ti ni ara wọn ninu tẹlẹ. Bayi wọn jẹ ọkan: Ofin-Ipilẹ CIRIS.",
     "apexLabel": "Ipilẹ naa, Ibi-afẹde Agba M-1",
-    "apexQuote": "Ṣe atilẹyin iṣọkan ti o yẹ ati ti o le ṣatunṣe: awọn ipo igbesi aye ti o gba awọn ẹda alãye oniruru laaye lati lepa ilọsiwaju tiwọn ni idajọ ododo ati iyanu.",
+    "apexQuote": "Gbéga ÌBÁRAMU tó dúró ṣínsín tí ó sì lè fara mọ́ àyípadà: àwọn ipò ìgbé-ayé tí ó jẹ́ kí àwọn ẹ̀dá alààyè onírúurú lè lépa ìlọsíwájú tìwọn nínú ìdájọ́ ododo àti ìyanu.",
     "apexNote": "Gbogbo ofin, afikun orukọ, ati eto-ise ninu iwe naa n pada si ibi-afẹde kan yii. Giga ni idi, pẹlẹpẹlẹ ni agbara: ibi-afẹde kan ni o ṣakoso, ko si imọran kan, ko si ẹgbẹ kan ti o ni bọtini si otitọ.",
     "foldedTitle": "Ohun ti a fi papọ",
     "foldedBody": "A daakọ Accord (ẹya 1.3-RC2) ati CEG (ẹya 1.0-RC29) ọrọ fun ọrọ, lẹhinna a hun wọn di iwe alainilara kan ti o wa ni akoko lọwọlọwọ. A tọju gbogbo ofin ipele-okun lati byte si byte. Ẹgbẹ kan ti awọn atunyẹwo ailopin dajọ pe ẹya ti a darapọ jẹ kedere ju orisun kọọkan lọ ni awọn ori 28 ninu 29.",
@@ -80,7 +80,7 @@
       "constitution": "Ofin-Ipilẹ"
     },
     "levels": {
-      "simple": "Gẹ́ẹ́sì Rọrùn",
+      "simple": "Èdè rọrùn",
       "advanced": "Ìpele tó ti gòkè",
       "srLabel": "Ipele kika"
     }
@@ -2072,10 +2072,10 @@
     "kicker": "Ile-iṣẹ iwadi"
   },
   "cewp": {
-    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · a n pe e bi “soup”",
+    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · à ń pè é bí “soup”",
     "headline": "Ìnítánẹ́tì tí a tún kọ́ láìsí alárinà.",
-    "intro1": "CEWP jẹ arọpo pipe fun intaneti. Ohun gbogbo ti o n ṣe lori ayelujara loni, ṣiṣanwọle, ipe fidio, ere, awọn faili, awọn ifiranṣẹ, ati awọn ẹtọ ti a fọwọsi, ni a fi taara laarin awọn ẹrọ ti awọn eniyan ti ni tẹlẹ, lori nẹtiwọọki ti a fi koodu di eyiti o lera-lẹhin-quantum. Ko si awọn ile-iṣẹ data nla ni aarin. Ko si awọn ile-iṣẹ diẹ ti o ni awọn ọpa naa.",
-    "intro2": "Alarina ti oni n na nipa 175 megatons ti CO2 ni ọdun kan o si fi awọn ile-iṣẹ marun-un mejeeji data rẹ ati agbara lati pinnu ohun ti o ri. CEWP n ṣiṣẹ lori ẹrọ ti o ti ni tẹlẹ, ko ni polowo akoonu agbegbe rẹ rara fun iyoku nẹtiwọọki, o si n ṣakoso ara rẹ: nẹtiwọọki pinnu nipasẹ awọn ibo ti a fọwọsi ti a si wọn, laisi oluni pẹpẹ kankan ni aarin.",
+    "intro1": "CEWP jẹ arọpo pipe fun intaneti. Ohun gbogbo ti o n ṣe lori ayelujara loni, ṣíṣàn fíìmù àti orin, ipe fidio, ere, awọn faili, awọn ifiranṣẹ, ati awọn ẹtọ ti a fọwọsi, ni a fi taara laarin awọn ẹrọ ti awọn eniyan ti ni tẹlẹ, lórí nẹ́tíwọ́ọ̀kì mesh tí a ti fi ìkọ̀kọ́ post-quantum dáàbò bo rẹ̀. Ko si awọn ile-iṣẹ data nla ni aarin. Ko si awọn ile-iṣẹ diẹ ti o ni awọn àsopọ̀ naa.",
+    "intro2": "Alárìnà ti òní ń na nípa 175 megatons CO2 lọ́dún kan, ó sì fi dátà rẹ àti agbára láti pinnu ohun tí o máa rí sí ọwọ́ àwọn ilé-iṣẹ́ márùn-ún wọ̀nyí. CEWP n ṣiṣẹ lori ẹrọ ti o ti ni tẹlẹ, kò fi àkóònú inú ẹ̀rọ rẹ hàn gbangba rárá sí ìyókù nẹ́tíwọ́ọ̀kì, o si n ṣakoso ara rẹ: nẹtiwọọki pinnu nipasẹ awọn ibo ti a fọwọsi ti a si wọn, laisi olùṣàkóso pẹpẹ kankan ní àárín.",
     "watchLabel": "Wo àlàyé ìṣéjú méje",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "Gba CIRIS lori App Store",
@@ -2924,8 +2924,8 @@
       "Ohun ti yipada",
       "Lẹhinna"
     ],
-    "summit": "Iberu mẹrin, ilẹ kan. Yọ ile-iṣẹ ti o fi agbara mu ọ lati gbẹkẹle kuro, gbogbo mẹrin yipada ni akoko kan.",
-    "seeAlsoHead": "Ilẹ̀ kan náà, tí a rí láti àwọn ẹnu-ọ̀nà mìíràn",
+    "summit": "Ìbẹ̀rù mẹ́rin, ìdáhùn kan. Yọ àárín tí a fi agbára mú ọ láti gbẹ́kẹ̀lé kúrò, gbogbo mẹ́rin yípadà ní àkókò kan.",
+    "seeAlsoHead": "Ìdáhùn kan náà, tí a rí láti ojú àwọn ìbẹ̀rù yòókù",
     "cta": "Fi sori foonu rẹ",
     "back": "padà sí ojú-ìwé àkọ́kọ́"
   },
