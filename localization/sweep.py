@@ -263,6 +263,7 @@ def main() -> int:
     ap.add_argument("--backoff", type=int, default=180)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-push", action="store_true")
+    ap.add_argument("--langs", default="", help="comma list: restrict every batch to these languages (e.g. yo)")
     args = ap.parse_args()
 
     OUT.mkdir(exist_ok=True)
@@ -284,11 +285,12 @@ def main() -> int:
         log("src/i18n has uncommitted changes; refusing to sweep over them")
         return 4
 
+    only_langs = [l for l in args.langs.split(",") if l]
     spent = 0.0
     kv_done = 0
     status = "complete"
     for name, bundle, patterns in plan:
-        kv = selection_size(bundle, patterns, [])
+        kv = selection_size(bundle, patterns, only_langs)
         if kv < 0:
             status = "error_sizing"; break
         if kv == 0:
@@ -304,7 +306,7 @@ def main() -> int:
         if args.dry_run:
             continue
 
-        langs: List[str] = []
+        langs: List[str] = list(only_langs)
         batch_spend = 0.0
         merged: dict = {}
         rc = 1
