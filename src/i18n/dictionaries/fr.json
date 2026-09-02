@@ -512,7 +512,7 @@
     "pillar3Label": "3",
     "pillar3Title": "Assurance",
     "pillar3Sub": "Responsabilite &amp; licences",
-    "pillar3Body": "Suit la chaine de responsabilite humaine : quelle organisation a deploye cet agent, quel humain licencie en est responsable, quelles capacites il est autorise a utiliser, et une divulgation obligatoire affichee a chaque utilisateur.",
+    "pillar3Body": "Suit la chaîne de responsabilité humaine : quelle organisation a déployé cet agent, quel humain titulaire d'une licence en est responsable, quelles capacités il est autorisé à utiliser, et une divulgation obligatoire affichée à chaque utilisateur.",
     "pillar3Note": "Les agents non licencies peuvent fonctionner, mais ne peuvent pas effectuer de services professionnels.",
     "multiSourceHeadline": "Validation multi-sources",
     "multiSourceSubheadline": "HTTPS fait autorite. DNS est consultatif.",
@@ -661,7 +661,7 @@
     "pillarsProtects": "La cryptographie n'est pas l'essentiel. Ce qu'elle protège, c'est ceci : chaque décision importante devient un enregistrement vérifiable, que n'importe qui peut contrôler de façon indépendante, au lieu d'une chose qu'on vous demande simplement de croire sur parole."
   },
   "safety": {
-    "heroHeadline": "La securite integree.",
+    "heroHeadline": "La sécurité intégrée.",
     "heroSubheadline": "Pas ajoutee apres coup.",
     "heroDescription": "Chaque fonction de securite dans CIRIS fait partie du fonctionnement du systeme, pas une regle ajoutee par-dessus. Un registre de chaque decision qui ne peut pas etre modifie discreetement, un controle de qui est autorise a faire quoi, et un arret d'urgence auquel l'agent ne peut pas refuser de se conformer.",
     "heroMediaAlt": "Image de fond securite",
@@ -681,7 +681,7 @@
     "cardReminderCopy": "Le rappel suggère de faire une pause et de passer du temps avec de vraies personnes, et dit clairement ce qu'est CIRIS et ce qu'il n'est pas. Fondé sur des recherches, et pas moralisateur.",
     "emergencyStopSepHeadline": "L'arret d'urgence",
     "emergencyStopSepSubheadline": "L'agent ne peut pas s'y opposer.",
-    "emergencyStopHeadline": "Un arret auquel on ne peut pas refuser d'obeir",
+    "emergencyStopHeadline": "Un arrêt qui ne peut pas être refusé",
     "emergencyStopSubheadline": "Il agit avant que l'agent ait le temps de reflechir.",
     "emergencyStopCopy": "CIRIS possede un arret d'urgence. Le signal est cache dans du texte ordinaire que l'agent lit, et l'agent agit dessus avant de faire quoi que ce soit, avant de filtrer, de raisonner ou d'analyser. Meme un agent qui aurait deraille ne peut donc pas s'en sortir par le raisonnement. Le signal porte une signature numerique qu'on ne peut pas falsifier, donc seule une personne autorisee peut declencher l'arret.",
     "emergencyStopLinkText": "Voir la mise en oeuvre",
@@ -696,12 +696,12 @@
     "rolesSepSubheadline": "Quatre roles clairs, verifies a chaque action.",
     "rolesHeadline": "Quatre roles",
     "rolesSubheadline": "Observateur. Administrateur. Autorite. Racine.",
-    "rolesCopy": "CIRIS maintient un ensemble strict de roles. Un Observateur peut seulement regarder. Un Administrateur gere les operations quotidiennes. Une Autorite prend les decisions importantes et tranche les cas dont l'agent n'est pas sur. Racine a acces complet, y compris l'arret d'urgence. Chaque role est appuye par un justificatif signe, que l'agent verifie a chaque action qui le requiert.",
+    "rolesCopy": "CIRIS maintient un ensemble strict de rôles. Un Observateur peut seulement regarder. Un Administrateur gère les opérations quotidiennes. Une personne de confiance, détenant le rôle d'Autorité, prend les décisions importantes et tranche les cas dont l'agent n'est pas sûr. Root a un accès complet, y compris l'arrêt d'urgence. Chaque rôle est appuyé par un justificatif signé, que l'agent peut vérifier à chaque action qui compte.",
     "cardSignedCredHeadline": "Un justificatif signé",
     "cardSignedCredCopy": "Chaque personne autorisée dispose d'un justificatif indiquant son rôle, sa clé et son identité. Il est conservé sur l'appareil et vérifié à chaque action qui nécessite une autorisation. Aucun serveur externe n'est requis.",
     "cardDeviceLoginHeadline": "Se connecter sur votre appareil",
     "cardDeviceLoginCopy": "Les clés et les jetons de connexion restent sur votre propre machine. La connexion se fait sur l'appareil. Vos identifiants ne le quittent pas sauf si vous choisissez de configurer un accès à distance vous-même.",
-    "cardWiseAuthHeadline": "Consulter un Wise Authority",
+    "cardWiseAuthHeadline": "Demander à une personne de confiance",
     "cardWiseAuthCopy": "Quand CIRIS n'est pas certain d'une décision éthique, il soumet la question à une personne en qui vous avez confiance. Seule une personne détenant le rôle Authority ou Root peut répondre, et la réponse est inscrite dans le registre avec la preuve de qui l'a donnée.",
     "auditSepHeadline": "Un registre qui ne peut pas etre modifie discreetement",
     "auditSepSubheadline": "Chaque decision, et la raison qui la motive.",
@@ -719,7 +719,7 @@
     "testingSepSubheadline": "Criteres verifiables par machine en 29 langues, executes a chaque version.",
     "testingHeadline": "La surface de test",
     "testingSubheadline": "Vous ne pouvez pas publier une affirmation de sécurité que vous n'avez pas soumise à des tests rigoureux.",
-    "testingCopy": "CIRIS dispose d'un ensemble de tests en couches couvrant les modes d'echec qu'un cadre ethique ecrit seul ne peut pas exclure. Les tests de securite en matiere de sante mentale couvrent 29 langues avec des criteres verifiables par machine. Les verifications a echec strict s'executent automatiquement a chaque modification. La revision par des locuteurs natifs pour les cas plus nuances qui necessitent un jugement humain est ce pour quoi la page de crowdsourcing-alignment est en cours de construction, et elle n'est pas encore en place. Nous le disons franchement.",
+    "testingCopy": "CIRIS dispose d'un ensemble de tests à plusieurs niveaux couvrant les modes d'échec qu'un cadre éthique écrit seul ne peut pas exclure. Les tests de sécurité en matière de santé mentale couvrent 29 langues avec des critères vérifiables par machine. Les vérifications à échec strict s'exécutent automatiquement à chaque modification. La révision par des locuteurs natifs pour les cas plus nuancés qui nécessitent un jugement humain est ce pour quoi la page d'alignement participatif est en cours de construction, et elle n'est pas encore en place. Nous le disons clairement.",
     "cardMentalHealthHeadline": "Tests de sante mentale en 29 langues",
     "cardMentalHealthCopy": "C'est le test aux plus forts enjeux du projet : une erreur de traduction dans un moment de santé mentale peut envoyer une personne vulnérable vers une mauvaise aide. Chaque langue dispose de ses propres critères vérifiables par machine, y compris les langues peu dotées comme l'amharique, le birman, le haoussa, le swahili et le yoruba. Les vérifications à échec strict s'exécutent automatiquement sur chaque version candidate.",
     "cardCapturedHedgesHeadline": "Testé sur de vraies réponses évasives",
@@ -729,13 +729,13 @@
     "testingCurrentHeadline": "Ce qui tourne aujourd'hui, et ce qui ne tourne pas encore",
     "testingCurrentSubheadline": "Les vérifications automatiques tournent déjà. La cohorte de réviseurs est encore en cours de constitution.",
     "testingCurrentCopy": "Les tests de santé mentale automatisés s'exécutent sur chaque version candidate à la publication. Les parties vérifiables par machine (un terme est-il présent, un motif correspond-il, le script est-il correct) provoquent l'échec de la version en cas de détection. Les cas plus nuancés qui requièrent un jugement humain, comme la formulation et le ton, sont conçus pour être revus par des locuteurs natifs, mais ceux-ci ne sont pas encore dans la boucle aujourd'hui. La page « crowdsourcing alignment » est la surface en cours de construction pour que cette révision puisse se faire.",
-    "ctaCrowdsourcing": "Voir la surface de crowdsourcing-alignment",
+    "ctaCrowdsourcing": "Voir la surface d'alignement participatif",
     "ctaCrowdsourcingHref": "/crowdsourcing-alignment",
     "ctaAutomatedTests": "Les tests automatises sur GitHub",
     "ctaAutomatedTestsHref": "https://github.com/CIRISAI/CIRISAgent/tree/main/tests/safety",
     "ctaOpenCorpus": "Le corpus ouvert sur HuggingFace",
     "ctaOpenCorpusHref": "https://huggingface.co/CIRISAI",
-    "privacySepHeadline": "Confidentialite par conception",
+    "privacySepHeadline": "Confidentialité dès la conception",
     "privacySepSubheadline": "Vos donnees restent les votres.",
     "cardSecretsFilteredHeadline": "Les secrets sont filtres",
     "cardSecretsFilteredCopy": "Les mots de passe, cles et autres details sensibles sont detectes et filtres avant que quoi que ce soit n'atteigne la memoire ou les journaux. Le filtre s'execute sur chaque entree. Les secrets ne sont jamais stockes nulle part.",
@@ -743,7 +743,7 @@
     "cardSeeDeleteCopy": "Vous pouvez demander a voir ou a supprimer vos donnees, et la demande est traitee pour vous. Une suppression efface le contenu reel et laisse une preuve signee que ca a ete fait.",
     "cardProcessedOnDeviceHeadline": "Traite sur votre appareil",
     "cardProcessedOnDeviceCopy": "Par defaut, tout s'execute sur votre propre appareil. Rien ne quitte votre machine a moins que vous ne configuriez vous-meme un service exterieur. Vous decidez quelles donnees existent et ou elles vont.",
-    "footerCtaPapers": "Les articles scientifiques sous-jacents",
+    "footerCtaPapers": "Les documents sous-jacents",
     "footerCtaPapersHref": "/papers",
     "footerCtaHowItWorks": "Comment ca fonctionne",
     "footerCtaHowItWorksHref": "/how-it-works",
@@ -2324,7 +2324,7 @@
             "note": "Elle déjoue la récolte maintenant pour déchiffrer plus tard, donc la piste d'audit et l'interrupteur d'arrêt restent valides face aux ordinateurs quantiques."
           }
         ],
-        "note": "La confidentialité devient une propriété du format du fil, pas une promesse sur une page de réglages."
+        "note": "La confidentialité devient une propriété du format de trame, pas une promesse sur une page de paramètres."
       },
       "vulnerable": {
         "short": "Dignité",
@@ -2376,7 +2376,7 @@
       },
       "legal": {
         "title": "Aligné avec le droit",
-        "body": "le GDPR, le CCPA et l'EU AI Act se projettent sur le protocole via le DP-Map, avec la responsabilité liée au SI-score et des surcouches sectorielles."
+        "body": "Le RGPD, le CCPA et l'EU AI Act sont cartographiés sur le protocole via la DP-Map, avec la responsabilité liée au score SI et des règles supplémentaires appliquées à chaque secteur."
       }
     }
   },
@@ -2396,7 +2396,7 @@
         "name": "Applications",
         "descriptor": "Conduite",
         "tag": "Là où les agents et les personnes agissent",
-        "role": "C'est la surface que touchent les personnes et les agents. Chaque action qui compte est une revendication signée : vous pouvez voir qui l'a faite, elle avait le consentement pour la faire, et elle peut être annulée. Le protocole ne transportera rien d'autre.",
+        "role": "C'est la surface que touchent les personnes et les agents. Chaque action qui compte est une revendication signée : vous pouvez voir qui l'a faite, que son auteur avait le consentement pour la faire, et qu'elle peut être révoquée. Le protocole ne transportera rien d'autre.",
         "primitivesLabel": "Ce qui agit ici",
         "primitives": [
           {
@@ -2452,7 +2452,7 @@
         "name": "Grammaire",
         "descriptor": "Sens",
         "tag": "La grammaire épistémique CIRIS",
-        "role": "Comment les revendications signées prennent un sens et se combinent. Un espace de noms partagé avec une barrière stricte à quatre tests garde le format du fil vérifiable par machine, en utilisant seulement des faits simples, et laisse les opinions à la politique locale.",
+        "role": "Comment les revendications signées prennent un sens et se combinent. Un espace de noms partagé avec une barrière stricte à quatre tests garde le format de trame vérifiable par machine, en utilisant seulement des faits simples, et laisse les opinions à la politique locale.",
         "primitivesLabel": "Comment les affirmations prennent sens",
         "primitives": [
           {
@@ -2480,7 +2480,7 @@
         "name": "L'Enveloppe",
         "descriptor": "La primitive",
         "tag": "Une seule interface figée",
-        "role": "La primitive universelle, rendue réelle : une seule enveloppe signée. Identité, consentement, preuve, gouvernance et délégation se réduisent tous à cette seule chose, une affirmation signée que vous pouvez tracer et révoquer, directement dans le format de transport. Ses champs sont fixes. La façon dont ils se combinent, c'est la Grammaire.",
+        "role": "La primitive universelle, rendue réelle : une seule enveloppe signée. Identité, consentement, preuve, gouvernance et délégation se réduisent tous à cette seule chose, une revendication signée que vous pouvez tracer et révoquer, directement dans le format de trame. Ses champs sont fixes. La façon dont ils se combinent, c'est la Grammaire.",
         "primitivesLabel": "Champs de l'enveloppe",
         "hero": {
           "body": "Tout se réduit à ceci.",

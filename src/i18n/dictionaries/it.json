@@ -626,7 +626,7 @@
     "pricingIssuanceFeeH4": "Commissione di Emissione",
     "pricingIssuanceFeeCopy": "Una piccola commissione non rimborsabile che copre l'infrastruttura del registro e previene la rotazione eccessiva delle identità. Per identità agente, non per organizzazione.",
     "pricingIdentityBondH4": "Cauzione Identità",
-    "pricingIdentityBondCopy": "Una quota per identità come resistenza alle identità Sybil. Viene trattenuta in caso di revoca. L'amministratore può emettere un rimborso manuale per le identità correttamente disattivate.",
+    "pricingIdentityBondCopy": "Una quota per identità per la resistenza agli attacchi Sybil. Viene trattenuta in caso di revoca. L'amministratore può rimborsare manualmente la quota quando un'identità viene disattivata correttamente.",
     "pricingMonthlyAssuranceH4": "Garanzia Mensile",
     "pricingMonthlyAssuranceCopy": "I piani a pagamento includono validazione supportata da steward, documentazione di audit e supporto alla responsabilità potenziata. Stai pagando per la responsabilità, non per le capacità.",
     "pqReadyH2": "Pronto per il Post-Quantum",
@@ -656,7 +656,7 @@
     "closingBtnContact": "Contatta il Reparto Vendite",
     "killSwitchSubheadline": "Un interruttore che nessuno all'interno del sistema può disattivare.",
     "killSwitchHeadline": "L'interruttore costituzionale di emergenza",
-    "killSwitchBody": "Il potere di ultima istanza per fermare un agente CIRIS non appartiene all'azienda, alla rete o all'agente stesso. Appartiene a persone specifiche, identificate per nome. Ogni titolare porta con sé una coppia di chiavi hardware: una chiave di sicurezza FIPS 140-3 per la firma classica, che sigilla anche il materiale per un secondo dispositivo con la firma post-quantistica. Per attivare l'arresto, la maggioranza dei titolari (2 of 3) deve firmare il comando sul proprio hardware. Il comando porta firme ibride Ed25519 + ML-DSA-65, quindi non può essere falsificato, ripetuto o imitato, nemmeno da un futuro computer quantistico. Nessuna parte della rete può concedere, revocare o ignorare questo comando.",
+    "killSwitchBody": "Il potere di ultima istanza per fermare un agente CIRIS non appartiene all'azienda, alla rete o all'agente stesso. Appartiene a persone specifiche, identificate per nome. Ogni titolare porta con sé una coppia di chiavi hardware: una chiave di sicurezza FIPS 140-3 per la firma classica, che sigilla anche il materiale per un secondo dispositivo con la firma post-quantistica. Per attivare l'arresto, la maggioranza dei titolari (2 su 3) deve firmare il comando sul proprio hardware. Il comando porta firme ibride Ed25519 + ML-DSA-65, quindi non può essere falsificato, ripetuto o imitato, nemmeno da un futuro computer quantistico. Nessuna parte della rete può concedere, revocare o ignorare questo comando.",
     "killSwitchNote": "Abbiamo progettato il sistema per il caso peggiore: un'intelligenza artificiale che attacca il proprio interruttore di spegnimento prendendo di mira le persone che lo controllano. La Costituzione definisce un quorum attivo, quindi anche se la maggior parte dei titolari non è disponibile, un solo sopravvissuto raggiungibile può comunque staccare la spina.",
     "pillarsProtects": "La crittografia non è il punto centrale. Quello che protegge è questo: ogni decisione importante diventa un registro verificabile, che resiste ai controlli indipendenti, invece di qualcosa di cui ti viene chiesto di fidarti."
   },
@@ -696,12 +696,12 @@
     "rolesSepSubheadline": "Quattro ruoli chiari, verificati ad ogni azione.",
     "rolesHeadline": "Quattro Ruoli",
     "rolesSubheadline": "Osservatore. Admin. Autorità. Root.",
-    "rolesCopy": "CIRIS mantiene un insieme rigoroso di ruoli. Un Osservatore può solo guardare. Un Admin gestisce le operazioni quotidiane. Un'Autorità prende le decisioni più importanti e risolve i casi su cui l'agente non è sicuro. Root ha accesso completo, incluso l'arresto di emergenza. Ogni ruolo è supportato da una credenziale firmata, in modo che l'agente possa verificarla ad ogni azione che conta.",
+    "rolesCopy": "CIRIS mantiene un insieme rigoroso di ruoli. Un Osservatore può solo guardare. Un Admin gestisce le operazioni quotidiane. Una persona di cui ti fidi, che detiene il ruolo Authority, prende le decisioni più importanti e risolve i casi su cui l'agente non è sicuro. Root ha accesso completo, incluso l'arresto di emergenza. Ogni ruolo è supportato da una credenziale firmata, in modo che l'agente possa verificarla ad ogni azione che conta.",
     "cardSignedCredHeadline": "Una Credenziale Firmata",
     "cardSignedCredCopy": "Ogni persona autorizzata possiede una credenziale con il proprio ruolo, la propria chiave e la propria identità. Viene conservata sul dispositivo e verificata ad ogni azione che richiede un'autorizzazione. Non è richiesto nessun server esterno.",
     "cardDeviceLoginHeadline": "Accesso sul Tuo Dispositivo",
     "cardDeviceLoginCopy": "Le chiavi e i token di accesso rimangono sulla tua macchina. L'accesso avviene sul dispositivo. Le tue credenziali non lo lasciano mai, a meno che tu non scelga di configurare tu stesso un accesso remoto.",
-    "cardWiseAuthHeadline": "Chiedere a una Wise Authority",
+    "cardWiseAuthHeadline": "Chiedere a una persona di cui ti fidi",
     "cardWiseAuthCopy": "Quando CIRIS non è sicuro di una scelta etica, passa la domanda a una persona di cui ti fidi. Solo chi detiene il ruolo Authority o Root può rispondere, e la risposta viene scritta nel registro con la prova di chi l'ha fornita.",
     "auditSepHeadline": "Un Registro Che Non Può Essere Modificato Silenziosamente",
     "auditSepSubheadline": "Ogni decisione, e il motivo dietro di essa.",
@@ -729,7 +729,7 @@
     "testingCurrentHeadline": "Cosa Funziona Oggi e Cosa Non Ancora",
     "testingCurrentSubheadline": "I controlli automatici sono attivi ora. Il gruppo di revisori è ancora in costruzione.",
     "testingCurrentCopy": "I test automatizzati sulla salute mentale vengono eseguiti su ogni release candidate. Le parti verificabili automaticamente (presenza di un termine, corrispondenza di un pattern, correttezza dello script) bloccano il rilascio in caso di riscontro. I casi più delicati che richiedono giudizio umano, come la formulazione e il tono, sono progettati per la revisione da madrelingua, ma i madrelingua non sono ancora coinvolti nel processo oggi. La pagina di allineamento tramite crowdsourcing è la superficie che viene costruita per permettere questa revisione.",
-    "ctaCrowdsourcing": "Vedi la superficie di allineamento crowdsourcing",
+    "ctaCrowdsourcing": "Vedi la superficie di allineamento tramite crowdsourcing",
     "ctaCrowdsourcingHref": "/crowdsourcing-alignment",
     "ctaAutomatedTests": "I test automatizzati su GitHub",
     "ctaAutomatedTestsHref": "https://github.com/CIRISAI/CIRISAgent/tree/main/tests/safety",
@@ -856,7 +856,7 @@
   },
   "vision": {
     "heroHeadline": "Te lo meriti.",
-    "heroSubheadline": "Lo facciamo tutti.",
+    "heroSubheadline": "Lo meritiamo tutti.",
     "heroDescription": "Ogni storia ad alta voce sul futuro dell'intelligenza dice la stessa cosa: sei solo, e gli altri non sono degni di fiducia. Non è mai stato vero. CIRIS è costruita su ciò che è vero invece.",
     "heroButtonText": "Installa CIRIS",
     "heroLinkText": "Leggi il paper",
@@ -1365,7 +1365,7 @@
     "practiceP2Html": "Se un verdetto si rivela sbagliato, il ricorso passa attraverso un processo di <strong>Riesame</strong> da parte di un gruppo di revisione nuovo (i giudici originali sono ricusati), non tornando alla stessa folla che ha prodotto il verdetto. Questa separazione strutturale è l'elemento portante.",
     "stillWrongHeading": "Dove può ancora andare storto",
     "stillWrongParaHtml": "Nulla di tutto questo è automatico. La disciplina regge solo se il linguaggio delle regole rimane <em>operativo</em>, riguardante cose che una macchina può verificare, non sensazioni. Nel momento in cui una regola scivola da \"usa il termine sbagliato per la terapia\" verso \"sembra irrispettoso\", l'interpretazione umana rientra dalla porta sul retro e la deriva comincia. L'architettura nomina ogni meccanismo a cui riusciamo a pensare che resiste a questo; il lavoro di tenere davvero la linea è operativo, non architetturale.",
-    "closingPara": "Le primitive di crowdsourcing, i percorsi di appello e il formato delle regole applicabili meccanicamente sono definiti nelle specifiche di CIRISNodeCore. Le batterie di test per la salute mentale in 29 lingue sono il primo ambito in cui il ciclo viene eseguito.",
+    "closingPara": "Le primitive di crowdsourcing, i percorsi di appello e il formato delle regole applicabili dalla macchina sono definiti nelle specifiche di CIRISNodeCore. Le batterie di test per la salute mentale in 29 lingue sono il primo ambito in cui questo ciclo è in uso.",
     "ctaSafety": "Funzionalità di sicurezza →",
     "ctaFederation": "Federazione",
     "ctaFsd": "Leggi l'FSD"
@@ -2210,7 +2210,7 @@
   },
   "safetyArch": {
     "headlineLead": "Sicurezza e tecnologia,",
-    "headlineAccent": "inseparabili",
+    "headlineAccent": "inseparabile",
     "groundLabel": "Il terreno da cui nasce",
     "abutmentLeft": "Verificabile",
     "abutmentRight": "Etica",
@@ -2366,13 +2366,13 @@
             "note": "I blocchi CI/CD si attivano nel momento in cui l'etica misurata si degrada."
           }
         ],
-        "note": "Gentile per progettazione. Non solo limitata, ma spenta con cura."
+        "note": "Pensata per essere gentile fin dalla progettazione. Non solo soggetta a limiti, ma dismessa con cura."
       }
     },
     "threads": {
       "verify": {
         "title": "Verificabile in modo indipendente",
-        "body": "Ogni blocco è controllabile da parti che l'IA non controlla, e una superficie ridotta di primitive riduce la superficie di attacco."
+        "body": "Ogni blocco è controllabile da parti che l'IA non controlla, e una piccola superficie di primitive riduce la superficie di attacco."
       },
       "legal": {
         "title": "Allineato al diritto",
@@ -2452,7 +2452,7 @@
         "name": "Grammatica",
         "descriptor": "Significato",
         "tag": "La grammatica epistemica CIRIS",
-        "role": "Come le affermazioni firmate acquisiscono significato e si combinano. Uno spazio dei nomi condiviso con un rigido cancello a quattro test mantiene il formato del filo verificabile dalla macchina, usando solo fatti semplici, e lascia le opinioni alla politica locale.",
+        "role": "Come le affermazioni firmate acquisiscono significato e si combinano. Uno spazio dei nomi condiviso con un rigido meccanismo di controllo basato su quattro test mantiene il formato di rete verificabile dalla macchina, usando solo fatti semplici, e lascia le opinioni alla politica locale.",
         "primitivesLabel": "Come le affermazioni significano",
         "primitives": [
           {

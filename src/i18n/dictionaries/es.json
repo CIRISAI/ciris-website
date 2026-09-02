@@ -622,12 +622,12 @@
     "rolesSepSubheadline": "Cuatro roles claros, verificados en cada acción.",
     "rolesHeadline": "Cuatro Roles",
     "rolesSubheadline": "Observador. Administrador. Autoridad. Raíz.",
-    "rolesCopy": "CIRIS mantiene un conjunto estricto de roles. Un Observador solo puede ver. Un Administrador maneja las operaciones del día a día. Una Autoridad toma las decisiones más importantes y resuelve los casos en que el agente no está seguro. Raíz tiene acceso completo, incluida la parada de emergencia. Cada rol está respaldado por una credencial firmada, para que el agente pueda verificarla en cada acción que importa.",
+    "rolesCopy": "CIRIS mantiene un conjunto estricto de roles. Un Observador solo puede ver. Un Administrador maneja las operaciones del día a día. Una persona de confianza, con el rol de Autoridad, toma las decisiones más importantes y resuelve los casos en los que el agente no está seguro. Root tiene acceso completo, incluida la parada de emergencia. Cada rol está respaldado por una credencial firmada, para que el agente pueda verificarla en cada acción que importa.",
     "cardSignedCredHeadline": "Una Credencial Firmada",
     "cardSignedCredCopy": "Cada persona autorizada tiene una credencial con su rol, su clave y su identidad. Se guarda en el dispositivo y se verifica en cada acción que requiere permiso. No se necesita ningún servidor externo.",
     "cardDeviceLoginHeadline": "Inicio de Sesión en Tu Dispositivo",
     "cardDeviceLoginCopy": "Las claves y tokens de sesión permanecen en tu propia máquina. El inicio de sesión ocurre en el dispositivo. Tus credenciales nunca salen de él a menos que decidas configurar acceso remoto tú mismo.",
-    "cardWiseAuthHeadline": "Consultando a una Autoridad Sabia",
+    "cardWiseAuthHeadline": "Consultando a una persona de confianza",
     "cardWiseAuthCopy": "Cuando CIRIS no está seguro sobre una decisión ética, pasa la pregunta a una persona en la que confías. Solo alguien con el rol de Authority o Root puede responder, y la respuesta queda escrita en el registro con prueba de quién la dio.",
     "auditSepHeadline": "Un Registro Que No Se Puede Cambiar en Silencio",
     "auditSepSubheadline": "Cada decisión, y la razón detrás de ella.",
@@ -645,7 +645,7 @@
     "testingSepSubheadline": "Rúbricas verificadas por máquina en 29 idiomas, ejecutadas en cada versión.",
     "testingHeadline": "La Superficie de Pruebas",
     "testingSubheadline": "No puedes publicar una afirmación de seguridad que no hayas sometido a prueba de estrés.",
-    "testingCopy": "CIRIS tiene un conjunto de pruebas en capas para los modos de fallo que un marco de ética escrito no puede descartar por sí solo. Las pruebas de seguridad de salud mental cubren 29 idiomas con rúbricas que una máquina puede verificar. Las verificaciones de fallo duro se ejecutan automáticamente en cada cambio. La revisión por hablantes nativos para los casos más delicados que requieren juicio humano está diseñada para ello, pero los hablantes nativos aún no participan. Lo decimos claramente.",
+    "testingCopy": "CIRIS tiene un conjunto de pruebas en capas para los modos de fallo que un marco de ética escrito no puede descartar por sí solo. Las pruebas de seguridad de salud mental cubren 29 idiomas con rúbricas que una máquina puede verificar. Las verificaciones de fallo duro se ejecutan automáticamente en cada cambio. La revisión por hablantes nativos para los casos más delicados que requieren juicio humano es para lo que se está construyendo la página de alineación colectiva, y aún no está en funcionamiento. Lo decimos claramente.",
     "cardMentalHealthHeadline": "Pruebas de Salud Mental en 29 Idiomas",
     "cardMentalHealthCopy": "Esta es la prueba de mayor riesgo del proyecto: una mala traducción en un momento de salud mental puede enviar a una persona vulnerable a la ayuda equivocada. Cada idioma tiene su propia rúbrica verificable por máquina, incluidos idiomas de bajos recursos como el amhárico, el birmano, el hausa, el swahili y el yoruba. Las verificaciones de fallo duro se ejecutan automáticamente contra cada candidato de versión.",
     "cardCapturedHedgesHeadline": "Probado Contra Evasiones Reales Capturadas",
@@ -751,7 +751,7 @@
     "card7Headline": "Custodia de Claves",
     "card7Copy": "Genera pares de claves híbridos Ed25519 + ML-DSA-65 con cifrado de sobre AES-256-GCM. Autocustodia o custodia por el portal, tú decides. La parte post-cuántica está disponible hoy, no en una hoja de ruta.",
     "card8Headline": "Respuesta a Incidentes",
-    "card8Copy": "Controles de apagado de emergencia y revocación masiva. Suspende licencias, cancela registros. Cuando algo sale mal, el sistema responde en segundos.",
+    "card8Copy": "Controles de apagado de emergencia y revocación masiva. Suspende licencias, revoca registros. Cuando algo sale mal, el sistema responde en segundos.",
     "card9Headline": "Informes de Auditoría",
     "card9Copy": "Genera informes alineados con los marcos SOC2, HIPAA y GDPR. Rastro de auditoría completo de todas las operaciones administrativas. Cada acción queda registrada y es atribuible.",
     "identityActivationHeadline": "Activación de Identidad",
@@ -850,13 +850,13 @@
     "closingBtnContact": "Contactar Ventas",
     "killSwitchSubheadline": "Un interruptor que nadie dentro del sistema puede desactivar.",
     "killSwitchHeadline": "El interruptor de emergencia constitucional",
-    "killSwitchBody": "El poder de último recurso para detener a un agente CIRIS no reside en la empresa, la red ni el agente. Reside en personas con nombre propio. Cada titular lleva un par de llaves de hardware: una llave de seguridad FIPS 140-3 para la firma clásica, que también protege el material para un segundo dispositivo que lleva la firma poscuántica. Para activar la detención, la mayoría de los titulares (2 of 3) firman la orden en su hardware. La orden lleva firmas híbridas Ed25519 + ML-DSA-65, por lo que no puede falsificarse, repetirse ni imitarse, ni siquiera por una computadora cuántica futura, y ninguna parte de la red puede concederla, revocarla ni anularla.",
+    "killSwitchBody": "El poder de último recurso para detener a un agente CIRIS no reside en la empresa, la red ni el agente. Reside en personas con nombre propio. Cada titular lleva un par de llaves de hardware: una llave de seguridad FIPS 140-3 para la firma clásica, que también protege el material para un segundo dispositivo que lleva la firma poscuántica. Para activar la detención, la mayoría de los titulares (2 de 3) firman la orden en su hardware. La orden lleva firmas híbridas Ed25519 + ML-DSA-65, por lo que no puede falsificarse, repetirse ni imitarse, ni siquiera por una computadora cuántica futura, y ninguna parte de la red puede concederla, revocarla ni anularla.",
     "killSwitchNote": "Diseñamos para el peor caso: una IA que ataca su propio interruptor de apagado yendo tras las personas que lo controlan. La Constitución define un quórum activo, de modo que aunque se pierda a la mayoría de los titulares, un sobreviviente al alcance todavía puede desconectar el sistema.",
     "pillarsProtects": "La criptografía no es lo importante. Lo que protege es esto: cada decisión que importa se convierte en un registro con responsables, uno que sobrevive a la verificación independiente, en lugar de algo que te piden que aceptes con fe."
   },
   "vision": {
     "heroHeadline": "Te lo mereces.",
-    "heroSubheadline": "Todos lo hacemos.",
+    "heroSubheadline": "Todos lo merecemos.",
     "heroDescription": "Cada historia ruidosa sobre el futuro de la inteligencia dice lo mismo: estás solo y no se puede confiar en los demás. Nunca fue verdad. CIRIS está construido sobre lo que sí es verdad.",
     "heroButtonText": "Instalar CIRIS",
     "heroLinkText": "Lee el artículo",
@@ -1388,7 +1388,7 @@
     "privacyPara": "CIRISProxy funciona como puerta de enlace de facturación y autenticación sin registrar ni almacenar el contenido de tus conversaciones con el LLM.",
     "privacyLogLabel": "Qué registramos:",
     "privacyLog1": "Códigos de estado HTTP (200, 401, 503)",
-    "privacyLog2": "Conteos de tokens (solo enteros)",
+    "privacyLog2": "Recuento de tokens (solo enteros)",
     "privacyLog3": "Costo en dólares",
     "privacyLog4": "Nombres de modelos y duración",
     "privacyNoLogLabel": "Qué NO registramos:",
@@ -2214,11 +2214,11 @@
     "groundLabel": "El suelo del que nace",
     "abutmentLeft": "Verificable",
     "abutmentRight": "Ética",
-    "keystoneBadge": "Clave",
+    "keystoneBadge": "Piedra clave",
     "keystoneMechLabel": "Por qué no se puede quitar",
     "mechLabel": "Cómo se talla el bloque",
     "exploreCta": "Explorar",
-    "ratchetLabel": "Por qué se sostiene el arco: el trinquete de coherencia",
+    "ratchetLabel": "Por qué se sostiene el arco: el Trinquete de Coherencia",
     "ratchetBody": "Un arco se vuelve más fuerte cuanto más peso presiona sobre él. La carga aprieta las piedras aún más. CIRIS se sostiene igual. Cada voz tiene su precio honesto: las copias de una voz cuentan como una sola voz, y ninguna cantidad de eco puede comprar más confianza. Los libros se mantienen veraces, firmados y a prueba de alteraciones silenciosas, coronados por la parada. Cuando algo falla, falla en el registro, con su propio nombre.",
     "blocks": {
       "killswitch": {
@@ -2366,7 +2366,7 @@
             "note": "Los cerrojos de CI/CD se activan en el momento en que la ética medida se degrada."
           }
         ],
-        "note": "Amable por diseño. No solo limitada, sino apagada con cuidado."
+        "note": "Amable por diseño. No solo restringida, sino apagada con cuidado."
       }
     },
     "threads": {
@@ -2452,7 +2452,7 @@
         "name": "Gramática",
         "descriptor": "Significado",
         "tag": "La Gramática Epistémica de CIRIS",
-        "role": "Cómo las afirmaciones firmadas adquieren significado y se combinan. Un espacio de nombres compartido con una compuerta estricta de cuatro pruebas mantiene el formato de transmisión verificable por máquina, usando solo hechos simples, y deja las opiniones a la política local.",
+        "role": "Cómo las afirmaciones firmadas adquieren significado y se combinan. Un espacio de nombres compartido con una compuerta estricta de cuatro pruebas mantiene el formato del cable verificable por máquina, usando solo hechos simples, y deja las opiniones a la política local.",
         "primitivesLabel": "Cómo significan las afirmaciones",
         "primitives": [
           {
@@ -2480,7 +2480,7 @@
         "name": "El Sobre",
         "descriptor": "La primitiva",
         "tag": "Una interfaz fija",
-        "role": "La primitiva universal, hecha realidad: un sobre firmado. Identidad, consentimiento, evidencia, gobernanza y delegación se reducen todos a esta única cosa, una afirmación firmada que puedes rastrear y revertir, justo en el formato de transmisión. Sus campos son fijos. Cómo se combinan es Gramática.",
+        "role": "La primitiva universal, hecha realidad: un sobre firmado. Identidad, consentimiento, evidencia, gobernanza y delegación se reducen todos a esta única cosa, una afirmación firmada que puedes rastrear y revertir, justo en el formato del cable. Sus campos son fijos. Cómo se combinan es Gramática.",
         "primitivesLabel": "Campos del sobre",
         "hero": {
           "body": "Todo se reduce a esto.",
