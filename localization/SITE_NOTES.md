@@ -98,3 +98,19 @@ three at $0.15 to $0.19 per string. Default now, set in drive.sh, sweep.py
 and the workflow variable, overridable with LOCALIZE_LADDER:
 sonnet-5 (draft) -> gemini-3.7-flash (first repair) -> claude-opus-5 (last
 word). The judge stays gpt-5.1: a different family from every repairer.
+
+## Where things stand (2026-09-02, end of the big job)
+
+- Yoruba first: 17 batches + final pass + touch-up; 2 holds left, both judge
+  nitpicks. ~70 English rewrites came out of it.
+- 27 languages: 54,270 strings, 5,094 repaired, 1,176 holds on 500 keys,
+  $112.31, 6.5 h with four shards. Then a consolidation pass over every held
+  key + changed English, a chrome touch-up, and a finishing pass over the
+  'people you trust' keys and two array labels.
+- Copy rules that came out of this: no idioms, nothing that only works in
+  English, terms of art kept but glossed; "people you trust" not Wise
+  Authority/WA in prose; no aging counts. The judge's remaining holds are
+  mostly glossary-casing disputes; do not chase them.
+- Ladder: sonnet-5 -> gemini-3.7-flash -> claude-opus-5; judge gpt-5.1.
+  Batches are chunked to 80 keys (Flash 504s on ~70-key repair payloads).
+- Upstream PR: https://github.com/CIRISAI/CIRISClient/pull/29 (six commits).
