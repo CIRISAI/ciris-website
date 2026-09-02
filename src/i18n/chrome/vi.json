@@ -18,7 +18,7 @@
     },
     "federation": {
       "name": "Liên minh",
-      "subtitle": "Phản hồi"
+      "subtitle": "Lời đáp"
     },
     "compare": {
       "name": "So sánh",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "Hạ tầng tính nhất quán mở. AGPL-3.0 | Được khóa theo sứ mệnh.",
+    "desc": "Hạ tầng mã nguồn mở cho tính nhất quán. AGPL-3.0. Được ràng buộc với sứ mệnh của mình.",
     "headings": {
       "technology": "Công nghệ",
       "resources": "Tài nguyên",
@@ -81,13 +81,13 @@
       "status": "Trạng thái",
       "about": "Về chúng tôi",
       "vision": "Tầm nhìn",
-      "thesis": "Luận văn",
+      "thesis": "Luận đề",
       "methodology": "Phương pháp luận",
-      "safetyVsCensorship": "An toàn so với kiểm duyệt",
+      "safetyVsCensorship": "An toàn đối lập với kiểm duyệt",
       "principles": "Nguyên tắc",
       "privacyPolicy": "Chính sách bảo mật",
       "safetyPolicy": "Chính sách an toàn",
-      "warrantCanary": "Thông báo cảnh báo (warrant canary)"
+      "warrantCanary": "Warrant Canary"
     },
     "tagline": "an toàn nhờ cấu trúc, mở nhờ nguyên tắc, tử tế nhờ thiết kế"
   }
