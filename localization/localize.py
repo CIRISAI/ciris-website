@@ -566,8 +566,10 @@ def _openrouter_call(model: str, system: str, messages: List[dict]) -> Reply:
         # thinking against max_tokens. At 16000 a 35-key repair payload came
         # back with content null (Opus) or reasoning-only text (gpt-5-pro), so
         # every rung 'produced nothing usable' and the whole batch was held.
-        # Propose upstream.
-        "max_tokens": 64000,
+        # Propose upstream. The top rung is capped lower because OpenRouter
+        # pre-authorizes max_tokens x output price: at 64000 gpt-5-pro reserved
+        # ~$8 and 402'd whenever the balance sat under that.
+        "max_tokens": 32000 if "gpt-5-pro" in model else 64000,
         "messages": [{"role": "system", "content": system},
                      {"role": "user", "content": flat}],
     }).encode()

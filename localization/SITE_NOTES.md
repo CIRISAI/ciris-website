@@ -7,7 +7,8 @@ raises ValueError (handled as an unparseable reply) instead of AttributeError
 (which killed a whole run when a rung returned no text). A second one raises
 `max_tokens` to 64000 on the OpenRouter path: reasoning models count thinking
 against it, and at 16000 a 35-key repair payload came back with no content
-from every rung. Propose both upstream.
+from every rung (the gpt-5-pro rung is capped at 32000 because OpenRouter
+pre-authorizes max_tokens x price and 64000 reserved ~$8). Propose both upstream.
 The site-owned pieces are `check_localization_sync.py` (the shim: two
 single-copy bundles, lists excluded from the address space) and `drive.sh`
 (retry/backoff/banked-work driver).
