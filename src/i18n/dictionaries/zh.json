@@ -928,7 +928,7 @@
     "runtimeRefConscience": "FSD/CONSCIENCE_V3.md",
     "polyglotSectionLabel": "多语言规范（通用）",
     "polyglotBody1Html": "<strong>系统中的三个文件</strong>是多语言的，无论用户语言环境如何都会通用加载，通过来自多种传统的规范文本片段对同一伦理框架进行编码：",
-    "polyglotItem1Html": "<strong>多语言协议</strong>是加载到每次良知评估中的通用框架。以两种运行形式发布：<strong>编织巨石</strong>（约 7KB / 约 2,200 个令牌，生产运行时默认，使用 <code>CIRIS_ACCORD_MODE=compressed</code>）和<strong>完整多语言协议</strong>（约 2,177 行，第 0-9 册 + 附录 A-J，使用 <code>CIRIS_ACCORD_MODE=full</code> 加载）。两者均在下方展示。",
+    "polyglotItem1Html": "<strong>多语言 Accord</strong>是加载到每次良知评估中的通用框架。以两种运行形式发布：<strong>编织巨石</strong>（约 7KB / 约 2,200 个令牌，生产运行时默认，使用 <code>CIRIS_ACCORD_MODE=compressed</code>）和<strong>完整多语言 Accord</strong>（约 2,177 行，第 0-9 册 + 附录 A-J，使用 <code>CIRIS_ACCORD_MODE=full</code> 加载）。两者均在下方展示。",
     "polyglotItem2Html": "<strong>PDMA 提示词</strong>是唯一的多语言 DMA 提示词（原则评估）。在以下第 7 节中以多语言标签展示（<a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/logic/dma/prompts/pdma_ethical.yml\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">pdma_ethical.yml</a>）。",
     "polyglotItem3Html": "<strong>优化否决良知提示词（CIRIS-EOV）</strong>是唯一的多语言良知提示词（拒绝熵减少行动）。在以下第 8 节中以多语言标签展示（<a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/logic/conscience/prompts/optimization_veto_conscience.yml\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">optimization_veto_conscience.yml</a>）。",
     "polyglotBody2": "其余 6 个 DMA 提示词和 3 个良知提示词是每个语言环境独立的。多语言强化有意集中在这两个提示词接触面上。这正是吸引子捕获会造成最大危害的地方，因此也是跨传统编码最为关键的地方。",

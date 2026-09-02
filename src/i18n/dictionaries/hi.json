@@ -911,7 +911,7 @@
     "runtimeBody1": "एजेंट जो हर विचार प्रोसेस करता है वह एक 11-चरण पाइपलाइन से गुज़रता है, H3ERE पाइपलाइन (Hyper³ Ethical Recursive Engine)। इस पेज के DMA prompts वे सिस्टम prompts हैं जो उस पाइपलाइन को चलाते हैं। हर एक भाषा के अनुसार स्थानीयकृत है; उपयोगकर्ता को जो जवाब दिखते हैं वे उनके locale में वापस आते हैं।",
     "pipelineDiagramLabel": "प्रति-विचार पाइपलाइन (मानक 11-चरण पथ)",
     "runtimeBody2Html": "हर LLM कॉल पर दो परतें स्टैक होती हैं। <strong>polyglot layer</strong> सार्वभौमिक है। <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT_compressed.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\"><strong>Braided Monolith</strong></a> (प्रोडक्शन डिफ़ॉल्ट, ~7KB) और <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/ciris_engine/data/accord_1.2b_POLYGLOT.txt\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">full Polyglot Accord</a> कई परंपराओं के सबसे सघन एनकोडिंग में अवधारणाओं को त्रिकोणित करते हैं, जो हर अनुरोध के लिए लोड होते हैं, चाहे कोई भी पूछ रहा हो। <strong>per-locale layer</strong> वह है जो यह पेज सामने लाता है: Accord, Guide, DMA prompts (4 पहले पास + 3 क्रिया-विशिष्ट दूसरे पास), UI strings, और glossary, सभी उपयोगकर्ता की भाषा में।",
-    "runtimeList1": "Localization strings: हर उपयोगकर्ता-सामना संदेश: error text, agent reply templates, handler follow-up thoughts LLM context में वापस इंजेक्ट किए गए।",
+    "runtimeList1": "Localization strings: हर उपयोगकर्ता-सामना संदेश: error text, agent reply templates, handler follow-up thoughts जिन्हें LLM context में वापस इंजेक्ट किया जाता है।",
     "runtimeList1Label": "स्थानीयकरण स्ट्रिंग्स:",
     "runtimeList2Label": "Accord (प्रति-लोकेल):",
     "runtimeList2": "वह फ्रेमवर्क जिसके तहत एजेंट काम करता है, इस उपयोगकर्ता की भाषा में। हर विवेक मूल्यांकन में लोड किया जाता है।",
@@ -2585,7 +2585,7 @@
     "cewpCardBody": "CIRIS Epistemic Web Platform वही इंटरनेट है, सचमुच चलता हुआ। यह स्ट्रीमिंग, कॉल, गेमिंग, फ़ाइलें और हस्ताक्षरित दावे आपके उपकरणों के बीच सीधे एक पोस्ट-क्वांटम एन्क्रिप्टेड मेश पर ले जाता है, बीच में कोई डेटा सेंटर और कोई बड़ी टेक कंपनी नहीं। आज आप ऑनलाइन जो कुछ भी करते हैं, तेज़ और निजी, बिचौलिए के बिना।",
     "cewpCardCta": "प्लेटफ़ॉर्म देखें →",
     "appTitle": "यह किसी दूर के दिन का विचार नहीं है",
-    "appBody": "CIRIS अभी आ रहा है। जो एजेंट इस व्याकरण को बोलता है और इस नेटवर्क पर चलता है, वह आज आपके फ़ोन पर इंस्टॉल होता है, और पूरा नेटवर्क 2026 भर में सामने आता है।",
+    "appBody": "CIRIS अभी जारी हो रहा है। जो एजेंट इस व्याकरण को बोलता है और इस नेटवर्क पर चलता है, वह आज आपके फ़ोन पर इंस्टॉल होता है, और पूरा नेटवर्क 2026 के दौरान चरणबद्ध तरीके से जारी होता रहेगा।",
     "ctaAppStore": "CIRIS को App Store से डाउनलोड करें",
     "ctaGooglePlay": "CIRIS को Google Play से डाउनलोड करें",
     "reel": {
