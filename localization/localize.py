@@ -562,7 +562,12 @@ def _openrouter_call(model: str, system: str, messages: List[dict]) -> Reply:
     flat = "\n\n".join(part["text"] for m in messages for part in m["content"])
     body = json.dumps({
         "model": model,
-        "max_tokens": 16000,
+        # LOCAL PATCH (ciris-website, 2026-09-02): reasoning models count their
+        # thinking against max_tokens. At 16000 a 35-key repair payload came
+        # back with content null (Opus) or reasoning-only text (gpt-5-pro), so
+        # every rung 'produced nothing usable' and the whole batch was held.
+        # Propose upstream.
+        "max_tokens": 64000,
         "messages": [{"role": "system", "content": system},
                      {"role": "user", "content": flat}],
     }).encode()

@@ -4,7 +4,10 @@
 CIRISAI/CIRISClient — keep them unmodified so upstream fixes port cleanly.
 ONE local patch, marked `LOCAL PATCH` in localize.py: `parse_json_reply(None)`
 raises ValueError (handled as an unparseable reply) instead of AttributeError
-(which killed a whole run when a rung returned no text). Propose it upstream.
+(which killed a whole run when a rung returned no text). A second one raises
+`max_tokens` to 64000 on the OpenRouter path: reasoning models count thinking
+against it, and at 16000 a 35-key repair payload came back with no content
+from every rung. Propose both upstream.
 The site-owned pieces are `check_localization_sync.py` (the shim: two
 single-copy bundles, lists excluded from the address space) and `drive.sh`
 (retry/backoff/banked-work driver).
