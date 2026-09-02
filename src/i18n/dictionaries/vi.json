@@ -1082,7 +1082,7 @@
     "h1": "AI An Toàn và Có Đạo Đức Nhất Đang Hoạt Động Hiện Nay",
     "heroSubheadline": "Không có trách nhiệm giải trình, AI có xu hướng lấy đi nhiều hơn những gì nó mang lại.",
     "heroDescription": "Nếu bạn không thể kiểm tra trách nhiệm giải trình, đó chỉ là quảng cáo. Đây là những điều cần tìm kiếm và cách các phương pháp hiện tại so sánh với nhau.",
-    "heroButtonText": "Xem Cách So Sánh",
+    "heroButtonText": "Xem chúng so sánh với nhau như thế nào",
     "heroLinkText": "Đọc Các Nguyên Tắc",
     "threeTypesHeading": "Ba Loại AI",
     "threeTypesTagline": "Lương Tâm là cần thiết. Nhưng chưa đủ.",
@@ -1180,7 +1180,7 @@
     "layersSeparatorHeadline": "Ba Lớp Bảo Vệ",
     "layersSeparatorSubheadline": "Mỗi lớp giải quyết một vấn đề khác nhau.",
     "layersCard1Headline": "Bộ Lọc Đầu Ra",
-    "layersCard1Copy": "Chặn các đầu ra nguy hiểm: tấn công injection vào lệnh, nội dung có hại, tấn công đối kháng. Giống như một bộ lọc bắt những thứ xấu trên đường ra.",
+    "layersCard1Copy": "Chặn các đầu ra nguy hiểm: prompt injection, nội dung có hại, tấn công đối kháng. Giống như một bộ lọc bắt lại nội dung xấu trên đường ra.",
     "layersCard2Headline": "Lương Tâm Đạo Đức",
     "layersCard2Copy": "Suy luận xem một hành động có đúng không, chứ không chỉ có an toàn không. Giống như một thẩm phán cân nhắc tình huống trước khi đưa ra quyết định.",
     "layersCard3Headline": "Phát Hiện Buồng Vang",
@@ -1238,8 +1238,8 @@
       "singletonPlain": "Trách nhiệm cần nhiều hơn một bên. Cần có người để trả lời. Cần một cách kiểm tra không thể bị nuốt chửng lặng lẽ. Cần một sự cân bằng quyền lực mà không bên nào có thể nắm bắt. Một siêu trí tuệ duy nhất không có bất kỳ điều nào trong số này, vì vậy không có cách trung thực nào để buộc nó phải chịu trách nhiệm. CIRIS được xây dựng cho tương lai kia: nhiều tác nhân có năng lực, con người và tổ chức mà các quyết định quan trọng của họ đều có thể được kiểm tra độc lập.",
       "singletonRigor": "Vì vậy lập trường này là rõ ràng. Một ASI độc nhất không phải là hệ thống cần được căn chỉnh mà là điều kiện cần được ngăn chặn. Tập trung năng lực siêu nhân vào một nơi không chịu trách nhiệm, ở giai đoạn phát triển thể chế con người hiện nay, là không hợp pháp, vì không có thể chế nào đủ trưởng thành để buộc nó phải chịu trách nhiệm, và đó chính xác là mối nguy hiểm. Theo thuật ngữ của khung này, một thực thể độc nhất là sự sụp đổ tiếng nói đơn ρ→1 mà mô hình hành lang gọi là thất bại phối hợp, không phải thành công. Việc các đảm bảo của chúng tôi duy trì trong một liên đoàn và suy yếu trước một thực thể độc nhất không phải là khoảng trống chúng tôi đang vá lại. Đó là chế độ chúng tôi từ chối hợp pháp hóa, được giữ như một cam kết, không chỉ là một dự đoán.",
       "rwLabel": "Công trình liên quan, một cách trung thực",
-      "rwH2": "Mỗi người hàng xóm gần điền vào một số ô. Một hàng điền vào tất cả.",
-      "rwIntro": "CIRIS có những người đồng nghiệp trí tuệ nghiêm túc, mỗi người mạnh trong lĩnh vực riêng của mình. Mục đích của bảng này không phải là các ý tưởng chưa từng có tiền lệ. Mà là hầu như không ai đã xây dựng và vận chuyển toàn bộ ngăn xếp như một hệ thống chịu trách nhiệm duy nhất. Mỗi hàng dưới đây là một dòng thực sự đáng đọc. Chỉ có hàng cuối cùng kiểm tra mọi cột, và sự tích hợp đó là tuyên bố.",
+      "rwH2": "Mỗi giải pháp lân cận chỉ điền được một số ô. Một hàng điền được tất cả.",
+      "rwIntro": "CIRIS có những người đồng nghiệp trí tuệ nghiêm túc, mỗi người mạnh trong lĩnh vực riêng của mình. Mục đích của bảng này không phải để nói rằng các ý tưởng này chưa từng có tiền lệ, mà để nhấn mạnh rằng hầu như không ai đã xây dựng và phát hành toàn bộ ngăn xếp như một hệ thống có thể truy cứu trách nhiệm. Mỗi hàng dưới đây là một nhánh nghiên cứu trước đó thực sự đáng đọc. Chỉ có hàng cuối cùng đánh dấu đủ mọi cột, và sự tích hợp đó là tuyên bố.",
       "rwColApproach": "Phương pháp",
       "rwColWho": "Công trình gần nhất",
       "rwColMechanism": "Cơ chế",
@@ -1248,14 +1248,14 @@
       "rwColConstitution": "Hiến pháp thời gian chạy",
       "rwColFederated": "Xác minh liên đoàn",
       "rwColConformance": "Tuân thủ có thể thực thi",
-      "rwColShipping": "Vận chuyển",
+      "rwColShipping": "Phát hành",
       "rwStatus": {
         "yes": "Có",
         "no": "Không",
         "partial": "Một phần",
         "research": "Nghiên cứu",
         "theory": "Lý thuyết",
-        "components": "Một phần"
+        "components": "Các thành phần"
       },
       "rwRows": [
         {
@@ -1332,7 +1332,7 @@
       "rwFootnote": "Được lập bản đồ từ công trình công khai tính đến tháng 6 năm 2026, mỗi hàng được trích dẫn bên dưới. Nếu chúng tôi hiểu sai một người hàng xóm gần, hãy cho chúng tôi biết và chúng tôi sẽ sửa hàng đó.",
       "rwSourcesLabel": "Nguồn",
       "seeAlsoCta": "Vị trí của hệ thống này trong bức tranh siêu căn chỉnh",
-      "dimAlign": "Sự Cân Bằng",
+      "dimAlign": "Căn Chỉnh",
       "dimConsumer": "AI Tiêu Dùng",
       "consumerH2": "So sánh với AI bạn thực sự dùng",
       "consumerLead": "Các trợ lý hàng ngày rất mạnh mẽ và dễ sử dụng. Chúng cũng chạy trên đám mây của người khác, không lưu lại bất kỳ hồ sơ nào bạn có thể kiểm tra, và không chịu trách nhiệm trước bất kỳ ai bạn có thể nêu tên. Đây là bài kiểm tra trách nhiệm giải trình tương tự, áp dụng cho AI mà hầu hết mọi người mở ra mỗi ngày.",
@@ -1341,7 +1341,7 @@
       "cuColProof": "Bằng chứng về việc nó đã làm",
       "cuColAsks": "Hỏi người khi không chắc",
       "cuColOpen": "Mã nguồn mở",
-      "cuColEcho": "Kiểm tra buồng vọng",
+      "cuColEcho": "Kiểm tra buồng vang",
       "cuFootnote": "So sánh dựa trên hành vi sản phẩm công khai tính đến tháng 6 năm 2026. Mỗi liên kết nguyên tắc dẫn đến thông số kỹ thuật đã công bố của chính công ty đó.",
       "cuRows": [
         "ChatGPT",
