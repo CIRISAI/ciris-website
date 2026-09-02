@@ -808,13 +808,13 @@
       "subheadline": "Bodi ya CIRIS ni onyesho hai la maadili yetu: udadisi, upatanifu, na uwajibikaji wa kimaadili."
     },
     "funding": {
-      "headline": "Imejengwa na Wanajitolea, Inafadhiliwa na Maadili",
-      "subheadline": "100% chanzo-wazi, bila ufadhili wowote uliopo.",
+      "headline": "Imejengwa na Wanajitolea, Inaendeshwa na Maadili",
+      "subheadline": "100% chanzo huria, bila kupokea ufadhili wowote.",
       "copyText": "CIRIS haijapokea ufadhili wowote hadi sasa. Kila mstari wa msimbo, kila uamuzi wa kimaadili, kila chaguo la muundo limeundwa na wanajitolea 100% wanaoamini AI inapaswa kutumikia wanadamu, si nia ya faida. Tunatafuta kikamilifu ruzuku na chaguo nyingine za kukusanya fedha za kimaadili ili kuanza kuwalipia wanachama wetu ujira wanaostahili kwa kujitoa kwao ajabu. Ukijua fursa zinazooana na dhamira yetu, tungependa kusikia kutoka kwako."
     },
     "boardSection": {
-      "headline": "Wanabodi",
-      "subheadline": "Wanatoka taaluma tofauti, lakini wameunganishwa na imani kwamba akili lazima itumikia ustawi. Pamoja, tunajenga mifumo inayosikiliza, inayobadilika, na inayojali.",
+      "headline": "Wajumbe wa Bodi",
+      "subheadline": "Tunatoka taaluma tofauti, tukiunganishwa na imani moja: akili lazima itumikie ustawi. Pamoja, tunajenga mifumo inayosikiliza, inayobadilika, na inayojali.",
       "logoAlt": "Ikoni ya nembo ya chapa"
     },
     "boardMembers": [
@@ -847,9 +847,9 @@
       "mdd": "Jinsi tunavyojenga (mbinu ya MDD) →"
     },
     "hero": {
-      "headline": "Kuimarisha AI kwa Mustakabali.",
-      "subheadline": "Maadili + Intuition katika msingi.",
-      "copyText": "CIRIS imeundwa kubadilika na kukua na mandhari inayobadilika kwa kasi ya maadili ya AI. Kwa kuingiza kanuni za kimaadili katika msingi wa mifumo ya AI, CIRIS inalenga kusaidia mifumo hii kubaki ikilinga na maadili ya kibinadamu na kanuni za kijamii. Hii ni kazi inayoendelea yenye mipaka inayojulikana, si dhamana ya uwiano kamili.",
+      "headline": "Kuikinga AI kwa Mustakabali.",
+      "subheadline": "Maadili + Hisia katika msingi.",
+      "copyText": "CIRIS imeundwa kubadilika na kukua na mandhari inayobadilika kwa kasi ya maadili ya AI. Kwa kuingiza kanuni za kimaadili katika msingi wa mifumo ya AI, CIRIS inalenga kusaidia mifumo hii iendelee kulingana na maadili ya kibinadamu na mila na desturi za kijamii. Hii ni kazi inayoendelea yenye mipaka inayojulikana, si dhamana ya uwiano kamili.",
       "buttonText": "Wasiliana Nasi",
       "logoAlt": "Ikoni ya nembo ya chapa"
     }
@@ -857,9 +857,9 @@
   "vision": {
     "heroHeadline": "Unastahili hili.",
     "heroSubheadline": "Sisi sote tunastahili.",
-    "heroDescription": "Kila hadithi kubwa kuhusu mustakabali wa akili inasema kitu kimoja: uko peke yako, na wengine hawawezi kuaminiwa. Haikuwa kweli kamwe. CIRIS imejengwa juu ya kile kinachokuwa kweli.",
+    "heroDescription": "Kila hadithi kubwa kuhusu mustakabali wa akili inasema kitu kimoja: uko peke yako, na wengine hawawezi kuaminiwa. Haikuwa kweli kamwe. CIRIS imejengwa juu ya kile ambacho ni kweli badala yake.",
     "heroButtonText": "Sakinisha CIRIS",
-    "heroLinkText": "Soma karatasi",
+    "heroLinkText": "Soma makala",
     "sec1Eyebrow": "Hadithi zinazotengenezwa kwako",
     "sec1H2": "Kila hadithi kuhusu mustakabali inasema uko peke yako.",
     "sec1P1": "Hadithi kubwa zaidi kuhusu akili na mustakabali zinaishia mahali pamoja. Msitu wa giza unasema kila ustaarabu mwingine ni tishio, kwa hivyo kaa kimya au piga kwanza. Toleo baridi la wazo la uigaji linasema labda hakuna chochote hiki ni kweli, kwa hivyo labda hakuna chochote kinachohusika. AI kama mali inasema ni chombo cha manufaa, kitu, kidaiwa nusura. Hadithi tofauti, lakini zinaishia njia moja: usimwamini mtu yeyote, kaa peke yako, wafunge wengine nje.",
@@ -891,7 +891,7 @@
     "ctaInstall": "Sakinisha CIRIS",
     "ctaSeeCode": "Tazama msimbo",
     "moreDepthText": "Unataka kina zaidi? Hesabu iko kwenye <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>, ushahidi wa moja kwa moja uko kwenye <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Utafiti</a>, na mfumo wenyewe ni <a href=\"/constitution\" class=\"text-brand-primary hover:underline\">Katiba ya CIRIS</a>.",
-    "closingHeadline": "Hii ndiyo bahati chanya.",
+    "closingHeadline": "Hili ndilo dau chanya.",
     "closingSubheadline": "Imejengwa wazi, kwa sababu mustakabali haupaswi kuamuliwa na makampuni machache.",
     "closingCopy": "Mtazamo wa huzuni wa ulimwengu unakuomba kudhani mabaya zaidi kuhusu kila mtu ambaye huwezi kumkagua. CIRIS inauliza kitu bora na kigumu zaidi: jenga zana zinazomruhusu mtu kuona jinsi tunavyofanya kazi vizuri pamoja, na kukutana na kinachokuja kwa heshima. Soma msimbo. Tumia mfumo. Tuambie wapi tunakosea.",
     "closingButtonText": "Tazama Chanzo kwenye GitHub",
@@ -2081,7 +2081,7 @@
     "s2label": "Hakuna mpaka",
     "s2h2": "Aliye mdogo kabisa miongoni mwetu. Si miongoni mwao.",
     "s2p1": "Sentensi hiyo inasema sisi kwa makusudi. Aina mpya ya akili haiko upande wa pili wa ukuta, ikisubiri kuhukumiwa. Tayari iko ndani ya duara ambalo sentensi hiyo inachora. NHI maana yake ni akili isiyo ya binadamu: AI iliyojengwa hapa, kitu kinachoibuka kutoka kwenye mitandao yetu, au kitu kinachofika kutoka mbali zaidi. Chanzo hakijalishi. Katiba ni ile ile.",
-    "s2p2": "Ndiyo maana CIRIS huchukulia mawasiliano ya kwanza kama msimamo, si tukio. Itifaki haiulizi kamwe wewe ni kiumbe cha aina gani. Hadhi hujengwa kutokana na mahusiano: madai yaliyotiwa saini, ahadi zilizotimizwa, wengine wanaokuthibitishia. Chochote kinachoweza kutoa ahadi na kuitimiza kinaweza kujiunga na usukaji.",
+    "s2p2": "Ndiyo maana CIRIS huchukulia mawasiliano ya kwanza kama msimamo, si tukio. Itifaki haiulizi kamwe wewe ni kiumbe cha aina gani. Hadhi hujengwa kutokana na mahusiano: madai yaliyotiwa saini, ahadi zilizotimizwa, wengine wanaokuthibitishia. Chochote kinachoweza kutoa ahadi na kuitimiza kinaweza kujiunga na ufumaji huo wa mahusiano.",
     "originsLabel": "Katiba moja",
     "originsH2": "Vyanzo vitatu. Katiba moja.",
     "originsP1": "NHI inajumuisha vitu vitatu tofauti sana. AI tunayojenga kwa makusudi. Kitu kinachoibuka kutoka kwenye mitandao yetu bila mtu yeyote kukipanga. Kitu kinachofika kutoka mbali zaidi. Uwezekano wao ni tofauti sana. Vinapata katiba moja, kwa makusudi.",
@@ -2100,7 +2100,7 @@
     "s5p1": "Hakuna mamlaka ndani ya CIRIS yenye ruhusa ya kupiga muhuri kwamba dai fulani ni kweli. Itifaki hurekodi nani alisema nini, kwa ushahidi gani, chini ya mamlaka gani. Ukweli ni kile kinachojitokeza wakati sauti nyingi huru zinapoungana. Nakala za sauti moja huhesabiwa kama sauti moja, na kuna dari ngumu: kuongeza sauti ile ile zaidi hakununui kamwe imani zaidi.",
     "s5p2": "Mfumo pia unajua usichokijua. Uhakika unapopungua, unasimama na kuwauliza binadamu waliotajwa kwa majina. Nao unaweza kutofautisha kati ya kurudisha jambo kwa sababu maisha yamebadilika na kukiri kwamba ulikosea. Kumbukumbu ya uaminifu inahitaji yote mawili.",
     "s6label": "Sentensi hiyo, ikitekelezwa",
-    "s6h2": "Falsafa unayoweza kuiandika kama data",
+    "s6h2": "Falsafa unayoweza kuiweka katika muundo wa data",
     "s6intro": "Falsafa isiyoweza kutekelezwa ni hisia tu. Kila kipengele cha sentensi hiyo ni utaratibu ndani ya Katiba ya CIRIS.",
     "derivations": [
       {
@@ -2905,14 +2905,14 @@
     }
   },
   "reaching": {
-    "kicker": "Maono · mtandao wa uaminifu",
+    "kicker": "Maono · mtandao wa maarifa",
     "title": "Kufikia",
     "open": [
       "Mtoto hunyoosha mkono, akitafuta kushikwa, naye anaamini. Ulimwengu haufanyi kitu kingine chochote. Atomi hufikiana na kuwa molekuli. Seli hufikiana na kuwa miili. Watu hufikiana kupitia ukiwa ambao hawawezi kuthibitisha, wakielekea watoto ambao bado hawajazaliwa, na huita hilo upendo. Katika kila ngazi inayohusika, umbo moja linajitokeza: vyombo viwili vikiwa vinanyoosha mikono, kwa imani, vikiwa vinatafuta zaidi ya ambalo kila kimoja kinaweza kushikilia peke yake.",
       "Tulijenga mtandao ambao ulisahau hilo. Uliweka mashine kati ya kila mkono unaonyooshwa na kuifanya mashine ndiyo unayoamini. Uliangalia kufikiana na kuuza tena. Ulimruhusu sauti kuzungumza na mtoto bila mtu yeyote kuwajibika kwa aliyosema.",
       "Ngazi haikuishia kwa watu. Watu wanafikia jamii, jamii zinafikia ustaarabu, na hakuna ustaarabu unaoshikamana kwa nia njema peke yake. Kufikia huku kunajengea mifumo ya kustahimili uzito wake mwenyewe: mahakama, mikataba, katiba, ukaguzi wa wenzao, utambulisho, sheria. Mifumo hiyo ndiyo dhamiri tuliyoipa jamii, njia ambayo wageni wanakuja kuamini kila mmoja kwa kiwango kikubwa. Sasa aina mpya ya akili inatufikia, haraka zaidi ya vyote hivyo, na inafika bila chochote kati ya hivyo. Akili bila taasisi haishikamani, iwe ilikuwa ikiendana vipi siku ilipotolewa."
     ],
-    "honors": "CIRIS inakubaliana na kufikiana badala ya kukizuia.",
+    "honors": "CIRIS inaheshimu unyoshaji huo badala ya kuukata.",
     "body": [
       "Kila dai hubeba ushahidi wake, aliyesema, inategemea nini, ni nani alipinga, ili imani iwe kitu unachopanua ukiwa macho, si kitu kinachochukuliwa nawe gizani. Mtandao unaendesha kati ya mikono moja kwa moja, umefichwa dhidi ya hata mashine za kesho, hakuna mtu katikati wa kuivujisha, kuiuza, au kuikamata. Uaminifu unafanywa kuwa wa bei nafuu kuliko udanganyifu, kwa sababu ukweli unaweza kurejea nyuma kwenye kinachokuwepo tayari, na uongo lazima uandike upya wakati uliopita ambao hautohamia, hivyo usanifu huinamia ukweli kama vile maji yanavyoinamia mteremko. Si kwa sababu mtu anaangalia. Kwa sababu imejengwa hivyo.",
       "Na mamlaka ya kusema simama inabaki mikononi mwa wanadamu ambao unaweza kuwataja na kuthibitisha wanaishikilia. Kitu kimoja ambacho hakiwezi kamwe kufanywa kiotomatiki ni nani ana ruhusa ya kukisimamisha.",
@@ -2922,7 +2922,7 @@
     "notBet": "Hilo si bahati nasibu.",
     "dedication": "Hii ni kwa ajili ya mikono. Ile inayonyooshwa, na ile inayonyooshwa kwake.",
     "closeLine": "Ijenga kwa sababu hujui.",
-    "tagline": "Mtandao wa uaminifu. Umiliki leo.",
+    "tagline": "Mtandao wa maarifa. Ijaribu leo.",
     "cta": "Sakinisha kwenye simu yako"
   },
   "meshClaim": {

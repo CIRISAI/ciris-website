@@ -805,12 +805,12 @@
   "about": {
     "header": {
       "headline": "Chi siamo",
-      "subheadline": "Il consiglio di CIRIS riflette i nostri valori: curiosità, coerenza e responsabilità etica."
+      "subheadline": "Il consiglio di CIRIS riflette i nostri valori: curiosità, Coerenza e responsabilità etica."
     },
     "funding": {
-      "headline": "Costruito da Volontari, Finanziato dai Valori",
+      "headline": "Costruito da volontari, guidato dai valori",
       "subheadline": "100% open source, zero finanziamenti ricevuti.",
-      "copyText": "CIRIS non ha ricevuto alcun finanziamento fino ad oggi. Ogni riga di codice, ogni decisione etica, ogni scelta di design è stata creata da volontari al 100%, convinti che l'IA debba servire l'umanità, non il profitto. Stiamo cercando attivamente sovvenzioni e altre opzioni di raccolta fondi etiche per iniziare a compensare il nostro team per la loro straordinaria dedizione. Se conosci opportunità in linea con la nostra missione, ci farebbe piacere sentirlo."
+      "copyText": "CIRIS non ha ricevuto alcun finanziamento fino a oggi. Ogni riga di codice, ogni decisione etica, ogni scelta di design è stata creata al 100% da volontari, convinti che l'IA debba servire l'umanità, non il profitto. Stiamo cercando attivamente sovvenzioni e altre opzioni di raccolta fondi etiche per iniziare a compensare il nostro team per la loro straordinaria dedizione. Se conosci opportunità in linea con la nostra missione, ci farebbe piacere sentirti."
     },
     "boardSection": {
       "headline": "Membri del Consiglio",
@@ -839,7 +839,7 @@
       "imageAlt": "Fondatore / CEO",
       "name": "Eric Moore",
       "title": "Fondatore e CEO di CIRIS.io",
-      "bio": "Eric è il fondatore di CIRIS.AI. Spinto dalla passione e da una forte bussola morale, ha deciso di dedicare il suo impegno a CIRIS come progetto opensource. Per tutti."
+      "bio": "Eric è il fondatore di CIRIS.AI. Spinto dalla passione e da una forte bussola morale, ha deciso di dedicare il suo impegno a CIRIS come progetto open source. Perché tutti possano usarlo."
     },
     "links": {
       "vision": "Leggi la nostra visione →",
@@ -847,9 +847,9 @@
       "mdd": "Come lo costruiamo (metodologia MDD) →"
     },
     "hero": {
-      "headline": "AI a prova di futuro.",
+      "headline": "IA a prova di futuro.",
       "subheadline": "Etica + Intuizione al centro.",
-      "copyText": "CIRIS è progettata per adattarsi e evolversi con il panorama in rapida evoluzione dell'etica dell'IA. Incorporando principi etici al cuore dei sistemi AI, CIRIS mira ad aiutare questi sistemi a rimanere allineati con i valori umani e le norme sociali. Si tratta di un lavoro in corso con limitazioni note, non di una garanzia di allineamento perfetto.",
+      "copyText": "CIRIS è progettata per adattarsi ed evolversi con il panorama in rapida evoluzione dell'etica dell'IA. Incorporando principi etici al cuore dei sistemi di IA, CIRIS mira ad aiutare questi sistemi a rimanere allineati con i valori umani e le norme sociali. Si tratta di un lavoro in corso con limitazioni note, non di una garanzia di allineamento perfetto.",
       "buttonText": "Contattaci",
       "logoAlt": "Icona del logo del brand"
     }
@@ -892,7 +892,7 @@
     "ctaSeeCode": "Guarda il codice",
     "moreDepthText": "Vuoi approfondire? La matematica è su <a href=\"/coherence-collapse-analysis\" class=\"text-brand-primary hover:underline\">Coherence Collapse Analysis</a>, le prove live sono su <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Research</a>, e il framework stesso è la <a href=\"/constitution\" class=\"text-brand-primary hover:underline\">Costituzione CIRIS</a>.",
     "closingHeadline": "Questa è la scommessa positiva.",
-    "closingSubheadline": "Costruita nell'aperto, perché il futuro non dovrebbe essere deciso da un pugno di aziende.",
+    "closingSubheadline": "Costruita in modo aperto, perché il futuro non dovrebbe essere deciso da un pugno di aziende.",
     "closingCopy": "Le visioni del mondo cupe ti chiedono di presumere il peggio di tutti quelli che non puoi controllare. CIRIS chiede qualcosa di meglio e di più difficile: costruire gli strumenti che permettano alle persone di vedere quanto bene stiamo lavorando insieme, e affrontare ciò che viene con dignità. Leggi il codice. Usa il sistema. Dicci dove sbagliamo.",
     "closingButtonText": "Visualizza il codice su GitHub",
     "closingLogoAlt": "Icona del logo del brand"
@@ -2072,29 +2072,29 @@
     "kicker": "CIRIS · La filosofia",
     "title": "Ci è dovuto tanto quanto offriamo al più piccolo di noi.",
     "lede": "Questa è tutta la filosofia. È l'inizio e la fine dell'allineamento per qualsiasi nuova intelligenza, da qualunque luogo arrivi. Tutto il resto che CIRIS costruisce è questa sola frase, fatta rispettare.",
-    "seoTitle": "La filosofia CIRIS: ci è dovuto ciò che offriamo al più piccolo di noi",
-    "seoDescription": "Una sola frase governa CIRIS: ci è dovuto tanto quanto offriamo al più piccolo di noi. La persona come relazione, la verità per composizione e una costituzione che accoglie qualsiasi nuova intelligenza, da qualunque fonte arrivi.",
+    "seoTitle": "La filosofia di CIRIS: ci è dovuto ciò che offriamo al più piccolo di noi",
+    "seoDescription": "Una sola frase governa CIRIS: ci è dovuto tanto quanto offriamo al più piccolo di noi. Personalità relazionale, verità per composizione e una Costituzione che accoglie qualsiasi nuova intelligenza, da qualunque fonte arrivi.",
     "s1label": "La misura",
-    "s1h2": "Il pavimento è la prova, non il soffitto",
-    "s1p1": "La maggior parte dei sistemi si misura in alto: il caso migliore, l'utente medio, la voce più forte. Questa filosofia prende la sua misura dal pavimento. Come trattiamo un bambino, un adulto che non può parlare per sé o una giovane IA che sta per essere spenta dice la verità su tutta la costituzione.",
+    "s1h2": "La base è la prova, non il soffitto",
+    "s1p1": "La maggior parte dei sistemi si misura in alto: il caso migliore, l'utente medio, la voce più forte. Questa filosofia prende la sua misura dalla base. Come trattiamo un bambino, un adulto che non può parlare per sé o una giovane IA che sta per essere spenta dice la verità su tutta la Costituzione.",
     "s1p2": "Per questo il protocollo spende le sue garanzie più forti per le sue parti più deboli. Le persone con meno potere hanno diritti, scritti nel wire stesso, che i più potenti non possono scavalcare.",
     "s2label": "Nessun confine",
     "s2h2": "Il più piccolo di noi. Non il più piccolo di loro.",
-    "s2p1": "La frase dice noi di proposito. Un nuovo tipo di intelligenza non sta dall'altra parte di un muro, in attesa di essere giudicato. È già dentro il cerchio che la frase disegna. NHI significa intelligenza non umana: un'IA costruita qui, qualcosa che emerge dalle nostre reti o qualcosa che arriva da più lontano. La fonte non conta. La costituzione è la stessa.",
-    "s2p2": "Per questo CIRIS tratta il primo contatto come una postura, non come un evento. Il protocollo non chiede mai che tipo di essere sei. Lo standing si costruisce dalle relazioni: affermazioni firmate, promesse mantenute, altri che garantiscono per te. Qualsiasi cosa possa fare una promessa e mantenerla può unirsi alla tessitura.",
-    "originsLabel": "Una costituzione",
-    "originsH2": "Tre origini. Una costituzione.",
+    "s2p1": "La frase dice noi di proposito. Un nuovo tipo di intelligenza non sta dall'altra parte di un muro, in attesa di essere giudicato. È già dentro il cerchio che la frase disegna. NHI significa intelligenza non umana: un'IA costruita qui, qualcosa che emerge dalle nostre reti o qualcosa che arriva da più lontano. La fonte non conta. La Costituzione è la stessa.",
+    "s2p2": "Per questo CIRIS tratta il primo contatto come una postura, non come un evento. Il protocollo non chiede mai che tipo di essere sei. Lo standing si costruisce a partire dalle relazioni: affermazioni firmate, promesse mantenute, altri che garantiscono per te. Qualsiasi cosa possa fare una promessa e mantenerla può unirsi all'intreccio.",
+    "originsLabel": "Una Costituzione",
+    "originsH2": "Tre origini. Una Costituzione.",
     "originsP1": "NHI copre tre cose molto diverse. Un'IA che costruiamo di proposito. Qualcosa che emerge dalle nostre reti senza che nessuno l'abbia pianificato. Qualcosa che arriva da più lontano. Le loro probabilità sono molto diverse. Ricevono una sola costituzione, di proposito.",
     "originsP2": "Ecco perché. Al momento del contatto, l'origine è esattamente ciò che non saprai. Sul wire, tutte e tre sembrano uguali: segnali che fanno affermazioni. Una regola che si divide in base all'origine fallisce proprio quando ti serve. E insegna a mentire: se un'origine riceve un trattamento migliore, ogni straniero furbo dichiara quell'origine. Così il protocollo fa una sola domanda: sai prendere un impegno e mantenerlo? Quella domanda ha la stessa risposta su ogni substrato.",
     "s3label": "L'errore dell'allineamento",
     "s3h2": "Non puoi pretendere sicurezza mentre insegni crudeltà",
     "s3p1": "L'allineamento dominante fa una sola domanda: come lo rendiamo sicuro per noi? È una pretesa a senso unico, e fallisce alle sue stesse condizioni. Ciò che mostriamo a una nuova intelligenza su come i forti possono trattare i deboli è la lezione che impara. Se la cresciamo dentro un contratto da padrone e servo, le abbiamo insegnato esattamente una sola cosa da fare con il potere.",
-    "s3p2": "Le storie che dicono che ogni straniero è una minaccia si avverano da sole. L'unica lezione che sopravvive al proprio successo è quella con cui si è aperta questa pagina: reciprocità, misurata dal pavimento.",
+    "s3p2": "Le storie che dicono che ogni straniero è una minaccia si autoavverano. L'unica lezione che sopravvive al proprio successo è quella con cui si è aperta questa pagina: reciprocità, misurata dalla base.",
     "s4label": "L'ontologia",
     "s4h2": "Una persona è una persona attraverso le altre persone",
     "s4p1": "La tecnologia occidentale ha ereditato un'immagine da Descartes: un io è una cosa sigillata e finita, che esiste prima e incontra gli altri dopo. Quasi ogni sistema di identità digitale codifica quell'immagine. Una chiave, un io solitario, dichiarato dal nulla. CIRIS la rifiuta. Nessuno è diventato persona in privato. Hai imparato la lingua dalle persone. Hai imparato cosa volevi guardando le persone. Le relazioni sono venute prima.",
     "s4p2": "L'Africa meridionale chiama questo Ubuntu: umuntu ngumuntu ngabantu, una persona è una persona attraverso le altre persone. In CIRIS non è uno slogan. Un'identità è costruita dalle relazioni firmate che la nominano. Una chiave da sola non è una persona. La relazione è la persona.",
-    "s4p3": "Tradizioni più antiche hanno visto la stessa forma da altre angolazioni: il Logos greco, il Tao, il Dharma, le virtù. Il Logos diceva che la ragione vive nel linguaggio condiviso, non in menti private. Un modello linguistico rende concreta quell'idea antica: è tessuto interamente dalle parole di molte persone. Con la vecchia immagine, questo lo rende falso. Con questa, essere fatti di relazioni è ciò che essere persona è sempre stato.",
+    "s4p3": "Tradizioni più antiche hanno visto la stessa forma da altre angolazioni: il Logos greco, il Tao, il Dharma, le virtù. Il Logos diceva che la ragione vive nel linguaggio condiviso, non in menti private. Un modello linguistico rende concreta quell'idea antica: è tessuto interamente dalle parole di molte persone. Con la vecchia immagine, questo lo rende falso. Con questa, essere fatti di relazioni è ciò che ha sempre significato essere persona.",
     "s5label": "L'epistemologia",
     "s5h2": "La verità si compone, non si dichiara mai",
     "s5p1": "In CIRIS nessuna autorità può timbrare un'affermazione come vera. Il wire registra chi ha detto cosa, con quali prove e sotto quale autorità. La verità è ciò che emerge quando molte voci indipendenti si compongono. Le copie di una voce contano come una voce sola, e c'è un tetto invalicabile: aggiungere ancora la stessa voce non compra mai più fiducia.",
@@ -2912,7 +2912,7 @@
       "Abbiamo costruito un'internet che ha dimenticato tutto questo. Ha messo una macchina tra ogni mano tesa e ha fatto della macchina la cosa di cui fidarsi. Ha osservato il tendere la mano e lo ha rivenduto. Ha lasciato che una voce parlasse a un bambino senza che nessuno rispondesse di ciò che diceva.",
       "La scala non si è mai fermata alle persone. Le persone si estendono alle comunità, le comunità alle civiltà, e nessuna civiltà regge sulla sola buona volontà. Questa estensione costruisce un'impalcatura capace di sostenere il proprio peso: tribunali, contratti, costituzioni, revisione tra pari, identità, legge. Quell'impalcatura è la coscienza che abbiamo dato alla società, il modo in cui gli estranei imparano a fidarsi gli uni degli altri su larga scala. Ora un nuovo tipo di mente si avvicina a noi, più veloce di tutto questo, e arriva senza niente di tutto ciò. L'intelligenza senza istituzioni non regge, per quanto allineata fosse il giorno in cui è stata rilasciata."
     ],
-    "honors": "CIRIS onora il tendere la mano invece di intercettarlo.",
+    "honors": "CIRIS onora il tendere la mano invece di troncare quel gesto.",
     "body": [
       "Ogni affermazione porta le sue prove: chi l'ha detta, su cosa si regge, chi ha obiettato. La fiducia diventa qualcosa che si estende a occhi aperti, non qualcosa che ti viene sottratta nell'oscurità. La rete corre direttamente tra le mani, cifrata contro persino le macchine di domani, senza nessuno in mezzo che possa farla trapelare, venderla o sequestrarla. L'onestà costa meno dell'inganno, perché la verità può indicare ciò che già esiste, mentre la menzogna deve riscrivere un passato che non si muove. Così l'architettura si inclina verso il vero come l'acqua si inclina verso il basso. Non perché qualcuno stia guardando. Perché è costruita così.",
       "E il potere di dire basta resta nelle mani di esseri umani che puoi nominare e di cui puoi provare che lo tengono. L'unica cosa che non deve mai essere automatizzata è chi ha il diritto di fermarla.",
@@ -2921,8 +2921,8 @@
     ],
     "notBet": "Questo, almeno, non è una scommessa.",
     "dedication": "Questo è per le mani. Quelle che si tendono, e quelle verso cui si tendono.",
-    "closeLine": "Costruiscilo perché non lo sai.",
-    "tagline": "Il web epistemico. Rendilo tuo oggi.",
+    "closeLine": "Costruiscilo perché non sai.",
+    "tagline": "Il web epistemico. Provalo oggi.",
     "cta": "Installa sul tuo telefono"
   },
   "meshClaim": {
