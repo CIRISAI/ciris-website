@@ -900,9 +900,9 @@
   "crowdsourcingAlignment": {
     "heroBadgeProto": "Proto safety.ciris.ai",
     "heroBadgeLanguages": "{count} idiomas",
-    "heroH1": "Alineamiento por Colaboración Colectiva",
+    "heroH1": "Alineamiento colaborativo",
     "heroBody1": "CIRIS tiene que ser seguro en muchos idiomas, no solo en inglés. Esta página permite a un hablante nativo abrir los archivos reales que el agente usa en su idioma, leerlos en su lugar y sugerir correcciones a través de un issue de GitHub pre-rellenado. Elige un idioma para comenzar.",
-    "heroBody2": "Lo decimos claramente: la revisión por hablantes nativos de los casos más difíciles que requieren juicio es hacia donde se está construyendo esta página. Esa revisión aún no está en marcha.",
+    "heroBody2": "Lo decimos claramente: la revisión por hablantes nativos de los casos más difíciles que requieren juicio es el objetivo hacia el que se está construyendo esta página. Esa revisión aún no está en marcha.",
     "heroBody3Html": "Cada &quot;Ver en línea&quot; obtiene el archivo de <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAI/CIRISAgent</a> bajo demanda. No se duplica contenido aquí; el repositorio de GitHub es la fuente de verdad.",
     "langSelectorLabel": "1. Selecciona un idioma",
     "langOptionBattery": ", batería disponible",
