@@ -271,6 +271,16 @@ def guard_and_fix(bundle: str) -> Dict[str, List[str]]:
             for p in parts[:-1]:
                 node = node[p]
             node.pop(parts[-1], None)
+        # A whole section English no longer has (dead copy) goes with its lists
+        # and any empty dicts the leaf pops left behind.
+        for top in [t for t in cur if t not in en and t != "_meta"]:
+            cur.pop(top); extra.append(f"<section {top}>")
+        def _prune(d: dict) -> None:
+            for kk in [kk for kk, vv in d.items() if isinstance(vv, dict)]:
+                _prune(d[kk])
+                if not d[kk]:
+                    d.pop(kk)
+        _prune(cur)
         if bad or extra:
             path.write_text(json.dumps(cur, ensure_ascii=False, indent=2) + "\n")
             reverted[rel] = bad + [f"<extra key {k}>" for k in extra]
