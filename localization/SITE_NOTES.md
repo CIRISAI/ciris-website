@@ -88,3 +88,13 @@ Fixes live in the data the judge and repairer already read:
   paths.consumer-ai.ogCardTitle), re-run the changed-English keys in both
   bundles, splice the three seeAlso labels, harvest a "decision trace" row
   once its label has been re-run.
+
+## The ladder (2026-09-02)
+
+gpt-5-pro is out (Eric: "way too expensive"). On the same 21 held Yoruba
+strings with the same judge, gemini-3.7-flash had 16 accepted for $0.05,
+gemini-3.1-pro-preview 4 for $0.21, gpt-5-pro historically about one in
+three at $0.15 to $0.19 per string. Default now, set in drive.sh, sweep.py
+and the workflow variable, overridable with LOCALIZE_LADDER:
+sonnet-5 (draft) -> gemini-3.7-flash (first repair) -> claude-opus-5 (last
+word). The judge stays gpt-5.1: a different family from every repairer.

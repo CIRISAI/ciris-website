@@ -22,6 +22,10 @@ set -u
 cd "$(dirname "$0")/.."
 LANE="${LANE:-translate}"
 export LOCALIZE_BUNDLE="${BUNDLE:-dictionaries}"
+# The ladder (per Eric, 2026-09-02): gpt-5-pro is out. Gemini 3.7 Flash repairs
+# first (16/21 held Yoruba strings accepted at $0.05), Opus 5 is the last word;
+# the judge stays gpt-5.1, a different family from every repairer.
+export LOCALIZE_LADDER="${LOCALIZE_LADDER:-anthropic/claude-sonnet-5,google/gemini-3.7-flash,anthropic/claude-opus-5}"
 MAX_KEYS="${MAX_KEYS:-500}"
 ATTEMPTS="${ATTEMPTS:-8}"
 BACKOFF="${BACKOFF:-180}"

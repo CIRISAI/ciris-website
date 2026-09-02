@@ -84,6 +84,7 @@ def sh(cmd: List[str], **kw) -> subprocess.CompletedProcess:
 def lane_env(bundle: str) -> dict:
     env = dict(os.environ)
     env["LOCALIZE_BUNDLE"] = bundle
+    env.setdefault("LOCALIZE_LADDER", "anthropic/claude-sonnet-5,google/gemini-3.7-flash,anthropic/claude-opus-5")
     if not env.get("OPENROUTER_API_KEY"):
         keyfile = Path.home() / ".openrouter_key"
         if keyfile.exists():
