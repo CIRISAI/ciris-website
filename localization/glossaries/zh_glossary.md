@@ -259,3 +259,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | 宪法网状网络 | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | 效益证明（Proof of Benefit） | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | 认知之网 | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | 连贯性棘轮 | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

@@ -201,3 +201,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | அரசியலமைப்பு மெஷ் | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | பயன் சான்று (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | அறிவு வலை | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | ஒத்திசைவு சக்கரம் | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

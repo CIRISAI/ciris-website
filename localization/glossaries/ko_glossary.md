@@ -185,3 +185,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | 헌법 메시 | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | 유익증명 (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | 지식의 웹 | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | 일관성 래칫 메커니즘 | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

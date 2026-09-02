@@ -217,3 +217,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | Anayasal Örgü | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | Fayda Kanıtı (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | epistemik ağ | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | Tutarlılık Mandalı | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

@@ -43,7 +43,7 @@ BUNDLES = {"dictionaries": ROOT / "src/i18n/dictionaries",
 PLACEHOLDER = re.compile(r"\$\{[^}]*\}|\{[A-Za-z0-9_]+\}|%[0-9]*\$?[sd]")
 SPEND_RE = re.compile(r"total ~ \$([0-9]+\.[0-9]+)")
 TRAILER = ("Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n"
-           "Claude-Session: https://claude.ai/code/session_014c1RUjthygJXcH7WEXBAhF")
+           "Claude-Session: https://claude.ai/code/session_016pB47qFep7rPXfVJwytXBk")
 
 # The plan, in importance order: what a visitor meets first goes first. The
 # landing (homeHero) was drafted AND reviewed by the lane today, so it is not

@@ -242,3 +242,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | Wavu wa Katiba | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | Uthibitisho wa Manufaa (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | mtandao wa maarifa | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | Ratchet ya Upatanifu | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

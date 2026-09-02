@@ -186,3 +186,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | Mạng lưới hiến pháp | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | Bằng chứng Lợi ích (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | mạng tri thức | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | Cơ chế siết chặt tính nhất quán | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

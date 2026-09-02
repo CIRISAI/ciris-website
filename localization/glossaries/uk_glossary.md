@@ -162,3 +162,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | Конституційна мережа | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | Доказ користі (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | епістемічна мережа | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | Храповик узгодженості | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

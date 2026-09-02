@@ -202,3 +202,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | مِش قانون اساسی | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | اثبات فایده (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | وب معرفتی | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | چرخ‌دنده انسجام | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

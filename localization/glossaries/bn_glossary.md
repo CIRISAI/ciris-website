@@ -170,3 +170,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitutional Mesh | সাংবিধানিক মেশ | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | উপকারের প্রমাণ (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
 | epistemic web | জ্ঞানের জাল | The site's masthead phrase for the CIRIS stack |
+| Coherence Ratchet | সামঞ্জস্য র‍্যাচেট | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |

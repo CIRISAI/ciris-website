@@ -6,11 +6,11 @@
   "nav": {
     "firstContact": {
       "name": "First Contact",
-      "subtitle": "Start Here: the Why"
+      "subtitle": "Start here: why CIRIS exists"
     },
     "install": {
       "name": "Install",
-      "subtitle": "Own it today"
+      "subtitle": "Your own agent, today"
     },
     "coherenceRatchet": {
       "name": "Coherence Ratchet",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "Constitution",
-      "subtitle": "The framework"
+      "subtitle": "The founding document"
     },
     "github": {
       "name": "GitHub",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "Open coherence infrastructure. AGPL-3.0 | Mission-locked.",
+    "desc": "Open-source coherence infrastructure. AGPL-3.0. Bound to its mission.",
     "headings": {
       "technology": "Technology",
       "resources": "Resources",
@@ -74,7 +74,7 @@
       "grammar": "Grammar (CEG)",
       "game": "Mystery game",
       "firstContact": "First Contact",
-      "exploreTrace": "Explore a Trace",
+      "exploreTrace": "Explore a decision trace",
       "scoring": "CIRIS Scoring",
       "researchStatus": "Research Status",
       "documentation": "Documentation",
@@ -83,7 +83,7 @@
       "vision": "Vision",
       "thesis": "Thesis",
       "methodology": "Methodology",
-      "safetyVsCensorship": "Safety vs Censorship",
+      "safetyVsCensorship": "Safety versus censorship",
       "principles": "Principles",
       "privacyPolicy": "Privacy Policy",
       "safetyPolicy": "Safety Policy",
