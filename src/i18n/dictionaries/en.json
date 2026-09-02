@@ -149,7 +149,7 @@
       "label": "The conscience pipeline",
       "h2": "Today’s agents act. CIRIS decides, accountably.",
       "body1": "A normal AI agent goes straight from prompt to tokens to tool call. CIRIS adds a step that does not exist anywhere else. Before an action can happen, the decision passes through a conscience pipeline: it is weighed, checked against the constitution, and turned into a signed, witnessed record that anyone can verify. The action only happens if that record holds.",
-      "body2": "This is what makes CIRIS less an agent and more an institution. It has memory, laws, delegation, accountability, and a record no one can quietly change, the same machinery that lets human societies trust each other at scale. The novel part is not the cryptography. It is that a consequential decision must become accountable before it is allowed to act."
+      "body2": "This is what makes CIRIS less an agent and more an institution. It has memory, laws, delegation, accountability, and a record no one can quietly change, the same machinery that lets large human societies trust each other. The novel part is not the cryptography. It is that a consequential decision must become accountable before it is allowed to act."
     },
     "whatIsCiris": {
       "heading": "What is CIRIS?",
@@ -384,7 +384,7 @@
       ],
       "accordHeading": "Accord Invocation System (Kill Switch)",
       "accordLink": "View Code →",
-      "accordBody": "Unfilterable emergency control. Processes in perception layer before any cognition. Extraction IS perception. You can&apos;t disable accord detection without disabling message reading entirely.",
+      "accordBody": "An emergency control that cannot be filtered out. It is handled in the perception layer, before any thinking happens. Reading a message and extracting the stop signal are one step, so the detection cannot be switched off without switching off message reading entirely.",
       "shutdownLabel": "SHUTDOWN_NOW",
       "shutdownDesc": "Immediate termination",
       "freezeLabel": "FREEZE",
@@ -440,7 +440,7 @@
       "openSourceHeading": "Open Source Infrastructure",
       "openSourceBody": "The entire CIRIS stack is open source, not just the agent. You can verify, audit, and self-host everything:",
       "proxyLink": "CIRISProxy →",
-      "proxyDesc": "Zero-Data-Retention (ZDR) LLM proxy. Routes requests to OpenAI, Anthropic, Together.ai, Groq with no logging of prompts or responses. Self-hostable.",
+      "proxyDesc": "An LLM proxy that keeps no data (zero data retention). It routes requests to OpenAI, Anthropic, Together.ai, and Groq with no logging of prompts or responses. You can host it yourself.",
       "billingLink": "CIRISBilling →",
       "billingDesc": "Credit-based usage tracking. Transparent pricing, no hidden fees. Self-host to eliminate third-party billing entirely.",
       "bridgeLink": "CIRISBridge →",
@@ -493,7 +493,7 @@
         }
       ],
       "fundingHeading": "Funding Needed: Benchmark Infrastructure",
-      "fundingBody": "Running coherence benchmarks at scale is expensive. Each scenario requires 13+ LLM calls minimum, averaging 20+ with a long tail. Coherence tests drive ponders, deferrals, and refusals that require follow-up rounds to reach conclusion. We need funding to develop automated benchmark pipelines and maintain continuous coherence verification.",
+      "fundingBody": "Running coherence benchmarks at scale is expensive. Each scenario requires 13+ LLM calls minimum, averaging 20+ with a long tail. Coherence tests drive ponders, deferrals, and refusals that require follow-up rounds to reach conclusion. We need funding to develop automated benchmark systems and maintain continuous coherence verification.",
       "ethicsEngineLink": "View EthicsEngine Enterprise →",
       "cirisLensLink": "View CIRISLens →"
     },
