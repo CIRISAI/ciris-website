@@ -1365,7 +1365,7 @@
     "practiceP2Html": "Si un verdict s'avère erroné, l'appel passe par une <strong>Reconsidération</strong> par un nouveau groupe d'examen (les arbitres d'origine étant récusés), et non par la même foule qui a produit le verdict. Cette séparation structurelle est la pièce maîtresse.",
     "stillWrongHeading": "Là où cela peut encore mal tourner",
     "stillWrongParaHtml": "Rien de tout cela n'est automatique. La discipline tient uniquement si le langage des règles reste <em>opérationnel</em>, portant sur des choses qu'une machine peut vérifier, pas sur des ressentis. Au moment où une règle glisse de &quot;utilise le mauvais mot pour la thérapie&quot; vers &quot;semble irrespectueux,&quot; l'interprétation humaine rentre par la porte de derrière et la dérive commence. L'architecture nomme chaque mécanisme qui y résiste, autant que nous pouvons en imaginer ; le travail de tenir la ligne est opérationnel, pas architectural.",
-    "closingPara": "Les primitives de participation collective, les chemins d'appel et le format de règles applicable par machine figurent dans la spec CIRISNodeCore. Les batteries de santé mentale en 29 langues sont la première cellule où la boucle tourne.",
+    "closingPara": "Les primitives de participation collective, les chemins d'appel et le format de règles applicable par machine figurent dans la spécification CIRISNodeCore. Les batteries de santé mentale en 29 langues sont le premier endroit où la boucle s'exécute.",
     "ctaSafety": "Fonctionnalités de sécurité →",
     "ctaFederation": "Fédération",
     "ctaFsd": "Lire le FSD"
@@ -2210,7 +2210,7 @@
   },
   "safetyArch": {
     "headlineLead": "La sécurité et la technologie,",
-    "headlineAccent": "inséparables",
+    "headlineAccent": "inséparable",
     "groundLabel": "Le sol d'où elle jaillit",
     "abutmentLeft": "Vérifiable",
     "abutmentRight": "Éthique",

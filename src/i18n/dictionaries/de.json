@@ -2309,7 +2309,7 @@
         "short": "Datenschutz",
         "name": "Datenschutz durch Physik",
         "tag": "Block 05 · Datenschutz",
-        "promise": "Deine Daten sind nicht durch eine Richtlinie geschützt. Sie sind durch die Bauweise unerreichbar.",
+        "promise": "Ihre Daten sind nicht durch eine Richtlinie geschützt. Sie sind durch die Bauweise unerreichbar.",
         "mechanisms": [
           {
             "label": "Strukturelle Unsichtbarkeit",
@@ -2372,11 +2372,11 @@
     "threads": {
       "verify": {
         "title": "Unabhängig überprüfbar",
-        "body": "jeder Block ist von Parteien prüfbar, die die KI nicht kontrolliert, und eine kleine Primitiv-Oberfläche verkleinert die Angriffsfläche."
+        "body": "jeder Block ist von Parteien prüfbar, die die KI nicht kontrolliert, und eine kleine Oberfläche aus Primitiven verkleinert die Angriffsfläche."
       },
       "legal": {
         "title": "Rechtlich abgestimmt",
-        "body": "GDPR, CCPA und der EU AI Act bilden sich über die DP-Map auf das Protokoll ab, mit SI-score-Haftung und branchenspezifischen Ergänzungen."
+        "body": "GDPR, CCPA und der EU AI Act werden über die DP-Map auf das Protokoll abgebildet, wobei die Haftung an den SI-Score geknüpft ist und für jeden Sektor zusätzliche Regeln aufgesetzt werden."
       }
     }
   },

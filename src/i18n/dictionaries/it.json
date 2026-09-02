@@ -1358,14 +1358,14 @@
     "failureModeHeading": "Il modo di fallire che ci preoccupa",
     "failureModeP1": "Se gli esseri umani raccolgono verdetti caso per caso in modo crowdsourced (\"questa risposta specifica ha violato la regola?\"), il pregiudizio entra in ogni interpretazione. Lo stesso comportamento viene giudicato diversamente a seconda di chi vota quel giorno. Anche con buone intenzioni, il ciclo tende ad imporre le preferenze della maggioranza invece di individuare i danni reali.",
     "failureModeP2": "Questo è il modo di fallire. La disciplina a cui ci stiamo impegnando è pensata per rendere questa deriva visibile e costosa quando accade.",
-    "maximHeading": "Le regole sono crowdsourced. I verdetti sono meccanici.",
+    "maximHeading": "Le regole vengono dalla folla. I verdetti vengono dalle macchine.",
     "maximParaHtml": "Le persone propongono e votano le regole: pubbliche, datate, firmate, reversibili. Un controllo deterministico applica quelle regole ai casi specifici. Stessa risposta + stessa regola → stesso verdetto, ogni volta. La discussione si sposta <em>a monte</em>, su se la regola dovrebbe esistere, invece di essere a valle, su se un caso specifico conta oggi.",
     "practiceHeading": "Cosa significa in pratica",
     "practiceP1Html": "Le regole superano un <strong>controllo del linguaggio operativo</strong> prima di poter essere votate. Una regola deve essere verificabile senza giudizio soggettivo, altrimenti non è pronta. Ogni regola è datata, firmata e legata a una versione specifica. Il verdetto su una risposta specifica viene prodotto in modo deterministico.",
     "practiceP2Html": "Se un verdetto si rivela sbagliato, il ricorso passa attraverso un processo di <strong>Riesame</strong> da parte di un gruppo di revisione nuovo (i giudici originali sono ricusati), non tornando alla stessa folla che ha prodotto il verdetto. Questa separazione strutturale è l'elemento portante.",
     "stillWrongHeading": "Dove può ancora andare storto",
     "stillWrongParaHtml": "Nulla di tutto questo è automatico. La disciplina regge solo se il linguaggio delle regole rimane <em>operativo</em>, riguardante cose che una macchina può verificare, non sensazioni. Nel momento in cui una regola scivola da \"usa il termine sbagliato per la terapia\" verso \"sembra irrispettoso\", l'interpretazione umana rientra dalla porta sul retro e la deriva comincia. L'architettura nomina ogni meccanismo a cui riusciamo a pensare che resiste a questo; il lavoro di tenere davvero la linea è operativo, non architetturale.",
-    "closingPara": "Le primitive di crowdsourcing, i percorsi di appello e il formato delle regole applicabili meccanicamente si trovano nelle specifiche di CIRISNodeCore. Le batterie di test per la salute mentale in 29 lingue sono la prima cella in cui il ciclo funziona.",
+    "closingPara": "Le primitive di crowdsourcing, i percorsi di appello e il formato delle regole applicabili meccanicamente sono definiti nelle specifiche di CIRISNodeCore. Le batterie di test per la salute mentale in 29 lingue sono il primo ambito in cui il ciclo viene eseguito.",
     "ctaSafety": "Funzionalità di sicurezza →",
     "ctaFederation": "Federazione",
     "ctaFsd": "Leggi l'FSD"
@@ -2215,10 +2215,10 @@
     "abutmentLeft": "Verificabile",
     "abutmentRight": "Etica",
     "keystoneBadge": "Chiave di volta",
-    "keystoneMechLabel": "Perché non può essere rimossa",
-    "mechLabel": "Come viene tagliata la pietra",
+    "keystoneMechLabel": "Perché non può essere rimosso",
+    "mechLabel": "Come viene tagliato il blocco",
     "exploreCta": "Esplora",
-    "ratchetLabel": "Perché l'arco regge: il cricchetto di coerenza",
+    "ratchetLabel": "Perché l'arco regge: il Ratchet di Coerenza",
     "ratchetBody": "Un arco diventa più forte quanto più peso preme su di esso. Il carico blocca le pietre più saldamente. CIRIS regge allo stesso modo. Ogni voce ha il suo prezzo onesto: le copie di una voce contano come una voce sola, e nessuna quantità di eco può comprare più fiducia. I libri contabili restano veri, firmati e fatti in modo che ogni manomissione lasci traccia, con l'arresto come chiave di volta. Quando qualcosa fallisce, fallisce nel registro, con il proprio nome.",
     "blocks": {
       "killswitch": {
@@ -2307,9 +2307,9 @@
       },
       "privacy": {
         "short": "Privacy",
-        "name": "La privacy per fisica",
+        "name": "Privacy garantita dalla fisica",
         "tag": "Blocco 05 · Privacy",
-        "promise": "I tuoi dati non sono protetti da una politica. Sono irraggiungibili per costruzione.",
+        "promise": "I tuoi dati non sono protetti da un'informativa. Sono irraggiungibili per costruzione.",
         "mechanisms": [
           {
             "label": "Invisibilità strutturale",
@@ -2324,13 +2324,13 @@
             "note": "Sconfigge il raccogli-ora-decifra-dopo, così la pista di controllo e l'interruttore di arresto restano validi contro i computer quantistici."
           }
         ],
-        "note": "La privacy diventa una proprietà del formato del filo, non una promessa su una pagina di impostazioni."
+        "note": "La privacy diventa una proprietà del formato di rete, non una promessa su una pagina di impostazioni."
       },
       "vulnerable": {
         "short": "Dignità",
-        "name": "Proteggere chi non può dare il consenso",
+        "name": "Protezione per chi non può dare il consenso",
         "tag": "Blocco 06 · Dignità",
-        "promise": "Il sistema opta per impostazione predefinita per la libertà e la dignità di chi non può parlare per sé.",
+        "promise": "Per impostazione predefinita, il sistema garantisce libertà e dignità a chi non può parlare per sé.",
         "mechanisms": [
           {
             "label": "Sicurezza strutturale dei minori",
@@ -2372,11 +2372,11 @@
     "threads": {
       "verify": {
         "title": "Verificabile in modo indipendente",
-        "body": "ogni blocco è controllabile da parti che l'IA non controlla, e una piccola superficie di primitive riduce la superficie di attacco."
+        "body": "Ogni blocco è controllabile da parti che l'IA non controlla, e una superficie ridotta di primitive riduce la superficie di attacco."
       },
       "legal": {
         "title": "Allineato al diritto",
-        "body": "il GDPR, il CCPA e l'EU AI Act si proiettano sul protocollo tramite il DP-Map, con responsabilità legata al SI-score e sovrapposizioni settoriali."
+        "body": "Il GDPR, il CCPA e l'EU AI Act vengono mappati sul protocollo tramite il DP-Map, con la responsabilità legata al punteggio SI e regole aggiuntive stratificate per ciascun settore."
       }
     }
   },

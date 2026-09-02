@@ -1354,18 +1354,18 @@
   "safetyVsCensorship": {
     "heroEyebrow": "Hatari katika muundo wetu wenyewe",
     "h1": "Mahali ambapo usalama wa pamoja unaweza kupotoka.",
-    "heroPara": "Mfumo wa usalama wa pamoja unaweza kupotoka na kuwa kitu kingine tusipokuwa waangalifu. Vifaa vilevile vinavyogundua makosa ya kweli vinaweza kuwa vifaa vinavyotekeleza mapendeleo. Tunaona hatari hiyo katika muundo tunaojenga. Kuitaja ndiyo sehemu ya kwanza ya kuipinga.",
+    "heroPara": "Mfumo wa usalama uliokusanywa kutoka kwa umati unaweza kupotoka na kuwa kitu kingine tusipokuwa waangalifu. Mitambo ileile inayogundua makosa ya kweli inaweza kuwa mitambo inayolazimisha mapendeleo. Tunaona hatari hiyo katika muundo tunaojenga. Kuitaja hatari hiyo ndiyo sehemu ya kwanza ya kuipinga.",
     "failureModeHeading": "Hali ya kushindwa tunayoiogopa",
     "failureModeP1": "Wanadamu wakikusanya hukumu za kila kesi kwa njia ya pamoja (\"je, jibu hili maalum lilikiuka sheria?\"), upendeleo huingia katika kila tafsiri. Tabia ile ile huitwa tofauti kulingana na wanaopiga kura leo. Hata kwa nia njema, mzunguko unateleza kuelekea kutekeleza mapendeleo ya wengi badala ya kugundua madhara ya kweli.",
     "failureModeP2": "Hiyo ndiyo hali ya kushindwa. Nidhamu tunayojitolea kufuata imekusudiwa kufanya upotokaji huo uonekane na uwe na gharama unapotokea.",
-    "maximHeading": "Sheria zinakusanywa na watu. Hukumu zinatengenezwa na mashine.",
+    "maximHeading": "Sheria hutoka kwa umati. Hukumu hutolewa na mashine.",
     "maximParaHtml": "Watu wanapendekeza na kupiga kura kwa sheria: za umma, zenye tarehe, zilizosainiwa, zinazoweza kubatilishwa. Ukaguzi wa kudhabitiwa unatumia sheria hizo kwa kesi maalum. Jibu lile lile + sheria ile ile → hukumu ile ile, kila wakati. Hoja inahamia <em>juu</em>, kwenye swali la kama sheria inapaswa kuwepo, badala ya chini, kwenye swali la kama kesi maalum inafaa leo.",
     "practiceHeading": "Maana yake katika vitendo",
-    "practiceP1Html": "Sheria hupitia <strong>lango la lugha ya uendeshaji</strong> kabla ya kuweza kupigwa kura. Sheria lazima iweze kukaguliwa bila hukumu, au bado haiko tayari. Kila sheria ina tarehe, imesainiwa, na ina nambari ya toleo. Hukumu ya jibu lolote maalum inatengenezwa kwa njia ya kudhabitiwa.",
+    "practiceP1Html": "Sheria hupitia <strong>lango la lugha ya uendeshaji</strong> kabla ya kuweza kupigiwa kura. Sheria lazima iweze kukaguliwa bila hukumu ya kibinafsi, au bado haiko tayari. Kila sheria ina tarehe, imesainiwa, na imefungwa kwa toleo maalum. Hukumu ya jibu lolote maalum hutolewa kwa njia ya kimaamuzi isiyobadilika.",
     "practiceP2Html": "Hukumu ikionekana kuwa mbaya, rufaa inaenda kupitia <strong>Kuzingatia Upya</strong> na kikundi kipya cha wakaguzi (waamuzi wa asili wanajiondoa), si kurudi kwa umati uliozalisha hukumu. Utengano huo wa kimundo ndiyo kipande kinachobeba mzigo.",
     "stillWrongHeading": "Mahali ambapo hii bado inaweza kwenda vibaya",
     "stillWrongParaHtml": "Hakuna hapa kinachofanya kazi kiotomatiki. Nidhamu inashikilia tu ikiwa lugha ya sheria inabaki <em>ya uendeshaji</em>, kuhusu mambo ambayo mashine inaweza kukagua, si kuhusu hisia. Wakati sheria inapoteleza kutoka &quot;inatumia neno lisilo sahihi kwa tiba&quot; kuelekea &quot;inahisi kutokuwa na heshima,&quot; tafsiri ya kibinadamu inaingia kwa mlango wa nyuma na upotokaji unaanza. Muundo huu unataja kila utaratibu tunaoweza kufikiria unaopinga hili; kazi ya kushikilia mstari kweli kweli ni ya kiuendeshaji, si ya kimundo.",
-    "closingPara": "Vijenzi vya ukusanyaji wa pamoja, njia za rufaa, na umbizo la sheria linalotumika kwa mashine vipo katika vipimo vya CIRISNodeCore. Betri za afya ya akili kwa lugha 29 ndiyo seli ya kwanza ambapo mzunguko unafanya kazi.",
+    "closingPara": "Vipengele vya msingi vya ukusanyaji wa umati, njia za rufaa, na umbizo la sheria linalotumika kwa mashine vimefafanuliwa katika ubainishaji wa CIRISNodeCore. Seti za majaribio ya afya ya akili za lugha 29 ndiyo sehemu ya kwanza ambako mzunguko huu huendeshwa.",
     "ctaSafety": "Vipengele vya usalama →",
     "ctaFederation": "Shirikisho",
     "ctaFsd": "Soma FSD"
@@ -2372,11 +2372,11 @@
     "threads": {
       "verify": {
         "title": "Inayothibitishika kwa kujitegemea",
-        "body": "kila kizuizi kinaweza kukaguliwa na pande ambazo AI haizidhibiti, na uso mdogo wa primitiv hupunguza uso wa shambulio."
+        "body": "kila kizuizi kinaweza kukaguliwa na pande ambazo AI haizidhibiti, na eneo dogo la vipengele vya msingi hupunguza eneo la shambulio."
       },
       "legal": {
         "title": "Inayolingana kisheria",
-        "body": "GDPR, CCPA, na EU AI Act zinaramaniwa kwenye itifaki kupitia DP-Map, na dhima ya SI-score na tabaka za sekta."
+        "body": "GDPR, CCPA, na EU AI Act zimepangwa kwenye itifaki kupitia DP-Map, huku dhima ikiwa imefungwa kwenye alama ya SI na sheria za ziada zikiwekwa kwa kila sekta."
       }
     }
   },

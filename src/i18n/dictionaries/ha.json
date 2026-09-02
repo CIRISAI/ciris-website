@@ -1354,20 +1354,20 @@
   "safetyVsCensorship": {
     "heroEyebrow": "Haɗari a cikin tsarinmu namu",
     "h1": "Inda amincin da aka tattara na iya kaɗewa.",
-    "heroPara": "Tsarin aminci na tattara ra'ayoyi na iya kaɗewa ya zama wani abu daban idan ba mu yi hankali ba. Na'urar da ke kama gazawa ta gaske na iya zama na'urar da ke tilasta son rai. Muna ganin wannan haɗari a cikin tsarin da muke gina. Ambata shi shi ne ɓangare na farko na tsayin da shi.",
+    "heroPara": "Tsarin aminci na tattara ra'ayoyi na iya kaɗewa ya zama wani abu daban idan ba mu yi hankali ba. Na'urar da ke kama gazawa ta gaske na iya zama na'urar da ke tilasta son rai. Muna ganin wannan haɗari a cikin tsarin da muke gina. Ambata shi shi ne ɓangare na farko na ƙoƙarin ƙin yarda da shi.",
     "failureModeHeading": "Hanyar gazawa da muke damunwa a kanta",
     "failureModeP1": "Idan mutane suna tattara ra'ayoyi kan hukunce-hukunce na kowane ɗan shari'a (\"shin wannan amsa ta karya ƙa'idar?\"), son rai yana shiga kowane fassara. Ana kiran hali ɗaya daban-daban dangane da wanda ke zaɓe a yau. Ko da da niyya mai kyau, zagaye na kaiwa ga tilasta son rai na yawancin mutane maimakon kama cutarwa ta gaske.",
-    "failureModeP2": "Wannan ita ce hanyar gazawa. Ɗa'awar da muke ɗaukar alƙawarin aiwatarwa an yi niyya don sa wannan kaɗewar ta bayyana kuma mai tsada idan ta faru.",
-    "maximHeading": "Ka'idoji an tattara su. Hukunce-hukunce na'ura ke yankewa.",
-    "maximParaHtml": "Mutane suna ba da shawara kuma suna zaɓar ƙa'idoji: na jama'a, tare da kwanan wata, tare da sa hannun, mai iya juya. Duba da niyya ɗaya tana amfani da waɗannan ƙa'idoji zuwa shari'o'in da aka keɓance. Amsa ɗaya + ƙa'ida ɗaya → hukunci ɗaya, kowane lokaci. Muhawara tana tafiya <em>sama</em>, kan ko ƙa'idar ya kamata ta wanzu, maimakon zuwa ƙasa, kan ko wata shari'a ta dace a yau.",
+    "failureModeP2": "Wannan ita ce hanyar gazawa. Tsarin da muka ɗauki alƙawarin bi an yi niyya ne don sa wannan karkata ta bayyana kuma ta zama mai tsada idan ta faru.",
+    "maximHeading": "Ƙa'idoji suna fitowa ne daga jama'a. Hukunce-hukunce injuna ne ke yanke su.",
+    "maximParaHtml": "Mutane suna ba da shawara kuma suna kaɗa ƙuri'a kan ƙa'idoji: na jama'a, masu kwanan wata, da sa hannu, kuma masu iya juyawa. Duba mai ƙayyadadden tsari (deterministic) tana amfani da waɗannan ƙa'idoji ga takamaiman shari'o'i. Amsa ɗaya + ƙa'ida ɗaya → hukunci ɗaya, kowane lokaci. Muhawara tana tafiya <em>sama</em>, kan ko ƙa'idar ya kamata ta wanzu, maimakon zuwa ƙasa, kan ko wata shari'a ta dace a yau.",
     "practiceHeading": "Abin da wannan ke nufin a aikace",
-    "practiceP1Html": "Ka'idoji suna wucewa ta <strong>ƙofar harshen ayyuka</strong> kafin za a zaɓe su. Ƙa'idar dole ne ta iya dubawa ba tare da hukunci ba, ko ba ta shirya ba. Kowane ƙa'ida tana da kwanan wata, sa hannun, da sigar da aka ƙulla. An samar da hukunci kan kowane amsa da niyya ɗaya.",
-    "practiceP2Html": "Idan hukunci ya zama kuskure, ɗaukaka ta tafi ta hanyar <strong>Sake Nazari</strong> ta ƙungiyar sabo (masu yanke hukunci na asali an ba su uzuri), ba tare da komawa ga taron da ya samar da hukuncin ba. Wannan rarrabuwa ta tsari ita ce ɗangon ɗaukar nauyi.",
+    "practiceP1Html": "Ƙa'idoji suna wucewa ta <strong>ƙofar harshen aiki da injin zai iya aiwatarwa</strong> kafin a kaɗa musu ƙuri'a. Ƙa'idar dole ne ta kasance mai iya dubawa ba tare da hukunci ba, ko kuma ba ta shirya ba. Kowace ƙa'ida tana da kwanan wata, sa hannu, da kuma sigar da aka ƙulla. Ana samar da hukunci kan kowace takamaiman amsa ta hanyar tsari ɗaya da ke bayar da sakamako iri ɗaya a ko yaushe.",
+    "practiceP2Html": "Idan hukunci ya zama kuskure, ɗaukaka tana tafiya ne ta hanyar <strong>Sake Nazari</strong> ta sabuwar ƙungiyar masu bita (masu yanke hukunci na asali an janye su), ba tare da komawa ga taron da ya samar da hukuncin ba. Wannan rarrabuwa ce ke tallafa wa dukan tsarin.",
     "stillWrongHeading": "Inda wannan har yanzu zai iya tafiya kuskure",
-    "stillWrongParaHtml": "Babu ɗaya daga cikin waɗannan da ya atomatik ne. Ɗa'awar tana riƙewa ne kawai idan harshen ƙa'idar ya kasance <em>mai aiki</em>, game da abubuwan da na'ura za ta iya duba, ba game da ji ba. Lokacin da ƙa'ida ta kaɗe daga &quot;tana amfani da kalmar kuskure don jiyya&quot; zuwa &quot;tana jin ƙasƙanci,&quot; fassarar ɗan adam ta sake shiga ta ƙofar baya kaɗewar ta fara. Tsarin yana suna kowane tsari da muke iya tunanin da ke tsayin wannan; aikin riƙe layin gaske a aiki ne, ba tsari ba.",
+    "stillWrongParaHtml": "Babu wani ɓangare na wannan da yake ta atomatik. Tsarin yana aiki ne kawai idan harshen ƙa'idar ya kasance <em>mai aiki</em>, game da abubuwan da na'ura za ta iya dubawa, ba game da ji ba. Da zarar ƙa'ida ta zame daga &quot;tana amfani da kalmar da ba daidai ba don jiyya&quot; zuwa &quot;tana jin rashin girmamawa,&quot; fassarar ɗan adam tana sake shiga ta ƙofar baya kuma karkatar tana farawa. Tsarin yana bayyana kowane inji da muke iya tunani da ke tsayayya da wannan; amma aikin riƙe layin a zahiri aiki ne na gudanarwa, ba na ginin tsari kaɗai ba.",
     "closingPara": "Asalin tattara ra'ayoyi, hanyoyin ɗaukaka, da tsarin ƙa'idar da na'ura za ta iya amfani yana zaune a cikin ƙayyadaddun CIRISNodeCore. Baturiyar lafiyar hankali ta harsuna 29 ita ce kwayar farko inda zagaye ke gudana.",
     "ctaSafety": "Fasalolin aminci →",
-    "ctaFederation": "Tarayyar ƙungiya",
+    "ctaFederation": "Tarayya",
     "ctaFsd": "Karanta FSD"
   },
   "services": {
@@ -2211,7 +2211,7 @@
   "safetyArch": {
     "headlineLead": "Tsaro da fasaha,",
     "headlineAccent": "ba sa rabuwa",
-    "groundLabel": "Ƙasar da take tashi daga gare ta",
+    "groundLabel": "Tushen da take fitowa daga gare shi",
     "abutmentLeft": "Mai tabbatarwa",
     "abutmentRight": "Ɗabi'a",
     "keystoneBadge": "Dutsen tushe",
@@ -2219,7 +2219,7 @@
     "mechLabel": "Yadda aka sassaƙa toshin",
     "exploreCta": "Bincika",
     "ratchetLabel": "Me ya sa gadar take riƙe: na'urar daidaito",
-    "ratchetBody": "Baka na ƙara ƙarfi yayin da nauyi ke matsa masa. Nauyin yana ƙulla duwatsun sosai. CIRIS na tsayawa haka. Ana kimanta kowace murya da gaskiya: kwafin murya ɗaya ana ƙidaya su a matsayin murya ɗaya, kuma kowane yawan amo ba zai iya sayen ƙarin amana ba. Littattafan sun kasance gaskiya, an sa musu hannu kuma duk wani canji na bayyana, kuma a saman akwai tsayarwa. Idan wani abu ya gaza, yana gazawa a cikin rikodin, da sunansa.",
+    "ratchetBody": "Baka na ƙara ƙarfi yayin da nauyi ke matsa masa. Nauyin yana ƙulla duwatsun sosai. CIRIS na tsayawa haka. Ana kimanta kowace murya da gaskiya: kwafin murya ɗaya ana ƙidaya su a matsayin murya ɗaya, kuma kowane yawan amo ba zai iya sayen ƙarin amincewa ba. Littattafan sun kasance gaskiya, an sa musu hannu kuma duk wani canji na bayyana, kuma ana kulle su da matakin tsayawa na ƙarshe. Idan wani abu ya gaza, yana gazawa a cikin rikodin, da sunansa.",
     "blocks": {
       "killswitch": {
         "short": "Tsayarwa",
@@ -2307,9 +2307,9 @@
       },
       "privacy": {
         "short": "Sirri",
-        "name": "Sirri ta hanyar kimiyyar lissafi",
+        "name": "Sirri ta hanyar ilimin jiki",
         "tag": "Block 05 · Sirri",
-        "promise": "Bayananka ba a kare su ta manufa ba. Ba a iya kaiwa gare su ta hanyar ginawa.",
+        "promise": "Bayananka ba a kare su ta manufa ba. Ba a iya isa gare su saboda yadda aka gina tsarin tun farko.",
         "mechanisms": [
           {
             "label": "Rashin ganuwa a tsarin",
@@ -2328,7 +2328,7 @@
       },
       "vulnerable": {
         "short": "Mutunci",
-        "name": "Kare waɗanda ba za su iya yin izini ba",
+        "name": "Kariya ga waɗanda ba za su iya ba da yardarsu ba",
         "tag": "Block 06 · Mutunci",
         "promise": "Tsarin yana komawa zuwa 'yanci da mutunci ga waɗanda ba za su iya magana wa kansu ba.",
         "mechanisms": [
@@ -2372,11 +2372,11 @@
     "threads": {
       "verify": {
         "title": "Ana iya tabbatar da kanta",
-        "body": "kowane toshi za a iya bincika shi ta ɓangarorin da AI ba ta sarrafa ba, kuma ƙaramin farfajiyar tushe na rage farfajiyar kai hari."
+        "body": "Kowane bulo za a iya bincika shi ta ɓangarorin da AI ba ta sarrafa ba, kuma ƙaramar farfajiyar asali tana rage yawan farfajiyar hare-hare."
       },
       "legal": {
         "title": "Daidaita da doka",
-        "body": "GDPR, CCPA, da EU AI Act suna dacewa da ka'idar ta hanyar DP-Map, tare da alhakin SI-score da rufe-rufe na sassa."
+        "body": "GDPR, CCPA, da EU AI Act suna dacewa da ka'idar ta hanyar DP-Map, inda alhaki yake ɗaure da maki na SI, kuma ana ƙara ƙarin ƙa'idoji a saman don kowane fanni."
       }
     }
   },

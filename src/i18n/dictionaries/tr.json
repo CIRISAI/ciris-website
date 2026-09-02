@@ -2219,7 +2219,7 @@
     "mechLabel": "Bu taş nasıl yontuldu",
     "exploreCta": "Keşfet",
     "ratchetLabel": "Kemer neden ayakta durur: tutarlılık cırcırı",
-    "ratchetBody": "Bir kemer, üzerine ne kadar çok ağırlık bastırırsa o kadar güçlenir. Yük, taşları daha sıkı kenetler. CIRIS de aynı şekilde ayakta durur. Her sesin bedeli dürüstçe biçilir: tek sesin kopyaları tek ses sayılır ve hiçbir yankı miktarı daha fazla güven satın alamaz. Defterler doğru kalır; imzalıdır, kurcalanırsa belli eder ve en tepede durdurma vardır. Bir şey başarısız olduğunda, kayıtta, kendi adıyla başarısız olur.",
+    "ratchetBody": "Bir kemer, üzerine ne kadar çok ağırlık bastırırsa o kadar güçlenir. Yük, taşları daha sıkı kenetler. CIRIS de aynı şekilde ayakta durur. Her sesin bedeli dürüstçe biçilir: tek sesin kopyaları tek ses sayılır ve hiçbir yankı miktarı daha fazla güven satın alamaz. Defterler doğru kalır; imzalıdır, kurcalanırsa belli eder ve en tepede durdurma mekanizmasıyla sınırlandırılır. Bir şey başarısız olduğunda, kayıtta, kendi adıyla başarısız olur.",
     "blocks": {
       "killswitch": {
         "short": "Durdur",
@@ -2376,7 +2376,7 @@
       },
       "legal": {
         "title": "Yasayla uyumlu",
-        "body": "GDPR, CCPA ve EU AI Act, DP-Map aracılığıyla protokole eşlenir; SI-score sorumluluğu ve sektör katmanlarıyla birlikte."
+        "body": "GDPR, CCPA ve EU AI Act, DP-Map aracılığıyla protokole eşlenir; sorumluluk SI puanına bağlanır ve her bir sektör için ek kurallar katmanlar halinde eklenir."
       }
     }
   },

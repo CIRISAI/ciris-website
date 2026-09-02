@@ -1367,7 +1367,7 @@
     "stillWrongParaHtml": "Không có gì trong số này là tự động. Kỷ luật chỉ giữ được nếu ngôn ngữ quy tắc duy trì tính <em>vận hành</em>, về những điều mà máy có thể kiểm tra, không phải về cảm xúc. Ngay khi một quy tắc trượt từ &quot;dùng từ sai cho liệu pháp&quot; sang &quot;cảm thấy thiếu tôn trọng,&quot; cách diễn giải của con người sẽ quay trở lại từ cửa sau và sự lệch hướng bắt đầu. Kiến trúc đặt tên mọi cơ chế chúng tôi có thể nghĩ đến để chống lại điều này; công việc thực sự giữ vững ranh giới là vận hành, không phải kiến trúc.",
     "closingPara": "Các bản nguyên thủy cộng đồng, con đường kháng cáo, và định dạng quy tắc có thể áp dụng bằng máy nằm trong đặc tả CIRISNodeCore. Các bộ kiểm tra sức khỏe tâm thần 29 ngôn ngữ là ô đầu tiên nơi vòng lặp chạy.",
     "ctaSafety": "Tính năng an toàn →",
-    "ctaFederation": "Liên đoàn",
+    "ctaFederation": "Federation",
     "ctaFsd": "Đọc FSD"
   },
   "services": {
@@ -2376,7 +2376,7 @@
       },
       "legal": {
         "title": "Phù hợp về mặt pháp lý",
-        "body": "GDPR, CCPA, và EU AI Act ánh xạ lên giao thức thông qua DP-Map, với trách nhiệm pháp lý SI-score và các lớp phủ theo ngành."
+        "body": "GDPR, CCPA, và EU AI Act được ánh xạ lên giao thức thông qua DP-Map, với trách nhiệm pháp lý được gắn với điểm SI và các quy tắc bổ sung được xếp lớp cho từng ngành."
       }
     }
   },

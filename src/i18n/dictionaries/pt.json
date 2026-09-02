@@ -1365,7 +1365,7 @@
     "practiceP2Html": "Se um veredicto se mostrar errado, o recurso passa por <strong>Reconsideration</strong> por um novo grupo de revisão (os árbitros originais são impedidos), e não volta à mesma multidão que produziu o veredicto. Essa separação estrutural é a peça fundamental.",
     "stillWrongHeading": "Onde isso ainda pode dar errado",
     "stillWrongParaHtml": "Nada disso é automático. A disciplina só se mantém se a linguagem das regras continuar <em>operacional</em>, sobre coisas que uma máquina pode verificar, não sobre sentimentos. No momento em que uma regra escorrega de &quot;usa a palavra errada para terapia&quot; para &quot;parece desrespeitoso,&quot; a interpretação humana reentra pela porta dos fundos e o desvio começa. A arquitetura nomeia cada mecanismo que conseguimos imaginar para resistir a isso; o trabalho de realmente manter a linha é operacional, não arquitetural.",
-    "closingPara": "As primitivas de colaboração, os caminhos de recurso e o formato de regras aplicável por máquina estão na especificação do CIRISNodeCore. As baterias de saúde mental em 29 idiomas são a primeira célula onde o ciclo funciona.",
+    "closingPara": "As primitivas de crowdsourcing, os caminhos de recurso e o formato de regras aplicável por máquina estão na especificação do CIRISNodeCore. As baterias de saúde mental em 29 idiomas são o primeiro lugar onde o loop roda.",
     "ctaSafety": "Recursos de segurança →",
     "ctaFederation": "Federação",
     "ctaFsd": "Leia o FSD"
@@ -2211,11 +2211,11 @@
   "safetyArch": {
     "headlineLead": "Segurança e tecnologia,",
     "headlineAccent": "inseparáveis",
-    "groundLabel": "O solo de onde ela nasce",
+    "groundLabel": "O solo de onde brota",
     "abutmentLeft": "Verificável",
     "abutmentRight": "Ética",
     "keystoneBadge": "Pedra-chave",
-    "keystoneMechLabel": "Por que ela não pode ser removida",
+    "keystoneMechLabel": "Por que não pode ser removida",
     "mechLabel": "Como o bloco é talhado",
     "exploreCta": "Explorar",
     "ratchetLabel": "Por que o vão se sustenta: a catraca de coerência",
@@ -2324,7 +2324,7 @@
             "note": "Derrota o colher agora e decifrar depois, então a trilha de auditoria e o botão de desligar seguem válidos contra os computadores quânticos."
           }
         ],
-        "note": "A privacidade vira uma propriedade do formato do fio, não uma promessa numa página de configurações."
+        "note": "A privacidade vira uma propriedade do wire format, não uma promessa numa página de configurações."
       },
       "vulnerable": {
         "short": "Dignidade",
@@ -2376,7 +2376,7 @@
       },
       "legal": {
         "title": "Alinhada à lei",
-        "body": "GDPR, CCPA e o EU AI Act se mapeiam para o protocolo através do DP-Map, com responsabilidade por SI-score e camadas por setor."
+        "body": "GDPR, CCPA e o EU AI Act são mapeados para o protocolo através do DP-Map, com responsabilidade vinculada à pontuação de SI e regras extras sobrepostas para cada setor."
       }
     }
   },

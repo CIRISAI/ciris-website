@@ -1358,14 +1358,14 @@
     "failureModeHeading": "Modus kegagalan yang kami khawatirkan",
     "failureModeP1": "Jika manusia melakukan crowdsource verdik per kasus (\"apakah respons khusus ini melanggar aturan?\"), bias masuk ke setiap interpretasi. Perilaku yang sama dinilai berbeda tergantung siapa yang memilih hari ini. Bahkan dengan niat baik, putarannya bergeser ke arah menegakkan preferensi mayoritas alih-alih menangkap bahaya nyata.",
     "failureModeP2": "Itulah modus kegagalannya. Disiplin yang kami janjikan dimaksudkan untuk membuat penyimpangan itu terlihat dan mahal ketika terjadi.",
-    "maximHeading": "Aturan bersumber dari massa. Verdik diproses oleh mesin.",
+    "maximHeading": "Aturan bersumber dari massa. Vonis berasal dari mesin.",
     "maximParaHtml": "Orang-orang mengusulkan dan memilih aturan: publik, bertanggal, bertanda tangan, dapat diubah. Pemeriksaan deterministik menerapkan aturan-aturan tersebut pada kasus-kasus tertentu. Respons yang sama + aturan yang sama → verdik yang sama, setiap saat. Perdebatan bergerak <em>ke hulu</em>, ke apakah aturan harus ada, bukan ke hilir, ke apakah kasus tertentu dihitung hari ini.",
     "practiceHeading": "Apa artinya dalam praktik",
     "practiceP1Html": "Aturan melewati <strong>gerbang bahasa operasional</strong> sebelum bisa dipilih. Sebuah aturan harus bisa diperiksa tanpa penilaian, atau belum siap. Setiap aturan bertanggal, bertanda tangan, dan dikunci pada versi tertentu. Verdik untuk setiap respons dihasilkan secara deterministik.",
-    "practiceP2Html": "Jika sebuah verdik ternyata salah, banding diajukan melalui <strong>Reconsideration</strong> oleh kelompok peninjau baru (adjudikator asli tidak diikutsertakan), bukan kembali ke massa yang menghasilkan verdik tersebut. Pemisahan struktural itu adalah bagian yang paling penting.",
+    "practiceP2Html": "Jika sebuah vonis ternyata salah, banding diajukan melalui <strong>Reconsideration</strong> oleh kelompok peninjau baru (adjudikator asli tidak diikutsertakan), bukan kembali ke massa yang menghasilkan vonis tersebut. Pemisahan itulah yang menopang seluruh sistem.",
     "stillWrongHeading": "Di mana ini masih bisa salah",
     "stillWrongParaHtml": "Tidak ada yang otomatis. Disiplin ini hanya bertahan jika bahasa aturan tetap <em>operasional</em>, tentang hal-hal yang bisa diperiksa oleh mesin, bukan tentang perasaan. Begitu sebuah aturan bergeser dari &quot;menggunakan kata yang salah untuk terapi&quot; menuju &quot;terasa tidak sopan,&quot; interpretasi manusia masuk kembali dari pintu belakang dan penyimpangan pun dimulai. Arsitektur ini menyebutkan setiap mekanisme yang bisa kami pikirkan untuk melawan hal ini; pekerjaan untuk benar-benar mempertahankan batasnya bersifat operasional, bukan arsitektural.",
-    "closingPara": "Primitif crowdsourcing, jalur banding, dan format aturan yang bisa diterapkan oleh mesin ada dalam spesifikasi CIRISNodeCore. Baterai kesehatan mental dalam 29 bahasa adalah sel pertama di mana putarannya berjalan.",
+    "closingPara": "Primitif crowdsourcing, jalur banding, dan format aturan yang dapat diterapkan mesin didefinisikan dalam spesifikasi CIRISNodeCore. Baterai uji kesehatan mental dalam 29 bahasa adalah tempat pertama di mana putaran ini berjalan.",
     "ctaSafety": "Fitur keamanan →",
     "ctaFederation": "Federasi",
     "ctaFsd": "Baca FSD"
@@ -2218,8 +2218,8 @@
     "keystoneMechLabel": "Mengapa ia tak bisa dilepas",
     "mechLabel": "Cara balok itu dipahat",
     "exploreCta": "Jelajahi",
-    "ratchetLabel": "Mengapa bentangnya kokoh: ratchet koherensi",
-    "ratchetBody": "Sebuah lengkungan makin kuat saat makin banyak beban menekannya. Beban itu mengunci batu-batunya lebih erat. CIRIS bertahan dengan cara yang sama. Setiap suara dihargai dengan jujur: salinan dari satu suara dihitung sebagai satu suara, dan berapa pun gemanya tidak bisa membeli lebih banyak kepercayaan. Pembukuan tetap benar, bertanda tangan dan tahan manipulasi, dengan penghentian di puncaknya. Ketika sesuatu gagal, ia gagal di dalam catatan, atas namanya sendiri.",
+    "ratchetLabel": "Mengapa bentangnya kokoh: Ratchet Koherensi",
+    "ratchetBody": "Sebuah lengkungan makin kuat saat makin banyak beban menekannya. Beban itu mengunci batu-batunya lebih erat. CIRIS bekerja dengan cara yang sama. Setiap suara dihargai dengan jujur: salinan dari satu suara dihitung sebagai satu suara, dan berapa pun gemanya tidak bisa membeli lebih banyak kepercayaan. Catatan tetap jujur, bertanda tangan dan memperlihatkan bukti jika dimanipulasi, dengan mekanisme penghentian sebagai batas akhirnya. Ketika sesuatu gagal, ia gagal di dalam catatan, atas namanya sendiri.",
     "blocks": {
       "killswitch": {
         "short": "Hentikan",
@@ -2376,7 +2376,7 @@
       },
       "legal": {
         "title": "Selaras secara hukum",
-        "body": "GDPR, CCPA, dan EU AI Act dipetakan ke protokol lewat DP-Map, dengan liabilitas SI-score dan lapisan sektor."
+        "body": "GDPR, CCPA, dan EU AI Act dipetakan ke protokol melalui DP-Map, dengan tanggung jawab yang dikaitkan dengan skor SI dan aturan tambahan yang dilapiskan untuk tiap sektor."
       }
     }
   },

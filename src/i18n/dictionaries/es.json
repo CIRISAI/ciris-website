@@ -1356,7 +1356,7 @@
     "h1": "Hacia dónde puede derivar la seguridad colectiva.",
     "heroPara": "Un sistema de seguridad colectiva puede convertirse en algo diferente si no tenemos cuidado. La misma maquinaria que detecta fallos reales puede convertirse en la maquinaria que impone preferencias. Vemos ese riesgo en la arquitectura que estamos construyendo. Nombrarlo es el primer paso para resistirlo.",
     "failureModeHeading": "El modo de fallo que nos preocupa",
-    "failureModeP1": "Si las personas colectivizan veredictos caso por caso («¿rompió esta respuesta específica la regla?»), el sesgo entra en cada interpretación. El mismo comportamiento se califica de manera diferente según quién vota hoy. Incluso con buenas intenciones, el bucle tiende a imponer las preferencias de la mayoría en lugar de detectar daños reales.",
+    "failureModeP1": "Si las personas obtienen veredictos caso por caso mediante colaboración colectiva («¿rompió esta respuesta específica la regla?»), el sesgo entra en cada interpretación. El mismo comportamiento se califica de manera diferente según quién vota hoy. Incluso con buenas intenciones, el bucle tiende a imponer las preferencias de la mayoría en lugar de detectar daños reales.",
     "failureModeP2": "Ese es el modo de fallo. La disciplina a la que nos comprometemos está pensada para hacer esa deriva visible y costosa cuando ocurre.",
     "maximHeading": "Las reglas son colectivas. Los veredictos son automáticos.",
     "maximParaHtml": "Las personas proponen y votan reglas: públicas, fechadas, firmadas, reversibles. Una verificación determinista aplica esas reglas a casos específicos. La misma respuesta + la misma regla → el mismo veredicto, siempre. El debate se mueve <em>hacia arriba</em>, hacia si la regla debería existir, en lugar de hacia abajo, hacia si un caso específico cuenta hoy.",
@@ -1365,7 +1365,7 @@
     "practiceP2Html": "Si un veredicto resulta estar equivocado, la apelación pasa por <strong>Reconsideración</strong> de un grupo de revisión nuevo (los adjudicadores originales se recusan), no vuelve a la misma multitud que produjo el veredicto. Esa separación estructural es la pieza fundamental.",
     "stillWrongHeading": "Dónde esto aún puede salir mal",
     "stillWrongParaHtml": "Nada de esto es automático. La disciplina se mantiene solo si el lenguaje de las reglas permanece <em>operacional</em>, sobre cosas que una máquina puede verificar, no sobre sentimientos. En el momento en que una regla pasa de &quot;usa la palabra incorrecta para terapia&quot; hacia &quot;parece irrespetuoso,&quot; la interpretación humana vuelve a entrar por la puerta trasera y la deriva comienza. La arquitectura nombra cada mecanismo que podemos imaginar que resiste esto; el trabajo de mantener la línea es operacional, no arquitectónico.",
-    "closingPara": "Los primitivos de colaboración colectiva, las rutas de apelación y el formato de reglas aplicable por máquina viven en la especificación CIRISNodeCore. Las baterías de salud mental en 29 idiomas son la primera celda donde el bucle se ejecuta.",
+    "closingPara": "Los primitivos de colaboración colectiva, las rutas de apelación y el formato de reglas aplicable por máquina viven en la especificación CIRISNodeCore. Las baterías de salud mental en 29 idiomas son el primer lugar donde el bucle se ejecuta.",
     "ctaSafety": "Funciones de seguridad →",
     "ctaFederation": "Federación",
     "ctaFsd": "Leer el FSD"
@@ -2210,7 +2210,7 @@
   },
   "safetyArch": {
     "headlineLead": "Seguridad y tecnología,",
-    "headlineAccent": "inseparables",
+    "headlineAccent": "inseparable",
     "groundLabel": "El suelo del que nace",
     "abutmentLeft": "Verificable",
     "abutmentRight": "Ética",
@@ -2324,7 +2324,7 @@
             "note": "Derrota el recoger ahora y descifrar después, así que el registro de auditoría y el interruptor de apagado siguen siendo válidos frente a las computadoras cuánticas."
           }
         ],
-        "note": "La privacidad se vuelve una propiedad del formato del cable, no una promesa en una página de ajustes."
+        "note": "La privacidad se vuelve una propiedad del formato del cable, no una promesa en una página de configuración."
       },
       "vulnerable": {
         "short": "Dignidad",
@@ -2345,7 +2345,7 @@
             "note": "Caducan de forma automática a menos que un panel médico los renueve."
           }
         ],
-        "note": "El valor por defecto es la libertad. La autoridad sobre otra persona hay que volver a ganarla una y otra vez."
+        "note": "Por defecto es la libertad. La autoridad sobre otra persona hay que volver a ganarla una y otra vez."
       },
       "lifecycle": {
         "short": "Ciclo de vida",
@@ -2376,7 +2376,7 @@
       },
       "legal": {
         "title": "Alineado con la ley",
-        "body": "GDPR, CCPA y el EU AI Act se asignan al protocolo a través del DP-Map, con responsabilidad por SI-score y capas por sector."
+        "body": "GDPR, CCPA y el EU AI Act se asignan al protocolo a través del DP-Map, con la responsabilidad vinculada a la puntuación SI y reglas adicionales superpuestas para cada sector."
       }
     }
   },
