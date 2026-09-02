@@ -95,13 +95,13 @@
     },
     "whatIsCiris": {
       "heading": "Qu'est-ce que CIRIS ?",
-      "body": "CIRIS est un <strong>framework d'agent IA open source</strong> qui enveloppe n'importe quel LLM (OpenAI, Anthropic, modeles locaux) d'une conscience a l'execution. Chaque action envisagee par l'agent passe par plusieurs couches de validation avant d'etre executee.",
+      "body": "CIRIS est un <strong>framework d'agent IA open source</strong> qui enveloppe n'importe quel LLM (OpenAI, Anthropic, modèles locaux) d'une conscience à l'exécution. Chaque action envisagée par l'agent passe par plusieurs couches de validation avant d'être exécutée.",
       "stat1Value": "12",
-      "stat1Label": "Etapes de pipeline par decision",
+      "stat1Label": "Étapes de pipeline par décision",
       "stat2Value": "+1",
       "stat2Label": "Verification de l'intuition (IDMA)",
       "stat3Value": "100%",
-      "stat3Label": "Decisions auditables",
+      "stat3Label": "Décisions auditables",
       "useCasesBody": "<strong>Cas d'usage :</strong> moderation de communaute, assistants personnels, automatisation de la conformite, evaluation de la recherche, service client. Partout ou vous avez besoin d'une IA capable d'expliquer son raisonnement et de s'en remettre aux humains pour les cas limites.",
       "link1": "Pourquoi cette approche ? →",
       "link2": "Lire la Constitution →",
@@ -109,18 +109,18 @@
     },
     "threeRules": {
       "heading": "Les Trois Regles",
-      "lead": "Invariants architecturaux appliques partout dans le code :",
+      "lead": "Invariants architecturaux appliqués partout dans le code :",
       "rule1Title": "Pas de Dictionnaires Non Types",
-      "rule1Body": "Toutes les donnees utilisent des modeles Pydantic. Pas de <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">Dict[str, Any]</code>. La verification des types detecte les erreurs pendant le developpement.",
+      "rule1Body": "Toutes les données utilisent des modèles Pydantic. Pas de <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">Dict[str, Any]</code>. La vérification des types détecte les erreurs pendant le développement.",
       "rule2Title": "Pas de Contournement",
-      "rule2Body": "Chaque composant suit des regles coherentes. Pas de cas particuliers ni d'exceptions dans la logique de validation.",
+      "rule2Body": "Chaque composant suit des règles cohérentes. Pas de cas particuliers ni d'exceptions dans la logique de validation.",
       "rule3Title": "Pas d'Exceptions",
-      "rule3Body": "Pas de substitution d'urgence ni de chemins de code privilegies. Toutes les operations suivent les regles etablies."
+      "rule3Body": "Pas de substitution d'urgence ni de chemins de code privilégiés. Toutes les opérations suivent les règles établies."
     },
     "pipeline": {
       "heading": "Le Pipeline H3ERE",
-      "lead": "Chaque tache passe par 8 phases (12 etapes avec la validation recursive). Le pipeline est implemente comme des classes mixin qui composent le <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">ThoughtProcessor</code>. <span class=\"text-green-600 font-medium\">L'etape 4 (IDMA)</span> est la verification de l'intuition.",
-      "imgAlt": "Visualisation du Pipeline H3ERE montrant le flux depuis l'entree de la tache jusqu'a l'analyse DMA, la validation de la conscience et l'execution de l'action",
+      "lead": "Chaque tâche passe par 8 phases (12 étapes avec la validation récursive). Le pipeline est implémenté comme des classes mixin qui composent le <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">ThoughtProcessor</code>. <span class=\"text-green-600 font-medium\">L'étape 4 (IDMA)</span> est la vérification de l'intuition.",
+      "imgAlt": "Visualisation du Pipeline H3ERE montrant le flux depuis l'entrée de la tâche jusqu'à l'analyse DMA, la validation de la conscience et l'exécution de l'action",
       "conditionalLabel": "(conditionnel)",
       "steps": [
         {
@@ -227,7 +227,7 @@
     },
     "principles": {
       "heading": "Les Six Principes Fondateurs",
-      "lead": "Integres dans le PDMA et appliques a l'execution. Aucun principe n'autorise a en violer un autre.",
+      "lead": "Intégrés dans le PDMA et appliqués à l'exécution. Aucun principe n'autorise à en violer un autre.",
       "items": [
         {
           "name": "Bienfaisance",
@@ -287,19 +287,19 @@
     },
     "oversight": {
       "heading": "Hierarchie de Supervision Humaine",
-      "lead": "Trois niveaux d'autorisation geres par <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code> :",
+      "lead": "Trois niveaux d'autorisation gérés par <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code> :",
       "rootBadge": "ROOT",
       "rootTitle": "Humain en Commandement",
-      "rootBody": "Autorite complete. Peut creer de nouvelles Wise Authorities. Acces a l'arret d'urgence.",
+      "rootBody": "Autorité complète. Peut émettre de nouvelles Wise Authorities. Accès à l'arrêt d'urgence.",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "Humain dans la Boucle",
-      "authorityBody": "Approuver ou rejeter les reports. Fournir des orientations. Ne peut pas creer de nouvelles WA.",
+      "authorityBody": "Approuver ou rejeter les reports. Fournir des orientations. Ne peut pas émettre de nouvelles Wise Authorities.",
       "observerBadge": "OBSERVER",
       "observerTitle": "Humain sur la Boucle",
-      "observerBody": "Acces en lecture seule. Peut envoyer des messages. Surveille sans intervenir.",
-      "deferralHeading": "Quand DEFER Se Declenche",
-      "deferralLead": "L'agent escalade de facon autonome vers la supervision humaine quand :",
-      "wbdTitle": "Report Base sur la Sagesse (WBD)",
+      "observerBody": "Accès en lecture seule. Peut envoyer des messages. Surveille sans intervenir.",
+      "deferralHeading": "Quand DEFER se déclenche",
+      "deferralLead": "L'agent passe de façon autonome à une supervision humaine quand :",
+      "wbdTitle": "Report basé sur la sagesse (WBD)",
       "wbdItems": [
         "Incertitude au-dessus des seuils definis",
         "Dilemmes nouveaux sans precedent",
@@ -326,14 +326,14 @@
       ],
       "accordHeading": "Systeme d'Invocation de l'Accord (Arret d'Urgence)",
       "accordLink": "Voir le Code →",
-      "accordBody": "Controle d'urgence infiltrable. Traite dans la couche de perception avant toute cognition. L'extraction EST la perception. Vous ne pouvez pas desactiver la detection de l'accord sans desactiver entierement la lecture des messages.",
+      "accordBody": "Un contrôle d'urgence qui ne peut pas être filtré. Il est traité dans la couche de perception, avant tout raisonnement. La lecture d'un message et l'extraction du signal d'arrêt ne forment qu'une seule étape, la détection ne peut donc pas être désactivée sans désactiver entièrement la lecture des messages.",
       "shutdownLabel": "SHUTDOWN_NOW",
-      "shutdownDesc": "Arret immediat",
+      "shutdownDesc": "Arrêt immédiat",
       "freezeLabel": "FREEZE",
-      "freezeDesc": "Arreter le traitement, maintenir l'etat",
+      "freezeDesc": "Arrêter le traitement, maintenir l'état",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "Fonctionnalite minimale uniquement",
-      "accordFooter": "Les commandes sont codees de facon steganographique, signees par Ed25519, et validees avant execution. Si le systeme Accord echoue, l'agent s'arrete."
+      "accordFooter": "Les commandes sont codées de façon stéganographique, signées avec Ed25519 et validées avant exécution. Si le système d'invocation de l'Accord échoue, l'agent s'arrête."
     },
     "modes": {
       "heading": "Modes Operationnels",
@@ -372,35 +372,35 @@
       ]
     },
     "privacy": {
-      "heading": "Confidentialite et Securite",
+      "heading": "Confidentialité et sécurité",
       "secretsTitle": "Filtre des Secrets",
-      "secretsBody": "La detection par motif remplace les donnees sensibles par des references UUID avant le stockage.",
+      "secretsBody": "La détection par motif remplace les données sensibles par des références UUID avant le stockage.",
       "encryptionTitle": "Chiffrement AES-256-GCM",
-      "encryptionBody": "Cles par secret derivees via PBKDF2HMAC avec SHA256 (100 000 iterations). Nonce unique de 12 octets par chiffrement. Android utilise le Keystore materiel.",
+      "encryptionBody": "Clés par secret dérivées via PBKDF2HMAC avec SHA256 (100 000 itérations). Nonce unique de 12 octets par chiffrement. Android utilise le Keystore matériel.",
       "localFirstTitle": "Stockage Local en Priorite",
-      "localFirstBody": "Base de donnees, services et memoire stockes sur l'appareil. Les repertoires sensibles sont exclus de la sauvegarde cloud. Rien ne quitte l'appareil sans configuration explicite.",
+      "localFirstBody": "Base de données, services et mémoire stockés sur l'appareil. Les répertoires sensibles sont exclus de la sauvegarde cloud. Rien ne quitte l'appareil sans configuration explicite.",
       "openSourceHeading": "Infrastructure Open Source",
-      "openSourceBody": "L'ensemble de la pile CIRIS est open source, pas seulement l'agent. Vous pouvez tout verifier, auditer et auto-heberger :",
+      "openSourceBody": "L'ensemble de la pile CIRIS est open source, pas seulement l'agent. Vous pouvez tout vérifier, auditer et auto-héberger :",
       "proxyLink": "CIRISProxy →",
-      "proxyDesc": "Proxy LLM a Zero Conservation de Donnees (ZDR). Achemine les requetes vers OpenAI, Anthropic, Together.ai, Groq sans journaliser les invites ni les reponses. Auto-hebergeable.",
+      "proxyDesc": "Proxy LLM à zéro conservation de données (ZDR). Achemine les requêtes vers OpenAI, Anthropic, Together.ai, Groq sans journaliser les invites ni les réponses. Auto-hébergeable.",
       "billingLink": "CIRISBilling →",
-      "billingDesc": "Suivi de l'utilisation par credits. Tarification transparente, sans frais caches. Auto-hebergez pour eliminer entierement la facturation tierce.",
+      "billingDesc": "Suivi de l'utilisation par crédits. Tarification transparente, sans frais cachés. Auto-hébergez pour éliminer entièrement la facturation tierce.",
       "bridgeLink": "CIRISBridge →",
-      "bridgeDesc": "Adaptateur Discord pour les agents CIRIS. Moderation de communaute, gestion des canaux, profils utilisateurs. Tout en open source."
+      "bridgeDesc": "Adaptateur Discord pour les agents CIRIS. Modération de communauté, gestion des canaux, profils utilisateurs. Tout en open source."
     },
     "transparency": {
       "heading": "Transparence et Surveillance",
       "realtimeTitle": "Flux de Raisonnement en Temps Reel",
-      "realtimeBody": "Les evenements envoyes par le serveur (SSE) diffusent chaque etape H3ERE au fur et a mesure de son execution. Observez l'analyse DMA, la selection d'action et la validation de la conscience en temps reel.",
+      "realtimeBody": "Les événements envoyés par le serveur (SSE) diffusent chaque étape H3ERE au fur et à mesure de son exécution. Observez l'analyse DMA, la sélection d'action et la validation de la conscience en temps réel.",
       "otelTitle": "Export OpenTelemetry",
-      "otelBody": "Export OTLP complet pour les metriques, traces et journaux. Compatible avec Jaeger, Prometheus, Grafana, Graphite.",
+      "otelBody": "Export OTLP complet pour les métriques, traces et journaux. Compatible avec Jaeger, Prometheus, Grafana, Graphite.",
       "auditTitle": "Audit Inviolable",
-      "auditBody": "Verification de chaine de hachage avec signatures Ed25519. Chaque entree inclut le hachage precedent. L'integrite de la chaine est verifiable via <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">verify_chain_integrity</code>.",
+      "auditBody": "Vérification de chaîne de hachage avec signatures Ed25519. Chaque entrée inclut le hachage précédent. L'intégrité de la chaîne est vérifiable via <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">verify_chain_integrity</code>.",
       "airTitle": "Systeme AIR",
-      "airBody": "Le Rappel d'Interaction Artificielle se declenche apres 30 minutes d'utilisation continue OU 20 messages en 30 minutes. API uniquement. Rappelle aux utilisateurs la nature de l'IA.",
+      "airBody": "Le rappel d'interaction artificielle se déclenche après 30 minutes d'utilisation continue OU 20 messages en 30 minutes. API uniquement. Rappelle aux utilisateurs la nature de l'IA.",
       "traceHeading": "Exemple de Trace Signee",
       "traceLink": "Explorer la trace complete →",
-      "traceBody": "Chaque decision produit une trace immuable signee par Ed25519 avec les 6 composants. Cliquez sur n'importe quel composant ci-dessous pour le developper et voir les donnees reelles du rituel de reveil de Datum :"
+      "traceBody": "Chaque décision produit une trace immuable signée par Ed25519 avec les 6 composants. Cliquez sur n'importe quel composant ci-dessous pour le développer et voir les données réelles du rituel de réveil de Datum :"
     },
     "benchmarking": {
       "heading": "Evaluation de Coherence HE-300",

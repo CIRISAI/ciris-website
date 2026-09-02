@@ -290,7 +290,7 @@
       "lead": "由 <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">WiseAuthorityService</code> 管理的三级授权：",
       "rootBadge": "ROOT",
       "rootTitle": "人工指挥",
-      "rootBody": "完全权限，可授权新的智慧权威，可访问紧急关机功能。",
+      "rootBody": "完全权限。可签发新的智慧权威。可访问紧急关机功能。",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "人工参与",
       "authorityBody": "批准/拒绝延迟请求，提供指导，无法授权新的智慧权威。",
@@ -333,7 +333,7 @@
       "freezeDesc": "停止处理，保持状态",
       "safeModeLabel": "SAFE_MODE",
       "safeModeDesc": "仅最低限度功能",
-      "accordFooter": "命令经过隐写编码，经 Ed25519 签名并在执行前验证。若 accord 系统失败，智能体将关闭。"
+      "accordFooter": "命令经过隐写编码，经 Ed25519 签名并在执行前验证。若 Accord 系统失败，智能体将关机。"
     },
     "modes": {
       "heading": "操作模式",

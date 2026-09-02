@@ -95,9 +95,9 @@
     },
     "whatIsCiris": {
       "heading": "CIRIS là gì?",
-      "body": "CIRIS là một <strong>framework tác nhân AI mã nguồn mở</strong> bao bọc bất kỳ LLM nào (OpenAI, Anthropic, mô hình cục bộ) với lương tâm thời gian thực. Mọi hành động tác nhân cân nhắc đều đi qua nhiều lớp kiểm tra trước khi thực thi.",
+      "body": "CIRIS là một <strong>framework tác nhân AI mã nguồn mở</strong> bao bọc bất kỳ LLM nào (OpenAI, Anthropic, các mô hình cục bộ) với Lương Tâm khi chạy. Mọi hành động mà tác nhân cân nhắc đều đi qua nhiều lớp xác thực trước khi thực thi.",
       "stat1Value": "12",
-      "stat1Label": "Bước đường ống mỗi quyết định",
+      "stat1Label": "Các bước Đường Ống cho mỗi quyết định",
       "stat2Value": "+1",
       "stat2Label": "Kiểm tra trực giác (IDMA)",
       "stat3Value": "100%",
@@ -292,13 +292,13 @@
       "rootTitle": "Con Người Chỉ Huy",
       "rootBody": "Toàn quyền. Có thể tạo Cơ Quan Sáng Suốt mới. Quyền truy cập tắt khẩn cấp.",
       "authorityBadge": "AUTHORITY",
-      "authorityTitle": "Con Người Trong Vòng",
+      "authorityTitle": "Con Người Trong Vòng Lặp",
       "authorityBody": "Phê duyệt/từ chối các chuyển giao. Cung cấp hướng dẫn. Không thể tạo WA mới.",
       "observerBadge": "OBSERVER",
       "observerTitle": "Con Người Theo Dõi",
       "observerBody": "Chỉ đọc. Có thể gửi tin nhắn. Giám sát mà không can thiệp.",
       "deferralHeading": "Khi Nào DEFER Kích Hoạt",
-      "deferralLead": "Tác nhân tự động chuyển giao lên giám sát con người khi:",
+      "deferralLead": "Tác nhân tự động chuyển giao lên sự giám sát của con người khi:",
       "wbdTitle": "Chuyển Giao Dựa Trên Sự Khôn Ngoan (WBD)",
       "wbdItems": [
         "Sự không chắc chắn vượt ngưỡng đã xác định",
@@ -324,9 +324,9 @@
         "Thay đổi cấu hình quan trọng",
         "Kích hoạt ranh giới đặc thù của tác nhân"
       ],
-      "accordHeading": "Hệ Thống Kích Hoạt HIỆP ƯỚC (Công Tắc Tắt)",
+      "accordHeading": "Hệ Thống Kích Hoạt Accord (Công Tắc Tắt)",
       "accordLink": "Xem Mã →",
-      "accordBody": "Điều khiển khẩn cấp không thể lọc. Xử lý trong lớp nhận thức trước bất kỳ nhận thức nào. Trích xuất LÀ nhận thức. Bạn không thể vô hiệu hóa phát hiện accord mà không vô hiệu hóa hoàn toàn việc đọc tin nhắn.",
+      "accordBody": "Một cơ chế kiểm soát khẩn cấp không thể bị lọc bỏ. Nó được xử lý trong lớp nhận thức, trước khi bất kỳ suy nghĩ nào diễn ra. Việc đọc tin nhắn và trích xuất tín hiệu dừng là một bước duy nhất, nên không thể tắt cơ chế phát hiện mà không tắt hoàn toàn việc đọc tin nhắn.",
       "shutdownLabel": "SHUTDOWN_NOW",
       "shutdownDesc": "Kết thúc ngay lập tức",
       "freezeLabel": "FREEZE",
@@ -382,7 +382,7 @@
       "openSourceHeading": "Cơ Sở Hạ Tầng Mã Nguồn Mở",
       "openSourceBody": "Toàn bộ stack CIRIS là mã nguồn mở, không chỉ tác nhân. Bạn có thể xác minh, kiểm tra và tự lưu trữ mọi thứ:",
       "proxyLink": "CIRISProxy →",
-      "proxyDesc": "Proxy LLM Zero-Data-Retention (ZDR). Định tuyến yêu cầu đến OpenAI, Anthropic, Together.ai, Groq mà không ghi lại prompt hay phản hồi. Có thể tự lưu trữ.",
+      "proxyDesc": "Một proxy LLM không lưu giữ dữ liệu (zero data retention). Nó định tuyến các yêu cầu đến OpenAI, Anthropic, Together.ai và Groq mà không ghi nhật ký prompt hay phản hồi. Bạn có thể tự lưu trữ.",
       "billingLink": "CIRISBilling →",
       "billingDesc": "Theo dõi sử dụng dựa trên credit. Giá minh bạch, không phí ẩn. Tự lưu trữ để loại bỏ hoàn toàn bên thanh toán thứ ba.",
       "bridgeLink": "CIRISBridge →",
@@ -400,7 +400,7 @@
       "airBody": "Nhắc Nhở Tương Tác Nhân Tạo kích hoạt sau 30 phút sử dụng liên tục HOẶC 20 tin nhắn trong 30 phút. Chỉ API. Nhắc nhở người dùng về bản chất AI.",
       "traceHeading": "Ví Dụ Dấu Vết Đã Ký",
       "traceLink": "Khám phá dấu vết đầy đủ →",
-      "traceBody": "Mỗi quyết định tạo ra một dấu vết bất biến được ký Ed25519 với đủ 6 thành phần. Nhấp vào bất kỳ thành phần nào bên dưới để mở rộng và xem dữ liệu thực từ nghi lễ thức dậy của Datum:"
+      "traceBody": "Mỗi quyết định tạo ra một dấu vết bất biến được ký Ed25519 với đủ 6 thành phần. Nhấp vào bất kỳ thành phần nào bên dưới để mở rộng và xem dữ liệu thực từ nghi lễ THỨC DẬY của Datum:"
     },
     "benchmarking": {
       "heading": "Đánh Giá Tính Nhất Quán HE-300",
