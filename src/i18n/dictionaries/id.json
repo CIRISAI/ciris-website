@@ -1532,7 +1532,7 @@
     "contextAlwaysOnPara1": "CIRIS menyematkan <strong>teks tata kelola lengkap</strong> dan <strong>Panduan Komprehensif lengkap</strong> ke setiap prompt. Bukan ringkasan. Bukan versi yang sudah dipadatkan. Seluruh teks tata kelola.",
     "contextAlwaysOnPara2": "Ini memastikan bahwa pembaruan pada teks tata kelola atau Panduan segera mempengaruhi perilaku di semua agen, tanpa menunggu fine-tune baru atau strategi kompresi prompt.",
     "contextStateHeading": "Status Etis dan Prosedural Penuh",
-    "contextStateIntro": "CIRIS Agent adalah orkestrator berbasis alat yang mengelola:",
+    "contextStateIntro": "Agen CIRIS mengoordinasikan banyak alat sekaligus dan harus melacak:",
     "contextStateLi1": "Alur kerja multi-langkah",
     "contextStateLi2": "Status sistem dan keluaran alat",
     "contextStateLi3": "Pesan pengguna dan riwayat percakapan",
@@ -1549,9 +1549,9 @@
     "accord2Heading": "Ketahanan dan Tata Kelola",
     "accord2Li1": "Penerapan multi-penyedia menghindari titik kegagalan tunggal dalam infrastruktur etis yang kritis",
     "accord2Li2": "Memilih \"cukup baik dan andal\" daripada \"mencolok tapi rapuh\" mengutamakan keamanan dan kelangsungan",
-    "accord2Li3": "Degradasi yang baik saat pemadaman menjaga ketersediaan layanan",
+    "accord2Li3": "Degradasi bertahap yang terkontrol saat pemadaman menjaga ketersediaan layanan",
     "accord3Heading": "Pengawasan Manusia",
-    "accord3Li1": "Tingkatan cepat membuat manusia tetap nyaman dalam putaran untuk tinjauan etis real-time",
+    "accord3Li1": "Tingkatan respons cepat menjaga manusia tetap terlibat dalam proses untuk tinjauan etis real-time",
     "accord3Li2": "Tingkatan lebih murah memungkinkan analisis latar belakang yang luas tanpa biaya yang terlalu besar",
     "accord3Li3": "Pendekatan seimbang mendukung penggunaan sehari-hari maupun audit tata kelola berkala",
     "conclusionHeading": "Intinya",
@@ -2568,9 +2568,9 @@
     }
   },
   "epistemicWeb": {
-    "eyebrow": "Web Epistemik",
-    "headline": "Apa itu web epistemik?",
-    "intro": "Web saat ini hebat dalam menunjukkan banyak hal kepada Anda, tetapi buruk dalam memberi tahu apakah Anda harus memercayainya. Anda melihat sebuah unggahan, harga, atau klaim, tetapi tidak melihat siapa yang sebenarnya berdiri di belakangnya, apa dasarnya, atau siapa yang sudah membantahnya. Web epistemik memperbaiki itu dari akarnya: setiap klaim bergerak dengan tanda tangan, sehingga Anda bisa melihat siapa yang mengatakannya, apa landasannya, dan bagaimana orang lain telah menyetujui, mengoreksi, atau menggantinya.",
+    "eyebrow": "Jaringan Epistemik",
+    "headline": "Apa itu jaringan epistemik?",
+    "intro": "Web saat ini hebat dalam menunjukkan banyak hal kepada Anda, tetapi buruk dalam memberi tahu apakah Anda harus memercayainya. Anda melihat sebuah unggahan, harga, atau klaim, tetapi tidak melihat siapa yang sebenarnya berdiri di belakangnya, apa dasarnya, atau siapa yang sudah membantahnya. Jaringan epistemik memperbaiki itu dari akarnya: setiap klaim bergerak dengan tanda tangan, sehingga Anda bisa melihat siapa yang mengatakannya, apa landasannya, dan bagaimana orang lain telah menyetujui, mengoreksi, atau menggantinya.",
     "p2": "Bayangkan web ini lengkap dengan buktinya. Tidak ada hal penting yang anonim. Klaim apa pun bisa ditelusuri mundur ke sebuah tanda tangan dan maju ke setiap tanggapan. Anda tidak perlu lagi memilih pihak soal kepercayaan dan mulai bisa memeriksanya sendiri.",
     "biggerTitle": "Ini lebih besar daripada AI",
     "biggerBody": "Dan ini bukan hanya soal klaim, atau soal AI. Rancangan yang sama yang menandatangani sebuah klaim bisa membawa segala hal yang Anda lakukan online hari ini: panggilan video, siaran langsung, game, file, pesan, semuanya dialirkan langsung antarperangkat yang sudah dimiliki orang. Tidak ada pusat data di tengah. Tidak ada segelintir perusahaan yang menguasai saluran. Enkripsi pasca-kuantum secara default. Ini adalah pengganti internet sepenuhnya, dibangun ulang tanpa perantara, yang membuat pusat data besar dan perusahaan teknologi besar yang duduk di antara Anda dan semua orang menjadi usang.",
@@ -2589,9 +2589,9 @@
     "ctaAppStore": "Dapatkan CIRIS di App Store",
     "ctaGooglePlay": "Dapatkan CIRIS di Google Play",
     "reel": {
-      "watchLabel": "Tonton · jaring, dalam gerak",
-      "caption": "Perjalanan yang sunyi dan berulang tentang bagaimana CIRIS tumbuh dari satu identitas tersegel menjadi jaring yang menyembuhkan diri tanpa pusat. Geser garis waktu atau ketuk sebuah bab untuk berpindah antar adegan.",
-      "title": "JARING, DALAM GERAK",
+      "watchLabel": "Tonton · mesh, dalam gerak",
+      "caption": "Sebuah tur sunyi yang berulang tentang bagaimana CIRIS tumbuh dari satu identitas tersegel menjadi jaringan mesh tanpa pusat yang memperbaiki diri. Geser garis waktu atau ketuk sebuah bab untuk berpindah antar adegan.",
+      "title": "MESH, DALAM GERAK",
       "scenes": [
         {
           "label": "BINTANG YANG KAMI GANTIKAN",

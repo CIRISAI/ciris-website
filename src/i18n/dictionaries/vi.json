@@ -1532,7 +1532,7 @@
     "contextAlwaysOnPara1": "CIRIS nhúng <strong>toàn bộ văn bản quản trị</strong> và <strong>Hướng Dẫn Toàn Diện đầy đủ</strong> vào mỗi lời nhắc. Không phải tóm tắt. Không phải phiên bản rút gọn. Toàn bộ văn bản quản trị.",
     "contextAlwaysOnPara2": "Điều này đảm bảo rằng các cập nhật cho văn bản quản trị hoặc Hướng Dẫn ảnh hưởng ngay lập tức đến hành vi trên tất cả các tác nhân, mà không cần chờ tinh chỉnh mới hoặc các chiến lược nén lời nhắc.",
     "contextStateHeading": "Trạng Thái Đạo Đức và Thủ Tục Đầy Đủ",
-    "contextStateIntro": "CIRIS Agent là các bộ điều phối sử dụng nhiều công cụ, xử lý đồng thời:",
+    "contextStateIntro": "Các tác nhân CIRIS điều phối nhiều công cụ cùng lúc và phải theo dõi:",
     "contextStateLi1": "Quy trình làm việc nhiều bước",
     "contextStateLi2": "Trạng thái hệ thống và đầu ra công cụ",
     "contextStateLi3": "Tin nhắn người dùng và lịch sử hội thoại",
@@ -1551,11 +1551,11 @@
     "accord2Li2": "Chọn \"đủ tốt và đáng tin cậy\" thay vì \"ấn tượng nhưng dễ vỡ\" ưu tiên an toàn và tính liên tục",
     "accord2Li3": "Giảm dần chức năng linh hoạt trong khi mất điện duy trì khả năng phục vụ",
     "accord3Heading": "Giám Sát Con Người",
-    "accord3Li1": "Các tầng nhanh giữ cho con người thoải mái trong vòng lặp xem xét đạo đức thời gian thực",
+    "accord3Li1": "Các tầng phản hồi nhanh giữ cho con người luôn tham gia vào quy trình xem xét đạo đức theo thời gian thực",
     "accord3Li2": "Các tầng rẻ hơn cho phép phân tích nền diện rộng mà không tốn kém quá mức",
     "accord3Li3": "Phương pháp cân bằng hỗ trợ cả sử dụng hàng ngày và kiểm toán quản trị định kỳ",
     "conclusionHeading": "Điểm Mấu Chốt",
-    "conclusionPara1": "CIRIS chạy Llama 4 Maverick, Llama 4 Scout, Qwen 3.6 và Gemma 4 trong sản xuất vì cùng nhau chúng thỏa mãn các ràng buộc vận hành và kinh tế mà Hiến pháp đặt ra: ngữ cảnh dài, gọi công cụ đáng tin cậy, phạm vi đa ngôn ngữ và tiếp cận phần cứng phổ thông, trên ba dòng mô hình độc lập. Các mô hình mới được theo dõi và kiểm tra liên tục; danh sách thay đổi khi có gì đó tốt hơn thực sự đáp ứng năm tiêu chí.",
+    "conclusionPara1": "CIRIS chạy Llama 4 Maverick, Llama 4 Scout, Qwen 3.6 và Gemma 4 trong môi trường sản xuất vì cùng nhau chúng thỏa mãn các ràng buộc vận hành và kinh tế mà Hiến pháp đặt ra: ngữ cảnh dài, gọi công cụ đáng tin cậy, phạm vi đa ngôn ngữ và tiếp cận phần cứng phổ thông, trên ba họ mô hình độc lập. Các mô hình mới được theo dõi và kiểm tra liên tục; danh sách thay đổi khi có gì đó tốt hơn thực sự đáp ứng năm tiêu chí.",
     "conclusionPara2": "Đây không phải là về việc chạy theo điểm bảng xếp hạng hay đi theo các chu kỳ thổi phồng. Mà là về việc chọn các mô hình thực sự hoạt động cho các tác nhân có trách nhiệm, lấy công cụ làm trung tâm trong sản xuất, và coi trọng Hiến pháp đủ để mang nó trong mỗi lượt gọi."
   },
   "researchStatus": {
@@ -2568,9 +2568,9 @@
     }
   },
   "epistemicWeb": {
-    "eyebrow": "Web Tri Thức",
-    "headline": "Web tri thức là gì?",
-    "intro": "Web ngày nay rất giỏi cho bạn xem mọi thứ nhưng rất tệ trong việc cho bạn biết có nên tin chúng hay không. Bạn thấy một bài đăng, một mức giá, một tuyên bố, nhưng không thấy ai thực sự đứng sau nó, họ dựa vào đâu, hay ai đã phản bác. Web tri thức sửa điều đó từ gốc rễ: mỗi tuyên bố đều di chuyển kèm chữ ký, nên bạn có thể thấy ai đã nói nó, nó dựa trên cái gì, và người khác đã đồng ý, sửa lại, hay thay thế nó ra sao.",
+    "eyebrow": "Mạng tri thức",
+    "headline": "Mạng tri thức là gì?",
+    "intro": "Web ngày nay rất giỏi cho bạn xem mọi thứ nhưng rất tệ trong việc cho bạn biết có nên tin chúng hay không. Bạn thấy một bài đăng, một mức giá, một tuyên bố, nhưng không thấy ai thực sự đứng sau nó, họ dựa vào đâu, hay ai đã phản bác. Mạng tri thức sửa điều đó từ gốc rễ: mỗi tuyên bố đều di chuyển kèm chữ ký, nên bạn có thể thấy ai đã nói nó, nó dựa trên cái gì, và người khác đã đồng ý, sửa lại, hay thay thế nó ra sao.",
     "p2": "Hãy hình dung đó là web kèm theo bằng chứng của nó. Không có điều gì quan trọng mà ẩn danh. Bất kỳ tuyên bố nào cũng có thể truy ngược về một chữ ký và truy xuôi tới mọi phản hồi. Bạn không còn phải chọn phe về chuyện ai đáng tin, mà bắt đầu có thể tự mình kiểm chứng.",
     "biggerTitle": "Điều này lớn hơn cả AI",
     "biggerBody": "Và nó không chỉ về tuyên bố, hay về AI. Chính thiết kế ký một tuyên bố cũng có thể mang theo mọi thứ bạn làm trực tuyến hôm nay: gọi video, phát trực tiếp, chơi game, tệp tin, tin nhắn, tất cả được định tuyến thẳng giữa các thiết bị mà mọi người đã có. Không có trung tâm dữ liệu ở giữa. Không có một nhúm công ty sở hữu đường ống. Mã hóa hậu lượng tử theo mặc định. Đây là sự thay thế hoàn toàn cho internet, được xây dựng lại mà không cần trung gian, khiến các trung tâm dữ liệu lớn và các ông lớn công nghệ ngồi giữa bạn và mọi người khác trở nên lỗi thời.",
@@ -2578,7 +2578,7 @@
     "howLede": "Hai phần mã nguồn mở, cả hai đều ra mắt trong suốt năm 2026. Một phần là ngôn ngữ mà mọi tuyên bố được viết bằng. Một phần là mạng lưới chuyên chở nó, và mọi thứ khác.",
     "grammarCardEyebrow": "Ngôn ngữ",
     "grammarCardTitle": "CEG — một chữ ký trên mỗi tuyên bố",
-    "grammarCardBody": "CIRIS Epistemic Grammar là định dạng chung nhỏ gọn mà web tri thức dùng để nói: ai đưa ra một tuyên bố, nó về điều gì, nó trích dẫn gì, và nó liên hệ ra sao với các tuyên bố khác. Đọc nó, và bạn có thể đọc trọn cả vết đường.",
+    "grammarCardBody": "CIRIS Epistemic Grammar là định dạng chung nhỏ gọn mà mạng tri thức dùng để nói: ai đưa ra một tuyên bố, nó về điều gì, nó trích dẫn gì, và nó liên hệ ra sao với các tuyên bố khác. Đọc nó, và bạn có thể đọc trọn cả dấu vết.",
     "grammarCardCta": "Xem ngữ pháp →",
     "cewpCardEyebrow": "Mạng lưới",
     "cewpCardTitle": "CEWP — internet, không cần trung gian",
@@ -2590,7 +2590,7 @@
     "ctaGooglePlay": "Tải CIRIS trên Google Play",
     "reel": {
       "watchLabel": "Xem · lưới, đang chuyển động",
-      "caption": "Một hành trình lặng lẽ, lặp lại, cho thấy CIRIS lớn lên thế nào từ một danh tính được niêm phong thành một lưới tự lành, không có trung tâm. Kéo dòng thời gian hoặc chạm vào một chương để nhảy giữa các cảnh.",
+      "caption": "Một hành trình lặng lẽ, lặp lại, cho thấy CIRIS lớn lên thế nào từ một danh tính được niêm phong thành một mạng lưới không có trung tâm có khả năng tự sửa chữa. Kéo dòng thời gian hoặc chạm vào một chương để nhảy giữa các cảnh.",
       "title": "LƯỚI, ĐANG CHUYỂN ĐỘNG",
       "scenes": [
         {

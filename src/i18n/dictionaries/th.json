@@ -1532,7 +1532,7 @@
     "contextAlwaysOnPara1": "CIRIS ฝัง <strong>ข้อความกำกับดูแลฉบับสมบูรณ์</strong>และ<strong>Comprehensive Guide ที่ครบถ้วน</strong>ลงในทุก prompt ไม่ใช่บทสรุป ไม่ใช่เวอร์ชันย่อ แต่เป็นข้อความกำกับดูแลทั้งหมด",
     "contextAlwaysOnPara2": "สิ่งนี้ช่วยให้การอัปเดตข้อความกำกับดูแลหรือ Guide ส่งผลต่อพฤติกรรมของเอเจนต์ทั้งหมดทันที โดยไม่ต้องรอการ fine-tune ใหม่หรือกลยุทธ์การบีบอัด prompt",
     "contextStateHeading": "สถานะทางจริยธรรมและขั้นตอนการทำงานเต็มรูปแบบ",
-    "contextStateIntro": "CIRIS Agents เป็น orchestrator ที่ใช้ tool มากมาย จัดการ:",
+    "contextStateIntro": "เอเจนต์ CIRIS ประสานงานเครื่องมือหลายตัวพร้อมกัน และต้องคอยติดตาม:",
     "contextStateLi1": "ขั้นตอนการทำงานหลายขั้นตอน",
     "contextStateLi2": "สถานะระบบและผลลัพธ์ tool",
     "contextStateLi3": "ข้อความผู้ใช้และประวัติการสนทนา",

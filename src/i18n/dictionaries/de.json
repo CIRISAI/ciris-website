@@ -1532,7 +1532,7 @@
     "contextAlwaysOnPara1": "CIRIS bettet den <strong>vollständigen Governance-Text</strong> und den <strong>kompletten Comprehensive Guide</strong> in jeden Prompt ein. Keine Zusammenfassung. Keine destillierte Version. Den gesamten Governance-Text.",
     "contextAlwaysOnPara2": "So wirken Änderungen am Governance-Text oder Guide sofort auf das Verhalten aller Agenten, ohne auf neue Fine-Tunes oder Prompt-Komprimierungsstrategien warten zu müssen.",
     "contextStateHeading": "Vollständiger ethischer und verfahrenstechnischer Zustand",
-    "contextStateIntro": "CIRIS-Agenten sind tool-intensive Orchestratoren, die gleichzeitig verwalten:",
+    "contextStateIntro": "CIRIS-Agenten koordinieren viele Tools gleichzeitig und müssen den Überblick behalten über:",
     "contextStateLi1": "Mehrstufige Arbeitsabläufe",
     "contextStateLi2": "Systemzustand und Tool-Ausgaben",
     "contextStateLi3": "Nutzernachrichten und Gesprächsverlauf",
@@ -1545,13 +1545,13 @@
     "accord1Heading": "Transparenz und Überprüfbarkeit",
     "accord1Li1": "Großer Kontext hält Denk-Traces, Entscheidungen und Tool-Aufrufe für die menschliche Überprüfung sichtbar",
     "accord1Li2": "Stabiles JSON und strukturierte Ausgaben machen jeden Tool-Aufruf prüfbar",
-    "accord1Li3": "Vollständige Governance-Dokumente bei jedem Aufruf stellen sicher, dass Entscheidungen auf Prinzipien zurückgeführt werden können",
+    "accord1Li3": "Vollständige Governance-Artefakte bei jedem Aufruf stellen sicher, dass Entscheidungen auf Prinzipien zurückgeführt werden können",
     "accord2Heading": "Widerstandsfähigkeit und Governance",
     "accord2Li1": "Einsatz bei mehreren Anbietern vermeidet einzelne Ausfallpunkte in kritischer ethischer Infrastruktur",
     "accord2Li2": "Die Wahl von \"gut genug und zuverlässig\" statt \"auffällig, aber fragil\" priorisiert Sicherheit und Kontinuität",
     "accord2Li3": "Kontrollierte Degradierung bei Ausfällen erhält die Dienstverfügbarkeit",
     "accord3Heading": "Menschliche Aufsicht",
-    "accord3Li1": "Schnelle Stufen halten Menschen komfortabel im Prozess für die Echtzeit-Ethikprüfung",
+    "accord3Li1": "Schnelle Antwortstufen halten Menschen für die Echtzeit-Ethikprüfung eingebunden",
     "accord3Li2": "Günstigere Stufen ermöglichen umfangreiche Hintergrundanalysen ohne prohibitive Kosten",
     "accord3Li3": "Ausgewogener Ansatz unterstützt sowohl den täglichen Betrieb als auch regelmäßige Governance-Prüfungen",
     "conclusionHeading": "Das Wesentliche",
@@ -2568,7 +2568,7 @@
     }
   },
   "epistemicWeb": {
-    "eyebrow": "Das Epistemische Web",
+    "eyebrow": "Das epistemische Web",
     "headline": "Was ist ein epistemisches Web?",
     "intro": "Das heutige Web ist großartig darin, dir Dinge zu zeigen, und schrecklich darin, dir zu sagen, ob du sie glauben sollst. Du siehst einen Beitrag, einen Preis, eine Behauptung, aber nicht, wer wirklich dahintersteht, worauf sie sich stützt oder wer ihr widersprochen hat. Ein epistemisches Web behebt das an der Wurzel: Jede Behauptung reist signiert, sodass du sehen kannst, wer sie gesagt hat, worauf sie beruht und wie andere ihr zugestimmt, sie korrigiert oder ersetzt haben.",
     "p2": "Stell es dir als das Web mit seinen Belegen vor. Nichts Tragendes ist anonym. Jede Behauptung lässt sich zurück bis zu einer Signatur und vorwärts bis zu jeder Antwort verfolgen. Du musst dich beim Vertrauen nicht mehr auf eine Seite schlagen, sondern kannst selbst nachprüfen.",
@@ -2590,7 +2590,7 @@
     "ctaGooglePlay": "CIRIS bei Google Play holen",
     "reel": {
       "watchLabel": "Ansehen · das Netz in Bewegung",
-      "caption": "Ein stiller Rundgang in Schleife zeigt, wie CIRIS aus einer einzigen versiegelten Identität zu einem selbstheilenden Netz ohne Mitte heranwächst. Schieben Sie die Zeitleiste oder tippen Sie auf ein Kapitel, um zwischen den Szenen zu springen.",
+      "caption": "Ein stiller Rundgang in Schleife zeigt, wie CIRIS aus einer einzigen versiegelten Identität zu einem selbstheilenden Netz ohne Mitte heranwächst. Schiebe die Zeitleiste oder tippe auf ein Kapitel, um zwischen den Szenen zu springen.",
       "title": "DAS NETZ IN BEWEGUNG",
       "scenes": [
         {

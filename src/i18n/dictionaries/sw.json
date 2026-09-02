@@ -1498,7 +1498,7 @@
     "criteriaHeadline": "Vigezo Vyetu vya Modeli",
     "criteriaSubheadline": "Mahitaji matano yasiyoweza kupuuzwa kwa CIRIS Agent",
     "criteria1Heading": "1. Matokeo ya Muundo na Matumizi ya Zana",
-    "criteria1Body": "Lazima iunge mkono natively uito wa vitendaji na kurudisha JSON halali katika uito wa zana 12 hadi 70 kwa kila mwingiliano. CIRIS ni mpangiliaji. Tunahitaji semantiki imara za zana, sio mazungumzo ya maneno mengi.",
+    "criteria1Body": "Lazima iunge mkono kwa asili uito wa vitendaji na kurudisha JSON halali katika mfululizo wote wa uito wa zana 12 hadi 70 kwa kila mwingiliano. CIRIS ni mratibu. Tunahitaji maana thabiti ya matumizi ya zana, sio mazungumzo ya maneno mengi.",
     "criteria2Heading": "2. Dirisha la Muktadha: Kiwango cha Chini cha 128K",
     "criteria2Body": "CIRIS inajumuisha maandiko kamili ya utawala na Mwongozo katika kila ujumbe. 128K ndiyo kiwango cha chini kabisa; 256K+ inapendelewa sana kwa mazungumzo marefu, matokeo ya zana, na njia za ukaguzi.",
     "criteria3Heading": "3. Ufanisi wa Gharama",
@@ -1542,21 +1542,21 @@
     "contextBottomLineBody": "CIRIS haipunguzi maadili au taratibu zake ili kulingana na modeli. Badala yake, CIRIS huchagua modeli ambazo ni kubwa ya kutosha kubeba mfumo wote wa kimaadili na wa uendeshaji katika kila uito. Modeli zenye madirisha madogo ya muktadha (hata kama ni za bei nafuu au maarufu zaidi) zinaachwa nje ya matumizi ya uzalishaji.",
     "accordHeadline": "Jinsi Hii Inavyounga Mkono Katiba ya CIRIS",
     "accordSubheadline": "Uchaguzi wa modeli kama miundombinu ya kimaadili",
-    "accord1Heading": "Uwazi na Ukaguliaji",
+    "accord1Heading": "Uwazi na Ukaguzi",
     "accord1Li1": "Muktadha mrefu huweka njia za hoja, maamuzi, na uito wa zana wazi kwa ukaguzi wa binadamu",
     "accord1Li2": "JSON imara na matokeo ya muundo hufanya kila uito wa zana uweze kukaguliwa",
-    "accord1Li3": "Vifaa kamili vya utawala katika kila uito huhakikisha maamuzi yanaweza kufuatiliwa hadi kanuni",
+    "accord1Li3": "Nyaraka kamili za utawala katika kila uito huhakikisha maamuzi yanaweza kufuatiliwa hadi kanuni",
     "accord2Heading": "Uthabiti na Utawala",
-    "accord2Li1": "Upelekaji wa watoa huduma wengi huepuka pointi moja za kushindwa katika miundombinu muhimu ya kimaadili",
+    "accord2Li1": "Upelekaji wa watoa huduma wengi huepuka sehemu za kushindwa za kipekee katika miundombinu muhimu ya kimaadili",
     "accord2Li2": "Kuchagua \"ya kutosha na inayotegemewa\" badala ya \"inayovutia lakini dhaifu\" kunatanguliza usalama na uendelevu",
-    "accord2Li3": "Kushuka kwa heshima wakati wa ukatikaji kunahifadhi upatikanaji wa huduma",
+    "accord2Li3": "Kushuka kwa taratibu kwa utendaji wakati wa ukatikaji kunahifadhi upatikanaji wa huduma",
     "accord3Heading": "Usimamizi wa Binadamu",
     "accord3Li1": "Viwango vya haraka huweka wanadamu vizuri katika mzunguko kwa ukaguzi wa kimaadili wa wakati halisi",
     "accord3Li2": "Viwango vya bei nafuu vinasaidia uchambuzi mpana wa nyuma bila gharama kubwa",
     "accord3Li3": "Njia yenye usawa inasaidia matumizi ya kila siku na ukaguzi wa utawala wa mara kwa mara",
     "conclusionHeading": "Hitimisho",
     "conclusionPara1": "CIRIS inakimbia Llama 4 Maverick, Llama 4 Scout, Qwen 3.6, na Gemma 4 katika uzalishaji kwa sababu pamoja zinakidhi vizuizi vya uendeshaji na kiuchumi ambavyo Katiba inaweka: muktadha mrefu, uito imara wa zana, ufunikaji wa lugha nyingi, na ufikiaji wa vifaa vya kawaida, katika familia tatu huru za modeli. Modeli mpya zinafuatiliwa na kupimwa kila wakati; safu inabadilika modeli bora inapokidhi kweli vigezo vitano.",
-    "conclusionPara2": "Hii si kuhusu kufuata alama za vipimo au mzunguko wa msisimko. Ni kuhusu kuchagua modeli ambazo zinafanya kazi kweli kweli kwa mawakala yanayoweza kuhesabiwa, yenye zana nyingi katika uzalishaji, na ambayo yanachukulia Katiba kwa uzito wa kutosha kuibeba katika kila uito mmoja mmoja."
+    "conclusionPara2": "Hii si kuhusu kufuata alama za vipimo au mzunguko wa msisimko. Ni kuhusu kuchagua modeli ambazo zinafanya kazi kweli kweli kwa mawakala wanaowajibika, wanaozingatia zana katika uzalishaji, na ambazo zinachukulia Katiba kwa uzito wa kutosha kuibeba katika kila uito mmoja mmoja."
   },
   "researchStatus": {
     "heroLabel": "Hali ya utafiti",
@@ -1977,7 +1977,7 @@
     "doTitle3": "Amua mwenyewe",
     "doBody3": "Imani si kitu ambacho mfumo hukukabidhi. Wewe huchagua sauti unazozipima, kwa uzito gani, na juu ya nini. Muundo ni ule ule kwa kila mtu; uamuzi ni wako.",
     "deepTitle": "Unataka teknolojia ya kina?",
-    "deepBody": "Kisomaji kamili cha maelezo, kinachoonyeshwa moja kwa moja kutoka kwa rejista: primitivi za 1+4, familia na sehemu za bahasha, sera za muundo, nafasi ya majina huria, mfululizo wa matoleo, na kichunguzi shirikishi cha uthibitisho.",
+    "deepBody": "Kisomaji kamili cha maelezo, kinachoonyeshwa moja kwa moja kutoka kwa rejista: vipengele msingi vya 1+4, familia na sehemu za bahasha, sera za muundo, nafasi ya majina huria, mfululizo wa matoleo, na kichunguzi shirikishi cha ushuhuda.",
     "ctaSpecReader": "Fungua kisomaji cha maelezo →",
     "ctaExplore": "Jenga mnyororo kwenye kivinjari →"
   },
@@ -2589,9 +2589,9 @@
     "ctaAppStore": "Pata CIRIS kwenye App Store",
     "ctaGooglePlay": "Pata CIRIS kwenye Google Play",
     "reel": {
-      "watchLabel": "Tazama · kitambaa, kikisogea",
-      "caption": "Mwendo wa kimya, unaorudi mara kwa mara, unaoonyesha jinsi CIRIS inavyokua kutoka kwa nakala moja iliyofungwa hadi kwenye kitambaa kinachojipona bila kituo. Sogeza mstari wa wakati au gusa sura ili kuruka kati ya matukio.",
-      "title": "KITAMBAA, KIKISOGEA",
+      "watchLabel": "Tazama · mtandao wa mesh, ukisogea",
+      "caption": "Mwendo wa kimya, unaorudi mara kwa mara, unaoonyesha jinsi CIRIS inavyokua kutoka kwa nakala moja iliyofungwa hadi kwenye mtandao wa mesh usio na kitovu unaojirekebisha wenyewe. Sogeza mstari wa wakati au gusa sura ili kuruka kati ya matukio.",
+      "title": "MTANDAO WA MESH, UKISOGEA",
       "scenes": [
         {
           "label": "NYOTA TUNAYOIBADILISHA",
