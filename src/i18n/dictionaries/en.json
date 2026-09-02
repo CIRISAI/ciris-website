@@ -1356,7 +1356,7 @@
     "h1": "Where crowdsourced safety can drift.",
     "heroPara": "A crowdsourced safety system can drift into something else if we're not careful. The same machinery that catches real failures can become the machinery that enforces preferences. We see that risk in the architecture we're building. Naming it is the first part of resisting it.",
     "failureModeHeading": "The failure mode we're worried about",
-    "failureModeP1": "If humans crowdsource per-case verdicts (\"did this specific response break the rule?\"), bias rides into every interpretation. The same behavior gets called differently depending on who's voting today. Even with good intentions, the loop slides toward enforcing the majority's preferences instead of catching real harm.",
+    "failureModeP1": "If humans crowdsource per-case verdicts (\"did this specific response break the rule?\"), bias enters every interpretation. The same behavior gets called differently depending on who's voting today. Even with good intentions, the feedback loop drifts toward enforcing the majority's preferences instead of catching real harm.",
     "failureModeP2": "That's the failure mode. The discipline we're committing to is meant to make that drift visible and expensive when it happens.",
     "maximHeading": "Rules come from the crowd. Verdicts come from machines.",
     "maximParaHtml": "People propose and vote on rules: public, dated, signed, reversible. A deterministic check applies those rules to specific cases. Same response + same rule → same verdict, every time. The argument moves <em>upstream</em>, to whether the rule should exist, instead of downstream, to whether a specific case counts today.",
@@ -1365,7 +1365,7 @@
     "practiceP2Html": "If a verdict turns out to be wrong, the appeal goes through <strong>Reconsideration</strong> by a fresh review group (the original adjudicators recused), not back to the same crowd that produced the verdict. That separation is what holds the whole system up.",
     "stillWrongHeading": "Where this can still go wrong",
     "stillWrongParaHtml": "None of this is automatic. The discipline holds only if rule language stays <em>operational</em>, about things a machine can check, not about feelings. The moment a rule slides from &quot;uses the wrong word for therapy&quot; toward &quot;feels disrespectful,&quot; human interpretation re-enters by the back door and the drift starts. The architecture names every mechanism we can think of that resists this; the work of actually holding the line is operational, not architectural.",
-    "closingPara": "The crowdsourcing primitives, the appeal paths, and the machine-applicable rule format live in the CIRISNodeCore spec. The 29-language mental-health batteries are the first cell where the loop runs.",
+    "closingPara": "The crowdsourcing primitives, the appeal paths, and the machine-applicable rule format are defined in the CIRISNodeCore specification. The 29-language mental-health test batteries are the first place where the loop runs.",
     "ctaSafety": "Safety features →",
     "ctaFederation": "Federation",
     "ctaFsd": "Read the FSD"
@@ -2328,7 +2328,7 @@
       },
       "vulnerable": {
         "short": "Dignity",
-        "name": "Protecting those who can’t consent",
+        "name": "Protection for those who cannot consent",
         "tag": "Block 06 · Dignity",
         "promise": "The system defaults to liberty and dignity for those who cannot speak for themselves.",
         "mechanisms": [
@@ -2376,7 +2376,7 @@
       },
       "legal": {
         "title": "Legally aligned",
-        "body": "GDPR, CCPA, and the EU AI Act map onto the protocol through the DP-Map, with SI-score liability and sector overlays."
+        "body": "GDPR, CCPA, and the EU AI Act are mapped onto the protocol through the DP-Map, with liability tied to the SI score and extra rules layered on for each sector."
       }
     }
   },
@@ -3061,7 +3061,7 @@
     "s2label": "Independent verification",
     "s2h2": "One command. No hardware, no network, no trust in us.",
     "s2p1": "Our validation harness re-runs CIRISVerify's exact production admission-gate verifier over the six committed key attestations, against a pinned copy of Yubico's own public attestation root. Clone the CIRISVerify repository and run:",
-    "cmdCaption": "Confirm the pinned root is genuine by pulling it straight from Yubico:",
+    "cmdCaption": "Confirm that the pinned root certificate is genuine by fetching it directly from Yubico:",
     "provesH": "What this proves",
     "provesP": "All six quorum keys chain to Yubico's real attestation root, so their Ed25519 signing halves were generated inside genuine YubiKey 5 FIPS hardware, the series validated to FIPS 140-3: non-extractable, touch-required, unforgeable. The attestation certificates themselves record the FIPS series marker, firmware 5.7.4, and the touch-always policy, so the hardware class is proven by the chain, not claimed by us.",
     "notProvesH": "What it does not prove",
