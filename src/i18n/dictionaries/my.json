@@ -3128,12 +3128,12 @@
   "euAiAct": {
     "kicker": "EU AI Act ကို article အလိုက်",
     "title": "CIRIS သည် EU AI Act နှင့် မည်သို့ ကိုက်ညီသနည်း။",
-    "lede": "EU AI Act ရှိ high-risk တာဝန်တစ်ခုစီအတွက် ၎င်းနှင့် ကိုက်ညီသော ထုတ်ပြန်ပြီးသား CIRIS mechanism နှင့် ၎င်းသည် Constitution နှင့် code တွင် မည်သည့်နေရာ၌ ရှိသည်ကို ဖော်ပြထားသည်။ High-risk တာဝန်များသည် 2026 ခုနှစ် သြဂုတ်လမှစတင်၍ သက်ရောက်မည်ဖြစ်သောကြောင့် ဤစာမျက်နှာသည် ဤအတွက် တာဝန်ယူဖြေကြားရမည့်သူများအတွက် ရေးသားထားသည်။",
+    "lede": "EU AI Act ရှိ high-risk တာဝန်တစ်ခုစီအတွက် ၎င်းနှင့် ကိုက်ညီသော ထုတ်ပြန်ပြီးသား CIRIS mechanism နှင့် ၎င်းသည် ဖွဲ့စည်းပုံ နှင့် code တွင် မည်သည့်နေရာ၌ ရှိသည်ကို ဖော်ပြထားသည်။ High-risk တာဝန်များသည် 2026 ခုနှစ် သြဂုတ်လမှစတင်၍ သက်ရောက်မည်ဖြစ်သောကြောင့် ဤစာမျက်နှာသည် ဤအတွက် တာဝန်ယူဖြေကြားရမည့်သူများအတွက် ရေးသားထားသည်။",
     "bannerA": "ဤစာမျက်နှာကို ",
     "bannerStrong": "ဥပဒေအကြံဉာဏ် သို့မဟုတ် လက်မှတ်ရ conformity assessment မဟုတ်ဘဲ အချက်အလက်ပေးသော engineering correspondence တစ်ခု",
     "bannerB": " အဖြစ် ဖတ်ရှုပါ။ CIRIS Constitution ကိုယ်တိုင်ကပင် ဤ article mapping များကို \"pending legal review\" ဟု အမှတ်အသားပြုထားသည်။ အောက်ပါ mechanism တိုင်းကို ၎င်းအား ငြင်းဆန်ရန် တာဝန်ရှိသော skeptic တစ်ဦးက code တွင် တိုက်ရိုက် အတည်ပြုခဲ့သည်။ သို့သော် ၎င်းသည် ဥပဒေနှင့် ကိုက်ညီမကိုက်ညီ ဆိုသည့် မေးခွန်းမှာ ဤစာမျက်နှာအတွက် မဟုတ်ဘဲ သင့် ရှေ့နေအတွက် ဖြစ်သည်။",
     "colArticle": "Article",
-    "colRequires": "လိုအပ်ချက်",
+    "colRequires": "ဘာလိုအပ်သည်",
     "colHow": "CIRIS က ၎င်းကို မည်သို့ဖြေရှင်းသနည်း",
     "rows": [
       {
@@ -3177,17 +3177,17 @@
         "how": "Constitution ၏ continuous-compliance loop သည် telemetry stream များကို drift detection သို့၊ ထို့နောက် review သို့ ဆက်လက် run လုပ်ပေးသည်။ တစ်ကြိမ်တည်း audit မဟုတ်ဘဲ CIRISLens observability မှတစ်ဆင့် ဖော်ထုတ်ပေးသော ဆက်တိုက် monitoring loop တစ်ခု ဖြစ်သည်။"
       }
     ],
-    "footnote": "2026 ခုနှစ် ဇူလိုင်လအထိ canonical CIRIS Constitution နှင့် နှိုင်းယှဉ် mapping ပြုလုပ်ထားသည်။ pending legal review ဖြစ်သော အချက်အလက်ပေးသော correspondence ဖြစ်သည်။ mapping တစ်ခုခု မှားယွင်းနေပါက ကျွန်ုပ်တို့ကို အသိပေးပါက ပြင်ဆင်ပေးပါမည်။",
+    "footnote": "2026 ခုနှစ် ဇူလိုင်လအထိ canonical CIRIS ဖွဲ့စည်းပုံ နှင့် နှိုင်းယှဉ် mapping ပြုလုပ်ထားသည်။ pending legal review ဖြစ်သော အချက်အလက်ပေးသော correspondence ဖြစ်သည်။ mapping တစ်ခုခု မှားယွင်းနေပါက ကျွန်ုပ်တို့ကို အသိပေးပါက ပြင်ဆင်ပေးပါမည်။",
     "sourcesLabel": "ရင်းမြစ်များ",
     "ctaPara": "အလားတူ mechanism များကို security taxonomy နှင့် accountability landscape တစ်ခုလုံးနှင့် mapping ပြုလုပ်ထားသည်။",
     "btnOwasp": "OWASP Agentic mapping",
     "btnLandscape": "အပြည့်အစုံ landscape",
-    "btnConstitution": "Constitution"
+    "btnConstitution": "ဖွဲ့စည်းပုံ"
   },
   "msCompare": {
     "kicker": "နှိုင်းယှဉ်ချက်၊ တည်ငြိမ်သော criteria",
     "title": "CIRIS နှင့် Microsoft Agent Governance Toolkit",
-    "lede": "AI agent များကို ထိန်းချုပ်ရန် လေးနက်သော open-source ကြိုးပမ်းမှု နှစ်ခုကို public ရင်းမြစ်များမှ criteria ရှစ်ခု တူညီစွာ ဖြင့် score ပေးထားပြီး cell တိုင်း၌ ကိုးကားချက် ပါဝင်သည်။ Microsoft အားကောင်းသော နေရာများတွင် ကျွန်ုပ်တို့ ထိုအတိုင်း ဖော်ပြသည်။ အရေးကြီးသော ကွာခြားချက်များမှာ ထုတ်ပြန်ပြီးဖြစ်ခြင်း၊ သင် ချေဖျက်၍ မရသော enforced constitution နှင့် post-quantum လက်မှတ်ရေးထိုးထားသော မှတ်တမ်းများ ဖြစ်သည်။",
+    "lede": "AI agent များကို ထိန်းချုပ်ရန် လေးနက်သော open-source ကြိုးပမ်းမှု နှစ်ခုကို public ရင်းမြစ်များမှ criteria ရှစ်ခု တူညီစွာ ဖြင့် score ပေးထားပြီး cell တိုင်း၌ ကိုးကားချက် ပါဝင်သည်။ Microsoft အားကောင်းသော နေရာများတွင် ကျွန်ုပ်တို့ ထိုအတိုင်း ဖော်ပြသည်။ အရေးကြီးသော ကွာခြားချက်များမှာ ထုတ်ပြန်ပြီးဖြစ်ခြင်း၊ သင် ဖြေလျှော့၍ မရသော အတည်ပြုထားသည့် ဖွဲ့စည်းပုံ နှင့် post-quantum လက်မှတ်ရေးထိုးထားသော မှတ်တမ်းများ ဖြစ်သည်။",
     "sectionLabel": "တိုက်ရိုက်နှိုင်းယှဉ်ချက်",
     "colCriterion": "Criterion",
     "colCiris": "CIRIS",

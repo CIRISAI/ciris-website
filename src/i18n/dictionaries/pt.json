@@ -3074,7 +3074,7 @@
     "colHow": "Como o CIRIS trata isso",
     "covFull": "Total",
     "covPartial": "Parcial",
-    "covRoadmap": "Planejado",
+    "covRoadmap": "Roteiro",
     "covNone": "Nenhuma",
     "rows": [
       {
@@ -3130,7 +3130,7 @@
     "title": "Como o CIRIS se alinha com a Lei de IA da UE.",
     "lede": "Para cada obrigação de alto risco na Lei de IA da UE, aqui está o mecanismo já implementado do CIRIS que corresponde a ela e onde ele reside na Constituição e no código. As obrigações de alto risco se aplicam a partir de agosto de 2026, então isto foi escrito para as pessoas que precisam responder por isso.",
     "bannerA": "Leia isto como uma ",
-    "bannerStrong": "correspondência técnica informativa, não aconselhamento jurídico nem uma avaliação de conformidade certificada",
+    "bannerStrong": "descrição técnica informativa, não aconselhamento jurídico nem uma avaliação de conformidade certificada",
     "bannerB": ". A própria Constituição CIRIS marca esses mapeamentos de artigos como “pendente de revisão jurídica”. Cada mecanismo abaixo foi verificado ao vivo no código por um cético cujo trabalho era refutá-lo, mas a questão de saber se isso satisfaz a lei cabe ao seu advogado, não a esta página.",
     "colArticle": "Artigo",
     "colRequires": "O que exige",
@@ -3179,7 +3179,7 @@
     ],
     "footnote": "Mapeado em relação à Constituição CIRIS canônica em julho de 2026. Correspondência informativa, pendente de revisão jurídica. Avise-nos se um mapeamento estiver errado e nós o corrigiremos.",
     "sourcesLabel": "Fontes",
-    "ctaPara": "Os mesmos mecanismos mapeados à taxonomia de segurança, e todo o panorama de responsabilização.",
+    "ctaPara": "Os mesmos mecanismos mapeados em relação à lista de segurança da OWASP, e a comparação completa de responsabilização.",
     "btnOwasp": "Mapeamento OWASP Agentic",
     "btnLandscape": "O panorama completo",
     "btnConstitution": "A Constituição"
@@ -3187,7 +3187,7 @@
   "msCompare": {
     "kicker": "Comparação, critérios fixos",
     "title": "CIRIS vs. o Microsoft Agent Governance Toolkit",
-    "lede": "Duas tentativas sérias de código aberto para governar agentes de IA, avaliadas nos mesmos oito critérios a partir de fontes públicas, com uma citação em cada célula. Onde a Microsoft é forte, nós o dizemos. As diferenças que importam são estar em produção, uma constituição aplicada que você não pode afrouxar, e registros assinados pós-quanticamente.",
+    "lede": "Duas tentativas sérias de código aberto para governar agentes de IA, avaliadas nos mesmos oito critérios a partir de fontes públicas, com uma citação para cada pontuação na tabela. Onde a Microsoft é forte, nós o dizemos. As diferenças que importam são estar em produção, uma Constituição aplicada que você não pode afrouxar, e registros assinados pós-quanticamente.",
     "sectionLabel": "Frente a frente",
     "colCriterion": "Critério",
     "colCiris": "CIRIS",
@@ -3211,7 +3211,7 @@
     "msTitle": "Os pontos fortes reais da Microsoft",
     "msBody": "A Agent Control Specification é um runtime de política genuinamente sem estado, determinístico e de falha fechada, com oito pontos de intervenção nomeados e um modelo de veredito de cinco vias (permitir, avisar, negar, escalar, transformar). Ela inclui identidade Ed25519 baseada em DID, um interruptor de emergência, e engenharia de código aberto sólida sob uma licença permissiva MIT, com integração profunda com Azure e Entra para empresas.",
     "cirisTitle": "Onde o CIRIS vai além",
-    "cirisBody": "Cada ação passa por um pipeline de consciência em tempo de execução antes de ser executada, não por um registro posterior. A trilha de auditoria é encadeada por hash e assinada pós-quanticamente, e reverificada de forma independente por um conjunto de conformidade separado. O interruptor de emergência é um quórum de falha segura de dois em três humanos nomeados. E a constituição é fixa e publicada, não uma política criada pelo operador que assume permitir por padrão.",
+    "cirisBody": "Cada ação passa pelas verificações de consciência em tempo de execução antes de ser executada, e não apenas por um registro gravado posteriormente. A trilha de auditoria é encadeada por hash e assinada pós-quanticamente, e reverificada de forma independente por um conjunto de conformidade separado. O interruptor de emergência é um quórum de falha segura de dois em três humanos nomeados. E a Constituição é fixa e publicada, não uma política criada pelo operador que assume permitir por padrão.",
     "ctaPara": "Esta é apenas uma linha de um panorama maior. Veja onde ambos se posicionam entre todas as abordagens de responsabilização da IA.",
     "btnLandscape": "O panorama completo",
     "btnCirisGh": "CIRIS no GitHub",

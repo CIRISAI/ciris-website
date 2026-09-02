@@ -3068,7 +3068,7 @@
     "kicker": "Taswirar tsaro na OWASP Agentic",
     "title": "Manyan Hatsari 10 na OWASP don Aikace-aikacen Agentic, an tsara su tare da CIRIS.",
     "lede": "Ga kowanne daga cikin hatsarori goma na agentic da OWASP ta ambata, ga takamaiman tsarin CIRIS da ke magance shi, matakin rufe hatsarin da gaskiya, da kuma tushen bayani da za ka iya bincika. Muna tsara dukkan tsarin, har da inda muke gazawa.",
-    "callout": "Ɗaya cikakke, tara na sashi, babu wanda aka wuce gona da iri a kai. Shafi da zai ce goma duka cikakke zai zama daidai da tallar da muke gaya maka kada ka amince da ita. Matakan rufe hatsari da ke ƙasa sun jure wa mai shakka daban wanda aikinsa shine ya rushe su, kuma inda kariya take a cikin tushen tsari amma wakilin da aka aiwatar bai gaje ta ba tukuna, muna faɗin haka a jerin.",
+    "callout": "Ɗaya cikakke, tara na sashi, babu wanda aka share shi kawai. Shafi da zai ce goma duka cikakke zai zama daidai da tallar da muke gaya maka kada ka amince da ita. Matakan rufewa da ke ƙasa sun jure wa mai shakka daban wanda aikinsa shi ne ya ƙalubalance su, kuma inda kariya take a cikin tushen tsari amma wakilin da aka tura bai gaje ta ba tukuna, muna faɗin haka a jerin.",
     "colRisk": "Hatsari",
     "colCoverage": "Rufewa",
     "colHow": "Yadda CIRIS ke magance shi",
@@ -3120,7 +3120,7 @@
     ],
     "footnote": "Manyan Hatsari 10 na OWASP don Aikace-aikacen Agentic, an buga a Disamba 2025. An tsara su tare da CIRIS tun daga Yuli 2026; ka gaya mana idan wani sel ba daidai ba ne kuma za mu gyara shi.",
     "sourcesLabel": "Majiyoyi",
-    "ctaPara": "Tsarin nan gilashin kallo ɗaya ne kawai. Duba inda CIRIS take tsaye tsakanin dukkan hanyoyin da ake bi don tantance AI, da kuma yadda za a tabbatar da maɓallin dakatarwa da kanka.",
+    "ctaPara": "Wannan tsarin rarrabuwa gilashin kallo ɗaya ne kawai. Duba inda CIRIS take tsaye tsakanin dukkan hanyoyin ɗaukar alhakin AI, da kuma yadda za a tabbatar da maɓallin dakatarwa da kanka mai zaman kansa.",
     "btnLandscape": "Cikakken hoton yanayin",
     "btnVerify": "Tabbatar da maɓallin dakatarwa",
     "btnOwasp": "Tushen OWASP"
@@ -3128,7 +3128,7 @@
   "euAiAct": {
     "kicker": "EU AI Act, mataki bisa mataki",
     "title": "Yadda CIRIS ke daidaita da EU AI Act.",
-    "lede": "Ga kowace wajibcin hatsari mai girma a cikin EU AI Act, ga tsarin CIRIS da aka aiwatar wanda ya dace da shi da kuma inda yake a cikin Kundin Tsarin Mulki da code. Wajibcin hatsari mai girma ya fara aiki daga Agusta 2026, don haka an rubuta wannan don mutanen da dole ne su ba da amsa a kai.",
+    "lede": "Ga kowace wajibcin hatsari mai girma a cikin EU AI Act, ga tsarin CIRIS da aka aiwatar wanda ya dace da shi da kuma inda yake a cikin Kundin Tsarin Mulki da code. Wajibcin hatsari mai girma ya fara aiki daga Agusta 2026, don haka an rubuta wannan don mutanen da za a ɗora musu alhakin hakan.",
     "bannerA": "Karanta wannan a matsayin ",
     "bannerStrong": "wasiƙar injiniya mai ba da bayani, ba shawarar shari'a ko tantancewar daidaituwa da aka tabbatar ba",
     "bannerB": ". Kundin Tsarin Mulki na CIRIS da kansa yana yiwa waɗannan tsare-tsaren mataki alama “ana jiran bitar shari'a.” An tabbatar da kowane tsari da ke ƙasa a cikin code na gaske ta mai shakka wanda aikinsa shine ya karyata shi, amma tambayar ko hakan ya gamsar da doka wani abu ne da lauyanka zai amsa, ba wannan shafi ba.",
@@ -3177,9 +3177,9 @@
         "how": "Zagayowar bin ƙa'ida mai ci gaba ta Kundin Tsarin Mulki tana gudanar da bayanan telemetry zuwa gano karkacewa zuwa bita, wata zagayowar sa ido ta dindindin maimakon bincike na sau ɗaya, wanda ake gani ta hanyar sa idon CIRISLens."
       }
     ],
-    "footnote": "An tsara shi bisa Kundin Tsarin Mulki na CIRIS na hukuma tun daga Yuli 2026. Wasiƙar ba da bayani ce, ana jiran bitar shari'a. Ka gaya mana idan wani tsari ba daidai ba ne kuma za mu gyara shi.",
+    "footnote": "An tsara shi bisa ingantaccen Tsarin Mulki na CIRIS tun daga Yuli 2026. Bayani ne kawai na ba da haske, ana jiran bitar shari'a. Ka gaya mana idan wani tsari ba daidai ba ne kuma za mu gyara shi.",
     "sourcesLabel": "Majiyoyi",
-    "ctaPara": "Irin waɗannan tsare-tsare da aka tsara tare da tsarin tsaro, da kuma cikakken hoton yanayin tantancewa.",
+    "ctaPara": "Irin waɗannan hanyoyi ne da aka daidaita da jerin tsaro na OWASP, tare da cikakken kwatancen ɗaukar alhaki.",
     "btnOwasp": "Taswirar OWASP Agentic",
     "btnLandscape": "Cikakken hoton yanayin",
     "btnConstitution": "Kundin Tsarin Mulki"
@@ -3187,7 +3187,7 @@
   "msCompare": {
     "kicker": "Kwatance, ma'auni na tabbatacce",
     "title": "CIRIS a kan Microsoft Agent Governance Toolkit",
-    "lede": "Yunƙurin gaske guda biyu na open-source don shugabanci na wakilan AI, an kimanta su bisa ma'auni takwas iri ɗaya daga majiyoyi na jama'a, tare da tushen bayani a kan kowane sel. Inda Microsoft take da ƙarfi, muna faɗin haka. Bambance-bambancen da suka fi muhimmanci su ne aiwatarwa, kundin tsarin mulki mai tilastawa da ba za a iya sassauta shi ba, da kuma bayanan da aka sa hannu bayan-quantum.",
+    "lede": "Yunƙurin gaske guda biyu na open-source don sarrafa wakilan AI, an kimanta su bisa ma'auni takwas iri ɗaya daga majiyoyi na jama'a, tare da ambaton tushe a kan kowane maki a teburin. Inda Microsoft take da ƙarfi, muna faɗin haka. Bambance-bambancen da suka fi muhimmanci su ne fitar da samfuri, Tsarin Mulki mai tilastawa da ba za a iya sassauta shi ba, da kuma bayanan da aka sanya wa hannu ta post-quantum.",
     "sectionLabel": "Kai da kai",
     "colCriterion": "Ma'auni",
     "colCiris": "CIRIS",
@@ -3209,10 +3209,10 @@
     "sourcesLabel": "Majiyoyi",
     "concLabel": "Abin da kowanne ke yi da kyau",
     "msTitle": "Ƙarfin Microsoft na gaske",
-    "msBody": "Ƙayyadaddun Sarrafa Wakili tsari ne na gaske na runtime na ƙa'ida wanda ba shi da yanayi, mai tabbaci, kuma yana kasawa cikin rufewa, tare da wurare takwas na shiga tsakani da aka ambata da suna da kuma tsarin hukunci mai hanyoyi biyar (bari, gargaɗi, hana, ɗaga, canza). Yana tare da shaidar Ed25519 bisa DID, maɓallin dakatarwa na gaggawa, da injiniyar open-source mai ƙarfi a ƙarƙashin lasisin MIT mai sassaucin ra'ayi, tare da haɗin kai mai zurfi da Azure da Entra don kamfanoni.",
+    "msBody": "Agent Control Specification tsari ne na gaske na policy runtime wanda ba shi da yanayi (stateless), mai tabbataccen sakamako, kuma yana kasawa cikin rufewa (fail-closed), tare da mahimman wurare takwas na shiga tsakani da aka ƙayyade da suna da kuma tsarin hukunci mai hanyoyi biyar (allow, warn, deny, escalate, transform). Yana zuwa da shaidar Ed25519 bisa DID, maɓallin dakatarwa na gaggawa, da injiniyar open-source mai ƙarfi a ƙarƙashin lasisin MIT mai sassaucin ra'ayi, tare da haɗin kai mai zurfi da Azure da Entra don kamfanoni.",
     "cirisTitle": "Inda CIRIS ta wuce gaba",
-    "cirisBody": "Kowane aiki yana wucewa ta tsarin lamiri na runtime kafin ya faru, ba rikodin bayan-haka ba. Hanyar bincike an haɗa ta da hash kuma an sa mata hannu bayan-quantum, kuma ana sake tabbatar da ita da kanta ta hanyar tsarin daidaituwa daban. Maɓallin dakatarwa yarjejeniya ce mai kasawa cikin aminci ta mutum biyu daga cikin uku da aka ambata da suna. Kuma kundin tsarin mulki tabbatacce ne kuma an buga shi, ba ƙa'idar da mai aiki ya rubuta wadda take barin komai ta tsohuwa ba.",
-    "ctaPara": "Wannan layi ɗaya ne kawai na babban hoto. Duba inda dukansu biyu suke tsaye tsakanin dukkan hanyoyin tantance AI.",
+    "cirisBody": "Kowane aiki yana wucewa ta duban lamiri a lokacin aiki (runtime) kafin ya gudana, ba kawai rikodin da ake rubutawa daga baya ba. Tarihin bincike an haɗa shi da sarƙar hash kuma an sanya masa hannun post-quantum, kuma ana sake tabbatar da shi mai zaman kansa ta wani rukunin duba daidaituwa daban. Maɓallin dakatarwa ƙuri'ar isa ce (quorum) mai kasawa cikin tsaro ta mutum biyu daga cikin mutane uku da aka ambata da suna. Kuma Tsarin Mulki kafaffe ne kuma an buga shi, ba ƙa'ida ce da mai sarrafawa ya rubuta wadda ke ƙyale komai ta asali ba.",
+    "ctaPara": "Wannan layi ɗaya ne kawai na babban hoto. Duba inda dukansu biyu suke tsaye tsakanin dukkan hanyoyin ɗaukar alhakin AI.",
     "btnLandscape": "Cikakken hoton yanayin",
     "btnCirisGh": "CIRIS a kan GitHub",
     "btnMsGh": "Kayan aikin Microsoft"

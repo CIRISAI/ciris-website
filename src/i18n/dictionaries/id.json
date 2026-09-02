@@ -3068,7 +3068,7 @@
     "kicker": "Pemetaan keamanan Agentic OWASP",
     "title": "OWASP Top 10 for Agentic Applications, dipetakan ke CIRIS.",
     "lede": "Untuk setiap satu dari sepuluh ancaman agentic yang disebutkan OWASP, berikut ini mekanisme spesifik CIRIS yang menanganinya, tingkat cakupan yang jujur, dan sitasi yang dapat Anda periksa. Kami memetakan seluruh taksonomi, termasuk bagian yang masih kurang.",
-    "callout": "Satu penuh, sembilan sebagian, tidak ada yang dilebih-lebihkan. Halaman yang mengklaim semua sepuluh terpenuhi justru akan menjadi pemasaran yang kami minta Anda untuk tidak percayai. Tingkat cakupan di bawah ini telah bertahan dari pengujian seorang skeptis terpisah yang tugasnya adalah menjatuhkannya, dan ketika sebuah pertahanan ada pada substrat tetapi agen yang sudah diterapkan belum mewarisinya, kami menyatakannya di baris tersebut.",
+    "callout": "Satu penuh, sembilan sebagian, tidak ada yang asal diklaim. Halaman yang mengklaim semua sepuluh terpenuhi justru akan menjadi pemasaran yang kami minta Anda untuk tidak percayai. Tingkat cakupan di bawah ini telah bertahan dari pengujian seorang skeptis terpisah yang tugasnya adalah menjatuhkannya, dan ketika sebuah pertahanan ada pada substrat tetapi agen yang sudah diterapkan belum mewarisinya, kami menyatakannya di baris tersebut.",
     "colRisk": "Risiko",
     "colCoverage": "Cakupan",
     "colHow": "Cara CIRIS mengatasinya",
@@ -3128,9 +3128,9 @@
   "euAiAct": {
     "kicker": "EU AI Act, pasal demi pasal",
     "title": "Bagaimana CIRIS sejalan dengan EU AI Act.",
-    "lede": "Untuk setiap kewajiban berisiko tinggi dalam EU AI Act, berikut ini mekanisme CIRIS yang sudah dirilis dan berkaitan dengannya, serta letaknya di dalam Constitution dan kode. Kewajiban berisiko tinggi berlaku mulai Agustus 2026, sehingga halaman ini ditulis untuk orang-orang yang harus mempertanggungjawabkannya.",
+    "lede": "Untuk setiap kewajiban berisiko tinggi dalam EU AI Act, berikut ini mekanisme CIRIS yang sudah dirilis dan berkaitan dengannya, serta letaknya di dalam Konstitusi dan kode. Kewajiban berisiko tinggi berlaku mulai Agustus 2026, sehingga halaman ini ditulis untuk orang-orang yang harus mempertanggungjawabkannya.",
     "bannerA": "Bacalah ini sebagai ",
-    "bannerStrong": "korespondensi teknik yang bersifat informatif, bukan nasihat hukum atau penilaian kesesuaian bersertifikat",
+    "bannerStrong": "tulisan rekayasa yang bersifat informatif, bukan nasihat hukum dan bukan penilaian kesesuaian bersertifikat",
     "bannerB": ". CIRIS Constitution sendiri menandai pemetaan pasal-pasal ini sebagai “menunggu tinjauan hukum.” Setiap mekanisme di bawah ini telah diverifikasi langsung di dalam kode oleh seorang skeptis yang tugasnya adalah menyanggahnya, tetapi pertanyaan apakah hal itu memenuhi persyaratan hukum adalah urusan penasihat hukum Anda, bukan halaman ini.",
     "colArticle": "Pasal",
     "colRequires": "Apa yang disyaratkan",
@@ -3177,17 +3177,17 @@
         "how": "Loop kepatuhan berkelanjutan dari Constitution mengalirkan data telemetri ke deteksi penyimpangan lalu ke tinjauan, sebuah loop pemantauan yang berjalan terus-menerus, bukan audit satu kali, dan ditampilkan melalui observabilitas CIRISLens."
       }
     ],
-    "footnote": "Dipetakan terhadap CIRIS Constitution kanonis per Juli 2026. Korespondensi yang bersifat informatif, menunggu tinjauan hukum. Beri tahu kami jika ada pemetaan yang salah dan kami akan memperbaikinya.",
+    "footnote": "Dipetakan terhadap Konstitusi CIRIS kanonis per Juli 2026. Korespondensi yang bersifat informatif, menunggu tinjauan hukum. Beri tahu kami jika ada pemetaan yang salah dan kami akan memperbaikinya.",
     "sourcesLabel": "Sumber",
-    "ctaPara": "Mekanisme yang sama dipetakan ke taksonomi keamanan, dan seluruh lanskap akuntabilitas.",
+    "ctaPara": "Mekanisme yang sama dicocokkan dengan daftar keamanan OWASP, dan perbandingan akuntabilitas lengkap.",
     "btnOwasp": "Pemetaan Agentic OWASP",
     "btnLandscape": "Lanskap lengkap",
-    "btnConstitution": "Constitution"
+    "btnConstitution": "Konstitusi"
   },
   "msCompare": {
     "kicker": "Perbandingan, kriteria tetap",
     "title": "CIRIS vs Microsoft Agent Governance Toolkit",
-    "lede": "Dua upaya sumber terbuka yang serius untuk mengatur agen AI, dinilai berdasarkan delapan kriteria yang sama dari sumber publik, dengan sitasi pada setiap sel. Ketika Microsoft unggul, kami menyatakannya secara jujur. Perbedaan yang benar-benar penting adalah sudah dirilis atau belum, constitution yang diberlakukan dan tidak dapat dilonggarkan, serta catatan bertanda tangan pasca-kuantum.",
+    "lede": "Dua upaya sumber terbuka yang serius untuk mengatur agen AI, dinilai berdasarkan delapan kriteria yang sama dari sumber publik, dengan sitasi untuk setiap skor di dalam tabel. Ketika Microsoft unggul, kami menyatakannya secara jujur. Perbedaan yang benar-benar penting adalah sudah dirilis atau belum, Konstitusi yang diberlakukan dan tidak dapat dilonggarkan, serta catatan bertanda tangan pasca-kuantum.",
     "sectionLabel": "Perbandingan langsung",
     "colCriterion": "Kriteria",
     "colCiris": "CIRIS",
@@ -3211,7 +3211,7 @@
     "msTitle": "Kekuatan nyata Microsoft",
     "msBody": "Agent Control Specification adalah runtime kebijakan yang benar-benar stateless, deterministik, dan fail-closed, dengan delapan titik intervensi bernama dan model putusan lima arah (allow, warn, deny, escalate, transform). Sistem ini menyertakan identitas berbasis DID dengan Ed25519, kill switch darurat, dan rekayasa sumber terbuka yang kuat di bawah lisensi permisif MIT, dengan integrasi mendalam ke Azure dan Entra untuk perusahaan.",
     "cirisTitle": "Di mana CIRIS melangkah lebih jauh",
-    "cirisBody": "Setiap tindakan melewati pipeline conscience saat runtime sebelum dijalankan, bukan sekadar log yang dibuat setelah kejadian. Jejak audit dirantai hash dan ditandatangani pasca-kuantum, serta diverifikasi ulang secara independen oleh rangkaian uji konformansi terpisah. Kill switch-nya adalah kuorum dua dari tiga manusia yang ditunjuk dan gagal secara aman. Dan constitution-nya bersifat tetap dan diterbitkan, bukan kebijakan buatan operator yang secara default mengizinkan.",
+    "cirisBody": "Setiap tindakan melewati pemeriksaan nurani saat runtime sebelum dijalankan, bukan sekadar log yang dibuat setelah kejadian. Jejak audit dirantai hash dan ditandatangani pasca-kuantum, serta diverifikasi ulang secara independen oleh rangkaian uji konformansi terpisah. Kill switch-nya adalah kuorum dua dari tiga manusia bernama yang bersifat fail-secure. Dan Konstitusinya bersifat tetap dan diterbitkan, bukan kebijakan buatan operator yang secara default mengizinkan.",
     "ctaPara": "Ini hanyalah satu baris dari gambaran yang lebih besar. Lihat posisi keduanya di antara setiap pendekatan akuntabilitas AI.",
     "btnLandscape": "Lanskap lengkap",
     "btnCirisGh": "CIRIS di GitHub",

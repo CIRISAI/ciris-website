@@ -3065,16 +3065,16 @@
     "sources": "Vyanzo: CIRISVerify (uthibitisho wa umiliki wa Ed25519 + ML-DSA-65, mzizi wa Yubico uliokitwa), tovuti ya kupima ya CIRISServer (utendaji uliopimwa), PKI ya Yubico (mzizi wa uthibitisho). Namba zimekitwa kwenye commit 0b73486, 2026-06-24."
   },
   "owasp": {
-    "kicker": "Uwiano wa usalama wa OWASP Agentic",
+    "kicker": "Ramani ya usalama ya OWASP Agentic",
     "title": "OWASP Top 10 kwa Programu za Kiwakala (Agentic Applications), zikilinganishwa na CIRIS.",
     "lede": "Kwa kila moja ya vitisho kumi vya kiwakala ambavyo OWASP imetaja, hii hapa ni mbinu mahususi ya CIRIS inayovishughulikia, kiwango cha ufuasi cha kweli, na rejeleo unaloweza kuthibitisha. Tunaonyesha uwiano wa taksonomia nzima, ikiwemo mahali ambapo tunapungukiwa.",
     "callout": "Moja kamili, tisa sehemu, hakuna iliyodanganywa. Ukurasa ulioidai vyote kumi ungekuwa ni sawa kabisa na uuzaji tunaokushauri usiuamini. Viwango vya ufuasi hapa chini vilipita ukaguzi wa mtu tofauti wa kutilia shaka ambaye kazi yake ilikuwa kuvibomoa, na pale ambapo ulinzi upo kwenye msingi wa mfumo lakini wakala uliotumika bado haujaurithi, tunasema hivyo kwenye safu husika.",
     "colRisk": "Hatari",
-    "colCoverage": "Ufuasi",
+    "colCoverage": "Uwigo",
     "colHow": "Jinsi CIRIS inavyoishughulikia",
     "covFull": "Kamili",
     "covPartial": "Sehemu",
-    "covRoadmap": "Ramani ya baadaye",
+    "covRoadmap": "Ramani ya njia",
     "covNone": "Hakuna",
     "rows": [
       {
@@ -3118,7 +3118,7 @@
         "how": "Tabaka tatu: dhamiri sita zinalinda kila hatua yenye matokeo kabla haijatekelezwa, njia ya ukaguzi iliyosainiwa na kuunganishwa kwa heshi inafanya ufichaji ugundulike baadaye, na kitufe cha kuzima kinachoshindwa kwa usalama kinaruhusu binadamu wanaotambulika kwa majina kusimamisha wakala asiye na mwelekeo sahihi. Pengo: kukamata wakala aliyepotoka kwa udanganifu lakini bado anaonekana mwenye mantiki ni jambo lenye mipaka kwa asili."
       }
     ],
-    "footnote": "OWASP Top 10 kwa Programu za Kiwakala, iliyochapishwa Desemba 2025. Imelinganishwa na CIRIS hadi Julai 2026; tuambie ikiwa kiini fulani si sahihi na tutakirekebisha.",
+    "footnote": "OWASP Top 10 kwa Programu za Kiwakala, iliyochapishwa Desemba 2025. Imelinganishwa na CIRIS hadi Julai 2026; tuambie ikiwa seli fulani si sahihi na tutairekebisha.",
     "sourcesLabel": "Vyanzo",
     "ctaPara": "Taksonomia hii ni kiwango kimoja tu cha kuangalia. Ona mahali CIRIS ilipo miongoni mwa mbinu zote za uwajibikaji wa AI, na jinsi kitufe cha kuzima kinavyoweza kuthibitishwa kwa uhuru.",
     "btnLandscape": "Mandhari nzima",
@@ -3128,10 +3128,10 @@
   "euAiAct": {
     "kicker": "EU AI Act, kifungu kwa kifungu",
     "title": "Jinsi CIRIS inavyolingana na EU AI Act.",
-    "lede": "Kwa kila wajibu wa hatari-kubwa kwenye EU AI Act, hii hapa ni mbinu ya CIRIS iliyoshasafirishwa inayolingana nayo na mahali inapopatikana kwenye Katiba na msimbo. Wajibu wa hatari-kubwa unaanza kutumika kuanzia Agosti 2026, hivyo hii imeandikwa kwa ajili ya watu watakaohitajika kuwajibika kwa hilo.",
+    "lede": "Kwa kila wajibu wa hatari kubwa kwenye EU AI Act, hii hapa ni mbinu ya CIRIS iliyoshasafirishwa inayolingana nayo na mahali inapopatikana kwenye Katiba na msimbo. Wajibu wa hatari kubwa unaanza kutumika kuanzia Agosti 2026, hivyo hii imeandikwa kwa ajili ya watu watakaohitajika kuwajibika kwa hilo.",
     "bannerA": "Soma haya kama ",
-    "bannerStrong": "mawasiliano ya kiuhandisi ya kielimu, si ushauri wa kisheria wala tathmini iliyoidhinishwa ya ufuasi",
-    "bannerB": ". Katiba ya CIRIS yenyewe inaweka alama kwenye ramani hizi za vifungu kuwa “vinasubiri ukaguzi wa kisheria.” Kila mbinu iliyoorodheshwa hapa chini ilithibitishwa moja kwa moja kwenye msimbo na mtu wa kutilia shaka ambaye kazi yake ilikuwa kuikanusha, lakini swali la kama hilo linatosheleza sheria ni la wakili wako, si ukurasa huu.",
+    "bannerStrong": "maelezo ya kiuhandisi ya taarifa tu, si ushauri wa kisheria wala tathmini iliyoidhinishwa ya ufuasi",
+    "bannerB": ". Katiba ya CIRIS yenyewe inaweka alama kwenye ramani hizi za vifungu kuwa “inasubiri ukaguzi wa kisheria.” Kila mbinu iliyo hapa chini ilithibitishwa moja kwa moja kwenye msimbo na mtu wa kutilia shaka ambaye kazi yake ilikuwa kuikanusha, lakini swali la kama hilo linatosheleza sheria ni la wakili wako, si ukurasa huu.",
     "colArticle": "Kifungu",
     "colRequires": "Kinachohitajika",
     "colHow": "Jinsi CIRIS inavyokishughulikia",
@@ -3177,10 +3177,10 @@
         "how": "Mzunguko wa ufuasi endelevu wa Katiba unapitisha mikondo ya telemetry kupitia ugunduzi wa mkengeuko hadi kwenye ukaguzi, mzunguko wa ufuatiliaji wa kudumu badala ya ukaguzi wa mara moja, unaoonekana kupitia uangalizi wa CIRISLens."
       }
     ],
-    "footnote": "Imelinganishwa na Katiba rasmi ya CIRIS hadi Julai 2026. Mawasiliano ya kielimu, yanayosubiri ukaguzi wa kisheria. Tuambie ikiwa ulinganisho fulani si sahihi na tutaurekebisha.",
+    "footnote": "Imelinganishwa na Katiba rasmi ya CIRIS hadi Julai 2026. Ulinganisho wa taarifa tu, unaosubiri ukaguzi wa kisheria. Tuambie ikiwa ulinganisho fulani si sahihi na tutaurekebisha.",
     "sourcesLabel": "Vyanzo",
-    "ctaPara": "Mbinu zile zile zilizolinganishwa na taksonomia ya usalama, na mandhari nzima ya uwajibikaji.",
-    "btnOwasp": "Uwiano wa OWASP Agentic",
+    "ctaPara": "Mbinu zile zile zilizolinganishwa na orodha ya usalama ya OWASP, na ulinganisho kamili wa uwajibikaji.",
+    "btnOwasp": "Ramani ya OWASP Agentic",
     "btnLandscape": "Mandhari nzima",
     "btnConstitution": "Katiba"
   },
@@ -3205,7 +3205,7 @@
       "Chanzo huria",
       "Inatumika katika uzalishaji"
     ],
-    "footnote": "Imepimwa kutoka kwa hati za bidhaa za umma hadi Julai 2026. Ikiwa kiini fulani si sahihi, tuambie na tutakirekebisha.",
+    "footnote": "Imepimwa kutoka kwa hati za bidhaa za umma hadi Julai 2026. Ikiwa seli fulani si sahihi, tuambie na tutairekebisha.",
     "sourcesLabel": "Vyanzo",
     "concLabel": "Kile ambacho kila mmoja anakifanya vizuri",
     "msTitle": "Uwezo halisi wa Microsoft",

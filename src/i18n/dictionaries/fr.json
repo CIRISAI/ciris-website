@@ -3068,7 +3068,7 @@
     "kicker": "Cartographie de sécurité OWASP Agentic",
     "title": "Le Top 10 OWASP pour les applications agentiques, mis en correspondance avec CIRIS.",
     "lede": "Pour chacune des dix menaces agentiques nommées par l'OWASP, voici le mécanisme CIRIS spécifique qui y répond, un niveau de couverture honnête, et une citation que vous pouvez vérifier. Nous cartographions toute la taxonomie, y compris là où nous sommes en retrait.",
-    "callout": "Une couverture complète, neuf partielles, aucune approximation. Une page qui prétendrait couvrir les dix serait exactement le type de marketing dont nous vous disons de vous méfier. Les niveaux de couverture ci-dessous ont résisté à l'examen d'un sceptique indépendant dont le travail était de les démonter, et là où une défense existe dans le substrat mais où l'agent déployé ne l'a pas encore héritée, nous le précisons sur la ligne.",
+    "callout": "Une couverture complète, neuf couvertures partielles, aucune éludée. Une page qui prétendrait couvrir les dix serait exactement le type de marketing dont nous vous disons de vous méfier. Les niveaux de couverture ci-dessous ont résisté à l'examen d'un sceptique indépendant dont le travail était de les démonter, et là où une défense existe dans le substrat mais où l'agent déployé ne l'a pas encore héritée, nous le précisons sur la ligne.",
     "colRisk": "Risque",
     "colCoverage": "Couverture",
     "colHow": "Comment CIRIS y répond",
@@ -3179,7 +3179,7 @@
     ],
     "footnote": "Mis en correspondance avec la Constitution CIRIS canonique en date de juillet 2026. Correspondance informative, en attente de révision juridique. Signalez-nous toute correspondance erronée et nous la corrigerons.",
     "sourcesLabel": "Sources",
-    "ctaPara": "Les mêmes mécanismes mis en correspondance avec la taxonomie de sécurité, et l'ensemble du panorama de la redevabilité.",
+    "ctaPara": "Les mêmes mécanismes mis en correspondance avec la liste de sécurité OWASP, et le comparatif complet de redevabilité.",
     "btnOwasp": "Cartographie OWASP Agentic",
     "btnLandscape": "Le panorama complet",
     "btnConstitution": "La Constitution"
@@ -3187,7 +3187,7 @@
   "msCompare": {
     "kicker": "Comparaison, critères fixes",
     "title": "CIRIS face à Microsoft Agent Governance Toolkit",
-    "lede": "Deux tentatives sérieuses et open source pour gouverner des agents IA, notées selon les huit mêmes critères issus de sources publiques, avec une citation sur chaque cellule. Là où Microsoft est solide, nous le disons. Les différences qui comptent sont le déploiement effectif, une constitution appliquée que vous ne pouvez pas assouplir, et des registres signés post-quantiques.",
+    "lede": "Deux tentatives sérieuses et open source pour gouverner des agents IA, notées selon les huit mêmes critères issus de sources publiques, avec une citation pour chaque score du tableau. Là où Microsoft est solide, nous le disons. Les différences qui comptent sont le déploiement effectif, une Constitution appliquée que vous ne pouvez pas assouplir, et des registres signés post-quantiques.",
     "sectionLabel": "Face à face",
     "colCriterion": "Critère",
     "colCiris": "CIRIS",

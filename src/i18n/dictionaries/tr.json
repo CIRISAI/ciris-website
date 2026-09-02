@@ -3067,7 +3067,7 @@
   "owasp": {
     "kicker": "OWASP Agentic güvenlik eşlemesi",
     "title": "Agentic Uygulamalar için OWASP İlk 10'u, CIRIS'e eşlendi.",
-    "lede": "OWASP'ın adlandırdığı on agentic tehdidin her biri için, bunu ele alan belirli CIRIS mekanizmasını, dürüst bir kapsam düzeyini ve kontrol edebileceğiniz bir kaynağı burada bulabilirsiniz. Yetersiz kaldığımız noktalar dahil, tüm sınıflandırmayı eşliyoruz.",
+    "lede": "OWASP'ın adlandırdığı on agentic tehdidin her biri için, bunu ele alan belirli CIRIS mekanizmasını, dürüst bir kapsam düzeyini ve kontrol edebileceğiniz bir kaynağı burada bulabilirsiniz. Yetersiz kaldığımız noktalar dahil, tüm sınıflandırmayı haritalandırıyoruz.",
     "callout": "Biri tam, dokuzu kısmi, hiçbiri geçiştirilmiş değil. On tanesinin de karşılandığını iddia eden bir sayfa, tam olarak size güvenmemenizi söylediğimiz türden bir pazarlama olurdu. Aşağıdaki kapsam düzeyleri, onları çürütmekle görevli ayrı bir şüpheciden geçti ve bir savunma altyapıda var olup henüz devreye alınan ajana geçmemişse, bunu ilgili satırda belirtiyoruz.",
     "colRisk": "Risk",
     "colCoverage": "Kapsam",
@@ -3121,7 +3121,7 @@
     "footnote": "Agentic Uygulamalar için OWASP İlk 10'u, Aralık 2025'te yayımlandı. Temmuz 2026 itibarıyla CIRIS'e eşlendi; bir hücrenin yanlış olduğunu düşünüyorsanız bize bildirin, düzeltelim.",
     "sourcesLabel": "Kaynaklar",
     "ctaPara": "Bu sınıflandırma tek bir bakış açısıdır. CIRIS'in, yapay zeka hesap verebilirliğine yönelik tüm yaklaşımlar arasında nerede durduğunu ve acil durdurma anahtarının nasıl bağımsız olarak doğrulanabildiğini görün.",
-    "btnLandscape": "Tüm manzara",
+    "btnLandscape": "Tüm tablo",
     "btnVerify": "Acil durdurma anahtarını doğrulayın",
     "btnOwasp": "OWASP kaynağı"
   },
@@ -3179,9 +3179,9 @@
     ],
     "footnote": "Temmuz 2026 itibarıyla kanonik CIRIS Anayasası'na göre eşlendi. Bilgilendirici karşılık, hukuki incelemeyi bekliyor. Bir eşlemenin yanlış olduğunu düşünüyorsanız bize bildirin, düzeltelim.",
     "sourcesLabel": "Kaynaklar",
-    "ctaPara": "Aynı mekanizmaların güvenlik sınıflandırmasına eşlenmiş hali ve tüm hesap verebilirlik manzarası.",
+    "ctaPara": "Aynı mekanizmaların OWASP güvenlik listesine eşlenmiş hali ve tam hesap verebilirlik karşılaştırması.",
     "btnOwasp": "OWASP Agentic eşlemesi",
-    "btnLandscape": "Tüm manzara",
+    "btnLandscape": "Tüm tablo",
     "btnConstitution": "Anayasa"
   },
   "msCompare": {
@@ -3213,7 +3213,7 @@
     "cirisTitle": "CIRIS'in daha ileri gittiği noktalar",
     "cirisBody": "Her eylem, çalıştırılmadan önce bir çalışma zamanı vicdan hattından geçer, bu sonradan tutulan bir günlük değildir. Denetim izi özet zinciriyle bağlanmış ve kuantum sonrası imzalanmıştır, ayrıca ayrı bir uygunluk paketi tarafından bağımsız olarak yeniden doğrulanır. Acil durdurma anahtarı, güvenli şekilde başarısız olan, üçte iki belirlenmiş kişi yeter sayısına dayalı bir mekanizmadır. Ve anayasa, varsayılan olarak izin veren, operatör tarafından yazılmış bir politika değil, sabit ve yayımlanmış bir belgedir.",
     "ctaPara": "Bu, daha büyük bir tablonun tek bir satırı. İkisinin de yapay zeka hesap verebilirliğine yönelik tüm yaklaşımlar arasında nerede durduğunu görün.",
-    "btnLandscape": "Tüm manzara",
+    "btnLandscape": "Tüm tablo",
     "btnCirisGh": "GitHub'da CIRIS",
     "btnMsGh": "Microsoft toolkit'i"
   },

@@ -3074,7 +3074,7 @@
     "colHow": "CIRIS இதை எவ்வாறு நிவர்த்தி செய்கிறது",
     "covFull": "முழுமையானது",
     "covPartial": "பகுதியளவு",
-    "covRoadmap": "திட்டமிடப்பட்டது",
+    "covRoadmap": "வழித்திட்டம்",
     "covNone": "இல்லை",
     "rows": [
       {
@@ -3128,10 +3128,10 @@
   "euAiAct": {
     "kicker": "EU AI Act, article வாரியாக",
     "title": "CIRIS EU AI Act உடன் எவ்வாறு பொருந்துகிறது.",
-    "lede": "EU AI Act இல் உள்ள ஒவ்வொரு high-risk கடமைக்கும், அதற்குப் பொருந்தும் வழங்கப்பட்ட CIRIS mechanism மற்றும் அது Constitution மற்றும் code இல் எங்கு உள்ளது என்பது இதோ. high-risk கடமைகள் ஆகஸ்ட் 2026 முதல் பொருந்தும், எனவே இது அதற்குப் பொறுப்பேற்க வேண்டியவர்களுக்காக எழுதப்பட்டுள்ளது.",
+    "lede": "EU AI Act இல் உள்ள ஒவ்வொரு high-risk கடமைக்கும், அதற்குப் பொருந்தும் வழங்கப்பட்ட CIRIS mechanism மற்றும் அது அரசியலமைப்பு மற்றும் code இல் எங்கு உள்ளது என்பது இதோ. high-risk கடமைகள் ஆகஸ்ட் 2026 முதல் பொருந்தும், எனவே இது அதற்குப் பொறுப்பேற்க வேண்டியவர்களுக்காக எழுதப்பட்டுள்ளது.",
     "bannerA": "இதை ஒரு ",
-    "bannerStrong": "தகவல் அளிக்கும் engineering correspondence ஆகக் கருதுங்கள், சட்ட ஆலோசனை அல்லது சான்றளிக்கப்பட்ட conformity assessment அல்ல",
-    "bannerB": ". CIRIS Constitution தானே இந்த article mappings ஐ “சட்ட மறுஆய்வுக்குக் காத்திருக்கிறது” என்று குறிக்கிறது. கீழே உள்ள ஒவ்வொரு mechanism உம், அதை மறுக்கும் வேலையை மேற்கொண்ட ஒரு skeptic ஆல் code இல் live ஆக சரிபார்க்கப்பட்டது, ஆனால் அது சட்டத்தை பூர்த்தி செய்கிறதா என்பது இந்தப் பக்கத்தினுடையது அல்ல, உங்கள் வழக்கறிஞரின் கேள்வி.",
+    "bannerStrong": "தகவலுக்கான பொறியியல் விளக்கம், சட்ட ஆலோசனை அல்லது சான்றளிக்கப்பட்ட conformity assessment அல்ல",
+    "bannerB": ". CIRIS அரசியலமைப்பே இந்த கட்டுரைப் பொருத்தங்களை “சட்ட மறுஆய்வுக்குக் காத்திருக்கிறது” என்று குறிக்கிறது. கீழே உள்ள ஒவ்வொரு mechanism உம், அதை மறுப்பதே தனது பணி எனக் கொண்ட ஒரு ஆய்வாளரால் code இல் நேரடியாகச் சரிபார்க்கப்பட்டது, ஆனால் அது சட்டத்தைப் பூர்த்தி செய்கிறதா என்ற கேள்வி உங்கள் வழக்கறிஞருக்கானது, இந்தப் பக்கத்திற்கானதல்ல.",
     "colArticle": "Article",
     "colRequires": "அது எதை கோருகிறது",
     "colHow": "CIRIS இதை எவ்வாறு நிவர்த்தி செய்கிறது",
@@ -3177,17 +3177,17 @@
         "how": "Constitution இன் தொடர்ச்சியான-compliance loop, telemetry streams ஐ drift detection க்கும் அதன் பின் review க்கும் இயக்குகிறது, ஒரு முறை audit அல்ல, CIRISLens observability மூலம் காட்டப்படும் ஒரு நிலையான கண்காணிப்பு loop."
       }
     ],
-    "footnote": "ஜூலை 2026 நிலவரப்படி canonical CIRIS Constitution உடன் mapping செய்யப்பட்டது. தகவல் அளிக்கும் correspondence, சட்ட மறுஆய்வுக்குக் காத்திருக்கிறது. ஒரு mapping தவறு எனில் எங்களுக்குத் தெரிவிக்கவும், நாங்கள் அதை சரிசெய்வோம்.",
+    "footnote": "ஜூலை 2026 நிலவரப்படி canonical CIRIS அரசியலமைப்புடன் mapping செய்யப்பட்டது. தகவல் அளிக்கும் விளக்கம், சட்ட மறுஆய்வுக்குக் காத்திருக்கிறது. ஒரு mapping தவறு எனில் எங்களுக்குத் தெரிவிக்கவும், நாங்கள் அதை சரிசெய்வோம்.",
     "sourcesLabel": "ஆதாரங்கள்",
-    "ctaPara": "பாதுகாப்பு taxonomy உடன் mapping செய்யப்பட்ட அதே mechanisms, மற்றும் முழு பொறுப்புணர்வு நிலப்பரப்பு.",
+    "ctaPara": "OWASP பாதுகாப்புப் பட்டியலுடன் பொருத்தப்பட்ட அதே mechanisms, மற்றும் முழு பொறுப்புணர்வு ஒப்பீடு.",
     "btnOwasp": "OWASP Agentic mapping",
     "btnLandscape": "முழு நிலப்பரப்பு",
-    "btnConstitution": "Constitution"
+    "btnConstitution": "அரசியலமைப்பு"
   },
   "msCompare": {
     "kicker": "ஒப்பீடு, நிலையான criteria",
     "title": "CIRIS எதிராக Microsoft Agent Governance Toolkit",
-    "lede": "AI agents ஐ ஆளுகை செய்வதற்கான இரண்டு தீவிரமான open-source முயற்சிகள், பொது ஆதாரங்களிலிருந்து ஒரே எட்டு criteria மீது மதிப்பிடப்பட்டவை, ஒவ்வொரு cell இலும் ஒரு மேற்கோளுடன். Microsoft வலுவாக இருக்கும் இடங்களில், நாங்கள் அதைச் சொல்கிறோம். முக்கியமான வேறுபாடுகள்: shipping, நீங்கள் தளர்த்த முடியாத ஒரு enforced constitution, மற்றும் post-quantum signed records.",
+    "lede": "AI agents ஐ ஆளுகை செய்வதற்கான இரண்டு தீவிரமான open-source முயற்சிகள், பொது ஆதாரங்களிலிருந்து ஒரே எட்டு criteria மீது மதிப்பிடப்பட்டவை, அட்டவணையில் உள்ள ஒவ்வொரு மதிப்பீட்டிற்கும் ஒரு மேற்கோளுடன். Microsoft வலுவாக இருக்கும் இடங்களில், நாங்கள் அதைச் சொல்கிறோம். முக்கியமான வேறுபாடுகள்: shipping, நீங்கள் தளர்த்த முடியாத ஒரு enforced அரசியலமைப்பு, மற்றும் post-quantum signed records.",
     "sectionLabel": "நேருக்கு நேர்",
     "colCriterion": "Criterion",
     "colCiris": "CIRIS",
@@ -3211,7 +3211,7 @@
     "msTitle": "Microsoft இன் உண்மையான பலங்கள்",
     "msBody": "Agent Control Specification, எட்டு பெயரிடப்பட்ட intervention points மற்றும் ஒரு ஐந்து-வழி verdict model (allow, warn, deny, escalate, transform) கொண்ட ஒரு உண்மையான stateless, deterministic, fail-closed policy runtime ஆகும். இது DID-அடிப்படையிலான Ed25519 identity, ஒரு emergency kill switch, மற்றும் ஒரு permissive MIT license இன் கீழ் வலுவான open-source engineering ஐ வழங்குகிறது, நிறுவனங்களுக்காக ஆழமான Azure மற்றும் Entra integration உடன்.",
     "cirisTitle": "CIRIS எங்கு மேலும் முன்னேறுகிறது",
-    "cirisBody": "ஒவ்வொரு action உம் இயங்குவதற்கு முன் ஒரு runtime conscience pipeline ஐக் கடக்கிறது, ஒரு post-hoc log அல்ல. audit trail hash-chained மற்றும் post-quantum signed ஆனது, மேலும் ஒரு தனி conformance suite ஆல் சுயேச்சையாக மீண்டும் சரிபார்க்கப்படுகிறது. kill switch ஒரு fail-secure two-of-three பெயரிடப்பட்ட-மனித quorum ஆகும். மேலும் constitution நிலையானது மற்றும் வெளியிடப்பட்டது, default ஆக allow செய்யும் ஒரு operator-எழுதிய policy அல்ல.",
+    "cirisBody": "ஒவ்வொரு action உம் இயங்குவதற்கு முன் runtime இல் மனசாட்சி சரிபார்ப்புகளைக் கடக்கிறது, ஒரு post-hoc log அல்ல. audit trail hash-chained மற்றும் post-quantum signed ஆனது, மேலும் ஒரு தனி conformance suite ஆல் சுயேச்சையாக மீண்டும் சரிபார்க்கப்படுகிறது. kill switch ஒரு fail-secure two-of-three பெயரிடப்பட்ட-மனித quorum ஆகும். மேலும் அரசியலமைப்பு நிலையானது மற்றும் வெளியிடப்பட்டது, default ஆக allow செய்யும் ஒரு operator-எழுதிய policy அல்ல.",
     "ctaPara": "இது ஒரு பெரிய படத்தின் ஒரு வரி மட்டுமே. AI பொறுப்புணர்வுக்கான ஒவ்வொரு அணுகுமுறையிலும் இரண்டும் எங்கு நிற்கின்றன என்பதைக் காணுங்கள்.",
     "btnLandscape": "முழு நிலப்பரப்பு",
     "btnCirisGh": "GitHub இல் CIRIS",

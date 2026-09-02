@@ -3068,7 +3068,7 @@
     "kicker": "Mappatura di sicurezza OWASP Agentic",
     "title": "La OWASP Top 10 per le applicazioni agentiche, mappata su CIRIS.",
     "lede": "Per ciascuna delle dieci minacce agentiche identificate da OWASP, ecco il meccanismo specifico di CIRIS che la affronta, un livello di copertura onesto e una citazione che puoi verificare. Mappiamo l'intera tassonomia, compresi i punti in cui siamo carenti.",
-    "callout": "Una copertura completa, nove parziali, nessuna liquidata a parole. Una pagina che dichiarasse tutte e dieci complete sarebbe esattamente il tipo di marketing di cui ti diciamo di diffidare. I livelli di copertura qui sotto sono sopravvissuti a uno scettico indipendente il cui compito era smontarli, e dove una difesa esiste nel substrato ma l'agente distribuito non l'ha ancora ereditata, lo indichiamo nella riga.",
+    "callout": "Una completa, nove parziali, nessuna data per buona senza prove. Una pagina che dichiarasse tutte e dieci complete sarebbe esattamente il marketing di cui ti diciamo di diffidare. I livelli di copertura qui sotto sono sopravvissuti a uno scettico indipendente il cui compito era smontarli, e dove una difesa esiste nel substrato ma l'agente distribuito non l'ha ancora ereditata, lo indichiamo in quella riga.",
     "colRisk": "Rischio",
     "colCoverage": "Copertura",
     "colHow": "Come la affronta CIRIS",
@@ -3128,10 +3128,10 @@
   "euAiAct": {
     "kicker": "EU AI Act, articolo per articolo",
     "title": "Come CIRIS si allinea con l'EU AI Act.",
-    "lede": "Per ciascun obbligo ad alto rischio previsto dall'EU AI Act, ecco il meccanismo CIRIS effettivamente rilasciato che vi corrisponde e dove si trova nella Constitution e nel codice. Gli obblighi ad alto rischio si applicano da agosto 2026, quindi questo testo è scritto per chi ne deve rispondere.",
+    "lede": "Per ciascun obbligo ad alto rischio previsto dall'EU AI Act, ecco il meccanismo CIRIS effettivamente rilasciato che vi corrisponde e dove si trova nella Costituzione e nel codice. Gli obblighi ad alto rischio si applicano da agosto 2026, quindi questo testo è pensato per chi ne deve rispondere.",
     "bannerA": "Leggi questo come una ",
-    "bannerStrong": "corrispondenza tecnica informativa, non una consulenza legale né una valutazione di conformità certificata",
-    "bannerB": ". La stessa CIRIS Constitution segna queste mappature degli articoli come “in attesa di revisione legale”. Ogni meccanismo qui sotto è stato verificato dal vivo nel codice da uno scettico il cui compito era confutarlo, ma la domanda se questo soddisfi la legge spetta al tuo consulente legale, non a questa pagina.",
+    "bannerStrong": "analisi tecnica a scopo informativo, non una consulenza legale né una valutazione di conformità certificata",
+    "bannerB": ". La stessa Costituzione CIRIS segna queste mappature degli articoli come “in attesa di revisione legale”. Ogni meccanismo qui sotto è stato verificato direttamente nel codice da uno scettico il cui compito era confutarlo, ma la domanda se questo soddisfi la legge spetta al tuo consulente legale, non a questa pagina.",
     "colArticle": "Articolo",
     "colRequires": "Cosa richiede",
     "colHow": "Come la affronta CIRIS",
@@ -3177,17 +3177,17 @@
         "how": "Il ciclo di conformità continua della Constitution fa fluire i flussi di telemetria nel rilevamento delle deviazioni e poi nella revisione, un ciclo di monitoraggio permanente anziché un audit una tantum, reso visibile attraverso l'osservabilità di CIRISLens."
       }
     ],
-    "footnote": "Mappato rispetto alla CIRIS Constitution canonica a partire da luglio 2026. Corrispondenza informativa, in attesa di revisione legale. Segnalaci se una mappatura è errata e la correggeremo.",
+    "footnote": "Mappato rispetto alla Costituzione CIRIS canonica a partire da luglio 2026. Corrispondenza informativa, in attesa di revisione legale. Segnalaci se una mappatura è errata e la correggeremo.",
     "sourcesLabel": "Fonti",
-    "ctaPara": "Gli stessi meccanismi mappati sulla tassonomia della sicurezza, e l'intero panorama della responsabilità.",
+    "ctaPara": "Gli stessi meccanismi confrontati con l'elenco di sicurezza OWASP, e il confronto completo sulla responsabilità.",
     "btnOwasp": "Mappatura OWASP Agentic",
     "btnLandscape": "Il panorama completo",
-    "btnConstitution": "La Constitution"
+    "btnConstitution": "La Costituzione"
   },
   "msCompare": {
     "kicker": "Confronto, criteri fissi",
     "title": "CIRIS a confronto con il Microsoft Agent Governance Toolkit",
-    "lede": "Due tentativi seri e open source di governare gli agenti IA, valutati sugli stessi otto criteri a partire da fonti pubbliche, con una citazione per ogni cella. Dove Microsoft è forte, lo diciamo apertamente. Le differenze che contano sono la disponibilità effettiva, una costituzione applicata che non puoi allentare e registri firmati post-quantisticamente.",
+    "lede": "Due tentativi seri e open source di governare gli agenti IA, valutati sugli stessi otto criteri a partire da fonti pubbliche, con una citazione per ogni punteggio nella tabella. Dove Microsoft è forte, lo diciamo apertamente. Le differenze che contano sono il fatto di essere già in distribuzione, una Costituzione vincolante che non puoi allentare e registri firmati post-quantisticamente.",
     "sectionLabel": "Confronto diretto",
     "colCriterion": "Criterio",
     "colCiris": "CIRIS",
