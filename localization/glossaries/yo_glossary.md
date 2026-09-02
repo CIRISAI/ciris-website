@@ -177,6 +177,7 @@ Keep them exactly, including any article the rendering carries.
 | CIRIS Scoring | Ìṣírò Àmì CIRIS | Product name of the scoring page; keep the CIRIS mark as is |
 | safety case | Ẹ̀rí ààbò | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
 | Constitutional AI | Constitutional AI | Anthropic's training method, a proper name: keep it in English exactly; it is NOT the CIRIS Constitution and the Constitution row does not apply to it |
+| CIRIS Registry | CIRIS Registry | The named registry service (a product component); keep the name, add a Yoruba gloss only if the sentence needs one |
 
 ## Cultural Considerations
 
