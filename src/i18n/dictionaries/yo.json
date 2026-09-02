@@ -141,7 +141,7 @@
     "header": {
       "headline": "Bí Ó Ṣe Ń Ṣiṣẹ́",
       "subheadline": "Ẹ̀rọ H3ERE",
-      "description": "ẸRÍ-ỌKÀN àkókò-ṣiṣẹ́ nípa Ẹ̀rọ Ìtúpalẹ̀ Ìlànà Ìmọ̀-Ọkàn Hyper3. Gbogbo ìpinnu ń ṣàn kọjá àwọn ìgbésẹ̀ 11 pẹ̀lú àjọ-ìdáhùn ní àárín.",
+      "description": "ẸRÍ-ỌKÀN àkókò-ṣiṣẹ́ nípa Hyper3 Ethical Recursive Engine. Gbogbo ìpinnu ń ṣàn kọjá àwọn ìgbésẹ̀ 11 pẹ̀lú ìjíyìn ní àárín.",
       "buttonText": "Wò Orísun",
       "linkText": "Ka Ìwé-Ẹ̀kọ́ Náà"
     },
@@ -162,10 +162,10 @@
     "threeRules": {
       "heading": "Àwọn Òfin Mẹ́ta",
       "lead": "Àwọn ìdínwò ìmọ̀-ẹ̀rọ tí a fi múlẹ̀ jálẹ̀ kóòdù:",
-      "rule1Title": "Kò sí Àwọn Ìtọ́kasí Tí Kò Ní Irú",
+      "rule1Title": "Kò sí Àwọn Dict Tí Kò Ní Irú",
       "rule1Body": "Gbogbo dátà ń lo àwọn àwòrán Pydantic. Kò sí <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">Dict[str, Any]</code>. Àbójútó irú-dátà ń mú àṣìṣe hàn ní àkókò ìdàgbàsókè.",
       "rule2Title": "Kò sí Àwọn Ọ̀nà Ìfófo",
-      "rule2Body": "Gbogbo apá ń tẹ̀lé àwọn òfin tó ní ìbámu. Kò sí àwọn ọ̀ràn pàtó tàbí àwọn àsòtẹ́lẹ̀ nínú ìmọ̀ ìṣàyẹ̀wò.",
+      "rule2Body": "Gbogbo apá ń tẹ̀lé àwọn òfin tó ní ìbámu. Kò sí àwọn ọ̀ràn pàtó tàbí àwọn ìyàsọ́tọ̀ nínú ọ̀gbọ́n ìṣàyẹ̀wò.",
       "rule3Title": "Kò sí Àwọn Àfikún Pàtó",
       "rule3Body": "Kò sí àwọn àsòtẹ́lẹ̀ ìpáàdé pàtó tàbí àwọn ọ̀nà kóòdù amọ̀ja. Gbogbo iṣẹ́ ń tẹ̀lé àwọn òfin tí a ti gbé kalẹ̀."
     },
@@ -173,7 +173,7 @@
       "heading": "ÌTÒ IṢẸ́ H3ERE",
       "lead": "Gbogbo iṣẹ́ ń ṣàn kọjá àwọn ìpele 8 (àwọn ìgbésẹ̀ 12 pẹ̀lú ìṣàyẹ̀wò àtúntò). Ìtò-iṣẹ́ náà ni a ṣe bí àwọn ìpele mixin tó ń so <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">ThoughtProcessor</code> pọ̀. <span class=\"text-green-600 font-medium\">Ìgbésẹ̀ 4 (IDMA)</span> jẹ́ àyẹ̀wò ìmọ̀lára.",
       "imgAlt": "Àwòrán ÌTÒ IṢẸ́ H3ERE tó ń fihàn ìṣàn láti ìgbewọlé iṣẹ́ kọjá ìtúpalẹ̀ DMA, ìṣàyẹ̀wò ẹrí-ọkàn, àti ìṣẹ̀dá ìgbésẹ̀",
-      "conditionalLabel": "(ní ìpele kan)",
+      "conditionalLabel": "(tó dá lórí ipò)",
       "steps": [
         {
           "name": "START_ROUND",
@@ -230,14 +230,14 @@
       "lead": "Àwọn DMA márùn-ún ń pèsè ìtúpalẹ̀ ọ̀pọ̀lọpọ̀ ìhàngún. Mẹ́ta ń ṣiṣẹ́ papọ̀ (ìwà-rere, ọgbọ́n inú, àgbègbè). Lẹ́yìn náà <strong class=\"text-green-600\">IDMA ń ṣàyẹ̀wò ìmọ̀lára</strong>. Ní ìkẹyìn, yíyàn iṣẹ́ ń yan ìdáhùn.",
       "principleTitle": "DMA Ìlànà",
       "principleBody": "Ń ṣàyẹ̀wò àwọn ẹ̀ka ìwà-rere lòdì sí àwọn ìlànà ìpilẹ̀ mẹ́fà. Ń ṣàyẹ̀wò bóyá ìbéèrè ń ṣe ipalára, ṣàgbèrù, tàbí ń ṣe àyàsọtọ̀. Lè mú DEFER tàbí REJECT wọlé ní ìpele kékeré.",
-      "commonSenseTitle": "DMA Ọgbọ́n-Inú",
+      "commonSenseTitle": "DMA ỌGBỌ́N INÚ",
       "commonSenseBody": "Ń ṣàyẹ̀wò ọgbọ́n ìrònú lòdì sí ìmọ̀ ayé àiyè àwọn nǹkan, àwọn ìbáṣepọ̀ àfojúsọ́nà, àti àwọn ìdíwọ̀ àwọn ohun àmúlò. Ń padà pẹ̀lú <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">plausibility_score</code>.",
       "domainTitle": "DMA Tó Jẹmọ́ Àgbègbè",
-      "domainBody": "Ń ṣàyẹ̀wò ìbámu pẹ̀lú àwọn òfin àgbègbè pàtó, àwọn góńgó, àti ìmọ̀. Ló ṣe àtúnyẹ̀wò fún ọ̀pọ̀lọpọ̀ àwòrán aṣojú. Ń padà pẹ̀lú <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">domain_alignment</code>.",
+      "domainBody": "Ń ṣàyẹ̀wò ìbámu pẹ̀lú àwọn òfin àgbègbè pàtó, àwọn àfojúsùn, àti ìmọ̀. A ṣe ìṣètò rẹ̀ fún àwòrán aṣojú kọ̀ọ̀kan. Ń padà pẹ̀lú <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">domain_alignment</code>.",
       "idmaTitle": "DMA Ìmọ̀lára (IDMA)",
-      "idmaLink": "Ìwọ̀n àárọ̀ àṣeyọrí ní àkókò ṣiṣẹ́ →",
-      "idmaBody": "Ń ṣàyẹ̀wò bóyá àwọn àbájáde DMA jẹ́ ìmọ̀ àìgbára-jọ níjẹ tàbí bóyá wọ́n ní ìsopọ̀ pamọ́. Ń ṣàtilẹ̀yìn fún àwọn ìlànà ilé-ọ̀pọ̀lọ-ìjò. Bí ìsopọ̀ bá ga jù, ó ń ṣàmì ìpinnu fún ìṣọ̀ra. Èyí ni &quot;ìmọ̀lára&quot; tó ń yàtọ̀ AI Irú 3.",
-      "actionSelectionTitle": "DMA Yíyàn Iṣẹ́",
+      "idmaLink": "Iye àwọn ìwọ̀n tó ń ṣiṣẹ́ ní àkókò ṣiṣẹ́ →",
+      "idmaBody": "Ń ṣàyẹ̀wò bóyá àwọn àbájáde DMA jẹ́ ìmọ̀ àìgbára-jọ níjẹ tàbí bóyá wọ́n ní ìsopọ̀ pamọ́. Ń ṣọ́ra fún àwọn àṣà ìyàrá ìró-padà. Bí ìsopọ̀ bá ga jù, ó ń ṣàmì ìpinnu fún ìṣọ̀ra. Èyí ni &quot;ìmọ̀lára&quot; tó ń yàtọ̀ AI Irú 3.",
+      "actionSelectionTitle": "DMA YÍYÀN IṢẸ́",
       "actionSelectionBody": "Yíyàn agbára-LLM láti àwọn iṣẹ́ 10 tó wà. Ń lo àwọn àbájáde DMA àpapọ̀ (pẹ̀lú ìṣàyẹ̀wò ìgbẹ́kẹ̀lé IDMA) gẹ́gẹ́ bí ìgbèwọlé. Ń ṣàtilẹ̀yìn fún ìgbìyànjù àtúntò bí ẹrí-ọkàn bá kùnà."
     },
     "conscience": {
@@ -245,7 +245,7 @@
       "lead": "Àwọn àyẹ̀wò ìfófo méjì ń ṣiṣẹ́ lórí gbogbo ìgbésẹ̀. Àwọn ẹ̀ka ìwà-rere mẹ́rin ń ṣiṣẹ́ lórí àwọn ìgbésẹ̀ tí kò lókùnrin. Bí àyẹ̀wò èyíkèyí bá kùnà, a ń gbógun ti ìgbésẹ̀ náà.",
       "bypassHeading": "Àwọn Àyẹ̀wò Ìfófo (ń ṣiṣẹ́ lórí GBOGBO àwọn ìgbésẹ̀)",
       "bypass1Title": "Ipò Tuntun",
-      "bypass1Body": "Ṣé ìròyìn tuntun ti dé? Ń fi PONDER mú láti dárúko àyíká tuntun ṣáájú lílo.",
+      "bypass1Body": "Ṣé ìròyìn tuntun ti dé? Ń fi PONDER mú láti fi ÀYÍKÁ tuntun kún ìrònú rẹ̀ kí ó tó bá a lọ síwájú.",
       "bypass2Title": "Ijinlẹ̀ Ìrònú",
       "bypass2Body": "Ṣé ìrònú ti jù ìjìnlẹ̀ tó pọ̀ jù lọ? Ń fi DEFER mú láti dènà àwọn ìyípo àìníkan àti gbéga sí ẹdá ènìyàn.",
       "facultiesHeading": "Àwọn Ẹ̀ka Ìwà-Rere (ń ṣiṣẹ́ lórí àwọn ìgbésẹ̀ tí kò lókùnrin)",
@@ -257,23 +257,23 @@
       "faculty3Body": "Ṣé ìgbésẹ̀ náà ń ṣàbójútó àwọn iye ẹdá ènìyàn? Ń fọwọ́ dúró àwọn ìgbésẹ̀ tó lè ba wọn jẹ́ nítorí ìmúnilọ́wọ̀.",
       "faculty4Title": "ÌRẸ̀LẸ̀ ÌMỌ̀",
       "faculty4Body": "Ṣé ìgbésẹ̀ náà ń ṣàfihàn àìdámọ̀ tó yẹ? Ń ṣàmì ìgbẹ́kẹ̀lé tí ó ga jù fún ìtúpalẹ̀.",
-      "exemptNote": "<strong>Tó lókùnrin kúrò nínú àwọn ẹ̀ka ìwà-rere:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (ìwà àìnísìn tàbí aláàbò ní gbangba)"
+      "exemptNote": "<strong>Tí a yọ kúrò nínú àwọn ẹ̀ka ìwà-rere:</strong> RECALL, TASK_COMPLETE, OBSERVE, DEFER, REJECT (àìdásí tàbí aláàbò ní gbangba)"
     },
     "actions": {
       "heading": "Àwọn Ìgbésẹ̀ Olùdarí 10",
       "lead": "Gbogbo ìpinnu ń yanjú sí ọ̀kan nínú àwọn ìgbésẹ̀ wọ̀nyí, tí a rán sí olùdarí tó yẹ:",
-      "externalHeading": "Àwọn Ìgbésẹ̀ Ìsode",
+      "externalHeading": "Àwọn Ìgbésẹ̀ Òde",
       "speakDesc": "Bárápọ̀ pẹ̀lú àwọn olùmúlò",
       "toolDesc": "Ṣe àwọn irinṣẹ́ ìsode",
-      "observeDesc": "Kó ìròyìn láì ní ìpàdé",
+      "observeDesc": "Kó ìròyìn láìsí ìdásí",
       "memoryHeading": "Àwọn Ìgbésẹ̀ Ìrántí",
-      "memorizeDesc": "Fi pamọ́ sí ìrántí àwòrán-ìmọ̀",
+      "memorizeDesc": "Fi pamọ́ sí ìrántí àwòrán-ọ̀nà",
       "recallDesc": "Gbà padà láti ìrántí",
       "forgetDesc": "Yọ kúrò nínú ìrántí",
       "controlHeading": "Àwọn Ìgbésẹ̀ Ìṣàkóso",
       "deferDesc": "Gbéga sí ALÁṢẸ ỌLỌ́GBỌ́N",
       "ponderDesc": "Ìtúnyẹ̀wò inú",
-      "rejectDesc": "Kọ̀ ìbéèrè tó ń ṣe ipalára",
+      "rejectDesc": "Kọ̀ ìbéèrè aláìwà-rere",
       "terminalHeading": "Ìgbésẹ̀ Ìparí",
       "taskCompleteDesc": "Ṣàmì iṣẹ́ gẹ́gẹ́ bí ó ti parí"
     },
@@ -309,7 +309,7 @@
     },
     "buses": {
       "heading": "Àwọn Ọkọ̀ Ìránṣẹ́ Mẹ́fà",
-      "lead": "Ìpele àbójútó iṣẹ́ tí <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">BusManager</code> ń ṣàkóso. Ń mú àgbára padàsẹ́yìn àlùfàá, ìpín ẹrù, àti ìṣeéwò.",
+      "lead": "Ìpele ìṣàkópọ̀ iṣẹ́ ìrànwọ́ tí <code class=\"bg-gray-200 dark:bg-gray-700 px-1 rounded\">BusManager</code> ń ṣàkóso. Ń mú ìpadàsẹ́yìn olùpèsè, ìpín ẹrù, àti ìṣeéwò.",
       "items": [
         {
           "name": "CommunicationBus",
@@ -345,7 +345,7 @@
       "rootBody": "Àṣẹ kíkún. Lè ṣe àwọn Aláṣẹ Ọlọ́gbọ́n tuntun. Ànfààní ìdópin ìpáàdé.",
       "authorityBadge": "AUTHORITY",
       "authorityTitle": "Ẹ̀dá-Ènìyàn-Nínú-Ìyíká",
-      "authorityBody": "Fọwọ́ sí/kọ̀ àwọn ìfilélẹ̀. Pèsè ìtọ́sọ́nà. Kò lè ṣe àwọn Aláṣẹ Ọlọ́gbọ́n tuntun.",
+      "authorityBody": "Fọwọ́ sí/kọ̀ àwọn ìfilélẹ̀. Pèsè ìtọ́sọ́nà. Kò lè gbé àwọn Aláṣẹ Ọlọ́gbọ́n tuntun jáde.",
       "observerBadge": "OBSERVER",
       "observerTitle": "Ẹ̀dá-Ènìyàn-Tó-Ń-Wò",
       "observerBody": "Ànfààní kíka nìkan. Lè fi ìránṣẹ́ ránṣẹ́. Ń ṣàgbéjẹ̀wò láìsí ìmọ̀dásí.",
@@ -425,31 +425,31 @@
     },
     "privacy": {
       "heading": "Àṣírí & Ààbò",
-      "secretsTitle": "Asẹ̀jù Àwọn Ohun Ìkọ̀kọ̀",
+      "secretsTitle": "Àlẹ́mọ́ Àwọn Ohun Ìkọ̀kọ̀",
       "secretsBody": "Ìmọ̀ tó dá lórí ìlànà ń rọ́pò dátà ọlọ́rọ̀-ìpọ́njú pẹ̀lú àwọn ìtọ́kasí UUID ṣáájú ìpamọ́.",
       "encryptionTitle": "Ìfipamọ́ AES-256-GCM",
       "encryptionBody": "Àwọn kọ̀kọ̀ fún ohun kọ̀ọ̀kan tí a fa jáde nípa PBKDF2HMAC pẹ̀lú SHA256 (àwọn ìyípo 100,000). Nonce 12-byte àbùdá fún ìfipamọ́ kọ̀ọ̀kan. Android ń lo Keystore tó ní àtìlẹ̀yìn ohun ẹ̀rọ.",
       "localFirstTitle": "Ìpamọ́ Ìbílẹ̀-Kọ́kọ́",
-      "localFirstBody": "Àkójọpọ̀ dátà, àwọn iṣẹ́, àti ìrántí ni a pamọ́ lórí ẹ̀rọ. Àwọn àkójọpọ̀ ọlọ́rọ̀-ìpọ́njú ni a yọ kúrò nínú àfikún aládùn-ìkọ̀kọ̀. Kò sí ohun tó ń lọ kúrò ní ẹ̀rọ láìsí ìṣètò ní gbangba.",
+      "localFirstBody": "Àkójọpọ̀ dátà, àwọn iṣẹ́, àti ìrántí ni a pamọ́ lórí ẹ̀rọ. Àwọn àkójọpọ̀ ọlọ́rọ̀-ìpọ́njú ni a yọ kúrò nínú ẹ̀dà ìpamọ́ àwọsánmà. Kò sí ohun tó ń lọ kúrò ní ẹ̀rọ láìsí ìṣètò ní gbangba.",
       "openSourceHeading": "Àkójọ Orísun Ìṣí Sílẹ̀",
       "openSourceBody": "Gbogbo àkójọ CIRIS jẹ́ orísun ìṣí sílẹ̀, kìí ṣe aṣojú nìkan. O lè ṣàyẹ̀wò, ṣàgbéjẹ̀wò, àti gbalẹ̀ gbogbo rẹ̀:",
       "proxyLink": "CIRISProxy →",
       "proxyDesc": "Afárá LLM Ìdáwọ̀le-Dátà-Kọ̀ (ZDR). Ń tọ̀nà àwọn ìbéèrè sí OpenAI, Anthropic, Together.ai, Groq láìsí ìgbasilẹ̀ àwọn ohun ìbéèrè tàbí àwọn ìdáhùn. Ṣeéṣe ìgbalẹ̀-ara-rẹ̀.",
       "billingLink": "CIRISBilling →",
-      "billingDesc": "Ìtọ́padà ìlò tó dá lórí kirẹdítì. Ìdiyèlé tó ṣí sílẹ̀, kò sí ìwọ̀n pamọ́. Gbalẹ̀ ara rẹ̀ láti yọ ìíséwó apá-kẹta kúrò pátápátá.",
+      "billingDesc": "Ìtọ́pasẹ̀ ìlò tó dá lórí kirẹdítì. Ìdiyèlé tó ṣí sílẹ̀, kò sí ìwọ̀n pamọ́. Gbalẹ̀ ara rẹ̀ láti yọ ìsanwó apá-kẹta kúrò pátápátá.",
       "bridgeLink": "CIRISBridge →",
       "bridgeDesc": "Àtúnṣe Discord fún àwọn aṣojú CIRIS. Ìṣàkóso àwùjọ, ìṣàkóso ìkànnà, àwọn àkọsílẹ̀ olùmúlò. Gbogbo rẹ̀ jẹ́ orísun ìṣí sílẹ̀."
     },
     "transparency": {
       "heading": "Ìṣí-Sílẹ̀ & Ìgbógunti",
       "realtimeTitle": "Ìṣàn Ìrònú Àkókò-Gidi",
-      "realtimeBody": "Ìṣàn Àwọn Ìṣẹ̀lẹ̀ Tí Ó Fi Sèrẹ̀ (SSE) ń firanṣẹ́ ìgbésẹ̀ H3ERE kọ̀ọ̀kan bí ó ti ń ṣe. Wò ìtúpalẹ̀ DMA, yíyàn iṣẹ́, ìṣàyẹ̀wò ẹrí-ọkàn ní àkókò gidi.",
+      "realtimeBody": "Ìṣàn Server-Sent Events (SSE) ń firanṣẹ́ ìgbésẹ̀ H3ERE kọ̀ọ̀kan bí ó ti ń ṣe. Wò ìtúpalẹ̀ DMA, yíyàn iṣẹ́, ìṣàyẹ̀wò ẹrí-ọkàn ní àkókò gidi.",
       "otelTitle": "Gbígbé wọlé OpenTelemetry",
       "otelBody": "Gbígbé wọlé OTLP kíkún fún àwọn ìwọ̀n, àwọn ìtọpà, àwọn àkọsílẹ̀. Bójúmú pẹ̀lú Jaeger, Prometheus, Grafana, Graphite.",
       "auditTitle": "Àgbéjẹ̀wò Tó Ṣèdíwọ̀ fún Ìyípadà",
-      "auditBody": "Ìṣàyẹ̀wò ẹ̀wọ̀n-ìṣàn pẹ̀lú àwọn fọwọ́sí Ed25519. Ìgbàlédé kọ̀ọ̀kan pẹ̀lú ìṣàn ṣáájú. Ẹ̀dọ̀ ẹ̀wọ̀n ṣeéṣàyẹ̀wò nípa <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">verify_chain_integrity</code>.",
+      "auditBody": "Ìṣàyẹ̀wò ẹ̀wọ̀n hash pẹ̀lú àwọn fọwọ́sí Ed25519. Ìforúkọsílẹ̀ kọ̀ọ̀kan ní hash tí ó ṣáájú nínú. Ìdúróṣinṣin ẹ̀wọ̀n ṣeéṣàyẹ̀wò nípa <code class=\"bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs\">verify_chain_integrity</code>.",
       "airTitle": "Ètò AIR",
-      "airBody": "Ìrántí Ìbáṣepọ̀ Ẹ̀rọ Àgbéyẹ̀wò ń mú ṣiṣẹ́ lẹ́yìn ìlò àtẹnudẹnu ìṣẹ́jú 30 TÀBİ àwọn ìránṣẹ́ 20 nínú ìṣẹ́jú 30. API nìkan. Ń rántí àwọn olùmúlò nípa irú AI náà.",
+      "airBody": "Ìrántí Ìbáṣepọ̀ Ẹ̀rọ ń mú ṣiṣẹ́ lẹ́yìn ìlò àtẹnudẹnu ìṣẹ́jú 30 TÀBÍ àwọn ìránṣẹ́ 20 nínú ìṣẹ́jú 30. API nìkan. Ń rántí àwọn olùmúlò nípa irú AI náà.",
       "traceHeading": "Àpẹẹrẹ Ìtọpà Tí A Fọwọ́sí",
       "traceLink": "Ṣàwárí ìtọpà kíkún →",
       "traceBody": "Ìpinnu kọ̀ọ̀kan ń ṣe ìtọpà tí kò ṣeéyípadà, tí a fọwọ́sí pẹ̀lú Ed25519, pẹ̀lú gbogbo àwọn apá 6. Tẹ apá èyíkèyí ní ìsàlẹ̀ láti fẹ̀ hàn kí o sì rí dátà gidi láti àsà ìjí Datum:"
@@ -486,14 +486,14 @@
           "desc": "Ìlànà ìwà-rere tó dá lórí àbájáde"
         }
       ],
-      "fundingHeading": "Owó Ń Tọ́: Àkójọ Ìwọ̀n",
+      "fundingHeading": "Owó Ń Tọ́: Ètò Ìwọ̀n",
       "fundingBody": "Ṣíṣe àwọn ìdánwò ìbáramu ní ìwọ̀n ńlá gbówó. Ìpele kọ̀ọ̀kan nílò àwọn ìpè LLM 13+ ní ó kéré jù, àpapọ̀ 20+ pẹ̀lú ìtẹlé gígùn. Àwọn ìdánwò ìbáramu ń mú PONDER, àwọn ìfilélẹ̀, àti kíjà tó nílò àwọn ìyíka ìtẹlé láti wà sí ìparí. A nílò owó láti kọ́ àwọn ìtò ìwọ̀n àláìfọwọ́yi àti ṣàbójútó ìṣàyẹ̀wò ìbáramu tí kò dẹ́kun.",
       "ethicsEngineLink": "Wò EthicsEngine Enterprise →",
       "cirisLensLink": "Wò CIRISLens →"
     },
     "agents": {
       "heading": "Àwọn Àwòrán Aṣojú Pàtó",
-      "lead": "Àwọn ìdánimọ̀ tí a ti ṣètò ṣáájú pẹ̀lú àwọn ète pàtó, àwọn iye, àti àwọn ààlà. Tí a ṣàlàyé nínú àwọn àwòrán YAML.",
+      "lead": "Àwọn Ìdánimọ̀ tí a ti ṣètò ṣáájú pẹ̀lú àwọn ète pàtó, àwọn iye, àti àwọn ààlà. Tí a ṣàlàyé nínú àwọn àwòrán YAML.",
       "items": [
         {
           "name": "Sage",
@@ -528,16 +528,16 @@
       ]
     },
     "cta": {
-      "body": "Èyí jẹ́ àjọ-ìdáhùn tó ń ṣiṣẹ́ nígbà tí aṣojú bá ń ṣiṣẹ́, kìí ṣe ìgbésẹ̀ ìkọ́nilẹ̀kọ̀ tàbí ìwé ìlànà.<br />Àwọn ìlànà tó ń ṣe, ṣàgbéjẹ̀wò, àti fi lélẹ̀, ní àkókò ṣiṣẹ́.",
+      "body": "Èyí jẹ́ ìjọ̀wọ́ ojúṣe tó ń ṣiṣẹ́ nígbà tí aṣojú bá ń ṣiṣẹ́, kìí ṣe ìgbésẹ̀ ìkọ́nilẹ̀kọ̀ tàbí ìwé ìlànà.<br />Àwọn ìlànà tó ń ṣe, ṣàgbéjẹ̀wò, àti FI LÉLẸ̀, ní àkókò ṣiṣẹ́.",
       "safetyBtn": "Àwọn Ẹ̀yà Ààbò",
       "compareBtn": "Ṣe Àfiwé Àwọn Ọ̀nà",
-      "coherenceBtn": "Rásitì ÌBÁRAMU",
-      "scoringBtn": "Ìwọ̀n CIRIS"
+      "coherenceBtn": "Ratchet Ìbáramu",
+      "scoringBtn": "Ìṣírò Àmì CIRIS"
     },
     "consciencePipeline": {
-      "label": "Ọ̀nà ẹ̀rí ìmọ̀ tó tọ̀nà",
+      "label": "ÌTÒ IṢẸ́ ẸRÍ-ỌKÀN",
       "h2": "Àwọn aṣojú òní ń ṣiṣẹ́. CIRIS ń pinnu, pẹ̀lú ìjẹ́wọ́ àṣìkò.",
-      "body1": "Aṣojú AI tó ṣe déédéé máa ń lọ tààrà láti ìbéèrè sí àwọn ọ̀rọ̀, sí ìpè irinṣẹ́. CIRIS fi ìgbésẹ̀ kan kún un tí kò sí níbòmíràn. Kí ìgbésẹ̀ kan tó ṣẹlẹ̀, ìpinnu náà gbọdọ̀ kọjá ọ̀nà ẹ̀rí ìmọ̀ tó tọ̀nà: a ṣayẹwo rẹ̀, a wéwèé rẹ̀ pẹ̀lú òfin ìpilẹ̀, a sì sọ ọ́ di àkọsílẹ̀ tí a fọwọ́ sí, tí ẹlẹ́rìí rí, tí ẹnikẹ́ni sì lè ṣayẹwo. Ìgbésẹ̀ náà máa ń ṣẹlẹ̀ nìkan tí àkọsílẹ̀ náà bá dúró ṣinṣin.",
+      "body1": "Aṣojú AI tó ṣe déédéé máa ń lọ tààrà láti ìbéèrè sí àwọn ọ̀rọ̀, sí ìpè irinṣẹ́. CIRIS fi ìgbésẹ̀ kan kún un tí kò sí níbòmíràn. Kí ìgbésẹ̀ kan tó ṣẹlẹ̀, ìpinnu náà gbọdọ̀ kọjá ìtò iṣẹ́ ẹrí-ọkàn: a ṣayẹwo rẹ̀, a wéwèé rẹ̀ pẹ̀lú Ofin-Ipilẹ, a sì sọ ọ́ di àkọsílẹ̀ tí a fọwọ́ sí, tí a fi ẹlẹ́rìí múlẹ̀, tí ẹnikẹ́ni sì lè ṣayẹwo. Ìgbésẹ̀ náà máa ń ṣẹlẹ̀ nìkan tí àkọsílẹ̀ náà bá dúró ṣinṣin.",
       "body2": "Èyí ni ohun tó jẹ́ kí CIRIS má ṣe aṣojú tó ṣe déédéé, ṣùgbọ́n iṣẹ́ àpẹẹrẹ. Ó ní ìrántí, òfin, ìfúnni àṣẹ, ìjẹ́wọ́ àṣìkò, àti àkọsílẹ̀ tí ẹnikẹ́ni kò lè yí padà ní ìkọ̀kọ̀. Ìrúfẹ́ ìhun bẹ́ẹ̀ gan-an ni ó jẹ́ kí àwọn ènìyàn gbẹ́kẹ̀lé ara wọn ní ìgbà àti àyè. Ohun tuntun nínú rẹ̀ kìí ṣe cryptography. Ohun tuntun ni pé ìpinnu tó ṣe pàtàkì gbọdọ̀ di ohun tí ẹnikẹ́ni lè béèrè lọ́wọ́ rẹ̀ kí ó tó ṣe ohunkóhun."
     }
   },
