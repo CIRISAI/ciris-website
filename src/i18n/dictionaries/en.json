@@ -2,12 +2,12 @@
   "constitution": {
     "eyebrow": "The CIRIS Constitution · CC 1.0-rc3",
     "headline": "One document. One version line.",
-    "intro": "The CIRIS Accord set out what an AI must care about. The CIRIS Epistemic Grammar set out how every claim gets signed so anyone can check it. They were written as two documents, but they already contained each other. Now they are one: the CIRIS Constitution.",
+    "intro": "The CIRIS Accord, the earlier document that became this Constitution, set out what an AI must care about. The CIRIS Epistemic Grammar set out how every claim gets signed so anyone can check it. They were written as two documents, but they already contained each other. Now they are one: the CIRIS Constitution.",
     "apexLabel": "The foundation: Meta-Goal M-1",
     "apexQuote": "Promote sustainable adaptive coherence: the living conditions under which diverse sentient beings may pursue their own flourishing in justice and wonder.",
     "apexNote": "Every rule, prefix, and policy in the document traces back to this one goal. Peaked in purpose, flat in power: one goal governs, and no single concept, and no single party, holds the keys to truth.",
     "foldedTitle": "What got folded in",
-    "foldedBody": "The Accord (version 1.3-RC2) and the CEG (version 1.0-RC29) were copied in word for word, then woven into one plain, present-tense document. Every wire-level rule is kept byte for byte. A panel of adversarial checks judged the joined version clearer than either source on 28 of 29 chapters.",
+    "foldedBody": "The Accord (version 1.3-RC2) and the CEG (version 1.0-RC29) were copied in word for word and joined into one plain document written in the present tense. Every wire-level rule is kept exactly. A panel of adversarial checks judged the joined version clearer than either source on 28 of 29 chapters.",
     "partsLabel": "The eight parts",
     "parts": [
       {
@@ -2074,7 +2074,7 @@
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · pronounced “soup”",
     "headline": "The internet, rebuilt without the middleman.",
-    "intro1": "CEWP is a complete replacement for the internet. Everything you do online today, streaming, video calls, gaming, files, messages, and signed claims, routed directly between the devices people already own, over a post-quantum encrypted mesh. No giant data centers in the middle. No handful of companies owning the pipes.",
+    "intro1": "CEWP is a complete replacement for the internet. Everything you do online today, streaming, video calls, gaming, files, messages, and signed claims, routed directly between the devices people already own, over a post-quantum encrypted mesh. No giant data centers in the middle. No handful of companies owning the connections.",
     "intro2": "Today’s middle costs about 175 megatons of CO2 a year and hands five companies both your data and the power to decide what you see. CEWP runs on hardware you already have, never advertises your local content to the rest of the network, and governs itself: the network decides through signed, weighted votes, with no platform owner in the middle.",
     "watchLabel": "Watch the 7-minute explainer",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
@@ -2488,7 +2488,7 @@
     "intro": "Today’s web is great at showing you things and terrible at telling you whether to believe them. You see a post, a price, a claim, but not who really stands behind it, what they based it on, or who has pushed back. An epistemic web fixes that at the root: every claim travels signed, so you can see who said it, what it rests on, and how others have agreed, corrected, or replaced it.",
     "p2": "Think of it as the web with its receipts. Nothing load-bearing is anonymous. Any claim can be traced back to a signature and forward to every response. You stop having to pick a side on trust and start being able to check for yourself.",
     "biggerTitle": "This is bigger than AI",
-    "biggerBody": "And it is not just about claims, or about AI. The same design that signs a claim can carry everything you do online today: video calls, live streams, games, files, messages, all of it routed straight between the devices people already own. No data centers in the middle. No handful of companies owning the pipes. Post-quantum encryption by default. It is a complete replacement for the internet, rebuilt without the middleman, which makes the big data centers and big tech that sit between you and everyone else obsolete.",
+    "biggerBody": "And it is not just about claims, or about AI. The same design that signs a claim can carry everything you do online today: video calls, live streams, games, files, messages, all of it routed straight between the devices people already own. No data centers in the middle. No handful of companies owning the connections. Post-quantum encryption by default. It is a complete replacement for the internet, rebuilt without the middleman, which makes the big data centers and big tech that sit between you and everyone else obsolete.",
     "howTitle": "How CIRIS makes it real",
     "howLede": "Two open-source pieces, both shipping through 2026. One is the language every claim is written in. One is the network that carries it, and everything else.",
     "grammarCardEyebrow": "The language",

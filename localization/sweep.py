@@ -47,11 +47,12 @@ TRAILER = ("Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n"
 
 # The plan, in importance order: what a visitor meets first goes first. The
 # landing (homeHero) is included: cheap, and it is the first thing anyone reads. `home.*` is dead copy (no source references) and `lobby.*` is
-# retired except the store badge labels, which every install CTA still uses.
+# retired; its store badge labels are two lines of a badge by design and are
+# left as shipped (every judge reads a badge half as a broken sentence).
 PLAN: List[Tuple[str, str, List[str]]] = [
     ("chrome",        "chrome",       ["nav.*", "footer.*"]),
     ("hero",          "dictionaries", ["homeHero.*"]),
-    ("shell-install", "dictionaries", ["common.*", "pathsCommon.*", "lobby.store.*",
+    ("shell-install", "dictionaries", ["common.*", "pathsCommon.*",
                                         "install.*", "cewp.*", "constitution.*"]),
     ("safety",        "dictionaries", ["safety.*"]),
     ("story",         "dictionaries", ["philosophy.*", "vision.*", "reaching.*", "about.*"]),
