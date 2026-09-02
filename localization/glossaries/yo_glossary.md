@@ -171,12 +171,11 @@ Keep them exactly, including any article the rendering carries.
 |---------|-----------|---------------|
 | Constitutional Mesh | Àwọ̀n Ofin-Ipilẹ | The /constitutional-mesh page identity; "post-quantum decentralized constitutional mesh" is the category phrase |
 | Proof of Benefit | Ẹ̀rí Àǹfààní (Proof of Benefit) | Governance standing earned, not bought or mined; /constitutional-mesh section title |
-| epistemic web | ayelujara ti o ni idaniloju | The site's masthead phrase for the CIRIS stack |
+| epistemic web | Wẹ́ẹ̀bù Ìmọ̀ | The site's masthead phrase for the CIRIS stack; singular, the named concept (web of knowledge); the reviewed nav label |
 | Coherence Ratchet | Ratchet Ìbáramu | Nav label and the /coherence-ratchet page identity; a coined mechanism name, keep the compound whole |
 | Constitution | Ofin-Ipilẹ | The CIRIS Constitution, the governing document (replaces the Accord); also the /constitution nav label |
 | CIRIS Scoring | Ìṣírò Àmì CIRIS | Product name of the scoring page; keep the CIRIS mark as is |
 | safety case | Ẹ̀rí ààbò | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
-| Meta-Goal M-1 | Meta-Goal M-1 | The Constitution's top-level goal; M-1 is a label, keep it |
 
 ## Cultural Considerations
 
