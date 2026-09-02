@@ -22,7 +22,7 @@
     },
     "compare": {
       "name": "አወዳድር",
-      "subtitle": "የደህንነት ምክንያቱን ይመልከቱ"
+      "subtitle": "የደህንነት ማስረጃን ይመልከቱ"
     },
     "research": {
       "name": "ምርምር",
@@ -37,12 +37,12 @@
       "subtitle": "ክፍት ምንጭ"
     },
     "epistemicWeb": {
-      "name": "የእውቀት ድር",
+      "name": "የዕውቀት ድር",
       "subtitle": "ማዕከል የሌለው ኢንተርኔት"
     },
     "safety": {
       "name": "ደህንነት",
-      "subtitle": "የደህንነት ማስረጃ"
+      "subtitle": "የደህንነት ማብራሪያ"
     },
     "howItWorks": {
       "name": "እንዴት እንደሚሰራ",
@@ -81,14 +81,14 @@
       "status": "ሁኔታ",
       "about": "ስለ እኛ",
       "vision": "ራዕይ",
-      "thesis": "ጽሁፍ",
-      "methodology": "ዘዴ",
+      "thesis": "ጥናታዊ ጽሑፍ",
+      "methodology": "የአሠራር ዘዴ",
       "safetyVsCensorship": "ደህንነት ወይስ ሳንሱር",
       "principles": "መርሆዎች",
       "privacyPolicy": "የግልነት ፖሊሲ",
       "safetyPolicy": "የደህንነት ፖሊሲ",
-      "warrantCanary": "የፍርድ ቤት ትዕዛዝ ካናሪ"
+      "warrantCanary": "የፍርድ ትዕዛዝ ማሳወቂያ (Warrant Canary)"
     },
-    "tagline": "በመዋቅር ደህንነት፣ በመርህ ክፍትነት፣ በንድፍ ደግነት"
+    "tagline": "በመዋቅር የተረጋገጠ ደህንነት፣ በመርህ የተመሠረተ ክፍትነት፣ በንድፍ የተቀረጸ ደግነት"
   }
 }

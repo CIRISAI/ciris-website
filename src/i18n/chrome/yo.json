@@ -9,16 +9,16 @@
       "subtitle": "Bẹ̀rẹ̀ Níbí: Ìdí Rẹ̀"
     },
     "install": {
-      "name": "Fún Sínú",
+      "name": "Fi sórí ẹ̀rọ",
       "subtitle": "Ní i lónìí"
     },
     "coherenceRatchet": {
       "name": "Ratchet Ìbáramu",
-      "subtitle": "Ìtẹ̀síwájú Náà"
+      "subtitle": "Ìfúnpá náà"
     },
     "federation": {
-      "name": "Ìṣọ̀kan-Àjùmọ̀ṣe",
-      "subtitle": "Ìdáhùn Náà"
+      "name": "Ìṣọ̀kan-Àjùmọ̀ṣe (federation)",
+      "subtitle": "Ìdáhùn náà"
     },
     "compare": {
       "name": "Ṣe Àfiwéra",
@@ -60,11 +60,11 @@
     "privacyPolicy": "Ìlànà Àṣírí",
     "items": {
       "howItWorks": "Bí Ó Ṣe Ń Ṣiṣẹ́",
-      "federation": "Ìṣọ̀kan-Àjùmọ̀ṣe",
-      "models": "Àwọn Àwòrán",
+      "federation": "Ìṣọ̀kan-Àjùmọ̀ṣe (federation)",
+      "models": "Àwọn Módẹ̀lì",
       "services": "Àwọn Iṣẹ́",
       "integrations": "Àwọn Ìdàpọ̀",
-      "install": "Fún Sínú",
+      "install": "Fi sórí ẹ̀rọ",
       "safety": "Ààbò",
       "infrastructure": "Amayederun",
       "trust": "Ìgbẹ́kẹ̀lé & Ìdánimọ̀",
@@ -75,20 +75,20 @@
       "game": "Eré àṣírí",
       "firstContact": "Ìfọ̀kànsìn Àkọ́kọ́",
       "exploreTrace": "Ṣàwárí Itọpa",
-      "scoring": "CIRIS Ìṣírò",
+      "scoring": "Ìṣírò Àmì CIRIS",
       "researchStatus": "Ipò Ìwádìí",
       "documentation": "Àkọsílẹ̀",
       "status": "Ipò",
-      "about": "Nípa Rẹ̀",
+      "about": "Nípa",
       "vision": "Ìrọ̀jú",
-      "thesis": "Àríwísí",
-      "methodology": "Ọ̀nà Ìwádìí",
+      "thesis": "Tẹ́sìsì",
+      "methodology": "Ọ̀nà Ìṣe",
       "safetyVsCensorship": "Ààbò vs Ìdènà",
       "principles": "Àwọn Ìlànà",
       "privacyPolicy": "Ìlànà Àṣírí",
       "safetyPolicy": "Ìlànà Ààbò",
-      "warrantCanary": "Canary Ìgbẹ̀sínjú"
+      "warrantCanary": "Warrant Canary"
     },
-    "tagline": "àbò nípasẹ̀ ètò, ṣíṣí nípasẹ̀ ìlànà, rere nípasẹ̀ ìpèsè"
+    "tagline": "ààbò nípasẹ̀ ìhun, ṣíṣí nípasẹ̀ àwọn ìlànà, onínúure nípasẹ̀ ìṣàpẹẹrẹ"
   }
 }

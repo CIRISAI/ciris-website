@@ -5,7 +5,7 @@
   },
   "nav": {
     "firstContact": {
-      "name": "Primo Contatto",
+      "name": "Primo contatto",
       "subtitle": "Inizia qui: il Perché"
     },
     "install": {
@@ -30,14 +30,14 @@
     },
     "accord": {
       "name": "Costituzione",
-      "subtitle": "Il quadro"
+      "subtitle": "Il framework"
     },
     "github": {
       "name": "GitHub",
       "subtitle": "Codice aperto"
     },
     "epistemicWeb": {
-      "name": "Web epistemico",
+      "name": "Il web epistemico",
       "subtitle": "Un internet senza centro"
     },
     "safety": {
@@ -59,7 +59,7 @@
     },
     "privacyPolicy": "Informativa sulla Privacy",
     "items": {
-      "howItWorks": "Come Funziona",
+      "howItWorks": "Come funziona",
       "federation": "Federazione",
       "models": "Modelli",
       "services": "Servizi",
@@ -73,10 +73,10 @@
       "cewp": "CEWP (soup)",
       "grammar": "Grammatica (CEG)",
       "game": "Gioco misterioso",
-      "firstContact": "Primo Contatto",
-      "exploreTrace": "Esplora una Traccia",
-      "scoring": "CIRIS Punteggio",
-      "researchStatus": "Stato della Ricerca",
+      "firstContact": "Primo contatto",
+      "exploreTrace": "Esplora una traccia",
+      "scoring": "Punteggio CIRIS",
+      "researchStatus": "Stato della ricerca",
       "documentation": "Documentazione",
       "status": "Stato",
       "about": "Chi siamo",
@@ -89,6 +89,6 @@
       "safetyPolicy": "Politica di Sicurezza",
       "warrantCanary": "Warrant Canary"
     },
-    "tagline": "sicuro per struttura, aperto per principio, gentile per progetto"
+    "tagline": "sicuro per struttura, aperto per principio, gentile per progettazione"
   }
 }

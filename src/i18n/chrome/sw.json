@@ -6,7 +6,7 @@
   "nav": {
     "firstContact": {
       "name": "Mawasiliano ya Kwanza",
-      "subtitle": "Anza Hapa: Sababu"
+      "subtitle": "Anza Hapa: Kwa Nini"
     },
     "install": {
       "name": "Sakinisha",
@@ -37,7 +37,7 @@
       "subtitle": "Chanzo huria"
     },
     "epistemicWeb": {
-      "name": "Wavuti ya Maarifa",
+      "name": "Mtandao wa maarifa",
       "subtitle": "Intaneti isiyo na kitovu"
     },
     "safety": {
@@ -63,7 +63,7 @@
       "federation": "Shirikisho",
       "models": "Mifano",
       "services": "Huduma",
-      "integrations": "Muunganiko",
+      "integrations": "Miunganiko",
       "install": "Sakinisha",
       "safety": "Usalama",
       "infrastructure": "Miundombinu",
@@ -75,7 +75,7 @@
       "game": "Mchezo wa siri",
       "firstContact": "Mawasiliano ya Kwanza",
       "exploreTrace": "Chunguza Mfuatilio",
-      "scoring": "CIRIS Kipimo",
+      "scoring": "Alama za CIRIS",
       "researchStatus": "Hali ya Utafiti",
       "documentation": "Nyaraka",
       "status": "Hali",
@@ -87,8 +87,8 @@
       "principles": "Kanuni",
       "privacyPolicy": "Sera ya Faragha",
       "safetyPolicy": "Sera ya Usalama",
-      "warrantCanary": "Ndege wa Onyo la Hati"
+      "warrantCanary": "Warrant Canary"
     },
-    "tagline": "salama kwa muundo, wazi kwa kanuni, na huruma kwa makusudi"
+    "tagline": "salama kwa muundo, wazi kwa kanuni, na yenye huruma kwa usanifu"
   }
 }

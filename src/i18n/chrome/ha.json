@@ -13,7 +13,7 @@
       "subtitle": "Mallaka shi yau"
     },
     "coherenceRatchet": {
-      "name": "Matsin Daidaituwa",
+      "name": "Ratchet na Daidaituwa",
       "subtitle": "Matsinin"
     },
     "federation": {
@@ -37,7 +37,7 @@
       "subtitle": "Buɗaɗɗen tushe"
     },
     "epistemicWeb": {
-      "name": "Yanar Ilimi",
+      "name": "Yanar gizo na ilimi",
       "subtitle": "Yanar gizo marar tsakiya"
     },
     "safety": {
@@ -46,11 +46,11 @@
     },
     "howItWorks": {
       "name": "Yadda yake aiki",
-      "subtitle": "Cikin wakili"
+      "subtitle": "Cikin Wakili"
     }
   },
   "footer": {
-    "desc": "Buɗaɗɗen kayayyakin daidaituwa. AGPL-3.0 | Kullum ga manufa.",
+    "desc": "Buɗaɗɗen tsarin Daidaituwa. AGPL-3.0 | An kulle ga manufa.",
     "headings": {
       "technology": "Fasaha",
       "resources": "Albarkatu",
@@ -63,10 +63,10 @@
       "federation": "Haɗin ƙungiyoyi",
       "models": "Samfurori",
       "services": "Sabis",
-      "integrations": "Haɗewar",
+      "integrations": "Haɗe-haɗe",
       "install": "Shigar da shi",
       "safety": "Aminci",
-      "infrastructure": "Kayan Aikin Jama'a",
+      "infrastructure": "Tsarin tushe",
       "trust": "Amincewa da Asali",
       "compare": "Kwatanta",
       "compliance": "Bin Doka",
@@ -87,7 +87,7 @@
       "principles": "Ka'idoji",
       "privacyPolicy": "Manufar Sirri",
       "safetyPolicy": "Manufar Aminci",
-      "warrantCanary": "Gargaɗin Umarni"
+      "warrantCanary": "Warrant Canary (gargaɗin shiru na doka)"
     },
     "tagline": "lafiya ta tsari, buɗewa ta ƙa’ida, kirki ta ƙira"
   }

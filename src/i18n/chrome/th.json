@@ -17,7 +17,7 @@
       "subtitle": "แรงกดดัน"
     },
     "federation": {
-      "name": "สหพันธ์",
+      "name": "Federation",
       "subtitle": "การตอบสนอง"
     },
     "compare": {
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "โครงสร้างพื้นฐานความสอดคล้องแบบเปิด AGPL-3.0 | ล็อกภารกิจ",
+    "desc": "โครงสร้างพื้นฐานแบบเปิดสำหรับความสอดคล้อง AGPL-3.0 | ล็อกด้วยภารกิจ",
     "headings": {
       "technology": "เทคโนโลยี",
       "resources": "ทรัพยากร",
@@ -60,7 +60,7 @@
     "privacyPolicy": "นโยบายความเป็นส่วนตัว",
     "items": {
       "howItWorks": "วิธีการทำงาน",
-      "federation": "สหพันธ์",
+      "federation": "Federation",
       "models": "โมเดล",
       "services": "บริการ",
       "integrations": "การรวมระบบ",
@@ -83,7 +83,7 @@
       "vision": "วิสัยทัศน์",
       "thesis": "วิทยานิพนธ์",
       "methodology": "วิธีวิทยา",
-      "safetyVsCensorship": "ความปลอดภัยกับการเซนเซอร์",
+      "safetyVsCensorship": "ความปลอดภัย vs การเซ็นเซอร์",
       "principles": "หลักการ",
       "privacyPolicy": "นโยบายความเป็นส่วนตัว",
       "safetyPolicy": "นโยบายความปลอดภัย",

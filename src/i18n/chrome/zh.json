@@ -13,7 +13,7 @@
       "subtitle": "今天就拥有"
     },
     "coherenceRatchet": {
-      "name": "连贯棘轮",
+      "name": "连贯性棘轮",
       "subtitle": "压力所在"
     },
     "federation": {
@@ -22,7 +22,7 @@
     },
     "compare": {
       "name": "对比",
-      "subtitle": "查看安全案例"
+      "subtitle": "查看安全论证"
     },
     "research": {
       "name": "研究",
@@ -30,7 +30,7 @@
     },
     "accord": {
       "name": "宪法",
-      "subtitle": "那套框架"
+      "subtitle": "该框架"
     },
     "github": {
       "name": "GitHub",
@@ -42,7 +42,7 @@
     },
     "safety": {
       "name": "安全性",
-      "subtitle": "安全性论证"
+      "subtitle": "安全论证"
     },
     "howItWorks": {
       "name": "工作原理",
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "开放连贯基础设施。AGPL-3.0 | 使命锁定。",
+    "desc": "开放连贯性基础设施。AGPL-3.0 | 使命锁定。",
     "headings": {
       "technology": "技术",
       "resources": "资源",
@@ -87,8 +87,8 @@
       "principles": "原则",
       "privacyPolicy": "隐私政策",
       "safetyPolicy": "安全政策",
-      "warrantCanary": "授权金丝雀"
+      "warrantCanary": "Warrant Canary（搜查令金丝雀）"
     },
-    "tagline": "以结构求安全，以原则求开放，以设计求善意"
+    "tagline": "结构上安全，原则上开放，设计上友善"
   }
 }

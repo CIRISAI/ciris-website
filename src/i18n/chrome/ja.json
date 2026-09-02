@@ -37,7 +37,7 @@
       "subtitle": "オープンソース"
     },
     "epistemicWeb": {
-      "name": "知のウェブ",
+      "name": "知識のウェブ",
       "subtitle": "中心のないインターネット"
     },
     "safety": {
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "desc": "オープン一貫性インフラ。AGPL-3.0 | ミッションロック。",
+    "desc": "オープンな一貫性インフラ。AGPL-3.0 | ミッションに固定されています。",
     "headings": {
       "technology": "テクノロジー",
       "resources": "リソース",
@@ -74,7 +74,7 @@
       "grammar": "文法 (CEG)",
       "game": "謎解きゲーム",
       "firstContact": "最初の接触",
-      "exploreTrace": "トレースを探索",
+      "exploreTrace": "トレースの探索",
       "scoring": "CIRIS スコアリング",
       "researchStatus": "研究状況",
       "documentation": "ドキュメント",
@@ -87,8 +87,8 @@
       "principles": "原則",
       "privacyPolicy": "プライバシーポリシー",
       "safetyPolicy": "安全性ポリシー",
-      "warrantCanary": "令状カナリア"
+      "warrantCanary": "Warrant Canary（令状カナリア）"
     },
-    "tagline": "構造で安全に、原則で開かれて、設計で優しく"
+    "tagline": "構造によって安全に、原則によって開かれ、設計によって思いやりをもって"
   }
 }
