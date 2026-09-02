@@ -130,24 +130,74 @@ def selection_size(bundle: str, patterns: List[str], langs: List[str]) -> int:
     return int(m.group(1))
 
 
-def run_lane(bundle: str, patterns: List[str], langs: List[str], kv: int,
-             report: Path, logfile: Path) -> Tuple[int, Optional[float], str]:
+def all_langs(bundle: str) -> List[str]:
+    return sorted(q.stem for q in BUNDLES[bundle].glob("*.json") if q.stem not in ("en", "manifest"))
+
+
+def _lane_cmd(patterns: List[str], langs: List[str], kv: int, report: Path) -> List[str]:
     cmd = [sys.executable, "localization/localize.py", "--lane", "evaluate",
            "--max-keys", str(kv + 64), "--report", str(report)]
     for p in patterns:
         cmd += ["--keys", p]
     for l in langs:
         cmd += ["--lang", l]
-    with open(logfile, "a") as fh:
+    return cmd
+
+
+def _segment_after_marker(logfile: Path) -> str:
+    text = logfile.read_text() if logfile.exists() else ""
+    return text[text.rfind("====="):]
+
+
+def run_lane(bundle: str, patterns: List[str], langs: List[str], kv: int,
+             report: Path, logfile: Path, shards: int = 1) -> Tuple[int, Optional[float], str]:
+    """Run the evaluate lane for one batch. With shards > 1 the languages are
+    split round-robin across that many concurrent lane processes. This is
+    write-safe because the lane writes one file per language and the shards
+    never share a language; it buys wall time, not money."""
+    targets = langs or all_langs(bundle)
+    if shards <= 1 or len(targets) <= 1:
+        cmd = _lane_cmd(patterns, langs, kv, report)
+        with open(logfile, "a") as fh:
+            fh.write(f"\n===== {dt.datetime.now(dt.timezone.utc).isoformat()} {' '.join(cmd)}\n")
+            fh.flush()
+            proc = subprocess.run(cmd, cwd=ROOT, env=lane_env(bundle), text=True,
+                                  stdout=fh, stderr=subprocess.STDOUT)
+        tail = _segment_after_marker(logfile)
+        spends = SPEND_RE.findall(tail)
+        return proc.returncode, (float(spends[-1]) if spends else None), tail
+
+    groups = [targets[i::shards] for i in range(shards)]
+    groups = [g for g in groups if g]
+    procs = []
+    for i, g in enumerate(groups):
+        rep_i = report.with_name(report.stem + f"-s{i}.json")
+        log_i = logfile.with_name(logfile.stem + f"-s{i}.log")
+        cmd = _lane_cmd(patterns, g, kv, rep_i)
+        fh = open(log_i, "a")
         fh.write(f"\n===== {dt.datetime.now(dt.timezone.utc).isoformat()} {' '.join(cmd)}\n")
         fh.flush()
-        proc = subprocess.run(cmd, cwd=ROOT, env=lane_env(bundle), text=True,
-                              stdout=fh, stderr=subprocess.STDOUT)
-    text = logfile.read_text()
-    tail = text[text.rfind("====="):]
-    spends = SPEND_RE.findall(tail)
-    spend = float(spends[-1]) if spends else None
-    return proc.returncode, spend, tail
+        procs.append((subprocess.Popen(cmd, cwd=ROOT, env=lane_env(bundle), text=True,
+                                       stdout=fh, stderr=subprocess.STDOUT), fh, rep_i, log_i))
+    rc, spend, tails, merged = 0, 0.0, [], {}
+    any_spend = False
+    for proc, fh, rep_i, log_i in procs:
+        proc.wait(); fh.close()
+        rc = max(rc, proc.returncode)
+        seg = _segment_after_marker(log_i)
+        tails.append(seg)
+        found = SPEND_RE.findall(seg)
+        if found:
+            spend += float(found[-1]); any_spend = True
+        try:
+            merged.update(json.loads(rep_i.read_text())) if rep_i.exists() else None
+        except json.JSONDecodeError:
+            pass
+    report.write_text(json.dumps(merged, indent=2, ensure_ascii=False))
+    with open(logfile, "a") as fh:
+        fh.write(f"\n===== {dt.datetime.now(dt.timezone.utc).isoformat()} sharded x{len(groups)} -> {report.name}\n")
+        fh.write("\n".join(tails))
+    return rc, (spend if any_spend else None), "\n".join(tails)
 
 
 def retry_langs(report: dict, tail: str) -> List[str]:
@@ -265,6 +315,7 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-push", action="store_true")
     ap.add_argument("--langs", default="", help="comma list: restrict every batch to these languages (e.g. yo)")
+    ap.add_argument("--shards", type=int, default=1, help="concurrent lane processes per batch, languages split round-robin (write-safe: one file per language)")
     args = ap.parse_args()
 
     OUT.mkdir(exist_ok=True)
@@ -318,7 +369,7 @@ def main() -> int:
         rc = 1
         for attempt in range(1, args.attempts + 1):
             report = OUT / f"sweep-{stamp}-{name}-a{attempt}.json"
-            rc, spend, tail = run_lane(bundle, patterns, langs, kv if not langs else kv, report, logfile)
+            rc, spend, tail = run_lane(bundle, patterns, langs, kv, report, logfile, shards=args.shards)
             if spend is None:
                 log(f"{name}: attempt {attempt} produced no spend line; stopping the sweep for inspection")
                 ledger["batches"].append({"name": name, "attempt": attempt, "error": "no_spend_line",
