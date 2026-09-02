@@ -296,7 +296,7 @@ def commit_batch(name: str, bundle: str, stats: dict, push: bool) -> Optional[st
     langs = stats["langs"]
     msg = (f"i18n(sweep): {name} reviewed x{langs}; {stats['repaired']} repaired, "
            f"{stats['held']} held for judgment\n\n"
-           f"Evaluate lane over {', '.join(stats['patterns'])} ({stats['kv']} key-values). "
+           f"Evaluate lane over {', '.join(stats['patterns'][:6])}{' ...' if len(stats['patterns']) > 6 else ''} ({stats['kv']} key-values). "
            f"Cross-family MQM review; repairs up the full ladder; rejected values "
            f"withheld for adjudication (localization/hard-cases). Spend ~${stats['spend']:.2f}.\n\n"
            + TRAILER)
@@ -354,6 +354,23 @@ def main() -> int:
         log(f"uncommitted changes in {dirty_paths}; refusing to sweep over them")
         return 4
 
+    # Chunk every batch to at most CHUNK keys: the repair payload for one
+    # language is its flagged keys, and Gemini Flash timed out (504) on a
+    # 70-key repair, falling through to the costlier rung. Explicit key names
+    # are exact fnmatch patterns.
+    CHUNK = int(os.environ.get("SWEEP_CHUNK", "80"))
+    expanded: List[Tuple[str, str, List[str]]] = []
+    for name, bundle, patterns in plan:
+        en_keys = sorted(flat(json.loads((BUNDLES[bundle] / "en.json").read_text())))
+        import fnmatch as _fn
+        keys = [k for k in en_keys if any(_fn.fnmatch(k, pt) for pt in patterns)]
+        if len(keys) <= CHUNK:
+            expanded.append((name, bundle, patterns))
+        else:
+            parts = [keys[i:i + CHUNK] for i in range(0, len(keys), CHUNK)]
+            for i, part in enumerate(parts, 1):
+                expanded.append((f"{name}-{i}of{len(parts)}", bundle, part))
+    plan = expanded
     spent = 0.0
     kv_done = 0
     status = "complete"
