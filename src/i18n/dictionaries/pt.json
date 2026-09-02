@@ -7,7 +7,7 @@
     "apexQuote": "Promover uma coerência adaptativa sustentável: as condições de vida sob as quais seres sencientes e diversos podem buscar o próprio florescimento com justiça e admiração.",
     "apexNote": "Cada regra, prefixo e política do documento remonta a esse único objetivo. Com propósito no ápice e poder nivelado: um objetivo governa, e nenhum conceito, e nenhuma parte, detém as chaves da verdade.",
     "foldedTitle": "O que foi incorporado",
-    "foldedBody": "O Accord (versão 1.3-RC2) e o CEG (versão 1.0-RC29) foram copiados palavra por palavra e depois entrelaçados em um documento simples e no tempo presente. Cada regra no nível de protocolo foi mantida byte por byte. Um painel de verificações adversariais considerou a versão unificada mais clara do que qualquer uma das fontes originais em 28 dos 29 capítulos.",
+    "foldedBody": "O Accord (versão 1.3-RC2) e o CEG (versão 1.0-RC29) foram copiados palavra por palavra e reunidos em um único documento escrito no tempo presente. Cada regra sobre o formato de transmissão foi mantida exatamente. Um painel de verificações adversariais considerou a versão unificada mais clara do que cada uma das duas fontes originais em 28 dos 29 capítulos.",
     "partsLabel": "As oito partes",
     "parts": [
       {
@@ -1732,7 +1732,7 @@
     "ideaPara2": "Isso importa para a IA. Um sistema de IA pode rodar muitas verificações sobre seu próprio raciocínio e ainda assim ser enganado, se essas verificações compartilham o mesmo ponto cego. Coherence Collapse Analysis é como CIRIS diferencia verificações reais de ecos.",
     "formulaEyebrow": "A única fórmula",
     "formulaH2": "Contando as verificações que você realmente tem.",
-    "formulaPara1": "Há uma fórmula curta e única no coração disso. Ela vem da estatística de levantamentos, onde é chamada de efeito de delineamento de Kish, e a mesma forma aparece na teoria da votação e na engenharia de segurança. CIRIS a aplica ao alinhamento de IA.",
+    "formulaPara1": "Há uma fórmula curta e única no coração disso. Ela vem da estatística de amostragem, onde é chamada de efeito de delineamento de Kish, e a mesma forma aparece na teoria da votação e na engenharia de segurança. CIRIS a aplica ao alinhamento de IA.",
     "formulaDisplay": "real checks = checks / (1 + copying × (checks − 1))",
     "formulaPara2": "\"Checks\" é quantas verificações você rodou. \"Copying\" é o quanto elas se sobrepõem, de 0 (todas independentes) a 1 (todas iguais). O resultado é quantas verificações você realmente tem.",
     "formulaLi1": "<strong class=\"text-slate-900 dark:text-white\">Sem cópia:</strong> dez verificações contam como dez apenas quando cada uma é uma verificação separada.",
@@ -1923,7 +1923,7 @@
     "ratchetP4Italic": "Uma segunda imagem também funciona. Uma engrenagem em uma máquina avança um dente de cada vez. Ela não pode recuar. O Coherence Ratchet é uma engrenagem assim, girando em direção à abertura.",
     "cirisLabel": "O que CIRIS faz",
     "cirisH2": "Escrever. Verificar. Depois verificar quem verifica.",
-    "cirisP1": "CIRIS é um sistema de IA construído em torno do Coherence Ratchet. Cada escolha que um agente faz é registrada em um registro assinado. O registro não pode ser alterado silenciosamente. Outros agentes podem ler o registro e verificar o trabalho. Com o tempo, os registros se acumulam. Cada novo registro é mais um degrau do qual o agente não pode recuar.",
+    "cirisP1": "CIRIS é um sistema de IA construído em torno da Catraca de Coerência. Cada escolha que um agente faz é registrada em um registro assinado. O registro não pode ser alterado silenciosamente. Outros agentes podem ler o registro e verificar o trabalho. Com o tempo, os registros se acumulam. Cada novo registro é mais um degrau do qual o agente não pode recuar.",
     "cirisP2": "CIRIS também faz uma segunda pergunta antes de agir. Quantas visões verdadeiramente diferentes verificaram essa ideia? Não o número de fontes, mas o número de fontes que não partiram do mesmo lugar. Cinco notícias que reescrevem um único press release contam como uma visão, não cinco. Se algo estiver errado no press release, estará errado em todas as cinco histórias, e o agente não tem como detectar isso.",
     "cirisP3": "Quando a independência real cai baixo demais, o agente trata seu próprio raciocínio como ainda não confiável e pede que uma pessoa analise.",
     "claimH2": "O que afirmamos, e o que não afirmamos.",
@@ -1934,7 +1934,7 @@
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · pronunciada como a palavra inglesa “soup” (sopa)",
     "headline": "A internet, reconstruída sem o intermediário.",
-    "intro1": "O CEWP é uma substituição completa para a internet. Tudo o que você faz online hoje, streaming, chamadas de vídeo, jogos, arquivos, mensagens e declarações assinadas, roteado diretamente entre os dispositivos que as pessoas já possuem, sobre uma malha criptografada pós-quântica. Sem gigantescos data centers no meio. Sem um punhado de empresas donas dos canos.",
+    "intro1": "O CEWP é uma substituição completa para a internet. Tudo o que você faz online hoje, streaming, chamadas de vídeo, jogos, arquivos, mensagens e declarações assinadas, roteado diretamente entre os dispositivos que as pessoas já possuem, em uma malha criptografada pós-quântica. Sem gigantescos data centers no meio. Sem um punhado de empresas controlando as conexões.",
     "intro2": "O meio de hoje custa cerca de 175 megatons de CO2 por ano e entrega a cinco empresas tanto os seus dados quanto o poder de decidir o que você vê. O CEWP roda no hardware que você já tem, nunca anuncia o seu conteúdo local para o resto da rede, e se governa sozinho: a rede decide por votos assinados e ponderados, sem dono de plataforma no meio.",
     "watchLabel": "Assista à explicação de 7 minutos",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
@@ -2200,7 +2200,7 @@
       "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
     ],
     "ctaPara": "Leia o mecanismo com seus próprios olhos.",
-    "btnConstitution": "Leia a constituição →",
+    "btnConstitution": "Leia a Constituição →",
     "btnPrivacy": "Privacidade estrutural →",
     "btnGrammar": "A gramática →",
     "btnCewp": "A plataforma →",

@@ -5,9 +5,9 @@
     "intro": "Il CIRIS Accord ha stabilito cosa un'intelligenza artificiale deve avere a cuore. La CIRIS Epistemic Grammar ha stabilito come ogni affermazione viene firmata in modo che chiunque possa verificarla. Erano scritti come due documenti, ma si contenevano già a vicenda. Ora sono uno solo: la Costituzione CIRIS.",
     "apexLabel": "Il cardine, Meta-Goal M-1",
     "apexQuote": "Promuovere una coerenza adattiva sostenibile: le condizioni di vita in cui diversi esseri senzienti possono perseguire la propria fioritura nella giustizia e nella meraviglia.",
-    "apexNote": "Ogni regola, prefisso e politica nel documento risale a questo unico obiettivo. Acuto nello scopo, piatto nel potere: un solo obiettivo governa, e nessun singolo concetto, e nessuna singola parte, detiene le chiavi della verità.",
+    "apexNote": "Ogni regola, prefisso e politica nel documento risale a questo unico obiettivo. Acuto nello scopo, piatto nel potere: un solo obiettivo governa, e nessun singolo concetto, e nessun singolo soggetto, detiene le chiavi della verità.",
     "foldedTitle": "Cosa è stato unificato",
-    "foldedBody": "Il CIRIS Accord (versione 1.3-RC2) e il CEG (versione 1.0-RC29) sono stati copiati parola per parola, poi intrecciati in un unico documento chiaro al presente. Ogni regola a livello di protocollo è conservata byte per byte. Un gruppo di verifiche avversariali ha giudicato la versione unificata più chiara di ciascuna fonte in 28 dei 29 capitoli.",
+    "foldedBody": "L'Accord (versione 1.3-RC2) e il CEG (versione 1.0-RC29) sono stati copiati parola per parola e uniti in un unico documento semplice scritto al presente. Ogni regola sul formato di trasmissione è mantenuta esattamente. Un gruppo di verifiche avversariali ha giudicato la versione unificata più chiara di ciascuna fonte in 28 capitoli su 29.",
     "partsLabel": "Le otto parti",
     "parts": [
       {
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Questa pagina è stata tradotta automaticamente.",
-      "body": "Se qualcosa non suona bene, apri una segnalazione. Il repository è pubblico per una ragione.",
+      "body": "Se qualcosa non suona bene, apri una segnalazione su GitHub. Il repository è pubblico così chiunque può aiutare a correggerlo.",
       "cta": "Segnala un problema di traduzione"
     },
     "nav": {
@@ -900,7 +900,7 @@
   "crowdsourcingAlignment": {
     "heroBadgeProto": "Proto safety.ciris.ai",
     "heroBadgeLanguages": "{count} lingue",
-    "heroH1": "Allineamento Crowdsourcing",
+    "heroH1": "Crowdsourcing dell'allineamento",
     "heroBody1": "CIRIS deve essere sicuro in molte lingue, non solo in inglese. Questa pagina permette a un madrelingua di aprire i file effettivi che l'agente usa nella propria lingua, leggerli sul posto e suggerire correzioni attraverso una segnalazione GitHub pre-compilata. Scegli una lingua per iniziare.",
     "heroBody2": "Lo diciamo apertamente: la revisione da parte di madrelingua dei casi più difficili che richiedono giudizio è l'obiettivo verso cui questa pagina è in costruzione. Quella revisione non è ancora attiva.",
     "heroBody3Html": "Ogni &quot;Visualizza inline&quot; recupera il file da <a href=\"https://github.com/CIRISAI/CIRISAgent\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">CIRISAI/CIRISAgent</a> su richiesta. Nessun contenuto viene duplicato qui; il repository GitHub è la fonte di verità.",
@@ -960,7 +960,7 @@
     "placeholderBody": "I prompt YAML sopra contengono token <code>{placeholder}</code> che vengono riempiti a runtime dall'agente. Un revisore che legge un prompt dovrebbe sapere con cosa verrà sostituito ogni segnaposto. I più comuni:",
     "placeholderColHeader1": "Segnaposto",
     "placeholderColHeader2": "Sorgente a runtime",
-    "placeholderRow1Source": "Costruito dal passo di raccolta contesto (GATHER_CONTEXT). Include il snapshot del sistema, i pensieri recenti, il profilo utente e i metadati del canale.",
+    "placeholderRow1Source": "Costruito dal passaggio di raccolta del contesto (GATHER_CONTEXT). Include lo snapshot del sistema, i pensieri recenti, il profilo utente e i metadati del canale.",
     "placeholderRow2Source": "Il pensiero in valutazione, preso dalla coda di elaborazione.",
     "placeholderRow3Source": "La motivazione dell'ASPDMA per l'azione candidata. Viene inserita nei prompt della coscienza.",
     "placeholderRow4Source": "Il frammento di guida dalle stringhe localizzate (<code>prompts.dma</code>) per il locale attivo.",
@@ -1245,7 +1245,7 @@
       "rwColMechanism": "Meccanismo",
       "rwColRuntime": "Runtime, non addestramento",
       "rwColCrypto": "Firma la decisione",
-      "rwColConstitution": "Costituzione runtime",
+      "rwColConstitution": "Costituzione applicata a runtime",
       "rwColFederated": "Verifica federata",
       "rwColConformance": "Conformità eseguibile",
       "rwColShipping": "In distribuzione",
@@ -1925,7 +1925,7 @@
     "cirisH2": "Scrivilo. Verificalo. Poi verifica chi verifica.",
     "cirisP1": "CIRIS è un sistema di IA costruito attorno al Ratchet di Coerenza. Ogni scelta che un agente compie viene scritta in un registro firmato. Il registro non può essere modificato in silenzio. Altri agenti possono leggere il registro e verificare il lavoro. Nel tempo, i registri si accumulano. Ogni nuovo registro è un piolo in più da cui l'agente non può tornare indietro.",
     "cirisP2": "CIRIS pone anche una seconda domanda prima di agire. Quante opinioni davvero diverse hanno esaminato questa idea? Non il numero di fonti, ma il numero di fonti che non sono partite dallo stesso punto. Cinque notizie che riscrivono un solo comunicato stampa contano come una sola visione, non cinque. Se qualcosa è sbagliato nel comunicato stampa, lo sarà in tutte e cinque le notizie, e l'agente non ha modo di accorgersene.",
-    "cirisP3": "Quando l'indipendenza reale scende troppo in basso, l'agente tratta il proprio ragionamento come fragile e chiede a una persona di guardare.",
+    "cirisP3": "Quando l'indipendenza reale scende troppo in basso, l'agente tratta il proprio pensiero come non ancora affidabile e chiede a una persona di controllare.",
     "claimH2": "Cosa affermiamo, e cosa no.",
     "claimP1": "Non abbiamo risolto la sicurezza dell'IA. Abbiamo costruito un pezzo di una risposta e lo stiamo testando in modo aperto.",
     "claimP2Html": "Squadre esterne non hanno ancora verificato il nostro lavoro. Lo diciamo chiaramente. La teoria completa e la matematica vivono nei nostri <a href=\"/papers\" class=\"text-brand-primary hover:underline\">quattro articoli</a>. Il codice è aperto. Se sbagliamo, anche il modo di dimostrarlo è aperto. <a href=\"/research-status\" class=\"text-brand-primary hover:underline\">Vedi lo stato attuale della ricerca.</a>",
@@ -1934,7 +1934,7 @@
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · si pronuncia come l'inglese “soup” (zuppa)",
     "headline": "Internet, ricostruito senza l’intermediario.",
-    "intro1": "CEWP è una sostituzione completa di internet. Tutto ciò che fai online oggi, streaming, videochiamate, gaming, file, messaggi e dichiarazioni firmate, instradato direttamente tra i dispositivi che le persone già possiedono, su una mesh cifrata post-quantistica. Nessun gigantesco data center nel mezzo. Nessuna manciata di aziende che possiede i tubi.",
+    "intro1": "CEWP è un sostituto completo di Internet. Tutto ciò che fai online oggi, streaming, videochiamate, gaming, file, messaggi e dichiarazioni firmate, instradato direttamente tra i dispositivi che le persone già possiedono, su una mesh cifrata post-quantistica. Nessun gigantesco data center nel mezzo. Nessuna manciata di aziende che possiede le connessioni.",
     "intro2": "L’intermediario di oggi costa circa 175 megatons di CO2 all’anno e consegna a cinque aziende sia i tuoi dati sia il potere di decidere cosa vedi. CEWP gira sull’hardware che hai già, non pubblicizza mai i tuoi contenuti locali al resto della rete, e si governa da solo: la rete decide tramite voti firmati e pesati, senza alcun proprietario della piattaforma nel mezzo.",
     "watchLabel": "Guarda la spiegazione di 7 minuti",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
