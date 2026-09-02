@@ -235,3 +235,4 @@ Keep them exactly, including any article the rendering carries.
 | Constitution | Конституция | The CIRIS Constitution, the governing document (replaces the Accord); also the /constitution nav label |
 | CIRIS Scoring | Оценка CIRIS | Product name of the scoring page; keep the CIRIS mark as is |
 | safety case | Обоснование безопасности | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
+| Constitutional AI | Constitutional AI | Anthropic's training method, a proper name: keep it in English exactly; it is NOT the CIRIS Constitution and the Constitution row does not apply to it |

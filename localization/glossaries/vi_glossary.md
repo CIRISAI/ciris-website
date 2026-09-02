@@ -197,3 +197,4 @@ Keep them exactly, including any article the rendering carries.
 | CIRIS Scoring | CIRIS Chấm điểm | Product name of the scoring page; keep the CIRIS mark as is |
 | safety case | Hồ sơ an toàn | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
 | Meta-Goal M-1 | Meta-Goal M-1 | The Constitution's top-level goal; M-1 is a label, keep it |
+| Constitutional AI | Constitutional AI | Anthropic's training method, a proper name: keep it in English exactly; it is NOT the CIRIS Constitution and the Constitution row does not apply to it |

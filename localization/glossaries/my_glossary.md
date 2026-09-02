@@ -163,6 +163,7 @@ Keep them exactly, including any article the rendering carries.
 | Constitution | ဖွဲ့စည်းပုံ | The CIRIS Constitution, the governing document (replaces the Accord); also the /constitution nav label |
 | CIRIS Scoring | CIRIS အမှတ်ပေးစနစ် | Product name of the scoring page; keep the CIRIS mark as is |
 | safety case | လုံခြုံရေးကိစ္စ | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
+| Constitutional AI | Constitutional AI | Anthropic's training method, a proper name: keep it in English exactly; it is NOT the CIRIS Constitution and the Constitution row does not apply to it |
 
 ## Cultural Considerations
 
