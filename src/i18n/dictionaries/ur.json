@@ -1376,13 +1376,13 @@
     "tryCirisCta": "Scout پریویو ایجنٹ آزمائیں →",
     "mobileHeading": "CIRIS موبائل ایپس",
     "mobileAvailableBadge": "ابھی دستیاب",
-    "mobilePara": "آپ کا ذاتی قابل جانچ AI ایجنٹ، اب موبائل پر۔ نجی، مقامی اولیت، اور مکمل اوپن سورس۔",
+    "mobilePara": "آپ کا ذاتی قابل جانچ AI ایجنٹ، اب موبائل پر۔ نجی، لوکل فرسٹ، اور مکمل اوپن سورس۔",
     "appStoreLabel": "App Store",
     "googlePlayLabel": "Google Play",
     "mobileSourceLink": "GitHub پر سورس سے بنائیں",
     "mobileSourcePre": "یا",
     "heroHeading": "CIRIS ہوسٹڈ سروسز",
-    "heroSub": "CIRIS موبائل ایپس کے لیے نجیت پر مبنی LLM پراکسی اور بلنگ سروسز",
+    "heroSub": "CIRIS موبائل ایپس کے لیے رازداری پر مبنی LLM پراکسی اور بلنگ سروسز",
     "heroNote": "نوٹ: CIRIS LLM پراکسی iPhone اور Android پر CIRIS ایپس کے ساتھ استعمال کے لیے ہے",
     "privacyHeading": "صفر ڈیٹا برقراری",
     "privacyPara": "CIRISProxy ایک بلنگ اور تصدیقی گیٹ وے کے طور پر کام کرتا ہے اور آپ کی LLM گفتگو کا مواد کبھی لاگ یا محفوظ نہیں کرتا۔",
@@ -1396,7 +1396,7 @@
     "privacyNoLog2": "معاون کے جوابات",
     "privacyNoLog3": "سسٹم پرامپٹ",
     "privacyNoLog4": "کوئی بھی پیغام کا مواد",
-    "pricingHeading": "سادہ، شفاف قیمت",
+    "pricingHeading": "سادہ، شفاف قیمتوں کا نظام",
     "pricingUnit": "فی تعامل",
     "pricingNote": "1 تعامل = 1 سیشن (زیادہ سے زیادہ 7 پروسیسنگ راؤنڈ)۔ قیمت اصل لاگت کے مطابق ایڈجسٹ کی گئی۔",
     "pricingStripeHtml": "<strong>Stripe کے ذریعے کریڈٹ خریدیں:</strong> اپنے اکاؤنٹ میں کریڈٹ شامل کرنے کے لیے <a href=\"https://scout.ciris.ai/billing\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-purple-600 hover:underline dark:text-purple-400\">scout.ciris.ai/billing</a> میں لاگ ان کریں۔ Stripe کے ذریعے ادائیگی کی پروسیسنگ۔",
@@ -1428,7 +1428,7 @@
     "techDetail3Item3": "دیگر OpenAI سے مطابقت رکھنے والے فراہم کنندگان",
     "ctaPara": "شروع کرنے کے لیے تیار ہیں؟",
     "ctaBtn": "CIRIS Agent انسٹال کریں",
-    "kicker": "میزبان CIRIS"
+    "kicker": "ہوسٹڈ CIRIS"
   },
   "federation": {
     "shell": {

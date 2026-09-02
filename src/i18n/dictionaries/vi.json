@@ -1373,7 +1373,7 @@
   "services": {
     "tryCirisHeading": "Thử CIRIS Ngay",
     "tryCirisPara": "Trải nghiệm CIRIS mà không cần cài đặt bất cứ thứ gì. Đăng nhập vào tác nhân xem trước được lưu trữ của chúng tôi và thử ngay lập tức.",
-    "tryCirisCta": "Thử Tác Nhân Xem Trước Scout →",
+    "tryCirisCta": "Thử Scout Preview Agent →",
     "mobileHeading": "Ứng Dụng Di Động CIRIS",
     "mobileAvailableBadge": "CÓ SẴN NGAY",
     "mobilePara": "Tác nhân AI cá nhân có thể kiểm toán của bạn, nay trên di động. Riêng tư, ưu tiên lưu trữ cục bộ và hoàn toàn mã nguồn mở.",
@@ -1383,7 +1383,7 @@
     "mobileSourcePre": "Hoặc",
     "heroHeading": "Dịch Vụ Lưu Trữ CIRIS",
     "heroSub": "Dịch vụ proxy LLM và thanh toán tập trung vào quyền riêng tư cho ứng dụng di động CIRIS",
-    "heroNote": "Lưu ý: CIRISProxy LLM chỉ dùng với ứng dụng CIRIS trên iPhone và Android",
+    "heroNote": "Lưu ý: Proxy LLM CIRIS chỉ dùng với các ứng dụng CIRIS trên iPhone và Android",
     "privacyHeading": "Không Lưu Trữ Dữ Liệu",
     "privacyPara": "CIRISProxy hoạt động như một cổng thanh toán và xác thực mà không bao giờ ghi nhật ký hoặc lưu trữ nội dung hội thoại LLM của bạn.",
     "privacyLogLabel": "Những gì chúng tôi GHI NHẬT KÝ:",
@@ -2819,11 +2819,11 @@
       ]
     },
     "superalignment": {
-      "kicker": "Kiểm Soát Siêu AI",
+      "kicker": "Siêu Căn Chỉnh",
       "accent": "violet",
-      "metaTitle": "Kiểm soát siêu AI như một thuộc tính của mạng lưới",
-      "metaDesc": "Đưa một AI vào mạng có trách nhiệm mật mã và mọi hành động nó thực hiện đều được ký số. Giữ cho nó trung thực không còn là chính sách của phòng lab mà là điều mạng lưới bảo đảm.",
-      "h1": "AI đang vượt khỏi tầm kiểm soát của bất kỳ ai.",
+      "metaTitle": "Siêu căn chỉnh như một thuộc tính của mạng lưới",
+      "metaDesc": "Đưa một tác nhân AI vào một mạng lưới có thể truy cứu trách nhiệm bằng mật mã và mọi hành động nó thực hiện đều được ký số. Giữ cho nó trung thực không còn là chính sách của phòng lab mà trở thành điều mạng lưới thực thi.",
+      "h1": "AI đang chạy nhanh hơn bất kỳ ai chịu trách nhiệm về nó.",
       "steps": [
         "Chúng ta đang xây dựng những trí tuệ mà chúng ta không thể kiểm tra. Chúng bị chi phối bởi các quy tắc mà một công ty có thể viết lại, trong các hệ thống mà không ai bên ngoài công ty đó có thể thấy. Chúng ta được yêu cầu tin vào phòng lab.",
         "CIRIS đưa AI vào một mạng nơi mọi hành động nó thực hiện đều là một bản ghi được ký số. Một người, một AI, và một tổ chức đều mang cùng một loại danh tính, và tất cả đều phải chịu trách nhiệm theo cùng một chuẩn.",
@@ -2853,7 +2853,7 @@
       "kicker": "Thông Tin Sai Lệch",
       "accent": "rose",
       "metaTitle": "Web có bằng chứng: tự kiểm tra điều gì là thật",
-      "metaDesc": "Trên CIRIS mọi thông tin quan trọng đều được ký số khi truyền đi: ai nói, dựa trên gì, và ai đồng ý, đính chính hay thay thế nó. Bạn không còn phải đoán nên tin ai.",
+      "metaDesc": "Trên CIRIS mọi tuyên bố quan trọng đều được ký số khi truyền đi: ai nói, dựa trên gì, và ai đồng ý, đính chính hay thay thế nó. Bạn không còn phải đoán nên tin ai và bắt đầu kiểm tra.",
       "h1": "Bạn không còn biết điều gì là thật nữa.",
       "steps": [
         "Bạn thấy một bài đăng, một giá cả, một thông tin. Bạn không thể thấy ai thực sự đứng sau nó, nó dựa trên gì, hay ai đã phản bác. Niềm tin đã trở thành việc tung đồng xu.",

@@ -1379,12 +1379,12 @@
     "mobilePara": "ਤੁਹਾਡਾ ਨਿੱਜੀ ਆਡਿਟਯੋਗ AI ਏਜੰਟ, ਹੁਣ ਮੋਬਾਈਲ 'ਤੇ। ਪ੍ਰਾਈਵੇਟ, ਸਥਾਨਕ-ਪਹਿਲਾਂ, ਅਤੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਖੁੱਲ੍ਹਾ ਸਰੋਤ।",
     "appStoreLabel": "App Store",
     "googlePlayLabel": "Google Play",
-    "mobileSourceLink": "GitHub ਤੋਂ ਸਰੋਤ ਬਣਾਓ",
+    "mobileSourceLink": "GitHub 'ਤੇ ਸਰੋਤ ਕੋਡ ਤੋਂ ਬਿਲਡ ਕਰੋ",
     "mobileSourcePre": "ਜਾਂ",
     "heroHeading": "CIRIS ਹੋਸਟਡ ਸੇਵਾਵਾਂ",
     "heroSub": "CIRIS ਮੋਬਾਈਲ ਐਪਸ ਲਈ ਪ੍ਰਾਈਵੇਸੀ-ਕੇਂਦਰਿਤ LLM ਪ੍ਰੌਕਸੀ ਅਤੇ ਬਿਲਿੰਗ ਸੇਵਾਵਾਂ",
     "heroNote": "ਨੋਟ: CIRIS LLM ਪ੍ਰੌਕਸੀ iPhone ਅਤੇ Android 'ਤੇ CIRIS ਐਪਸ ਨਾਲ ਵਰਤੋਂ ਲਈ ਹੈ",
-    "privacyHeading": "ਜ਼ੀਰੋ ਡੇਟਾ ਰੱਖਿਆ",
+    "privacyHeading": "ਜ਼ੀਰੋ ਡੇਟਾ ਰਿਟੈਂਸ਼ਨ",
     "privacyPara": "CIRISProxy ਤੁਹਾਡੀ LLM ਗੱਲਬਾਤ ਸਮੱਗਰੀ ਨੂੰ ਕਦੇ ਲੌਗ ਜਾਂ ਸਟੋਰ ਕੀਤੇ ਬਿਨਾਂ ਬਿਲਿੰਗ ਅਤੇ ਪ੍ਰਮਾਣਿਕਤਾ ਗੇਟਵੇ ਵਜੋਂ ਕੰਮ ਕਰਦਾ ਹੈ।",
     "privacyLogLabel": "ਅਸੀਂ ਕੀ ਲੌਗ ਕਰਦੇ ਹਾਂ:",
     "privacyLog1": "HTTP ਸਟੇਟਸ ਕੋਡ (200, 401, 503)",
@@ -1418,7 +1418,7 @@
     "priority3Sub": "$0.10/ਇੰਟਰਐਕਸ਼ਨ • ਮੁਫ਼ਤ ਕ੍ਰੈਡਿਟ ਤੋਂ ਬਾਅਦ ਹੀ ਵਰਤੇ ਜਾਂਦੇ ਹਨ",
     "techHeading": "ਤਕਨੀਕੀ ਵੇਰਵੇ",
     "techDetail1Summary": "API ਅੰਤ ਬਿੰਦੂ",
-    "techDetail1Para": "CIRIS Agent ਲਈ OpenAI-ਅਨੁਕੂਲ API ਅੰਤ ਬਿੰਦੂ",
+    "techDetail1Para": "CIRIS ਏਜੰਟ ਲਈ OpenAI-ਅਨੁਕੂਲ API ਅੰਤ ਬਿੰਦੂ",
     "techDetail2Summary": "ਪ੍ਰਮਾਣਿਕਤਾ",
     "techDetail2Para": "Authorization ਹੈੱਡਰ ਰਾਹੀਂ API ਕੀ ਪ੍ਰਮਾਣਿਕਤਾ:",
     "techDetail3Summary": "ਸਮਰਥਿਤ ਮਾਡਲ",
@@ -1427,7 +1427,7 @@
     "techDetail3Item2": "OpenAI (GPT ਮਾਡਲ)",
     "techDetail3Item3": "ਹੋਰ OpenAI-ਅਨੁਕੂਲ ਪ੍ਰੋਵਾਈਡਰ",
     "ctaPara": "ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ ਹੋ?",
-    "ctaBtn": "CIRIS Agent ਇੰਸਟਾਲ ਕਰੋ",
+    "ctaBtn": "CIRIS ਏਜੰਟ ਇੰਸਟਾਲ ਕਰੋ",
     "kicker": "ਹੋਸਟ ਕੀਤਾ CIRIS"
   },
   "federation": {
@@ -2819,7 +2819,7 @@
       ]
     },
     "superalignment": {
-      "kicker": "Superalignment",
+      "kicker": "ਸੁਪਰਅਲਾਈਨਮੈਂਟ",
       "accent": "violet",
       "metaTitle": "ਨੈੱਟਵਰਕ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਵਜੋਂ ਸੁਪਰਅਲਾਈਨਮੈਂਟ",
       "metaDesc": "AI ਏਜੰਟ ਨੂੰ ਕ੍ਰਿਪਟੋਗ੍ਰਾਫ਼ਿਕ ਤੌਰ ਤੇ ਜਵਾਬਦੇਹ ਨੈੱਟਵਰਕ ਵਿੱਚ ਰੱਖੋ ਅਤੇ ਇਸ ਦੇ ਹਰ ਕਦਮ ਉੱਤੇ ਦਸਤਖ਼ਤ ਹੋਣਗੇ। ਇਸ ਨੂੰ ਇਮਾਨਦਾਰ ਰੱਖਣਾ ਲੈਬ ਦੀ ਨੀਤੀ ਨਹੀਂ ਰਹਿੰਦਾ, ਇਹ ਕੁਝ ਅਜਿਹਾ ਬਣ ਜਾਂਦਾ ਹੈ ਜੋ ਨੈੱਟਵਰਕ ਲਾਗੂ ਕਰਦਾ ਹੈ।",
@@ -2850,7 +2850,7 @@
       ]
     },
     "misinformation": {
-      "kicker": "Misinformation",
+      "kicker": "ਗਲਤ ਜਾਣਕਾਰੀ",
       "accent": "rose",
       "metaTitle": "ਸਬੂਤਾਂ ਵਾਲਾ ਵੈੱਬ: ਖ਼ੁਦ ਜਾਂਚੋ ਕੀ ਸੱਚ ਹੈ",
       "metaDesc": "CIRIS ਤੇ ਹਰ ਜ਼ਰੂਰੀ ਦਾਅਵਾ ਦਸਤਖ਼ਤ ਕੀਤਾ ਆਉਂਦਾ ਹੈ: ਕਿਸਨੇ ਕਿਹਾ, ਕਿਸ ਆਧਾਰ ਤੇ, ਅਤੇ ਕਿਸਨੇ ਸਹਿਮਤੀ, ਸੁਧਾਰ ਜਾਂ ਬਦਲਾਅ ਕੀਤਾ। ਤੁਸੀਂ ਭਰੋਸੇ ਦਾ ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ ਛੱਡ ਕੇ ਖ਼ੁਦ ਜਾਂਚਣਾ ਸ਼ੁਰੂ ਕਰਦੇ ਹੋ।",

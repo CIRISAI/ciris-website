@@ -1373,7 +1373,7 @@
   "services": {
     "tryCirisHeading": "立即体验CIRIS",
     "tryCirisPara": "无需安装即可体验CIRIS。登录我们托管的预览智能体，立刻试用。",
-    "tryCirisCta": "试用Scout预览智能体 →",
+    "tryCirisCta": "试用 Scout 预览智能体 →",
     "mobileHeading": "CIRIS移动应用",
     "mobileAvailableBadge": "NOW AVAILABLE",
     "mobilePara": "您的个人可审计AI智能体，现已登陆移动端。私密、本地优先，完全开源。",
@@ -1427,7 +1427,7 @@
     "techDetail3Item2": "OpenAI（GPT系列模型）",
     "techDetail3Item3": "其他OpenAI兼容提供商",
     "ctaPara": "准备好开始了吗？",
-    "ctaBtn": "安装CIRIS Agent",
+    "ctaBtn": "安装 CIRIS 智能体",
     "kicker": "托管 CIRIS"
   },
   "federation": {
@@ -2853,8 +2853,8 @@
       "kicker": "错误信息",
       "accent": "rose",
       "metaTitle": "带有凭证的网络：自己核实什么是真的",
-      "metaDesc": "在 CIRIS 上，每一个重要的说法都带着签名传递：谁说的、依据是什么、谁同意、谁纠正或谁替换了它。你不用再猜该信任谁，可以自己去查。",
-      "h1": "你再也分不清什么是真的了。",
+      "metaDesc": "在 CIRIS 上，每一个重要的说法都带着签名传递：谁说的、依据是什么、谁同意、谁纠正或谁替换了它。您不用再猜该信任谁，而是可以自己去核查。",
+      "h1": "您再也分不清什么是真的了。",
       "steps": [
         "你看到一篇帖子、一个价格、一个说法。你看不到背后真正是谁，它的依据是什么，有没有人提出质疑。信任变成了一次猜硬币。",
         "在 CIRIS 上，每一个重要的说法都带着签名传递。不是平台颁发的认证标志，而是一条你自己可以核查的签名链：谁说的、依据是什么、谁同意、谁纠正或谁替换了它。",

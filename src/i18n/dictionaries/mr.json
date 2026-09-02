@@ -1401,13 +1401,13 @@
     "pricingNote": "1 interaction = 1 session (7 processing rounds पर्यंत). प्रत्यक्ष खर्चानुसार किंमत.",
     "pricingStripeHtml": "<strong>Stripe द्वारे credits खरेदी करा:</strong> तुमच्या account मध्ये credits जोडण्यासाठी <a href=\"https://scout.ciris.ai/billing\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-purple-600 hover:underline dark:text-purple-400\">scout.ciris.ai/billing</a> वर log in करा. Stripe द्वारे payment processing.",
     "billingHeadline": "Billing कसे काम करते",
-    "billingSubheadline": "पारदर्शक, subscription नसलेले pay-as-you-go pricing.",
+    "billingSubheadline": "सबस्क्रिप्शन नसलेले, वापरानुसार पैसे देण्याचे पारदर्शक दर.",
     "billingCard1Headline": "रोजचे मोफत वापर",
-    "billingCard1Copy": "दररोज 2 मोफत API calls, midnight UTC ला आपोआप reset. Casual वापर आणि testing साठी उत्तम.",
+    "billingCard1Copy": "दररोज 2 मोफत API कॉल, मध्यरात्री UTC ला आपोआप रीसेट होतात. सामान्य वापर आणि चाचणीसाठी उत्तम.",
     "billingCard2Headline": "मोफत Trial Credits",
     "billingCard2Copy": "Google OAuth वापरकर्त्यांना CIRIS वापरून पाहण्यासाठी 3 मोफत interaction credits मिळतात. रोजचे मोफत वापर संपल्यानंतर हे वापरले जातात.",
     "billingCard3Headline": "Stripe द्वारे Paid Credits",
-    "billingCard3Copy": "Stripe द्वारे सुरक्षितपणे credits खरेदी करा. $0.10/interaction. रोजचे मोफत आणि trial credits संपल्यावरच charge होतो.",
+    "billingCard3Copy": "Stripe द्वारे सुरक्षितपणे क्रेडिट्स खरेदी करा. $0.10/interaction. रोजचे मोफत आणि ट्रायल क्रेडिट्स संपल्यावरच शुल्क आकारले जाते.",
     "priorityHeading": "Credit वापराचा क्रम",
     "priorityPara": "CIRIS तुमचे मोफत वापर जास्तीत जास्त करण्यासाठी नेहमी या क्रमाने credits वापरतो:",
     "priority1Label": "रोजचे मोफत वापर",
@@ -1427,7 +1427,7 @@
     "techDetail3Item2": "OpenAI (GPT मॉडेल्स)",
     "techDetail3Item3": "इतर OpenAI-compatible providers",
     "ctaPara": "सुरू करायला तयार आहात?",
-    "ctaBtn": "CIRIS Agent Install करा",
+    "ctaBtn": "CIRIS एजंट स्थापित करा",
     "kicker": "होस्ट केलेले CIRIS"
   },
   "federation": {
@@ -2850,7 +2850,7 @@
       ]
     },
     "misinformation": {
-      "kicker": "Misinformation",
+      "kicker": "गैरमाहिती",
       "accent": "rose",
       "metaTitle": "पावत्या असलेले वेब: स्वतः काय खरे आहे ते तपासा",
       "metaDesc": "CIRIS वर महत्त्वाचा प्रत्येक दावा सही केलेला प्रवास करतो: कोणी सांगितले, ते कशावर आधारले, आणि कोणी सहमती दाखवली, दुरुस्त केले किंवा बदलले. तुम्ही कोणावर विश्वास ठेवायचा याचा अंदाज करणे बंद होते आणि तपासणे सुरू होते.",

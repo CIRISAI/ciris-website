@@ -1374,7 +1374,7 @@
     "tryCirisHeading": "CIRIS ကို ယခုစမ်းကြည့်ပါ",
     "tryCirisPara": "ဘာမှမတပ်ဆင်ဘဲ CIRIS ကို ကြည့်ရှုနိုင်သည်။ ကျွန်တော်တို့၏ hosted preview agent သို့ ဝင်ရောက်ပြီး ချက်ချင်းစမ်းကြည့်ပါ။",
     "tryCirisCta": "Scout Preview Agent ကို စမ်းကြည့်ပါ →",
-    "mobileHeading": "CIRIS မိုဘိုင်းဂဲပလီကေးရှင်းများ",
+    "mobileHeading": "CIRIS မိုဘိုင်း App များ",
     "mobileAvailableBadge": "ယခုရရှိနိုင်ပြီ",
     "mobilePara": "သင်၏ ကိုယ်ပိုင် auditable AI အေးဂျင့်၊ ယခု မိုဘိုင်းတွင်ပါ။ ပုဂ္ဂလိကနှင့် local-first, ပြည့်ပြည့်ဝဝ open source။",
     "appStoreLabel": "App Store",
@@ -1382,8 +1382,8 @@
     "mobileSourceLink": "GitHub မှ source ကနေ build လုပ်ပါ",
     "mobileSourcePre": "သို့မဟုတ်",
     "heroHeading": "CIRIS Hosted ဝန်ဆောင်မှုများ",
-    "heroSub": "CIRIS မိုဘိုင်းဂဲပလီကေးရှင်းများအတွက် ကိုယ်ရေးကိုယ်တာကာကွယ်ပေးသော LLM proxy နှင့် billing ဝန်ဆောင်မှုများ",
-    "heroNote": "မှတ်ချက်: CIRIS LLM proxy သည် iPhone နှင့် Android ပေါ်ရှိ CIRIS ဂဲပလီကေးရှင်းများနှင့်သာ အသုံးပြုရန်ဖြစ်သည်",
+    "heroSub": "CIRIS မိုဘိုင်း app များအတွက် ကိုယ်ရေးကိုယ်တာကာကွယ်ပေးသော LLM proxy နှင့် billing ဝန်ဆောင်မှုများ",
+    "heroNote": "မှတ်ချက်: CIRIS LLM proxy သည် iPhone နှင့် Android ပေါ်ရှိ CIRIS app များနှင့် အသုံးပြုရန်ဖြစ်သည်",
     "privacyHeading": "ဒေတာ မသိမ်းဆည်းပါ",
     "privacyPara": "CIRISProxy သည် သင်၏ LLM စကားဝိုင်းအကြောင်းအရာကို ဘယ်တော့မမှတ်တမ်းတင်ဘဲ သို့မဟုတ် မသိမ်းဆည်းဘဲ billing နှင့် authentication gateway အဖြစ် ဆောင်ရွက်သည်။",
     "privacyLogLabel": "ကျွန်တော်တို့ မှတ်တမ်းတင်သည်:",
@@ -1409,7 +1409,7 @@
     "billingCard3Headline": "Stripe မှတဆင့် ပေးချေသော Credit များ",
     "billingCard3Copy": "Stripe မှတဆင့် လုံခြုံစိတ်ချစွာ credit ဝယ်ပါ။ interaction တစ်ခုလျှင် $0.10။ နေ့စဉ်အခမဲ့နှင့် trial credit ကုန်ဆုံးသောနောက်မှသာ ကောက်ခံသည်။",
     "priorityHeading": "Credit အသုံးပြုသောဦးစားပေးအစဉ်",
-    "priorityPara": "CIRIS သည် သင်၏ အခမဲ့အသုံးများကို အများဆုံးဖြစ်အောင် credit များကို ဤအစဉ်အတိုင်း သုံးသည်:",
+    "priorityPara": "CIRIS သည် သင်၏ အခမဲ့အသုံးပြုမှုကို အများဆုံးရရှိစေရန် သင့် credit များကို ဤအစဉ်အတိုင်း အမြဲအသုံးပြုသည်:",
     "priority1Label": "နေ့စဉ် အခမဲ့အသုံးများ",
     "priority1Sub": "နေ့တိုင်း ပြန်သတ်မှတ်",
     "priority2Label": "အခမဲ့ Trial Credit များ",
@@ -1417,7 +1417,7 @@
     "priority3Label": "ပေးချေသော Credit များ (Stripe)",
     "priority3Sub": "interaction တစ်ခုလျှင် $0.10 • အခမဲ့ credit ကုန်ဆုံးမှသာ သုံးသည်",
     "techHeading": "နည်းပညာဆိုင်ရာ အသေးစိတ်",
-    "techDetail1Summary": "API ချိတ်ဆက်မှတ်",
+    "techDetail1Summary": "API Endpoint",
     "techDetail1Para": "CIRIS Agent အတွက် OpenAI-compatible API endpoint",
     "techDetail2Summary": "စစ်မှန်ကြောင်းအတည်ပြုမှု",
     "techDetail2Para": "Authorization header မှတဆင့် API key စစ်မှန်ကြောင်းအတည်ပြုမှု:",
@@ -1428,7 +1428,7 @@
     "techDetail3Item3": "OpenAI-compatible ဝန်ဆောင်မှုပေးသူများ",
     "ctaPara": "စတင်ရန် အဆင်သင့်ဖြစ်ပြီလား?",
     "ctaBtn": "CIRIS Agent ကို တပ်ဆင်ပါ",
-    "kicker": "CIRIS အင်တာနက်မှတဆင့်"
+    "kicker": "Hosted CIRIS"
   },
   "federation": {
     "shell": {
@@ -2822,8 +2822,8 @@
       "kicker": "Superalignment",
       "accent": "violet",
       "metaTitle": "Network ရဲ့ ဂုဏ်သတ္တိအဖြစ် Superalignment",
-      "metaDesc": "AI agent ကို လက်မှတ်တင်ပြနိုင်တဲ့ network ထဲ ထည့်ပြီး သူလုပ်တဲ့ ကြိုးပမ်းမှုတိုင်းကို မှတ်တမ်းတင်ပါ။ AI ကို ရိုးသားအောင် ထိမ်းသိမ်းတာဟာ lab ပေါ်လစီမဟုတ်တော့ဘဲ network က တင်းကြပ်သည်။",
-      "h1": "AI ဟာ တာဝန်ကျနိုင်သူ မဆုံးနိုင်အောင် ရှိနေသည်။",
+      "metaDesc": "AI အေးဂျင့်တစ်ခုကို လျှို့ဝှက်နည်းပညာဖြင့် တာဝန်ခံနိုင်မှုရှိသော network ထဲ ထည့်သွင်းလိုက်ပါက ၎င်းလုပ်ဆောင်သည့် လုပ်ဆောင်ချက်တိုင်းကို လက်မှတ်ထိုးထားသည်။ ၎င်းကို ရိုးသားအောင် ထိန်းသိမ်းခြင်းသည် lab မူဝါဒတစ်ခု မဟုတ်တော့ဘဲ network က ကျင့်သုံးစေသည့် အရာတစ်ခု ဖြစ်လာသည်။",
+      "h1": "AI သည် ၎င်းအတွက် တာဝန်ခံမည့်သူ မည်သူမဆိုထက် ပိုမိုမြန်ဆန်နေသည်။",
       "steps": [
         "ကျွန်တော်တို့ စစ်ဆေးမရနိုင်တဲ့ စိတ်တွေ တည်ဆောက်နေသည်။ ကုမ္ပဏီတစ်ခုတည်း ပြန်ရေးနိုင်တဲ့ စည်းမျဉ်းတွေနဲ့ ထောင်ချောက်ချထားသည်၊ ကုမ္ပဏီပြင်ဘက်မှ ဘယ်သူမှ မမြင်နိုင်တဲ့ စနစ်တွေထဲမှာ ရှိသည်။ lab ကို ယုံကြည်ဖို့ ကျွန်တော်တို့ကို တောင်းဆိုသည်။",
         "CIRIS ဟာ AI ကို network တစ်ခုထဲ ထည့်ပြီး သူလုပ်တဲ့ ကြိုးပမ်းမှုတိုင်းဟာ လက်မှတ်ထိုးထားတဲ့ မှတ်တမ်းဖြစ်သည်။ လူတစ်ဦး၊ AI တစ်ခု နှင့် အဖွဲ့အစည်းတစ်ခုဟာ တူညီသော identity အမျိုးအစားကို ဆောင်ကြပြီး အားလုံး တူညီသောတာဝန်ကို ခံယူသည်။",

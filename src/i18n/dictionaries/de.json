@@ -1384,7 +1384,7 @@
     "heroHeading": "CIRIS Hosted Services",
     "heroSub": "Datenschutzorientierter LLM-Proxy und Abrechnungsdienste für die CIRIS Mobile Apps",
     "heroNote": "Hinweis: Der CIRIS LLM-Proxy ist für die Verwendung mit den CIRIS Apps auf iPhone und Android gedacht",
-    "privacyHeading": "Null Datenspeicherung",
+    "privacyHeading": "Keine Datenspeicherung",
     "privacyPara": "CIRISProxy fungiert als Abrechnungs- und Authentifizierungsgateway, ohne jemals Ihre LLM-Gesprächsinhalte zu protokollieren oder zu speichern.",
     "privacyLogLabel": "Was wir PROTOKOLLIEREN:",
     "privacyLog1": "HTTP-Statuscodes (200, 401, 503)",
@@ -2823,7 +2823,7 @@
       "accent": "violet",
       "metaTitle": "Superalignment als Eigenschaft des Netzwerks",
       "metaDesc": "Stell einen KI-Agenten in ein kryptografisch verantwortliches Netzwerk, und jede Handlung ist signiert. Ehrlichkeit ist dann keine Laborrichtlinie mehr, sondern etwas, das das Netzwerk durchsetzt.",
-      "h1": "KI wächst schneller als jede Kontrolle.",
+      "h1": "KI ist schneller als alle, die für sie verantwortlich sind.",
       "steps": [
         "Wir bauen Köpfe, die wir nicht prüfen können. Sie werden von Regeln gesteuert, die eine einzige Firma neu schreiben kann, in Systemen, die niemand außerhalb dieser Firma sehen kann. Man bittet uns, dem Labor zu vertrauen.",
         "CIRIS stellt die KI in ein Netzwerk, in dem jede Handlung ein signierter Eintrag ist. Eine Person, eine KI und eine Organisation tragen alle dieselbe Art von Identität und werden alle gleich zur Verantwortung gezogen.",
@@ -2850,10 +2850,10 @@
       ]
     },
     "misinformation": {
-      "kicker": "Misinformation",
+      "kicker": "Falschinformationen",
       "accent": "rose",
       "metaTitle": "Das Web mit Belegen: selbst prüfen, was stimmt",
-      "metaDesc": "Auf CIRIS trägt jede wichtige Aussage ihre Signatur: wer sie gemacht hat, worauf sie beruht, und wer ihr zugestimmt, sie korrigiert oder ersetzt hat. Du hörst auf zu raten, wem du vertraust.",
+      "metaDesc": "Auf CIRIS trägt jede wichtige Aussage ihre Signatur: wer sie gemacht hat, worauf sie beruht, und wer ihr zugestimmt, sie korrigiert oder ersetzt hat. Du hörst auf zu raten, wem du vertraust, und fängst an zu prüfen.",
       "h1": "Du kannst nicht mehr sagen, was stimmt.",
       "steps": [
         "Du siehst einen Beitrag, einen Preis, eine Behauptung. Du kannst nicht sehen, wer wirklich dahintersteckt, worauf sie beruht, oder wer widersprochen hat. Vertrauen ist zum Münzwurf geworden.",
