@@ -154,7 +154,7 @@
       "stat2Label": "Verificación de intuición (IDMA)",
       "stat3Value": "100%",
       "stat3Label": "Decisiones auditables",
-      "useCasesBody": "<strong>Casos de uso:</strong> Moderación de comunidades, asistentes personales, automatización de cumplimiento normativo, evaluación de investigaciones, atención al cliente. En cualquier lugar donde necesites una IA que pueda explicar su razonamiento y deferir a personas en casos límite.",
+      "useCasesBody": "<strong>Casos de uso:</strong> Moderación de comunidades, asistentes personales, automatización de cumplimiento normativo, evaluación de investigaciones, atención al cliente. En cualquier lugar donde necesites una IA que pueda explicar su razonamiento y derivar los casos difíciles a una persona.",
       "link1": "¿Por qué este enfoque? →",
       "link2": "Leer la Constitución →",
       "link3": "Ver código fuente →"
@@ -349,7 +349,7 @@
       "observerBadge": "OBSERVER",
       "observerTitle": "Humano sobre el bucle",
       "observerBody": "Acceso de solo lectura. Puede enviar mensajes. Monitorea sin intervención.",
-      "deferralHeading": "Cuándo se activa el DEFER",
+      "deferralHeading": "Cuando el agente consulta a una persona de confianza",
       "deferralLead": "El agente escala de forma autónoma a supervisión humana cuando:",
       "wbdTitle": "Deferencia basada en sabiduría (WBD)",
       "wbdItems": [
@@ -528,7 +528,7 @@
       ]
     },
     "cta": {
-      "body": "Esta es la responsabilidad que opera mientras el agente trabaja, no un paso de entrenamiento ni un documento de política.<br />Mecanismos que actúan, mantienen registros y entregan las decisiones difíciles a personas, en tiempo de ejecución.",
+      "body": "Esta es la responsabilidad que opera mientras el agente trabaja, no un paso del entrenamiento ni un documento de políticas.<br />Mecanismos que actúan, mantienen registros y entregan las decisiones difíciles a personas, en tiempo de ejecución.",
       "safetyBtn": "Características de seguridad",
       "compareBtn": "Comparar enfoques",
       "coherenceBtn": "Trinquete de Coherencia",
@@ -1856,7 +1856,7 @@
     "caseArchLi2": "Más de 200 endpoints de API verificados",
     "caseArchLi3": "Un amplio conjunto de pruebas, medido por el entorno de pruebas en lugar de afirmado aquí, con un uso mínimo de estructuras de datos sin tipo en producción",
     "caseArchLi4Html": "<a href=\"/vision\" class=\"text-brand-primary hover:underline\">Filosofía Ubuntu</a> integrada en el diseño de protocolos",
-    "caseArchLi5Html": "Deferencia basada en sabiduría que previene violaciones de la misión (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">ver Seguridad</a>)",
+    "caseArchLi5Html": "Entregar decisiones inciertas a personas de confianza (deferencia basada en sabiduría) previene violaciones de la misión (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">ver Seguridad</a>)",
     "caseArchLi6": "Despliegue en producción moderando comunidades de Discord",
     "caseSuccessH3": "Factores clave de éxito",
     "caseSuccessLi1": "Meta-objetivo claro: M-1 proporciona criterios de decisión sin ambigüedad",

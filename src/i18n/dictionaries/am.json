@@ -154,7 +154,7 @@
       "stat2Label": "የማሰብ ፍተሻ (IDMA)",
       "stat3Value": "100%",
       "stat3Label": "ሊዳሰሱ የሚችሉ ውሳኔዎች",
-      "useCasesBody": "<strong>የአጠቃቀም ሁኔታዎች፡</strong> የማህበረሰብ ቅን-ነት ቁጥጥር፣ የግል ረዳቶች፣ የህጋዊ ተፈጻሚነት አውቶሜሽን፣ የምርምር ግምገማ፣ የደንበኛ አገልግሎት። AI ምክንያቱን ሊያስረዳ እና በድንበር ሁኔታዎች ለሰዎች ሊያስተላልፍ የሚያስፈልግ ማናቸውም ቦታ።",
+      "useCasesBody": "<strong>የአጠቃቀም ሁኔታዎች፡</strong> የማህበረሰብ ቁጥጥር፣ የግል ረዳቶች፣ የህጋዊ ተፈጻሚነት አውቶሜሽን፣ የምርምር ግምገማ፣ የደንበኛ አገልግሎት። AI ምክንያቱን ሊያስረዳ እና ከባድ ጉዳዮችን ለሰዎች ሊያስተላልፍ የሚያስፈልግ ማናቸውም ቦታ።",
       "link1": "ይህ አቀራረብ ለምን? →",
       "link2": "ሕገ መንግስቱን ያንብቡ →",
       "link3": "ምንጭ ኮድ ይመልከቱ →"
@@ -349,7 +349,7 @@
       "observerBadge": "OBSERVER",
       "observerTitle": "በሂደቱ ላይ ያለ ሰው",
       "observerBody": "ለማንበብ ብቻ ፍቃድ። መልዕክቶችን ሊልኩ ይችላሉ። ጣልቃ ሳይገቡ ይከታተላሉ።",
-      "deferralHeading": "DEFER የሚነሳበት ጊዜ",
+      "deferralHeading": "ወኪሉ የሚተማመኑበትን ሰው ሲጠይቅ",
       "deferralLead": "ወኪሉ በሚከተሉት ሁኔታዎች በራሱ ወደ ሰው ቁጥጥር ያስተላልፋል፦",
       "wbdTitle": "ጥበብ-ተኮር ማስተላለፍ (WBD)",
       "wbdItems": [
@@ -1856,7 +1856,7 @@
     "caseArchLi2": "200+ ኤፒአይ ኤንድፖይንቶች ተረጋግጠዋል",
     "caseArchLi3": "ትልቅ የሙከራ ስብስብ፣ መጠኑ በማስመሰያው ላይ የሚለካ እንጂ እዚህ የተገለጸ ሳይሆን፣ በምርት ውስጥ እጅግ አነስተኛ ዓይነት-ያልተሰጣቸው የውሂብ መዋቅሮች ያሉት",
     "caseArchLi4Html": "<a href=\"/vision\" class=\"text-brand-primary hover:underline\">Ubuntu ፍልስፍና</a> በፕሮቶኮል ዲዛይን ውስጥ ተካቷል",
-    "caseArchLi5Html": "ተልዕኮ ጥሰቶችን የሚከለክል Wisdom-Based Deferral (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">ደህንነትን ይዩ</a>)",
+    "caseArchLi5Html": "ያልተረጋገጡ ውሳኔዎችን ለሚተማመኑባቸው ሰዎች ማስተላለፍ (Wisdom-Based Deferral) የተልዕኮ ጥሰቶችን ይከላከላል (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">ደህንነትን ይዩ</a>)",
     "caseArchLi6": "Discord ማህበረሰቦችን የሚቆጣጠር ምርት ተዘርግቷል",
     "caseSuccessH3": "ዋና ስኬት ምክንያቶች",
     "caseSuccessLi1": "ግልጽ ሜታ-ግብ፡ M-1 ግልጽ የሆነ የውሳኔ መስፈርት ይሰጣል",

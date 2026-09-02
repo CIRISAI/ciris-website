@@ -297,9 +297,9 @@
       "observerBadge": "OBSERVER",
       "observerTitle": "ループ上の人間（Human-on-the-Loop）",
       "observerBody": "読み取り専用のアクセス。メッセージを送信できます。介入なしに監視します。",
-      "deferralHeading": "DEFERが発動する条件",
+      "deferralHeading": "エージェントが信頼できる人に尋ねるとき",
       "deferralLead": "エージェントが自律的に人間の監督にエスカレーションするのは次の場合です：",
-      "wbdTitle": "知恵に基づく委任（WBD）",
+      "wbdTitle": "信頼できる人への委譲（Wisdom-Based Deferral）",
       "wbdItems": [
         "不確実性が定義された閾値を超えた場合",
         "前例のない新たなジレンマが生じた場合",
@@ -476,7 +476,7 @@
       ]
     },
     "cta": {
-      "body": "これはエージェントの稼働中に実行される説明責任であり、トレーニングステップやポリシー文書ではありません。<br />実行時に動作し、監査し、委任するメカニズムです。",
+      "body": "これはエージェントの稼働中に実行される説明責任であり、トレーニングステップやポリシー文書ではありません。<br />実行時に動作し、記録を残し、難しい判断を人に委ねるメカニズムです。",
       "safetyBtn": "安全機能",
       "compareBtn": "アプローチを比較する",
       "coherenceBtn": "一貫性ラチェット",
@@ -1856,7 +1856,7 @@
     "caseArchLi2": "200以上のAPIエンドポイントを検証済み",
     "caseArchLi3": "大規模なテストスイート（ここで主張するのではなくハーネスによって実測）、そして本番環境では型なしデータ構造が最小限であること",
     "caseArchLi4Html": "<a href=\"/vision\" class=\"text-brand-primary hover:underline\">Ubuntu哲学</a>をプロトコル設計に組み込む",
-    "caseArchLi5Html": "ミッション違反を防ぐWisdom-Based Deferral（<a href=\"/safety\" class=\"text-brand-primary hover:underline\">Safetyを参照</a>）",
+    "caseArchLi5Html": "不確かな判断を信頼できる人に委ねる（Wisdom-Based Deferral）ことでミッション違反を防ぐ（<a href=\"/safety\" class=\"text-brand-primary hover:underline\">Safetyを参照</a>）",
     "caseArchLi6": "Discordコミュニティをモデレートする本番デプロイ",
     "caseSuccessH3": "主要な成功要因",
     "caseSuccessLi1": "明確なメタゴール: M-1が明確な意思決定基準を提供する",

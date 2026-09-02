@@ -102,7 +102,7 @@
       "stat2Label": "Ukaguzi wa hisia (IDMA)",
       "stat3Value": "100%",
       "stat3Label": "Maamuzi yanayoweza kukaguliwa",
-      "useCasesBody": "<strong>Matumizi:</strong> Usimamizi wa Jamii, wasaidizi wa kibinafsi, uendeshaji otomatiki wa uzingatiaji wa sheria, tathmini ya utafiti, huduma kwa wateja. Popote unapohitaji AI inayoweza kueleza mantiki yake na kuahirisha maamuzi kwa wanadamu katika hali ngumu.",
+      "useCasesBody": "<strong>Matumizi:</strong> Usimamizi wa Jamii, wasaidizi wa kibinafsi, uendeshaji otomatiki wa uzingatiaji wa sheria, tathmini ya utafiti, huduma kwa wateja. Popote unapohitaji AI inayoweza kueleza mantiki yake na kukabidhi kesi ngumu kwa mtu.",
       "link1": "Kwa nini njia hii? →",
       "link2": "Soma Katiba →",
       "link3": "Angalia msimbo →"
@@ -297,7 +297,7 @@
       "observerBadge": "OBSERVER",
       "observerTitle": "Binadamu juu ya Mzunguko",
       "observerBody": "Upatikanaji wa kusoma tu. Anaweza kutuma ujumbe. Kufuatilia bila kuingilia.",
-      "deferralHeading": "Wakati DEFER Inasababishwa",
+      "deferralHeading": "Wakati wakala anapomwuliza mtu unayemwamini",
       "deferralLead": "Wakala hupandisha kwa usimamizi wa kibinadamu kwa kujitegemea wakati:",
       "wbdTitle": "Kuahirishwa kwa Msingi wa Hekima (WBD)",
       "wbdItems": [
@@ -1856,7 +1856,7 @@
     "caseArchLi2": "Zaidi ya miisho 200 ya API imethibitishwa",
     "caseArchLi3": "seti kubwa ya majaribio, inayopimwa na kifaa cha majaribio (harness) badala ya kudaiwa hapa, ikiwa na miundo michache sana ya data isiyo na aina katika uzalishaji",
     "caseArchLi4Html": "<a href=\"/vision\" class=\"text-brand-primary hover:underline\">Falsafa ya Ubuntu</a> iliyojumuishwa katika muundo wa itifaki",
-    "caseArchLi5Html": "Uahirishaji Unaozingatia Hekima unaozuia uvunjaji wa dhamira (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">angalia Usalama</a>)",
+    "caseArchLi5Html": "Kukabidhi maamuzi yenye mashaka kwa watu unaowaamini (Kuahirishwa kwa Msingi wa Hekima) huzuia uvunjaji wa dhamira (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">angalia Usalama</a>)",
     "caseArchLi6": "Utekelezaji wa uzalishaji ukisimamia jumuiya za Discord",
     "caseSuccessH3": "Mambo muhimu ya mafanikio",
     "caseSuccessLi1": "Lengo kuu wazi: M-1 hutoa vigezo vya maamuzi visivyo na utata",

@@ -297,9 +297,9 @@
       "observerBadge": "OBSERVER",
       "observerTitle": "Humain sur la Boucle",
       "observerBody": "Accès en lecture seule. Peut envoyer des messages. Surveille sans intervenir.",
-      "deferralHeading": "Quand DEFER se déclenche",
+      "deferralHeading": "Quand l'agent demande à une personne en qui vous avez confiance",
       "deferralLead": "L'agent passe de façon autonome à une supervision humaine quand :",
-      "wbdTitle": "Report basé sur la sagesse (WBD)",
+      "wbdTitle": "Demander à une personne en qui vous avez confiance (Wisdom-Based Deferral)",
       "wbdItems": [
         "Incertitude au-dessus des seuils definis",
         "Dilemmes nouveaux sans precedent",
@@ -476,7 +476,7 @@
       ]
     },
     "cta": {
-      "body": "C'est une responsabilite qui s'execute pendant que l'agent travaille, et non une etape d'entrainement ou un document de politique.<br />Des mecanismes qui s'executent, auditent et reportent, a l'execution.",
+      "body": "C'est un dispositif de responsabilisation qui s'exécute pendant que l'agent travaille, et non une étape d'entraînement ou une politique.<br />Des mécanismes qui agissent, gardent des traces et transmettent les décisions difficiles à des personnes, en cours d'exécution.",
       "safetyBtn": "Fonctionnalites de Securite",
       "compareBtn": "Comparer les Approches",
       "coherenceBtn": "Cliquet de Cohérence",
@@ -1704,7 +1704,7 @@
     "safetyBatteryCta": "La batterie de sécurité en 29 langues",
     "safetyRubricCta": "Comment chaque réponse est notée",
     "safetyConscienceCta": "La spécification de conscience",
-    "safetyDmaCta": "La spécification de renvoi à un humain",
+    "safetyDmaCta": "La spécification pour confier les décisions à une personne",
     "safetySourceCta": "Lire le code source du moteur",
     "complianceEyebrow": "Conformité",
     "complianceH2": "Cartographié sur quatre cadres de gouvernance, règle par règle.",
@@ -1856,7 +1856,7 @@
     "caseArchLi2": "200+ points de terminaison API vérifiés",
     "caseArchLi3": "une vaste suite de tests (le nombre est mesuré par l'environnement de test, pas indiqué ici), avec un minimum de structures de données non typées en production",
     "caseArchLi4Html": "<a href=\"/vision\" class=\"text-brand-primary hover:underline\">Philosophie Ubuntu</a> intégrée dans la conception des protocoles",
-    "caseArchLi5Html": "Déférence fondée sur la sagesse empêchant les violations de mission (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">voir Sécurité</a>)",
+    "caseArchLi5Html": "Confier les décisions incertaines à des personnes en qui vous avez confiance (Wisdom-Based Deferral) empêche les violations de mission (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">voir Sécurité</a>)",
     "caseArchLi6": "Déploiement en production modérant des communautés Discord",
     "caseSuccessH3": "Facteurs clés de réussite",
     "caseSuccessLi1": "Méta-objectif clair : M-1 fournit des critères de décision non ambigus",
