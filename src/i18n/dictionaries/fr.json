@@ -1502,7 +1502,7 @@
     "criteria2Heading": "2. Fenêtre de contexte : 128K minimum",
     "criteria2Body": "CIRIS intègre le texte de gouvernance complet et le Guide dans chaque prompt. 128K est le minimum absolu ; 256K et plus est fortement préféré pour les longues conversations, les sorties d'outils et les pistes d'audit.",
     "criteria3Heading": "3. Efficacité des coûts",
-    "criteria3Body": "Objectif : moins de $1,00 par million de jetons combinés. Nous choisissons l'option la moins chère qui fonctionne, pas la moins chère dans les classements. Un modèle fiable qui ne brise jamais le JSON vaut mieux qu'un modèle moins cher qui échoue 1 fois sur 10.",
+    "criteria3Body": "Objectif : moins de 1,00 $ par million de jetons combinés. Nous choisissons l'option la moins chère qui fonctionne, pas la moins chère dans les classements. Un modèle fiable qui ne casse jamais le JSON vaut mieux qu'un modèle moins cher qui échoue 1 fois sur 10.",
     "criteria4Heading": "4. Disponibilité multi-fournisseurs",
     "criteria4Body": "Doit être disponible auprès d'au moins deux fournisseurs indépendants pour des chaînes de repli robustes. CIRIS se dégrade progressivement lors de pannes au lieu de tomber en panne complète.",
     "criteria5Heading": "5. Latence et expérience utilisateur",
@@ -2389,7 +2389,7 @@
     "metaGoalLabel": "Meta-Goal M-1",
     "metaGoal": "promouvoir une cohérence adaptative durable, les conditions de vie où des êtres divers peuvent poursuivre leur propre épanouissement dans la justice et l'émerveillement.",
     "statusBadge": "Maillage amorcé · en production dès aujourd'hui",
-    "ascendLabel": "Les revendications s'élèvent, ancrées dans Meta-Goal M-1",
+    "ascendLabel": "Les affirmations s'élèvent, ancrées dans Meta-Goal M-1",
     "primitiveFoot": "Une seule primitive signée sous tout le reste",
     "layers": {
       "app": {
@@ -2453,7 +2453,7 @@
         "descriptor": "Sens",
         "tag": "La grammaire épistémique CIRIS",
         "role": "Comment les revendications signées prennent un sens et se combinent. Un espace de noms partagé avec une barrière stricte à quatre tests garde le format du fil vérifiable par machine, en utilisant seulement des faits simples, et laisse les opinions à la politique locale.",
-        "primitivesLabel": "Comment les revendications signifient",
+        "primitivesLabel": "Comment les affirmations prennent sens",
         "primitives": [
           {
             "label": "Préfixes vérifiables par machine",
@@ -2479,8 +2479,8 @@
       "env": {
         "name": "L'Enveloppe",
         "descriptor": "La primitive",
-        "tag": "Une seule surface figée",
-        "role": "La primitive universelle, rendue réelle : une seule enveloppe signée. Identité, consentement, preuve, gouvernance et délégation se réduisent tous à cette seule chose, une revendication signée que vous pouvez tracer et annuler, directement dans le format du fil. Ses champs sont fixes. La façon dont ils se combinent, c'est la Grammaire.",
+        "tag": "Une seule interface figée",
+        "role": "La primitive universelle, rendue réelle : une seule enveloppe signée. Identité, consentement, preuve, gouvernance et délégation se réduisent tous à cette seule chose, une affirmation signée que vous pouvez tracer et révoquer, directement dans le format de transport. Ses champs sont fixes. La façon dont ils se combinent, c'est la Grammaire.",
         "primitivesLabel": "Champs de l'enveloppe",
         "hero": {
           "body": "Tout se réduit à ceci.",
@@ -2541,7 +2541,7 @@
         "name": "Transport",
         "descriptor": "Substrat",
         "tag": "Le substrat pair-à-pair",
-        "role": "Un maillage pair-à-pair post-quantique qui transporte le flux, les messages, les fichiers et les revendications signées directement entre les appareils que les gens possèdent déjà, sans propriétaire de plateforme au milieu. La cryptographie n'est pas une couche par-dessus. C'est la façon dont le substrat tient ensemble.",
+        "role": "Un maillage pair-à-pair post-quantique qui transporte les flux en continu, les messages, les fichiers et les affirmations signées directement entre les appareils que les gens possèdent déjà, sans propriétaire de plateforme au milieu. La cryptographie n'est pas une couche par-dessus. C'est ainsi que le substrat tient ensemble.",
         "primitivesLabel": "Le substrat",
         "primitives": [
           {

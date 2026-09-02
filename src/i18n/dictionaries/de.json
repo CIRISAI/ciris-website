@@ -1505,9 +1505,9 @@
     "criteria3Body": "Zielwert: unter $1,00 pro 1 Million Token kombiniert. Wir wählen die günstigste funktionierende Option, nicht den günstigsten Benchmark-Gewinner. Ein zuverlässiges Modell, das JSON nie bricht, schlägt ein billigeres Modell, das in einem von zehn Aufrufen versagt.",
     "criteria4Heading": "4. Verfügbarkeit bei mehreren Anbietern",
     "criteria4Body": "Muss bei mindestens zwei unabhängigen Anbietern verfügbar sein, um robuste Fallback-Ketten zu ermöglichen. CIRIS degradiert bei Ausfällen kontrolliert, statt hart zu versagen.",
-    "criteria5Heading": "5. Latenz &amp; Nutzererfahrung",
+    "criteria5Heading": "5. Latenz & Nutzererfahrung",
     "criteria5Body": "Schnelle Antworten halten Menschen im Prozess der ethischen Überprüfung. Wir priorisieren Anbieter mit niedriger Latenz für interaktive Stufen und akzeptieren langsamere Backends für Hintergrundaufgaben.",
-    "productionHeading": "Produktionseinsatz",
+    "productionHeading": "Produktivbetrieb",
     "tier1Heading": "Standard-Stufe",
     "tier1Desc": "Llama 4 Maverick über einen kostenoptimierten Anbieter für tiefe Denkschritte, die das volle Kontextbudget benötigen.",
     "tier2Heading": "Schnell-Stufe",
@@ -1522,7 +1522,7 @@
     "whyRoles1Heading": "Verschiedene Rollen, keine austauschbaren Teile",
     "whyRoles1Body": "Maverick übernimmt das tiefe Denken, wo das volle Kontextbudget zählt. Scout trägt die interaktive Stufe, wo Latenz entscheidend ist. Qwen 3.6 erreicht die mehrsprachigen Denkpfade, die die Verfassung über 29 Sprachen erfordert. Gemma 4 ist die kompakte Option, die den Agenten auf handelsüblicher Hardware erreichbar macht. Die Auswahl ist so getroffen, dass verschiedene Arbeitsstufen das jeweils passende Modell erhalten, statt ein einziges Modell mit allem zu belasten.",
     "whyRoles2Heading": "Drei unabhängige Modellfamilien",
-    "whyRoles2Body": "Llama (Maverick + Scout), Qwen und Gemma stammen aus drei unabhängigen Trainingspipelines und drei unabhängigen Anbieter-Ökosystemen. Das ist für Fallback-Ketten wichtig: Ein CVE, eine Lizenzänderung oder ein Anbieterausfall bei einer Familie legt den Agenten nicht lahm. Unabhängigkeit auf der Modellebene ist dieselbe Eigenschaft, die die IDMA-Komponente auf der Denkebene robust macht.",
+    "whyRoles2Body": "Llama (Maverick + Scout), Qwen und Gemma stammen aus drei unabhängigen Trainingspipelines und drei unabhängigen Anbieter-Ökosystemen. Das ist für Fallback-Ketten wichtig: Ein CVE, eine Lizenzänderung oder ein Anbieterausfall bei einer Familie legt den Agenten nicht lahm. Unabhängigkeit auf der Modellschicht ist dieselbe Eigenschaft, die die IDMA-Komponente auf der Reasoning-Schicht robust macht.",
     "whyExcludedHeading": "Was nicht in die Auswahl kommt",
     "whyExcludedBody": "Modelle, die die fünf Kriterien nicht erfüllen, meistens Modelle, die beim Token-Preis attraktiv wirken, aber bei strukturierter Ausgabe und Tool-Calling versagen.",
     "whyExcludedFailure": "<strong>Typischer Fehlerfall (GPT-OSS-20B):</strong> &quot;tool choice is required, but the model did not call a tool&quot;",
@@ -2384,7 +2384,7 @@
     "eyebrow": "CIRIS · Architektur des Vertrauens",
     "headlineLead": "CIRIS entschlüsselt:",
     "headlineAccent": "der holografische Stack",
-    "lede": "Fünf Schichten über einem signierten Primitiv. Tippe auf eine Schicht, um zu sehen, was sie tut, und öffne dann die Seite, die tief darauf eingeht.",
+    "lede": "Fünf Schichten über einem signierten Primitiv. Tippen Sie auf eine Schicht, um zu sehen, was sie tut, und öffnen Sie dann die Seite, die näher darauf eingeht.",
     "exploreCta": "Erkunden",
     "metaGoalLabel": "Meta-Goal M-1",
     "metaGoal": "fördere nachhaltige adaptive Kohärenz, die Lebensbedingungen, unter denen verschiedene Wesen ihr eigenes Aufblühen in Gerechtigkeit und Staunen verfolgen können.",
@@ -2396,7 +2396,7 @@
         "name": "Anwendungen",
         "descriptor": "Handeln",
         "tag": "Wo Agenten und Menschen handeln",
-        "role": "Das ist die Oberfläche, die Menschen und Agenten berühren. Jede Handlung, die zählt, ist eine signierte Aussage: du kannst sehen, wer sie getan hat, dass Einwilligung dafür vorlag und dass sie zurückgenommen werden kann. Das Protokoll trägt nichts anderes.",
+        "role": "Das ist die Oberfläche, die Menschen und Agenten berühren. Jede Handlung, die zählt, ist eine signierte Aussage: Sie können sehen, wer sie getan hat, dass Einwilligung dafür vorlag und dass die Handlung zurückgenommen werden kann. Das Protokoll trägt nichts anderes.",
         "primitivesLabel": "Wer hier handelt",
         "primitives": [
           {
@@ -2418,7 +2418,7 @@
             "body": "Nicht „trainiere ein Modell, bis du ihm vertraust.“ Sondern: mach jede wichtige Handlung überprüfbar durch Menschen, die das Modell nicht kontrolliert."
           }
         ],
-        "cta": "Hol dir die App →"
+        "cta": "Holen Sie sich die App →"
       },
       "gov": {
         "name": "Governance",
@@ -2446,13 +2446,13 @@
             "body": "Jeder Mechanismus kommt aus einem Versprechen: nachhaltige adaptive Kohärenz."
           }
         ],
-        "cta": "Sieh, wie es regiert wird →"
+        "cta": "Sehen Sie, wie es regiert wird →"
       },
       "ceg": {
         "name": "Grammatik",
         "descriptor": "Bedeutung",
         "tag": "Die CIRIS Epistemic Grammar",
-        "role": "Wie signierte Aussagen Bedeutung erhalten und sich verbinden. Ein gemeinsamer Namensraum mit einem strengen Vier-Test-Tor hält das Wire-Format maschinenprüfbar, nutzt nur schlichte Fakten und überlässt Meinungen der lokalen Politik.",
+        "role": "Wie signierte Aussagen Bedeutung erhalten und sich verbinden. Ein gemeinsamer Namensraum mit einem strengen Vierfach-Test hält das Wire-Format maschinenprüfbar, nutzt nur schlichte Fakten und überlässt Meinungen der lokalen Politik.",
         "primitivesLabel": "Wie Aussagen bedeuten",
         "primitives": [
           {
@@ -2474,13 +2474,13 @@
             "body": "Das Protokoll hält fest, wer was sagte, warum und unter welcher Autorität. Es hält nie fest, was wahr ist."
           }
         ],
-        "cta": "Sieh die Grammatik →"
+        "cta": "Sehen Sie sich die Grammatik an →"
       },
       "env": {
         "name": "Die Hülle",
         "descriptor": "Das Primitiv",
         "tag": "Eine feste Oberfläche",
-        "role": "Das universelle Primitiv, verwirklicht: eine signierte Hülle. Identität, Einwilligung, Belege, Governance und Delegation reduzieren sich alle auf diese eine Sache, eine signierte Aussage, die du zurückverfolgen und zurücknehmen kannst, direkt im Wire-Format. Ihre Felder sind fest. Wie sie sich verbinden, ist Grammatik.",
+        "role": "Das universelle Primitiv, verwirklicht: eine signierte Hülle. Identität, Einwilligung, Belege, Governance und Delegation reduzieren sich alle auf diese eine Sache, eine signierte Aussage, die Sie zurückverfolgen und zurücknehmen können, direkt im Wire-Format. Ihre Felder sind fest. Wie sie sich verbinden, ist Grammatik.",
         "primitivesLabel": "Hüllenfelder",
         "hero": {
           "body": "Alles reduziert sich hierauf.",
@@ -2535,13 +2535,13 @@
             "body": "Jeder, der in subject_key_ids genannt ist, kann auf Wire-Ebene widerrufen, durchgesetzt vom Substrat, nicht von einer App."
           }
         ],
-        "cta": "Sieh die Plattform →"
+        "cta": "Sehen Sie sich die Plattform an →"
       },
       "transport": {
         "name": "Transport",
         "descriptor": "Substrat",
         "tag": "Das Peer-to-Peer-Substrat",
-        "role": "Ein post-quanten, Peer-to-Peer-Mesh, das Streaming, Nachrichten, Dateien und signierte Aussagen direkt zwischen den Geräten trägt, die Menschen bereits besitzen, ohne einen Plattformeigentümer in der Mitte. Kryptografie ist keine Schicht obendrauf. Sie ist, wie das Substrat sich selbst zusammenhält.",
+        "role": "Ein Post-Quanten-Peer-to-Peer-Mesh, das Streaming, Nachrichten, Dateien und signierte Aussagen direkt zwischen den Geräten trägt, die Menschen bereits besitzen, ohne einen Plattformeigentümer in der Mitte. Kryptografie ist keine Schicht obendrauf. Sie ist, wie das Substrat sich selbst zusammenhält.",
         "primitivesLabel": "Das Substrat",
         "primitives": [
           {
@@ -2563,7 +2563,7 @@
             "body": "Sie wird innerhalb von Transport, Speicher und dem Wire-Format selbst durchgesetzt, nicht in einem Regelordner daneben."
           }
         ],
-        "cta": "Sieh, wie es verifiziert wird →"
+        "cta": "Sehen Sie, wie es verifiziert wird →"
       }
     }
   },

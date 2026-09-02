@@ -1520,7 +1520,7 @@
     "tier5Desc": "Maverick → Scout → Qwen 3.6 → Gemma 4 di berbagai penyedia, sehingga agen terdegradasi dengan baik di berbagai keluarga model dan batas infrastruktur, bukan gagal total.",
     "whyLineupHeading": "Mengapa Jajaran Ini",
     "whyRoles1Heading": "Peran berbeda, bukan bagian yang dapat dipertukarkan",
-    "whyRoles1Body": "Maverick menangani penalaran mendalam di mana anggaran konteks penuh penting. Scout membawa tingkatan interaktif di mana latensi mendominasi. Qwen 3.6 menjangkau jalur penalaran poliglot yang diharuskan Konstitusi di 29 bahasa. Gemma 4 adalah opsi jejak kecil yang membawa agen ke jangkauan perangkat keras biasa. Jajaran ini dipilih agar berbagai tingkatan pekerjaan pergi ke model yang benar-benar cocok, bukan memaksa satu model untuk melakukan segalanya.",
+    "whyRoles1Body": "Maverick menangani penalaran mendalam di mana anggaran konteks penuh penting. Scout membawa tingkatan interaktif di mana latensi mendominasi. Qwen 3.6 menjangkau jalur penalaran poliglot yang diharuskan Konstitusi dalam 29 bahasa. Gemma 4 adalah opsi berjejak ringan yang membawa agen ke jangkauan perangkat keras biasa. Jajaran ini dipilih agar berbagai tingkatan kerja dialokasikan ke model yang benar-benar cocok, bukan memaksa satu model untuk melakukan segalanya.",
     "whyRoles2Heading": "Tiga keluarga model independen",
     "whyRoles2Body": "Llama (Maverick + Scout), Qwen, dan Gemma berasal dari tiga jalur pelatihan independen dan tiga ekosistem penyedia independen. Hal ini penting untuk rantai fallback: CVE, perubahan lisensi, atau pemadaman penyedia pada satu keluarga tidak akan mematikan agen. Independensi di lapisan model adalah properti yang sama yang membuat komponen IDMA tangguh di lapisan penalaran.",
     "whyExcludedHeading": "Yang tidak masuk jajaran",
@@ -2479,11 +2479,11 @@
       "env": {
         "name": "Amplop",
         "descriptor": "Sang primitif",
-        "tag": "Satu permukaan yang dibekukan",
+        "tag": "Satu antarmuka tetap",
         "role": "Primitif universal, diwujudkan: satu amplop bertanda tangan. Identitas, izin, bukti, tata kelola, dan delegasi semuanya menyusut menjadi satu hal ini, sebuah klaim bertanda tangan yang bisa Anda lacak dan tarik kembali, langsung di format wire. Kolomnya sudah tetap. Cara kolom itu digabungkan adalah Tata Bahasa.",
         "primitivesLabel": "Kolom amplop",
         "hero": {
-          "body": "Semuanya menyusut menjadi ini.",
+          "body": "Semuanya bermuara pada ini.",
           "workhorse": {
             "label": "Klaim bertanda tangan",
             "note": "Satu amplop membawa identitas, izin, dan bukti sekaligus."
@@ -2538,7 +2538,7 @@
         "cta": "Lihat platformnya →"
       },
       "transport": {
-        "name": "Transportasi",
+        "name": "Transpor",
         "descriptor": "Substrat",
         "tag": "Substrat peer-to-peer",
         "role": "Sebuah jaringan mesh pasca-kuantum, peer-to-peer yang membawa streaming, pesan, berkas, dan klaim bertanda tangan langsung antar perangkat yang sudah dimiliki orang, tanpa pemilik platform di tengah. Kriptografi bukan lapisan di atasnya. Ia adalah cara substrat menyatukan dirinya sendiri.",

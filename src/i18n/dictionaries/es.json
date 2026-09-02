@@ -1485,7 +1485,7 @@
     "kicker": "Una federación de iguales"
   },
   "models": {
-    "h1": "Qué LLM usamos y por qué",
+    "h1": "Qué LLMs usamos y por qué",
     "heroPara": "CIRIS Agent funciona con un pequeño conjunto de modelos abiertos que cumplen cinco criterios innegociables. La línea de producción actual es Llama 4 Maverick, Llama 4 Scout, Qwen 3.6 y Gemma 4, elegidos para distintos roles en la carga de trabajo del agente.",
     "maverickDesc": "El motor de razonamiento principal. Mantiene una cantidad de contexto muy grande a la vez, por lo que es el predeterminado para los pasos de razonamiento más profundo donde importa más tener toda la imagen en vista.",
     "maverickProviders": "Proveedores: OpenRouter, Groq, Together, DeepInfra",
@@ -1517,7 +1517,7 @@
     "tier4Heading": "Nivel de borde",
     "tier4Desc": "Gemma 4 para despliegues en dispositivos locales, bajo ancho de banda y redes degradadas, donde llegar al usuario importa más que el tamaño del modelo.",
     "tier5Heading": "Cadena de respaldo",
-    "tier5Desc": "Maverick → Scout → Qwen 3.6 → Gemma 4 en múltiples proveedores, para que el agente degradue con gracia entre familias de modelos y límites de infraestructura en lugar de fallar por completo.",
+    "tier5Desc": "Maverick → Scout → Qwen 3.6 → Gemma 4 en múltiples proveedores, para que el agente se degrade con gracia entre familias de modelos y límites de infraestructura en lugar de fallar por completo.",
     "whyLineupHeading": "Por qué esta combinación",
     "whyRoles1Heading": "Roles distintos, no piezas intercambiables",
     "whyRoles1Body": "Maverick maneja el razonamiento profundo donde importa el presupuesto completo de contexto. Scout lleva el nivel interactivo donde domina la latencia. Qwen 3.6 alcanza las rutas de razonamiento políglota que la Constitución requiere en 29 idiomas. Gemma 4 es la opción de huella pequeña que pone al agente al alcance del hardware estándar. La combinación se elige para que los distintos niveles de trabajo vayan al modelo que realmente corresponde, en lugar de forzar a uno solo a hacer todo.",
@@ -2452,7 +2452,7 @@
         "name": "Gramática",
         "descriptor": "Significado",
         "tag": "La Gramática Epistémica de CIRIS",
-        "role": "Cómo las afirmaciones firmadas adquieren significado y se combinan. Un espacio de nombres compartido con una compuerta estricta de cuatro pruebas mantiene el formato de cable verificable por máquina, usando solo hechos simples, y deja las opiniones a la política local.",
+        "role": "Cómo las afirmaciones firmadas adquieren significado y se combinan. Un espacio de nombres compartido con una compuerta estricta de cuatro pruebas mantiene el formato de transmisión verificable por máquina, usando solo hechos simples, y deja las opiniones a la política local.",
         "primitivesLabel": "Cómo significan las afirmaciones",
         "primitives": [
           {
@@ -2479,8 +2479,8 @@
       "env": {
         "name": "El Sobre",
         "descriptor": "La primitiva",
-        "tag": "Una superficie congelada",
-        "role": "La primitiva universal, hecha realidad: un sobre firmado. Identidad, consentimiento, evidencia, gobernanza y delegación se reducen todos a esta única cosa, una afirmación firmada que puedes rastrear y revertir, justo en el formato de cable. Sus campos son fijos. Cómo se combinan es Gramática.",
+        "tag": "Una interfaz fija",
+        "role": "La primitiva universal, hecha realidad: un sobre firmado. Identidad, consentimiento, evidencia, gobernanza y delegación se reducen todos a esta única cosa, una afirmación firmada que puedes rastrear y revertir, justo en el formato de transmisión. Sus campos son fijos. Cómo se combinan es Gramática.",
         "primitivesLabel": "Campos del sobre",
         "hero": {
           "body": "Todo se reduce a esto.",

@@ -2479,8 +2479,8 @@
       "env": {
         "name": "La Busta",
         "descriptor": "La primitiva",
-        "tag": "Un'unica superficie congelata",
-        "role": "La primitiva universale, resa reale: un'unica busta firmata. Identità, consenso, prova, governance e delega si riducono tutte a quest'unica cosa, un'affermazione firmata che puoi tracciare e annullare, direttamente nel formato del filo. I suoi campi sono fissi. Il modo in cui si combinano è la Grammatica.",
+        "tag": "Un'unica interfaccia fissa",
+        "role": "La primitiva universale, resa reale: un'unica busta firmata. Identità, consenso, prova, governance e delega si riducono tutte a quest'unica cosa, un'affermazione firmata che puoi tracciare e annullare, direttamente nel wire format. I suoi campi sono fissi. Il modo in cui si combinano è la Grammatica.",
         "primitivesLabel": "Campi della busta",
         "hero": {
           "body": "Tutto si riduce a questo.",

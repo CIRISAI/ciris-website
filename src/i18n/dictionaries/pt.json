@@ -2452,7 +2452,7 @@
         "name": "Gramática",
         "descriptor": "Significado",
         "tag": "A Gramática Epistêmica do CIRIS",
-        "role": "Como afirmações assinadas ganham significado e se combinam. Um espaço de nomes compartilhado com um portão estrito de quatro testes mantém o formato de fio verificável por máquina, usando apenas fatos simples, e deixa as opiniões para a política local.",
+        "role": "Como afirmações assinadas ganham significado e se combinam. Um espaço de nomes compartilhado com um critério estrito de quatro testes mantém o formato de transmissão verificável por máquina, usando apenas fatos objetivos, e deixa as opiniões para a política local.",
         "primitivesLabel": "Como as afirmações significam",
         "primitives": [
           {
@@ -2479,8 +2479,8 @@
       "env": {
         "name": "O Envelope",
         "descriptor": "A primitiva",
-        "tag": "Uma superfície congelada",
-        "role": "A primitiva universal, feita realidade: um envelope assinado. Identidade, consentimento, evidência, governança e delegação se reduzem todos a esta única coisa, uma afirmação assinada que você pode rastrear e reverter, bem no formato de fio. Os campos dela são fixos. Como eles se combinam é Gramática.",
+        "tag": "Uma interface fixa",
+        "role": "A primitiva universal, feita realidade: um envelope assinado. Identidade, consentimento, evidência, governança e delegação se reduzem todos a esta única coisa, uma afirmação assinada que você pode rastrear e reverter, diretamente no formato de transmissão. Os campos dela são fixos. Como eles se combinam é Gramática.",
         "primitivesLabel": "Campos do envelope",
         "hero": {
           "body": "Tudo se reduz a isto.",

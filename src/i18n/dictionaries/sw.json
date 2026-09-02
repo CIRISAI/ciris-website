@@ -1491,22 +1491,22 @@
     "maverickProviders": "Watoa huduma: OpenRouter, Groq, Together, DeepInfra",
     "scoutDesc": "Msaidizi wa haraka katika familia ya Llama 4. Ndogo na wa haraka zaidi kuliko Maverick, akiwa na uwezo imara wa kuita zana. Hutumika kwa viwango vya mwingiliano ambapo muda wa kujibu una umuhimu na bajeti kamili ya muktadha wa Maverick haihitajiki.",
     "scoutProviders": "Watoa huduma: OpenRouter, Groq",
-    "qwenDesc": "Kina cha lugha nyingi na matokeo imara ya muundo. Hubeba uzito katika njia za hoja zisizo za Kiingereza ambazo safu ya lugha nyingi inahitaji; msingi wa mtoa huduma huru nje ya familia ya Llama huongeza uakiba katika mnyororo wa kuingia mbadala.",
+    "qwenDesc": "Kina cha lugha nyingi na matokeo imara ya muundo. Hubeba uzito katika njia za hoja zisizo za Kiingereza ambazo safu ya lugha nyingi inahitaji; msingi huru wa watoa huduma nje ya familia ya Llama huongeza uakiba katika mnyororo wa mbadala.",
     "qwenProviders": "Watoa huduma: OpenRouter, DashScope, DeepInfra",
     "gemmaDesc": "Ndogo ya kutosha kukimbia kwenye vifaa vya kawaida. Hutumika mahali ambapo ufikiaji una umuhimu zaidi kuliko uwezo ghafi (kwenye kifaa, unganisho la chini, na upelekaji wa mtandao ulioathirika) na kama mbadala wa familia ya tatu pamoja na Llama na Qwen.",
     "gemmaProviders": "Watoa huduma: OpenRouter, Google",
     "criteriaHeadline": "Vigezo Vyetu vya Modeli",
-    "criteriaSubheadline": "Mahitaji matano yasiyoweza kupuuzwa kwa CIRIS Agent",
+    "criteriaSubheadline": "Mahitaji matano yasiyoweza kupuuzwa kwa Wakala wa CIRIS",
     "criteria1Heading": "1. Matokeo ya Muundo na Matumizi ya Zana",
     "criteria1Body": "Lazima iunge mkono kwa asili uito wa vitendaji na kurudisha JSON halali katika mfululizo wote wa uito wa zana 12 hadi 70 kwa kila mwingiliano. CIRIS ni mratibu. Tunahitaji maana thabiti ya matumizi ya zana, sio mazungumzo ya maneno mengi.",
     "criteria2Heading": "2. Dirisha la Muktadha: Kiwango cha Chini cha 128K",
     "criteria2Body": "CIRIS inajumuisha maandiko kamili ya utawala na Mwongozo katika kila ujumbe. 128K ndiyo kiwango cha chini kabisa; 256K+ inapendelewa sana kwa mazungumzo marefu, matokeo ya zana, na njia za ukaguzi.",
     "criteria3Heading": "3. Ufanisi wa Gharama",
-    "criteria3Body": "Lengo: chini ya $1.00 kwa tokeni 1M pamoja. Tunachagua chaguo la bei nafuu zaidi linalofanya kazi, sio mshindi wa bei nafuu zaidi wa kipimo. Modeli inayotegemewa ambayo haichanganyi JSON kamwe inashinda modeli ya bei nafuu zaidi inayoshindwa mara 1 kati ya 10.",
+    "criteria3Body": "Lengo: <$1.00 kwa tokeni 1M pamoja. Tunachagua chaguo la bei nafuu zaidi linalofanya kazi, si mshindi wa vipimo vya utendaji wa bei ya chini zaidi. Modeli inayotegemewa ambayo haivunji JSON kamwe ni bora kuliko modeli ya bei nafuu zaidi inayoshindwa mara 1 kati ya 10.",
     "criteria4Heading": "4. Upatikanaji wa Watoa Huduma Wengi",
     "criteria4Body": "Lazima ipatikane kutoka kwa watoa huduma wawili huru au zaidi kwa minyororo imara ya mbadala. CIRIS inashuka kwa heshima wakati wa ukatikaji badala ya kushindwa kabisa.",
     "criteria5Heading": "5. Muda wa Kujibu na Uzoefu wa Mtumiaji",
-    "criteria5Body": "Majibu ya haraka huweka wanadamu katika mzunguko kwa mtiririko wa ukaguzi wa kimaadili. Tunapendelea watoa huduma wa muda mfupi wa kujibu kwa viwango vya mwingiliano huku tukikubali vifaa vya polepole zaidi kwa kazi za nyuma.",
+    "criteria5Body": "Majibu ya haraka huweka wanadamu katika mzunguko kwa mtiririko wa kazi wa ukaguzi wa kimaadili. Tunapendelea watoa huduma wenye ucheleweshaji mdogo kwa viwango vya mwingiliano huku tukikubali seva za nyuma za polepole zaidi kwa kazi za usuli.",
     "productionHeading": "Upelekaji wa Uzalishaji",
     "tier1Heading": "Kiwango cha Kawaida",
     "tier1Desc": "Llama 4 Maverick kupitia mtoa huduma ulioimarishwa kwa gharama kwa hatua za hoja za kina zinazohitaji bajeti kamili ya muktadha.",
@@ -1514,15 +1514,15 @@
     "tier2Desc": "Llama 4 Scout kupitia mtoa huduma ulioboreshwa kwa kasi (Groq) kwa matumizi ya mwingiliano, na Maverick kwenye Groq kama mbadala wa muktadha mzito zaidi.",
     "tier3Heading": "Kiwango cha Lugha Nyingi",
     "tier3Desc": "Qwen 3.6 hubeba uzito katika njia za hoja zisizo za Kiingereza ambazo safu ya lugha nyingi inahitaji, na hutoa mbadala wa kundi lisilo la Llama katika mnyororo.",
-    "tier4Heading": "Kiwango cha Makingamakingo",
+    "tier4Heading": "Kiwango cha Edge",
     "tier4Desc": "Gemma 4 kwa upelekaji kwenye kifaa, unganisho la chini, na mtandao ulioathirika ambapo kufikia mtumiaji kuna umuhimu zaidi kuliko ukubwa wa modeli.",
     "tier5Heading": "Mnyororo wa Mbadala",
-    "tier5Desc": "Maverick → Scout → Qwen 3.6 → Gemma 4 kwa watoa huduma wengi, ili wakala ushuke kwa heshima katika familia za modeli na mipaka ya miundombinu badala ya kushindwa kabisa.",
+    "tier5Desc": "Maverick → Scout → Qwen 3.6 → Gemma 4 kwa watoa huduma wengi, ili wakala ashuke kwa heshima katika familia za modeli na mipaka ya miundombinu badala ya kushindwa kabisa.",
     "whyLineupHeading": "Sababu ya Safu Hii",
     "whyRoles1Heading": "Majukumu tofauti, sio sehemu zinazoweza kubadilishana",
-    "whyRoles1Body": "Maverick anashughulikia hoja za kina ambapo bajeti kamili ya muktadha ina umuhimu. Scout hubeba kiwango cha mwingiliano ambapo muda wa kujibu unatawala. Qwen 3.6 hufikia njia za hoja za lugha nyingi ambazo Katiba inahitaji katika lugha 29. Gemma 4 ni chaguo la kiwango kidogo cha alama ambayo huweka wakala ndani ya uwezo wa vifaa vya kawaida. Safu imechaguliwa ili viwango tofauti vya kazi viende kwa modeli inayofaa kweli kweli, badala ya kulazimisha modeli moja kufanya kila kitu.",
+    "whyRoles1Body": "Maverick anashughulikia hoja za kina ambapo bajeti kamili ya muktadha ina umuhimu. Scout hubeba kiwango cha mwingiliano ambapo muda wa kujibu unatawala. Qwen 3.6 hufikia njia za hoja za lugha nyingi ambazo Katiba inahitaji katika lugha 29. Gemma 4 ni chaguo lenye matumizi madogo ya rasilimali ambalo huweka wakala ndani ya uwezo wa vifaa vya kawaida. Safu imechaguliwa ili viwango tofauti vya kazi viende kwa modeli inayofaa kweli kweli, badala ya kulazimisha modeli moja kufanya kila kitu.",
     "whyRoles2Heading": "Familia tatu huru za modeli",
-    "whyRoles2Body": "Llama (Maverick + Scout), Qwen, na Gemma zinatoka katika njia tatu huru za mafunzo na mifumo mitatu huru ya watoa huduma. Hilo lina umuhimu kwa minyororo ya mbadala: CVE, mabadiliko ya leseni, au ukatikaji wa mtoa huduma katika familia moja hautelemshi wakala. Uhuru katika safu ya modeli ni sawa na mali inayofanya sehemu ya IDMA kuwa imara katika safu ya hoja.",
+    "whyRoles2Body": "Llama (Maverick + Scout), Qwen, na Gemma zinatoka katika njia tatu huru za mafunzo na mifumo mitatu huru ya watoa huduma. Hilo lina umuhimu kwa minyororo ya mbadala: CVE, mabadiliko ya leseni, au ukatikaji wa mtoa huduma katika familia moja haumuangushi wakala. Uhuru katika safu ya modeli ndiyo ile ile sifa inayofanya sehemu ya IDMA kuwa imara katika safu ya hoja.",
     "whyExcludedHeading": "Kinachobaki nje ya safu",
     "whyExcludedBody": "Modeli ambazo haziwezi kukidhi vigezo vitano, mara nyingi, modeli ambazo zinaonekana kuvutia kwa bei ya tokeni lakini zinashindwa katika matokeo ya muundo na uito wa zana.",
     "whyExcludedFailure": "<strong>Hali ya kushindwa inayowakilisha (GPT-OSS-20B):</strong> &quot;uchaguzi wa zana unahitajika, lakini modeli haikuita zana&quot;",
@@ -2387,7 +2387,7 @@
     "lede": "Tabaka tano juu ya kipengele kimoja kilichotiwa saini. Gusa tabaka ili kuona linalofanya, kisha fungua ukurasa unaolieleza kwa kina.",
     "exploreCta": "Chunguza",
     "metaGoalLabel": "Meta-Goal M-1",
-    "metaGoal": "kukuza mshikamano wa kubadilika unaodumu, yaani hali za maisha zinazowawezesha viumbe mbalimbali kufuata ustawi wao wenyewe katika haki na mshangao.",
+    "metaGoal": "kukuza upatanifu wa kubadilika endelevu, hali za maisha ambazo viumbe mbalimbali wanaweza kufuata ustawi wao wenyewe katika haki na mshangao.",
     "statusBadge": "Mtandao umeanzishwa · unatumika leo",
     "ascendLabel": "Madai hupanda juu, yakiegemea Meta-Goal M-1",
     "primitiveFoot": "Kipengele kimoja kilichotiwa saini kinachotegemeza yote",
@@ -2446,7 +2446,7 @@
             "body": "Kila utaratibu unatokana na ahadi moja: mshikamano wa kubadilika unaodumu."
           }
         ],
-        "cta": "Ona jinsi unavyotawaliwa →"
+        "cta": "Ona jinsi inavyotawaliwa →"
       },
       "ceg": {
         "name": "Sarufi",
@@ -2479,7 +2479,7 @@
       "env": {
         "name": "Bahasha",
         "descriptor": "Kipengele",
-        "tag": "Sehemu moja iliyogandishwa",
+        "tag": "Kiolesura kimoja kisichobadilika",
         "role": "Kipengele cha ulimwengu wote, kilichofanywa halisi: bahasha moja iliyotiwa saini. Utambulisho, ruhusa, ushahidi, utawala, na ukabidhi yote yanapungua hadi kitu hiki kimoja, dai lililotiwa saini unaloweza kulifuatilia na kulitengua, moja kwa moja katika muundo wa wire. Sehemu zake zimewekwa. Jinsi zinavyounganishwa ndiyo Sarufi.",
         "primitivesLabel": "Sehemu za bahasha",
         "hero": {
@@ -2563,7 +2563,7 @@
             "body": "Unatekelezwa ndani ya usafirishaji, uhifadhi, na muundo wa wire wenyewe, si katika kabrasha la sera lililo pembeni."
           }
         ],
-        "cta": "Ona jinsi unavyothibitishwa →"
+        "cta": "Ona jinsi inavyothibitishwa →"
       }
     }
   },
