@@ -1896,7 +1896,7 @@
     "caseArchH3": "Architecture results",
     "caseArchLi1": "22 services, each justified by mission requirements",
     "caseArchLi2": "200+ API endpoints verified",
-    "caseArchLi3": "10,000+ tests, with minimal untyped data structures in production",
+    "caseArchLi3": "a large test suite, measured by the harness rather than asserted here, with minimal untyped data structures in production",
     "caseArchLi4Html": "<a href=\"/vision\" class=\"text-brand-primary hover:underline\">Ubuntu philosophy</a> embedded in protocol design",
     "caseArchLi5Html": "Wisdom-Based Deferral preventing mission violations (<a href=\"/safety\" class=\"text-brand-primary hover:underline\">see Safety</a>)",
     "caseArchLi6": "Production deployment moderating Discord communities",
