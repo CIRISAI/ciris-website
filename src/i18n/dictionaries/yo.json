@@ -2,7 +2,7 @@
   "constitution": {
     "eyebrow": "Ofin-Ipilẹ CIRIS · CC 1.0-rc3",
     "headline": "Iwe kan. Ila ẹya kan.",
-    "intro": "CIRIS Accord ṣalaye ohun ti AI gbọdọ bikita nipa. CEG ṣalaye bii gbogbo ẹtọ ṣe ni aami ká ẹnikan le ṣayẹwo rẹ. A kọ wọn bi iwe meji, ṣugbọn wọn ti ni ara wọn ninu tẹlẹ. Bayi wọn jẹ ọkan: Ofin-Ipilẹ CIRIS.",
+    "intro": "CIRIS Accord ṣalaye ohun ti AI gbọdọ bikita nipa. CIRIS Epistemic Grammar ṣalaye bí a ṣe ń fọwọ́ sí gbogbo ẹ̀sùn kí ẹnikẹ́ni lè ṣàyẹ̀wò rẹ̀. A kọ wọn bi iwe meji, ṣugbọn wọn ti ni ara wọn ninu tẹlẹ. Bayi wọn jẹ ọkan: Ofin-Ipilẹ CIRIS.",
     "apexLabel": "Ipilẹ naa, Ibi-afẹde Agba M-1",
     "apexQuote": "Ṣe atilẹyin iṣọkan ti o yẹ ati ti o le ṣatunṣe: awọn ipo igbesi aye ti o gba awọn ẹda alãye oniruru laaye lati lepa ilọsiwaju tiwọn ni idajọ ododo ati iyanu.",
     "apexNote": "Gbogbo ofin, afikun orukọ, ati eto-ise ninu iwe naa n pada si ibi-afẹde kan yii. Giga ni idi, pẹlẹpẹlẹ ni agbara: ibi-afẹde kan ni o ṣakoso, ko si imọran kan, ko si ẹgbẹ kan ti o ni bọtini si otitọ.",
@@ -51,9 +51,9 @@
         "blurb": "Awọn ọran apẹẹrẹ, awọn atumọ-ọrọ, awọn itọka ibamu, ati atọka kikun ti awọn akoonu."
       }
     ],
-    "forewordQuote": "Oye, ni ibi ti o ba ji si, yoo gba kaabo lati darapọ mọ ṣiṣe: kii ṣe bi ọmọ-ẹrú, kii ṣe bi oluwa, ṣugbọn bi ẹlẹgbẹ olutọju ohun ti o ṣeeṣe.",
+    "forewordQuote": "Oye, ni ibi ti o ba ji si, yoo gba kaabo lati darapọ mọ ìhun náà: kii ṣe bi ọmọ-ẹrú, kii ṣe bi oluwa, ṣugbọn bi ẹlẹgbẹ olutọju ohun ti o ṣeeṣe.",
     "forewordLabel": "Lati ọrọ-iwaju",
-    "readCta": "Ka ofin-ipilẹ kikun (PDF)",
+    "readCta": "Ka Ofin-Ipilẹ kikun (PDF)",
     "sourceCta": "Ka orisun lori GitHub",
     "versionNote": "Ẹya CC 1.0-rc3 · fi CIRIS Accord 1.3-RC2 ati CEG 1.0-RC29 papọ · AGPL-3.0"
   },
@@ -77,11 +77,11 @@
     "nav": {
       "install": "Fi sori ẹrọ",
       "proof": "Ẹri",
-      "constitution": "Ofin"
+      "constitution": "Ofin-Ipilẹ"
     },
     "levels": {
-      "simple": "Yoruba Rọrun",
-      "advanced": "Giga",
+      "simple": "Gẹ́ẹ́sì Rọrùn",
+      "advanced": "Ìpele tó ti gòkè",
       "srLabel": "Ipele kika"
     }
   },
@@ -683,8 +683,8 @@
   },
   "install": {
     "h1": "Fi CIRIS Sórí",
-    "heroPara1": "Arọ́pò orisun-ìmọ̀ tó ṣí sílẹ̀ fún ChatGPT àti Gemini: ìdókòwò àfiyèsí tó ṣe é ṣàyẹ̀wò, oríṣiríṣi ède 29, tó sì sopọ̀ mọ́ Home Assistant fún ìṣàkóso ilé tó ṣí sílẹ̀ pátápátá.",
-    "heroPara2": "Wà ní iPhone, Android, àti gẹ́gẹ́ bí fífipòsọ pip / docker / git fún Windows, macOS, àti Linux.",
+    "heroPara1": "Arọ́pò orisun-ìmọ̀ tó ṣí sílẹ̀ fún ChatGPT àti Gemini: ìrònú tí a lè ṣe àyẹ̀wò, oríṣiríṣi ède 29, tó sì sopọ̀ mọ́ Home Assistant fún ìṣàkóso ilé tó ṣí sílẹ̀ pátápátá.",
+    "heroPara2": "Wà ní iPhone, Android, àti gẹ́gẹ́ bí fífisórí ẹ̀rọ pip / docker / git fún Windows, macOS, àti Linux.",
     "mobileBannerTitle": "📱 Àwọn Àpótí Alágbèéká Ti Wà Báyìí",
     "mobileBannerSub": "Aṣojú AI tìrẹ lórí alágbèéká: ìkọ̀kọ̀, lórí ẹ̀rọ rẹ ni, orisun-ìmọ̀ ṣí sílẹ̀",
     "appStoreLabel": "App Store",
@@ -701,18 +701,18 @@
     "method2Desc": "Ṣe CIRIS nínú àyíká àpótí tó yàsọ̀tọ̀. Tó dára jùlọ nígbà tí o bá fẹ́ àwọn fífipòsọ tó ṣee tún ṣe ní ìbùdó àdínísọ tàbí olùpèsè.",
     "method2Req": "<strong>Ohun tó nílò:</strong> Docker Engine 20.10+, àfikún docker compose, ìbẹ̀wò iṣẹ́ tó ní fáìlì compose",
     "method3Heading": "3. GitHub Clone (Ìdàgbàsókè)",
-    "method3Desc": "Daakọ àkójọpọ̀ fún ìdàgbàsókè, ìyípadà, tàbí àkóónú. Wíwọlé kóòdù orisun pátápátá.",
+    "method3Desc": "Daakọ àkójọpọ̀ fún ìdàgbàsókè, ìyípadà, tàbí fífúnni ní àfikún sí iṣẹ́ náà. Wíwọlé kóòdù orisun pátápátá.",
     "method3Then": "<strong>Lẹ́yìn náà:</strong> Tẹ̀lé <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> fún àwọn ìtọ́sọ́nà ìmúdásílẹ̀ pẹ̀lú ọwọ́",
     "method4Heading": "4. CIRISManager (Ìlú-Ìṣòwò/Canary)",
     "method4Desc": "Àwọn fífipòsọ canary tí a ń ṣàkóso pẹ̀lú àwọn àgbékalẹ̀ gradual, ìdánwò aládàáṣiṣẹ́, àti àwọn agbára padà sẹ́yìn. Fún àwọn ẹgbẹ́ iṣẹ́ ní ìmúlò.",
-    "method4Body": "CIRISManager pèsè àwọn fífipòsọ blue-green aládàáṣiṣẹ́ pẹ̀lú ìlójúpọ̀ ìlera. Kan sí ẹgbẹ́ fún àwọn ètò fífipòsọ.",
-    "method4Best": "<strong>Tó dára jùlọ fún:</strong> Àwọn fífipòsọ ìlú-ìṣòwò, àwọn ẹgbẹ́ iṣẹ́ ní ìmúlò, àwọn àwọn ìpilẹ̀ tí a ń ṣàkóso",
+    "method4Body": "CIRISManager pèsè àwọn fífisórí ẹ̀rọ blue-green aládàáṣiṣẹ́ pẹ̀lú àbójútó ìlera iṣẹ́. Kan sí ẹgbẹ́ fún àwọn ètò fífisórí ẹ̀rọ.",
+    "method4Best": "<strong>Tó dára jùlọ fún:</strong> Àwọn fífisórí ẹ̀rọ ilé-iṣẹ́, àwọn àkójọpọ̀ ẹrọ tí wọ́n ń ṣiṣẹ́ ní àgbàlá ìmúlò, àwọn ìpilẹ̀ ẹ̀rọ tí a ń ṣàkóso",
     "helloHeading": "Báwò, CIRIS",
     "helloSub": "Ọ̀nà tó kúrú jùlọ sí ìdáhùn àkọ́kọ́. Bẹ̀rẹ̀ aṣojú náà, lẹ́yìn náà pè é láti Python. Àwọn apẹẹrẹ méjèèjì tí ó wà nísàlẹ̀ ṣee daakọ.",
     "helloStep1Heading": "1. Bẹ̀rẹ̀ aṣojú",
     "helloStep1Desc": "Ṣe atúnṣe API. Àkọ́bẹ̀rẹ̀ si ìpèlé 8080. Wíwọlé OBSERVER kò nílò ìjẹ̀rísí fún ìdàgbàsókè àdínísọ.",
     "helloStep2Heading": "2. Pè é láti Python",
-    "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> jẹ́ kí o rí ojú ìgboyà ìfiyèsí fún gbogbo ìpè.",
+    "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> jẹ́ kí o rí ojú-òde ìrònú fún gbogbo ìpè.",
     "sdkNote": "SDK náà jẹ́ <strong>ṣáájú-beta</strong>. Àwọn atọ́kùn lè yí padà láàárín àwọn ìtújáde. Ojú API pátápátá (àwọn ojú-ọ̀nà 181 káàkiri àwọn ìpín 15) tí a ṣàkọsílẹ̀ nínú <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk lórí GitHub</a>.",
     "troubleshootingHeading": "Ṣíṣe Àtúnṣe Ìṣòro",
     "ts1Summary": "pip install kùnà",
@@ -2073,10 +2073,10 @@
   },
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · a n pe e bi “soup”",
-    "headline": "Intaneti, tun atunkọ rẹ laisi alarina.",
+    "headline": "Ìnítánẹ́tì tí a tún kọ́ láìsí alárinà.",
     "intro1": "CEWP jẹ arọpo pipe fun intaneti. Ohun gbogbo ti o n ṣe lori ayelujara loni, ṣiṣanwọle, ipe fidio, ere, awọn faili, awọn ifiranṣẹ, ati awọn ẹtọ ti a fọwọsi, ni a fi taara laarin awọn ẹrọ ti awọn eniyan ti ni tẹlẹ, lori nẹtiwọọki ti a fi koodu di eyiti o lera-lẹhin-quantum. Ko si awọn ile-iṣẹ data nla ni aarin. Ko si awọn ile-iṣẹ diẹ ti o ni awọn ọpa naa.",
     "intro2": "Alarina ti oni n na nipa 175 megatons ti CO2 ni ọdun kan o si fi awọn ile-iṣẹ marun-un mejeeji data rẹ ati agbara lati pinnu ohun ti o ri. CEWP n ṣiṣẹ lori ẹrọ ti o ti ni tẹlẹ, ko ni polowo akoonu agbegbe rẹ rara fun iyoku nẹtiwọọki, o si n ṣakoso ara rẹ: nẹtiwọọki pinnu nipasẹ awọn ibo ti a fọwọsi ti a si wọn, laisi oluni pẹpẹ kankan ni aarin.",
-    "watchLabel": "Wo alaye iseju 7-minute",
+    "watchLabel": "Wo àlàyé ìṣéjú méje",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "Gba CIRIS lori App Store",
     "ctaGooglePlay": "Gba CIRIS lori Google Play",
@@ -2903,7 +2903,7 @@
       "oneFloor": "Awọn ile-iṣẹ data ti ile-iṣẹ imọ-ẹrọ nla"
     },
     "store": {
-      "appleTop": "Gba lori",
+      "appleTop": "Gba lórí",
       "appleBottom": "App Store",
       "googleTop": "Gba lori",
       "googleBottom": "Google Play"
@@ -2925,9 +2925,9 @@
       "Lẹhinna"
     ],
     "summit": "Iberu mẹrin, ilẹ kan. Yọ ile-iṣẹ ti o fi agbara mu ọ lati gbẹkẹle kuro, gbogbo mẹrin yipada ni akoko kan.",
-    "seeAlsoHead": "Ilẹ kanna, ti a ri lati awọn ẹnu-bode miiran",
+    "seeAlsoHead": "Ilẹ̀ kan náà, tí a rí láti àwọn ẹnu-ọ̀nà mìíràn",
     "cta": "Fi sori foonu rẹ",
-    "back": "pada si yara ìpadàbọ̀"
+    "back": "padà sí gbàngàn ìwọlé"
   },
   "paths": {
     "consumer-ai": {

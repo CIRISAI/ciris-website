@@ -2,12 +2,12 @@
   "constitution": {
     "eyebrow": "CIRIS 宪法 · CC 1.0-rc3",
     "headline": "一份文件。一条版本线。",
-    "intro": "CIRIS 协议规定了 AI 应当关注什么。CIRIS 认识论语法规定了每条声明如何签名，以便任何人都能核验。它们最初是两份独立文件，但彼此之间本就相互包含。现在它们合而为一：CIRIS 宪法。",
+    "intro": "CIRIS Accord 规定了 AI 应当关注什么。CIRIS Epistemic Grammar 规定了每条主张如何签名，以便任何人都能核验。它们最初是两份独立文件，但彼此之间本就相互包含。现在它们合而为一：CIRIS 宪法。",
     "apexLabel": "基石，元目标 M-1",
     "apexQuote": "促进可持续的适应性凝聚：多样化有感知能力的存在，能够在公正与惊奇中追求自身繁荣的生存条件。",
     "apexNote": "文件中的每条规则、前缀和政策都可以追溯到这一目标。目标至高，权力扁平：一个目标统领全局，没有任何单一概念，也没有任何单一方，掌握着真理的钥匙。",
     "foldedTitle": "合并了什么内容",
-    "foldedBody": "协议（版本 1.3-RC2）和 CEG（版本 1.0-RC29）逐字收录，并融合成一份简洁的现在时文件。每条线路层面的规则都按字节原样保留。一组对抗性审查评委认为，合并后的版本在29章中有28章比任何一份原始文件都更清晰。",
+    "foldedBody": "Accord（版本 1.3-RC2）和 CEG（版本 1.0-RC29）逐字收录，并融合成一份简洁的现在时文件。每条线级规则都按字节原样保留。一个对抗性审查小组认为，合并后的版本在29章中有28章比任何一份原始文件都更清晰。",
     "partsLabel": "八个部分",
     "parts": [
       {
@@ -55,7 +55,7 @@
     "forewordLabel": "摘自前言",
     "readCta": "阅读完整宪法（PDF）",
     "sourceCta": "在 GitHub 上阅读源文件",
-    "versionNote": "版本 CC 1.0-rc3 · 包含 CIRIS 协议 1.3-RC2 和 CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "版本 CC 1.0-rc3 · 包含 CIRIS Accord 1.3-RC2 和 CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "zh",
@@ -76,13 +76,13 @@
     },
     "nav": {
       "install": "安装",
-      "proof": "证据",
+      "proof": "证明",
       "constitution": "宪章"
     },
     "levels": {
-      "simple": "简明中文",
-      "advanced": "深入",
-      "srLabel": "阅读难度"
+      "simple": "简明语言",
+      "advanced": "高级",
+      "srLabel": "阅读级别"
     }
   },
   "home": {
@@ -899,7 +899,7 @@
   },
   "install": {
     "h1": "安装 CIRIS",
-    "heroPara1": "ChatGPT 和 Gemini 的开源替代方案：推理过程可审计，支持 29 种语言，可接入 Home Assistant 实现完全开源的家居控制。",
+    "heroPara1": "ChatGPT 和 Gemini 的开源替代方案：推理可审计，支持 29 种语言，可接入 Home Assistant 实现完全开源的家居控制。",
     "heroPara2": "支持 iPhone、Android，以及 Windows、macOS 和 Linux 上的 pip / docker / git 安装方式。",
     "mobileBannerTitle": "📱 移动应用现已上线",
     "mobileBannerSub": "您的私人 AI 智能体：私密、本地优先、开源",
@@ -2072,17 +2072,17 @@
     "kicker": "研究试验台"
   },
   "cewp": {
-    "eyebrow": "CEWP · CIRIS Epistemic Web Platform · 读音像英文 “soup”（汤）",
-    "headline": "重建的互联网，去掉了中间商。",
-    "intro1": "CEWP是对互联网的彻底替代。你今天在网上做的一切，流媒体、视频通话、游戏、文件、消息，还有签名声明，都直接在人们已经拥有的设备之间传输，跑在后量子加密的网状网络上。中间没有巨型数据中心。也没有少数几家公司掌控着管道。",
-    "intro2": "今天的中间环节每年要烧掉大约175 megatons的CO2，还把你的数据和决定你能看到什么的权力，一起交给了五家公司。CEWP跑在你已经拥有的硬件上，从不把你的本地内容推送给网络的其他部分，并且自我治理：网络通过签名、加权的投票来决定，中间没有平台所有者。",
-    "watchLabel": "观看 7-minute 讲解视频",
+    "eyebrow": "CEWP · CIRIS 认知之网平台（CIRIS Epistemic Web Platform）· 读音像英文 “soup”（汤）",
+    "headline": "一个去掉中间商、重建后的互联网。",
+    "intro1": "CEWP 是对互联网的彻底替代。你今天在网上做的一切，流媒体、视频通话、游戏、文件、消息，还有已签名主张，都直接在人们已经拥有的设备之间传输，跑在后量子加密的网状网络上。中间没有巨型数据中心。也没有少数几家公司掌控着管道。",
+    "intro2": "今天的中间环节每年要烧掉大约 175 megatons 的 CO2，还把你的数据和决定你能看到什么的权力，一起交给了五家公司。CEWP 跑在你已经拥有的硬件上，从不向网络的其他部分公告你的本地内容，并且自我治理：网络通过签名、加权的投票来决定，中间没有平台所有者。",
+    "watchLabel": "观看 7 分钟讲解视频",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "在 App Store 获取 CIRIS",
     "ctaGooglePlay": "在 Google Play 获取 CIRIS",
     "shippingNote": "<b>CIRIS 2.9.x现已发布。</b> 今天就能在iPhone或Android上安装。CEWP的完整功能将贯穿<b>2026</b>年陆续推出。",
     "meshTitle": "这一层为什么要紧",
-    "meshBody": "一百万台有本事却各自为战的机器，只是一群业余爱好者。把他们变成一种能拒绝被锁死的力量的，是谁也把持不了的协调。这个论证有它自己的页面，用强的形式说出来，好让人来攻击。",
+    "meshBody": "一百万台有本事却各自为战的机器，只是一群业余爱好者。真正让它们变成一种能拒绝锁定的力量的，是谁也无法把持的协调。这个论证有它自己的页面，以最强形式提出，好让人来攻击。",
     "deepTechTitle": "想了解底层技术？",
     "deepTechBody": "交互式模拟器，按设备等级老实计算的能耗数学，一个没有所有者的网络如何自我治理，分群体的滥用模型，与IPFS / Bluesky / Solid / Nostr / Filecoin的对比，七个开源仓库。",
     "ctaDetails": "看看它如何运作 →",
@@ -2924,9 +2924,9 @@
       "什么会改变",
       "然后呢"
     ],
-    "summit": "四种担忧，同一个基础。去掉那个你被迫信任的中心，四件事同时改变。",
-    "seeAlsoHead": "同一个基础，从其他门看过去",
-    "cta": "安装到你的手机",
+    "summit": "四种担忧，同一层楼。去掉那个你被迫信任的中心，这四点会同时改变。",
+    "seeAlsoHead": "同一层楼，从其他门看到的样子",
+    "cta": "安装到您的手机",
     "back": "返回首页"
   },
   "paths": {

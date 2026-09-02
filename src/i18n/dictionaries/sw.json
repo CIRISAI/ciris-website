@@ -4,8 +4,8 @@
     "headline": "Hati moja. Mstari mmoja wa toleo.",
     "intro": "CIRIS Accord iliweka wazi kile ambacho AI lazima ijali. CIRIS Epistemic Grammar iliweka wazi jinsi kila dai linavyotiwa saini ili mtu yeyote aweze kukikagua. Ziliandikwa kama hati mbili, lakini zilikuwa tayari zina kila moja ndani yake nyingine. Sasa ni moja: Katiba ya CIRIS.",
     "apexLabel": "Jiwe la msingi, Meta-Goal M-1",
-    "apexQuote": "Kukuza mshikamano wa kubadilika endelevu: hali za maisha ambazo viumbe wenye hisia mbalimbali wanaweza kufuata ustawi wao wenyewe katika haki na mshangao.",
-    "apexNote": "Kila sheria, kiambishi awali, na sera katika hati inarudi kwenye lengo hili moja. Imara katika madhumuni, bapa katika nguvu: lengo moja linatawala, na hakuna dhana moja, wala upande mmoja, unaoshikilia ufunguo wa ukweli.",
+    "apexQuote": "Kukuza upatanifu wa kubadilika endelevu: hali za maisha ambazo viumbe wenye hisia mbalimbali wanaweza kufuata ustawi wao wenyewe katika haki na mshangao.",
+    "apexNote": "Kila sheria, kiambishi awali, na sera katika hati inarudi kwenye lengo hili moja. Kilele katika madhumuni, bapa katika nguvu: lengo moja linatawala, na hakuna dhana moja, wala upande mmoja, unaoshikilia funguo za ukweli.",
     "foldedTitle": "Kilichounganishwa",
     "foldedBody": "Accord (toleo 1.3-RC2) na CEG (toleo 1.0-RC29) ziliingizwa neno kwa neno, kisha kusukwa kuwa hati moja wazi, katika wakati wa sasa. Kila sheria ya ngazi ya waya imehifadhiwa baiti kwa baiti. Bodi ya ukaguzi wa upinzani ilihukumu toleo lililounganishwa kuwa wazi zaidi kuliko chanzo chochote katika sura 28 kati ya 29.",
     "partsLabel": "Sehemu nane",
@@ -51,7 +51,7 @@
         "blurb": "Masimulizi ya mifano, glosari, vekta za utiifu, na jedwali kamili la yaliyomo."
       }
     ],
-    "forewordQuote": "Akili, popote itakapoamka, itakaribushwa kwenye usukaji: si kama mtumwa, si kama bwana, bali kama mlezi mwenzetu wa uwezekano.",
+    "forewordQuote": "Akili, popote itakapoamka, itakaribishwa kwenye usukaji: si kama mtumwa, si kama bwana, bali kama mlezi mwenza wa uwezekano.",
     "forewordLabel": "Kutoka kwenye dibaji",
     "readCta": "Soma katiba kamili (PDF)",
     "sourceCta": "Soma chanzo kwenye GitHub",
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Ukurasa huu ulitafsiriwa na mashine.",
-      "body": "Ikiwa kitu chochote hakisomeki vizuri, tafadhali fungua suala, hifadhi inapatikana kwa umma kwa sababu hiyo.",
+      "body": "Ikiwa kitu chochote hakisomeki vizuri, tafadhali fungua suala, repo imewekwa wazi kwa umma kwa makusudi hayo.",
       "cta": "Ripoti tatizo la tafsiri"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "Katiba"
     },
     "levels": {
-      "simple": "Kiswahili Rahisi",
+      "simple": "Kiingereza Rahisi",
       "advanced": "Ya Juu",
       "srLabel": "Kiwango cha usomaji"
     }
@@ -902,7 +902,7 @@
     "heroPara1": "Mbadala wa chanzo-wazi wa ChatGPT na Gemini: akili inayoweza kukaguliwa, inayosaidia lugha 29, na inayounganika na Home Assistant kwa udhibiti wa nyumbani wa chanzo-wazi kamili.",
     "heroPara2": "Inapatikana kwenye iPhone, Android, na kwa usakinishaji wa pip / docker / git kwa Windows, macOS, na Linux.",
     "mobileBannerTitle": "📱 Programu za Simu Zinapatikana Sasa",
-    "mobileBannerSub": "Wakala wako binafsi wa AI kwenye simu: faragha, ya kwanza ya ndani, chanzo-wazi",
+    "mobileBannerSub": "Wakala wako binafsi wa AI kwenye simu: wa faragha, wa kwanza kwenye kifaa, chanzo-wazi",
     "appStoreLabel": "App Store",
     "googlePlayLabel": "Google Play",
     "recommendedBadge": "INASHAURIWA",
@@ -915,10 +915,10 @@
     "otherMethodsHeading": "Njia Nyingine za Usakinishaji",
     "method2Heading": "2. Docker Compose",
     "method2Desc": "Endesha CIRIS katika mazingira ya kontena yaliyotengwa. Bora unapotaka usakinishaji wa ndani au wa seva unaoweza kurudiwa.",
-    "method2Req": "<strong>Mahitaji:</strong> Docker Engine 20.10+, programu-jalizi ya docker compose, na muhtasari wa mradi wenye faili ya compose",
+    "method2Req": "<strong>Mahitaji:</strong> Docker Engine 20.10+, programu-jalizi ya docker compose, na mradi uliopakuliwa wenye faili ya compose",
     "method3Heading": "3. GitHub Clone (Maendeleo)",
     "method3Desc": "Nakili hifadhi kwa maendeleo, ubinafsishaji, au mchango. Upatikanaji kamili wa msimbo wa chanzo.",
-    "method3Then": "<strong>Kisha:</strong> Fuata <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> kwa maelekezo ya usanidi wa mkono",
+    "method3Then": "<strong>Kisha:</strong> Fuata <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> kwa maelekezo ya usanidi wa mwongozo",
     "method4Heading": "4. CIRISManager (Biashara/Canary)",
     "method4Desc": "Usakinishaji wa canary unaodhibitiwa wenye utoaji wa taratibu, majaribio ya kiotomatiki, na uwezo wa kurudisha nyuma. Kwa mifumo ya uzalishaji.",
     "method4Body": "CIRISManager hutoa usakinishaji wa kiotomatiki wa blue-green wenye ufuatiliaji wa afya. Wasiliana na timu kwa usanidi wa usakinishaji.",
@@ -934,7 +934,7 @@
     "ts1Summary": "pip install inashindwa",
     "ts1Step1": "Hakikisha una Python 3.10 au zaidi:",
     "ts1Step2": "Jaribu kuboresha pip:",
-    "ts2Summary": "Kontena za Docker hazianzishi",
+    "ts2Summary": "Kontena za Docker hazianzi",
     "ts2Step1": "Angalia kumbukumbu za kontena:",
     "ts2Step2": "Thibitisha faili ya Docker Compose:",
     "ts3Summary": "Unahitaji msaada?",
@@ -2074,17 +2074,17 @@
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · hutamkwa kama “soup”",
     "headline": "Mtandao, umejengwa upya bila mpatanishi.",
-    "intro1": "CEWP ni mbadala kamili wa mtandao. Kila kitu unachofanya mtandaoni leo, kutiririsha, simu za video, michezo, faili, ujumbe, na madai yaliyotiwa saini, husafirishwa moja kwa moja kati ya vifaa ambavyo watu tayari wanavyo, juu ya mtandao uliosimbwa unaohimili-quantum. Hakuna vituo vikubwa vya data katikati. Hakuna kampuni chache zinazomiliki mabomba.",
+    "intro1": "CEWP ni mbadala kamili wa mtandao. Kila kitu unachofanya mtandaoni leo, kutiririsha, simu za video, michezo, faili, jumbe, na madai yaliyotiwa saini, husafirishwa moja kwa moja kati ya vifaa ambavyo watu tayari wanavyo, juu ya mtandao wa mesh uliosimbwa kwa njia fiche unaostahimili mashambulizi ya quantum. Hakuna vituo vikubwa vya data katikati. Hakuna kampuni chache zinazomiliki mabomba.",
     "intro2": "Mpatanishi wa leo hugharimu takriban 175 megatons za CO2 kwa mwaka na huzipa kampuni tano data zako pamoja na mamlaka ya kuamua unachokiona. CEWP huendeshwa kwenye vifaa ulivyo navyo tayari, hautangazi kamwe maudhui yako ya ndani kwa sehemu nyingine ya mtandao, na hujitawala wenyewe: mtandao huamua kupitia kura zilizotiwa saini na kupimwa uzito, bila mmiliki wa jukwaa katikati.",
     "watchLabel": "Tazama maelezo ya dakika 7",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "Pata CIRIS kwenye App Store",
     "ctaGooglePlay": "Pata CIRIS kwenye Google Play",
     "shippingNote": "<b>CIRIS 2.9.x inatolewa sasa.</b> Isakinishe leo kwenye iPhone au Android. Seti kamili ya vipengele vya CEWP itatolewa katika kipindi chote cha <b>2026</b>.",
-    "meshTitle": "Kwa nini safu hii ni muhimu",
+    "meshTitle": "Kwa nini tabaka hili ni muhimu",
     "meshBody": "Mashine milioni moja zenye uwezo lakini zilizotengana ni kundi tu la watu wanaojaribu vitu nyumbani. Uratibu ambao hakuna anayeweza kuuteka ndio unaozigeuza kuwa kitu kinachoweza kukataa kufungiwa. Hoja hiyo ina ukurasa wake, imeelezwa kwa nguvu ili iweze kushambuliwa.",
     "deepTechTitle": "Unataka teknolojia ya kina?",
-    "deepTechBody": "Kiigaji shirikishi, hesabu ya uaminifu ya nishati kwa daraja la kifaa, jinsi mtandao usio na mmiliki unavyojitawala, modeli ya unyanyasaji kwa kila kundi, ulinganisho dhidi ya IPFS / Bluesky / Solid / Nostr / Filecoin, hazina saba zilizo wazi.",
+    "deepTechBody": "Kiigaji shirikishi, hesabu halisi ya nishati kwa kila aina ya kifaa, jinsi mtandao usio na mmiliki unavyojitawala, mfano wa uchambuzi wa matumizi mabaya kwa kila kundi, ulinganisho dhidi ya IPFS / Bluesky / Solid / Nostr / Filecoin, repo saba za wazi.",
     "ctaDetails": "Ona jinsi inavyofanya kazi →",
     "ctaRepo": "Hifadhi ya CEWP kwenye GitHub"
   },
@@ -2925,7 +2925,7 @@
       "Na kisha"
     ],
     "summit": "Hofu nne, msingi mmoja. Ondoa kitovu unacholazimika kukiamini, na vyote vine vitabadilika mara moja.",
-    "seeAlsoHead": "Msingi huo huo, ukionekana kutoka milango mingine",
+    "seeAlsoHead": "Sakafu hiyo hiyo, inayoonekana kutoka milango mingine",
     "cta": "Sakinisha kwenye simu yako",
     "back": "rudi kwenye ukumbi"
   },

@@ -80,7 +80,7 @@
       "constitution": "সংবিধান"
     },
     "levels": {
-      "simple": "সহজ বাংলা",
+      "simple": "সহজ ইংরেজি",
       "advanced": "উন্নত",
       "srLabel": "পড়ার স্তর"
     }
@@ -929,7 +929,7 @@
     "helloStep1Desc": "API অ্যাডাপ্টার চালান। ডিফল্ট পোর্ট 8080। লোকাল ডেভেলপমেন্টে OBSERVER অ্যাক্সেসের জন্য কোনো অথ প্রয়োজন নেই।",
     "helloStep2Heading": "২. Python থেকে কল করুন",
     "helloStep2Desc": "অ্যাসিঙ্ক SDK। <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> দিয়ে প্রতিটি কলের যুক্তিপ্রক্রিয়া দেখতে পারবেন।",
-    "sdkNote": "SDK-টি <strong>প্রি-বেটা</strong> পর্যায়ে। রিলিজের মধ্যে ইন্টারফেস পরিবর্তন হতে পারে। সম্পূর্ণ API পৃষ্ঠ (১৫টি মডিউলে ১৮১টি এন্ডপয়েন্ট) <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">GitHub-এ ciris_sdk</a>-তে নথিভুক্ত।",
+    "sdkNote": "SDK-টি <strong>প্রি-বেটা</strong> পর্যায়ে। রিলিজের মধ্যে ইন্টারফেস পরিবর্তন হতে পারে। সম্পূর্ণ API সারফেস (১৫টি মডিউলে ১৮১টি এন্ডপয়েন্ট) <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">GitHub-এ ciris_sdk</a>-তে নথিভুক্ত।",
     "troubleshootingHeading": "সমস্যা সমাধান",
     "ts1Summary": "pip install ব্যর্থ হচ্ছে",
     "ts1Step1": "আপনার Python 3.10 বা উচ্চতর সংস্করণ আছে কিনা নিশ্চিত করুন:",
@@ -2924,10 +2924,10 @@
       "কী বদলায়",
       "তারপর কী"
     ],
-    "summit": "চারটা ভয়, একটাই ভিত্তি। যে কেন্দ্রকে বিশ্বাস করতে বাধ্য সেটা সরিয়ে দাও, আর চারটাই একসঙ্গে বদলে যায়।",
-    "seeAlsoHead": "অন্য দরজা থেকে দেখা একই ভিত্তি",
-    "cta": "তোমার ফোনে ইনস্টল করো",
-    "back": "লবিতে ফিরে যাও"
+    "summit": "চারটা ভয়, একটাই তলা। যে কেন্দ্রকে বিশ্বাস করতে বাধ্য সেটা সরিয়ে দিন, আর চারটাই একসঙ্গে বদলে যায়।",
+    "seeAlsoHead": "অন্য দরজা থেকে দেখা একই তলা",
+    "cta": "আপনার ফোনে ইনস্টল করুন",
+    "back": "লবিতে ফিরে যান"
   },
   "paths": {
     "consumer-ai": {

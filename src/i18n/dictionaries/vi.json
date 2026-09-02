@@ -80,7 +80,7 @@
       "constitution": "Hiến pháp"
     },
     "levels": {
-      "simple": "Tiếng Việt đơn giản",
+      "simple": "Tiếng Anh đơn giản",
       "advanced": "Nâng cao",
       "srLabel": "Mức độ đọc"
     }
@@ -920,13 +920,13 @@
     "method3Desc": "Clone kho lưu trữ để phát triển, tùy chỉnh hoặc đóng góp. Toàn quyền truy cập mã nguồn.",
     "method3Then": "<strong>Sau đó:</strong> Làm theo <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> để hướng dẫn cài đặt thủ công",
     "method4Heading": "4. CIRISManager (Doanh nghiệp/Canary)",
-    "method4Desc": "Triển khai canary có quản lý với rollout từng bước, kiểm thử tự động và khả năng rollback. Dành cho cụm sản xuất.",
-    "method4Body": "CIRISManager cung cấp triển khai blue-green tự động với giám sát sức khỏe. Liên hệ nhóm để biết cấu hình triển khai.",
+    "method4Desc": "Triển khai canary có quản lý với các đợt triển khai dần dần, kiểm thử tự động và khả năng hoàn nguyên. Dành cho cụm sản xuất.",
+    "method4Body": "CIRISManager cung cấp triển khai blue-green tự động với giám sát trạng thái. Liên hệ nhóm để biết cấu hình triển khai.",
     "method4Best": "<strong>Phù hợp nhất cho:</strong> Triển khai doanh nghiệp, cụm sản xuất, hạ tầng được quản lý",
     "helloHeading": "Xin chào, CIRIS",
-    "helloSub": "Con đường ngắn nhất đến phản hồi đầu tiên. Khởi động tác nhân, sau đó gọi nó từ Python. Cả hai khối bên dưới đều có thể sao chép và dán.",
-    "helloStep1Heading": "1. Khởi động tác nhân",
-    "helloStep1Desc": "Chạy bộ điều hợp API. Mặc định là cổng 8080. Quyền truy cập OBSERVER không yêu cầu xác thực cho phát triển cục bộ.",
+    "helloSub": "Con đường ngắn nhất đến phản hồi đầu tiên. Khởi động Tác Nhân, sau đó gọi nó từ Python. Cả hai khối bên dưới đều có thể sao chép-dán trực tiếp.",
+    "helloStep1Heading": "1. Khởi động Tác Nhân",
+    "helloStep1Desc": "Chạy Bộ Điều Hợp API. Mặc định là cổng 8080. Quyền truy cập OBSERVER không yêu cầu xác thực cho phát triển cục bộ.",
     "helloStep2Heading": "2. Gọi nó từ Python",
     "helloStep2Desc": "SDK bất đồng bộ. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> cho phép bạn thấy bề mặt lý luận cho mỗi lần gọi.",
     "sdkNote": "SDK đang ở giai đoạn <strong>pre-beta</strong>. Các giao diện có thể thay đổi giữa các phiên bản. Toàn bộ bề mặt API (181 endpoint trên 15 module) được ghi lại tại <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk trên GitHub</a>.",
@@ -936,7 +936,7 @@
     "ts1Step2": "Thử nâng cấp pip:",
     "ts2Summary": "Container Docker không khởi động được",
     "ts2Step1": "Kiểm tra nhật ký container:",
-    "ts2Step2": "Xác minh file Docker Compose:",
+    "ts2Step2": "Xác minh tệp Docker Compose:",
     "ts3Summary": "Cần trợ giúp?",
     "ts3Link1": "Đọc tài liệu",
     "ts3Link2": "Báo cáo sự cố",
@@ -2076,7 +2076,7 @@
     "headline": "Internet, được xây dựng lại mà không cần kẻ trung gian.",
     "intro1": "CEWP là một sự thay thế hoàn toàn cho internet. Mọi thứ bạn làm trực tuyến hôm nay, phát trực tuyến, gọi video, chơi game, tập tin, tin nhắn, và các tuyên bố đã ký, được định tuyến trực tiếp giữa các thiết bị mà mọi người đã sở hữu, qua một mạng lưới mã hóa kháng lượng tử. Không có trung tâm dữ liệu khổng lồ ở giữa. Không có một nhóm nhỏ công ty sở hữu đường ống.",
     "intro2": "Phần trung gian hôm nay tiêu tốn khoảng 175 megatons CO2 mỗi năm và trao cho năm công ty cả dữ liệu của bạn lẫn quyền quyết định những gì bạn thấy. CEWP chạy trên phần cứng bạn đã có, không bao giờ quảng cáo nội dung cục bộ của bạn cho phần còn lại của mạng, và tự quản trị: mạng lưới quyết định thông qua các lá phiếu đã ký và có trọng số, không có chủ nền tảng nào ở giữa.",
-    "watchLabel": "Xem video giải thích 7-minute",
+    "watchLabel": "Xem video giải thích dài 7 phút",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "Tải CIRIS trên App Store",
     "ctaGooglePlay": "Tải CIRIS trên Google Play",
@@ -2924,8 +2924,8 @@
       "Điều gì thay đổi",
       "Và tiếp theo"
     ],
-    "summit": "Bốn nỗi lo, một nền tảng. Xóa trung tâm mà bạn buộc phải tin, và cả bốn thứ thay đổi cùng lúc.",
-    "seeAlsoHead": "Cùng một nền tảng, nhìn từ các cửa khác",
+    "summit": "Bốn nỗi lo, một tầng. Xóa trung tâm mà bạn buộc phải tin, và cả bốn thứ thay đổi cùng lúc.",
+    "seeAlsoHead": "Cùng một tầng, nhìn từ các cửa khác",
     "cta": "Cài đặt trên điện thoại của bạn",
     "back": "quay lại sảnh chờ"
   },

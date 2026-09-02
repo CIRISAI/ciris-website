@@ -4,8 +4,8 @@
     "headline": "Takarda ɗaya. Layin sigar ɗaya.",
     "intro": "CIRIS Accord ya tsara abin da AI dole ta kula da shi. CIRIS CEG ya tsara yadda ake sanya sa'a ga kowane da'awa don kowa ya iya duba shi. An rubuta su azaman takardun biyu, amma sun riga sun ƙunshi juna. Yanzu ɗaya ne: Tsarin Mulki na CIRIS.",
     "apexLabel": "Ginshiƙi, Manufa ta M-1",
-    "apexQuote": "Haɓaka daidaituwar daidaitawa mai ɗorewa: yanayin rayuwa da ƙarƙashinsa halittu masu hankali daban-daban za su iya neman jin daɗinsu da adalci da mamaki.",
-    "apexNote": "Kowane doka, farawa, da manufar ƙa'ida a cikin takarda tana komawa zuwa ga wannan manufa guda ɗaya. Matsayi a manufa, lami a iko: manufa guda ɗaya ke mulki, kuma babu wata ra'ayi guda ɗaya, kuma babu wata jam'iyya guda ɗaya, da ke riƙe da makullin gaskiya.",
+    "apexQuote": "Inganta daidaituwa mai ɗorewa kuma mai iya daidaitawa: yanayin rayuwa da ƙarƙashinsa halittu masu hankali daban-daban za su iya neman bunƙasarsu cikin adalci da al'ajabi.",
+    "apexNote": "Kowace doka, kowane sashin farko (prefix), da kowace manufar ƙa'ida a cikin takarda tana komawa zuwa ga wannan manufa guda ɗaya. Babba a manufa, daidaitacce a iko: manufa guda ɗaya ke mulki, kuma babu wani ra'ayi guda ɗaya, kuma babu wata jam'iyya guda ɗaya, da ke riƙe da makullin gaskiya.",
     "foldedTitle": "Abin da aka haɗa a ciki",
     "foldedBody": "An kwafi Accord (sigar 1.3-RC2) da CEG (sigar 1.0-RC29) kalma bayan kalma, sannan aka haɗa su zuwa cikin takarda ɗaya mai sauƙi, na yanzu. Ana kiyaye kowane doka ta matakin waya byte bayan byte. Wani kwamitin gwaje-gwajen adawa ya yanke hukunci cewa sigar da aka haɗa ta fi bayyanawa fiye da kowace tushe a cikin surori 28 daga cikin 29.",
     "partsLabel": "Sassa takwas",
@@ -66,13 +66,13 @@
   "common": {
     "langSwitcher": {
       "label": "Harshe",
-      "cta": "Karanta wannan da harshenu",
+      "cta": "Karanta wannan da harshenku",
       "current": "Harshen yanzu"
     },
     "mtBanner": {
       "lead": "An fassara wannan shafi ta na'ura.",
       "body": "Idan wani abu ya yi kuskure, don Allah buɗe batun a shafin — repo yana buɗe wa kowa.",
-      "cta": "Rarraba matsalar fassara"
+      "cta": "Ba da rahoton matsalar fassara"
     },
     "nav": {
       "install": "Shigar",
@@ -80,7 +80,7 @@
       "constitution": "Tsarin Mulki"
     },
     "levels": {
-      "simple": "Sauƙaƙan Hausa",
+      "simple": "Sauƙaƙan Turanci",
       "advanced": "Ci Gaba",
       "srLabel": "Matakin karatu"
     }
@@ -683,23 +683,23 @@
   },
   "install": {
     "h1": "Shigar da CIRIS",
-    "heroPara1": "Madadin buɗe-ido na ChatGPT da Gemini: tunani da za a iya duba, harsuna 29 a cikin mulkin harshe, yana haɗawa da Home Assistant don cikakken sarrafawa na gida ta hanyar buɗe-ido.",
+    "heroPara1": "Madadin buɗaɗɗen tushe na ChatGPT da Gemini: tunani da za a iya duba, yana iya aiki da harsuna 29, yana haɗawa da Home Assistant don cikakken sarrafawa na gida ta hanyar buɗaɗɗen tushe.",
     "heroPara2": "Yana samuwa a iPhone, Android, kuma azaman shigar pip / docker / git don Windows, macOS, da Linux.",
     "mobileBannerTitle": "📱 Aikace-Aikacen Wayar Hannu Sun Samuwa",
-    "mobileBannerSub": "Wakilin AI naka na sirri a wayar hannu: mai sirri, gida-da-farko, buɗe-ido",
+    "mobileBannerSub": "Wakilin AI naka na sirri a wayar hannu: mai sirri, na gida-farko, buɗaɗɗen tushe",
     "appStoreLabel": "App Store",
     "googlePlayLabel": "Google Play",
     "recommendedBadge": "ANA SHAWARTAR",
     "method1Heading": "1. pip install (Na fi so)",
-    "method1Desc": "Hanya mafi sauƙi da sauri. Ta haɗa da taimakon farko-gudanar. Tana aiki a Windows, macOS, da Linux.",
+    "method1Desc": "Hanya mafi sauƙi da sauri. Ta haɗa da jagorar saiti na farkon amfani (setup wizard). Tana aiki a Windows, macOS, da Linux.",
     "copyBtn": "Kwafi",
     "copiedBtn": "✓ An Kwafi!",
-    "method1ThenRun": "<strong>Sa'an nan gudanar:</strong> <code class=\"rounded bg-green-200 px-1 dark:bg-green-800\">ciris-agent</code> don fara taimakon farko-gudanar",
+    "method1ThenRun": "<strong>Sa'an nan gudanar:</strong> <code class=\"rounded bg-green-200 px-1 dark:bg-green-800\">ciris-agent</code> don ƙaddamar da jagorar saiti na farkon amfani",
     "method1Req": "<strong>Buƙatun:</strong> Python 3.10+",
     "otherMethodsHeading": "Sauran Hanyoyin Shigarwa",
     "method2Heading": "2. Docker Compose",
     "method2Desc": "Gudanar da CIRIS a cikin yanayin kwantena mai keɓewa. Mafi kyau idan kana son kunnawa na gida ko na uwar garken da za a iya maimaita.",
-    "method2Req": "<strong>Buƙatun:</strong> Docker Engine 20.10+, docker compose plugin, fitintar aikin tare da fayil ɗin compose",
+    "method2Req": "<strong>Buƙatun:</strong> Docker Engine 20.10+, docker compose plugin, ajiyar lambar aikin da aka sauke tare da fayil ɗin compose",
     "method3Heading": "3. GitHub Clone (Ci gaban Shirin)",
     "method3Desc": "Kwafi ajiyar don ci gaba, gyara, ko bayarwa. Cikakken damar lambar tushe.",
     "method3Then": "<strong>Sa'an nan:</strong> Bi <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> don umarni na kafa da hannu",
@@ -710,10 +710,10 @@
     "helloHeading": "Sannu, CIRIS",
     "helloSub": "Hanyar mafi gajeruwa zuwa amsawa ta farko. Fara wakili, sa'an nan kira shi daga Python. Dukkan tubalan biyu a ƙasa za a iya kwafi-lura.",
     "helloStep1Heading": "1. Fara wakili",
-    "helloStep1Desc": "Gudanar da mai daidaita API. Yana farawa a tashar 8080. Damar OBSERVER ba ta buƙatar tabbatarwa don ci gaban gida.",
+    "helloStep1Desc": "Gudanar da na'ura mai haɗawa ta API. Tashar da take amfani da ita ta tsoho ita ce 8080. Matakin damar OBSERVER ba ya buƙatar tantancewa don ci gaban gida.",
     "helloStep2Heading": "2. Kira shi daga Python",
-    "helloStep2Desc": "SDK na Async. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> suna barka ka ga saman tunani don kowane kira.",
-    "sdkNote": "SDK ta <strong>kafin-beta</strong>. Furofayiloli na iya canzawa tsakanin sakewa. Cikakken saman API (wurare 181 a duk cikin ƙungiyoyi 15) an rubuta a <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk a GitHub</a>.",
+    "helloStep2Desc": "SDK na Async. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> suna ba ka damar ganin fagen bayyana tunani (reasoning surface) don kowane kira.",
+    "sdkNote": "SDK ta <strong>kafin-beta</strong>. Fuskokin amfani (interfaces) na iya canzawa tsakanin sakewa. Cikakken saman API (endpoints 181 a cikin modules 15) an rubuta a <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk a GitHub</a>.",
     "troubleshootingHeading": "Gyaran Matsaloli",
     "ts1Summary": "pip install ya kasa",
     "ts1Step1": "Tabbatar cewa kana da Python 3.10 ko sama da haka:",
@@ -2074,17 +2074,17 @@
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · ana furta shi kamar “soup”",
     "headline": "Intanet, an sake gina shi ba tare da dan tsaka-tsaki ba.",
-    "intro1": "CEWP cikakken maye gurbin intanet ne. Duk abin da kake yi a yanar gizo a yau, yawo, kiran bidiyo, wasanni, fayiloli, sakonni, da da'awace-da'awacen da aka sa hannu, ana tura su kai tsaye tsakanin na'urorin da mutane suka riga suka mallaka, ta hanyar sadarwar da aka boye da boyewa mai jurewa-quantum. Babu manyan cibiyoyin bayanai a tsakiya. Babu 'yan kamfanoni kalilan da ke mallakar bututun.",
+    "intro1": "CEWP cikakken maye gurbin intanet ne. Duk abin da kake yi a yanar gizo a yau, watsa shirye-shirye (streaming), kiran bidiyo, wasanni, fayiloli, saƙonni, da da'awace-da'awacen da aka sa hannu, ana tura su kai tsaye tsakanin na'urorin da mutane suka riga suka mallaka, ta hanyar sadarwar mesh mai ɓoyewa da ke jure kwamfutocin quantum. Babu manyan cibiyoyin bayanai a tsakiya. Babu ƴan kamfanoni kaɗan da ke mallakar bututun.",
     "intro2": "Dan tsaka-tsaki na yau yana kashe kusan 175 megatons na CO2 a shekara kuma yana ba kamfanoni biyar bayananka da kuma ikon yanke shawarar abin da kake gani. CEWP yana aiki a kan na'urorin da ka riga ka mallaka, ba ya taba tallata abubuwan da kake da su a gida ga sauran hanyar sadarwa, kuma yana mulkin kansa: hanyar sadarwa tana yanke shawara ta hanyar kuri'un da aka sa hannu kuma aka auna, ba tare da mai mallakar dandamali a tsakiya ba.",
     "watchLabel": "Kalli bayanin na 7-minute",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "Sami CIRIS a App Store",
     "ctaGooglePlay": "Sami CIRIS a Google Play",
     "shippingNote": "<b>CIRIS 2.9.x yana fitowa yanzu.</b> Sanya shi a yau a kan iPhone ko Android. Cikakken saitin abubuwan CEWP zai fito a tsawon <b>2026</b>.",
-    "meshTitle": "Me ya sa wannan layin ke da muhimmanci",
+    "meshTitle": "Me ya sa wannan shimfiɗar ke da muhimmanci",
     "meshBody": "Na'urori miliyan ɗaya masu iyawa amma keɓaɓɓu taro ne kawai na masu gwaji a gida. Haɗin gwiwa da babu wanda zai iya kwacewa shi ne abin da ke mai da su wani abu da zai iya ƙin kulle-kulle. Wannan hujjar tana da shafinta, an faɗe ta da ƙarfi domin a iya kai mata hari.",
     "deepTechTitle": "Kana son zurfin fasaha?",
-    "deepTechBody": "Na'urar kwaikwayo mai hulda, lissafin makamashi na gaskiya bisa rukunin na'ura, yadda hanyar sadarwa marar mai shi ke mulkin kanta, samfurin cin zarafi ga kowane rukuni, kwatance da IPFS / Bluesky / Solid / Nostr / Filecoin, ma'ajiyar bude bakwai.",
+    "deepTechBody": "Na'urar kwaikwayo mai mu'amala, lissafin makamashi na gaskiya bisa rukunin na'ura, yadda hanyar sadarwa marar mai shi ke mulkin kanta, samfurin cin zarafi ga kowane rukuni, kwatance da IPFS / Bluesky / Solid / Nostr / Filecoin, repos bakwai da suke buɗe wa kowa.",
     "ctaDetails": "Duba yadda yake aiki →",
     "ctaRepo": "Wurin ajiyar CEWP a GitHub"
   },
@@ -2903,7 +2903,7 @@
       "oneFloor": "Cibiyoyin bayanai na manyan kamfanonin fasaha"
     },
     "store": {
-      "appleTop": "Sauke daga",
+      "appleTop": "Sauke a",
       "appleBottom": "App Store",
       "googleTop": "Samu a",
       "googleBottom": "Google Play"
@@ -2925,7 +2925,7 @@
       "Sa'an nan"
     ],
     "summit": "Tsoro huɗu, tushe ɗaya. Ka cire cibiyar da aka tilasta maka amincewa da ita, duk huɗu za su canja lokaci ɗaya.",
-    "seeAlsoHead": "Tushe ɗaya, an gane shi daga sauran kofofin",
+    "seeAlsoHead": "Tushe ɗaya, ana ganin sa ta sauran kofofi",
     "cta": "Saka a wayar ka",
     "back": "koma zauren farko"
   },

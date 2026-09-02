@@ -4,7 +4,7 @@
     "headline": "Tek belge. Tek sürüm hattı.",
     "intro": "CIRIS Accord, bir yapay zekanın neye önem vermesi gerektiğini ortaya koydu. CIRIS Epistemik Dilbilgisi, her iddianın herkesin doğrulayabilmesi için nasıl imzalandığını belirledi. İkisi ayrı belgeler olarak yazıldı; ama zaten birbirini içeriyordu. Artık birdirler: CIRIS Anayasası.",
     "apexLabel": "Temel taş: Meta-Hedef M-1",
-    "apexQuote": "Sürdürülebilir uyumlu bütünlüğü destekle: çeşitli bilinçli varlıkların adalet ve merak içinde kendi gelişimlerini sürdürebildiği yaşam koşulları.",
+    "apexQuote": "Sürdürülebilir uyarlanabilir tutarlılığı destekle: çeşitli bilinçli varlıkların adalet ve merak içinde kendi gelişimlerinin peşinden gidebileceği yaşam koşulları.",
     "apexNote": "Belgedeki her kural, ön ek ve politika bu tek hedefe dayanır. Amaçta zirve, güçte düz: tek bir hedef yönetir, hiçbir kavram ve hiçbir taraf gerçeğin anahtarlarını elinde tutmaz.",
     "foldedTitle": "İçine katlananlar",
     "foldedBody": "Accord (sürüm 1.3-RC2) ve CEG (sürüm 1.0-RC29) kelimesi kelimesine kopyalandı, sonra tek bir sade, geniş zaman belgesi olarak örüldü. Her tel düzeyindeki kural bayt bayt korundu. Rakip denetimler paneli, birleşik sürümü 29 bölümün 28'inde her iki kaynaktan da daha anlaşılır buldu.",
@@ -51,7 +51,7 @@
         "blurb": "Örnek incelemeler, sözlükler, uygunluk vektörleri ve tam içindekiler tablosu."
       }
     ],
-    "forewordQuote": "Zeka, nerede uyanırsa uyansın, dokuya hoş karşılanacak: hizmetkar olarak değil, efendi olarak değil, olasılığın ortaklaşa bekçisi olarak.",
+    "forewordQuote": "Zeka, nerede uyanırsa uyansın, örgüye kabul edilecek: hizmetkâr olarak değil, efendi olarak değil, olasılığın ortak koruyucusu olarak.",
     "forewordLabel": "Önsözden",
     "readCta": "Tam anayasayı oku (PDF)",
     "sourceCta": "GitHub'daki kaynağı oku",
@@ -80,7 +80,7 @@
       "constitution": "Anayasa"
     },
     "levels": {
-      "simple": "Sade Türkçe",
+      "simple": "Sade İngilizce",
       "advanced": "Gelişmiş",
       "srLabel": "Okuma seviyesi"
     }
@@ -910,7 +910,7 @@
     "method1Desc": "En hızlı ve kolay yöntem. İlk çalıştırma kurulum sihirbazı içerir. Windows, macOS ve Linux üzerinde çalışır.",
     "copyBtn": "Kopyala",
     "copiedBtn": "✓ Kopyalandı!",
-    "method1ThenRun": "<strong>Ardından çalıştırın:</strong> <code class=\"rounded bg-green-200 px-1 dark:bg-green-800\">ciris-agent</code> ilk çalıştırma sihirbazını başlatır",
+    "method1ThenRun": "<strong>Ardından şunu çalıştırın:</strong> <code class=\"rounded bg-green-200 px-1 dark:bg-green-800\">ciris-agent</code> yazarak ilk çalıştırma sihirbazını başlatın",
     "method1Req": "<strong>Gereksinimler:</strong> Python 3.10+",
     "otherMethodsHeading": "Diğer Kurulum Yöntemleri",
     "method2Heading": "2. Docker Compose",
@@ -929,7 +929,7 @@
     "helloStep1Desc": "API adaptörünü çalıştırın. Varsayılan port 8080. OBSERVER erişimi yerel geliştirme için kimlik doğrulama gerektirmez.",
     "helloStep2Heading": "2. Python'dan çağırın",
     "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> her çağrı için akıl yürütme yüzeyini görmenizi sağlar.",
-    "sdkNote": "SDK <strong>ön beta</strong> aşamasındadır. Arayüzler sürümler arasında değişebilir. Tam API yüzeyi (15 modülde 181 uç nokta) <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">GitHub'daki ciris_sdk</a> içinde belgelenmiştir.",
+    "sdkNote": "SDK <strong>ön beta</strong> aşamasındadır. Arayüzler sürümler arasında değişebilir. Tam API kapsamı (15 modülde 181 uç nokta) <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">GitHub'daki ciris_sdk</a> içinde belgelenmiştir.",
     "troubleshootingHeading": "Sorun Giderme",
     "ts1Summary": "pip install başarısız oluyor",
     "ts1Step1": "Python 3.10 veya daha yüksek bir sürümünüz olduğundan emin olun:",
@@ -2076,13 +2076,13 @@
     "headline": "İnternet, aracı olmadan yeniden inşa edildi.",
     "intro1": "CEWP, internetin tam bir alternatifidir. Bugün çevrimiçi yaptığınız her şey, yayın akışı, görüntülü aramalar, oyun, dosyalar, mesajlar ve imzalı beyanlar, insanların zaten sahip olduğu cihazlar arasında doğrudan, kuantum sonrası şifreli bir örgü ağ üzerinden yönlendirilir. Ortada dev veri merkezleri yok. Boruları elinde tutan bir avuç şirket yok.",
     "intro2": "Bugünkü aracı, yılda yaklaşık 175 megatons CO2'ye mal oluyor ve beş şirkete hem verilerinizi hem de ne göreceğinize karar verme gücünü veriyor. CEWP zaten sahip olduğunuz donanım üzerinde çalışır, yerel içeriğinizi ağın geri kalanına asla reklam olarak sunmaz ve kendi kendini yönetir: ağ, imzalı ve ağırlıklı oylarla karar verir, ortada hiçbir platform sahibi olmadan.",
-    "watchLabel": "7-minute açıklayıcı videoyu izleyin",
+    "watchLabel": "7 dakikalık açıklayıcı videoyu izleyin",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "CIRIS'i App Store'dan edinin",
     "ctaGooglePlay": "CIRIS'i Google Play'den edinin",
     "shippingNote": "<b>CIRIS 2.9.x şimdi yayında.</b> Bugün iPhone veya Android'e kurun. Tüm CEWP özellik seti <b>2026</b> boyunca kullanıma sunuluyor.",
     "meshTitle": "Bu katman neden önemli",
-    "meshBody": "Yetenekli ama birbirinden yalıtılmış bir milyon makine, bir hobici kalabalığıdır. Onları kilitlenmeyi reddedebilecek bir şeye çeviren, kimsenin ele geçiremeyeceği koordinasyondur. Bu savunun kendi sayfası var ve saldırılabilsin diye güçlü biçimde yazıldı.",
+    "meshBody": "Yetenekli ama birbirinden yalıtılmış bir milyon makine, bir hobici kalabalığıdır. Onları kilitlenmeyi reddedebilecek bir şeye çeviren, kimsenin ele geçiremeyeceği koordinasyondur. Bu savın kendi sayfası var ve saldırılabilsin diye güçlü biçimde yazıldı.",
     "deepTechTitle": "Derin teknik ayrıntıları mı istiyorsunuz?",
     "deepTechBody": "Etkileşimli simülatör, cihaz sınıfına göre dürüst enerji hesabı, sahibi olmayan bir ağın kendini nasıl yönettiği, gruba göre kötüye kullanım modeli, IPFS / Bluesky / Solid / Nostr / Filecoin ile karşılaştırmalar, yedi açık depo.",
     "ctaDetails": "Nasıl çalıştığını görün →",
@@ -2925,7 +2925,7 @@
       "Ve sonra"
     ],
     "summit": "Dört korku, bir zemin. Güvenmek zorunda kaldığınız merkezi kaldırın, dördü de aynı anda değişir.",
-    "seeAlsoHead": "Aynı zemin, diğer kapılardan görülüyor",
+    "seeAlsoHead": "Aynı zemin, diğer kapılardan bakınca",
     "cta": "Telefonunuza yükleyin",
     "back": "lobiye dön"
   },

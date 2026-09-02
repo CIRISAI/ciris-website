@@ -80,7 +80,7 @@
       "constitution": "Verfassung"
     },
     "levels": {
-      "simple": "Einfach Deutsch",
+      "simple": "Einfaches Deutsch",
       "advanced": "Erweitert",
       "srLabel": "Lesestufe"
     }
@@ -902,7 +902,7 @@
     "heroPara1": "Ein Open-Source-Ersatz für ChatGPT und Gemini: nachvollziehbares Reasoning, mehrsprachig in 29 Sprachen, lässt sich in Home Assistant einbinden für vollständig quelloffene Haussteuerung.",
     "heroPara2": "Verfügbar für iPhone, Android sowie als pip / docker / git-Installation für Windows, macOS und Linux.",
     "mobileBannerTitle": "📱 Mobile Apps jetzt verfügbar",
-    "mobileBannerSub": "Dein persönlicher KI-Agent auf dem Handy: privat, lokal-first, Open Source",
+    "mobileBannerSub": "Ihr persönlicher KI-Agent auf dem Handy: privat, lokal-zuerst, Open Source",
     "appStoreLabel": "App Store",
     "googlePlayLabel": "Google Play",
     "recommendedBadge": "EMPFOHLEN",
@@ -918,10 +918,10 @@
     "method2Req": "<strong>Voraussetzungen:</strong> Docker Engine 20.10+, docker compose Plugin, ein Projekt-Checkout mit der Compose-Datei",
     "method3Heading": "3. GitHub Clone (Entwicklung)",
     "method3Desc": "Repository klonen für Entwicklung, Anpassung oder Beiträge. Vollständiger Zugriff auf den Quellcode.",
-    "method3Then": "<strong>Dann:</strong> Der <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> für manuelle Einrichtungsanweisungen folgen",
+    "method3Then": "<strong>Dann:</strong> Dem <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> für manuelle Einrichtungsanweisungen folgen",
     "method4Heading": "4. CIRISManager (Enterprise/Canary)",
     "method4Desc": "Verwaltete Canary-Deployments mit schrittweisen Rollouts, automatisierten Tests und Rollback-Funktionen. Für Produktionsflotten.",
-    "method4Body": "CIRISManager bietet automatisierte Blue-Green-Deployments mit Gesundheitsüberwachung. Team für Deployment-Konfigurationen kontaktieren.",
+    "method4Body": "CIRISManager bietet automatisierte Blue-Green-Deployments mit Gesundheitsüberwachung. Kontaktieren Sie das Team für Deployment-Konfigurationen.",
     "method4Best": "<strong>Am besten für:</strong> Enterprise-Deployments, Produktionsflotten, verwaltete Infrastruktur",
     "helloHeading": "Hallo, CIRIS",
     "helloSub": "Der kürzeste Weg zur ersten Antwort. Agent starten, dann von Python aus aufrufen. Beide Codeblöcke sind zum Kopieren und Einfügen bereit.",
@@ -2076,7 +2076,7 @@
     "headline": "Das Internet, neu gebaut ohne den Mittelsmann.",
     "intro1": "CEWP ist ein vollständiger Ersatz für das Internet. Alles, was du heute online tust, Streaming, Videoanrufe, Gaming, Dateien, Nachrichten und signierte Aussagen, wird direkt zwischen den Geräten geleitet, die die Menschen bereits besitzen, über ein post-quanten-verschlüsseltes Mesh. Keine riesigen Rechenzentren in der Mitte. Keine Handvoll Konzerne, denen die Leitungen gehören.",
     "intro2": "Die heutige Mitte kostet etwa 175 megatons CO2 pro Jahr und gibt fünf Konzernen sowohl deine Daten als auch die Macht, zu entscheiden, was du siehst. CEWP läuft auf Hardware, die du schon hast, bewirbt deine lokalen Inhalte nie beim Rest des Netzwerks und verwaltet sich selbst: Das Netzwerk entscheidet durch signierte, gewichtete Stimmen, ohne Plattform-Eigentümer in der Mitte.",
-    "watchLabel": "Sieh dir die 7-minute Erklärung an",
+    "watchLabel": "Sieh dir die 7-minütige Erklärung an",
     "videoCaption": "„Dismantling the Hyperscaler“ · YouTube",
     "ctaAppStore": "Hol dir CIRIS im App Store",
     "ctaGooglePlay": "Hol dir CIRIS bei Google Play",

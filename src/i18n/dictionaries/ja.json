@@ -80,9 +80,9 @@
       "constitution": "憲章"
     },
     "levels": {
-      "simple": "やさしい日本語",
+      "simple": "平易な英語",
       "advanced": "上級",
-      "srLabel": "読みやすさ"
+      "srLabel": "読解レベル"
     }
   },
   "home": {
@@ -929,7 +929,7 @@
     "helloStep1Desc": "APIアダプターを実行します。デフォルトはポート8080。ローカル開発時はOBSERVERアクセスに認証は不要です。",
     "helloStep2Heading": "2. Pythonから呼び出す",
     "helloStep2Desc": "非同期SDK。<code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> と <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> で各呼び出しの推論サーフェスを確認できます。",
-    "sdkNote": "SDKは<strong>プレベータ版</strong>です。リリース間でインターフェースが変更される場合があります。APIの全サーフェス（15モジュール、181エンドポイント）は <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> に記載されています。",
+    "sdkNote": "SDKは<strong>プレベータ版</strong>です。リリース間でインターフェースが変更される場合があります。API全体（15モジュール、181エンドポイント）は <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> に記載されています。",
     "troubleshootingHeading": "トラブルシューティング",
     "ts1Summary": "pip installが失敗する",
     "ts1Step1": "Python 3.10以上がインストールされているか確認してください：",
@@ -2076,7 +2076,7 @@
     "headline": "仲介者をなくして作り直したインターネット。",
     "intro1": "CEWPはインターネットを丸ごと置き換えます。ストリーミング、ビデオ通話、ゲーム、ファイル、メッセージ、署名付きの主張まで、今あなたがオンラインでやっていることすべてが、人々がすでに持っている端末どうしを直接行き来します。ポスト量子暗号のメッシュの上で。真ん中に巨大なデータセンターはありません。回線を握る一握りの会社もありません。",
     "intro2": "今の中間層は年間およそ175 megatonsのCO2を使い、あなたのデータと、あなたが何を見るかを決める力の両方を五つの会社に渡しています。CEWPはあなたがすでに持っているハードウェアで動き、あなたのローカルなコンテンツをネットワークの他の部分に決して宣伝せず、自らを治めます。ネットワークが署名付きで重み付けされた投票で決め、真ん中にプラットフォームの所有者はいません。",
-    "watchLabel": "7-minuteの解説を見る",
+    "watchLabel": "7分間の解説を見る",
     "videoCaption": "「Dismantling the Hyperscaler」 · YouTube",
     "ctaAppStore": "App StoreでCIRISを入手",
     "ctaGooglePlay": "Google PlayでCIRISを入手",
