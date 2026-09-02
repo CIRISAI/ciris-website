@@ -239,4 +239,3 @@ Keep them exactly, including any article the rendering carries.
 | Constitution | 憲法 | The CIRIS Constitution, the governing document (replaces the Accord); also the /constitution nav label |
 | CIRIS Scoring | CIRIS スコアリング | Product name of the scoring page; keep the CIRIS mark as is |
 | safety case | 安全性の論拠 | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
-| Meta-Goal M-1 | Meta-Goal M-1 | The Constitution's top-level goal; M-1 is a label, keep it |

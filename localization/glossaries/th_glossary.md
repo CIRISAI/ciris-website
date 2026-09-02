@@ -164,7 +164,6 @@ Keep them exactly, including any article the rendering carries.
 | Constitution | รัฐธรรมนูญ | The CIRIS Constitution, the governing document (replaces the Accord); also the /constitution nav label |
 | CIRIS Scoring | CIRIS การให้คะแนน | Product name of the scoring page; keep the CIRIS mark as is |
 | safety case | กรณีความปลอดภัย | The argued case that CIRIS is safe (the /safety page); a term of art from safety engineering, not a legal case |
-| Meta-Goal M-1 | Meta-Goal M-1 | The Constitution's top-level goal; M-1 is a label, keep it |
 
 ## Cultural Considerations
 
