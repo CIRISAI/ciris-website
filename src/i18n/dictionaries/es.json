@@ -7,7 +7,7 @@
     "apexQuote": "Promover una coherencia adaptativa sostenible: las condiciones de vida bajo las cuales seres sintientes diversos pueden buscar su propio florecimiento con justicia y asombro.",
     "apexNote": "Cada regla, prefijo y política del documento se remonta a este único objetivo. Elevado en propósito, plano en poder: un solo objetivo gobierna, y ningún concepto ni ninguna parte tiene las llaves de la verdad.",
     "foldedTitle": "Lo que se incorporó",
-    "foldedBody": "El Acuerdo (versión 1.3-RC2) y el CEG (versión 1.0-RC29) se copiaron palabra por palabra y luego se integraron en un documento claro y en tiempo presente. Cada regla a nivel de protocolo se conserva byte por byte. Un panel de revisión adversarial consideró la versión unificada más clara que cualquiera de las dos fuentes en 28 de los 29 capítulos.",
+    "foldedBody": "El Acuerdo (versión 1.3-RC2) y el CEG (versión 1.0-RC29) se copiaron palabra por palabra y se unieron en un único documento escrito en tiempo presente. Cada regla sobre el formato en el cable se conserva exactamente. Un panel de pruebas adversariales consideró la versión unificada más clara que cualquiera de las dos fuentes en 28 de los 29 capítulos.",
     "partsLabel": "Las ocho partes",
     "parts": [
       {
@@ -71,16 +71,16 @@
     },
     "mtBanner": {
       "lead": "Esta página fue traducida automáticamente.",
-      "body": "Si algo no suena bien, abre un issue — el repositorio es público por algo.",
+      "body": "Si algo no suena bien, por favor abre un issue en GitHub. El repositorio es público para que cualquiera pueda ayudar a corregirlo.",
       "cta": "Reportar un problema de traducción"
     },
     "nav": {
       "install": "Instalar",
-      "proof": "Evidencia",
+      "proof": "Prueba",
       "constitution": "Constitución"
     },
     "levels": {
-      "simple": "Español sencillo",
+      "simple": "Lenguaje sencillo",
       "advanced": "Avanzado",
       "srLabel": "Nivel de lectura"
     }
@@ -543,7 +543,7 @@
   },
   "install": {
     "h1": "Instalar CIRIS",
-    "heroPara1": "Un reemplazo de código abierto para ChatGPT y Gemini: razonamiento auditable, políglota en 29 idiomas, se conecta a Home Assistant para control del hogar completamente de código abierto.",
+    "heroPara1": "Un reemplazo de código abierto para ChatGPT y Gemini: razonamiento auditable, funciona en 29 idiomas y se conecta a Home Assistant para un control del hogar completamente de código abierto.",
     "heroPara2": "Disponible en iPhone, Android, y como instalaciones pip / docker / git para Windows, macOS y Linux.",
     "mobileBannerTitle": "📱 Aplicaciones Móviles Ya Disponibles",
     "mobileBannerSub": "Tu agente de IA personal en el móvil: privado, local primero, código abierto",
@@ -566,14 +566,14 @@
     "method4Heading": "4. CIRISManager (Empresa/Canario)",
     "method4Desc": "Despliegues canario gestionados con lanzamientos graduales, pruebas automatizadas y capacidades de reversión. Para flotas en producción.",
     "method4Body": "CIRISManager proporciona despliegues automatizados azul-verde con monitoreo de salud. Contacta al equipo para configuraciones de despliegue.",
-    "method4Best": "<strong>Ideal para:</strong> Despliegues empresariales, flotas en producción, infraestructura gestionada",
+    "method4Best": "<strong>Ideal para:</strong> Despliegues empresariales, sistemas en producción, infraestructura gestionada",
     "helloHeading": "Hola, CIRIS",
     "helloSub": "El camino más corto hacia una primera respuesta. Inicia el agente y luego llámalo desde Python. Los dos bloques siguientes son copiar y pegar.",
     "helloStep1Heading": "1. Inicia el agente",
     "helloStep1Desc": "Ejecuta el adaptador de API. Por defecto usa el puerto 8080. El acceso OBSERVER no requiere autenticación para desarrollo local.",
     "helloStep2Heading": "2. Llámalo desde Python",
-    "helloStep2Desc": "SDK asíncrono. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> te permiten ver la superficie de razonamiento en cada llamada.",
-    "sdkNote": "El SDK está en versión <strong>pre-beta</strong>. Las interfaces pueden cambiar entre versiones. La superficie completa de API (181 endpoints en 15 módulos) está documentada en <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk en GitHub</a>.",
+    "helloStep2Desc": "SDK asíncrono. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> te muestran el razonamiento detrás de cada llamada.",
+    "sdkNote": "El SDK está en <strong>pre-beta</strong>. Las interfaces pueden cambiar entre versiones. La API completa está documentada en <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk en GitHub</a>.",
     "troubleshootingHeading": "Solución de Problemas",
     "ts1Summary": "La instalación con pip falla",
     "ts1Step1": "Asegúrate de tener Python 3.10 o superior:",
@@ -1934,8 +1934,8 @@
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · se pronuncia como “soup” (sopa en inglés)",
     "headline": "El internet, reconstruido sin intermediarios.",
-    "intro1": "CEWP es un reemplazo completo del internet. Todo lo que haces hoy en línea, streaming, videollamadas, juegos, archivos, mensajes y declaraciones firmadas, enrutado directamente entre los dispositivos que la gente ya tiene, sobre una malla cifrada post-cuántica. Sin gigantescos centros de datos en medio. Sin un puñado de empresas dueñas de las tuberías.",
-    "intro2": "El intermediario de hoy cuesta unas 175 megatons de CO2 al año y entrega a cinco empresas tanto tus datos como el poder de decidir qué ves. CEWP funciona en el hardware que ya tienes, nunca anuncia tu contenido local al resto de la red y se gobierna a sí mismo: la red decide mediante votos firmados y ponderados, sin ningún dueño de plataforma en medio.",
+    "intro1": "CEWP es un reemplazo completo del internet. Todo lo que haces hoy en línea, streaming, videollamadas, juegos, archivos, mensajes y afirmaciones firmadas, enrutado directamente entre los dispositivos que la gente ya tiene, sobre una malla cifrada post-cuántica. Sin gigantescos centros de datos en medio. Sin un puñado de empresas dueñas de las conexiones.",
+    "intro2": "El intermediario de hoy cuesta unas 175 megatoneladas de CO2 al año y entrega a cinco empresas tanto tus datos como el poder de decidir qué ves. CEWP funciona en el hardware que ya tienes, nunca anuncia tu contenido local al resto de la red y se gobierna a sí mismo: la red decide mediante votos firmados y ponderados, sin ningún dueño de plataforma en medio.",
     "watchLabel": "Mira la explicación de 7 minutos",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "Consigue CIRIS en la App Store",

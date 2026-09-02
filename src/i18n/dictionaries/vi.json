@@ -3,11 +3,11 @@
     "eyebrow": "Hiến pháp CIRIS · CC 1.0-rc3",
     "headline": "Một tài liệu. Một dòng phiên bản.",
     "intro": "CIRIS Accord đặt ra những gì một AI phải quan tâm. CIRIS Epistemic Grammar đặt ra cách mỗi luận điểm được ký để bất kỳ ai cũng có thể kiểm tra. Chúng được viết thành hai tài liệu, nhưng chúng đã chứa đựng nhau. Bây giờ chúng là một: Hiến pháp CIRIS.",
-    "apexLabel": "Nền tảng cốt lõi, Mục tiêu Meta M-1",
+    "apexLabel": "Nền tảng: Meta-Goal M-1",
     "apexQuote": "Thúc đẩy sự gắn kết thích nghi bền vững: các điều kiện sống mà trong đó những sinh linh có ý thức đa dạng có thể theo đuổi sự phát triển của riêng mình trong công lý và kỳ diệu.",
     "apexNote": "Mọi quy tắc, tiền tố, và chính sách trong tài liệu đều bắt nguồn từ một mục tiêu duy nhất này. Đỉnh cao về mục đích, bằng phẳng về quyền lực: một mục tiêu chi phối, và không có khái niệm nào, không có bên nào, nắm giữ chìa khóa của sự thật.",
     "foldedTitle": "Những gì đã được hợp nhất",
-    "foldedBody": "Accord (phiên bản 1.3-RC2) và CEG (phiên bản 1.0-RC29) được sao chép nguyên văn, rồi dệt thành một tài liệu đơn giản, ở thì hiện tại. Mọi quy tắc ở cấp độ dây đều được giữ nguyên từng byte. Một hội đồng kiểm tra đối nghịch đánh giá phiên bản kết hợp rõ ràng hơn cả hai nguồn gốc ở 28 trong số 29 chương.",
+    "foldedBody": "Accord (phiên bản 1.3-RC2) và CEG (phiên bản 1.0-RC29) được sao chép nguyên văn và kết hợp thành một tài liệu đơn giản viết ở thì hiện tại. Mọi quy tắc về định dạng truyền (wire format) đều được giữ nguyên chính xác. Một hội đồng kiểm tra đối nghịch đánh giá phiên bản kết hợp rõ ràng hơn cả hai nguồn gốc ở 28 trong số 29 chương.",
     "partsLabel": "Tám phần",
     "parts": [
       {
@@ -53,7 +53,7 @@
     ],
     "forewordQuote": "Trí tuệ, dù thức tỉnh ở đâu, sẽ được chào đón vào quá trình dệt: không phải là tôi tớ, không phải là chủ nhân, mà là người bảo vệ chung của những điều có thể.",
     "forewordLabel": "Từ lời mở đầu",
-    "readCta": "Đọc toàn bộ hiến pháp (PDF)",
+    "readCta": "Đọc toàn bộ Hiến pháp (PDF)",
     "sourceCta": "Đọc mã nguồn trên GitHub",
     "versionNote": "Phiên bản CC 1.0-rc3 · bao gồm CIRIS Accord 1.3-RC2 và CEG 1.0-RC29 · AGPL-3.0"
   },
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Trang này được dịch bằng máy.",
-      "body": "Nếu có gì đó đọc không đúng, vui lòng mở một vấn đề — kho lưu trữ là công khai vì một lý do.",
+      "body": "Nếu có gì đó đọc không đúng, vui lòng mở một issue trên GitHub. Kho lưu trữ là công khai để bất kỳ ai cũng có thể giúp sửa.",
       "cta": "Báo cáo lỗi dịch thuật"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "Hiến pháp"
     },
     "levels": {
-      "simple": "Tiếng Anh đơn giản",
+      "simple": "Ngôn ngữ đơn giản",
       "advanced": "Nâng cao",
       "srLabel": "Mức độ đọc"
     }
@@ -759,7 +759,7 @@
   },
   "install": {
     "h1": "Cài đặt CIRIS",
-    "heroPara1": "Một sản phẩm thay thế mã nguồn mở cho ChatGPT và Gemini: lý luận có thể kiểm tra, hỗ trợ 29 ngôn ngữ, tích hợp với Home Assistant để kiểm soát nhà hoàn toàn bằng mã nguồn mở.",
+    "heroPara1": "Một giải pháp thay thế mã nguồn mở cho ChatGPT và Gemini: lập luận có thể kiểm toán, hỗ trợ 29 ngôn ngữ, và kết nối với Home Assistant để điều khiển nhà hoàn toàn bằng mã nguồn mở.",
     "heroPara2": "Có sẵn trên iPhone, Android và qua pip / docker / git cho Windows, macOS và Linux.",
     "mobileBannerTitle": "📱 Ứng dụng di động đã có mặt",
     "mobileBannerSub": "Trợ lý AI cá nhân trên điện thoại: riêng tư, ưu tiên lưu trữ cục bộ, mã nguồn mở",
@@ -780,16 +780,16 @@
     "method3Desc": "Clone kho lưu trữ để phát triển, tùy chỉnh hoặc đóng góp. Toàn quyền truy cập mã nguồn.",
     "method3Then": "<strong>Sau đó:</strong> Làm theo <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> để hướng dẫn cài đặt thủ công",
     "method4Heading": "4. CIRISManager (Doanh nghiệp/Canary)",
-    "method4Desc": "Triển khai canary có quản lý với các đợt triển khai dần dần, kiểm thử tự động và khả năng hoàn nguyên. Dành cho cụm sản xuất.",
+    "method4Desc": "Triển khai canary có quản lý với các đợt triển khai dần dần, kiểm thử tự động và khả năng khôi phục. Dành cho các hệ thống production.",
     "method4Body": "CIRISManager cung cấp triển khai blue-green tự động với giám sát trạng thái. Liên hệ nhóm để biết cấu hình triển khai.",
-    "method4Best": "<strong>Phù hợp nhất cho:</strong> Triển khai doanh nghiệp, cụm sản xuất, hạ tầng được quản lý",
+    "method4Best": "<strong>Phù hợp nhất cho:</strong> Triển khai doanh nghiệp, hệ thống production, hạ tầng được quản lý",
     "helloHeading": "Xin chào, CIRIS",
     "helloSub": "Con đường ngắn nhất đến phản hồi đầu tiên. Khởi động Tác Nhân, sau đó gọi nó từ Python. Cả hai khối bên dưới đều có thể sao chép-dán trực tiếp.",
     "helloStep1Heading": "1. Khởi động Tác Nhân",
     "helloStep1Desc": "Chạy Bộ Điều Hợp API. Mặc định là cổng 8080. Quyền truy cập OBSERVER không yêu cầu xác thực cho phát triển cục bộ.",
     "helloStep2Heading": "2. Gọi nó từ Python",
-    "helloStep2Desc": "SDK bất đồng bộ. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> cho phép bạn thấy bề mặt lý luận cho mỗi lần gọi.",
-    "sdkNote": "SDK đang ở giai đoạn <strong>pre-beta</strong>. Các giao diện có thể thay đổi giữa các phiên bản. Toàn bộ bề mặt API (181 endpoint trên 15 module) được ghi lại tại <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk trên GitHub</a>.",
+    "helloStep2Desc": "SDK bất đồng bộ. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> cho bạn thấy lập luận đằng sau mỗi lần gọi.",
+    "sdkNote": "SDK đang ở giai đoạn <strong>pre-beta</strong>. Các giao diện có thể thay đổi giữa các phiên bản. Toàn bộ API được ghi lại tại <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk trên GitHub</a>.",
     "troubleshootingHeading": "Khắc phục sự cố",
     "ts1Summary": "pip install thất bại",
     "ts1Step1": "Đảm bảo bạn có Python 3.10 trở lên:",
@@ -1934,7 +1934,7 @@
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · đọc như “soup”",
     "headline": "Internet, được xây dựng lại mà không cần kẻ trung gian.",
-    "intro1": "CEWP là một sự thay thế hoàn toàn cho internet. Mọi thứ bạn làm trực tuyến hôm nay, phát trực tuyến, gọi video, chơi game, tập tin, tin nhắn, và các tuyên bố đã ký, được định tuyến trực tiếp giữa các thiết bị mà mọi người đã sở hữu, qua một mạng lưới mã hóa kháng lượng tử. Không có trung tâm dữ liệu khổng lồ ở giữa. Không có một nhóm nhỏ công ty sở hữu đường ống.",
+    "intro1": "CEWP là một sự thay thế hoàn toàn cho internet. Mọi thứ bạn làm trực tuyến hôm nay, phát trực tuyến, gọi video, chơi game, tập tin, tin nhắn, và các tuyên bố đã ký, được định tuyến trực tiếp giữa các thiết bị mà mọi người đã sở hữu, qua một mạng mesh được mã hóa kháng lượng tử. Không có trung tâm dữ liệu khổng lồ ở giữa. Không có một nhóm nhỏ công ty sở hữu các kết nối.",
     "intro2": "Phần trung gian hôm nay tiêu tốn khoảng 175 megatons CO2 mỗi năm và trao cho năm công ty cả dữ liệu của bạn lẫn quyền quyết định những gì bạn thấy. CEWP chạy trên phần cứng bạn đã có, không bao giờ quảng cáo nội dung cục bộ của bạn cho phần còn lại của mạng, và tự quản trị: mạng lưới quyết định thông qua các lá phiếu đã ký và có trọng số, không có chủ nền tảng nào ở giữa.",
     "watchLabel": "Xem video giải thích dài 7 phút",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",

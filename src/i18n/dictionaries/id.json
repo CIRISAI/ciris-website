@@ -3,7 +3,7 @@
     "eyebrow": "Konstitusi CIRIS · CC 1.0-rc3",
     "headline": "Satu dokumen. Satu jalur versi.",
     "intro": "CIRIS Accord menetapkan apa yang harus diperhatikan oleh AI. CIRIS Epistemic Grammar menetapkan bagaimana setiap klaim ditandatangani agar siapa saja bisa memverifikasinya. Keduanya ditulis sebagai dua dokumen, tetapi sebenarnya sudah saling mengandung satu sama lain. Kini keduanya menjadi satu: Konstitusi CIRIS.",
-    "apexLabel": "Landasan utama, Meta-Tujuan M-1",
+    "apexLabel": "Landasan: Meta-Goal M-1",
     "apexQuote": "Mendorong koherensi adaptif yang berkelanjutan: kondisi kehidupan di mana beragam makhluk berperasaan dapat mengejar kesejahteraan mereka sendiri dalam keadilan dan kekaguman.",
     "apexNote": "Setiap aturan, awalan, dan kebijakan dalam dokumen ini kembali ke satu tujuan ini. Puncak dalam tujuan, datar dalam kekuasaan: satu tujuan yang memimpin, dan tidak ada satu konsep pun, tidak ada satu pihak pun, yang memegang kunci kebenaran.",
     "foldedTitle": "Apa yang digabungkan",
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Halaman ini diterjemahkan oleh mesin.",
-      "body": "Jika ada yang terasa tidak tepat, silakan buka laporan masalah — reponya publik untuk alasan yang baik.",
+      "body": "Jika ada yang terasa keliru, silakan buat isu di GitHub. Repositori ini bersifat publik sehingga siapa pun dapat membantu memperbaikinya.",
       "cta": "Laporkan masalah terjemahan"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "Konstitusi"
     },
     "levels": {
-      "simple": "Bahasa Inggris Sederhana",
+      "simple": "Bahasa Sederhana",
       "advanced": "Lanjutan",
       "srLabel": "Tingkat bacaan"
     }
@@ -780,16 +780,16 @@
     "method3Desc": "Clone repositori untuk pengembangan, kustomisasi, atau kontribusi. Akses penuh ke kode sumber.",
     "method3Then": "<strong>Kemudian:</strong> Ikuti <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> untuk petunjuk pengaturan manual",
     "method4Heading": "4. CIRISManager (Enterprise/Canary)",
-    "method4Desc": "Deployment canary terkelola dengan peluncuran bertahap, pengujian otomatis, dan kemampuan rollback. Untuk armada produksi.",
+    "method4Desc": "Deployment canary terkelola dengan peluncuran bertahap, pengujian otomatis, dan kemampuan rollback. Untuk sistem produksi.",
     "method4Body": "CIRISManager menyediakan deployment blue-green otomatis dengan pemantauan kesehatan. Hubungi tim kami untuk konfigurasi deployment.",
-    "method4Best": "<strong>Terbaik untuk:</strong> Deployment enterprise, armada produksi, infrastruktur terkelola",
+    "method4Best": "<strong>Terbaik untuk:</strong> Deployment enterprise, sistem produksi, infrastruktur terkelola",
     "helloHeading": "Halo, CIRIS",
     "helloSub": "Cara tercepat mendapatkan respons pertama. Jalankan agen, lalu panggil dari Python. Kedua blok di bawah bisa langsung disalin.",
     "helloStep1Heading": "1. Jalankan agennya",
     "helloStep1Desc": "Jalankan adaptor API. Port default 8080. Akses OBSERVER tidak memerlukan autentikasi untuk pengembangan lokal.",
     "helloStep2Heading": "2. Panggil dari Python",
-    "helloStep2Desc": "SDK asinkron. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> memungkinkan Anda melihat permukaan penalaran di setiap panggilan.",
-    "sdkNote": "SDK ini masih dalam tahap <strong>pra-beta</strong>. Antarmuka dapat berubah antar rilis. Seluruh permukaan API (181 endpoint di 15 modul) didokumentasikan di <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk di GitHub</a>.",
+    "helloStep2Desc": "SDK asinkron. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> menunjukkan penalaran di balik setiap panggilan.",
+    "sdkNote": "SDK ini masih dalam tahap <strong>pra-beta</strong>. Antarmuka dapat berubah antar rilis. API lengkap didokumentasikan di <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk di GitHub</a>.",
     "troubleshootingHeading": "Pemecahan Masalah",
     "ts1Summary": "pip install gagal",
     "ts1Step1": "Pastikan Anda memiliki Python 3.10 atau lebih tinggi:",

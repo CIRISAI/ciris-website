@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Ukurasa huu ulitafsiriwa na mashine.",
-      "body": "Ikiwa kitu chochote hakisomeki vizuri, tafadhali fungua suala, repo imewekwa wazi kwa umma kwa makusudi hayo.",
+      "body": "Ikiwa kuna chochote kilichoandikwa vibaya, tafadhali fungua suala kwenye GitHub. Hifadhi ya msimbo (repo) ni ya umma ili mtu yeyote aweze kusaidia kuirekebisha.",
       "cta": "Ripoti tatizo la tafsiri"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "Katiba"
     },
     "levels": {
-      "simple": "Kiingereza Rahisi",
+      "simple": "Lugha Rahisi",
       "advanced": "Ya Juu",
       "srLabel": "Kiwango cha usomaji"
     }
@@ -777,7 +777,7 @@
     "method2Desc": "Endesha CIRIS katika mazingira ya kontena yaliyotengwa. Bora unapotaka usakinishaji wa ndani au wa seva unaoweza kurudiwa.",
     "method2Req": "<strong>Mahitaji:</strong> Docker Engine 20.10+, programu-jalizi ya docker compose, na mradi uliopakuliwa wenye faili ya compose",
     "method3Heading": "3. GitHub Clone (Maendeleo)",
-    "method3Desc": "Nakili hifadhi kwa maendeleo, ubinafsishaji, au mchango. Upatikanaji kamili wa msimbo wa chanzo.",
+    "method3Desc": "Fanya clone ya hifadhi ya msimbo (repository) kwa maendeleo, ubinafsishaji, au kuchangia. Upatikanaji kamili wa msimbo wa chanzo.",
     "method3Then": "<strong>Kisha:</strong> Fuata <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> kwa maelekezo ya usanidi wa mwongozo",
     "method4Heading": "4. CIRISManager (Biashara/Canary)",
     "method4Desc": "Usakinishaji wa canary unaodhibitiwa wenye utoaji wa taratibu, majaribio ya kiotomatiki, na uwezo wa kurudisha nyuma. Kwa mifumo ya uzalishaji.",
@@ -789,7 +789,7 @@
     "helloStep1Desc": "Endesha adapter ya API. Huwa inatumia bandari 8080. Upatikanaji wa OBSERVER hauhitaji uthibitisho kwa maendeleo ya ndani.",
     "helloStep2Heading": "2. Mpigie simu kutoka Python",
     "helloStep2Desc": "SDK ya Async. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> hukuruhusu kuona uso wa akili kwa kila simu.",
-    "sdkNote": "SDK iko katika hali ya <strong>kabla ya beta</strong>. Miingiliano inaweza kubadilika kati ya matoleo. Uso kamili wa API (endpoints 181 katika moduli 15) umewekwa kumbukumbu katika <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk kwenye GitHub</a>.",
+    "sdkNote": "SDK iko katika hali ya <strong>kabla ya beta</strong>. Miingiliano inaweza kubadilika kati ya matoleo. API kamili imewekwa kumbukumbu katika <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk kwenye GitHub</a>.",
     "troubleshootingHeading": "Utatuzi wa Matatizo",
     "ts1Summary": "pip install inashindwa",
     "ts1Step1": "Hakikisha una Python 3.10 au zaidi:",

@@ -3,11 +3,11 @@
     "eyebrow": "CIRIS دستور · CC 1.0-rc3",
     "headline": "ایک دستاویز۔ ایک ورژن لائن۔",
     "intro": "CIRIS Accord نے بتایا کہ ایک AI کو کس چیز کی پرواہ کرنی چاہیے۔ CIRIS CEG نے بتایا کہ ہر دعوے پر دستخط کیسے کیے جاتے ہیں تاکہ کوئی بھی جانچ سکے۔ یہ دو دستاویزوں کے طور پر لکھے گئے تھے، لیکن ان میں پہلے سے ایک دوسرے کا مواد موجود تھا۔ اب یہ ایک ہیں: CIRIS دستور۔",
-    "apexLabel": "بنیادی پتھر، میٹا گول M-1",
+    "apexLabel": "بنیاد: میٹا گول M-1",
     "apexQuote": "پائیدار موافق ہم آہنگی کو فروغ دیں: وہ زندگی کے حالات جن میں متنوع ذی شعور مخلوق انصاف اور حیرت کے ساتھ اپنی خوشحالی کی تلاش کر سکے۔",
     "apexNote": "دستاویز کا ہر قاعدہ، سابقہ، اور پالیسی اسی ایک مقصد سے جڑی ہے۔ مقصد میں بلند، طاقت میں ہموار: ایک مقصد حکومت کرتا ہے، اور کوئی واحد تصور، اور کوئی واحد فریق، سچ کی چابیاں نہیں رکھتا۔",
     "foldedTitle": "کیا ملایا گیا",
-    "foldedBody": "Accord (ورژن 1.3-RC2) اور CEG (ورژن 1.0-RC29) لفظ بہ لفظ نقل کیے گئے، پھر ایک سادہ، حال کی زبان میں دستاویز میں بُنے گئے۔ ہر وائر سطح کا قاعدہ ہر بائٹ کے ساتھ محفوظ ہے۔ مخالف جانچ کے ایک پینل نے 29 میں سے 28 ابواب میں جڑے ہوئے ورژن کو کسی بھی ماخذ سے زیادہ واضح پایا۔",
+    "foldedBody": "Accord (ورژن 1.3-RC2) اور CEG (ورژن 1.0-RC29) لفظ بہ لفظ نقل کیے گئے اور حال کے صیغے میں لکھی گئی ایک سادہ دستاویز میں یکجا کیے گئے۔ وائر فارمیٹ کے بارے میں ہر قاعدہ جوں کا توں محفوظ ہے۔ مخالفانہ جانچوں کے ایک پینل نے 29 میں سے 28 ابواب میں اس مشترکہ ورژن کو دونوں ماخذوں کے مقابلے میں زیادہ واضح پایا۔",
     "partsLabel": "آٹھ حصے",
     "parts": [
       {
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "یہ صفحہ مشین سے ترجمہ کیا گیا تھا۔",
-      "body": "اگر کچھ غلط لگے تو براہ کرم ایک مسئلہ کھولیں — ریپو اسی لیے عوامی ہے۔",
+      "body": "اگر کچھ غلط لگے تو براہ کرم GitHub پر issue کھولیں۔ ریپو عوامی ہے اس لیے کوئی بھی اسے درست کرنے میں مدد کر سکتا ہے۔",
       "cta": "ترجمے کا مسئلہ رپورٹ کریں"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "دستور"
     },
     "levels": {
-      "simple": "سادہ انگلش",
+      "simple": "سادہ زبان",
       "advanced": "اعلی",
       "srLabel": "پڑھنے کی سطح"
     }
@@ -780,16 +780,16 @@
     "method3Desc": "ڈویلپمنٹ، حسب ضرورت تبدیلی، یا تعاون کے لیے ریپوزٹری کلون کریں۔ مکمل سورس کوڈ تک رسائی۔",
     "method3Then": "<strong>پھر:</strong> دستی سیٹ اپ ہدایات کے لیے <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> پڑھیں",
     "method4Heading": "4. CIRISManager (انٹرپرائز/کینری)",
-    "method4Desc": "بتدریج رول آؤٹ، خودکار ٹیسٹنگ، اور رول بیک صلاحیتوں کے ساتھ منظم کینری ڈیپلائمنٹ۔ پروڈکشن فلیٹس کے لیے۔",
+    "method4Desc": "بتدریج رول آؤٹ، خودکار ٹیسٹنگ، اور رول بیک صلاحیتوں کے ساتھ منظم کینری ڈیپلائمنٹ۔ پروڈکشن سسٹمز کے لیے۔",
     "method4Body": "CIRISManager صحت کی نگرانی کے ساتھ خودکار بلیو-گرین ڈیپلائمنٹ فراہم کرتا ہے۔ ڈیپلائمنٹ کنفیگریشن کے لیے ٹیم سے رابطہ کریں۔",
-    "method4Best": "<strong>بہترین مناسب:</strong> انٹرپرائز ڈیپلائمنٹ، پروڈکشن فلیٹس، منظم انفراسٹرکچر",
+    "method4Best": "<strong>بہترین مناسب:</strong> انٹرپرائز ڈیپلائمنٹ، پروڈکشن سسٹمز، منظم انفراسٹرکچر",
     "helloHeading": "ہیلو، CIRIS",
     "helloSub": "پہلے جواب تک سب سے مختصر راستہ۔ ایجنٹ شروع کریں، پھر Python سے کال کریں۔ نیچے دونوں بلاکس کاپی-پیسٹ کے قابل ہیں۔",
     "helloStep1Heading": "1. ایجنٹ شروع کریں",
     "helloStep1Desc": "API اڈاپٹر چلائیں۔ ڈیفالٹ پورٹ 8080 ہے۔ مقامی ڈویلپمنٹ کے لیے OBSERVER رسائی کو کسی تصدیق کی ضرورت نہیں۔",
     "helloStep2Heading": "2. Python سے کال کریں",
-    "helloStep2Desc": "Async SDK۔ <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> آپ کو ہر کال کے لیے استدلال کی سطح دیکھنے دیتے ہیں۔",
-    "sdkNote": "SDK <strong>پری-بیٹا</strong> ہے۔ ریلیز کے درمیان انٹرفیس تبدیل ہو سکتے ہیں۔ مکمل API سطح (15 ماڈیولز میں 181 اینڈپوائنٹس) <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> میں دستاویز شدہ ہے۔",
+    "helloStep2Desc": "Async SDK۔ <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> آپ کو ہر کال کے پیچھے کا استدلال دکھاتے ہیں۔",
+    "sdkNote": "SDK <strong>پری-بیٹا</strong> ہے۔ ریلیز کے درمیان انٹرفیس تبدیل ہو سکتے ہیں۔ مکمل API <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> میں دستاویز شدہ ہے۔",
     "troubleshootingHeading": "مسئلہ حل کرنا",
     "ts1Summary": "pip install ناکام ہو رہی ہے",
     "ts1Step1": "یقینی بنائیں کہ آپ کے پاس Python 3.10 یا اس سے اوپر ہے:",
@@ -1941,7 +1941,7 @@
     "ctaAppStore": "App Store سے CIRIS حاصل کریں",
     "ctaGooglePlay": "Google Play سے CIRIS حاصل کریں",
     "shippingNote": "<b>CIRIS 2.9.x ابھی جاری ہو رہا ہے۔</b> آج ہی iPhone یا Android پر انسٹال کریں۔ CEWP کی مکمل خصوصیات <b>2026</b> کے دوران مرحلہ وار سامنے آئیں گی۔",
-    "meshTitle": "یہ تہہ کیوں اہم ہے",
+    "meshTitle": "یہ پرت کیوں اہم ہے",
     "meshBody": "دس لاکھ قابل مگر الگ تھلگ مشینیں شوقینوں کا ہجوم ہیں۔ ایسی ہم آہنگی جس پر کوئی قبضہ نہ کر سکے، وہی انہیں ایسی چیز میں بدلتی ہے جو تالا بندی سے انکار کر سکے۔ اس دلیل کا اپنا صفحہ ہے، سخت ترین شکل میں لکھا ہوا تاکہ اس پر حملہ کیا جا سکے۔",
     "deepTechTitle": "گہری ٹیکنالوجی جاننا چاہتے ہیں؟",
     "deepTechBody": "انٹرایکٹو سمیولیٹر، آلات کی کلاس کے حساب سے ایماندار توانائی کا حساب، مالک کے بغیر نیٹ ورک خود کو کیسے چلاتا ہے، ہر گروہ کے لیے بدسلوکی کا ماڈل، IPFS / Bluesky / Solid / Nostr / Filecoin کے ساتھ موازنہ، سات کھلے ریپو۔",

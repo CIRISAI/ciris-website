@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "এই পৃষ্ঠাটি মেশিন দ্বারা অনুবাদ করা হয়েছে।",
-      "body": "কিছু ভুল মনে হলে একটি ইস্যু খুলুন — রিপোজিটরি সবার জন্য উন্মুক্ত।",
+      "body": "যদি কিছু ভুল মনে হয়, অনুগ্রহ করে GitHub-এ একটি ইস্যু খুলুন। রিপোজিটরিটি উন্মুক্ত, তাই যে কেউ এটি ঠিক করতে সাহায্য করতে পারেন।",
       "cta": "অনুবাদের সমস্যা জানান"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "সংবিধান"
     },
     "levels": {
-      "simple": "সহজ ইংরেজি",
+      "simple": "সহজ ভাষা",
       "advanced": "উন্নত",
       "srLabel": "পড়ার স্তর"
     }
@@ -774,22 +774,22 @@
     "method1Req": "<strong>প্রয়োজনীয়তা:</strong> Python 3.10+",
     "otherMethodsHeading": "অন্যান্য ইনস্টলেশন পদ্ধতি",
     "method2Heading": "২. Docker Compose",
-    "method2Desc": "একটি আলাদা কন্টেইনার পরিবেশে CIRIS চালান। পুনরায় ব্যবহারযোগ্য লোকাল বা সার্ভার ডিপ্লয়মেন্টের জন্য সবচেয়ে ভালো।",
+    "method2Desc": "একটি আলাদা কন্টেইনার পরিবেশে CIRIS চালান। পুনরুৎপাদনযোগ্য লোকাল বা সার্ভার ডিপ্লয়মেন্টের জন্য সবচেয়ে ভালো।",
     "method2Req": "<strong>প্রয়োজনীয়তা:</strong> Docker Engine 20.10+, docker compose প্লাগইন, compose ফাইলসহ একটি প্রজেক্ট চেকআউট",
     "method3Heading": "৩. GitHub Clone (ডেভেলপমেন্ট)",
     "method3Desc": "ডেভেলপমেন্ট, কাস্টমাইজেশন বা অবদান রাখার জন্য রিপোজিটরি ক্লোন করুন। সম্পূর্ণ সোর্স কোড অ্যাক্সেস।",
     "method3Then": "<strong>তারপর:</strong> ম্যানুয়াল সেটআপের নির্দেশনার জন্য <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> অনুসরণ করুন",
     "method4Heading": "৪. CIRISManager (এন্টারপ্রাইজ/ক্যানারি)",
-    "method4Desc": "ধীরে ধীরে রোলআউট, স্বয়ংক্রিয় পরীক্ষা এবং রোলব্যাক সুবিধাসহ ম্যানেজড ক্যানারি ডিপ্লয়মেন্ট। প্রোডাকশন ফ্লিটের জন্য।",
+    "method4Desc": "ধীরে ধীরে রোলআউট, স্বয়ংক্রিয় পরীক্ষা এবং রোলব্যাক সুবিধাসহ ম্যানেজড ক্যানারি ডিপ্লয়মেন্ট। প্রোডাকশন সিস্টেমের জন্য।",
     "method4Body": "CIRISManager স্বাস্থ্য পর্যবেক্ষণসহ স্বয়ংক্রিয় ব্লু-গ্রিন ডিপ্লয়মেন্ট সরবরাহ করে। ডিপ্লয়মেন্ট কনফিগারেশনের জন্য দলের সাথে যোগাযোগ করুন।",
-    "method4Best": "<strong>সবচেয়ে ভালো:</strong> এন্টারপ্রাইজ ডিপ্লয়মেন্ট, প্রোডাকশন ফ্লিট, ম্যানেজড ইনফ্রাস্ট্রাকচার",
+    "method4Best": "<strong>সবচেয়ে ভালো:</strong> এন্টারপ্রাইজ ডিপ্লয়মেন্ট, প্রোডাকশন সিস্টেম, ম্যানেজড ইনফ্রাস্ট্রাকচার",
     "helloHeading": "হ্যালো, CIRIS",
     "helloSub": "প্রথম সাড়া পাওয়ার সবচেয়ে সংক্ষিপ্ত পথ। এজেন্ট শুরু করুন, তারপর Python থেকে কল করুন। নিচের দুটি ব্লক কপি-পেস্টযোগ্য।",
     "helloStep1Heading": "১. এজেন্ট শুরু করুন",
-    "helloStep1Desc": "API অ্যাডাপ্টার চালান। ডিফল্ট পোর্ট 8080। লোকাল ডেভেলপমেন্টে OBSERVER অ্যাক্সেসের জন্য কোনো অথ প্রয়োজন নেই।",
+    "helloStep1Desc": "API অ্যাডাপ্টার চালান। আপনি পরিবর্তন না করলে এটি পোর্ট 8080 ব্যবহার করে। লোকাল ডেভেলপমেন্টে OBSERVER অ্যাক্সেসের জন্য কোনো অথ প্রয়োজন নেই।",
     "helloStep2Heading": "২. Python থেকে কল করুন",
     "helloStep2Desc": "অ্যাসিঙ্ক SDK। <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> দিয়ে প্রতিটি কলের যুক্তিপ্রক্রিয়া দেখতে পারবেন।",
-    "sdkNote": "SDK-টি <strong>প্রি-বেটা</strong> পর্যায়ে। রিলিজের মধ্যে ইন্টারফেস পরিবর্তন হতে পারে। সম্পূর্ণ API সারফেস (১৫টি মডিউলে ১৮১টি এন্ডপয়েন্ট) <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">GitHub-এ ciris_sdk</a>-তে নথিভুক্ত।",
+    "sdkNote": "SDK-টি <strong>প্রি-বেটা</strong> পর্যায়ে। রিলিজের মধ্যে ইন্টারফেস পরিবর্তন হতে পারে। সম্পূর্ণ API <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">GitHub-এ ciris_sdk</a>-তে নথিভুক্ত।",
     "troubleshootingHeading": "সমস্যা সমাধান",
     "ts1Summary": "pip install ব্যর্থ হচ্ছে",
     "ts1Step1": "আপনার Python 3.10 বা উচ্চতর সংস্করণ আছে কিনা নিশ্চিত করুন:",

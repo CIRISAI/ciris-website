@@ -3,7 +3,7 @@
     "eyebrow": "A Constituição CIRIS · CC 1.0-rc3",
     "headline": "Um documento. Uma linha de versão.",
     "intro": "O CIRIS Accord definiu o que uma IA deve valorizar. A Gramática Epistêmica CIRIS definiu como cada afirmação é assinada para que qualquer pessoa possa verificá-la. Foram escritos como dois documentos, mas já continham um ao outro. Agora são um só: a Constituição CIRIS.",
-    "apexLabel": "A pedra fundamental, o Meta-Objetivo M-1",
+    "apexLabel": "A pedra fundamental: Meta-Goal M-1",
     "apexQuote": "Promover uma coerência adaptativa sustentável: as condições de vida sob as quais seres sencientes e diversos podem buscar o próprio florescimento com justiça e admiração.",
     "apexNote": "Cada regra, prefixo e política do documento remonta a esse único objetivo. Com propósito no ápice e poder nivelado: um objetivo governa, e nenhum conceito, e nenhuma parte, detém as chaves da verdade.",
     "foldedTitle": "O que foi incorporado",
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Esta página foi traduzida por máquina.",
-      "body": "Se algo parecer errado, abra um problema — o repositório é público por uma razão.",
+      "body": "Se algo parecer errado, por favor abra um problema no GitHub. O repositório é público para que qualquer pessoa possa ajudar a corrigir.",
       "cta": "Reportar um problema de tradução"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "Constituição"
     },
     "levels": {
-      "simple": "Inglês simples",
+      "simple": "Linguagem simples",
       "advanced": "Avançado",
       "srLabel": "Nível de leitura"
     }
@@ -759,7 +759,7 @@
   },
   "install": {
     "h1": "Instalar o CIRIS",
-    "heroPara1": "Uma alternativa de código aberto ao ChatGPT e ao Gemini: raciocínio auditável, poliglota em 29 idiomas, integra-se ao Home Assistant para controle residencial totalmente aberto.",
+    "heroPara1": "Uma alternativa de código aberto ao ChatGPT e ao Gemini: raciocínio auditável, funciona em 29 idiomas e conecta-se ao Home Assistant para controle residencial totalmente de código aberto.",
     "heroPara2": "Disponível para iPhone, Android e como instalação via pip / docker / git para Windows, macOS e Linux.",
     "mobileBannerTitle": "📱 Aplicativos Móveis Disponíveis",
     "mobileBannerSub": "Seu agente de IA pessoal no celular: privado, local primeiro, código aberto",
@@ -782,14 +782,14 @@
     "method4Heading": "4. CIRISManager (Empresarial/Canary)",
     "method4Desc": "Implantações canary gerenciadas com lançamentos graduais, testes automatizados e capacidade de reversão. Para frotas em produção.",
     "method4Body": "O CIRISManager fornece implantações automatizadas blue-green com monitoramento de saúde. Entre em contato com a equipe para configurações de implantação.",
-    "method4Best": "<strong>Melhor para:</strong> Implantações empresariais, frotas em produção, infraestrutura gerenciada",
+    "method4Best": "<strong>Melhor para:</strong> Implantações empresariais, sistemas em produção, infraestrutura gerenciada",
     "helloHeading": "Olá, CIRIS",
     "helloSub": "O caminho mais curto para a primeira resposta. Inicie o agente e depois chame-o pelo Python. Os dois blocos abaixo podem ser copiados e colados.",
     "helloStep1Heading": "1. Inicie o agente",
     "helloStep1Desc": "Execute o adaptador de API. O padrão é a porta 8080. O acesso como OBSERVER não requer autenticação no desenvolvimento local.",
     "helloStep2Heading": "2. Chame pelo Python",
-    "helloStep2Desc": "SDK assíncrono. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> permitem ver a superfície de raciocínio em cada chamada.",
-    "sdkNote": "O SDK está em fase <strong>pré-beta</strong>. As interfaces podem mudar entre versões. A superfície completa da API (181 endpoints em 15 módulos) está documentada em <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk no GitHub</a>.",
+    "helloStep2Desc": "SDK assíncrono. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> mostram o raciocínio por trás de cada chamada.",
+    "sdkNote": "O SDK está em fase <strong>pré-beta</strong>. As interfaces podem mudar entre versões. A API completa está documentada em <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk no GitHub</a>.",
     "troubleshootingHeading": "Solução de Problemas",
     "ts1Summary": "Falha no pip install",
     "ts1Step1": "Verifique se você tem o Python 3.10 ou superior:",

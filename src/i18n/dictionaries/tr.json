@@ -3,7 +3,7 @@
     "eyebrow": "CIRIS Anayasası · CC 1.0-rc3",
     "headline": "Tek belge. Tek sürüm hattı.",
     "intro": "CIRIS Accord, bir yapay zekanın neye önem vermesi gerektiğini ortaya koydu. CIRIS Epistemik Dilbilgisi, her iddianın herkesin doğrulayabilmesi için nasıl imzalandığını belirledi. İkisi ayrı belgeler olarak yazıldı; ama zaten birbirini içeriyordu. Artık birdirler: CIRIS Anayasası.",
-    "apexLabel": "Temel taş: Meta-Hedef M-1",
+    "apexLabel": "Temel: Meta-Goal M-1",
     "apexQuote": "Sürdürülebilir uyarlanabilir tutarlılığı destekle: çeşitli bilinçli varlıkların adalet ve merak içinde kendi gelişimlerinin peşinden gidebileceği yaşam koşulları.",
     "apexNote": "Belgedeki her kural, ön ek ve politika bu tek hedefe dayanır. Amaçta zirve, güçte düz: tek bir hedef yönetir, hiçbir kavram ve hiçbir taraf gerçeğin anahtarlarını elinde tutmaz.",
     "foldedTitle": "İçine katlananlar",
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Bu sayfa makine tarafından çevrilmiştir.",
-      "body": "Bir şeyler yanlış geliyorsa lütfen bir sorun bildirin; depo zaten herkese açık.",
+      "body": "Bir şeyler yanlış görünüyorsa lütfen GitHub'da bir konu açın. Depo herkese açıktır, böylece herkes düzeltmeye yardımcı olabilir.",
       "cta": "Çeviri sorunu bildirin"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "Anayasa"
     },
     "levels": {
-      "simple": "Sade İngilizce",
+      "simple": "Sade dil",
       "advanced": "Gelişmiş",
       "srLabel": "Okuma seviyesi"
     }
@@ -759,7 +759,7 @@
   },
   "install": {
     "h1": "CIRIS'i Yükle",
-    "heroPara1": "ChatGPT ve Gemini için açık kaynaklı bir alternatif: denetlenebilir akıl yürütme, 29 dilde çok dilli destek ve tamamen açık kaynaklı ev kontrolü için Home Assistant entegrasyonu.",
+    "heroPara1": "ChatGPT ve Gemini için açık kaynaklı bir alternatif: denetlenebilir akıl yürütme, 29 dilde çalışır ve tamamen açık kaynaklı ev kontrolü için Home Assistant'a bağlanır.",
     "heroPara2": "iPhone, Android ve Windows, macOS ile Linux için pip / docker / git kurulumu olarak sunulmaktadır.",
     "mobileBannerTitle": "📱 Mobil Uygulamalar Artık Mevcut",
     "mobileBannerSub": "Telefonunuzda kişisel yapay zeka ajanınız: özel, yerel öncelikli, açık kaynak",
@@ -780,16 +780,16 @@
     "method3Desc": "Geliştirme, özelleştirme veya katkı sağlamak için depoyu klonlayın. Tam kaynak kodu erişimi.",
     "method3Then": "<strong>Ardından:</strong> Manuel kurulum talimatları için <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> dosyasını takip edin",
     "method4Heading": "4. CIRISManager (Kurumsal/Canary)",
-    "method4Desc": "Kademeli yayınlar, otomatik test ve geri alma özellikleriyle yönetilen canary dağıtımları. Üretim filosu için.",
+    "method4Desc": "Kademeli yayınlar, otomatik test ve geri alma özellikleriyle yönetilen canary dağıtımları. Üretim sistemleri için.",
     "method4Body": "CIRISManager, sağlık izleme ile otomatik mavi-yeşil dağıtım sağlar. Dağıtım yapılandırmaları için ekiple iletişime geçin.",
-    "method4Best": "<strong>En iyisi:</strong> Kurumsal dağıtımlar, üretim filoları, yönetilen altyapı",
+    "method4Best": "<strong>En iyisi:</strong> Kurumsal dağıtımlar, üretim sistemleri, yönetilen altyapı",
     "helloHeading": "Merhaba, CIRIS",
     "helloSub": "İlk yanıta giden en kısa yol. Ajanı başlatın, ardından Python'dan çağırın. Aşağıdaki her iki blok da kopyalanıp yapıştırılabilir.",
     "helloStep1Heading": "1. Ajanı başlatın",
     "helloStep1Desc": "API adaptörünü çalıştırın. Varsayılan port 8080. OBSERVER erişimi yerel geliştirme için kimlik doğrulama gerektirmez.",
     "helloStep2Heading": "2. Python'dan çağırın",
-    "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> her çağrı için akıl yürütme yüzeyini görmenizi sağlar.",
-    "sdkNote": "SDK <strong>ön beta</strong> aşamasındadır. Arayüzler sürümler arasında değişebilir. Tam API kapsamı (15 modülde 181 uç nokta) <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">GitHub'daki ciris_sdk</a> içinde belgelenmiştir.",
+    "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> her çağrının arkasındaki akıl yürütmeyi görmenizi sağlar.",
+    "sdkNote": "SDK <strong>ön beta</strong> aşamasındadır. Arayüzler sürümler arasında değişebilir. Tam API, <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">GitHub'daki ciris_sdk</a> içinde belgelenmiştir.",
     "troubleshootingHeading": "Sorun Giderme",
     "ts1Summary": "pip install başarısız oluyor",
     "ts1Step1": "Python 3.10 veya daha yüksek bir sürümünüz olduğundan emin olun:",
@@ -1934,8 +1934,8 @@
   "cewp": {
     "eyebrow": "CEWP · CIRIS Epistemic Web Platform · İngilizce “soup” (çorba) gibi okunur",
     "headline": "İnternet, aracı olmadan yeniden inşa edildi.",
-    "intro1": "CEWP, internetin tam bir alternatifidir. Bugün çevrimiçi yaptığınız her şey, yayın akışı, görüntülü aramalar, oyun, dosyalar, mesajlar ve imzalı beyanlar, insanların zaten sahip olduğu cihazlar arasında doğrudan, kuantum sonrası şifreli bir örgü ağ üzerinden yönlendirilir. Ortada dev veri merkezleri yok. Boruları elinde tutan bir avuç şirket yok.",
-    "intro2": "Bugünkü aracı, yılda yaklaşık 175 megatons CO2'ye mal oluyor ve beş şirkete hem verilerinizi hem de ne göreceğinize karar verme gücünü veriyor. CEWP zaten sahip olduğunuz donanım üzerinde çalışır, yerel içeriğinizi ağın geri kalanına asla reklam olarak sunmaz ve kendi kendini yönetir: ağ, imzalı ve ağırlıklı oylarla karar verir, ortada hiçbir platform sahibi olmadan.",
+    "intro1": "CEWP, internetin tam bir ikamesidir. Bugün çevrimiçi yaptığınız her şey; akış, görüntülü aramalar, oyun, dosyalar, mesajlar ve imzalı beyanlar, insanların zaten sahip olduğu cihazlar arasında doğrudan, kuantum sonrası şifreli bir örgü ağ üzerinden yönlendirilir. Ortada dev veri merkezleri yok. Bağlantıları elinde tutan bir avuç şirket yok.",
+    "intro2": "Bugünkü aracı, yılda yaklaşık 175 megaton CO2'ye mal oluyor ve beş şirkete hem verilerinizi hem de ne göreceğinize karar verme gücünü veriyor. CEWP zaten sahip olduğunuz donanım üzerinde çalışır, yerel içeriğinizi ağın geri kalanına asla reklam olarak sunmaz ve kendi kendini yönetir: ağ, imzalı ve ağırlıklı oylarla karar verir, ortada hiçbir platform sahibi olmadan.",
     "watchLabel": "7 dakikalık açıklayıcı videoyu izleyin",
     "videoCaption": "“Dismantling the Hyperscaler” · YouTube",
     "ctaAppStore": "CIRIS'i App Store'dan edinin",

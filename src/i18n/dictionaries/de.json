@@ -7,7 +7,7 @@
     "apexQuote": "Nachhaltige adaptive Kohärenz fördern: die Lebensbedingungen, unter denen verschiedene empfindungsfähige Wesen ihr eigenes Gedeihen in Gerechtigkeit und Staunen verfolgen können.",
     "apexNote": "Jede Regel, jedes Präfix und jede Richtlinie im Dokument geht auf dieses eine Ziel zurück. Klar im Zweck, flach in der Macht: Ein Ziel regiert, und kein einzelnes Konzept und keine einzelne Partei hält den Schlüssel zur Wahrheit.",
     "foldedTitle": "Was zusammengeführt wurde",
-    "foldedBody": "Der Accord (Version 1.3-RC2) und die CEG (Version 1.0-RC29) wurden Wort für Wort übernommen und dann zu einem einfachen, gegenwärtigen Dokument verwoben. Jede Regel auf Byte-Ebene bleibt erhalten. Ein Prüfgremium stellte fest, dass die zusammengeführte Version in 28 von 29 Kapiteln klarer ist als jede der Quellen einzeln.",
+    "foldedBody": "Der Accord (Version 1.3-RC2) und die CEG (Version 1.0-RC29) wurden Wort für Wort übernommen und zu einem einfachen Dokument im Präsens zusammengeführt. Jede Regel zum Übertragungsformat bleibt genau erhalten. Ein Prüfgremium stellte fest, dass die zusammengeführte Version in 28 von 29 Kapiteln klarer ist als jede der Quellen einzeln.",
     "partsLabel": "Die acht Teile",
     "parts": [
       {
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Diese Seite wurde maschinell übersetzt.",
-      "body": "Falls etwas falsch klingt, öffnen Sie bitte einen Issue, das Repository ist aus gutem Grund öffentlich.",
+      "body": "Falls etwas falsch klingt, öffnen Sie bitte ein Issue auf GitHub. Das Repository ist öffentlich, damit jeder helfen kann, es zu beheben.",
       "cta": "Ein Übersetzungsproblem melden"
     },
     "nav": {
@@ -82,7 +82,7 @@
     "levels": {
       "simple": "Einfaches Deutsch",
       "advanced": "Erweitert",
-      "srLabel": "Lesestufe"
+      "srLabel": "Leseniveau"
     }
   },
   "howItWorks": {
@@ -788,8 +788,8 @@
     "helloStep1Heading": "1. Agent starten",
     "helloStep1Desc": "API-Adapter ausführen. Standardmäßig Port 8080. OBSERVER-Zugriff erfordert keine Authentifizierung für die lokale Entwicklung.",
     "helloStep2Heading": "2. Von Python aus aufrufen",
-    "helloStep2Desc": "Asynchrones SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> zeigen die Reasoning-Oberfläche für jeden Aufruf.",
-    "sdkNote": "Das SDK befindet sich im <strong>Pre-Beta-Stadium</strong>. Schnittstellen können sich zwischen Versionen ändern. Die vollständige API (181 Endpunkte in 15 Modulen) ist in <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> dokumentiert.",
+    "helloStep2Desc": "Asynchrones SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> zeigen Ihnen das Reasoning hinter jedem Aufruf.",
+    "sdkNote": "Das SDK befindet sich im <strong>Pre-Beta-Stadium</strong>. Schnittstellen können sich zwischen Versionen ändern. Die vollständige API ist in <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> dokumentiert.",
     "troubleshootingHeading": "Fehlerbehebung",
     "ts1Summary": "pip install schlägt fehl",
     "ts1Step1": "Sicherstellen, dass Python 3.10 oder höher installiert ist:",

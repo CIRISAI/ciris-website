@@ -80,7 +80,7 @@
       "constitution": "Costituzione"
     },
     "levels": {
-      "simple": "Italiano semplice",
+      "simple": "Linguaggio semplice",
       "advanced": "Avanzato",
       "srLabel": "Livello di lettura"
     }
@@ -788,8 +788,8 @@
     "helloStep1Heading": "1. Avvia l'agente",
     "helloStep1Desc": "Esegui l'adattatore API. Usa la porta 8080 per default. L'accesso OBSERVER non richiede autenticazione per lo sviluppo locale.",
     "helloStep2Heading": "2. Chiamalo da Python",
-    "helloStep2Desc": "SDK asincrono. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> ti permettono di vedere la superficie di ragionamento per ogni chiamata.",
-    "sdkNote": "L'SDK è <strong>pre-beta</strong>. Le interfacce possono cambiare tra i rilasci. L'intera superficie API (181 endpoint su 15 moduli) è documentata in <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk su GitHub</a>.",
+    "helloStep2Desc": "SDK asincrono. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> ti mostrano il processo di ragionamento dietro ogni chiamata.",
+    "sdkNote": "L'SDK è <strong>pre-beta</strong>. Le interfacce possono cambiare tra i rilasci. L'intera API è documentata in <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk su GitHub</a>.",
     "troubleshootingHeading": "Risoluzione dei problemi",
     "ts1Summary": "pip install non riesce",
     "ts1Step1": "Assicurati di avere Python 3.10 o superiore:",

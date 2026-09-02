@@ -71,16 +71,16 @@
     },
     "mtBanner": {
       "lead": "このページは機械翻訳されています。",
-      "body": "おかしな表現があればイシューを開いてください。リポジトリは公開されています。",
+      "body": "おかしな表現があればGitHubでイシューを開いてください。リポジトリは公開されているので、誰でも修正に参加できます。",
       "cta": "翻訳の問題を報告"
     },
     "nav": {
       "install": "インストール",
       "proof": "証拠",
-      "constitution": "憲章"
+      "constitution": "憲法"
     },
     "levels": {
-      "simple": "平易な英語",
+      "simple": "平易な言葉",
       "advanced": "上級",
       "srLabel": "読解レベル"
     }
@@ -780,16 +780,16 @@
     "method3Desc": "開発・カスタマイズ・コントリビューションのためにリポジトリをクローンします。ソースコードへの完全アクセスが可能です。",
     "method3Then": "<strong>次に：</strong> <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> の手順に従って手動セットアップを行ってください",
     "method4Heading": "4. CIRISManager（エンタープライズ/カナリア）",
-    "method4Desc": "段階的ロールアウト・自動テスト・ロールバック機能を備えたマネージドカナリアデプロイ。本番フリート向けです。",
+    "method4Desc": "段階的ロールアウト・自動テスト・ロールバック機能を備えたマネージドカナリアデプロイ。本番システム向けです。",
     "method4Body": "CIRISManagerはヘルスモニタリング付きのブルーグリーン自動デプロイを提供します。デプロイ設定についてはチームまでお問い合わせください。",
-    "method4Best": "<strong>最適な用途：</strong> エンタープライズデプロイ・本番フリート・マネージドインフラ",
+    "method4Best": "<strong>最適な用途：</strong> エンタープライズデプロイ・本番システム・マネージドインフラ",
     "helloHeading": "こんにちは、CIRIS",
     "helloSub": "初回レスポンスまでの最短経路。エージェントを起動してPythonから呼び出します。以下の2ブロックはそのままコピー&ペーストできます。",
     "helloStep1Heading": "1. エージェントを起動する",
     "helloStep1Desc": "APIアダプターを実行します。デフォルトはポート8080。ローカル開発時はOBSERVERアクセスに認証は不要です。",
     "helloStep2Heading": "2. Pythonから呼び出す",
-    "helloStep2Desc": "非同期SDK。<code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> と <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> で各呼び出しの推論サーフェスを確認できます。",
-    "sdkNote": "SDKは<strong>プレベータ版</strong>です。リリース間でインターフェースが変更される場合があります。API全体（15モジュール、181エンドポイント）は <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> に記載されています。",
+    "helloStep2Desc": "非同期SDK。<code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> と <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> で、各呼び出しの背後にある推論を確認できます。",
+    "sdkNote": "SDKは<strong>プレベータ版</strong>です。リリース間でインターフェースが変更される場合があります。API全体は <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> に記載されています。",
     "troubleshootingHeading": "トラブルシューティング",
     "ts1Summary": "pip installが失敗する",
     "ts1Step1": "Python 3.10以上がインストールされているか確認してください：",

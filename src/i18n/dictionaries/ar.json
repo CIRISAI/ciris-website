@@ -3,8 +3,8 @@
     "eyebrow": "دستور CIRIS · CC 1.0-rc3",
     "headline": "وثيقة واحدة. خط إصدار واحد.",
     "intro": "حدّدت اتفاقية CIRIS ما يجب أن يهتم به الذكاء الاصطناعي. وحدّدت وثيقة CIRIS Epistemic Grammar كيف يُوقَّع كل ادعاء ليتمكن أي شخص من التحقق منه. كُتبا كوثيقتين منفصلتين، لكنهما كانا يحتويان كل منهما على الآخر. الآن أصبحا واحداً: دستور CIRIS.",
-    "apexLabel": "حجر الأساس: الهدف العام M-1",
-    "apexQuote": "تعزيز التماسك التكيفي المستدام: الظروف المعيشية التي تستطيع فيها الكائنات الواعية المتنوعة أن تسعى إلى ازدهارها الخاص في عدل ودهشة.",
+    "apexLabel": "الأساس: الميتا-هدف M-1",
+    "apexQuote": "تعزيز التماسك التكيّفي المستدام: الظروف المعيشية التي تستطيع فيها كائنات واعية متنوعة أن تسعى إلى ازدهارها الخاص في عدل ودهشة.",
     "apexNote": "كل قاعدة وبادئة وسياسة في الوثيقة تعود إلى هذا الهدف الواحد. القمة في الغرض، والسطحية في السلطة: هدف واحد يحكم، ولا مفهوم واحد ولا طرف واحد يملك مفاتيح الحقيقة.",
     "foldedTitle": "ما الذي أُدمج",
     "foldedBody": "نُسخ الميثاق (الإصدار 1.3-RC2) ووثيقة CEG (الإصدار 1.0-RC29) حرفاً بحرف، ثم نُسجا في وثيقة واحدة واضحة بصيغة المضارع. تُحفَظ كل قاعدة على مستوى البروتوكول بايتًا ببايت. حكمت لجنة فحوصات خصومية على النسخة المدمجة بأنها أوضح من كلٍّ من المصدرين في 28 فصلًا من أصل 29.",
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "تُرجمت هذه الصفحة آلياً.",
-      "body": "إذا بدا أي شيء غير صحيح، يرجى فتح تقرير، المستودع عام لهذا السبب.",
+      "body": "إذا بدا أي شيء غير صحيح، يرجى فتح بلاغ على GitHub. المستودع عام حتى يتمكن أي شخص من المساعدة في إصلاحه.",
       "cta": "أبلغ عن مشكلة في الترجمة"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "الدستور"
     },
     "levels": {
-      "simple": "الإنجليزية المبسطة",
+      "simple": "لغة بسيطة",
       "advanced": "متقدم",
       "srLabel": "مستوى القراءة"
     }
@@ -789,7 +789,7 @@
     "helloStep1Desc": "شغّل محول API. الافتراضي هو المنفذ 8080. وصول OBSERVER لا يتطلب مصادقة للتطوير المحلي.",
     "helloStep2Heading": "2. استدعاؤه من Python",
     "helloStep2Desc": "SDK غير متزامن. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> تتيح لك رؤية سطح الاستدلال لكل استدعاء.",
-    "sdkNote": "SDK في مرحلة <strong>ما قبل النسخة التجريبية</strong>. قد تتغير الواجهات بين الإصدارات. السطح الكامل لـ API (181 نقطة وصول عبر 15 وحدة) موثق في <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk على GitHub</a>.",
+    "sdkNote": "حزمة SDK في مرحلة <strong>ما قبل النسخة التجريبية</strong>. قد تتغير الواجهات بين الإصدارات. كامل الـ API موثق في <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk على GitHub</a>.",
     "troubleshootingHeading": "استكشاف الأخطاء وإصلاحها",
     "ts1Summary": "فشل pip install",
     "ts1Step1": "تأكد من أن لديك Python 3.10 أو أعلى:",

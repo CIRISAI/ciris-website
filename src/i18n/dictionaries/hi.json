@@ -7,7 +7,7 @@
     "apexQuote": "टिकाऊ अनुकूली सुसंगति को बढ़ावा दें: वह जीवन-दशाएँ जिनमें विविध चेतन प्राणी न्याय और विस्मय के साथ अपनी उन्नति का पीछा कर सकें।",
     "apexNote": "दस्तावेज़ का हर नियम, उपसर्ग और नीति इसी एक लक्ष्य से जुड़ती है। उद्देश्य में शिखर, शक्ति में समतल: एक लक्ष्य शासन करता है, और न कोई एकल अवधारणा, न कोई एकल पक्ष सच्चाई की चाबी अपने पास रखता है।",
     "foldedTitle": "क्या-क्या समाहित किया गया",
-    "foldedBody": "Accord (संस्करण 1.3-RC2) और CEG (संस्करण 1.0-RC29) को शब्द-दर-शब्द लिया गया, फिर एक सरल, वर्तमान-काल के दस्तावेज़ में बुन दिया गया। हर वायर-स्तरीय नियम बाइट-दर-बाइट सुरक्षित है। विरोधी जाँचों के एक समूह ने 29 में से 28 अध्यायों में संयुक्त संस्करण को दोनों मूल स्रोतों से ज़्यादा स्पष्ट पाया।",
+    "foldedBody": "Accord (संस्करण 1.3-RC2) और CEG (संस्करण 1.0-RC29) को शब्द-दर-शब्द लिया गया, फिर एक सरल, वर्तमान-काल के दस्तावेज़ में जोड़ा गया। वायर फ़ॉर्मेट से जुड़ा हर नियम ज्यों का त्यों रखा गया है। विरोधी जाँचों के एक पैनल ने 29 में से 28 अध्यायों में संयुक्त संस्करण को दोनों मूल स्रोतों से ज़्यादा स्पष्ट पाया।",
     "partsLabel": "आठ भाग",
     "parts": [
       {
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "यह पृष्ठ मशीन द्वारा अनुवादित है।",
-      "body": "अगर कुछ गलत लगे, तो कृपया एक समस्या रिपोर्ट करें — रेपो इसीलिए सार्वजनिक है।",
+      "body": "अगर कुछ गलत लगे, तो कृपया GitHub पर एक issue खोलें। रेपो सार्वजनिक है ताकि कोई भी इसे ठीक करने में मदद कर सके।",
       "cta": "अनुवाद की समस्या रिपोर्ट करें"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "संविधान"
     },
     "levels": {
-      "simple": "सरल अंग्रेज़ी",
+      "simple": "सरल भाषा",
       "advanced": "उन्नत",
       "srLabel": "पठन स्तर"
     }
@@ -782,14 +782,14 @@
     "method4Heading": "4. CIRISManager (एंटरप्राइज़/कैनरी)",
     "method4Desc": "धीरे-धीरे रोलआउट, स्वचालित परीक्षण और रोलबैक क्षमताओं के साथ प्रबंधित canary डिप्लॉयमेंट। प्रोडक्शन फ्लीट के लिए।",
     "method4Body": "CIRISManager हेल्थ मॉनिटरिंग के साथ स्वचालित blue-green डिप्लॉयमेंट प्रदान करता है। डिप्लॉयमेंट कॉन्फ़िगरेशन के लिए टीम से संपर्क करें।",
-    "method4Best": "<strong>सबसे अच्छा:</strong> Enterprise डिप्लॉयमेंट, प्रोडक्शन फ्लीट, प्रबंधित इंफ्रास्ट्रक्चर के लिए",
+    "method4Best": "<strong>सबसे उपयुक्त:</strong> Enterprise डिप्लॉयमेंट, प्रोडक्शन सिस्टम, प्रबंधित इंफ्रास्ट्रक्चर",
     "helloHeading": "नमस्ते, CIRIS",
     "helloSub": "पहले जवाब तक का सबसे छोटा रास्ता। एजेंट शुरू करें, फिर Python से कॉल करें। नीचे दोनों ब्लॉक कॉपी-पेस्ट करने योग्य हैं।",
     "helloStep1Heading": "1. एजेंट शुरू करें",
     "helloStep1Desc": "API एडॉप्टर चलाएं। डिफ़ॉल्ट रूप से port 8080 पर। स्थानीय डेवलपमेंट के लिए OBSERVER एक्सेस में कोई auth नहीं चाहिए।",
     "helloStep2Heading": "2. Python से कॉल करें",
     "helloStep2Desc": "Async SDK। <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> आपको हर कॉल का reasoning surface देखने देते हैं।",
-    "sdkNote": "SDK <strong>pre-beta</strong> में है। रिलीज़ के बीच इंटरफेस बदल सकते हैं। पूरी API (15 मॉड्यूल में 181 endpoints) <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> में दर्ज है।",
+    "sdkNote": "SDK <strong>pre-beta</strong> में है। रिलीज़ के बीच इंटरफेस बदल सकते हैं। पूरी API <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> में दर्ज है।",
     "troubleshootingHeading": "समस्या निवारण",
     "ts1Summary": "pip install विफल होता है",
     "ts1Step1": "सुनिश्चित करें कि आपके पास Python 3.10 या उससे ऊपर है:",

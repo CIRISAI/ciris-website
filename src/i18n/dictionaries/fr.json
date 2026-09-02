@@ -4,10 +4,10 @@
     "headline": "Un seul document. Une seule ligne de version.",
     "intro": "L'Accord CIRIS définissait ce dont une IA doit se soucier. La Grammaire Épistémique CIRIS définissait comment chaque affirmation est signée pour que n'importe qui puisse la vérifier. Ils ont été rédigés comme deux documents, mais ils se contenaient déjà l'un l'autre. Maintenant ils n'en forment qu'un: la Constitution CIRIS.",
     "apexLabel": "La pierre angulaire: le méta-objectif M-1",
-    "apexQuote": "Promouvoir une cohérence adaptive durable: les conditions de vie dans lesquelles des êtres sensibles divers peuvent poursuivre leur propre épanouissement dans la justice et l'émerveillement.",
-    "apexNote": "Chaque règle, préfixe et politique dans le document remonte à ce seul objectif. Pointu dans son but, plat dans son pouvoir: un seul objectif gouverne, et aucun concept, aucune partie seule, ne détient les clés de la vérité.",
+    "apexQuote": "Promouvoir une cohérence adaptative durable : les conditions de vie dans lesquelles des êtres sensibles divers peuvent poursuivre leur propre épanouissement dans la justice et l'émerveillement.",
+    "apexNote": "Chaque règle, préfixe et politique dans le document remonte à ce seul objectif. Un but concentré, un pouvoir réparti : un seul objectif gouverne, et aucun concept, aucun acteur, ne détient les clés de la vérité.",
     "foldedTitle": "Ce qui a été intégré",
-    "foldedBody": "L'Accord (version 1.3-RC2) et le CEG (version 1.0-RC29) ont été copiés mot pour mot, puis tissés en un seul document clair au présent. Chaque règle au niveau du protocole est conservée octet par octet. Un groupe de vérifications contradictoires a jugé la version combinée plus claire que chaque source sur 28 des 29 chapitres.",
+    "foldedBody": "L'Accord (version 1.3-RC2) et le CEG (version 1.0-RC29) ont été copiés mot pour mot et réunis en un seul document rédigé au présent. Chaque règle concernant le format sur le fil est conservée à l'identique. Un panel de vérifications contradictoires a jugé la version combinée plus claire que chaque source sur 28 des 29 chapitres.",
     "partsLabel": "Les huit parties",
     "parts": [
       {
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "Cette page a été traduite par machine.",
-      "body": "Si quelque chose semble mal traduit, veuillez ouvrir un ticket, le dépôt est public pour une bonne raison.",
+      "body": "Si quelque chose semble incorrect, veuillez ouvrir un ticket sur GitHub. Le dépôt est public afin que tout le monde puisse aider à le corriger.",
       "cta": "Signaler un problème de traduction"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "Constitution"
     },
     "levels": {
-      "simple": "Anglais simple",
+      "simple": "Langage simple",
       "advanced": "Avancé",
       "srLabel": "Niveau de lecture"
     }
@@ -781,15 +781,15 @@
     "method3Then": "<strong>Ensuite :</strong> suivez le <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> pour les instructions de configuration manuelle",
     "method4Heading": "4. CIRISManager (Entreprise/Canary)",
     "method4Desc": "Déploiements canary gérés avec déploiements progressifs, tests automatisés et capacités de retour arrière. Pour les flottes en production.",
-    "method4Body": "CIRISManager propose des déploiements blue-green automatisés avec surveillance de la santé. Contactez l'équipe pour les configurations de déploiement.",
+    "method4Body": "CIRISManager propose des déploiements blue-green automatisés avec des vérifications que chaque service fonctionne correctement. Contactez l'équipe pour les configurations de déploiement.",
     "method4Best": "<strong>Idéal pour :</strong> déploiements en entreprise, flottes en production, infrastructure gérée",
     "helloHeading": "Bonjour, CIRIS",
     "helloSub": "Le chemin le plus court vers une première réponse. Démarrez l'agent, puis appelez-le depuis Python. Les deux blocs ci-dessous sont prêts à copier-coller.",
     "helloStep1Heading": "1. Démarrer l'agent",
     "helloStep1Desc": "Lancez l'adaptateur API. Port par défaut : 8080. L'accès OBSERVER ne nécessite pas d'authentification en développement local.",
     "helloStep2Heading": "2. L'appeler depuis Python",
-    "helloStep2Desc": "SDK asynchrone. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> vous permettent de voir la surface de raisonnement pour chaque appel.",
-    "sdkNote": "Le SDK est en <strong>pré-bêta</strong>. Les interfaces peuvent changer entre les versions. L'ensemble complet de l'API (181 points de terminaison répartis sur 15 modules) est documenté dans <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk sur GitHub</a>.",
+    "helloStep2Desc": "SDK asynchrone. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> vous montrent le raisonnement derrière chaque appel.",
+    "sdkNote": "Le SDK est en <strong>pré-bêta</strong>. Les interfaces peuvent changer entre les versions. L'API complète est documentée dans <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk sur GitHub</a>.",
     "troubleshootingHeading": "Résolution des problèmes",
     "ts1Summary": "L'installation pip échoue",
     "ts1Step1": "Vérifiez que vous avez Python 3.10 ou une version supérieure :",

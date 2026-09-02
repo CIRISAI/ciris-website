@@ -3,7 +3,7 @@
     "eyebrow": "CIRIS ဖွဲ့စည်းပုံ · CC 1.0-rc3",
     "headline": "စာတမ်းတစ်ခု။ ဗားရှင်းလိုင်းတစ်ခု။",
     "intro": "CIRIS Accord သည် AI တစ်ခု ဂရုစိုက်ရမည့်အရာများကို သတ်မှတ်ခဲ့သည်။ CIRIS Epistemic Grammar (CEG) သည် မည်သူမဆို စစ်ဆေးနိုင်အောင် တောင်းဆိုမှုတိုင်းကို လက်မှတ်ထိုးသောနည်းကို သတ်မှတ်ခဲ့သည်။ ၎င်းတို့ကို စာတမ်းနှစ်ခုအဖြစ် ရေးသားခဲ့သော်လည်း တစ်ဦးနှင့်တစ်ဦး အတွင်းပိုင်းတွင် ပါဝင်ပြီးသားဖြစ်သည်။ ယခုတွင် ၎င်းတို့သည် တစ်ခုတည်းဖြစ်လာသည်: CIRIS ဖွဲ့စည်းပုံ။",
-    "apexLabel": "အခြေခံကျောက်တိုင်: အဓိကရည်မှန်းချက် M-1",
+    "apexLabel": "အခြေခံကျောက်တိုင်: Meta-Goal M-1",
     "apexQuote": "တည်မြဲသော လိုက်လျောညီထွေမှုကို မြှင့်တင်ပါ: မတူညီသော သတိရှိသူများ တရားမျှတမှုနှင့် အံ့ဩမှုတွင် ၎င်းတို့၏ ကိုယ်ပိုင် ဖွံ့ဖြိုးကြီးပွားမှုကို ရှာဖွေနိုင်သည့် နေထိုင်မှု အခြေအနေများ။",
     "apexNote": "စာတမ်းအတွင်း စည်းမျဉ်း၊ prefix နှင့် မူဝါဒတိုင်းသည် ဤတစ်ခုတည်းသော ရည်မှန်းချက်သို့ ပြန်ဆက်သည်။ ရည်ရွယ်ချက်မြင့်မားပြီး အာဏာအဆင့်အတန်း မရှိပါ: ရည်မှန်းချက်တစ်ခုက အုပ်ချုပ်သည်၊ မည်သည့်သဘောတရားတစ်ခုမျှ၊ မည်သည့်ပါတီတစ်ခုမျှ အမှန်တရား၏ သော့ချိများကို ကိုင်ဆောင်မထားနိုင်ပါ။",
     "foldedTitle": "ဘာတွေ ထည့်သွင်းခဲ့သည်",
@@ -71,7 +71,7 @@
     },
     "mtBanner": {
       "lead": "ဤစာမျက်နှာကို စက်ဘာသာပြန်ဆိုထားသည်။",
-      "body": "တစ်ခုခု မှားဖတ်ရပါက၊ issue တင်ပေးပါ — repo ကို အကြောင်းရင်းတစ်ခုကြောင့် အများလက်လှမ်းမီနိုင်အောင် ဖွင့်ထားသည်။",
+      "body": "တစ်ခုခု မှားဖတ်ရပါက GitHub တွင် issue ဖွင့်ပေးပါ။ repo ကို မည်သူမဆို ကူညီပြင်ဆင်နိုင်ရန် အများလက်လှမ်းမီနိုင်အောင် ဖွင့်ထားသည်။",
       "cta": "ဘာသာပြန်ဆိုချက် ပြဿနာ တင်ပြပါ"
     },
     "nav": {
@@ -80,7 +80,7 @@
       "constitution": "ဖွဲ့စည်းပုံ"
     },
     "levels": {
-      "simple": "ရိုးရှင်းသော အင်္ဂလိပ်ဘာသာ",
+      "simple": "ရိုးရှင်းသော ဘာသာစကား",
       "advanced": "အဆင့်မြင့်",
       "srLabel": "စာဖတ်အဆင့်"
     }
@@ -759,7 +759,7 @@
   },
   "install": {
     "h1": "CIRIS ထည့်သွင်းခြင်း",
-    "heroPara1": "ChatGPT နှင့် Gemini အစားထိုးနိုင်သော open-source ဖြေရှင်းချက်: စစ်ဆေးနိုင်သောတွေးခေါ်မှု၊ ဘာသာ ၂၉ မျိုးတွင် ပါဝင်သည်၊ Home Assistant နှင့် ချိတ်ဆက်၍ open-source ဖြင့် အိမ်ကို ထိန်းချုပ်နိုင်သည်။",
+    "heroPara1": "ChatGPT နှင့် Gemini အစားထိုးနိုင်သော open-source ဖြေရှင်းချက်: စစ်ဆေးနိုင်သောတွေးခေါ်မှု၊ ဘာသာစကား ၂၉ မျိုးတွင် အလုပ်လုပ်နိုင်သည်၊ Home Assistant နှင့် ချိတ်ဆက်၍ open-source ဖြင့် အိမ်ကို အပြည့်အဝ ထိန်းချုပ်နိုင်သည်။",
     "heroPara2": "iPhone၊ Android တွင် ရနိုင်သည်၊ Windows၊ macOS နှင့် Linux အတွက် pip / docker / git ဖြင့်လည်း ထည့်သွင်းနိုင်သည်။",
     "mobileBannerTitle": "📱 မိုဘိုင်းအက်ပ်များ ယခုရနိုင်ပြီ",
     "mobileBannerSub": "သင့်ဖုန်းပေါ်ရှိ ကိုယ်ပိုင် AI အေးဂျင့်: သီးသန့်၊ ကိုယ်ပိုင်ကိရိယာပဦးစားပေး၊ open source",
@@ -780,16 +780,16 @@
     "method3Desc": "ဖန်တီးမှု၊ ပြင်ဆင်မှု သို့မဟုတ် ပါဝင်ဆောင်ရွက်မှုအတွက် repository ကို clone ပါ။ source code အပြည့်အဝ ဝင်ရောက်နိုင်သည်။",
     "method3Then": "<strong>ထို့နောက်:</strong> <a href=\"https://github.com/CIRISAI/CIRISAgent/blob/main/README.md\" class=\"text-blue-600 hover:underline dark:text-blue-400\">README.md</a> ကို လိုက်နာ၍ လက်ဖြင့် setup ညွှန်ကြားချက်များကို ဖတ်ပါ",
     "method4Heading": "၄. CIRISManager (Enterprise/Canary)",
-    "method4Desc": "တဖြည်းဖြည်း rollout၊ အလိုအလျောက် testing နှင့် rollback စွမ်းရည်များဖြင့် managed canary deployments။ production fleet များအတွက်ဖြစ်သည်။",
-    "method4Body": "CIRISManager သည် ကျန်းမာရေး monitoring ဖြင့် အလိုအလျောက် blue-green deployments ပေးသည်။ deployment configurations အတွက် team နှင့် ဆက်သွယ်ပါ။",
-    "method4Best": "<strong>အကောင်းဆုံး:</strong> Enterprise deployments, production fleets, managed infrastructure",
+    "method4Desc": "တဖြည်းဖြည်း rollout၊ အလိုအလျောက် testing နှင့် rollback စွမ်းရည်များဖြင့် managed canary deployments။ production systems များအတွက် ဖြစ်သည်။",
+    "method4Body": "CIRISManager သည် ဝန်ဆောင်မှုတစ်ခုချင်းစီ ကောင်းစွာ လည်ပတ်နေကြောင်း စစ်ဆေးမှုများနှင့်အတူ အလိုအလျောက် blue-green deployments ပေးသည်။ deployment configurations အတွက် team နှင့် ဆက်သွယ်ပါ။",
+    "method4Best": "<strong>အကောင်းဆုံး:</strong> Enterprise deployments, production systems, managed infrastructure",
     "helloHeading": "မင်္ဂလာပါ၊ CIRIS",
     "helloSub": "ပထမဦးဆုံး ပြန်ကြားချက်ရရန် အတိုဆုံးနည်းလမ်း။ အေးဂျင့်ကို start ပြီး Python မှ ခေါ်ပါ။ အောက်ပါ block နှစ်ခုလုံးကို ကူး-ကပ်နိုင်သည်။",
     "helloStep1Heading": "၁. အေးဂျင့်ကို start ပါ",
     "helloStep1Desc": "API adapter ကို run ပါ။ port 8080 ကို မူလသတ်မှတ်ချက်အဖြစ် အသုံးပြုသည်။ OBSERVER ဝင်ရောက်မှုသည် local development အတွက် auth မလိုအပ်ပါ။",
     "helloStep2Heading": "၂. Python မှ ခေါ်ပါ",
-    "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> တို့ဖြင့် ခေါ်ဆိုမှုတိုင်းတွင် တွေးခေါ်မှု surface ကို မြင်နိုင်သည်။",
-    "sdkNote": "SDK သည် <strong>pre-beta</strong> ဖြစ်သည်။ ထုတ်ဝေမှုများကြား interface များ ပြောင်းလဲနိုင်သည်။ API surface အပြည့်အဝ (module ၁၅ ခုတွင် endpoint ၁၈၁ ခု) ကို <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> တွင် မှတ်တမ်းပြုထားသည်။",
+    "helloStep2Desc": "Async SDK. <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.processing_time_ms</code> + <code class=\"text-xs bg-gray-100 dark:bg-gray-700 px-1 rounded\">response.state</code> တို့က ခေါ်ဆိုမှုတိုင်း၏ နောက်ကွယ်မှ တွေးခေါ်မှုကို ပြသပေးသည်။",
+    "sdkNote": "SDK သည် <strong>pre-beta</strong> ဖြစ်သည်။ ထုတ်ဝေမှုများကြား interface များ ပြောင်းလဲနိုင်သည်။ API အပြည့်အစုံကို <a href=\"https://github.com/CIRISAI/CIRISAgent/tree/main/ciris_sdk\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-brand-primary hover:underline\">ciris_sdk on GitHub</a> တွင် မှတ်တမ်းပြုထားသည်။",
     "troubleshootingHeading": "ပြဿနာဖြေရှင်းခြင်း",
     "ts1Summary": "pip install မအောင်မြင်ပါ",
     "ts1Step1": "Python 3.10 သို့မဟုတ် ထို့အထက်ရှိမရှိ စစ်ဆေးပါ:",
