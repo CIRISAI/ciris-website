@@ -43,7 +43,7 @@ BUNDLES = {"dictionaries": ROOT / "src/i18n/dictionaries",
 PLACEHOLDER = re.compile(r"\$\{[^}]*\}|\{[A-Za-z0-9_]+\}|%[0-9]*\$?[sd]")
 SPEND_RE = re.compile(r"total ~ \$([0-9]+\.[0-9]+)")
 TRAILER = ("Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n"
-           "Claude-Session: https://claude.ai/code/session_016pB47qFep7rPXfVJwytXBk")
+           "Claude-Session: https://claude.ai/code/session_01CRnDXFjqKmXcym1ToVmGaH")
 
 # The plan, in importance order: what a visitor meets first goes first. The
 # landing (homeHero) is included: cheap, and it is the first thing anyone reads. `home.*` is dead copy (no source references) and `lobby.*` is
