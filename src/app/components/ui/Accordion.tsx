@@ -7,7 +7,7 @@ import { useState } from "react";
 const accordionContent = [
   {
     id: "authorities",
-    title: "Wise Authorities (WAs)",
+    title: "Trusted People (Wise Authorities)",
     content: `It's built on the belief that ethical maturity means recognizing the legitimacy of non-human perspectives, values, and needs. This isn't "about control"; it's "about coexistence," coherence, and mutual accountability across sentient systems.`,
   },
   {
