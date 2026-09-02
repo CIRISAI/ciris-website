@@ -2964,7 +2964,7 @@
     "runP2": "As chaves por trás desse quórum também não são só uma afirmação. Qualquer pessoa pode refazer a verificação pública que prova que todas as seis foram criadas dentro de hardware FIPS 140-3 genuíno, com o firmware e a regra de toque registrados nos próprios certificados.",
     "r1t": "Nenhum intermediário para capturar",
     "r1b": "Os pares se encontram e baixam software por meio de registros assinados, não por lojas de aplicativos, repositórios de pacotes ou nomes de domínio.",
-    "r2t": "Qualquer um pode emitir uma raiz",
+    "r2t": "Qualquer um pode criar uma raiz",
     "r2b": "A raiz do CIRIS é o padrão que vem de fábrica, nunca a única opção. Qualquer operador pode criar uma raiz igualmente válida, e cada cliente escolhe em quais raízes confiar. A raiz que vem junto é um padrão, não a raiz.",
     "r3t": "Responsabilidade, não stake",
     "r3b": "A legitimidade vem de ter que prestar contas, rastreável por uma cadeia viva até um humano responsável, não da riqueza. E membros falsos não conseguem se eleger sozinhos: os quóruns de admissão que importam contam fundadores, não a multidão.",
