@@ -1884,7 +1884,7 @@
     "failH2": "How MDD breaks, and how it stays unbroken.",
     "fail1H3": "Mission drift",
     "fail1Body": "Symptom: features accumulate that don't serve the core mission. Mitigation: regular architectural reviews with mission-alignment as the gate.",
-    "fail2H3": "Complexity explosion",
+    "fail2H3": "Complexity grows out of control",
     "fail2Body": "Symptom: the system becomes unmaintainable through unnecessary sophistication. Mitigation: reject additions unless they strengthen mission fulfillment.",
     "fail3H3": "Ethical inconsistency",
     "fail3Body": "Symptom: components apply ethical reasoning inconsistently. Mitigation: centralized ethical framework with shared implementation patterns.",
