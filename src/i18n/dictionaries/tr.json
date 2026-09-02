@@ -2212,7 +2212,7 @@
     "headlineLead": "Güvenlik ve teknoloji,",
     "headlineAccent": "ayrılmaz",
     "groundLabel": "Doğduğu zemin",
-    "abutmentLeft": "Doğrulanabilirlik",
+    "abutmentLeft": "Doğrulanabilir",
     "abutmentRight": "Etik",
     "keystoneBadge": "Kilit taşı",
     "keystoneMechLabel": "Neden kaldırılamaz",
@@ -2240,7 +2240,7 @@
             "note": "Durdurma tüm sistemin üzerinde durur. Hiçbir hedef ona karşı oy çokluğu sağlayamaz."
           }
         ],
-        "note": "Kilit taşı. Diğer her güvence ona bastırır ve bu, kaldırılamayan tek taştır."
+        "note": "Kilit taşı. Diğer her güvence ona bastırır ve bu, kaldırılamayan tek bloktur."
       },
       "limits": {
         "short": "Sınırlar",
@@ -3034,7 +3034,7 @@
   "killSwitch": {
     "kicker": "Kontrol edebileceğiniz güvenlik",
     "title": "Acil durdurma anahtarımızı kendiniz doğrulayın.",
-    "lede": "Çoğu yapay zeka güvenliği iddiası sizden güven ister. Bu ise kontrol etmenizi ister. Depoyu klonlayın, tek bir komut çalıştırın ve bir CIRIS ajanını durdurabilecek anahtarların gerçek, FIPS 140-3 doğrulamalı donanımda bulunduğunu doğrulayın. Biz dahil kimseye güvenmeyin.",
+    "lede": "Çoğu yapay zekâ güvenliği iddiası sizden ona güvenmenizi ister. Bu ise kontrol etmenizi ister. Depoyu klonlayın, tek bir komut çalıştırın ve bir CIRIS ajanını durdurabilecek anahtarların gerçek, FIPS 140-3 doğrulamalı donanımda bulunduğunu doğrulayın. Biz dahil kimseye güvenmeyin.",
     "s1label": "Anayasal acil durdurma anahtarı",
     "s1h2": "Belirlenmiş kişiler bir CIRIS ajanını durdurabilir. Bu güç şirkette değil, donanımda bulunur.",
     "s1p1": "Son çare durdurma mekanizması olan HUMANITY_ACCORD, şirket olarak CIRIS, ağ veya ajanın kendisi tarafından değil, belirlenmiş kişiler tarafından elde tutulur. Federasyon içindeki hiçbir taraf bunu veremez, iptal edemez veya geçersiz kılamaz. Üçte iki canlı yeter sayı ile devreye girer.",
@@ -3049,7 +3049,7 @@
     "notProvesP": "ML-DSA-65 yarısı, YubiKey altında USB'ye mühürlenmiş bir yazılım anahtarıdır, donanım tarafından onaylanmamıştır. Bu sistem, ayrı olarak uygulanan USB mühürlemesini veya canlı yeter sayıyı kontrol etmez. Bu makbuzun tam olarak neyi kapsadığını bilmenizi tercih ederiz.",
     "s3label": "İddia edilmiş değil, ölçülmüş",
     "s3h2": "Kuantum sonrası kriptografi üretimde çalışır ve her rakam herkese açıktır.",
-    "measuredTag": "ölçüldü",
+    "measuredTag": "ölçülmüş",
     "measuredLabels": [
       "çekirdek başına PQC imzalı olay",
       "çekirdek başına AEAD şifre çözme",
@@ -3057,7 +3057,7 @@
       "gruplar arası sızıntı, 50 ila 400 düğüm"
     ],
     "s3p1": "Kuantum sonrası köken ücretsiz değildir ve maliyeti gizlemiyoruz: melez Ed25519 + ML-DSA-65 imzalama, klasik yönteme göre yaklaşık on beş kat daha yavaştır, olay başına yaklaşık 36 yerine 550 mikrosaniye. Saklanan veri kümesi, sahiplerin beşte biri çevrimdışıyken denemelerin 97.6%'sında, üçte biri çevrimdışıyken 72.7%'sinde yeniden oluşturulur. Rakamlar, paylaşılan bir CI çalıştırıcısında tek çekirdekli medyan değerlerdir ve her commit'te yeniden üretilir.",
-    "benchLink": "Her commit'te yeniden üretilen tüm rakamları görün",
+    "benchLink": "Her commit'te yeniden üretilen tüm metrikleri görün",
     "ctaPara": "Buradaki asıl amaç, yukarıdaki cümleye güvenmek zorunda kalmamanızdır. Kontrolü kendiniz çalıştırabilirsiniz.",
     "btnGithub": "GitHub'da CIRISVerify",
     "btnTrust": "Güven nasıl işler",

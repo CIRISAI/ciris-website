@@ -2190,7 +2190,7 @@
     "s5h2": "Chúng tôi đến đây từ một con đường khác",
     "s5p1": "CIRIS không được thiết kế để hiện thực hóa tính toàn vẹn ngữ cảnh. Nó lớn lên từ một ý tưởng quan hệ: một con người là con người nhờ những con người khác, nên mọi tuyên bố phải mang theo các mối quan hệ của nó. Theo quy tắc đó đủ lâu, bạn sẽ đến đúng nơi lý thuyết của Nissenbaum chỉ tới: quyền riêng tư là dòng chảy phù hợp, và quy tắc dòng chảy thuộc về cấu trúc. Hai con đường, một điểm đến. Con đường của chúng tôi xuất xưởng dưới dạng một định dạng truyền tải.",
     "s6label": "Vì sao điều này quan trọng lúc này",
-    "s6h2": "Các tác tử AI khiến việc này trở nên cấp bách",
+    "s6h2": "Các tác nhân AI khiến việc này trở nên cấp bách",
     "s6p1": "Trợ lý AI đọc lịch, hộp thư và hồ sơ sức khỏe. Giới nghiên cứu giờ đây đo xem chúng có làm rò rỉ thông tin giữa các ngữ cảnh hay không, và chuẩn mà họ dùng để đo chính là tính toàn vẹn ngữ cảnh. Hầu hết các công trình cố dạy mô hình biết cẩn trọng. CIRIS đi con đường còn lại: làm cho dòng chảy không phù hợp trở nên không thể diễn đạt.",
     "sourcesLabel": "Nguồn",
     "sources": [
@@ -2205,7 +2205,7 @@
     "btnGrammar": "Ngữ pháp →",
     "btnCewp": "Nền tảng →",
     "crossTitle": "Đây chính là tính toàn vẹn ngữ cảnh",
-    "crossBody": "Khuôn khổ quyền riêng tư mà giới nghiên cứu dùng để đánh giá các hệ thống AI có một cái tên. CIRIS thực thi nó trong định dạng truyền tải.",
+    "crossBody": "Khuôn khổ quyền riêng tư mà giới nghiên cứu dùng để đánh giá các hệ thống AI có một tên gọi chính thức: tính toàn vẹn ngữ cảnh. CIRIS thực thi nó trong định dạng truyền tải.",
     "crossCta": "Tính toàn vẹn ngữ cảnh là gì? →"
   },
   "safetyArch": {
@@ -3034,9 +3034,9 @@
   "killSwitch": {
     "kicker": "Bảo mật bạn có thể tự kiểm chứng",
     "title": "Tự mình xác minh công tắc ngắt khẩn cấp của chúng tôi.",
-    "lede": "Hầu hết các tuyên bố về an toàn AI đều yêu cầu bạn tin tưởng. Tuyên bố này yêu cầu bạn kiểm chứng. Hãy clone kho mã, chạy một lệnh duy nhất, và xác nhận rằng các khóa có khả năng dừng một agent CIRIS thực sự nằm trên phần cứng đã được thẩm định theo FIPS 140-3. Đừng tin ai cả, kể cả chúng tôi.",
+    "lede": "Hầu hết các tuyên bố về an toàn AI đều yêu cầu bạn tin tưởng. Tuyên bố này yêu cầu bạn kiểm chứng. Hãy clone kho mã, chạy một lệnh duy nhất, và xác nhận rằng các khóa có khả năng dừng một tác nhân CIRIS thực sự nằm trên phần cứng đã được thẩm định theo FIPS 140-3. Đừng tin ai cả, kể cả chúng tôi.",
     "s1label": "Công tắc ngắt khẩn cấp theo hiến pháp",
-    "s1h2": "Những con người được nêu tên có thể dừng một agent CIRIS. Quyền lực này nằm trong phần cứng, không nằm trong công ty.",
+    "s1h2": "Những con người được nêu tên có thể dừng một tác nhân CIRIS. Quyền lực này nằm trong phần cứng, không nằm trong công ty.",
     "s1p1": "Một cơ chế dừng khẩn cấp cuối cùng, HUMANITY_ACCORD, được nắm giữ bởi những người được nêu tên cụ thể, không phải bởi công ty CIRIS, mạng lưới, hay bản thân agent. Không bên nào trong liên minh có thể cấp, thu hồi, hay ghi đè lên nó. Nó kích hoạt khi đạt số đông trực tiếp hai trên ba.",
     "s1p2": "Mỗi khóa số đông là sự kết hợp của hai chữ ký gắn liền với nhau. Nửa Ed25519 bắt nguồn từ một YubiKey 5 FIPS, đã được thẩm định theo FIPS 140-3: được tạo ra bên trong thiết bị, không thể trích xuất, và yêu cầu chạm vật lý để ký. Nửa ML-DSA-65, chữ ký hậu lượng tử, là một khóa phần mềm được niêm phong vào một USB dưới cùng chiếc YubiKey đó, vì chưa có YubiKey nào tích hợp sẵn applet hậu lượng tử. Tổng cộng có sáu khóa, ba khóa đang hoạt động và ba khóa được lưu trữ dự phòng. Một lần kiểm tra thu hồi thất bại hoặc không xác định được coi là đã bị thu hồi, nên hệ thống luôn nghiêng về phía an toàn khi gặp lỗi.",
     "s2label": "Xác minh độc lập",
@@ -3060,7 +3060,7 @@
     "benchLink": "Xem mọi con số, được tạo lại sau mỗi commit",
     "ctaPara": "Vấn đề cốt lõi là bạn không cần phải tin vào câu vừa rồi. Bạn có thể tự chạy kiểm tra.",
     "btnGithub": "CIRISVerify trên GitHub",
-    "btnTrust": "Niềm tin được xây dựng như thế nào",
+    "btnTrust": "Cách tin cậy hoạt động",
     "btnVerif": "Bộ kiểm thử tuân thủ",
     "sources": "Nguồn: CIRISVerify (chứng thực lưu ký Ed25519 + ML-DSA-65, gốc Yubico cố định), trang benchmark của CIRISServer (hiệu năng đã đo lường), Yubico PKI (gốc chứng thực). Các số liệu được cố định theo commit 0b73486, ngày 24/06/2026."
   },

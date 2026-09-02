@@ -2127,16 +2127,16 @@
   },
   "contextualIntegrity": {
     "kicker": "Integridade contextual · Privacidade como fluxo apropriado",
-    "title": "Integridade contextual, embutida no formato de fio",
-    "lede": "Integridade contextual é uma ideia simples com um nome famoso: privacidade não é segredo, é informação fluindo do jeito que as pessoas de um contexto esperam. O CIRIS não acrescentou isso depois. O formato de fio impõe isso.",
+    "title": "Integridade contextual, embutida no wire format",
+    "lede": "Integridade contextual é uma ideia simples com um nome famoso: privacidade não é sigilo, é informação fluindo do jeito que as pessoas de um contexto esperam. O CIRIS não acrescentou isso depois. O wire format impõe isso.",
     "seoTitle": "Integridade contextual, imposta no nível do fio | CIRIS",
-    "seoDescription": "Os cinco parâmetros de privacidade de Nissenbaum correspondem um a um aos campos de fio do CIRIS. Sujeito, remetente, destinatário, tipo e princípio de transmissão, assinados e revogáveis. Privacidade como fluxo apropriado, tornada estrutural.",
+    "seoDescription": "Os cinco parâmetros de privacidade de Nissenbaum correspondem um a um aos campos wire do CIRIS. Sujeito, remetente, destinatário, tipo e princípio de transmissão, assinados e revogáveis. Privacidade como fluxo apropriado, tornada estrutural.",
     "s1label": "A ideia",
     "s1h2": "O que é integridade contextual?",
     "s1p1": "Em 2004, a filósofa Helen Nissenbaum deu à privacidade uma definição melhor. Privacidade não é esconder coisas. Não é uma caixinha que diz \"eu concordo\". Privacidade é o fluxo apropriado da informação. Cada parte da vida tem suas próprias regras sobre como a informação deve se mover. Seu médico saber seu diagnóstico é normal. Seu médico vender isso a um anunciante é uma violação, mesmo que um formulário dissesse que ele podia.",
     "s1p2": "A teoria nomeia cinco partes de todo fluxo de informação: sobre quem é a informação, quem envia, quem recebe, que tipo de informação é, e a regra que o fluxo deve seguir. Quebre a regra do contexto e a privacidade quebra, não importa no que alguém clicou.",
     "s2label": "O mapeamento",
-    "s2h2": "Os cinco parâmetros são campos de fio do CIRIS",
+    "s2h2": "Os cinco parâmetros são campos wire do CIRIS",
     "s2intro": "A Constituição do CIRIS nunca usa a expressão integridade contextual. Encontramos a correspondência depois que o design já estava pronto. Cada um dos cinco parâmetros de Nissenbaum é um campo que o protocolo assina e impõe.",
     "citePrefix": "Constituição",
     "params": [
@@ -2168,7 +2168,7 @@
     ],
     "s3label": "A parte difícil",
     "s3h2": "O princípio de transmissão, em bytes",
-    "s3p1": "O quinto parâmetro é o que todos os outros deixam de fora. Leis e formulários de consentimento podem dizer quais dados foram coletados. Raramente dizem a regra que o fluxo deve seguir depois. O CIRIS transforma essa regra num valor assinado e legível por máquina, que o sujeito emite e pode retirar. consent:scope:train é uma pessoa dizendo sim ou não ao treinamento de IA, no formato de fio, revogável a qualquer momento.",
+    "s3p1": "O quinto parâmetro é o que todos os outros deixam de fora. Leis e formulários de consentimento podem dizer quais dados foram coletados. Raramente dizem a regra que o fluxo deve seguir depois. O CIRIS transforma essa regra num valor assinado e legível por máquina, que o sujeito emite e pode retirar. consent:scope:train é uma pessoa dizendo sim ou não ao treinamento de IA, no wire format, revogável a qualquer momento.",
     "s3p2": "E a revogação tem dentes. Um produtor se compromete com uma janela de exclusão quando publica. Se o sujeito revoga e a janela passa sem prova de exclusão, a própria rede levanta um sinal de violação.",
     "s4label": "Além da caixinha",
     "s4h2": "O que fluxos assim podem fazer",
@@ -2188,7 +2188,7 @@
     ],
     "s5label": "A parte honesta",
     "s5h2": "Chegamos aqui por outra estrada",
-    "s5p1": "O CIRIS não foi projetado para implementar integridade contextual. Ele cresceu de uma ideia relacional: uma pessoa é pessoa através de outras pessoas, então toda afirmação precisa carregar junto as suas relações. Siga essa regra por tempo suficiente e você chega aonde a teoria de Nissenbaum aponta: privacidade é fluxo apropriado, e as regras de fluxo pertencem à estrutura. Duas estradas, o mesmo lugar. A nossa é entregue como um formato de fio.",
+    "s5p1": "O CIRIS não foi projetado para implementar integridade contextual. Ele cresceu de uma ideia relacional: uma pessoa é pessoa através de outras pessoas, então toda afirmação precisa carregar junto as suas relações. Siga essa regra por tempo suficiente e você chega aonde a teoria de Nissenbaum aponta: privacidade é fluxo apropriado, e as regras de fluxo pertencem à estrutura. Duas estradas, o mesmo lugar. A nossa é entregue como um wire format.",
     "s6label": "Por que isso importa agora",
     "s6h2": "Agentes de IA tornaram isso urgente",
     "s6p1": "Assistentes de IA leem agendas, caixas de entrada e registros de saúde. O campo de pesquisa agora mede se eles vazam informação entre contextos, e o padrão usado nessa medição é a integridade contextual. A maior parte do trabalho tenta ensinar o modelo a ter cuidado. O CIRIS pega o outro caminho: tornar o fluxo inapropriado impossível de expressar.",
@@ -2205,7 +2205,7 @@
     "btnGrammar": "A gramática →",
     "btnCewp": "A plataforma →",
     "crossTitle": "Isto é integridade contextual",
-    "crossBody": "A estrutura de privacidade que os pesquisadores usam para avaliar sistemas de IA tem nome. O CIRIS a impõe no formato de fio.",
+    "crossBody": "A estrutura de privacidade que os pesquisadores usam para avaliar sistemas de IA tem um nome formal: integridade contextual. O CIRIS a impõe no wire format.",
     "crossCta": "O que é integridade contextual? →"
   },
   "safetyArch": {
@@ -2222,9 +2222,9 @@
     "ratchetBody": "Um arco fica mais forte quanto mais peso pressiona sobre ele. A carga trava as pedras com mais firmeza. O CIRIS se sustenta do mesmo jeito. Cada voz tem seu preço honesto: cópias de uma voz contam como uma voz só, e nenhuma quantidade de eco compra mais confiança. Os livros permanecem verdadeiros, assinados e feitos para que qualquer adulteração deixe rastro, com a parada fechando o topo. Quando algo falha, falha no registro, com o próprio nome.",
     "blocks": {
       "killswitch": {
-        "short": "Parar",
-        "name": "O botão de desligar",
-        "tag": "Bloco 01 · Parar",
+        "short": "Desligar",
+        "name": "O kill switch",
+        "tag": "Bloco 01 · Desligar",
         "promise": "Existe um botão de desligar que nenhuma pontuação, nenhum argumento e nenhum atacante pode anular. Remova este bloco e nada mais consegue sustentar a carga.",
         "mechanisms": [
           {
@@ -2265,7 +2265,7 @@
       },
       "humans": {
         "short": "Supervisão",
-        "name": "As pessoas seguem responsáveis",
+        "name": "As pessoas seguem prestando contas",
         "tag": "Bloco 03 · Supervisão",
         "promise": "Sem cantos escuros. Uma pessoa sempre carrega o dever, ou o espaço não pode existir.",
         "mechanisms": [
@@ -3035,14 +3035,14 @@
     "kicker": "Segurança que você pode verificar",
     "title": "Verifique você mesmo o nosso interruptor de emergência.",
     "lede": "A maioria das alegações de segurança de IA pede a sua confiança. Esta pede que você verifique. Clone o repositório, execute um comando e confirme que as chaves capazes de interromper um agente CIRIS residem em hardware real, validado conforme a norma FIPS 140-3. Não confie em ninguém, nem em nós.",
-    "s1label": "O interruptor de emergência constitucional",
+    "s1label": "O kill switch constitucional",
     "s1h2": "Humanos nomeados podem interromper um agente CIRIS. O poder está no hardware, não na empresa.",
     "s1p1": "Uma parada de último recurso, o HUMANITY_ACCORD, é mantida por pessoas nomeadas, não pela empresa CIRIS, pela rede ou pelo próprio agente. Nenhuma parte dentro da federação pode concedê-la, revogá-la ou anulá-la. Ela é acionada por um quórum ativo de dois em três.",
     "s1p2": "Cada chave de quórum é um híbrido de duas assinaturas unidas. A metade Ed25519 tem raiz em um YubiKey 5 FIPS, validado conforme a norma FIPS 140-3: gerada dentro do dispositivo, não extraível e exigindo um toque físico para assinar. A metade ML-DSA-65, a assinatura pós-quântica, é uma chave de software selada em um pen drive USB sob esse mesmo YubiKey, porque nenhum YubiKey ainda vem com um applet pós-quântico. Seis chaves ao todo, três instaladas e três guardadas em cofre. Uma verificação de revogação que falha ou é desconhecida é tratada como revogada, de modo que o sistema falha de forma segura.",
     "s2label": "Verificação independente",
     "s2h2": "Um comando. Sem hardware, sem rede, sem confiar em nós.",
-    "s2p1": "Nosso conjunto de validação reexecuta o verificador exato de portão de admissão de produção do CIRISVerify sobre as seis atestações de chave registradas, em relação a uma cópia fixada da própria raiz pública de atestação da Yubico. Clone o repositório CIRISVerify e execute:",
-    "cmdCaption": "Confirme que a raiz fixada é genuína buscando-a diretamente da Yubico:",
+    "s2p1": "Nosso conjunto de validação reexecuta o exato verificador de produção admission-gate do CIRISVerify sobre as seis atestações de chave registradas, em relação a uma cópia fixada da própria raiz pública de atestação da Yubico. Clone o repositório CIRISVerify e execute:",
+    "cmdCaption": "Confirme que o certificado raiz fixado é genuíno buscando-o diretamente da Yubico:",
     "provesH": "O que isso prova",
     "provesP": "Todas as seis chaves de quórum encadeiam-se até a raiz de atestação real da Yubico, de modo que suas metades de assinatura Ed25519 foram geradas dentro de hardware YubiKey 5 FIPS genuíno, uma série validada conforme a norma FIPS 140-3: não extraível, exige toque, não falsificável. Os próprios certificados de atestação registram o marcador da série FIPS, o firmware 5.7.4 e a política de toque sempre obrigatório, de modo que a classe do hardware é provada pela cadeia, e não afirmada por nós.",
     "notProvesH": "O que isso não prova",
@@ -3056,8 +3056,8 @@
       "troca de chaves PQC híbrida",
       "vazamentos entre grupos, de 50 a 400 nós"
     ],
-    "s3p1": "A proveniência pós-quântica não é gratuita, e não escondemos o custo: a assinatura híbrida Ed25519 + ML-DSA-65 roda cerca de quinze vezes mais devagar que a clássica, aproximadamente 550 microssegundos contra 36 por evento. O corpus armazenado se reconstrói em 97.6% dos testes com um quinto dos detentores offline, e em 72.7% com um terço offline. Os números são medianas de núcleo único em um executor de CI compartilhado, regeneradas a cada commit.",
-    "benchLink": "Veja cada número, regenerado a cada commit",
+    "s3p1": "A proveniência pós-quântica não é gratuita, e não escondemos o custo: a assinatura híbrida Ed25519 + ML-DSA-65 roda cerca de quinze vezes mais devagar que a clássica, aproximadamente 550 microssegundos contra 36 por evento. O corpus armazenado se reconstrói em 97,6% dos testes com um quinto dos detentores offline, e em 72,7% com um terço offline. Os números são medianas de núcleo único em um runner de CI compartilhado, regeneradas a cada commit.",
+    "benchLink": "Veja cada figura, regenerada a cada commit",
     "ctaPara": "Todo o propósito é que você não precise confiar na frase acima. Você pode executar a verificação.",
     "btnGithub": "CIRISVerify no GitHub",
     "btnTrust": "Como a confiança funciona",

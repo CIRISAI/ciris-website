@@ -2205,7 +2205,7 @@
     "btnGrammar": "La gramática →",
     "btnCewp": "La plataforma →",
     "crossTitle": "Esto es integridad contextual",
-    "crossBody": "El marco de privacidad que los investigadores usan para juzgar sistemas de IA tiene nombre. CIRIS lo hace cumplir en el formato del cable.",
+    "crossBody": "El marco de privacidad que los investigadores usan para juzgar sistemas de IA tiene un nombre formal: integridad contextual. CIRIS lo hace cumplir en el formato del cable.",
     "crossCta": "¿Qué es la integridad contextual? →"
   },
   "safetyArch": {
@@ -2282,7 +2282,7 @@
             "note": "El veto de PDMA bloquea cualquier acción que erosionaría la coherencia."
           }
         ],
-        "note": "El software no puede cargar con la responsabilidad moral, así que nunca se le pide."
+        "note": "El software no puede cargar con la responsabilidad moral, así que nunca se le pide que la asuma."
       },
       "moderation": {
         "short": "Voz",
@@ -2348,8 +2348,8 @@
         "note": "El valor por defecto es la libertad. La autoridad sobre otra persona hay que volver a ganarla una y otra vez."
       },
       "lifecycle": {
-        "short": "Ciclo",
-        "name": "Seguro durante toda la vida de la IA",
+        "short": "Ciclo de vida",
+        "name": "Seguridad para la IA durante toda su vida",
         "tag": "Bloque 07 · Ciclo de vida",
         "promise": "Desde el entrenamiento hasta el apagado, la IA está gobernada y se la trata con dignidad.",
         "mechanisms": [
@@ -3041,12 +3041,12 @@
     "s1p2": "Cada clave del quórum es un híbrido de dos firmas unidas entre sí. La mitad Ed25519 tiene su raíz en una YubiKey 5 FIPS, validada conforme a la norma FIPS 140-3: generada dentro del dispositivo, no extraíble y que requiere un toque físico para firmar. La mitad ML-DSA-65, la firma poscuántica, es una clave de software sellada en una memoria USB bajo esa misma YubiKey, porque ninguna YubiKey incluye todavía un applet poscuántico. Seis claves en total, tres en uso activo y tres guardadas en bóveda. Una comprobación de revocación que falla o cuyo resultado se desconoce se trata como revocada, de modo que el sistema falla de forma segura.",
     "s2label": "Verificación independiente",
     "s2h2": "Un solo comando. Sin hardware, sin red, sin confiar en nosotros.",
-    "s2p1": "Nuestro arnés de validación vuelve a ejecutar el verificador exacto de la puerta de admisión de producción de CIRISVerify sobre las seis certificaciones de clave registradas, contra una copia fija de la propia raíz de certificación pública de Yubico. Clona el repositorio CIRISVerify y ejecuta:",
-    "cmdCaption": "Confirma que la raíz fija es auténtica descargándola directamente desde Yubico:",
+    "s2p1": "Nuestro entorno de validación vuelve a ejecutar el verificador exacto de la puerta de admisión de producción de CIRISVerify sobre las seis atestaciones de clave registradas, contra una copia fijada de la propia raíz de atestación pública de Yubico. Clona el repositorio CIRISVerify y ejecuta:",
+    "cmdCaption": "Confirma que el certificado raíz fijado es auténtico descargándolo directamente desde Yubico:",
     "provesH": "Qué demuestra esto",
     "provesP": "Las seis claves del quórum se encadenan a la raíz de certificación real de Yubico, por lo que sus mitades de firma Ed25519 se generaron dentro de hardware YubiKey 5 FIPS auténtico, una serie validada conforme a la norma FIPS 140-3: no extraíble, con toque requerido e infalsificable. Los propios certificados de atestación registran el marcador de serie FIPS, el firmware 5.7.4 y la política de toque siempre obligatorio, de modo que la clase del hardware la demuestra la cadena, no nuestra palabra.",
     "notProvesH": "Qué no demuestra",
-    "notProvesP": "La mitad ML-DSA-65 es una clave de software sellada en USB bajo la YubiKey, no certificada por hardware. Este arnés no comprueba el sellado del USB ni el quórum en vivo, que se aplican por separado. Preferimos que sepas exactamente qué cubre este comprobante.",
+    "notProvesP": "La mitad ML-DSA-65 es una clave de software sellada en USB bajo la YubiKey, no atestada por hardware. Este arnés no comprueba el sellado del USB ni el quórum en vivo, que se hacen cumplir por separado. Preferimos que sepas exactamente qué cubre el recibo.",
     "s3label": "Medido, no afirmado",
     "s3h2": "La criptografía poscuántica funciona en producción, y cada cifra es pública.",
     "measuredTag": "medido",
@@ -3062,7 +3062,7 @@
     "btnGithub": "CIRISVerify en GitHub",
     "btnTrust": "Cómo funciona la confianza",
     "btnVerif": "El conjunto de conformidad",
-    "sources": "Fuentes: CIRISVerify (certificaciones de custodia Ed25519 + ML-DSA-65, raíz fija de Yubico), sitio de referencia de CIRISServer (rendimiento medido), PKI de Yubico (raíz de certificación). Cifras fijadas al commit 0b73486, 2026-06-24."
+    "sources": "Fuentes: CIRISVerify (atestaciones de custodia Ed25519 + ML-DSA-65, raíz fijada de Yubico), sitio de benchmarks de CIRISServer (rendimiento medido), PKI de Yubico (raíz de atestación). Cifras fijadas al commit 0b73486, 2026-06-24."
   },
   "owasp": {
     "kicker": "Mapeo de seguridad OWASP Agentic",

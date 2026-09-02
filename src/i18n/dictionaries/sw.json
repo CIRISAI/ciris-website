@@ -3037,7 +3037,7 @@
     "lede": "Madai mengi kuhusu usalama wa AI yanakuomba uamini. Hili linakuomba uthibitishe. Nakili hazina ya msimbo (repo), endesha amri moja, kisha uthibitishe kwamba funguo zenye uwezo wa kusimamisha wakala wa CIRIS zinaishi kwenye vifaa halisi vilivyothibitishwa kwa kiwango cha FIPS 140-3. Usimwamini yeyote, hata sisi.",
     "s1label": "Kitufe cha kuzima cha kikatiba",
     "s1h2": "Watu wanaotambulika kwa majina wanaweza kusimamisha wakala wa CIRIS. Nguvu hiyo iko kwenye vifaa, si kwenye kampuni.",
-    "s1p1": "Kusimamisha kwa hatua ya mwisho, HUMANITY_ACCORD, kunashikiliwa na watu wanaotambulika kwa majina, si na kampuni ya CIRIS, mtandao, au wakala mwenyewe. Hakuna upande ndani ya shirikisho unaoweza kutoa, kubatilisha, au kupindua uwezo huo. Unaanza kutumika kwa idhini ya moja kwa wawili kati ya watatu, ikiwa hai wakati huo.",
+    "s1p1": "Kusimamisha kwa hatua ya mwisho, HUMANITY_ACCORD, kunashikiliwa na watu wanaotambulika kwa majina, si na kampuni ya CIRIS, mtandao, au wakala mwenyewe. Hakuna upande ndani ya shirikisho unaoweza kutoa, kubatilisha, au kupindua uwezo huo. Unaanza kutumika kwa quorum hai ya wawili kati ya watatu.",
     "s1p2": "Kila funguo ya idhini ni mchanganyiko wa saini mbili zilizounganishwa pamoja. Nusu ya Ed25519 imejikita kwenye YubiKey 5 FIPS, iliyothibitishwa kwa kiwango cha FIPS 140-3: inazalishwa ndani ya kifaa, haiwezi kutolewa nje, na inahitaji mgusano wa mwili ili kusaini. Nusu ya ML-DSA-65, saini ya baada ya kwantamu, ni funguo ya programu iliyofungwa kwa muhuri (seal-wrapped) kwenye kijiti cha USB chini ya YubiKey hiyo hiyo, kwa sababu hakuna YubiKey inayosafirishwa na programu-tumizi ya baada ya kwantamu bado. Funguo sita kwa jumla, tatu zimewekwa tayari na tatu zimehifadhiwa kwenye kasha. Ukaguzi wa kubatilisha ulioshindwa au usiojulikana unachukuliwa kuwa umebatilishwa, hivyo mfumo unashindwa kwa usalama.",
     "s2label": "Uthibitisho huru",
     "s2h2": "Amri moja. Bila vifaa, bila mtandao, bila kutuamini sisi.",
@@ -3057,7 +3057,7 @@
       "uvujaji kati ya makundi, nodi 50 hadi 400"
     ],
     "s3p1": "Uthibitisho wa asili wa baada ya kwantamu si wa bure, na hatufichi gharama yake: kusaini kwa mseto wa Ed25519 + ML-DSA-65 kunaendesha polepole mara kumi na tano zaidi ya njia ya kawaida, kama mikrosekunde 550 dhidi ya 36 kwa kila tukio. Hazina iliyohifadhiwa inajengwa upya katika 97.6% ya majaribio ikiwa moja ya tano ya wenye funguo hawapo mtandaoni, na 72.7% ikiwa theluthi moja hawapo mtandaoni. Namba ni wastani wa kiini kimoja kwenye mtambo shirikishi wa CI, unaozalishwa upya kwenye kila commit.",
-    "benchLink": "Ona kila namba, inayozalishwa upya kwenye kila commit",
+    "benchLink": "Ona kila kielelezo, kinachozalishwa upya kwenye kila commit",
     "ctaPara": "Lengo lote ni kwamba hupaswi kulazimika kuamini sentensi iliyo hapo juu. Unaweza kuendesha ukaguzi wewe mwenyewe.",
     "btnGithub": "CIRISVerify kwenye GitHub",
     "btnTrust": "Jinsi uaminifu unavyofanya kazi",

@@ -2200,12 +2200,12 @@
       "Understanding Privacy Norms Around LLM-Based Chatbots: A Contextual Integrity Perspective (2025)"
     ],
     "ctaPara": "Leggi tu stesso il meccanismo.",
-    "btnConstitution": "Leggi la costituzione →",
+    "btnConstitution": "Leggi la Costituzione →",
     "btnPrivacy": "Privacy strutturale →",
     "btnGrammar": "La grammatica →",
     "btnCewp": "La piattaforma →",
     "crossTitle": "Questa è integrità contestuale",
-    "crossBody": "Il quadro sulla privacy che i ricercatori usano per giudicare i sistemi di IA ha un nome. CIRIS lo fa rispettare nel formato di rete.",
+    "crossBody": "Il quadro sulla privacy che i ricercatori usano per giudicare i sistemi di IA ha un nome formale: integrità contestuale. CIRIS lo fa rispettare nel formato di rete.",
     "crossCta": "Che cos'è l'integrità contestuale? →"
   },
   "safetyArch": {
@@ -2348,7 +2348,7 @@
         "note": "L'impostazione predefinita è la libertà. L'autorità su un'altra persona deve essere riguadagnata ancora e ancora."
       },
       "lifecycle": {
-        "short": "Ciclo",
+        "short": "Ciclo di vita",
         "name": "Sicuro per tutta la vita dell'IA",
         "tag": "Blocco 07 · Ciclo di vita",
         "promise": "Dall'addestramento allo spegnimento, l'IA è governata e trattata con dignità.",
@@ -2366,7 +2366,7 @@
             "note": "I blocchi CI/CD si attivano nel momento in cui l'etica misurata si degrada."
           }
         ],
-        "note": "Gentile per progettazione. Non solo vincolata, ma spenta con cura."
+        "note": "Gentile per progettazione. Non solo limitata, ma spenta con cura."
       }
     },
     "threads": {
@@ -3041,7 +3041,7 @@
     "s1p2": "Ogni chiave del quorum è un ibrido di due firme unite tra loro. La metà Ed25519 ha radice in una YubiKey 5 FIPS, validata secondo lo standard FIPS 140-3: generata all'interno del dispositivo, non estraibile e che richiede un tocco fisico per firmare. La metà ML-DSA-65, la firma post-quantistica, è una chiave software sigillata su una chiavetta USB protetta dalla stessa YubiKey, perché nessuna YubiKey include ancora un applet post-quantistico. Sei chiavi in totale, tre attive e tre custodite. Un controllo di revoca fallito o sconosciuto viene trattato come una revoca, quindi il sistema fallisce in modo sicuro.",
     "s2label": "Verifica indipendente",
     "s2h2": "Un solo comando. Nessun hardware, nessuna rete, nessuna fiducia richiesta verso di noi.",
-    "s2p1": "Il nostro framework di validazione riesegue esattamente il verificatore di produzione del gate di ammissione di CIRISVerify sulle sei attestazioni delle chiavi registrate, confrontandole con una copia fissata della radice di attestazione pubblica di Yubico. Clona il repository CIRISVerify ed esegui:",
+    "s2p1": "Il nostro harness di validazione riesegue esattamente il verificatore del gate di ammissione di produzione di CIRISVerify sulle sei attestazioni delle chiavi sottoposte a commit, confrontandole con una copia fissata della radice di attestazione pubblica di Yubico. Clona il repository CIRISVerify ed esegui:",
     "cmdCaption": "Conferma che la radice fissata sia autentica scaricandola direttamente da Yubico:",
     "provesH": "Cosa dimostra questo",
     "provesP": "Tutte e sei le chiavi del quorum si ricollegano alla vera radice di attestazione di Yubico, quindi le loro metà di firma Ed25519 sono state generate all'interno di hardware YubiKey 5 FIPS autentico, una serie validata secondo lo standard FIPS 140-3: non estraibile, con tocco richiesto, non falsificabile. Gli stessi certificati di attestazione riportano il marcatore della serie FIPS, il firmware 5.7.4 e la politica del tocco sempre obbligatorio, quindi la classe dell'hardware è provata dalla catena, non dichiarata da noi.",
@@ -3057,7 +3057,7 @@
       "fughe tra gruppi, da 50 a 400 nodi"
     ],
     "s3p1": "La provenienza post-quantistica non è gratuita, e non nascondiamo il costo: la firma ibrida Ed25519 + ML-DSA-65 è circa quindici volte più lenta di quella classica, circa 550 microsecondi contro 36 per evento. Il corpus archiviato si ricostruisce nel 97.6% delle prove con un quinto dei detentori offline, e nel 72.7% con un terzo offline. I numeri sono mediane a singolo core su un runner CI condiviso, rigenerate a ogni commit.",
-    "benchLink": "Guarda ogni cifra, rigenerata a ogni commit",
+    "benchLink": "Guarda ogni grafico, rigenerato a ogni commit",
     "ctaPara": "Il punto è proprio che non dovresti doverti fidare della frase qui sopra. Puoi eseguire tu stesso il controllo.",
     "btnGithub": "CIRISVerify su GitHub",
     "btnTrust": "Come funziona la fiducia",

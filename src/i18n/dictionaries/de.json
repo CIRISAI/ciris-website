@@ -2205,7 +2205,7 @@
     "btnGrammar": "Die Grammatik →",
     "btnCewp": "Die Plattform →",
     "crossTitle": "Das ist kontextuelle Integrität",
-    "crossBody": "Das Privatsphäre-Framework, mit dem Forschende KI-Systeme beurteilen, hat einen Namen. CIRIS erzwingt es im Wire-Format.",
+    "crossBody": "Das Privatsphäre-Framework, mit dem Forschende KI-Systeme beurteilen, hat einen formalen Namen: kontextuelle Integrität. CIRIS erzwingt sie im Wire-Format.",
     "crossCta": "Was ist kontextuelle Integrität? →"
   },
   "safetyArch": {
@@ -3061,7 +3061,7 @@
     "ctaPara": "Der ganze Sinn dahinter ist, dass Sie dem obigen Satz nicht vertrauen müssen. Sie können die Prüfung selbst ausführen.",
     "btnGithub": "CIRISVerify auf GitHub",
     "btnTrust": "Wie Vertrauen funktioniert",
-    "btnVerif": "Die Konformitätsprüfung",
+    "btnVerif": "Die Konformitäts-Suite",
     "sources": "Quellen: CIRISVerify (Ed25519- + ML-DSA-65-Verwahrungsattestierungen, fest hinterlegte Yubico-Wurzel), CIRISServer-Benchmark-Seite (gemessene Leistung), Yubico-PKI (Attestierungswurzel). Werte festgelegt auf Commit 0b73486, 2026-06-24."
   },
   "owasp": {

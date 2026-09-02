@@ -2205,7 +2205,7 @@
     "btnGrammar": "La grammaire →",
     "btnCewp": "La plateforme →",
     "crossTitle": "C'est l'intégrité contextuelle",
-    "crossBody": "Le cadre de la vie privée que les chercheurs utilisent pour juger les systèmes d'IA a un nom. CIRIS le fait respecter dans le format réseau.",
+    "crossBody": "Le cadre de protection de la vie privée que les chercheurs utilisent pour juger les systèmes d'IA a un nom formel : l'intégrité contextuelle. CIRIS le fait respecter dans le format réseau.",
     "crossCta": "Qu'est-ce que l'intégrité contextuelle ? →"
   },
   "safetyArch": {
@@ -3041,8 +3041,8 @@
     "s1p2": "Chaque clé de quorum est un hybride de deux signatures liées entre elles. La moitié Ed25519 est ancrée dans une YubiKey 5 FIPS, validée selon la norme FIPS 140-3 : générée à l'intérieur de l'appareil, non extractible, et exigeant un contact physique pour signer. La moitié ML-DSA-65, la signature post-quantique, est une clé logicielle scellée sur une clé USB sous cette même YubiKey, car aucune YubiKey n'embarque encore d'applet post-quantique. Six clés au total, trois en poste et trois en coffre. Une vérification de révocation échouée ou inconnue est traitée comme une révocation, si bien que le système échoue de façon sécurisée.",
     "s2label": "Vérification indépendante",
     "s2h2": "Une seule commande. Pas de matériel, pas de réseau, pas de confiance envers nous.",
-    "s2p1": "Notre banc de validation réexécute exactement le vérificateur de porte d'admission de production de CIRISVerify sur les six attestations de clés validées, en les comparant à une copie figée de la racine d'attestation publique de Yubico elle-même. Clonez le dépôt CIRISVerify et exécutez :",
-    "cmdCaption": "Confirmez que la racine figée est authentique en la récupérant directement depuis Yubico :",
+    "s2p1": "Notre banc de validation réexécute exactement le vérificateur de porte d'admission de production de CIRISVerify sur les six attestations de clés engagées, en les comparant à une copie figée de la racine d'attestation publique de Yubico elle-même. Clonez le dépôt CIRISVerify et exécutez :",
+    "cmdCaption": "Confirmez que le certificat racine figé est authentique en le récupérant directement depuis Yubico :",
     "provesH": "Ce que cela prouve",
     "provesP": "Les six clés de quorum se rattachent toutes à la véritable racine d'attestation de Yubico, ce qui prouve que leurs moitiés de signature Ed25519 ont été générées à l'intérieur d'un véritable matériel YubiKey 5 FIPS, une série validée selon la norme FIPS 140-3 : non extractible, exigeant un contact, infalsifiable. Les certificats d'attestation eux-mêmes consignent le marqueur de série FIPS, le micrologiciel 5.7.4 et la politique de contact systématique, si bien que la classe du matériel est prouvée par la chaîne, et non affirmée par nous.",
     "notProvesH": "Ce que cela ne prouve pas",
@@ -3056,8 +3056,8 @@
       "échange de clés PQC hybride",
       "fuites inter-groupes, 50 à 400 nœuds"
     ],
-    "s3p1": "La provenance post-quantique n'est pas gratuite, et nous ne cachons pas le coût : la signature hybride Ed25519 + ML-DSA-65 tourne environ quinze fois plus lentement que la méthode classique, soit environ 550 microsecondes contre 36 par événement. Le corpus stocké se reconstruit dans 97.6% des essais avec un cinquième des détenteurs hors ligne, et 72.7% avec un tiers hors ligne. Les chiffres sont des médianes sur un seul cœur, sur un exécuteur CI partagé, régénérées à chaque commit.",
-    "benchLink": "Consultez chaque chiffre, régénéré à chaque commit",
+    "s3p1": "La provenance post-quantique n'est pas gratuite, et nous ne cachons pas le coût : la signature hybride Ed25519 + ML-DSA-65 tourne environ quinze fois plus lentement que la méthode classique, soit environ 550 microsecondes contre 36 par événement. Le corpus stocké se reconstruit dans 97,6% des essais avec un cinquième des détenteurs hors ligne, et 72,7% avec un tiers hors ligne. Les chiffres sont des médianes sur un seul cœur, sur un exécuteur CI partagé, régénérées à chaque commit.",
+    "benchLink": "Consultez chaque figure, régénérée à chaque commit",
     "ctaPara": "Tout l'intérêt est que vous n'ayez pas à faire confiance à la phrase ci-dessus. Vous pouvez effectuer la vérification vous-même.",
     "btnGithub": "CIRISVerify sur GitHub",
     "btnTrust": "Comment fonctionne la confiance",
