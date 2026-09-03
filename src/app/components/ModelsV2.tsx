@@ -12,7 +12,8 @@
 // is authored and machine-translated by us (never user input), so this is safe.
 
 import type { Dictionary } from "@/i18n/dictionaries";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
 const h = (str: string) => ({ __html: str });
@@ -21,7 +22,8 @@ export default function ModelsV2({ t, locale }: { t: Dictionary; locale: string 
   const m = t.models;
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="violet"
       kicker={m.criteriaHeadline}
@@ -216,6 +218,6 @@ export default function ModelsV2({ t, locale }: { t: Dictionary; locale: string 
         <p className={s.paragraph}>{m.conclusionPara1}</p>
         <p className={s.paragraph}>{m.conclusionPara2}</p>
       </div>
-    </ContentShell>
+    </PageShell>
   );
 }

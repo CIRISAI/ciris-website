@@ -5,7 +5,9 @@
 // path. Sourced from CIRISConformance's README (the contract-governance suite).
 // v2 dark-blueprint via ContentShell.
 
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { getDictionary } from "@/i18n/dictionaries";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 const REPO = (name: string) => `https://github.com/CIRISAI/${name}`;
 
@@ -137,7 +139,8 @@ const COMPONENTS = [
 
 export default function VerificationV2() {
   return (
-    <ContentShell
+    <PageShell
+      nav={getDictionary("en").homeHero}
       locale="en"
       accent="teal"
       kicker="Continuous verification"
@@ -267,6 +270,6 @@ export default function VerificationV2() {
           </a>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

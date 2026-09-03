@@ -112,7 +112,7 @@ export default function InstallV2({ t, locale }: { t: Dictionary; locale: string
 
   return (
     <PageShell
-      t={t}
+      nav={t.homeHero}
       locale={locale}
       accent="cyan"
       kicker={i.heroPara2}

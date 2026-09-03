@@ -16,7 +16,7 @@ import { useState } from "react";
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref, DEFAULT_LOCALE, localeMeta } from "@/i18n/config";
-import SiteHeader from "@/app/components/SiteHeader";
+import SkyChrome from "@/app/components/SkyChrome";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import StoreBadges from "@/app/components/graphics/StoreBadges";
 import styles from "./cirisStack.module.css";
@@ -250,170 +250,169 @@ export default function CirisStackView({ t, locale }: { t: Dictionary; locale: s
   };
 
   return (
-    <>
-      {isLocalized && t.common.mtBanner && (
-        <MachineTranslationBanner lead={t.common.mtBanner.lead} body={t.common.mtBanner.body} cta={t.common.mtBanner.cta} />
-      )}
-      <SiteHeader locale={locale} />
+    <SkyChrome nav={t.homeHero} locale={locale} forceDark>
+        {isLocalized && t.common.mtBanner && (
+          <MachineTranslationBanner lead={t.common.mtBanner.lead} body={t.common.mtBanner.body} cta={t.common.mtBanner.cta} />
+        )}
 
-      <main className={styles.page}>
-        <div className={styles.inner}>
-          <p className={styles.back}>
-            <Link href={lh("/")}>{backArrow} {t.pathsCommon.back}</Link>
-          </p>
+        <main className={styles.page}>
+          <div className={styles.inner}>
+            <p className={styles.back}>
+              <Link href={lh("/")}>{backArrow} {t.pathsCommon.back}</Link>
+            </p>
 
-          {/* HEADER */}
-          <div className={styles.head}>
-            <div className={styles.headText}>
-              <p className={styles.eyebrow}>{c.eyebrow}</p>
-              <h1 className={styles.h1}>
-                {c.headlineLead} <em>{c.headlineAccent}</em>
-              </h1>
-              <p className={styles.lede}>{c.lede}</p>
-              <p className={styles.meta}>
-                <b>{c.metaGoalLabel}.</b> {c.metaGoal}
-              </p>
-            </div>
-            <div className={styles.badge}>
-              <span className={styles.dot} />
-              {c.statusBadge}
-            </div>
-          </div>
-
-          {/* ===== DESKTOP STAGE: isometric stack + prism + side hologram ===== */}
-          <div className={styles.desktopStage}>
-            {/* light apparatus (tracks selected layer) */}
-            <div
-              aria-hidden
-              style={{ position: "absolute", left: 0, right: 0, top: `calc(280px + ${(sel - 2) * 60}px)`, height: 0, zIndex: 1, pointerEvents: "none", transition: "top .5s cubic-bezier(.2,.7,.2,1)", ["--hue" as string]: LAYERS[sel].hue }}
-            >
-              <div style={{ position: "absolute", left: -34, top: -1.5, width: 86, height: 3, background: "linear-gradient(90deg, transparent, #ffffff)", boxShadow: "0 0 14px 2px rgba(255,255,255,0.85)", borderRadius: 2, animation: "cirisBeamPulse 2.6s ease-in-out infinite" }} />
-              <div style={{ position: "absolute", left: 46, top: -32, width: 52, height: 64, clipPath: "polygon(0 0, 100% 50%, 0 100%)", background: "linear-gradient(118deg, rgba(255,255,255,0.92), rgba(255,80,120,0.72) 34%, rgba(122,111,214,0.72) 62%, rgba(80,220,255,0.85))", boxShadow: "0 0 26px color-mix(in oklab, var(--hue) 60%, transparent)", opacity: 0.95, animation: "cirisShimmer 3.4s ease-in-out infinite" }} />
-              <div style={{ position: "absolute", left: 96, top: -3, width: "44%", height: 6, background: "linear-gradient(90deg, color-mix(in oklab, var(--hue) 92%, #fff), color-mix(in oklab, var(--hue) 55%, transparent))", boxShadow: "0 0 28px 4px color-mix(in oklab, var(--hue) 70%, transparent)", filter: "blur(.4px)", borderRadius: 3, animation: "cirisBeamPulse 2.6s ease-in-out infinite" }} />
-              <div style={{ position: "absolute", left: "44%", top: -235, width: "60%", height: 470, clipPath: "polygon(0 48.6%, 0 51.4%, 100% 0, 100% 100%)", background: "linear-gradient(90deg, color-mix(in oklab, var(--hue) 62%, transparent), color-mix(in oklab, var(--hue) 16%, transparent) 72%, transparent)", filter: "blur(9px)", mixBlendMode: "screen", opacity: 0.5, animation: "cirisBeamPulse 3.4s ease-in-out infinite" }} />
+            {/* HEADER */}
+            <div className={styles.head}>
+              <div className={styles.headText}>
+                <p className={styles.eyebrow}>{c.eyebrow}</p>
+                <h1 className={styles.h1}>
+                  {c.headlineLead} <em>{c.headlineAccent}</em>
+                </h1>
+                <p className={styles.lede}>{c.lede}</p>
+                <p className={styles.meta}>
+                  <b>{c.metaGoalLabel}.</b> {c.metaGoal}
+                </p>
+              </div>
+              <div className={styles.badge}>
+                <span className={styles.dot} />
+                {c.statusBadge}
+              </div>
             </div>
 
-            {/* left: isometric glass stack */}
-            <div className={styles.isoCol}>
-              <div className={styles.isoCaption}>↑ {c.ascendLabel}</div>
-              <div className={styles.isoScene}>
-                <div className={styles.isoWorld}>
-                  {LAYERS.map((layer, i) => {
-                    const selected = i === sel;
-                    return (
-                      <div
-                        key={layer.id}
-                        style={{
-                          ["--hue" as string]: layer.hue,
-                          ["--lit" as string]: selected ? 1 : 0,
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          width: 380,
-                          height: 60,
-                          transformStyle: "preserve-3d",
-                          transform: `translate(-50%,-50%) translateY(${(i - 2) * 60}px)${selected ? " translateZ(18px) scale(1.012)" : ""}`,
-                          transition: "transform .5s cubic-bezier(.2,.7,.2,1)",
-                          pointerEvents: "none",
-                        }}
-                      >
-                        <button type="button" onClick={() => setSel(i)} aria-label={c.layers[layer.id].name} className={styles.slabFace}>
-                          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(112deg, rgba(255,60,150,0.15), rgba(80,170,255,0.11) 34%, rgba(150,120,255,0.14) 60%, rgba(90,255,200,0.11) 82%, rgba(255,190,70,0.11))", mixBlendMode: "screen", pointerEvents: "none" }} />
-                          <div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "44%", background: "linear-gradient(rgba(255,255,255,0.16), transparent)", pointerEvents: "none" }} />
-                          <div style={{ position: "absolute", inset: 0, background: "#ffffff", opacity: "calc(0.2 * var(--lit))", mixBlendMode: "overlay", pointerEvents: "none" }} />
-                          <div style={{ position: "relative", display: "flex", alignItems: "baseline", gap: 12, color: "#fff", whiteSpace: "nowrap" }}>
-                            <span style={{ font: "600 13px/1 'Geist Mono', ui-monospace, monospace", opacity: 0.82, textShadow: "0 1px 3px rgba(0,0,0,0.85)" }}>L{layer.num}</span>
-                            <span style={{ fontWeight: 700, fontSize: 19, letterSpacing: "0.005em", textShadow: "0 1px 4px rgba(0,0,0,0.9)" }}>{c.layers[layer.id].name}</span>
-                            <span style={{ font: "500 10.5px/1 'Geist Mono', ui-monospace, monospace", opacity: 0.72, textShadow: "0 1px 3px rgba(0,0,0,0.85)" }}>{c.layers[layer.id].descriptor}</span>
-                          </div>
-                        </button>
-                        <div style={{ position: "absolute", top: 0, right: 0, width: 74, height: "100%", transformOrigin: "100% 50%", transform: "rotateY(-90deg)", background: "linear-gradient(115deg, color-mix(in oklab, var(--hue) calc(34% + 22% * var(--lit)), #090C11), color-mix(in oklab, var(--hue) calc(18% + 14% * var(--lit)), #090C11))", border: "1px solid color-mix(in oklab, var(--hue) 38%, transparent)" }} />
-                      </div>
-                    );
-                  })}
+            {/* ===== DESKTOP STAGE: isometric stack + prism + side hologram ===== */}
+            <div className={styles.desktopStage}>
+              {/* light apparatus (tracks selected layer) */}
+              <div
+                aria-hidden
+                style={{ position: "absolute", left: 0, right: 0, top: `calc(280px + ${(sel - 2) * 60}px)`, height: 0, zIndex: 1, pointerEvents: "none", transition: "top .5s cubic-bezier(.2,.7,.2,1)", ["--hue" as string]: LAYERS[sel].hue }}
+              >
+                <div style={{ position: "absolute", left: -34, top: -1.5, width: 86, height: 3, background: "linear-gradient(90deg, transparent, #ffffff)", boxShadow: "0 0 14px 2px rgba(255,255,255,0.85)", borderRadius: 2, animation: "cirisBeamPulse 2.6s ease-in-out infinite" }} />
+                <div style={{ position: "absolute", left: 46, top: -32, width: 52, height: 64, clipPath: "polygon(0 0, 100% 50%, 0 100%)", background: "linear-gradient(118deg, rgba(255,255,255,0.92), rgba(255,80,120,0.72) 34%, rgba(122,111,214,0.72) 62%, rgba(80,220,255,0.85))", boxShadow: "0 0 26px color-mix(in oklab, var(--hue) 60%, transparent)", opacity: 0.95, animation: "cirisShimmer 3.4s ease-in-out infinite" }} />
+                <div style={{ position: "absolute", left: 96, top: -3, width: "44%", height: 6, background: "linear-gradient(90deg, color-mix(in oklab, var(--hue) 92%, #fff), color-mix(in oklab, var(--hue) 55%, transparent))", boxShadow: "0 0 28px 4px color-mix(in oklab, var(--hue) 70%, transparent)", filter: "blur(.4px)", borderRadius: 3, animation: "cirisBeamPulse 2.6s ease-in-out infinite" }} />
+                <div style={{ position: "absolute", left: "44%", top: -235, width: "60%", height: 470, clipPath: "polygon(0 48.6%, 0 51.4%, 100% 0, 100% 100%)", background: "linear-gradient(90deg, color-mix(in oklab, var(--hue) 62%, transparent), color-mix(in oklab, var(--hue) 16%, transparent) 72%, transparent)", filter: "blur(9px)", mixBlendMode: "screen", opacity: 0.5, animation: "cirisBeamPulse 3.4s ease-in-out infinite" }} />
+              </div>
+
+              {/* left: isometric glass stack */}
+              <div className={styles.isoCol}>
+                <div className={styles.isoCaption}>↑ {c.ascendLabel}</div>
+                <div className={styles.isoScene}>
+                  <div className={styles.isoWorld}>
+                    {LAYERS.map((layer, i) => {
+                      const selected = i === sel;
+                      return (
+                        <div
+                          key={layer.id}
+                          style={{
+                            ["--hue" as string]: layer.hue,
+                            ["--lit" as string]: selected ? 1 : 0,
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            width: 380,
+                            height: 60,
+                            transformStyle: "preserve-3d",
+                            transform: `translate(-50%,-50%) translateY(${(i - 2) * 60}px)${selected ? " translateZ(18px) scale(1.012)" : ""}`,
+                            transition: "transform .5s cubic-bezier(.2,.7,.2,1)",
+                            pointerEvents: "none",
+                          }}
+                        >
+                          <button type="button" onClick={() => setSel(i)} aria-label={c.layers[layer.id].name} className={styles.slabFace}>
+                            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(112deg, rgba(255,60,150,0.15), rgba(80,170,255,0.11) 34%, rgba(150,120,255,0.14) 60%, rgba(90,255,200,0.11) 82%, rgba(255,190,70,0.11))", mixBlendMode: "screen", pointerEvents: "none" }} />
+                            <div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "44%", background: "linear-gradient(rgba(255,255,255,0.16), transparent)", pointerEvents: "none" }} />
+                            <div style={{ position: "absolute", inset: 0, background: "#ffffff", opacity: "calc(0.2 * var(--lit))", mixBlendMode: "overlay", pointerEvents: "none" }} />
+                            <div style={{ position: "relative", display: "flex", alignItems: "baseline", gap: 12, color: "#fff", whiteSpace: "nowrap" }}>
+                              <span style={{ font: "600 13px/1 'Geist Mono', ui-monospace, monospace", opacity: 0.82, textShadow: "0 1px 3px rgba(0,0,0,0.85)" }}>L{layer.num}</span>
+                              <span style={{ fontWeight: 700, fontSize: 19, letterSpacing: "0.005em", textShadow: "0 1px 4px rgba(0,0,0,0.9)" }}>{c.layers[layer.id].name}</span>
+                              <span style={{ font: "500 10.5px/1 'Geist Mono', ui-monospace, monospace", opacity: 0.72, textShadow: "0 1px 3px rgba(0,0,0,0.85)" }}>{c.layers[layer.id].descriptor}</span>
+                            </div>
+                          </button>
+                          <div style={{ position: "absolute", top: 0, right: 0, width: 74, height: "100%", transformOrigin: "100% 50%", transform: "rotateY(-90deg)", background: "linear-gradient(115deg, color-mix(in oklab, var(--hue) calc(34% + 22% * var(--lit)), #090C11), color-mix(in oklab, var(--hue) calc(18% + 14% * var(--lit)), #090C11))", border: "1px solid color-mix(in oklab, var(--hue) 38%, transparent)" }} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+
+              {/* right: holographic projection */}
+              <div className={styles.holoCol}>
+                <div key={sel} style={holoPanelStyle(LAYERS[sel].hue)}>
+                  <div style={scanOverlay(LAYERS[sel].hue)} />
+                  <div style={sheenOverlay} />
+                  {holoFor(sel, false)}
                 </div>
               </div>
             </div>
 
-            {/* right: holographic projection */}
-            <div className={styles.holoCol}>
-              <div key={sel} style={holoPanelStyle(LAYERS[sel].hue)}>
+            {/* ===== MOBILE STAGE: vertical isometric cube + downward beam + hologram ===== */}
+            <div className={styles.mobileStage} style={{ ["--hue" as string]: LAYERS[sel].hue }}>
+              <div style={{ position: "relative", height: 236, zIndex: 2 }}>
+                <div style={{ font: "500 9px/1 'Geist Mono', ui-monospace, monospace", letterSpacing: "0.14em", color: "#4b5563", position: "absolute", left: 2, top: 0 }}>↑ {c.ascendLabel}</div>
+                <div style={{ perspective: "1300px", perspectiveOrigin: "50% 46%", position: "absolute", inset: 0 }}>
+                  <div style={{ position: "absolute", inset: 0, transformStyle: "preserve-3d", transform: "rotateX(9deg) rotateY(-19deg)" }}>
+                    {LAYERS.map((layer, i) => {
+                      const selected = i === sel;
+                      return (
+                        <div
+                          key={layer.id}
+                          style={{
+                            ["--hue" as string]: layer.hue,
+                            ["--lit" as string]: selected ? 1 : 0,
+                            position: "absolute",
+                            top: "46%",
+                            left: "50%",
+                            width: "clamp(220px, 66%, 340px)",
+                            height: 44,
+                            transformStyle: "preserve-3d",
+                            transform: `translate(-50%,-50%) translateY(${(i - 2) * 44}px)${selected ? " translateZ(16px) scale(1.015)" : ""}`,
+                            transition: "transform .5s cubic-bezier(.2,.7,.2,1)",
+                            pointerEvents: "none",
+                          }}
+                        >
+                          <button type="button" onClick={() => setSel(i)} aria-label={c.layers[layer.id].name} className={styles.slabFaceM}>
+                            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(112deg, rgba(255,60,150,0.14), rgba(80,170,255,0.10) 34%, rgba(150,120,255,0.13) 60%, rgba(90,255,200,0.10) 82%, rgba(255,190,70,0.10))", mixBlendMode: "screen", pointerEvents: "none" }} />
+                            <div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "46%", background: "linear-gradient(rgba(255,255,255,0.15), transparent)", pointerEvents: "none" }} />
+                            <div style={{ position: "absolute", inset: 0, background: "#ffffff", opacity: "calc(0.18 * var(--lit))", mixBlendMode: "overlay", pointerEvents: "none" }} />
+                            <div style={{ position: "relative", display: "flex", alignItems: "baseline", gap: 10, color: "#fff", whiteSpace: "nowrap" }}>
+                              <span style={{ font: "600 11px/1 'Geist Mono', ui-monospace, monospace", opacity: 0.82, textShadow: "0 1px 3px rgba(0,0,0,0.85)" }}>L{layer.num}</span>
+                              <span style={{ fontWeight: 700, fontSize: 15.5, letterSpacing: "0.003em", textShadow: "0 1px 4px rgba(0,0,0,0.9)" }}>{c.layers[layer.id].name}</span>
+                              <span style={{ font: "500 9px/1 'Geist Mono', ui-monospace, monospace", opacity: 0.68, textShadow: "0 1px 3px rgba(0,0,0,0.85)" }}>{c.layers[layer.id].descriptor}</span>
+                            </div>
+                          </button>
+                          <div style={{ position: "absolute", top: 0, right: 0, width: 60, height: "100%", transformOrigin: "100% 50%", transform: "rotateY(-90deg)", background: "linear-gradient(115deg, color-mix(in oklab, var(--hue) calc(32% + 22% * var(--lit)), #090C11), color-mix(in oklab, var(--hue) calc(16% + 14% * var(--lit)), #090C11))", border: "1px solid color-mix(in oklab, var(--hue) 36%, transparent)" }} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+
+              {/* downward refracted beam */}
+              <div style={{ position: "relative", height: 46, zIndex: 1 }}>
+                <div style={{ position: "absolute", left: "50%", top: -6, transform: "translateX(-50%)", width: 6, height: 52, borderRadius: 3, background: "linear-gradient(180deg, color-mix(in oklab, var(--hue) 92%, #fff), color-mix(in oklab, var(--hue) 32%, transparent))", boxShadow: "0 0 26px 5px color-mix(in oklab, var(--hue) 68%, transparent)", animation: "cirisBeamPulse 2.6s ease-in-out infinite" }} />
+              </div>
+
+              {/* hologram panel */}
+              <div key={sel} style={{ ...holoPanelStyle(LAYERS[sel].hue), width: "clamp(280px, 100%, 460px)", marginLeft: "auto", marginRight: "auto", padding: "22px 18px", borderRadius: 20 }}>
                 <div style={scanOverlay(LAYERS[sel].hue)} />
                 <div style={sheenOverlay} />
-                {holoFor(sel, false)}
-              </div>
-            </div>
-          </div>
-
-          {/* ===== MOBILE STAGE: vertical isometric cube + downward beam + hologram ===== */}
-          <div className={styles.mobileStage} style={{ ["--hue" as string]: LAYERS[sel].hue }}>
-            <div style={{ position: "relative", height: 236, zIndex: 2 }}>
-              <div style={{ font: "500 9px/1 'Geist Mono', ui-monospace, monospace", letterSpacing: "0.14em", color: "#4b5563", position: "absolute", left: 2, top: 0 }}>↑ {c.ascendLabel}</div>
-              <div style={{ perspective: "1300px", perspectiveOrigin: "50% 46%", position: "absolute", inset: 0 }}>
-                <div style={{ position: "absolute", inset: 0, transformStyle: "preserve-3d", transform: "rotateX(9deg) rotateY(-19deg)" }}>
-                  {LAYERS.map((layer, i) => {
-                    const selected = i === sel;
-                    return (
-                      <div
-                        key={layer.id}
-                        style={{
-                          ["--hue" as string]: layer.hue,
-                          ["--lit" as string]: selected ? 1 : 0,
-                          position: "absolute",
-                          top: "46%",
-                          left: "50%",
-                          width: "clamp(220px, 66%, 340px)",
-                          height: 44,
-                          transformStyle: "preserve-3d",
-                          transform: `translate(-50%,-50%) translateY(${(i - 2) * 44}px)${selected ? " translateZ(16px) scale(1.015)" : ""}`,
-                          transition: "transform .5s cubic-bezier(.2,.7,.2,1)",
-                          pointerEvents: "none",
-                        }}
-                      >
-                        <button type="button" onClick={() => setSel(i)} aria-label={c.layers[layer.id].name} className={styles.slabFaceM}>
-                          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(112deg, rgba(255,60,150,0.14), rgba(80,170,255,0.10) 34%, rgba(150,120,255,0.13) 60%, rgba(90,255,200,0.10) 82%, rgba(255,190,70,0.10))", mixBlendMode: "screen", pointerEvents: "none" }} />
-                          <div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "46%", background: "linear-gradient(rgba(255,255,255,0.15), transparent)", pointerEvents: "none" }} />
-                          <div style={{ position: "absolute", inset: 0, background: "#ffffff", opacity: "calc(0.18 * var(--lit))", mixBlendMode: "overlay", pointerEvents: "none" }} />
-                          <div style={{ position: "relative", display: "flex", alignItems: "baseline", gap: 10, color: "#fff", whiteSpace: "nowrap" }}>
-                            <span style={{ font: "600 11px/1 'Geist Mono', ui-monospace, monospace", opacity: 0.82, textShadow: "0 1px 3px rgba(0,0,0,0.85)" }}>L{layer.num}</span>
-                            <span style={{ fontWeight: 700, fontSize: 15.5, letterSpacing: "0.003em", textShadow: "0 1px 4px rgba(0,0,0,0.9)" }}>{c.layers[layer.id].name}</span>
-                            <span style={{ font: "500 9px/1 'Geist Mono', ui-monospace, monospace", opacity: 0.68, textShadow: "0 1px 3px rgba(0,0,0,0.85)" }}>{c.layers[layer.id].descriptor}</span>
-                          </div>
-                        </button>
-                        <div style={{ position: "absolute", top: 0, right: 0, width: 60, height: "100%", transformOrigin: "100% 50%", transform: "rotateY(-90deg)", background: "linear-gradient(115deg, color-mix(in oklab, var(--hue) calc(32% + 22% * var(--lit)), #090C11), color-mix(in oklab, var(--hue) calc(16% + 14% * var(--lit)), #090C11))", border: "1px solid color-mix(in oklab, var(--hue) 36%, transparent)" }} />
-                      </div>
-                    );
-                  })}
-                </div>
+                {holoFor(sel, true)}
               </div>
             </div>
 
-            {/* downward refracted beam */}
-            <div style={{ position: "relative", height: 46, zIndex: 1 }}>
-              <div style={{ position: "absolute", left: "50%", top: -6, transform: "translateX(-50%)", width: 6, height: 52, borderRadius: 3, background: "linear-gradient(180deg, color-mix(in oklab, var(--hue) 92%, #fff), color-mix(in oklab, var(--hue) 32%, transparent))", boxShadow: "0 0 26px 5px color-mix(in oklab, var(--hue) 68%, transparent)", animation: "cirisBeamPulse 2.6s ease-in-out infinite" }} />
+            {/* app-store CTA — CIRIS ships today */}
+            <div className={styles.appCta}>
+              <h2 className={styles.appCtaTitle}>{t.epistemicWeb.appTitle}</h2>
+              <p className={styles.appCtaBody}>{t.epistemicWeb.appBody}</p>
+              <StoreBadges labels={t.lobby.store} />
             </div>
 
-            {/* hologram panel */}
-            <div key={sel} style={{ ...holoPanelStyle(LAYERS[sel].hue), width: "clamp(280px, 100%, 460px)", marginLeft: "auto", marginRight: "auto", padding: "22px 18px", borderRadius: 20 }}>
-              <div style={scanOverlay(LAYERS[sel].hue)} />
-              <div style={sheenOverlay} />
-              {holoFor(sel, true)}
-            </div>
+            <p className={styles.footline}>
+              <span>CIRIS</span> · safe by structure, open by principle, kind by design
+            </p>
           </div>
-
-          {/* app-store CTA — CIRIS ships today */}
-          <div className={styles.appCta}>
-            <h2 className={styles.appCtaTitle}>{t.epistemicWeb.appTitle}</h2>
-            <p className={styles.appCtaBody}>{t.epistemicWeb.appBody}</p>
-            <StoreBadges labels={t.lobby.store} />
-          </div>
-
-          <p className={styles.footline}>
-            <span>CIRIS</span> · safe by structure, open by principle, kind by design
-          </p>
-        </div>
-      </main>
-    </>
+        </main>
+    </SkyChrome>
   );
 }
 

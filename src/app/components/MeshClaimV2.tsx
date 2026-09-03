@@ -10,7 +10,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 const SEED_URL =
   "https://github.com/CIRISAI/CIRISPersist/blob/main/src/federation/genesis/canonical_seed.json";
@@ -60,7 +61,8 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
   ];
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="violet"
       kicker={m.eyebrow}
@@ -303,6 +305,6 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
         </div>
         <p className={s.footnote}>{m.lineageNote}</p>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

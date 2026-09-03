@@ -155,6 +155,7 @@
   /* A flex item may not be widened by its content: without this the column
      took its min-content width from a code panel and the whole document grew
      past the phone viewport, which mobile Chrome answers by zooming out. */
+  width: 100%;
   min-width: 0;
   max-width: 100%;
 }

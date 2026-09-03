@@ -8,7 +8,7 @@ import { DEFAULT_LOCALE, localizeHref, localeMeta } from "@/i18n/config";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import SvgGraphic, { PATH_GRAPHIC } from "@/app/components/graphics/SvgGraphic";
 import StoreBadges from "@/app/components/graphics/StoreBadges";
-import SiteHeader from "@/app/components/SiteHeader";
+import SkyChrome from "@/app/components/SkyChrome";
 import styles from "./path.module.css";
 
 const ACCENT: Record<string, string> = {
@@ -27,64 +27,63 @@ export default function PathStaircase({ t, slug }: { t: Dictionary; slug: string
   const backArrow = localeMeta(locale).dir === "rtl" ? "→" : "←";
 
   return (
-    <>
-      {isLocalized && (
-        <MachineTranslationBanner
-          lead={t.common.mtBanner.lead}
-          body={t.common.mtBanner.body}
-          cta={t.common.mtBanner.cta}
-        />
-      )}
-      <SiteHeader locale={locale} />
-      <main className={`${styles.wrap} ${ACCENT[p.accent] ?? styles.cyan}`}>
-        <p className={styles.back}>
-          <Link href={lh("/")}>{backArrow} {c.back}</Link>
-        </p>
+    <SkyChrome nav={t.homeHero} locale={locale} forceDark>
+        {isLocalized && (
+          <MachineTranslationBanner
+            lead={t.common.mtBanner.lead}
+            body={t.common.mtBanner.body}
+            cta={t.common.mtBanner.cta}
+          />
+        )}
+        <main className={`${styles.wrap} ${ACCENT[p.accent] ?? styles.cyan}`}>
+          <p className={styles.back}>
+            <Link href={lh("/")}>{backArrow} {c.back}</Link>
+          </p>
 
-        <header className={styles.head}>
-          <p className={styles.kicker}>{p.kicker}</p>
-          <h1 className={styles.h1}>{p.h1}</h1>
-          <div className={styles.heroArt} aria-hidden="true">
-            {PATH_GRAPHIC[slug] ? (
-              <SvgGraphic id={PATH_GRAPHIC[slug]} className={styles.heroGraphic} />
-            ) : (
-              <span className={styles.bar} />
-            )}
-          </div>
-        </header>
+          <header className={styles.head}>
+            <p className={styles.kicker}>{p.kicker}</p>
+            <h1 className={styles.h1}>{p.h1}</h1>
+            <div className={styles.heroArt} aria-hidden="true">
+              {PATH_GRAPHIC[slug] ? (
+                <SvgGraphic id={PATH_GRAPHIC[slug]} className={styles.heroGraphic} />
+              ) : (
+                <span className={styles.bar} />
+              )}
+            </div>
+          </header>
 
-        <ol className={styles.steps}>
-          {p.steps.map((body, i) => (
-            <li className={styles.step} key={i}>
-              <span className={styles.num}>{String(i + 1).padStart(2, "0")}</span>
-              <div>
-                <p className={styles.stepLabel}>{c.stepLabels[i]}</p>
-                <p className={styles.stepBody}>{body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-
-        <section className={styles.summit}>
-          <p>{c.summit}</p>
-        </section>
-
-        <section className={styles.seeAlso}>
-          <p className={styles.seeAlsoHead}>{c.seeAlsoHead}</p>
-          <div className={styles.seeAlsoRow}>
-            {p.seeAlso.map((s) => (
-              <Link key={s.href} href={lh(s.href)} className={styles.seeAlsoCard}>
-                {s.label} <span className={styles.arrow}>&rarr;</span>
-              </Link>
+          <ol className={styles.steps}>
+            {p.steps.map((body, i) => (
+              <li className={styles.step} key={i}>
+                <span className={styles.num}>{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <p className={styles.stepLabel}>{c.stepLabels[i]}</p>
+                  <p className={styles.stepBody}>{body}</p>
+                </div>
+              </li>
             ))}
-          </div>
-        </section>
+          </ol>
 
-        <div className={styles.cta}>
-          <Link href={lh("/install")} className={styles.ctaBtn}>{c.cta} &rarr;</Link>
-        </div>
-        <StoreBadges labels={t.lobby.store} className={styles.stores} />
-      </main>
-    </>
+          <section className={styles.summit}>
+            <p>{c.summit}</p>
+          </section>
+
+          <section className={styles.seeAlso}>
+            <p className={styles.seeAlsoHead}>{c.seeAlsoHead}</p>
+            <div className={styles.seeAlsoRow}>
+              {p.seeAlso.map((s) => (
+                <Link key={s.href} href={lh(s.href)} className={styles.seeAlsoCard}>
+                  {s.label} <span className={styles.arrow}>&rarr;</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <div className={styles.cta}>
+            <Link href={lh("/install")} className={styles.ctaBtn}>{c.cta} &rarr;</Link>
+          </div>
+          <StoreBadges labels={t.lobby.store} className={styles.stores} />
+        </main>
+    </SkyChrome>
   );
 }

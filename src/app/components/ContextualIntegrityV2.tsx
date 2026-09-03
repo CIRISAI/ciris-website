@@ -10,7 +10,8 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
 import Link from "next/link";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 const A = { target: "_blank", rel: "noopener noreferrer" } as const;
 
@@ -39,7 +40,8 @@ export default function ContextualIntegrityV2({ t, locale }: { t: Dictionary; lo
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="cyan"
       kicker={c.kicker}
@@ -136,7 +138,7 @@ export default function ContextualIntegrityV2({ t, locale }: { t: Dictionary; lo
           <Link href={lh("/cewp")} className={`${s.btn} ${s.btnS}`}>{c.btnCewp}</Link>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }
 

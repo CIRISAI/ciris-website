@@ -10,14 +10,16 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 export default function SafetyV2({ t, locale }: { t: Dictionary; locale: string }) {
   const sf = t.safety;
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="ok"
       graphicId="g11"
@@ -227,6 +229,6 @@ export default function SafetyV2({ t, locale }: { t: Dictionary; locale: string 
           </Link>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

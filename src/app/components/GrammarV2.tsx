@@ -11,7 +11,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
@@ -26,7 +27,8 @@ export default function GrammarV2({ t }: { t: Dictionary }) {
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="brass"
       graphicId="g13"
@@ -114,6 +116,6 @@ export default function GrammarV2({ t }: { t: Dictionary }) {
 
       {/* Concept tag: the envelope + consent family is contextual integrity. */}
       <ContextualIntegrityCrossLink t={t} locale={locale} />
-    </ContentShell>
+    </PageShell>
   );
 }

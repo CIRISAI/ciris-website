@@ -12,7 +12,8 @@
 // restyled to the dark-blueprint palette via CSS variables.
 
 import { useEffect, useState } from "react";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import SvgGraphic from "@/app/components/graphics/SvgGraphic";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -456,7 +457,8 @@ export default function CrowdsourcingAlignmentV2({ t, locale }: { t: Dictionary;
   };
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="ok"
       kicker={ca.heroBadgeLanguages.replace("{count}", String(LANGUAGES.length))}
@@ -871,6 +873,6 @@ PERFORM_ACTION → ACTION_COMPLETE → ROUND_COMPLETE`}</pre>
           </a>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

@@ -10,7 +10,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import SvgGraphic from "@/app/components/graphics/SvgGraphic";
 
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
@@ -45,7 +46,8 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
   ];
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="ok"
       kicker={rs.heroEyebrow}
@@ -289,6 +291,6 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
           </a>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

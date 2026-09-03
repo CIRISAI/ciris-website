@@ -12,14 +12,16 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: string }) {
   const p = t.philosophy;
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="brass"
       graphicId="g13"
@@ -111,6 +113,6 @@ export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: str
           </Link>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

@@ -7,7 +7,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import table from "@/app/components/compare-v2.module.css";
 
 const A = { target: "_blank", rel: "noopener noreferrer" } as const;
@@ -31,7 +32,8 @@ export default function CompareMicrosoftV2({ t, locale }: { t: Dictionary; local
   const val: Record<string, string> = { yes: c.valYes, partial: c.valPartial, no: c.valNo };
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="cyan"
       kicker={c.kicker}
@@ -102,6 +104,6 @@ export default function CompareMicrosoftV2({ t, locale }: { t: Dictionary; local
           <a className={`${s.btn} ${s.btnS}`} href="https://github.com/microsoft/agent-governance-toolkit" {...A}>{c.btnMsGh}</a>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

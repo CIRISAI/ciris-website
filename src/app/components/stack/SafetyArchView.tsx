@@ -18,7 +18,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref, DEFAULT_LOCALE } from "@/i18n/config";
-import SiteHeader from "@/app/components/SiteHeader";
+import SkyChrome from "@/app/components/SkyChrome";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import styles from "./safetyArch.module.css";
 
@@ -230,141 +230,140 @@ export default function SafetyArchView({ t, locale }: { t: Dictionary; locale: s
   };
 
   return (
-    <>
-      {isLocalized && t.common.mtBanner && (
-        <MachineTranslationBanner lead={t.common.mtBanner.lead} body={t.common.mtBanner.body} cta={t.common.mtBanner.cta} />
-      )}
-      <SiteHeader locale={locale} />
+    <SkyChrome nav={t.homeHero} locale={locale} forceDark>
+        {isLocalized && t.common.mtBanner && (
+          <MachineTranslationBanner lead={t.common.mtBanner.lead} body={t.common.mtBanner.body} cta={t.common.mtBanner.cta} />
+        )}
 
-      <main className={styles.page} data-ciris-scene>
-        <div className={styles.inner}>
-          <p className={styles.back}>
-            <Link href={lh("/")}>{localeArrow(locale)} {t.pathsCommon.back}</Link>
-          </p>
+        <main className={styles.page} data-ciris-scene>
+          <div className={styles.inner}>
+            <p className={styles.back}>
+              <Link href={lh("/")}>{localeArrow(locale)} {t.pathsCommon.back}</Link>
+            </p>
 
-          <h1 className={styles.h1}>
-            {c.headlineLead} <em>{c.headlineAccent}</em>
-          </h1>
+            <h1 className={styles.h1}>
+              {c.headlineLead} <em>{c.headlineAccent}</em>
+            </h1>
 
-          {/* SCENE */}
-          <div style={hueVar}>
-            <div className={styles.sceneWrap}>{scene()}</div>
-          </div>
-
-          {/* PROJECTED PANEL */}
-          <div style={hueVar}>
-            <div style={{ display: "flex", justifyContent: "center", margin: "2px 0 -9px", position: "relative", zIndex: 2 }}>
-              <div style={{ width: 6, height: 30, borderRadius: 3, background: `linear-gradient(180deg, color-mix(in oklab, ${hue} 92%, #fff), color-mix(in oklab, ${hue} 28%, transparent))`, boxShadow: `0 0 24px 5px color-mix(in oklab, ${hue} 62%, transparent)`, animation: "cirisBeamPulse 2.6s ease-in-out infinite" }} />
+            {/* SCENE */}
+            <div style={hueVar}>
+              <div className={styles.sceneWrap}>{scene()}</div>
             </div>
 
-            <div key={safety ? "s" + SBLOCKS[sSel].id : "k" + KLAYERS[kSel].id} style={{ position: "relative", overflow: "hidden", borderRadius: 20, padding: "22px 18px", border: `1px solid color-mix(in oklab, ${hue} 42%, transparent)`, background: `linear-gradient(180deg, color-mix(in oklab, ${hue} 11%, rgba(10,13,18,0.72)), rgba(10,13,18,0.84))`, boxShadow: `0 0 0 1px color-mix(in oklab, ${hue} 18%, transparent), 0 26px 70px -34px color-mix(in oklab, ${hue} 60%, transparent), inset 0 0 56px color-mix(in oklab, ${hue} 8%, transparent)`, animation: "cirisHoloIn .45s cubic-bezier(.2,.7,.2,1)" }}>
-              <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(0deg, color-mix(in oklab, ${hue} 13%, transparent) 0px, transparent 1px, transparent 3px)`, opacity: 0.4, mixBlendMode: "screen", animation: "cirisScan 7s linear infinite", pointerEvents: "none" }} />
+            {/* PROJECTED PANEL */}
+            <div style={hueVar}>
+              <div style={{ display: "flex", justifyContent: "center", margin: "2px 0 -9px", position: "relative", zIndex: 2 }}>
+                <div style={{ width: 6, height: 30, borderRadius: 3, background: `linear-gradient(180deg, color-mix(in oklab, ${hue} 92%, #fff), color-mix(in oklab, ${hue} 28%, transparent))`, boxShadow: `0 0 24px 5px color-mix(in oklab, ${hue} 62%, transparent)`, animation: "cirisBeamPulse 2.6s ease-in-out infinite" }} />
+              </div>
 
-              <div style={{ position: "relative", animation: "cirisHoloFloat 8s ease-in-out infinite" }}>
-                {/* header */}
-                <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
-                  <div style={{ width: 52, height: 52, borderRadius: 14, background: `color-mix(in oklab, ${hue} 22%, transparent)`, display: "grid", placeItems: "center", color: hue, flexShrink: 0, boxShadow: `inset 0 0 0 1px color-mix(in oklab, ${hue} 38%, transparent), 0 0 22px color-mix(in oklab, ${hue} 34%, transparent)` }}>{mkIcon(iconId, 26)}</div>
-                  <div style={{ minWidth: 0 }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 8, font: "500 10px/1.3 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.13em", color: hue }}>
-                      <span>{tagLine}</span>
-                      {isKey && <span style={{ padding: "2px 7px", borderRadius: 999, background: `color-mix(in oklab, ${hue} 24%, transparent)`, border: `1px solid color-mix(in oklab, ${hue} 50%, transparent)`, fontSize: 9, letterSpacing: "0.1em" }}>◆ {c.keystoneBadge.toUpperCase()}</span>}
+              <div key={safety ? "s" + SBLOCKS[sSel].id : "k" + KLAYERS[kSel].id} style={{ position: "relative", overflow: "hidden", borderRadius: 20, padding: "22px 18px", border: `1px solid color-mix(in oklab, ${hue} 42%, transparent)`, background: `linear-gradient(180deg, color-mix(in oklab, ${hue} 11%, rgba(10,13,18,0.72)), rgba(10,13,18,0.84))`, boxShadow: `0 0 0 1px color-mix(in oklab, ${hue} 18%, transparent), 0 26px 70px -34px color-mix(in oklab, ${hue} 60%, transparent), inset 0 0 56px color-mix(in oklab, ${hue} 8%, transparent)`, animation: "cirisHoloIn .45s cubic-bezier(.2,.7,.2,1)" }}>
+                <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(0deg, color-mix(in oklab, ${hue} 13%, transparent) 0px, transparent 1px, transparent 3px)`, opacity: 0.4, mixBlendMode: "screen", animation: "cirisScan 7s linear infinite", pointerEvents: "none" }} />
+
+                <div style={{ position: "relative", animation: "cirisHoloFloat 8s ease-in-out infinite" }}>
+                  {/* header */}
+                  <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
+                    <div style={{ width: 52, height: 52, borderRadius: 14, background: `color-mix(in oklab, ${hue} 22%, transparent)`, display: "grid", placeItems: "center", color: hue, flexShrink: 0, boxShadow: `inset 0 0 0 1px color-mix(in oklab, ${hue} 38%, transparent), 0 0 22px color-mix(in oklab, ${hue} 34%, transparent)` }}>{mkIcon(iconId, 26)}</div>
+                    <div style={{ minWidth: 0 }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, font: "500 10px/1.3 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.13em", color: hue }}>
+                        <span>{tagLine}</span>
+                        {isKey && <span style={{ padding: "2px 7px", borderRadius: 999, background: `color-mix(in oklab, ${hue} 24%, transparent)`, border: `1px solid color-mix(in oklab, ${hue} 50%, transparent)`, fontSize: 9, letterSpacing: "0.1em" }}>◆ {c.keystoneBadge.toUpperCase()}</span>}
+                      </div>
+                      <div style={{ fontWeight: 600, fontSize: 21, letterSpacing: "-0.015em", marginTop: 4, lineHeight: 1.15, textShadow: `0 0 16px color-mix(in oklab, ${hue} 45%, transparent)` }}>{name}</div>
                     </div>
-                    <div style={{ fontWeight: 600, fontSize: 21, letterSpacing: "-0.015em", marginTop: 4, lineHeight: 1.15, textShadow: `0 0 16px color-mix(in oklab, ${hue} 45%, transparent)` }}>{name}</div>
                   </div>
-                </div>
 
-                {safety ? (
-                  <>
-                    <p style={{ margin: "15px 0 0", fontSize: 14, lineHeight: 1.55, color: "#dbe0e6", fontWeight: 500 }}>{sb.promise}</p>
-                    <div style={{ marginTop: 18 }}>
-                      <div style={{ font: "500 9.5px/1 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.14em", color: "#6b7280", textTransform: "uppercase", marginBottom: 11 }}>{isKey ? c.keystoneMechLabel : c.mechLabel}</div>
-                      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                        {sb.mechanisms.map((m, i) => (
-                          <div key={m.label} style={mechRow(hue)}>
-                            <span style={mechIdx(hue)}>{String(i + 1).padStart(2, "0")}</span>
-                            <div style={{ minWidth: 0 }}>
-                              <div style={{ fontWeight: 600, fontSize: 13.5, letterSpacing: "-0.005em", lineHeight: 1.35 }}>{m.label}</div>
-                              <div style={{ fontSize: 12, color: "#9aa3af", lineHeight: 1.45, marginTop: 3 }}>{m.note}</div>
+                  {safety ? (
+                    <>
+                      <p style={{ margin: "15px 0 0", fontSize: 14, lineHeight: 1.55, color: "#dbe0e6", fontWeight: 500 }}>{sb.promise}</p>
+                      <div style={{ marginTop: 18 }}>
+                        <div style={{ font: "500 9.5px/1 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.14em", color: "#6b7280", textTransform: "uppercase", marginBottom: 11 }}>{isKey ? c.keystoneMechLabel : c.mechLabel}</div>
+                        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                          {sb.mechanisms.map((m, i) => (
+                            <div key={m.label} style={mechRow(hue)}>
+                              <span style={mechIdx(hue)}>{String(i + 1).padStart(2, "0")}</span>
+                              <div style={{ minWidth: 0 }}>
+                                <div style={{ fontWeight: 600, fontSize: 13.5, letterSpacing: "-0.005em", lineHeight: 1.35 }}>{m.label}</div>
+                                <div style={{ fontSize: 12, color: "#9aa3af", lineHeight: 1.45, marginTop: 3 }}>{m.note}</div>
+                              </div>
                             </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div style={{ marginTop: 12, padding: "12px 14px", borderRadius: 11, background: `color-mix(in oklab, ${hue} 8%, transparent)`, border: `1px solid color-mix(in oklab, ${hue} 22%, transparent)` }}>
-                      <span style={{ fontSize: 12.5, color: "#c6ccd4", lineHeight: 1.5, fontStyle: "italic" }}>{sb.note}</span>
-                    </div>
-                    {/* Concept tag on the Privacy block: this guarantee IS
-                        contextual integrity; funnel to the anchor page. */}
-                    {SBLOCKS[sSel].id === "privacy" && (
-                      <p style={{ margin: "12px 0 0", fontSize: 13 }}>
-                        <Link href={lh("/contextual-integrity")} style={{ color: hue }}>
-                          {t.contextualIntegrity.crossCta}
-                        </Link>
-                      </p>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    <p style={{ margin: "15px 0 0", fontSize: 13.5, lineHeight: 1.6, color: "#c6ccd4" }}>{kl.role}</p>
-                    <div style={{ marginTop: 18 }}>
-                      <div style={{ font: "500 9.5px/1 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.14em", color: "#6b7280", textTransform: "uppercase", marginBottom: 11 }}>{kl.primitivesLabel}</div>
-                      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                        {kl.primitives.map((p, i) => (
-                          <div key={p.label} style={mechRow(hue)}>
-                            <span style={mechIdx(hue)}>{String(i + 1).padStart(2, "0")}</span>
-                            <div style={{ minWidth: 0 }}>
-                              <div style={{ fontWeight: 600, fontSize: 13.5, letterSpacing: "-0.005em", lineHeight: 1.35 }}>{p.label}</div>
-                              <div style={{ fontSize: 12, color: "#9aa3af", lineHeight: 1.45, marginTop: 3 }}>{p.note}</div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div style={{ display: "flex", flexDirection: "column", gap: 9, marginTop: 14 }}>
-                      {kl.notes.map((n) => (
-                        <div key={n.title} style={{ padding: "12px 14px", borderRadius: 11, background: `color-mix(in oklab, ${hue} 8%, transparent)`, border: `1px solid color-mix(in oklab, ${hue} 22%, transparent)` }}>
-                          <span style={{ fontWeight: 600, fontSize: 12.5, color: "#f4f5f7" }}>{n.title}. </span>
-                          <span style={{ fontSize: 12.5, color: "#9aa3af", lineHeight: 1.5 }}>{n.body}</span>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </>
-                )}
+                      </div>
+                      <div style={{ marginTop: 12, padding: "12px 14px", borderRadius: 11, background: `color-mix(in oklab, ${hue} 8%, transparent)`, border: `1px solid color-mix(in oklab, ${hue} 22%, transparent)` }}>
+                        <span style={{ fontSize: 12.5, color: "#c6ccd4", lineHeight: 1.5, fontStyle: "italic" }}>{sb.note}</span>
+                      </div>
+                      {/* Concept tag on the Privacy block: this guarantee IS
+                          contextual integrity; funnel to the anchor page. */}
+                      {SBLOCKS[sSel].id === "privacy" && (
+                        <p style={{ margin: "12px 0 0", fontSize: 13 }}>
+                          <Link href={lh("/contextual-integrity")} style={{ color: hue }}>
+                            {t.contextualIntegrity.crossCta}
+                          </Link>
+                        </p>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <p style={{ margin: "15px 0 0", fontSize: 13.5, lineHeight: 1.6, color: "#c6ccd4" }}>{kl.role}</p>
+                      <div style={{ marginTop: 18 }}>
+                        <div style={{ font: "500 9.5px/1 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.14em", color: "#6b7280", textTransform: "uppercase", marginBottom: 11 }}>{kl.primitivesLabel}</div>
+                        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                          {kl.primitives.map((p, i) => (
+                            <div key={p.label} style={mechRow(hue)}>
+                              <span style={mechIdx(hue)}>{String(i + 1).padStart(2, "0")}</span>
+                              <div style={{ minWidth: 0 }}>
+                                <div style={{ fontWeight: 600, fontSize: 13.5, letterSpacing: "-0.005em", lineHeight: 1.35 }}>{p.label}</div>
+                                <div style={{ fontSize: 12, color: "#9aa3af", lineHeight: 1.45, marginTop: 3 }}>{p.note}</div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div style={{ display: "flex", flexDirection: "column", gap: 9, marginTop: 14 }}>
+                        {kl.notes.map((n) => (
+                          <div key={n.title} style={{ padding: "12px 14px", borderRadius: 11, background: `color-mix(in oklab, ${hue} 8%, transparent)`, border: `1px solid color-mix(in oklab, ${hue} 22%, transparent)` }}>
+                            <span style={{ fontWeight: 600, fontSize: 12.5, color: "#f4f5f7" }}>{n.title}. </span>
+                            <span style={{ fontSize: 12.5, color: "#9aa3af", lineHeight: 1.5 }}>{n.body}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
 
-                <Link href={lh(href)} style={ctaStyle}>
-                  {c.exploreCta} {name}
-                  <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
-                </Link>
+                  <Link href={lh(href)} style={ctaStyle}>
+                    {c.exploreCta} {name}
+                    <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* THREADS */}
-          <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 9 }}>
-            <div style={{ font: "500 9.5px/1 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.14em", color: "#4b5563", textTransform: "uppercase", paddingLeft: 2 }}>{c.groundLabel}</div>
-            {THREADS.map((th) => (
-              <Link key={th.id} href={lh(th.href)} style={{ display: "flex", gap: 11, alignItems: "center", padding: "12px 14px", borderRadius: 12, background: "rgba(65,156,160,0.06)", border: "1px solid rgba(65,156,160,0.2)", textDecoration: "none" }}>
-                <span style={{ color: "#419ca0", flexShrink: 0, display: "grid", placeItems: "center" }}>{mkIcon(th.id, 18)}</span>
-                <div style={{ minWidth: 0 }}>
-                  <span style={{ fontWeight: 600, fontSize: 13, color: "#eaf6f6" }}>{c.threads[th.id].title} — </span>
-                  <span style={{ fontSize: 12.5, color: "#9aa3af", lineHeight: 1.5 }}>{c.threads[th.id].body}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+            {/* THREADS */}
+            <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 9 }}>
+              <div style={{ font: "500 9.5px/1 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.14em", color: "#4b5563", textTransform: "uppercase", paddingLeft: 2 }}>{c.groundLabel}</div>
+              {THREADS.map((th) => (
+                <Link key={th.id} href={lh(th.href)} style={{ display: "flex", gap: 11, alignItems: "center", padding: "12px 14px", borderRadius: 12, background: "rgba(65,156,160,0.06)", border: "1px solid rgba(65,156,160,0.2)", textDecoration: "none" }}>
+                  <span style={{ color: "#419ca0", flexShrink: 0, display: "grid", placeItems: "center" }}>{mkIcon(th.id, 18)}</span>
+                  <div style={{ minWidth: 0 }}>
+                    <span style={{ fontWeight: 600, fontSize: 13, color: "#eaf6f6" }}>{c.threads[th.id].title} — </span>
+                    <span style={{ fontSize: 12.5, color: "#9aa3af", lineHeight: 1.5 }}>{c.threads[th.id].body}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
 
-          {/* RATCHET CLOSING NOTE */}
-          <div style={{ marginTop: 16, padding: "16px", borderRadius: 14, background: "linear-gradient(120deg, rgba(63,190,122,0.08), rgba(65,156,160,0.05))", border: "1px solid rgba(63,190,122,0.24)" }}>
-            <div style={{ font: "500 9.5px/1 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.14em", color: "#3fbe7a", textTransform: "uppercase", marginBottom: 8 }}>{c.ratchetLabel}</div>
-            <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: "#c6ccd4" }}>{c.ratchetBody}</p>
-          </div>
+            {/* RATCHET CLOSING NOTE */}
+            <div style={{ marginTop: 16, padding: "16px", borderRadius: 14, background: "linear-gradient(120deg, rgba(63,190,122,0.08), rgba(65,156,160,0.05))", border: "1px solid rgba(63,190,122,0.24)" }}>
+              <div style={{ font: "500 9.5px/1 var(--font-geist-mono), ui-monospace, monospace", letterSpacing: "0.14em", color: "#3fbe7a", textTransform: "uppercase", marginBottom: 8 }}>{c.ratchetLabel}</div>
+              <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: "#c6ccd4" }}>{c.ratchetBody}</p>
+            </div>
 
-          <p className={styles.footline}>
-            <span>CIRIS</span> · safe by structure, open by principle, kind by design
-          </p>
-        </div>
-      </main>
-    </>
+            <p className={styles.footline}>
+              <span>CIRIS</span> · safe by structure, open by principle, kind by design
+            </p>
+          </div>
+        </main>
+    </SkyChrome>
   );
 }
 

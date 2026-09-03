@@ -6,7 +6,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import ReachingGraphic from "@/app/components/graphics/ReachingGraphic";
 
 export default function VisionV2({ t }: { t: Dictionary }) {
@@ -15,7 +16,8 @@ export default function VisionV2({ t }: { t: Dictionary }) {
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="violet"
       kicker={r.kicker}
@@ -50,6 +52,6 @@ export default function VisionV2({ t }: { t: Dictionary }) {
           <Link className={`${s.btn} ${s.btnP}`} href={lh("/install")}>{r.cta} &rarr;</Link>
         </div>
       </div>
-    </ContentShell>
+    </PageShell>
   );
 }

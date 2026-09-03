@@ -7,7 +7,9 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { getDictionary } from "@/i18n/dictionaries";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 export const metadata: Metadata = {
   title: "Reviews: Outside Assessments of CIRIS",
@@ -39,7 +41,8 @@ const REVIEWS = [
 
 export default function ReviewsPage() {
   return (
-    <ContentShell
+    <PageShell
+      nav={getDictionary("en").homeHero}
       locale="en"
       accent="teal"
       kicker="Outside reviews"
@@ -89,6 +92,6 @@ export default function ReviewsPage() {
           </a>
         </div>
       </div>
-    </ContentShell>
+    </PageShell>
   );
 }

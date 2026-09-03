@@ -10,7 +10,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 const A = { target: "_blank", rel: "noopener noreferrer" } as const;
 
@@ -43,7 +44,8 @@ export default function FirstContactTheoryV2({ t, locale }: { t: Dictionary; loc
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="cyan"
       kicker={c.kicker}
@@ -138,6 +140,6 @@ export default function FirstContactTheoryV2({ t, locale }: { t: Dictionary; loc
           </Link>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

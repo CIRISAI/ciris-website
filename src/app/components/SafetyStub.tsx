@@ -10,7 +10,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s, type ContentAccent } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s, type ContentAccent } from "@/app/components/v2/ContentShell";
 import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
 export type SafetyStubVariant = "structural-privacy" | "ai-welfare" | "stewardship";
@@ -92,7 +93,8 @@ export default function SafetyStub({
   const c = CONTENT[variant];
   const lh = (href: string) => localizeHref(href, locale);
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent={c.accent}
       kicker={c.kicker}
@@ -120,6 +122,6 @@ export default function SafetyStub({
       {/* Concept tag: structural privacy IS contextual integrity enforced in the
           substrate; the anchor page holds the full mapping. */}
       {variant === "structural-privacy" && <ContextualIntegrityCrossLink t={t} locale={locale} />}
-    </ContentShell>
+    </PageShell>
   );
 }

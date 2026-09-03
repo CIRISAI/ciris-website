@@ -8,7 +8,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import sec from "@/app/components/security.module.css";
 
 const A = { target: "_blank", rel: "noopener noreferrer" } as const;
@@ -21,7 +22,8 @@ export default function SecurityKillSwitchV2({ t, locale }: { t: Dictionary; loc
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="teal"
       kicker={k.kicker}
@@ -91,6 +93,6 @@ export default function SecurityKillSwitchV2({ t, locale }: { t: Dictionary; loc
         </div>
         <p className={s.footnote}>{k.sources}</p>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

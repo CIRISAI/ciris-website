@@ -8,7 +8,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import table from "@/app/components/compare-v2.module.css";
 
 const A = { target: "_blank", rel: "noopener noreferrer" } as const;
@@ -30,7 +31,8 @@ export default function EuAiActV2({ t, locale }: { t: Dictionary; locale: string
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="violet"
       kicker={eu.kicker}
@@ -90,6 +92,6 @@ export default function EuAiActV2({ t, locale }: { t: Dictionary; locale: string
           <a className={`${s.btn} ${s.btnS}`} href="https://github.com/CIRISAI/CIRISConstitution" {...A}>{eu.btnConstitution}</a>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

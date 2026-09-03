@@ -14,7 +14,13 @@ import { useCallback, useEffect, useState } from "react";
 
 export const THEME_KEY = "ciris-hero-theme";
 
-export function useSkyTheme(): { dark: boolean; ready: boolean; toggle: () => void } {
+/**
+ * @param force pass "dark" for pages whose content is a hard-coded dark scene
+ *              (the safety arch, the stack, the path staircase): the chrome
+ *              matches the scene instead of clashing with it, and the visitor's
+ *              preference is left untouched for every other page.
+ */
+export function useSkyTheme(force?: "dark"): { dark: boolean; ready: boolean; toggle: () => void } {
   const [dark, setDark] = useState<boolean | null>(null);
 
   useEffect(() => {
@@ -33,14 +39,14 @@ export function useSkyTheme(): { dark: boolean; ready: boolean; toggle: () => vo
   // The attribute the page tokens key off. Written on every change (including
   // the first read) so a page rendered server-side dark does not flash.
   useEffect(() => {
-    if (dark === null) return;
+    if (!force && dark === null) return;
     const el = document.documentElement;
-    el.setAttribute("data-theme", dark ? "dark" : "light");
+    el.setAttribute("data-theme", force === "dark" || dark ? "dark" : "light");
     // Client-side navigation to a page still on the old look must not inherit
     // day tokens: that page is dark by design, so drop the attribute with the
     // shell that set it.
     return () => el.removeAttribute("data-theme");
-  }, [dark]);
+  }, [dark, force]);
 
   const toggle = useCallback(() => {
     setDark((d) => {
@@ -52,5 +58,5 @@ export function useSkyTheme(): { dark: boolean; ready: boolean; toggle: () => vo
     });
   }, []);
 
-  return { dark: dark === true, ready: dark !== null, toggle };
+  return { dark: force === "dark" || dark === true, ready: force === "dark" || dark !== null, toggle };
 }

@@ -9,7 +9,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { DEFAULT_LOCALE, localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import table from "@/app/components/compare-v2.module.css";
 
 const A = { target: "_blank", rel: "noopener noreferrer" } as const;
@@ -36,7 +37,8 @@ export default function OwaspAgenticV2({ t, locale }: { t: Dictionary; locale: s
   const covLabel: Record<string, string> = { full: o.covFull, partial: o.covPartial, roadmap: o.covRoadmap, none: o.covNone };
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="teal"
       kicker={o.kicker}
@@ -99,6 +101,6 @@ export default function OwaspAgenticV2({ t, locale }: { t: Dictionary; locale: s
           <a className={`${s.btn} ${s.btnS}`} href={OWASP} {...A}>{o.btnOwasp}</a>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

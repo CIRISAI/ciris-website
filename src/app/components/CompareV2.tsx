@@ -11,7 +11,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import table from "@/app/components/compare-v2.module.css";
 
 // Related-work matrix: per-row status keys (tone-mapped in code, never
@@ -172,7 +173,8 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
     lz.rwStatus[key as keyof typeof lz.rwStatus] ?? key;
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="cyan"
       kicker={lz.kicker}
@@ -378,6 +380,6 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
           </a>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }

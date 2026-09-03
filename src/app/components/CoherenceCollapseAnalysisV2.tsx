@@ -16,7 +16,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
 const h = (str: string) => ({ __html: str });
@@ -72,7 +73,8 @@ export default function CoherenceCollapseAnalysisV2({
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <ContentShell
+    <PageShell
+      nav={t.homeHero}
       locale={locale}
       accent="rose"
       graphicId="g16"
@@ -176,6 +178,6 @@ export default function CoherenceCollapseAnalysisV2({
           </a>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }
