@@ -24,17 +24,17 @@ const REVIEWS = [
     who: "Gunnar Zarncke's map of alignment research",
     url: "https://towards-alignment.com/cards/agenda/ciris/",
     body:
-      "A structured assessment of CIRIS as an alignment research agenda. It records what is measured and names the limits plainly, including that “signed protocol logs do not imply that the represented reasoning produced the action” — exactly the kind of outside precision this project asks for.",
+      "A structured assessment of CIRIS as an alignment research agenda. It records what is measured and names the limits plainly, including that “signed protocol logs do not imply that the represented reasoning produced the action”. That is exactly the kind of outside precision this project asks for.",
     status: "Published assessment",
     cls: s.cCyan,
   },
   {
     name: "Nullworks",
     who: "Operational Intelligence",
-    url: "https://nullworks.systems/ciris-review",
+    url: "https://nullworks.systems/ciris-proof",
     body:
-      "A private preliminary review is in progress. The report is access-gated by the reviewer and none of its content is public yet; it is listed here because the review's existence is part of the record, and the record is the point.",
-    status: "Private preliminary review, in progress",
+      "An independent operational assurance review of CIRISAgent, read-only and pinned to exact versions. The public page is not the full report and not a certification: it publishes the evidence classes, the test counts, the revisions that were checked, the artifact hashes, and conclusions on both sides. It calls the constitutional machinery substantive, and it names a real gap in plain words, that \u201crole is not the same as jurisdiction\u201d, because the core authorization surface it inspected was broader than the specific resource. The full report stays confidential with the reviewer.",
+    status: "Public sanitized proof, August 2026",
     cls: s.cBrass,
   },
 ];
