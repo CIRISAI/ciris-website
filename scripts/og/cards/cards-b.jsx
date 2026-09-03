@@ -10,7 +10,7 @@ const Lbl2 = ({ x, y, children, fill, anchor = 'start', size = 15, fam = 'Geist 
 function OGSafety() {
   const a = Cb.ok;
   return (
-    <Card accent={a} eyebrow="safety" title="The Safest AI<br/>You Can Use">
+    <Card accent={a} eyebrow="safety" title="AI you can check,<br/>and stop.">
       <Stage>
         {/* immutable ledger stack (left of stop) */}
         {[0,1,2].map(i=>(

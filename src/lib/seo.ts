@@ -112,10 +112,20 @@ export function ogVideo(basePath: string, locale: string = DEFAULT_LOCALE): stri
 
 // Full localized metadata for a marketing page: hreflang alternates + a
 // localized, per-page social preview (og/twitter title+description, og:locale).
-function homeOg(locale: string): { title: string; description: string } | undefined {
-  const h = getDictionary(locale).homeHero as { ogTitle?: string; ogDescription?: string };
-  const title = h.ogTitle?.trim();
-  const description = h.ogDescription?.trim();
+// Pages whose social title and description live in the dictionary, so the
+// localization lane owns them like any other string. MARKETING_OG stays the
+// fallback until a locale is filled.
+const DICT_OG: Record<string, "homeHero" | "safety"> = {
+  "/": "homeHero",
+  "/safety": "safety",
+};
+
+function dictOg(basePath: string, locale: string): { title: string; description: string } | undefined {
+  const section = DICT_OG[basePath];
+  if (!section) return undefined;
+  const d = getDictionary(locale)[section] as { ogTitle?: string; ogDescription?: string };
+  const title = d.ogTitle?.trim();
+  const description = d.ogDescription?.trim();
   return title && description ? { title, description } : undefined;
 }
 
@@ -125,7 +135,7 @@ export function localizedSeo(basePath: string, locale: string): Metadata {
   // The landing's social title lives in the dictionary so the localization
   // lane translates it like any other string; MARKETING_OG is the fallback
   // until a locale has been filled.
-  const heroOg = basePath === "/" ? homeOg(locale) : undefined;
+  const heroOg = dictOg(basePath, locale);
   const title = heroOg?.title ?? og?.title;
   const description = heroOg?.description ?? og?.description;
   const image = ogImage(basePath, locale);
