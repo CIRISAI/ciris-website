@@ -588,6 +588,9 @@
   },
   "safety": {
     "heroHeadline": "Seguridad Integrada.",
+    "ogTitle": "Seguridad: IA que puedes comprobar, y detener.",
+    "ogDescription": "Cada acción con consecuencias está firmada, es atribuible y revocable, y la autoridad para decir alto permanece en manos humanas nombradas. Responsable, no infalible.",
+    "ogCardTitle": "IA que puedes comprobar, y detener.",
     "heroSubheadline": "No añadida después.",
     "heroDescription": "Cada función de seguridad en CIRIS forma parte de cómo funciona el sistema, no es una regla agregada encima. Un registro de cada decisión que no se puede cambiar en silencio, un control de quién puede hacer qué, y un botón de parada de emergencia que el agente no puede rechazar.",
     "heroMediaAlt": "Imagen de fondo de seguridad",
@@ -2240,7 +2243,7 @@
             "note": "La parada está sobre todo el sistema. Ningún objetivo puede vencerla por voto."
           }
         ],
-        "note": "La piedra clave. Cada otra garantía presiona contra ella, y es el único bloque que no se puede quitar."
+        "note": "La clave de bóveda. Cada otra garantía presiona contra ella, y es el único bloque que no se puede quitar."
       },
       "limits": {
         "short": "Límites",

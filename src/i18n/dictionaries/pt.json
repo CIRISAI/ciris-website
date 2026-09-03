@@ -662,6 +662,9 @@
   },
   "safety": {
     "heroHeadline": "Segurança Integrada.",
+    "ogTitle": "Segurança: IA que você pode verificar, e interromper.",
+    "ogDescription": "Cada ação importante é assinada, atribuível e reversível, e a autoridade para dizer parar permanece em mãos humanas identificadas. Responsável, não infalível.",
+    "ogCardTitle": "IA que você pode verificar, e interromper.",
     "heroSubheadline": "Não adicionada depois.",
     "heroDescription": "Cada funcionalidade de segurança do CIRIS faz parte de como o sistema funciona, não uma regra acrescentada por cima. Um registro de cada decisão que não pode ser alterado silenciosamente, um controle sobre quem tem permissão de fazer o quê, e um botão de emergência que o agente não pode recusar.",
     "heroMediaAlt": "Imagem de fundo de segurança",
@@ -2240,7 +2243,7 @@
             "note": "A parada fica sobre todo o sistema. Nenhum objetivo pode vencê-la por voto."
           }
         ],
-        "note": "A pedra-chave. Cada outra garantia pressiona contra ela, e é o único bloco que não pode ser removido."
+        "note": "A pedra-chave. Cada outro compromisso pressiona contra ela, e é o único bloco que não pode ser removido."
       },
       "limits": {
         "short": "Limites",

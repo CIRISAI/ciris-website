@@ -662,6 +662,9 @@
   },
   "safety": {
     "heroHeadline": "Sicherheit ist eingebaut.",
+    "ogTitle": "Sicherheit: KI, die Sie prüfen und stoppen können.",
+    "ogDescription": "Jede folgenreiche Handlung ist signiert, zuordenbar und widerrufbar, und die Befugnis, Stopp zu sagen, bleibt in den Händen namentlich genannter Menschen. Rechenschaftspflichtig, nicht unfehlbar.",
+    "ogCardTitle": "KI, die Sie prüfen und stoppen können.",
     "heroSubheadline": "Nicht nachträglich hinzugefügt.",
     "heroDescription": "Jede Sicherheitsfunktion in CIRIS ist Teil der Funktionsweise des Systems, keine obendrauf gesetzte Regel. Ein Protokoll jeder Entscheidung, das nicht still geändert werden kann, eine Kontrolle darüber, wer was tun darf, und ein Notabschalter, den der Agent nicht ablehnen kann.",
     "heroMediaAlt": "Sicherheits-Hintergrundbild",
@@ -2240,7 +2243,7 @@
             "note": "Der Halt steht über dem ganzen System. Kein Ziel kann ihn überstimmen."
           }
         ],
-        "note": "Der Schlussstein. Jede andere Garantie drückt gegen ihn, und er ist der eine Block, der nicht entfernt werden kann."
+        "note": "Der Schlussstein. Jede andere Verpflichtung drückt gegen ihn, und er ist der eine Block, der nicht entfernt werden kann."
       },
       "limits": {
         "short": "Grenzen",

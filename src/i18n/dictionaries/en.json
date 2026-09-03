@@ -588,6 +588,9 @@
   },
   "safety": {
     "heroHeadline": "Safety Built In.",
+    "ogTitle": "Safety: AI you can check, and stop.",
+    "ogDescription": "Every consequential action is signed, attributable, and revocable, and the authority to say stop stays in named human hands. Accountable, not infallible.",
+    "ogCardTitle": "AI you can check, and stop.",
     "heroSubheadline": "Not bolted on.",
     "heroDescription": "Every safety feature in CIRIS is part of how the system works, not a rule added on top. A record of every decision that cannot be quietly changed, a check on who is allowed to do what, and an emergency stop the agent cannot refuse.",
     "heroMediaAlt": "Safety background image",
@@ -2240,7 +2243,7 @@
             "note": "The halt sits over the whole system. No objective can outvote it."
           }
         ],
-        "note": "The keystone. Every other guarantee presses against it, and it is the one block that cannot be removed."
+        "note": "The keystone. Every other commitment presses against it, and it is the one block that cannot be removed."
       },
       "limits": {
         "short": "Limits",
