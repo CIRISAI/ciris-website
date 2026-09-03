@@ -4,6 +4,10 @@
 
 .page {
   min-height: 100svh;
+  width: 100%;
+  overflow-x: clip;
+  background: var(--sky-page-bg);
+  color: var(--sky-page-fg);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -148,6 +152,11 @@
   z-index: 1;
   flex: 1;
   padding-top: 4px;
+  /* A flex item may not be widened by its content: without this the column
+     took its min-content width from a code panel and the whole document grew
+     past the phone viewport, which mobile Chrome answers by zooming out. */
+  min-width: 0;
+  max-width: 100%;
 }
 
 .bottomNav {

@@ -82,7 +82,6 @@ export default function PageShell({
   return (
     <div
       className={`${instrument.className} ${styles.page}`}
-      style={{ background: P.pageBg, color: P.pageFg }}
       data-page-theme={dark ? "dark" : "light"}
     >
       <SkyBanner dark={dark}>

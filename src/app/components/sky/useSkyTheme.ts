@@ -34,7 +34,12 @@ export function useSkyTheme(): { dark: boolean; ready: boolean; toggle: () => vo
   // the first read) so a page rendered server-side dark does not flash.
   useEffect(() => {
     if (dark === null) return;
-    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    const el = document.documentElement;
+    el.setAttribute("data-theme", dark ? "dark" : "light");
+    // Client-side navigation to a page still on the old look must not inherit
+    // day tokens: that page is dark by design, so drop the attribute with the
+    // shell that set it.
+    return () => el.removeAttribute("data-theme");
   }, [dark]);
 
   const toggle = useCallback(() => {

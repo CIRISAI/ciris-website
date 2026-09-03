@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { PREFIXED_LOCALES, LOCALIZED_ROUTES } from "@/i18n/config";
 import { DEFAULT_OG_IMAGE, DEFAULT_OG_VIDEO } from "@/lib/seo";
 import V1Banner from "@/app/components/V1Banner";
+import { NEW_LOOK_ROUTES } from "@/app/components/newLookRoutes";
 
 // Universal language persistence: a locale chosen anywhere is stored, and
 // this guard redirects localizable pages to
@@ -239,6 +240,26 @@ export default function Layout({ children }: { children: ReactNode }) {
         />
         {/* The site is dark by design (canvas/video backgrounds are black).
             Force the theme dark so it never follows the OS preference. */}
+        {/* Day/night before first paint, on the revamped routes only: the
+            pages still on the old look are dark by design, and lighting their
+            tokens while their Tailwind dark: classes stay dark would mix the
+            two. Same key and ?theme= override useSkyTheme uses. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{" +
+              "var NEW=" + JSON.stringify([...NEW_LOOK_ROUTES]) + ";" +
+              "var L=" + JSON.stringify(PREFIXED_LOCALES) + ";" +
+              "var p=location.pathname.replace(/\\/$/,'')||'/';" +
+              "var seg=p.split('/')[1];" +
+              "if(L.indexOf(seg)>-1){p='/'+p.split('/').slice(2).join('/');p=p.replace(/\\/$/,'')||'/';}" +
+              "if(NEW.indexOf(p)<0)return;" +
+              "var q=new URLSearchParams(location.search).get('theme');" +
+              "var v=q==='dark'||q==='light'?q:(localStorage.getItem('ciris-hero-theme')==='dark'?'dark':'light');" +
+              "document.documentElement.setAttribute('data-theme',v);" +
+              "}catch(e){}})()",
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -84,6 +84,12 @@
 /* Card grid + accent card variants for the colored chain/join cards. */
 .cardGrid { display: grid; gap: 12px; margin: 0; }
 .cardGridTwo { grid-template-columns: 1fr 1fr; }
+/* A long unbreakable token (a docker command, a URL) inside a grid item sets
+   the track's min-content width and drags the whole document wider than the
+   phone. Tracks are allowed to be narrower than their content; the code panels
+   scroll inside themselves. */
+.cardGrid > *, .cardGridTwo > *, .card { min-width: 0; }
+.card pre, .callout pre, .article pre { max-width: 100%; }
 @media (max-width: 600px) { .cardGridTwo { grid-template-columns: 1fr; } }
 .card { --c: var(--color-cyan); border: 1px solid color-mix(in srgb, var(--c) 38%, var(--color-line));
   border-radius: 12px; padding: 18px 20px; background: color-mix(in srgb, var(--c) 6%, var(--color-panel)); }

@@ -15,7 +15,14 @@ export default function MachineTranslationBanner({
   cta: string;
 }) {
   return (
-    <div className="relative z-40 border-b border-amber-300/60 bg-amber-50 px-4 py-2.5 text-center text-sm text-amber-900 dark:border-amber-500/30 dark:bg-amber-950/40 dark:text-amber-200">
+    <div
+      className="relative z-40 px-4 py-2.5 text-center text-sm"
+      style={{
+        background: "var(--mt-bg)",
+        borderBottom: "1px solid var(--mt-border)",
+        color: "var(--mt-text)",
+      }}
+    >
       <span aria-hidden className="mr-1.5">
         🤖
       </span>
@@ -25,7 +32,8 @@ export default function MachineTranslationBanner({
         href={ISSUE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-semibold underline decoration-amber-500/60 underline-offset-2 hover:decoration-amber-700"
+        className="font-semibold underline underline-offset-2"
+        style={{ color: "var(--mt-link)" }}
       >
         {cta}
       </a>

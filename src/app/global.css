@@ -92,6 +92,17 @@ body {
    The site is dark by design, but next-themes can wipe the `.dark` class off
    <html> on client-side navigation; without these at :root the page could
    flash light until a full reload. */
+:root {
+  /* Day is the default for the new look; dark pages set data-theme="dark". */
+  --sky-page-bg: #faf9f6;
+  --sky-page-fg: #14181d;
+}
+
+html[data-theme="dark"] {
+  --sky-page-bg: #0d1117;
+  --sky-page-fg: #e8eaed;
+}
+
 :root,
 .dark {
   /* !important so neither a dropped .dark class (next-themes wipes it on
@@ -128,6 +139,11 @@ body {
 html[data-theme="light"] {
   color-scheme: light;
 
+  /* The new-look page surface, read by PageShell/HomeHero so the first paint
+     is already the right mode (no wait for React). */
+  --sky-page-bg: #faf9f6;
+  --sky-page-fg: #14181d;
+
   --background: #faf9f6 !important;
   --foreground: #14181d !important;
   --color-fd-background: #faf9f6 !important;
@@ -162,12 +178,20 @@ html[data-theme="light"] body {
 /* Panels and code blocks are drawn as translucent white over black in the dark
    theme; on paper they need the opposite, so the two mixes are tokens too. */
 :root {
+  --mt-bg: rgba(120, 53, 15, 0.34);
+  --mt-border: rgba(245, 158, 11, 0.3);
+  --mt-text: #fcd9a4;
+  --mt-link: #fcd34d;
   --surface-raise: rgba(255, 255, 255, 0.04);
   --surface-sink: rgba(0, 0, 0, 0.35);
   --hairline-grid: rgba(255, 255, 255, 0.025);
 }
 
 html[data-theme="light"] {
+  --mt-bg: #fffbeb;
+  --mt-border: #f3d38a;
+  --mt-text: #6b4a10;
+  --mt-link: #8a5a0b;
   --surface-raise: rgba(20, 24, 29, 0.03);
   --surface-sink: rgba(20, 24, 29, 0.04);
   --hairline-grid: rgba(20, 24, 29, 0.04);
