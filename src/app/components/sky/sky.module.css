@@ -1,0 +1,27 @@
+/* The banner strip: the landing's sky, short. The ground band is the same
+ * 318x110 8-bit raster stretched full width (nearest neighbour), the luminary
+ * canvas sits over it, and a fade carries the strip into the page background. */
+
+.banner {
+  position: relative;
+  height: clamp(132px, 20vh, 190px);
+  overflow: hidden;
+}
+
+.ground,
+.luminary {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ground {
+  image-rendering: pixelated;
+}
+
+.fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}

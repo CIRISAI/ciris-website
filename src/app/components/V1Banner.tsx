@@ -1,16 +1,19 @@
 "use client";
 
 // Migration banner: the day/night hero landing is the new surface, and every
-// other page is the old look until the revamp reaches it. So the banner shows
-// everywhere EXCEPT the landing, and its link is the landing. Locale-aware.
+// page not yet revamped is the old look. The banner shows on those, and its
+// link is the landing. Locale-aware; hidden on every route in NEW_LOOK_ROUTES.
 
 import { usePathname } from "next/navigation";
 import { delocalizePath } from "@/i18n/config";
+import { NEW_LOOK_ROUTES } from "./newLookRoutes";
 
 export default function V1Banner() {
   const pathname = usePathname() || "/";
   const { locale, path } = delocalizePath(pathname);
-  if (path === "/") return null;
+  // Gone once a page carries the new chrome: it already links home from the
+  // brand, and the banner announced a change the page itself now shows.
+  if (NEW_LOOK_ROUTES.has(path)) return null;
 
   const home = locale === "en" ? "/" : `/${locale}`;
 

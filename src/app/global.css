@@ -117,6 +117,62 @@ body {
   background-color: #0d1117 !important;
 }
 
+/* ---------------------------------------------------------------------------
+   DAY MODE (2026-09-03). The site was dark-only; the redesign gives every page
+   the landing's day/night toggle, so the same tokens need a light set. The
+   shell writes `data-theme` on <html> (see components/sky/useSkyTheme.ts) and
+   these override the dark values above — attribute beats :root on specificity,
+   and the !important pairs match theirs. Surfaces come from the hero's day
+   palette; the accents are darkened only as far as legibility on paper needs.
+   --------------------------------------------------------------------------- */
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --background: #faf9f6 !important;
+  --foreground: #14181d !important;
+  --color-fd-background: #faf9f6 !important;
+  --color-fd-foreground: #14181d !important;
+  --color-fd-muted-foreground: #4b5563 !important;
+  --color-fd-primary: #4c43c9 !important;
+  --color-fd-secondary: #f1eee6 !important;
+  --color-fd-accent: #e7e3d8 !important;
+  --color-fd-card: #ffffff !important;
+  --color-fd-muted: #f1eee6 !important;
+  --color-fd-border: #e0dbcf !important;
+
+  --color-bg: #faf9f6;
+  --color-panel: #ffffff;
+  --color-line: #e0dbcf;
+  --color-text: #14181d;
+  --color-dim: #43506a;
+  --color-mute: #6b7280;
+  --color-teal: #2b7b7f;
+  --color-cyan: #0e7490;
+  --color-violet: #5b51b8;
+  --color-rose: #c02f63;
+  --color-brass: #8a6a26;
+  --color-ok: #2f8f52;
+}
+
+html[data-theme="light"] body {
+  background-color: #faf9f6 !important;
+  color: #14181d;
+}
+
+/* Panels and code blocks are drawn as translucent white over black in the dark
+   theme; on paper they need the opposite, so the two mixes are tokens too. */
+:root {
+  --surface-raise: rgba(255, 255, 255, 0.04);
+  --surface-sink: rgba(0, 0, 0, 0.35);
+  --hairline-grid: rgba(255, 255, 255, 0.025);
+}
+
+html[data-theme="light"] {
+  --surface-raise: rgba(20, 24, 29, 0.03);
+  --surface-sink: rgba(20, 24, 29, 0.04);
+  --hairline-grid: rgba(20, 24, 29, 0.04);
+}
+
 @utility container {
   margin-inline: auto;
 }

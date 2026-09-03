@@ -15,7 +15,8 @@
 
 import { useState } from "react";
 import type { Dictionary } from "@/i18n/dictionaries";
-import ContentShell, { contentStyles as s } from "@/app/components/v2/ContentShell";
+import PageShell from "@/app/components/PageShell";
+import { contentStyles as s } from "@/app/components/v2/ContentShell";
 import StoreBadges from "@/app/components/graphics/StoreBadges";
 
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
@@ -26,7 +27,7 @@ const PRE_STYLE: React.CSSProperties = {
   overflowX: "auto",
   borderRadius: 10,
   border: "1px solid var(--color-line)",
-  background: "rgba(0,0,0,0.35)",
+  background: "var(--surface-sink)",
   padding: "14px 16px",
   margin: "0 0 6px",
   fontFamily: "ui-monospace, monospace",
@@ -64,7 +65,7 @@ function CodeBlock({
           top: 8,
           borderRadius: 8,
           border: "1px solid var(--color-line)",
-          background: "rgba(255,255,255,0.06)",
+          background: "var(--surface-raise)",
           color: "var(--color-dim)",
           padding: "4px 10px",
           fontFamily: "ui-monospace, monospace",
@@ -110,7 +111,8 @@ export default function InstallV2({ t, locale }: { t: Dictionary; locale: string
   const i = t.install;
 
   return (
-    <ContentShell
+    <PageShell
+      t={t}
       locale={locale}
       accent="cyan"
       kicker={i.heroPara2}
@@ -259,6 +261,6 @@ export default function InstallV2({ t, locale }: { t: Dictionary; locale: string
           </p>
         </div>
       </section>
-    </ContentShell>
+    </PageShell>
   );
 }
