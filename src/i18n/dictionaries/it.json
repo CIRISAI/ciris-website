@@ -479,8 +479,7 @@
       "body": "Questa è una responsabilità che opera mentre l'agente lavora, non una fase di addestramento o un documento di policy.<br />Meccanismi che agiscono, tengono registri e affidano le decisioni difficili alle persone, a runtime.",
       "safetyBtn": "Funzioni di sicurezza",
       "compareBtn": "Confronta gli approcci",
-      "coherenceBtn": "Ratchet di coerenza",
-      "scoringBtn": "Punteggio CIRIS"
+      "coherenceBtn": "Ratchet di coerenza"
     },
     "consciencePipeline": {
       "label": "La pipeline della coscienza",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "Una superintelligenza etica decentralizzata: la tesi del sistema, l'architettura e le scommesse in gioco.",
       "ctaPara": "Non devi risolvere la sicurezza dell'AI un agente alla volta. La risolvi per il livello di supervisione, e lasci che la struttura porti il resto.",
       "ctaBtn1": "Il lato della pressione",
-      "ctaBtn2": "Guarda il punteggio in diretta",
       "ctaBtn3": "Partecipa su GitHub"
     },
     "intro": "Quello che CIRIS sta costruendo non è un'unica AI. È una rete di agenti AI che si controllano a vicenda, tengono un registro di ogni scelta e formano insieme una sorta di mente collettiva. La mente collettiva funziona solo perché ogni sua parte può essere vista e verificata.",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS non afferma di aver risolto l'allineamento. Sta costruendo l'infrastruttura di tracciamento necessaria per misurare il comportamento rilevante per l'allineamento in modo aperto.",
     "corpusSectionEyebrow": "Dimensionalità Effettiva in Produzione",
     "corpusSectionH2": "Il corpus attuale mostra già strutture di campo distinte.",
-    "corpusSectionDashLink": "Apri la dashboard in tempo reale →",
     "corpusSectionBody": "Le sovrapposizioni di percorsi aggregati dal corpus di tracce attuale mostrano una struttura comportamentale stabile in uno spazio di punteggi condiviso. Ally mostra un corridoio di completamento maturo, Scout mostra un confine di rifiuto modellato dall'esposizione avversariale pubblica, e Datum fornisce una baseline sparsa e compatta.",
     "imageAltOverlays": "Tre schede affiancate che mostrano le sovrapposizioni aggregate dei percorsi degli agenti nello spazio di punteggi CIRIS per Ally, Scout e Datum, con note sui pattern di completamento, esitazione e rifiuto.",
     "imageCaption": "Sovrapposizioni di percorsi aggregati dal corpus di tracce attuale. Ally mostra un corridoio di completamento maturo, Scout mostra un angolo di rifiuto netto sotto pressione avversariale pubblica, e Datum fornisce una baseline sparsa.",

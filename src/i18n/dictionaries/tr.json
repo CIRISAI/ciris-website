@@ -479,8 +479,7 @@
       "body": "Bu, bir eğitim adımı veya politika belgesi değil, ajan çalışırken yürütülen bir hesap verebilirliktir.<br />Çalışma zamanında eyleme geçen, kayıt tutan ve zor kararları insanlara devreden mekanizmalar.",
       "safetyBtn": "Güvenlik Özellikleri",
       "compareBtn": "Yaklaşımları Karşılaştır",
-      "coherenceBtn": "Tutarlılık Mandali",
-      "scoringBtn": "CIRIS Puanlama"
+      "coherenceBtn": "Tutarlılık Mandali"
     },
     "consciencePipeline": {
       "label": "Vicdan Hattı",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "Merkezi olmayan etik bir üst zeka: sistem iddiası, mimari ve yapılan bahisler.",
       "ctaPara": "Yapay zeka güvenliğini ajan ajan çözmeniz gerekmiyor. Denetim katmanı için çözüyorsunuz ve yapının geri kalanı bunu taşıyor.",
       "ctaBtn1": "Baskı tarafı",
-      "ctaBtn2": "Canlı puanlamaya bakın",
       "ctaBtn3": "GitHub'da katılın"
     },
     "intro": "CIRIS'in inşa ettiği şey tek bir yapay zeka değil. Birbirini gözlemleyen, her seçimin kaydını tutan ve birlikte bir tür grup zihni oluşturan bir yapay zeka ajanları ağıdır. Grup zihni yalnızca her parçasının görülebilir ve denetlenebilir olması sayesinde işler.",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS, hizalamayı çözdüğünü iddia etmiyor. Hizalama ile ilgili davranışı açık biçimde ölçmek için gereken iz altyapısını inşa ediyor.",
     "corpusSectionEyebrow": "Üretimdeki Etkin Boyutsallık",
     "corpusSectionH2": "Mevcut korpus zaten belirgin alan yapıları gösteriyor.",
-    "corpusSectionDashLink": "Canlı paneli aç →",
     "corpusSectionBody": "Mevcut iz korpusundan alınan toplu yol örtüşmeleri, paylaşılan bir skor uzayında kararlı davranışsal yapı ortaya koyuyor. Ally olgun bir tamamlama koridoru gösteriyor, Scout kamuya açık düşmanca maruziyetle şekillenmiş bir ret sınırı gösteriyor ve Datum seyrek bir temel referans noktası sağlıyor.",
     "imageAltOverlays": "CIRIS skor uzayında Ally, Scout ve Datum için tamamlama, duraksamalar ve ret örüntüleri hakkında notlar içeren toplu ajan yolu örtüşmelerini gösteren üç yan yana kart.",
     "imageCaption": "Mevcut iz korpusundan toplu yol örtüşmeleri. Ally olgun bir tamamlama koridoru, Scout kamuya açık düşmanca baskı altında keskin bir ret köşesi gösteriyor ve Datum seyrek bir temel referans sağlıyor.",

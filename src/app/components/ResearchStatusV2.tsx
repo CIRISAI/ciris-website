@@ -204,9 +204,6 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
         <p className={s.sectionLabel}>{rs.corpusSectionEyebrow}</p>
         <h2 className={s.h2}>{rs.corpusSectionH2}</h2>
         <p className={s.paragraph}>{rs.corpusSectionBody}</p>
-        <p className={s.paragraph}>
-          <Link href={lh("/ciris-scoring")}>{rs.corpusSectionDashLink}</Link>
-        </p>
         <p className={s.footnote}>{rs.imageCaption}</p>
         <div className={s.cardGrid}>
           {agentSummaries.map((agent) => (
@@ -278,7 +275,7 @@ export default function ResearchStatusV2({ t, locale }: { t: Dictionary; locale:
       {/* CTAs preserved from the original hero */}
       <section className={s.cta}>
         <div className={s.ctaRow}>
-          <Link href={lh("/ciris-scoring")} className={`${s.btn} ${s.btnP}`}>
+          <Link href={lh("/explore-a-trace")} className={`${s.btn} ${s.btnP}`}>
             {rs.heroCtaTrace}
           </Link>
           <a

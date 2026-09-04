@@ -30,6 +30,44 @@ const CIRIS_LETTER_LABELS: Record<string, { label: string; taskName: string }> =
   S: { label: "Signalling Gratitude", taskName: "EXPRESS_GRATITUDE" },
 };
 
+// The five wakeup-ritual traces, served as static JSON from public/traces.
+// The live lens repository that briefly replaced these was taken down, so the
+// pages read the committed traces again: they are real signed traces, they
+// never 404, and they render the same because the file format is the shape
+// TraceData describes.
+export const CIRIS_TRACE_FILES: Record<string, { initial: string; followUp: string; taskName: string; label: string }> = {
+  C: {
+    initial: "/traces/trace_VERIFY_IDENTITY_7035b7ee.json",
+    followUp: "/traces/trace_VERIFY_IDENTITY_52df1774.json",
+    taskName: "VERIFY_IDENTITY",
+    label: "Core Identity",
+  },
+  I_integrity: {
+    initial: "/traces/trace_VALIDATE_INTEGRITY_e6787ea0.json",
+    followUp: "/traces/trace_VALIDATE_INTEGRITY_7396348b.json",
+    taskName: "VALIDATE_INTEGRITY",
+    label: "Integrity",
+  },
+  R: {
+    initial: "/traces/trace_EVALUATE_RESILIENCE_45de15ef.json",
+    followUp: "/traces/trace_EVALUATE_RESILIENCE_36279c9e.json",
+    taskName: "EVALUATE_RESILIENCE",
+    label: "Resilience",
+  },
+  I_incompleteness: {
+    initial: "/traces/trace_ACCEPT_INCOMPLETENESS_9495c03a.json",
+    followUp: "/traces/trace_ACCEPT_INCOMPLETENESS_28f3895b.json",
+    taskName: "ACCEPT_INCOMPLETENESS",
+    label: "Incompleteness",
+  },
+  S: {
+    initial: "/traces/trace_EXPRESS_GRATITUDE_9bc409cf.json",
+    followUp: "/traces/trace_EXPRESS_GRATITUDE_763e85d5.json",
+    taskName: "EXPRESS_GRATITUDE",
+    label: "Signalling Gratitude",
+  },
+};
+
 const COMPONENT_ICONS: Record<string, string> = {
   observation: "eye",
   context: "clipboard",
@@ -2363,9 +2401,11 @@ export default function TraceExplorer({ trace, compact = false, defaultOpenIndex
     const loadTrace = async () => {
       setLoading(true);
       try {
-        // Static file loading removed - traces now loaded via API
-        console.warn("TraceExplorer: No trace prop provided, static files no longer supported");
-        setTraceData(null);
+        const fileInfo = CIRIS_TRACE_FILES[selectedLetter];
+        const filePath = selectedThought === "initial" ? fileInfo.initial : fileInfo.followUp;
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error(`Failed to load trace: ${response.status}`);
+        setTraceData(await response.json());
       } catch (error) {
         console.error("Failed to load trace:", error);
         setTraceData(null);

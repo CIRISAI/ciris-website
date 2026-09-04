@@ -479,8 +479,7 @@
       "body": "Đây là trách nhiệm giải trình hoạt động trong khi tác nhân làm việc, thay vì một bước huấn luyện hay một tài liệu chính sách.<br />Các cơ chế thực thi, ghi lại nhật ký và chuyển giao các quyết định khó cho con người ngay trong lúc chạy.",
       "safetyBtn": "Tính Năng An Toàn",
       "compareBtn": "So Sánh Các Phương Pháp",
-      "coherenceBtn": "Cơ chế siết chặt tính nhất quán",
-      "scoringBtn": "CIRIS Chấm điểm"
+      "coherenceBtn": "Cơ chế siết chặt tính nhất quán"
     },
     "consciencePipeline": {
       "label": "Đường Ống lương tâm",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "Một siêu trí tuệ đạo đức phi tập trung: tuyên bố hệ thống, kiến trúc và những đặt cược đang được thực hiện.",
       "ctaPara": "Bạn không cần giải quyết an toàn AI từng tác nhân một. Bạn giải quyết cho tầng giám sát, và để cấu trúc đảm nhận phần còn lại.",
       "ctaBtn1": "Phía áp lực",
-      "ctaBtn2": "Xem điểm số trực tiếp",
       "ctaBtn3": "Tham gia trên GitHub"
     },
     "intro": "Những gì CIRIS đang xây dựng không phải là một AI duy nhất. Đó là một mạng lưới tác nhân AI theo dõi lẫn nhau, ghi lại mọi lựa chọn và cùng nhau tạo thành một loại trí tuệ tập thể. Trí tuệ tập thể chỉ hoạt động vì mọi phần của nó đều có thể được nhìn thấy và kiểm tra.",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS không tuyên bố đã giải quyết được vấn đề căn chỉnh. CIRIS đang xây dựng cơ sở hạ tầng dấu vết cần thiết để đo lường hành vi liên quan đến căn chỉnh một cách công khai.",
     "corpusSectionEyebrow": "Chiều Hữu Hiệu trong Sản xuất",
     "corpusSectionH2": "Kho dữ liệu hiện tại đã cho thấy các cấu trúc trường riêng biệt.",
-    "corpusSectionDashLink": "Mở bảng điều khiển trực tiếp →",
     "corpusSectionBody": "Các lớp chồng lộ trình tổng hợp từ kho dấu vết hiện tại cho thấy cấu trúc hành vi ổn định trong một không gian điểm chung. Ally cho thấy một hành lang hoàn thành trưởng thành, Scout cho thấy ranh giới từ chối được định hình bởi áp lực đối kháng công khai, và Datum cung cấp đường cơ sở thưa thớt nhỏ gọn.",
     "imageAltOverlays": "Ba thẻ cạnh nhau hiển thị các lớp chồng lộ trình tác nhân tổng hợp trong không gian điểm CIRIS cho Ally, Scout và Datum, với các ghi chú về mẫu hoàn thành, do dự và từ chối.",
     "imageCaption": "Các lớp chồng lộ trình tổng hợp từ kho dấu vết hiện tại. Ally cho thấy một hành lang hoàn thành trưởng thành, Scout cho thấy một góc từ chối sắc nét dưới áp lực đối kháng công khai, và Datum cung cấp đường cơ sở thưa thớt.",

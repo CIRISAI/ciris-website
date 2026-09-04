@@ -69,12 +69,6 @@ export default function Shell({
                 The pressure side
               </a>
               <a
-                href="/ciris-scoring"
-                className="inline-block rounded-lg border-2 border-brand-primary px-8 py-4 text-lg font-semibold text-brand-primary transition-colors hover:bg-brand-primary/10"
-              >
-                See it scored live
-              </a>
-              <a
                 href="https://github.com/CIRISAI/CIRISAgent"
                 target="_blank"
                 rel="noopener noreferrer"

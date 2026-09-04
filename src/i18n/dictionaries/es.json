@@ -531,8 +531,7 @@
       "body": "Esta es la responsabilidad que opera mientras el agente trabaja, no un paso del entrenamiento ni un documento de políticas.<br />Mecanismos que actúan, mantienen registros y entregan las decisiones difíciles a personas, en tiempo de ejecución.",
       "safetyBtn": "Características de seguridad",
       "compareBtn": "Comparar enfoques",
-      "coherenceBtn": "Trinquete de Coherencia",
-      "scoringBtn": "CIRIS Scoring"
+      "coherenceBtn": "Trinquete de Coherencia"
     },
     "consciencePipeline": {
       "label": "Pipeline de conciencia",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "Una superinteligencia ética descentralizada: la afirmación del sistema, la arquitectura y las apuestas que se hacen.",
       "ctaPara": "No tienes que resolver la seguridad de la IA un agente a la vez. La resuelves para la capa de supervisión y dejas que la estructura lleve el resto.",
       "ctaBtn1": "El lado de la presión",
-      "ctaBtn2": "Verlo puntuado en vivo",
       "ctaBtn3": "Participar en GitHub"
     },
     "intro": "Lo que CIRIS está construyendo no es una sola IA. Es una red de agentes de IA que se observan mutuamente, guardan registros de cada elección y forman juntos una especie de mente colectiva. La mente colectiva solo funciona porque cada parte de ella puede verse y verificarse.",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS no afirma haber resuelto la alineación. Está construyendo la infraestructura de trazas necesaria para medir el comportamiento relevante para la alineación de forma abierta.",
     "corpusSectionEyebrow": "Dimensionalidad efectiva en producción",
     "corpusSectionH2": "El corpus actual ya muestra estructuras de campo diferenciadas.",
-    "corpusSectionDashLink": "Abrir el panel en vivo →",
     "corpusSectionBody": "Las superposiciones de rutas agregadas del corpus de trazas actual muestran una estructura de comportamiento estable en un espacio de puntuaciones compartido. Ally muestra un corredor de completación maduro, Scout muestra un límite de rechazo moldeado por la exposición adversarial pública, y Datum ofrece una línea de base dispersa y compacta.",
     "imageAltOverlays": "Tres tarjetas lado a lado que muestran superposiciones de rutas de agentes agregadas en el espacio de puntuaciones de CIRIS para Ally, Scout y Datum, con notas sobre patrones de completación, duda y rechazo.",
     "imageCaption": "Superposiciones de rutas agregadas del corpus de trazas actual. Ally muestra un corredor de completación maduro, Scout muestra un límite de rechazo pronunciado bajo presión adversarial pública, y Datum ofrece una línea de base dispersa.",

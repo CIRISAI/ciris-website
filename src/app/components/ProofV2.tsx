@@ -154,7 +154,7 @@ export default function ProofV2({ t, locale }: { t: Dictionary; locale: string }
         <p className={s.sectionLabel}>{rs.classTransparencyTitle}</p>
         <h2 className={s.h2}>{rs.classTransparencyBlurb}</h2>
         <p className={s.paragraph}>
-          <Link href={lh("/ciris-scoring")}>{rs.heroCtaTrace} →</Link>
+          <Link href={lh("/explore-a-trace")}>{rs.heroCtaTrace} →</Link>
         </p>
         <p className={s.paragraph}>
           <a href="https://huggingface.co/datasets/CIRISAI/reasoning-traces" target="_blank" rel="noopener noreferrer">

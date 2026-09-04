@@ -479,8 +479,7 @@
       "body": "Esta é uma responsabilidade que funciona enquanto o agente trabalha, em vez de uma etapa de treinamento ou um documento de política.<br />Mecanismos que agem, mantêm registros e entregam decisões difíceis para pessoas, em tempo de execução.",
       "safetyBtn": "Recursos de Segurança",
       "compareBtn": "Comparar Abordagens",
-      "coherenceBtn": "Catraca de Coerência",
-      "scoringBtn": "CIRIS Pontuação"
+      "coherenceBtn": "Catraca de Coerência"
     },
     "consciencePipeline": {
       "label": "O pipeline de consciência",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "Uma superinteligência ética descentralizada: a afirmação do sistema, a arquitetura e as apostas feitas.",
       "ctaPara": "Você não precisa resolver a segurança da IA um agente de cada vez. Você resolve para a camada de supervisão e deixa a estrutura carregar o resto.",
       "ctaBtn1": "O lado da pressão",
-      "ctaBtn2": "Ver pontuado ao vivo",
       "ctaBtn3": "Participar no GitHub"
     },
     "intro": "O que o CIRIS está construindo não é uma única IA. É uma rede de agentes de IA que se observam mutuamente, guardam registros de cada escolha e formam juntos uma espécie de mente coletiva. A mente coletiva só funciona porque cada parte dela pode ser vista e verificada.",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS não afirma ter resolvido o alinhamento. Está construindo a infraestrutura de traços necessária para medir comportamento relevante ao alinhamento de forma aberta.",
     "corpusSectionEyebrow": "Dimensionalidade Efetiva em Produção",
     "corpusSectionH2": "O corpus atual já mostra estruturas de campo distintas.",
-    "corpusSectionDashLink": "Abrir o painel ao vivo →",
     "corpusSectionBody": "Sobreposições de caminhos agregados do corpus de traços atual mostram estrutura de comportamento estável em um espaço de pontuações compartilhado. Ally mostra um corredor de conclusão maduro, Scout mostra um limite de recusa moldado por exposição adversarial pública, e Datum fornece uma linha de base esparsa e compacta.",
     "imageAltOverlays": "Três cartões lado a lado mostrando sobreposições de caminhos de agentes agregados no espaço de pontuações do CIRIS para Ally, Scout e Datum, com notas sobre padrões de conclusão, hesitação e recusa.",
     "imageCaption": "Sobreposições de caminhos agregados do corpus de traços atual. Ally mostra um corredor de conclusão maduro, Scout mostra um canto de recusa acentuado sob pressão adversarial pública, e Datum fornece uma linha de base esparsa.",

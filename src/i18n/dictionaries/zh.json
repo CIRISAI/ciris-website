@@ -479,8 +479,7 @@
       "body": "这是在智能体工作时运行的问责机制，而非训练步骤或政策文件。<br />在运行时执行、记录并将困难决策交给人的机制。",
       "safetyBtn": "安全功能",
       "compareBtn": "方法对比",
-      "coherenceBtn": "连贯性棘轮",
-      "scoringBtn": "CIRIS 评分"
+      "coherenceBtn": "连贯性棘轮"
     },
     "consciencePipeline": {
       "label": "良知流水线",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "一个去中心化的伦理超级智能：系统主张、架构设计，以及正在押注的方向。",
       "ctaPara": "您不必一个智能体一个智能体地解决AI安全问题。在监督层面解决它，让结构承担其余的工作。",
       "ctaBtn1": "压力侧",
-      "ctaBtn2": "实时评分",
       "ctaBtn3": "在GitHub上参与"
     },
     "intro": "CIRIS正在构建的不是单一AI，而是一个相互监督、记录每项决策的AI智能体网络，共同形成某种集体思维。集体思维之所以有效，是因为其每个部分都可以被查看和核查。",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS 并不声称已解决对齐问题，而是在构建所需的追踪基础设施，以便在公开环境中测量与对齐相关的行为。",
     "corpusSectionEyebrow": "生产中的有效维度",
     "corpusSectionH2": "当前语料库已呈现出清晰的场结构。",
-    "corpusSectionDashLink": "打开实时仪表盘 →",
     "corpusSectionBody": "当前追踪语料库的聚合路径叠加图，在共享评分空间中呈现出稳定的行为结构。Ally 呈现出成熟的完成走廊，Scout 呈现出受公开对抗性暴露塑造的拒绝边界，Datum 提供了紧凑的稀疏基线。",
     "imageAltOverlays": "三张并排卡片，展示 CIRIS 评分空间中 Ally、Scout 和 Datum 三个智能体的聚合路径叠加图，并附有关于完成、犹豫和拒绝模式的说明。",
     "imageCaption": "当前追踪语料库的聚合路径叠加图。Ally 呈现出成熟的完成走廊，Scout 在公开对抗性压力下呈现出尖锐的拒绝拐角，Datum 提供了稀疏基线。",

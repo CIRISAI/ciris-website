@@ -593,9 +593,6 @@ export default function HowItWorksV2({ t, locale }: { t: Dictionary; locale: str
           <Link href={lh("/coherence-ratchet")} className={`${s.btn} ${s.btnS}`}>
             {hiw.cta.coherenceBtn}
           </Link>
-          <Link href={lh("/ciris-scoring")} className={`${s.btn} ${s.btnS}`}>
-            {hiw.cta.scoringBtn}
-          </Link>
         </div>
       </section>
     </PageShell>

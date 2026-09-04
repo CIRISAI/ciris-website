@@ -537,8 +537,7 @@
       "body": "This is accountability that runs while the agent works, rather than a training step or a policy document.<br />Mechanisms that act, keep records, and hand hard calls to people, at runtime.",
       "safetyBtn": "Safety Features",
       "compareBtn": "Compare Approaches",
-      "coherenceBtn": "Coherence Ratchet",
-      "scoringBtn": "CIRIS Scoring"
+      "coherenceBtn": "Coherence Ratchet"
     }
   },
   "install": {
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "A decentralized ethical superintelligence: the claim the system makes, the architecture, and the bets being made.",
       "ctaPara": "You do not have to solve AI safety one agent at a time. You solve it for the supervision layer, and let the structure carry the rest.",
       "ctaBtn1": "The pressure side",
-      "ctaBtn2": "See it scored live",
       "ctaBtn3": "Engage on GitHub"
     },
     "intro": "What CIRIS is building is not a single AI. It is a network of AI agents that watch each other, keep records of every choice, and together form a kind of shared mind. The shared mind only works because every part of it can be seen and checked.",
@@ -1608,7 +1606,7 @@
     "heroEyebrow": "Crowd-Sourcing Alignment Research",
     "heroH1": "CIRIS is building an open trace commons for alignment research.",
     "heroPara": "We give away a free AI app. With your okay, it records the shape of how it reasoned, never your private words. Those records become a public map that researchers can study to learn what keeps AI honest as it scales.",
-    "heroCtaTrace": "View the live trace compendium",
+    "heroCtaTrace": "Explore a decision trace",
     "heroCtaLens": "View Lens source",
     "corpusLabel": "What the current corpus already shows",
     "corpusItem1": "Aggregate traces reveal stable behavioral structure.",
@@ -1703,8 +1701,8 @@
     "whyTracesBody": "Benchmarks are narrow and curated. Traces are continuous records of behavior under real tasks. At scale, they reveal structure that isolated demos and anecdotes cannot.",
     "whySchemaTitle": "Why the schema matters",
     "whySchemaBody": "CIRIS uses privacy-preserving trace schemas that capture the shape of reasoning rather than the private content of reasoning. That keeps the research useful without turning the system into a pile of raw transcripts.",
-    "whyCompendiumTitle": "Why the live compendium matters",
-    "whyCompendiumBody": "<a href=\"/ciris-scoring\" class=\"text-brand-primary hover:underline\">CIRIS Scoring</a> is the public window into the live trace compendium. It shows how the corpus is accumulating and where behavior is becoming legible.",
+    "whyCompendiumTitle": "Why the trace corpus matters",
+    "whyCompendiumBody": "<a href=\"/explore-a-trace\" class=\"text-brand-primary hover:underline\">Explore a trace</a> opens a signed reasoning trace end to end, one stage at a time. It shows what the corpus is made of and where behavior becomes legible.",
     "privacyEyebrow": "Privacy-preserving tracing",
     "privacyH2": "The thesis is that reasoning has a shape we can measure as everything else scales.",
     "privacyBody": "The research bet is not that we can read every private thought. The bet is that standardized ethical traces can preserve enough trajectory shape to study how agents complete, hesitate, defer, override, and refuse as intelligence, context, and data points scale upward.",
@@ -1718,7 +1716,6 @@
     "publicFramingBody": "CIRIS is not claiming to have solved alignment. It is building the trace infrastructure needed to measure alignment-relevant behavior in the open.",
     "corpusSectionEyebrow": "Effective Dimensionality in Production",
     "corpusSectionH2": "The current corpus already shows distinct field structures.",
-    "corpusSectionDashLink": "Open the live dashboard →",
     "corpusSectionBody": "Aggregate path overlays from the current trace corpus show stable behavioral structure in a shared score space. Ally shows a mature completion corridor, Scout shows a refusal boundary shaped by public adversarial exposure, and Datum provides a compact sparse baseline.",
     "imageAltOverlays": "Three side-by-side cards showing aggregate agent path overlays in CIRIS score space for Ally, Scout, and Datum, with notes about completion, hesitation, and refusal patterns.",
     "imageCaption": "Aggregate path overlays from the current trace corpus. Ally shows a mature completion corridor, Scout shows a sharp refusal corner under public adversarial pressure, and Datum provides a sparse baseline.",

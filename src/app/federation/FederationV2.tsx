@@ -150,9 +150,6 @@ export default function FederationV2({ t, locale }: { t: Dictionary; locale: str
           <Link href={lh("/coherence-ratchet")} className={`${s.btn} ${s.btnP}`}>
             {sh.ctaBtn1}
           </Link>
-          <Link href={lh("/ciris-scoring")} className={`${s.btn} ${s.btnS}`}>
-            {sh.ctaBtn2}
-          </Link>
           <a
             href="https://github.com/CIRISAI/CIRISAgent"
             target="_blank"

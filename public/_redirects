@@ -13,6 +13,12 @@
 # and in downstream vendored copies).
 /ciris-constitution-0.4.pdf  /ciris_constitution.pdf  301
 
+# The live scoring dashboard is retired with the lens serving that fed it;
+# the research page carries what remains of that story.
+/ciris-scoring       /research-status         301
+/ciris-scoring/*     /research-status         301
+/:locale/ciris-scoring  /:locale/research-status  301
+
 # The legacy Accord/Constitution reader (/sections/**) is retired; the
 # canonical document lives at /constitution (and in the CIRISConstitution
 # repo). Every reader URL, in every locale, forwards there.

@@ -479,8 +479,7 @@
       "body": "C'est un dispositif de responsabilisation qui s'exécute pendant que l'agent travaille, et non une étape d'entraînement ou une politique.<br />Des mécanismes qui agissent, gardent des traces et transmettent les décisions difficiles à des personnes, en cours d'exécution.",
       "safetyBtn": "Fonctionnalites de Securite",
       "compareBtn": "Comparer les Approches",
-      "coherenceBtn": "Cliquet de Cohérence",
-      "scoringBtn": "CIRIS Évaluation"
+      "coherenceBtn": "Cliquet de Cohérence"
     },
     "consciencePipeline": {
       "label": "Le pipeline de conscience",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "Une superintelligence éthique décentralisée : l'affirmation du système, l'architecture et les paris qui sont faits.",
       "ctaPara": "Vous n'avez pas à résoudre la sécurité de l'IA un agent à la fois. Vous la résolvez pour la couche de supervision, et vous laissez la structure porter le reste.",
       "ctaBtn1": "Le côté pression",
-      "ctaBtn2": "Voir en direct le score",
       "ctaBtn3": "Participer sur GitHub"
     },
     "intro": "Ce que CIRIS construit n'est pas une IA unique. C'est un réseau d'agents IA qui se surveillent mutuellement, conservent l'historique de chaque choix et forment ensemble une sorte d'intelligence collective. Cette intelligence collective ne fonctionne que parce que chaque partie peut être vue et vérifiée.",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS ne prétend pas avoir résolu l'alignement. Elle construit l'infrastructure de traces nécessaire pour mesurer le comportement pertinent à l'alignement de manière ouverte.",
     "corpusSectionEyebrow": "Dimensionnalité effective en production",
     "corpusSectionH2": "Le corpus actuel montre déjà des structures de champ distinctes.",
-    "corpusSectionDashLink": "Ouvrir le tableau de bord en direct →",
     "corpusSectionBody": "Les superpositions de trajectoires agrégées du corpus de traces actuel révèlent une structure comportementale stable dans un espace de scores partagé. Ally montre un corridor d'achèvement mature, Scout montre une frontière de refus façonnée par l'exposition adversariale publique, et Datum fournit une base de référence clairsemée et compacte.",
     "imageAltOverlays": "Trois cartes côte à côte montrant les superpositions de trajectoires agrégées des agents dans l'espace de scores CIRIS pour Ally, Scout et Datum, avec des notes sur les schémas d'achèvement, d'hésitation et de refus.",
     "imageCaption": "Superpositions de trajectoires agrégées du corpus de traces actuel. Ally montre un corridor d'achèvement mature, Scout montre un coin de refus marqué sous la pression adversariale publique, et Datum fournit une base de référence clairsemée.",

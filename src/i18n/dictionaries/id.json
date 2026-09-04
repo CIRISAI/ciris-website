@@ -479,8 +479,7 @@
       "body": "Ini adalah akuntabilitas yang berjalan selagi agen bekerja, bukan langkah pelatihan atau dokumen kebijakan.<br />Mekanisme yang bertindak, menyimpan catatan, dan menyerahkan keputusan sulit kepada manusia, saat runtime.",
       "safetyBtn": "Fitur Keamanan",
       "compareBtn": "Bandingkan Pendekatan",
-      "coherenceBtn": "Ratchet Koherensi",
-      "scoringBtn": "CIRIS Penilaian"
+      "coherenceBtn": "Ratchet Koherensi"
     },
     "consciencePipeline": {
       "label": "Pipa nurani",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "Superkecerdasan etis yang terdesentralisasi: klaim sistem, arsitektur, dan taruhan yang sedang dibuat.",
       "ctaPara": "Anda tidak harus memecahkan keamanan AI satu agen dalam satu waktu. Anda memecahkannya untuk lapisan pengawasan, dan biarkan strukturnya yang menanggung sisanya.",
       "ctaBtn1": "Sisi tekanan",
-      "ctaBtn2": "Lihat skornya secara langsung",
       "ctaBtn3": "Berkontribusi di GitHub"
     },
     "intro": "Yang sedang dibangun CIRIS bukan satu AI tunggal. Ini adalah jaringan agen AI yang saling mengawasi, menyimpan catatan setiap pilihan, dan bersama-sama membentuk semacam pikiran kolektif. Pikiran kolektif itu hanya berfungsi karena setiap bagiannya dapat dilihat dan diperiksa.",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS tidak mengklaim telah memecahkan masalah keselarasan. CIRIS sedang membangun infrastruktur jejak yang diperlukan untuk mengukur perilaku yang relevan dengan keselarasan secara terbuka.",
     "corpusSectionEyebrow": "Dimensionalitas Efektif dalam Produksi",
     "corpusSectionH2": "Korpus saat ini sudah menunjukkan struktur medan yang berbeda.",
-    "corpusSectionDashLink": "Buka dasbor langsung →",
     "corpusSectionBody": "Hamparan jalur agregat dari korpus jejak saat ini menunjukkan struktur perilaku yang stabil dalam ruang skor bersama. Ally menunjukkan koridor penyelesaian yang matang, Scout menunjukkan batas penolakan yang dibentuk oleh paparan adversarial publik, dan Datum menyediakan garis dasar yang kompak dan jarang.",
     "imageAltOverlays": "Tiga kartu berdampingan yang menampilkan hamparan jalur agen agregat dalam ruang skor CIRIS untuk Ally, Scout, dan Datum, dengan catatan tentang pola penyelesaian, keraguan, dan penolakan.",
     "imageCaption": "Hamparan jalur agregat dari korpus jejak saat ini. Ally menunjukkan koridor penyelesaian yang matang, Scout menunjukkan sudut penolakan yang tajam di bawah tekanan adversarial publik, dan Datum menyediakan garis dasar yang jarang.",

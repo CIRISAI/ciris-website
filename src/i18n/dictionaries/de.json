@@ -479,8 +479,7 @@
       "body": "Das ist Rechenschaftspflicht, die während der Arbeit des Agenten läuft, statt eines Trainingsschritts oder eines Richtliniendokuments.<br />Mechanismen, die zur Laufzeit handeln, Protokolle führen und schwierige Entscheidungen an Menschen übergeben.",
       "safetyBtn": "Sicherheitsfunktionen",
       "compareBtn": "Ansätze vergleichen",
-      "coherenceBtn": "Kohärenz-Ratsche",
-      "scoringBtn": "CIRIS Bewertung"
+      "coherenceBtn": "Kohärenz-Ratsche"
     },
     "consciencePipeline": {
       "label": "Die Gewissens-Pipeline",
@@ -1439,7 +1438,6 @@
       "subtitleAdvanced": "Eine dezentrale ethische Superintelligenz: die Systembehauptung, die Architektur und die Wetten, die dabei gemacht werden.",
       "ctaPara": "Sie müssen KI-Sicherheit nicht Agent für Agent lösen. Sie lösen sie für die Aufsichtsebene und lassen die Struktur den Rest tragen.",
       "ctaBtn1": "Die Druckseite",
-      "ctaBtn2": "Sehen, wie es live bewertet wird",
       "ctaBtn3": "Auf GitHub mitmachen"
     },
     "intro": "Was CIRIS aufbaut, ist keine einzelne KI. Es ist ein Netzwerk von KI-Agenten, die sich gegenseitig beobachten, jede Entscheidung festhalten und gemeinsam eine Art Gruppenverstand bilden. Dieser Gruppenverstand funktioniert nur, weil jeder Teil davon eingesehen und überprüft werden kann.",
@@ -1646,7 +1644,6 @@
     "publicFramingBody": "CIRIS behauptet nicht, Alignment gelöst zu haben. Es baut die Trace-Infrastruktur auf, die nötig ist, um alignment-relevantes Verhalten in der Öffentlichkeit zu messen.",
     "corpusSectionEyebrow": "Effektive Dimensionalität in der Produktion",
     "corpusSectionH2": "Der aktuelle Korpus zeigt bereits deutliche Feldstrukturen.",
-    "corpusSectionDashLink": "Live-Dashboard öffnen →",
     "corpusSectionBody": "Aggregierte Pfadüberlagerungen aus dem aktuellen Trace-Korpus zeigen eine stabile Verhaltensstruktur in einem gemeinsamen Score-Raum. Ally zeigt einen ausgereiften Abschlusskorridor, Scout zeigt eine Verweigerungsgrenze, die durch öffentlichen adversarialen Druck geprägt wurde, und Datum liefert eine kompakte dünne Basislinie.",
     "imageAltOverlays": "Drei nebeneinander angeordnete Karten mit aggregierten Agenten-Pfadüberlagerungen im CIRIS-Score-Raum für Ally, Scout und Datum, mit Hinweisen zu Abschluss-, Zöger- und Verweigerungsmustern.",
     "imageCaption": "Aggregierte Pfadüberlagerungen aus dem aktuellen Trace-Korpus. Ally zeigt einen ausgereiften Abschlusskorridor, Scout zeigt eine scharfe Verweigerungsecke unter öffentlichem adversarialem Druck, und Datum liefert eine dünne Basislinie.",
