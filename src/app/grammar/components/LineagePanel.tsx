@@ -11,9 +11,12 @@
 // froze the wire surface, RC2 completed the design surface, RC3 was a
 // clarity cut, RC4 ratified the last reserved §RC slot.
 
-import { REGISTRY_BLOB, CEG_DIR } from "../lib/shared";
+import { CC_BLOB, CC_PART } from "../lib/shared";
 
-const CEG_BLOB = `${REGISTRY_BLOB}/${CEG_DIR}`;
+// The chapters these cite were absorbed into the constitution; the labels keep
+// the historical section numbers because that is what the lineage is about,
+// and each link lands on the Part that now carries the text.
+const CEG_BLOB = `${CC_BLOB}/${CC_PART.namespace}`;
 
 type LineageRow = {
   version: string;
@@ -43,7 +46,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§7.0.2 consent_role", href: `${CEG_BLOB}/07_reserved.md` },
+      { label: "§7.0.2 consent_role", href: CEG_BLOB },
     ],
   },
   {
@@ -65,7 +68,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§7.0.1 fabric-node", href: `${CEG_BLOB}/07_reserved.md` },
+      { label: "§7.0.1 fabric-node", href: CEG_BLOB },
     ],
   },
   {
@@ -91,8 +94,8 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5.6.8.13 operational data", href: `${CEG_BLOB}/05_namespace.md` },
-      { label: "§10.1.6 merge intents", href: `${CEG_BLOB}/10_endpoints.md` },
+      { label: "§5.6.8.13 operational data", href: CEG_BLOB },
+      { label: "§10.1.6 merge intents", href: CEG_BLOB },
     ],
   },
   {
@@ -115,8 +118,8 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5.2.1 provenance (JCS)", href: `${CEG_BLOB}/05_namespace.md` },
-      { label: "§10.5.3 removal coalescing", href: `${CEG_BLOB}/10_endpoints.md` },
+      { label: "§5.2.1 provenance (JCS)", href: CEG_BLOB },
+      { label: "§10.5.3 removal coalescing", href: CEG_BLOB },
     ],
   },
   {
@@ -140,7 +143,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5.6.8.8.2 encryption_pubkeys", href: `${CEG_BLOB}/05_namespace.md` },
+      { label: "§5.6.8.8.2 encryption_pubkeys", href: CEG_BLOB },
     ],
   },
   {
@@ -163,8 +166,8 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§8.1.13.3 holder-inspectability", href: `${CEG_BLOB}/08_composition.md` },
-      { label: "§10.5.3 epoch DEK", href: `${CEG_BLOB}/10_endpoints.md` },
+      { label: "§8.1.13.3 holder-inspectability", href: CEG_BLOB },
+      { label: "§10.5.3 epoch DEK", href: CEG_BLOB },
     ],
   },
   {
@@ -187,8 +190,8 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§10.1.5 attestation tiers", href: `${CEG_BLOB}/10_endpoints.md` },
-      { label: "§0.9.2.1 determinism", href: `${CEG_BLOB}/00_conformance.md` },
+      { label: "§10.1.5 attestation tiers", href: CEG_BLOB },
+      { label: "§0.9.2.1 determinism", href: CEG_BLOB },
     ],
   },
   {
@@ -211,8 +214,8 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§10.5 streaming", href: `${CEG_BLOB}/10_endpoints.md` },
-      { label: "§0.4 references", href: `${CEG_BLOB}/00_conformance.md` },
+      { label: "§10.5 streaming", href: CEG_BLOB },
+      { label: "§0.4 references", href: CEG_BLOB },
     ],
   },
   {
@@ -236,7 +239,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5.6.8.12 settlement", href: `${CEG_BLOB}/05_namespace.md` },
+      { label: "§5.6.8.12 settlement", href: CEG_BLOB },
     ],
   },
   {
@@ -258,7 +261,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§10.5.8 group comms", href: `${CEG_BLOB}/10_endpoints.md` },
+      { label: "§10.5.8 group comms", href: CEG_BLOB },
     ],
   },
   {
@@ -282,8 +285,8 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5.6.8.8.1 transport", href: `${CEG_BLOB}/05_namespace.md` },
-      { label: "§8.1.13.1.1 resolution", href: `${CEG_BLOB}/08_composition.md` },
+      { label: "§5.6.8.8.1 transport", href: CEG_BLOB },
+      { label: "§8.1.13.1.1 resolution", href: CEG_BLOB },
     ],
   },
   {
@@ -306,7 +309,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5.6.8.10 infrastructure", href: `${CEG_BLOB}/05_namespace.md` },
+      { label: "§5.6.8.10 infrastructure", href: CEG_BLOB },
     ],
   },
   {
@@ -333,9 +336,9 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§4 envelope", href: `${CEG_BLOB}/04_envelope.md` },
-      { label: "§10.5 streaming", href: `${CEG_BLOB}/10_endpoints.md` },
-      { label: "§0.9 JCS canonicalization", href: `${CEG_BLOB}/00_conformance.md` },
+      { label: "§4 envelope", href: CEG_BLOB },
+      { label: "§10.5 streaming", href: CEG_BLOB },
+      { label: "§0.9 JCS canonicalization", href: CEG_BLOB },
     ],
   },
   {
@@ -353,7 +356,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§7 reserved prefixes", href: `${CEG_BLOB}/07_reserved.md` },
+      { label: "§7 reserved prefixes", href: CEG_BLOB },
     ],
   },
   {
@@ -371,7 +374,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5 namespace", href: `${CEG_BLOB}/05_namespace.md` },
+      { label: "§5 namespace", href: CEG_BLOB },
     ],
   },
   {
@@ -391,7 +394,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5.6.8.5 cohort_scope", href: `${CEG_BLOB}/05_namespace.md` },
+      { label: "§5.6.8.5 cohort_scope", href: CEG_BLOB },
     ],
   },
   {
@@ -408,7 +411,7 @@ const ROWS: LineageRow[] = [
       </>
     ),
     anchors: [
-      { label: "§5.6.9 event_listing", href: `${CEG_BLOB}/05_namespace.md` },
+      { label: "§5.6.9 event_listing", href: CEG_BLOB },
     ],
   },
 ];

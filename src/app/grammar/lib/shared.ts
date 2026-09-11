@@ -6,39 +6,62 @@ export const REGISTRY_BLOB = `${REGISTRY_REPO}/blob/main`;
 export const REGISTRY_RAW =
   "https://raw.githubusercontent.com/CIRISAI/CIRISRegistry/main";
 
-// CEG 0.1 Public Working Draft (2026-05-28) is the authoritative spec. It
-// ships as a directory of 18 files under FSD/CEG/. FSD-002 is design history.
-// The build pulls FSD/CEG/05_namespace.md for the §5 prefix tables and reads
-// version metadata from FSD/CEG/README.md. No fallback to FSD-002.
-export const CEG_DIR = "FSD/CEG";
-export const CEG_README_PATH = `${CEG_DIR}/README.md`;
-export const CEG_NAMESPACE_PATH = `${CEG_DIR}/05_namespace.md`;
-// Per-chapter file paths the page links into.
-export const CEG_CHAPTER = {
-  conformance: `${CEG_DIR}/00_conformance.md`,
-  foundation: `${CEG_DIR}/01_foundation.md`,
-  grammar: `${CEG_DIR}/02_grammar.md`,
-  primitives: `${CEG_DIR}/03_primitives.md`,
-  envelope: `${CEG_DIR}/04_envelope.md`,
-  namespace: `${CEG_DIR}/05_namespace.md`,
-  relations: `${CEG_DIR}/06_relations.md`,
-  reserved: `${CEG_DIR}/07_reserved.md`,
-  composition: `${CEG_DIR}/08_composition.md`,
-  humanityAccord: `${CEG_DIR}/09_humanity_accord.md`,
-  endpoints: `${CEG_DIR}/10_endpoints.md`,
-  governance: `${CEG_DIR}/11_governance.md`,
-  translation: `${CEG_DIR}/12_translation.md`,
-  antiPatterns: `${CEG_DIR}/13_anti_patterns.md`,
-  glossaries: `${CEG_DIR}/14_glossaries.md`,
-  gaps: `${CEG_DIR}/15_gaps.md`,
-  references: `${CEG_DIR}/16_references.md`,
-  cadence: `${CEG_DIR}/17_cadence.md`,
+// The grammar is no longer a standalone spec. It was absorbed into the CIRIS
+// Constitution, which is now the single source of truth, and the old
+// CIRISRegistry/FSD/CEG directory is a stub that says so. The old 1.0-RC29
+// line was discontinued at the move and must not be cited as later than the
+// constitution's own number.
+//
+// The build reads the namespace from Part 3 and the version from VERSION.
+// Section numbering did not survive the move: cite the Part anchor, never the
+// old section number.
+export const CC_REPO = "https://github.com/CIRISAI/CIRISConstitution";
+export const CC_BLOB = `${CC_REPO}/blob/main`;
+export const CC_RAW = "https://raw.githubusercontent.com/CIRISAI/CIRISConstitution/main";
+export const CC_DIR = "constitution";
+export const CC_VERSION_PATH = "VERSION";
+export const CC_README_PATH = "README.md";
+export const CC_NAMESPACE_PATH = `${CC_DIR}/part_3_the_namespace.md`;
+
+// The eight Parts the old eighteen CEG chapters became. Panels link into these.
+export const CC_PART = {
+  foundation: `${CC_DIR}/part_1_foundation.md`,
+  grammar: `${CC_DIR}/part_2_the_grammar.md`,
+  namespace: `${CC_DIR}/part_3_the_namespace.md`,
+  composition: `${CC_DIR}/part_4_composition_governance.md`,
+  transport: `${CC_DIR}/part_5_transport_substrate.md`,
+  mathematics: `${CC_DIR}/part_6_the_coherence_mathematics.md`,
+  lifecycle: `${CC_DIR}/part_7_lifecycle_stewardship.md`,
+  appendices: `${CC_DIR}/part_8_appendices.md`,
 } as const;
-// CEG 0.15 PDF editions (GitHub renders both in its PDF viewer).
-// The reader edition is the de-editorialized, human-first cut; the
-// full edition is the exhaustive working draft.
-export const CEG_READER_PDF = `${REGISTRY_BLOB}/${CEG_DIR}/pdf/ceg-0.15-reader.pdf`;
-export const CEG_FULL_PDF = `${REGISTRY_BLOB}/${CEG_DIR}/pdf/ceg-0.15.pdf`;
+
+// Kept under their old names so the panels that link to chapters keep
+// compiling; each now points at the Part that absorbed it.
+export const CEG_CHAPTER = {
+  conformance: CC_PART.grammar,
+  foundation: CC_PART.foundation,
+  grammar: CC_PART.grammar,
+  primitives: CC_PART.grammar,
+  envelope: CC_PART.grammar,
+  namespace: CC_PART.namespace,
+  relations: CC_PART.namespace,
+  reserved: CC_PART.namespace,
+  composition: CC_PART.composition,
+  humanityAccord: CC_PART.composition,
+  endpoints: CC_PART.transport,
+  governance: CC_PART.composition,
+  translation: CC_PART.appendices,
+  antiPatterns: CC_PART.appendices,
+  glossaries: CC_PART.appendices,
+  gaps: CC_PART.appendices,
+  references: CC_PART.appendices,
+  cadence: CC_PART.lifecycle,
+} as const;
+
+// The PDF editions the constitution publishes.
+export const CEG_READER_PDF = `${CC_REPO}/blob/main/ciris_constitution-1.0-rc4.pdf`;
+export const CEG_FULL_PDF = CEG_READER_PDF;
+
 export const WITNESS_KIND_REGISTRY_PATH = "FSD/WITNESS_KIND_REGISTRY.md";
 export const LANG_PRIMER_PATH = "FSD/LANGUAGE_PRIMER.md";
 export const CEG_PRIMER_PATH = "docs/CEG_EXPLORATION_PAGE_PRIMER.md";

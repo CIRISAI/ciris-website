@@ -14,9 +14,9 @@
 // recants, with one envelope field added and the withdraws admission
 // rule semantically broadened.
 
-import { REGISTRY_BLOB, CEG_DIR } from "../lib/shared";
+import { CC_BLOB, CC_PART } from "../lib/shared";
 
-const CEG_BLOB = `${REGISTRY_BLOB}/${CEG_DIR}`;
+const NAMESPACE_URL = `${CC_BLOB}/${CC_PART.namespace}`;
 
 const CONSENT_PREFIXES: Array<{ key: string; description: string }> = [
   {
@@ -114,7 +114,7 @@ export default function ConsentTierPanel() {
               The new envelope field
             </h3>
             <a
-              href={`${CEG_BLOB}/04_envelope.md`}
+              href={NAMESPACE_URL}
               className="text-[11px] text-brand-primary underline-offset-2 hover:underline"
               target="_blank"
               rel="noreferrer"
@@ -145,7 +145,7 @@ export default function ConsentTierPanel() {
               Withdraws admission, broadened
             </h3>
             <a
-              href={`${CEG_BLOB}/03_primitives.md`}
+              href={NAMESPACE_URL}
               className="text-[11px] text-brand-primary underline-offset-2 hover:underline"
               target="_blank"
               rel="noreferrer"
@@ -186,7 +186,7 @@ export default function ConsentTierPanel() {
               consent:* dimension family
             </h3>
             <a
-              href={`${CEG_BLOB}/05_namespace.md`}
+              href={NAMESPACE_URL}
               className="text-[11px] text-brand-primary underline-offset-2 hover:underline"
               target="_blank"
               rel="noreferrer"
@@ -219,7 +219,7 @@ export default function ConsentTierPanel() {
               consent_record subject_kind
             </h3>
             <a
-              href={`${CEG_BLOB}/05_namespace.md`}
+              href={NAMESPACE_URL}
               className="text-[11px] text-brand-primary underline-offset-2 hover:underline"
               target="_blank"
               rel="noreferrer"
@@ -255,7 +255,7 @@ export default function ConsentTierPanel() {
               ratification, decay-protocol stages, and the CIRISAgent
               CEM bundle (TEMPORARY / PARTNERED / ANONYMOUS).{" "}
               <a
-                href={`${CEG_BLOB}/08_composition.md`}
+                href={NAMESPACE_URL}
                 className="text-brand-primary underline-offset-2 hover:underline"
                 target="_blank"
                 rel="noreferrer"
@@ -272,7 +272,7 @@ export default function ConsentTierPanel() {
               revoked claim could keep replicating because the
               revocation stayed local.{" "}
               <a
-                href={`${CEG_BLOB}/10_endpoints.md`}
+                href={NAMESPACE_URL}
                 className="text-brand-primary underline-offset-2 hover:underline"
                 target="_blank"
                 rel="noreferrer"
@@ -287,7 +287,7 @@ export default function ConsentTierPanel() {
               Operator-configurable; CEG wire primitives stay
               domain-agnostic.{" "}
               <a
-                href={`${CEG_BLOB}/11_governance.md`}
+                href={NAMESPACE_URL}
                 className="text-brand-primary underline-offset-2 hover:underline"
                 target="_blank"
                 rel="noreferrer"

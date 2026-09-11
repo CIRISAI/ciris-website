@@ -3,9 +3,23 @@ import navItems from "@/app/components/navitems";
 import { FloatingNav } from "@/app/components/ui/floating/nav";
 import { getRegistrySource } from "../lib/source";
 import ExploreWorkshop from "./ExploreWorkshop";
+import SpecMoved from "../components/SpecMoved";
 
 export default async function ExplorePage() {
   const source = await getRegistrySource();
+  if (!source) {
+    return (
+      <>
+        <FloatingNav navItems={navItems} />
+        <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-gray-950 dark:via-black dark:to-gray-950">
+          <div className="mx-auto max-w-6xl px-4 pb-20 pt-32 md:px-6">
+            <SpecMoved title="Explore the grammar" />
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
   return (
     <>
       <FloatingNav navItems={navItems} />

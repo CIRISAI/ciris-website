@@ -9,7 +9,7 @@ import {
   COMPONENT_TAGLINE,
   FAMILY_COLOR,
   FAMILY_LABEL,
-  REGISTRY_BLOB,
+  CC_BLOB,
   CEG_CHAPTER,
 } from "../lib/shared";
 import { FractalSelfBadge } from "./FractalSelfCallout";
@@ -36,7 +36,7 @@ function isFractalSelfPrefix(prefix: string): string | null {
 }
 
 function PrefixRowDisplay({ row }: { row: PrefixRow }) {
-  const fsdLink = `${REGISTRY_BLOB}/${CEG_CHAPTER.namespace}#${row.section.replace(/\./g, "")}`;
+  const fsdLink = `${CC_BLOB}/${CEG_CHAPTER.namespace}`;
   return (
     <li className="rounded-md border border-slate-200 bg-white p-3 dark:border-gray-800 dark:bg-gray-900">
       <div className="mb-1 flex flex-wrap items-center gap-1.5">
@@ -107,7 +107,7 @@ export default function NamespacePanel({
         <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
           Auto-parsed from{" "}
           <a
-            href={`${REGISTRY_BLOB}/${CEG_CHAPTER.namespace}`}
+            href={`${CC_BLOB}/${CEG_CHAPTER.namespace}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-brand-primary hover:underline"

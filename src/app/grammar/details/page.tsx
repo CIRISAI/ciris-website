@@ -6,14 +6,16 @@ import {
   getRegistrySource,
   specCommitUrl,
   REGISTRY_BLOB,
+  CC_BLOB,
   REGISTRY_REPO,
-  CEG_README_PATH,
+  CC_README_PATH,
   WITNESS_KIND_REGISTRY_PATH,
   LANG_PRIMER_PATH,
   CEG_PRIMER_PATH,
   ANCHORS,
 } from "../lib/source";
 import GrammarNav from "../components/GrammarNav";
+import SpecMoved from "../components/SpecMoved";
 import PrimitivesPanel from "../components/PrimitivesPanel";
 import FamiliesPanel from "../components/FamiliesPanel";
 import EnvelopeAndAxesPanel from "../components/EnvelopeAndAxesPanel";
@@ -38,7 +40,20 @@ export const metadata = {
 
 export default async function GrammarDetailsPage() {
   const source = await getRegistrySource();
-  const fsdLink = `${REGISTRY_BLOB}/${CEG_README_PATH}`;
+  if (!source) {
+    return (
+      <>
+        <FloatingNav navItems={navItems} />
+        <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-gray-950 dark:via-black dark:to-gray-950">
+          <div className="mx-auto max-w-6xl px-4 pb-20 pt-32 md:px-6">
+            <SpecMoved title="The grammar moved into the Constitution" />
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+  const fsdLink = `${CC_BLOB}/${CC_README_PATH}`;
   const witnessRegistryLink = `${REGISTRY_BLOB}/${WITNESS_KIND_REGISTRY_PATH}`;
   const commitLink = source.commitShaFull
     ? specCommitUrl(source.commitShaFull)
@@ -145,7 +160,7 @@ export default async function GrammarDetailsPage() {
                   rel="noopener noreferrer"
                   className="rounded-md border border-slate-300 px-3 py-2 text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
                 >
-                  {source.specVersion}, the wire-format spec (18-file directory) →
+                  {source.specVersion}, the constitution that carries the wire format →
                 </a>
                 <a
                   href={witnessRegistryLink}

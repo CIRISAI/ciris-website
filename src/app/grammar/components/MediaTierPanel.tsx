@@ -8,9 +8,12 @@
 // the surface in one place so a reader doesn't have to thread it out
 // of the namespace and composition panels.
 
-import { REGISTRY_BLOB, CEG_DIR } from "../lib/shared";
+import { CC_BLOB, CC_PART } from "../lib/shared";
 
-const CEG_BLOB = `${REGISTRY_BLOB}/${CEG_DIR}`;
+// Section numbering did not survive the move into the constitution, so these
+// link to the Part rather than to an anchor that no longer resolves.
+const NAMESPACE_URL = `${CC_BLOB}/${CC_PART.namespace}`;
+const COMPOSITION_URL = `${CC_BLOB}/${CC_PART.composition}`;
 
 const SUB_KINDS: Array<{ id: string; label: string; description: string }> = [
   {
@@ -126,7 +129,7 @@ export default function MediaTierPanel() {
               external_content sub_kinds
             </h3>
             <a
-              href={`${CEG_BLOB}/05_namespace.md#5681-external_content-sub_kinds`}
+              href={NAMESPACE_URL}
               className="text-[11px] text-brand-primary underline-offset-2 hover:underline"
               target="_blank"
               rel="noreferrer"
@@ -156,7 +159,7 @@ export default function MediaTierPanel() {
               New dimension families
             </h3>
             <a
-              href={`${CEG_BLOB}/05_namespace.md#5683`}
+              href={NAMESPACE_URL}
               className="text-[11px] text-brand-primary underline-offset-2 hover:underline"
               target="_blank"
               rel="noreferrer"
@@ -191,7 +194,7 @@ export default function MediaTierPanel() {
               Governance Contribution subject_kinds
             </h3>
             <a
-              href={`${CEG_BLOB}/05_namespace.md#5684-governance-subject_kinds-ceg-03-addition-per-cirisregistry37--38`}
+              href={NAMESPACE_URL}
               className="text-[11px] text-brand-primary underline-offset-2 hover:underline"
               target="_blank"
               rel="noreferrer"
@@ -227,7 +230,7 @@ export default function MediaTierPanel() {
               content-class plus content-rating gate, age-assurance gate.
               Same shape as Policy F but for media.{" "}
               <a
-                href={`${CEG_BLOB}/08_composition.md#8110-policy-j--trusted-publisher-composition-ceg-03-addition`}
+                href={COMPOSITION_URL}
                 className="text-brand-primary underline-offset-2 hover:underline"
                 target="_blank"
                 rel="noreferrer"
@@ -244,7 +247,7 @@ export default function MediaTierPanel() {
               §9 Humanity Accord so a takedown can remove specific bytes
               but cannot capture the substrate.{" "}
               <a
-                href={`${CEG_BLOB}/11_governance.md#114-fast-path-takedown-coordination`}
+                href={COMPOSITION_URL}
                 className="text-brand-primary underline-offset-2 hover:underline"
                 target="_blank"
                 rel="noreferrer"
@@ -258,7 +261,7 @@ export default function MediaTierPanel() {
               future CIRIS hash-coalition clearinghouse slot is
               documented but deferred.{" "}
               <a
-                href={`${CEG_BLOB}/11_governance.md#115-hash-database-operator-policy`}
+                href={COMPOSITION_URL}
                 className="text-brand-primary underline-offset-2 hover:underline"
                 target="_blank"
                 rel="noreferrer"

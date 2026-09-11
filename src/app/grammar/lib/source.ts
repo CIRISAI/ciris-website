@@ -1,11 +1,13 @@
 import "server-only";
 import { cache } from "react";
 import {
-  REGISTRY_RAW,
+  CC_RAW,
+  CC_REPO,
   REGISTRY_REPO,
-  CEG_DIR,
-  CEG_README_PATH,
-  CEG_NAMESPACE_PATH,
+  CC_DIR,
+  CC_README_PATH,
+  CC_VERSION_PATH,
+  CC_NAMESPACE_PATH,
   type ComponentId,
   type FamilyId,
   type NamespaceSection,
@@ -26,71 +28,93 @@ const BUILD_REV =
   process.env.GITHUB_SHA ||
   process.env.VERCEL_GIT_COMMIT_SHA ||
   String(Date.now());
-const README_URL = `${REGISTRY_RAW}/${CEG_README_PATH}?cb=${BUILD_REV}`;
-const NAMESPACE_URL = `${REGISTRY_RAW}/${CEG_NAMESPACE_PATH}?cb=${BUILD_REV}`;
+const README_URL = `${CC_RAW}/${CC_README_PATH}?cb=${BUILD_REV}`;
+const VERSION_URL = `${CC_RAW}/${CC_VERSION_PATH}?cb=${BUILD_REV}`;
+const NAMESPACE_URL = `${CC_RAW}/${CC_NAMESPACE_PATH}?cb=${BUILD_REV}`;
 
-// CEG 0.1 §5 namespace mapping. §5 lives in its own file (05_namespace.md)
-// as of the directory-based 18-file layout. Headings are ## §5.x (top-level
-// component) and ### §5.x.y (sub-section).
+// Namespace mapping, read from the constitution's Part 3. Headings are
+// ## 3.x (the namespace, reservations, relations), ### 3.x.y (the per-component
+// sections) and #### 3.x.y.z (their sub-sections).
+// Part 3 groups the per-component prefixes under §3.1, so a component now sits
+// at three segments (3.1.5) where it used to sit at two (5.1). The headings
+// name their component in plain text ("3.1.5 `accord-agent` — CIRISAgent — ..."),
+// so the name is read from the heading first and this map is the fallback: a
+// renumbering upstream then costs nothing here.
 const SECTION_TO_COMPONENT: Record<string, ComponentId> = {
-  "5.1": "CIRISAgent",
-  "5.2": "CIRISVerify",
-  "5.3": "CIRISPersist",
-  "5.4": "CIRISEdge",
-  "5.5": "CIRISLensCore",
-  "5.6": "CIRISNodeCore",
-  "5.7": "RATCHET",
-  "5.8": "CIRISBench",
-  "5.9": "CIRISRegistry",
+  "3.1.1": "CIRISRegistry",
+  "3.1.2": "CIRISVerify",
+  "3.1.3": "CIRISPersist",
+  "3.1.4": "CIRISEdge",
+  "3.1.5": "CIRISAgent",
+  "3.1.6": "RATCHET",
+  "3.1.8": "CIRISLensCore",
+  "3.1.9": "CIRISNodeCore",
+  "3.1.10": "CIRISBench",
 };
 
-// Per CEG 0.1 §12.1 — the five-family organization of the namespace.
+/** The component names that appear verbatim in Part 3's headings. */
+const COMPONENT_NAMES: ComponentId[] = [
+  "CIRISRegistry",
+  "CIRISVerify",
+  "CIRISPersist",
+  "CIRISEdge",
+  "CIRISAgent",
+  "CIRISLensCore",
+  "CIRISNodeCore",
+  "CIRISBench",
+  "RATCHET",
+];
+
+// The five-family organization, re-keyed onto Part 3. Same editorial reading as
+// before the move: who may speak, what was detected, what was done, what was
+// agreed, what was corrected.
 const SUBSECTION_TO_FAMILY: Record<string, FamilyId> = {
-  // Agent (§5.1) — Accord + DMA + conscience + apophatic = STANDING
-  "5.1.1": "STANDING",
-  "5.1.2": "STANDING",
-  "5.1.3": "STANDING",
-  "5.1.4": "STANDING",
-  // Verify (§5.2) — attestation ladder + provenance + transparency = STANDING
-  "5.2": "STANDING",
-  "5.2.1": "STANDING",
-  // Persist (§5.3) — substrate self-reports = STANDING
-  "5.3": "STANDING",
-  // Edge (§5.4) — substrate self-reports = STANDING
-  "5.4": "STANDING",
-  // LensCore (§5.5)
-  "5.5": "DETECTION",
-  "5.5.1": "DETECTION", // Coherence Ratchet detectors
-  "5.5.2": "STANDING", // Cohort + conformity
-  "5.5.3": "DETECTION", // F-3 correlated-action
-  "5.5.4": "STANDING", // Capacity-Score factors
-  "5.5.5": "DETECTION", // Distributive-access
-  // NodeCore (§5.6)
-  "5.6.1": "STANDING", // Tier-1 ledger
-  "5.6.2": "ACTION", // Tier-2 decision hierarchy
-  "5.6.3": "CONSENSUS", // Tier-3 consensus mechanics
-  "5.6.4": "CORRECTION", // Tier-4 governance
-  "5.6.5": "ACTION", // Decision locality
-  "5.6.6": "STANDING", // hard_case + transparency + judge_model
-  "5.6.7": "STANDING", // Files-as-Contributions
-  "5.6.8": "STANDING", // Content ingestion (news/encyclopedia/topical_relation)
-  // RATCHET (§5.7)
-  "5.7": "DETECTION",
-  // Bench (§5.8)
-  "5.8": "STANDING",
-  // Registry (§5.9)
-  "5.9": "STANDING",
+  "3.1.1": "STANDING", // registry — identity / build / license
+  "3.1.2": "STANDING", // attestation ladder + provenance
+  "3.1.3": "STANDING", // substrate self-reports
+  "3.1.4": "STANDING", // transport + delivery
+  "3.1.5": "STANDING", // Accord principles + DMA + conscience + apophatic
+  "3.1.6": "DETECTION", // anti-Sybil flags
+  "3.1.8": "DETECTION", // lens
+  "3.1.8.1": "STANDING", // Capacity-Score factors
+  "3.1.8.2": "DETECTION", // Coherence-Ratchet detectors
+  "3.1.8.3": "STANDING", // cohort + conformity
+  "3.1.8.4": "DETECTION", // structural injustice / correlated action
+  "3.1.8.5": "DETECTION", // distributive access
+  "3.1.9": "STANDING", // node
+  "3.1.9.1": "STANDING", // files as contributions
+  "3.1.9.2": "CORRECTION", // tier 4, governance steering
+  "3.1.9.3": "CONSENSUS", // tier 3, consensus mechanics
+  "3.1.9.4": "STANDING", // hard case + transparency + judge model
+  "3.1.9.5": "ACTION", // decision locality
+  "3.1.9.6": "STANDING", // tier 1, agent-state ledger
+  "3.1.9.7": "ACTION", // tier 2, decision hierarchy
+  "3.1.10": "STANDING", // benchmark outcomes
+  "3.2": "STANDING", // community subject_kind
+  "3.3": "STANDING", // content ingestion, consent, subject kinds
 };
 
 function familyFor(section: string): FamilyId | null {
-  if (SUBSECTION_TO_FAMILY[section]) return SUBSECTION_TO_FAMILY[section];
-  const parent = section.split(".").slice(0, 2).join(".");
-  return SUBSECTION_TO_FAMILY[parent] ?? null;
+  const parts = section.split(".");
+  for (let n = parts.length; n >= 2; n--) {
+    const key = parts.slice(0, n).join(".");
+    if (SUBSECTION_TO_FAMILY[key]) return SUBSECTION_TO_FAMILY[key];
+  }
+  return null;
 }
 
-function componentFor(section: string): ComponentId {
-  const top = section.split(".").slice(0, 2).join(".");
-  return SECTION_TO_COMPONENT[top] ?? "CIRISAgent";
+function componentFor(section: string, title?: string): ComponentId {
+  if (title) {
+    const named = COMPONENT_NAMES.find((c) => title.includes(c));
+    if (named) return named;
+  }
+  // Walk up: 3.1.5.2 -> 3.1.5 -> 3.1. The component lives at three segments.
+  const parts = section.split(".");
+  for (let n = Math.min(parts.length, 3); n >= 2; n--) {
+    const key = parts.slice(0, n).join(".");
+    if (SECTION_TO_COMPONENT[key]) return SECTION_TO_COMPONENT[key];
+  }
+  return "CIRISAgent";
 }
 
 interface ParsedTableRow {
@@ -265,19 +289,20 @@ function stripBackticks(s: string): string {
   return s.replace(/`/g, "").trim();
 }
 
-function extractSpecVersion(text: string): {
+function extractSpecVersion(
+  versionText: string,
+  readmeText: string,
+): {
   specVersion: string;
   lastUpdated: string;
 } {
-  // Capture the version token up to the first space or "(", so release-
-  // candidate suffixes survive (e.g. "1.0-RC2 (Release Candidate ...)" ->
-  // "1.0-RC2", not "1.0").
-  const versionMatch = text.match(/\*\*Version\*\*:\s*([0-9][^\s(]*)/);
-  // Status format: "Public Working Draft (2026-05-28). ..."
-  const statusMatch = text.match(/\*\*Status\*\*:[^(]*\((\d{4}-\d{2}-\d{2})\)/);
+  // VERSION is the bare number ("1.0-rc4"). The README carries the cut date on
+  // its status line: "**This tree:** CC 1.0-rc4 ... cut 2026-09-03 (...)".
+  const version = versionText.trim().split(/\s/)[0];
+  const cut = readmeText.match(/cut\s+(\d{4}-\d{2}-\d{2})/);
   return {
-    specVersion: versionMatch ? `CEG ${versionMatch[1].trim()}` : "CEG 0.1",
-    lastUpdated: statusMatch ? statusMatch[1] : "—",
+    specVersion: version ? `CC ${version}` : "CC 1.0-rc4",
+    lastUpdated: cut ? cut[1] : "\u2014",
   };
 }
 
@@ -285,7 +310,7 @@ async function fetchCommitSha(): Promise<{
   short: string;
   full: string;
 }> {
-  const url = `https://api.github.com/repos/CIRISAI/CIRISRegistry/commits?path=${encodeURIComponent(CEG_DIR)}&per_page=1&cb=${BUILD_REV}`;
+  const url = `https://api.github.com/repos/CIRISAI/CIRISConstitution/commits?path=${encodeURIComponent(CC_DIR)}&per_page=1&cb=${BUILD_REV}`;
   try {
     const resp = await fetch(url, {
       cache: "force-cache",
@@ -326,26 +351,47 @@ async function fetchTextWithRetry(
     }
   }
   throw new Error(
-    `Failed to fetch ${label} after ${attempts} attempts: ${String(lastErr)}. CEG is the source of truth — no fallback to FSD-002.`,
+    `Failed to fetch ${label} after ${attempts} attempts: ${String(lastErr)}. The constitution is the source of truth, and there is no other document to fall back to.`,
   );
 }
 
-export const getRegistrySource = cache(async (): Promise<RegistrySource> => {
-  const [readmeText, text] = await Promise.all([
-    fetchTextWithRetry(README_URL, CEG_README_PATH),
-    fetchTextWithRetry(NAMESPACE_URL, CEG_NAMESPACE_PATH),
-  ]);
-  const { specVersion, lastUpdated } = extractSpecVersion(readmeText);
+/**
+ * The spec source, or `null` when it cannot be read.
+ *
+ * The CEG chapters moved into the CIRIS Constitution and the old directory is
+ * a stub, so this fetch 404s and took the whole site's build with it. The rule
+ * above still holds: there is no fallback to another document, because a
+ * different source would be a different spec. What changed is that a missing
+ * source now returns `null` and the two pages that read it say so, instead of
+ * every page on the site failing to build.
+ */
+export const getRegistrySource = cache(async (): Promise<RegistrySource | null> => {
+  let readmeText: string;
+  let versionText: string;
+  let text: string;
+  try {
+    [readmeText, versionText, text] = await Promise.all([
+      fetchTextWithRetry(README_URL, CC_README_PATH),
+      fetchTextWithRetry(VERSION_URL, CC_VERSION_PATH),
+      fetchTextWithRetry(NAMESPACE_URL, CC_NAMESPACE_PATH),
+    ]);
+  } catch (e) {
+    console.warn(
+      `[grammar] spec source unavailable, rendering the moved-notice instead: ${String(e)}`,
+    );
+    return null;
+  }
+  const { specVersion, lastUpdated } = extractSpecVersion(versionText, readmeText);
   const sha = await fetchCommitSha();
 
-  // The whole namespace file IS §5. No boundary slicing needed.
+  // The whole file IS Part 3. No boundary slicing needed.
   const sec5 = scanSections(text);
 
   const byTopSection = new Map<string, NamespaceSection>();
   for (const s of sec5) {
     const isTop = s.section.split(".").length === 2;
     if (isTop) {
-      const component = componentFor(s.section);
+      const component = componentFor(s.section, s.title);
       byTopSection.set(s.section, {
         section: s.section,
         title: s.title,
@@ -360,7 +406,7 @@ export const getRegistrySource = cache(async (): Promise<RegistrySource> => {
     const s = sec5[i];
     const nextStart = i + 1 < sec5.length ? sec5[i + 1].startLine : endOfFile;
     const extracted = extractSection(text, s.startLine, nextStart);
-    const component = componentFor(s.section);
+    const component = componentFor(s.section, s.title);
     const family = familyFor(s.section);
     extracted.rows.forEach((r) => {
       r.section = s.section;
@@ -415,5 +461,5 @@ export const getRegistrySource = cache(async (): Promise<RegistrySource> => {
 });
 
 export function specCommitUrl(sha: string): string {
-  return `${REGISTRY_REPO}/blob/${sha || "main"}/${CEG_DIR}/README.md`;
+  return `${CC_REPO}/blob/${sha || "main"}/${CC_NAMESPACE_PATH}`;
 }
