@@ -13,6 +13,7 @@ export const NEW_LOOK_ROUTES: ReadonlySet<string> = new Set([
   "/about",
   "/ai-welfare",
   "/cewp",
+  "/ciris-scoring",
   "/coherence-collapse-analysis",
   "/coherence-ratchet",
   "/compare",

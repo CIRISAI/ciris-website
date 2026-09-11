@@ -80,6 +80,8 @@
   background: color-mix(in srgb, var(--color-brass) 9%, transparent); }
 .notice p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--color-text); }
 .notice a { color: var(--color-brass); }
+.notice ul { margin: 6px 0 0; padding-left: 20px; list-style: disc; }
+.notice li { font-size: 14px; line-height: 1.5; color: var(--color-text); margin: 0 0 4px; }
 
 /* Card grid + accent card variants for the colored chain/join cards. */
 .cardGrid { display: grid; gap: 12px; margin: 0; }
