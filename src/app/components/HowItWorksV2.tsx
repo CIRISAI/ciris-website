@@ -246,6 +246,11 @@ export default function HowItWorksV2({ t, locale }: { t: Dictionary; locale: str
             </div>
           ))}
         </div>
+        <div className={s.ctaRow}>
+          <Link href={lh("/values")} className={`${s.btn} ${s.btnS}`}>
+            {t.values.linkFromPrinciples}
+          </Link>
+        </div>
       </section>
 
       {/* 6 Message Buses */}

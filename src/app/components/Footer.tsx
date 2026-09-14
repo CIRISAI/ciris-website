@@ -47,6 +47,7 @@ const navigation: Navigation = {
     { name: "Mystery game", href: "/game", key: "game" },
     { name: "First Contact", href: "/first-contact", key: "firstContact" },
     { name: "Explore a Trace", href: "/explore-a-trace", key: "exploreTrace" },
+    { name: "Values", href: "/values", key: "values" },
     { name: "CIRIS Scoring", href: "/ciris-scoring", key: "scoring" },
     { name: "Research Status", href: "/research-status", key: "researchStatus" },
     { name: "Documentation", href: "https://deepwiki.com/CIRISAI/CIRISAgent", key: "documentation" },

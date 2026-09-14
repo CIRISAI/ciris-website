@@ -21,7 +21,7 @@ import styles from "./pageShell.module.css";
 
 const instrument = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-/** The eight bottom-nav labels: all PageShell needs from the dictionary. */
+/** The bottom-nav labels: all PageShell needs from the dictionary. */
 export type ShellNav = Dictionary["homeHero"];
 
 export default function SkyChrome({
@@ -113,6 +113,7 @@ export default function SkyChrome({
       {/* The landing's bottom nav: the only navigation on the page. */}
       <nav className={styles.bottomNav} aria-label="Site">
         <Link href={lh("/constitution")}>{nav.navConstitution}</Link>
+        <Link href={lh("/values")}>{nav.navValues}</Link>
         <Link href={lh("/constitutional-mesh")}>{nav.navMesh}</Link>
         <Link href={lh("/safety")}>{nav.navSafety}</Link>
         <Link href={lh("/research-status")}>{nav.navResearch}</Link>
