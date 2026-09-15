@@ -5,7 +5,10 @@
 .banner {
   position: relative;
   height: clamp(132px, 20vh, 190px);
-  overflow: hidden;
+  /* Not `overflow: hidden`: the language menu opens from the header inside
+     this strip, and hiding the overflow cut the list off after three rows, so
+     most of the languages looked like they were not there. The sky layers
+     below are all inset:0, so there is nothing of the art to clip. */
 }
 
 .ground,
