@@ -120,6 +120,10 @@ export default function SkyChrome({
         <Link href="/papers">{nav.navPapers}</Link>
         <Link href="/reviews">{nav.navReviews}</Link>
         <Link href="/status">{nav.navStatus}</Link>
+        {/* CIRIS is not a 501(c)(3), so this says support, never donate. */}
+        <a href="https://www.gofundme.com/f/the-ai-the-world-deserves" target="_blank" rel="noopener noreferrer">
+          {nav.navSupport}
+        </a>
         <a href="https://github.com/CIRISAI" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>

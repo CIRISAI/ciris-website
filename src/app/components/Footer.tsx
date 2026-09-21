@@ -62,6 +62,8 @@ const navigation: Navigation = {
     { name: "Safety vs Censorship", href: "/safety-vs-censorship", key: "safetyVsCensorship" },
     { name: "Principles", href: "/constitution", key: "principles" },
     { name: "Reviews", href: "/reviews", key: "reviews" },
+    // Not a 501(c)(3): this is support for the work, not a tax-deductible donation.
+    { name: "Support CIRIS", href: "https://www.gofundme.com/f/the-ai-the-world-deserves", key: "support" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy", key: "privacyPolicy" },
@@ -174,7 +176,13 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={localizeHref(item.href, locale)} className="hover:underline text-sm/6">
+                      <a
+                        href={localizeHref(item.href, locale)}
+                        className="hover:underline text-sm/6"
+                        {...(item.href.startsWith("/")
+                          ? {}
+                          : { target: "_blank", rel: "noopener noreferrer" })}
+                      >
                         {itemLabel(item)}
                       </a>
                     </li>
@@ -188,7 +196,13 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={localizeHref(item.href, locale)} className="hover:underline text-sm/6">
+                      <a
+                        href={localizeHref(item.href, locale)}
+                        className="hover:underline text-sm/6"
+                        {...(item.href.startsWith("/")
+                          ? {}
+                          : { target: "_blank", rel: "noopener noreferrer" })}
+                      >
                         {itemLabel(item)}
                       </a>
                     </li>
@@ -204,7 +218,13 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={localizeHref(item.href, locale)} className="hover:underline text-sm/6">
+                      <a
+                        href={localizeHref(item.href, locale)}
+                        className="hover:underline text-sm/6"
+                        {...(item.href.startsWith("/")
+                          ? {}
+                          : { target: "_blank", rel: "noopener noreferrer" })}
+                      >
                         {itemLabel(item)}
                       </a>
                     </li>
@@ -218,7 +238,13 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={localizeHref(item.href, locale)} className="hover:underline text-sm/6">
+                      <a
+                        href={localizeHref(item.href, locale)}
+                        className="hover:underline text-sm/6"
+                        {...(item.href.startsWith("/")
+                          ? {}
+                          : { target: "_blank", rel: "noopener noreferrer" })}
+                      >
                         {itemLabel(item)}
                       </a>
                     </li>
