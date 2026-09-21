@@ -37,6 +37,15 @@ const REVIEWS = [
     status: "Public sanitized proof, August 2026",
     cls: s.cBrass,
   },
+  {
+    name: "Cut Off the Spigot",
+    who: "A reader's guide to leaving Google and the big assistants",
+    url: "https://cutoffthespigot.substack.com/p/de-google-series-part-1-search-and",
+    body:
+      "Not a technical audit, a consumer guide, and it is listed here because it checks the things a reader can check for themselves. It added CIRIS to its recommended alternatives in September 2026 after looking at who owns the company (an L3C with no major outside investors), what governs it (the constitution and the values page), what happens to your data (nothing sold or shared, research sharing is opt-in and anonymized first), which model answers you, and what one query costs in energy and water. It also records what it could not find, namely no OpenSecrets profile and no public diversity policy. Its on-device summary matches ours: with a local model nothing leaves your machine, and with a remote one the text goes to providers configured for zero data retention, processed and discarded rather than kept. There is no CIRIS cloud holding your chats, and the privacy page names every provider.",
+    status: "Listed in a consumer guide, September 2026",
+    cls: s.cViolet,
+  },
 ];
 
 export default function ReviewsPage() {
