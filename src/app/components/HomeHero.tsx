@@ -207,6 +207,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
           design). Small, dim, one row; the rest of the site hangs off it. */}
       <nav className={styles.bottomNav} aria-label="Site">
         <Link href={lh("/constitution")}>{hero.navConstitution}</Link>
+        <Link href={lh("/values")}>{hero.navValues}</Link>
         <Link href={lh("/constitutional-mesh")}>{hero.navMesh}</Link>
         <Link href={lh("/safety")}>{hero.navSafety}</Link>
         <Link href={lh("/research-status")}>{hero.navResearch}</Link>
@@ -215,6 +216,15 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
         <Link href="/status">{hero.navStatus}</Link>
         <a href="https://github.com/CIRISAI" target="_blank" rel="noopener noreferrer">
           GitHub
+        </a>
+        {/* CIRIS is not a 501(c)(3), so this says support, never donate. */}
+        <a
+          href="https://www.gofundme.com/f/the-ai-the-world-deserves"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.navSupport}
+        >
+          {hero.navSupport}
         </a>
       </nav>
 

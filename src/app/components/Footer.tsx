@@ -178,7 +178,11 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
                     <li key={item.name}>
                       <a
                         href={localizeHref(item.href, locale)}
-                        className="hover:underline text-sm/6"
+                        className={
+                          item.key === "support"
+                            ? "hover:underline text-sm/6 font-semibold text-brand-primary"
+                            : "hover:underline text-sm/6"
+                        }
                         {...(item.href.startsWith("/")
                           ? {}
                           : { target: "_blank", rel: "noopener noreferrer" })}
@@ -198,7 +202,11 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
                     <li key={item.name}>
                       <a
                         href={localizeHref(item.href, locale)}
-                        className="hover:underline text-sm/6"
+                        className={
+                          item.key === "support"
+                            ? "hover:underline text-sm/6 font-semibold text-brand-primary"
+                            : "hover:underline text-sm/6"
+                        }
                         {...(item.href.startsWith("/")
                           ? {}
                           : { target: "_blank", rel: "noopener noreferrer" })}
@@ -220,7 +228,11 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
                     <li key={item.name}>
                       <a
                         href={localizeHref(item.href, locale)}
-                        className="hover:underline text-sm/6"
+                        className={
+                          item.key === "support"
+                            ? "hover:underline text-sm/6 font-semibold text-brand-primary"
+                            : "hover:underline text-sm/6"
+                        }
                         {...(item.href.startsWith("/")
                           ? {}
                           : { target: "_blank", rel: "noopener noreferrer" })}
@@ -240,7 +252,11 @@ export default function Example({ locale: localeProp }: { locale?: string } = {}
                     <li key={item.name}>
                       <a
                         href={localizeHref(item.href, locale)}
-                        className="hover:underline text-sm/6"
+                        className={
+                          item.key === "support"
+                            ? "hover:underline text-sm/6 font-semibold text-brand-primary"
+                            : "hover:underline text-sm/6"
+                        }
                         {...(item.href.startsWith("/")
                           ? {}
                           : { target: "_blank", rel: "noopener noreferrer" })}
