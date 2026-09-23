@@ -1,0 +1,162 @@
+name: i18n mdx
+
+# Translate MDX docs into the site's locales, glossary-first and fail-closed.
+#
+# Ported from CIRISClient's i18n lane. Two jobs, and the split matters:
+#
+#   guard      — runs on EVERY push and pull request. Calls no model, needs no
+#                secret, costs nothing. It asserts the segmenter still
+#                round-trips all 757 documents byte-for-byte, which is the only
+#                thing standing between a translation run and a corrupted doc
+#                tree in 29 languages nobody on the team reads.
+#
+#   translate  — manual (workflow_dispatch) only. Spends money. Opens a PR
+#                rather than pushing, because a machine translation of the
+#                Constitution should be looked at by a person before it is live.
+#
+# The guard is deliberately not gated behind the translate job: it is most
+# useful on the PRs that CHANGE the segmenter, where a regression would
+# otherwise only show up the next time someone spent a budget.
+
+on:
+  push:
+    paths:
+      - 'scripts/i18n/**'
+      - 'content/**/*.mdx'
+      - '.github/workflows/i18n-mdx.yml'
+  pull_request:
+    paths:
+      - 'scripts/i18n/**'
+      - 'content/**/*.mdx'
+      - '.github/workflows/i18n-mdx.yml'
+  workflow_dispatch:
+    inputs:
+      langs:
+        description: 'Locale codes, comma-separated (blank = all 28)'
+        required: false
+        default: 'es'
+      limit:
+        description: 'Max documents to translate this run (budget guard; 0 = no cap)'
+        required: false
+        default: '5'
+      overwrite:
+        description: 'Retranslate documents that already have a translation'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: i18n-mdx-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  guard:
+    name: guard (free — no model, no secret)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # THE ONE THAT MATTERS.
+      #
+      # Segment every .mdx and put it back together without translating
+      # anything; the result must equal the input byte for byte. A segmenter
+      # that mangles a code fence or drops a table's alignment row produces a
+      # page that renders wrong in a language no reviewer here reads, and looks
+      # finished while doing it. An earlier version of the segmenter merged
+      # adjacent table rows in 203 of 757 files; this test is what caught it.
+      - name: Segmenter round-trips the whole corpus
+        run: python3 scripts/i18n/test_mdx_segment.py
+
+      - name: Coverage report
+        run: python3 scripts/i18n/translate_mdx.py --check
+
+  translate:
+    name: translate
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    needs: guard
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Translate
+        env:
+          # Repo secret, already provisioned on this repository.
+          # Prefer moving it to an org-level secret scoped to the repos that
+          # need it: CIRISClient and CIRISAgent each keep their own copy today,
+          # so rotating this key currently means three places, and SONAR_TOKEN
+          # already proves the org path reaches this repo.
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Inputs come through the ENVIRONMENT, never interpolated into the
+          # script text. `${{ inputs.langs }}` spliced straight into a shell
+          # command is a script-injection hole: whoever can dispatch the
+          # workflow chooses that string.
+          IN_LANGS: ${{ inputs.langs }}
+          IN_LIMIT: ${{ inputs.limit }}
+          IN_OVERWRITE: ${{ inputs.overwrite }}
+        run: |
+          set -euo pipefail
+          if [ -z "${OPENROUTER_API_KEY:-}" ]; then
+            echo "::error::OPENROUTER_API_KEY is empty. Set it as a repository or organization secret."
+            exit 1
+          fi
+          args=""
+          if [ -n "${IN_LANGS:-}" ]; then
+            for l in $(printf '%s' "$IN_LANGS" | tr ',' ' '); do
+              # Locale codes only. Anything else is refused rather than passed on.
+              case "$l" in
+                [a-z][a-z]) args="$args --lang $l" ;;
+                *) echo "::error::not a locale code: $l"; exit 1 ;;
+              esac
+            done
+          fi
+          if [ -n "${IN_LIMIT:-}" ] && [ "$IN_LIMIT" != "0" ]; then
+            case "$IN_LIMIT" in
+              ''|*[!0-9]*) echo "::error::limit must be a number: $IN_LIMIT"; exit 1 ;;
+              *) args="$args --limit $IN_LIMIT" ;;
+            esac
+          fi
+          if [ "${IN_OVERWRITE:-false}" = "true" ]; then
+            args="$args --overwrite"
+          fi
+          echo "running: translate_mdx.py $args"
+          python3 scripts/i18n/translate_mdx.py $args
+
+      # Re-assert the guarantee on the OUTPUT, not just the input. The
+      # translated files are now part of the corpus, so if a translation broke
+      # a table this fails here rather than on someone's next PR.
+      - name: The output must still round-trip
+        run: python3 scripts/i18n/test_mdx_segment.py
+
+      - name: Open a PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: i18n/mdx-${{ github.run_id }}
+          title: 'i18n: translated MDX'
+          commit-message: 'i18n: translated MDX'
+          body: |
+            Machine translation from `.github/workflows/i18n-mdx.yml`.
+
+            Glossary-first and fail closed: any segment whose translation lost a
+            placeholder — a URL, a code span, a link target — was rejected and
+            left in English rather than written. A half-translated page a reader
+            can navigate beats a complete one with a dead link in it.
+
+            The segmenter round-trip was asserted on the output as well as the
+            input, so no table, code fence or frontmatter key moved.
+
+            **Still worth a human read.** Terminology is enforced by the
+            glossaries; meaning is not. See the run log for anything rejected.
+          labels: i18n, automated
+          delete-branch: true
