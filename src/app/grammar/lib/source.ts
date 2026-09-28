@@ -296,12 +296,12 @@ function extractSpecVersion(
   specVersion: string;
   lastUpdated: string;
 } {
-  // VERSION is the bare number ("1.0-rc4"). The README carries the cut date on
-  // its status line: "**This tree:** CC 1.0-rc4 ... cut 2026-09-03 (...)".
+  // VERSION is the bare number ("1.0-rc5"). The README carries the cut date on
+  // its status line: "**This tree:** CC 1.0-rc5 ... cut 2026-09-27 (...)".
   const version = versionText.trim().split(/\s/)[0];
   const cut = readmeText.match(/cut\s+(\d{4}-\d{2}-\d{2})/);
   return {
-    specVersion: version ? `CC ${version}` : "CC 1.0-rc4",
+    specVersion: version ? `CC ${version}` : "CC 1.0-rc5",
     lastUpdated: cut ? cut[1] : "\u2014",
   };
 }

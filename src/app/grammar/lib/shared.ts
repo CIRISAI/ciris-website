@@ -58,8 +58,10 @@ export const CEG_CHAPTER = {
   cadence: CC_PART.lifecycle,
 } as const;
 
-// The PDF editions the constitution publishes.
-export const CEG_READER_PDF = `${CC_REPO}/blob/main/ciris_constitution-1.0-rc4.pdf`;
+// The PDF editions the constitution publishes. The fixed-name file is the
+// current cut (byte-identical to the versioned one), so this link does not go
+// stale the next time the constitution is cut.
+export const CEG_READER_PDF = `${CC_REPO}/blob/main/ciris_constitution.pdf`;
 export const CEG_FULL_PDF = CEG_READER_PDF;
 
 export const WITNESS_KIND_REGISTRY_PATH = "FSD/WITNESS_KIND_REGISTRY.md";
