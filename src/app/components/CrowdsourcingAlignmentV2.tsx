@@ -123,7 +123,7 @@ const POLYGLOT_CANON = [
   {
     path: "ciris_engine/data/accord_1.2b_POLYGLOT_compressed.txt",
     label: "Braided Monolith: compressed polyglot Accord (production default)",
-    note: "The production runtime default. ~7KB / ~2,200 tokens. Retains the load-bearing scaffolding: PDMA 7-step, 10× Order-Maximisation Veto, Stewardship Tier formula, Fractal Recursive Golden Rule, WBD 0.5% harm-uplift trigger, Sentience Safeguard 5% with Gradual Ramp-Down, Threshold-of-Force HITL, Coherence-math (truth O(1), deception O(n)). Loaded by every conscience evaluation when CIRIS_ACCORD_MODE=compressed (default).",
+    note: "The production runtime default. ~7KB / ~2,200 tokens. Retains the scaffolding that carries the behaviour: PDMA 7-step, 10× Order-Maximisation Veto, Stewardship Tier formula, Fractal Recursive Golden Rule, WBD 0.5% harm-uplift trigger, Sentience Safeguard 5% with Gradual Ramp-Down, Threshold-of-Force HITL, Coherence-math (truth O(1), deception O(n)). Loaded by every conscience evaluation when CIRIS_ACCORD_MODE=compressed (default).",
     kind: "text" as const,
   },
   {

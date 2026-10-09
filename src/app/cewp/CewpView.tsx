@@ -137,7 +137,7 @@ export default function CewpView() {
   const abuseOverwhelmed = scenario.malicious_fraction >= 0.5;
 
   // Map model output to animation intensity. The toy's per-server
-  // bandwidth is the load-bearing number. Saturate around 10.8 TB/day
+  // bandwidth is the number that decides it. Saturate around 10.8 TB/day
   // (the 1 Gbps gate).
   const intensity = useMemo(() => {
     const srvBw = srv.bandwidth_in_per_day + srv.bandwidth_out_per_day;

@@ -155,7 +155,40 @@ def relevant(code: str, texts: List[str], *, limit: int = 60) -> Dict[str, str]:
         if _mentions(english, texts):
             hits.append((len(english), english))
     hits.sort(key=lambda p: (-p[0], p[1]))
-    return {e: all_terms[e] for _, e in hits[:limit]}
+    chosen = [e for _, e in hits]
+    chosen = _drop_contained(chosen, texts)
+    return {e: all_terms[e] for e in chosen[:limit]}
+
+
+# LOCAL PATCH (website): a term that only ever appears INSIDE a longer term is
+# not a separate instruction, it is the same words counted twice, and sending
+# both makes the block self-contradictory. Vietnamese pinned both
+# "Constitutional Mesh -> Mạng lưới hiến pháp" and "Constitutional -> Hiến chế
+# (liên bang)"; the one phrase "post-quantum decentralized constitutional mesh"
+# contains both, so every rendering violated one row and the reviewer could
+# always cite the other. No draft could pass. A shorter term is kept whenever it
+# also occurs on its own somewhere in the request, which is why "Authority"
+# survives alongside "Wise Authority" in a text that uses both.
+def _drop_contained(chosen: List[str], texts: List[str]) -> List[str]:
+    hay = " \n ".join(texts).lower()
+    keep: List[str] = []
+    for i, short in enumerate(chosen):
+        longer = [c for c in chosen if c is not short and _contains_term(c, short)]
+        if longer:
+            rest = hay
+            for c in longer:
+                rest = rest.replace(c.lower(), " ")
+            if not _mentions(short, [rest]):
+                continue
+        keep.append(short)
+    return keep
+
+
+def _contains_term(longer: str, short: str) -> bool:
+    """Is `short` a whole-word phrase inside `longer`?"""
+    if len(short) >= len(longer):
+        return False
+    return re.search(rf"\b{re.escape(short.strip().lower())}\b", longer.strip().lower()) is not None
 
 
 class GlossaryMissing(RuntimeError):

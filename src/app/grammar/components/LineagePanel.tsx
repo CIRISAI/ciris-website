@@ -57,7 +57,7 @@ const ROWS: LineageRow[] = [
     body: (
       <>
         Four clarifications plus one canonical-encoding addition, all
-        additive on the frozen surface. The load-bearing one: §7.0.1
+        additive on the frozen surface. The one that matters: §7.0.1
         fabric-node separation-of-powers. A fabric node (the headless
         cohabitation runtime, where <code>agent = fabric node + brain</code>)
         that co-locates substrate, steward, detector, and witness roles in

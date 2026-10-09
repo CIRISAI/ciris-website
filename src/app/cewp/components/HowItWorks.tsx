@@ -58,7 +58,7 @@ const SECTIONS: Array<{ id: string; q: string; body: React.ReactNode }> = [
           the user count you picked.
         </p>
         <p>
-          The load-bearing formula is the same one the Rust toy uses:
+          The formula underneath is the same one the Rust toy uses:
         </p>
         <pre className="my-2 overflow-x-auto rounded bg-slate-100 p-3 text-[12px] leading-5 dark:bg-gray-950">
 {`effective_R       = trust_radius * trust_multiplier(depth)

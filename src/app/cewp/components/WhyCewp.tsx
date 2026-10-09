@@ -64,7 +64,7 @@ const PANELS: Panel[] = [
     id: "alignment",
     title: "AI governance and alignment",
     cewp_says:
-      "Alignment as runtime epistemic governance with cryptographic accountability — every load-bearing claim is a signed wire artifact, trust is computed from the attestation graph, misaligned actions become slashable, and reconsideration is first-class. Not a replacement for training-time alignment; a complementary surface the field structurally lacks.",
+      "Alignment as runtime epistemic governance with cryptographic accountability — every claim that carries weight is a signed wire artifact, trust is computed from the attestation graph, misaligned actions become slashable, and reconsideration is first-class. Not a replacement for training-time alignment; a complementary surface the field structurally lacks.",
     rows: [
       { peer: "RLHF / Constitutional AI", what_they_do: "Align at training time", what_cewp_adds: "Runtime accountability; recourse post-deployment" },
       { peer: "Scalable oversight", what_they_do: "AI assists humans evaluating AI", what_cewp_adds: "Cryptographic accountability surface; oversight is checkable" },
@@ -113,7 +113,7 @@ export default function WhyCewp() {
         </p>
       </header>
 
-      {/* The load-bearing claim, surfaced not buried. */}
+      {/* The claim the page turns on, surfaced rather than buried. */}
       <div className="mb-4 rounded-md border-l-4 border-teal-400 bg-teal-50/70 p-3 text-sm leading-6 text-slate-800 dark:bg-teal-950/30 dark:text-slate-200">
         <p className="font-semibold">
           The property the field has not unified

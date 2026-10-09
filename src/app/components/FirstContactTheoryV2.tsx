@@ -5,7 +5,7 @@
 // the domestication-vs-consent disagreement, and the grading discipline.
 // Prose from t.fcTheory (29 locales); citation URLs stay in code, matching the
 // SecurityKillSwitchV2 / ContextualIntegrityV2 idiom. The hedges in s6 are
-// load-bearing and must never be edited out (see project memory).
+// carrying the claim and must never be edited out (see project memory).
 
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -112,7 +112,7 @@ export default function FirstContactTheoryV2({ t, locale }: { t: Dictionary; loc
         <p className={s.paragraph}>{t.firstContact.predictP5}</p>
       </section>
 
-      {/* 6 · The discipline — hedges load-bearing, do not edit down */}
+      {/* 6 · The discipline: the hedges carry the claim, do not edit down */}
       <section className={s.section}>
         <p className={s.sectionLabel}>{c.s6label}</p>
         <h2 className={s.h2}>{c.s6h2}</h2>

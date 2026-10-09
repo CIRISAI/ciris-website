@@ -48,7 +48,7 @@ export default function FamiliesPanel({
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
           Every claim in the federation sits in one of five families. The
-          analogy on each card is load-bearing pedagogy, read it before
+          analogy on each card is how the card teaches, read it before
           touching a prefix.
         </p>
       </header>

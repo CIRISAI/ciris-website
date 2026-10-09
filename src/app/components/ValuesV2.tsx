@@ -3,7 +3,7 @@
 //
 // Two halves that belong on one page. The first states the values: Meta-Goal
 // M-1 as the apex, then the six principles the conscience reasons with. The
-// second is the load-bearing claim: values run inside the agent at decision
+// second is the claim the page rests on: values run inside the agent at decision
 // time, and accountability is proved by the shape of the signed envelope
 // rather than by an inspector reading the content, because structure stays
 // cheap to check as capability grows and judgment does not.

@@ -1,6 +1,6 @@
 // CEWP federation scaling model.
 //
-// TypeScript port of the load-bearing math from
+// TypeScript port of the math that does the counting, from
 // CIRISNodeCore/examples/scale_model.rs (v0.3 single-pool, CEG-organic).
 // Constants are taken from the substrate-sister benchmark suites cited
 // in the original. The web page exposes the knobs as sliders so the

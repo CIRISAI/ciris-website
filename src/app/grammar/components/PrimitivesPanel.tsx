@@ -14,7 +14,7 @@ export default function PrimitivesPanel() {
         <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
           The entire wire format is one scalar attestation primitive plus four
           structural composers. Everything else is open vocabulary on top.
-          This is the most load-bearing fact about CEG.
+          This is the fact everything else about CEG depends on.
         </p>
       </header>
 

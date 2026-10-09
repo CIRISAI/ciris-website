@@ -6,8 +6,8 @@ export const MARKETING_OG: Record<
 > = {
   "/constitutional-mesh": {
     "en": {
-      "title": "The Constitutional Mesh: The Load-Bearing Layer of Open-Source AI Safety",
-      "description": "CIRIS is a post-quantum decentralized constitutional mesh: a machine conscience on coordination built to resist capture. Open models and clever agent tooling are not enough. This page states the claim plainly and invites you to break it."
+      "title": "The Constitutional Mesh: What Open-Source AI Safety Rests On",
+      "description": "CIRIS is a post-quantum decentralized constitutional mesh: a machine conscience on coordination built to resist capture. Open models and clever agent tooling are not enough. This page puts the claim in the open and invites you to break it."
     }
   },
   "/first-contact/theory": {
@@ -1813,7 +1813,7 @@ export const MARKETING_OG: Record<
   "/mdd": {
     "en": {
       "title": "Mission Driven Development | Methodology for Mission-as-Architecture",
-      "description": "A software engineering methodology that treats mission as the load-bearing fourth foundation of system architecture. Active worked example: CIRIS."
+      "description": "A software engineering methodology that treats mission as the fourth foundation of system architecture, the one the other three rest on. Active worked example: CIRIS."
     },
     "es": {
       "title": "Desarrollo orientado por misión | Metodología para la misión como arquitectura",
