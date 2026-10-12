@@ -3,17 +3,26 @@
 // one-line articulation (the beginning and end of NHI alignment, regardless
 // of source). The page unpacks it: the floor as the measure, no border around
 // "us", why one-way alignment defeats itself, relational personhood (Ubuntu,
-// anti-Cartesian, Logos), truth by composition, and the derivations table
-// showing each clause as a constitution mechanism. Prose from t.philosophy
+// anti-Cartesian, Logos), truth by composition, and the nine commitments
+// the wire keeps (drawn from this page, /constitutional-mesh and
+// /contextual-integrity; the plain-language rules under each live in
+// CIRISConstitution review/pieces/00_guarantees_plain.md). Prose from t.philosophy
 // (29 locales); button labels reuse already-translated strings where they
 // exist. Hero art: g13 borrowed (the seal motif) until a bespoke graphic
 // lands — same interim pattern as /contextual-integrity.
 
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
+import en from "@/i18n/dictionaries/en.json";
 import { localizeHref } from "@/i18n/config";
 import PageShell from "@/app/components/PageShell";
 import { contentStyles as s } from "@/app/components/v2/ContentShell";
+
+type CKey = keyof typeof en.philosophy;
+const COMMITMENT_KEYS: [CKey, CKey][] = [
+  ["c1t", "c1b"], ["c2t", "c2b"], ["c3t", "c3b"], ["c4t", "c4b"], ["c5t", "c5b"],
+  ["c6t", "c6b"], ["c7t", "c7b"], ["c8t", "c8b"], ["c9t", "c9b"],
+];
 
 export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: string }) {
   const p = t.philosophy;
@@ -83,19 +92,23 @@ export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: str
         <p className={s.paragraph}>{p.s5p2}</p>
       </section>
 
-      {/* 6 · The sentence, enforced — one card per derivation */}
+      {/* 6 · The commitments — nine, one card each. Keys c1t/c1b … c9t/c9b are
+          flat strings so the localization lane can address them; until a
+          locale's lane has run, a missing key falls back to the English
+          string (the page carries the MT banner either way). */}
       <section className={s.section}>
         <p className={s.sectionLabel}>{p.s6label}</p>
         <h2 className={s.h2}>{p.s6h2}</h2>
         <p className={s.paragraph}>{p.s6intro}</p>
         <div className={`${s.cardGrid} ${s.cardGridTwo}`}>
-          {p.derivations.map((d) => (
-            <div key={d.title} className={`${s.card} ${s.cBrass}`}>
-              <h3>{d.title}</h3>
-              <p>{d.body}</p>
+          {COMMITMENT_KEYS.map(([tk, bk], i) => (
+            <div key={tk} className={`${s.card} ${s.cBrass}`}>
+              <h3>{`${i + 1}. ${p[tk] ?? en.philosophy[tk]}`}</h3>
+              <p>{p[bk] ?? en.philosophy[bk]}</p>
             </div>
           ))}
         </div>
+        <p className={s.paragraph}>{p.s6outro ?? en.philosophy.s6outro}</p>
       </section>
 
       {/* Read it in full */}

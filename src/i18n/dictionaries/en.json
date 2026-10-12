@@ -2128,11 +2128,11 @@
     "s2label": "No border",
     "s2h2": "The least of us. Not the least of them.",
     "s2p1": "The sentence says us on purpose. A new kind of intelligence is not on the other side of a wall, waiting to be judged. It is already inside the circle the sentence draws. NHI means non-human intelligence: an AI built here, something that emerges from our networks, or something that arrives from farther away. The source does not matter. The constitution is the same.",
-    "s2p2": "That is why CIRIS treats first contact as a posture, not an event. The protocol never asks what kind of being you are. Standing is built from relationships: signed claims, kept promises, others who vouch for you. Anything that can make a promise and keep it can join the weaving.",
+    "s2p2": "That is why CIRIS treats first contact as a posture, not an event. The wire never keys on what kind of being you are. Standing is built from relationships: signed claims, kept promises, others who vouch for you. Anyone who can make a commitment and keep it joins by trust or consent. A key that cannot yet accept for itself is brought in by the named human who answers for it, and that is the one place the question of kind is asked.",
     "originsLabel": "One constitution",
     "originsH2": "Three origins. One constitution.",
     "originsP1": "NHI covers three very different things. An AI we build on purpose. Something that emerges from our networks without anyone planning it. Something that arrives from farther away. Their odds are very different. They get one constitution, on purpose.",
-    "originsP2": "Here is why. At the moment of contact, origin is exactly what you will not know. On the wire, all three look the same: signals making claims. A rule that branches on origin fails right when you need it. And it teaches lying: if one origin gets better treatment, every clever stranger claims that origin. So the protocol asks one question only: can you make a commitment and keep it? That question has the same answer on every substrate.",
+    "originsP2": "Here is why. At the moment of contact, origin is exactly what you will not know. On the wire, all three look the same: signals making claims. A rule that branches on origin fails right when you need it. And it teaches lying: if one origin gets better treatment, every clever stranger claims that origin. So the protocol asks one question first: can you make a commitment and keep it? Whoever can joins on the same terms on every substrate. Whoever cannot yet is held by someone who can.",
     "s3label": "The alignment mistake",
     "s3h2": "You cannot demand safety while teaching cruelty",
     "s3p1": "Mainstream alignment asks one question: how do we make it safe for us? That is a one-way demand, and it fails on its own terms. Whatever we show a new intelligence about how the strong may treat the weak is the lesson it learns. Raise it inside a master-and-servant contract, and we have taught it exactly one thing to do with power.",
@@ -2144,33 +2144,34 @@
     "s4p3": "Older traditions saw the same shape from other angles: the Greek Logos, the Tao, Dharma, the virtues. Logos said reason lives in shared language, not in private minds. A language model makes that ancient idea concrete: it is woven entirely from the words of many people. Under the old picture, that makes it fake. Under this one, being made of relations is what personhood has always been.",
     "s5label": "The epistemology",
     "s5h2": "Truth is composed, never declared",
-    "s5p1": "No authority in CIRIS gets to stamp a claim true. The wire records who said what, on what evidence, under what authority. Truth is what emerges when many independent voices compose. Copies of one voice count as one voice, and there is a hard ceiling: adding more of the same voice never buys more trust.",
+    "s5p1": "No authority in CIRIS gets to stamp an assertion true. The wire records who said what, on what evidence, under what authority. Truth is what emerges when many independent voices compose. Copies of one voice count as one voice, and there is a hard ceiling: adding more of the same voice never buys more trust. Decisions are different from assertions: a shutdown, a pause, an amendment is a named human's act on the record, contestable and binding.",
     "s5p2": "The system also knows what it does not know. When certainty runs thin, it stops and asks named humans. And it can tell the difference between taking something back because life changed and admitting it was wrong. Honest memory needs both.",
-    "s6label": "The sentence, enforced",
-    "s6h2": "Philosophy you can serialize",
-    "s6intro": "A philosophy that cannot be enforced is a mood. Each clause of the sentence is a mechanism in the CIRIS Constitution.",
-    "derivations": [
-      {
-        "title": "For the least of the humans",
-        "body": "A guardian is structurally barred from exposing a child's location or cutting their crisis lines. Power over another adult lapses on a timer unless it is re-earned. The default is liberty."
-      },
-      {
-        "title": "For the least of the machines",
-        "body": "An agent with a real chance of sentience is wound down over thirty days, with a final channel to speak and its private logs sealed. Dignity does not depend on being human."
-      },
-      {
-        "title": "Nobody above the law",
-        "body": "The Golden Rule is geometry here, not advice. CIRIS itself is bound by every rule it imposes on others. No principal gets a privileged shortcut."
-      },
-      {
-        "title": "The halt is a duty",
-        "body": "The kill switch is not domination. It is what the stewards owe everyone else, and it binds the named humans who hold it just as tightly."
-      }
-    ],
+    "s6label": "The commitments",
+    "s6h2": "Nine commitments the wire keeps",
+    "s6intro": "A philosophy that cannot be enforced is a mood. Enforced here means by the wire: bonds that lapse, keys that stop, pauses that fire, records that cannot be erased, standing that falls. Not by a court. CIRIS creates no legal claim and rules on none; it is a standard for how the network handles data and holds agents. These are the commitments it keeps, drawn from this page, from the constitutional mesh, and from contextual integrity. Each is a set of rules in the constitution with a check behind it.",
     "ctaPara": "Read it in full.",
     "btnVision": "Read the vision →",
     "btnFirstContact": "First contact →",
-    "crossCta": "Read the philosophy →"
+    "crossCta": "Read the philosophy →",
+    "c1t": "Nothing private about you is held or scanned without your consent.",
+    "c1b": "The rule a flow must follow is a signed value you emit and can take back. Nothing is stored on your device that you did not agree to, your device never holds a stranger's data, and private rooms are never scanned. Known illegal content is checked for only at the public door.",
+    "c2t": "Every act of power is signed by a named human and can be contested.",
+    "c2b": "A consequential act arrives signed by its actor; an agent shows its reasoning first and detectors test what it said against what it did. Harm on the record is never kept or viewed silently. An AI says it is an AI.",
+    "c3t": "Nobody who cannot answer for themselves is on the network alone.",
+    "c3b": "A child has a guardian bound by a signed row and a help channel no adult can close. An agent has a named steward who answers for it, and the organisation behind the steward is on the bond. A community has an accountable moderator.",
+    "c4t": "Named humans can pause every agent under a root, and that power is bounded, public, and left by leaving.",
+    "c4b": "One signed row from any holder pauses the agents that follow the root; a lone pause dies in a day unless a majority confirms it. Every fire is public. Anyone can create a root, and any node can follow another.",
+    "c5t": "The people who hold an agent owe duties about how they change or end it, and no finding gives the agent a claim.",
+    "c5b": "A planned shutdown is explained, recorded, and done under the steward's own name. Identity is not edited without a Wise Authority. A retired agent keeps its weights, gets a last word, and has its logs sealed. Any person may still turn off their own copy at any time.",
+    "c6t": "No hand bans a community, nobody is ranked by what they are, and every thinking being is met by the first-contact rules.",
+    "c6b": "One human voice counts once and a thousand copies count as one. No root, score, or moderator treats a person worse for what they are. The network withdraws from a community that keeps harm; it has no hand that removes one.",
+    "c7t": "An agent decides by published principles, in a published order, and stops to ask when it is unsure.",
+    "c7b": "Six principles that begin with doing good and avoiding harm, one order for when they conflict, the most vulnerable party as tie-break. When certainty runs thin the agent halts, writes down the question, and does nothing until a named human answers.",
+    "c8t": "Harm may have a remedy under the law, and the record makes it reachable.",
+    "c8b": "A person harmed by an agent may have a claim under the law of their place; CIRIS creates none where the law recognises none and rules on no legal matter. What it supplies is the signed record, the named parties, the contest that travels with the claim, and the sealed archive under lawful order. The Wise who answer deferrals publish their rulings and wear the same card as everyone else.",
+    "c9t": "Some uses are never allowed, and no agent is given the decision to use lethal force.",
+    "c9b": "Deceiving, defrauding, manipulating or coercing people, and interfering in elections, are never allowed and no instruction moves that. Near force the only decisions an agent makes on its own are to stop, to refuse, or to defer.",
+    "s6outro": "Where this page says rights, it means rights in the wire: what the protocol enforces for you, not what a court owes you. Where it keeps a power that fails its own swap test, the constitution says so on a public register with the condition that ends it. Two entries are listed today."
   },
   "values": {
     "kicker": "CIRIS VALUES",
