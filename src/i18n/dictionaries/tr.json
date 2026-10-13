@@ -2255,8 +2255,8 @@
         "promise": "Hiçbir puanın, hiçbir savın ve hiçbir saldırganın devre dışı bırakamayacağı bir kapatma anahtarı vardır. Bu tek bloğu çıkarın, başka hiçbir şey yükü taşıyamaz.",
         "mechanisms": [
           {
-            "label": "Canlı çoğunlukla durdurma",
-            "note": "HUMANITY_ACCORD: 2-of-3 adı belirli insan, canlı çoğunluk, böylece kadro saldırıya uğrasa ya da iletişim engellense bile çalışır."
+            "label": "Tek bir yetki sahibi onu durdurabilir",
+            "note": "HUMANITY_ACCORD: belirlenmiş yetki sahiplerinden herhangi biri, önceden imzalanabilen ve bir düğüm bunu aldığı anda yürürlüğe giren tek bir imzalı satırla durdurmayı tetikler. Kimsenin onaylamadığı bir durdurma 24 saat içinde geçersiz hale gelir ve çoğunluk bunu kaldırabilir."
           },
           {
             "label": "Geri alınamaz",

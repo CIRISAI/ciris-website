@@ -26,7 +26,9 @@ import type {
   AccordPrinciple,
   RegulatoryAttestation,
 } from "../lib/shared";
-import { CHAPTERS_BY_BATCH } from "../lib/shared";
+import { CHAPTERS_BY_BATCH,
+  prefixLabel,
+} from "../lib/shared";
 import DimensionDoc from "./DimensionDoc";
 import SemanticsGraph from "./SemanticsGraph";
 import SourceChapterView from "./SourceChapterView";
@@ -225,7 +227,7 @@ function DimensionTree({
                       title={ACCORD_LABEL[d.accord_principle]}
                     />
                     <span className="min-w-0 flex-1 break-all font-mono text-xs">
-                      {d.prefix}
+                      {prefixLabel(d)}
                     </span>
                   </button>
                 </li>
@@ -376,7 +378,7 @@ function DimensionOverview({
           </span>
         </div>
         <h2 className="break-all font-mono text-xl font-bold tracking-tight text-slate-900 dark:text-white md:text-2xl">
-          {d.prefix}
+          {prefixLabel(d)}
         </h2>
         <p className="mt-2 leading-7 text-slate-700 dark:text-slate-300">
           {d.gloss}
@@ -904,7 +906,7 @@ function SemanticsDetail({
     if (!d) return null;
     return (
       <div className="space-y-3">
-        <RightHeader title={d.prefix} onClose={onClose} />
+        <RightHeader title={prefixLabel(d)} onClose={onClose} />
         <p className="text-sm leading-6 text-slate-700 dark:text-slate-300">
           {d.gloss}
         </p>
@@ -983,7 +985,7 @@ function SemanticsDetail({
               className="break-all rounded-md border border-slate-300 px-2 py-0.5 font-mono text-xs hover:border-brand-primary hover:text-brand-primary dark:border-gray-700"
               title={d.gloss}
             >
-              {d.prefix}
+              {prefixLabel(d)}
             </button>
           ))}
         </div>

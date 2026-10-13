@@ -2255,8 +2255,8 @@
         "promise": "Es gibt einen Aus-Schalter, den keine Bewertung, kein Argument und kein Angreifer außer Kraft setzen kann. Entfernt man diesen einen Block, kann nichts anderes mehr die Last tragen.",
         "mechanisms": [
           {
-            "label": "Live-Quorum-Halt",
-            "note": "HUMANITY_ACCORD: 2-of-3 benannte Menschen, Live-Quorum, damit es auch dann funktioniert, wenn die Liste angegriffen oder die Kommunikation gestört wird."
+            "label": "Ein Inhaber kann ihn stoppen",
+            "note": "HUMANITY_ACCORD: Jeder der namentlich benannten Inhaber kann den Halt mit einer einzigen signierten Zeile auslösen – im Voraus signierbar und wirksam in dem Moment, in dem ein Knoten sie empfängt. Ein Halt, den niemand bestätigt, verfällt nach 24 Stunden, und eine Mehrheit kann ihn aufheben."
           },
           {
             "label": "Nicht widerrufbar",

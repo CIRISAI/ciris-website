@@ -2255,8 +2255,8 @@
         "promise": "Esiste un interruttore di arresto che nessun punteggio, nessun argomento e nessun aggressore può aggirare. Rimuovi questo solo blocco e nient'altro può reggere il carico.",
         "mechanisms": [
           {
-            "label": "Arresto a quorum dal vivo",
-            "note": "HUMANITY_ACCORD: 2-of-3 esseri umani nominati, a quorum dal vivo, così funziona anche se l'elenco viene attaccato o le comunicazioni vengono disturbate."
+            "label": "Un solo detentore può fermarlo",
+            "note": "HUMANITY_ACCORD: uno qualsiasi dei detentori identificati per nome attiva l'arresto con una singola riga firmata, firmabile in anticipo ed efficace nel momento in cui un nodo la riceve. Un arresto che nessuno conferma decade in 24 ore, e una maggioranza può revocarlo."
           },
           {
             "label": "Non revocabile",

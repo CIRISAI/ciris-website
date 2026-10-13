@@ -8,6 +8,9 @@ import {
   getDimension,
   RESPONSE_BLOB,
   AGENT_BLOB,
+  prefixLabel,
+  isStructural,
+  STRUCTURAL_DIMENSIONS,
 } from "../lib/seed";
 import Workspace from "../components/Workspace";
 import SeoBrowseAll, {
@@ -48,12 +51,22 @@ export default async function DimensionPage({
             <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white md:text-3xl">
               <span className="font-mono text-brand-primary">{d.id}</span>{" "}
               <span className="font-mono text-slate-700 dark:text-slate-300">
-                {d.prefix}
+                {prefixLabel(d)}
               </span>
+              {isStructural(d.id) && (
+                <span className="ml-2 align-middle rounded border border-slate-300 px-2 py-0.5 font-mono text-[11px] font-normal text-slate-600 dark:border-slate-600 dark:text-slate-300">
+                  structural, not a namespace family
+                </span>
+              )}
             </h1>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">
               {d.gloss}
             </p>
+            {isStructural(d.id) && (
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">
+                {STRUCTURAL_DIMENSIONS[d.id]}
+              </p>
+            )}
             <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
               Sources:{" "}
               <a

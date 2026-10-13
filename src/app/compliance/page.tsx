@@ -54,6 +54,17 @@ export default async function CompliancePage() {
               </a>
               .
             </p>
+            {/* ciris-website#31: 26 of the 27 are CC 3.1 namespace families and
+                one, D23, is a structural property. Saying so once keeps a
+                reader from inferring a 27th family that does not exist. */}
+            <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
+              Of the {seed.metadata.totals.dimensions} dimensions, 26 are CC 3.1
+              namespace families and one, D23 accountability, is a structural
+              property: its evidence is the audit chain rather than an
+              attestation prefix. The dimension IDs are the stable key. A later
+              seed will relabel prefixes to the namespace families, and the IDs
+              will not move with them.
+            </p>
             <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
               We do not just audit after the fact. The constraints are
               mechanically enforced before a single image is minted. See the{" "}

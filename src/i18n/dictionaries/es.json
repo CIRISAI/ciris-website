@@ -2255,8 +2255,8 @@
         "promise": "Existe un interruptor de apagado que ningún puntaje, ningún argumento y ningún atacante puede anular. Quita este bloque y nada más podrá sostener la carga.",
         "mechanisms": [
           {
-            "label": "Parada por quórum en vivo",
-            "note": "HUMANITY_ACCORD: 2-of-3 personas nombradas, con quórum en vivo para que funcione incluso si se ataca la lista o se bloquean las comunicaciones."
+            "label": "Un titular puede detenerlo",
+            "note": "HUMANITY_ACCORD: cualquiera de los titulares designados activa la parada con una sola fila firmada, que puede firmarse de antemano y entra en vigor en el momento en que un nodo la recibe. Una parada que nadie confirma caduca en 24 horas, y una mayoría puede levantarla."
           },
           {
             "label": "No revocable",

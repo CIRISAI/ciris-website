@@ -2255,8 +2255,8 @@
         "promise": "Ada sakelar mati yang tak bisa ditimpa oleh skor apa pun, argumen apa pun, atau penyerang mana pun. Lepas satu balok ini dan tak ada lagi yang bisa menahan beban.",
         "mechanisms": [
           {
-            "label": "Penghentian kuorum langsung",
-            "note": "HUMANITY_ACCORD: 2-of-3 manusia yang bernama, kuorum langsung agar tetap bekerja meski daftar diserang atau komunikasi terganggu."
+            "label": "Satu pemegang dapat menghentikannya",
+            "note": "HUMANITY_ACCORD: siapa pun di antara para pemegang yang disebutkan namanya dapat memicu penghentian dengan satu baris bertanda tangan, yang dapat ditandatangani lebih dulu dan berlaku segera setelah sebuah node menerimanya. Penghentian yang tidak dikonfirmasi oleh siapa pun akan kedaluwarsa dalam 24 jam, dan mayoritas dapat mencabutnya."
           },
           {
             "label": "Tak bisa dicabut",

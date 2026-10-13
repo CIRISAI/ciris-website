@@ -12,6 +12,7 @@ import {
   type AccordPrinciple,
   type Dimension,
   type BatchId,
+  prefixLabel,
 } from "../lib/shared";
 
 const ACCORD_LABEL: Record<AccordPrinciple, string> = {
@@ -59,7 +60,7 @@ function DimensionLink({ d }: { d: Dimension }) {
         </span>
       </div>
       <p className="break-all font-mono text-sm font-semibold text-brand-primary">
-        {d.prefix}
+        {prefixLabel(d)}
       </p>
       <p className="mt-1 line-clamp-2 text-xs text-slate-600 dark:text-slate-300">
         {d.gloss}
@@ -180,7 +181,7 @@ export default function SeoBrowseAll({ seed }: { seed: Seed }) {
                         className="break-all rounded-md border border-slate-300 px-1.5 py-0.5 font-mono text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
                         title={d.gloss}
                       >
-                        {d.prefix}
+                        {prefixLabel(d)}
                       </Link>
                     </li>
                   ))}
@@ -239,7 +240,7 @@ export default function SeoBrowseAll({ seed }: { seed: Seed }) {
                           className="break-all rounded-md border border-slate-300 px-1.5 py-0.5 font-mono text-slate-700 hover:border-brand-primary hover:text-brand-primary dark:border-gray-700 dark:text-slate-200"
                           title={d.gloss}
                         >
-                          {d.prefix}
+                          {prefixLabel(d)}
                         </Link>
                       ))}
                     </p>

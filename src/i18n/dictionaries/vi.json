@@ -2255,8 +2255,8 @@
         "promise": "Có một công tắc tắt mà không điểm số nào, không lập luận nào, và không kẻ tấn công nào có thể vượt qua. Gỡ bỏ khối đá này thì không gì khác còn chịu nổi tải trọng.",
         "mechanisms": [
           {
-            "label": "Dừng bằng túc số trực tiếp",
-            "note": "HUMANITY_ACCORD: 2-of-3 người có tên, túc số trực tiếp nên nó vẫn hoạt động ngay cả khi danh sách bị tấn công hoặc liên lạc bị gây nhiễu."
+            "label": "Một người nắm giữ có thể dừng nó",
+            "note": "HUMANITY_ACCORD: bất kỳ người nắm giữ nào trong số những người được nêu tên đều có thể kích hoạt lệnh dừng bằng một dòng đã ký duy nhất, có thể ký trước và có hiệu lực ngay khi một nút nhận được nó. Một lệnh dừng mà không ai xác nhận sẽ hết hiệu lực sau 24 giờ, và đa số có thể gỡ bỏ nó."
           },
           {
             "label": "Không thể thu hồi",

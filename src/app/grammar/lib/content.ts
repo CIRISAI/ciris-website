@@ -461,9 +461,9 @@ attestation_envelope:
     primitives: ["accord:invoke:CONSTITUTIONAL"],
     family: "CORRECTION",
     walkthrough:
-      "Requires 2-of-3 HUMANITY_ACCORD multi-sig. Distinct from operational SYSTEM_ADMIN authority, the SetEmergencyShutdown admin RPC explicitly refuses this; it must come through the constitutional layer per §7.",
+      "Requires one HUMANITY_ACCORD holder's signed row; a strict majority of the roster confirms it within the fuse or it lapses, and a majority resumes (CC 4.2, steward ruling CIRISConstitution#146). Distinct from operational SYSTEM_ADMIN authority, the SetEmergencyShutdown admin RPC explicitly refuses this; it must come through the constitutional layer per §7.",
     exampleYaml: `attestation_type: scores
-attesting_key_id: <humanity-accord-multisig-2-of-3>
+attesting_key_id: <humanity-accord-holder>
 attested_key_id: <federation>
 attestation_envelope:
   dimension: "accord:invoke:CONSTITUTIONAL:halt-2026-05-28"

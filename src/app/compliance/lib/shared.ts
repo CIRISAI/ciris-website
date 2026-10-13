@@ -87,6 +87,32 @@ export interface Dimension {
   convergence_note?: string;
 }
 
+// D23 is the one dimension of the 27 that is not a CC 3.1 namespace family.
+// Accountability is not a scored axis in CIRIS: there is no `accountability:*`
+// attestation anywhere in CIRISAgent and there never has been, because the
+// properties live in the audit service and its hash-chained Ed25519 log
+// instead (CIRISAgent/compliance/D23_accountability.md; Conformance test_320).
+// The seed's prefix column is a historical wire-form label, so rendering it
+// beside 26 real families reads as a 27th family that does not exist
+// (ciris-website#31).
+export const STRUCTURAL_DIMENSIONS: Readonly<Record<string, string>> = {
+  D23:
+    "CIRIS does not name accountability as a single axis. The accountability " +
+    "properties are built into the audit service and its hash-chained log, " +
+    "so the evidence is the chain and its verify endpoint rather than an " +
+    "attestation prefix.",
+};
+
+/** True for a dimension whose governed surface is structural, not a family. */
+export function isStructural(id: string): boolean {
+  return id in STRUCTURAL_DIMENSIONS;
+}
+
+/** What to print where a namespace family would go. */
+export function prefixLabel(d: { id: string; prefix: string }): string {
+  return isStructural(d.id) ? d.prefix.replace(/:\*$/, "") : d.prefix;
+}
+
 export interface Conflict {
   id: string;
   type: string;

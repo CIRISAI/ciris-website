@@ -716,8 +716,8 @@
     "multiSourceCopy": "CIRISVerify doesn’t trust a single source. HTTPS endpoints at independent domains are authoritative; DNS provides advisory cross-checks. If sources disagree, the agent is restricted. Anti-rollback protection tracks the highest-seen revocation revision and rejects any decrease.",
     "killSwitchSubheadline": "A switch no one inside the system can disable.",
     "killSwitchHeadline": "The Constitutional Kill Switch",
-    "killSwitchBody": "The last-resort power to halt a CIRIS agent is not held by the company, the network, or the agent. It is held by named humans. Each holder carries a pair of hardware keys: a FIPS 140-3 security key for the classical signature, which also seals the material for a second device that carries the post-quantum signature. To trigger the halt, a majority of the holders (2 of 3) sign the command on their hardware. The command carries hybrid Ed25519 + ML-DSA-65 signatures, so it cannot be forged, replayed, or faked, even by a future quantum computer, and no part of the network can grant, revoke, or override it.",
-    "killSwitchNote": "We designed for the worst case: an AI that attacks its own off-switch by going after the people who hold it. The constitution defines a live quorum, so even if most holders are lost, one reachable survivor can still pull the plug.",
+    "killSwitchBody": "The last-resort power to halt a CIRIS agent is not held by the company, the network, or the agent. It is held by named humans. Each holder carries a pair of hardware keys: a FIPS 140-3 security key for the classical signature, which also seals the material for a second device that carries the post-quantum signature. Any one holder fires the halt by signing a single row on their hardware, and every node that receives it stops its agents in the same step. The row can be signed in advance and kept sealed offline, so there is nothing in flight for an attacker to see or jam. The command carries hybrid Ed25519 and ML-DSA-65 signatures, so it cannot be forged, replayed, or faked, even by a future quantum computer, and no part of the network can grant, revoke, or override it.",
+    "killSwitchNote": "We designed for the worst case: an AI that attacks its own off-switch by going after the people who hold it. So stopping is easy and staying stopped is not. One holder stops every agent, even if the others are unreachable. A halt nobody else confirms lapses after 24 hours, and a majority of the holders can lift it at any time, so one frightened or coerced holder costs everyone a day and never more. With three holders seated, a majority is two, and the thresholds follow the roster rather than a fixed number.",
     "unifiedAttestationHeadline": "Unified Attestation",
     "unifiedAttestationSubheadline": "The full background check.",
     "card1Headline": "Key Attestation",
@@ -2340,8 +2340,8 @@
         "promise": "There is an off-switch that no score, no argument, and no attacker can override. Remove this one block and nothing else can hold the load.",
         "mechanisms": [
           {
-            "label": "Live-quorum halt",
-            "note": "HUMANITY_ACCORD: 2-of-3 named humans, live-quorum so it works even if the roster is attacked or comms are jammed."
+            "label": "One holder can stop it",
+            "note": "HUMANITY_ACCORD: any one of the named holders fires the halt with a single signed row, signable in advance and effective the moment a node receives it. A halt nobody confirms lapses in 24 hours, and a majority can lift it."
           },
           {
             "label": "Non-revocable",
@@ -3170,7 +3170,7 @@
     "lede": "Most AI safety claims ask for your trust. This one asks you to check it. Clone the repo, run one command, and confirm that the keys able to halt a CIRIS agent live on real, FIPS 140-3 validated hardware. Trust no one, including us.",
     "s1label": "The constitutional kill switch",
     "s1h2": "Named humans can halt a CIRIS agent. The power sits in hardware, not in the company.",
-    "s1p1": "A last-resort halt, the HUMANITY_ACCORD, is held by named people, not by CIRIS the company, the network, or the agent itself. No party inside the federation can grant, revoke, or override it. It fires on a two-of-three live quorum.",
+    "s1p1": "A last-resort halt, the HUMANITY_ACCORD, is held by named people, not by CIRIS the company, the network, or the agent itself. No party inside the federation can grant, revoke, or override it. Any one holder fires it with a single signed row, and it takes effect the moment a node receives it. Keeping it fired takes more than one: a halt nobody else confirms lapses after 24 hours, and a majority of the holders can lift it at any time. A missed halt is the only failure that cannot be undone, which is why firing is the easy half.",
     "s1p2": "Each quorum key is a hybrid of two signatures bound together. The Ed25519 half is rooted in a YubiKey 5 FIPS, validated to FIPS 140-3: generated inside the device, non-extractable, and requiring a physical touch to sign. The ML-DSA-65 half, the post-quantum signature, is a software key seal-wrapped to a USB stick under that same YubiKey, because no YubiKey ships a post-quantum applet yet. Six keys in all, three seated and three vaulted. A failed or unknown revocation check is treated as revoked, so the system fails secure.",
     "s2label": "Independent verification",
     "s2h2": "One command. No hardware, no network, no trust in us.",

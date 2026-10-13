@@ -2255,8 +2255,8 @@
         "promise": "Existe um botão de desligar que nenhuma pontuação, nenhum argumento e nenhum atacante pode anular. Remova este bloco e nada mais consegue sustentar a carga.",
         "mechanisms": [
           {
-            "label": "Parada por quórum ao vivo",
-            "note": "HUMANITY_ACCORD: 2-of-3 pessoas nomeadas, com quórum ao vivo para funcionar mesmo se a lista for atacada ou as comunicações forem bloqueadas."
+            "label": "Um detentor pode interrompê-lo",
+            "note": "HUMANITY_ACCORD: qualquer um dos detentores nomeados aciona a parada com uma única linha assinada, que pode ser assinada antecipadamente e passa a valer no momento em que um nó a recebe. Uma parada que ninguém confirma expira em 24 horas, e uma maioria pode suspendê-la."
           },
           {
             "label": "Não revogável",

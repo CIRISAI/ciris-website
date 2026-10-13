@@ -2255,8 +2255,8 @@
         "promise": "Il existe un interrupteur d'arrêt qu'aucun score, aucun argument et aucun attaquant ne peut contourner. Retirez ce seul bloc et rien d'autre ne peut porter la charge.",
         "mechanisms": [
           {
-            "label": "Arrêt à quorum vivant",
-            "note": "HUMANITY_ACCORD : 2-of-3 humains nommés, à quorum vivant, pour que cela marche même si la liste est attaquée ou si les communications sont brouillées."
+            "label": "Un détenteur peut l'arrêter",
+            "note": "HUMANITY_ACCORD : n'importe lequel des détenteurs nommés déclenche l'arrêt avec une seule ligne signée, qui peut être signée à l'avance et prend effet dès qu'un nœud la reçoit. Un arrêt que personne ne confirme s'annule en 24 heures, et une majorité peut le lever."
           },
           {
             "label": "Non révocable",
