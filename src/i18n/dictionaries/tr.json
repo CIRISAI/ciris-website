@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "CIRIS Anayasası · CC 1.0-rc5",
+    "eyebrow": "CIRIS Anayasası · CC {version}",
     "headline": "Tek belge. Tek sürüm hattı.",
     "intro": "CIRIS Accord, bir yapay zekanın neye önem vermesi gerektiğini ortaya koydu. CIRIS Epistemik Dilbilgisi, her iddianın herkesin doğrulayabilmesi için nasıl imzalandığını belirledi. İkisi ayrı belgeler olarak yazıldı; ama zaten birbirini içeriyordu. Artık birdirler: CIRIS Anayasası.",
     "apexLabel": "Temel: Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Önsözden",
     "readCta": "Tam anayasayı oku (PDF)",
     "sourceCta": "GitHub'daki kaynağı oku",
-    "versionNote": "Sürüm CC 1.0-rc5 · CIRIS Accord 1.3-RC2 ve CEG 1.0-RC29'u kapsar · AGPL-3.0"
+    "versionNote": "Sürüm CC {version} · CIRIS Accord 1.3-RC2 ve CEG 1.0-RC29'u kapsar · AGPL-3.0"
   },
   "_meta": {
     "locale": "tr",
@@ -2068,7 +2068,21 @@
     "btnPrediction": "Öngörü →"
   },
   "philosophy": {
+    "c10t": "Bir ajanın ve düğümünün kullandığı şey ölçülür, eylemden önce tartılır ve asla gizlenmez.",
+    "c10b": "Bir ajan harcadığı her şeyi sayar: tokenleri, enerjiyi, karbonu ve suyu, her eylem için ve son bir saat ile son bir gün boyunca. Bu sayım, ajan karar verirken önünde durur, böylece maliyet eylemle birlikte tartılır, sonradan toplanmaz; ajanın dünyaya olan maliyeti, hizmet ettiği kişiler tarafından, yaptığı diğer her şeyle aynı ayrıntı düzeyinde okunabilir. Kaynakları kısıtlı bir düğüm, yayımlanmış bir adım merdiveniyle kendini korur ve bu adımlar asla ajanın verdiği kararlar olarak kaydedilmez. Bir ajanı emekliye ayırmak hiçbir çevresel atık bırakmaz ve bu sorumluluk onu emekliye ayıran kişiye aittir.",
+    "c11t": "Hat üzerindeki her şey şifrelenir ve imzalanır, saldırı provadan geçirilir ve kapsam dışında kalan şey açıkça söylenir.",
+    "c11b": "Her bağlantı ve her kayıt, kuantum bilgisayarlara karşı dayanıklı olacak şekilde tasarlanmış anahtarlarla uçtan uca şifrelenir ve bir üye ayrıldığında anahtar değişir, böylece çıkarılan kişi bundan sonrasını okuyamaz. Kimse başkasının eylemini taklit edemez ve kimse iki izleyiciye iki farklı geçmiş gösteremez. Yazılım çalışmadan önce kayıtlı bir yapıya karşı denetlenir. Kodu yazmamış kişiler belirli bir takvimde ona saldırır, bulgular yayımlanmış kurallar çerçevesinde açıklanır ve ağın savunmadığı saldırıların listesi de yayımlanır: kimin kiminle konuştuğu, trafik örüntüleri, her bağlantıyı gören bir gözlemci ve bir üyenin kendi çalınmış anahtarı.",
+    "s6outro": "Bu sayfanın hak dediği yerde, kastedilen telin kendisindeki haklardır: bir mahkemenin size borçlu olduğu değil, protokolün sizin için uyguladığı şey. Kendi yer değiştirme testini geçemeyen bir gücü koruduğu yerlerde, anayasa bunu kamuya açık bir sicilde, onu sona erdirecek koşulla birlikte belirtir. Bugün iki kayıt listelenmiştir.",
+    "s6aspirationHead": "Hangi bölümler kendi başına ayakta durur, hangileri başkalarına bağlıdır",
+    "s6aspiration": "On bir kuralın tümü aynı türden bir söz değildir. Çoğu, telin kendisi tarafından tutulur: süresi dolan bir teminat bir anahtarı durdurur, imzalı tek bir satır bir kök altındaki her ajanı duraklatır, bir kayıt sessizce yeniden yazılamaz. Diğerleri ağın dışındaki insanlara ve kurumlara dayanır ve bu kısımlar güvence değil, amaçtır. Zarara karşı bir çare, kanunun vermesi gereken bir şeydir; kanunun tanımadığı yerde CIRIS hiçbir hak iddiası oluşturmaz. Dış denetimler, provalı saldırılar ve Bilge Otoriteleri yöneten tüzük, yalnızca projenin dışındaki insanlar bu çalışmayı sürdürdüğü sürece geçerlidir. Bir yanıtın yol açtığı enerji ve su maliyeti, ancak üst kademedeki sağlayıcıların bildirdiği kadar doğru olabilir. Kendi cihazını piyasaya süren bir tedarikçi, onu kendi elinde tuttuğu bir köke sabitleyebilir ve hiçbir protokol bunu engellemez. Bir sözün tutulması başka birinin kendi payına düşeni yerine getirmesine bağlı olduğu durumlarda, Anayasa bunu tutulmuş saymak yerine kendi notlarında açıkça belirtir.",
+    "c8t": "Zararın hukuk önünde bir giderim yolu olabilir, kayıt bunu ulaşılabilir kılar ve içerideki yargıçlar da yargılanır.",
+    "c8b": "Bir ajan tarafından zarar gören bir kişinin, bulunduğu yerin hukukuna göre bir hak talebi olabilir; CIRIS, hukukun tanımadığı hiçbir hakkı yaratmaz ve hiçbir hukuki konuda karar vermez. Sağladığı şey imzalı kayıt, adı bilinen taraflar, hak talebiyle birlikte ilerleyen itiraz süreci ve yasal bir emir altında mühürlenen arşivdir. Ertelemelere yanıt veren Bilgeler kararlarını yayımlar ve herkesle aynı kartı taşır.",
+    "c9t": "Bazı kullanımlara asla izin verilmez ve hiçbir ajana öldürücü güç kullanma kararı verilmez.",
+    "c9b": "İnsanları aldatmak, dolandırmak, manipüle etmek veya zorlamak ve seçimlere müdahale etmek asla izin verilmez ve hiçbir talimat bunu değiştiremez. Bir ajan güç kullanımına herhangi bir şekilde yaklaştığında, kendi başına alabileceği tek kararlar durmak, reddetmek veya ertelemektir.",
     "kicker": "CIRIS · Felsefe",
+    "s6limit": "Hizalama burada çözülmüş değildir. CIRIS bir süper zekayı iyi yapmaz ve herhangi bir modelin içinde ne olduğu hakkında hiçbir şey söylemez. Katılmamış kimseyi bağlamaz, bu yüzden başka bir yerde oluşabilecek hesap verebilirliği olmayan bir süper zekayı durduramaz. Yapabildiği şey, elindeki ajanlar onları tutan insanlardan daha yetenekli hale gelirken, insanların onları durdurabilmesini, düzeltebilmesini ve reddedebilmesini sağlamaktır; CIRIS içinde ise sahip olduğu kurallar ve ağla, böyle bir gücün hesap verebilirlikten kaçarak oluşmasını engellemek için elinden geleni yapar. İddia ettiği tek şey budur. ciris.ai üzerinde bundan fazlası okunan her yerde, bu cümle geçerlidir.",
+    "btnRulesFull": "On bir kuralın tamamını okuyun",
+    "s6limitHead": "Burada iddia edilmeyenler",
     "title": "Hakkımız, en küçüğümüze sunduğumuz kadardır.",
     "lede": "Felsefenin tamamı bu. Nereden gelirse gelsin, her yeni zeka için hizalamanın başı da sonu da budur. CIRIS'in inşa ettiği diğer her şey, bu tek cümlenin yürürlüğe konmuş halidir.",
     "seoTitle": "CIRIS Felsefesi: Hakkımız, En Küçüğümüze Sunduğumuz Kadar",
@@ -2122,7 +2136,21 @@
     "ctaPara": "Tamamını okuyun.",
     "btnVision": "Vizyonu okuyun →",
     "btnFirstContact": "İlk temas →",
-    "crossCta": "Felsefeyi okuyun →"
+    "crossCta": "Felsefeyi okuyun →",
+    "c1t": "Sizinle ilgili özel hiçbir şey, rızanız olmadan tutulmaz veya taranmaz.",
+    "c1b": "Bir akışın uyması gereken kural, sizin yaydığınız ve geri alabileceğiniz imzalı bir değerdir. Cihazınızda onaylamadığınız hiçbir şey saklanmaz, cihazınız asla bir yabancının verisini tutmaz ve özel odalar asla taranmaz. Bilinen yasa dışı içerik yalnızca kamuya açık kapıda kontrol edilir.",
+    "c2t": "Her güç kullanımı, adı bilinen bir insan tarafından imzalanır ve itiraz edilebilir.",
+    "c2b": "Önemli sonuçlar doğuran bir eylem, failinin imzasıyla gelir; bir ajan önce gerekçesini gösterir ve dedektörler söylediğini yaptığıyla karşılaştırarak sınar. Kayıtlı bir zarar asla sessizce saklanmaz veya görüntülenmez. Bir yapay zeka, yapay zeka olduğunu söyler.",
+    "c3t": "Kendi adına hesap veremeyen hiç kimse ağda yalnız değildir.",
+    "c3b": "Bir çocuğun, imzalı bir kayıtla bağlı bir vasisi ve hiçbir yetişkinin kapatamayacağı bir yardım kanalı vardır. Bir ajanın, onun adına hesap veren, adı bilinen bir sorumlusu vardır ve sorumlunun arkasındaki kuruluş da bu yükümlülüğe dahildir. Bir topluluğun hesap verebilir bir moderatörü vardır.",
+    "c4t": "Adı bilinen insanlar, bir kökün altındaki her ajanı duraklatabilir ve bu güç sınırlıdır, kamuya açıktır ve ağdan ayrılarak bırakılabilir.",
+    "c4b": "Herhangi bir sahibinden gelen tek bir imzalı satır, kökü izleyen ajanları duraklatır; yalnız başına bir duraklama, bir çoğunluk onu onaylamadıkça bir gün içinde sona erer. Duraklama her tetiklendiğinde bu, kamuya açık kayda geçer. Herkes bir kök oluşturabilir ve her düğüm başka bir düğümü izleyebilir.",
+    "c5t": "Bir ajanı elinde bulunduran kişiler, onu nasıl değiştirdikleri veya sonlandırdıkları konusunda yükümlülük taşır ve hiçbir bulgu ajana bir hak talebi vermez.",
+    "c5b": "Planlı bir kapatma açıklanır, kaydedilir ve sorumlunun kendi adı altında gerçekleştirilir. Kimlik, bir Bilge Otorite olmadan değiştirilmez. Emekliye ayrılan bir ajan ağırlıklarını korur, son sözünü söyler ve günlükleri mühürlenir. Herhangi bir kişi yine de kendi kopyasını istediği zaman kapatabilir.",
+    "c6t": "Hiçbir el bir topluluğu yasaklamaz, hiç kimse ne olduğuna göre sıralanmaz ve her düşünen varlık ilk temas kurallarıyla karşılanır.",
+    "c6b": "Bir insan sesi bir kez sayılır ve binlerce kopya tek olarak sayılır. Hiçbir kök, puan veya moderatör bir kişiye kim olduğu yüzünden daha kötü davranmaz. Ağ, zararı sürdüren bir topluluktan çekilir; onu kaldıracak bir eli yoktur.",
+    "c7t": "Bir ajan, yayımlanmış ilkelere, yayımlanmış bir sıraya göre karar verir ve emin olmadığında durup sorar.",
+    "c7b": "İyilik yapmak ve zarardan kaçınmakla başlayan altı ilke, bunlar çatıştığında uygulanacak tek bir sıralama ve beraberlik bozucu olarak en savunmasız taraf. Kesinlik azaldığında ajan durur, soruyu yazıya döker ve adı bilinen bir insan yanıt verene kadar hiçbir şey yapmaz."
   },
   "contextualIntegrity": {
     "kicker": "Bağlamsal bütünlük · Uygun akış olarak mahremiyet",
@@ -2753,7 +2781,7 @@
     "convergence": "Dört korku, bir zemin. İnternetin yerini alacak şey, ChatGPT'nin de yerini alır.",
     "convergenceAccent": "Aynı altyapı, her kapı.",
     "footL": "CIRISAgent · epistemik ağ · AGPL-3.0, misyon kilitli",
-    "footR": "CIRIS 3.0 yayılıyor · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 yayılıyor",
     "heroLabels": {
       "consumerAi": "Güvenemeyeceğin bir yapay zeka",
       "bigTech": "Büyük Teknoloji her şeye sahip",

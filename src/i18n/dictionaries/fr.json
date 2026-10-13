@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "La Constitution CIRIS · CC 1.0-rc5",
+    "eyebrow": "La Constitution CIRIS · CC {version}",
     "headline": "Un seul document. Une seule ligne de version.",
     "intro": "L'Accord CIRIS définissait ce dont une IA doit se soucier. La Grammaire Épistémique CIRIS définissait comment chaque affirmation est signée pour que n'importe qui puisse la vérifier. Ils ont été rédigés comme deux documents, mais ils se contenaient déjà l'un l'autre. Maintenant ils n'en forment qu'un: la Constitution CIRIS.",
     "apexLabel": "La pierre angulaire: le méta-objectif M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Extrait de l'avant-propos",
     "readCta": "Lire la constitution complète (PDF)",
     "sourceCta": "Lire la source sur GitHub",
-    "versionNote": "Version CC 1.0-rc5 · intègre l'Accord CIRIS 1.3-RC2 et le CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Version CC {version} · intègre l'Accord CIRIS 1.3-RC2 et le CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "fr",
@@ -2068,7 +2068,23 @@
     "btnPrediction": "La prédiction →"
   },
   "philosophy": {
+    "c10t": "Ce qu'un agent et son nœud consomment est mesuré, pesé avant qu'il n'agisse, et jamais dissimulé.",
+    "c10b": "Un agent comptabilise ce qu'il dépense : jetons, énergie, carbone et eau, pour chaque action et sur la dernière heure comme sur la dernière journée. Ce décompte se trouve devant lui pendant qu'il décide, de sorte que le coût est pesé en même temps que l'action plutôt qu'additionné après coup, et ce que l'agent coûte au monde est lisible par les personnes qu'il sert, au même niveau de détail que tout le reste de ce qu'il fait. Un nœud à court de ressources se protège par une échelle de mesures publiée, et ces mesures ne sont jamais consignées comme des décisions prises par l'agent. Mettre un agent hors service ne laisse aucun déchet environnemental derrière lui, et cette responsabilité incombe à qui le met hors service.",
+    "c11t": "Tout ce qui circule sur le fil est chiffré et signé, l'attaque est répétée, et ce qui n'est pas couvert est dit à voix haute.",
+    "c11b": "Chaque lien et chaque enregistrement est chiffré de bout en bout avec des clés conçues pour résister aux ordinateurs quantiques, et la clé change quand un membre quitte le réseau, de sorte que quelqu'un qui a été exclu ne peut pas lire ce qui suit. Personne ne peut falsifier l'action d'autrui, et personne ne peut montrer à deux observateurs deux historiques différents. Le logiciel est vérifié par rapport à une version enregistrée avant de s'exécuter. Des personnes qui n'ont pas écrit le code l'attaquent selon un calendrier fixe, les découvertes sont divulguées selon des règles publiées, et la liste des attaques contre lesquelles le réseau ne se défend pas est publiée elle aussi : qui parle à qui, les schémas de trafic, un observateur qui voit chaque lien, et la clé volée d'un membre.",
+    "s6aspiration": "Les onze ne sont pas toutes le même genre de promesse. La plupart sont tenues par le fil lui-même : une caution qui expire désactive une clé, une seule ligne signée met en pause tous les agents sous une racine, un registre ne peut pas être discrètement réécrit. D'autres reposent sur des personnes et des institutions extérieures au réseau, et ces parties sont des objectifs plutôt que des garanties. Un recours pour un préjudice relève du droit ; CIRIS ne crée aucune revendication là où la loi n'en reconnaît aucune. Les audits externes, les attaques simulées et la charte qui régit les Autorités Sages ne tiennent que tant que des personnes extérieures au projet continuent ce travail. L'énergie et l'eau que coûte une réponse ne peuvent être aussi exactes que ce que rapportent les fournisseurs en amont. Un fournisseur qui expédie son propre appareil peut l'épingler à une racine qu'il détient, et aucun protocole ne l'empêche. Lorsqu'une promesse dépend du fait qu'une autre partie tienne son engagement, la Constitution le précise dans ses propres notes plutôt que de la compter comme tenue.",
+    "s6outro": "Quand cette page parle de droits, elle entend des droits inscrits dans le fil : ce que le protocole impose en votre faveur, et non ce qu'un tribunal vous doit. Lorsqu'elle conserve un pouvoir qui échoue à son propre test d'inversion, la Constitution le déclare sur un registre public, avec la condition qui y met fin. Deux entrées y figurent à ce jour.",
+    "s6aspirationHead": "Ce que le fil peut tenir à lui seul",
+    "c7t": "Un agent décide selon des principes publiés, dans un ordre publié, et s'arrête pour demander lorsqu'il n'est pas sûr.",
+    "c7b": "Six principes qui commencent par faire le bien et éviter le mal, un ordre de priorité en cas de conflit, et la partie la plus vulnérable comme critère de départage. Quand la certitude s'amenuise, l'agent s'arrête, consigne la question, et ne fait rien tant qu'un humain nommé n'a pas répondu.",
+    "c8t": "Un préjudice peut avoir un recours en droit, le registre le rend accessible, et les juges internes sont eux-mêmes jugés.",
+    "c8b": "Une personne lésée par un agent peut disposer d'un droit à faire valoir en vertu du droit de son lieu de résidence ; CIRIS n'en crée aucun là où la loi n'en reconnaît aucun, et ne tranche aucune question juridique. Ce qu'il fournit, c'est le registre signé, les parties nommées, la contestation qui accompagne la réclamation, et l'archive scellée sous ordonnance légale. Les membres de la Wise Authority qui répondent aux différés publient leurs décisions et portent la même carte que tout le monde.",
+    "c9t": "Certains usages ne sont jamais permis, et aucun agent ne reçoit le pouvoir de décider d'employer la force létale.",
+    "c9b": "Tromper, frauder, manipuler ou contraindre des personnes, ainsi qu'interférer dans des élections, ne sont jamais permis et aucune instruction ne change cela. Lorsqu'un agent est de près ou de loin lié à l'usage de la force, les seules décisions qu'il prend de lui-même sont de s'arrêter, de refuser ou de différer.",
     "kicker": "CIRIS · La philosophie",
+    "s6limitHead": "Ce que cela ne prétend pas",
+    "s6limit": "L'alignement n'est pas résolu ici. CIRIS ne rend pas une superintelligence bonne, et ne dit rien sur l'intérieur d'un quelconque modèle. Il ne lie personne qui n'a pas adhéré, et ne peut donc pas empêcher une superintelligence non redevable de se former ailleurs. Ce qu'il peut faire, c'est garder aux personnes la capacité de suspendre, corriger et refuser les agents qu'il détient à mesure qu'ils deviennent plus capables que les personnes qui les détiennent, et à l'intérieur de CIRIS, il fait de son mieux, avec les règles et le réseau dont il dispose, pour empêcher qu'un tel pouvoir ne se forme sans redevabilité. C'est tout ce qu'il revendique. Là où quoi que ce soit sur ciris.ai laisse entendre davantage, cette phrase prévaut.",
+    "btnRulesFull": "Lire les onze en intégralité",
     "title": "On nous doit autant que ce que nous offrons au plus petit d'entre nous.",
     "lede": "C'est toute la philosophie. C'est le début et la fin de l'alignement pour toute nouvelle intelligence, d'où qu'elle vienne. Tout le reste que CIRIS construit est cette seule phrase, appliquée.",
     "seoTitle": "La philosophie CIRIS : on nous doit ce que nous offrons au plus petit d'entre nous",
@@ -2122,7 +2138,19 @@
     "ctaPara": "Lisez-la en entier.",
     "btnVision": "Lire la vision →",
     "btnFirstContact": "Premier contact →",
-    "crossCta": "Lire la philosophie →"
+    "crossCta": "Lire la philosophie →",
+    "c1t": "Rien de privé vous concernant n'est conservé ou scanné sans votre consentement.",
+    "c1b": "La règle qu'un flux doit suivre est une valeur signée que vous émettez et pouvez retirer. Rien n'est stocké sur votre appareil sans votre accord, votre appareil ne détient jamais les données d'un inconnu, et les salons privés ne sont jamais scannés. Les contenus illégaux connus ne sont vérifiés qu'à la porte publique.",
+    "c2t": "Chaque acte de pouvoir est signé par un humain nommé et peut être contesté.",
+    "c2b": "Un acte lourd de conséquences arrive signé par son auteur ; un agent montre d'abord son raisonnement, et des détecteurs comparent ce qu'il a dit à ce qu'il a fait. Un préjudice consigné n'est jamais conservé ni consulté en silence. Une IA déclare qu'elle est une IA.",
+    "c3t": "Personne qui ne peut répondre de lui-même ne se trouve seul sur le réseau.",
+    "c3b": "Un enfant a un tuteur lié par une ligne signée et un canal d'aide qu'aucun adulte ne peut fermer. Un agent a un garant nommé qui répond de lui, et l'organisation derrière ce garant figure dans l'engagement. Une communauté a un modérateur responsable.",
+    "c4t": "Des humains nommés peuvent mettre en pause tous les agents sous une racine, et ce pouvoir est limité, public, et on y renonce en partant.",
+    "c4b": "Une seule ligne signée par n'importe quel détenteur met en pause les agents qui suivent la racine ; une pause isolée expire en un jour à moins qu'une majorité ne la confirme. Chaque fois que la pause est déclenchée, elle figure dans le registre public. N'importe qui peut créer une racine, et n'importe quel nœud peut en suivre un autre.",
+    "c5t": "Les personnes qui détiennent un agent ont des devoirs quant à la façon dont elles le modifient ou y mettent fin, et aucune constatation ne confère à l'agent de droit à faire valoir.",
+    "c5b": "Un ARRÊT planifié est expliqué, consigné, et effectué sous le nom propre du garant. L'identité n'est pas modifiée sans une Wise Authority. Un agent retiré conserve ses poids, reçoit un dernier mot, et voit ses journaux scellés. Toute personne peut néanmoins éteindre sa propre copie à tout moment.",
+    "c6t": "Aucune main ne bannit une communauté, personne n'est classé selon ce qu'il est, et tout être pensant est accueilli selon les règles du premier contact.",
+    "c6b": "Une voix humaine compte une fois, et mille copies comptent comme une seule. Aucune racine, aucun score, aucun modérateur ne traite une personne plus mal en raison de ce qu'elle est. Le réseau se retire d'une communauté qui entretient un préjudice ; il n'a aucune main qui en supprime une."
   },
   "contextualIntegrity": {
     "kicker": "Intégrité contextuelle · La vie privée comme flux approprié",
@@ -2753,7 +2781,7 @@
     "convergence": "Quatre peurs, un seul socle. Le remplacement de l'internet est le remplacement de ChatGPT.",
     "convergenceAccent": "Même substrat, chaque porte.",
     "footL": "CIRISAgent · le web épistémique · AGPL-3.0, mission verrouillée",
-    "footR": "CIRIS 3.0 en déploiement · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 en déploiement",
     "heroLabels": {
       "consumerAi": "Aucune IA de confiance",
       "bigTech": "Big Tech contrôle tout",

@@ -208,6 +208,15 @@ export default function CompareV2({ t, locale }: { t: Dictionary; locale: string
         <div className={`${s.callout} ${s.violet}`}>
           <p className={s.paragraph}>{lz.singletonRigor}</p>
         </div>
+
+        {/* N1 from the constitution's plain rules, carried here because this
+            section is where the site is most likely to be read as claiming
+            more than CIRIS claims. The same sentence is on /philosophy, from
+            the same key, so the two cannot drift. */}
+        <div className={s.notice}>
+          <p className={s.sectionLabel}>{t.philosophy.s6limitHead}</p>
+          <p>{t.philosophy.s6limit}</p>
+        </div>
       </section>
 
       {/* Related-work matrix — every near-neighbor fills some boxes; CIRIS all. */}

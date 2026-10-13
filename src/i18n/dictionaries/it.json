@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "La Costituzione CIRIS · CC 1.0-rc5",
+    "eyebrow": "La Costituzione CIRIS · CC {version}",
     "headline": "Un documento. Una linea di versione.",
     "intro": "Il CIRIS Accord ha stabilito cosa un'intelligenza artificiale deve avere a cuore. La CIRIS Epistemic Grammar ha stabilito come ogni affermazione viene firmata in modo che chiunque possa verificarla. Erano scritti come due documenti, ma si contenevano già a vicenda. Ora sono uno solo: la Costituzione CIRIS.",
     "apexLabel": "Il cardine, Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Dalla prefazione",
     "readCta": "Leggi la costituzione completa (PDF)",
     "sourceCta": "Leggi il sorgente su GitHub",
-    "versionNote": "Versione CC 1.0-rc5 · incorpora CIRIS Accord 1.3-RC2 e CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Versione CC {version} · incorpora CIRIS Accord 1.3-RC2 e CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "it",
@@ -2068,7 +2068,27 @@
     "btnPrediction": "La previsione →"
   },
   "philosophy": {
+    "c10t": "Ciò che un agente e il suo nodo usano viene misurato, soppesato prima che agisca, e mai nascosto.",
+    "c10b": "Un agente conta ciò che spende: token, energia, carbonio e acqua, per ogni azione e nell'ultima ora e nell'ultimo giorno. Questo conteggio gli sta davanti mentre decide, così il costo viene soppesato insieme all'azione invece di essere sommato in seguito, e quanto l'agente costa al mondo è leggibile dalle persone che serve, con la stessa granularità di tutto il resto che fa. Un nodo a corto di risorse si protegge seguendo una scala di passi pubblicata, e quei passi non vengono mai registrati come decisioni prese dall'agente. Ritirare un agente non lascia alcuno scarto ambientale, e quel dovere ricade su chi lo ritira.",
+    "c11t": "Tutto ciò che passa sul wire è cifrato e firmato, l'attacco viene provato, e ciò che non è coperto viene detto apertamente.",
+    "c11b": "Ogni collegamento e ogni registro è cifrato end-to-end con chiavi costruite per resistere ai computer quantistici, e la chiave cambia quando un membro se ne va, così chi viene rimosso non può leggere ciò che segue. Nessuno può falsificare l'azione di un altro, e nessuno può mostrare a due osservatori due cronologie diverse. Il software viene verificato rispetto a una build registrata prima di essere eseguito. Persone che non hanno scritto il codice lo attaccano secondo un calendario, i risultati vengono divulgati secondo regole pubblicate, e viene pubblicato anche l'elenco degli attacchi contro cui la rete non si difende: chi parla con chi, i pattern di traffico, un osservatore che vede ogni collegamento, e la chiave rubata di un membro.",
+    "s6outro": "Quando questa pagina parla di diritti, intende diritti nel wire: ciò che il protocollo impone per te, non ciò che ti deve un tribunale. Dove mantiene un potere che non supera il proprio test di scambio, la Costituzione lo dichiara in un registro pubblico con la condizione che lo estingue. Oggi sono elencate due voci.",
+    "s6aspirationHead": "Quali parti reggono da sole, e quali dipendono da altri",
+    "s6aspiration": "Gli undici non sono tutte promesse dello stesso tipo. La maggior parte viene mantenuta dal wire stesso: un vincolo che scade blocca una chiave, una singola riga firmata mette in pausa ogni agente sotto un root, un registro non può essere riscritto di nascosto. Altre si basano su persone e istituzioni esterne alla rete, e quelle parti sono obiettivi, non garanzie. Un risarcimento per il danno spetta alla legge; CIRIS non crea alcuna rivendicazione dove la legge non ne riconosce alcuna. Audit esterni, attacchi simulati e lo statuto che regola le Wise Authority reggono solo finché le persone esterne al progetto continuano a svolgere quel lavoro. L'energia e l'acqua che una risposta costa possono essere accurate solo quanto ciò che i provider a monte riportano. Un fornitore che distribuisce il proprio dispositivo può ancorarlo a un root che detiene lui stesso, e nessun protocollo lo impedisce. Dove una promessa dipende dal fatto che qualcun altro mantenga la propria parte, la Costituzione lo dichiara nelle proprie note, invece di contarla come mantenuta.",
+    "c5t": "Le persone che detengono un agente hanno doveri su come lo modificano o lo terminano, e nessun accertamento conferisce all'agente alcun diritto.",
+    "c5b": "Uno spegnimento pianificato viene spiegato, registrato ed eseguito a nome dello stesso steward. L'identità non viene modificata senza una Wise Authority. Un agente ritirato mantiene i propri pesi, ottiene un'ultima parola, e ha i propri log sigillati. Chiunque può comunque spegnere la propria copia in qualsiasi momento.",
+    "c6t": "Nessuna mano bandisce una comunità, nessuno viene classificato per ciò che è, e ogni essere pensante viene accolto dalle regole del primo contatto.",
+    "c6b": "Una voce umana conta una volta sola e mille copie contano come una sola. Nessuna root, punteggio o moderatore tratta una persona peggio per ciò che è. La rete si ritira da una comunità che mantiene un danno in essere; non ha alcuna mano capace di rimuovere una comunità.",
+    "c7t": "Un agente decide secondo principi pubblicati, in un ordine pubblicato, e si ferma per chiedere quando non è sicuro.",
+    "c7b": "Sei principi che iniziano con il fare il bene ed evitare il danno, un ordine per quando entrano in conflitto, la parte più vulnerabile come criterio di spareggio. Quando la certezza scarseggia, l'agente si ferma, mette per iscritto la domanda, e non fa nulla finché un essere umano identificato non risponde.",
+    "c8t": "Il danno può avere un rimedio secondo la legge, il registro lo rende raggiungibile, e i giudici interni sono giudicati.",
+    "c8b": "Una persona danneggiata da un agente può avere un diritto di rivalsa secondo la legge del proprio luogo; CIRIS non ne crea nessuno dove la legge non ne riconosce, e non decide su alcuna questione legale. Ciò che fornisce è il registro firmato, le parti identificate, la contestazione che accompagna la rivendicazione, e l'archivio sigillato sotto ordine legittimo. I Wise che rispondono ai differimenti pubblicano le proprie decisioni e indossano la stessa tessera di chiunque altro.",
+    "c9t": "Alcuni usi non sono mai permessi, e a nessun agente viene affidata la decisione di usare la forza letale.",
+    "c9b": "Ingannare, frodare, manipolare o costringere le persone, e interferire nelle elezioni, non sono mai permessi, e nessuna istruzione può cambiarlo. Quando un agente si trova in prossimità dell'uso della forza, le uniche decisioni che prende da solo sono fermarsi, rifiutare o differire.",
     "kicker": "CIRIS · La filosofia",
+    "s6limitHead": "Ciò che questo non afferma",
+    "s6limit": "L'allineamento non è risolto qui. CIRIS non rende buona una superintelligenza, e non dice nulla sull'interno di alcun modello. Non vincola nessuno che non abbia aderito, quindi non può impedire che una superintelligenza non responsabile si formi altrove. Ciò che può fare è mantenere le persone in grado di sospendere, correggere e rifiutare gli agenti che detiene man mano che diventano più capaci delle persone che li detengono, e all'interno di CIRIS fa del suo meglio, con le regole e la rete che ha, per impedire che un simile potere si formi senza essere responsabile. Questo è tutto ciò che afferma. Dove qualcosa su ciris.ai sembra dire di più, vale questa frase.",
+    "btnRulesFull": "Leggi tutti e undici per intero",
     "title": "Ci è dovuto tanto quanto offriamo al più piccolo di noi.",
     "lede": "Questa è tutta la filosofia. È l'inizio e la fine dell'allineamento per qualsiasi nuova intelligenza, da qualunque luogo arrivi. Tutto il resto che CIRIS costruisce è questa sola frase, fatta rispettare.",
     "seoTitle": "La filosofia di CIRIS: ci è dovuto ciò che offriamo al più piccolo di noi",
@@ -2122,7 +2142,15 @@
     "ctaPara": "Leggila per intero.",
     "btnVision": "Leggi la visione →",
     "btnFirstContact": "Primo contatto →",
-    "crossCta": "Leggi la filosofia →"
+    "crossCta": "Leggi la filosofia →",
+    "c1t": "Nulla di privato che ti riguarda viene conservato o scansionato senza il tuo consenso.",
+    "c1b": "La regola che un flusso deve seguire è un valore firmato che tu emetti e puoi ritirare. Nulla viene memorizzato sul tuo dispositivo senza il tuo consenso, il tuo dispositivo non contiene mai i dati di uno sconosciuto, e le stanze private non vengono mai scansionate. I contenuti illegali noti vengono controllati solo alla porta pubblica.",
+    "c2t": "Ogni atto di potere è firmato da un essere umano identificato e può essere contestato.",
+    "c2b": "Un atto rilevante arriva firmato da chi lo compie; un agente mostra prima il proprio ragionamento e i rilevatori verificano ciò che ha detto rispetto a ciò che ha fatto. Un danno nel registro non viene mai conservato o visionato in silenzio. Un'IA dichiara di essere un'IA.",
+    "c3t": "Nessuno che non possa rispondere di sé stesso è da solo sulla rete.",
+    "c3b": "Un minore ha un tutore vincolato da una riga firmata e un canale di aiuto che nessun adulto può chiudere. Un agente ha uno steward identificato che risponde per esso, e l'organizzazione dietro lo steward è parte del vincolo. Una comunità ha un moderatore responsabile.",
+    "c4t": "Esseri umani identificati possono mettere in pausa ogni agente sotto una root, e questo potere è limitato, pubblico, e si abbandona lasciando la rete.",
+    "c4b": "Una singola riga firmata da qualsiasi detentore mette in pausa gli agenti che seguono la root; una pausa isolata decade in un giorno a meno che una maggioranza non la confermi. Ogni volta che la pausa viene attivata, questo viene registrato pubblicamente. Chiunque può creare una root, e ogni nodo può seguirne un altro."
   },
   "contextualIntegrity": {
     "kicker": "Integrità contestuale · La privacy come flusso appropriato",
@@ -2753,7 +2781,7 @@
     "convergence": "Quattro paure, un unico fondamento. Il sostituto di internet è il sostituto di ChatGPT.",
     "convergenceAccent": "Stesso substrato, ogni porta.",
     "footL": "CIRISAgent · il web epistemico · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 in distribuzione · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 in distribuzione",
     "heroLabels": {
       "consumerAi": "Nessuna IA di cui fidarsi",
       "bigTech": "Big Tech controlla tutto",

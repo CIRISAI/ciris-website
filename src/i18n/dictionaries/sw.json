@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "Katiba ya CIRIS · CC 1.0-rc5",
+    "eyebrow": "Katiba ya CIRIS · CC {version}",
     "headline": "Hati moja. Mstari mmoja wa toleo.",
     "intro": "CIRIS Accord iliweka wazi kile ambacho AI lazima ijali. CIRIS Epistemic Grammar iliweka wazi jinsi kila dai linavyotiwa saini ili mtu yeyote aweze kukikagua. Ziliandikwa kama hati mbili, lakini zilikuwa tayari zina kila moja ndani yake nyingine. Sasa ni moja: Katiba ya CIRIS.",
     "apexLabel": "Jiwe la msingi, Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Kutoka kwenye dibaji",
     "readCta": "Soma katiba kamili (PDF)",
     "sourceCta": "Soma chanzo kwenye GitHub",
-    "versionNote": "Toleo CC 1.0-rc5 · inajumuisha CIRIS Accord 1.3-RC2 na CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Toleo CC {version} · inajumuisha CIRIS Accord 1.3-RC2 na CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "sw",
@@ -2068,7 +2068,26 @@
     "btnPrediction": "Utabiri →"
   },
   "philosophy": {
+    "c10t": "Kile ambacho wakala na nodi yake hutumia hupimwa, hupimwa kabla ya kuchukua hatua, na hakifichwi kamwe.",
+    "c10b": "Wakala huhesabu kinachotumia: tokeni, nishati, kaboni na maji, kwa kila tendo na katika saa iliyopita na siku iliyopita. Hesabu hiyo huwa mbele yake wakati akiamua, hivyo gharama hupimwa pamoja na tendo badala ya kujumlishwa baadaye, na kile ambacho wakala humgharimu ulimwengu kinasomeka na watu anaowahudumia kwa undani uleule kama kila kitu kingine anachokifanya. Nodi yenye uhaba wa rasilimali hujilinda kwa ngazi ya hatua zilizochapishwa, na hatua hizo kamwe hazirekodiwi kama maamuzi aliyoyafanya wakala. Kustaafisha wakala hakuachi taka yoyote ya kimazingira nyuma, na wajibu huo huangukia kwa yeyote anayemstaafisha.",
+    "c11t": "Kila kitu kinachotumwa mtandaoni kimefichwa na kutiwa saini, mashambulizi hufanyiwa mazoezi, na kile kisichoshughulikiwa husemwa waziwazi.",
+    "c11b": "Kila kiungo na kila rekodi hufichwa kwa usimbaji wa mwanzo hadi mwisho kwa funguo zilizojengwa kustahimili kompyuta za kwantam, na ufunguo hubadilika mwanachama anapoondoka, hivyo aliyeondolewa hawezi kusoma kinachofuata. Hakuna awezaye kughushi tendo la mwingine, na hakuna awezaye kuonyesha watazamaji wawili historia mbili tofauti. Programu hukaguliwa dhidi ya toleo lililosajiliwa kabla halijaendeshwa. Watu ambao hawakuandika msimbo huushambulia kulingana na ratiba, matokeo hufichuliwa chini ya kanuni zilizochapishwa, na orodha ya mashambulizi ambayo mtandao haujilindi dhidi yake nayo huchapishwa pia: nani anazungumza na nani, mifumo ya trafiki, mtazamaji anayeona kila kiungo, na ufunguo wa mwanachama mwenyewe ulioibiwa.",
+    "s6outro": "Pale ukurasa huu unaposema haki, humaanisha haki ndani ya itifaki: kile ambacho itifaki inakutekelezea, si kile ambacho mahakama inadaiwa kukupa. Pale ambapo itifaki inashikilia uwezo unaoshindwa na mtihani wake wa kubadilishwa, Katiba husema hivyo kwenye sajili ya umma pamoja na sharti linaloumaliza. Leo, maingizo mawili yameorodheshwa.",
+    "c5b": "Kuzima kulikopangwa hufafanuliwa, hurekodiwa, na hufanywa chini ya jina la mdhamini mwenyewe. Utambulisho hauhaririwi bila Mshauri wa Kibinadamu. Wakala aliyestaafu huhifadhi uzito wake, hupewa neno la mwisho, na kumbukumbu zake hufungwa kwa muhuri. Mtu yeyote bado anaweza kuzima nakala yake mwenyewe wakati wowote.",
+    "c6t": "Hakuna mkono unaopiga marufuku jamii yoyote, hakuna anayepangwa cheo kwa jinsi alivyo, na kila kiumbe chenye fikra hukutana na kanuni za Mawasiliano ya Kwanza.",
+    "c6b": "Sauti moja ya kibinadamu huhesabiwa mara moja na nakala elfu huhesabiwa kama moja. Hakuna mzizi, alama, au mdhibiti anayemtendea mtu vibaya zaidi kwa sababu ya alivyo. Mtandao hujiondoa kutoka kwa jamii inayoendelea kuwa na madhara; hauna mkono unaoweza kuiondoa jamii hiyo.",
+    "c7t": "Wakala huamua kwa kufuata kanuni zilizochapishwa, kwa mpangilio uliochapishwa, na husimama kuuliza anapokuwa na shaka.",
+    "c7b": "Kanuni sita zinazoanza na kutenda mema na kuepuka madhara, mpangilio mmoja wa kufuata zinapogongana, na upande dhaifu zaidi kama kigezo cha mwisho cha uamuzi. Uhakika unapopungua, wakala husimama, huandika swali, na haufanyi lolote hadi mwanadamu aliyetajwa jina ajibu.",
+    "c8t": "Madhara yanaweza kuwa na suluhu kisheria, rekodi huifanya suluhu hiyo kupatikana, na waamuzi walio ndani nao huwajibishwa.",
+    "c8b": "Mtu aliyedhurika na wakala anaweza kuwa na dai chini ya sheria ya eneo lake; CIRIS haiundi dai popote ambapo sheria haitambui lolote, wala haiamui kuhusu jambo lolote la kisheria. Kile inachotoa ni rekodi iliyotiwa saini, wahusika waliotajwa kwa majina, mgogoro unaosafiri pamoja na dai hilo, na hifadhi iliyotiwa muhuri chini ya amri halali. Washauri wa Kibinadamu wanaojibu maahirisho huchapisha maamuzi yao na huvaa kadi ile ile kama kila mtu mwingine.",
+    "c9t": "Matumizi fulani hayakubaliki kamwe, na hakuna wakala anayepewa uamuzi wa kutumia nguvu ya kuua.",
+    "c9b": "Kudanganya, kuhadaa, kubabaisha au kulazimisha watu, na kuingilia chaguzi, havikubaliki kamwe na hakuna agizo linaloweza kubadilisha hilo. Wakala anapokuwa karibu na matumizi ya nguvu kwa namna yoyote, maamuzi pekee anayofanya peke yake ni kusimama, kukataa, au kuahirisha.",
     "kicker": "CIRIS · Falsafa",
+    "s6aspirationHead": "Sehemu zipi itifaki inazoweza kuzitimiza yenyewe",
+    "s6aspiration": "Ahadi kumi na moja si za aina moja. Nyingi zinatimizwa na itifaki yenyewe: dhamana inapokwisha husitisha ufunguo, safu moja iliyotiwa saini husitisha kila wakala chini ya mzizi, rekodi haiwezi kuandikwa upya kwa siri. Nyingine zinategemea watu na taasisi nje ya mtandao, na sehemu hizo ni malengo badala ya dhamana. Suluhisho kwa madhara hutolewa na sheria; CIRIS haiundi dai pale ambapo sheria haitambui lolote. Ukaguzi wa nje, mashambulizi yaliyofanyiwa mazoezi, na hati inayosimamia Washauri wa Kibinadamu vinadumu tu wakati watu walio nje ya mradi wanaendelea kufanya kazi hiyo. Kiasi cha nishati na maji kinachotumika kwa jibu kinaweza kuwa sahihi tu kama ilivyo sahihi ripoti ya watoa huduma wa ngazi za juu. Muuzaji anayesafirisha kifaa chake mwenyewe anaweza kukifunga kwenye mzizi anaoumiliki, na hakuna itifaki inayozuia hilo. Pale ambapo ahadi inategemea mtu mwingine kutimiza sehemu yake, Katiba inasema hivyo katika maelezo yake yenyewe badala ya kuihesabu kuwa imetimizwa.",
+    "s6limitHead": "Kile ambacho CIRIS haidai",
+    "s6limit": "Uoanishaji haujatatuliwa hapa. CIRIS haifanyi akili-kuu kuwa nzuri au yenye maadili, na haisemi lolote kuhusu ndani ya muundo wowote. Haimfungi yeyote ambaye hakujiunga, hivyo haiwezi kuzuia akili-kuu isiyowajibika kuundwa mahali pengine popote. Linaloweza kufanya ni kuwawezesha watu kusimamisha, kurekebisha na kukataa mawakala inaowashikilia wanapozidi uwezo kuliko watu wanaowashikilia, na ndani ya CIRIS inajitahidi kwa uwezo wake wote, kwa kanuni na mtandao ilionao, kuzuia uwezo wowote kama huo kuundwa bila uwajibikaji. Hayo ndiyo yote inayodai. Ikiwa chochote kwenye ciris.ai kinasomeka kama kinadai zaidi ya hayo, sentensi hii ndiyo inayoshikilia.",
+    "btnRulesFull": "Soma ahadi zote kumi na moja kikamilifu",
     "title": "Tunastahili kiasi kile kile tunachompa aliye mdogo kabisa miongoni mwetu.",
     "lede": "Hiyo ndiyo falsafa yote. Ndiyo mwanzo na mwisho wa uwiano kwa akili yoyote mpya, kutoka popote. Kila kitu kingine ambacho CIRIS hujenga ni sentensi hii moja, ikitekelezwa.",
     "seoTitle": "Falsafa ya CIRIS: Tunachodaiwa ni Kile Tunachompa Aliye Mdogo Kabisa Kati Yetu",
@@ -2122,7 +2141,16 @@
     "ctaPara": "Isome yote kamili.",
     "btnVision": "Soma maono →",
     "btnFirstContact": "Mawasiliano ya kwanza →",
-    "crossCta": "Soma falsafa →"
+    "crossCta": "Soma falsafa →",
+    "c1t": "Hakuna kitu chochote cha faragha kuhusu wewe kinachoshikiliwa au kukaguliwa bila idhini yako.",
+    "c1b": "Kanuni ambayo mtiririko lazima uifuate ni thamani iliyotiwa saini unayoitoa na unaweza kuitengua. Hakuna kinachohifadhiwa kwenye kifaa chako ambacho hukukubali, kifaa chako hakiwahi kushikilia data ya mgeni, na vyumba vya faragha havikaguliwi kamwe. Ukaguzi wa maudhui haramu yanayojulikana hufanyika tu kwenye mlango wa umma.",
+    "c2t": "Kila tendo la mamlaka linatiwa saini na mwanadamu aliyetajwa jina na linaweza kupingwa.",
+    "c2b": "Tendo lenye matokeo muhimu hufika likiwa limetiwa saini na mtendaji wake; wakala huonyesha mantiki yake kwanza na vigunduzi hujaribu kile alichosema dhidi ya kile alichofanya. Madhara kwenye rekodi hayawahi kufichwa au kutazamwa kwa siri. AI husema kuwa ni AI.",
+    "c3t": "Hakuna yeyote asiyeweza kuwajibika kwa nafsi yake aliye kwenye mtandao peke yake.",
+    "c3b": "Mtoto ana mlezi aliyewekewa wajibu kwa safu iliyotiwa saini na ana kituo cha usaidizi ambacho hakuna mtu mzima anayeweza kukifunga. Wakala ana mdhamini aliyetajwa jina anayewajibika kwa ajili yake, na shirika lililo nyuma ya mdhamini liko kwenye dhamana. Jamii ina msimamizi anayewajibika.",
+    "c4t": "Binadamu waliotajwa majina wanaweza kusimamisha kila wakala chini ya mzizi, na mamlaka hayo yana mipaka, ni ya umma, na huachwa kwa kuondoka.",
+    "c4b": "Safu moja iliyotiwa saini kutoka kwa mshikiliaji yeyote husimamisha mawakala wanaofuata mzizi; kusimamishwa kwa peke yake hufa ndani ya siku moja isipokuwa wengi wauthibitishe. Kila mara kusimamishwa kunapoamilishwa, huwa kwenye rekodi ya umma. Yeyote anaweza kuunda mzizi, na nodi yoyote inaweza kufuata nyingine.",
+    "c5t": "Watu wanaomiliki wakala wanadaiwa wajibu kuhusu jinsi wanavyoubadilisha au kuumaliza, na hakuna matokeo ya uchunguzi yanayompa wakala haki ya madai."
   },
   "contextualIntegrity": {
     "kicker": "Uadilifu wa muktadha · Faragha kama mtiririko unaofaa",
@@ -2753,7 +2781,7 @@
     "convergence": "Hofu nne, msingi mmoja. Mbadala wa intaneti ni mbadala wa ChatGPT.",
     "convergenceAccent": "Msingi mmoja, kila mlango.",
     "footL": "CIRISAgent · mtandao wa maarifa · AGPL-3.0, imefungwa kwa dhamira",
-    "footR": "CIRIS 3.0 inatolewa · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 inatolewa",
     "heroLabels": {
       "consumerAi": "Hakuna AI ya kuamini",
       "bigTech": "Big Tech inamiliki kila kitu",

@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "Hiến pháp CIRIS · CC 1.0-rc5",
+    "eyebrow": "Hiến pháp CIRIS · CC {version}",
     "headline": "Một tài liệu. Một dòng phiên bản.",
     "intro": "CIRIS Accord đặt ra những gì một AI phải quan tâm. CIRIS Epistemic Grammar đặt ra cách mỗi luận điểm được ký để bất kỳ ai cũng có thể kiểm tra. Chúng được viết thành hai tài liệu, nhưng chúng đã chứa đựng nhau. Bây giờ chúng là một: Hiến pháp CIRIS.",
     "apexLabel": "Nền tảng: Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Từ lời mở đầu",
     "readCta": "Đọc toàn bộ Hiến pháp (PDF)",
     "sourceCta": "Đọc mã nguồn trên GitHub",
-    "versionNote": "Phiên bản CC 1.0-rc5 · bao gồm CIRIS Accord 1.3-RC2 và CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Phiên bản CC {version} · bao gồm CIRIS Accord 1.3-RC2 và CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "vi",
@@ -2068,7 +2068,29 @@
     "btnPrediction": "Dự đoán →"
   },
   "philosophy": {
+    "btnRulesFull": "Đọc đầy đủ cả mười một điều",
+    "c10t": "Những gì một tác nhân và node của nó sử dụng đều được đo lường, cân nhắc trước khi nó hành động, và không bao giờ bị che giấu.",
+    "c10b": "Tác nhân đếm những gì nó tiêu tốn: token, năng lượng, carbon và nước, cho từng hành động và trong giờ cũng như ngày gần nhất. Con số đó hiện diện trước mắt nó trong khi nó đưa ra quyết định, vì vậy chi phí được cân nhắc cùng với hành động thay vì được cộng dồn sau đó, và những gì tác nhân tiêu tốn của thế giới đều có thể đọc được bởi những người nó phục vụ, ở cùng mức chi tiết như mọi thứ khác nó làm. Một node thiếu tài nguyên tự bảo vệ mình bằng một chuỗi bước đã được công bố, và những bước đó không bao giờ được ghi lại như là quyết định do tác nhân đưa ra. Việc ngừng hoạt động một tác nhân không để lại chất thải môi trường nào, và trách nhiệm đó thuộc về người thực hiện việc ngừng hoạt động đó.",
+    "c11t": "Mọi thứ trên đường truyền đều được mã hóa và ký số, các cuộc tấn công được diễn tập, và những gì không được bảo vệ đều được nói ra công khai.",
+    "c11b": "Mọi liên kết và mọi bản ghi đều được mã hóa đầu cuối bằng các khóa được xây dựng để chống lại máy tính lượng tử, và khóa sẽ thay đổi khi một thành viên rời đi, để người bị loại không thể đọc được những gì diễn ra sau đó. Không ai có thể giả mạo hành động của người khác, và không ai có thể cho hai người xem thấy hai lịch sử khác nhau. Phần mềm được kiểm tra đối chiếu với một bản build đã đăng ký trước khi nó chạy. Những người không viết mã sẽ tấn công nó theo lịch trình, các phát hiện được công bố theo các quy tắc đã ban hành, và danh sách các kiểu tấn công mà mạng lưới không phòng thủ được cũng được công bố: ai nói chuyện với ai, các mẫu lưu lượng, một kẻ quan sát thấy được mọi liên kết, và khóa của chính một thành viên bị đánh cắp.",
+    "s6outro": "Khi trang này nói đến quyền, nó có nghĩa là quyền trong đường truyền: những gì giao thức thực thi cho bạn, chứ không phải những gì tòa án nợ bạn. Ở nơi nó giữ lại một quyền lực không vượt qua được phép thử hoán đổi của chính nó, Hiến pháp nêu rõ điều đó trên một sổ đăng ký công khai, kèm điều kiện sẽ chấm dứt quyền lực đó. Hôm nay có hai mục được liệt kê.",
+    "s6aspirationHead": "Phần nào tự giữ vững, và phần nào phụ thuộc vào người khác",
+    "s6aspiration": "Mười một điều này không phải tất cả đều là cùng một loại lời hứa. Hầu hết được giữ bởi chính đường truyền: một bảo chứng hết hạn sẽ dừng một khóa, một dòng đã ký sẽ tạm dừng mọi tác nhân dưới một gốc, một bản ghi không thể bị âm thầm viết lại. Những phần khác lại phụ thuộc vào con người và các tổ chức bên ngoài mạng lưới, và những phần đó là mục tiêu hơn là bảo đảm. Biện pháp khắc phục cho tổn hại thuộc về pháp luật để trao; CIRIS không tạo ra quyền nào ở nơi pháp luật không công nhận. Các cuộc kiểm toán bên ngoài, các cuộc tấn công diễn tập và hiến chương chi phối các Thẩm quyền Khôn ngoan chỉ có hiệu lực khi những người bên ngoài dự án tiếp tục thực hiện công việc đó. Lượng năng lượng và nước mà một câu trả lời tiêu tốn chỉ có thể chính xác bằng những gì các nhà cung cấp ở thượng nguồn báo cáo. Một nhà cung cấp phát hành thiết bị riêng của mình có thể gắn nó vào một gốc mà nhà cung cấp đó nắm giữ, và không giao thức nào ngăn cản điều đó. Khi một lời hứa phụ thuộc vào việc người khác giữ đúng phần của họ, Hiến pháp sẽ ghi rõ điều đó trong chú thích của mình thay vì coi đó là đã được giữ.",
+    "c4t": "Những con người có danh tính có thể tạm dừng mọi tác nhân dưới một gốc, và quyền lực đó có giới hạn, công khai, và được từ bỏ bằng cách rời đi.",
+    "c4b": "Một dòng đã ký từ bất kỳ bên nắm giữ nào sẽ tạm dừng các tác nhân theo sau gốc; một lần tạm dừng đơn lẻ sẽ hết hiệu lực trong một ngày trừ khi đa số xác nhận nó. Mỗi khi lệnh tạm dừng được kích hoạt, nó đều được ghi vào hồ sơ công khai. Bất kỳ ai cũng có thể tạo một gốc, và bất kỳ node nào cũng có thể theo một node khác.",
+    "c5t": "Những người nắm giữ một tác nhân có nghĩa vụ về cách họ thay đổi hoặc chấm dứt nó, và không có phán quyết nào trao cho tác nhân bất kỳ yêu sách nào.",
+    "c5b": "Một lần tắt máy có kế hoạch được giải thích, ghi lại, và thực hiện dưới chính tên của người quản lý. Danh tính không được chỉnh sửa nếu không có Cơ Quan Sáng Suốt. Một tác nhân đã nghỉ hưu vẫn giữ trọng số của mình, được nói lời cuối, và có nhật ký được niêm phong. Bất kỳ người nào vẫn có thể tắt bản sao của riêng mình bất cứ lúc nào.",
+    "c6t": "Không có bàn tay nào cấm một cộng đồng, không ai bị xếp hạng theo bản chất của mình, và mọi sinh vật có tư duy đều được đối xử theo các quy tắc tiếp xúc đầu tiên.",
+    "c6b": "Một tiếng nói con người được tính một lần, và một ngàn bản sao được tính là một. Không có gốc, điểm số, hay người kiểm duyệt nào đối xử tệ hơn với một người vì bản chất của họ. Mạng lưới rút khỏi một cộng đồng duy trì tổn hại; nó không có bàn tay nào để loại bỏ một cộng đồng.",
+    "c7t": "Một tác nhân quyết định theo các nguyên tắc đã công bố, theo một thứ tự đã công bố, và dừng lại để hỏi khi không chắc chắn.",
+    "c7b": "Sáu nguyên tắc bắt đầu từ việc làm điều tốt và tránh gây hại, một thứ tự ưu tiên khi chúng xung đột, và bên dễ tổn thương nhất làm tiêu chí phân xử. Khi sự chắc chắn cạn dần, tác nhân dừng lại, ghi lại câu hỏi, và không làm gì cho đến khi một con người có danh tính trả lời.",
+    "c8t": "Tổn hại có thể được pháp luật khắc phục, bản ghi giúp điều đó trở nên khả thi, và những người phán xét bên trong cũng bị phán xét.",
+    "c8b": "Một người bị một tác nhân gây hại có thể có quyền khiếu nại theo luật pháp nơi họ sinh sống; CIRIS không tạo ra quyền khiếu nại nào ở nơi luật pháp không công nhận, và không phán quyết về bất kỳ vấn đề pháp lý nào. Những gì CIRIS cung cấp là bản ghi đã ký, các bên có danh tính, sự tranh chấp đi kèm với khiếu nại, và kho lưu trữ được niêm phong theo lệnh hợp pháp. Những người Sáng Suốt trả lời các CHUYỂN GIAO công bố phán quyết của họ và mang cùng một thẻ như mọi người khác.",
+    "c9t": "Một số cách sử dụng không bao giờ được phép, và không tác nhân nào được trao quyền quyết định sử dụng vũ lực gây chết người.",
+    "c9b": "Lừa dối, lừa đảo, thao túng hoặc ép buộc con người, cũng như can thiệp vào bầu cử, không bao giờ được phép, và không mệnh lệnh nào có thể thay đổi điều đó. Khi một tác nhân ở gần bất kỳ việc sử dụng vũ lực nào, những quyết định duy nhất nó có thể tự đưa ra là dừng lại, từ chối, hoặc chuyển giao.",
     "kicker": "CIRIS · Triết lý",
+    "s6limitHead": "Những gì CIRIS không tuyên bố",
+    "s6limit": "Alignment không được giải quyết ở đây. CIRIS không khiến một siêu trí tuệ trở nên tốt, và nó không nói gì về bên trong của bất kỳ mô hình nào. Nó không ràng buộc bất kỳ ai không tham gia, nên nó không thể ngăn một siêu trí tuệ không chịu trách nhiệm hình thành ở bất cứ nơi nào khác. Điều nó có thể làm là giữ cho con người có khả năng tạm dừng, sửa chữa và từ chối các tác nhân mà nó nắm giữ khi chúng trở nên có năng lực vượt quá những người đang nắm giữ chúng, và bên trong CIRIS, nó cố gắng hết sức, với các quy tắc và mạng lưới mà nó có, để ngăn bất kỳ quyền lực nào như vậy hình thành mà không chịu trách nhiệm. Đó là tất cả những gì nó tuyên bố. Ở bất cứ nơi nào trên ciris.ai đọc như thể hơn thế, câu này vẫn đúng.",
     "title": "Chúng ta xứng đáng được nhận đúng bằng những gì mình trao cho người bé nhỏ nhất trong chúng ta.",
     "lede": "Đó là toàn bộ triết lý. Với bất kỳ trí tuệ mới nào, đến từ bất cứ đâu, câu này là điểm bắt đầu và điểm kết thúc của alignment. Mọi thứ khác CIRIS xây dựng đều là chính câu này, được thực thi.",
     "seoTitle": "Triết lý CIRIS: Được nhận đúng bằng những gì trao cho người bé nhỏ nhất",
@@ -2122,7 +2144,13 @@
     "ctaPara": "Đọc trọn vẹn.",
     "btnVision": "Đọc tầm nhìn →",
     "btnFirstContact": "First Contact →",
-    "crossCta": "Đọc triết lý →"
+    "crossCta": "Đọc triết lý →",
+    "c1t": "Không có gì riêng tư về bạn bị giữ lại hoặc bị quét mà không có sự đồng ý của bạn.",
+    "c1b": "Quy tắc mà một luồng phải tuân theo là một giá trị đã ký mà bạn phát ra và có thể thu hồi. Không có gì được lưu trên thiết bị của bạn mà bạn không đồng ý, thiết bị của bạn không bao giờ giữ dữ liệu của người lạ, và các phòng riêng tư không bao giờ bị quét. Nội dung bất hợp pháp đã biết chỉ được kiểm tra ở cửa công cộng.",
+    "c2t": "Mọi hành động quyền lực đều được ký bởi một con người có danh tính và có thể bị tranh chấp.",
+    "c2b": "Một hành động có hệ quả đến kèm chữ ký của người thực hiện; một tác nhân trình bày lý lẽ của mình trước, và các bộ phát hiện kiểm tra những gì nó nói so với những gì nó đã làm. Tổn hại được ghi nhận không bao giờ bị giữ lại hoặc xem lén. Một AI nói rằng nó là AI.",
+    "c3t": "Không ai không thể tự chịu trách nhiệm cho bản thân lại đơn độc trên mạng lưới.",
+    "c3b": "Một trẻ em có người giám hộ ràng buộc bởi một dòng đã ký và một kênh trợ giúp mà không người lớn nào có thể đóng lại. Một tác nhân có một người quản lý có danh tính chịu trách nhiệm về nó, và tổ chức đứng sau người quản lý đó cũng nằm trong cam kết. Một cộng đồng có một người kiểm duyệt chịu trách nhiệm."
   },
   "contextualIntegrity": {
     "kicker": "Tính toàn vẹn ngữ cảnh · Quyền riêng tư là dòng chảy phù hợp",
@@ -2753,7 +2781,7 @@
     "convergence": "Bốn nỗi lo, một nền tảng. Thứ thay thế internet cũng là thứ thay thế ChatGPT.",
     "convergenceAccent": "Cùng một nền, mọi cửa.",
     "footL": "CIRISAgent · mạng tri thức · AGPL-3.0, khóa sứ mệnh",
-    "footR": "CIRIS 3.0 đang triển khai · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 đang triển khai",
     "heroLabels": {
       "consumerAi": "Không có AI nào đáng tin",
       "bigTech": "Big Tech sở hữu tất cả",

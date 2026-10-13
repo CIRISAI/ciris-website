@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "Ofin-Ipilẹ CIRIS · CC 1.0-rc5",
+    "eyebrow": "Ofin-Ipilẹ CIRIS · CC {version}",
     "headline": "Iwe kan. Ila ẹya kan.",
     "intro": "Ìwé àkọ́kọ́ náà, CIRIS Accord, tí ó di Ofin-Ipilẹ yìí lẹ́yìn-ọ̀-rẹyìn, ṣàgbékalẹ̀ ohun tí AI gbọ́dọ̀ bìkítà nípa rẹ̀. CIRIS Epistemic Grammar ṣàgbékalẹ̀ bí a ṣe ń fọwọ́ sí gbogbo ìsọ kí ẹnikẹ́ni lè ṣàyẹ̀wò rẹ̀. A kọ wọ́n bí ìwé méjì, ṣùgbọ́n ọ̀kọ̀ọ̀kan wọn ti wà nínú èkejì tẹ́lẹ̀. Báyìí wọ́n jẹ́ ọ̀kan: Ofin-Ipilẹ CIRIS.",
     "apexLabel": "Ipilẹ naa, Ibi-afẹde Agba M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Lati ọrọ-iwaju",
     "readCta": "Ka Ofin-Ipilẹ kikun (PDF)",
     "sourceCta": "Ka orisun lori GitHub",
-    "versionNote": "Ẹya CC 1.0-rc5 · fi CIRIS Accord 1.3-RC2 ati CEG 1.0-RC29 papọ · AGPL-3.0"
+    "versionNote": "Ẹya CC {version} · fi CIRIS Accord 1.3-RC2 ati CEG 1.0-RC29 papọ · AGPL-3.0"
   },
   "_meta": {
     "locale": "yo",
@@ -2068,7 +2068,30 @@
     "btnPrediction": "Àsọtẹ́lẹ̀ náà →"
   },
   "philosophy": {
+    "c10t": "Ohun tí aṣojú àti nódù rẹ̀ lò ni a díwọ̀n, tí a sì wọ̀n kí ó tó ṣe, a kò sì fi pamọ́ rí.",
+    "c10b": "Aṣojú kan ń ka ohun tí ó ná: àwọn tokens, agbára, erogba àti omi, fún ìṣe kọ̀ọ̀kan àti fún wákàtí tó kọjá àti ọjọ́ tó kọjá. Iye kíkà yẹn wà níwájú rẹ̀ nígbà tí ó ń pinnu, nítorí náà iye owó náà ni a fi wọ̀n pẹ̀lú ìṣe náà dípò kí a kó jọ lẹ́yìn náà, àti ohun tí aṣojú ná fún àgbáyé jẹ́ ohun tí àwọn ènìyàn tí ó ń sìn lè kà ní ìwọ̀n kan náà gẹ́gẹ́ bí gbogbo ohun mìíràn tí ó ń ṣe. Nódù kan tí àwọn ohun àmúlò rẹ̀ ti dín kù ń dáàbò bo ara rẹ̀ pẹ̀lú àtòjọ ìgbésẹ̀ nípò-nípò tí a ti tẹ̀jáde, àwọn ìgbésẹ̀ wọ̀nyí kì í sìí ṣe àkọsílẹ̀ gẹ́gẹ́ bí ìpinnu tí aṣojú ṣe rárá. Fífi aṣojú kan sílẹ̀ kì í fi ìdọ̀tí àyíká sílẹ̀, gbèsè iṣẹ́ yìí sì wà lórí ẹni tí ó bá fi aṣojú náà sílẹ̀.",
+    "c11t": "Gbogbo ohun tí ó wà ní orí ìjápọ̀ náà ni a fi kọ́kọ́rọ̀ dáàbò bò, tí a sì fọwọ́ sí, a ń ṣe ìdánwò ìkọlù déédéé, ohun tí kò sì sí lábẹ́ ààbò ni a ń sọ payá.",
+    "c11b": "Gbogbo ìjápọ̀ àti gbogbo àkọsílẹ̀ ni a fi kọ́kọ́rọ̀ dí láti òpin dé òpin, pẹ̀lú kọ́kọ́rọ̀ tí a kọ́ láti dúró ṣinṣin lòdì sí àwọn kọ̀ǹpútà kúántọ́mù, kọ́kọ́rọ̀ náà a sì yípadà nígbà tí ọmọ ẹgbẹ́ kan bá kúrò, nítorí náà ẹni tí a yọ kúrò kò lè ka ohun tí ó ń bọ̀ lẹ́yìn. Kò sí ẹni tí ó lè fi ìfọwọ́sí èké dá ìṣe ẹlòmíràn sílẹ̀, kò sí ẹni tí ó sì lè fi ìtàn méjì tó yàtọ̀ hàn fún àwọn olùwò méjì. A ń ṣàyẹ̀wò software náà nípa fífi wé ẹ̀dà tí a ti forúkọsílẹ̀ kí ó tó bẹ̀rẹ̀ iṣẹ́. Àwọn ènìyàn tí kò kọ kóòdù náà ń kọlù ú ní àkókò tí a ṣètò, a sì ń fi àwọn àwárí hàn gẹ́gẹ́ bí àwọn òfin tí a tẹ̀jáde, a sì tún tẹ̀jáde àkójọ àwọn ìkọlù tí nẹ́tíwọ́ọ̀kì náà kò dáàbò bò lòdì sí pẹ̀lú: ta ni ń bá ta sọ̀rọ̀, àwọn àmì àtọ́ka ọ̀nà ìrìnàjò dátà, olùṣọ́ kan tí ó rí gbogbo ìjápọ̀, àti kọ́kọ́rọ̀ tirẹ̀ tí a jí lọ́wọ́ ọmọ ẹgbẹ́.",
+    "s6outro": "Níbi tí ojú-ìwé yìí ti sọ̀rọ̀ ẹ̀tọ́, ó ń tọ́ka sí ẹ̀tọ́ nínú ìlànà fúnra rẹ̀: ohun tí ìlànà náà fi ipá mú ṣẹ fún ọ, kì í ṣe ohun tí ilé-ẹjọ́ jẹ̀ ọ́. Níbi tí ó bá dá agbára kan tí ó kùnà nínú àdánwò pàṣípààrọ̀ tirẹ̀ dúró mọ́, Ofin-Ipilẹ a sọ bẹ́ẹ̀ sórí àkọsílẹ̀ gbangba kan pẹ̀lú ipò tí yóò fòpin sí i. Àkọsílẹ̀ méjì ni a ti ṣe sórí rẹ̀ lónìí.",
+    "s6aspirationHead": "Àwọn apá wo ni okun-waya náà lè pa mọ́ fúnra rẹ̀",
+    "s6aspiration": "Àwọn mọ́kànlá náà kì í ṣe irú ìlérí kan náà ni gbogbo wọn. Ọ̀pọ̀lọpọ̀ nínú wọn ni ìlànà náà fúnra rẹ̀ ń pa mọ́: bọ́ndi tí àkókò rẹ̀ bá parí a máa dá bọ́tìnì kan dúró, ìlà kan tí a fọwọ́ sí a máa mú gbogbo aṣojú tí ó wà lábẹ́ gbòǹgbò kan simi, a kò sì lè tún àkọsílẹ̀ kọ ní ìkọ̀kọ̀. Àwọn mìíràn gbára lé àwọn ènìyàn àti àwọn àjọ tí ó wà ní ìta ìlànà náà, àwọn apá wọ̀nyí sì jẹ́ àfojúsùn dípò ìdánilójú. Àtúnṣe fún ìpalára jẹ́ ti òfin láti fúnni; CIRIS kò dá ẹ̀tọ́ sílẹ̀ níbi tí òfin kò ti dá irú ẹ̀tọ́ bẹ́ẹ̀ mọ̀. Àwọn àyẹ̀wò ìta, àwọn ìkọlù tí a ti múra sílẹ̀ tẹ́lẹ̀, àti Ofin-Ipilẹ tí ó ń darí Àwọn Aláṣẹ Ọlọ́gbọ́n a dúró ṣinṣin nìkan níwọ̀n ìgbà tí àwọn ènìyàn tí ó wà ní ìta ètò náà bá ń ṣe iṣẹ́ náà. Agbára àti omi tí ìdáhùn kan ń ná kò lè jẹ́ pípéye ju ohun tí àwọn olùpèsè tí ó wà lókè ń ròyìn lọ. Olùtajà tí ó ń fi ẹ̀rọ tirẹ̀ ránṣẹ́ lè so ó mọ́ gbòǹgbò tí olùtajà náà fúnra rẹ̀ ní lọ́wọ́, kò sì sí ìlànà kan tí ó lè dí èyí lọ́wọ́. Níbi tí ìlérí kan bá gbára lé pé kí ẹlòmíràn pa ìpín tirẹ̀ mọ́, Ofin-Ipilẹ a sọ bẹ́ẹ̀ nínú àwọn àkọsílẹ̀ tirẹ̀, dípò kíkà á sí ìlérí tí a ti pa mọ́.",
+    "c3b": "Ọmọdé ní alágbàtọ́ tí a dè pẹ̀lú ìlà tí a fọwọ́ sí àti ọ̀nà ìrànlọ́wọ́ tí àgbàlagbà kankan kò lè ti pa. Aṣojú ní alábòójútó tí a dárúkọ tí ó ń dáhùn fún un, ètò àjọ tí ó wà lẹ́yìn alábòójútó náà sì wà nínú àdéhùn náà. Àwùjọ ní alábòójútó tí a lè bèèrè lọ́wọ́ rẹ̀.",
+    "c4t": "Àwọn ènìyàn tí a dárúkọ lè dá gbogbo aṣojú tí ó wà lábẹ́ gbòǹgbò kan dúró, agbára yìí sì ní ààlà, ó jẹ́ ti gbangba, a sì lè fi sílẹ̀ nípasẹ̀ kíkúrò.",
+    "c4b": "Ọ̀nà kan tí a fọwọ́ sí láti ọ̀dọ̀ olùdìmú èyíkéyìí a máa dá àwọn aṣojú tí ó tẹ̀lé gbòǹgbò náà dúró; ìdúró kan ṣoṣo yóò kú láàrín ọjọ́ kan àyàfi bí ọ̀pọ̀lọ́pọ̀ bá fi ìdí rẹ̀ múlẹ̀. Ní gbogbo ìgbà tí a bá fi ìdúró náà ṣiṣẹ́, ó wà lórí àkọsílẹ̀ gbangba. Ẹnikẹ́ni lè dá gbòǹgbò kan, nódù èyíkéyìí sì lè tẹ̀lé òmíràn.",
+    "c5t": "Àwọn ènìyàn tí ó dì aṣojú mú ní ojúṣe nípa bí wọ́n ṣe ń yí i padà tàbí fòpin sí i, kò sí àwárí kankan tí ó fún aṣojú ní ẹ̀tọ́.",
+    "c5b": "A máa ṣàlàyé DÍNÀ tí a pète, a óò kọ ọ́ sílẹ̀, a óò sì ṣe é lábẹ́ orúkọ olùtọ́jú fúnra rẹ̀. A kò ní ṣàtúnṣe ìdánimọ̀ láìsí ALÁṢẸ ỌLỌ́GBỌ́N. AṢOJÚ tí ó ti fẹ̀yìntì a máa pa àwọn ìwọ̀n rẹ̀ mọ́, a óò fún un ní ọ̀rọ̀ ìkẹ́yìn, àkọsílẹ̀ rẹ̀ a sì di èdìdì dì. Ẹnikẹ́ni ṣì lè pa ẹ̀dà tirẹ̀ fúnra rẹ̀ ní àsìkò yòówù kó jẹ́.",
+    "c6t": "Kò sí ọwọ́ tí ó lè fòfin de àwùjọ kan, kò sí ẹni tí a ṣe ìpele rẹ̀ nítorí ẹni tí ó jẹ́, gbogbo ẹ̀dá tí ó ní èrò-inú ni a sì ń bá lò pẹ̀lú àwọn òfin ìpàdé àkọ́kọ́.",
+    "c6b": "Ohùn ènìyàn kan ni a kà lẹ́ẹ̀kan, ẹgbẹ̀rún ẹ̀dà sì ni a kà gẹ́gẹ́ bí ọ̀kan. Kò sí gbòǹgbò kankan, àmì-ìyè kankan, tàbí alábòójútó kankan tí ó ń ṣe ìyàsọ́tọ̀ sí ènìyàn nítorí ohun tí wọ́n jẹ́. Nẹ́tíwọ́kì náà a máa yọ ara rẹ̀ kúrò nínú àdúgbò tí ó bá ń tẹ̀síwájú nínú ìpalára; kò sì ní ọwọ́ tí ó lè yọ ẹni kan kúrò.",
+    "c7t": "Aṣojú a ń pinnu nípasẹ̀ àwọn ìlànà tí a tẹ̀ jáde, ní ìlànà tí a tẹ̀ jáde, a sì ń dúró láti béèrè nígbà tí kò bá dájú.",
+    "c7b": "Ìlànà mẹ́fà tí ó bẹ̀rẹ̀ pẹ̀lú ṣíṣe oore àti yíyẹra fún ìpalára, ìlànà kan ṣoṣo fún ìgbà tí wọ́n bá ta ko ara wọn, ẹgbẹ́ tí ó jẹ́ aláìlágbára jùlọ ni a sì ń lò láti pinnu nígbà tí ohun méjì bá dọ́gba. Nígbà tí àìdánilójú bá pọ̀, aṣojú a dúró, a kọ ìbéèrè náà sílẹ̀, kò sì ṣe ohunkóhun títí ènìyàn tí a dárúkọ yóò fi dáhùn.",
+    "c8t": "Ìpalára lè ní ọ̀nà àtúnṣe lábẹ́ òfin, àkọsílẹ̀ náà sì jẹ́ kí ó ṣeéṣe láti dé ọ̀dọ̀ rẹ̀, àwọn adájọ́ inú rẹ̀ pẹ̀lú ni a ń dájọ́.",
+    "c8b": "Ènìyàn tí aṣojú kan bá ṣe léṣe lè ní ẹ̀tọ́ lábẹ́ òfin ibi tí ó wà; CIRIS kò dá èyíkeyìí sílẹ̀ níbi tí òfin kò ti mọ̀ ọ́n, kò sì ṣe ìdájọ́ lórí ọ̀rọ̀ òfin kankan. Ohun tí ó pèsè ni àkọsílẹ̀ tí a fọwọ́ sí, àwọn ẹgbẹ́ tí a dárúkọ, àríyànjiyàn tí ó ń bá ẹ̀tọ́ náà rìn, àti àkójọ àkọsílẹ̀ tí a fi èdìdì di lábẹ́ àṣẹ òfin. Àwọn Aláṣẹ Ọlọ́gbọ́n tí ń dáhùn àwọn ìbéèrè tí a fi lélẹ̀ fún wọn máa ń tẹ ìdájọ́ wọn jáde, wọ́n sì wọ káàdì kan náà gẹ́gẹ́ bí gbogbo ẹlòmíràn.",
+    "c9t": "Àwọn ìlò kan kò ní yọ̀ǹda rárá, a kò sì fún aṣojú kankan ní agbára láti pinnu láti lo ipá apaniyan.",
+    "c9b": "Rírẹ́ ènìyàn jẹ, jíjìbìtì wọn, yíyí wọn ká, tàbí fífipá mú wọn, àti dídásí nínú àwọn ìdìbò, kò ní yọ̀ǹda rárá, kò sí ìtọ́ni kankan tí ó lè borí òfin yìí. Nígbàkigbà tí aṣojú kan bá súnmọ́ ìlò ipá, àwọn ìpinnu kan ṣoṣo tí ó lè ṣe fúnra rẹ̀ ni láti dúró, láti kọ̀, tàbí láti fi lélẹ̀.",
     "kicker": "CIRIS · Ìmọ̀ ọgbọ́n orí",
+    "s6limitHead": "Ohun tí èyí kò sọ",
+    "s6limit": "A kò yanjú ìfohùnṣọ̀kan níhìn-ín. CIRIS kò mú kí ọgbọ́n-ìmọ̀ gíga jùlọ dára, kò sì sọ ohunkóhun nípa inú àwòṣe kankan. Kò dì mú ẹnikẹ́ni tí kò darapọ̀ mọ́ ọn, nítorí náà kò lè dí ọgbọ́n-ìmọ̀ gíga jùlọ tí kò ní ẹnikẹ́ni tí yóò jíhìn fún lọ́wọ́ láti dá sílẹ̀ níbòmíràn. Ohun tí ó lè ṣe ni láti rí i dájú pé àwọn ènìyàn lè dá àwọn aṣojú tí ó dì mú dúró, ṣàtúnṣe wọn, kí wọ́n sì kọ̀ wọ́n, bí àwọn aṣojú ṣe ń di alágbára ju àwọn ènìyàn tí ń dì wọ́n mú lọ, nínú CIRIS pẹ̀lú, pẹ̀lú àwọn òfin àti ìlànà tí ó ní, ó ń sapá gẹ́gẹ́ bí ó ti lè ṣe láti dí irú agbára bẹ́ẹ̀ lọ́wọ́ láti dá sílẹ̀ láìsí ẹnikẹ́ni tí yóò jíhìn fún. Ìyẹn ni gbogbo ohun tí ó sọ. Níbikíbi tí ohunkóhun lórí ciris.ai bá dà bí ẹni pé ó ju bẹ́ẹ̀ lọ, gbólóhùn yìí ni ó dúró ṣinṣin.",
+    "btnRulesFull": "Ka gbogbo mọ́kànlá náà ní kíkún",
     "title": "Ohun tí ó yẹ wá dọ́gba pẹ̀lú ohun tí a ń fún ẹni tí ó kéré jùlọ nínú wa.",
     "lede": "Ìyẹn ni gbogbo ìmọ̀ ọgbọ́n orí náà. Òun ni ìbẹ̀rẹ̀ àti òpin ìbáradọgba fún ọgbọ́n tuntun èyíkéyìí, láti ibikíbi. Gbogbo ohun mìíràn tí CIRIS ń kọ́ ni gbólóhùn kan ṣoṣo yìí, tí a ń fi agbára mú ṣẹ.",
     "seoTitle": "Ìmọ̀ Ọgbọ́n Orí CIRIS: Ohun tí ó Yẹ Wá Dọ́gba pẹ̀lú Ohun tí A Fún Ẹni tí ó Kéré Jùlọ",
@@ -2122,7 +2145,12 @@
     "ctaPara": "Ka gbogbo rẹ̀ ní kíkún.",
     "btnVision": "Ka ojú-ìwòye →",
     "btnFirstContact": "Ìpàdé àkọ́kọ́ →",
-    "crossCta": "Ka ìmọ̀ ọgbọ́n orí náà →"
+    "crossCta": "Ka ìmọ̀ ọgbọ́n orí náà →",
+    "c1t": "Kò sí ohun ìkọ̀kọ̀ kan nípa rẹ tí a mú tàbí ṣàyẹ̀wò láìsí ìyọ̀ǹda rẹ.",
+    "c1b": "Òfin tí ìṣàn gbọ́dọ̀ tẹ̀lé jẹ́ iye tí a fọwọ́ sí, tí ìwọ ń fi jáde tí o sì lè fà padà. Kò sí ohun kan tí a tọ́jú sórí ẹ̀rọ rẹ tí o kò fi àṣẹ sí, ẹ̀rọ rẹ kì í mú dátà àjèjì láé, àwọn yàrá ìkọ̀kọ̀ kì í sì í jẹ́ ṣíṣàyẹ̀wò láé. Àkóónú tí a ti mọ̀ pé kò bófin mu ni a ń wá a wò ní ẹnu-ọ̀nà gbogbogbòò nìkan.",
+    "c2t": "Gbogbo iṣe agbára ni a fọwọ́ sí nípasẹ̀ ènìyàn tí a dárúkọ, a sì lè ṣe àtakò sí i.",
+    "c2b": "Iṣe tí ó léso ń dé pẹ̀lú ìfọwọ́sí ẹni tí ó ṣe é; aṣojú a kọ́kọ́ fi ìrònú rẹ̀ hàn, àwọn awárí a sì fi ohun tí ó sọ wé ohun tí ó ṣe. Ìpalára tí ó wà nínú àkọsílẹ̀ kò ní jẹ́ pa mọ́ tàbí wò ní ìkọ̀kọ̀ láé. AI a máa sọ pé òun jẹ́ AI.",
+    "c3t": "Kò sí ẹnikẹ́ni tí kò lè dáhùn fún ara rẹ̀ tí ó wà nìkan lórí nẹ́tíwọ́kì náà."
   },
   "contextualIntegrity": {
     "kicker": "Ìdúróṣinṣin àyíká-ọ̀rọ̀ · Àṣírí gẹ́gẹ́ bí ìṣàn tí ó yẹ",
@@ -2753,7 +2781,7 @@
     "convergence": "Iberu mẹrin, ilẹ kan. Rirọpo intanẹẹti ni rirọpo ChatGPT.",
     "convergenceAccent": "Ipilẹ kanna, ẹnu-bode kọọkan.",
     "footL": "CIRISAgent · ayelujara ti o ni idaniloju · AGPL-3.0, ti a tii pẹlu iṣẹ apinfunni",
-    "footR": "CIRIS 3.0 n jade · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 n jade",
     "heroLabels": {
       "consumerAi": "Ko si AI ti o le gbẹkẹle",
       "bigTech": "Big Tech ni ohun gbogbo",

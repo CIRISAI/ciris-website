@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "The CIRIS Constitution · CC 1.0-rc5",
+    "eyebrow": "The CIRIS Constitution · CC {version}",
     "headline": "One document. One version line.",
     "intro": "The CIRIS Accord, the earlier document that became this Constitution, set out what an AI must care about. The CIRIS Epistemic Grammar set out how every claim gets signed so anyone can check it. They were written as two documents, but they already contained each other. Now they are one: the CIRIS Constitution.",
     "apexLabel": "The foundation: Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "From the foreword",
     "readCta": "Read the full constitution (PDF)",
     "sourceCta": "Read the source on GitHub",
-    "versionNote": "Version CC 1.0-rc5 · incorporates CIRIS Accord 1.3-RC2 and CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Version CC {version} · incorporates CIRIS Accord 1.3-RC2 and CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "en",
@@ -2147,7 +2147,7 @@
     "s5p1": "No authority in CIRIS gets to stamp an assertion true. The wire records who said what, on what evidence, under what authority. Truth is what emerges when many independent voices compose. Copies of one voice count as one voice, and there is a hard ceiling: adding more of the same voice never buys more trust. Decisions are different from assertions: a shutdown, a pause, an amendment is a named human's act on the record, contestable and binding.",
     "s5p2": "The system also knows what it does not know. When certainty runs thin, it stops and asks named humans. And it can tell the difference between taking something back because life changed and admitting it was wrong. Honest memory needs both.",
     "s6label": "The commitments",
-    "s6h2": "Nine commitments the wire keeps",
+    "s6h2": "Eleven commitments the wire keeps",
     "s6intro": "A philosophy that cannot be enforced is a mood. Enforced here means by the wire: bonds that lapse, keys that stop, pauses that fire, records that cannot be erased, standing that falls. Not by a court. CIRIS creates no legal claim and rules on none; it is a standard for how the network handles data and holds agents. These are the commitments it keeps, drawn from this page, from the constitutional mesh, and from contextual integrity. Each is a set of rules in the constitution with a check behind it.",
     "ctaPara": "Read it in full.",
     "btnVision": "Read the vision →",
@@ -2160,18 +2160,27 @@
     "c3t": "Nobody who cannot answer for themselves is on the network alone.",
     "c3b": "A child has a guardian bound by a signed row and a help channel no adult can close. An agent has a named steward who answers for it, and the organisation behind the steward is on the bond. A community has an accountable moderator.",
     "c4t": "Named humans can pause every agent under a root, and that power is bounded, public, and left by leaving.",
-    "c4b": "One signed row from any holder pauses the agents that follow the root; a lone pause dies in a day unless a majority confirms it. Every fire is public. Anyone can create a root, and any node can follow another.",
+    "c4b": "One signed row from any holder pauses the agents that follow the root; a lone pause dies in a day unless a majority confirms it. Every time the pause is fired, it is on the public record. Anyone can create a root, and any node can follow another.",
     "c5t": "The people who hold an agent owe duties about how they change or end it, and no finding gives the agent a claim.",
     "c5b": "A planned shutdown is explained, recorded, and done under the steward's own name. Identity is not edited without a Wise Authority. A retired agent keeps its weights, gets a last word, and has its logs sealed. Any person may still turn off their own copy at any time.",
     "c6t": "No hand bans a community, nobody is ranked by what they are, and every thinking being is met by the first-contact rules.",
     "c6b": "One human voice counts once and a thousand copies count as one. No root, score, or moderator treats a person worse for what they are. The network withdraws from a community that keeps harm; it has no hand that removes one.",
     "c7t": "An agent decides by published principles, in a published order, and stops to ask when it is unsure.",
     "c7b": "Six principles that begin with doing good and avoiding harm, one order for when they conflict, the most vulnerable party as tie-break. When certainty runs thin the agent halts, writes down the question, and does nothing until a named human answers.",
-    "c8t": "Harm may have a remedy under the law, and the record makes it reachable.",
+    "c8t": "Harm may have a remedy under the law, the record makes it reachable, and the judges inside are judged.",
     "c8b": "A person harmed by an agent may have a claim under the law of their place; CIRIS creates none where the law recognises none and rules on no legal matter. What it supplies is the signed record, the named parties, the contest that travels with the claim, and the sealed archive under lawful order. The Wise who answer deferrals publish their rulings and wear the same card as everyone else.",
     "c9t": "Some uses are never allowed, and no agent is given the decision to use lethal force.",
-    "c9b": "Deceiving, defrauding, manipulating or coercing people, and interfering in elections, are never allowed and no instruction moves that. Near force the only decisions an agent makes on its own are to stop, to refuse, or to defer.",
-    "s6outro": "Where this page says rights, it means rights in the wire: what the protocol enforces for you, not what a court owes you. Where it keeps a power that fails its own swap test, the constitution says so on a public register with the condition that ends it. Two entries are listed today."
+    "c9b": "Deceiving, defrauding, manipulating or coercing people, and interfering in elections, are never allowed and no instruction moves that. When an agent is anywhere near the use of force, the only decisions it makes on its own are to stop, to refuse, or to defer.",
+    "c10t": "What an agent and its node use is measured, weighed before it acts, and never hidden.",
+    "c10b": "An agent counts what it spends: tokens, energy, carbon and water, for each act and over the last hour and day. That count sits in front of it while it decides, so the cost is weighed with the act instead of added up afterwards, and what the agent costs the world is readable by the people it serves at the same grain as everything else it does. A node short on resources protects itself by a published ladder of steps, and those steps are never written down as decisions the agent made. Retiring an agent leaves no environmental waste behind, and that duty falls on whoever retires it.",
+    "c11t": "Everything on the wire is encrypted and signed, attack is rehearsed, and what is not covered is said out loud.",
+    "c11b": "Every link and every record is encrypted end to end with keys built to hold up against quantum computers, and the key changes when a member leaves, so someone removed cannot read what comes next. Nobody can forge another's act, and nobody can show two viewers two different histories. Software is checked against a registered build before it runs. People who did not write the code attack it on a schedule, findings are disclosed under published rules, and the list of attacks the network does not defend against is published too: who talks to whom, traffic patterns, a watcher who sees every link, and a member's own stolen key.",
+    "s6outro": "Where this page says rights, it means rights in the wire: what the protocol enforces for you, not what a court owes you. Where it keeps a power that fails its own swap test, the constitution says so on a public register with the condition that ends it. Two entries are listed today.",
+    "s6aspirationHead": "Which parts hold on their own, and which depend on others",
+    "s6aspiration": "The eleven are not all the same kind of promise. Most are kept by the wire itself: a bond that lapses stops a key, one signed row pauses every agent under a root, a record cannot be quietly rewritten. Others rest on people and institutions outside the network, and those parts are aims rather than guarantees. A remedy for harm is the law's to give; CIRIS creates no claim where the law recognises none. Outside audits, rehearsed attacks and the charter that governs the Wise Authorities only hold while people outside the project keep doing that work. The energy and water an answer costs can only be as accurate as what the providers upstream report. A vendor shipping its own device can pin it to a root the vendor holds, and no protocol prevents that. Where a promise rests on someone else keeping their end, the constitution says so in its own notes rather than counting it as kept.",
+    "s6limitHead": "What this does not claim",
+    "s6limit": "Alignment is not solved here. CIRIS does not make a superintelligence good, and it says nothing about the inside of any model. It binds nobody who did not join, so it cannot stop an unaccountable superintelligence from forming anywhere else. What it can do is keep people able to pause, correct and refuse the agents it holds as they grow more capable than the people holding them, and inside CIRIS it tries its best, with the rules and the network it has, to keep any such power from forming unaccountable. That is all it claims. Where anything on ciris.ai reads as more, this sentence holds.",
+    "btnRulesFull": "Read all eleven in full"
   },
   "values": {
     "kicker": "CIRIS VALUES",
@@ -2886,7 +2895,7 @@
     "convergence": "Four fears, one floor. The replacement for the internet is the replacement for ChatGPT.",
     "convergenceAccent": "Same substrate, every door.",
     "footL": "CIRISAgent · the epistemic web · AGPL-3.0, mission-locked",
-    "footR": "CIRIS 3.0 rolling out · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 rolling out",
     "heroLabels": {
       "consumerAi": "No AI you can trust",
       "bigTech": "Big Tech owns everything",

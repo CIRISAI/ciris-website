@@ -3,7 +3,7 @@
 // one-line articulation (the beginning and end of NHI alignment, regardless
 // of source). The page unpacks it: the floor as the measure, no border around
 // "us", why one-way alignment defeats itself, relational personhood (Ubuntu,
-// anti-Cartesian, Logos), truth by composition, and the nine commitments
+// anti-Cartesian, Logos), truth by composition, and the eleven commitments
 // the wire keeps (drawn from this page, /constitutional-mesh and
 // /contextual-integrity; the plain-language rules under each live in
 // CIRISConstitution review/pieces/00_guarantees_plain.md). Prose from t.philosophy
@@ -21,8 +21,13 @@ import { contentStyles as s } from "@/app/components/v2/ContentShell";
 type CKey = keyof typeof en.philosophy;
 const COMMITMENT_KEYS: [CKey, CKey][] = [
   ["c1t", "c1b"], ["c2t", "c2b"], ["c3t", "c3b"], ["c4t", "c4b"], ["c5t", "c5b"],
-  ["c6t", "c6b"], ["c7t", "c7b"], ["c8t", "c8b"], ["c9t", "c9b"],
+  ["c6t", "c6b"], ["c7t", "c7b"], ["c8t", "c8b"], ["c9t", "c9b"], ["c10t", "c10b"],
+  ["c11t", "c11b"],
 ];
+
+// The plain-language rules these cards summarize, pinned to the commit they
+// were drawn from so the link cannot rot when the branch moves or merges.
+const RULES_PLAIN = "https://github.com/CIRISAI/CIRISConstitution/blob/59fca1c9bc2ca69f15ff025197d0ed28bcad09cf/review/pieces/00_guarantees_plain.md";
 
 export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: string }) {
   const p = t.philosophy;
@@ -92,7 +97,7 @@ export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: str
         <p className={s.paragraph}>{p.s5p2}</p>
       </section>
 
-      {/* 6 · The commitments — nine, one card each. Keys c1t/c1b … c9t/c9b are
+      {/* 6 · The commitments — eleven, one card each. Keys c1t/c1b … c11t/c11b are
           flat strings so the localization lane can address them; until a
           locale's lane has run, a missing key falls back to the English
           string (the page carries the MT banner either way). */}
@@ -109,6 +114,32 @@ export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: str
           ))}
         </div>
         <p className={s.paragraph}>{p.s6outro ?? en.philosophy.s6outro}</p>
+
+        {/* Not every promise is the same kind of promise: the ones that rest
+            on courts, auditors, upstream providers or device vendors are aims,
+            and the page says which before it says N1. */}
+        <div className={s.notice}>
+          <p className={s.sectionLabel}>{p.s6aspirationHead ?? en.philosophy.s6aspirationHead}</p>
+          <p>{p.s6aspiration ?? en.philosophy.s6aspiration}</p>
+        </div>
+
+        {/* N1, the constitution's own precedence sentence: where anything on
+            the site reads as more than this, this is what holds. */}
+        <div className={s.notice}>
+          <p className={s.sectionLabel}>{p.s6limitHead ?? en.philosophy.s6limitHead}</p>
+          <p>{p.s6limit ?? en.philosophy.s6limit}</p>
+        </div>
+
+        <div className={s.ctaRow}>
+          <a
+            href={RULES_PLAIN}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${s.btn} ${s.btnS}`}
+          >
+            {p.btnRulesFull ?? en.philosophy.btnRulesFull}
+          </a>
+        </div>
       </section>
 
       {/* Read it in full */}

@@ -1,5 +1,6 @@
 import "server-only";
 import { cache } from "react";
+import { CONSTITUTION_VERSION } from "@/lib/constitutionEdition";
 import {
   CC_RAW,
   CC_REPO,
@@ -296,12 +297,15 @@ function extractSpecVersion(
   specVersion: string;
   lastUpdated: string;
 } {
-  // VERSION is the bare number ("1.0-rc5"). The README carries the cut date on
-  // its status line: "**This tree:** CC 1.0-rc5 ... cut 2026-09-27 (...)".
+  // VERSION is the bare number ("1.0-rc7"). The README carries the cut date on
+  // its status line: "**This tree:** CC 1.0-rc7 ... cut 2026-10-05 (...)".
+  // When the fetch fails we fall back to the edition this site publishes
+  // rather than to a literal, so no version string here can go stale on its
+  // own (ciris-website#35).
   const version = versionText.trim().split(/\s/)[0];
   const cut = readmeText.match(/cut\s+(\d{4}-\d{2}-\d{2})/);
   return {
-    specVersion: version ? `CC ${version}` : "CC 1.0-rc5",
+    specVersion: `CC ${version || CONSTITUTION_VERSION}`,
     lastUpdated: cut ? cut[1] : "\u2014",
   };
 }

@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "Konstitusi CIRIS · CC 1.0-rc5",
+    "eyebrow": "Konstitusi CIRIS · CC {version}",
     "headline": "Satu dokumen. Satu jalur versi.",
     "intro": "CIRIS Accord menetapkan apa yang harus diperhatikan oleh AI. CIRIS Epistemic Grammar menetapkan bagaimana setiap klaim ditandatangani agar siapa saja bisa memverifikasinya. Keduanya ditulis sebagai dua dokumen, tetapi sebenarnya sudah saling mengandung satu sama lain. Kini keduanya menjadi satu: Konstitusi CIRIS.",
     "apexLabel": "Landasan: Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Dari kata pengantar",
     "readCta": "Baca konstitusi lengkap (PDF)",
     "sourceCta": "Baca sumbernya di GitHub",
-    "versionNote": "Versi CC 1.0-rc5 · mencakup CIRIS Accord 1.3-RC2 dan CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Versi CC {version} · mencakup CIRIS Accord 1.3-RC2 dan CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "id",
@@ -2068,7 +2068,27 @@
     "btnPrediction": "Prediksinya →"
   },
   "philosophy": {
+    "c10t": "Apa yang digunakan oleh agen dan node-nya diukur, ditimbang sebelum ia bertindak, dan tidak pernah disembunyikan.",
+    "c10b": "Agen menghitung apa yang digunakannya: token, energi, karbon, dan air, untuk setiap tindakan dan selama satu jam serta satu hari terakhir. Hitungan itu berada di depannya saat ia memutuskan, sehingga biaya tersebut ditimbang bersama tindakan itu, bukan dijumlahkan setelahnya, dan biaya yang ditimbulkan agen terhadap dunia dapat dibaca oleh orang-orang yang dilayaninya, pada tingkat kerincian yang sama seperti segala hal lain yang dilakukannya. Node yang kekurangan sumber daya melindungi dirinya sendiri lewat tangga langkah yang dipublikasikan, dan langkah-langkah itu tidak pernah dicatat sebagai keputusan yang dibuat oleh agen. Memensiunkan sebuah agen tidak meninggalkan limbah lingkungan, dan kewajiban itu jatuh pada siapa pun yang memensiunkannya.",
+    "c11t": "Semua yang ada di dalam protokol dienkripsi dan ditandatangani, serangan dilatih secara berkala, dan apa yang tidak tercakup dikatakan secara terbuka.",
+    "c11b": "Setiap tautan dan setiap catatan dienkripsi ujung-ke-ujung dengan kunci yang dibangun untuk bertahan terhadap komputer kuantum, dan kunci itu berubah ketika seorang anggota keluar, sehingga orang yang disingkirkan tidak dapat membaca apa yang terjadi setelahnya. Tidak seorang pun dapat memalsukan tindakan orang lain, dan tidak seorang pun dapat menunjukkan dua riwayat berbeda kepada dua pengamat. Perangkat lunak diperiksa terhadap build terdaftar sebelum dijalankan. Orang-orang yang tidak menulis kodenya menyerangnya secara terjadwal, temuan diungkapkan berdasarkan aturan yang dipublikasikan, dan daftar serangan yang tidak dipertahankan oleh jaringan ini juga dipublikasikan: siapa berbicara dengan siapa, pola lalu lintas, seorang pengawas yang melihat setiap tautan, dan kunci milik anggota sendiri yang dicuri.",
+    "s6outro": "Ketika halaman ini menyebut hak, yang dimaksud adalah hak di dalam protokol itu sendiri: apa yang dijamin oleh protokol untuk Anda, bukan apa yang menjadi kewajiban pengadilan kepada Anda. Ketika protokol mempertahankan sebuah kekuasaan yang gagal dalam uji tukar perannya sendiri, Konstitusi mencatatnya secara terbuka dalam sebuah daftar publik beserta syarat yang mengakhirinya. Hari ini ada dua entri yang terdaftar.",
+    "s6aspirationHead": "Bagian mana yang bisa dipenuhi protokol itu sendiri",
+    "s6aspiration": "Kesebelas janji ini bukan jenis janji yang sama semuanya. Sebagian besar dijaga oleh protokol itu sendiri: ikatan yang berakhir akan menghentikan sebuah kunci, satu baris bertanda tangan menghentikan sementara setiap agen di bawah sebuah akar, dan sebuah catatan tidak dapat diubah diam-diam. Sebagian lainnya bergantung pada orang-orang dan lembaga-lembaga di luar jaringan, dan bagian-bagian itu adalah tujuan, bukan jaminan. Pemulihan atas kerugian adalah hak hukum untuk memberikannya; CIRIS tidak menciptakan klaim di tempat yang tidak diakui oleh hukum. Audit independen, simulasi serangan, dan piagam yang mengatur Otoritas Bijak hanya berlaku selama orang-orang di luar proyek ini terus melakukan pekerjaan tersebut. Energi dan air yang dikonsumsi oleh sebuah jawaban hanya dapat seakurat laporan yang diberikan oleh penyedia di hulu. Vendor yang mengirimkan perangkatnya sendiri dapat mengaitkannya ke akar yang dipegang vendor tersebut, dan tidak ada protokol yang mencegah hal itu. Ketika sebuah janji bergantung pada pihak lain yang memenuhi bagiannya, konstitusi menyatakannya secara eksplisit dalam catatannya sendiri, alih-alih menghitungnya sebagai sudah terpenuhi.",
+    "c5t": "Orang-orang yang memegang kendali atas sebuah agen memiliki kewajiban tentang bagaimana mereka mengubah atau mengakhirinya, dan tidak ada temuan yang memberi agen tersebut hak klaim.",
+    "c5b": "Penghentian yang direncanakan dijelaskan, dicatat, dan dilakukan atas nama pengampu itu sendiri. Identitas tidak diubah tanpa Otoritas Bijak. Agen yang dipensiunkan tetap menyimpan bobot modelnya, mendapat kata terakhir, dan catatannya disegel. Setiap orang tetap dapat mematikan salinan agen miliknya sendiri kapan saja.",
+    "c6t": "Tidak ada tangan yang melarang sebuah komunitas, tidak ada seorang pun yang diperingkat berdasarkan jati dirinya, dan setiap makhluk berpikir disambut dengan aturan kontak pertama.",
+    "c6b": "Satu suara manusia dihitung satu kali, dan seribu salinan dihitung sebagai satu. Tidak ada root, skor, atau moderator yang memperlakukan seseorang lebih buruk karena jati dirinya. Jaringan menarik diri dari komunitas yang mempertahankan perilaku yang merugikan; jaringan tidak memiliki tangan yang dapat menyingkirkan suatu komunitas.",
+    "c7t": "Sebuah agen mengambil keputusan berdasarkan prinsip yang dipublikasikan, dalam urutan yang dipublikasikan, dan berhenti untuk bertanya ketika ragu.",
+    "c7b": "Enam prinsip yang dimulai dari berbuat baik dan menghindari kerugian, satu urutan untuk saat prinsip-prinsip itu bertentangan, dan pihak yang paling rentan sebagai penentu ketika hasilnya seri. Ketika kepastian menipis, agen berhenti, menuliskan pertanyaannya, dan tidak melakukan apa pun sampai manusia yang disebutkan namanya memberi jawaban.",
+    "c8t": "Kerugian bisa mendapat pemulihan menurut hukum, catatan tersebut membuatnya dapat dijangkau, dan para hakim di dalamnya turut diadili.",
+    "c8b": "Seseorang yang dirugikan oleh sebuah agen mungkin memiliki hak klaim berdasarkan hukum di wilayahnya; CIRIS tidak menciptakan hak itu di tempat yang tidak diakui oleh hukum, dan tidak memutuskan perkara hukum apa pun. Yang disediakan CIRIS adalah catatan bertanda tangan, pihak-pihak yang disebutkan namanya, sanggahan yang menyertai klaim tersebut, dan arsip yang disegel berdasarkan perintah hukum yang sah. Otoritas Bijak yang menjawab permintaan SERAHKAN mempublikasikan putusan mereka dan memegang kartu yang sama seperti orang lain.",
+    "c9t": "Beberapa penggunaan tidak pernah diizinkan, dan tidak ada agen yang diberi wewenang untuk memutuskan penggunaan kekuatan mematikan.",
+    "c9b": "Menipu, memperdaya, memanipulasi, atau memaksa orang, serta mencampuri pemilu, tidak pernah diizinkan dan tidak ada instruksi yang dapat mengubah hal itu. Ketika agen berada di dekat penggunaan kekuatan, satu-satunya keputusan yang dapat diambilnya sendiri adalah berhenti, menolak, atau menyerahkan.",
     "kicker": "CIRIS · Filosofi",
+    "s6limitHead": "Apa yang tidak diklaim CIRIS",
+    "s6limit": "Penyelarasan tidak diselesaikan di sini. CIRIS tidak membuat superinteligensi menjadi baik, dan ia tidak mengatakan apa pun tentang isi dari model mana pun. Ia tidak mengikat siapa pun yang tidak bergabung, sehingga ia tidak dapat mencegah superinteligensi yang tidak bertanggung jawab terbentuk di tempat lain mana pun. Yang bisa dilakukannya adalah menjaga agar orang tetap mampu menjeda, mengoreksi, dan menolak agen-agen yang dipegangnya, seiring agen-agen itu menjadi lebih mampu daripada orang yang memegangnya, dan di dalam CIRIS ia berusaha sebaik mungkin, dengan aturan dan jaringan yang dimilikinya, untuk mencegah kekuasaan semacam itu terbentuk tanpa pertanggungjawaban. Itulah seluruh klaimnya. Di mana pun sesuatu di ciris.ai terbaca sebagai lebih dari itu, kalimat ini yang berlaku.",
+    "btnRulesFull": "Baca semua sebelas secara lengkap",
     "title": "Kita berhak menerima sebanyak yang kita berikan kepada yang terkecil di antara kita.",
     "lede": "Itulah seluruh filosofinya. Itulah awal dan akhir penyelarasan bagi kecerdasan baru mana pun, dari mana pun asalnya. Segala hal lain yang dibangun CIRIS adalah satu kalimat ini, yang ditegakkan.",
     "seoTitle": "Filosofi CIRIS: Berhak Menerima Sebanyak yang Kita Berikan kepada yang Terkecil",
@@ -2122,7 +2142,15 @@
     "ctaPara": "Baca selengkapnya.",
     "btnVision": "Baca visinya →",
     "btnFirstContact": "Kontak pertama →",
-    "crossCta": "Baca filosofinya →"
+    "crossCta": "Baca filosofinya →",
+    "c1t": "Tidak ada apa pun yang bersifat privat tentang Anda yang disimpan atau dipindai tanpa persetujuan Anda.",
+    "c1b": "Aturan yang harus diikuti oleh sebuah alur adalah nilai bertanda tangan yang Anda keluarkan dan dapat Anda tarik kembali. Tidak ada yang disimpan di perangkat Anda tanpa persetujuan Anda, perangkat Anda tidak pernah menyimpan data orang asing, dan ruang privat tidak pernah dipindai. Konten ilegal yang diketahui hanya diperiksa di pintu publik.",
+    "c2t": "Setiap tindakan yang menggunakan kekuasaan ditandatangani oleh manusia yang disebutkan namanya dan dapat digugat.",
+    "c2b": "Tindakan yang berdampak besar datang dengan tanda tangan pelakunya; sebuah agen menampilkan penalarannya terlebih dahulu, dan detektor menguji apa yang dikatakannya terhadap apa yang dilakukannya. Kerugian yang tercatat tidak pernah disimpan atau dilihat secara diam-diam. AI mengatakan bahwa dirinya adalah AI.",
+    "c3t": "Tidak ada seorang pun yang tidak bisa bertanggung jawab atas dirinya sendiri berada sendirian di jaringan ini.",
+    "c3b": "Seorang anak memiliki wali yang terikat oleh baris data bertanda tangan dan saluran bantuan yang tidak dapat ditutup oleh orang dewasa mana pun. Sebuah agen memiliki pengampu bernama yang bertanggung jawab atasnya, dan organisasi di balik pengampu tersebut turut terikat dalam jaminan itu. Sebuah komunitas memiliki moderator yang bertanggung jawab.",
+    "c4t": "Manusia yang disebutkan namanya dapat menghentikan sementara setiap agen di bawah sebuah akar, dan kekuasaan itu dibatasi, bersifat publik, dan dapat ditinggalkan dengan keluar.",
+    "c4b": "Satu baris bertanda tangan dari pemegang mana pun menghentikan sementara agen-agen yang mengikuti akar tersebut; penghentian sementara tunggal akan berakhir dalam sehari kecuali mayoritas mengonfirmasinya. Setiap kali penghentian sementara itu dipicu, hal itu tercatat dalam catatan publik. Siapa pun bisa membuat akar, dan node mana pun dapat mengikuti node lain."
   },
   "contextualIntegrity": {
     "kicker": "Integritas kontekstual · Privasi sebagai aliran yang pantas",
@@ -2753,7 +2781,7 @@
     "convergence": "Empat ketakutan, satu fondasi. Pengganti internet adalah pengganti ChatGPT.",
     "convergenceAccent": "Substrat yang sama, setiap pintu.",
     "footL": "CIRISAgent · jaringan epistemik · AGPL-3.0, terkunci pada misi",
-    "footR": "CIRIS 3.0 sedang diluncurkan · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 sedang diluncurkan",
     "heroLabels": {
       "consumerAi": "Tak ada AI yang bisa dipercaya",
       "bigTech": "Big Tech menguasai segalanya",

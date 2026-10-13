@@ -1,6 +1,6 @@
 // v2 "dark-blueprint" front-door for the unified CIRIS Constitution. The Accord
 // (the ethics) and the CEG (the wire grammar) are no longer two documents — they
-// are folded into one constitution (CC 1.0-rc5) that lives canonically in
+// are folded into one constitution that lives canonically in
 // CIRISAI/CIRISConstitution. This page frames that whole, surfaces the M-1 apex
 // + the eight parts, and links out to the PDF and source.
 // Every label comes from the dictionary (constitution.*); the GitHub URLs and
@@ -11,6 +11,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
 import PageShell from "@/app/components/PageShell";
 import { contentStyles as s } from "@/app/components/v2/ContentShell";
+import { withEdition } from "@/lib/constitutionEdition";
 import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegrityV2";
 
 const REPO = "https://github.com/CIRISAI/CIRISConstitution";
@@ -42,7 +43,7 @@ export default function ConstitutionV2({ t, locale }: { t: Dictionary; locale: s
       nav={t.homeHero}
       locale={locale}
       accent="brass"
-      kicker={c.eyebrow}
+      kicker={withEdition(c.eyebrow)}
       title={c.headline}
       lede={c.intro}
       graphicId="g13"
@@ -61,7 +62,7 @@ export default function ConstitutionV2({ t, locale }: { t: Dictionary; locale: s
       <section className={s.section}>
         <p className={s.sectionLabel}>{c.foldedTitle}</p>
         <p className={s.paragraph}>{c.foldedBody}</p>
-        <p className={s.footnote}>{c.versionNote}</p>
+        <p className={s.footnote}>{withEdition(c.versionNote)}</p>
       </section>
 
       {/* The eight parts — a table of contents into the unified document. */}

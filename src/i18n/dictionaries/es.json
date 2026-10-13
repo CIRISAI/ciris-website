@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "La Constitución CIRIS · CC 1.0-rc5",
+    "eyebrow": "La Constitución CIRIS · CC {version}",
     "headline": "Un documento. Una línea de versiones.",
     "intro": "El Acuerdo CIRIS estableció lo que una IA debe tener en cuenta. La Gramática Epistémica CIRIS estableció cómo se firma cada afirmación para que cualquiera pueda verificarla. Se escribieron como dos documentos, pero ya se contenían el uno al otro. Ahora son uno: la Constitución CIRIS.",
     "apexLabel": "La piedra angular: Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Del prólogo",
     "readCta": "Lee la constitución completa (PDF)",
     "sourceCta": "Lee el código fuente en GitHub",
-    "versionNote": "Versión CC 1.0-rc5 · incorpora el Acuerdo CIRIS 1.3-RC2 y el CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Versión CC {version} · incorpora el Acuerdo CIRIS 1.3-RC2 y el CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "es",
@@ -2068,7 +2068,27 @@
     "btnPrediction": "La predicción →"
   },
   "philosophy": {
+    "c10t": "Lo que un agente y su nodo usan se mide, se sopesa antes de actuar, y nunca se oculta.",
+    "c10b": "Un agente cuenta lo que gasta: tokens, energía, carbono y agua, por cada acto y a lo largo de la última hora y del último día. Ese conteo está frente a él mientras decide, de modo que el costo se sopesa junto con el acto en lugar de sumarse después, y lo que el agente le cuesta al mundo es legible para las personas a quienes sirve, con el mismo nivel de detalle que todo lo demás que hace. Un nodo con pocos recursos se protege mediante una escala publicada de pasos, y esos pasos nunca se registran como decisiones que tomó el agente. Retirar a un agente no deja residuos ambientales, y esa responsabilidad recae en quien lo retira.",
+    "c11t": "Todo lo que circula por el protocolo está cifrado y firmado, el ataque se ensaya, y lo que no queda cubierto se dice en voz alta.",
+    "c11b": "Cada enlace y cada registro está cifrado de extremo a extremo con claves diseñadas para resistir a las computadoras cuánticas, y la clave cambia cuando un miembro se va, de modo que quien fue excluido no puede leer lo que viene después. Nadie puede falsificar el acto de otro, y nadie puede mostrarles a dos observadores dos historiales distintos. El software se verifica contra una compilación registrada antes de ejecutarse. Personas que no escribieron el código lo atacan de forma programada, los hallazgos se divulgan bajo reglas publicadas, y también se publica la lista de ataques contra los que la red no se defiende: quién habla con quién, los patrones de tráfico, un observador que ve cada enlace, y la clave robada del propio miembro.",
+    "s6outro": "Cuando esta página dice derechos, se refiere a derechos en el protocolo: lo que el protocolo hace cumplir por ti, no lo que un tribunal te debe. Cuando conserva un poder que no supera su propia prueba de intercambio, la Constitución lo indica en un registro público junto con la condición que le pone fin. Hoy se enumeran dos entradas.",
+    "s6aspirationHead": "Qué partes se sostienen por sí mismas y cuáles dependen de otras",
+    "s6aspiration": "Las once no son todas el mismo tipo de promesa. La mayoría las cumple el propio protocolo: una fianza que caduca detiene una clave, una sola fila firmada pausa a todos los agentes bajo una raíz, un registro no puede reescribirse en silencio. Otras dependen de personas e instituciones fuera de la red, y esas partes son aspiraciones más que garantías. Una reparación por daño es algo que corresponde dar a la ley; CIRIS no crea ninguna reclamación donde la ley no reconoce ninguna. Las auditorías externas, los ataques ensayados y el estatuto que rige a las Autoridades Sabias solo se sostienen mientras las personas fuera del proyecto sigan haciendo ese trabajo. La energía y el agua que cuesta una respuesta solo pueden ser tan precisas como lo que informan los proveedores en origen. Un fabricante que distribuye su propio dispositivo puede fijarlo a una raíz que ese fabricante posee, y ningún protocolo lo impide. Donde una promesa depende de que alguien más cumpla su parte, la Constitución lo dice en sus propias notas en lugar de contarla como cumplida.",
+    "c5t": "Las personas que tienen a su cargo a un agente tienen deberes sobre cómo lo cambian o lo terminan, y ningún dictamen le otorga al agente un derecho.",
+    "c5b": "Un apagado planeado se explica, se registra y se realiza bajo el nombre del propio custodio. La identidad no se modifica sin una Autoridad Sabia. Un agente retirado conserva sus pesos, recibe una última palabra y tiene sus registros sellados. Cualquier persona puede apagar su propia copia en cualquier momento.",
+    "c6t": "Ninguna mano prohíbe a una comunidad, a nadie se le clasifica por lo que es, y a todo ser pensante se le recibe con las reglas de primer contacto.",
+    "c6b": "Una voz humana cuenta una vez, y mil copias cuentan como una. Ninguna raíz, puntaje o moderador trata peor a una persona por lo que es. La red se retira de una comunidad que mantiene el daño; no tiene una mano que la elimine.",
+    "c7t": "Un agente decide según principios publicados, en un orden publicado, y se detiene a preguntar cuando no está seguro.",
+    "c7b": "Seis principios que comienzan por hacer el bien y evitar el daño, un orden para cuando entran en conflicto, y la parte más vulnerable como criterio de desempate. Cuando la certeza escasea, el agente se detiene, anota la pregunta y no hace nada hasta que un humano identificado responda.",
+    "c8t": "El daño puede tener un remedio bajo la ley, el registro lo hace alcanzable, y los jueces internos también son juzgados.",
+    "c8b": "Una persona perjudicada por un agente puede tener una reclamación conforme a la ley de su lugar; CIRIS no crea ninguna donde la ley no reconoce ninguna, y no dictamina sobre ningún asunto legal. Lo que proporciona es el registro firmado, las partes identificadas, la disputa que viaja con la reclamación, y el archivo sellado bajo orden legal. Los Sabios que responden a los diferimientos publican sus fallos y llevan la misma credencial que todos los demás.",
+    "c9t": "Algunos usos nunca están permitidos, y a ningún agente se le da la decisión de usar fuerza letal.",
+    "c9b": "Engañar, defraudar, manipular o coaccionar a las personas, e interferir en elecciones, nunca están permitidos y ninguna instrucción puede cambiar eso. En situaciones cercanas al uso de la fuerza, las únicas decisiones que un agente toma por sí mismo son detenerse, negarse o diferir.",
     "kicker": "CIRIS · La filosofía",
+    "s6limitHead": "Lo que esto no afirma",
+    "s6limit": "La alineación no se resuelve aquí. CIRIS no hace buena a una superinteligencia, y no dice nada sobre el interior de ningún modelo. No obliga a nadie que no se haya unido, así que no puede impedir que una superinteligencia sin rendición de cuentas se forme en cualquier otro lugar. Lo que sí puede hacer es mantener a las personas capaces de pausar, corregir y rechazar a los agentes que sostiene a medida que se vuelven más capaces que las personas que los sostienen, y dentro de CIRIS hace todo lo posible, con las reglas y la red que tiene, para impedir que ese poder se forme sin rendición de cuentas. Eso es todo lo que afirma. Donde cualquier cosa en ciris.ai se lea como más que eso, esta frase prevalece.",
+    "btnRulesFull": "Lee las once completas",
     "title": "Se nos debe tanto como ofrecemos al más pequeño de nosotros.",
     "lede": "Esa es toda la filosofía. Es el principio y el fin de la alineación para cualquier inteligencia nueva, venga de donde venga. Todo lo demás que CIRIS construye es esta única frase, hecha cumplir.",
     "seoTitle": "La filosofía CIRIS: se nos debe lo que ofrecemos al más pequeño de nosotros",
@@ -2122,7 +2142,15 @@
     "ctaPara": "Léela completa.",
     "btnVision": "Lee la visión →",
     "btnFirstContact": "Primer contacto →",
-    "crossCta": "Lee la filosofía →"
+    "crossCta": "Lee la filosofía →",
+    "c1t": "Nada privado sobre ti se guarda ni se escanea sin tu consentimiento.",
+    "c1b": "La regla que un flujo debe seguir es un valor firmado que tú emites y puedes retirar. Nada se almacena en tu dispositivo sin que lo hayas aceptado, tu dispositivo nunca guarda los datos de un desconocido, y las salas privadas nunca se escanean. El contenido ilegal conocido solo se verifica en la puerta pública.",
+    "c2t": "Todo acto de poder está firmado por un humano identificado y puede ser impugnado.",
+    "c2b": "Un acto con consecuencias llega firmado por quien lo realiza; un agente muestra primero su razonamiento y los detectores comparan lo que dijo con lo que hizo. El daño registrado nunca se guarda ni se revisa en silencio. Una IA dice que es una IA.",
+    "c3t": "Nadie que no pueda responder por sí mismo está solo en la red.",
+    "c3b": "Un niño tiene un tutor vinculado por un registro firmado y un canal de ayuda que ningún adulto puede cerrar. Un agente tiene un custodio identificado que responde por él, y la organización detrás del custodio queda en la garantía. Una comunidad tiene un moderador responsable.",
+    "c4t": "Los humanos identificados pueden pausar a todos los agentes bajo una raíz, y ese poder está limitado, es público, y se deja al marcharse.",
+    "c4b": "Una sola fila firmada de cualquier titular pausa a los agentes que siguen la raíz; una pausa solitaria muere en un día a menos que una mayoría la confirme. Cada vez que se activa la pausa, queda en el registro público. Cualquiera puede crear una raíz, y cualquier nodo puede seguir a otro."
   },
   "contextualIntegrity": {
     "kicker": "Integridad contextual · La privacidad como flujo apropiado",
@@ -2753,7 +2781,7 @@
     "convergence": "Cuatro miedos, un mismo suelo. El reemplazo del internet es el reemplazo de ChatGPT.",
     "convergenceAccent": "La misma base, en cada puerta.",
     "footL": "CIRISAgent · la web epistémica · AGPL-3.0, con misión fija",
-    "footR": "CIRIS 3.0 en despliegue · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 en despliegue",
     "heroLabels": {
       "consumerAi": "Sin IA en quien confiar",
       "bigTech": "Big Tech lo controla todo",

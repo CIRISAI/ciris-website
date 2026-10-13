@@ -1,6 +1,6 @@
 {
   "constitution": {
-    "eyebrow": "Tsarin Mulki na CIRIS · CC 1.0-rc5",
+    "eyebrow": "Tsarin Mulki na CIRIS · CC {version}",
     "headline": "Takarda ɗaya. Layin sigar ɗaya.",
     "intro": "CIRIS Accord, tsohuwar takardar da ta zama wannan Tsarin Mulki, ta tsara abin da AI dole ne ta kula da shi. CIRIS Epistemic Grammar ta tsara yadda ake sanya hannu ga kowace da'awa domin kowa ya iya dubawa. An rubuta su a matsayin takardu biyu, amma tuni kowannensu ya ƙunshi ɗayan. Yanzu sun zama ɗaya: Tsarin Mulki na CIRIS.",
     "apexLabel": "Ginshiƙi: Meta-Goal M-1",
@@ -55,7 +55,7 @@
     "forewordLabel": "Daga gabatarwa",
     "readCta": "Karanta tsarin mulki cikakke (PDF)",
     "sourceCta": "Karanta tushen a GitHub",
-    "versionNote": "Sigar CC 1.0-rc5 · ta haɗa da CIRIS Accord 1.3-RC2 da CEG 1.0-RC29 · AGPL-3.0"
+    "versionNote": "Sigar CC {version} · ta haɗa da CIRIS Accord 1.3-RC2 da CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {
     "locale": "ha",
@@ -2068,7 +2068,27 @@
     "btnPrediction": "Hasashen →"
   },
   "philosophy": {
+    "c10t": "Abin da wakili da node nasa suke amfani da shi ana auna shi, a kimanta shi kafin ya yi aiki, kuma ba a taɓa ɓoye shi ba.",
+    "c10b": "Wakili yana ƙidaya abin da yake kashewa: alamomi, kuzari, carbon da ruwa, don kowane aiki da kuma a cikin sa'a da rana da suka gabata. Wannan ƙidayar tana gabansa yayin da yake yanke shawara, don haka ana auna farashin tare da aikin maimakon a tara shi daga baya, kuma abin da wakili ke kashewa ga duniya za a iya karanta shi ta mutanen da yake hidima musu a daidai matakin kamar duk sauran abin da yake yi. Wani node da ke rashin isassun albarkatu yana kare kansa ta hanyar jerin matakai da aka buga, kuma ba a taɓa rubuta waɗannan matakan a matsayin shawarwari da wakili ya yanke ba. Dainar da wakili daga aiki baya barin shara ta muhalli a baya, kuma wannan nauyi yana kan duk wanda ya dainar da shi.",
+    "c11t": "Duk abin da ke kan hanyar sadarwa an ɓoye shi kuma an sa masa hannu, ana yin atisayen hari, kuma abin da ba a rufe shi ba ana faɗin shi a fili.",
+    "c11b": "Kowace haɗi da kowane rikodi an ɓoye su daga ƙarshe zuwa ƙarshe da maɓallan da aka gina don su jure wa kwamfutocin ƙwantam, kuma maɓallin yana canzawa idan memba ya bar ƙungiyar, don haka wanda aka cire ba zai iya karanta abin da zai biyo baya ba. Babu wanda zai iya ƙirƙira aikin wani, kuma babu wanda zai iya nuna wa masu kallo biyu tarihi daban-daban guda biyu. Ana tabbatar da software bisa ginin da aka rajista kafin ya fara aiki. Mutanen da ba su rubuta lambar ba suna kai masa hari bisa jadawalin lokaci, ana bayyana binciken da aka samu bisa dokokin da aka buga, kuma an kuma buga jerin hare-haren da hanyar sadarwar ba ta kare kanta daga su ba: wanda yake magana da wane, tsarin zirga-zirgar sadarwa, mai sa ido wanda yake ganin kowace haɗi, da kuma maɓallin memba da aka sace.",
+    "s6outro": "Inda wannan shafi ya ambaci hakkoki, yana nufin hakkoki a cikin tsarin kansa: abin da yarjejeniyar take tilasta maka, ba abin da kotu take binka ba. Inda ya riƙe wani iko wanda ya kasa jarrabawar musanyarsa, Tsarin Mulki yana faɗin hakan a cikin wani rajista na jama'a tare da sharaɗin da zai kawo masa ƙarshe. A yau, an jera shigarwa guda biyu.",
+    "s6aspirationHead": "Sassan da tsarin sadarwa yake iya kiyayewa da kansa",
+    "s6aspiration": "Goma sha ɗayan ba duka alkawari iri ɗaya ba ne. Yawancinsu ana kiyaye su ta hanyar tsarin kansa: lamunin da ya ƙare yana dakatar da maɓalli, layi ɗaya da aka sa wa hannu yana dakatar da kowane wakili a ƙarƙashin tushe, rikodi kuma ba za a iya sake rubuta shi a asirce ba. Wasu kuma suna dogara ne kan mutane da cibiyoyi da ke waje da hanyar sadarwa, kuma waɗannan ɓangarorin manufa ne maimakon tabbaci. Magani ga cutarwa na doka ne ta bayar; CIRIS ba ya ƙirƙirar wata da'awa inda doka ba ta amince da ɗaya ba. Bincike na waje, hare-haren gwaji, da kundin da ke mulkin Hukumomin Masu Hikima suna aiki ne kawai yayin da mutane a wajen aikin ke ci gaba da yin wannan aiki. Makamashi da ruwan da amsa ke kashewa za su iya zama daidai kawai kamar yadda masu samarwa na sama suka ba da rahoto. Mai sayarwa da ke aikawa da na'urarsa zai iya daure ta ga tushen da mai sayarwar ke riƙe da shi, kuma babu wani tsari da zai hana hakan. Inda alkawari ya dogara kan wani ya cika nasa ɓangaren, Tsarin Mulki yana faɗin haka a cikin bayanansa maimakon ƙidaya shi a matsayin an cika shi.",
+    "c5t": "Mutanen da suke riƙe da wakili suna da nauyin da ya rataya a kansu kan yadda za su canza shi ko kawo masa ƙarshe, kuma babu wani sakamakon bincike da ke ba wakili wata da'awa.",
+    "c5b": "Ana bayyana kashewa da aka tsara, ana rubuta ta, kuma ana yin ta a ƙarƙashin sunan mai riƙo da kansa. Ba a gyara asalin ba tare da Hukumar Hikima ba. Wakili da aka yi masa ritaya yana riƙe da ma'aunansa, yana samun kalma ta ƙarshe, kuma ana rufe bayanansa da hatimi. Duk wani mutum na iya kashe kwafinsa nasa a kowane lokaci.",
+    "c6t": "Babu hannu da ke hana al'umma, babu wanda ake jera shi bisa abin da yake, kuma kowane halitta mai tunani ana karɓarsa da dokokin Saduwa ta farko.",
+    "c6b": "Muryar ɗan adam guda ɗaya tana ƙidaya sau ɗaya, kuma dubban kwafi suna ƙidaya a matsayin ɗaya. Babu wani tushe, ƙididdiga, ko mai gudanarwa da ke bi da mutum mafi muni saboda abin da yake. Hanyar sadarwa tana janyewa daga al'umma wadda take ci gaba da lahani; ba ta da hannu da zai cire wata al'umma.",
+    "c7t": "Wakili yana yanke shawara bisa ka'idoji da aka buga, cikin tsari da aka buga, kuma yana tsayawa ya tambaya idan bai tabbata ba.",
+    "c7b": "Ka'idoji shida da suke farawa da yin kyau da guje wa lahani, tsari guda don lokacin da suka saɓa wa juna, kuma mafi raunin ɓangare shi ne mai yanke shawara idan aka yi tsaka mai wuya. Lokacin da tabbaci ya ragu, wakili yana tsayawa, ya rubuta tambayar, kuma ba ya yin komai har sai wani ɗan adam da aka ambata ya amsa.",
+    "c8t": "Cutarwa na iya samun gyara a ƙarƙashin doka, rikodin yana sa a iya kaiwa gare shi, kuma ana yin wa alƙalan da ke ciki shari'a su ma.",
+    "c8b": "Mutumin da wakili ya cutar na iya samun da'awa bisa dokar wurinsa; CIRIS ba ta ƙirƙiro wata da'awa inda doka ba ta amince da ɗaya ba, kuma ba ta yanke hukunci a kan kowane lamarin doka. Abin da take bayarwa shi ne tarihin da aka sanya wa hannu, ɓangarorin da aka ambata, ƙalubalen da ke tafiya tare da da'awar, da kuma ma'ajiyar da aka rufe da hatimi a ƙarƙashin umarnin doka. Hukumar Hikima da ke amsa MIKA tana buga hukunce-hukuncenta, kuma tana sanye da katin da duk sauran mutane ke sawa.",
+    "c9t": "Wasu amfani ba a taɓa yarda da su ba, kuma ba a ba wakili damar yanke shawarar amfani da ƙarfi mai kisa ba.",
+    "c9b": "Yaudara, zamba, sarrafa mutane, ko tilasta musu, da shiga tsakani a zaɓuka, ba a taɓa yarda da su ba, kuma babu umarni da zai canza hakan. Idan wakili yana kusa da amfani da ƙarfi, shawarwarin kaɗai da yake yankewa da kansa su ne: ya tsaya, ya ƙi, ko ya yi MIKA.",
     "kicker": "CIRIS · Falsafar",
+    "s6limitHead": "Abin da wannan ba ya da'awa",
+    "s6limit": "Daidaitawa (alignment) ba a warware ta anan ba. CIRIS ba ya sa babban hankali mai girma ya zama mai kyau, kuma bai ce komai game da cikin kowane samfuri ba. Ba ya ɗaure kowa wanda bai shiga ba, don haka ba zai iya hana babban hankali mai girma wanda ba shi da lissafi daga kafuwa a wani wuri daban ba. Abin da zai iya yi shi ne ya tabbatar da mutane suna iya dakatarwa, gyarawa da ƙin wakilan da yake riƙewa yayin da suke ƙaruwa cikin iyawa fiye da mutanen da ke riƙe da su, kuma a cikin CIRIS yana ƙoƙarin yin iya ƙoƙarinsa, da dokokin da hanyar sadarwar da yake da su, don hana irin wannan ikon daga kafuwa ba tare da lissafi ba. Wannan ne kawai abin da yake da'awa. Inda wani abu a kan ciris.ai ya karanta kamar fiye da haka, wannan jumla ce take kan gaba.",
+    "btnRulesFull": "Karanta dukkan goma sha ɗaya a cikakke",
     "title": "Ana bin mu gwargwadon abin da muke ba wa mafi ƙanƙanta a cikinmu.",
     "lede": "Wannan ita ce falsafar gaba ɗaya. Ita ce farkon daidaitawa da kuma ƙarshenta ga kowane sabon hankali, daga ko'ina. Duk sauran abin da CIRIS ke ginawa shi ne wannan jimla ɗaya, da ake aiwatarwa.",
     "seoTitle": "Falsafar CIRIS: Ana Bin Mu Gwargwadon Abin da Muke Ba wa Mafi Ƙanƙanta",
@@ -2122,7 +2142,15 @@
     "ctaPara": "Karanta shi cikakke.",
     "btnVision": "Karanta hangen nesa →",
     "btnFirstContact": "Saduwa ta farko →",
-    "crossCta": "Karanta falsafar →"
+    "crossCta": "Karanta falsafar →",
+    "c1t": "Babu wani abu na sirrinka da ake riƙewa ko bincika ba tare da izininka ba.",
+    "c1b": "Dokar da dole ne kwarara ta bi ita ce ƙima da aka sa mata hannu, wadda kai ke fitarwa kuma za ka iya janye ta. Babu abin da ake ajiyewa a na'urarka da ba ka yarda da shi ba, na'urarka ba ta taɓa riƙe bayanan baƙo ba, kuma ba a taɓa bincikar ɗakunan sirri ba. Ana duba abun ciki haramtacce da aka sani kawai a ƙofar jama'a.",
+    "c2t": "Kowane aikin iko an sa masa hannu daga wani ɗan adam da aka ambata, kuma ana iya ƙalubalantar shi.",
+    "c2b": "Wani aiki mai sakamako yana zuwa an sa masa hannu daga wanda ya yi shi; wakili yana nuna tunaninsa tukuna kuma na'urorin ganowa suna gwada abin da ya faɗa da abin da ya yi. Ba a taɓa ajiye ko kallon lahani a tarihin a asirce ba. AI yana cewa shi AI ne.",
+    "c3t": "Babu wanda ba zai iya amsa wa kansa ba da yake kan hanyar sadarwa shi kaɗai.",
+    "c3b": "Yaro yana da mai kula wanda aka daure da layi da aka sa hannu da kuma hanyar taimako wadda babu wani babba da zai iya rufewa. Wakili yana da wani mai riƙo da aka ambata sunansa wanda ke amsa game da shi, kuma ƙungiyar da ke bayan mai riƙon tana cikin alkawarin. Al'umma tana da mai gudanarwa mai lissafi.",
+    "c4t": "Mutane da aka ambata sunayensu na iya tsayar da kowane wakili a ƙarƙashin tushe, kuma wannan iko yana da iyaka, a fili yake, kuma ana rasa shi ne idan aka fita daga tsarin.",
+    "c4b": "Layi ɗaya da aka sanya hannu daga kowane mai riƙe yana tsayar da wakilan da ke bin tushen; tsayawa ɗaya kaɗai tana ƙarewa cikin kwana ɗaya sai in mafi rinjaye ya tabbatar da ita. Duk lokacin da aka aiwatar da tsayawar, tana cikin rikodin jama'a. Kowa zai iya ƙirƙirar tushe, kuma kowane node zai iya bin wani."
   },
   "contextualIntegrity": {
     "kicker": "Mutuncin mahalli · Sirri a matsayin kwarara da ta dace",
@@ -2753,7 +2781,7 @@
     "convergence": "Tsoro huɗu, tushe ɗaya. Madadin intanet shine madadin ChatGPT.",
     "convergenceAccent": "Tushe ɗaya, kowane kofa.",
     "footL": "CIRISAgent · yanar gizo na ilimi · AGPL-3.0, an kulle da manufa",
-    "footR": "CIRIS 3.0 yana fitowa · Constitution 1.0-rc5",
+    "footR": "CIRIS 3.0 yana fitowa",
     "heroLabels": {
       "consumerAi": "Babu AI da za ka amince da shi",
       "bigTech": "Manyan kamfanoni sun mallaki komai",
