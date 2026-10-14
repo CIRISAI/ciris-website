@@ -25,7 +25,10 @@ export LOCALIZE_BUNDLE="${BUNDLE:-dictionaries}"
 # The ladder (per Eric, 2026-09-02): gpt-5-pro is out. Gemini 3.7 Flash repairs
 # first (16/21 held Yoruba strings accepted at $0.05), Opus 5 is the last word;
 # the judge stays gpt-5.1, a different family from every repairer.
-export LOCALIZE_LADDER="${LOCALIZE_LADDER:-anthropic/claude-sonnet-5,google/gemini-3.7-flash,anthropic/claude-opus-5}"
+# Drafter moved off the Claude family (per Eric, 2026-10-14): Claude sessions
+# review the output anyway. muse-spark-1.3 tied sonnet-5 on judge pass rate
+# (26 vs 27 of 54 held cells) at a quarter of the drafting cost.
+export LOCALIZE_LADDER="${LOCALIZE_LADDER:-meta/muse-spark-1.3,google/gemini-3.7-flash,anthropic/claude-opus-5}"
 MAX_KEYS="${MAX_KEYS:-500}"
 ATTEMPTS="${ATTEMPTS:-8}"
 BACKOFF="${BACKOFF:-180}"

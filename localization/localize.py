@@ -208,6 +208,9 @@ PRICE = {
     "openai/gpt-5.4": (2.50, 15.00),
     "x-ai/grok-4.6": (2.00, 6.00),
     "google/gemini-3.7-flash": (0.75, 3.75),
+    # LOCAL PATCH (ciris-website, 2026-10-14): the drafting rung, off the Claude
+    # family per Eric; priced so the spend report stops printing $0 for it.
+    "meta/muse-spark-1.3": (1.25, 4.25),
     "claude-sonnet-5": (2.00, 10.00),
     "claude-opus-5": (5.00, 25.00),
 }

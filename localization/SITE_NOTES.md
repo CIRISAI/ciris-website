@@ -99,6 +99,16 @@ and the workflow variable, overridable with LOCALIZE_LADDER:
 sonnet-5 (draft) -> gemini-3.7-flash (first repair) -> claude-opus-5 (last
 word). The judge stays gpt-5.1: a different family from every repairer.
 
+Update 2026-10-14 (Eric, via the CIRISAgent session's trial and ours): the
+drafting rung is now meta/muse-spark-1.3. Reasoning: Claude sessions review
+the output, so the drafter should be another family. On 6 held keys x 9
+low-coverage locales (am ha yo my sw ta mr pa te), same judge and repair
+rungs, muse-spark drafts passed the judge unrepaired 26/54 against sonnet-5's
+27/54, finished 43/54 accepted against 37/54, and cost $0.23 to draft
+against $0.95 (run $1.59 against $2.59). No script, leakage or word-salad
+failures. Ladder: muse-spark-1.3 -> gemini-3.7-flash -> claude-opus-5; judge
+gpt-5.1. Set in drive.sh, sweep.py and the LOCALIZE_LADDER repo variable.
+
 ## Where things stand (2026-09-02, end of the big job)
 
 - Yoruba first: 17 batches + final pass + touch-up; 2 holds left, both judge
