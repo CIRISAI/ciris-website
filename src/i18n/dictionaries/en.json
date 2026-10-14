@@ -3162,6 +3162,8 @@
     "l9b": "A 2026 game-theory result supports the capability-floor premise from outside: restricting open models can take capability away from ordinary defenders while determined adversaries obtain substitutes anyway. Keeping the floor is not recklessness. It can be the defensive move.",
     "l10n": "Constitutive protocol",
     "l10b": "The nearest scholarly neighbor approaches from the opposite direction: Hu and Rong ask how society can govern an AI that has become decentralized and uncapturable. We ask how society keeps some AI uncapturable when the rest becomes centralized and very powerful. Same architectural observation, opposite fear. Both can be right.",
+    "l11n": "Xiong et al., the ERC-8004 field study",
+    "l11b": "ERC-8004 is a standard for recording trust between agents on a blockchain. Any agent can register without asking permission. Xiong et al. looked at what was actually running and found that most registrations had nothing working behind them: only 3% to 15% pointed at a working endpoint, depending on the chain. Between 59% and 91% of reviewers acted as coordinated Sybil groups, and a reputation score could be gamed at almost no cost. They recommend three fixes: an agreed list of scoring dimensions, attestations that cite their evidence, and aggregation that resists Sybils. The CIRIS grammar already has all three: a registered namespace, attestations that must cite their evidence, and a count that gives correlated voices less weight.",
     "lineageNote": "External positions summarized in good faith from public writing. If we have any of them wrong, that is worth an issue too.",
     "crossCta": "Explore the Constitutional Mesh"
   },

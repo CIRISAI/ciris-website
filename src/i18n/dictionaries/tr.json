@@ -3056,8 +3056,10 @@
     "l9b": "2026 tarihli bir oyun kuramı sonucu, yetenek tabanı önermesini dışarıdan destekliyor: açık modelleri kısıtlamak sıradan savunmacıların elinden yetenek alabilirken, kararlı saldırganlar yerine geçecek şeyleri yine de buluyor. Tabanı korumak pervasızlık değildir. Savunma hamlesi olabilir.",
     "l10n": "Kurucu protokol",
     "l10b": "Akademideki en yakın komşu tam ters yönden geliyor: Hu ve Rong, merkezsizleşmiş ve artık ele geçirilemeyen bir yapay zekayı toplumun nasıl yönetebileceğini soruyor. Biz, geri kalanı tek elde toplanıp çok güçlenirken toplumun bir kısım yapay zekayı nasıl ele geçirilemez tutacağını soruyoruz. Aynı mimari gözlem, ters yönde bir korku. İkisi de haklı olabilir.",
+    "l11n": "Xiong ve ark., ERC-8004 saha çalışması",
     "lineageNote": "Dışarıdaki görüşler kamuya açık yazılarından iyi niyetle özetlendi. Herhangi birini yanlış anladıysak, bu da bir konu açmaya değer.",
-    "crossCta": "Anayasal Örgüyü keşfedin"
+    "crossCta": "Anayasal Örgüyü keşfedin",
+    "l11b": "ERC-8004, ajanlar arasındaki güvenin bir blok zincirinde kaydedilmesi için bir standarttır. Herhangi bir ajan izin almadan kaydolabilir. Xiong ve ark., gerçekte neyin çalıştığına baktı ve kayıtların çoğunun arkasında işleyen hiçbir şey olmadığını buldu: zincire bağlı olarak yalnızca %3 ila %15'i çalışan bir uç noktaya işaret ediyordu. İncelemecilerin %59 ila %91'i koordineli Sybil grupları olarak hareket etti ve bir itibar puanı neredeyse hiç maliyet olmadan manipüle edilebiliyordu. Üç düzeltme öneriyorlar: üzerinde uzlaşılmış bir puanlama boyutları listesi, kanıtlarına atıfta bulunan tasdikler ve Sybillere karşı dirençli bir toplulaştırma. CIRIS grameri bu üçünü de zaten içeriyor: kayıtlı bir ad alanı, kanıtlarına mutlaka atıfta bulunması gereken tasdikler ve ilişkili sesleri daha az ağırlıklandıran bir sayım."
   },
   "killSwitch": {
     "kicker": "Kontrol edebileceğiniz güvenlik",

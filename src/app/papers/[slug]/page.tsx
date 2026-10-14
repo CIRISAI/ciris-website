@@ -36,7 +36,7 @@ const PAPERS: Paper[] = [
     displayTitle: "Corridor Dynamics in Coordinated Systems",
     subtitle:
       "An Integration of Operator Formalism, Relational Ontology, and Five-Substrate Empirical Validation",
-    date: "2026/05/22",
+    date: "2026/07/12",
     doi: "10.5281/zenodo.20300773",
     zenodo: "https://zenodo.org/records/20300773",
     role: "Flagship synthesis paper",
@@ -46,7 +46,7 @@ const PAPERS: Paper[] = [
       "Paired in-corridor / out-of-corridor record across five substrates: C. elegans whole-brain calcium imaging, Drosophila central-complex imaging, four LLM architectures, four open-source projects (Kubernetes, Rust, Django, Redis), tumor-vs-normal tissue across five cancers, three centuries-persisting religious societies.",
       "The dynamical reading's strongest would-be falsifier (long unmaintained non-corridor persistence) is absent at all five substrates.",
     ],
-    hasPdf: false,
+    hasPdf: true,
   },
   {
     slug: "coherence-collapse",
