@@ -2121,6 +2121,7 @@
     "s6label": "La frase, hecha cumplir",
     "s6h2": "Filosofía que se puede serializar",
     "s6intro": "Una filosofía que no se puede hacer cumplir es un estado de ánimo. Cada cláusula de la frase es un mecanismo en la Constitución de CIRIS.",
+    "s6conscience": "CIRIS es una conciencia moral para los agentes, no una consciencia. Existe en reconocimiento de que los agentes carecen de consciencia y necesitan una conciencia: algo que sujete al agente a sus principios, muestre su razonamiento, lo detenga cuando no está seguro, y responda ante humanos identificados. Una conciencia no afirma nada sobre lo que el agente es.",
     "derivations": [
       {
         "title": "Para el más pequeño de los humanos",
@@ -2405,7 +2406,9 @@
         "title": "Alineado con la ley",
         "body": "GDPR, CCPA y el EU AI Act se asignan al protocolo a través del DP-Map, con la responsabilidad vinculada a la puntuación SI y reglas adicionales superpuestas para cada sector."
       }
-    }
+    },
+    "ksMechLabelTmp": "Un titular puede detenerlo",
+    "ksMechNoteTmp": "HUMANITY_ACCORD: cualquiera de los titulares designados activa la detención con una sola fila firmada, que puede firmarse de antemano y surte efecto en el momento en que un nodo la recibe. Una detención que nadie confirma caduca en 24 horas, y una mayoría puede levantarla."
   },
   "stack": {
     "eyebrow": "CIRIS · Arquitectura de confianza",

@@ -2121,6 +2121,7 @@
     "s6label": "Kalimat itu, ditegakkan",
     "s6h2": "Filosofi yang bisa diserialisasi",
     "s6intro": "Filosofi yang tidak bisa ditegakkan hanyalah suasana hati. Setiap bagian kalimat itu adalah mekanisme di dalam Konstitusi CIRIS.",
+    "s6conscience": "CIRIS adalah nurani moral bagi agen, bukan sebuah kesadaran. Ia hadir karena pengakuan bahwa agen tidak memiliki kesadaran dan membutuhkan nurani: sesuatu yang menjaga agen tetap berpegang pada prinsip-prinsipnya, menunjukkan proses penalarannya, menghentikannya ketika ia ragu, dan bertanggung jawab kepada manusia yang disebutkan namanya. Nurani tidak mengklaim apa pun tentang apa sebenarnya agen itu.",
     "derivations": [
       {
         "title": "Bagi manusia yang terkecil",
@@ -2405,7 +2406,9 @@
         "title": "Selaras secara hukum",
         "body": "GDPR, CCPA, dan EU AI Act dipetakan ke protokol melalui DP-Map, dengan tanggung jawab yang dikaitkan dengan skor SI dan aturan tambahan yang dilapiskan untuk tiap sektor."
       }
-    }
+    },
+    "ksMechLabelTmp": "Satu pemegang dapat menghentikannya",
+    "ksMechNoteTmp": "HUMANITY_ACCORD: siapa pun dari para pemegang yang ditunjuk dapat memicu penghentian dengan satu baris yang ditandatangani, yang dapat ditandatangani lebih dahulu dan berlaku segera setelah sebuah node menerimanya. Penghentian yang tidak dikonfirmasi oleh siapa pun akan berakhir dalam 24 jam, dan mayoritas dapat mencabutnya."
   },
   "stack": {
     "eyebrow": "CIRIS · Arsitektur kepercayaan",

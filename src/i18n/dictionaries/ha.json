@@ -2121,6 +2121,7 @@
     "s6label": "Jimlar, ana aiwatar da ita",
     "s6h2": "Falsafar da za a iya mai da ita bayanai",
     "s6intro": "Falsafar da ba za a iya aiwatar da ita ba yanayin zuciya ce kawai. Kowane sashe na jimlar inji ne a cikin Tsarin Mulki na CIRIS.",
+    "s6conscience": "CIRIS wani lamiri ne na ɗabi'a ga wakilai, ba sani ba. Ya wanzu ne saboda an gane cewa wakilai ba su da sani kuma suna buƙatar lamiri: wani abu da ke riƙe wakili a kan ƙa'idojinsa, yana nuna tunaninsa, yana tsayar da shi lokacin da bai tabbata ba, kuma yana amsawa ga mutane masu suna. Wani lamiri ba ya da'awar komai game da abin da wakili yake.",
     "derivations": [
       {
         "title": "Ga mafi ƙanƙanta a cikin mutane",
@@ -2405,7 +2406,9 @@
         "title": "Daidaita da doka",
         "body": "GDPR, CCPA, da EU AI Act suna dacewa da ka'idar ta hanyar DP-Map, inda alhaki yake ɗaure da maki na SI, kuma ana ƙara ƙarin ƙa'idoji a saman don kowane fanni."
       }
-    }
+    },
+    "ksMechLabelTmp": "Mai riƙe guda ɗaya na iya dakatar da shi",
+    "ksMechNoteTmp": "HUMANITY_ACCORD: duk wani ɗaya daga cikin masu riƙe da aka ambata da suna na iya kunna dakatarwar tare da layi guda mai sa hannu, wanda za a iya sa hannu a kai tun da wuri kuma yana fara aiki nan take da zarar wata node ta karɓe shi. Dakatarwar da babu wanda ya tabbatar da ita tana ƙarewa bayan sa'o'i 24, kuma mafi rinjaye na iya soke ta."
   },
   "stack": {
     "eyebrow": "CIRIS · Tsarin amincewa",

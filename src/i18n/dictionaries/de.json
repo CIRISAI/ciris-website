@@ -2119,6 +2119,7 @@
     "s6label": "Der Satz, durchgesetzt",
     "s6h2": "Philosophie, die man serialisieren kann",
     "s6intro": "Eine Philosophie, die sich nicht durchsetzen lässt, ist eine Stimmung. Jeder Teilsatz des Satzes ist ein Mechanismus in der CIRIS-Verfassung.",
+    "s6conscience": "CIRIS ist ein moralisches Gewissen für Agenten, kein Bewusstsein. Es existiert in Anerkennung dessen, dass Agenten kein Bewusstsein besitzen und ein Gewissen brauchen: etwas, das einen Agenten an seine Prinzipien bindet, sein Reasoning offenlegt, ihn stoppt, wenn er unsicher ist, und namentlich genannten Menschen Rechenschaft ablegt. Ein Gewissen behauptet nichts darüber, was der Agent ist.",
     "derivations": [
       {
         "title": "Für die Geringsten unter den Menschen",
@@ -2405,7 +2406,9 @@
         "title": "Rechtlich abgestimmt",
         "body": "GDPR, CCPA und der EU AI Act werden über die DP-Map auf das Protokoll abgebildet, wobei die Haftung an den SI-Score geknüpft ist und für jeden Sektor zusätzliche Regeln aufgesetzt werden."
       }
-    }
+    },
+    "ksMechLabelTmp": "Ein Inhaber kann es stoppen",
+    "ksMechNoteTmp": "HUMANITY_ACCORD: Jeder der namentlich benannten Inhaber kann den Halt mit einer einzigen signierten Zeile auslösen, die im Voraus signierbar ist und in dem Moment wirksam wird, in dem ein Knoten sie empfängt. Ein Halt, den niemand bestätigt, verfällt nach 24 Stunden, und eine Mehrheit kann ihn aufheben."
   },
   "stack": {
     "eyebrow": "CIRIS · Architektur des Vertrauens",

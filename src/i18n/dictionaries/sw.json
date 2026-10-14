@@ -2120,6 +2120,7 @@
     "s6label": "Sentensi hiyo, ikitekelezwa",
     "s6h2": "Falsafa unayoweza kuipanga katika mfululizo",
     "s6intro": "Falsafa isiyoweza kutekelezwa ni hisia tu. Kila kipengele cha sentensi hiyo ni utaratibu ndani ya Katiba ya CIRIS.",
+    "s6conscience": "CIRIS ni Dhamiri ya kimaadili kwa mawakala, wala si fahamu. Ipo kwa sababu ya kutambua kwamba mawakala hawana fahamu na wanahitaji dhamiri: kitu kinachomshikilia wakala kwenye kanuni zake, kinachoonyesha mantiki yake, kinachomzuia anapokuwa na shaka, na kinachowajibika kwa binadamu wanaobainishwa kwa majina. Dhamiri haidai lolote kuhusu wakala alivyo.",
     "derivations": [
       {
         "title": "Kwa walio wadogo kabisa miongoni mwa binadamu",
@@ -2405,7 +2406,9 @@
         "title": "Inayolingana kisheria",
         "body": "GDPR, CCPA, na EU AI Act zimepangwa kwenye itifaki kupitia DP-Map, huku dhima ikiwa imefungwa kwenye alama ya SI na sheria za ziada zikiwekwa kwa kila sekta."
       }
-    }
+    },
+    "ksMechLabelTmp": "Mshikiliaji mmoja anaweza kuisimamisha",
+    "ksMechNoteTmp": "HUMANITY_ACCORD: yeyote kati ya washikiliaji wanaotambulika kwa majina anaweza kuwasha kusimamishwa kwa safu moja iliyotiwa saini, inayoweza kutiwa saini mapema na kuanza kutumika mara tu nodi inapoipokea. Kusimamishwa ambako hakuna mwingine anayethibitisha hupotea ndani ya saa 24, na wengi wanaweza kuiondoa."
   },
   "stack": {
     "eyebrow": "CIRIS · Muundo wa uaminifu",

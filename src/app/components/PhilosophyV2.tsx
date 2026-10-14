@@ -17,6 +17,7 @@ import en from "@/i18n/dictionaries/en.json";
 import { localizeHref } from "@/i18n/config";
 import PageShell from "@/app/components/PageShell";
 import { contentStyles as s } from "@/app/components/v2/ContentShell";
+import { CONSTITUTION_VERSION } from "@/lib/constitutionEdition";
 
 type CKey = keyof typeof en.philosophy;
 const COMMITMENT_KEYS: [CKey, CKey][] = [
@@ -27,7 +28,10 @@ const COMMITMENT_KEYS: [CKey, CKey][] = [
 
 // The plain-language rules these cards summarize, pinned to the commit they
 // were drawn from so the link cannot rot when the branch moves or merges.
-const RULES_PLAIN = "https://github.com/CIRISAI/CIRISConstitution/blob/59fca1c9bc2ca69f15ff025197d0ed28bcad09cf/review/pieces/00_guarantees_plain.md";
+const RULES_PLAIN =
+  "https://github.com/CIRISAI/CIRISConstitution/blob/" +
+  "7189daca9aa5a73064cd0b6e08a395d513cd5796/review/pieces/00_guarantees_plain.md";
+const RULES_EDITION = "CC 1.0-rc8";
 
 export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: string }) {
   const p = t.philosophy;
@@ -104,6 +108,9 @@ export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: str
       <section className={s.section}>
         <p className={s.sectionLabel}>{p.s6label}</p>
         <h2 className={s.h2}>{p.s6h2}</h2>
+        <p className={s.paragraph}>
+          {p.s6conscience ?? en.philosophy.s6conscience}
+        </p>
         <p className={s.paragraph}>{p.s6intro}</p>
         <div className={`${s.cardGrid} ${s.cardGridTwo}`}>
           {COMMITMENT_KEYS.map(([tk, bk], i) => (
@@ -129,6 +136,11 @@ export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: str
           <p className={s.sectionLabel}>{p.s6limitHead ?? en.philosophy.s6limitHead}</p>
           <p>{p.s6limit ?? en.philosophy.s6limit}</p>
         </div>
+
+        <p className={s.footnote}>
+          {RULES_EDITION} · review/pieces/00_guarantees_plain.md · released
+          edition CC {CONSTITUTION_VERSION}
+        </p>
 
         <div className={s.ctaRow}>
           <a
