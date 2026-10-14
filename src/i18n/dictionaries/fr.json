@@ -2254,7 +2254,7 @@
         "short": "Arrêt",
         "name": "L'interrupteur d'arrêt",
         "tag": "Bloc 01 · Arrêt",
-        "promise": "Il existe un interrupteur d'arrêt qu'aucun score, aucun argument et aucun attaquant ne peut contourner. Retirez ce seul bloc et rien d'autre ne peut porter la charge.",
+        "promise": "Il existe un interrupteur d'arrêt détenu par des humains nommés. Aucun score ni aucun argument ne peut mettre fin à un arrêt ; y mettre fin exige la majorité de ces personnes. Supprimer ce seul bloc et rien d'autre ne peut supporter la charge.",
         "mechanisms": [
           {
             "label": "Un détenteur peut l'arrêter",
@@ -2338,7 +2338,7 @@
         "short": "Confidentialité",
         "name": "La confidentialité par la physique",
         "tag": "Bloc 05 · Confidentialité",
-        "promise": "Vos données ne sont pas protégées par une politique. Elles sont hors de portée par construction.",
+        "promise": "Vos données ne sont pas protégées par une politique de confidentialité. Le contenu privé est chiffré de bout en bout et jamais scanné, et les règles disent ouvertement ce qui n'est pas caché.",
         "mechanisms": [
           {
             "label": "Invisibilité structurelle",
@@ -2380,7 +2380,7 @@
         "short": "Cycle",
         "name": "Sûr pour toute la vie de l'IA",
         "tag": "Bloc 07 · Cycle de vie",
-        "promise": "De l'entraînement à l'arrêt, l'IA est encadrée et traitée avec dignité.",
+        "promise": "De la création à la fin de vie, l'IA est gouvernée, et les personnes qui la détiennent ont des devoirs quant à la façon dont elles la modifient ou y mettent fin.",
         "mechanisms": [
           {
             "label": "Niveaux de tutelle et d'autonomie",
@@ -2850,14 +2850,14 @@
     "superalignment": {
       "kicker": "Superalignement",
       "accent": "violet",
-      "metaTitle": "Le superalignement comme propriété du réseau",
-      "metaDesc": "Placez un agent IA dans un réseau cryptographiquement responsable et chaque action qu'il prend est signée. Garder l'IA honnête cesse d'être une règle de laboratoire et devient quelque chose que le réseau impose.",
+      "metaTitle": "Superalignement : ce que CIRIS affirme, et ce qu'il n'affirme pas",
+      "metaDesc": "CIRIS ne rend pas une superintelligence bonne et ne dit rien de l'intérieur d'un quelconque modèle. Il permet aux personnes qui détiennent un agent de rester capables de le mettre en pause, de le corriger et de le refuser, avec chaque action signée, alors qu'il devient plus capable qu'elles.",
       "h1": "L'IA va plus vite que quiconque peut en être responsable.",
       "steps": [
         "Nous construisons des esprits que nous ne pouvons pas auditer. Ils sont gouvernés par des règles qu'une seule entreprise peut réécrire, dans des systèmes que personne en dehors de cette entreprise ne peut voir. On nous demande de faire confiance au laboratoire.",
         "CIRIS place l'IA dans un réseau où chaque action qu'elle prend est un enregistrement signé. Une personne, une IA et une organisation portent tous le même type d'identité, et tous rendent compte de la même façon.",
-        "Garder l'IA honnête cesse d'être une politique qu'une entreprise espère tenir. Cela devient quelque chose que le réseau impose. Vous ne faites pas confiance au communiqué de presse. Vous lisez les signatures.",
-        "Un réseau capable de tenir une IA surhumaine responsable est, par sa forme même, un internet sans centre. Les mêmes enregistrements signés permettent à n'importe qui de vérifier ce qui est vrai, et ils tournent sur le même substrat privé que l'IA sur votre téléphone."
+        "Cela ne rend pas l'IA bonne, et cela ne dit rien de ce qui se passe à l'intérieur du modèle. Ce qu'il fait, c'est permettre aux personnes qui détiennent un agent de rester capables de le mettre en pause, de le corriger et de le refuser, et il vous permet de lire les signatures au lieu du communiqué de presse.",
+        "Il ne lie que ceux qui y adhèrent, il ne peut donc pas empêcher une superintelligence dont personne n'est responsable de se former ailleurs. Au sein de CIRIS, il fait de son mieux, avec les règles et le réseau dont il dispose, pour empêcher que ce pouvoir se forme sans que personne n'en soit responsable. Les mêmes enregistrements signés s'exécutent sur le même substrat privé que l'IA sur votre téléphone."
       ],
       "seeAlso": [
         {
@@ -2875,6 +2875,10 @@
         {
           "label": "Une IA privée que vous pouvez essayer dès aujourd'hui",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "Ce que CIRIS n'affirme pas",
+          "href": "/philosophy"
         }
       ]
     },

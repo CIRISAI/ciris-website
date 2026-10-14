@@ -2253,7 +2253,7 @@
         "short": "Tsayarwa",
         "name": "Maɓallin kashewa",
         "tag": "Block 01 · Tsayarwa",
-        "promise": "Akwai maɓallin kashewa da babu wata ƙima ko maki na tantancewa, babu wata gardama, kuma babu wani mai kai hari da zai iya ƙwace shi. Cire wannan toshin ɗaya kuma babu wani abin da zai iya riƙe nauyin.",
+        "promise": "Akwai maɓallin kashewa da ke hannun mutanen da aka ambata sunayensu. Babu wata ƙididdiga kuma babu wata hujja da za su iya kawo ƙarshen tsayarwa; kawo ƙarshenta yana buƙatar rinjayen waɗannan mutane. Idan aka cire wannan toshi ɗaya, babu wani abu da zai iya ɗaukar nauyin da ke kansa.",
         "mechanisms": [
           {
             "label": "Mai riƙewa ɗaya zai iya dakatar da shi",
@@ -2337,7 +2337,7 @@
         "short": "Sirri",
         "name": "Sirri ta hanyar ilimin jiki",
         "tag": "Block 05 · Sirri",
-        "promise": "Bayananka ba a kare su ta manufa ba. Ba a iya isa gare su saboda yadda aka gina tsarin tun farko.",
+        "promise": "Manufa ba ce ke kare bayananku ba. Abubuwan sirri an ɓoye su daga ƙarshe zuwa ƙarshe kuma ba a taɓa bincika su ba, kuma dokokin sun faɗi a sarari abin da ba a ɓoye ba.",
         "mechanisms": [
           {
             "label": "Rashin ganuwa a tsarin",
@@ -2379,7 +2379,7 @@
         "short": "Zagayowar rayuwa",
         "name": "Tsaro ga dukan rayuwar AI",
         "tag": "Block 07 · Zagayowar rayuwa",
-        "promise": "Daga horo zuwa kashewa, ana sarrafa AI, kuma ana bi da shi da mutunci.",
+        "promise": "Tun daga halitta har zuwa ritaya ana tafiyar da AI, kuma mutanen da suke riƙe da shi suna da nauyin da ya rataya a kansu kan yadda za su canza shi ko kawo masa ƙarshe.",
         "mechanisms": [
           {
             "label": "Matakan kulawa da 'yancin kai",
@@ -2851,14 +2851,14 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment a matsayin dukiyar hanyar sadarwa",
-      "metaDesc": "Sanya wakilin AI a cikin hanyar sadarwa mai ɗaukar alhaki ta hanyar ɓoyayyen lissafi, kuma kowane aiki da ya yi yana da sa hannu. Tsare shi cikin gaskiya ya daina zama manufar dakin bincike, ya koma wani abu da hanyar sadarwa ke tilastawa.",
+      "metaTitle": "Superalignment: abin da CIRIS ke iƙirari, da abin da ba ya iƙirari",
+      "metaDesc": "CIRIS ba ya mai da babban hankali na gari, kuma ba ya faɗi komai game da cikin kowane samfuri. Yana ci gaba da ba mutanen da ke riƙe da wakili ikon dakatar da shi, gyara shi da ƙin shi, tare da sa hannu a kan kowane aiki, yayin da ya ke ƙara ƙwarewa fiye da su.",
       "h1": "AI tana yin gudu da sauri fiye da kowa mai ɗaukar alhakin ta.",
       "steps": [
         "Muna gina tunani da ba za mu iya duba ba. Ana mulkar su da dokoki da kamfani ɗaya ke iya sake rubuta su, a cikin tsarin da babu wanda ke wajen kamfanin zai iya gani. Ana roƙon mu amince da dakin binciken.",
         "CIRIS tana sanya AI a cikin hanyar sadarwa inda kowace mataki ta ɗauka rikodin da aka sa hannun ne. Mutum, AI, da ƙungiya duka suna ɗauke da irin nau'in shaida ɗaya, kuma duka ana riƙe su da lissafi ɗaya.",
-        "Riƙe AI da aminci ya daina zama manufar da kamfani ɗaya ke fatan ta yi. Ya zama wani abu da hanyar sadarwar ke aiwatarwa. Ba za ka amince da sanarwar ba. Ka karanta sa hannun.",
-        "Hanyar sadarwa da ke iya riƙe AI mai ƙarfi da alhakin ita ce, ta siffarta, intanet ba tare da cibiya ba. Irin waɗannan rikodi masu sa hannun na barin kowa ya duba abin da yake gaskiya, kuma suna gudana a cikin irin wannan tushe mai zaman kansa kamar AI a wayar ka."
+        "Wannan ba ya sa AI ta zama mai kyau, kuma ba ya faɗi komai game da abin da ke faruwa a cikin samfurin. Abin da yake yi shi ne ci gaba da ba mutanen da ke riƙe da wakili ikon dakatar da shi, gyara shi da ƙin shi, kuma yana barin ka karanta sa-hannu maimakon sanarwar manema labarai.",
+        "Yana ɗaure waɗanda suka shiga kawai, don haka ba zai iya hana babban hankali marar alhaki samuwa a wani wuri ba. A cikin CIRIS yana yin iya ƙoƙarinsa, da ƙa'idoji da hanyar sadarwa da yake da ita, don hana wannan ƙarfi samuwa ba tare da alhaki ba. Rikodin da aka sa hannu iri ɗaya suna gudana a kan tushe mai zaman kansa iri ɗaya da AI a wayarka."
       ],
       "seeAlso": [
         {
@@ -2876,6 +2876,10 @@
         {
           "label": "AI mai zaman kansa da za ka iya gwadawa yau",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "Abin da CIRIS ba ya iƙirari",
+          "href": "/philosophy"
         }
       ]
     },

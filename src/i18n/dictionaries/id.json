@@ -2254,7 +2254,7 @@
         "short": "Hentikan",
         "name": "Sakelar mati",
         "tag": "Blok 01 · Hentikan",
-        "promise": "Ada sakelar mati yang tak bisa ditimpa oleh skor apa pun, argumen apa pun, atau penyerang mana pun. Lepas satu balok ini dan tak ada lagi yang bisa menahan beban.",
+        "promise": "Ada sakelar mati yang dipegang oleh orang-orang yang telah ditunjuk. Tidak ada skor dan tidak ada argumen yang dapat mengakhiri penghentian; untuk mengakhirinya dibutuhkan mayoritas dari mereka. Lepas satu balok ini dan tidak ada lagi yang dapat menahan beban.",
         "mechanisms": [
           {
             "label": "Satu pemegang dapat menghentikannya",
@@ -2338,7 +2338,7 @@
         "short": "Privasi",
         "name": "Privasi lewat fisika",
         "tag": "Blok 05 · Privasi",
-        "promise": "Data Anda tak dilindungi oleh kebijakan. Ia tak terjangkau menurut rancangannya.",
+        "promise": "Data Anda tidak dilindungi oleh kebijakan. Konten privat dienkripsi ujung ke ujung dan tidak pernah dipindai, dan aturannya menyatakan secara terbuka apa yang tidak disembunyikan.",
         "mechanisms": [
           {
             "label": "Ketaktampakan struktural",
@@ -2380,7 +2380,7 @@
         "short": "Daur hidup",
         "name": "Aman sepanjang hidup AI",
         "tag": "Blok 07 · Daur hidup",
-        "promise": "Dari pelatihan hingga penghentian, AI diatur, dan diperlakukan dengan martabat.",
+        "promise": "Dari penciptaan hingga akhir masa pakainya AI diatur, dan orang-orang yang memegang kendalinya memiliki kewajiban tentang bagaimana mereka mengubah atau mengakhirinya.",
         "mechanisms": [
           {
             "label": "Tingkat perwalian dan otonomi",
@@ -2852,14 +2852,14 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment sebagai sifat jaringan",
-      "metaDesc": "Tempatkan agen AI di dalam jaringan yang bisa dipertanggungjawabkan secara kriptografis dan setiap tindakannya ditandatangani. Menjaganya tetap jujur bukan lagi kebijakan lab, melainkan sesuatu yang dipaksakan oleh jaringan.",
+      "metaTitle": "Superalignment: apa yang diklaim CIRIS, dan apa yang tidak",
+      "metaDesc": "CIRIS tidak membuat kecerdasan super menjadi baik dan tidak menyatakan apa pun tentang bagian dalam model apa pun. CIRIS menjaga agar orang-orang yang memegang kendali atas sebuah agen tetap dapat menjeda, mengoreksi, dan menolaknya, dengan setiap tindakan ditandatangani, seiring kemampuannya berkembang melampaui mereka.",
       "h1": "AI berkembang lebih cepat dari siapa pun yang bertanggung jawab atasnya.",
       "steps": [
         "Kita membangun pikiran yang tidak bisa kita audit. Mereka diatur oleh aturan yang bisa ditulis ulang oleh satu perusahaan, di dalam sistem yang tidak bisa dilihat oleh siapa pun di luar perusahaan itu. Kita diminta percaya pada lab.",
         "CIRIS menempatkan AI di dalam jaringan tempat setiap tindakannya adalah catatan yang ditandatangani. Seseorang, sebuah AI, dan sebuah organisasi semuanya membawa jenis identitas yang sama, dan semuanya dimintai pertanggungjawaban yang sama.",
-        "Menjaga AI tetap jujur bukan lagi kebijakan yang diharapkan satu perusahaan bisa bertahan. Itu menjadi sesuatu yang dipaksakan oleh jaringan. Kamu tidak percaya pada siaran pers. Kamu membaca tanda tangannya.",
-        "Jaringan yang bisa meminta pertanggungjawaban AI superkuat adalah, berdasarkan bentuknya, internet tanpa pusat. Catatan bertanda tangan yang sama memungkinkan siapa saja memeriksa apa yang benar, dan mereka berjalan di atas substrat pribadi yang sama dengan AI di ponselmu."
+        "Hal itu tidak membuat AI menjadi baik, dan tidak mengatakan apa pun tentang apa yang terjadi di dalam model. Yang dilakukannya adalah menjaga agar orang-orang yang memegang kendali atas sebuah agen tetap dapat menjedanya, mengoreksinya, dan menolaknya, serta memungkinkan Anda membaca tanda tangan alih-alih siaran pers.",
+        "Hal ini hanya mengikat mereka yang bergabung, sehingga tidak dapat menghentikan terbentuknya kecerdasan super yang tidak akuntabel di tempat lain. Di dalam CIRIS, sistem ini berupaya sebaik mungkin, dengan aturan dan jaringan yang dimilikinya, untuk menjaga agar kekuatan tersebut tidak terbentuk tanpa akuntabilitas. Catatan bertanda tangan yang sama berjalan pada substrat privat yang sama seperti AI di ponsel Anda."
       ],
       "seeAlso": [
         {
@@ -2877,6 +2877,10 @@
         {
           "label": "AI pribadi yang bisa kamu coba hari ini",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "Apa yang tidak diklaim oleh CIRIS",
+          "href": "/philosophy"
         }
       ]
     },

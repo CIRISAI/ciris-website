@@ -2253,7 +2253,7 @@
         "short": "Ìdádúró",
         "name": "Bọ́tìnì ìdádúró pajawiri",
         "tag": "Block 01 · Ìdádúró",
-        "promise": "Bọ́tìnì ìpapòdà kan wà tí kò sí àmì-ìdíwọ̀n, kò sí àríyànjiyàn, tàbí ẹni-ìkọlù kankan tí ó lè borí rẹ̀. Yọ bíríkì kan yìí kúrò, kò sí ohunkóhun mìíràn tí ó lè di ẹrù náà mú.",
+        "promise": "Bọ́tìnì ìdádúró pajawiri kan wà lọ́wọ́ àwọn ènìyàn tí a mọ orúkọ wọn. Kò sí àmì kankan àti kò sí àríyànjiyàn kankan tí ó lè parí ìdádúró kan; láti parí ọ̀kan, ó nílò ìdí-pupọ̀ nínú àwọn ènìyàn náà. Yọ bíríkì kan yìí kúrò, kò sí ohunkóhun mìíràn tí ó lè rù ẹrù náà.",
         "mechanisms": [
           {
             "label": "Olùdímú kan lè dá a dúró",
@@ -2337,7 +2337,7 @@
         "short": "Àṣírí",
         "name": "Àṣírí nípasẹ̀ físíìsì",
         "tag": "Block 05 · Àṣírí",
-        "promise": "A kò dáàbò bo dátà rẹ nípasẹ̀ ìlànà. Kò ṣeé dé nípasẹ̀ ìkọ́kalẹ̀.",
+        "promise": "Dátà rẹ kò ní ààbò nípasẹ̀ ìlànà lásán. A ti fi àwọn àkóónú ìkọ̀kọ̀ pamọ́ láti ìbẹ̀rẹ̀ dé òpin, a kì í ṣàyẹ̀wò wọn rárá, àwọn òfin sì sọ ní gbangba ohun tí kò farapamọ́.",
         "mechanisms": [
           {
             "label": "Àìríran ìṣètò",
@@ -2379,7 +2379,7 @@
         "short": "Àyíká-ìyè",
         "name": "Ààbò fún gbogbo ìyè AI",
         "tag": "Block 07 · Àyíká-ìyè",
-        "promise": "Láti ìkẹ́kọ̀ọ́ dé DÍNÀ, a ń ṣàkóso AI náà, a sì ń bá a lò pẹ̀lú iyì.",
+        "promise": "A ń ṣàkóso AI láti ìṣẹ̀dá títí dé ìfẹ̀yìntì, àwọn ènìyàn tí wọ́n dì í mú sì ní ojúṣe nípa bí wọ́n ṣe ń yí i padà tàbí fòpin sí i.",
         "mechanisms": [
           {
             "label": "Àwọn ipele àbójútó àti òmìnira-ara-ẹni",
@@ -2849,14 +2849,14 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment gẹgẹbi ohun-ini nẹtiwọki",
-      "metaDesc": "Fi aṣojú AI sínú nẹ́tíwọ́ọ̀kì tí a fi cryptography mú kí ó jẹ́ ẹni tí a lè béèrè lọ́wọ́ rẹ̀, gbogbo ìgbésẹ̀ tí ó bá sì gbé ni a fọwọ́ sí. Mímú kí ó jẹ́ olóòtítọ́ kò tún jẹ́ ìlànà yàrá ìwádìí mọ́; ó ti di ohun tí nẹ́tíwọ́ọ̀kì fúnra rẹ̀ ń mú ṣẹ.",
+      "metaTitle": "Superalignment: ohun tí CIRIS sọ, àti ohun tí kò sọ",
+      "metaDesc": "CIRIS kò sọ ọgbọ́n-gíga (superintelligence) di rere, kò sì sọ ohunkóhun nípa inú mọ́dẹ́lì kankan. Ó jẹ́ kí àwọn ènìyàn tó ní aṣojú náà lè dá a dúró, ṣe àtúnṣe sí i, kí wọ́n sì kọ̀ ọ̀, pẹ̀lú gbogbo ìṣe tí a fọwọ́ sí, bí ó ṣe ń ní agbára ju wọ́n lọ.",
       "h1": "AI n sare kọja ẹnikẹni ti o jẹ iduro fun rẹ.",
       "steps": [
         "A n kọ awọn ọkan ti a ko le ṣayẹwo. Awọn ofin ile-iṣẹ kan n ṣakoso wọn, inu awọn eto ti ko si ẹnikẹni lode le ri. A n beere lọwọ wa lati gbẹkẹle ile-iyẹwu naa.",
         "CIRIS fi AI sinu nẹtiwọki nibiti gbogbo iṣe ti o ṣe jẹ àkọsílẹ ti a fọwọsi. Eniyan, AI, ati ẹgbẹ kan gbogbo wọn gbe iru idanimọ kanna, gbogbo wọn si jẹ iduro si ìwọn kanna.",
-        "Jijẹ ki AI wa ni otitọ dẹkun jijẹ eto ti ile-iṣẹ kan nireti pe yoo ṣiṣẹ. O di ohun ti nẹtiwọki n fi agbara mu. O ko gbẹkẹle ifitonileti tẹ. O ka awọn ibuwọlu.",
-        "Nẹtiwọki ti o le jẹ ki AI ti o ga ju eniyan lọ jẹ iduro jẹ, nipa ọna rẹ, intanẹẹti laisi ile-iṣẹ. Awọn àkọsílẹ kanna ti a fọwọsi jẹ ki ẹnikẹni ṣayẹwo ohun ti o jẹ otitọ, wọn si n ṣiṣẹ lori ipilẹ ikọkọ kanna bi AI lori foonu rẹ."
+        "Èyí kò sọ AI di rere, kò sì sọ ohunkóhun nípa ohun tí ó ń ṣẹlẹ̀ nínú mọ́dẹ́lì náà. Ohun tí ó ń ṣe ni pé ó jẹ́ kí àwọn ènìyàn tó ní aṣojú náà lè dá a dúró, ṣe àtúnṣe sí i, kí wọ́n sì kọ̀ ọ̀, ó sì jẹ́ kí o ka àwọn ìfọwọ́sí dípò kí o gbẹ́kẹ̀lé ọ̀rọ̀ ìpolówó.",
+        "Ó dè àwọn tó dara pọ̀ mọ́ ọn nìkan, nítorí náà kò lè dá ọgbọ́n-gíga (superintelligence) tí ẹnikẹ́ni kò jẹ ìdúró fún dúró láti ṣẹ̀dá níbòmíràn. Nínú CIRIS, ó ń ṣe ohun tó dára jùlọ, pẹ̀lú àwọn òfin àti nẹ́tíwọ́ọ̀kì tó ní, láti má jẹ́ kí agbára náà dàgbà láìsí ẹni tó jẹ ìdúró fún un. Àwọn àkọsílẹ̀ tí a fọwọ́ sí kan náà ń ṣiṣẹ́ lórí ìpìlẹ̀ ìkọ̀kọ̀ kan náà bí AI tí ó wà lórí fóònù rẹ."
       ],
       "seeAlso": [
         {
@@ -2874,6 +2874,10 @@
         {
           "label": "AI ikọkọ ti o le gbiyanju loni",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "Ohun tí CIRIS kò sọ",
+          "href": "/philosophy"
         }
       ]
     },

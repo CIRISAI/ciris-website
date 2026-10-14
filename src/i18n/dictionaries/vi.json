@@ -2254,7 +2254,7 @@
         "short": "Dừng",
         "name": "Công tắc ngắt",
         "tag": "Block 01 · Dừng",
-        "promise": "Có một công tắc tắt mà không điểm số nào, không lập luận nào, và không kẻ tấn công nào có thể vượt qua. Gỡ bỏ khối đá này thì không gì khác còn chịu nổi tải trọng.",
+        "promise": "Có một công tắc ngắt do những cá nhân con người được đặt tên nắm giữ. Không điểm số và không lập luận nào có thể chấm dứt một lệnh dừng; việc chấm dứt một lệnh dừng cần đa số trong số những người đó. Gỡ bỏ viên đá này và không còn gì khác có thể gánh được sức nặng.",
         "mechanisms": [
           {
             "label": "Một người nắm giữ có thể dừng nó",
@@ -2338,7 +2338,7 @@
         "short": "Riêng tư",
         "name": "Riêng tư bằng vật lý",
         "tag": "Block 05 · Riêng tư",
-        "promise": "Dữ liệu của bạn không được bảo vệ bằng một chính sách. Nó không thể chạm tới được ngay từ cách xây dựng.",
+        "promise": "Dữ liệu của bạn không được bảo vệ bởi một chính sách. Nội dung riêng tư được mã hóa đầu cuối và không bao giờ bị quét, và các quy tắc công khai nói rõ những gì không bị che giấu.",
         "mechanisms": [
           {
             "label": "Vô hình về mặt cấu trúc",
@@ -2380,7 +2380,7 @@
         "short": "Vòng đời",
         "name": "An toàn suốt cả đời của AI",
         "tag": "Block 07 · Vòng đời",
-        "promise": "Từ lúc huấn luyện đến khi tắt máy, AI được quản trị, và được đối xử có phẩm giá.",
+        "promise": "Từ khi tạo ra đến khi kết thúc, AI được quản trị, và những người nắm giữ nó có nghĩa vụ về cách họ thay đổi hoặc chấm dứt nó.",
         "mechanisms": [
           {
             "label": "Các cấp giám hộ và tự chủ",
@@ -2850,14 +2850,14 @@
     "superalignment": {
       "kicker": "Siêu Căn Chỉnh",
       "accent": "violet",
-      "metaTitle": "Siêu căn chỉnh như một thuộc tính của mạng lưới",
-      "metaDesc": "Đưa một tác nhân AI vào một mạng lưới có thể truy cứu trách nhiệm bằng mật mã và mọi hành động nó thực hiện đều được ký số. Giữ cho nó trung thực không còn là chính sách của phòng lab mà trở thành điều mạng lưới thực thi.",
+      "metaTitle": "Siêu Căn Chỉnh: những gì CIRIS khẳng định, và những gì không",
+      "metaDesc": "CIRIS không khiến siêu trí tuệ trở nên tốt và không nói gì về những gì diễn ra bên trong bất kỳ mô hình nào. Nó giữ cho những người nắm giữ một tác nhân vẫn có thể tạm dừng, sửa chữa và từ chối nó, với mọi hành động đều được ký số, khi nó trở nên có năng lực hơn họ.",
       "h1": "AI đang chạy nhanh hơn bất kỳ ai chịu trách nhiệm về nó.",
       "steps": [
         "Chúng ta đang xây dựng những trí tuệ mà chúng ta không thể kiểm tra. Chúng bị chi phối bởi các quy tắc mà một công ty có thể viết lại, trong các hệ thống mà không ai bên ngoài công ty đó có thể thấy. Chúng ta được yêu cầu tin vào phòng lab.",
         "CIRIS đưa AI vào một mạng nơi mọi hành động nó thực hiện đều là một bản ghi được ký số. Một người, một AI, và một tổ chức đều mang cùng một loại danh tính, và tất cả đều phải chịu trách nhiệm theo cùng một chuẩn.",
-        "Giữ cho AI trung thực không còn là chính sách mà một công ty hy vọng sẽ giữ vững. Nó trở thành điều mà chính mạng lưới bảo đảm. Bạn không tin vào thông cáo báo chí. Bạn đọc các chữ ký.",
-        "Một mạng có thể buộc một AI siêu mạnh phải chịu trách nhiệm, xét về hình dạng của nó, là một internet không có trung tâm. Những bản ghi được ký số đó cho phép bất kỳ ai kiểm tra điều gì là thật, và chúng chạy trên cùng nền tảng riêng tư như AI trên điện thoại của bạn."
+        "Điều đó không làm cho AI trở nên tốt, và nó không nói gì về những gì xảy ra bên trong mô hình. Điều nó làm là giữ cho những người nắm giữ một tác nhân vẫn có thể tạm dừng nó, sửa chữa nó và từ chối nó, và để bạn đọc các chữ ký thay vì thông cáo báo chí.",
+        "Nó chỉ ràng buộc những người tham gia, vì vậy nó không thể ngăn một siêu trí tuệ không chịu trách nhiệm hình thành ở nơi khác. Bên trong CIRIS, nó cố gắng hết sức, với các quy tắc và mạng lưới mà nó có, để giữ cho quyền lực đó không hình thành một cách thiếu trách nhiệm. Những bản ghi được ký số đó chạy trên cùng một nền tảng riêng tư như AI trên điện thoại của bạn."
       ],
       "seeAlso": [
         {
@@ -2875,6 +2875,10 @@
         {
           "label": "Một AI riêng tư bạn có thể thử ngay hôm nay",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "Những điều CIRIS không khẳng định",
+          "href": "/philosophy"
         }
       ]
     },

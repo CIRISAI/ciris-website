@@ -2253,7 +2253,7 @@
         "short": "Durdur",
         "name": "Acil durdurma anahtarı",
         "tag": "Blok 01 · Durdur",
-        "promise": "Hiçbir puanın, hiçbir savın ve hiçbir saldırganın devre dışı bırakamayacağı bir kapatma anahtarı vardır. Bu tek bloğu çıkarın, başka hiçbir şey yükü taşıyamaz.",
+        "promise": "İsmi bilinen kişilerin elinde tuttuğu bir acil durdurma anahtarı vardır. Hiçbir puan ve hiçbir gerekçe bir durdurmayı sona erdiremez; bir durdurmayı sona erdirmek o kişilerin çoğunluğunu gerektirir. Bu tek bloğu kaldırın, yükü tutacak başka hiçbir şey kalmaz.",
         "mechanisms": [
           {
             "label": "Tek bir yetki sahibi onu durdurabilir",
@@ -2337,7 +2337,7 @@
         "short": "Gizlilik",
         "name": "Fizikle gizlilik",
         "tag": "Blok 05 · Gizlilik",
-        "promise": "Verileriniz bir politikayla korunmaz. Tasarımı gereği erişilemezdir.",
+        "promise": "Verileriniz bir politikayla korunmaz. Özel içerik uçtan uca şifrelidir ve asla taranmaz, kurallar da neyin gizlenmediğini açıkça söyler.",
         "mechanisms": [
           {
             "label": "Yapısal görünmezlik",
@@ -2379,7 +2379,7 @@
         "short": "Yaşam döngüsü",
         "name": "Yapay zekânın tüm yaşamı boyunca güvenli",
         "tag": "Blok 07 · Yaşam döngüsü",
-        "promise": "Eğitimden kapatmaya kadar yapay zeka yönetilir ve onurla muamele görür.",
+        "promise": "Oluşturulmasından devreden çıkarılmasına kadar yapay zekâ yönetilir ve onu elinde bulunduran kişiler, onu nasıl değiştirdikleri veya sonlandırdıkları konusunda yükümlülük taşır.",
         "mechanisms": [
           {
             "label": "Vesayet ve özerklik kademeleri",
@@ -2849,14 +2849,14 @@
     "superalignment": {
       "kicker": "Süper Hizalama",
       "accent": "violet",
-      "metaTitle": "Ağın bir özelliği olarak süper hizalama",
-      "metaDesc": "Bir yapay zeka ajanını kriptografik olarak hesap verebilir bir ağa koyun; yaptığı her eylem imzalanır. Dürüst tutmak bir laboratuvar politikası olmaktan çıkar, ağın zorunlu kıldığı bir şeye dönüşür.",
+      "metaTitle": "Süper Hizalama: CIRIS'in iddia ettikleri ve etmedikleri",
+      "metaDesc": "CIRIS bir üst zekayı iyi yapmaz ve herhangi bir modelin içiyle ilgili hiçbir şey söylemez. Ajan onu elinde tutan kişilerden daha yetenekli hale gelse bile, her eylem imzalı olacak şekilde, bu kişilerin ajanı duraklatabilmesini, düzeltebilmesini ve reddedebilmesini sağlar.",
       "h1": "Yapay zeka, onu denetleyebilecek herkesi geride bırakıyor.",
       "steps": [
         "Denetleyemediğimiz zihinler inşa ediyoruz. Tek bir şirketin yeniden yazabileceği kurallarla yönetiliyorlar, o şirketin dışından kimsenin göremediği sistemlerin içinde. Laboratuvara güvenmemiz isteniyor.",
         "CIRIS, yapay zekayı her eyleminin imzalı bir kayıt olduğu bir ağın içine koyar. Bir insan, bir yapay zeka ve bir kuruluş aynı tür kimliği taşır ve hepsi aynı hesaba tutulur.",
-        "Yapay zekayı dürüst tutmak artık bir şirketin tutmasını umduğu bir politika değildir. Ağın zorunlu kıldığı bir şey haline gelir. Basın bültenine güvenmezsiniz. İmzaları okursunuz.",
-        "İnsan üstü bir yapay zekayı hesap verebilir tutabilen bir ağ, şekli itibarıyla merkezsiz bir internettir. Aynı imzalı kayıtlar herkesin doğruyu kontrol etmesini sağlar ve telefonunuzdaki yapay zekayla aynı özel altyapı üzerinde çalışırlar."
+        "Bu, yapay zekayı iyi yapmaz ve modelin içinde olanlarla ilgili hiçbir şey söylemez. Yaptığı şey, ajanı elinde tutan kişilerin onu duraklatabilmesini, düzeltebilmesini ve reddedebilmesini sağlamak ve basın bülteni yerine imzaları okumanızı sağlamaktır.",
+        "Yalnızca katılanları bağlar, bu yüzden başka bir yerde denetlenemez bir üst zekanın oluşmasını engelleyemez. CIRIS'in içinde, sahip olduğu kurallar ve ağla, bu gücün denetlenemez şekilde oluşmaması için elinden geleni yapar. Aynı imzalı kayıtlar, telefonunuzdaki yapay zekayla aynı özel altyapıda çalışır."
       ],
       "seeAlso": [
         {
@@ -2874,6 +2874,10 @@
         {
           "label": "Bugün deneyebileceğiniz özel bir yapay zeka",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "CIRIS'in iddia etmedikleri",
+          "href": "/philosophy"
         }
       ]
     },

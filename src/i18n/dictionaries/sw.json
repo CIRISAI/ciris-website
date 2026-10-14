@@ -2253,7 +2253,7 @@
         "short": "Simamisha",
         "name": "Swichi ya kuzima",
         "tag": "Kizuizi 01 · Simamisha",
-        "promise": "Kuna swichi ya kuzima ambayo hakuna alama, hoja, wala mshambuliaji anayeweza kuipita. Ondoa kizuizi hiki kimoja na hakuna kingine kinachoweza kushikilia mzigo.",
+        "promise": "Kuna swichi ya kuzima inayoshikiliwa na watu mahususi wanaobainishwa kwa majina. Hakuna alama wala hoja inayoweza kumaliza usimamishaji; kuumaliza kunahitaji walio wengi miongoni mwa watu hao. Ukiondoa kizuizi hiki kimoja, hakuna kingine kinachoweza kubeba mzigo.",
         "mechanisms": [
           {
             "label": "Mshikiliaji mmoja anaweza kumsimamisha",
@@ -2337,7 +2337,7 @@
         "short": "Faragha",
         "name": "Faragha kwa fizikia",
         "tag": "Kizuizi 05 · Faragha",
-        "promise": "Data yako hailindwi na sera. Haifikiki kwa jinsi ilivyojengwa.",
+        "promise": "Data yako hailindwi na sera. Maudhui ya faragha yamesimbwa kutoka mwisho hadi mwisho na hayakaguliwi kamwe, na sheria zinasema kwa uwazi kile kisichofichwa.",
         "mechanisms": [
           {
             "label": "Kutoonekana kwa kimuundo",
@@ -2379,7 +2379,7 @@
         "short": "Mzunguko",
         "name": "Salama kwa maisha yote ya AI",
         "tag": "Kizuizi 07 · Mzunguko",
-        "promise": "Kutoka mafunzo hadi kuzima, AI inatawaliwa, na inatendewa kwa utu.",
+        "promise": "Kuanzia kuundwa hadi kustaafu, AI inasimamiwa, na watu wanaoimiliki wanadaiwa wajibu kuhusu jinsi wanavyoibadilisha au kuimaliza.",
         "mechanisms": [
           {
             "label": "Ngazi za uangalizi na uhuru",
@@ -2851,14 +2851,14 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment kama sifa ya mtandao",
-      "metaDesc": "Weka wakala wa AI ndani ya mtandao wenye uwajibikaji wa kriptografia na kila hatua anayochukua imesainiwa. Kuishikilia kuwa ya uaminifu kunaacha kuwa sera ya maabara na kuwa kitu mtandao unachotekeleza.",
+      "metaTitle": "Superalignment: kile CIRIS inadai, na kile haidai",
+      "metaDesc": "CIRIS haifanyi akili ya juu ya pamoja kuwa njema na haisemi chochote kuhusu ndani ya modeli yoyote. Inawawezesha watu wanaoshikilia wakala kuweza kuusimamisha, kuusahihisha na kuukataa, huku kila kitendo kikiwa kimetiwa saini, hata inapoendelea kuwa na uwezo zaidi kuliko wao.",
       "h1": "AI inazidi kasi ya yeyote anayehusika nayo.",
       "steps": [
         "Tunajenga akili ambazo haziwezi kukaguliwa. Zinaongozwa na sheria ambayo kampuni moja inaweza kuziandika upya, ndani ya mifumo ambayo hakuna mtu nje ya kampuni hiyo anayeweza kuona. Tunaombwa kuiamini maabara.",
         "CIRIS inaweka AI ndani ya mtandao ambapo kila hatua inayochukua ni rekodi iliyosainiwa. Mtu, AI, na shirika vyote vinabeba aina moja ya utambulisho, na vyote viwajibika kwa kiwango kimoja.",
-        "Kushikilia AI kuwa ya uaminifu kunaacha kuwa sera ambayo kampuni moja inatumainia kushikilia. Inakuwa kitu mtandao unachotekeleza. Huamini taarifa ya habari. Unasoma saini.",
-        "Mtandao unaoweza kushikilia AI ya nguvu kubwa kuwa na uwajibikaji ni, kwa muundo wake, intaneti bila kitovu. Rekodi hizo hizo zilizosainiwa zinaweza kuruhusu yeyote kuangalia ukweli, na zinafanya kazi kwenye msingi huo huo wa kibinafsi kama AI kwenye simu yako."
+        "Hiyo haifanyi AI kuwa njema, na haisemi chochote kuhusu kinachotokea ndani ya modeli. Kile inachofanya ni kuwawezesha watu wanaoshikilia wakala kuweza kuusimamisha, kuusahihisha na kuukataa, na inakuwezesha kusoma saini badala ya taarifa kwa vyombo vya habari.",
+        "Inawafunga tu wale wanaojiunga, kwa hivyo haiwezi kuzuia akili ya juu ya pamoja isiyohusika kuibuka mahali pengine. Ndani ya CIRIS inafanya kadri ya uwezo wake, kwa sheria na mtandao ilio nao, kuzuia nguvu hiyo isijengeke bila kuhusika. Rekodi zilezile zilizotiwa saini zinafanya kazi kwenye msingi uleule wa kibinafsi kama AI iliyo kwenye simu yako."
       ],
       "seeAlso": [
         {
@@ -2876,6 +2876,10 @@
         {
           "label": "AI ya kibinafsi unayoweza kuijaribu leo",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "Kile CIRIS haidai",
+          "href": "/philosophy"
         }
       ]
     },

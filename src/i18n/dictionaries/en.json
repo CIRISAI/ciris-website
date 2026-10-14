@@ -2338,7 +2338,7 @@
         "short": "Halt",
         "name": "The kill switch",
         "tag": "Block 01 · Halt",
-        "promise": "There is an off-switch that no score, no argument, and no attacker can override. Remove this one block and nothing else can hold the load.",
+        "promise": "There is an off-switch held by named people. No score and no argument can end a stop; ending one takes a majority of those people. Remove this one block and nothing else can hold the load.",
         "mechanisms": [
           {
             "label": "One holder can stop it",
@@ -2422,7 +2422,7 @@
         "short": "Privacy",
         "name": "Privacy by physics",
         "tag": "Block 05 · Privacy",
-        "promise": "Your data is not protected by a policy. It is unreachable by construction.",
+        "promise": "Your data is not protected by a policy. Private content is encrypted end to end and never scanned, and the rules say openly what is not hidden.",
         "mechanisms": [
           {
             "label": "Structural invisibility",
@@ -2464,7 +2464,7 @@
         "short": "Lifecycle",
         "name": "Safe for the AI’s whole life",
         "tag": "Block 07 · Lifecycle",
-        "promise": "From training to shutdown, the AI is governed, and treated with dignity.",
+        "promise": "From creation to retirement the AI is governed, and the people who hold it owe duties about how they change or end it.",
         "mechanisms": [
           {
             "label": "Stewardship and autonomy tiers",
@@ -2955,14 +2955,14 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment as a property of the network",
-      "metaDesc": "Put an AI agent inside a cryptographically accountable network and every action it takes is signed. Keeping it honest stops being a lab policy and becomes something the network enforces.",
+      "metaTitle": "Superalignment: what CIRIS claims, and what it does not",
+      "metaDesc": "CIRIS does not make a superintelligence good and says nothing about the inside of any model. It keeps the people holding an agent able to pause, correct and refuse it, with every action signed, as it grows more capable than they are.",
       "h1": "AI is outrunning anyone accountable for it.",
       "steps": [
         "We are building minds we cannot audit. They are governed by rules one company can rewrite, inside systems no one outside that company can see. We are asked to trust the lab.",
         "CIRIS puts the AI inside a network where every action it takes is a signed record. A person, an AI, and an organization all carry the same kind of identity, and all are held to the same account.",
-        "Keeping AI honest stops being a policy one company hopes holds. It becomes something the network enforces. You do not trust the press release. You read the signatures.",
-        "A network that can hold a superhuman AI accountable is, by its shape, an internet with no center. The same signed records let anyone check what is true, and they run on the same private substrate as the AI on your phone."
+        "That does not make the AI good, and it says nothing about what happens inside the model. What it does is keep the people holding an agent able to pause it, correct it and refuse it, and it lets you read the signatures instead of the press release.",
+        "It binds only those who join, so it cannot stop an unaccountable superintelligence from forming somewhere else. Inside CIRIS it does its best, with the rules and the network it has, to keep that power from forming unaccountable. The same signed records run on the same private substrate as the AI on your phone."
       ],
       "seeAlso": [
         {
@@ -2980,6 +2980,10 @@
         {
           "label": "A private AI you can try today",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "What CIRIS does not claim",
+          "href": "/philosophy"
         }
       ]
     },

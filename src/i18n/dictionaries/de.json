@@ -2253,7 +2253,7 @@
         "short": "Stopp",
         "name": "Der Not-Aus-Schalter",
         "tag": "Block 01 · Stopp",
-        "promise": "Es gibt einen Aus-Schalter, den keine Bewertung, kein Argument und kein Angreifer außer Kraft setzen kann. Entfernt man diesen einen Block, kann nichts anderes mehr die Last tragen.",
+        "promise": "Es gibt einen Not-Aus-Schalter in den Händen namentlich genannter Menschen. Keine Bewertung und kein Argument kann einen Stopp beenden; einen Stopp zu beenden erfordert eine Mehrheit dieser Menschen. Entfernen Sie diesen einen Block und nichts anderes kann die Last halten.",
         "mechanisms": [
           {
             "label": "Ein Inhaber kann ihn stoppen",
@@ -2337,7 +2337,7 @@
         "short": "Datenschutz",
         "name": "Datenschutz durch Physik",
         "tag": "Block 05 · Datenschutz",
-        "promise": "Ihre Daten sind nicht durch eine Richtlinie geschützt. Sie sind durch die Bauweise unerreichbar.",
+        "promise": "Ihre Daten werden nicht durch eine Richtlinie geschützt. Private Inhalte sind Ende-zu-Ende verschlüsselt und werden nie gescannt, und die Regeln sagen offen, was nicht verborgen ist.",
         "mechanisms": [
           {
             "label": "Strukturelle Unsichtbarkeit",
@@ -2379,7 +2379,7 @@
         "short": "Lebenszyklus",
         "name": "Sicher für das ganze Leben der KI",
         "tag": "Block 07 · Lebenszyklus",
-        "promise": "Vom Training bis zur Abschaltung wird die KI geführt und mit Würde behandelt.",
+        "promise": "Von der Erstellung bis zur Außerbetriebnahme wird die KI beaufsichtigt, und die Menschen, die sie halten, haben Pflichten, wie sie sie verändern oder beenden.",
         "mechanisms": [
           {
             "label": "Stufen für Obhut und Autonomie",
@@ -2851,14 +2851,14 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalignment als Eigenschaft des Netzwerks",
-      "metaDesc": "Stell einen KI-Agenten in ein kryptografisch verantwortliches Netzwerk, und jede Handlung ist signiert. Ehrlichkeit ist dann keine Laborrichtlinie mehr, sondern etwas, das das Netzwerk durchsetzt.",
+      "metaTitle": "Superalignment: Was CIRIS behauptet und was nicht",
+      "metaDesc": "CIRIS macht eine Superintelligenz nicht gut und sagt nichts über das Innere eines Modells aus. Es hält die Menschen, die einen Agenten halten, in der Lage, ihn anzuhalten, zu korrigieren und abzulehnen, wobei jede Handlung signiert ist, während er fähiger wird als sie.",
       "h1": "KI ist schneller als alle, die für sie verantwortlich sind.",
       "steps": [
         "Wir bauen Köpfe, die wir nicht prüfen können. Sie werden von Regeln gesteuert, die eine einzige Firma neu schreiben kann, in Systemen, die niemand außerhalb dieser Firma sehen kann. Man bittet uns, dem Labor zu vertrauen.",
         "CIRIS stellt die KI in ein Netzwerk, in dem jede Handlung ein signierter Eintrag ist. Eine Person, eine KI und eine Organisation tragen alle dieselbe Art von Identität und werden alle gleich zur Verantwortung gezogen.",
-        "KI ehrlich zu halten ist dann keine Richtlinie mehr, von der eine Firma hofft, dass sie hält. Es wird zu etwas, das das Netzwerk durchsetzt. Du vertraust nicht der Pressemitteilung. Du liest die Signaturen.",
-        "Ein Netzwerk, das eine übermenschliche KI zur Verantwortung ziehen kann, ist seiner Form nach ein Internet ohne Mitte. Dieselben signierten Einträge erlauben es jedem zu prüfen, was stimmt, und sie laufen auf derselben privaten Grundlage wie die KI auf deinem Handy."
+        "Das macht die KI nicht gut, und das sagt nichts darüber aus, was im Inneren des Modells geschieht. Was es tut: Es sorgt dafür, dass die Menschen, die einen Agenten halten, ihn anhalten, korrigieren und zurückweisen können, und lässt Sie die Signaturen lesen statt der Pressemitteilung.",
+        "Es bindet nur diejenigen, die sich anschließen, und kann daher nicht verhindern, dass sich anderswo eine nicht rechenschaftspflichtige Superintelligenz bildet. Innerhalb von CIRIS tut es mit den Regeln und dem Netzwerk, die ihm zur Verfügung stehen, sein Bestes, um zu verhindern, dass diese Macht ohne Rechenschaftspflicht entsteht. Dieselben signierten Aufzeichnungen laufen auf demselben privaten Substrat wie die KI auf Ihrem Smartphone."
       ],
       "seeAlso": [
         {
@@ -2876,6 +2876,10 @@
         {
           "label": "Eine private KI, die du heute ausprobieren kannst",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "Was CIRIS nicht behauptet",
+          "href": "/philosophy"
         }
       ]
     },

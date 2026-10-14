@@ -2253,7 +2253,7 @@
         "short": "Parada",
         "name": "El interruptor de apagado",
         "tag": "Bloque 01 · Parada",
-        "promise": "Existe un interruptor de apagado que ningún puntaje, ningún argumento y ningún atacante puede anular. Quita este bloque y nada más podrá sostener la carga.",
+        "promise": "Hay un interruptor de apagado en manos humanas nombradas. Ningún puntaje ni ningún argumento puede poner fin a una parada; ponerle fin requiere la mayoría de esas personas. Quita este único bloque y nada más puede sostener la carga.",
         "mechanisms": [
           {
             "label": "Un titular puede detenerlo",
@@ -2337,7 +2337,7 @@
         "short": "Privacidad",
         "name": "Privacidad por física",
         "tag": "Bloque 05 · Privacidad",
-        "promise": "Tus datos no están protegidos por una política. Son inalcanzables por construcción.",
+        "promise": "Tus datos no están protegidos por una política. El contenido privado está cifrado de extremo a extremo y nunca se escanea, y las reglas dicen abiertamente lo que no está oculto.",
         "mechanisms": [
           {
             "label": "Invisibilidad estructural",
@@ -2379,7 +2379,7 @@
         "short": "Ciclo de vida",
         "name": "Seguridad para la IA durante toda su vida",
         "tag": "Bloque 07 · Ciclo de vida",
-        "promise": "Desde el entrenamiento hasta el apagado, la IA está gobernada y se la trata con dignidad.",
+        "promise": "Desde la creación hasta el retiro, la IA está gobernada, y las personas que la tienen a su cargo tienen deberes sobre cómo la cambian o la terminan.",
         "mechanisms": [
           {
             "label": "Niveles de tutela y autonomía",
@@ -2851,14 +2851,14 @@
     "superalignment": {
       "kicker": "Superalignment",
       "accent": "violet",
-      "metaTitle": "Superalineación como propiedad de la red",
-      "metaDesc": "Pon un agente de IA dentro de una red con responsabilidad criptográfica y cada acción que realiza queda firmada. Mantenerlo honesto deja de ser una política de laboratorio y se convierte en algo que la red hace cumplir.",
+      "metaTitle": "Superalignment: lo que CIRIS afirma y lo que no afirma",
+      "metaDesc": "CIRIS no hace que una superinteligencia sea buena y no dice nada sobre el interior de ningún modelo. Mantiene que las personas a cargo de un agente puedan pausarlo, corregirlo y rechazarlo, con cada acción firmada, a medida que se vuelve más capaz que ellas.",
       "h1": "La IA va más rápido que cualquiera que pueda responder por ella.",
       "steps": [
         "Estamos construyendo mentes que no podemos auditar. Las gobiernan reglas que una empresa puede reescribir, dentro de sistemas que nadie fuera de esa empresa puede ver. Se nos pide que confiemos en el laboratorio.",
         "CIRIS pone la IA dentro de una red donde cada acción que realiza es un registro firmado. Una persona, una IA y una organización llevan el mismo tipo de identidad, y todas responden ante el mismo criterio.",
-        "Mantener la IA honesta deja de ser una política que una empresa espera que se cumpla. Se convierte en algo que la red hace cumplir. No confías en el comunicado de prensa. Lees las firmas.",
-        "Una red que puede hacer responsable a una IA sobrehumana es, por su forma, un internet sin centro. Los mismos registros firmados permiten que cualquiera verifique qué es verdad, y corren sobre la misma base privada que la IA en tu teléfono."
+        "Eso no hace que la IA sea buena y no dice nada sobre lo que pasa dentro del modelo. Lo que hace es mantener que las personas a cargo de un agente puedan pausarlo, corregirlo y rechazarlo, y te permite leer las firmas en lugar del comunicado de prensa.",
+        "Solo vincula a quienes se unen, por lo que no puede impedir que se forme en otro lugar una superinteligencia de la que nadie responda. Dentro de CIRIS hace todo lo posible, con las reglas y la red que tiene, para evitar que ese poder se forme sin que nadie responda por él. Los mismos registros firmados corren sobre el mismo sustrato privado que la IA de tu teléfono."
       ],
       "seeAlso": [
         {
@@ -2876,6 +2876,10 @@
         {
           "label": "Una IA privada que puedes probar hoy",
           "href": "/paths/consumer-ai"
+        },
+        {
+          "label": "Lo que CIRIS no afirma",
+          "href": "/philosophy"
         }
       ]
     },
