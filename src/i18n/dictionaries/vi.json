@@ -854,6 +854,15 @@
       "copyText": "CIRIS được thiết kế để thích nghi và phát triển cùng với bối cảnh đạo đức AI đang thay đổi nhanh chóng. Bằng cách nhúng các nguyên tắc đạo đức vào cốt lõi của các hệ thống AI, CIRIS hướng đến việc giúp các hệ thống này duy trì sự phù hợp với các giá trị con người và chuẩn mực xã hội. Đây là một công trình đang tiến triển với những hạn chế đã biết, không phải một cam kết về sự phù hợp hoàn hảo.",
       "buttonText": "Liên hệ",
       "logoAlt": "Biểu tượng thương hiệu"
+    },
+    "behind": {
+      "label": "Ai đứng sau CIRIS",
+      "headline": "Ai viết các quy tắc, và cách phản đối",
+      "p1": "CIRIS được viết và quản lý bởi Eric Moore, thông qua CIRIS L3C, một công ty lợi nhuận thấp. Cho đến khi mạng lưới đạt 100.000 nút, các quy tắc được thay đổi công khai bởi Eric và bởi những người có tên giữ công tắc tắt. Bất kỳ ai cũng có thể sao chép công trình này và bắt đầu mạng lưới của riêng mình, và ai không tham gia thì không bị ràng buộc.",
+      "p2": "Hiến pháp liệt kê thẩm quyền đó, và điều gì chấm dứt nó, trong các quy tắc của chính nó về cách các quy tắc thay đổi, C1 và C2.",
+      "p3": "Để phản đối, hãy mở một issue trên kho lưu trữ hiến pháp, viết thư tới info@ciris.ai, hoặc đến trực tiếp. Eric tổ chức các buổi thảo luận về đạo đức AI vào mỗi tối thứ Tư từ 6 đến 8 giờ tối tại Core Memory Works ở Roselle, Illinois. Đó là cửa hàng của Eric, và nó được nêu tên ở đây để bạn biết đó là phòng của ai.",
+      "repoCta": "Mở một issue trên GitHub",
+      "venueCta": "Core Memory Works, thứ Tư 6 đến 8 giờ tối"
     }
   },
   "vision": {

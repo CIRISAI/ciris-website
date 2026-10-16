@@ -96,6 +96,33 @@ export default function AboutV2({ t, locale }: { t: Dictionary; locale: string }
         </div>
       </section>
 
+      {/* Who is behind CIRIS: the founder, the authority, and how to object */}
+      <section className={s.section}>
+        <p className={s.sectionLabel}>{about.behind.label}</p>
+        <h2 className={s.h2}>{about.behind.headline}</h2>
+        <p className={s.paragraph}>{about.behind.p1}</p>
+        <p className={s.paragraph}>{about.behind.p2}</p>
+        <p className={s.paragraph}>{about.behind.p3}</p>
+        <div className={s.ctaRow}>
+          <a
+            href="https://github.com/CIRISAI/CIRISConstitution/issues"
+            className={`${s.btn} ${s.btnS}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {about.behind.repoCta}
+          </a>
+          <a
+            href="https://corememory.works"
+            className={`${s.btn} ${s.btnS}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {about.behind.venueCta}
+          </a>
+        </div>
+      </section>
+
       {/* Next steps */}
       <section className={s.section}>
         <p className={s.footnote}>
