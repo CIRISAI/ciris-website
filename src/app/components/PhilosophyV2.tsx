@@ -31,7 +31,7 @@ const COMMITMENT_KEYS: [CKey, CKey][] = [
 const RULES_PLAIN =
   "https://github.com/CIRISAI/CIRISConstitution/blob/" +
   "7189daca9aa5a73064cd0b6e08a395d513cd5796/review/pieces/00_guarantees_plain.md";
-const RULES_EDITION = "CC 1.0-rc8";
+const RULES_EDITION = "CC 1.0-rc9";
 
 export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: string }) {
   const p = t.philosophy;

@@ -164,12 +164,12 @@ export default function ProofV2({ t, locale }: { t: Dictionary; locale: string }
         </div>
         <p className={s.footnote}>{rs.formalLimit}</p>
         <p className={s.paragraph}>
-          <a href="https://github.com/CIRISAI/CIRISConstitution/tree/rc9/formal" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/CIRISAI/CIRISConstitution/tree/v1.0-rc9/formal" target="_blank" rel="noopener noreferrer">
             {rs.formalCta} →
           </a>
         </p>
         <p className={s.paragraph}>
-          <a href="https://github.com/CIRISAI/CIRISConstitution/blob/rc9/formal/ADEQUACY.md" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/CIRISAI/CIRISConstitution/blob/v1.0-rc9/formal/ADEQUACY.md" target="_blank" rel="noopener noreferrer">
             {rs.formalAdequacyCta} →
           </a>
         </p>
