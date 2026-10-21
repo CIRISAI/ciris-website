@@ -125,6 +125,57 @@ export default function ProofV2({ t, locale }: { t: Dictionary; locale: string }
       <section id="proof-theory" className={s.section}>
         <p className={s.sectionLabel}>{rs.classTheoryTitle}</p>
         <h2 className={s.h2}>{rs.classTheoryBlurb}</h2>
+
+        {/* Formal verification: what the machine checks, how far each promise
+            has got, and what is not proved. Every line is true of the released
+            edition; no comparative claims (N1 holds). */}
+        <p className={s.sectionLabel}>{rs.formalEyebrow}</p>
+        <h3 className={s.h2}>{rs.formalH2}</h3>
+        <p className={s.paragraph}>{rs.formalBody}</p>
+        <div className={s.notice}>
+          <p className={s.sectionLabel}>{rs.formalBasisLabel}</p>
+          <p>{rs.formalBasis1}</p>
+          <p>{rs.formalBasis2}</p>
+          <p>{rs.formalBasis3}</p>
+          <p>{rs.formalBasis4}</p>
+        </div>
+        <p className={s.footnote}>{rs.formalBasisNote}</p>
+        <div className={`${s.cardGrid} ${s.cardGridTwo}`}>
+          <div className={`${s.card} ${s.cOk}`}>
+            <h3>{rs.formalHaltTitle}</h3>
+            <p>{rs.formalHaltBody}</p>
+          </div>
+          <div className={`${s.card} ${s.cTeal}`}>
+            <h3>{rs.formalAdequacyTitle}</h3>
+            <p>{rs.formalAdequacyBody}</p>
+          </div>
+          <div className={`${s.card} ${s.cCyan}`}>
+            <h3>{rs.formalTagsTitle}</h3>
+            <p>{rs.formalTagsBody}</p>
+          </div>
+          <div className={`${s.card} ${s.cViolet}`}>
+            <h3>{rs.formalReciprocityTitle}</h3>
+            <p>{rs.formalReciprocityBody}</p>
+          </div>
+          <div className={`${s.card} ${s.cRose}`}>
+            <h3>{rs.formalOpenTitle}</h3>
+            <p>{rs.formalOpenBody}</p>
+          </div>
+        </div>
+        <p className={s.footnote}>{rs.formalLimit}</p>
+        <p className={s.paragraph}>
+          <a href="https://github.com/CIRISAI/CIRISConstitution/tree/rc9/formal" target="_blank" rel="noopener noreferrer">
+            {rs.formalCta} →
+          </a>
+        </p>
+        <p className={s.paragraph}>
+          <a href="https://github.com/CIRISAI/CIRISConstitution/blob/rc9/formal/ADEQUACY.md" target="_blank" rel="noopener noreferrer">
+            {rs.formalAdequacyCta} →
+          </a>
+        </p>
+        <p className={s.paragraph}>
+          <Link href={lh("/compare")}>{rs.formalCompareCta} →</Link>
+        </p>
         <p className={s.paragraph}>
           <Link href={lh("/constitution")}>{rs.theoryConstitutionCta} →</Link>
         </p>
