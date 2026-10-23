@@ -37,8 +37,8 @@
       },
       {
         "n": "VI",
-        "title": "The Coherence Mathematics",
-        "blurb": "The holonomic substrate, the witness, and the noise floor."
+        "title": "The Substrate",
+        "blurb": "The census that counts the network, how records are stored and copied, and how the network spots copies that disagree."
       },
       {
         "n": "VII",
@@ -55,6 +55,8 @@
     "forewordLabel": "From the foreword",
     "readCta": "Read the full constitution (PDF)",
     "sourceCta": "Read the source on GitHub",
+    "wireCta": "Download the wire format volume (PDF)",
+    "volumesCta": "See all nine volumes",
     "versionNote": "Version CC {version} · incorporates CIRIS Accord 1.3-RC2 and CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {

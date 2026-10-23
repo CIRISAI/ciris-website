@@ -20,6 +20,8 @@ const h = (str: string) => ({ __html: str });
 
 // Self-hosted constitution reader PDF (same file ConstitutionV2 serves).
 const CONSTITUTION_PDF = "/ciris_constitution.pdf";
+// The wire volume (rc10 on) is the grammar's own volume of the edition.
+const WIRE_PDF = "/ciris_constitution-wire.pdf";
 
 export default function GrammarV2({ t }: { t: Dictionary }) {
   const locale = t._meta.locale;
@@ -110,6 +112,9 @@ export default function GrammarV2({ t }: { t: Dictionary }) {
           </Link>
           <a href={CONSTITUTION_PDF} download className={`${s.btn} ${s.btnS}`}>
             {t.constitution.readCta}
+          </a>
+          <a href={WIRE_PDF} download className={`${s.btn} ${s.btnS}`}>
+            {t.constitution.wireCta}
           </a>
         </div>
       </div>

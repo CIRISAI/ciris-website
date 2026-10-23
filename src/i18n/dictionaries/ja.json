@@ -37,8 +37,8 @@
       },
       {
         "n": "VI",
-        "title": "統合の数学",
-        "blurb": "ホロノミック基盤、証人、ノイズフロア。"
+        "title": "土台",
+        "blurb": "ネットワークを数えるセンサス、記録の保存・複製の仕組み、ネットワークが不一致のコピーをどう見つけるか。"
       },
       {
         "n": "VII",
@@ -55,6 +55,8 @@
     "forewordLabel": "まえがきより",
     "readCta": "憲法全文を読む（PDF）",
     "sourceCta": "GitHubでソースを読む",
+    "wireCta": "ワイヤーフォーマット巻をダウンロード (PDF)",
+    "volumesCta": "全九巻を見る",
     "versionNote": "バージョン CC {version} · CIRISアコード1.3-RC2およびCEG 1.0-RC29を統合 · AGPL-3.0"
   },
   "_meta": {

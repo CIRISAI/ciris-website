@@ -37,8 +37,8 @@
       },
       {
         "n": "VI",
-        "title": "A Matemática da Coerência",
-        "blurb": "O substrato holonômico, a testemunha e o piso de ruído."
+        "title": "O Substrato",
+        "blurb": "O censo que conta a rede, como os registros são armazenados e copiados, e como a rede detecta cópias que divergem."
       },
       {
         "n": "VII",
@@ -55,6 +55,8 @@
     "forewordLabel": "Do prefácio",
     "readCta": "Ler a constituição completa (PDF)",
     "sourceCta": "Ler o código-fonte no GitHub",
+    "wireCta": "Baixar o volume do wire format (PDF)",
+    "volumesCta": "Ver os nove volumes",
     "versionNote": "Versão CC {version} · incorpora o CIRIS Accord 1.3-RC2 e o CEG 1.0-RC29 · AGPL-3.0"
   },
   "_meta": {

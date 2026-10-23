@@ -75,6 +75,9 @@ def main() -> int:
     if pdf != versioned:
         raise SystemExit("the fixed-name PDF and the versioned PDF differ at this tag")
     text = text_edition(repo, args.ref, version)
+    # rc10 split the edition into volumes (CIRISConstitution#123); the site
+    # hosts the wire volume beside the full edition and links the rest.
+    wire = at(repo, args.ref, f"volumes/ciris_constitution-{version}-wire.pdf")
 
     manifest = {
         "version": version,
@@ -85,6 +88,8 @@ def main() -> int:
         "pdf_bytes": len(pdf),
         "text_sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
         "text_bytes": len(text.encode("utf-8")),
+        "wire_sha256": hashlib.sha256(wire).hexdigest(),
+        "wire_bytes": len(wire),
     }
     if args.dry_run:
         print(json.dumps(manifest, indent=2))
@@ -92,6 +97,12 @@ def main() -> int:
 
     (SITE / "public/ciris_constitution.pdf").write_bytes(pdf)
     (SITE / "public/ciris_constitution.txt").write_text(text, encoding="utf-8")
+    (SITE / "public/ciris_constitution-wire.pdf").write_bytes(wire)
+    for name, key in [("ciris_constitution.pdf", "pdf_sha256"),
+                      ("ciris_constitution.txt", "text_sha256"),
+                      ("ciris_constitution-wire.pdf", "wire_sha256")]:
+        if hashlib.sha256((SITE / "public" / name).read_bytes()).hexdigest() != manifest[key]:
+            raise SystemExit(f"public/{name} does not match the bytes at {args.ref}")
     (SITE / "public/constitution-edition.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(manifest, indent=2))

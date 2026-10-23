@@ -19,6 +19,10 @@ const CONST_DIR = `${REPO}/tree/main/constitution`;
 // Self-hosted so the read CTA downloads the reader PDF directly (the `download`
 // attribute only forces a download for same-origin files, not a GitHub blob URL).
 const PDF = "/ciris_constitution.pdf";
+// From rc10 the edition also ships as volumes; the wire volume is hosted
+// beside the full edition, the index links the rest at the release tag.
+const WIRE_PDF = "/ciris_constitution-wire.pdf";
+const VOLUMES = `${REPO}/blob/v1.0-rc10/volumes/README.md`;
 
 // Per-part source files, in the same order as constitution.parts.
 const PART_FILES = [
@@ -100,6 +104,12 @@ export default function ConstitutionV2({ t, locale }: { t: Dictionary; locale: s
         <div className={s.ctaRow}>
           <a href={PDF} download className={`${s.btn} ${s.btnP}`}>
             {c.readCta}
+          </a>
+          <a href={WIRE_PDF} download className={`${s.btn} ${s.btnS}`}>
+            {c.wireCta}
+          </a>
+          <a href={VOLUMES} target="_blank" rel="noopener noreferrer" className={`${s.btn} ${s.btnS}`}>
+            {c.volumesCta}
           </a>
           <a href={CONST_DIR} target="_blank" rel="noopener noreferrer" className={`${s.btn} ${s.btnS}`}>
             {c.sourceCta}
