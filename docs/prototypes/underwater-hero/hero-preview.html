@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>CIRIS — Intelligence you can verify</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Silkscreen&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root[data-theme=dark] {
+  --bg: #0d1117;
+  --fg: #e8eaed;
+  --dim: #a8b0bb;
+  --mute: #8b94a1;
+  --panel: #131922;
+  --panel2: #10151d;
+  --line: rgba(255,255,255,0.08);
+  --line2: rgba(255,255,255,0.18);
+  --chip: rgba(13,17,23,0.72);
+  --pipDay: transparent;
+  --pipNight: #e8eaed;
+  --sky: linear-gradient(to bottom, #05080f 0%, #0a1020 36%, #131c39 68%, #212b4e 100%);
+  --glow: #aac6f6;
+  --star: #9fb6dd;
+  --edge: rgba(159,182,221,0.28);
+  --node: #0d1117;
+  --nodeRing: #c3d2ee;
+  --label: #b6c4dc;
+  --bld: #1d2947;
+  --win: #d9b45f;
+  --g0: #141d33;
+  --g1: #0c1220;
+  --g2: #070b13;
+  --g3: #04060b;
+  --sigStar: #c3cfe6;
+  --sigGlow: rgba(150,180,235,0.4);
+  --logoFilter: invert(1);
+  --accent: #22c0e8;
+  --accentText: #5fd3f0;
+  --ok: #4ade80;
+  --warn: #f2b02f;
+  --violetText: #a69df0;
+  --gold: #f2c35c;
+}
+:root[data-theme=light] {
+  --bg: #faf9f6;
+  --fg: #14181d;
+  --dim: #4a525d;
+  --mute: #5f6874;
+  --panel: #ffffff;
+  --panel2: #f3f1ec;
+  --line: rgba(20,24,29,0.09);
+  --line2: rgba(20,24,29,0.2);
+  --chip: rgba(250,249,246,0.78);
+  --pipDay: #14181d;
+  --pipNight: #9aa3af;
+  --sky: linear-gradient(to bottom, #4d82b3 0%, #6c9cc5 34%, #9bbdd6 66%, #e2d3ba 100%);
+  --glow: #fff3cf;
+  --star: rgba(255,255,255,0.45);
+  --edge: rgba(20,40,70,0.28);
+  --node: #faf9f6;
+  --nodeRing: #1d3b5c;
+  --label: #14304d;
+  --bld: #55687a;
+  --win: #ffe9a8;
+  --g0: #b3c29c;
+  --g1: #9aab84;
+  --g2: #849570;
+  --g3: #70805d;
+  --sigStar: #e3eaf0;
+  --sigGlow: rgba(227,234,240,0.5);
+  --logoFilter: none;
+  --accent: #0e7490;
+  --accentText: #0b6178;
+  --ok: #15803d;
+  --warn: #8a5a00;
+  --violetText: #5b4fc4;
+  --gold: #8a5a00;
+}
+body { margin: 0; background: var(--bg); }
+a { color: inherit; }
+a:hover { opacity: .85; }
+button { font: inherit; }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.mono { font-family: 'Geist Mono', ui-monospace, monospace; }
+.px { font-family: 'Silkscreen', monospace; }
+.hero { position: relative; }
+.water {
+  position: relative;
+  height: clamp(340px, 41vw, 550px);
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--surface), var(--water) 60%, var(--bg));
+  isolation: isolate;
+}
+:root { --surface: #1d3545; --water: #102a3b; }
+:root[data-theme=light] { --surface: #b9e2d8; --water: #99c9c0; }
+.water canvas { display: block; width: 100%; height: 100%; }
+.water::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 26%;
+  background: linear-gradient(transparent, var(--bg));
+  pointer-events: none;
+}
+.theme-control {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+  border: 1px solid var(--line2);
+  border-radius: 999px;
+  padding: 3px;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 12px;
+}
+.theme-control button {
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  min-height: 34px;
+}
+.theme-control button[aria-pressed=true] { color: var(--bg); background: var(--fg); }
+.theme-control button[aria-pressed=false]:hover { background: var(--panel2); }
+@media (max-width: 1020px) {
+  .pnav { display: none !important; }
+}
+@media (max-width: 900px) {
+  .rg { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 560px) {
+  .rg, .rr { grid-template-columns: minmax(0, 1fr) !important; }
+  .rr { gap: 2px !important; }
+  .hsm { display: none !important; }
+  .sec { padding: 72px 20px 0 !important; }
+  .hd { padding: 14px 20px !important; gap: 10px !important; }
+  .hd > div { gap: 5px !important; }
+  .ft { margin-top: 72px !important; }
+}
+
+</style>
+</head>
+<body>
+<div style="font-family: 'Instrument Sans', system-ui, sans-serif; background: var(--bg); color: var(--fg); min-height: 100vh">
+
+<!-- ============ HEADER ============ -->
+<header class="hd" style="position: relative; z-index: 3; max-width: 1240px; margin: 0 auto; padding: 22px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+  <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none">
+    <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.08em">CIRIS</span>
+  </a>
+  <nav aria-label="Primary" class="pnav" style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap; font-size: 15px; font-weight: 500">
+    <a href="#audiences" style="text-decoration: none; padding: 10px 14px; border-radius: 999px">For people</a>
+    <a href="#audiences" style="text-decoration: none; padding: 10px 14px; border-radius: 999px">For builders</a>
+    <a href="#audiences" style="text-decoration: none; padding: 10px 14px; border-radius: 999px">For the network</a>
+    <a href="#audiences" style="text-decoration: none; padding: 10px 14px; border-radius: 999px">For researchers</a>
+  </nav>
+  <div style="display: flex; align-items: center; gap: 10px">
+    <button type="button" aria-label="Language: English" class="mono" style="height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line2); background: var(--chip); color: var(--fg); font-size: 13px">EN</button>
+    <div class="theme-control mono" role="group" aria-label="Color mode">
+      <button type="button" data-mode="light" aria-pressed="false">Light</button>
+      <button type="button" data-mode="dark" aria-pressed="true">Dark</button>
+    </div>
+    <a href="https://scout.ciris.ai" class="hsm" style="height: 44px; display: inline-flex; align-items: center; padding: 0 20px; border-radius: 999px; background: var(--fg); color: var(--bg); text-decoration: none; font-weight: 600; font-size: 15px">Try Scout</a>
+  </div>
+</header>
+
+<!-- Replacement hero artwork: underwater murmurations and glowing fish forming a signet. -->
+<section id="top" class="hero" aria-labelledby="hero-h">
+  <div class="water">
+    <canvas id="current" aria-hidden="true"></canvas>
+  </div>
+  <div style="max-width: 900px; margin: 0 auto; padding: 8px 32px 0; text-align: center">
+    <p class="px" style="margin: 0 0 18px; font-size: 13px; letter-spacing: 0.12em; color: var(--accentText)">OPEN SOURCE · SELF-HOSTABLE · FEDERATED BY DESIGN</p>
+    <h1 id="hero-h" style="margin: 0; font-size: clamp(44px, 6.4vw, 84px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 600">Intelligence you can verify.</h1>
+    <p style="margin: 24px auto 0; max-width: 680px; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: var(--dim)">Accountable agents, signed knowledge, and a federated network governed by shared rules — running on the devices people already own.</p>
+    <div style="margin-top: 34px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap">
+      <a href="https://ciris.ai/architecture/" style="height: 52px; display: inline-flex; align-items: center; padding: 0 26px; border-radius: 999px; background: var(--fg); color: var(--bg); text-decoration: none; font-weight: 600; font-size: 16px">See how it works</a>
+      <a href="#today" style="height: 52px; display: inline-flex; align-items: center; padding: 0 26px; border-radius: 999px; border: 1px solid var(--line2); text-decoration: none; font-weight: 600; font-size: 16px">Use it today</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT IT ALREADY DOES ============ -->
+<section aria-labelledby="does-h" class="sec" style="max-width: 1240px; margin: 0 auto; padding: 130px 32px 0">
+  <p class="mono" style="margin: 0 0 16px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accentText)">No data center required</p>
+  <h2 id="does-h" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 600; max-width: 22ch">Calls, votes and scale, on the devices people already own.</h2>
+  <div class="rg" style="margin-top: 32px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+    <article style="border: 1px solid var(--line); border-radius: 16px; padding: 26px; background: var(--panel); display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="mono" style="font-size: 12px; color: var(--mute)">Calls &amp; live video</span><span class="mono" style="font-size: 11px; letter-spacing: 0.08em; color: var(--ok)">● IN THE APP</span></div>
+      <h3 style="margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: -0.015em; font-weight: 600">Private calls, with no company in the middle.</h3>
+      <p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--dim)">Group calls and live video for thousands go straight from person to person, with viewers passing the stream along. Protected by next-generation security, built to stay private for decades.</p>
+    </article>
+    <article style="border: 1px solid var(--line); border-radius: 16px; padding: 26px; background: var(--panel); display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="mono" style="font-size: 12px; color: var(--mute)">Votes</span><span class="mono" style="font-size: 11px; letter-spacing: 0.08em; color: var(--ok)">● IN THE APP</span></div>
+      <h3 style="margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: -0.015em; font-weight: 600">Voting that doesn’t burn a forest.</h3>
+      <p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--dim)">One person, one vote, however many devices. Every ballot is signed, and every device counts them the same way. No mining, no giant shared ledger, no wasted energy.</p>
+    </article>
+    <article style="border: 1px solid var(--line); border-radius: 16px; padding: 26px; background: var(--panel); display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="mono" style="font-size: 12px; color: var(--mute)">Scale</span><span class="mono" style="font-size: 11px; letter-spacing: 0.08em; color: var(--warn)">● MODELLED · CALIBRATED ON THE LIVE MESH</span></div>
+      <h3 style="margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: -0.015em; font-weight: 600">Every device that joins adds capacity.</h3>
+      <p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--dim)">Each device brings its own space and connection, private things never leave your circle, and big audiences pass the stream among themselves. Modelled to 5 billion people with no data center.</p>
+      <a href="https://cirisai.github.io/CEWP/" style="margin-top: auto; font-weight: 600; text-decoration: none; color: var(--accentText)">See the scaling model →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PROBLEM + THE IDEA ============ -->
+<section aria-labelledby="problem-h" class="sec" style="max-width: 1240px; margin: 0 auto; padding: 130px 32px 0">
+  <div style="display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: end">
+    <div style="flex: 1 1 560px; min-width: 0">
+      <p class="mono" style="margin: 0 0 18px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accentText)">The missing layer</p>
+      <h2 id="problem-h" style="margin: 0; font-size: clamp(30px, 3.8vw, 48px); line-height: 1.08; letter-spacing: -0.03em; font-weight: 600">The internet made information easy to publish. It never made it easy to verify.</h2>
+    </div>
+    <p style="flex: 1 1 420px; min-width: 0; margin: 0; font-size: 18px; line-height: 1.6; color: var(--dim)">AI makes that urgent: agents act at scale while their claims and authority stay locked inside the platforms that run them. CIRIS adds the missing layer — evidence that travels with the claim, and governance that travels with the relationship.</p>
+  </div>
+
+  <div style="margin-top: 72px; padding-top: 44px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 36px 64px">
+    <div style="flex: 1 1 560px; min-width: 0">
+      <p class="px" style="margin: 0 0 16px; font-size: 12px; letter-spacing: 0.12em; color: var(--gold)">THE IDEA UNDER EVERYTHING</p>
+      <p style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.22; letter-spacing: -0.02em; font-weight: 600">CIRIS separates intelligence from authority, and makes authority accountable through evidence.</p>
+    </div>
+    <dl style="flex: 1 1 420px; min-width: 0; margin: 0; display: grid; grid-template-columns: 150px 1fr; font-size: 16px">
+      <dt style="padding: 12px 0; border-bottom: 1px solid var(--line); font-weight: 600">The agent</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--dim)">intelligent, not sovereign</dd>
+      <dt style="padding: 12px 0; border-bottom: 1px solid var(--line); font-weight: 600">The fabric</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--dim)">deterministic, not omniscient</dd>
+      <dt style="padding: 12px 0; border-bottom: 1px solid var(--line); font-weight: 600">The federation</dt><dd style="margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--dim)">distributed, not ungoverned</dd>
+      <dt style="padding: 12px 0; font-weight: 600">The constitution</dt><dd style="margin: 0; padding: 12px 0; color: var(--dim)">shared, and contestable</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ THE RECEIPT ============ -->
+<section aria-labelledby="row-h" class="sec" style="max-width: 1240px; margin: 0 auto; padding: 130px 32px 0; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+  <div style="flex: 1 1 420px; min-width: 0">
+    <p class="mono" style="margin: 0 0 16px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accentText)">The web with its receipts</p>
+    <h2 id="row-h" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 600">Every act is a signed row. Anyone can check it. Its author can take it back.</h2>
+    <p style="margin: 22px 0 0; font-size: 18px; line-height: 1.6; color: var(--dim)">A message, a vote, a consent, a moderation decision, an agent’s action — five kinds of row, and no sixth.</p>
+  </div>
+  <figure aria-label="A signed row's receipt: five facts travel with every item" style="flex: 1 1 460px; min-width: 0; margin: 0; border: 1px solid var(--line2); border-radius: 18px; background: var(--panel); overflow: hidden">
+    <div style="padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed var(--line2)">
+      <span class="mono" style="font-size: 12px; letter-spacing: 0.1em; color: var(--mute)">RECEIPT · CLAIM</span>
+      <span class="mono" style="font-size: 12px; color: var(--ok)">✓ signature verified</span>
+    </div>
+    <div style="padding: 4px 24px">
+      <div class="rr" style="display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line)"><span style="font-size: 15px; color: var(--dim)">Who it is about</span><span class="mono" style="font-size: 14px">Riverside Bakery</span></div>
+      <div class="rr" style="display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line)"><span style="font-size: 15px; color: var(--dim)">Who sent it</span><span class="mono" style="font-size: 14px">Ana · key 7f3a…c21e</span></div>
+      <div class="rr" style="display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line)"><span style="font-size: 15px; color: var(--dim)">Who can see it</span><span class="mono" style="font-size: 14px">Neighbours</span></div>
+      <div class="rr" style="display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line)"><span style="font-size: 15px; color: var(--dim)">What it is</span><span class="mono" style="font-size: 14px">review · “open late on Fridays”</span></div>
+      <div class="rr" style="display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 13px 0"><span style="font-size: 15px; color: var(--dim)">The rule it follows</span><span class="mono" style="font-size: 14px">consent: community scope</span></div>
+    </div>
+    <div class="mono" style="padding: 12px 24px; background: var(--panel2); font-size: 12px; color: var(--mute); display: flex; gap: 18px; flex-wrap: wrap">
+      <span>3 agreed</span><span>1 corrected</span><span>0 withdrawn</span><span>next-generation secure</span>
+    </div>
+  </figure>
+</section>
+
+<!-- ============ GO DEEPER ============ -->
+<section aria-labelledby="deeper-h" class="sec" style="max-width: 1240px; margin: 0 auto; padding: 130px 32px 0">
+  <h2 id="deeper-h" style="margin: 0; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 600">Go deeper.</h2>
+  <div class="rg" style="margin-top: 28px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+    <a href="https://ciris.ai/architecture/" style="text-decoration: none; border: 1px solid var(--line); border-radius: 16px; padding: 24px; background: var(--panel); display: flex; flex-direction: column; gap: 10px; min-height: 200px">
+      <span class="mono" style="font-size: 12px; color: var(--mute)">Architecture</span>
+      <span style="font-size: 20px; font-weight: 600; line-height: 1.2">How it fits together</span>
+      <span style="font-size: 15px; line-height: 1.5; color: var(--dim)">The agent proposes. The fabric admits. The federation decides.</span>
+      <span style="margin-top: auto; font-weight: 600; color: var(--accentText)">→</span>
+    </a>
+    <a href="https://ciris.ai/web4/" style="text-decoration: none; border: 1px solid var(--line); border-radius: 16px; padding: 24px; background: var(--panel); display: flex; flex-direction: column; gap: 10px; min-height: 200px">
+      <span class="mono" style="font-size: 12px; color: var(--mute)">Web4</span>
+      <span style="font-size: 20px; font-weight: 600; line-height: 1.2">Relationships, not platforms</span>
+      <span style="font-size: 15px; line-height: 1.5; color: var(--dim)">Portable identity, signed reputation, leaving in one step.</span>
+      <span style="margin-top: auto; font-weight: 600; color: var(--accentText)">→</span>
+    </a>
+    <a href="https://ciris.ai/constitution/" style="text-decoration: none; border: 1px solid var(--line); border-radius: 16px; padding: 24px; background: var(--panel); display: flex; flex-direction: column; gap: 10px; min-height: 200px">
+      <span class="mono" style="font-size: 12px; color: var(--mute)">Constitution</span>
+      <span style="font-size: 20px; font-weight: 600; line-height: 1.2">Rules people can read — and a brake</span>
+      <span style="font-size: 15px; line-height: 1.5; color: var(--dim)">Eleven promises. Any named human can pause an agent.</span>
+      <span style="margin-top: auto; font-weight: 600; color: var(--accentText)">→</span>
+    </a>
+    <a href="https://ciris.ai/cewpos/" style="text-decoration: none; border: 1px solid var(--line); border-radius: 16px; padding: 24px; background: var(--panel); display: flex; flex-direction: column; gap: 10px; min-height: 200px">
+      <span class="mono" style="font-size: 12px; color: var(--mute)">CEWPOS · <span style="color: var(--warn)">in development</span></span>
+      <span style="font-size: 20px; font-weight: 600; line-height: 1.2">A computer whose state is evidence</span>
+      <span style="font-size: 15px; line-height: 1.5; color: var(--dim)">The OS layer where AI can propose, but never simply act.</span>
+      <span style="margin-top: auto; font-weight: 600; color: var(--accentText)">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ USE IT TODAY ============ -->
+<section id="today" aria-labelledby="today-h" class="sec" style="max-width: 1240px; margin: 0 auto; padding: 130px 32px 0">
+  <h2 id="today-h" style="margin: 0; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 600">Use it today.</h2>
+  <div class="rg" style="margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+    <div style="border: 1px solid var(--line); border-radius: 16px; padding: 26px; background: var(--panel); display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; gap: 14px; align-items: center">
+        <h3 style="margin: 0; font-size: 20px; font-weight: 600">The CIRIS app</h3>
+      </div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--dim)">Phone, desktop or browser, in 29 languages. Your device becomes a node.</p>
+      <div style="margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap">
+        <a href="https://apps.apple.com/us/app/cirisagent/id6758524415" style="height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 10px; background: var(--fg); color: var(--bg); text-decoration: none; font-size: 14px; font-weight: 600">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=ai.ciris.mobile" style="height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 10px; background: var(--fg); color: var(--bg); text-decoration: none; font-size: 14px; font-weight: 600">Google Play</a>
+      </div>
+    </div>
+    <div style="border: 1px solid var(--line); border-radius: 16px; padding: 26px; background: var(--panel); display: flex; flex-direction: column; gap: 12px">
+      <h3 style="margin: 0; font-size: 20px; font-weight: 600">Talk to Scout</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--dim)">A hosted CIRIS agent. Ask it something, then read every step it took.</p>
+      <a href="https://scout.ciris.ai" style="margin-top: auto; align-self: flex-start; height: 44px; display: inline-flex; align-items: center; padding: 0 18px; border-radius: 999px; border: 1px solid var(--line2); text-decoration: none; font-size: 15px; font-weight: 600">Try Scout →</a>
+    </div>
+    <div style="border: 1px solid var(--line); border-radius: 16px; padding: 26px; background: var(--panel); display: flex; flex-direction: column; gap: 12px">
+      <h3 style="margin: 0; font-size: 20px; font-weight: 600">Run your own</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--dim)">Self-host the agent or a node. AGPL-3.0, bring your own model key.</p>
+      <code class="mono" style="margin-top: auto; display: block; padding: 12px 14px; border-radius: 10px; background: var(--panel2); border: 1px solid var(--line); font-size: 13px">pip install ciris-agent</code>
+    </div>
+  </div>
+  <p class="mono" style="margin: 18px 0 0; font-size: 13px; line-height: 1.7; color: var(--mute)"><span style="color: var(--ok)">● Shipping</span> app, agent, node &#160;·&#160; <span style="color: var(--warn)">● In development</span> CEWPOS &#160;·&#160; <span style="color: var(--violetText)">● Research</span> formal models and open claims, tracked one by one</p>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="audiences" class="ft" style="margin-top: 130px; border-top: 1px solid var(--line)">
+  <div class="rg" style="max-width: 1240px; margin: 0 auto; padding: 52px 32px 32px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px">
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px">
+        <span style="font-weight: 700; letter-spacing: 0.08em">CIRIS</span>
+      </div>
+      <p style="margin: 14px 0 0; font-size: 14px; line-height: 1.55; color: var(--dim)">The infrastructure for accountable intelligence. CIRIS L3C, mission-locked.</p>
+      <a href="https://www.gofundme.com/f/the-ai-the-world-deserves" style="display: inline-block; margin-top: 14px; font-size: 14px; font-weight: 600; color: var(--gold); text-decoration: none">Support CIRIS</a>
+    </div>
+    <nav aria-label="For people" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+      <p class="mono" style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.12em; color: var(--mute)">FOR PEOPLE</p>
+      <a href="#" style="text-decoration: none; color: var(--dim)">Try CIRIS</a><a href="#" style="text-decoration: none; color: var(--dim)">Install</a><a href="#" style="text-decoration: none; color: var(--dim)">How the agent works</a><a href="#" style="text-decoration: none; color: var(--dim)">Privacy</a><a href="#" style="text-decoration: none; color: var(--dim)">Safety</a>
+    </nav>
+    <nav aria-label="For builders" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+      <p class="mono" style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.12em; color: var(--mute)">FOR BUILDERS</p>
+      <a href="https://ciris.ai/architecture/" style="text-decoration: none; color: var(--dim)">Architecture</a><a href="#" style="text-decoration: none; color: var(--dim)">CEG grammar</a><a href="#" style="text-decoration: none; color: var(--dim)">Explore a trace</a><a href="#" style="text-decoration: none; color: var(--dim)">Conformance</a><a href="#" style="text-decoration: none; color: var(--dim)">Repositories</a>
+    </nav>
+    <nav aria-label="For the network" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+      <p class="mono" style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.12em; color: var(--mute)">FOR THE NETWORK</p>
+      <a href="https://ciris.ai/web4/" style="text-decoration: none; color: var(--dim)">Web4 vision</a><a href="#" style="text-decoration: none; color: var(--dim)">Constitutional mesh</a><a href="#" style="text-decoration: none; color: var(--dim)">Federation</a><a href="#" style="text-decoration: none; color: var(--dim)">CEWP</a><a href="https://ciris.ai/cewpos/" style="text-decoration: none; color: var(--dim)">CEWPOS</a><a href="https://ciris.ai/constitution/" style="text-decoration: none; color: var(--dim)">Constitution &amp; governance</a>
+    </nav>
+    <nav aria-label="For researchers" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+      <p class="mono" style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.12em; color: var(--mute)">FOR RESEARCHERS</p>
+      <a href="#" style="text-decoration: none; color: var(--dim)">Research status</a><a href="#" style="text-decoration: none; color: var(--dim)">Formal methods</a><a href="#" style="text-decoration: none; color: var(--dim)">First contact theory</a><a href="#" style="text-decoration: none; color: var(--dim)">Papers</a><a href="#" style="text-decoration: none; color: var(--dim)">Status</a>
+    </nav>
+  </div>
+  <div class="mono" style="max-width: 1240px; margin: 0 auto; padding: 16px 32px 40px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--mute)">
+    <span>AGPL-3.0 · Open source · 29 languages</span>
+    <a href="https://github.com/CIRISAI" style="text-decoration: none">github.com/CIRISAI</a>
+  </div>
+</footer>
+</div>
+<svg id='signet-geometry' width='0' height='0' aria-hidden='true' style='position:absolute'><path id='signet-outline' d='M170.87,55.21c0-.76-.49-1.44-1.22-1.67l-18.62-5.91c-1.16-5.44-3.57-10.55-7.04-14.93l3.79-7.32c.35-.68.22-1.5-.32-2.04-.54-.54-1.36-.67-2.04-.32l-7.32,3.79c-4.37-3.46-9.48-5.87-14.92-7.03l-5.9-18.56c-.23-.73-.91-1.22-1.67-1.22s-1.44.49-1.67,1.22l-5.89,18.56c-5.45,1.16-10.57,3.57-14.95,7.04l-7.33-3.79c-.68-.35-1.5-.22-2.04.32s-.67,1.37-.32,2.04l3.79,7.33c-3.47,4.37-5.88,9.49-7.04,14.94l-18.56,5.9c-.73.23-1.22.91-1.22,1.67s.49,1.44,1.22,1.67l18.56,5.89c1.16,5.44,3.57,10.56,7.04,14.93l-3.79,7.32c-.35.68-.22,1.5.32,2.04.34.34.78.51,1.24.51.27,0,.55-.06.8-.2l7.32-3.79c4.38,3.47,9.5,5.89,14.94,7.04l5.89,18.56c.23.73.91,1.22,1.67,1.22s1.44-.49,1.67-1.22l5.89-18.56c5.45-1.16,10.57-3.57,14.94-7.04l7.31,3.79c.25.13.53.2.8.2.45,0,.9-.18,1.24-.51.54-.54.67-1.37.32-2.04l-3.79-7.31c3.47-4.37,5.88-9.48,7.04-14.92l18.62-5.91c.73-.23,1.22-.91,1.22-1.67Z'/><path data-signet-interior d='M147.13,46.39l-5.82-1.85c-1.03-.29-2.07-.5-3.11-.65l4.01-7.75c2.23,3.11,3.89,6.58,4.92,10.25Z'/>
+<path data-signet-interior d='M142.14,28.66l-1.78,3.44s0,0,0,0l-5.97,11.54c-3.15.05-6.25.69-9.13,1.91,1.2-2.87,1.86-5.97,1.9-9.14l14.99-7.76Z'/>
+<path data-signet-interior d='M117.4,59.52c.38.39.78.76,1.18,1.11,2.74,3.17,4.44,7.05,4.94,11.1-3.54-2.84-5.77-7-6.16-11.55.02-.22.03-.44.04-.66Z'/>
+<path data-signet-interior d='M117.37,50.32c.02-.29.03-.58.07-.86.01-.11.03-.22.05-.33.08-.5.17-1,.29-1.49,0-.04.02-.08.03-.12.13-.51.29-1.02.47-1.51.04-.11.08-.22.12-.32.19-.49.39-.96.62-1.43.04-.07.08-.14.11-.21.22-.43.46-.85.71-1.25.04-.07.09-.14.13-.22.28-.43.59-.85.91-1.26.07-.09.14-.17.21-.26.34-.41.69-.81,1.06-1.18.02-.02.04-.03.05-.05.37-.36.75-.7,1.15-1.03.05-.04.09-.08.14-.12-.5,4.09-2.21,7.96-4.9,11.09-.41.36-.81.74-1.2,1.14,0-.2-.02-.39-.03-.58Z'/>
+<path data-signet-interior d='M121.06,58.15c-.35-.4-.72-.78-1.09-1.16.22,0,.43-.01.65-.03,4.53.4,8.71,2.63,11.53,6.14-4.06-.51-7.92-2.21-11.08-4.96Z'/>
+<path data-signet-interior d='M120.59,53.44c-.2-.01-.4-.03-.6-.04.37-.37.72-.75,1.07-1.14,3.16-2.75,7.03-4.45,11.07-4.97-2.83,3.53-6.99,5.75-11.54,6.14Z'/>
+<path data-signet-interior d='M106.82,23.68l-1.85,5.82c-.22.7.01,1.46.59,1.91.58.45,1.37.5,1.99.11l8-4.9,8.15,4.91c.28.17.59.25.9.25.38,0,.77-.13,1.08-.38.57-.45.8-1.21.58-1.9l-1.85-5.82c3.67,1.03,7.14,2.68,10.24,4.91l-10.07,5.21s0,0,0,0l-.57.3c-3.78,2.14-6.68,5.38-8.42,9.19-1.74-3.81-4.65-7.07-8.47-9.22l-.51-.26s0,0,0,0l-10.08-5.22c3.11-2.23,6.59-3.89,10.27-4.92Z'/>
+<path data-signet-interior d='M110.01,52.09c.39.45.8.89,1.23,1.32-.21,0-.41.02-.62.04-4.55-.39-8.72-2.62-11.54-6.14,3.99.49,7.79,2.13,10.93,4.79Z'/>
+<path data-signet-interior d='M107.72,38.69s.1.08.14.12c.41.34.82.69,1.19,1.07,0,0,0,0,.01.01.37.37.72.77,1.06,1.18.07.09.14.17.21.26.32.41.62.82.91,1.26.05.08.09.15.14.23.26.41.49.83.71,1.25.03.07.07.13.1.19.23.47.43.94.62,1.43.04.1.08.21.12.32.18.5.34,1,.47,1.52,0,.03.01.07.02.1.12.49.22.99.29,1.5.02.1.03.21.05.31.04.29.05.58.07.87-.01.17-.02.35-.03.52-.42-.42-.86-.83-1.31-1.22-2.62-3.1-4.29-6.9-4.79-10.93Z'/>
+<path data-signet-interior d='M111.26,56.99c-.43.43-.84.87-1.23,1.32-3.15,2.67-6.96,4.32-10.95,4.81,2.83-3.53,6.97-5.76,11.51-6.16.23.02.45.02.68.03Z'/>
+<path data-signet-interior d='M112.48,60.83c.46-.4.9-.81,1.34-1.25,0,.2.02.4.04.6-.38,4.56-2.62,8.73-6.14,11.55.49-3.98,2.13-7.77,4.77-10.9Z'/>
+<path data-signet-interior d='M104.06,36.43c.04,3.16.7,6.25,1.89,9.11-2.88-1.21-5.98-1.84-9.12-1.88l-5.97-11.53v-.02s-1.79-3.45-1.79-3.45l15,7.77Z'/>
+<path data-signet-interior d='M89,36.15l4.02,7.76c-1.04.15-2.08.36-3.12.65l-5.82,1.85c1.03-3.67,2.69-7.15,4.92-10.26Z'/>
+<path data-signet-interior d='M67.93,55.21l22.97-7.3c1.28-.36,2.58-.58,3.88-.69,2.13,3.56,5.26,6.31,8.92,7.98-3.65,1.67-6.77,4.42-8.92,8-1.28-.11-2.55-.33-3.81-.68l-23.03-7.32Z'/>
+<path data-signet-interior d='M84.08,64.01l5.88,1.87c1.01.28,2.03.49,3.05.64l-4.01,7.75c-2.23-3.11-3.89-6.58-4.91-10.25Z'/>
+<path data-signet-interior d='M89.07,81.74l1.78-3.43s.01-.02.01-.03l5.96-11.51c3.14-.04,6.24-.68,9.12-1.88-1.2,2.87-1.83,5.96-1.88,9.09l-15,7.77Z'/>
+<path data-signet-interior d='M96.54,81.81l7.77-4.02c.15,1.04.36,2.09.65,3.12l1.85,5.82c-3.68-1.03-7.15-2.69-10.27-4.92Z'/>
+<path data-signet-interior d='M122.92,79.85l-7.32,23.03-7.3-22.97c-.36-1.28-.58-2.58-.69-3.88,3.57-2.13,6.32-5.27,7.98-8.93,1.66,3.65,4.41,6.78,7.99,8.93-.11,1.28-.33,2.56-.68,3.82Z'/>
+<path data-signet-interior d='M124.41,86.73l1.87-5.88c.28-1.01.49-2.03.64-3.06l7.76,4.02c-3.11,2.23-6.59,3.89-10.26,4.92Z'/>
+<path data-signet-interior d='M138.71,79.96s0,0-.01,0l-11.53-5.97c-.04-3.15-.68-6.25-1.89-9.13,2.87,1.21,5.97,1.86,9.11,1.9l5.98,11.54s0,0,0,0l1.78,3.44-3.44-1.78Z'/>
+<path data-signet-interior d='M142.21,74.27l-4.02-7.75c1.06-.15,2.12-.37,3.17-.66l5.76-1.83c-1.03,3.67-2.69,7.14-4.91,10.24Z'/>
+<path data-signet-interior d='M149.23,59.69c-.15.03-.3.07-.44.14l-8.42,2.68c-1.3.36-2.62.59-3.93.69-2.13-3.57-5.27-6.33-8.93-8,3.65-1.66,6.77-4.41,8.92-7.99,1.3.11,2.59.33,3.87.68l8.57,2.72c.06.02.12.04.18.06l14.28,4.54-14.11,4.48Z'/></svg>
+<script>
+function createOcean(w,h) {
+  const TAU = Math.PI*2;
+  let state = 8702;
+  const random = () => ((state=(Math.imul(state,1664525)+1013904223)>>>0)/4294967296);
+  const small = w<580;
+  const counts = small ? [71,48] : [94,63];
+  const nearest = new Int16Array(7);
+  const distances = new Float64Array(7);
+  const school = counts.map((count,g) => Array.from({length:count}, () => {
+    const u=random()*2-1, v=random()+random()+random()-1.5, scale=random(), layer=random();
+    const x=w*((g===0 ? .31 : .69)+u*(small ? .32 : .27));
+    const y=h*((g===0 ? .34 : .59)+v*(.07+.14*(1-u*u)) + Math.sin(u*2.9)*.065*(g===0 ? -1 : 1));
+    const vx=(g===0 ? 1 : -1)*h*(.065+random()*.052), vy=h*(random()-.5)*.055;
+    return {
+      x,y,px:x,py:y,vx,vy,heading:Math.atan2(vy,vx),roll:0,
+      phase:random()*TAU,depth:(.91-g*.22)*(.34+layer*.66),spacing:.73+.53*random(),
+      size:((small ? 4.9 : 5.2)+scale*(small ? 6.2 : 9.6))*(.73+.32*layer),
+    };
+  }));
+
+  function sharksAt(time) {
+    return [0,1].map((i) => {
+      const period=i===0 ? 34 : 43;
+      const phase=((time+(i===0 ? 7 : 26))%period)/period;
+      const u=i===0 ? 1.57-2.09*phase : -.53+2.09*phase;
+      const y=h*((i===0 ? .47 : .29)+.075*Math.sin(TAU*phase+i));
+      return {x:w*u,y,dir:i===0 ? -1 : 1,angle:.075*Math.cos(TAU*phase+i),phase:i*2.9+.48,
+        size:Math.min(w*.25,h*.38)*(i===0 ? 1 : .75),opacity:i===0 ? .70 : .43};
+    });
+  }
+
+  function step(dt,time) {
+    const sharks=sharksAt(time);
+    school.forEach((group,g) => {
+      const a=time*(g===0 ? .29 : .23)+(g===0 ? -.66 : 2.53);
+      const guideX=w*(.5+Math.sin(a)*.30);
+      const guideY=h*((g===0 ? .37 : .56)+Math.sin(a*1.42+g)*.11);
+      const cruiseX=Math.cos(a)*h*.108;
+      const cruiseY=Math.cos(a*1.42+g)*h*.044;
+      const personal=Math.max(13,Math.min(w*.081,h*.086));
+      // Read positions/velocities from the same frame, then integrate all fish together.
+      for (const f of group) {
+        distances.fill(Infinity);
+        for (let j=0;j<group.length;j++) {
+          const n=group[j];
+          if (n===f) continue;
+          const dx=n.x-f.x, dy=n.y-f.y, d=dx*dx+dy*dy;
+          if (d>=distances[6]) continue;
+          let k=6;
+          while (k>0 && d<distances[k-1]) {
+            distances[k]=distances[k-1]; nearest[k]=nearest[k-1]; k--;
+          }
+          distances[k]=d; nearest[k]=j;
+        }
+        let cx=0,cy=0,ax=0,ay=0,sx=0,sy=0;
+        for (let k=0;k<7;k++) {
+          const n=group[nearest[k]], dx=n.x-f.x, dy=n.y-f.y;
+          const d=Math.max(.01,Math.sqrt(distances[k]));
+          cx+=dx; cy+=dy; ax+=n.vx-f.vx; ay+=n.vy-f.vy;
+          const space=Math.max(0,1-d/(personal*f.spacing));
+          sx-=dx/d*space*space;
+          sy-=dy/d*space*space;
+        }
+        const wave=Math.sin(f.x/w*9-time*1.34+g*1.5);
+        const eddy=Math.sin(f.y/h*8+f.x/w*5+time*.63+g*.71);
+        let fx=cx*.077+ax*.16+sx*h*.39+(cruiseX-f.vx)*.48+(guideX-f.x)*.12+eddy*h*.022;
+        let fy=cy*.11+ay*.16+sy*h*.39+(cruiseY-f.vy)*.49+(guideY-f.y)*.34+wave*h*.056;
+        for (const shark of sharks) {
+          // Look ahead of the shark's snout, not just at its current center.
+          const dx=f.x-shark.x-shark.dir*shark.size*.30, dy=f.y-shark.y;
+          const reach=shark.size+ h*.14;
+          const d=Math.hypot(dx,dy*1.18);
+          if (d<reach) {
+            const push=(1-d/reach)**2*h*1.19;
+            fx+=dx/Math.max(d,8)*push*.66;
+            fy+=(Math.abs(dy)>1 ? Math.sign(dy) : (g===0 ? -1 : 1))*push;
+          }
+          // A broad, gentler wake keeps the bank turning even after the whale shark passes.
+          const trail=(shark.x-f.x)*shark.dir/shark.size;
+          if (trail>0 && trail<1.9 && Math.abs(dy)<reach*.63) {
+            const wake=Math.sin(Math.PI*trail/1.9)*(1-Math.abs(dy)/(reach*.63))*h*.20;
+            fx+=shark.dir*wake*.8;
+            fy+=Math.sin(trail*2.1+g)*wake*.62;
+          }
+        }
+        fx+=Math.max(0,w*.045-f.x)*1.5-Math.max(0,f.x-w*.955)*1.5;
+        fy+=Math.max(0,h*.13-f.y)*1.6-Math.max(0,f.y-h*.80)*1.6;
+        f.nx=f.vx+fx*dt; f.ny=f.vy+fy*dt;
+        const speed=Math.hypot(f.nx,f.ny);
+        const max=h*.245;
+        if (speed>max) { f.nx*=max/speed; f.ny*=max/speed; }
+      }
+      for (const f of group) {
+        f.px=f.x; f.py=f.y;
+        f.vx=f.nx; f.vy=f.ny;
+        const yaw=Math.atan2(f.vy,f.vx)-f.heading;
+        const turn=Math.atan2(Math.sin(yaw),Math.cos(yaw));
+        f.heading+=turn*Math.min(.29,Math.hypot(f.vx,f.vy)*dt*.29);
+        const ripple=.16+.15*Math.sin(f.x/w*9-time*1.34+g*1.5+f.phase*.39);
+        f.roll+=(Math.min(.90,ripple+Math.abs(turn)*.53)-f.roll)*.20;
+        f.x+=f.vx*dt; f.y+=f.vy*dt;
+      }
+    });
+  }
+  return { school, sharksAt, step };
+}
+
+function createMarineArt(rgba,mix,seed) {
+  const turn=Math.PI*2;
+  const path=(commands)=>new Path2D(commands);
+  const whaleBody=path('M .89 -.08 C .91 -.044 .902 .021 .856 .053 C .74 .13 .54 .164 .25 .151 C -.10 .145 -.32 .098 -.62 .046 Q -.74 .026 -.84 .037 L -.84 -.044 C -.68 -.045 -.56 -.087 -.40 -.121 C -.16 -.172 .035 -.202 .27 -.204 C .49 -.199 .672 -.158 .80 -.13 Q .866 -.111 .89 -.08 Z');
+  const farFin=path('M .25 .080 Q .15 .196 -.11 .30 Q -.15 .314 -.145 .282 L .025 .104 Z');
+  const nearFin=path('M .38 .068 C .264 .167 .133 .288 -.119 .36 Q -.152 .373 -.142 .34 L .002 .167 C .074 .088 .18 .065 .38 .068 Z');
+  const dorsal=path('M -.009 -.169 Q -.06 -.266 -.177 -.329 Q -.223 -.354 -.204 -.317 Q -.179 -.250 -.222 -.159 Z');
+  const secondDorsal=path('M -.50 -.092 Q -.58 -.149 -.629 -.157 Q -.609 -.113 -.649 -.059 Z');
+  const tailFin=path('M .06 -.033 C -.032 -.059 -.084 -.177 -.286 -.354 C -.318 -.379 -.33 -.353 -.311 -.312 C -.269 -.223 -.201 -.105 -.188 -.025 Q -.176 .019 -.216 .081 C -.277 .165 -.293 .225 -.298 .268 Q -.294 .292 -.269 .272 C -.13 .192 -.052 .094 .06 .027 Z');
+  const ridges=path('M -.70 -.035 C -.398 -.074 -.17 -.147 .14 -.151 Q .45 -.146 .683 -.073 M -.62 .013 C -.32 -.017 -.14 -.081 .14 -.099 Q .43 -.108 .652 -.050');
+  const mouth=path('M .87 -.013 Q .823 .018 .684 .033');
+  const gills=path(Array.from({length:5},(_,i)=>`M ${.518-i*.026} ${-.021-i*.005} q -.019 .052 -.055 .082`).join(' '));
+  const spots=Array.from({length:4},()=>new Path2D());
+  const rand=seed(142);
+  for (let row=0;row<8;row++) {
+    for (let col=0;col<29;col++) {
+      const x=-.79+col*.056+(row%2)*.023+(rand()-.5)*.040;
+      const y=-.166+row*.039+Math.sin(x*4.1+row*.3)*.012+(rand()-.5)*.025;
+      const r=.0034+rand()*.009;
+      if (rand()>.19+row*.036) {
+        const layer=spots[Math.floor(rand()*spots.length)];
+        layer.moveTo(x+r,y);
+        layer.ellipse(x,y,r,r*.71,0,0,turn);
+      }
+    }
+  }
+
+  function fishSprites(palette,light,lit) {
+    const base=lit ? palette.gold : palette.shoal;
+    const silver=lit ? palette.glint : palette.rim;
+    return Array.from({length:16},(_,i)=>{
+      const sprite=document.createElement('canvas');
+      sprite.width=96; sprite.height=64;
+      const s=sprite.getContext('2d');
+      s.translate(48,32); s.scale(32,32);
+      const phase=i*turn/16;
+      const swing=Math.sin(phase), far=Math.sin(phase-.62);
+      const tail=-.70+.047*Math.cos(phase);
+      const neck=swing*.075;
+      const tip=far*.21;
+      const fin=mix(base,palette.depth,lit ? .25 : .39);
+      const outline=path(`M .89 -.009 C .871 -.071 .753 -.127 .615 -.178 C .432 -.24 .274 -.287 .083 -.263 C -.185 -.234 -.39 -.102 ${tail} ${neck-.043} L ${tail-.014} ${neck+.033} C -.458 .097 -.225 .187 .045 .213 C .34 .244 .618 .147 .773 .060 Q .843 .041 .89 -.009 Z`);
+      s.fillStyle=rgba(fin,.65);
+      s.fill(path(`M .38 .047 Q .208 .23 -.18 .324 C -.1 .20 .026 .108 .099 .058 Z`));
+      s.fill(path('M .32 -.221 Q .164 -.345 -.019 -.422 Q .018 -.312 -.132 -.235 Z'));
+      s.fill(path('M -.216 .141 Q -.352 .269 -.523 .243 L -.401 .092 Z'));
+
+      const caudal=s.createLinearGradient(tail,neck,-1.23,tip);
+      caudal.addColorStop(0,rgba(base,.95));
+      caudal.addColorStop(.67,rgba(fin,.77));
+      caudal.addColorStop(1,rgba(mix(fin,silver,.36),.48));
+      s.fillStyle=caudal;
+      s.fill(path(`M ${tail+.07} ${neck-.041} C -.86 ${neck-.066} -.918 ${tip-.231} -1.17 ${tip-.318} Q -1.105 ${tip-.132} -1.00 ${tip+.013} Q -1.075 ${tip+.108} -1.164 ${tip+.29} Q -.965 ${tip+.23} -.873 ${neck+.082} L ${tail+.06} ${neck+.047} Z`));
+
+      const tone=s.createLinearGradient(0,-.29,0,.25);
+      tone.addColorStop(0,rgba(mix(base,palette.depth,lit ? .36 : .62),1));
+      tone.addColorStop(.29,rgba(base,1));
+      tone.addColorStop(.56,rgba(mix(base,silver,lit ? .64 : (light ? .35 : .52)),1));
+      tone.addColorStop(.82,rgba(mix(base,silver,lit ? .77 : .64),1));
+      tone.addColorStop(1,rgba(silver,lit ? .88 : .79));
+      s.fillStyle=tone;
+      s.fill(outline);
+      s.save();
+      s.clip(outline);
+      const lightRim=s.createLinearGradient(-.59,0,.74,0);
+      lightRim.addColorStop(0,rgba(silver,0));
+      lightRim.addColorStop(.52,rgba(silver,lit ? .67 : .48));
+      lightRim.addColorStop(1,rgba(silver,.14));
+      s.strokeStyle=lightRim;
+      s.lineWidth=.032;
+      s.stroke(path(`M -.61 ${neck} C -.365 -.076 -.198 -.112 .103 -.092 Q .484 -.088 .783 -.028`));
+      s.strokeStyle=rgba(fin,.51);
+      s.lineWidth=.022;
+      s.stroke(path('M .561 -.138 C .465 -.091 .43 .014 .493 .119 M .826 .016 Q .755 .044 .68 .038'));
+      s.restore();
+      s.fillStyle=rgba(mix(fin,base,.4),.36);
+      s.fill(path(`M .424 .022 Q .277 ${.20+swing*.09} .037 ${.21+swing*.08} Q .14 .101 .24 .047 Z`));
+      s.beginPath();
+      s.arc(.685,-.044,.049,0,turn);
+      s.fillStyle=rgba(mix(silver,base,.22),.85); s.fill();
+      s.beginPath(); s.arc(.697,-.047,.032,0,turn);
+      s.fillStyle=rgba(palette.depth,.92); s.fill();
+      s.beginPath(); s.arc(.710,-.059,.012,0,turn);
+      s.fillStyle=rgba(silver,.92); s.fill();
+      return sprite;
+    });
+  }
+
+  function drawWhaleShark(ctx,s,time,light,palette,w) {
+    if (s.x < -s.size*2 || s.x > w+s.size*2) return;
+    const undulation=Math.sin(time*1.89+s.phase);
+    const bank=Math.cos(time*.58+s.phase);
+    const hide=palette.shark;
+    const rim=palette.rim;
+    ctx.save();
+    ctx.translate(s.x,s.y);
+    ctx.rotate(s.angle+.018*undulation);
+    ctx.scale(s.size*s.dir,s.size*(.95+.055*bank));
+    ctx.globalAlpha=s.opacity;
+
+    const backFin=mix(hide,palette.depth,.26);
+    const lipTone=mix(hide,rim,light ? .38 : .27);
+    ctx.fillStyle=rgba(backFin,.70);
+    ctx.fill(farFin);
+    ctx.fill(secondDorsal);
+    ctx.fill(dorsal);
+    ctx.save();
+    ctx.translate(-.806,.051*undulation);
+    ctx.rotate(.105*undulation);
+    ctx.scale(.88+.15*Math.cos(time*1.89+s.phase-.24),1);
+    const tailTone=ctx.createLinearGradient(0,-.32,0,.24);
+    tailTone.addColorStop(0,rgba(backFin,.85));
+    tailTone.addColorStop(.57,rgba(hide,.98));
+    tailTone.addColorStop(1,rgba(mix(hide,rim,.26),.84));
+    ctx.fillStyle=tailTone;
+    ctx.fill(tailFin);
+    ctx.restore();
+
+    const body=ctx.createLinearGradient(0,-.21,0,.17);
+    body.addColorStop(0,rgba(mix(hide,palette.depth,.39),1));
+    body.addColorStop(.25,rgba(hide,1));
+    body.addColorStop(.65,rgba(mix(hide,rim,light ? .17 : .22),1));
+    body.addColorStop(1,rgba(mix(hide,rim,light ? .56 : .49),.90));
+    ctx.fillStyle=body;
+    ctx.fill(whaleBody);
+    ctx.save();
+    ctx.clip(whaleBody);
+    ctx.strokeStyle=rgba(rim,.21);
+    ctx.lineWidth=.009;
+    ctx.stroke(ridges);
+    spots.forEach((layer,i)=>{
+      ctx.fillStyle=rgba(rim,(.25+i*.14)*(light ? .84 : .71));
+      ctx.fill(layer);
+    });
+    ctx.restore();
+
+    const finTone=ctx.createLinearGradient(.24,.078,-.13,.34);
+    finTone.addColorStop(0,rgba(mix(hide,rim,.12),1));
+    finTone.addColorStop(.82,rgba(backFin,.89));
+    finTone.addColorStop(1,rgba(hide,.55));
+    ctx.fillStyle=finTone; ctx.fill(nearFin);
+    ctx.strokeStyle=rgba(lipTone,.80);
+    ctx.lineWidth=.0085;
+    ctx.stroke(mouth);
+    ctx.strokeStyle=rgba(palette.depth,.66);
+    ctx.lineWidth=.006;
+    ctx.stroke(gills);
+    ctx.beginPath(); ctx.ellipse(.744,-.071,.015,.010,-.1,0,turn);
+    ctx.fillStyle=rgba(palette.depth,.91); ctx.fill();
+    ctx.beginPath(); ctx.arc(.749,-.073,.004,0,turn);
+    ctx.fillStyle=rgba(rim,.66); ctx.fill();
+    ctx.restore();
+  }
+  const raySpecks=Array.from({length:31},()=>{
+    const x=-.43+rand()*.98, y=(rand()-.5)*1.19, r=.010+rand()*.024;
+    return [x,y,r,.11+rand()*.19];
+  });
+
+  function drawStingray(ctx,x,y,size,heading,phase,opacity,light,palette) {
+    const flap=Math.sin(phase), lag=Math.sin(phase-.67);
+    const nearWing=.91+flap*.17;
+    const farWing=.81-lag*.14;
+    const ray=palette.ray, rim=palette.rim;
+    ctx.save();
+    ctx.translate(x,y);
+    ctx.rotate(Math.sin(phase*.40)*.087);
+    ctx.scale(size*heading,size);
+    ctx.globalAlpha=opacity;
+
+    // A narrow taper and the delayed bend of the whip tail, trailing behind the disc.
+    const bend=Math.sin(phase-.5)*.18, tip=Math.sin(phase-1.2)*.37;
+    const tail=path(`M -.58 -.035 C -.95 ${bend*.15-.039} -1.31 ${bend-.025} -1.68 ${tip*.77-.015}
+      Q -1.86 ${tip-.01} -2.04 ${tip} Q -1.85 ${tip+.025} -1.67 ${tip*.77+.028}
+      C -1.29 ${bend+.040} -.92 ${bend*.15+.055} -.58 .056 Z`);
+    const tailShade=ctx.createLinearGradient(-2.04,0,-.58,0);
+    tailShade.addColorStop(0,rgba(ray,.16));
+    tailShade.addColorStop(.58,rgba(ray,.73));
+    tailShade.addColorStop(1,rgba(mix(ray,palette.depth,.27),.96));
+    ctx.fillStyle=tailShade;
+    ctx.fill(tail);
+
+    const wing=(span,sign,sweep)=>path(`M .76 -.03 C .65 ${.16*sign} .35 ${.30*sign} .25 ${.53*span*sign}
+      C .14 ${.78*span*sign} ${.02+sweep} ${.98*span*sign} ${-.19+sweep} ${1.01*span*sign}
+      C ${-.39+sweep} ${.96*span*sign} -.50 ${.67*span*sign} -.63 ${.46*span*sign}
+      Q -.82 ${.24*sign} -.71 .006 Q -.34 ${-.092*sign} .10 ${-.033*sign} Z`);
+    const skin=(span,sign)=>{
+      const tone=ctx.createLinearGradient(.19,0,-.18,span*sign);
+      tone.addColorStop(0,rgba(mix(ray,palette.depth,.12),1));
+      tone.addColorStop(.57,rgba(ray,.92));
+      tone.addColorStop(.87,rgba(mix(ray,rim,light ? .39 : .28),.78));
+      tone.addColorStop(1,rgba(mix(ray,rim,.55),.49));
+      return tone;
+    };
+    ctx.fillStyle=skin(farWing,-1);
+    const far=wing(farWing,-1,-.088*lag);
+    ctx.fill(far);
+    ctx.fillStyle=skin(nearWing,1);
+    const near=wing(nearWing,1,.107*flap);
+    ctx.fill(near);
+    ctx.save();
+    const disc=new Path2D();
+    disc.addPath(far);disc.addPath(near);
+    ctx.clip(disc,'nonzero');
+    for (const [px,py,r,a] of raySpecks) {
+      ctx.beginPath();
+      ctx.fillStyle=rgba(mix(ray,rim,.53),a);
+      ctx.ellipse(px,py,r,r*.72,0,0,turn);
+      ctx.fill();
+    }
+    ctx.restore();
+
+    const spine=ctx.createLinearGradient(0,-.23,0,.30);
+    spine.addColorStop(0,rgba(mix(ray,rim,.35),.47));
+    spine.addColorStop(.48,rgba(ray,.88));
+    spine.addColorStop(1,rgba(mix(ray,palette.depth,.37),.38));
+    ctx.fillStyle=spine;
+    ctx.fill(path('M .75 -.03 C .59 -.159 .33 -.196 .031 -.162 Q -.438 -.094 -.727 -.011 L -.72 .035 Q -.351 .176 .133 .176 Q .558 .145 .75 -.03 Z'));
+    ctx.lineWidth=.014;
+    ctx.strokeStyle=rgba(rim,.23);
+    ctx.stroke(path('M -.648 .013 C -.397 .016 -.166 -.041 .022 -.090 Q .390 -.142 .653 -.052'));
+    for (const py of [-.096,.098]) {
+      ctx.beginPath(); ctx.ellipse(.46,py,.045,.028,py,0,turn);
+      ctx.fillStyle=rgba(mix(ray,rim,.50),.60);ctx.fill();
+      ctx.beginPath();ctx.arc(.476,py,.020,0,turn);
+      ctx.fillStyle=rgba(palette.depth,.91);ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  function drawJellyfish(ctx,x,y,size,phase,opacity,light,palette) {
+    // A slow contraction pulls the bell inward; trailing tissue responds a beat later.
+    const pulse=((1+Math.sin(phase))*.5)**2.8;
+    const width=1-pulse*.16, crown=.72+pulse*.17, skirt=.12+pulse*.10;
+    const tissue=palette.jelly, rim=palette.rim;
+    ctx.save();
+    ctx.translate(x,y);
+    ctx.rotate(Math.sin(phase*.24)*.19);
+    ctx.scale(size,size);
+    ctx.globalAlpha=opacity;
+    ctx.lineCap='round';
+
+    const trailing=ctx.createLinearGradient(0,.04,0,1.92);
+    trailing.addColorStop(0,rgba(tissue,.70));
+    trailing.addColorStop(.49,rgba(mix(tissue,rim,.36),.38));
+    trailing.addColorStop(1,rgba(tissue,0));
+    for (let i=0;i<9;i++) {
+      const u=(i-4)/4;
+      const wobble=Math.sin(phase-.72+i*.68)*.14;
+      const end=1.38+.54*Math.sin(i*2.30)**2;
+      ctx.strokeStyle=trailing;
+      ctx.lineWidth=i%3===1 ? .035 : .019;
+      ctx.beginPath();
+      ctx.moveTo(u*width*.83,skirt-.016);
+      ctx.bezierCurveTo(u*.68+wobble,.63-pulse*.17,
+        u*.54-wobble,.97,u*.67+wobble*1.4,end-pulse*.11);
+      ctx.stroke();
+    }
+    ctx.lineWidth=.045;
+    ctx.strokeStyle=rgba(mix(tissue,rim,.39),.32);
+    for (let i=0;i<3;i++) {
+      const k=(i-1)*.16;
+      ctx.beginPath();
+      ctx.moveTo(k,skirt-.07);
+      ctx.bezierCurveTo(k+.25,.39,k-.25,.62,k+.05,.83);
+      ctx.bezierCurveTo(k+.17,.97,k-.17,1.07,k-.13,1.23-pulse*.16);
+      ctx.stroke();
+    }
+
+    const bell=path(`M ${-width} ${skirt} C ${-width*.99} ${-.34-pulse*.13} ${-width*.51} ${-crown} 0 ${-crown}
+      C ${width*.51} ${-crown} ${width*.98} ${-.34-pulse*.13} ${width} ${skirt}
+      C ${width*.60} ${skirt+.179} ${-width*.63} ${skirt+.181} ${-width} ${skirt} Z`);
+    const tint=ctx.createRadialGradient(-width*.28,-.49,.031,0,-.021,1.04);
+    tint.addColorStop(0,rgba(rim,light ? .69 : .57));
+    tint.addColorStop(.49,rgba(mix(tissue,rim,.43),.42));
+    tint.addColorStop(.83,rgba(tissue,.10));
+    tint.addColorStop(1,rgba(mix(tissue,rim,.36),.43));
+    ctx.fillStyle=tint;ctx.fill(bell);
+    ctx.lineWidth=.033;
+    ctx.strokeStyle=rgba(mix(tissue,rim,light ? .32 : .62),.54);
+    ctx.stroke(bell);
+    ctx.beginPath();
+    ctx.ellipse(0,skirt-.01,width,.092+pulse*.018,0,0,turn);
+    ctx.lineWidth=.025;
+    ctx.strokeStyle=rgba(mix(tissue,rim,.46),.64);ctx.stroke();
+    // Four translucent horseshoe-shaped gonads give a moon-jelly-like bell its structure.
+    ctx.strokeStyle=rgba(tissue,.46);
+    ctx.lineWidth=.028;
+    for (let i=0;i<4;i++) {
+      const a=.63+i*turn/4;
+      ctx.beginPath();
+      ctx.ellipse(Math.cos(a)*.154,Math.sin(a)*.076-.127,.093,.061+pulse*.009,-a,0,Math.PI*1.56);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawDeepWildlife(ctx,w,h,time,light,palette) {
+    const small=w<580;
+    const jellyPlaces=[[.167,.39,.92,.37],[.826,.34,.88,2.80],[.66,.63,.62,4.75]];
+    jellyPlaces.slice(0,small ? 2 : 3).forEach(([x,y,size,phase],i)=>{
+      const px=w*(x+.046*Math.sin(time*.139+phase));
+      const py=h*(y+.072*Math.sin(time*.221+phase));
+      drawJellyfish(ctx,px,py,Math.min(h*.069,w*.065)*size,time*(1.04+i*.15)+phase,
+        (light ? .66 : .64)*(i===2 ? .74 : 1),light,palette);
+    });
+    const rayPaths=[[1,40,.052,.656,1],[-1,53,.124,.29,.63]];
+    rayPaths.forEach(([heading,period,offset,y,scale],i)=>{
+      const phase=(time/period+offset)%1;
+      const x=w*(heading>0 ? -.29+1.58*phase : 1.29-1.58*phase);
+      const yPos=h*(y+.055*Math.sin(phase*turn+i*.61));
+      const size=Math.min(h*.119,w*.13)*scale;
+      if (x< -size*2.3 || x>w+size*2.3) return;
+      drawStingray(ctx,x,yPos,size,heading,time*2.07+i*.96,
+        (light ? .57 : .54)*(i===1 ? .74 : 1),light,palette);
+    });
+  }
+
+  return {fishSprites,drawWhaleShark,drawDeepWildlife};
+}
+
+const SIGNET_SETTLED_AT=12;
+const SIGNET_FADE_OUT=2;
+const SIGNET_FADE_IN=5;
+const SIGNET_CYCLE=SIGNET_FADE_OUT+SIGNET_FADE_IN;
+
+function createFishSignet(geometry,w,h,banks) {
+  const outline=geometry.querySelector('#signet-outline');
+  const box=outline.getBBox();
+  const length=outline.getTotalLength();
+  const cx=box.x+box.width/2, cy=box.y+box.height/2;
+  const small=w<580;
+  const scale=Math.min(w*(small ? .62 : .55),h*.66,343)/Math.max(box.width,box.height);
+  const wrap=(n)=>(n%length+length)%length;
+  // Preserve the eight tips of the original outline, even with a small number of fish.
+  const tips=Array.from({length:8},()=>({projection:-Infinity,at:0}));
+  for (let i=0;i<1024;i++) {
+    const at=length*i/1024, p=outline.getPointAtLength(at);
+    const angle=Math.atan2(p.y-cy,p.x-cx);
+    const sector=(Math.round(angle/(Math.PI/4))+8)%8;
+    const axis=sector*Math.PI/4;
+    const projection=(p.x-cx)*Math.cos(axis)+(p.y-cy)*Math.sin(axis);
+    if (projection>tips[sector].projection) tips[sector]={projection,at};
+  }
+  const sorted=tips.map(({at})=>at).sort((a,b)=>a-b);
+  const points=[];
+  sorted.forEach((at,i)=>{
+    points.push(at);
+    if (!small || i%2===0) points.push((at+(sorted[i+1]??sorted[0]+length))*.5);
+  });
+  const seek=outline.getPointAtLength.bind(outline);
+  function contourPoint(at) {
+    const p=seek(wrap(at));
+    return {x:w*.5+(p.x-cx)*scale,y:h*.44+(p.y-cy)*scale};
+  }
+  const slots=points.map((at,i)=>{
+    return {...contourPoint(at),order:(i*5)%points.length,index:i};
+  }).sort((a,b)=>a.order-b.order);
+  const departures=[];
+  const arrivals=new Float64Array(points.length).fill(Infinity);
+  // Follow the vector's actual curves between each pair, rather than cutting across the tips.
+  const links=points.map((start,i)=>{
+    const end=points[i+1]??points[0]+length;
+    const steps=Math.max(5,Math.ceil((end-start)*scale/2.6));
+    const path=new Path2D();
+    for (let j=0;j<=steps;j++) {
+      const p=seek(wrap(start+(end-start)*j/steps));
+      const x=w*.5+(p.x-cx)*scale, y=h*.44+(p.y-cy)*scale;
+      if (j===0) path.moveTo(x,y); else path.lineTo(x,y);
+    }
+    return path;
+  });
+  const clamp01=(x)=>Math.max(0,Math.min(1,x));
+  const smooth=(x)=>x*x*(3-2*x);
+  const eased=(x)=>x*x*x*(x*(x*6-15)+10);
+  const angleDelta=(a,b)=>Math.atan2(Math.sin(b-a),Math.cos(b-a));
+  // Preserve each of the original internal negative spaces, including the small center petals.
+  const geometryX=w*.5-cx*scale, geometryY=h*.44-cy*scale;
+  const interior=Array.from(geometry.querySelectorAll('[data-signet-interior]'),(shape)=>{
+    const b=shape.getBBox();
+    const x=geometryX+(b.x+b.width*.5)*scale, y=geometryY+(b.y+b.height*.5)*scale;
+    const near=slots.map((slot)=>({id:slot.index, distance:(slot.x-x)**2+(slot.y-y)**2}))
+      .sort((a,b)=>a.distance-b.distance).slice(0,2).map(({id})=>id);
+    return {path:new Path2D(shape.getAttribute('d')),near};
+  });
+
+  function advance(time) {
+    for (let i=departures.length;i<slots.length;i++) {
+      const start=1.6+i*.34+Math.sin(i*6.37)*.10;
+      if (time<start) break;
+      const goal=slots[i], bank=banks[i%banks.length];
+      // Lift a visible fish out of its actual school; its schoolmates keep swimming.
+      let index=0, score=Infinity;
+      for (let j=0;j<bank.length;j++) {
+        const f=bank[j];
+        if (f.x<w*.035 || f.x>w*.965 || f.y<h*.12 || f.y>h*.78) continue;
+        const d=Math.hypot(f.x-goal.x,f.y-goal.y);
+        if (d<score) { score=d; index=j; }
+      }
+      const [fish]=bank.splice(index,1);
+      const speed=Math.max(1,Math.hypot(fish.vx,fish.vy));
+      const launch=Math.max(h*.10,Math.min(h*.24,Math.hypot(fish.x-goal.x,fish.y-goal.y)*.41));
+      const duration=3.1+.65*Math.sin(i*2.8)**2;
+      arrivals[goal.index]=start+duration;
+      departures.push({
+        fish,goal,start,duration,initialSlope:Math.max(.45,Math.min(1.60,speed*duration/(3*launch))),
+        ax:fish.x+fish.vx/speed*launch, ay:fish.y+fish.vy/speed*launch,
+        bx:goal.x-h*.085, by:goal.y+h*.008,
+      });
+    }
+  }
+
+  const slotIndex=(i)=>(i%points.length+points.length)%points.length;
+  function settledPoint(index,time) {
+    if (time<SIGNET_SETTLED_AT) return contourPoint(points[index]);
+    const elapsed=time-SIGNET_SETTLED_AT;
+    const cycle=Math.floor(elapsed/SIGNET_CYCLE), phase=elapsed%SIGNET_CYCLE;
+    // Alternate which adjacent slots trade fish. All travel stays on the fixed outline.
+    // After two exchanges, an originally even slot advances by two; an odd slot retreats by two.
+    const direction=index%2===0 ? 1 : -1;
+    const from=slotIndex(index+direction*cycle);
+    const to=slotIndex(from+direction);
+    if (phase>=SIGNET_FADE_OUT) return contourPoint(points[to]);
+    const pairCount=points.length/2;
+    const pair=slotIndex((direction===1 ? from : to)-cycle%2)/2;
+    // Interleave the swaps so adjoining stretches don't all move at once.
+    const order=(pair%2)*(pairCount/2)+Math.floor(pair/2);
+    // Longer, overlapping passes give each pair time to accelerate and settle
+    // while the other fish continue to anchor the silhouette.
+    const start=SIGNET_FADE_OUT*(.025+.315*order/(pairCount-1));
+    const p=clamp01((phase-start)/(SIGNET_FADE_OUT*.64));
+    const k=eased(p);
+    let distance=points[to]-points[from];
+    if (direction*distance<0) distance+=direction*length;
+    return contourPoint(points[from]+k*distance);
+  }
+
+  function positions(time) {
+    // Even when trading slots, the fish keep their common heading.
+    const heading=-.075;
+    return departures.map((d)=>{
+      const {fish,goal,ax,ay,bx,by}=d;
+      const age=Math.max(0,time-d.start);
+      const p=Math.min(1,age/d.duration);
+      // Carry the school fish's forward speed into its departure, easing to a stop.
+      const slope=d.initialSlope;
+      const k=p*(slope+p*(3-2*slope+p*(slope-2))), s=1-k;
+      const fullSize=Math.min(small ? 15.5 : 20.5,h*.053)*(.91+(fish.size/(small ? 11.1 : 15.4))*.17);
+      if (p===1) {
+        return {...settledPoint(goal.index,time),angle:heading,size:fullSize,
+          phase:fish.phase,depth:fish.depth,glow:1};
+      }
+      const angle=Math.atan2(
+        s*s*(ay-fish.y)+2*s*k*(by-ay)+k*k*(goal.y-by),
+        s*s*(ax-fish.x)+2*s*k*(bx-ax)+k*k*(goal.x-bx),
+      );
+      const departureHeading=fish.heading+angleDelta(fish.heading,angle)*smooth(clamp01(p/.25));
+      const glow=Math.min(1,age/.95);
+      return {
+        x:s**3*fish.x+3*s*s*k*ax+3*s*k*k*bx+k**3*goal.x,
+        y:s**3*fish.y+3*s*s*k*ay+3*s*k*k*by+k**3*goal.y,
+        angle:departureHeading+angleDelta(departureHeading,heading)*smooth(clamp01((p-.58)/.42)),
+        size:fish.size+(fullSize-fish.size)*k,
+        phase:fish.phase, depth:fish.depth, glow,
+      };
+    });
+  }
+
+  function drawLinks(ctx,time,light,palette,staticView) {
+    function ease(age, seconds) {
+      const k=Math.max(0,Math.min(1,age/seconds));
+      return k*k*(3-2*k);
+    }
+    let cycle=1;
+    if (!staticView && time>=SIGNET_SETTLED_AT) {
+      const phase=(time-SIGNET_SETTLED_AT)%SIGNET_CYCLE;
+      // Ease down and up at different speeds, without a hold between fades.
+      cycle=phase<SIGNET_FADE_OUT
+        ? (1+Math.cos(Math.PI*phase/SIGNET_FADE_OUT))*.5
+        : (1-Math.cos(Math.PI*(phase-SIGNET_FADE_OUT)/SIGNET_FADE_IN))*.5;
+    }
+    if (cycle<=0) return;
+    const color=light ? palette.gold : palette.glint;
+    function glowStroke(path,opacity,shimmer,inner,units) {
+      const strength=opacity*cycle*shimmer;
+      const stroke=(width,rgb,alpha)=>{
+        ctx.lineWidth=width/units;
+        ctx.strokeStyle=`rgba(${rgb.join(',')},${strength*alpha})`;
+        ctx.stroke(path);
+      };
+      stroke(inner ? 7.5 : 10,palette.glint,light ? .16 : .15);
+      stroke(inner ? 4 : 5,palette.glint,light ? .29 : .26);
+      stroke(inner ? 1.35 : 1.55,color,inner ? (light ? .73 : .72) : (light ? .86 : .91));
+    }
+    ctx.save();
+    ctx.lineJoin='round';
+    ctx.lineCap='round';
+    links.forEach((link,i)=>{
+      const age=time-Math.max(arrivals[i],arrivals[(i+1)%links.length]);
+      if (age<=0) return;
+      const opacity=ease(age,.8);
+      const shimmer=.94+.06*Math.sin(i*.82-time*1.6);
+      glowStroke(link,opacity,shimmer,false,1);
+    });
+    ctx.translate(geometryX,geometryY);
+    ctx.scale(scale,scale);
+    interior.forEach(({path,near},i)=>{
+      const age=time-Math.max(arrivals[near[0]],arrivals[near[1]])-.22;
+      if (age<=0) return;
+      const opacity=ease(age,1.1);
+      const pulse=.95+.05*Math.sin(time*1.1-i*.70);
+      glowStroke(path,opacity,pulse,true,scale);
+    });
+    ctx.restore();
+  }
+  return {advance,positions,drawLinks};
+}
+
+(() => {
+  'use strict';
+  const root = document.documentElement;
+  const canvas = document.querySelector('#current');
+  const ctx = canvas.getContext('2d');
+  const modes = [...document.querySelectorAll('[data-mode]')];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const systemDark = matchMedia('(prefers-color-scheme: dark)');
+  const stepSize = 1/30;
+  let w = 0, h = 0, dpr = 1, t = 0, frame = 0, previous = null;
+  let visible = false, manualMode = false, staticView = reduced.matches;
+  let palette, back, motes, schoolSprites, glowingSprites, ocean, signet, simulated = 0, lag = 0;
+  const TAU = Math.PI * 2;
+  const clamp = (x) => Math.max(0, Math.min(1, x));
+  const lerp = (a, b, k) => a + (b - a) * k;
+  const mix = (a, b, k) => a.map((v, i) => Math.round(lerp(v, b[i], k)));
+  const rgba = (rgb, a) => `rgba(${rgb.join(',')},${a})`;
+  function seed(n) {
+    return () => {
+      n = (Math.imul(n, 1664525) + 1013904223) >>> 0;
+      return n / 4294967296;
+    };
+  }
+  const marine=createMarineArt(rgba,mix,seed);
+
+  const palettes = {
+    light: {
+      surface: ['#deeee6', '#a8d3c9', '#80b8ae', '#dce8db'],
+      beam: [255, 255, 221], depth: [41, 101, 107], haze: [241, 251, 223],
+      shoal: [33, 92, 103], rim: [217, 247, 231], dust: [43, 114, 112],
+      gold: [158, 84, 22], glint: [255, 219, 120], shark: [39,94,107],
+      ray: [65,101,103], jelly: [109,136,161],
+    },
+    dark: {
+      surface: ['#203b52', '#142d44', '#101e33', '#0d1117'],
+      beam: [150, 201, 228], depth: [7, 16, 34], haze: [75, 168, 192],
+      shoal: [112, 169, 193], rim: [203, 245, 245], dust: [162, 224, 230],
+      gold: [239, 169, 61], glint: [255, 232, 160], shark: [17,45,70],
+      ray: [53,102,124], jelly: [123,150,190],
+    },
+  };
+  function waterBackdrop() {
+    back = document.createElement('canvas');
+    back.width = canvas.width;
+    back.height = canvas.height;
+    const b = back.getContext('2d');
+    b.scale(dpr,dpr);
+    const isLight = root.dataset.theme === 'light';
+    const grad = b.createLinearGradient(0,0,0,h);
+    palette.surface.forEach((c,i) => grad.addColorStop([0,.24,.72,1][i],c));
+    b.fillStyle = grad;
+    b.fillRect(0,0,w,h);
+
+    // Wide, softly feathered shafts and a shallow surface shimmer, painted only on resize/theme change.
+    const glow = b.createRadialGradient(w*.48,0,0,w*.48,0,Math.max(w*.69,h*.96));
+    glow.addColorStop(0,rgba(palette.haze,isLight ? .72 : .23));
+    glow.addColorStop(1,rgba(palette.haze,0));
+    b.fillStyle = glow;
+    b.fillRect(0,0,w,h);
+    const noise = seed(987);
+    for (let i=0;i<23;i++) {
+      const x = w*(.02 + noise()*.94);
+      const width = 10+noise()*w*.06;
+      const reach = h*(.36+noise()*.53);
+      b.save();
+      b.translate(x,-h*.1);
+      b.rotate(-.20 - noise()*.23);
+      const g = b.createLinearGradient(0,0,0,reach);
+      g.addColorStop(0,rgba(palette.beam,(.1+noise()*.18)*(isLight ? 1 : .27)));
+      g.addColorStop(1,rgba(palette.beam,0));
+      b.fillStyle=g;
+      b.filter = `blur(${Math.max(5,w*.009)}px)`;
+      b.beginPath();
+      b.moveTo(-width*.18,0);
+      b.lineTo(width*.18,0);
+      b.lineTo(width*.68,reach);
+      b.lineTo(-width*.68,reach);
+      b.closePath();
+      b.fill();
+      b.restore();
+    }
+    for (let i=0;i<9;i++) {
+      const y = 5 + i*i*.55;
+      const x = noise()*w*.33;
+      b.strokeStyle=rgba(palette.beam, (1-i/10)*(isLight ? .16 : .09));
+      b.lineWidth=1+i*.21;
+      b.beginPath();
+      b.moveTo(x,y);
+      b.bezierCurveTo(w*.19,y+26,w*.34,y-21,w*.54,y+2);
+      b.bezierCurveTo(w*.71,y+19,w*.82,y-13,w-x*.5,y+3);
+      b.stroke();
+    }
+    const vignette = b.createRadialGradient(w*.5,h*.34,h*.14,w*.5,h*.41,Math.max(w*.67,h*.74));
+    vignette.addColorStop(0,rgba(palette.depth,0));
+    vignette.addColorStop(1,rgba(palette.depth,isLight ? .13 : .5));
+    b.fillStyle=vignette;
+    b.fillRect(0,0,w,h);
+  }
+
+  function drawFish(f, time, k, light) {
+    const lit=f.glow??0;
+    const x=lerp(f.px??f.x,f.x,k),y=lerp(f.py??f.y,f.y,k),size=f.size;
+    if (x < -size*2 || x > w+size*2) return;
+    const phase=time*(8+f.depth*4)+f.phase;
+    const index=Math.floor(phase/TAU*schoolSprites.length)%schoolSprites.length;
+    ctx.save();
+    ctx.translate(x,y);
+    const direction=f.angle??f.heading;
+    const facing=Math.cos(direction)<0 ? -1 : 1;
+    ctx.rotate(direction+(facing<0 ? Math.PI : 0));
+    const roll=f.roll??.1;
+    ctx.scale(facing*(1-.09*roll),1-.32*roll);
+    if (lit>0) {
+      const pulse=.87+.13*Math.sin(time*1.42+f.phase);
+      const r=size*1.20;
+      const glow=ctx.createRadialGradient(0,0,1,0,0,r);
+      glow.addColorStop(0,rgba(palette.glint,lit*pulse*(light ? .54 : .60)));
+      glow.addColorStop(.48,rgba(palette.glint,lit*pulse*(light ? .24 : .25)));
+      glow.addColorStop(1,rgba(palette.glint,0));
+      ctx.fillStyle=glow;
+      ctx.fillRect(-r,-r,2*r,2*r);
+    }
+    if (lit<1) {
+      ctx.globalAlpha=(.13+f.depth*.50+roll*.065)*(1-lit);
+      ctx.drawImage(schoolSprites[index],-size,-size*2/3,size*2,size*4/3);
+    }
+    if (lit>0) {
+      ctx.globalAlpha=lit;
+      ctx.drawImage(glowingSprites[index],-size,-size*2/3,size*2,size*4/3);
+    }
+    ctx.restore();
+  }
+
+  function render(time) {
+    if (!back || !w || !h) return;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.drawImage(back,0,0,w,h);
+    for (const p of motes) {
+      ctx.fillStyle=rgba(palette.dust,p.alpha);
+      ctx.beginPath();
+      ctx.ellipse((p.x*w+time*p.speed)%w,p.y*h+3*Math.sin(time*.4+p.x*TAU),p.r,p.r*.72,0,0,TAU);
+      ctx.fill();
+    }
+    const isLight = root.dataset.theme==='light';
+    marine.drawDeepWildlife(ctx,w,h,time,isLight,palette);
+    for (const shark of ocean.sharksAt(time)) marine.drawWhaleShark(ctx,shark,time,isLight,palette,w);
+    const blend=staticView ? 1 : clamp(lag/stepSize);
+    for (let i=ocean.school.length-1;i>=0;i--) {
+      for (const fish of ocean.school[i]) drawFish(fish,time,blend);
+    }
+    signet.drawLinks(ctx,time,isLight,palette,staticView);
+    for (const fish of signet.positions(time)) drawFish(fish,time,1,isLight);
+  }
+
+  function resetOcean() {
+    ocean=createOcean(w,h);
+    signet=createFishSignet(document.querySelector('#signet-geometry'),w,h,ocean.school);
+    signet.advance(t);
+    lag=0;
+    simulated=t;
+  }
+
+  function resize() {
+    const width=canvas.clientWidth, height=canvas.clientHeight;
+    const density=Math.min(devicePixelRatio || 1,1.75);
+    if (w===width && h===height && dpr===density) return;
+    w=width;
+    h=height;
+    if (!w || !h) return;
+    dpr=density;
+    canvas.width = Math.round(w*dpr);
+    canvas.height = Math.round(h*dpr);
+    resetOcean();
+    const r = seed(42);
+    motes = Array.from({length:w<580 ? 40 : 92}, () => ({
+      x:r(), y:r(), speed:1+r()*4, alpha:.06+r()*.16, r:.5+r()*1.55,
+    }));
+    rebuild();
+  }
+
+  function rebuild() {
+    if (!ctx || !w || !h) return;
+    palette = palettes[root.dataset.theme];
+    waterBackdrop();
+    const light=root.dataset.theme==='light';
+    schoolSprites = marine.fishSprites(palette,light,false);
+    glowingSprites = marine.fishSprites(palette,light,true);
+    render(t);
+  }
+
+  function sync() {
+    if (!ctx) return;
+    const canPlay = visible && !document.hidden && !staticView;
+    if (canPlay && !frame) frame=requestAnimationFrame(tick);
+    if (!canPlay) {
+      if (frame) cancelAnimationFrame(frame);
+      frame=0;
+      previous=null;
+    }
+  }
+
+  function tick(now) {
+    frame=0;
+    if (previous!==null) {
+      const delta=Math.min(.064,(now-previous)/1000);
+      lag+=delta;
+      t+=delta;
+      while (lag>=stepSize) {
+        simulated+=stepSize;
+        ocean.step(stepSize,simulated);
+        signet.advance(simulated);
+        lag-=stepSize;
+      }
+    }
+    previous=now;
+    render(t);
+    sync();
+  }
+
+  function setMode(mode) {
+    root.dataset.theme=mode;
+    modes.forEach((button) => button.setAttribute('aria-pressed',String(button.dataset.mode===mode)));
+    rebuild();
+  }
+
+  modes.forEach((button) => button.addEventListener('click', () => {
+    manualMode=true;
+    setMode(button.dataset.mode);
+  }));
+  systemDark.addEventListener('change', () => {
+    if (!manualMode) setMode(systemDark.matches ? 'dark' : 'light');
+  });
+  setMode(systemDark.matches ? 'dark' : 'light');
+  if (!ctx) return;
+
+  t=staticView ? SIGNET_SETTLED_AT : 0;
+  resize();
+  sync();
+  new ResizeObserver(resize).observe(canvas);
+  new IntersectionObserver(([entry]) => {
+    visible=entry.isIntersecting;
+    sync();
+  }).observe(canvas);
+  document.addEventListener('visibilitychange',sync);
+  reduced.addEventListener('change', () => {
+    staticView=reduced.matches;
+    if (reduced.matches) {
+      t=Math.max(t,SIGNET_SETTLED_AT);
+      signet.advance(t);
+      lag=0;
+      simulated=t;
+    }
+    render(t);
+    sync();
+  });
+})();
+
+</script>
+</body>
+</html>
