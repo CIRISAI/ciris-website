@@ -14,6 +14,7 @@ import { NEW_LOOK_ROUTES, DARK_SCENE_ROUTES } from "@/app/components/newLookRout
 // it before paint, so the language "sticks" across the whole site. Built from
 // config so the path/locale lists never drift.
 const LOCALE_GUARD = `(function(){try{
+if(/[?&]hl=en(&|$)/.test(location.search))return;
 var s=localStorage.getItem('ciris-locale');if(!s)return;
 var P=${JSON.stringify(PREFIXED_LOCALES)},M=${JSON.stringify([...LOCALIZED_ROUTES])};
 var path=location.pathname;while(path.length>1&&path.charAt(path.length-1)==='/')path=path.slice(0,-1);

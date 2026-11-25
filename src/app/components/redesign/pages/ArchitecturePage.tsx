@@ -114,12 +114,13 @@ export default function ArchitecturePage({ t, locale }: { t: Dictionary; locale:
         </section>
 
         {/* The infrastructure text is English only, so localized pages link to it
+            (hl=en keeps the saved-language redirect from bouncing the reader back)
             instead of mixing English into a translated page. */}
         {locale === "en" ? (
           <ArchitectureInfrastructure locale={locale} shippingLabel={t.rd.chips.shipping} />
         ) : (
           <p className={s.layerBody}>
-            <a href="/architecture#infrastructure" className={s.layerCta}>
+            <a href="/architecture/?hl=en#infrastructure" className={s.layerCta}>
               {a.infraEnglish}
             </a>
           </p>

@@ -39,6 +39,11 @@ def at(repo: Path, ref: str, path: str) -> bytes:
     return out.stdout
 
 
+def has(repo: Path, ref: str, path: str) -> bool:
+    return subprocess.run(["git", "cat-file", "-e", f"{ref}:{path}"], cwd=repo,
+                          capture_output=True).returncode == 0
+
+
 def text_edition(repo: Path, ref: str, version: str) -> str:
     head = (
         "THE CIRIS CONSTITUTION (CC)\n"
@@ -52,6 +57,10 @@ def text_edition(repo: Path, ref: str, version: str) -> str:
     )
     parts = [head]
     for name in ORDER:
+        # The foreword became CC 8.12 on 2026-11-15 and has no file of its own
+        # after that; every other file must be present.
+        if name == "FOREWORD" and not has(repo, ref, "constitution/FOREWORD.md"):
+            continue
         body = at(repo, ref, f"constitution/{name}.md").decode("utf-8").strip("\n")
         parts.append(f"\n{RULE}\n\n{body}\n")
     parts.append(f"\n{RULE}\n")

@@ -6,7 +6,7 @@
 // anti-Cartesian, Logos), truth by composition, and the eleven commitments
 // the wire keeps (drawn from this page, /constitutional-mesh and
 // /contextual-integrity; the plain-language rules under each live in
-// CIRISConstitution review/pieces/00_guarantees_plain.md). Prose from t.philosophy
+// CIRISConstitution constitution/digest/00_guarantees_plain.md). Prose from t.philosophy
 // (29 locales); button labels reuse already-translated strings where they
 // exist. Hero art: g13 borrowed (the seal motif) until a bespoke graphic
 // lands — same interim pattern as /contextual-integrity.
@@ -26,12 +26,12 @@ const COMMITMENT_KEYS: [CKey, CKey][] = [
   ["c11t", "c11b"],
 ];
 
-// The plain-language rules these cards summarize, pinned to the commit they
+// The plain-language rules these cards summarize, pinned to the tag they
 // were drawn from so the link cannot rot when the branch moves or merges.
 const RULES_PLAIN =
   "https://github.com/CIRISAI/CIRISConstitution/blob/" +
-  "7189daca9aa5a73064cd0b6e08a395d513cd5796/review/pieces/00_guarantees_plain.md";
-const RULES_EDITION = "CC 1.0-rc10";
+  "v1.0-rc22/constitution/digest/00_guarantees_plain.md";
+const RULES_EDITION = "CC 1.0-rc22";
 
 export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: string }) {
   const p = t.philosophy;
@@ -138,7 +138,7 @@ export default function PhilosophyV2({ t, locale }: { t: Dictionary; locale: str
         </div>
 
         <p className={s.footnote}>
-          {RULES_EDITION} · review/pieces/00_guarantees_plain.md · released
+          {RULES_EDITION} · constitution/digest/00_guarantees_plain.md · released
           edition CC {CONSTITUTION_VERSION}
         </p>
 

@@ -28,10 +28,14 @@ const REPO = "https://github.com/CIRISAI/CIRISConstitution";
 const CONST_DIR = `${REPO}/tree/main/constitution`;
 // Self-hosted so the read CTA downloads the reader PDF directly.
 const PDF = "/ciris_constitution.pdf";
-// The wire volume is hosted beside the full edition; the index links the rest
+// the wire volume is hosted beside the full edition; the rest open
 // at the release tag of the published edition.
 const WIRE_PDF = "/ciris_constitution-wire.pdf";
-const VOLUMES = `${REPO}/blob/v${CONSTITUTION_VERSION}/volumes/README.md`;
+const VOLUMES = `${REPO}/tree/v${CONSTITUTION_VERSION}/volumes`;
+// The nine volumes in the order of constitutionPage.volumes, by file name.
+const VOLUME_FILES = ["digest", "charter", "constitution", "wire", "dictionary", "policies", "maths", "register", "threats"];
+const volumePdf = (name: string) =>
+  `${REPO}/blob/v${CONSTITUTION_VERSION}/volumes/ciris_constitution-${CONSTITUTION_VERSION}-${name}.pdf`;
 
 // Per-part source files, in the same order as constitution.parts.
 const PART_FILES = [
@@ -178,7 +182,7 @@ export default function ConstitutionPage({ t, locale }: { t: Dictionary; locale:
         </div>
       </section>
 
-      {/* Nine volumes. Only the wire volume is hosted; the rest are listed in the index. */}
+      {/* Nine volumes. Only the wire volume is hosted; the rest open at the release tag. */}
       <section aria-labelledby="const-vol" className={s.sec}>
         <h2 id="const-vol" className={s.h2s}>
           {d.volumesTitle}
@@ -191,7 +195,7 @@ export default function ConstitutionPage({ t, locale }: { t: Dictionary; locale:
                 <span className={p.volBody}>{v.d}</span>
               </a>
             ) : (
-              <a key={v.t} href={VOLUMES} {...ext} className={p.vol}>
+              <a key={v.t} href={volumePdf(VOLUME_FILES[i])} {...ext} className={p.vol}>
                 <span className={p.volTitle}>{v.t}</span>
                 <span className={p.volBody}>{v.d}</span>
               </a>

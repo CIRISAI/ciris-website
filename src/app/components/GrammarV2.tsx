@@ -18,7 +18,7 @@ import { ContextualIntegrityCrossLink } from "@/app/components/ContextualIntegri
 /** Inline raw HTML from the dictionary. Content is authored/machine-translated by us, never user input. */
 const h = (str: string) => ({ __html: str });
 
-// Self-hosted constitution reader PDF (same file ConstitutionV2 serves).
+// Self-hosted constitution reader PDF (the same file /constitution serves).
 const CONSTITUTION_PDF = "/ciris_constitution.pdf";
 // The wire volume (rc10 on) is the grammar's own volume of the edition.
 const WIRE_PDF = "/ciris_constitution-wire.pdf";
