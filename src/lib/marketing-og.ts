@@ -4,6 +4,24 @@ export const MARKETING_OG: Record<
   string,
   Record<string, { title: string; description: string }>
 > = {
+  "/web4": {
+    "en": {
+      "title": "Web4: a web built around relationships, not platforms",
+      "description": "Web4 is not a new destination on the internet. It is a different way for the internet to organize trust: signed claims, portable identity, and shared rules you can leave in one step."
+    }
+  },
+  "/cewpos": {
+    "en": {
+      "title": "CEWPOS: a computer whose state is evidence",
+      "description": "CEWPOS (in development) is a federated operating environment built from immutable objects, signed attestations, and a small verifiable kernel, where AI can propose but never simply act."
+    }
+  },
+  "/architecture": {
+    "en": {
+      "title": "How CIRIS fits together: three layers, one system",
+      "description": "The agent proposes. The fabric verifies and admits. The federation decides what to trust. How the CIRIS agent, CEWP and CEWPOS, and the federation fit together."
+    }
+  },
   "/constitutional-mesh": {
     "en": {
       "title": "The Constitutional Mesh: What Open-Source AI Safety Rests On",

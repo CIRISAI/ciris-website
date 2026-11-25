@@ -11,6 +11,8 @@
 export const NEW_LOOK_ROUTES: ReadonlySet<string> = new Set([
   "/",
   "/about",
+  "/architecture",
+  "/cewpos",
   "/ai-welfare",
   "/cewp",
   "/ciris-scoring",
@@ -50,7 +52,8 @@ export const NEW_LOOK_ROUTES: ReadonlySet<string> = new Set([
   "/trust",
   "/values",
   "/verification",
-  "/vision"
+  "/vision",
+  "/web4"
 ]);
 
 /** Routes whose content is a hard-coded dark scene: the chrome is dark there

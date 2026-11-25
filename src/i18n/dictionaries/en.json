@@ -2834,8 +2834,8 @@
     "fact1": "Self-hosted or bring your own key",
     "fact2": "Every reasoning step signed and readable",
     "fact3": "No accounts sold, no data pooled",
-    "ogTitle": "CIRIS: An AI That Shows Its Work",
-    "ogDescription": "One app. No Big Tech data centers. Every claim it makes, signed. Open-source ethical AI you can try on your phone today, and check."
+    "ogTitle": "CIRIS: Intelligence you can verify",
+    "ogDescription": "CIRIS separates intelligence from authority, and makes authority accountable through evidence. Open-source agents, signed knowledge and a federated network, on the devices people already own."
   },
   "lobby": {
     "eyebrow": "CIRIS · the epistemic web",
@@ -3390,5 +3390,648 @@
     "btnLandscape": "The full landscape",
     "btnCirisGh": "CIRIS on GitHub",
     "btnMsGh": "Microsoft toolkit"
+  },
+  "rd": {
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "tryScout": "Try Scout",
+    "languageLabel": "Language",
+    "themeLabel": "Toggle day or night",
+    "groups": {
+      "people": {
+        "label": "For people",
+        "sub": "Try it, trust it",
+        "featureKicker": "START HERE",
+        "featureTitle": "An assistant that shows its work.",
+        "featureBody": "Use CIRIS on your phone or in the browser, and read every step it took.",
+        "featureCta": "Install the app →",
+        "install": "Install",
+        "installSub": "Phone, desktop or browser",
+        "howItWorks": "How the agent works",
+        "howItWorksSub": "From question to answer, step by step",
+        "privacy": "Privacy",
+        "privacySub": "What stays on your device",
+        "safety": "Safety",
+        "safetySub": "Guardrails, and the human brake",
+        "trust": "Trust",
+        "trustSub": "Why you can check, not just believe",
+        "services": "Services & pricing",
+        "servicesSub": "Free, hosted, or your own",
+        "values": "Values",
+        "valuesSub": "What it is built to care about",
+        "models": "Models",
+        "modelsSub": "Which models it runs on"
+      },
+      "builders": {
+        "label": "For builders",
+        "sub": "Build on the stack",
+        "featureKicker": "START HERE",
+        "featureTitle": "The agent proposes. The fabric admits. The federation decides.",
+        "featureBody": "How the pieces fit together, and where your code plugs in.",
+        "featureCta": "Architecture →",
+        "architecture": "Architecture",
+        "architectureSub": "How it fits together",
+        "grammar": "CEG grammar",
+        "grammarSub": "The language every row is written in",
+        "trace": "Explore a trace",
+        "traceSub": "Read a real agent's reasoning",
+        "verification": "Verification",
+        "verificationSub": "Check a signature yourself",
+        "integrations": "Integrations",
+        "integrationsSub": "Connect your tools",
+        "compliance": "Compliance",
+        "complianceSub": "EU AI Act, OWASP agentic top 10",
+        "killSwitch": "PQ kill switch",
+        "killSwitchSub": "Halting an agent, provably",
+        "compare": "Compare",
+        "compareSub": "Against other agent platforms",
+        "repositories": "Repositories",
+        "repositoriesSub": "Every repo, AGPL-3.0"
+      },
+      "network": {
+        "label": "For the network",
+        "sub": "Web4 and federation",
+        "featureKicker": "START HERE",
+        "featureTitle": "A web built around relationships, not platforms.",
+        "featureBody": "How signed claims, portable identity and shared rules make a federated internet possible.",
+        "featureCta": "The Web4 vision →",
+        "federation": "Federation",
+        "federationSub": "Nodes, trust roots, leaving in one step",
+        "cewp": "CEWP",
+        "cewpSub": "The epistemic web platform, running",
+        "cewpos": "CEWPOS",
+        "cewposSub": "A computer whose state is evidence",
+        "constitution": "Constitution",
+        "constitutionSub": "The rulebook the network shares",
+        "stewardship": "Governance & halt",
+        "stewardshipSub": "Amendment, stewardship, the human brake",
+        "mesh": "Constitutional mesh",
+        "meshSub": "The whole stack, end to end"
+      },
+      "researchers": {
+        "label": "For researchers",
+        "sub": "Check the claims",
+        "featureKicker": "START HERE",
+        "featureTitle": "Every open claim, tracked one by one.",
+        "featureBody": "What is proven, what is modelled, and what is still a question.",
+        "featureCta": "Research status →",
+        "status": "Research status",
+        "statusSub": "Claim by claim",
+        "theory": "First contact theory",
+        "theorySub": "The framework underneath",
+        "papers": "Papers",
+        "papersSub": "Published work",
+        "proof": "Proof",
+        "proofSub": "Formal models and what they show",
+        "collapse": "Coherence collapse",
+        "collapseSub": "How shared truth fails",
+        "ratchet": "Coherence ratchet",
+        "ratchetSub": "How it is held in place",
+        "scoring": "CIRIS scoring",
+        "scoringSub": "Measuring agents against the constitution",
+        "integrity": "Contextual integrity",
+        "integritySub": "Privacy as appropriate flow"
+      },
+      "about": {
+        "label": "About & ethos",
+        "about": "About",
+        "philosophy": "Philosophy",
+        "mdd": "MDD",
+        "welfare": "AI welfare",
+        "firstContact": "First contact",
+        "reviews": "Reviews",
+        "status": "Status",
+        "events": "Events",
+        "safetyPolicy": "Safety policy"
+      }
+    },
+    "chips": {
+      "shipping": "Shipping",
+      "inApp": "In the app",
+      "inDev": "In development",
+      "research": "Research",
+      "modelled": "Modelled · calibrated on the live mesh"
+    },
+    "footer": {
+      "blurb": "The infrastructure for accountable intelligence. CIRIS L3C, mission-locked.",
+      "support": "Support CIRIS",
+      "license": "AGPL-3.0 · Open source · 29 languages"
+    },
+    "home": {
+      "ctaHow": "See how it works",
+      "ctaToday": "Use it today",
+      "doesKicker": "No data center required",
+      "doesTitle": "Calls, votes and scale, on the devices people already own.",
+      "callsLabel": "Calls & live video",
+      "callsTitle": "Private calls, with no company in the middle.",
+      "callsBody": "Group calls and live video for thousands go straight from person to person, with viewers passing the stream along. Protected by next-generation security, built to stay private for decades.",
+      "votesLabel": "Votes",
+      "votesTitle": "Voting that doesn’t burn a forest.",
+      "votesBody": "One person, one vote, however many devices. Every ballot is signed, and every device counts them the same way. No mining, no giant shared ledger, no wasted energy.",
+      "scaleLabel": "Scale",
+      "scaleTitle": "Every device that joins adds capacity.",
+      "scaleBody": "Each device brings its own space and connection, private things never leave your circle, and big audiences pass the stream among themselves. Modelled to 5 billion people with no data center.",
+      "scaleCta": "See the scaling model →",
+      "problemKicker": "The missing layer",
+      "problemTitle": "The internet made information easy to publish. It never made it easy to verify.",
+      "problemBody": "AI makes that urgent: agents act at scale while their claims and authority stay locked inside the platforms that run them. CIRIS adds the missing layer — evidence that travels with the claim, and governance that travels with the relationship.",
+      "ideaKicker": "THE IDEA UNDER EVERYTHING",
+      "idea": "CIRIS separates intelligence from authority, and makes authority accountable through evidence.",
+      "layers": [
+        {
+          "term": "The agent",
+          "def": "intelligent, not sovereign"
+        },
+        {
+          "term": "The fabric",
+          "def": "deterministic, not omniscient"
+        },
+        {
+          "term": "The federation",
+          "def": "distributed, not ungoverned"
+        },
+        {
+          "term": "The constitution",
+          "def": "shared, and contestable"
+        }
+      ],
+      "receiptKicker": "The web with its receipts",
+      "receiptTitle": "Every act is a signed row. Anyone can check it. Its author can take it back.",
+      "receiptBody": "A message, a vote, a consent, a moderation decision, an agent’s action — five kinds of row, and no sixth.",
+      "receiptLabel": "A signed row's receipt: five facts travel with every item",
+      "receiptHead": "RECEIPT · CLAIM",
+      "receiptVerified": "✓ signature verified",
+      "receiptRows": [
+        {
+          "k": "Who it is about",
+          "v": "Riverside Bakery"
+        },
+        {
+          "k": "Who sent it",
+          "v": "Ana · key 7f3a…c21e"
+        },
+        {
+          "k": "Who can see it",
+          "v": "Neighbours"
+        },
+        {
+          "k": "What it is",
+          "v": "review · “open late on Fridays”"
+        },
+        {
+          "k": "The rule it follows",
+          "v": "consent: community scope"
+        }
+      ],
+      "receiptFoot": [
+        "3 agreed",
+        "1 corrected",
+        "0 withdrawn",
+        "next-generation secure"
+      ],
+      "deeperTitle": "Go deeper.",
+      "deeper": [
+        {
+          "label": "Architecture",
+          "title": "How it fits together",
+          "body": "The agent proposes. The fabric admits. The federation decides.",
+          "href": "/architecture"
+        },
+        {
+          "label": "Web4",
+          "title": "Relationships, not platforms",
+          "body": "Portable identity, signed reputation, leaving in one step.",
+          "href": "/web4"
+        },
+        {
+          "label": "Constitution",
+          "title": "Rules people can read — and a brake",
+          "body": "Eleven promises. Any named human can pause an agent.",
+          "href": "/constitution"
+        },
+        {
+          "label": "CEWPOS",
+          "title": "A computer whose state is evidence",
+          "body": "The OS layer where AI can propose, but never simply act.",
+          "href": "/cewpos"
+        }
+      ],
+      "todayTitle": "Use it today.",
+      "appTitle": "The CIRIS app",
+      "appBody": "Phone, desktop or browser, in 29 languages. Your device becomes a node.",
+      "scoutTitle": "Talk to Scout",
+      "scoutBody": "A hosted CIRIS agent. Ask it something, then read every step it took.",
+      "scoutCta": "Try Scout →",
+      "ownTitle": "Run your own",
+      "ownBody": "Self-host the agent or a node. AGPL-3.0, bring your own model key.",
+      "ownCode": "pip install ciris-agent",
+      "legendShipping": "app, agent, node",
+      "legendInDev": "CEWPOS",
+      "legendResearch": "formal models and open claims, tracked one by one"
+    }
+  },
+  "cewposPage": {
+    "breadcrumbLabel": "Breadcrumb",
+    "status": "In development",
+    "h1": "A computer whose state is evidence.",
+    "lede": "CEWPOS is a federated operating environment built from immutable objects, signed attestations, and a small verifiable kernel.",
+    "standsKicker": "Where it stands",
+    "standsLead": "CIRISServer, CIRISAgent and CIRISClient are the shipping software.",
+    "standsBody": "CEWPOS is the native OS and semantic-view layer being built on that same substrate — not a finished operating system you can install today.",
+    "invKicker": "The inversion",
+    "invTitle": "Most “AI operating systems” ask you to trust a large runtime. CEWPOS turns that around.",
+    "usualCaption": "The usual shape",
+    "usualModel": "AI model",
+    "usualControls": "controls the system",
+    "usualNote": "Root access, ambient authority. You trust the model.",
+    "cewposCaption": "CEWPOS",
+    "cewposProposal": "AI emits a signed proposal",
+    "cewposGate": "gate",
+    "cewposAdmitted": "admitted",
+    "cewposRefused": "refused",
+    "cewposNote": "Verify the constraint. Never trust the model.",
+    "stepsTitle": "How it works, in four steps.",
+    "steps": [
+      {
+        "title": "Everything is an object.",
+        "body": "Identity, config, consent, a moderation act, a file, a media stream: immutable and content-addressed."
+      },
+      {
+        "title": "State is attested.",
+        "body": "Changes are signed claims, not silent writes to a shared database. Current state is folded from them."
+      },
+      {
+        "title": "The kernel is constrained.",
+        "body": "A deterministic, effect-typed evaluator. Its only effect is a gate-checked emit."
+      },
+      {
+        "title": "The interface is not authority.",
+        "body": "Views run as sandboxed WASM with zero ambient authority. A render can draw a scene and nothing else."
+      }
+    ],
+    "kernelKicker": "A small trusted core",
+    "kernelTitle": "Five operators. The system grows by vocabulary, not by new primitives.",
+    "operatorsLabel": "The five operators",
+    "kernelBody": "The same discipline behind Git’s object model, RDF, content-addressed storage and capability systems. A small evaluator stays auditable.",
+    "betKicker": "The bet",
+    "betTitle": "Make truthfulness architecturally cheaper than deception.",
+    "betBody": "Holding a consistent lie across many independent, signed, externally checkable constraints costs more than telling the truth.",
+    "stackKicker": "Where CEWPOS sits",
+    "stackTitle": "The stack, bottom to top.",
+    "layers": [
+      {
+        "name": "Constitution",
+        "what": "One rulebook: the ethics and the wire grammar, in one versioned text",
+        "status": "Published"
+      },
+      {
+        "name": "Formal models",
+        "what": "TLA+, Lean and Python models that check the rules",
+        "status": "Research"
+      },
+      {
+        "name": "Substrate",
+        "what": "Verify (hybrid post-quantum signatures), Persist (signed state), Edge (sealed transport)",
+        "status": "Shipping"
+      },
+      {
+        "name": "Fabric node",
+        "what": "CIRISServer — the peer that holds rows and admits acts",
+        "status": "Shipping"
+      },
+      {
+        "name": "Agent runtime",
+        "what": "CIRISAgent — conscience pipeline, deferral to humans, halt latch",
+        "status": "Shipping"
+      },
+      {
+        "name": "Client & OS",
+        "what": "CIRISClient (shipping) and CEWPOS: attestation calculus, WASM view-forms, 3D renderer",
+        "status": "CEWPOS in dev"
+      }
+    ],
+    "cewpLink": "CEWP, the epistemic web platform →"
+  },
+  "web4Page": {
+    "kicker": "WEB4 · FOR THE NETWORK",
+    "h1": "A web built around relationships, not platforms.",
+    "lede": "Web4 is not a new destination on the internet. It is a different way for the internet to organize trust.",
+    "essay1": "The internet’s original promise was a network without a centre. Over time, identity, reputation, discovery and governance moved into platforms that became the authorities over our digital lives. Leaving one meant leaving everyone you knew there.",
+    "essay2": "In a federated web, a person, an organization or an AI agent can make a claim, establish where it came from, grant scoped authority and take part in shared governance — ",
+    "essay2Strong": "without surrendering its identity or relationships to a single platform.",
+    "movesKicker": "WHAT ANY PARTICIPANT CAN DO",
+    "movesTitle": "Four moves, available to everyone equally.",
+    "moves": [
+      {
+        "title": "Make a claim",
+        "body": "A post, a review, a vote, a fact — signed under your own key."
+      },
+      {
+        "title": "Show where it came from",
+        "body": "Cite what it rests on. Anyone can trace it back, and forward to every reply."
+      },
+      {
+        "title": "Grant scoped authority",
+        "body": "Delegate a duty to a person or an agent, for a scope you name, revocable in one step."
+      },
+      {
+        "title": "Govern together",
+        "body": "Votes no single voice can carry, polls nobody outside can see."
+      }
+    ],
+    "changesTitle": "What changes.",
+    "changesTableLabel": "Platform-centric web compared with the CIRIS model",
+    "changesColA": "PLATFORM-CENTRIC WEB",
+    "changesColB": "CIRIS · WEB4 MODEL",
+    "changes": [
+      {
+        "a": "The platform owns your identity",
+        "b": "Identity is your key — portable and attributable"
+      },
+      {
+        "a": "The platform decides reputation",
+        "b": "Participants weigh signed evidence themselves"
+      },
+      {
+        "a": "Moderation happens behind closed doors",
+        "b": "Every act of power is signed and contestable"
+      },
+      {
+        "a": "The platform’s logs are the truth",
+        "b": "Signed records anyone can check independently"
+      },
+      {
+        "a": "Corrections vanish into edits",
+        "b": "Agreement, correction and withdrawal are rows in the open"
+      },
+      {
+        "a": "AI acts with the platform’s authority",
+        "b": "Agents propose; the fabric admits or refuses"
+      },
+      {
+        "a": "Leaving means losing your relationships",
+        "b": "Relationships persist across nodes; leaving is one step"
+      }
+    ],
+    "coordKicker": "COORDINATION WITHOUT A COORDINATOR",
+    "coordTitle": "The network doesn’t need everyone to agree. It needs a common way to record what was claimed.",
+    "coordBody": "For each act, the kernel works out which voices could change the answer. Once enough of them have acknowledged it, the answer is final — proved in Lean, not promised.",
+    "notKicker": "WHAT IT IS NOT",
+    "nots": [
+      "No global ledger.",
+      "No global order.",
+      "No company in the middle."
+    ],
+    "notBody": "Nodes are the phones and computers people already own. A node holds signed rows and nothing else.",
+    "protectsKicker": "WHAT IT PROTECTS",
+    "protectsTitle": "Three harms the design rules out.",
+    "protects": [
+      {
+        "title": "Being spoken for without consent",
+        "body": "Every claim carries who it is about and the consent it relies on. You can withdraw a claim you are named in."
+      },
+      {
+        "title": "Being watched inside private groups",
+        "body": "Private circles are structurally invisible from outside. Everything on the wire is encrypted and signed."
+      },
+      {
+        "title": "AI nobody can switch off",
+        "body": "Named humans can pause every agent under their trust root with one signed row."
+      }
+    ],
+    "furtherLabel": "Read further",
+    "further": [
+      {
+        "label": "What is an epistemic web?",
+        "href": "/epistemic-web"
+      },
+      {
+        "label": "The web with receipts",
+        "href": "/paths/misinformation"
+      },
+      {
+        "label": "An internet with no datacenters",
+        "href": "/paths/big-tech"
+      },
+      {
+        "label": "The vision",
+        "href": "/vision"
+      }
+    ],
+    "statusChip": "Design direction, partly shipping",
+    "nextTitle": "The mesh is live in the CIRIS app. Not every property is proven at scale yet.",
+    "nextBody": "The evidence register lists every claim with its status and the code, test or proof behind it — including where shipped code still differs from the text.",
+    "ctaApp": "Get the app",
+    "ctaFabric": "How the fabric works →"
+  },
+  "architecturePage": {
+    "breadcrumbLabel": "Breadcrumb",
+    "kicker": "How it fits together",
+    "title": "Three layers, one system.",
+    "lede": "The agent proposes. The fabric verifies and admits. The federation decides what to trust.",
+    "layersLabel": "The three layers",
+    "layers": {
+      "agent": {
+        "label": "01 · The agent",
+        "chip": "Shipping",
+        "name": "CIRISAgent",
+        "tagline": "Intelligence with a conscience",
+        "body": "Reasons, proposes actions, and can refuse or defer to a named human every round. Its reasoning is a signed, readable trace.",
+        "cta": "How the agent works →"
+      },
+      "constitution": {
+        "label": "02 · The constitution",
+        "chip": "Published · 1.0-RC",
+        "name": "Constitution + CEG",
+        "tagline": "Rules and evidence, in one text",
+        "body": "The ethics and the exact bytes that prove them: a grammar for signed claims, consent, correction, withdrawal and governance.",
+        "cta": "Read the Constitution →"
+      },
+      "substrate": {
+        "label": "03 · The substrate",
+        "chip": "Node shipping · OS in dev",
+        "name": "CEWP + CEWPOS",
+        "tagline": "A federated computational fabric",
+        "body": "Independent nodes on ordinary devices store, check and compose signed state. Agents take part, but the fabric can reject what they propose.",
+        "cta": "CEWPOS →"
+      }
+    },
+    "life": {
+      "kicker": "The life of one act",
+      "title": "From a proposal to something others can trust.",
+      "steps": [
+        {
+          "title": "Propose",
+          "body": "A person or agent writes one signed row under their own key."
+        },
+        {
+          "title": "Verify",
+          "body": "The node checks the signature, the consent it relies on, and the scope."
+        },
+        {
+          "title": "Admit or refuse",
+          "body": "A deterministic gate decides. An agent gets no shortcut around it."
+        },
+        {
+          "title": "Weigh",
+          "body": "Others agree, correct or ignore it. Each reader forms their own verdict."
+        }
+      ]
+    },
+    "stack": {
+      "kicker": "The full stack",
+      "title": "Bottom to top, with what ships today.",
+      "rows": [
+        {
+          "n": "01",
+          "name": "Constitution",
+          "what": "One rulebook: the ethics and the wire grammar, in one versioned text",
+          "status": "Published"
+        },
+        {
+          "n": "02",
+          "name": "Formal models",
+          "what": "TLA+, Lean and Python models that check the rules",
+          "status": "Research"
+        },
+        {
+          "n": "03",
+          "name": "Substrate",
+          "what": "Verify (hybrid post-quantum signatures), Persist (signed state), Edge (sealed transport)",
+          "status": "Shipping"
+        },
+        {
+          "n": "04",
+          "name": "Fabric node",
+          "what": "CIRISServer — the peer that holds rows and admits acts",
+          "status": "Shipping"
+        },
+        {
+          "n": "05",
+          "name": "Agent runtime",
+          "what": "CIRISAgent — conscience pipeline, deferral to humans, halt latch",
+          "status": "Shipping"
+        },
+        {
+          "n": "06",
+          "name": "Client & OS",
+          "what": "CIRISClient (shipping) and CEWPOS, the native OS layer",
+          "status": "CEWPOS in dev"
+        }
+      ]
+    },
+    "meetLabel": "What a person meets",
+    "circles": {
+      "kicker": "What you meet in the app",
+      "title": "Starts close to you. Moves out only when you say so.",
+      "body": "Five circles, closest first: Just me, Family, Neighbours, Communities & businesses, Everyone. Sharing outward always asks. Pulling back never needs permission."
+    },
+    "halt": {
+      "kicker": "Humans stay in charge",
+      "title": "One person can pull the brake. It takes a group to let go of it.",
+      "body": "Any named holder of a trust root can pause every agent under it with one signed row. A lone pause lapses after a day unless a majority confirms it."
+    }
+  },
+  "constitutionPage": {
+    "h1": "What does a constitution mean when the participants are software, organizations and people?",
+    "lede": "One text says what the network owes the people it touches — and exactly what bytes it must send to show it. The ethics and the wire cannot drift apart.",
+    "editionLabel": "Published edition",
+    "editionNote": "Wire surface frozen at 1.0. Amended through its own governance.",
+    "partsKicker": "How it is organized",
+    "partsTitle": "Purpose, rules, evidence — and who can change them.",
+    "parts": [
+      {
+        "n": "01",
+        "t": "Purpose",
+        "k": "M-1 · sustainable adaptive coherence",
+        "d": "The one goal every rule answers to."
+      },
+      {
+        "n": "02",
+        "t": "Rules",
+        "k": "The Accord · the decision framework",
+        "d": "Published principles an agent may not trade away, and when it must stop and ask a human."
+      },
+      {
+        "n": "03",
+        "t": "Evidence",
+        "k": "CEG · the signed claim grammar",
+        "d": "Five row kinds and no sixth. Consent, identity, keys, rosters and moderation are all rows."
+      },
+      {
+        "n": "04",
+        "t": "Composition",
+        "k": "Agree · disagree · supersede · withdraw · recant",
+        "d": "How claims relate over time, so a correction is a row in the open, not a silent edit."
+      },
+      {
+        "n": "05",
+        "t": "Governance",
+        "k": "Amendment · stewardship · moderation · halt",
+        "d": "Who can change the text, who moderates the moderators, and how named humans pause agents."
+      },
+      {
+        "n": "06",
+        "t": "Implementation",
+        "k": "Code, tests and proofs",
+        "d": "An evidence register ties every rule to the code, test or proof behind it — and lists where they differ."
+      }
+    ],
+    "promisesKicker": "The eleven promises",
+    "promisesTitle": "Each kept by a named section — and, where a machine can check it, by a model or a test.",
+    "promises": [
+      "Nothing private about you is held or scanned without your consent.",
+      "Every act of power is signed by a named person and can be contested.",
+      "Nobody who cannot answer for themselves is on the network alone.",
+      "Named humans can pause every agent under a root; the power is bounded, public, and left by leaving.",
+      "The people who hold an agent owe duties about how they change or end it.",
+      "No hand bans a community, nobody is ranked by what they are, and first-contact rules apply to every thinking being.",
+      "An agent decides by published principles it may not trade away, and stops to ask when unsure.",
+      "Harm is reachable on the record, and the judges within are judged.",
+      "Some uses are never allowed, and lethal action is one of them.",
+      "What an agent and its node consume is measured, weighed before an act, and never hidden.",
+      "Everything on the wire is encrypted and signed."
+    ],
+    "volumesTitle": "One edition, printed nine ways. Start with the one for you.",
+    "volumes": [
+      {
+        "t": "The Digest",
+        "d": "Everyone: plain-language rules and a user’s guide to the mesh"
+      },
+      {
+        "t": "The Charter",
+        "d": "Anyone: the ethics, the stance, the duties of making and ending"
+      },
+      {
+        "t": "The Constitution",
+        "d": "Root holders, stewards, moderators, Wise Authorities"
+      },
+      {
+        "t": "The Wire",
+        "d": "Implementers: the envelope, five row types, canonical bytes"
+      },
+      {
+        "t": "The Dictionary",
+        "d": "Every registered family and admission rule"
+      },
+      {
+        "t": "The Reader’s Policies",
+        "d": "How rows become verdicts — and what a score about you becomes"
+      },
+      {
+        "t": "The Mathematics",
+        "d": "Reviewers of the substrate: census, replication, the witness"
+      },
+      {
+        "t": "The Evidence Register",
+        "d": "Auditors: every claim, its status, and the pointer behind it"
+      },
+      {
+        "t": "The Threat Model",
+        "d": "Red teams: adversaries, what is addressed and what is not"
+      }
+    ],
+    "readKicker": "Read it"
   }
 }
