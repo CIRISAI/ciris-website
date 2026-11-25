@@ -7,6 +7,7 @@
 // audience come from RdShell. Copy: rd.home.* and homeHero.{kicker,h1,sub}.
 
 import Link from "next/link";
+import { shellCopy } from "./redesign/shellCopy";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
 import StoreBadges from "./graphics/StoreBadges";
@@ -15,6 +16,16 @@ import { CALLS_AND_VOTES_CONFIRMED_SHIPPING, StatusChip } from "./redesign/Statu
 import HeroWater from "./HeroWater";
 import s from "./redesign/rd.module.css";
 import h from "./home.module.css";
+
+/** Order and targets of the "go deeper" cards; the copy is rd.home.deeper. */
+const DEEPER = [
+  { key: "s1", href: "/architecture" },
+  { key: "s2", href: "/web4" },
+  { key: "s3", href: "/constitution" },
+  { key: "s4", href: "/cewpos" },
+] as const;
+
+const INSTALL_COMMAND = "pip install ciris-agent";
 
 export default function HomeHero({ t, locale }: { t: Dictionary; locale: string }) {
   const hero = t.homeHero;
@@ -28,7 +39,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
   );
 
   return (
-    <RdShell t={t} locale={locale} overlayHeader>
+    <RdShell t={shellCopy(t)} locale={locale} overlayHeader>
       <section className={h.hero} aria-labelledby="hero-h">
         <HeroWater />
         <div className={h.claim}>
@@ -100,7 +111,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
             <p className={h.idea}>{c.idea}</p>
           </div>
           <dl className={`${h.layers} ${h.splitNarrow}`}>
-            {c.layers.map((l) => (
+            {Object.values(c.layers).map((l) => (
               <div key={l.term} style={{ display: "contents" }}>
                 <dt>{l.term}</dt>
                 <dd>{l.def}</dd>
@@ -126,7 +137,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
             <span className={s.ok}>{c.receiptVerified}</span>
           </div>
           <dl className={h.receiptRows}>
-            {c.receiptRows.map((r) => (
+            {Object.values(c.receiptRows).map((r) => (
               <div key={r.k} className={h.receiptRow}>
                 <dt>{r.k}</dt>
                 <dd className={s.mono}>{r.v}</dd>
@@ -134,7 +145,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
             ))}
           </dl>
           <div className={`${h.receiptFoot} ${s.mono}`}>
-            {c.receiptFoot.map((f) => (
+            {Object.values(c.receiptFoot).map((f) => (
               <span key={f}>{f}</span>
             ))}
           </div>
@@ -146,14 +157,14 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
           {c.deeperTitle}
         </h2>
         <div className={s.grid4} style={{ marginTop: 28 }}>
-          {c.deeper.map((d) => (
+          {DEEPER.map(({ key, href }) => ({ ...c.deeper[key], href })).map((d) => (
             <Link key={d.href} href={lh(d.href)} className={`${s.card} ${h.deeper}`}>
               <span className={`${s.cardLabel} ${s.mono}`}>
                 {d.label}
                 {d.href === "/cewpos" && (
                   <>
                     {" · "}
-                    <span className={s.warn}>{chips.inDev.toLowerCase()}</span>
+                    <span className={s.warn}>{chips.inDev}</span>
                   </>
                 )}
               </span>
@@ -191,7 +202,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
           <div className={s.card}>
             <h3 className={h.todayTitle}>{c.ownTitle}</h3>
             <p className={h.todayBody}>{c.ownBody}</p>
-            <code className={`${h.code} ${s.mono}`}>{c.ownCode}</code>
+            <code className={`${h.code} ${s.mono}`}>{INSTALL_COMMAND}</code>
           </div>
         </div>
         <p className={`${h.legend} ${s.mono}`}>

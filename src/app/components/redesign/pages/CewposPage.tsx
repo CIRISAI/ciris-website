@@ -6,6 +6,7 @@ import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
 import RdShell from "../RdShell";
+import { shellCopy } from "../shellCopy";
 import { StatusChip, type ChipKind } from "../StatusChip";
 import s from "../rd.module.css";
 import c from "./CewposPage.module.css";
@@ -26,10 +27,13 @@ const LAYER_KIND: { kind: ChipKind; hi?: boolean }[] = [
 export default function CewposPage({ t, locale }: { t: Dictionary; locale: string }) {
   const p = t.cewposPage;
   const net = t.rd.groups.network;
+  // Rows 1 to 5 are the same stack /architecture shows; only the top row differs.
+  const { s6: _top, ...shared } = t.architecturePage.stack.rows;
+  const layers = [...Object.values(shared), p.osLayer];
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <RdShell t={t} locale={locale}>
+    <RdShell t={shellCopy(t)} locale={locale}>
       <div className={c.page}>
         <div className={c.wrap}>
           <nav aria-label={p.breadcrumbLabel} className={`${s.mono} ${c.crumb}`}>
@@ -100,7 +104,7 @@ export default function CewposPage({ t, locale }: { t: Dictionary; locale: strin
               {p.stepsTitle}
             </h2>
             <ol className={c.steps}>
-              {p.steps.map((step, i) => (
+              {Object.values(p.steps).map((step, i) => (
                 <li key={i} className={c.step}>
                   <span className={`${s.px} ${c.stepN}`} aria-hidden="true">
                     {i + 1}
@@ -142,7 +146,7 @@ export default function CewposPage({ t, locale }: { t: Dictionary; locale: strin
               {p.stackTitle}
             </h2>
             <ol className={c.stack}>
-              {p.layers.map((l, i) => {
+              {layers.map((l, i) => {
                 const meta = LAYER_KIND[i] ?? { kind: "shipping" as ChipKind };
                 return (
                   <li key={i} className={`${c.layer} ${meta.hi ? c.layerHi : ""}`}>

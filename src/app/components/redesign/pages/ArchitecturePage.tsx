@@ -6,6 +6,7 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
 import RdShell from "../RdShell";
+import { shellCopy } from "../shellCopy";
 import { StatusChip, type ChipKind } from "../StatusChip";
 import rd from "../rd.module.css";
 import s from "./ArchitecturePage.module.css";
@@ -27,7 +28,7 @@ export default function ArchitecturePage({ t, locale }: { t: Dictionary; locale:
   const builders = t.rd.groups.builders;
 
   return (
-    <RdShell t={t} locale={locale}>
+    <RdShell t={shellCopy(t)} locale={locale}>
       <div className={s.page}>
         <nav aria-label={a.breadcrumbLabel} className={`${rd.mono} ${s.crumbs}`}>
           {builders.label} / <span aria-current="page">{builders.architecture}</span>
@@ -67,7 +68,7 @@ export default function ArchitecturePage({ t, locale }: { t: Dictionary; locale:
             {a.life.title}
           </h2>
           <ol className={s.steps}>
-            {a.life.steps.map((step, i) => (
+            {Object.values(a.life.steps).map((step, i) => (
               <li key={step.title} className={s.step}>
                 <span className={`${rd.px} ${s.stepN}`} aria-hidden="true">
                   {i + 1}
@@ -86,9 +87,9 @@ export default function ArchitecturePage({ t, locale }: { t: Dictionary; locale:
           </h2>
           {/* In reading order 01→06; drawn bottom to top. */}
           <ol className={s.stack}>
-            {a.stack.rows.map((row, i) => (
-              <li key={row.n} className={s.row}>
-                <span className={`${rd.mono} ${s.rowN}`}>{row.n}</span>
+            {Object.values(a.stack.rows).map((row, i) => (
+              <li key={row.name} className={s.row}>
+                <span className={`${rd.mono} ${s.rowN}`}>{String(i + 1).padStart(2, "0")}</span>
                 <span className={s.rowName}>{row.name}</span>
                 <span className={s.rowWhat}>{row.what}</span>
                 <span className={s.rowChip}>
@@ -112,7 +113,17 @@ export default function ArchitecturePage({ t, locale }: { t: Dictionary; locale:
           </div>
         </section>
 
-        <ArchitectureInfrastructure locale={locale} shippingLabel={t.rd.chips.shipping} />
+        {/* The infrastructure text is English only, so localized pages link to it
+            instead of mixing English into a translated page. */}
+        {locale === "en" ? (
+          <ArchitectureInfrastructure locale={locale} shippingLabel={t.rd.chips.shipping} />
+        ) : (
+          <p className={s.layerBody}>
+            <a href="/architecture#infrastructure" className={s.layerCta}>
+              {a.infraEnglish}
+            </a>
+          </p>
+        )}
       </div>
     </RdShell>
   );

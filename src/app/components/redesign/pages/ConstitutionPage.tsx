@@ -20,6 +20,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
 import { CONSTITUTION_VERSION, withEdition } from "@/lib/constitutionEdition";
 import RdShell from "../RdShell";
+import { shellCopy } from "../shellCopy";
 import s from "../rd.module.css";
 import p from "./ConstitutionPage.module.css";
 
@@ -56,7 +57,7 @@ export default function ConstitutionPage({ t, locale }: { t: Dictionary; locale:
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <RdShell t={t} locale={locale}>
+    <RdShell t={shellCopy(t)} locale={locale}>
       {/* Hero: the question, and the edition this site publishes. */}
       <section aria-labelledby="const-h1" className={`${s.sec} ${p.hero}`}>
         <div className={p.heroText}>
@@ -101,10 +102,10 @@ export default function ConstitutionPage({ t, locale }: { t: Dictionary; locale:
           {d.partsTitle}
         </h2>
         <div className={s.grid3}>
-          {d.parts.map((part) => (
-            <div key={part.n} className={p.part}>
+          {Object.values(d.parts).map((part, i) => (
+            <div key={part.t} className={p.part}>
               <p className={`${s.mono} ${p.partNum}`} dir="ltr">
-                {part.n}
+                {String(i + 1).padStart(2, "0")}
               </p>
               <h3 className={p.partTitle}>{part.t}</h3>
               <p className={p.partKey}>{part.k}</p>
@@ -144,7 +145,7 @@ export default function ConstitutionPage({ t, locale }: { t: Dictionary; locale:
             {d.promisesTitle}
           </h2>
           <ol className={p.promList}>
-            {d.promises.map((text, i) => (
+            {Object.values(d.promises).map((text, i) => (
               <li key={i} className={p.prom}>
                 <span className={`${s.mono} ${p.promNum}`} dir="ltr">
                   {String(i + 1).padStart(2, "0")}
@@ -183,7 +184,7 @@ export default function ConstitutionPage({ t, locale }: { t: Dictionary; locale:
           {d.volumesTitle}
         </h2>
         <div className={p.vols}>
-          {d.volumes.map((v, i) =>
+          {Object.values(d.volumes).map((v, i) =>
             i === WIRE_VOLUME ? (
               <a key={v.t} href={WIRE_PDF} download className={p.vol}>
                 <span className={p.volTitle}>{v.t}</span>

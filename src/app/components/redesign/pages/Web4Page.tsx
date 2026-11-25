@@ -5,6 +5,7 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 import { localizeHref } from "@/i18n/config";
 import RdShell from "../RdShell";
+import { shellCopy } from "../shellCopy";
 import { StatusChip } from "../StatusChip";
 import s from "../rd.module.css";
 import w from "./Web4Page.module.css";
@@ -37,12 +38,19 @@ function SkyBand() {
   );
 }
 
+const FURTHER = [
+  { key: "s1", href: "/epistemic-web" },
+  { key: "s2", href: "/paths/misinformation" },
+  { key: "s3", href: "/paths/big-tech" },
+  { key: "s4", href: "/vision" },
+] as const;
+
 export default function Web4Page({ t, locale }: { t: Dictionary; locale: string }) {
   const p = t.web4Page;
   const lh = (href: string) => localizeHref(href, locale);
 
   return (
-    <RdShell t={t} locale={locale} overlayHeader>
+    <RdShell t={shellCopy(t)} locale={locale} overlayHeader>
       <div className={w.page}>
         <SkyBand />
 
@@ -58,7 +66,7 @@ export default function Web4Page({ t, locale }: { t: Dictionary; locale: string 
           <section className={w.essay}>
             <p>{p.essay1}</p>
             <p>
-              {p.essay2}
+              {p.essay2}{" "}
               <b>{p.essay2Strong}</b>
             </p>
           </section>
@@ -69,7 +77,7 @@ export default function Web4Page({ t, locale }: { t: Dictionary; locale: string 
               {p.movesTitle}
             </h2>
             <ol className={w.moves}>
-              {p.moves.map((m, i) => (
+              {Object.values(p.moves).map((m, i) => (
                 <li key={m.title} className={w.move}>
                   <p className={`${s.mono} ${w.moveNum}`} aria-hidden="true">
                     {String(i + 1).padStart(2, "0")}
@@ -94,7 +102,7 @@ export default function Web4Page({ t, locale }: { t: Dictionary; locale: string 
                   {p.changesColB}
                 </span>
               </div>
-              {p.changes.map((r) => (
+              {Object.values(p.changes).map((r) => (
                 <div role="row" key={r.a} className={w.row}>
                   <span role="cell" className={w.cellA}>
                     {r.a}
@@ -117,7 +125,7 @@ export default function Web4Page({ t, locale }: { t: Dictionary; locale: string 
             </div>
             <div className={w.nots}>
               <p className={`${s.mono} ${w.notsKicker}`}>{p.notKicker}</p>
-              {p.nots.map((n) => (
+              {Object.values(p.nots).map((n) => (
                 <p key={n} className={w.not}>
                   {n}
                 </p>
@@ -132,7 +140,7 @@ export default function Web4Page({ t, locale }: { t: Dictionary; locale: string 
               {p.protectsTitle}
             </h2>
             <div className={w.protects}>
-              {p.protects.map((x) => (
+              {Object.values(p.protects).map((x) => (
                 <div key={x.title} className={w.protect}>
                   <h3 className={w.protectTitle}>{x.title}</h3>
                   <p className={w.protectBody}>{x.body}</p>
@@ -142,7 +150,7 @@ export default function Web4Page({ t, locale }: { t: Dictionary; locale: string 
 
             <nav aria-label={p.furtherLabel} className={w.further}>
               <span className={`${s.mono} ${w.furtherLabel}`}>{p.furtherLabel}</span>
-              {p.further.map((f) => (
+              {FURTHER.map(({ key, href }) => ({ label: p.further[key], href })).map((f) => (
                 <a key={f.href} href={lh(f.href)}>
                   {f.label}
                 </a>

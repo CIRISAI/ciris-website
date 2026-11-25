@@ -10,7 +10,7 @@ import Link from "next/link";
 import { createContext, useCallback, useContext, useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Geist_Mono, Instrument_Sans, Silkscreen } from "next/font/google";
-import type { Dictionary } from "@/i18n/dictionaries";
+import type { ShellCopy } from "./shellCopy";
 import { LOCALES, delocalizePath, localizeHref, localizedPath } from "@/i18n/config";
 import { setLocalePref } from "@/i18n/pref";
 import { useSkyTheme } from "@/app/components/sky/useSkyTheme";
@@ -40,7 +40,7 @@ export default function RdShell({
   overlayHeader = false,
   children,
 }: {
-  t: Dictionary;
+  t: ShellCopy;
   locale: string;
   /** Float the header over the page's first block (the homepage hero). */
   overlayHeader?: boolean;
@@ -206,7 +206,7 @@ export default function RdShell({
                             {l.chip && (
                               <>
                                 {" "}
-                                <StatusChip kind="inDev" label={rd.chips.inDev} pill />
+                                <StatusChip kind="inDev" label={rd.inDev} pill />
                               </>
                             )}
                           </span>
@@ -249,9 +249,9 @@ export default function RdShell({
 
         {isLocalized && (
           <MachineTranslationBanner
-            lead={t.common.mtBanner.lead}
-            body={t.common.mtBanner.body}
-            cta={t.common.mtBanner.cta}
+            lead={t.mtBanner.lead}
+            body={t.mtBanner.body}
+            cta={t.mtBanner.cta}
           />
         )}
 
