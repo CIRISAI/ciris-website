@@ -2,6 +2,7 @@
 // stays English (localized OG cards can follow). Same page tier as /compare.
 
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/seo";
 import OwaspAgenticV2 from "@/app/components/OwaspAgenticV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
@@ -24,7 +25,7 @@ export async function generateMetadata({
     title: TITLE,
     description: DESC,
     alternates: { canonical: `/${locale}/compliance/owasp-agentic-top-10` },
-    openGraph: { type: "article", url: `https://ciris.ai/${locale}/compliance/owasp-agentic-top-10`, title: TITLE, description: DESC },
+    openGraph: { type: "article", url: `https://ciris.ai/${locale}/compliance/owasp-agentic-top-10`, title: TITLE, description: DESC, images: ogImages("/compliance/owasp-agentic-top-10", locale, TITLE) },
   };
 }
 

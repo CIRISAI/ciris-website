@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DEFAULT_OG_IMAGE } from "@/lib/seo";
+import { ogImage } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Status: Live Infrastructure Health",
     description:
       "Real-time operational status across US and EU regions.",
-    images: [DEFAULT_OG_IMAGE],
+    images: [ogImage("/status")],
   },
 };
 

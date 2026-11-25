@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { PREFIXED_LOCALES, LOCALIZED_ROUTES } from "@/i18n/config";
-import { DEFAULT_OG_IMAGE, DEFAULT_OG_VIDEO } from "@/lib/seo";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 import V1Banner from "@/app/components/V1Banner";
 import { NEW_LOOK_ROUTES, DARK_SCENE_ROUTES } from "@/app/components/newLookRoutes";
 
@@ -76,14 +76,11 @@ export const metadata: Metadata = {
     images: [
       {
         url: DEFAULT_OG_IMAGE,
-        type: "image/gif",
+        type: "image/jpeg",
         width: 1200,
         height: 630,
         alt: "CIRIS: Verifiable Ethical AI Agent",
       },
-    ],
-    videos: [
-      { url: DEFAULT_OG_VIDEO, type: "video/mp4", width: 1200, height: 630 },
     ],
   },
   twitter: {

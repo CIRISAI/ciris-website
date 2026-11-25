@@ -3,6 +3,7 @@
 // OWASP Agentic taxonomy practitioners are standardizing on.
 
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/seo";
 import OwaspAgenticV2 from "@/app/components/OwaspAgenticV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     type: "article",
     url: "https://ciris.ai/compliance/owasp-agentic-top-10",
     title: TITLE,
-    description: DESC,
+    description: DESC, images: ogImages("/compliance/owasp-agentic-top-10", "en", TITLE)
   },
 };
 
