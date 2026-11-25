@@ -1,0 +1,506 @@
+/* /cewpos page styles. Shell tokens (--bg --fg --dim …) inherit from
+ * rd.module.css; the few extra colors this design uses are defined here for
+ * day (default) and night. */
+
+.page {
+  --accentLine: rgba(14, 116, 144, 0.45);
+  --accentSoft: rgba(14, 116, 144, 0.07);
+  --okLine: rgba(21, 128, 61, 0.4);
+  --rose: #b4235a;
+  --roseLine: rgba(180, 35, 90, 0.4);
+  --inverse: #f1ede4;
+  --inverseFg: #14181d;
+  --inverseLine: rgba(20, 24, 29, 0.14);
+}
+
+:global(html[data-theme="dark"]) .page {
+  --accentLine: rgba(34, 192, 232, 0.45);
+  --accentSoft: rgba(34, 192, 232, 0.08);
+  --okLine: rgba(74, 222, 128, 0.4);
+  --rose: #f07ba3;
+  --roseLine: rgba(240, 123, 163, 0.45);
+  --inverse: #161d29;
+  --inverseFg: #e8eaed;
+  --inverseLine: rgba(255, 255, 255, 0.14);
+}
+
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.crumb {
+  padding-top: 8px;
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.crumb a {
+  text-decoration: none;
+}
+
+.crumb span {
+  color: var(--fg);
+}
+
+/* ---- hero ---- */
+
+.hero {
+  padding-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-end;
+}
+
+.heroText {
+  flex: 1 1 640px;
+  min-width: 0;
+}
+
+.heroChip {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--warnLine);
+  color: var(--warn);
+  line-height: 1.3;
+}
+
+.heroChip > span {
+  letter-spacing: 0.1em;
+}
+
+.h1 {
+  margin: 22px 0 0;
+  font-size: clamp(42px, 5.6vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.stands {
+  flex: 1 1 320px;
+  min-width: 0;
+  border: 1px solid var(--line2);
+  border-radius: 16px;
+  padding: 22px;
+  background: var(--panel);
+}
+
+.smallKicker {
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.standsBody {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dim);
+}
+
+.standsBody b {
+  color: var(--fg);
+}
+
+/* ---- sections ---- */
+
+.sec {
+  padding-top: 110px;
+}
+
+.last {
+  padding-bottom: 0;
+}
+
+.h2 {
+  margin: 0;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.narrow {
+  max-width: 26ch;
+}
+
+/* ---- the inversion ---- */
+
+.inv {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.usual,
+.ours {
+  margin: 0;
+  border-radius: 18px;
+  padding: 32px;
+}
+
+.usual {
+  border: 1px solid var(--line);
+  background: var(--panel2);
+}
+
+.ours {
+  border: 1px solid var(--accentLine);
+  background: var(--accentSoft);
+}
+
+.caption {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.accentText {
+  color: var(--accentText);
+}
+
+.flow {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.flowWrap {
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.box {
+  padding: 18px 26px;
+  border-radius: 12px;
+  border: 1px solid var(--line2);
+  font-weight: 600;
+  text-align: center;
+}
+
+.boxPanel {
+  padding: 18px 22px;
+  background: var(--panel);
+}
+
+.gate {
+  border: 2px solid var(--accent);
+}
+
+.arrow {
+  font-size: 22px;
+  color: var(--mute);
+}
+
+.outcomes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.outcome {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.admitted {
+  color: var(--ok);
+  border: 1px solid var(--okLine);
+}
+
+.refused {
+  color: var(--rose);
+  border: 1px solid var(--roseLine);
+}
+
+.figNote {
+  margin: 28px 0 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dim);
+  text-align: center;
+}
+
+/* ---- four steps ---- */
+
+.steps {
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.step {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 26px;
+  background: var(--panel);
+}
+
+.stepN {
+  font-size: 22px;
+  color: var(--accentText);
+}
+
+.stepTitle {
+  margin: 16px 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.stepBody {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dim);
+}
+
+/* ---- small kernel ---- */
+
+.kernelRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.kernel {
+  flex: 1 1 560px;
+  min-width: 0;
+  border-radius: 22px;
+  padding: 48px;
+  background: var(--inverse);
+  color: var(--inverseFg);
+  border: 1px solid var(--line2);
+}
+
+.kernelKicker {
+  margin: 0 0 18px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.h2k {
+  margin: 0;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.ops {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.op {
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--inverseLine);
+}
+
+.kernelBody {
+  margin: 24px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dim);
+}
+
+.bet {
+  flex: 1 1 360px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 40px;
+  background: var(--panel);
+}
+
+.betTitle {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.betBody {
+  margin: 18px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dim);
+}
+
+/* ---- stack ---- */
+
+.stack {
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+
+.layer {
+  display: grid;
+  grid-template-columns: 56px 240px minmax(0, 1fr) 190px;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 24px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.layerHi {
+  border-color: var(--accentLine);
+  background: var(--accentSoft);
+}
+
+.layerN {
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.layerName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.layerWhat {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--dim);
+}
+
+.layerStatus {
+  justify-self: end;
+}
+
+.layerStatus > span {
+  display: inline-block;
+  font-size: 11px;
+  padding: 5px 10px;
+}
+
+.related {
+  margin: 28px 0 0;
+  font-size: 16px;
+}
+
+/* ---- responsive ---- */
+
+@media (max-width: 1020px) {
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .layer {
+    grid-template-columns: 40px 180px minmax(0, 1fr);
+  }
+
+  .layerStatus {
+    grid-column: 3;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .inv {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .wrap {
+    padding: 0 20px;
+  }
+
+  .hero {
+    padding-top: 40px;
+    gap: 32px;
+  }
+
+  .sec {
+    padding-top: 72px;
+  }
+
+  .usual,
+  .ours {
+    padding: 24px 20px;
+  }
+
+  .box {
+    padding: 14px 16px;
+  }
+
+  .flowWrap {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .flowWrap .arrow {
+    transform: rotate(90deg);
+  }
+
+  .flowWrap .outcomes {
+    flex-direction: row;
+  }
+
+  .steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .kernel {
+    padding: 28px 22px;
+  }
+
+  .bet {
+    padding: 28px 22px;
+  }
+
+  .layer {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 6px 12px;
+    padding: 16px 18px;
+    align-items: start;
+  }
+
+  .layerName {
+    font-size: 17px;
+  }
+
+  .layerWhat,
+  .layerStatus {
+    grid-column: 2;
+  }
+
+  .layerN {
+    padding-top: 3px;
+  }
+}
