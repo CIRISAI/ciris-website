@@ -1,7 +1,7 @@
-/* The day/night hero (2a). The sky region is a fixed-height stage: wash
- * gradient behind, 8-bit ground band stretched full width (nearest
- * neighbour), the luminary canvas over it, the masked signet floating in
- * front, then a fade into the page background. */
+/* The underwater hero. The water is a fixed-height stage behind the header:
+ * one canvas (schools, whale sharks, the fish signet), then a fade into the
+ * page background. Heights are in svh, not vh, so a phone's collapsing URL
+ * bar does not resize the scene mid-scroll. */
 
 .page {
   min-height: 100svh;
@@ -11,68 +11,25 @@
   overflow: hidden;
 }
 
-.sky {
+.water {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: clamp(300px, 50vh, 440px);
+  height: clamp(330px, 56svh, 540px);
+  overflow: hidden;
 }
 
-.ground,
-.luminary {
-  position: absolute;
-  inset: 0;
+.ocean {
+  display: block;
   width: 100%;
   height: 100%;
 }
 
-.ground {
-  image-rendering: pixelated;
-}
-
-.skyFade {
+.waterFade {
   position: absolute;
   inset: 0;
   pointer-events: none;
-}
-
-@keyframes floaty {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
-
-.signetWrap {
-  position: absolute;
-  top: clamp(56px, 11vh, 100px);
-  left: 0;
-  right: 0;
-  display: grid;
-  place-items: center;
-  pointer-events: none;
-}
-
-.signet {
-  width: clamp(150px, 18vw, 224px);
-  aspect-ratio: 224 / 172;
-  animation: floaty 9s ease-in-out infinite;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .signet {
-    animation: none;
-  }
 }
 
 .header {
@@ -133,7 +90,8 @@
 
 .copy {
   position: relative;
-  padding: clamp(230px, 38vh, 322px) clamp(20px, 3.5vw, 44px) 0;
+  /* Clears the water (minus the header above and a little of the fade). */
+  padding: calc(clamp(330px, 56svh, 540px) - 104px) clamp(20px, 3.5vw, 44px) 0;
   display: flex;
   flex-direction: column;
   align-items: center;

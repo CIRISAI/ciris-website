@@ -1,13 +1,13 @@
 "use client";
-// The new landing page: the day/night hero with the CIRIS signet in the sky.
-// Ported from the redesign's 2a artboard (CIRIS Home Hero.dc.html): a sky
-// wash with an 8-bit ground band, the signet (public/logo.svg, masked and
-// floating) as the sky's luminary with bloom, corona and slowly turning
-// rays, day or night on the toggle. Per Eric: no cell/neural viz, no pixel
-// agent, no Scout sign-in inset; "Chat with Scout" links to scout.ciris.ai
-// next to Install. The old four-doors lobby is retired entirely.
+// The landing page: the underwater hero. Schools of fish, a whale shark the
+// visitor can steer with the pointer, and a handful of glowing fish that
+// gather into the CIRIS signet, drift apart, and gather again. Franco's
+// design (CIRISAI/ciris-website PR 38); the engine is in ./ocean.
+// Day or night on the toggle, shared with the rest of the site. Per Eric: no
+// Scout sign-in inset; "Chat with Scout" links to scout.ciris.ai next to
+// Install. The old four-doors lobby is retired entirely.
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Instrument_Sans, Silkscreen } from "next/font/google";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -15,7 +15,8 @@ import { LOCALES, localeMeta, localizeHref, localizedPath } from "@/i18n/config"
 import { setLocalePref } from "@/i18n/pref";
 import StoreBadges from "./graphics/StoreBadges";
 import styles from "./homeHero.module.css";
-import { T, GW, GH, paintTerrain, paintWeather, paintLuminary } from "./sky/skyPaint";
+import { T } from "./sky/skyPaint";
+import OceanCanvas from "./ocean/OceanCanvas";
 import { useSkyTheme } from "./sky/useSkyTheme";
 
 const instrument = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
@@ -25,62 +26,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
   const hero = t.homeHero;
   const { dark: isDark, ready, toggle } = useSkyTheme();
   const [langOpen, setLangOpen] = useState(false);
-  const groundRef = useRef<HTMLCanvasElement>(null);
-  const lumRef = useRef<HTMLCanvasElement>(null);
-  const terrainRef = useRef<{ night: boolean; cv: HTMLCanvasElement } | null>(null);
-
   const P = isDark ? T.dark : T.light;
-
-  useEffect(() => {
-    if (!ready) return;
-    const night = isDark;
-    let raf = 0;
-    const t0 = performance.now();
-    const tick = () => {
-      const time = (performance.now() - t0) / 1000;
-      const gcv = groundRef.current;
-      if (gcv) {
-        if (gcv.width !== GW) {
-          gcv.width = GW;
-          gcv.height = GH;
-        }
-        const g = gcv.getContext("2d");
-        if (g) {
-          g.imageSmoothingEnabled = false;
-          if (!terrainRef.current || terrainRef.current.night !== night) {
-            const off = document.createElement("canvas");
-            off.width = GW;
-            off.height = GH;
-            const og = off.getContext("2d")!;
-            og.imageSmoothingEnabled = false;
-            paintTerrain(og, night ? T.dark.ground : T.light.ground);
-            terrainRef.current = { night, cv: off };
-          }
-          g.clearRect(0, 0, GW, GH);
-          g.drawImage(terrainRef.current.cv, 0, 0);
-          paintWeather(g, time, night);
-        }
-      }
-      const lcv = lumRef.current;
-      if (lcv) {
-        const cssW = lcv.clientWidth || 1272;
-        const cssH = lcv.clientHeight || 440;
-        const DPR = 2;
-        if (lcv.width !== cssW * DPR || lcv.height !== cssH * DPR) {
-          lcv.width = cssW * DPR;
-          lcv.height = cssH * DPR;
-        }
-        const g = lcv.getContext("2d");
-        if (g) {
-          g.setTransform(DPR, 0, 0, DPR, 0, 0);
-          paintLuminary(g, cssW, cssH, time, night);
-        }
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [ready, isDark]);
 
   const lh = (href: string) => localizeHref(href, locale);
 
@@ -90,24 +36,13 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
       style={{ background: P.pageBg, color: P.pageFg }}
       data-hero-theme={isDark ? "dark" : "light"}
     >
-      {/* The sky: wash, 8-bit ground, luminary, floating signet, fade. */}
-      <div className={styles.sky} style={{ background: P.skyWash }}>
-        <canvas ref={groundRef} className={styles.ground} aria-hidden />
-        <canvas ref={lumRef} className={styles.luminary} aria-hidden />
-        <div className={styles.signetWrap} aria-hidden>
-          <div
-            className={styles.signet}
-            style={{
-              background: P.signetFill,
-              WebkitMaskImage: "url(/logo.svg)",
-              maskImage: "url(/logo.svg)",
-              filter: `drop-shadow(0 1px 14px ${P.signetGlow})`,
-            }}
-          />
-        </div>
+      {/* The water. Mounted once the stored day/night choice is known, so a
+          night visitor never sees a flash of daylight sea. */}
+      <div className={styles.water} style={{ background: P.pageBg }}>
+        {ready && <OceanCanvas dark={isDark} className={styles.ocean} />}
         <div
-          className={styles.skyFade}
-          style={{ background: `linear-gradient(to bottom, transparent 0%, transparent 80%, ${P.pageBg} 100%)` }}
+          className={styles.waterFade}
+          style={{ background: `linear-gradient(to bottom, transparent 0%, transparent 70%, ${P.pageBg} 100%)` }}
         />
       </div>
 
@@ -169,7 +104,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
         </div>
       </header>
 
-      {/* The claim, centered under the signet. */}
+      {/* The claim, centered under the water. */}
       <main className={styles.copy}>
         <p className={`${silkscreen.className} ${styles.kicker}`}>{hero.kicker}</p>
         <h1 className={styles.h1}>{hero.h1}</h1>
