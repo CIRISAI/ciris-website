@@ -1,9 +1,12 @@
 // Security/SEO page (/security/post-quantum-kill-switch), localized. Prose from
-// t.killSwitch (29 locales); the measured numbers, the command, and citation URLs
-// stay in code. Framing is exact: the Ed25519 half is hardware-rooted on a FIPS
-// YubiKey; the ML-DSA-65 half is software, seal-wrapped to USB. It states plainly
-// what the cargo-test receipt does and does not cover. Sources: CIRISVerify recon
-// + CIRISServer bench_results.json.
+// t.killSwitch (29 locales); the numbers, commands and URLs stay in code.
+// Framing is exact: the Ed25519 half is attested by a FIPS YubiKey; the
+// ML-DSA-65 half is stated by the holder and is not attested. Releases still
+// read the June 2026 root; the November bundle is not used by any release as
+// of 23.7.0 (checked: engine.rs, validation.rs), so never call it "in force". The URL
+// keeps "kill switch"; body copy says "pause" (CC 1.13.2, 4.2.1.1). Holders
+// are never named. Sources: CC 1.0-rc22 part 4, genesis/humanity-accord-v1,
+// CIRISVerify 23.7.0.
 
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -14,6 +17,9 @@ import sec from "@/app/components/security.module.css";
 
 const A = { target: "_blank", rel: "noopener noreferrer" } as const;
 const CMD = "cargo test -p ciris-verify-core --test accord_ceremony_custody -- --nocapture";
+// Run from genesis/humanity-accord-v1/package in CIRISConstitution.
+const CEREMONY_RECORD = "https://github.com/CIRISAI/CIRISConstitution/tree/main/genesis/humanity-accord-v1";
+const CEREMONY_CMDS = ["sha256sum -c SHA256SUMS", "python3 -I ../../../formal/ceremony/check_trace.py trace.json"];
 // Measured values pinned to CIRISServer/bench_results.json (commit 0b73486). Order matches t.killSwitch.measuredLabels.
 const MEASURED_V = ["4,946/s", "5.11 GiB/s", "67.6 µs", "0"];
 
@@ -36,8 +42,12 @@ export default function SecurityKillSwitchV2({ t, locale }: { t: Dictionary; loc
       <section className={s.section}>
         <p className={s.sectionLabel}>{k.s1label}</p>
         <h2 className={s.h2}>{k.s1h2}</h2>
+        <p className={s.paragraph}>{k.s1p0}</p>
         <p className={s.paragraph}>{k.s1p1}</p>
+        <p className={s.paragraph}>{k.s1p1b}</p>
+        <p className={s.paragraph}>{k.s1p1c}</p>
         <p className={s.paragraph}>{k.s1p2}</p>
+        <p className={s.paragraph}>{k.s1p2b}</p>
       </section>
 
       <section className={s.section}>
@@ -47,10 +57,19 @@ export default function SecurityKillSwitchV2({ t, locale }: { t: Dictionary; loc
           {k.s2p1}{" "}
           <a href="https://github.com/CIRISAI/CIRISVerify" {...A}>github.com/CIRISAI/CIRISVerify</a>
         </p>
-        <code className={sec.cmd}>{CMD}</code>
+        <code className={sec.cmd} dir="ltr">{CMD}</code>
         <p className={sec.cmdCaption}>
           {k.cmdCaption}{" "}
           <a href="https://developers.yubico.com/PKI/yubico-ca-1.pem" {...A}>developers.yubico.com/PKI/yubico-ca-1.pem</a>
+        </p>
+
+        <h2 className={s.h2}>{k.ceremonyH}</h2>
+        <p className={s.paragraph}>{k.ceremonyP}</p>
+        {CEREMONY_CMDS.map((c) => (
+          <code className={sec.cmd} dir="ltr" key={c}>{c}</code>
+        ))}
+        <p className={sec.cmdCaption}>
+          <a href={CEREMONY_RECORD} {...A}>{k.ceremonyLink}</a>
         </p>
 
         <div className={sec.split}>
