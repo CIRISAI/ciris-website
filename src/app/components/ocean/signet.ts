@@ -14,12 +14,15 @@
 // Nothing here is a scripted path. Every glowing fish is a steering agent
 // (seek-and-arrive toward a station, or boid rules while milling) and every
 // line's brightness is read off how settled its two fish actually are. So
-// the timing breathes, no two cycles match, and a whale shark steered through
-// the mark really does scatter it for a while.
+// the timing breathes and no two cycles match.
+//
+// The one thing the glowing fish never answer to is a whale shark. The silver
+// schools part round it; these keep to their stations and their circle however
+// close it comes, and wherever the visitor steers it. That is the point of
+// them, so no whale is passed in here.
 
 import { SIGNET_INTERIORS, SIGNET_OUTLINE } from "./signetGeometry";
 import type { School } from "./school";
-import type { Whale } from "./whale";
 import { SCHOOLS } from "./school";
 import { Palette, TAU, angleDelta, clamp01, rgba, seeded, smooth, smoothstep } from "./art";
 
@@ -125,7 +128,7 @@ export function createSignet(w: number, h: number, small: boolean, centerY: numb
   let scale = 1, ox = 0, oy = 0, radius = 1;
   const slotX = new Float32Array(S), slotY = new Float32Array(S);
   function layout() {
-    scale = Math.min(W * (small ? 0.62 : 0.55), H * 0.66, 343) / geo.extent;
+    scale = Math.min(W * (small ? 0.62 : 0.55), H * 0.62, 520) / geo.extent;
     ox = W * 0.5 - geo.cx * scale;
     oy = H * centerY - geo.cy * scale;
     radius = (geo.extent * scale) / 2;
@@ -159,8 +162,6 @@ export function createSignet(w: number, h: number, small: boolean, centerY: numb
   const phase = f32(), depth = f32(), glow = f32(), dock = f32(), restless = f32();
   const beat = f32(), cue = f32(), born = f32();
   const mode = new Uint8Array(S);
-  /** Set once a fish has made its station; cleared when it lets go. */
-  const anchored = new Uint8Array(S);
   const slot = new Int16Array(S);
   /** Which fish holds each station (−1: nobody). */
   const holder = new Int16Array(S).fill(-1);
@@ -169,7 +170,7 @@ export function createSignet(w: number, h: number, small: boolean, centerY: numb
 
   const random = seeded(4099);
   const fullSize = (i: number) =>
-    Math.min(small ? 15.5 : 20.5, H * 0.053) * (0.91 + (fromSize[i] / (small ? 11.1 : 15.4)) * 0.17);
+    Math.min(small ? 15.5 : 27, H * 0.04) * (0.91 + (fromSize[i] / (small ? 11.1 : 15.4)) * 0.17);
 
   let stage: Stage = "gather";
   let stageAt = 0;
@@ -239,7 +240,7 @@ export function createSignet(w: number, h: number, small: boolean, centerY: numb
     }
   }
 
-  function step(dt: number, time: number, school: School, whales: readonly Whale[]) {
+  function step(dt: number, time: number, school: School) {
     // ---- the stage manager ------------------------------------------------
     if (stage === "gather") {
       while (recruited < S) {
@@ -257,7 +258,6 @@ export function createSignet(w: number, h: number, small: boolean, centerY: numb
       for (let i = 0; i < S; i++) {
         if (mode[i] === SEEKING && time >= cue[i]) {
           mode[i] = MILLING;
-          anchored[i] = 0;
           holder[slot[i]] = -1;
         }
         if (mode[i] === MILLING) out++;
@@ -305,7 +305,6 @@ export function createSignet(w: number, h: number, small: boolean, centerY: numb
         wantY = (dy / d) * pace + (dx / d) * stray;
         const off = Math.hypot(slotX[slot[i]] - x[i], slotY[slot[i]] - y[i]);
         dock[i] = 1 - smoothstep(3, radius * 0.17, off);
-        if (dock[i] > 0.9) anchored[i] = 1;
       } else {
         restless[i] *= Math.exp(-dt);
         dock[i] = 0;
@@ -341,23 +340,7 @@ export function createSignet(w: number, h: number, small: boolean, centerY: numb
         grip = 1.2;
       }
 
-      let fx = (wantX - vx[i]) * grip, fy = (wantY - vy[i]) * grip;
-      // Give way to a whale shark, unless on station: the mark is the one
-      // thing in the water that holds its place (it sways, and its light
-      // wavers, but a pointer resting on it must not take it apart).
-      for (const wh of whales) {
-        if (wh.presence <= 0) continue;
-        const rx = x[i] - wh.x, ry = y[i] - wh.y;
-        const along = Math.max(-wh.size * 0.9, Math.min(wh.size * 0.85, rx * wh.hx + ry * wh.hy));
-        const ex = rx - wh.hx * along, ey = ry - wh.hy * along;
-        const d = Math.hypot(ex, ey) || 1;
-        const reach = wh.size * 0.5;
-        if (d < reach) {
-          const push = (1 - d / reach) ** 2 * H * 1.5 * wh.presence * (anchored[i] ? 0.03 : mode[i] === SEEKING ? 0.7 : 1);
-          fx += (ex / d) * push;
-          fy += (ey / d) * push;
-        }
-      }
+      const fx = (wantX - vx[i]) * grip, fy = (wantY - vy[i]) * grip;
       vx[i] += fx * dt;
       vy[i] += fy * dt;
       x[i] += vx[i] * dt;
@@ -402,7 +385,6 @@ export function createSignet(w: number, h: number, small: boolean, centerY: numb
       vx[i] = vy[i] = 0;
       heading[i] = pHeading[i] = REST_HEADING;
       glow[i] = dock[i] = grown[i] = 1;
-      anchored[i] = 1;
       size[i] = fullSize(i);
       born[i] = -10;
     }

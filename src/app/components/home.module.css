@@ -8,7 +8,7 @@
 
 .water {
   position: relative;
-  height: clamp(340px, 58svh, 560px);
+  height: clamp(400px, 74svh, 1200px);
   overflow: hidden;
   background: var(--bg);
 }
@@ -22,7 +22,7 @@
 .fade {
   position: absolute;
   inset: auto 0 0;
-  height: 26%;
+  height: 16%;
   background: linear-gradient(transparent, var(--bg));
   pointer-events: none;
 }

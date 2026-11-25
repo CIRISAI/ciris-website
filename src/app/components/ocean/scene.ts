@@ -163,7 +163,7 @@ export function createOceanScene(canvas: HTMLCanvasElement, initialDark: boolean
     steps++;
     whales!.step(STEP, simulated, p);
     school!.step(STEP, simulated, whales!.list);
-    signet!.step(STEP, simulated, school!, whales!.list);
+    signet!.step(STEP, simulated, school!);
   }
 
   function fish(
