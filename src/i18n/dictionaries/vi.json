@@ -3098,7 +3098,8 @@
     "l11n": "Xiong et al., nghiên cứu thực địa về ERC-8004",
     "l11b": "ERC-8004 là một tiêu chuẩn để ghi lại tin cậy giữa các tác nhân trên một blockchain. Bất kỳ tác nhân nào cũng có thể đăng ký mà không cần xin phép. Xiong et al. đã xem xét những gì thực sự đang hoạt động và phát hiện rằng hầu hết các đăng ký không có gì vận hành phía sau: chỉ từ 3% đến 15% trỏ đến một điểm cuối đang hoạt động, tùy theo chuỗi. Từ 59% đến 91% số người đánh giá hoạt động như các nhóm Sybil có phối hợp, và điểm uy tín có thể bị thao túng với chi phí gần như bằng không. Họ đề xuất ba cách khắc phục: một danh sách thống nhất về các chiều đánh giá, các chứng thực có trích dẫn bằng chứng, và một cơ chế tổng hợp chống lại các Sybil. Ngữ pháp CIRIS đã có sẵn cả ba: một không gian tên đã đăng ký, các chứng thực phải trích dẫn bằng chứng, và một phép đếm giúp giảm trọng số cho các tiếng nói có tương quan với nhau.",
     "lineageNote": "Các quan điểm bên ngoài được tóm tắt một cách thiện chí từ những gì họ viết công khai. Nếu chúng tôi hiểu sai bất kỳ điều nào, chuyện đó cũng đáng để mở một issue.",
-    "crossCta": "Khám phá mạng lưới hiến pháp"
+    "crossCta": "Khám phá mạng lưới hiến pháp",
+    "runCtaPlain": "Trải nghiệm sử dụng như thế nào"
   },
   "killSwitch": {
     "kicker": "Bảo mật bạn có thể tự kiểm chứng",
@@ -3426,6 +3427,8 @@
         "featureTitle": "Một trợ lý cho bạn thấy rõ cách nó làm việc.",
         "featureBody": "Dùng CIRIS trên điện thoại hoặc trong trình duyệt, và đọc mọi bước nó đã thực hiện.",
         "featureCta": "Cài đặt ứng dụng →",
+        "plainAnswers": "Câu trả lời dễ hiểu",
+        "plainAnswersSub": "Nhóm, quyền riêng tư, kiểm duyệt, bỏ phiếu",
         "install": "Cài đặt",
         "installSub": "Điện thoại, máy tính hoặc trình duyệt",
         "howItWorks": "Cách tác nhân hoạt động",
@@ -4010,5 +4013,171 @@
       }
     },
     "readKicker": "Đọc nó"
+  },
+  "plainPage": {
+    "ogTitle": "Cuộc sống trên CIRIS như thế nào, qua những câu trả lời dễ hiểu",
+    "ogDescription": "Ai giữ tài khoản của bạn, ai có thể thêm bạn vào nhóm, điều gì là riêng tư, ai kiểm duyệt, cách bỏ phiếu hoạt động, và AI có thể làm gì. Những câu trả lời dễ hiểu cho các câu hỏi thực tế.",
+    "kicker": "CÂU TRẢ LỜI DỄ HIỂU",
+    "h1": "Một mạng lưới do bạn và những người hàng xóm vận hành.",
+    "lede": "Nhắn tin, chia sẻ, tạo nhóm và cùng nhau quyết định mọi việc, với các trợ lý AI chịu trách nhiệm trước một con người. Nó chạy trên điện thoại và máy tính bạn đã có. Không có công ty nào đứng ở giữa.",
+    "ctaStory": "Tham quan nó trong không gian 3D",
+    "ctaInstall": "Cài đặt ứng dụng",
+    "sections": {
+      "you": {
+        "scale": "Bạn",
+        "title": "Điện thoại của bạn, máy tính của bạn, khóa của bạn.",
+        "qa": {
+          "s1": {
+            "q": "Ai giữ tài khoản của tôi?",
+            "a": "Chính bạn. Khóa của bạn hoạt động như chữ ký, và nó nằm trên thiết bị của chính bạn. Không điều gì có thể được thực hiện nhân danh bạn nếu thiếu nó. Bất kỳ ai lấy được khóa của bạn đều có thể ký thay bạn cho đến khi bạn vô hiệu hóa khóa đó, vì vậy hãy giữ nó an toàn."
+          },
+          "s2": {
+            "q": "Nếu tôi mất điện thoại thì sao?",
+            "a": "Nếu bạn đã liên kết một thiết bị khác, hãy dùng nó để loại bỏ thiết bị đã mất. Việc đó mất một ngày. Hãy liên kết hai thiết bị khác trở lên nếu có thể: không công ty nào có thể đặt lại khóa giúp bạn."
+          },
+          "s3": {
+            "q": "Chi phí là bao nhiêu?",
+            "a": "Mạng lưới không thu phí và không có tiền mã hóa. Bạn dùng thiết bị và internet của chính mình. Một mô hình AI có thể tốn tiền nếu bạn chọn bản trả phí."
+          },
+          "s4": {
+            "q": "Ai chọn những gì tôi xem?",
+            "a": "Chính bạn. Các bộ lọc chạy trên thiết bị của bạn theo quy tắc bạn chọn. Không công ty nào xếp hạng bảng tin của bạn."
+          }
+        }
+      },
+      "family": {
+        "scale": "Gia đình và bạn bè",
+        "title": "Một vòng tròn nhỏ của riêng bạn.",
+        "qa": {
+          "s1": {
+            "q": "Ai đó có thể thêm tôi vào nhóm mà không hỏi ý tôi không?",
+            "a": "Không. Tham gia cần ít nhất hai tiếng nói, và một trong số đó luôn là của bạn. Lời mời của một người bạn và sự đồng ý của bạn là hai tiếng nói."
+          },
+          "s2": {
+            "q": "Điều gì xảy ra khi điện thoại của tôi tắt?",
+            "a": "Một thiết bị mà bạn hoặc một thành viên luôn bật có thể giữ các tin nhắn niêm phong cho đến khi điện thoại của bạn hoạt động trở lại."
+          },
+          "s3": {
+            "q": "Ai có thể đọc nhóm riêng tư?",
+            "a": "Các thành viên của nhóm. Không ai bí mật quét nội dung: người điều hành của một nhóm có thể bật tính năng kiểm tra hình ảnh lạm dụng trẻ em đã biết trong nhóm của mình, và phép kiểm tra đó cũng chạy khi ai đó đăng cho mọi người hoặc đăng lên một phòng công khai."
+          },
+          "s4": {
+            "q": "Riêng tư không bao gồm điều gì?",
+            "a": "Một thành viên luôn có thể kể lại những gì đã nói. Người theo dõi sát mạng lưới có thể suy ra rằng một nhóm tồn tại, quy mô khoảng bao nhiêu, và những thiết bị nào tham gia. Họ không thể đọc nội dung."
+          },
+          "s5": {
+            "q": "Tôi có thể rời đi không?",
+            "a": "Có, bằng chính hành động của bạn. Không ai phải phê duyệt cả."
+          }
+        }
+      },
+      "town": {
+        "scale": "Câu lạc bộ, nhà thờ hay thị trấn của bạn",
+        "title": "Do các thành viên vận hành, không máy chủ và không cần chuyên gia kỹ thuật.",
+        "qa": {
+          "s1": {
+            "q": "Ai vận hành nó?",
+            "a": "Các thành viên vận hành. Thiết bị của chính họ gánh đỡ nó, nên nó vẫn tiếp tục khi ai đó rời đi."
+          },
+          "s2": {
+            "q": "Ai kiểm duyệt?",
+            "a": "Ít nhất một thành viên đã nhận việc. Điều phối viên có thể ẩn hoặc gỡ một bài đăng, nhắc nhở một thành viên, hoặc ngăn ai đó đăng bài. Điều phối viên là một thành viên có trách nhiệm, và không xếp trên bất kỳ ai."
+          },
+          "s3": {
+            "q": "Điều phối viên có thể đuổi tôi ra không?",
+            "a": "Không phải một mình. Việc loại một người cần có sự kiểm đếm của các thành viên trong nhóm."
+          },
+          "s4": {
+            "q": "Nếu điều phối viên làm sai thì sao?",
+            "a": "Hơn một nửa các thành viên còn lại có thể hủy bỏ việc đó trong vòng 48 giờ, và hơn hai phần ba tất cả thành viên có thể thay thế điều phối viên. Một số trường hợp gỡ bỏ khẩn cấp vì pháp lý và an toàn vẫn được giữ nguyên."
+          },
+          "s5": {
+            "q": "Một cuộc bỏ phiếu hoạt động thế nào?",
+            "a": "Các thành viên ký vào lựa chọn của mình, và mọi thiết bị cộng dồn các phiếu đã ký theo cùng bộ quy tắc đã công bố. Mỗi người chỉ được tính một lần, bất kể họ dùng bao nhiêu thiết bị. Không ai có thể mua vị thế."
+          },
+          "s6": {
+            "q": "Mọi người có thể thấy tôi đã bỏ phiếu thế nào không?",
+            "a": "Với cuộc bỏ phiếu thông thường, có. Mọi người có thể đọc phòng đều có thể thấy phiếu của bạn. Các quy tắc cũng cho phép bỏ phiếu kín."
+          },
+          "s7": {
+            "q": "Ai đó có thể đóng nhóm của chúng tôi không?",
+            "a": "Không ai có nút bấm để cấm một nhóm. Người khác có thể chọn ngừng gánh đỡ nó, và các thông báo gỡ bỏ theo luật vẫn có hiệu lực."
+          }
+        }
+      },
+      "ai": {
+        "scale": "Trợ lý AI",
+        "title": "Một trợ lý với một con người đứng sau.",
+        "qa": {
+          "s1": {
+            "q": "Ai chịu trách nhiệm cho AI ở đây?",
+            "a": "Luôn là một người có tên cụ thể. AI nói rõ mình là AI, không có quyền bỏ phiếu, có thể từ chối bất kỳ nhiệm vụ nào, và dừng lại để hỏi con người khi không chắc chắn."
+          },
+          "s2": {
+            "q": "Có thể dừng nó không?",
+            "a": "Có. Bạn có thể tắt AI của mình bất cứ lúc nào. Bất kỳ một trong ba người nào cũng có thể tạm dừng mọi AI đi theo root của họ, bằng một lệnh đã ký."
+          },
+          "s3": {
+            "q": "Điều gì xảy ra với tệp của tôi khi AI bị tạm dừng?",
+            "a": "Không có gì cả. Tin nhắn, tệp và nhóm của bạn vẫn tiếp tục hoạt động."
+          },
+          "s4": {
+            "q": "Vì sao có nút tạm dừng?",
+            "a": "Con người không thể thực sự đồng thuận trong mối quan hệ với thứ vượt trội hơn mà họ không thể dừng lại. Nút tạm dừng chính là điều khiến mối quan hệ đó công bằng."
+          }
+        }
+      },
+      "world": {
+        "scale": "Thế giới rộng lớn hơn",
+        "title": "Nhiều nơi, một bộ quy tắc mở.",
+        "qa": {
+          "s1": {
+            "q": "Tất cả chúng ta có phải thống nhất không?",
+            "a": "Không. Mỗi nhóm giữ quy tắc riêng của mình. Điều mọi người cùng chia sẻ là một bộ quy tắc đã công bố, nêu rõ một tuyên bố đã ký có nghĩa là gì."
+          },
+          "s2": {
+            "q": "Ai điều hành mạng lưới?",
+            "a": "Không ai sở hữu nó. Bạn chọn cơ quan mà thiết bị của mình tuân theo, và bạn có thể rời đi. Bất kỳ ai cũng có thể khởi tạo một cơ quan khác."
+          },
+          "s3": {
+            "q": "Nó có cần internet không?",
+            "a": "Nó chạy qua các kết nối internet thông thường, và cũng có thể chuyển tin nhắn bằng sóng radio."
+          },
+          "s4": {
+            "q": "Nó có thể lớn mạnh không?",
+            "a": "Trong mô phỏng, nó phục vụ năm tỷ người mà không cần trung tâm dữ liệu. Sử dụng thực tế ngày nay còn nhỏ hơn nhiều."
+          }
+        }
+      }
+    },
+    "todayKicker": "TÌNH HÌNH HIỆN NAY",
+    "todayTitle": "Những gì bạn có thể làm ngay, và những gì sắp tới.",
+    "nowLabel": "Đã có trong ứng dụng hôm nay",
+    "now": {
+      "s1": "Nhắn tin và chia sẻ trong nhóm riêng tư",
+      "s2": "Tham gia nhóm bằng lời mời và sự đồng ý của chính bạn",
+      "s3": "Thay đổi thành viên nhóm theo đa số, theo toàn thể, hoặc theo số lượng thành viên nhất định",
+      "s4": "Ký đồng ý hoặc từ chối một thay đổi mà nhóm bạn đang thực hiện",
+      "s5": "Điều phối viên có thể gắn cờ một bài đăng hoặc gỡ cờ, và tác giả có thể kháng nghị",
+      "s6": "Chạy một trợ lý AI, và dừng mọi việc nó làm"
+    },
+    "nextLabel": "Đã được ghi trong quy tắc, chưa có trong ứng dụng",
+    "next": {
+      "s1": "Phòng riêng tư với khóa riêng cho từng phòng",
+      "s2": "Phòng công khai bất kỳ ai cũng có thể tham gia",
+      "s3": "Nhắc nhở một thành viên, và ngăn ai đó đăng bài trong phòng",
+      "s4": "Hủy hành động của điều phối viên, thay thế điều phối viên, và bầu cử",
+      "s5": "Bỏ phiếu trong phòng, và thăm dò kín",
+      "s6": "Chọn bộ lọc cho nội dung bạn xem",
+      "s7": "Lưu giữ tin nhắn niêm phong khi điện thoại của bạn tắt",
+      "s8": "Rời phòng chỉ có hai người, hoặc khi là người sáng lập cuối cùng",
+      "s9": "Cuộc gọi nhóm và video trực tiếp"
+    },
+    "limitsTitle": "Điều chúng tôi chưa chứng minh.",
+    "limitsBody": "Chưa ai ngoài các tác giả xây dựng phiên bản thứ hai, tấn công hệ thống, hay vận hành một root độc lập. Mạng lưới chưa thể biết một khóa thuộc về một người đang sống. Ứng dụng vẫn được phân phối qua các cửa hàng ứng dụng, và thiết bị mới bắt đầu từ cơ quan mặc định của dự án.",
+    "limitsCta": "Hãy thử phản biện lập luận này",
+    "finalTitle": "Đọc các quy tắc đằng sau mọi câu trả lời.",
+    "ctaConstitution": "Hiến pháp",
+    "ctaMesh": "Toàn bộ lập luận"
   }
 }

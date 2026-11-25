@@ -3097,7 +3097,8 @@
     "l11n": "Xiong et al., ìwádìí pápá ERC-8004",
     "l11b": "ERC-8004 jẹ́ ìlànà fún kíkọ Ìgbẹ́kẹ̀lé sílẹ̀ láàrin àwọn aṣojú lórí blockchain. Aṣojú kankan lè forúkọsílẹ̀ láìbéèrè ìyọ̀ǹda. Xiong et al. wo ohun tí ó ń ṣiṣẹ́ ní ti gidi, wọ́n sì rí i pé ọ̀pọ̀lọpọ̀ àwọn tí wọ́n forúkọsílẹ̀ kò ní ohunkóhun tí ń ṣiṣẹ́ lẹ́yìn wọn: àwọn 3% sí 15% nikan ni wọ́n tọ́ka sí ibi-ìparí tí ń ṣiṣẹ́, gẹ́gẹ́ bí ẹ̀wọ̀n náà ti rí. Láàrin 59% sí 91% àwọn olùtúnyẹ̀wò hùwà gẹ́gẹ́ bí àwọn ẹgbẹ́ Sybil tí a ṣètò papọ̀, àti pé a lè fi ẹ̀tàn ṣe àmì orúkọ rere ní fẹ́rẹ̀ẹ́ láìná owó kankan. Wọ́n dábàá àwọn àtúnṣe mẹ́ta: àkójọ tí a fọwọ́sí ti àwọn ìwọ̀n àmì, àwọn ìjẹ́rìí tí ń tọ́ka sí ẹ̀rí wọn, àti àkójọpọ̀ tí ń kojú àwọn Sybil. Gírámà CIRIS ti ní gbogbo mẹ́tẹ̀ẹ̀ta tẹ́lẹ̀: orúkọ-ààyè tí a forúkọsílẹ̀, àwọn ìjẹ́rìí tí ó gbọdọ̀ tọ́ka sí ẹ̀rí wọn, àti kíkà tí ń fún àwọn ohùn tí ó ní ìbáṣepọ̀ ìwúwo tí ó kéré.",
     "lineageNote": "A ṣe àkópọ̀ àwọn ipò òde ní ọ̀nà òtítọ́ láti inú àwọn ìwé gbogbogbò. Bí a bá ṣàṣìṣe nípa èyíkéyìí nínú wọn, ìyẹn náà tọ́ sí ṣíṣí ọ̀rọ̀ sílẹ̀.",
-    "crossCta": "Ṣàwárí Àwọ̀n Ofin-Ipilẹ"
+    "crossCta": "Ṣàwárí Àwọ̀n Ofin-Ipilẹ",
+    "runCtaPlain": "Bí lílò ó ṣe rí"
   },
   "killSwitch": {
     "benchLink": "Wo àwọn nọ́mbà tuntun jùlọ",
@@ -3425,6 +3426,8 @@
         "featureTitle": "Olùrànlọ́wọ́ tí ó fi iṣẹ́ rẹ̀ hàn.",
         "featureBody": "Lo CIRIS lórí fóònù rẹ tàbí nínú ẹ̀rọ aṣàwárí, kí o sì ka gbogbo ìgbésẹ̀ tí ó gbà.",
         "featureCta": "Fi ètò náà sórí ẹrọ →",
+        "plainAnswers": "Àwọn ìdáhùn kéderé",
+        "plainAnswersSub": "Àwọn ẹgbẹ́, ìkọ̀kọ̀, abójútó, àwọn ìbò",
         "install": "Fi sórí ẹrọ",
         "installSub": "Fóònù, kọnpútà tábìlì tàbí ẹ̀rọ aṣàwárí",
         "howItWorks": "Bí aṣojú ṣe ń ṣiṣẹ́",
@@ -4009,5 +4012,171 @@
       }
     },
     "readKicker": "Kà á"
+  },
+  "plainPage": {
+    "ogTitle": "Bí ìgbé-ayé lórí CIRIS ṣe rí, nínú àwọn ìdáhùn kéderé",
+    "ogDescription": "Ta ni ó ni àkọọ́lẹ̀ rẹ, ta ni ó lè fi ọ́ sí ẹgbẹ́, ohun tí ó jẹ́ ìkọ̀kọ̀, ta ni ó ń ṣe abójútó, bí ìbò ṣe ń ṣiṣẹ́, àti ohun tí AI lè ṣe. Àwọn ìdáhùn kéderé sí àwọn ìbéèrè gidi.",
+    "kicker": "ÌDÁHÙN KÉDÉRÉ",
+    "h1": "Ìtàkùn tí ìwọ àti àwọn aládùúgbò rẹ ń ṣàkóso.",
+    "lede": "Ṣe ìránṣẹ́, pín nǹkan, ṣe àwọn ẹgbẹ́ kí ẹ sì pinnu papọ̀, pẹ̀lú àwọn olùrànlọ́wọ́ AI tí ẹnìyàn ń dáhùn fún. Ó ń ṣiṣẹ́ lórí àwọn fóònù àti kọ̀mpútà tí o ní tẹ́lẹ̀. Kò sí ilé-iṣẹ́ kankan ní àárín.",
+    "ctaStory": "Rìn nínú rẹ̀ ní 3D",
+    "ctaInstall": "Gba ètò náà",
+    "sections": {
+      "you": {
+        "scale": "Ìwọ",
+        "title": "Fóònù rẹ, kọ̀mpútà rẹ, kọ́kọ́rọ́ rẹ.",
+        "qa": {
+          "s1": {
+            "q": "Ta ni ó dì àkọọ́lẹ̀ mi mú?",
+            "a": "Ìwọ ni. Kọ́kọ́rọ́ rẹ ń ṣiṣẹ́ bí ìfọwọ́sí, ó sì ń gbé lórí àwọn ẹ̀rọ tìrẹ. Kò sí ohunkóhun tí a lè ṣe ní orúkọ rẹ láìsí kọ́kọ́rọ́ náà. Ẹnikẹ́ni tí ó gba kọ́kọ́rọ́ rẹ lè fọwọ́ sí bí ìwọ títí o fi pa kọ́kọ́rọ́ náà, nítorí náà pa á mọ́ dáadáa."
+          },
+          "s2": {
+            "q": "Kí ni tí mo bá pàdánù fóònù mi?",
+            "a": "Tí o bá ti so ẹ̀rọ mìíràn pọ̀, lò ó láti yọ èyí tí ó sọnù kúrò. Èyí gba ọjọ́ kan. So ẹ̀rọ méjì tàbí jù bẹ́ẹ̀ lọ pọ̀ tí o bá lè: kò sí ilé-iṣẹ́ kankan tí ó lè tún kọ́kọ́rọ́ rẹ ṣe fún ọ."
+          },
+          "s3": {
+            "q": "Elo ni ó ná?",
+            "a": "Ìtàkùn náà kò ní owó ìsanwọlé, kò sì ní cryptocurrency. O ń lo àwọn ẹ̀rọ tìrẹ àti ìtàkùn ayélujára rẹ. Àwòṣe AI lè ná owó bí o bá yan èyí tí a ń sanwó fún."
+          },
+          "s4": {
+            "q": "Ta ni ó yan ohun tí mo rí?",
+            "a": "Ìwọ ni. Àwọn àṣàfihàn ń ṣiṣẹ́ lórí ẹ̀rọ rẹ nípa àwọn òfin tí o yan. Kò sí ilé-iṣẹ́ kankan tí ó ń yan ohun tí o rí fún ọ."
+          }
+        }
+      },
+      "family": {
+        "scale": "Ìdílé àti àwọn ọ̀rẹ́",
+        "title": "Àyíká kékeré tìrẹ.",
+        "qa": {
+          "s1": {
+            "q": "Ṣé ẹnìyàn kan lè fi mí sí ẹgbẹ́ láìsí ìbéèrè?",
+            "a": "Rárá. Dídarapọ̀ nílò ó kéré tán ohùn méjì, ọ̀kan nínú wọn sì jẹ́ tìrẹ nígbà gbogbo. Ìpè ọ̀rẹ́ kan àti “bẹ́ẹ̀ni” tìrẹ ni ohùn méjì yẹn."
+          },
+          "s2": {
+            "q": "Kí ni ó ṣẹlẹ̀ nígbà tí fóònù mi bá wà ní pipa?",
+            "a": "Ẹ̀rọ tí ìwọ tàbí ọmọ ẹgbẹ́ fi sílẹ̀ ní títan lè dì àwọn ìránṣẹ́ tí a fi èdì mú títí fóònù rẹ yóò fi padà."
+          },
+          "s3": {
+            "q": "Ta ni ó lè ka ẹgbẹ́ ìkọ̀kọ̀?",
+            "a": "Àwọn ọmọ ẹgbẹ́ rẹ̀. Ẹnikẹ́ni kì í ṣe àyẹ̀wò rẹ̀ ní ìkọ̀kọ̀: àwọn alábójútó ẹgbẹ́ kan lè tan àyẹ̀wò fún àwọn àwòrán ìlòkulò ọmọdé tí a mọ̀ nínú ẹgbẹ́ tiwọn, àyẹ̀wò kan náà sì ń ṣiṣẹ́ nígbà tí ẹnìyàn bá tẹ̀ jáde sí gbogbo ènìyàn tàbí sí yàrá gbogboogbò."
+          },
+          "s4": {
+            "q": "Kí ni ìkọ̀kọ̀ kò bò mọ́lẹ̀?",
+            "a": "Ọmọ ẹgbẹ́ lè máa tún ohun tí a sọ ṣe nígbà gbogbo. Ẹni tí ó ń ṣọ́ ìtàkùn náà dáadáa lè mọ̀ pé ẹgbẹ́ kan wà, tóbi tó, àti àwọn ẹ̀rọ wo ló kópa. Wọn kò lè kà á."
+          },
+          "s5": {
+            "q": "Ṣé mo lè kúrò?",
+            "a": "Bẹ́ẹ̀ ni, nípa iṣe tìrẹ. Ẹnikẹ́ni kò ní láti fọwọ́ sí i."
+          }
+        }
+      },
+      "town": {
+        "scale": "Ẹgbẹ́ rẹ, ìjọ tàbí ìlú rẹ",
+        "title": "Tí àwọn ọmọ ẹgbẹ̀ ń ṣiṣẹ́, láìsí server àti láìsí ògbóǹkangí ọ̀nà-ẹ̀rọ.",
+        "qa": {
+          "s1": {
+            "q": "Ta ni ó ń ṣàkóso rẹ̀?",
+            "a": "Àwọn ọmọ ẹgbẹ̀ ni. Àwọn ẹ̀rọ tiwọn ni ó gbé e, nítorí náà ó ń tẹ̀síwájú nígbà tí ẹnìyàn bá kúrò."
+          },
+          "s2": {
+            "q": "Ta ni ó ń ṣe abójútó?",
+            "a": "Ó kéré tán ọmọ ẹgbẹ́ kan tí ó gba iṣẹ́ náà. Abójútó lè fi ìfìwéránṣẹ́ pamọ́ tàbí yọ ọ́ kúrò, kìlọ̀ fún ọmọ ẹgbẹ́ kan, tàbí dá ẹnìkan dúró láti firánṣẹ́. Abójútó jẹ́ ọmọ ẹgbẹ́ tí ó ní ojúṣe, kò sì ju ẹnikẹ́ni lọ."
+          },
+          "s3": {
+            "q": "Ṣé alábójútó lè lé mi jáde?",
+            "a": "Kì í ṣe òun nìkan. Yíyọ ènìyàn kúrò nílò kíkà àwọn ọmọ ẹgbẹ́ ẹgbẹ́ náà."
+          },
+          "s4": {
+            "q": "Kí ni tí alábójútó bá ṣìnà?",
+            "a": "Jù ìdajì àwọn ọmọ ẹgbẹ́ mìíràn lè yí i padà láàrín wákàtí 48, jù ìdá méjì nínú mẹ́ta gbogbo àwọn ọmọ ẹgbẹ́ sì lè rọ́pò alábójútó náà. Àwọn yíyọkúrò pàtàkì kan fún òfin àti ààbò ń dúró."
+          },
+          "s5": {
+            "q": "Báwo ni ìbò ṣe ń ṣiṣẹ́?",
+            "a": "Àwọn ọmọ ẹgbẹ̀ ń fọwọ́ sí àṣàyàn wọn, gbogbo ẹ̀rọ sì ń ṣàkópọ̀ àwọn ìbò tí a fọwọ́ sí nípa àwọn òfin tí a tẹ̀ jáde kan náà. Ẹnìyàn kan ni ó ń kà ní ẹ̀ẹ̀kan, bó tiẹ̀ jẹ́ pé iye ẹ̀rọ tí wọ́n lò. Ẹnikẹ́ni kò lè ra ipò."
+          },
+          "s6": {
+            "q": "Ṣé àwọn ènìyàn lè rí bí mo ṣe dìbò?",
+            "a": "Nínú ìbò déédé, bẹ́ẹ̀ ni. Gbogbo ẹni tí ó lè kà yàrá náà lè rí ìbò rẹ. Àwọn òfin náà tún gbà àwọn ìbò ìkọ̀kọ̀ láàyè."
+          },
+          "s7": {
+            "q": "Ṣé ẹnìyàn kan lè ti ẹgbẹ́ wa?",
+            "a": "Ẹnikẹ́ni kò ní ìyípadà tí ó fi ẹgbẹ́ kan léèwọ̀. Àwọn ènìyàn mìíràn lè yàn láti dá gbígbé e dúró, àwọn àkíyèsí yíyọkúrò òfin sì ṣi wà."
+          }
+        }
+      },
+      "ai": {
+        "scale": "Àwọn olùrànlọ́wọ́ AI",
+        "title": "Olùrànlọ́wọ́ pẹ̀lú ẹnìyàn lẹ́yìn rẹ̀.",
+        "qa": {
+          "s1": {
+            "q": "Ta ni ó ń dáhùn fún AI níbí?",
+            "a": "Ẹnìyàn tí a dárúkọ, nígbà gbogbo. AI ń sọ pé AI ni òun, kò ní ìbò, ó lè kọ̀ iṣẹ́ kankan, ó sì ń dúró láti bi ènìyàn nígbà tí kò bá dáni lójú."
+          },
+          "s2": {
+            "q": "Ṣé a lè dá a dúró?",
+            "a": "Bẹ́ẹ̀ ni. O lè pa tìrẹ nígbàkígbà. Ẹnikẹ́ni nínú àwọn ènìyàn mẹ́ta náà sì lè dá gbogbo AI tí ó ń tẹ̀lé root wọn dúró, pẹ̀lú àṣẹ kan tí a fọwọ́ sí."
+          },
+          "s3": {
+            "q": "Kí ni ó ṣẹlẹ̀ sí àwọn fáìlì mi nígbà tí AI bá wà ní ìsinmi?",
+            "a": "Kankan. Àwọn ìránṣẹ́ rẹ, àwọn fáìlì àti àwọn ẹgbẹ́ rẹ ń tẹ̀síwájú."
+          },
+          "s4": {
+            "q": "Kí ló dé tí ìsinmi náà fi wà?",
+            "a": "Àwọn ènìyàn kò lè fún ìtẹ́wọ́gbà gidi sí ìbáṣepọ̀ pẹ̀lú ohun tí ó lágbára jù tí wọn kò lè dá dúró. Ìsinmi náà ni ó mú kí ìbáṣepọ̀ náà dọ́gba."
+          }
+        }
+      },
+      "world": {
+        "scale": "Àgbáyé gbòòrò",
+        "title": "Àwọn ibì ọ̀pọ̀lọpọ̀, ìwé òfin kan ṣoṣo tí ó ṣí sílẹ̀.",
+        "qa": {
+          "s1": {
+            "q": "Ṣé a gbọdọ̀ fara mọ́ gbogbo rẹ̀?",
+            "a": "Rárá. Ẹgbẹ́ kọ̀ọ̀kan ń pa àwọn òfin tirẹ̀ mọ́. Ohun tí gbogbo ènìyàn pín ni ìwé òfin tí a tẹ̀ jáde tó sọ ohun tí ọ̀rọ̀ tí a fọwọ́ sí túmọ̀ sí."
+          },
+          "s2": {
+            "q": "Ta ni ó ń darí ìtàkùn náà?",
+            "a": "Ẹnikẹ́ni kò ni í. Ìwọ ni ó yan aṣẹ wo ni àwọn ẹ̀rọ rẹ yóò tẹ̀lé, o sì lè kúrò níbẹ̀. Ẹnikẹ́ni lè bẹ̀rẹ̀ òmìíràn."
+          },
+          "s3": {
+            "q": "Ṣé ó nílò intánẹ́ẹ̀tì?",
+            "a": "Ó ń ṣiṣẹ́ lórí àwọn ìsopọ̀ intánẹ́ẹ̀tì déédé, ó sì lè fi ìránṣẹ́ ránṣẹ́ nípa rédíò pẹ̀lú."
+          },
+          "s4": {
+            "q": "Ṣé ó lè tóbi?",
+            "a": "Nínú àfarawé ó gbé ènìyàn 5 bilionu láìsí ilé-iṣẹ́ dátà. Lílo gidi kéré gan-an lónìí."
+          }
+        }
+      }
+    },
+    "todayKicker": "IBI TÍ Ó WÀ LÓNÌÍ",
+    "todayTitle": "Ohun tí o lè ṣe báyìí, àti ohun tí ó ń bọ̀.",
+    "nowLabel": "Nínú ètò lónìí",
+    "now": {
+      "s1": "Ṣe ìránṣẹ́ kí o sì pín nǹkan nínú àwọn ẹgbẹ́ ìkọ̀kọ̀",
+      "s2": "Darapọ̀ mọ́ ẹgbẹ́ nípa ìpè àti ìtẹ́wọ́gbà tìrẹ",
+      "s3": "Yí àwọn tó wà nínú ẹgbẹ́ padà nípa ọ̀pọ̀lọpọ̀, nípa gbogbo ènìyàn, tàbí nípa iye àwọn ọmọ ẹgbẹ́ tí a yàn",
+      "s4": "Fọwọ́ sí tàbí kọ̀ láti fọwọ́ sí àyípadà tí ẹgbẹ́ rẹ ń ṣe",
+      "s5": "Àwọn alábójútó lè fi àmì sí ìránṣẹ́ kan tàbí kí wọ́n yọ àmì náà kúrò, òǹkọ̀wé rẹ̀ sì lè bẹ̀bẹ̀",
+      "s6": "Ṣiṣẹ́ olùrànlọ́wọ́ AI, kí o sì dá gbogbo ohun tí ó ń ṣe dúró"
+    },
+    "nextLabel": "Ó wà nínú àwọn òfin, kò tí ì sí nínú ètò náà",
+    "next": {
+      "s1": "Àwọn yàrá ìkọ̀kọ̀ pẹ̀lú kọ́kọ́rọ́ tí a ṣe fún yàrá kọ̀ọ̀kan",
+      "s2": "Àwọn yàrá gbogboogbò tí ẹnikẹ́ni lè darapọ̀ mọ́",
+      "s3": "Kìlọ̀ fún ọmọ ẹgbẹ́, àti dídá ẹnìkan dúró láti firánṣẹ́ nínú yàrá",
+      "s4": "Yíyí ohun tí abójútó ṣe padà, rírọ́pò abójútó, àti àwọn ìdìbò",
+      "s5": "Àwọn ìbò yàrá, àti àwọn ìbò ìkọ̀kọ̀",
+      "s6": "Yíyan àwọn àṣàfihàn fún ohun tí o rí",
+      "s7": "Dídì àwọn ìránṣẹ́ tí a fi èdì mú nígbà tí fóònù rẹ bá wà ní pipa",
+      "s8": "Kíkúrò nínú yàrá àwọn méjì, tàbí gẹ́gẹ́ bí olùdásílẹ̀ ìkẹyìn",
+      "s9": "Àwọn ìpè ẹgbẹ́ àti fídíò lọ́wọ́lọ́wọ́"
+    },
+    "limitsTitle": "Ohun tí a kò tíì fi hàn.",
+    "limitsBody": "Kò sí ẹnikẹ́ni mìíràn yàtọ̀ sí àwọn òǹkọ̀wé tí ó ti kọ́ ẹ̀dà kejì, tí ó ti kọlu ètò náà, tàbí tí ó ti ṣiṣẹ́ root òmìnira. Ìtàkùn náà kò lè mọ̀ pé kọ́kọ́rọ́ kan jẹ́ ti ẹnìyàn ààyè. Ètò náà ṣi ń wá láti ọwọ́ àwọn ilé ìtajà ètò, ẹ̀rọ tuntun sì ń bẹ̀rẹ̀ láti ọwọ́ aṣẹ ìbẹ̀rẹ̀ iṣẹ́ náà.",
+    "limitsCta": "Gbìyànjú láti fọ́ ìjiyàn náà",
+    "finalTitle": "Ka àwọn òfin tó wà lẹ́yìn gbogbo ìdáhùn.",
+    "ctaConstitution": "Ofin-Ipilẹ",
+    "ctaMesh": "Gbogbo ìjiyàn náà"
   }
 }

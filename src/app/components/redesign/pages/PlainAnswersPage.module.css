@@ -1,0 +1,202 @@
+/* /plain-answers: tokens come from the shell (rd.module.css). */
+
+.page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px 120px;
+  box-sizing: border-box;
+}
+
+.hero {
+  padding-top: 64px;
+  max-width: 900px;
+}
+
+.heroKicker {
+  margin: 0 0 18px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--accentText);
+}
+
+.ctas {
+  margin-top: 32px;
+}
+
+.trail {
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.trail a {
+  display: block;
+  padding: 8px 14px;
+  border: 1px solid var(--line2);
+  border-radius: 999px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.sec {
+  padding-top: 112px;
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: 32px 72px;
+  scroll-margin-top: 8px;
+}
+
+.side {
+  position: sticky;
+  top: 40px;
+  align-self: start;
+}
+
+.mark {
+  display: block;
+  width: 108px;
+  height: 108px;
+  margin: 0 0 20px;
+  fill: none;
+  stroke: var(--dim);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.fill {
+  fill: var(--panel2);
+}
+
+.accent {
+  stroke: var(--accentText);
+}
+
+.accentFill {
+  fill: var(--accentText);
+  stroke: var(--accentText);
+}
+
+.scale {
+  margin-bottom: 12px;
+}
+
+.h2 {
+  margin: 0;
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.qa {
+  margin: 0;
+}
+
+.pair {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.pair:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.pair dt {
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.pair dd {
+  margin: 8px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--dim);
+  text-wrap: pretty;
+}
+
+.block {
+  padding-top: 130px;
+}
+
+.list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  padding: 11px 0;
+  border-top: 1px solid var(--line);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.list li:first-child {
+  border-top: 0;
+}
+
+.limits {
+  margin-top: 40px;
+  padding-inline-start: 24px;
+  border-inline-start: 2px solid var(--line2);
+  max-width: 760px;
+}
+
+.limits h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.limits p {
+  margin: 10px 0 12px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--dim);
+}
+
+.final {
+  padding-top: 120px;
+}
+
+@media (max-width: 900px) {
+  .sec {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 84px;
+  }
+
+  .side {
+    position: static;
+  }
+
+  .mark {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 0 20px 80px;
+  }
+
+  .hero {
+    padding-top: 36px;
+  }
+}
+
+.notYet {
+  margin-inline-start: 12px;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 400;
+  letter-spacing: 0;
+}

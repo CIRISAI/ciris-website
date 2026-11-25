@@ -53,6 +53,7 @@ export const NEW_LOOK_ROUTES: ReadonlySet<string> = new Set([
   "/values",
   "/verification",
   "/vision",
+  "/plain-answers",
   "/web4"
 ]);
 

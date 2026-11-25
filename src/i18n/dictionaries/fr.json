@@ -3098,7 +3098,8 @@
     "l11n": "Xiong et al., l'étude de terrain sur ERC-8004",
     "l11b": "ERC-8004 est une norme pour enregistrer la confiance entre agents sur une blockchain. N'importe quel agent peut s'enregistrer sans demander d'autorisation. Xiong et al. ont examiné ce qui tournait réellement et ont constaté que la plupart des enregistrements n'avaient rien de fonctionnel derrière eux : seuls 3 % à 15 % pointaient vers un point de terminaison opérationnel, selon la chaîne. Entre 59 % et 91 % des évaluateurs agissaient comme des groupes Sybil coordonnés, et un score de réputation pouvait être manipulé à un coût quasi nul. Ils recommandent trois correctifs : une liste convenue de dimensions d'évaluation, des attestations qui citent leurs preuves, et une agrégation résistante aux attaques Sybil. La grammaire de CIRIS possède déjà les trois : un espace de noms enregistré, des attestations qui doivent citer leurs preuves, et un décompte qui accorde moins de poids aux voix corrélées.",
     "lineageNote": "Les positions extérieures sont résumées de bonne foi à partir de textes publics. Si nous nous trompons sur l'une d'elles, cela mérite aussi une issue.",
-    "crossCta": "Explorer le maillage constitutionnel"
+    "crossCta": "Explorer le maillage constitutionnel",
+    "runCtaPlain": "À quoi ressemble son utilisation"
   },
   "killSwitch": {
     "kicker": "Une sécurité que vous pouvez vérifier",
@@ -3426,6 +3427,8 @@
         "featureTitle": "Un assistant qui montre son travail.",
         "featureBody": "Utilisez CIRIS sur votre téléphone ou dans le navigateur, et lisez chaque étape suivie.",
         "featureCta": "Installer l'application →",
+        "plainAnswers": "Réponses simples",
+        "plainAnswersSub": "Groupes, confidentialité, modération, votes",
         "install": "Installer",
         "installSub": "Téléphone, ordinateur ou navigateur",
         "howItWorks": "Comment fonctionne l'agent",
@@ -4010,5 +4013,171 @@
       }
     },
     "readKicker": "Lire"
+  },
+  "plainPage": {
+    "ogTitle": "La vie sur CIRIS en réponses simples",
+    "ogDescription": "Qui détient votre compte, qui peut vous ajouter à un groupe, ce qui est privé, qui modère, comment fonctionnent les votes, et ce que l’IA peut faire. Des réponses simples à de vraies questions.",
+    "kicker": "RÉPONSES SIMPLES",
+    "h1": "Un réseau que vous et vos voisins gérez.",
+    "lede": "Envoyez des messages, partagez, créez des groupes et décidez ensemble, avec des assistants IA qui répondent devant une personne. Cela fonctionne sur les téléphones et les ordinateurs que vous possédez déjà. Aucune entreprise au milieu.",
+    "ctaStory": "Parcourez-le en 3D",
+    "ctaInstall": "Obtenir l’application",
+    "sections": {
+      "you": {
+        "scale": "Vous",
+        "title": "Votre téléphone, votre ordinateur portable, votre clé.",
+        "qa": {
+          "s1": {
+            "q": "Qui détient mon compte ?",
+            "a": "Vous. Votre clé fonctionne comme une signature, et elle vit sur vos propres appareils. Rien ne peut être fait en votre nom sans elle. Quiconque prend votre clé peut signer comme vous jusqu’à ce que vous désactiviez cette clé, alors gardez-la en sécurité."
+          },
+          "s2": {
+            "q": "Et si je perds mon téléphone ?",
+            "a": "Si vous avez lié un autre appareil, utilisez-le pour retirer celui perdu. Cela prend un jour. Liez deux autres appareils ou plus si vous le pouvez : aucune entreprise ne peut réinitialiser votre clé pour vous."
+          },
+          "s3": {
+            "q": "Combien ça coûte ?",
+            "a": "Le réseau n’a ni frais ni cryptomonnaie. Vous utilisez vos propres appareils et internet. Un modèle d’IA peut coûter de l’argent si vous choisissez un modèle payant."
+          },
+          "s4": {
+            "q": "Qui choisit ce que je vois ?",
+            "a": "Vous. Les filtres fonctionnent sur votre appareil selon des règles que vous choisissez. Aucune entreprise ne classe votre fil."
+          }
+        }
+      },
+      "family": {
+        "scale": "Famille et amis",
+        "title": "Un petit cercle à vous.",
+        "qa": {
+          "s1": {
+            "q": "Peut-on m’ajouter à un groupe sans me demander ?",
+            "a": "Non. Rejoindre demande au moins deux voix, et l’une d’elles est toujours la vôtre. L’invitation d’un ami et votre oui font deux voix."
+          },
+          "s2": {
+            "q": "Que se passe-t-il quand mon téléphone est éteint ?",
+            "a": "Un appareil que vous ou un membre laissez allumé peut conserver des messages scellés jusqu’au retour de votre téléphone."
+          },
+          "s3": {
+            "q": "Qui peut lire un groupe privé ?",
+            "a": "Ses membres. Personne ne le scrute en secret : les modérateurs d’un groupe peuvent activer un contrôle des images connues d’abus d’enfants dans leur propre groupe, et le même contrôle s’applique quand quelqu’un publie pour tout le monde ou dans un salon public."
+          },
+          "s4": {
+            "q": "Que ne couvre pas le caractère privé ?",
+            "a": "Un membre peut toujours répéter ce qui a été dit. Quelqu’un qui surveille le réseau de près peut deviner qu’un groupe existe, sa taille approximative, et quels appareils y participent. Il ne peut pas le lire."
+          },
+          "s5": {
+            "q": "Puis-je partir ?",
+            "a": "Oui, par votre propre acte. Personne n’a à l’approuver."
+          }
+        }
+      },
+      "town": {
+        "scale": "Votre club, église ou ville",
+        "title": "Géré par ses membres, sans serveur ni technicien.",
+        "qa": {
+          "s1": {
+            "q": "Qui le gère ?",
+            "a": "Les membres. Leurs propres appareils le portent, donc il continue quand quelqu’un part."
+          },
+          "s2": {
+            "q": "Qui modère ?",
+            "a": "Au moins un membre qui a accepté la tâche. Un modérateur peut masquer ou retirer une publication, avertir un membre, ou empêcher quelqu’un de publier. Un modérateur est un membre avec un devoir, et n’est au-dessus de personne."
+          },
+          "s3": {
+            "q": "Un modérateur peut-il m’exclure ?",
+            "a": "Pas seul. Exclure une personne exige un décompte des membres du groupe."
+          },
+          "s4": {
+            "q": "Et si le modérateur se trompe ?",
+            "a": "Plus de la moitié des autres membres peuvent l’annuler sous 48 heures, et plus des deux tiers de tous les membres peuvent remplacer le modérateur. Certains retraits urgents légaux et de sécurité demeurent."
+          },
+          "s5": {
+            "q": "Comment fonctionne un vote ?",
+            "a": "Les membres signent leur choix, et chaque appareil additionne les votes signés selon les mêmes règles publiées. Une personne compte une fois, quel que soit le nombre d’appareils utilisés. Personne ne peut acheter d’influence."
+          },
+          "s6": {
+            "q": "Peut-on voir comment j’ai voté ?",
+            "a": "Lors d’un vote ordinaire, oui. Tous ceux qui peuvent lire le salon peuvent voir votre vote. Les règles autorisent aussi les sondages secrets."
+          },
+          "s7": {
+            "q": "Quelqu’un peut-il fermer notre groupe ?",
+            "a": "Personne n’a d’interrupteur pour interdire un groupe. D’autres peuvent choisir de cesser de le porter, et les avis de retrait légaux s’appliquent toujours."
+          }
+        }
+      },
+      "ai": {
+        "scale": "Assistants IA",
+        "title": "Un assistant avec une personne derrière lui.",
+        "qa": {
+          "s1": {
+            "q": "Qui répond d’une IA ici ?",
+            "a": "Une personne nommée, toujours. Une IA dit qu’elle est une IA, n’a pas de vote, peut refuser toute tâche, et s’arrête pour demander à un humain en cas de doute."
+          },
+          "s2": {
+            "q": "Peut-on l’arrêter ?",
+            "a": "Oui. Vous pouvez éteindre la vôtre à tout moment. N’importe laquelle des trois personnes peut aussi mettre en pause chaque IA qui suit leur racine, avec un seul ordre signé."
+          },
+          "s3": {
+            "q": "Qu’advient-il de mes fichiers quand l’IA est en pause ?",
+            "a": "Rien. Vos messages, fichiers et groupes continuent."
+          },
+          "s4": {
+            "q": "Pourquoi la pause existe-t-elle ?",
+            "a": "On ne peut pas consentir vraiment à une relation avec quelque chose de plus capable qu’on ne peut pas arrêter. La pause est ce qui rend cette relation équitable."
+          }
+        }
+      },
+      "world": {
+        "scale": "Le monde élargi",
+        "title": "Beaucoup de lieux, un seul recueil de règles ouvert.",
+        "qa": {
+          "s1": {
+            "q": "Devons-nous tous être d’accord ?",
+            "a": "Non. Chaque groupe garde ses propres règles. Ce que tous partagent, c’est un recueil de règles publié qui dit ce que signifie une déclaration signée."
+          },
+          "s2": {
+            "q": "Qui dirige le réseau ?",
+            "a": "Personne ne le possède. Vous choisissez l’autorité que vos appareils suivent, et vous pouvez la quitter. Chacun peut en lancer une autre."
+          },
+          "s3": {
+            "q": "Faut-il internet ?",
+            "a": "Il fonctionne sur des liens internet ordinaires, et peut aussi transmettre des messages par radio."
+          },
+          "s4": {
+            "q": "Peut-il devenir grand ?",
+            "a": "En simulation, il porte cinq milliards de personnes sans centre de données. L’usage réel est bien plus modeste aujourd’hui."
+          }
+        }
+      }
+    },
+    "todayKicker": "OÙ NOUS EN SOMMES AUJOURD’HUI",
+    "todayTitle": "Ce que vous pouvez faire maintenant, et la suite.",
+    "nowLabel": "Dans l’application aujourd’hui",
+    "now": {
+      "s1": "Envoyez des messages et partagez dans des groupes privés",
+      "s2": "Rejoignez un groupe sur invitation et avec votre propre oui",
+      "s3": "Changez les membres d’un groupe à la majorité, à l’unanimité, ou avec un nombre défini de membres",
+      "s4": "Signez ou refusez un changement que votre groupe prépare",
+      "s5": "Les modérateurs peuvent signaler une publication ou retirer le signalement, et son auteur peut faire appel",
+      "s6": "Faites fonctionner un assistant IA, et arrêtez tout ce qu’il fait"
+    },
+    "nextLabel": "Inscrit dans les règles, pas encore dans l’application",
+    "next": {
+      "s1": "Salons privés avec une clé créée pour chaque salon",
+      "s2": "Salons publics que tout le monde peut rejoindre",
+      "s3": "Avertir un membre, et empêcher quelqu’un de publier dans un salon",
+      "s4": "Annuler l’acte d’un modérateur, remplacer un modérateur, et élections",
+      "s5": "Votes en salon, et sondages secrets",
+      "s6": "Choisir des filtres pour ce que vous voyez",
+      "s7": "Conserver des messages scellés quand votre téléphone est éteint",
+      "s8": "Quitter un salon à deux, ou en tant que dernier fondateur",
+      "s9": "Appels de groupe et vidéo en direct"
+    },
+    "limitsTitle": "Ce que nous n’avons pas encore démontré.",
+    "limitsBody": "Personne en dehors des auteurs n’a construit de seconde version, attaqué le système, ni exploité de racine indépendante. Le réseau ne peut pas dire qu’une clé appartient à une personne vivante. L’application passe toujours par les boutiques d’applications, et un nouvel appareil part de l’autorité par défaut du projet.",
+    "limitsCta": "Essayez de réfuter l’argumentaire",
+    "finalTitle": "Lisez les règles derrière chaque réponse.",
+    "ctaConstitution": "La Constitution",
+    "ctaMesh": "L’argumentaire complet"
   }
 }

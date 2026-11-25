@@ -3099,7 +3099,8 @@
     "l11n": "Xiong et al., el estudio de campo sobre ERC-8004",
     "l11b": "ERC-8004 es un estándar para registrar la confianza entre agentes en una blockchain. Cualquier agente puede registrarse sin pedir permiso. Xiong et al. examinaron lo que realmente estaba en funcionamiento y descubrieron que la mayoría de los registros no tenían nada funcional detrás: solo entre el 3% y el 15% apuntaban a un endpoint que funcionaba, según la cadena. Entre el 59% y el 91% de los revisores actuaban como grupos Sybil coordinados, y un puntaje de reputación podía manipularse con un costo casi nulo. Recomiendan tres correcciones: una lista acordada de dimensiones de puntaje, atestaciones que citen su evidencia, y una agregación que resista a los Sybils. La gramática de CIRIS ya cuenta con las tres: un espacio de nombres registrado, atestaciones que deben citar su evidencia, y un conteo que da menos peso a las voces correlacionadas.",
     "lineageNote": "Las posturas ajenas están resumidas de buena fe a partir de textos públicos. Si tenemos alguna mal, eso también merece un issue.",
-    "crossCta": "Explora la Malla Constitucional"
+    "crossCta": "Explora la Malla Constitucional",
+    "runCtaPlain": "Cómo es usarlo"
   },
   "killSwitch": {
     "kicker": "Seguridad que puedes comprobar",
@@ -3427,6 +3428,8 @@
         "featureTitle": "Un asistente que muestra su trabajo.",
         "featureBody": "Usa CIRIS en tu teléfono o en el navegador, y lee cada paso que dio.",
         "featureCta": "Instala la app →",
+        "plainAnswers": "Respuestas claras",
+        "plainAnswersSub": "Grupos, privacidad, moderación, votos",
         "install": "Instalar",
         "installSub": "Teléfono, escritorio o navegador",
         "howItWorks": "Cómo funciona el agente",
@@ -4011,5 +4014,171 @@
       }
     },
     "readKicker": "Leer"
+  },
+  "plainPage": {
+    "lede": "Envía mensajes, comparte, crea grupos y decidan juntos, con asistentes de IA que responden ante una persona. Funciona en los teléfonos y computadoras que ya tienes. Ninguna empresa está en el medio.",
+    "ctaStory": "Recórrelo en 3D",
+    "ctaInstall": "Instala la app",
+    "ogTitle": "Cómo es la vida en CIRIS, en respuestas claras",
+    "ogDescription": "Quién tiene tu cuenta, quién puede agregarte a un grupo, qué es privado, quién modera, cómo funcionan las votaciones y qué puede hacer la IA. Respuestas claras a preguntas reales.",
+    "kicker": "RESPUESTAS CLARAS",
+    "sections": {
+      "you": {
+        "scale": "Tú",
+        "title": "Tu teléfono, tu computadora, tu clave.",
+        "qa": {
+          "s1": {
+            "q": "¿Quién tiene mi cuenta?",
+            "a": "Tú. Tu clave funciona como una firma y vive en tus propios dispositivos. Nada puede hacerse en tu nombre sin ella. Quien tome tu clave puede firmar como tú hasta que desactives esa clave, así que cuídala."
+          },
+          "s2": {
+            "q": "¿Qué pasa si pierdo mi teléfono?",
+            "a": "Si vinculaste otro dispositivo, úsalo para quitar el perdido. Eso toma un día. Vincula dos o más dispositivos si puedes: ninguna empresa puede restablecer tu clave por ti."
+          },
+          "s3": {
+            "q": "¿Cuál es el costo?",
+            "a": "La red no tiene tarifa ni criptomoneda. Usas tus propios dispositivos e internet. Un modelo de IA puede tener un costo si eliges uno de pago."
+          },
+          "s4": {
+            "q": "¿Quién elige lo que veo?",
+            "a": "Tú. Los filtros corren en tu dispositivo con reglas que tú eliges. Ninguna empresa ordena tu feed."
+          }
+        }
+      },
+      "family": {
+        "scale": "Familia y amigos",
+        "title": "Un pequeño círculo propio.",
+        "qa": {
+          "s1": {
+            "q": "¿Alguien puede agregarme a un grupo sin preguntarme?",
+            "a": "No. Unirse requiere al menos dos voces, y una siempre es la tuya. La invitación de un amigo y tu sí son dos voces."
+          },
+          "s2": {
+            "q": "¿Qué pasa cuando mi teléfono está apagado?",
+            "a": "Un dispositivo que tú o un miembro mantengan encendido puede guardar mensajes sellados hasta que tu teléfono vuelva."
+          },
+          "s3": {
+            "q": "¿Quién puede leer un grupo privado?",
+            "a": "Sus miembros. Nadie lo revisa en secreto: los moderadores de un grupo pueden activar una revisión de imágenes conocidas de abuso infantil en su propio grupo, y la misma revisión se aplica cuando alguien publica para todos o en una sala pública."
+          },
+          "s4": {
+            "q": "¿Qué no cubre lo privado?",
+            "a": "Un miembro siempre puede repetir lo dicho. Alguien que observe la red de cerca puede deducir que un grupo existe, su tamaño aproximado y qué dispositivos participan. No puede leerlo."
+          },
+          "s5": {
+            "q": "¿Puedo salir?",
+            "a": "Sí, por tu propio acto. Nadie tiene que aprobarlo."
+          }
+        }
+      },
+      "town": {
+        "scale": "Tu club, iglesia o pueblo",
+        "title": "Gestionado por sus miembros, sin servidor ni técnico.",
+        "qa": {
+          "s1": {
+            "q": "¿Quién lo opera?",
+            "a": "Los miembros. Sus propios dispositivos lo sostienen, así sigue funcionando cuando alguien se va."
+          },
+          "s2": {
+            "q": "¿Quién modera?",
+            "a": "Al menos un miembro que aceptó el trabajo. Un moderador puede ocultar o retirar una publicación, advertir a un miembro o impedir que alguien publique. Un moderador es un miembro con un deber, y no está por encima de nadie."
+          },
+          "s3": {
+            "q": "¿Puede un moderador expulsarme?",
+            "a": "No por sí solo. Expulsar a una persona requiere un conteo de los miembros del grupo."
+          },
+          "s4": {
+            "q": "¿Qué pasa si el moderador se equivoca?",
+            "a": "Más de la mitad de los demás miembros puede revertirlo en 48 horas, y más de dos tercios de todos los miembros puede reemplazar al moderador. Algunas retiradas urgentes legales y de seguridad se mantienen."
+          },
+          "s5": {
+            "q": "¿Cómo funciona una votación?",
+            "a": "Los miembros firman su elección, y cada dispositivo suma los votos firmados con las mismas reglas publicadas. Una persona cuenta una vez, sin importar cuántos dispositivos use. Nadie puede comprar posición."
+          },
+          "s6": {
+            "q": "¿Pueden ver cómo voté?",
+            "a": "En una votación ordinaria, sí. Todos los que pueden leer la sala pueden ver tu voto. Las reglas también permiten encuestas secretas."
+          },
+          "s7": {
+            "q": "¿Alguien puede cerrar nuestro grupo?",
+            "a": "Nadie tiene un interruptor que prohíba un grupo. Otros pueden elegir dejar de sostenerlo, y los avisos legales de retirada siguen aplicando."
+          }
+        }
+      },
+      "ai": {
+        "scale": "Asistentes de IA",
+        "title": "Un asistente con una persona detrás.",
+        "qa": {
+          "s1": {
+            "q": "¿Quién responde por una IA aquí?",
+            "a": "Una persona nombrada, siempre. Una IA dice que es una IA, no tiene voto, puede rechazar cualquier tarea y se detiene para preguntar a un humano cuando no está segura."
+          },
+          "s2": {
+            "q": "¿Se puede detener?",
+            "a": "Sí. Puedes apagar la tuya en cualquier momento. Cualquiera de tres personas también puede pausar cada IA que siga su raíz, con una sola orden firmada."
+          },
+          "s3": {
+            "q": "¿Qué pasa con mis archivos cuando la IA está en pausa?",
+            "a": "Nada. Tus mensajes, archivos y grupos siguen funcionando."
+          },
+          "s4": {
+            "q": "¿Por qué existe la pausa?",
+            "a": "Las personas no pueden dar consentimiento real a una relación con algo más capaz que no pueden detener. La pausa es lo que hace esa relación equitativa."
+          }
+        }
+      },
+      "world": {
+        "scale": "El mundo más amplio",
+        "title": "Muchos lugares, un reglamento abierto.",
+        "qa": {
+          "s1": {
+            "q": "¿Tenemos que estar de acuerdo en todo?",
+            "a": "No. Cada grupo mantiene sus propias reglas. Lo que todos comparten es un reglamento publicado que dice lo que significa una declaración firmada."
+          },
+          "s2": {
+            "q": "¿Quién está a cargo de la red?",
+            "a": "Nadie lo posee. Tú eliges qué autoridad siguen tus dispositivos, y puedes salirte. Cualquiera puede iniciar otra."
+          },
+          "s3": {
+            "q": "¿Necesita internet?",
+            "a": "Funciona sobre conexiones comunes de internet, y también puede pasar mensajes por radio."
+          },
+          "s4": {
+            "q": "¿Puede crecer?",
+            "a": "En simulación sostiene a cinco mil millones de personas sin centro de datos. El uso real hoy es mucho menor."
+          }
+        }
+      }
+    },
+    "todayKicker": "DÓNDE ESTÁ HOY",
+    "todayTitle": "Lo que puedes hacer ahora y lo que sigue.",
+    "nowLabel": "En la app hoy",
+    "now": {
+      "s1": "Envía mensajes y comparte en grupos privados",
+      "s2": "Únete a un grupo por invitación y tu propio sí",
+      "s3": "Cambia quién está en un grupo por mayoría, por todos o por un número fijo de miembros",
+      "s4": "Firma o rechaza un cambio que tu grupo está haciendo",
+      "s5": "Los moderadores pueden marcar una publicación o quitar la marca, y su autor puede apelar",
+      "s6": "Opera un asistente de IA y detén todo lo que hace"
+    },
+    "nextLabel": "Escrito en las reglas, aún no en la app",
+    "next": {
+      "s1": "Salas privadas con una clave creada para cada sala",
+      "s2": "Salas públicas a las que cualquiera puede unirse",
+      "s3": "Advertir a un miembro e impedir que alguien publique en una sala",
+      "s4": "Revertir un acto de moderación, reemplazar a un moderador, y elecciones",
+      "s5": "Votaciones en salas y encuestas secretas",
+      "s6": "Elegir filtros para lo que ves",
+      "s7": "Guardar mensajes sellados mientras tu teléfono está apagado",
+      "s8": "Salir de una sala de dos, o como último fundador",
+      "s9": "Llamadas grupales y video en vivo"
+    },
+    "limitsTitle": "Lo que aún no hemos demostrado.",
+    "limitsBody": "Nadie fuera de los autores ha construido una segunda versión, atacado el sistema ni operado una raíz independiente. La red no puede saber que una clave pertenece a una persona viva. La app aún llega a través de tiendas de apps, y un dispositivo nuevo parte de la autoridad predeterminada del proyecto.",
+    "limitsCta": "Intenta romper el argumento",
+    "finalTitle": "Lee las reglas detrás de cada respuesta.",
+    "ctaConstitution": "La Constitución",
+    "ctaMesh": "Argumento completo",
+    "h1": "Una red que tú y tus vecinos llevan juntos."
   }
 }
