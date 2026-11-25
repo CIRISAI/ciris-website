@@ -17,7 +17,8 @@ import {
 } from "./art";
 import { School, createSchool } from "./school";
 import { Signet, createSignet } from "./signet";
-import { Pointer, WhaleBuffer, createWhales, drawWhale, whaleBuffer } from "./whale";
+import { Pointer, WhaleBuffer, createWhales, drawWhale, setCourse, whaleBuffer } from "./whale";
+import { type WhaleTurn, whaleTurn } from "./whaleTurn";
 
 /** The schools have the water to themselves for this long. */
 const INTRO_SECONDS = 4.5;
@@ -49,6 +50,7 @@ export function createOceanScene(canvas: HTMLCanvasElement, initialDark: boolean
   let back: HTMLCanvasElement | null = null;
   let shoal: HTMLCanvasElement, gold: HTMLCanvasElement, halo: HTMLCanvasElement, whaleArt: HTMLCanvasElement;
   let buffers: WhaleBuffer[] = [];
+  let turn: WhaleTurn;
   let whalePx = 1;
   let motes: { x: number; y: number; speed: number; r: number }[][] = [];
   const MOTE_ALPHA = [0.08, 0.13, 0.19];
@@ -98,8 +100,7 @@ export function createOceanScene(canvas: HTMLCanvasElement, initialDark: boolean
     const lead = whales.lead;
     lead.x = lead.px = w * 0.19;
     lead.y = lead.py = h * 0.52;
-    lead.facing = lead.pFacing = 1;
-    lead.hx = 1;
+    setCourse(lead, false);
   }
 
   function paint() {
@@ -115,6 +116,7 @@ export function createOceanScene(canvas: HTMLCanvasElement, initialDark: boolean
     whalePx = Math.max(40, Math.min(whales.lead.size * Math.min(dpr, 1.25), 380));
     whaleArt = whaleSprite(palette, light, whalePx);
     buffers = [whaleBuffer(whaleArt, whalePx), whaleBuffer(whaleArt, whalePx)];
+    turn = whaleTurn(palette, light, whalePx);
     signet.paint(palette, light, dpr);
   }
 
@@ -198,7 +200,7 @@ export function createOceanScene(canvas: HTMLCanvasElement, initialDark: boolean
       ctx.fill();
     }
 
-    whales.list.forEach((s, i) => drawWhale(ctx, s, k, whaleArt, buffers[i], whalePx, dpr, w, time, still ? -2 : steps));
+    whales.list.forEach((s, i) => drawWhale(ctx, s, k, whaleArt, buffers[i], whalePx, dpr, w, time, still ? -2 : steps, turn));
 
     // Deepest school first.
     const o = school;

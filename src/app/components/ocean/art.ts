@@ -198,7 +198,13 @@ export const WHALE_TAIL = -1.25;
  * the swimmer bends this single image along its spine (see whale.ts), so the
  * tail cannot separate from the body by construction.
  */
-export function whaleSprite(palette: Palette, light: boolean, pxPerUnit: number): HTMLCanvasElement {
+/** The parts a turning whale is assembled from, all in the sprite's frame. */
+export type WhaleLayer = "all" | "trunk" | "crest" | "fin" | "finFar";
+
+export function whaleSprite(
+  palette: Palette, light: boolean, pxPerUnit: number, layer: WhaleLayer = "all",
+): HTMLCanvasElement {
+  const on = (...l: WhaleLayer[]) => layer === "all" || l.includes(layer);
   const c = offscreen((WHALE.x1 - WHALE.x0) * pxPerUnit, (WHALE.y1 - WHALE.y0) * pxPerUnit);
   const ctx = c.getContext("2d")!;
   ctx.scale(pxPerUnit, pxPerUnit);
@@ -231,11 +237,22 @@ export function whaleSprite(palette: Palette, light: boolean, pxPerUnit: number)
     `M .89 -.08 C .91 -.044 .902 .021 .856 .053 C .74 .13 .54 .164 .25 .151 C -.10 .145 -.32 .098 -.62 .046 C -.719 .030 -.833 .041 ${hingeX - 0.022} .029 L ${hingeX - 0.022} -.031 C -.833 -.040 -.714 -.026 -.62 -.066 Q -.54 -.091 -.40 -.121 C -.16 -.172 .035 -.202 .27 -.204 C .49 -.199 .672 -.158 .80 -.13 Q .866 -.111 .89 -.08 Z`,
   );
 
-  ctx.fillStyle = rgba(backFin, 0.7);
-  ctx.fill(farFin);
-  ctx.fill(secondDorsal);
-  ctx.fill(dorsal);
+  if (layer === "finFar") {
+    // Seen from outside its own flank, so the near fin's outline in far tones.
+    ctx.fillStyle = rgba(backFin, 0.7);
+    ctx.fill(nearFin);
+  }
+  if (layer === "all") {
+    ctx.fillStyle = rgba(backFin, 0.7);
+    ctx.fill(farFin);
+  }
+  if (on("crest")) {
+    ctx.fillStyle = rgba(backFin, 0.7);
+    ctx.fill(secondDorsal);
+    ctx.fill(dorsal);
+  }
 
+  if (on("crest")) {
   ctx.save();
   ctx.translate(hingeX, 0);
   const tailTone = ctx.createLinearGradient(0, -0.32, 0, 0.24);
@@ -245,7 +262,9 @@ export function whaleSprite(palette: Palette, light: boolean, pxPerUnit: number)
   ctx.fillStyle = tailTone;
   ctx.fill(tailFin);
   ctx.restore();
+  }
 
+  if (on("trunk")) {
   const tone = ctx.createLinearGradient(0, -0.21, 0, 0.17);
   tone.addColorStop(0, rgba(mix(hide, palette.depth, 0.39), 1));
   tone.addColorStop(0.25, rgba(hide, 1));
@@ -277,13 +296,17 @@ export function whaleSprite(palette: Palette, light: boolean, pxPerUnit: number)
     ctx.fill(layer);
   });
   ctx.restore();
+  }
 
+  if (on("fin")) {
   const finTone = ctx.createLinearGradient(0.24, 0.078, -0.13, 0.34);
   finTone.addColorStop(0, rgba(mix(hide, rim, 0.12), 1));
   finTone.addColorStop(0.82, rgba(backFin, 0.89));
   finTone.addColorStop(1, rgba(hide, 0.55));
   ctx.fillStyle = finTone;
   ctx.fill(nearFin);
+  }
+  if (!on("trunk")) return c;
   ctx.strokeStyle = rgba(lipTone, 0.8);
   ctx.lineWidth = 0.0085;
   ctx.stroke(mouth);
