@@ -70,7 +70,7 @@ export default function CewposPage({ t, locale }: { t: Dictionary; locale: strin
                 <figcaption className={`${s.mono} ${c.caption}`}>{p.usualCaption}</figcaption>
                 <div className={c.flow}>
                   <div className={c.box}>{p.usualModel}</div>
-                  <span className={`${s.mono} ${c.arrow}`} aria-hidden="true">
+                  <span className={`${s.mono} ${c.arrow} ${s.arrowMark}`} aria-hidden="true">
                     →
                   </span>
                   <div className={c.box}>{p.usualControls}</div>
@@ -81,11 +81,11 @@ export default function CewposPage({ t, locale }: { t: Dictionary; locale: strin
                 <figcaption className={`${s.mono} ${c.caption} ${c.accentText}`}>{p.cewposCaption}</figcaption>
                 <div className={`${c.flow} ${c.flowWrap}`}>
                   <div className={`${c.box} ${c.boxPanel}`}>{p.cewposProposal}</div>
-                  <span className={`${s.mono} ${c.arrow} ${c.accentText}`} aria-hidden="true">
+                  <span className={`${s.mono} ${c.arrow} ${s.arrowMark} ${c.accentText}`} aria-hidden="true">
                     →
                   </span>
                   <div className={`${c.box} ${c.boxPanel} ${c.gate}`}>{p.cewposGate}</div>
-                  <span className={`${s.mono} ${c.arrow} ${c.accentText}`} aria-hidden="true">
+                  <span className={`${s.mono} ${c.arrow} ${s.arrowMark} ${c.accentText}`} aria-hidden="true">
                     →
                   </span>
                   <div className={c.outcomes}>

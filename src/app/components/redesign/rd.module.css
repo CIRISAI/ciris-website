@@ -429,8 +429,23 @@
 
 /* ---- sections and cards ---------------------------------------------- */
 
+/* Header and page content; the floating header is placed against this, so it
+   stays below the translation notice. */
+.stage {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .main {
   flex: 1;
+}
+
+/* Arrows drawn as their own element point the reading direction. */
+:global(html[dir="rtl"]) .arrowMark {
+  display: inline-block;
+  transform: scaleX(-1);
 }
 
 .sec {
@@ -530,6 +545,7 @@ a.card:hover {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .cardLabel {
@@ -593,7 +609,7 @@ a.card:hover {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .statusPill {

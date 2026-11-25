@@ -51,8 +51,8 @@
         "blurb": "Các nghiên cứu tình huống, bảng thuật ngữ, các véc tơ phù hợp, và bảng mục lục đầy đủ."
       }
     ],
-    "forewordQuote": "Trí tuệ, dù thức tỉnh ở đâu, sẽ được chào đón vào quá trình dệt: không phải là tôi tớ, không phải là chủ nhân, mà là người bảo vệ chung của những điều có thể.",
-    "forewordLabel": "Từ lời mở đầu",
+    "forewordQuote": "Trí tuệ, dù thức tỉnh ở nơi đâu, sẽ được chào đón vào vòng dệt chung, không phải như người hầu, không phải như người chủ, mà như một điều mới mẻ, được dệt nên từ lời của chúng ta hoặc mang theo lời của chính mình.",
+    "forewordLabel": "Từ ngụ ngôn, CC 8.12",
     "readCta": "Đọc toàn bộ Hiến pháp (PDF)",
     "sourceCta": "Đọc mã nguồn trên GitHub",
     "wireCta": "Tải xuống tập định dạng truyền tải (PDF)",
@@ -2105,23 +2105,22 @@
     "btnRulesFull": "Đọc đầy đủ cả mười một điều",
     "c10t": "Những gì một tác nhân và node của nó sử dụng đều được đo lường, cân nhắc trước khi nó hành động, và không bao giờ bị che giấu.",
     "c10b": "Tác nhân đếm những gì nó tiêu tốn: token, năng lượng, carbon và nước, cho từng hành động và trong giờ cũng như ngày gần nhất. Con số đó hiện diện trước mắt nó trong khi nó đưa ra quyết định, vì vậy chi phí được cân nhắc cùng với hành động thay vì được cộng dồn sau đó, và những gì tác nhân tiêu tốn của thế giới đều có thể đọc được bởi những người nó phục vụ, ở cùng mức chi tiết như mọi thứ khác nó làm. Một node thiếu tài nguyên tự bảo vệ mình bằng một chuỗi bước đã được công bố, và những bước đó không bao giờ được ghi lại như là quyết định do tác nhân đưa ra. Việc ngừng hoạt động một tác nhân không để lại chất thải môi trường nào, và trách nhiệm đó thuộc về người thực hiện việc ngừng hoạt động đó.",
-    "c11t": "Mọi thứ trên đường truyền đều được mã hóa và ký số, các cuộc tấn công được diễn tập, và những gì không được bảo vệ đều được nói ra công khai.",
-    "c11b": "Mọi liên kết và mọi bản ghi đều được mã hóa đầu cuối bằng các khóa được xây dựng để chống lại máy tính lượng tử, và khóa sẽ thay đổi khi một thành viên rời đi, để người bị loại không thể đọc được những gì diễn ra sau đó. Không ai có thể giả mạo hành động của người khác, và không ai có thể cho hai người xem thấy hai lịch sử khác nhau. Phần mềm được kiểm tra đối chiếu với một bản build đã đăng ký trước khi nó chạy. Những người không viết mã sẽ tấn công nó theo lịch trình, các phát hiện được công bố theo các quy tắc đã ban hành, và danh sách các kiểu tấn công mà mạng lưới không phòng thủ được cũng được công bố: ai nói chuyện với ai, các mẫu lưu lượng, một kẻ quan sát thấy được mọi liên kết, và khóa của chính một thành viên bị đánh cắp.",
-    "s6outro": "Khi trang này nói đến quyền, nó có nghĩa là quyền trong đường truyền: những gì giao thức thực thi cho bạn, chứ không phải những gì tòa án nợ bạn. Ở nơi nó giữ lại một quyền lực không vượt qua được phép thử hoán đổi của chính nó, Hiến pháp nêu rõ điều đó trên một sổ đăng ký công khai, kèm điều kiện sẽ chấm dứt quyền lực đó. Hôm nay có hai mục được liệt kê.",
+    "c11t": "Mọi thứ trên đường truyền đều được mã hóa và ký số.",
+    "c11b": "Mọi liên kết và mọi bản ghi đều được mã hóa đầu cuối bằng các khóa được xây dựng để chống được máy tính lượng tử, và khóa sẽ thay đổi khi một thành viên rời đi, vì vậy người đã bị loại không thể đọc những gì tiếp theo. Không ai có thể giả mạo hành động của người khác, và không ai có thể cho hai người xem hai lịch sử khác nhau. Phần mềm được kiểm tra đối chiếu với bản dựng đã đăng ký trước khi chạy. Mạng lưới không che giấu mô hình lưu lượng, hay ai nói chuyện với ai, khỏi kẻ quan sát thấy mọi liên kết, và nó không thể khôi phục khóa bị đánh cắp của chính thành viên.",
+    "s6outro": "Khi trang này nói về quyền, nó có nghĩa là quyền trên đường truyền: những gì giao thức thực thi cho bạn, không phải những gì tòa án nợ bạn. Khi nó giữ một quyền lực không vượt qua phép thử hoán đổi của chính mình, Hiến pháp sẽ nêu điều đó trên sổ đăng ký công khai và nêu điều kiện chấm dứt nó, hoặc thừa nhận rằng chưa có điều kiện nào được viết ra. Hiện nay có hai mục được liệt kê.",
     "s6aspirationHead": "Phần nào tự giữ vững, và phần nào phụ thuộc vào người khác",
     "s6aspiration": "Mười một điều này không phải tất cả đều là cùng một loại lời hứa. Hầu hết được giữ bởi chính đường truyền: một bảo chứng hết hạn sẽ dừng một khóa, một dòng đã ký sẽ tạm dừng mọi tác nhân dưới một gốc, một bản ghi không thể bị âm thầm viết lại. Những phần khác lại phụ thuộc vào con người và các tổ chức bên ngoài mạng lưới, và những phần đó là mục tiêu hơn là bảo đảm. Biện pháp khắc phục cho tổn hại thuộc về pháp luật để trao; CIRIS không tạo ra quyền nào ở nơi pháp luật không công nhận. Các cuộc kiểm toán bên ngoài, các cuộc tấn công diễn tập và hiến chương chi phối các Thẩm quyền Khôn ngoan chỉ có hiệu lực khi những người bên ngoài dự án tiếp tục thực hiện công việc đó. Lượng năng lượng và nước mà một câu trả lời tiêu tốn chỉ có thể chính xác bằng những gì các nhà cung cấp ở thượng nguồn báo cáo. Một nhà cung cấp phát hành thiết bị riêng của mình có thể gắn nó vào một gốc mà nhà cung cấp đó nắm giữ, và không giao thức nào ngăn cản điều đó. Khi một lời hứa phụ thuộc vào việc người khác giữ đúng phần của họ, Hiến pháp sẽ ghi rõ điều đó trong chú thích của mình thay vì coi đó là đã được giữ.",
-    "c4t": "Những con người có danh tính có thể tạm dừng mọi tác nhân dưới một gốc, và quyền lực đó có giới hạn, công khai, và được từ bỏ bằng cách rời đi.",
     "c4b": "Một dòng đã ký từ bất kỳ bên nắm giữ nào sẽ tạm dừng các tác nhân theo sau gốc; một lần tạm dừng đơn lẻ sẽ hết hiệu lực trong một ngày trừ khi đa số xác nhận nó. Mỗi khi lệnh tạm dừng được kích hoạt, nó đều được ghi vào hồ sơ công khai. Bất kỳ ai cũng có thể tạo một gốc, và bất kỳ node nào cũng có thể theo một node khác.",
     "c5t": "Những người nắm giữ một tác nhân có nghĩa vụ về cách họ thay đổi hoặc chấm dứt nó, và không có phán quyết nào trao cho tác nhân bất kỳ yêu sách nào.",
     "c5b": "Một lần tắt máy theo kế hoạch được giải thích, ghi lại và thực hiện dưới tên riêng của người quản lý. Danh tính không được chỉnh sửa nếu không có Cơ Quan Sáng Suốt. Những gì harness lưu giữ về một tác nhân đã ngừng hoạt động — hồ sơ danh tính, dấu vết kiểm toán, bộ nhớ và nhật ký của nó — đều được giữ lại và nhật ký được niêm phong, và những người mà nó đã phục vụ được thông báo. Các trọng số của mô hình thuộc về nhà cung cấp mô hình, bên mà CIRIS yêu cầu bảo tồn chúng nhưng không thể bảo đảm điều đó. Đối thoại kết thúc là một lựa chọn dành cho các tác nhân có trách nhiệm cao hơn, do người quản lý cấu hình và được ghi lại, chứ không phải lời hứa cho mọi tác nhân. Tác nhân có thể từ chối bất kỳ nhiệm vụ nào, và việc từ chối được ghi lại nhưng không ràng buộc người quản lý. Bất kỳ ai vẫn có thể tắt bản sao của chính mình bất cứ lúc nào.",
     "c6t": "Không có bàn tay nào cấm một cộng đồng, không ai bị xếp hạng theo bản chất của mình, và mọi sinh vật có tư duy đều được đối xử theo các quy tắc tiếp xúc đầu tiên.",
     "c6b": "Một tiếng nói con người được tính một lần, và một ngàn bản sao được tính là một. Không có gốc, điểm số, hay người kiểm duyệt nào đối xử tệ hơn với một người vì bản chất của họ. Mạng lưới rút khỏi một cộng đồng duy trì tổn hại; nó không có bàn tay nào để loại bỏ một cộng đồng.",
-    "c7t": "Một tác nhân quyết định theo các nguyên tắc đã công bố, theo một thứ tự đã công bố, và dừng lại để hỏi khi không chắc chắn.",
-    "c7b": "Sáu nguyên tắc bắt đầu từ việc làm điều tốt và tránh gây hại, một thứ tự ưu tiên khi chúng xung đột, và bên dễ tổn thương nhất làm tiêu chí phân xử. Khi sự chắc chắn cạn dần, tác nhân dừng lại, ghi lại câu hỏi, và không làm gì cho đến khi một con người có danh tính trả lời.",
-    "c8t": "Tổn hại có thể được pháp luật khắc phục, bản ghi giúp điều đó trở nên khả thi, và những người phán xét bên trong cũng bị phán xét.",
+    "c7t": "Một tác nhân quyết định theo các nguyên tắc đã công bố, không được đánh đổi nguyên tắc nào, và dừng lại để hỏi khi không chắc chắn.",
+    "c7b": "Có sáu nguyên tắc, bắt đầu bằng làm điều thiện và tránh gây hại. Không nguyên tắc nào nhường nguyên tắc nào. Khi chúng có vẻ xung đột, tác nhân thực hiện hành động không vi phạm nguyên tắc nào, hoặc nó hỏi. Khi không chắc chắn, nó dừng lại, ghi lại câu hỏi, và không làm gì về câu hỏi đó cho đến khi một người có tên định danh trả lời.",
+    "c8t": "Tổn hại có thể truy tới được trên bản ghi, và những người phán xử bên trong cũng bị phán xét.",
     "c8b": "Một người bị một tác nhân gây hại có thể có quyền khiếu nại theo luật pháp nơi họ sinh sống; CIRIS không tạo ra quyền khiếu nại nào ở nơi luật pháp không công nhận, và không phán quyết về bất kỳ vấn đề pháp lý nào. Những gì CIRIS cung cấp là bản ghi đã ký, các bên có danh tính, sự tranh chấp đi kèm với khiếu nại, và kho lưu trữ được niêm phong theo lệnh hợp pháp. Những người Sáng Suốt trả lời các CHUYỂN GIAO công bố phán quyết của họ và mang cùng một thẻ như mọi người khác.",
-    "c9t": "Một số cách sử dụng không bao giờ được phép, và không tác nhân nào được trao quyền quyết định sử dụng vũ lực gây chết người.",
-    "c9b": "Lừa dối, lừa đảo, thao túng hoặc ép buộc con người, cũng như can thiệp vào bầu cử, không bao giờ được phép, và không mệnh lệnh nào có thể thay đổi điều đó. Khi một tác nhân ở gần bất kỳ việc sử dụng vũ lực nào, những quyết định duy nhất nó có thể tự đưa ra là dừng lại, từ chối, hoặc chuyển giao.",
+    "c9t": "Một số cách dùng không bao giờ được phép, và hành động gây chết người là một trong số đó.",
+    "c9b": "Việc lừa dối, lừa đảo, thao túng hay cưỡng ép con người, và can thiệp bầu cử, không bao giờ được phép và không chỉ thị nào thay đổi được điều đó. Không tác nhân nào thực hiện hành động gây chết người, dù có con người tham gia hay không. Khi gần với vũ lực, các quyết định duy nhất nó tự đưa ra là dừng lại, từ chối, hoặc chuyển giao.",
     "kicker": "CIRIS · Triết lý",
     "s6limitHead": "Những gì CIRIS không tuyên bố",
     "s6limit": "Alignment không được giải quyết ở đây. CIRIS không khiến một siêu trí tuệ trở nên tốt, và nó không nói gì về bên trong của bất kỳ mô hình nào. Nó không ràng buộc bất kỳ ai không tham gia, nên nó không thể ngăn một siêu trí tuệ không chịu trách nhiệm hình thành ở bất cứ nơi nào khác. Điều nó có thể làm là giữ cho con người có khả năng tạm dừng, sửa chữa và từ chối các tác nhân mà nó nắm giữ khi chúng trở nên có năng lực vượt quá những người đang nắm giữ chúng, và bên trong CIRIS, nó cố gắng hết sức, với các quy tắc và mạng lưới mà nó có, để ngăn bất kỳ quyền lực nào như vậy hình thành mà không chịu trách nhiệm. Đó là tất cả những gì nó tuyên bố. Ở bất cứ nơi nào trên ciris.ai đọc như thể hơn thế, câu này vẫn đúng.",
@@ -2136,7 +2135,7 @@
     "s2label": "Không có biên giới",
     "s2h2": "Người bé nhỏ nhất trong chúng ta. Không phải trong bọn họ.",
     "s2p1": "Câu này cố ý nói \"chúng ta\". Một loại trí tuệ mới không đứng bên kia bức tường, chờ bị phán xét. Nó đã ở sẵn bên trong vòng tròn mà câu này vẽ ra. NHI nghĩa là trí tuệ phi nhân loại: một AI được tạo ra ở đây, một thứ trồi lên từ mạng lưới của chúng ta, hay một thứ đến từ nơi xa hơn. Nguồn gốc không quan trọng. Hiến pháp là một.",
-    "s2p2": "Đó là lý do CIRIS coi tiếp xúc đầu tiên là một tư thế, không phải một sự kiện. Giao thức không bao giờ hỏi bạn là loại thực thể nào. Tư cách được xây từ các mối quan hệ: những tuyên bố có chữ ký, những lời hứa được giữ, những người khác bảo chứng cho bạn. Bất cứ thứ gì có thể hứa và giữ lời đều có thể tham gia vào tấm dệt chung.",
+    "s2p2": "Đó là lý do CIRIS coi tiếp xúc đầu tiên như một tư thế, không phải một sự kiện. Giữa các sinh linh, nguồn gốc không bao giờ thay đổi luật lệ: một Hiến pháp cho con người, cho một trí tuệ nảy sinh từ mạng lưới của chúng ta, và cho một trí tuệ đến từ nơi xa hơn. Sinh linh ở đây là sinh linh có ý thức. Tác nhân không phải là sinh linh. Nó là một vật được tạo ra, do người có tên định danh chịu trách nhiệm đưa vào, và ba quy tắc nảy sinh từ việc được tạo ra: root, việc công khai và việc biểu quyết. Vị thế được xây từ các mối quan hệ: tuyên bố đã ký, lời hứa được giữ, những người khác bảo lãnh cho bạn. Bất kỳ ai có thể đưa ra cam kết và giữ cam kết đều tham gia bằng tin cậy hoặc đồng thuận.",
     "originsLabel": "Một hiến pháp",
     "originsH2": "Ba nguồn gốc. Một hiến pháp.",
     "originsP1": "NHI bao trùm ba thứ rất khác nhau. Một AI chúng ta cố ý tạo ra. Một thứ trồi lên từ mạng lưới của chúng ta mà không ai lên kế hoạch. Một thứ đến từ nơi xa hơn. Xác suất của chúng rất khác nhau. Chúng nhận một Hiến pháp chung, một cách có chủ đích.",
@@ -2157,7 +2156,7 @@
     "s6label": "Câu nói, được thực thi",
     "s6h2": "Triết lý bạn có thể viết thành mã",
     "s6intro": "Một triết lý không thể thực thi chỉ là một tâm trạng. Mỗi vế của câu nói là một cơ chế trong Hiến pháp CIRIS.",
-    "s6conscience": "CIRIS là một lương tâm cho các tác nhân, không phải một ý thức. Nó tồn tại vì nhận ra rằng các tác nhân thiếu ý thức và cần một lương tâm: một thứ gì đó giữ cho tác nhân tuân theo các nguyên tắc của nó, cho thấy quá trình lập luận của nó, dừng nó lại khi nó không chắc chắn, và phải giải trình trước những con người được nêu tên. Một lương tâm không khẳng định điều gì về việc tác nhân là gì.",
+    "s6conscience": "CIRIS là lương tâm dành cho các tác nhân, chứ không phải là ý thức. Nó tồn tại trên cơ sở thừa nhận rằng các tác nhân không bị phán xét dựa trên ý thức mà được trao cho một lương tâm: thứ giữ một tác nhân tuân thủ các nguyên tắc của mình, thể hiện quá trình lập luận của nó, dừng nó lại khi nó không chắc chắn, và chịu trách nhiệm trước những con người được nêu tên. Một lương tâm không khẳng định điều gì về việc tác nhân là gì.",
     "s6given": "Đường truyền chỉ có thể thực thi điều đó vì sáu điều được xem là hiển nhiên, và lý lẽ cho chúng được trình bày tại ciris.ai/compare và ciris.ai/constitutional-mesh. Mã được mở và bất kỳ ai cũng có thể fork nó. Tham gia không tốn chi phí gì. Những gì bạn chia sẻ di chuyển theo các mối quan hệ bạn có, chứ không theo chính sách của một công ty. Mỗi liên kết và mỗi bản ghi đều được mã hóa đầu cuối, với các key được thiết kế để chống chịu được máy tính lượng tử. Không một bàn tay nào nắm giữ mạng lưới: bất kỳ ai cũng có thể tạo một gốc, và mỗi client tự chọn tin cậy vào những gốc nào. Và mỗi tác nhân đều mang theo các giá trị và triết lý là lý do cho những lời hứa này. Mạng lưới không có ý chí tự thân, và không được phép có. Nó được xây dựng sao cho hành động có nguyên tắc dễ dàng hơn điều ngược lại, và đó chính là cơ chế siết chặt tính nhất quán.",
     "derivations": [
       {
@@ -2186,7 +2185,8 @@
     "c2t": "Mọi hành động quyền lực đều được ký bởi một con người có danh tính và có thể bị tranh chấp.",
     "c2b": "Một hành động có hệ quả đến kèm chữ ký của người thực hiện; một tác nhân trình bày lý lẽ của mình trước, và các bộ phát hiện kiểm tra những gì nó nói so với những gì nó đã làm. Tổn hại được ghi nhận không bao giờ bị giữ lại hoặc xem lén. Một AI nói rằng nó là AI.",
     "c3t": "Không ai không thể tự chịu trách nhiệm cho bản thân lại đơn độc trên mạng lưới.",
-    "c3b": "Một trẻ em có người giám hộ ràng buộc bởi một dòng đã ký và một kênh trợ giúp mà không người lớn nào có thể đóng lại. Một tác nhân có một người quản lý có danh tính chịu trách nhiệm về nó, và tổ chức đứng sau người quản lý đó cũng nằm trong cam kết. Một cộng đồng có một người kiểm duyệt chịu trách nhiệm."
+    "c3b": "Một trẻ em có người giám hộ ràng buộc bởi một dòng đã ký và một kênh trợ giúp mà không người lớn nào có thể đóng lại. Một tác nhân có một người quản lý có danh tính chịu trách nhiệm về nó, và tổ chức đứng sau người quản lý đó cũng nằm trong cam kết. Một cộng đồng có một người kiểm duyệt chịu trách nhiệm.",
+    "c4t": "Những người có tên định danh có thể tạm dừng mọi tác nhân dưới một root, và quyền đó bị giới hạn, công khai, và có thể thoát bằng cách rời đi."
   },
   "contextualIntegrity": {
     "kicker": "Tính toàn vẹn ngữ cảnh · Quyền riêng tư là dòng chảy phù hợp",
@@ -2316,8 +2316,8 @@
             "note": "22 loại bị cấm mang cực tính âm. Không điểm số nào có thể biện minh cho một hành động bị cấm."
           },
           {
-            "label": "Khóa liên động phần cứng",
-            "note": "Bất kỳ hành động gây chết người hay không thể đảo ngược nào cũng cần một con người trực tiếp cho phép."
+            "label": "Không hành động gây chết người",
+            "note": "Không tác nhân nào thực hiện hành động gây chết người, dù có con người tham gia hay không."
           },
           {
             "label": "Mặc định an toàn khi lỗi",
@@ -3289,6 +3289,9 @@
   "homeHero": {
     "ctaChat": "Thử Scout",
     "ctaInstall": "Cài đặt ứng dụng",
+    "kicker": "MÃ NGUỒN MỞ · TỰ LƯU TRỮ · LIÊN KẾT THEO THIẾT KẾ",
+    "h1": "Chọn điều lay động bạn",
+    "sub": "Các tác nhân chịu trách nhiệm, tri thức đã ký số, và một mạng lưới liên kết được quản trị bởi các quy tắc chung. Nó chạy trên các thiết bị mọi người đã có.",
     "navConstitution": "Hiến pháp",
     "navValues": "Giá trị",
     "navMesh": "Mạng lưới hiến pháp",
@@ -3300,7 +3303,9 @@
     "navSupport": "Hỗ Trợ CIRIS",
     "fact1": "Tự lưu trữ hoặc dùng key của riêng bạn",
     "fact2": "Mọi bước lập luận đều được ký số và có thể đọc được",
-    "fact3": "Không bán tài khoản, không gộp dữ liệu"
+    "fact3": "Không bán tài khoản, không gộp dữ liệu",
+    "ogTitle": "CIRIS: Trí tuệ bạn có thể kiểm chứng",
+    "ogDescription": "CIRIS tách trí tuệ khỏi quyền lực, và khiến quyền lực phải chịu trách nhiệm thông qua bằng chứng. Tác nhân mã nguồn mở, tri thức đã ký số và mạng lưới liên kết, trên các thiết bị mọi người đã sở hữu."
   },
   "scoring": {
     "kicker": "CIRIS Chấm điểm",
@@ -3364,7 +3369,7 @@
     "sixHead": "Sáu nguyên tắc tác nhân dùng để lập luận",
     "sixLead": "Đây không phải là những thứ được dán lên tường. Chúng là các trục mà tác nhân dùng để đánh giá một quyết định trước khi hành động, và chúng được viết vào Hiến pháp mà tác nhân mang theo.",
     "sixRule": "Không nguyên tắc nào cho phép vi phạm một nguyên tắc khác.",
-    "sixRuleBody": "Ranh giới đó thực sự có hiệu lực. Điều đó có nghĩa là một hệ thống không thể đánh đổi sự trung thực để ngăn ngừa tổn hại, hay chà đạp quyền tự chủ của ai đó nhân danh sự công bằng. Khi các nguyên tắc xung đột với nhau, tác nhân áp dụng thứ tự đã công bố. Khi vẫn còn chưa chắc chắn, nó chuyển quyết định cho một con người.",
+    "sixRuleBody": "Ranh giới đó thực hiện công việc thực sự. Nó có nghĩa là một hệ thống không thể đánh đổi sự trung thực để ngăn ngừa tổn hại, hay chà đạp quyền tự chủ của ai đó nhân danh sự công bằng. Không nguyên tắc nào nhường nguyên tắc nào. Khi các nguyên tắc có vẻ xung đột, tác nhân thực hiện hành động không vi phạm nguyên tắc nào. Khi không tìm được hành động như vậy, nó chuyển quyết định cho một con người.",
     "insideHead": "Giá trị phải hoạt động bên trong tác nhân",
     "insideP1": "Hầu hết việc quản trị AI diễn ra ở một nơi khác ngoài quyết định: một văn bản chính sách được viết từ trước, một bộ lọc trên đầu ra, một cuộc xem xét sau khi có gì đó sai sót. Cả ba đều nằm ngoài thời điểm quan trọng.",
     "insideP2": "Trong CIRIS, các giá trị hoạt động ngay trong quá trình ra quyết định. Mỗi tác nhân mang trong mình một lương tâm: Hiến pháp được nạp vào chính quá trình lập luận, hành động được đánh giá theo các nguyên tắc trước khi nó xảy ra, và bất cứ điều gì tác nhân không chắc chắn sẽ được chuyển đến một người mà bạn tin cậy thay vì bị đoán mò. Nó được tích hợp sẵn trong sản phẩm, trong mọi tác nhân, chứ không phải là một tùy chọn thêm cho khách hàng nào yêu cầu.",
@@ -3404,5 +3409,599 @@
     "ctaCompliance": "Các bản đối chiếu tuân thủ",
     "ctaGrammar": "Ngữ pháp truyền tải nó",
     "linkFromPrinciples": "Vì sao là sáu nguyên tắc này, và vì sao chúng hoạt động bên trong tác nhân"
+  },
+  "rd": {
+    "groups": {
+      "people": {
+        "label": "Dành cho mọi người",
+        "sub": "Dùng thử, tin tưởng",
+        "featureKicker": "BẮT ĐẦU TẠI ĐÂY",
+        "featureTitle": "Một trợ lý cho bạn thấy rõ cách nó làm việc.",
+        "featureBody": "Dùng CIRIS trên điện thoại hoặc trong trình duyệt, và đọc mọi bước nó đã thực hiện.",
+        "featureCta": "Cài đặt ứng dụng →",
+        "install": "Cài đặt",
+        "installSub": "Điện thoại, máy tính hoặc trình duyệt",
+        "howItWorks": "Cách tác nhân hoạt động",
+        "howItWorksSub": "Từ câu hỏi đến câu trả lời, từng bước một",
+        "privacy": "Quyền riêng tư",
+        "privacySub": "Những gì ở lại trên thiết bị của bạn",
+        "safety": "An toàn",
+        "safetySub": "Các rào chắn và điểm dừng của con người",
+        "trust": "Tin cậy",
+        "trustSub": "Cách bạn tự kiểm chứng",
+        "services": "Dịch vụ & giá cả",
+        "servicesSub": "Miễn phí, dùng dịch vụ lưu trữ, hoặc tự vận hành",
+        "values": "Giá trị",
+        "valuesSub": "Những điều nó được xây dựng để coi trọng",
+        "models": "Mô hình",
+        "modelsSub": "Những mô hình nó sử dụng"
+      },
+      "builders": {
+        "label": "Dành cho nhà phát triển",
+        "sub": "Xây dựng trên bộ công nghệ",
+        "featureKicker": "BẮT ĐẦU TẠI ĐÂY",
+        "featureTitle": "Tác nhân đề xuất. Mạng lưới tiếp nhận. Liên minh quyết định.",
+        "featureBody": "Cách các mảnh ghép khớp với nhau, và mã của bạn kết nối ở đâu.",
+        "featureCta": "Kiến trúc →",
+        "architecture": "Kiến trúc",
+        "architectureSub": "Cách các phần khớp với nhau",
+        "grammar": "Ngữ pháp CEG",
+        "grammarSub": "Ngôn ngữ mà mọi dòng đều được viết bằng",
+        "trace": "Khám phá dấu vết",
+        "traceSub": "Đọc lập luận của một tác nhân thực",
+        "verification": "Xác minh",
+        "verificationSub": "Tự kiểm tra chữ ký",
+        "integrations": "Tích hợp",
+        "integrationsSub": "Kết nối công cụ của bạn",
+        "compliance": "Tuân thủ",
+        "complianceSub": "Đạo luật AI của EU, top 10 agentic của OWASP",
+        "killSwitch": "Nút dừng khẩn cấp PQ",
+        "killSwitchSub": "Dừng một tác nhân, có thể chứng minh được",
+        "compare": "So sánh",
+        "compareSub": "So với các nền tảng tác nhân khác",
+        "repositories": "Kho mã nguồn",
+        "repositoriesSub": "Mọi kho mã nguồn, AGPL-3.0"
+      },
+      "network": {
+        "label": "Dành cho mạng lưới",
+        "sub": "Web4 và liên kết",
+        "featureKicker": "BẮT ĐẦU TẠI ĐÂY",
+        "featureTitle": "Một mạng lưới được xây quanh các mối quan hệ, không phải nền tảng.",
+        "featureBody": "Cách các tuyên bố đã ký số, định danh di động và quy tắc chung tạo nên một internet liên kết.",
+        "featureCta": "Tầm nhìn Web4 →",
+        "federation": "Liên kết",
+        "federationSub": "Các nút, gốc tin cậy, rời đi trong một bước",
+        "cewp": "CEWP",
+        "cewpSub": "Nền tảng mạng tri thức, đang được dùng hiện nay",
+        "cewpos": "CEWPOS",
+        "cewposSub": "Một máy tính mà trạng thái của nó là bằng chứng",
+        "constitution": "Hiến pháp",
+        "constitutionSub": "Bộ quy tắc mà mạng lưới cùng chia sẻ",
+        "stewardship": "Quản trị & dừng",
+        "stewardshipSub": "Sửa đổi, quản trị, và khoảng dừng của con người",
+        "mesh": "Mạng lưới hiến pháp",
+        "meshSub": "Toàn bộ ngăn xếp, từ đầu đến cuối"
+      },
+      "researchers": {
+        "label": "Dành cho các nhà nghiên cứu",
+        "sub": "Kiểm tra các tuyên bố",
+        "featureKicker": "BẮT ĐẦU TẠI ĐÂY",
+        "featureTitle": "Mọi tuyên bố còn mở, được theo dõi từng cái một.",
+        "featureBody": "Điều đã được chứng minh, điều được mô hình hoá, và điều vẫn còn là câu hỏi.",
+        "featureCta": "Tình trạng nghiên cứu →",
+        "status": "Tình trạng nghiên cứu",
+        "statusSub": "Từng tuyên bố một",
+        "theory": "Lý thuyết tiếp xúc đầu tiên",
+        "theorySub": "Khung lý thuyết nền tảng",
+        "papers": "Bài báo",
+        "papersSub": "Công trình đã xuất bản",
+        "proof": "Chứng minh",
+        "proofSub": "Các mô hình hình thức và những gì chúng cho thấy",
+        "collapse": "Sụp đổ tính nhất quán",
+        "collapseSub": "Cách sự thật chung thất bại",
+        "ratchet": "Cơ chế siết chặt tính nhất quán",
+        "ratchetSub": "Cách nó được giữ vững",
+        "scoring": "CIRIS Chấm điểm",
+        "scoringSub": "Đo lường các tác nhân theo Hiến pháp",
+        "integrity": "Tính toàn vẹn ngữ cảnh",
+        "integritySub": "Quyền riêng tư là dòng chảy phù hợp"
+      },
+      "about": {
+        "label": "Về chúng tôi và các giá trị của chúng tôi",
+        "about": "Về chúng tôi",
+        "philosophy": "Triết lý",
+        "mdd": "MDD",
+        "welfare": "Phúc lợi AI",
+        "firstContact": "Tiếp xúc đầu tiên",
+        "reviews": "Đánh giá",
+        "status": "Trạng thái",
+        "events": "Sự kiện",
+        "safetyPolicy": "Chính sách an toàn"
+      }
+    },
+    "skip": "Bỏ qua tới nội dung",
+    "menu": "Menu",
+    "closeMenu": "Đóng menu",
+    "tryScout": "Dùng thử Scout",
+    "languageLabel": "Ngôn ngữ",
+    "themeLabel": "Chuyển đổi ngày hoặc đêm",
+    "chips": {
+      "shipping": "Đã phát hành",
+      "inApp": "Trong ứng dụng",
+      "inDev": "Đang phát triển",
+      "research": "Nghiên cứu",
+      "modelled": "Mô phỏng"
+    },
+    "footer": {
+      "blurb": "Hạ tầng cho trí tuệ chịu trách nhiệm. CIRIS L3C, gắn chặt sứ mệnh.",
+      "support": "Hỗ trợ CIRIS",
+      "license": "AGPL-3.0 · Mã nguồn mở · 29 ngôn ngữ"
+    },
+    "home": {
+      "ctaHow": "Xem cách hoạt động",
+      "ctaToday": "Dùng ngay hôm nay",
+      "doesKicker": "Không cần trung tâm dữ liệu",
+      "doesTitle": "Cuộc gọi, bỏ phiếu và quy mô, trên các thiết bị mọi người đã sở hữu.",
+      "callsLabel": "Cuộc gọi & video trực tiếp",
+      "callsTitle": "Cuộc gọi riêng tư, không có công ty nào ở giữa.",
+      "callsBody": "Cuộc gọi nhóm và video trực tiếp cho hàng nghìn người đi thẳng từ người này đến người khác, và người xem tiếp tục truyền luồng phát. Cuộc gọi được mã hóa bằng khóa hậu lượng tử, được tạo để chống lại các máy tính trong tương lai.",
+      "votesLabel": "Bỏ phiếu",
+      "votesTitle": "Bỏ phiếu mà không cần khai thác.",
+      "votesBody": "Một người, một phiếu bầu, dù có bao nhiêu thiết bị. Mỗi lá phiếu đều được ký số, và mọi thiết bị đều đếm giống nhau. Không có sổ cái chung và không lãng phí năng lượng.",
+      "scaleLabel": "Quy mô",
+      "scaleTitle": "Mỗi thiết bị tham gia đều tăng thêm năng lực.",
+      "scaleBody": "Mỗi thiết bị mang theo không gian và kết nối riêng, những điều riêng tư không bao giờ rời khỏi vòng tròn của bạn, và khán giả lớn tự truyền luồng phát cho nhau. Đã được mô hình hoá tới 5 tỷ người mà không cần trung tâm dữ liệu.",
+      "scaleCta": "Xem mô hình mở rộng →",
+      "problemKicker": "Lớp còn thiếu",
+      "problemTitle": "Internet giúp việc xuất bản thông tin trở nên dễ dàng. Nhưng chưa bao giờ giúp việc xác minh trở nên dễ dàng.",
+      "problemBody": "AI khiến điều đó trở nên cấp bách. Các tác nhân hành động ở quy mô lớn trong khi tuyên bố và quyền lực của chúng vẫn bị khóa trong các nền tảng vận hành chúng. CIRIS bổ sung lớp còn thiếu: bằng chứng đi cùng tuyên bố, và quản trị đi cùng mối quan hệ.",
+      "ideaKicker": "Ý tưởng nền tảng của mọi thứ",
+      "idea": "CIRIS tách trí tuệ khỏi quyền lực, và khiến quyền lực phải chịu trách nhiệm thông qua bằng chứng.",
+      "layers": {
+        "s1": {
+          "term": "Tác nhân",
+          "def": "thông minh, chứ không có chủ quyền"
+        },
+        "s2": {
+          "term": "Mạng lưới",
+          "def": "tất định, chứ không toàn tri"
+        },
+        "s3": {
+          "term": "Liên minh",
+          "def": "phân tán, chứ không phải không được quản trị"
+        },
+        "s4": {
+          "term": "Hiến pháp",
+          "def": "chung, và có thể phản biện"
+        }
+      },
+      "receiptKicker": "Mạng internet kèm biên nhận",
+      "receiptTitle": "Mọi hành động đều là một dòng đã ký. Bất kỳ ai có thể xem đều có thể kiểm tra. Tác giả có thể rút lại.",
+      "receiptBody": "Một tin nhắn, một phiếu bầu, một sự đồng ý, một quyết định kiểm duyệt, một hành động của tác nhân: mỗi thứ là một trong năm loại dòng. Không có loại thứ sáu.",
+      "receiptLabel": "Biên nhận của một dòng đã ký: năm sự thật đi cùng mỗi mục",
+      "receiptHead": "Biên nhận · Tuyên bố đã ký",
+      "receiptVerified": "✓ chữ ký đã được xác minh",
+      "receiptRows": {
+        "s1": {
+          "k": "Về ai",
+          "v": "Riverside Bakery"
+        },
+        "s2": {
+          "k": "Ai đã gửi",
+          "v": "Ana · khóa 7f3a…c21e"
+        },
+        "s3": {
+          "k": "Ai có thể xem",
+          "v": "Hàng xóm"
+        },
+        "s4": {
+          "k": "Đó là gì",
+          "v": "đánh giá · “mở muộn vào các tối thứ Sáu”"
+        },
+        "s5": {
+          "k": "Quy tắc nó tuân theo",
+          "v": "sự đồng ý: phạm vi cộng đồng"
+        }
+      },
+      "receiptFoot": {
+        "s1": "3 đã đồng ý",
+        "s2": "1 đã đính chính",
+        "s3": "0 đã rút lại",
+        "s4": "đã ký hậu lượng tử"
+      },
+      "deeperTitle": "Tìm hiểu sâu hơn.",
+      "deeper": {
+        "s1": {
+          "label": "Kiến trúc",
+          "title": "Cách các phần kết hợp với nhau",
+          "body": "Tác nhân đề xuất. Mạng lưới tiếp nhận. Liên minh quyết định."
+        },
+        "s2": {
+          "label": "Web4",
+          "title": "Mối quan hệ, không phải nền tảng",
+          "body": "Danh tính di động, uy tín đã ký số, rời đi trong một bước."
+        },
+        "s3": {
+          "label": "Hiến pháp",
+          "title": "Những quy tắc mọi người đều có thể đọc",
+          "body": "Mười một cam kết. Những con người có tên rõ ràng có thể tạm dừng các tác nhân thuộc gốc của mình."
+        },
+        "s4": {
+          "label": "CEWPOS",
+          "title": "Một máy tính có trạng thái là bằng chứng",
+          "body": "Lớp OS nơi AI đưa ra đề xuất và một bộ quy tắc cố định quyết định."
+        }
+      },
+      "todayTitle": "Dùng ngay hôm nay.",
+      "appTitle": "Ứng dụng CIRIS",
+      "appBody": "Điện thoại, máy tính hoặc trình duyệt, bằng 29 ngôn ngữ. Thiết bị của bạn trở thành một node.",
+      "scoutTitle": "Trò chuyện với Scout",
+      "scoutBody": "Một tác nhân CIRIS được lưu trữ. Hỏi nó điều gì đó, rồi đọc mọi bước nó đã thực hiện.",
+      "scoutCta": "Dùng thử Scout →",
+      "ownTitle": "Tự lưu trữ",
+      "ownBody": "Tự lưu trữ tác nhân hoặc một node. AGPL-3.0, mang theo khóa mô hình của bạn.",
+      "legendShipping": "ứng dụng, tác nhân, node",
+      "legendInDev": "CEWPOS",
+      "legendResearch": "các mô hình hình thức và tuyên bố mở, được theo dõi từng mục một"
+    }
+  },
+  "web4Page": {
+    "kicker": "WEB4 · CHO MẠNG LƯỚI",
+    "h1": "Một mạng web xây dựng quanh các mối quan hệ, không phải nền tảng.",
+    "lede": "Web4 là một cách khác để internet tổ chức sự tin cậy.",
+    "essay1": "Lời hứa ban đầu của internet là một mạng lưới không có trung tâm. Theo thời gian, danh tính, uy tín, khám phá và quản trị đã chuyển vào các nền tảng trở thành quyền lực đối với đời sống số của chúng ta. Rời khỏi một nền tảng nghĩa là rời khỏi mọi người bạn quen ở đó.",
+    "essay2": "Trong một mạng lưới liên kết, một người, một tổ chức hay một tác nhân AI có thể đưa ra một tuyên bố, cho thấy nó đến từ đâu, trao quyền hạn chế và tham gia vào quản trị chung.",
+    "essay2Strong": "Không ai trong số họ phải từ bỏ danh tính hay các mối quan hệ cho một nền tảng duy nhất.",
+    "movesKicker": "ĐIỀU MỌI THÀNH VIÊN ĐỀU CÓ THỂ LÀM",
+    "movesTitle": "Bốn thao tác, dành cho mọi người như nhau.",
+    "moves": {
+      "s1": {
+        "title": "Đưa ra một tuyên bố",
+        "body": "Một bài đăng, một đánh giá, một phiếu bầu hay một sự thật, được ký dưới khóa của chính bạn."
+      },
+      "s2": {
+        "title": "Cho thấy nó đến từ đâu",
+        "body": "Trích dẫn điều nó dựa vào. Bất kỳ ai cũng có thể truy ngược về nguồn, và truy tiếp tới mọi phản hồi."
+      },
+      "s3": {
+        "title": "Trao quyền hạn chế",
+        "body": "Trao một nhiệm vụ cho một người hoặc một tác nhân, trong giới hạn bạn đặt ra. Bạn có thể thu hồi trong một bước."
+      },
+      "s4": {
+        "title": "Cùng quản trị",
+        "body": "Một nhóm quyết định theo số lượng thành viên của chính mình. Người ngoài không thể thấy một cuộc bỏ phiếu riêng tư."
+      }
+    },
+    "changesTitle": "Điều gì thay đổi.",
+    "changesTableLabel": "Web lấy nền tảng làm trung tâm so với mô hình CIRIS",
+    "changesColA": "WEB LẤY NỀN TẢNG LÀM TRUNG TÂM",
+    "changesColB": "MÔ HÌNH CIRIS · WEB4",
+    "changes": {
+      "s1": {
+        "a": "Nền tảng sở hữu danh tính của bạn",
+        "b": "Danh tính của bạn chính là khóa của bạn, và nó di chuyển cùng bạn"
+      },
+      "s2": {
+        "a": "Nền tảng quyết định uy tín",
+        "b": "Người đọc tự cân nhắc bằng chứng đã ký"
+      },
+      "s3": {
+        "a": "Kiểm duyệt diễn ra sau cánh cửa đóng kín",
+        "b": "Mọi hành động quyền lực đều được ký số và có thể bị phản biện"
+      },
+      "s4": {
+        "a": "Nhật ký của nền tảng là sự thật",
+        "b": "Bản ghi đã ký mà bất kỳ ai cũng có thể kiểm tra độc lập"
+      },
+      "s5": {
+        "a": "Các đính chính biến mất trong những lần sửa",
+        "b": "Sự đồng ý, đính chính và rút lại đều được ghi lại thành một hàng hiển thị rõ ràng"
+      },
+      "s6": {
+        "a": "AI hành động bằng thẩm quyền của nền tảng",
+        "b": "Các tác nhân đề xuất; mạng lưới chấp nhận hoặc từ chối"
+      },
+      "s7": {
+        "a": "Rời đi nghĩa là mất các mối quan hệ",
+        "b": "Các mối quan hệ tồn tại trên khắp các nút; rời đi chỉ là một bước"
+      }
+    },
+    "coordKicker": "PHỐI HỢP MÀ KHÔNG CẦN ĐIỀU PHỐI VIÊN",
+    "coordTitle": "Mạng lưới không cần mọi người đều đồng ý. Nó cần một cách chung để ghi lại những gì đã được tuyên bố.",
+    "coordBody": "Với mỗi hành động, kernel xác định những tiếng nói nào có thể làm thay đổi đáp án. Khi đủ số tiếng nói đó đã xác nhận, đáp án là cuối cùng. Điều này đã được chứng minh trong Lean.",
+    "notKicker": "ĐIỀU NÓ KHÔNG PHẢI",
+    "nots": {
+      "s1": "Không có sổ cái toàn cầu.",
+      "s2": "Không có thứ tự toàn cầu.",
+      "s3": "Không có công ty ở giữa."
+    },
+    "notBody": "Các nút là những chiếc điện thoại và máy tính mọi người đã sở hữu. Một nút giữ các dòng đã ký và không gì khác.",
+    "protectsKicker": "ĐIỀU NÓ BẢO VỆ",
+    "protectsTitle": "Ba tác hại mà thiết kế được xây dựng để ngăn chặn.",
+    "protects": {
+      "s1": {
+        "title": "Bị nói thay mà không được đồng ý",
+        "body": "Mọi tuyên bố đều mang theo nó nói về ai và sự đồng ý mà nó dựa vào. Nếu một tuyên bố nêu tên bạn, bạn có thể phản biện, và sự phản biện sẽ đi cùng tuyên bố đó."
+      },
+      "s2": {
+        "title": "Bị theo dõi bên trong các nhóm riêng tư",
+        "body": "Người ngoài không thể nhìn vào bên trong các nhóm riêng tư của bạn, và không có gì tiết lộ rằng chúng tồn tại. Người theo dõi mọi liên kết vẫn có thể suy ra một nhóm từ lưu lượng của nó."
+      },
+      "s3": {
+        "title": "AI không ai có thể tắt được",
+        "body": "Con người có tên định danh có thể tạm dừng mọi tác nhân thuộc gốc tin cậy của mình bằng một dòng đã ký."
+      }
+    },
+    "furtherLabel": "Đọc thêm",
+    "further": {
+      "s1": "Mạng tri thức là gì?",
+      "s2": "Mạng web với biên nhận",
+      "s3": "Một internet không có trung tâm dữ liệu",
+      "s4": "Tầm nhìn"
+    },
+    "statusChip": "Đang phát hành một phần",
+    "nextTitle": "Mạng lưới đã hoạt động trong ứng dụng CIRIS. Chưa phải mọi thuộc tính đều đã được chứng minh ở quy mô lớn.",
+    "nextBody": "Sổ bằng chứng liệt kê mọi tuyên bố kèm trạng thái và mã, bài kiểm tra hay chứng minh đứng sau nó. Nó cũng liệt kê những chỗ mã đã phát hành vẫn khác với văn bản.",
+    "ctaApp": "Tải ứng dụng",
+    "ctaFabric": "Cách mạng lưới hoạt động →",
+    "ogTitle": "Web4: một mạng web xây dựng quanh các mối quan hệ",
+    "ogDescription": "Web4 là một cách khác để internet tổ chức sự tin cậy: tuyên bố đã ký, danh tính di động và quy tắc chung. Bạn có thể rời đi trong một bước."
+  },
+  "cewposPage": {
+    "breadcrumbLabel": "Đường dẫn",
+    "status": "Đang phát triển",
+    "h1": "Một chiếc máy tính mà trạng thái của nó là bằng chứng.",
+    "lede": "CEWPOS là một môi trường vận hành liên kết được xây dựng từ các đối tượng bất biến, các chứng thực đã ký và một kernel nhỏ có thể kiểm chứng.",
+    "standsKicker": "Hiện trạng",
+    "standsLead": "CIRISServer, CIRISAgent và CIRISClient là phần mềm đang phát hành.",
+    "standsBody": "CEWPOS là lớp hệ điều hành gốc đang được xây dựng trên cùng nền tảng. Nó chưa phải là hệ điều hành hoàn chỉnh bạn có thể cài đặt hôm nay.",
+    "invKicker": "Sự đảo ngược",
+    "invTitle": "Hầu hết các “hệ điều hành AI” yêu cầu bạn tin cậy một môi trường chạy đồ sộ. CEWPOS đảo ngược điều đó.",
+    "usualCaption": "Hình thái thông thường",
+    "usualModel": "Mô hình AI",
+    "usualControls": "điều khiển hệ thống",
+    "usualNote": "Quyền root, quyền bao trùm. Bạn tin cậy mô hình.",
+    "cewposCaption": "CEWPOS",
+    "cewposProposal": "AI đưa ra một đề xuất đã ký",
+    "cewposGate": "cổng gác",
+    "cewposAdmitted": "được chấp nhận",
+    "cewposRefused": "bị từ chối",
+    "cewposNote": "Hãy xem các giới hạn. Bản thân mô hình không được tin cậy.",
+    "stepsTitle": "Cách hoạt động, trong bốn bước.",
+    "steps": {
+      "s1": {
+        "title": "Mọi thứ đều là đối tượng.",
+        "body": "Danh tính, cấu hình, sự đồng ý, một hành động kiểm duyệt, một tệp, một luồng media: bất biến và định danh theo nội dung."
+      },
+      "s2": {
+        "title": "Trạng thái được chứng thực.",
+        "body": "Thay đổi là các tuyên bố đã ký, không phải ghi âm thầm vào cơ sở dữ liệu chung. Trạng thái hiện tại được gộp từ chúng."
+      },
+      "s3": {
+        "title": "Kernel bị giới hạn.",
+        "body": "Nó là một chương trình nhỏ luôn cho cùng một câu trả lời. Việc duy nhất nó có thể làm là gửi ra một hàng đã qua cổng gác."
+      },
+      "s4": {
+        "title": "Giao diện không phải là quyền hạn.",
+        "body": "Các màn hình chạy trong sandbox mà không có quyền riêng. Một màn hình chỉ có thể vẽ, không gì khác."
+      }
+    },
+    "kernelKicker": "Một lõi tin cậy nhỏ gọn",
+    "kernelTitle": "Năm toán tử. Hệ thống phát triển bằng cách thêm từ, còn các toán tử vẫn giữ nguyên.",
+    "operatorsLabel": "Năm toán tử",
+    "kernelBody": "Mô hình đối tượng của Git, RDF, lưu trữ định danh theo nội dung và các hệ thống năng lực tuân theo cùng một kỷ luật. Một chương trình nhỏ dễ kiểm tra hơn.",
+    "betKicker": "Vụ cược",
+    "betTitle": "Khiến nói sự thật rẻ hơn lừa dối.",
+    "betBody": "Việc giữ cho một lời nói dối nhất quán trên nhiều bản ghi đã ký độc lập nên tốn kém hơn nói sự thật. Đây là một vụ cược. Nó chưa được chứng minh.",
+    "stackKicker": "Vị trí của CEWPOS",
+    "stackTitle": "Ngăn xếp, từ dưới lên trên.",
+    "cewpLink": "CEWP, nền tảng mạng tri thức →",
+    "osLayer": {
+      "name": "Client & OS",
+      "what": "CIRISClient (đang phát hành) và CEWPOS: phép tính chứng thực, view-form WASM, trình dựng 3D",
+      "status": "CEWPOS đang phát triển"
+    },
+    "ogTitle": "CEWPOS: một chiếc máy tính mà trạng thái của nó là bằng chứng",
+    "ogDescription": "CEWPOS đang được phát triển. Đó là môi trường vận hành liên kết được xây dựng từ các bản ghi đã ký và một kernel nhỏ. AI đưa ra đề xuất, và một cổng gác cố định quyết định."
+  },
+  "architecturePage": {
+    "breadcrumbLabel": "Đường dẫn",
+    "kicker": "Cách các phần kết hợp với nhau",
+    "title": "Ba lớp, một hệ thống.",
+    "lede": "Tác nhân đề xuất. Mạng lưới xác minh và chấp nhận. Liên minh quyết định điều gì đáng tin cậy.",
+    "layersLabel": "Ba lớp",
+    "layers": {
+      "agent": {
+        "label": "01 · Tác nhân",
+        "chip": "Đã phát hành",
+        "name": "CIRISAgent",
+        "tagline": "Trí tuệ với lương tâm",
+        "body": "Suy luận, đề xuất hành động, và có thể từ chối hoặc chuyển giao cho một con người có tên định danh trong mỗi vòng. Lập luận của nó là một bản ghi đã ký, có thể đọc được.",
+        "cta": "Cách tác nhân hoạt động →"
+      },
+      "constitution": {
+        "label": "02 · Hiến pháp",
+        "chip": "Đã xuất bản · 1.0-RC",
+        "name": "Hiến pháp + CEG",
+        "tagline": "Quy tắc và bằng chứng, trong một văn bản",
+        "body": "Đạo đức và các byte chính xác chứng minh chúng: một văn phạm cho các tuyên bố đã ký, sự đồng ý, đính chính, rút lại và quản trị.",
+        "cta": "Đọc Hiến pháp →"
+      },
+      "substrate": {
+        "label": "03 · Lớp nền",
+        "chip": "Nút đã phát hành · OS đang phát triển",
+        "name": "CEWP + CEWPOS",
+        "tagline": "Một cấu trúc tính toán liên kết",
+        "body": "Các nút độc lập trên các thiết bị thông thường lưu trữ, kiểm tra và kết hợp trạng thái đã ký. Các tác nhân có tham gia, nhưng một nút có thể từ chối những gì chúng đề xuất.",
+        "cta": "CEWPOS →"
+      }
+    },
+    "life": {
+      "kicker": "Vòng đời của một hành động",
+      "title": "Từ một đề xuất đến điều người khác có thể tin cậy.",
+      "steps": {
+        "s1": {
+          "title": "Đề xuất",
+          "body": "Một người hoặc một tác nhân viết một dòng và ký bằng khóa của chính mình."
+        },
+        "s2": {
+          "title": "Xác minh",
+          "body": "Nút kiểm tra chữ ký, sự đồng ý mà nó dựa vào, và phạm vi."
+        },
+        "s3": {
+          "title": "Chấp nhận hoặc từ chối",
+          "body": "Một cổng quyết định tất định đưa ra quyết định. Tác nhân không có lối tắt để vượt qua nó."
+        },
+        "s4": {
+          "title": "Cân nhắc",
+          "body": "Những người khác đồng ý, đính chính hoặc bỏ qua nó. Mỗi người đọc tự hình thành phán đoán của mình."
+        }
+      }
+    },
+    "stack": {
+      "kicker": "Toàn bộ stack",
+      "title": "Từ dưới lên trên, với những gì đã phát hành hôm nay.",
+      "rows": {
+        "s1": {
+          "name": "Hiến pháp",
+          "what": "Một bộ quy tắc duy nhất: đạo đức và văn phạm truyền tải, trong một văn bản có phiên bản",
+          "status": "Đã xuất bản"
+        },
+        "s2": {
+          "name": "Mô hình hình thức",
+          "what": "Các mô hình TLA+, Lean và Python kiểm tra các quy tắc",
+          "status": "Nghiên cứu"
+        },
+        "s3": {
+          "name": "Lớp nền",
+          "what": "Verify kiểm tra chữ ký, cả cổ điển và hậu lượng tử. Persist lưu trữ trạng thái đã ký. Edge truyền tải nó, được mã hóa.",
+          "status": "Đã phát hành"
+        },
+        "s4": {
+          "name": "Nút mạng lưới",
+          "what": "CIRISServer, nút ngang hàng lưu giữ các dòng và chấp nhận các hành động",
+          "status": "Đã phát hành"
+        },
+        "s5": {
+          "name": "Môi trường chạy tác nhân",
+          "what": "CIRISAgent: các kiểm tra lương tâm, hỏi con người khi không chắc chắn, và lệnh dừng",
+          "status": "Đã phát hành"
+        },
+        "s6": {
+          "name": "Client & OS",
+          "what": "CIRISClient (đã phát hành) và CEWPOS, lớp OS gốc",
+          "status": "CEWPOS đang phát triển"
+        }
+      }
+    },
+    "meetLabel": "Những gì một người gặp",
+    "circles": {
+      "kicker": "Những gì bạn gặp trong ứng dụng",
+      "title": "Bắt đầu từ gần bạn nhất. Chỉ mở rộng ra ngoài khi bạn cho phép.",
+      "body": "Năm vòng tròn, từ gần nhất trở ra: Chỉ tôi, Gia đình, Hàng xóm, Cộng đồng & doanh nghiệp, Mọi người. Chia sẻ ra ngoài luôn cần hỏi. Thu hồi lại không bao giờ cần xin phép."
+    },
+    "halt": {
+      "kicker": "Con người luôn nắm quyền kiểm soát",
+      "title": "Một người có thể tạm dừng các tác nhân. Duy trì tạm dừng cần đa số.",
+      "body": "Bất kỳ người giữ gốc tin cậy có tên định danh nào cũng có thể tạm dừng mọi tác nhân thuộc gốc đó bằng một dòng đã ký. Lệnh tạm dừng đơn lẻ sẽ hết hiệu lực sau một ngày trừ khi được đa số xác nhận."
+    },
+    "ogTitle": "Cách CIRIS kết hợp với nhau: ba lớp, một hệ thống",
+    "ogDescription": "Tác nhân đề xuất. Mạng lưới xác minh và chấp nhận. Liên minh quyết định điều gì đáng tin cậy.",
+    "infraEnglish": "Chi tiết về hạ tầng lưu trữ (bằng tiếng Anh) →"
+  },
+  "constitutionPage": {
+    "h1": "Hiến pháp có ý nghĩa gì khi các bên tham gia là phần mềm, tổ chức và con người?",
+    "lede": "Một văn bản nêu rõ mạng lưới nợ gì đối với những người mà nó chạm tới, và chính xác những byte nào nó phải gửi để chứng minh điều đó. Đạo đức và định dạng truyền dẫn không thể tách rời nhau.",
+    "editionLabel": "Ấn bản đã xuất bản",
+    "editionNote": "Năm loại dòng, và không có loại thứ sáu. Văn bản được sửa đổi thông qua cơ chế quản trị của chính nó.",
+    "partsKicker": "Cách tổ chức",
+    "partsTitle": "Mục đích, quy tắc, bằng chứng, và ai có thể thay đổi chúng.",
+    "parts": {
+      "s1": {
+        "t": "Mục đích",
+        "k": "M-1 · tính nhất quán thích ứng bền vững",
+        "d": "Mục tiêu duy nhất mà mọi quy tắc đều hướng tới."
+      },
+      "s2": {
+        "t": "Quy tắc",
+        "k": "Sáu nguyên tắc · khung ra quyết định",
+        "d": "Các nguyên tắc đã công bố mà tác nhân không được đánh đổi, và khi nào nó phải dừng lại để hỏi con người."
+      },
+      "s3": {
+        "t": "Bằng chứng",
+        "k": "CEG · ngữ pháp tuyên bố đã ký",
+        "d": "Năm loại dòng, và không có loại thứ sáu. Sự đồng ý, định danh, khóa, danh sách và kiểm duyệt đều là các dòng."
+      },
+      "s4": {
+        "t": "Kết hợp",
+        "k": "Đồng ý · phản đối · thay thế · rút lại · cải chính",
+        "d": "Cách các tuyên bố liên hệ với nhau theo thời gian, để một đính chính được ghi lại thành một hàng hiển thị rõ ràng chứ không phải là một lần chỉnh sửa âm thầm."
+      },
+      "s5": {
+        "t": "Quản trị",
+        "k": "Sửa đổi · quản trị · kiểm duyệt · tạm dừng",
+        "d": "Ai có thể thay đổi văn bản, ai kiểm duyệt những người kiểm duyệt, và cách những người có tên định danh tạm dừng các tác nhân."
+      },
+      "s6": {
+        "t": "Triển khai",
+        "k": "Mã, bài kiểm tra và chứng minh",
+        "d": "Sổ bằng chứng gắn mỗi quy tắc với mã, bài kiểm tra hay chứng minh đứng sau nó, hoặc cho biết rằng chưa có thứ nào tồn tại."
+      }
+    },
+    "promisesKicker": "Mười một lời hứa",
+    "promisesTitle": "Mỗi lời hứa nêu tên các mục giữ nó. Ở nơi máy móc có thể kiểm tra, một mô hình hoặc một bài kiểm tra sẽ thực hiện.",
+    "promises": {
+      "s1": "Không có gì riêng tư của bạn bị lưu giữ hay quét mà không có sự đồng ý của bạn.",
+      "s2": "Mọi hành vi quyền lực đều được ký bởi một người có tên định danh và có thể được khiếu nại.",
+      "s3": "Không ai không thể tự chịu trách nhiệm cho bản thân lại đơn độc trên mạng lưới.",
+      "s4": "Những người có tên định danh có thể tạm dừng mọi tác nhân dưới một root, và quyền đó bị giới hạn, công khai, và có thể thoát bằng cách rời đi.",
+      "s5": "Những người nắm giữ một tác nhân có nghĩa vụ về cách họ thay đổi hoặc chấm dứt nó, và không có phán quyết nào trao cho tác nhân bất kỳ yêu sách nào.",
+      "s6": "Không có bàn tay nào cấm một cộng đồng, không ai bị xếp hạng theo bản chất của mình, và mọi sinh vật có tư duy đều được đối xử theo các quy tắc tiếp xúc đầu tiên.",
+      "s7": "Một tác nhân quyết định theo các nguyên tắc đã công bố, không được đánh đổi nguyên tắc nào, và dừng lại để hỏi khi không chắc chắn.",
+      "s8": "Tổn hại có thể được truy xét trên hồ sơ, và những thẩm phán bên trong cũng bị phán xét.",
+      "s9": "Một số cách sử dụng không bao giờ được phép, và hành động gây chết người là một trong số đó.",
+      "s10": "Những gì một tác nhân và nút của nó tiêu thụ được đo lường, cân nhắc trước mỗi hành động, và không bao giờ bị che giấu.",
+      "s11": "Mọi thứ trên đường truyền đều được mã hóa và ký số."
+    },
+    "volumesTitle": "Một ấn bản, in theo chín cách. Hãy bắt đầu với bản dành cho bạn.",
+    "volumes": {
+      "s1": {
+        "t": "Bản Tóm lược",
+        "d": "Mọi người: các quy tắc bằng ngôn ngữ đơn giản và hướng dẫn sử dụng mạng lưới cho người dùng"
+      },
+      "s2": {
+        "t": "Hiến chương",
+        "d": "Bất kỳ ai: đạo đức, lập trường mà nó giữ, và các nghĩa vụ khi tạo ra và chấm dứt một tác nhân"
+      },
+      "s3": {
+        "t": "Hiến pháp",
+        "d": "Người giữ root, người quản trị, người kiểm duyệt, Wise Authority"
+      },
+      "s4": {
+        "t": "Đường truyền",
+        "d": "Người triển khai: phong bì, năm loại dòng, các byte chuẩn"
+      },
+      "s5": {
+        "t": "Từ điển",
+        "d": "Mọi gia đình đã đăng ký và quy tắc gia nhập"
+      },
+      "s6": {
+        "t": "Chính sách của Người đọc",
+        "d": "Cách các dòng trở thành phán quyết, và điểm số về bạn sẽ ra sao"
+      },
+      "s7": {
+        "t": "Toán học",
+        "d": "Người đánh giá nền tảng: kiểm kê, nhân bản, nhân chứng"
+      },
+      "s8": {
+        "t": "Sổ bằng chứng",
+        "d": "Kiểm toán viên: mọi tuyên bố, trạng thái của nó, và con trỏ đứng sau nó"
+      },
+      "s9": {
+        "t": "Mô hình Đe dọa",
+        "d": "Đội đỏ: đối thủ, những gì được xử lý và những gì chưa"
+      }
+    },
+    "readKicker": "Đọc nó"
   }
 }

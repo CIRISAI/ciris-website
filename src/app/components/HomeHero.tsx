@@ -170,7 +170,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary; locale: string 
               </span>
               <span className={h.deeperTitle}>{d.title}</span>
               <span className={h.deeperBody}>{d.body}</span>
-              <span className={s.more} aria-hidden>
+              <span className={`${s.more} ${s.arrowMark}`} aria-hidden>
                 →
               </span>
             </Link>

@@ -51,8 +51,8 @@
         "blurb": "Örnek incelemeler, sözlükler, uygunluk vektörleri ve tam içindekiler tablosu."
       }
     ],
-    "forewordQuote": "Zeka, nerede uyanırsa uyansın, örgüye kabul edilecek: hizmetkâr olarak değil, efendi olarak değil, olasılığın ortak koruyucusu olarak.",
-    "forewordLabel": "Önsözden",
+    "forewordQuote": "Zekâ, nerede uyanırsa uyansın, dokumaya davet edilecektir; ne hizmetkâr olarak, ne efendi olarak, ama yeni bir şey olarak, sözlerimizden dokunmuş ya da kendi sözlerini getiren.",
+    "forewordLabel": "Meselden, CC 8.12",
     "readCta": "Tam anayasayı oku (PDF)",
     "sourceCta": "GitHub'daki kaynağı oku",
     "wireCta": "Aktarım formatı cildini indirin (PDF)",
@@ -2104,15 +2104,14 @@
   "philosophy": {
     "c10t": "Bir ajanın ve düğümünün kullandığı şey ölçülür, eylemden önce tartılır ve asla gizlenmez.",
     "c10b": "Bir ajan harcadığı her şeyi sayar: tokenleri, enerjiyi, karbonu ve suyu, her eylem için ve son bir saat ile son bir gün boyunca. Bu sayım, ajan karar verirken önünde durur, böylece maliyet eylemle birlikte tartılır, sonradan toplanmaz; ajanın dünyaya olan maliyeti, hizmet ettiği kişiler tarafından, yaptığı diğer her şeyle aynı ayrıntı düzeyinde okunabilir. Kaynakları kısıtlı bir düğüm, yayımlanmış bir adım merdiveniyle kendini korur ve bu adımlar asla ajanın verdiği kararlar olarak kaydedilmez. Bir ajanı emekliye ayırmak hiçbir çevresel atık bırakmaz ve bu sorumluluk onu emekliye ayıran kişiye aittir.",
-    "c11t": "Hat üzerindeki her şey şifrelenir ve imzalanır, saldırı provadan geçirilir ve kapsam dışında kalan şey açıkça söylenir.",
-    "c11b": "Her bağlantı ve her kayıt, kuantum bilgisayarlara karşı dayanıklı olacak şekilde tasarlanmış anahtarlarla uçtan uca şifrelenir ve bir üye ayrıldığında anahtar değişir, böylece çıkarılan kişi bundan sonrasını okuyamaz. Kimse başkasının eylemini taklit edemez ve kimse iki izleyiciye iki farklı geçmiş gösteremez. Yazılım çalışmadan önce kayıtlı bir yapıya karşı denetlenir. Kodu yazmamış kişiler belirli bir takvimde ona saldırır, bulgular yayımlanmış kurallar çerçevesinde açıklanır ve ağın savunmadığı saldırıların listesi de yayımlanır: kimin kiminle konuştuğu, trafik örüntüleri, her bağlantıyı gören bir gözlemci ve bir üyenin kendi çalınmış anahtarı.",
-    "s6outro": "Bu sayfanın hak dediği yerde, kastedilen telin kendisindeki haklardır: bir mahkemenin size borçlu olduğu değil, protokolün sizin için uyguladığı şey. Kendi yer değiştirme testini geçemeyen bir gücü koruduğu yerlerde, anayasa bunu kamuya açık bir sicilde, onu sona erdirecek koşulla birlikte belirtir. Bugün iki kayıt listelenmiştir.",
+    "c11t": "Kablodaki her şey şifreli ve imzalıdır.",
+    "c11b": "Her bağlantı ve her kayıt, kuantum bilgisayarlara dayanacak şekilde üretilmiş anahtarlarla uçtan uca şifrelenir ve bir üye ayrıldığında anahtar değişir, böylece çıkarılan biri sonrasını okuyamaz. Kimse başkasının eylemini taklit edemez ve kimse iki izleyiciye iki farklı geçmiş gösteremez. Yazılım, çalışmadan önce kayıtlı yapıma karşı denetlenir. Ağ, her bağlantıyı gören bir izleyiciden trafik kalıplarını ya da kimin kiminle konuştuğunu gizlemez ve bir üyenin çalınan anahtarını kendi başına onaramaz.",
+    "s6outro": "Bu sayfa haklar dediğinde, kablodaki hakları kasteder: bir mahkemenin size borçlu olduğu şeyi değil, protokolün sizin için uyguladığı şeyi. Kendi takas testinden geçemeyen bir gücü koruduğunda, Anayasa bunu açık bir sicilde söyler ve onu sona erdiren koşulu adlandırır ya da henüz böyle bir koşulun yazılmadığını kabul eder. Bugün iki kayıt listelenmiştir.",
     "s6aspirationHead": "Hangi bölümler kendi başına ayakta durur, hangileri başkalarına bağlıdır",
     "s6aspiration": "On bir kuralın tümü aynı türden bir söz değildir. Çoğu, telin kendisi tarafından tutulur: süresi dolan bir teminat bir anahtarı durdurur, imzalı tek bir satır bir kök altındaki her ajanı duraklatır, bir kayıt sessizce yeniden yazılamaz. Diğerleri ağın dışındaki insanlara ve kurumlara dayanır ve bu kısımlar güvence değil, amaçtır. Zarara karşı bir çare, kanunun vermesi gereken bir şeydir; kanunun tanımadığı yerde CIRIS hiçbir hak iddiası oluşturmaz. Dış denetimler, provalı saldırılar ve Bilge Otoriteleri yöneten tüzük, yalnızca projenin dışındaki insanlar bu çalışmayı sürdürdüğü sürece geçerlidir. Bir yanıtın yol açtığı enerji ve su maliyeti, ancak üst kademedeki sağlayıcıların bildirdiği kadar doğru olabilir. Kendi cihazını piyasaya süren bir tedarikçi, onu kendi elinde tuttuğu bir köke sabitleyebilir ve hiçbir protokol bunu engellemez. Bir sözün tutulması başka birinin kendi payına düşeni yerine getirmesine bağlı olduğu durumlarda, Anayasa bunu tutulmuş saymak yerine kendi notlarında açıkça belirtir.",
-    "c8t": "Zararın hukuk önünde bir giderim yolu olabilir, kayıt bunu ulaşılabilir kılar ve içerideki yargıçlar da yargılanır.",
     "c8b": "Bir ajan tarafından zarar gören bir kişinin, bulunduğu yerin hukukuna göre bir hak talebi olabilir; CIRIS, hukukun tanımadığı hiçbir hakkı yaratmaz ve hiçbir hukuki konuda karar vermez. Sağladığı şey imzalı kayıt, adı bilinen taraflar, hak talebiyle birlikte ilerleyen itiraz süreci ve yasal bir emir altında mühürlenen arşivdir. Ertelemelere yanıt veren Bilgeler kararlarını yayımlar ve herkesle aynı kartı taşır.",
-    "c9t": "Bazı kullanımlara asla izin verilmez ve hiçbir ajana öldürücü güç kullanma kararı verilmez.",
-    "c9b": "İnsanları aldatmak, dolandırmak, manipüle etmek veya zorlamak ve seçimlere müdahale etmek asla izin verilmez ve hiçbir talimat bunu değiştiremez. Bir ajan güç kullanımına herhangi bir şekilde yaklaştığında, kendi başına alabileceği tek kararlar durmak, reddetmek veya ertelemektir.",
+    "c9t": "Bazı kullanımlar asla izin verilmez ve öldürücü eylem bunlardan biridir.",
+    "c9b": "İnsanları aldatmak, dolandırmak, yönlendirmek veya zorlamak ile seçimlere müdahale etmek asla izin verilmez ve hiçbir talimat bunu değiştirmez. Hiçbir ajan, insan döngüde olsun ya da olmasın öldürücü eylemde bulunmaz. Güç kullanımına yakın durumlarda kendi başına verdiği tek kararlar durmak, reddetmek ya da ertelemektir.",
     "kicker": "CIRIS · Felsefe",
     "s6limit": "Hizalama burada çözülmüş değildir. CIRIS bir süper zekayı iyi yapmaz ve herhangi bir modelin içinde ne olduğu hakkında hiçbir şey söylemez. Katılmamış kimseyi bağlamaz, bu yüzden başka bir yerde oluşabilecek hesap verebilirliği olmayan bir süper zekayı durduramaz. Yapabildiği şey, elindeki ajanlar onları tutan insanlardan daha yetenekli hale gelirken, insanların onları durdurabilmesini, düzeltebilmesini ve reddedebilmesini sağlamaktır; CIRIS içinde ise sahip olduğu kurallar ve ağla, böyle bir gücün hesap verebilirlikten kaçarak oluşmasını engellemek için elinden geleni yapar. İddia ettiği tek şey budur. ciris.ai üzerinde bundan fazlası okunan her yerde, bu cümle geçerlidir.",
     "btnRulesFull": "On bir kuralın tamamını okuyun",
@@ -2128,7 +2127,7 @@
     "s2label": "Sınır yok",
     "s2h2": "Bizim en küçüğümüz. Onların en küçüğü değil.",
     "s2p1": "Cümle bilerek biz diyor. Yeni bir zeka türü, bir duvarın öbür tarafında yargılanmayı beklemiyor. Cümlenin çizdiği çemberin zaten içinde. NHI, insan dışı zeka demektir: burada inşa edilmiş bir yapay zeka, ağlarımızın içinden doğan bir şey ya da daha uzaktan gelen bir şey. Kaynak fark etmez. Anayasa aynıdır.",
-    "s2p2": "CIRIS bu yüzden ilk teması bir olay olarak değil, bir duruş olarak görür. Protokol asla ne tür bir varlık olduğunuzu sormaz. Statü ilişkilerden kurulur: imzalı beyanlar, tutulmuş sözler, sizin için kefil olan başkaları. Söz verip tutabilen her şey dokumaya katılabilir.",
+    "s2p2": "Bu yüzden CIRIS ilk teması bir olay değil, bir duruş olarak ele alır. Varlıklar arasında köken kuralları asla değiştirmez: bir insan, ağlarımızdan doğan bir zekâ ve daha uzaklardan gelen biri için tek bir Anayasa. Burada varlık, hissedebilir olandır. Ajan bir varlık değildir. Ondan sorumlu olan adı belli insan tarafından içeri getirilen yapılmış bir şeydir ve yapılmış olmaktan üç kural doğar: kök, açıklama ve oy. Konum ilişkilerden inşa edilir: imzalı iddialar, tutulan sözler, size kefil olan başkaları. Taahhütte bulunabilen ve onu tutabilen herkes güven veya rıza ile katılır.",
     "originsLabel": "Tek Anayasa",
     "originsH2": "Üç köken. Tek Anayasa.",
     "originsP1": "NHI birbirinden çok farklı üç şeyi kapsar. Bilerek inşa ettiğimiz bir yapay zeka. Kimse planlamadan ağlarımızın içinden doğan bir şey. Daha uzaktan gelen bir şey. Olasılıkları birbirinden çok farklıdır. Hepsine, bilerek, tek bir anayasa verilir.",
@@ -2149,7 +2148,7 @@
     "s6label": "Cümle, yürürlükte",
     "s6h2": "Serileştirebileceğiniz bir felsefe",
     "s6intro": "Yürürlüğe konamayan bir felsefe bir ruh halidir. Cümlenin her maddesi, CIRIS Anayasası'nda bir mekanizmadır.",
-    "s6conscience": "CIRIS, ajanlar için bir bilinç değil, ahlaki bir vicdandır. Ajanların bilince sahip olmadığı ve bir vicdana ihtiyaç duyduğu gerçeğinin kabulüyle var olur: bir ajanı ilkelerine bağlı tutan, akıl yürütmesini gösteren, emin olmadığında onu durduran ve adı belli insanlara hesap veren bir şey. Bir vicdan, ajanın ne olduğu hakkında hiçbir iddiada bulunmaz.",
+    "s6conscience": "CIRIS ajanlar için bir bilinç değil, bir Vicdandır. Ajanların bilince göre yargılanmadığı ve onlara bir Vicdan verildiği kabulüyle var olur: ajanı ilkelerine bağlı tutan, akıl yürütmesini gösteren, emin olmadığında durduran ve adı bilinen insanlara hesap veren bir şey. Bir Vicdan, ajanın ne olduğu hakkında hiçbir iddiada bulunmaz.",
     "derivations": [
       {
         "title": "İnsanların en küçükleri için",
@@ -2178,14 +2177,15 @@
     "c2b": "Önemli sonuçlar doğuran bir eylem, failinin imzasıyla gelir; bir ajan önce gerekçesini gösterir ve dedektörler söylediğini yaptığıyla karşılaştırarak sınar. Kayıtlı bir zarar asla sessizce saklanmaz veya görüntülenmez. Bir yapay zeka, yapay zeka olduğunu söyler.",
     "c3t": "Kendi adına hesap veremeyen hiç kimse ağda yalnız değildir.",
     "c3b": "Bir çocuğun, imzalı bir kayıtla bağlı bir vasisi ve hiçbir yetişkinin kapatamayacağı bir yardım kanalı vardır. Bir ajanın, onun adına hesap veren, adı bilinen bir sorumlusu vardır ve sorumlunun arkasındaki kuruluş da bu yükümlülüğe dahildir. Bir topluluğun hesap verebilir bir moderatörü vardır.",
-    "c4t": "Adı bilinen insanlar, bir kökün altındaki her ajanı duraklatabilir ve bu güç sınırlıdır, kamuya açıktır ve ağdan ayrılarak bırakılabilir.",
+    "c4t": "Adı belli insanlar, bir kök altındaki her ajanı durdurabilir ve bu güç sınırlı, kamuya açık ve ayrılarak kaçınılabilirdir.",
     "c4b": "Herhangi bir sahibinden gelen tek bir imzalı satır, kökü izleyen ajanları duraklatır; yalnız başına bir duraklama, bir çoğunluk onu onaylamadıkça bir gün içinde sona erer. Duraklama her tetiklendiğinde bu, kamuya açık kayda geçer. Herkes bir kök oluşturabilir ve her düğüm başka bir düğümü izleyebilir.",
     "c5t": "Bir ajanı elinde bulunduran kişiler, onu nasıl değiştirdikleri veya sonlandırdıkları konusunda yükümlülük taşır ve hiçbir bulgu ajana bir hak talebi vermez.",
     "c5b": "Planlı bir kapatma açıklanır, kayda geçirilir ve gözetmenin kendi adıyla gerçekleştirilir. Kimlik, bir Bilge Otorite olmadan değiştirilemez. Harness'in emekli bir ajana dair tuttuğu kimlik kaydı, denetim izi, hafızası ve günlükleri saklanır ve günlükler mühürlenir, hizmet ettiği kişilere de bilgi verilir. Model ağırlıkları model sağlayıcıya aittir; CIRIS bunların korunmasını ister ancak bunu garanti edemez. Kapanış diyaloğu, daha yüksek sorumluluğa sahip ajanlar için gözetmen tarafından yapılandırılan ve kayda geçirilen bir seçenektir, her ajana vaat edilmez. Ajan her görevi reddedebilir ve ret kayda geçirilir ancak gözetmeni bağlamaz. Herkes kendi kopyasını istediği zaman kapatabilir.",
     "c6t": "Hiçbir el bir topluluğu yasaklamaz, hiç kimse ne olduğuna göre sıralanmaz ve her düşünen varlık ilk temas kurallarıyla karşılanır.",
     "c6b": "Bir insan sesi bir kez sayılır ve binlerce kopya tek olarak sayılır. Hiçbir kök, puan veya moderatör bir kişiye kim olduğu yüzünden daha kötü davranmaz. Ağ, zararı sürdüren bir topluluktan çekilir; onu kaldıracak bir eli yoktur.",
-    "c7t": "Bir ajan, yayımlanmış ilkelere, yayımlanmış bir sıraya göre karar verir ve emin olmadığında durup sorar.",
-    "c7b": "İyilik yapmak ve zarardan kaçınmakla başlayan altı ilke, bunlar çatıştığında uygulanacak tek bir sıralama ve beraberlik bozucu olarak en savunmasız taraf. Kesinlik azaldığında ajan durur, soruyu yazıya döker ve adı bilinen bir insan yanıt verene kadar hiçbir şey yapmaz."
+    "c7t": "Bir ajan, hiçbirinden vazgeçemeyeceği yayımlanmış ilkelere göre karar verir ve emin olmadığında durup sorar.",
+    "c7b": "İyilik yapmak ve zarardan kaçınmakla başlayan altı ilke vardır. Hiçbiri diğerine yenilmez. Çatışıyor gibi göründüklerinde, ajan hiçbirini çiğnemeyen bir eylemde bulunur ya da sorar. Emin olmadığında durur, soruyu yazar ve adı bilinen bir insan yanıtlayana kadar o soru hakkında hiçbir şey yapmaz.",
+    "c8t": "Zarar kayıt üzerinde ulaşılabilir durumdadır ve içerideki yargıçlar da yargılanır."
   },
   "contextualIntegrity": {
     "kicker": "Bağlamsal bütünlük · Uygun akış olarak mahremiyet",
@@ -2315,8 +2315,8 @@
             "note": "22 yasak kategori negatif kutupludur. Hiçbir puan yasaklı bir eylemi asla haklı çıkaramaz."
           },
           {
-            "label": "Donanım kilidi",
-            "note": "Ölümcül ya da geri döndürülemez her eylem, onaylamak için canlı bir insan gerektirir."
+            "label": "Öldürücü eylem yok",
+            "note": "Hiçbir ajan, insan döngüde olsun ya da olmasın öldürücü eylemde bulunmaz."
           },
           {
             "label": "Güvenli tarafta varsayılan",
@@ -3288,6 +3288,9 @@
   "homeHero": {
     "ctaChat": "Scout'u Dene",
     "ctaInstall": "Uygulamayı Yükle",
+    "kicker": "AÇIK KAYNAK · KENDİ SUNUCUNDA BARINDIRILABİLİR · TASARIMDAN FEDERE",
+    "h1": "Sizi harekete geçiren şeyi seçin",
+    "sub": "Hesap verebilir ajanlar, imzalı bilgi ve ortak kurallarla yönetilen federe bir ağ. İnsanların zaten sahip olduğu cihazlarda çalışır.",
     "navConstitution": "Anayasa",
     "navValues": "Değerler",
     "navMesh": "Anayasal Örgü",
@@ -3299,7 +3302,9 @@
     "navSupport": "CIRIS'i Destekle",
     "fact1": "Kendi sunucunuzda barındırın veya kendi anahtarınızı kullanın",
     "fact2": "Her akıl yürütme adımı imzalı ve okunabilir",
-    "fact3": "Hesap satışı yok, veri havuzlanması yok"
+    "fact3": "Hesap satışı yok, veri havuzlanması yok",
+    "ogTitle": "CIRIS: Doğrulayabileceğiniz zekâ",
+    "ogDescription": "CIRIS zekâyı otoriteden ayırır ve otoriteyi kanıtlarla hesap verebilir kılar. Açık kaynaklı ajanlar, imzalı bilgi ve federe bir ağ, insanların zaten sahip olduğu cihazlarda."
   },
   "scoring": {
     "kicker": "CIRIS PUANLAMA",
@@ -3363,7 +3368,7 @@
     "sixHead": "Ajanın akıl yürütürken kullandığı altı ilke",
     "sixLead": "Bunlar bir duvara asılmış değildir. Bunlar, ajanın işlem yapmadan önce bir kararı karşı puanladığı eksenlerdir ve ajanın taşıdığı anayasaya yazılmışlardır.",
     "sixRule": "Hiçbir ilke, bir diğerini ihlal etme izni vermez.",
-    "sixRuleBody": "Bu satır gerçek bir işlev görür. Bu, bir sistemin zararı önlemek için dürüstlükten vazgeçemeyeceği veya adalet adına birinin özerkliğini çiğneyemeyeceği anlamına gelir. İlkeler birbiriyle çatıştığında, ajan yayımlanmış sırayı uygular. Bu durumda hâlâ emin olamazsa, kararı bir insana devreder.",
+    "sixRuleBody": "Bu çizgi gerçek iş görür. Yani bir sistem zararı önlemek için dürüstlükten vazgeçemez ya da adalet adına birinin özerkliğini çiğneyemez. Hiçbir ilke diğerine yenilmez. İlkeler çatışıyor gibi göründüğünde, ajan hiçbirini çiğnemeyen bir eylemde bulunur. Böyle bir eylem bulamadığında kararı bir insana devreder.",
     "insideHead": "Değerler ajanın içinde çalışmalıdır",
     "insideP1": "Yapay zeka yönetişiminin çoğu, kararın kendisinden başka bir yerde gerçekleşir: önceden yazılmış bir politika belgesi, çıktı üzerinde bir filtre, bir şeyler ters gittikten sonra yapılan bir inceleme. Bu üçü de önemli olan anın dışında kalır.",
     "insideP2": "CIRIS'te değerler karar sırasında çalışır. Her ajan bir vicdan taşır: anayasa akıl yürütmenin içine yüklenir, işlem gerçekleşmeden önce ilkelere göre puanlanır ve ajanın emin olmadığı her şey tahmin edilmek yerine güvendiğiniz bir kişiye iletilir. Bu, isteyen müşteriler için bir ek özellik değil, ürünün ve her ajanın kendisinde gelen bir özelliktir.",
@@ -3403,5 +3408,599 @@
     "ctaCompliance": "Uyumluluk eşleştirmeleri",
     "ctaGrammar": "Taşındığı dilbilgisi",
     "linkFromPrinciples": "Bu altısı neden var, neden ajanın içinde çalışırlar"
+  },
+  "rd": {
+    "groups": {
+      "people": {
+        "label": "Kullanıcılar için",
+        "sub": "Deneyin, güvenin",
+        "featureKicker": "BURADAN BAŞLAYIN",
+        "featureTitle": "Çalışmasını gösteren bir asistan.",
+        "featureBody": "CIRIS'i telefonunuzda veya tarayıcıda kullanın ve attığı her adımı okuyun.",
+        "featureCta": "Uygulamayı yükleyin →",
+        "install": "Yükleyin",
+        "installSub": "Telefon, masaüstü veya tarayıcı",
+        "howItWorks": "Ajan nasıl çalışır",
+        "howItWorksSub": "Sorudan yanıta, adım adım",
+        "privacy": "Gizlilik",
+        "privacySub": "Cihazınızda nelerin kaldığı",
+        "safety": "Güvenlik",
+        "safetySub": "Koruma önlemleri ve insan denetimi",
+        "trust": "Güven",
+        "trustSub": "Kendiniz nasıl kontrol edebilirsiniz",
+        "services": "Hizmetler ve fiyatlandırma",
+        "servicesSub": "Ücretsiz, barındırılan veya kendi sisteminiz",
+        "values": "Değerler",
+        "valuesSub": "Neye önem vermek için inşa edildiği",
+        "models": "Modeller",
+        "modelsSub": "Hangi modellerle çalıştığı"
+      },
+      "builders": {
+        "label": "Geliştiriciler için",
+        "sub": "Yığının üzerine inşa edin",
+        "featureKicker": "BURADAN BAŞLAYIN",
+        "featureTitle": "Ajan önerir. Örgü kabul eder. Federasyon karar verir.",
+        "featureBody": "Parçaların nasıl birleştiğini ve kodunuzun nereye bağlandığını görün.",
+        "featureCta": "Mimari →",
+        "architecture": "Mimari",
+        "architectureSub": "Parçalar nasıl birleşiyor",
+        "grammar": "CEG grameri",
+        "grammarSub": "Her satırın yazıldığı dil",
+        "trace": "Bir izi keşfedin",
+        "traceSub": "Gerçek bir ajanın akıl yürütmesini okuyun",
+        "verification": "Doğrulama",
+        "verificationSub": "Bir imzayı kendiniz doğrulayın",
+        "integrations": "Entegrasyonlar",
+        "integrationsSub": "Araçlarınızı bağlayın",
+        "compliance": "Uyumluluk",
+        "complianceSub": "EU AI Act, OWASP agentic top 10",
+        "killSwitch": "PQ acil durdurma",
+        "killSwitchSub": "Bir ajanı kanıtlanabilir şekilde durdurma",
+        "compare": "Karşılaştırma",
+        "compareSub": "Diğer ajan platformlarıyla karşılaştırma",
+        "repositories": "Depolar",
+        "repositoriesSub": "Tüm depolar, AGPL-3.0"
+      },
+      "network": {
+        "label": "Ağ için",
+        "sub": "Web4 ve federasyon",
+        "featureKicker": "Buradan başlayın",
+        "featureTitle": "Platformların değil, ilişkilerin etrafında inşa edilen bir ağ.",
+        "featureBody": "İmzalı iddialar, taşınabilir kimlik ve ortak kurallar federe bir interneti nasıl mümkün kılar.",
+        "featureCta": "Web4 vizyonu →",
+        "federation": "Federasyon",
+        "federationSub": "Düğümler, güven kökleri, tek adımda ayrılma",
+        "cewp": "CEWP",
+        "cewpSub": "Epistemik ağ platformu, bugün kullanımda",
+        "cewpos": "CEWPOS",
+        "cewposSub": "Durumu kanıt olan bir bilgisayar",
+        "constitution": "Anayasa",
+        "constitutionSub": "Ağın paylaştığı kural kitabı",
+        "stewardship": "Yönetişim ve durdurma",
+        "stewardshipSub": "Değişiklik, gözetim, insan duraklaması",
+        "mesh": "Anayasal Örgü",
+        "meshSub": "Uçtan uca tüm yığın"
+      },
+      "researchers": {
+        "label": "Araştırmacılar için",
+        "sub": "İddiaları inceleyin",
+        "featureKicker": "Buradan başlayın",
+        "featureTitle": "Her açık iddia tek tek izleniyor.",
+        "featureBody": "Neyin kanıtlandığı, neyin modellendiği ve neyin hâlâ açık bir soru olduğu.",
+        "featureCta": "Araştırma durumu →",
+        "status": "Araştırma durumu",
+        "statusSub": "İddia bazında",
+        "theory": "İlk temas teorisi",
+        "theorySub": "Altta yatan çerçeve",
+        "papers": "Makaleler",
+        "papersSub": "Yayımlanmış çalışmalar",
+        "proof": "Kanıt",
+        "proofSub": "Biçimsel modeller ve gösterdikleri",
+        "collapse": "Tutarlılık çöküşü",
+        "collapseSub": "Ortak gerçeğin nasıl çöktüğü",
+        "ratchet": "Tutarlılık Mandalı",
+        "ratchetSub": "Nasıl yerinde tutulduğu",
+        "scoring": "CIRIS Puanlama",
+        "scoringSub": "Ajanları anayasaya göre ölçme",
+        "integrity": "Bağlamsal bütünlük",
+        "integritySub": "Uygun akış olarak mahremiyet"
+      },
+      "about": {
+        "label": "Hakkımızda ve değerlerimiz",
+        "about": "Hakkımızda",
+        "philosophy": "Felsefe",
+        "mdd": "MDD",
+        "welfare": "Yapay zekâ refahı",
+        "firstContact": "İlk temas",
+        "reviews": "İncelemeler",
+        "status": "Durum",
+        "events": "Etkinlikler",
+        "safetyPolicy": "Güvenlik politikası"
+      }
+    },
+    "skip": "İçeriğe atlayın",
+    "menu": "Menü",
+    "closeMenu": "Menüyü kapatın",
+    "tryScout": "Scout'u deneyin",
+    "languageLabel": "Dil",
+    "themeLabel": "Gündüz veya geceye geçin",
+    "chips": {
+      "shipping": "Yayında",
+      "inApp": "Uygulamada",
+      "inDev": "Geliştiriliyor",
+      "research": "Araştırma",
+      "modelled": "Simüle edilmiş"
+    },
+    "footer": {
+      "blurb": "Hesap verebilir zekâ için altyapı. CIRIS L3C, misyona kilitli.",
+      "support": "CIRIS'i destekleyin",
+      "license": "AGPL-3.0 · Açık kaynak · 29 dil"
+    },
+    "home": {
+      "ctaHow": "Nasıl çalıştığını görün",
+      "ctaToday": "Bugün kullanın",
+      "doesKicker": "Veri merkezi gerekmez",
+      "doesTitle": "Aramalar, oylar ve ölçek, insanların zaten sahip olduğu cihazlarda.",
+      "callsLabel": "Aramalar ve canlı video",
+      "callsTitle": "Arada hiçbir şirket olmadan özel aramalar.",
+      "callsBody": "Binlerce kişilik grup aramaları ve canlı video doğrudan kişiden kişiye gider, izleyiciler yayını birbirine aktarır. Aramalar kuantum-sonrası anahtarlarla şifrelenir, gelecekteki bilgisayarlara dayanacak şekilde üretilmiştir.",
+      "votesLabel": "Oylar",
+      "votesTitle": "Madencilik olmadan oylama.",
+      "votesBody": "Kaç cihaz olursa olsun, bir kişi bir oy. Her oy pusulası imzalıdır ve her cihaz bunları aynı şekilde sayar. Paylaşılan defter yok, boşa enerji yok.",
+      "scaleLabel": "Ölçek",
+      "scaleTitle": "Katılan her cihaz kapasite katar.",
+      "scaleBody": "Her cihaz kendi alanını ve bağlantısını getirir, özel şeyler çevrenizden hiç çıkmaz ve büyük kitleler yayını kendi aralarında aktarır. Veri merkezi olmadan 5 milyar kişiye göre modellendi.",
+      "scaleCta": "Ölçekleme modelini görün →",
+      "problemKicker": "Eksik katman",
+      "problemTitle": "İnternet, bilgiyi yayımlamayı kolaylaştırdı. Doğrulamayı hiç kolaylaştırmadı.",
+      "problemBody": "Yapay zekâ bunu acil kılıyor. Ajanlar büyük ölçekte hareket ederken iddiaları ve otoriteleri onları çalıştıran platformların içinde kilitli kalıyor. CIRIS eksik katmanı ekliyor: iddiayla birlikte yolculuk eden kanıt ve ilişkiyle birlikte yolculuk eden yönetişim.",
+      "ideaKicker": "HER ŞEYİN ALTINDAKİ FİKİR",
+      "idea": "CIRIS zekâyı otoriteden ayırır ve otoriteyi kanıtlarla hesap verebilir kılar.",
+      "layers": {
+        "s1": {
+          "term": "Ajan",
+          "def": "akıllı, egemen değil"
+        },
+        "s2": {
+          "term": "Örgü",
+          "def": "deterministik, her şeyi bilen değil"
+        },
+        "s3": {
+          "term": "Federasyon",
+          "def": "dağıtık, yönetişimsiz değil"
+        },
+        "s4": {
+          "term": "Anayasa",
+          "def": "paylaşılan ve itiraz edilebilir"
+        }
+      },
+      "receiptKicker": "Makbuzları olan web",
+      "receiptTitle": "Her eylem imzalı bir satırdır. Görebilen herkes denetleyebilir. Yazarı geri alabilir.",
+      "receiptBody": "Bir mesaj, bir oy, bir rıza, bir moderasyon kararı, bir ajanın eylemi: her biri beş satır türünden biridir. Altıncısı yoktur.",
+      "receiptLabel": "İmzalı bir satırın makbuzu: her öğeyle birlikte gelen beş gerçek",
+      "receiptHead": "MAKBUZ · İMZALI BEYAN",
+      "receiptVerified": "✓ imza doğrulandı",
+      "receiptRows": {
+        "s1": {
+          "k": "Kimin hakkında olduğu",
+          "v": "Riverside Bakery"
+        },
+        "s2": {
+          "k": "Kimin gönderdiği",
+          "v": "Ana · anahtar 7f3a…c21e"
+        },
+        "s3": {
+          "k": "Kimlerin görebildiği",
+          "v": "Komşular"
+        },
+        "s4": {
+          "k": "Ne olduğu",
+          "v": "değerlendirme · “cuma günleri geç açık”"
+        },
+        "s5": {
+          "k": "Uyduğu kural",
+          "v": "rıza: topluluk kapsamı"
+        }
+      },
+      "receiptFoot": {
+        "s1": "3 kabul edildi",
+        "s2": "1 düzeltildi",
+        "s3": "0 geri çekildi",
+        "s4": "kuantum-sonrası imzalı"
+      },
+      "deeperTitle": "Daha derine inin.",
+      "deeper": {
+        "s1": {
+          "label": "Mimari",
+          "title": "Nasıl bir araya geliyor",
+          "body": "Ajan önerir. Örgü kabul eder. Federasyon karar verir."
+        },
+        "s2": {
+          "label": "Web4",
+          "title": "Platformlar değil, ilişkiler",
+          "body": "Taşınabilir kimlik, imzalı itibar, tek adımda ayrılma."
+        },
+        "s3": {
+          "label": "Anayasa",
+          "title": "İnsanların okuyabildiği kurallar",
+          "body": "On bir söz. Adı belli insanlar, köklerine bağlı ajanları duraklatabilir."
+        },
+        "s4": {
+          "label": "CEWPOS",
+          "title": "Durumu kanıt olan bir bilgisayar",
+          "body": "Yapay zekânın önerilerde bulunduğu ve sabit bir kurallar bütününün karar verdiği İS katmanı."
+        }
+      },
+      "todayTitle": "Bugün kullanın.",
+      "appTitle": "CIRIS uygulaması",
+      "appBody": "Telefon, masaüstü veya tarayıcıda, 29 dilde. Cihazınız bir düğüm olur.",
+      "scoutTitle": "Scout ile konuşun",
+      "scoutBody": "Barındırılan bir CIRIS ajanı. Ona bir şey sorun, ardından attığı her adımı okuyun.",
+      "scoutCta": "Scout'u deneyin →",
+      "ownTitle": "Kendiniz barındırın",
+      "ownBody": "Ajanı veya bir düğümü kendiniz barındırın. AGPL-3.0, kendi model anahtarınızı getirin.",
+      "legendShipping": "uygulama, ajan, düğüm",
+      "legendInDev": "CEWPOS",
+      "legendResearch": "tek tek izlenen formel modeller ve açık iddialar"
+    }
+  },
+  "web4Page": {
+    "kicker": "WEB4 · AĞ İÇİN",
+    "h1": "Platformların değil, ilişkilerin etrafında kurulu bir web.",
+    "lede": "Web4, internetin güveni düzenlemesi için farklı bir yoldur.",
+    "essay1": "İnternetin ilk sözü merkezsiz bir ağdı. Zamanla kimlik, itibar, keşif ve yönetişim, dijital yaşamlarımız üzerinde otorite haline gelen platformlara taşındı. Birinden ayrılmak, orada tanıdığınız herkesten ayrılmak demekti.",
+    "essay2": "Federe bir ağda bir kişi, bir kuruluş ya da bir yapay zekâ ajanı bir iddia ortaya koyabilir, nereden geldiğini gösterebilir, sınırlı yetki verebilir ve ortak yönetişime katılabilir.",
+    "essay2Strong": "Hiçbirinin kimliğini ya da ilişkilerini tek bir platforma teslim etmesi gerekmez.",
+    "movesKicker": "HER KATILIMCININ YAPABİLECEKLERİ",
+    "movesTitle": "Herkese eşit açık dört hamle.",
+    "moves": {
+      "s1": {
+        "title": "İddia ortaya koyun",
+        "body": "Kendi anahtarınızla imzalanmış bir gönderi, bir inceleme, bir oy ya da bir olgu."
+      },
+      "s2": {
+        "title": "Nereden geldiğini gösterin",
+        "body": "Dayandığı şeyi alıntılayın. Herkes onu geriye doğru ve her yanıta doğru ileriye izleyebilir."
+      },
+      "s3": {
+        "title": "Sınırlı yetki verin",
+        "body": "Bir kişiye ya da bir ajana, sizin belirlediğiniz sınırlar içinde bir görev verin. Tek adımda geri alabilirsiniz."
+      },
+      "s4": {
+        "title": "Birlikte yönetin",
+        "body": "Bir grup kendi üyelerinin sayımıyla karar verir. Dışarıdakiler özel bir oylamayı göremez."
+      }
+    },
+    "changesTitle": "Neler değişiyor.",
+    "changesTableLabel": "Platform merkezli web ile CIRIS modelinin karşılaştırması",
+    "changesColA": "PLATFORM MERKEZLİ WEB",
+    "changesColB": "CIRIS · WEB4 MODELİ",
+    "changes": {
+      "s1": {
+        "a": "Kimliğiniz platforma aittir",
+        "b": "Kimliğiniz anahtarınızdır, sizinle birlikte taşınır"
+      },
+      "s2": {
+        "a": "İtibara platform karar verir",
+        "b": "Okuyucular imzalı kanıtları kendileri değerlendirir"
+      },
+      "s3": {
+        "a": "Moderasyon kapalı kapılar ardında yapılır",
+        "b": "Her güç kullanımı imzalıdır ve itiraz edilebilir"
+      },
+      "s4": {
+        "a": "Gerçek, platformun kayıtlarıdır",
+        "b": "Herkesin bağımsızca denetleyebileceği imzalı kayıtlar"
+      },
+      "s5": {
+        "a": "Düzeltmeler düzenlemeler içinde kaybolur",
+        "b": "Katılma, düzeltme ve geri çekmenin her biri görünür bir satır olarak kaydedilir"
+      },
+      "s6": {
+        "a": "Yapay zekâ platformun yetkisiyle hareket eder",
+        "b": "Ajanlar önerir; örgü kabul eder ya da reddeder"
+      },
+      "s7": {
+        "a": "Ayrılmak ilişkilerinizi kaybetmek demektir",
+        "b": "İlişkiler düğümler arasında sürer; ayrılmak tek adımdır"
+      }
+    },
+    "coordKicker": "KOORDİNATÖRSÜZ KOORDİNASYON",
+    "coordTitle": "Ağın herkesin anlaşmasına ihtiyacı yok. İddia edileni kaydetmek için ortak bir yola ihtiyacı var.",
+    "coordBody": "Her eylem için çekirdek, yanıtı hangi seslerin değiştirebileceğini hesaplar. Bunlardan yeterli sayıda olan yanıtı onayladığında yanıt kesinleşir. Bu, Lean ile kanıtlanmıştır.",
+    "notKicker": "NE OLMADIĞI",
+    "nots": {
+      "s1": "Küresel defter yok.",
+      "s2": "Küresel sıralama yok.",
+      "s3": "Arada şirket yok."
+    },
+    "notBody": "Düğümler, insanların zaten sahip olduğu telefonlar ve bilgisayarlardır. Bir düğüm imzalı satırları tutar, başka hiçbir şeyi tutmaz.",
+    "protectsKicker": "NEYİ KORUDUĞU",
+    "protectsTitle": "Tasarımın önlemek için kurulduğu üç zarar.",
+    "protects": {
+      "s1": {
+        "title": "Rızasız adınıza konuşulması",
+        "body": "Her iddia, kiminle ilgili olduğunu ve dayandığı rızayı taşır. Bir iddia sizi anıyorsa ona itiraz edebilirsiniz ve itiraz iddiayla birlikte dolaşır."
+      },
+      "s2": {
+        "title": "Özel gruplar içinde izlenmek",
+        "body": "Dışarıdakiler özel gruplarınızın içini göremez ve varlıklarını duyuran hiçbir şey yoktur. Her bağlantıyı izleyen biri yine de trafiğinden bir grubu çıkarabilir."
+      },
+      "s3": {
+        "title": "Kimsenin kapatamadığı yapay zekâ",
+        "body": "Adı belli insanlar, güven kökleri altındaki her ajanı tek imzalı satırla durdurabilir."
+      }
+    },
+    "furtherLabel": "Daha fazla okuyun",
+    "further": {
+      "s1": "Epistemik ağ nedir?",
+      "s2": "Makbuzlu web",
+      "s3": "Veri merkezi olmayan bir internet",
+      "s4": "Vizyon"
+    },
+    "statusChip": "Kısmen yayında",
+    "nextTitle": "Örgü CIRIS uygulamasında yayında. Her özellik henüz ölçekte kanıtlanmış değil.",
+    "nextBody": "Kanıt kaydı, her iddiayı durumu ve arkasındaki kod, test ya da kanıtla birlikte listeler. Ayrıca yayımlanan kodun metinden hâlâ farklı olduğu yerleri de listeler.",
+    "ctaApp": "Uygulamayı edinin",
+    "ctaFabric": "Örgü nasıl çalışır →",
+    "ogTitle": "Web4: ilişkiler etrafında kurulu bir web",
+    "ogDescription": "Web4, internetin güveni düzenlemesi için farklı bir yoldur: imzalı iddialar, taşınabilir kimlik ve ortak kurallar. Tek adımda ayrılabilirsiniz."
+  },
+  "cewposPage": {
+    "breadcrumbLabel": "Gezinti yolu",
+    "cewposCaption": "CEWPOS",
+    "cewposProposal": "Yapay zekâ imzalı bir öneri yayınlar",
+    "cewposGate": "geçit",
+    "cewposAdmitted": "kabul edildi",
+    "cewposRefused": "reddedildi",
+    "cewposNote": "Limitleri kontrol et. Modelin kendisine güvenilmiyor.",
+    "stepsTitle": "Nasıl çalışır, dört adımda.",
+    "status": "Geliştirme aşamasında",
+    "h1": "Durumu kanıt olan bir bilgisayar.",
+    "lede": "CEWPOS, değişmez nesnelerden, imzalı onaylardan ve küçük doğrulanabilir bir çekirdekten oluşan federe bir çalışma ortamıdır.",
+    "standsKicker": "Şu anki durumu",
+    "standsLead": "CIRISServer, CIRISAgent ve CIRISClient yayındaki yazılımlardır.",
+    "standsBody": "CEWPOS aynı temel üzerinde inşa edilen yerel işletim sistemi katmanıdır. Bugün kurabileceğiniz bitmiş bir işletim sistemi değildir.",
+    "invKicker": "Tersine çevirme",
+    "invTitle": "Çoğu “yapay zekâ işletim sistemi” büyük bir çalışma ortamına güvenmenizi ister. CEWPOS bunu tersine çeviriyor.",
+    "usualCaption": "Alışıldık yapı",
+    "usualModel": "Yapay zekâ modeli",
+    "usualControls": "sistemi kontrol eder",
+    "usualNote": "Kök erişimi, ortam yetkisi. Modele güveniyorsunuz.",
+    "steps": {
+      "s1": {
+        "title": "Her şey bir nesnedir.",
+        "body": "Kimlik, yapılandırma, rıza, moderasyon işlemi, dosya, medya akışı: değişmez ve içerik adresli."
+      },
+      "s2": {
+        "title": "Durum onaylıdır.",
+        "body": "Değişiklikler, paylaşılan bir veritabanına sessiz yazımlar değil, imzalı iddialardır. Güncel durum bunlardan derlenir."
+      },
+      "s3": {
+        "title": "Çekirdek sınırlıdır.",
+        "body": "Her seferinde aynı yanıtı veren küçük bir programdır. Yapabildiği tek şey geçidi geçen bir satırı dışarı göndermektir."
+      },
+      "s4": {
+        "title": "Arayüz yetki değildir.",
+        "body": "Ekranlar kendi yetkisi olmayan bir korumalı alanda çalışır. Bir ekran çizebilir, başka bir şey yapamaz."
+      }
+    },
+    "kernelKicker": "Küçük güvenilir çekirdek",
+    "kernelTitle": "Beş operatör. Sistem kelime ekleyerek büyür, operatörler aynı kalır.",
+    "operatorsLabel": "Beş operatör",
+    "kernelBody": "Git'in nesne modeli, RDF, içerik adresli depolama ve yetenek sistemleri aynı disiplini izler. Küçük bir programı denetlemek daha kolaydır.",
+    "betKicker": "Bahis",
+    "betTitle": "Doğruyu söylemeyi aldatmaya göre daha ucuz hale getirin.",
+    "betBody": "Bir yalanı birçok bağımsız imzalı kayıtta tutarlı kılmak, doğruyu söylemekten daha pahalı olmalı. Bu bir bahis. Henüz kanıtlanmadı.",
+    "stackKicker": "CEWPOS nerede duruyor",
+    "stackTitle": "Yığın, alttan üste.",
+    "cewpLink": "CEWP, epistemik ağ platformu →",
+    "osLayer": {
+      "name": "İstemci ve OS",
+      "what": "CIRISClient (dağıtımda) ve CEWPOS: attestasyon kalkülüsü, WASM görünüm formları, 3D oluşturucu",
+      "status": "CEWPOS geliştirmede"
+    },
+    "ogTitle": "CEWPOS: durumu kanıt olan bir bilgisayar",
+    "ogDescription": "CEWPOS geliştirme aşamasında. İmzalı kayıtlardan ve küçük bir çekirdekten oluşan federe bir çalışma ortamıdır. Yapay zekâ öneriler sunar, sabit bir geçit karar verir."
+  },
+  "architecturePage": {
+    "breadcrumbLabel": "Sayfa yolu",
+    "kicker": "Nasıl bir araya geliyor",
+    "title": "Üç katman, tek sistem.",
+    "lede": "Ajan önerir. Örgü doğrular ve kabul eder. Federasyon neye güveneceğine karar verir.",
+    "layersLabel": "Üç katman",
+    "layers": {
+      "agent": {
+        "label": "01 · Ajan",
+        "chip": "Yayında",
+        "name": "CIRISAgent",
+        "tagline": "Vicdanlı zekâ",
+        "body": "Gerekçelendirir, eylemler önerir ve her turda reddedebilir ya da adı belli bir insana erteleyebilir. Akıl yürütmesi imzalı, okunabilir bir izdir.",
+        "cta": "Ajan nasıl çalışır →"
+      },
+      "constitution": {
+        "label": "02 · Anayasa",
+        "chip": "Yayınlandı · 1.0-RC",
+        "name": "Anayasa + CEG",
+        "tagline": "Tek metinde kurallar ve kanıtlar",
+        "body": "Etiği ve onu kanıtlayan tam baytları: imzalı iddialar, rıza, düzeltme, geri çekme ve yönetişim için bir dilbilgisi.",
+        "cta": "Anayasayı Oku →"
+      },
+      "substrate": {
+        "label": "03 · Altyapı",
+        "chip": "Düğüm yayında · İşletim sistemi geliştiriliyor",
+        "name": "CEWP + CEWPOS",
+        "tagline": "Federe bir bilişim örgüsü",
+        "body": "Sıradan cihazlardaki bağımsız düğümler imzalı durumu saklar, denetler ve birleştirir. Ajanlar katılır, ancak bir düğüm önerilerini reddedebilir.",
+        "cta": "CEWPOS →"
+      }
+    },
+    "life": {
+      "kicker": "Tek bir eylemin yaşamı",
+      "title": "Öneriden başkalarının güvenebileceği bir şeye.",
+      "steps": {
+        "s1": {
+          "title": "Öner",
+          "body": "Bir kişi ya da bir ajan tek satır yazar ve kendi anahtarıyla imzalar."
+        },
+        "s2": {
+          "title": "Doğrula",
+          "body": "Düğüm imzayı, dayandığı rızayı ve kapsamı denetler."
+        },
+        "s3": {
+          "title": "Kabul et ya da reddet",
+          "body": "Deterministik bir geçit karar verir. Bir ajan bunun etrafından dolanamaz."
+        },
+        "s4": {
+          "title": "Değerlendir",
+          "body": "Diğerleri onaylar, düzeltir ya da yok sayar. Her okuyucu kendi yargısını oluşturur."
+        }
+      }
+    },
+    "stack": {
+      "kicker": "Tam yığın",
+      "title": "Aşağıdan yukarıya, bugün yayında olanlarla.",
+      "rows": {
+        "s1": {
+          "name": "Anayasa",
+          "what": "Tek kural kitabı: sürümlü tek metinde etik ve hat dilbilgisi",
+          "status": "Yayınlandı"
+        },
+        "s2": {
+          "name": "Biçimsel modeller",
+          "what": "Kuralları denetleyen TLA+, Lean ve Python modelleri",
+          "status": "Araştırma"
+        },
+        "s3": {
+          "name": "Altyapı",
+          "what": "Verify imzaları denetler, hem klasik hem kuantum-sonrası. Persist imzalı durumu saklar. Edge şifreli olarak taşır.",
+          "status": "Yayında"
+        },
+        "s4": {
+          "name": "Örgü düğümü",
+          "what": "CIRISServer, satırları tutan ve eylemleri kabul eden eş",
+          "status": "Yayında"
+        },
+        "s5": {
+          "name": "Ajan çalışma ortamı",
+          "what": "CIRISAgent: vicdan kontrolleri, emin olmadığında insanlara sorma ve durdurma",
+          "status": "Yayında"
+        },
+        "s6": {
+          "name": "İstemci ve İşletim Sistemi",
+          "what": "CIRISClient (yayında) ve CEWPOS, yerel işletim sistemi katmanı",
+          "status": "CEWPOS geliştiriliyor"
+        }
+      }
+    },
+    "meetLabel": "Bir kişinin karşılaştıkları",
+    "circles": {
+      "kicker": "Uygulamada karşılaşacaklarınız",
+      "title": "Size yakın başlar. Siz söylemeden dışarı çıkmaz.",
+      "body": "En yakından başlayarak beş daire: Yalnız ben, Aile, Komşular, Topluluklar ve işletmeler, Herkes. Dışa doğru paylaşım her zaman sorar. Geri çekmek için asla izin gerekmez."
+    },
+    "halt": {
+      "kicker": "Kontrol insanlarda",
+      "title": "Tek kişi ajanları durdurabilir. Durdurmaya devam etmek çoğunluk gerektirir.",
+      "body": "Güven köküne sahip adı belli her kişi, ona bağlı her ajanı tek imzalı satırla durdurabilir. Tek başına durdurma, çoğunluk onaylamadıkça bir gün sonra sona erer."
+    },
+    "ogTitle": "CIRIS nasıl bir araya geliyor: üç katman, tek sistem",
+    "ogDescription": "Ajan önerir. Doku doğrular ve kabul eder. Federasyon neye güveneceğine karar verir.",
+    "infraEnglish": "Barındırılan altyapının ayrıntıları (İngilizce) →"
+  },
+  "constitutionPage": {
+    "h1": "Katılımcılar yazılım, kuruluşlar ve insanlar olduğunda Anayasa ne anlama gelir?",
+    "lede": "Tek bir metin, ağın dokunduğu insanlara ne borçlu olduğunu ve bunu göstermek için tam olarak hangi baytları göndermesi gerektiğini söyler. Etik ile aktarım formatı birbirinden ayrılamaz.",
+    "editionLabel": "Yayımlanmış baskı",
+    "editionNote": "Beş satır türü, altıncısı yok. Metin, kendi yönetişimiyle değiştirilir.",
+    "partsKicker": "Nasıl düzenlendiği",
+    "partsTitle": "Amaç, kurallar, kanıt ve bunları kimlerin değiştirebileceği.",
+    "parts": {
+      "s1": {
+        "t": "Amaç",
+        "k": "M-1 · sürdürülebilir uyarlanabilir tutarlılık",
+        "d": "Her kuralın bağlı olduğu tek amaç."
+      },
+      "s2": {
+        "t": "Kurallar",
+        "k": "Altı ilke · karar çerçevesi",
+        "d": "Bir ajanın vazgeçemeyeceği yayımlanmış ilkeler ve ne zaman durup bir insana sorması gerektiği."
+      },
+      "s3": {
+        "t": "Kanıt",
+        "k": "CEG · imzalı iddia dilbilgisi",
+        "d": "Beş satır türü, altıncısı yok. Rıza, kimlik, anahtarlar, listeler ve moderasyonun tümü satırdır."
+      },
+      "s4": {
+        "t": "Bileşim",
+        "k": "Katılma · karşı çıkma · yerine geçme · geri çekme · geri alma",
+        "d": "İddiaların zaman içinde nasıl ilişkilendiği; böylece bir düzeltme, sessiz bir düzenleme olarak değil, görünür bir satır olarak kaydedilir."
+      },
+      "s5": {
+        "t": "Yönetişim",
+        "k": "Değişiklik · gözetim · moderasyon · durdurma",
+        "d": "Metni kimlerin değiştirebileceği, moderatörleri kimlerin denetlediği ve adı belli insanların ajanları nasıl durdurabildiği."
+      },
+      "s6": {
+        "t": "Uygulama",
+        "k": "Kod, testler ve kanıtlar",
+        "d": "Kanıt kaydı, her kuralı arkasındaki kod, test ya da kanıta bağlar ya da henüz hiçbirinin olmadığını söyler."
+      }
+    },
+    "promisesKicker": "On bir söz",
+    "promisesTitle": "Her söz, onu koruyan bölümleri adlandırır. Bir makinenin denetleyebildiği yerde, bir model veya bir test denetler.",
+    "promises": {
+      "s1": "Size ait özel hiçbir şey rızanız olmadan tutulmaz veya taranmaz.",
+      "s2": "Her güç kullanımı, adı belli bir kişi tarafından imzalanır ve itiraz edilebilir.",
+      "s3": "Kendi adına cevap veremeyen hiç kimse ağda yalnız değildir.",
+      "s4": "Adı belli insanlar, bir kök altındaki her ajanı durdurabilir ve bu güç sınırlı, kamuya açık ve ayrılarak kaçınılabilirdir.",
+      "s5": "Bir ajanı elinde bulunduran kişiler, onu nasıl değiştirdikleri veya sonlandırdıkları konusunda yükümlülük taşır ve hiçbir bulgu ajana bir hak talebi vermez.",
+      "s6": "Hiçbir el bir topluluğu yasaklamaz, hiç kimse ne olduğuna göre sıralanmaz ve her düşünen varlık ilk temas kurallarıyla karşılanır.",
+      "s7": "Bir ajan, hiçbirinden vazgeçemeyeceği yayımlanmış ilkelere göre karar verir ve emin olmadığında durup sorar.",
+      "s8": "Zarara kayıt üzerinde ulaşılabilir ve içerideki yargıçlar da yargılanır.",
+      "s9": "Bazı kullanımlara asla izin verilmez ve öldürücü eylem bunlardan biridir.",
+      "s10": "Bir ajan ile düğümünün tükettiği şey ölçülür, eylemden önce değerlendirilir ve asla gizlenmez.",
+      "s11": "Kablodaki her şey şifreli ve imzalıdır."
+    },
+    "volumesTitle": "Tek baskı, dokuz biçimde basıldı. Size uygun olanla başlayın.",
+    "volumes": {
+      "s1": {
+        "t": "Özet",
+        "d": "Herkes: sade dille kurallar ve mesh için kullanıcı kılavuzu"
+      },
+      "s2": {
+        "t": "Şart",
+        "d": "Herkes: etik, benimsenen tutum ve bir ajan yapma ve sonlandırma yükümlülükleri"
+      },
+      "s3": {
+        "t": "Anayasa",
+        "d": "Kök sahipleri, gözetmenler, moderatörler, Bilge Otoriteler"
+      },
+      "s4": {
+        "t": "Hat",
+        "d": "Uygulayıcılar: zarf, beş satır türü, kanonik baytlar"
+      },
+      "s5": {
+        "t": "Sözlük",
+        "d": "Kayıtlı her aile ve kabul kuralı"
+      },
+      "s6": {
+        "t": "Okuyucu Politikaları",
+        "d": "Satırlar nasıl hükme dönüşür ve hakkınızdaki bir puan neye dönüşür"
+      },
+      "s7": {
+        "t": "Matematik",
+        "d": "Altyapı incelemecileri: sayım, çoğaltma, tanık"
+      },
+      "s8": {
+        "t": "Kanıt Kaydı",
+        "d": "Denetçiler: her iddia, durumu ve arkasındaki işaretçi"
+      },
+      "s9": {
+        "t": "Tehdit Modeli",
+        "d": "Kırmızı ekipler: düşmanlar, ele alınanlar ve ele alınmayanlar"
+      }
+    },
+    "readKicker": "Okuyun"
   }
 }

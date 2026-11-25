@@ -105,12 +105,20 @@ export default function RdShell({
   const lang = LOCALES.find((l) => l.code === locale);
   const isLocalized = locale !== "en";
 
+  // Over a hero the header floats, so the notice goes above it; otherwise the
+  // notice would sit on the menu.
+  const banner = isLocalized && (
+    <MachineTranslationBanner lead={t.mtBanner.lead} body={t.mtBanner.body} cta={t.mtBanner.cta} />
+  );
+
   return (
     <ThemeContext.Provider value={{ dark, ready }}>
       <div className={`${sans.variable} ${mono.variable} ${pixel.variable} ${s.root}`}>
         <a href="#content" className={s.skip}>
           {rd.skip}
         </a>
+        {overlayHeader && banner}
+        <div className={s.stage}>
         <header ref={headerRef} className={`${s.header} ${overlayHeader ? s.overlay : ""}`}>
           <Link href={lh("/")} className={s.brand} aria-label="CIRIS">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -247,16 +255,11 @@ export default function RdShell({
           </div>
         )}
 
-        {isLocalized && (
-          <MachineTranslationBanner
-            lead={t.mtBanner.lead}
-            body={t.mtBanner.body}
-            cta={t.mtBanner.cta}
-          />
-        )}
+        {!overlayHeader && banner}
 
         <div id="content" className={s.main}>
           {children}
+        </div>
         </div>
 
         <footer className={s.footer}>

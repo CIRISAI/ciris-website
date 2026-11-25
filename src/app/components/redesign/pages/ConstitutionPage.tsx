@@ -28,7 +28,7 @@ const REPO = "https://github.com/CIRISAI/CIRISConstitution";
 const CONST_DIR = `${REPO}/tree/main/constitution`;
 // Self-hosted so the read CTA downloads the reader PDF directly.
 const PDF = "/ciris_constitution.pdf";
-// the wire volume is hosted beside the full edition; the rest open
+// The wire volume is hosted beside the full edition; the rest open
 // at the release tag of the published edition.
 const WIRE_PDF = "/ciris_constitution-wire.pdf";
 const VOLUMES = `${REPO}/tree/v${CONSTITUTION_VERSION}/volumes`;
