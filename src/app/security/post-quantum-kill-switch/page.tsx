@@ -9,7 +9,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 
 const TITLE = "Post-Quantum AI Agent Kill Switch, Independently Verifiable | CIRIS";
 const DESC =
-  "CIRIS ships a constitutional AI agent kill switch on FIPS 140-3 YubiKey hardware with a hybrid Ed25519 + ML-DSA-65 (post-quantum) quorum. Verify the keys yourself with one command. Quantum-safe, signed audit trail, no trust required.";
+  "Any one of three people can pause CIRIS agents with one signed row. The classical key half is on FIPS 140-3 YubiKey hardware, the post-quantum half (ML-DSA-65) on separate storage. Check the keys yourself with one command.";
 
 export const metadata: Metadata = {
   title: TITLE,
