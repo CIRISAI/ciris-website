@@ -17,6 +17,7 @@ import { useSkyTheme } from "@/app/components/sky/useSkyTheme";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import { ABOUT_LINKS, AUDIENCES, type AudienceKey, SUPPORT_HREF, label } from "./siteMap";
 import { StatusChip } from "./StatusChip";
+import { getCopyrightNotice } from "@/lib/copyright";
 import s from "./rd.module.css";
 
 const sans = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--rd-sans" });
@@ -295,7 +296,9 @@ export default function RdShell({
             </nav>
           </div>
           <div className={`${s.footBar} ${s.mono}`}>
-            <span>{rd.footer.license}</span>
+            <span>
+              {getCopyrightNotice()} · {rd.footer.license}
+            </span>
             <a href="https://github.com/CIRISAI">github.com/CIRISAI</a>
           </div>
         </footer>
