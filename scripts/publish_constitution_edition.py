@@ -18,16 +18,19 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent
-ORDER = ["EXECUTIVE_SUMMARY", "FOREWORD", "SCOPE_AND_DISCLAIMERS",
-         "part_1_foundation", "part_2_the_grammar", "part_3_the_namespace",
-         "part_4_composition_governance", "part_5_transport_substrate",
-         "part_6_the_coherence_mathematics", "part_7_lifecycle_stewardship",
-         "part_8_appendices", "STEWARDSHIP"]
+# Reading order, as the tag's own build_pdf.py assembles it. FOREWORD.md is
+# read only where the tag has one: by rc22 the foreword had moved into
+# Part 8, and the separate file was gone. The Parts are taken from the tag
+# (part_<n>_*.md, by n), so a renamed or added Part needs no edit here.
+FRONT = ["EXECUTIVE_SUMMARY", "FOREWORD", "SCOPE_AND_DISCLAIMERS"]
+OPTIONAL = {"FOREWORD"}
+BACK = ["STEWARDSHIP"]
 RULE = "=" * 70
 
 
@@ -39,9 +42,22 @@ def at(repo: Path, ref: str, path: str) -> bytes:
     return out.stdout
 
 
-def has(repo: Path, ref: str, path: str) -> bool:
-    return subprocess.run(["git", "cat-file", "-e", f"{ref}:{path}"], cwd=repo,
-                          capture_output=True).returncode == 0
+def files_at(repo: Path, ref: str, folder: str) -> list[str]:
+    out = subprocess.run(["git", "ls-tree", "--name-only", f"{ref}:{folder}"], cwd=repo,
+                         capture_output=True, text=True)
+    if out.returncode != 0:
+        raise SystemExit(f"{ref}:{folder} is not in {repo}: {out.stderr.strip()}")
+    return out.stdout.split()
+
+
+def reading_order(repo: Path, ref: str) -> list[str]:
+    names = {f[:-3] for f in files_at(repo, ref, "constitution") if f.endswith(".md")}
+    parts = sorted((n for n in names if re.match(r"part_\d+_", n)),
+                   key=lambda n: int(n.split("_")[1]))
+    if not parts:
+        raise SystemExit(f"{ref} has no constitution/part_*.md")
+    front = [n for n in FRONT if n in names or n not in OPTIONAL]
+    return front + parts + BACK
 
 
 def text_edition(repo: Path, ref: str, version: str) -> str:
@@ -56,11 +72,7 @@ def text_edition(repo: Path, ref: str, version: str) -> str:
         "sources in reading order. The PDF edition is at https://ciris.ai/ciris_constitution.pdf\n"
     )
     parts = [head]
-    for name in ORDER:
-        # The foreword became CC 8.12 on 2026-11-15 and has no file of its own
-        # after that; every other file must be present.
-        if name == "FOREWORD" and not has(repo, ref, "constitution/FOREWORD.md"):
-            continue
+    for name in reading_order(repo, ref):
         body = at(repo, ref, f"constitution/{name}.md").decode("utf-8").strip("\n")
         parts.append(f"\n{RULE}\n\n{body}\n")
     parts.append(f"\n{RULE}\n")
