@@ -143,6 +143,9 @@ export default function MeshClaimV2({ t, locale }: { t: Dictionary; locale: stri
           </div>
         </div>
         <div className={s.ctaRow}>
+          <Link href={lh("/plain-answers")} className={`${s.btn} ${s.btnS}`}>
+            {m.runCtaPlain}
+          </Link>
           <a href={SEED_URL} target="_blank" rel="noopener noreferrer" className={`${s.btn} ${s.btnS}`}>
             {m.runCtaSeed}
           </a>

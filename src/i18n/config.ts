@@ -120,6 +120,7 @@ export const LOCALIZED_ROUTES: ReadonlySet<string> = new Set([
   "/compliance/eu-ai-act",
   "/security/post-quantum-kill-switch",
   "/web4",
+  "/plain-answers",
   "/cewpos",
   "/architecture",
 ]);

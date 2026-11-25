@@ -3100,7 +3100,8 @@
     "l11n": "Xiong et al., studi lapangan ERC-8004",
     "l11b": "ERC-8004 adalah standar untuk mencatat kepercayaan antaragen di blockchain. Agen mana pun bisa mendaftar tanpa meminta izin. Xiong et al. meneliti apa yang sebenarnya berjalan dan menemukan bahwa sebagian besar pendaftaran tidak memiliki apa pun yang berfungsi di baliknya: hanya 3% hingga 15% yang mengarah ke endpoint yang berfungsi, tergantung rantainya. Antara 59% dan 91% peninjau bertindak sebagai kelompok Sybil yang terkoordinasi, dan skor reputasi bisa dimanipulasi dengan biaya yang hampir nol. Mereka merekomendasikan tiga perbaikan: daftar dimensi penilaian yang disepakati, atestasi yang mengutip buktinya, dan agregasi yang tahan terhadap Sybil. Tata bahasa CIRIS sudah memiliki ketiganya: namespace terdaftar, atestasi yang harus mengutip buktinya, dan hitungan yang memberi bobot lebih kecil pada suara-suara yang berkorelasi.",
     "lineageNote": "Posisi pihak luar diringkas dengan itikad baik dari tulisan publik mereka. Kalau ada yang kami salah pahami, itu juga layak dibuatkan isu.",
-    "crossCta": "Jelajahi Mesh Konstitusional"
+    "crossCta": "Jelajahi Mesh Konstitusional",
+    "runCtaPlain": "Seperti apa rasanya menggunakannya"
   },
   "killSwitch": {
     "kicker": "Keamanan yang dapat Anda periksa",
@@ -3428,6 +3429,8 @@
         "featureTitle": "Asisten yang menunjukkan kerjanya.",
         "featureBody": "Gunakan CIRIS di ponsel atau browser Anda, dan baca setiap langkah yang diambilnya.",
         "featureCta": "Pasang aplikasi →",
+        "plainAnswers": "Jawaban sederhana",
+        "plainAnswersSub": "Grup, privasi, moderasi, voting",
         "install": "Pasang",
         "installSub": "Ponsel, desktop, atau browser",
         "howItWorks": "Cara kerja Agen",
@@ -4012,5 +4015,171 @@
       }
     },
     "readKicker": "Baca"
+  },
+  "plainPage": {
+    "ogTitle": "Seperti apa hidup di CIRIS, dalam jawaban sederhana",
+    "ogDescription": "Siapa pemegang akun Anda, siapa yang dapat menambahkan Anda ke grup, apa yang privat, siapa yang memoderasi, bagaimana voting bekerja, dan apa yang dapat dilakukan AI. Jawaban sederhana untuk pertanyaan nyata.",
+    "kicker": "JAWABAN SEDERHANA",
+    "h1": "Jaringan yang Anda jalankan bersama tetangga Anda.",
+    "lede": "Berkirim pesan, berbagi, buat grup dan putuskan berbagai hal bersama, dengan asisten AI yang bertanggung jawab kepada seseorang. Berjalan di ponsel dan komputer yang sudah Anda miliki. Tanpa perusahaan di tengah-tengahnya.",
+    "ctaStory": "Jelajahi dalam 3D",
+    "ctaInstall": "Pasang aplikasi",
+    "sections": {
+      "you": {
+        "scale": "Anda",
+        "title": "Ponsel Anda, laptop Anda, kunci Anda.",
+        "qa": {
+          "s1": {
+            "q": "Siapa pemegang akun saya?",
+            "a": "Anda. Kunci Anda berfungsi seperti tanda tangan, dan tersimpan di perangkat Anda sendiri. Tidak ada yang dapat dilakukan atas nama Anda tanpanya. Siapa pun yang mengambil kunci Anda dapat menandatangani sebagai Anda hingga Anda menonaktifkan kunci itu, jadi jagalah keamanannya."
+          },
+          "s2": {
+            "q": "Bagaimana jika saya kehilangan ponsel?",
+            "a": "Jika Anda telah menautkan perangkat lain, gunakan untuk menghapus yang hilang. Itu memakan waktu sehari. Tautkan dua atau lebih perangkat lain jika bisa: tidak ada perusahaan yang dapat mengatur ulang kunci Anda."
+          },
+          "s3": {
+            "q": "Berapa biayanya?",
+            "a": "Jaringan tidak berbiaya dan tidak ada mata uang kripto. Anda menggunakan perangkat dan internet Anda sendiri. Model AI mungkin berbiaya jika Anda memilih yang berbayar."
+          },
+          "s4": {
+            "q": "Siapa yang memilih apa yang saya lihat?",
+            "a": "Anda. Filter berjalan di perangkat Anda berdasarkan aturan yang Anda pilih. Tidak ada perusahaan yang menentukan peringkat feed Anda."
+          }
+        }
+      },
+      "family": {
+        "scale": "Keluarga dan teman",
+        "title": "Lingkaran kecil milik Anda.",
+        "qa": {
+          "s1": {
+            "q": "Bisakah seseorang menambahkan saya ke grup tanpa bertanya?",
+            "a": "Tidak. Bergabung membutuhkan setidaknya dua suara, dan salah satunya selalu milik Anda. Undangan teman dan ya dari Anda adalah dua suara."
+          },
+          "s2": {
+            "q": "Apa yang terjadi saat ponsel saya mati?",
+            "a": "Perangkat yang Anda atau anggota nyalakan dapat menyimpan pesan tersegel hingga ponsel Anda kembali menyala."
+          },
+          "s3": {
+            "q": "Siapa yang dapat membaca grup privat?",
+            "a": "Anggotanya. Tidak ada yang memindainya diam-diam: moderator grup dapat menyalakan pemeriksaan untuk gambar pelecehan anak yang sudah dikenal di grup mereka sendiri, dan pemeriksaan yang sama berjalan saat seseorang memublikasikan ke semua orang atau ke ruang publik."
+          },
+          "s4": {
+            "q": "Apa yang tidak dicakup privat?",
+            "a": "Seorang anggota selalu dapat mengulangi apa yang dikatakan. Seseorang yang mengawasi jaringan dengan saksama dapat mengetahui bahwa sebuah grup ada, kira-kira sebesar apa grup itu, dan perangkat mana yang ikut serta. Mereka tidak dapat membacanya."
+          },
+          "s5": {
+            "q": "Bisakah saya keluar?",
+            "a": "Ya, atas tindakan Anda sendiri. Tidak perlu persetujuan siapa pun."
+          }
+        }
+      },
+      "town": {
+        "scale": "Klub, gereja, atau kota Anda",
+        "title": "Dijalankan oleh anggotanya, tanpa server dan tanpa teknisi.",
+        "qa": {
+          "s1": {
+            "q": "Siapa yang menjalankannya?",
+            "a": "Para anggotanya. Perangkat mereka sendiri yang membawanya, sehingga tetap berjalan saat seseorang keluar."
+          },
+          "s2": {
+            "q": "Siapa yang memoderasi?",
+            "a": "Setidaknya satu anggota yang menerima tugas itu. Moderator dapat menyembunyikan atau menurunkan kiriman, memperingatkan anggota, atau menghentikan seseorang mengunggah. Moderator adalah anggota dengan tugas, dan tidak lebih tinggi dari siapa pun."
+          },
+          "s3": {
+            "q": "Bisakah moderator mengeluarkan saya?",
+            "a": "Tidak sendiri. Mengeluarkan seseorang membutuhkan hitungan anggota grup."
+          },
+          "s4": {
+            "q": "Bagaimana jika moderator salah?",
+            "a": "Lebih dari separuh anggota lain dapat membatalkannya dalam 48 jam, dan lebih dari dua pertiga seluruh anggota dapat mengganti moderator. Beberapa penghapusan hukum dan keselamatan yang mendesak tetap berlaku."
+          },
+          "s5": {
+            "q": "Bagaimana voting bekerja?",
+            "a": "Anggota menandatangani pilihannya, dan setiap perangkat menjumlahkan suara bertanda tangan dengan aturan publikasi yang sama. Satu orang dihitung sekali, berapa pun jumlah perangkat yang digunakannya. Tidak ada yang dapat membeli kedudukan."
+          },
+          "s6": {
+            "q": "Bisakah orang melihat bagaimana saya memilih?",
+            "a": "Dalam voting biasa, ya. Semua orang yang bisa membaca ruang bisa melihat suara Anda. Aturan juga mengizinkan jajak pendapat rahasia."
+          },
+          "s7": {
+            "q": "Bisakah seseorang menutup grup kami?",
+            "a": "Tidak ada yang memiliki tombol untuk melarang grup. Orang lain dapat memilih untuk berhenti membawanya, dan pemberitahuan penghapusan hukum tetap berlaku."
+          }
+        }
+      },
+      "ai": {
+        "scale": "Asisten AI",
+        "title": "Asisten dengan seseorang di baliknya.",
+        "qa": {
+          "s1": {
+            "q": "Siapa yang bertanggung jawab atas AI di sini?",
+            "a": "Seseorang yang bernama jelas, selalu. AI menyatakan bahwa ia AI, tidak punya suara, dapat menolak tugas apa pun, dan berhenti untuk bertanya kepada manusia saat ragu."
+          },
+          "s2": {
+            "q": "Bisakah ia dihentikan?",
+            "a": "Ya. Anda dapat mematikan milik Anda kapan saja. Salah satu dari tiga orang juga dapat menjeda setiap AI yang mengikuti root mereka, dengan satu perintah bertanda tangan."
+          },
+          "s3": {
+            "q": "Apa yang terjadi pada file saya saat AI dijeda?",
+            "a": "Tidak ada apa-apa. Pesan, file, dan grup Anda tetap berjalan."
+          },
+          "s4": {
+            "q": "Mengapa jeda itu ada?",
+            "a": "Orang tidak dapat memberi persetujuan nyata atas hubungan dengan sesuatu yang lebih mampu yang tidak dapat mereka hentikan. Jeda inilah yang membuat hubungan itu seimbang."
+          }
+        }
+      },
+      "world": {
+        "scale": "Dunia yang lebih luas",
+        "title": "Banyak tempat, satu buku aturan terbuka.",
+        "qa": {
+          "s1": {
+            "q": "Apakah kita semua harus sepakat?",
+            "a": "Tidak. Setiap grup menyimpan aturannya sendiri. Yang dibagikan semua orang adalah buku aturan yang dipublikasikan yang menyatakan arti pernyataan bertanda tangan."
+          },
+          "s2": {
+            "q": "Siapa yang bertanggung jawab atas jaringan?",
+            "a": "Tidak ada yang memilikinya. Anda memilih otoritas mana yang diikuti perangkat Anda, dan Anda dapat meninggalkannya. Siapa pun dapat memulai yang lain."
+          },
+          "s3": {
+            "q": "Apakah butuh internet?",
+            "a": "Ia berjalan melalui tautan internet biasa, dan juga dapat meneruskan pesan lewat radio."
+          },
+          "s4": {
+            "q": "Bisakah ia menjadi besar?",
+            "a": "Dalam simulasi ia menampung lima miliar orang tanpa pusat data. Penggunaan nyata saat ini jauh lebih kecil."
+          }
+        }
+      }
+    },
+    "todayKicker": "POSISI SAAT INI",
+    "todayTitle": "Apa yang dapat Anda lakukan sekarang, dan apa selanjutnya.",
+    "nowLabel": "Di aplikasi saat ini",
+    "now": {
+      "s1": "Berkirim pesan dan berbagi di grup privat",
+      "s2": "Bergabung ke grup lewat undangan dan persetujuan Anda",
+      "s3": "Mengubah siapa anggota grup lewat mayoritas, lewat semua anggota, atau lewat jumlah anggota tertentu",
+      "s4": "Menandatangani atau menolak perubahan yang dibuat grup Anda",
+      "s5": "Moderator dapat menandai kiriman atau menghapus tandanya, dan penulisnya dapat mengajukan banding",
+      "s6": "Menjalankan asisten AI, dan menghentikan semua yang dilakukannya"
+    },
+    "nextLabel": "Tertulis dalam aturan, belum ada di aplikasi",
+    "next": {
+      "s1": "Ruang privat dengan kunci yang dibuat untuk setiap ruang",
+      "s2": "Ruang publik yang bisa diikuti siapa saja",
+      "s3": "Memperingatkan anggota, dan menghentikan seseorang mengunggah di ruang",
+      "s4": "Membatalkan tindakan moderator, mengganti moderator, dan pemilihan",
+      "s5": "Voting ruang, dan jajak pendapat rahasia",
+      "s6": "Memilih filter untuk apa yang Anda lihat",
+      "s7": "Menyimpan pesan tersegel saat ponsel Anda mati",
+      "s8": "Keluar dari ruang berdua, atau sebagai pendiri terakhir",
+      "s9": "Panggilan grup dan video langsung"
+    },
+    "limitsTitle": "Yang belum kami buktikan.",
+    "limitsBody": "Belum ada pihak di luar penulis yang membangun versi kedua, menyerang sistem, atau menjalankan root independen. Jaringan tidak dapat mengetahui bahwa sebuah kunci milik orang yang masih hidup. Aplikasi masih diperoleh melalui toko aplikasi, dan perangkat baru dimulai dari otoritas bawaan proyek.",
+    "limitsCta": "Coba patahkan argumennya",
+    "finalTitle": "Baca aturan di balik setiap jawaban.",
+    "ctaConstitution": "Konstitusi",
+    "ctaMesh": "Argumen selengkapnya"
   }
 }

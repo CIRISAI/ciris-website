@@ -3099,7 +3099,8 @@
     "l11n": "Xiong et al., die ERC-8004-Feldstudie",
     "l11b": "ERC-8004 ist ein Standard zur Aufzeichnung von Vertrauen zwischen Agenten auf einer Blockchain. Jeder Agent kann sich ohne Erlaubnis registrieren. Xiong et al. haben untersucht, was tatsächlich lief, und festgestellt, dass hinter den meisten Registrierungen nichts Funktionierendes stand: Je nach Chain verwiesen nur 3 % bis 15 % auf einen funktionierenden Endpunkt. Zwischen 59 % und 91 % der Prüfer agierten als koordinierte Sybil-Gruppen, und ein Reputationswert ließ sich fast kostenlos manipulieren. Sie empfehlen drei Korrekturen: eine vereinbarte Liste von Bewertungsdimensionen, Attestierungen, die ihre Belege zitieren, und eine Aggregation, die Sybil-Angriffen widersteht. Die Grammatik von CIRIS enthält bereits alle drei: einen registrierten Namensraum, Attestierungen, die ihre Belege zitieren müssen, und eine Zählung, die korrelierten Stimmen weniger Gewicht gibt.",
     "lineageNote": "Fremde Positionen sind in gutem Glauben aus öffentlichen Texten zusammengefasst. Wenn wir eine davon falsch wiedergeben, ist auch das ein Issue wert.",
-    "crossCta": "Das Verfassungs-Mesh erkunden"
+    "crossCta": "Das Verfassungs-Mesh erkunden",
+    "runCtaPlain": "Wie sich die Nutzung anfühlt"
   },
   "killSwitch": {
     "kicker": "Sicherheit, die man selbst prüfen kann",
@@ -3427,6 +3428,8 @@
         "featureTitle": "Ein Assistent, der seine Arbeit zeigt.",
         "featureBody": "Nutzen Sie CIRIS auf Ihrem Smartphone oder im Browser und lesen Sie jeden Schritt nach, den es gemacht hat.",
         "featureCta": "App installieren →",
+        "plainAnswers": "Einfache Antworten",
+        "plainAnswersSub": "Gruppen, Privatsphäre, Moderation, Abstimmungen",
         "install": "Installieren",
         "installSub": "Smartphone, Desktop oder Browser",
         "howItWorks": "Wie der Agent funktioniert",
@@ -4011,5 +4014,171 @@
       }
     },
     "readKicker": "Lesen"
+  },
+  "plainPage": {
+    "ogTitle": "Wie das Leben auf CIRIS ist, in einfachen Antworten",
+    "ogDescription": "Wer Ihr Konto verwahrt, wer Sie zu einer Gruppe hinzufügen kann, was privat ist, wer moderiert, wie Abstimmungen funktionieren und was die KI tun darf. Einfache Antworten auf echte Fragen.",
+    "kicker": "EINFACHE ANTWORTEN",
+    "h1": "Ein Netzwerk, das Sie und Ihre Nachbarn betreiben.",
+    "lede": "Schreiben Sie Nachrichten, teilen Sie Inhalte, bilden Sie Gruppen und entscheiden Sie gemeinsam, mit KI-Helfern, die einem Menschen unterstehen. Es läuft auf den Smartphones und Computern, die Sie schon besitzen. Kein Unternehmen sitzt dazwischen.",
+    "ctaStory": "In 3D durchgehen",
+    "ctaInstall": "App holen",
+    "sections": {
+      "you": {
+        "scale": "Sie",
+        "title": "Ihr Smartphone, Ihr Laptop, Ihr Schlüssel.",
+        "qa": {
+          "s1": {
+            "q": "Wer verwahrt mein Konto?",
+            "a": "Sie. Ihr Schlüssel funktioniert wie eine Unterschrift und liegt auf Ihren eigenen Geräten. Ohne ihn kann nichts in Ihrem Namen getan werden. Wer Ihren Schlüssel nimmt, kann als Sie signieren, bis Sie diesen Schlüssel abschalten – halten Sie ihn also sicher."
+          },
+          "s2": {
+            "q": "Was, wenn ich mein Smartphone verliere?",
+            "a": "Wenn Sie ein weiteres Gerät verknüpft haben, nutzen Sie es, um das verlorene zu entfernen. Das dauert einen Tag. Verknüpfen Sie möglichst zwei oder mehr weitere Geräte: Kein Unternehmen kann Ihren Schlüssel für Sie zurücksetzen."
+          },
+          "s3": {
+            "q": "Was kostet es?",
+            "a": "Das Netzwerk hat keine Gebühr und keine Kryptowährung. Sie nutzen Ihre eigenen Geräte und Ihr Internet. Ein KI-Modell kann Geld kosten, wenn Sie ein Bezahlmodell wählen."
+          },
+          "s4": {
+            "q": "Wer wählt, was ich sehe?",
+            "a": "Sie. Filter laufen auf Ihrem Gerät nach Regeln, die Sie wählen. Kein Unternehmen ordnet Ihren Feed."
+          }
+        }
+      },
+      "family": {
+        "scale": "Familie und Freunde",
+        "title": "Ein eigener kleiner Kreis.",
+        "qa": {
+          "s1": {
+            "q": "Kann mich jemand ohne Nachfrage zu einer Gruppe hinzufügen?",
+            "a": "Nein. Beitritt braucht mindestens zwei Stimmen, und eine davon ist immer Ihre. Die Einladung eines Freundes und Ihr Ja sind zwei Stimmen."
+          },
+          "s2": {
+            "q": "Was passiert, wenn mein Smartphone aus ist?",
+            "a": "Ein Gerät, das Sie oder ein Mitglied eingeschaltet lassen, kann versiegelte Nachrichten aufbewahren, bis Ihr Smartphone zurück ist."
+          },
+          "s3": {
+            "q": "Wer kann eine private Gruppe lesen?",
+            "a": "Ihre Mitglieder. Niemand liest heimlich mit: Die Moderatoren einer Gruppe können in der eigenen Gruppe eine Prüfung auf bekannte Missbrauchsbilder von Kindern einschalten, und dieselbe Prüfung läuft, wenn jemand an alle oder in einen öffentlichen Raum veröffentlicht."
+          },
+          "s4": {
+            "q": "Was deckt privat nicht ab?",
+            "a": "Ein Mitglied kann immer wiedererzählen, was gesagt wurde. Wer das Netzwerk genau beobachtet, kann erschließen, dass eine Gruppe existiert, wie groß sie etwa ist und welche Geräte teilnehmen. Lesen kann er sie nicht."
+          },
+          "s5": {
+            "q": "Kann ich gehen?",
+            "a": "Ja, durch Ihre eigene Handlung. Niemand muss das genehmigen."
+          }
+        }
+      },
+      "town": {
+        "scale": "Ihr Verein, Ihre Gemeinde oder Stadt",
+        "title": "Von seinen Mitgliedern betrieben, ohne Server und ohne Technikperson.",
+        "qa": {
+          "s1": {
+            "q": "Wer betreibt es?",
+            "a": "Die Mitglieder. Ihre eigenen Geräte tragen es, daher läuft es weiter, wenn jemand geht."
+          },
+          "s2": {
+            "q": "Wer moderiert?",
+            "a": "Mindestens ein Mitglied, das die Aufgabe angenommen hat. Ein Moderator kann einen Beitrag verbergen oder entfernen, ein Mitglied verwarnen oder jemanden vom Posten ausschließen. Ein Moderator ist ein Mitglied mit einer Pflicht und steht über niemandem."
+          },
+          "s3": {
+            "q": "Kann ein Moderator mich hinauswerfen?",
+            "a": "Nicht allein. Um eine Person zu entfernen, braucht es eine Zählung der Gruppenmitglieder."
+          },
+          "s4": {
+            "q": "Was, wenn der Moderator falschliegt?",
+            "a": "Mehr als die Hälfte der übrigen Mitglieder kann es innerhalb von 48 Stunden rückgängig machen, und mehr als zwei Drittel aller Mitglieder können den Moderator ersetzen. Manche dringenden rechtlichen und sicherheitsbedingten Entfernungen bleiben bestehen."
+          },
+          "s5": {
+            "q": "Wie funktioniert eine Abstimmung?",
+            "a": "Mitglieder signieren ihre Wahl, und jedes Gerät zählt die signierten Stimmen nach denselben veröffentlichten Regeln zusammen. Eine Person zählt einmal, egal wie viele Geräte sie nutzt. Niemand kann sich Ansehen kaufen."
+          },
+          "s6": {
+            "q": "Können Leute sehen, wie ich abgestimmt habe?",
+            "a": "Bei einer gewöhnlichen Abstimmung ja. Alle, die den Raum lesen können, können Ihre Stimme sehen. Die Regeln erlauben auch geheime Umfragen."
+          },
+          "s7": {
+            "q": "Kann jemand unsere Gruppe abschalten?",
+            "a": "Niemand hat einen Schalter, der eine Gruppe verbietet. Andere können wählen, sie nicht mehr mitzutragen, und rechtliche Löschaufforderungen gelten weiterhin."
+          }
+        }
+      },
+      "ai": {
+        "scale": "KI-Helfer",
+        "title": "Ein Assistent mit einem Menschen dahinter.",
+        "qa": {
+          "s1": {
+            "q": "Wer steht hier für eine KI ein?",
+            "a": "Immer eine benannte Person. Eine KI sagt, dass sie eine KI ist, hat keine Stimme, kann jede Aufgabe ablehnen und fragt einen Menschen, wenn sie unsicher ist."
+          },
+          "s2": {
+            "q": "Kann sie gestoppt werden?",
+            "a": "Ja. Sie können Ihre jederzeit ausschalten. Jede von drei Personen kann zudem mit einer signierten Anordnung jede KI pausieren, die ihrer Root folgt."
+          },
+          "s3": {
+            "q": "Was passiert mit meinen Dateien, wenn die KI pausiert ist?",
+            "a": "Nichts. Ihre Nachrichten, Dateien und Gruppen laufen weiter."
+          },
+          "s4": {
+            "q": "Warum gibt es die Pause?",
+            "a": "Menschen können einer Beziehung mit etwas Leistungsfähigerem, das sie nicht stoppen können, nicht wirklich zustimmen. Die Pause macht diese Beziehung ausgeglichen."
+          }
+        }
+      },
+      "world": {
+        "scale": "Die weitere Welt",
+        "title": "Viele Orte, ein offenes Regelwerk.",
+        "qa": {
+          "s1": {
+            "q": "Müssen wir uns alle einig sein?",
+            "a": "Nein. Jede Gruppe behält ihre eigenen Regeln. Was alle teilen, ist ein veröffentlichtes Regelwerk, das sagt, was eine signierte Aussage bedeutet."
+          },
+          "s2": {
+            "q": "Wer leitet das Netzwerk?",
+            "a": "Niemand besitzt es. Sie wählen, welcher Autorität Ihre Geräte folgen, und Sie können diese Autorität verlassen. Jeder darf eine weitere Autorität gründen."
+          },
+          "s3": {
+            "q": "Braucht es das Internet?",
+            "a": "Es läuft über gewöhnliche Internetverbindungen und kann Nachrichten auch per Funk weitergeben."
+          },
+          "s4": {
+            "q": "Kann es groß werden?",
+            "a": "In der Simulation trägt es fünf Milliarden Menschen ohne Rechenzentrum. Die echte Nutzung ist heute viel kleiner."
+          }
+        }
+      }
+    },
+    "todayKicker": "WO ES HEUTE STEHT",
+    "todayTitle": "Was Sie jetzt tun können und was als Nächstes kommt.",
+    "nowLabel": "Heute in der App",
+    "now": {
+      "s1": "Nachrichten schreiben und in privaten Gruppen teilen",
+      "s2": "Einer Gruppe per Einladung und eigenem Ja beitreten",
+      "s3": "Ändern, wer in einer Gruppe ist, per Mehrheit, per Einstimmigkeit oder per fester Mitgliederzahl",
+      "s4": "Einer Änderung Ihrer Gruppe zustimmen oder sie ablehnen",
+      "s5": "Moderatoren können einen Beitrag melden oder die Meldung aufheben, und der Autor kann Widerspruch einlegen",
+      "s6": "Einen KI-Assistenten betreiben und alles stoppen, was er tut"
+    },
+    "nextLabel": "In den Regeln verankert, noch nicht in der App",
+    "next": {
+      "s1": "Private Räume mit einem Schlüssel für jeden Raum",
+      "s2": "Öffentliche Räume, denen jeder beitreten kann",
+      "s3": "Ein Mitglied verwarnen und jemanden in einem Raum vom Posten ausschließen",
+      "s4": "Die Aktion eines Moderators rückgängig machen, einen Moderator ersetzen und Wahlen",
+      "s5": "Raum-Abstimmungen und geheime Umfragen",
+      "s6": "Filter für das wählen, was Sie sehen",
+      "s7": "Versiegelte Nachrichten aufbewahren, während Ihr Smartphone aus ist",
+      "s8": "Einen Zweier-Raum verlassen oder als letzter Gründer",
+      "s9": "Gruppenanrufe und Live-Video"
+    },
+    "limitsTitle": "Was wir noch nicht gezeigt haben.",
+    "limitsBody": "Niemand außer den Autoren hat eine zweite Version gebaut, das System angegriffen oder eine unabhängige Root betrieben. Das Netzwerk erkennt nicht, dass ein Schlüssel zu einem lebenden Menschen gehört. Die App kommt weiterhin über App-Stores, und ein neues Gerät startet mit der Standard-Autorität des Projekts.",
+    "limitsCta": "Stellen Sie das Argument auf die Probe",
+    "finalTitle": "Lesen Sie die Regeln hinter jeder Antwort.",
+    "ctaConstitution": "Die Verfassung",
+    "ctaMesh": "Die ganze Begründung"
   }
 }

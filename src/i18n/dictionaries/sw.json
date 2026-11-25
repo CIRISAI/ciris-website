@@ -3099,7 +3099,8 @@
     "l11n": "Xiong et al., utafiti wa uga wa ERC-8004",
     "l11b": "ERC-8004 ni kiwango cha kurekodi uaminifu kati ya mawakala kwenye mnyororo wa vitalu. Wakala yeyote anaweza kujisajili bila kuomba ruhusa. Xiong et al. walichunguza kile kilichokuwa kikifanya kazi kihalisi na kugundua kuwa sehemu kubwa ya usajili haikuwa na kitu chochote kinachofanya kazi nyuma yake: ni asilimia 3 hadi 15 tu ndizo zilizoelekeza kwenye kituo kinachofanya kazi, kutegemea mnyororo husika. Kati ya asilimia 59 na 91 ya wakaguzi walifanya kazi kama vikundi vya Sybil vilivyoratibiwa, na alama ya hadhi ingeweza kudanganywa kwa gharama ndogo sana. Wanapendekeza marekebisho matatu: orodha iliyokubaliwa ya vipimo vya kutathmini, uthibitisho unaotaja ushahidi wake, na ujumlishaji unaostahimili Sybil. Sarufi ya CIRIS tayari ina yote matatu: nafasi ya majina iliyosajiliwa, uthibitisho unaopaswa kutaja ushahidi wake, na hesabu inayopunguza uzito wa sauti zinazohusiana.",
     "lineageNote": "Misimamo ya nje imefupishwa kwa nia njema kutoka kwa maandishi ya hadhara. Ikiwa tumekosea kuhusu yeyote kati yao, hilo pia linastahili suala.",
-    "crossCta": "Chunguza Wavu wa Katiba"
+    "crossCta": "Chunguza Wavu wa Katiba",
+    "runCtaPlain": "Jinsi inavyotumika"
   },
   "killSwitch": {
     "kicker": "Usalama unaoweza kuuthibitisha",
@@ -3427,6 +3428,8 @@
         "featureTitle": "Msaidizi anayeonyesha kazi yake.",
         "featureBody": "Tumia CIRIS kwenye simu yako au kwenye kivinjari, na usome kila hatua iliyochukua.",
         "featureCta": "Sakinisha programu →",
+        "plainAnswers": "Majibu ya wazi",
+        "plainAnswersSub": "Vikundi, faragha, usimamizi, kura",
         "install": "Sakinisha",
         "installSub": "Simu, kompyuta au kivinjari",
         "howItWorks": "Jinsi wakala anavyofanya kazi",
@@ -4011,5 +4014,171 @@
       }
     },
     "readKicker": "Isome"
+  },
+  "plainPage": {
+    "ogTitle": "Maisha kwenye CIRIS yalivyo, kwa majibu ya wazi",
+    "ogDescription": "Nani anashikilia akaunti yako, nani anaweza kukuongeza kwenye kikundi, kilicho cha siri ni kipi, nani anasimamia, kura hufanyaje kazi, na AI inaweza kufanya nini. Majibu ya wazi kwa maswali halisi.",
+    "kicker": "MAJIBU YA WAZI",
+    "h1": "Mtandao unaoendeshwa na wewe na majirani zako.",
+    "lede": "Tuma jumbe, shiriki, tengeneza vikundi na muamue mambo pamoja, pamoja na wasaidizi wa AI wanaowajibika kwa mtu. Inafanya kazi kwenye simu na kompyuta ulizonazo tayari. Hakuna kampuni katikati.",
+    "ctaStory": "Ipitie kwa 3D",
+    "ctaInstall": "Sakinisha programu",
+    "sections": {
+      "you": {
+        "scale": "Wewe",
+        "title": "Simu yako, kompyuta yako, ufunguo wako.",
+        "qa": {
+          "s1": {
+            "q": "Nani anashikilia akaunti yangu?",
+            "a": "Wewe mwenyewe. Ufunguo wako hufanya kazi kama saini, na unaishi kwenye vifaa vyako mwenyewe. Hakuna kinachoweza kufanywa kwa jina lako bila huo. Yeyote anayechukua ufunguo wako anaweza kutia saini kama wewe hadi uuzime ufunguo huo, kwa hivyo uweke salama."
+          },
+          "s2": {
+            "q": "Je, nikipoteza simu yangu?",
+            "a": "Ikiwa umeunganisha kifaa kingine, kitumie kuondoa kilichopotea. Hiyo huchukua siku. Unganisha vifaa vingine viwili au zaidi ukiweza: hakuna kampuni inayoweza kukuwekea upya ufunguo wako."
+          },
+          "s3": {
+            "q": "Inagharimu nini?",
+            "a": "Mtandao hauna ada wala sarafu ya kidijitali. Unatumia vifaa vyako na intaneti yako. Muundo wa AI unaweza kugharimu pesa ukichagua wa kulipia."
+          },
+          "s4": {
+            "q": "Nani anachagua ninachoona?",
+            "a": "Wewe mwenyewe. Vichujio vinafanya kazi kwenye kifaa chako kwa sheria unazochagua. Hakuna kampuni inayopanga mtiririko wako wa machapisho."
+          }
+        }
+      },
+      "family": {
+        "scale": "Familia na marafiki",
+        "title": "Mzunguko mdogo wako mwenyewe.",
+        "qa": {
+          "s1": {
+            "q": "Je, mtu anaweza kuniongeza kwenye kikundi bila kuniuliza?",
+            "a": "Hapana. Kujiunga kunahitaji angalau sauti mbili, na moja yao daima ni yako. Mwaliko wa rafiki na ndiyo yako ni sauti mbili."
+          },
+          "s2": {
+            "q": "Nini kinatokea simu yangu ikiwa imezimwa?",
+            "a": "Kifaa ambacho wewe au mwanachama mwingine mnakiacha kikiwa kimewashwa kinaweza kushikilia jumbe zilizofungwa hadi simu yako irudi."
+          },
+          "s3": {
+            "q": "Nani anaweza kusoma kikundi cha siri?",
+            "a": "Wanachama wake. Hakuna anayekichunguza kwa siri: wasimamizi wa kikundi wanaweza kuwasha ukaguzi wa picha zinazojulikana za unyanyasaji wa watoto kwenye kikundi chao wenyewe, na ukaguzi huo huo unafanya kazi mtu anapochapisha kwa wote au kwenye chumba cha umma."
+          },
+          "s4": {
+            "q": "Faragha haifuniki nini?",
+            "a": "Mwanachama anaweza kurudia kila wakati kilichosemwa. Mtu anayechunguza mtandao kwa karibu anaweza kugundua kwamba kikundi kipo, ukubwa wake takriban, na ni vifaa vipi vinavyoshiriki. Hawawezi kukisoma."
+          },
+          "s5": {
+            "q": "Naweza kuondoka?",
+            "a": "Ndiyo, kwa kitendo chako mwenyewe. Hakuna anayepaswa kukuidhinisha."
+          }
+        }
+      },
+      "town": {
+        "scale": "Klabu, kanisa au mji wako",
+        "title": "Kinaendeshwa na wanachama wake, bila seva na bila fundi wa teknolojia.",
+        "qa": {
+          "s1": {
+            "q": "Nani anakiendesha?",
+            "a": "Wanachama ndio. Vifaa vyao wenyewe hubeba kikundi hicho, kwa hivyo kinaendelea hata mtu anapoondoka."
+          },
+          "s2": {
+            "q": "Nani anasimamia?",
+            "a": "Angalau mwanachama mmoja aliyekubali kazi. Msimamizi anaweza kuficha au kuondoa chapisho, kuonya mwanachama, au kumzuia mtu kuchapisha. Msimamizi ni mwanachama mwenye wajibu, na hamzidi mtu yeyote cheo."
+          },
+          "s3": {
+            "q": "Je, msimamizi anaweza kunifukuza?",
+            "a": "Si peke yake. Kumwondoa mtu kunahitaji hesabu ya wanachama wa kikundi."
+          },
+          "s4": {
+            "q": "Je, msimamizi akikosea?",
+            "a": "Zaidi ya nusu ya wanachama wengine wanaweza kukitengua ndani ya saa 48, na zaidi ya thuluthi mbili ya wanachama wote wanaweza kumbadilisha msimamizi. Baadhi ya uondoaji wa dharura wa kisheria na usalama hubaki."
+          },
+          "s5": {
+            "q": "Kura hufanyaje kazi?",
+            "a": "Wanachama hutia saini chaguo lao, na kila kifaa hujumlisha kura zilizotiwa saini kwa sheria zilezile zilizochapishwa. Mtu mmoja anahesabiwa mara moja, bila kujali idadi ya vifaa anavyotumia. Hakuna anayeweza kununua hadhi."
+          },
+          "s6": {
+            "q": "Je, watu wanaweza kuona nilivyopiga kura?",
+            "a": "Katika kura ya kawaida, ndiyo. Kila mtu anayeweza kusoma chumba hicho anaweza kuona kura yako. Sheria pia zinaruhusu kura za siri."
+          },
+          "s7": {
+            "q": "Je, mtu anaweza kukifunga kikundi chetu?",
+            "a": "Hakuna aliye na swichi ya kupiga marufuku kikundi. Watu wengine wanaweza kuchagua kuacha kukibeba, na notisi za kisheria za uondoaji bado zinatumika."
+          }
+        }
+      },
+      "ai": {
+        "scale": "Wasaidizi wa AI",
+        "title": "Msaidizi mwenye mtu nyuma yake.",
+        "qa": {
+          "s1": {
+            "q": "Nani anayewajibika kwa AI hapa?",
+            "a": "Mtu aliyetajwa, kila wakati. AI inasema ni AI, haina kura, inaweza kukataa kazi yoyote, na inasimama kuuliza binadamu inapokuwa haina uhakika."
+          },
+          "s2": {
+            "q": "Inaweza kusimamishwa?",
+            "a": "Ndiyo. Unaweza kuizima yako wakati wowote. Yeyote kati ya watu watatu anaweza pia kusitisha kila AI inayofuata mzizi wake, kwa amri moja iliyotiwa saini."
+          },
+          "s3": {
+            "q": "Nini kinatokea kwa faili zangu AI ikisitishwa?",
+            "a": "Hakuna. Jumbe zako, faili na vikundi vinaendelea."
+          },
+          "s4": {
+            "q": "Kwa nini kusitisha kuko?",
+            "a": "Watu hawawezi kutoa ridhaa ya kweli kwa uhusiano na kitu chenye uwezo zaidi ambacho hawawezi kukisimamisha. Kusitisha ndiko kunakoufanya uhusiano huo kuwa wa usawa."
+          }
+        }
+      },
+      "world": {
+        "scale": "Ulimwengu mpana",
+        "title": "Sehemu nyingi, kitabu kimoja cha sheria kilicho wazi.",
+        "qa": {
+          "s1": {
+            "q": "Je, sote lazima tukubaliane?",
+            "a": "Hapana. Kila kikundi huweka sheria zake zenyewe. Kile kila mtu anachoshiriki ni kitabu cha sheria kilichochapishwa kinachosema tamko lililotiwa saini linamaanisha nini."
+          },
+          "s2": {
+            "q": "Nani anaongoza mtandao?",
+            "a": "Hakuna anayekimiliki. Unachagua ni mamlaka gani vifaa vyako vinafuata, na unaweza kuiacha. Yeyote anaweza kuanzisha nyingine."
+          },
+          "s3": {
+            "q": "Je, inahitaji intaneti?",
+            "a": "Inafanya kazi kupitia viungo vya kawaida vya intaneti, na pia inaweza kupitisha jumbe kwa redio."
+          },
+          "s4": {
+            "q": "Inaweza kuwa kubwa?",
+            "a": "Katika uigaji, hubeba watu bilioni tano bila kituo cha data. Matumizi halisi ni madogo sana leo."
+          }
+        }
+      }
+    },
+    "todayKicker": "ILIPO LEO",
+    "todayTitle": "Unachoweza kufanya sasa, na kinachofuata.",
+    "nowLabel": "Kwenye programu leo",
+    "now": {
+      "s1": "Tuma jumbe na shiriki kwenye vikundi vya siri",
+      "s2": "Jiunge na kikundi kwa mwaliko na ndiyo yako mwenyewe",
+      "s3": "Badilisha walio kwenye kikundi kwa wingi, kwa wote, au kwa idadi maalum ya wanachama",
+      "s4": "Tia saini au kataa mabadiliko ambayo kikundi chako kinafanya",
+      "s5": "Wasimamizi wanaweza kuweka alama kwenye chapisho au kuiondoa, na mwandishi wake anaweza kukata rufaa",
+      "s6": "Endesha msaidizi wa AI, na simamisha kila kitu anachofanya"
+    },
+    "nextLabel": "Imeandikwa kwenye sheria, bado si kwenye programu",
+    "next": {
+      "s1": "Vyumba vya siri vyenye ufunguo uliotengenezwa kwa kila chumba",
+      "s2": "Vyumba vya umma ambavyo yeyote anaweza kujiunga",
+      "s3": "Kuonya mwanachama, na kumzuia mtu kuchapisha kwenye chumba",
+      "s4": "Kutengua kitendo cha msimamizi, kumbadilisha msimamizi, na uchaguzi",
+      "s5": "Kura za vyumba, na kura za siri",
+      "s6": "Kuchagua vichujio vya unachoona",
+      "s7": "Kushikilia jumbe zilizotiwa muhuri wakati simu yako imezimwa",
+      "s8": "Kuondoka kwenye chumba cha watu wawili, au kama mwanzilishi wa mwisho",
+      "s9": "Simu za vikundi na video za moja kwa moja"
+    },
+    "limitsTitle": "Kile ambacho hatujaonyesha bado.",
+    "limitsBody": "Hakuna mtu nje ya waandishi aliyejenga toleo la pili, kuushambulia mfumo, au kuendesha mzizi huru. Mtandao hauwezi kujua kwamba ufunguo unamilikiwa na mtu aliye hai. Programu bado inakuja kupitia maduka ya programu, na kifaa kipya huanza kutoka mamlaka chaguo-msingi ya mradi.",
+    "limitsCta": "Jaribu kuivunja hoja",
+    "finalTitle": "Soma sheria zilizo nyuma ya kila jibu.",
+    "ctaConstitution": "Katiba",
+    "ctaMesh": "Hoja nzima"
   }
 }

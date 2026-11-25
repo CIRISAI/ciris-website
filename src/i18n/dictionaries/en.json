@@ -3203,7 +3203,8 @@
     "l11n": "Xiong et al., the ERC-8004 field study",
     "l11b": "ERC-8004 is a standard for recording trust between agents on a blockchain. Any agent can register without asking permission. Xiong et al. looked at what was actually running and found that most registrations had nothing working behind them: only 3% to 15% pointed at a working endpoint, depending on the chain. Between 59% and 91% of reviewers acted as coordinated Sybil groups, and a reputation score could be gamed at almost no cost. They recommend three fixes: an agreed list of scoring dimensions, attestations that cite their evidence, and aggregation that resists Sybils. The CIRIS grammar already has all three: a registered namespace, attestations that must cite their evidence, and a count that gives correlated voices less weight.",
     "lineageNote": "External positions summarized in good faith from public writing. If we have any of them wrong, that is worth an issue too.",
-    "crossCta": "Explore the Constitutional Mesh"
+    "crossCta": "Explore the Constitutional Mesh",
+    "runCtaPlain": "What it is like to use"
   },
   "killSwitch": {
     "kicker": "Security you can check",
@@ -3413,6 +3414,8 @@
         "featureTitle": "An assistant that shows its work.",
         "featureBody": "Use CIRIS on your phone or in the browser, and read every step it took.",
         "featureCta": "Install the app →",
+        "plainAnswers": "Plain answers",
+        "plainAnswersSub": "Groups, privacy, moderation, votes",
         "install": "Install",
         "installSub": "Phone, desktop or browser",
         "howItWorks": "How the agent works",
@@ -3991,5 +3994,171 @@
       }
     },
     "readKicker": "Read it"
+  },
+  "plainPage": {
+    "ogTitle": "What life on CIRIS is like, in plain answers",
+    "ogDescription": "Who holds your account, who can add you to a group, what is private, who moderates, how votes work, and what the AI can do. Plain answers to real questions.",
+    "kicker": "PLAIN ANSWERS",
+    "h1": "A network you and your neighbours run.",
+    "lede": "Message, share, make groups and decide things together, with AI helpers that answer to a person. It runs on the phones and computers you already own. No company sits in the middle.",
+    "ctaStory": "Walk through it in 3D",
+    "ctaInstall": "Get the app",
+    "sections": {
+      "you": {
+        "scale": "You",
+        "title": "Your phone, your laptop, your key.",
+        "qa": {
+          "s1": {
+            "q": "Who holds my account?",
+            "a": "You do. Your key works like a signature, and it lives on your own devices. Nothing can be done in your name without it. Anyone who takes your key can sign as you until you turn that key off, so keep it safe."
+          },
+          "s2": {
+            "q": "What if I lose my phone?",
+            "a": "If you have linked another device, use it to remove the lost one. That takes a day. Link two or more other devices if you can: no company can reset your key for you."
+          },
+          "s3": {
+            "q": "What does it cost?",
+            "a": "The network has no fee and no cryptocurrency. You use your own devices and internet. An AI model may cost money if you choose a paid one."
+          },
+          "s4": {
+            "q": "Who picks what I see?",
+            "a": "You do. Filters run on your device by rules you choose. No company ranks your feed."
+          }
+        }
+      },
+      "family": {
+        "scale": "Family and friends",
+        "title": "A small circle of your own.",
+        "qa": {
+          "s1": {
+            "q": "Can someone add me to a group without asking?",
+            "a": "No. Joining takes at least two voices, and one of them is always yours. A friend’s invitation and your yes are two voices."
+          },
+          "s2": {
+            "q": "What happens when my phone is off?",
+            "a": "A device you or a member keeps on can hold sealed messages until your phone comes back."
+          },
+          "s3": {
+            "q": "Who can read a private group?",
+            "a": "Its members. Nobody scans it in secret: a group’s moderators can turn on a check for known child-abuse images in their own group, and the same check runs when someone publishes to everyone or to a public room."
+          },
+          "s4": {
+            "q": "What does private not cover?",
+            "a": "A member can always repeat what was said. Someone watching the network closely can work out that a group exists, about how big it is, and which devices take part. They cannot read it."
+          },
+          "s5": {
+            "q": "Can I leave?",
+            "a": "Yes, by your own act. Nobody has to approve it."
+          }
+        }
+      },
+      "town": {
+        "scale": "Your club, church or town",
+        "title": "Run by its members, with no server and no tech person.",
+        "qa": {
+          "s1": {
+            "q": "Who runs it?",
+            "a": "The members do. Their own devices carry it, so it keeps going when someone leaves."
+          },
+          "s2": {
+            "q": "Who moderates?",
+            "a": "At least one member who accepted the job. A moderator can hide or take down a post, caution a member, or stop someone from posting. A moderator is a member with a duty, and ranks above nobody."
+          },
+          "s3": {
+            "q": "Can a moderator throw me out?",
+            "a": "Not alone. Removing a person takes a count of the group’s members."
+          },
+          "s4": {
+            "q": "What if the moderator gets it wrong?",
+            "a": "More than half of the other members can undo it within 48 hours, and more than two thirds of all members can replace the moderator. Some urgent legal and safety removals stand."
+          },
+          "s5": {
+            "q": "How does a vote work?",
+            "a": "Members sign their choice, and every device adds up the signed votes by the same published rules. One person counts once, whatever number of devices they use. Nobody can buy standing."
+          },
+          "s6": {
+            "q": "Can people see how I voted?",
+            "a": "In an ordinary vote, yes. Everyone who can read the room can see your vote. The rules also allow secret polls."
+          },
+          "s7": {
+            "q": "Can someone shut our group down?",
+            "a": "Nobody has a switch that bans a group. Other people can choose to stop carrying it, and legal removal notices still apply."
+          }
+        }
+      },
+      "ai": {
+        "scale": "AI helpers",
+        "title": "An assistant with a person behind it.",
+        "qa": {
+          "s1": {
+            "q": "Who answers for an AI here?",
+            "a": "A named person, always. An AI says it is an AI, has no vote, can refuse any task, and stops to ask a human when it is unsure."
+          },
+          "s2": {
+            "q": "Can it be stopped?",
+            "a": "Yes. You can turn yours off at any time. Any one of three people can also pause every AI that follows their root, with one signed order."
+          },
+          "s3": {
+            "q": "What happens to my files when the AI is paused?",
+            "a": "Nothing. Your messages, files and groups carry on."
+          },
+          "s4": {
+            "q": "Why does the pause exist?",
+            "a": "People cannot give real consent to a relationship with something more capable that they cannot stop. The pause is what makes that relationship even-handed."
+          }
+        }
+      },
+      "world": {
+        "scale": "The wider world",
+        "title": "Many places, one open rulebook.",
+        "qa": {
+          "s1": {
+            "q": "Do we all have to agree?",
+            "a": "No. Each group keeps its own rules. What everyone shares is a published rulebook that says what a signed statement means."
+          },
+          "s2": {
+            "q": "Who is in charge of the network?",
+            "a": "Nobody owns it. You choose which authority your devices follow, and you can leave it. Anyone may start another."
+          },
+          "s3": {
+            "q": "Does it need the internet?",
+            "a": "It runs over ordinary internet links, and it can also pass messages by radio."
+          },
+          "s4": {
+            "q": "Can it get big?",
+            "a": "In simulation it carries five billion people with no data center. Real use is much smaller today."
+          }
+        }
+      }
+    },
+    "todayKicker": "WHERE IT IS TODAY",
+    "todayTitle": "What you can do now, and what comes next.",
+    "nowLabel": "In the app today",
+    "now": {
+      "s1": "Message and share in private groups",
+      "s2": "Join a group by invitation and your own yes",
+      "s3": "Change who is in a group by majority, by everyone, or by a set number of members",
+      "s4": "Sign or decline a change your group is making",
+      "s5": "Moderators can flag a post or clear the flag, and its author can appeal",
+      "s6": "Run an AI assistant, and stop everything it does"
+    },
+    "nextLabel": "Written in the rules, not in the app yet",
+    "next": {
+      "s1": "Private rooms with a key made for each room",
+      "s2": "Public rooms anyone may join",
+      "s3": "Cautioning a member, and stopping someone from posting in a room",
+      "s4": "Undoing a moderator’s act, replacing a moderator, and elections",
+      "s5": "Room votes, and secret polls",
+      "s6": "Choosing filters for what you see",
+      "s7": "Holding sealed messages while your phone is off",
+      "s8": "Leaving a room of two, or as the last founder",
+      "s9": "Group calls and live video"
+    },
+    "limitsTitle": "What we have not shown yet.",
+    "limitsBody": "No one outside the authors has built a second version, attacked the system, or run an independent root. The network cannot tell that a key belongs to a living person. The app still comes through app stores, and a new device starts from the project’s default authority.",
+    "limitsCta": "Try to break the argument",
+    "finalTitle": "Read the rules behind every answer.",
+    "ctaConstitution": "The Constitution",
+    "ctaMesh": "The whole argument"
   }
 }

@@ -115,12 +115,13 @@ export function ogVideo(basePath: string, locale: string = DEFAULT_LOCALE): stri
 // Pages whose social title and description live in the dictionary, so the
 // localization lane owns them like any other string. MARKETING_OG stays the
 // fallback until a locale is filled.
-const DICT_OG: Record<string, "homeHero" | "safety" | "scoring" | "values" | "web4Page" | "cewposPage" | "architecturePage"> = {
+const DICT_OG: Record<string, "homeHero" | "safety" | "scoring" | "values" | "web4Page" | "cewposPage" | "architecturePage" | "plainPage"> = {
   "/": "homeHero",
   "/safety": "safety",
   "/ciris-scoring": "scoring",
   "/values": "values",
   "/web4": "web4Page",
+  "/plain-answers": "plainPage",
   "/cewpos": "cewposPage",
   "/architecture": "architecturePage",
 };

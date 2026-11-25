@@ -3099,7 +3099,8 @@
     "l11n": "Xiong et al., binciken filin na ERC-8004",
     "l11b": "ERC-8004 ƙa'ida ce ta fasaha don rubuta amincewa tsakanin wakilai a kan blockchain. Kowane wakili zai iya yin rajista ba tare da neman izini ba. Xiong et al. sun duba abin da ke gudana a zahiri kuma sun gano cewa yawancin rajistocin ba su da komai mai aiki a bayansu: kashi 3% zuwa 15% kawai ne suka nuna wurin aiki, ya danganta da sarkar. Tsakanin kashi 59% zuwa 91% na masu bitar sun yi aiki a matsayin ƙungiyoyin Sybil masu haɗin kai, kuma ana iya yaudarar makin suna ko martaba da ɗan kuɗi kaɗan. Sun ba da shawarar gyare-gyare uku: jerin fannonin ƙididdiga da aka amince da su, takardun shaida da ke ambaton hujjojinsu, da tarawa da ke tsayayya da Sybil. Tsarin CIRIS yana da duk gyare-gyare uku tuni: wani namespace da aka yi wa rajista, takardun shaida waɗanda dole su ambaci hujjojinsu, da ƙidayar da ke bai wa muryoyin da suka danganci juna ƙarancin nauyi.",
     "lineageNote": "An taƙaita matsayin waje da kyakkyawar niyya daga rubuce-rubucen jama'a. Idan mun yi kuskure kan kowanne daga cikinsu, hakan ma ya cancanci a buɗe batu.",
-    "crossCta": "Bincika Ragar Tsarin Mulki"
+    "crossCta": "Bincika Ragar Tsarin Mulki",
+    "runCtaPlain": "Yadda amfani da shi yake"
   },
   "killSwitch": {
     "benchLink": "Dubi sabbin alkaluma",
@@ -3427,6 +3428,8 @@
         "featureTitle": "Mataimaki da ke nuna aikinsa.",
         "featureBody": "Yi amfani da CIRIS a wayarka ko a burauza, ka karanta kowane mataki da ya ɗauka.",
         "featureCta": "Sanya app ɗin →",
+        "plainAnswers": "Sauƙaƙun amsoshi",
+        "plainAnswersSub": "Ƙungiyoyi, sirri, gudanarwa, ƙuri'u",
         "install": "Sanya",
         "installSub": "Waya, kwamfuta ko burauza",
         "howItWorks": "Yadda Wakili ke aiki",
@@ -4011,5 +4014,171 @@
       }
     },
     "readKicker": "Karanta shi"
+  },
+  "plainPage": {
+    "ogTitle": "Yadda rayuwa a CIRIS take, cikin sauƙaƙun amsoshi",
+    "ogDescription": "Wa ke riƙe da asusunka, wa zai iya saka ka a ƙungiya, menene ne mai zaman kansa, wa ke gudanarwa, yadda ƙuri'a ke aiki, da abin da AI zai iya yi. Sauƙaƙun amsoshi ga tambayoyi na gaske.",
+    "kicker": "SAUƘAƘUN AMSOSHI",
+    "h1": "Hanyar sadarwa da ku da maƙobtanku ke gudanarwa.",
+    "lede": "Aika saƙo, raba abubuwa, ƙirƙiri ƙungiyoyi kuma yanke shawara tare, da mataimakan AI da ke amsa wa mutum. Yana gudana a wayoyin da kwamfutocin da kuke da su. Babu kamfani a tsakani.",
+    "ctaStory": "Bi ta cikin 3D",
+    "ctaInstall": "Sanya app ɗin",
+    "sections": {
+      "you": {
+        "scale": "Kai",
+        "title": "Wayarka, kwamfutarka, maɓallinka.",
+        "qa": {
+          "s1": {
+            "q": "Wa ke riƙe da asusuna?",
+            "a": "Kai ne. Maɓallinka yana aiki kamar sa-hannu, kuma yana zaune a na'urorinka. Babu abin da za a iya yi da sunanka ba tare da shi ba. Duk wanda ya ɗauki maɓallinka zai iya sanya hannu kamar kai har ka kashe wannan maɓallin, don haka ka kiyaye shi."
+          },
+          "s2": {
+            "q": "Idan na rasa wayata?",
+            "a": "Idan ka haɗa wata na'ura, yi amfani da ita ka cire wanda ya ɓace. Wannan yana ɗaukar rana. Haɗa wasu na'urori biyu ko fiye idan za ka iya: babu kamfanin da zai iya sake saita maɓallinka a gare ka."
+          },
+          "s3": {
+            "q": "Nawa ne kudin?",
+            "a": "Hanyar sadarwar ba ta da kuɗi kuma ba ta da cryptocurrency. Kana amfani da na'urorinka da intanet ɗinka. Samfurin AI na iya kashe kuɗi idan ka zaɓi wanda ake biya."
+          },
+          "s4": {
+            "q": "Wa ke zaɓen abin da nake gani?",
+            "a": "Kai kanka ne. Matattara suna gudana a na'urarka da ƙa'idodin da ka zaɓa. Babu wani kamfani da ke tsara jerin abubuwan da kake gani."
+          }
+        }
+      },
+      "family": {
+        "scale": "Iyali da abokai",
+        "title": "Ƙaramin da'irarka kanka.",
+        "qa": {
+          "s1": {
+            "q": "Shin wani zai iya saka ni a ƙungiya ba tare da tambayata ba?",
+            "a": "A'a. Shiga yana ɗaukar muryoyi biyu aƙalla, ɗaya daga cikinsu naka ce koyaushe. Gayyatar aboki da amincewarka muryoyi biyu ne."
+          },
+          "s2": {
+            "q": "Me zai faru idan wayata ta kashe?",
+            "a": "Na'urar da kai ko mamba ke barin a kunne za ta iya riƙe saƙonni a rufe har wayarka ta dawo."
+          },
+          "s3": {
+            "q": "Wa zai iya karanta ƙungiya mai zaman kansa?",
+            "a": "Mambobinta. Babu wanda ke leƙen asirin ta: masu gudanarwa na ƙungiya za su iya kunna bincike ga sanannun hotunan cin zarafin yara a ƙungiyarsu, kuma wannan binciken yana gudana idan wani ya wallafa ga kowa ko ga ɗakin jama'a."
+          },
+          "s4": {
+            "q": "Me zaman kansa ba ya rufe?",
+            "a": "Mamba koyaushe zai iya maimaita abin da aka faɗa. Wanda ke sa ido sosai a hanyar sadarwar zai iya gane cewa ƙungiya tana nan, kusan girmanta, da waɗanne na'urori ke ciki. Ba za su iya karanta ta ba."
+          },
+          "s5": {
+            "q": "Zan iya tafiya?",
+            "a": "I, da aikinka kanka. Babu wanda dole ne ya amince."
+          }
+        }
+      },
+      "town": {
+        "scale": "Ƙungiyarku, cocinku ko garinku",
+        "title": "Mambobi ne ke gudanarwa, ba tare da uwar garke ba kuma ba tare da ƙwararren fasaha ba.",
+        "qa": {
+          "s1": {
+            "q": "Wa ke gudanar da ita?",
+            "a": "Mambobi ne. Na'urorinsu ne ke ɗauke da ita, don haka tana ci gaba idan wani ya tafi."
+          },
+          "s2": {
+            "q": "Wa ke gudanarwa?",
+            "a": "Aƙalla mamba ɗaya da ya karɓi aikin. Mai gudanarwa zai iya ɓoye ko cire rubutu, gargadi mamba, ko hana wani yin rubutu. Mai gudanarwa mamba ne da aiki, kuma bai fi kowa ba."
+          },
+          "s3": {
+            "q": "Shin mai gudanarwa zai iya kore ni?",
+            "a": "Ba shi kaɗai ba. Cire mutum yana buƙatar ƙidayar mambobin ƙungiya."
+          },
+          "s4": {
+            "q": "Idan mai gudanarwa ya yi kuskure?",
+            "a": "Fiye da rabin sauran mambobi za su iya soke shi cikin sa'o'i 48, kuma fiye da kashi biyu cikin uku na dukan mambobi za su iya maye gurbin mai gudanarwar. Wasu cirewar gaggawa na doka da tsaro suna tsayuwa."
+          },
+          "s5": {
+            "q": "Yadda ƙuri'a ke aiki?",
+            "a": "Mambobi suna sanya hannu kan zaɓinsu, kuma kowace na'ura tana ƙara ƙuri'un da aka sanya wa hannu da dokokin da aka wallafa iri ɗaya. Mutum ɗaya yana ƙirgawa sau ɗaya, komai yawan na'urorin da yake amfani da su. Babu wanda zai iya siyan matsayi."
+          },
+          "s6": {
+            "q": "Shin mutane za su iya ganin yadda na kaɗa ƙuri'a?",
+            "a": "A ƙuri'a ta al'ada, eh. Duk wanda zai iya ganin ɗakin zai iya ganin ƙuri'arka. Dokokin kuma suna ba da damar ƙuri'un sirri."
+          },
+          "s7": {
+            "q": "Shin wani zai iya rufe ƙungiyarmu?",
+            "a": "Babu wanda ke da maɓallin da zai haramta ƙungiya. Wasu na iya zaɓar su daina ɗaukarta, kuma sanarwar cirewa ta doka har yanzu tana aiki."
+          }
+        }
+      },
+      "ai": {
+        "scale": "Mataimakan AI",
+        "title": "Mataimaki da mutum a bayansa.",
+        "qa": {
+          "s1": {
+            "q": "Wa ke amsa don AI a nan?",
+            "a": "Mutum da aka ambata, koyaushe. AI yana faɗin cewa AI ne, ba shi da ƙuri'a, zai iya ƙin kowane aiki, kuma yana tsayawa ya tambayi ɗan adam idan ba shi da tabbas."
+          },
+          "s2": {
+            "q": "Za a iya dakatar da shi?",
+            "a": "Eh. Za ka iya kashe naka a kowane lokaci. Kowane ɗaya daga mutane uku kuma zai iya dakatar da duk AI da ke bin tushensu, da umarni ɗaya da aka sa wa hannu."
+          },
+          "s3": {
+            "q": "Me zai faru da fayilolina idan AI ta tsaya?",
+            "a": "Babu komai. Saƙonninka, fayilolinka da ƙungiyoyinka suna ci gaba."
+          },
+          "s4": {
+            "q": "Me ya sa dakatarwar take?",
+            "a": "Mutane ba za su iya ba da amincewa ta gaske ga alaƙa da wani abu mafi ƙarfi da ba za su iya dakatarwa ba. Dakatarwar ita ce ke sa wannan alaƙar ta zama daidai."
+          }
+        }
+      },
+      "world": {
+        "scale": "Duniya mafi faɗi",
+        "title": "Wurare da yawa, littafin ƙa'idoji ɗaya a bayyane.",
+        "qa": {
+          "s1": {
+            "q": "Shin dole mu yarda duka?",
+            "a": "A'a. Kowace ƙungiya tana riƙe da ƙa'idodinta. Abin da kowa ke rabawa shi ne littafin ƙa'idoji da aka wallafa da ke faɗin abin da bayanin da aka sanya wa hannu ke nufi."
+          },
+          "s2": {
+            "q": "Wa ke jagorantar hanyar sadarwar?",
+            "a": "Babu wanda ya mallake ta. Kai ke zaɓen wace hukuma na'urorinka za su bi, kuma za ka iya barinta. Kowa zai iya fara wata."
+          },
+          "s3": {
+            "q": "Shin tana buƙatar intanet?",
+            "a": "Tana gudana a hanyoyin intanet na yau da kullum, kuma za ta iya watsa saƙonni ta rediyo."
+          },
+          "s4": {
+            "q": "Shin za ta iya girma?",
+            "a": "A kwaikwayo tana ɗaukar mutane biliyan biyar ba tare da cibiyar bayanai ba. Amfani na gaske ƙarami ne sosai yau."
+          }
+        }
+      }
+    },
+    "todayKicker": "INDA TAKE YAU",
+    "todayTitle": "Abin da za ka iya yi yanzu, da abin da ke zuwa.",
+    "nowLabel": "A cikin app ɗin yau",
+    "now": {
+      "s1": "Aika Saƙonni da raba abubuwa a ƙungiyoyi masu zaman kansu",
+      "s2": "Shiga ƙungiya ta gayyata da amincewarka kanka",
+      "s3": "Sauya waɗanda ke cikin ƙungiya ta mafi rinjaye, ta kowa, ko ta ƙayyadadden adadin mambobi",
+      "s4": "Sanya hannu ko ƙin canjin da ƙungiyarka ke yi",
+      "s5": "Masu gudanarwa za su iya yi wa rubutu alama ko share alamar, kuma marubucinsa zai iya ɗaukaka ƙara",
+      "s6": "Gudanar da mataimakin AI, kuma dakatar da duk abin da yake yi"
+    },
+    "nextLabel": "An rubuta a cikin dokokin, ba a app ba tukuna",
+    "next": {
+      "s1": "Ɗakuna masu zaman kansu da maɓalli da aka yi wa kowane ɗaki",
+      "s2": "Ɗakunan jama'a da kowa zai iya shiga",
+      "s3": "Yi gargaɗi ga mamba, da hana wani yin rubutu a ɗaki",
+      "s4": "Soke abin da mai gudanarwa ya yi, maye gurbin mai gudanarwa, da zaɓe",
+      "s5": "Ƙuri'ar ɗaki, da zaɓen sirri",
+      "s6": "Zaɓen matatun abin da kake gani",
+      "s7": "Riƙe saƙonni a rufe yayin da wayarka ke kashe",
+      "s8": "Barin ɗakin mutum biyu, ko a matsayin wanda ya kafa na ƙarshe",
+      "s9": "Kiran ƙungiya da bidiyo kai tsaye"
+    },
+    "limitsTitle": "Abin da ba mu nuna ba tukuna.",
+    "limitsBody": "Ba wanda a wajen marubuta ya gina wani sigar ta biyu, ya kai hari ga tsarin, ko ya gudanar da tushe mai zaman kansa. Hanyar sadarwar ba za ta iya gane cewa maɓalli na mutum mai rai ba ne. App ɗin har yanzu yana zuwa ta shagunan app, kuma sabuwar na'ura tana farawa daga tsohuwar hukumar aikin.",
+    "limitsCta": "Yi ƙoƙarin rushe hujjar",
+    "finalTitle": "Karanta ƙa'idodin da ke bayan kowace amsa.",
+    "ctaConstitution": "Tsarin Mulki",
+    "ctaMesh": "Gaba ɗayan hujja"
   }
 }

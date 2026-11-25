@@ -3097,6 +3097,7 @@
     "l11n": "Xiong ve ark., ERC-8004 saha çalışması",
     "lineageNote": "Dışarıdaki görüşler kamuya açık yazılarından iyi niyetle özetlendi. Herhangi birini yanlış anladıysak, bu da bir konu açmaya değer.",
     "crossCta": "Anayasal Örgüyü keşfedin",
+    "runCtaPlain": "Kullanmak nasıl bir şey",
     "l11b": "ERC-8004, ajanlar arasındaki güvenin bir blok zincirinde kaydedilmesi için bir standarttır. Herhangi bir ajan izin almadan kaydolabilir. Xiong ve ark., gerçekte neyin çalıştığına baktı ve kayıtların çoğunun arkasında işleyen hiçbir şey olmadığını buldu: zincire bağlı olarak yalnızca %3 ila %15'i çalışan bir uç noktaya işaret ediyordu. İncelemecilerin %59 ila %91'i koordineli Sybil grupları olarak hareket etti ve bir itibar puanı neredeyse hiç maliyet olmadan manipüle edilebiliyordu. Üç düzeltme öneriyorlar: üzerinde uzlaşılmış bir puanlama boyutları listesi, kanıtlarına atıfta bulunan tasdikler ve Sybillere karşı dirençli bir toplulaştırma. CIRIS grameri bu üçünü de zaten içeriyor: kayıtlı bir ad alanı, kanıtlarına mutlaka atıfta bulunması gereken tasdikler ve ilişkili sesleri daha az ağırlıklandıran bir sayım."
   },
   "killSwitch": {
@@ -3425,6 +3426,8 @@
         "featureTitle": "Çalışmasını gösteren bir asistan.",
         "featureBody": "CIRIS'i telefonunuzda veya tarayıcıda kullanın ve attığı her adımı okuyun.",
         "featureCta": "Uygulamayı yükleyin →",
+        "plainAnswers": "Sade yanıtlar",
+        "plainAnswersSub": "Gruplar, gizlilik, moderasyon, oylar",
         "install": "Yükleyin",
         "installSub": "Telefon, masaüstü veya tarayıcı",
         "howItWorks": "Ajan nasıl çalışır",
@@ -4009,5 +4012,171 @@
       }
     },
     "readKicker": "Okuyun"
+  },
+  "plainPage": {
+    "ogTitle": "CIRIS'te hayat nasıl, sade yanıtlarla",
+    "ogDescription": "Hesabınızı kim tutar, sizi gruba kim ekleyebilir, özel olan nedir, kim modere eder, oylar nasıl işler ve yapay zeka ne yapabilir. Gerçek sorulara sade yanıtlar.",
+    "kicker": "SADE YANITLAR",
+    "h1": "Siz ve komşularınızın işlettiği bir ağ.",
+    "lede": "Mesajlaşın, paylaşın, gruplar kurun ve birlikte karar verin; arkasında bir insanın durduğu yapay zeka yardımcılarıyla. Zaten sahip olduğunuz telefonlarda ve bilgisayarlarda çalışır. Arada hiçbir şirket yok.",
+    "ctaStory": "3D olarak içinde gezinin",
+    "ctaInstall": "Uygulamayı yükleyin",
+    "sections": {
+      "you": {
+        "scale": "Siz",
+        "title": "Telefonunuz, dizüstü bilgisayarınız, anahtarınız.",
+        "qa": {
+          "s1": {
+            "q": "Hesabımı kim tutuyor?",
+            "a": "Siz. Anahtarınız bir imza gibi çalışır ve kendi cihazlarınızda yaşar. O olmadan adınıza hiçbir şey yapılamaz. Anahtarınızı alan herkes, o anahtarı kapatana kadar sizin gibi imza atabilir, bu yüzden onu güvende tutun."
+          },
+          "s2": {
+            "q": "Telefonumu kaybedersem ne olur?",
+            "a": "Başka bir cihaz bağladıysanız, kayıp olanı çıkarmak için onu kullanın. Bu bir gün sürer. Yapabiliyorsanız iki veya daha fazla başka cihaz bağlayın: hiçbir şirket anahtarınızı sizin için sıfırlayamaz."
+          },
+          "s3": {
+            "q": "Maliyeti nedir?",
+            "a": "Ağın ücreti ve kripto parası yok. Kendi cihazlarınızı ve internetinizi kullanırsınız. Ücretli birini seçerseniz bir yapay zeka modeli ücrete tabi olabilir."
+          },
+          "s4": {
+            "q": "Ne göreceğimi kim seçiyor?",
+            "a": "Siz. Filtreler, seçtiğiniz kurallarla cihazınızda çalışır. Hiçbir şirket akışınızı sıralamaz."
+          }
+        }
+      },
+      "family": {
+        "scale": "Aile ve arkadaşlar",
+        "title": "Kendinize ait küçük bir çevre.",
+        "qa": {
+          "s1": {
+            "q": "Biri beni sormadan bir gruba ekleyebilir mi?",
+            "a": "Hayır. Katılmak en az iki onay gerektirir ve bunlardan biri her zaman sizindir. Bir arkadaşınızın daveti ve sizin evetiniz iki onaydır."
+          },
+          "s2": {
+            "q": "Telefonum kapalıyken ne olur?",
+            "a": "Sizin ya da bir üyenin açık tuttuğu bir cihaz, telefonunuz geri gelene kadar mühürlü mesajları tutabilir."
+          },
+          "s3": {
+            "q": "Özel bir grubu kim okuyabilir?",
+            "a": "Üyeleri. Hiç kimse onu gizlice taramaz: bir grubun moderatörleri kendi gruplarında bilinen çocuk istismarı görüntüleri için bir denetimi açabilir ve aynı denetim biri herkese ya da herkese açık bir odaya yayın yaptığında çalışır."
+          },
+          "s4": {
+            "q": "Özel olan neleri kapsamaz?",
+            "a": "Bir üye söylenenleri her zaman tekrarlayabilir. Ağı yakından izleyen biri bir grubun var olduğunu, yaklaşık ne büyüklükte olduğunu ve hangi cihazların yer aldığını çıkarabilir. Onu okuyamaz."
+          },
+          "s5": {
+            "q": "Ayrılabilir miyim?",
+            "a": "Evet, kendi eyleminizle. Kimsenin onaylaması gerekmez."
+          }
+        }
+      },
+      "town": {
+        "scale": "Kulübünüz, kiliseniz ya da kasabanız",
+        "title": "Üyeleri tarafından işletilir, sunucusuz ve teknik sorumlusuz.",
+        "qa": {
+          "s1": {
+            "q": "Onu kim işletiyor?",
+            "a": "Üyeler işletir. Kendi cihazları onu taşır, böylece biri ayrıldığında devam eder."
+          },
+          "s2": {
+            "q": "Kim modere eder?",
+            "a": "İşi kabul etmiş en az bir üye. Bir moderatör bir gönderiyi gizleyebilir ya da kaldırabilir, bir üyeyi uyarabilir ya da birinin paylaşım yapmasını engelleyebilir. Moderatör, görevi olan bir üyedir ve kimseden üstün değildir."
+          },
+          "s3": {
+            "q": "Bir moderatör beni atabilir mi?",
+            "a": "Tek başına değil. Bir kişiyi çıkarmak grup üyelerinin sayımını gerektirir."
+          },
+          "s4": {
+            "q": "Moderatör yanlış yaparsa ne olur?",
+            "a": "Diğer üyelerin yarısından fazlası 48 saat içinde onu geri alabilir ve tüm üyelerin üçte ikisinden fazlası moderatörü değiştirebilir. Bazı acil yasal ve güvenlik çıkarmaları geçerlidir."
+          },
+          "s5": {
+            "q": "Oylama nasıl işler?",
+            "a": "Üyeler seçimlerini imzalar ve her cihaz imzalı oyları aynı yayımlanmış kurallarla toplar. Kullandıkları cihaz sayısı ne olursa olsun bir kişi bir kez sayılır. Kimse itibar satın alamaz."
+          },
+          "s6": {
+            "q": "İnsanlar nasıl oy verdiğimi görebilir mi?",
+            "a": "Sıradan bir oylamada, evet. Odayı okuyabilen herkes oyunuzu görebilir. Kurallar gizli anketlere de izin verir."
+          },
+          "s7": {
+            "q": "Biri grubumuzu kapatabilir mi?",
+            "a": "Hiç kimsede bir grubu yasaklayan bir düğme yok. Diğer kişiler onu taşımayı bırakmayı seçebilir ve yasal kaldırma bildirimleri geçerliliğini korur."
+          }
+        }
+      },
+      "ai": {
+        "scale": "Yapay zeka yardımcıları",
+        "title": "Arkasında bir insan olan bir asistan.",
+        "qa": {
+          "s1": {
+            "q": "Burada bir yapay zekadan kim sorumlu?",
+            "a": "Her zaman adı belli bir kişi. Bir yapay zeka, yapay zeka olduğunu söyler, oyu yoktur, her görevi reddedebilir ve emin olmadığında sormak için bir insana başvurur."
+          },
+          "s2": {
+            "q": "Durdurulabilir mi?",
+            "a": "Evet. Sizinkini istediğiniz zaman kapatabilirsiniz. Üç kişiden herhangi biri de kökünü izleyen her yapay zekayı tek bir imzalı emirle duraklatabilir."
+          },
+          "s3": {
+            "q": "Yapay zeka duraklatıldığında dosyalarıma ne olur?",
+            "a": "Hiçbir şey. Mesajlarınız, dosyalarınız ve gruplarınız devam eder."
+          },
+          "s4": {
+            "q": "Duraklatma neden var?",
+            "a": "İnsanlar, durduramadıkları, kendilerinden daha yetenekli bir şeyle ilişkiye gerçekten onay veremez. Bu ilişkiyi dengeli kılan duraklatmadır."
+          }
+        }
+      },
+      "world": {
+        "scale": "Daha geniş dünya",
+        "title": "Çok yer, tek bir açık kural kitabı.",
+        "qa": {
+          "s1": {
+            "q": "Hepimiz anlaşmak zorunda mıyız?",
+            "a": "Hayır. Her grup kendi kurallarını korur. Herkesin paylaştığı, imzalı bir beyanın ne anlama geldiğini söyleyen yayımlanmış bir kural kitabıdır."
+          },
+          "s2": {
+            "q": "Ağdan kim sorumlu?",
+            "a": "Sahibi yok. Cihazlarınızın hangi otoriteyi izleyeceğini siz seçersiniz ve ondan ayrılabilirsiniz. Herkes bir başkasını başlatabilir."
+          },
+          "s3": {
+            "q": "İnternet gerekli mi?",
+            "a": "Sıradan internet bağlantıları üzerinden çalışır ve mesajları radyoyla da iletebilir."
+          },
+          "s4": {
+            "q": "Büyüyebilir mi?",
+            "a": "Simülasyonda veri merkezi olmadan beş milyar kişiyi taşır. Gerçek kullanım bugün çok daha küçük."
+          }
+        }
+      }
+    },
+    "todayKicker": "BUGÜN NEREDE",
+    "todayTitle": "Şimdi yapabilecekleriniz ve sırada ne var.",
+    "nowLabel": "Bugün uygulamada",
+    "now": {
+      "s1": "Özel gruplarda mesajlaşıp paylaşın",
+      "s2": "Davet ve kendi onayınızla bir gruba katılın",
+      "s3": "Grupta kimlerin olduğunu çoğunlukla, herkesle ya da belirli sayıda üyeyle değiştirin",
+      "s4": "Grubunuzun yaptığı bir değişikliği imzalayın ya da reddedin",
+      "s5": "Moderatörler bir gönderiyi işaretleyebilir ya da işareti kaldırabilir, yazarı itiraz edebilir",
+      "s6": "Bir yapay zeka asistanı çalıştırın ve yaptığı her şeyi durdurun"
+    },
+    "nextLabel": "Kurallarda yazılı, uygulamada henüz yok",
+    "next": {
+      "s1": "Her oda için üretilmiş bir anahtarla özel odalar",
+      "s2": "Herkesin katılabileceği herkese açık odalar",
+      "s3": "Bir üyeyi uyarmak ve birinin bir odada paylaşım yapmasını engellemek",
+      "s4": "Bir moderatörün işlemini geri almak, moderatörü değiştirmek ve seçimler",
+      "s5": "Oda oylamaları ve gizli anketler",
+      "s6": "Gördükleriniz için filtre seçmek",
+      "s7": "Telefonunuz kapalıyken mühürlü mesajları tutmak",
+      "s8": "İki kişilik bir odadan ya da son kurucu olarak ayrılmak",
+      "s9": "Grup aramaları ve canlı video"
+    },
+    "limitsTitle": "Henüz göstermediklerimiz.",
+    "limitsBody": "Yazarlar dışında hiç kimse ikinci bir sürüm inşa etmedi, sisteme saldırmadı ya da bağımsız bir kök çalıştırmadı. Ağ, bir anahtarın yaşayan bir kişiye ait olduğunu anlayamaz. Uygulama hâlâ uygulama mağazaları üzerinden geliyor ve yeni bir cihaz projenin varsayılan otoritesinden başlıyor.",
+    "limitsCta": "Argümanı çürütmeyi deneyin",
+    "finalTitle": "Her yanıtın ardındaki kuralları okuyun.",
+    "ctaConstitution": "Anayasa",
+    "ctaMesh": "Tüm argüman"
   }
 }

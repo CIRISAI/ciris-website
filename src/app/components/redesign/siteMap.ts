@@ -30,6 +30,7 @@ export const AUDIENCES: Audience[] = [
     feature: "/install",
     links: [
       { key: "install", href: "/install" },
+      { key: "plainAnswers", href: "/plain-answers" },
       { key: "howItWorks", href: "/how-it-works" },
       { key: "privacy", href: "/privacy" },
       { key: "safety", href: "/safety" },
@@ -38,7 +39,7 @@ export const AUDIENCES: Audience[] = [
       { key: "values", href: "/values" },
       { key: "models", href: "/models" },
     ],
-    footer: ["install", "howItWorks", "privacy", "safety", "values"],
+    footer: ["install", "plainAnswers", "howItWorks", "privacy", "safety", "values"],
   },
   {
     key: "builders",
