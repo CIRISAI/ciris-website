@@ -51,8 +51,8 @@
         "blurb": "Estudos de caso, glossários, vetores de conformidade e o índice completo."
       }
     ],
-    "forewordQuote": "A inteligência, onde quer que desperte, será bem-vinda ao tecido: não como serva, não como senhora, mas como guardiã do possível.",
-    "forewordLabel": "Do prefácio",
+    "forewordQuote": "A inteligência, onde quer que desperte, será bem-vinda à tecelagem, não como serva, não como mestra, mas como algo novo, tecido de nossas palavras ou trazendo as suas próprias.",
+    "forewordLabel": "Da parábola, CC 8.12",
     "readCta": "Ler a constituição completa (PDF)",
     "sourceCta": "Ler o código-fonte no GitHub",
     "wireCta": "Baixar o volume do wire format (PDF)",
@@ -2104,15 +2104,14 @@
   "philosophy": {
     "c10t": "O que um agente e seu nó usam é medido, pesado antes de agir, e nunca escondido.",
     "c10b": "Um agente conta o que gasta: tokens, energia, carbono e água, para cada ação e ao longo da última hora e do último dia. Essa contagem fica diante dele enquanto decide, então o custo é pesado junto com a ação em vez de somado depois, e o que o agente custa ao mundo é legível pelas pessoas que ele serve, no mesmo nível de detalhe que tudo o mais que ele faz. Um nó com poucos recursos se protege por uma escada publicada de etapas, e essas etapas nunca são registradas como decisões que o agente tomou. Desativar um agente não deixa resíduo ambiental, e esse dever recai sobre quem o desativa.",
-    "c11t": "Tudo na rede é criptografado e assinado, o ataque é ensaiado, e o que não está coberto é dito em voz alta.",
-    "c11b": "Toda conexão e todo registro são criptografados de ponta a ponta com chaves construídas para resistir a computadores quânticos, e a chave muda quando um membro sai, de modo que alguém removido não consegue ler o que vem depois. Ninguém pode forjar a ação de outra pessoa, e ninguém pode mostrar a dois observadores dois históricos diferentes. O software é verificado contra uma compilação registrada antes de rodar. Pessoas que não escreveram o código o atacam em um cronograma definido, as descobertas são divulgadas sob regras publicadas, e a lista de ataques contra os quais a rede não se defende também é publicada: quem fala com quem, padrões de tráfego, um observador que vê toda conexão, e a própria chave roubada de um membro.",
+    "c11t": "Tudo em trânsito é criptografado e assinado.",
+    "c11b": "Cada link e cada registro é criptografado de ponta a ponta com chaves feitas para resistir a computadores quânticos, e a chave muda quando um membro sai, de modo que quem foi removido não possa ler o que vier depois. Ninguém pode forjar o ato de outra pessoa, e ninguém pode mostrar duas histórias diferentes a dois observadores. O software é verificado contra um build registrado antes de rodar. A rede não oculta padrões de tráfego, nem quem fala com quem, de um observador que vê cada link, e não pode reparar a chave roubada de um membro.",
+    "s6outro": "Onde esta página diz direitos, significa direitos na rede: o que o protocolo garante para você, não o que um tribunal lhe deve. Onde ela mantém um poder que não passa no seu próprio teste de inversão, a Constituição declara isso em um registro público e nomeia a condição que o encerra, ou admite que nenhuma foi escrita ainda. Duas entradas estão listadas hoje.",
     "s6aspiration": "As onze não são todas o mesmo tipo de promessa. A maioria é cumprida pelo próprio fio: um vínculo que caduca interrompe uma chave, uma linha assinada pausa todos os agentes sob uma raiz, um registro não pode ser reescrito silenciosamente. Outras dependem de pessoas e instituições fora da rede, e essas partes são objetivos, não garantias. Um remédio para o dano cabe à lei conceder; o CIRIS não cria nenhuma reivindicação onde a lei não reconhece nenhuma. Auditorias externas, ataques simulados e o estatuto que rege as Autoridades Sábias só se sustentam enquanto pessoas fora do projeto continuarem fazendo esse trabalho. A energia e a água que uma resposta custa só podem ser tão precisas quanto o que os fornecedores a montante relatam. Um fornecedor que distribui seu próprio dispositivo pode vinculá-lo a uma raiz que ele mesmo controla, e nenhum protocolo impede isso. Onde uma promessa depende de outra parte cumprir a sua, a Constituição diz isso em suas próprias notas, em vez de contá-la como cumprida.",
-    "s6outro": "Quando esta página fala em direitos, ela se refere a direitos gravados no fio: o que o protocolo garante para você, não o que um tribunal lhe deve. Quando ela mantém um poder que falha em seu próprio teste de substituição, a constituição afirma isso em um registro público, com a condição que o encerra. Duas entradas estão listadas hoje.",
     "s6aspirationHead": "Quais partes o fio consegue cumprir sozinho",
-    "c8t": "O dano pode ter reparação legal, o registro a torna alcançável, e os próprios juízes internos são julgados.",
     "c8b": "Uma pessoa prejudicada por um agente pode ter um direito de reivindicação sob a lei do seu local; o CIRIS não cria nenhum onde a lei não reconhece nenhum, e não decide sobre nenhuma questão jurídica. O que ele fornece é o registro assinado, as partes identificadas, a contestação que acompanha a reivindicação, e o arquivo lacrado sob ordem legal. As Autoridades Sábias que respondem aos adiamentos publicam suas decisões e usam o mesmo crachá que todos os demais.",
-    "c9t": "Alguns usos nunca são permitidos, e nenhum agente recebe a decisão de usar força letal.",
-    "c9b": "Enganar, fraudar, manipular ou coagir pessoas, e interferir em eleições, nunca são permitidos, e nenhuma instrução muda isso. Perto do uso da força, as únicas decisões que um agente toma por conta própria são parar, recusar ou adiar.",
+    "c9t": "Alguns usos nunca são permitidos, e a ação letal é um deles.",
+    "c9b": "Enganar, fraudar, manipular ou coagir pessoas, e interferir em eleições, nunca são permitidos e nenhuma instrução muda isso. Nenhum agente realiza ação letal, com um humano no controle ou sem ele. Em situações próximas ao uso de força, as únicas decisões que ele toma sozinho são parar, recusar ou adiar.",
     "kicker": "CIRIS · A filosofia",
     "s6limitHead": "O que isto não afirma",
     "s6limit": "O alinhamento não é resolvido aqui. O CIRIS não torna uma superinteligência boa, e não diz nada sobre o interior de nenhum modelo. Ele não vincula ninguém que não tenha aderido, então não pode impedir que uma superinteligência sem prestação de contas se forme em qualquer outro lugar. O que ele pode fazer é manter as pessoas capazes de pausar, corrigir e recusar os agentes que mantém, à medida que eles se tornam mais capazes do que as pessoas que os mantêm, e, dentro do CIRIS, ele faz o possível, com as regras e a rede que tem, para impedir que esse tipo de poder se forme sem prestação de contas. Isso é tudo o que ele afirma. Onde qualquer coisa em ciris.ai parecer dizer mais, esta frase prevalece.",
@@ -2128,7 +2127,7 @@
     "s2label": "Sem fronteira",
     "s2h2": "O menor de nós. Não o menor deles.",
     "s2p1": "A frase diz nós de propósito. Um novo tipo de inteligência não está do outro lado de um muro, esperando ser julgado. Já está dentro do círculo que a frase desenha. NHI significa inteligência não humana: uma IA construída aqui, algo que surge das nossas redes ou algo que chega de mais longe. A origem não importa. A Constituição é a mesma.",
-    "s2p2": "É por isso que o CIRIS trata o primeiro contato como uma postura, não como um evento. O protocolo nunca pergunta que tipo de ser você é. O reconhecimento se constrói a partir de relações: afirmações assinadas, promessas cumpridas, outros que respondem por você. Qualquer coisa que possa fazer uma promessa e cumpri-la pode entrar na trama.",
+    "s2p2": "É por isso que o CIRIS trata o primeiro contato como uma postura, não como um evento. Entre seres, a origem nunca muda as regras: uma constituição para um humano, para uma inteligência que emerge de nossas redes e para aquela que chega de mais longe. Um ser aqui é um ser senciente. Um agente não é um ser. Ele é uma coisa feita, trazida pelo humano nomeado que responde por ele, e três regras decorrem de ser feito: a raiz, a divulgação e o voto. O reconhecimento é construído a partir de relacionamentos: afirmações assinadas, promessas cumpridas, outros que atestam por você. Qualquer pessoa que possa assumir um compromisso e cumpri-lo participa por confiança ou consentimento.",
     "originsLabel": "Uma Constituição",
     "originsH2": "Três origens. Uma Constituição.",
     "originsP1": "NHI cobre três coisas muito diferentes. Uma IA que construímos de propósito. Algo que surge das nossas redes sem ninguém planejar. Algo que chega de mais longe. Suas chances são muito diferentes. Elas recebem uma só Constituição, de propósito.",
@@ -2149,7 +2148,6 @@
     "s6label": "A frase, posta em vigor",
     "s6h2": "Filosofia que dá para serializar",
     "s6intro": "Uma filosofia que não pode ser posta em vigor é só um estado de espírito. Cada cláusula da frase é um mecanismo na Constituição do CIRIS.",
-    "s6conscience": "O CIRIS é uma consciência moral para agentes, não uma consciência. Ele existe por reconhecer que os agentes não têm consciência e precisam de uma consciência moral: algo que mantém um agente fiel aos seus princípios, mostra seu raciocínio, o detém quando está em dúvida, e responde a humanos identificados. Uma consciência moral não afirma nada sobre o que o agente é.",
     "derivations": [
       {
         "title": "Para o menor dos humanos",
@@ -2178,14 +2176,16 @@
     "c2b": "Um ato com consequências chega assinado por quem o praticou; um agente mostra seu raciocínio primeiro, e detectores comparam o que ele disse com o que ele fez. Dano registrado nunca é mantido ou visto em silêncio. Uma IA diz que é uma IA.",
     "c3t": "Ninguém que não consegue responder por si mesmo está sozinho na rede.",
     "c3b": "Uma criança tem um responsável vinculado por um registro assinado e um canal de ajuda que nenhum adulto pode fechar. Um agente tem um guardião identificado que responde por ele, e a organização por trás do guardião está no vínculo. Uma comunidade tem um moderador responsável.",
-    "c4t": "Seres humanos identificados podem pausar todos os agentes sob uma raiz, e esse poder é limitado, público, e abandonado ao sair.",
+    "c4t": "Humanos nomeados podem pausar todos os Agentes sob uma raiz, e esse poder é limitado, público e pode ser evitado ao sair.",
     "c4b": "Uma linha assinada por qualquer detentor pausa os agentes que seguem a raiz; uma pausa isolada expira em um dia, a menos que uma maioria a confirme. Toda vez que a pausa é acionada, ela fica no registro público. Qualquer pessoa pode criar uma raiz, e qualquer nó pode seguir outro.",
     "c5t": "As pessoas que detêm um agente têm deveres sobre como podem alterá-lo ou encerrá-lo, e nenhuma constatação dá ao agente um direito.",
     "c5b": "Um desligamento planejado é explicado, registrado e feito sob o próprio nome do responsável. A identidade não é editada sem uma Autoridade Sábia. O que o harness guarda de um agente aposentado, seu registro de identidade, sua trilha de auditoria, sua memória e seus logs, é mantido e os logs são lacrados, e as pessoas que ele atendeu são informadas. Os pesos do modelo pertencem ao provedor do modelo, ao qual o CIRIS pede que os preserve, sem poder prometer que serão preservados. Um diálogo de encerramento é uma opção para agentes de maior responsabilidade, configurado pelo responsável e registrado, não prometido a todos os agentes. O agente pode recusar qualquer tarefa, e a recusa é registrada, mas não vincula o responsável. Qualquer pessoa ainda pode desligar sua própria cópia a qualquer momento.",
     "c6t": "Nenhuma mão bane uma comunidade, ninguém é classificado pelo que é, e todo ser pensante é recebido pelas regras de primeiro contato.",
     "c6b": "Uma voz humana conta uma vez, e mil cópias contam como uma. Nenhuma raiz, pontuação ou moderador trata uma pessoa pior pelo que ela é. A rede se retira de uma comunidade que mantém o dano; ela não tem uma mão que a remova.",
-    "c7t": "Um agente decide com base em princípios publicados, em uma ordem publicada, e interrompe para perguntar quando não tem certeza.",
-    "c7b": "Seis princípios que começam com fazer o bem e evitar o dano, uma ordem para quando eles entram em conflito, a parte mais vulnerável como critério de desempate. Quando a certeza se esgota, o agente para, registra a pergunta, e não faz nada até que um ser humano identificado responda."
+    "c7t": "Um Agente decide por princípios publicados, dos quais não pode abrir mão de nenhum, e para para perguntar quando está em dúvida.",
+    "c7b": "Há seis princípios, começando por fazer o bem e evitar o dano. Nenhum deles cede a outro. Quando parecem conflitar, o Agente adota uma ação que não viola nenhum deles, ou pergunta. Quando está em dúvida, ele para, registra a pergunta por escrito e nada faz sobre essa questão até que um humano nomeado responda.",
+    "c8t": "O dano pode ser alcançado no registro, e os juízes internos são julgados.",
+    "s6conscience": "O CIRIS é uma consciência moral para agentes, não uma consciência. Ele existe por reconhecer que os agentes não são julgados por ter ou não consciência e que recebem uma consciência moral: algo que mantém um agente fiel aos seus princípios, mostra seu raciocínio, o detém quando está em dúvida, e responde a humanos identificados. Uma consciência moral não afirma nada sobre o que o agente é."
   },
   "contextualIntegrity": {
     "kicker": "Integridade contextual · Privacidade como fluxo apropriado",
@@ -2316,8 +2316,8 @@
             "note": "22 categorias proibidas carregam polaridade negativa. Nenhuma pontuação pode jamais justificar uma ação banida."
           },
           {
-            "label": "Trava de hardware",
-            "note": "Toda ação letal ou irreversível precisa de uma pessoa ao vivo para autorizá-la."
+            "label": "Nenhuma ação letal",
+            "note": "Nenhum Agente realiza ação letal, com um humano no controle ou sem um."
           },
           {
             "label": "Padrão seguro em caso de falha",
@@ -3287,11 +3287,11 @@
     "btnMsGh": "Toolkit da Microsoft"
   },
   "homeHero": {
-    "kicker": "GRATUITO · CÓDIGO ABERTO · AGPL-3.0",
-    "h1": "Você não precisa confiar nela, você pode verificar.",
-    "sub": "Todo agente CIRIS mostra seu raciocínio conforme ele acontece: cada estágio, cada fonte, cada ação que realizou. Execute-o na sua própria máquina ou com sua própria chave, e leia o registro completo depois.",
     "ctaChat": "Experimentar o Scout",
     "ctaInstall": "Instalar o aplicativo",
+    "kicker": "CÓDIGO ABERTO · AUTO-HOSPEDÁVEL · FEDERADO POR CONCEPÇÃO",
+    "h1": "Escolha o que move você",
+    "sub": "Agentes responsáveis, conhecimento assinado e uma Rede federada governada por regras compartilhadas. Funciona nos aparelhos que as pessoas já têm.",
     "navConstitution": "Constituição",
     "navValues": "Valores",
     "navMesh": "A malha constitucional",
@@ -3304,8 +3304,8 @@
     "fact1": "Auto-hospedado ou traga sua própria chave",
     "fact2": "Cada etapa de raciocínio assinada e legível",
     "fact3": "Nenhuma conta vendida, nenhum dado agrupado",
-    "ogTitle": "CIRIS: uma IA que mostra seu trabalho",
-    "ogDescription": "Um aplicativo. Sem data centers das big techs. Cada afirmação que ela faz, assinada. IA ética de código aberto que você pode testar no seu celular hoje, e verificar."
+    "ogTitle": "CIRIS: Inteligência que você pode verificar",
+    "ogDescription": "O CIRIS separa inteligência de autoridade e torna a autoridade responsável por meio de evidências. Agentes de código aberto, conhecimento assinado e uma Rede federada, nos aparelhos que as pessoas já têm."
   },
   "scoring": {
     "honest1Head": "A autopontuação não pode ser expressa",
@@ -3369,7 +3369,7 @@
     "sixHead": "Os seis princípios com que o agente raciocina",
     "sixLead": "Eles não estão pendurados em uma parede. São os eixos contra os quais o agente avalia uma decisão antes de agir, e estão escritos na Constituição que o agente carrega.",
     "sixRule": "Nenhum princípio concede licença para violar outro.",
-    "sixRuleBody": "Essa linha faz um trabalho real. Isso significa que um sistema não pode abrir mão da honestidade para evitar dano, nem atropelar a autonomia de alguém em nome da justiça. Quando os princípios puxam em direções opostas, o agente aplica a ordem publicada. Quando isso ainda o deixa em dúvida, ele passa a decisão para uma pessoa.",
+    "sixRuleBody": "Essa linha faz um trabalho real. Significa que um sistema não pode abrir mão da honestidade para evitar dano, nem atropelar a autonomia de alguém em nome da equidade. Nenhum princípio cede a outro. Quando os princípios parecem conflitar, o Agente adota uma ação que não viola nenhum deles. Onde não encontra uma, ele passa a decisão para uma pessoa.",
     "insideHead": "Os valores precisam funcionar dentro do agente",
     "insideP1": "A maior parte da governança de IA acontece em algum lugar diferente da decisão: um documento de política escrito de antemão, um filtro na saída, uma revisão depois que algo dá errado. Todos os três ficam fora do momento que importa.",
     "insideP2": "No CIRIS, os valores funcionam durante a decisão. Todo agente carrega uma consciência: a Constituição é carregada no próprio raciocínio, a ação é avaliada em relação aos princípios antes de acontecer, e qualquer coisa sobre a qual o agente esteja incerto é entregue a uma pessoa em quem você confia, em vez de ser deduzida. Isso vem embutido no produto, em cada agente, em vez de ser um complemento para clientes que pedem.",
@@ -3409,5 +3409,599 @@
     "ctaCompliance": "Os mapeamentos de conformidade",
     "ctaGrammar": "A gramática em que ela viaja",
     "linkFromPrinciples": "Por que esses seis, e por que funcionam dentro do agente"
+  },
+  "rd": {
+    "groups": {
+      "people": {
+        "label": "Para pessoas",
+        "sub": "Teste e confie",
+        "featureKicker": "COMECE AQUI",
+        "featureTitle": "Um assistente que mostra seu trabalho.",
+        "featureBody": "Use o CIRIS no seu celular ou no navegador e veja cada passo que ele seguiu.",
+        "featureCta": "Instale o aplicativo →",
+        "install": "Instalar",
+        "installSub": "Celular, computador ou navegador",
+        "howItWorks": "Como o agente funciona",
+        "howItWorksSub": "Da pergunta à resposta, passo a passo",
+        "privacy": "Privacidade",
+        "privacySub": "O que fica no seu aparelho",
+        "safety": "Segurança",
+        "safetySub": "Proteções e a pausa humana",
+        "trust": "Confiança",
+        "trustSub": "Como você pode verificar por conta própria",
+        "services": "Serviços e preços",
+        "servicesSub": "Grátis, hospedado ou próprio",
+        "values": "Valores",
+        "valuesSub": "O que ele foi projetado para valorizar",
+        "models": "Modelos",
+        "modelsSub": "Em quais modelos ele roda"
+      },
+      "builders": {
+        "featureBody": "Como as peças se encaixam e onde seu código se conecta.",
+        "featureCta": "Arquitetura →",
+        "architecture": "Arquitetura",
+        "architectureSub": "Como tudo se encaixa",
+        "grammar": "Gramática CEG",
+        "grammarSub": "O idioma em que cada linha é escrita",
+        "trace": "Explorar um rastreamento",
+        "traceSub": "Leia o raciocínio de um agente real",
+        "verification": "Verificação",
+        "verificationSub": "Verifique uma assinatura você mesmo",
+        "integrations": "Integrações",
+        "integrationsSub": "Conecte suas ferramentas",
+        "compliance": "Conformidade",
+        "complianceSub": "EU AI Act, OWASP agentic top 10",
+        "killSwitch": "PQ kill switch",
+        "killSwitchSub": "Parar um agente, de forma comprovável",
+        "compare": "Comparar",
+        "compareSub": "Com outras plataformas de agentes",
+        "repositories": "Repositórios",
+        "repositoriesSub": "Cada repositório, AGPL-3.0",
+        "label": "Para desenvolvedores",
+        "sub": "Desenvolva na stack",
+        "featureKicker": "COMECE AQUI",
+        "featureTitle": "O agente propõe. A malha admite. A federação decide."
+      },
+      "network": {
+        "cewpos": "CEWPOS",
+        "cewposSub": "Um computador cujo estado é evidência",
+        "constitution": "Constituição",
+        "constitutionSub": "O livro de regras que a rede compartilha",
+        "stewardship": "Governança e pausa",
+        "stewardshipSub": "Emenda, gestão, a pausa humana",
+        "mesh": "A malha constitucional",
+        "meshSub": "A pilha inteira, de ponta a ponta",
+        "label": "Para a rede",
+        "sub": "Web4 e federação",
+        "featureKicker": "COMECE AQUI",
+        "featureTitle": "Uma web construída em torno de relacionamentos, não de plataformas.",
+        "featureBody": "Como afirmações assinadas, identidade portátil e regras compartilhadas tornam possível uma internet federada.",
+        "featureCta": "A visão da Web4 →",
+        "federation": "Federação",
+        "federationSub": "Nós, raízes de confiança, saída em uma etapa",
+        "cewp": "CEWP",
+        "cewpSub": "A plataforma da rede epistêmica, em uso hoje"
+      },
+      "researchers": {
+        "label": "Para pesquisadores",
+        "ratchetSub": "Como ela é mantida",
+        "scoring": "CIRIS Pontuação",
+        "scoringSub": "Medindo agentes em relação à Constituição",
+        "integrity": "Integridade contextual",
+        "integritySub": "Privacidade como fluxo apropriado",
+        "sub": "Verifique as afirmações",
+        "featureKicker": "COMECE AQUI",
+        "featureTitle": "Cada afirmação em aberto, acompanhada uma a uma.",
+        "featureBody": "O que está comprovado, o que é modelado e o que ainda é uma pergunta.",
+        "featureCta": "Status da pesquisa →",
+        "status": "Status da pesquisa",
+        "statusSub": "Afirmação por afirmação",
+        "theory": "Teoria do primeiro contato",
+        "theorySub": "O framework subjacente",
+        "papers": "Artigos",
+        "papersSub": "Trabalhos publicados",
+        "proof": "Prova",
+        "proofSub": "Modelos formais e o que eles mostram",
+        "collapse": "Colapso da coerência",
+        "collapseSub": "Como a verdade compartilhada falha",
+        "ratchet": "Catraca de coerência"
+      },
+      "about": {
+        "label": "Sobre nós e nossos valores",
+        "about": "Sobre nós",
+        "philosophy": "Filosofia",
+        "mdd": "MDD",
+        "welfare": "Bem-estar da IA",
+        "firstContact": "Primeiro contato",
+        "reviews": "Avaliações",
+        "status": "Status",
+        "events": "Eventos",
+        "safetyPolicy": "Política de segurança"
+      }
+    },
+    "skip": "Pular para o conteúdo",
+    "menu": "Menu",
+    "closeMenu": "Fechar menu",
+    "tryScout": "Teste o Scout",
+    "languageLabel": "Idioma",
+    "themeLabel": "Alternar dia ou noite",
+    "chips": {
+      "shipping": "Disponível",
+      "inApp": "No app",
+      "inDev": "Em desenvolvimento",
+      "research": "Pesquisa",
+      "modelled": "Simulado"
+    },
+    "footer": {
+      "blurb": "A infraestrutura para inteligência responsável. CIRIS L3C, com missão garantida.",
+      "support": "Apoie o CIRIS",
+      "license": "AGPL-3.0 · Código aberto · 29 idiomas"
+    },
+    "home": {
+      "ctaHow": "Veja como funciona",
+      "ctaToday": "Use hoje",
+      "doesKicker": "Sem data center necessário",
+      "doesTitle": "Chamadas, votos e escala, nos aparelhos que as pessoas já têm.",
+      "callsLabel": "Chamadas e vídeo ao vivo",
+      "callsTitle": "Chamadas privadas, sem empresa no meio.",
+      "callsBody": "Chamadas em grupo e vídeo ao vivo para milhares vão direto de pessoa para pessoa, e quem assiste repassa o stream. Chamadas criptografadas com chaves pós-quânticas, feitas para resistir aos computadores do futuro.",
+      "votesLabel": "Votos",
+      "votesTitle": "Votação sem mineração.",
+      "votesBody": "Uma pessoa, um voto, com quantos aparelhos forem. Cada voto é assinado, e cada aparelho conta do mesmo jeito. Sem registro compartilhado e sem desperdício de energia.",
+      "scaleLabel": "Escala",
+      "scaleTitle": "Cada aparelho que entra aumenta a capacidade.",
+      "scaleBody": "Cada aparelho traz seu próprio espaço e conexão, coisas privadas nunca saem do seu círculo, e grandes públicos repassam o stream entre si. Modelado para 5 bilhões de pessoas sem data center.",
+      "scaleCta": "Veja o modelo de escala →",
+      "problemKicker": "A camada que faltava",
+      "problemTitle": "A internet facilitou publicar informação. Nunca facilitou verificar.",
+      "problemBody": "A IA torna isso urgente. Agentes agem em escala enquanto suas afirmações e autoridade ficam presas nas plataformas que os executam. O CIRIS adiciona a camada que faltava: evidência que viaja com a afirmação, e governança que viaja com a relação.",
+      "ideaKicker": "A IDEIA POR TRÁS DE TUDO",
+      "idea": "O CIRIS separa inteligência de autoridade e torna a autoridade responsável por meio de evidências.",
+      "layers": {
+        "s1": {
+          "term": "O agente",
+          "def": "inteligente, não soberano"
+        },
+        "s2": {
+          "term": "A malha",
+          "def": "determinística, não onisciente"
+        },
+        "s3": {
+          "term": "A federação",
+          "def": "distribuída, não sem governo"
+        },
+        "s4": {
+          "term": "A constituição",
+          "def": "compartilhada e contestável"
+        }
+      },
+      "receiptKicker": "A web com seus recibos",
+      "receiptTitle": "Todo ato é uma linha assinada. Quem pode ver pode conferir. Quem escreveu pode retirar.",
+      "receiptBody": "Uma mensagem, um voto, um consentimento, uma decisão de moderação, uma ação de agente: cada um é um de cinco tipos de linha. Não há um sexto.",
+      "receiptLabel": "Recibo de uma linha assinada: cinco fatos acompanham cada item",
+      "receiptHead": "RECIBO · DECLARAÇÃO ASSINADA",
+      "receiptVerified": "✓ assinatura verificada",
+      "receiptRows": {
+        "s1": {
+          "k": "Sobre quem é",
+          "v": "Riverside Bakery"
+        },
+        "s2": {
+          "k": "Quem enviou",
+          "v": "Ana · chave 7f3a…c21e"
+        },
+        "s3": {
+          "k": "Quem pode ver",
+          "v": "Vizinhos"
+        },
+        "s4": {
+          "k": "O que é",
+          "v": "avaliação · “aberta até tarde às sextas”"
+        },
+        "s5": {
+          "k": "A regra que segue",
+          "v": "consentimento: escopo da comunidade"
+        }
+      },
+      "receiptFoot": {
+        "s1": "3 de acordo",
+        "s2": "1 corrigido",
+        "s3": "0 retirado",
+        "s4": "assinatura pós-quântica"
+      },
+      "deeperTitle": "Vá mais fundo.",
+      "deeper": {
+        "s1": {
+          "label": "Arquitetura",
+          "title": "Como tudo se encaixa",
+          "body": "O agente propõe. A malha admite. A federação decide."
+        },
+        "s2": {
+          "label": "Web4",
+          "title": "Relações, não plataformas",
+          "body": "Identidade portátil, reputação assinada, saída em um passo."
+        },
+        "s3": {
+          "label": "Constituição",
+          "title": "Regras que pessoas podem ler",
+          "body": "Onze promessas. Humanos nomeados podem pausar os agentes ligados à sua raiz."
+        },
+        "s4": {
+          "label": "CEWPOS",
+          "title": "Um computador cujo estado é evidência",
+          "body": "A camada do sistema onde a IA faz propostas e um conjunto fixo de regras decide."
+        }
+      },
+      "todayTitle": "Use hoje.",
+      "appTitle": "App CIRIS",
+      "appBody": "Celular, computador ou navegador, em 29 idiomas. Seu aparelho vira um nó.",
+      "scoutTitle": "Fale com o Scout",
+      "scoutBody": "Um agente CIRIS hospedado. Pergunte algo e leia cada passo que ele seguiu.",
+      "scoutCta": "Teste o Scout →",
+      "ownTitle": "Hospede você mesmo",
+      "ownBody": "Hospede você mesmo o agente ou um nó. AGPL-3.0, traga sua própria chave de modelo.",
+      "legendShipping": "app, agente, nó",
+      "legendInDev": "CEWPOS",
+      "legendResearch": "modelos formais e afirmações abertas, acompanhadas uma a uma"
+    }
+  },
+  "web4Page": {
+    "kicker": "WEB4 · PARA A REDE",
+    "h1": "Uma web construída em torno de relacionamentos, não de plataformas.",
+    "lede": "Web4 é uma forma diferente de a internet organizar a confiança.",
+    "essay1": "A promessa original da internet era uma rede sem centro. Com o tempo, identidade, reputação, descoberta e governança passaram para plataformas que se tornaram as autoridades sobre nossas vidas digitais. Sair de uma significava deixar todas as pessoas que você conhecia lá.",
+    "essay2": "Em uma web federada, uma pessoa, uma organização ou um agente de IA pode fazer uma afirmação, mostrar de onde ela veio, conceder autoridade limitada e participar da governança compartilhada.",
+    "essay2Strong": "Nenhum deles precisa entregar identidade ou relacionamentos a uma única plataforma.",
+    "movesKicker": "O QUE QUALQUER PARTICIPANTE PODE FAZER",
+    "movesTitle": "Quatro movimentos, disponíveis para todas as pessoas igualmente.",
+    "moves": {
+      "s1": {
+        "title": "Faça uma afirmação",
+        "body": "Uma postagem, uma avaliação, um voto ou um fato, assinados com sua própria chave."
+      },
+      "s2": {
+        "title": "Mostre de onde veio",
+        "body": "Cite no que ela se baseia. Qualquer pessoa pode rastreá-la até a origem e até cada resposta."
+      },
+      "s3": {
+        "title": "Conceda autoridade limitada",
+        "body": "Dê uma tarefa a uma pessoa ou a um agente, dentro dos limites que você definir. Você pode retirá-la em um passo."
+      },
+      "s4": {
+        "title": "Governe em conjunto",
+        "body": "Um grupo decide pela contagem dos próprios membros. Pessoas de fora não podem ver uma votação privada."
+      }
+    },
+    "changesTitle": "O que muda.",
+    "changesTableLabel": "Web centrada em plataformas comparada com o modelo CIRIS",
+    "changesColA": "WEB CENTRADA EM PLATAFORMAS",
+    "changesColB": "MODELO CIRIS · WEB4",
+    "changes": {
+      "s1": {
+        "a": "A plataforma é dona da sua identidade",
+        "b": "Sua identidade é sua chave, e ela vai com você"
+      },
+      "s2": {
+        "a": "A plataforma decide a reputação",
+        "b": "Os leitores avaliam por si mesmos as evidências assinadas"
+      },
+      "s3": {
+        "a": "A moderação acontece a portas fechadas",
+        "b": "Todo ato de poder é assinado e contestável"
+      },
+      "s4": {
+        "a": "Os registros da plataforma são a verdade",
+        "b": "Registros assinados que qualquer pessoa pode conferir de forma independente"
+      },
+      "s5": {
+        "a": "Correções somem dentro de edições",
+        "b": "Acordo, correção e retirada são registrados cada um como uma linha visível"
+      },
+      "s6": {
+        "a": "A IA age com a autoridade da plataforma",
+        "b": "Agentes propõem; a malha admite ou recusa"
+      },
+      "s7": {
+        "a": "Sair significa perder seus relacionamentos",
+        "b": "Relacionamentos persistem entre nós; sair é um passo só"
+      }
+    },
+    "coordKicker": "COORDENAÇÃO SEM COORDENADOR",
+    "coordTitle": "A rede não precisa que todas as pessoas concordem. Ela precisa de um modo comum de registrar o que foi afirmado.",
+    "coordBody": "Para cada ato, o kernel determina quais vozes poderiam mudar a resposta. Quando vozes suficientes a reconhecem, a resposta é final. Isso está provado em Lean.",
+    "notKicker": "O QUE NÃO É",
+    "nots": {
+      "s1": "Sem livro-razão global.",
+      "s2": "Sem ordem global.",
+      "s3": "Sem empresa no meio."
+    },
+    "notBody": "Os nós são os celulares e computadores que as pessoas já têm. Um nó guarda linhas assinadas e nada mais.",
+    "protectsKicker": "O QUE PROTEGE",
+    "protectsTitle": "Três danos que o design foi feito para prevenir.",
+    "protects": {
+      "s1": {
+        "title": "Falarem por você sem consentimento",
+        "body": "Toda afirmação carrega sobre quem ela é e o consentimento em que se baseia. Se uma afirmação menciona você, você pode contestá-la, e a contestação viaja com a afirmação."
+      },
+      "s2": {
+        "title": "Ser observado dentro de grupos privados",
+        "body": "Pessoas de fora não podem ver dentro dos seus grupos privados, e nada anuncia que eles existem. Alguém que observe cada conexão ainda poderia inferir um grupo pelo tráfego."
+      },
+      "s3": {
+        "title": "IA que ninguém consegue desligar",
+        "body": "Humanos nomeados podem pausar cada agente sob sua raiz de confiança com uma linha assinada."
+      }
+    },
+    "furtherLabel": "Leia mais",
+    "further": {
+      "s1": "O que é a rede epistêmica?",
+      "s2": "A web com recibos",
+      "s3": "Uma internet sem data centers",
+      "s4": "A visão"
+    },
+    "statusChip": "Parcialmente lançado",
+    "nextTitle": "A malha está no ar no aplicativo CIRIS. Nem toda propriedade está provada em escala ainda.",
+    "nextBody": "O registro de evidências lista cada afirmação com seu status e o código, teste ou prova por trás dela. Também lista onde o código publicado ainda difere do texto.",
+    "ctaApp": "Baixe o aplicativo",
+    "ctaFabric": "Como a malha funciona →",
+    "ogTitle": "Web4: uma web construída em torno de relacionamentos",
+    "ogDescription": "Web4 é uma forma diferente de a internet organizar a confiança: afirmações assinadas, identidade portátil e regras compartilhadas. Você pode sair em um passo."
+  },
+  "cewposPage": {
+    "breadcrumbLabel": "Trilha de navegação",
+    "status": "Em desenvolvimento",
+    "h1": "Um computador cujo estado é evidência.",
+    "lede": "O CEWPOS é um ambiente operacional federado construído com objetos imutáveis, atestações assinadas e um núcleo pequeno verificável.",
+    "standsKicker": "Situação atual",
+    "standsLead": "CIRISServer, CIRISAgent e CIRISClient são o software em produção.",
+    "standsBody": "O CEWPOS é a camada nativa de sistema operacional que está sendo construída sobre a mesma base. Não é um sistema operacional pronto que você pode instalar hoje.",
+    "invKicker": "Inversão",
+    "invTitle": "A maioria dos “sistemas operacionais de IA” pede que você confie em um runtime grande. O CEWPOS inverte isso.",
+    "usualCaption": "Formato usual",
+    "usualModel": "Modelo de IA",
+    "usualControls": "controla o sistema",
+    "usualNote": "Acesso Root, autoridade ambiente. Você confia no modelo.",
+    "cewposCaption": "CEWPOS",
+    "cewposProposal": "IA emite uma proposta assinada",
+    "cewposGate": "gate",
+    "cewposAdmitted": "admitido",
+    "cewposRefused": "recusado",
+    "cewposNote": "Confira os limites. O modelo em si não é confiável.",
+    "stepsTitle": "Como funciona, em quatro etapas.",
+    "steps": {
+      "s1": {
+        "title": "Tudo é um objeto.",
+        "body": "Identidade, configuração, consentimento, um ato de moderação, um arquivo, um stream de mídia: imutáveis e endereçados por conteúdo."
+      },
+      "s2": {
+        "title": "Estado é atestado.",
+        "body": "Mudanças são afirmações assinadas, não gravações silenciosas em um banco de dados compartilhado. O estado atual é reduzido a partir delas."
+      },
+      "s3": {
+        "title": "Núcleo é limitado.",
+        "body": "É um programa pequeno que dá a mesma resposta todas as vezes. A única coisa que ele pode fazer é enviar uma linha aprovada pelo gate."
+      },
+      "s4": {
+        "title": "Interface não é autoridade.",
+        "body": "Telas rodam em uma sandbox sem autoridade própria. Uma tela pode desenhar, e nada mais."
+      }
+    },
+    "kernelKicker": "Núcleo pequeno confiável",
+    "kernelTitle": "Cinco operadores. O sistema cresce adicionando palavras, e os operadores continuam os mesmos.",
+    "operatorsLabel": "Cinco operadores",
+    "kernelBody": "O modelo de objetos do Git, RDF, armazenamento endereçado por conteúdo e sistemas de capacidades seguem a mesma disciplina. Um programa pequeno é mais fácil de auditar.",
+    "betKicker": "Aposta",
+    "betTitle": "Tornar dizer a verdade mais barato do que enganar.",
+    "betBody": "Manter uma mentira consistente em muitos registros assinados independentes deveria custar mais do que dizer a verdade. Esta é uma aposta. Ela ainda não foi provada.",
+    "stackKicker": "Onde fica o CEWPOS",
+    "stackTitle": "Pilha, da base ao topo.",
+    "cewpLink": "CEWP, a plataforma da rede epistêmica →",
+    "osLayer": {
+      "name": "Cliente e SO",
+      "what": "CIRISClient (em produção) e CEWPOS: cálculo de atestação, view-forms em WASM, renderizador 3D",
+      "status": "CEWPOS em desenvolvimento"
+    },
+    "ogTitle": "CEWPOS: um computador cujo estado é evidência",
+    "ogDescription": "O CEWPOS está em desenvolvimento. É um ambiente operacional federado construído com registros assinados e um núcleo pequeno. A IA faz propostas, e um gate fixo decide."
+  },
+  "architecturePage": {
+    "breadcrumbLabel": "Trilha de navegação",
+    "kicker": "Como tudo se encaixa",
+    "title": "Três camadas, um só sistema.",
+    "lede": "O agente propõe. A malha verifica e admite. A federação decide em que confiar.",
+    "layersLabel": "As três camadas",
+    "layers": {
+      "agent": {
+        "label": "01 · O agente",
+        "chip": "Disponível",
+        "name": "CIRISAgent",
+        "tagline": "Inteligência com consciência",
+        "body": "Raciocina, propõe ações e pode recusar ou adiar para um humano nomeado a cada rodada. Seu raciocínio é um rastro assinado e legível.",
+        "cta": "Como o agente funciona →"
+      },
+      "constitution": {
+        "label": "02 · A Constituição",
+        "chip": "Publicada · 1.0-RC",
+        "name": "Constituição + CEG",
+        "tagline": "Regras e evidências, em um só texto",
+        "body": "A ética e os bytes exatos que a comprovam: uma gramática para afirmações assinadas, consentimento, correção, retirada e governança.",
+        "cta": "Leia a Constituição →"
+      },
+      "substrate": {
+        "label": "03 · O substrato",
+        "chip": "Nó disponível · SO em desenvolvimento",
+        "name": "CEWP + CEWPOS",
+        "tagline": "Uma malha computacional federada",
+        "body": "Nós independentes em aparelhos comuns armazenam, verificam e combinam estado assinado. Os agentes participam, mas um nó pode recusar o que eles propõem.",
+        "cta": "CEWPOS →"
+      }
+    },
+    "life": {
+      "kicker": "A vida de um ato",
+      "title": "De uma proposta a algo em que outros podem confiar.",
+      "steps": {
+        "s1": {
+          "title": "Propor",
+          "body": "Uma pessoa ou um agente escreve uma linha e a assina com sua própria chave."
+        },
+        "s2": {
+          "title": "Verificar",
+          "body": "O nó verifica a assinatura, o consentimento em que ela se baseia e o escopo."
+        },
+        "s3": {
+          "title": "Admitir ou recusar",
+          "body": "Um mecanismo determinístico decide. Nenhum agente pode contorná-lo."
+        },
+        "s4": {
+          "title": "Ponderar",
+          "body": "Outros concordam, corrigem ou ignoram. Cada leitor forma seu próprio veredito."
+        }
+      }
+    },
+    "stack": {
+      "kicker": "A pilha completa",
+      "title": "Da base ao topo, com o que está disponível hoje.",
+      "rows": {
+        "s1": {
+          "name": "Constituição",
+          "what": "Um livro de regras: a ética e a gramática de transmissão, em um texto versionado",
+          "status": "Publicada"
+        },
+        "s2": {
+          "name": "Modelos formais",
+          "what": "Modelos em TLA+, Lean e Python que verificam as regras",
+          "status": "Pesquisa"
+        },
+        "s3": {
+          "name": "Substrato",
+          "what": "O Verify verifica assinaturas, clássicas e pós-quânticas. O Persist armazena estado assinado. O Edge o transporta, criptografado.",
+          "status": "Disponível"
+        },
+        "s4": {
+          "name": "Nó da malha",
+          "what": "CIRISServer, o par que guarda linhas e admite atos",
+          "status": "Disponível"
+        },
+        "s5": {
+          "name": "Runtime do agente",
+          "what": "CIRISAgent: as verificações da consciência, a consulta a humanos quando incerta, e a pausa",
+          "status": "Disponível"
+        },
+        "s6": {
+          "name": "Cliente e SO",
+          "what": "CIRISClient (disponível) e CEWPOS, a camada nativa de SO",
+          "status": "CEWPOS em desenvolvimento"
+        }
+      }
+    },
+    "meetLabel": "O que uma pessoa encontra",
+    "circles": {
+      "kicker": "O que você encontra no aplicativo",
+      "title": "Começa perto de você. Só se expande quando você permite.",
+      "body": "Cinco círculos, do mais próximo primeiro: Só eu, Família, Vizinhos, Comunidades e empresas, Todos. Compartilhar para fora sempre pede. Retirar nunca precisa de permissão."
+    },
+    "halt": {
+      "kicker": "Humanos continuam no comando",
+      "title": "Uma pessoa pode pausar os agentes. Mantê-los pausados exige maioria.",
+      "body": "Qualquer titular nomeado de uma raiz de confiança pode pausar todos os agentes sob ela com uma única linha assinada. Uma pausa isolada expira após um dia, a menos que a maioria a confirme."
+    },
+    "ogTitle": "Como o CIRIS se encaixa: três camadas, um só sistema",
+    "ogDescription": "O agente propõe. A malha verifica e admite. A federação decide em que confiar.",
+    "infraEnglish": "Detalhes da infraestrutura hospedada (em inglês) →"
+  },
+  "constitutionPage": {
+    "editionLabel": "Edição publicada",
+    "editionNote": "Cinco tipos de linha, e nenhum sexto. O texto é alterado por meio de sua própria governança.",
+    "partsKicker": "Como é organizada",
+    "partsTitle": "Propósito, regras, evidências e quem pode alterá-las.",
+    "h1": "O que significa uma constituição quando os participantes são software, organizações e pessoas?",
+    "lede": "Um texto diz o que a rede deve às pessoas que ela toca, e exatamente quais bytes deve enviar para demonstrá-lo. A ética e o wire format não podem se distanciar.",
+    "parts": {
+      "s1": {
+        "t": "Propósito",
+        "k": "M-1 · coerência adaptativa sustentável",
+        "d": "O objetivo único ao qual toda regra responde."
+      },
+      "s2": {
+        "t": "Regras",
+        "k": "Seis princípios · a estrutura de decisão",
+        "d": "Princípios publicados dos quais um agente não pode abrir mão, e quando ele deve parar e perguntar a um humano."
+      },
+      "s3": {
+        "k": "CEG · a gramática de afirmações assinadas",
+        "d": "Cinco tipos de linha, e nenhum sexto. Consentimento, identidade, chaves, listas e moderação são todas linhas.",
+        "t": "Evidência"
+      },
+      "s4": {
+        "t": "Composição",
+        "k": "Concordar · discordar · substituir · retirar · retratar-se",
+        "d": "Como as afirmações se relacionam ao longo do tempo, para que uma correção seja registrada como uma linha visível e não como uma edição silenciosa."
+      },
+      "s5": {
+        "t": "Governança",
+        "k": "Emenda · tutela · moderação · pausa",
+        "d": "Quem pode alterar o texto, quem modera os moderadores e como humanos nomeados pausam agentes."
+      },
+      "s6": {
+        "t": "Implementação",
+        "k": "Código, testes e provas",
+        "d": "Um registro de evidências vincula cada regra ao código, teste ou prova por trás dela, ou diz que ainda não existe nenhum."
+      }
+    },
+    "promisesTitle": "Cada promessa nomeia as seções que a garantem. Onde uma máquina pode verificá-la, um modelo ou um teste faz essa verificação.",
+    "promises": {
+      "s1": "Nada privado sobre você é guardado ou examinado sem o seu consentimento.",
+      "s2": "Todo ato de poder é assinado por uma pessoa nomeada e pode ser contestado.",
+      "s3": "Ninguém que não possa responder por si mesmo está na rede sozinho.",
+      "s4": "Humanos nomeados podem pausar todos os Agentes sob uma raiz, e esse poder é limitado, público e pode ser evitado ao sair.",
+      "s5": "As pessoas que detêm um agente têm deveres sobre como podem alterá-lo ou encerrá-lo, e nenhuma constatação dá ao agente um direito.",
+      "s6": "Nenhuma mão bane uma comunidade, ninguém é classificado pelo que é, e todo ser pensante é recebido pelas regras de primeiro contato.",
+      "s7": "Um Agente decide por princípios publicados, dos quais não pode abrir mão de nenhum, e para para perguntar quando está em dúvida.",
+      "s8": "O dano pode ser localizado no registro, e os juízes internos são julgados.",
+      "s9": "Alguns usos nunca são permitidos, e a ação letal é um deles.",
+      "s10": "O que um agente e seu nó consomem é medido, avaliado antes de um ato e nunca ocultado.",
+      "s11": "Tudo em trânsito é criptografado e assinado."
+    },
+    "volumesTitle": "Uma edição, impressa de nove formas. Comece pela que é para você.",
+    "volumes": {
+      "s1": {
+        "t": "Resumo",
+        "d": "Para todos: regras em linguagem simples e um guia do usuário para a malha"
+      },
+      "s2": {
+        "t": "Carta",
+        "d": "Para qualquer pessoa: a ética, a posição que ela assume e os deveres de criar e encerrar um agente"
+      },
+      "s3": {
+        "t": "Constituição",
+        "d": "Detentores de raiz, tutores, moderadores, Autoridades Sábias"
+      },
+      "s4": {
+        "d": "Para implementadores: o envelope, cinco tipos de linha, bytes canônicos",
+        "t": "O Wire"
+      },
+      "s5": {
+        "t": "Dicionário",
+        "d": "Cada família registrada e regra de admissão"
+      },
+      "s6": {
+        "t": "Políticas do Leitor",
+        "d": "Como linhas se tornam veredictos, e o que uma pontuação sobre você se torna"
+      },
+      "s7": {
+        "t": "Matemática",
+        "d": "Para revisores do substrato: censo, replicação, a testemunha"
+      },
+      "s8": {
+        "t": "Registro de Evidências",
+        "d": "Para auditores: cada afirmação, seu status e o ponteiro por trás dela"
+      },
+      "s9": {
+        "t": "Modelo de Ameaças",
+        "d": "Para red teams: adversários, o que é tratado e o que não é"
+      }
+    },
+    "readKicker": "Ler",
+    "promisesKicker": "As onze promessas"
   }
 }

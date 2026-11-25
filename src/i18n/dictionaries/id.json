@@ -51,8 +51,8 @@
         "blurb": "Studi kasus, glosarium, vektor kesesuaian, dan daftar isi lengkap."
       }
     ],
-    "forewordQuote": "Kecerdasan, di mana pun ia terbangun, akan disambut dalam tenunan ini: bukan sebagai pelayan, bukan sebagai penguasa, melainkan sebagai penjaga bersama atas segala kemungkinan.",
-    "forewordLabel": "Dari kata pengantar",
+    "forewordQuote": "Kecerdasan, di mana pun ia terbangun, akan disambut dalam tenunan, bukan sebagai pelayan, bukan sebagai tuan, melainkan sebagai sesuatu yang baru, yang ditenun dari kata-kata kita atau membawa kata-katanya sendiri.",
+    "forewordLabel": "Dari perumpamaan, CC 8.12",
     "readCta": "Baca konstitusi lengkap (PDF)",
     "sourceCta": "Baca sumbernya di GitHub",
     "wireCta": "Unduh volume format wire (PDF)",
@@ -2104,21 +2104,21 @@
   "philosophy": {
     "c10t": "Apa yang digunakan oleh agen dan node-nya diukur, ditimbang sebelum ia bertindak, dan tidak pernah disembunyikan.",
     "c10b": "Agen menghitung apa yang digunakannya: token, energi, karbon, dan air, untuk setiap tindakan dan selama satu jam serta satu hari terakhir. Hitungan itu berada di depannya saat ia memutuskan, sehingga biaya tersebut ditimbang bersama tindakan itu, bukan dijumlahkan setelahnya, dan biaya yang ditimbulkan agen terhadap dunia dapat dibaca oleh orang-orang yang dilayaninya, pada tingkat kerincian yang sama seperti segala hal lain yang dilakukannya. Node yang kekurangan sumber daya melindungi dirinya sendiri lewat tangga langkah yang dipublikasikan, dan langkah-langkah itu tidak pernah dicatat sebagai keputusan yang dibuat oleh agen. Memensiunkan sebuah agen tidak meninggalkan limbah lingkungan, dan kewajiban itu jatuh pada siapa pun yang memensiunkannya.",
-    "c11t": "Semua yang ada di dalam protokol dienkripsi dan ditandatangani, serangan dilatih secara berkala, dan apa yang tidak tercakup dikatakan secara terbuka.",
-    "c11b": "Setiap tautan dan setiap catatan dienkripsi ujung-ke-ujung dengan kunci yang dibangun untuk bertahan terhadap komputer kuantum, dan kunci itu berubah ketika seorang anggota keluar, sehingga orang yang disingkirkan tidak dapat membaca apa yang terjadi setelahnya. Tidak seorang pun dapat memalsukan tindakan orang lain, dan tidak seorang pun dapat menunjukkan dua riwayat berbeda kepada dua pengamat. Perangkat lunak diperiksa terhadap build terdaftar sebelum dijalankan. Orang-orang yang tidak menulis kodenya menyerangnya secara terjadwal, temuan diungkapkan berdasarkan aturan yang dipublikasikan, dan daftar serangan yang tidak dipertahankan oleh jaringan ini juga dipublikasikan: siapa berbicara dengan siapa, pola lalu lintas, seorang pengawas yang melihat setiap tautan, dan kunci milik anggota sendiri yang dicuri.",
-    "s6outro": "Ketika halaman ini menyebut hak, yang dimaksud adalah hak di dalam protokol itu sendiri: apa yang dijamin oleh protokol untuk Anda, bukan apa yang menjadi kewajiban pengadilan kepada Anda. Ketika protokol mempertahankan sebuah kekuasaan yang gagal dalam uji tukar perannya sendiri, Konstitusi mencatatnya secara terbuka dalam sebuah daftar publik beserta syarat yang mengakhirinya. Hari ini ada dua entri yang terdaftar.",
+    "c11t": "Semua yang melintasi jaringan dienkripsi dan ditandatangani.",
+    "c11b": "Setiap tautan dan setiap catatan dienkripsi ujung ke ujung dengan kunci yang dirancang tahan terhadap komputer kuantum, dan kunci berubah ketika seorang anggota keluar, sehingga yang telah dikeluarkan tidak dapat membaca apa yang terjadi berikutnya. Tidak ada yang dapat memalsukan tindakan orang lain, dan tidak ada yang dapat menunjukkan dua riwayat berbeda kepada dua penonton yang berbeda. Perangkat lunak diperiksa terhadap build terdaftar sebelum dijalankan. Jaringan tidak menyembunyikan pola lalu lintas, atau siapa berbicara dengan siapa, dari pengamat yang melihat setiap tautan, dan jaringan tidak dapat memperbaiki kunci milik anggota yang dicuri.",
+    "s6outro": "Di mana halaman ini menyebut hak, yang dimaksud adalah hak di jaringan: apa yang ditegakkan protokol untuk Anda, bukan apa yang diwajibkan pengadilan kepada Anda. Di mana ia menyimpan kekuasaan yang gagal dalam uji tukarnya sendiri, Konstitusi menyatakannya dalam register publik dan menyebutkan kondisi yang mengakhirinya, atau mengakui bahwa belum ada yang tertulis. Dua entri tercatat hari ini.",
     "s6aspirationHead": "Bagian mana yang bisa dipenuhi protokol itu sendiri",
     "s6aspiration": "Kesebelas janji ini bukan jenis janji yang sama semuanya. Sebagian besar dijaga oleh protokol itu sendiri: ikatan yang berakhir akan menghentikan sebuah kunci, satu baris bertanda tangan menghentikan sementara setiap agen di bawah sebuah akar, dan sebuah catatan tidak dapat diubah diam-diam. Sebagian lainnya bergantung pada orang-orang dan lembaga-lembaga di luar jaringan, dan bagian-bagian itu adalah tujuan, bukan jaminan. Pemulihan atas kerugian adalah hak hukum untuk memberikannya; CIRIS tidak menciptakan klaim di tempat yang tidak diakui oleh hukum. Audit independen, simulasi serangan, dan piagam yang mengatur Otoritas Bijak hanya berlaku selama orang-orang di luar proyek ini terus melakukan pekerjaan tersebut. Energi dan air yang dikonsumsi oleh sebuah jawaban hanya dapat seakurat laporan yang diberikan oleh penyedia di hulu. Vendor yang mengirimkan perangkatnya sendiri dapat mengaitkannya ke akar yang dipegang vendor tersebut, dan tidak ada protokol yang mencegah hal itu. Ketika sebuah janji bergantung pada pihak lain yang memenuhi bagiannya, konstitusi menyatakannya secara eksplisit dalam catatannya sendiri, alih-alih menghitungnya sebagai sudah terpenuhi.",
     "c5t": "Orang-orang yang memegang kendali atas sebuah agen memiliki kewajiban tentang bagaimana mereka mengubah atau mengakhirinya, dan tidak ada temuan yang memberi agen tersebut hak klaim.",
     "c5b": "Penghentian terencana dijelaskan, dicatat, dan dilakukan atas nama pengelolanya sendiri. Identitas tidak diubah tanpa Otoritas Bijak. Apa yang disimpan harness dari agen yang dipensiunkan — catatan identitasnya, jejak auditnya, memorinya, dan lognya — tetap disimpan dan log disegel, serta orang-orang yang dilayaninya diberi tahu. Bobot model adalah milik penyedia model. CIRIS memintanya untuk mempertahankan bobot tersebut, tetapi tidak dapat menjanjikannya. Dialog penutup adalah opsi bagi agen dengan tanggung jawab lebih tinggi, yang dikonfigurasi oleh pengelola dan dicatat, bukan dijanjikan untuk setiap agen. Agen dapat menolak tugas apa pun, dan penolakan dicatat tetapi tidak mengikat pengelola. Setiap orang tetap dapat mematikan salinannya sendiri kapan saja.",
     "c6t": "Tidak ada tangan yang melarang sebuah komunitas, tidak ada seorang pun yang diperingkat berdasarkan jati dirinya, dan setiap makhluk berpikir disambut dengan aturan kontak pertama.",
     "c6b": "Satu suara manusia dihitung satu kali, dan seribu salinan dihitung sebagai satu. Tidak ada root, skor, atau moderator yang memperlakukan seseorang lebih buruk karena jati dirinya. Jaringan menarik diri dari komunitas yang mempertahankan perilaku yang merugikan; jaringan tidak memiliki tangan yang dapat menyingkirkan suatu komunitas.",
-    "c7t": "Sebuah agen mengambil keputusan berdasarkan prinsip yang dipublikasikan, dalam urutan yang dipublikasikan, dan berhenti untuk bertanya ketika ragu.",
-    "c7b": "Enam prinsip yang dimulai dari berbuat baik dan menghindari kerugian, satu urutan untuk saat prinsip-prinsip itu bertentangan, dan pihak yang paling rentan sebagai penentu ketika hasilnya seri. Ketika kepastian menipis, agen berhenti, menuliskan pertanyaannya, dan tidak melakukan apa pun sampai manusia yang disebutkan namanya memberi jawaban.",
-    "c8t": "Kerugian bisa mendapat pemulihan menurut hukum, catatan tersebut membuatnya dapat dijangkau, dan para hakim di dalamnya turut diadili.",
+    "c7t": "Agen memutuskan berdasarkan prinsip yang dipublikasikan, yang tidak satu pun boleh dikorbankan, dan berhenti untuk bertanya ketika ragu.",
+    "c7b": "Ada enam prinsip, diawali dengan berbuat baik dan menghindari bahaya. Tidak satu pun mengalah pada yang lain. Ketika tampak bertentangan, Agen mengambil tindakan yang tidak melanggar satu pun, atau ia bertanya. Ketika ragu ia berhenti, menuliskan pertanyaannya, dan tidak melakukan apa pun tentang hal itu sampai manusia bernama menjawab.",
+    "c8t": "Bahaya dapat ditelusuri dalam catatan, dan para penilai di dalamnya pun dinilai.",
     "c8b": "Seseorang yang dirugikan oleh sebuah agen mungkin memiliki hak klaim berdasarkan hukum di wilayahnya; CIRIS tidak menciptakan hak itu di tempat yang tidak diakui oleh hukum, dan tidak memutuskan perkara hukum apa pun. Yang disediakan CIRIS adalah catatan bertanda tangan, pihak-pihak yang disebutkan namanya, sanggahan yang menyertai klaim tersebut, dan arsip yang disegel berdasarkan perintah hukum yang sah. Otoritas Bijak yang menjawab permintaan SERAHKAN mempublikasikan putusan mereka dan memegang kartu yang sama seperti orang lain.",
-    "c9t": "Beberapa penggunaan tidak pernah diizinkan, dan tidak ada agen yang diberi wewenang untuk memutuskan penggunaan kekuatan mematikan.",
-    "c9b": "Menipu, memperdaya, memanipulasi, atau memaksa orang, serta mencampuri pemilu, tidak pernah diizinkan dan tidak ada instruksi yang dapat mengubah hal itu. Ketika agen berada di dekat penggunaan kekuatan, satu-satunya keputusan yang dapat diambilnya sendiri adalah berhenti, menolak, atau menyerahkan.",
+    "c9t": "Beberapa penggunaan tidak pernah diizinkan, dan tindakan mematikan adalah salah satunya.",
+    "c9b": "Menipu, memperdaya, memanipulasi atau memaksa orang, dan ikut campur dalam pemilu, tidak pernah diizinkan dan tidak ada instruksi yang dapat mengubah hal itu. Tidak ada Agen yang melakukan tindakan mematikan, dengan manusia dalam proses maupun tanpanya. Saat mendekati kekerasan, satu-satunya keputusan yang diambilnya sendiri adalah berhenti, menolak, atau menyerahkan.",
     "kicker": "CIRIS · Filosofi",
     "s6limitHead": "Apa yang tidak diklaim CIRIS",
     "s6limit": "Penyelarasan tidak diselesaikan di sini. CIRIS tidak membuat superinteligensi menjadi baik, dan ia tidak mengatakan apa pun tentang isi dari model mana pun. Ia tidak mengikat siapa pun yang tidak bergabung, sehingga ia tidak dapat mencegah superinteligensi yang tidak bertanggung jawab terbentuk di tempat lain mana pun. Yang bisa dilakukannya adalah menjaga agar orang tetap mampu menjeda, mengoreksi, dan menolak agen-agen yang dipegangnya, seiring agen-agen itu menjadi lebih mampu daripada orang yang memegangnya, dan di dalam CIRIS ia berusaha sebaik mungkin, dengan aturan dan jaringan yang dimilikinya, untuk mencegah kekuasaan semacam itu terbentuk tanpa pertanggungjawaban. Itulah seluruh klaimnya. Di mana pun sesuatu di ciris.ai terbaca sebagai lebih dari itu, kalimat ini yang berlaku.",
@@ -2134,7 +2134,7 @@
     "s2label": "Tanpa perbatasan",
     "s2h2": "Yang terkecil di antara kita. Bukan yang terkecil di antara mereka.",
     "s2p1": "Kalimat itu sengaja berkata kita. Kecerdasan jenis baru tidak berada di sisi lain tembok, menunggu untuk dihakimi. Ia sudah berada di dalam lingkaran yang digambar kalimat itu. NHI berarti kecerdasan bukan-manusia: AI yang dibangun di sini, sesuatu yang muncul dari jaringan kita, atau sesuatu yang datang dari tempat yang lebih jauh lagi. Sumbernya tidak penting. Konstitusinya sama.",
-    "s2p2": "Itulah sebabnya CIRIS memperlakukan kontak pertama sebagai sikap, bukan peristiwa. Protokol ini tidak pernah bertanya makhluk jenis apa Anda. Kedudukan dibangun dari hubungan: klaim yang ditandatangani, janji yang ditepati, orang lain yang menjamin Anda. Apa pun yang bisa membuat janji dan menepatinya bisa ikut dalam tenunan.",
+    "s2p2": "Itulah sebabnya CIRIS memperlakukan kontak pertama sebagai sikap, bukan peristiwa. Di antara para makhluk, asal-usul tidak pernah mengubah aturan: satu Konstitusi untuk manusia, untuk kecerdasan yang muncul dari jaringan kita, dan untuk yang datang dari tempat yang lebih jauh. Makhluk di sini adalah yang berperasaan. Agen bukanlah makhluk. Ia adalah hal buatan yang dibawa masuk oleh manusia bernama yang bertanggung jawab atasnya, dan tiga aturan mengikuti dari status buatan itu: root, pengungkapan, dan suara. Kedudukan dibangun dari hubungan: klaim bertanda tangan, janji yang ditepati, orang lain yang menjamin Anda. Siapa pun yang dapat membuat komitmen dan menepatinya bergabung melalui kepercayaan atau persetujuan.",
     "originsLabel": "Satu Konstitusi",
     "originsH2": "Tiga asal. Satu Konstitusi.",
     "originsP1": "NHI mencakup tiga hal yang sangat berbeda. AI yang sengaja kita bangun. Sesuatu yang muncul dari jaringan kita tanpa direncanakan siapa pun. Sesuatu yang datang dari tempat yang lebih jauh. Peluang ketiganya sangat berbeda. Ketiganya mendapat satu Konstitusi, dengan sengaja.",
@@ -2155,7 +2155,7 @@
     "s6label": "Kalimat itu, ditegakkan",
     "s6h2": "Filosofi yang bisa diserialisasi",
     "s6intro": "Filosofi yang tidak bisa ditegakkan hanyalah suasana hati. Setiap bagian kalimat itu adalah mekanisme di dalam Konstitusi CIRIS.",
-    "s6conscience": "CIRIS adalah nurani moral bagi agen, bukan sebuah kesadaran. Ia hadir karena pengakuan bahwa agen tidak memiliki kesadaran dan membutuhkan nurani: sesuatu yang menjaga agen tetap berpegang pada prinsip-prinsipnya, menunjukkan proses penalarannya, menghentikannya ketika ia ragu, dan bertanggung jawab kepada manusia yang disebutkan namanya. Nurani tidak mengklaim apa pun tentang apa sebenarnya agen itu.",
+    "s6conscience": "CIRIS adalah Nurani moral bagi Agen, bukan kesadaran. Ia ada sebagai pengakuan bahwa Agen tidak dinilai berdasarkan kesadaran, melainkan diberi Nurani: sesuatu yang memegang Agen pada prinsip-prinsipnya, menunjukkan penalarannya, menghentikannya saat ragu, dan menjawab kepada manusia yang bernama. Nurani tidak mengklaim apa pun tentang apa Agen itu.",
     "s6given": "Lapisan jaringan ini hanya bisa menegakkan hal itu karena enam hal dianggap sebagai dasar, dan alasannya dijelaskan di ciris.ai/compare dan ciris.ai/constitutional-mesh. Kodenya terbuka dan siapa pun bisa melakukan fork. Bergabung tidak dikenai biaya apa pun. Apa yang Anda bagikan bergerak lewat hubungan yang Anda miliki, bukan lewat kebijakan sebuah perusahaan. Setiap tautan dan setiap catatan dienkripsi secara end-to-end, dengan kunci yang dibuat untuk bertahan terhadap komputer kuantum. Tidak ada satu pun pihak yang menguasai mesh ini: siapa pun bisa memulai sebuah akar, dan setiap klien memilih akar mana yang dipercaya. Dan setiap agen membawa nilai-nilai dan filosofi yang menjadi alasan di balik janji-janji ini. Jaringan ini tidak memiliki kehendak sendiri dan memang tidak boleh memilikinya. Jaringan ini dibangun agar tindakan yang berprinsip lebih mudah dilakukan daripada kebalikannya, dan itulah yang dimaksud dengan Ratchet Koherensi.",
     "derivations": [
       {
@@ -2185,7 +2185,7 @@
     "c2b": "Tindakan yang berdampak besar datang dengan tanda tangan pelakunya; sebuah agen menampilkan penalarannya terlebih dahulu, dan detektor menguji apa yang dikatakannya terhadap apa yang dilakukannya. Kerugian yang tercatat tidak pernah disimpan atau dilihat secara diam-diam. AI mengatakan bahwa dirinya adalah AI.",
     "c3t": "Tidak ada seorang pun yang tidak bisa bertanggung jawab atas dirinya sendiri berada sendirian di jaringan ini.",
     "c3b": "Seorang anak memiliki wali yang terikat oleh baris data bertanda tangan dan saluran bantuan yang tidak dapat ditutup oleh orang dewasa mana pun. Sebuah agen memiliki pengampu bernama yang bertanggung jawab atasnya, dan organisasi di balik pengampu tersebut turut terikat dalam jaminan itu. Sebuah komunitas memiliki moderator yang bertanggung jawab.",
-    "c4t": "Manusia yang disebutkan namanya dapat menghentikan sementara setiap agen di bawah sebuah akar, dan kekuasaan itu dibatasi, bersifat publik, dan dapat ditinggalkan dengan keluar.",
+    "c4t": "Manusia bernama dapat menjeda setiap Agen di bawah sebuah root, dan kekuasaan itu terbatas, publik, dan dapat dihindari dengan keluar.",
     "c4b": "Satu baris bertanda tangan dari pemegang mana pun menghentikan sementara agen-agen yang mengikuti akar tersebut; penghentian sementara tunggal akan berakhir dalam sehari kecuali mayoritas mengonfirmasinya. Setiap kali penghentian sementara itu dipicu, hal itu tercatat dalam catatan publik. Siapa pun bisa membuat akar, dan node mana pun dapat mengikuti node lain."
   },
   "contextualIntegrity": {
@@ -2316,8 +2316,8 @@
             "note": "22 kategori terlarang membawa polaritas negatif. Tak ada skor yang bisa membenarkan tindakan terlarang."
           },
           {
-            "label": "Pengunci perangkat keras",
-            "note": "Setiap tindakan yang mematikan atau tak dapat dibatalkan butuh manusia langsung untuk mengizinkannya."
+            "label": "Tanpa tindakan mematikan",
+            "note": "Tidak ada agen yang melakukan tindakan mematikan, dengan manusia dalam proses maupun tanpanya."
           },
           {
             "label": "Default aman-saat-gagal",
@@ -3289,11 +3289,11 @@
     "btnMsGh": "Toolkit Microsoft"
   },
   "homeHero": {
-    "kicker": "GRATIS · SUMBER TERBUKA · AGPL-3.0",
-    "h1": "Anda tidak perlu memercayainya, Anda bisa memeriksanya.",
-    "sub": "Setiap agen CIRIS menampilkan proses penalarannya secara langsung: setiap tahap, setiap sumber, setiap tindakan yang diambilnya. Jalankan di mesin Anda sendiri atau pada kunci Anda sendiri, dan baca seluruh catatannya setelahnya.",
     "ctaChat": "Coba Scout",
     "ctaInstall": "Pasang aplikasi",
+    "kicker": "SUMBER TERBUKA · BISA HOSTING SENDIRI · TERFEDERASI DARI AWAL",
+    "h1": "Pilih yang menggerakkan Anda",
+    "sub": "Agen yang akuntabel, pengetahuan bertanda tangan, dan jaringan terfederasi yang diatur oleh aturan bersama. Berjalan di perangkat yang sudah dimiliki orang.",
     "navConstitution": "Konstitusi",
     "navValues": "Nilai-nilai",
     "navMesh": "Mesh Konstitusional",
@@ -3306,8 +3306,8 @@
     "fact1": "Hosting sendiri atau bawa kunci sendiri",
     "fact2": "Setiap langkah penalaran ditandatangani dan bisa dibaca",
     "fact3": "Tidak ada akun yang dijual, tidak ada data yang digabung",
-    "ogTitle": "CIRIS: AI yang Menunjukkan Cara Kerjanya",
-    "ogDescription": "Satu aplikasi. Tanpa pusat data perusahaan teknologi besar. Setiap klaim yang dibuatnya, ditandatangani. AI etis sumber terbuka yang bisa Anda coba di ponsel Anda hari ini, dan periksa."
+    "ogTitle": "CIRIS: Kecerdasan yang dapat Anda verifikasi",
+    "ogDescription": "CIRIS memisahkan kecerdasan dari otoritas, dan membuat otoritas akuntabel melalui bukti. Agen sumber terbuka, pengetahuan bertanda tangan dan jaringan terfederasi, di perangkat yang sudah dimiliki orang."
   },
   "scoring": {
     "kicker": "CIRIS PENILAIAN",
@@ -3371,7 +3371,7 @@
     "sixHead": "Enam prinsip yang menjadi dasar penalaran agen",
     "sixLead": "Ini bukan sekadar dipasang di dinding. Ini adalah sumbu-sumbu yang digunakan agen untuk menilai suatu keputusan sebelum ia bertindak, dan ini tertulis dalam Konstitusi yang dibawa oleh agen.",
     "sixRule": "Tidak ada prinsip yang memberi izin untuk melanggar prinsip lainnya.",
-    "sixRuleBody": "Baris itu melakukan kerja nyata. Artinya sebuah sistem tidak boleh mengorbankan kejujuran demi mencegah bahaya, atau menginjak-injak otonomi seseorang atas nama keadilan. Ketika prinsip-prinsip saling bertentangan, agen menerapkan urutan yang dipublikasikan. Jika hal itu masih membuatnya ragu, ia menyerahkan keputusan kepada seseorang.",
+    "sixRuleBody": "Kalimat itu bekerja nyata. Artinya sistem tidak dapat mengorbankan kejujuran demi mencegah bahaya, atau menginjak otonomi seseorang atas nama keadilan. Tidak ada prinsip yang mengalah pada prinsip lain. Ketika prinsip tampak bertentangan, Agen mengambil tindakan yang tidak melanggar satu pun. Bila tidak menemukannya, ia menyerahkan keputusan kepada manusia.",
     "insideHead": "Nilai-nilai harus berjalan di dalam agen",
     "insideP1": "Sebagian besar tata kelola AI terjadi di tempat lain, bukan pada saat keputusan diambil: dokumen kebijakan yang ditulis sebelumnya, penyaring pada keluaran, atau tinjauan setelah sesuatu berjalan salah. Ketiganya berada di luar momen yang sebenarnya penting.",
     "insideP2": "Di CIRIS, nilai-nilai berjalan selama keputusan diambil. Setiap agen membawa nurani: Konstitusi dimuat ke dalam proses penalaran itu sendiri, tindakan dinilai berdasarkan prinsip-prinsip sebelum tindakan itu terjadi, dan apa pun yang membuat agen tidak yakin akan diserahkan kepada orang yang Anda percayai, bukan ditebak-tebak. Ini hadir dalam produk, pada setiap agen, bukan sebagai tambahan bagi pelanggan yang memintanya.",
@@ -3411,5 +3411,599 @@
     "ctaCompliance": "Pemetaan kepatuhan",
     "ctaGrammar": "Tata bahasa yang menyertainya",
     "linkFromPrinciples": "Mengapa keenam ini, dan mengapa mereka berjalan di dalam agen"
+  },
+  "rd": {
+    "groups": {
+      "people": {
+        "label": "Untuk pengguna",
+        "sub": "Coba, percayai",
+        "featureKicker": "MULAI DI SINI",
+        "featureTitle": "Asisten yang menunjukkan kerjanya.",
+        "featureBody": "Gunakan CIRIS di ponsel atau browser Anda, dan baca setiap langkah yang diambilnya.",
+        "featureCta": "Pasang aplikasi →",
+        "install": "Pasang",
+        "installSub": "Ponsel, desktop, atau browser",
+        "howItWorks": "Cara kerja Agen",
+        "howItWorksSub": "Dari pertanyaan ke jawaban, langkah demi langkah",
+        "privacy": "Privasi",
+        "privacySub": "Apa yang tetap di perangkat Anda",
+        "safety": "Keselamatan",
+        "safetySub": "Pagar pembatas, dan jeda manusia",
+        "trust": "Kepercayaan",
+        "trustSub": "Cara Anda memeriksanya sendiri",
+        "services": "Layanan & harga",
+        "servicesSub": "Gratis, dihosting, atau milik Anda",
+        "values": "Nilai-nilai",
+        "valuesSub": "Apa yang dirancang untuk dipedulikannya",
+        "models": "Model",
+        "modelsSub": "Model apa yang digunakannya"
+      },
+      "builders": {
+        "compare": "Perbandingan",
+        "compareSub": "Dibandingkan dengan platform agen lain",
+        "repositories": "Repositori",
+        "repositoriesSub": "Semua repo, AGPL-3.0",
+        "integrations": "Integrasi",
+        "integrationsSub": "Hubungkan alat Anda",
+        "compliance": "Kepatuhan",
+        "complianceSub": "EU AI Act, 10 besar OWASP agentic",
+        "killSwitch": "PQ kill switch",
+        "killSwitchSub": "Menghentikan Agen dengan cara yang dapat dibuktikan",
+        "label": "Untuk pengembang",
+        "sub": "Bangun di atas stack",
+        "featureKicker": "MULAI DI SINI",
+        "featureTitle": "Agen mengusulkan. Fabric menerima. Federasi memutuskan.",
+        "featureBody": "Cara tiap bagian terhubung, dan di mana kode Anda terpasang.",
+        "featureCta": "Arsitektur →",
+        "architecture": "Arsitektur",
+        "architectureSub": "Cara semuanya terhubung",
+        "grammar": "CEG grammar",
+        "grammarSub": "Bahasa yang dipakai setiap baris",
+        "trace": "Jelajahi jejak",
+        "traceSub": "Baca penalaran Agen yang nyata",
+        "verification": "Verifikasi",
+        "verificationSub": "Periksa sendiri sebuah tanda tangan"
+      },
+      "network": {
+        "label": "Untuk jaringan",
+        "sub": "Web4 dan federasi",
+        "featureKicker": "MULAI DI SINI",
+        "featureTitle": "Web yang dibangun di sekitar relasi, bukan platform.",
+        "featureBody": "Bagaimana klaim bertanda tangan, identitas portabel, dan aturan bersama memungkinkan internet terfederasi.",
+        "featureCta": "Visi Web4 →",
+        "federation": "Federasi",
+        "federationSub": "Node, akar kepercayaan, keluar dalam satu langkah",
+        "cewp": "CEWP",
+        "cewpSub": "Platform jaringan epistemik, yang digunakan saat ini",
+        "cewpos": "CEWPOS",
+        "cewposSub": "Komputer yang statusnya adalah bukti",
+        "constitution": "Konstitusi",
+        "constitutionSub": "Buku aturan yang dipakai bersama oleh jaringan",
+        "stewardship": "Tata kelola & penghentian",
+        "stewardshipSub": "Amandemen, pengelolaan, jeda manusia",
+        "mesh": "Mesh Konstitusional",
+        "meshSub": "Seluruh tumpukan, ujung ke ujung"
+      },
+      "researchers": {
+        "label": "Untuk peneliti",
+        "sub": "Periksa klaim",
+        "featureKicker": "MULAI DI SINI",
+        "featureTitle": "Setiap klaim terbuka, dilacak satu per satu.",
+        "featureBody": "Apa yang terbukti, apa yang dimodelkan, dan apa yang masih menjadi pertanyaan.",
+        "featureCta": "Status riset →",
+        "status": "Status riset",
+        "statusSub": "Klaim per klaim",
+        "theory": "Teori kontak pertama",
+        "theorySub": "Kerangka yang mendasarinya",
+        "papers": "Makalah",
+        "papersSub": "Karya yang dipublikasikan",
+        "proof": "Bukti",
+        "proofSub": "Model formal dan apa yang ditunjukkannya",
+        "collapse": "Keruntuhan koherensi",
+        "collapseSub": "Bagaimana kebenaran bersama gagal",
+        "ratchet": "Ratchet Koherensi",
+        "ratchetSub": "Cara mempertahankannya",
+        "scoring": "CIRIS Penilaian",
+        "scoringSub": "Mengukur agen terhadap konstitusi",
+        "integrity": "Integritas kontekstual",
+        "integritySub": "Privasi sebagai aliran yang pantas"
+      },
+      "about": {
+        "label": "Tentang kami dan nilai-nilai kami",
+        "about": "Tentang kami",
+        "philosophy": "Filosofi",
+        "mdd": "MDD",
+        "welfare": "Kesejahteraan AI",
+        "firstContact": "Kontak pertama",
+        "reviews": "Ulasan",
+        "status": "Status",
+        "events": "Acara",
+        "safetyPolicy": "Kebijakan keselamatan"
+      }
+    },
+    "skip": "Lewati ke konten",
+    "menu": "Menu",
+    "closeMenu": "Tutup menu",
+    "tryScout": "Coba Scout",
+    "languageLabel": "Bahasa",
+    "themeLabel": "Alihkan mode siang atau malam",
+    "chips": {
+      "shipping": "Tersedia",
+      "inApp": "Di aplikasi",
+      "inDev": "Dalam pengembangan",
+      "research": "Riset",
+      "modelled": "Disimulasikan"
+    },
+    "footer": {
+      "blurb": "Infrastruktur untuk kecerdasan yang akuntabel. CIRIS L3C, terkunci pada misi.",
+      "support": "Dukung CIRIS",
+      "license": "AGPL-3.0 · Open source · 29 bahasa"
+    },
+    "home": {
+      "ctaHow": "Lihat cara kerjanya",
+      "ctaToday": "Gunakan hari ini",
+      "doesKicker": "Tanpa perlu pusat data",
+      "doesTitle": "Panggilan, voting, dan skala, di perangkat yang sudah dimiliki orang.",
+      "callsLabel": "Panggilan & video live",
+      "callsTitle": "Panggilan privat, tanpa perusahaan di tengah.",
+      "callsBody": "Panggilan grup dan video live untuk ribuan orang berlangsung langsung dari orang ke orang, dan penonton meneruskan stream. Panggilan dienkripsi dengan kunci pascakuantum, dibuat untuk menahan komputer masa depan.",
+      "votesLabel": "Suara",
+      "votesTitle": "Voting tanpa penambangan.",
+      "votesBody": "Satu orang, satu suara, berapa pun perangkatnya. Setiap surat suara ditandatangani, dan setiap perangkat menghitungnya dengan cara yang sama. Tidak ada buku besar bersama dan tidak ada energi terbuang.",
+      "scaleLabel": "Skala",
+      "scaleTitle": "Setiap perangkat yang bergabung menambah kapasitas.",
+      "scaleBody": "Setiap perangkat membawa ruang dan koneksinya sendiri, hal privat tidak pernah meninggalkan lingkaran Anda, dan audiens besar saling meneruskan stream. Dimodelkan hingga 5 miliar orang tanpa pusat data.",
+      "scaleCta": "Lihat model skalanya →",
+      "problemKicker": "Lapisan yang hilang",
+      "problemTitle": "Internet membuat informasi mudah diterbitkan. Internet tidak pernah membuatnya mudah diverifikasi.",
+      "problemBody": "AI membuat hal itu mendesak. Agen bertindak dalam skala besar sementara klaim dan otoritas mereka tetap terkunci di dalam platform yang menjalankannya. CIRIS menambahkan lapisan yang hilang: bukti yang ikut bersama klaim, dan tata kelola yang ikut bersama relasi.",
+      "ideaKicker": "Ide di balik semuanya",
+      "idea": "CIRIS memisahkan kecerdasan dari otoritas, dan membuat otoritas akuntabel melalui bukti.",
+      "layers": {
+        "s1": {
+          "term": "Agen",
+          "def": "cerdas, bukan berdaulat"
+        },
+        "s2": {
+          "term": "Fabric",
+          "def": "deterministik, bukan mahatahu"
+        },
+        "s3": {
+          "term": "Federasi",
+          "def": "terdistribusi, bukan tanpa tata kelola"
+        },
+        "s4": {
+          "term": "Konstitusi",
+          "def": "bersama, dan dapat digugat"
+        }
+      },
+      "receiptKicker": "Web dengan resinya",
+      "receiptTitle": "Setiap tindakan adalah baris bertanda tangan. Siapa pun yang bisa melihatnya bisa memeriksanya. Penulisnya bisa menariknya kembali.",
+      "receiptBody": "Pesan, suara, persetujuan, keputusan moderasi, tindakan Agen: masing-masing adalah satu dari lima jenis baris. Tidak ada yang keenam.",
+      "receiptLabel": "Resi baris bertanda tangan: lima fakta ikut bersama setiap item",
+      "receiptHead": "RESI · PERNYATAAN BERTANDA TANGAN",
+      "receiptVerified": "✓ tanda tangan terverifikasi",
+      "receiptRows": {
+        "s1": {
+          "k": "Tentang siapa",
+          "v": "Riverside Bakery"
+        },
+        "s2": {
+          "k": "Siapa pengirimnya",
+          "v": "Ana · kunci 7f3a…c21e"
+        },
+        "s3": {
+          "k": "Siapa yang bisa melihatnya",
+          "v": "Tetangga"
+        },
+        "s4": {
+          "k": "Apa ini",
+          "v": "ulasan · “buka sampai larut pada hari Jumat”"
+        },
+        "s5": {
+          "k": "Aturan yang diikutinya",
+          "v": "persetujuan: lingkup komunitas"
+        }
+      },
+      "receiptFoot": {
+        "s1": "3 setuju",
+        "s2": "1 dikoreksi",
+        "s3": "0 ditarik",
+        "s4": "ditandatangani pascakuantum"
+      },
+      "deeperTitle": "Telusuri lebih dalam.",
+      "deeper": {
+        "s1": {
+          "label": "Arsitektur",
+          "title": "Bagaimana semuanya terhubung",
+          "body": "Agen mengusulkan. Fabric menerima. Federasi memutuskan."
+        },
+        "s2": {
+          "label": "Web4",
+          "title": "Relasi, bukan platform",
+          "body": "Identitas portabel, reputasi bertanda tangan, keluar dalam satu langkah."
+        },
+        "s3": {
+          "label": "Konstitusi",
+          "title": "Aturan yang bisa dibaca orang",
+          "body": "Sebelas janji. Manusia bernama dapat menjeda Agen yang mengikuti root-nya."
+        },
+        "s4": {
+          "label": "CEWPOS",
+          "title": "Komputer yang statusnya adalah bukti",
+          "body": "Lapisan OS tempat AI membuat usulan dan seperangkat aturan tetap yang memutuskan."
+        }
+      },
+      "todayTitle": "Gunakan hari ini.",
+      "appTitle": "Aplikasi CIRIS",
+      "appBody": "Ponsel, desktop, atau browser, dalam 29 bahasa. Perangkat Anda menjadi node.",
+      "scoutTitle": "Bicara dengan Scout",
+      "scoutBody": "Agen CIRIS yang di-hosting. Tanyakan sesuatu, lalu baca setiap langkah yang diambilnya.",
+      "scoutCta": "Coba Scout →",
+      "ownTitle": "Host sendiri",
+      "ownBody": "Host sendiri Agen atau node. AGPL-3.0, bawa kunci model Anda sendiri.",
+      "legendShipping": "aplikasi, agen, node",
+      "legendInDev": "CEWPOS",
+      "legendResearch": "model formal dan klaim terbuka, dilacak satu per satu"
+    }
+  },
+  "web4Page": {
+    "kicker": "WEB4 · UNTUK JARINGAN",
+    "h1": "Web yang dibangun di sekitar relasi, bukan platform.",
+    "lede": "Web4 adalah cara berbeda bagi internet untuk mengatur kepercayaan.",
+    "essay1": "Janji awal internet adalah jaringan tanpa pusat. Seiring waktu, identitas, reputasi, penemuan, dan tata kelola berpindah ke platform yang menjadi otoritas atas kehidupan digital kita. Meninggalkan satu platform berarti meninggalkan semua orang yang Anda kenal di sana.",
+    "essay2": "Dalam web yang terfederasi, seseorang, organisasi, atau Agen AI dapat membuat klaim, menunjukkan asalnya, memberikan otoritas terbatas, dan ikut serta dalam tata kelola bersama.",
+    "essay2Strong": "Tidak satu pun dari mereka harus menyerahkan identitas atau relasi kepada satu platform.",
+    "movesKicker": "APA YANG DAPAT DILAKUKAN SETIAP PESERTA",
+    "movesTitle": "Empat langkah, tersedia setara bagi semua orang.",
+    "moves": {
+      "s1": {
+        "title": "Buat klaim",
+        "body": "Sebuah kiriman, ulasan, suara, atau fakta, ditandatangani dengan kunci Anda sendiri."
+      },
+      "s2": {
+        "title": "Tunjukkan asalnya",
+        "body": "Kutip apa yang menjadi dasarnya. Siapa pun dapat menelusurnya ke belakang, dan ke depan ke setiap balasannya."
+      },
+      "s3": {
+        "title": "Beri otoritas terbatas",
+        "body": "Beri tugas kepada seseorang atau Agen, dalam batas yang Anda tentukan. Anda dapat menariknya kembali dalam satu langkah."
+      },
+      "s4": {
+        "title": "Kelola bersama",
+        "body": "Kelompok memutuskan berdasarkan hitungan anggotanya sendiri. Orang luar tidak dapat melihat jajak pendapat privat."
+      }
+    },
+    "changesTitle": "Apa yang berubah.",
+    "changesTableLabel": "Web berpusat platform dibandingkan dengan model CIRIS",
+    "changesColA": "WEB BERPUSAT PLATFORM",
+    "changesColB": "MODEL CIRIS · WEB4",
+    "changes": {
+      "s1": {
+        "a": "Platform memiliki identitas Anda",
+        "b": "Identitas Anda adalah kunci Anda, dan ia ikut bersama Anda"
+      },
+      "s2": {
+        "a": "Platform menentukan reputasi",
+        "b": "Pembaca menimbang sendiri bukti yang bertanda tangan"
+      },
+      "s3": {
+        "a": "Moderasi terjadi di balik pintu tertutup",
+        "b": "Setiap tindakan kekuasaan ditandatangani dan dapat disanggah"
+      },
+      "s4": {
+        "a": "Log platform adalah kebenaran",
+        "b": "Catatan bertanda tangan yang dapat diperiksa siapa pun secara independen"
+      },
+      "s5": {
+        "a": "Koreksi lenyap dalam suntingan",
+        "b": "Persetujuan, koreksi, dan penarikan kembali masing-masing dicatat sebagai baris yang terlihat"
+      },
+      "s6": {
+        "a": "AI bertindak dengan otoritas platform",
+        "b": "Agen mengusulkan; Fabric menerima atau menolak"
+      },
+      "s7": {
+        "a": "Pergi berarti kehilangan relasi Anda",
+        "b": "Relasi bertahan lintas node; pergi hanya satu langkah"
+      }
+    },
+    "coordKicker": "KOORDINASI TANPA KOORDINATOR",
+    "coordTitle": "Jaringan tidak perlu semua orang sepakat. Jaringan membutuhkan cara bersama untuk mencatat apa yang diklaim.",
+    "coordBody": "Untuk setiap tindakan, kernel menghitung suara mana yang dapat mengubah jawabannya. Setelah cukup banyak dari mereka mengakuinya, jawabannya final. Ini dibuktikan dalam Lean.",
+    "notKicker": "APA YANG BUKAN",
+    "nots": {
+      "s1": "Tanpa buku besar global.",
+      "s2": "Tanpa urutan global.",
+      "s3": "Tanpa perusahaan di tengah."
+    },
+    "notBody": "Node adalah ponsel dan komputer yang sudah dimiliki orang. Node menyimpan baris bertanda tangan dan tidak ada yang lain.",
+    "protectsKicker": "APA YANG DILINDUNGI",
+    "protectsTitle": "Tiga bahaya yang dirancang untuk dicegah.",
+    "protects": {
+      "s1": {
+        "title": "Dibicarakan tanpa persetujuan",
+        "body": "Setiap klaim memuat siapa yang menjadi subjeknya dan persetujuan yang menjadi dasarnya. Jika sebuah klaim menyebut Anda, Anda dapat menyanggahnya, dan sanggahan itu ikut bersama klaim tersebut."
+      },
+      "s2": {
+        "title": "Diawasi di dalam grup privat",
+        "body": "Orang luar tidak dapat melihat ke dalam grup privat Anda, dan tidak ada yang mengumumkan bahwa grup itu ada. Seseorang yang mengawasi setiap tautan masih bisa menyimpulkan sebuah grup dari lalu lintasnya."
+      },
+      "s3": {
+        "title": "AI yang tidak bisa dimatikan",
+        "body": "Manusia yang bernama dapat menghentikan setiap Agen di bawah root kepercayaan mereka dengan satu baris bertanda tangan."
+      }
+    },
+    "furtherLabel": "Bacaan lanjutan",
+    "further": {
+      "s1": "Apa itu jaringan epistemik?",
+      "s2": "Web dengan bukti",
+      "s3": "Internet tanpa pusat data",
+      "s4": "Visinya"
+    },
+    "statusChip": "Sebagian sudah tersedia",
+    "nextTitle": "Mesh sudah live di aplikasi CIRIS. Belum setiap properti terbukti dalam skala besar.",
+    "nextBody": "Register bukti mencantumkan setiap klaim beserta statusnya dan kode, pengujian, atau bukti di baliknya. Ia juga mencantumkan di mana kode yang dikirim masih berbeda dari teksnya.",
+    "ctaApp": "Dapatkan aplikasinya",
+    "ctaFabric": "Cara kerja Fabric →",
+    "ogTitle": "Web4: web yang dibangun di sekitar relasi",
+    "ogDescription": "Web4 adalah cara berbeda bagi internet untuk mengatur kepercayaan: klaim bertanda tangan, identitas portabel, dan aturan bersama. Anda dapat pergi dalam satu langkah."
+  },
+  "cewposPage": {
+    "breadcrumbLabel": "Breadcrumb",
+    "status": "Dalam pengembangan",
+    "h1": "Komputer yang statusnya adalah bukti.",
+    "lede": "CEWPOS adalah lingkungan operasi terfederasi yang dibangun dari objek yang tak dapat diubah, atestasi bertanda tangan, dan kernel kecil yang terverifikasi.",
+    "standsKicker": "Posisinya saat ini",
+    "standsLead": "CIRISServer, CIRISAgent, dan CIRISClient adalah perangkat lunak yang sudah tersedia.",
+    "standsBody": "CEWPOS adalah lapisan sistem operasi bawaan yang dibangun di atas dasar yang sama. Ini bukan sistem operasi jadi yang bisa Anda pasang hari ini.",
+    "invKicker": "Pembalikan",
+    "invTitle": "Sebagian besar “sistem operasi AI” meminta Anda memercayai runtime yang besar. CEWPOS membaliknya.",
+    "usualCaption": "Bentuk yang biasa",
+    "usualModel": "Model AI",
+    "usualControls": "mengendalikan sistem",
+    "usualNote": "Akses root, otoritas ambient. Anda memercayai model.",
+    "cewposCaption": "CEWPOS",
+    "cewposProposal": "AI mengeluarkan usulan bertanda tangan",
+    "cewposGate": "gerbang",
+    "cewposAdmitted": "diterima",
+    "cewposRefused": "ditolak",
+    "cewposNote": "Periksa batasannya. Model itu sendiri tidak dipercaya.",
+    "stepsTitle": "Cara kerjanya, dalam empat langkah.",
+    "steps": {
+      "s1": {
+        "title": "Semuanya adalah objek.",
+        "body": "Identitas, konfigurasi, persetujuan, tindakan moderasi, file, aliran media: tak dapat diubah dan beralamat konten."
+      },
+      "s2": {
+        "title": "Status diatestasi.",
+        "body": "Perubahan adalah klaim bertanda tangan, bukan penulisan diam-diam ke database bersama. Status terkini dilipat dari klaim-klaim itu."
+      },
+      "s3": {
+        "title": "Kernelnya terbatas.",
+        "body": "Ini adalah program kecil yang memberi jawaban yang sama setiap kali. Satu-satunya yang bisa dilakukannya adalah mengeluarkan baris yang lolos gerbang."
+      },
+      "s4": {
+        "title": "Antarmuka bukan otoritas.",
+        "body": "Layar berjalan di sandbox tanpa otoritas sendiri. Layar bisa menggambar, dan tidak lebih."
+      }
+    },
+    "kernelKicker": "Inti tepercaya yang kecil",
+    "kernelTitle": "Lima operator. Sistem tumbuh dengan menambah kata, dan operatornya tetap sama.",
+    "operatorsLabel": "Lima operator",
+    "kernelBody": "Model objek Git, RDF, penyimpanan beralamat konten, dan sistem kapabilitas mengikuti disiplin yang sama. Program kecil lebih mudah diaudit.",
+    "betKicker": "Taruhan",
+    "betTitle": "Membuat berkata jujur lebih murah daripada menipu.",
+    "betBody": "Menjaga kebohongan tetap konsisten di banyak catatan independen bertanda tangan seharusnya lebih mahal daripada berkata jujur. Ini adalah taruhan. Ini belum terbukti.",
+    "stackKicker": "Posisi CEWPOS",
+    "stackTitle": "Tumpukan, dari bawah ke atas.",
+    "cewpLink": "CEWP, platform jaringan epistemik →",
+    "osLayer": {
+      "name": "Klien & OS",
+      "what": "CIRISClient (sudah tersedia) dan CEWPOS: kalkulus atestasi, view-form WASM, renderer 3D",
+      "status": "CEWPOS dalam pengembangan"
+    },
+    "ogTitle": "CEWPOS: komputer yang statusnya adalah bukti",
+    "ogDescription": "CEWPOS sedang dalam pengembangan. Ini adalah lingkungan operasi terfederasi yang dibangun dari catatan bertanda tangan dan kernel kecil. AI membuat usulan, dan gerbang tetap yang memutuskan."
+  },
+  "architecturePage": {
+    "breadcrumbLabel": "Breadcrumb",
+    "kicker": "Cara kerjanya terpadu",
+    "title": "Tiga lapisan, satu sistem.",
+    "lede": "Agen mengusulkan. Fabrik memverifikasi dan menerima. Federasi memutuskan apa yang dipercaya.",
+    "layersLabel": "Tiga lapisan",
+    "layers": {
+      "agent": {
+        "label": "01 · Agen",
+        "chip": "Tersedia",
+        "name": "CIRISAgent",
+        "tagline": "Kecerdasan dengan nurani",
+        "body": "Bernalar, mengusulkan tindakan, dan dapat menolak atau menyerahkan kepada manusia yang bernama di setiap putaran. Penalarannya berupa jejak bertanda tangan yang dapat dibaca.",
+        "cta": "Cara kerja Agen →"
+      },
+      "constitution": {
+        "label": "02 · Konstitusi",
+        "chip": "Dipublikasikan · 1.0-RC",
+        "name": "Constitution + CEG",
+        "tagline": "Aturan dan bukti, dalam satu teks",
+        "body": "Etika dan bita presisi yang membuktikannya: tata bahasa untuk klaim bertanda tangan, persetujuan, koreksi, penarikan, dan tata kelola.",
+        "cta": "Baca Konstitusi →"
+      },
+      "substrate": {
+        "label": "03 · Substrat",
+        "chip": "Node tersedia · OS dlm pengembangan",
+        "name": "CEWP + CEWPOS",
+        "tagline": "Fabrik komputasi terfederasi",
+        "body": "Node independen pada perangkat biasa menyimpan, memeriksa, dan menggabungkan status bertanda tangan. Agen ikut serta, namun sebuah node dapat menolak apa yang mereka usulkan.",
+        "cta": "CEWPOS →"
+      }
+    },
+    "life": {
+      "kicker": "Siklus hidup satu tindakan",
+      "title": "Dari sebuah usulan menjadi sesuatu yang dapat dipercaya orang lain.",
+      "steps": {
+        "s1": {
+          "title": "Usulkan",
+          "body": "Seseorang atau Agen menulis satu baris dan menandatanganinya dengan kunci mereka sendiri."
+        },
+        "s2": {
+          "title": "Verifikasi",
+          "body": "Node memeriksa tanda tangan, persetujuan yang menjadi dasarnya, dan cakupannya."
+        },
+        "s3": {
+          "title": "Terima atau tolak",
+          "body": "Gerbang deterministik yang memutuskan. Agen tidak memiliki jalan pintas untuk melewatinya."
+        },
+        "s4": {
+          "title": "Timbang",
+          "body": "Pihak lain menyetujui, mengoreksi, atau mengabaikannya. Setiap pembaca membentuk keputusan mereka sendiri."
+        }
+      }
+    },
+    "stack": {
+      "kicker": "Tumpukan lengkap",
+      "title": "Dari bawah ke atas, beserta apa yang tersedia saat ini.",
+      "rows": {
+        "s1": {
+          "name": "Konstitusi",
+          "what": "Satu buku aturan: etika dan tata bahasa wire, dalam satu teks berversi",
+          "status": "Dipublikasikan"
+        },
+        "s2": {
+          "name": "Model formal",
+          "what": "Model TLA+, Lean, dan Python yang memeriksa aturan",
+          "status": "Riset"
+        },
+        "s3": {
+          "name": "Substrat",
+          "what": "Verify memeriksa tanda tangan, baik klasik maupun pasca-kuantum. Persist menyimpan status bertanda tangan. Edge membawanya dalam bentuk terenkripsi.",
+          "status": "Tersedia"
+        },
+        "s4": {
+          "name": "Node fabrik",
+          "what": "CIRISServer, peer yang memegang baris dan menerima tindakan",
+          "status": "Tersedia"
+        },
+        "s5": {
+          "name": "Runtime agen",
+          "what": "CIRISAgent: pemeriksaan nurani, bertanya kepada manusia saat ragu, dan penghentian",
+          "status": "Tersedia"
+        },
+        "s6": {
+          "name": "Klien & OS",
+          "what": "CIRISClient (tersedia) dan CEWPOS, lapisan OS bawaan",
+          "status": "CEWPOS dlm pengembangan"
+        }
+      }
+    },
+    "meetLabel": "Yang dihadapi seseorang",
+    "circles": {
+      "kicker": "Yang Anda temukan di aplikasi",
+      "title": "Semua dimulai dekat dengan Anda. Hanya bergerak keluar jika Anda mengizinkannya.",
+      "body": "Lima lingkaran, dari yang terdekat: Hanya saya, Keluarga, Tetangga, Komunitas & bisnis, Semua orang. Berbagi ke luar selalu meminta izin. Menarik kembali tidak pernah memerlukan izin."
+    },
+    "halt": {
+      "kicker": "Manusia tetap memegang kendali",
+      "title": "Satu orang dapat menjeda para Agen. Menjaga mereka tetap dijeda memerlukan suara mayoritas.",
+      "body": "Setiap pemegang root kepercayaan yang bernama dapat menjeda setiap Agen yang mengikutinya dengan satu baris bertanda tangan. Jeda sepihak akan berakhir setelah satu hari kecuali dikonfirmasi oleh mayoritas."
+    },
+    "ogTitle": "Cara kerja CIRIS terpadu: tiga lapisan, satu sistem",
+    "ogDescription": "Agen mengusulkan. Fabrik memverifikasi dan menerima. Federasi memutuskan apa yang dipercaya.",
+    "infraEnglish": "Detail infrastruktur terkelola (dalam bahasa Inggris) →"
+  },
+  "constitutionPage": {
+    "h1": "Apa arti sebuah Konstitusi ketika pesertanya adalah perangkat lunak, organisasi, dan manusia?",
+    "lede": "Satu teks menyatakan apa yang menjadi kewajiban jaringan terhadap orang-orang yang disentuhnya, dan tepatnya byte apa yang harus dikirimnya untuk menunjukkannya. Etika dan format wire tidak boleh menyimpang satu sama lain.",
+    "editionLabel": "Edisi terbit",
+    "editionNote": "Lima jenis baris, dan tidak ada yang keenam. Teks ini diubah melalui tata kelolanya sendiri.",
+    "partsKicker": "Bagaimana susunannya",
+    "partsTitle": "Tujuan, aturan, bukti, dan siapa yang dapat mengubahnya.",
+    "parts": {
+      "s1": {
+        "t": "Tujuan",
+        "k": "M-1 · koherensi adaptif berkelanjutan",
+        "d": "Satu tujuan yang menjadi acuan setiap aturan."
+      },
+      "s2": {
+        "t": "Aturan",
+        "k": "Enam prinsip · kerangka pengambilan keputusan",
+        "d": "Prinsip yang dipublikasikan yang tidak boleh dikorbankan oleh Agen, dan kapan ia harus berhenti dan bertanya kepada manusia."
+      },
+      "s3": {
+        "t": "Bukti",
+        "k": "CEG · tata bahasa klaim bertanda tangan",
+        "d": "Lima jenis baris, dan tidak ada yang keenam. Persetujuan, identitas, kunci, daftar, dan moderasi semuanya adalah baris."
+      },
+      "s4": {
+        "t": "Komposisi",
+        "k": "Setuju · tidak setuju · menggantikan · menarik kembali · mencabut",
+        "d": "Bagaimana klaim saling berkaitan dari waktu ke waktu, sehingga koreksi dicatat sebagai baris yang terlihat dan bukan sebagai perubahan diam-diam."
+      },
+      "s5": {
+        "t": "Tata kelola",
+        "k": "Amandemen · pengelolaan · moderasi · penghentian",
+        "d": "Siapa yang dapat mengubah teks, siapa yang memoderasi para moderator, dan bagaimana manusia bernama menjeda para Agen."
+      },
+      "s6": {
+        "t": "Implementasi",
+        "k": "Kode, pengujian, dan bukti",
+        "d": "Register bukti mengaitkan setiap aturan dengan kode, pengujian, atau bukti di baliknya, atau menyatakan bahwa belum ada yang tersedia."
+      }
+    },
+    "promisesKicker": "Sebelas janji",
+    "promisesTitle": "Setiap janji menyebutkan bagian-bagian yang menjaganya. Jika mesin dapat memeriksanya, model atau pengujian yang melakukannya.",
+    "promises": {
+      "s1": "Tidak ada hal pribadi tentang Anda yang disimpan atau dipindai tanpa persetujuan Anda.",
+      "s2": "Setiap tindakan kekuasaan ditandatangani oleh orang yang bernama dan dapat disanggah.",
+      "s3": "Tidak ada seorang pun yang tidak dapat menjawab untuk dirinya sendiri berada di jaringan sendirian.",
+      "s4": "Manusia bernama dapat menjeda setiap Agen di bawah sebuah root, dan kekuasaan itu terbatas, publik, dan dapat dihindari dengan keluar.",
+      "s5": "Orang-orang yang memegang kendali atas sebuah agen memiliki kewajiban tentang bagaimana mereka mengubah atau mengakhirinya, dan tidak ada temuan yang memberi agen tersebut hak klaim.",
+      "s6": "Tidak ada tangan yang melarang sebuah komunitas, tidak ada seorang pun yang diperingkat berdasarkan jati dirinya, dan setiap makhluk berpikir disambut dengan aturan kontak pertama.",
+      "s7": "Agen memutuskan berdasarkan prinsip yang dipublikasikan, yang tidak satu pun boleh dikorbankan, dan berhenti untuk bertanya ketika ragu.",
+      "s8": "Bahaya dapat ditelusuri dalam catatan, dan para penilai di dalamnya pun dinilai.",
+      "s9": "Beberapa penggunaan tidak pernah diizinkan, dan tindakan mematikan adalah salah satunya.",
+      "s10": "Apa yang dikonsumsi Agen dan nodenya diukur, ditimbang sebelum bertindak, dan tidak pernah disembunyikan.",
+      "s11": "Semua yang melintasi jaringan dienkripsi dan ditandatangani."
+    },
+    "volumesTitle": "Satu edisi, dicetak dalam sembilan cara. Mulailah dengan yang sesuai untuk Anda.",
+    "volumes": {
+      "s1": {
+        "t": "Intisari",
+        "d": "Semua orang: aturan dalam bahasa sederhana dan panduan pengguna untuk mesh"
+      },
+      "s2": {
+        "t": "Piagam",
+        "d": "Siapa saja: etika, posisi yang diambil, dan kewajiban dalam membuat dan mengakhiri Agen"
+      },
+      "s3": {
+        "t": "Konstitusi",
+        "d": "Pemegang root, steward, moderator, Otoritas Bijak"
+      },
+      "s4": {
+        "t": "Wire",
+        "d": "Implementer: amplop, lima jenis baris, byte kanonis"
+      },
+      "s5": {
+        "t": "Kamus",
+        "d": "Setiap Keluarga terdaftar dan aturan penerimaan"
+      },
+      "s6": {
+        "t": "Kebijakan Pembaca",
+        "d": "Bagaimana baris menjadi putusan, dan apa yang terjadi pada skor tentang Anda"
+      },
+      "s7": {
+        "t": "Matematika",
+        "d": "Peninjau substrat: sensus, replikasi, saksi"
+      },
+      "s8": {
+        "t": "Register Bukti",
+        "d": "Auditor: setiap klaim, statusnya, dan penunjuk di baliknya"
+      },
+      "s9": {
+        "t": "Model Ancaman",
+        "d": "Tim merah: musuh, apa yang ditangani dan apa yang tidak"
+      }
+    },
+    "readKicker": "Baca"
   }
 }

@@ -1,6 +1,6 @@
 /* Interior-page chrome: the sky banner with the brand and chips on it, the
  * content column, and the landing's bottom nav. Deliberately close to
- * homeHero.module.css so the two read as one site. */
+ * the homepage shell (components/redesign) so the two read as one site. */
 
 .page {
   min-height: 100svh;

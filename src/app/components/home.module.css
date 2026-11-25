@@ -1,0 +1,272 @@
+/* The homepage hero: the water, a fade into the page, and the claim under it.
+ * Heights are in svh so a phone's collapsing URL bar does not resize the scene
+ * mid-scroll. The header floats over the water (RdShell overlayHeader). */
+
+.hero {
+  position: relative;
+}
+
+.water {
+  position: relative;
+  height: clamp(400px, 74svh, 1200px);
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.ocean {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fade {
+  position: absolute;
+  inset: auto 0 0;
+  height: 16%;
+  background: linear-gradient(transparent, var(--bg));
+  pointer-events: none;
+}
+
+.claim {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px 32px 0;
+  text-align: center;
+}
+
+.claim .lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.claim .ctas {
+  justify-content: center;
+}
+
+.kicker {
+  margin: 0 0 18px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--accentText);
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 64px;
+  align-items: end;
+}
+
+.splitWide {
+  flex: 1 1 560px;
+  min-width: 0;
+}
+
+.splitNarrow {
+  flex: 1 1 420px;
+  min-width: 0;
+  margin: 0;
+}
+
+.idea {
+  margin: 0;
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.ideaKicker {
+  margin: 0 0 16px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+}
+
+.layers {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  font-size: 16px;
+}
+
+.layers dt,
+.layers dd {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.layers dt {
+  font-weight: 600;
+}
+
+.layers dd {
+  margin: 0;
+  color: var(--dim);
+}
+
+.layers dt:nth-last-of-type(1),
+.layers dd:nth-last-of-type(1) {
+  border-bottom: 0;
+}
+
+.receiptSec {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  align-items: center;
+}
+
+.receipt {
+  flex: 1 1 460px;
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--line2);
+  border-radius: 18px;
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.receiptHead {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px dashed var(--line2);
+  font-size: 12px;
+}
+
+.receiptRows {
+  margin: 0;
+  padding: 4px 24px;
+}
+
+.receiptRow {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.receiptRow:last-child {
+  border-bottom: 0;
+}
+
+.receiptRow dt {
+  font-size: 15px;
+  color: var(--dim);
+}
+
+.receiptRow dd {
+  margin: 0;
+  font-size: 14px;
+}
+
+.receiptFoot {
+  padding: 12px 24px;
+  background: var(--panel2);
+  font-size: 12px;
+  color: var(--mute);
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.deeper {
+  min-height: 200px;
+  gap: 10px;
+}
+
+.deeperTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.deeperBody {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--dim);
+}
+
+.appHead {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.appHead img {
+  border-radius: 11px;
+}
+
+.todayTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.todayBody {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dim);
+}
+
+/* The shared store badges, in this page's palette. */
+.badges {
+  margin-top: auto;
+}
+
+.badges a {
+  color: var(--fg) !important;
+  background: transparent;
+  border: 1px solid var(--line2);
+}
+
+.pill {
+  margin-top: auto;
+  align-self: flex-start;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line2);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.code {
+  margin-top: auto;
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.legend {
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--mute);
+}
+
+@media (max-width: 560px) {
+  .claim {
+    padding: 0 20px;
+  }
+
+  .receiptRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+
+  .layers {
+    grid-template-columns: 120px 1fr;
+  }
+}

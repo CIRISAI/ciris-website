@@ -1,0 +1,880 @@
+/* /architecture/ ("How it fits together"): page-only styles. Colors come from
+ * the shell's tokens (rd.module.css); --rose is the one extra this page needs. */
+
+.page {
+  --rose: #b4235a;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+:global(html[data-theme="dark"]) .page {
+  --rose: #f07ba3;
+}
+
+.crumbs {
+  padding-top: 28px;
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.crumbs a {
+  text-decoration: none;
+}
+
+.crumbs [aria-current] {
+  color: var(--fg);
+}
+
+.hero {
+  padding: 56px 0 0;
+  max-width: 860px;
+}
+
+.heroKicker {
+  margin: 0 0 18px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accentText);
+}
+
+.h1 {
+  margin: 0;
+  font-size: clamp(40px, 5.2vw, 68px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.lede {
+  margin: 22px 0 0;
+  font-size: clamp(18px, 2vw, 21px);
+  line-height: 1.5;
+  color: var(--dim);
+  text-wrap: pretty;
+}
+
+/* three layers */
+.layers {
+  padding: 64px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.layer {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.layerHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.layerLabel {
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.layerName {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accentText);
+}
+
+.layerBody {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dim);
+}
+
+.layerCta {
+  margin-top: auto;
+  padding-top: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accentText) !important;
+}
+
+/* section heads */
+.block {
+  padding: 110px 0 0;
+}
+
+.kicker {
+  margin: 0 0 14px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accentText);
+}
+
+.h2 {
+  margin: 0;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+/* life of one act */
+.steps {
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.step {
+  padding: 28px;
+  border-right: 1px solid var(--line);
+}
+
+.step:last-child {
+  border-right: 0;
+}
+
+.stepN {
+  font-size: 20px;
+  color: var(--accentText);
+}
+
+.stepTitle {
+  margin: 14px 0 8px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.stepBody {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dim);
+}
+
+/* the full stack, drawn bottom to top */
+.stack {
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 56px 220px minmax(0, 1fr) 170px;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 24px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.rowN {
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.rowName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.rowWhat {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--dim);
+}
+
+.rowChip {
+  justify-self: end;
+}
+
+/* circles + halt */
+.meet {
+  padding: 110px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.meetCard {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 36px;
+  background: var(--panel);
+}
+
+.rose {
+  color: var(--rose);
+}
+
+.meetTitle {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.meetBody {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dim);
+}
+
+@media (max-width: 1020px) {
+  .layers {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .step {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .step:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .step:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .row {
+    grid-template-columns: 40px 180px minmax(0, 1fr);
+  }
+
+  .rowChip {
+    grid-column: 2 / -1;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .meet {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 0 16px;
+  }
+
+  .crumbs {
+    padding-top: 16px;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .layers {
+    padding-top: 44px;
+  }
+
+  .layer,
+  .meetCard {
+    padding: 24px;
+  }
+
+  .block,
+  .meet {
+    padding-top: 72px;
+  }
+
+  .steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .step,
+  .step:nth-last-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .step:last-child {
+    border-bottom: 0;
+  }
+
+  .row {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 6px 12px;
+    padding: 16px 18px;
+  }
+
+  .rowWhat,
+  .rowChip {
+    grid-column: 2 / -1;
+  }
+
+  .meetTitle {
+    font-size: 24px;
+  }
+}
+
+/* ---- the hosted infrastructure (moved from the old /architecture page) ---- */
+
+.infra {
+  margin-top: 130px;
+  padding-top: 64px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 24px;
+}
+
+.infraHead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.infraLede {
+  margin: 16px 0 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--dim);
+}
+
+.infraSub {
+  margin: 56px 0 20px;
+  font-size: clamp(24px, 2.6vw, 30px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.callout {
+  margin-top: 40px;
+  border: 1px solid var(--line2);
+  border-left: 4px solid var(--accent);
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.calloutWarn {
+  border-left-color: var(--warn);
+}
+
+.calloutViolet {
+  border-left-color: var(--violetText);
+}
+
+.calloutTitle {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dim);
+}
+
+.p strong,
+.list strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.small {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--mute);
+}
+
+.link {
+  color: var(--accentText) !important;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.replace {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  font-size: 14px;
+  color: var(--dim);
+}
+
+.replace strong {
+  color: var(--fg);
+}
+
+/* the two-region diagram */
+.diagram {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: max-content;
+  margin: 0 auto;
+  padding: 12px 24px;
+  border: 1px solid var(--line2);
+  border-radius: 12px;
+  background: var(--panel2);
+}
+
+.clientsName {
+  font-weight: 600;
+}
+
+.tiny {
+  font-size: 12px;
+  color: var(--mute);
+}
+
+.drops {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  margin: 12px 0;
+}
+
+.drops span {
+  width: 1px;
+  height: 32px;
+  background: var(--line2);
+}
+
+.split {
+  margin-bottom: 16px;
+  text-align: center;
+  font-style: italic;
+}
+
+.regions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.region {
+  border: 1px solid var(--line2);
+  border-top: 3px solid var(--rc);
+  border-radius: 12px;
+  background: var(--panel2);
+  padding: 18px;
+}
+
+.regionUs {
+  --rc: var(--ok);
+}
+
+.regionEu {
+  --rc: var(--accent);
+}
+
+.regionHead {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.regionName {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.regionVia {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--warn);
+}
+
+.regionDirect {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--mute);
+}
+
+.domain {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--dim);
+}
+
+.svcList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--dim);
+}
+
+.svcList li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rc);
+  flex: none;
+}
+
+.usOnly {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--warn);
+}
+
+.usOnly .dot {
+  background: var(--warn);
+}
+
+.sync {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0 4px;
+}
+
+.syncLine {
+  flex: 1;
+  height: 1px;
+  background: var(--line2);
+}
+
+.syncPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line2);
+  background: var(--panel2);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dim);
+}
+
+.legend {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  font-size: 12px;
+  color: var(--mute);
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 2px solid var(--rc);
+  box-sizing: border-box;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--warn);
+}
+
+/* cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stackCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 24px;
+  display: block;
+  text-decoration: none;
+}
+
+a.card:hover {
+  border-color: var(--line2);
+  opacity: 1 !important;
+}
+
+.cardTitle {
+  margin: 0 0 8px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+
+.cardP {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dim);
+}
+
+.list {
+  margin: 12px 0 0;
+  padding: 0 0 0 18px;
+  list-style: disc;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--mute);
+}
+
+.list li + li {
+  margin-top: 4px;
+}
+
+.metrics {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--ok);
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.metricsTitle {
+  margin: 0 0 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ok);
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  text-align: center;
+}
+
+.metricValue {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.metricLabel {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--mute);
+}
+
+.note {
+  margin-top: 16px;
+  border-radius: 14px;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  padding: 20px 24px;
+}
+
+.noteTitle {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pauses {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pause {
+  border-radius: 12px;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  padding: 16px;
+}
+
+.pauseTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.repos {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.repo {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.repoHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.repoName {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.license {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  color: var(--violetText);
+}
+
+.repoLinks {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.repoLinks a {
+  color: var(--accentText) !important;
+  text-decoration: none;
+}
+
+.repoLinks a:hover {
+  text-decoration: underline;
+}
+
+.infraCtas {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.closing {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--mute);
+}
+
+@media (max-width: 900px) {
+  .repos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metricGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .regions,
+  .cards,
+  .pauses,
+  .replace,
+  .repos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .drops {
+    gap: 64px;
+  }
+
+  .infra {
+    margin-top: 72px;
+    padding-top: 48px;
+  }
+
+  .callout,
+  .diagram,
+  .panel {
+    padding: 20px;
+  }
+}

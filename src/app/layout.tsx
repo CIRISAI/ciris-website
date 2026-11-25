@@ -14,6 +14,7 @@ import { NEW_LOOK_ROUTES, DARK_SCENE_ROUTES } from "@/app/components/newLookRout
 // it before paint, so the language "sticks" across the whole site. Built from
 // config so the path/locale lists never drift.
 const LOCALE_GUARD = `(function(){try{
+if(/[?&]hl=en(&|$)/.test(location.search))return;
 var s=localStorage.getItem('ciris-locale');if(!s)return;
 var P=${JSON.stringify(PREFIXED_LOCALES)},M=${JSON.stringify([...LOCALIZED_ROUTES])};
 var path=location.pathname;while(path.length>1&&path.charAt(path.length-1)==='/')path=path.slice(0,-1);
@@ -45,11 +46,12 @@ const fontBrandRegular = localFont({
   fallback: ["sans-serif"],
 });
 
-const TITLE =
-  "CIRIS: Verifiable Ethical AI Agent | Coherence-Grounded, AGPL, Production-Deployed";
+// The redesign's positioning (handoff §1): plain words, no technical terms on
+// the homepage, the unifying sentence as the description.
+const TITLE = "CIRIS: Intelligence you can verify";
 
 const DESCRIPTION =
-  "Safe by structure, open by principle, kind by design. Open-source ethical AI framework with post-quantum cryptographic attestation (Ed25519 + ML-DSA-65 dual signatures), runtime conscience, Kish-formula effective-dimensionality measurement, Ubuntu-grounded relational ethics, and Mission Driven Development methodology. AGPL-3.0, L3C mission-locked. Live on Google Play and App Store.";
+  "CIRIS separates intelligence from authority, and makes authority accountable through evidence. Open-source agents, signed knowledge, and a federated network governed by shared rules, running on the devices people already own. AGPL-3.0, L3C mission-locked.";
 
 export const metadata: Metadata = {
   title: {

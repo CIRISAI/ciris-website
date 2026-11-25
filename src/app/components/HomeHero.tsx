@@ -1,233 +1,216 @@
-"use client";
-// The new landing page: the day/night hero with the CIRIS signet in the sky.
-// Ported from the redesign's 2a artboard (CIRIS Home Hero.dc.html): a sky
-// wash with an 8-bit ground band, the signet (public/logo.svg, masked and
-// floating) as the sky's luminary with bloom, corona and slowly turning
-// rays, day or night on the toggle. Per Eric: no cell/neural viz, no pixel
-// agent, no Scout sign-in inset; "Chat with Scout" links to scout.ciris.ai
-// next to Install. The old four-doors lobby is retired entirely.
+// The homepage. The underwater hero (schools of fish, a whale shark the
+// visitor can steer with the pointer, and glowing fish that gather into the
+// CIRIS signet, drift apart and gather again; Franco's design, CIRISAI/
+// ciris-website PR 38, engine in ./ocean), then the redesign's sections in
+// order: what it already does, the missing layer and the idea under
+// everything, the receipt, go deeper, use it today. Header and footer by
+// audience come from RdShell. Copy: rd.home.* and homeHero.{kicker,h1,sub}.
 
-import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Instrument_Sans, Silkscreen } from "next/font/google";
+import { shellCopy } from "./redesign/shellCopy";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { LOCALES, localeMeta, localizeHref, localizedPath } from "@/i18n/config";
-import { setLocalePref } from "@/i18n/pref";
+import { localizeHref } from "@/i18n/config";
 import StoreBadges from "./graphics/StoreBadges";
-import styles from "./homeHero.module.css";
-import { T, GW, GH, paintTerrain, paintWeather, paintLuminary } from "./sky/skyPaint";
-import { useSkyTheme } from "./sky/useSkyTheme";
+import RdShell from "./redesign/RdShell";
+import { CALLS_AND_VOTES_CONFIRMED_SHIPPING, StatusChip } from "./redesign/StatusChip";
+import HeroWater from "./HeroWater";
+import s from "./redesign/rd.module.css";
+import h from "./home.module.css";
 
-const instrument = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
-const silkscreen = Silkscreen({ subsets: ["latin"], weight: ["400", "700"] });
+/** Order and targets of the "go deeper" cards; the copy is rd.home.deeper. */
+const DEEPER = [
+  { key: "s1", href: "/architecture" },
+  { key: "s2", href: "/web4" },
+  { key: "s3", href: "/constitution" },
+  { key: "s4", href: "/cewpos" },
+] as const;
+
+const INSTALL_COMMAND = "pip install ciris-agent";
 
 export default function HomeHero({ t, locale }: { t: Dictionary; locale: string }) {
   const hero = t.homeHero;
-  const { dark: isDark, ready, toggle } = useSkyTheme();
-  const [langOpen, setLangOpen] = useState(false);
-  const groundRef = useRef<HTMLCanvasElement>(null);
-  const lumRef = useRef<HTMLCanvasElement>(null);
-  const terrainRef = useRef<{ night: boolean; cv: HTMLCanvasElement } | null>(null);
-
-  const P = isDark ? T.dark : T.light;
-
-  useEffect(() => {
-    if (!ready) return;
-    const night = isDark;
-    let raf = 0;
-    const t0 = performance.now();
-    const tick = () => {
-      const time = (performance.now() - t0) / 1000;
-      const gcv = groundRef.current;
-      if (gcv) {
-        if (gcv.width !== GW) {
-          gcv.width = GW;
-          gcv.height = GH;
-        }
-        const g = gcv.getContext("2d");
-        if (g) {
-          g.imageSmoothingEnabled = false;
-          if (!terrainRef.current || terrainRef.current.night !== night) {
-            const off = document.createElement("canvas");
-            off.width = GW;
-            off.height = GH;
-            const og = off.getContext("2d")!;
-            og.imageSmoothingEnabled = false;
-            paintTerrain(og, night ? T.dark.ground : T.light.ground);
-            terrainRef.current = { night, cv: off };
-          }
-          g.clearRect(0, 0, GW, GH);
-          g.drawImage(terrainRef.current.cv, 0, 0);
-          paintWeather(g, time, night);
-        }
-      }
-      const lcv = lumRef.current;
-      if (lcv) {
-        const cssW = lcv.clientWidth || 1272;
-        const cssH = lcv.clientHeight || 440;
-        const DPR = 2;
-        if (lcv.width !== cssW * DPR || lcv.height !== cssH * DPR) {
-          lcv.width = cssW * DPR;
-          lcv.height = cssH * DPR;
-        }
-        const g = lcv.getContext("2d");
-        if (g) {
-          g.setTransform(DPR, 0, 0, DPR, 0, 0);
-          paintLuminary(g, cssW, cssH, time, night);
-        }
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [ready, isDark]);
-
+  const c = t.rd.home;
+  const chips = t.rd.chips;
   const lh = (href: string) => localizeHref(href, locale);
+  const callsChip = CALLS_AND_VOTES_CONFIRMED_SHIPPING ? (
+    <StatusChip kind="shipping" label={chips.inApp} />
+  ) : (
+    <StatusChip kind="inDev" label={chips.inDev} />
+  );
 
   return (
-    <div
-      className={`${instrument.className} ${styles.page}`}
-      style={{ background: P.pageBg, color: P.pageFg }}
-      data-hero-theme={isDark ? "dark" : "light"}
-    >
-      {/* The sky: wash, 8-bit ground, luminary, floating signet, fade. */}
-      <div className={styles.sky} style={{ background: P.skyWash }}>
-        <canvas ref={groundRef} className={styles.ground} aria-hidden />
-        <canvas ref={lumRef} className={styles.luminary} aria-hidden />
-        <div className={styles.signetWrap} aria-hidden>
-          <div
-            className={styles.signet}
-            style={{
-              background: P.signetFill,
-              WebkitMaskImage: "url(/logo.svg)",
-              maskImage: "url(/logo.svg)",
-              filter: `drop-shadow(0 1px 14px ${P.signetGlow})`,
-            }}
-          />
-        </div>
-        <div
-          className={styles.skyFade}
-          style={{ background: `linear-gradient(to bottom, transparent 0%, transparent 80%, ${P.pageBg} 100%)` }}
-        />
-      </div>
-
-      {/* Header: brand left; language pill + theme toggle top right, matching
-          chips per the design (and Eric: language lives beside the toggle). */}
-      <header className={styles.header}>
-        <div className={styles.brand}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="CIRIS" width={28} height={22} style={{ filter: P.logoFilter }} />
-          <span className={styles.wordmark}>CIRIS</span>
-        </div>
-        <div className={styles.chips}>
-          <div className={styles.langWrap}>
-            <button
-              onClick={() => setLangOpen((o) => !o)}
-              aria-expanded={langOpen}
-              aria-haspopup="listbox"
-              className={styles.langChip}
-              style={{ background: P.chipBg }}
-            >
-              <span className={styles.langRing} />
-              {localeMeta(locale)?.nativeName ?? "English"}
-            </button>
-            {langOpen && (
-              <div
-                className={styles.langPanel}
-                role="listbox"
-                style={{ background: P.pageBg, borderColor: "color-mix(in srgb, currentColor 16%, transparent)" }}
-              >
-                {LOCALES.map((l) => (
-                  <a
-                    key={l.code}
-                    role="option"
-                    aria-selected={l.code === locale}
-                    href={localizedPath("/", l.code)}
-                    onClick={() => setLocalePref(l.code)}
-                    className={l.code === locale ? styles.langActive : undefined}
-                  >
-                    {l.nativeName}
-                  </a>
-                ))}
-              </div>
-            )}
+    <RdShell t={shellCopy(t)} locale={locale} overlayHeader>
+      <section className={h.hero} aria-labelledby="hero-h">
+        <HeroWater />
+        <div className={h.claim}>
+          <p className={`${s.px} ${h.kicker}`}>{hero.kicker}</p>
+          <h1 id="hero-h" className={s.h1}>
+            {hero.h1}
+          </h1>
+          <p className={`${s.lede} ${h.lede}`}>{hero.sub}</p>
+          <div className={`${s.ctas} ${h.ctas}`}>
+            <Link href={lh("/architecture")} className={s.btnPrimary}>
+              {c.ctaHow}
+            </Link>
+            <a href="#today" className={s.btnSecondary}>
+              {c.ctaToday}
+            </a>
           </div>
-          <button
-            onClick={toggle}
-            title="Light / dark"
-            aria-label="Toggle day or night"
-            className={styles.themeToggle}
-            style={{ background: P.chipBg }}
-          >
-            <span className={styles.pip} style={{ background: P.lightPipBg }}>
-              <span className={styles.pipDotFill} style={{ background: P.lightPipDot }} />
-            </span>
-            <span className={styles.pip} style={{ background: P.darkPipBg }}>
-              <span className={styles.pipDotRing} style={{ borderColor: P.darkPipDot }} />
-            </span>
-          </button>
         </div>
-      </header>
+      </section>
 
-      {/* The claim, centered under the signet. */}
-      <main className={styles.copy}>
-        <p className={`${silkscreen.className} ${styles.kicker}`}>{hero.kicker}</p>
-        <h1 className={styles.h1}>{hero.h1}</h1>
-        <p className={styles.sub}>{hero.sub}</p>
-        <div className={styles.ctas}>
-          <a href="https://scout.ciris.ai" className={styles.ctaPrimary}>
-            {hero.ctaChat}
-          </a>
-          <Link href={lh("/install")} className={styles.ctaSecondary}>
-            {hero.ctaInstall}
-          </Link>
+      <section className={s.sec} aria-labelledby="does-h">
+        <p className={`${s.kicker} ${s.mono}`}>{c.doesKicker}</p>
+        <h2 id="does-h" className={s.h2} style={{ maxWidth: "22ch" }}>
+          {c.doesTitle}
+        </h2>
+        <div className={s.grid3}>
+          <article className={s.card}>
+            <div className={s.cardHead}>
+              <span className={`${s.cardLabel} ${s.mono}`}>{c.callsLabel}</span>
+              {callsChip}
+            </div>
+            <h3 className={s.cardTitle}>{c.callsTitle}</h3>
+            <p className={s.cardBody}>{c.callsBody}</p>
+          </article>
+          <article className={s.card}>
+            <div className={s.cardHead}>
+              <span className={`${s.cardLabel} ${s.mono}`}>{c.votesLabel}</span>
+              {callsChip}
+            </div>
+            <h3 className={s.cardTitle}>{c.votesTitle}</h3>
+            <p className={s.cardBody}>{c.votesBody}</p>
+          </article>
+          <article className={s.card}>
+            <div className={s.cardHead}>
+              <span className={`${s.cardLabel} ${s.mono}`}>{c.scaleLabel}</span>
+              <StatusChip kind="modelled" label={chips.modelled} />
+            </div>
+            <h3 className={s.cardTitle}>{c.scaleTitle}</h3>
+            <p className={s.cardBody}>{c.scaleBody}</p>
+            <a href="https://cirisai.github.io/CEWP/" className={s.more}>
+              {c.scaleCta}
+            </a>
+          </article>
         </div>
-        {/* The app is on both stores today: the icon people will look for on
-            their phone, and the two badges that take them there. */}
-        <div className={styles.store}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/apple-touch-icon.png"
-            alt="CIRIS app icon"
-            width={44}
-            height={44}
-            className={styles.appIcon}
-          />
-          <StoreBadges labels={t.lobby.store} className={styles.storeBadges} />
+      </section>
+
+      <section className={s.sec} aria-labelledby="problem-h">
+        <div className={h.split}>
+          <div className={h.splitWide}>
+            <p className={`${s.kicker} ${s.mono}`}>{c.problemKicker}</p>
+            <h2 id="problem-h" className={s.h2}>
+              {c.problemTitle}
+            </h2>
+          </div>
+          <p className={`${s.body} ${h.splitNarrow}`}>{c.problemBody}</p>
         </div>
-      </main>
+        <div className={`${s.rule} ${h.split}`}>
+          <div className={h.splitWide}>
+            <p className={`${s.px} ${h.ideaKicker}`}>{c.ideaKicker}</p>
+            <p className={h.idea}>{c.idea}</p>
+          </div>
+          <dl className={`${h.layers} ${h.splitNarrow}`}>
+            {Object.values(c.layers).map((l) => (
+              <div key={l.term} style={{ display: "contents" }}>
+                <dt>{l.term}</dt>
+                <dd>{l.def}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
 
-      <div className={styles.facts}>
-        <span>{hero.fact1}</span>
-        <span>{hero.fact2}</span>
-        <span>{hero.fact3}</span>
-      </div>
+      <section className={`${s.sec} ${h.receiptSec}`} aria-labelledby="row-h">
+        <div className={h.splitNarrow}>
+          <p className={`${s.kicker} ${s.mono}`}>{c.receiptKicker}</p>
+          <h2 id="row-h" className={s.h2}>
+            {c.receiptTitle}
+          </h2>
+          <p className={s.body} style={{ margin: "22px 0 0" }}>
+            {c.receiptBody}
+          </p>
+        </div>
+        <figure className={h.receipt} aria-label={c.receiptLabel}>
+          <div className={`${h.receiptHead} ${s.mono}`}>
+            <span style={{ letterSpacing: "0.1em", color: "var(--mute)" }}>{c.receiptHead}</span>
+            <span className={s.ok}>{c.receiptVerified}</span>
+          </div>
+          <dl className={h.receiptRows}>
+            {Object.values(c.receiptRows).map((r) => (
+              <div key={r.k} className={h.receiptRow}>
+                <dt>{r.k}</dt>
+                <dd className={s.mono}>{r.v}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className={`${h.receiptFoot} ${s.mono}`}>
+            {Object.values(c.receiptFoot).map((f) => (
+              <span key={f}>{f}</span>
+            ))}
+          </div>
+        </figure>
+      </section>
 
-      {/* The clean bottom nav: the landing's only navigation (no top nav by
-          design). Small, dim, one row; the rest of the site hangs off it. */}
-      <nav className={styles.bottomNav} aria-label="Site">
-        <Link href={lh("/constitution")}>{hero.navConstitution}</Link>
-        <Link href={lh("/values")}>{hero.navValues}</Link>
-        <Link href={lh("/constitutional-mesh")}>{hero.navMesh}</Link>
-        <Link href={lh("/safety")}>{hero.navSafety}</Link>
-        <Link href={lh("/research-status")}>{hero.navResearch}</Link>
-        <Link href="/papers">{hero.navPapers}</Link>
-        <Link href="/reviews">{hero.navReviews}</Link>
-        <Link href="/status">{hero.navStatus}</Link>
-        <a href="https://github.com/CIRISAI" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-        {/* CIRIS is not a 501(c)(3), so this says support, never donate. */}
-        <a
-          href="https://www.gofundme.com/f/the-ai-the-world-deserves"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.navSupport}
-        >
-          {hero.navSupport}
-        </a>
-      </nav>
+      <section className={s.sec} aria-labelledby="deeper-h">
+        <h2 id="deeper-h" className={s.h2s}>
+          {c.deeperTitle}
+        </h2>
+        <div className={s.grid4} style={{ marginTop: 28 }}>
+          {DEEPER.map(({ key, href }) => ({ ...c.deeper[key], href })).map((d) => (
+            <Link key={d.href} href={lh(d.href)} className={`${s.card} ${h.deeper}`}>
+              <span className={`${s.cardLabel} ${s.mono}`}>
+                {d.label}
+                {d.href === "/cewpos" && (
+                  <>
+                    {" · "}
+                    <span className={s.warn}>{chips.inDev}</span>
+                  </>
+                )}
+              </span>
+              <span className={h.deeperTitle}>{d.title}</span>
+              <span className={h.deeperBody}>{d.body}</span>
+              <span className={`${s.more} ${s.arrowMark}`} aria-hidden>
+                →
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
-    </div>
+      <section id="today" className={s.sec} aria-labelledby="today-h">
+        <h2 id="today-h" className={s.h2s}>
+          {c.todayTitle}
+        </h2>
+        <div className={s.grid3} style={{ marginTop: 28 }}>
+          <div className={s.card}>
+            <div className={h.appHead}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/apple-touch-icon.png" alt="" width={48} height={48} />
+              <h3 className={h.todayTitle}>{c.appTitle}</h3>
+            </div>
+            <p className={h.todayBody}>{c.appBody}</p>
+            <StoreBadges labels={t.lobby.store} className={h.badges} />
+          </div>
+          <div className={s.card}>
+            <h3 className={h.todayTitle}>{c.scoutTitle}</h3>
+            <p className={h.todayBody}>{c.scoutBody}</p>
+            <a href="https://scout.ciris.ai" className={h.pill}>
+              {c.scoutCta}
+            </a>
+          </div>
+          <div className={s.card}>
+            <h3 className={h.todayTitle}>{c.ownTitle}</h3>
+            <p className={h.todayBody}>{c.ownBody}</p>
+            <code className={`${h.code} ${s.mono}`}>{INSTALL_COMMAND}</code>
+          </div>
+        </div>
+        <p className={`${h.legend} ${s.mono}`}>
+          <span className={s.ok}>● {chips.shipping}</span> {c.legendShipping} &#160;·&#160;{" "}
+          <span className={s.warn}>● {chips.inDev}</span> {c.legendInDev} &#160;·&#160;{" "}
+          <span className={s.violet}>● {chips.research}</span> {c.legendResearch}
+        </p>
+      </section>
+    </RdShell>
   );
 }

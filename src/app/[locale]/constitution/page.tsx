@@ -1,9 +1,9 @@
 // Localized front-door for the unified CIRIS Constitution (/es/constitution, …).
-// Thin entry over the shared ConstitutionV2, fed the locale's dictionary.
+// Thin entry over the redesigned ConstitutionPage, fed the locale's dictionary.
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";
-import ConstitutionV2 from "@/app/components/ConstitutionV2";
+import ConstitutionPage from "@/app/components/redesign/pages/ConstitutionPage";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
 
@@ -29,5 +29,5 @@ export default async function LocalizedConstitution({
 }) {
   const { locale } = await params;
   const dict = getDictionary(isLocale(locale) ? locale : "en");
-  return <ConstitutionV2 t={dict} locale={isLocale(locale) ? locale : "en"} />;
+  return <ConstitutionPage t={dict} locale={isLocale(locale) ? locale : "en"} />;
 }

@@ -119,6 +119,9 @@ export const LOCALIZED_ROUTES: ReadonlySet<string> = new Set([
   "/compliance/owasp-agentic-top-10",
   "/compliance/eu-ai-act",
   "/security/post-quantum-kill-switch",
+  "/web4",
+  "/cewpos",
+  "/architecture",
 ]);
 
 /**
