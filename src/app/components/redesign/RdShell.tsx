@@ -17,6 +17,7 @@ import { useSkyTheme } from "@/app/components/sky/useSkyTheme";
 import MachineTranslationBanner from "@/app/components/MachineTranslationBanner";
 import { ABOUT_LINKS, AUDIENCES, type AudienceKey, SUPPORT_HREF, label } from "./siteMap";
 import { StatusChip } from "./StatusChip";
+import { SignetMark } from "./SignetMark";
 import { getCopyrightNotice } from "@/lib/copyright";
 import s from "./rd.module.css";
 
@@ -121,8 +122,7 @@ export default function RdShell({
         <div className={s.stage}>
         <header ref={headerRef} className={`${s.header} ${overlayHeader ? s.overlay : ""}`}>
           <Link href={lh("/")} className={s.brand} aria-label="CIRIS">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" alt="" width={30} height={23} />
+            <SignetMark size={36} className={s.mark} />
             <span className={s.wordmark}>CIRIS</span>
           </Link>
 
@@ -266,8 +266,7 @@ export default function RdShell({
           <div className={s.footGrid}>
             <div>
               <div className={s.footBrand}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo.svg" alt="" width={26} height={20} />
+                <SignetMark size={30} className={s.mark} />
                 <span className={s.wordmark}>CIRIS</span>
               </div>
               <p className={s.footBlurb}>{rd.footer.blurb}</p>

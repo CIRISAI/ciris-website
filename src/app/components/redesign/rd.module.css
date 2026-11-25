@@ -124,14 +124,16 @@
   text-decoration: none;
 }
 
-.brand img {
-  filter: var(--logoFilter);
+.mark {
+  flex: none;
+  color: var(--accentText);
 }
 
 .wordmark {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 21px;
   letter-spacing: 0.08em;
+  line-height: 1;
 }
 
 .nav {
@@ -684,10 +686,6 @@ a.card:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.footBrand img {
-  filter: var(--logoFilter);
 }
 
 .footBlurb {
