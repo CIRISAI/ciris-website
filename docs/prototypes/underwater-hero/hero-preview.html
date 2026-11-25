@@ -379,17 +379,24 @@ function createOcean(w,h) {
   let state = 8702;
   const random = () => ((state=(Math.imul(state,1664525)+1013904223)>>>0)/4294967296);
   const small = w<580;
-  const counts = small ? [71,48] : [94,63];
+  const counts = small ? [92,79,72] : [142,121,106];
+  const currents = [
+    {x:.29,y:.25,dir: 1,phase:-.75,rate:.235,depth:.89,span:.29},
+    {x:.71,y:.45,dir:-1,phase:2.39,rate:.206,depth:.72,span:.27},
+    {x:.43,y:.64,dir: 1,phase:-.26,rate:.184,depth:.59,span:.28},
+  ];
   const nearest = new Int16Array(7);
   const distances = new Float64Array(7);
   const school = counts.map((count,g) => Array.from({length:count}, () => {
+    const current=currents[g];
     const u=random()*2-1, v=random()+random()+random()-1.5, scale=random(), layer=random();
-    const x=w*((g===0 ? .31 : .69)+u*(small ? .32 : .27));
-    const y=h*((g===0 ? .34 : .59)+v*(.07+.14*(1-u*u)) + Math.sin(u*2.9)*.065*(g===0 ? -1 : 1));
-    const vx=(g===0 ? 1 : -1)*h*(.065+random()*.052), vy=h*(random()-.5)*.055;
+    const x=w*(current.x+u*(current.span+(small ? .03 : 0)));
+    const y=h*(current.y+v*(.052+.106*(1-u*u))-Math.sin(u*2.9)*.057*current.dir);
+    const vx=current.dir*h*(.060+random()*.045), vy=h*(random()-.5)*.045;
+    const heading=Math.atan2(vy,vx);
     return {
-      x,y,px:x,py:y,vx,vy,heading:Math.atan2(vy,vx),roll:0,
-      phase:random()*TAU,depth:(.91-g*.22)*(.34+layer*.66),spacing:.73+.53*random(),
+      x,y,px:x,py:y,vx,vy,heading,previousHeading:heading,roll:0,previousRoll:0,
+      phase:random()*TAU,depth:current.depth*(.34+layer*.66),spacing:.73+.53*random(),
       size:((small ? 4.9 : 5.2)+scale*(small ? 6.2 : 9.6))*(.73+.32*layer),
     };
   }));
@@ -399,11 +406,13 @@ function createOcean(w,h) {
     const entering=Math.min(1,(time-SCHOOL_INTRO_SECONDS)/2.5);
     const presence=entering*entering*(3-2*entering);
     return [0,1].map((i) => {
-      const period=i===0 ? 34 : 43;
+      const period=i===0 ? 37 : 46;
       const phase=((time+(i===0 ? 7 : 26))%period)/period;
-      const u=i===0 ? 1.57-2.09*phase : -.53+2.09*phase;
-      const y=h*((i===0 ? .47 : .29)+.075*Math.sin(TAU*phase+i));
-      return {x:w*u,y,dir:i===0 ? -1 : 1,angle:.075*Math.cos(TAU*phase+i),phase:i*2.9+.48,
+      const glide=phase+.037*Math.sin(TAU*phase);
+      const u=i===0 ? 1.57-2.09*glide : -.53+2.09*glide;
+      const swell=TAU*phase+i*.8;
+      const y=h*((i===0 ? .49 : .31)+.066*Math.sin(swell)+.013*Math.sin(swell*2));
+      return {x:w*u,y,dir:i===0 ? -1 : 1,angle:.066*Math.cos(swell),phase:i*2.9+.48,
         size:Math.min(w*.25,h*.38)*(i===0 ? 1 : .75),opacity:presence*(i===0 ? .70 : .43),presence};
     });
   }
@@ -411,11 +420,12 @@ function createOcean(w,h) {
   function step(dt,time) {
     const sharks=sharksAt(time);
     school.forEach((group,g) => {
-      const a=time*(g===0 ? .29 : .23)+(g===0 ? -.66 : 2.53);
+      const current=currents[g];
+      const a=time*current.rate+current.phase;
       const guideX=w*(.5+Math.sin(a)*.30);
-      const guideY=h*((g===0 ? .37 : .56)+Math.sin(a*1.42+g)*.11);
-      const cruiseX=Math.cos(a)*h*.108;
-      const cruiseY=Math.cos(a*1.42+g)*h*.044;
+      const guideY=h*(current.y+Math.sin(a*1.35+g*.61)*.088);
+      const cruiseX=Math.cos(a)*h*.092;
+      const cruiseY=Math.cos(a*1.35+g*.61)*h*.037;
       const personal=Math.max(13,Math.min(w*.081,h*.086));
       // Read positions/velocities from the same frame, then integrate all fish together.
       for (const f of group) {
@@ -440,8 +450,8 @@ function createOcean(w,h) {
           sx-=dx/d*space*space;
           sy-=dy/d*space*space;
         }
-        const wave=Math.sin(f.x/w*9-time*1.34+g*1.5);
-        const eddy=Math.sin(f.y/h*8+f.x/w*5+time*.63+g*.71);
+        const wave=Math.sin(f.x/w*9-time*1.05+g*1.5);
+        const eddy=Math.sin(f.y/h*8+f.x/w*5+time*.54+g*.71);
         let fx=cx*.077+ax*.16+sx*h*.39+(cruiseX-f.vx)*.48+(guideX-f.x)*.12+eddy*h*.022;
         let fy=cy*.11+ay*.16+sy*h*.39+(cruiseY-f.vy)*.49+(guideY-f.y)*.34+wave*h*.056;
         for (const shark of sharks) {
@@ -452,12 +462,14 @@ function createOcean(w,h) {
           if (d<reach) {
             const push=(1-d/reach)**2*h*1.19*shark.presence;
             fx+=dx/Math.max(d,8)*push*.66;
-            fy+=(Math.abs(dy)>1 ? Math.sign(dy) : (g===0 ? -1 : 1))*push;
+            // Bank gradually around the whale's centerline instead of snapping away from it.
+            const bankSide=Math.tanh(dy/(h*.043)+(current.y<.45 ? -.39 : .39));
+            fy+=bankSide*push;
           }
           // A broad, gentler wake keeps the bank turning even after the whale shark passes.
           const trail=(shark.x-f.x)*shark.dir/shark.size;
           if (trail>0 && trail<1.9 && Math.abs(dy)<reach*.63) {
-            const wake=Math.sin(Math.PI*trail/1.9)*(1-Math.abs(dy)/(reach*.63))*h*.20*shark.presence;
+            const wake=Math.sin(Math.PI*trail/1.9)**2*(1-Math.abs(dy)/(reach*.63))**2*h*.21*shark.presence;
             fx+=shark.dir*wake*.8;
             fy+=Math.sin(trail*2.1+g)*wake*.62;
           }
@@ -466,17 +478,18 @@ function createOcean(w,h) {
         fy+=Math.max(0,h*.13-f.y)*1.6-Math.max(0,f.y-h*.80)*1.6;
         f.nx=f.vx+fx*dt; f.ny=f.vy+fy*dt;
         const speed=Math.hypot(f.nx,f.ny);
-        const max=h*.245;
+        const max=h*.215;
         if (speed>max) { f.nx*=max/speed; f.ny*=max/speed; }
       }
       for (const f of group) {
         f.px=f.x; f.py=f.y;
+        f.previousHeading=f.heading; f.previousRoll=f.roll;
         f.vx=f.nx; f.vy=f.ny;
         const yaw=Math.atan2(f.vy,f.vx)-f.heading;
         const turn=Math.atan2(Math.sin(yaw),Math.cos(yaw));
-        f.heading+=turn*Math.min(.29,Math.hypot(f.vx,f.vy)*dt*.29);
-        const ripple=.16+.15*Math.sin(f.x/w*9-time*1.34+g*1.5+f.phase*.39);
-        f.roll+=(Math.min(.90,ripple+Math.abs(turn)*.53)-f.roll)*.20;
+        f.heading+=turn*(1-Math.exp(-dt*Math.min(6.8,Math.hypot(f.vx,f.vy)*.25)));
+        const ripple=.16+.15*Math.sin(f.x/w*9-time*1.05+g*1.5+f.phase*.39);
+        f.roll+=(Math.min(.90,ripple+Math.abs(turn)*.53)-f.roll)*(1-Math.exp(-dt*4.6));
         f.x+=f.vx*dt; f.y+=f.vy*dt;
       }
     });
@@ -487,7 +500,6 @@ function createOcean(w,h) {
 function createMarineArt(rgba,mix,seed) {
   const turn=Math.PI*2;
   const path=(commands)=>new Path2D(commands);
-  const whaleBody=path('M .89 -.08 C .91 -.044 .902 .021 .856 .053 C .74 .13 .54 .164 .25 .151 C -.10 .145 -.32 .098 -.62 .046 Q -.74 .026 -.84 .037 L -.84 -.044 C -.68 -.045 -.56 -.087 -.40 -.121 C -.16 -.172 .035 -.202 .27 -.204 C .49 -.199 .672 -.158 .80 -.13 Q .866 -.111 .89 -.08 Z');
   const farFin=path('M .25 .080 Q .15 .196 -.11 .30 Q -.15 .314 -.145 .282 L .025 .104 Z');
   const nearFin=path('M .38 .068 C .264 .167 .133 .288 -.119 .36 Q -.152 .373 -.142 .34 L .002 .167 C .074 .088 .18 .065 .38 .068 Z');
   const dorsal=path('M -.009 -.169 Q -.06 -.266 -.177 -.329 Q -.223 -.354 -.204 -.317 Q -.179 -.250 -.222 -.159 Z');
@@ -514,12 +526,13 @@ function createMarineArt(rgba,mix,seed) {
   function fishSprites(palette,light,lit) {
     const base=lit ? palette.gold : palette.shoal;
     const silver=lit ? palette.glint : palette.rim;
-    return Array.from({length:16},(_,i)=>{
+    const frames=24;
+    return Array.from({length:frames},(_,i)=>{
       const sprite=document.createElement('canvas');
       sprite.width=96; sprite.height=64;
       const s=sprite.getContext('2d');
       s.translate(48,32); s.scale(32,32);
-      const phase=i*turn/16;
+      const phase=i*turn/frames;
       const swing=Math.sin(phase), far=Math.sin(phase-.62);
       const tail=-.70+.047*Math.cos(phase);
       const neck=swing*.075;
@@ -574,7 +587,8 @@ function createMarineArt(rgba,mix,seed) {
 
   function drawWhaleShark(ctx,s,time,light,palette,w) {
     if (s.x < -s.size*2 || s.x > w+s.size*2) return;
-    const undulation=Math.sin(time*1.89+s.phase);
+    const beat=time*1.54+s.phase;
+    const undulation=Math.sin(beat);
     const bank=Math.cos(time*.58+s.phase);
     const hide=palette.shark;
     const rim=palette.rim;
@@ -590,10 +604,19 @@ function createMarineArt(rgba,mix,seed) {
     ctx.fill(farFin);
     ctx.fill(secondDorsal);
     ctx.fill(dorsal);
+    // The rear body bends all the way to the animated tail hinge in one silhouette.
+    // The fin overlaps the hinge so the joint stays connected throughout the stroke.
+    const hingeX=-.92, hingeY=.049*undulation;
+    const whaleBody=path(`M .89 -.08 C .91 -.044 .902 .021 .856 .053
+      C .74 .13 .54 .164 .25 .151 C -.10 .145 -.32 .098 -.62 .046
+      C -.719 .030 -.833 ${hingeY+.041} ${hingeX-.022} ${hingeY+.029}
+      L ${hingeX-.022} ${hingeY-.031} C -.833 ${hingeY-.040} -.714 -.026 -.62 -.066
+      Q -.54 -.091 -.40 -.121 C -.16 -.172 .035 -.202 .27 -.204
+      C .49 -.199 .672 -.158 .80 -.13 Q .866 -.111 .89 -.08 Z`);
     ctx.save();
-    ctx.translate(-.806,.051*undulation);
-    ctx.rotate(.105*undulation);
-    ctx.scale(.88+.15*Math.cos(time*1.89+s.phase-.24),1);
+    ctx.translate(hingeX,hingeY);
+    ctx.rotate(.136*undulation);
+    ctx.scale(.91+.12*Math.cos(beat-.24),1);
     const tailTone=ctx.createLinearGradient(0,-.32,0,.24);
     tailTone.addColorStop(0,rgba(backFin,.85));
     tailTone.addColorStop(.57,rgba(hide,.98));
@@ -640,7 +663,8 @@ function createMarineArt(rgba,mix,seed) {
   return {fishSprites,drawWhaleShark};
 }
 
-const SIGNET_SETTLED_AT=SCHOOL_INTRO_SECONDS+10.5;
+const SIGNET_FORM_SECONDS=15;
+const SIGNET_SETTLED_AT=SCHOOL_INTRO_SECONDS+SIGNET_FORM_SECONDS;
 const SIGNET_FADE_OUT=2;
 const SIGNET_FADE_IN=5;
 const SIGNET_CYCLE=SIGNET_FADE_OUT+SIGNET_FADE_IN;
@@ -693,7 +717,6 @@ function createFishSignet(geometry,w,h,banks) {
   });
   const clamp01=(x)=>Math.max(0,Math.min(1,x));
   const smooth=(x)=>x*x*(3-2*x);
-  const eased=(x)=>x*x*x*(x*(x*6-15)+10);
   const angleDelta=(a,b)=>Math.atan2(Math.sin(b-a),Math.cos(b-a));
   // Preserve each of the original internal negative spaces, including the small center petals.
   const geometryX=w*.5-cx*scale, geometryY=h*.44-cy*scale;
@@ -707,7 +730,9 @@ function createFishSignet(geometry,w,h,banks) {
 
   function advance(time) {
     for (let i=departures.length;i<slots.length;i++) {
-      const start=SCHOOL_INTRO_SECONDS+i*.34+Math.sin(i*6.37)*.10;
+      const progress=i/(slots.length-1);
+      const spread=Math.sin(Math.PI*progress);
+      const start=SCHOOL_INTRO_SECONDS+progress*(SIGNET_FORM_SECONDS-6.8)+Math.sin(i*2.41)*.28*spread;
       if (time<start) break;
       const goal=slots[i], bank=banks[i%banks.length];
       // Lift a visible fish out of its actual school; its schoolmates keep swimming.
@@ -720,13 +745,16 @@ function createFishSignet(geometry,w,h,banks) {
       }
       const [fish]=bank.splice(index,1);
       const speed=Math.max(1,Math.hypot(fish.vx,fish.vy));
-      const launch=Math.max(h*.10,Math.min(h*.24,Math.hypot(fish.x-goal.x,fish.y-goal.y)*.41));
-      const duration=3.1+.65*Math.sin(i*2.8)**2;
+      const travel=Math.hypot(fish.x-goal.x,fish.y-goal.y);
+      const launch=Math.max(h*.11,Math.min(h*.29,travel*.44));
+      const arrives=SCHOOL_INTRO_SECONDS+6+progress*(SIGNET_FORM_SECONDS-7.4)+Math.cos(i*2.04)*.33*spread;
+      const duration=arrives-start;
       arrivals[goal.index]=start+duration;
       departures.push({
         fish,goal,start,duration,initialSlope:Math.max(.45,Math.min(1.60,speed*duration/(3*launch))),
         ax:fish.x+fish.vx/speed*launch, ay:fish.y+fish.vy/speed*launch,
-        bx:goal.x-h*.085, by:goal.y+h*.008,
+        bx:goal.x-Math.min(h*.23,h*.067+travel*.15),
+        by:goal.y+h*.044*Math.sin(i*1.99+.48),
       });
     }
   }
@@ -748,9 +776,9 @@ function createFishSignet(geometry,w,h,banks) {
     const order=(pair%2)*(pairCount/2)+Math.floor(pair/2);
     // Longer, overlapping passes give each pair time to accelerate and settle
     // while the other fish continue to anchor the silhouette.
-    const start=SIGNET_FADE_OUT*(.025+.315*order/(pairCount-1));
-    const p=clamp01((phase-start)/(SIGNET_FADE_OUT*.64));
-    const k=eased(p);
+    const start=SIGNET_FADE_OUT*(.027+.23*order/(pairCount-1));
+    const p=clamp01((phase-start)/(SIGNET_FADE_OUT*.72));
+    const k=(1-Math.cos(Math.PI*p))*.5;
     let distance=points[to]-points[from];
     if (direction*distance<0) distance+=direction*length;
     return contourPoint(points[from]+k*distance);
@@ -776,10 +804,12 @@ function createFishSignet(geometry,w,h,banks) {
         s*s*(ax-fish.x)+2*s*k*(bx-ax)+k*k*(goal.x-bx),
       );
       const departureHeading=fish.heading+angleDelta(fish.heading,angle)*smooth(clamp01(p/.25));
-      const glow=Math.min(1,age/.95);
+      const glow=smooth(clamp01(age/1.35));
+      const swim=Math.sin(Math.PI*p)**2;
+      const sway=Math.sin(age*1.62+fish.phase)*swim*h*.018;
       return {
-        x:s**3*fish.x+3*s*s*k*ax+3*s*k*k*bx+k**3*goal.x,
-        y:s**3*fish.y+3*s*s*k*ay+3*s*k*k*by+k**3*goal.y,
+        x:s**3*fish.x+3*s*s*k*ax+3*s*k*k*bx+k**3*goal.x-sway*Math.sin(angle),
+        y:s**3*fish.y+3*s*s*k*ay+3*s*k*k*by+k**3*goal.y+sway*Math.cos(angle),
         angle:departureHeading+angleDelta(departureHeading,heading)*smooth(clamp01((p-.58)/.42)),
         size:fish.size+(fullSize-fish.size)*k,
         phase:fish.phase, depth:fish.depth, glow,
@@ -942,10 +972,10 @@ function createFishSignet(geometry,w,h,banks) {
     const index=Math.floor(phase/TAU*schoolSprites.length)%schoolSprites.length;
     ctx.save();
     ctx.translate(x,y);
-    const direction=f.angle??f.heading;
+    const direction=f.angle??lerp(f.previousHeading,f.heading,k);
     const facing=Math.cos(direction)<0 ? -1 : 1;
     ctx.rotate(direction+(facing<0 ? Math.PI : 0));
-    const roll=f.roll??.1;
+    const roll=f.roll==null ? .1 : lerp(f.previousRoll,f.roll,k);
     ctx.scale(facing*(1-.09*roll),1-.32*roll);
     if (lit>0) {
       const pulse=.87+.13*Math.sin(time*1.42+f.phase);
