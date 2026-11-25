@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<title>CIRIS — Intelligence you can verify</title>
+<title>CIRIS — choose what moves you</title>
 <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +94,7 @@ button { font: inherit; }
   isolation: isolate;
 }
 :root { --surface: #1d3545; --water: #102a3b; }
-:root[data-theme=light] { --surface: #b9e2d8; --water: #99c9c0; }
+:root[data-theme=light] { --surface: #dceffa; --water: #88b9da; }
 .water canvas { display: block; width: 100%; height: 100%; }
 .water::after {
   content: "";
@@ -175,7 +175,7 @@ button { font: inherit; }
   </div>
   <div style="max-width: 900px; margin: 0 auto; padding: 8px 32px 0; text-align: center">
     <p class="px" style="margin: 0 0 18px; font-size: 13px; letter-spacing: 0.12em; color: var(--accentText)">OPEN SOURCE · SELF-HOSTABLE · FEDERATED BY DESIGN</p>
-    <h1 id="hero-h" style="margin: 0; font-size: clamp(44px, 6.4vw, 84px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 600">Intelligence you can verify.</h1>
+    <h1 id="hero-h" style="margin: 0; font-size: clamp(44px, 6.4vw, 84px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 600">choose what moves you</h1>
     <p style="margin: 24px auto 0; max-width: 680px; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: var(--dim)">Accountable agents, signed knowledge, and a federated network governed by shared rules — running on the devices people already own.</p>
     <div style="margin-top: 34px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap">
       <a href="https://ciris.ai/architecture/" style="height: 52px; display: inline-flex; align-items: center; padding: 0 26px; border-radius: 999px; background: var(--fg); color: var(--bg); text-decoration: none; font-weight: 600; font-size: 16px">See how it works</a>
@@ -372,6 +372,8 @@ button { font: inherit; }
 <path data-signet-interior d='M142.21,74.27l-4.02-7.75c1.06-.15,2.12-.37,3.17-.66l5.76-1.83c-1.03,3.67-2.69,7.14-4.91,10.24Z'/>
 <path data-signet-interior d='M149.23,59.69c-.15.03-.3.07-.44.14l-8.42,2.68c-1.3.36-2.62.59-3.93.69-2.13-3.57-5.27-6.33-8.93-8,3.65-1.66,6.77-4.41,8.92-7.99,1.3.11,2.59.33,3.87.68l8.57,2.72c.06.02.12.04.18.06l14.28,4.54-14.11,4.48Z'/></svg>
 <script>
+const SCHOOL_INTRO_SECONDS=4.5;
+
 function createOcean(w,h) {
   const TAU = Math.PI*2;
   let state = 8702;
@@ -393,13 +395,16 @@ function createOcean(w,h) {
   }));
 
   function sharksAt(time) {
+    if (time<=SCHOOL_INTRO_SECONDS) return [];
+    const entering=Math.min(1,(time-SCHOOL_INTRO_SECONDS)/2.5);
+    const presence=entering*entering*(3-2*entering);
     return [0,1].map((i) => {
       const period=i===0 ? 34 : 43;
       const phase=((time+(i===0 ? 7 : 26))%period)/period;
       const u=i===0 ? 1.57-2.09*phase : -.53+2.09*phase;
       const y=h*((i===0 ? .47 : .29)+.075*Math.sin(TAU*phase+i));
       return {x:w*u,y,dir:i===0 ? -1 : 1,angle:.075*Math.cos(TAU*phase+i),phase:i*2.9+.48,
-        size:Math.min(w*.25,h*.38)*(i===0 ? 1 : .75),opacity:i===0 ? .70 : .43};
+        size:Math.min(w*.25,h*.38)*(i===0 ? 1 : .75),opacity:presence*(i===0 ? .70 : .43),presence};
     });
   }
 
@@ -445,14 +450,14 @@ function createOcean(w,h) {
           const reach=shark.size+ h*.14;
           const d=Math.hypot(dx,dy*1.18);
           if (d<reach) {
-            const push=(1-d/reach)**2*h*1.19;
+            const push=(1-d/reach)**2*h*1.19*shark.presence;
             fx+=dx/Math.max(d,8)*push*.66;
             fy+=(Math.abs(dy)>1 ? Math.sign(dy) : (g===0 ? -1 : 1))*push;
           }
           // A broad, gentler wake keeps the bank turning even after the whale shark passes.
           const trail=(shark.x-f.x)*shark.dir/shark.size;
           if (trail>0 && trail<1.9 && Math.abs(dy)<reach*.63) {
-            const wake=Math.sin(Math.PI*trail/1.9)*(1-Math.abs(dy)/(reach*.63))*h*.20;
+            const wake=Math.sin(Math.PI*trail/1.9)*(1-Math.abs(dy)/(reach*.63))*h*.20*shark.presence;
             fx+=shark.dir*wake*.8;
             fy+=Math.sin(trail*2.1+g)*wake*.62;
           }
@@ -632,174 +637,10 @@ function createMarineArt(rgba,mix,seed) {
     ctx.fillStyle=rgba(rim,.66); ctx.fill();
     ctx.restore();
   }
-  const raySpecks=Array.from({length:31},()=>{
-    const x=-.43+rand()*.98, y=(rand()-.5)*1.19, r=.010+rand()*.024;
-    return [x,y,r,.11+rand()*.19];
-  });
-
-  function drawStingray(ctx,x,y,size,heading,phase,opacity,light,palette) {
-    const flap=Math.sin(phase), lag=Math.sin(phase-.67);
-    const nearWing=.91+flap*.17;
-    const farWing=.81-lag*.14;
-    const ray=palette.ray, rim=palette.rim;
-    ctx.save();
-    ctx.translate(x,y);
-    ctx.rotate(Math.sin(phase*.40)*.087);
-    ctx.scale(size*heading,size);
-    ctx.globalAlpha=opacity;
-
-    // A narrow taper and the delayed bend of the whip tail, trailing behind the disc.
-    const bend=Math.sin(phase-.5)*.18, tip=Math.sin(phase-1.2)*.37;
-    const tail=path(`M -.58 -.035 C -.95 ${bend*.15-.039} -1.31 ${bend-.025} -1.68 ${tip*.77-.015}
-      Q -1.86 ${tip-.01} -2.04 ${tip} Q -1.85 ${tip+.025} -1.67 ${tip*.77+.028}
-      C -1.29 ${bend+.040} -.92 ${bend*.15+.055} -.58 .056 Z`);
-    const tailShade=ctx.createLinearGradient(-2.04,0,-.58,0);
-    tailShade.addColorStop(0,rgba(ray,.16));
-    tailShade.addColorStop(.58,rgba(ray,.73));
-    tailShade.addColorStop(1,rgba(mix(ray,palette.depth,.27),.96));
-    ctx.fillStyle=tailShade;
-    ctx.fill(tail);
-
-    const wing=(span,sign,sweep)=>path(`M .76 -.03 C .65 ${.16*sign} .35 ${.30*sign} .25 ${.53*span*sign}
-      C .14 ${.78*span*sign} ${.02+sweep} ${.98*span*sign} ${-.19+sweep} ${1.01*span*sign}
-      C ${-.39+sweep} ${.96*span*sign} -.50 ${.67*span*sign} -.63 ${.46*span*sign}
-      Q -.82 ${.24*sign} -.71 .006 Q -.34 ${-.092*sign} .10 ${-.033*sign} Z`);
-    const skin=(span,sign)=>{
-      const tone=ctx.createLinearGradient(.19,0,-.18,span*sign);
-      tone.addColorStop(0,rgba(mix(ray,palette.depth,.12),1));
-      tone.addColorStop(.57,rgba(ray,.92));
-      tone.addColorStop(.87,rgba(mix(ray,rim,light ? .39 : .28),.78));
-      tone.addColorStop(1,rgba(mix(ray,rim,.55),.49));
-      return tone;
-    };
-    ctx.fillStyle=skin(farWing,-1);
-    const far=wing(farWing,-1,-.088*lag);
-    ctx.fill(far);
-    ctx.fillStyle=skin(nearWing,1);
-    const near=wing(nearWing,1,.107*flap);
-    ctx.fill(near);
-    ctx.save();
-    const disc=new Path2D();
-    disc.addPath(far);disc.addPath(near);
-    ctx.clip(disc,'nonzero');
-    for (const [px,py,r,a] of raySpecks) {
-      ctx.beginPath();
-      ctx.fillStyle=rgba(mix(ray,rim,.53),a);
-      ctx.ellipse(px,py,r,r*.72,0,0,turn);
-      ctx.fill();
-    }
-    ctx.restore();
-
-    const spine=ctx.createLinearGradient(0,-.23,0,.30);
-    spine.addColorStop(0,rgba(mix(ray,rim,.35),.47));
-    spine.addColorStop(.48,rgba(ray,.88));
-    spine.addColorStop(1,rgba(mix(ray,palette.depth,.37),.38));
-    ctx.fillStyle=spine;
-    ctx.fill(path('M .75 -.03 C .59 -.159 .33 -.196 .031 -.162 Q -.438 -.094 -.727 -.011 L -.72 .035 Q -.351 .176 .133 .176 Q .558 .145 .75 -.03 Z'));
-    ctx.lineWidth=.014;
-    ctx.strokeStyle=rgba(rim,.23);
-    ctx.stroke(path('M -.648 .013 C -.397 .016 -.166 -.041 .022 -.090 Q .390 -.142 .653 -.052'));
-    for (const py of [-.096,.098]) {
-      ctx.beginPath(); ctx.ellipse(.46,py,.045,.028,py,0,turn);
-      ctx.fillStyle=rgba(mix(ray,rim,.50),.60);ctx.fill();
-      ctx.beginPath();ctx.arc(.476,py,.020,0,turn);
-      ctx.fillStyle=rgba(palette.depth,.91);ctx.fill();
-    }
-    ctx.restore();
-  }
-
-  function drawJellyfish(ctx,x,y,size,phase,opacity,light,palette) {
-    // A slow contraction pulls the bell inward; trailing tissue responds a beat later.
-    const pulse=((1+Math.sin(phase))*.5)**2.8;
-    const width=1-pulse*.16, crown=.72+pulse*.17, skirt=.12+pulse*.10;
-    const tissue=palette.jelly, rim=palette.rim;
-    ctx.save();
-    ctx.translate(x,y);
-    ctx.rotate(Math.sin(phase*.24)*.19);
-    ctx.scale(size,size);
-    ctx.globalAlpha=opacity;
-    ctx.lineCap='round';
-
-    const trailing=ctx.createLinearGradient(0,.04,0,1.92);
-    trailing.addColorStop(0,rgba(tissue,.70));
-    trailing.addColorStop(.49,rgba(mix(tissue,rim,.36),.38));
-    trailing.addColorStop(1,rgba(tissue,0));
-    for (let i=0;i<9;i++) {
-      const u=(i-4)/4;
-      const wobble=Math.sin(phase-.72+i*.68)*.14;
-      const end=1.38+.54*Math.sin(i*2.30)**2;
-      ctx.strokeStyle=trailing;
-      ctx.lineWidth=i%3===1 ? .035 : .019;
-      ctx.beginPath();
-      ctx.moveTo(u*width*.83,skirt-.016);
-      ctx.bezierCurveTo(u*.68+wobble,.63-pulse*.17,
-        u*.54-wobble,.97,u*.67+wobble*1.4,end-pulse*.11);
-      ctx.stroke();
-    }
-    ctx.lineWidth=.045;
-    ctx.strokeStyle=rgba(mix(tissue,rim,.39),.32);
-    for (let i=0;i<3;i++) {
-      const k=(i-1)*.16;
-      ctx.beginPath();
-      ctx.moveTo(k,skirt-.07);
-      ctx.bezierCurveTo(k+.25,.39,k-.25,.62,k+.05,.83);
-      ctx.bezierCurveTo(k+.17,.97,k-.17,1.07,k-.13,1.23-pulse*.16);
-      ctx.stroke();
-    }
-
-    const bell=path(`M ${-width} ${skirt} C ${-width*.99} ${-.34-pulse*.13} ${-width*.51} ${-crown} 0 ${-crown}
-      C ${width*.51} ${-crown} ${width*.98} ${-.34-pulse*.13} ${width} ${skirt}
-      C ${width*.60} ${skirt+.179} ${-width*.63} ${skirt+.181} ${-width} ${skirt} Z`);
-    const tint=ctx.createRadialGradient(-width*.28,-.49,.031,0,-.021,1.04);
-    tint.addColorStop(0,rgba(rim,light ? .69 : .57));
-    tint.addColorStop(.49,rgba(mix(tissue,rim,.43),.42));
-    tint.addColorStop(.83,rgba(tissue,.10));
-    tint.addColorStop(1,rgba(mix(tissue,rim,.36),.43));
-    ctx.fillStyle=tint;ctx.fill(bell);
-    ctx.lineWidth=.033;
-    ctx.strokeStyle=rgba(mix(tissue,rim,light ? .32 : .62),.54);
-    ctx.stroke(bell);
-    ctx.beginPath();
-    ctx.ellipse(0,skirt-.01,width,.092+pulse*.018,0,0,turn);
-    ctx.lineWidth=.025;
-    ctx.strokeStyle=rgba(mix(tissue,rim,.46),.64);ctx.stroke();
-    // Four translucent horseshoe-shaped gonads give a moon-jelly-like bell its structure.
-    ctx.strokeStyle=rgba(tissue,.46);
-    ctx.lineWidth=.028;
-    for (let i=0;i<4;i++) {
-      const a=.63+i*turn/4;
-      ctx.beginPath();
-      ctx.ellipse(Math.cos(a)*.154,Math.sin(a)*.076-.127,.093,.061+pulse*.009,-a,0,Math.PI*1.56);
-      ctx.stroke();
-    }
-    ctx.restore();
-  }
-
-  function drawDeepWildlife(ctx,w,h,time,light,palette) {
-    const small=w<580;
-    const jellyPlaces=[[.167,.39,.92,.37],[.826,.34,.88,2.80],[.66,.63,.62,4.75]];
-    jellyPlaces.slice(0,small ? 2 : 3).forEach(([x,y,size,phase],i)=>{
-      const px=w*(x+.046*Math.sin(time*.139+phase));
-      const py=h*(y+.072*Math.sin(time*.221+phase));
-      drawJellyfish(ctx,px,py,Math.min(h*.069,w*.065)*size,time*(1.04+i*.15)+phase,
-        (light ? .66 : .64)*(i===2 ? .74 : 1),light,palette);
-    });
-    const rayPaths=[[1,40,.052,.656,1],[-1,53,.124,.29,.63]];
-    rayPaths.forEach(([heading,period,offset,y,scale],i)=>{
-      const phase=(time/period+offset)%1;
-      const x=w*(heading>0 ? -.29+1.58*phase : 1.29-1.58*phase);
-      const yPos=h*(y+.055*Math.sin(phase*turn+i*.61));
-      const size=Math.min(h*.119,w*.13)*scale;
-      if (x< -size*2.3 || x>w+size*2.3) return;
-      drawStingray(ctx,x,yPos,size,heading,time*2.07+i*.96,
-        (light ? .57 : .54)*(i===1 ? .74 : 1),light,palette);
-    });
-  }
-
-  return {fishSprites,drawWhaleShark,drawDeepWildlife};
+  return {fishSprites,drawWhaleShark};
 }
 
-const SIGNET_SETTLED_AT=12;
+const SIGNET_SETTLED_AT=SCHOOL_INTRO_SECONDS+10.5;
 const SIGNET_FADE_OUT=2;
 const SIGNET_FADE_IN=5;
 const SIGNET_CYCLE=SIGNET_FADE_OUT+SIGNET_FADE_IN;
@@ -866,7 +707,7 @@ function createFishSignet(geometry,w,h,banks) {
 
   function advance(time) {
     for (let i=departures.length;i<slots.length;i++) {
-      const start=1.6+i*.34+Math.sin(i*6.37)*.10;
+      const start=SCHOOL_INTRO_SECONDS+i*.34+Math.sin(i*6.37)*.10;
       if (time<start) break;
       const goal=slots[i], bank=banks[i%banks.length];
       // Lift a visible fish out of its actual school; its schoolmates keep swimming.
@@ -1023,18 +864,16 @@ function createFishSignet(geometry,w,h,banks) {
 
   const palettes = {
     light: {
-      surface: ['#deeee6', '#a8d3c9', '#80b8ae', '#dce8db'],
-      beam: [255, 255, 221], depth: [41, 101, 107], haze: [241, 251, 223],
-      shoal: [33, 92, 103], rim: [217, 247, 231], dust: [43, 114, 112],
-      gold: [158, 84, 22], glint: [255, 219, 120], shark: [39,94,107],
-      ray: [65,101,103], jelly: [109,136,161],
+      surface: ['#dceffa', '#a5cdeb', '#78afd5', '#d8e8f4'],
+      beam: [243, 251, 255], depth: [32, 75, 115], haze: [225, 241, 255],
+      shoal: [37, 82, 124], rim: [223, 243, 255], dust: [50, 103, 147],
+      gold: [158, 84, 22], glint: [255, 219, 120], shark: [42,92,128],
     },
     dark: {
       surface: ['#203b52', '#142d44', '#101e33', '#0d1117'],
       beam: [150, 201, 228], depth: [7, 16, 34], haze: [75, 168, 192],
       shoal: [112, 169, 193], rim: [203, 245, 245], dust: [162, 224, 230],
       gold: [239, 169, 61], glint: [255, 232, 160], shark: [17,45,70],
-      ray: [53,102,124], jelly: [123,150,190],
     },
   };
   function waterBackdrop() {
@@ -1140,7 +979,6 @@ function createFishSignet(geometry,w,h,banks) {
       ctx.fill();
     }
     const isLight = root.dataset.theme==='light';
-    marine.drawDeepWildlife(ctx,w,h,time,isLight,palette);
     for (const shark of ocean.sharksAt(time)) marine.drawWhaleShark(ctx,shark,time,isLight,palette,w);
     const blend=staticView ? 1 : clamp(lag/stepSize);
     for (let i=ocean.school.length-1;i>=0;i--) {
