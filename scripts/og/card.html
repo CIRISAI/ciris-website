@@ -1,0 +1,69 @@
+<!doctype html><meta charset="utf-8">
+<!-- A card: one art frame, the page's title over it. generate.py calls set(). -->
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; position: relative; font-family: "Instrument Sans", "Noto Sans", sans-serif; }
+  body > img, .veil { position: absolute; inset: 0; width: 1200px; height: 630px; }
+  .t { position: absolute; inset-block: 54px; inset-inline-start: 64px; width: 610px; display: flex; flex-direction: column; }
+  .brand { align-self: flex-start; display: flex; align-items: center; gap: 16px; font: 700 32px "Instrument Sans"; letter-spacing: 0.08em; direction: ltr; }
+  .rtl .brand { flex-direction: row-reverse; }
+  .brand svg { width: 52px; height: 52px; }
+  .k { margin: auto 0 14px; font-size: 20px; letter-spacing: 0.1em; white-space: nowrap; font-family: Silkscreen, "Noto Sans", sans-serif; }
+  h1 { font-weight: 600; letter-spacing: -0.03em; line-height: 1.06; text-wrap: balance; }
+  .u { margin-top: 24px; font: 500 23px "Instrument Sans"; opacity: 0.8; }
+  .script .k { letter-spacing: 0; font-size: 24px; }
+  .script h1 { letter-spacing: 0; line-height: 1.28; }
+  :lang(ko) h1 { word-break: keep-all; }
+  .center .veil { display: none; }
+  .center .t { inset: auto 0 44px; width: auto; align-items: center; }
+  .center .k, .center h1, .center .u { display: none; }
+  .center .brand { font-size: 44px; }
+  .center .brand svg { display: none; }
+</style>
+<img id="art" alt=""><div class="veil" id="v"></div>
+<div class="t" id="t"><div class="brand"><svg id="m"><path fill-rule="evenodd" /></svg><span>CIRIS</span></div><div class="k" id="k"></div><h1 id="h"></h1><div class="u">ciris.ai</div></div>
+<script>
+  let font = "";
+  async function set(c) {
+    const $ = (i) => document.getElementById(i), e = document.documentElement;
+    e.lang = c.lang;
+    e.dir = c.rtl ? "rtl" : "ltr";
+    document.body.className = [c.rtl && "rtl", c.script && "script", c.center && "center"].filter(Boolean).join(" ");
+    if (c.family !== font) {
+      font = c.family;
+      const l = Object.assign(document.createElement("link"), { rel: "stylesheet", href: c.css });
+      await new Promise((ok) => { l.onload = l.onerror = ok; document.head.append(l); });
+    }
+    document.body.style.fontFamily = c.family ? `"${c.family}", "Instrument Sans", sans-serif` : "";
+    $("k").style.fontFamily = c.family ? `"${c.family}", sans-serif` : "";
+    $("art").src = c.art;
+    await $("art").decode();
+    const p = document.querySelector("#m path"), side = c.rtl ? "to left" : "to right";
+    p.setAttribute("d", c.mark);
+    const b = p.getBBox();
+    $("m").setAttribute("viewBox", `${b.x} ${b.y} ${b.width} ${b.height}`);
+    p.setAttribute("fill", c.night ? "#7fd0ea" : "#0f5f80");
+    $("v").style.background = c.night
+      ? `linear-gradient(${side}, rgba(13,17,23,.82), rgba(13,17,23,.56) 40%, rgba(13,17,23,0) 64%)`
+      : `linear-gradient(${side}, rgba(250,249,246,.84), rgba(250,249,246,.62) 38%, rgba(250,249,246,0) 62%)`;
+    $("t").style.color = c.night ? "#e8eaed" : "#14181d";
+    $("k").style.color = c.night ? "#7fd0ea" : "#0f5f80";
+    $("k").textContent = c.kicker;
+    // These scripts write no spaces: keep each word on one line.
+    if (["ja", "zh", "th", "my"].includes(c.lang)) {
+      $("h").replaceChildren();
+      for (const { segment: w } of new Intl.Segmenter(c.lang, { granularity: "word" }).segment(c.title)) {
+        const last = $("h").lastElementChild;
+        if (last && /^[\p{P}ー]+$/u.test(w)) last.textContent += w;
+        else if (/^\s+$/.test(w)) $("h").append(w);
+        else $("h").append(Object.assign(document.createElement("span"), { textContent: w, style: "display:inline-block" }));
+      }
+    } else $("h").textContent = c.title;
+    await Promise.all([document.fonts.load('600 40px "Instrument Sans"', "A"), document.fonts.load("20px Silkscreen", "A"), c.family && document.fonts.load(`600 40px "${c.family}"`, c.title + c.kicker)]);
+    await document.fonts.ready;
+    let size = 84;
+    do $("h").style.fontSize = (size -= 2) + "px"; while (size > 30 && ($("h").scrollHeight > (c.script ? 350 : 330) || $("h").scrollWidth > 610));
+    return { size, over: $("h").scrollHeight > 350 };
+  }
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Silkscreen&display=block">

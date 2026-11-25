@@ -2,6 +2,7 @@
 // stays English (localized OG cards can follow). Same page tier as /compare.
 
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/seo";
 import CompareMicrosoftV2 from "@/app/components/CompareMicrosoftV2";
 import { getDictionary } from "@/i18n/dictionaries";
 import { PREFIXED_LOCALES, isLocale } from "@/i18n/config";
@@ -24,7 +25,7 @@ export async function generateMetadata({
     title: TITLE,
     description: DESC,
     alternates: { canonical: `/${locale}/compare/microsoft-agent-governance` },
-    openGraph: { type: "article", url: `https://ciris.ai/${locale}/compare/microsoft-agent-governance`, title: TITLE, description: DESC },
+    openGraph: { type: "article", url: `https://ciris.ai/${locale}/compare/microsoft-agent-governance`, title: TITLE, description: DESC, images: ogImages("/compare/microsoft-agent-governance", locale, TITLE) },
   };
 }
 

@@ -4,6 +4,7 @@
 // FIPS YubiKey, quantum-safe audit trail, ML-DSA-65.
 
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/seo";
 import SecurityKillSwitchV2 from "@/app/components/SecurityKillSwitchV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "article",
     url: "https://ciris.ai/security/post-quantum-kill-switch",
     title: TITLE,
-    description: DESC,
+    description: DESC, images: ogImages("/security/post-quantum-kill-switch", "en", TITLE)
   },
 };
 

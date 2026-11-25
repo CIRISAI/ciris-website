@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PathStaircase from "@/app/components/PathStaircase";
 import { getDictionary } from "@/i18n/dictionaries";
 import { LOCALES, localizedPath, PREFIXED_LOCALES, isLocale } from "@/i18n/config";
-import { ogImage, ogVideo } from "@/lib/seo";
+import { ogImage } from "@/lib/seo";
 
 const SLUG = "superalignment";
 const BASE = "/paths/" + SLUG;
@@ -22,8 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: { canonical: url, languages },
     openGraph: {
       type: "article", title: p.metaTitle, description: p.metaDesc, url: "https://ciris.ai" + url,
-      images: [{ url: ogImage(BASE, locale), type: "image/gif", width: 1200, height: 630, alt: p.metaTitle }],
-      ...(ogVideo(BASE, locale) ? { videos: [{ url: ogVideo(BASE, locale)!, type: "video/mp4", width: 1200, height: 630 }] } : {}),
+      images: [{ url: ogImage(BASE, locale), type: "image/jpeg", width: 1200, height: 630, alt: p.metaTitle }],
     },
     twitter: { card: "summary_large_image", title: p.metaTitle, description: p.metaDesc, images: [{ url: ogImage(BASE, locale), alt: p.metaTitle }] },
   };

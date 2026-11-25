@@ -3,6 +3,7 @@
 // search that spikes ahead of the August 2026 high-risk deadline.
 
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/seo";
 import EuAiActV2 from "@/app/components/EuAiActV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     type: "article",
     url: "https://ciris.ai/compliance/eu-ai-act",
     title: TITLE,
-    description: DESC,
+    description: DESC, images: ogImages("/compliance/eu-ai-act", "en", TITLE)
   },
 };
 

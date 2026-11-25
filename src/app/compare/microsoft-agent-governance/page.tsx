@@ -3,6 +3,7 @@
 // CIRIS and Microsoft's agent governance stack.
 
 import type { Metadata } from "next";
+import { ogImages } from "@/lib/seo";
 import CompareMicrosoftV2 from "@/app/components/CompareMicrosoftV2";
 import { getDictionary } from "@/i18n/dictionaries";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     type: "article",
     url: "https://ciris.ai/compare/microsoft-agent-governance",
     title: TITLE,
-    description: DESC,
+    description: DESC, images: ogImages("/compare/microsoft-agent-governance", "en", TITLE)
   },
 };
 
