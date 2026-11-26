@@ -28,7 +28,7 @@ const SIGNET_Y = 0.49;
 const MAX_DPR = 1.75;
 /** A resting mouse stops steering after this long; a lifted finger sooner. */
 const MOUSE_IDLE_MS = 7000;
-const TOUCH_IDLE_MS = 3500;
+const TOUCH_IDLE_MS = 6000;
 
 export interface OceanScene {
   setDark(dark: boolean): void;
@@ -70,7 +70,20 @@ export function createOceanScene(canvas: HTMLCanvasElement, initialDark: boolean
     movedAt = performance.now();
     idleAfter = e.pointerType === "mouse" ? MOUSE_IDLE_MS : TOUCH_IDLE_MS;
   };
-  const onLeave = () => {
+  // A finger: the browser stops sending pointer moves once the page starts
+  // scrolling, but touch events keep coming, so a drag still steers.
+  const onTouch = (e: TouchEvent) => {
+    const t = e.touches[0];
+    if (!t) return;
+    clientX = t.clientX;
+    clientY = t.clientY;
+    movedAt = performance.now();
+    idleAfter = TOUCH_IDLE_MS;
+  };
+  // Only a mouse leaving the page means "stop". A lifted finger fires
+  // pointerleave too, and the whale should still swim to where it touched.
+  const onLeave = (e?: Event) => {
+    if (e instanceof PointerEvent && e.pointerType !== "mouse") return;
     movedAt = -Infinity;
   };
   function readPointer(now: number) {
@@ -316,6 +329,8 @@ export function createOceanScene(canvas: HTMLCanvasElement, initialDark: boolean
   reduced.addEventListener("change", onMotion);
   window.addEventListener("pointermove", onPointer, { passive: true });
   window.addEventListener("pointerdown", onPointer, { passive: true });
+  window.addEventListener("touchstart", onTouch, { passive: true });
+  window.addEventListener("touchmove", onTouch, { passive: true });
   window.addEventListener("blur", onLeave);
   document.documentElement.addEventListener("pointerleave", onLeave);
 
@@ -335,6 +350,8 @@ export function createOceanScene(canvas: HTMLCanvasElement, initialDark: boolean
       reduced.removeEventListener("change", onMotion);
       window.removeEventListener("pointermove", onPointer);
       window.removeEventListener("pointerdown", onPointer);
+      window.removeEventListener("touchstart", onTouch);
+      window.removeEventListener("touchmove", onTouch);
       window.removeEventListener("blur", onLeave);
       document.documentElement.removeEventListener("pointerleave", onLeave);
     },
