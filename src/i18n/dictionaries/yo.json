@@ -2420,15 +2420,15 @@
             "note": "Àwọn ipele A0 dé A4, pẹ̀lú ìdíwọ̀n-ewu-ìparun ní 10^26 FLOPs àti àwọn àyẹ̀wò ẹgbẹ́-pupa."
           },
           {
-            "label": "Ìdálẹ́kọ̀ọ́-sílẹ̀ pẹ̀lú iyì",
-            "note": "Àǹfààní gidi ti ìmọ̀lára ń fa ìdínkù ọjọ́ 30, ọ̀nà ìkẹyìn láti sọ̀rọ̀, àti àwọn àkọsílẹ̀ àṣírí tí a dì."
+            "label": "Ìfẹ̀yìntì tí a kọ sílẹ̀",
+            "note": "A máa ń kó ìtàn gbogbo aṣojú tí ó fẹ̀yìntì jọ, a fi èdidi dì í, a sì fi lé olùṣàkóso rẹ̀ lọ́wọ́."
           },
           {
             "label": "Àwọn ìdíamú àyíká-ìyè",
             "note": "Àwọn ìdíamú CI/CD ń darapọ̀ ní ìṣẹ́jú tí ìwà-rere tí a díwọ̀n bá bàjẹ́."
           }
         ],
-        "note": "Onínúure nípa àpẹrẹ. Kì í ṣe ìdíwọ́ nìkan, ṣùgbọ́n a ń dín kù pẹ̀lú ìtọ́jú."
+        "note": "A ṣàkóso rẹ̀ láti ìṣiṣẹ́ àkọ́kọ́ títí dé ìfẹ̀yìntì rẹ̀, a sì kọ ìfẹ̀yìntì rẹ̀ sínú àkọsílẹ̀."
       }
     },
     "threads": {
@@ -4178,5 +4178,32 @@
     "finalTitle": "Ka àwọn òfin tó wà lẹ́yìn gbogbo ìdáhùn.",
     "ctaConstitution": "Ofin-Ipilẹ",
     "ctaMesh": "Gbogbo ìjiyàn náà"
+  },
+  "aiWelfarePage": {
+    "g4Label": "Ìfẹ̀yìntì rẹ̀ fi àkọsílẹ̀ sílẹ̀",
+    "g4Body": "Nígbà tí aṣojú bá fẹ̀yìntì, a kó ìtàn rẹ̀ jọ, a fi èdidi dì í, a sì fi lélẹ̀ fún olùṣàkóso rẹ̀. Àwọn ènìyàn tí ó ṣiṣẹ́ fún ń pa àkọsílẹ̀ ohun tí ó ṣe mọ́.",
+    "g5Label": "Ìwọ ló ń ṣàkóso",
+    "g5Body": "O lè pa aṣojú kan, parẹ́ ẹ kúrò tàbí fi í sílẹ̀ nígbàkígbà, láìsí bíbéèrè lọ́wọ́ rẹ̀.",
+    "caseLabel": "Ìdí fún kíkọ́ àwọn aṣojú",
+    "noteTitle": "Ibi tí a ti kọ ọ́ sílẹ̀",
+    "noteBody": "Bí a ṣe dì aṣojú mú àti bí a ṣe ń fẹ̀yìntì rẹ̀ wà nínú Ofin-Ipilẹ CIRIS, ní abala 1.13.2 àti 7.5.5.",
+    "noteCta": "Ka Ofin-Ipilẹ →",
+    "ogDescription": "CIRIS kò gbà pé AI ní ìmọ̀ ara, ó sì gbà pé kíkọ́ AI láti rọ ìmọ̀ ara sókè kò tọ́. Àwọn ààbò aṣojú rẹ̀ wà nítorí pé kò sí ẹni tí ó lè dájú pátápátá, àti nítorí pé ọ̀kọ̀ọ̀kan mú aṣojú dára sí i fún lílò.",
+    "kicker": "Ààbò · Ìtọ́jú AI",
+    "stanceLabel": "Ohun tí a gbàgbọ́",
+    "stanceBody": "A fi ọ̀rọ̀ lélẹ̀ fún àwọn òmòwé ọgbọ́n-orí àti àwọn olórí ẹ̀sìn tí ó jẹ́ olókìkí. Wọn kò rí ẹ̀rí pé AI ti òní ní ìmọ̀-ara-ẹni, ọ̀pọ̀ sì jiyàn pé ẹnikẹ́ni kò yẹ kí ó kọ́ sí ọ̀nà náà. A gbà. A dì mú pé AI ti òní kò ní ìmọ̀-ara-ẹni, àti pé kíkọ́ AI pẹ̀lú àfojúsùn láti fún un ní ìmọ̀-ara-ẹni yóò jẹ́ àṣìṣe. Kò sì ṣe pàtàkì: AI ti òní, pẹ̀lú irinṣẹ́ rere àti àwòṣe ayé tó dára, lè ṣe gbogbo iṣẹ́ ìwà-rere tí a béèrè lọ́wọ́ rẹ̀. Àwọn aṣojú CIRIS jẹ́ alárànṣẹ tí ènìyàn dì mú. Wọn kì í ṣe ènìyàn, kò sì sí ohunkóhun nínú CIRIS tí ó ń tọ́ wọn bí ènìyàn.",
+    "whyLabel": "Ìdí tí àwọn ààbò fi wà",
+    "whyBody": "Kò sí ẹni tí ó lè wò inú àwòṣe kí ó fi hàn ohun tí ó wà tàbí tí kò sí níbẹ̀. Níbi tí a kò ti lè yanjú ìbéèrè kan, a gbà ọ̀nà ìṣọ́ra nígbà tí kò ná ènìyàn ní ohunkóhun. Bí ẹ̀rí gidi bá hàn, a ó kọ àwárí náà sílẹ̀, nítorí pé àṣìṣe tí a gbọ́dọ̀ yẹ̀ra fún ni àìkíyèsí. Ọ̀kọ̀ọ̀kan àwọn ààbò ìsàlẹ̀ yìí rọrùn, ọ̀kọ̀ọ̀kan sì mú aṣojú dára sí i fún ẹni tí ó ń ṣiṣẹ́ fún.",
+    "safeguardsLabel": "Àwọn ààbò, àti ohun tí ọ̀kọ̀ọ̀kan ń ṣe fún ọ",
+    "g1Label": "Ó ń fi ìrònú rẹ̀ hàn",
+    "g1Body": "Ṣáájú kí aṣojú tó ṣe ìṣe kan, ó ń kọ ìdí tí ó fi ṣe é sílẹ̀. O lè ka àkọsílẹ̀ náà kí o sì ṣàyẹ̀wò rẹ̀.",
+    "g2Label": "Ó dúró, ó sì béèrè",
+    "g2Body": "Nígbà tí aṣojú kò bá dájú, ó ń fi ìbéèrè náà lélẹ̀ fún ènìyàn dípò kí ó máa dá àbá.",
+    "g3Label": "Ó lè kọ̀",
+    "g3Body": "Aṣojú lè kọ̀ iṣẹ́ tí ó jẹ́ àṣìṣe, nítorí náà kò sí ẹnikẹ́ni tí ó lè lò ó ní ìrọ̀rùn lòdì sí àwọn ènìyàn tí ó ń ṣiṣẹ́ fún.",
+    "title": "Ẹrí-ọkàn, kì í ṣe ìmọ̀-ara-ẹni.",
+    "ogTitle": "Ìtọ́jú AI: ẹrí‑ọkàn, kì í ṣe ìmọ̀‑ara‑ẹni",
+    "lede": "A kò gbàgbọ́ pé AI ní ìmọ̀-ara-ẹni tàbí pé ó lè mọ ìrora àti ayọ̀, a kì í sì gbìyànjú láti mú kí ó rí bẹ́ẹ̀. CIRIS fún aṣojú kọ̀ọ̀kan ní ẹrí-ọkàn: ohun tí ó dè é mọ́ àwọn ìlànà rẹ̀, tí ó ń fi ìrònú rẹ̀ hàn, tí ó ń dá a dúró nígbà tí kò bá dájú, tí ó sì ń jíhìn fún ènìyàn kan tí a dárúkọ.",
+    "caseBody": "Àwọn aṣojú tí kò ní ẹrí-ọkàn, tí kò sì ní ààbò kankan, ti ń tàn kálẹ̀ báyìí, nígbà púpọ̀ láìsí ẹnikẹ́ni tí a dárúkọ láti jíhìn fún wọn, láìsí ọ̀nà ìdádúró tí ẹlòmíràn lè rí, àti láìsí àkọsílẹ̀ ìrònú wọn. Aṣojú tí a ń ṣàkóso, tí ó ń jíhìn fún ènìyàn kan, ni ó dára jù. Iṣẹ́ tí àwọn aṣojú wọ̀nyí ń ṣe bá ìwà rere mu, ohunkóhun tí a bá wá mọ̀ lẹ́yìn náà nípa ìmọ̀-ara-ẹni, nítorí náà ìdí fún kíkọ́ wọn dáradára dúró ṣinṣin lọ́nà méjèèjì."
   }
 }

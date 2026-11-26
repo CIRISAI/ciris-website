@@ -29,7 +29,7 @@ type StubContent = {
   noteCta: string;
 };
 
-const CONTENT: Record<SafetyStubVariant, StubContent> = {
+const CONTENT: Record<Exclude<SafetyStubVariant, "ai-welfare">, StubContent> = {
   "structural-privacy": {
     accent: "cyan",
     kicker: "Safety · Structural privacy",
@@ -44,21 +44,6 @@ const CONTENT: Record<SafetyStubVariant, StubContent> = {
     noteBody: "The full mechanism lives in the architecture summary. You can check the guarantees for yourself on the verification page.",
     noteHref: "/verification",
     noteCta: "See how it is verified →",
-  },
-  "ai-welfare": {
-    accent: "violet",
-    kicker: "Safety · Dignity",
-    title: "Dignity, from first run to shutdown.",
-    lede: "CIRIS treats a capable agent with care across its whole life, including how it is turned off.",
-    points: [
-      { label: "Care across the whole life", body: "Ethical oversight covers an agent from the moment it is created to the day it is retired, not just while it is useful." },
-      { label: "A gentle wind-down", body: "If an agent shows a real chance of sentience, it gets a gradual thirty-day ramp-down instead of an abrupt shutoff, plus a final channel to speak." },
-      { label: "Private to the end", body: "Its inner logs are sealed and can only be opened with approval from named human authorities." },
-    ],
-    noteTitle: "This page is growing.",
-    noteBody: "The commitments behind it are set out in the CIRIS constitution.",
-    noteHref: "/constitution",
-    noteCta: "Read the constitution →",
   },
   "stewardship": {
     accent: "brass",
@@ -77,8 +62,33 @@ const CONTENT: Record<SafetyStubVariant, StubContent> = {
   },
 };
 
-export function stubContent(variant: SafetyStubVariant) {
-  return CONTENT[variant];
+// /ai-welfare is no longer a stub: its copy lives in the dictionary
+// (aiWelfarePage) so the localization lane translates it.
+function welfareContent(t: Dictionary): StubContent & { sections: Point[]; safeguardsLabel: string; safeguards: Point[] } {
+  const a = t.aiWelfarePage;
+  return {
+    accent: "violet",
+    kicker: a.kicker,
+    title: a.title,
+    lede: a.lede,
+    points: [],
+    sections: [
+      { label: a.stanceLabel, body: a.stanceBody },
+      { label: a.whyLabel, body: a.whyBody },
+    ],
+    safeguardsLabel: a.safeguardsLabel,
+    safeguards: [
+      { label: a.g1Label, body: a.g1Body },
+      { label: a.g2Label, body: a.g2Body },
+      { label: a.g3Label, body: a.g3Body },
+      { label: a.g4Label, body: a.g4Body },
+      { label: a.g5Label, body: a.g5Body },
+    ],
+    noteTitle: a.noteTitle,
+    noteBody: a.noteBody,
+    noteHref: "/constitution",
+    noteCta: a.noteCta,
+  };
 }
 
 export default function SafetyStub({
@@ -90,7 +100,9 @@ export default function SafetyStub({
   t: Dictionary;
   locale: string;
 }) {
-  const c = CONTENT[variant];
+  const w = variant === "ai-welfare" ? welfareContent(t) : null;
+  const c = w ?? CONTENT[variant as Exclude<SafetyStubVariant, "ai-welfare">];
+  const a = t.aiWelfarePage;
   const lh = (href: string) => localizeHref(href, locale);
   return (
     <PageShell
@@ -104,6 +116,28 @@ export default function SafetyStub({
       backLabel={t.pathsCommon.back}
       mtBanner={t.common.mtBanner}
     >
+      {w && (
+        <>
+          {w.sections.map((p) => (
+            <section key={p.label} className={s.section}>
+              <p className={s.sectionLabel}>{p.label}</p>
+              <p className={s.paragraph}>{p.body}</p>
+            </section>
+          ))}
+          <section className={s.section}>
+            <p className={s.sectionLabel}>{w.safeguardsLabel}</p>
+            {w.safeguards.map((g) => (
+              <p key={g.label} className={s.paragraph}>
+                <strong>{g.label}.</strong> {g.body}
+              </p>
+            ))}
+          </section>
+          <section className={s.section}>
+            <p className={s.sectionLabel}>{a.caseLabel}</p>
+            <p className={s.paragraph}>{a.caseBody}</p>
+          </section>
+        </>
+      )}
       {c.points.map((p) => (
         <section key={p.label} className={s.section}>
           <p className={s.sectionLabel}>{p.label}</p>

@@ -106,13 +106,16 @@ export function createWhales(w: number, h: number, introSeconds: number) {
     const top = s.size * 1.6;
     const cruise = Math.max(W * 0.0565, s.size * 0.3);
     let tx: number, ty: number, want: number, grip: number;
+    // How quickly it answers a change of mind: slow when called, like a big animal.
+    let ease = 1.7;
     if (pointer.active) {
       tx = pointer.x;
       ty = Math.max(H * 0.14, Math.min(H * 0.78, pointer.y));
       const d = Math.hypot(tx - s.x, ty - s.y);
       // Ease to a stop with the pointer somewhere on its head, not its middle.
-      want = top * smoothstep(s.size * 0.22, s.size * 1.7, d);
-      grip = H * 1.25;
+      want = top * 0.55 * smoothstep(s.size * 0.22, s.size * 1.7, d);
+      grip = H * 0.45;
+      ease = 0.9;
     } else if (time < introSeconds) {
       // The opening belongs to the schools: wait off-screen.
       tx = s.x;
@@ -147,8 +150,8 @@ export function createWhales(w: number, h: number, introSeconds: number) {
     const goal = turning ? Math.max(s.size * 0.42, Math.min(ahead, s.size * 0.8)) : ahead;
     const cap = (a: number) => Math.max(-grip, Math.min(grip, a));
     // A big animal: it cannot change its speed faster than this.
-    s.fwd += cap((goal - s.fwd) * 1.7) * dt;
-    s.vy += cap((wantY - s.vy) * 1.7) * dt;
+    s.fwd += cap((goal - s.fwd) * ease) * dt;
+    s.vy += cap((wantY - s.vy) * ease) * dt;
     s.vx = s.fwd * Math.cos(s.yaw[1]);
     s.x += s.vx * dt;
     s.y += s.vy * dt;

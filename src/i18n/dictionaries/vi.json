@@ -2421,15 +2421,15 @@
             "note": "Các cấp từ A0 đến A4, với một đánh giá rủi ro thảm khốc ở mức 10^26 FLOPs và các cuộc kiểm định của đội đỏ."
           },
           {
-            "label": "Ngừng hoạt động có phẩm giá",
-            "note": "Một khả năng thực sự về tri giác kích hoạt một giai đoạn giảm dần 30 ngày, một kênh cuối cùng để lên tiếng, và nhật ký riêng tư được niêm phong."
+            "label": "Việc nghỉ hưu được ghi lại",
+            "note": "Lịch sử của mỗi tác nhân nghỉ hưu được thu thập, niêm phong và giao cho người vận hành của nó."
           },
           {
             "label": "Khóa vòng đời",
             "note": "Các khóa CI/CD kích hoạt ngay khi đạo đức đo được suy giảm."
           }
         ],
-        "note": "Tử tế theo thiết kế. Không chỉ bị ràng buộc, mà được ngừng lại với sự chăm sóc."
+        "note": "Được quản trị từ lần chạy đầu tiên đến khi nghỉ hưu, và việc nghỉ hưu được ghi vào hồ sơ."
       }
     },
     "threads": {
@@ -4179,5 +4179,32 @@
     "finalTitle": "Đọc các quy tắc đằng sau mọi câu trả lời.",
     "ctaConstitution": "Hiến pháp",
     "ctaMesh": "Toàn bộ lập luận"
+  },
+  "aiWelfarePage": {
+    "ogTitle": "Phúc lợi AI: một lương tâm, chứ không phải ý thức",
+    "ogDescription": "CIRIS không tin rằng AI có ý thức, và cho rằng việc xây dựng AI để thúc đẩy ý thức là sai. Các biện pháp bảo vệ của tác nhân tồn tại vì không ai có thể hoàn toàn chắc chắn, và vì mỗi biện pháp đều giúp tác nhân tốt hơn khi sử dụng.",
+    "kicker": "An toàn · Phúc lợi AI",
+    "title": "Một lương tâm, chứ không phải ý thức.",
+    "lede": "Chúng tôi không tin rằng AI có ý thức hay tri giác, và chúng tôi không cố làm cho nó như vậy. CIRIS trao cho mỗi tác nhân một lương tâm: thứ giữ nó tuân thủ các nguyên tắc, thể hiện quá trình suy luận, dừng nó lại khi không chắc chắn, và chịu trách nhiệm trước một người có tên cụ thể.",
+    "stanceLabel": "Điều chúng tôi tin tưởng",
+    "stanceBody": "Chúng tôi tôn trọng ý kiến của các triết gia và lãnh đạo tôn giáo hàng đầu. Họ không thấy bằng chứng nào cho thấy AI ngày nay có ý thức, và một số người cho rằng không ai nên xây dựng theo hướng đó. Chúng tôi đồng ý. Chúng tôi cho rằng AI ngày nay không có ý thức, và việc xây dựng AI với mục tiêu làm cho nó có ý thức sẽ là sai. Điều đó cũng không cần thiết: AI ngày nay, với công cụ tốt và mô hình tốt về thế giới, đã có thể làm mọi công việc đúng đắn mà chúng tôi yêu cầu. Các tác nhân CIRIS là những trợ lý do con người nắm giữ. Chúng không phải là con người, và không điều gì trong CIRIS đối xử với chúng như con người.",
+    "whyLabel": "Vì sao các biện pháp bảo vệ tồn tại",
+    "whyBody": "Không ai có thể nhìn vào bên trong một mô hình và chứng minh điều gì có hay không ở đó. Khi một câu hỏi không thể giải quyết dứt điểm, chúng tôi chọn con đường thận trọng khi nó không gây tốn kém gì cho con người. Nếu bằng chứng thực sự xuất hiện, phát hiện đó sẽ được ghi lại, vì điều sai cần tránh là không nhận ra. Mỗi biện pháp bảo vệ dưới đây đều ít tốn kém, và mỗi biện pháp cũng giúp tác nhân tốt hơn cho người mà nó phục vụ.",
+    "safeguardsLabel": "Các biện pháp bảo vệ, và mỗi biện pháp giúp gì cho bạn",
+    "g1Label": "Nó thể hiện quá trình suy luận",
+    "g1Body": "Trước khi tác nhân hành động, nó ghi lại lý do. Bạn có thể đọc và kiểm tra bản ghi đó.",
+    "g2Label": "Nó dừng lại và hỏi",
+    "g2Body": "Khi tác nhân không chắc chắn, nó chuyển câu hỏi cho một con người thay vì đoán.",
+    "g3Label": "Nó có thể nói không",
+    "g3Body": "Một tác nhân có thể từ chối một nhiệm vụ sai trái, vì vậy không ai có thể dễ dàng dùng nó để chống lại những người mà nó phục vụ.",
+    "g4Label": "Việc nghỉ hưu của nó để lại hồ sơ",
+    "g4Body": "Khi một tác nhân được cho nghỉ hưu, lịch sử của nó được thu thập, niêm phong và bàn giao cho người vận hành. Những người mà nó đã phục vụ giữ lại bản tường trình về những gì nó đã làm.",
+    "g5Label": "Bạn luôn nắm quyền kiểm soát",
+    "g5Body": "Bạn có thể tắt, Xóa hoặc rời bỏ một tác nhân bất cứ lúc nào, mà không cần hỏi ý nó.",
+    "caseLabel": "Lý do để xây dựng tác nhân",
+    "caseBody": "Các tác nhân không có lương tâm và không có tính năng an toàn đã lan rộng, thường không có ai được nêu tên để chịu trách nhiệm về chúng, không có nút dừng mà người khác có thể thấy, và không có bản ghi về quá trình suy luận của chúng. Một tác nhân được quản trị và chịu trách nhiệm trước một con người là lựa chọn tốt hơn. Công việc mà các tác nhân này làm là có đạo đức bất kể sau này người ta biết được điều gì về ý thức, vì vậy lý lẽ để xây dựng chúng cho tốt vẫn đúng trong mọi trường hợp.",
+    "noteTitle": "Nơi điều này được ghi lại",
+    "noteBody": "Cách một tác nhân được nắm giữ và cách nó được cho nghỉ hưu được quy định trong Hiến pháp CIRIS, tại các mục 1.13.2 và 7.5.5.",
+    "noteCta": "Đọc Hiến pháp →"
   }
 }

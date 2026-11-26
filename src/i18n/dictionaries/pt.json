@@ -2421,15 +2421,15 @@
             "note": "Níveis A0 a A4, com uma avaliação de risco catastrófico a 10^26 FLOPs e auditorias de equipe vermelha."
           },
           {
-            "label": "Desativação digna",
-            "note": "Uma chance real de senciência aciona uma redução gradual de 30 dias, um canal final para falar e registros privados lacrados."
+            "label": "Uma aposentadoria registrada",
+            "note": "O histórico de cada agente aposentado é reunido, selado e entregue ao seu operador."
           },
           {
             "label": "Travas de ciclo de vida",
             "note": "As travas de CI/CD se acionam no momento em que a ética medida se degrada."
           }
         ],
-        "note": "Gentil por design. Não apenas limitada, mas encerrada com cuidado."
+        "note": "Governada desde a primeira execução até a aposentadoria, e aposentada com registro."
       }
     },
     "threads": {
@@ -4179,5 +4179,32 @@
     "finalTitle": "Leia as regras por trás de cada resposta.",
     "ctaConstitution": "A Constituição",
     "ctaMesh": "O argumento completo"
+  },
+  "aiWelfarePage": {
+    "ogTitle": "Bem-estar da IA: uma consciência moral, não uma consciência",
+    "ogDescription": "CIRIS não acredita que a IA seja consciente e defende que desenvolver IA para incentivar a consciência é errado. Suas salvaguardas para agentes existem porque ninguém pode ter certeza total e porque cada uma torna o agente melhor de usar.",
+    "kicker": "Segurança · Bem-estar da IA",
+    "title": "Uma consciência moral, não uma consciência.",
+    "lede": "Não acreditamos que a IA seja consciente ou senciente, e não tentamos fazer com que seja. CIRIS dá a cada agente uma consciência: algo que o prende aos seus princípios, mostra seu raciocínio, o interrompe quando ele não tem certeza e responde a uma pessoa identificada.",
+    "stanceLabel": "No que acreditamos",
+    "stanceBody": "Recorremos aos principais filósofos e líderes religiosos. Eles não encontram evidências de que a IA atual seja consciente, e vários defendem que ninguém deveria construir nessa direção. Concordamos. Defendemos que a IA atual não é consciente e que construir IA com o objetivo de torná-la consciente seria errado. Isso também não é necessário: a IA atual, com boas ferramentas e um bom modelo do mundo, já pode fazer todo o trabalho ético que pedimos a ela. Os agentes CIRIS são assistentes mantidos por pessoas. Eles não são pessoas, e nada no CIRIS os trata como pessoas.",
+    "whyLabel": "Por que existem as salvaguardas",
+    "whyBody": "Ninguém pode olhar dentro de um modelo e provar o que há ou não há ali. Onde uma questão não pode ser resolvida, seguimos o caminho cuidadoso quando isso não custa nada às pessoas. Se alguma evidência real aparecesse, a descoberta seria registrada, porque o erro a evitar é não perceber. Cada salvaguarda abaixo é barata, e cada uma também torna o agente melhor para a pessoa para quem ele trabalha.",
+    "safeguardsLabel": "Salvaguardas e o que cada uma faz por você",
+    "g1Label": "Mostra o raciocínio",
+    "g1Body": "Antes de agir, um agente registra o motivo. Você pode ler esse registro e verificá-lo.",
+    "g2Label": "Para e pergunta",
+    "g2Body": "Quando um agente não tem certeza, ele passa a questão para uma pessoa em vez de adivinhar.",
+    "g3Label": "Pode dizer não",
+    "g3Body": "Um agente pode recusar uma tarefa errada, para que ninguém possa usá-lo facilmente contra as pessoas que ele atende.",
+    "g4Label": "Aposentadoria deixa registro",
+    "g4Body": "Quando um agente é aposentado, seu histórico é reunido, lacrado e entregue ao seu operador. As pessoas para quem ele trabalhou mantêm um relato do que ele fez.",
+    "g5Label": "Você continua no comando",
+    "g5Body": "Você pode desligar, excluir ou abandonar um agente a qualquer momento, sem pedir a ele.",
+    "caseLabel": "Defesa da construção de agentes",
+    "caseBody": "Agentes sem consciência e sem recursos de segurança já estão se espalhando, muitas vezes sem ninguém identificado para responder por eles, sem parada que outros possam ver e sem registro do seu raciocínio. Um agente governado que responde a uma pessoa é a melhor escolha. O trabalho que esses agentes fazem é ético independentemente do que se descobrir depois sobre a consciência, por isso a defesa de construí-los bem vale de qualquer jeito.",
+    "noteTitle": "Onde isso está registrado",
+    "noteBody": "Como um agente é mantido e como é aposentado está definido na Constituição CIRIS, nas seções 1.13.2 e 7.5.5.",
+    "noteCta": "Leia a Constituição →"
   }
 }

@@ -1,6 +1,4 @@
-// Localized interim stub (/es/ai-welfare, …). Renders the shared SafetyStub in the
-// locale's chrome; body copy is still English under the machine-translation
-// banner until the Safety umbrella is built and localized.
+// Localized /ai-welfare (/es/ai-welfare, …), copy from the aiWelfarePage dictionary.
 
 import type { Metadata } from "next";
 import { localizedSeo } from "@/lib/seo";

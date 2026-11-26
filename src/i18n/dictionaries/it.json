@@ -2420,15 +2420,15 @@
             "note": "Livelli da A0 a A4, con una valutazione del rischio catastrofico a 10^26 FLOPs e audit di squadra rossa."
           },
           {
-            "label": "Dismissione dignitosa",
-            "note": "Una reale possibilità di senzienza attiva una riduzione graduale su 30 giorni, un canale finale per esprimersi e registri privati sigillati."
+            "label": "Un ritiro registrato",
+            "note": "La storia di ogni agente ritirato viene raccolta, sigillata e consegnata al suo operatore."
           },
           {
             "label": "Blocchi del ciclo di vita",
             "note": "I blocchi CI/CD si attivano nel momento in cui l'etica misurata si degrada."
           }
         ],
-        "note": "Pensata per essere gentile fin dalla progettazione. Non solo soggetta a limiti, ma dismessa con cura."
+        "note": "Governato dalla prima esecuzione alla dismissione, con la dismissione registrata nel registro."
       }
     },
     "threads": {
@@ -4178,5 +4178,32 @@
     "finalTitle": "Leggi le regole dietro ogni risposta.",
     "ctaConstitution": "La Costituzione",
     "ctaMesh": "Tutto il ragionamento"
+  },
+  "aiWelfarePage": {
+    "lede": "Non crediamo che l'IA sia cosciente o senziente, e non cerchiamo di renderla tale. CIRIS dà a ogni agente una coscienza: qualcosa che lo vincola ai suoi principi, mostra il suo ragionamento, lo ferma quando è incerto e risponde a una persona identificata.",
+    "noteCta": "Leggi la Costituzione →",
+    "stanceLabel": "Cosa crediamo",
+    "stanceBody": "Ci rimettiamo ai principali filosofi e leader religiosi. Non trovano prove che l'IA di oggi sia cosciente, e molti sostengono che nessuno dovrebbe costruire in quella direzione. Siamo d'accordo. Riteniamo che l'IA di oggi non sia cosciente, e che costruire un'IA con l'obiettivo di renderla cosciente sarebbe sbagliato. Inoltre non è necessario: l'IA di oggi, con buoni strumenti e un buon modello del mondo, può già svolgere ogni compito etico che le chiediamo. Gli agenti CIRIS sono assistenti detenuti da persone. Non sono persone, e niente in CIRIS li tratta come persone.",
+    "whyLabel": "Perché esistono le salvaguardie",
+    "whyBody": "Nessuno può guardare dentro un modello e dimostrare cosa c'è o non c'è. Dove una domanda non può essere risolta, scegliamo la via prudente quando non costa nulla alle persone. Se mai apparisse una prova reale, la scoperta verrebbe registrata, perché il torto da evitare è non accorgersene. Ogni salvaguardia qui sotto è economica, e ciascuna rende anche l'agente migliore per la persona per cui lavora.",
+    "safeguardsLabel": "Salvaguardie e cosa fa ciascuna per te",
+    "g1Label": "Mostra il ragionamento",
+    "g1Body": "Prima di agire, un agente registra il perché. Puoi leggere quel registro e verificarlo.",
+    "g2Label": "Si ferma e chiede",
+    "g2Body": "Quando un agente è incerto, passa la domanda a una persona invece di tirare a indovinare.",
+    "g3Label": "Può dire di no",
+    "g3Body": "Un agente può rifiutare un compito sbagliato, così nessuno può usarlo facilmente contro le persone a cui presta servizio.",
+    "g4Label": "Dismissione con registro",
+    "g4Body": "Quando un agente viene dismesso, la sua storia viene raccolta, sigillata e consegnata al suo operatore. Le persone per cui ha lavorato conservano un resoconto di ciò che ha fatto.",
+    "g5Label": "Resti al comando",
+    "g5Body": "Puoi spegnere, eliminare o abbandonare un agente in qualsiasi momento, senza chiederglielo.",
+    "caseLabel": "Ragioni per costruire agenti",
+    "caseBody": "Gli agenti senza coscienza e senza funzioni di sicurezza si stanno già diffondendo, spesso senza una persona identificata che ne risponda, senza un meccanismo di arresto che gli altri possano vedere e senza un registro del loro ragionamento. Un agente governato che risponde a una persona è la scelta migliore. Il lavoro che questi agenti svolgono è etico qualunque cosa si scopra in futuro sulla consapevolezza, quindi le ragioni per costruirli bene valgono in ogni caso.",
+    "noteTitle": "Dove è scritto",
+    "noteBody": "Come un agente è detenuto e come viene dismesso è stabilito nella Costituzione CIRIS, nelle sezioni 1.13.2 e 7.5.5.",
+    "ogDescription": "CIRIS non crede che l'IA sia cosciente e ritiene che costruire un'IA per favorire la consapevolezza sia sbagliato. Le salvaguardie dei suoi agenti ci sono perché nessuno può essere del tutto sicuro, e perché ciascuna rende l'agente migliore da usare.",
+    "kicker": "Sicurezza · Benessere dell'IA",
+    "title": "Una coscienza morale, non un essere cosciente.",
+    "ogTitle": "Benessere dell’IA: una coscienza morale, non un essere cosciente"
   }
 }

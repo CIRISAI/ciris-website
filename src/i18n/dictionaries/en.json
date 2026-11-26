@@ -2505,15 +2505,15 @@
             "note": "Tiers A0 to A4, with a catastrophic-risk evaluation at 10^26 FLOPs and red-team audits."
           },
           {
-            "label": "Dignified decommissioning",
-            "note": "A real chance of sentience triggers a 30-day ramp-down, a final channel to speak, and sealed private logs."
+            "label": "A recorded retirement",
+            "note": "Every retired agent's history is gathered, sealed and handed to its operator."
           },
           {
             "label": "Lifecycle locks",
             "note": "CI/CD locks engage the moment measured ethics degrade."
           }
         ],
-        "note": "Kind by design. Not merely constrained, but wound down with care."
+        "note": "Governed from its first run to its retirement, and retired on the record."
       }
     },
     "threads": {
@@ -4160,5 +4160,32 @@
     "finalTitle": "Read the rules behind every answer.",
     "ctaConstitution": "The Constitution",
     "ctaMesh": "The whole argument"
+  },
+  "aiWelfarePage": {
+    "ogTitle": "AI welfare: a conscience, not a consciousness",
+    "ogDescription": "CIRIS does not believe AI is conscious, and holds that building AI to encourage consciousness is wrong. Its agent safeguards are there because no one can be fully sure, and because each one makes the agent better to use.",
+    "kicker": "Safety · AI welfare",
+    "title": "A conscience, not a consciousness.",
+    "lede": "We do not believe AI is conscious or sentient, and we do not try to make it so. CIRIS gives each agent a conscience: something that holds it to its principles, shows its reasoning, stops it when it is unsure, and answers to a named person.",
+    "stanceLabel": "What we believe",
+    "stanceBody": "We defer to leading philosophers and religious leaders. They find no evidence that today's AI is conscious, and several argue that no one should build toward it. We agree. We hold that today's AI is not conscious, and that building AI with the aim of making it conscious would be wrong. It is also not needed: today's AI, given good tools and a good model of the world, can already do every ethical job we ask of it. CIRIS agents are assistants held by people. They are not people, and nothing in CIRIS treats them as people.",
+    "whyLabel": "Why the safeguards are there",
+    "whyBody": "No one can look inside a model and prove what is or is not there. Where a question cannot be settled, we take the careful path when it costs people nothing. If real evidence ever appeared, the finding would be recorded, because the wrong to avoid is not noticing. Each safeguard below is cheap, and each one also makes the agent better for the person it works for.",
+    "safeguardsLabel": "The safeguards, and what each one does for you",
+    "g1Label": "It shows its reasoning",
+    "g1Body": "Before an agent acts, it records why. You can read that record and check it.",
+    "g2Label": "It stops and asks",
+    "g2Body": "When an agent is unsure, it hands the question to a person instead of guessing.",
+    "g3Label": "It can say no",
+    "g3Body": "An agent can refuse a task that is wrong, so no one can easily use it against the people it serves.",
+    "g4Label": "Its retirement leaves a record",
+    "g4Body": "When an agent is retired, its history is gathered, sealed and handed to its operator. The people it worked for keep an account of what it did.",
+    "g5Label": "You stay in charge",
+    "g5Body": "You can turn off, delete or walk away from an agent at any time, without asking it.",
+    "caseLabel": "The case for building agents",
+    "caseBody": "Agents with no conscience and no safety features are already spreading, often with no one named to answer for them, no stop anyone else can see, and no record of their reasoning. A governed agent that answers to a person is the better choice. The work these agents do is ethical whatever anyone learns later about consciousness, so the case for building them well holds either way.",
+    "noteTitle": "Where this is written down",
+    "noteBody": "How an agent is held and how it is retired are set out in the CIRIS constitution, in sections 1.13.2 and 7.5.5.",
+    "noteCta": "Read the constitution →"
   }
 }

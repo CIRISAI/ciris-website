@@ -2421,15 +2421,15 @@
             "note": "Niveaux A0 à A4, avec une évaluation du risque catastrophique à 10^26 FLOPs et des audits d'équipe rouge."
           },
           {
-            "label": "Mise hors service digne",
-            "note": "Une réelle possibilité de conscience déclenche une réduction sur 30 jours, un dernier canal pour s'exprimer et des journaux privés scellés."
+            "label": "Un retrait consigné",
+            "note": "L’historique de chaque agent retiré est rassemblé, scellé et remis à son opérateur."
           },
           {
             "label": "Verrous de cycle de vie",
             "note": "Les verrous CI/CD s'enclenchent dès que l'éthique mesurée se dégrade."
           }
         ],
-        "note": "Bienveillant par conception. Pas seulement contraint, mais arrêté avec soin."
+        "note": "Gouvernée de sa première exécution à sa fin de vie, et mise en fin de vie avec registre."
       }
     },
     "threads": {
@@ -4179,5 +4179,32 @@
     "finalTitle": "Lisez les règles derrière chaque réponse.",
     "ctaConstitution": "La Constitution",
     "ctaMesh": "L’argumentaire complet"
+  },
+  "aiWelfarePage": {
+    "lede": "Nous ne croyons pas que l'IA soit consciente ou sensible, et nous ne cherchons pas à la rendre telle. CIRIS donne à chaque agent une conscience : ce qui le tient à ses principes, montre son raisonnement, l'arrête en cas de doute, et répond à une personne nommée.",
+    "stanceLabel": "Ce que nous croyons",
+    "whyLabel": "Pourquoi ces garde-fous existent",
+    "whyBody": "Personne ne peut regarder à l'intérieur d'un modèle et prouver ce qui s'y trouve ou non. Quand une question ne peut être tranchée, nous prenons la voie prudente lorsqu'elle ne coûte rien aux personnes. Si une preuve réelle apparaissait, la découverte serait enregistrée, car le tort à éviter est de ne pas remarquer. Chaque garde-fou ci-dessous coûte peu, et chacun rend aussi l'agent meilleur pour la personne qu'il sert.",
+    "safeguardsLabel": "Garde-fous et ce que chacun vous apporte",
+    "g1Label": "Il montre son raisonnement",
+    "g1Body": "Avant d'agir, un agent enregistre pourquoi. Vous pouvez lire ce registre et le vérifier.",
+    "g2Label": "Il s'arrête et demande",
+    "g2Body": "Quand un agent a un doute, il transmet la question à une personne au lieu de deviner.",
+    "g3Label": "Il peut dire non",
+    "g3Body": "Un agent peut refuser une tâche qui est mauvaise, afin que personne ne puisse facilement l'utiliser contre les personnes qu'il sert.",
+    "g4Label": "Fin de vie laissant un registre",
+    "g4Body": "Lorsqu'un agent est mis en fin de vie, son historique est rassemblé, scellé et remis à son opérateur. Les personnes pour qui il a travaillé conservent un compte rendu de ce qu'il a fait.",
+    "g5Label": "Vous restez aux commandes",
+    "g5Body": "Vous pouvez éteindre, supprimer ou abandonner un agent à tout moment, sans le lui demander.",
+    "caseLabel": "Argument pour construire des agents",
+    "caseBody": "Des agents sans conscience et sans dispositifs de sécurité se répandent déjà, souvent sans personne nommée pour en répondre, sans arrêt que quiconque puisse voir, et sans registre de leur raisonnement. Un agent gouverné qui répond à une personne est le meilleur choix. Le travail que ces agents accomplissent est éthique quoi que l'on apprenne plus tard sur la conscience, donc l'argument en faveur de bien les construire tient dans tous les cas.",
+    "noteTitle": "Où c'est écrit",
+    "noteBody": "La façon dont un agent est détenu et mis en fin de vie est exposée dans la Constitution CIRIS, aux sections 1.13.2 et 7.5.5.",
+    "noteCta": "Lire la Constitution →",
+    "ogDescription": "CIRIS ne croit pas que l'IA soit consciente, et estime qu'il serait mal de construire une IA pour encourager la conscience. Ses garde-fous pour agents existent parce que personne ne peut être tout à fait sûr, et parce que chacun rend l'agent meilleur à l'usage.",
+    "kicker": "Sécurité · Bien-être de l'IA",
+    "title": "Une conscience morale, pas un être conscient.",
+    "ogTitle": "Bien-être de l’IA : une conscience morale, pas un être conscient",
+    "stanceBody": "Nous nous en remettons au jugement des grands philosophes et des grands responsables religieux. Ils ne trouvent aucune preuve que l'IA d'aujourd'hui soit consciente, et plusieurs estiment que personne ne devrait chercher à la rendre consciente. Nous sommes d'accord. Nous tenons que l'IA d'aujourd'hui n'est pas consciente, et qu'il serait moralement mal de concevoir une IA dans le but de la rendre consciente. Ce n'est d'ailleurs pas nécessaire : l'IA d'aujourd'hui, avec de bons outils et un bon modèle du monde, peut déjà accomplir chaque tâche éthique que nous lui confions. Les agents CIRIS sont des assistants tenus par des personnes. Ce ne sont pas des personnes, et rien dans CIRIS ne les traite comme telles."
   }
 }
