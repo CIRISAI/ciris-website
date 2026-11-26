@@ -372,8 +372,8 @@ export const MARKETING_OG: Record<
   },
   "/ai-welfare": {
     "en": {
-      "title": "AI Dignity: Care from First Run to Shutdown | CIRIS",
-      "description": "CIRIS treats a capable agent with care across its whole life. If an agent may be sentient, it gets a gradual wind-down instead of an abrupt kill. Ethical oversight from creation to decommissioning."
+      "title": "AI welfare: a conscience, not a consciousness",
+      "description": "CIRIS does not believe AI is conscious, and holds that building AI to encourage consciousness is wrong. Its agent safeguards are there because no one can be fully sure, and because each one makes the agent better to use."
     }
   },
   "/stewardship": {

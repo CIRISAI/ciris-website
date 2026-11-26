@@ -2420,15 +2420,15 @@
             "note": "Matakai A0 zuwa A4, tare da kimanta haɗarin bala'i a 10^26 FLOPs da binciken ƙungiyar-ja."
           },
           {
-            "label": "Kashewa cikin mutunci",
-            "note": "Damar gaskiya ta hankali na jawo rage-rage na kwanaki 30, hanya ta ƙarshe don magana, da rufaffun bayanan sirri."
+            "label": "Ritaya da aka rubuta",
+            "note": "Ana tattara tarihin kowane wakili da ya yi ritaya, a rufe shi, a kuma mika shi ga mai sarrafa shi."
           },
           {
             "label": "Kullen rayuwa",
             "note": "Kullen CI/CD na kunnawa lokacin da aka auna ɗabi'a ta lalace."
           }
         ],
-        "note": "An ƙera shi da tausayi tun daga farko. Ba kawai an takaita shi ba, amma ana rage aikin sa a hankali tare da kulawa."
+        "note": "Ana tafiyar da shi tun daga gudun farko har zuwa ritayarsa, kuma ana shigar da ritayarsa a cikin tarihi."
       }
     },
     "threads": {
@@ -4180,5 +4180,32 @@
     "finalTitle": "Karanta ƙa'idodin da ke bayan kowace amsa.",
     "ctaConstitution": "Tsarin Mulki",
     "ctaMesh": "Gaba ɗayan hujja"
+  },
+  "aiWelfarePage": {
+    "g5Label": "Iko yana hannunka",
+    "g5Body": "Za ka iya kashewa, sharewa ko rabuwa da wakili a kowane lokaci, ba tare da tambayarsa ba.",
+    "caseLabel": "Hujjar gina wakilai",
+    "caseBody": "Wakilai marasa lamiri kuma marasa matakan tsaro sun riga sun yadu, sau da yawa ba tare da wani mutum da aka ambata da zai amsa a madadinsu ba, ba tare da tsayawa da kowa zai iya gani ba, kuma ba tare da tarihin tunaninsu ba. Wakili da ake tafiyar da shi wanda ke amsa wa mutum shi ne zaɓi mafi kyau. Aikin da waɗannan wakilai ke yi na ɗabi'a ne komai abin da aka gano daga baya game da sani, don haka hujjar gina su da kyau tana nan ta kowane hali.",
+    "noteTitle": "Inda aka rubuta wannan",
+    "noteBody": "Yadda ake riƙe wakili da yadda ake yi masa ritaya an bayyana su a cikin Tsarin Mulkin CIRIS, a sassa 1.13.2 da 7.5.5.",
+    "noteCta": "Karanta Tsarin Mulki →",
+    "ogTitle": "Jin daɗin AI: lamiri, ba sani ba",
+    "ogDescription": "CIRIS ba ta yarda AI yana da sani ba, kuma ta riƙe cewa gina AI don ƙarfafa sani ba daidai ba ne. Matakan tsaron wakilan nata suna nan saboda babu wanda zai iya tabbata gaba ɗaya, kuma saboda kowane ɗaya yana sa wakili ya fi kyau a amfani.",
+    "kicker": "Tsaro · Jin daɗin AI",
+    "safeguardsLabel": "Matakan tsaro, da abin da kowane ɗaya yake yi maka",
+    "g1Label": "Yana nuna tunaninsa",
+    "g1Body": "Kafin wakili ya yi aiki, yana rubuta dalili. Za ka iya karanta wannan tarihi ka kuma duba shi.",
+    "g2Label": "Yana tsayawa ya tambaya",
+    "g2Body": "Idan wakili ba shi da tabbas, yana miƙa tambayar ga mutum maimakon yin zato.",
+    "g3Label": "Zai iya cewa a'a",
+    "g3Body": "Wakili zai iya ƙin aikin da ba daidai ba ne, don haka babu wanda zai iya amfani da shi cikin sauƙi a kan mutanen da yake yi wa hidima.",
+    "g4Label": "Ritayarsa tana barin tarihi",
+    "g4Body": "Idan aka yi wa wakili ritaya, ana tattara tarihinsa, a rufe shi a mika shi ga wanda ke tafiyar da shi. Mutanen da ya yi wa aiki suna riƙe da bayanin abin da ya yi.",
+    "title": "Lamiri, ba sani ba.",
+    "lede": "Ba mu yarda AI yana da sani ko ji ba, kuma ba ma ƙoƙarin sa hakan ta faru ba. CIRIS tana ba kowane wakili lamiri: wani abu da ke riƙe shi kan ƙa'idodinsa, yana nuna tunaninsa, yana tsayar da shi idan ba shi da tabbas, kuma yana amsa ga mutum da aka ambata.",
+    "stanceLabel": "Abin da muka yarda da shi",
+    "stanceBody": "Muna mika wuya ga manyan masana falsafa da shugabannin addini. Ba su sami wata shaida cewa AI na yau yana da sani ba, kuma da yawa daga cikinsu suna cewa ba wanda ya kamata ya gina zuwa ga hakan. Mun yarda. Muna riƙe cewa AI na yau ba shi da sani, kuma gina AI da nufin sa shi mai sani ba daidai ba ne. Haka kuma ba a buƙatarsa: AI na yau, idan aka ba shi kayan aiki masu kyau da kyakkyawan tsarin duniya, zai iya yin kowane aiki na ɗabi'a da muka nemi ya yi. Wakilan CIRIS mataimaka ne da mutane ke riƙe da su. Ba mutane ba ne, kuma babu komai a CIRIS da ke ɗaukar su a matsayin mutane.",
+    "whyLabel": "Dalilin matakan tsaron",
+    "whyBody": "Babu wanda zai iya duba cikin samfuri ya tabbatar da abin da ke ciki ko babu. Inda ba a iya warware tambaya ba, muna bin tafarki na taka-tsantsan idan hakan ba zai kashe mutane komai ba. Idan wata shaida ta gaskiya ta bayyana, za a rubuta binciken, saboda kuskuren da za a guje wa shi ne rashin lura. Kowane matakin tsaro da ke ƙasa mai sauƙi ne, kuma kowannensu yana sa wakili ya fi kyau ga mutumin da yake yi wa aiki."
   }
 }

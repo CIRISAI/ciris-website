@@ -2420,15 +2420,15 @@
             "note": "Ngazi A0 hadi A4, na tathmini ya hatari ya maafa katika 10^26 FLOPs na ukaguzi wa red-team."
           },
           {
-            "label": "Kustaafisha kwa heshima",
-            "note": "Nafasi halisi ya ufahamu husababisha kupunguza polepole kwa siku 30, njia ya mwisho ya kuzungumza, na kumbukumbu za faragha zilizofungwa."
+            "label": "Kustaafu kunakorekodiwa",
+            "note": "Historia ya kila wakala anayestaafu hukusanywa, hufungwa kwa muhuri na kukabidhiwa kwa mwendeshaji wake."
           },
           {
             "label": "Vifungo vya mzunguko",
             "note": "Vifungo vya CI/CD huanza kufanya kazi mara maadili yaliyopimwa yanaposhuka."
           }
         ],
-        "note": "Yenye wema kwa kubuni. Si kwa kuzuiliwa tu, bali kuzimwa kwa uangalifu."
+        "note": "Inasimamiwa kuanzia uendeshaji wake wa kwanza hadi kustaafu kwake, na kustaafu kwake kunawekwa kwenye rekodi."
       }
     },
     "threads": {
@@ -4180,5 +4180,32 @@
     "finalTitle": "Soma sheria zilizo nyuma ya kila jibu.",
     "ctaConstitution": "Katiba",
     "ctaMesh": "Hoja nzima"
+  },
+  "aiWelfarePage": {
+    "ogTitle": "Ustawi wa AI: dhamiri, si fahamu",
+    "ogDescription": "CIRIS haamini kuwa AI ina fahamu, na inashikilia kuwa kujenga AI ili kuhamasisha fahamu ni vibaya. Kinga za wakala wake zipo kwa sababu hakuna mtu anayeweza kuwa na uhakika kamili, na kwa sababu kila moja humfanya wakala kuwa bora kutumia.",
+    "kicker": "Usalama · Ustawi wa AI",
+    "safeguardsLabel": "Kinga, na kile kila moja inachokufanyia",
+    "g1Label": "Inaonyesha hoja zake",
+    "g1Body": "Kabla wakala hajachukua hatua, hunakili sababu yake. Unaweza kuisoma rekodi hiyo na kuikagua.",
+    "g2Label": "Inasimama na kuuliza",
+    "g2Body": "Wakala anapokuwa na mashaka, humkabidhi mtu swali badala ya kubahatisha.",
+    "g3Label": "Inaweza kukataa",
+    "g3Body": "Wakala anaweza kukataa kazi isiyo sahihi, ili hakuna mtu anayeweza kumtumia kwa urahisi dhidi ya watu anaowahudumia.",
+    "g4Label": "Kustaafu kwake kunaacha rekodi",
+    "g4Body": "Wakala anapostaafu, historia yake hukusanywa, hufungwa na kukabidhiwa kwa mwendeshaji wake. Watu aliowatumikia hubaki na kumbukumbu ya alichofanya.",
+    "g5Label": "Unabaki na udhibiti",
+    "g5Body": "Unaweza kuzima, kufuta au kuachana na wakala wakati wowote, bila kumuuliza.",
+    "caseLabel": "Hoja ya kuwajenga mawakala",
+    "caseBody": "Mawakala wasio na dhamiri na wasio na vipengele vya usalama tayari wanaenea, mara nyingi bila mtu aliyetajwa kuwajibika kwa ajili yao, bila kituo cha kuzima ambacho wengine wanaweza kuona, na bila rekodi ya hoja zao. Wakala anayesimamiwa anayejibu kwa mtu ndiye chaguo bora. Kazi wanayofanya mawakala hawa ni ya kimaadili chochote kitakachojulikana baadaye kuhusu fahamu, kwa hivyo hoja ya kuwajenga vizuri inasimama kwa vyovyote.",
+    "noteTitle": "Mahali ilipoandikwa",
+    "noteBody": "Jinsi wakala anavyoshikiliwa na jinsi anavyostaafishwa imeelezwa katika Katiba ya CIRIS, katika vifungu 1.13.2 na 7.5.5.",
+    "noteCta": "Soma Katiba →",
+    "title": "Dhamiri, si fahamu.",
+    "lede": "Hatuamini kuwa AI ina fahamu au hisia, wala hatujaribu kuifanya iwe hivyo. CIRIS humpa kila wakala dhamiri: kitu kinachomshikilia kwenye kanuni zake, kinachoonyesha hoja zake, kinachomsimamisha akiwa na mashaka, na kinachojibu kwa mtu aliyetajwa.",
+    "stanceLabel": "Tunachoamini",
+    "stanceBody": "Tunaahirisha kwa wanafalsafa wanaoongoza na viongozi wa kidini. Hawaoni ushahidi kwamba AI ya leo ina fahamu, na kadhaa husema kwamba hakuna anayepaswa kujenga kuelekea humo. Tunakubaliana. Tunashikilia kwamba AI ya leo haina fahamu, na kwamba kujenga AI kwa lengo la kuifanya iwe na fahamu itakuwa vibaya. Pia haihitajiki: AI ya leo, ikipatiwa zana nzuri na mfano mzuri wa dunia, tayari inaweza kufanya kila kazi ya kimaadili tunayoiomba. Mawakala wa CIRIS ni wasaidizi wanaoshikiliwa na watu. Si watu, na hakuna chochote katika CIRIS kinachowachukulia kama watu.",
+    "whyLabel": "Kwa nini kinga zipo",
+    "whyBody": "Hakuna anayeweza kutazama ndani ya kielelezo na kuthibitisha kilichopo au kisichokuwepo. Pale swali haliwezi kuamuliwa, tunachukua njia ya tahadhari isipowagharimu watu chochote. Ushahidi wa kweli ukiwahi kujitokeza, matokeo yatarekodiwa, kwa sababu kosa la kuepuka ni kutotambua. Kila kinga hapa chini ni rahisi, na kila moja pia humfanya wakala kuwa bora kwa mtu anayemfanyia kazi."
   }
 }

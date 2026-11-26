@@ -2420,15 +2420,15 @@
             "note": "Stufen A0 bis A4, mit einer Bewertung des katastrophalen Risikos bei 10^26 FLOPs und Red-Team-Prüfungen."
           },
           {
-            "label": "Würdevolle Außerdienststellung",
-            "note": "Eine echte Chance auf Empfindungsfähigkeit löst ein 30-tägiges Herunterfahren, einen letzten Kanal zum Sprechen und versiegelte private Protokolle aus."
+            "label": "Ein dokumentierter Ruhestand",
+            "note": "Die Geschichte jedes in den Ruhestand versetzten Agenten wird gesammelt, versiegelt und seinem Betreiber übergeben."
           },
           {
             "label": "Lebenszyklus-Sperren",
             "note": "CI/CD-Sperren greifen in dem Moment, in dem die gemessene Ethik nachlässt."
           }
         ],
-        "note": "Freundlich von Grund auf. Nicht bloß eingeschränkt, sondern mit Sorgfalt heruntergefahren."
+        "note": "Von seinem ersten Lauf bis zu seiner Außerbetriebnahme beaufsichtigt, und mit Protokoll außer Betrieb genommen."
       }
     },
     "threads": {
@@ -4180,5 +4180,32 @@
     "finalTitle": "Lesen Sie die Regeln hinter jeder Antwort.",
     "ctaConstitution": "Die Verfassung",
     "ctaMesh": "Die ganze Begründung"
+  },
+  "aiWelfarePage": {
+    "ogTitle": "Wohl der KI: ein Gewissen, kein Bewusstsein",
+    "ogDescription": "CIRIS glaubt nicht, dass KI bewusst ist, und hält es für falsch, KI mit dem Ziel zu bauen, Bewusstsein zu fördern. Seine Schutzmaßnahmen für Agenten bestehen, weil niemand völlig sicher sein kann und weil jede einzelne den Agenten besser nutzbar macht.",
+    "kicker": "Sicherheit · Wohl der KI",
+    "title": "Ein Gewissen, kein Bewusstsein.",
+    "lede": "Wir glauben nicht, dass KI bewusst oder empfindungsfähig ist, und wir versuchen nicht, sie dazu zu machen. CIRIS gibt jedem Agenten ein Gewissen: etwas, das ihn an seine Prinzipien bindet, sein Reasoning zeigt, ihn stoppt, wenn er unsicher ist, und ihn einer benannten Person gegenüber verantwortlich macht.",
+    "stanceLabel": "Was wir glauben",
+    "stanceBody": "Wir folgen führenden Philosophen und religiösen Führern. Sie finden keine Belege dafür, dass die heutige KI bewusst ist, und mehrere argumentieren, dass niemand darauf hinarbeiten sollte. Wir stimmen zu. Wir halten fest, dass die heutige KI nicht bewusst ist und dass es falsch wäre, KI mit dem Ziel zu bauen, sie bewusst zu machen. Es ist auch nicht nötig: Die heutige KI kann mit guten Werkzeugen und einem guten Modell der Welt bereits jede ethische Aufgabe erledigen, die wir ihr stellen. CIRIS-Agenten sind Assistenten, die von Menschen gehalten werden. Sie sind keine Menschen, und nichts in CIRIS behandelt sie als Menschen.",
+    "whyLabel": "Warum es die Schutzmaßnahmen gibt",
+    "whyBody": "Niemand kann in ein Modell hineinschauen und beweisen, was darin ist oder nicht. Wo eine Frage nicht entschieden werden kann, wählen wir den sorgfältigen Weg, wenn er die Menschen nichts kostet. Sollte jemals ein echter Beleg auftauchen, würde der Befund festgehalten, denn das zu vermeidende Unrecht ist das Nichtbemerken. Jede Schutzmaßnahme unten ist kostengünstig, und jede macht den Agenten zudem besser für die Person, für die er arbeitet.",
+    "safeguardsLabel": "Die Schutzmaßnahmen und ihr Nutzen für Sie",
+    "g1Label": "Zeigt sein Reasoning",
+    "g1Body": "Bevor ein Agent handelt, hält er fest, warum. Sie können diese Aufzeichnung lesen und prüfen.",
+    "g2Label": "Hält an und fragt",
+    "g2Body": "Wenn ein Agent unsicher ist, übergibt er die Frage an einen Menschen, statt zu raten.",
+    "g3Label": "Kann Nein sagen",
+    "g3Body": "Ein Agent kann eine Aufgabe ablehnen, die falsch ist, sodass niemand ihn leicht gegen die Menschen einsetzen kann, denen er dient.",
+    "g4Label": "Außerbetriebnahme hinterlässt ein Protokoll",
+    "g4Body": "Wenn ein Agent außer Betrieb genommen wird, wird seine Geschichte gesammelt, versiegelt und an seinen Betreiber übergeben. Die Menschen, für die er gearbeitet hat, behalten einen Bericht über das, was er getan hat.",
+    "g5Label": "Sie behalten die Kontrolle",
+    "g5Body": "Sie können einen Agenten jederzeit ausschalten, löschen oder sich von ihm abwenden, ohne ihn zu fragen.",
+    "caseLabel": "Das Argument für den Bau von Agenten",
+    "caseBody": "Agenten ohne Gewissen und ohne Sicherheitsfunktionen verbreiten sich bereits, oft ohne benannte verantwortliche Person, ohne für andere sichtbaren Stopp und ohne Aufzeichnung ihres Reasonings. Ein beaufsichtigter Agent, der einer Person gegenüber verantwortlich ist, ist die bessere Wahl. Die Arbeit dieser Agenten ist ethisch, unabhängig davon, was man später über Bewusstsein erfährt, daher gilt das Argument, sie gut zu bauen, in jedem Fall.",
+    "noteTitle": "Wo dies festgehalten ist",
+    "noteBody": "Wie ein Agent gehalten und wie er außer Betrieb genommen wird, ist in der CIRIS-Verfassung in den Abschnitten 1.13.2 und 7.5.5 festgelegt.",
+    "noteCta": "Verfassung lesen →"
   }
 }

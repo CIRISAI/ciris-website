@@ -1,4 +1,4 @@
-// Interim stub landing (/ai-welfare) so the Safety umbrella scene's "Explore" button
+// /ai-welfare: the AI-welfare stance page (copy in the aiWelfarePage dictionary).
 // resolves. Shared thin content in @/app/components/SafetyStub; localized
 // variant lives at src/app/[locale]/ai-welfare/. To be expanded when /safety becomes
 // the umbrella hub.

@@ -42,7 +42,7 @@
   "/first-contact/theory": { "group": "researchers", "night": true },
   "/contextual-integrity": { "group": "researchers" },
   "/structural-privacy": { "group": "people", "en": true },
-  "/ai-welfare": { "group": "about", "mode": "whale", "en": true },
+  "/ai-welfare": { "title": "aiWelfarePage.ogTitle", "group": "about", "mode": "whale" },
   "/stewardship": { "group": "about", "en": true },
   "/verification": { "text": "Alignment you can check, not just trust.", "group": "builders", "en": true },
   "/constitutional-mesh": { "title": "meshClaim.seoTitle", "group": "network", "night": true, "mode": "signet" },

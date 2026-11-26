@@ -2421,15 +2421,15 @@
             "note": "Tingkat A0 hingga A4, dengan evaluasi risiko bencana pada 10^26 FLOPs dan audit red-team."
           },
           {
-            "label": "Penonaktifan yang bermartabat",
-            "note": "Peluang nyata akan kesadaran memicu penurunan bertahap 30 hari, saluran terakhir untuk bicara, dan catatan pribadi yang tersegel."
+            "label": "Pensiun yang tercatat",
+            "note": "Riwayat setiap agen yang dipensiunkan dikumpulkan, disegel, dan diserahkan kepada operatornya."
           },
           {
             "label": "Kunci daur hidup",
             "note": "Kunci CI/CD aktif begitu etika terukur menurun."
           }
         ],
-        "note": "Baik menurut rancangan. Bukan sekadar dibatasi, tetapi dihentikan dengan penuh perhatian."
+        "note": "Diatur sejak pertama kali dijalankan hingga dipensiunkan, dan dipensiunkan secara tercatat."
       }
     },
     "threads": {
@@ -4181,5 +4181,32 @@
     "finalTitle": "Baca aturan di balik setiap jawaban.",
     "ctaConstitution": "Konstitusi",
     "ctaMesh": "Argumen selengkapnya"
+  },
+  "aiWelfarePage": {
+    "ogTitle": "Kesejahteraan AI: nurani, bukan kesadaran",
+    "ogDescription": "CIRIS tidak percaya AI itu sadar, dan berpendapat membangun AI untuk mendorong kesadaran adalah salah. Pengaman agennya ada karena tidak ada yang bisa sepenuhnya yakin, dan karena masing-masing membuat agen lebih baik digunakan.",
+    "kicker": "Keselamatan · Kesejahteraan AI",
+    "title": "Nurani, bukan kesadaran.",
+    "lede": "Kami tidak percaya AI itu sadar atau sentien, dan kami tidak berusaha membuatnya demikian. CIRIS memberi setiap agen nurani: sesuatu yang memegangnya pada prinsipnya, menunjukkan penalarannya, menghentikannya saat ragu, dan bertanggung jawab kepada orang yang bernama jelas.",
+    "stanceLabel": "Apa yang kami yakini",
+    "stanceBody": "Kami mengikuti para filsuf terkemuka dan pemimpin agama. Mereka tidak menemukan bukti bahwa AI saat ini sadar, dan beberapa berpendapat bahwa tidak seorang pun boleh membangun ke arah itu. Kami setuju. Kami berpendirian bahwa AI saat ini tidak sadar, dan bahwa membangun AI dengan tujuan membuatnya sadar adalah salah. Itu juga tidak diperlukan: AI saat ini, dengan alat yang baik dan model dunia yang baik, sudah dapat melakukan setiap pekerjaan etis yang kami minta. Agen CIRIS adalah asisten yang dipegang oleh manusia. Mereka bukan manusia, dan tidak ada pun dalam CIRIS yang memperlakukan mereka sebagai manusia.",
+    "whyLabel": "Alasan pengaman itu ada",
+    "whyBody": "Tidak ada yang bisa melihat ke dalam model dan membuktikan apa yang ada atau tidak ada di sana. Jika suatu pertanyaan tidak bisa dipastikan, kami mengambil jalan yang hati-hati ketika itu tidak merugikan manusia. Jika bukti nyata pernah muncul, temuan itu akan dicatat, karena kesalahan yang harus dihindari adalah tidak menyadarinya. Setiap pengaman di bawah ini murah, dan masing-masing juga membuat agen lebih baik bagi orang yang dilayaninya.",
+    "safeguardsLabel": "Pengaman, dan manfaat masing-masing bagi Anda",
+    "g1Label": "Ia menunjukkan penalarannya",
+    "g1Body": "Sebelum agen bertindak, ia mencatat alasannya. Anda dapat membaca catatan itu dan memeriksanya.",
+    "g2Label": "Ia berhenti dan bertanya",
+    "g2Body": "Ketika agen ragu, ia menyerahkan pertanyaan itu kepada manusia alih-alih menebak.",
+    "g3Label": "Ia bisa berkata tidak",
+    "g3Body": "Agen dapat menolak tugas yang salah, sehingga tidak ada yang bisa dengan mudah menggunakannya melawan orang-orang yang dilayaninya.",
+    "g4Label": "Pensiunnya meninggalkan catatan",
+    "g4Body": "Ketika agen dipensiunkan, riwayatnya dikumpulkan, disegel, dan diserahkan kepada operatornya. Orang-orang yang dilayaninya tetap memegang catatan tentang apa yang dilakukannya.",
+    "g5Label": "Anda tetap memegang kendali",
+    "g5Body": "Anda dapat mematikan, menghapus, atau meninggalkan agen kapan saja, tanpa memintanya.",
+    "caseLabel": "Alasan membangun agen",
+    "caseBody": "Agen tanpa nurani dan tanpa fitur keselamatan sudah menyebar, sering tanpa ada orang bernama jelas yang bertanggung jawab atasnya, tanpa penghentian yang bisa dilihat orang lain, dan tanpa catatan atas penalarannya. Agen yang diatur dan bertanggung jawab kepada seseorang adalah pilihan yang lebih baik. Pekerjaan yang dilakukan agen-agen ini bersifat etis apa pun yang kemudian diketahui orang tentang kesadaran, sehingga alasan untuk membangunnya dengan baik tetap berlaku dalam kedua hal.",
+    "noteTitle": "Tempat hal ini tertulis",
+    "noteBody": "Cara agen dipegang dan cara ia dipensiunkan diatur dalam Konstitusi CIRIS, di bagian 1.13.2 dan 7.5.5.",
+    "noteCta": "Baca Konstitusi →"
   }
 }

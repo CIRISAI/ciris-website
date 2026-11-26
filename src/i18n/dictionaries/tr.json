@@ -2420,15 +2420,15 @@
             "note": "A0 ile A4 arası kademeler, 10^26 FLOPs değerinde felaket riski değerlendirmesi ve kırmızı takım denetimleri."
           },
           {
-            "label": "Onurlu hizmetten çıkarma",
-            "note": "Gerçek bir bilinç olasılığı 30 günlük bir azaltmayı, konuşmak için son bir kanalı ve mühürlü özel günlükleri devreye sokar."
+            "label": "Kayda geçen emeklilik",
+            "note": "Emekliye ayrılan her ajanın geçmişi toplanır, mühürlenir ve operatörüne teslim edilir."
           },
           {
             "label": "Yaşam döngüsü kilitleri",
             "note": "Ölçülen etik bozulduğu anda CI/CD kilitleri devreye girer."
           }
         ],
-        "note": "Tasarımı gereği şefkatli. Yalnızca kısıtlanmış değil, özenle devreden çıkarılan."
+        "note": "İlk çalışmasından devreden çıkarılmasına kadar yönetilir ve kayda geçirilerek devreden çıkarılır."
       }
     },
     "threads": {
@@ -4178,5 +4178,32 @@
     "finalTitle": "Her yanıtın ardındaki kuralları okuyun.",
     "ctaConstitution": "Anayasa",
     "ctaMesh": "Tüm argüman"
+  },
+  "aiWelfarePage": {
+    "ogTitle": "Yapay zekâ refahı: bilinç değil, vicdan",
+    "ogDescription": "CIRIS, yapay zekânın bilinçli olduğuna inanmaz ve bilinci teşvik edecek şekilde yapay zekâ inşa etmenin yanlış olduğunu savunur. Ajan güvenlik önlemleri, kimsenin tam olarak emin olamaması ve her birinin ajanı kullanımı daha iyi hale getirmesi nedeniyle vardır.",
+    "kicker": "Güvenlik · Yapay zekâ refahı",
+    "title": "Bir vicdan, bilinç değil.",
+    "lede": "Yapay zekânın bilinçli veya hissedebilir olduğuna inanmıyoruz ve onu öyle yapmaya çalışmıyoruz. CIRIS her ajana bir vicdan verir: onu ilkelerine bağlı tutan, akıl yürütmesini gösteren, emin olmadığında durduran ve adı belli bir kişiye hesap veren bir şey.",
+    "stanceLabel": "Ne düşünüyoruz",
+    "stanceBody": "Bu konuyu önde gelen filozoflara ve dini liderlere erteliyoruz. Onlar bugünkü yapay zekânın bilinçli olduğuna dair hiçbir kanıt bulamıyor ve birçoğu kimsenin buna yönelik inşa etmemesi gerektiğini savunuyor. Katılıyoruz. Bugünkü yapay zekânın bilinçli olmadığını ve onu bilinçli yapma amacıyla yapay zekâ inşa etmenin yanlış olacağını savunuyoruz. Buna gerek de yok: bugünkü yapay zekâ, iyi araçlar ve iyi bir dünya modeliyle kendisinden istediğimiz her etik işi zaten yapabilir. CIRIS ajanları insanlar tarafından elde tutulan asistanlardır. Onlar insan değildir ve CIRIS'te hiçbir şey onlara insanmış gibi davranmaz.",
+    "whyLabel": "Güvenlik önlemleri neden var",
+    "whyBody": "Kimse bir modelin içine bakıp orada ne olup ne olmadığını kanıtlayamaz. Bir soru çözüme kavuşturulamadığında, insanlara hiçbir maliyeti yoksa dikkatli yolu seçeriz. Gerçek bir kanıt ortaya çıkarsa bulgu kayda geçirilir, çünkü kaçınılacak yanlış fark etmemektir. Aşağıdaki her güvenlik önlemi ucuzdur ve her biri ajanı, hizmet ettiği kişi için daha iyi hale getirir.",
+    "safeguardsLabel": "Güvenlik önlemleri ve her birinin sizin için ne yaptığı",
+    "g1Label": "Akıl yürütmesini gösterir",
+    "g1Body": "Bir ajan harekete geçmeden önce nedenini kaydeder. O kaydı okuyabilir ve denetleyebilirsiniz.",
+    "g2Label": "Durur ve sorar",
+    "g2Body": "Bir ajan emin olmadığında tahmin etmek yerine soruyu bir insana iletir.",
+    "g3Label": "Hayır diyebilir",
+    "g3Body": "Bir ajan yanlış olan bir görevi reddedebilir, böylece kimse onu hizmet ettiği insanlara karşı kolayca kullanamaz.",
+    "g4Label": "Devreden çıkarılması kayıt bırakır",
+    "g4Body": "Bir ajan devreden çıkarıldığında geçmişi toplanır, mühürlenir ve operatörüne teslim edilir. Hizmet ettiği kişiler ne yaptığının kaydını tutar.",
+    "g5Label": "Kontrol sizde kalır",
+    "g5Body": "Bir ajanı istediğiniz zaman ona sormadan kapatabilir, silebilir veya bırakıp gidebilirsiniz.",
+    "caseLabel": "Ajan inşa etmenin gerekçesi",
+    "caseBody": "Vicdanı ve güvenlik özellikleri olmayan ajanlar zaten yayılıyor; çoğu zaman onlardan sorumlu adı belli kimse olmadan, başkalarının görebildiği bir durdurma olmadan ve akıl yürütmelerine dair bir kayıt olmadan. Bir kişiye hesap veren, yönetilen bir ajan daha iyi bir seçimdir. Bu ajanların yaptığı çalışma, bilinç hakkında sonradan ne öğrenilirse öğrenilsin etiktir, bu yüzden onları iyi inşa etme gerekçesi her durumda geçerlidir.",
+    "noteTitle": "Bunun nerede yazılı olduğu",
+    "noteBody": "Bir ajanın nasıl elde tutulduğu ve nasıl devreden çıkarıldığı, CIRIS Anayasası'nın 1.13.2 ve 7.5.5 bölümlerinde belirtilmiştir.",
+    "noteCta": "Anayasa'yı okuyun →"
   }
 }
